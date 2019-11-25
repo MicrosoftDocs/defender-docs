@@ -1,13 +1,12 @@
 ---
-title: Connect F5 data to Azure Sentinel| Microsoft Docs
-description: Learn how to connect F5 data to Azure Sentinel.
+title: Connect Zscaler data to Azure Sentinel| Microsoft Docs
+description: Learn how to connect Zscaler data to Azure Sentinel.
 services: sentinel
 documentationcenter: na
 author: rkarlin
 manager: rkarlin
 editor: ''
 
-ms.assetid: 0001cad6-699c-4ca9-b66c-80c194e439a5
 ms.service: azure-sentinel
 ms.subservice: azure-sentinel
 ms.devlang: na
@@ -18,14 +17,19 @@ ms.date: 10/13/2019
 ms.author: rkarlin
 
 ---
-# Connect F5 to Azure Sentinel
+# Connect Zscaler Internet Access to Azure Sentinel
 
-This article explains how to connect your F5 appliance to Azure Sentinel. The F5 data connector allows you to easily connect your F5 logs with Azure Sentinel, to view dashboards, create custom alerts, and improve investigation. Using F5 on Azure Sentinel will provide you more insights into your organization’s Internet usage, and will enhance its security operation capabilities.​ 
+> [!IMPORTANT]
+> The Zscaler data connector in Azure Sentinel is currently in public preview.
+> This feature is provided without a service level agreement, and it's not recommended for production workloads. Certain features might not be supported or might have constrained capabilities. 
+> For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
+
+This article explains how to connect your Zscaler Internet Access appliance to Azure Sentinel. The Zscaler data connector allows you to easily connect your Zscaler Internet Access (ZIA) logs with Azure Sentinel, to view dashboards, create custom alerts, and improve investigation. Using Zscaler on Azure Sentinel will provide you more insights into your organization’s Internet usage, and will enhance its security operation capabilities.​ 
 
 
 ## How it works
 
-You need to deploy an agent on a dedicated Linux machine (VM or on premises) to support the communication between F5 and Azure Sentinel. The following diagram describes the setup in the event of a Linux VM in Azure.
+You need to deploy an agent on a dedicated Linux machine (VM or on premises) to support the communication between Zscaler Internet Access and Azure Sentinel. The following diagram describes the setup in the event of a Linux VM in Azure.
 
  ![CEF in Azure](./media/connect-cef/cef-syslog-azure.png)
 
@@ -80,7 +84,7 @@ In this step, you need to select the Linux machine that will act as a proxy betw
 - Sets the Syslog agent to collect the data and send it securely to Log Analytics, where it is parsed and enriched.
  
  
-1. In the Azure Sentinel portal, click **Data connectors** and select **F5** and then **Open connector page**. 
+1. In the Azure Sentinel portal, click **Data connectors** and select **Zscaler** and then **Open connector page**. 
 
 1. Under **Install and configure the Syslog agent**, select your machine type, either Azure, other cloud, or on-premises. 
    > [!NOTE]
@@ -92,14 +96,18 @@ In this step, you need to select the Linux machine that will act as a proxy betw
 1. While the script is running, check to make sure you don't get any error or warning messages.
 
 
-## STEP 2: Configure your F5 to send CEF messages
+## STEP 2: Configure your Zscaler to send CEF messages
 
-1. Go to [F5 Configuring Application Security Event Logging](https://techdocs.f5.com/kb/en-us/products/big-ip_asm/manuals/product/asm-implementations-11-5-0/12.html), and follow the instructions to set up remote logging, using the following guidelines:
-   - Set the **Remote storage type** to **CEF**.
-   - Set the **Protocol** to **TCP**.
-   - Set the **IP address** to the Syslog server IP address.
-   - Set the **port number** to **514**, or the port you set your agent to use.
-   - You can set the **Maximum Query String Size** to the size you set in your agent.
+1. On the Zscaler appliance you need to set these values so that the appliance sends the necessary logs in the necessary format to the Azure Sentinel Syslog agent, based on the Log Analytics agent. You can modify these parameters in your appliance, as long as you also modify them in the Syslog daemon on the Azure Sentinel agent.
+    - Protocol = TCP
+    - Port = 514
+    - Format = CEF
+    - IP address - make sure to send the CEF messages to the IP address of the virtual machine you dedicated for this purpose.
+ For more information, see the [Zscaler and Azure Sentinel Deployment Guide](https://aka.ms/ZscalerCEFInstructions).
+ 
+   > [!NOTE]
+   > This solution supports Syslog RFC 3164 or RFC 5424.
+
 
 1. To use the relevant schema in Log Analytics for the CEF events, search for `CommonSecurityLog`.
 
@@ -114,6 +122,7 @@ In this step, you need to select the Linux machine that will act as a proxy betw
 
 
 ## Next steps
-In this document, you learned how to connect F5 to Azure Sentinel. To learn more about Azure Sentinel, see the following articles:
+In this document, you learned how to connect Zscaler Internet Access to Azure Sentinel. To learn more about Azure Sentinel, see the following articles:
 - Learn how to [get visibility into your data, and potential threats](quickstart-get-visibility.md).
 - Get started [detecting threats with Azure Sentinel](tutorial-detect-threats.md).
+
