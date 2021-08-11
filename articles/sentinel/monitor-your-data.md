@@ -17,7 +17,7 @@ ms.date: 04/04/2021
 ms.author: yelevin
 
 ---
-# Visualize and monitor your data
+# Use Azure Monitor workbooks to visualize and monitor your data
 
 Once you have [connected your data sources](quickstart-onboard.md) to Azure Sentinel, you can visualize and monitor the data using the Azure Sentinel adoption of Azure Monitor Workbooks, which provides versatility in creating custom dashboards. While the Workbooks are displayed differently in Azure Sentinel, it may be useful for you to see how to [create interactive reports with Azure Monitor Workbooks](../azure-monitor/visualize/workbooks-overview.md). Azure Sentinel allows you to create custom workbooks across your data, and also comes with built-in workbook templates to allow you to quickly gain insights across your data as soon as you connect a data source.
 
@@ -120,6 +120,8 @@ To delete a saved workbook (either a saved template or a customized workbook), i
 
 ## Next steps
 
-In this tutorial, you learned how to visualize your data in Azure Sentinel, using Azure Workbooks.
+In this article, you learned how to visualize your data in Azure Sentinel, using Azure Workbooks.
 
 To learn how to automate your responses to threats, see [Set up automated threat responses in Azure Sentinel](tutorial-respond-threats-playbook.md).
+
+To learn about popular built-in workbooks, see [Commonly used Azure Sentinel workbooks](top-workbooks.md). 
