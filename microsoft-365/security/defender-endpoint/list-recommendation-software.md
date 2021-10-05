@@ -1,5 +1,5 @@
 ---
-title: Get recommendation by software
+title: List software by recommendation
 description: Retrieves a security recommendation related to a specific software.
 keywords: apis, graph api, supported apis, get, security recommendation, security recommendation for software, threat and vulnerability management, threat and vulnerability management api 
 search.product: eADQiWindows 10XVcnh
@@ -18,7 +18,7 @@ MS.technology: mde
 ms.custom: api
 ---
 
-# Get recommendation by software
+# List software by recommendation
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -41,7 +41,7 @@ One of the following permissions is required to call this API. To learn more, in
 
 Permission type|Permission|Permission display name
 :---|:---|:---
-Application|SecurityRecommendation.Read.All|'Read Threat and Vulnerability Management security recommendation information'
+Application|Software.Read.All|'Read Threat and Vulnerability Management Software information'
 Delegated (work or school account)|SecurityRecommendation.Read|'Read Threat and Vulnerability Management security recommendation information'
 
 ## HTTP request
