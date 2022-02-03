@@ -1,52 +1,69 @@
 ---
-title: Customize attack surface reduction rules
-description: Individually set rules in audit, block, or disabled modes, and add files and folders that should be excluded from attack surface reduction rules
-keywords: Attack surface reduction, hips, host intrusion prevention system, protection rules, anti-exploit, antiexploit, exploit, infection prevention, customize, configure, exclude
+title: Attack surface reduction rules deployment Phase 3 - implement
+description: Provides guidance to implement your attack surface reduction rules deployment.
+keywords: Attack surface reduction rules deployment, ASR deployment, enable asr rules, configure ASR, host intrusion prevention system, protection rules, anti-exploit rules, anti-exploit, exploit rules, infection prevention rules, Microsoft Defender for Endpoint, configure ASR rules
+search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: manage
 ms.sitesec: library
+ms.pagetype: security
 ms.localizationpriority: medium
 audience: ITPro
 author: jweston-1
 ms.author: v-jweston
-ms.reviewer:
+ms.reviewer: oogunrinde, sugamar
 manager: dansimp
+ms.custom: asr
 ms.technology: mde
 ms.topic: article
-ms.collection: M365-security-compliance
+ms.collection: m365solution-scenario
+ms.date: 1/18/2022
 ---
 
-# Customize attack surface reduction rules
+# Phase 3 - implement
 
-**Applies to:**
+The implementation phase moves the ring from testing into functional state.
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+> [!div class="mx-imgBorder"]
+> ![ASR rules implementation steps](images/asr-rules-implementation-steps.png)
 
-> Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+## Step 1: Transition ASR Rules from Audit to Block
 
-> [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+1. After all exclusions are determined while in audit mode, start setting some ASR rules to "block" mode, starting with the rule that has the fewest triggered events. See” [Enable attack surface reduction rules](enable-attack-surface-reduction.md).
+2. Review the reporting page in the Microsoft 365 Defender portal; see [Threat protection report in Microsoft Defender for Endpoint](threat-protection-reports.md). Also review feedback from your ASR champions.
+3. Refine exclusions or create new exclusions as determined necessary.
+4. Switch problematic rules back to Audit.
 
-[Attack surface reduction rules](enable-attack-surface-reduction.md) help prevent software behaviors that are often abused to compromise your device or network. For example, an attacker might try to run an unsigned script off of a USB drive, or have a macro in an Office document make calls directly to the Win32 API. Attack surface reduction rules can constrain these kinds of risky behaviors and improve your organization's defensive posture.
+  >[!Note]
+  >For problematic rules (rules creating too much noise), it is better to create exclusions than to turn rules off or switching back to Audit. You will have to determine what is best for your environment.
 
-Learn how to customize attack surface reduction rules by [excluding files and folders](#exclude-files-and-folders) or [adding custom text to the notification](#customize-the-notification) alert that appears on a user's computer.
+  >[!Tip]
+  >When available, take advantage of the Warn mode setting in rules to limit disruptions. Enabling ASR rules in Warn mode enables you to capture triggered events and view their potential disruptions, without actually blocking end-user access. Learn more: [Warn mode for users](attack-surface-reduction.md#warn-mode-for-users).
 
-You can set attack surface reduction rules for devices running any of the following editions and versions of Windows:
+### How does Warn mode work?
 
-- Windows 10 Pro, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
-- Windows 10 Enterprise, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) or later
-- Windows Server, [version 1803 (Semi-Annual Channel)](/windows-server/get-started/whats-new-in-windows-server-1803) or later
-- [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
--  [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
-- [Windows Server 2012 R2](/win32/srvnodes/what-s-new-for-windows-server-2012-r2) 
-- Windows Server 2022
+Warn mode is effectively a Block instruction, but with the option for the user to “Unblock” subsequent executions of the given flow or app. Warn mode unblocks on a per device, user, file and process combination. The warn mode information is stored locally and has a duration of 24 hours.
 
-You can use Group Policy, PowerShell, and Mobile Device Management (MDM) configuration service providers (CSP) to configure these settings.
+### Step 2: Expand deployment to ring n + 1
 
-See [Requirements](enable-attack-surface-reduction.md#requirements) in the "Enable attack surface reduction rules" article for information about supported operating systems and additional requirement information.
+When you are confident that you have correctly configured the ASR rules for ring 1, you can widen the scope of your deployment to the next ring (ring n + 1).
 
-## Exclude files and folders
+The deployment process, steps 1 – 3,  is essentially the same for each subsequent ring:
+
+1. Test rules in Audit
+2. Review ASR-triggered audit events in the Microsoft 365 Defender portal
+3. Create exclusions
+4. Review: refine, add, or remove exclusions as necessary
+5. Set rules to “block”
+6. Review the reporting page in the Microsoft 365 Defender portal.
+7. Create exclusions.
+8. Disable problematic rules or switch them back to Audit.
+
+#### Customize attack surface reduction rules
+
+As you continue to expand your attack surface reduction rules deployment, you may find it necessary or beneficial to customize the attack surface reduction rules that you have enabled.
+
+##### Exclude files and folders
 
 You can choose to exclude files and folders from being evaluated by attack surface reduction rules. When excluded, the file won't be blocked from running even if an attack surface reduction rule detects that the file contains malicious behavior.
 
@@ -63,12 +80,12 @@ An exclusion applies to all rules that allow exclusions. You can specify an indi
 
 An exclusion is applied only when the excluded application or service starts. For example, if you add an exclusion for an update service that is already running, the update service will continue to trigger events until the service is stopped and restarted.
 
-Attack surface reduction supports environment variables and wildcards. For information about using wildcards, see [use wildcards in the file name and folder path or extension exclusion lists](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists) .
+Attack surface reduction supports environment variables and wildcards. For information about using wildcards, see [use wildcards in the file name and folder path or extension exclusion lists](configure-extension-file-exclusions-microsoft-defender-antivirus.md#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists).
 If you are encountering problems with rules detecting files that you believe should not be detected, [use audit mode to test the rule](evaluate-attack-surface-reduction.md).
 
 See the [attack surface reduction rules reference](attack-surface-reduction-rules-reference.md) topic for details on each rule.
 
-### Use Group Policy to exclude files and folders
+##### Use Group Policy to exclude files and folders
 
 1. On your Group Policy management computer, open the [Group Policy Management Console](https://technet.microsoft.com/library/cc731212.aspx), right-click the Group Policy Object you want to configure and select **Edit**.
 
@@ -81,7 +98,7 @@ See the [attack surface reduction rules reference](attack-surface-reduction-rule
 > [!WARNING]
 > Do not use quotes as they are not supported for either the **Value name** column or the **Value** column.
 
-### Use PowerShell to exclude files and folders
+##### Use PowerShell to exclude files and folders
 
 1. Type **powershell** in the Start menu, right-click **Windows PowerShell** and select **Run as administrator**.
 
@@ -92,21 +109,24 @@ See the [attack surface reduction rules reference](attack-surface-reduction-rule
     ```
 
     Continue to use `Add-MpPreference -AttackSurfaceReductionOnlyExclusions` to add more folders to the list.
-    
+
     > [!IMPORTANT]
     > Use `Add-MpPreference` to append or add apps to the list. Using the `Set-MpPreference` cmdlet will overwrite the existing list.
 
-### Use MDM CSPs to exclude files and folders
+##### Use MDM CSPs to exclude files and folders
 
 Use the [./Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-defender#defender-attacksurfacereductiononlyexclusions) configuration service provider (CSP) to add exclusions.
 
-## Customize the notification
+##### Customize the notification
 
 You can customize the notification for when a rule is triggered and blocks an app or file. See the [Windows Security](/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center#customize-notifications-from-the-windows-defender-security-center) article.
 
-## Related topics
+## Additional topics in this deployment collection
 
-- [Reduce attack surfaces with attack surface reduction rules](attack-surface-reduction.md)
-- [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
-- [Evaluate attack surface reduction rules](evaluate-attack-surface-reduction.md)
-- [Attack surface reduction FAQ](attack-surface-reduction.md)
+[ASR rules deployment overview](attack-surface-reduction-rules-deployment.md)
+
+[Phase 1: Plan](attack-surface-reduction-rules-deployment-plan.md)
+
+[Phase 2: Test](attack-surface-reduction-rules-deployment-test.md)
+
+[Phase 4: Operationalize](attack-surface-reduction-rules-deployment-operationalize.md)
