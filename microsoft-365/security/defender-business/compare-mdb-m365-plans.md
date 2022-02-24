@@ -19,7 +19,7 @@ ms.collection:
 - m365-security-compliance
 ---
 
-# Compare Microsoft Defender for Business (preview) to Microsoft 365 Business Premium
+# Compare Microsoft Defender for Business to Microsoft 365 Business Premium
 
 > [!IMPORTANT]
 > Microsoft Defender for Business is now in preview, and will roll out gradually to customers and IT Partners who [sign-up here](https://aka.ms/mdb-preview) to request it. We will onboard an initial set of customers and partners in the coming weeks and will expand the preview leading up to general availability. Note that preview will launch with an [initial set of scenarios](mdb-tutorials.md#try-these-preview-scenarios), and we will be adding capabilities regularly.
@@ -35,12 +35,12 @@ Microsoft Defender for Business is available as a standalone offering or as part
 - [Compare Microsoft Defender for Business (standalone) to Microsoft 365 Business Premium](#compare-security-features-in-microsoft-defender-for-business-to-microsoft-365-business-premium)
 - [Compare Defender for Business (standalone) to Microsoft Defender for Endpoint enterprise offerings](#compare-microsoft-defender-for-business-to-microsoft-defender-for-endpoint-plans-1-and-2)
 
-**You don't have to have a Microsoft 365 subscription to buy and use Microsoft Defender for Business (preview).** Microsoft Defender for Business (preview) is a standalone security solution for small and medium-sized businesses. If you do already have another subscription (such as Microsoft 365 Business Basic or Standard), consider adding Microsoft Defender for Business to get more threat protection capabilities. 
+**You don't have to have a Microsoft 365 subscription to buy and use Microsoft Defender for Business.** Microsoft Defender for Business is a standalone security solution for small and medium-sized businesses. If you do already have another subscription (such as Microsoft 365 Business Basic or Standard), consider adding Microsoft Defender for Business to get more threat protection capabilities. 
 
 ## Compare security features in Microsoft Defender for Business to Microsoft 365 Business Premium
 
 > [!NOTE]
-> This article is intended to provide a high-level overview of threat protection features included in Microsoft Defender for Business (preview) and Microsoft 365 Business Premium. This article is not intended to serve as a service description or licensing contract document. For more information, see [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
+> This article is intended to provide a high-level overview of threat protection features included in Microsoft Defender for Business and Microsoft 365 Business Premium. This article is not intended to serve as a service description or licensing contract document. For more information, see [Microsoft 365 licensing guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
 
 **Beginning March 1, 2022, Defender for Business will start rolling out as part of Microsoft 365 Business Premium. Defender for Business as a standalone offering is still in preview.**
 
@@ -64,7 +64,7 @@ The following table compares security features and capabilities in Defender for 
 
 ## Compare Microsoft Defender for Business to Microsoft Defender for Endpoint Plans 1 and 2
 
-Defender for Business (preview) brings enterprise-grade capabilities of Defender for Endpoint to small and medium-sized businesses. The following table compares security features and capabilities in Defender for Business (preview) to Microsoft Defender for Endpoint Plans 1 and 2. <br/><br/>
+Defender for Business brings enterprise-grade capabilities of Defender for Endpoint to small and medium-sized businesses. The following table compares security features and capabilities in Defender for Business to Microsoft Defender for Endpoint Plans 1 and 2. <br/><br/>
 
 | Feature/Capability | [Defender for Business](mdb-overview.md) (preview) | [Defender for Endpoint Plan 1](../defender-endpoint/defender-endpoint-plan-1.md) | [Defender for Endpoint Plan 2](../defender-endpoint/microsoft-defender-endpoint.md) |
 |:---|:---|:---|
@@ -90,8 +90,8 @@ Defender for Business (preview) brings enterprise-grade capabilities of Defender
 
 ## Next steps
 
-- [See the requirements for Microsoft Defender for Business (preview)](mdb-requirements.md)
+- [See the requirements for Microsoft Defender for Business](mdb-requirements.md)
 
-- [Get Microsoft Defender for Business (preview)](get-defender-business.md)
+- [Get Microsoft Defender for Business](get-defender-business.md)
 
-- [Learn how to set up and configure Microsoft Defender for Business (preview)](mdb-setup-configuration.md) 
+- [Learn how to set up and configure Microsoft Defender for Business](mdb-setup-configuration.md) 
