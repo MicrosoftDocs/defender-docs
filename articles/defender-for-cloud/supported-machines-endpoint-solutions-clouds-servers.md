@@ -1,8 +1,8 @@
 ---
-title: Microsoft Defender for Cloud's features according to OS, machine type, and cloud
-description: Learn about the availability of Microsoft Defender for Cloud features according to OS, machine type, and cloud deployment.
+title: Microsoft Defender for Cloud's servers features according to OS, machine type, and cloud
+description: Learn about the availability of Microsoft Defender for Cloud's servers features according to OS, machine type, and cloud deployment.
 ms.topic: overview
-ms.date: 02/01/2022
+ms.date: 03/08/2022
 ms.custom: references_regions
 ---
 
@@ -32,11 +32,11 @@ The **tabs** below show the features of Microsoft Defender for Cloud that are av
 | [Docker host hardening](./harden-docker-hosts.md)                                                                                 | -                                                                                                               | -                                    | -                              | Yes                                     |
 | Missing OS patches assessment                                                                                                     | ✔                                                                                                              | ✔                                    | ✔                             | Azure: No<br><br>Azure Arc-enabled: Yes |
 | Security misconfigurations assessment                                                                                             | ✔                                                                                                              | ✔                                    | ✔                             | Azure: No<br><br>Azure Arc-enabled: Yes |
-| [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds.md#supported-endpoint-protection-solutions-)        | ✔                                                                                                              | ✔                                    | ✔                             | Azure: No<br><br>Azure Arc-enabled: Yes |
+| [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions-)        | ✔                                                                                                              | ✔                                    | ✔                             | Azure: No<br><br>Azure Arc-enabled: Yes |
 | Disk encryption assessment                                                                                                        | ✔</br>(for [supported scenarios](../virtual-machines/windows/disk-encryption-windows.md#unsupported-scenarios)) | ✔                                    | -                              | No                                      |
 | Third-party vulnerability assessment                                                                                              | ✔                                                                                                              | -                                    | ✔                             | No                                      |
 | [Network security assessment](protect-network-resources.md)                                                                       | ✔                                                                                                              | ✔                                    | -                              | No                                      |
-|                                                                                                                                   |                                                                                                                 |                                      |                                |                                         |
+
 
 ### [**Linux machines**](#tab/features-linux)
 
@@ -56,36 +56,36 @@ The **tabs** below show the features of Microsoft Defender for Cloud that are av
 | [Docker host hardening](./harden-docker-hosts.md)                                                                                 | ✔                                                                                                              | ✔                                    | ✔                             | Yes                                     |
 | Missing OS patches assessment                                                                                                     | ✔                                                                                                              | ✔                                    | ✔                             | Azure: No<br><br>Azure Arc-enabled: Yes |
 | Security misconfigurations assessment                                                                                             | ✔                                                                                                              | ✔                                    | ✔                             | Azure: No<br><br>Azure Arc-enabled: Yes |
-| [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds.md#supported-endpoint-protection-solutions-)        | -                                                                                                               | -                                    | -                              | No                                      |
+| [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions-)        | -                                                                                                               | -                                    | -                              | No                                      |
 | Disk encryption assessment                                                                                                        | ✔</br>(for [supported scenarios](../virtual-machines/windows/disk-encryption-windows.md#unsupported-scenarios)) | ✔                                    | -                              | No                                      |
 | Third-party vulnerability assessment                                                                                              | ✔                                                                                                              | -                                    | ✔                             | No                                      |
 | [Network security assessment](protect-network-resources.md)                                                                       | ✔                                                                                                              | ✔                                    | -                              | No                                      |
-|                                                                                                                                   |                                                                                                                 |                                      |                                |                                         |
+
 
 
 ### [**Multi-cloud machines**](#tab/features-multi-cloud)
 
-| **Feature**                                                                                                                       | **Availability in AWS**                                                                                         |
-|-----------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------:|
-| [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md)                                               | ✔                                                                                                              |
-| [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md)                                                 | ✔                                                                                                              |
-| [Fileless security alerts](alerts-reference.md#alerts-windows)                                                                    | ✔                                                                                                              |
-| [Network-based security alerts](other-threat-protections.md#network-layer)                                                        | -                                                                                                               |
-| [Just-in-time VM access](just-in-time-access-usage.md)                                                                            | -                                                                                                               |
-| [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔                                                                                                              |
-| [File integrity monitoring](file-integrity-monitoring-overview.md)                                                                | ✔                                                                                                              |
-| [Adaptive application controls](adaptive-application-controls.md)                                                                 | ✔                                                                                                              |
-| [Network map](protect-network-resources.md#network-map)                                                                           | -                                                                                                               |
-| [Adaptive network hardening](adaptive-network-hardening.md)                                                                       | -                                                                                                               |
-| [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md)                                                   | ✔                                                                                                              |
-| [Docker host hardening](harden-docker-hosts.md)                                                                                   | ✔                                                                                                              |
-| Missing OS patches assessment                                                                                                     | ✔                                                                                                              |
-| Security misconfigurations assessment                                                                                             | ✔                                                                                                              |
-| [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds.md#supported-endpoint-protection-solutions-)        | ✔                                                                                                              |
-| Disk encryption assessment                                                                                                        | ✔</br>(for [supported scenarios](../virtual-machines/windows/disk-encryption-windows.md#unsupported-scenarios)) |
-| Third-party vulnerability assessment                                                                                              | -                                                                                                               |
-| [Network security assessment](protect-network-resources.md)                                                                       | -                                                                                                               |
-|                                                                                                                                   |                                                                                                                 |
+| **Feature** | **Availability in AWS** | **Availability in GCP** |
+|--|:-:|
+| [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔ | ✔ |
+| [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md) | ✔ | ✔ |
+| [Fileless security alerts](alerts-reference.md#alerts-windows) | ✔ | ✔ |
+| [Network-based security alerts](other-threat-protections.md#network-layer) | - | - |
+| [Just-in-time VM access](just-in-time-access-usage.md) | - | - |
+| [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ |
+| [File integrity monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ |
+| [Adaptive application controls](adaptive-application-controls.md) | ✔ | ✔ |
+| [Network map](protect-network-resources.md#network-map) | - | - |
+| [Adaptive network hardening](adaptive-network-hardening.md) | - | - |
+| [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ |
+| [Docker host hardening](harden-docker-hosts.md) | ✔ | ✔ |
+| Missing OS patches assessment | ✔ | ✔ |
+| Security misconfigurations assessment | ✔ | ✔ |
+| [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions-) | ✔ | ✔ |
+| Disk encryption assessment | ✔</br>(for [supported scenarios](../virtual-machines/windows/disk-encryption-windows.md#unsupported-scenarios)) | ✔</br>(for [supported scenarios](../virtual-machines/windows/disk-encryption-windows.md#unsupported-scenarios)) |
+| Third-party vulnerability assessment | - | - |
+| [Network security assessment](protect-network-resources.md) | - | - |
+
 
 --- 
 
@@ -109,7 +109,7 @@ For information about when recommendations are generated for each of these solut
 | McAfee v10+                                                         | Linux (GA)                   | No                              |
 | Microsoft Defender for Endpoint for Linux<sup>[1](#footnote1)</sup> | Linux (GA)                   | Via extension                   |
 | Sophos V9+                                                          | Linux (GA)                   | No                              |
-|                                                                     |                              |                                 |
+
 
 <sup><a name="footnote1"></a>1</sup> It's not enough to have Microsoft Defender for Endpoint on the Linux machine: the machine will only appear as healthy if the always-on scanning feature (also known as real-time protection (RTP)) is active. By default, the RTP feature is **disabled** to avoid clashes with other AV software.
 
@@ -145,7 +145,7 @@ For information about when recommendations are generated for each of these solut
 | - [Microsoft Defender for Key Vault](./defender-for-key-vault-introduction.md)                                                                                | GA             | Not Available                  | Not Available                  |
 | - [Microsoft Defender for Resource Manager](./defender-for-resource-manager-introduction.md)                                                                  | GA             | GA                             | GA                             |
 | - [Microsoft Defender for Storage](./defender-for-storage-introduction.md) <sup>[6](#footnote6)</sup>                                                         | GA             | GA                             | Not Available                  |
-| - [Threat protection for Cosmos DB](./other-threat-protections.md#threat-protection-for-azure-cosmos-db-preview)                                              | Public Preview | Not Available                  | Not Available                  |
+| - [Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md)                                              | Public Preview | Not Available                  | Not Available                  |
 | - [Kubernetes workload protection](./kubernetes-workload-protections.md)                                                                                      | GA             | GA                             | GA                             |
 | - [Bi-directional alert synchronization with Sentinel](../sentinel/connect-azure-security-center.md)                                                          | Public Preview | Not Available                  | Not Available                  |
 | **Microsoft Defender for servers features** <sup>[7](#footnote7)</sup>                                                                                        |                |                                |                                |
@@ -158,8 +158,8 @@ For information about when recommendations are generated for each of these solut
 | - [Regulatory compliance dashboard & reports](./regulatory-compliance-dashboard.md) <sup>[8](#footnote8)</sup>                                                | GA             | GA                             | GA                             |
 | - [Microsoft Defender for Endpoint deployment and integrated license](./integration-defender-for-endpoint.md)                                                 | GA             | GA                             | Not Available                  |
 | - [Connect AWS account](./quickstart-onboard-aws.md)                                                                                                          | GA             | Not Available                  | Not Available                  |
-| - [Connect GCP account](./quickstart-onboard-gcp.md)                                                                                                          | GA             | Not Available                  | Not Available                  |
-|                                                                                                                                                               |                |                                |                                |
+| - [Connect GCP project](./quickstart-onboard-gcp.md)                                                                                                          | GA             | Not Available                  | Not Available                  |
+
 
 <sup><a name="footnote1"></a>1</sup> Partially GA: The ability to disable specific findings from vulnerability scans is in public preview.
 
