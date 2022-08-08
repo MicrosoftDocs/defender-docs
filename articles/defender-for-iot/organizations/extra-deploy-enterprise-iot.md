@@ -82,4 +82,8 @@ Wait 1 minute after your sensor installation has completed before starting this 
 
     Check the results to ensure that packets are being sent as expected.
 
+## Next steps
+
+For more information, see [Tutorial: Get started with Enterprise IoT monitoring](tutorial-getting-started-eiot-sensor.md) and [Manage sensors with Defender for IoT in the Azure portal](how-to-manage-sensors-on-the-cloud.md).
+
 <!--for example?-->
