@@ -2,7 +2,6 @@
 title: Track and respond to emerging security threats with campaigns view in Microsoft Defender for Office 365
 description: Walkthrough of threat campaigns within Microsoft Defender for Office 365 to demonstrate how they can be used to investigate a coordinated email attack against your organization.
 search.product: 
-search.appverid: 
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -17,6 +16,7 @@ audience: ITPro
 ms.collection: m365-guidance-templates
 ms.topic: how-to
 ms.technology: mdo
+search.appverid: met150
 ---
 
 # Track and respond to emerging threats with campaigns in Microsoft Defender for Office 365
@@ -56,7 +56,7 @@ In the event that a campaign has targeted your organization and you’d like to 
 1. Upon the flyout opening, select **Download threat report**.
 1. Open the threat report and it will provide more information surrounding the campaign. The information in the report includes: 
 - **Executive summary:** High-level summary of the type of campaign and the number of users targeted in your organization. 
-- **Analysis:** Timeline chart of when the campaign started, the count of messages targetting your organization, and the destination and verdicts of the messages. 
+- **Analysis:** Timeline chart of when the campaign started, the count of messages targeting your organization, and the destination and verdicts of the messages. 
 - **Attack origin:** Top sending IP addresses and domains with a count of messages that were delivered to inboxes in your organization. This allows you to investigate who is targeting your organization. 
 - **Email template and payload:** The subject line of the emails that were part of the campaign and URLs (and their frequency) present as part of the campaign.
 - **Recommendations:** Recommendations for next steps to remediate messages.
