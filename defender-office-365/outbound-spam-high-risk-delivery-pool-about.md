@@ -37,11 +37,11 @@ These scenarios can result in the IP address of the affected Microsoft 365 datac
 
 To prevent our IP addresses from being blocked, all outbound messages from Microsoft 365 datacenter servers that are determined to be spam are sent through the _high-risk delivery pool_.
 
-The high risk delivery pool is a separate IP address pool for outbound email that's only used to send "low quality" messages (for example, spam and [backscatter](backscatter-messages-and-eop.md). Using the high risk delivery pool helps prevent the normal IP address pool for outbound email from sending spam. The normal IP address pool for outbound email maintains the reputation sending "high quality" messages, which reduces the likelihood that these IP address will appear on IP blocklists.
+The high risk delivery pool is a separate IP address pool for outbound email that's only used to send "low quality" messages (for example, spam and [backscatter](anti-spam-backscatter-about.md). Using the high risk delivery pool helps prevent the normal IP address pool for outbound email from sending spam. The normal IP address pool for outbound email maintains the reputation sending "high quality" messages, which reduces the likelihood that these IP address will appear on IP blocklists.
 
 The very real possibility that IP addresses in the high-risk delivery pool will be placed on IP blocklists remains, but this is by design. Delivery to the intended recipients isn't guaranteed, because many email organizations won't accept messages from the high risk delivery pool.
 
-For more information, see [Control outbound spam](outbound-spam-controls.md).
+For more information, see [Control outbound spam](outbound-spam-protection-about.md).
 
 > [!NOTE]
 > Messages where the source email domain has no A record and no MX record defined in public DNS are always routed through the high-risk delivery pool, regardless of their spam or sending limit disposition.
@@ -49,7 +49,7 @@ For more information, see [Control outbound spam](outbound-spam-controls.md).
 > Messages that exceed the following limits are blocked, so they aren't sent through the high-risk delivery pool:
 >
 > - The [sending limits of the service](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options).
-> - [Outbound spam policies](configure-the-outbound-spam-policy.md) where the senders are restricted from sending mail.
+> - [Outbound spam policies](outbound-spam-policies-configure.md) where the senders are restricted from sending mail.
 
 ### Bounce messages
 
@@ -62,7 +62,7 @@ Possible causes for a surge in NDRs include:
 - A spam attack.
 - A rogue email server.
 
-All of these issues can result in a sudden increase in the number of NDRs being processed by the service. Many times, these NDRs appear to be spam to other email servers and services (also known as _[backscatter](backscatter-messages-and-eop.md)_).
+All of these issues can result in a sudden increase in the number of NDRs being processed by the service. Many times, these NDRs appear to be spam to other email servers and services (also known as _[backscatter](anti-spam-backscatter-about.md)_).
 
 ### Relay pool
 
