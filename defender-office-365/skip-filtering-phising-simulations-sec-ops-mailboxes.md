@@ -25,7 +25,7 @@ ms.service: microsoft-365-security
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Applies to**
-- [Exchange Online Protection](exchange-online-protection-overview.md)
+- [Exchange Online Protection](eop-about.md)
 - [Microsoft Defender for Office 365 plan 1 and plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
@@ -41,10 +41,10 @@ You use the _advanced delivery policy_ in Microsoft 365 to prevent inbound messa
 - [Default system alerts](/microsoft-365/compliance/alert-policies#default-alert-policies) aren't triggered for these scenarios.
 - [AIR and clustering in Defender for Office 365](office-365-air.md) ignores these messages.
 - Specifically for third-party phishing simulations:
-  - [Admin submissions](admin-submission.md) generates an automatic response saying that the message is part of a phishing simulation campaign and isn't a real threat. Alerts and AIR will not be triggered. The admin submissions experience will show these messages as a simulated threat.
-  - When a user reports a phishing simulation message using the [Report Message or the Report Phishing add-ins](enable-the-report-message-add-in.md), the system will not generate an alert, investigation, or incident. The links or files will not be detonated, but the message will appear on the **User reported messages** tab of the **Submissions** page.
-  - [Safe Links in Defender for Office 365](safe-links.md) doesn't block or detonate the specifically identified URLs in these messages at time of click. URLs are still wrapped, but they aren't blocked.
-  - [Safe Attachments in Defender for Office 365](safe-attachments.md) doesn't detonate attachments in these messages.
+  - [Admin submissions](submissions-admin.md) generates an automatic response saying that the message is part of a phishing simulation campaign and isn't a real threat. Alerts and AIR will not be triggered. The admin submissions experience will show these messages as a simulated threat.
+  - When a user reports a phishing simulation message using the [built-in Report button in Outlook on the web](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook-on-the-web) or the [Microsoft Report Message or Report Phishing add-ins](submissions-outlook-report-messages.md#use-the-report-message-and-report-phishing-add-ins-in-outlook), the system will not generate an alert, investigation, or incident. The links or files will not be detonated, but the message will appear on the **User reported** tab of the **Submissions** page.
+  - [Safe Links in Defender for Office 365](safe-links-about.md) doesn't block or detonate the specifically identified URLs in these messages at time of click. URLs are still wrapped, but they aren't blocked.
+  - [Safe Attachments in Defender for Office 365](safe-attachments-about.md) doesn't detonate attachments in these messages.
 
 <sup>\*</sup> You can't bypass malware filtering.
 
@@ -52,9 +52,9 @@ You use the _advanced delivery policy_ in Microsoft 365 to prevent inbound messa
 
 Messages that are identified by the advanced delivery policy aren't security threats, so the messages are marked with system overrides. Admin experiences will show these messages as due to either a **Phishing simulation** system override or a **SecOps mailbox** system override. Admins can filter and analyze on these system overrides in the following experiences:
 
-- [Threat Explorer/Real-time detections in Defender for Office 365 plan 2](threat-explorer.md): Admin can filter on **System override source** and select either **Phishing simulation** or **SecOps Mailbox**.
+- [Threat Explorer/Real-time detections in Defender for Office 365 plan 2](threat-explorer-about.md): Admin can filter on **System override source** and select either **Phishing simulation** or **SecOps Mailbox**.
 - The [Email entity Page in Threat Explorer/Real-time detections](mdo-email-entity-page.md): Admin can view a message that was allowed by organization policy by either **SecOps mailbox** or **Phishing simulation** under **Tenant override** in the **Override(s)** section.
-- The [Threat protection status report](view-email-security-reports.md#threat-protection-status-report): Admin can filter by **view data by System override** in the drop down menu and select to see messages allowed due to a phishing simulation system override. To see messages allowed by the SecOps mailbox override, you can select **chart breakdown by delivery location** in the **chart breakdown by reason** drop down menu.
+- The [Threat protection status report](reports-email-security.md#threat-protection-status-report): Admin can filter by **view data by System override** in the drop down menu and select to see messages allowed due to a phishing simulation system override. To see messages allowed by the SecOps mailbox override, you can select **chart breakdown by delivery location** in the **chart breakdown by reason** drop down menu.
 - [Advanced hunting in Microsoft Defender for Endpoint](../defender-endpoint/advanced-hunting-overview.md): Phishing simulation and SecOps mailbox system overrides will show as options within OrgLevelPolicy in EmailEvents.
 - [Campaign Views](campaigns.md): Admin can filter on **System override source** and select either **Phishing simulation** or **SecOps Mailbox**.
 
@@ -68,7 +68,7 @@ Messages that are identified by the advanced delivery policy aren't security thr
   - To create, modify, or remove configured settings in the advanced delivery policy, you need to be a member of the **Security Administrator** role group in the **Microsoft 365 Defender portal** and a member of the **Organization Management** role group in **Exchange Online**.
   - For read-only access to the advanced delivery policy, you need to be a member of the **Global Reader** or **Security Reader** role groups.
 
-  For more information, see [Permissions in the Microsoft 365 Defender portal](permissions-microsoft-365-security-center.md) and [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
+  For more information, see [Permissions in the Microsoft 365 Defender portal](mdo-portal-permissions.md) and [Permissions in Exchange Online](/exchange/permissions-exo/permissions-exo).
 
   > [!NOTE]
   > Adding users to the corresponding Azure Active Directory role gives users the required permissions in the Microsoft 365 Defender portal _and_ permissions for other features in Microsoft 365. For more information, see [About admin roles](../../admin/add-users/about-admin-roles.md).
@@ -127,7 +127,7 @@ The SecOps mailbox entries that you configured are displayed on the **SecOps mai
      - IP range: For example, 192.168.0.1-192.168.0.254.
      - CIDR IP: For example, 192.168.0.1/25.
 
-   - **Simulation URLs to allow**: Expand this setting and optionally enter specific URLs that are part of your phishing simulation campaign that should not be blocked or detonated by clicking in the box, entering a value, and then pressing Enter or selecting the value that's displayed below the box. You can add up to 10 entries. For the URL syntax format, see [URL syntax for the Tenant Allow/Block List](allow-block-urls.md#url-syntax-for-the-tenant-allowblock-list). These URLs are wrapped at the time of click, but they aren't blocked.
+   - **Simulation URLs to allow**: Expand this setting and optionally enter specific URLs that are part of your phishing simulation campaign that should not be blocked or detonated by clicking in the box, entering a value, and then pressing Enter or selecting the value that's displayed below the box. You can add up to 10 entries. For the URL syntax format, see [URL syntax for the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md#url-syntax-for-the-tenant-allowblock-list). These URLs are wrapped at the time of click, but they aren't blocked.
 
    To remove an existing value, click remove ![Remove icon.](../../media/m365-cc-sc-remove-selection-icon.png) next to the value.
 
@@ -167,7 +167,7 @@ In addition to the two scenarios that the advanced delivery policy can help you 
 
 - **Third-party filters**: If your domain's MX record _doesn't_ point to Office 365 (messages are routed somewhere else first), [secure by default](secure-by-default.md) _is not available_. If you'd like to add protection, you'll need to enable Enhanced Filtering for Connectors (also known as _skip listing_). For more information, see [Manage mail flow using a third-party cloud service with Exchange Online](/exchange/mail-flow-best-practices/manage-mail-flow-using-third-party-cloud). If you don't want Enhanced Filtering for Connectors, use mail flow rules (also known as transport rules) to bypass Microsoft filtering for messages that have already been evaluated by third-party filtering. For more information, see [Use mail flow rules to set the SCL in messages](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
 
-- **False positives under review**: You might want to temporarily allow certain messages that are still being analyzed by Microsoft via [admin submissions](admin-submission.md) to report known good messages that are incorrectly being marked as bad to Microsoft (false positives). As with all overrides, we _**highly recommended**_ that these allowances are temporary.
+- **False positives under review**: You might want to temporarily allow certain messages that are still being analyzed by Microsoft via [admin submissions](submissions-admin.md) to report known good messages that are incorrectly being marked as bad to Microsoft (false positives). As with all overrides, we _**highly recommended**_ that these allowances are temporary.
 
 ## PowerShell procedures for SecOps mailboxes in the advanced delivery policy
 
@@ -371,7 +371,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 New-TenantAllowBlockListItems -Allow -ListType Url -ListSubType AdvancedDelivery -Entries "<URL1>","<URL2>",..."<URL10>" <[-NoExpiration] | [-ExpirationDate <DateTime>]>
 ```
 
-For details about the URL syntax, see [URL syntax for the Tenant Allow/Block List](allow-block-urls.md#url-syntax-for-the-tenant-allowblock-list)
+For details about the URL syntax, see [URL syntax for the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md#url-syntax-for-the-tenant-allowblock-list)
 
 This example adds a URL allow entry for the specified third-party phishing simulation URL with no expiration.
 
