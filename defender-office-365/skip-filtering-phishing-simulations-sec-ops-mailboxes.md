@@ -5,7 +5,6 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: dansimp
-ms.date:
 audience: ITPro
 ms.topic: how-to
 
@@ -18,6 +17,7 @@ ms.custom:
 description: Admins can learn how to use the advanced delivery policy in Exchange Online Protection (EOP) to identify messages that should not be filtered in specific supported scenarios (third-party phishing simulations and messages delivered to security operations (SecOps) mailboxes.
 ms.subservice: mdo
 ms.service: microsoft-365-security
+ms.date: 12/20/2022
 ---
 
 # Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes
@@ -39,7 +39,7 @@ You use the _advanced delivery policy_ in Microsoft 365 to prevent inbound messa
 - Filters in EOP and Microsoft Defender for Office 365 take no action on these messages.<sup>\*</sup>
 - [Zero-hour Purge (ZAP)](zero-hour-auto-purge.md) for spam and phishing take no action on these messages<sup>\*\*</sup>.
 - [Default system alerts](/microsoft-365/compliance/alert-policies#default-alert-policies) aren't triggered for these scenarios.
-- [AIR and clustering in Defender for Office 365](office-365-air.md) ignores these messages.
+- [AIR and clustering in Defender for Office 365](air-about.md) ignores these messages.
 - Specifically for third-party phishing simulations:
   - [Admin submissions](submissions-admin.md) generates an automatic response saying that the message is part of a phishing simulation campaign and isn't a real threat. Alerts and AIR will not be triggered. The admin submissions experience will show these messages as a simulated threat.
   - When a user reports a phishing simulation message using the [built-in Report button in Outlook on the web](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook-on-the-web) or the [Microsoft Report Message or Report Phishing add-ins](submissions-outlook-report-messages.md#use-the-report-message-and-report-phishing-add-ins-in-outlook), the system will not generate an alert, investigation, or incident. The links or files will not be detonated, but the message will appear on the **User reported** tab of the **Submissions** page.
@@ -48,7 +48,7 @@ You use the _advanced delivery policy_ in Microsoft 365 to prevent inbound messa
 
 <sup>\*</sup> You can't bypass malware filtering.
 
-<sup>\*\*</sup> You can bypass ZAP for malware by creating an anti-malware policy for the SecOps mailbox where ZAP for malware is turned off. For instructions, see [Configure anti-malware policies in EOP](configure-anti-malware-policies.md).
+<sup>\*\*</sup> You can bypass ZAP for malware by creating an anti-malware policy for the SecOps mailbox where ZAP for malware is turned off. For instructions, see [Configure anti-malware policies in EOP](anti-malware-policies-configure.md).
 
 Messages that are identified by the advanced delivery policy aren't security threats, so the messages are marked with system overrides. Admin experiences will show these messages as due to either a **Phishing simulation** system override or a **SecOps mailbox** system override. Admins can filter and analyze on these system overrides in the following experiences:
 
@@ -126,7 +126,7 @@ The SecOps mailbox entries that you configured are displayed on the **SecOps mai
      - IP range: For example, 192.168.0.1-192.168.0.254.
      - CIDR IP: For example, 192.168.0.1/25.
 
-   - **Simulation URLs to allow**: Expand this setting and optionally enter specific URLs that are part of your phishing simulation campaign that should not be blocked or detonated by clicking in the box, entering a value, and then pressing Enter or selecting the value that's displayed below the box. You can add up to 10 entries. For the URL syntax format, see [URL syntax for the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md#url-syntax-for-the-tenant-allowblock-list). These URLs are wrapped at the time of click, but they aren't blocked.
+   - **Simulation URLs to allow**: Expand this setting and optionally enter specific URLs that are part of your phishing simulation campaign that should not be blocked or detonated by clicking in the box, entering a value, and then pressing Enter or selecting the value that's displayed below the box. You can add up to 30 entries. For the URL syntax format, see [URL syntax for the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md#url-syntax-for-the-tenant-allowblock-list). These URLs are wrapped at the time of click, but they aren't blocked.
 
    To remove an existing value, click remove ![Remove icon.](../../media/m365-cc-sc-remove-selection-icon.png) next to the value.
 
@@ -143,6 +143,8 @@ The SecOps mailbox entries that you configured are displayed on the **SecOps mai
    > You can specify up to 10 entries for each field.
    >
    > There must be a match on at least one **Domain** and one **Sending IP**, but no association between values is maintained.
+   >
+   > If your MX record does not point to Microsoft 365, the IP address in the `Authentication-results` header must match the IP address in the advanced delivery policy. If the IP addresses don't match, you might need to configure [Enhanced Filtering for Connectors]/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) in order for the correct IP address to be detected.
 
 4. When you're finished, click **Add**, and then click **Close**.
 
