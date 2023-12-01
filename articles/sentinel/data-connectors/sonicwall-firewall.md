@@ -1,58 +1,56 @@
 ---
-title: "[Deprecated] Delinea Secret Server via Legacy Agent connector for Microsoft Sentinel"
-description: "Learn how to install the connector [Deprecated] Delinea Secret Server via Legacy Agent to connect your data source to Microsoft Sentinel."
+title: "SonicWall Firewall connector for Microsoft Sentinel"
+description: "Learn how to install the connector SonicWall Firewall to connect your data source to Microsoft Sentinel."
 author: cwatson-cat
 ms.topic: how-to
-ms.date: 10/23/2023
+ms.date: 11/29/2023
 ms.service: microsoft-sentinel
 ms.author: cwatson
 ---
 
-# [Deprecated] Delinea Secret Server via Legacy Agent connector for Microsoft Sentinel
+# SonicWall Firewall connector for Microsoft Sentinel
 
-Common Event Format (CEF) from Delinea Secret Server 
+Common Event Format (CEF) is an industry standard format on top of Syslog messages, used by SonicWall to allow event interoperability among different platforms. By connecting your CEF logs to Microsoft Sentinel, you can take advantage of search & correlation, alerting, and threat intelligence enrichment for each log.
 
 ## Connector attributes
 
 | Connector attribute | Description |
 | --- | --- |
-| **Log Analytics table(s)** | CommonSecurityLog(DelineaSecretServer)<br/> |
+| **Log Analytics table(s)** | CommonSecurityLog (SonicWall)<br/> |
 | **Data collection rules support** | [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal) |
-| **Supported by** | [Delinea](https://delinea.com/support/) |
+| **Supported by** | [SonicWall](https://www.sonicwall.com/support/) |
 
 ## Query samples
 
-**Get records create new secret**
+**All logs**
    ```kusto
 CommonSecurityLog
 
-   | where DeviceVendor == "Delinea Software" or DeviceVendor == "Thycotic Software"
+   | where DeviceVendor == "SonicWall"
 
-   | where DeviceProduct == "Secret Server"
-
-   | where Activity has "SECRET - CREATE"
+   | sort by TimeGenerated desc
    ```
 
-**Get records where view secret**
+**Summarize by destination IP and port**
    ```kusto
 CommonSecurityLog
 
-   | where DeviceVendor == "Delinea Software" or DeviceVendor == "Thycotic Software"
+   | where DeviceVendor == "SonicWall"
 
-   | where DeviceProduct == "Secret Server"
+   | summarize count() by DestinationIP, DestinationPort, TimeGenerated
 
-   | where Activity has "SECRET - VIEW"
+   | sort by TimeGenerated desc
    ```
 
+**Show all dropped traffic from the SonicWall Firewall**
+   ```kusto
+CommonSecurityLog
 
+   | where DeviceVendor == "SonicWall"
 
-## Prerequisites
+   | where AdditionalExtensions contains "fw_action='drop'"
+   ```
 
-To integrate with [Deprecated] Delinea Secret Server via Legacy Agent make sure you have: 
-
-- **Delinea Secret Server**: must be configured to export logs via Syslog 
-
-   [Learn more about configure Secret Server](https://thy.center/ss/link/syslog)
 
 
 ## Vendor installation instructions
@@ -77,11 +75,13 @@ Install the Microsoft Monitoring Agent on your Linux machine and configure the m
 
    Run the following command to install and apply the CEF collector:
 
-   `sudo wget https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/CEF/cef_installer.py&&sudo python cef_installer.py {0} {1}`
+  `sudo wget -O cef_installer.py https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/CEF/cef_installer.py&&sudo python cef_installer.py {0} {1}`
 
-2. Forward Common Event Format (CEF) logs to Syslog agent
+2. Forward SonicWall Firewall Common Event Format (CEF) logs to Syslog agent
 
-Set your security solution to send Syslog messages in CEF format to the proxy machine. Make sure you to send the logs to port 514 TCP on the machine's IP address.
+Set your SonicWall Firewall to send Syslog messages in CEF format to the proxy machine. Make sure you send the logs to port 514 TCP on the machine's IP address.
+
+ Follow Instructions . Then Make sure you select local use 4 as the facility. Then select ArcSight as the Syslog format.
 
 3. Validate connection
 
@@ -99,7 +99,7 @@ If the logs are not received, run the following connectivity validation script:
 
    Run the following command to validate your connectivity:
 
-   `sudo wget https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/CEF/cef_troubleshoot.py&&sudo python cef_troubleshoot.py  {0}`
+   `sudo wget -O cef_installer.py https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/CEF/cef_troubleshoot.py&&sudo python cef_troubleshoot.py  {0}`
 
 4. Secure your machine 
 
@@ -112,4 +112,4 @@ Make sure to configure the machine's security according to your organization's s
 
 ## Next steps
 
-For more information, go to the [related solution](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/delineainc1653506022260.delinea_secret_server_mss?tab=Overview) in the Azure Marketplace.
+For more information, go to the [related solution](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/sonicwall-inc.sonicwall-networksecurity-azure-sentinal?tab=Overview) in the Azure Marketplace.

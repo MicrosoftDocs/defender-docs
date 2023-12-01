@@ -1,14 +1,14 @@
 ---
-title: "[Deprecated] Morphisec UTPP via Legacy Agent connector for Microsoft Sentinel"
-description: "Learn how to install the connector [Deprecated] Morphisec UTPP via Legacy Agent to connect your data source to Microsoft Sentinel."
+title: "Morphisec UTPP connector for Microsoft Sentinel"
+description: "Learn how to install the connector Morphisec UTPP to connect your data source to Microsoft Sentinel."
 author: cwatson-cat
 ms.topic: how-to
-ms.date: 10/23/2023
+ms.date: 11/29/2023
 ms.service: microsoft-sentinel
 ms.author: cwatson
 ---
 
-# [Deprecated] Morphisec UTPP via Legacy Agent connector for Microsoft Sentinel
+# Morphisec UTPP connector for Microsoft Sentinel
 
 Integrate vital insights from your security products with the Morphisec Data Connector for Microsoft Sentinel and expand your analytical capabilities with search and correlation, threat intelligence, and customized alerts. Morphisec's Data Connector provides visibility into today's most advanced threats including sophisticated fileless attacks, in-memory exploits and zero days. With a single, cross-product view, you can make real-time, data-backed decisions to protect your most important assets
 
@@ -19,7 +19,7 @@ Integrate vital insights from your security products with the Morphisec Data Con
 | **Kusto function url** | https://aka.ms/sentinel-morphisecutpp-parser |
 | **Log Analytics table(s)** | CommonSecurityLog (Morphisec)<br/> |
 | **Data collection rules support** | [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal) |
-| **Supported by** | [Morphisec](https://support.morphisec.com/support/home) |
+| **Supported by** | [Morphisec](https://support.morphisec.com/hc/en-us) |
 
 ## Query samples
 
@@ -67,7 +67,7 @@ Install and configure the Linux agent to collect your Common Event Format (CEF) 
 
 1.1 Select or create a Linux machine
 
-Select or create a Linux machine that Microsoft Sentinel will use as the proxy between your security solution and Microsoft Sentinel this machine can be on your on-prem environment, Azure or other clouds.
+Select or create a Linux machine that Microsoft Sentinel will use as the proxy between your security solution and Microsoft Sentinel this machine can be on your on-premises environment, Azure or other clouds.
 
 1.2 Install the CEF collector on the Linux machine
 

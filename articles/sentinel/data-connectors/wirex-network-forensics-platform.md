@@ -1,54 +1,56 @@
 ---
-title: "[Deprecated] SonicWall Firewall via Legacy Agent connector for Microsoft Sentinel"
-description: "Learn how to install the connector [Deprecated] SonicWall Firewall via Legacy Agent to connect your data source to Microsoft Sentinel."
+title: "WireX Network Forensics Platform connector for Microsoft Sentinel"
+description: "Learn how to install the connector WireX Network Forensics Platform to connect your data source to Microsoft Sentinel."
 author: cwatson-cat
 ms.topic: how-to
-ms.date: 10/23/2023
+ms.date: 11/29/2023
 ms.service: microsoft-sentinel
 ms.author: cwatson
 ---
 
-# [Deprecated] SonicWall Firewall via Legacy Agent connector for Microsoft Sentinel
+# WireX Network Forensics Platform connector for Microsoft Sentinel
 
-Common Event Format (CEF) is an industry standard format on top of Syslog messages, used by SonicWall to allow event interoperability among different platforms. By connecting your CEF logs to Microsoft Sentinel, you can take advantage of search & correlation, alerting, and threat intelligence enrichment for each log.
+The WireX Systems data connector allows security professional to integrate with Microsoft Sentinel to allow you to further enrich your forensics investigations; to not only encompass the contextual content offered by WireX but to analyze data from other sources, and to create custom dashboards to give the most complete picture during a forensic investigation and to create custom workflows.
 
 ## Connector attributes
 
 | Connector attribute | Description |
 | --- | --- |
-| **Log Analytics table(s)** | CommonSecurityLog (SonicWall)<br/> |
+| **Log Analytics table(s)** | CommonSecurityLog (WireXNFPevents)<br/> |
 | **Data collection rules support** | [Workspace transform DCR](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal) |
-| **Supported by** | [SonicWall](https://www.sonicwall.com/support/) |
+| **Supported by** | [WireX Systems](https://wirexsystems.com/contact-us/) |
 
 ## Query samples
 
-**All logs**
+**All Imported Events from WireX**
    ```kusto
-CommonSecurityLog
+CommonSecurityLog 
+   | where DeviceVendor == "WireX"
 
-   | where DeviceVendor == "SonicWall"
-
-   | sort by TimeGenerated desc
    ```
 
-**Summarize by destination IP and port**
+**Imported DNS Events from WireX**
    ```kusto
 CommonSecurityLog
+   | where DeviceVendor == "WireX"
+ and ApplicationProtocol == "DNS"
 
-   | where DeviceVendor == "SonicWall"
-
-   | summarize count() by DestinationIP, DestinationPort, TimeGenerated
-
-   | sort by TimeGenerated desc
    ```
 
-**Show all dropped traffic from the SonicWall Firewall**
+**Imported DNS Events from WireX**
    ```kusto
 CommonSecurityLog
+   | where DeviceVendor == "WireX"
+ and ApplicationProtocol == "HTTP"
 
-   | where DeviceVendor == "SonicWall"
+   ```
 
-   | where AdditionalExtensions contains "fw_action='drop'"
+**Imported DNS Events from WireX**
+   ```kusto
+CommonSecurityLog
+   | where DeviceVendor == "WireX"
+ and ApplicationProtocol == "TDS"
+
    ```
 
 
@@ -77,11 +79,9 @@ Install the Microsoft Monitoring Agent on your Linux machine and configure the m
 
   `sudo wget -O cef_installer.py https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/CEF/cef_installer.py&&sudo python cef_installer.py {0} {1}`
 
-2. Forward SonicWall Firewall Common Event Format (CEF) logs to Syslog agent
+2. Forward Common Event Format (CEF) logs to Syslog agent
 
-Set your SonicWall Firewall to send Syslog messages in CEF format to the proxy machine. Make sure you send the logs to port 514 TCP on the machine's IP address.
-
- Follow Instructions . Then Make sure you select local use 4 as the facility. Then select ArcSight as the Syslog format.
+Contact WireX support (https://wirexsystems.com/contact-us/) in order to configure your NFP solution to send Syslog messages in CEF format to the proxy machine. Make sure that they central manager can send the logs to port 514 TCP on the machine's IP address.
 
 3. Validate connection
 
@@ -99,7 +99,7 @@ If the logs are not received, run the following connectivity validation script:
 
    Run the following command to validate your connectivity:
 
-   `sudo wget -O cef_installer.py https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/CEF/cef_troubleshoot.py&&sudo python cef_troubleshoot.py  {0}`
+   `sudo wget -O cef_troubleshoot.py https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/DataConnectors/CEF/cef_troubleshoot.py&&sudo python cef_troubleshoot.py  {0}`
 
 4. Secure your machine 
 
@@ -112,4 +112,4 @@ Make sure to configure the machine's security according to your organization's s
 
 ## Next steps
 
-For more information, go to the [related solution](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/sonicwall-inc.sonicwall-networksecurity-azure-sentinal?tab=Overview) in the Azure Marketplace.
+For more information, go to the [related solution](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/wirexsystems1584682625009.wirex_network_forensics_platform_mss?tab=Overview) in the Azure Marketplace.
