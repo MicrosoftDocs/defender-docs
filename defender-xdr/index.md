@@ -1,16 +1,24 @@
-### YamlMime:Hub 
+### YamlMime:Hub
+
 title: Microsoft Defender XDR documentation
-summary: "Official product documentation for Microsoft Defender XDR"
+summary: Explore the Microsoft Defender XDR product and services available for your business or organization. 
+
 metadata:
-   ms.topic: hub-page
-   ms.service: defender-xdr
-   ms.localizationpriority: high
-   ms.date: 12/14/2023
-highlightedContent: 
+  title: Microsoft Defender XDR documentation
+  description: Explore the Microsoft Defender XDR product and services available for your business or organization. 
+  ms.service: defender-xdr 
+  ms.topic: hub-page 
+  ms.custom: intro-hub-or-landing
+  author: dansimp 
+  ms.author: dansimp 
+  ms.date: 01/01/2023
+  ms.localizationpriority: high
 
+# highlightedContent section (optional)
+# Maximum of 8 items
+highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
-
-  items: 
+  items:
     - title: Get Started
       itemType: get-started
       url: /microsoft-365/security/defender/get-started.md
