@@ -43,6 +43,18 @@ conceptualContent:
             itemType: overview
             text: Hunt for threats in Defender XDR
 
+        - title: Settings and configurations for Defender XDR
+          links: 
+          - url: /microsoft-365/security/defender/mto-overview.md
+            itemType: overview
+            text: Multi-tenant management in Defender XDR
+          - url: /microsoft-365/security/defender/manage-rbac.md
+            itemType: overview
+            text: Microsoft Defender XDR Unified role-based access control
+          - url: /microsoft-365/security/defender/api-overview.md
+            itemType: overview
+            text: Microsoft Defender XDR APIs
+
         - title: Related Microsoft Defender products
           links:
           - url: /microsoft-365/security/defender-endpoint
