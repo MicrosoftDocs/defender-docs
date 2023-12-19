@@ -19,10 +19,10 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   items:
-    - title: Get Started
+    - title: Get Started with Defender XDR
       itemType: get-started
       url: /microsoft-365/security/defender/get-started.md
-    - title: What's new
+    - title: What's new in Defender XDR
       itemType: whats-new
       url: /microsoft-365/security/defender/whats-new.md
     - title: Respond to your first incident in Defender XDR
@@ -38,11 +38,16 @@ conceptualContent:
           links:
           - url: /microsoft-365/security/defender/incidents-overview.md
             itemType: overview
-            text: Microsoft Defender XDR
+            text: View and manage security incidents in Defender XDR
           - url: /microsoft-365/security/defender/advanced-hunting-overview
             itemType: overview
-            text: Hunt for threats in Defender XDR
-
+            text: Hunt for threats with Defender XDR
+          - url: /microsoft-365/security/defender/m365d-autoir
+            itemType: overview
+            text: Automated investigation and self-healing
+          - url: /microsoft-365/security/defender/automatic-attack-disruption
+            itemType: overview
+            text: Automatic investigation and remediation with Defender XDR
         - title: Settings and configurations for Defender XDR
           links: 
           - url: /microsoft-365/security/defender/mto-overview.md
@@ -55,7 +60,7 @@ conceptualContent:
             itemType: overview
             text: Microsoft Defender XDR APIs
 
-        - title: Related Microsoft Defender products
+        - title: Microsoft Defender products
           links:
           - url: /microsoft-365/security/defender-endpoint
             itemType: overview
