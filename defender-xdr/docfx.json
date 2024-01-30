@@ -45,7 +45,9 @@
       "breadcrumb_path": "/defender-xdr/breadcrumb/toc.json",
       "feedback_system": "Standard",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/MicrosoftThreatProtection"
-      "permissioned-type": "public"
+      "permissioned-type": "public",
+      "searchScope": ["Defender XDR"],
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
     },
     "template": [],
     "dest": "defender-xdr"
