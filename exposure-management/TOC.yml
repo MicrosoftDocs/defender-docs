@@ -83,15 +83,15 @@
        - name: Defender for Cloud Apps
          href: /cloud-app-security
        - name: Defender for Business
-         href: ../defender-business/index.yml
+         href: /microsoft-365/security/defender/defender-business/index.yml
        - name: Defender Vulnerability Management
-         href: ../defender-vulnerability-management/index.yml
+         href: /microsoft-365/security/defender/defender-vulnerability-management/index.yml
     - name: Related products
       items:
       - name: Defender for Cloud
-        href: ../defender-vulnerability-management/index.yml
+        href: /microsoft-365/security/defender/defender-vulnerability-management/index.yml
       - name: Entra  
-        href: ../defender-vulnerability-management/index.yml 
+        href: /microsoft-365/security/defender/defender-vulnerability-management/index.yml 
     - name: Extra 
       items:
        - name: Microsoft Security Exposure Management in Microsoft Defender portal
