@@ -1,2 +1,126 @@
-- name: Index
-  href: index.md
+- name: Microsoft Security Exposure Management
+  href: index.yml
+  expanded: true
+  items: 
+    - name: Overview
+      items:
+      - name: What is Microsoft Security Exposure Management
+        href: microsoft-security-exposure-management.md
+      - name: What is security exposure management
+        href: get-to-know-exposure-management.md     
+      - name: What is the difference between Secure Score and Microsoft Security Exposure Management
+        href: compare-secure-score-security-exposure-management.md      
+    - name: Get Started
+      items:
+      - name: Prerequisites and support
+        href: prerequisites.md
+      - name: Get started with Microsoft Security Exposure Management
+        href: get-started-exposure-management.md
+      - name: Review organizational exposure
+        href: review-organizational-exposure.md
+    - name: Explore cross-workload attack surfaces
+      items:
+      - name: Overview
+        href: cross-workload-attack-surfaces.md
+      - name: Schemas and operators overview
+        href: schemas-operators.md
+      - name: Query the enterprise exposure graph
+        href: query-enterprise-exposure-graph.md
+      - name: Explore with the attack surface map
+        href: enterprise-exposure-map.md    
+    - name: Identify and manage critical assets
+      items:
+      - name: Overview
+        href: critical-asset-management.md
+      - name: Classify assets as critical
+        href: classify-critical-assets.md  
+    - name: Work with attack paths
+      items:      
+        - name: Overview
+          href: work-attack-paths-overview.md
+        - name: Review attack paths
+          href: review-attack-paths.md    
+        - name: Mitigate attack paths
+          href: attack-paths-analysis-remediation.md    
+    - name: Improve security insights with exposure insights
+      items:
+        - name: Overview
+          href: exposure-insights-overview.md    
+        - name: Secure score for Security Exposure Management
+          href: secure-score.md
+        - name: Review security initiatives
+          href: initiatives.md
+        - name: Investigate initiative metrics
+          href: security-metrics.md
+        - name: Review security recommendations
+          href: security-recommendations.md
+        - name: Explore security events
+          href: security-events.md 
+    - name: Review non-Microsoft data connectors
+      href: data-connectors.md
+    - name: Reference information
+      items:
+      - name: Microsoft Security Exposure Management APIs
+        items:
+          - name: Attack surface management APIs
+            items:
+            - name: Critical asset management API
+              href: microsoft-security-exposure-management.md
+      - name: Support
+        href: microsoft-security-exposure-management.md
+      - name: Troubleshooting
+        href: microsoft-security-exposure-management.md
+    - name: Microsoft Defender XDR docs
+      items: 
+       - name: Microsoft Defender XDR
+         href: /microsoft-365/security/defender/index.yml
+       - name: Defender for Office 365
+         href: /microsoft-365/security/defender/office-365-security/index.yml
+       - name: Defender for Endpoint
+         href: /microsoft-365/security/defender-endpoint/index.yml
+       - name: Defender for Identity
+         href: /defender-for-identity
+       - name: Defender for Cloud Apps
+         href: /cloud-app-security
+       - name: Defender for Business
+         href: /microsoft-365/security/defender/defender-business/index.yml
+       - name: Defender Vulnerability Management
+         href: /microsoft-365/security/defender/defender-vulnerability-management/index.yml
+    - name: Related products
+      items:
+      - name: Defender for Cloud
+        href: /microsoft-365/security/defender/defender-vulnerability-management/index.yml
+      - name: Entra  
+        href: /microsoft-365/security/defender/defender-vulnerability-management/index.yml 
+    - name: Extra 
+      items:
+       - name: Microsoft Security Exposure Management in Microsoft Defender portal
+         href: microsoft-security-exposure-management.md
+       - name: Delegating metrics and recommendations
+         href: delegate-metrics-recommendations.md
+       - name: Identify and investigate attack paths
+         href: attack-paths-analysis-remediation.md
+       - name: Explore attack surface
+         items:
+         - name: Overview
+           href: attack-surface-management-overview.md
+         - name: Attack surface in advanced hunting
+           href: microsoft-security-exposure-management.md    
+       - name: Identify risk and exposure across your organization
+         items:
+         - name: Overview
+           href: identify-risk-exposure-overview.md
+       - name: Estimate overall risk and exposure
+         items:
+          - name: Estimate overall risk and exposure overview
+            href: estimate-overall-risk-exposure-overview.md 
+          - name: Customize exposure management tools
+            href: customization.md              
+       - name: Track exposure over time
+         items:
+          - name: Overview
+            href: track-exposure-over-time-overview.md
+          - name: Track exposure management history
+            href: history.md
+
+      
