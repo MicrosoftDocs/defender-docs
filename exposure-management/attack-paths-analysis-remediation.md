@@ -1,17 +1,17 @@
 ---
-title: Mitigate attack paths
-description: This article describes how Microsoft Exposure Management's attack paths analysis and remediation works.
+title: Mitigate attack paths in Microsoft Security Exposure Management
+description: This article describes how attack path analysis works in Microsoft Security Exposure Management.
 ms.author: v-mjosephy
 author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 11/28/2023
+ms.date: 02/28/2024
 ---
 
 # Mitigate attack paths
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes/prerelease.md)]
 <!--the text here is mostly what is in the overview-->
 Once you identify potential attack paths, you want to reduce the risk of their use. To remediate and minimize your risk from attack paths, you will:
 
@@ -33,7 +33,7 @@ For more information about how to use the exposure map, see [Explore with the at
 <!-->
 Attack paths provide the means to proactively identify and visualize potential threats so you can investigate and remediate the potential threats. You can do so from [Attack paths](https://security.microsoft.com/attack-paths) in the [Microsoft Defender portal](https://security.microsoft.com/) or by selecting **Attack surface -> Attack path**.
 
-:::image type="content" source="../../media/security-exposure-management/attack-paths.png" alt-text="Screenshot of the attack path window":::
+:::image type="content" source="./media/security-exposure-management/attack-paths.png" alt-text="Screenshot of the attack path window":::
 
 Attack path analysis and remediation:
 
@@ -44,7 +44,7 @@ Attack path analysis and remediation:
 
 You can select an attack path to see the related Graph and Recommendations in a side pane:
 -->
-:::image type="content" source="../../media/security-exposure-management/attack-paths-graph-recommendations.png" alt-text="Screenshot of attack paths graph and recommendations":::
+:::image type="content" source="./media/security-exposure-management/attack-paths-graph-recommendations.png" alt-text="Screenshot of attack paths graph and recommendations":::
 
 <!-- 
 <!-- can you only see these recommendations once there is an attack path?
@@ -59,5 +59,5 @@ For more information, see:
 
 - [Attack surface management overview](attack-surface-management-overview.md)
 - [Critical asset management](critical-asset-management.md)
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes/support.md)]
 
