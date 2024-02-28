@@ -13,7 +13,7 @@ ms.date: 11/28/2023
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-This section provides an overview of how to manage, visualize, and analyze cross-workload attack surfaces using the enterprise exposure graph. The exposure graph schemas are made up of multiple tables that provide either event information or information about devices, alerts, identities, and other entity types. The enterprise exposure graph and the exposure graph schemas extend [advanced hunting schemas](../defender/advanced-hunting-overview.md) which support a query-based threat hunting tool. Queries cross an advanced hunting schema that’s made up of multiple tables that provide event information, or information about entities such as devices, alerts, and identities. Microsoft Security Exposure Management extends the schema with enterprise exposure graph schemas and operators and the exposure map to visualize your data. These tools allow you to inspect and search attack surface data and retrieve exposure information to help prevent risk.
+This section provides an overview of how to manage, visualize, and analyze cross-workload attack surfaces using the enterprise exposure graph. The exposure graph schemas are made up of multiple tables that provide either event information or information about devices, alerts, identities, and other entity types. The enterprise exposure graph and the exposure graph schemas extend [advanced hunting schemas](/microsoft-365/security/defender/advanced-hunting-overview.md) which support a query-based threat hunting tool. Queries cross an advanced hunting schema that’s made up of multiple tables that provide event information, or information about entities such as devices, alerts, and identities. Microsoft Security Exposure Management extends the schema with enterprise exposure graph schemas and operators and the exposure map to visualize your data. These tools allow you to inspect and search attack surface data and retrieve exposure information to help prevent risk.
 
 ## Enterprise graph schema
 
@@ -35,7 +35,7 @@ The Attack surface map (enterprise exposure map), gives you a way to visualize t
 
 ## Schema and operators
 
-The enterprise exposure graph schemas provide attack surface information that helps you understand how potential threats can reach and compromise valuable assets. Exposure graph tables and operators allow you to query the enterprise exposure graph. You can use the schemas to build queries in [Advanced hunting](../defender/advanced-hunting-modes.md). For more information about Advanced Hunting schemas, see [Understanding the advanced hunting schema](../defender/advanced-hunting-schema-tables.md).
+The enterprise exposure graph schemas provide attack surface information that helps you understand how potential threats can reach and compromise valuable assets. Exposure graph tables and operators allow you to query the enterprise exposure graph. You can use the schemas to build queries in [Advanced hunting](/microsoft-365/security/defender/advanced-hunting-modes.md). For more information about Advanced Hunting schemas, see [Understanding the advanced hunting schema](/microsoft-365/security/defender/advanced-hunting-schema-tables.md).
 
 The following sections explore the enterprise exposure graph schemas further:
 

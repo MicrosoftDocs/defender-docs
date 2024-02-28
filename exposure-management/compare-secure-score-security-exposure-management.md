@@ -12,7 +12,7 @@ ms.date: 01/10/2024
 # What is the difference between Secure Score and Microsoft Security Exposure Management?
 
 
-This article discusses the differences between [Microsoft Secure Score](../defender/microsoft-secure-score.md) and [Microsoft Security Exposure Management](microsoft-security-exposure-management.md). While both are security posture tools that contribute to reducing your organizational security risk through meeting recommendations, Microsoft Security Exposure Management has broader tools to assist with security posture.
+This article discusses the differences between [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score.md) and [Microsoft Security Exposure Management](microsoft-security-exposure-management.md). While both are security posture tools that contribute to reducing your organizational security risk through meeting recommendations, Microsoft Security Exposure Management has broader tools to assist with security posture.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
@@ -20,7 +20,7 @@ This article discusses the differences between [Microsoft Secure Score](../defen
 
 Microsoft Secure Score is an industry baseline and benchmark that helps your organization assess and improve its security posture. It provides a numerical summary based on system configurations, user behavior, and other security-related measurements. It depicts how well recommendations are met using a score and point system, which change as you complete recommendations.
 
-For more information about Secure Score, see  [Assess your security posture with Microsoft Secure Score](../defender/microsoft-secure-score-improvement-actions.md).
+For more information about Secure Score, see  [Assess your security posture with Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score-improvement-actions.md).
 
 Microsoft Security Exposure Management is a posture and exposure management interface that provides a unified view of your organization’s security posture and threat exposure information across your organizational workloads. For more information, see [What is Microsoft Security Exposure Management](microsoft-security-exposure-management.md) <!--Including through measuring and benchmarking an organization's compliance with Microsoft Secure Score. It enables customers to choose the standards they wish to comply with. Whether they want to track compliance with industry-driven standards such as CIS (Center for Internet Security) or NIST (National Institute of Standards and Technology), or whether to align with Microsoft’s own standards, represented by the Microsoft Secure Score. This flexibility allows organizations to tailor their security and compliance strategies to meet specific industry requirements or to follow Microsoft’s best practices for security.--> While both provide posture management, they serve different functions. Both use recommendations, but in distinct ways. In addition, Security Exposure Management has a broader tool set and includes Secure Score data.
 

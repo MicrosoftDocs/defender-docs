@@ -36,7 +36,7 @@ To access critical asset management:
 
 1. Select **Save**.
 
-:::image type="content" source="media/security-exposure-management/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature.":::
+:::image type="content" source="./media/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature.":::
 
 ./media/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature."
 

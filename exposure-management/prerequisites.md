@@ -28,7 +28,7 @@ For a more optimal experience, we recommend an E5 license and the Defender CSPM 
 
 ## Permissions
 
-Permissions are based on [unified Role Based Access Control (RBAC)](../defender/manage-rbac.md) and [Microsoft Entra ID RBAC](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
+Permissions are based on [unified Role Based Access Control (RBAC)](/microsoft-365/security/defender/manage-rbac.md) and [Microsoft Entra ID RBAC](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
 <!--To assign Microsoft Entra ID roles, see [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal). For more information about required permissions, see Role groups.-->
 <!-- Is this correct?-->
 <!-- -- get url>

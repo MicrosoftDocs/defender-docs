@@ -62,7 +62,7 @@ You can access the [Critical asset management](critical-asset-management.md) sec
 
 #### View in device inventory and in advanced hunting
 
-The Security Exposure Management Overview allows you to review critical devices in your inventory and critical issues in [Advanced hunting](../defender/advanced-hunting-overview.md). The following views take you to a predefined filter or query for the topics: <!-- is device inventory endpoint related and if so what happens if the customer doesnt have endpoint? -->
+The Security Exposure Management Overview allows you to review critical devices in your inventory and critical issues in [Advanced hunting](/microsoft-365/security/defender/advanced-hunting-overview.md). The following views take you to a predefined filter or query for the topics: <!-- is device inventory endpoint related and if so what happens if the customer doesnt have endpoint? -->
 You can access these headings from the device inventory:
 
 - Critical devices

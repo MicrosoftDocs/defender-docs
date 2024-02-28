@@ -73,7 +73,7 @@
     - name: Microsoft Defender XDR docs
       items: 
        - name: Microsoft Defender XDR
-         href: ../defender/index.yml
+         href: /microsoft-365/security/defender/index.yml
        - name: Defender for Office 365
          href: ../office-365-security/index.yml
        - name: Defender for Endpoint

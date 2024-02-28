@@ -27,7 +27,7 @@ ms.date: 11/28/2023
 
     - **All initiatives** - All initiatives are displayed.
     - **Domain initiatives** - Initiatives that are specific to particular domains, and address a specific product category or type, often aligned with organizational and market definition. They currently include endpoint, identity, and cloud security. Examples of domain initiatives are Critical Asset Protection, Business Email Compromise- Financial Fraud, Ransomware Protection, and Vulnerabilities Assessments initiatives. <!-- confirm-->
-    - **Threat Article initiatives** - Initiatives that contribute to threat analysis by addressing a known threat or paradigm across multiple product categories or types. Threat article initiatives are designed based on the Recommended actions for [Threat analytics](../defender/threat-analytics.md) items. Threat Article initiatives deal with phishing, ransomware, and specific actor and activity profiles, among an ever expanding list of initiative areas.
+    - **Threat Article initiatives** - Initiatives that contribute to threat analysis by addressing a known threat or paradigm across multiple product categories or types. Threat article initiatives are designed based on the Recommended actions for [Threat analytics](/microsoft-365/security/defender/threat-analytics.md) items. Threat Article initiatives deal with phishing, ransomware, and specific actor and activity profiles, among an ever expanding list of initiative areas.
 1. Once you select how to view initiatives you can review the following information:
     - **14 day change trend graph**
     - **Initiative name**

@@ -86,9 +86,9 @@ Secure score helps organizations:
 - Improve their security posture by providing discoverability, visibility, guidance, and control.
 - Compare with benchmarks and establish key performance indicators (KPIs).
 
-For more information, see [Microsoft Secure Score](../defender/microsoft-secure-score.md).
+For more information, see [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score.md).
 
-Microsoft Security Exposure Management recommendations use Secure Score as one of its sources. Secure score has "Recommended actions" for a [number of products](../defender/microsoft-secure-score.md#products-included-in-secure-score). Selecting a recommendation to review, allows you to remediate the problem in the specific product, including recommendations that derived from Secure Score. For recommendations where Secure score is relevant, if Secure score isn't active, that recommendation doesn't display.
+Microsoft Security Exposure Management recommendations use Secure Score as one of its sources. Secure score has "Recommended actions" for a [number of products](/microsoft-365/security/defender/microsoft-secure-score.md#products-included-in-secure-score). Selecting a recommendation to review, allows you to remediate the problem in the specific product, including recommendations that derived from Secure Score. For recommendations where Secure score is relevant, if Secure score isn't active, that recommendation doesn't display.
 
 ## Next steps
 

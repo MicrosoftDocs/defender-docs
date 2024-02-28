@@ -18,11 +18,11 @@ ms.date: 11/28/2023
 The enterprise exposure graph schemas allow you to proactively hunt for enterprise exposure threats in Advanced hunting. For more information, see [Overview of cross-workload attack surfaces](cross-workload-attack-surfaces.md). You can access [Advanced Hunting](https://security.microsoft.com/v2/advanced-hunting) in the [Microsoft security portal](https://security.microsoft.com). This article describes the best practices for enterprise exposure graph queries and example queries.
 
 > [!NOTE]
->For more information about how to build queries in Advanced hunting, see [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](../defender/advanced-hunting-modes.md).
+>For more information about how to build queries in Advanced hunting, see [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-modes.md).
 
 ## Best practices for enterprise exposure graph queries
 
-In order to write the best enterprise exposure queries possible, follow the recommended best practices. These include [best practices for building Advanced hunting queries](../defender/advanced-hunting-best-practices.md) and [best practices in using the Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/). In addition, for exposure queries the recommendation is to use specific node properties to reduce query memory usage and Kusto smart-indexing with specific operators to ensure appropriate results.
+In order to write the best enterprise exposure queries possible, follow the recommended best practices. These include [best practices for building Advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-best-practices.md) and [best practices in using the Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/). In addition, for exposure queries the recommendation is to use specific node properties to reduce query memory usage and Kusto smart-indexing with specific operators to ensure appropriate results.
 
 ### Reduce memory usage by selecting specific node properties
 <!-- said properties but should be NodeProperties? -->

@@ -14,7 +14,7 @@ ms.date: 11/28/2023
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 <!-- Recommendations types ,compliance logic, recommendations fields (including other related EM objects) , products included, data is presented based on  product license-->
 
-The Microsoft Security Exposure Management recommendations catalog serves as a centralized repository for security recommendations originating from various different sources. These include Microsoft Secure Score, encompassing [all its sources](../defender/microsoft-secure-score.md#products-included-in-secure-score), and Microsoft Defender for Cloud. Examining and addressing recommendations allows you to preemptively address security risk and reduce exposure.
+The Microsoft Security Exposure Management recommendations catalog serves as a centralized repository for security recommendations originating from various different sources. These include Microsoft Secure Score, encompassing [all its sources](/microsoft-365/security/defender/microsoft-secure-score.md#products-included-in-secure-score), and Microsoft Defender for Cloud. Examining and addressing recommendations allows you to preemptively address security risk and reduce exposure.
 
 It can be found at [Microsoft Exposure Recommendations](https://security.microsoft.com/exposure-recommendations) in the [Microsoft Defender portal](https://security.microsoft.com/). You can access them in the Microsoft Defender portal by going to **Exposure Management -> Exposure Insights -> Recommendations**.
 
