@@ -1,0 +1,62 @@
+### YamlMime:Landing
+
+title: Microsoft Security Posture Management
+summary: A unified view that provides insights into exposure, details on potential attack paths, and the tools to drive continuous security posture improvement while considering business priorities.
+metadata:
+  title: Microsoft Security Posture Management documentation
+  description: Get an overview and setup information for Microsoft Security Posture Management
+  ms.service: azure
+  ms.subservice:
+  ms.topic: landing-page
+  ms.collection: 
+  - m365-security
+  - tier1
+  ms.custom: intro-hub-or-landing
+  author: siosulli
+  ms.author: siosulli
+  ms.date: 11/28/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: Overview
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Microsoft Security Posture Management?
+            url: microsoft-security-exposure-management.md
+
+  # Card
+  - title: Deploy
+    linkLists:
+      - linkListType: deploy
+        links:
+          - text: Get Microsoft Security Posture Management
+            url: microsoft-security-exposure-management.md
+
+ # Card
+  - title: Exposure management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Exposure management overview
+            url: microsoft-security-exposure-management.md
+
+ # Card
+  - title: Attack surface management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Critical asset management
+            url: microsoft-security-exposure-management.md
+
+ # Card
+  - title: Exposure insights
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Initiatives
+            url: microsoft-security-exposure-management.md

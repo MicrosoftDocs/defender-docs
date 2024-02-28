@@ -43,7 +43,7 @@ For full access users need one of the following Microsoft Entra ID roles:
 
 ### Permissions for Security Exposure Management tasks
 
-For users to have full Security Exposure Management access, currently their role needs access to all device groups. Any scope restrictions to access, such as limits to a specific device group or multiple [device groups](../defender-endpoint/machine-groups.md), allows a user to view global exposure insight information, but not specific device information. Additionally, users with a defined scope don't have access to Attack Paths and Security Exposure Management Advanced Hunting tables.
+For users to have full Security Exposure Management access, currently their role needs access to all device groups. Any scope restrictions to access, such as limits to a specific device group or multiple [device groups](/microsoft-365/security//defender-endpoint/machine-groups), allows a user to view global exposure insight information, but not specific device information. Additionally, users with a defined scope don't have access to Attack Paths and Security Exposure Management Advanced Hunting tables.
 
 Permission levels for Security Exposure Management tasks are as follows:
 
