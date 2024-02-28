@@ -15,7 +15,7 @@ ms.date: 11/28/2023
 
 The Attack surface map (enterprise exposure map), allows you to use the exposure graph schema to visualize your exposure data. For more information, see [Overview of cross-workload attack surfaces](cross-workload-attack-surfaces.md). You can access the attack surface map from your device inventory, by choosing a device and selecting **View Map** or by searching directly for an asset from **Attack Surface -> Map**.
 
-:::image type="content" source="./media/security-exposure-management/attack-surface-exposure-map.png" alt-text="Screenshot of the attack surface exposure map.":::
+:::image type="content" source="./media/attack-surface-exposure-map.png" alt-text="Screenshot of the attack surface exposure map.":::
 <!--image-->
 
 The exposure map gives you visibility into the connections of your assets. The map has the following features that make it easy to explore:
@@ -51,11 +51,11 @@ The following table depicts each edge type and its icon:
 |EdgeType  | Icon  |
 |---------|---------|
 |affecting |         |
-|routes traffic to | :::image type="content" source="./media/security-exposure-management/routes-traffic-to-icon.png" alt-text="routes traffic to icon":::          |
-|is running | :::image type="content" source="./media/security-exposure-management/is-running-icon.png" alt-text="is running icon":::        |
-|contains | :::image type="content" source="./media/security-exposure-management/contains-icon.png" alt-text="contains icon":::        |
+|routes traffic to | :::image type="content" source="./media/routes-traffic-to-icon.png" alt-text="routes traffic to icon":::          |
+|is running | :::image type="content" source="./media/is-running-icon.png" alt-text="is running icon":::        |
+|contains | :::image type="content" source="./media/contains-icon.png" alt-text="contains icon":::        |
 |pushes |         |
-|can authenticate as |  :::image type="content" source="./media/security-exposure-management/can-authenticate-as-icon.png" alt-text="can authenticate as icon":::       |
+|can authenticate as |  :::image type="content" source="./media/can-authenticate-as-icon.png" alt-text="can authenticate as icon":::       |
 |maintains |         |
 |has role on |         |
 |can authenticate to |         |
@@ -65,7 +65,7 @@ The following table depicts each edge type and its icon:
 |can logon over the network to |         |
 |can interactive logon to |         |
 |can remote interactive logon to |         |
-|runs on |  :::image type="content" source="./media/security-exposure-management/runs-on-icon.png" alt-text="runs on icon":::       |
+|runs on |  :::image type="content" source="./media/runs-on-icon.png" alt-text="runs on icon":::       |
 |member |         |
 
 ### Indicator Name Description

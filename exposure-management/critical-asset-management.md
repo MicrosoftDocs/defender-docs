@@ -45,9 +45,9 @@ In order to protect your business critical assets, you might need to create cust
 
 Once your criticality levels are defined, rules classify your assets by criticality level in other Exposure Management and Defender contexts. You can sort your assets in the device inventory by criticality and explore them individually. You can choose to view the asset on the [attack map](enterprise-exposure-map.md) and look for any exposure to threats and identify choke points. The halo color surrounding the asset icon and the crown indicator visually indicate the high criticality level. In addition, you can gain an overview of threats to critical assets through the [Critical asset protection initiative](#critical-asset-protection-initiative).
 
-:::image type="content" source="./media/security-exposure-management/device-inventory-criticality-level.png" alt-text="Screenshot of the Device inventory window. The image includes an emphasis on the criticality level section.":::
+:::image type="content" source="./media/device-inventory-criticality-level.png" alt-text="Screenshot of the Device inventory window. The image includes an emphasis on the criticality level section.":::
 
-:::image type="content" source="./media/security-exposure-management/attack-surface-exposure-map.png" alt-text="Screenshot of an asset viewed in the exposure map in the context of other connections. Two devices on the map show high critical levels.":::
+:::image type="content" source="./media/attack-surface-exposure-map.png" alt-text="Screenshot of an asset viewed in the exposure map in the context of other connections. Two devices on the map show high critical levels.":::
 
 ## Review critical assets
 

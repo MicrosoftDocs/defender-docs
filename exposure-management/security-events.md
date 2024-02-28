@@ -30,7 +30,7 @@ The following information is available to review from the Events overview page:
 - **Date**
 - **Type**
 
-:::image type="content" source="./media/security-exposure-management/events-navigation.png" alt-text="Screenshot of the Security Exposure Management Events window.":::
+:::image type="content" source="./media/events-navigation.png" alt-text="Screenshot of the Security Exposure Management Events window.":::
 <!--should this be rearranged so first access events then talk about drift events and then the details?-->
 
 You can choose to sort events by type, either metric or initiative drift events. Metric drift events display a change greater than two percent in exposure measured by each [security metric](security-metrics.md) and initiative drift events measure the change in exposure of [security initiatives](initiatives.md) greater than two percent. Selecting an event takes you to either the metric or initiative that experienced a drift event.

@@ -38,7 +38,7 @@ Security initiatives provide a means to measure the maturity of an organization'
 
 [Initiatives](https://security.microsoft.com/exposure-initiatives) can be accessed through the dashboard or in the [Microsoft Defender portal](https://security.microsoft.com) through the navigation bar under **Exposure Management -> Exposure Insights -> Initiatives**.
 
-:::image type="content" source="./media/security-exposure-management/initiatives-dashboard.png" alt-text="screenshot of the initiatives dashboard":::
+:::image type="content" source="./media/initiatives-dashboard.png" alt-text="screenshot of the initiatives dashboard":::
 
 For more information, see [Review security initiatives](initiatives.md).
 
@@ -52,7 +52,7 @@ Security metrics measure specific aspects of exposure with respect to a given as
 Metrics allow users to assess an initiative's exposure status and identify exposed areas or areas that don't meet internal standards. This information can be used to prioritize which areas to address first.
 To access [Metrics](https://security.microsoft.com/exposure-metrics), go to **Exposure Management -> Exposure Insights -> Metrics**.
 
-:::image type="content" source="./media/security-exposure-management/metrics.png" alt-text="Screenshot of the metrics page in Exposure management.":::
+:::image type="content" source="./media/metrics.png" alt-text="Screenshot of the metrics page in Exposure management.":::
 
 For more information, see [Investigate initiative metrics](security-metrics.md).
 
@@ -62,7 +62,7 @@ The recommendations catalog serves as a centralized repository for security reco
 
 For more information, see [Review security recommendations](security-recommendations.md).
 
-:::image type="content" source="./media/security-exposure-management/recommendations-navigation.png" alt-text="Screenshot of the recommendations window.":::
+:::image type="content" source="./media/recommendations-navigation.png" alt-text="Screenshot of the recommendations window.":::
 
 ## Security events
 
@@ -74,7 +74,7 @@ Security events consolidate information about any posture management changes det
 
 To access [Events](https://security.microsoft.com/exposure-events), go to **Exposure Management -> Exposure Insights -> Events**.
 
-:::image type="content" source="./media/security-exposure-management/events-navigation.png" alt-text="Screenshot of the Exposure management Events window.":::
+:::image type="content" source="./media/events-navigation.png" alt-text="Screenshot of the Exposure management Events window.":::
 
 For more information, see [Explore security events](security-events.md).
 

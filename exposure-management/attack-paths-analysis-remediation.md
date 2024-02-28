@@ -37,7 +37,7 @@ For more information about how to use the exposure map, see [Explore with the at
 <!-->
 Attack paths provide the means to proactively identify and visualize potential threats so you can investigate and remediate the potential threats. You can do so from [Attack paths](https://security.microsoft.com/attack-paths) in the [Microsoft Defender portal](https://security.microsoft.com/) or by selecting **Attack surface -> Attack path**.
 
-:::image type="content" source="./media/security-exposure-management/attack-paths.png" alt-text="Screenshot of the attack path window":::
+:::image type="content" source="./media/attack-paths.png" alt-text="Screenshot of the attack path window":::
 
 Attack path analysis and remediation:
 
@@ -48,7 +48,7 @@ Attack path analysis and remediation:
 
 You can select an attack path to see the related Graph and Recommendations in a side pane:
 -->
-:::image type="content" source="./media/security-exposure-management/attack-paths-graph-recommendations.png" alt-text="Screenshot of attack paths graph and recommendations":::
+:::image type="content" source="./media/attack-paths-graph-recommendations.png" alt-text="Screenshot of attack paths graph and recommendations":::
 
 <!-- 
 <!-- can you only see these recommendations once there is an attack path?

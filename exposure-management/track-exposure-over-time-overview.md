@@ -42,7 +42,7 @@ The Microsoft Security Exposure Management Security Events provides information 
  See [Security events](security-events.md) for more information.
 <!-- To access [Events](https://security.microsoft.com/exposure-events), go to **Exposure Management -> Exposure Insights -> Events**. -->
 
-:::image type="content" source="./media/security-exposure-management/events-navigation.png" alt-text="Screenshot of the Exposure management Events window.":::
+:::image type="content" source="./media/events-navigation.png" alt-text="Screenshot of the Exposure management Events window.":::
 
 For more information, see [Security Events](security-events.md).
 

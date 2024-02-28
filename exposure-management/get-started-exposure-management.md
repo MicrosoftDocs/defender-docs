@@ -40,7 +40,7 @@ The navigation includes these items:
 - **Microsoft Secure score:** Measures an organization's security posture, with a higher number indicating more recommended actions taken.
 - **Data connectors:** Provides a means to connect non-Microsoft data sources.
 
-:::image type="content" source="./media/security-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the security exposure management overview page.":::
+:::image type="content" source="./media/exposure-management-overview.png" alt-text="Screenshot of the security exposure management overview page.":::
 
 ## Navigate the overview dashboard
 
@@ -62,9 +62,9 @@ With assets overview, you can quickly see your organization's exposed assets. Th
 
 Key initiatives are made up of initiatives that are marked as favorites in [Initiatives](initiatives.md), and any newly added recommended initiatives. Select an individual key initiative to see the initiative summary or open its page. You can also navigate to all initiatives from this section.
 
-:::image type="content" source="./media/security-exposure-management/key-initiatives.png" alt-text="Screenshot of Security Exposure Management Overview key initiatives section":::
+:::image type="content" source="./media/key-initiatives.png" alt-text="Screenshot of Security Exposure Management Overview key initiatives section":::
 
-:::image type="content" source="./media/security-exposure-management/key-initiatives-example_summary.png" alt-text="Screenshot of an Overview key initiatives summary window.":::
+:::image type="content" source="./media/key-initiatives-example_summary.png" alt-text="Screenshot of an Overview key initiatives summary window.":::
 
 ### Top metrics
 
@@ -82,7 +82,7 @@ The critical asset summary shows you how many critical assets you have and how m
 
 You can access the [Critical asset management](critical-asset-management.md) section from the Critical asset summary. It allows users to manage the criticality level of predefined asset of interests identified by Microsoft and create custom classification rules to detect critical assets. You can also access Critical asset management from **Settings > Microsoft XDR > Rules > Critical asset management** <!-- i put in rules for clarity but it shouldnt really be bolded. -->
 
-:::image type="content" source="./media/security-exposure-management/critical-asset-management-summary.png" alt-text="Screenshot of Critical asset management in the Critical asset summary window.":::
+:::image type="content" source="./media/critical-asset-management-summary.png" alt-text="Screenshot of Critical asset management in the Critical asset summary window.":::
 
 #### View in device inventory and in advanced hunting
 
@@ -99,7 +99,7 @@ The following are accessible in advanced hunting:
 - Critical identities
 - Critical cloud resources  
 
-:::image type="content" source="./media/security-exposure-management/critical-asset-management-devices-advanced-hunting.png" alt-text="Screenshot of the Security Exposure Management Overview view in device inventory and advanced hunting section":::
+:::image type="content" source="./media/critical-asset-management-devices-advanced-hunting.png" alt-text="Screenshot of the Security Exposure Management Overview view in device inventory and advanced hunting section":::
 
 ### Recent security events
 

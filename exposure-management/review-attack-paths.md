@@ -15,7 +15,7 @@ ms.date: 11/28/2023
 <!--the text here is mostly what is in the overview-->
 Attack paths provide the means to proactively identify and visualize potential attack paths that put critical assets at risk. They allow you to investigate and remediate the potential threats. You can do so from [Attack paths](https://security.microsoft.com/attack-paths) in the [Microsoft Defender portal](https://security.microsoft.com/) or by selecting **Attack surface -> Attack path**.
 
-:::image type="content" source="./media/security-exposure-management/attack-paths.png" alt-text="Screenshot of the Security Exposure Management attack path window":::
+:::image type="content" source="./media/attack-paths.png" alt-text="Screenshot of the Security Exposure Management attack path window":::
 
 For each listed attack path, you can view the following information:
 
@@ -39,7 +39,7 @@ Selecting an attack path to examine further for potential exploitable vulnerabil
 
 The graph allows you to view the attack path that attackers can use to breach your environment and target a critical asset. This helps provide a clear understanding of how potential threats can unfold, and therefore aids in threat assessment and decision-making. Hovering over each node and connector icon provides you with additional information about how the attack path is build. For instance, from an initial virtual machine containing TLS/SSL keys all the way to permissions to storage accounts.
 
-:::image type="content" source="./media/security-exposure-management/attack-paths-graph.png" alt-text="Screenshot of the graph visualization of attack path":::
+:::image type="content" source="./media/attack-paths-graph.png" alt-text="Screenshot of the graph visualization of attack path":::
 
 ## Review recommendations
 

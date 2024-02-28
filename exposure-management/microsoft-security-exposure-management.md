@@ -65,7 +65,7 @@ Consolidation happens proactively and responsively in Security Exposure Manageme
 
 Security teams can use the aggregated view of the security events and review changes requiring attention to keep track and effectively respond to issues. They can also gain broad visibility into different assets throughout the organization and ask intelligent, exposure-related questions about them using advanced hunting capabilities.
 
-:::image type="content" source="./media/security-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the exposure management overview page.":::
+:::image type="content" source="./media/exposure-management-overview.png" alt-text="Screenshot of the exposure management overview page.":::
 
 <!-- should this be removed here?  
 Microsoft Exposure Management includes the following features:
