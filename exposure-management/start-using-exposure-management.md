@@ -21,7 +21,7 @@ ms.date: 01/10/2024
 
 NEED content
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 To get started with Microsoft Security Exposure Management start by browsing to the [Exposure Overview dashboard](https://security.microsoft.com/exposure-overview) in the [Microsoft Security portal](https://security.microsoft.com). The Microsoft Security Exposure Management section includes the following navigation items:
 
@@ -45,6 +45,6 @@ For more information, see:
 - [Explore cross-workload attack surfaces](attack-surface-management-overview.md)
 - [Identify and manage critical assets](critical-asset-management.md)
 - [Improve security insights with exposure insights](exposure-insights-overview.md)
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes//support.md)]
 
 ## See also

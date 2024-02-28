@@ -19,7 +19,7 @@ ms.date: 11/28/2023
 
 # Get started with Microsoft Security Exposure Management
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 Microsoft Security Exposure Management assesses your company workloads to identify and mitigate organizational risk associated with security exposure. Security Exposure Management is available with any E5 or P2 license, and is available as soon as you sign up for a license. Security Exposure Management collects data across workloads from your subscriptions, and adds increasing value as more workloads are assessed. Initially, your data uses the default settings in Security Exposure Management.
 
@@ -40,7 +40,7 @@ The navigation includes these items:
 - **Microsoft Secure score:** Measures an organization's security posture, with a higher number indicating more recommended actions taken.
 - **Data connectors:** Provides a means to connect non-Microsoft data sources.
 
-:::image type="content" source="../../media/security-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the security exposure management overview page.":::
+:::image type="content" source="./media/security-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the security exposure management overview page.":::
 
 ## Navigate the overview dashboard
 
@@ -62,9 +62,9 @@ With assets overview, you can quickly see your organization's exposed assets. Th
 
 Key initiatives are made up of initiatives that are marked as favorites in [Initiatives](initiatives.md), and any newly added recommended initiatives. Select an individual key initiative to see the initiative summary or open its page. You can also navigate to all initiatives from this section.
 
-:::image type="content" source="../../media/security-exposure-management/key-initiatives.png" alt-text="Screenshot of Security Exposure Management Overview key initiatives section":::
+:::image type="content" source="./media/security-exposure-management/key-initiatives.png" alt-text="Screenshot of Security Exposure Management Overview key initiatives section":::
 
-:::image type="content" source="../../media/security-exposure-management/key-initiatives-example_summary.png" alt-text="Screenshot of an Overview key initiatives summary window.":::
+:::image type="content" source="./media/security-exposure-management/key-initiatives-example_summary.png" alt-text="Screenshot of an Overview key initiatives summary window.":::
 
 ### Top metrics
 
@@ -82,7 +82,7 @@ The critical asset summary shows you how many critical assets you have and how m
 
 You can access the [Critical asset management](critical-asset-management.md) section from the Critical asset summary. It allows users to manage the criticality level of predefined asset of interests identified by Microsoft and create custom classification rules to detect critical assets. You can also access Critical asset management from **Settings > Microsoft XDR > Rules > Critical asset management** <!-- i put in rules for clarity but it shouldnt really be bolded. -->
 
-:::image type="content" source="../../media/security-exposure-management/critical-asset-management-summary.png" alt-text="Screenshot of Critical asset management in the Critical asset summary window.":::
+:::image type="content" source="./media/security-exposure-management/critical-asset-management-summary.png" alt-text="Screenshot of Critical asset management in the Critical asset summary window.":::
 
 #### View in device inventory and in advanced hunting
 
@@ -99,7 +99,7 @@ The following are accessible in advanced hunting:
 - Critical identities
 - Critical cloud resources  
 
-:::image type="content" source="../../media/security-exposure-management/critical-asset-management-devices-advanced-hunting.png" alt-text="Screenshot of the Security Exposure Management Overview view in device inventory and advanced hunting section":::
+:::image type="content" source="./media/security-exposure-management/critical-asset-management-devices-advanced-hunting.png" alt-text="Screenshot of the Security Exposure Management Overview view in device inventory and advanced hunting section":::
 
 ### Recent security events
 
@@ -123,4 +123,4 @@ Select **Connect** to enter the connection information needed. Each vendor could
 - [Review organizational exposure](review-organizational-exposure.md)
 - [Identify and manage critical assets](critical-asset-management.md)
 - [Improve security insights with exposure insights](exposure-insights-overview.md)
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes//support.md)]

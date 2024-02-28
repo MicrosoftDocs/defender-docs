@@ -13,7 +13,7 @@ ms.date: 11/28/2023
 
 [Critical asset management](critical-asset-management.md) provides visibility into your business critical assets.
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 To access critical asset management:
 
@@ -22,7 +22,7 @@ To access critical asset management:
 1. From the critical asset management page, you can view basic overview information. For instance, the on/off state or number of assets, and can select individual critical asset classifications to edit or explore. You can also choose to add a new classification.
 <!--1. From there you can choose to change criticality levels,  view the general critical asset information including the  review general information such , choose to review classifications, create new classifications, or update the criticality levels for the existing classifications in your organization.-->
 
-:::image type="content" source="../../media/security-exposure-management/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window.":::
+:::image type="content" source="./media/security-exposure-management/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window.":::
 
 > [!NOTE]
 > Critical asset protection management is only available to members with one of the following roles: Global administrator, Security administrator, Security Operator, Global Reader, and Security Reader.
@@ -36,7 +36,9 @@ To access critical asset management:
 
 1. Select **Save**.
 
-:::image type="content" source="../../media/security-exposure-management/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature.":::
+:::image type="content" source="media/security-exposure-management/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature.":::
+
+./media/security-exposure-management/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature."
 
 ## Edit critical asset classifications
 
@@ -59,7 +61,7 @@ To access critical asset management:
 > [!NOTE]
 > The Assets to review window only displays when there are assets to review.
 
-:::image type="content" source="../../media/security-exposure-management/assets-to-review.png" alt-text="Screenshot of the Assets to review screen.":::
+:::image type="content" source="./media/security-exposure-management/assets-to-review.png" alt-text="Screenshot of the Assets to review screen.":::
 
 <!--## Critical asset overview
 
@@ -86,7 +88,7 @@ You can change the criticality levels and turn off all assets. You can also edit
     - **Name** - New classification name
     - **Description** - New classification description
     - **Query builder** - Use the query builder to define a new classification, for instance, "mark all devices with a certain naming convention as critical.". Add one or more boolean filters that are defined per device, identity, or cloud resource.
-:::image type="content" source="../../media/security-exposure-management/create-critical-asset-classification.png" alt-text="Screenshot of the create critical asset classification window.":::
+:::image type="content" source="./media/security-exposure-management/create-critical-asset-classification.png" alt-text="Screenshot of the create critical asset classification window.":::
 1. Once your criteria are set, select **Next**. On the following pages, you can preview the assets that are affected and assign the criticality level for the set of assets.
 
 > [!NOTE]
@@ -99,7 +101,7 @@ You can change the criticality levels and turn off all assets. You can also edit
 
 1. Sort by **criticality level** to view business critical assets with a "very high" level of criticality or other needs.
 
-:::image type="content" source="../../media/security-exposure-management/device-inventory.png" alt-text="screenshot of the Device inventory window":::
+:::image type="content" source="./media/security-exposure-management/device-inventory.png" alt-text="screenshot of the Device inventory window":::
 
 ## Request a new critical asset classification
 

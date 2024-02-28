@@ -11,7 +11,7 @@ ms.date: 11/28/2023
 
 # Review security initiatives
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 <!--Microsoft Security Exposure Management provides a means to optimize your security domain and protect against security threats using security initiatives.--> Microsoft Security Exposure initiatives offer a focused, metric-driven way of tracking your organization’s maturity to a wide variety of important security concerns. For example, initiatives for ransomware protection, endpoint security, and [critical asset protection](critical-asset-management.md#critical-asset-protection-initiative). Security initiatives allow you to review your product specific and threat specific initiatives, evaluate an initiative's maturity, customize their scores, and prioritize initiatives for display on the overview dashboard.
 
@@ -20,7 +20,7 @@ ms.date: 11/28/2023
 1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com/).
 
 1. From the Exposure management section on the navigation bar, select **Exposure Insights -> Initiatives** to access [Initiatives](https://security.microsoft.com/exposure-initiatives). The Initiatives page opens.<!-- from through the navigation bar under **Exposure Management -> Exposure Insights -> Initiatives**.-->
-:::image type="content" source="../../media/security-exposure-management/initiatives-window.png" alt-text="Screenshot of the Initiatives window.":::
+:::image type="content" source="./media/security-exposure-management/initiatives-window.png" alt-text="Screenshot of the Initiatives window.":::
 
 1. At the top of the Initiatives page, review the highlighted Key initiatives by scrolling and drilling down per your needs. To set an initiative to appear in the Top Initiative bar in the dashboard and in Initiatives, select the star icon in the Initiatives window or **mark as favorite** in the individual initiative.
 1. Select how to view the initiatives catalog. Choose between:
@@ -44,14 +44,14 @@ ms.date: 11/28/2023
     - metric trends graph and drift change
     - History of score changes
     - Related threats
-:::image type="content" source="../../media/security-exposure-management/initiatives-ransomware.png" alt-text="Screenshot Ransomware initiative":::
+:::image type="content" source="./media/security-exposure-management/initiatives-ransomware.png" alt-text="Screenshot Ransomware initiative":::
 
 ## Score
 <!-- distinction between score and current value percentage-->
 An initiative's score reflects its exposure status. The score is calculated based on the value and weight of the metrics associated with the initiative. As users improve their metrics the initiative score rises, reflecting a better posture on that domain. The score level reflects the organization's maturity in relation to security concerns. Metrics largely improve through applying the recommendations associated with the initiative.
 To customize your initiative's target score, select the initiative and then **Set target score** from the individual initiative overview window to open the Set initiative target score window. Once your new value is selected, select **Apply**.
 
-:::image type="content" source="../../media/security-exposure-management/set-initiative-target-score.png" alt-text="Screenshot of the Set target score window.":::
+:::image type="content" source="./media/security-exposure-management/set-initiative-target-score.png" alt-text="Screenshot of the Set target score window.":::
 
 ## Trends
 
@@ -60,7 +60,7 @@ The changes in your score provide you with useful feedback about how well you're
 1. From your initiative page, check the overall **14 day change trend graph** and **14 day drift change** to track the changes in your initiative score, visually and as a percentage. You can examine this data per metric as well.
 1. Select **Open initiative page** and then **History** to track the changes in metrics every day along with the reason for the change. For instance, a weight change or a change in the metric value. Also, each initiative displays the delta change in assets and the related assets that day. For instance, if the metric "Virtual machines with plain text keys and secrets" went down 2.5% yesterday, the asset tab shows the larger number of assets that day with plain text keys and secrets.
 <!-- note that history may need to go outand replaced with this: The **14 day change trend graph** and **14 day drift change** track the changes in your initiative score, visually and as a percentage. -->
-:::image type="content" source="../../media/security-exposure-management/history.png" alt-text="Screenshot of the Initiatives History tab.":::
+:::image type="content" source="./media/security-exposure-management/history.png" alt-text="Screenshot of the Initiatives History tab.":::
 
 ## Programs
 
@@ -83,4 +83,4 @@ Adding or changing metrics might affect the score of your initiative. The metric
 - [Review security metrics](security-metrics.md)
 - [Explore security events](security-events.md)
 - [Review security recommendations](security-recommendations.md)
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes//support.md)]

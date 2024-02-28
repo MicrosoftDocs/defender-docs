@@ -11,7 +11,7 @@ ms.date: 11/28/2023
 
 # Secure score for Microsoft Security Exposure Management
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 [Microsoft Secure Score](../defender/microsoft-secure-score.md) measures an organization's security posture. A higher number indicating more recommended actions taken. It can be found at [Microsoft Secure Score](https://security.microsoft.com/exposure-secure-score) in the [Microsoft Defender portal](https://security.microsoft.com/).
 
@@ -36,6 +36,6 @@ Microsoft Security Exposure Management recommendations use secure score as one o
 
 For more information, see:
 
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes//support.md)]
 
 ## See also

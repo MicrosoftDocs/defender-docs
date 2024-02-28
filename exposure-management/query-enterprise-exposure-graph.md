@@ -13,7 +13,7 @@ ms.date: 11/28/2023
 
 <!-- the best practices seemed better here-->
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 The enterprise exposure graph schemas allow you to proactively hunt for enterprise exposure threats in Advanced hunting. For more information, see [Overview of cross-workload attack surfaces](cross-workload-attack-surfaces.md). You can access [Advanced Hunting](https://security.microsoft.com/v2/advanced-hunting) in the [Microsoft security portal](https://security.microsoft.com). This article describes the best practices for enterprise exposure graph queries and example queries.
 

@@ -11,7 +11,7 @@ ms.date: 11/28/2023
 
 # Identify risk and exposure across the organization
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 Identifying risk and exposure and finding vulnerabilities is an ongoing, changing, challenge for security teams. The Continuous Threat Exposure Management (CTEM) framework is a way to allow security teams to continuously improve, adapt, and commit to proactive cybersecurity. Cybersecurity that aligns to business outcomes, and identify an organization's specific risks. Microsoft Security Exposure Management supports CTEM by providing a way to see your organization's risk and exposure from the point of view of an attacker. It also identifies the greatest threats to the organization and the threats that are most likely to be exploited. Security Exposure Management provides the following tools and capabilities to support the CTEM process:
 
@@ -42,4 +42,4 @@ Effective mobilization: Enabling security teams to streamline approval processes
 For more information, see:
 
 - [Attack path analysis and remediation](attack-paths-analysis-remediation.md)
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes//support.md)]

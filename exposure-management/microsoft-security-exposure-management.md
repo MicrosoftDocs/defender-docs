@@ -14,7 +14,7 @@ ms.date: 01/09/2024
 
 Microsoft Security Exposure Management provides a unified view of your organization’s security posture and threat exposure information across your organizational workloads. In increasingly complex environments that combine legacy and modern apps, and hybrid/cloud environments, the organizational attack surface grows.
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 With Security Exposure Management eXtended Security Posture Management (XSPM) and exposure management tools, your organization has a means to identify and mitigate attack risks across your organization in one place. It manages continuous security posture improvement, systemically, while considering business priorities. In addition, it provides a consolidated view of your organization’s assets and exposure insights, identifying potential attack paths, and measures the maturity of security programs.
 
@@ -65,7 +65,7 @@ Consolidation happens proactively and responsively in Security Exposure Manageme
 
 Security teams can use the aggregated view of the security events and review changes requiring attention to keep track and effectively respond to issues. They can also gain broad visibility into different assets throughout the organization and ask intelligent, exposure-related questions about them using advanced hunting capabilities.
 
-:::image type="content" source="../../media/security-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the exposure management overview page.":::
+:::image type="content" source="./media/security-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the exposure management overview page.":::
 
 <!-- should this be removed here?  
 Microsoft Exposure Management includes the following features:

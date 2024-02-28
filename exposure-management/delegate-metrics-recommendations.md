@@ -21,13 +21,13 @@ ms.date: 11/28/2023
 
 NEED content
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 <!--images -->
 ## Next steps
 
 For more information, see:
 
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes//support.md)]
 
 ## See also

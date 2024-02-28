@@ -11,7 +11,7 @@ ms.date: 11/28/2023
 
 # Schemas and operators overview
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 The enterprise exposure graph schemas provide attack surface information that helps you understand how potential threats can reach and compromise valuable assets. For more information, see [Schema and operators](cross-workload-attack-surfaces.md#schema-and-operators). This article discusses the exposure graph schema tables and operators.
 
@@ -157,4 +157,4 @@ The `graph-match` operator searches for all occurrences of a graph pattern in an
 For more information, see:
 
 - [Query the enterprise exposure graph](query-enterprise-exposure-graph.md)
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes//support.md)]

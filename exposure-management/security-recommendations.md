@@ -11,14 +11,14 @@ ms.date: 11/28/2023
 
 # Review security recommendations
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 <!-- Recommendations types ,compliance logic, recommendations fields (including other related EM objects) , products included, data is presented based on  product license-->
 
 The Microsoft Security Exposure Management recommendations catalog serves as a centralized repository for security recommendations originating from various different sources. These include Microsoft Secure Score, encompassing [all its sources](../defender/microsoft-secure-score.md#products-included-in-secure-score), and Microsoft Defender for Cloud. Examining and addressing recommendations allows you to preemptively address security risk and reduce exposure.
 
 It can be found at [Microsoft Exposure Recommendations](https://security.microsoft.com/exposure-recommendations) in the [Microsoft Defender portal](https://security.microsoft.com/). You can access them in the Microsoft Defender portal by going to **Exposure Management -> Exposure Insights -> Recommendations**.
 
-:::image type="content" source="../../media/security-exposure-management/recommendations-navigation.png" alt-text="Screenshot of the recommendations window.":::
+:::image type="content" source="./media/security-exposure-management/recommendations-navigation.png" alt-text="Screenshot of the recommendations window.":::
 
 You can also access recommendations from an [**Initiatives**](initiatives.md) page to view initiative specific metrics.
 
@@ -78,9 +78,9 @@ Security exposure management recommendations relate to the following workloads:
 
 You can drill down into an individual recommendation by selecting it from the recommendations list. The individual recommendation view includes a more detailed description about the recommendation, when its state was last updated, its source and workload, as well as related metrics and initiatives. You can further explore steps to remediate the recommendation, details about exposed entities, and related initiatives and metrics.
 
-:::image type="content" source="../../media/security-exposure-management/recommendation-ransomeware-advanced-protection.png" alt-text="Screenshot of the ransomware advanced protection recommendation details ":::
+:::image type="content" source="./media/security-exposure-management/recommendation-ransomeware-advanced-protection.png" alt-text="Screenshot of the ransomware advanced protection recommendation details ":::
 
-:::image type="content" source="../../media/security-exposure-management/recommendations-ransomeware-remediation-steps.png" alt-text="Screenshot of a recommendation remediation steps window.":::
+:::image type="content" source="./media/security-exposure-management/recommendations-ransomeware-remediation-steps.png" alt-text="Screenshot of a recommendation remediation steps window.":::
 
 The **Remediation steps** tab describes steps you can take to remediate the recommendation, and provides a means to act on the recommendation, as relevant. Selecting **Manage** takes you to the originating workload where you can work on addressing the recommendation. For instance, in Microsoft Defender for Cloud, Microsoft Entra ID, Microsoft Defender for Office, or Microsoft Defender Vulnerability Management.
 
@@ -95,6 +95,6 @@ For more information, see:
 - [Explore security events](security-events.md)
 - [Investigate initiative metrics](security-metrics.md)
 - [Secure score for Microsoft Security Exposure Management](secure-score.md)
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes//support.md)]
 
 <!-- ## See also is this needed? -->

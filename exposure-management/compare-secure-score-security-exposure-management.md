@@ -14,7 +14,7 @@ ms.date: 01/10/2024
 
 This article discusses the differences between [Microsoft Secure Score](../defender/microsoft-secure-score.md) and [Microsoft Security Exposure Management](microsoft-security-exposure-management.md). While both are security posture tools that contribute to reducing your organizational security risk through meeting recommendations, Microsoft Security Exposure Management has broader tools to assist with security posture.
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Overview
 
@@ -70,4 +70,4 @@ The following chart reviews some of the key differences of Secure Score and Expo
 ## Next steps
 
 - [Start using Exposure Management](start-using-exposure-management.md)
-- <!--[!INCLUDE [support](../../includes/support.md)]-->
+- <!--[!INCLUDE [support](../includes//support.md)]-->

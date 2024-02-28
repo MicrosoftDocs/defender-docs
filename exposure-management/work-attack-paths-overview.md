@@ -11,13 +11,13 @@ ms.date: 11/28/2023
 
 # Overview of work with attack paths
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 Microsoft Security Exposure Management uses attack surface tools to proactively identify and visualize potential threats. Attack paths and the exposure map help you investigate and remediate potential threats.
 
 <!--You can do so from [Attack paths](https://security.microsoft.com/attack-paths) in the [Microsoft defender portal](https://security.microsoft.com/) or by selecting **Attack surface -> Attack path**.-->
 
-:::image type="content" source="../../media/security-exposure-management/attack-paths.png" alt-text="Screenshot of the attack path window":::
+:::image type="content" source="./media/security-exposure-management/attack-paths.png" alt-text="Screenshot of the attack path window":::
 
 Your attack surface tools:
 

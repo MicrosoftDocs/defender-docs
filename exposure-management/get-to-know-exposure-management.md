@@ -13,7 +13,7 @@ ms.date: 11/28/2023
 
 The following article provides an overview of concepts that are useful when getting started with Microsoft Security Exposure Management.
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 NEED content and expected terms
 <!--introduction this was removed but probably should stay-->

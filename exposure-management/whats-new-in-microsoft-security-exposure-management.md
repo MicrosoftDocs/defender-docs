@@ -11,7 +11,7 @@ ms.date: 11/28/2023
 
 # What's new in Microsoft Security Exposure Management
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 WHEN RELEVANT
 
 This article lists recent features added for Microsoft Security Exposure Management in the last three months.
@@ -22,5 +22,5 @@ For information about earlier features delivered, see our Tech Community blogs.
 ## Next steps
 
 For more information, see:
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes//support.md)]
 

@@ -19,7 +19,7 @@ ms.date: 11/28/2023
 
 # Track exposure over time overview
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 Tracking events over time provides important insights into an organization's risk exposure over a period of time. The information can help security decision makers manage exposure. Exposure tracking is discussed further in the following sections:
 
@@ -42,7 +42,7 @@ The Microsoft Security Exposure Management Security Events provides information 
  See [Security events](security-events.md) for more information.
 <!-- To access [Events](https://security.microsoft.com/exposure-events), go to **Exposure Management -> Exposure Insights -> Events**. -->
 
-:::image type="content" source="../../media/security-exposure-management/events-navigation.png" alt-text="Screenshot of the Exposure management Events window.":::
+:::image type="content" source="./media/security-exposure-management/events-navigation.png" alt-text="Screenshot of the Exposure management Events window.":::
 
 For more information, see [Security Events](security-events.md).
 
@@ -52,6 +52,6 @@ For more information, see:
 
 - [History](history.md)
 - [Security Events](security-events.md)
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes//support.md)]
 
 ## See also

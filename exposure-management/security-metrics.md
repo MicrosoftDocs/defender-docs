@@ -11,7 +11,7 @@ ms.date: 11/28/2023
 
 # Investigate security metrics
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 <!-- * what is secuirty metrics and their components (value, weight, trend, recommendations)
 * why is value upside down ?X
 * how to prioritize and drilldown to metrics
@@ -26,7 +26,7 @@ Metrics are associated with initiatives. They allow users to assess an initiativ
 
 To access [Metrics](https://security.microsoft.com/exposure-metrics), go to **Exposure Management -> Exposure Insights -> Metrics** to see a complete list of metrics:
 
-:::image type="content" source="../../media/security-exposure-management/metrics.png" alt-text="Screenshot of the metrics page in Microsoft Security Exposure management.":::
+:::image type="content" source="./media/security-exposure-management/metrics.png" alt-text="Screenshot of the metrics page in Microsoft Security Exposure management.":::
 
 You can also access Metrics from the dashboard or access initiative specific metrics from an individual initiatives page.
 
@@ -89,6 +89,6 @@ For more information, see:
 - [Security events](security-events.md)
 - [Security recommendations](security-recommendations.md)
 - [Identify and investigate attack paths](attack-paths-analysis-remediation.md)
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes//support.md)]
 
 ## See also

@@ -20,7 +20,7 @@ ms.date: 11/28/2023
 # Customize exposure management tools
 NEED FURTHER content
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 Microsoft Security Exposure Management provides the means to customize your organization's risk management, adapting tools to your organization's specific risk tolerance and profile. It recognizes that not all organizations view risk in the same way. Some might be more or less risk adverse, depending on specific needs.
 
@@ -46,6 +46,6 @@ Increasing or decreasing these values increases or reduces their impact on your 
 
 For more information, see:
 
-- [!INCLUDE [support](../../includes/support.md)]
+- [!INCLUDE [support](../includes//support.md)]
 
 ## See also

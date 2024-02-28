@@ -11,7 +11,7 @@ ms.date: 02/19/2024
 
 # Review non-Microsoft data connectors
 
-[!INCLUDE [prerelease](../../includes/prerelease.md)]
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 Data connectors allow you to connect non-Microsoft data sources for a richer, more centralized exposure management experience.
 
@@ -22,7 +22,7 @@ Data connectors allow you to connect non-Microsoft data sources for a richer, mo
 1. Once you enter the information requested, save the information by selecting **Connect**.
 1. Once the data source is connected, you can select **Status** to review its status.
 
-:::image type="content" source="../../media/security-exposure-management/data-connectors.png" alt-text="Screenshot of the Data connectors screen in Security Exposure Management.":::
+:::image type="content" source="./media/security-exposure-management/data-connectors.png" alt-text="Screenshot of the Data connectors screen in Security Exposure Management.":::
 
 <!--images -->
 ## Next steps
