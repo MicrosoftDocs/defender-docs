@@ -11,12 +11,16 @@ ms.date: 02/28/2024
 
 # Mitigate attack paths
 
-[!INCLUDE [prerelease](../includes/prerelease.md)]
+
+
+
 <!--the text here is mostly what is in the overview-->
 Once you identify potential attack paths, you want to reduce the risk of their use. To remediate and minimize your risk from attack paths, you will:
 
 - Review and meet the recommendations for each attack path
 - Review the exposure map to contextualize your attack path, determine and prioritize choke points, and mitigate them
+
+[!INCLUDE [prerelease](../includes/prerelease.md)]
 
 ## Meet recommendations
 
