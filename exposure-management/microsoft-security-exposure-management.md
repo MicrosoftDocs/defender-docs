@@ -65,7 +65,7 @@ Currently, Security Exposure Management consolidates security posture informatio
 - Microsoft Entra ID  
 - Azure External Attack Surface Management (EASM)
 
-In addition to Microsoft services, Security Exposure Management provides data connector, to connect to non-Microsoft data sources that will grow with time.
+In addition to Microsoft services, Security Exposure Management provides data connectors to connect to non-Microsoft data sources. Data connectors will connect to more third-party data sources over time.
 
 ## Next steps
 
