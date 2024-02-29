@@ -4,17 +4,17 @@
   items: 
     - name: Overview
       items:
-      - name: What is Microsoft Security Exposure Management
+      - name: What is Microsoft Security Exposure Management?
         href: microsoft-security-exposure-management.md
       - name: What is security exposure management
         href: get-to-know-exposure-management.md     
       - name: What is the difference between Secure Score and Microsoft Security Exposure Management
         href: compare-secure-score-security-exposure-management.md      
-    - name: Get Started
+    - name: Get started
       items:
       - name: Prerequisites and support
         href: prerequisites.md
-      - name: Get started with Microsoft Security Exposure Management
+      - name: Start using Microsoft Security Exposure Management
         href: get-started-exposure-management.md
       - name: Review organizational exposure
         href: review-organizational-exposure.md
@@ -42,11 +42,11 @@
           href: review-attack-paths.md    
         - name: Mitigate attack paths
           href: attack-paths-analysis-remediation.md    
-    - name: Improve security insights with exposure insights
+    - name: Manage exposure with security insights
       items:
         - name: Overview
           href: exposure-insights-overview.md    
-        - name: Secure score for Security Exposure Management
+        - name: Secure score in Microsoft Security Exposure Management
           href: secure-score.md
         - name: Review security initiatives
           href: initiatives.md

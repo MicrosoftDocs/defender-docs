@@ -15,6 +15,14 @@ ms.date: 11/28/2023
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
+## Prerequisites
+
+Critical asset protection management is only available to members with one of the following roles: Global administrator, Security administrator, Security Operator, Global Reader, and Security Reader.
+
+
+
+## Review critical assets
+
 To access critical asset management:
 
 1. Select **Settings > Microsoft XDR > Rules > Critical asset management**  in the Security Exposure Management section in the [Microsoft Defender portal](https://security.microsoft.com) or from the **Classify critical asset** action card in **Assets > Devices**, and the **Critical asset protection** initiative in **Exposure insights -> Initiatives**.
@@ -24,9 +32,6 @@ To access critical asset management:
 
 :::image type="content" source="./media/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window.":::
 
-> [!NOTE]
-> Critical asset protection management is only available to members with one of the following roles: Global administrator, Security administrator, Security Operator, Global Reader, and Security Reader.
->Creating critical asset classification queries is additionally useful for limited cases where not all assets of interest are identified.
 
 ## Set critical asset levels
 

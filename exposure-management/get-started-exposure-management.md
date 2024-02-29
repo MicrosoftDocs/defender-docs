@@ -25,6 +25,26 @@ Microsoft Security Exposure Management assesses your company workloads to identi
 
 Get started with Security Exposure Management in the [Microsoft Security portal](https://security.microsoft.com).
 
+
+
+
+
+<!-- should this be removed here?  
+Microsoft Exposure Management includes the following features:
+
+- **Overview (dashboard):** The exposure management overview page:
+  - Summarizes the exposure management workflows
+  - Lists the most exposed metrics
+  - Displays recent security events
+  - Allows easy navigation for drill-down to features such as key initiatives and critical asset management.
+  - Provides **asset criticality management**. Critical asset management allows users to manage the criticality level of assets, that Microsoft predefined as assets of interests. It also creates custom classification rules to detect critical assets. 
+- **Attack surface** This allows users to explore, investigate, and remediate the attack paths identified, visually and by attack path.
+- **Exposure Insights**
+  - **Initiatives:** Initiatives or the Initiative catalog provides a full list of all initiatives and their details.
+  - **Security Metrics:** Metrics or the Metrics catalog provides a full list of all metrics and their details, for all initiatives.
+  - **Security Recommendations:** Recommendations or the Recommendation catalog provides a full list of all recommendations and their details, in relation to the relevant metrics and initiatives.
+  - **Security Events:** Lists all events, with a historical view, across the entire platform.
+- **Microsoft Secure Score**: Measures an organization's security posture, with a higher number indicating more recommended actions taken.
 ## Navigate Security Exposure Management
 
 The navigation includes these items:
