@@ -32,6 +32,28 @@ The Exposure insights section is made up of the following capabilities:
 
 It uses Secure Score, and other benchmarks, to help meet a target score to minimize risk. <!--improve-->
 
+
+## Address security insights
+
+Security Exposure Management determines potential threats and provides a means to address them proactively. It supports your organization through:
+
+|Capability |Description |Get Started |
+|---------|---------|---------|
+| **Comprehensive exposure visibility** | The platform provides a single view of exposure across all security products, giving security managers a holistic understanding of their organization’s risk profile. | [Review organizational exposure](review-organizational-exposure.md)|
+| **Drill-down capabilities** | Security managers can drill down into specific security programs or threats to see how exposed they are in that segment. Examining segments individually allows security managers to focus their remediation efforts on the areas of greatest risk based on business context and data. | [Improve security insights with exposure insights overview](exposure-insights-overview.md) |
+|**Actionable recommendations** | The platform provides actionable recommendations for reducing exposure, helping security managers to prioritize their remediation efforts, and make the most of their resources. | [Improve security insights with exposure insights overview](exposure-insights-overview.md)  |
+|**Exposure events feed** | Compiled critical exposure events are vital data for security decision-makers to monitor and respond to. These exposure events offer insights into changes in baseline conditions and emerging vulnerabilities related to your organization's assets. |  [Improve security insights with exposure insights overview](exposure-insights-overview.md) |
+|**Critical Asset Identification** | The platform automatically identifies critical assets within your organization, highlighting their significance in relation to exposure and potential vulnerabilities. Users can also define their own logic for identifying critical assets in their organization. The ability to identify critical assets empowers security managers with a clear understanding of which assets are most vital to protect. This identification helps safeguard your key resources, proactively. | [Overview of identify and manage critical assets](critical-asset-management.md) |
+|**Attack Path Management** | The platform effectively manages attack paths by identifying potential routes that attackers might use to access and compromise your critical assets. Security managers can proactively address these pathways, reducing the risk of security breaches and ensuring the safety of your organization's most crucial data and systems. This proactive approach enables you to stay ahead of potential threats and effectively safeguard your critical assets. | [Overview of work with attack paths](work-attack-paths-overview.md) |
+
+## Consolidate insights
+
+Consolidation happens proactively and responsively in Security Exposure Management. **Initiatives** combines different security areas, such as ransomware protection and endpoint security, optimizing existing products to assess exposure and posture. The overview of different areas, contributes to better insights.
+
+Security teams can use the aggregated view of the security events and review changes requiring attention to keep track and effectively respond to issues. They can also gain broad visibility into different assets throughout the organization and ask intelligent, exposure-related questions about them using advanced hunting capabilities.
+
+:::image type="content" source="./media/exposure-management-overview.png" alt-text="Screenshot of the exposure management overview page.":::
+
 ## Security initiatives
 
 Security initiatives provide a means to measure the maturity of an organization's various security concerns, priorities, and threats. You can review your product specific and threat specific initiatives, customize scores, and prioritize which initiatives to see on the overview dashboard.
