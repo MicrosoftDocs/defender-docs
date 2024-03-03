@@ -12,9 +12,7 @@ ms.date: 01/09/2024
 
 # What is Microsoft Security Exposure Management?
 
-Extended security posture management (XSPM) combines and integrates tools and processes into  comprehensive solutions for proactively managing organizational security.
-
-Microsoft Security Exposure Management is a security posture management solution that facilitates XSPM. Security Exposure Management provides a unified view of security posture across company data, assets and workloads, and enriches asset information with security context that helps you to manage attack surfaces, identify critical assets, and mitigate exposure risk. 
+Microsoft Security Exposure Management is a security solution that provides a unified view of security posture across company data, assets and workloads. Security Exposure Management enriches asset information with security context that helps you to manage attack surfaces, identify critical assets, and mitigate exposure risk. 
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
@@ -30,7 +28,7 @@ Security Exposure Management is aimed at:
 
 With Security Exposure Management you can:
 
-- **Get a unified view across the organization**: Security Exposure Management continuously discovers assets and workloads and gathers discovered data into a unified and up-to-date view of your inventory and attack surface.
+- **Get a unified view across the organization**: Security Exposure Management continuously discovers assets and workloads, and gathers discovered data into a unified up-to-date view of your company inventory and attack surface.
 -**Manage attack surfaces**: You can visualize, analyze, and manage cross-workload attack surfaces. Features include:
     - **Enterprise exposure graph**: The enterprise exposure graph gathers infomation about assets, users, and workloads across your enterprise to provide a unified, comprehensive view of your organizational security posture.
     - **Enterprise exposure graph schemas**: Schemas provide contextual information about specific organizational entitles such as devices, identities, machines, and storage.
