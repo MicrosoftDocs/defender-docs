@@ -6,8 +6,6 @@
       items:
       - name: What is Microsoft Security Exposure Management?
         href: microsoft-security-exposure-management.md
-      - name: What is security exposure management
-        href: get-to-know-exposure-management.md     
       - name: What is the difference between Secure Score and Microsoft Security Exposure Management
         href: compare-secure-score-security-exposure-management.md      
     - name: Get started
@@ -91,36 +89,6 @@
       - name: Defender for Cloud
         href: /microsoft-365/security/defender/defender-vulnerability-management/index.yml
       - name: Entra  
-        href: /microsoft-365/security/defender/defender-vulnerability-management/index.yml 
-    - name: Extra 
-      items:
-       - name: Microsoft Security Exposure Management in Microsoft Defender portal
-         href: microsoft-security-exposure-management.md
-       - name: Delegating metrics and recommendations
-         href: delegate-metrics-recommendations.md
-       - name: Identify and investigate attack paths
-         href: attack-paths-analysis-remediation.md
-       - name: Explore attack surface
-         items:
-         - name: Overview
-           href: attack-surface-management-overview.md
-         - name: Attack surface in advanced hunting
-           href: microsoft-security-exposure-management.md    
-       - name: Identify risk and exposure across your organization
-         items:
-         - name: Overview
-           href: identify-risk-exposure-overview.md
-       - name: Estimate overall risk and exposure
-         items:
-          - name: Estimate overall risk and exposure overview
-            href: estimate-overall-risk-exposure-overview.md 
-          - name: Customize exposure management tools
-            href: customization.md              
-       - name: Track exposure over time
-         items:
-          - name: Overview
-            href: track-exposure-over-time-overview.md
-          - name: Track exposure management history
-            href: history.md
+        href: /microsoft-365/security/defender/defender-vulnerability-management/index.yml     
 
       

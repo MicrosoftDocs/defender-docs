@@ -11,10 +11,6 @@ ms.date: 02/28/2024
 
 # Mitigate attack paths
 
-
-
-
-<!--the text here is mostly what is in the overview-->
 Once you identify potential attack paths, you want to reduce the risk of their use. To remediate and minimize your risk from attack paths, you will:
 
 - Review and meet the recommendations for each attack path
@@ -48,7 +44,7 @@ Attack path analysis and remediation:
 
 You can select an attack path to see the related Graph and Recommendations in a side pane:
 -->
-:::image type="content" source="./media/attack-paths-graph-recommendations.png" alt-text="Screenshot of attack paths graph and recommendations":::
+:::image type="content" source="./media/attack-paths-analysis-remediation/attack-paths-graph-recommendations.png" alt-text="Screenshot of attack paths graph and recommendations":::
 
 <!-- 
 <!-- can you only see these recommendations once there is an attack path?
@@ -64,4 +60,3 @@ For more information, see:
 - [Attack surface management overview](attack-surface-management-overview.md)
 - [Critical asset management](critical-asset-management.md)
 - [!INCLUDE [support](../includes/support.md)]
-

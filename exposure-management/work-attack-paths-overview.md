@@ -11,13 +11,11 @@ ms.date: 11/28/2023
 
 # Overview of work with attack paths
 
-[!INCLUDE [prerelease](../includes//prerelease.md)]
-
 Microsoft Security Exposure Management uses attack surface tools to proactively identify and visualize potential threats. Attack paths and the exposure map help you investigate and remediate potential threats.
 
-<!--You can do so from [Attack paths](https://security.microsoft.com/attack-paths) in the [Microsoft defender portal](https://security.microsoft.com/) or by selecting **Attack surface -> Attack path**.-->
+[!INCLUDE [prerelease](../includes/prerelease.md)]
 
-:::image type="content" source="./media/attack-paths.png" alt-text="Screenshot of the attack path window":::
+:::image type="content" source="media/work-attack-paths-overview/attack-paths.png" alt-text="Screenshot of the attack path window":::
 
 Your attack surface tools:
 
@@ -26,12 +24,6 @@ Your attack surface tools:
 - **Provides recommendations:** Provides actionable recommendations to mitigate identified attack paths.
 - **Gives visibility into choke points:** The solution highlights choke points through which many attack paths flow. This visibility enables users to focus their mitigation efforts strategically, addressing multiple attack paths by securing these critical points in the network.
 
-<!--## Delegate metrics and recommendations
-
-Microsoft Security Exposure Management provides a way to delegate risk and exposure metrics and recommendation tasks to other members of your security team. This helps appropriate team members remediate identified risks in a timely fashion.
-
-For more information, see [Delegate metrics and recommendations](delegate-metrics-recommendations.md)
--->
 ## Review attack paths
 
 Security Exposure Management generates attack paths based on data gathered from your various connected workloads. **Attack paths** lets you view how an attacker could try to breach your attack surface. It also provides the means to mitigate these risks. It allows you to group attack paths together to better identify risk and prioritize how you address issues.
@@ -59,8 +51,6 @@ The following articles explore threat identification using attack surface tools:
 > The value of your attack paths increases based on the workload data it can use as a source. Some attack paths may not appear if there is no data to generate the path.
 
 ## Next steps
-
-For more information, see:
 
 - [Review attack paths](review-attack-paths.md)
 - [Mitigate attack paths](attack-paths-analysis-remediation.md)

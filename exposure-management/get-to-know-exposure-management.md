@@ -13,10 +13,7 @@ ms.date: 11/28/2023
 
 The following article provides an overview of concepts that are useful when getting started with Microsoft Security Exposure Management.
 
-[!INCLUDE [prerelease](../includes//prerelease.md)]
-
-NEED content and expected terms
-<!--introduction this was removed but probably should stay-->
+[!INCLUDE [prerelease](../../includes/prerelease.md)]
 
 ## What is exposure management?
 
@@ -26,6 +23,10 @@ For more information, see [What is Microsoft Security Exposure Management](micro
 ## [What is Cloud security posture management (CSPM)?](https://www.microsoft.com/en-us/security/business/security-101/what-is-cspm)
 
 ## How are posture management and exposure management different?
+
+## What is eXtended Security Posture Management?
+
+eXtended Security Posture Management (XSPM) is a way to aggregate cross-workload exposure and posture management information and insights from domain specific products.
 
 ## What is risk mitigation?
 
@@ -40,10 +41,6 @@ Critical assets are those assets that are crucial for your business to function 
 ## What is a choke point?
 
 A choke point is a specific node, which creates a bottleneck in the graph or map. A chokepoint provides information about the flow in the graph. With Security Exposure Management, chokepoints are where multiple attack paths intersect on the way to a critical asset. Ensuring that chokepoints are secure, protects your assets from threats. 
-
-## What is XSPM?
-
-eXtended Security Posture Management (XSPM) is a way to aggregate cross-workload exposure and posture management information and insights from domain specific products.
 
 <!--images -->
 ## Next steps
