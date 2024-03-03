@@ -20,11 +20,10 @@ ms.date: 11/28/2023
 # Overview of exposure insights
 
 
-Exposure insights in Microsoft Security Exposure Management aggregate security posture data into a single pipeline, and provide rich context around the security posture state of your asset inventory. You leverage these insights to prioritize security effort, focus, and investment.  
+Exposure insights in Microsoft Security Exposure Management aggregate security posture data into a single pipeline, and provide rich context around the security posture state of your asset inventory.
 
-Insights information and context helps CISOs, security decision makers, risk owners, and security/partner teams to manage exposure risk across the entire organization with a continuous and up-to-date posture overview to manage, drive, and prioritize security hygience and exposure management across the business.
-
-
+Leveraging insights information and context helps CISOs, security decision makers, risk owners, and security/partner teams to manage exposure risk across the entire organization with a continuous and up-to-date posture overview to manage, drive, and prioritize security efforts and investment across the business.
+ 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
 Exposure insights include security events, recommendations, metrics, and initiatives. These components build on each other to provide granular and aggregrated information about security posture state. Insights enable you to:
@@ -38,14 +37,14 @@ Exposure insights include security events, recommendations, metrics, and initiat
 
 ## Security recommendations
 
-Assets and workloads are assessed against security standards. Security recommendations based on those assessments provide practical steps to help you improve security settings and remediate identified issues.
+Assets and workloads are assessed against security standards. Security recommendations based on those assessments provide practical steps to help you improve security settings and remediate identified issues. In Security Exposure Management, the recommendations catalog serves as a centralized repository for security recommendations. 
 
-In Security Exposure Management, the recommendations catalog serves as a centralized repository for security recommendations. Reommendations show as compliant or non-compliant for the entire organization, where compliant indicates that the recommendation has been implemented successfully. You can review individual recommendations, their state, impact, and source, and follow remediation steps to address recommendation issues.
+Recommendations show as compliant or non-compliant for the entire organization, where compliant indicates that the recommendation has been implemented successfully. You can review individual recommendations, their state, impact, and source, and follow remediation steps to address recommendation issues.
 
 
 Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), and from Defender XDR [secure score](/microsoft-365/security/defender/microsoft-secure-score.md).
 
-he recommendations For instance, sources like Microsoft Secure Score and Microsoft Defender for Cloud. Examining and addressing recommendations lets you preemptively address security risk and reduce exposure.
+
 
 ## Metrics
 
@@ -56,19 +55,21 @@ For example:
 - Percent of macOS endpoints missing an endpoint security solution agent
 - Percent of cloud resources with critical vulnerabilities
 
-You can review the metrics for your assets. Each metric shows the percentage of assets affected, the relative importance of the metric, and the impact that the metric has on initiatives in which it is include. You can drill down into individual recommendations to remediate them. Metric scores go up as recommendations are remediated.
+As you review the metrics for your assets, each metric shows the percentage of assets affected, the relative importance of the metric, and the impact that the metric has on initiatives in which it is included. You can drill down into individual metric recommendations to remediate them. Metric scores go up as recommendations are remediated.
 
-Use metrics to assess an initiative's exposure status and identify exposed areas or areas that don't meet internal standards. This information can be used to prioritize which areas to address first.
+Use metrics to assess an initiative's exposure status, and identify exposed areas or areas that don't meet internal standards. This information can be used to prioritize efforts around risk mitigation.
 
 Metrics are only shown if underlying data for the metric is available.
 
 ## Initiatives
 
-Predefined initiatives gather metrics together to help you review and manage exposure in specific areas of security risk. Initiatives might measure a specific type of security such as identity or endpoint security, or focus horizontally across asset types, for example ransomware protection. Initiatives also focus on threat intelligence and emerging threats/attacks, or on specific compliance standards.
+Predefined initiatives gather metrics together to help you review and manage exposure in specific areas of security risk. 
 
-Security initiatives provide a means to measure the maturity of an organization's various security concerns, priorities, and threats. You can prioritize which initiatives to see on the overview dashboard.
+Initiatives might measure a specific type of security such as identity or endpoint security, or focus horizontally across asset types, for example ransomware protection. Initiatives also focus on threat intelligence, or on specific compliance standards.
 
-You can review the initiative score that reflects the exposure status of the initiative, and drill down into initiatives to see their associated metrics. The score and recommendations are derived from metrics within the initiative.
+Security initiatives provide a means to measure the maturity of an organization's security concerns, priorities, and threats. 
+
+You can prioritize which initiatives to see on the overview dashboard, review the initiative score that reflects the exposure status of the initiative, and drill down into initiatives to see their associated metrics. The initiative score and recommendations are derived from metrics within the initiative.
 
 As recommendations are fixed, metrics rise, and in turn initiative scores rise to reflect improved security posture.
 
@@ -85,15 +86,15 @@ Security events consolidate information about any posture management changes det
 
 ## Secure Score
 
-Secure score helps organizations:
+[Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score.md) helps organizations:
 
 - Report on the current state of the organization's security posture.
 - Improve their security posture by providing discoverability, visibility, guidance, and control.
 - Compare with benchmarks and establish key performance indicators (KPIs).
 
-For more information, see [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score.md).
-
-Microsoft Security Exposure Management recommendations use Secure Score as one of its sources. Secure score has "Recommended actions" for a [number of products](/microsoft-365/security/defender/microsoft-secure-score.md#products-included-in-secure-score). Selecting a recommendation to review, allows you to remediate the problem in the specific product, including recommendations that derived from Secure Score. For recommendations where Secure score is relevant, if Secure score isn't active, that recommendation doesn't display.
+- Security Exposure Management recommendations use secure score as one of its sources. 
+- Secure score has "Recommended actions" for a [number of products](/microsoft-365/security/defender/microsoft-secure-score.md#products-included-in-secure-score).
+- Selecting a recommendation to review, allows you to remediate the problem in the specific product, including recommendations that derived from Secure Score. For recommendations where Secure score is relevant, if Secure score isn't active, that recommendation doesn't display.
 
 ## Next steps
 

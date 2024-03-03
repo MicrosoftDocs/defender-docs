@@ -11,11 +11,12 @@ ms.date: 11/28/2023
 
 # Overview of work with attack paths
 
-Microsoft Security Exposure Management helps you to manage your company attack surface and exposure risk. Attack paths show you how an attacker might breach your attack surface, so that you can investigate and remediate potential threats. The value of attack paths increases based on the data used as a source. If no data is available, attack paths might not appear.
+Microsoft Security Exposure Management helps you to manage your company attack surface and exposure risk. Attack paths show you how an attacker might breach your attack surface, so that you can investigate and remediate potential threats. 
+
+> [!NOTE]
+> The value of attack paths increases based on the data used as a source. If no data is available, attack paths might not appear.
 
 [!INCLUDE [prerelease](../includes/prerelease.md)]
-
-:::image type="content" source="media/work-attack-paths-overview/attack-paths.png" alt-text="Screenshot of the attack path window":::
 
 
 ## Identifying and resolving attack paths
@@ -23,12 +24,11 @@ Microsoft Security Exposure Management helps you to manage your company attack s
 Here's how Security Exposure Management helps you to identify and resolve attack paths.
 
 - **Attack path generation**: Security Exposure Management automatically generates attack paths based on the data collected across assets and workloads. It simulates attack scenarios, and identifies vulnerabilities and weaknesses that an attacker could exploit.
-- **Attack path visibility**: You can use the enterprise exposure graph view to understand how potential threats might unfold. The [enterprise exposure map](enterprise-exposure-map.md) extends how you can visualize attack paths by showing you multiple attack paths and choke points. It visualizes exposure data, allowing you to see what assets are at risk, and where to prioritize your focus.
-- **Security recommendations**: Get actionable recommendations to mitigate identified attack paths.
-- **Identify choke points**: A choke point is a specific node, which creates a bottleneck in the graph or map, and provides information about the graph flow.
-    - Security Exposure Management highlights choke points through which multiple attack paths flows, or where multiple attack paths intersect on the way to a critical asset.
-    -  Ensuring that chokepoints are secure protects your assets from threats.
-    - This visibility enables you to focus mitigation efforts strategically, addressing multiple attack paths by securing these critical points in the network.
+- **Attack path visibility**: You use the enterprise exposure graph view to understand how potential threats might unfold. In addition to the graph, the [enterprise exposure map](enterprise-exposure-map.md) extends how you can visualize attack paths by showing you multiple attack paths and choke points. It visualizes exposure data, allowing you to see what assets are at risk, and where to prioritize your focus.
+- **Security recommendations**: Get actionable recommendations to mitigate potential attack paths.
+- **Choke point identification**: A choke point is a specific node, which creates a bottleneck in the graph or map. Ensuring that chokepoints are secure protects your assets from threats.
+    - Security Exposure Management highlights choke points through which multiple attack paths flow, or where multiple attack paths intersect on the way to a critical asset.
+    - Chokepoint visibility enables you to focus mitigation efforts strategically, addressing multiple attack paths by securing these critical points in the network.
 
 
 

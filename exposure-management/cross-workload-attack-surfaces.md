@@ -24,13 +24,13 @@ The enterprise exposure graph is the central tool for attack surface exploration
 Graph schemas provide a framework for organizing and analyzing interconnected assets from multiple workloads across the organization.
 
 - Schemas are made up of tables that provide either event information or information about devices, alerts, identities, and other entity types.
-- You query against schemas for proactive threat hunting across data and events. you can build queries in [advanced hunting](/microsoft-365/security/defender/advanced-hunting-modes.md). 
+- You query against schemas for proactive threat hunting across data and events. You can build queries in [advanced hunting](/microsoft-365/security/defender/advanced-hunting-modes.md). 
 - To understand schemas and build effective queries, you can use a built in schema reference that provides table information. Learn more about the [advanced hunting schema](/microsoft-365/security/defender/advanced-hunting-schema-tables.md).
 
 
 The enterprise exposure graph and the exposure graph schemas extend the existing Defender XDR [advanced hunting schemas](/microsoft-365/security/defender/advanced-hunting-schema-tables.md).
 
-- The enterprise exposure graph schemas provide attack surface information to help understand how poten
+- The enterprise exposure graph schemas provide attack surface information to help understand how potential threats can reach and compromise valuable assets.
 - Use the exposure graph schema tables and operators to query the enterprise exposure graph.
 - You can query the extended enterprise exposure graph schemas and operators, and the exposure map, to visualize your data. These tools allow you to inspect and search attack surface data and retrieve exposure information to help prevent risk.
 - The enterprise exposure graph currently includes assets, findings, and entity relationships from:
