@@ -12,7 +12,7 @@ ms.date: 01/09/2024
 
 # What is Microsoft Security Exposure Management?
 
-Microsoft Security Exposure Management is a security solution that provides a unified view of security posture across company data, assets and workloads. Security Exposure Management enriches asset information with security context that helps you to manage attack surfaces, identify critical assets, and mitigate exposure risk. 
+Microsoft Security Exposure Management is a security solution that provides a unified view of security posture across company data, assets and workloads. Security Exposure Management enriches asset information with security context that helps you to manage attack surfaces, identify critical assets, and explore and mitigate exposure risk.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
@@ -35,12 +35,15 @@ With Security Exposure Management you can:
     - **Graph queries**: You can query the exposure graph to explore assets, assess risks, and hunt for threats across on-premises, hybrid, and multicloud environments.
     - **Attack surface map**: The attack surface map provides information about your environment and provides query results in a visual format.  
 
-- **Discover and safeguard critical assets**: Security Exposure Management marks predefined assets as critical. You can customize critical asset settings.  You can then focus on those critical assets with prioritized triage or recommendation remediation, to ensure their safety and business continuity.
+- **Discover and safeguard critical assets**: Security Exposure Management marks predefined assets, and assets you customize, as critical. You can then focus and prioritize those critical assets for exploration, triage, and remediation, to ensure security and business continuity.
 
 - **Manage exposure**: Security Exposure Management provides a number of tools to manage exposure and mitigate exposure risk.
-    - **Exposure insights**: Exposure insights aggregate security posture data, and provide context around the security posture state of your asset inventory. Leverage insights to effectively prioritize security investments and focus areas. 
-    - **Initiatives**: Initiatives focus on specific areas of security risk. Predefined initiatives help you to review and manage exposure in these specific areas. Iniatives might measure a specific type of security such as identity or endpoint security, or be horizontal across asset types, for example ransomware protection. Initiatives might also focus on known and emerging threats/attacks, or on specific compliance standards.
-    - **Metrics**: Measure how you're doing in a specific context. 
+    - **Exposure insights**: Exposure insights aggregate security posture data, and provide rich context around the security posture state of your asset inventory. You leverage these insights to effectively prioritize security focus and investment. 
+    - **Security recommendations**: Assets and workloads are assessment against security standards. Based on those assessments, security recommendations provide practical steps to help you remediate security issues that were identified. Security Exposure Management integrates recommendations fromMicrosoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), and from Defender XDR [secure score](/microsoft-365/security/defender/microsoft-secure-score.md).
+    - **Metrics**: Metrics group together recommendations that have a similar context, and measure how you're doing in that context, from high to zero exposure for the context area.
+    - **Initiatives**: Predefined initiatives gather metrics information that helps you to review and manage exposure in specific areas of security risk.
+        - Initiatives might measure a specific type of security such as identity or endpoint security, or focus horizontally across asset types, for example ransomware protection. Initiatives might also focus on known and emerging threats/attacks, or on specific compliance standards.
+        - Initiative recommendations are derived from metrics within the initiative.
     - **Secure score**: In addition to exposure features in Security Exposure Management, the Security Exposure Management dashboard also includes secure score data. Secure score is an analytics tool that assigns a score based on security configuration settings.  
 - **Manage exposure: attack paths**: As you manage exposure risk, attack paths show you how an attacker might breach your attack surface. Security Exposure Management:
     -  **Generates attack paths**: Security Exposure Management generates attack paths based on the data collected across assets and workloads. It simulates attack scenarios, and identifies weaknesses that an attacker could exploit.
