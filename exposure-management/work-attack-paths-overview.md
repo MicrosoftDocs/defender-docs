@@ -11,44 +11,27 @@ ms.date: 11/28/2023
 
 # Overview of work with attack paths
 
-Microsoft Security Exposure Management uses attack surface tools to proactively identify and visualize potential threats. Attack paths and the exposure map help you investigate and remediate potential threats.
+Microsoft Security Exposure Management helps you to manage your company attack surface and exposure risk. Attack paths show you how an attacker might breach your attack surface, so that you can investigate and remediate potential threats. The value of attack paths increases based on the data used as a source. If no data is available, attack paths might not appear.
 
 [!INCLUDE [prerelease](../includes/prerelease.md)]
 
 :::image type="content" source="media/work-attack-paths-overview/attack-paths.png" alt-text="Screenshot of the attack path window":::
 
-Your attack surface tools:
 
-- **Automatically generate attack paths:** It simulates various attack scenarios, identifying vulnerabilities and weaknesses in the organization’s security posture that an attack could exploit.
-- **Provides visibility into attack paths with graph view:** The graph view provides a clear understanding of how potential threats could unfold aiding threat assessment and decision-making. It also allows you to view the attack path visually in the [exposure map](enterprise-exposure-map.md) by selecting **view in map**.  
-- **Provides recommendations:** Provides actionable recommendations to mitigate identified attack paths.
-- **Gives visibility into choke points:** The solution highlights choke points through which many attack paths flow. This visibility enables users to focus their mitigation efforts strategically, addressing multiple attack paths by securing these critical points in the network.
+## Identifying and resolving attack paths
 
-## Review attack paths
+Here's how Security Exposure Management helps you to identify and resolve attack paths.
 
-Security Exposure Management generates attack paths based on data gathered from your various connected workloads. **Attack paths** lets you view how an attacker could try to breach your attack surface. It also provides the means to mitigate these risks. It allows you to group attack paths together to better identify risk and prioritize how you address issues.
+- **Attack path generation**: Security Exposure Management automatically generates attack paths based on the data collected across assets and workloads. It simulates attack scenarios, and identifies vulnerabilities and weaknesses that an attacker could exploit.
+- **Attack path visibility**: You can use the enterprise exposure graph view to understand how potential threats might unfold. The [enterprise exposure map](enterprise-exposure-map.md) extends how you can visualize attack paths by showing you multiple attack paths and choke points. It visualizes exposure data, allowing you to see what assets are at risk, and where to prioritize your focus.
+- **Security recommendations**: Get actionable recommendations to mitigate identified attack paths.
+- **Identify choke points**: A choke point is a specific node, which creates a bottleneck in the graph or map, and provides information about the graph flow.
+    - Security Exposure Management highlights choke points through which multiple attack paths flows, or where multiple attack paths intersect on the way to a critical asset.
+    -  Ensuring that chokepoints are secure protects your assets from threats.
+    - This visibility enables you to focus mitigation efforts strategically, addressing multiple attack paths by securing these critical points in the network.
 
-The exposure map extends how you can visualize attack paths by showing you multiple attack paths and choke points. It visualizes exposure data, allows you to see what assets are at risk, and therefore to prioritize your focus.
-For more about the exposure map, see [Explore the attack surface visually](enterprise-exposure-map.md).
 
-## Resolve attack paths
 
-Microsoft Security Exposure management resolves attack paths in the following ways:
-
-- **Automatically generates attack paths:** It simulates various attack scenarios, identifying vulnerabilities and weaknesses in the organization’s security posture that an attack could exploit.
-- **Provides visibility into attack paths with graph view:** This graph view provides a clear understanding of how potential threats could unfold aiding threat assessment and decision-making.
-- **Provides recommendations:** Provides actionable recommendations to mitigate identified attack paths.
-- **Gives visibility into choke points:** The solution highlights choke points through which many attack paths flow. This visibility enables users to focus their mitigation efforts strategically, addressing multiple attack paths by securing these critical points in the network.
-
-For more information, see [Mitigate attack paths](attack-paths-analysis-remediation.md).
-
-The following articles explore threat identification using attack surface tools:
-
-- [Review attack paths](review-attack-paths.md)
-- [Mitigate attack paths](attack-paths-analysis-remediation.md)
-
-> [!NOTE]
-> The value of your attack paths increases based on the workload data it can use as a source. Some attack paths may not appear if there is no data to generate the path.
 
 ## Next steps
 
