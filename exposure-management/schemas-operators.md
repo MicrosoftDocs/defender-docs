@@ -13,7 +13,7 @@ ms.date: 11/28/2023
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-The enterprise exposure graph schemas provide attack surface information that helps you understand how potential threats can reach and compromise valuable assets. For more information, see [Schema and operators](cross-workload-attack-surfaces.md#schema-and-operators). This article discusses the exposure graph schema tables and operators.
+The [enterprise exposure graph schemas](cross-workload-attack-surfaces.md#enterprise-exposure-graph-schemas) provide attack surface information that helps you understand how potential threats can reach and compromise valuable assets. This article discusses the exposure graph schema tables and operators.
 
 ## Schema tables
 

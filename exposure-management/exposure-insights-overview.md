@@ -19,72 +19,60 @@ ms.date: 11/28/2023
 
 # Overview of exposure insights
 
-The Exposure insights section in Microsoft Security Exposure Management is a one-stop-shop for chief information security officers (CISO), security decision makers, risk owners, and security managers to manage exposure insights throughout the entire organization. It provides a continuous and unified posture oversight to prioritize and drive security hygiene and exposure management across the enterprise. It aggregates detection data across workloads into a single pipeline.
 
+Exposure insights in Microsoft Security Exposure Management aggregate security posture data into a single pipeline, and provide rich context around the security posture state of your asset inventory.
+
+Leveraging insights information and context helps CISOs, security decision makers, risk owners, and security/partner teams to manage exposure risk across the entire organization with a continuous and up-to-date posture overview to manage, drive, and prioritize security efforts and investment across the business.
+ 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-The Exposure insights section is made up of the following capabilities:
+Exposure insights include security events, recommendations, metrics, and initiatives. These components build on each other to provide granular and aggregrated information about security posture state. Insights enable you to:
 
-- Security initiatives
-- Security metrics
-- Recommendations
-- Security events
-
-It uses Secure Score, and other benchmarks, to help meet a target score to minimize risk. <!--improve-->
+- Break down organizational security posture into prioritized initiatives.
+- Measure and track exposure of key elements in initiatives.
+- Prioritize areas of security focus based on initiatives and metrics.
+- Follow actionable remediation steps to improve security posture and reduce risk.
 
 
-## Address security insights
 
-Security Exposure Management determines potential threats and provides a means to address them proactively. It supports your organization through:
+## Security recommendations
 
-|Capability |Description |Get Started |
-|---------|---------|---------|
-| **Comprehensive exposure visibility** | The platform provides a single view of exposure across all security products, giving security managers a holistic understanding of their organization’s risk profile. | [Review organizational exposure](review-organizational-exposure.md)|
-| **Drill-down capabilities** | Security managers can drill down into specific security programs or threats to see how exposed they are in that segment. Examining segments individually allows security managers to focus their remediation efforts on the areas of greatest risk based on business context and data. | [Improve security insights with exposure insights overview](exposure-insights-overview.md) |
-|**Actionable recommendations** | The platform provides actionable recommendations for reducing exposure, helping security managers to prioritize their remediation efforts, and make the most of their resources. | [Improve security insights with exposure insights overview](exposure-insights-overview.md)  |
-|**Exposure events feed** | Compiled critical exposure events are vital data for security decision-makers to monitor and respond to. These exposure events offer insights into changes in baseline conditions and emerging vulnerabilities related to your organization's assets. |  [Improve security insights with exposure insights overview](exposure-insights-overview.md) |
-|**Critical Asset Identification** | The platform automatically identifies critical assets within your organization, highlighting their significance in relation to exposure and potential vulnerabilities. Users can also define their own logic for identifying critical assets in their organization. The ability to identify critical assets empowers security managers with a clear understanding of which assets are most vital to protect. This identification helps safeguard your key resources, proactively. | [Overview of identify and manage critical assets](critical-asset-management.md) |
-|**Attack Path Management** | The platform effectively manages attack paths by identifying potential routes that attackers might use to access and compromise your critical assets. Security managers can proactively address these pathways, reducing the risk of security breaches and ensuring the safety of your organization's most crucial data and systems. This proactive approach enables you to stay ahead of potential threats and effectively safeguard your critical assets. | [Overview of work with attack paths](work-attack-paths-overview.md) |
+Assets and workloads are assessed against security standards. Security recommendations based on those assessments provide practical steps to help you improve security settings and remediate identified issues. In Security Exposure Management, the recommendations catalog serves as a centralized repository for security recommendations. 
 
-## Consolidate insights
+Recommendations show as compliant or non-compliant for the entire organization, where compliant indicates that the recommendation has been implemented successfully. You can review individual recommendations, their state, impact, and source, and follow remediation steps to address recommendation issues.
 
-Consolidation happens proactively and responsively in Security Exposure Management. **Initiatives** combines different security areas, such as ransomware protection and endpoint security, optimizing existing products to assess exposure and posture. The overview of different areas, contributes to better insights.
 
-Security teams can use the aggregated view of the security events and review changes requiring attention to keep track and effectively respond to issues. They can also gain broad visibility into different assets throughout the organization and ask intelligent, exposure-related questions about them using advanced hunting capabilities.
+Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), and from Defender XDR [secure score](/microsoft-365/security/defender/microsoft-secure-score.md).
 
-:::image type="content" source="./media/exposure-management-overview.png" alt-text="Screenshot of the exposure management overview page.":::
 
-## Security initiatives
 
-Security initiatives provide a means to measure the maturity of an organization's various security concerns, priorities, and threats. You can review your product specific and threat specific initiatives, customize scores, and prioritize which initiatives to see on the overview dashboard.
+## Metrics
 
-[Initiatives](https://security.microsoft.com/exposure-initiatives) can be accessed through the dashboard or in the [Microsoft Defender portal](https://security.microsoft.com) through the navigation bar under **Exposure Management -> Exposure Insights -> Initiatives**.
+Metrics group together recommendations for similar assets, and measure specific aspects of exposure around those assets, from high to zero exposure.
 
-:::image type="content" source="./media/initiatives-dashboard.png" alt-text="screenshot of the initiatives dashboard":::
-
-For more information, see [Review security initiatives](initiatives.md).
-
-## Security metrics
-
-Security metrics measure specific aspects of exposure with respect to a given asset. For example:
+For example:
 
 - Percent of macOS endpoints missing an endpoint security solution agent
 - Percent of cloud resources with critical vulnerabilities
 
-Metrics allow users to assess an initiative's exposure status and identify exposed areas or areas that don't meet internal standards. This information can be used to prioritize which areas to address first.
-To access [Metrics](https://security.microsoft.com/exposure-metrics), go to **Exposure Management -> Exposure Insights -> Metrics**.
+As you review the metrics for your assets, each metric shows the percentage of assets affected, the relative importance of the metric, and the impact that the metric has on initiatives in which it is included. You can drill down into individual metric recommendations to remediate them. Metric scores go up as recommendations are remediated.
 
-:::image type="content" source="./media/metrics.png" alt-text="Screenshot of the metrics page in Exposure management.":::
+Use metrics to assess an initiative's exposure status, and identify exposed areas or areas that don't meet internal standards. This information can be used to prioritize efforts around risk mitigation.
 
-For more information, see [Investigate initiative metrics](security-metrics.md).
+Metrics are only shown if underlying data for the metric is available.
 
-## Recommendations
+## Initiatives
 
-The recommendations catalog serves as a centralized repository for security recommendations from various different sources. For instance, sources like Microsoft Secure Score and Microsoft Defender for Cloud. Examining and addressing recommendations lets you preemptively address security risk and reduce exposure.
+Predefined initiatives gather metrics together to help you review and manage exposure in specific areas of security risk. 
 
-For more information, see [Review security recommendations](security-recommendations.md).
+Initiatives might measure a specific type of security such as identity or endpoint security, or focus horizontally across asset types, for example ransomware protection. Initiatives also focus on threat intelligence, or on specific compliance standards.
 
-:::image type="content" source="./media/recommendations-navigation.png" alt-text="Screenshot of the recommendations window.":::
+Security initiatives provide a means to measure the maturity of an organization's security concerns, priorities, and threats. 
+
+You can prioritize which initiatives to see on the overview dashboard, review the initiative score that reflects the exposure status of the initiative, and drill down into initiatives to see their associated metrics. The initiative score and recommendations are derived from metrics within the initiative.
+
+As recommendations are fixed, metrics rise, and in turn initiative scores rise to reflect improved security posture.
+
 
 ## Security events
 
@@ -94,23 +82,19 @@ Security events consolidate information about any posture management changes det
 - *Initiative score drop events* notify customers when security initiatives decrease. We assess *Initiative score drop events* based on how it affects the score. If there's a decrease of at least 2% since yesterday, the change is classified as a score drop event.
 - Security Events present and track initiative and metric score drop incidents in order to determine how they affect the organizations security posture.
 
-To access [Events](https://security.microsoft.com/exposure-events), go to **Exposure Management -> Exposure Insights -> Events**.
 
-:::image type="content" source="./media/events-navigation.png" alt-text="Screenshot of the Exposure management Events window.":::
-
-For more information, see [Explore security events](security-events.md).
 
 ## Secure Score
 
-Secure score helps organizations:
+[Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score.md) helps organizations:
 
 - Report on the current state of the organization's security posture.
 - Improve their security posture by providing discoverability, visibility, guidance, and control.
 - Compare with benchmarks and establish key performance indicators (KPIs).
 
-For more information, see [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score.md).
-
-Microsoft Security Exposure Management recommendations use Secure Score as one of its sources. Secure score has "Recommended actions" for a [number of products](/microsoft-365/security/defender/microsoft-secure-score.md#products-included-in-secure-score). Selecting a recommendation to review, allows you to remediate the problem in the specific product, including recommendations that derived from Secure Score. For recommendations where Secure score is relevant, if Secure score isn't active, that recommendation doesn't display.
+- Security Exposure Management recommendations use secure score as one of its sources. 
+- Secure score has "Recommended actions" for a [number of products](/microsoft-365/security/defender/microsoft-secure-score.md#products-included-in-secure-score).
+- Selecting a recommendation to review, allows you to remediate the problem in the specific product, including recommendations that derived from Secure Score. For recommendations where Secure score is relevant, if Secure score isn't active, that recommendation doesn't display.
 
 ## Next steps
 
@@ -119,4 +103,4 @@ Microsoft Security Exposure Management recommendations use Secure Score as one o
 - [Review security recommendations](security-recommendations.md)
 - [Explore security events](security-events.md)
 - [Secure score for Microsoft Security Exposure Management](secure-score.md)
-- [!INCLUDE [support](../includes//support.md)]
+

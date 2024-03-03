@@ -14,7 +14,8 @@ ms.date: 11/28/2023
 
 In Microsoft Security Exposure Management, you can define and manage resources as critical assets. 
 
-Identifying critical assets helps ensure that the most important assets in your organization are protected against risk of data breaches and operational disruptions to ensure availability and business continuity. You can also prioritize security investigations, posture recommendations, and remediation steps to focus on critical assets first.
+- Identifying critical assets helps ensure that the most important assets in your organization are protected against risk of data breaches and operational disruptions to ensure availability and business continuity.
+- You can also prioritize security investigations, posture recommendations, and remediation steps to focus on critical assets first.
 
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
@@ -25,8 +26,8 @@ Security Exposure Management provides an out-of-the-box catalog of predefined cr
 
 - Domain controllers
 - Databases with sensitive data
-- Groups like Power Users
-- Roles like Privileged Role Administrator.
+- Groups such as Power Users
+- Roles such as Privileged Role Administrator.
 
 In addition, you can create custom critical assets to prioritize what your organization considers to be critical when assessing exposure and risk.
 
@@ -36,25 +37,21 @@ In addition, you can create custom critical assets to prioritize what your organ
 Critical assets can be identified in different ways:
 
 - **Automatically:** The solution employs advanced analytics to automatically identify critical assets within your organization, including devices, identities, or cloud resources, in line with predefined classifications. This streamlines the identification process, enabling you to pinpoint assets that require heightened protection and immediate attention.
-- **With custom queries:** Writing custom queries allows you to pinpoint your organization’s "crown jewels" based on unique criteria. With granular control, you can ensure that you can focus your security efforts precisely where they're needed.
-- **Manually:** Review assets in the [device inventory](/microsoft-365/security/defender-endpoint/machines-view-overview) sorted by criticality level and identify assets that require attention.
+- **With custom queries:** Writing custom queries allows you to pinpoint your organization’s "crown jewels" based on your unique criteria. With granular control, you can ensure that you can focus your security efforts precisely where they're needed.
+- **Manually:** Review assets in the [device inventory](/microsoft-365/security/defender-endpoint/machines-view-overview) sorted by criticality level, and identify assets that require attention.
 
 
 ## Classifying assets
 
-After business critical assets are defined and identified, asset criticality appears with your asset information. Asset criticality is integrated into other experiences in the Defender portal, such as  
-advanced hunting, the device inventory, and attack paths involving critical assets.
+After business critical assets are defined and identified, asset criticality appears with your asset information. Asset criticality is integrated into other experiences in the Defender portal, such as in advanced hunting, the device inventory, and in attack paths that involve critical assets.
 
-For example, on the Device Inventory, a criticality level is shown.
+For example, in Device Inventory, a criticality level is shown.
 
 :::image type="content" source="./media/device-inventory-criticality-level.png" alt-text="Screenshot of the Device inventory window. The image includes an emphasis on the criticality level section.":::
 
-On the [attack map](enterprise-exposure-map.md), as you look for exposure to threats and identify choke points, the halo color surrounding the asset icon and the crown indicator visually indicate the high criticality level.
+In another example, on the [attack surface map](enterprise-exposure-map.md), as you look for exposure to threats and identify choke points, the halo color surrounding the asset icon and the crown indicator visually indicate the high criticality level.
 
 :::image type="content" source="./media/attack-surface-exposure-map.png" alt-text="Screenshot of an asset viewed in the exposure map in the context of other connections. Two devices on the map show high critical levels.":::
-
-
-In addition, you can gain an overview of threats to critical assets through the [Critical asset protection initiative](#critical-asset-protection-initiative).
 
 
 
@@ -62,7 +59,7 @@ In addition, you can gain an overview of threats to critical assets through the 
 
 You can work with critical asset settings as follows:
 
-- **Create custom classifications**: You can create new critical asset classifications for devices, identities and cloud resources. As you do this, you use the query builder to define a new classification. For example, you might build a query to make all devices with a specific naming convention as critical.
+- **Create custom classifications**: You can create new critical asset classifications for devices, identities and cloud resources. You use the query builder to define a new classification. For example, you might build a query to define devices with a specific naming convention as critical.
     - Building custom queries helps to identify your unique organizational “crown jewels."
     - Creating critical asset classification queries is additionally useful for limited cases where not all assets of interest are identified.
 - **Add assets to classifications**: You can manually add assets to critical asset classifications.
@@ -72,17 +69,17 @@ You can work with critical asset settings as follows:
 
 ## Reviewing critical assets
 
-The critical asset classification logic classifies your assets according to the particular classification. However, some assets that fit the classification might not meet the threshold for the classification. For instance, it might be a domain controller, but it isn't clear whether your organization considers the asset business critical. When assets don't meet the classification threshold for criticality, you can choose to add them to your defined classification with the asset review feature. This feature allows you to add listed assets based on your organization's criticality criteria.
+The critical asset classification logic classifies your assets according to a particular classification. 
+
+However, some assets that fit the classification might not meet the classification threshold. For instance, the asset might be a domain controller, but it might not be considered a critical asset in your business. When assets don't meet the classification threshold for criticality, you can choose to add them to your defined classification with the asset review feature. This feature allows you to add listed assets based on your organization's criticality criteria.
 
 
 ## Critical asset protection initiative
 
-The Critical Asset Protection initiative helps you make sure your business critical assets are safeguarded from threats.
+The Critical Asset Protection initiative in the [Microsoft Defender portal](https://security.microsoft.com/) (**Exposure Insights > Initiatives** >**Critical Asset Protection**) helps you make sure your business critical assets are safeguarded from threats.
 
 - The Critical Asset Protection initiative offers continuous monitoring of the security resilience of your critical assets, providing real-time insights into the effectiveness of your protection measures.
 - The initiative's asset tab lets you gain visibility into all critical assets within your organization, identify potential gaps in critical asset discovery, and fine-tune your classifications accordingly. 
-
-View the Critical Asset Protection initiative in **Exposure Insights > Initiatives** >**Critical Asset Protection** in the [Microsoft Defender portal](https://security.microsoft.com/). 
 
 
 
