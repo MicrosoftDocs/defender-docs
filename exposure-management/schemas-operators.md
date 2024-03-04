@@ -11,9 +11,9 @@ ms.date: 11/28/2023
 
 # Schemas and operators overview
 
-[!INCLUDE [prerelease](../includes//prerelease.md)]
-
 The [enterprise exposure graph schemas](cross-workload-attack-surfaces.md#enterprise-exposure-graph-schemas) provide attack surface information that helps you understand how potential threats can reach and compromise valuable assets. This article discusses the exposure graph schema tables and operators.
+
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Schema tables
 
@@ -153,8 +153,6 @@ The `make-graph operator` builds a graph structure from tabular inputs of edges 
 The `graph-match` operator searches for all occurrences of a graph pattern in an input graph source. For more information, see [graph-match operator](/azure/data-explorer/kusto/query/graph-match-operator).
 
 ## Next steps
-
-For more information, see:
 
 - [Query the enterprise exposure graph](query-enterprise-exposure-graph.md)
 - [!INCLUDE [support](../includes//support.md)]

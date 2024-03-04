@@ -94,4 +94,3 @@ graph operators
 For more information, see:
 
 - [Attack path analysis and remediation](attack-paths-analysis-remediation.md)
-- [!INCLUDE [support](../includes//support.md)]

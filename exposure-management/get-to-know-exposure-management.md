@@ -40,7 +40,7 @@ Critical assets are those assets that are crucial for your business to function 
 
 ## What is a choke point?
 
-A choke point is a specific node, which creates a bottleneck in the graph or map. A chokepoint provides information about the flow in the graph. With Security Exposure Management, chokepoints are where multiple attack paths intersect on the way to a critical asset. Ensuring that chokepoints are secure, protects your assets from threats. 
+A choke point is a specific node, which creates a bottleneck in the graph or map. A chokepoint provides information about the flow in the graph. With Security Exposure Management, chokepoints are where multiple attack paths intersect on the way to a critical asset. Ensuring that chokepoints are secure, protects your assets from threats.
 
 <!--images -->
 ## Next steps

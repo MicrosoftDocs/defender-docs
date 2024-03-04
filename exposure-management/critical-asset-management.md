@@ -11,12 +11,10 @@ ms.date: 11/28/2023
 
 # Overview of critical asset management
 
-
 In Microsoft Security Exposure Management, you can define and manage resources as critical assets. 
 
 - Identifying critical assets helps ensure that the most important assets in your organization are protected against risk of data breaches and operational disruptions to ensure availability and business continuity.
 - You can also prioritize security investigations, posture recommendations, and remediation steps to focus on critical assets first.
-
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
@@ -31,7 +29,6 @@ Security Exposure Management provides an out-of-the-box catalog of predefined cr
 
 In addition, you can create custom critical assets to prioritize what your organization considers to be critical when assessing exposure and risk.
 
-
 ## Identifying critical assets
 
 Critical assets can be identified in different ways:
@@ -39,7 +36,6 @@ Critical assets can be identified in different ways:
 - **Automatically:** The solution employs advanced analytics to automatically identify critical assets within your organization, including devices, identities, or cloud resources, in line with predefined classifications. This streamlines the identification process, enabling you to pinpoint assets that require heightened protection and immediate attention.
 - **With custom queries:** Writing custom queries allows you to pinpoint your organization’s "crown jewels" based on your unique criteria. With granular control, you can ensure that you can focus your security efforts precisely where they're needed.
 - **Manually:** Review assets in the [device inventory](/microsoft-365/security/defender-endpoint/machines-view-overview) sorted by criticality level, and identify assets that require attention.
-
 
 ## Classifying assets
 
@@ -53,8 +49,6 @@ In another example, on the [attack surface map](enterprise-exposure-map.md), as 
 
 :::image type="content" source="./media/attack-surface-exposure-map.png" alt-text="Screenshot of an asset viewed in the exposure map in the context of other connections. Two devices on the map show high critical levels.":::
 
-
-
 ## Working with asset classifications
 
 You can work with critical asset settings as follows:
@@ -66,10 +60,9 @@ You can work with critical asset settings as follows:
 - **Modify criticality levels**: You can choose to edit the criticality levels according to your organization's risk profile.
 - **Edit custom classifications**: You can edit, delete, and turn off custom classifications. Predefined classifications can't be modified.
 
-
 ## Reviewing critical assets
 
-The critical asset classification logic classifies your assets according to a particular classification. 
+The critical asset classification logic classifies your assets according to a particular classification.
 
 However, some assets that fit the classification might not meet the classification threshold. For instance, the asset might be a domain controller, but it might not be considered a critical asset in your business. When assets don't meet the classification threshold for criticality, you can choose to add them to your defined classification with the asset review feature. This feature allows you to add listed assets based on your organization's criticality criteria.
 
