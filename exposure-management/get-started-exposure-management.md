@@ -35,7 +35,7 @@ On the Exposure Management Overview dashboard dashboard you can review the state
 
 ## Review assets
 
-GEt a quick view of your organization's exposed assets. The overview includes all your onboarded devices, those discovered devices not yet onboarded, internet facing devices, and cloud resources. Knowing what is exposed allows you to address any asset exposure risks.
+Get a quick view of your organization's exposed assets. The overview includes all your onboarded devices, those discovered devices not yet onboarded, internet facing devices, and cloud resources. Knowing what is exposed allows you to address any asset exposure risks.
 
 ## Review key initiatives
 
@@ -109,53 +109,4 @@ For more information, see [Review security initiatives](initiatives.md).-->
 - [Explore cross-workload attack surfaces](attack-surface-management-overview.md)
 - [Identify and manage critical assets](critical-asset-management.md)
 - [Improve security insights with exposure insights](exposure-insights-overview.md)
-- [!INCLUDE [support](../includes//support.md)
 
-
-
-
-
-
-### Critical asset summary
-
-T
-
-#### Critical asset management
-
-You can access the [Critical asset management](critical-asset-management.md) section from the Critical asset summary. It allows users to manage the criticality level of predefined asset of interests identified by Microsoft and create custom classification rules to detect critical assets. You can also access Critical asset management from **Settings > Microsoft XDR > Rules > Critical asset management** <!-- i put in rules for clarity but it shouldnt really be bolded. -->
-
-:::image type="content" source="./media/critical-asset-management-summary.png" alt-text="Screenshot of Critical asset management in the Critical asset summary window.":::
-
-#### View in device inventory and in advanced hunting
-
-The Security Exposure Management Overview allows you to review critical devices in your inventory and critical issues in [Advanced hunting](/microsoft-365/security/defender/advanced-hunting-overview.md). The following views take you to a predefined filter or query for the topics: 
-You can access these headings from the device inventory:
-
-- Critical devices
-- Critical devices with high risk
-- Highly exposed critical devices
-- Internet-facing critical devices
-
-The following are accessible in advanced hunting:
-
-- Critical identities
-- Critical cloud resources  
-
-:::image type="content" source="./media/critical-asset-management-devices-advanced-hunting.png" alt-text="Screenshot of the Security Exposure Management Overview view in device inventory and advanced hunting section":::
-
-### Recent security events
-
-The Recent security events section displays security events from the past week  sorted by all events or by either initiatives or metrics drift. Select the **View all events** button to view a complete list of all events occurring in your organization.
-
-<!--
-[Data connectors](https://security.microsoft.com/exposure-data-connectors) can be found in the  [Microsoft Defender portal](https://security.microsoft.com).
-
-Select **Connect** to enter the connection information needed. Each vendor could have different connection requirements. For instance, Rapid7 requires an API key and Endpoint information. Once the data source is connected, you can select **Status** to review its status.
--->
-## Next steps
-
-- [Explore cross-workload attack surfaces](attack-surface-management-overview.md)
-- [Review organizational exposure](review-organizational-exposure.md)
-- [Identify and manage critical assets](critical-asset-management.md)
-- [Improve security insights with exposure insights](exposure-insights-overview.md)
-- [!INCLUDE [support](../includes//support.md)]
