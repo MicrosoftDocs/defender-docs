@@ -19,8 +19,6 @@ ms.date: 11/28/2023
 
 Critical asset protection management is only available to members with one of the following roles: Global administrator, Security administrator, Security Operator, Global Reader, and Security Reader.
 
-
-
 ## Review critical assets
 
 To access critical asset management:
@@ -31,7 +29,6 @@ To access critical asset management:
 <!--1. From there you can choose to change criticality levels,  view the general critical asset information including the  review general information such , choose to review classifications, create new classifications, or update the criticality levels for the existing classifications in your organization.-->
 
 :::image type="content" source="./media/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window.":::
-
 
 ## Set critical asset levels
 
@@ -73,8 +70,6 @@ To access critical asset management:
 : CAP management  explanation about how we identify critical asset for our customers and marking them as critical  predefined queries, what, which, why  managing rules – setting criticality level, turning rules off/on  Reviewing asset list  low confidence criticality  suggest new classifications for us to support  custom queries  criticality in other portal experiences (e.g., device inventory).-->
 
 <!--The Overview tab provides the following information:
-
-
 - **Description** - A description of the critical asset.
 - **Status** - Whether the critical asset is on or off.
 - **Assets** - The number of connected assets.

@@ -60,7 +60,14 @@ ms.date: 11/28/2023
 The changes in your score provide you with useful feedback about how well you're meeting the goals of your initiatives.
 
 1. From your initiative page, check the overall **14 day change trend graph** and **14 day drift change** to track the changes in your initiative score, visually and as a percentage. You can examine this data per metric as well.
-<!--1. Select **Open initiative page** and then **History** to track the changes in metrics every day along with the reason for the change. For instance, a weight change or a change in the metric value. Also, each initiative displays the delta change in assets and the related assets that day. For instance, if the metric "Virtual machines with plain text keys and secrets" went down 2.5% yesterday, the asset tab shows the larger number of assets that day with plain text keys and secrets. -->
+
+## History
+
+1. Select an individual initiative and then **History** to view changes over time
+
+1. Browse to the time table to choose a specific time point to examine.
+    1. If needed, filter for specific time points.
+    1. Choose the time point and determine the cause of the change.
 <!-- note that history may need to go outand replaced with this: The **14 day change trend graph** and **14 day drift change** track the changes in your initiative score, visually and as a percentage. -->
 <!-->:::image type="content" source="./media/history.png" alt-text="Screenshot of the Initiatives History tab."::: -->
 

@@ -20,12 +20,16 @@ The enterprise exposure graph schemas allow you to proactively hunt for enterpri
 > [!NOTE]
 >For more information about how to build queries in Advanced hunting, see [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-modes.md).
 
-## Best practices for enterprise exposure graph queries
+## Prerequisites for enterprise exposure graph queries
 
-In order to write the best enterprise exposure queries possible, follow the recommended best practices. These include [best practices for building Advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-best-practices.md) and [best practices in using the Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/). In addition, for exposure queries the recommendation is to use specific node properties to reduce query memory usage and Kusto smart-indexing with specific operators to ensure appropriate results.
+In order to write the best enterprise exposure queries possible, follow the recommended best practices. These include:
+- [best practices for building Advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-best-practices.md) 
+- [best practices in using the Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/)
+- [Memory best practices when using `make-graph` and node properties](#memory-best-practices-when-using-make-graph-and-node-properties)
+- [Best practices using dynamic columns and smart-indexing](#best-practices-using-dynamic-columns-and-smart-indexing)
 
-### Reduce memory usage by selecting specific node properties
-<!-- said properties but should be NodeProperties? -->
+### Memory best practices when using `make-graph` and node properties
+<!--Reduce memory usage by selecting specific node properties-->
 Kusto's `make-graph` operator loads nodes and edges data into memory. Since Kusto only loads the columns that are in use, there's no need to explicitly select columns. However, the `NodeProperties` column contains all node information and so is large.
 
 In most scenarios, it's useful to extract only the information required before feeding it into the `make-graph` operator.
@@ -39,7 +43,7 @@ Edges
 ..
 ```
 
-### Leverage Kusto smart indexes and checks on dynamic columns
+### Best practices using dynamic columns and smart-indexing
 
 `NodeProperties` and `Categories` are dynamic columns. Kusto knows those columns contain json-like content, and applies smart indexing. However, not all Kusto operators use the index. For example, `set_has_element`, `isempty`, `isnotnull` don't use the index when they're applied to a dynamic column and `isnotnull(Properties[“containsSensitiveData”]` doesn't use the index. Instead, use the `has()` operator, which always uses the index.
 
@@ -101,6 +105,13 @@ ExposureGraphNodes
 | project-keep NodeProperties
 | take 1
 ```
+
+## Query the exposure graph
+
+To query the exposure graph:
+1.  Select **hunting -> advanced hunting** in the [Microsoft Defender portal](https://security.microsoft.com/).
+
+1. Once you've entered your query select **run query**. Use the graph schema, functions, and operator tables or the examples below to help you build your query.
 
 ## Graph-oriented query examples
 
@@ -222,8 +233,8 @@ ExposureGraphEdges
        project DeviceWithRCEIds=DeviceWithRCE.EntityIds, DeviceWithRCEName=DeviceWithRCE.NodeName, CriticalDeviceIds=CriticalDevice.EntityIds, CriticalDeviceName=CriticalDevice.NodeName
 ```
 
-### Provide all paths from specific node ID to a node with a specific label <!--Graph paths: IPs -> any asset -> VM-->
-<!-- confirm the description-->
+### Provide all paths from specific node ID to a node with a specific label 
+
 This query displays the path from a specific IP node, passing through up to three assets that result in a connection to the virtual machine node label. It uses the `ExposureGraphNodes` and `ExposureGraphEdges` schema tables and the `make-graph` and `graph-match` operators to create a graph structure. With the `project` operator, it displays a list of IP IDs, IP properties, virtual machine IDs, and virtual machine properties.
 
 ```kusto
@@ -237,7 +248,5 @@ ExposureGraphEdges
 ```
 
 ## Next steps
-
-For more information, see:
 
 - [Explore with the attack surface map](enterprise-exposure-map.md)
