@@ -34,13 +34,51 @@ Exposure insights include security events, recommendations, metrics, and initiat
 
 ## Security recommendations
 
-Assets and workloads are assessed against security standards. Security recommendations based on those assessments provide practical steps to help you improve security settings and remediate identified issues. In Security Exposure Management, the recommendations catalog serves as a centralized repository for security recommendations.
+Assets and workloads are assessed against security standards. Security recommendations, based on those assessments, provide practical steps to help you improve security settings and remediate identified issues. In Security Exposure Management, the recommendations catalog serves as a centralized repository for security recommendations.
 
-Recommendations show as *compliant*, *non-compliant*, *mitigated by org*, or *not available* for the entire organization. Compliant indicates that the recommendation has been implemented successfully. The status mitigated by org displays when you've taken steps to mitigate recommendations elsewhere, such as by changing a status in Secure Score, and Security Exposure Management can't know whether recommendations are compliant. A not available status means there isn't enough information to determine the compliance status.
+Every action taken on a security recommendation, helps reduce exposure and directly influences related security metrics and security initiatives, as relevant.
 
-You can review individual recommendations, their state, impact, and source, and follow remediation steps to address recommendation issues.
+Each security recommendation can be categorized as *compliant*, *non-compliant*, *mitigated by org*, or *not available* for the entire organization. *Compliant* indicates that the recommendation has been implemented successfully. The status *mitigated by org* displays when you've taken steps to mitigate recommendations elsewhere, such as by changing a status in secure score, and Security Exposure Management can't know whether recommendations are compliant. A *not available* status means there isn't enough information to determine the compliance status.
 
-Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), and from Defender XDR [secure score](/microsoft-365/security/defender/microsoft-secure-score.md).
+You can review individual recommendations, their state, impact, and source, and follow remediation steps to address recommendation issues. You can further explore steps to remediate the recommendation, details about exposed entities, and related initiatives and metrics.
+
+:::image type="content" source="./media/recommendation-ransomeware-advanced-protection.png" alt-text="Screenshot of the ransomware advanced protection recommendation details ":::
+
+### Proactive workload recommendations
+
+Recommendations are sourced from Microsoft or CIS (Center for Internet Security benchmarks) and applicable across certain workloads and domains. In addition, Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [secure score](/microsoft-365/security/defender/microsoft-secure-score.md), and from a wide range of Microsoft workloads. It also provides recommendations related to non-Microsoft workloads.
+
+<!--Security exposure management recommendations relate to the following workloads:
+
+- App governance
+- Atlassian (preview)
+- Microsoft Entra ID 
+- Citrix ShareFile
+- Defender for Cloud
+- Defender for Endpoint
+- Defender for Identity
+- Defender for Office
+- DocuSign
+- Dropbox (preview)
+- Exchange Online
+- GitHub
+- Google Workspace
+- Intune
+- Microsoft Defender for Cloud Apps
+- Microsoft Purview Information Protection
+- Microsoft Teams
+- NetDocuments (preview)
+- Okta
+- Salesforce
+- ServiceNow
+- SharePoint Online
+- Slack (preview)
+- Workplace (preview)
+- Zendesk (preview)
+- Zoom
+-->
+> [!NOTE]
+>Customers who have Microsoft Defender Cloud Security Posture Management (CSPM) subscriptions will have access to comprehensive cloud data. In the absence of this subscription, only limited cloud data will be accessible in recommendations.
 
 ## Metrics
 
@@ -82,7 +120,7 @@ Those properties display when viewing all metrics in the Exposure insights secti
 - **Last Updated**
 
 In some cases, metrics display grayed out because the underlying data required for this metric, doesn't exist. Several situations cause metrics to be grayed out:
-<!-- what is the E5 plan? -->
+
 - The required workload isn't onboarded. For example, E5 customers without the Microsoft Defender for Identity workload turned on, has all, or most, Identity-related metrics grayed out.
 - The required workload is onboarded, but to a limited extent. For instance:
  - A customer with a E3/P1 license has Defender for Endpoint workload enabled but without all the features of an E5/P2 license.
@@ -104,7 +142,7 @@ Predefined initiatives gather metrics together to help you review and manage exp
 
 Initiatives might relate to particular domains, and measure a specific security like endpoint, identity, and cloud security. They could contribute to threat analysis by addressing a known threat or paradigm across multiple product categories or types, for example ransomware protection or [critical asset protection](critical-asset-management.md#critical-asset-protection-initiative). Initiatives also focus on specific compliance standards.
 
-<!-->
+<!--
     - **Threat Article initiatives** - Initiatives that contribute to threat analysis by addressing a known threat or paradigm across multiple product categories or types. Threat article initiatives are designed based on the Recommended actions for [Threat analytics](/microsoft-365/security/defender/threat-analytics.md) items. Threat Article initiatives deal with phishing, ransomware, and specific actor and activity profiles, among an ever expanding list of initiative areas.
 -->
 Security initiatives provide a means to measure an organization's maturity across security concerns, priorities, and threats. They provide a consumable way to approach exposure.
@@ -117,7 +155,7 @@ The initiative score is calculated based on the value and weight of the metrics 
 
 As recommendations are fixed, metrics rise, and in turn initiative scores rise to reflect improved security posture.
 
-Changes in metric, value, and properties can impact the initiative score. Initiatives provides a way to track the history of changes, filter for specific time points, and drill down to specific changes for an initiative, such as when a metric value changes or a metric is removed. The metric or score changes can't be controlled in advanced by customers.
+Changes in metric, value, and properties can impact the initiative score. Initiatives provides a way to track the history of changes greater than 2.5%, filter for specific time points, and drill down to specific initiative changes. For instance, when a metric value changes or a metric is removed. The metric or score changes can't be controlled in advanced by customers.
 
 <!--## Programs
 
