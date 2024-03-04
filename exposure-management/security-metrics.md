@@ -11,14 +11,6 @@ ms.date: 11/28/2023
 
 # Investigate security metrics
 
-<!-- * what is secuirty metrics and their components (value, weight, trend, recommendations)
-* why is value upside down ?X
-* how to prioritize and drilldown to metrics
-* metric actions
-* metric lifecycle (state, adding, depraciating)?
-* required data from workloads?
-* metric catalog
--->
 [Security metrics](exposure-insights-overview.md#metrics) in Microsoft Security Exposure Management, measure exposure of assets within a specific scope of assets.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
@@ -31,32 +23,31 @@ ms.date: 11/28/2023
 
 1. To view a specific metric's information select the metric from the list.
 
-1. View additional inforamtion such as:
+1. Review the metric details such as:
 
 - **Description** of the metric
 - Related **Security recommendations** and a means to manage them
 - Specific **Affected items** and the number they make of the total
 - **Last state update**
-- **Category**
 - Current **Exposure score** value
 - **Weight** or maximum metric score possible
-- **Score impact** or remaining metric score possible
+- **Score impact** or what score gain is possible
 
 ## Edit the metric value
 
-1. To edit the metric value, with admin priviledges, select a specific metric.
+1. To edit the metric value, with admin privileges, select a specific metric.
 
 1. Select weight, change the value, and apply. by editing its weight, to customize the metric to your organization's business priorities.
 
 1. To accept the risk described by the metric, set the weight to zero.
 
-> [!NOTE]
-> Some instances of affected assets information, largely information originating in Secure Score, doesn't appear on the Affected Items tab in an individual metric. Also some critical asset information for assets in the Affected Items tab does not show.
+<!-- [!NOTE]
+> Some instances of affected assets information, largely information originating in Secure Score, doesn't appear on the affected items tab in an individual metric. Also some critical asset information for assets in the Affected Items tab does not show.
 > Asset details are calculated on demand.
-> Cloud-related metrics apply only for subscription and their subsequent resources if the subscription is onboarded to a Cloud Security Posture Management (CSPM) Premium plan.
+> Cloud-related metrics apply only for a subscription and their subsequent resources if the subscription is onboarded to a Cloud Security Posture Management (CSPM) Premium plan.
 > In some cases, metrics are more specific than the scope of the related recommendations. In such a case, the asset detail shown won't align with the asset details of the related recommendations.
 > Offboarding a workload will result in an inability to refresh the metric status and the asset details for related metrics.
-
+-->
 ## Next steps
 
 - [Priority exposure items](exposure-insights-overview.md)

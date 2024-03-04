@@ -46,7 +46,7 @@ You can review individual recommendations, their state, impact, and source, and 
 
 ### Proactive workload recommendations
 
-Recommendations are sourced from Microsoft or CIS (Center for Internet Security benchmarks) and applicable across certain workloads and domains. In addition, Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [secure score](/microsoft-365/security/defender/microsoft-secure-score.md), and from a wide range of Microsoft workloads. It also provides recommendations related to non-Microsoft workloads.
+Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [secure score](/microsoft-365/security/defender/microsoft-secure-score.md), and from a wide range of Microsoft workloads. It also provides recommendations related to non-Microsoft workloads.
 
 <!--Security exposure management recommendations relate to the following workloads:
 
@@ -104,7 +104,7 @@ Most metrics have at least one associated recommendation, to help users make imp
 |Property  |Description  |
 |---------|---------|
 |**Current value** | The percentage of affected assets out of the total assets. Zero percent is best since there's no exposure, while 100% is worst. |
-|**Affected items** | The number of items that comply with the metric’s logic. In most cases, these items would be assets that are exposed or that create a risk factor. In other cases, affected would be the number of missing Microsoft Secure Score points to effectively implement recommended controls. |
+|**Affected items** | The number of items that comply with the metric’s logic. In most cases, these items would be assets that are exposed or that create a risk factor. In other cases, affected would be the number of missing Microsoft secure score points to effectively implement recommended controls. |
 |**Total** | The number of assets that is scoped for the metric. For example, for a given metric it might be all endpoints. For another, it could be all Windows endpoints. |
 |**Weight** | The importance of the metric and its effect over the initiative score. One is the lowest while 10 is the highest. Weight can be customized to have greater or lesser effect based on your organization's unique business priorities and considerations. Editing your metric weight value affects the metric and all related initiatives. |
 | **Score impact** | The impact completing the metric has on the initiative score. Meaning if a given metric is completed, the score impact is the addition seen to the initiative score. |
@@ -125,12 +125,12 @@ In some cases, metrics display grayed out because the underlying data required f
 - The required workload is onboarded, but to a limited extent. For instance:
  - A customer with a E3/P1 license has Defender for Endpoint workload enabled but without all the features of an E5/P2 license.
  - Microsoft Defenders for Endpoint customers see the “% of iOS devices not covered by security agents” metric grayed out if there are no onboarded or discovered iOS devices.
-- The respective control in Secure Score that the metric is based on is invalid for any reason, such as completed or risk accepted.
+- The respective control in secure score that the metric is based on is invalid for any reason, such as completed or risk accepted.
 
 Grayed out metrics aren't considered for score calculation.
 
 > [!NOTE]
-> Some instances of affected assets information, largely information originating in Secure Score, doesn't appear on the Affected Items tab in an individual metric. Also some critical asset information for assets in the Affected Items tab does not show.
+> Some instances of affected assets information, largely information originating in secure score, doesn't appear on the Affected Items tab in an individual metric. Also some critical asset information for assets in the Affected Items tab does not show.
 > Asset details are calculated on demand.
 > Cloud-related metrics apply only for subscription and their subsequent resources if the subscription is onboarded to a Cloud Security Posture Management (CSPM) Premium plan.
 > In some cases, metrics are more specific than the scope of the related recommendations. In such a case, the asset detail shown won't align with the asset details of the related recommendations.
@@ -170,11 +170,11 @@ Security events consolidate information about any posture management changes det
 
 - *Metric score drop events* notify customers when there's a new exposure measured by the security metrics. They're evaluated based on the effect on the score and its weight. If there's a decrease of at least 2% since yesterday, meaning exposure grew by 2%, the change is considered a score drop event.
 - *Initiative score drop events* notify customers when security initiatives decrease. We assess *Initiative score drop events* based on how it affects the score. If there's a decrease of at least 2% since yesterday, the change is classified as a score drop event.
-- Security Events present and track initiative and metric score drop incidents in order to determine how they affect the organizations security posture.
+- Security events present and track initiative and metric score drop incidents in order to determine how they affect the organizations security posture.
 
 New events appear at the top of the table and can include a new initiative event.  
 
-## Secure Score
+## Secure score
 
 [Microsoft secure score](/microsoft-365/security/defender/microsoft-secure-score.md) helps organizations:
 
@@ -191,7 +191,7 @@ For more information, see [Microsoft secure score](/microsoft-365/security/defen
 Microsoft Security Exposure Management provides metrics through [initiatives](#initiatives) that help you identify exposure and potential posture improvements attached to business context and various security objectives in your organization.
 
 - Security Exposure Management initiative scores use secure score as one of its sources for initiative scores.
-- Secure score has "Recommended actions" for a [number of products](/microsoft-365/security/defender/microsoft-secure-score.md#products-included-in-secure-score).
+- Secure score has "recommended actions" for a [number of products](/microsoft-365/security/defender/microsoft-secure-score.md#products-included-in-secure-score).
 - Selecting a recommendation to review, allows you to remediate the problem in the specific product, including recommendations that derived from Secure Score. For recommendations where Secure score is relevant, if Secure score isn't active, that recommendation doesn't display.
 
 ## Next steps

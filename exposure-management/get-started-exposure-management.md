@@ -19,15 +19,11 @@ ms.date: 11/28/2023
 
 # Get started with Microsoft Security Exposure Management
 
-[!INCLUDE [prerelease](../includes//prerelease.md)]
-
 Microsoft Security Exposure Management assesses your company workloads to identify and mitigate organizational risk associated with security exposure. Security Exposure Management is available with any E5 or P2 license, and is available as soon as you sign up for a license. Security Exposure Management collects data across workloads from your subscriptions, and adds increasing value as more workloads are assessed. Initially, your data uses the default settings in Security Exposure Management.
 
+[!INCLUDE [prerelease](../includes//prerelease.md)]
+
 Get started with Security Exposure Management in the [Microsoft Security portal](https://security.microsoft.com).
-
-
-
-
 
 <!-- should this be removed here?  
 Microsoft Exposure Management includes the following features:
@@ -106,7 +102,7 @@ You can access the [Critical asset management](critical-asset-management.md) sec
 
 #### View in device inventory and in advanced hunting
 
-The Security Exposure Management Overview allows you to review critical devices in your inventory and critical issues in [Advanced hunting](/microsoft-365/security/defender/advanced-hunting-overview.md). The following views take you to a predefined filter or query for the topics: 
+The Security Exposure Management Overview allows you to review critical devices in your inventory and critical issues in [Advanced hunting](/microsoft-365/security/defender/advanced-hunting-overview.md).
 You can access these headings from the device inventory:
 
 - Critical devices
@@ -127,11 +123,7 @@ The Recent security events section displays security events from the past week  
 
 ## Connect to non-Microsoft data sources
 
-Use data connectors to link to third-party data sources to enrich your exposure management context, findings, and insights. Using data connectors allows you to ingest non-Microsoft tools to the enterprise exposure graph. Currently, you can connect the following data sources:
-
-- ServiceNow
-- Qualys
-- Rapid7
+Use data connectors to link to third-party data sources to enrich your exposure management context, findings, and insights. Using data connectors allows you to ingest non-Microsoft tools to the enterprise exposure graph. <!--Currently, you can connect the following data sources:- ServiceNow Qualys -Rapid7-->
 <!--
 [Data connectors](https://security.microsoft.com/exposure-data-connectors) can be found in the  [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -143,4 +135,3 @@ Select **Connect** to enter the connection information needed. Each vendor could
 - [Review organizational exposure](review-organizational-exposure.md)
 - [Identify and manage critical assets](critical-asset-management.md)
 - [Improve security insights with exposure insights](exposure-insights-overview.md)
-- [!INCLUDE [support](../includes//support.md)]
