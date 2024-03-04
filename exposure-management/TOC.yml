@@ -14,8 +14,6 @@
         href: prerequisites.md
       - name: Start using Microsoft Security Exposure Management
         href: get-started-exposure-management.md
-      - name: Review organizational exposure
-        href: review-organizational-exposure.md
     - name: Explore cross-workload attack surfaces
       items:
       - name: Overview
