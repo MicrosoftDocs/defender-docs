@@ -38,7 +38,7 @@ Permissions are based on [unified Role Based Access Control (RBAC)](/microsoft-3
 <!--To assign Microsoft Entra ID roles, see [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal). For more information about required permissions, see Role groups.-->
 <!-- Is this correct?-->
 <!-- -- get url>
-Users might be assigned one of the following global roles in Microsoft Entra ID to access the full experience<!--is this the right word to use?-->:
+Users might be assigned one of the following global roles in Microsoft Entra ID to access the full experience<!--is this the right word to use?-->
 
 
 For full access users need one of the following Microsoft Entra ID roles:
@@ -82,11 +82,11 @@ Access Security Exposure Management using Microsoft Edge, Internet Explorer 11, 
 
 ## Getting support
 
-To access support for Microsoft Security Exposure Management:
+To get support:
 
 - Select the Help question mark icon in the Microsoft Security toolbar
 
-:::image type="content" source="./media/microsoft-defender-portal-header.png" alt-text="Screenshot of the Microsoft Defender security portal Help button in the portal header bar.":::
+    :::image type="content" source="./media/microsoft-defender-portal-header.png" alt-text="Screenshot of the Microsoft Defender security portal Help button in the portal header bar.":::
 
 - Engage with the [Microsoft Tech community](https://techcommunity.microsoft.com/)  
 <!--an exact url once it exists-->
