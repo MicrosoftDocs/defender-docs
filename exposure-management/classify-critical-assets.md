@@ -11,9 +11,7 @@ ms.date: 11/28/2023
 
 # Work with critical assets
 
-
 [Microsoft Security Exposure Manager](microsoft-security-exposure-management.md) helps keep your business critical assets secure and available. This article describes how to work with critical assets.
-
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
@@ -26,21 +24,20 @@ ms.date: 11/28/2023
 
 Review your critical assets.
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com) select **Settings > Microsoft XDR > Rules > Critical asset management**
+1. In the [Microsoft Defender portal](https://security.microsoft.com) select **settings > Microsoft XDR > rules > critical asset management**
 1. On the **Critical asset management** page, you can view predefined and custom critical asset classifications. Information includes the number of assets in the classification, whether assets are on or off, and criticality levels.  
 
 :::image type="content" source="./media/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window.":::
 
 > [!NOTE]
-> You can also view critical assets in **Assets > Devices** > **Classify critical asset**, and view the **Critical asset protection** initiative in **Exposure insights -> Initiatives**.
+> You can also view critical assets in **assets > devices** > **classify critical asset**, and view the **critical asset protection** initiative in **exposure insights -> initiatives**.
 
 ## Request a new predefined classification
 Request a predefined classification as follows.
 
+1. On the **Critical asset management** page, select **suggest new classification**.
 
-1. On the **Critical asset management** page, select **Suggest new classification**.
-
-1. Fill in what classification you'd like to see and then select **Submit request**.
+1. Fill in what classification you'd like to see and then select **submit request**.
 
  You can also choose to add a new classification.
 
@@ -50,7 +47,7 @@ Request a predefined classification as follows.
 
 Create a custom classification as follows.
 
-1. On the **Critical asset management** page, select **Create a new classification.**
+1. On the **Critical asset management** page, select **create a new classification.**
 
 1. On the **Create a critical asset classification** page, complete the following information to set your classification criteria:
 
@@ -59,7 +56,7 @@ Create a custom classification as follows.
     - **Query builder** - Use the query builder to define a new classification, for instance, "mark all devices with a certain naming convention as critical.". Add one or more boolean filters that are defined per device, identity, or cloud resource.
 :::image type="content" source="./media/create-critical-asset-classification.png" alt-text="Screenshot of the create critical asset classification window.":::
 
-1. Once your criteria are set, select **Next**. On the following pages, you can preview the assets that are affected and assign the criticality level for the set of assets.
+1. Once your criteria are set, select **next**. On the following pages, you can preview the assets that are affected and assign the criticality level for the set of assets.
 
 > [!NOTE]
 > It's also possible to set the criticality levels manually in the device inventory. We recommend creating criticality rules to ensure a broader application of the designation across assets.
@@ -71,7 +68,7 @@ Set levels as follows.
 
 1. On the **Critical asset management** page,select a critical asset classification.
 
-1. In the side pane **Overview** tab, select the desired criticality level. 
+1. In the side pane **overview** tab, select the desired criticality level.
 
 1. Select **Save**.
 
@@ -84,18 +81,18 @@ Set levels as follows.
 Edit custom classifications as follows.
 
 1. On the **Critical asset management** page, , browse to the critical asset classification you want to modify, delete, or turn off. Only custom classifications can be edited or deleted.
-1. Select **Edit**, **Delete**, or **Turn off**.
-1. Selecting **Edit** takes you to **Create a critical asset classification**.
+1. Select **edit**, **delete**, or **turn off**.
+1. Selecting **edit** takes you to **Create a critical asset classification**.
 
 ## Add assets to classifications
 
 1. On the **Critical asset management** page, select the predefined or custom business critical asset classification to review based on your current needs.
 
-1. To see all the custom and predefined assets classified to the defined critical asset select the **Overview** or **Assets** tab.
+1. To see all the custom and predefined assets classified to the defined critical asset select the **overview** or **assets** tab.
 
 1. Review the list of assets to give you a clearer picture of the specific assets detected by each classification.
 
-1. To approve assets that fit the critical asset classification definition, but which are out of threshold, browse to **Assets to review**.
+1. To approve assets that fit the critical asset classification definition, but which are out of threshold, browse to **assets to review**.
     1. Review the listed assets for assets that meet your organization's criticality criteria for that definition.
     1. Select the **plus** button next to the assets that fit the business critical asset criteria to add to your Asset tab.
 
@@ -118,14 +115,10 @@ Edit custom classifications as follows.
 -->
 You can change the criticality levels and turn off all assets. You can also edit and delete custom critical assets.
 
-
-
 ## Sort by criticality
 
-1. Select **Devices** in the Microsoft Security portal.
+1. Select **devices** in the Microsoft Security portal.
 
 1. Sort by **criticality level** to view business critical assets with a "very high" level of criticality or other needs.
 
 :::image type="content" source="./media/device-inventory.png" alt-text="screenshot of the Device inventory window":::
-
-

@@ -13,7 +13,7 @@ ms.date: 11/28/2023
 
 In Microsoft Security Exposure Management, you can define and manage resources as critical assets.
 
-- Identifying critical assets helps ensure that the most important assets in your organization are protected against risk of data breaches and operational disruptions to ensure availability and business continuity.
+- Identifying critical assets helps ensure that the most important assets in your organization are protected against risk of data breaches and operational disruptions. This contributes to availability and business continuity.
 - You can also prioritize security investigations, posture recommendations, and remediation steps to focus on critical assets first.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
@@ -25,7 +25,7 @@ Security Exposure Management provides an out-of-the-box catalog of predefined cr
 - Domain controllers
 - Databases with sensitive data
 - Groups such as Power Users
-- Roles such as Privileged Role Administrator.
+- Roles like Privileged Role Administrator
 
 In addition, you can create custom critical assets to prioritize what your organization considers to be critical when assessing exposure and risk.
 
@@ -45,7 +45,7 @@ For example, in Device Inventory, a criticality level is shown.
 
 :::image type="content" source="./media/critical-asset-management/device-inventory-criticality-level.png" alt-text="Screenshot of the Device inventory window. The image includes an emphasis on the criticality level section.":::
 
-In another example, on the [attack surface map](enterprise-exposure-map.md), as you look for exposure to threats and identify choke points, the halo color surrounding the asset icon and the crown indicator visually indicate the high criticality level.
+In another example, on the [attack surface map](enterprise-exposure-map.md), as you look for exposure to threats and identify choke points, the halo color surrounding the asset icon, and the crown indicator, visually indicate the high criticality level.
 
 :::image type="content" source="./media/critical-asset-management/attack-surface-exposure-map.png" alt-text="Screenshot of an asset viewed in the exposure map in the context of other connections. Two devices on the map show high critical levels.":::
 
@@ -53,7 +53,7 @@ In another example, on the [attack surface map](enterprise-exposure-map.md), as 
 
 You can work with critical asset settings as follows:
 
-- **Create custom classifications**: You can create new critical asset classifications for devices, identities and cloud resources. You use the query builder to define a new classification. For example, you might build a query to define devices with a specific naming convention as critical.
+- **Create custom classifications**: You can create new critical asset classifications for devices, identities, and cloud resources. You use the query builder to define a new classification. For example, you might build a query to define devices with a specific naming convention as critical.
   - Building custom queries helps to identify your unique organizational “crown jewels."
   - Creating critical asset classification queries is additionally useful for limited cases where not all assets of interest are identified.
 - **Add assets to classifications**: You can manually add assets to critical asset classifications.
@@ -68,9 +68,9 @@ However, some assets that fit the classification might not meet the classificati
 
 ## Critical asset protection initiative
 
-The Critical Asset Protection initiative in the [Microsoft Defender portal](https://security.microsoft.com/) (**Exposure Insights -> Initiatives ->Critical Asset Protection**) helps you make sure your business critical assets are safeguarded from threats.
+The critical asset protection initiative in the [Microsoft Defender portal](https://security.microsoft.com/) (**exposure insights -> initiatives ->critical asset protection**) helps you make sure your business critical assets are safeguarded from threats.
 
-- The Critical Asset Protection initiative offers continuous monitoring of the security resilience of your critical assets, providing real-time insights into the effectiveness of your protection measures.
+- The critical asset protection initiative offers continuous monitoring of the security resilience of your critical assets, providing real-time insights into the effectiveness of your protection measures.
 - The initiative's asset tab lets you gain visibility into all critical assets within your organization, identify potential gaps in critical asset discovery, and fine-tune your classifications accordingly.
 
 ## Next steps
