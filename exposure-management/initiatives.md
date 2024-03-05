@@ -11,9 +11,13 @@ ms.date: 11/28/2023
 
 # Review security initiatives
 
-<!--Microsoft Security Exposure Management provides a means to optimize your security domain and protect against security threats using security initiatives.--> [Microsoft Security Exposure initiatives](exposure-insights-overview.md#initiatives) offer a focused, metric-driven way of tracking your organization’s maturity to a wide variety of important security concerns. It aggregates data and insights across workloads into a single pipeline.
+[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) offers a focused, metric-driven way of tracking exposure in specific security areas using security initiatives. This article describes how to work with initatives.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
+
+## Prerequisites
+
+[Read about initiatives](exposure-insights-overview.md) before you start.
 
 ## View initiatives page
 
