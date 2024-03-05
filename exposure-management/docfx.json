@@ -25,7 +25,9 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -42,9 +44,28 @@
     "globalMetadata": {
       "breadcrumb_path": "/security-exposure-management/breadcrumb/toc.json",
       "feedback_system": "Standard",
-      "permissioned-type": "public"
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/security-exposure-management",
+      "permissioned-type": "public",
+      "searchScope": ["security-exposure-management"],
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "titleSuffix": "Microsoft Security Exposure Management",
+      "contributors_to_exclude": [
+        "dstrome2",
+        "rjagiewich",  
+        "American-Dipper",
+        "claydetels19", 
+        "jborsecnik",
+        "v-stchambers",
+        "shdyas",
+        "Stacyrch140",
+        "garycentric",
+        "dstrome",
+        "alekyaj"
+      ]
+
     },
-    "fileMetadata": {},
-    "template": []
+    "fileMetadata": [],
+    "template": [],
+    "dest": "defender-xdr"
   }
 }
