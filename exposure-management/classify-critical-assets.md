@@ -9,10 +9,10 @@ ms.service: azure
 ms.date: 11/28/2023
 ---
 
-# Classify assets as critical
+# Work with critical assets
 
 
-[Microsoft Security Exposure Manager](microsoft-security-exposure-management) helps keep your business critical assets secure and available. This article describes how to work with critical assets.
+[Microsoft Security Exposure Manager](microsoft-security-exposure-management.md) helps keep your business critical assets secure and available. This article describes how to work with critical assets.
 
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
@@ -85,7 +85,7 @@ Edit custom classifications as follows.
 
 1. On the **Critical asset management** page, , browse to the critical asset classification you want to modify, delete, or turn off. Only custom classifications can be edited or deleted.
 1. Select **Edit**, **Delete**, or **Turn off**.
-1. Selecting **Edit** takes you to the [Create a critical asset classification](#create-critical-asset-classification) window for modification.
+1. Selecting **Edit** takes you to **Create a critical asset classification**.
 
 ## Add assets to classifications
 
