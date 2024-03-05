@@ -15,7 +15,7 @@ ms.date: 11/28/2023
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-1. To access [Metrics](https://security.microsoft.com/exposure-metrics), go to **exposure management -> exposure insights -> metrics**,  the **overview** dashboard, or individual initiative or recommendations.
+1. To access [metrics](https://security.microsoft.com/exposure-metrics), go to **exposure management -> exposure insights -> metrics**,  the **overview** dashboard, or individual initiative or recommendations.
 
 :::image type="content" source="./media/metrics.png" alt-text="Screenshot of the metrics page in Microsoft Security Exposure management.":::
 

@@ -11,7 +11,7 @@ ms.date: 01/10/2024
 
 # What is the difference between secure score and Microsoft Security Exposure Management?
 
-This article discusses the differences between Defender Extended Detection and Response (XDR) [secure score](/microsoft-365/security/defender/microsoft-secure-score.md) and [Microsoft Security Exposure Management](microsoft-security-exposure-management.md).
+This article discusses the differences between Microsoft [secure score](/microsoft-365/security/defender/microsoft-secure-score.md) and [Microsoft Security Exposure Management](microsoft-security-exposure-management.md).
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
