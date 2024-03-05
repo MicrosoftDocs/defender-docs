@@ -11,9 +11,7 @@ ms.date: 11/28/2023
 
 # Review security recommendations
 
-<!-- Recommendations types ,compliance logic, recommendations fields (including other related EM objects) , products included, data is presented based on  product license-->
-
-The Microsoft Security Exposure Management [recommendations catalog](exposure-insights-overview.md#security-recommendations) serves as a centralized repository for security recommendations originating from various different sources to assist in preemptively addressing security risk and reduce exposure.
+The Microsoft Security Exposure Management [recommendations catalog](exposure-insights-overview.md#security-recommendations) serves as a centralized repository for security recommendations originating from various sources to help preemptively address security risk and reduce exposure.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
@@ -35,8 +33,6 @@ The following information is available to view in Recommendations as an overview
 - **Source** - the benchmark source
 - **Workload** - which workload the recommendations relate to
 - **Domain** - Either device, apps, data, or identity
-
-<!-- what does preview mean next to workload? only in the preview? -->
 
 ## Remediate recommendations
 

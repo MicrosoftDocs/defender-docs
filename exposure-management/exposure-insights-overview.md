@@ -1,19 +1,11 @@
 ---
-title: Overview of exposure insights
-description: This article provides an overview of Microsoft Exposure Management's exposure insights.
-keywords: Microsoft Exposure Management, exposure insights, cyber security
+title: Overview of exposure insights and secure score
+description: This article provides an overview of Microsoft Exposure Management's exposure insights and secure score.
 ms.author: v-mjosephy
 author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.subservice:
-ms.localizationpriority: medium
-ms.collection: 
-- Tier1
-- m365-security
-search.appverid: met150
-audience: ITPro
 ms.date: 11/28/2023
 ---
 
@@ -25,7 +17,7 @@ Leveraging insights information and context helps CISOs, security decision maker
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-Exposure insights include security events, recommendations, metrics, and initiatives. These components build on each other to provide granular and aggregrated information about security posture state. Insights enable you to:
+Exposure insights include security events, recommendations, metrics, and initiatives. These components build on each other to provide granular and aggregated information about security posture state. Insights enable you to:
 
 - Break down organizational security posture into prioritized initiatives.
 - Measure and track exposure of key elements in initiatives.
@@ -166,13 +158,13 @@ For each initiative, Programs shows the user what workloads or product types ref
 
 ## Security events
 
-Security events consolidate information about any posture management changes detected, enabling customers to make adjustments to maintain a robust security posture. It measures the score drop, or worsening in the metric status. In particular, Security events handle *Initiative score drop events* and *Metric score drop events*.
+Security events consolidate information about any posture management changes detected, enabling customers to adjust to maintain a robust security posture. It measures the score drop, or worsening in the metric status. Security events handle *initiative score drop events* and *metric score drop events*.
 
 - *Metric score drop events* notify customers when there's a new exposure measured by the security metrics. They're evaluated based on the effect on the score and its weight. If there's a decrease of at least 2% since yesterday, meaning exposure grew by 2%, the change is considered a score drop event.
 - *Initiative score drop events* notify customers when security initiatives decrease. We assess *Initiative score drop events* based on how it affects the score. If there's a decrease of at least 2% since yesterday, the change is classified as a score drop event.
-- Security events present and track initiative and metric score drop incidents in order to determine how they affect the organizations security posture.
+- Security events present and track, initiative and metric score drop incidents to determine how they affect the organization's security posture.
 
-New events appear at the top of the table and can include a new initiative event.  
+New events appear at the top of the table and can include a new initiative event. 
 
 ## Secure score
 
@@ -182,7 +174,7 @@ New events appear at the top of the table and can include a new initiative event
 - Identify potential improvements across all Microsoft 365 workloads and 3rd party services.
 - Improve their security posture by providing discoverability, visibility, guidance, and control.
 - Report to leadership on the current state of the organization's security posture and sustain progress with historical data reports.
-- Benchmark the organization's status over time and compare with benchmarks and established key performance indicators (KPIs).
+- Benchmark the organization's status over time and compare it with benchmarks and established key performance indicators (KPIs).
 
 You can continue to use secure score tools to plan and improve your overall security posture with secure score as a tracking metric.
 
@@ -192,7 +184,7 @@ Microsoft Security Exposure Management provides metrics through [initiatives](#i
 
 - Security Exposure Management initiative scores use secure score as one of its sources for initiative scores.
 - Secure score has "recommended actions" for a [number of products](/microsoft-365/security/defender/microsoft-secure-score.md#products-included-in-secure-score).
-- Selecting a recommendation to review, allows you to remediate the problem in the specific product, including recommendations that derived from Secure Score. For recommendations where Secure score is relevant, if Secure score isn't active, that recommendation doesn't display.
+- Selecting a recommendation to review allows you to remediate the problem in the specific product, including recommendations that derived from Secure Score. For recommendations where Secure score is relevant, if Secure score isn't active, that recommendation doesn't display.
 
 ## Next steps
 
