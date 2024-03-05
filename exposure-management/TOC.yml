@@ -6,7 +6,7 @@
       items:
       - name: What is Microsoft Security Exposure Management?
         href: microsoft-security-exposure-management.md
-      - name: What's the difference between Secure Score and Security Exposure Management?
+      - name: What's the difference between secure score and Security Exposure Management?
         href: compare-secure-score-security-exposure-management.md      
     - name: Get started
       items:

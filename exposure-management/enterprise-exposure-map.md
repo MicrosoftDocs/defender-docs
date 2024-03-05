@@ -17,7 +17,7 @@ Use the attack surface map (enterprise exposure map) in [Microsoft Security Expo
 
 ## Map
 
-The exposure map gives you visibility into the connections of your assets. 
+The exposure map gives you visibility into the connections of your assets.
 
 :::image type="content" source="./media/attack-surface-exposure-map.png" alt-text="Screenshot of the attack surface exposure map.":::
 
@@ -31,77 +31,10 @@ The map provides the following:
 - **Focus on Asset** provides a way to refocus the graph visualization on the specific node you wish to explore, similar to the Graph view when selecting an individual attack path in [Attack paths](review-attack-paths.md).
 - **Search** allows you to discover items by node type, and by selected **all results** search the particular type for specific results.
 
-
 ## Accessing the map
 
 You can access the attack surface map from your device inventory, by choosing a device and selecting **View Map** or by searching directly for an asset from **Attack Surface -> Map**.
 
-
-<!--image-->
-
-
-<!--Discuss exposure graph which is where the data to create the visual map comes from.
-Discuss nodes, connections, indicators (crown for high value) should this be graphs and maps?-->
-<!--
-## Reading the map
-
-The following sections provide information about each node type and connector type and their visual icons.
-
-### Node type description
-
-The following table depicts each node type and its icon:
-
-|NodeType  | Icon  |
-|---------|---------|
-|SQL virtual machines| |
-|Virtual machines | |
-
-### Edge/Connector type description
-
-The following table depicts each edge type and its icon:
-
-|EdgeType  | Icon  |
-|---------|---------|
-|affecting |         |
-|routes traffic to | :::image type="content" source="./media/routes-traffic-to-icon.png" alt-text="routes traffic to icon":::          |
-|is running | :::image type="content" source="./media/is-running-icon.png" alt-text="is running icon":::        |
-|contains | :::image type="content" source="./media/contains-icon.png" alt-text="contains icon":::        |
-|pushes |         |
-|can authenticate as |  :::image type="content" source="./media/can-authenticate-as-icon.png" alt-text="can authenticate as icon":::       |
-|maintains |         |
-|has role on |         |
-|can authenticate to |         |
-|moves data to |         |
-|frequently logged in by |         |
-|member of |         |
-|can logon over the network to |         |
-|can interactive logon to |         |
-|can remote interactive logon to |         |
-|runs on |  :::image type="content" source="./media/runs-on-icon.png" alt-text="runs on icon":::       |
-|member |         |
-
-### Indicator Name Description
-
-The following are graph indicators:
-
-|Indicator  | Icon  |
-|---------|---------|
-|Vulnerability | |
-|Explorable connected assets| |
-|High criticality level | |-->
-<!--images -->
-
-<!--- graph operators
-send permissions
-device names
-nodes, edges
-different types
-
-indicators- on the map
-add reference to 
-graph operators
--->
 ## Next steps
 
-
-[Analyze and remediate atttack paths](attack-paths-analysis-remediation.md)
+[Analyze and remediate attack paths](attack-paths-analysis-remediation.md)

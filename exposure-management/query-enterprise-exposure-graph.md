@@ -11,11 +11,11 @@ ms.date: 11/28/2023
 
 # Query the enterprise exposure graph
 
-Use the enterprise exposure graph in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) to proactively hunt for enterprise exposure threats in [advanced hunting](https://security.microsoft.com/v2/advanced-hunting)  in the Microsoft Defender portal
+Use the enterprise exposure graph in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) to proactively hunt for enterprise exposure threats in [advanced hunting](https://security.microsoft.com/v2/advanced-hunting)  in the Microsoft Defender portal.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-This article provides some example, tips and hinting for constructing queries in the enterprise exposure graph.
+This article provides some example, tips, and hinting for constructing queries in the enterprise exposure graph.
 
 ## Building advanced hunting queries
 
@@ -24,12 +24,11 @@ This article provides some example, tips and hinting for constructing queries in
 
 ## Using the make-graph operator
 
-
 ### Memory best practices when using `make-graph` and node properties
-<!--Reduce memory usage by selecting specific node properties-->
+
 Kusto's `make-graph` operator loads nodes and edges data into memory.
 
-- Since Kusto only loads the columns that are in use, there's no need to explicitly select columns
+- Since Kusto only loads the columns that are in use, there's no need to explicitly select columns.
 - However, the `NodeProperties` column contains all node information and so is large.
 - In most scenarios, it's useful to extract only the information required before feeding it into the `make-graph` operator.
 
@@ -54,9 +53,9 @@ Edges
 
 ### Example
 
-The following query the `has` operator checks for the `data` string and    `set_has_element` checks for the `data` element.
+In the following query the `has` operator checks for the `data` string, and `set_has_element` checks for the `data` element.
 
-Using both operators is important as the `has()` operator returns true even for a category `prefix_data`. 
+Using both operators is important as the `has()` operator returns true even for a category `prefix_data`.
 
 <!--confirm Properties is NodeProperties-->
 `Categories has('data') and set_has_element(Categories, 'data')`
@@ -119,9 +118,11 @@ ExposureGraphNodes
 ## Query the exposure graph
 
 To query the exposure graph:
-1.  in the [Microsoft Defender portal](https://security.microsoft.com/), select **Hunting -> Advanced hunting** 
 
-1. In the Query area, type your query.  Use the graph schema, functions, and operator tables or the examples below to help you build your query.
+1. In the [Microsoft Defender portal](https://security.microsoft.com/), select **hunting -> advanced hunting**.
+
+1. In the Query area, type your query. Use the graph schema, functions, and operator tables or the following examples to help you build your query.
+
 1. Select **run query**.
 
 ## Graph-oriented query examples
@@ -153,7 +154,6 @@ The following query results in a list of all the outgoing node labels with a con
 - It then uses the `graph-match` operator to match the graph pattern where `SourceNode` and `NodeLabel` match `microsoft.compute/virtualmachines`.
 - The `project` operator is used to keep only the `OutgoingNodeLabels`, and lists the results by `OutgoingNodeLabels`.
 
-<!-- is id NodeId?-->
 ```kusto
 ExposureGraphEdges
 | make-graph SourceNodeId --> TargetNodeId with ExposureGraphNodes
@@ -200,7 +200,7 @@ This query results in a list of users logged into more than one critical device,
 - It then makes a graph structure with the `make-graph` operator, where the `EdgeLabel` is `Can Authenticate As`.
 - It uses the `graph-match` operator to match instances where a `device` matches an `identity`.
 - Then it uses the `project` operator to keep identity IDs and device IDs.
-- The `mv-apply` operator filters device IDs and identity IDs by type. It summarizes them and displays the results in a table with the headers, `Number Of devices user is logged-in to` and `User Id`.
+- The `mv-apply` operator filters device IDs and identity IDs by type. It summarizes them and displays the results in a table with the headers, `Number Of devices user is logged-in to`, and `User Id`.
 
 ```kusto
 let IdentitiesAndCriticalDevices = ExposureGraphNodes
@@ -280,4 +280,3 @@ ExposureGraphEdges
 ## Next steps
 
 [Explore with the attack surface map](enterprise-exposure-map.md)
-

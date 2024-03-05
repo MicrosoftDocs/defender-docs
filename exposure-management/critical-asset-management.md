@@ -11,7 +11,7 @@ ms.date: 11/28/2023
 
 # Overview of critical asset management
 
-In Microsoft Security Exposure Management, you can define and manage resources as critical assets. 
+In Microsoft Security Exposure Management, you can define and manage resources as critical assets.
 
 - Identifying critical assets helps ensure that the most important assets in your organization are protected against risk of data breaches and operational disruptions to ensure availability and business continuity.
 - You can also prioritize security investigations, posture recommendations, and remediation steps to focus on critical assets first.
@@ -54,8 +54,8 @@ In another example, on the [attack surface map](enterprise-exposure-map.md), as 
 You can work with critical asset settings as follows:
 
 - **Create custom classifications**: You can create new critical asset classifications for devices, identities and cloud resources. You use the query builder to define a new classification. For example, you might build a query to define devices with a specific naming convention as critical.
-    - Building custom queries helps to identify your unique organizational “crown jewels."
-    - Creating critical asset classification queries is additionally useful for limited cases where not all assets of interest are identified.
+  - Building custom queries helps to identify your unique organizational “crown jewels."
+  - Creating critical asset classification queries is additionally useful for limited cases where not all assets of interest are identified.
 - **Add assets to classifications**: You can manually add assets to critical asset classifications.
 - **Modify criticality levels**: You can choose to edit the criticality levels according to your organization's risk profile.
 - **Edit custom classifications**: You can edit, delete, and turn off custom classifications. Predefined classifications can't be modified.
@@ -65,7 +65,6 @@ You can work with critical asset settings as follows:
 The critical asset classification logic classifies your assets according to a particular classification.
 
 However, some assets that fit the classification might not meet the classification threshold. For instance, the asset might be a domain controller, but it might not be considered a critical asset in your business. When assets don't meet the classification threshold for criticality, you can choose to add them to your defined classification with the asset review feature. This feature allows you to add listed assets based on your organization's criticality criteria.
-
 
 ## Critical asset protection initiative
 
