@@ -21,7 +21,7 @@ The exposure map gives you visibility into the connections of your assets.
 
 :::image type="content" source="./media/attack-surface-exposure-map.png" alt-text="Screenshot of the attack surface exposure map.":::
 
-The map provides the following:
+The map provides:
 
 - **Icon indicators** for node type and edge type, visual indicators like the high criticality crown or a vulnerability bug provides visual input to where critical organizational data is at risk.
 - **Expandable groups** provides a way to expand similar assets when you want to view them more in depth. Expanding the view helps you to discover [choke points](get-to-know-exposure-management.md#what-is-a-choke-point) and specific assets with high vulnerability or criticality, when needed, but otherwise leave them collapsed for a more organized screen.
@@ -33,7 +33,7 @@ The map provides the following:
 
 ## Accessing the map
 
-You can access the attack surface map from your device inventory, by choosing a device and selecting **View Map** or by searching directly for an asset from **Attack Surface -> Map**.
+You can access the attack surface map from your device inventory, by choosing a device and selecting **View Map** or by searching directly for an asset from **attack surface -> map**.
 
 ## Next steps
 

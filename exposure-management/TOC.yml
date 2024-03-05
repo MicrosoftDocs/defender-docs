@@ -36,8 +36,6 @@
           href: work-attack-paths-overview.md
         - name: Review attack paths
           href: review-attack-paths.md    
-        - name: Mitigate attack paths
-          href: attack-paths-analysis-remediation.md    
     - name: Manage exposure with security insights
       items:
         - name: Overview
