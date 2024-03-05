@@ -49,7 +49,7 @@ The attack surface map displays your tenant's total and critical assets for the 
 
 Selecting an asset type allows you to search just that asset type and open it in the attack surface exposure map. You can also select to open the attack surface exposure map by selecting **view in map**.
 
-:::image type="content" source="media/attack-surface-exposure-map.png" alt-text="Screenshot of the dashboard attack surface exposure map.":::
+:::image type="content" source="media/get-started-exposure-management/attack-surface-map-overview.png" alt-text="Screenshot of the dashboard attack surface exposure map.":::
 
 ## Review critical assets
 

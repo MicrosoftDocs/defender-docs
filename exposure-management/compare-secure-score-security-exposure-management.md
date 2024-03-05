@@ -28,4 +28,4 @@ This article discusses the differences between Microsoft [secure score](/microso
 
 ## Next steps
 
-[Start using Exposure Management](start-using-exposure-management.md)
+-[Get started with Microsoft Security Exposure Management](get-started-exposure-management.md)
