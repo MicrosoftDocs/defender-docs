@@ -13,12 +13,12 @@ ms.date: 11/28/2023
 
 [!INCLUDE [prerelease](../includes/prerelease.md)]
 <!--the text here is mostly what is in the overview-->
-[Attack paths](work-attack-paths-overview.md) provide the means to proactively identify and visualize potential routes an attacker can exploit using vulnerabilities, gaps and misconfigurations, that put critical assets at risk. They allow you to investigate and remediate the potential threats. For more information, see [Overview of work with attack paths](work-attack-paths-overview.md).
+[Attack paths](work-attack-paths-overview.md) help you proactively identify and visualize potential routes to critical assets that attackers can exploit using vulnerabilities, gaps, and misconfigurations. They allow you to investigate and remediate the potential threats.
 
-1. To access [Attack paths](https://security.microsoft.com/attack-paths) select  **attack surface -> attack path** or select the attack path action card from **device**, **settings -> Microsoft defender XDR -> critical asset management**, or **initiatives -> critical asset protection initiative**.
+1. To access [attack paths](https://security.microsoft.com/attack-paths), select  **attack surface -> attack path** or select the attack path action card from **device**, **settings -> Microsoft defender XDR -> critical asset management**, or **initiatives -> critical asset protection initiative.**
 :::image type="content" source="./media/review-attack-paths/attack-paths.png" alt-text="Screenshot of the Security Exposure Management attack path window":::
 
-1. To change how attack paths are displayed you can select a heading name to sort by a specific column heading or select **Group** to group by **Name**, **Entry point type**, **Target type**, or **Target criticality**.
+1. To change how attack paths are displayed you can select a heading name to sort by a specific column heading or select **group** to group by **name**, **entry point type**, **target type**, **target criticality**, or **status.**
 <!--
 - **Attack path name** - The name of the attack path.
 - **Entry point** - The name of the asset vulnerable to an entry.
@@ -34,12 +34,33 @@ ms.date: 11/28/2023
 
 1. Select a specific attack path to examine it further for potential exploitable vulnerabilities. The attack path graph displays.
 
-1. Hover over a node or edge (connector) icon to see additional information about how the attack path is build.
+1. To see additional information about how the attack path is buildHover over a node or edge (connector) icon.
 
 ## Review recommendations
 
 1. Select the **recommendations** tab to view the list of actionable recommendations to take to mitigate the identified attack paths.
-1. Sort recommendations by heading or select a specific recommendation, to open the recommendation screen and manage remediation from **recommendations**. 
+
+1. Sort recommendations by heading or select a specific recommendation, to open the recommendation screen.
+
+1. Review recommendation details and recommendations and then select **manage** to remediate the recommendation in the appropriate workload interface.
+
+## Group by choke points
+
+To group by choke point:
+
+1. Select **attack surface -> attack path**. The **Graph** section opens by default. 
+
+1. Select **group** and select to group by attack path name, entry point type, target type, target criticality, or status.
+
+## View an attack path asset in the exposure map
+
+To see a broader picture of an attack path asset in the exposure map:
+
+1. Select **attack surface -> attack path -> map** or **View in map** from an individual device in **Device Inventory**.
+
+1. If you've browsed to the map directly, search for the asset in the search bar and select it.
+
+1. Explore connections according to your needs.
 
 > [!NOTE]
 > The value of your attack paths increases based on the workload data it can use as a source. Some attack paths may not appear if there is no data to generate the path.

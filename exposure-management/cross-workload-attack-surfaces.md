@@ -17,14 +17,14 @@ ms.date: 11/28/2023
 
 ## Enterprise exposure graph
 
-The enterprise exposure graph is the central tool for attack surface exploration and management. The  graph gathers information about assets, users, workloads, and more from across your enterprise to provide a unified, comprehensive view of your organizational security posture.
+The enterprise exposure graph is the central tool for attack surface exploration and management. The graph gathers information about assets, users, workloads, and more from across your enterprise to provide a unified, comprehensive view of your organizational security posture.
 
 ## Enterprise exposure graph schemas
 
 Graph schemas provide a framework for organizing and analyzing interconnected assets from multiple workloads across the organization.
 
 - Schemas are made up of tables that provide either event information or information about devices, alerts, identities, and other entity types.
-- You query against schemas for proactive threat hunting across data and events. You can build queries in [advanced hunting](/microsoft-365/security/defender/advanced-hunting-modes.md). 
+- Query against schemas for proactive threat hunting across data and events. You can build queries in [advanced hunting](/microsoft-365/security/defender/advanced-hunting-modes.md).
 - To understand schemas and build effective queries, you can use a built-in schema reference that provides table information. Learn more about the [advanced hunting schema](/microsoft-365/security/defender/advanced-hunting-schema-tables.md).
 
 The enterprise exposure graph and the exposure graph schemas extend the existing Defender XDR [advanced hunting schemas](/microsoft-365/security/defender/advanced-hunting-schema-tables.md).
@@ -43,7 +43,7 @@ By correlating exposure queries with other graph data, such as incident data, yo
 
 ## Attack surface map
 
-The attack surface map (enterprise exposure map), gives you a way to visualize the exposure data that you can query using the exposure graph schema. It allows you to explore the data, and contextualize it in a broader network. It also allows you to dig deeper into multiple attack paths to see what other assets are at risk and prioritize your focus. For instance, you want to see whether a particular asset has undesired connections. Or see whether a device has a path to the internet, and if so, what other devices are exposed.  
+The attack surface map (enterprise exposure map), gives you a way to visualize the exposure data that you can query using the exposure graph schema. It allows you to explore the data, check what assets are at risk, contextualize them in a broader network, and prioritize your focus. For instance, you can check whether a particular asset has undesired connections. Or see whether a device has a path to the internet, and if so, what other devices are exposed.  
 
 ## Next steps
 
