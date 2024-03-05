@@ -21,7 +21,7 @@ ms.date: 11/28/2023
 
 On the Exposure Management Overview dashboard, you can review the state of your organizational exposure. Use the Overview dashboard as a starting point for organizational posture and exposure, and drill down as needed.
 
-:::image type="content" source="./media/exposure-management-overview.png" alt-text="Screenshot of the security exposure management overview page.":::
+:::image type="content" source="./media/get-started-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the security exposure management overview page.":::
 
 ## Review assets
 
@@ -31,13 +31,25 @@ Get a quick view of your organization's exposed assets. The overview includes al
 
 Key initiatives are made up of initiatives that are marked as favorites in the [initiatives](initiatives.md) page, and any newly added recommended initiatives. Select an individual key initiative to see the initiative summary or open its page. You can also navigate to all initiatives from this section.
 
-:::image type="content" source="./media/key-initiatives.png" alt-text="Screenshot of Security Exposure Management Overview key initiatives section":::
+:::image type="content" source="./media/get-started-exposure-management/key-initiatives.png" alt-text="Screenshot of Security Exposure Management Overview key initiatives section":::
 
-:::image type="content" source="./media/key-initiatives-example_summary.png" alt-text="Screenshot of an Overview key initiatives summary window.":::
+:::image type="content" source="./media/get-started-exposure-management/key-initiatives-example_summary.png" alt-text="Screenshot of an Overview key initiatives summary window.":::
 
 ## Review top metrics
 
 The top metrics section identifies the security metrics with the most significant exposure. It shows you the current exposure value, 14 day change trend, and associated recommendations. Drilling down into an individual security metric takes you to its metric page. You can also access all metrics from this section.
+
+## Review assets in the attack surface exposure map
+
+The attack surface map displays your tenant's total and critical assets for the following asset types:
+
+- devices
+- identity
+- cloud
+
+Selecting an asset type allows you to search just that asset type and open it in the attack surface exposure map. You can also select to open the attack surface exposure map by selecting **view in map**.
+
+:::image type="content" source="media/get-started-exposure-management/attack-surface-map-overview.png" alt-text="Screenshot of the dashboard attack surface exposure map.":::
 
 ## Review critical assets
 
@@ -51,7 +63,7 @@ The critical asset summary shows you how many critical assets you have and how m
 
 In [Critical asset management](critical-asset-management.md), you can manage the criticality level of predefined asset of interests identified by Microsoft, and create custom classification rules to detect critical assets.
 
-:::image type="content" source="./media/critical-asset-management-summary.png" alt-text="Screenshot of Critical asset management in the Critical asset summary window.":::
+:::image type="content" source="./media/get-started-exposure-management/critical-asset-management-summary.png" alt-text="Screenshot of Critical asset management in the Critical asset summary window.":::
 
 ### View assets in inventory/advanced hunting
 
@@ -69,7 +81,7 @@ In view in advanced hunting, you can quickly access queries for:
 - Critical identities
 - Critical cloud resources  
 
-:::image type="content" source="./media/critical-asset-management-devices-advanced-hunting.png" alt-text="Screenshot of the Security Exposure Management Overview view in device inventory and advanced hunting section":::
+:::image type="content" source="./media/get-started-exposure-management/critical-asset-management-devices-advanced-hunting.png" alt-text="Screenshot of the Security Exposure Management Overview view in device inventory and advanced hunting section":::
 
 ## Examine key initiative score over time
 

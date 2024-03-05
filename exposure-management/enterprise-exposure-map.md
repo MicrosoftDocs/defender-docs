@@ -19,7 +19,7 @@ Use the attack surface map (enterprise exposure map) in [Microsoft Security Expo
 
 The exposure map gives you visibility into the connections of your assets.
 
-:::image type="content" source="./media/attack-surface-exposure-map.png" alt-text="Screenshot of the attack surface exposure map.":::
+:::image type="content" source="./media/enterprise-exposure-map/attack-surface-exposure-map.png" alt-text="Screenshot of the attack surface exposure map.":::
 
 The map provides:
 
@@ -29,7 +29,7 @@ The map provides:
 - **Explore assets and their edges** by selecting the plus sign or **Explorable connected assets** from the contextual menu.
 - **Asset details** are easily viewable by selecting the asset icon.
 - **Focus on Asset** provides a way to refocus the graph visualization on the specific node you wish to explore, similar to the Graph view when selecting an individual attack path in [Attack paths](review-attack-paths.md).
-- **Search** allows you to discover items by node type, and by selected **all results** search the particular type for specific results.
+- **Search** allows you to discover items by node type, and by selected **all results** search the particular type for specific results. You can also filter your search by devices, identity, or cloud assets from the initial screen.
 
 ## Accessing the map
 

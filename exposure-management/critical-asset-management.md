@@ -43,11 +43,11 @@ After business critical assets are defined and identified, asset criticality app
 
 For example, in Device Inventory, a criticality level is shown.
 
-:::image type="content" source="./media/device-inventory-criticality-level.png" alt-text="Screenshot of the Device inventory window. The image includes an emphasis on the criticality level section.":::
+:::image type="content" source="./media/critical-asset-management/device-inventory-criticality-level.png" alt-text="Screenshot of the Device inventory window. The image includes an emphasis on the criticality level section.":::
 
 In another example, on the [attack surface map](enterprise-exposure-map.md), as you look for exposure to threats and identify choke points, the halo color surrounding the asset icon and the crown indicator visually indicate the high criticality level.
 
-:::image type="content" source="./media/attack-surface-exposure-map.png" alt-text="Screenshot of an asset viewed in the exposure map in the context of other connections. Two devices on the map show high critical levels.":::
+:::image type="content" source="./media/critical-asset-management/attack-surface-exposure-map.png" alt-text="Screenshot of an asset viewed in the exposure map in the context of other connections. Two devices on the map show high critical levels.":::
 
 ## Working with asset classifications
 
@@ -68,12 +68,10 @@ However, some assets that fit the classification might not meet the classificati
 
 ## Critical asset protection initiative
 
-The Critical Asset Protection initiative in the [Microsoft Defender portal](https://security.microsoft.com/) (**Exposure Insights > Initiatives** >**Critical Asset Protection**) helps you make sure your business critical assets are safeguarded from threats.
+The Critical Asset Protection initiative in the [Microsoft Defender portal](https://security.microsoft.com/) (**Exposure Insights -> Initiatives ->Critical Asset Protection**) helps you make sure your business critical assets are safeguarded from threats.
 
 - The Critical Asset Protection initiative offers continuous monitoring of the security resilience of your critical assets, providing real-time insights into the effectiveness of your protection measures.
-- The initiative's asset tab lets you gain visibility into all critical assets within your organization, identify potential gaps in critical asset discovery, and fine-tune your classifications accordingly. 
-
-
+- The initiative's asset tab lets you gain visibility into all critical assets within your organization, identify potential gaps in critical asset discovery, and fine-tune your classifications accordingly.
 
 ## Next steps
 
