@@ -32,7 +32,7 @@ ms.date: 11/28/2023
 1. Select how to view the initiatives catalog. Choose between **all initiatives**, **domain initiatives**, and  **threat Article initiatives**.
 
 1. Once you select how to view initiatives you can review the following information:
-    - **14 day change trend graph** showcasing how the initiatitve score changes over the past 14 days
+    - **14 day change trend graph** highlighting how the initiative score changes over the past 14 days
     - **Initiative name**
     - **Favorite** indicator (toggle on/off) to display in the key initiatives banner
     - **Current score** of the initiative
@@ -71,17 +71,17 @@ The changes in your score provide you with useful feedback about how well you're
 
 1. Browse to the time table to choose a specific time point to examine.
     1. If needed, filter for specific time points.
-    1. Choose the time point and determine the cause of the change.
+    1. Choose the time point and find the cause of the change.
 <!-- note that history may need to go outand replaced with this: The **14 day change trend graph** and **14 day drift change** track the changes in your initiative score, visually and as a percentage. -->
 <!-->:::image type="content" source="./media/history.png" alt-text="Screenshot of the Initiatives History tab."::: -->
 
 ## Metrics and recommendations
 
-1. To review metrics associated with your initiative, select **Exposure Insights -> Initiatives-> Security metrics**.
+1. To review metrics associated with your initiative, select **exposure insights -> initiatives-> security metrics**.
 
-1. Select **Exposure Insights -> Initiatives-> Security recommendations** to view recommendations  related to your initiative. You only see those recommendations that are *currently* applied to assets and active in Microsoft Secure Score or Microsoft Defender for Cloud.
+1. Select **exposure insights -> initiatives-> security recommendations** to view recommendations related to your initiative. You only see those recommendations that are *currently* applied to assets and active in Microsoft Secure Score or Microsoft Defender for Cloud.
 
-1. Select a not compliant recommendation and then **Manage** to remediate the recommendation in the appropriate workload.
+1. Select a *not compliant* recommendation and then **manage** to remediate the recommendation in the appropriate workload.
 
 ## Next steps
 

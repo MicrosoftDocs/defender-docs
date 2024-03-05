@@ -11,38 +11,35 @@ ms.date: 11/28/2023
 
 # Review security recommendations
 
-<!-- Recommendations types ,compliance logic, recommendations fields (including other related EM objects) , products included, data is presented based on  product license-->
-
-The Microsoft Security Exposure Management [recommendations catalog](exposure-insights-overview.md#security-recommendations) serves as a centralized repository for security recommendations originating from various different sources to assist in preemptively addressing security risk and reduce exposure.
+The Microsoft Security Exposure Management [recommendations catalog](exposure-insights-overview.md#security-recommendations) serves as a centralized repository for security recommendations originating from various sources to help preemptively address security risk and reduce exposure.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-1. Select **Exposure Management -> Exposure Insights -> Recommendations** or via an individual initiative page in **initiatives** to access [Microsoft Exposure Recommendations](https://security.microsoft.com/exposure-recommendations) in the [Microsoft Defender portal](https://security.microsoft.com/) .
-
+1. Select **exposure management -> exposure insights -> recommendations** or the **recommendations** tab in an individual initiative page in **initiatives** to access [Microsoft Exposure Recommendations](https://security.microsoft.com/exposure-recommendations) in the [Microsoft Defender portal](https://security.microsoft.com/) .
 :::image type="content" source="./media/recommendations-navigation.png" alt-text="Screenshot of the recommendations window.":::
 
-## View recommendations page
+1. Sort the recommendations by any of the headings or filter them based on your task needs.
+    1. Sorting includes all of the headers which are:
 
-The following information is available to view in Recommendations as an overview, and you can filter recommendations by each item:
+    - **Name**
+    - **Compliance state** - compliant or not compliant
+    - **Impact** - high, low, or medium
+    - **Last calculated**
+    - **Last state change**
+    - **Related initiatives** - the number of related initiatives
+    - **Related metrics** - the number of related metrics
+    - **Source** - the benchmark source
+    - **Workload** - which workload the recommendations relate to
+    - **Domain** - Either device, apps, data, or identity
+    1. Filter recommendations by state, source, impact, workload, and domain.
 
-- **Name**
-- **Compliance state** - compliant or not compliant
-- **Impact** - high, low, or medium
-- **Last calculated**
-- **Last state change**
-- **Related initiatives** - the number of related initiatives
-- **Related metrics** - the number of related metrics
-- **Source** - the benchmark source
-- **Workload** - which workload the recommendations relate to
-- **Domain** - Either device, apps, data, or identity
-
-<!-- what does preview mean next to workload? only in the preview? -->
+1. Select a recommendation to view and review details.
 
 ## Remediate recommendations
 
 1. To remediate a recommendation select a specific recommendation and browse to the **Remediation steps** tab.
 
-1. Review the remediation steps and select **Manage** to follow the steps in the originating workload. For instance, in Microsoft Defender for Cloud, Microsoft Entra ID, Microsoft Defender for Office, or Microsoft Defender Vulnerability Management.
+1. Review the remediation steps and select **Manage** to follow the steps in the originating workload, such as Microsoft Defender for Cloud or Microsoft Defender Vulnerability Management.
 
 > [!NOTE]
 >Customers who have Microsoft Defender Cloud Security Posture Management (CSPM) subscriptions will have access to comprehensive cloud data. In the absence of this subscription, only limited cloud data will be accessible.

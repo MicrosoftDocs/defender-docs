@@ -11,28 +11,28 @@ ms.date: 11/28/2023
 
 # Explore security events
 
+Microsoft Security Exposure Management security events present and track initiative and metric score drop incidents in order to determine how they affect the organization's security posture.
+
 [!INCLUDE [prerelease](../includes//prerelease.md)]
-<!--Event types including the logic for each type -->
-Microsoft Security Exposure Management Security Events present and track initiative and metric drift incidents in order to determine how they affect the organizations security posture.
-<!--The Microsoft Security Exposure Management Security Events provides information about any posture management changes detected, enabling customers to make adjustments to maintain a robust security posture. It measures the drift, or worsening in the metric status. In particular, Security Events handles *Initiative Drift Events* and *Metric Drift Events*.
 
-- *Metric drift events* notify customers when there's a new exposure measured by the security metrics. They're evaluated based on the impact on the score and its weight. If there's a decrease of at least 2% since yesterday of at least 2%, meaning exposure grew by 2%, the change is considered a drift event.
-- *Initiative drift events* notify customers when security initiatives decrease. We assess *Initiative drift events* based on how it impacts the score. If there's a decrease of at least 2% since yesterday, the change is classified as a drift event.-->
+1. To access [security events](https://security.microsoft.com/exposure-events) in the [Microsoft Defender portal](https://security.microsoft.com) select **exposure management -> exposure insights -> events**.
 
-You can find [Events](https://security.microsoft.com/exposure-events) in the [Microsoft Defender portal](https://security.microsoft.com). To navigate to Events, go to **Security Exposure Management -> Exposure Insights -> Events**.
+1. Select the time range you need in the calendar drop down.
+1. To filter by initiative score drop events or metric score drop events select *filter* or the score drop event quantity.
+1. Select a specific event to open it in initiatives or metrics, respectively.
 
-## View security events
-
+<!--## View security events
+-->
 <!--The Exposure Overview page shows the last five events in chronological order. Select the **View all events** button to view a complete list of all events occurring in your organization over the past 90 days.-->
-The following information is available to review from the Events overview page:
+<!--The following information is available to review from the Events overview page:
 
 - **Event**
 - **Date**
 - **Type**
 
 :::image type="content" source="./media/events-navigation.png" alt-text="Screenshot of the Security Exposure Management Events window.":::
-<!--should this be rearranged so first access events then talk about drift events and then the details?-->
-
+should this be rearranged so first access events then talk about drift events and then the details?-->
+<!--
 You can choose to sort events by type, either metric or initiative drift events. Metric drift events display a change greater than two percent in exposure measured by each [security metric](security-metrics.md) and initiative drift events measure the change in exposure of [security initiatives](initiatives.md) greater than two percent. Selecting an event takes you to either the metric or initiative that experienced a drift event.
 
 > [!NOTE]
@@ -70,10 +70,7 @@ You can view the following information for each metric drift event:
 - Score impact
 
 You can also edit the metric value by editing its weight. This customizes the metric to your organization's business priorities.
-
+-->
 ## Next steps
 
-For more information, see:
-
 - [Secure Score](secure-score.md)
-- [!INCLUDE [support](../includes//support.md)]
