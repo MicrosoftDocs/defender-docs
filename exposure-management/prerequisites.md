@@ -61,7 +61,7 @@ Permission levels are as follows:
 | **Export metric (PDF)** | ✔       |  ✔       |   ✔      | ✔ | ✔ |
 |  **View metrics**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
 | **Export assets (metric/recommendation)**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
-|  **Manage recommendations**  |    ✔    |   |  ✔  |         |  |
+|  **Manage recommendations**  |    ✔    | -  |  ✔  |   -      | - |
 |  **View recommendations**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
 |  **Export events**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
 |  **Change criticality level**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
