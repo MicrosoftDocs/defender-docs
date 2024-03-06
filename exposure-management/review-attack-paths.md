@@ -14,7 +14,6 @@ ms.date: 11/28/2023
 Attack paths help you proactively identify and visualize potential routes to critical assets that attackers can exploit using vulnerabilities, gaps, and misconfigurations. They allow you to investigate and remediate potential threats.
 
 [!INCLUDE [prerelease](../includes/prerelease.md)]
-<!--the text here is mostly what is in the overview-->
 
 ## Prerequisites
 
@@ -26,7 +25,7 @@ Attack paths help you proactively identify and visualize potential routes to cri
 ## View attack paths
 
 1. To access [attack paths](https://security.microsoft.com/attack-paths), select  **Attack surface -> Attack path**.
-:::image type="content" source="./media/review-attack-paths/attack-paths.png" alt-text="Screenshot of the Security Exposure Management attack path window":::
+:::image type="content" source="./media/review-attack-paths/attack-paths.png" alt-text="Screenshot of the Security Exposure Management attack path window" lightbox="media/review-attack-paths/attack-paths.png":::
 
 1. To change how attack paths are displayed you can select a heading name to sort by a specific column heading.
 
@@ -47,7 +46,8 @@ To group by choke point:
 
 1. Hover over a node or edge (connector) icon to see additional information about how the attack path is built.
 
-:::image type="content" source="media/review-attack-paths/attack-path-graph-details.png" alt-text="Screenshot of an Attack path graph detail screen.":::
+:::image type="content" source="media/review-attack-paths/attack-path-graph-details.png" alt-text="Screenshot of an Attack path graph detail screen." lightbox="media/review-attack-paths/attack-path-graph-details.png":::
+
 
 ## Review recommendations
 

@@ -35,5 +35,4 @@ Here's how Security Exposure Management helps you to identify and resolve attack
 
 ## Next steps
 
-- [Review attack paths](review-attack-paths.md)
-- [Mitigate attack paths](attack-paths-analysis-remediation.md)
+- Start to [Review attack paths](review-attack-paths.md).
