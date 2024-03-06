@@ -1,5 +1,5 @@
 ---
-title: Compare Microsoft secure score and Microsoft Security Exposure Management 
+title: Compare Microsoft Secure Score and Microsoft Security Exposure Management 
 description: Compare Microsoft secure score and Microsoft Security Exposure Management.
 ms.author: v-mjosephy
 author: mjosephym
@@ -9,9 +9,9 @@ ms.service: azure
 ms.date: 03/04/2024
 ---
 
-# Compare Microsoft secure score and Microsoft Security Exposure Management
+# Compare Microsoft Secure score and Microsoft Security Exposure Management
 
-This article discusses the differences between Microsoft [secure score](/microsoft-365/security/defender/microsoft-secure-score) and [Microsoft Security Exposure Management](microsoft-security-exposure-management.md).
+This article discusses the differences between Microsoft [Secure score](/microsoft-365/security/defender/microsoft-secure-score) and [Microsoft Security Exposure Management](microsoft-security-exposure-management.md).
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
