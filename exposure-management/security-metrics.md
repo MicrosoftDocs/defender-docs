@@ -37,13 +37,13 @@ ms.date: 03/06/2024
     - **Weight**: Metric weight or maximum metric score possible.
     - **Score impact**: Possible score gain.
     - **Security recommendations**: Recommendations associated with the metric.
-    
+
 ## Edit the metric value
 
 You can customize metric values for your business needed.
 
 1. To edit the metric value, select a specific metric.
-1. In the metric properties page, select weight, change the value, and apply. 
+1. In the metric properties page, select weight, change the value, and apply.
 1. To accept the risk described by the metric, set the weight to zero.
 
 <!-- [!NOTE]
