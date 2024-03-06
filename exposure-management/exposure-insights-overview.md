@@ -30,11 +30,13 @@ Assets and workloads are assessed against security standards. Security recommend
 
 Every action taken on a security recommendation, helps reduce exposure and directly influences related security metrics and security initiatives, as relevant.
 
-Each security recommendation can be categorized as *compliant*, *non-compliant*, *mitigated by org*, or *not available* for the entire organization. *Compliant* indicates that the recommendation has been implemented successfully. The status *mitigated by org* displays when you've taken steps to mitigate recommendations elsewhere, such as by changing a status in secure score, and Security Exposure Management can't know whether recommendations are compliant. A *not available* status means there isn't enough information to determine the compliance status.
-
-You can review individual recommendations, their state, impact, and source, and follow remediation steps to address recommendation issues. You can further explore steps to remediate the recommendation, details about exposed entities, and related initiatives and metrics.
+You can review individual recommendations, their state, impact, and source, details about exposed entities, and related initiatives and metrics. You can also follow remediation steps to address recommendation issues.
 
 :::image type="content" source="./media/recommendation-ransomeware-advanced-protection.png" alt-text="Screenshot of the ransomware advanced protection recommendation details ":::
+
+### Compliance data
+
+Each security recommendation can be categorized as *compliant*, *non-compliant*, *mitigated by org*, or *not available* for the entire organization. *Compliant* indicates that the recommendation has been implemented successfully. The status *mitigated by org* displays when you've taken steps to mitigate recommendations elsewhere, such as by changing a status in secure score, and Security Exposure Management can't know whether recommendations are compliant. A *not available* status means there isn't enough information to determine the compliance status.
 
 ### Proactive workload recommendations
 
@@ -87,7 +89,7 @@ Weight can be customized by an admin to have greater or lesser impact, based on 
 
 You can drill down into individual metric recommendations to remediate them. Metric scores go up as recommendations are remediated.
 
-Use metrics to assess an initiative's exposure status, and identify exposed areas or areas that don't meet internal standards. This information can be used to prioritize efforts around risk mitigation.
+Use metrics to assess an initiative's exposure status and identify exposed areas or areas that don't meet internal standards. This information can be used to prioritize efforts around risk mitigation.
 
 Metrics are only shown if underlying data for the metric is available.
 
@@ -111,7 +113,7 @@ Those properties display when viewing all metrics in the Exposure insights secti
 - **Total** number of items
 - **Last Updated**
 
-In some cases, metrics display grayed out because the underlying data required for this metric, doesn't exist. Several situations cause metrics to be grayed out:
+In some cases, metrics display grayed out because the underlying data needed for this metric doesn't exist. Several situations cause metrics to be grayed out:
 
 - The required workload isn't onboarded. For example, E5 customers without the Microsoft Defender for Identity workload turned on, has all, or most, Identity-related metrics grayed out.
 - The required workload is onboarded, but to a limited extent. For instance:
@@ -122,7 +124,7 @@ In some cases, metrics display grayed out because the underlying data required f
 Grayed out metrics aren't considered for score calculation.
 
 > [!NOTE]
-> Some instances of affected assets information, largely information originating in secure score, doesn't appear on the Affected Items tab in an individual metric. Also some critical asset information for assets in the Affected Items tab does not show.
+> Some instances of affected assets information, largely information originating in secure score, doesn't appear on the Affected Items tab in an individual metric. Also, some critical asset information for assets in the Affected Items tab does not show.
 > Asset details are calculated on demand.
 > Cloud-related metrics apply only for subscription and their subsequent resources if the subscription is onboarded to a Cloud Security Posture Management (CSPM) Premium plan.
 > In some cases, metrics are more specific than the scope of the related recommendations. In such a case, the asset detail shown won't align with the asset details of the related recommendations.
@@ -132,9 +134,9 @@ Grayed out metrics aren't considered for score calculation.
 
 Predefined initiatives gather metrics together to help you review and manage exposure in specific areas of security risk.
 
-Initiatives might relate to particular domains, and measure a specific security like endpoint, identity, and cloud security. They could contribute to threat analysis by addressing a known threat or paradigm across multiple product categories or types, for example ransomware protection or [critical asset protection](critical-asset-management.md#critical-asset-protection-initiative). Initiatives also focus on specific compliance standards.
+Initiatives might relate to specific domains, and measure a specific security like endpoint, identity, and cloud security. They could contribute to threat analysis by addressing a known threat or paradigm across multiple product categories or types, for example ransomware protection or [critical asset protection](critical-asset-management.md#critical-asset-protection-initiative). Initiatives also focus on specific compliance standards.
 
-Security initiatives provide a means to measure an organization's maturity across security concerns, priorities, and threats. They provide a consumable way to approach exposure.
+Security initiatives offer a means to measure an organization's maturity across security concerns, priorities, and threats. They offer a consumable way to approach exposure.
 
 You can prioritize which initiatives to see on the overview dashboard, review the initiative score that reflects the exposure status of the initiative, and drill down into initiatives to see their associated metrics and to understand where gaps or risks reside. The initiative score and recommendations are derived from metrics within the initiative.
 
@@ -144,7 +146,7 @@ The initiative score is calculated based on the value and weight of the metrics 
 
 As recommendations are fixed, metrics rise, and in turn initiative scores rise to reflect improved security posture.
 
-Changes in metric, value, and properties can impact the initiative score. Initiatives provides a way to track the history of changes greater than 2.5%, filter for specific time points, and drill down to specific initiative changes. For instance, when a metric value changes or a metric is removed. The metric or score changes can't be controlled in advanced by customers.
+Changes in metric, value, and properties can impact the initiative score. Initiatives provides a way to track the history of changes greater than 2.5%, filter for specific time points, and drill down to specific initiative changes. For instance, when a metric value changes or a metric is removed. The metric or score changes can't be controlled in advance by customers.
 
 <!--## Programs
 
@@ -155,13 +157,13 @@ For each initiative, Programs shows the user what workloads or product types ref
 
 ## Security events
 
-Security events consolidate information about any posture management changes detected, enabling customers to adjust to maintain a robust security posture. It measures the score drop, or worsening in the metric status. Security events handle *initiative score drop events* and *metric score drop events*.
+Security events consolidate information about any posture management changes detected, enabling customers to adjust to maintain a robust security posture. It measures the score drop or worsening in the metric status. Security events handle *initiative score drop events* and *metric score drop events*.
 
 - *Metric score drop events* notify customers when there's a new exposure measured by the security metrics. They're evaluated based on the effect on the score and its weight. If there's a decrease of at least 2% since yesterday, meaning exposure grew by 2%, the change is considered a score drop event.
 - *Initiative score drop events* notify customers when security initiatives decrease. We assess *Initiative score drop events* based on how it affects the score. If there's a decrease of at least 2% since yesterday, the change is classified as a score drop event.
 - Security events present and track, initiative and metric score drop incidents to determine how they affect the organization's security posture.
 
-New events appear at the top of the table and can include a new initiative event. 
+New events appear at the top of the table and can include a new initiative event.
 
 ## Secure score
 
@@ -177,7 +179,7 @@ You can continue to use secure score tools to plan and improve your overall secu
 
 For more information, see [Microsoft secure score](/microsoft-365/security/defender/microsoft-secure-score.md).
 
-Microsoft Security Exposure Management provides metrics through [initiatives](#initiatives) that help you identify exposure and potential posture improvements attached to business context and various security objectives in your organization.
+Microsoft Security Exposure Management provides metrics through [initiatives](#initiatives) that help you identify exposure and potential posture improvements attached to business context and various security aims in your organization.
 
 - Security Exposure Management initiative scores use secure score as one of its sources for initiative scores.
 - Secure score has "recommended actions" for a [number of products](/microsoft-365/security/defender/microsoft-secure-score.md#products-included-in-secure-score).

@@ -23,13 +23,13 @@ ms.date: 11/28/2023
 
 1. Navigate to the [Microsoft Defender portal](https://security.microsoft.com/).
 
-1. From the Exposure management section on the navigation bar, select **Exposure insights -> initiatives** to open the [initiatives](https://security.microsoft.com/exposure-initiatives) page.<!-- from through the navigation bar under **Exposure Management -> Exposure Insights -> Initiatives**.-->
+1. From the Exposure management section on the navigation bar, select **exposure insights -> initiatives** to open the [initiatives](https://security.microsoft.com/exposure-initiatives) page.<!-- from through the navigation bar under **Exposure Management -> Exposure Insights -> Initiatives**.-->
 :::image type="content" source="./media/initiatives-window.png" alt-text="Screenshot of the Initiatives window.":::
 
 1. At the top of the initiatives page, review the highlighted key initiatives by scrolling and drilling down per your needs.
 
 1. To set an initiative to appear in the top initiative bar in the dashboard or on the initiatives page, select the **star** icon in the initiatives window or **mark as favorite** in the individual initiative.
-1. Select how to view the initiatives catalog. Choose between **all initiatives**, **domain initiatives**, and  **threat article initiatives**.
+1. Select how to view the initiatives catalog. Choose between **all initiatives**, **domain initiatives**, and **threat article initiatives**.
 
 1. Once you select how to view initiatives you can review the following information:
     - **14 day change trend graph** highlighting how the initiative score changes over the past 14 days
@@ -38,7 +38,7 @@ ms.date: 11/28/2023
     - **Current score** of the initiative
     - **Programs** or workloads contributing to or required by this initiative
 
-1. Select an initiative to open the small overview and then select **Open initiative page** to review or remediate issues. The initiative page includes additional information including:
+1. Select an initiative to open the small overview and then select **open initiative page** to review or remediate issues. The initiative page includes additional information including:
     - Your target score for the initiative
     - A means to set a custom target score appropriate to your organization's needs
     - Description
@@ -67,14 +67,13 @@ The changes in your score provide you with useful feedback about how well you're
 
 ## History
 
-1. Select an individual initiative and then **History** to view changes over time
+1. Select an initiative to open the small overview and then select **open initiative page-> history** to view changes over time.
 
 1. Browse to the time table to choose a specific time point to examine.
     1. If needed, filter for specific time points.
     1. Choose the time point and find the cause of the change.
 <!-- note that history may need to go outand replaced with this: The **14 day change trend graph** and **14 day drift change** track the changes in your initiative score, visually and as a percentage. -->
-<!-->:::image type="content" source="./media/history.png" alt-text="Screenshot of the Initiatives History tab."::: -->
-
+:::image type="content" source="./media/history.png" alt-text="Screenshot of the initiatives history tab.":::
 ## Metrics and recommendations
 
 1. To review metrics associated with your initiative, select **exposure insights -> initiatives-> security metrics**.
