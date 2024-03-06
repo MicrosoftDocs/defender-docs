@@ -1,12 +1,12 @@
 ---
-title: What's the difference between Secure Score and Microsoft Security Exposure Management 
-description: This article describes how Secure Score and Microsoft Exposure Management are different.
+title: Compare Microsoft secure score and Microsoft Security Exposure Management 
+description: Compare Microsoft secure score and Microsoft Security Exposure Management.
 ms.author: v-mjosephy
 author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 01/10/2024
+ms.date: 03/04/2024
 ---
 
 # Compare Microsoft secure score and Microsoft Security Exposure Management

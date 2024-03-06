@@ -1,12 +1,11 @@
 ---
-title: Query the enterprise exposure graph
-description: This article describes how to query the enterprise exposure graph that supports exposure management by helping to understanding potential risks.
-ms.author: v-mjosephy
+title: Query the enterprise exposure graph in Microsoft Security Exposure Management
+description: Learn how to query the enterprise exposure graph to understand security risk in Microsoft Security Exposure Management.
 author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 11/28/2023
+ms.date: 03/06/2024
 ---
 
 # Query the enterprise exposure graph
@@ -22,9 +21,8 @@ This article provides some example, tips, and hinting for constructing queries i
 - Review [best practices for building advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-best-practices.md) 
 - Review [best practices for Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/)
 
-## Using the make-graph operator
+## Using the make-graph operator 
 
-### Memory best practices when using `make-graph` and node properties
 
 Kusto's `make-graph` operator loads nodes and edges data into memory.
 

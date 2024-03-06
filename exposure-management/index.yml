@@ -67,19 +67,6 @@ landingContent:
       - text: Explore with the attack surface map
         url: enterprise-exposure-map.md 
 
-
-  # Card
-  - title: Investigate attack paths 
-    linkLists:
-      - linkListType: concept
-        links:
-        - text: Learn about attack paths
-          url: work-attack-paths-overview.md
-      - linkListType: how-to-guide
-        links:
-        - text: Investigate attack paths
-          url: review-attack-paths.md 
-
   # Card
   - title: Get insights into exposure risk
     linkLists:
@@ -95,3 +82,17 @@ landingContent:
           url: security-metrics.md
         - text: Review security recommendations
           url: security-recommendations.md
+
+  # Card
+  - title: Investigate attack paths 
+    linkLists:
+      - linkListType: concept
+        links:
+        - text: Learn about attack paths
+          url: work-attack-paths-overview.md
+      - linkListType: how-to-guide
+        links:
+        - text: Investigate attack paths
+          url: review-attack-paths.md 
+
+  
