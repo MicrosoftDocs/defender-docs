@@ -84,7 +84,7 @@ You can access Security Exposure Management in the Microsoft Defender portal usi
 
 To get support, select the Help question mark icon in the Microsoft Security toolbar.
 
-    :::image type="content" source="./media/microsoft-defender-portal-header.png" alt-text="Screenshot of the Microsoft Defender security portal Help button in the portal header bar.":::
+:::image type="content" source="./media/microsoft-defender-portal-header.png" alt-text="Screenshot of the Microsoft Defender security portal Help button in the portal header bar.":::
 
 You can also engage with the [Microsoft Tech community](https://techcommunity.microsoft.com/).  
 <!--an exact url once it exists-->

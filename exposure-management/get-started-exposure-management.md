@@ -23,9 +23,8 @@ On the Exposure Management > **Overview** dashboard, you can review the overall 
 
 Use the dashboard as a starting point for a snapshot of organizational posture and exposure, and drill down to details as needed.
 
-:::image type="content" source="./media/get-started-exposure-management/exposure-management-overview.png" 
-alt-text="Screenshot of the security exposure management overview page." lightbox="./media/get-started-exposure-management/exposure-management-overview.png":::
-::
+:::image type="content" source="./media/get-started-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the security exposure management overview page." lightbox="./media/get-started-exposure-management/exposure-management-overview.png":::
+
 
 ## Review assets
 
@@ -59,7 +58,7 @@ The **Attack surface map** displays your tenant's total and critical device, ide
 
 You can select and search on a specific asset type, and open it in the map. 
 
-:::image type="content" source="./media/get-started-exposure-management/attack-surface-map-overview.png" alt-text="Screenshot of the dashboard attack surface exposure map." lightbox=".media/get-started-exposure-management/attack-surface-map-overview.png:::
+:::image type="content" source="./media/get-started-exposure-management/attack-surface-map-overview.png" alt-text="Screenshot of the dashboard attack surface exposure map." lightbox="./media/get-started-exposure-management/attack-surface-map-overview.png":::
 
 ## Review and manage critical assets
 
@@ -69,7 +68,7 @@ From here you can view and manage critical assets and devices.
 
 In [Critical asset management](critical-asset-management.md), you can manage the criticality level of predefined assets identified by Security Exposure Management, and create custom classification rules to detect other critical assets.
 
-:::image type="content" source="./media/get-started-exposure-management/critical-asset-management-summary.png" alt-text="Screenshot of critical asset management." lightbox=".media/get-started-exposure-management/attack-surface-map-overview.png:::
+:::image type="content" source="./media/get-started-exposure-management/critical-asset-management-summary.png" alt-text="Screenshot of critical asset management." lightbox="./media/get-started-exposure-management/attack-surface-map-overview.png":::
 
 ### View in device inventory and advanced hunting
 
