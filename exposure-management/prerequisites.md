@@ -11,25 +11,27 @@ ms.date: 01/10/2024
 
 # Prerequisites and support
 
-This article describes the support and requirements for a successful deployment of Microsoft Security Exposure Management.
+This article describes the requirements and prerequisites for using Microsoft Security Exposure Management.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Licensing requirements
 
 - Security Exposure Management is available with any Microsoft Defender license.
-- The value of Security Exposure Management increases based on the workload data it uses as a source. The data is used to build proactive methods for identifying and remediating threats to your organization. The better data you have, the better your threat management. We recommend at a minimum two Microsoft Security workloads such as:
-  - A P1/P2/E3 license and Microsoft Defender for Identity license.
-  - Microsoft Defender for Identity and the Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud.
-- To receive recommendations from Defender for Cloud, you must have the Defender for CSPM plan switched on.
-- For a more optimal experience, we recommend an E5 license and the Defender CSPM plan.
+- The value of Security Exposure Management increases based on the workload data it uses as a source.
+
+    - Data is used to build proactive methods for identifying and remediating threats to your organization. The better data you have, the better your threat management.
+    - We recommend at a minimum two Microsoft Security workloads such as a P1/P2/E3 license and a Microsoft Defender for Identity license.  
+
+- For a more optimal experience, we recommend an E5 license and the Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud.
+- To receive security recommendations from Defender for Cloud, you must have the [Defender CSPM plan](/azure/defender-for-cloud/concept-cloud-security-posture-management) switched on.
 
 ## Permissions
 
 Permissions are based on [unified Role Based Access Control (RBAC)](/microsoft-365/security/defender/manage-rbac.md) and [Microsoft Entra ID RBAC](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
 
-- For users to have full Security Exposure Management access, currently their role needs access to all Defender for Endpoint  [device groups](/microsoft-365/security//defender-endpoint/machine-groups).
-- Any scope restrictions to access, such as limits to a specific device group or multiple device groups, allows a user to view global exposure insight information, but not specific device information.
+- For full Security Exposure Management access, user roles needs access to all Defender for Endpoint  [device groups](/microsoft-365/security//defender-endpoint/machine-groups).
+- If users have scope restrictions to access, such as limits to a specific device group or multiple device groups, they can view global exposure insight information, but not specific device information.
 - Users with a defined scope don't have access to attack paths and Security Exposure Management advanced hunting tables.
 
 ### Permissions for Security Exposure Management tasks
@@ -75,18 +77,16 @@ Permission levels are as follows:
 
 ## Browser requirements
 
-Access Security Exposure Management using Microsoft Edge, Internet Explorer 11, or any HTML 5 compliant web browser.
+You can access Security Exposure Management in the Microsoft Defender portal using Microsoft Edge, Internet Explorer 11, or any HTML 5 compliant web browser.
 <!--###  US government customers-->
 
 ## Getting support
 
-To get support:
-
-- Select the Help question mark icon in the Microsoft Security toolbar.
+To get support, select the Help question mark icon in the Microsoft Security toolbar.
 
     :::image type="content" source="./media/microsoft-defender-portal-header.png" alt-text="Screenshot of the Microsoft Defender security portal Help button in the portal header bar.":::
 
-- Engage with the [Microsoft Tech community](https://techcommunity.microsoft.com/).  
+You can also engage with the [Microsoft Tech community](https://techcommunity.microsoft.com/).  
 <!--an exact url once it exists-->
 
 <!--images -->

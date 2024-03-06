@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Microsoft Security Posture Management
-summary: A unified view that provides insights into exposure, details on potential attack paths, and the tools to drive continuous security posture improvement while considering business priorities.
+title: Microsoft Security Exposure Management
+summary: Provides a unified view of security posture. Investigate security insights, identify critical assets, reduce attack surfaces and security risk.
 metadata:
-  title: Microsoft Security Posture Management documentation
-  description: Get an overview and setup information for Microsoft Security Posture Management
+  title: Microsoft Security Exposure Management documentation
+  description: Get started with Microsoft Security Exposure Management
   ms.service: azure
   ms.subservice:
   ms.topic: landing-page
@@ -14,7 +14,8 @@ metadata:
   ms.custom: intro-hub-or-landing
   author: siosulli
   ms.author: siosulli
-  ms.date: 11/28/2023
+  ms.date: 03/04/2024
+
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -26,37 +27,71 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: What is Microsoft Security Posture Management?
+          - text: What is Microsoft Security Exposure Management?
             url: microsoft-security-exposure-management.md
 
   # Card
-  - title: Deploy
+  - title: Get started
     linkLists:
-      - linkListType: deploy
+      - linkListType: get-started
         links:
-          - text: Get Microsoft Security Posture Management
-            url: microsoft-security-exposure-management.md
+          - text: Start using Microsoft Security Posture Management
+            url: get-started-exposure-management.md
+          - text: Review prerequisites
+            url: prerequisites.md
 
- # Card
-  - title: Exposure management
+
+  # Card
+  - title: Manage critical assets
     linkLists:
+      - linkListType: concept
+        links:
+          - text: Learn about critical asset management
+            url: critical-asset-management.md
       - linkListType: how-to-guide
         links:
-          - text: Exposure management overview
-            url: microsoft-security-exposure-management.md
+          - text: Manage and classify critical assets
+            url: classify-critical-assets.md 
 
- # Card
-  - title: Attack surface management
+  # Card
+  - title: Investigate & remediate attack surfaces
     linkLists:
+    - linkListType: concept
+      links:
+        - text: Learn about attack surface management
+          url: cross-workload-attack-surfaces.md
+    - linkListType: how-to-guide
+      links:
+      - text: Query the enterprise exposure graph
+        url: query-enterprise-exposure-graph.md
+      - text: Explore with the attack surface map
+        url: enterprise-exposure-map.md 
+
+
+  # Card
+  - title: Investigate attack paths 
+    linkLists:
+      - linkListType: concept
+        links:
+        - text: Learn about attack paths
+          url: work-attack-paths-overview.md
       - linkListType: how-to-guide
         links:
-          - text: Critical asset management
-            url: microsoft-security-exposure-management.md
+        - text: Investigate attack paths
+          url: review-attack-paths.md 
 
- # Card
-  - title: Exposure insights
+  # Card
+  - title: Get insights into exposure risk
     linkLists:
+      - linkListType: concept
+        links:
+        - text: Learn about exposure insights
+          url: exposure-insights-overview.md
       - linkListType: how-to-guide
         links:
-          - text: Initiatives
-            url: microsoft-security-exposure-management.md
+        - text: Review security initiatives
+          url: initiatives.md
+        - text: Investigate initiative metrics
+          url: security-metrics.md
+        - text: Review security recommendations
+          url: security-recommendations.md
