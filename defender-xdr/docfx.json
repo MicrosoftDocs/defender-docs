@@ -45,7 +45,8 @@
       "breadcrumb_path": "/defender-xdr/breadcrumb/toc.json",
       "permissioned-type": "public",
       "searchScope": ["Defender XDR"],
-      "uhfHeaderId": "MSDocsHeader-M365-IT"
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "titleSuffix": "Microsoft Security Exposure Management"
     },
     "template": [],
     "dest": "defender-xdr"
