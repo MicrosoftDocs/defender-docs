@@ -21,7 +21,6 @@ Attack paths in [Microsoft Security Exposure Management](microsoft-security-expo
 - [Review permissions needed](prerequisites.md#permissions-for-security-exposure-management-tasks) for working with Security Exposure Management.
 - Note that the value of attack paths increases based on the data used as a source. If no data is available or the data doesn't reflect your organization's environment, attack paths might not appear. Attack paths might not be fully representative if you don't have licenses defined for workloads integrated and represented in the attack path, or if you haven't fully defined critical assets.
 
-
 ## View attack paths
 
 1. To access [attack paths](https://security.microsoft.com/attack-paths), select  **Attack surface -> Attack path**.
@@ -49,7 +48,6 @@ To group by choke point:
 
 :::image type="content" source="media/review-attack-paths/attack-path-graph-details.png" alt-text="Screenshot of an Attack path graph detail screen." lightbox="media/review-attack-paths/attack-path-graph-details.png":::
 
-
 ## Review recommendations
 
 1. Select the **Recommendations** tab to view the list of actionable recommendations to mitigate the identified attack paths.
@@ -62,7 +60,7 @@ To group by choke point:
 
 To see a broader picture of an attack path asset in the exposure map:
 
-1. Select **Attack surface -> Attack path -> Graph -> View in map**. 
+1. Select **Attack surface -> Attack path -> Graph -> View in map**.
 
     You can also search for and select an asset in the attack path from **Map** and select it. Or, select **View in map** from an asset in the attack path from the **Device inventory**.
 

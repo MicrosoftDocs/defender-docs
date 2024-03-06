@@ -20,7 +20,7 @@ Use the exposure (attack surface) map in [Microsoft Security Exposure Management
 1. In your device inventory, select a device.
 1. Select **View Map**.
 
-You can also search for an asset from **Attack surface -> Map**.
+You can also search for an asset from **Attack surface -> Map**, or from the **Overview** dashboard.
 
 ## Explore the map
 
@@ -38,7 +38,6 @@ The exposure map gives you visibility into the connections of your assets.
     - **Search** allows you to discover items by node type, and by selected **all results** search the particular type for specific results. You can also filter your search by devices, identity, or cloud assets from the initial screen.
 
     :::image type="content" source="./media/enterprise-exposure-map/attack-surface-exposure-map.png" alt-text="Screenshot of the attack surface exposure map." lightbox="./media/enterprise-exposure-map/attack-surface-exposure-map.png":::
-
 
 ## Next steps
 
