@@ -29,7 +29,7 @@ ms.date: 11/28/2023
 1. At the top of the initiatives page, review the highlighted key initiatives by scrolling and drilling down per your needs.
 
 1. To set an initiative to appear in the top initiative bar in the dashboard or on the initiatives page, select the **star** icon in the initiatives window or **mark as favorite** in the individual initiative.
-1. Select how to view the initiatives catalog. Choose between **all initiatives**, **domain initiatives**, and  **threat Article initiatives**.
+1. Select how to view the initiatives catalog. Choose between **all initiatives**, **domain initiatives**, and  **threat article initiatives**.
 
 1. Once you select how to view initiatives you can review the following information:
     - **14 day change trend graph** highlighting how the initiative score changes over the past 14 days
@@ -81,7 +81,7 @@ The changes in your score provide you with useful feedback about how well you're
 
 1. Select **exposure insights -> initiatives-> security recommendations** to view recommendations related to your initiative. You only see those recommendations that are *currently* applied to assets and active in Microsoft Secure Score or Microsoft Defender for Cloud.
 
-1. Select a *not compliant* recommendation and then **manage** to remediate the recommendation in the appropriate workload.
+1. Select a *not compliant* recommendation and then **manage** to remediate the recommendation in the originating workload, such as Microsoft Defender Vulnerability Management.
 
 ## Next steps
 

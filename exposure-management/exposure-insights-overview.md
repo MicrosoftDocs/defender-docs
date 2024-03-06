@@ -134,9 +134,6 @@ Predefined initiatives gather metrics together to help you review and manage exp
 
 Initiatives might relate to particular domains, and measure a specific security like endpoint, identity, and cloud security. They could contribute to threat analysis by addressing a known threat or paradigm across multiple product categories or types, for example ransomware protection or [critical asset protection](critical-asset-management.md#critical-asset-protection-initiative). Initiatives also focus on specific compliance standards.
 
-<!--
-    - **Threat Article initiatives** - Initiatives that contribute to threat analysis by addressing a known threat or paradigm across multiple product categories or types. Threat article initiatives are designed based on the Recommended actions for [Threat analytics](/microsoft-365/security/defender/threat-analytics.md) items. Threat Article initiatives deal with phishing, ransomware, and specific actor and activity profiles, among an ever expanding list of initiative areas.
--->
 Security initiatives provide a means to measure an organization's maturity across security concerns, priorities, and threats. They provide a consumable way to approach exposure.
 
 You can prioritize which initiatives to see on the overview dashboard, review the initiative score that reflects the exposure status of the initiative, and drill down into initiatives to see their associated metrics and to understand where gaps or risks reside. The initiative score and recommendations are derived from metrics within the initiative.

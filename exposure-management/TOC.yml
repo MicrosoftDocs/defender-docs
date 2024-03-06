@@ -48,8 +48,6 @@
           href: security-recommendations.md
         - name: Explore security events
           href: security-events.md 
-    - name: Review non-Microsoft data connectors
-      href: data-connectors.md
     - name: Microsoft Defender XDR docs
       items: 
        - name: Microsoft Defender XDR
