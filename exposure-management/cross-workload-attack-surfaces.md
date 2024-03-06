@@ -1,17 +1,17 @@
 ---
-title: Overview of cross-workload attack surfaces
-description: This article provides an overview of how to manage and visualize cross-workload attack surfaces using the enterprise exposure graph to analyze assets, findings, relationships from multiple workloads across the organization.
+title: Overview of attack surface management in Microsoft Security Exposure Management
+description: Learn about attack surface management in Microsoft Security Exposure Management. s
 ms.author: v-mjosephy
 author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 11/28/2023
+ms.date: 03/04/2024
 ---
 
 # Overview of attack surface management
 
-[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) helps you to visualize, analyze, and manage cross-workload attack surfaces.
+[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) helps you to visualize, analyze, and remediate cross-workload attack surfaces.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
@@ -41,9 +41,13 @@ The enterprise exposure graph and the exposure graph schemas extend the existing
 
 By correlating exposure queries with other graph data, such as incident data, you can uncover risk to a greater degree.
 
-## Attack surface map
+## Exposure map
 
-The attack surface map (enterprise exposure map), gives you a way to visualize the exposure data that you can query using the exposure graph schema. It allows you to explore the data, check what assets are at risk, contextualize them in a broader network, and prioritize your focus. For instance, you can check whether a particular asset has undesired connections. Or see whether a device has a path to the internet, and if so, what other devices are exposed.  
+The exposure (attack surface) map helps you to visualize the exposure data that you query using the exposure graph schema.
+
+In the map you can explore the data, check what assets are at risk, contextualize them in a broader network framework, and prioritize security focus.
+
+For example, you can check whether a particular asset has unwanted connections, or see whether a device has a path to the internet, and if so, what other devices are exposed.  
 
 ## Next steps
 
