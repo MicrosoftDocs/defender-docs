@@ -66,12 +66,12 @@ The critical asset classification logic classifies your assets according to a pa
 
 However, some assets that fit the classification might not meet the classification threshold. For instance, the asset might be a domain controller, but it might not be considered a critical asset in your business. When assets don't meet the classification threshold for criticality, you can choose to add them to your defined classification with the asset review feature. This feature allows you to add listed assets based on your organization's criticality criteria.
 
-## Critical asset protection initiative
+## Critical Asset Protection initiative
 
-The critical asset protection initiative in the [Microsoft Defender portal](https://security.microsoft.com/) (**exposure insights -> initiatives ->critical asset protection**) helps you make sure your business critical assets are safeguarded from threats.
+The Critical Asset Protection initiative in the [Microsoft Defender portal](https://security.microsoft.com/) (**Exposure insights -> Initiatives ->Critical asset protection**) helps you make sure your business critical assets are safeguarded from threats.
 
-- The critical asset protection initiative offers continuous monitoring of the security resilience of your critical assets, providing real-time insights into the effectiveness of your protection measures.
-- The initiative's asset tab lets you gain visibility into all critical assets within your organization, identify potential gaps in critical asset discovery, and fine-tune your classifications accordingly.
+- The initiative offers continuous monitoring of the security resilience of your critical assets, providing real-time insights into the effectiveness of your protection measures.
+- Within the initiative, you can gain visibility into all critical assets within your organization, identify potential gaps in critical asset discovery, and fine-tune your classifications accordingly.
 
 ## Next steps
 

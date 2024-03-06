@@ -1,15 +1,15 @@
 ---
-title: Work with critical assets in Microsoft Security Exposure Management
+title: Review and classify critical assets in Microsoft Security Exposure Management
 description: Learn how to manage critical assets in Microsoft Security Exposure Management.
 ms.author: v-mjosephy
 author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 03/06/2023
+ms.date: 03/06/2024
 ---
 
-# Work with critical assets
+# Review and classify critical assets
 
 [Microsoft Security Exposure Manager](microsoft-security-exposure-management.md) helps keep your business critical assets secure and available. This article describes how to work with critical assets.
 
@@ -22,9 +22,9 @@ ms.date: 03/06/2023
 
 ## Review critical assets
 
-Review critical assets.
+Review critical assets as follows.
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com) select **Settings > Microsoft XDR > rules > Critical asset management**
+1. In the [Microsoft Defender portal](https://security.microsoft.com) select **Settings > Microsoft XDR > Rules > Critical asset management**
 1. On the **Critical asset management** page, review predefined and custom critical asset classifications, including the number of assets in the classification, whether assets are on or off, and criticality levels.  
 
 :::image type="content" source="./media/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window." lightbox="./media/critical-asset-management-window.png":::
@@ -79,8 +79,8 @@ Set levels as follows.
 
 
 > [!NOTE]
-> You can set critical levels manually in the device inventory. We recommend creating criticality rules for broad application of levels across assets.
-<!--initiative?The initiative page allows you to view security metrics, security recommendations, critical assets, and history in one place. In addition, you can access critical asset management to change your asset criticality levels. -->
+> You can set critical levels manually in the device inventory. We recommend creating criticality rules that allow broad application of critical levels across assets.
+
 
 ## Edit custom classifications
 
