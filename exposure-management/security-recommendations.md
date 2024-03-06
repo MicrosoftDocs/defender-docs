@@ -15,23 +15,22 @@ The Microsoft Security Exposure Management [recommendations catalog](exposure-in
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-1. Select **exposure management -> exposure insights -> recommendations** or the **recommendations** tab in an individual initiative page in **initiatives** to access [Microsoft Exposure Recommendations](https://security.microsoft.com/exposure-recommendations) in the [Microsoft Defender portal](https://security.microsoft.com/) .
+1. Select **Exposure management -> Exposure insights -> Recommendations** or the **Recommendations** tab in an individual initiative page in **Initiatives** to access [Microsoft Exposure Recommendations](https://security.microsoft.com/exposure-recommendations) in the [Microsoft Defender portal](https://security.microsoft.com/) .
 :::image type="content" source="./media/recommendations-navigation.png" alt-text="Screenshot of the recommendations window.":::
 
 1. Sort the recommendations by any of the headings or filter them based on your task needs.
     1. Sorting includes all of the headers which are:
-
-    - **Name**
-    - **Compliance state** - compliant or not compliant
-    - **Impact** - high, low, or medium
-    - **Last calculated**
-    - **Last state change**
-    - **Related initiatives** - the number of related initiatives
-    - **Related metrics** - the number of related metrics
-    - **Source** - the benchmark source
-    - **Workload** - which workload the recommendations relate to
-    - **Domain** - Either device, apps, data, or identity
-    1. Filter recommendations by state, source, impact, workload, and domain.
+        - **Name**
+        - **Compliance state** - compliant or not compliant
+        - **Impact** - high, low, or medium
+        - **Last calculated**
+        - **Last state change**
+        - **Related initiatives** - the number of related initiatives
+        - **Related metrics** - the number of related metrics
+        - **Source** - the benchmark source
+        - **Workload** - which workload the recommendations relate to
+        - **Domain** - Either device, apps, data, or identity
+     1. Filter recommendations by state, source, impact, workload, and domain.
 
 1. Select a recommendation to view and review details.
 
@@ -46,7 +45,6 @@ The Microsoft Security Exposure Management [recommendations catalog](exposure-in
 
 ## Next steps
 
-- [Overview of improve security insights with exposure insights](exposure-insights-overview.md)
-- [Explore security events](security-events.md)
+- Review other ways to [improve security insights with exposure insights](exposure-insights-overview.md)
+- Learn how to [Explore security events](security-events.md)
 - [Investigate initiative metrics](security-metrics.md)
-- [Secure score for Microsoft Security Exposure Management](secure-score.md)
