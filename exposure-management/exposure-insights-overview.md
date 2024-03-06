@@ -146,13 +146,13 @@ The initiative score is calculated based on the value and weight of the metrics 
 
 As recommendations are fixed, metrics rise, and in turn initiative scores rise to reflect improved security posture.
 
-Changes in metric, value, and properties can impact the initiative score. Initiatives provides a way to track the history of changes greater than 2.5%, filter for specific time points, and drill down to specific initiative changes. For instance, when a metric value changes or a metric is removed. The metric or score changes can't be controlled in advance by customers.
+Changes in metric (including if depreciated or removed), value, and properties can impact the initiative score. Initiatives provides a way to track the history of changes greater than 2.5%, filter for specific time points, and drill down to specific initiative changes. For instance, when a metric value changes or a metric is removed. The metric or score changes can't be controlled in advance by customers.
 
 <!--## Programs
 
 For each initiative, Programs shows the user what workloads or product types reflected in the initiative. For instance, Cloud Security or External Attack Surface. For initiatives that are connected to specific workloads, ensure that the product is onboarded. The initiative alerts you to the data required by the initiative. Some initiatives, like the Microsoft Defender External Attack Surface Management (EASM), require their own onboarding process. -->
 
-> ![NOTE]
+> [!NOTE]
 > The ability to onboard initiatives is included in the paid version of Microsoft Security Exposure Management.
 
 ## Security events

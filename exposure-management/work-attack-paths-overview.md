@@ -14,7 +14,7 @@ ms.date: 11/28/2023
 Microsoft Security Exposure Management helps you to manage your company attack surface and exposure risk. Attack paths show you how an attacker might breach your attack surface, so that you can investigate and remediate potential threats.
 
 > [!NOTE]
-> The value of attack paths increases based on the data used as a source. If no data is available or the data doesn't reflect your organization's environment, attack paths might not appear. Attack paths may also not be fully representative if your plan doesn't include all the relevant licenses or if you haven't fully defined critical assets.
+> The value of attack paths increases based on the data used as a source. If no data is available or the data doesn't reflect your organization's environment, attack paths might not appear. Attack paths might not be fully representative if you don't have licenses defined for workloads integrated and represented in the attack path or if you haven't fully defined critical assets.
 
 [!INCLUDE [prerelease](../includes/prerelease.md)]
 <!--:::image type="content" source="media/work-attack-paths-overview/attack-paths.png" alt-text="Screenshot of the attack path window":::
