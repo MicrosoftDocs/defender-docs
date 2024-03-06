@@ -124,4 +124,4 @@ You can change the criticality levels and turn off all assets. You can also edit
 1. Select **Devices** in the **Device Inventory**.
 1. Sort by **Criticality level** to view business critical assets with a "very high" level of criticality.
 
-:::image type="content" source="./media/device-inventory.png" alt-text="screenshot of the Device inventory window" lightbox="./media/get-started-exposure-management/device-inventory.png":::
+:::image type="content" source="./media/device-inventory.png" alt-text="screenshot of the Device inventory window" lightbox="./media/device-inventory.png":::
