@@ -1,5 +1,5 @@
 ---
-title: Schemas and operators overview
+title: Schemas and operators in Microsoft Security Exposure Management
 description: This article describes the enterprise exposure graph schemas and operators in Microsoft Exposure Management.
 ms.author: v-mjosephy
 author: mjosephym
@@ -11,7 +11,7 @@ ms.date: 11/28/2023
 
 # Schemas and operators overview
 
-The [enterprise exposure graph schemas](cross-workload-attack-surfaces.md#enterprise-exposure-graph-schemas) provide attack surface information that helps you understand how potential threats can reach and compromise valuable assets. This article discusses the exposure graph schema tables and operators.
+[Enterprise exposure graph schemas](cross-workload-attack-surfaces.md#enterprise-exposure-graph-schemas) in Microsoft Security Exposure Management provide attack surface information to help you understand how potential threats might reach and compromise valuable assets. This article summarizes the exposure graph schema tables and operators.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
@@ -154,5 +154,5 @@ The `graph-match` operator searches for all occurrences of a graph pattern in an
 
 ## Next steps
 
-- [Query the enterprise exposure graph](query-enterprise-exposure-graph.md)
-- [!INCLUDE [support](../includes//support.md)]
+[Query the enterprise exposure graph](query-enterprise-exposure-graph.md)
+
