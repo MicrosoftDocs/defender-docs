@@ -1,44 +1,49 @@
 ---
-title: Investigate security metrics
-description: This article describes Microsoft Security Exposure Management metrics and how it works.
+title: Investigate security metrics in Microsoft Security Exposure Management
+description: Learn how to investigate metrics in Microsoft Security Exposure Management.
 ms.author: v-mjosephy
 author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 11/28/2023
+ms.date: 03/06/2024
 ---
 
 # Investigate security metrics
 
-[Security metrics](exposure-insights-overview.md#metrics) in Microsoft Security Exposure Management, measure exposure of assets within a specific scope of assets.
+[Security metrics](exposure-insights-overview.md#metrics) in Microsoft Security Exposure Management measure security exposure within a specific scope of assets.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-1. To access [metrics](https://security.microsoft.com/exposure-metrics), go to **exposure management -> exposure insights -> metrics**,  the **overview** dashboard, or individual initiative or recommendations.
+## Prerequisites
 
-:::image type="content" source="./media/metrics.png" alt-text="Screenshot of the metrics page in Microsoft Security Exposure management.":::
+- Learn about [security metrics](exposure-insights-overview.md#metrics)
+- [Review permissions needed](prerequisites.md#permissions-for-security-exposure-management-tasks) for working with Security Exposure Management.
 
 ## Review security metrics
 
-1. To view a specific metric's information select the metric from the list.
+1. In the Defender portal > **Eposure management**, navigate to **Exposure insights** > **Metrics**
 
-1. Review the metric details such as:
+    :::image type="content" source="./media/metrics.png" alt-text="Screenshot of the metrics page in Microsoft Security Exposure management.":::
 
-- **Description** of the metric
-- Related **Security recommendations** and a means to manage them
-- Specific **Affected items** and the number they make of the total
-- **Last state update**
-- Current **Exposure score** value
-- **Weight** or maximum metric score possible
-- **Score impact** or what score gain is possible
+1. Select the metric you want to review.
+1. Review the metric properties.
 
+    - **Description**: Metric description.
+    - **State**: Current state of metric.
+    - **Last state update**: The last time metric state was updated.
+    - **Current value**: Current exposure score from significant to no/low exposure.
+    - **Affected items**. The number of affected items in the total items.
+    - **Weight**: Metric weight or maximum metric score possible.
+    - **Score impact**: Possible score gain.
+    - **Security recommendations**: Recommendations associated with the metric.
+    
 ## Edit the metric value
 
-1. To edit the metric value, with admin privileges, select a specific metric.
+You can customize metric values for your business needed.
 
-1. Select weight, change the value, and apply. by editing its weight, to customize the metric to your organization's business priorities.
-
+1. To edit the metric value, select a specific metric.
+1. In the metric properties page, select weight, change the value, and apply. 
 1. To accept the risk described by the metric, set the weight to zero.
 
 <!-- [!NOTE]

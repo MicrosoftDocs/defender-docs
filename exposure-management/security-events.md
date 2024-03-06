@@ -1,25 +1,31 @@
 ---
-title: Explore security events
-description: This article describes Microsoft Security Exposure Management events and how it works.
+title: Explore security events in Microsoft Security Exposure Management
+description: Learn how to work with security events in Microsoft Security Exposure Management.
 ms.author: v-mjosephy
 author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 11/28/2023
+ms.date: 03/06/2024
 ---
 
 # Explore security events
 
-Microsoft Security Exposure Management security events present and track initiative and metric score drop incidents in order to determine how they affect the organization's security posture.
+Security events in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md)  track initiative and metric score drop incidents in order to determine how they affect organizational security posture.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-1. To access [security events](https://security.microsoft.com/exposure-events) in the [Microsoft Defender portal](https://security.microsoft.com) select **exposure management -> exposure insights -> events**.
+## Prerequisites
+
+[Learn about](exposure-insights-overview.md#security-events) security events
+
+## Review security events
+
+1. in the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management -> Exposure insights -> Events**.
 
 1. Select the time range you need in the calendar drop down.
-1. To filter by initiative score drop events or metric score drop events select *filter* or the score drop event quantity.
-1. Select a specific event to open it in initiatives or metrics, respectively.
+1. To filter by initiative score drop events or metric score drop events, select *filter* or the score drop event quantity.
+1. Select a specific event to open it in initiatives or metrics.
 
 <!--## View security events
 -->
@@ -73,4 +79,5 @@ You can also edit the metric value by editing its weight. This customizes the me
 -->
 ## Next steps
 
-- [Secure Score](secure-score.md)
+- [Work with security initiatives](initiatives.md)
+- [Work with security metrics](security-metrics.md)
