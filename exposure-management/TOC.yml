@@ -28,7 +28,7 @@
       items:
       - name: Overview
         href: critical-asset-management.md
-      - name: Classify assets as critical
+      - name: Review and classify critical assets
         href: classify-critical-assets.md  
     - name: Work with attack paths
       items:      
