@@ -25,12 +25,11 @@ Use the dashboard as a starting point for a snapshot of organizational posture a
 
 :::image type="content" source="./media/get-started-exposure-management/exposure-management-overview.png" alt-text="Screenshot of the security exposure management overview page." lightbox="./media/get-started-exposure-management/exposure-management-overview.png":::
 
-
 ## Review assets
 
 Get a quick view of your organization's exposed assets. 
 
-You can see onboarded devices, discovered devices not yet onboarded, internet facing devices, and cloud resources. 
+You can see onboarded devices, discovered devices not yet onboarded, internet facing devices, and cloud resources.
 
 Knowing what is exposed helps you to address asset exposure risks.
 
@@ -96,7 +95,7 @@ You can hover over points on the timeline to see what the score of the key initi
 
 ## Review recent security events
 
-**Recent security events** displays security events from the past week sorted by all events or by either initiatives or metrics drift. Select the **View all events** button to view a complete list of all events occurring in your organization.
+**Recent security events** displays security events from the past week sorted by all events or by either initiatives or metrics drop. Select the **View all events** button to view a complete list of all events in the last 30 days occurring in your organization.
 
 ## Next steps
 
