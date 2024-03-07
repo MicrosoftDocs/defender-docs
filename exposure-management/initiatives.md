@@ -74,9 +74,11 @@ The changes in your score provide you with useful feedback about how well you're
 
 1. Browse to the time table to choose a specific time point to examine.
     1. If needed, filter for specific time points.
-    1. Choose the time point and find the cause of the change.
+    1. Choose the time point and select to examine the percent affect on the initiative score and the reason for the change.
+    1. select a metric to explore the change's affect further.
+
 <!-- note that history may need to go outand replaced with this: The **14 day change trend graph** and **14 day drift change** track the changes in your initiative score, visually and as a percentage. -->
-:::image type="content" source="./media/initiatives/history.png" alt-text="Screenshot of the initiatives history tab.":::
+:::image type="content" source="media/initiatives/history-details.png" alt-text="Screenshot of the history metric change details side panel.":::
 
 ## Review metrics and recommendations
 

@@ -17,7 +17,7 @@ ms.date: 03/06/2024
 
 ## Prerequisites
 
-- Before you start, [learn about critical asset management](critical-asset-management.md) in Security Exposure Manager.
+- Before you start, [learn about critical asset management](critical-asset-management.md) in Security Exposure Management.
 - To manage critical assets you need one of these roles: Global Administrator, Security Administrator, Security Operator, Global Reader, Security Reader.
 
 ## Review critical assets
@@ -29,7 +29,6 @@ Review critical assets as follows.
 
 :::image type="content" source="./media/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window." lightbox="./media/critical-asset-management-window.png":::
 
-
 > [!NOTE]
 > You can also view critical assets in **Assets > Devices** > **Classify critical asset**, and view the **Critical Asset Protection** initiative in **Exposure insights -> Initiatives**.
 
@@ -40,8 +39,6 @@ Request a new predefined classification as follows.
 1. On the **Critical asset management** page, select **Suggest new classification**.
 
 1. Fill in what classification you'd like to see and then select **Submit request**.
-
-
 
 <!--1. From there you can choose to change criticality levels,  view the general critical asset information including the  review general information such , choose to review classifications, create new classifications, or update the criticality levels for the existing classifications in your organization.-->
 
@@ -58,12 +55,11 @@ Create a custom classification as follows.
     - **Query builder**
         - Use the query builder to define a new classification, for instance, "mark all devices with a certain naming convention as critical.".
         - Add one or more boolean filters that are defined per device, identity, or cloud resource.
-        
+
 :::image type="content" source="./media/create-critical-asset-classification.png" alt-text="Screenshot of the create critical asset classification window." lightbox="./media/create-critical-asset-classification.png":::
 
 1. After setting the criteria select **Next**. 
 1. On the following pages, preview the affected assets, and assign the criticality level.
-
 
 ## Set critical asset levels
 
@@ -77,10 +73,8 @@ Set levels as follows.
 
 :::image type="content" source="./media/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature.":::
 
-
 > [!NOTE]
 > You can set critical levels manually in the device inventory. We recommend creating criticality rules that allow broad application of critical levels across assets.
-
 
 ## Edit custom classifications
 

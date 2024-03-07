@@ -76,4 +76,3 @@ The Critical Asset Protection initiative in the [Microsoft Defender portal](http
 ## Next steps
 
 [Classify critical assets](classify-critical-assets.md)
-<!-- [!INCLUDE [support](../includes//support.md)] -->
