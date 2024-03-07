@@ -22,7 +22,7 @@ ms.date: 03/06/2024
 
 ## Review security metrics
 
-1. In the Defender portal > **Eposure management**, navigate to **Exposure insights** > **Metrics**
+1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management -> Exposure insights ->Metrics** to open the [metrics](https://security.microsoft.com/exposure-metrics) page.
 
     :::image type="content" source="./media/metrics.png" alt-text="Screenshot of the metrics page in Microsoft Security Exposure management.":::
 
@@ -46,13 +46,6 @@ You can customize metric values for your business needed.
 1. In the metric properties page, select weight, change the value, and apply.
 1. To accept the risk described by the metric, set the weight to zero.
 
-<!-- [!NOTE]
-> Some instances of affected assets information, largely information originating in Secure Score, doesn't appear on the affected items tab in an individual metric. Also some critical asset information for assets in the Affected Items tab does not show.
-> Asset details are calculated on demand.
-> Cloud-related metrics apply only for a subscription and their subsequent resources if the subscription is onboarded to a Cloud Security Posture Management (CSPM) Premium plan.
-> In some cases, metrics are more specific than the scope of the related recommendations. In such a case, the asset detail shown won't align with the asset details of the related recommendations.
-> Offboarding a workload will result in an inability to refresh the metric status and the asset details for related metrics.
--->
 ## Next steps
 
 - [Priority exposure items](exposure-insights-overview.md)

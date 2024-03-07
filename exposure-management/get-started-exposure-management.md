@@ -99,6 +99,6 @@ You can hover over points on the timeline to see what the score of the key initi
 
 ## Next steps
 
-- [Explore cross-workload attack surfaces](attack-surface-management-overview.md)
+- [Overview of attack paths](work-attack-paths-overview.md)
 - [Identify and manage critical assets](critical-asset-management.md)
 - [Improve security insights with exposure insights](exposure-insights-overview.md)

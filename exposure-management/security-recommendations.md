@@ -21,7 +21,8 @@ Read about the [recommendations catalog](exposure-insights-overview.md#security-
 
 ## Review recommendations
 
-1. Select **Exposure management -> Exposure insights -> Recommendations**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management -> Exposure insights -> Recommendations** to open the [recommendations](https://security.microsoft.com/exposure-recommendations) page.
+ .
 
     :::image type="content" source="./media/recommendations-navigation.png" alt-text="Screenshot of the recommendations window." lightbox="./media/recommendations-navigation.png":::
 
