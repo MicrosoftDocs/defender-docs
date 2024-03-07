@@ -36,6 +36,6 @@ For more information about how to use the exposure map, see [Explore with the at
 
 For more information, see:
 
-- [Attack surface management overview](attack-surface-management-overview.md)
+- [Overview of attack paths](work-attack-paths-overview.md)
 - [Critical asset management](critical-asset-management.md)
 - [!INCLUDE [support](../includes/support.md)]
