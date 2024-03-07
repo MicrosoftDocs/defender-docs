@@ -54,11 +54,10 @@ Currently, Security Exposure Management consolidates security posture informatio
 - Microsoft Defender Vulnerability Management  
 - Microsoft Defender for Cloud
 - Microsoft Entra ID  
-- Azure External Attack Surface Management (EASM)
+- Microsoft Defender External Attack Surface Management (EASM)
 
 In addition to Microsoft services, Security Exposure Management will connect to non-Microsoft data sources over time.
 
 ## Next steps
 
-- Read the [Microsoft Security Exposure Management licensing datasheet](https://aka.ms/?)
-- Review [prerequisites and support](prerequisites.md) to get started with Security Exposure Management.
+Review [prerequisites and support](prerequisites.md) to get started with Security Exposure Management.
