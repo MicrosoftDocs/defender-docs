@@ -206,9 +206,9 @@ New events appear at the top of the table and can include a new initiative event
 
 ## Secure score
 
-[Microsoft secure score](/microsoft-365/security/defender/microsoft-secure-score.md) helps organizations to plan and improve overall security posture using secure score as a tracking metric.
+[Microsoft Secure score](/microsoft-365/security/defender/microsoft-secure-score.md) helps organizations to plan and improve overall security posture using secure score as a tracking metric.
 
-Security Exposure Management uses secure score as one of its sources for initiative scores.
+Security Exposure Management uses Secure score as one of its sources for initiative scores.
 
 - Secure score has "recommended actions" for a [number of products](/microsoft-365/security/defender/microsoft-secure-score.md#products-included-in-secure-score).
 - Selecting a recommendation to review allows you to remediate the problem in the specific product, including recommendations that derived from secure score.

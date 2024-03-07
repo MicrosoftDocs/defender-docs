@@ -43,7 +43,7 @@ After business critical assets are defined and identified, asset criticality app
 
 For example, in Device Inventory, a criticality level is shown.
 
-:::image type="content" source="./media/critical-asset-management/device-inventory-criticality-level.png" alt-text="Screenshot of the Device inventory window. The image includes an emphasis on the criticality level section.":::
+:::image type="content" source="./media/critical-asset-management/device-inventory-criticality-level.png" alt-text="Screenshot of the Device inventory window. The image includes an emphasis on the criticality level section."  lightbox="media/critical-asset-management/device-inventory-criticality-level.png":::
 
 In another example, on the [attack surface map](enterprise-exposure-map.md), as you look for exposure to threats and identify choke points, the halo color surrounding the asset icon, and the crown indicator, visually indicate the high criticality level.
 

@@ -19,11 +19,10 @@ This article provides some example, tips, and hinting for constructing queries i
 
 ## Building advanced hunting queries
 
-- Review [best practices for building advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-best-practices.md) 
+- Review [best practices for building advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-best-practices)
 - Review [best practices for Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/)
 
-## Using the make-graph operator 
-
+## Using the make-graph operator
 
 Kusto's `make-graph` operator loads nodes and edges data into memory.
 
