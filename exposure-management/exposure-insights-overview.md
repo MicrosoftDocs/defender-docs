@@ -21,70 +21,53 @@ Exposure insights include security events, recommendations, metrics, and initiat
 - Measure and track exposure of key security elements within initiatives.
 - Prioritize areas of security focus based on initiatives and metrics.
 - Follow actionable remediation steps to improve security posture and reduce risk.
+- Track improvements in security initiatives in order to track security risk reduction.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-## Security recommendations
 
-Assets and workloads are assessed against security measurements and standards, and security recommendations are issued based on those assessments.
+## Initiatives
 
-Recommendations provide practical steps to help you improve and remediate security posture and detected issues.
+Security initiatives simplify security posture management and help you to assess readiness and maturity in specific areas of security risk.
 
-In Security Exposure Management, the recommendations catalog serves as a centralized repository for security recommendations.
+Security Exposure Management provides predefined initiatives. Each predefined initiative contains one or more security metrics relevant to the initiative.
 
-### Recommendations integration
+Initiatives might relate to specific workload domains, or measure a specific area like endpoint, identity, and cloud security. They might contribute to threat analysis by addressing a specific threat across multiple product categories or types, for example ransomware protection or [critical asset protection](critical-asset-management.md#critical-asset-protection-initiative). Initiatives also focus on specific compliance standards.
 
-Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [secure score](/microsoft-365/security/defender/microsoft-secure-score.md), and from other Microsoft workloads. It also provides recommendations related to non-Microsoft workloads.
+You can prioritize which initiatives to see on the Overview dashboard and review the initiative score that reflects the exposure status of the initiative. You can also drill down into initiatives to see their associated metrics and to understand where gaps or risks reside. The initiative score and recommendations are derived from metrics within the initiative.
 
-### Working with recommendations
+### Initiative score
 
-You can review individual recommendations, their state, impact, and source, details about exposed entities, and related initiatives and metrics. Each recommendation provides remediation steps to address detected issues.
+The initiative score is calculated based on the value and weight of the metrics associated with the initiative. As users improve their metrics the initiative score rises, reflecting a better posture on that domain.
 
-Every action taken on a security recommendation, helps reduce exposure and directly influences related security metrics and initiatives.
+- Metrics largely improve through applying the recommendations associated with the initiative.
+- As recommendations are fixed, metrics rise, and in turn initiative scores rise to reflect improved security posture.
+- Changes in metrics, including deprecation/removal, value, and metric properties can affect the initiative score.
 
-:::image type="content" source="./media//exposure-insights-overview/recommendation-ransomeware-advanced-protection.png" alt-text="Screenshot of the ransomware advanced protection recommendation details ":::
+### History
 
-### Compliance
+Initiatives provide a way to track the history of changes greater than 2.5% that affect initiative score. You can filter for specific time points, and drill down to specific initiative changes. History can show the percent affect of metrics in the initiative score along with the change reason including:
 
-Each security recommendation is categorized for the entire organization.
+- Property change - A change in the weight of the metric in the score.
+- Value change - A change in the value of the metric in the initiative score.
+- Metric removed - The metric is no longer relevant for that specific initiative. For instance, if a better suggestion is introduced or it becomes irrelevant.
+- Metric depreciated - That metric is removed globally.
 
-- *Compliant* indicates that the recommendation was implemented successfully.
-- *Mitigated by org* displays when you've taken steps to mitigate recommendations elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
-- *Not available* means there isn't enough information to determine the compliance status.
+:::image type="content" source="media/exposure-insights-overview/initiatives-history.png" alt-text="Screenshot of the Initiative history tab showing the graph and dates of changes."  lightbox="media/exposure-insights-overview/initiatives-history.png":::
 
-<!--Security exposure management recommendations relate to the following workloads:
+Selecting on the metric that changed provides more details about the change such as the new weight of a property change or the number of affected assets before or after the change.
 
-- App governance
-- Atlassian (preview)
-- Microsoft Entra ID 
-- Citrix ShareFile
-- Defender for Cloud
-- Defender for Endpoint
-- Defender for Identity
-- Defender for Office
-- DocuSign
-- Dropbox (preview)
-- Exchange Online
-- GitHub
-- Google Workspace
-- Intune
-- Microsoft Defender for Cloud Apps
-- Microsoft Purview Information Protection
-- Microsoft Teams
-- NetDocuments (preview)
-- Okta
-- Salesforce
-- ServiceNow
-- SharePoint Online
-- Slack (preview)
-- Workplace (preview)
-- Zendesk (preview)
-- Zoom
--->
+:::image type="content" source="media/exposure-insights-overview/initiatives-history-details.png" alt-text="Screenshot of the metric change side panel in the Initiatives history tab."  lightbox="media/exposure-insights-overview/initiatives-history-details.png":::
+
+Customers can't control the metric or score changes in advance.
+
+<!--## Programs
+
+For each initiative, Programs shows the user what workloads or product types reflected in the initiative. For instance, Cloud Security or External Attack Surface. For initiatives that are connected to specific workloads, ensure that the product is onboarded. The initiative alerts you to the data required by the initiative. Some initiatives, like the Microsoft Defender External Attack Surface Management (EASM), require their own onboarding process. -->
 
 ## Metrics
 
-Metrics group together recommendations for similar assets, and measure security exposure around those assets, from high to zero.
+Metrics group together recommendations for similar assets, and measure security exposure around those assets, from very high exposure to no exposure identified.
 
 For example:
 
@@ -155,42 +138,63 @@ Note that:
 - In some cases, metrics are more specific than the scope of the related recommendations. In this case, the asset detail shown doesn't align with the asset details of the related recommendations.
 - If you offboard a workload, you won't be able to refresh the metric status and the asset details for the workload related metrics.
 
-## Initiatives
+## Security recommendations
 
-Security initiatives help you to assess security readiness and maturity in specific areas of security risk. Predefined security initiatives gather metrics together within their targeted security areas.
+Assets and workloads are assessed against security measurements and standards, and security recommendations are issued based on those assessments.
 
-Initiatives might relate to specific workload domains, or measure a specific area like endpoint, identity, and cloud security. They might contribute to threat analysis by addressing a specific threat across multiple product categories or types, for example ransomware protection or [critical asset protection](critical-asset-management.md#critical-asset-protection-initiative). Initiatives also focus on specific compliance standards.
+Recommendations provide practical steps to help you improve and remediate security posture and detected issues.
 
-You can prioritize which initiatives to see on the Overview dashboard and review the initiative score that reflects the exposure status of the initiative. You can also drill down into initiatives to see their associated metrics and to understand where gaps or risks reside. The initiative score and recommendations are derived from metrics within the initiative.
+In Security Exposure Management, the recommendations catalog serves as a centralized repository for security recommendations.
 
-### Initiative score
+### Recommendations integration
 
-The initiative score is calculated based on the value and weight of the metrics associated with the initiative. As users improve their metrics the initiative score rises, reflecting a better posture on that domain.
+Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [secure score](/microsoft-365/security/defender/microsoft-secure-score), and from other Microsoft workloads. It also provides recommendations related to non-Microsoft workloads.
 
-- Metrics largely improve through applying the recommendations associated with the initiative.
-- As recommendations are fixed, metrics rise, and in turn initiative scores rise to reflect improved security posture.
-- Changes in metrics, including deprecation/removal, value, and metric properties can affect the initiative score.
+### Working with recommendations
 
-### History
+You can review individual recommendations, their state, impact, and source, details about exposed entities, and related initiatives and metrics. Each recommendation provides remediation steps to address detected issues.
 
-Initiatives provide a way to track the history of changes greater than 2.5% that affect initiative score. You can filter for specific time points, and drill down to specific initiative changes. History can show the percent affect of metrics in the initiative score along with the change reason including:
+Every action taken on a security recommendation, helps reduce exposure and directly influences related security metrics and initiatives.
 
-- Property change - A change in the weight of the metric in the score.
-- Value change - A change in the value of the metric in the initiative score.
-- Metric removed - The metric is no longer relevant for that specific initiative. For instance, if a better suggestion is introduced or it becomes irrelevant.
-- Metric depreciated - That metric is removed globally.
+:::image type="content" source="./media//exposure-insights-overview/recommendation-ransomeware-advanced-protection.png" alt-text="Screenshot of the ransomware advanced protection recommendation details ":::
 
-:::image type="content" source="media/exposure-insights-overview/initiatives-history.png" alt-text="Screenshot of the Initiative history tab showing the graph and dates of changes."  lightbox="media/exposure-insights-overview/initiatives-history.png":::
+### Compliance
 
-Selecting on the metric that changed provides more details about the change such as the new weight of a property change or the number of affected assets before or after the change.
+Each security recommendation is categorized for the entire organization.
 
-:::image type="content" source="media/exposure-insights-overview/initiatives-history-details.png" alt-text="Screenshot of the metric change side panel in the Initiatives history tab."  lightbox="media/exposure-insights-overview/initiatives-history-details.png":::
+- *Compliant* indicates that the recommendation was implemented successfully.
+- *Mitigated by org* displays when you've taken steps to mitigate recommendations elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
+- *Not available* means there isn't enough information to determine the compliance status.
 
-Customers can't control the metric or score changes in advance.
+<!--Security exposure management recommendations relate to the following workloads:
 
-<!--## Programs
-
-For each initiative, Programs shows the user what workloads or product types reflected in the initiative. For instance, Cloud Security or External Attack Surface. For initiatives that are connected to specific workloads, ensure that the product is onboarded. The initiative alerts you to the data required by the initiative. Some initiatives, like the Microsoft Defender External Attack Surface Management (EASM), require their own onboarding process. -->
+- App governance
+- Atlassian (preview)
+- Microsoft Entra ID 
+- Citrix ShareFile
+- Defender for Cloud
+- Defender for Endpoint
+- Defender for Identity
+- Defender for Office
+- DocuSign
+- Dropbox (preview)
+- Exchange Online
+- GitHub
+- Google Workspace
+- Intune
+- Microsoft Defender for Cloud Apps
+- Microsoft Purview Information Protection
+- Microsoft Teams
+- NetDocuments (preview)
+- Okta
+- Salesforce
+- ServiceNow
+- SharePoint Online
+- Slack (preview)
+- Workplace (preview)
+- Zendesk (preview)
+- Zoom
+-->
 
 ## Security events
 
@@ -210,7 +214,7 @@ New events appear at the top of the table and can include a new initiative event
 
 Security Exposure Management uses Secure score as one of its sources for initiative scores.
 
-- Secure score has "recommended actions" for a [number of products](/microsoft-365/security/defender/microsoft-secure-score.md#products-included-in-secure-score).
+- Secure score has "recommended actions" for a [number of products](/microsoft-365/security/defender/microsoft-secure-score#products-included-in-secure-score).
 - Selecting a recommendation to review allows you to remediate the problem in the specific product, including recommendations that derived from secure score.
 - For recommendations where secure score is relevant, if secure score isn't active, that recommendation doesn't display.
 
