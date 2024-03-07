@@ -25,7 +25,6 @@ Exposure insights include security events, recommendations, metrics, and initiat
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-
 ## Initiatives
 
 Security initiatives simplify security posture management and help you to assess readiness and maturity in specific areas of security risk.
@@ -48,10 +47,10 @@ The initiative score is calculated based on the value and weight of the metrics 
 
 Initiatives provide a way to track the history of changes greater than 2.5% that affect initiative score. You can filter for specific time points, and drill down to specific initiative changes. History can show the percent affect of metrics in the initiative score along with the change reason including:
 
-- Property change - A change in the weight of the metric in the score.
-- Value change - A change in the value of the metric in the initiative score.
-- Metric removed - The metric is no longer relevant for that specific initiative. For instance, if a better suggestion is introduced or it becomes irrelevant.
-- Metric depreciated - That metric is removed globally.
+- *Property change* - A change in the weight of the metric in the score.
+- *Value change* - A change in the value of the metric in the initiative score.
+- *Metric removed* - The metric is no longer relevant for that specific initiative. For instance, if a better suggestion is introduced or it becomes irrelevant.
+- *Metric depreciated* - That metric is removed globally.
 
 :::image type="content" source="media/exposure-insights-overview/initiatives-history.png" alt-text="Screenshot of the Initiative history tab showing the graph and dates of changes."  lightbox="media/exposure-insights-overview/initiatives-history.png":::
 
@@ -123,7 +122,7 @@ In some cases, metrics display grayed out because the underlying data needed for
 - The required workload is onboarded, but to a limited extent. For instance:
  - A customer with a E3/P1 license has Defender for Endpoint workload enabled but without all the features of an E5/P2 license.
  - Microsoft Defenders for Endpoint customers see the "% of iOS devices not covered by security agents" metric grayed out if there are no onboarded or discovered iOS devices.
-- The respective control in secure score that the metric is based on is invalid for any reason, such as completed or risk accepted.
+- The respective control in Secure score that the metric is based on is invalid for any reason, such as completed or risk accepted.
 
 Grayed out metrics aren't considered for score calculation.
 
@@ -148,7 +147,7 @@ In Security Exposure Management, the recommendations catalog serves as a central
 
 ### Recommendations integration
 
-Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [secure score](/microsoft-365/security/defender/microsoft-secure-score), and from other Microsoft workloads. It also provides recommendations related to non-Microsoft workloads.
+Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [Secure score](/microsoft-365/security/defender/microsoft-secure-score), and from other Microsoft workloads. It also provides recommendations related to non-Microsoft workloads.
 
 ### Working with recommendations
 
@@ -210,7 +209,7 @@ New events appear at the top of the table and can include a new initiative event
 
 ## Secure score
 
-[Microsoft Secure score](/microsoft-365/security/defender/microsoft-secure-score.md) helps organizations to plan and improve overall security posture using secure score as a tracking metric.
+[Microsoft Secure score](/microsoft-365/security/defender/microsoft-secure-score) helps organizations to plan and improve overall security posture using Secure score as a tracking metric.
 
 Security Exposure Management uses Secure score as one of its sources for initiative scores.
 
