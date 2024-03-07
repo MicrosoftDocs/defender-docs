@@ -28,7 +28,7 @@ This article describes the requirements and prerequisites for using Microsoft Se
 
 ## Permissions
 
-Permissions are based on [unified Role Based Access Control (RBAC)](/microsoft-365/security/defender/manage-rbac.md) and [Microsoft Entra ID RBAC](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
+Permissions are based on [Microsoft Entra ID RBAC](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
 
 - For full Security Exposure Management access, user roles needs access to all Defender for Endpoint  [device groups](/microsoft-365/security//defender-endpoint/machine-groups).
 - If users have scope restrictions to access, such as limits to a specific device group or multiple device groups, they can view global exposure insight information, but not specific device information.

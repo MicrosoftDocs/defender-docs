@@ -30,8 +30,6 @@ Attack paths in [Microsoft Security Exposure Management](microsoft-security-expo
 
 1. To change how attack paths are displayed you can select a heading name to sort by a specific column heading.
 
-> [!NOTE]
-> You can also select the attack path action card from either **Device** > **Settings** > Microsoft Defender XDR -> **Critical asset management**, or from **Initiatives -> Critical asset protection Initiative.**
 
 ## Group by choke points
 
