@@ -18,7 +18,8 @@ Attack paths in [Microsoft Security Exposure Management](microsoft-security-expo
 ## Prerequisites
 
 - [Read about attack paths](work-attack-paths-overview.md) before you start.
-- [Review permissions needed](prerequisites.md#permissions-for-security-exposure-management-tasks) for working with Security Exposure Management.
+- 
+- [Review prerequisites and permissions](prerequisites.md) for working with Security Exposure Management.
 - Note that the value of attack paths increases based on the data used as a source. If no data is available or the data doesn't reflect your organization's environment, attack paths might not appear. Attack paths might not be fully representative if you don't have licenses defined for workloads integrated and represented in the attack path, or if you haven't fully defined critical assets.
 
 ## View attack paths
@@ -29,8 +30,6 @@ Attack paths in [Microsoft Security Exposure Management](microsoft-security-expo
 
 1. To change how attack paths are displayed you can select a heading name to sort by a specific column heading.
 
-> [!NOTE]
-> You can also select the attack path action card from either **Device** > **Settings** > Microsoft Defender XDR -> **Critical asset management**, or from **Initiatives -> Critical asset protection Initiative.**
 
 ## Group by choke points
 
