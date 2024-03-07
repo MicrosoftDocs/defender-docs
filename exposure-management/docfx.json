@@ -43,8 +43,6 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/security-exposure-management/breadcrumb/toc.json",
-      "feedback_system": "Standard",
-      "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/security-exposure-management",
       "permissioned-type": "public",
       "searchScope": ["security-exposure-management"],
       "uhfHeaderId": "MSDocsHeader-M365-IT",
