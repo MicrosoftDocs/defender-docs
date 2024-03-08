@@ -1,2 +1,8 @@
-- name: Index
-  href: index.md
+- name: Microsoft Security Exposure Management
+  href: index.yml
+  expanded: true
+  items: 
+    - name: Overview
+      items:
+      - name: What is Microsoft Security Exposure Management?
+        href: microsoft-security-exposure-management.md
