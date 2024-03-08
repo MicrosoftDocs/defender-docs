@@ -58,6 +58,4 @@ Currently, Security Exposure Management consolidates security posture informatio
 
 In addition to Microsoft services, Security Exposure Management will connect to non-Microsoft data sources over time.
 
-## Next steps
 
-Review [prerequisites and support](prerequisites.md) to get started with Security Exposure Management.
