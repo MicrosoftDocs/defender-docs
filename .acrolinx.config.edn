@@ -1,4 +1,4 @@
-{:changed-files-limit 60
+{:changed-files-limit 30
  :allowed-branchname-matches ["main" "release-.*"]
  :allowed-filename-matches ["defender-xdr/" "exposure-management/"] ;; Can be overridden in repo-specific edn file. This is an allow list that identifies which folders contain the files Acrolinx will check. Separate multiple folders as follows ["folder/" "folder2"]
  
@@ -20,19 +20,6 @@
  
  :guidance-profile "d2b6c2c8-00ee-47f1-8d10-b280cc3434c1" ;; Profile ID for "M365-specific"
 
- :acrolinx-check-settings
- 
- {
-  "languageId" "en"
-  "ruleSetName" "Standard"
-  "requestedFlagTypes" ["CORRECTNESS" "SPELLING" "GRAMMAR" "STYLE"
-                        "TERMINOLOGY_DEPRECATED"
-                        "TERMINOLOGY_VALID"
-                        "VOICE_GUIDANCE"
-                        ]
-  "termSetNames" ["M365" "Products" "Microsoft"] 
- }
- 
  :template-header
 
  "
