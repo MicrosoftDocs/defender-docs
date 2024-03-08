@@ -1,0 +1,31 @@
+### YamlMime:Landing
+
+title: Microsoft Security Exposure Management
+summary: Provides a unified view of security posture. Investigate security insights, identify critical assets, reduce attack surfaces and security risk.
+metadata:
+  title: Microsoft Security Exposure Management documentation
+  description: Get started with Microsoft Security Exposure Management
+  ms.service: azure
+  ms.subservice:
+  ms.topic: landing-page
+  ms.collection: 
+  - m365-security
+  - tier1
+  ms.custom: intro-hub-or-landing
+  author: siosulli
+  ms.author: siosulli
+  ms.date: 03/04/2024
+
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: Overview
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Microsoft Security Exposure Management?
+            url: microsoft-security-exposure-management.md
