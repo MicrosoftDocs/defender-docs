@@ -1,12 +1,15 @@
-{:allowed-branchname-matches ["main" "release-.*"]
- :allowed-filename-matches ["defender-xdr/" "exposure-management/"]
+{:changed-files-limit 60
+ :allowed-branchname-matches ["main" "release-.*"]
+ :allowed-filename-matches ["defender-xdr/" "exposure-management/"] ;; Can be overridden in repo-specific edn file. This is an allow list that identifies which folders contain the files Acrolinx will check. Separate multiple folders as follows ["folder/" "folder2"]
  
-  :targets 
+ :use-gh-statuses true
+ 
+ :targets 
    {
      :counts {
-              ;;:correctness 13
               ;;:total 15 ;; absolute flag count but i don't know the difference between this and issues
               ;;:issues 15 ;; coming from the platform, will need to be tested.
+              ;;:correctness 13 ;; combined spelling and grammar
              }
      :scores {
               ;;:terminology 100
@@ -16,8 +19,9 @@
    }
  
  :guidance-profile "d2b6c2c8-00ee-47f1-8d10-b280cc3434c1" ;; Profile ID for "M365-specific"
- 
+
  :acrolinx-check-settings
+ 
  {
   "languageId" "en"
   "ruleSetName" "Standard"
@@ -32,7 +36,8 @@
  :template-header
 
  "
-## Acrolinx Scorecards
+
+## Acrolinx Scorecards 
  
 **The minimum Acrolinx topic score of 80 is required for all MAGIC content merged to the default branch.**
 
@@ -47,7 +52,7 @@ For more information about the exception criteria and exception process, see [Mi
 Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology:
 
 | Article | Score | Issues | Correctness<br>score | Scorecard | Processed |
-| ------- | ----- | ------ | ---- | ----- | --------- |
+| ------- | ----- | ------ | ------ | --------- | --------- |
 "
 
  :template-change
