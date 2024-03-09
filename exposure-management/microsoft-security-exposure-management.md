@@ -13,6 +13,8 @@ ms.date: 03/04/2024
 
 # What is Microsoft Security Exposure Management?
 
+M365 is a disallowed word.
+
 Microsoft Security Exposure Management is a security solution that provides a unified view of security posture across company assets, and workloads. Security Exposure Management enriches asset information with security context that helps you to manage attack surfaces, identify critical assets, and explore and mitigate exposure risk.
 
 ## Who uses Security Exposure Management?
