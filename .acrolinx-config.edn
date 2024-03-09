@@ -1,5 +1,5 @@
 {:changed-files-limit 30
- :allowed-branchname-matches ["main"]
+ :allowed-branchname-matches ["main" "release-.*"]
  :allowed-filename-matches ["defender-xdr/" "exposure-management/"] ;; Can be overridden in repo-specific edn file. This is an allow list that identifies which folders contain the files Acrolinx will check. Separate multiple folders as follows ["folder/" "folder2"]
  
  :use-gh-statuses true
@@ -7,6 +7,7 @@
  :targets 
    {
      :counts {
+              ;;:correctness 13
               ;;:total 15 ;; absolute flag count but i don't know the difference between this and issues
               ;;:issues 15 ;; coming from the platform, will need to be tested.
               ;;:correctness 13 ;; combined spelling and grammar
@@ -20,6 +21,19 @@
  
  :guidance-profile "d2b6c2c8-00ee-47f1-8d10-b280cc3434c1" ;; Profile ID for "M365-specific"
 
+ :acrolinx-check-settings
+ 
+ {
+  "languageId" "en"
+  "ruleSetName" "Standard"
+  "requestedFlagTypes" ["CORRECTNESS" "SPELLING" "GRAMMAR" "STYLE"
+                        "TERMINOLOGY_DEPRECATED"
+                        "TERMINOLOGY_VALID"
+                        "VOICE_GUIDANCE"
+                        ]
+  "termSetNames" ["M365" "Products" "Microsoft"] 
+ }
+ 
  :template-header
 
  "
@@ -34,9 +48,9 @@ If you need a scoring exception for content in this PR, add the *Sign off* and t
 - Escalate the exception request to the Acrolinx Review Team for review.
 - Approve the exception and work with the GitHub Admin Team to merge the PR to the default branch.
 
-For more information about the exception criteria and exception process, see [Minimum Acrolinx topic scores for publishing](https://review.learn.microsoft.com/en-us/office-authoring-guide/acrolinx-min-score?branch=main).
+For more information about the exception criteria and exception process, see [Minimum Acrolinx topic scores for publishing](https://review.docs.microsoft.com/en-us/office-authoring-guide/acrolinx-min-score?branch=main).
  
-Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology:
+Select the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology:
 
 | Article | Score | Issues | Correctness<br>score | Scorecard | Processed |
 | ------- | ----- | ------ | ------ | --------- | --------- |
@@ -50,6 +64,6 @@ Click the scorecard links for each article to review the Acrolinx feedback on gr
  "
 **More info about Acrolinx**
  
-Use the Acrolinx extension, or sidebar, in Visual Studio Code to check spelling, grammar, style, tone, clarity, and key terminology when you're creating or updating content. For more information, see [Use the Visual Studio Code extension to run Acrolinx locally](https://review.learn.microsoft.com/en-us/office-authoring-guide/acrolinx-vscode?branch=main).
+Use the Acrolinx extension, or sidebar, in Visual Studio Code to check spelling, grammar, style, tone, clarity, and key terminology when you're creating or updating content. For more information, see [Use the Visual Studio Code extension to run Acrolinx locally](https://review.docs.microsoft.com/en-us/office-authoring-guide/acrolinx-vscode?branch=main).
 "
 }
