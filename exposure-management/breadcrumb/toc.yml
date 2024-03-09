@@ -1,3 +1,3 @@
-- name: '<please enter product name here>'
-  tocHref: /
-  topicHref: /
+- name: 'Microsoft Security Exposure Management'
+  tocHref: /exposure-management
+  topicHref: /exposure/management/index
