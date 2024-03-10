@@ -11,7 +11,7 @@ ms.date: 03/06/2024
 
 # Review and classify critical assets
 
-[Microsoft Security Exposure Manager](microsoft-security-exposure-management.md) helps keep your business critical assets secure and available. This article describes how to work with critical assets.
+[Microsoft Security Exposure Managent](microsoft-security-exposure-management.md) helps keep your business critical assets secure and available. This article describes how to work with critical assets.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
