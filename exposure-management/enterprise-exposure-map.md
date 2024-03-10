@@ -41,4 +41,4 @@ The exposure map gives you visibility into the connections of your assets.
 
 ## Next steps
 
-[Analyze and remediate attack paths](attack-paths-analysis-remediation.md).
+[Work with attack paths](work-attack-paths-overview.md)
