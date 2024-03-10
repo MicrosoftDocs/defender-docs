@@ -18,20 +18,19 @@ This article describes the requirements and prerequisites for using Microsoft Se
 ## Licensing requirements
 
 - Security Exposure Management is available with any Microsoft Defender license.
-- The value of Security Exposure Management increases based on the workload data it uses as a source.
-
-    - Data is used to build proactive methods for identifying and remediating threats to your organization. The better data you have, the better your threat management.
+- Data is used as a source to build proactive methods for identifying and remediating threats to your organization. The better data you have, the better your threat management.
+    - The value of Security Exposure Management increases based on the workload data it uses as a source.
     - We recommend at a minimum two Microsoft Security workloads such as a P1/P2/E3 license and a Microsoft Defender for Identity license.  
 
-- For a more optimal experience, we recommend an E5 license and the Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud.
+- For a more optimal experience, we recommend an E5 license and enabling the Defender Cloud Security Posture Management (CSPM) plan in [Microsoft Defender for Cloud](azure/defender-for-cloud/cdefender-for-cloud-introduction).
 - To receive security recommendations from Defender for Cloud, you must have the [Defender CSPM plan](/azure/defender-for-cloud/concept-cloud-security-posture-management) switched on.
 
 ## Permissions
 
 Permissions are based on [Microsoft Entra ID RBAC](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
 
-- For full Security Exposure Management access, user roles needs access to all Defender for Endpoint  [device groups](/microsoft-365/security//defender-endpoint/machine-groups).
-- If users have scope restrictions to access, such as limits to a specific device group or multiple device groups, they can view global exposure insight information, but not specific device information.
+- For full Security Exposure Management access, user roles need access to all Defender for Endpoint  [device groups](/microsoft-365/security//defender-endpoint/machine-groups).
+- Users with scope restrictions to access, such as limits to a specific device group or multiple device groups, can view global exposure insight information, but not specific device information.
 - Users with a defined scope don't have access to attack paths and Security Exposure Management advanced hunting tables.
 
 ### Permissions for Security Exposure Management tasks
@@ -49,7 +48,7 @@ For full access users need one of the following Microsoft Entra ID roles:
 - **Security Operator** (read and limited write permissions)
 - **Security Reader** (read permissions)
 
-Permission levels are as follows:
+Permission levels are summarized in the table.
 
 | Action| Global Admin |Global Reader | Security Admin  | Security Operator | Security Reader |
 |---------|---------|---------|---------|---------|---------|
@@ -92,4 +91,4 @@ You can also engage with the [Microsoft Tech community](https://techcommunity.mi
 <!--images -->
 ## Next steps
 
-[Get started with Microsoft Security Exposure Management](get-started-exposure-management.md)
+[Start using Microsoft Security Exposure Management](get-started-exposure-management.md)

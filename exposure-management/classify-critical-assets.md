@@ -17,7 +17,7 @@ ms.date: 03/06/2024
 
 ## Prerequisites
 
-- Before you start, [learn about critical asset management](critical-asset-management.md) in Security Exposure Management.
+- Before you start, learn about [critical asset management](critical-asset-management.md) in Security Exposure Management.
 - To manage critical assets you need one of these roles: Global Administrator, Security Administrator, Security Operator, Global Reader, Security Reader.
 
 ## Review critical assets
@@ -107,3 +107,7 @@ You can change the criticality levels and turn off all assets. You can also edit
 1. Sort by **Criticality level** to view business critical assets with a "very high" level of criticality.
 
 :::image type="content" source="./media/device-inventory.png" alt-text="screenshot of the Device inventory window" lightbox="./media/device-inventory.png":::
+
+## Next steps
+
+Learn about simulating [attack paths](work-attack-paths-overview.md).

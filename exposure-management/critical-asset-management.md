@@ -11,7 +11,7 @@ ms.date: 03/04/2024
 
 # Overview of critical asset management
 
-In Microsoft Security Exposure Management, you can define and manage resources as critical assets.
+In [Microsoft Security Exposure Management](microsoft-security-exposure-management.md), you can define and manage resources as critical assets.
 
 - Identifying critical assets helps ensure that the most important assets in your organization are protected against risk of data breaches and operational disruptions. This contributes to availability and business continuity.
 - You can also prioritize security investigations, posture recommendations, and remediation steps to focus on critical assets first.
@@ -41,11 +41,11 @@ Critical assets can be identified in different ways:
 
 After business critical assets are defined and identified, asset criticality appears with your asset information. Asset criticality is integrated into other experiences in the Defender portal, such as in advanced hunting, the device inventory, and in attack paths that involve critical assets.
 
-For example, in Device Inventory, a criticality level is shown.
+For example, in the **Device Inventory**, a criticality level is shown.
 
 :::image type="content" source="./media/critical-asset-management/device-inventory-criticality-level.png" alt-text="Screenshot of the Device inventory window. The image includes an emphasis on the criticality level section."  lightbox="media/critical-asset-management/device-inventory-criticality-level.png":::
 
-In another example, on the [attack surface map](enterprise-exposure-map.md), as you look for exposure to threats and identify choke points, the halo color surrounding the asset icon, and the crown indicator, visually indicate the high criticality level.
+In another example, on the [**Attack surface map**](enterprise-exposure-map.md), as you look for exposure to threats and identify choke points, the halo color surrounding the asset icon, and the crown indicator, visually indicate the high criticality level.
 
 :::image type="content" source="./media/critical-asset-management/attack-surface-exposure-map.png" alt-text="Screenshot of an asset viewed in the exposure map in the context of other connections. Two devices on the map show high critical levels.":::
 
@@ -75,4 +75,4 @@ The Critical Asset Protection initiative in the [Microsoft Defender portal](http
 
 ## Next steps
 
-[Classify critical assets](classify-critical-assets.md)
+[Classify critical assets](classify-critical-assets.md).
