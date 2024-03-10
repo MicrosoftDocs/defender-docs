@@ -18,7 +18,7 @@ ms.date: 03/06/2024
 ## Prerequisites
 
 - Learn about [initiatives](exposure-insights-overview.md#initiatives) before you start.
-- [Review permissions needed](prerequisites.md#permissions-for-security-exposure-management-tasks) for working with Security Exposure Management.
+- [Review prerequisites and permissions needed](prerequisites.md) for working with Security Exposure Management.
 
 ## View initiatives page
 
@@ -26,7 +26,7 @@ ms.date: 03/06/2024
 
 1. From the Exposure management section on the navigation bar, select **Exposure insights -> Initiatives** to open the [initiatives](https://security.microsoft.com/exposure-initiatives) page.
 
-:::image type="content" source="./media/initiatives/initiatives-window.png" alt-text="Screenshot of the Initiatives window.":::
+    :::image type="content" source="./media/initiatives/initiatives-window.png" alt-text="Screenshot of the Initiatives window.":::
 
 1. At the top of the initiatives page, review the highlighted key initiatives by scrolling and drilling down per your needs.
 
@@ -92,7 +92,7 @@ The changes in your score provide you with useful feedback about how well you're
 
 1. Select a recommendation, such as a *not compliant* one, and then select **Manage** to remediate the recommendation in the originating workload, such as Microsoft Defender Vulnerability Management.
 
-:::image type="content" source="media/initiatives/initiatives-security-recommendations.png" alt-text="Screenshot of the initiative's security recommendation tab.":::
+    :::image type="content" source="media/initiatives/initiatives-security-recommendations.png" alt-text="Screenshot of the initiative's security recommendation tab.":::
 
 ## Next steps
 

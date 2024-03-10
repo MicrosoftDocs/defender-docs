@@ -15,13 +15,14 @@ This article describes how to work with security recommendations in [Microsoft S
 
 ## Prerequisites
 
-Read about the [recommendations catalog](exposure-insights-overview.md#security-recommendations) beofre you start.
+- Learn about the [recommendations catalog](exposure-insights-overview.md#security-recommendations) before you start.
+- [Review permissions and prerequisites needed](prerequisites.md) for working with Security Exposure Management.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Review recommendations
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management -> Exposure insights -> Recommendations** to open the [recommendations](https://security.microsoft.com/exposure-recommendations) page.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management -> Exposure insights -> Recommendations** to open the [Recommendations](https://security.microsoft.com/exposure-recommendations) page.
  .
 
     :::image type="content" source="./media/recommendations-navigation.png" alt-text="Screenshot of the recommendations window." lightbox="./media/recommendations-navigation.png":::

@@ -17,17 +17,18 @@ Security events in [Microsoft Security Exposure Management](microsoft-security-e
 
 ## Prerequisites
 
-[Learn about](exposure-insights-overview.md#security-events) security events
+[Learn about](exposure-insights-overview.md#security-events) security events.
+- [Review permissions and prerequisites needed](prerequisites.md) for working with Security Exposure Management.
 
 ## Review security events
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management -> Exposure insights -> Events** to open the [events](https://security.microsoft.com/exposure-events) page.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management -> Exposure insights -> Events** to open the [Events](https://security.microsoft.com/exposure-events) page.
 
 1. Select the time range you need in the calendar drop down.
 
 1. To filter by initiative score drop events or metric score drop events, select *filter* or the score drop event quantity.
 
-1. Select a specific event to open it in initiatives or metrics.
+1. Select a specific event to open it in **Initiatives** or **Metrics**.
 
 ## Next steps
 
