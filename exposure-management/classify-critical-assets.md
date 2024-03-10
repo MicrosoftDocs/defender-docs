@@ -50,8 +50,8 @@ Create a custom classification as follows.
 
 1. On the **Create a critical asset classification** page, complete the following information to set your classification criteria:
 
-    - **Name** - New classification name
-    - **Description** - New classification description
+    - **Name** - A new classification name.
+    - **Description** - A new classification description.
     - **Query builder**
         - Use the query builder to define a new classification, for instance, "mark all devices with a certain naming convention as critical."
         - Add one or more boolean filters that are defined per device, identity, or cloud resource.
