@@ -24,7 +24,7 @@ Security events in [Microsoft Security Exposure Management](microsoft-security-e
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management -> Exposure insights -> Events** to open the [Events](https://security.microsoft.com/exposure-events) page.
 
-1. Select the time range you need in the calendar drop down.
+1. Select the time range you need in the calendar drop-down.
 
 1. To filter by initiative score drop events or metric score drop events, select *filter* or the score drop event quantity.
 

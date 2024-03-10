@@ -17,12 +17,12 @@ Security metrics in [Microsoft Security Exposure Management](microsoft-security-
 
 ## Prerequisites
 
-- Learn about [security metrics](exposure-insights-overview.md#metrics)
+- Learn about [security metrics](exposure-insights-overview.md#metrics).
 - [Review permissions and prerequisites needed](prerequisites.md) for working with Security Exposure Management.
 
 ## Review security metrics
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management -> Exposure insights ->Metrics** to open the [Mtrics](https://security.microsoft.com/exposure-metrics) page.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management -> Exposure insights ->Metrics** to open the [Metrics](https://security.microsoft.com/exposure-metrics) page.
 
     :::image type="content" source="./media/metrics.png" alt-text="Screenshot of the metrics page in Microsoft Security Exposure management.":::
 
