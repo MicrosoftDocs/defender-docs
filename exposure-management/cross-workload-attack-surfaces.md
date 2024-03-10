@@ -51,6 +51,6 @@ For example, you can check whether a particular asset has unwanted connections, 
 
 ## Next steps
 
-- Review [enterprise exposure graph schemas and operators](schemas-operators.md)
+- Review [enterprise exposure schemas and operators](schemas-operators.md)
 - [Query the enterprise exposure graph](query-enterprise-exposure-graph.md)
 - Explore the [attack surface map](enterprise-exposure-map.md)

@@ -11,7 +11,7 @@ ms.date: 11/28/2023
 
 # Overview of exposure insights and secure score
 
-Exposure insights in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) continuously aggregate security posture data and insights across workloads into a single pipeline, and provide rich context around the security posture state of your asset inventory.
+Exposure insights in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) continuously aggregate security posture data and insights across workloads into a single pipeline. They provide rich context around the security posture state of your asset inventory.
 
 Leveraging security insights and context helps CISOs, security decision makers, risk owners, and security/partner teams manage exposure risk across the entire organization. It helps them prioritize security efforts and investment across the business.
 
@@ -54,7 +54,7 @@ Initiatives provide a way to track the history of changes greater than 2.5% that
 
 :::image type="content" source="media/exposure-insights-overview/initiatives-history.png" alt-text="Screenshot of the Initiative history tab showing the graph and dates of changes."  lightbox="media/exposure-insights-overview/initiatives-history.png":::
 
-Selecting on the metric that changed provides more details about the change such as the new weight of a property change or the number of affected assets before or after the change.
+Selecting the metric that changed provides more details about the change. For instance, details like the new weight of a property change or the number of affected assets before or after the change.
 
 :::image type="content" source="media/exposure-insights-overview/initiatives-history-details.png" alt-text="Screenshot of the metric change side panel in the Initiatives history tab."  lightbox="media/exposure-insights-overview/initiatives-history-details.png":::
 
@@ -106,7 +106,7 @@ Those properties display when viewing all metrics in the Exposure insights secti
 
 Viewing all metrics from the metrics page adds:
 
-- **14 day trend** shows the metric value changes over the past 14 days as a percentage and graph. 
+- **14 day trend** shows the metric value changes over the past 14 days as a percentage and graph.
 - **State** such as:
   - **Needs attention** or requires mitigation.
   - **Risk accepted** by an admin to indicate that the risk was mitigated in a nonmeasurable way that doesn't affect the initiative score.
@@ -151,7 +151,7 @@ Security Exposure Management integrates recommendations from Microsoft Defender 
 
 ### Working with recommendations
 
-You can review individual recommendations, their state, impact, and source, details about exposed entities, and related initiatives and metrics. Each recommendation provides remediation steps to address detected issues.
+You can review individual recommendations, their state, impact, source, details about exposed entities, and related initiatives and metrics. Each recommendation provides remediation steps to address detected issues.
 
 Every action taken on a security recommendation, helps reduce exposure and directly influences related security metrics and initiatives.
 
@@ -162,7 +162,7 @@ Every action taken on a security recommendation, helps reduce exposure and direc
 Each security recommendation is categorized by compliance state for the entire organization.
 
 - *Compliant* indicates that the recommendation was implemented successfully.
-- *Mitigated by org* displays when you've taken steps to mitigate recommendations elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
+- *Mitigated by org* displays when steps to mitigate recommendations were taken elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
 - *Not available* means there isn't enough information to determine the compliance status.
 
 <!--Security exposure management recommendations relate to the following workloads:
@@ -203,7 +203,7 @@ Events measure the score drop or worsening in the metric status.
 
 - *Metric score drop events* notify customers when there's a new exposure measured by the security metrics. They're evaluated based on the effect on the score and its weight. If there's a decrease of at least 2% since yesterday, meaning exposure grew by 2%, the change is considered a score drop event.
 - *Initiative score drop events* notify customers when security initiatives decrease. We assess *Initiative score drop events* based on how it affects the score. If there's a decrease of at least 2% since yesterday, the change is classified as a score drop event.
-Security events present and track, initiative and metric score drop incidents to determine how they affect the organization's security posture.
+Security events present and track, both initiative and metric score drop incidents to determine how they affect the organization's security posture.
 
 New events appear at the top of the table and can include a new initiative event.
 
