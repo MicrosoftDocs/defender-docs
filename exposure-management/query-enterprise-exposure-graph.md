@@ -20,7 +20,7 @@ This article provides some example, tips, and hinting for constructing queries i
 ## Building advanced hunting queries
 
 - Review [best practices for building advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-best-practices)
-- Review [best practices for Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/)
+- Get started with [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/)
 
 ## Using the make-graph operator
 
@@ -277,4 +277,4 @@ ExposureGraphEdges
 
 ## Next steps
 
-[Explore with the attack surface map](enterprise-exposure-map.md)
+[Explore with the attack surface map](enterprise-exposure-map.md).
