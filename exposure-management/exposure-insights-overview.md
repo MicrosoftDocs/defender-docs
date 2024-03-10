@@ -13,11 +13,7 @@ ms.date: 11/28/2023
 
 Exposure insights in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) continuously aggregate security posture data and insights across workloads, into a single pipeline. Exposure insights provide rich context around the security posture state of your asset inventory.
 
-<<<<<<< HEAD
-Using security insights and context helps CISOs, security decision makers, risk owners, and security/partner teams manage exposure risk across the entire organization. It helps them prioritize security efforts and investment across the business.
-=======
 Chief Information Security Officers (CISOs), decision makers, risk owners, and security teams can use security insights and context to manage exposure risk across the entire organization, and to prioritize security efforts and investment.
->>>>>>> origin/release-raynew-msempublic
 
 Exposure insights include security events, recommendations, metrics, and initiatives. These components build on each other to provide granular context around security posture state. Insights enable you to:
 
@@ -124,7 +120,7 @@ In some cases, metrics display grayed out because the underlying data needed for
 
 - The required workload isn't onboarded. For example, E5 customers without the Microsoft Defender for Identity workload turned on, has all, or most, Identity-related metrics grayed out.
 - The required workload is onboarded, but to a limited extent. For instance:
-  - A customer with a E3/P1 license has Defender for Endpoint workload enabled but without all the features of an E5/P2 license.
+  - A customer with an E3/P1 license has Defender for Endpoint workload enabled but without all the features of an E5/P2 license.
   - Microsoft Defenders for Endpoint customers see the "% of iOS devices not covered by security agents" metric grayed out if there are no onboarded or discovered iOS devices.
 
 - The respective control in Secure score that the metric is based on is invalid for any reason, such as completed or risk accepted.
