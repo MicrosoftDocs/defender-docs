@@ -203,7 +203,7 @@ Events measure the score drop or worsening in the metric status.
 
 - *Metric score drop events* notify customers when there's a new exposure measured by the security metrics. They're evaluated based on the effect on the score and its weight. If there's a decrease of at least 2% since yesterday, meaning exposure grew by 2%, the change is considered a score drop event.
 - *Initiative score drop events* notify customers when security initiatives decrease. We assess *Initiative score drop events* based on how it affects the score. If there's a decrease of at least 2% since yesterday, the change is classified as a score drop event.
-Security events present and track, initiative and metric score drop incidents to determine how they affect the organization's security posture.
+Security events present and track, both initiative and metric score drop incidents to determine how they affect the organization's security posture.
 
 New events appear at the top of the table and can include a new initiative event.
 
