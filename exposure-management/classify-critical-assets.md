@@ -24,7 +24,7 @@ ms.date: 03/06/2024
 
 Review critical assets as follows.
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com) select **Settings > Microsoft XDR > Rules > Critical asset management**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Settings > Microsoft XDR > Rules > Critical asset management**.
 1. On the **Critical asset management** page, review predefined and custom critical asset classifications, including the number of assets in the classification, whether assets are on or off, and criticality levels.  
 
 :::image type="content" source="./media/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window." lightbox="./media/critical-asset-management-window.png":::
@@ -53,12 +53,12 @@ Create a custom classification as follows.
     - **Name** - New classification name
     - **Description** - New classification description
     - **Query builder**
-        - Use the query builder to define a new classification, for instance, "mark all devices with a certain naming convention as critical.".
+        - Use the query builder to define a new classification, for instance, "mark all devices with a certain naming convention as critical."
         - Add one or more boolean filters that are defined per device, identity, or cloud resource.
 
-:::image type="content" source="./media/create-critical-asset-classification.png" alt-text="Screenshot of the create critical asset classification window." lightbox="./media/create-critical-asset-classification.png":::
+:::image type="content" source="./media/create-critical-asset-classification.png" alt-text="Screenshot of the page where you create critical asset classifications." lightbox="./media/create-critical-asset-classification.png":::
 
-1. After setting the criteria select **Next**.
+1. After setting the criteria, select **Next**.
 1. On the following pages, preview the affected assets, and assign the criticality level.
 
 ## Set critical asset levels

@@ -11,7 +11,7 @@ ms.date: 03/06/2024
 
 # Explore with the attack surface map
 
-Use the exposure (attack surface) map in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md), together with the enterprise exposure graph schema, to visualize exposure data.
+To visualize exposure data, use the exposure (attack surface) map in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md), together with the enterprise exposure graph schema.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
@@ -32,7 +32,7 @@ The exposure map gives you visibility into the connections of your assets.
     - **Icon indicators** for node type and edge type, visual indicators like the high criticality crown or a vulnerability bug provides visual input to where critical organizational data is at risk.
     - **Expandable groups** provides a way to expand similar assets when you want to view them more in depth. Expanding the view helps you to discover choke points and specific assets with high vulnerability or criticality, when needed, but otherwise leave them collapsed for a more organized screen.
     - **Hovering** over nodes and edges provides additional information.
-    - **Explore assets and their edges** by selecting the plus sign or **Explorable connected assets** from the contextual menu.
+    - **Explore assets and their edges**. To explore assets and edge, select the plus sign. Or select **Explorable connected assets** from the contextual menu.
     - **Asset details** are easily viewable by selecting the asset icon.
     - **Focus on asset** provides a way to refocus the graph visualization on the specific node you wish to explore, similar to the Graph view when selecting an individual attack path in [Attack paths](review-attack-paths.md).
     - **Search** allows you to discover items by node type, and by selected **all results**, search the particular type for specific results. You can also filter your search by devices, identity, or cloud assets from the initial screen.
@@ -41,4 +41,4 @@ The exposure map gives you visibility into the connections of your assets.
 
 ## Next steps
 
-[Analyze and remediate attack paths](attack-paths-analysis-remediation.md)
+[Analyze and remediate attack paths](attack-paths-analysis-remediation.md).

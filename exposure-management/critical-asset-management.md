@@ -13,7 +13,7 @@ ms.date: 03/04/2024
 
 In [Microsoft Security Exposure Management](microsoft-security-exposure-management.md), you can define and manage resources as critical assets.
 
-- Identifying critical assets helps ensure that the most important assets in your organization are protected against risk of data breaches and operational disruptions. This contributes to availability and business continuity.
+- Identifying critical assets helps ensure that the most important assets in your organization are protected against risk of data breaches and operational disruptions. Critical asset identification contributes to availability and business continuity.
 - You can also prioritize security investigations, posture recommendations, and remediation steps to focus on critical assets first.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
@@ -43,7 +43,7 @@ After business critical assets are defined and identified, asset criticality app
 
 For example, in the **Device Inventory**, a criticality level is shown.
 
-:::image type="content" source="./media/critical-asset-management/device-inventory-criticality-level.png" alt-text="Screenshot of the Device inventory window. The image includes an emphasis on the criticality level section."  lightbox="media/critical-asset-management/device-inventory-criticality-level.png":::
+:::image type="content" source="./media/critical-asset-management/device-inventory-criticality-level.png" alt-text="Screenshot of the Device inventory window. The image includes an emphasis on the criticality level section." lightbox="media/critical-asset-management/device-inventory-criticality-level.png":::
 
 In another example, on the [**Attack surface map**](enterprise-exposure-map.md), as you look for exposure to threats and identify choke points, the halo color surrounding the asset icon, and the crown indicator, visually indicate the high criticality level.
 
