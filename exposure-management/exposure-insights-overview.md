@@ -52,11 +52,11 @@ You can track the history of changes greater than 2.5% that affect initiative sc
 - *Metric removed* - The metric is no longer relevant for that specific initiative. For instance, if a better suggestion is introduced or it becomes irrelevant.
 - *Metric depreciated* - The metric is removed globally.
 
-:::image type="content" source="media/exposure-insights-overview/initiatives-history.png" alt-text="Screenshot of the Initiative history tab showing the graph and dates of changes."  lightbox="media/exposure-insights-overview/initiatives-history.png":::
+:::image type="content" source="media/exposure-insights-overview/initiatives-history.png" alt-text="Screenshot of the Initiative history tab showing the graph and dates of changes." lightbox="media/exposure-insights-overview/initiatives-history.png":::
 
 Selecting the metric that changed provides more details about the change. For instance, it might display the new weight of a property change, or the number of affected assets before or after the change.
 
-:::image type="content" source="media/exposure-insights-overview/initiatives-history-details.png" alt-text="Screenshot of the metric change side panel in the Initiatives history tab."  lightbox="media/exposure-insights-overview/initiatives-history-details.png":::
+:::image type="content" source="media/exposure-insights-overview/initiatives-history-details.png" alt-text="Screenshot of the metric change side panel in the Initiatives history tab." lightbox="media/exposure-insights-overview/initiatives-history-details.png":::
 
 You can't control the metric or score changes in advance.
 

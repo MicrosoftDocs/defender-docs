@@ -21,7 +21,7 @@ This article describes the support, and requirements for a successful deployment
 - The value of Security Exposure Management increases based on the workload data it uses as a source. The data is used to build proactive methods for identifying and remediating threats to your organization. The better data you have, the better your threat management. We recommend at a minimum two Microsoft Security workloads such as:
 
     - A P1/P2/E3 license and Microsoft Defender for Identity license.
-    - Microsoft Defender for Identity and the the Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud.
+    - Microsoft Defender for Identity and the Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for Cloud.
 - To receive recommendations from Defender for Cloud, you must have the Defender for CSPM plan switched on.
 
 - For a more optimal experience, we recommend an E5 license and the Defender CSPM plan.
