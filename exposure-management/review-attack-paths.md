@@ -30,14 +30,13 @@ Attack paths in [Microsoft Security Exposure Management](microsoft-security-expo
 
 1. To change how attack paths are displayed you can select a heading name to sort by a specific column heading.
 
-
 ## Group by choke points
 
 To group by choke point:
 
 1. Select **Attack surface -> Attack path**.
 
-1. Select **Group** to group by **Name**, **Entry point type**, **Target type**, **Target criticality**, or **Status.**
+1. Select **Group** to group by **Name**, **Entry point type**, **Target type**, **Target criticality**, **Status**, or **choke point**.
 
 ## Examine an attack path
 
@@ -61,7 +60,7 @@ To see a broader picture of an attack path asset in the exposure map:
 
 1. Select **Attack surface -> Attack path -> Graph -> View in map**.
 
-    You can also search for and select an asset in the attack path from **Map** and select it. Or, select **View in map** from an asset in the attack path from the **Device inventory**.
+    You can also search for and select an asset in the attack path from **Map** and select it. Or, select **View in map** from an asset from the **Device inventory**.
 
 1. Explore connections as needed.
 

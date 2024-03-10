@@ -145,7 +145,7 @@ Recommendations provide practical steps to help you improve and remediate securi
 
 In Security Exposure Management, the recommendations catalog serves as a centralized repository for security recommendations.
 
-### Recommendations integration
+### Recommendations sources
 
 Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [Secure score](/microsoft-365/security/defender/microsoft-secure-score), and from other Microsoft workloads. It also provides recommendations related to non-Microsoft workloads.
 
@@ -159,7 +159,7 @@ Every action taken on a security recommendation, helps reduce exposure and direc
 
 ### Compliance
 
-Each security recommendation is categorized for the entire organization.
+Each security recommendation is categorized by compliance state for the entire organization.
 
 - *Compliant* indicates that the recommendation was implemented successfully.
 - *Mitigated by org* displays when you've taken steps to mitigate recommendations elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
@@ -197,7 +197,7 @@ Each security recommendation is categorized for the entire organization.
 
 ## Security events
 
-Security events consolidate information about posture management changes that are detected. In response to changes, you can adjust accordingly to maintain a robust security posture. 
+Security events consolidate information about posture management changes that are detected. In response to changes, you can adjust accordingly to maintain a robust security posture.
 
 Events measure the score drop or worsening in the metric status.
 
