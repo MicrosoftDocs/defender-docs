@@ -76,7 +76,7 @@ For example:
 Each metric shows:
 
 - The percentage of assets affected, the relative importance of the metric, and the affect that the metric has on initiatives in which it's included.
-- It also shows the weight, or importance, of the metric and its effect on the initiative score as a number with one the lowest and 10 the highest.
+- It also shows the weight, or importance, of the metric and its effect on the initiative score as a number. One is the lowest and 10 the highest.
 - Metric weight can be customized to have greater or lesser effect, based on your organizational business priorities.
 - Editing metric weight value affects the metric and all related initiatives.
 
@@ -100,7 +100,7 @@ Metrics include several properties that help contextualize them and make them ac
 |**Affected items** | The number of items that comply with the metric’s logic. In most cases, these items would be assets that are exposed or that create a risk factor. In other cases, affected would be the number of missing Microsoft secure score points to effectively implement recommended controls. |
 |**Total** | The number of assets that is scoped for the metric. For example, for a given metric it might be all endpoints. For another, it could be all Windows endpoints. |
 |**Weight** | The importance of the metric and its effect over the initiative score. One is the lowest while 10 is the highest. Weight can be customized to have greater or lesser effect based on your organization's unique business priorities and considerations. Editing your metric weight value affects the metric and all related initiatives. |
-| **Score impact** | The impact completing the metric has on the initiative score. Meaning if a given metric is completed, the score impact is the addition seen to the initiative score. |
+| **Score impact** | The effect completing the metric has on the initiative score. Meaning if a given metric is completed, the score impact is the addition seen to the initiative score. |
 
 Those properties display when viewing all metrics in the Exposure insights section. V
 
@@ -112,7 +112,7 @@ Viewing all metrics from the metrics page adds:
   - **Risk accepted** by an admin to indicate that the risk was mitigated in a nonmeasurable way that doesn't affect the initiative score.
   - **Target met** or the exposure was mitigated.
 - **Total** number of items.
-- **Last Updated**
+- **Last Updated** shows the last date the metric was updated.
 
 ### Unavailable metrics
 
@@ -135,7 +135,7 @@ Note that:
 - Asset details are calculated on demand.
 - Cloud-related metrics are only available if Microsoft Defender for Cloud is available in the subscription, and the Defender Cloud Security Posture Management (CSPM) plan is enabled.
 - In some cases, metrics are more specific than the scope of the related recommendations. In this case, the asset detail shown doesn't align with the asset details of the related recommendations.
-- If you offboard a workload, you won't be able to refresh the metric status and the asset details for the workload related metrics.
+- If you offboard a workload, you can't refresh the metric status and the asset details for the workload related metrics.
 
 ## Security recommendations
 
@@ -145,7 +145,7 @@ Recommendations provide practical steps to help you improve and remediate securi
 
 In Security Exposure Management, the recommendations catalog serves as a centralized repository for security recommendations.
 
-### Recommendations integration
+### Recommendations sources
 
 Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [Secure score](/microsoft-365/security/defender/microsoft-secure-score), and from other Microsoft workloads. It also provides recommendations related to non-Microsoft workloads.
 
@@ -159,7 +159,7 @@ Every action taken on a security recommendation, helps reduce exposure and direc
 
 ### Compliance
 
-Each security recommendation is categorized for the entire organization.
+Each security recommendation is categorized by compliance state for the entire organization.
 
 - *Compliant* indicates that the recommendation was implemented successfully.
 - *Mitigated by org* displays when you've taken steps to mitigate recommendations elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
@@ -197,7 +197,7 @@ Each security recommendation is categorized for the entire organization.
 
 ## Security events
 
-Security events consolidate information about posture management changes that are detected. In response to changes, you can adjust accordingly to maintain a robust security posture. 
+Security events consolidate information about posture management changes that are detected. In response to changes, you can adjust accordingly to maintain a robust security posture.
 
 Events measure the score drop or worsening in the metric status.
 

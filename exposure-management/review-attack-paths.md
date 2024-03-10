@@ -18,9 +18,10 @@ Attack paths in [Microsoft Security Exposure Management](microsoft-security-expo
 ## Prerequisites
 
 - [Read about attack paths](work-attack-paths-overview.md) before you start.
-- 
 - [Review prerequisites and permissions](prerequisites.md) for working with Security Exposure Management.
-- Note that the value of attack paths increases based on the data used as a source. If no data is available or the data doesn't reflect your organization's environment, attack paths might not appear. Attack paths might not be fully representative if you don't have licenses defined for workloads integrated and represented in the attack path, or if you haven't fully defined critical assets.
+- The value of attack paths increases based on the data used as a source. If no data is available or the data doesn't reflect your organization's environment, attack paths might not appear. Attack paths might not be fully representative:
+    - If you don't have licenses defined for workloads integrated and represented in the attack path.
+    - If you don't fully define critical assets.
 
 ## View attack paths
 
@@ -28,8 +29,7 @@ Attack paths in [Microsoft Security Exposure Management](microsoft-security-expo
 
     :::image type="content" source="./media/review-attack-paths/attack-paths.png" alt-text="Screenshot of the Security Exposure Management attack path window" lightbox="media/review-attack-paths/attack-paths.png":::
 
-1. To change how attack paths are displayed you can select a heading name to sort by a specific column heading.
-
+1. To change how attack paths are displayed, you can select a heading name to sort by a specific column heading.
 
 ## Group by choke points
 
@@ -37,7 +37,7 @@ To group by choke point:
 
 1. Select **Attack surface -> Attack path**.
 
-1. Select **Group** to group by **Name**, **Entry point type**, **Target type**, **Target criticality**, or **Status.**
+1. Select **Group** to group by **Name**, **Entry point type**, **Target type**, **Target criticality**, **Status**, or **choke point**.
 
 ## Examine an attack path
 
@@ -61,7 +61,7 @@ To see a broader picture of an attack path asset in the exposure map:
 
 1. Select **Attack surface -> Attack path -> Graph -> View in map**.
 
-    You can also search for and select an asset in the attack path from **Map** and select it. Or, select **View in map** from an asset in the attack path from the **Device inventory**.
+    You can also search for and select an asset in the attack path from **Map** and select it. Or, select **View in map** from an asset from the **Device inventory**.
 
 1. Explore connections as needed.
 
