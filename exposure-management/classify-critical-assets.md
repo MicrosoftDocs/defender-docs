@@ -11,14 +11,14 @@ ms.date: 03/06/2024
 
 # Review and classify critical assets
 
-[Microsoft Security Exposure Manager](microsoft-security-exposure-management.md) helps keep your business critical assets secure and available. This article describes how to work with critical assets.
+[Microsoft Security Exposure Management](microsoft-security-exposure-management.md) helps keep your business critical assets secure and available. This article describes how to work with critical assets.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Prerequisites
 
 - Before you start, learn about [critical asset management](critical-asset-management.md) in Security Exposure Management.
-- To manage critical assets you need one of these roles: Global Administrator, Security Administrator, Security Operator, Global Reader, Security Reader.
+- To manage critical assets, you need one of these roles: Global Administrator, Security Administrator, Security Operator, Global Reader, Security Reader.
 
 ## Review critical assets
 
@@ -50,8 +50,8 @@ Create a custom classification as follows.
 
 1. On the **Create a critical asset classification** page, complete the following information to set your classification criteria:
 
-    - **Name** - New classification name
-    - **Description** - New classification description
+    - **Name** - A new classification name.
+    - **Description** - A new classification description.
     - **Query builder**
         - Use the query builder to define a new classification, for instance, "mark all devices with a certain naming convention as critical."
         - Add one or more boolean filters that are defined per device, identity, or cloud resource.

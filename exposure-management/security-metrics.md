@@ -51,4 +51,4 @@ You can customize metric values for your business needed.
 - [Priority exposure items](exposure-insights-overview.md)
 - [Security events](security-events.md)
 - [Security recommendations](security-recommendations.md)
-- [Identify and investigate attack paths](attack-paths-analysis-remediation.md)
+- [Review attack paths](work-attack-paths-overview.md)

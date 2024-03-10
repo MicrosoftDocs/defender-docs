@@ -102,7 +102,7 @@ Metrics include several properties that help contextualize them and make them ac
 |**Weight** | The importance of the metric and its effect over the initiative score. One is the lowest while 10 is the highest. Weight can be customized to have greater or lesser effect based on your organization's unique business priorities and considerations. Editing your metric weight value affects the metric and all related initiatives. |
 | **Score impact** | The effect that completing the metric has on the initiative score. Meaning if a given metric is completed, the score impact is the addition seen to the initiative score. |
 
-Those properties display when viewing all metrics in the Exposure insights section. 
+Those properties display when viewing all metrics in the Exposure insights section.
 
 Viewing all metrics from the metrics page adds:
 
@@ -120,17 +120,16 @@ In some cases, metrics display grayed out because the underlying data needed for
 
 - The required workload isn't onboarded. For example, E5 customers without the Microsoft Defender for Identity workload turned on, has all, or most, Identity-related metrics grayed out.
 - The required workload is onboarded, but to a limited extent. For instance:
+  - A customer with an E3/P1 license has Defender for Endpoint workload enabled but without all the features of an E5/P2 license.
+  - Microsoft Defenders for Endpoint customers see the "% of iOS devices not covered by security agents" metric grayed out if there are no onboarded or discovered iOS devices.
 
-    - A customer with a E3/P1 license has Defender for Endpoint workload enabled but without all the features of an E5/P2 license.
-    - Microsoft Defenders for Endpoint customers see the "% of iOS devices not covered by security agents" metric grayed out if there are no onboarded or discovered iOS devices.
-    
 - The respective control in Secure score that the metric is based on is invalid for any reason, such as completed or risk accepted.
 
 Grayed out metrics aren't considered for score calculation.
 
 ### Issues to note
 
-Note that:
+Some metric specific issues are important to note:
 
 - Some instances of affected assets information (largely information originating in Secure score) don't appear on the **Affected Items** tab in an individual metric.
 - Some critical asset information for assets in the **Affected Items** tab doesn't show.
@@ -167,36 +166,6 @@ Security Exposure Management categorizes security by compliance state for the en
 - *Mitigated by org* displays when steps to mitigate recommendations were taken elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
 - *Not available* means there isn't enough information to determine the compliance status.
 
-<!--Security exposure management recommendations relate to the following workloads:
-
-- App governance
-- Atlassian (preview)
-- Microsoft Entra ID 
-- Citrix ShareFile
-- Defender for Cloud
-- Defender for Endpoint
-- Defender for Identity
-- Defender for Office
-- DocuSign
-- Dropbox (preview)
-- Exchange Online
-- GitHub
-- Google Workspace
-- Intune
-- Microsoft Defender for Cloud Apps
-- Microsoft Purview Information Protection
-- Microsoft Teams
-- NetDocuments (preview)
-- Okta
-- Salesforce
-- ServiceNow
-- SharePoint Online
-- Slack (preview)
-- Workplace (preview)
-- Zendesk (preview)
-- Zoom
--->
-
 ## Security events
 
 Security events consolidate information about posture management changes that are detected. In response to changes, you can adjust accordingly to maintain a robust security posture.
@@ -211,7 +180,7 @@ New events appear at the top of the table and can include a new initiative event
 
 ## Secure score
 
-[Microsoft secure score](/microsoft-365/security/defender/microsoft-secure-score) helps organizations to plan and improve overall security posture using Secure score as a tracking metric.
+[Microsoft Secure score](/microsoft-365/security/defender/microsoft-secure-score) helps organizations to plan and improve overall security posture using Secure score as a tracking metric.
 
 Security Exposure Management uses Secure score as one of its sources for initiative scores.
 
@@ -222,6 +191,6 @@ Security Exposure Management uses Secure score as one of its sources for initiat
 ## Next steps
 
 - [Review security initiatives](initiatives.md)
-- [Investigate initiative metrics](security-metrics.md)
+- [Investigate security metrics](security-metrics.md)
 - [Review security recommendations](security-recommendations.md)
 - [Explore security events](security-events.md)
