@@ -13,7 +13,7 @@ ms.date: 11/28/2023
 
 Exposure insights in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) continuously aggregate security posture data and insights across workloads into a single pipeline. They provide rich context around the security posture state of your asset inventory.
 
-Leveraging security insights and context helps CISOs, security decision makers, risk owners, and security/partner teams manage exposure risk across the entire organization. It helps them prioritize security efforts and investment across the business.
+Using security insights and context helps CISOs, security decision makers, risk owners, and security/partner teams manage exposure risk across the entire organization. It helps them prioritize security efforts and investment across the business.
 
 Exposure insights include security events, recommendations, metrics, and initiatives. These components build on each other to provide granular context around security posture state. Insights enable you to:
 
@@ -52,11 +52,11 @@ Initiatives provide a way to track the history of changes greater than 2.5% that
 - *Metric removed* - The metric is no longer relevant for that specific initiative. For instance, if a better suggestion is introduced or it becomes irrelevant.
 - *Metric depreciated* - That metric is removed globally.
 
-:::image type="content" source="media/exposure-insights-overview/initiatives-history.png" alt-text="Screenshot of the Initiative history tab showing the graph and dates of changes."  lightbox="media/exposure-insights-overview/initiatives-history.png":::
+:::image type="content" source="media/exposure-insights-overview/initiatives-history.png" alt-text="Screenshot of the Initiative history tab showing the graph and dates of changes."  Lightbox="media/exposure-insights-overview/initiatives-history.png":::
 
 Selecting the metric that changed provides more details about the change. For instance, details like the new weight of a property change or the number of affected assets before or after the change.
 
-:::image type="content" source="media/exposure-insights-overview/initiatives-history-details.png" alt-text="Screenshot of the metric change side panel in the Initiatives history tab."  lightbox="media/exposure-insights-overview/initiatives-history-details.png":::
+:::image type="content" source="media/exposure-insights-overview/initiatives-history-details.png" alt-text="Screenshot of the metric change side panel in the Initiatives history tab."  Lightbox="media/exposure-insights-overview/initiatives-history-details.png":::
 
 Customers can't control the metric or score changes in advance.
 
@@ -128,7 +128,7 @@ Grayed out metrics aren't considered for score calculation.
 
 ### Issues to note
 
-Note that:
+Some metric specific issues are important to note:
 
 - Some instances of affected assets information (largely information originating in Secure score) don't appear on the **Affected Items** tab in an individual metric.
 - Some critical asset information for assets in the **Affected Items** tab doesn't show.
@@ -220,6 +220,6 @@ Security Exposure Management uses Secure score as one of its sources for initiat
 ## Next steps
 
 - [Review security initiatives](initiatives.md)
-- [Investigate initiative metrics](security-metrics.md)
+- [Investigate security metrics](security-metrics.md)
 - [Review security recommendations](security-recommendations.md)
 - [Explore security events](security-events.md)
