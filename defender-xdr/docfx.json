@@ -43,10 +43,10 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/defender-xdr/breadcrumb/toc.json",
-      "feedback_system": "Standard",
-      "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/MicrosoftThreatProtection",
       "permissioned-type": "public",
       "searchScope": ["Defender XDR"],
+      "feedback_system": "Standard",
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/MicrosoftThreatProtection",
       "uhfHeaderId": "MSDocsHeader-M365-IT"
     },
     "template": [],

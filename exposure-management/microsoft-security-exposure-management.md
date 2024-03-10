@@ -40,11 +40,11 @@ With Security Exposure Management you can:
 
 - **Manage exposure**: Security Exposure Management provides a number of tools to manage security exposure, and mitigate exposure risk.
   - Exposure insights aggregate security posture data, and provide rich context around the security posture state of your asset inventory. You leverage these insights to prioritize security efforts and investments. Insights include security events, recommendations, metrics, and security initiatives.
-    - As you manage exposure risk, attack paths show you how an attacker might breach your attack surface
-      - Security Exposure Management generates attack paths based on data collected across assets and workloads. It simulates attack scenarios, and identifies weaknesses that an attacker could exploit.
-      - You can use the enterprise exposure graph and attack surface map to visualize and understand potential threats.
-      - You can also focus on choke points through which many attack paths flow.
-      - Actionable recommendations help you to mitigate identified attack paths.
+  - As you manage exposure risk, attack paths show you how an attacker might breach your attack surface.
+    - Security Exposure Management generates attack paths based on data collected across assets and workloads. It simulates attack scenarios, and identifies weaknesses that an attacker could exploit.
+    - You can use the enterprise exposure graph and attack surface map to visualize and understand potential threats.
+    - You can also focus on choke points through which many attack paths flow.
+    - Actionable recommendations help you to mitigate identified attack paths.
 
 ## What's integrated into Security Exposure Management?
 
