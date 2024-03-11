@@ -52,7 +52,6 @@ ms.date: 03/06/2024
 :::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot Ransomware initiative":::
 
 ## Set target score
-<!-- distinction between score and current value percentage-->
 1. To customize your initiative's target score, select **Initiatives.**
 
 1. Select the individual initiative and then **Set target score** to open the set initiative target score window.
@@ -77,7 +76,6 @@ The changes in your score provide you with useful feedback about how well you're
     1. Choose the time point and select to examine the percent effect on the initiative score and the reason for the change.
     1. select a metric to explore the change's effect further.
 
-<!-- note that history may need to go outand replaced with this: The **14 day change trend graph** and **14 day drift change** track the changes in your initiative score, visually and as a percentage. -->
 :::image type="content" source="media/initiatives/history-details.png" alt-text="Screenshot of the history metric change details side panel.":::
 
 ## Review metrics and recommendations
@@ -100,4 +98,3 @@ The changes in your score provide you with useful feedback about how well you're
 - [Review security metrics](security-metrics.md)
 - [Explore security events](security-events.md)
 - [Review security recommendations](security-recommendations.md)
-

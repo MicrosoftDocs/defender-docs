@@ -55,7 +55,6 @@ In the following query the `has` operator checks for the `data` string, and `set
 
 Using both operators is important as the `has()` operator returns true even for a category `prefix_data`.
 
-<!--confirm Properties is NodeProperties-->
 `Categories has('data') and set_has_element(Categories, 'data')`
 
 Learn more about [understanding string terms](/azure/data-explorer/kusto/query/datatypes-string-operators#understanding-string-terms).
@@ -126,10 +125,9 @@ To query the exposure graph:
 ## Graph-oriented query examples
 
 Use these examples to help you write better security exposure queries. The examples are graph-oriented queries that search for patterns to expose relationships between entities that can uncover risk. They show you how to correlate context with incident/alert signals. T
-<!-- is there a reason to seperate these out from the previous section? -->
 
 ### List all node labels with an edge to a specific node label
-<!--confirm the description-->
+
 The following query results in a list of all incoming node labels with a connector to the virtual machine node label. It builds a graph structure by mapping the `SourceNodeId` column data in the `ExposureGraphEdges` table to the `TargetNodeId` column in the `ExposureGraphNodes` table with the `make-graph` operator to build a graph structure.
 
 It then uses the `graph-match` operator to make a graph pattern where the target node `TargetNode` and `NodeLabel` match `microsoft.compute/virtualmachines`. The `project` operator is used to keep only the `IncomingNodeLabels`, and lists the results by `IncomingNodeLabels`.
@@ -168,7 +166,7 @@ The following query allows you to discover virtual machines exposed to the inter
 
 - It uses the `ExposureGraphNodes` schema table.
 - When both `NodeProperties` `exposedToInternet` and `vulnerableToRCE` are true, it checks that the category  (`Categories`) is virtual machines (`virtual_machine`).
-<!--intros for each of these and better headings-->
+
 ```kusto
 ExposureGraphNodes
 | where isnotnull(NodeProperties.rawData.exposedToInternet)

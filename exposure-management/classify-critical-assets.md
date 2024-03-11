@@ -40,8 +40,6 @@ Request a new predefined classification as follows.
 
 1. Fill in what classification you'd like to see and then select **Submit request**.
 
-<!--1. From there you can choose to change criticality levels,  view the general critical asset information including the  review general information such , choose to review classifications, create new classifications, or update the criticality levels for the existing classifications in your organization.-->
-
 ## Create a custom classification
 
 Create a custom classification as follows.

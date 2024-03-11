@@ -19,8 +19,8 @@ This article describes the requirements and prerequisites for using Microsoft Se
 
 - Security Exposure Management is available with any Microsoft Defender license.
 - Data is used as a source to build proactive methods for identifying and remediating threats to your organization. The better data you have, the better your threat management.
-    - The value of Security Exposure Management increases based on the workload data it uses as a source.
-    - We recommend at a minimum two Microsoft Security workloads such as a P1/P2/E3 license and a Microsoft Defender for Identity license.  
+  - The value of Security Exposure Management increases based on the workload data it uses as a source.
+  - We recommend at a minimum two Microsoft Security workloads such as a P1/P2/E3 license and a Microsoft Defender for Identity license.  
 
 - For a more optimal experience, we recommend an E5 license and enabling the Defender Cloud Security Posture Management (CSPM) plan in [Microsoft Defender for Cloud](/azure/defender-for-cloud/cdefender-for-cloud-introduction).
 - To receive security recommendations from Defender for Cloud, you must have the [Defender CSPM plan](/azure/defender-for-cloud/concept-cloud-security-posture-management) switched on.
@@ -34,11 +34,6 @@ Permissions are based on [Microsoft Entra ID RBAC](/entra/identity/role-based-ac
 - Users with a defined scope don't have access to attack paths and Security Exposure Management advanced hunting tables.
 
 ### Permissions for Security Exposure Management tasks
-
-<!--To assign Microsoft Entra ID roles, see [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal). For more information about required permissions, see Role groups.-->
-<!-- Is this correct?-->
-<!-- -- get url>
-Users might be assigned one of the following global roles in Microsoft Entra ID to access the full experience<!--is this the right word to use?-->
 
 For full access users need one of the following Microsoft Entra ID roles:
 
@@ -69,15 +64,11 @@ Permission levels are summarized in the table.
 | **Set critical asset rule** | ✔       |  -       |   -      | - | - |
 |  **Create criticality rule**  | ✔       |    -    |   ✔      | - | - |
 |  **Turn criticality rule on/off**  | ✔       |    -    |   ✔      | ✔ | - |
-|  **Run a query on exposure graph data**  |        |        |         |  | |
-
-<!--| **View security initiatives such as External Attack Surface Protection** | ✔  |-|✔ |- |- |-->
-<!--|  **Resolve Attack Path** tbd- unclear if this is recommendations |        |        |         |  |-->
+|  **Run a query on exposure graph data**  |    ✔    |   ✔     |  ✔       | ✔ | ✔ |
 
 ## Browser requirements
 
 You can access Security Exposure Management in the Microsoft Defender portal using Microsoft Edge, Internet Explorer 11, or any HTML 5 compliant web browser.
-<!--###  US government customers-->
 
 ## Getting support
 
@@ -86,10 +77,7 @@ To get support, select the Help question mark icon in the Microsoft Security too
 :::image type="content" source="./media/microsoft-defender-portal-header.png" alt-text="Screenshot of the Microsoft Defender security portal Help button in the portal header bar.":::
 
 You can also engage with the [Microsoft Tech community](https://techcommunity.microsoft.com/).  
-<!--an exact url once it exists-->
 
-<!--images -->
 ## Next steps
 
-[Start using Microsoft Security Exposure Management](get-started-exposure-management.md)
-
+[Start using Microsoft Security Exposure Management](get-started-exposure-management.md).

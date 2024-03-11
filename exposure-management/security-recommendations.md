@@ -24,7 +24,6 @@ This article describes how to work with security recommendations in [Microsoft S
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Exposure management > Exposure insights > Recommendations** to open the [Recommendations](https://security.microsoft.com/exposure-recommendations) page.
 
-
     :::image type="content" source="./media/recommendations-navigation.png" alt-text="Screenshot of the recommendations window." lightbox="./media/recommendations-navigation.png":::
 
 1. Sort the recommendations by any of the headings or filter them based on your task needs. Sorting includes all of the headers:

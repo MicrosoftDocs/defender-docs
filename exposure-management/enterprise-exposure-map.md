@@ -40,4 +40,4 @@ The exposure map gives you visibility into asset connections.
 
 ## Next steps
 
-[Work with attack paths](work-attack-paths-overview.md)
+[Work with attack paths](work-attack-paths-overview.md).
