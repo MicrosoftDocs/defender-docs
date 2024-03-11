@@ -15,14 +15,14 @@ Use the enterprise exposure graph in [Microsoft Security Exposure Management](mi
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-This article provides some example, tips, and hinting for constructing queries in the enterprise exposure graph.
+This article provides some examples, tips and hints for constructing queries in the enterprise exposure graph.
 
-## Building advanced hunting queries
+## Build advanced hunting queries
 
 - Review [best practices for building advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-best-practices)
 - Get started with [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/)
 
-## Using the make-graph operator
+## Use the make-graph operator
 
 Kusto's `make-graph` operator loads nodes and edges data into memory.
 
@@ -41,7 +41,7 @@ Edges
 ..
 ```
 
-## Using dynamic columns and smart-indexing
+## Use dynamic columns and smart-indexing
 
 `NodeProperties` and `Categories` are dynamic columns.
 
