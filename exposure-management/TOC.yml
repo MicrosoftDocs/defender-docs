@@ -1,0 +1,73 @@
+- name: Microsoft Security Exposure Management
+  href: index.yml
+  expanded: true
+  items: 
+    - name: Overview
+      items:
+      - name: What is Microsoft Security Exposure Management?
+        href: microsoft-security-exposure-management.md
+      - name: Compare secure score and Security Exposure Management
+        href: compare-secure-score-security-exposure-management.md      
+    - name: Get started
+      items:
+      - name: Prerequisites and support
+        href: prerequisites.md
+      - name: Start using Microsoft Security Exposure Management
+        href: get-started-exposure-management.md
+    - name: Explore cross-workload attack surfaces
+      items:
+      - name: Overview
+        href: cross-workload-attack-surfaces.md
+      - name: Schemas and operators overview
+        href: schemas-operators.md
+      - name: Query the enterprise exposure graph
+        href: query-enterprise-exposure-graph.md
+      - name: Explore with the attack surface map
+        href: enterprise-exposure-map.md    
+    - name: Identify and manage critical assets
+      items:
+      - name: Overview
+        href: critical-asset-management.md
+      - name: Review and classify critical assets
+        href: classify-critical-assets.md  
+    - name: Work with attack paths
+      items:      
+        - name: Overview
+          href: work-attack-paths-overview.md
+        - name: Review attack paths
+          href: review-attack-paths.md    
+    - name: Manage exposure with security insights
+      items:
+        - name: Overview
+          href: exposure-insights-overview.md
+        - name: Review security initiatives
+          href: initiatives.md
+        - name: Investigate initiative metrics
+          href: security-metrics.md
+        - name: Review security recommendations
+          href: security-recommendations.md
+        - name: Explore security events
+          href: security-events.md 
+    - name: Microsoft Defender XDR docs
+      items: 
+       - name: Microsoft Defender XDR
+         href: /microsoft-365/security/defender
+       - name: Defender for Office 365
+         href: /microsoft-365/security/defender/office-365-security
+       - name: Defender for Endpoint
+         href: /microsoft-365/security/defender-endpoint
+       - name: Defender for Identity
+         href: /defender-for-identity
+       - name: Defender for Cloud Apps
+         href: /cloud-app-security
+       - name: Defender for Business
+         href: /microsoft-365/security/defender/defender-business
+       - name: Defender Vulnerability Management
+         href: /microsoft-365/security/defender/defender-vulnerability-management
+    - name: Related products
+      items:
+      - name: Defender for Cloud
+        href: /microsoft-365/security/defender/defender-vulnerability-management
+      - name: Entra  
+        href: /microsoft-365/security/defender/defender-vulnerability-management   
+
