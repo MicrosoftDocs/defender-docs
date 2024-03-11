@@ -27,7 +27,7 @@ Use the dashboard as a starting point for a snapshot of organizational posture a
 
 ## Review assets
 
-Get a quick view of your organization's exposed assets. 
+Get a quick view of your organization's exposed assets.
 
 You can see onboarded devices, discovered devices not yet onboarded, internet facing devices, and cloud resources.
 
@@ -35,7 +35,7 @@ Knowing what is exposed helps you to address asset exposure risks.
 
 ## Review key initiatives
 
-**Key initiatives** show initiatives that are marked as favorites in the [initiatives](initiatives.md) page, and any newly added recommended initiatives. 
+**Key initiatives** show initiatives that are marked as favorites in the [initiatives](initiatives.md) page, and any newly added recommended initiatives.
 
 Select an individual key initiative to drill down. You can also navigate to all initiatives.
 
@@ -61,7 +61,7 @@ You can select and search on a specific asset type, and open it in the map.
 
 ## Review and manage critical assets
 
-The **Critical asset summary** shows you how many critical assets you have and how many have attack paths that put them at risk. 
+The **Critical asset summary** shows you how many critical assets you have and how many have attack paths that put them at risk.
 
 From here you can view and manage critical assets and devices.
 

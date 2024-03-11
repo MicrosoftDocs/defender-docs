@@ -26,7 +26,7 @@ ms.date: 03/06/2024
 
 1. From the Exposure management section on the navigation bar, select **Exposure insights -> Initiatives** to open the [initiatives](https://security.microsoft.com/exposure-initiatives) page.
 
-    :::image type="content" source="./media/initiatives/initiatives-window.png" alt-text="Screenshot of the Initiatives window.":::
+    :::image type="content" source="./media/initiatives/initiatives-window.png" alt-text="Screenshot of the Security Exposure Management Initiatives window.":::
 
 1. At the top of the initiatives page, review the highlighted key initiatives by scrolling and drilling down per your needs.
 
@@ -49,7 +49,7 @@ ms.date: 03/06/2024
     - metric trends graph and drift change
     - History of score changes
     - Related threats
-:::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot Ransomware initiative":::
+:::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot of the Ransomware initiative.":::
 
 ## Set target score
 1. To customize your initiative's target score, select **Initiatives.**
