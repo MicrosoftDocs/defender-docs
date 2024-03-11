@@ -154,5 +154,5 @@ The `graph-match` operator searches for all occurrences of a graph pattern in an
 
 ## Next steps
 
-[Query the enterprise exposure graph](query-enterprise-exposure-graph.md)
+[Query the enterprise exposure graph](query-enterprise-exposure-graph.md).
 
