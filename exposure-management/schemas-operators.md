@@ -24,7 +24,7 @@ The exposure graph relies on the following tables:
 
 ### ExposureGraphNodes
 
-*ExposureGraphNodes* contains organizational entities and their properties. These include entities like devices, identities, user groups, and cloud assets such as virtual machines (VMs), storage, and containers. Each node corresponds to an individual entity and encapsulates information about its characteristics, attributes, and security related insights within the organizational structure. <!--*ExposureGraphNodes* helps you discover relationships between entities and assets in the graph.-->
+*ExposureGraphNodes* contains organizational entities and their properties. These include entities like devices, identities, user groups, and cloud assets such as virtual machines (VMs), storage, and containers. Each node corresponds to an individual entity and encapsulates information about its characteristics, attributes, and security related insights within the organizational structure.
 
 The following are *ExposureGraphNodes* column names, types, and descriptions:
 
@@ -71,7 +71,7 @@ Many hunting scenarios require exploration of entity relationships and attack pa
 
 The following are *ExposureGraphEdges* column names, labels, and descriptions:
 
-- `EdgeId` (`string`) - The unique identifier for the relationship/edge. <!--Example: "650d6aa0-10a5-587e-52f4-280bfc014a08"-->
+- `EdgeId` (`string`) - The unique identifier for the relationship/edge.
 - `EdgeLabel` (`string`) - The edge label. Examples: "affecting," "routes traffic to," "is running," and "contains." You can view a list of edge labels by querying the graph. For more information, see [List all edge labels in your tenant](query-enterprise-exposure-graph.md#list-all-edge-labels-in-your-tenant).
 - `SourceNodeId` (`string`) - Node ID of the edge's source. Example: "12346aa0-10a5-587e-52f4-280bfc014a08"
 - `SourceNodeName` (`string`) - The source node display name. Example: "mdvmaas-win-123"
@@ -82,27 +82,6 @@ The following are *ExposureGraphEdges* column names, labels, and descriptions:
 - `TargetNodeLabel` (`string`) - The target node label. Example: "compute.instances"
 - `TargetNodeCategories` (`Dynamic` (json)) - The categories list of the target node.
 - `EdgeProperties` (`Dynamic` (json)) - Optional data relevant for the relationship between the nodes. Example: For the `EdgeLabel` "routes traffic to" with `EdgeProperties` of `networkReachability`, provide information about the port and protocol ranges that are used to transfer traffic from point A to B.
-<!--
-```json
-{
-  "type": "InternetReachability",
-  "nsgRules": {
-    "nic1": [
-      {
-        "description": "nsgEtag1",
-        "access": "Allow",
-        "priority": 0
-      },
-      {
-        "description": "nsgEtag2",
-        "access": "Allow",
-        "priority": 0
-      }
-    ]
-  }
-}
-```
--->
 
 ```json
 {   
@@ -155,4 +134,3 @@ The `graph-match` operator searches for all occurrences of a graph pattern in an
 ## Next steps
 
 [Query the enterprise exposure graph](query-enterprise-exposure-graph.md).
-

@@ -18,6 +18,7 @@ Security events in [Microsoft Security Exposure Management](microsoft-security-e
 ## Prerequisites
 
 [Learn about](exposure-insights-overview.md#security-events) security events.
+
 - [Review permissions and prerequisites needed](prerequisites.md) for working with Security Exposure Management.
 
 ## Review security events
