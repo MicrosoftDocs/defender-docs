@@ -6,18 +6,20 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 03/04/2024
+ms.date: 03/11/2024
 ---
 
 # Overview of attack surface management
 
 [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) helps you to visualize, analyze, and remediate cross-workload attack surfaces.
 
+Security Exposure Management is currently in public preview.
+
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Enterprise exposure graph
 
-The enterprise exposure graph is the central tool for exploring and managing attack surfaces. The graph gathers information about assets, users, workloads, and more from across your enterprise to provide a unified, comprehensive view of your organizational security posture.
+The enterprise exposure graph is the central tool for exploring and managing attack surfaces. The graph gathers information about assets, users, workloads, and more, from across your enterprise to provide a unified, comprehensive view of your organizational security posture.
 
 ### Graph schemas
 

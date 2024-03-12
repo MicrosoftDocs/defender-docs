@@ -50,7 +50,7 @@ landingContent:
             url: critical-asset-management.md
       - linkListType: how-to-guide
         links:
-          - text: Manage and classify critical assets
+          - text: Review and classify critical assets
             url: classify-critical-assets.md 
 
   # Card
@@ -78,7 +78,7 @@ landingContent:
         links:
         - text: Review security initiatives
           url: initiatives.md
-        - text: Investigate initiative metrics
+        - text: Investigate security metrics
           url: security-metrics.md
         - text: Review security recommendations
           url: security-recommendations.md
@@ -92,7 +92,7 @@ landingContent:
           url: work-attack-paths-overview.md
       - linkListType: how-to-guide
         links:
-        - text: Investigate attack paths
+        - text: Review potential attack paths
           url: review-attack-paths.md 
           
           

@@ -6,12 +6,20 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 11/28/2023
+ms.date: 03/11/2024
 ---
 
 # Overview of exposure insights and secure score
 
-Exposure insights in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) continuously aggregate security posture data and insights across workloads, into a single pipeline. Exposure insights provide rich context around the security posture state of your asset inventory.
+Exposure insights in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) continuously aggregate security posture data and insights across workloads, into a single pipeline. 
+
+Security Exposure Management is currently in public preview.
+
+[!INCLUDE [prerelease](../includes//prerelease.md)]
+
+## Exposure insights
+
+Exposure insights provide rich context around the security posture state of your asset inventory.
 
 Chief Information Security Officers (CISOs), decision makers, risk owners, and security teams can use security insights and context to manage exposure risk across the entire organization, and to prioritize security efforts and investment.
 
@@ -22,8 +30,6 @@ Exposure insights include security events, recommendations, metrics, and initiat
 - Prioritize areas of security focus based on initiatives and metrics.
 - Follow actionable remediation steps to improve security posture and reduce risk.
 - Track improvements in security initiatives in order to track security risk reduction.
-
-[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Initiatives
 
