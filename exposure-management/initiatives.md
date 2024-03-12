@@ -48,7 +48,7 @@ Security Exposure Management is currently in public preview.
     - Description
     - Associated security recommendations
     - All metrics related to the initiative
-    - Metric trends graph and drift change
+    - A metric trends graph and drift change
     - History of score changes
     - Related threats
 :::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot of the Ransomware initiative.":::
