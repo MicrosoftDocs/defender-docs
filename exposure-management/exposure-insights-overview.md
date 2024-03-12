@@ -99,7 +99,7 @@ Metrics include several properties that help contextualize them and make them ac
 |Property  |Description  |
 |---------|---------|
 |**Current value** | The percentage of affected assets out of the total assets. Zero percent is best since there's no exposure, while 100% is worst. |
-|**Affected items** | The number of items that comply with the metric’s logic. In most cases, these items would be assets that are exposed or that create a risk factor. In other cases, affected would be the number of missing Microsoft secure score points to effectively implement recommended controls. |
+|**Affected items** | The number of items that comply with the metric’s logic. In most cases, these items would be assets that are exposed or that create a risk factor. In other cases, affected items would be the number of missing Microsoft secure score points to effectively implement recommended controls. |
 |**Total** | The number of assets that is scoped for the metric. For example, for a given metric it might be all endpoints. For another, it could be all Windows endpoints. |
 |**Weight** | The importance of the metric and its effect over the initiative score. One is the lowest while 10 is the highest. Weight can be customized to have greater or lesser effect based on your organization's unique business priorities and considerations. Editing your metric weight value affects the metric and all related initiatives. |
 | **Score impact** | The effect that completing the metric has on the initiative score. Meaning if a given metric is completed, the score impact is the addition seen to the initiative score. |
@@ -118,14 +118,7 @@ Viewing all metrics from the metrics page adds:
 
 ### Unavailable metrics
 
-In some cases, metrics display grayed out because the underlying data needed for this metric doesn't exist. Several situations cause metrics to be grayed out:
-
-- The required workload isn't onboarded. For example, E5 customers without the Microsoft Defender for Identity workload turned on, has all, or most, Identity-related metrics grayed out.
-- The required workload is onboarded, but to a limited extent. For instance:
-  - A customer with an E3/P1 license has Defender for Endpoint workload enabled but without all the features of an E5/P2 license.
-  - Microsoft Defenders for Endpoint customers see the "% of iOS devices not covered by security agents" metric grayed out if there are no onboarded or discovered iOS devices.
-
-- The respective control in Secure score that the metric is based on is invalid for any reason, such as completed or risk accepted.
+In some cases, metrics display grayed out because the underlying data needed for this metric doesn't exist. For instance, when the required workload isn't onboarded or when a Secure score metric was set in Secure score to completed or risk accepted so that Security Exposure Management can't access the metric data.
 
 Grayed out metrics aren't considered for score calculation.
 
