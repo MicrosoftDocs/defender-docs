@@ -6,12 +6,14 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 03/06/2023
+ms.date: 03/11/2023
 ---
 
 # Review attack paths
 
 Attack paths in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) help you to proactively identify and visualize potential routes that attackers can exploit using vulnerabilities, gaps, and misconfigurations. Simulated attack paths allow you to proactively investigate and remediate potential threats.
+
+Security Exposure Management is currently in public preview.
 
 [!INCLUDE [prerelease](../includes/prerelease.md)]
 

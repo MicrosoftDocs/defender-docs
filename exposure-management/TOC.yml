@@ -1,4 +1,4 @@
-- name: Microsoft Security Exposure Management
+- name: Microsoft Security Exposure Management (public preview)
   href: index.yml
   expanded: true
   items: 
@@ -53,7 +53,7 @@
        - name: Microsoft Defender XDR
          href: /microsoft-365/security/defender
        - name: Defender for Office 365
-         href: /microsoft-365/security/defender/office-365-security
+         href: /microsoft-365/security/office-365-security
        - name: Defender for Endpoint
          href: /microsoft-365/security/defender-endpoint
        - name: Defender for Identity
@@ -61,13 +61,13 @@
        - name: Defender for Cloud Apps
          href: /cloud-app-security
        - name: Defender for Business
-         href: /microsoft-365/security/defender/defender-business
+         href: /microsoft-365/security/defender-business
        - name: Defender Vulnerability Management
-         href: /microsoft-365/security/defender/defender-vulnerability-management
+         href: /microsoft-365/security/defender-vulnerability-management
     - name: Related products
       items:
       - name: Defender for Cloud
-        href: /microsoft-365/security/defender/defender-vulnerability-management
+        href: /azure/defender-for-cloud
       - name: Entra  
-        href: /microsoft-365/security/defender/defender-vulnerability-management   
+        href: /entra/  
 

@@ -6,12 +6,14 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 11/28/2023
+ms.date: 03/11/2024
 ---
 
 # Schemas and operators overview
 
 [Enterprise exposure graph schemas](cross-workload-attack-surfaces.md#enterprise-exposure-graph-schemas) in Microsoft Security Exposure Management provide attack surface information to help you understand how potential threats might reach and compromise valuable assets. This article summarizes the exposure graph schema tables and operators.
+
+Security Exposure Management is currently in public preview.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 

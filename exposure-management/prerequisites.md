@@ -6,24 +6,15 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 03/06/2024
+ms.date: 03/11/2024
 ---
 
 # Prerequisites and support
 
 This article describes the requirements and prerequisites for using Microsoft Security Exposure Management.
 
-[!INCLUDE [prerelease](../includes//prerelease.md)]
+Security Exposure Management is currently in public preview.
 
-## Licensing requirements
-
-- Security Exposure Management is available with any Microsoft Defender license.
-- Data is used as a source to build proactive methods for identifying and remediating threats to your organization. The better data you have, the better your threat management.
-  - The value of Security Exposure Management increases based on the workload data it uses as a source.
-  - We recommend at a minimum two Microsoft Security workloads such as a P1/P2/E3 license and a Microsoft Defender for Identity license.  
-
-- For a more optimal experience, we recommend an E5 license and enabling the Defender Cloud Security Posture Management (CSPM) plan in [Microsoft Defender for Cloud](/azure/defender-for-cloud/cdefender-for-cloud-introduction).
-- To receive security recommendations from Defender for Cloud, you must have the [Defender CSPM plan](/azure/defender-for-cloud/concept-cloud-security-posture-management) switched on.
 
 ## Permissions
 

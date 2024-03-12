@@ -6,19 +6,25 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 03/06/2024
+ms.date: 03/11/2024
 ---
 
 # Review security recommendations
 
 This article describes how to work with security recommendations in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md).
 
+Security Exposure Management is currently in public preview.
+
+[!INCLUDE [prerelease](../includes//prerelease.md)]
+
+
+
 ## Prerequisites
 
 - Learn about the [recommendations catalog](exposure-insights-overview.md#security-recommendations) before you start.
 - [Review permissions and prerequisites needed](prerequisites.md) for working with Security Exposure Management.
 
-[!INCLUDE [prerelease](../includes//prerelease.md)]
+
 
 ## Review recommendations
 
