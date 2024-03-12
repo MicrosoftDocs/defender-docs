@@ -11,7 +11,7 @@ ms.date: 03/11/2024
 
 # Prerequisites and support
 
-This article describes the requirements and prerequisites for using Microsoft Security Exposure Management public preview.
+This article describes the requirements and prerequisites for using Microsoft Security Exposure Management.
 
 Security Exposure Management is currently in public preview.
 
