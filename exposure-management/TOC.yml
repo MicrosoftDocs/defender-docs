@@ -67,7 +67,6 @@
     - name: Related products
       items:
       - name: Defender for Cloud
-        href: /microsoft-365/security/defender/defender-vulnerability-management
+        href: /azure/defender-for-cloud/
       - name: Entra  
-        href: /microsoft-365/security/defender/defender-vulnerability-management   
-
+        href: /entra/
