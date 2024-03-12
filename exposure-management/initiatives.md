@@ -33,9 +33,8 @@ Security Exposure Management is currently in public preview.
 1. At the top of the initiatives page, review the highlighted key initiatives by scrolling and drilling down per your needs.
 
 1. To set an initiative to appear in the top initiative bar in the dashboard or on the initiatives page, select the **star** icon in the initiatives window or **Mark as favorite** in the individual initiative.
-1. Select how to view the initiatives catalog. Choose between **All initiatives**, **Domain initiatives**, and **Threat article initiatives**.
 
-1. Once you select how to view initiatives you can review the following information:
+1. You can review the following information for all initiatives:
     - **14 day change trend graph** highlighting how the initiative score changes over the past 14 days
     - **Initiative name**
     - **Favorite** indicator (toggle on/off) to display in the key initiatives banner
