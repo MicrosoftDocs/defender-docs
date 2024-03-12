@@ -29,7 +29,7 @@ Review critical assets as follows.
 1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Settings > Microsoft XDR > Rules > Critical asset management**.
 1. On the **Critical asset management** page, review predefined and custom critical asset classifications, including the number of assets in the classification, whether assets are on or off, and criticality levels.  
 
-:::image type="content" source="./media/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window." lightbox="./media/critical-asset-management-window.png":::
+:::image type="content" source="./media/classify-critical-assets/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window." lightbox="./media/classify-critical-assets/critical-asset-management-window.png":::
 
 > [!NOTE]
 > You can also see critical assets in **Assets > Devices** > **Classify critical asset**. In addition, you can view the **Critical Asset Protection** initiative in **Exposure insights -> Initiatives**.
@@ -56,7 +56,7 @@ Create a custom classification as follows.
         - Use the query builder to define a new classification, for instance, "mark all devices with a certain naming convention as critical."
         - Add one or more boolean filters that are defined per device, identity, or cloud resource.
 
-:::image type="content" source="./media/create-critical-asset-classification.png" alt-text="Screenshot of the page where you create critical asset classifications." lightbox="./media/create-critical-asset-classification.png":::
+:::image type="content" source="./media/classify-critical-assets/create-critical-asset-classification.png" alt-text="Screenshot of the page where you create critical asset classifications." lightbox="./media/classify-critical-assets/create-critical-asset-classification.png":::
 
 1. After setting the criteria, select **Next**.
 1. On the following pages, preview the affected assets, and assign the criticality level.
@@ -71,7 +71,7 @@ Set levels as follows.
 
 1. Select **Save**.
 
-:::image type="content" source="./media/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature.":::
+:::image type="content" source="./media/classify-critical-assets/edit-criticality-levels.png" alt-text="Screenshot of the Critical asset management criticality editing feature.":::
 
 > [!NOTE]
 > You can set critical levels manually in the device inventory. We recommend creating criticality rules that allow broad application of critical levels across assets.
@@ -97,7 +97,7 @@ Edit custom classifications as follows.
 > [!NOTE]
 > **Assets to review** only displays when there are assets to review.
 
-:::image type="content" source="./media/assets-to-review.png" alt-text="Screenshot of the Assets to review screen.":::
+:::image type="content" source="./media/classify-critical-assets/assets-to-review.png" alt-text="Screenshot of the Assets to review screen.":::
 
 You can change the criticality levels and turn off all assets. You can also edit and delete custom critical assets.
 
@@ -106,7 +106,7 @@ You can change the criticality levels and turn off all assets. You can also edit
 1. Select **Devices** in the **Device Inventory**.
 1. Sort by **Criticality level** to view business critical assets with a "very high" level of criticality.
 
-:::image type="content" source="./media/device-inventory.png" alt-text="screenshot of the Device inventory window" lightbox="./media/device-inventory.png":::
+:::image type="content" source="./media/classify-critical-assets/device-inventory.png" alt-text="screenshot of the Device inventory window" lightbox="./media/classify-critical-assets/device-inventory.png":::
 
 ## Next steps
 
