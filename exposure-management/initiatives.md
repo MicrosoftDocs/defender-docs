@@ -48,7 +48,7 @@ Security Exposure Management is currently in public preview.
     - Description
     - Associated security recommendations
     - All metrics related to the initiative
-    - metric trends graph and drift change
+    - A metric trends graph and drift change
     - History of score changes
     - Related threats
 :::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot of the Ransomware initiative.":::
@@ -76,7 +76,7 @@ The changes in your score provide you with useful feedback about how well you're
 1. Browse to the time table to choose a specific time point to examine.
     1. If needed, filter for specific time points.
     1. Choose the time point and select to examine the percent effect on the initiative score and the reason for the change.
-    1. select a metric to explore the change's effect further.
+    1. Select a metric to explore the change's effect further.
 
 :::image type="content" source="media/initiatives/history-details.png" alt-text="Screenshot of the history metric change details side panel.":::
 

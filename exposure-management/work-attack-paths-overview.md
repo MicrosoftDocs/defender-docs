@@ -33,7 +33,7 @@ Here's how Security Exposure Management helps you to identify and resolve attack
   - Security Exposure Management provides a way to group choke point nodes through which multiple attack paths flow, or where multiple attack paths intersect on the way to a critical asset.
   - Choke point visibility enables you to focus mitigation efforts strategically, addressing multiple attack paths by securing these critical points in the network.
   - Ensuring that choke points are secure protects your assets from threats.
-:::image type="content" source="./media/review-attack-paths/attack-paths-graph.png" alt-text="Screenshot of the graph visualization of attack path":::
+:::image type="content" source="./media/review-attack-paths/attack-paths-graph.png" alt-text="Screenshot of the graph visualization of attack path"  lightbox="media/review-attack-paths/attack-paths-graph.png":::
 
 ## Next steps
 
