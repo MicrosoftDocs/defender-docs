@@ -66,10 +66,6 @@ Selecting the metric that changed provides more details about the change. For in
 
 You can't control the metric or score changes in advance.
 
-<!--## Programs
-
-For each initiative, Programs shows the user what workloads or product types reflected in the initiative. For instance, Cloud Security or External Attack Surface. For initiatives that are connected to specific workloads, ensure that the product is onboarded. The initiative alerts you to the data required by the initiative. Some initiatives, like the Microsoft Defender External Attack Surface Management (EASM), require their own onboarding process. -->
-
 ## Metrics
 
 Metrics group together recommendations for similar assets, and measure security exposure around those assets, from very high exposure to no exposure identified.

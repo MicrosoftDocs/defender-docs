@@ -36,10 +36,11 @@ The exposure map gives you visibility into asset connections.
     - **Explore assets and their edges**. To explore assets and edge, select the plus sign. Or select the option to explore connected assets from the contextual menu.
     - **Asset details**: Select the asset icon to view details.
     - **Focus on asset**: Provides a way to refocus the graph visualization on the specific node you want to explore, similar to the Graph view when selecting an individual [attack path](review-attack-paths.md).
-    - **Search**: Helps you to discover items by node type and by selected **all results**. Search the particular type for specific results. You can also filter your search by devices, identity, or cloud assets from the initial screen.
+    - **Search**: Helps you to discover items by node type. By selecting **all results**, search the particular type for specific results. You can also filter your search by devices, identity, or cloud assets from the initial screen.
+
 
     :::image type="content" source="./media/enterprise-exposure-map/attack-surface-exposure-map.png" alt-text="Screenshot of the attack surface exposure map." lightbox="./media/enterprise-exposure-map/attack-surface-exposure-map.png":::
 
 ## Next steps
 
-[Work with attack paths](work-attack-paths-overview.md)
+[Work with attack paths](work-attack-paths-overview.md).

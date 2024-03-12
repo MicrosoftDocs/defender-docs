@@ -15,8 +15,6 @@ This article describes the requirements and prerequisites for using Microsoft Se
 
 Security Exposure Management is currently in public preview.
 
-[!INCLUDE [prerelease](../includes//prerelease.md)]
-
 
 ## Permissions
 
@@ -57,15 +55,11 @@ Permission levels are summarized in the table.
 | **Set critical asset rule** | ✔       |  -       |   -      | - | - |
 |  **Create criticality rule**  | ✔       |    -    |   ✔      | - | - |
 |  **Turn criticality rule on/off**  | ✔       |    -    |   ✔      | ✔ | - |
-|  **Run a query on exposure graph data**  |        |        |         |  | |
-
-<!--| **View security initiatives such as External Attack Surface Protection** | ✔  |-|✔ |- |- |-->
-<!--|  **Resolve Attack Path** tbd- unclear if this is recommendations |        |        |         |  |-->
+|  **Run a query on exposure graph data**  |    ✔    |   ✔     |  ✔       | ✔ | ✔ |
 
 ## Browser requirements
 
 You can access Security Exposure Management in the Microsoft Defender portal using Microsoft Edge, Internet Explorer 11, or any HTML 5 compliant web browser.
-
 
 ## Getting support
 
@@ -77,5 +71,4 @@ You can also engage with the [Microsoft Tech community](https://techcommunity.mi
 
 ## Next steps
 
-[Start using Microsoft Security Exposure Management](get-started-exposure-management.md)
-
+[Start using Microsoft Security Exposure Management](get-started-exposure-management.md).

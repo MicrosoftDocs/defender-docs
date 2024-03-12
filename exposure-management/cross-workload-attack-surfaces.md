@@ -27,7 +27,7 @@ Graph schemas provide a framework for organizing and analyzing interconnected as
 
 - Schemas are made up of tables that provide either event information or information about devices, alerts, identities, and other entity types.
 - You query against schemas for proactive threat hunting across data and events. You can build queries in [advanced hunting](/microsoft-365/security/defender/advanced-hunting-modes).
-- To understand schemas and build effective queries, you can use a built-in schema reference that provides table information. 
+- To understand schemas and build effective queries, you can use a built-in schema reference that provides table information.
 
 ### Enterprise exposure graph schemas
 
@@ -54,6 +54,6 @@ For example, you can check whether a particular asset has unwanted connections, 
 
 ## Next steps
 
-- Review [enterprise exposure schemas and operators](schemas-operators.md)
-- [Query the enterprise exposure graph](query-enterprise-exposure-graph.md)
-- Explore the [attack surface map](enterprise-exposure-map.md)
+- Review [enterprise exposure schemas and operators](schemas-operators.md).
+- [Query the enterprise exposure graph](query-enterprise-exposure-graph.md).
+- Explore the [attack surface map](enterprise-exposure-map.md).
