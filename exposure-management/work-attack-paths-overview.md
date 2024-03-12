@@ -6,7 +6,7 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 03/06/2024
+ms.date: 03/11/2024
 ---
 
 # Overview of attack paths
@@ -16,9 +16,10 @@ Microsoft Security Exposure Management helps you to manage your company attack s
 > [!NOTE]
 > The value of attack paths increases based on the data used as a source. If no data is available or the data doesn't reflect your organization's environment, attack paths might not appear. Attack paths might not be fully representative if you don't have licenses defined for workloads integrated and represented in the attack path or if you haven't fully defined critical assets.
 
+Security Exposure Management is currently in public preview.
+
 [!INCLUDE [prerelease](../includes/prerelease.md)]
-<!--:::image type="content" source="media/work-attack-paths-overview/attack-paths.png" alt-text="Screenshot of the attack path window":::
--->
+
 ## Identifying and resolving attack paths
 
 Here's how Security Exposure Management helps you to identify and resolve attack paths.

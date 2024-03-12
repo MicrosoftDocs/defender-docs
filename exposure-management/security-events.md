@@ -6,12 +6,14 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 03/06/2024
+ms.date: 03/11/2024
 ---
 
 # Explore security events
 
 Security events in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md)  track initiative and metric score drop incidents in order to determine how they affect organizational security posture.
+
+Security Exposure Management is currently in public preview.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 

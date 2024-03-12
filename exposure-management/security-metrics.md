@@ -6,12 +6,14 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 03/06/2024
+ms.date: 03/11/2024
 ---
 
 # Investigate security metrics
 
 Security metrics in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) measure security exposure within a specific scope of assets.
+
+Security Exposure Management is currently in public preview.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 

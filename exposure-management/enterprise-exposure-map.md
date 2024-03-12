@@ -6,12 +6,14 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 03/06/2024
+ms.date: 03/11/2024
 ---
 
 # Explore with the attack surface map
 
 To visualize exposure data, use the attack surface map in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md), together with the enterprise exposure graph schema.
+
+Security Exposure Management is currently in public preview.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
@@ -28,13 +30,13 @@ The exposure map gives you visibility into asset connections.
 
 1. In **Attack surface map**, explore assets and connections.
 1. Use the map features to explore.
-    - **Indicators**: Icon indicators show node type and edge type. Visual indicators show indicators such as the high criticality crown or a vulnerability bug that provide visual input to where critical organizational data is at risk.
-    - **Expandable groups**: Provides a way to expand similar assets when you want to view them more in depth. Expanding the view helps you to discover choke points and specific assets with high vulnerability or criticality, when needed, but otherwise leave them collapsed for a more organized screen.
+    - **Indicators**: Icon indicators show node type and edge type. Visual indicators show information such as the high criticality crown or a vulnerability bug, providing visual input to where critical organizational data is at risk.
+    - **Expandable groups**: Provide a way to expand similar assets when you want to view them more in depth. Expanding the view helps you to discover choke points and specific highly vulnerability or critical assets. If not needed, leave them collapsed for a more organized screen.
     - **Hovering**: Hover over nodes and edges to get additional information.
     - **Explore assets and their edges**. To explore assets and edge, select the plus sign. Or select the option to explore connected assets from the contextual menu.
-    - **Asset details**: Easily viewable by selecting the asset icon.
+    - **Asset details**: Select the asset icon to view details.
     - **Focus on asset**: Provides a way to refocus the graph visualization on the specific node you want to explore, similar to the Graph view when selecting an individual [attack path](review-attack-paths.md).
-    - **Search**: Helps you to discover items by node type, and by selected **all results**, search the particular type for specific results. You can also filter your search by devices, identity, or cloud assets from the initial screen.
+    - **Search**: Helps you to discover items by node type and by selected **all results**. Search the particular type for specific results. You can also filter your search by devices, identity, or cloud assets from the initial screen.
 
     :::image type="content" source="./media/enterprise-exposure-map/attack-surface-exposure-map.png" alt-text="Screenshot of the attack surface exposure map." lightbox="./media/enterprise-exposure-map/attack-surface-exposure-map.png":::
 

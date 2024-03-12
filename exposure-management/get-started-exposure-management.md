@@ -6,16 +6,16 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 03/04/2024
+ms.date: 03/11/2024
 ---
 
 # Start using Microsoft Security Exposure Management
 
 This article describes how to start working with the [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) dashboard.
 
-[!INCLUDE [prerelease](../includes//prerelease.md)]
+Security Exposure Management is currently in public preview. Initially, your data uses default settings in Security Exposure Management.
 
-There are no specific deployment steps for Security Exposure Management. It's available as soon as you sign up for any E5 or P2 license. Initially, your data uses default settings in Security Exposure Management.
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
 ## Reviewing security exposure state
 
@@ -99,6 +99,6 @@ You can hover over points on the timeline to see what the score of the key initi
 
 ## Next steps
 
-- [Overview of attack paths](work-attack-paths-overview.md)
-- [Identify and manage critical assets](critical-asset-management.md)
-- [Improve security insights with exposure insights](exposure-insights-overview.md)
+- [Overview of attack paths](work-attack-paths-overview.md).
+- [Identify and manage critical assets](critical-asset-management.md).
+- [Improve security insights with exposure insights](exposure-insights-overview.md).

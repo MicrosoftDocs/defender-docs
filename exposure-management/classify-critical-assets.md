@@ -6,12 +6,14 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 03/06/2024
+ms.date: 03/11/2024
 ---
 
 # Review and classify critical assets
 
 [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) helps keep your business critical assets secure and available. This article describes how to work with critical assets.
+
+Security Exposure Management is currently in public preview.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
@@ -30,7 +32,7 @@ Review critical assets as follows.
 :::image type="content" source="./media/critical-asset-management-window.png" alt-text="Screenshot of the Critical asset management window." lightbox="./media/critical-asset-management-window.png":::
 
 > [!NOTE]
-> You can also view critical assets in **Assets > Devices** > **Classify critical asset**, and view the **Critical Asset Protection** initiative in **Exposure insights -> Initiatives**.
+> You can also see critical assets in **Assets > Devices** > **Classify critical asset**. In addition, you can view the **Critical Asset Protection** initiative in **Exposure insights -> Initiatives**.
 
 ## Request a new predefined classification
 

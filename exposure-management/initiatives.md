@@ -6,12 +6,14 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: azure
-ms.date: 03/06/2024
+ms.date: 03/11/2024
 ---
 
 # Review security initiatives
 
 [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) offers a focused, metric-driven way of tracking exposure in specific security areas using security initiatives. This article describes how to work with initiatives.
+
+Security Exposure Management is currently in public preview.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
