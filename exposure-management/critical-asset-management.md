@@ -49,14 +49,14 @@ For example, in the **Device Inventory**, a criticality level is shown.
 
 In another example, on the [**Attack surface map**](enterprise-exposure-map.md), as you look for exposure to threats and identify choke points, the halo color surrounding the asset icon, and the crown indicator, visually indicate the high criticality level.
 
-:::image type="content" source="./media/critical-asset-management/attack-surface-exposure-map.png" alt-text="Screenshot of an asset viewed in the exposure map in the context of other connections. Two devices on the map show high critical levels.":::
+:::image type="content" source="./media/critical-asset-management/attack-surface-exposure-map.png" alt-text="Screenshot of an asset viewed in the exposure map in the context of other connections. Two devices on the map show high critical levels." lightbox="media/critical-asset-management/attack-surface-exposure-map.png":::
 
 ## Working with asset classifications
 
 You can work with critical asset settings as follows:
 
 - **Create custom classifications**: You can create new critical asset classifications for devices, identities, and cloud resources, tailored to your organization.
-    - You use the query builder to define a new classification. For example, you might build a query to define devices with a specific naming convention as critical.
+  - You use the query builder to define a new classification. For example, you might build a query to define devices with a specific naming convention as critical.
   - Creating critical asset classification queries is also useful for limited cases where not all assets of interest are identified.
 - **Add assets to classifications**: You can manually add assets to critical asset classifications.
 - **Modify criticality levels**: You can choose to edit criticality levels according to your organization's risk profile.

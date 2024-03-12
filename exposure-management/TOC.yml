@@ -68,6 +68,5 @@
       items:
       - name: Defender for Cloud
         href: /azure/defender-for-cloud
-      - name: Entra  
-        href: /entra/  
-
+      - name: Entra
+        href: /entra/

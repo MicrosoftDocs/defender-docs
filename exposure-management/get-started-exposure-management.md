@@ -65,7 +65,7 @@ The **Critical asset summary** shows you how many critical assets you have and h
 
 From here you can view and manage critical assets and devices.
 
-In [Critical asset management](critical-asset-management.md), you can manage the criticality level of predefined assets identified by Security Exposure Management, and create custom classification rules to detect other critical assets.
+In [Critical asset management](critical-asset-management.md), you can manage the criticality level of assets identified by Security Exposure Management, and create custom classification rules to detect other critical assets.
 
 :::image type="content" source="./media/get-started-exposure-management/critical-asset-management-summary.png" alt-text="Screenshot of critical asset management." lightbox="./media/get-started-exposure-management/attack-surface-map-overview.png":::
 

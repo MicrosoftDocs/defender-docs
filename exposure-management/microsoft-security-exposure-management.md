@@ -12,7 +12,7 @@ ms.date: 03/11/2024
 
 # What is Microsoft Security Exposure Management?
 
-Microsoft Security Exposure Management is a security solution that provides a unified view of security posture across company assets and workloads. Security Exposure Management enriches asset information with security context that helps you to manage attack surfaces, protect critical assets, and explore and mitigate exposure risk. 
+Microsoft Security Exposure Management is a security solution that provides a unified view of security posture across company assets and workloads. Security Exposure Management enriches asset information with security context that helps you to manage attack surfaces, protect critical assets, and explore and mitigate exposure risk.
 
 Security Exposure Management is currently in public preview.
 
@@ -38,9 +38,9 @@ With Security Exposure Management you can:
   - Query the enterprise exposure graph to explore assets, assess risk, and hunt for threats across on-premises, hybrid, and multicloud environments.
   - Visualize your environment and graph queries with the attack surface map.
 
-- **Discover and safeguard critical assets**: Security Exposure Management marks predefined assets, and assets you customize, as critical. This enables you to focus and prioritize on those critical assets to ensure security and business continuity.
+- **Discover and safeguard critical assets**: Security Exposure Management marks predefined assets and assets you customize, as critical. This enables you to focus and prioritize on those critical assets to ensure security and business continuity.
 
-- **Manage exposure**: Security Exposure Management provides a number of tools to manage security exposure, and mitigate exposure risk.
+- **Manage exposure**: Security Exposure Management provides tools to manage security exposure, and mitigate exposure risk.
   - Exposure insights aggregate security posture data, and provide rich context around the security posture state of your asset inventory.
   - You leverage these insights to prioritize security efforts and investments.
   - Insights include security events, recommendations, metrics, and security initiatives.

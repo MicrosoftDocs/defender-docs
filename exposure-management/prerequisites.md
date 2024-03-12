@@ -15,6 +15,7 @@ This article describes the requirements and prerequisites for using Microsoft Se
 
 Security Exposure Management is currently in public preview.
 
+[!INCLUDE [prerelease](../includes/prerelease.md)]
 
 ## Permissions
 
@@ -26,7 +27,7 @@ Permissions are based on [Microsoft Entra ID RBAC](/entra/identity/role-based-ac
 
 ### Permissions for Security Exposure Management tasks
 
-For full access users need one of the following Microsoft Entra ID roles:
+For full access, users need one of the following Microsoft Entra ID roles:
 
 - **Global Admin** (read and write permissions)
 - **Global Reader** (read permissions)

@@ -19,7 +19,7 @@ Security Exposure Management is currently in public preview.
 
 ## Enterprise exposure graph
 
-The enterprise exposure graph is the central tool for exploring and managing attack surfaces. The graph gathers information about assets, users, workloads, and more from across your enterprise to provide a unified, comprehensive view of your organizational security posture.
+The enterprise exposure graph is the central tool for exploring and managing attack surfaces. The graph gathers information about assets, users, workloads, and more, from across your enterprise to provide a unified, comprehensive view of your organizational security posture.
 
 ### Graph schemas
 

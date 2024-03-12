@@ -31,7 +31,7 @@ The exposure map gives you visibility into asset connections.
 1. In **Attack surface map**, explore assets and connections.
 1. Use the map features to explore.
     - **Indicators**: Icon indicators show node type and edge type. Visual indicators show information such as the high criticality crown or a vulnerability bug, providing visual input to where critical organizational data is at risk.
-    - **Expandable groups**: Provide a way to expand similar assets when you want to view them more in depth. Expanding the view helps you to discover choke points and specific highly vulnerability or critical assets. If not needed, leave them collapsed for a more organized screen.
+    - **Expandable groups**: Provide a way to expand similar assets when you want to view them more in depth. Expanding the view helps you to discover choke points and specific highly vulnerable or critical assets. If not needed, leave them collapsed for a more organized screen.
     - **Hovering**: Hover over nodes and edges to get additional information.
     - **Explore assets and their edges**. To explore assets and edge, select the plus sign. Or select the option to explore connected assets from the contextual menu.
     - **Asset details**: Select the asset icon to view details.

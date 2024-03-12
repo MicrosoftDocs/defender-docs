@@ -13,7 +13,7 @@ ms.date: 03/11/2024
 
 Use the enterprise exposure graph in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) to proactively hunt for enterprise exposure threats in [advanced hunting](https://security.microsoft.com/v2/advanced-hunting)  in the Microsoft Defender portal.
 
-This article provides some examples, tips and hints for constructing queries in the enterprise exposure graph.
+This article provides some examples, tips, and hints for constructing queries in the enterprise exposure graph.
 
 Security Exposure Management is currently in public preview.
 
@@ -97,7 +97,7 @@ ExposureGraphEdges
 
 ### List all connections to a specific node label
 
-The following query summarizes connectors (edges) that connect virtual machines to other security exposure graph assets. It groups the data in the `ExposureGraphEdges` table, and where the target node label is `microsoft.compute/virtualmachines`, it uses Kusto's `summarize` operator to list the target node label by `EdgeLabel`.
+The following query summarizes edges that connect virtual machines to other security exposure graph assets. It groups the data in the `ExposureGraphEdges` table, and where the target node label is `microsoft.compute/virtualmachines`, it uses Kusto's `summarize` operator to list the target node label by `EdgeLabel`.
 
 ```kusto
 ExposureGraphEdges
@@ -128,13 +128,13 @@ To query the exposure graph:
 
 ## Graph-oriented query examples
 
-Use these examples to help you write better security exposure queries. The examples are graph-oriented queries that search for patterns to expose relationships between entities that can uncover risk. They show you how to correlate context with incident/alert signals. T
+Use these graph-oriented query examples to help you write better security exposure queries. The examples search for patterns to expose relationships between entities that can uncover risk. They show you how to correlate context with incident/alert signals.
 
 ### List all node labels with an edge to a specific node label
 
 The following query results in a list of all incoming node labels with a connector to the virtual machine node label. It builds a graph structure by mapping the `SourceNodeId` column data in the `ExposureGraphEdges` table to the `TargetNodeId` column in the `ExposureGraphNodes` table with the `make-graph` operator to build a graph structure.
 
-It then uses the `graph-match` operator to make a graph pattern where the target node `TargetNode` and `NodeLabel` match `microsoft.compute/virtualmachines`. The `project` operator is used to keep only the `IncomingNodeLabels`, and lists the results by `IncomingNodeLabels`.
+It then uses the `graph-match` operator to make a graph pattern where the target node `TargetNode` and `NodeLabel` match `microsoft.compute/virtualmachines`. The `project` operator is used to keep only the `IncomingNodeLabels`. It lists the results by `IncomingNodeLabels`.
 
 ```kusto
 ExposureGraphEdges
@@ -152,7 +152,7 @@ The following query results in a list of all the outgoing node labels with a con
 
 - It builds a graph structure by mapping the `SourceNodeId` column uses the data in the `ExposureGraphEdges` table to the `TargetNodeId` column in the `ExposureGraphNodes` table using the `make-graph` operator to build a graph structure.
 - It then uses the `graph-match` operator to match the graph pattern where `SourceNode` and `NodeLabel` match `microsoft.compute/virtualmachines`.
-- The `project` operator is used to keep only the `OutgoingNodeLabels`, and lists the results by `OutgoingNodeLabels`.
+- The `project` operator is used to keep only the `OutgoingNodeLabels`. It lists the results by `OutgoingNodeLabels`.
 
 ```kusto
 ExposureGraphEdges
@@ -180,7 +180,7 @@ ExposureGraphNodes
 
 ### Discover internet facing devices with a privilege escalation vulnerability
 
-The following query looks for internet facing devices exposed to a privilege escalation vulnerability, which could allow access to higher level privileges within the system. 
+The following query looks for internet facing devices exposed to a privilege escalation vulnerability, which could allow access to higher level privileges within the system.
 
 - It uses the `ExposureGraphNodes` schema table.
 - When `NodeProperties` is both internet facing (`IsInternetFacing`) and `VulnerableToPrivilegeEscalation`, the query checks that the items in `Categories` are actually devices (`device`).
@@ -260,9 +260,9 @@ ExposureGraphEdges
        project DeviceWithRCEIds=DeviceWithRCE.EntityIds, DeviceWithRCEName=DeviceWithRCE.NodeName, CriticalDeviceIds=CriticalDevice.EntityIds, CriticalDeviceName=CriticalDevice.NodeName
 ```
 
-### Provide all paths from specific node ID to a node with a specific label 
+### Provide all paths from specific node ID to a node with a specific label
 
-This query displays the path from a specific IP node, passing through up to three assets that result in a connection to the virtual machine node label.
+This query displays the path from a specific IP node, passing through up to three assets that results in a connection to the virtual machine node label.
 
 - It uses the `ExposureGraphNodes` and `ExposureGraphEdges` schema tables and the `make-graph` and `graph-match` operators to create a graph structure.
 - With the `project` operator, it displays a list of IP IDs, IP properties, virtual machine IDs, and virtual machine properties.
