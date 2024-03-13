@@ -13,11 +13,27 @@
       },
       "build_entry_point": "docs",
       "template_folder": "_themes"
+    },
+    {
+      "docset_name": "exposure-management",
+      "build_source_folder": "exposure-management",
+      "build_output_subfolder": "exposure-management",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [],
   "sync_notification_subscribers": [],
   "branches_to_filter": [],
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/defender-docs",
+  "git_repository_branch_open_to_public_contributors": "public",
   "need_preview_pull_request": true,
   "dependent_repositories": [
     {
@@ -27,5 +43,6 @@
       "branch_mapping": {}
     }
   ],
-  "branch_target_mapping": {}
+  "branch_target_mapping": {},
+  "targets": {}
 }

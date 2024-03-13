@@ -42,15 +42,31 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/defender-xdr/breadcrumb/toc.json",
+      "breadcrumb_path": "/security-exposure-management/breadcrumb/toc.json",
       "permissioned-type": "public",
-      "searchScope": ["Defender XDR"],
       "feedback_system": "Standard",
-      "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/MicrosoftThreatProtection",
-      "uhfHeaderId": "MSDocsHeader-M365-IT"
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
+      "searchScope": ["security-exposure-management"],
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "titleSuffix": "Microsoft Security Exposure Management",
+      "contributors_to_exclude": [
+        "dstrome2",
+        "rjagiewich",  
+        "American-Dipper",
+        "claydetels19", 
+        "jborsecnik",
+        "v-stchambers",
+        "shdyas",
+        "Stacyrch140",
+        "garycentric",
+        "dstrome",
+        "alekyaj"
+      ]
+
     },
+    "fileMetadata": {},
     "template": [],
-    "dest": "defender-xdr"
+    "dest": "security-exposure-management"
   }
 }
 
