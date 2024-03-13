@@ -1,1 +1,0 @@
-# Welcome to defender-xdr!
