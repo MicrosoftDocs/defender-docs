@@ -3,6 +3,11 @@ obj/
 _site/
 .optemp/
 _themes*/
-_repo.*/
-
+.vs/
+common/
+.vscode/
+*.ini
+.DS_Store
+*.db
+ 
 .openpublishing.buildcore.ps1

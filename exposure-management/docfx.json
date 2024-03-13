@@ -25,7 +25,9 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -41,10 +43,30 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/security-exposure-management/breadcrumb/toc.json",
+      "permissioned-type": "public",
       "feedback_system": "Standard",
-      "permissioned-type": "public"
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
+      "searchScope": ["security-exposure-management"],
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "titleSuffix": "Microsoft Security Exposure Management",
+      "contributors_to_exclude": [
+        "dstrome2",
+        "rjagiewich",  
+        "American-Dipper",
+        "claydetels19", 
+        "jborsecnik",
+        "v-stchambers",
+        "shdyas",
+        "Stacyrch140",
+        "garycentric",
+        "dstrome",
+        "alekyaj"
+      ]
+
     },
     "fileMetadata": {},
-    "template": []
+    "template": [],
+    "dest": "security-exposure-management"
   }
 }
+
