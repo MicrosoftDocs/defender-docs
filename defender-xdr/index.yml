@@ -22,17 +22,17 @@ highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   items:
     # Card
-    - title: Azure security documentation
+    - title: Microsoft Defender portal
       itemType: overview
-      url: /azure/security/
+      url: /microsoft-365/security/defender/microsoft-365-defender-portal
     # Card
-    - title: Learn modules for Azure security 
+    - title: Security for Copilot integrations
       itemType: learn
-      url: /training/browse/?products=azure&subjects=security     
+      url: /security-copilot
     # Card
-    - title: Microsoft security Technical Community
+    - title: Zero Trust security
       itemType: overview
-      url: https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance
+      url: /security/zero-trust/zero-trust-overview
     # Card
     - title: Learn modules for Microsoft Defender XDR
       itemType: learn
@@ -44,23 +44,45 @@ productDirectory:
     # Card
     - title: Microsoft Defender XDR docs
       summary: Microsoft Defender XDR provides visibility, investigation, and response actions across the cyberattack chain with an industry-leading extended detection and response (XDR) solution.
-      imageSrc: ../media/hub/learn.svg
+      imageSrc: ../media/hub/overview.svg
       url: ./defender-xdr/index.yml
     # Card
-    - title: Microsoft Sentinel docs
-      imageSrc: ../media/concept.svg
-      summary: Microsoft Sentinel is a scalable, cloud-native solution that provides SIEM and SOAR capabilities, security analytics and threat intelligence across the enterprise.
-      url: /azure/sentinel/
+    - title: What's new in Microsoft Defender XDR
+      summary: Stay up to date with the latest features and updates for Microsoft Defender XDR.
+      imageSrc: ../media/hub/overview.svg
+      url: /microsoft-365/security/defender/whats-new
     # Card
-    - title: TBD
+    - title: Learn modules for Microsoft Defender XDR
       imageSrc: ../media/learn.svg
-      summary: TBD
-      url: /azure/sentinel/    
+      summary: Training and skilling for Security Operations teams to learn how to use Microsoft Defender XDR.
+      url: /training/m365/defender 
     # Card
-    - title: TBD
-      summary: TBD
+    - title: Microsoft Defender XDR Technical Community
+      summary: Read the lastest blogs, ask questions, and connect with other users of Microsoft Defender XDR.
       imageSrc: ../media/hub/minihub.svg
-      url: ./defender-xdr/index.yml  
+      url: https://techcommunity.microsoft.com/t5/microsoft-defender-xdr/bd-p/MicrosoftThreatProtection
+    # Card
+    - title: Microsoft Defender for Endpoint
+      summary: Microsoft Defender for Endpoint provides protection and response capabilities for your devices and endpoints.
+      imageSrc: ../media/hub/overview.svg
+      url: ./defender-endpoint
+    # Card
+    - title: Microsoft Defender for Office 365
+      summary: Microsoft Defender for Office 365 provides protection against threats to email and collaboration tools, such as phishing and zero-day malware.
+      imageSrc: ../media/hub/overview.svg
+      url: ./defender-collaboration
+    # Card
+    - title: Microsoft Defender for Identity
+      summary: Microsoft Defender for Identity provides protection and response actions against identity-based threats.
+      imageSrc: ../media/hub/overview.svg
+      url: /defender-for-identity
+    # Card
+    - title: Microsoft Defender for Cloud Apps
+      summary: Microsoft Defender for Cloud Apps provides protection for your cloud Apps.
+      imageSrc: ../media/hub/overview.svg
+      url: ./defender-collaboration
+
+
 
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
