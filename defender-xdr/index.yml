@@ -21,19 +21,15 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   items:
-    # Card
     - title: What is Microsoft Defender XDR
       itemType: overview
       url: /microsoft-365/security/defender/microsoft-365-defender
-    # Card
     - title: What is Microsoft Sentinel?
       itemType: overview
-      url: /azure/sentinel/overview    - 
-    # Card
+      url: /azure/sentinel/overview 
     - title: Security for Copilot integrations
       itemType: deploy
       url: /security-copilot
-    # Card
     - title: Learn modules for Microsoft Defender XDR
       itemType: learn
       url: /training/m365/defender
@@ -44,23 +40,26 @@ conceptualContent:
   sections:
     - items:
         # Card
-        - title: Protect your digital estate
+        - title: Protect your organization and detect threats
           links:
+          - url: /microsoft-365/security/security-posture-solution-overview
+            itemType: quickstart
+            text: Strengthen your security posture with Microsoft Defender
           - url: /microsoft-365/security/defender-endpoint
             itemType: overview
-            text: Microsoft Defender for Endpoint
+            text: Protect your devices with Microsoft Defender for Endpoint
           - url: /microsoft-365/security/defender-vulnerability-management
             itemType: overview
-            text: Microsoft Defender Vulnerability Management
+            text: Manage risk to your critical assets with Defender Vulnerability Management
           - url: /microsoft-365/security/office-365-security/defender-for-office-365
             itemType: overview
-            text: Microsoft Defender for Office 365
+            text: Protect your email from phishing, spam, and more with Microsoft Defender for Office 365
           - url: /defender-for-identity/
             itemType: overview
-            text: Microsoft Defender for Identity
+            text: Monitor users with Microsoft Defender for Identity
           - url: /defender-cloud-apps/what-is-defender-for-cloud-apps
             itemType: overview
-            text: Microsoft Defender for Cloud Apps
+            text: Protect your apps with Microsoft Defender for Cloud Apps
 
         - title: Investigate Incidents
           links:
@@ -70,54 +69,15 @@ conceptualContent:
           - url: /microsoft-365/security/defender/respond-first-incident-365-defender
             itemType: how-to-guide
             text: Investigate your first incident
+          - url: /microsoft-365/security/defender/advanced-hunting
+            itemType: how-to-guide
+            text: Hunt for threats across your organization
           footerLink:
            text: See more
            url: /microsoft-365/security/defender/index.yml
           
 
-    # Card
-        - title: Microsoft Defender for Cloud
-      # imageSrc should be square in ratio with no whitespace
-          links:
-            - url: /azure/defender-for-cloud/
-              itemType: overview
-              text: Microsoft Defender for Cloud 
-            - url: /azure/defender-for-cloud/defender-for-servers-introduction
-              itemType: overview
-              text: Microsoft Defender for Servers
-            - url: /azure/defender-for-cloud/defender-for-storage-introduction
-              itemType: overview
-              text: Microsoft Defender for Storage
-            - url: /azure/defender-for-cloud/defender-for-sql-introduction
-              itemType: overview
-              text: Microsoft Defender for SQL
-            - url: /azure/defender-for-cloud/defender-for-containers-introduction
-              itemType: overview
-              text: Microsoft Defender for Containers
-            - url: /azure/defender-for-cloud/defender-for-app-service-introduction
-              itemType: overview
-              text: Microsoft Defender for App Service
-            - url: /azure/defender-for-cloud/defender-for-key-vault-introduction
-              itemType: overview
-              text: Microsoft Defender for Key Vault
-            - url: /azure/defender-for-cloud/defender-for-dns-introduction
-              itemType: overview
-              text: Microsoft Defender for DNS
-            - url: /azure/defender-for-cloud/defender-for-resource-manager-introduction
-              itemType: overview
-              text: Microsoft Defender for Resource Manager
-            - url: /azure/defender-for-cloud/defender-for-databases-introduction
-              itemType: overview
-              text: Microsoft Defender for open-source relational databases
-# Card
-        - title: Microsoft Defender for IoT 
-          links:
-          - url: /azure/defender-for-iot/organizations/overview
-            itemType: overview
-            text: Microsoft Defender for IoT for end-user organizations
-          - url: /azure/defender-for-iot/device-builders/overview
-            itemType: overview
-            text: Microsoft Defender for IoT for device builders
+
 
 additionalContent:
    sections:
@@ -126,9 +86,44 @@ additionalContent:
       - title: Security, Compliance, Identity Tech Community
         summary: News and announcements
         url: https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance
+      - title: Microsoft Defender XDR Tech Community
+        summary: Get help from the community
+        url: https://techcommunity.microsoft.com/t5/microsoft-defender-xdr/bd-p/MicrosoftThreatProtection 
       - title: Threat intelligence blogs
         summary: Keep up with the latest Microsoft Threat Intelligence information
         url: https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/
       - title: Microsoft Threat Intelligence on LinkedIn
         summary: Follow us on LinkedIn
         url: https://www.linkedin.com/showcase/microsoft-threat-intelligence/
+
+   - title: Other content
+     items: 
+     - title: Microsoft Defender for IoT 
+       links:
+        - url: /azure/defender-for-iot/organizations/overview
+          text: Microsoft Defender for IoT for end-user organizations
+        - url: /azure/defender-for-iot/device-builders/overview
+          text: Microsoft Defender for IoT for device builders
+
+     - title: Microsoft Defender for Cloud
+       links:
+        - url: /azure/defender-for-cloud/
+          text: Microsoft Defender for Cloud 
+        - url: /azure/defender-for-cloud/defender-for-servers-introduction
+          text: Microsoft Defender for Servers
+        - url: /azure/defender-for-cloud/defender-for-storage-introduction
+          text: Microsoft Defender for Storage
+        - url: /azure/defender-for-cloud/defender-for-sql-introduction
+          text: Microsoft Defender for SQL
+        - url: /azure/defender-for-cloud/defender-for-containers-introduction
+          text: Microsoft Defender for Containers
+        - url: /azure/defender-for-cloud/defender-for-app-service-introduction
+          text: Microsoft Defender for App Service
+        - url: /azure/defender-for-cloud/defender-for-key-vault-introduction
+          text: Microsoft Defender for Key Vault
+        - url: /azure/defender-for-cloud/defender-for-dns-introduction
+          text: Microsoft Defender for DNS
+        - url: /azure/defender-for-cloud/defender-for-resource-manager-introduction
+          text: Microsoft Defender for Resource Manager
+        - url: /azure/defender-for-cloud/defender-for-databases-introduction
+          text: Microsoft Defender for open-source relational databases
