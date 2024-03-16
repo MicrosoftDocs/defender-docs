@@ -70,6 +70,9 @@ conceptualContent:
           - url: /microsoft-365/security/defender/respond-first-incident-365-defender
             itemType: how-to-guide
             text: Investigate your first incident
+          footerLink:
+           text: See more
+           url: /microsoft-365/security/defender/index.yml
           
 
     # Card
@@ -116,3 +119,16 @@ conceptualContent:
             itemType: overview
             text: Microsoft Defender for IoT for device builders
 
+additionalContent:
+   sections:
+   - title: Community & support
+     items:
+      - title: Security, Compliance, Identity Tech Community
+        summary: News and announcements
+        url: https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance
+      - title: Threat intelligence blogs
+        summary: Keep up with the latest Microsoft Threat Intelligence information
+        url: https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/
+      - title: Microsoft Threat Intelligence on LinkedIn
+        summary: Follow us on LinkedIn
+        url: https://www.linkedin.com/showcase/microsoft-threat-intelligence/
