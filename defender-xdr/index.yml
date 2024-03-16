@@ -72,6 +72,12 @@ conceptualContent:
           - url: /microsoft-365/security/defender/advanced-hunting
             itemType: how-to-guide
             text: Hunt for threats across your organization
+          - url: /microsoft-365/security/defender/defender-experts-for-hunting
+            itemType: overview
+            text: Get help from Microsoft Defender Experts to hunt for threats
+          - url: /microsoft-365/security/defender/dex-xdr-overview
+            itemType: get-started
+            text: Augment your SOC with Microsoft Defender Experts for XDR
           footerLink:
            text: See more
            url: /microsoft-365/security/defender/index.yml
