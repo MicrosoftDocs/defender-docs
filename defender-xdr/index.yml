@@ -40,26 +40,35 @@ conceptualContent:
   sections:
     - items:
         # Card
-        - title: Protect your organization and detect threats
+        - title: Get started with Microsoft Defender products
           links:
-          - url: /microsoft-365/security/security-posture-solution-overview
-            itemType: quickstart
-            text: Strengthen your security posture with Microsoft Defender
           - url: /microsoft-365/security/defender-endpoint
             itemType: overview
-            text: Protect your devices with Microsoft Defender for Endpoint
+            text: Onboard and protect devices and endpoints (Defender for Endpoint)
           - url: /microsoft-365/security/defender-vulnerability-management
             itemType: overview
-            text: Manage risk to your critical assets with Defender Vulnerability Management
+            text: Manage risk to your critical assets (Defender Vulnerability Management)
           - url: /microsoft-365/security/office-365-security/defender-for-office-365
             itemType: overview
-            text: Protect your email from phishing, spam, and more with Microsoft Defender for Office 365
+            text: Protect your employees from phishing and spam (Defender for Office 365)
           - url: /defender-for-identity/
             itemType: overview
-            text: Monitor users with Microsoft Defender for Identity
+            text: Monitor risky users (Defender for Identity)
           - url: /defender-cloud-apps/what-is-defender-for-cloud-apps
             itemType: overview
-            text: Protect your apps with Microsoft Defender for Cloud Apps
+            text: Protect your apps (Defender for Cloud Apps)
+      
+        - title: Protect your organization and detect threats
+          links:
+          - url: /microsoft-365/security/defender/microsoft-365-defender-portal
+            itemType: overview
+            text: Use the Microsoft 365 Defender portal
+          - url: /microsoft-365/security/security-posture-solution-overview
+            itemType: quickstart
+            text: Improve your security posture
+          - url: ../exposure-management/index.yml
+            itemType: overview
+            text: Track your security posture with Microsoft Security Exposure Management
 
         - title: Investigate Incidents
           links:
@@ -72,6 +81,9 @@ conceptualContent:
           - url: /microsoft-365/security/defender/advanced-hunting
             itemType: how-to-guide
             text: Hunt for threats across your organization
+          - url: /microsoft-365/security/defender/microsoft-sentinel-onboard
+            itemType: how-to-guide
+            text: Integrate Microsoft Sentinel with Microsoft Defender XDR
           - url: /microsoft-365/security/defender/defender-experts-for-hunting
             itemType: overview
             text: Get help from Microsoft Defender Experts to hunt for threats
