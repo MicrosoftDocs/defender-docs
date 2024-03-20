@@ -24,15 +24,15 @@ highlightedContent:
     - title: What is Microsoft Defender XDR
       itemType: overview
       url: /microsoft-365/security/defender/microsoft-365-defender
+    - title: Learn modules for Microsoft Defender XDR
+      itemType: learn
+      url: /training/m365/defender    
     - title: What is Microsoft Sentinel?
       itemType: overview
       url: /azure/sentinel/overview 
     - title: Security for Copilot integrations
       itemType: deploy
       url: /security-copilot
-    - title: Learn modules for Microsoft Defender XDR
-      itemType: learn
-      url: /training/m365/defender
 
 
 conceptualContent:
@@ -40,37 +40,52 @@ conceptualContent:
   sections:
     - items:
         # Card
-        - title: Get started with Microsoft Defender products
+        - title: Protect your devices and endpoints
+          summary: Use Defender for Endpoint to protect your devices and endpoints from threats.
           links:
           - url: /microsoft-365/security/defender-endpoint
             itemType: overview
             text: Onboard and protect devices and endpoints (Defender for Endpoint)
+          - url: /microsoft-365/security/defender-endpoint/whats-new-in-microsoft-defender-endpoint
+            itemType: whats-new
+            text: What's new in Microsoft Defender for Endpoint
+          - url: /microsoft-365/security/defender-endpoint/mde-planning-guide
+            itemType: how-to-guide
+            text: Get started with your Defender for Endpoint deployment
           - url: /microsoft-365/security/defender-vulnerability-management
             itemType: overview
-            text: Manage risk to your critical assets (Defender Vulnerability Management)
+            text: Review risk and vulnerabilities with Defender Vulnerability Management
+
+        - title: Protect your email, collaboration tools, and apps
+          summary: Use Defender for Office 365 to protect your email, prevent phishing attacks, and protect your collaboration tools.
+          links: 
           - url: /microsoft-365/security/office-365-security/defender-for-office-365
             itemType: overview
             text: Protect your employees from phishing and spam (Defender for Office 365)
+
+        - title: Protect your identities
+          summary: Use Defender for Identity to protect your users and monitor risky behavior
+          links: 
           - url: /defender-for-identity/
             itemType: overview
             text: Monitor risky users (Defender for Identity)
+
+        - title: Protect your cloud Apps
+          summary: Use Defender for Cloud Apps to protect your cloud apps and services
+          links:
           - url: /defender-cloud-apps/what-is-defender-for-cloud-apps
             itemType: overview
             text: Protect your apps (Defender for Cloud Apps)
       
-        - title: Protect your organization and detect threats
+        - title: track your security posture
+          summary: use Microsoft Security Exposure Management to track your security posture
           links:
-          - url: /microsoft-365/security/defender/microsoft-365-defender-portal
-            itemType: overview
-            text: Use the Microsoft 365 Defender portal
-          - url: /microsoft-365/security/security-posture-solution-overview
-            itemType: quickstart
-            text: Improve your security posture
           - url: ../exposure-management/index.yml
             itemType: overview
             text: Track your security posture with Microsoft Security Exposure Management
 
         - title: Investigate Incidents
+          summary: Use Microsoft Defender XDR to investigate incidents and hunt for threats
           links:
           - url: /microsoft-365/security/defender/get-started
             itemType: get-started
