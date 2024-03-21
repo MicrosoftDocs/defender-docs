@@ -71,7 +71,7 @@ In [Critical asset management](critical-asset-management.md), you can manage the
 
 ### View in device inventory and advanced hunting
 
-You can review critical assets in the context of the Defender XDR device inventory and in Defender XDR [advanced hunting](/microsoft-365/security/defender/advanced-hunting-overview.md).
+You can review critical assets in the context of the Defender XDR device inventory and in Defender XDR [advanced hunting](/microsoft-365/security/defender/advanced-hunting-overview).
 
 The device inventory provides quick links to devices sorted by:
 
