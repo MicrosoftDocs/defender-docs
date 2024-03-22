@@ -5,7 +5,7 @@ summary: Provides a unified view of security posture. Investigate security insig
 metadata:
   title: Microsoft Security Exposure Management documentation
   description: Get started with Microsoft Security Exposure Management
-  ms.service: azure
+  ms.service: exposure-management
   ms.subservice:
   ms.topic: landing-page
   ms.collection: 

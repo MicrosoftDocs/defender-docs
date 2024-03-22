@@ -5,7 +5,7 @@ ms.author: v-mjosephy
 author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
-ms.service: azure
+ms.service: exposure-management
 ms.date: 03/11/2024
 ---
 
