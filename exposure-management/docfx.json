@@ -43,6 +43,7 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/security-exposure-management/breadcrumb/toc.json",
+      "extendBreadcrumb": false,
       "permissioned-type": "public",
       "feedback_system": "Standard",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
