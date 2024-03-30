@@ -1,12 +1,12 @@
 ---
-title: Microsoft Defender for Endpoint Pre-release Disclaimer
-description: Disclaimer for pre-release version of Microsoft Defender for Endpoint.
-ms.date: 08/28/2017
+title: Microsoft Security Exposure Management pre-release Disclaimer
+description: Disclaimer for pre-release version of Microsoft Security Exposure Management.
+ms.date: 03/21/2024
 ms.reviewer: 
 manager: dansimp
 ms.author: macapara
 author: mjcaparas
-ms.service: microsoft-365-security
+ms.service: exposure-management
 ---
 
 > [!IMPORTANT]
