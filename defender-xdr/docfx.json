@@ -43,11 +43,25 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/defender-xdr/breadcrumb/toc.json",
+      "extendBreadcrumb": false,
       "permissioned-type": "public",
-      "searchScope": ["Defender XDR"],
       "feedback_system": "Standard",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/MicrosoftThreatProtection",
-      "uhfHeaderId": "MSDocsHeader-M365-IT"
+      "searchScope": ["Defender XDR"],
+      "uhfHeaderId": "MSDocsHeader-Security",
+      "contributors_to_exclude": [
+        "dstrome2",
+        "rjagiewich",
+        "American-Dipper",
+        "claydetels19",
+        "jborsecnik",
+        "v-stchambers",
+        "shdyas",
+        "Stacyrch140",
+        "garycentric",
+        "dstrome",
+        "alekyaj"
+      ]
     },
     "template": [],
     "dest": "defender-xdr"
