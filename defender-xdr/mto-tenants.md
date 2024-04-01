@@ -26,7 +26,7 @@ ms.date: 03/20/2024
 
 To view the list of tenants that appear in multitenant management, go to [Settings page](https://mto.security.microsoft.com/mtosettings) in multitenant management in Microsoft Defender XDR:
 
-   :::image type="content" source="../../media/defender/mto-tenant-settings.png" alt-text="Screenshot of multitenant management in Microsoft Defender XDR" lightbox="../../media/defender/mto-tenant-settings.png":::
+   :::image type="content" source="./media/defender/mto-tenant-settings.png" alt-text="Screenshot of multitenant management in Microsoft Defender XDR" lightbox="./media/defender/mto-tenant-settings.png":::
 
 From the **Settings** page you can:
 
@@ -40,12 +40,12 @@ The multitenant management status indicator provides information on whether data
 
 When no issue exists, the status indicator is a green tick:
 
-- ![No data issues](../../media/defender/mto_nodata_issue.png)
+- ![No data issues](./media/defender/mto_nodata_issue.png)
 
 When an issue exists, the status indicator shows a red warning sign:
 
-- ![data issues](../../media/defender/mto-data-issues.png)
+- ![data issues](./media/defender/mto-data-issues.png)
 
 Hovering over the red warning sign displays the issues that occurred and the tenant information. By expanding each section, you see all the tenants with this issue.
 
-- ![tenant data issues](../../media/defender/mto-tenantdata-issues.png)
+- ![tenant data issues](./media/defender/mto-tenantdata-issues.png)

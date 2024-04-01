@@ -35,7 +35,7 @@ ms.topic: conceptual
 
 Use the steps below to enable and pilot Microsoft Defender for Identity.
 
-:::image type="content" source="../../media/defender/m365-defender-identity-eval-steps.png" alt-text="The steps for adding Microsoft Defender for Identity to the Microsoft Defender evaluation environment" lightbox="../../media/defender/m365-defender-identity-eval-steps.png":::
+:::image type="content" source="./media/defender/m365-defender-identity-eval-steps.png" alt-text="The steps for adding Microsoft Defender for Identity to the Microsoft Defender evaluation environment" lightbox="./media/defender/m365-defender-identity-eval-steps.png":::
 
 This table describes the steps in the illustration.
 
@@ -44,4 +44,4 @@ This table describes the steps in the illustration.
 |1|[Review architecture requirements and key concepts](eval-defender-identity-architecture.md)    | Understand the Defender for Identity architecture and be sure your environment meets the architecture prerequisites.       |
 |2|[Enable the evaluation environment](eval-defender-identity-enable-eval.md)     |   Follow the steps to set up the evaluation environment.      |
 |3|[Set up the pilot](eval-defender-identity-pilot.md)     |   Learn about benchmark settings for your identity environment and try out Defender for Identity tutorials.     |
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

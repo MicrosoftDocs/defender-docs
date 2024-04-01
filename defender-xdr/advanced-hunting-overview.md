@@ -68,7 +68,7 @@ Advanced hunting data can be categorized into two distinct types, each consolida
 ## Time zone
 ### Queries
 Advanced hunting data uses the UTC (Universal Time Coordinated) timezone. 
-![Screenshot of custom time range.](../../media/custom-time-range.png)
+![Screenshot of custom time range.](./media/custom-time-range.png)
 
 Queries should be created in UTC.
 
@@ -85,4 +85,4 @@ Advanced hunting results are converted to the [timezone](m365d-time-zone.md) set
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)
 - [Custom detections overview](custom-detections-overview.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

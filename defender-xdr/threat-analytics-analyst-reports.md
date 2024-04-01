@@ -32,7 +32,7 @@ ms.date: 02/16/2021
 
 Each [threat analytics report](threat-analytics.md) includes dynamic sections and a comprehensive written section called the _analyst report_. To access this section, open the report about the tracked threat and select the **Analyst report** tab.
 
-:::image type="content" source="../../media/threat-analytics/ta_analystreport_mtp.png" alt-text="The analyst report section of a threat analytics report" lightbox="../../media/threat-analytics/ta_analystreport_mtp.png":::
+:::image type="content" source="./media/threat-analytics/ta_analystreport_mtp.png" alt-text="The analyst report section of a threat analytics report" lightbox="./media/threat-analytics/ta_analystreport_mtp.png":::
 
 _Analyst report section of a threat analytics report_
 
@@ -103,4 +103,4 @@ Advanced hunting queries in the analyst reports have been vetted by Microsoft an
 - [Threat analytics overview](threat-analytics.md)
 - [Proactively find threats with advanced hunting](advanced-hunting-overview.md)
 - [Custom detection rules](custom-detection-rules.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

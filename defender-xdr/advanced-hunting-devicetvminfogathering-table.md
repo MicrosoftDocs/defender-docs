@@ -66,4 +66,4 @@ DeviceTvmInfoGathering
 - [Apply query best practices](advanced-hunting-best-practices.md)
 - [Overview of Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt)
 - [Learn how to manage the Log4Shell vulnerability in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/tvm-manage-log4shell-guidance)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

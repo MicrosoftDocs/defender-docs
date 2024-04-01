@@ -38,7 +38,7 @@ Defender for Identity protects your on-premises Active Directory users and/or us
 
 The following diagram illustrates the baseline architecture for Defender for Identity.
 
-:::image type="content" source="../../media/defender/m365-defender-identity-architecture.png" alt-text="The identity architecture for Microsoft Defender for Identity" lightbox="../../media/defender/m365-defender-identity-architecture.png":::
+:::image type="content" source="./media/defender/m365-defender-identity-architecture.png" alt-text="The identity architecture for Microsoft Defender for Identity" lightbox="./media/defender/m365-defender-identity-architecture.png":::
 
 In this illustration:
 
@@ -80,4 +80,4 @@ Step 2 of 3: [Enable the evaluation environment Defender for Identity](eval-defe
 Return to the overview for [Evaluate Microsoft Defender for Identity](eval-defender-identity-overview.md)
 
 Return to the overview for [Evaluate and pilot Microsoft Defender XDR](eval-overview.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

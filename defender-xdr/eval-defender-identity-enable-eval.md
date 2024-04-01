@@ -30,7 +30,7 @@ This article is [Step 2 of 2](eval-defender-identity-overview.md) in the process
 
 Use the following steps to set up your Microsoft Defender for Identity environment.
 
-:::image type="content" source="../../media/defender/m365-defender-identity-eval-enable-steps.png" alt-text="The steps to enable Microsoft Defender for Identity in the Microsoft Defender evaluation environment" lightbox="../../media/defender/m365-defender-identity-eval-enable-steps.png":::
+:::image type="content" source="./media/defender/m365-defender-identity-eval-enable-steps.png" alt-text="The steps to enable Microsoft Defender for Identity in the Microsoft Defender evaluation environment" lightbox="./media/defender/m365-defender-identity-eval-enable-steps.png":::
 
 - [Step 1. Set up the Defender for Identity Instance](#step-1-set-up-the-defender-for-identity-instance)
 - [Step 2. Install and configure the sensor](#step-2-install-and-configure-the-sensor)
@@ -81,4 +81,4 @@ Step 3 of 3: [Pilot Microsoft Defender for Identity](eval-defender-identity-pilo
 Return to the overview for [Evaluate Microsoft Defender for Identity](eval-defender-identity-overview.md)
 
 Return to the overview for [Evaluate and pilot Microsoft Defender XDR](eval-overview.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

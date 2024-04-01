@@ -52,7 +52,7 @@ SOC Oversight activities related to use case development include:
 
 To facilitate the runbook and playbook creation processes, create a use case decision tree. This figure shows an example.
 
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png" alt-text="The use-case decision process" lightbox="../../media/integrate-microsoft-365-defender-secops/use-case-decision-process.png":::
+:::image type="content" source="./media/integrate-microsoft-365-defender-secops/use-case-decision-process.png" alt-text="The use-case decision process" lightbox="./media/integrate-microsoft-365-defender-secops/use-case-decision-process.png":::
 
 Once a high-level use case standard has been defined and approved, the next step is to create and test an actual use case. The following sections use anti-phishing and threat and vulnerability scanning scenarios as examples.
 
@@ -60,13 +60,13 @@ Once a high-level use case standard has been defined and approved, the next step
 
 The first step in creating a use case is to outline the workflow using a story board. Here's an example of a high-level story board for a new phishing exploit notification to a Threat Intelligence team.
 
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png" alt-text="The workflow of a use case for an anti-phishing campaign" lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png":::
+:::image type="content" source="./media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png" alt-text="The workflow of a use case for an anti-phishing campaign" lightbox="./media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-phishing.png":::
 
 ### Invoke the use case workflow for example 1
 
 Once the story board has been approved, the next step is to invoke the use case workflow. Here's an example process for an anti-phishing campaign.
 
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png" alt-text="A detailed use case workflow for an anti-phishing campaign" lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png":::
+:::image type="content" source="./media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png" alt-text="A detailed use case workflow for an anti-phishing campaign" lightbox="./media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-phishing.png":::
 
 ## Use case example 2: Threat and vulnerability scanning
 
@@ -74,13 +74,13 @@ Another scenario where a use case could be used is for threat and vulnerability 
 
 Here's an example high-level storyboard for the Microsoft Defender Vulnerability Management of assets.
 
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png" alt-text="A use-case workflow for threat and vulnerability management" lightbox="../../media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png":::
+:::image type="content" source="./media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png" alt-text="A use-case workflow for threat and vulnerability management" lightbox="./media/integrate-microsoft-365-defender-secops/example-use-case-workflow-storyboard-tvm.png":::
 
 ### Invoke the use case workflow for example 2
 
 Here's an example process for threat and vulnerability scanning.
 
-:::image type="content" source="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png" alt-text="A detailed use case workflow for threat and vulnerability management" lightbox="../../media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png":::
+:::image type="content" source="./media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png" alt-text="A detailed use case workflow for threat and vulnerability management" lightbox="./media/integrate-microsoft-365-defender-secops/example-detailed-use-case-workflow-tvm.png":::
 
 ### Analyze the use case output and lessons learned
 
@@ -145,4 +145,4 @@ After executing the Preparation phase, organizations should invoke the remaining
 ## Next step
 
 [Step 6. Identify SOC maintenance tasks](integrate-microsoft-365-defender-secops-tasks.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -19,7 +19,7 @@ search.appverid: met150
 
 # Microsoft Defender XDR Unified role-based access control (RBAC)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -106,4 +106,4 @@ Watch the following video to see the preceding steps in action:
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW12hyh]
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

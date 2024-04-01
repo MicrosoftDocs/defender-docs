@@ -51,10 +51,10 @@ An [incident](incidents-overview.md) is a chain of processes created, commands, 
 
 Microsoft Defender XDR has many features that you can use to respond to an incident. You can navigate the incidents by selecting **View all incidents** in the Active incidents card on the Home page or through **Incidents & alerts** on the left navigation pane.
 
-:::image type="content" source="../../media/first-incident/m365d-viewincidents-home.png" alt-text="View all incidents shown in Microsoft Defender XDR home page" lightbox="../../media/first-incident/m365d-viewincidents-home.png":::
+:::image type="content" source="./media/first-incident/m365d-viewincidents-home.png" alt-text="View all incidents shown in Microsoft Defender XDR home page" lightbox="./media/first-incident/m365d-viewincidents-home.png":::
 *Figure 1. Active incidents card on the Microsoft Defender XDR home page*
 
-:::image type="content" source="../../media/first-incident/m365d-incidents.png" alt-text="Incident queue in Microsoft Defender XDR" lightbox="../../media/first-incident/m365d-incidents.png":::
+:::image type="content" source="./media/first-incident/m365d-incidents.png" alt-text="Incident queue in Microsoft Defender XDR" lightbox="./media/first-incident/m365d-incidents.png":::
 *Figure 2. Incident queue*
 
 Each incident contains automatically correlated [alerts](investigate-alerts.md) from [different detection sources](microsoft-365-defender.md#microsoft-defender-xdr-protection) and might involve various endpoints, identities, or cloud apps.
@@ -104,4 +104,4 @@ Learn how to classify incidents and alerts through this video:
 - [Respond to common attacks using incident response playbooks](/security/operations/incident-response-playbooks)
 - Learn the portal's features and functions through the [Microsoft Defender XDR Ninja training](https://techcommunity.microsoft.com/t5/microsoft-365-defender/become-a-microsoft-365-defender-ninja/ba-p/1789376)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

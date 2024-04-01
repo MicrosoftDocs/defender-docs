@@ -39,7 +39,7 @@ To help you find the information you need more quickly, Microsoft recommended ac
 
 In the Microsoft Secure Score overview page, view how points are split between these groups and what points are available. You can also get an all-up view of the total score, historical trend of your secure score with benchmark comparisons, and prioritized recommended actions that can be taken to improve your score.
 
-:::image type="content" source="../../media/secure-score/secure-score-home-page.png" alt-text="The Secure Score homepage in the Microsoft Defender portal" lightbox="../../media/secure-score/secure-score-home-page.png":::
+:::image type="content" source="./media/secure-score/secure-score-home-page.png" alt-text="The Secure Score homepage in the Microsoft Defender portal" lightbox="./media/secure-score/secure-score-home-page.png":::
 
 ## Check your current score
 
@@ -55,7 +55,7 @@ The following are scores you can add to your view of your overall score to give 
 
 This view is what it will look like if you've included all possible score views:
 
-:::image type="content" source="../../media/secure-score/secure-score-achievable.png" alt-text="Your secure score including planned score, current license score, and achievable score in the Microsoft Defender portal" lightbox="../../media/secure-score/secure-score-achievable.png":::
+:::image type="content" source="./media/secure-score/secure-score-achievable.png" alt-text="Your secure score including planned score, current license score, and achievable score in the Microsoft Defender portal" lightbox="./media/secure-score/secure-score-achievable.png":::
 
 ## Take action to improve your score
 
@@ -71,7 +71,7 @@ Ranking is based on the number of points left to achieve, implementation difficu
 
 When you select a specific recommended action, a full page flyout appears.
 
-:::image type="content" source="../../media/secure-score/secure-score-improvement-action-details.png" alt-text="Screenshot that shows the flyout of a recommended action in the Microsoft Defender portal." lightbox="../../media/secure-score/secure-score-improvement-action-details.png":::
+:::image type="content" source="./media/secure-score/secure-score-improvement-action-details.png" alt-text="Screenshot that shows the flyout of a recommended action in the Microsoft Defender portal." lightbox="./media/secure-score/secure-score-improvement-action-details.png":::
 
 To complete the action, you have a few options:
 
@@ -125,4 +125,4 @@ If you have any issues, let us know by posting in the [Security, Privacy & Compl
 - [Track your Microsoft Secure Score history and meet goals](microsoft-secure-score-history-metrics-trends.md)
 - [What's coming](microsoft-secure-score-whats-coming.md)
 - [What's new](microsoft-secure-score-whats-new.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

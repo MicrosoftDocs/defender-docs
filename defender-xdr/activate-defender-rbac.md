@@ -19,7 +19,7 @@ search.appverid: met150
 
 # Activate Microsoft Defender XDR Unified role-based access control (RBAC)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -50,14 +50,14 @@ Sign in to the [Microsoft Defender portal](https://security.microsoft.com). In t
 
 You can activate your workloads in two ways from the Permissions and roles page:
 
-:::image type="content" source="../../media/defender/m365-defender-rbac-activate-workloads1.png" alt-text="Screenshot of the activate workloads page" lightbox="../../media/defender/m365-defender-rbac-activate-workloads1.png":::
+:::image type="content" source="./media/defender/m365-defender-rbac-activate-workloads1.png" alt-text="Screenshot of the activate workloads page" lightbox="./media/defender/m365-defender-rbac-activate-workloads1.png":::
 
 1. **Activate workloads**
     - Select **Activate workloads** on the banner above the list of roles.
     - This will bring you directly to the **Activate workloads** screen.
     - You must activate each workload one by one. Once you select the individual toggle, you'll activate (or deactivate) that workload.
 
-    :::image type="content" source="../../media/defender/m365-defender-rbac-activate-workload-selection1.png" alt-text="Screenshot of the choose workloads to activate screen" lightbox="../../media/defender/m365-defender-rbac-activate-workload-selection1.png":::
+    :::image type="content" source="./media/defender/m365-defender-rbac-activate-workload-selection1.png" alt-text="Screenshot of the choose workloads to activate screen" lightbox="./media/defender/m365-defender-rbac-activate-workload-selection1.png":::
 
     > [!NOTE]
     > The **Activate workloads** button is only available when there is it at least one workload that's not active for Microsoft Defender XDR Unified RBAC.
@@ -107,4 +107,4 @@ If you deactivate a workload, the roles created and edited within Microsoft Defe
 ## Next steps
 
 - [Edit or delete roles](edit-delete-rbac-roles.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

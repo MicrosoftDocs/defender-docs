@@ -34,7 +34,7 @@ Microsoft 365 services and apps create alerts when they detect a suspicious or m
 
 Because piecing the individual alerts together to gain insight into an attack can be challenging and time-consuming, Microsoft Defender XDR automatically aggregates the alerts and their associated information into an incident.
 
-:::image type="content" source="../../media/incidents-overview/incidents.png" alt-text="How Microsoft Defender XDR correlates events from entities into an incident." lightbox="../../media/incidents-overview/incidents.png":::
+:::image type="content" source="./media/incidents-overview/incidents.png" alt-text="How Microsoft Defender XDR correlates events from entities into an incident." lightbox="./media/incidents-overview/incidents.png":::
 
 Grouping related alerts into an incident gives you a comprehensive view of an attack. For example, you can see:
 
@@ -55,7 +55,7 @@ If [enabled](m365d-enable.md), Microsoft Defender XDR can [automatically investi
 
 You manage incidents from **Incidents & alerts > Incidents** on the quick launch of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target=" blank">Microsoft Defender portal</a>. Here's an example.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="The Incidents page in the Microsoft Defender portal." lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
+:::image type="content" source="./media/incidents-queue/incidents-ss-incidents.png" alt-text="The Incidents page in the Microsoft Defender portal." lightbox="./media/incidents-queue/incidents-ss-incidents.png":::
 
 Selecting an incident name displays the entire attack story of the incident, including:
 
@@ -64,7 +64,7 @@ Selecting an incident name displays the entire attack story of the incident, inc
 
 You can view the entity details directly from the graph and act on them with response options like file delete or device isolation.
 
-:::image type="content" source="../../media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Screenshot that shows the attack story page for an incident in the Microsoft Defender portal." lightbox="../../media/incidents-overview/incidents-ss-incident-summary.png":::
+:::image type="content" source="./media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Screenshot that shows the attack story page for an incident in the Microsoft Defender portal." lightbox="./media/incidents-overview/incidents-ss-incident-summary.png":::
 
 The additional tabs for an incident are:
 
@@ -101,7 +101,7 @@ The additional tabs for an incident are:
 
 Here's an example workflow for responding to incidents in Microsoft 365 with the Microsoft Defender portal.
 
-:::image type="content" source="../../media/incidents-overview/incidents-example-workflow.png" alt-text="An example of an incident response workflow for the Microsoft Defender portal." lightbox="../../media/incidents-overview/incidents-example-workflow.png":::
+:::image type="content" source="./media/incidents-overview/incidents-example-workflow.png" alt-text="An example of an incident response workflow for the Microsoft Defender portal." lightbox="./media/incidents-overview/incidents-example-workflow.png":::
 
 On an ongoing basis, identify the highest priority incidents for analysis and resolution in the incident queue and get them ready for response. This is a combination of:
 
@@ -143,7 +143,7 @@ For more information about incident response across Microsoft products, see [thi
 
 Here's an example of security operations (SecOps) for Microsoft Defender XDR.
 
-:::image type="content" source="../../media/incidents-overview/incidents-example-operations.png" alt-text="An example of security operations for Microsoft Defender XDR" lightbox="../../media/incidents-overview/incidents-example-operations.png":::
+:::image type="content" source="./media/incidents-overview/incidents-example-operations.png" alt-text="An example of security operations for Microsoft Defender XDR" lightbox="./media/incidents-overview/incidents-example-operations.png":::
 
 Daily tasks can include:
 
@@ -190,7 +190,7 @@ Use this learning module from Microsoft Learn to understand how to use Microsoft
 
 |Training:|Investigate incidents with Microsoft Defender XDR|
 |---|---|
-|![Investigate incidents with Microsoft Defender XDR training icon.](../../media/incidents-overview/m365-defender-address-security-investigation.svg)| Microsoft Defender XDR unifies threat data from multiple services and uses AI to combine them into incidents and alerts. Learn how to minimize the time between an incident and its management for subsequent response and resolution. <p> 27 min - 6 Units |
+|![Investigate incidents with Microsoft Defender XDR training icon.](./media/incidents-overview/m365-defender-address-security-investigation.svg)| Microsoft Defender XDR unifies threat data from multiple services and uses AI to combine them into incidents and alerts. Learn how to minimize the time between an incident and its management for subsequent response and resolution. <p> 27 min - 6 Units |
 
 > [!div class="nextstepaction"]
 > [Start >](/training/modules/defender-investigate-incidents/)
@@ -218,4 +218,4 @@ Follow this table based on your security team role.
 | Security investigator or analyst (Tier 2) | <ol><li> Perform [investigations](investigate-incidents.md) of incidents from the **Incidents** page of the Microsoft Defender portal. </li><li> See these [incident response playbooks](/security/operations/incident-response-playbooks) for detailed guidance for phishing, password spray, and app consent grant attacks. </li></ol> |
 | Advanced security analyst or threat hunter (Tier 3) | <ol><li>Perform [investigations](investigate-incidents.md) of incidents from the **Incidents** page of the Microsoft Defender portal. </li><li> Track and respond to emerging threats with [threat analytics](threat-analytics.md). </li><li> Proactively hunt for threats with [advanced threat hunting](advanced-hunting-overview.md). </li><li> See these [incident response playbooks](/security/operations/incident-response-playbooks) for detailed guidance for phishing, password spray, and app consent grant attacks. |
 | SOC manager | See how to [integrate Microsoft Defender XDR into your Security Operations Center (SOC)](integrate-microsoft-365-defender-secops.md). |
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

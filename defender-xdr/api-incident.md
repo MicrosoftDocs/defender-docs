@@ -89,4 +89,4 @@ Refer to the respective method articles for more details on how to construct a r
 - [List incidents API](api-list-incidents.md)
 - [Update incident API](api-update-incidents.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

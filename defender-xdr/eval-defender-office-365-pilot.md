@@ -31,7 +31,7 @@ This article is [Step 3 of 3](eval-defender-office-365-overview.md) in the proce
 
 Use the following steps to set up and configure the pilot for Microsoft Defender for Office 365.
 
-:::image type="content" source="../../media/defender/m365-defender-office-pilot.png" alt-text="The steps for creating the pilot in the Microsoft Defender for Office 365 portal." lightbox="../../media/defender/m365-defender-office-pilot.png":::
+:::image type="content" source="./media/defender/m365-defender-office-pilot.png" alt-text="The steps for creating the pilot in the Microsoft Defender for Office 365 portal." lightbox="./media/defender/m365-defender-office-pilot.png":::
 
 - [Step 1: Create pilot groups](#step-1-create-pilot-groups)
 - [Step 2: Configure protection](#step-2-configure-protection)
@@ -48,19 +48,19 @@ Distribution groups can be created and defined directly in Exchange Online or sy
 1. Sign in to the Exchange Admin Center (EAC) at <https://admin.exchange.microsoft.com> using an account that has been granted Recipient Administrator role or been delegated group management permissions.
 2. Go to **Recipients** \> **Groups**.
 
-   :::image type="content" source="../../media/mdo-eval/1_mdo-eval-pilot.png" alt-text=" The Groups menu item to be clicked." lightbox="../../media/mdo-eval/1_mdo-eval-pilot.png":::
+   :::image type="content" source="./media/mdo-eval/1_mdo-eval-pilot.png" alt-text=" The Groups menu item to be clicked." lightbox="./media/mdo-eval/1_mdo-eval-pilot.png":::
 
-3. On the **Groups** page, select ![Add a group icon.](../../media/m365-cc-sc-add-internal-icon.png) **Add a group**.
+3. On the **Groups** page, select ![Add a group icon.](./media/m365-cc-sc-add-internal-icon.png) **Add a group**.
 
-   :::image type="content" source="../../media/mdo-eval/2_mdo-eval-pilot-add-group.png" alt-text="The Add a group option to be clicked." lightbox="../../media/mdo-eval/2_mdo-eval-pilot-add-group.png":::
+   :::image type="content" source="./media/mdo-eval/2_mdo-eval-pilot-add-group.png" alt-text="The Add a group option to be clicked." lightbox="./media/mdo-eval/2_mdo-eval-pilot-add-group.png":::
 
 4. For group type, select **Distribution**, and then click **Next**.
 
-   :::image type="content" source="../../media/mdo-eval/3-mdo-eval-pilot-group-type.png" alt-text=" The Choose a group type section." lightbox="../../media/mdo-eval/3-mdo-eval-pilot-group-type.png":::
+   :::image type="content" source="./media/mdo-eval/3-mdo-eval-pilot-group-type.png" alt-text=" The Choose a group type section." lightbox="./media/mdo-eval/3-mdo-eval-pilot-group-type.png":::
 
 5. Give the group a **Name** and optional **Description**, and then click Next.
 
-   :::image type="content" source="../../media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png" alt-text="The Set up the basics section." lightbox="../../media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png":::
+   :::image type="content" source="./media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png" alt-text="The Set up the basics section." lightbox="./media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png":::
 
 6. On the remaining pages, assign an owner, add members to the group, set the email address, join-depart restrictions, and other settings.
 
@@ -120,4 +120,4 @@ Return to the overview for [Evaluate Microsoft Defender for Office 365](eval-def
 
 Return to the overview for [Evaluate and pilot Microsoft Defender XDR](eval-overview.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

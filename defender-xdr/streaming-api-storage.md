@@ -23,7 +23,7 @@ ms.date: 02/08/2023
 
 # Configure Microsoft Defender XDR to stream Advanced Hunting events to your Storage account
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
@@ -31,7 +31,7 @@ ms.date: 02/08/2023
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!include[Prerelease information](../includes/prerelease.md)]
 
 ## Before you begin
 
@@ -122,4 +122,4 @@ For more information, see [Monitor destinations - Azure Monitor | Microsoft Docs
 - [Microsoft Defender XDR Streaming API](streaming-api.md)
 - [Stream Microsoft Defender XDR events to your Azure storage account](streaming-api-storage.md)
 - [Azure Storage Account documentation](/azure/storage/common/storage-account-overview)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

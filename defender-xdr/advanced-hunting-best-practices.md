@@ -36,7 +36,7 @@ Depending on its size, each tenant has access to a set amount of CPU resources a
 
 After running your query, you can see the execution time and its resource usage (Low, Medium, High). High indicates that the query took more resources to run and could be improved to return results more efficiently.
 
-:::image type="content" source="../../media/resource-usage.png" alt-text="The query details under **Results** tab in the Microsoft Defender portal" lightbox="../../media/resource-usage.png":::
+:::image type="content" source="./media/resource-usage.png" alt-text="The query details under **Results** tab in the Microsoft Defender portal" lightbox="./media/resource-usage.png":::
 
 Customers who run multiple queries regularly should track consumption and apply the optimization guidance in this article to minimize disruption resulting from exceeding quotas or usage parameters.
 
@@ -279,4 +279,4 @@ To learn about all supported parsing functions, [read about Kusto string functio
 - [Handle advanced hunting errors](advanced-hunting-errors.md)
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

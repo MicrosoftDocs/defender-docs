@@ -85,4 +85,4 @@ The alerts for Defender for Cloud are turned on by default. To maintain your sub
 2. In **Alert service settings**, look for **Microsoft Defender for Cloud alerts**.
 3. Select **No alerts** to turn off all Defender for Cloud alerts. Selecting this option stops the ingestion of new Defender for Cloud alerts to the portal. Alerts previously ingested remain in an alert or incident page.
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

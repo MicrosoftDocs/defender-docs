@@ -18,7 +18,7 @@ ms.date: 07/25/2023
 
 # Streaming API
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2118804)
@@ -27,7 +27,7 @@ ms.date: 07/25/2023
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview?view=graph-rest-1.0&preserve-view=true).
 > If you're using Microsoft Defender for Business, see [Use the streaming API (preview) with Microsoft Defender for Business](../defender-business/mdb-streaming-api.md).
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!include[Prerelease information](../includes/prerelease.md)]
 
 ## Stream Advanced Hunting events to Event Hubs and/or Azure storage account.
 
@@ -53,4 +53,4 @@ Watch this short video to learn how to set up the streaming API to ship event in
 - [Overview of Advanced Hunting](../defender/advanced-hunting-overview.md)
 - [Azure Event Hubs documentation](/azure/event-hubs/)
 - [Azure Storage Account documentation](/azure/storage/common/storage-account-overview)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

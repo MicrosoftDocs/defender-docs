@@ -42,7 +42,7 @@ In Microsoft Defender XDR, related alerts are aggregated together to form [incid
 
 The **Alerts queue** shows the current set of alerts. You get to the alerts queue from **Incidents & alerts > Alerts** on the quick launch of the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-queue.png" alt-text="The Alerts section in the Microsoft Defender portal" lightbox="../../media/investigate-alerts/alerts-ss-alerts-queue.png":::
+:::image type="content" source="./media/investigate-alerts/alerts-ss-alerts-queue.png" alt-text="The Alerts section in the Microsoft Defender portal" lightbox="./media/investigate-alerts/alerts-ss-alerts-queue.png":::
 
 Alerts from different Microsoft security solutions like Microsoft Defender for Endpoint, Microsoft Defender for Office 365, and Microsoft Defender XDR appear here.
 
@@ -50,7 +50,7 @@ By default, the alerts queue in the Microsoft Defender portal displays the new a
 
 From the default alerts queue, you can select **Filter** to see a **Filter** pane, from which you can specify a subset of the alerts. Here's an example.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-filter.png" alt-text="The Filters section in the Microsoft Defender portal." lightbox="../../media/investigate-alerts/alerts-ss-alerts-filter.png":::
+:::image type="content" source="./media/investigate-alerts/alerts-ss-alerts-filter.png" alt-text="The Filters section in the Microsoft Defender portal." lightbox="./media/investigate-alerts/alerts-ss-alerts-filter.png":::
 
 You can filter alerts according to these criteria:
 
@@ -81,7 +81,7 @@ You'll need to have any of the following roles to access Microsoft Defender for 
 
 To see the main alert page, select the name of the alert. Here's an example.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-main.png" alt-text="Screenshot showing the details of an alert in the Microsoft Defender portal" lightbox="../../media/investigate-alerts/alerts-ss-alerts-main.png":::
+:::image type="content" source="./media/investigate-alerts/alerts-ss-alerts-main.png" alt-text="Screenshot showing the details of an alert in the Microsoft Defender portal" lightbox="./media/investigate-alerts/alerts-ss-alerts-main.png":::
 
 You can also select the **Open the main alert page** action from the **Manage alert** pane.
 
@@ -120,7 +120,7 @@ Microsoft Defender XDR alerts may come from solutions like Microsoft Defender fo
 
 2. From the list, select **Alert service settings**, and then configure your **Microsoft Entra ID Protection** alert service.
 
-   :::image type="content" source="../../media/investigate-alerts/alerts-ss-entra-alert.png" alt-text="Screenshot of Microsoft Entra ID Protection alerts setting in the Microsoft Defender portal." lightbox="../../media/investigate-alerts/alerts-ss-entra-alert.png":::
+   :::image type="content" source="./media/investigate-alerts/alerts-ss-entra-alert.png" alt-text="Screenshot of Microsoft Entra ID Protection alerts setting in the Microsoft Defender portal." lightbox="./media/investigate-alerts/alerts-ss-entra-alert.png":::
 
 By default, only the most relevant alerts for the security operation center are enabled. If you want to get all Microsoft Entra IP risk detections, you can change it in the **Alert service settings** section.
 
@@ -152,7 +152,7 @@ Once you've selected an entity of interest, the details page changes to display 
 
 To manage an alert, select **Manage alert** in the summary details section of the alert page. For a single alert, here's an example of the **Manage alert** pane.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-manage.png" alt-text="Screenshot of the Manage alert section in the Microsoft Defender portal" lightbox="../../media/investigate-alerts/alerts-ss-alerts-manage.png":::
+:::image type="content" source="./media/investigate-alerts/alerts-ss-alerts-manage.png" alt-text="Screenshot of the Manage alert section in the Microsoft Defender portal" lightbox="./media/investigate-alerts/alerts-ss-alerts-manage.png":::
 
 The **Manage alert** pane allows you to view or specify:
 
@@ -175,19 +175,19 @@ The **Manage alert** pane allows you to view or specify:
 
 To manage a *set of alerts similar to a specific alert*, select **View similar alerts** in the **INSIGHT** box in the summary details section of the alert page.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-manage-select.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-manage-select.png" alt-text="Screenshot of selecting an alert in the Microsoft Defender portal":::
+:::image type="content" source="./media/investigate-alerts/alerts-ss-alerts-manage-select.png" lightbox="./media/investigate-alerts/alerts-ss-alerts-manage-select.png" alt-text="Screenshot of selecting an alert in the Microsoft Defender portal":::
 
 From the **Manage alerts** pane, you can then classify all of the related alerts at the same time. Here's an example.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-select-related.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-select-related.png" alt-text="Screenshot of managing related alerts in the Microsoft Defender portal":::
+:::image type="content" source="./media/investigate-alerts/alerts-ss-alerts-select-related.png" lightbox="./media/investigate-alerts/alerts-ss-alerts-select-related.png" alt-text="Screenshot of managing related alerts in the Microsoft Defender portal":::
 
 If similar alerts were already classified in the past, you can save time by using Microsoft Defender XDR recommendations to learn how the other alerts were resolved. From the summary details section, select **Recommendations**.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-recommendations.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-recommendations.png" alt-text="Screenshot of an example of selecting recommendations for an alert":::
+:::image type="content" source="./media/investigate-alerts/alerts-ss-alerts-recommendations.png" lightbox="./media/investigate-alerts/alerts-ss-alerts-recommendations.png" alt-text="Screenshot of an example of selecting recommendations for an alert":::
 
 The **Recommendations** tab provides next-step actions and advice for investigation, remediation, and prevention. Here's an example.
 
-:::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-recommendations-example.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-recommendations-example.png" alt-text="Screenshot of an example of alert recommendations":::
+:::image type="content" source="./media/investigate-alerts/alerts-ss-alerts-recommendations-example.png" lightbox="./media/investigate-alerts/alerts-ss-alerts-recommendations-example.png" alt-text="Screenshot of an example of alert recommendations":::
 
 ## Tune an alert
 
@@ -208,15 +208,15 @@ There are two ways to tune an alert in Microsoft Defender XDR. To tune an alert 
 
 1. Go to Settings. On the left pane, go to **Rules** and select **Alert tuning**.
 
-    :::image type="content" source="../../media/investigate-alerts/alert-tuning-settings.png" lightbox="../../media/investigate-alerts/alert-tuning-settings.png" alt-text="Screenshot of Alert tuning option in Microsoft Defender XDR's Settings page.":::
+    :::image type="content" source="./media/investigate-alerts/alert-tuning-settings.png" lightbox="./media/investigate-alerts/alert-tuning-settings.png" alt-text="Screenshot of Alert tuning option in Microsoft Defender XDR's Settings page.":::
     
     Select **Add new rule** to tune a new alert. You can also edit an existing rule in this view by selecting a rule from the list.
 
-     :::image type="content" source="../../media/investigate-alerts/alert-tuning-add-new.png" lightbox="../../media/investigate-alerts/alert-tuning-add-new.png" alt-text="Screenshot of adding new rules in the Alert tuning page.":::
+     :::image type="content" source="./media/investigate-alerts/alert-tuning-add-new.png" lightbox="./media/investigate-alerts/alert-tuning-add-new.png" alt-text="Screenshot of adding new rules in the Alert tuning page.":::
 
 2. In the **Tune alert** pane, you can select service sources where the rule applies in the dropdown menu under **Service sources**.
 
-     :::image type="content" source="../../media/investigate-alerts/alert-tuning-select-service.png" lightbox="../../media/investigate-alerts/alert-tuning-select-service.png" alt-text="Screenshot of service source dropdown menu in Tune an alert page.":::
+     :::image type="content" source="./media/investigate-alerts/alert-tuning-select-service.png" lightbox="./media/investigate-alerts/alert-tuning-select-service.png" alt-text="Screenshot of service source dropdown menu in Tune an alert page.":::
 
    > [!NOTE]
    > Only services that the user has permission to are shown.
@@ -225,7 +225,7 @@ There are two ways to tune an alert in Microsoft Defender XDR. To tune an alert 
 
    IOCs are indicators such as files, processes, scheduled tasks, and other evidence types that trigger the alert.
 
-     :::image type="content" source="../../media/investigate-alerts/alert-tuning-choose-ioc2.png" lightbox="../../media/investigate-alerts/alert-tuning-choose-ioc2.png" alt-text="Screenshot of the IOC menu in Tune an alert page.":::
+     :::image type="content" source="./media/investigate-alerts/alert-tuning-choose-ioc2.png" lightbox="./media/investigate-alerts/alert-tuning-choose-ioc2.png" alt-text="Screenshot of the IOC menu in Tune an alert page.":::
 
    To set multiple rule conditions, use **AND**, **OR**, and grouping options to build relationship between these multiple 'evidence types' that cause the alert.
 
@@ -249,7 +249,7 @@ There are two ways to tune an alert in Microsoft Defender XDR. To tune an alert 
    > [!NOTE]
    > The **alert title (Name)** is based on the **alert type (IoaDefinitionId)**, which decides the alert title. Two alerts that have the same alert type can change to a different alert title.
 
-     :::image type="content" source="../../media/investigate-alerts/alert-tuning-choose-action2.png" lightbox="../../media/investigate-alerts/alert-tuning-choose-action2.png" alt-text="Screenshot of the Action menu in the Tune an alert page.":::
+     :::image type="content" source="./media/investigate-alerts/alert-tuning-choose-action2.png" lightbox="./media/investigate-alerts/alert-tuning-choose-action2.png" alt-text="Screenshot of the Action menu in the Tune an alert page.":::
 
 To tune an alert from the **Alerts** page:
 
@@ -257,41 +257,41 @@ To tune an alert from the **Alerts** page:
 
     You can tune an alert through the **Tune alert** pane that automatically opens on the right side of the alert details page.
 
-   :::image type="content" source="../../media/investigate-alerts/alert-tuning-tune-pane2.png" lightbox="../../media/investigate-alerts/alert-tuning-tune-pane2.png" alt-text="Screenshot of Tune an alert pane within an Alert page.":::
+   :::image type="content" source="./media/investigate-alerts/alert-tuning-tune-pane2.png" lightbox="./media/investigate-alerts/alert-tuning-tune-pane2.png" alt-text="Screenshot of Tune an alert pane within an Alert page.":::
 
 2. Select the conditions where the alert applies in the **Alert types** section. Select **Only this alert type** to apply the rule on the selected alert.
 
     However, to apply the rule on any alert type that meets rule conditions select **Any alert type based on IOC conditions**.
 
-   :::image type="content" source="../../media/investigate-alerts/alert-tuning-alert-types.png" lightbox="../../media/investigate-alerts/alert-tuning-alert-types.png" alt-text="Screenshot of Tune an alert pane highlighting the Alert types section.":::
+   :::image type="content" source="./media/investigate-alerts/alert-tuning-alert-types.png" lightbox="./media/investigate-alerts/alert-tuning-alert-types.png" alt-text="Screenshot of Tune an alert pane highlighting the Alert types section.":::
 
 3. Filling out the **Scope** section is required if the alert tuning is Defender for Endpoint-specific. Select whether the rule applies to all devices in the organization or for a specific device.
 
    > [!NOTE]
    > Applying the rule to all organization requires an administrative role permission.
 
-   :::image type="content" source="../../media/investigate-alerts/alert-tuning-scope.png" lightbox="../../media/investigate-alerts/alert-tuning-scope.png" alt-text="Screenshot of Tune an alert pane highlighting the Scope section.":::
+   :::image type="content" source="./media/investigate-alerts/alert-tuning-scope.png" lightbox="./media/investigate-alerts/alert-tuning-scope.png" alt-text="Screenshot of Tune an alert pane highlighting the Scope section.":::
 
 4. Add conditions in the **Conditions** section to stop the alert when triggered by a specific IOC or by any IOC added in the alert. You can select a specific device, multiple devices, device groups, the entire organization or by user in this section.
 
    > [!NOTE]
    > You must have Admin permission when the **Scope** is set only for User. Admin permission is not required when the **Scope** is set for **User** together with **Device, Device groups**.
 
-   :::image type="content" source="../../media/investigate-alerts/alert-tuning-conditions.png" lightbox="../../media/investigate-alerts/alert-tuning-conditions.png" alt-text="Screenshot of Tune an alert pane highlighting the Conditions section.":::
+   :::image type="content" source="./media/investigate-alerts/alert-tuning-conditions.png" lightbox="./media/investigate-alerts/alert-tuning-conditions.png" alt-text="Screenshot of Tune an alert pane highlighting the Conditions section.":::
 
 5. Add IOCs where the rule applies in the **IOCs** section. You can select **Any IOC** to stop the alert no matter what 'evidence' has caused the alert.
 
-   :::image type="content" source="../../media/investigate-alerts/alert-tuning-any-ioc.png" lightbox="../../media/investigate-alerts/alert-tuning-any-ioc.png" alt-text="Screenshot of Tune an alert pane highlighting the IOCs section.":::
+   :::image type="content" source="./media/investigate-alerts/alert-tuning-any-ioc.png" lightbox="./media/investigate-alerts/alert-tuning-any-ioc.png" alt-text="Screenshot of Tune an alert pane highlighting the IOCs section.":::
 
 6. Alternatively, you can select **Auto fill all alert 7 related IOCs** in the **IOCs** section to add all alert-related evidence types and their properties at once in the **Conditions** section.
 
-   :::image type="content" source="../../media/investigate-alerts/alert-tuning-auto-fill-conditions.png" alt-text="Screenshot of auto fill all alert related IOCs." lightbox="../../media/investigate-alerts/alert-tuning-auto-fill-conditions.png":::
+   :::image type="content" source="./media/investigate-alerts/alert-tuning-auto-fill-conditions.png" alt-text="Screenshot of auto fill all alert related IOCs." lightbox="./media/investigate-alerts/alert-tuning-auto-fill-conditions.png":::
 
 7. In the **Action** section, take the appropriate action of either **Hide alert** or **Resolve alert**.
 
    Enter **Name**, **Comment**,  and click **Save**.
 
-   :::image type="content" source="../../media/investigate-alerts/alert-tuning-tune-pane-action.png" alt-text="Screenshot of Action section in the Tune alert pane." lightbox="../../media/investigate-alerts/alert-tuning-tune-pane-action.png":::
+   :::image type="content" source="./media/investigate-alerts/alert-tuning-tune-pane-action.png" alt-text="Screenshot of Action section in the Tune alert pane." lightbox="./media/investigate-alerts/alert-tuning-tune-pane-action.png":::
 
 8. **Prevent the IOCs from being blocked in the future:**
 
@@ -361,4 +361,4 @@ As needed for in-process incidents, continue your [investigation](investigate-in
 - [Investigate data loss prevention alerts in Defender](dlp-investigate-alerts-defender.md)
 - [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

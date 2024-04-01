@@ -155,7 +155,7 @@ Breaches also happen through various devices like phones and tablets that connec
 
 Microsoft Defender XDR's built-in threat intelligence capabilities and hunting aid incident response teams in performing proactive protection against emerging threats and attacks. You have direct access to the latest information on emerging threats and attacks through the portal's [Threat analytics](threat-analytics.md).
 
-:::image type="content" source="../../media/first-incident/m365d-threat-analytics.png" alt-text="Threat analytics home page" lightbox="../../media/first-incident/m365d-threat-analytics.png":::
+:::image type="content" source="./media/first-incident/m365d-threat-analytics.png" alt-text="Threat analytics home page" lightbox="./media/first-incident/m365d-threat-analytics.png":::
 
 Use the intelligence in Threat analytics to deep dive into new threats with the following video:
 
@@ -163,7 +163,7 @@ Use the intelligence in Threat analytics to deep dive into new threats with the 
 
 Proactively hunt for threats within the organization using the portal's built-in [advanced hunting](advanced-hunting-overview.md) capability.
 
-:::image type="content" source="../../media/first-incident/m365d-advancedhunting.png" alt-text="Advanced hunting page in Microsoft Defender XDR" lightbox="../../media/first-incident/m365d-advancedhunting.png":::
+:::image type="content" source="./media/first-incident/m365d-advancedhunting.png" alt-text="Advanced hunting page in Microsoft Defender XDR" lightbox="./media/first-incident/m365d-advancedhunting.png":::
 
 The following resources provide more information on how to use advanced hunting:
 
@@ -193,4 +193,4 @@ Collaborate with Microsoft's experts for incident response and threat hunting to
 - [Investigate alerts](investigate-alerts.md)
 - Learn the portal's features and functions through the [Microsoft Defender XDR Ninja training](https://techcommunity.microsoft.com/t5/microsoft-365-defender/become-a-microsoft-365-defender-ninja/ba-p/1789376)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

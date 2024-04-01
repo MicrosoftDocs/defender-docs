@@ -31,7 +31,7 @@ ms.date: 08/04/2022
 **Applies to:**
 - Microsoft Defender XDR
 
-You can find the **advanced hunting** page by going to the left navigation bar in Microsoft Defender XDR and selecting **Hunting** > **Advanced hunting**. If the navigation bar is collapsed, select the hunting icon ![hunting icon](../../media/guided-hunting/hunting-icon.png).
+You can find the **advanced hunting** page by going to the left navigation bar in Microsoft Defender XDR and selecting **Hunting** > **Advanced hunting**. If the navigation bar is collapsed, select the hunting icon ![hunting icon](./media/guided-hunting/hunting-icon.png).
 
 In the **advanced hunting** page, two modes are supported:
 
@@ -53,13 +53,13 @@ When you open the advanced hunting page for the first time after guided hunting 
 
 To take the tour, select **Take tour** when this banner appears:
 
-[![banner inviting user to take the tour](../../media/guided-hunting/1-guided-hunting-banner-tb.png)](../../media/guided-hunting/1-guided-hunting-banner.png#lightbox)
+[![banner inviting user to take the tour](./media/guided-hunting/1-guided-hunting-banner-tb.png)](./media/guided-hunting/1-guided-hunting-banner.png#lightbox)
 
 Follow the blue teaching bubbles that appear throughout the page and select **Next** to move from one step to the next.
 
 You can take the tour again at any time by going to **Help resources** > **Learn more** and selecting **Take the tour**.
 
-![Screenshot of help resources](../../media/guided-hunting/help-resources.png)
+![Screenshot of help resources](./media/guided-hunting/help-resources.png)
 
 You can then start building your query to hunt for threats. The following articles can help you get the most out of hunting in guided mode:
 
@@ -88,4 +88,4 @@ We recommend going through these steps to quickly get started with advanced hunt
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Build hunting queries using guided mode](advanced-hunting-query-builder.md)
 - [Learn the query language](advanced-hunting-query-language.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

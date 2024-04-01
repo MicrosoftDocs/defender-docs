@@ -73,4 +73,4 @@ Each identified threat includes an analyst report, a comprehensive analysis of t
 
 For more information, see [Threat analytics in Microsoft Defender XDR](threat-analytics.md).
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

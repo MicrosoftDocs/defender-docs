@@ -63,11 +63,11 @@ The left navigation, or quick launch bar, will look familiar. However, there are
 
 With the unified Microsoft Defender XDR solution, you can stitch together the threat signals and determine the full scope and impact of the threat, and how it's currently impacting the organization.
 
-![The The Microsoft Defender portal converged experience.](../../media/mdo-m36d-nav-collapsed.png)
+![The The Microsoft Defender portal converged experience.](./media/mdo-m36d-nav-collapsed.png)
 
 Defender for Office 365 safeguards your organization against malicious threats posed by email messages, links (URLs), and collaboration tools.
 
-![The Defender for Office 365 portal.](../../media/mdo-m365d-nav.png)
+![The Defender for Office 365 portal.](./media/mdo-m365d-nav.png)
 
 ### Incidents and alerts
 
@@ -76,7 +76,7 @@ Brings together incident and alert management across your email, devices, and id
 - [Learn more about Investigations](incidents-overview.md)
 - [Learn more about managing alerts](/windows/security/threat-protection/microsoft-defender-atp/review-alerts)
 
-![Alerts and Actions quick launch bar in the Microsoft Defender portal.](../../media/m365d-incident-nav.png)
+![Alerts and Actions quick launch bar in the Microsoft Defender portal.](./media/m365d-incident-nav.png)
 
 ### Hunting
 
@@ -108,7 +108,7 @@ Learn more about how to [track and respond to emerging threats with threat analy
 
 Track and investigate threats to your users' email, track campaigns, and more. If you've used the Security & Compliance Center, this will be familiar.
 
-![The quick launch menu for Email & collab, on the left navigation pane in the Microsoft Defender portal.](../../media/mdo-m365d-nav.png)
+![The quick launch menu for Email & collab, on the left navigation pane in the Microsoft Defender portal.](./media/mdo-m365d-nav.png)
   
 #### Email entity page
 
@@ -118,7 +118,7 @@ The [Email entity page](../office-365-security/mdo-email-entity-page.md) *unifie
 
 View reports, change your settings, and modify user roles.
 
-![The quick launch menu for The Microsoft Defender portal permissions and reporting, on the left navigation pane in the Microsoft Defender portal.](../../media/m365d-settings-nav.png)
+![The quick launch menu for The Microsoft Defender portal permissions and reporting, on the left navigation pane in the Microsoft Defender portal.](./media/m365d-settings-nav.png)
   
 > [!NOTE]
 > For Defender for Office 365 users, you can now *manage and rotate* DKIM keys in The Microsoft Defender portal at <https://security.microsoft.com/authentication?viewid=DKIM>.
@@ -170,4 +170,4 @@ Also included is a link to the Security & Compliance Center for comparison. The 
 - [Custom detection rules](/microsoft-365/security/defender-endpoint/custom-detection-rules)
 - [Create a phishing attack simulation](../office-365-security/attack-simulation-training-simulations.md) and [create a payload for training your people](../office-365-security/attack-simulation-training-payloads.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -66,4 +66,4 @@ One of the best ways to learn is by configuring and testing Microsoft Defender X
 ## Simulating an attack
 
 To test your security staff on their ability to detect and respond to a cyberattack, use a simulated attack. See [Simulate attacks with the Microsoft Defender portal](eval-defender-investigate-respond-simulate-attack.md#simulate-attacks-with-the-microsoft-365-defender-portal) for more information. 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

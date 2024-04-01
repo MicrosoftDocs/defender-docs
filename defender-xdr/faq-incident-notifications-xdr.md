@@ -66,4 +66,4 @@ The following section lists down questions your SOC team might have regarding th
 
 [Managed detection and response](managed-detection-and-response-xdr.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

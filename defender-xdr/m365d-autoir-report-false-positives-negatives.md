@@ -66,4 +66,4 @@ If a remediation action was taken on an entity (such as a device or an email mes
 
 - [View the details and results of an automated investigation](m365d-autoir-results.md)
 - [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](advanced-hunting-overview.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

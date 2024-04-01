@@ -53,7 +53,7 @@ Business operation disruptions are likely when responding to a ransomware attack
 
 Here's the qualitative relationship of the impact of a ransomware attack and your time to respond for no detection vs. proactive detection and response.
 
-![The qualitative relationship of the impact of a ransomware attack and your time to respond for no detection vs. proactive detection and response, showing the impact to your business reduces, the quicker you respond.](../../media/defender/playbook-detecting-ransomware-m365-defender-qualitative-diagram.png)
+![The qualitative relationship of the impact of a ransomware attack and your time to respond for no detection vs. proactive detection and response, showing the impact to your business reduces, the quicker you respond.](./media/defender/playbook-detecting-ransomware-m365-defender-qualitative-diagram.png)
 
 ### Proactive detection via common malware tools and techniques
 
@@ -324,4 +324,4 @@ As part of your SecOps team's ongoing tool and process best practices and securi
 - Update the set of operational tasks for ransomware detection.
 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

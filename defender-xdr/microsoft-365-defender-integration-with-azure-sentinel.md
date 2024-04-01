@@ -41,7 +41,7 @@ Watch this short overview of Microsoft Sentinel integration with Microsoft Defen
 
 Here's how it works.
 
-:::image type="content" source="../../media/microsoft-365-defender-integration-with-azure-sentinel/microsoft-365-defender-integration-with-azure-sentinel.png" alt-text="The flow and sharing of incident data for the Microsoft Defender XDR and Microsoft Sentinel portals" lightbox="../../media/microsoft-365-defender-integration-with-azure-sentinel/microsoft-365-defender-integration-with-azure-sentinel.png":::
+:::image type="content" source="./media/microsoft-365-defender-integration-with-azure-sentinel/microsoft-365-defender-integration-with-azure-sentinel.png" alt-text="The flow and sharing of incident data for the Microsoft Defender XDR and Microsoft Sentinel portals" lightbox="./media/microsoft-365-defender-integration-with-azure-sentinel/microsoft-365-defender-integration-with-azure-sentinel.png":::
 
 ## Next steps
 
@@ -52,4 +52,4 @@ Here's how it works.
 
 - [Overview of incidents in Microsoft Defender XDR](incidents-overview.md)
 - [Investigate incidents with Microsoft Sentinel](/azure/sentinel/tutorial-investigate-cases)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

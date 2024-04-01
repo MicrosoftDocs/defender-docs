@@ -40,7 +40,7 @@ This article includes guidance for both methods.
 
 Use the following steps to set up Microsoft Defender for Cloud Apps.
 
-:::image type="content" source="../../media/defender/m365-defender-mcas-eval-enable-steps.png" alt-text="The steps to enable Microsoft Microsoft Defender for Cloud Apps in the Microsoft Defender evaluation environment" lightbox="../../media/defender/m365-defender-mcas-eval-enable-steps.png":::
+:::image type="content" source="./media/defender/m365-defender-mcas-eval-enable-steps.png" alt-text="The steps to enable Microsoft Microsoft Defender for Cloud Apps in the Microsoft Defender evaluation environment" lightbox="./media/defender/m365-defender-mcas-eval-enable-steps.png":::
 
 - [Step 1. Connect to the Defender for Cloud Apps portal](#step-1)
 - [Step 2. Integrate with Microsoft Defender for Endpoint](#step-2)
@@ -97,4 +97,4 @@ Step 3 of 3: [Pilot Microsoft Defender for Cloud Apps](eval-defender-mcas-pilot.
 Return to the overview for [Evaluate Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)
 
 Return to the overview for [Evaluate and pilot Microsoft Defender XDR](eval-overview.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

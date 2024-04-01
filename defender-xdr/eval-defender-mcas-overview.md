@@ -30,11 +30,11 @@ This article outlines the process to enable and pilot Microsoft Defender for Clo
 
 Use the following steps to enable and pilot Microsoft Defender for Cloud Apps.
 
-:::image type="content" source="../../media/defender/m365-defender-office-eval-steps.png" alt-text="The steps for adding Microsoft Defender for Office to the Defender evaluation environment" lightbox="../../media/defender/m365-defender-office-eval-steps.png":::
+:::image type="content" source="./media/defender/m365-defender-office-eval-steps.png" alt-text="The steps for adding Microsoft Defender for Office to the Defender evaluation environment" lightbox="./media/defender/m365-defender-office-eval-steps.png":::
 
 |Step  |Description  |
 |---------|---------|
 |[Review architecture requirements and key concepts](eval-defender-mcas-architecture.md)    | Understand the Defender for Cloud Apps architecture and how it integrates with Microsoft Defender XDR, Microsoft Defender for Endpoint, and Microsoft Entra ID.        |
 |[Enable the evaluation environment](eval-defender-mcas-enable-eval.md)     | Connect to the portal, configure integration with Defender for Identity and/or your organization's network devices, and begin to view and manage cloud apps.         |
 |[Set up the pilot](eval-defender-mcas-pilot.md)    | Scope your deployment to certain user groups, configure Conditional Access App Control, and try out tutorials for protecting your environment.       |
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

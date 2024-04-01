@@ -24,7 +24,7 @@ ms.date: 02/28/2024
 
 # Start using Microsoft Defender Experts for Hunting
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -39,7 +39,7 @@ If you're new to Microsoft Defender XDR and Defender Experts for Hunting:
 3. The Microsoft Defender XDR quick tour will get you familiar with the security suite, where the capabilities are and how important they are. Select **Take a quick tour**.
 4. Read the short descriptions about what the Microsoft Defender Experts service is and the capabilities it provides. Select **Next**. You'll see the welcome page:
 
-![Screenshot of the Microsoft Defender XDR welcome page with a card for the Defender Experts for Hunting service.](../../media/mte/defenderexperts/start-using-defender-experts-for-hunting.png)
+![Screenshot of the Microsoft Defender XDR welcome page with a card for the Defender Experts for Hunting service.](./media/mte/defenderexperts/start-using-defender-experts-for-hunting.png)
 
 ## Receive Defender Experts Notifications
 
@@ -52,7 +52,7 @@ The Defender Experts Notifications service includes:
 
 Refer to the following screenshot to see a sample Defender Experts Notification:
 
-![Screenshot of a Defender Experts Notification in Microsoft Defender XDR. A Defender Expert Notification includes a title that describes the threat or activity observed, an executive summary, and list of recommendations.](../../media/mte/defenderexperts/receive-defender-experts-notification.png)
+![Screenshot of a Defender Experts Notification in Microsoft Defender XDR. A Defender Expert Notification includes a title that describes the threat or activity observed, an executive summary, and list of recommendations.](./media/mte/defenderexperts/receive-defender-experts-notification.png)
 
 ### Where you'll find Defender Experts Notifications
 
@@ -68,7 +68,7 @@ You can receive Defender Experts Notifications from Defender Experts through the
 
 You can filter your incidents and alerts if you want to only see the Defender Experts Notifications amongst the many alerts. To do so:
 
-1. On the navigation menu, go to **Incidents & alerts** > **Incidents** > select the ![Filter icon](../../media/mte/defenderexperts/filter.png) icon.
+1. On the navigation menu, go to **Incidents & alerts** > **Incidents** > select the ![Filter icon](./media/mte/defenderexperts/filter.png) icon.
 2. Scroll down to the **Tags** field > select the **Defender Experts** check box.
 3. Select **Apply**.
 
@@ -88,7 +88,7 @@ You can generate a sample Defender Experts Notification to start experiencing th
 
 A sample Defender Experts Notification shows up in your **Incidents** page with the title _Defender Experts: Test Notification from Microsoft Defender Experts_. The [contents](#receive-defender-experts-notifications) of the notification are placeholder texts, while the other elements such as alerts are randomly generated from events present in your tenant and aren't actually impacted.
 
-:::image type="content" source="../../media/mte/defenderexperts/sample-den-dexh.png" alt-text="Screenshot of Sample DEN in Defender Experts for Hunting." lightbox="../../media/mte/defenderexperts/sample-den-dexh.png":::
+:::image type="content" source="./media/mte/defenderexperts/sample-den-dexh.png" alt-text="Screenshot of Sample DEN in Defender Experts for Hunting." lightbox="./media/mte/defenderexperts/sample-den-dexh.png":::
 
 **To generate a sample notification:**
 
@@ -96,7 +96,7 @@ A sample Defender Experts Notification shows up in your **Incidents** page with 
 2. Select **Generate a sample notification**. A green status message appears, confirming that your sample notification is ready for review.
 3. Under **Recently generated Defender Experts Notification**, select a link from the list to view its corresponding generated sample notification. The most recent sample appears on the top of the list. Selecting a link redirects you to the **Incidents** page.
 
-:::image type="content" source="../../media/mte/defenderexperts/sample-den-links-dexh.png" alt-text="Screenshot of Sample DEN links." lightbox="../../media/mte/defenderexperts/sample-den-links-dexh.png":::
+:::image type="content" source="./media/mte/defenderexperts/sample-den-links-dexh.png" alt-text="Screenshot of Sample DEN links." lightbox="./media/mte/defenderexperts/sample-den-links-dexh.png":::
 
 ## Collaborate with experts on demand
 
@@ -113,19 +113,19 @@ The option to **Ask Defender Experts** is available in several places throughout
 
 - ***Device page actions menu***
 
-![Screenshot of the Ask Defender Experts menu option in the Device page action menu in the Microsoft Defender portal.](../../media/mte/defenderexperts/device-page-actions-menu.png)
+![Screenshot of the Ask Defender Experts menu option in the Device page action menu in the Microsoft Defender portal.](./media/mte/defenderexperts/device-page-actions-menu.png)
 
 - ***Device inventory page flyout menu***
 
-![Screenshot of the Ask Defender Experts menu option in the Device inventory page flyout menu in the Microsoft Defender portal.](../../media/mte/defenderexperts/device-inventory-flyout-menu.png)
+![Screenshot of the Ask Defender Experts menu option in the Device inventory page flyout menu in the Microsoft Defender portal.](./media/mte/defenderexperts/device-inventory-flyout-menu.png)
 
 - ***Alerts page flyout menu***
 
-![Screenshot of the Ask Defender Experts menu option in the Alerts page flyout menu in the Microsoft Defender portal.](../../media/mte/defenderexperts/alerts-flyout-menu.png)
+![Screenshot of the Ask Defender Experts menu option in the Alerts page flyout menu in the Microsoft Defender portal.](./media/mte/defenderexperts/alerts-flyout-menu.png)
 
 - ***Incidents page actions menu***
 
-![Screenshot of the Ask Defender Experts menu option in the Incidents page actions menu in the Microsoft Defender portal.](../../media/mte/defenderexperts/incidents-page-actions-menu.png)
+![Screenshot of the Ask Defender Experts menu option in the Incidents page actions menu in the Microsoft Defender portal.](./media/mte/defenderexperts/incidents-page-actions-menu.png)
 
 > [!NOTE]
 > If you'd like to track the status of your Experts on Demand cases through Microsoft Services Hub, reach out to your Customer Success Account Manager. Watch this [video](https://www.microsoft.com/videoplayer/embed/RE4pk9f) for a quick overview of the Microsoft Services Hub.
@@ -160,4 +160,4 @@ The option to **Ask Defender Experts** is available in several places throughout
 ### Next step
 
 - [Understand the Defender Experts for Hunting report in Microsoft Defender XDR](defender-experts-report.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -137,4 +137,4 @@ Here's an example of the request.
 - [List incidents](api-list-incidents.md)
 - [Incidents overview](incidents-overview.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

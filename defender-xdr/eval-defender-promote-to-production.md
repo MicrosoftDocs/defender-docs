@@ -59,4 +59,4 @@ Use the following general guidelines to onboard more devices to Microsoft Defend
 
 Microsoft Defender for Cloud Apps doesn't require any other configuration. Just make sure to purchase the necessary licenses. If you've scoped the deployment to certain user groups, increase the scope of these groups until you reach production scale.
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

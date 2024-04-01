@@ -112,4 +112,4 @@ For more information, see:
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 - [Microsoft Defender for Identity](/defender-for-identity/)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

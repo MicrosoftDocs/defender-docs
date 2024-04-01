@@ -84,7 +84,7 @@ Once the service is provisioned, it adds:
 - [Advanced hunting](advanced-hunting-overview.md) capabilities
 - Threat analytics
 
-:::image type="content" source="../../media/overview-incident.png" alt-text="The navigation pane in the Microsoft Defender portal with Microsoft Defender XDR features" lightbox="../../media/overview-incident.png":::
+:::image type="content" source="./media/overview-incident.png" alt-text="The navigation pane in the Microsoft Defender portal with Microsoft Defender XDR features" lightbox="./media/overview-incident.png":::
 *Microsoft Defender portal with incidents management and other capabilities*
 
 ### Getting Microsoft Defender for Identity data 
@@ -109,4 +109,4 @@ Microsoft support staff can help provision or deprovision the service and relate
 - [Microsoft Defender for Cloud Apps overview](/cloud-app-security/what-is-cloud-app-security)
 - [Microsoft Defender for Identity overview](/azure-advanced-threat-protection/what-is-atp)
 - [Microsoft Defender for Endpoint data storage](../defender-endpoint/data-storage-privacy.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

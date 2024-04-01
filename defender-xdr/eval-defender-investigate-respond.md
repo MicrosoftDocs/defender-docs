@@ -30,7 +30,7 @@ This article outlines the process to create incidents with attack simulations an
 
 Use the following steps.
 
-:::image type="content" source="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png" alt-text="The steps for performing simulated incident response in the Microsoft Defender XDR evaluation environment" lightbox="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png":::
+:::image type="content" source="./media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png" alt-text="The steps for performing simulated incident response in the Microsoft Defender XDR evaluation environment" lightbox="./media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png":::
 
 The following table describes the steps in the illustration.
 
@@ -42,4 +42,4 @@ The following table describes the steps in the illustration.
 ## Navigation you may need
 
 [Create the Microsoft Defender XDR Evaluation Environment](eval-create-eval-environment.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

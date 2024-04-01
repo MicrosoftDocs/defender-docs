@@ -50,39 +50,39 @@ Enable security teams to tackle attack investigations in a timely manner with ea
 
 Investigating incidents with multiple alerts can be a daunting task. To immediately understand an incident, you can tap Copilot to [summarize an incident](security-copilot-m365d-incident-summary.md) for you. Copilot creates an overview of the attack containing essential information for you to understand what transpired in the attack, what assets are involved, and the timeline of the attack. Copilot automatically creates a summary when you navigate to an incident's page.
 
-:::image type="content" source="../../media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-small.png" alt-text="Screenshot of the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="../../media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
+:::image type="content" source="./media/copilot-in-defender/incident-summary/copilot-defender-incident-summary-small.png" alt-text="Screenshot of the incident summary card on the Copilot pane as seen in the Microsoft Defender incident page." lightbox="./media/copilot-in-defender/incident-summary/copilot-defender-incident-summary.png":::
 
 ### Take action on incidents through guided responses
 
 Resolving incidents require analysts to have an understanding of an attack to know what solutions are appropriate. Copilot recommends solutions through [guided responses](security-copilot-m365d-guided-response.md) that are specific to each incident.
 
-:::image type="content" source="../../media/copilot-in-defender/guided-response/copilot-defender-guided-response-small.png" alt-text="Screenshot highlighting the Copilot pane with the guided responses in the Microsoft Defender incident page." lightbox="../../media/copilot-in-defender/guided-response/copilot-defender-guided-response.png":::
+:::image type="content" source="./media/copilot-in-defender/guided-response/copilot-defender-guided-response-small.png" alt-text="Screenshot highlighting the Copilot pane with the guided responses in the Microsoft Defender incident page." lightbox="./media/copilot-in-defender/guided-response/copilot-defender-guided-response.png":::
 
 ### Run script analysis with ease
 
 Most attackers rely on sophisticated malware when launching attacks to avoid detection and analysis. These malware are usually obfuscated, and might be in the form of scripts or command lines in PowerShell. Copilot can quickly [analyze scripts](security-copilot-m365d-script-analysis.md), reducing the time for investigation.
 
-:::image type="content" source="../../media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-incident-small.png" alt-text="Screenshot highlighting the script analysis button in the attack story view in the incident page." lightbox="../../media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-incident.png":::
+:::image type="content" source="./media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-incident-small.png" alt-text="Screenshot highlighting the script analysis button in the attack story view in the incident page." lightbox="./media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-incident.png":::
 
 ### Generate device summaries
 
 Investigating devices involved in incidents can be a tasking job. To quickly assess a device, Copilot can [summarize a device's information](copilot-in-defender-device-summary.md), including the device's security posture, any unusual behaviors, a list of vulnerable software, and relevant Microsoft Intune information.
 
-:::image type="content" source="../../media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page-small.png" alt-text="Screenshot of the device summary results in Copilot in Defender." lightbox="../../media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page.png":::
+:::image type="content" source="./media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page-small.png" alt-text="Screenshot of the device summary results in Copilot in Defender." lightbox="./media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page.png":::
 
 ### Analyze files promptly
 
 Copilot helps security teams quickly assess and understand suspicious files with [file analysis](copilot-in-defender-file-analysis.md). Copilot provides a file's summary, including detection information, related file certificates, a list of API calls, and strings found in the file.
 
-:::image type="content" source="../../media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide-small.png" alt-text="Screenshot of the file analysis results in Copilot in Defender with the Hide details option highlighted." lightbox="../../media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide.png":::
+:::image type="content" source="./media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide-small.png" alt-text="Screenshot of the file analysis results in Copilot in Defender with the Hide details option highlighted." lightbox="./media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide.png":::
 
 ### Write incident reports efficiently
 
 Security operations teams usually write reports to record important information, including what response actions were taken and the corresponding results, the team members involved, and other information to aid future security decisions and learning. Oftentimes, documenting incidents can be time-consuming. For incident reports to be effective, it must contain an incident's summary along with the actions taken, including what actions were taken by whom and when. Copilot [generates an incident report](security-copilot-m365d-create-incident-report.md) by quickly consolidating these pieces of information.
 
-:::image type="content" source="../../media/copilot-in-defender/incident-report/copilot-defender-incident-report-results1-small.png" alt-text="Screenshot of the incident report card in the incident page." lightbox="../../media/copilot-in-defender/incident-report/copilot-defender-incident-report-results1.png":::
+:::image type="content" source="./media/copilot-in-defender/incident-report/copilot-defender-incident-report-results1-small.png" alt-text="Screenshot of the incident report card in the incident page." lightbox="./media/copilot-in-defender/incident-report/copilot-defender-incident-report-results1.png":::
 
-:::image type="content" source="../../media/copilot-in-defender/incident-report/copilot-defender-incident-report-results2-small.png" alt-text="Screenshot of the incident report card in the incident page showing the lower bottom of the card." lightbox="../../media/copilot-in-defender/incident-report/copilot-defender-incident-report-results2.png":::
+:::image type="content" source="./media/copilot-in-defender/incident-report/copilot-defender-incident-report-results2-small.png" alt-text="Screenshot of the incident report card in the incident page showing the lower bottom of the card." lightbox="./media/copilot-in-defender/incident-report/copilot-defender-incident-report-results2.png":::
 
 ## Hunt like a pro
 
@@ -92,7 +92,7 @@ Copilot in Defender helps security teams proactively hunt for threats in their n
 
 Security teams who use advanced hunting to proactively hunt for threats in their network can now use a query assistant that converts any natural-language question in the context of threat hunting, into a ready-to-run KQL query. The query assistant saves security teams time by generating a KQL query that can then be automatically run or further tweaked according to the analyst needs. Read more about the query assistant in [Copilot for Security in advanced hunting](advanced-hunting-security-copilot.md).
 
-:::image type="content" source="../../media/advanced-hunting-security-copilot-pane.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="../../media/advanced-hunting-security-copilot-pane-big.png":::
+:::image type="content" source="./media/advanced-hunting-security-copilot-pane.png" alt-text="Screenshot of the Copilot pane in advanced hunting." lightbox="./media/advanced-hunting-security-copilot-pane-big.png":::
 
 ## Protect your organization with relevant threat intelligence
 
@@ -102,7 +102,7 @@ Empower your security organization to make informed decisions with the latest th
 
 Ask Copilot to summarize the relevant threats impacting your environment, to prioritize resolving threats based on your exposure levels, or to find threat actors that might be targeting your industry. Read more about [Copilot for Security in threat intelligence](/defender/threat-intelligence/security-copilot-and-defender-threat-intelligence).
 
-:::image type="content" source="../../media/copilot-in-defender/TI/copilot-defender-threat-intel-small.png" alt-text="Screenshot of the Copilot pane in threat intelligence in Defender XDR." lightbox="../../media/copilot-in-defender/TI/copilot-defender-threat-intel-full.png":::
+:::image type="content" source="./media/copilot-in-defender/TI/copilot-defender-threat-intel-small.png" alt-text="Screenshot of the Copilot pane in threat intelligence in Defender XDR." lightbox="./media/copilot-in-defender/TI/copilot-defender-threat-intel-full.png":::
 
 ## Data security and feedback in Copilot
 
@@ -112,7 +112,7 @@ Because of its continuing evolution, Copilot might miss some things. Reviewing a
 
 All Copilot in Defender capabilities have an option for providing feedback. To provide feedback, perform the following steps:
 
-1. Select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](../../media/copilot-in-defender/copilot-defender-feedback.png) located at the bottom of any results card in the Copilot side panel.
+1. Select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](./media/copilot-in-defender/copilot-defender-feedback.png) located at the bottom of any results card in the Copilot side panel.
 2. Select **Confirmed, it looks great** if the results are accurate based on your assessment. You can provide more information in the next dialog box.
 3. Select **Off-target, inaccurate** if any detail is incorrect or incomplete based on your assessment. You can provide more information about your assessment in the next dialog box and submit this assessment to Microsoft.
 4. You can also report the results if it contains questionable or ambiguous information by selecting **Potentially harmful, inappropriate**. Provide more information about the results in the next dialog box and select Submit.
@@ -141,4 +141,4 @@ Copilot uses [preinstalled Microsoft plugins](/security-copilot/manage-plugins#p
 - [Responsible AI FAQs](/security-copilot/responsible-ai-overview-security-copilot)
 - Other [Copilot for Security embedded experiences](/security-copilot/experiences-security-copilot)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

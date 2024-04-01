@@ -22,7 +22,7 @@ ms.date: 10/17/2023
 
 # Understand the Defender Experts for Hunting report in Microsoft Defender XDR
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -36,7 +36,7 @@ To view the report in your Microsoft Defender portal, go to **Reports**, select 
 
 Refer to the following screenshot of a sample report:
 
-![Screenshot of a Defender Experts for Hunting report.](../../media/defender-experts/defender-experts-hunting-report.png)
+![Screenshot of a Defender Experts for Hunting report.](./media/defender-experts/defender-experts-hunting-report.png)
 
 ## Identify prevalent threats and other potential attack entry points
 
@@ -44,7 +44,7 @@ Signals from Microsoft Defender XDR and investigations by Defender Experts for H
 
 The report provides you with the total number of Defender Experts Notifications our experts have sent for your chosen period: 
 
-![Screenshot of the top section of the report showing the number of threats identified](../../media/defender-experts/report-top-section-dens.png)
+![Screenshot of the top section of the report showing the number of threats identified](./media/defender-experts/report-top-section-dens.png)
 
 To view these notifications, select **View Defender Experts Notifications**. This button redirects you to the Microsoft Defender XDR incidents page. Defender Expert for Hunting alerts or Defender Experts Notifications are labeled with **Defender Experts**.
 
@@ -59,12 +59,12 @@ You can filter the activities displayed in the table by choosing any of the foll
 - **DEX notified** – Displays activities with corresponding Defender Expert Notifications only.
 - **All activities** – Displays all true positive, benign true positive, and false positive activities.  
 
-![Screenshot of the top section of the Threat categories section showing the dropdown menu.](../../media/defender-experts/threat-categories-filter.png)
+![Screenshot of the top section of the Threat categories section showing the dropdown menu.](./media/defender-experts/threat-categories-filter.png)
 
 If an activity has a related Defender Expert Notification, its corresponding icon also appears under the activity name.
 Selecting an identified suspicious activity opens a flyout panel detailing the impacted devices and users: 
 
-![Screenshot of a flyout panel displaying a list of devices impacted by a detected suspicious activity.](../../media/defender-experts/suspicious-activity-detail-panel.png)
+![Screenshot of a flyout panel displaying a list of devices impacted by a detected suspicious activity.](./media/defender-experts/suspicious-activity-detail-panel.png)
 
 If applicable, the page also provides links to view related Defender Expert Notifications.
 
@@ -72,9 +72,9 @@ If applicable, the page also provides links to view related Defender Expert Noti
 
 The **Top trending suspicious activities** section of the report identifies up to 20 suspicious activities that were consistently observed in your environment in the last three months, sorted based on their severity rating and frequency of occurrence:
 
-![Screenshot of the Top trending suspicious activities section of the report.](../../media/defender-experts/top-trending-suspicious-activities.png)
+![Screenshot of the Top trending suspicious activities section of the report.](./media/defender-experts/top-trending-suspicious-activities.png)
 
 By showing the most critical and frequently observed activities, you can assess and evaluate their impact and develop strategies to prevent or mitigate potential threats to your environment
 
 Select **View details** in each card to open a flyout panel detailing the impacted devices and users. If applicable, the page also provides links to view related Defender Expert Notifications.
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

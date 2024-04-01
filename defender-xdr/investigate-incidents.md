@@ -41,11 +41,11 @@ Before diving into the details, take a look at the properties and the entire att
 
 You can start by selecting the incident from the check mark column. Here's an example.
 
-:::image type="content" source="../../media/investigate-incidents/incidents-ss-incident-select.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="../../media/investigate-incidents/incidents-ss-incident-select.png":::
+:::image type="content" source="./media/investigate-incidents/incidents-ss-incident-select.png" alt-text="Selecting an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incidents-ss-incident-select.png":::
 
 When you do, a summary pane opens with key information about the incident, such as severity, to whom it is assigned, and the [MITRE ATT&CK&trade;](https://attack.mitre.org/) categories for the incident. Here's an example.
 
-:::image type="content" source="../../media/investigate-incidents/incidents-ss-incident-side-panel.png" alt-text="The pane that displays the summary details for an incident in the Microsoft Defender portal." lightbox="../../media/investigate-incidents/incidents-ss-incident-side-panel.png":::
+:::image type="content" source="./media/investigate-incidents/incidents-ss-incident-side-panel.png" alt-text="The pane that displays the summary details for an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incidents-ss-incident-side-panel.png":::
 
 From here, you can select **Open incident page**. This opens the main page for the incident where you'll find the full attack story information and tabs for alerts, devices, users, investigations, and evidence.
 
@@ -78,11 +78,11 @@ From the graph, you can:
 
 - Play the alerts and the nodes on the graph as they occurred over time to understand the chronology of the attack.
   
-  :::image type="content" source="../../media/investigate-incidents/play-alert-attack-story.gif" alt-text="Screenshot that shows playing of the alerts and nodes on the attack story graph page.":::
+  :::image type="content" source="./media/investigate-incidents/play-alert-attack-story.gif" alt-text="Screenshot that shows playing of the alerts and nodes on the attack story graph page.":::
 
 - Open an entity pane, allowing you to review the entity details and act on remediation actions, such as deleting a file or isolating a device.
 
-  :::image type="content" source="../../media/investigate-incidents/review-entity-details-attack-story.gif" alt-text="Screenshot that shows the review of the entity details on the attack story graph page.":::
+  :::image type="content" source="./media/investigate-incidents/review-entity-details-attack-story.gif" alt-text="Screenshot that shows the review of the entity details on the attack story graph page.":::
 
 - Highlight the alerts based on the entity to which they are related.
 
@@ -94,17 +94,17 @@ The *go hunt* option takes advantage of the [advanced hunting](advanced-hunting-
   - All Activity – the query returns all activities associated with an entity, providing you with a comprehensive view of the incident's context.
   - Related Alerts – the query searches for and returns all security alerts involving a specific entity, ensuring you don't miss any information.
 
-:::image type="content" source="../../media/investigate-incidents/fig1-gohunt-attackstory.png" alt-text="Selecting the go hunt option on a device in an attack story" lightbox="../../media/investigate-incidents/fig1-gohunt-attackstory.png":::
+:::image type="content" source="./media/investigate-incidents/fig1-gohunt-attackstory.png" alt-text="Selecting the go hunt option on a device in an attack story" lightbox="./media/investigate-incidents/fig1-gohunt-attackstory.png":::
 
 The resulting logs or alerts can be linked to an incident by selecting a results and then selecting *Link to incident*.
 
-:::image type="content" source="../../media/investigate-incidents/fig2-gohunt-attackstory.png" alt-text="Highlighting the link to incident option in go hunt query results" lightbox="../../media/investigate-incidents/fig2-gohunt-attackstory.png":::
+:::image type="content" source="./media/investigate-incidents/fig2-gohunt-attackstory.png" alt-text="Highlighting the link to incident option in go hunt query results" lightbox="./media/investigate-incidents/fig2-gohunt-attackstory.png":::
 
 ## Summary
 
 Use the **Summary** page to assess the relative importance of the incident and quickly access the associated alerts and impacted entities. The **Summary** page gives you a snapshot glance at the top things to notice about the incident.
 
-:::image type="content" source="../../media/incidents-overview/incidents-investigate-summary.png" alt-text="Screenshot that shows the summary information for an incident in the Microsoft Defender portal." lightbox="../../media/incidents-overview/incidents-investigate-summary.png":::
+:::image type="content" source="./media/incidents-overview/incidents-investigate-summary.png" alt-text="Screenshot that shows the summary information for an incident in the Microsoft Defender portal." lightbox="./media/incidents-overview/incidents-investigate-summary.png":::
 
 Information is organized in these sections.
 
@@ -127,7 +127,7 @@ On the **Alerts** tab, you can view the alert queue for alerts related to the in
 
 Here's an example.
 
-:::image type="content" source="../../media/investigate-incidents/incident-alerts.png" alt-text="The Alerts pane for an incident in the Microsoft Defender portal" lightbox="../../media/investigate-incidents/incident-alerts.png":::
+:::image type="content" source="./media/investigate-incidents/incident-alerts.png" alt-text="The Alerts pane for an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-alerts.png":::
 
 By default, the alerts are ordered chronologically to allow you to see how the attack played out over time. When you select an alert within an incident, Microsoft Defender XDR displays the alert information specific to the context of the overall incident.
 
@@ -135,7 +135,7 @@ You can see the events of the alert, which other triggered alerts caused the cur
 
 Here's an example.
 
-:::image type="content" source="../../media/investigate-incidents/incident-alert-example.png" alt-text="The details of an alert within an incident in the Microsoft Defender portal." lightbox="../../media/investigate-incidents/incident-alert-example.png":::
+:::image type="content" source="./media/investigate-incidents/incident-alert-example.png" alt-text="The details of an alert within an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-alert-example.png":::
 
 Learn how to use the alert queue and alert pages in [investigate alerts](investigate-alerts.md).
 
@@ -145,23 +145,23 @@ Easily view and manage all your assets in one place with the new **Assets** tab.
 
 The Assets tab displays the total number of assets beside its name. A list of different categories with the number of assets within that category is presented when selecting the Assets tab.
 
-:::image type="content" source="../../media/investigate-incidents/incident-assets.png" alt-text="The Assets page for an incident in the Microsoft Defender portal" lightbox="../../media/investigate-incidents/incident-assets.png":::
+:::image type="content" source="./media/investigate-incidents/incident-assets.png" alt-text="The Assets page for an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-assets.png":::
 
 ### Devices
 
 The **Devices** view lists all the devices related to the incident. Here's an example.
 
-:::image type="content" source="../../media/investigate-incidents/incident-devices2.png" alt-text="The Devices page for an incident in the Microsoft Defender portal" lightbox="../../media/investigate-incidents/incident-devices2.png":::
+:::image type="content" source="./media/investigate-incidents/incident-devices2.png" alt-text="The Devices page for an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-devices2.png":::
 
 Selecting a device from the list opens a bar that allows you to manage the selected device. You can quickly export, manage tags, initiate automated investigation, and more. 
 
 You can select the check mark for a device to see details of the device, directory data, active alerts, and logged on users. Select the name of the device to see device details in the Defender for Endpoint device inventory. Here's an example.
 
-:::image type="content" source="../../media/investigate-incidents/incident-devicebar.png" alt-text="The Devices options in the Assets page in the Microsoft Defender portal." lightbox="../../media/investigate-incidents/incident-devicebar.png":::
+:::image type="content" source="./media/investigate-incidents/incident-devicebar.png" alt-text="The Devices options in the Assets page in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-devicebar.png":::
 
 From the device page, you can gather additional information about the device, such as all of its alerts, a timeline, and security recommendations. For example, from the **Timeline** tab, you can scroll through the device timeline and view all events and behaviors observed on the machine in chronological order, interspersed with the alerts raised. Here's an example
 
-:::image type="content" source="../../media/investigate-incidents/incident-devices-details.png" alt-text="The details of a device in the Device page in the Microsoft Defender portal." lightbox="../../media/investigate-incidents/incident-devices-details.png":::
+:::image type="content" source="./media/investigate-incidents/incident-devices-details.png" alt-text="The details of a device in the Device page in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-devices-details.png":::
 
 > [!TIP]
 > You can do on-demand scans on a device page. In the Microsoft Defender portal, choose **Endpoints > Device inventory**. Select a device that has alerts, and then run an antivirus scan. Actions, such as antivirus scans, are tracked and are visible on the **Device inventory** page. To learn more, see [Run Microsoft Defender Antivirus scan on devices](/microsoft-365/security/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices).
@@ -170,7 +170,7 @@ From the device page, you can gather additional information about the device, su
 
 The **Users** view lists all the users that have been identified to be part of or related to the incident. Here's an example.
 
-:::image type="content" source="../../media/investigate-incidents/incident-users2.png" alt-text="The Users page in the Microsoft Defender portal." lightbox="../../media/investigate-incidents/incident-users2.png":::
+:::image type="content" source="./media/investigate-incidents/incident-users2.png" alt-text="The Users page in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-users2.png":::
 
 You can select the check mark for a user to see details of the user account threat, exposure, and contact information. Select the user name to see additional user account details.
 
@@ -180,7 +180,7 @@ Learn how to view additional user information and manage the users of an inciden
 
 The **Mailboxes** view lists all the mailboxes that have been identified to be part of or related to the incident. Here's an example.
 
-:::image type="content" source="../../media/investigate-incidents/incident-mailboxes2.png" alt-text="The Mailboxes page for an incident in the Microsoft Defender portal." lightbox="../../media/investigate-incidents/incident-mailboxes2.png":::
+:::image type="content" source="./media/investigate-incidents/incident-mailboxes2.png" alt-text="The Mailboxes page for an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-mailboxes2.png":::
 
 You can select the check mark for a mailbox to see a list of active alerts. Select the mailbox name to see additional mailbox details on the Explorer page for Defender for Office 365.
 
@@ -188,7 +188,7 @@ You can select the check mark for a mailbox to see a list of active alerts. Sele
 
 The **Apps** view lists all the apps identified to be part of or related to the incident. Here's an example.
 
-:::image type="content" source="../../media/investigate-incidents/incident-apps.png" alt-text="The Apps page for an incident in the Microsoft Defender portal." lightbox="../../media/investigate-incidents/incident-apps.png":::
+:::image type="content" source="./media/investigate-incidents/incident-apps.png" alt-text="The Apps page for an incident in the Microsoft Defender portal." lightbox="./media/investigate-incidents/incident-apps.png":::
 
 You can select the check mark for an app to see a list of active alerts. Select the app name to see additional  details on the Explorer page for Defender for Cloud Apps.
 
@@ -196,7 +196,7 @@ You can select the check mark for an app to see a list of active alerts. Select 
 
 The **Investigations** tab lists all the [automated investigations](m365d-autoir.md) triggered by alerts in this incident. Automated investigations will perform remediation actions or wait for analyst approval of actions, depending on how you configured your automated investigations to run in Defender for Endpoint and Defender for Office 365.
 
-:::image type="content" source="../../media/investigate-incidents/incident-investigations.png" alt-text="The Investigations page for an incident in the Microsoft Defender portal" lightbox="../../media/investigate-incidents/incident-investigations.png":::
+:::image type="content" source="./media/investigate-incidents/incident-investigations.png" alt-text="The Investigations page for an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-investigations.png":::
 
 Select an investigation to navigate to its details page for full information on the investigation and remediation status. If there are any actions pending for approval as part of the investigation, they will appear in the **Pending actions history** tab. Take action as part of incident remediation.
 
@@ -214,7 +214,7 @@ For more information, see [Automated investigation and response in Microsoft Def
 
 The **Evidence and Response** tab shows all the supported events and suspicious entities in the alerts in the incident. Here's an example.
 
-:::image type="content" source="../../media/investigate-incidents/incident-evidence.png" alt-text="The Evidence and Response page for an incident in the Microsoft Defender portal" lightbox="../../media/investigate-incidents/incident-evidence.png":::
+:::image type="content" source="./media/investigate-incidents/incident-evidence.png" alt-text="The Evidence and Response page for an incident in the Microsoft Defender portal" lightbox="./media/investigate-incidents/incident-evidence.png":::
 
 Microsoft Defender XDR automatically investigates all the incidents' supported events and suspicious entities in the alerts, providing you with information about the important emails, files, processes, services, IP Addresses, and more. This helps you quickly detect and block potential threats in the incident.
 
@@ -233,7 +233,7 @@ For incidents with a remediation status of **Pending approval**, you can approve
    - Select the Approve pending action option to initiate a pending action.
    - Select the Reject pending action option to prevent a pending action from being taken.
 
-:::image type="content" source="../../media/defender/m365-defender-approve-reject-action.png" alt-text="The Approve\Reject option in the Evidence and Response management pane for an incident in the Microsoft Defender portal." lightbox="../../media/defender/m365-defender-approve-reject-action.png":::
+:::image type="content" source="./media/defender/m365-defender-approve-reject-action.png" alt-text="The Approve\Reject option in the Evidence and Response management pane for an incident in the Microsoft Defender portal." lightbox="./media/defender/m365-defender-approve-reject-action.png":::
 
 ## Next steps
 
@@ -247,4 +247,4 @@ As needed:
 - [Incidents overview](incidents-overview.md)
 - [Prioritize incidents](incident-queue.md)
 - [Manage incidents](manage-incidents.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

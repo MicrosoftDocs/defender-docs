@@ -31,7 +31,7 @@ Microsoft Defender XDR contributes to a strong Zero Trust strategy and architect
 
 Microsoft Defender XDR is an XDR solution that automatically collects, correlates, and analyzes signal, threat, and alert data from across your Microsoft 365 environment, including endpoint, email, applications, and identities.
 
-:::image type="content" source="../../media/zero-trust/m365-zero-trust-architecture-defender.png" alt-text="Diagram that shows the Microsoft Defender XDR in the Zero Trust architecture." lightbox="../../media/zero-trust/m365-zero-trust-architecture-defender.png":::
+:::image type="content" source="./media/zero-trust/m365-zero-trust-architecture-defender.png" alt-text="Diagram that shows the Microsoft Defender XDR in the Zero Trust architecture." lightbox="./media/zero-trust/m365-zero-trust-architecture-defender.png":::
 
 In the illustration: Microsoft Defender XDR provides XDR capabilities for protecting:
 
@@ -66,4 +66,4 @@ Learn more about Zero Trust for Microsoft Defender XDR services:
 Learn more about other Microsoft 365 capabilities that contribute to a strong Zero Trust strategy and architecture with the [Zero Trust deployment plan with Microsoft 365](../Microsoft-365-zero-trust.md).
 
 Learn more about Zero Trust and how to build an enterprise-scale strategy and architecture with the [Zero Trust Guidance Center](/security/zero-trust).
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

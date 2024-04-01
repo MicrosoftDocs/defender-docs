@@ -36,7 +36,7 @@ This article describes the Defender for Endpoint experience in the Microsoft Def
 The image and the table below lists the changes in navigation between the Microsoft Defender Security Center and the Microsoft Defender portal.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="../../media/mde-m3d-security-center.png" alt-text="The new locations in the Microsoft Defender portal" lightbox="../../media/mde-m3d-security-center.png":::
+> :::image type="content" source="./media/mde-m3d-security-center.png" alt-text="The new locations in the Microsoft Defender portal" lightbox="./media/mde-m3d-security-center.png":::
 
 | Microsoft Defender Security Center | the Microsoft Defender portal |
 |---------|---------|
@@ -126,7 +126,7 @@ Brings together incident and alert management across your email, devices, and id
 - [Learn more about incidents](incidents-overview.md)
 - [Learn more about managing alerts](investigate-alerts.md)
 
-:::image type="content" source="../../media/converge-1-alerts-and-actions.png" alt-text="The Alerts and Actions quick launch bar in the Microsoft Defender portal" lightbox="../../media/converge-1-alerts-and-actions.png":::
+:::image type="content" source="./media/converge-1-alerts-and-actions.png" alt-text="The Alerts and Actions quick launch bar in the Microsoft Defender portal" lightbox="./media/converge-1-alerts-and-actions.png":::
 
 ### Hunting
 
@@ -157,13 +157,13 @@ Learn more about how to [track and respond to emerging threats with threat analy
 
 View and manage the security of endpoints in your organization. If you've used the Microsoft Defender Security Center, it will look familiar.
 
-:::image type="content" source="../../media/converge-2-endpoints.png" alt-text="The Endpoints quick launch bar in the Microsoft Defender portal" lightbox="../../media/converge-2-endpoints.png":::
+:::image type="content" source="./media/converge-2-endpoints.png" alt-text="The Endpoints quick launch bar in the Microsoft Defender portal" lightbox="./media/converge-2-endpoints.png":::
 
 ### Access and reports
 
 View reports, change your settings, and modify user roles.
 
-:::image type="content" source="../../media/converge-4-access-and-reporting-new.png" alt-text="The Access and Reporting quicklaunch bar in the Microsoft Defender portal" lightbox="../../media/converge-4-access-and-reporting-new.png":::
+:::image type="content" source="./media/converge-4-access-and-reporting-new.png" alt-text="The Access and Reporting quicklaunch bar in the Microsoft Defender portal" lightbox="./media/converge-4-access-and-reporting-new.png":::
 
 ### SIEM API connections
 
@@ -183,4 +183,4 @@ Logging in to multiple tenants simultaneously in the same browsing session is cu
 - [Microsoft Defender for Endpoint in The Microsoft Defender portal](microsoft-365-security-center-mde.md)
 - [Redirecting accounts from Microsoft Defender for Endpoint to The Microsoft Defender portal](microsoft-365-security-mde-redirection.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

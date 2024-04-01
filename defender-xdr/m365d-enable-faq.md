@@ -117,4 +117,4 @@ Get the latest publicly available experiences by turning on [preview features](p
 - [Deploy supported services](deploy-supported-services.md)
 - [Setup guides for Microsoft Defender XDR](deploy-configure-m365-defender.md)
 - [Turn on preview features](preview.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

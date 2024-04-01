@@ -32,7 +32,7 @@ This article is [Step 3 of 3](eval-defender-mcas-overview.md) in the process of 
 Use the following steps to set up and configure the pilot for Microsoft Defender for Cloud Apps.
 
 
-:::image type="content" source="../../media/defender/m365-defender-mcas-pilot-steps.png" alt-text="The steps for piloting the Microsoft Defender for Cloud Apps" lightbox="../../media/defender/m365-defender-mcas-pilot-steps.png":::
+:::image type="content" source="./media/defender/m365-defender-mcas-pilot-steps.png" alt-text="The steps for piloting the Microsoft Defender for Cloud Apps" lightbox="./media/defender/m365-defender-mcas-pilot-steps.png":::
 - [Step 1. Create the pilot group—Scope your pilot deployment to certain user groups](#step-1-create-the-pilot-groupscope-your-pilot-deployment-to-certain-user-groups)
 - [Step 2. Configure protection—Conditional Access App Control](#step-2-configure-protectionconditional-access-app-control)
 - [Step 3. Try out capabilities—Walk through tutorials for protecting your environment](#step-3-try-out-capabilitieswalk-through-tutorials-for-protecting-your-environment) 
@@ -81,4 +81,4 @@ For more information on advanced hunting in Microsoft Defender for Cloud Apps da
 Return to the overview for [Evaluate Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)
 
 Return to the overview for [Evaluate and pilot Microsoft Defender XDR](eval-overview.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

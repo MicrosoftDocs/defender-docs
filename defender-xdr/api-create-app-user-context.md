@@ -62,11 +62,11 @@ This article explains how to:
 
 2. Navigate to **Microsoft Entra ID** > **App registrations** > **New registration**.
 
-   :::image type="content" source="../../media/atp-azure-new-app2.png" alt-text="The New registration option in the Manage pane in the Azure portal" lightbox="../../media/atp-azure-new-app2.png":::
+   :::image type="content" source="./media/atp-azure-new-app2.png" alt-text="The New registration option in the Manage pane in the Azure portal" lightbox="./media/atp-azure-new-app2.png":::
 
 3. In the form, choose a name for your application and enter the following information for the redirect URI, then select **Register**.
 
-   :::image type="content" source="../../media/nativeapp-create2.PNG" alt-text="The application registration pane in the Azure portal" lightbox="../../media/nativeapp-create2.PNG":::
+   :::image type="content" source="./media/nativeapp-create2.PNG" alt-text="The application registration pane in the Azure portal" lightbox="./media/nativeapp-create2.PNG":::
    
 
    - **Application type:** Public client
@@ -77,11 +77,11 @@ This article explains how to:
    > [!TIP]
    > *Microsoft Threat Protection* is a former name for Microsoft Defender XDR, and will not appear in the original list. You need to start writing its name in the text box to see it appear.
 
-   :::image type="content" source="../../media/apis-in-my-org-tab.PNG" alt-text="Your organization's APIs pane in the Microsoft Defender portal" lightbox="../../media/apis-in-my-org-tab.PNG":::
+   :::image type="content" source="./media/apis-in-my-org-tab.PNG" alt-text="Your organization's APIs pane in the Microsoft Defender portal" lightbox="./media/apis-in-my-org-tab.PNG":::
 
    - Choose **Delegated permissions**. Choose the relevant permissions for your scenario (for example **Incident.Read**), and then select **Add permissions**.
 
-     :::image type="content" source="../../media/request-api-permissions-delegated.PNG" alt-text="The Delegated permissions pane in the Microsoft Defender portal" lightbox="../../media/request-api-permissions-delegated.PNG":::
+     :::image type="content" source="./media/request-api-permissions-delegated.PNG" alt-text="The Delegated permissions pane in the Microsoft Defender portal" lightbox="./media/request-api-permissions-delegated.PNG":::
 
     > [!NOTE]
     > You need to select the relevant permissions for your scenario. *Read all incidents* is just an example. To determine which permission you need, please look at the **Permissions** section in the API you want to call.
@@ -90,11 +90,11 @@ This article explains how to:
 
 5. Select **Grant admin consent**. Every time you add a permission, you must select **Grant admin consent** for it to take effect.
 
-   :::image type="content" source="../../media/grant-consent-delegated.PNG" alt-text="The admin consent-granting pane in the Microsoft Defender portal" lightbox="../../media/grant-consent-delegated.PNG":::
+   :::image type="content" source="./media/grant-consent-delegated.PNG" alt-text="The admin consent-granting pane in the Microsoft Defender portal" lightbox="./media/grant-consent-delegated.PNG":::
 
 6. Record your application ID and your tenant ID somewhere safe. They're listed under **Overview** on your application page.
 
-   :::image type="content" source="../../media/app-and-tenant-ids.png" alt-text="The Overview pane in the Microsoft Defender portal" lightbox="../../media/app-and-tenant-ids.png":::
+   :::image type="content" source="./media/app-and-tenant-ids.png" alt-text="The Overview pane in the Microsoft Defender portal" lightbox="./media/app-and-tenant-ids.png":::
 
 ## Get an access token
 
@@ -128,7 +128,7 @@ $AccessToken # Display the token in PS console
 
 In the following image, you can see a decoded token acquired from an app, with ```Incidents.Read.All```, ```Incidents.ReadWrite.All```, and ```AdvancedHunting.Read.All``` permissions:
 
-:::image type="content" source="../../media/defender-endpoint/webapp-decoded-token.png" alt-text="The permissions section in the Decoded Token pane in the Microsoft Defender portal" lightbox="../../media/defender-endpoint/webapp-decoded-token.png":::
+:::image type="content" source="./media/defender-endpoint/webapp-decoded-token.png" alt-text="The permissions section in the Decoded Token pane in the Microsoft Defender portal" lightbox="./media/defender-endpoint/webapp-decoded-token.png":::
 
 <a name='use-the-token-to-access-the-microsoft-365-defender-api'></a>
 
@@ -159,4 +159,4 @@ The following example shows how to send a request to get a list of incidents **u
 - [Learn about API limits and licensing](api-terms.md)
 - [Understand error codes](api-error-codes.md)
 - [OAuth 2.0 authorization for user sign in and API access](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

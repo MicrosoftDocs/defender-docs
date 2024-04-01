@@ -19,7 +19,7 @@ search.appverid: met150
 
 # Create custom roles with Microsoft Defender XDR Unified RBAC
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -44,14 +44,14 @@ The following steps guide you on how to create custom roles in Microsoft Defende
 5. Enter the Role name and description.
 6. Select **Next** to choose the permissions you want to assign. Permissions are organized in three different categories:
 
-   :::image type="content" source="../../media/defender/m365-defender-rbac-permissions1.png" alt-text="Screenshot of the permissions screen" lightbox="../../media/defender/m365-defender-rbac-permissions1.png":::
+   :::image type="content" source="./media/defender/m365-defender-rbac-permissions1.png" alt-text="Screenshot of the permissions screen" lightbox="./media/defender/m365-defender-rbac-permissions1.png":::
 
 7. Select a permission category (for example, Security operations), and then review the permissions available. You can choose to assign the following different levels of permissions:
     - Select all read-only permissions – Users will be assigned with all the read-only permissions in this category.
     - Select all read and manage permissions – Users will be assigned all permissions in this category (read and manage permissions).
     - Select custom permissions – Users will be assigned the custom permissions selected.
 
-   :::image type="content" source="../../media/defender/m365-defender-rbac-assignments-fig.png" alt-text="Screenshot of the permissions flyout screen" lightbox="../../media/defender/m365-defender-rbac-assignments-fig.png":::
+   :::image type="content" source="./media/defender/m365-defender-rbac-assignments-fig.png" alt-text="Screenshot of the permissions flyout screen" lightbox="./media/defender/m365-defender-rbac-assignments-fig.png":::
 
     For more information on the RBAC custom permissions, see [About RBAC custom permissions](custom-permissions-details.md).
 
@@ -64,7 +64,7 @@ The following steps guide you on how to create custom roles in Microsoft Defende
 9. Select **Add assignments** and Enter the Assignment name.
 10. Under **data sources**, choose if the assigned users will have the selected permissions across all the available products, or only for specific data sources:
 
-     :::image type="content" source="../../media/defender/m365-defender-rbac-assignments.png" alt-text="Screenshot of the assignments screen" lightbox="../../media/defender/m365-defender-rbac-assignments.png":::
+     :::image type="content" source="./media/defender/m365-defender-rbac-assignments.png" alt-text="Screenshot of the assignments screen" lightbox="./media/defender/m365-defender-rbac-assignments.png":::
 
     If a user selects all read-only permissions for a single data source, for example, Microsoft Defender for Endpoint, they will not be able to read alerts for Microsoft Defender for Office 365 or Microsoft Defender for Identity.
 
@@ -92,7 +92,7 @@ To access and manage roles and permissions, without being a Global Administrator
     - Select all permissions - users will be able to create and manage roles and permissions.
     - Read-only - uses will be able to access and view roles and permissions in a read-only mode.
 
-    :::image type="content" source="../../media/defender/m365-defender-rbac-authorization-role.png" alt-text="Screenshot of the permissions and roles page" lightbox="../../media/defender/m365-defender-rbac-authorization-role.png":::
+    :::image type="content" source="./media/defender/m365-defender-rbac-authorization-role.png" alt-text="Screenshot of the permissions and roles page" lightbox="./media/defender/m365-defender-rbac-authorization-role.png":::
 
 8. Select **Apply** and then **Next** to assign users and data sources.
 9. Select **Add assignments** and enter the Assignment name.
@@ -111,4 +111,4 @@ To access and manage roles and permissions, without being a Global Administrator
 
 - [Import existing RBAC roles](import-rbac-roles.md)
 - [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

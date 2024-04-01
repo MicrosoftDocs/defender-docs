@@ -64,11 +64,11 @@ For more information, see these blog posts:
 
 To review the Suspicious Email Forwarding Activity alert, open the **Alerts** page to see the **Activity list** section. Here's an example.
 
-:::image type="content" source="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-list.png" alt-text="List of activities related to the alert" lightbox="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-list.png":::
+:::image type="content" source="./media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-list.png" alt-text="List of activities related to the alert" lightbox="./media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-list.png":::
 
 Select **Activity**  to view the details of that activity in the sidebar. Here's an example.
 
-:::image type="content" source="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-details.png" alt-text="Details of the activity" lightbox="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-details.png":::
+:::image type="content" source="./media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-details.png" alt-text="Details of the activity" lightbox="./media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-details.png":::
 
 ## Investigation workflow
 
@@ -103,7 +103,7 @@ For more information, see the following articles:
 
 Here's the workflow to identify suspicious email forwarding activities.
 
-:::image type="content" source="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-workflow.png" alt-text="Alert investigation workflow for email forwarding" lightbox="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-workflow.png":::
+:::image type="content" source="./media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-workflow.png" alt-text="Alert investigation workflow for email forwarding" lightbox="./media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-workflow.png":::
 
 You can investigate an email forwarding alert using Threat Explorer or with advanced hunting queries, based on the availability of features in the Microsoft Defender portal. You may choose to follow the entire process or a part of the process as needed.
 
@@ -113,7 +113,7 @@ Threat Explorer provides an interactive investigation experience for email relat
 
 - SRL/RL: Use the (Suspicious) Recipients List (SRL) to find these details:
 
-    :::image type="content" source="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-recipients-list.png" alt-text="Example of the list of recipients" lightbox="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-recipients-list.png":::
+    :::image type="content" source="./media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-recipients-list.png" alt-text="Example of the list of recipients" lightbox="./media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-recipients-list.png":::
 
   - Who else has forwarded emails to these recipients?
   - How many emails have been forwarded to these recipients?
@@ -121,7 +121,7 @@ Threat Explorer provides an interactive investigation experience for email relat
 
 - MTI: Use the Message Trace ID/Network Message ID to find these details:
 
-    :::image type="content" source="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-network-message-id.png" alt-text="Example of the Network Message ID" lightbox="../../media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-network-message-id.png":::
+    :::image type="content" source="./media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-network-message-id.png" alt-text="Example of the Network Message ID" lightbox="./media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-network-message-id.png":::
 
   - What other details are available for this email? For example: subject, return path, and timestamp.
   - What is the origin of this email? Are there any similar emails?
@@ -255,4 +255,4 @@ Once you determine that the activities associated make this alert a True Positiv
 - [Suspicious inbox manipulation rules](alert-grading-playbook-inbox-manipulation-rules.md)
 - [Investigate alerts](investigate-alerts.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

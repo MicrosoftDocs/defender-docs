@@ -46,7 +46,7 @@ The images and the tables below list the changes in navigation between Microsoft
 ### Discover
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="../../media/defender-cloud-apps-m365-defender-discover.png" alt-text="The new locations for Cloud Discovery features in the Microsoft Defender portal" lightbox="../../media/defender-cloud-apps-m365-defender-discover.png":::
+> :::image type="content" source="./media/defender-cloud-apps-m365-defender-discover.png" alt-text="The new locations for Cloud Discovery features in the Microsoft Defender portal" lightbox="./media/defender-cloud-apps-m365-defender-discover.png":::
 
 | Defender for Cloud Apps | Microsoft Defender XDR |
 |---------|---------|
@@ -62,7 +62,7 @@ The images and the tables below list the changes in navigation between Microsoft
 ### Investigate
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="../../media/defender-cloud-apps-m365-defender-investigate.png" alt-text="The new locations for Investigation features in the Microsoft Defender portal" lightbox="../../media/defender-cloud-apps-m365-defender-investigate.png":::
+> :::image type="content" source="./media/defender-cloud-apps-m365-defender-investigate.png" alt-text="The new locations for Investigation features in the Microsoft Defender portal" lightbox="./media/defender-cloud-apps-m365-defender-investigate.png":::
 
 | Defender for Cloud Apps | Microsoft Defender XDR |
 |---------|---------|
@@ -77,7 +77,7 @@ The images and the tables below list the changes in navigation between Microsoft
 ### Control
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="../../media/defender-cloud-apps-m365-defender-control.png" alt-text="The new locations for Control features in the Microsoft Defender portal" lightbox="../../media/defender-cloud-apps-m365-defender-control.png":::
+> :::image type="content" source="./media/defender-cloud-apps-m365-defender-control.png" alt-text="The new locations for Control features in the Microsoft Defender portal" lightbox="./media/defender-cloud-apps-m365-defender-control.png":::
 
 | Defender for Cloud Apps | Microsoft Defender XDR |
 |---------|---------|
@@ -87,7 +87,7 @@ The images and the tables below list the changes in navigation between Microsoft
 ### Settings
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="../../media/defender-cloud-apps-m365-defender-settings.png" alt-text="The new locations for Settings in the Microsoft Defender portal" lightbox="../../media/defender-cloud-apps-m365-defender-settings.png":::
+> :::image type="content" source="./media/defender-cloud-apps-m365-defender-settings.png" alt-text="The new locations for Settings in the Microsoft Defender portal" lightbox="./media/defender-cloud-apps-m365-defender-settings.png":::
 
 | Defender for Cloud Apps | Microsoft Defender XDR |
 |---------|---------|
@@ -120,7 +120,7 @@ Learn about the changes that have come with the integration of Defender for Clou
 
 Global search in Microsoft Defender XDR (using the search bar at the top of the page) now includes an additional searchable entity: it allows you to search for connected apps in Defender for Cloud Apps.
 
-:::image type="content" source="../../media/global-search-apps.png" alt-text="Search for connected apps.":::
+:::image type="content" source="./media/global-search-apps.png" alt-text="Search for connected apps.":::
 
 ### Assets and identities
 
@@ -143,7 +143,7 @@ Turn on the preview experience setting to be among the first to try upcoming fea
 
 You'll know you have preview features turned on when you see that the **Enable preview features** check box is selected. For example:
 
-:::image type="content" source="../../media/preview-features.png" alt-text="Screenshot that shows how to enable preview features.":::
+:::image type="content" source="./media/preview-features.png" alt-text="Screenshot that shows how to enable preview features.":::
 
 For more information, see [Microsoft Defender for Cloud Apps preview features](/defender-cloud-apps/preview-features).
 
@@ -189,4 +189,4 @@ Learn how to protect your cloud apps in Microsoft Defender XDR:
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 - [Contact support](/defender-cloud-apps/support-and-ts)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
