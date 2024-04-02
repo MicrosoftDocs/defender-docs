@@ -42,7 +42,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/exposure-management/breadcrumb/toc.yml",
+      "breadcrumb_path": "~/breadcrumb/exposure-management/toc.yml",
       "extendBreadcrumb": false,
       "permissioned-type": "public",
       "feedback_system": "Standard",
