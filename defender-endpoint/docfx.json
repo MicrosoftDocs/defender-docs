@@ -46,7 +46,7 @@
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
       "uhfHeaderId": "MSDocsHeader-Security",
       "titleSuffix": "Microsoft Defender Endpoint",
-      "searchScope": "Microsoft Defender Endpoint",
+      "searchScope": ["Microsoft Defender Endpoint"],
       "contributors_to_exclude": [
         "dstrome",
         "shdyas",

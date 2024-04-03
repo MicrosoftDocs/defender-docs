@@ -47,21 +47,9 @@
       "permissioned-type": "public",
       "feedback_system": "Standard",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/MicrosoftThreatProtection",
-      "searchScope": ["Defender XDR"],
-      "uhfHeaderId": "MSDocsHeader-Security",
-      "contributors_to_exclude": [
-        "dstrome2",
-        "rjagiewich",
-        "American-Dipper",
-        "claydetels19",
-        "jborsecnik",
-        "v-stchambers",
-        "shdyas",
-        "Stacyrch140",
-        "garycentric",
-        "dstrome",
-        "alekyaj"
-      ]
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "titleSuffix": "Microsoft Defender XDR",
+      "searchScope": ["Defender XDR"]
     },
     "template": [],
     "dest": "defender-xdr"
