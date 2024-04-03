@@ -1,6 +1,54 @@
 {
   "docsets_to_publish": [
     {
+      "docset_name": "defender",
+      "build_source_folder": "defender",
+      "build_output_subfolder": "defender",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    },
+    {
+      "docset_name": "defender-business",
+      "build_source_folder": "defender-business",
+      "build_output_subfolder": "defender-business",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    },
+    {
+      "docset_name": "defender-endpoint",
+      "build_source_folder": "defender-endpoint",
+      "build_output_subfolder": "defender-endpoint",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    },
+    {
+      "docset_name": "defender-vulnerability-management",
+      "build_source_folder": "defender-vulnerability-management",
+      "build_output_subfolder": "defender-vulnerability-management",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    },
+    {
       "docset_name": "defender-xdr",
       "build_source_folder": "defender-xdr",
       "build_output_subfolder": "defender-xdr",

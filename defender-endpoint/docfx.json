@@ -25,9 +25,7 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg",
-          "**/*.gif",
-          "**/*.svg"
+          "**/*.jpg"
         ],
         "exclude": [
           "**/obj/**",
@@ -42,32 +40,11 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/exposure-management/breadcrumb/toc.json",
-      "extendBreadcrumb": false,
-      "permissioned-type": "public",
+      "breadcrumb_path": "/defender-endpoint/breadcrumb/toc.json",
       "feedback_system": "Standard",
-      "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
-      "searchScope": ["security-exposure-management"],
-      "uhfHeaderId": "MSDocsHeader-Security",
-      "titleSuffix": "Microsoft Security Exposure Management",
-      "contributors_to_exclude": [
-        "dstrome2",
-        "rjagiewich",  
-        "American-Dipper",
-        "claydetels19", 
-        "jborsecnik",
-        "v-stchambers",
-        "shdyas",
-        "Stacyrch140",
-        "garycentric",
-        "dstrome",
-        "alekyaj"
-      ]
-
+      "permissioned-type": "public"
     },
     "fileMetadata": {},
-    "template": [],
-    "dest": "security-exposure-management"
+    "template": []
   }
 }
-
