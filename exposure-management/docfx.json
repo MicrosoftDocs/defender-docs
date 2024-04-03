@@ -42,7 +42,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/brgiteadcrumb/exposure-management/toc.json",
+      "breadcrumb_path": "/exposure-management/breadcrumb/toc.json",
       "extendBreadcrumb": false,
       "permissioned-type": "public",
       "feedback_system": "Standard",
