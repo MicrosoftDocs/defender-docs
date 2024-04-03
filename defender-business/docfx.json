@@ -42,9 +42,26 @@
     "globalMetadata": {
       "breadcrumb_path": "/defender-business/breadcrumb/toc.json",
       "feedback_system": "Standard",
-      "permissioned-type": "public"
+      "permissioned-type": "public",
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
+      "uhfHeaderId": "MSDocsHeader-Security",
+      "titleSuffix": "Microsoft Defender Business",
+      "searchScope": "Microsoft Defender Business",
+      "contributors_to_exclude": [
+        "dstrome",
+        "shdyas",
+        "rjagiewich",
+        "American-Dipper",
+        "claydetels19",
+        "jborsecnik",
+        "v-stchambers",
+        "Stacyrch140",
+        "garycentric",
+        "alekyaj"
+      ]
     },
     "fileMetadata": {},
-    "template": []
+    "template": [],
+    "dest": "defender-business"
   }
 }
