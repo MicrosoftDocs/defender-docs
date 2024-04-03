@@ -40,7 +40,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/breadcrumb/defender-endpoint/toc.json",
+      "breadcrumb_path": "/defender-endpoint/breadcrumb/toc.json",
       "feedback_system": "Standard",
       "permissioned-type": "public"
     },
