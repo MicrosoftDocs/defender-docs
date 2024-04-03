@@ -48,7 +48,19 @@
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/MicrosoftThreatProtection",
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "titleSuffix": "Microsoft Defender XDR",
-      "searchScope": ["Defender XDR"]
+      "searchScope": ["Defender XDR"],
+      "contributors_to_exclude": [
+        "dstrome",
+        "shdyas",
+        "rjagiewich",
+        "American-Dipper",
+        "claydetels19",
+        "jborsecnik",
+        "v-stchambers",
+        "Stacyrch140",
+        "garycentric",
+        "alekyaj"
+      ]
     },
     "template": [],
     "dest": "defender-xdr"
