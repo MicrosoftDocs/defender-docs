@@ -47,7 +47,6 @@
       "uhfHeaderId": "MSDocsHeader-Security",
       "titleSuffix": "Microsoft Defender",
       "searchScope": "Microsoft Defender",
-      "dest": "defender",
       "contributors_to_exclude": [
         "dstrome",
         "shdyas",
@@ -62,6 +61,7 @@
       ]
     },
     "fileMetadata": {},
-    "template": []
+    "template": [],
+    "dest": "defender"
   }
 }
