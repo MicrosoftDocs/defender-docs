@@ -59,7 +59,7 @@ Error codes can be returned by an operation on any of the Microsoft Defender XDR
 | DisallowedOperation | Forbidden (403) | \<the disallowed operation and the reason\>. |
 | NotFound | Not Found (404) | General Not Found error message. |
 | ResourceNotFound | Not Found (404) | Resource \<the requested resource\> wasn't found. |
-| InternalServerError | Internal Server Error (500) | *If there's no error message, retry the operation. [Contact Microsoft](../../admin/get-help-support.md) if it doesn't get resolved*. |
+| InternalServerError | Internal Server Error (500) | *If there's no error message, retry the operation. [Contact Microsoft](/Microsoft-365/admin/get-help-support.md) if it doesn't get resolved*. |
 
 ## Examples
 

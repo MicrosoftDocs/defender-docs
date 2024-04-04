@@ -40,7 +40,7 @@ As soon as you have signed up for Defender for Business, your first step is to a
 
 4. On the **Assign product licenses** page, select Defender for Business (or Microsoft 365 Business Premium). Then choose **Next**. 
 
-   If you don't have any licenses available, you can still add a user and buy additional licenses. For more information about adding users, see [Add users and assign licenses at the same time](../../admin/add-users/add-users.md).
+   If you don't have any licenses available, you can still add a user and buy additional licenses. For more information about adding users, see [Add users and assign licenses at the same time](/Microsoft-365/admin/add-users/add-users.md).
 
 5. On the **Optional settings** page, you can expand **Profile info** and fill in details, such as the user's job title, department, location, and so forth. Then choose **Next**.
 
@@ -67,7 +67,7 @@ One good way to make sure MFA is enabled for all users is by using [security def
 
    > [!CAUTION]
    > If your organization is using Conditional Access policies, you won't be able to enable security defaults. You'll see a message that indicates you're using classic policies instead. You can use *either* security defaults *or* Conditional Access, but not both. For most organizations, security defaults offer a good level of sign-in security. But if your organization must meet more stringent requirements, you can use Conditional Access policies instead. To learn more, see the following articles:
-   > - [Multi-factor authentication](../../business-premium/m365bp-turn-on-mfa.md) (in the Microsoft 365 Business Premium documentation)
+   > - [Multi-factor authentication](/Microsoft-365/business-premium/m365bp-turn-on-mfa) (in the Microsoft 365 Business Premium documentation)
    > - [Security defaults in Microsoft Entra ID](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)
 
 5. Save your changes.

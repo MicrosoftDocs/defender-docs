@@ -22,7 +22,7 @@ audience: ITPro
 
 # Use the streaming API with Microsoft Defender for Business
 
-If your organization has a Security Operations Center (SOC), the ability to use the [Microsoft Defender for Endpoint streaming API](../defender-endpoint/raw-data-export.md) is available for [Defender for Business](mdb-overview.md) and [Microsoft 365 Business Premium](../../business-premium/m365bp-overview.md). The API enables you to stream data, such as device file, registry, network, sign-in events, and more to one of the following services:
+If your organization has a Security Operations Center (SOC), the ability to use the [Microsoft Defender for Endpoint streaming API](../defender-endpoint/api/raw-data-export.md) is available for [Defender for Business](mdb-overview.md) and [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview). The API enables you to stream data, such as device file, registry, network, sign-in events, and more to one of the following services:
 
 - [Microsoft Sentinel](#use-the-streaming-api-with-microsoft-sentinel), a scalable, cloud-native solution that provides security information and event management (SIEM) and security orchestration, automation, and response (SOAR) capabilities. 
 - [Azure Event Hubs](#use-the-streaming-api-with-event-hubs), a modern big data streaming platform and event ingestion service that can seamlessly integrate with other Azure and Microsoft services, such as Stream Analytics, Power BI, and Event Grid, along with outside services like Apache Spark.
@@ -126,5 +126,5 @@ Each blob contains multiple rows. Each row contains the event name, the time Def
 
 ## See also
 
-- [Raw Data Streaming API](../defender-endpoint/raw-data-export.md) in Defender for Endpoint
+- [Raw Data Streaming API](../defender-endpoint/api/raw-data-export.md) in Defender for Endpoint
 

@@ -22,7 +22,7 @@ ms.collection:
 
 ## Microsoft Defender for Business integrates with Microsoft 365 Lighthouse
 
-If you're a Microsoft Cloud Solution Provider (CSP) or Managed Service Provider (MSP), you can use [Microsoft 365 Lighthouse](../../lighthouse/m365-lighthouse-overview.md) to manage security for your customers. Microsoft Defender for Business and Defender for Endpoint integrate with Microsoft 365 Lighthouse, an admin portal that CSPs and MSPs can use to secure and manage their customers' data and devices.
+If you're a Microsoft Cloud Solution Provider (CSP) or Managed Service Provider (MSP), you can use [Microsoft 365 Lighthouse](/Microsoft-365/lighthouse/m365-lighthouse-overview) to manage security for your customers. Microsoft Defender for Business and Defender for Endpoint integrate with Microsoft 365 Lighthouse, an admin portal that CSPs and MSPs can use to secure and manage their customers' data and devices.
 
 :::image type="content" source="media/lighthouse-incidents.png" alt-text="screenshot of incidents list in Microsoft 365 Lighthouse":::
 
@@ -38,9 +38,9 @@ Microsoft 365 Lighthouse enables Microsoft CSPs and MSPs to secure and manage de
 
 To learn more, see:
 
-- [Overview of Microsoft 365 Lighthouse](../../lighthouse/m365-lighthouse-overview.md)
-- [Requirements for Microsoft 365 Lighthouse](../../lighthouse/m365-lighthouse-requirements.md)
-- [Sign up for Microsoft 365 Lighthouse](../../lighthouse/m365-lighthouse-sign-up.md)
+- [Overview of Microsoft 365 Lighthouse](/Microsoft-365/lighthouse/m365-lighthouse-overview)
+- [Requirements for Microsoft 365 Lighthouse](/Microsoft-365/lighthouse/m365-lighthouse-requirements)
+- [Sign up for Microsoft 365 Lighthouse](/Microsoft-365/lighthouse/m365-lighthouse-sign-up)
 
 ## See also
 

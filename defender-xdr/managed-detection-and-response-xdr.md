@@ -137,7 +137,7 @@ The following section describes how an incident handled by our experts is update
 
 ### Other applications
 
-You could obtain visibility into incidents in your SIEM or ITSM application by using the [Microsoft Defender XDR API](../defender/api-overview.md) or [connectors in Sentinel](/azure/sentinel/data-connectors-reference).
+You could obtain visibility into incidents in your SIEM or ITSM application by using the [Microsoft Defender XDR API](api-overview.md) or [connectors in Sentinel](/azure/sentinel/data-connectors-reference).
 
 After configuring a connector, the updates by Defender Experts to an incident's **Status**, **Assigned to**, **Classification**, and **Determination** fields in Microsoft Defender XDR can be synchronized with the third-party SIEM or ITSM applications, depending on how the field mapping has been implemented. To illustrate, you can take a look at the [connector available from Sentinel to ServiceNow](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Servicenow/StoreApp).
 

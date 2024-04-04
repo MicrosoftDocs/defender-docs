@@ -248,7 +248,7 @@ The security operations team can view all actions pending approval, and the stip
 
   Threat tags help you focus on specific threat categories and review the most relevant reports.
 
-- (Preview) [Streaming API](../defender-endpoint/raw-data-export.md)
+- (Preview) [Streaming API](../defender-endpoint/api/raw-data-export.md)
 
   Microsoft Defender XDR supports streaming all the events available through Advanced Hunting to an Event Hubs and/or Azure storage account.
 

@@ -95,7 +95,7 @@ Let’s say a triage analyst investigates an incident and finds that it is relat
 
 For more information, see:
 
-- [What is Microsoft Defender Threat Intelligence (Defender TI)?](index.md)
+- [What is Microsoft Defender Threat Intelligence (Defender TI)?](index.yml)
 - [Data sets](data-sets.md)
 - [Sorting, filtering, and downloading data](sorting-filtering-and-downloading-data.md)
 - [Reputation scoring](reputation-scoring.md)

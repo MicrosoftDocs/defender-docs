@@ -74,7 +74,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Maintain your environment
-            url: mdb-maintain-environment.md
+            url: /microsoft-365/business-premium/m365bp-mdb-maintain-environment
           - text: View your reports
             url: mdb-reports.md
 
@@ -84,7 +84,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: How to get help or contact support
-            url: mdb-get-help.md
+            url: /microsoft-365/admin/get-help-support
           - text: Frequently asked questions
             url: mdb-faq.yml
           - text: Microsoft Security Intelligence
