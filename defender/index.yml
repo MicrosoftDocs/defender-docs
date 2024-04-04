@@ -21,7 +21,7 @@ highlightedContent:
   items:
     - title: What is Microsoft Defender XDR
       itemType: overview
-      url: /microsoft-365/security/defender/microsoft-365-defender
+      url: /defender-xdr/microsoft-365-defender
     - title: Learn modules for Microsoft Defender XDR
       itemType: learn
       url: /training/m365/defender    
@@ -41,13 +41,13 @@ conceptualContent:
         - title: Microsoft Defender XDR
           summary: Investigate incidents and hunt for threats.
           links:
-          - url: /microsoft-365/security/defender/microsoft-365-defender
+          - url: /defender-xdr/microsoft-365-defender
             itemType: overview
             text: Overview
-          - url: /microsoft-365/security/defender/whats-new
+          - url: /defender-xdr/whats-new
             itemType: whats-new
             text: What's new
-          - url: /microsoft-365/security/defender/get-started
+          - url: /defender-xdr/get-started
             itemType: get-started
             text: Get started 
           - url: https://techcommunity.microsoft.com/t5/microsoft-defender-xdr/bd-p/MicrosoftThreatProtection
@@ -58,18 +58,18 @@ conceptualContent:
             text: Training - SC-200 Mitigate threats using Defender XDR
           footerLink:
            text: See more
-           url: /microsoft-365/security/defender/index.yml
+           url: /defender-xdr/index.yml
 
         - title: Microsoft Defender for Endpoint
           summary: Protect your devices and endpoints
           links:
-          - url: /microsoft-365/security/defender-endpoint
+          - url: /defender-endpoint/microsoft-defender-endpoint
             itemType: overview
             text: Overview
-          - url: /microsoft-365/security/defender-endpoint/whats-new-in-microsoft-defender-endpoint
+          - url: /defender-endpoint/whats-new-in-microsoft-defender-endpoint
             itemType: whats-new
             text: What's new
-          - url: /microsoft-365/security/defender-endpoint/mde-planning-guide
+          - url: /defender-endpoint/mde-planning-guide
             itemType: get-started
             text: Get started
           - url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bd-p/MicrosoftDefenderATP
@@ -80,18 +80,18 @@ conceptualContent:
             text: Training - SC-200 Mitigate threats using Microsoft Defender for Endpoint
           footerLink:
            text: See more
-           url: /microsoft-365/security/defender-endpoint/index.yml
+           url: /defender-endpoint/index.yml
 
         - title: Microsoft Defender for Office 365
           summary: Protect your email, prevent phishing attacks, and protect your collaboration tools
           links: 
-          - url: /microsoft-365/security/office-365-security/defender-for-office-365
+          - url: /defender-office-365/defender-for-office-365
             itemType: overview
             text: Overview
-          - url: /microsoft-365/security/office-365-security/microsoft-365/security/office-365-security/defender-for-office-365-whats-new
+          - url: /defender-office-365/security/office-365-security/microsoft-365/security/office-365-security/defender-for-office-365-whats-new
             itemType: whats-new
             text: What's new
-          - url: /microsoft-365/security/office-365-security/mdo-deployment-guide
+          - url: /defender-office-365/security/office-365-security/mdo-deployment-guide
             itemType: get-started
             text: Get started
           - url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/bd-p/MicrosoftDefenderforOffice365
@@ -102,7 +102,7 @@ conceptualContent:
             text: Training - Implement email and collaboration protection
           footerLink:
            text: See more
-           url: /microsoft-365/security/office-365-security/index.yml
+           url: /defender-office-365/index.yml
 
         - title: Microsoft Defender for Identity
           summary: Protect your users and monitor risky behavior
@@ -154,15 +154,15 @@ conceptualContent:
           - url: /microsoft-365/security/defender-vulnerability-management/defender-vulnerability-management
             itemType: overview
             text: Overview
-          - url: /microsoft-365/security/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-
+          - url: /defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-
             itemType: whats-new
             text: What's new
-          - url: /microsoft-365/security/defender-vulnerability-management/tvm-prerequisites
+          - url: /defender-vulnerability-management/tvm-prerequisites
             itemType: get-started
             text: Get started 
           footerLink:
            text: See more
-           url: /microsoft-365/security/defender-vulnerability-management/
+           url: /defender-vulnerability-management/
           
 
 additionalContent:
