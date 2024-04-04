@@ -20,7 +20,7 @@ ms.date: 02/21/2024
 
 # Deploy Microsoft Defender for Endpoint on Linux with Saltstack
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -37,7 +37,7 @@ This article describes how to deploy Defender for Endpoint on Linux using Saltst
 - [Deployment](#deployment)
 - [Reference](#reference)
 
-[!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../../includes/support.md)]
+[!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 
 ## Prerequisites and system requirements
 
@@ -60,7 +60,7 @@ In addition, for Saltstack deployment, you need to be familiar with Saltstack ad
 
 Download the onboarding package from Microsoft Defender portal.
 
-[!INCLUDE [Defender for Endpoint repackaging warning](../../includes/repackaging-warning.md)]
+[!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
 1. In Microsoft Defender portal, go to **Settings > Endpoints > Device management > Onboarding**.
 2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Your preferred Linux configuration management tool** as the deployment method.
@@ -276,4 +276,4 @@ When upgrading your operating system to a new major version, you must first unin
 ## See also
 
 - [Investigate agent health issues](health-status.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

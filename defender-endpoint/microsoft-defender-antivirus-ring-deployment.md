@@ -20,7 +20,7 @@ ms.date: 07/21/2023
 
 # Deploy Microsoft Defender Antivirus in rings
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 

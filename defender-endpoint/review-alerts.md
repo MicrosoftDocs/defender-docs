@@ -21,7 +21,7 @@ search.appverid: met150
 
 # Review alerts in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -86,4 +86,4 @@ Selecting a device or a user card in the affected assets sections will switch to
 - [View and organize the incidents queue](view-incidents-queue.md)
 - [Investigate incidents](investigate-incidents.md)
 - [Manage incidents](manage-incidents.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

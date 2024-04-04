@@ -29,7 +29,7 @@ ms.date: 02/01/2024
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
 
 
-[!Include[Prerelease information](../../includes/prerelease.md)]
+[!Include[Prerelease information](../includes/prerelease.md)]
 
 Before you onboard devices to Defender for Endpoint, make sure your network is configured to connect to the service. The first step of this process involves adding URLs to the allowed domains list if your proxy server or firewall rules prevent access to Defender for Endpoint. This article also includes information about proxy and firewall requirements for older versions of Windows client and Windows Server.
 

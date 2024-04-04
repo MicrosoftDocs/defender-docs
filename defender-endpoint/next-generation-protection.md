@@ -70,4 +70,4 @@ If you're looking for Microsoft Defender Antivirus-related information for other
 > See [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -18,7 +18,7 @@ ms.date: 12/18/2020
 
 # Manage suppression rules
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -52,4 +52,4 @@ You can view a list of all the suppression rules and manage them in one place. Y
 ## Related topics
 
 - [Manage alerts](manage-alerts.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

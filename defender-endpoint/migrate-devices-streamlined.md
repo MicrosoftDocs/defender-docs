@@ -18,7 +18,7 @@ ms.date: 02/01/2024
 
 # Migrate devices to use the streamlined connectivity method
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -27,7 +27,7 @@ ms.date: 02/01/2024
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 
-[!Include[Prerelease information](../../includes/prerelease.md)]
+[!Include[Prerelease information](../includes/prerelease.md)]
 
 
 This article describes how to migrate (reonboard) devices that are currently onboarded to Defender for Endpoint to use the streamlined device connectivity method. For more information on streamlined connectivity, see [Onboarding devices using streamlined connectivity](configure-device-connectivity.md). Devices must meet the prerequisites listed in [Streamlined connectivity](configure-device-connectivity.md#prerequisites). 

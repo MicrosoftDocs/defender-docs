@@ -19,7 +19,7 @@ ms.date: 12/18/2020
 
 # Enroll Microsoft Defender for Endpoint on macOS devices into Jamf Pro
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -103,4 +103,4 @@ For a complete list, see [About Computer Enrollment](https://docs.jamf.com/9.9/c
 6. Select **Continue**  to complete the configuration.
 
    :::image type="content" source="media/jamfpro-mdm-profile.png" alt-text="The Jamf Pro enrollment6" lightbox="media/jamfpro-mdm-profile.png":::
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

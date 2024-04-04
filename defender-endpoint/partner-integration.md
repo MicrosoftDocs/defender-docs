@@ -18,7 +18,7 @@ ms.date: 12/18/2020
 
 # Microsoft Defender for Endpoint partner opportunities and scenarios
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -60,4 +60,4 @@ Follow the steps in [Become a Microsoft Defender for Endpoint partner](get-start
 
 - [Overview of management and APIs](management-apis.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

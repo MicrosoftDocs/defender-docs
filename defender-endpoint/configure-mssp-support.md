@@ -17,7 +17,7 @@ ms.date: 12/18/2020
 
 # Configure managed security service provider integration
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -26,7 +26,7 @@ ms.date: 12/18/2020
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-mssp-support-abovefoldlink)
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!include[Prerelease information](../includes/prerelease.md)]
 
 To enable the managed security service provider (MSSP) integration, follow the guidance in this article.
 
@@ -63,4 +63,4 @@ For information on how to implement a multitenant delegated access, see [Multi-t
 - [Access the MSSP customer portal](access-mssp-portal.md)
 - [Configure alert notifications](configure-mssp-notifications.md)
 - [Fetch alerts from customer tenant](fetch-alerts-mssp.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -20,7 +20,7 @@ ms.date: 07/21/2023
 
 # Microsoft Defender Antivirus pilot ring deployment using Group Policy and Windows Server Update Services
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 

@@ -19,7 +19,7 @@ search.appverid: met150
 
 # Turn on network protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -215,4 +215,4 @@ Use the following procedure to enable network protection on domain-joined comput
 - [Evaluate network protection](evaluate-network-protection.md)
 
 - [Troubleshoot network protection](troubleshoot-np.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

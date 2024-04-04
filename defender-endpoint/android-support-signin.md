@@ -19,7 +19,7 @@ ms.date: 12/18/2020
 
 # Troubleshooting issues on Microsoft Defender for Endpoint on Android
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -166,4 +166,4 @@ If a user faces an issue, which isn't already addressed in the above sections or
     :::image type="content" source="media/finalsubmit5.png" alt-text="The pane on which you can add details and attach diagnostic data" lightbox="media/finalsubmit5.png":::
 
 6. Select on "Submit" to successfully send the feedback.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

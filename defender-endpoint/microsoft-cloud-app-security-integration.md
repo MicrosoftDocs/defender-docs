@@ -18,9 +18,9 @@ search.appverid: met150
 
 # Microsoft Defender for Cloud Apps in Defender for Endpoint overview
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!include[Prerelease information](../includes/prerelease.md)]
 
 **Applies to:**
 
@@ -54,5 +54,5 @@ For more information about cloud discovery, see [Working with discovered apps](/
 ## Related topic
 
 - [Configure Microsoft Defender for Cloud Apps integration](microsoft-cloud-app-security-config.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

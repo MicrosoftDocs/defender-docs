@@ -20,7 +20,7 @@ ms.date: 12/18/2020
 
 # Get installed software
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -33,11 +33,11 @@ ms.date: 12/18/2020
 
 > Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](../../defender-vulnerability-management/get-defender-vulnerability-management.md).
 
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../../includes/microsoft-defender-api-usgov.md)]
+[!include[Microsoft Defender for Endpoint API URIs for US Government](../includes/microsoft-defender-api-usgov.md)]
 
-[!include[Improve request performance](../../../includes/improve-request-performance.md)]
+[!include[Improve request performance](../includes/improve-request-performance.md)]
 
-[!include[Prerelease information](../../../includes/prerelease.md)]
+[!include[Prerelease information](../includes/prerelease.md)]
 
 Retrieves a collection of installed software related to a given device ID.
 
@@ -106,4 +106,4 @@ Here is an example of the response.
 
 - [Microsoft Defender Vulnerability Management](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
 - [Defender Vulnerability Management software inventory](/microsoft-365/security/defender-endpoint/tvm-software-inventory)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

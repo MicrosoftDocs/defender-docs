@@ -21,7 +21,7 @@ ms.date: 12/18/2020
 
 # Assign roles and permissions for Microsoft Defender for Endpoint deployment
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -73,4 +73,4 @@ The following example table serves to identify the Cyber Defense Operations Cent
 ## Next step
 
 After assigning roles and permissions to view and manage Defender for Endpoint it's time for [Step 3 - Identify your architecture and choose your deployment method](deployment-strategy.md).
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

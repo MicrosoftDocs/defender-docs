@@ -19,7 +19,7 @@ ms.date: 01/19/2024
 
 # Configure general Defender for Endpoint settings
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -40,4 +40,4 @@ APIs | Enable the threat intel and SIEM integration.
 Rules | Configure suppressions rules and automation settings.
 Device management | Onboard and offboard devices.
 Network assessments | Choose devices to be scanned regularly and added to the device inventory.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -20,7 +20,7 @@ search.appverid: met150
 
 # Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -315,4 +315,4 @@ When the ratelimit is enabled a rule will be added in AuditD to handle 2500 even
 ## See also
 
 - [Investigate agent health issues](health-status.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

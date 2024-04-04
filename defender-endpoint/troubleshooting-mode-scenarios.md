@@ -139,4 +139,4 @@ For more information, see [Use network protection to help prevent connections to
 - [Set-MpPreference](/powershell/module/defender/set-mppreference)
 - [Get an overview of Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

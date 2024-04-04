@@ -17,7 +17,7 @@ ms.date: 12/18/2020
 
 # Enable Conditional Access to better protect users, devices, and data
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -75,4 +75,4 @@ The following example sequence of events explains Conditional Access in action:
 ## Related topic
 
 - [Configure Conditional Access in Microsoft Defender for Endpoint](configure-conditional-access.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

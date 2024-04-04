@@ -20,7 +20,7 @@ ms.date: 03/15/2021
 
 # Batch update alerts
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -29,9 +29,9 @@ ms.date: 03/15/2021
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-[!include[Microsoft Defender for Endpoint API URIs for US Government](../../../includes/microsoft-defender-api-usgov.md)]
+[!include[Microsoft Defender for Endpoint API URIs for US Government](../includes/microsoft-defender-api-usgov.md)]
 
-[!include[Improve request performance](../../../includes/improve-request-performance.md)]
+[!include[Improve request performance](../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -120,4 +120,4 @@ POST https://api.securitycenter.microsoft.com/api/alerts/batchUpdate
     "comment": "Resolve my alert and assign to secop2"
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

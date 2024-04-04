@@ -18,7 +18,7 @@ ms.date: 03/25/2021
 
 # Evaluate Microsoft Defender for Endpoint 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
@@ -52,4 +52,4 @@ Next gen protections help detect and block the latest threats.
 ## See Also
 
 [Microsoft Defender for Endpoint overview](microsoft-defender-endpoint.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -19,7 +19,7 @@ ms.date: 04/03/2023
 
 # Device Control for macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -460,4 +460,4 @@ In this case, only have one access rule policy, but if you have multiple, make s
 - [Deploy Device Control by using JAMF](mac-device-control-jamf.md)
 - [Deploy Device Control manually](mac-device-control-manual.md)
 - [macOS Device Control frequently asked questions (FAQ)](mac-device-control-faq.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

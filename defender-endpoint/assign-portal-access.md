@@ -18,7 +18,7 @@ ms.date: 3/30/2023
 
 # Assign user access 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -47,4 +47,4 @@ Defender for Endpoint supports two ways to manage permissions:
 
 - [Use basic permissions to access the portal](basic-permissions.md)
 - [Manage portal access using RBAC](rbac.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

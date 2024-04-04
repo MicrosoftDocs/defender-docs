@@ -19,7 +19,7 @@ metadata:
 
 title: Attack surface reduction frequently asked questions (FAQ)
 summary: |
-  [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+  [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
   **Applies to:**
   - [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2154037)

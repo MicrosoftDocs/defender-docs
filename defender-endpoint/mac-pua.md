@@ -19,7 +19,7 @@ ms.date: 11/20/2023
 
 # Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
@@ -75,4 +75,4 @@ You are able to test PUA protection by going to [Potentially unwanted applicatio
 
 - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -20,7 +20,7 @@ ms.date: 12/18/2020
 
 # Configure Microsoft Defender for Endpoint on Linux for static proxy discovery
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -96,4 +96,4 @@ sudo systemctl daemon-reload; sudo systemctl restart mdatp
 
 > [!NOTE]
 > Red Hat Enterprise Linux 6.X and CentOS 6.X don't support **systemctl** and **/etc/environment** methods. To configure static proxy for MDE on these distributions, use the Recommended **mdatp config proxy set** method.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

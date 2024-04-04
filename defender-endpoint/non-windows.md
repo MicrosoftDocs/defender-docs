@@ -20,7 +20,7 @@ ms.date: 12/18/2020
 
 # Microsoft Defender for Endpoint on other platforms
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1 and Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -76,4 +76,4 @@ Recently announced capabilities of Microsoft Defender for Endpoint on Android an
 Defender for Endpoint on Linux is available through the Defender for Endpoint Server SKU that is available for both commercial and education customers.
 
 Please contact your account team or CSP for pricing and additional eligibility requirements.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

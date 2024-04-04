@@ -96,4 +96,4 @@ For more information about hunting options, see: [Demystifying attack surface re
 [Enable attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
 
 [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

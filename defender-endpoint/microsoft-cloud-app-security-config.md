@@ -18,7 +18,7 @@ ms.date: 12/18/2020
 
 # Configure Microsoft Defender for Cloud Apps in Microsoft Defender for Endpoint
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -54,4 +54,4 @@ If you're interested in trying Microsoft Defender for Cloud Apps, see [Microsoft
 ## Related topic
 
 - [Microsoft Defender for Cloud Apps integration](microsoft-cloud-app-security-integration.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -21,7 +21,7 @@ search.appverid: met150
 
 # Alerts queue in Microsoft Defender XDR
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -43,4 +43,4 @@ Topic|Description
 [Investigate an IP address](investigate-ip.md)|Examine possible communication between devices in your network and external internet protocol (IP) addresses.
 [Investigate a domain](investigate-domain.md)|Investigate a domain to see if devices and servers in your network have been communicating with a known malicious domain.
 [Investigate a user account](investigate-user.md)|Identify user accounts with the most active alerts and investigate cases of potential compromised credentials.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

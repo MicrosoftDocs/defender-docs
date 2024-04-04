@@ -33,4 +33,4 @@ If you have feedback or suggestions that would help us improve the Microsoft Def
 2. Microsoft Defender portal (security.microsoft.com):
 
 :::image type="content" source="media/1d5b3c010b4b5c0e9d5eb43f71fa95e3.png" alt-text="The Give feedback button" lightbox="media/1d5b3c010b4b5c0e9d5eb43f71fa95e3.png":::
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

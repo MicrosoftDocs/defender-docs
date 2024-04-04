@@ -20,7 +20,7 @@ ms.date: 12/18/2020
 
 # Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -71,4 +71,4 @@ In your enterprise, you can configure PUA protection from a management console, 
 ## Related articles
 
 - [Set preferences for Defender for Endpoint on Linux](linux-preferences.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

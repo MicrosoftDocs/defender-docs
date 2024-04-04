@@ -18,7 +18,7 @@ ms.date: 03/30/2021
 
 # Network device discovery and vulnerability management
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -239,4 +239,4 @@ Change command-line settings on your device to allow copying and change text siz
 
 - [Device inventory](machines-view-overview.md)
 - [Windows authenticated scan](../defender-vulnerability-management/windows-authenticated-scan.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

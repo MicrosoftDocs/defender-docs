@@ -19,7 +19,7 @@ ms.date: 03/31/2023
 
 # macOS Device Control policies frequently asked questions (FAQ)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -54,4 +54,4 @@ Answer 2: Run _mdatp device-control policy groups list_ to see all the iOS group
 - [Device Control for macOS](mac-device-control-overview.md)
 - [Deploy and manage Device Control using Intune](mac-device-control-intune.md)
 - [Deploy and manage Device Control using jamf](mac-device-control-jamf.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

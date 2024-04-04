@@ -20,7 +20,7 @@ search.appverid: met150
 
 # Evaluate Microsoft Defender Antivirus using Powershell
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 

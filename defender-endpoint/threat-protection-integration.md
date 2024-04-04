@@ -17,7 +17,7 @@ ms.date: 12/18/2020
 
 # Microsoft Defender for Endpoint and other Microsoft solutions
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -81,4 +81,4 @@ With Microsoft Defender XDR, Microsoft Defender for Endpoint, and various Micros
 - [Microsoft Defender XDR overview](/microsoft-365/security/defender/microsoft-365-defender)
 - [Turn on Microsoft Defender XDR](/microsoft-365/security/defender/m365d-enable)
 - [Protect users, data, and devices with Conditional Access](conditional-access.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

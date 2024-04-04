@@ -20,7 +20,7 @@ ms.date: 08/15/2023
 
 # Enable controlled folder access
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -154,4 +154,4 @@ Use `Disabled` to turn off the feature.
 - [Protect important folders with controlled folder access](controlled-folders.md)
 - [Customize controlled folder access](customize-controlled-folders.md)
 - [Evaluate Microsoft Defender for Endpoint](evaluate-mde.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

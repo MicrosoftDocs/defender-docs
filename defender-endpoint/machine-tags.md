@@ -174,4 +174,4 @@ You can use Microsoft Intune to define and apply tag for mobile devices. You can
 - **For iOS**, follow the guidance in [Configure Microsoft Defender for Endpoint on iOS features](/microsoft-365/security/defender-endpoint/ios-configure-features).
 - **For Android**, follow the guidance on [Configure Defender for Endpoint on Android features](/microsoft-365/security/defender-endpoint/android-configure).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

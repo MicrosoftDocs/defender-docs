@@ -18,7 +18,7 @@ ms.date: 05/19/2022
 
 # Defender for Endpoint onboarding Windows Client
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -38,7 +38,7 @@ In general, you identify the client you're onboarding, then follow the correspon
 
 :::image type="content" source="media/onboarddevices.png" alt-text="Onboard devices" lightbox="media/onboarddevices.png":::
 
-[!INCLUDE [Defender for Endpoint repackaging warning](../../includes/repackaging-warning.md)]
+[!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
 ## Related topics
 
@@ -47,4 +47,4 @@ In general, you identify the client you're onboarding, then follow the correspon
 - [Onboard Windows devices using a local script](configure-endpoints-script.md)
 - [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -17,7 +17,7 @@ ms.date: 12/18/2020
 
 # Migrate from the MDE SIEM API to the Microsoft Defender XDR alerts API
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -132,4 +132,4 @@ For more information, see:
 - [Hello World example (describes how to register an application in Microsoft Entra ID)](api-hello-world.md)
 - [Get access with application context](exposed-apis-create-app-webapp.md)
 - [Microsoft Defender XDR SIEM integration](../defender/configure-siem-defender.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

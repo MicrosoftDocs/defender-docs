@@ -18,7 +18,7 @@ ms.date: 12/18/2020
 
 # Offboard devices
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -63,4 +63,4 @@ Follow the corresponding instructions depending on your preferred deployment met
 
 - [Offboard non-Windows devices](configure-endpoints-non-windows.md#offboard-non-windows-devices)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

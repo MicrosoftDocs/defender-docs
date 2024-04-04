@@ -191,5 +191,5 @@ Use the following steps to schedule scans:
     Tue Jun 14 20:20:50 UTC 2022 Time Scan Finished
     [root@redhat7 cron.weekly] #
     ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

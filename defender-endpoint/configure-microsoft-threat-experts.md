@@ -18,7 +18,7 @@ ms.date: 12/18/2020
 
 # Configure and manage Endpoint Attack Notifications
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -91,4 +91,4 @@ You can filter your incidents and alerts if you want to only see the Endpoint At
 #### To proactively hunt threats across endpoints, Office 365, cloud applications, and identity, refer to
 
 - [Microsoft Defender Experts in Microsoft 365 Overview](../defender/defender-experts-for-hunting.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
