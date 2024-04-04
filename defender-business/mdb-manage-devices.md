@@ -31,7 +31,7 @@ In Defender for Business, you can manage devices as follows:
 
 ## View the list of onboarded devices
 
-:::image type="content" source="../../media/defender-business/mdb-device-inventory.png" alt-text="Screenshot of device inventory":::
+:::image type="content" source="../media/defender-business/mdb-device-inventory.png" alt-text="Screenshot of device inventory":::
 
 > [!IMPORTANT]
 > In order to view the list of onboarded devices, you must have one of the following [roles](mdb-roles-permissions.md) assigned: 
@@ -50,7 +50,7 @@ In Defender for Business, you can manage devices as follows:
 
 ## Take action on a device that has threat detections
 
-:::image type="content" source="../../media/defender-business/mdb-selected-device.png" alt-text="Screenshot of a selected device with details and actions available":::
+:::image type="content" source="../media/defender-business/mdb-selected-device.png" alt-text="Screenshot of a selected device with details and actions available":::
 
 > [!IMPORTANT]
 > In order to take action on a device with detected threats, you must have one of the following [roles](mdb-roles-permissions.md) assigned: 

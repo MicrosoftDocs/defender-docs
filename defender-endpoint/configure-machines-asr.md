@@ -31,7 +31,7 @@ ms.date: 12/18/2020
 
 [Attack surface reduction rules](./attack-surface-reduction.md) identify and prevent typical malware exploits. They control when and how potentially malicious code can run. For example, they can prevent JavaScript or VBScript from launching a downloaded executable, block Win32 API calls from Office macros, and block processes that run from USB drives.
 
-:::image type="content" source="../../media/attack-surface-mgmt.png" alt-text="Attack surface management card" lightbox="../../media/attack-surface-mgmt.png":::
+:::image type="content" source="../media/attack-surface-mgmt.png" alt-text="Attack surface management card" lightbox="../media/attack-surface-mgmt.png":::
 
 > *Attack surface management card*
 

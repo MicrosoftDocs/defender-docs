@@ -155,7 +155,7 @@ For more information about allowed parameters, see [Windows Defender WMIv2 APIs]
 
 2. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar), and then, under **Virus & threat protection settings**, select **Manage settings**.
 
-   :::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="The Virus & threat protection settings" lightbox="../../media/wdav-protection-settings-wdsc.png":::
+   :::image type="content" source="../media/wdav-protection-settings-wdsc.png" alt-text="The Virus & threat protection settings" lightbox="../media/wdav-protection-settings-wdsc.png":::
 
 3. Confirm that **Cloud-based Protection** and **Automatic sample submission** are switched to **On**.
 

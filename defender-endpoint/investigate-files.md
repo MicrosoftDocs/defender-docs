@@ -66,7 +66,7 @@ The file page offers an overview of the file's details and attributes, the incid
 > [!NOTE]
 > Different users may see dissimilar values in the *devices in organization* section of the file prevalence card. This is because the card displays information based on the role-based access control (RBAC) scope that a user has. This means if a user has been granted visibility on a specific set of devices, they will only see the file organizational prevalence on those devices.
 
-:::image type="content" source="../../media/investigate-files/investigatefiles-fileoverview.png" alt-text="Screenshot of the File page overview" lightbox="../../media/investigate-files/investigatefiles-fileoverview.png":::
+:::image type="content" source="../media/investigate-files/investigatefiles-fileoverview.png" alt-text="Screenshot of the File page overview" lightbox="../media/investigate-files/investigatefiles-fileoverview.png":::
 
 ## Incidents and alerts
 
@@ -85,7 +85,7 @@ This section shows all the devices where the file is detected. The section inclu
 
 You can click on a device on the list to explore the full six months file history on each device and pivot to the first seen event in the device timeline.
 
-:::image type="content" source="../../media/investigate-files/investigatefiles-devices.png" alt-text="Screenshot of the devices page within a file" lightbox="../../media/investigate-files/investigatefiles-devices.png":::
+:::image type="content" source="../media/investigate-files/investigatefiles-devices.png" alt-text="Screenshot of the devices page within a file" lightbox="../media/investigate-files/investigatefiles-devices.png":::
 
 ### Cloud apps
 
@@ -94,7 +94,7 @@ You can click on a device on the list to explore the full six months file histor
 
 This section shows all the cloud applications where the file is observed. It also includes information like the file's names, the users associated with the app, the number of matches to a specific cloud app policy, associated apps' names, when the file was last modified, and the file's path.
 
-:::image type="content" source="../../media/investigate-files/investigatefiles-cloudapps.png" alt-text="Screenshot of the cloud apps page within a file" lightbox="../../media/investigate-files/investigatefiles-cloudapps.png":::
+:::image type="content" source="../media/investigate-files/investigatefiles-cloudapps.png" alt-text="Screenshot of the cloud apps page within a file" lightbox="../media/investigate-files/investigatefiles-cloudapps.png":::
 
 ## File names
 
@@ -109,11 +109,11 @@ The **File names** tab lists all names the file has been observed to use, within
 
 The File content tab lists information about portable executable (PE) files, including process writes, process creation, network activities, file writes, file deletes, registry reads, registry writes, strings, imports, and exports. This tab also lists all the file's capabilities.
 
-:::image type="content" source="../../media/investigate-files/investigatefiles-filecontent.png" alt-text="Screenshot of a file's content" lightbox="../../media/investigate-files/investigatefiles-filecontent.png":::
+:::image type="content" source="../media/investigate-files/investigatefiles-filecontent.png" alt-text="Screenshot of a file's content" lightbox="../media/investigate-files/investigatefiles-filecontent.png":::
 
 The file capabilities view lists a file's activities as mapped to the MITRE ATT&CK&trade; techniques.
 
-:::image type="content" source="../../media/investigate-files/investigatefiles-filecapabilities.png" alt-text="Screenshot of a file's capabilities" lightbox="../../media/investigate-files/investigatefiles-filecapabilities.png":::
+:::image type="content" source="../media/investigate-files/investigatefiles-filecapabilities.png" alt-text="Screenshot of a file's capabilities" lightbox="../media/investigate-files/investigatefiles-filecapabilities.png":::
 
 ## Related topics
 

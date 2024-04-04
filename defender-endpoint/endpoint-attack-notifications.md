@@ -41,12 +41,12 @@ Endpoint Attack Notifications (previously referred to as Microsoft Threat Expert
 - Scope of compromise and as much context as can be quickly delivered to enable fast SOC response
 
 
-![Screenshot of the Endpoint Attack Notifications alert](../../media/defender-endpoint/endpoint-attack-notification-alert.png)
+![Screenshot of the Endpoint Attack Notifications alert](../media/defender-endpoint/endpoint-attack-notification-alert.png)
 
 ## Apply for Endpoint Attack Notifications
 If you're a Microsoft Defender for Endpoint customer, you can apply for Endpoint Attack Notifications. Go to **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Endpoint Attack Notifications** to apply. Once accepted, you'll get the benefits of Endpoint Attack Notifications.
 
-![How to enable Endpoint Attack Notifications in 365 Defender Portal](../../media/defender-endpoint/enable-endpoint-attack-notifications.png)
+![How to enable Endpoint Attack Notifications in 365 Defender Portal](../media/defender-endpoint/enable-endpoint-attack-notifications.png)
 
 ## Receive Endpoint Attack notifications
 Endpoint Attack Notifications are alerts that have been hand crafted by Microsoft's managed hunting service based on suspicious activity in your environment. They can be viewed through several mediums:

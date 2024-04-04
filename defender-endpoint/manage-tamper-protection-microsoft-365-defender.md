@@ -60,7 +60,7 @@ search.appverid: met150
 
 ## Turn tamper protection on (or off) in the Microsoft Defender portal
 
-:::image type="content" source="../../media/mde-turn-tamperprotectionon.png" alt-text="Turn tamper protection turned on in the Microsoft Defender portal" lightbox="../../media/mde-turn-tamperprotectionon.png":::
+:::image type="content" source="../media/mde-turn-tamperprotectionon.png" alt-text="Turn tamper protection turned on in the Microsoft Defender portal" lightbox="../media/mde-turn-tamperprotectionon.png":::
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 

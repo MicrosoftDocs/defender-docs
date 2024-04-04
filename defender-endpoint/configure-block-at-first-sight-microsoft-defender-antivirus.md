@@ -112,7 +112,7 @@ You can confirm that block at first sight is enabled on individual client device
 
 2. Select **Virus & threat protection**, and then, under **Virus & threat protection settings**, select **Manage Settings**.
 
-   :::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="The Virus & threat protection settings label in the Windows Security app" lightbox="../../media/wdav-protection-settings-wdsc.png":::
+   :::image type="content" source="../media/wdav-protection-settings-wdsc.png" alt-text="The Virus & threat protection settings label in the Windows Security app" lightbox="../media/wdav-protection-settings-wdsc.png":::
 
 3. Confirm that **Cloud-delivered protection** and **Automatic sample submission** are both turned on.
 

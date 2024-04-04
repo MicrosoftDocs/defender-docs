@@ -85,7 +85,7 @@ Already have a lab? Make sure to enable the new threat simulators and have activ
 
 1. In the navigation pane, select **Evaluation & tutorials** \> **Evaluation lab**, then select **Setup lab**.
 
-   :::image type="content" source="../../media/evaluationtutormenu.png" alt-text="The evaluation lab welcome page" lightbox="../../media/evaluationtutormenu.png":::
+   :::image type="content" source="../media/evaluationtutormenu.png" alt-text="The evaluation lab welcome page" lightbox="../media/evaluationtutormenu.png":::
 
 2. Depending on your evaluation needs, you can choose to setup an environment with fewer devices for a longer period or more devices for a shorter period. Select your preferred lab configuration then select **Next**.
 
@@ -139,7 +139,7 @@ Automated investigation settings will be dependent on tenant settings. It will b
 
 2. Choose the type of device to add. You can choose to add Windows 10, Windows 11, Windows Server 2019, Windows Server 2016, and Linux (Ubuntu).
 
-   :::image type="content" source="../../media/add-machine-optionsnew.png" alt-text="The lab setup with device options" lightbox="../../media/add-machine-optionsnew.png":::
+   :::image type="content" source="../media/add-machine-optionsnew.png" alt-text="The lab setup with device options" lightbox="../media/add-machine-optionsnew.png":::
 
    > [!NOTE]
    > If something goes wrong with the device creation process, you'll be notified and you'll need to submit a new request. If the device creation fails, it will not be counted against the overall allowed quota.
@@ -149,7 +149,7 @@ Automated investigation settings will be dependent on tenant settings. It will b
    > [!NOTE]
    > The password is only displayed once. Be sure to save it for later use.
 
-    :::image type="content" source="../../media/add-machine-eval-lab-new.png" alt-text="The device added with connection details" lightbox="../../media/add-machine-eval-lab-new.png":::
+    :::image type="content" source="../media/add-machine-eval-lab-new.png" alt-text="The device added with connection details" lightbox="../media/add-machine-eval-lab-new.png":::
 
 4. Device set up begins. This can take up to approximately 30 minutes.
 

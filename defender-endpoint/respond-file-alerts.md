@@ -283,7 +283,7 @@ Results of deep analysis are matched against threat intelligence and any matches
 
 Use the deep analysis feature to investigate the details of any file, usually during an investigation of an alert or for any other reason where you suspect malicious behavior. This feature is available at the top of the file's page. Select the three dots to access the **Deep analysis** action.
 
-:::image type="content" source="../../media/defender-endpoint/deep-analysis.png" alt-text="Screenshot of the Deep analysis action" lightbox="../../media/defender-endpoint/deep-analysis.png":::
+:::image type="content" source="../media/defender-endpoint/deep-analysis.png" alt-text="Screenshot of the Deep analysis action" lightbox="../media/defender-endpoint/deep-analysis.png":::
 
 Learn about deep analysis in the following video:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4aAYy?rel=0]

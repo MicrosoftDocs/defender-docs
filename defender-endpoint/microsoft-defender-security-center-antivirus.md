@@ -51,7 +51,7 @@ Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus 
 
 ## Review the security intelligence update version and download the latest updates in the Windows Security app
 
-:::image type="content" source="../../media/wdav-wdsc-defs.png" alt-text="Security intelligence version number" lightbox="../../media/wdav-wdsc-defs.png":::
+:::image type="content" source="../media/wdav-wdsc-defs.png" alt-text="Security intelligence version number" lightbox="../media/wdav-wdsc-defs.png":::
 
 1. Open the Windows Security app by searching the start menu for *Security*, and then selecting **Windows Security**.
 

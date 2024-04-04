@@ -25,7 +25,7 @@ As threats are detected, remediation actions come into play. Depending on the pa
 
 All remediation actions are tracked in the Action center.
 
-:::image type="content" source="../../media/defender-business/mdb-actioncenter.png" alt-text="Screenshot of the Action center":::
+:::image type="content" source="../media/defender-business/mdb-actioncenter.png" alt-text="Screenshot of the Action center":::
 
 **This article describes**:
 

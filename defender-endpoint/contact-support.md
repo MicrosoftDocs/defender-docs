@@ -50,7 +50,7 @@ Accessing the new support widget can be done in one of two ways:
 
 1. Clicking on the question mark on the top right of the portal and then clicking on "Microsoft support":
 
-   :::image type="content" source="../../media/contactsupport.png" alt-text="The Microsoft support icon in the Microsoft Defender portal" lightbox="../../media/contactsupport.png":::
+   :::image type="content" source="../media/contactsupport.png" alt-text="The Microsoft support icon in the Microsoft Defender portal" lightbox="../media/contactsupport.png":::
 
 2. Clicking on the **Need help?**  button in the bottom right of the Microsoft Defender portal:
 
@@ -65,7 +65,7 @@ In the widget you'll be offered two options:
 
 This option includes articles that might be related to the question you may ask. Just start typing the question in the search box and articles related to your search will be surfaced.
 
-:::image type="content" source="../../media/contactsupport1.png" alt-text="How can we help?" lightbox="../../media/contactsupport1.png":::
+:::image type="content" source="../media/contactsupport1.png" alt-text="How can we help?" lightbox="../media/contactsupport1.png":::
 
 In case the suggested articles aren't sufficient, you can open a service request.
 
@@ -78,7 +78,7 @@ Learn how to open support tickets by contacting Defender for Endpoint support.
 
 ### Contact support
 
-:::image type="content" source="../../media/contactsupport2.png" alt-text="The contact support 2" lightbox="../../media/contactsupport2.png"::: </br>
+:::image type="content" source="../media/contactsupport2.png" alt-text="The contact support 2" lightbox="../media/contactsupport2.png"::: </br>
 
 1. Fill in a title and description for the issue you are facing, the phone number and email address where we may reach you.
 2. (Optional) Include up to five attachments that are relevant to the issue to provide additional context for the support case.
