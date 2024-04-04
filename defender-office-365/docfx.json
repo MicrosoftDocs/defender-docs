@@ -42,14 +42,13 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/defender-xdr/breadcrumb/toc.json",
-      "extendBreadcrumb": false,
+      "breadcrumb_path": "/defender-office-365/breadcrumb/toc.json",
       "permissioned-type": "public",
       "feedback_system": "Standard",
-      "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/MicrosoftThreatProtection",
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
       "uhfHeaderId": "MSDocsHeader-Security",
-      "titleSuffix": "Microsoft Defender XDR",
-      "searchScope": ["Defender XDR"],
+      "titleSuffix": "Microsoft Defender Office 365",
+      "searchScope": ["Microsoft Defender Office 365"],
       "contributors_to_exclude": [
         "dstrome",
         "shdyas",
@@ -63,8 +62,8 @@
         "alekyaj"
       ]
     },
+    "fileMetadata": {},
     "template": [],
-    "dest": "defender-xdr"
+    "dest": "defender-office-365"
   }
 }
-
