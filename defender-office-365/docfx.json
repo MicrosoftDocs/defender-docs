@@ -25,7 +25,9 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -40,11 +42,28 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/breadcrumb/defender-office-365/toc.yml",
+      "breadcrumb_path": "/defender-office-365/breadcrumb/toc.json",
+      "permissioned-type": "public",
       "feedback_system": "Standard",
-      "permissioned-type": "public"
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
+      "uhfHeaderId": "MSDocsHeader-Security",
+      "titleSuffix": "Microsoft Defender Office 365",
+      "searchScope": ["Microsoft Defender Office 365"],
+      "contributors_to_exclude": [
+        "dstrome",
+        "shdyas",
+        "rjagiewich",
+        "American-Dipper",
+        "claydetels19",
+        "jborsecnik",
+        "v-stchambers",
+        "Stacyrch140",
+        "garycentric",
+        "alekyaj"
+      ]
     },
     "fileMetadata": {},
-    "template": []
+    "template": [],
+    "dest": "defender-office-365"
   }
 }
