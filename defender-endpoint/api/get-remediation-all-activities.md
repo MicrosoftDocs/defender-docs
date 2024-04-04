@@ -20,7 +20,7 @@ ms.date: 04/25/2021
 
 # List all remediation activities
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -33,11 +33,11 @@ ms.date: 04/25/2021
 
 > Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](../../defender-vulnerability-management/get-defender-vulnerability-management.md).
 
-[!Include[Prerelease information](../includes/prerelease.md)]
+[!Include[Prerelease information](../../includes/prerelease.md)]
 
-[!Include[Microsoft Defender for Endpoint API URIs for US Government](../includes/microsoft-defender-api-usgov.md)]
+[!Include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
-[!Include[Improve request performance](../includes/improve-request-performance.md)]
+[!Include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## API description
 
@@ -153,4 +153,4 @@ GET https://api.securitycenter.windows.com/api/remediationtasks/
 - [List exposed devices of one remediation activity](get-remediation-exposed-devices-activities.md)
 - [Microsoft Defender Vulnerability Management](../next-gen-threat-and-vuln-mgt.md)
 - [Vulnerabilities in your organization](../tvm-weaknesses.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
