@@ -60,7 +60,7 @@ conceptualContent:
             text: Training - SC-200 Mitigate threats using Defender XDR
           footerLink:
            text: See more
-           url: /defender-xdr/index.yml
+           url: /defender-xdr/
 
         - title: Microsoft Defender for Endpoint
           summary: Protect your devices and endpoints
@@ -82,7 +82,7 @@ conceptualContent:
             text: Training - SC-200 Mitigate threats using Microsoft Defender for Endpoint
           footerLink:
            text: See more
-           url: /defender-endpoint/index.yml
+           url: /defender-endpoint/
 
         - title: Microsoft Defender for Office 365
           summary: Protect your email, prevent phishing attacks, and protect your collaboration tools
@@ -90,10 +90,10 @@ conceptualContent:
           - url: /defender-office-365/defender-for-office-365
             itemType: overview
             text: Overview
-          - url: /defender-office-365/security/office-365-security/microsoft-365/security/office-365-security/defender-for-office-365-whats-new
+          - url: /defender-office-365/defender-for-office-365-whats-new
             itemType: whats-new
             text: What's new
-          - url: /defender-office-365/security/office-365-security/mdo-deployment-guide
+          - url: /defender-office-365/mdo-deployment-guide
             itemType: get-started
             text: Get started
           - url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/bd-p/MicrosoftDefenderforOffice365
@@ -104,7 +104,7 @@ conceptualContent:
             text: Training - Implement email and collaboration protection
           footerLink:
            text: See more
-           url: /defender-office-365/index.yml
+           url: /defender-office-365/
 
         - title: Microsoft Defender for Identity
           summary: Protect your users and monitor risky behavior
@@ -126,7 +126,7 @@ conceptualContent:
             text: Training - Introduction to Defender for Identity
           footerLink:
            text: See more
-           url: /defender-for-identity/index.yml
+           url: /defender-for-identity/
 
         - title: Microsoft Defender for Cloud Apps
           summary: Protect your Cloud Apps
@@ -148,7 +148,7 @@ conceptualContent:
             text: Training - Introduction to Defender for Cloud Apps
           footerLink:
            text: See more
-           url: /defender-cloud-apps/index.yml
+           url: /defender-cloud-apps/
 
         - title: Microsoft Defender Vulnerability Management
           summary: Manage known vulnerabilities and track your security posture
@@ -167,7 +167,7 @@ conceptualContent:
             text: Microsoft Defender Vulnerability Management technical community
           footerLink:
            text: See more
-           url: /defender-vulnerability-management/index.yml          
+           url: /defender-vulnerability-management/     
           
 
 additionalContent:
