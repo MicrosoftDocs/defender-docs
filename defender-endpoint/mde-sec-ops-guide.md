@@ -105,7 +105,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
       
     Review the Message center messages to understand any upcoming changes that impact your environment. 
      
-    You can access this in the Microsoft 365 admin center under the Health tab. See [How to check Microsoft 365 service health](../../enterprise/view-service-health.md).
+    You can access this in the Microsoft 365 admin center under the Health tab. See [How to check Microsoft 365 service health](/Microsoft-365/enterprise/view-service-health).
 
 ### Security operations team  
 
@@ -121,7 +121,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 
 - **Review threat and vulnerability (TVM) status** 
 
-    Review TVM to identify any new vulnerabilities and recommendations that require action. See [Vulnerability management dashboard.](../defender-vulnerability-management/tvm-dashboard-insights.md)
+    Review TVM to identify any new vulnerabilities and recommendations that require action. See [Vulnerability management dashboard.](../defender-vulnerability-management/../defender-vulnerability-management/tvm-dashboard-insights.md)
 
 - **Review attack surface reduction reporting** 
 

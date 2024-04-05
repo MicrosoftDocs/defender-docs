@@ -135,5 +135,5 @@ Here is an example of the response.
 ## Other related
 
 - [Vulnerability management](../../defender-vulnerability-management/defender-vulnerability-management.md)
-- [Vulnerabilities in your organization](../../defender-vulnerability-management/tvm-weaknesses.md)
+- [Vulnerabilities in your organization](../../defender-vulnerability-management/../defender-vulnerability-management/tvm-weaknesses.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

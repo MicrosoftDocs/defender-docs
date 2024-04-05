@@ -43,7 +43,7 @@ ms.date: 04/25/2021
 
 Returns information for the specified remediation activity. Presents the same columns as [Get all remediation activity](get-remediation-all-activities.md)", but returns results _only for the one specified remediation activity_.
 
-[Learn more about remediation activities](../tvm-remediation.md).
+[Learn more about remediation activities](../../defender-vulnerability-management/tvm-remediation.md).
 
 ## List a specified remediation activity for (ID)
 
@@ -143,6 +143,6 @@ GET https://api.securitycenter.windows.com/api/remediationtasks/03942ef5-aecb-4c
 - [Remediation methods and properties](get-remediation-methods-properties.md)
 - [List all remediation activities](get-remediation-all-activities.md)
 - [List exposed devices of one remediation activity](get-remediation-exposed-devices-activities.md)
-- [Microsoft Defender Vulnerability Management](../next-gen-threat-and-vuln-mgt.md)
-- [Vulnerabilities in your organization](../tvm-weaknesses.md)
+- [Microsoft Defender Vulnerability Management](../../defender-vulnerability-management/../defender-vulnerability-management/../defender-vulnerability-management/next-gen-threat-and-vuln-mgt.md)
+- [Vulnerabilities in your organization](../../defender-vulnerability-management/tvm-weaknesses.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

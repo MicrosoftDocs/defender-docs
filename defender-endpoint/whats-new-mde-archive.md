@@ -178,7 +178,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md) <br> Microsoft Defender for Endpoint now adds support for Android. In addition to the provisions for you to install, configure, and use Microsoft Defender for Endpoint for Android (introducted in the previous sprint in August 2020), the provision to "update" Microsoft Defender for Endpoint for Android has been introduced in this sprint.
 
-- [Threat and vulnerability management macOS support](tvm-supported-os.md)<br> Threat and vulnerability management for macOS is now in public preview, and will continuously detect vulnerabilities on your macOS devices to help you prioritize remediation by focusing on risk. For more information, see [Microsoft Tech Community blog post](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-for-endpoint-adds-depth-and-breadth-to-threat/ba-p/1695824).
+- [Threat and vulnerability management macOS support](../defender-vulnerability-management/tvm-supported-os.md)<br> Threat and vulnerability management for macOS is now in public preview, and will continuously detect vulnerabilities on your macOS devices to help you prioritize remediation by focusing on risk. For more information, see [Microsoft Tech Community blog post](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-for-endpoint-adds-depth-and-breadth-to-threat/ba-p/1695824).
 
 ## August 2020
 
@@ -202,7 +202,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md) <BR> Microsoft Defender for Endpoint for Mac brings the next-generation protection to Mac devices. Core components of the unified endpoint security platform will now be available for Mac devices, including [endpoint detection and response](overview-endpoint-detection-response.md).
  
-- [Threat & Vulnerability Management application and application version end-of-life information](../defender-vulnerability-management/tvm-security-recommendation.md) <BR>Applications and application versions which have reached their end of life (EOL) are tagged or labeled as such; so, you are aware that they will no longer be supported, and can take action to either uninstall or replace. Doing so will help lessen the risks related to various vulnerability exposures due to unpatched applications.
+- [Threat & Vulnerability Management application and application version end-of-life information](../defender-vulnerability-management/../defender-vulnerability-management/tvm-security-recommendation.md) <BR>Applications and application versions which have reached their end of life (EOL) are tagged or labeled as such; so, you are aware that they will no longer be supported, and can take action to either uninstall or replace. Doing so will help lessen the risks related to various vulnerability exposures due to unpatched applications.
 
 - [Threat & Vulnerability Management Advanced Hunting Schemas](../defender/advanced-hunting-schema-tables.md) <BR>Use the Threat & Vulnerability Management tables in the Advanced hunting schema to query about software inventory, vulnerability knowledgebase, security configuration assessment, and security configuration knowledgebase.
  
@@ -231,7 +231,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## June 2019
 
-- [Threat & Vulnerability Management](next-gen-threat-and-vuln-mgt.md) <BR> A new built-in capability that uses a risk-based approach to the discovery, prioritization, and remediation of endpoint vulnerabilities and misconfigurations.
+- [Threat & Vulnerability Management](../defender-vulnerability-management/../defender-vulnerability-management/../defender-vulnerability-management/next-gen-threat-and-vuln-mgt.md) <BR> A new built-in capability that uses a risk-based approach to the discovery, prioritization, and remediation of endpoint vulnerabilities and misconfigurations.
   
 - [Device health and compliance report](machine-reports.md)  The device health and compliance report provides high-level information about the devices in your organization.
 

@@ -1392,7 +1392,7 @@
       - name: Configure alert notifications
         href: configure-mssp-notifications.md
       - name: Get partner application access
-        href: exposed-apis-create-app-partners.md
+        href: api/exposed-apis-create-app-partners.md
       - name: Fetch alerts from customer tenant
         href: fetch-alerts-mssp.md
       - name: Managed security service provider opportunity

@@ -110,7 +110,7 @@ In the **Mitigations** section, review the list of specific actionable recommend
   - Potentially unwanted application (PUA) protection
   - Real-time protection
 
-Mitigation information in this section incorporates data from [Microsoft Defender Vulnerability Management](next-gen-threat-and-vuln-mgt.md), which also provides detailed drill-down information from various links in the report.
+Mitigation information in this section incorporates data from [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/../defender-vulnerability-management/../defender-vulnerability-management/next-gen-threat-and-vuln-mgt.md), which also provides detailed drill-down information from various links in the report.
 
 :::image type="content" source="images/ta-mitigations.png" alt-text="The Mitigations section of a threat analytics report" lightbox="images/ta-mitigations.png":::
 
@@ -131,5 +131,5 @@ When using the reports, keep the following in mind:
 
 - [Proactively find threats with advanced hunting](advanced-hunting-overview.md)
 - [Understand the analyst report section](threat-analytics-analyst-reports.md)
-- [Assess and resolve security weaknesses and exposures](next-gen-threat-and-vuln-mgt.md)
+- [Assess and resolve security weaknesses and exposures](../defender-vulnerability-management/../defender-vulnerability-management/../defender-vulnerability-management/next-gen-threat-and-vuln-mgt.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -68,5 +68,5 @@ The following table lists a few examples of alerts and their severity levels:
 - [Learn about automatic attack disruption](mdb-attack-disruption.md)
 - [Respond to and mitigate threats in Defender for Business](mdb-respond-mitigate-threats.md)
 - [Review remediation actions in the Action center](mdb-review-remediation-actions.md)
-- [View or edit device policies in Defender for Business](mdb-view-edit-policies.md)
+- [View or edit device policies in Defender for Business](mdb-view-edit-create-policies.md)
 

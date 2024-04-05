@@ -150,7 +150,7 @@ To further inspect the event and related events, you can quickly run an [advance
 
 ### Security recommendations
 
-**Security recommendations** are generated from Microsoft Defender for Endpoint's [Vulnerability Management](tvm-dashboard-insights.md) capability. Selecting a recommendation shows a panel where you can view relevant details such as description of the recommendation and the potential risks associated with not enacting it. See [Security recommendation](tvm-security-recommendation.md) for details.
+**Security recommendations** are generated from Microsoft Defender for Endpoint's [Vulnerability Management](../defender-vulnerability-management/tvm-dashboard-insights.md) capability. Selecting a recommendation shows a panel where you can view relevant details such as description of the recommendation and the potential risks associated with not enacting it. See [Security recommendation](../defender-vulnerability-management/tvm-security-recommendation.md) for details.
 
 
 
@@ -165,7 +165,7 @@ The **Security policies** tab shows the endpoint security policies that are appl
 
 ### Software inventory
 
-The **Software inventory** tab lets you view software on the device, along with any weaknesses or threats. Selecting the name of the software takes you to the software details page where you can view security recommendations, discovered vulnerabilities, installed devices, and version distribution. See [Software inventory](tvm-software-inventory.md) for details.
+The **Software inventory** tab lets you view software on the device, along with any weaknesses or threats. Selecting the name of the software takes you to the software details page where you can view security recommendations, discovered vulnerabilities, installed devices, and version distribution. See [Software inventory](../defender-vulnerability-management/tvm-software-inventory.md) for details.
 
 :::image type="content" source="images/software-inventory-device.png" alt-text="The Software inventory tab" lightbox="images/software-inventory-device.png":::
 
@@ -249,7 +249,7 @@ To gain an in-depth view of the device health report, you can go to **Reports > 
 - [Investigate an IP address associated with a Defender for Endpoint alert](investigate-ip.md)
 - [Investigate a domain associated with a Defender for Endpoint alert](investigate-domain.md)
 - [Investigate a user account in Defender for Endpoint](investigate-user.md)
-- [Security recommendation](tvm-security-recommendation.md)
-- [Software inventory](tvm-software-inventory.md)
+- [Security recommendation](../defender-vulnerability-management/tvm-security-recommendation.md)
+- [Software inventory](../defender-vulnerability-management/tvm-software-inventory.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
