@@ -19,18 +19,19 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   items:
-    - title: What is Microsoft Defender XDR
+    - title: What's in the Microsoft Defender portal
       itemType: overview
-      url: /defender-xdr/microsoft-365-defender
-    - title: Learn modules for Microsoft Defender XDR
-      itemType: learn
-      url: /training/m365/defender    
-    - title: What is Microsoft Sentinel?
-      itemType: overview
-      url: /azure/sentinel/overview 
-    - title: Security for Copilot integrations
+      url: /defender-xdr/microsoft-365-defender-portal
+    - title: Microsoft Copilot for Security integrations
       itemType: deploy
       url: /security-copilot
+    - title: Microsoft security and Zero Trust
+      itemType: overview
+      url: /security/zero-trust/zero-trust-overview  
+    - title: Microsoft Security videos
+      itemType: video
+      url: https://www.youtube.com/@MicrosoftSecurityCommunity
+
 
 
 conceptualContent:
