@@ -85,4 +85,4 @@ Advanced hunting results are converted to the [timezone](m365d-time-zone.md) set
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)
 - [Custom detections overview](custom-detections-overview.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -25,7 +25,7 @@ appliesto:
 
 # The Teams Message Entity Panel for Microsoft Teams in Microsoft Defender for Office 365
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!include[Prerelease information](../includes/prerelease.md)]
 
 The Teams Message Entity Panel in Microsoft Defender for Office 365 puts all Microsoft Teams data about suspicious or malicious chats and channels on a *single, actionable panel*.
 

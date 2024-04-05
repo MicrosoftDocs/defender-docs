@@ -24,7 +24,7 @@ appliesto:
 
 # Microsoft Defender for Office 365 Plan 2 support for Microsoft Teams
 
-[!include[Prerelease information](../../includes/prerelease.md)]
+[!include[Prerelease information](../includes/prerelease.md)]
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
