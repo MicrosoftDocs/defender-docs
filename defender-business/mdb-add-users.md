@@ -40,7 +40,7 @@ As soon as you have signed up for Defender for Business, your first step is to a
 
 4. On the **Assign product licenses** page, select Defender for Business (or Microsoft 365 Business Premium). Then choose **Next**. 
 
-   If you don't have any licenses available, you can still add a user and buy additional licenses. For more information about adding users, see [Add users and assign licenses at the same time](/Microsoft-365/admin/add-users/add-users.md).
+   If you don't have any licenses available, you can still add a user and buy additional licenses. For more information about adding users, see [Add users and assign licenses at the same time](/Microsoft-365/admin/add-users/add-users).
 
 5. On the **Optional settings** page, you can expand **Profile info** and fill in details, such as the user's job title, department, location, and so forth. Then choose **Next**.
 

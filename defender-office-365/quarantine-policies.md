@@ -516,7 +516,7 @@ Even if you don't customize quarantine notifications for different languages, se
 
 - **Specify sender address**: Select an existing user for the sender email address of quarantine notifications. The default sender is `quarantine@messaging.microsoft.com`.
 
-- **Use my company logo**: Select this option to replace the default Microsoft logo that's used at the top of quarantine notifications. Before you do this step, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](../../admin/setup/customize-your-organization-theme.md) to upload your custom logo.
+- **Use my company logo**: Select this option to replace the default Microsoft logo that's used at the top of quarantine notifications. Before you do this step, you need to follow the instructions in [Customize the Microsoft 365 theme for your organization](/Microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
 
   A custom logo in a quarantine notification is shown in the following screenshot:
 

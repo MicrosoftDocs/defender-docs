@@ -50,7 +50,7 @@ Our Strict preset security policy has more aggressive limits and settings for se
 - If the criteria above are met, then the user should be placed in the Strict preset security policy. Otherwise the user should be placed in the Standard preset security policy.
 
 > [!TIP]
-> For information on what Standard and Strict security policies are, see this [article](../../office-365-security/recommended-settings-for-eop-and-office365.md).
+> For information on what Standard and Strict security policies are, see this [article](../../defender-office-365/recommended-settings-for-eop-and-office365.md).
 
 ## Enable Security Presets in Microsoft Defender for Office 365
 
@@ -71,13 +71,13 @@ Once you've chosen between the Standard and Strict security preset policies for 
 1. Click on the **Confirm** button.
 
 > [!TIP]
-> To learn more about preset policies click [here](../../office-365-security/preset-security-policies.md)
+> To learn more about preset policies click [here](../../defender-office-365/preset-security-policies.md)
 
 ## Your next step is Config Analyzer
 
 Use config analyzer to determine if your users are configured per Microsoft's best practices.
 
 > [!TIP]
-> Configuration analyzer allows admins to find and fix security policies where the settings are below the Standard or Strict protection profile settings in preset security policies. Find out more about Configuration analyzer [here](../../office-365-security/configuration-analyzer-for-security-policies.md).
+> Configuration analyzer allows admins to find and fix security policies where the settings are below the Standard or Strict protection profile settings in preset security policies. Find out more about Configuration analyzer [here](../../defender-office-365/configuration-analyzer-for-security-policies.md).
 
-Secure Presets are always recommended because it *ensures* admins are exercising Microsoft best practices. However, in some cases customized configurations are required. Learn about the reasons to use custom policies [here](../../office-365-security/mdo-deployment-guide.md#determine-your-protection-policy-strategy)
+Secure Presets are always recommended because it *ensures* admins are exercising Microsoft best practices. However, in some cases customized configurations are required. Learn about the reasons to use custom policies [here](../../defender-office-365/mdo-deployment-guide.md#determine-your-protection-policy-strategy)

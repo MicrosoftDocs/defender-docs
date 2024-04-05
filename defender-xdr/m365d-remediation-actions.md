@@ -35,7 +35,7 @@ During and after an automated investigation in Microsoft Defender XDR, remediati
 > - [Configure your automated investigation and response capabilities in Microsoft Defender XDR](m365d-configure-auto-investigation-response.md)
 > - [Configure action accounts in Microsoft Defender for Identity](/defender-for-identity/manage-action-accounts)
 > - [How threats are remediated on devices](../defender-endpoint/automated-investigations.md)
-> - [Threats and remediation actions on email & collaboration content](../office-365-security/air-remediation-actions.md#threats-and-remediation-actions)
+> - [Threats and remediation actions on email & collaboration content](../defender-office-365/air-remediation-actions.md#threats-and-remediation-actions)
 
 The following table summarizes remediation actions that are currently supported in Microsoft Defender XDR.
 
@@ -67,7 +67,7 @@ In addition to remediation actions that follow automated investigations, your se
 - Manual email action, such as soft-deleting email messages
 - Manual user action, such as disable user or reset user password
 - [Advanced hunting](../defender-endpoint/advanced-hunting-overview.md) action on devices, users, or email
-- [Explorer](../office-365-security/threat-explorer-real-time-detections-about.md) action on email content, such as moving email to junk, soft-deleting email, or hard-deleting email
+- [Explorer](../defender-office-365/threat-explorer-real-time-detections-about.md) action on email content, such as moving email to junk, soft-deleting email, or hard-deleting email
 - Manual [live response](/windows/security/threat-protection/microsoft-defender-atp/live-response) action, such as deleting a file, stopping a process, and removing a scheduled task
 - Live response action with [Microsoft Defender for Endpoint APIs](../defender-endpoint/management-apis.md#microsoft-defender-for-endpoint-apis), such as isolating a device, running an antivirus scan, and getting information about a file
 

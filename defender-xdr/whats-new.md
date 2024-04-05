@@ -21,7 +21,7 @@ Lists the new features and functionality in Microsoft Defender XDR.
 
 For more information on what's new with other Microsoft Defender security products, see:
 
-- [What's new in Microsoft Defender for Office 365](../office-365-security/defender-for-office-365-whats-new.md)
+- [What's new in Microsoft Defender for Office 365](../defender-office-365/defender-for-office-365-whats-new.md)
 - [What's new in Microsoft Defender for Endpoint](../defender-endpoint/whats-new-in-microsoft-defender-endpoint.md)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)

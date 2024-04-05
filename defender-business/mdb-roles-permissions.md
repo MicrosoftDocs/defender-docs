@@ -45,7 +45,7 @@ Permissions are granted through certain roles in the [Microsoft Entra ID](/azure
 
 ## Roles in Defender for Business
 
-The following table describes the three roles that can be assigned in Defender for Business. [Learn more about admin roles](/Microsoft-365/admin/add-users/about-admin-roles.md).
+The following table describes the three roles that can be assigned in Defender for Business. [Learn more about admin roles](/Microsoft-365/admin/add-users/about-admin-roles).
 
 | Permission level | Description |
 |:---|:---|

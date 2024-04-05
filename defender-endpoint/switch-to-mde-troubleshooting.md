@@ -82,7 +82,7 @@ If Microsoft Defender Antivirus is stuck in passive mode, set it to active mode 
 4. Reboot the device.
 
 > [!IMPORTANT]
-> If you're still having trouble setting Microsoft Defender Antivirus to active mode after following this procedure, [contact support](/Microsoft-365/admin/get-help-support.md).
+> If you're still having trouble setting Microsoft Defender Antivirus to active mode after following this procedure, [contact support](/Microsoft-365/admin/get-help-support).
 
 ## I am having trouble re-enabling Microsoft Defender Antivirus on Windows Server 2016
 

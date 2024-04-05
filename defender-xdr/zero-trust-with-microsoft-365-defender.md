@@ -59,7 +59,7 @@ To add Microsoft Defender XDR to your Zero Trust strategy and architecture, go t
 Learn more about Zero Trust for Microsoft Defender XDR services:
 
 - [Defender for Endpoint](../defender-endpoint/zero-trust-with-microsoft-defender-endpoint.md)
-- [Defender for Office 365](../office-365-security/zero-trust-with-microsoft-365-defender-office-365.md)
+- [Defender for Office 365](../defender-office-365/zero-trust-with-microsoft-365-defender-office-365.md)
 - [Defender for Cloud Apps](/defender-cloud-apps/zero-trust)
 - [Defender for Identity](/defender-for-identity/zero-trust)
 

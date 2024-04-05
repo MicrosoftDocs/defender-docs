@@ -104,7 +104,7 @@ Microsoft regularly provides information through the various channels, including
 
 - Blogposts in the [Microsoft 365 security & compliance tech community](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/bg-p/MicrosoftThreatProtectionBlog)
 - Go to [Defender monthly news](https://aka.ms/defendernews)
-- The [message center](/Microsoft-365/admin/manage/message-center.md) in Microsoft 365 admin center
+- The [message center](/Microsoft-365/admin/manage/message-center) in Microsoft 365 admin center
 
 
 Get the latest publicly available experiences by turning on [preview features](preview.md).

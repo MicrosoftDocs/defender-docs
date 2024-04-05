@@ -49,7 +49,7 @@ Users with existing Custom roles may access data in the Microsoft Defender porta
 Custom roles and permissions can be created and individually managed through each of the following security portals:
 
 - Microsoft Defender for Endpoint – [Edit roles in Microsoft Defender for Endpoint](../defender-endpoint/user-roles.md)
-- Microsoft Defender for Office 365 – [Permissions in the Security & Compliance Center](../office-365-security/scc-permissions.md?preserve-view=true&view=o365-worldwide)
+- Microsoft Defender for Office 365 – [Permissions in the Security & Compliance Center](../defender-office-365/scc-permissions.md?preserve-view=true&view=o365-worldwide)
 - Microsoft Defender for Cloud Apps – [Manage admin access](/cloud-app-security/manage-admins)
 
 Each custom role created through an individual portal allows access to the data of the relevant product portal. For example, a custom role created through Microsoft Defender for Endpoint will only allow access to Defender for Endpoint data.
@@ -100,7 +100,7 @@ Similarly, to view hunting data from Microsoft Defender for Office 365, users wo
 
 ## Related topics
 
-- [RBAC roles](../office-365-security/migrate-to-defender-for-office-365-onboard.md#rbac-roles)
+- [RBAC roles](../defender-office-365/migrate-to-defender-for-office-365-onboard.md#rbac-roles)
 - [Manage access to Microsoft Defender XDR](m365d-permissions.md)
 - [Manage admin access for Defender for Cloud Apps](/cloud-app-security/manage-admins)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
