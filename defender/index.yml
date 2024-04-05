@@ -109,24 +109,65 @@ conceptualContent:
         - title: Microsoft Defender for Identity
           summary: Protect your users and monitor risky behavior
           links: 
-          - url: /defender-for-identity/
+          - url: /defender-for-identity/what-is
             itemType: overview
-            text: Microsoft Defender for Identity
+            text: overview
+          - url: /defender-for-identity/whats-new
+            itemType: whats-new
+            text: What's New
+          - url: /defender-for-identity/deploy/quick-installation-guide
+            itemType: get-started
+            text: Get started
+          - url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-identity/bd-p/AzureAdvancedThreatProtection
+            itemType: concept
+            text: Microsoft Defender for Identity technical community
+          - url: /training/modules/defender-identity-introduction/
+            itemType: learn
+            text: Training - Introduction to Defender for Identity
+          footerLink:
+           text: See more
+           url: /defender-for-identity/index.yml
+
+        - title: Microsoft Defender for Cloud Apps
+          summary: Protect your Cloud Apps
+          links: 
           - url: /defender-cloud-apps/what-is-defender-for-cloud-apps
             itemType: overview
             text: Microsoft Defender for Cloud Apps
-          - url: /microsoft-365/security/defender-business/mdb-overview
+          - url: /defender-cloud-apps/release-notes
+            itemType: whats-new
+            text: What's new
+          - url: /defender-cloud-apps/get-started
+            text: Get started
+            itemType: get-started
+          - url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/bd-p/MicrosoftDefenderCloudApps
+            itemType: concept
+            text: Microsoft Defender for Cloud Apps technical community
+          - url: /training/modules/introduction-cloud-app-security/
+            itemType: learn
+            text: Training - Introduction to Defender for Cloud Apps
+          footerLink:
+           text: See more
+           url: /defender-cloud-apps/index.yml
+
+        - title: Microsoft Defender Vulnerability Management
+          summary: Manage known vulnerabilities and track your security posture
+          links: 
+          - url: /defender-vulnerability-management/defender-vulnerability-management
             itemType: overview
             text: Overview
-          - url: /defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-
+          - url: /defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management
             itemType: whats-new
             text: What's new
           - url: /defender-vulnerability-management/tvm-prerequisites
             itemType: get-started
             text: Get started 
+          - url: https://techcommunity.microsoft.com/t5/microsoft-defender-vulnerability/bg-p/Vulnerability-Management
+            itemType: concept
+            text: Microsoft Defender Vulnerability Management technical community
           footerLink:
            text: See more
-           url: /defender-vulnerability-management/
+           url: /defender-vulnerability-management/index.yml          
           
 
 additionalContent:
