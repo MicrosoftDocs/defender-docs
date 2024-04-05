@@ -104,7 +104,7 @@ First, you need to add an isolated AD DS domain controller and a Windows device 
 
    - Runs Windows Server 2008 R2 or a later version.
    - Reports to [Microsoft Defender for Identity](/azure/security-center/security-center-wdatp) and has enabled [remote management](/windows-server/administration/server-manager/configure-remote-management-in-server-manager).
-   - Has [Microsoft Defender for Identity and Microsoft Defender for Cloud Apps integration](/cloud-app-security/mdi-integration) enabled.
+   - Has [Microsoft Defender for Identity and Microsoft Defender for Cloud Apps integration](/defender-cloud-apps/mdi-integration) enabled.
    - Has a test user is created in the test domain. Administrator-level permissions are not needed.
 
 3. Verify that your test device:
@@ -278,7 +278,7 @@ For example, scroll down until you find the alert event **Suspicious process inj
 
 On the incident page, select the **Users** tab to display the list of users involved in the attack. The table contains additional information about each user, including each user's **Investigation Priority** score.
 
-Select the user name to open the user's profile page where further investigation can be conducted. [Read more about investigating risky users](/cloud-app-security/tutorial-ueba#identify).
+Select the user name to open the user's profile page where further investigation can be conducted. [Read more about investigating risky users](/defender-cloud-apps/tutorial-ueba#identify).
 
 :::image type="content" source="./media/mtp/fig13.png" alt-text="Defender for Cloud Apps user page" lightbox="./media/mtp/fig13.png":::
 

@@ -132,9 +132,9 @@ Because this solution recommends the EMS E5 plan, we recommend you start with De
 
 More information:
 
-- [Deploy Defender for Cloud Apps](/cloud-app-security/getting-started-with-cloud-app-security)
+- [Deploy Defender for Cloud Apps](/defender-cloud-apps/getting-started-with-cloud-app-security)
 - [More information about Microsoft Defender for Cloud Apps](https://www.microsoft.com/cloud-platform/cloud-app-security)
-- [What is Defender for Cloud Apps?](/cloud-app-security/what-is-cloud-app-security)
+- [What is Defender for Cloud Apps?](/defender-cloud-apps/what-is-cloud-app-security)
 
 :::image type="content" source="../../media/1fb2aa65-54b8-4746-9f5e-c187d339e9f5.png" alt-text="The Defender for Cloud Apps dashboard" lightbox="../../media/1fb2aa65-54b8-4746-9f5e-c187d339e9f5.png":::
 

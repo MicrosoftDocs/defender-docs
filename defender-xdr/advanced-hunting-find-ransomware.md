@@ -285,7 +285,7 @@ Microsoft Azure:
 
 Microsoft Defender for Cloud Apps:
 
-- [Create anomaly detection policies in Defender for Cloud Apps](/cloud-app-security/anomaly-detection-policy)
+- [Create anomaly detection policies in Defender for Cloud Apps](/defender-cloud-apps/anomaly-detection-policy)
 
 Microsoft Security team blog posts:
 

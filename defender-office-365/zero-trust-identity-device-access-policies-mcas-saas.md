@@ -34,7 +34,7 @@ This guidance includes recommendations for these scenarios:
 
 ## Bring SaaS apps into IT management
 
-The first step in using Defender for Cloud Apps to manage SaaS apps is to discover these and then add them to your Microsoft Entra tenant. If you need help with discovery, see [Discover and manage SaaS apps in your network](/cloud-app-security/tutorial-shadow-it). After you've discovered apps, [add these to your Microsoft Entra tenant](/entra/identity/enterprise-apps/add-application-portal).
+The first step in using Defender for Cloud Apps to manage SaaS apps is to discover these and then add them to your Microsoft Entra tenant. If you need help with discovery, see [Discover and manage SaaS apps in your network](/defender-cloud-apps/tutorial-shadow-it). After you've discovered apps, [add these to your Microsoft Entra tenant](/entra/identity/enterprise-apps/add-application-portal).
 
 You can begin to manage these by doing the following:
 
@@ -51,7 +51,7 @@ The following table lists the new conditional access policy you must create in M
 
 |Protection level|Policy|More information|
 |---|---|---|
-|All protection levels|[Use Conditional Access App Control in Defender for Cloud Apps](/cloud-app-security/proxy-deployment-aad#configure-integration-with-azure-ad)|This configures your IdP (Microsoft Entra ID) to work with Defender for Cloud Apps.|
+|All protection levels|[Use Conditional Access App Control in Defender for Cloud Apps](/defender-cloud-apps/proxy-deployment-aad#configure-integration-with-azure-ad)|This configures your IdP (Microsoft Entra ID) to work with Defender for Cloud Apps.|
 
 This next table lists the example policies illustrated above that you can create to protect all SaaS apps. Be sure to evaluate your own business, security, and compliance objectives and then create policies that provide the most appropriate protection for your environment.
 
@@ -61,9 +61,9 @@ This next table lists the example policies illustrated above that you can create
 |Enterprise|Block download of files labeled with sensitive or classified from unmanaged devices (this provides browser only access)|
 |Specialized security|Block download of files labeled with classified from all devices (this provides browser only access)|
 
-For end-to-end instructions for setting up Conditional Access App Control, see [Deploy Conditional Access App Control for featured apps](/cloud-app-security/proxy-deployment-aad). This article walks you through the process of creating the necessary conditional access policy in Microsoft Entra ID and testing your SaaS apps.
+For end-to-end instructions for setting up Conditional Access App Control, see [Deploy Conditional Access App Control for featured apps](/defender-cloud-apps/proxy-deployment-aad). This article walks you through the process of creating the necessary conditional access policy in Microsoft Entra ID and testing your SaaS apps.
 
-For more information, see [Protect apps with Microsoft Defender for Cloud Apps Conditional Access App Control](/cloud-app-security/proxy-intro-aad).
+For more information, see [Protect apps with Microsoft Defender for Cloud Apps Conditional Access App Control](/defender-cloud-apps/proxy-intro-aad).
 
 ## Tune protection for specific SaaS apps
 
@@ -82,9 +82,9 @@ For example, you can protect your Box environment with these types of built-in a
 - Risky Oauth App
 - Unusual file share activity
 
-These are examples. Additional policy templates are added regularly. For examples of how to apply additional protection to specific apps, see [Protecting connected apps](/cloud-app-security/protect-connected-apps).
+These are examples. Additional policy templates are added regularly. For examples of how to apply additional protection to specific apps, see [Protecting connected apps](/defender-cloud-apps/protect-connected-apps).
 
-[How Defender for Cloud Apps helps protect your Box environment](/cloud-app-security/protect-box) demonstrates the types of controls that can help you protect your business data in Box and other apps with sensitive data.
+[How Defender for Cloud Apps helps protect your Box environment](/defender-cloud-apps/protect-box) demonstrates the types of controls that can help you protect your business data in Box and other apps with sensitive data.
 
 ## Configure data loss prevention (DLP) to help comply with data protection regulations
 

@@ -50,12 +50,12 @@ Custom roles and permissions can be created and individually managed through eac
 
 - Microsoft Defender for Endpoint – [Edit roles in Microsoft Defender for Endpoint](../defender-endpoint/user-roles.md)
 - Microsoft Defender for Office 365 – [Permissions in the Security & Compliance Center](../defender-office-365/scc-permissions.md?preserve-view=true&view=o365-worldwide)
-- Microsoft Defender for Cloud Apps – [Manage admin access](/cloud-app-security/manage-admins)
+- Microsoft Defender for Cloud Apps – [Manage admin access](/defender-cloud-apps/manage-admins)
 
 Each custom role created through an individual portal allows access to the data of the relevant product portal. For example, a custom role created through Microsoft Defender for Endpoint will only allow access to Defender for Endpoint data.
 
 > [!TIP]
-> Permissions and roles can also be accessed through the Microsoft Defender portal by selecting Permissions & roles from the navigation pane. Access to Microsoft Defender for Cloud Apps is managed through the Defender for Cloud Apps portal and controls access to Microsoft Defender for Identity as well.  See [Microsoft Defender for Cloud Apps](/cloud-app-security/manage-admins)
+> Permissions and roles can also be accessed through the Microsoft Defender portal by selecting Permissions & roles from the navigation pane. Access to Microsoft Defender for Cloud Apps is managed through the Defender for Cloud Apps portal and controls access to Microsoft Defender for Identity as well.  See [Microsoft Defender for Cloud Apps](/defender-cloud-apps/manage-admins)
 
 > [!NOTE]
 > Custom roles created in Microsoft Defender for Cloud Apps have access to Microsoft Defender for Identity data as well. Users with User group admin, or App/instance admin Microsoft Defender for Cloud Apps roles are not able to access Microsoft Defender for Cloud Apps data through the Microsoft Defender portal.
@@ -102,5 +102,5 @@ Similarly, to view hunting data from Microsoft Defender for Office 365, users wo
 
 - [RBAC roles](../defender-office-365/migrate-to-defender-for-office-365-onboard.md#rbac-roles)
 - [Manage access to Microsoft Defender XDR](m365d-permissions.md)
-- [Manage admin access for Defender for Cloud Apps](/cloud-app-security/manage-admins)
+- [Manage admin access for Defender for Cloud Apps](/defender-cloud-apps/manage-admins)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

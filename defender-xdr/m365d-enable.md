@@ -106,7 +106,7 @@ Microsoft support staff can help provision or deprovision the service and relate
 - [Microsoft Defender XDR overview](microsoft-365-defender.md)
 - [Microsoft Defender for Endpoint overview](../defender-endpoint/microsoft-defender-endpoint.md)
 - [Defender for Office 365 overview](../defender-office-365/defender-for-office-365.md)
-- [Microsoft Defender for Cloud Apps overview](/cloud-app-security/what-is-cloud-app-security)
+- [Microsoft Defender for Cloud Apps overview](/defender-cloud-apps/what-is-cloud-app-security)
 - [Microsoft Defender for Identity overview](/azure-advanced-threat-protection/what-is-atp)
 - [Microsoft Defender for Endpoint data storage](../defender-endpoint/data-storage-privacy.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

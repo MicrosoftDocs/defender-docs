@@ -41,7 +41,7 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender XDR](../defender/whats-new.md)
 - [What's new in Microsoft Defender for Office 365](../defender-office-365/defender-for-office-365-whats-new.md)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
-- [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+- [What's new in Microsoft Defender for Cloud Apps](/defender-cloud-apps/release-notes)
 
 For more information on Microsoft Defender for Endpoint on specific operating systems and on other operating systems:
 

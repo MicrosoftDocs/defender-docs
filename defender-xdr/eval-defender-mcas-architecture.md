@@ -112,11 +112,11 @@ The following table identified key concepts that are important to understand whe
 
 |Concept  |Description |More information  |
 |---------|---------|---------|
-| Defender for Cloud Apps Dashboard | Presents an overview of the most important information about your organization and gives links to deeper investigation.        | [Working with the dashboard](/cloud-app-security/daily-activities-to-protect-your-cloud-environment)       |
-| Conditional Access App Control    | Reverse proxy architecture that integrates with your Identity Provider (IdP) to give Microsoft Entra Conditional Access policies and selectively enforce session controls.        |  [Protect apps with Microsoft Defender for Cloud Apps Conditional Access App Control](/cloud-app-security/proxy-intro-aad)       |
-|  Cloud App Catalog   | The Cloud App Catalog gives you a full picture against Microsoft catalog of over 16,000 cloud apps that are ranked and scored based on more than 80 risk factors.    |  [Working with App risk scores](/cloud-app-security/risk-score)       |
-| Cloud Discovery Dashboard    | Cloud Discovery analyzes your traffic logs and is designed to give more insight into how cloud apps are being used in your organization as well as give alerts and risk levels.     |  [Working with discovered apps](/cloud-app-security/discovered-apps)    |
-|Connected Apps |Defender for Cloud Apps provides end-to-end protection for connected apps using Cloud-to-Cloud integration, API connectors, and real-time access and session controls using our Conditional App Access Controls. |[Protecting connected apps](/cloud-app-security/protect-connected-apps) |
+| Defender for Cloud Apps Dashboard | Presents an overview of the most important information about your organization and gives links to deeper investigation.        | [Working with the dashboard](/defender-cloud-apps/daily-activities-to-protect-your-cloud-environment)       |
+| Conditional Access App Control    | Reverse proxy architecture that integrates with your Identity Provider (IdP) to give Microsoft Entra Conditional Access policies and selectively enforce session controls.        |  [Protect apps with Microsoft Defender for Cloud Apps Conditional Access App Control](/defender-cloud-apps/proxy-intro-aad)       |
+|  Cloud App Catalog   | The Cloud App Catalog gives you a full picture against Microsoft catalog of over 16,000 cloud apps that are ranked and scored based on more than 80 risk factors.    |  [Working with App risk scores](/defender-cloud-apps/risk-score)       |
+| Cloud Discovery Dashboard    | Cloud Discovery analyzes your traffic logs and is designed to give more insight into how cloud apps are being used in your organization as well as give alerts and risk levels.     |  [Working with discovered apps](/defender-cloud-apps/discovered-apps)    |
+|Connected Apps |Defender for Cloud Apps provides end-to-end protection for connected apps using Cloud-to-Cloud integration, API connectors, and real-time access and session controls using our Conditional App Access Controls. |[Protecting connected apps](/defender-cloud-apps/protect-connected-apps) |
 
 ## Review architecture requirements
 
@@ -141,7 +141,7 @@ You can integrate Microsoft Defender for Cloud Apps with your generic SIEM serve
 
 Additionally, Microsoft Sentinel includes a Microsoft Defender for Cloud Apps connector to provide deeper integration with Microsoft Sentinel. This arrangement enables you to not only gain visibility into your cloud apps but to also get sophisticated analytics to identify and combat cyberthreats and to control how your data travels.
 
-- [Generic SIEM integration](/cloud-app-security/siem)
+- [Generic SIEM integration](/defender-cloud-apps/siem)
 - [Stream alerts and Cloud Discovery logs from Defender for Cloud Apps into Microsoft Sentinel](/azure/sentinel/connect-cloud-app-security)
 
 ### Next steps

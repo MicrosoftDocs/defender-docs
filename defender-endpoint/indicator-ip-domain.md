@@ -125,7 +125,7 @@ When using warn mode, you can configure the following controls:
   - Redirect URL in Edge
   - Redirect URL on toast (Non-Microsoft browsers)
 
-For more information, see [Govern apps discovered by Microsoft Defender for Endpoint](/cloud-app-security/mde-govern).
+For more information, see [Govern apps discovered by Microsoft Defender for Endpoint](/defender-cloud-apps/mde-govern).
 
 ## IoC IP URL and domain policy conflict handling order
 

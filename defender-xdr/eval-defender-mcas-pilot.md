@@ -39,21 +39,21 @@ Use the following steps to set up and configure the pilot for Microsoft Defender
 
 ## Step 1: Create the pilot group—Scope your pilot deployment to certain user groups
 
-Microsoft Defender for Cloud Apps enables you to scope your deployment. Scoping allows you to select certain user groups to be monitored for apps or excluded from monitoring. You can include or exclude user groups. To scope your pilot deployment, see [Scoped Deployment](/cloud-app-security/scoped-deployment).
+Microsoft Defender for Cloud Apps enables you to scope your deployment. Scoping allows you to select certain user groups to be monitored for apps or excluded from monitoring. You can include or exclude user groups. To scope your pilot deployment, see [Scoped Deployment](/defender-cloud-apps/scoped-deployment).
 
 
 ## Step 2: Configure protection—Conditional Access App Control
 
 One of the most powerful protections you can configure is Conditional Access App Control. This protection requires integration with Microsoft Entra ID. It allows you to apply Conditional Access policies, including related policies (like requiring healthy devices), to cloud apps you've sanctioned. 
 
-The first step in using Microsoft Defender for Cloud Apps to manage SaaS apps is to discover these apps and then add them to your Microsoft Entra tenant. If you need help with discovery, see [Discover and manage SaaS apps in your network](/cloud-app-security/tutorial-shadow-it). After you've discovered apps, [add these apps to your Microsoft Entra tenant](/azure/active-directory/manage-apps/add-application-portal).
+The first step in using Microsoft Defender for Cloud Apps to manage SaaS apps is to discover these apps and then add them to your Microsoft Entra tenant. If you need help with discovery, see [Discover and manage SaaS apps in your network](/defender-cloud-apps/tutorial-shadow-it). After you've discovered apps, [add these apps to your Microsoft Entra tenant](/azure/active-directory/manage-apps/add-application-portal).
 
 You can begin to manage these apps by executing the following tasks:
 
 - First, in Microsoft Entra ID, create a new conditional access policy and configure it to "Use Conditional Access App Control." This configuration helps to redirect the request to Defender for Cloud Apps. You can create one policy and add all SaaS apps to this policy.
 - Next, in Defender for Cloud Apps, create session policies. Create one policy for each control you want to apply.
 
-For more information, including supported apps and clients, see [Protect apps with Microsoft Defender for Cloud Apps Conditional Access App Control](/cloud-app-security/proxy-intro-aad). 
+For more information, including supported apps and clients, see [Protect apps with Microsoft Defender for Cloud Apps Conditional Access App Control](/defender-cloud-apps/proxy-intro-aad). 
 
 For example policies, see [Recommended Microsoft Defender for Cloud Apps policies for SaaS apps](../defender-office-365/zero-trust-identity-device-access-policies-mcas-saas.md). These policies build on a set of [common identity and device access policies](../defender-office-365/zero-trust-identity-device-access-policies-overview.md) that are recommended as a starting point for all customers. 
 
@@ -63,14 +63,14 @@ The Microsoft Defender for Cloud Apps documentation includes a series of tutoria
 
 Try out Defender for Cloud Apps tutorials:
 
-- [Detect suspicious user activity](/cloud-app-security/tutorial-suspicious-activity)
-- [Investigate risky users](/cloud-app-security/tutorial-ueba)
-- [Investigate risky OAuth apps](/cloud-app-security/investigate-risky-oauth)
-- [Discover and protect sensitive information](/cloud-app-security/tutorial-dlp)
-- [Protect any app in your organization in real time](/cloud-app-security/tutorial-proxy)
-- [Block downloads of sensitive information](/cloud-app-security/use-case-proxy-block-session-aad)
-- [Protect your files with admin quarantine](/cloud-app-security/use-case-admin-quarantine)
-- [Require step-up authentication upon risky action](/cloud-app-security/tutorial-step-up-authentication)
+- [Detect suspicious user activity](/defender-cloud-apps/tutorial-suspicious-activity)
+- [Investigate risky users](/defender-cloud-apps/tutorial-ueba)
+- [Investigate risky OAuth apps](/defender-cloud-apps/investigate-risky-oauth)
+- [Discover and protect sensitive information](/defender-cloud-apps/tutorial-dlp)
+- [Protect any app in your organization in real time](/defender-cloud-apps/tutorial-proxy)
+- [Block downloads of sensitive information](/defender-cloud-apps/use-case-proxy-block-session-aad)
+- [Protect your files with admin quarantine](/defender-cloud-apps/use-case-admin-quarantine)
+- [Require step-up authentication upon risky action](/defender-cloud-apps/tutorial-step-up-authentication)
 
 For more information on advanced hunting in Microsoft Defender for Cloud Apps data, see the [video](https://www.microsoft.com/en-us/videoplayer/embed/RWFISa).
 

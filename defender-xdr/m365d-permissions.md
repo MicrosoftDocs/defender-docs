@@ -74,5 +74,5 @@ During the preview, Microsoft Defender XDR doesn't enforce access controls based
 - [Custom roles in role-based access control for Microsoft Defender XDR](custom-roles.md)
 - [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference)
 - [Microsoft Defender for Endpoint RBAC](/windows/security/threat-protection/microsoft-defender-atp/rbac)
-- [Defender for Cloud Apps roles](/cloud-app-security/manage-admins)
+- [Defender for Cloud Apps roles](/defender-cloud-apps/manage-admins)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

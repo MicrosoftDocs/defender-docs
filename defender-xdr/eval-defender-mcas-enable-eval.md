@@ -51,11 +51,11 @@ Use the following steps to set up Microsoft Defender for Cloud Apps.
 
 ## Step 1: Connect to the Defender for Cloud Apps portal
 
-To verify licensing and to connect to the Defender for Cloud Apps portal, see [Quickstart: Get started with Microsoft Defender for Cloud Apps](/cloud-app-security/getting-started-with-cloud-app-security).
+To verify licensing and to connect to the Defender for Cloud Apps portal, see [Quickstart: Get started with Microsoft Defender for Cloud Apps](/defender-cloud-apps/getting-started-with-cloud-app-security).
 
-If you're not immediately able to connect to the portal, you might need to add the IP address to the allowlist of your firewall. See [Basic setup for Defender for Cloud Apps](/cloud-app-security/general-setup).
+If you're not immediately able to connect to the portal, you might need to add the IP address to the allowlist of your firewall. See [Basic setup for Defender for Cloud Apps](/defender-cloud-apps/general-setup).
 
-If you're still having trouble, review [Network requirements](/cloud-app-security/network-requirements).
+If you're still having trouble, review [Network requirements](/defender-cloud-apps/network-requirements).
 
 <a name="step-2"></a>
 
@@ -65,7 +65,7 @@ Microsoft Defender for Cloud Apps integrates with Microsoft Defender for Endpoin
 
 If you've already set up Microsoft Defender for Endpoint, configuring integration with Defender for Cloud Apps is a toggle in Microsoft Defender XDR. After integration is turned on, you can return to the Defender for Cloud Apps portal and view rich data in the Cloud Discovery Dashboard.
 
-To accomplish these tasks, see [Microsoft Defender for Endpoint integration with Microsoft Defender for Cloud Apps](/cloud-app-security/mde-integration).
+To accomplish these tasks, see [Microsoft Defender for Endpoint integration with Microsoft Defender for Cloud Apps](/defender-cloud-apps/mde-integration).
 
 <a name="step-3"></a>
 
@@ -80,7 +80,7 @@ If you're using one of the following Secure Web Gateways (SWG), Defender for Clo
 - Corrata
 - Menlo Security
 
-For more information on integrating with these network devices, see [Set up Cloud Discovery](/cloud-app-security/set-up-cloud-discovery).
+For more information on integrating with these network devices, see [Set up Cloud Discovery](/defender-cloud-apps/set-up-cloud-discovery).
 
 <a name="step-4"></a>
 
@@ -88,7 +88,7 @@ For more information on integrating with these network devices, see [Set up Clou
 
 The Cloud Discovery dashboard is designed to give you more insight into how cloud apps are being used in your organization. It provides an at-a-glance overview of what kinds of apps are being used, your open alerts, and the risk levels of apps in your organization.
 
-To get started using the Cloud Discovery dashboard, see [Working with discovered apps](/cloud-app-security/discovered-apps).
+To get started using the Cloud Discovery dashboard, see [Working with discovered apps](/defender-cloud-apps/discovered-apps).
 
 ## Next steps
 
