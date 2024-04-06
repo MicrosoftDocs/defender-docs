@@ -1,0 +1,225 @@
+### YamlMime:Hub
+
+title: Microsoft Defender products and services # < 60 chars
+summary: Explore the Microsoft Defender products and services available for your business or organization. 
+brand: m365
+
+metadata:
+  title: Microsoft Defender products and services 
+  description: Explore the Microsoft Defender products and services available for your business or organization. 
+  ms.service: defender-xdr 
+  ms.topic: hub-page 
+  ms.collection: m365-security-compliance
+  ms.custom: intro-hub-or-landing
+  author: dansimp 
+  ms.author: dansimp 
+  ms.date: 03/20/2024 
+  ms.localizationpriority: high
+
+# highlightedContent section (optional)
+# Maximum of 8 items
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+  items:
+    - title: What's in the Microsoft Defender portal
+      itemType: overview
+      url: /defender-xdr/microsoft-365-defender-portal
+    - title: Microsoft Copilot for Security integrations
+      itemType: deploy
+      url: /security-copilot
+    - title: Microsoft security and Zero Trust
+      itemType: overview
+      url: /security/zero-trust/zero-trust-overview  
+    - title: Microsoft Security videos
+      itemType: video
+      url: https://www.youtube.com/@MicrosoftSecurityCommunity
+
+
+
+conceptualContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+  sections:
+    - items:
+        # Card
+        - title: Microsoft Defender XDR 
+          links:
+          - url: /defender-xdr/microsoft-365-defender
+            itemType: overview
+            text: Overview
+          - url: /defender-xdr/whats-new
+            itemType: whats-new
+            text: What's new
+          - url: /defender-xdr/get-started
+            itemType: get-started
+            text: Get started 
+          - url: https://techcommunity.microsoft.com/t5/microsoft-defender-xdr/bd-p/MicrosoftThreatProtection
+            itemType: concept
+            text: Microsoft Defender XDR technical community
+          - url: /training/paths/sc-200-mitigate-threats-using-microsoft-365-defender/
+            itemType: learn
+            text: Training - SC-200 Mitigate threats using Defender XDR
+          footerLink:
+           text: See more
+           url: /defender-xdr/
+
+        - title: Microsoft Defender for Endpoint
+          summary: Protect your devices and endpoints
+          links:
+          - url: /defender-endpoint/microsoft-defender-endpoint
+            itemType: overview
+            text: Overview
+          - url: /defender-endpoint/whats-new-in-microsoft-defender-endpoint
+            itemType: whats-new
+            text: What's new
+          - url: /defender-endpoint/mde-planning-guide
+            itemType: get-started
+            text: Get started
+          - url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bd-p/MicrosoftDefenderATP
+            itemType: concept
+            text: Microsoft Defender for Endpoint technical community
+          - url: /training/paths/sc-200-mitigate-threats-using-microsoft-defender-for-endpoint/
+            itemType: learn
+            text: Training - SC-200 Mitigate threats using Microsoft Defender for Endpoint
+          footerLink:
+           text: See more
+           url: /defender-endpoint/
+
+        - title: Microsoft Defender for Office 365
+          summary: Protect your email, prevent phishing attacks, and protect your collaboration tools
+          links: 
+          - url: /defender-office-365/defender-for-office-365
+            itemType: overview
+            text: Overview
+          - url: /defender-office-365/defender-for-office-365-whats-new
+            itemType: whats-new
+            text: What's new
+          - url: /defender-office-365/mdo-deployment-guide
+            itemType: get-started
+            text: Get started
+          - url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/bd-p/MicrosoftDefenderforOffice365
+            itemType: concept
+            text: Microsoft Defender for Office 365 technical community
+          - url: /training/modules/implement-email-collaboration-protection/
+            itemType: learn
+            text: Training - Implement email and collaboration protection
+          footerLink:
+           text: See more
+           url: /defender-office-365/
+
+        - title: Microsoft Defender for Identity
+          summary: Protect your users and monitor risky behavior
+          links: 
+          - url: /defender-for-identity/what-is
+            itemType: overview
+            text: overview
+          - url: /defender-for-identity/whats-new
+            itemType: whats-new
+            text: What's New
+          - url: /defender-for-identity/deploy/quick-installation-guide
+            itemType: get-started
+            text: Get started
+          - url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-identity/bd-p/AzureAdvancedThreatProtection
+            itemType: concept
+            text: Microsoft Defender for Identity technical community
+          - url: /training/modules/defender-identity-introduction/
+            itemType: learn
+            text: Training - Introduction to Defender for Identity
+          footerLink:
+           text: See more
+           url: /defender-for-identity/
+
+        - title: Microsoft Defender for Cloud Apps
+          summary: Protect your Cloud Apps
+          links: 
+          - url: /defender-cloud-apps/what-is-defender-for-cloud-apps
+            itemType: overview
+            text: Microsoft Defender for Cloud Apps
+          - url: /defender-cloud-apps/release-notes
+            itemType: whats-new
+            text: What's new
+          - url: /defender-cloud-apps/get-started
+            text: Get started
+            itemType: get-started
+          - url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/bd-p/MicrosoftDefenderCloudApps
+            itemType: concept
+            text: Microsoft Defender for Cloud Apps technical community
+          - url: /training/modules/introduction-cloud-app-security/
+            itemType: learn
+            text: Training - Introduction to Defender for Cloud Apps
+          footerLink:
+           text: See more
+           url: /defender-cloud-apps/
+
+        - title: Microsoft Defender Vulnerability Management
+          summary: Manage known vulnerabilities and track your security posture
+          links: 
+          - url: /defender-vulnerability-management/defender-vulnerability-management
+            itemType: overview
+            text: Overview
+          - url: /defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management
+            itemType: whats-new
+            text: What's new
+          - url: /defender-vulnerability-management/tvm-prerequisites
+            itemType: get-started
+            text: Get started 
+          - url: https://techcommunity.microsoft.com/t5/microsoft-defender-vulnerability/bg-p/Vulnerability-Management
+            itemType: concept
+            text: Microsoft Defender Vulnerability Management technical community
+          footerLink:
+           text: See more
+           url: /defender-vulnerability-management/     
+          
+
+additionalContent:
+   sections:
+   - title: Community & support
+     items:
+      - title: Security, Compliance, Identity Tech Community
+        summary: News and announcements
+        url: https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance
+      - title: Threat intelligence blogs
+        summary: Keep up with the latest Microsoft Threat Intelligence information
+        url: https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/
+      - title: Microsoft Threat Intelligence on LinkedIn
+        summary: Follow us on LinkedIn
+        url: https://www.linkedin.com/showcase/microsoft-threat-intelligence/
+
+   - title: Other content
+     items: 
+     - title: Microsoft Security Exposure Management
+       links:
+         - url: /security-exposure-management/microsoft-security-exposure-management
+           text: Microsoft Security Exposure Management
+
+     - title: Microsoft Defender for IoT 
+       links:
+        - url: /azure/defender-for-iot/organizations/overview
+          text: Microsoft Defender for IoT for end-user organizations
+        - url: /azure/defender-for-iot/device-builders/overview
+          text: Microsoft Defender for IoT for device builders
+
+     - title: Microsoft Defender for Cloud
+       links:
+        - url: /azure/defender-for-cloud/
+          text: Microsoft Defender for Cloud 
+        - url: /azure/defender-for-cloud/defender-for-servers-introduction
+          text: Microsoft Defender for Servers
+        - url: /azure/defender-for-cloud/defender-for-storage-introduction
+          text: Microsoft Defender for Storage
+        - url: /azure/defender-for-cloud/defender-for-sql-introduction
+          text: Microsoft Defender for SQL
+        - url: /azure/defender-for-cloud/defender-for-containers-introduction
+          text: Microsoft Defender for Containers
+        - url: /azure/defender-for-cloud/defender-for-app-service-introduction
+          text: Microsoft Defender for App Service
+        - url: /azure/defender-for-cloud/defender-for-key-vault-introduction
+          text: Microsoft Defender for Key Vault
+        - url: /azure/defender-for-cloud/defender-for-dns-introduction
+          text: Microsoft Defender for DNS
+        - url: /azure/defender-for-cloud/defender-for-resource-manager-introduction
+          text: Microsoft Defender for Resource Manager
+        - url: /azure/defender-for-cloud/defender-for-databases-introduction
+          text: Microsoft Defender for open-source relational databases
+
+
+

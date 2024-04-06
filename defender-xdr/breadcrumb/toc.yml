@@ -1,3 +1,7 @@
-- name: 'Microsoft Defender XDR'
-  tocHref: /defender-xdr/
-  topicHref: /defender-xdr/index
+- name: 'Microsoft Defender'
+  tocHref: /defender/
+  topicHref: /defender/index
+  items:
+   - name: 'Microsoft Defender XDR'
+     tocHref: /defender-xdr/
+     topicHref: /defender-xdr/index

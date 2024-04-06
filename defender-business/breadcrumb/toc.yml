@@ -1,3 +1,7 @@
-- name: 'Microsoft Defender Business'
-  tocHref: /defender-business/
-  topicHref: /defender-business/index
+- name: 'Microsoft Defender'
+  tocHref: /defender/
+  topicHref: /defender/index
+  items:
+    - name: Microsoft Defender for Business
+      tocHref: /defender-business/
+      topicHref: /defender-business/index
