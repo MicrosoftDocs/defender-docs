@@ -46,7 +46,7 @@
       "feedback_system": "Standard",
       "permissioned-type": "public",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
-      "uhfHeaderId": "MSDocsHeader-Security",
+      "uhfHeaderId": "MSDocsHeader-MicrosoftDefender",
       "titleSuffix": "Microsoft Defender",
       "searchScope": ["Microsoft Defender"],
       "contributors_to_exclude": [
