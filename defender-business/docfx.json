@@ -47,7 +47,7 @@
       "permissioned-type": "public",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
       "uhfHeaderId": "MSDocsHeader-MicrosoftDefender",
-      "titleSuffix": "Microsoft Defender Business",
+      "titleSuffix": "Microsoft Defender for Business",
       "searchScope": ["Microsoft Defender Business"],
       "contributors_to_exclude": [
         "dstrome",
