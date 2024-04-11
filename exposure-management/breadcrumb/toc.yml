@@ -1,4 +1,8 @@
-- name: 'Microsoft Security Exposure Management'
-  tocHref: /exposure-management/
-  topicHref: /exposure-management/index
+- name: 'Microsoft Defender'
+  tocHref: microsoft-365/security/defender/
+  topicHref: microsoft-365/security/defender/index
+  items:
+   - name: 'Microsoft Security Exposure Management'
+     tocHref: /security-exposure-management/
+     topicHref: /security-exposure-management/index
 
