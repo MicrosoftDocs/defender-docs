@@ -363,7 +363,7 @@
     - name: General
       items:
       - name: Configure alert notifications
-        href: ../defender/configure-email-notifications.md
+        href: /defender/configure-email-notifications
       - name: Configure vulnerability email notifications
         href: configure-vulnerability-email-notifications.md
       - name: Configure advanced features
@@ -423,7 +423,7 @@
     - name: Defender for Endpoint Security Operations Guide 
       href: mde-sec-ops-guide.md
     - name: Microsoft Defender Vulnerability Management
-      href: ../defender-vulnerability-management/index.yml
+      href: /defender-vulnerability-management
     - name: Device discovery
       items:
       - name: Device discovery overview
@@ -446,7 +446,7 @@
       - name: Network devices
         href: network-devices.md
       - name: Windows authenticated scan
-        href: ../defender-vulnerability-management/windows-authenticated-scan.md
+        href: /defender-vulnerability-management/windows-authenticated-scan
 
     - name: Devices
       items:
@@ -964,19 +964,19 @@
     - name: Microsoft Security Resources
       items: 
         - name: Threat actor naming
-          href: ../defender/microsoft-threat-actor-naming.md
+          href: /defender/microsoft-threat-actor-naming
         - name: Malware names
-          href: ../defender/malware-naming.md
+          href: /defender/malware-naming
         - name: How Microsoft identifies malware and PUA
-          href: ../defender/criteria.md
+          href: /defender/criteria
         - name: Submit files for analysis
-          href: ../defender/submission-guide.md
+          href: /defender/submission-guide
         - name: Troubleshoot MSI portal errors caused by admin block
-          href: ../defender/portal-submission-troubleshooting.md
+          href: /defender/portal-submission-troubleshooting
         - name: Microsoft virus initiative
-          href: ../defender/virus-initiative-criteria.md
+          href: /defender/virus-initiative-criteria
         - name: Software developer FAQ
-          href: ../defender/developer-faq.yml
+          href: /defender/developer-faq
     - name: Malware information
       items: 
        - name: Coinminers
@@ -1533,7 +1533,7 @@
   - name: Microsoft Defender XDR docs
     items:
     - name: Microsoft Defender XDR
-      href: ../defender/index.yml
+      href: /defender
     - name: Defender for Office 365
       href: ../office-365-security/index.yml
     - name: Defender for Identity
@@ -1541,9 +1541,9 @@
     - name: Defender for Cloud Apps
       href: /cloud-app-security/
     - name: Defender for Business
-      href: ../defender-business/index.yml
+      href: /defender-business
     - name: Defender Vulnerability Management
-      href: ../defender-vulnerability-management/index.yml
+      href: /defender-vulnerability-management
 
 
 

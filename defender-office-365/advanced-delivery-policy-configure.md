@@ -49,7 +49,7 @@ Messages that are identified by the advanced delivery policy aren't security thr
 - [Threat Explorer (Explorer) or Real-time detections in Defender for Office 365](threat-explorer-real-time-detections-about.md): Admins can filter on **System override source** and select **Phishing simulation** or **SecOps Mailbox**.
 - The [Email entity page](mdo-email-entity-page.md): Admins can view a message that was allowed by organization policy by **SecOps mailbox** or **Phishing simulation** under **Tenant override** in the **Override(s)** section.
 - The [Threat protection status report](reports-email-security.md#threat-protection-status-report): Admin can filter by **view data by System override** in the drop down menu and select to see messages allowed due to a phishing simulation system override. To see messages allowed by the SecOps mailbox override, you can select **chart breakdown by delivery location** in the **chart breakdown by reason** dropdown list.
-- [Advanced hunting in Microsoft Defender for Endpoint](../defender-endpoint/advanced-hunting-overview.md): Phishing simulation and SecOps mailbox system overrides are options within OrgLevelPolicy in EmailEvents.
+- [Advanced hunting in Microsoft Defender for Endpoint](/defender-endpoint/advanced-hunting-overview): Phishing simulation and SecOps mailbox system overrides are options within OrgLevelPolicy in EmailEvents.
 - [Campaign Views](campaigns.md): Admin can filter on **System override source** and select either **Phishing simulation** or **SecOps Mailbox**.
 
 ## What do you need to know before you begin?
@@ -59,7 +59,7 @@ Messages that are identified by the advanced delivery policy aren't security thr
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](../defender/manage-rbac.md) (Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender/manage-rbac) (Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md) and [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Create, modify, or remove configured settings in the advanced delivery policy_: Membership in the **Security Administrator** role groups in Email & collaboration RBAC <u>and</u> membership in the **Organization Management** role group in Exchange Online RBAC.
     - _Read-only access to the advanced delivery policy_: Membership in the **Global Reader** or **Security Reader** role groups in Email & collaboration RBAC.

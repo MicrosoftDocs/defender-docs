@@ -25,7 +25,7 @@ search.appverid: met150
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
+- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 > [!TIP]
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-main-abovefoldlink&rtc=1)
@@ -58,7 +58,7 @@ Before trying out this feature, make sure you meet the requirements described in
 
 | Requirement | Description |
 |:---|:---|
-| Subscription | Your subscription must include one of the following plans:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 A5<br/>- Microsoft 365 E5 Security<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Microsoft Defender for Endpoint Plan 1 or Plan 2](../defender/eval-defender-endpoint-overview.md)<br/>- [Microsoft Defender for Business](../defender-business/mdb-overview.md)<br/>- [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium)|
+| Subscription | Your subscription must include one of the following plans:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 A5<br/>- Microsoft 365 E5 Security<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Microsoft Defender for Endpoint Plan 1 or Plan 2](/defender/eval-defender-endpoint-overview.md)<br/>- [Microsoft Defender for Business](../defender-business/mdb-overview)<br/>- [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium)|
 | Portal access | You must have access to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. |
 | Operating system | Your organization's devices must be running one of the following operating systems with the [latest antivirus/antimalware updates](microsoft-defender-antivirus-updates.md): <br/>- Windows 11<br/>- Windows 10 Anniversary Update (version 1607) or later <br/>- For information on macOS availability, see [Network Protection for macOS](network-protection-macos.md)<br/>- For information on Linux availability, see [Network Protection for Linux](network-protection-linux.md)|
 | Browser | Your organization's devices must be running one of the following browsers: <br/>- Microsoft Edge<br/>- Google Chrome<br/>- Mozilla FireFox<br/>- Brave<br/>- Opera<br/>- Internet Explorer|

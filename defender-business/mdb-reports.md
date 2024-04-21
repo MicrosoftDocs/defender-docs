@@ -31,7 +31,7 @@ This article describes these reports, how you can use them, and how to find them
 The monthly security summary report (currently in preview) shows:
 
 - Threats that were detected and prevented by Defender for Business, so you can see how the service is working for you.
-- Your current status from [Microsoft Secure Score](../defender/microsoft-secure-score.md), which gives you an indication of your organization's security posture. 
+- Your current status from [Microsoft Secure Score](/defender/microsoft-secure-score), which gives you an indication of your organization's security posture. 
 - Recommended actions you can take to improve your score and your security posture.
 
 To access this report, in the navigation pane, choose **Reports** > **Endpoints** > **Monthly Security Summary**. 
@@ -110,7 +110,7 @@ The web protection report shows attempts to access phishing sites, malware vecto
 To access this report, in the navigation pane, choose **Reports** > **Endpoints** > **Web protection**.
 
 > [!NOTE]
-> If you haven't yet configured web protection for your company, choose the **Settings** button in a report view. Then, under **Rules**, choose **Web content filtering**. To learn more about web content filtering, see [Web content filtering](../defender-endpoint/web-content-filtering.md). 
+> If you haven't yet configured web protection for your company, choose the **Settings** button in a report view. Then, under **Rules**, choose **Web content filtering**. To learn more about web content filtering, see [Web content filtering](/defender-endpoint/web-content-filtering). 
 
 ## Firewall report
 

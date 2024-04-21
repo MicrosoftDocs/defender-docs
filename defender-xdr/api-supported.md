@@ -60,7 +60,7 @@ All APIs along the `/api` path use the [OData](/odata/overview) Protocol; for ex
 
 - [Microsoft Defender XDR APIs overview](api-overview.md)
 - [Access the Microsoft Defender XDR APIs](api-access.md)
-- [Streaming API](../defender-endpoint/raw-data-export.md)
+- [Streaming API](/defender-endpoint/raw-data-export)
 - [Learn about API limits and licensing](api-terms.md)
 - [Understand error codes](api-error-codes.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

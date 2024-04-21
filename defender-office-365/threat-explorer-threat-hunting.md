@@ -560,5 +560,5 @@ For specific scenarios, see the following articles:
 In addition to the scenarios outlined in this article, you have more options in Explorer or Real-time detections. For more information, see the following articles:
 
 - [Threat protection status report](reports-email-security.md#threat-protection-status-report)
-- [Automated investigation and response in Microsoft Defender XDR](../defender/m365d-autoir.md)
+- [Automated investigation and response in Microsoft Defender XDR](/defender/m365d-autoir)
 - [Trigger an investigation from Threat Explorer](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).

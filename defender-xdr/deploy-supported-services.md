@@ -75,7 +75,7 @@ Deploying each service typically requires provisioning to your tenant and some i
 
 | Service | Provisioning instructions | Initial configuration |
 | ------ | ------ | ------ |
-| Microsoft Defender for Endpoint | [Microsoft Defender for Endpoint deployment guide](../defender-endpoint/deployment-phases.md) | *See provisioning instructions* |
+| Microsoft Defender for Endpoint | [Microsoft Defender for Endpoint deployment guide](/defender-endpoint/deployment-phases) | *See provisioning instructions* |
 |Microsoft Defender for Office 365 | *None, provisioned with Office 365* | [Configure Microsoft Defender for Office 365 policies](/microsoft-365/security/office-365-security/defender-for-office-365#configure-atp-policies) |
 | Microsoft Defender for Identity | [Quickstart: Create your Microsoft Defender for Identity instance](/azure-advanced-threat-protection/install-atp-step1) | *See provisioning instructions* |
 | Microsoft Defender for Cloud Apps | *None* | [Quickstart: Get started with Microsoft Defender for Cloud Apps](/cloud-app-security/getting-started-with-cloud-app-security) |
@@ -87,7 +87,7 @@ Once you've deployed the supported services, [turn on Microsoft Defender XDR](m3
 - [Microsoft Defender XDR overview](microsoft-365-defender.md)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)
 - [Setup guides for Microsoft Defender XDR](deploy-configure-m365-defender.md)
-- [Microsoft Defender for Endpoint overview](../defender-endpoint/microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint overview](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Office 365 overview](../office-365-security/defender-for-office-365.md)
 - [Microsoft Defender for Cloud Apps overview](/cloud-app-security/what-is-cloud-app-security)
 - [Microsoft Defender for Identity overview](/azure-advanced-threat-protection/what-is-atp)

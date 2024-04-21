@@ -60,12 +60,12 @@ If you're a Microsoft Managed Service Provider (MSP), you can integrate Microsof
 - Fetch and view [incidents and alerts](mdb-view-manage-incidents.md) with your security information and event management (SIEM) tools.
 - Orchestrate [remediation actions](mdb-review-remediation-actions.md), such as approving actions following automated investigations, or taking manual response actions on a device.
 
-Integration can be done by using the [Defender for Endpoint APIs](../defender-endpoint/management-apis.md). Use the following resources to learn more:
+Integration can be done by using the [Defender for Endpoint APIs](/defender-endpoint/management-apis). Use the following resources to learn more:
 
 | Resource | Description |
 |:---|:---|
-| [Overview of management and APIs](../defender-endpoint/management-apis.md) | Defender for Business is built on Microsoft Defender for Endpoint, and is an integration-ready platform. This article describes how to automate workflows and innovate using the Defender for Endpoint APIs. |
-| [Configure managed security service provider integration](../defender-endpoint/configure-mssp-support.md) | Provides an overview of steps to take to successfully integrate a customer's tenant with your MSP solution. |
+| [Overview of management and APIs](/defender-endpoint/management-apis) | Defender for Business is built on Microsoft Defender for Endpoint, and is an integration-ready platform. This article describes how to automate workflows and innovate using the Defender for Endpoint APIs. |
+| [Configure managed security service provider integration](/defender-endpoint/configure-mssp-support) | Provides an overview of steps to take to successfully integrate a customer's tenant with your MSP solution. |
 
 ## Use Microsoft 365 Lighthouse to secure and manage your customers' devices and data
 

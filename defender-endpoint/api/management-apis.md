@@ -80,7 +80,7 @@ The Defender for Endpoint event information is pushed directly to Azure storage 
 For more information, see [Raw data streaming API](raw-data-export.md).
 
 The new Microsoft Defender XDR Streaming API includes email and alert events in addition to device events.
-For more information, see [Microsoft Defender XDR Streaming API](../../defender/streaming-api.md).
+For more information, see [Microsoft Defender XDR Streaming API](/defender/streaming-api).
 
 ## SIEM API
 

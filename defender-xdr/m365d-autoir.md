@@ -78,7 +78,7 @@ In Microsoft Defender XDR, each automated investigation correlates signals acros
 
 |Entities |Threat protection services  |
 |:---------|:---------|
-|Devices (also referred to as endpoints or machines) |[Defender for Endpoint](../defender-endpoint/automated-investigations.md) |      
+|Devices (also referred to as endpoints or machines) |[Defender for Endpoint](/defender-endpoint/automated-investigations) |      
 |On-premises Active Directory users, entity behavior, and activities     |[Defender for Identity](/azure-advanced-threat-protection/what-is-atp) |      
 |Email content (email messages that can contain files and URLs)     |[Defender for Office 365](../office-365-security/defender-for-office-365.md) |
 

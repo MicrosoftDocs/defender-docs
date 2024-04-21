@@ -48,7 +48,7 @@ Centralized permissions management is supported for the following solutions:
 |Microsoft Defender for Office 365|Full support for all data and actions scenarios that are controlled by [Email & Collaboration roles](../office-365-security/mdo-portal-permissions.md) and scenarios controlled by [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). </br></br> **Note:** <ul><li>The Microsoft Defender XDR RBAC model is initially available for organizations with Microsoft Defender for Office 365 Plan 2 licenses only. This capability isn't available to users on trial licenses.</li><li>Granular delegated admin privileges (GDAP) aren't supported.</li><li>Cmdlets in Exchange Online PowerShell and Security & Compliance PowerShell continue to use the old RBAC models and aren't affected by Microsoft Defender XDR Unified RBAC.</li><li>Azure B2B invited guests aren't supported by experiences that were previously under Exchange Online RBAC.</li></ul>|
 |Microsoft Defender for Identity|Full support for all identity data and actions. </br></br> **Note:** Defender for Identity experiences also adhere to permissions granted from [Microsoft Defender for Cloud Apps](https://security.microsoft.com/cloudapps/permissions/roles). For more information, see [Microsoft Defender for Identity role groups](https://go.microsoft.com/fwlink/?linkid=2202729).|
 |Microsoft Defender for Cloud|Support access management for all Defender for Cloud data that is available in Microsoft Defender portal.|
-|Microsoft Secure Score|Full support for all Secure Score data from the [Products included in Secure Score](../defender/microsoft-secure-score.md#products-included-in-secure-score).|
+|Microsoft Secure Score|Full support for all Secure Score data from the [Products included in Secure Score](/defender/microsoft-secure-score#products-included-in-secure-score).|
 
 > [!NOTE]
 > Scenarios and experiences controlled by Compliance permissions are still managed in the Microsoft Purview compliance portal.
@@ -66,7 +66,7 @@ This section provides useful information on what you need to know before you sta
 
   - Manage roles and permissions in Microsoft Defender XDR Unified RBAC.
 
-  - Create a custom role that can grant access to security groups or individual users to manage roles and permissions in Microsoft Defender XDR unified RBAC. This removes the need for Microsoft Entra global roles to manage permissions. To do this, you need to assign the **Authorization** permission in Microsoft Defender XDR Unified RBAC. For details on how to assign the Authorization permission, see [Create a role to access and manage roles and permissions](../defender/create-custom-rbac-roles.md#create-a-role-to-access-and-manage-roles-and-permissions).
+  - Create a custom role that can grant access to security groups or individual users to manage roles and permissions in Microsoft Defender XDR unified RBAC. This removes the need for Microsoft Entra global roles to manage permissions. To do this, you need to assign the **Authorization** permission in Microsoft Defender XDR Unified RBAC. For details on how to assign the Authorization permission, see [Create a role to access and manage roles and permissions](/defender/create-custom-rbac-roles#create-a-role-to-access-and-manage-roles-and-permissions).
 
 - The Microsoft Defender XDR security solution continues to respect existing Microsoft Entra global roles when you activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads, that is, Global Admins retain assigned admin privileges.
 

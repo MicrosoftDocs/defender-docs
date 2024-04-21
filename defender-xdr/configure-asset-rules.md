@@ -25,7 +25,7 @@ ms.date: 07/11/2023
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
+- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 Maintaining an accurate inventory of devices in a constantly changing corporate environment is a critical task for security and IT teams. Failing to effectively manage device context, such as device value and tags, which many organizations use in their security workflows can lead to security vulnerabilities.
 

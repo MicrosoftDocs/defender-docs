@@ -132,8 +132,8 @@ The following table lists the supported proxy settings:
 |Manual static proxy configuration |Web proxy autodiscovery protocol (WPAD, a type of authenticated proxy)|
 
 - [Network connections](microsoft-defender-endpoint-linux.md#network-connections)
-- [Full configuration profile](../defender-endpoint/linux-preferences.md#full-configuration-profile-example)
-- [Static proxy configuration](../defender-endpoint/linux-static-proxy-configuration.md)
+- [Full configuration profile](/defender-endpoint/linux-preferences#full-configuration-profile-example)
+- [Static proxy configuration](/defender-endpoint/linux-static-proxy-configuration)
 - [Troubleshooting connectivity issues in static proxy scenario](linux-support-connectivity.md#troubleshooting-steps-for-environments-with-static-proxy)
 
 #### Step 3: Verify SSL inspection isn't being performed on the network traffic

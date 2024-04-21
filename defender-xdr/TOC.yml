@@ -133,7 +133,7 @@
           - name: Secure Score data storage and privacy
             href: secure-score-data-storage-privacy.md
       - name: Protect your endpoints 
-        href: ../defender-endpoint/index.yml
+        href: /defender-endpoint
       - name: Protect your identities
         items:
           - name: Sensor settings and health
@@ -237,7 +237,7 @@
               - name: Incident response playbooks
                 href: /security/operations/incident-response-playbooks
               - name: Investigate domains and URLs associated with Microsoft Defender XDR
-                href: ../defender-endpoint/investigate-domain.md
+                href: /defender-endpoint/investigate-domain
        - name: Manage automated investigation and response
          items: 
               - name: Overview
@@ -431,7 +431,7 @@
               - name: Understand the analyst report
                 href: threat-analytics-analyst-reports.md
        - name: Endpoint Attack Notifications
-         href: ../defender-endpoint/endpoint-attack-notifications.md
+         href: /defender-endpoint/endpoint-attack-notifications
        - name: Collaborate with Microsoft Defender Experts for Hunting
          items:
               - name: Overview
@@ -635,15 +635,15 @@
                - name: Integrate your SIEM tools with Microsoft Defender XDR
                  href: configure-siem-defender.md
                - name: Troubleshoot issues with integrating SIEM tools
-                 href: ../defender-endpoint/troubleshoot-siem.md
+                 href: /defender-endpoint/troubleshoot-siem
             - name: Partner catalog
               items:
                - name: Technological partners of Microsoft Defender XDR
-                 href: ../defender-endpoint/technological-partners.md 
+                 href: /defender-endpoint/technological-partners 
                - name: Professional services supported by Microsoft Defender XDR
-                 href: ../defender-endpoint/professional-services.md           
+                 href: /defender-endpoint/professional-services           
             - name: Understand threat intelligence concepts
-              href: ../defender-endpoint/threat-indicator-concepts.md 
+              href: /defender-endpoint/threat-indicator-concepts 
       - name: Bi-directional connector for Microsoft Sentinel
         href: microsoft-365-defender-integration-with-azure-sentinel.md 
       - name: Microsoft Security Resources
@@ -669,12 +669,12 @@
        - name: Defender for Office 365
          href: ../office-365-security/index.yml
        - name: Defender for Endpoint
-         href: ../defender-endpoint/index.yml
+         href: /defender-endpoint
        - name: Defender for Identity
          href: /defender-for-identity
        - name: Defender for Cloud Apps
          href: /cloud-app-security
        - name: Defender for Business
-         href: ../defender-business/index.yml
+         href: /defender-business
        - name: Defender Vulnerability Management
-         href: ../defender-vulnerability-management/index.yml
+         href: /defender-vulnerability-management

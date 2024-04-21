@@ -22,7 +22,7 @@ search.appverid: met150
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
+- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 ## Remediation actions
 
@@ -107,7 +107,7 @@ If you've determined that a device or a file is not a threat, you can undo remed
 |<ul><li>Automated investigation</li><li>Manual response actions (see the note below)</li><li>Microsoft Defender Antivirus</li></ul>|<ul><li>Disable a driver</li><li>Isolate device</li><li>Quarantine a file</li><li>Remove a registry key</li><li>Remove a scheduled task</li><li>Restrict code execution</li><li>Stop a service</li></ul>|
 
 > [!NOTE]
-> [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) and [Microsoft Defender for Business](../defender-business/mdb-overview.md) include only the following manual response actions:
+> [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) and [Microsoft Defender for Business](/defender-business/mdb-overview) include only the following manual response actions:
 >
 > - Run antivirus scan
 > - Isolate device
@@ -148,7 +148,7 @@ Automation levels affect whether certain remediation actions are taken automatic
 All verdicts are tracked in the [Action center](auto-investigation-action-center.md#the-unified-action-center).
 
 > [!NOTE]
-> In [Defender for Business](../defender-business/mdb-overview.md), automated investigation and remediation capabilities are preset to use **Full - remediate threats automatically**. These capabilities are applied to all devices by default.
+> In [Defender for Business](/defender-business/mdb-overview), automated investigation and remediation capabilities are preset to use **Full - remediate threats automatically**. These capabilities are applied to all devices by default.
 
 ## Next steps
 

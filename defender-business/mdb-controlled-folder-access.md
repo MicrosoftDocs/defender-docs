@@ -42,7 +42,7 @@ Controlled folder access allows only trusted apps to access protected folders on
 
    5. On the **Review + create** step, review the information, and then choose **Create**.
 
-To learn more about controlled folder access, see [Protect important folders with controlled folder access](../defender-endpoint/controlled-folders.md).
+To learn more about controlled folder access, see [Protect important folders with controlled folder access](/defender-endpoint/controlled-folders).
 
 ## Next steps
 

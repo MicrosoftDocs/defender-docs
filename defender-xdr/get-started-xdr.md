@@ -44,7 +44,7 @@ You also need to grant our experts one or both of the following permissions:
 > [!IMPORTANT]
 > If you skip providing additional permissions, our experts won't be able to take certain response actions to secure your organization.  
 >
-> Even though our experts are granted these relatively powerful permissions, they will only have individual access to specific areas for a limited period. [Learn more about how Defender Experts for XDR permissions work](../defender/dex-xdr-permissions.md)
+> Even though our experts are granted these relatively powerful permissions, they will only have individual access to specific areas for a limited period. [Learn more about how Defender Experts for XDR permissions work](/defender/dex-xdr-permissions)
 
 **To grant our experts permissions:**
 
@@ -56,14 +56,14 @@ To edit or update permissions after the initial setup, go to **Settings** > **De
 
 ## Exclude devices from remediation
 
-Defender Experts for XDR lets you exclude devices and users from remediation actions taken by our experts and instead get remediation guidance for those entities. These exclusions are based on identified [device groups](../defender-endpoint/machine-groups.md) in Microsoft Defender for Endpoint<!--and identified [user groups](/entra/fundamentals/concept-learn-about-groups) in Microsoft Entra ID-->.
+Defender Experts for XDR lets you exclude devices and users from remediation actions taken by our experts and instead get remediation guidance for those entities. These exclusions are based on identified [device groups](/defender-endpoint/machine-groups) in Microsoft Defender for Endpoint<!--and identified [user groups](/entra/fundamentals/concept-learn-about-groups) in Microsoft Entra ID-->.
 
 **To exclude device groups:**
 
 1. In the same Defender Experts settings setup, under **Exclusions**, go to the **Device groups** tab.
 2. Select **+ Add device groups**, then search for and choose the device group(s) that you wish to exclude.
    > [!NOTE]
-   > This page only lists existing device groups. If you wish to create a new device group, you first need to go to the Defender for Endpoint settings in your Microsoft Defender portal. Then, refresh this page to search for and choose the newly created group. [Learn more about creating device groups](../defender-endpoint/machine-groups.md)
+   > This page only lists existing device groups. If you wish to create a new device group, you first need to go to the Defender for Endpoint settings in your Microsoft Defender portal. Then, refresh this page to search for and choose the newly created group. [Learn more about creating device groups](/defender-endpoint/machine-groups)
 
 3. Select **Add device groups**.
 4. Back on the **Device groups** tab, review the list of excluded device groups. If you wish to remove a device group from the exclusion list, choose it then select **Remove device group**.
@@ -91,7 +91,7 @@ To edit or update exclusions after the initial setup, go to **Settings** > **Def
 
 Defender Experts for XDR also lets you exclude automatically identified high-value devices and users, such as key executives, or sensitive admins, from remediation actions by our experts:
 
-- **High-value devices** are devices in your organization that were [identified as such](../defender-vulnerability-management/tvm-assign-device-value.md) in Defender for Endpoint
+- **High-value devices** are devices in your organization that were [identified as such](/defender-vulnerability-management/tvm-assign-device-value) in Defender for Endpoint
 - **High-value users** are users in your organization that were tagged with the [Sensitive tag](/defender-for-identity/entity-tags#sensitive--tags) in Microsoft Defender for Identity and the [priority account tag](/microsoft-365/admin/setup/priority-accounts) in Microsoft Defender for Office 365
 
 Similar to the other excluded device or user groups, you instead get remediation guidance for these high-value entities when they're excluded.
@@ -174,7 +174,7 @@ The readiness assessment has two parts:
 
 - **Protected assets** – This section shows the current number of protected devices and identities versus the ones that you still need to protect to get the Defender Experts for XDR service started.
 
-  The figures are based on your Defender for Endpoint and Defender for Identity licenses; to achieve these target number of protected assets, [onboard more devices](../defender-endpoint/onboarding.md) to Defender for Endpoint or [install more Defender for Identity sensors](/defender-for-identity/install-sensor).
+  The figures are based on your Defender for Endpoint and Defender for Identity licenses; to achieve these target number of protected assets, [onboard more devices](/defender-endpoint/onboarding) to Defender for Endpoint or [install more Defender for Identity sensors](/defender-for-identity/install-sensor).
 
 > [!IMPORTANT]
 > Defender Experts for XDR reviews your readiness assessment periodically, especially if there are any changes to your environment, such as the addition of new devices and identities. It's important that you regularly monitor and run the readiness assessment beyond the initial onboarding to ensure that your environment has strong security posture to reduce risk.

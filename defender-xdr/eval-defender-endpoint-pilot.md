@@ -57,7 +57,7 @@ Defender Vulnerability Management management helps you focus on the weaknesses t
 ### Run a simulation
 Microsoft Defender for Endpoint comes with ["Do It Yourself" attack scenarios](https://securitycenter.windows.com/tutorials) that you can run on your pilot devices.  Each document includes OS and application requirements as well as detailed instructions that are specific to an attack scenario. These scripts are safe, documented, and easy to use. These scenarios will reflect Defender for Endpoint capabilities and walk you through investigation experience.
 
-To run any of the provided simulations, you need at least [one onboarded device](../defender-endpoint/onboard-configure.md).
+To run any of the provided simulations, you need at least [one onboarded device](/defender-endpoint/onboard-configure).
 
 1. In **Help** > **Simulations & tutorials**, select which of the available attack scenarios you would like to simulate:
 

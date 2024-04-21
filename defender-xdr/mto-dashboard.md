@@ -56,9 +56,9 @@ At the top of the page, you can view the number of tenants and the aggregate num
 
 Select a tenant name to navigate to the Defender Vulnerability Management dashboard for that tenant in the [Microsoft Defender XDR](https://security.microsoft.com/machines) portal.
 
-For more information, see [Microsoft Defender Vulnerability Management dashboard](../defender-vulnerability-management/tvm-dashboard-insights.md).
+For more information, see [Microsoft Defender Vulnerability Management dashboard](/defender-vulnerability-management/tvm-dashboard-insights).
 
 ## Related articles
 
-- [Exposure score](../defender-vulnerability-management/tvm-exposure-score.md)
-- [Security recommendations](../defender-vulnerability-management/tvm-security-recommendation.md)
+- [Exposure score](/defender-vulnerability-management/tvm-exposure-score)
+- [Security recommendations](/defender-vulnerability-management/tvm-security-recommendation)

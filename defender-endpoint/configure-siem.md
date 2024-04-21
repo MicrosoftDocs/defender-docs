@@ -131,5 +131,5 @@ For more information, see:
 - [Access the Microsoft Defender for Endpoint APIs](apis-intro.md)
 - [Hello World example (describes how to register an application in Microsoft Entra ID)](api-hello-world.md)
 - [Get access with application context](exposed-apis-create-app-webapp.md)
-- [Microsoft Defender XDR SIEM integration](../defender/configure-siem-defender.md)
+- [Microsoft Defender XDR SIEM integration](/defender/configure-siem-defender)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

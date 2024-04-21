@@ -44,7 +44,7 @@ Defender for Business includes a full range of device protection capabilities, a
 
 With Defender for Business, you can help protect the devices and data your business uses with:
 
-- **Enterprise-grade security**. Defender for Business brings powerful endpoint security capabilities from our industry-leading [Microsoft Defender for Endpoint](../defender-endpoint/microsoft-defender-endpoint.md) solution and optimizes those capabilities for IT administrators to support small- and medium-sized businesses.
+- **Enterprise-grade security**. Defender for Business brings powerful endpoint security capabilities from our industry-leading [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) solution and optimizes those capabilities for IT administrators to support small- and medium-sized businesses.
 
 - **An easy-to-use security solution**. Defender for Business offers streamlined experiences that guide you to action with recommendations and insights into the security of your endpoints. No specialized knowledge is required, because Defender for Business offers wizard-driven configuration and default security policies that are designed to help protect your company's devices from day one.
 

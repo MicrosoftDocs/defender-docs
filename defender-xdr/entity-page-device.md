@@ -162,7 +162,7 @@ As with the previous tabs, the choice of displayed columns can be customized.
 
 The default view includes columns that detail the security weaknesses addressed, the associated threat, the related component or software affected by the threat, and more. Items can be filtered by the recommendation's status.
 
-Learn more about [security recommendations](../defender-vulnerability-management/tvm-security-recommendation.md).
+Learn more about [security recommendations](/defender-vulnerability-management/tvm-security-recommendation).
 
 :::image type="content" source="/defender/media/entity-page-device/entity-device-recommendations-tab.png" alt-text="Screenshot of the Security recommendations tab for the device entity page." lightbox="/defender/media/entity-page-device/entity-device-recommendations-tab.png":::
 

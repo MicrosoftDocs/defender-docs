@@ -55,7 +55,7 @@ You can also use the [configuration analyzer](configuration-analyzer-for-securit
 
 ## Best practices to stay protected
 
-- On a monthly basis, run [Secure Score](../defender/microsoft-secure-score.md) to assess your organization's security settings.
+- On a monthly basis, run [Secure Score](/defender/microsoft-secure-score) to assess your organization's security settings.
 
 - For messages that end up in quarantine by mistake (false positives), or for messages that are allowed through (false negatives), we recommend that you search for those messages in [Threat Explorer and real-time detections](threat-explorer-real-time-detections-about.md). You can search by sender, recipient, or message ID. After you locate the message, go to details by clicking on the subject. For a quarantined message, look to see what the "detection technology" was so that you can use the appropriate method to override. For an allowed message, look to see which policy allowed the message.
 
@@ -85,6 +85,6 @@ You can also use the [configuration analyzer](configuration-analyzer-for-securit
 
 - Multi factor authentication (MFA) is a good way to prevent compromised accounts. You should strongly consider enabling MFA for all of your users. For a phased approach, start by enabling MFA for your most sensitive users (admins, executives, etc.) before you enable MFA for everyone. For instructions, see [Set up multi-factor authentication](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication).
 
-- Forwarding rules to external recipients are often used by attackers to extract data. Use the **Review mailbox forwarding rules** information in [Microsoft Secure Score](../defender/microsoft-secure-score.md) to find and even prevent forwarding rules to external recipients. For more information, see [Mitigating Client External Forwarding Rules with Secure Score](/archive/blogs/office365security/mitigating-client-external-forwarding-rules-with-secure-score).
+- Forwarding rules to external recipients are often used by attackers to extract data. Use the **Review mailbox forwarding rules** information in [Microsoft Secure Score](/defender/microsoft-secure-score) to find and even prevent forwarding rules to external recipients. For more information, see [Mitigating Client External Forwarding Rules with Secure Score](/archive/blogs/office365security/mitigating-client-external-forwarding-rules-with-secure-score).
 
   Use the [Autoforwarded messages report](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report) to view specific details about forwarded email.

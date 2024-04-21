@@ -106,7 +106,7 @@ Controlled folder access requires enabling [Microsoft Defender Antivirus real-ti
 
 ## Review controlled folder access events in the Microsoft Defender portal
 
-Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md) in the Microsoft Defender portal; see [Microsoft Defender for Endpoint in Microsoft Defender XDR](../defender/microsoft-365-security-center-mde.md).
+Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md) in the Microsoft Defender portal; see [Microsoft Defender for Endpoint in Microsoft Defender XDR](/defender/microsoft-365-security-center-mde).
 
 You can query Microsoft Defender for Endpoint data by using [Advanced hunting](advanced-hunting-overview.md). If you're using [audit mode](audit-windows-defender.md), you can use [advanced hunting](advanced-hunting-overview.md) to see how controlled folder access settings would affect your environment if they were enabled.
 

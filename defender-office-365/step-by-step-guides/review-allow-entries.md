@@ -97,6 +97,6 @@ EmailEvents
 
 Hopefully you found this article to be useful, with some basic queries to get you started with advanced hunting, to learn more check out the below articles:
 
-Learn more about advanced hunting: [Overview - Advanced hunting](../../defender/advanced-hunting-overview.md).
+Learn more about advanced hunting: [Overview - Advanced hunting](/defender/advanced-hunting-overview).
 
 Learn more about authentication: [Email Authentication in Exchange Online Protection](../email-authentication-about.md).

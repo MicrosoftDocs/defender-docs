@@ -27,7 +27,7 @@ ms.date: 04/18/2024
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-The [Microsoft Defender portal](../defender/microsoft-365-defender-portal.md), [Microsoft Purview portal](/purview/purview-portal), and the classic Microsoft Purview [compliance](/purview/microsoft-365-compliance-center) and [governance](/purview/use-microsoft-purview-governance-portal) portals have replaced the Security & Compliance Center as the places to manage Microsoft Defender for Office 365 and Microsoft Purview roles and role groups for your organization. For more information about permissions within these portals, see the following articles:
+The [Microsoft Defender portal](/defender/microsoft-365-defender-portal), [Microsoft Purview portal](/purview/purview-portal), and the classic Microsoft Purview [compliance](/purview/microsoft-365-compliance-center) and [governance](/purview/use-microsoft-purview-governance-portal) portals have replaced the Security & Compliance Center as the places to manage Microsoft Defender for Office 365 and Microsoft Purview roles and role groups for your organization. For more information about permissions within these portals, see the following articles:
 
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md)
 - [Permissions in the Microsoft Purview portal](/purview/purview-portal)
@@ -41,7 +41,7 @@ Permissions in these portals are based on the role-based access control (RBAC) p
 This article contains the inventory of Defender for Office 365 and Microsoft Purview roles and role groups.
 
 > [!NOTE]
-> In the Microsoft Defender XDR preview program, a different Microsoft Defender 365 RBAC model is also available. The permissions in this RBAC model are different from the Defender for Office 365 permissions as described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](../defender/manage-rbac.md).
+> In the Microsoft Defender XDR preview program, a different Microsoft Defender 365 RBAC model is also available. The permissions in this RBAC model are different from the Defender for Office 365 permissions as described in this article. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender/manage-rbac).
 
 ## Role groups in Microsoft Defender for Office 365 and Microsoft Purview
 

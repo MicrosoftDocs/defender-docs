@@ -46,7 +46,7 @@ Deployment guides in the admin center require authentication to a Microsoft 365 
 - [Microsoft Defender XDR overview](microsoft-365-defender.md)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)
 - [Deploy supported services](deploy-supported-services.md)
-- [Microsoft Defender for Endpoint overview](../defender-endpoint/microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint overview](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Office 365 overview](../office-365-security/defender-for-office-365.md)
 - [Microsoft Defender for Cloud Apps overview](/cloud-app-security/what-is-cloud-app-security)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -22,7 +22,7 @@ Lists the new features and functionality in Microsoft Defender XDR.
 For more information on what's new with other Microsoft Defender security products and Microsoft Sentinel, see:
 
 - [What's new in Microsoft Defender for Office 365](../office-365-security/defender-for-office-365-whats-new.md)
-- [What's new in Microsoft Defender for Endpoint](../defender-endpoint/whats-new-in-microsoft-defender-endpoint.md)
+- [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 - [What's new in Microsoft Sentinel](/azure/sentinel/whats-new)
@@ -118,7 +118,7 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) The [Attack story](investigate-incidents.md#attack-story) in incidents is now generally available. The attack story provides the full story of the attack and allows incident response teams to view the details and apply remediation.
 
-- A new URL and domain page is now available in Microsoft Defender XDR. The updated URL and domain page provides a single place to view all the information about a URL or a domain, including its reputation, the users who clicked it, the devices that accessed it, and emails where the URL or domain was seen. For details, see [Investigate URLs in Microsoft Defender XDR](../defender-endpoint/investigate-domain.md).
+- A new URL and domain page is now available in Microsoft Defender XDR. The updated URL and domain page provides a single place to view all the information about a URL or a domain, including its reputation, the users who clicked it, the devices that accessed it, and emails where the URL or domain was seen. For details, see [Investigate URLs in Microsoft Defender XDR](/defender-endpoint/investigate-domain).
 
 ## June 2023
 
@@ -258,7 +258,7 @@ The security operations team can view all actions pending approval, and the stip
 
   Threat tags help you focus on specific threat categories and review the most relevant reports.
 
-- (Preview) [Streaming API](../defender-endpoint/raw-data-export.md)
+- (Preview) [Streaming API](/defender-endpoint/raw-data-export)
 
   Microsoft Defender XDR supports streaming all the events available through Advanced Hunting to an Event Hubs and/or Azure storage account.
 

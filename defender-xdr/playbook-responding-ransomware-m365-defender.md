@@ -39,15 +39,15 @@ Run through this list of questions and tasks to discover the extent of the attac
 
 * Which user accounts might be compromised?
   * Which accounts were used to deliver the payload?
-* Which [onboarded](../defender-endpoint/investigate-machines.md) and [discovered](../defender-endpoint/device-discovery.md) devices are affected and how?
+* Which [onboarded](/defender-endpoint/investigate-machines.md) and [discovered](../defender-endpoint/device-discovery) devices are affected and how?
   * Originating devices
   * Impacted devices
   * Suspicious devices
 * Identify any network communication that is associated with the incident.
 * Which applications are affected?
 * What payloads were spread?
-* How is the attacker communicating with the compromised devices? (Network protection must be [enabled](../defender-endpoint/enable-network-protection.md)):
-  * Go to the [indicators page](../defender-endpoint/indicator-ip-domain.md#create-indicators-for-ips-and-urlsdomains) to add a block for the IP and URL (if you have that information).
+* How is the attacker communicating with the compromised devices? (Network protection must be [enabled](/defender-endpoint/enable-network-protection)):
+  * Go to the [indicators page](/defender-endpoint/indicator-ip-domain#create-indicators-for-ips-and-urlsdomains) to add a block for the IP and URL (if you have that information).
 * What was the payload delivery medium?
 
 ### Step 2: Preserve existing systems
@@ -96,10 +96,10 @@ DeviceLogonEvents
 
 * Quarantine and add indicators for files that are infected.
 * Ensure that your antivirus solution is configurable in its optimal protection state. For Microsoft Defender Antivirus, this includes:
-  * [Real time protection](../defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus.md) is enabled.
-  * [Tamper protection](../defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection.md) is enabled. In the Microsoft Defender portal, select **Settings > Endpoints > Advanced features > Tamper protection**.
-  * [Attack surface reduction](../defender-endpoint/enable-attack-surface-reduction.md) rules are enabled.
-  * [Cloud protection](../defender-endpoint/enable-attack-surface-reduction.md) is enabled.
+  * [Real time protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) is enabled.
+  * [Tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) is enabled. In the Microsoft Defender portal, select **Settings > Endpoints > Advanced features > Tamper protection**.
+  * [Attack surface reduction](/defender-endpoint/enable-attack-surface-reduction) rules are enabled.
+  * [Cloud protection](/defender-endpoint/enable-attack-surface-reduction) is enabled.
 * Disable Exchange ActiveSync and OneDrive sync.
   * To disable Exchange ActiveSync for a mailbox, see [How to disable Exchange ActiveSync for users in Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-exchange-activesync).
   * To disable other types of access to a mailbox, see:

@@ -31,7 +31,7 @@ landingContent:
       - linkListType: whats-new
         links:
           - text: What's new in Microsoft Defender XDR
-            url: ../defender/whats-new.md
+            url: /defender/whats-new
       - linkListType: video
         links:
           - text: Overview video
@@ -93,11 +93,11 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is Microsoft Defender for Endpoint?
-            url: ../defender-endpoint/microsoft-defender-endpoint.md
+            url: /defender-endpoint/microsoft-defender-endpoint
           - text: Defender for Endpoint in Microsoft Defender XDR
             url: microsoft-365-security-center-mde.md
           - text: Redirecting Defender for Endpoint in Microsoft Defender XDR
-            url: ../defender/microsoft-365-security-mde-redirection.md
+            url: /defender/microsoft-365-security-mde-redirection
 
             
    # Card

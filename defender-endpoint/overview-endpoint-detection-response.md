@@ -34,7 +34,7 @@ When a threat is detected, alerts are created in the system for an analyst to in
 > Defender for Endpoint detection is not intended to be an auditing or logging solution that records every operation or activity that happens on a given endpoint. Our sensor has an internal throttling mechanism, so the high rate of repeat identical events don't flood the logs.
 
 > [!IMPORTANT]
-> [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) and [Microsoft Defender for Business](../defender-business/mdb-overview.md) include only the following manual response actions:
+> [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) and [Microsoft Defender for Business](/defender-business/mdb-overview) include only the following manual response actions:
 > - Run antivirus scan
 > - Isolate device
 > - Stop and quarantine a file

@@ -37,7 +37,7 @@ For more information on what's new with Microsoft Defender for Endpoint on Windo
 
 For more information on what's new with other Microsoft Defender security products, see:
 
-- [What's new in Microsoft Defender XDR](../defender/whats-new.md)
+- [What's new in Microsoft Defender XDR](/defender/whats-new)
 - [What's new in Microsoft Defender for Office 365](../office-365-security/defender-for-office-365-whats-new.md)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
@@ -200,9 +200,9 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md) <BR> Microsoft Defender for Endpoint for Mac brings the next-generation protection to Mac devices. Core components of the unified endpoint security platform will now be available for Mac devices, including [endpoint detection and response](overview-endpoint-detection-response.md).
 
-- [Threat & Vulnerability Management application and application version end-of-life information](../defender-vulnerability-management/tvm-security-recommendation.md) <BR>Applications and application versions which have reached their end of life (EOL) are tagged or labeled as such; so, you are aware that they will no longer be supported, and can take action to either uninstall or replace. Doing so will help lessen the risks related to various vulnerability exposures due to unpatched applications.
+- [Threat & Vulnerability Management application and application version end-of-life information](/defender-vulnerability-management/tvm-security-recommendation) <BR>Applications and application versions which have reached their end of life (EOL) are tagged or labeled as such; so, you are aware that they will no longer be supported, and can take action to either uninstall or replace. Doing so will help lessen the risks related to various vulnerability exposures due to unpatched applications.
 
-- [Threat & Vulnerability Management Advanced Hunting Schemas](../defender/advanced-hunting-schema-tables.md) <BR>Use the Threat & Vulnerability Management tables in the Advanced hunting schema to query about software inventory, vulnerability knowledgebase, security configuration assessment, and security configuration knowledgebase.
+- [Threat & Vulnerability Management Advanced Hunting Schemas](/defender/advanced-hunting-schema-tables) <BR>Use the Threat & Vulnerability Management tables in the Advanced hunting schema to query about software inventory, vulnerability knowledgebase, security configuration assessment, and security configuration knowledgebase.
 
 - [Threat & Vulnerability Management role-based access controls](user-roles.md) <BR>Use the new permissions to allow maximum flexibility to create SecOps-oriented roles, Threat & Vulnerability Management-oriented roles, or hybrid roles so that only authorized users are accessing specific data to do their task. You can also achieve even further granularity by specifying whether a Threat & Vulnerability Management role can only view vulnerability-related data, or can create and manage remediation and exceptions.
 
@@ -261,7 +261,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Controlled folder access](enable-controlled-folders.md)<BR> Controlled folder access is now supported on Windows Server 2019.
 
-- [Custom detection](../defender/custom-detections-overview.md)<BR>With custom detections, you can create custom queries to monitor events for any kind of behavior such as suspicious or emerging threats. This can be done by leveraging the power of advanced hunting through the creation of custom detection rules.
+- [Custom detection](/defender/custom-detections-overview)<BR>With custom detections, you can create custom queries to monitor events for any kind of behavior such as suspicious or emerging threats. This can be done by leveraging the power of advanced hunting through the creation of custom detection rules.
 
 - [Integration with Azure Security Center](configure-server-endpoints.md)<BR> Microsoft Defender for Endpoint integrates with Azure Security Center to provide a comprehensive server protection solution. With this integration, Azure Security Center can leverage the power of Microsoft Defender for Endpoint to provide improved threat detection for Windows Servers.
 
@@ -290,7 +290,7 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 
 ## March 2018
 
-- [Advanced Hunting](../defender/advanced-hunting-query-language.md)<BR>Query data using advanced hunting in Microsoft Defender for Endpoint.
+- [Advanced Hunting](/defender/advanced-hunting-query-language)<BR>Query data using advanced hunting in Microsoft Defender for Endpoint.
 
 - [Attack surface reduction rules](attack-surface-reduction.md)<BR>The newly introduced attack surface reduction rules are:
 

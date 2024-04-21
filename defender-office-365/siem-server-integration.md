@@ -50,7 +50,7 @@ A SIEM server can receive data from a wide variety of Microsoft 365 services and
 |Microsoft 365 Service or Application|SIEM server inputs/methods|Resources to learn more|
 |---|---|---|
 |[Microsoft Defender for Office 365](mdo-about.md)|Audit logs|[SIEM integration with Microsoft Defender for Office 365](siem-integration-with-office-365-ti.md)|
-|[Microsoft Defender for Endpoint](/windows/security/threat-protection/)|HTTPS endpoint hosted in Azure <p> REST API|[Pull alerts to your SIEM tools](../defender-endpoint/configure-siem.md)|
+|[Microsoft Defender for Endpoint](/windows/security/threat-protection/)|HTTPS endpoint hosted in Azure <p> REST API|[Pull alerts to your SIEM tools](/defender-endpoint/configure-siem)|
 |[Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security)|Log integration|[SIEM integration with Microsoft Defender for Cloud Apps](/cloud-app-security/siem)|
 
 > [!TIP]

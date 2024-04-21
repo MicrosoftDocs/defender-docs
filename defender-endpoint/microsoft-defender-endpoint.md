@@ -26,7 +26,7 @@ ms.date: 01/19/2024
 - [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/index.yml)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
@@ -89,11 +89,11 @@ Defender for Endpoint uses the following combination of technology built into Wi
 
 <a name="tvm"></a>
 
-**[Core Defender Vulnerability Management](../defender-vulnerability-management/defender-vulnerability-management.md)**
+**[Core Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)**
 
 Built-in core vulnerability management capabilities use a modern risk-based approach to the discovery, assessment, prioritization, and remediation of endpoint vulnerabilities and misconfigurations. To further enhance your ability to assess your security posture and reduce risk, a new Defender Vulnerability Management add-on for Plan 2 is available.
 
-For more information on the different vulnerability management capabilities available to you, see [Compare Microsoft Defender Vulnerability Management offerings](../defender-vulnerability-management/defender-vulnerability-management-capabilities.md).
+For more information on the different vulnerability management capabilities available to you, see [Compare Microsoft Defender Vulnerability Management offerings](/defender-vulnerability-management/defender-vulnerability-management-capabilities).
 
 <a name="asr"></a>
 

@@ -43,7 +43,7 @@ Select a tenant name to navigate to the device inventory for that tenant in the 
 
 ## Device inventory
 
-The Device inventory page lists all the devices in each tenant that you have access to. The page is like the [Defender for Endpoint device inventory](../defender-endpoint/machines-view-overview.md) with the addition of the **Tenant name** column. Moreover, the device inventory page doesn't have the network, IOT, and uncategorized devices tabs.
+The Device inventory page lists all the devices in each tenant that you have access to. The page is like the [Defender for Endpoint device inventory](/defender-endpoint/machines-view-overview) with the addition of the **Tenant name** column. Moreover, the device inventory page doesn't have the network, IOT, and uncategorized devices tabs.
 
 You can navigate to the device inventory page by selecting **Assets > Devices** in Microsoft Defender XDR's navigation menu.
 

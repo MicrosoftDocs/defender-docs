@@ -36,7 +36,7 @@ In Defender for Endpoint, a mixed-licensing scenario is a situation in which an 
 You can also use a newly added license usage report to track status.
 
 > [!NOTE]
-> If you're using Microsoft Defender for Business and you want to switch to Defender for Endpoint Plan 2, see [Change your endpoint security subscription](../defender-business/mdb-manage-subscription.md).
+> If you're using Microsoft Defender for Business and you want to switch to Defender for Endpoint Plan 2, see [Change your endpoint security subscription](/defender-business/mdb-manage-subscription).
 
 ## [**Use mixed mode**](#tab/mixed)
 
@@ -160,6 +160,6 @@ To reduce management overhead, there's no requirement for device-to-user mapping
 - [How to contact support for Defender for Endpoint](contact-support.md).
 - [Get started with Microsoft Security (trial offers)](https://www.microsoft.com/security/business/get-started/start-free-trial)
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](../defender-business/mdb-overview.md) (endpoint protection for small and medium-sized businesses)
+- [Microsoft Defender for Business](/defender-business/mdb-overview) (endpoint protection for small and medium-sized businesses)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

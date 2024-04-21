@@ -84,7 +84,7 @@ You can use a local script to onboard Windows client devices. When you run the o
 
 ### Group Policy for Windows 10 and 11
 
-If you prefer to use Group Policy to onboard Windows clients, follow the guidance in [Onboard Windows devices using Group Policy](../defender-endpoint/configure-endpoints-gp.md). This article describes the steps for onboarding to Microsoft Defender for Endpoint. The steps for onboarding to Defender for Business are similar.
+If you prefer to use Group Policy to onboard Windows clients, follow the guidance in [Onboard Windows devices using Group Policy](/defender-endpoint/configure-endpoints-gp). This article describes the steps for onboarding to Microsoft Defender for Endpoint. The steps for onboarding to Defender for Business are similar.
 
 ### Intune for Windows 10 and 11
 
@@ -339,19 +339,19 @@ After the command runs, the Command Prompt window will close automatically. If s
 > [!IMPORTANT]
 > Make sure that you meet the following requirements before you onboard a Linux Server endpoint:
 > - You have a Microsoft Defender for Business servers license. (See [How to get Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers).)
-> - You meet the [prerequisites for Microsoft Defender for Endpoint on Linux](../defender-endpoint/microsoft-defender-endpoint-linux.md#prerequisites).
+> - You meet the [prerequisites for Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux#prerequisites).
 
 ### Onboard Linux Server endpoints
 
 You can use the following methods to onboard an instance of Linux Server to Defender for Business:
 
-- **Local script:** See [Deploy Microsoft Defender for Endpoint on Linux manually](../defender-endpoint/linux-install-manually.md).
-- **Ansible:** See [Deploy Microsoft Defender for Endpoint on Linux with Ansible](../defender-endpoint/linux-install-with-ansible.md).
-- **Chef:** See [Deploy Defender for Endpoint on Linux with Chef](../defender-endpoint/linux-deploy-defender-for-endpoint-with-chef.md).
-- **Puppet:** See [Deploy Microsoft Defender for Endpoint on Linux with Puppet](../defender-endpoint/linux-install-with-puppet.md).
+- **Local script:** See [Deploy Microsoft Defender for Endpoint on Linux manually](/defender-endpoint/linux-install-manually).
+- **Ansible:** See [Deploy Microsoft Defender for Endpoint on Linux with Ansible](/defender-endpoint/linux-install-with-ansible).
+- **Chef:** See [Deploy Defender for Endpoint on Linux with Chef](/defender-endpoint/linux-deploy-defender-for-endpoint-with-chef).
+- **Puppet:** See [Deploy Microsoft Defender for Endpoint on Linux with Puppet](/defender-endpoint/linux-install-with-puppet).
 
 > [!NOTE]
-> Onboarding an instance of Linux Server to Defender for Business is the same as onboarding to [Microsoft Defender for Endpoint on Linux](../defender-endpoint/microsoft-defender-endpoint-linux.md).
+> Onboarding an instance of Linux Server to Defender for Business is the same as onboarding to [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
 
 
 ---

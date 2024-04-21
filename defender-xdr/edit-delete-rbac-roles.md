@@ -37,7 +37,7 @@ In Microsoft Defender XDR Unified role-based access control (RBAC), you can edit
 The following steps guide you on how to edit roles in Microsoft Defender XDR Unified RBAC:
 
 > [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](../defender/manage-rbac.md#permissions-pre-requisites).
+> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](/defender/manage-rbac#permissions-pre-requisites).
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as global administrator or security administrator.
 2. In the navigation pane, select **Permissions**.
@@ -79,7 +79,7 @@ The following steps guide you on how to export roles in Microsoft Defender XDR U
 >[!Note]
 >To export roles, you must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have the **Authorization (manage)** permission assigned for all data sources in Microsoft Defender XDR Unified RBAC and have at least one workload activated for Unified RBAC.
 >
->For more information on permissions, see [Permission pre-requisites](../defender/manage-rbac.md#permissions-pre-requisites).
+>For more information on permissions, see [Permission pre-requisites](/defender/manage-rbac#permissions-pre-requisites).
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) with the required roles or permissions.
 2. In the navigation pane, select **Permissions**.

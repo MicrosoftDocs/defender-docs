@@ -105,7 +105,7 @@ This query returns the following fields for each internet-facing device with the
 
 ### Get information on inbound connections
 
-For TCP connections, you can gain further insights into applications or services identified as listening on a device by querying [DeviceNetworkEvents](../defender/advanced-hunting-devicenetworkevents-table.md).
+For TCP connections, you can gain further insights into applications or services identified as listening on a device by querying [DeviceNetworkEvents](/defender/advanced-hunting-devicenetworkevents-table).
 
 Use the following query for devices tagged with the reason **This device received external incoming communication**:
 

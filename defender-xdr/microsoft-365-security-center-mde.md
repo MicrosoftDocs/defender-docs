@@ -167,7 +167,7 @@ View reports, change your settings, and modify user roles.
 
 ### SIEM API connections
 
-If you use the [Defender for Endpoint SIEM API](../defender-endpoint/enable-siem-integration.md), you can continue to do so. We've added new links on the API payload that point to the alert page or the incident page in the Microsoft 365 security portal. New API fields include LinkToMTP and IncidentLinkToMTP. For more information, see [Redirecting accounts from Microsoft Defender for Endpoint to The Microsoft Defender portal](./microsoft-365-security-mde-redirection.md).
+If you use the [Defender for Endpoint SIEM API](/defender-endpoint/enable-siem-integration.md), you can continue to do so. We've added new links on the API payload that point to the alert page or the incident page in the Microsoft 365 security portal. New API fields include LinkToMTP and IncidentLinkToMTP. For more information, see [Redirecting accounts from Microsoft Defender for Endpoint to The Microsoft Defender portal](./microsoft-365-security-mde-redirection).
 
 ### Email alerts
 

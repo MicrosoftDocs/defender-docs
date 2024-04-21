@@ -77,7 +77,7 @@ Microsoft Defender Antivirus is a key component of next-generation protection in
 To view the state of Microsoft Defender Antivirus, you can choose from several options, such as:
 
 - Reports, like the [Device health report](mdb-reports.md#device-health-report); or
-- One of the methods described in [How to confirm the state of Microsoft Defender Antivirus](../defender-endpoint/microsoft-defender-antivirus-compatibility.md#how-to-confirm-the-state-of-microsoft-defender-antivirus).
+- One of the methods described in [How to confirm the state of Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-compatibility#how-to-confirm-the-state-of-microsoft-defender-antivirus).
 
 The following table describes each state and what it means.
 

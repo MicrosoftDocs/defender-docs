@@ -62,7 +62,7 @@ Zero Trust identity and device access settings and policies are recommended in t
 These tiers and their corresponding configurations provide consistent levels of Zero Trust protection across your data, identities, and devices. These capabilities and their recommendations:
 
 - Are supported in Microsoft 365 E3 and Microsoft 365 E5.
-- Are aligned with [Microsoft Secure Score](../defender/microsoft-secure-score.md) and [identity score in Microsoft Entra ID](/entra/identity/monitoring-health/concept-identity-secure-score). Following the recommendations will increase these scores for your organization.
+- Are aligned with [Microsoft Secure Score](/defender/microsoft-secure-score) and [identity score in Microsoft Entra ID](/entra/identity/monitoring-health/concept-identity-secure-score). Following the recommendations will increase these scores for your organization.
 - Help you to implement these [five steps to securing your identity infrastructure](/azure/security/fundamentals/steps-secure-identity).
 
 If your organization has unique requirements or complexities, use these recommendations as a starting point. However, most organizations can implement these recommendations as prescribed.

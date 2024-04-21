@@ -46,7 +46,7 @@ Use the [Microsoft Defender portal](https://security.microsoft.com/) to submit s
 
 ### Submit a file or file hash
 
-Use the unified submissions feature in Microsoft Defender for Endpoint to submit files and file hashes to Microsoft for review. For more information, see [Submit files in Microsoft Defender for Endpoint](../defender-endpoint/admin-submissions-mde.md).
+Use the unified submissions feature in Microsoft Defender for Endpoint to submit files and file hashes to Microsoft for review. For more information, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
 ## Can I send a sample by email?
 
@@ -98,4 +98,4 @@ Your submission is immediately scanned by our systems to give you the latest det
 
 ## See also
 
-[Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](../defender-endpoint/defender-endpoint-antivirus-exclusions.md)
+[Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](/defender-endpoint/defender-endpoint-antivirus-exclusions)

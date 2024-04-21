@@ -61,7 +61,7 @@ The following table lists the basic requirements for Defender for Endpoint Plan 
 > 
 > - Microsoft Defender for Servers Plan 1 or Plan 2 (as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)) offering.
 > - Microsoft Defender for Endpoint for Servers
-> - [Microsoft Defender for Business servers](../defender-business/get-defender-business.md#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses)
+> - [Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers) (for small and medium-sized businesses)
 > 
 > To learn more. see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md)
 

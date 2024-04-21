@@ -26,7 +26,7 @@ ms.date: 06/04/2021
 
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender Vulnerability Management](../../defender-vulnerability-management/index.yml)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
@@ -82,7 +82,7 @@ deviceName|String|Fully qualified domain name (FQDN) of the device.
 isApplicable|Bool|Indicates whether the configuration or policy is applicable.
 isCompliant|Bool|Indicates whether the configuration or policy is properly configured.
 isExpectedUserImpact|Bool|Indicates whether the user gets affected if the configuration will be applied.
-osPlatform|String|Platform of the operating system running on the device. Specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [Supported operating systems, platforms and capabilities](../../defender-vulnerability-management/tvm-supported-os.md) for details.
+osPlatform|String|Platform of the operating system running on the device. Specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [Supported operating systems, platforms and capabilities](/defender-vulnerability-management/tvm-supported-os) for details.
 osVersion|String|Specific version of the operating system running on the device.
 rbacGroupName|String|The role-based access control (RBAC) group. If the device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."
 rbacGroupId|String|The role-based access control (RBAC) group ID.
@@ -117,7 +117,7 @@ DiskPaths|Array[string]|Disk evidence that the product is installed on the devic
 EndOfSupportDate|String|The date in which support for this software has or will end.
 EndOfSupportStatus|String|End of support status. Can contain these possible values: None, EOS Version, Upcoming EOS Version, EOS Software, Upcoming EOS Software.
 NumberOfWeaknesses|Int|Number of weaknesses on this software on this device.
-OSPlatform|String|Platform of the operating system running on the device; specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [Supported operating systems, platforms and capabilities](../../defender-vulnerability-management/tvm-supported-os.md) for details.
+OSPlatform|String|Platform of the operating system running on the device; specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [Supported operating systems, platforms and capabilities](/defender-vulnerability-management/tvm-supported-os) for details.
 RbacGroupName|String|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."
 rbacGroupId|String|The role-based access control (RBAC) group ID.
 RegistryPaths|Array[string]|Registry evidence that the product is installed in the device.
@@ -158,7 +158,7 @@ ExploitabilityLevel|String|The exploitability level of this vulnerability (NoExp
 FirstSeenTimestamp|String|First time the CVE of this product was seen on the device.
 Id|String|Unique identifier for the record.
 LastSeenTimestamp|String|Last time the CVE was seen on the device.
-OSPlatform|String|Platform of the operating system running on the device; specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [Supported operating systems, platforms and capabilities](../../defender-vulnerability-management/tvm-supported-os.md) for details.
+OSPlatform|String|Platform of the operating system running on the device; specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [Supported operating systems, platforms and capabilities](/defender-vulnerability-management/tvm-supported-os) for details.
 RbacGroupName|String|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."
 rbacGroupId|String|The role-based access control (RBAC) group ID.
 RecommendationReference|String|A reference to the recommendation ID related to this software.
@@ -192,7 +192,7 @@ ExploitabilityLevel|String|The exploitability level of the vulnerability (NoExpl
 FirstSeenTimestamp|String|First time the CVE of the product was seen on the device.
 Id|String|Unique identifier for the record.  
 LastSeenTimestamp|String|Last time the CVE was seen on the device.
-OSPlatform|String|Platform of the operating system running on the device; specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [Supported operating systems, platforms and capabilities](../../defender-vulnerability-management/tvm-supported-os.md) for details.
+OSPlatform|String|Platform of the operating system running on the device; specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [Supported operating systems, platforms and capabilities](/defender-vulnerability-management/tvm-supported-os) for details.
 RbacGroupName|String|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."
 RecommendationReference|String|A reference to the recommendation ID related to this software.
 RecommendedSecurityUpdate |String|Name or description of the security update provided by the software vendor to address the vulnerability.
@@ -221,7 +221,7 @@ Property (ID)|Data type|Description
 :---|:---|:---
 DeviceId|string|Unique identifier for the device in the service.
 DeviceName|string|Fully qualified domain name (FQDN) of the device.
-OSPlatform|string|Platform of the operating system running on the device. These are specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [Supported operating systems, platforms and capabilities](../../defender-vulnerability-management/tvm-supported-os.md) for details.
+OSPlatform|string|Platform of the operating system running on the device. These are specific operating systems with variations within the same family, such as Windows 10 and Windows 11. See [Supported operating systems, platforms and capabilities](/defender-vulnerability-management/tvm-supported-os) for details.
 RbacGroupName|string|The role-based access control (RBAC) group. If this device isn't assigned to any RBAC group, the value will be "Unassigned." If the organization doesn't contain any RBAC groups, the value will be "None."
 RbacGroupId|string|The role-based access control (RBAC) group ID.
 SoftwareLastSeenTimestamp|string|The last time this software was seen on the device.

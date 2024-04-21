@@ -26,7 +26,7 @@
      - name: Mail flow in EOP
        href: mail-flow-about.md
      - name: Microsoft Defender portal overview
-       href: ../defender/microsoft-365-defender-portal.md
+       href: /defender/microsoft-365-defender-portal
 
    - name: Evaluate
      items:
@@ -482,17 +482,17 @@
    - name: Microsoft Defender XDR docs
      items:
        - name: Microsoft Defender XDR
-         href: ../defender/index.yml
+         href: /defender
        - name: Defender for Endpoint
-         href: ../defender-endpoint/index.yml
+         href: /defender-endpoint
        - name: Defender for Identity
          href: /defender-for-identity
        - name: Defender for Cloud Apps
          href: /cloud-app-security
        - name: Defender for Business
-         href: ../defender-business/index.yml
+         href: /defender-business
        - name: Defender Vulnerability Management
-         href: ../defender-vulnerability-management/index.yml
+         href: /defender-vulnerability-management
 
    - name: Step-by-step guides
      items:

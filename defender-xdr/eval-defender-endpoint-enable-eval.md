@@ -28,7 +28,7 @@ This article will guide you through the steps on setting up the evaluation envir
 
 
 > [!TIP]
-> Microsoft Defender for Endpoint also comes with an in-product evaluation lab where you can add pre-configured devices and run simulations to evaluate the capabilities of the platform. The lab comes with a simplified set-up experience that can help quickly demonstrate the value of Microsoft Defender for Endpoint including guidance for many features like advanced hunting and threat analytics. For more information, see [Evaluate capabilities](../defender-endpoint/evaluation-lab.md). <br> The main difference between the guidance provided in this article and the evaluation lab is the evaluation environment uses production devices whereas the evaluation lab uses non-production devices. 
+> Microsoft Defender for Endpoint also comes with an in-product evaluation lab where you can add pre-configured devices and run simulations to evaluate the capabilities of the platform. The lab comes with a simplified set-up experience that can help quickly demonstrate the value of Microsoft Defender for Endpoint including guidance for many features like advanced hunting and threat analytics. For more information, see [Evaluate capabilities](/defender-endpoint/evaluation-lab). <br> The main difference between the guidance provided in this article and the evaluation lab is the evaluation environment uses production devices whereas the evaluation lab uses non-production devices. 
 
 Use the following steps to enable the evaluation for Microsoft Defender for Endpoint.
 
@@ -62,7 +62,7 @@ For the purpose of evaluating Microsoft Defender for Endpoint, we recommend choo
 
 You can choose to use any of the supported management tools, but Intune provides optimal integration. For more information, see [Configure Microsoft Defender for Endpoint in Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure#enable-microsoft-defender-for-endpoint-in-intune).
 
-The [Plan deployment](../defender-endpoint/deployment-strategy.md) topic outlines the general steps you need to take to deploy Defender for Endpoint.  
+The [Plan deployment](/defender-endpoint/deployment-strategy) topic outlines the general steps you need to take to deploy Defender for Endpoint.  
 
 Watch this video for a quick overview of the onboarding process and learn about the available tools and methods.
 
@@ -74,10 +74,10 @@ The following table lists the available tools based on the endpoint that you nee
 
 | Endpoint | Tool options |
 |:---|:---|
-| **Windows** |- [Local script (up to 10 devices)](../defender-endpoint/configure-endpoints-script.md)<br/>- [Group Policy](../defender-endpoint/configure-endpoints-gp.md)<br/>- [Microsoft Intune / Mobile Device Manager](../defender-endpoint/configure-endpoints-mdm.md)<br/>- [Microsoft Endpoint Configuration Manager](../defender-endpoint/configure-endpoints-sccm.md)<br/>- [VDI scripts](../defender-endpoint/configure-endpoints-vdi.md) |
-| **macOS** | - [Local scripts](../defender-endpoint/mac-install-manually.md)<br/>- [Microsoft Intune](../defender-endpoint/mac-install-with-intune.md)<br/>- [JAMF Pro](../defender-endpoint/mac-install-with-jamf.md)<br/>- [Mobile Device Management](../defender-endpoint/mac-install-with-other-mdm.md) |
-| **iOS** | [App-based](../defender-endpoint/ios-install.md) |
-| **Android** | [Microsoft Intune](../defender-endpoint/android-intune.md) |
+| **Windows** |- [Local script (up to 10 devices)](/defender-endpoint/configure-endpoints-script.md)<br/>- [Group Policy](../defender-endpoint/configure-endpoints-gp.md)<br/>- [Microsoft Intune / Mobile Device Manager](../defender-endpoint/configure-endpoints-mdm.md)<br/>- [Microsoft Endpoint Configuration Manager](../defender-endpoint/configure-endpoints-sccm.md)<br/>- [VDI scripts](../defender-endpoint/configure-endpoints-vdi) |
+| **macOS** | - [Local scripts](/defender-endpoint/mac-install-manually.md)<br/>- [Microsoft Intune](../defender-endpoint/mac-install-with-intune.md)<br/>- [JAMF Pro](../defender-endpoint/mac-install-with-jamf.md)<br/>- [Mobile Device Management](../defender-endpoint/mac-install-with-other-mdm) |
+| **iOS** | [App-based](/defender-endpoint/ios-install) |
+| **Android** | [Microsoft Intune](/defender-endpoint/android-intune) |
 
 
 

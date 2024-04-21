@@ -41,7 +41,7 @@ You can manage incidents & alerts originating from multiple tenants under **Inci
 - Select **Open incident page** to view this incident in a new tab for the specific tenant in the [Microsoft Defender portal](https://security.microsoft.com).
 - Select **Manage incident** to assign the incident, set incident tags, set the incident status, and classify the incident.
 
-To learn more, see [Investigate incidents](../defender-endpoint/investigate-incidents.md).
+To learn more, see [Investigate incidents](/defender-endpoint/investigate-incidents).
 
 ## Manage multiple incidents
 
@@ -57,7 +57,7 @@ On the incidents fly-out you can assign incidents, assign incidents tags, set th
 >[!Note]
 > Currently, you can only assign multiple incidents from same tenant.
 
-To learn more about incidents in the Microsoft Defender portal, see [Manage incidents](../defender-endpoint/manage-incidents.md).
+To learn more about incidents in the Microsoft Defender portal, see [Manage incidents](/defender-endpoint/manage-incidents).
 
 ## View and investigate alerts
 
@@ -70,7 +70,7 @@ To learn more about incidents in the Microsoft Defender portal, see [Manage inci
 - Select actions such as **Open alerts page**, **See in timeline**, and **Tune alert** to view this alert in a new tab for the specific tenant in the [Microsoft Defender portal](https://security.microsoft.com).
 - Select **Manage alert** to assign the alert, set the alert status, and classify the alert.
 
-To learn more, see [Investigate alerts](../defender-endpoint/investigate-alerts.md).
+To learn more, see [Investigate alerts](/defender-endpoint/investigate-alerts).
 
 ## Manage multiple alerts
 
@@ -85,4 +85,4 @@ On the alert fly-out you can assign alerts, set the alert status, and classify t
 
 > [!Note]
 > Currently, you can only assign multiple alerts from same tenant.
-To learn more about alerts in the Microsoft Defender portal, see [Manage alerts](../defender-endpoint/manage-alerts.md).
+To learn more about alerts in the Microsoft Defender portal, see [Manage alerts](/defender-endpoint/manage-alerts).

@@ -26,12 +26,12 @@ ms.date: 12/14/2022
 
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender Vulnerability Management](../../defender-vulnerability-management/index.yml)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](../../defender-vulnerability-management/get-defender-vulnerability-management.md).
+> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 [!Include[Prerelease information](../../includes/prerelease.md)]
 
@@ -50,7 +50,7 @@ Method|Description
 [Get scan history by definition](get-scan-history-by-definition.md)|List scan definition history.
 [Get scan history by session](get-scan-history-by-session.md)|List scan history for a session.
 
-Learn more about [Windows authenticated scan](../../defender-vulnerability-management/windows-authenticated-scan.md) and [Network authenticated scans](../network-devices.md).
+Learn more about [Windows authenticated scan](/defender-vulnerability-management/windows-authenticated-scan.md) and [Network authenticated scans](../network-devices).
 
 ## Properties
 
