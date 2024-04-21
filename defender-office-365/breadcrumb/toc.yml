@@ -1,0 +1,7 @@
+- name: 'Microsoft Defender'
+  tocHref: /defender/
+  topicHref: /defender/index
+  items:
+   - name: 'Microsoft Defender for Office 365'
+     tocHref: /defender-office-365/
+     topicHref: /defender-office-365/index
