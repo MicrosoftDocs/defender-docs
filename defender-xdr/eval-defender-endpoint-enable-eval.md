@@ -74,8 +74,8 @@ The following table lists the available tools based on the endpoint that you nee
 
 | Endpoint | Tool options |
 |:---|:---|
-| **Windows** |- [Local script (up to 10 devices)](/defender-endpoint/configure-endpoints-script.md)<br/>- [Group Policy](../defender-endpoint/configure-endpoints-gp.md)<br/>- [Microsoft Intune / Mobile Device Manager](../defender-endpoint/configure-endpoints-mdm.md)<br/>- [Microsoft Endpoint Configuration Manager](../defender-endpoint/configure-endpoints-sccm.md)<br/>- [VDI scripts](../defender-endpoint/configure-endpoints-vdi) |
-| **macOS** | - [Local scripts](/defender-endpoint/mac-install-manually.md)<br/>- [Microsoft Intune](../defender-endpoint/mac-install-with-intune.md)<br/>- [JAMF Pro](../defender-endpoint/mac-install-with-jamf.md)<br/>- [Mobile Device Management](../defender-endpoint/mac-install-with-other-mdm) |
+| **Windows** |- [Local script (up to 10 devices)](/defender-endpoint/configure-endpoints-script.md)<br/>- [Group Policy](/defender-endpoint/configure-endpoints-gp.md)<br/>- [Microsoft Intune / Mobile Device Manager](/defender-endpoint/configure-endpoints-mdm)<br/>- [Microsoft Endpoint Configuration Manager](../defender-endpoint/configure-endpoints-sccm)<br/>- [VDI scripts](../defender-endpoint/configure-endpoints-vdi) |
+| **macOS** | - [Local scripts](/defender-endpoint/mac-install-manually.md)<br/>- [Microsoft Intune](/defender-endpoint/mac-install-with-intune.md)<br/>- [JAMF Pro](../defender-endpoint/mac-install-with-jamf)<br/>- [Mobile Device Management](../defender-endpoint/mac-install-with-other-mdm) |
 | **iOS** | [App-based](/defender-endpoint/ios-install) |
 | **Android** | [Microsoft Intune](/defender-endpoint/android-intune) |
 
