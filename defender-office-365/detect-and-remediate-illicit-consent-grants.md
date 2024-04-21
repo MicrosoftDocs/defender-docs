@@ -109,7 +109,7 @@ The simplest way to verify the Illicit Consent Grant attack is to run [Get-Azure
 > [!IMPORTANT]
 > We ***highly recommend*** that you require multi-factor authentication on your admin account. This script supports MFA authentication.
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../microsoft-365/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../includes/aad-powershell-deprecation-note.md)]
 
 1. Sign in to the computer where you want to run the scripts with local administrator rights.
 

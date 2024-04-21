@@ -20,7 +20,7 @@ ms.date: 12/15/2023
 
 # Manual deployment for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -45,7 +45,7 @@ Before you get started, see [the main Microsoft Defender for Endpoint on macOS p
 
 Download the installation and onboarding packages from Microsoft Defender portal.
 
-[!INCLUDE [Defender for Endpoint repackaging warning](../../includes/repackaging-warning.md)]
+[!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
 1. In <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, go to **Settings > Endpoints > Device management > Onboarding**.
 2. In Section 1 of the page, set operating system to **macOS** and Deployment method to **Local script**.

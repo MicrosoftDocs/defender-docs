@@ -32,7 +32,7 @@ The Microsoft Defender portal at <https://security.microsoft.com> combines prote
 - **[Microsoft Defender for Cloud Apps](/cloud-app-security/)** is a comprehensive cross-SaaS and PaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps.
 - **[Microsoft Sentinel](/azure/sentinel/)** is a cloud-native security information and event management (SIEM) solution that provides proactive threat detection, investigation, and response.
 
-[!INCLUDE [unified-soc-preview](../../includes/unified-soc-preview.md)]
+[!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
 Watch this short video to learn about the Defender portal.
 
@@ -197,4 +197,4 @@ With this learning path from Microsoft Learn, you can understand Microsoft Defen
 - [Microsoft Defender for Cloud in the Microsoft Defender portal](microsoft-365-security-center-defender-cloud.md)
 - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

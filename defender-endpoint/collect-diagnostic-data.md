@@ -20,7 +20,7 @@ search.appverid: met150
 
 # Collect Microsoft Defender Antivirus diagnostic data
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -149,4 +149,4 @@ You can also specify where the diagnostic `.cab` file is created using a Group P
 - [Troubleshoot Microsoft Defender Antivirus reporting](troubleshoot-reporting.md)
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

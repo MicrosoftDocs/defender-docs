@@ -29,7 +29,7 @@ Advanced hunting in the unified portal allows you to view and query all data fro
 
 Querying from a single portal across different data sets makes hunting more efficient and removes the need for context-switching.
 
-[!INCLUDE [unified-soc-preview](../../includes/unified-soc-preview.md)]
+[!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
 ## How to access
 

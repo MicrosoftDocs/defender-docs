@@ -62,4 +62,4 @@ Track how many incidents and alerts were resolved in the past month using the in
 
 
  
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

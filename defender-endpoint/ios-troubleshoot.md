@@ -19,7 +19,7 @@ ms.date: 05/15/2021
 
 # Troubleshoot issues and find answers to FAQs on Microsoft Defender for Endpoint on iOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -134,4 +134,4 @@ If a user faces an issue which isn't already addressed in the above sections or 
 - Choose from the given options. To report an issue, select **I don't like something**.
 - Provide details of the issue that you're facing and check **Send diagnostic data**. We recommend that you include your email address so that the team can contact you for a solution or a follow-up.
 - Tap **Submit** to successfully send the feedback.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

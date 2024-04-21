@@ -105,4 +105,4 @@ This means that, for instance, if on a specific day you ran two queries, one use
 - [Advanced hunting best practices](advanced-hunting-best-practices.md)
 - [Handle advanced hunting errors](advanced-hunting-errors.md)
 - [Advanced hunting overview](advanced-hunting-overview.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

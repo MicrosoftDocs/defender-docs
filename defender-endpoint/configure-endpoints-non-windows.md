@@ -18,7 +18,7 @@ ms.date: 01/18/2024
 
 # Onboard non-Windows devices
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -43,7 +43,7 @@ You'll need to know the exact Linux distros and macOS versions that are compatib
 
 You can choose to onboard non-Windows devices through Microsoft Defender for Endpoint or through a third-party solution.
 
-[!INCLUDE [Defender for Endpoint repackaging warning](../../includes/repackaging-warning.md)]
+[!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
 You'll need to take the following steps:
 
@@ -72,5 +72,5 @@ You can also offboard non-Windows devices by disabling the third-party integrati
 - [Onboard servers](configure-server-endpoints.md)
 - [Configure proxy and Internet connectivity settings](configure-proxy-internet.md)
 - [Troubleshooting Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

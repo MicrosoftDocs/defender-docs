@@ -20,7 +20,7 @@ ms.date: 12/18/2020
 
 # Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -192,4 +192,4 @@ Now try restarting the mdatp service using step 2. Revert the configuration chan
     ```
 
     Path to a zip file that contains the logs are displayed as an output. Reach out to our customer support with these logs.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

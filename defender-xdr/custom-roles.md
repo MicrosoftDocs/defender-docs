@@ -103,4 +103,4 @@ Similarly, to view hunting data from Microsoft Defender for Office 365, users wo
 - [RBAC roles](../office-365-security/migrate-to-defender-for-office-365-onboard.md#rbac-roles)
 - [Manage access to Microsoft Defender XDR](m365d-permissions.md)
 - [Manage admin access for Defender for Cloud Apps](/cloud-app-security/manage-admins)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

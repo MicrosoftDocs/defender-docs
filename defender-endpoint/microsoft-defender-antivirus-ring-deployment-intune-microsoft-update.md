@@ -20,7 +20,7 @@ ms.date: 07/21/2023
 
 # Microsoft Defender Antivirus ring deployment using Intune and direct internet access for Microsoft Update
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 

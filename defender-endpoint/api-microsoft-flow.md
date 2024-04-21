@@ -18,7 +18,7 @@ ms.date: 12/18/2020
 
 # How to use Power Automate Connector to set up a Flow for events
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -86,4 +86,4 @@ You can also create a **scheduled** flow that runs Advanced Hunting queries and 
 
 ## Related topic
 - [Microsoft Defender for Endpoint APIs](apis-intro.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

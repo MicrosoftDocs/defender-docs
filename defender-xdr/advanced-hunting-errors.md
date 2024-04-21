@@ -46,4 +46,4 @@ Advanced hunting displays errors to notify for syntax mistakes and whenever quer
 - [Quotas and usage parameters](advanced-hunting-limits.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Kusto Query Language overview](/azure/data-explorer/kusto/query/)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

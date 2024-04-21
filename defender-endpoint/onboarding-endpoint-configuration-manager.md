@@ -22,7 +22,7 @@ ms.date: 12/18/2020
 
 # Onboarding using Microsoft Configuration Manager
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -367,4 +367,4 @@ You have now successfully configured Controlled folder access in test mode.
 ## Related article
 
 - [Onboarding using Microsoft Configuration Manager](onboarding-endpoint-manager.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

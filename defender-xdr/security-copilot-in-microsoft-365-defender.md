@@ -140,4 +140,4 @@ Copilot uses [preinstalled Microsoft plugins](/security-copilot/manage-plugins#p
 - [Responsible AI FAQs](/security-copilot/responsible-ai-overview-security-copilot)
 - Other [Copilot for Security embedded experiences](/security-copilot/experiences-security-copilot)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

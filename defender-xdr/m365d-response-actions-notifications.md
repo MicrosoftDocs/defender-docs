@@ -80,4 +80,4 @@ Once you get the notification, you can go directly to the action and review or r
 - [Configure automatic attack disruption capabilities](configure-attack-disruption.md)
 - [Configure automated investigation and response](m365d-configure-auto-investigation-response.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

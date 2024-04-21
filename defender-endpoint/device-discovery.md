@@ -22,7 +22,7 @@ ms.date: 04/03/2024
 
 # Device discovery overview
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -156,4 +156,4 @@ DeviceNetworkEvents
 - [Configure device discovery](configure-device-discovery.md)
 - [Device discovery FAQs](device-discovery-faq.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -21,7 +21,7 @@ ms.date: 02/21/2024
 
 # Use basic permissions to access the portal
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - Microsoft Entra ID
@@ -100,4 +100,4 @@ For more information, see [Assign administrator and non-administrator roles to u
 ## Related topic
 
 - [Manage portal access using RBAC](rbac.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -115,4 +115,4 @@ For more information, see [view attack disruption details and results](autoad-re
 - [Get email notifications for response actions](m365d-response-actions-notifications.md)
 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

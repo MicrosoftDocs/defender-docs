@@ -107,4 +107,4 @@ Here are some recommendations to consider to ensure that Copilot generates a com
 - [Learn about other Copilot for Security embedded experiences](/security-copilot/experiences-security-copilot)
 - Know more about [preinstalled plugins in Copilot for Security](/security-copilot/manage-plugins#preinstalled-plugins)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

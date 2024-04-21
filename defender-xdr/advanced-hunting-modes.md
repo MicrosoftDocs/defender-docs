@@ -84,4 +84,4 @@ We recommend going through these steps to quickly get started with advanced hunt
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Build hunting queries using guided mode](advanced-hunting-query-builder.md)
 - [Learn the query language](advanced-hunting-query-language.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

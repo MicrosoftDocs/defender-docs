@@ -19,7 +19,7 @@ search.appverid: met150
 
 # Microsoft Defender for Endpoint Antivirus and Intune integration
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 

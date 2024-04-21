@@ -286,4 +286,4 @@ Set up a network file share (UNC/mapped drive) to download security intelligence
 
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

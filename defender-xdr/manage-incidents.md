@@ -192,4 +192,4 @@ For resolved incidents, perform a [post-incident review](first-incident-post.md)
 - [Prioritize incidents](incident-queue.md)
 - [Investigate incidents](investigate-incidents.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

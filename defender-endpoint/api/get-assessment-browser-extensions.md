@@ -20,7 +20,7 @@ ms.date: 06/01/2022
 
 # Export browser extensions assessment per device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -234,4 +234,4 @@ GET https://api.securitycenter.microsoft.com/api/machines/browserextensionsinven
 
 - [Vulnerability management](../../defender-vulnerability-management/defender-vulnerability-management.md)
 - [Vulnerabilities in your organization](../../defender-vulnerability-management/tvm-weaknesses.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

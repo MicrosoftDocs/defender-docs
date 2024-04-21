@@ -94,4 +94,4 @@ The **View similar emails** action, which is specific to phishing incidents, tak
 - [Learn about other Copilot for Security embedded experiences](/security-copilot/experiences-security-copilot)
 - Know more about [preinstalled plugins in Copilot for Security](/security-copilot/manage-plugins#preinstalled-plugins)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

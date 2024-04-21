@@ -24,7 +24,7 @@ ms.date: 04/18/2024
 
 # Start using Microsoft Defender Experts for Hunting
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -101,4 +101,4 @@ A sample Defender Experts Notification shows up in your **Incidents** page with 
 ### Next step
 
 - [Access Defender Experts Notifications using Microsoft Graph security API](access-den-graph-api.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

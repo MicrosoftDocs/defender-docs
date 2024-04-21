@@ -20,7 +20,7 @@ ms.date: 01/02/2024
 
 # Microsoft Defender for Endpoint on Mac
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
@@ -166,4 +166,4 @@ Starting with macOS 11 (Big Sur), Microsoft Defender for Endpoint has been fully
 - [Privacy for Microsoft Defender for Endpoint on Mac](mac-privacy.md).
 - [Turn on Network protection for macOS](network-protection-macos.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

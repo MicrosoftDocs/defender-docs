@@ -95,4 +95,4 @@ The alert details contain:
 
 - [Configure the deception capability in Microsoft Defender XDR](configure-deception.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

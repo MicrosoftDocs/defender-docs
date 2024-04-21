@@ -51,7 +51,7 @@ When you investigate a specific user entity, you see the following tabs on its e
 
 The user page shows the Microsoft Entra organization as well as groups, helping you understand the groups and permissions associated with a user.
 
-[!INCLUDE [unified-soc-preview](../../includes/unified-soc-preview.md)]
+[!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 ## Overview
 
 ### Entity details
@@ -268,4 +268,4 @@ As needed for in-process incidents, continue your [investigation](investigate-in
 - [Connect Microsoft Sentinel to Microsoft Defender XDR (preview)](microsoft-sentinel-onboard.md)
 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

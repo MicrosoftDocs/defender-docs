@@ -20,7 +20,7 @@ ms.date: 12/18/2020
 
 # Evaluate controlled folder access
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -79,4 +79,4 @@ See [Protect important folders with controlled folder access](controlled-folders
 - [Evaluate Microsoft Defender for Endpoint](evaluate-mde.md)
 - [Use audit mode](audit-windows-defender.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

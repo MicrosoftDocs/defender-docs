@@ -67,4 +67,4 @@ Automated investigation and remediation (AIR) capabilities in Microsoft Defender
 
 - [Configure automated investigation and remediation capabilities in Defender for Endpoint](configure-automated-investigations-remediation.md)
 - [Visit the Action Center](/microsoft-365/security/defender-endpoint/auto-investigation-action-center#the-action-center)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

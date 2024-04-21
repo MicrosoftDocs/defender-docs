@@ -147,4 +147,4 @@ After configuring a connector, the updates by Defender Experts to an incident's 
 - [Understanding managed response](faq-managed-response.md)
 - [Get real-time visibility with Defender Experts for XDR reports](reports-xdr.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

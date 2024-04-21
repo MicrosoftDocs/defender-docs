@@ -140,4 +140,4 @@ After executing the Preparation phase, organizations should invoke the remaining
 ## Next step
 
 [Step 6. Identify SOC maintenance tasks](integrate-microsoft-365-defender-secops-tasks.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -66,4 +66,4 @@ Use these steps to integrate Microsoft Defender XDR into your SOC.
 
 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

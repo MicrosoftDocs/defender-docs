@@ -21,7 +21,7 @@ ms.date: 12/18/2020
 
 # Overview of management and APIs
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -91,4 +91,4 @@ When you enable security information and event management (SIEM) integration, it
 - [Access the Microsoft Defender for Endpoint APIs](apis-intro.md)
 - [Supported APIs](exposed-apis-list.md)
 - [Technical partner opportunities](../partner-integration.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

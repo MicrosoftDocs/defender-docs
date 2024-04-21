@@ -19,7 +19,7 @@ ms.date: 03/28/2024
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -601,5 +601,5 @@ Learn about adding Microsoft Defender for Endpoint to macOS devices using Micros
 <br>Configure Microsoft Defender for Endpoint web protection on Android devices managed by Microsoft Intune.
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

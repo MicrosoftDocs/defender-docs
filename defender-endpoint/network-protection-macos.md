@@ -21,7 +21,7 @@ search.appverid: met150
 
 # Network protection for macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -371,4 +371,4 @@ No End-user notification on third party browsers? Check your toast message setti
 - [Web content filtering](web-content-filtering.md)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

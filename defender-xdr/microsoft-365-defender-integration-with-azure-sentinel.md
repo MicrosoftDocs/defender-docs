@@ -52,4 +52,4 @@ Here's how it works.
 
 - [Overview of incidents in Microsoft Defender XDR](incidents-overview.md)
 - [Investigate incidents with Microsoft Sentinel](/azure/sentinel/tutorial-investigate-cases)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

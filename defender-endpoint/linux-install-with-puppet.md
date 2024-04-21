@@ -20,7 +20,7 @@ ms.date: 12/18/2020
 
 # Deploy Microsoft Defender for Endpoint on Linux with Puppet
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -38,7 +38,7 @@ This article describes how to deploy Defender for Endpoint on Linux using Puppet
 - [Deployment](#deployment)
 - [Check onboarding status](#check-onboarding-status)
 
-[!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../../includes/support.md)]
+[!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 
 
 ## Prerequisites and system requirements
@@ -51,7 +51,7 @@ In addition, for Puppet deployment, you need to be familiar with Puppet administ
 
 Download the onboarding package from Microsoft Defender portal.
 
-[!INCLUDE [Defender for Endpoint repackaging warning](../../includes/repackaging-warning.md)]
+[!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
 1. In Microsoft Defender portal, go to **Settings > Endpoints > Device management > Onboarding**.
 2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Your preferred Linux configuration management tool** as the deployment method.
@@ -264,4 +264,4 @@ class remove_mdatp {
     }
 }
 ```
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

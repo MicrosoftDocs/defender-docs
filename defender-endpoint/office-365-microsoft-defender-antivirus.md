@@ -22,7 +22,7 @@ ms.date: 10/10/2023
 
 # Better together: Microsoft Defender Antivirus and Office 365
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -101,4 +101,4 @@ Protection from ransomware is one great reason to put your files in OneDrive. An
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

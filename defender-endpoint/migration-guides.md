@@ -53,4 +53,4 @@ Let us know what you think! Submit your feedback at the bottom of the page. We'l
 - [Microsoft 365 Business Premium](../../business-premium/m365bp-overview.md)
 - [Microsoft Defender for Business](../defender-business/mdb-overview.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

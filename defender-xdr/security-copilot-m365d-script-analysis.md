@@ -75,4 +75,4 @@ To begin analysis, perform the following steps:
 - [Get started with Microsoft Copilot for Security](/security-copilot/get-started-security-copilot)
 - [Learn about other Copilot for Security embedded experiences](/security-copilot/experiences-security-copilot)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

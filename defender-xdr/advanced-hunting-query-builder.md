@@ -176,4 +176,4 @@ Then, add another condition, this time specifying the folder or **DeliveryLocati
 - [Refine your query in guided mode](advanced-hunting-query-builder-details.md)
 - [Work with query results in guided mode](advanced-hunting-query-builder-results.md)
  - [Understand the schema](advanced-hunting-schema-tables.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -41,7 +41,7 @@ This article provides information about Microsoft Defender for Endpoint attack s
 - [ASR rule modes](#asr-rule-modes)
 - [Per-rule-descriptions](#per-rule-descriptions)
 
-[!Include[Prerelease information](../../includes/prerelease.md)]
+[!Include[Prerelease information](../includes/prerelease.md)]
 
 ## Attack surface reduction rules by type
 
@@ -680,4 +680,4 @@ Dependencies: Microsoft Defender Antivirus, Cloud Protection
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

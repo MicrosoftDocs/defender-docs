@@ -19,7 +19,7 @@ ms.date: 02/29/2024
 
 # Configure and validate exclusions for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -167,4 +167,4 @@ For example, to add `EICAR-Test-File (not a virus)` (the threat name associated 
 mdatp threat allowed add --name "EICAR-Test-File (not a virus)"
 ```
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

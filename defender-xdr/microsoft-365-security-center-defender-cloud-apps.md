@@ -189,4 +189,4 @@ Learn how to protect your cloud apps in Microsoft Defender XDR:
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 - [Contact support](/defender-cloud-apps/support-and-ts)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

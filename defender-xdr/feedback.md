@@ -42,4 +42,4 @@ Check out this video to see how to provide feedback.
 
 3. Select **Submit**.
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

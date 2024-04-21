@@ -162,4 +162,4 @@ To provide more context about how investigation states show up, the following ta
 
 - [View and manage remediation actions](m365d-autoir-actions.md)
 - [Learn more about remediation actions](m365d-remediation-actions.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -67,4 +67,4 @@ Return to the overview for [Evaluate Microsoft Defender for Office 365.](eval-de
 
 Return to the overview for [Evaluate and pilot Microsoft Defender XDR](eval-overview.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding.](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding.](../includes/defender-m3d-techcommunity.md)]

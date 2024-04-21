@@ -22,7 +22,7 @@ ms.date: 04/09/2024
 > [!IMPORTANT]
 > **The Microsoft Defender for Endpoint evaluation lab was deprecated in January, 2024**.
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
@@ -68,4 +68,4 @@ Read the walkthrough document provided with each attack scenario. Each document 
 
 - [Onboard devices](onboard-configure.md)
 - [Onboard Windows devices](configure-endpoints.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

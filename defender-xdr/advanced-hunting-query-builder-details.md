@@ -107,4 +107,4 @@ If you change the view to **Emails & collaboration**, the query is narrowed down
 ## See also
  - [Advanced hunting quotas and usage parameters](advanced-hunting-limits.md)
  - [Extend advanced hunting coverage with the right settings](advanced-hunting-extend-data.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

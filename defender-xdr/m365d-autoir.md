@@ -104,4 +104,4 @@ Using the Automated investigation & response card, your security operations team
 - [Configure automated investigation and response for your organization](m365d-configure-auto-investigation-response.md)
 - [Learn more about the Action center](m365d-action-center.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

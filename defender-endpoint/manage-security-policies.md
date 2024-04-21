@@ -17,7 +17,7 @@ ms.date: 12/14/2023
 
 # Manage endpoint security policies in Microsoft Defender for Endpoint
 
-[!Include[Prerelease information](../../includes/prerelease.md)]
+[!Include[Prerelease information](../includes/prerelease.md)]
 
 **Applies to:**
 
@@ -114,4 +114,4 @@ During an investigation, you can also view the **Security policies** tab in the 
 
 
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

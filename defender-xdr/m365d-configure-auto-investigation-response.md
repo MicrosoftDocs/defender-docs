@@ -84,4 +84,4 @@ You can choose from several options to change settings for your automated invest
 - [Remediation actions in Microsoft Defender XDR](m365d-remediation-actions.md)
 - [Visit the Action center](m365d-action-center.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

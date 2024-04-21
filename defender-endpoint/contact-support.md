@@ -17,7 +17,7 @@ ms.date: 12/18/2020
 
 # Contact Microsoft Defender for Endpoint support
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -88,4 +88,4 @@ Learn how to open support tickets by contacting Defender for Endpoint support.
 
 - [Troubleshoot service issues](troubleshoot-mdatp.md)
 - [Check service health](/microsoft-365/enterprise/view-service-health)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

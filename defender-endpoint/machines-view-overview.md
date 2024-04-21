@@ -18,7 +18,7 @@ ms.date: 04/17/2024
 
 # Device inventory
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -169,4 +169,4 @@ On the **IoT devices** tab, select **Customize columns** to see the columns avai
 
 [Investigate devices in the Microsoft Defender for Endpoint Devices list](investigate-machines.md).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

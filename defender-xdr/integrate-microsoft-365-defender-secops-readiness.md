@@ -46,4 +46,4 @@ Adoption procedures and use case creation are described in Steps 3 and 4.
 ## Next step
 
 [Step 3. Plan for Microsoft Defender XDR integration with your SOC catalog of services](integrate-microsoft-365-defender-secops-services.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

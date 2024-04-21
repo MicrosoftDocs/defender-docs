@@ -77,4 +77,4 @@ To summarize an incident, perform the following steps:
 - Know more about [preinstalled plugins in Copilot for Security](/security-copilot/manage-plugins#preinstalled-plugins)
 - [Investigate incidents in Microsoft Defender XDR](investigate-incidents.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

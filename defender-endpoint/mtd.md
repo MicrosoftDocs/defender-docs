@@ -18,7 +18,7 @@ search.appverid: met150
 
 # Microsoft Defender for Endpoint - Mobile Threat Defense
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -121,4 +121,4 @@ Need help in deploying or configuring Defender for Endpoint on Android & iOS? If
 - [Microsoft Defender for Endpoint on iOS](microsoft-defender-endpoint-ios.md)
 - Stay informed about upcoming releases by reading our [announcements](https://aka.ms/mdeblog).
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

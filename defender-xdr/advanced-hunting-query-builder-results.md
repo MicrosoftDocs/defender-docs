@@ -58,4 +58,4 @@ To view more columns:
 - [Advanced hunting quotas and usage parameters](advanced-hunting-limits.md)
 - [Switch to advanced mode](advanced-hunting-query-builder-details.md#switch-to-advanced-mode-after-building-a-query)
 - [Refine your query in guided mode](advanced-hunting-query-builder-details.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

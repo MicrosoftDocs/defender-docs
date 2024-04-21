@@ -55,4 +55,4 @@ Although these portals aren't specifically for managing security, they support v
 | Microsoft Intune portal | Use [Microsoft Intune](/intune/fundamentals/what-is-intune) to deploy device policies and monitor devices for compliance | [endpoint.microsoft.com](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMenu/overview) |
 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

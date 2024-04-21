@@ -20,7 +20,7 @@ ms.subservice: asr
 
 # Web protection
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -190,4 +190,4 @@ For more information on how to submit false positives/negatives, see [Address fa
 |[Web threat protection](web-threat-protection.md) | Prevent access to phishing sites, malware vectors, exploit sites, untrusted or low-reputation sites, and sites that are blocked.|
 |[Web content filtering](web-content-filtering.md) | Track and regulate access to websites based on their content categories.|
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

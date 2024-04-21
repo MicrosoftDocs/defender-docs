@@ -19,7 +19,7 @@ ms.date: 04/18/2024
 
 # Microsoft Defender Experts for Hunting
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -46,4 +46,4 @@ The following capabilities included in this managed threat hunting service could
 ### Next step
 
 - [Before you begin using Defender Experts for Hunting](before-you-begin-defender-experts.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

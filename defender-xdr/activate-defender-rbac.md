@@ -19,7 +19,7 @@ search.appverid: met150
 
 # Activate Microsoft Defender XDR Unified role-based access control (RBAC)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -107,4 +107,4 @@ If you deactivate a workload, the roles created and edited within Microsoft Defe
 ## Next steps
 
 - [Edit or delete roles](edit-delete-rbac-roles.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -20,7 +20,7 @@ ms.date: 09/25/2023
 
 # Deploy updates for Microsoft Defender for Endpoint on Linux
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -68,4 +68,4 @@ sudo apt-get install --only-upgrade mdatp
 > When Defender for Cloud is provisioning the Microsoft Defender for Endpoint agent to Linux servers, it will keep the client updated automatically.
 
 To schedule an update of Microsoft Defender for Endpoint on Linux, see [Schedule an update of the Microsoft Defender for Endpoint (Linux)](linux-update-mde-linux.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -19,7 +19,7 @@ ms.date: 03/31/2023
 
 # Deploy and manage Device Control using JAMF
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -36,7 +36,7 @@ Microsoft Defender for Endpoint Device Control feature enables you to audit, all
 
 Before you get started with Removable Storage Access Control, you must confirm your [Microsoft 365 subscription](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=3). To access and use Removable Storage Access Control, you must have Microsoft 365 E3.
 
-[!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../../includes/support.md)]
+[!INCLUDE [Microsoft Defender for Endpoint third-party tool support](../includes/support.md)]
 
 ## Deploy policy by using JAMF
 
@@ -75,4 +75,4 @@ A new 'Device Control' property will now be available to add to the UX.
 - [Device Control for macOS](mac-device-control-overview.md)
 - [Deploy and manage Device Control using Intune](mac-device-control-intune.md)
 - [macOS Device Control frequently asked questions (FAQ)](mac-device-control-faq.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

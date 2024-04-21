@@ -87,4 +87,4 @@ To modify a deception rule, perform the following steps:
 3. To turn off the rule, select **Turn off** in the editing pane.  
 4. To delete a deception rule, select **Delete** in the editing pane.
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

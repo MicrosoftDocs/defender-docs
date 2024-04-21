@@ -139,4 +139,4 @@ This topic guides you to set up a dedicated lab environment. For information on 
 
 |[Phase 3: Configure & Onboard](config-m365d-eval.md) | Configure each Microsoft Defender XDR pillar for your Microsoft Defender XDR trial lab or pilot environment and onboard your endpoints.
 |:-------|:-----|
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

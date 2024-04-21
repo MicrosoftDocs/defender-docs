@@ -17,7 +17,7 @@ search.appverid: met150
 
 # Search the audit log for events in Microsoft Defender XDR
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 

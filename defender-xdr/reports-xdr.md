@@ -56,4 +56,4 @@ The **Most impacted assets** section shows the users and devices in your environ
 - [Managed detection and response](managed-detection-and-response-xdr.md)
 - [Communicating with experts in the Microsoft Defender Experts for XDR service](communicate-defender-experts-xdr.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

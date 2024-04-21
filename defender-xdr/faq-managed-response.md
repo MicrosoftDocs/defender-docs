@@ -39,4 +39,4 @@ The following section lists down questions you or your SOC team might have regar
 - [Managed detection and response](managed-detection-and-response-xdr.md)
 - [FAQs related to Microsoft Defender Experts for XDR incident notifications](../defender/faq-incident-notifications-xdr.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

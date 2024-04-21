@@ -141,4 +141,4 @@ This order is commonly recommended and designed to leverage the value of the cap
 ## Go to the Next Step
 
 [Learn about and/or create the Microsoft Defender XDR Evaluation Environment](eval-create-eval-environment.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

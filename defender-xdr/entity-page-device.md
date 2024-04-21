@@ -34,7 +34,7 @@ The device entity page in the Microsoft Defender portal helps you in your invest
 > 
 > In Microsoft Sentinel, device entities are also known as **host** entities. [Learn more](/azure/sentinel/entities-reference).
 >
-> [!INCLUDE [unified-soc-preview-no-alert](../../includes/unified-soc-preview-no-alert.md)]
+> [!INCLUDE [unified-soc-preview-no-alert](../includes/unified-soc-preview-no-alert.md)]
 
 Device entities can be found in the following areas:
 
@@ -316,4 +316,4 @@ Response actions run along the top of a specific device page and include:
 - [Microsoft Defender XDR integration with Microsoft Sentinel](microsoft-365-defender-integration-with-azure-sentinel.md)
 - [Connect Microsoft Sentinel to Microsoft Defender XDR (preview)](microsoft-sentinel-onboard.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

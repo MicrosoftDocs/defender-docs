@@ -17,7 +17,7 @@ ms.date: 02/16/2022
 
 # Exclude devices
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -100,4 +100,4 @@ You'll be able to stop excluding a device at any time. Once devices are no longe
 ## See also
 
 - [Device inventory](machines-view-overview.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

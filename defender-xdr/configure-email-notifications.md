@@ -17,7 +17,7 @@ ms.date: 10/11/2023
 
 # Configure alert notifications in Microsoft Defender XDR
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
@@ -99,4 +99,4 @@ This section lists various issues that you may encounter when using email notifi
 - [Update data retention settings](../defender-endpoint/data-retention-settings.md)
 - [Configure advanced features](../defender-endpoint/advanced-features.md)
 - [Configure vulnerability email notifications](../defender-endpoint/configure-vulnerability-email-notifications.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

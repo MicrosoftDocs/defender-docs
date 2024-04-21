@@ -69,4 +69,4 @@ To integrate the capabilities of Microsoft Defender XDR, you will need to refine
 ## Next step
 
 [Step 4. Define Microsoft Defender XDR roles, responsibilities, and oversight](integrate-microsoft-365-defender-secops-roles.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

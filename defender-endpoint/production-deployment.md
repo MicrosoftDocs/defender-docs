@@ -22,7 +22,7 @@ ms.date: 11/29/2023
 
 # Set up Microsoft Defender for Endpoint deployment
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -169,4 +169,4 @@ The following downloadable spreadsheet lists the services and their associated U
 ## Next step
 
 - Continue to [Step 2 - Assign roles and permissions](prepare-deployment.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

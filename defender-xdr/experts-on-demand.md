@@ -23,7 +23,7 @@ ms.date: 04/18/2024
 
 # Collaborate with experts on demand
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -97,4 +97,4 @@ The option to **Ask Defender Experts** is available in several places throughout
 ### Next step
 
 - [Understand the Defender Experts for Hunting report in Microsoft Defender XDR](defender-experts-report.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

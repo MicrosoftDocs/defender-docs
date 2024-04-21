@@ -209,4 +209,4 @@ The option to **Ask Defender Experts** is available in the incidents and alerts 
 - [Additional information](additional-information-xdr.md)
 - [General information on Defender Experts for XDR service](frequently-asked-questions.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

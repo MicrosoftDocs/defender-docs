@@ -19,7 +19,7 @@ ms.date: 03/07/2024
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -27,7 +27,7 @@ ms.date: 03/07/2024
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-[!Include[Prerelease information](../../includes/prerelease.md)]
+[!Include[Prerelease information](../includes/prerelease.md)]
 
 > [!NOTE] 
 >The streamlined onboarding method is currently in public preview. Make sure to review the prerequisites to confirm requirements and supported operating systems.

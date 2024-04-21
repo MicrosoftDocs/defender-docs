@@ -39,4 +39,4 @@ To set the time zone for these features, go to **Settings** > **Security center*
 
 > [!NOTE]
 > The custom time range filter in advanced hunting remains in UTC regardless of the time zone setting. 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

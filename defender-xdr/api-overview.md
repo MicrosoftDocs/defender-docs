@@ -69,4 +69,4 @@ Watch this short video to learn how you can use Microsoft Defender XDR to automa
 | [Understand API error codes](api-error-codes.md) |
 | [Manage secrets in your apps with Azure Key Vault](/training/modules/manage-secrets-with-azure-key-vault/) |
 | [Implement OAuth 2.0 authorization for user sign in](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code) |
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

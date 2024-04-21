@@ -170,4 +170,4 @@ Also included is a link to the Security & Compliance Center for comparison. The 
 - [Custom detection rules](/microsoft-365/security/defender-endpoint/custom-detection-rules)
 - [Create a phishing attack simulation](../office-365-security/attack-simulation-training-simulations.md) and [create a payload for training your people](../office-365-security/attack-simulation-training-payloads.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

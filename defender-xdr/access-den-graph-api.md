@@ -58,4 +58,4 @@ Your approach to consuming Defender Experts Notifications from the API will vary
 ### Next step
 
 - [Collaborate with Experts on Demand](experts-on-demand.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

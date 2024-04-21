@@ -636,4 +636,4 @@ Then your next step is to uninstall your non-Microsoft antivirus, antimalware, a
 
 - [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md)
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

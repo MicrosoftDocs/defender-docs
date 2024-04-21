@@ -325,4 +325,4 @@ Usage example: `sudo ./mde_support_tool.sh skipfaultyrules -e true`
 - perf_benchmark.tar.gz
 
   Description: The performance test reports. You'll see this only if you're using the performance parameter.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

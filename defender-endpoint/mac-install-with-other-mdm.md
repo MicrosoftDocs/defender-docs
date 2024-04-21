@@ -20,7 +20,7 @@ ms.date: 12/18/2020
 
 # Deployment with a different Mobile Device Management (MDM) system for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -65,7 +65,7 @@ Configure deployment of a [required application package](mac-install-with-jamf.m
 with the installation package (wdav.pkg) downloaded from [Microsoft Defender portal](mac-install-with-jamf.md).
 
 
-[!INCLUDE [Defender for Endpoint repackaging warning](../../includes/repackaging-warning.md)]
+[!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
 
 In order to deploy the package to your enterprise, use the instructions associated with your MDM solution.
@@ -106,4 +106,4 @@ We post notifications to our [What's New page](mac-whatsnew.md) once we make cha
 ## Check installation status
 
 Run [Microsoft Defender for Endpoint](mac-install-with-jamf.md) on a client device to check the onboarding status.
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

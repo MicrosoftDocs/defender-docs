@@ -183,4 +183,4 @@ Logging in to multiple tenants simultaneously in the same browsing session is cu
 - [Microsoft Defender for Endpoint in The Microsoft Defender portal](microsoft-365-security-center-mde.md)
 - [Redirecting accounts from Microsoft Defender for Endpoint to The Microsoft Defender portal](microsoft-365-security-mde-redirection.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -21,7 +21,7 @@ appliesto:
 
 # IP address entity page in Microsoft Defender
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 The IP address entity page in the Microsoft Defender portal helps you examine possible communication between your devices and external internet protocol (IP) addresses.
 
@@ -35,7 +35,7 @@ You can find information from the following sections in the IP address entity pa
 - [Sentinel events](#sentinel-events)
 
 
-[!INCLUDE [unified-soc-preview](../../includes/unified-soc-preview.md)]
+[!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
 ## Overview
 
@@ -128,4 +128,4 @@ Response actions run along the top of a specific IP entity page and include:
 - [User entity page in Microsoft Defender](investigate-users.md)
 - [Microsoft Defender XDR integration with Microsoft Sentinel](microsoft-365-defender-integration-with-azure-sentinel.md)
 - [Connect Microsoft Sentinel to Microsoft Defender XDR (preview)](microsoft-sentinel-onboard.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

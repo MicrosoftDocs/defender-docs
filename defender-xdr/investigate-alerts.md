@@ -361,4 +361,4 @@ As needed for in-process incidents, continue your [investigation](investigate-in
 - [Investigate data loss prevention alerts in Defender](dlp-investigate-alerts-defender.md)
 - [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

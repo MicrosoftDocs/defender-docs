@@ -19,7 +19,7 @@ metadata:
   ms.date: 03/24/2023
 title: Troubleshoot Microsoft Defender Antivirus while migrating from a non-Microsoft solution
 summary: |
-  [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+  [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
   **Applies to:**
   - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)

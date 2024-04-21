@@ -20,7 +20,7 @@ ms.date: 06/04/2021
 
 # Export assessment methods and properties per device
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -247,4 +247,4 @@ Other related
 
 - [Microsoft Defender Vulnerability Management](../next-gen-threat-and-vuln-mgt.md)
 - [Vulnerabilities in your organization](../tvm-weaknesses.md)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

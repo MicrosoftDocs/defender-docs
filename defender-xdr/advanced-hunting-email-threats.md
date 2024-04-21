@@ -60,4 +60,4 @@ The data from this query appears in the **Results** panel below the query itself
 
 - [Advanced hunting best practices](advanced-hunting-best-practices.md)
 - [Overview - Advanced hunting](advanced-hunting-overview.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

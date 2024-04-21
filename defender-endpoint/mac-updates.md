@@ -19,7 +19,7 @@ ms.date: 12/18/2020
 
 # Deploy updates for Microsoft Defender for Endpoint on macOS
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
@@ -277,4 +277,4 @@ To configure MAU, you can deploy this configuration profile from the management 
 ## Resources
 
 - [msupdate reference](/deployoffice/mac/update-office-for-mac-using-msupdate)
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
