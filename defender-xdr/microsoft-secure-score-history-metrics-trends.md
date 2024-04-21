@@ -33,13 +33,13 @@ View a graph of your organization's score over time in the **History** tab.
 
 Below the graph is a list of all the actions taken in the selected time range and their attributes, such as resulting points and category. You can customize a date range and filter by category.
 
-:::image type="content" source="../../media/secure-score/secure-score-history-activity.png" alt-text="An example of the page that describes the activity history in the Microsoft Defender portal" lightbox="../../media/secure-score/secure-score-history-activity.png":::
+:::image type="content" source="/defender/media/secure-score/secure-score-history-activity.png" alt-text="An example of the page that describes the activity history in the Microsoft Defender portal" lightbox="/defender/media/secure-score/secure-score-history-activity.png":::
 
 If you select the recommended action associated with an activity, the full recommended action flyout will appear.
 
 To view all history for that specific recommended action, select the history link in the flyout.
 
-:::image type="content" source="../../media/secure-score/secure-score-history-flyout.png" alt-text="The History pane regarding recommended action in the Microsoft Defender portal" lightbox="../../media/secure-score/secure-score-history-flyout.png":::
+:::image type="content" source="/defender/media/secure-score/secure-score-history-flyout.png" alt-text="The History pane regarding recommended action in the Microsoft Defender portal" lightbox="/defender/media/secure-score/secure-score-history-flyout.png":::
 
 ## Discover trends and set goals
 
@@ -59,17 +59,17 @@ There are two places to see how your score compares to organizations that are si
 
 The comparison bar chart is available on the **Overview** tab. Hover over the chart to view the score and score opportunity. 
 
-:::image type="content" source="../../media/secure-score/secure-score-comparison-bar.png" alt-text="An example of the bar graph of similar organization's scores in the Microsoft Defender portal" lightbox="../../media/secure-score/secure-score-comparison-bar.png":::
+:::image type="content" source="/defender/media/secure-score/secure-score-comparison-bar.png" alt-text="An example of the bar graph of similar organization's scores in the Microsoft Defender portal" lightbox="/defender/media/secure-score/secure-score-comparison-bar.png":::
 
 The comparison data is anonymized so we don't know exactly which others tenants are in the mix.
 
-![Bar graph of similar organization's scores.](../../media/secure-score/secure-score-comparison-screenshot.png)
+![Bar graph of similar organization's scores.](/defender/media/secure-score/secure-score-comparison-screenshot.png)
 
 #### Comparison trend
 
 In the **Metrics & trends** tab, view how your organization's Secure Score compares to others' over time.
 
-:::image type="content" source="../../media/secure-score/secure-score-comparison-trend.png" alt-text="An example of a line graph of similar organization's scores over time in the Microsoft Defender portal" lightbox="../../media/secure-score/secure-score-comparison-trend.png":::
+:::image type="content" source="/defender/media/secure-score/secure-score-comparison-trend.png" alt-text="An example of a line graph of similar organization's scores over time in the Microsoft Defender portal" lightbox="/defender/media/secure-score/secure-score-comparison-trend.png":::
 
 ## We want to hear from you
 

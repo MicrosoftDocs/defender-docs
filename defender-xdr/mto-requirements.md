@@ -58,7 +58,7 @@ In order to view and manage the data you have access to in multi-tenant manageme
 1. Go to [My account](https://myaccount.microsoft.com/organizations).
 2. Under **Organizations > Other organizations you collaborate with** see the list of organizations you have guest access to.
 
-   :::image type="content" source="../../media/defender/mto-myaccount.png" alt-text="Screenshot of organizations in the myaccount portal" lightbox="../../media/defender/mto-myaccount.png":::
+   :::image type="content" source="/defender/media/defender/mto-myaccount.png" alt-text="Screenshot of organizations in the myaccount portal" lightbox="/defender/media/defender/mto-myaccount.png":::
 
 3. Verify all the tenants you plan to manage appear in the list.
 4. For each tenant, go to the [Microsoft Defender portal](https://security.microsoft.com/?tid=tenant_id) and sign in to validate you can successfully access the tenant.
@@ -77,7 +77,7 @@ The first time you use multi-tenant management in Microsoft Defender XDR, you ne
 1. Sign in to [Multi-tenant management in Microsoft Defender XDR](https://mto.security.microsoft.com/)
 2. Select **Add tenants**.
 
-   :::image type="content" source="../../media/defender/mto-add-tenants.png" alt-text="Screenshot of the Microsoft Defender XDR multi-tenant portal setup screen" lightbox="../../media/defender/mto-add-tenants.png":::
+   :::image type="content" source="/defender/media/defender/mto-add-tenants.png" alt-text="Screenshot of the Microsoft Defender XDR multi-tenant portal setup screen" lightbox="/defender/media/defender/mto-add-tenants.png":::
 
 3. Choose the tenants you want to manage and select **Add**
 
@@ -86,7 +86,7 @@ The first time you use multi-tenant management in Microsoft Defender XDR, you ne
 
 The features available in multi-tenant management now appear on the navigation bar and you're ready to view and manage security data across all your tenants.
 
-   :::image type="content" source="../../media/defender/mto-tenant-selection.png" alt-text="Screenshot of multi-tenant management in Microsoft Defender XDR" lightbox="../../media/defender/mto-tenant-selection.png":::
+   :::image type="content" source="/defender/media/defender/mto-tenant-selection.png" alt-text="Screenshot of multi-tenant management in Microsoft Defender XDR" lightbox="/defender/media/defender/mto-tenant-selection.png":::
 
 ## Next step
 

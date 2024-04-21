@@ -93,7 +93,7 @@ To view investigations, go to the **Incidents** page. Select an incident, and th
 
 The new Automated investigation & response card is available in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). This new card visibility to the total number of available remediation actions. The card also gives an overview of all the alerts and required approval time for each alert.
 
-:::image type="content" source="../../media/automated-investigation-response-card.png" alt-text="Screenshot that shows the automated investigation & response card.":::
+:::image type="content" source="/defender/media/automated-investigation-response-card.png" alt-text="Screenshot that shows the automated investigation & response card.":::
 
 Using the Automated investigation & response card, your security operations team can quickly navigate to the Action center by selecting the **Approve in Action Center** link, and then taking appropriate actions. The card enables your security operations team to more effectively manage actions that are pending approval. 
 

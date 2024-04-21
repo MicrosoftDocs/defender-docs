@@ -73,11 +73,11 @@ Centralizing security information creates a single place to investigate security
 
 A primary example is **Incidents** under **Incidents & alerts**.
 
-:::image type="content" source="../../media/incidents-queue/incidents-ss-incidents.png" alt-text="The Incidents page in the Microsoft Defender portal." lightbox="../../media/incidents-queue/incidents-ss-incidents.png":::
+:::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents.png" alt-text="The Incidents page in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/incidents-ss-incidents.png":::
 
 Selecting an incident name displays a page that demonstrates the value of centralizing security information as you get better insights into the full extend of a threat, from email, to identity, to endpoints.
 
-:::image type="content" source="../../media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Screenshot that shows the attack story page for an incident in the Microsoft Defender portal." lightbox="../../media/incidents-overview/incidents-ss-incident-summary.png":::
+:::image type="content" source="/defender/media/incidents-overview/incidents-ss-incident-summary.png" alt-text="Screenshot that shows the attack story page for an incident in the Microsoft Defender portal." lightbox="/defender/media/incidents-overview/incidents-ss-incident-summary.png":::
 
 Take the time to review the incidents in your environment, drill down into each alert, and practice building an understanding of how to access the information and determine next steps in your analysis.
 
@@ -95,11 +95,11 @@ Common controls and content either appear in the same place, or are condensed in
 
 ### Unified settings
 
-:::image type="content" source="../../media/microsoft-365-defender-portal/defender-portal-settings.png" alt-text="Screenshot of the Settings page in the Microsoft Defender portal" lightbox="../../media/microsoft-365-defender-portal/defender-portal-settings.png":::
+:::image type="content" source="/defender/media/microsoft-365-defender-portal/defender-portal-settings.png" alt-text="Screenshot of the Settings page in the Microsoft Defender portal" lightbox="/defender/media/microsoft-365-defender-portal/defender-portal-settings.png":::
 
 ### Permissions
 
-:::image type="content" source="../../media/microsoft-365-defender-portal/defender-portal-permissions.png" alt-text="Screenshot of the permissions page in the Microsoft Defender portal" lightbox="../../media/microsoft-365-defender-portal/defender-portal-permissions.png":::
+:::image type="content" source="/defender/media/microsoft-365-defender-portal/defender-portal-permissions.png" alt-text="Screenshot of the permissions page in the Microsoft Defender portal" lightbox="/defender/media/microsoft-365-defender-portal/defender-portal-permissions.png":::
 
 Access to Microsoft Defender XDR is configured with Microsoft Entra global roles or by using custom roles.
 
@@ -182,7 +182,7 @@ With this learning path from Microsoft Learn, you can understand Microsoft Defen
 
 |Training:|Mitigate threats using Microsoft Defender XDR|
 |---|---|
-|![Microsoft Defender XDR training icon.](../../media/microsoft-365-defender/m365-defender-secure-organization.svg)|Analyze threat data across domains and rapidly remediate threats with built-in orchestration and automation in Microsoft Defender XDR. This learning path aligns with exam SC-200: Microsoft Security Operations Analyst.<p> 9 hr 31 min - Learning Path - 11 Modules|
+|![Microsoft Defender XDR training icon.](/defender/media/microsoft-365-defender/m365-defender-secure-organization.svg)|Analyze threat data across domains and rapidly remediate threats with built-in orchestration and automation in Microsoft Defender XDR. This learning path aligns with exam SC-200: Microsoft Security Operations Analyst.<p> 9 hr 31 min - Learning Path - 11 Modules|
 
 > [!div class="nextstepaction"]
 > [Start >](/training/paths/sc-200-mitigate-threats-using-microsoft-365-defender/)

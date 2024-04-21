@@ -94,7 +94,7 @@ The need to run Microsoft Defender Offline Scan:
 
 If Microsoft Defender Antivirus determines that you need to run Microsoft Defender Offline, it prompts the user on the device. The prompt can occur via a notification, similar to the following:
 
-   :::image type="content" source="../../media/notification.png" alt-text="Notification to run Microsoft Defender Offline" lightbox="../../media/notification.png":::
+   :::image type="content" source="/defender/media/notification.png" alt-text="Notification to run Microsoft Defender Offline" lightbox="/defender/media/notification.png":::
 
    The user is also notified within the Microsoft Defender Antivirus client. If you're using Intune to manage devices, you can see the notification in Intune.
 
@@ -104,7 +104,7 @@ In Configuration Manager, you can identify the status of endpoints by navigating
 
 Microsoft Defender Offline scans are indicated under **Malware remediation status** as **Offline scan required**.
 
-:::image type="content" source="../../media/sccm-wdo.png" alt-text="The indicator for a scan for Microsoft Defender Offline" lightbox="../../media/sccm-wdo.png":::
+:::image type="content" source="/defender/media/sccm-wdo.png" alt-text="The indicator for a scan for Microsoft Defender Offline" lightbox="/defender/media/sccm-wdo.png":::
 
 ## Configure notifications
 
@@ -138,27 +138,27 @@ Starting with Windows 10, version 1607 or newer, and Windows 11, Microsoft Defen
 
 3. You get a prompt to save your work before continuing, similar to the following image:
    
-    :::image type="content" source="../../media/defender-offline-save-work.png" alt-text="Screenshot of screen prompt to save all work before continuing.":::
+    :::image type="content" source="/defender/media/defender-offline-save-work.png" alt-text="Screenshot of screen prompt to save all work before continuing.":::
    
     After you saved your work, select **Scan**.
 
 4. After you select **Scan**, you get another prompt requesting your permission to make changes to your device, similar to the following image:
 
-    :::image type="content" source="../../media/defender-offline-apply-change.png" alt-text="Screenshot of a screen prompt requesting permission to apply.":::
+    :::image type="content" source="/defender/media/defender-offline-apply-change.png" alt-text="Screenshot of a screen prompt requesting permission to apply.":::
     
      Select **Yes**.
 
 5. Another prompt appears and informs you that you'll be signed out and Windows will shut down in less than a minute, similar to the following image:
 
-    :::image type="content" source="../../media/defender-offline-sign-out-notification.png" alt-text="Screenshot of a screen prompt informing about the sign out.":::
+    :::image type="content" source="/defender/media/defender-offline-sign-out-notification.png" alt-text="Screenshot of a screen prompt informing about the sign out.":::
 
 6. You see that the Microsoft Defender Antivirus scan (offline scan) is in progress.
     
-    :::image type="content" source="../../media/defender-offline-antivirus-run.png" alt-text="Screenshot of the Microsoft Defender Antivirus scan.":::
+    :::image type="content" source="/defender/media/defender-offline-antivirus-run.png" alt-text="Screenshot of the Microsoft Defender Antivirus scan.":::
     
     You'll see the following image:
     
-    :::image type="content" source="../../media/defender-offline-scan-run-2.png" alt-text="Screenshot of a dialogue when the run is ongoing.":::
+    :::image type="content" source="/defender/media/defender-offline-scan-run-2.png" alt-text="Screenshot of a dialogue when the run is ongoing.":::
 
 ### Use PowerShell cmdlets to run an offline scan
 
@@ -197,7 +197,7 @@ For more information, see [Windows Defender WMIv2 APIs](/previous-versions/windo
     > - Download Windows Defender Offline and create the CD, DVD, or USB flash drive on a PC that isn't infected with malware as the malware can interfere with the media creation.
     > - If you use a USB drive, the drive will be reformatted and any data on it will be erased. Ensure to back up any important data from the drive first.
 
-    :::image type="content" source="../../media/defender-offline-scan-pc-for-virus.png" alt-text="Screenshot of a dialogue for scan in PC.":::
+    :::image type="content" source="/defender/media/defender-offline-scan-pc-for-virus.png" alt-text="Screenshot of a dialogue for scan in PC.":::
 
 3. Scan your PC for viruses and other malware.
 

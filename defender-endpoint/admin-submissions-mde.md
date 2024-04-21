@@ -50,14 +50,14 @@ For more information about how you can submit spam, phish, URLs, and email attac
 
 2. On the **Submissions** page, select the **Files** tab.
 
-3. On the **Files** tab, select :::image type="icon" source="../../media/m365-cc-sc-create-icon.png" border="false"::: **Add new submission**.
+3. On the **Files** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Add new submission**.
 
-   :::image type="content" source="../../media/unified-admin-submission-new.png" alt-text="Screenshot showing how to add a new submission.":::
+   :::image type="content" source="/defender/media/unified-admin-submission-new.png" alt-text="Screenshot showing how to add a new submission.":::
 
 2. In the **Submit items to Microsoft for review** flyout that opens, select **Files** or **File hash** from the **Select the submission type** dropdown list.
 
    - If you selected **Files**, configure the following options:
-     - Select **Browse files**. In the dialog that opens, find and select the file, and then select **Open**. Repeat this step as many times as necessary. To remove an entry from the flyout, select :::image type="icon" source="../../media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
+     - Select **Browse files**. In the dialog that opens, find and select the file, and then select **Open**. Repeat this step as many times as necessary. To remove an entry from the flyout, select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
        - The maximum total size of all files is 500 MB.
        - Use the password 'infected' to encrypt archive files.
      - **The file should have been categorized as**: Select one of the following values:
@@ -71,10 +71,10 @@ For more information about how you can submit spam, phish, URLs, and email attac
      - **Notes for Microsoft (optional)**: Enter an optional note.
      - **Share feedback and relevant content with Microsoft**: Read the privacy statement and then select this option.
 
-     :::image type="content" source="../../media/unified-admin-submission-file.png" alt-text="Screenshot showing how to submit files.":::
+     :::image type="content" source="/defender/media/unified-admin-submission-file.png" alt-text="Screenshot showing how to submit files.":::
 
    - If you selected **File hash**, configure the following options:
-     - In the empty box, enter the file hash value (for example, `2725eb73741e23a254404cc6b5a54d9511b9923be2045056075542ca1bfbf3fe`) and then press the ENTER key. Repeat this step as many times as necessary. To remove an entry from the flyout, select :::image type="icon" source="../../media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
+     - In the empty box, enter the file hash value (for example, `2725eb73741e23a254404cc6b5a54d9511b9923be2045056075542ca1bfbf3fe`) and then press the ENTER key. Repeat this step as many times as necessary. To remove an entry from the flyout, select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
      - **The file should have been categorized as**: Select one of the following values:
        - **Malware** (false negative)
        - **Unwanted software**
@@ -82,7 +82,7 @@ For more information about how you can submit spam, phish, URLs, and email attac
      - **Notes for Microsoft (optional)**: Enter an optional note.
      - **Share feedback and relevant content with Microsoft**: Read the privacy statement and then select this option.
 
-     :::image type="content" source="../../media/unified-admin-submission-file-hash.png" alt-text="Screenshot showing how to submit files hashes.":::
+     :::image type="content" source="/defender/media/unified-admin-submission-file-hash.png" alt-text="Screenshot showing how to submit files hashes.":::
 
    When you're finished in the **Submit items to Microsoft for review** flyout, select **Submit**.
 
@@ -94,19 +94,19 @@ To view the details of the submission, select the submission by clicking anywher
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Incidents & alerts** \> **Alerts**. Or, to go directly to the **Alerts** page, use <https://security.microsoft.com/alerts>.
 
-2. On the **Alerts** page, find the alert that contains the file you want to report. For example, you can select :::image type="icon" source="../../media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**, and then select **Service sources** \> **Microsoft Defender for Endpoint**.
+2. On the **Alerts** page, find the alert that contains the file you want to report. For example, you can select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**, and then select **Service sources** \> **Microsoft Defender for Endpoint**.
 
 3. Select the alert from the list by clicking anywhere in the row other than the check box next to the **Alert name** value.
 
-4. In the details flyout that opens, select :::image type="icon" source="../../media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Submit items to Microsoft for review**.
+4. In the details flyout that opens, select :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Submit items to Microsoft for review**.
 
-   :::image type="content" source="../../media/unified-admin-submission-alerts-queue.png" alt-text="Screenshot showing how to submit items from an alerts queue.":::
+   :::image type="content" source="/defender/media/unified-admin-submission-alerts-queue.png" alt-text="Screenshot showing how to submit items from an alerts queue.":::
 
 5. The options that are available in the **Submit items to Microsoft for review** flyout that opens are basically same as described in the previous section.
 
    The only difference is an **Include alert story** option that you can select to attach a JSON file that helps Microsoft investigate the submission.
 
-   :::image type="content" source="../../media/unified-admin-submission-alert-queue-flyout.png" alt-text="Screenshot showing how to specify a submission type and fill in required fields.":::
+   :::image type="content" source="/defender/media/unified-admin-submission-alert-queue-flyout.png" alt-text="Screenshot showing how to specify a submission type and fill in required fields.":::
 
    When you're finished in the **Submit items to Microsoft for review** flyout, select **Submit**.
 

@@ -31,7 +31,7 @@ ms.date: 07/11/2022
 
 The **Export** feature allows you to export the data in the incident queue that is displayed according to the applied filters and time ranges. It's available in the form of a button named **Export**, as displayed in the following screenshot:
 
-:::image type="content" source="../../media/defender/incidents-queue-with-export-button.png" alt-text="Shows the Export button in the Incidents page  of the Microsoft Defender portal":::
+:::image type="content" source="/defender/media/defender/incidents-queue-with-export-button.png" alt-text="Shows the Export button in the Incidents page  of the Microsoft Defender portal":::
 
 When you click the **Export** button, the data is exported to a CSV file. You can apply various filters and time ranges to the incidents queue (not just in the context of exporting the data, but in a generic context). When you select **Export**, whichever filters and/or time ranges are applied to the incidents queue, such data is exported to the CSV file.
 

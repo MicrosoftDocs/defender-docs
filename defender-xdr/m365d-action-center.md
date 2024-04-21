@@ -38,7 +38,7 @@ Because the Action center provides a comprehensive view of Microsoft Defender XD
 
 The unified Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) lists pending and completed remediation actions for your devices, email & collaboration content, and identities in one location.
 
-:::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="The unified Action center in the Microsoft Defender portal." lightbox="../../media/m3d-action-center-unified.png":::
+:::image type="content" source="/defender/media/m3d-action-center-unified.png" alt-text="The unified Action center in the Microsoft Defender portal." lightbox="/defender/media/m3d-action-center-unified.png":::
 
 For example: 
 
@@ -76,7 +76,7 @@ You can navigate to the list of actions pending approval in two different ways:
 
 4. You can customize, sort, filter, and export data in the Action center.
 
-   :::image type="content" source="../../media/m3d-action-center-columnsfilters.png" alt-text="Screenshot that shows the sort, filter, and customize capabilities of the Action center." lightbox="../../media/m3d-action-center-columnsfilters.png":::
+   :::image type="content" source="/defender/media/m3d-action-center-columnsfilters.png" alt-text="Screenshot that shows the sort, filter, and customize capabilities of the Action center." lightbox="/defender/media/m3d-action-center-columnsfilters.png":::
 
    - Select a column heading to sort items in ascending or descending order.
    - Use the time period filter to view data for the past day, week, 30 days, or 6 months.

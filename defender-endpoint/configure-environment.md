@@ -156,7 +156,7 @@ Depending on the operating system, the proxy to be used for Microsoft Defender f
 
 4. Check the Microsoft Defender for Endpoint URLs list for the complete list of requirements for your region (refer to the Service URLs [Spreadsheet](https://go.microsoft.com/fwlink/?linkid=2247417)).
 
-  :::image type="content" source="../../media/defender-endpoint/admin-powershell.png" alt-text="This is admin PowerShell.":::
+  :::image type="content" source="/defender/media/defender-endpoint/admin-powershell.png" alt-text="This is admin PowerShell.":::
 
 The wildcards (\*) used in `*.ods.opinsights.azure.com`, `*.oms.opinsights.azure.com`, and `*.agentsvc.azure-automation.net` URL endpoints can be replaced with your specific Workspace ID. The Workspace ID is specific to your environment and workspace. It can be found in the Onboarding section of your tenant within the Microsoft Defender portal.
 

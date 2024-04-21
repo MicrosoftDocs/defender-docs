@@ -122,7 +122,7 @@ Automatic attack disruption enables the exclusion of specific user accounts from
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
 2. Go to **Settings** \> **Microsoft Defender XDR** \> **Identity automated response**. Check the user list to exclude accounts.
-:::image type="content" source="../../media/automatic-attack-disruption/Fig3-exclude-specific-users.png" alt-text="Selecting user accounts for automated response exclusion" lightbox="../../media/automatic-attack-disruption/Fig3-exclude-specific-users.png":::
+:::image type="content" source="/defender/media/automatic-attack-disruption/Fig3-exclude-specific-users.png" alt-text="Selecting user accounts for automated response exclusion" lightbox="/defender/media/automatic-attack-disruption/Fig3-exclude-specific-users.png":::
 
 3. To exclude a new user account, select **Add user exclusion**.
 

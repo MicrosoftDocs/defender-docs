@@ -59,13 +59,13 @@ You can use advanced hunting KQL (Kusto Query Language) queries to hunt through 
 When you open the advanced hunting page for the first time after connecting a workspace, you can find many of that workspace's tables  organized by solution after the Microsoft Defender XDR tables under the **Schema** tab.
 
 
-:::image type="content" source="../../media/advanced-hunting-unified-sentinel-data.png" alt-text="Screenshot of advanced hunting schema tab in the Microsoft Defender portal highlighting location of Sentinel tables" lightbox="../../media/advanced-hunting-unified-sentinel-data.png":::
+:::image type="content" source="/defender/media/advanced-hunting-unified-sentinel-data.png" alt-text="Screenshot of advanced hunting schema tab in the Microsoft Defender portal highlighting location of Sentinel tables" lightbox="/defender/media/advanced-hunting-unified-sentinel-data.png":::
 
 
 Likewise, you can find the functions from Microsoft Sentinel in the **Functions** tab, and your shared and sample queries from Microsoft Sentinel can be found in the **Queries** tab inside folders marked **Sentinel**.
 
 ## View schema information
-To learn more about a schema table, select the vertical ellipses ( ![kebab icon](../../media/ah-kebab.png) ) to the right of any schema table name under the **Schema** tab, then select **View schema**.
+To learn more about a schema table, select the vertical ellipses ( ![kebab icon](/defender/media/ah-kebab.png) ) to the right of any schema table name under the **Schema** tab, then select **View schema**.
 
 In the unified portal, in addition to viewing the schema column names and descriptions, you can also view:
 
@@ -74,13 +74,13 @@ In the unified portal, in addition to viewing the schema column names and descri
 - **Data retention period** – how long the data is set to be kept
 - **Tags** – available for Sentinel data tables
 
-:::image type="content" source="../../media/advanced-hunting-unified-view-schema.png" alt-text="Screenshot of the schema information pane in the Microsoft Defender portal" lightbox="../../media/advanced-hunting-unified-view-schema.png":::
+:::image type="content" source="/defender/media/advanced-hunting-unified-view-schema.png" alt-text="Screenshot of the schema information pane in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-view-schema.png":::
 
 ## Use functions
 
 To use a function from Microsoft Sentinel, go to the **Functions** tab and scroll until you find the function that you want. Double-click the function name to insert the function in the query editor. 
 
-You can also select the vertical ellipses ( ![kebab icon](../../media/ah-kebab.png) ) to the right of the function and select **Insert to query** to insert the function into a query in the query editor. 
+You can also select the vertical ellipses ( ![kebab icon](/defender/media/ah-kebab.png) ) to the right of the function and select **Insert to query** to insert the function into a query in the query editor. 
 
 Other options include:
 - **View details** – opens the function side pane containing its details
@@ -93,13 +93,13 @@ For editable functions, more options are available when you select the vertical 
 
 ## Use saved queries
 
-To use a saved query from Microsoft Sentinel, go to the **Queries** tab and scroll until you find the query that you want. Double-click the query name to load the query in the query editor. For more options, select the vertical ellipses ( ![kebab icon](../../media/ah-kebab.png) ) to the right of the query. From here, you can perform the following actions:
+To use a saved query from Microsoft Sentinel, go to the **Queries** tab and scroll until you find the query that you want. Double-click the query name to load the query in the query editor. For more options, select the vertical ellipses ( ![kebab icon](/defender/media/ah-kebab.png) ) to the right of the query. From here, you can perform the following actions:
 
 - **Run query** – loads the query in the query editor and runs it automatically
 - **Open in query editor** – loads the query in the query editor
 - **View details** – opens the query details side pane where you can inspect the query, run the query, or open the query in the editor
 
-   :::image type="content" source="../../media/advanced-hunting-unified-view-details.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal" lightbox="../../media/advanced-hunting-unified-view-details.png":::
+   :::image type="content" source="/defender/media/advanced-hunting-unified-view-details.png" alt-text="Screenshot of the options available in saved queries in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-view-details.png":::
 
 
 For editable queries, more options are available:
@@ -114,7 +114,7 @@ To help discover threats and anomalous behaviors in your environment, you can cr
 
 For analytics rules that apply to data ingested through the connected Microsoft Sentinel workspace, select **Manage rules > Create analytics rule**. 
 
-:::image type="content" source="../../media/advanced-hunting-unified-rules.png" alt-text="Screenshot of the options to create custom analytics or detections in the Microsoft Defender portal" lightbox="../../media/advanced-hunting-unified-rules.png":::
+:::image type="content" source="/defender/media/advanced-hunting-unified-rules.png" alt-text="Screenshot of the options to create custom analytics or detections in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-rules.png":::
 
 The **Analytics rule wizard** appears. Fill up the required details as described in [Analytics rule wizard—General tab](/azure/sentinel/detect-threats-custom#analytics-rule-wizardgeneral-tab).
 
@@ -124,7 +124,7 @@ For custom detection rules that apply to Microsoft Defender XDR data, select **M
 
 Results of queries that were run appear in the **Results** tab. You can export the results to a CSV file by selecting **Export**. 
 
-:::image type="content" source="../../media/advanced-hunting-unified-results.png" alt-text="Screenshot of advanced hunting results with options to expand result rows in the Microsoft Defender portal" lightbox="../../media/advanced-hunting-unified-results.png":::
+:::image type="content" source="/defender/media/advanced-hunting-unified-results.png" alt-text="Screenshot of advanced hunting results with options to expand result rows in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-results.png":::
 
 You can also explore the results in-line with the following features:
 

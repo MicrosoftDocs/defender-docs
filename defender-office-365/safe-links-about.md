@@ -172,7 +172,7 @@ URLs in Teams are checked against a list of known malicious links when the prote
 
 If the user who sent the link isn't protected by a Safe Links policy where Teams protection is turned on, the user is free to click through to the original URL on their computer or device.
 
-:::image type="content" source="../../media/tp-safe-links-for-teams-malicious.png" alt-text="A Safe Links for Teams page reporting a malicious link" lightbox="../../media/tp-safe-links-for-teams-malicious.png":::
+:::image type="content" source="/defender/media/tp-safe-links-for-teams-malicious.png" alt-text="A Safe Links for Teams page reporting a malicious link" lightbox="/defender/media/tp-safe-links-for-teams-malicious.png":::
 
 Clicking the **Go Back** button on the warning page returns the user to their original context or URL location. However, clicking on the original link again causes Safe Links to rescan the URL, so the warning page reappears.
 
@@ -295,7 +295,7 @@ This section contains examples of the various warning pages that are triggered b
 
 The clicked URL is being scanned by Safe Links. You might need to wait a few moments before trying the link again.
 
-:::image type="content" source="../../media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png" alt-text="The notification that the link is being scanned" lightbox="../../media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png":::
+:::image type="content" source="/defender/media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png" alt-text="The notification that the link is being scanned" lightbox="/defender/media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png":::
 
 ### Suspicious message warning
 
@@ -309,10 +309,10 @@ The clicked URL was in an email message that has been identified as a phishing a
 
 The clicked URL points to a site that has been identified as malicious. We recommend that you don't proceed to the site.
 
-:::image type="content" source="../../media/058883c8-23f0-4672-9c1c-66b084796177.png" alt-text="The warning that states that the website is classified as malicious" lightbox="../../media/058883c8-23f0-4672-9c1c-66b084796177.png":::
+:::image type="content" source="/defender/media/058883c8-23f0-4672-9c1c-66b084796177.png" alt-text="The warning that states that the website is classified as malicious" lightbox="/defender/media/058883c8-23f0-4672-9c1c-66b084796177.png":::
 
 ### Error warning
 
 Some kind of error has occurred, and the URL can't be opened.
 
-:::image type="content" source="../../media/2f7465a4-1cf4-4c1c-b7d4-3c07e4b795b4.png" alt-text="The warning that states the page that you are trying to access cannot be loaded" lightbox="../../media/2f7465a4-1cf4-4c1c-b7d4-3c07e4b795b4.png":::
+:::image type="content" source="/defender/media/2f7465a4-1cf4-4c1c-b7d4-3c07e4b795b4.png" alt-text="The warning that states the page that you are trying to access cannot be loaded" lightbox="/defender/media/2f7465a4-1cf4-4c1c-b7d4-3c07e4b795b4.png":::

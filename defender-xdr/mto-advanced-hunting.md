@@ -30,11 +30,11 @@ In multi-tenant management, you can use any of the queries you currently have ac
 
 Once you load the query in the query editor, you can then specify the scope of the query by tenant by selecting **Tenant scope**:
 
-   :::image type="content" source="../../media/defender/mto-cross-tenants-query.png" alt-text="Screenshot of the Microsoft Defender XDR cross tenants advanced hunting query page" lightbox="../../media/defender/mto-cross-tenants-query.png":::
+   :::image type="content" source="/defender/media/defender/mto-cross-tenants-query.png" alt-text="Screenshot of the Microsoft Defender XDR cross tenants advanced hunting query page" lightbox="/defender/media/defender/mto-cross-tenants-query.png":::
 
 This action opens a side pane from which you can specify the tenants to include in the query:
 
-   :::image type="content" source="../../media/defender/mto-cross-tenants-sidepane.png" alt-text="Screenshot of the Microsoft Defender XDR cross tenants advanced hunting query side pane scope" lightbox="../../media/defender/mto-cross-tenants-sidepane.png":::
+   :::image type="content" source="/defender/media/defender/mto-cross-tenants-sidepane.png" alt-text="Screenshot of the Microsoft Defender XDR cross tenants advanced hunting query side pane scope" lightbox="/defender/media/defender/mto-cross-tenants-sidepane.png":::
 
 Select the tenants you want to include in your query. Select **Apply**, then **Run query**.
 
@@ -43,7 +43,7 @@ Select the tenants you want to include in your query. Select **Apply**, then **R
 
 The query results contain the tenant ID:
 
-   :::image type="content" source="../../media/defender/mto-cross-tenants-query-tenant-id.png" alt-text="Screenshot of the Microsoft Defender XDR ross tenants advanced hunting query scope column" lightbox="../../media/defender/mto-cross-tenants-query-tenant-id.png":::
+   :::image type="content" source="/defender/media/defender/mto-cross-tenants-query-tenant-id.png" alt-text="Screenshot of the Microsoft Defender XDR ross tenants advanced hunting query scope column" lightbox="/defender/media/defender/mto-cross-tenants-query-tenant-id.png":::
 
 To learn more about advanced hunting in Microsoft Defender XDR, read [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](advanced-hunting-overview.md).
 
@@ -56,7 +56,7 @@ Likewise, you can manage custom detection rules from multiple tenants in the cus
 1. To view custom detection rules, go to the [Custom detection rules page](https://mto.security.microsoft.com/v2/custom_detection) in multi-tenant management in Microsoft Defender XDR.
 2. View the **Tenant name** column to see which tenant the detection rule comes from:
 
-   :::image type="content" source="../../media/defender/mto-custom-detection-tenant-name.png" alt-text="Screenshot of the Microsoft Defender XDR multi-tenant custom detection page" lightbox="../../media/defender/mto-custom-detection-tenant-name.png":::
+   :::image type="content" source="/defender/media/defender/mto-custom-detection-tenant-name.png" alt-text="Screenshot of the Microsoft Defender XDR multi-tenant custom detection page" lightbox="/defender/media/defender/mto-custom-detection-tenant-name.png":::
 
 To view only a specific tenant's custom detection rules, select **Filter**, choose the tenant or tenants and select **Apply**.
 
@@ -73,6 +73,6 @@ To manage detection rules:
 
 When you select a single detection rule, a flyout panel opens with the detection rule details:
 
-   :::image type="content" source="../../media/defender/custom-detection-rule-details.png" alt-text="Screenshot of the Microsoft Defender XDR custom detection rule details page" lightbox="../../media/defender/custom-detection-rule-details.png":::
+   :::image type="content" source="/defender/media/defender/custom-detection-rule-details.png" alt-text="Screenshot of the Microsoft Defender XDR custom detection rule details page" lightbox="/defender/media/defender/custom-detection-rule-details.png":::
 
 Select **Open detection rules** to view this rule in a new tab for the specific tenant in the [Microsoft Defender portal](https://security.microsoft.com). To learn more, see [Custom detection rules](./custom-detection-rules.md).

@@ -39,7 +39,7 @@ The Microsoft Defender portal ([https://security.microsoft.com](https://security
 
 The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is where you view alerts, manage devices, and view reports. When you sign into the Microsoft Defender portal, you start with the **Home** page, which resembles the following image:
 
-:::image type="content" source="../../media/mde-p1/m365-defender-portal.png" alt-text="The portal of Microsoft Defender XDR" lightbox="../../media/mde-p1/m365-defender-portal.png":::
+:::image type="content" source="/defender/media/mde-p1/m365-defender-portal.png" alt-text="The portal of Microsoft Defender XDR" lightbox="/defender/media/mde-p1/m365-defender-portal.png":::
 
 The Home page provides your security team with a snapshot aggregate view of alerts, device status, and threats detected. Microsoft Defender XDR is set up so that your security operations team can find the information they're looking for quickly and easily.
 
@@ -50,11 +50,11 @@ The Home page provides your security team with a snapshot aggregate view of aler
 
 The Home page includes cards, such as the Active incidents card shown in the following image:
 
-:::image type="content" source="../../media/mde-p1/active-incidents-card.png" alt-text="The Active incidents card" lightbox="../../media/mde-p1/active-incidents-card.png":::
+:::image type="content" source="/defender/media/mde-p1/active-incidents-card.png" alt-text="The Active incidents card" lightbox="/defender/media/mde-p1/active-incidents-card.png":::
 
 The card provides you with information at a glance, along with a link or button that you can select to view more detailed information. Referring to our example Active incidents card, we can select **View all incidents** to navigate to our list of incidents.
 
-:::image type="content" source="../../media/mde-p1/incidents.png" alt-text="The list of Incidents" lightbox="../../media/mde-p1/incidents.png":::
+:::image type="content" source="/defender/media/mde-p1/incidents.png" alt-text="The list of Incidents" lightbox="/defender/media/mde-p1/incidents.png":::
 
 ### Navigation bar makes it easy to find alerts, the Action center, and more
 
@@ -90,11 +90,11 @@ The navigation bar on the left side of the screen enables you to move easily bet
 
 When you sign into the Microsoft Defender portal, make sure to view and manage your incidents and alerts. Start with your **Incidents** list. The following image shows a list of incidents, including one with high severity, and another with medium severity.
 
-:::image type="content" source="../../media/mde-p1/incidents.png" alt-text="Incidents list":::
+:::image type="content" source="/defender/media/mde-p1/incidents.png" alt-text="Incidents list":::
 
 Select an incident to view details about the incident. Details include what alerts were triggered, how many devices and users were affected, and other details. The following image shows an example of incident details.
 
-:::image type="content" source="../../media/mde-p1/single-incident.png" alt-text="The details of an incident" lightbox="../../media/mde-p1/single-incident.png":::
+:::image type="content" source="/defender/media/mde-p1/single-incident.png" alt-text="The details of an incident" lightbox="/defender/media/mde-p1/single-incident.png":::
 
 Use the **Alerts**, **Devices**, and **Users** tabs to view more information, such as the alerts that were triggered, devices that were affected, and user accounts that were affected. From there, you can take manual response actions, such as isolating a device, stopping and quarantining a file, and so on.
 
@@ -105,7 +105,7 @@ Use the **Alerts**, **Devices**, and **Users** tabs to view more information, su
 
 To view and manage your organization's devices, in the navigation bar, under **Assets**, select **Devices**. You see a list of devices. The list includes devices for which alerts were generated. By default, the data shown is for the past 30 days, with the most recent items listed first. Select a device to view more information about it. A flyout pane opens, as shown in the following image:
 
-:::image type="content" source="../../media/mde-p1/device-inventory-selecteddevice.png" alt-text="Selected device details" lightbox="../../media/mde-p1/device-inventory-selecteddevice.png":::
+:::image type="content" source="/defender/media/mde-p1/device-inventory-selecteddevice.png" alt-text="Selected device details" lightbox="/defender/media/mde-p1/device-inventory-selecteddevice.png":::
 
 The flyout pane displays details, such as any active alerts for the device, and includes links to take action, such as isolating a device.
 
@@ -135,7 +135,7 @@ In Defender for Endpoint Plan 1, several reports are available in the Microsoft 
 
 To access your Threat protection report, in the Microsoft Defender portal, choose **Reports**, and then choose **Threat protection**. The Threat Protection report shows alert trends, status, categories, and more. Views are arranged in two columns: **Alert trends** and **Alert status**, as shown in the following image:
 
-:::image type="content" source="../../media/mde-p1/threat-protection-report.png" alt-text="Threat protection report" lightbox="../../media/mde-p1/threat-protection-report.png":::
+:::image type="content" source="/defender/media/mde-p1/threat-protection-report.png" alt-text="Threat protection report" lightbox="/defender/media/mde-p1/threat-protection-report.png":::
 
 Scroll down to see all the views in each list.
 
@@ -149,7 +149,7 @@ Scroll down to see all the views in each list.
 
 To access your Device health report, in the Microsoft Defender portal, choose **Reports**, and then choose **Device health**. The Device health report shows health state and antivirus across devices in your organization. Similar to the [Threat protection report](#threat-protection-report), views are arranged in two columns: **Device trends** and **Device summary**, as shown in the following image:
 
-:::image type="content" source="../../media/mde-p1/device-health-report.png" alt-text="Device health report" lightbox="../../media/mde-p1/device-health-report.png":::
+:::image type="content" source="/defender/media/mde-p1/device-health-report.png" alt-text="Device health report" lightbox="/defender/media/mde-p1/device-health-report.png":::
 
 Scroll down to see all the views in each list. By default, the views in the **Device trends** column display data for the past 30 days, but you can change a view to display data for the last three months, last six months, or a custom time range (up to 180 days). The **Device summary** views are snapshots for the previous business day.
 
@@ -160,7 +160,7 @@ Scroll down to see all the views in each list. By default, the views in the **De
 
 To access your Device health report, in the Microsoft Defender portal, choose **Reports**, and then choose **Web protection**. The Web protection report shows detections over time, such as malicious URLs and attempts to access blocked URLs, as shown in the following image:
 
-:::image type="content" source="../../media/mde-p1/web-protection-report.png" alt-text="Web protection report" lightbox="../../media/mde-p1/web-protection-report.png":::
+:::image type="content" source="/defender/media/mde-p1/web-protection-report.png" alt-text="Web protection report" lightbox="/defender/media/mde-p1/web-protection-report.png":::
 
 Scroll down to see all the views in the Web protection report. Some views include links that enable you to view more details, configure your threat protection features, and even manage indicators that serve as exceptions in Defender for Endpoint.
 

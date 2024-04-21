@@ -45,11 +45,11 @@ The following steps guide you on how to create a new dynamic rule in Microsoft D
 4. Enter a **Rule name** and **Description***.
 5. Select **Next** to choose the conditions you want to assign:
 
-:::image type="content" source="../../media/defender/rule-conditions.png" alt-text="Screenshot of the Rule conditions page" lightbox="../../media/defender/rule-conditions.png":::
+:::image type="content" source="/defender/media/defender/rule-conditions.png" alt-text="Screenshot of the Rule conditions page" lightbox="/defender/media/defender/rule-conditions.png":::
 
 6. Select **Next** and choose the tag to apply to this rule.
 
-:::image type="content" source="../../media/defender/actions-to-apply.png" alt-text="Screenshot of the actions page" lightbox="../../media/defender/actions-to-apply.png":::
+:::image type="content" source="/defender/media/defender/actions-to-apply.png" alt-text="Screenshot of the actions page" lightbox="/defender/media/defender/actions-to-apply.png":::
 
 7. Select **Next** to review and finish creating the rule and then select **Submit**.
 
@@ -66,10 +66,10 @@ To see tags on individual devices:
 2. In the **Device Inventory** page, select the device name that you want to view.
 3. Select **Manage tags**.
 
-:::image type="content" source="../../media/defender/manage-machine-tags.png" alt-text="Screenshot of the machine tags page" lightbox="../../media/defender/manage-machine-tags.png":::
+:::image type="content" source="/defender/media/defender/manage-machine-tags.png" alt-text="Screenshot of the machine tags page" lightbox="/defender/media/defender/manage-machine-tags.png":::
 
 ### Updating rules
 
 Dynamic tags and device values set by dynamic rules can't be manually updated. To edit, delete or turn off a rule, in the **Asset Rule Management** page select the rule and choose the action you wish to take:
 
-:::image type="content" source="../../media/defender/update-rule.png" alt-text="Screenshot of the rule details page" lightbox="../../media/defender/update-rule.png":::
+:::image type="content" source="/defender/media/defender/update-rule.png" alt-text="Screenshot of the rule details page" lightbox="/defender/media/defender/update-rule.png":::

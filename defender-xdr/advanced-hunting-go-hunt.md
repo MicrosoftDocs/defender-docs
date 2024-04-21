@@ -31,15 +31,15 @@ The *go hunt* action is available in various sections of Microsoft Defender XDR.
 
 - In the [incident page](investigate-incidents.md#summary), you can review details about users, devices, and many other entities associated with an incident. As you select an entity, you get additional information and the various actions you could take on that entity. In the example below, a mailbox is selected, showing details about the mailbox and the option to hunt for more information about the mailbox.
 
-    :::image type="content" source="../../media/go-hunt-1-incident.png" alt-text="The Mailboxes page with the Go hunt option in the Microsoft Defender portal " lightbox="../../media/go-hunt-1-incident.png":::
+    :::image type="content" source="/defender/media/go-hunt-1-incident.png" alt-text="The Mailboxes page with the Go hunt option in the Microsoft Defender portal " lightbox="/defender/media/go-hunt-1-incident.png":::
 
 - In the incident page, you can also access a list of entities under the **Evidence** tab. Selecting one of those entities provides an option to quickly hunt for information about that entity.
 
-    :::image type="content" source="../../media/go-hunt-2-entity.png" alt-text="The Go hunt option for a piece of evidence in the Incident page in Microsoft Defender portal" lightbox="../../media/go-hunt-2-entity.png":::
+    :::image type="content" source="/defender/media/go-hunt-2-entity.png" alt-text="The Go hunt option for a piece of evidence in the Incident page in Microsoft Defender portal" lightbox="/defender/media/go-hunt-2-entity.png":::
 
 - When viewing the timeline for a device, you can select an event in the timeline to view additional information about that event. Once an event is selected, you get the option to hunt for other relevant events in advanced hunting.
 
-    :::image type="content" source="../../media/go-hunt-3-event.png" alt-text="The Hunt for related events option on an event's page in the Timelines tab in Microsoft Defender portal" lightbox="../../media/go-hunt-3-event.png":::
+    :::image type="content" source="/defender/media/go-hunt-3-event.png" alt-text="The Hunt for related events option on an event's page in the Timelines tab in Microsoft Defender portal" lightbox="/defender/media/go-hunt-3-event.png":::
 
 Selecting **Go hunt** or **Hunt for related events** passes different queries, depending on whether you've selected an entity or an event.
 

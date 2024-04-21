@@ -322,7 +322,7 @@ Get-MpPreference
 
 In the following example, the items contained in the `ExclusionExtension` list are highlighted:
 
-:::image type="content" source="../../media/wdav-powershell-get-exclusions-variable.png" alt-text="PowerShell output for Get-MpPreference" lightbox="../../media/wdav-powershell-get-exclusions-variable.png":::
+:::image type="content" source="/defender/media/wdav-powershell-get-exclusions-variable.png" alt-text="PowerShell output for Get-MpPreference" lightbox="/defender/media/wdav-powershell-get-exclusions-variable.png":::
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).
 
@@ -338,7 +338,7 @@ $WDAVprefs.ExclusionPath
 
 In the following example, the list is split into new lines for each use of the `Add-MpPreference` cmdlet:
 
-:::image type="content" source="../../media/wdav-powershell-get-exclusions-variable.png" alt-text="PowerShell output showing only the entries in the exclusion list" lightbox="../../media/wdav-powershell-get-exclusions-variable.png":::
+:::image type="content" source="/defender/media/wdav-powershell-get-exclusions-variable.png" alt-text="PowerShell output showing only the entries in the exclusion list" lightbox="/defender/media/wdav-powershell-get-exclusions-variable.png":::
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/).
 

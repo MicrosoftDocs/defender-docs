@@ -108,7 +108,7 @@ The procedures in this article first describe how to set the order, and then how
 
    2. Specify the order of sources, separated by a single pipe, for example: `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`, as shown in the following screenshot.
 
-      :::image type="content" source="../../media/wdav-order-update-sources.png" alt-text="Group policy setting listing the order of sources" lightbox="../../media/wdav-order-update-sources.png":::
+      :::image type="content" source="/defender/media/wdav-order-update-sources.png" alt-text="Group policy setting listing the order of sources" lightbox="/defender/media/wdav-order-update-sources.png":::
 
    3. Select **OK**. This action sets the order of protection update sources.
 

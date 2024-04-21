@@ -16,7 +16,8 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices.md"
+          "ThirdPartyNotices.md",
+          "SECURITY.md"
         ]
       }
     ],
@@ -25,7 +26,8 @@
         "files": [
           "**/*.png",
           "**/*.jpg",
-          "**/*.gif"
+          "**/*.gif",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -41,14 +43,27 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/defender/breadcrumb/toc.json",
+      "feedback_system": "Standard",
+      "permissioned-type": "public",
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/security-compliance-and-identity/ct-p/MicrosoftSecurityandCompliance",
       "uhfHeaderId": "MSDocsHeader-MicrosoftDefender",
-      "feedback_system": "None",
-      "contributors_to_exclude": [ 
-        "beccarobins"
+      "titleSuffix": "Microsoft Defender",
+      "searchScope": ["Microsoft Defender"],
+      "contributors_to_exclude": [
+        "dstrome",
+        "shdyas",
+        "rjagiewich",
+        "American-Dipper",
+        "claydetels19",
+        "jborsecnik",
+        "v-stchambers",
+        "Stacyrch140",
+        "garycentric",
+        "alekyaj"
       ]
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "Defender"
+    "dest": "defender"
   }
 }

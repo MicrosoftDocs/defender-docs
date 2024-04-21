@@ -37,7 +37,7 @@ When an incident requires your attention, such as the incidents our experts issu
 
 The **Chat** tab within the Microsoft Defender XDR portal provides you with a space to engage with our experts and further understand the incident, our investigation, and the required actions we provided. You could ask about a malicious executable, malicious attachment, information about activity groups, advanced hunting queries, or any other information that would assist you with the incident resolution.
 
-:::image type="content" source="../../media/xdr/in-portal-xdr-chat.png" alt-text="Screenshot of managed response in-portal chat." lightbox="../../media/xdr/in-portal-xdr-chat.png":::
+:::image type="content" source="/defender/media/xdr/in-portal-xdr-chat.png" alt-text="Screenshot of managed response in-portal chat." lightbox="/defender/media/xdr/in-portal-xdr-chat.png":::
 
 ### Teams chat
 
@@ -45,7 +45,7 @@ Apart from using the in-portal chat, you can also engage in real-time chat conve
 
 Once you turn on chat on Teams, a new team named **Defender Experts team** is created and the Defender Experts Teams app is installed in it. Each incident that requires your attention is posted on this team's **Managed response** channel as a new post. To engage with our experts (for example, ask follow-up questions about the investigation summary or actions published by Defender Experts), use the **Reply** text bar to mention or tag *@Defender Experts* and type your message.
 
-:::image type="content" source="../../media/xdr/teams-chat-managed-response-01.png" alt-text="Screenshot of managed response teams channel." lightbox="../../media/xdr/teams-chat-managed-response-01.png":::
+:::image type="content" source="/defender/media/xdr/teams-chat-managed-response-01.png" alt-text="Screenshot of managed response teams channel." lightbox="/defender/media/xdr/teams-chat-managed-response-01.png":::
 
 **Important reminders when using the Teams chat:**
 

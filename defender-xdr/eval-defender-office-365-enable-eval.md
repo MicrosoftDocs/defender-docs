@@ -30,7 +30,7 @@ This article is [Step 2 of 3](eval-defender-office-365-overview.md) in the proce
 
 Use the following steps to enable the evaluation for Microsoft Defender for Office 365.
 
-:::image type="content" source="../../media/defender/m365-defender-office-eval-enable-steps.png" alt-text="The steps to enable Microsoft Defender for Office 365 in the Microsoft Defender evaluation environment." lightbox="../../media/defender/m365-defender-office-eval-enable-steps.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-office-eval-enable-steps.png" alt-text="The steps to enable Microsoft Defender for Office 365 in the Microsoft Defender evaluation environment." lightbox="/defender/media/defender/m365-defender-office-eval-enable-steps.png":::
 
 - [Step 1: Audit and verify the public MX record](#step-1-audit-and-verify-the-public-mx-record)
 - [Step 2: Audit accepted domains](#step-2-audit-accepted-domains)
@@ -73,21 +73,21 @@ For detailed information, see [Try Microsoft Defender for Office 365](../office-
 
 2. On the *Evaluation mode* page, click **Start evaluation**.
 
-   :::image type="content" source="../../media/mdo-eval/mdo-eval-activate-eval_05.png" alt-text="The Evaluation mode page and the Start evaluation button to click." lightbox="../../media/mdo-eval/mdo-eval-activate-eval_05.png":::
+   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_05.png" alt-text="The Evaluation mode page and the Start evaluation button to click." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_05.png":::
 
 3. In the *Turn on protection* dialog, select **No, I only want reporting**, and then click **Continue**.
 
-   :::image type="content" source="../../media/mdo-eval/mdo-eval-activate-eval_06.png" alt-text="The Turn on protection dialog and the No, I only want reporting option to select." lightbox="../../media/mdo-eval/mdo-eval-activate-eval_06.png":::
+   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_06.png" alt-text="The Turn on protection dialog and the No, I only want reporting option to select." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_06.png":::
 
 4. In the *Select the users you want to include* dialog, select **All users**, and then click **Continue**.
 
-   :::image type="content" source="../../media/mdo-eval/mdo-eval-activate-eval_07.png" alt-text="The Select the users you want to include dialog and the All users option to select." lightbox="../../media/mdo-eval/mdo-eval-activate-eval_07.png":::
+   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_07.png" alt-text="The Select the users you want to include dialog and the All users option to select." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_07.png":::
 
 5. In the *Help us understand your mail flow* dialog, one of the following options is automatically selected based on our detection of the MX record for your domain:
 
    - **I'm only using Microsoft Exchange Online**: The MX records for your domain point to Microsoft 365. There's nothing left to configure, so click **Finish**.
 
-     :::image type="content" source="../../media/mdo-eval/mdo-eval-activate-eval_08a.png" alt-text="The Help us understand your mail flow dialog with the I'm only using Microsoft Exchange Online option selected." lightbox="../../media/mdo-eval/mdo-eval-activate-eval_08a.png":::
+     :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_08a.png" alt-text="The Help us understand your mail flow dialog with the I'm only using Microsoft Exchange Online option selected." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_08a.png":::
 
    - **I'm using a third-party and/or on-premises service provider**: In the upcoming screens, select the vendor name along with the inbound connector that accepts mail from that solution. You also decide if you need an Exchange Online mail flow rule (also known as a transport rule) that skips spam filtering for incoming messages from the third-party protection service or device. When you're finished, click **Finish**.
 

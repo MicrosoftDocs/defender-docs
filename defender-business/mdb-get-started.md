@@ -25,7 +25,7 @@ ms.custom: intro-get-started
 
 The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is your one-stop shop for using and managing Microsoft Defender for Business. It includes callouts to help you get started, cards that surface relevant information, and a navigation bar to give you easy access to various features and capabilities.
 
-:::image type="content" source="../../media/defender-business/mdb-portal-home.png" alt-text="Microsoft Defender portal":::
+:::image type="content" source="/defender/media/defender-business/mdb-portal-home.png" alt-text="Microsoft Defender portal":::
 
 ## The navigation bar
 

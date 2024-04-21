@@ -30,7 +30,7 @@ ms.date: 08/11/2023
 
 In hunting using guided mode, the results of the query appear in the **Results** tab.
 
-![Screenshot of results tab](../../media/guided-hunting/35-query-results.png)
+![Screenshot of results tab](/defender/media/guided-hunting/35-query-results.png)
 
 You can work on the results further by exporting them to a CSV file by selecting **Export**. This downloads the CSV file for your use.
 
@@ -49,7 +49,7 @@ To view more columns:
 1. Select **Customize columns** in the upper right-hand portion of the results view.
 2. From here, select the columns to include in the results view and deselect columns to hide.
 
-   ![Screenshot of list of columns you can add to the results view](../../media/guided-hunting/36-columns.png)
+   ![Screenshot of list of columns you can add to the results view](/defender/media/guided-hunting/36-columns.png)
 
 3. Select **Apply** to view results with the added columns. Use the scroll bars if necessary.
 

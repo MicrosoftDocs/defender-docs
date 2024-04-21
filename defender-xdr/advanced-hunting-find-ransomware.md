@@ -238,7 +238,7 @@ The consolidated query returns the following results:
 - **TotalEvidenceCount**—number of observed signs
 - **UniqueEvidenceCount**—number of types of observed signs
 
-:::image type="content" source="../../media/advanced-hunting-ransomware-query.png" alt-text="An example of a consolidated query for a ransomware activity in the Microsoft Defender portal" lightbox="../../media/advanced-hunting-ransomware-query.png":::
+:::image type="content" source="/defender/media/advanced-hunting-ransomware-query.png" alt-text="An example of a consolidated query for a ransomware activity in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-ransomware-query.png":::
 
 *Query results showing affected devices and counts of various signs of ransomware activity*
 

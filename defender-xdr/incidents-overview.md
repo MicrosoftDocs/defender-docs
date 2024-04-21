@@ -32,7 +32,7 @@ The Microsoft Sentinel and Microsoft Defender services create alerts when they d
 
 Because individual alerts each tell only part of the story, and because manually grouping individual alerts together to gain insight into an attack can be challenging and time-consuming, the unified security operations platform automatically identifies alerts that are related&mdash;from both Microsoft Sentinel and Microsoft Defender XDR&mdash;and aggregates them and their associated information into an incident.
 
-:::image type="content" source="../../media/incidents-overview/incidents.png" alt-text="How Microsoft Defender XDR correlates events from entities into an incident." lightbox="../../media/incidents-overview/incidents.png":::
+:::image type="content" source="/defender/media/incidents-overview/incidents.png" alt-text="How Microsoft Defender XDR correlates events from entities into an incident." lightbox="/defender/media/incidents-overview/incidents.png":::
 
 Grouping related alerts into an incident gives you a comprehensive view of an attack. For example, you can see:
 
@@ -65,7 +65,7 @@ The unified security operations platform in the Microsoft Defender portal includ
 
 You manage incidents from **Investigation & response > Incidents & alerts > Incidents** on the quick launch of the [Microsoft Defender portal](https://security.microsoft.com). Here's an example:
 
-:::image type="content" source="../../media/incidents-overview/incidents-ss-incidents.png" alt-text="The Incidents page in the Microsoft Defender portal." lightbox="../../media/incidents-overview/incidents-ss-incidents.png":::
+:::image type="content" source="/defender/media/incidents-overview/incidents-ss-incidents.png" alt-text="The Incidents page in the Microsoft Defender portal." lightbox="/defender/media/incidents-overview/incidents-ss-incidents.png":::
 
 Selecting an incident name displays the incident page, starting with the entire **attack story** of the incident, including:
 
@@ -75,7 +75,7 @@ Selecting an incident name displays the incident page, starting with the entire 
 
 You can view the asset and other entity details directly from the graph and act on them with response options such as like disabling an account, deleting a file, or isolating a device.
 
-:::image type="content" source="../../media/incidents-overview/incident-summary.png" alt-text="Screenshot that shows the attack story page for an incident in the Microsoft Defender portal." lightbox="../../media/incidents-overview/incident-summary.png":::
+:::image type="content" source="/defender/media/incidents-overview/incident-summary.png" alt-text="Screenshot that shows the attack story page for an incident in the Microsoft Defender portal." lightbox="/defender/media/incidents-overview/incident-summary.png":::
 
 The incident page consists of the following tabs:
 
@@ -112,7 +112,7 @@ The incident page consists of the following tabs:
 
 Here's a workflow example for responding to incidents in Microsoft 365 with the Microsoft Defender portal.
 
-:::image type="content" source="../../media/incidents-overview/incidents-example-workflow.png" alt-text="An example of an incident response workflow for the Microsoft Defender portal." lightbox="../../media/incidents-overview/incidents-example-workflow.png":::
+:::image type="content" source="/defender/media/incidents-overview/incidents-example-workflow.png" alt-text="An example of an incident response workflow for the Microsoft Defender portal." lightbox="/defender/media/incidents-overview/incidents-example-workflow.png":::
 
 On an ongoing basis, identify the highest priority incidents for analysis and resolution in the incident queue and get them ready for response. This is a combination of:
 
@@ -140,7 +140,7 @@ For more information about incident response across Microsoft products, see [thi
 
 Here's an example of integrating security operations (SecOps) processes in the Microsoft Defender portal.
 
-:::image type="content" source="../../media/incidents-overview/incidents-example-operations.png" alt-text="An example of security operations for Microsoft Defender XDR" lightbox="../../media/incidents-overview/incidents-example-operations.png":::
+:::image type="content" source="/defender/media/incidents-overview/incidents-example-operations.png" alt-text="An example of security operations for Microsoft Defender XDR" lightbox="/defender/media/incidents-overview/incidents-example-operations.png":::
 
 Daily tasks can include:
 
@@ -187,7 +187,7 @@ Use this learning module from Microsoft Learn to understand how to use Microsoft
 
 |Training:|Investigate incidents with Microsoft Defender XDR|
 |---|---|
-|![Investigate incidents with Microsoft Defender XDR training icon.](../../media/incidents-overview/m365-defender-address-security-investigation.svg)| Microsoft Defender XDR unifies threat data from multiple services and uses AI to combine them into incidents and alerts. Learn how to minimize the time between an incident and its management for subsequent response and resolution. <p> 27 min - 6 Units |
+|![Investigate incidents with Microsoft Defender XDR training icon.](/defender/media/incidents-overview/m365-defender-address-security-investigation.svg)| Microsoft Defender XDR unifies threat data from multiple services and uses AI to combine them into incidents and alerts. Learn how to minimize the time between an incident and its management for subsequent response and resolution. <p> 27 min - 6 Units |
 
 > [!div class="nextstepaction"]
 > [Start >](/training/modules/defender-investigate-incidents/)

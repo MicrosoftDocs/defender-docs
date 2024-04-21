@@ -66,15 +66,15 @@ File information sent by Safe Documents isn't retained in Defender for Endpoint 
 
 1. In the Microsoft Defender portal, go to the **Safe Attachments** page at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Safe Attachments** in the **Policies** section. Or, to go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
 
-2. On the **Safe Attachments** page, select :::image type="icon" source="../../media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**.
+2. On the **Safe Attachments** page, select :::image type="icon" source="/defender/media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**.
 
 3. In the **Global settings** flyout that opens, confirm or configure the following settings:
-   - **Turn on Safe Documents for Office clients**: Move the toggle to the right to turn on the feature: :::image type="icon" source="../../media/scc-toggle-on.png" border="false":::.
-   - **Allow people to click through Protected View even if Safe Documents identified the file as malicious**: We recommend that you leave this option turned off :::image type="icon" source="../../media/scc-toggle-off.png" border="false":::.
+   - **Turn on Safe Documents for Office clients**: Move the toggle to the right to turn on the feature: :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false":::.
+   - **Allow people to click through Protected View even if Safe Documents identified the file as malicious**: We recommend that you leave this option turned off :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false":::.
 
    When you're finished in the **Global settings** flyout, select **Save**.
 
-   :::image type="content" source="../../media/safe-docs-global-settings.png" alt-text="The Safe Documents settings after selecting Global settings on the Safe Attachments page" lightbox="../../media/safe-docs-global-settings.png":::
+   :::image type="content" source="/defender/media/safe-docs-global-settings.png" alt-text="The Safe Documents settings after selecting Global settings on the Safe Attachments page" lightbox="/defender/media/safe-docs-global-settings.png":::
 
 ### Use Exchange Online PowerShell to configure Safe Documents
 
@@ -120,7 +120,7 @@ To learn more, see [Onboard to the Microsoft Defender for Endpoint service](/mic
 
 To verify that you've enabled and configured Safe Documents, do any of the following steps:
 
-- In the Microsoft Defender portal, go to the **Safe Attachments** page at <https://security.microsoft.com/safeattachmentv2>, select :::image type="icon" source="../../media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**, and verify the **Turn on Safe Documents for Office clients** and **Allow people to click through Protected View even if Safe Documents identifies the file as malicious** settings.
+- In the Microsoft Defender portal, go to the **Safe Attachments** page at <https://security.microsoft.com/safeattachmentv2>, select :::image type="icon" source="/defender/media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**, and verify the **Turn on Safe Documents for Office clients** and **Allow people to click through Protected View even if Safe Documents identifies the file as malicious** settings.
 
 - Run the following command in Exchange Online PowerShell and verify the property values:
 

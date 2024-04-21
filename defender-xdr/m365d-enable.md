@@ -84,7 +84,7 @@ Once the service is provisioned, it adds:
 - [Advanced hunting](advanced-hunting-overview.md) capabilities
 - Threat analytics
 
-:::image type="content" source="../../media/overview-incident.png" alt-text="The navigation pane in the Microsoft Defender portal with Microsoft Defender XDR features" lightbox="../../media/overview-incident.png":::
+:::image type="content" source="/defender/media/overview-incident.png" alt-text="The navigation pane in the Microsoft Defender portal with Microsoft Defender XDR features" lightbox="/defender/media/overview-incident.png":::
 *Microsoft Defender portal with incidents management and other capabilities*
 
 ### Getting Microsoft Defender for Identity data 
