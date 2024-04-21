@@ -296,7 +296,7 @@ Response actions run along the top of a specific device page and include:
 | **Run Antivirus Scan** | Updates Microsoft Defender Antivirus definitions and immediately runs an antivirus scan. Choose between Quick scan or Full scan. |
 | **Collect Investigation Package** | Gathers information about the device. When the investigation is completed, you can download it. |
 | **Restrict app execution** | Prevents applications that aren't signed by Microsoft from running. |
-| **Initiate automated investigation** | Automatically [investigates and remediates threats](../office-365-security/air-about.md). Although you can manually trigger automated investigations to run from this page, [certain alert policies](../../compliance/alert-policies.md#default-alert-policies) trigger automatic investigations on their own. |
+| **Initiate automated investigation** | Automatically [investigates and remediates threats](../office-365-security/air-about.md). Although you can manually trigger automated investigations to run from this page, [certain alert policies](/Microsoft-365/compliance/alert-policies#default-alert-policies) trigger automatic investigations on their own. |
 | **Initiate Live Response Session** | Loads a remote shell on the device for [in-depth security investigations](/microsoft-365/security/defender-endpoint/live-response). |
 | **Isolate device** | Isolates the device from your organization's network while keeping it connected to Microsoft Defender. You can choose to allow Outlook, Teams, and Skype for Business to run while the device is isolated, for communication purposes. |
 | **Ask Defender Experts** |  |

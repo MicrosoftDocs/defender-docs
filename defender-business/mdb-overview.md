@@ -23,12 +23,12 @@ ms.custom: intro-overview
 
 # What is Microsoft Defender for Business?
 
-Defender for Business is an endpoint security solution that was designed especially for the small- and medium-sized business (up to 300 employees). With this endpoint security solution, your company's devices are better protected from ransomware, malware, phishing, and other threats. Defender for Business is available as a standalone subscription and is included in [Microsoft 365 Business Premium](../../business-premium/m365bp-overview.md).
+Defender for Business is an endpoint security solution that was designed especially for the small- and medium-sized business (up to 300 employees). With this endpoint security solution, your company's devices are better protected from ransomware, malware, phishing, and other threats. Defender for Business is available as a standalone subscription and is included in [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview).
 
 This article describes what's included in Defender for Business and provides links to learn more about these features and capabilities.
 
 > [!TIP]
-> To learn more about Microsoft 365 Business Premium, see [Microsoft 365 Business Premium – productivity and cybersecurity for small business](../../business-premium/m365bp-overview.md).
+> To learn more about Microsoft 365 Business Premium, see [Microsoft 365 Business Premium – productivity and cybersecurity for small business](/Microsoft-365/business-premium/m365bp-overview).
 
 ## Video: Enterprise-grade protection for small- and medium-sized businesses
 
@@ -50,7 +50,7 @@ With Defender for Business, you can help protect the devices and data your busin
 
 - **Flexibility for your environment**. Defender for Business can work with your business environment, whether you're using Microsoft Intune or you're brand new to the Microsoft Cloud. Defender for Business works with components that are built into Windows, and with apps for Mac, iOS, and Android devices.
 
-- **Integration with Microsoft 365 Lighthouse, RMM tools, and PSA software**. If you're a Microsoft cloud solution provider (CSP) using [Microsoft 365 Lighthouse](../../lighthouse/m365-lighthouse-overview.md), you can view security incidents and alerts across your customers' tenants (see [Microsoft 365 Lighthouse and Defender for Business](mdb-lighthouse-integration.md)). If you're a Microsoft managed service provider (MSP), you can integrate Defender for Business with your remote monitoring and management (RMM) tools and professional service automation (PSA) software (see [Defender for Business and MSP resources](mdb-partners.md)).
+- **Integration with Microsoft 365 Lighthouse, RMM tools, and PSA software**. If you're a Microsoft cloud solution provider (CSP) using [Microsoft 365 Lighthouse](/Microsoft-365/lighthouse/m365-lighthouse-overview.md), you can view security incidents and alerts across your customers' tenants (see [Microsoft 365 Lighthouse and Defender for Business](mdb-lighthouse-integration.md)). If you're a Microsoft managed service provider (MSP), you can integrate Defender for Business with your remote monitoring and management (RMM) tools and professional service automation (PSA) software (see [Defender for Business and MSP resources](mdb-partners)).
 
 ## How does Defender for Business compare to Microsoft 365 Business Premium?
 
@@ -70,5 +70,5 @@ For more detailed information about what's included in each subscription, see th
 - [Try the interactive guide: Get started with Defender for Business](https://aka.ms/MDB-GetStartedGuide)
 - [Learn more about the simplified configuration process in Defender for Business](mdb-setup-configuration.md)
 - [Find out how to get Defender for Business](get-defender-business.md)
-- [Get an overview of Microsoft 365 Business Premium](../../business-premium/m365bp-overview.md)
+- [Get an overview of Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)
 

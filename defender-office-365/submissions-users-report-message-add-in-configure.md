@@ -38,7 +38,7 @@ Microsoft uses these user-reported messages to improve the effectiveness of emai
 
 The Report Message add-in provides the option to report both spam and phishing messages. The Report Phishing add-in provides the option to report phishing messages only.
 
-Admins can install and enable the add-ins for the organization. Both add-ins are available through [Centralized Deployment](../../admin/manage/centralized-deployment-of-add-ins.md). Individual users can install the add-ins for themselves.
+Admins can install and enable the add-ins for the organization. Both add-ins are available through [Centralized Deployment](/Microsoft-365/admin/manage/centralized-deployment-of-add-ins). Individual users can install the add-ins for themselves.
 
 After the add-in is installed and enabled, users see the following icons based on their Outlook client:
 
@@ -84,7 +84,7 @@ After the add-in is installed and enabled, users see the following icons based o
   - [Exchange Online permissions](/Exchange/permissions-exo/permissions-exo): Membership in the **Organization Management** role group.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator** role gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
-- For organizational installs, the organization needs to be configured to use OAuth authentication. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](../../admin/manage/centralized-deployment-of-add-ins.md).
+- For organizational installs, the organization needs to be configured to use OAuth authentication. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](/Microsoft-365/admin/manage/centralized-deployment-of-add-ins).
 
 - The Report Message and Report Phishing add-ins work with most Microsoft 365 subscriptions and the following products:
   - Outlook on the web
@@ -154,7 +154,7 @@ Install and configure the Report Message or Report Phishing add-ins for the orga
      - **Entire organization**
      - **Specific users/groups**: Find and select users and groups in the search box. After each selection, the user or group appears in the **To be added** section that appears below the search box. To remove a selection, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false"::: on the entry.
 
-   - **Email notification**: By default, **Send email notification to assigned users** is selected. Select **View email sample** to open [Add-in deployment email alerts](../../admin/manage/add-in-deployment-email-alerts.md).
+   - **Email notification**: By default, **Send email notification to assigned users** is selected. Select **View email sample** to open [Add-in deployment email alerts](/Microsoft-365/admin/manage/add-in-deployment-email-alerts).
 
    > [!div class="mx-imgBorder"]
    > :::image type="content" source="/defender/media/microsoft-365-admin-center-deploy-new-app-add-users.png" alt-text="The Add users page of Deploy New App." lightbox="/defender/media/microsoft-365-admin-center-deploy-new-app-add-users.png":::

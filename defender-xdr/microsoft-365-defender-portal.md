@@ -171,7 +171,7 @@ Keep exploring the features and capabilities in the Defender portal:
 - [The Action center](m365d-action-center.md)
 - [Hunt for threats across devices, emails, apps, and identities](./advanced-hunting-query-emails-devices.md)
 - [Custom detection rules](./custom-detection-rules.md)
-- [Email & collaboration alerts](../../compliance/alert-policies.md#default-alert-policies)
+- [Email & collaboration alerts](/Microsoft-365/compliance/alert-policies#default-alert-policies)
 - [Create a phishing attack simulation](../office-365-security/attack-simulation-training-simulations.md) and [create a payload for training your teams](/microsoft-365/security/office-365-security/attack-simulation-training-payloads)
 
 To explore capabilities related to the Microsoft Sentinel integration with Microsoft Defender XDR in the unified security operations platform (preview), see [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690).

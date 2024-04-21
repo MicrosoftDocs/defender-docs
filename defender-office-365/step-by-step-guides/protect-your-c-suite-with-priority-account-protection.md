@@ -46,7 +46,7 @@ Priority account protection helps IT and security teams ensure a high quality of
 1. Select **Priority account protection**.
 1. Make sure protection is set to **On**.
 
-To learn what priority account tags are see [Manage and monitor priority accounts - Microsoft 365 admin | Microsoft Docs](../../../admin/setup/priority-accounts.md).
+To learn what priority account tags are see [Manage and monitor priority accounts - Microsoft 365 admin | Microsoft Docs](..//Microsoft-365/admin/setup/priority-accounts).
 
 ## Next Steps
 
