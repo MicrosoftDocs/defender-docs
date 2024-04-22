@@ -30,9 +30,9 @@ ms.date: 03/28/2024
 
 Advanced hunting is a query-based threat hunting tool that lets you explore up to 30 days of raw data. You can proactively inspect events in your network to locate threat indicators and entities. The flexible access to data enables unconstrained hunting for both known and potential threats.
 
-Advanced hunting supports two modes, guided and advanced. Use [guided mode](advanced-hunting-query-builder.md) if you are not yet familiar with Kusto Query Language (KQL) or prefer the convenience of a query builder. Use [advanced mode](advanced-hunting-query-language.md) if you are comfortable using KQL to create queries from scratch. 
+Advanced hunting supports two modes, guided and advanced. Use [guided mode](/defender-xdr/advanced-hunting-query-builder) if you are not yet familiar with Kusto Query Language (KQL) or prefer the convenience of a query builder. Use [advanced mode](/defender-xdr/advanced-hunting-query-language) if you are comfortable using KQL to create queries from scratch. 
 
-**To start hunting, read [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](advanced-hunting-modes.md).**
+**To start hunting, read [Choose between guided and advanced modes to hunt in Microsoft Defender XDR](/defender-xdr/advanced-hunting-modes).**
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4G6DO]
 
@@ -45,7 +45,7 @@ Advanced hunting supports queries that check a broader data set coming from:
 - Microsoft Defender for Cloud Apps
 - Microsoft Defender for Identity
 
-To use advanced hunting, [turn on Microsoft Defender XDR](m365d-enable.md).
+To use advanced hunting, [turn on Microsoft Defender XDR](/defender-xdr/m365d-enable).
 
 
 For more information on advanced hunting in Microsoft Defender for Cloud Apps data, see the [video](https://www.microsoft.com/en-us/videoplayer/embed/RWFISa). 
@@ -53,9 +53,9 @@ For more information on advanced hunting in Microsoft Defender for Cloud Apps da
 
 
 ## Get access
-To use advanced hunting or other [Microsoft Defender XDR](microsoft-365-defender.md) capabilities, you need an appropriate role in Microsoft Entra ID. [Read about required roles and permissions for advanced hunting](custom-roles.md).
+To use advanced hunting or other [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender) capabilities, you need an appropriate role in Microsoft Entra ID. [Read about required roles and permissions for advanced hunting](/defender-xdr/custom-roles).
 
-Also, your access to endpoint data is determined by role-based access control (RBAC) settings in Microsoft Defender for Endpoint. [Read about managing access to Microsoft Defender XDR](m365d-permissions.md).
+Also, your access to endpoint data is determined by role-based access control (RBAC) settings in Microsoft Defender for Endpoint. [Read about managing access to Microsoft Defender XDR](/defender-xdr/m365d-permissions).
 
 
 ## Data freshness and update frequency
@@ -73,16 +73,16 @@ Advanced hunting data uses the UTC (Universal Time Coordinated) timezone.
 Queries should be created in UTC.
 
 ### Results
-Advanced hunting results are converted to the [timezone](m365d-time-zone.md) set in Microsoft Defender XDR. 
+Advanced hunting results are converted to the [timezone](/defender-xdr/m365d-time-zone) set in Microsoft Defender XDR. 
 
 
 
 
 ## Related topics
-- [Choose between guided and advanced hunting modes](advanced-hunting-modes.md)
-- [Build hunting queries using guided mode](advanced-hunting-query-builder.md)
-- [Learn the query language](advanced-hunting-query-language.md)
+- [Choose between guided and advanced hunting modes](/defender-xdr/advanced-hunting-modes)
+- [Build hunting queries using guided mode](/defender-xdr/advanced-hunting-query-builder)
+- [Learn the query language](/defender-xdr/advanced-hunting-query-language.)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)
-- [Custom detections overview](custom-detections-overview.md)
+- [Custom detections overview](/defender-xdr/custom-detections-overview)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

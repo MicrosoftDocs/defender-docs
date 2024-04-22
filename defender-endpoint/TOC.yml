@@ -326,7 +326,7 @@
     - name: Create an onboarding or offboarding notification rule
       href: onboarding-notification.md
     - name: Manage Microsoft Defender for Endpoint configuration settings on devices with Microsoft Intune
-      href: mde-security-integration.md
+      href: api/mde-security-integration.md
     - name: Manage Defender for Endpoint P1/P2 across devices
       href: defender-endpoint-subscription-settings.md
     - name: Onboarding using Microsoft Configuration Manager
@@ -919,7 +919,7 @@
       - name: Reporting
         items:
         - name: Power BI - How to use API - Samples
-          href: api-power-bi.md
+          href: api/api/api-power-bi.md
         - name: Threat protection reports
           href: threat-protection-reports.md
         - name: Monthly security summary
@@ -1028,7 +1028,7 @@
           - name: Microsoft Defender for Endpoint API license and terms
             href: /legal/microsoft-365/api-terms-of-use
           - name: Access the Microsoft Defender for Endpoint APIs
-            href: api/apis-intro.md
+            href: api/api/tvm-supported-os
           - name: Hello World
             href: api/api-hello-world.md
           - name: Get access with application context
@@ -1184,11 +1184,11 @@
             - name: Live response library methods and properties
               href: live-response-library-methods.md
             - name: List library files
-              href: list-library-files.md
+              href: api/list-library-files.md
             - name: Upload to live response library
-              href: upload-library.md
+              href: api/upload-library.md
             - name: Delete from library
-              href: delete-library.md
+              href: api/delete-library.md
 
           - name: Machine
             items:
@@ -1261,7 +1261,7 @@
           - name: Recommendation
             items:
             - name: Recommendation methods and properties
-              href: recommendation.md
+              href: api/recommendation.md
             - name: List all recommendations
               href: api/get-all-recommendations.md
             - name: Get recommendation by ID
@@ -1347,7 +1347,7 @@
           - name: Power Automate
             href: api-microsoft-flow.md
           - name: Power BI
-            href: api/api-power-bi.md
+            href: api/api/api-power-bi.md
           - name: Advanced Hunting using Python
             href: api/run-advanced-query-sample-python.md
           - name: Advanced Hunting using PowerShell
@@ -1380,7 +1380,7 @@
         - name: Connected applications
           href: connected-applications.md
         - name: API explorer
-          href: api-explorer.md
+          href: api/api-explorer.md
     - name: Managed security service provider (MSSP) integration
       items:
       - name: Configure managed security service provider integration
@@ -1392,7 +1392,7 @@
       - name: Configure alert notifications
         href: configure-mssp-notifications.md
       - name: Get partner application access
-        href: exposed-apis-create-app-partners.md
+        href: api/exposed-apis-create-app-partners.md
       - name: Fetch alerts from customer tenant
         href: ./api/fetch-alerts-mssp.md
       - name: Managed security service provider opportunity

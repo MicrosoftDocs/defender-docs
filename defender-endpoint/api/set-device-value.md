@@ -37,7 +37,7 @@ ms.date: 04/17/2024
 ## API description
 
 Set the device value of a specific [Machine](machine.md).<br>
-See [assign device values](../tvm-assign-device-value.md) for more information.
+See [assign device values](..//defender-vulnerability-management/tvm-assign-device-value) for more information.
 
 ## Limitations
 

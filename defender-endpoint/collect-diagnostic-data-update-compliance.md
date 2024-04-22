@@ -31,7 +31,7 @@ This article describes how to collect diagnostic data that's used by Microsoft s
 > [!NOTE]
 > For performance-specific issues related to Microsoft Defender Antivirus, see: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
-Before attempting this process, ensure you have read [Troubleshoot Microsoft Defender Antivirus reporting](advanced-threat-protection-configure.md), met all require prerequisites, and taken any other suggested troubleshooting steps.
+Before attempting this process, ensure you have read [Troubleshoot Microsoft Defender Antivirus reporting](/mem/intune/protect/advanced-threat-protection-configure), met all require prerequisites, and taken any other suggested troubleshooting steps.
 
 ## Obtain the diagnostic file
 
@@ -71,6 +71,6 @@ On at least two devices that aren't reporting or showing up in Update Compliance
 
 ## See also
 
-- [Troubleshoot Microsoft Defender Antivirus reporting](advanced-threat-protection-configure.md)
+- [Troubleshoot Microsoft Defender Antivirus reporting](/mem/intune/protect/advanced-threat-protection-configure)
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

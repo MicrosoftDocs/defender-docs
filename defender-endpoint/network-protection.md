@@ -253,7 +253,7 @@ Using this data you can make an informed decision on enabling Network protection
 
 For information about how to report false positives see [Report false positives](web-protection-overview.md#report-false-positives).
 
-For details on how to create your own Power BI reports, see [Create custom reports using Power BI](api-power-bi.md).
+For details on how to create your own Power BI reports, see [Create custom reports using Power BI](api/api-power-bi.md).
 
 ## Configuring network protection
 

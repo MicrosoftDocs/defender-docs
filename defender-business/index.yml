@@ -85,7 +85,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: How to get help or contact support
-            url: get-help-support.md
+            url: /microsoft-365/admin/get-help-support
           - text: Frequently asked questions
             url: mdb-faq.yml
           - text: Microsoft Security Intelligence

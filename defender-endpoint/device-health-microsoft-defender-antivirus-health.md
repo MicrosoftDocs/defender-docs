@@ -155,7 +155,7 @@ Exported reports capture information based on your entry point into the details 
 
 For information on exporting using API, see the following articles:
 
-- [Export device antivirus health report](device-health-export-antivirus-health-report-api.md)
+- [Export device antivirus health report](api/device-health-export-antivirus-health-report-api.md)
 - [Export device antivirus health details API methods and properties](device-health-api-methods-properties.md)
 
 > [!IMPORTANT]

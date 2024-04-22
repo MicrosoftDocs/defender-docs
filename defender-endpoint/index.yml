@@ -82,7 +82,7 @@ landingContent:
         - text: Automated investigation and response (AIR)
           url: automated-investigations.md
         - text: Advanced hunting
-          url: advanced-hunting-overview.md
+          url: /defender/advanced-hunting-overview
         - text: Microsoft Threat Experts
           url: microsoft-threat-experts.md
         - text: Threat analytics
