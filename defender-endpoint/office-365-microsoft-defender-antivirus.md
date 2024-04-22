@@ -36,7 +36,7 @@ ms.date: 10/10/2023
 
 You might already know that:
 
-- **Microsoft Defender Antivirus protects your Windows device from software threats, such as viruses, malware, and spyware**. Microsoft Defender Antivirus is your complete, ongoing protection, built into Windows 10 and Windows 11, and ready to go. [Microsoft Defender Antivirus is your next-generation protection](./microsoft-defender-antivirus-in-windows-10.md). 
+- **Microsoft Defender Antivirus protects your Windows device from software threats, such as viruses, malware, and spyware**. Microsoft Defender Antivirus is your complete, ongoing protection, built into Windows 10 and Windows 11, and ready to go. [Microsoft Defender Antivirus is your next-generation protection](./microsoft-defender-antivirus-windows.md). 
 
 - **Office 365 includes anti-malware, anti-spam, and anti-phishing protection**. With your Office 365 subscription, you get premium email and calendars, Office apps, 1 TB of cloud storage (via OneDrive), and advanced security across all your devices. This is true for home and business users. And if you're a business user, and your organization is using Office 365 E5, you get even more protection through Microsoft Defender for Office 365. [Microsoft Defender for Office 365 security product overview](../office-365-security/mdo-about.md).
 
@@ -52,7 +52,7 @@ Read the following sections to learn more.
 
 ## Ransomware protection and recovery
 
-When you save your files to [OneDrive](/onedrive), and [Microsoft Defender Antivirus](./microsoft-defender-antivirus-in-windows-10.md) detects a ransomware threat on your device, the following things occur:
+When you save your files to [OneDrive](/onedrive), and [Microsoft Defender Antivirus](./microsoft-defender-antivirus-windows.md) detects a ransomware threat on your device, the following things occur:
 
 1. **You are told about the threat**. (If your organization is using [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), your security operations team is notified, too.)
 

@@ -326,7 +326,7 @@
     - name: Create an onboarding or offboarding notification rule
       href: onboarding-notification.md
     - name: Manage Microsoft Defender for Endpoint configuration settings on devices with Microsoft Intune
-      href: security-config-management.md
+      href: mde-security-integration.md
     - name: Manage Defender for Endpoint P1/P2 across devices
       href: defender-endpoint-subscription-settings.md
     - name: Onboarding using Microsoft Configuration Manager

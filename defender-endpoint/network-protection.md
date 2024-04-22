@@ -270,19 +270,19 @@ Network protection works best with [Microsoft Defender for Endpoint](microsoft-d
 
 When network protection blocks a connection, a notification is displayed from the Action Center. Your security operations team can [customize the notification](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) with your organization's details and contact information. In addition, individual attack surface reduction rules can be enabled and customized to suit certain techniques to monitor.
 
-You can also use [audit mode](audit-windows-defender.md) to evaluate how network protection would impact your organization if it were enabled.
+You can also use [audit mode](overview-attack-surface-reduction.md) to evaluate how network protection would impact your organization if it were enabled.
 
 <a name='review-network-protection-events-in-the-microsoft-365-defender-portal'></a>
 
 ## Review network protection events in the Microsoft Defender portal
 
-Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md). You can view these details in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) in the [alerts queue](review-alerts.md) or by using [advanced hunting](advanced-hunting-overview.md). If you're using [audit mode](audit-windows-defender.md), you can use advanced hunting to see how network protection settings would affect your environment if they were enabled.
+Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md). You can view these details in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) in the [alerts queue](review-alerts.md) or by using [advanced hunting](advanced-hunting-overview.md). If you're using [audit mode](overview-attack-surface-reduction.md), you can use advanced hunting to see how network protection settings would affect your environment if they were enabled.
 
 ## Review network protection events in Windows Event Viewer
 
 You can review the Windows event log to see events that are created when network protection blocks (or audits) access to a malicious IP or domain:
 
-1. [Copy the XML directly](event-views.md).
+1. [Copy the XML directly](overview-attack-surface-reduction.md).
 
 2. Select **OK**.
 

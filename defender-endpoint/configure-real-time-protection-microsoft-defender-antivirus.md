@@ -127,7 +127,7 @@ For the most current settings, get the latest ADMX files in your central store. 
 ## See also
 
 - [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md)
-- [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-in-windows-10.md)
+- [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 
 If you're looking for antivirus-related information for other platforms, see:
 - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)

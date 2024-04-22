@@ -270,7 +270,7 @@ You might also use [limited periodic scanning](limited-periodic-scanning-microso
 
 ## See also
 
-- [Microsoft Defender Antivirus on Windows clients](microsoft-defender-antivirus-in-windows-10.md)
+- [Microsoft Defender Antivirus on Windows clients](microsoft-defender-antivirus-windows.md)
 - [EDR in block mode](edr-in-block-mode.md)
 - [Learn about Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

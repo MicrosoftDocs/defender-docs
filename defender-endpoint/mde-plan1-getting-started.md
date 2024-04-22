@@ -169,7 +169,7 @@ Scroll down to see all the views in the Web protection report. Some views includ
 
 ## Next steps
 
-- [Manage Microsoft Defender for Endpoint Plan 1](manage-mde-post-migration.md)
+- [Manage Microsoft Defender for Endpoint Plan 1](preferences-setup.md)
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

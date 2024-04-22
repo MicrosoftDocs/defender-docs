@@ -107,9 +107,9 @@ For reporting, Windows events comprise several security event sources, including
 ## See also
 
 - [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md)
-- [Deploy and enable Microsoft Defender Antivirus protection](deploy-microsoft-defender-antivirus.md)
+- [Deploy and enable Microsoft Defender Antivirus protection](deploy-manage-report-microsoft-defender-antivirus.md)
 - [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md)
-- [Monitor and report on Microsoft Defender Antivirus protection](report-monitor-microsoft-defender-antivirus.md)
+- [Monitor and report on Microsoft Defender Antivirus protection](deploy-manage-report-microsoft-defender-antivirus.md)
 - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)

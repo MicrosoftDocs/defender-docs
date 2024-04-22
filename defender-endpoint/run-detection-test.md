@@ -58,7 +58,7 @@ The Command Prompt window closes automatically. If successful, a new alert appea
 
 ## Related articles
 
-- [Onboard Windows devices](configure-endpoints.md)
+- [Onboard Windows devices](onboard-windows-client.md)
 - [Onboard servers](configure-server-endpoints.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding)
 

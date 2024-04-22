@@ -67,5 +67,5 @@ Read the walkthrough document provided with each attack scenario. Each document 
 ## Related topics
 
 - [Onboard devices](onboard-configure.md)
-- [Onboard Windows devices](configure-endpoints.md)
+- [Onboard Windows devices](onboard-windows-client.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

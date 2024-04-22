@@ -294,7 +294,7 @@ For Auto-IR testing labs, navigate to **Microsoft Defender XDR** \> **Evaluation
 
 #### Test Block at First Sight
 
-Follow instructions in [Microsoft Defender for Endpoint Block at First Sight (BAFS) demonstration](defender-endpoint-demonstration-block-at-first-sight-bafs.md).
+Follow instructions in [Microsoft Defender for Endpoint Block at First Sight (BAFS) demonstration](defender-endpoint-demonstrations.md).
 
 #### Test SmartScreen
 

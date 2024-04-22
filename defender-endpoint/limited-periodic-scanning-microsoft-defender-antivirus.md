@@ -53,7 +53,7 @@ Underneath the name of a non-Microsoft antivirus product, a link appears as **Mi
 ## Related articles
 
 - [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md)
-- [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-in-windows-10.md)
+- [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

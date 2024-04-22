@@ -39,7 +39,7 @@ Our custom policies give admins the ability to decide what items their users can
 1. It's **strongly recommended** that malware and high confidence phish items be assigned to **AdminOnlyPolicy**, regular confidence phish items be assigned *limited access with request release*, while bulk and spam can be left as full access for users.
 
 > [!IMPORTANT]
-> For more information on how granular custom policies can be created, see [Quarantine policies - Office 365 | Microsoft Docs](../../office-365-security/quarantine-policies.md).
+> For more information on how granular custom policies can be created, see [Quarantine policies - Office 365 | Microsoft Docs](/defender-office-365/quarantine-policies).
 
 ## Assigning quarantine policies and enabling notification with organization branding
 
@@ -56,7 +56,7 @@ When your security team has decided on which categories of items that users can 
 1. Move on to the **Review** section and select the **Confirm** button to create the new policy.
 1. Repeat these same steps for the other policies: **Anti-phishing policy**, **Anti-Malware policy**, and **Safe Attachment policy**.
 > [!TIP]
-> For more detailed information on what you've learned so far, see [Configure spam filter policies - Office 365](../../office-365-security/anti-spam-policies-configure.md)| [Configure anti-phishing policies in EOP](../../office-365-security/anti-phishing-policies-eop-configure.md) | [Configure anti-malware policies](../../office-365-security/anti-malware-policies-configure.md)| [Set up Safe Attachments policies in Microsoft Defender for Office 365](../../office-365-security/safe-attachments-policies-configure.md)
+> For more detailed information on what you've learned so far, see [Configure spam filter policies - Office 365](/defender-office-365/anti-spam-policies-configure.md)| [Configure anti-phishing policies in EOP](/defender-offfice-365/anti-phishing-policies-eop-configure.md) | [Configure anti-malware policies](/defender-offfice-365/anti-malware-policies-configure.md)| [Set up Safe Attachments policies in Microsoft Defender for Office 365](/defender-offfice-365/safe-attachments-policies-configure)
 
 ## Next Steps
 
@@ -65,5 +65,5 @@ When your security team has decided on which categories of items that users can 
 
 ## More information
 
-Learn more about organization branding and notification settings here [Quarantine policies](../../office-365-security/quarantine-policies.md).
+Learn more about organization branding and notification settings here [Quarantine policies](/defender-office-365/quarantine-policies).
 

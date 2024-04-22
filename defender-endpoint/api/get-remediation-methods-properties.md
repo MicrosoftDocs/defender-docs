@@ -39,7 +39,7 @@ ms.date: 04/24/2021
 
 [!Include[Improve request performance](../../includes/improve-request-performance.md)]
 
-The API response contains [Microsoft Defender Vulnerability Management](../next-gen-threat-and-vuln-mgt.md) remediation activities that have been created in your tenant.
+The API response contains [Microsoft Defender Vulnerability Management](../defender-vulnerability-management.md) remediation activities that have been created in your tenant.
 
 ## Methods
 
@@ -92,7 +92,7 @@ vendorId|String|Related vendor name
 
 - [List exposed devices of one remediation activity](get-remediation-exposed-devices-activities.md)
 
-- [Microsoft Defender Vulnerability Management](../next-gen-threat-and-vuln-mgt.md)
+- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management.md)
 
 - [Vulnerabilities in your organization](../tvm-weaknesses.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

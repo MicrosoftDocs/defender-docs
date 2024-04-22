@@ -64,7 +64,7 @@ sections:
       - question: |
           What rules to enable? All, or can I turn on individual rules?
         answer: |
-          To help you figure out what's best for your environment, we recommended that you enable attack surface reduction rules in [audit mode](audit-windows-defender.md). With this approach, you can determine the possible effect to your organization. For example, your line-of-business applications.
+          To help you figure out what's best for your environment, we recommended that you enable attack surface reduction rules in [audit mode](overview-attack-surface-reduction.md). With this approach, you can determine the possible effect to your organization. For example, your line-of-business applications.
 
       - question: |
           How do attack surface reduction rules exclusions work?
@@ -214,7 +214,7 @@ sections:
           See also
         answer: |
           * [Attack surface reduction overview](attack-surface-reduction.md)
-          * [Evaluate attack surface reduction rules](evaluate-attack-surface-reduction.md)
+          * [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
           * [Attack surface reduction rules deployment Step 3: Implement attack surface reduction rules](attack-surface-reduction-rules-deployment-implement.md)
           * [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
           * [Compatibility of Microsoft Defender Antivirus with other antivirus/antimalware](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility)

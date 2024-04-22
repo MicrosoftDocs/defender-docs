@@ -56,7 +56,7 @@ landingContent:
       - linkListType: deploy
         links:
           - text: Deployment guide
-            url: deployment-phases.md
+            url: mde-planning-guide.md
           - text: Onboard supported devices
             url: onboard-configure.md
           - text: Set up and configure Defender for Endpoint Plan 1

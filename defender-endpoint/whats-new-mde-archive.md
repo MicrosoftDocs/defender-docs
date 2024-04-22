@@ -229,9 +229,9 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## June 2019
 
-- [Threat & Vulnerability Management](next-gen-threat-and-vuln-mgt.md) <BR> A new built-in capability that uses a risk-based approach to the discovery, prioritization, and remediation of endpoint vulnerabilities and misconfigurations.
+- [Threat & Vulnerability Management](defender-vulnerability-management.md) <BR> A new built-in capability that uses a risk-based approach to the discovery, prioritization, and remediation of endpoint vulnerabilities and misconfigurations.
 
-- [Device health and compliance report](machine-reports.md)  The device health and compliance report provides high-level information about the devices in your organization.
+- [Device health and compliance report](device-health-reports.md)  The device health and compliance report provides high-level information about the devices in your organization.
 
 ## May 2019
 

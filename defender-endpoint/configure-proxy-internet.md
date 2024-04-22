@@ -184,8 +184,8 @@ See [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/
 
 - [Disconnected environments, proxies and Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/disconnected-environments-proxies-and-microsoft-defender-for/ba-p/3710502)
 - [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md)
-- [Onboard Windows devices](configure-endpoints.md)
+- [Onboard Windows devices](onboard-windows-client.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
-- [Onboard devices without Internet access to Microsoft Defender for Endpoint](onboard-offline-machines.md)
+- [Onboard devices without Internet access to Microsoft Defender for Endpoint](configure-environment.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

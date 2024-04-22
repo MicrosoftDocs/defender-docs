@@ -38,7 +38,7 @@ You can schedule updates for your endpoints by:
 - Specifying the interval to check for protection updates
 - Specifying the time to check for protection updates
 
-You can also randomize the times when each endpoint checks and downloads protection updates. See the [Schedule scans](scheduled-catch-up-scans-microsoft-defender-antivirus.md) topic for more information.
+You can also randomize the times when each endpoint checks and downloads protection updates. See the [Schedule scans](schedule-antivirus-scans.md) topic for more information.
 
 ## Use Configuration Manager to schedule protection updates
 
@@ -118,5 +118,5 @@ See the following for more information and allowed parameters:
 - [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md)
 - [Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md)
 - [Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
-- [Microsoft Defender Antivirus in Windows 10 and 11](microsoft-defender-antivirus-in-windows-10.md)
+- [Microsoft Defender Antivirus in Windows 10 and 11](microsoft-defender-antivirus-windows.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

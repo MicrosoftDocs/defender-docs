@@ -289,6 +289,6 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryExpor
 
 Other related
 
-- [Microsoft Defender Vulnerability Management](../next-gen-threat-and-vuln-mgt.md)
+- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management.md)
 - [Vulnerabilities in your organization](../tvm-weaknesses.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

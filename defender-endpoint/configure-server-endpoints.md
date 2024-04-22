@@ -360,7 +360,7 @@ For other Windows server versions, you have two options to offboard Windows serv
 ## Related articles
 
 - [Onboard previous versions of Windows](onboard-downlevel.md)
-- [Onboard Windows 10 devices](configure-endpoints.md)
+- [Onboard Windows 10 devices](onboard-windows-client.md)
 - [Onboard non-Windows devices](configure-endpoints-non-windows.md)
 - [Configure proxy and Internet connectivity settings](configure-proxy-internet.md)
 - [Run a detection test on a newly onboarded Defender for Endpoint device](run-detection-test.md)

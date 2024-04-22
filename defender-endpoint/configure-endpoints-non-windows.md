@@ -68,7 +68,7 @@ You can also offboard non-Windows devices by disabling the third-party integrati
 
 ## Related topics
 
-- [Onboard Windows devices](configure-endpoints.md)
+- [Onboard Windows devices](onboard-windows-client.md)
 - [Onboard servers](configure-server-endpoints.md)
 - [Configure proxy and Internet connectivity settings](configure-proxy-internet.md)
 - [Troubleshooting Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)

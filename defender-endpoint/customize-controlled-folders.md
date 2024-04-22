@@ -41,7 +41,7 @@ Controlled folder access helps you protect valuable data from malicious apps and
 - [Customize the notification](#customize-the-notification)
 
 > [!IMPORTANT]
-> Controlled folder access monitors apps for activities that are detected as malicious. Sometimes, legitimate apps are blocked from making changes to your files. If controlled folder access impacts your organization's productivity, you might consider running this feature in [audit mode](audit-windows-defender.md) to fully assess the impact.
+> Controlled folder access monitors apps for activities that are detected as malicious. Sometimes, legitimate apps are blocked from making changes to your files. If controlled folder access impacts your organization's productivity, you might consider running this feature in [audit mode](overview-attack-surface-reduction.md) to fully assess the impact.
 
 ## Protect additional folders
 
