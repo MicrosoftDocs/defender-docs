@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 08/28/2023
+ms.date: 04/08/2024
 ---
 
 # Manage the sources for Microsoft Defender Antivirus protection updates
@@ -69,7 +69,7 @@ There are five locations where you can specify where an endpoint should obtain u
 
 To ensure the best level of protection, Microsoft Update allows for rapid releases, which means smaller downloads on a frequent basis. The Windows Server Update Service, Microsoft Endpoint Configuration Manager, Microsoft security intelligence updates, and platform updates sources deliver less frequent updates. Thus, the delta might be larger, resulting in larger downloads.
 
-Platform updates contain engine updates and are released on a monthly cadence. Security intelligence updates are also delivered multiple times a day, but this package doesn't contain an engine. See [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).
+Platform updates and engine updates are released on a monthly cadence. Security intelligence updates are delivered multiple times a day, but this delta package doesn't contain an engine update. See [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).
 
 
 > [!IMPORTANT]
@@ -108,7 +108,7 @@ The procedures in this article first describe how to set the order, and then how
 
    2. Specify the order of sources, separated by a single pipe, for example: `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`, as shown in the following screenshot.
 
-      :::image type="content" source="../media/wdav-order-update-sources.png" alt-text="Group policy setting listing the order of sources" lightbox="../media/wdav-order-update-sources.png":::
+      :::image type="content" source="/defender/media/wdav-order-update-sources.png" alt-text="Group policy setting listing the order of sources" lightbox="/defender/media/wdav-order-update-sources.png":::
 
    3. Select **OK**. This action sets the order of protection update sources.
 
@@ -282,7 +282,7 @@ Set up a network file share (UNC/mapped drive) to download security intelligence
 - [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md)
 - [Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md)
 - [Manage updates for mobile devices and VMs](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
-- [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-in-windows-10.md)
+- [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 
 
 

@@ -1,14 +1,9 @@
 ---
 title: Rerun queries in query history
 description: Learn about the query history tab in advanced hunting 
-keywords: advanced hunting, threat hunting, cyber threat hunting, Microsoft Defender XDR, microsoft 365, m365, search, query, telemetry, schema reference, kusto, table, column, data type, security events, antivirus, query history, features
-search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords: 
   - NOCSH
 ms.author: maccruz
@@ -39,7 +34,7 @@ Your previous queries appear in the **Query history** tab in the lower half of t
 
 To view your query history, select the **Query history** tab. 
 
-:::image type="content" source="./media/advanced-hunting-query-history.png" alt-text="Screenshot of the query history pane in advanced hunting" lightbox="./media/advanced-hunting-query-history.png":::
+:::image type="content" source="/defender/media/advanced-hunting-query-history.png" alt-text="Screenshot of the query history pane in advanced hunting" lightbox="/defender/media/advanced-hunting-query-history.png":::
 
 Your recent queries appear in descending order of when you last ran them. The query history contains up to 30 queries from the last 28 days.
 
@@ -57,7 +52,7 @@ Select **Customize columns** to hide any of the columns in your view.
 
 To use any of your previous queries, select the query. The **Run query** and **Use in editor** options then appear. 
 
-:::image type="content" source="./media/advanced-hunting-query-history-functions.png" alt-text="Screenshot of the query history functions in advanced hunting" lightbox="./media/advanced-hunting-query-history-functions.png":::
+:::image type="content" source="/defender/media/advanced-hunting-query-history-functions.png" alt-text="Screenshot of the query history functions in advanced hunting" lightbox="/defender/media/advanced-hunting-query-history-functions.png":::
 
 Select **Run query** to load and run the query in the query editor. Select **Use in editor** to load the query in the editor, where you can then refine it further.
 

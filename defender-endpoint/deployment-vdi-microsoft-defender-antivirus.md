@@ -142,7 +142,7 @@ Scheduled scans run in addition to [real-time protection and scanning](configure
 
 The start time of the scan itself is still based on the scheduled scan policy (**ScheduleDay**, **ScheduleTime**, and **ScheduleQuickScanTime**). Randomization will cause Microsoft Defender Antivirus to start a scan on each machine within a four-hour window from the time set for the scheduled scan.
 
-See [Schedule scans](scheduled-catch-up-scans-microsoft-defender-antivirus.md) for other configuration options available for scheduled scans.
+See [Schedule scans](schedule-antivirus-scans.md) for other configuration options available for scheduled scans.
 
 ## Use quick scans
 

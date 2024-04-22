@@ -72,7 +72,7 @@ Once the Storage account is created, you'll need to:
 
 - A blob container is created for each event type:
 
-  :::image type="content" source="../defender-endpoint/images/storage-account-event-schema.png" alt-text="Example of a blob container" lightbox="../defender-endpoint/images/storage-account-event-schema.png":::
+  :::image type="content" source="/defender-endpoint/media/storage-account-event-schema.png" alt-text="Example of a blob container" lightbox="/defender-endpoint/media/storage-account-event-schema.png":::
 
 - The schema of each row in a blob is the following JSON:
 
@@ -89,7 +89,7 @@ Once the Storage account is created, you'll need to:
 
 - Each row contains the event name, the time Defender for Endpoint received the event, the tenant it belongs (you'll only get events from your tenant), and the event in JSON format in a property called "properties".
 
-- For more information about the schema of Microsoft Defender XDR events, see [Advanced Hunting overview](../defender/advanced-hunting-overview.md).
+- For more information about the schema of Microsoft Defender XDR events, see [Advanced Hunting overview](/defender/advanced-hunting-overview).
 
 ## Data types mapping
 
@@ -107,7 +107,7 @@ In order to get the data types for our events properties do the following:
 
 - Here's an example for Device Info event:
 
-  :::image type="content" source="../defender-endpoint/media/machine-info-datatype-example.png" alt-text="An example device info query" lightbox="../defender-endpoint/media/machine-info-datatype-example.png":::
+  :::image type="content" source="/defender-endpoint/media/machine-info-datatype-example.png" alt-text="An example device info query" lightbox="/defender-endpoint/media/machine-info-datatype-example.png":::
 
 ## Monitoring created resources
 
@@ -118,7 +118,7 @@ For more information, see [Monitor destinations - Azure Monitor | Microsoft Docs
 
 - [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 
-- [Overview of Advanced Hunting](../defender/advanced-hunting-overview.md)
+- [Overview of Advanced Hunting](/defender/advanced-hunting-overview)
 - [Microsoft Defender XDR Streaming API](streaming-api.md)
 - [Stream Microsoft Defender XDR events to your Azure storage account](streaming-api-storage.md)
 - [Azure Storage Account documentation](/azure/storage/common/storage-account-overview)

@@ -26,7 +26,7 @@ ms.date: 01/19/2024
 - [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/index.yml)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
@@ -63,7 +63,7 @@ Defender for Endpoint uses the following combination of technology built into Wi
 <td><center><a href="#ngp"><img src="media/ngp-icon.png" alt="Next-generation protection"><br> <b>Next-generation protection</b></a></center></td>
 <td><center><a href="#edr"><img src="media/edr-icon.png" alt="Endpoint detection and response"><br> <b>Endpoint detection and response</b></a></center></td>
 <td><center><a href="#ai"><img src="media/air-icon.png" alt="Automated investigation and remediation"><br> <b>Automated investigation and remediation</b></a></center></td>
-<td><center><a href="#mte"><img src="images/mte-icon.png" alt="Microsoft Threat Experts"><br> <b>Microsoft Threat Experts</b></a></center></td>
+<td><center><a href="#mte"><img src="media/mte-icon.png" alt="Microsoft Threat Experts"><br> <b>Microsoft Threat Experts</b></a></center></td>
 </tr>
 <tr>
 <td colspan="7">
@@ -89,11 +89,11 @@ Defender for Endpoint uses the following combination of technology built into Wi
 
 <a name="tvm"></a>
 
-**[Core Defender Vulnerability Management](../defender-vulnerability-management/defender-vulnerability-management.md)**
+**[Core Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)**
 
 Built-in core vulnerability management capabilities use a modern risk-based approach to the discovery, assessment, prioritization, and remediation of endpoint vulnerabilities and misconfigurations. To further enhance your ability to assess your security posture and reduce risk, a new Defender Vulnerability Management add-on for Plan 2 is available.
 
-For more information on the different vulnerability management capabilities available to you, see [Compare Microsoft Defender Vulnerability Management offerings](../defender-vulnerability-management/defender-vulnerability-management-capabilities.md).
+For more information on the different vulnerability management capabilities available to you, see [Compare Microsoft Defender Vulnerability Management offerings](/defender-vulnerability-management/defender-vulnerability-management-capabilities).
 
 <a name="asr"></a>
 
@@ -111,7 +111,7 @@ To further reinforce the security perimeter of your network, Microsoft Defender 
 
 **[Endpoint detection and response](overview-endpoint-detection-response.md)**
 
-Endpoint detection and response capabilities are put in place to detect, investigate, and respond to advanced threats that may have made it past the first two security pillars. [Advanced hunting](advanced-hunting-overview.md) provides a query-based threat-hunting tool that lets you proactively find breaches and create custom detections.
+Endpoint detection and response capabilities are put in place to detect, investigate, and respond to advanced threats that may have made it past the first two security pillars. [Advanced hunting](/defender/advanced-hunting-overview) provides a query-based threat-hunting tool that lets you proactively find breaches and create custom detections.
 
 <a name="ai"></a>
 
@@ -121,13 +121,13 @@ In conjunction with being able to quickly respond to advanced attacks, Microsoft
 
 <a name="ss"></a>
 
-**[Microsoft Secure Score for Devices](tvm-microsoft-secure-score-devices.md)**
+**[Microsoft Secure Score for Devices](/defender-vulnerability-management/tvm-microsoft-secure-score-devices)**
 
 Defender for Endpoint includes Microsoft Secure Score for Devices to help you dynamically assess the security state of your enterprise network, identify unprotected systems, and take recommended actions to improve the overall security of your organization.
 
 <a name="mte"></a>
 
-**[Microsoft Threat Experts](microsoft-threat-experts.md)**
+**[Microsoft Threat Experts](/defender/microsoft-threat-experts)**
 
 Microsoft Defender for Endpoint's new managed threat hunting service provides proactive hunting, prioritization, and additional context and insights that further empower Security operation centers (SOCs) to identify and respond to threats quickly and accurately.
 
@@ -138,7 +138,7 @@ Microsoft Defender for Endpoint's new managed threat hunting service provides pr
 
 <a name="apis"></a>
 
-**[Centralized configuration and administration, APIs](management-apis.md)**
+**[Centralized configuration and administration, APIs](api/management-apis.md)**
 
 Integrate Microsoft Defender for Endpoint into your existing workflows.
 

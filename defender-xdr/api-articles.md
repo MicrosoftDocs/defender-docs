@@ -18,7 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 02/08/2023
+ms.date: 02/08/2024
 ---
 
 # Other security and threat protection APIs
@@ -39,5 +39,5 @@ The following resources provide more information about APIs available for other 
 
 - [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/apis-intro)
 - [Microsoft Defender for Office 365](/office/office-365-management-api/)
-- [Microsoft Defender for Cloud Apps](/defender-cloud-apps/api-introduction)
+- [Microsoft Defender for Cloud Apps](/cloud-app-security/api-introduction)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

@@ -63,7 +63,7 @@ The following table shows the supported parameters.
 | Parameter|Type|Description |
 | ---| ---| --- |
 | indicatorType|Enum|Type of the indicator. Possible values are: *FileSha1*, *FileSha256*, *IpAddress*, *DomainName*, and *Url*. **Required** |
-| indicatorValue|String|Identity of the [Indicator](ti-indicator.md) entity. **Required** |
+| indicatorValue|String|Identity of the [Indicator](api/ti-indicator.md) entity. **Required** |
 | action|Enum|The action that is taken if the indicator is discovered in the organization. Possible values are: *Allowed*, *Audit*, *BlockAndRemediate*, *Warn*, and *Block*. **Required** |
 | title|String|Indicator alert title. **Required** |
 | description|String| Description of the indicator. **Required** |

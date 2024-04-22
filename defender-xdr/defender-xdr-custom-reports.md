@@ -44,7 +44,7 @@ In this section, we go through the steps required to get Microsoft Defender XDR 
 2. Select **Get Data > Blank Query**.
 3. Select **Advanced Editor**.
 
-   :::image type="content" source="./media/defender/power-bi/manage-parameters.png" alt-text="Screenshot that shows how to create a new data query in Power BI Desktop." lightbox="./media/defender/power-bi/manage-parameters.png":::
+   :::image type="content" source="/defender/media/defender/power-bi/manage-parameters.png" alt-text="Screenshot that shows how to create a new data query in Power BI Desktop." lightbox="/defender/media/defender/power-bi/manage-parameters.png":::
 
 4. Paste in Query:
 
@@ -58,11 +58,11 @@ In this section, we go through the steps required to get Microsoft Defender XDR 
 5. Select **Done**.
 6. When you're prompted for credentials, select **Edit Credentials**:
 
-   :::image type="content" source="./media/defender/power-bi/edit-credentials-api.png" alt-text="Screenshot of how to edit credentials for API connection." lightbox="./media/defender/power-bi/edit-credentials-api.png":::
+   :::image type="content" source="/defender/media/defender/power-bi/edit-credentials-api.png" alt-text="Screenshot of how to edit credentials for API connection." lightbox="/defender/media/defender/power-bi/edit-credentials-api.png":::
 
 7. Select **Organizational account > Sign in**.
 
-    :::image type="content" source="./media/defender/power-bi/sign-in-org-account.png" alt-text="Screenshot of the organizational account authentication window." lightbox="./media/defender/power-bi/sign-in-org-account.png":::
+    :::image type="content" source="/defender/media/defender/power-bi/sign-in-org-account.png" alt-text="Screenshot of the organizational account authentication window." lightbox="/defender/media/defender/power-bi/sign-in-org-account.png":::
 
 8. Enter credentials for account with access to Microsoft Defender XDR incidents data.
 9. Select **Connect**.
@@ -120,7 +120,7 @@ Instead of constantly querying the code to adjust the timeframe, use parameters 
 
    In the following example, we use two different time frames, Start and End dates.
 
-   :::image type="content" source="./media/defender/power-bi/manage-parameters.png" alt-text="Screenshot of how to manage Parameters in Power BI." lightbox="./media/defender/power-bi/manage-parameters.png":::
+   :::image type="content" source="/defender/media/defender/power-bi/manage-parameters.png" alt-text="Screenshot of how to manage Parameters in Power BI." lightbox="/defender/media/defender/power-bi/manage-parameters.png":::
 
 4. Remove hardcoded values from the queries and make sure that StartDate and EndDate variable names correspond to parameter names:
 
@@ -135,15 +135,15 @@ Instead of constantly querying the code to adjust the timeframe, use parameters 
 
 Once the data has been queried and the parameters are set, now we can review the report. During the first launch of the PBIT report file, you're prompted to provide the parameters that we specified earlier:
 
-:::image type="content" source="./media/defender/power-bi/soc-overview-dashboard.png" alt-text="Screenshot of the Power BI template parameter prompt window." lightbox="./media/defender/power-bi/soc-overview-dashboard.png":::
+:::image type="content" source="/defender/media/defender/power-bi/soc-overview-dashboard.png" alt-text="Screenshot of the Power BI template parameter prompt window." lightbox="/defender/media/defender/power-bi/soc-overview-dashboard.png":::
 
 The dashboard offers three tabs intended to provide SOC insights. The first tab provides a summary of all recent alerts (depending on the selected timeframe). This tab helps analysts clearly understand the security state over their environment using alert details broken down by detection source, severity, total number of alerts and mean-time-to-resolution.
 
-:::image type="content" source="./media/defender/power-bi/alert-tab-powerbi.png" alt-text="Screenshot of the alerts tab of resulting Power BI report." lightbox="./media/defender/power-bi/alert-tab-powerbi.png":::
+:::image type="content" source="/defender/media/defender/power-bi/alert-tab-powerbi.png" alt-text="Screenshot of the alerts tab of resulting Power BI report." lightbox="/defender/media/defender/power-bi/alert-tab-powerbi.png":::
 
 The second tab offers more insight into the attack data collected across the incidents and alerts. This view can provide analysts with greater perspective into the types of attacks executed and how they map to the MITRE ATT&CK framework.
 
-:::image type="content" source="./media/defender/power-bi/insights-tab-powerbi.png" alt-text="Screenshot of the insights tab of resulting Power BI report." lightbox="./media/defender/power-bi/insights-tab-powerbi.png":::
+:::image type="content" source="/defender/media/defender/power-bi/insights-tab-powerbi.png" alt-text="Screenshot of the insights tab of resulting Power BI report." lightbox="/defender/media/defender/power-bi/insights-tab-powerbi.png":::
 
 ## Power BI dashboard samples
 

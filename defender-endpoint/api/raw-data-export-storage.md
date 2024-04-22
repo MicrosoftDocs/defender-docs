@@ -52,7 +52,7 @@ ms.date: 12/18/2020
 
 6. Type your **Storage Account Resource ID**. In order to get your **Storage Account Resource ID**, go to your Storage account page on [Azure portal](https://ms.portal.azure.com/) \> properties tab \> copy the text under **Storage account resource ID**:
 
-   :::image type="content" source="../images/storage-account-resource-id.png" alt-text="The Event Hubs with resource ID1" lightbox="../images/storage-account-resource-id.png":::
+   :::image type="content" source="../media/storage-account-resource-id.png" alt-text="The Event Hubs with resource ID1" lightbox="../media/storage-account-resource-id.png":::
 
 7. Choose the events you want to stream and select **Save**.
 
@@ -60,7 +60,7 @@ ms.date: 12/18/2020
 
 - A blob container is created for each event type:
 
-  :::image type="content" source="../images/storage-account-event-schema.png" alt-text="The Event Hubs with resource ID2" lightbox="../images/storage-account-event-schema.png":::
+  :::image type="content" source="../media/storage-account-event-schema.png" alt-text="The Event Hubs with resource ID2" lightbox="../media/storage-account-event-schema.png":::
 
 - The schema of each row in a blob is the following JSON:
 
@@ -77,7 +77,7 @@ ms.date: 12/18/2020
 
 - Each row contains the event name, the time Defender for Endpoint received the event, the tenant it belongs (you get events only from your tenant), and the event in JSON format in a property called "properties".
 
-- For more information about the schema of Microsoft Defender for Endpoint events, see [Advanced Hunting overview](../advanced-hunting-overview.md).
+- For more information about the schema of Microsoft Defender for Endpoint events, see [Advanced Hunting overview](/defender/advanced-hunting-overview.md).
 
 - In Advanced Hunting, the **DeviceInfo** table has a column named **MachineGroup** which contains the group of the device. Here, every event is decorated with this column as well. For more information, see [Device Groups](../machine-groups.md).
     > [!NOTE]
@@ -105,7 +105,7 @@ In order to get the data types for our events properties do the following:
 
 - [Stream Microsoft Defender XDR events | Microsoft Learn](/microsoft-365/security/defender/streaming-api)
 
-- [Overview of Advanced Hunting](../advanced-hunting-overview.md)
+- [Overview of Advanced Hunting](/defender/advanced-hunting-overview.md)
 - [Microsoft Defender for Endpoint Streaming API](raw-data-export.md)
 - [Stream Microsoft Defender for Endpoint events to your Azure storage account](raw-data-export-storage.md)
 - [Azure Storage Account documentation](/azure/storage/common/storage-account-overview)

@@ -19,8 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -39,7 +38,7 @@ In an illicit consent grant attack, the attacker creates an Azure-registered app
 These attacks use an interaction model that presumes the entity calling the information is automation and not a human.
 
 > [!IMPORTANT]
-> Do you suspect you're experiencing problems with illicit consent-grants from an app, right now? Microsoft Defender for Cloud Apps has tools to detect, investigate, and remediate your OAuth apps. This Defender for Cloud Apps article has a tutorial that outlines how to go about [investigating risky OAuth apps](/defender-cloud-apps/investigate-risky-oauth). You can also set [OAuth app policies](/defender-cloud-apps/app-permission-policy) to investigate app-requested permissions, which users are authorizing these apps, and widely approve or ban these permissions requests.
+> Do you suspect you're experiencing problems with illicit consent-grants from an app, right now? Microsoft Defender for Cloud Apps has tools to detect, investigate, and remediate your OAuth apps. This Defender for Cloud Apps article has a tutorial that outlines how to go about [investigating risky OAuth apps](/cloud-app-security/investigate-risky-oauth). You can also set [OAuth app policies](/cloud-app-security/app-permission-policy) to investigate app-requested permissions, which users are authorizing these apps, and widely approve or ban these permissions requests.
 
 ## What does an illicit consent grant attack look like in Microsoft 365?
 
@@ -118,7 +117,7 @@ The simplest way to verify the Illicit Consent Grant attack is to run [Get-Azure
 
 3. Open an elevated PowerShell session as an administrator in the folder where you saved the script.
 
-4. Connect to your directory using the [Connect-AzureAD](/powershell/module/azuread/connect-azuread) cmdlet.
+4. Connect to your directory using the [Connect-MgGraph](/powershell/microsoftgraph/authentication-commands#using-connect-mggraph) cmdlet.
 
 5. Run this PowerShell command:
 
@@ -154,9 +153,9 @@ After you identified the application with illicit permissions, you have several 
   4. On the **Applications** page, select the illicit application by clicking on the **Name** value.
   5. On the **Assignment detail** page that opens, select **Remove**.
 
-- You can revoke the OAuth consent grant with PowerShell by following the steps in [Remove-AzureADOAuth2PermissionGrant](/powershell/module/azuread/Remove-AzureADOAuth2PermissionGrant).
+- You can revoke the OAuth consent grant with PowerShell by following the steps in [Remove-MgOauth2PermissionGrant](/powershell/module/microsoft.graph.identity.signins/remove-mgoauth2permissiongrant)
 
-- You can revoke the Service App role assignment with PowerShell by following the steps in [Remove-AzureADServiceAppRoleAssignment](/powershell/module/azuread/Remove-AzureADServiceAppRoleAssignment).
+- You can revoke the Service App Role Assignment with PowerShell by following the steps in [Remove-MgServicePrincipalAppRoleAssignment](/powershell/module/microsoft.graph.applications/remove-mgserviceprincipalapproleassignment).
 
 - You can disable sign-in for the affected account, which disables access to data in the account by the app. This action isn't ideal for user productivity, but it can be a short-term remediation to quickly limit the results of the attack.
 

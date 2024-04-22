@@ -16,8 +16,7 @@ ms.collection:
 - tier2
 ms.custom:
 description: Learn about remediation actions in automated investigation and response capabilities in Microsoft Defender for Office 365 Plan 2.
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 ms.date: 06/09/2023
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
@@ -71,7 +70,7 @@ There are four different ways to find and take auto investigation actions:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Threat investigation** page at **Email & collaboration** \> **Investigations**. To go directly to the **Threat investigation** page, use <https://security.microsoft.com/airinvestigation>.
 2. On the **Threat investigation** page, find and an item from the list whose status is **Pending action**.
-3. Click :::image type="icon" source="../../media/m365-cc-sc-open-icon.png" border="false"::: **Open in new window** on the list time (between **ID** and **Status**).
+3. Click :::image type="icon" source="/defender/media/m365-cc-sc-open-icon.png" border="false"::: **Open in new window** on the list time (between **ID** and **Status**).
 4. In the page that opens, take approve or reject actions.
 
 ## Change or undo one remediation action

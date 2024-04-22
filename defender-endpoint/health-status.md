@@ -54,7 +54,7 @@ The following table provides information on the values returned when you run the
 |real_time_protection_available|True if the real-time protection component is healthy, false otherwise.|
 |real_time_protection_enabled|True if real-time antivirus protection is enabled, false otherwise.|
 |real_time_protection_subsystem|Subsystem used to serve real-time protection. If real-time protection isn't operating as expected, this prints unavailable.|
-|release_ring|Release ring. For more information, see [Deployment rings](deployment-rings.md).|
+|release_ring|Release ring. For more information, see [Deployment rings](onboarding.md).|
 
 ## Component specific health
 

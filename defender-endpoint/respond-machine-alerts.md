@@ -43,7 +43,7 @@ Response actions run along the top of a specific device page and include:
 - Consult a threat expert
 - Action center
 
-[![Image of response actions.](images/response-actions.png)](images/response-actions.png#lightbox)
+[![Image of response actions.](media/response-actions.png)](media/response-actions.png#lightbox)
 
 > [!IMPORTANT]
 > [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) includes only the following manual response actions:
@@ -53,7 +53,7 @@ Response actions run along the top of a specific device page and include:
 > - Stop and quarantine a file
 > - Add an indicator to block or allow a file.
 >
-> [Microsoft Defender for Business](../defender-business/mdb-overview.md) does not include the "Stop and quarantine a file" action at this time.
+> [Microsoft Defender for Business](/defender-business/mdb-overview) does not include the "Stop and quarantine a file" action at this time.
 >
 > Your subscription must include Defender for Endpoint Plan 2 to have all of the response actions described in this article.
 
@@ -161,7 +161,7 @@ As part of the investigation or response process, you can remotely initiate an a
 
 One you have selected **Run antivirus scan**, select the scan type that you'd like to run (quick or full) and add a comment before confirming the scan.
 
-:::image type="content" source="images/run-antivirus.png" alt-text="The notification to select quick scan or full scan and add comment" lightbox="images/run-antivirus.png":::
+:::image type="content" source="media/run-antivirus.png" alt-text="The notification to select quick scan or full scan and add comment" lightbox="media/run-antivirus.png":::
 
 The Action center will show the scan information and the device timeline will include a new event, reflecting that a scan action was submitted on the device. Microsoft Defender Antivirus alerts will reflect any detections that surfaced during the scan.
 
@@ -187,7 +187,7 @@ To restrict an application from running, a code integrity policy is applied that
 
 Once you have selected **Restrict app execution** on the device page, type a comment and select **Confirm**. The Action center will show the scan information and the device timeline will include a new event.
 
-:::image type="content" source="images/restrict-app-execution.png" alt-text="The application restriction notification" lightbox="images/restrict-app-execution.png":::
+:::image type="content" source="media/restrict-app-execution.png" alt-text="The application restriction notification" lightbox="media/restrict-app-execution.png":::
 
 ### Notification on device user
 
@@ -277,17 +277,17 @@ When you have identified an unmanaged device that is compromised or potentially 
 
 2. Select **Contain device** from the actions menu in the device flyout.
 
-   :::image type="content" alt-text="Screenshot of the contain device popup message." source="../media/defender-endpoint/contain_device.png" lightbox="../media/defender-endpoint/contain_device.png":::
+   :::image type="content" alt-text="Screenshot of the contain device popup message." source="/defender/media/defender-endpoint/contain_device.png" lightbox="/defender/media/defender-endpoint/contain_device.png":::
 
 3. On the contain device popup, type a comment, and select **Confirm**.
 
-:::image type="content" alt-text="Screenshot of the contain device menu item." source="../media/defender-endpoint/contain_device_popup.png" lightbox="../media/defender-endpoint/contain_device_popup.png":::
+:::image type="content" alt-text="Screenshot of the contain device menu item." source="/defender/media/defender-endpoint/contain_device_popup.png" lightbox="/defender/media/defender-endpoint/contain_device_popup.png":::
 
 ### Contain a device from the device page
 
 A device can also be contained from the device page by selecting **Contain device** from the action bar:
 
-:::image type="content" alt-text="Screenshot of the contain device menu item on the device page." source="../media/defender-endpoint/contain_device_page.png" lightbox="../media/defender-endpoint/contain_device_page.png":::
+:::image type="content" alt-text="Screenshot of the contain device menu item on the device page." source="/defender/media/defender-endpoint/contain_device_page.png" lightbox="/defender/media/defender-endpoint/contain_device_page.png":::
 
 > [!NOTE]
 > It can take up to 5 minutes for the details about a newly contained device to reach Microsoft Defender for Endpoint onboarded devices.
@@ -323,11 +323,11 @@ Currently, containing users is only available automatically by using automatic a
 
 After a user is contained, you can view the action in this History view of the Action Center. Here, you can see when the action occurred, and which users in your organization were contained:
 
-:::image type="content" source="../media/defender-endpoint/user-contain-action-center.png" alt-text="View the user contain action in the action center" lightbox="../media/defender-endpoint/user-contain-action-center.png":::
+:::image type="content" source="/defender/media/defender-endpoint/user-contain-action-center.png" alt-text="View the user contain action in the action center" lightbox="/defender/media/defender-endpoint/user-contain-action-center.png":::
 
 Furthermore, after an identity is considered "contained", that user will be blocked by Defender for Endpoint and cannot perform any malicious lateral movement or remote encryption on or to any supported Defender for Endpoint onboarded device. These blocks will show up as alerts to help you quickly see the devices the compromised user attempted access and potential attack techniques:
 
-:::image type="content" source="../media/defender-endpoint/user-contain-lateral-move-block.png" alt-text="Shows a user contain lateral movement block event" lightbox="../media/defender-endpoint/user-contain-lateral-move-block.png":::
+:::image type="content" source="/defender/media/defender-endpoint/user-contain-lateral-move-block.png" alt-text="Shows a user contain lateral movement block event" lightbox="/defender/media/defender-endpoint/user-contain-lateral-move-block.png":::
 
 ### Undo contain user actions
 
@@ -338,17 +338,17 @@ You can release the blocks and containment on a user at any time:
 
 This action will restore this user's connection to the network.
 
-:::image type="content" source="../media/defender-endpoint/undo-user-contain-action.png" alt-text="Shows user contain undo option in the action center" lightbox="../media/defender-endpoint/undo-user-contain-action.png":::
+:::image type="content" source="/defender/media/defender-endpoint/undo-user-contain-action.png" alt-text="Shows user contain undo option in the action center" lightbox="/defender/media/defender-endpoint/undo-user-contain-action.png":::
 
 ### Investigation capabilities with Contain User
 
 After a user is contained, you can investigate the potential threat by viewing the blocked actions by the compromised user. In the Device timeline view, you can see information about specific events, including protocol and interface granularity, and the relevant MITRE Technique associated it.
 
-:::image type="content" source="../media/defender-endpoint/event-blocked by-contained-user.png" alt-text="Shows blocked event details for a contained users" lightbox="../media/defender-endpoint/event-blocked by-contained-user.png":::
+:::image type="content" source="/defender/media/defender-endpoint/event-blocked by-contained-user.png" alt-text="Shows blocked event details for a contained users" lightbox="/defender/media/defender-endpoint/event-blocked by-contained-user.png":::
 
 In addition, you can expand the investigation by using Advanced Hunting. Look for any "Action Type" starting with "Contain" in the "DeviceEvents" table. Then, you can view all the different singular blocking events in relation to Contain User in your tenant, dive deeper into the context of each block, and extract the different entities and techniques associated with those events.
 
-:::image type="content" source="../media/defender-endpoint/user-contain-advanced-hunting.png" alt-text="Shows advanced hunting for user contain events" lightbox="../media/defender-endpoint/user-contain-advanced-hunting.png":::
+:::image type="content" source="/defender/media/defender-endpoint/user-contain-advanced-hunting.png" alt-text="Shows advanced hunting for user contain events" lightbox="/defender/media/defender-endpoint/user-contain-advanced-hunting.png":::
 
 ## Consult a threat expert
 

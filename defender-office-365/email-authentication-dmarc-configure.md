@@ -16,8 +16,7 @@ ms.collection:
   - m365-security
   - tier1
 description: Learn how to configure Domain-based Message Authentication, Reporting, and Conformance (DMARC) to validate messages sent from your organization.
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -147,7 +146,7 @@ For more information about DMARC, use the following resources:
 
 3. On the domain details page that opens, select the **DNS records** tab.
 
-4. On the **DNS records** tab, select :::image type="icon" source="../../media/m365-cc-sc-create-icon.png" border="false"::: **Add record**.
+4. On the **DNS records** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Add record**.
 
 5. On the **Add a custom DNS record** flyout that opens, configure the following settings:
    - **Type**: Verify that **TXT (Text)** is selected.
@@ -254,7 +253,7 @@ Your DMARC roll-out plan should use the following steps. Start with a domain or 
 
 You can use the following graphic to help troubleshoot DMARC authentication issues.
 
-:::image type="content" source="../../media/Tp_DMARCTroublehoot.png" alt-text="A troubleshooting graphic for DMARC" lightbox="../../media/Tp_DMARCTroublehoot.png":::
+:::image type="content" source="/defender/media/Tp_DMARCTroublehoot.png" alt-text="A troubleshooting graphic for DMARC" lightbox="/defender/media/Tp_DMARCTroublehoot.png":::
 
 ## Next steps
 

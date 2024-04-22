@@ -44,7 +44,7 @@ Importing roles will migrate and maintain the roles with full parity in relation
 The following steps guide you on how to import roles into Microsoft Defender XDR Unified RBAC:
 
 > [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](../defender/manage-rbac.md#permissions-pre-requisites).
+> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](/defender/manage-rbac#permissions-pre-requisites).
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 2. In the navigation pane, select **Permissions**.
@@ -52,7 +52,7 @@ The following steps guide you on how to import roles into Microsoft Defender XDR
 4. Select **Import role**.
 5. Select the products you want to import roles from.
 
-    :::image type="content" source="./media/defender/m365-defender-import-workloads.png" alt-text="Screenshot of the import workloads page" lightbox="./media/defender/m365-defender-import-workloads.png":::
+    :::image type="content" source="/defender/media/defender/m365-defender-import-workloads.png" alt-text="Screenshot of the import workloads page" lightbox="/defender/media/defender/m365-defender-import-workloads.png":::
 
 6. Select **Next** to choose the roles to import. You can choose all roles or select specific roles from the list. Select the role name to review the permissions and assigned users or groups for that specific role.
 7. Select the roles you want to import and select **Next**.

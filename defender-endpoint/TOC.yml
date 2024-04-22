@@ -61,14 +61,12 @@
     items:
     - name: Evaluate capabilities overview
       href: evaluation-lab.md
-    - name: Evaluate Microsoft Defender Antivirus
+    - name: Microsoft Defender for Endpoint demonstrations
       items:
       - name: Overview
         href: evaluate-microsoft-defender-antivirus.md
       - name: Evaluate Microsoft Defender Antivirus using Powershell
         href: microsoft-defender-antivirus-using-powershell.md
-    - name: Microsoft defender for endpoint demonstrations
-      items:
       - name: Microsoft Defender for Endpoint demonstration scenarios
         href: defender-endpoint-demonstrations.md
       - name: App reputation demonstration
@@ -160,7 +158,8 @@
         href: configure-endpoints-script.md
       - name: Onboard non-persistent virtual desktop infrastructure (VDI) devices
         href: configure-endpoints-vdi.md
-
+      - name: Defender for Endpoint on Windows Server with SAP
+        href: mde-sap-windows-server.md
     - name: Onboard non-Windows devices
       href: configure-endpoints-non-windows.md
     - name: Defender for Endpoint on macOS
@@ -211,8 +210,6 @@
               href: mac-device-control-faq.md
           - name: Schedule scans
             href: mac-schedule-scan.md
-          - name: Configure Microsoft Defender for Endpoint on macOS
-            items:
       - name: Update Defender for Endpoint on macOS
         href: mac-updates.md
       - name: Privacy for Microsoft Defender for Endpoint on macOS
@@ -244,7 +241,7 @@
           - name: Manual deployment
             href: manage-sys-extensions-manual-deployment.md
         
-    - name: Microsoft Defender for Endpoint on Linux
+    - name: Defender for Endpoint on Linux
       items:
        - name: Deploy Defender for Endpoint on Linux
          items:
@@ -329,7 +326,7 @@
     - name: Create an onboarding or offboarding notification rule
       href: onboarding-notification.md
     - name: Manage Microsoft Defender for Endpoint configuration settings on devices with Microsoft Intune
-      href: security-config-management.md
+      href: /mem/intune/protect/mde-security-integration
     - name: Manage Defender for Endpoint P1/P2 across devices
       href: defender-endpoint-subscription-settings.md
     - name: Onboarding using Microsoft Configuration Manager
@@ -366,7 +363,7 @@
     - name: General
       items:
       - name: Configure alert notifications
-        href: ../defender/configure-email-notifications.md
+        href: /defender/configure-email-notifications
       - name: Configure vulnerability email notifications
         href: configure-vulnerability-email-notifications.md
       - name: Configure advanced features
@@ -426,7 +423,7 @@
     - name: Defender for Endpoint Security Operations Guide 
       href: mde-sec-ops-guide.md
     - name: Microsoft Defender Vulnerability Management
-      href: ../defender-vulnerability-management/index.yml
+      href: /defender-vulnerability-management
     - name: Device discovery
       items:
       - name: Device discovery overview
@@ -449,7 +446,7 @@
       - name: Network devices
         href: network-devices.md
       - name: Windows authenticated scan
-        href: ../defender-vulnerability-management/windows-authenticated-scan.md
+        href: /defender-vulnerability-management/windows-authenticated-scan
 
     - name: Devices
       items:
@@ -760,6 +757,9 @@
             href: device-health-microsoft-defender-antivirus-health.md
           - name: Sensor health and OS report
             href: device-health-sensor-health-os.md
+        - name: Microsoft Defender Core service overview
+          href: microsoft-defender-core-service-overview.md
+          displayName: Microsoft Defender Core service overview
         - name: Microsoft Defender Core service configurations and experimentation 
           href: microsoft-defender-core-service-configurations-and-experimentation.md
         - name: Troubleshoot performance issues related to real-time protection
@@ -919,7 +919,7 @@
       - name: Reporting
         items:
         - name: Power BI - How to use API - Samples
-          href: api-power-bi.md
+          href: api/api-power-bi.md
         - name: Threat protection reports
           href: threat-protection-reports.md
         - name: Monthly security summary
@@ -964,19 +964,19 @@
     - name: Microsoft Security Resources
       items: 
         - name: Threat actor naming
-          href: ../defender/microsoft-threat-actor-naming.md
+          href: /defender/microsoft-threat-actor-naming
         - name: Malware names
-          href: ../defender/malware-naming.md
+          href: /defender/malware-naming
         - name: How Microsoft identifies malware and PUA
-          href: ../defender/criteria.md
+          href: /defender/criteria
         - name: Submit files for analysis
-          href: ../defender/submission-guide.md
+          href: /defender/submission-guide
         - name: Troubleshoot MSI portal errors caused by admin block
-          href: ../defender/portal-submission-troubleshooting.md
+          href: /defender/portal-submission-troubleshooting
         - name: Microsoft virus initiative
-          href: ../defender/virus-initiative-criteria.md
+          href: /defender/virus-initiative-criteria
         - name: Software developer FAQ
-          href: ../defender/developer-faq.yml
+          href: /defender/developer-faq
     - name: Malware information
       items: 
        - name: Coinminers
@@ -1026,9 +1026,9 @@
         - name: Get started
           items:
           - name: Microsoft Defender for Endpoint API license and terms
-            href: api-terms-of-use.md
+            href: /legal/microsoft-365/api-terms-of-use
           - name: Access the Microsoft Defender for Endpoint APIs
-            href: api/apis-intro.md
+            href: /defender-vulnerability-management/tvm-supported-os
           - name: Hello World
             href: api/api-hello-world.md
           - name: Get access with application context
@@ -1159,7 +1159,7 @@
             - name: List Indicators
               href: api/get-ti-indicators-collection.md
             - name: Submit Indicator
-              href: api/post-ti-indicator.md
+              href: api/ti-indicator.md
             - name: Import Indicator
               href: api/import-ti-indicators.md
             - name: Delete Indicator
@@ -1184,11 +1184,11 @@
             - name: Live response library methods and properties
               href: live-response-library-methods.md
             - name: List library files
-              href: list-library-files.md
+              href: api/list-library-files.md
             - name: Upload to live response library
-              href: upload-library.md
+              href: api/upload-library.md
             - name: Delete from library
-              href: delete-library.md
+              href: api/delete-library.md
 
           - name: Machine
             items:
@@ -1261,7 +1261,7 @@
           - name: Recommendation
             items:
             - name: Recommendation methods and properties
-              href: recommendation.md
+              href: api/recommendation.md
             - name: List all recommendations
               href: api/get-all-recommendations.md
             - name: Get recommendation by ID
@@ -1380,7 +1380,7 @@
         - name: Connected applications
           href: connected-applications.md
         - name: API explorer
-          href: api-explorer.md
+          href: api/api-explorer.md
     - name: Managed security service provider (MSSP) integration
       items:
       - name: Configure managed security service provider integration
@@ -1394,7 +1394,7 @@
       - name: Get partner application access
         href: api/exposed-apis-create-app-partners.md
       - name: Fetch alerts from customer tenant
-        href: fetch-alerts-mssp.md
+        href: api/fetch-alerts-mssp.md
       - name: Managed security service provider opportunity
         href: mssp-support.md
     - name: Partner integration scenarios
@@ -1518,6 +1518,9 @@
       href: troubleshoot-collect-support-log.md
     - name: Troubleshoot Microsoft Defender Antivirus settings
       href: troubleshoot-settings.md
+    - name: Troubleshooting Security Intelligence Updates from Microsoft Update source
+      href: security-intelligence-update-tshoot.md
+      displayName: Troubleshooting Security Intelligence Updates from Microsoft Update source
     - name: Troubleshoot attack surface reduction issues
       items:
       - name: Network protection
@@ -1530,17 +1533,17 @@
   - name: Microsoft Defender XDR docs
     items:
     - name: Microsoft Defender XDR
-      href: ../defender/index.yml
+      href: /defender
     - name: Defender for Office 365
-      href: ../office-365-security/index.yml
+      href: /defender-office-365
     - name: Defender for Identity
       href: /defender-for-identity/
     - name: Defender for Cloud Apps
-      href: /defender-cloud-apps/
+      href: /cloud-app-security/
     - name: Defender for Business
-      href: ../defender-business/index.yml
+      href: /defender-business
     - name: Defender Vulnerability Management
-      href: ../defender-vulnerability-management/index.yml
+      href: /defender-vulnerability-management
 
 
 

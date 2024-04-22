@@ -26,7 +26,7 @@ ms.reviewer: mkaminska, yongrhee
 - [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
+- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
@@ -155,14 +155,14 @@ Exported reports capture information based on your entry point into the details 
 
 For information on exporting using API, see the following articles:
 
-- [Export device antivirus health report](device-health-export-antivirus-health-report-api.md)
-- [Export device antivirus health details API methods and properties](device-health-api-methods-properties.md)
+- [Export device antivirus health report](api/device-health-export-antivirus-health-report-api.md)
+- [Export device antivirus health details API methods and properties](api/device-health-api-methods-properties.md)
 
 > [!IMPORTANT]
 >
-> Currently, only the [Antivirus Health JSON Response](device-health-api-methods-properties.md#13-export-device-antivirus-health-details-api-properties-json-response) is generally available. [Antivirus Health API via files](device-health-api-methods-properties.md#14-export-device-antivirus-health-details-api-properties-via-files) is only available in public preview.
+> Currently, only the [Antivirus Health JSON Response](api/device-health-api-methods-properties.md#13-export-device-antivirus-health-details-api-properties-json-response) is generally available. [Antivirus Health API via files](api/device-health-api-methods-properties.md#14-export-device-antivirus-health-details-api-properties-via-files) is only available in public preview.
 >
-> [Advanced Hunting custom query](run-advanced-query-api.md) is currently only available in public preview, even if the queries are visible.
+> [Advanced Hunting custom query](api/run-advanced-query-api.md) is currently only available in public preview, even if the queries are visible.
 
 ### Microsoft Defender Antivirus version and update cards functionality
 
@@ -352,8 +352,8 @@ The following table lays out the possible up to date report values for **Securit
 > You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions.
 > See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
-- [Export device antivirus health details API methods and properties](device-health-api-methods-properties.md)
-- [Export device antivirus health report](device-health-api-methods-properties.md)
+- [Export device antivirus health details API methods and properties](api/device-health-api-methods-properties.md)
+- [Export device antivirus health report](api/device-health-api-methods-properties.md)
 - [Threat protection report](threat-protection-reports.md)
 
 > [!TIP]

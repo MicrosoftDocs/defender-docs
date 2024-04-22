@@ -39,7 +39,7 @@ Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus 
 3. Use one or more of the subsequent sections to perform tasks using the Windows Security app.
 
 > [!NOTE]
-> If these settings are configured and deployed using Group Policy, the settings described in this section will be greyed-out and unavailable for use on individual endpoints. Changes made through a Group Policy Object must first be deployed to individual endpoints before the setting will be updated in Windows Settings. The [Configure end-user interaction with Microsoft Defender Antivirus](configure-end-user-interaction-microsoft-defender-antivirus.md) topic describes how local policy override settings can be configured.
+> If these settings are configured and deployed using Group Policy, the settings described in this section will be greyed-out and unavailable for use on individual endpoints. Changes made through a Group Policy Object must first be deployed to individual endpoints before the setting will be updated in Windows Settings. The [Configure end-user interaction with Microsoft Defender Antivirus](configure-local-policy-overrides-microsoft-defender-antivirus.md) topic describes how local policy override settings can be configured.
 
 ## Run a scan with the Windows Security app
 
@@ -51,7 +51,7 @@ Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus 
 
 ## Review the security intelligence update version and download the latest updates in the Windows Security app
 
-:::image type="content" source="../media/wdav-wdsc-defs.png" alt-text="Security intelligence version number" lightbox="../media/wdav-wdsc-defs.png":::
+:::image type="content" source="/defender/media/wdav-wdsc-defs.png" alt-text="Security intelligence version number" lightbox="/defender/media/wdav-wdsc-defs.png":::
 
 1. Open the Windows Security app by searching the start menu for *Security*, and then selecting **Windows Security**.
 
@@ -123,7 +123,7 @@ To learn more, see the following resources:
 
 ## See also
 
-- [Microsoft Defender Antivirus](microsoft-defender-antivirus-in-windows-10.md)
+- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 

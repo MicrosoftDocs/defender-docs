@@ -78,9 +78,9 @@ In Microsoft Defender XDR, each automated investigation correlates signals acros
 
 |Entities |Threat protection services  |
 |:---------|:---------|
-|Devices (also referred to as endpoints or machines) |[Defender for Endpoint](../defender-endpoint/automated-investigations.md) |      
+|Devices (also referred to as endpoints or machines) |[Defender for Endpoint](/defender-endpoint/automated-investigations) |      
 |On-premises Active Directory users, entity behavior, and activities     |[Defender for Identity](/azure-advanced-threat-protection/what-is-atp) |      
-|Email content (email messages that can contain files and URLs)     |[Defender for Office 365](../defender-office-365/defender-for-office-365.md) |
+|Email content (email messages that can contain files and URLs)     |[Defender for Office 365](/defender-office-365/defender-for-office-365) |
 
 > [!NOTE]
 > Not every alert triggers an automated investigation, and not every investigation results in automated remediation actions. It depends on how automated investigation and response is configured for your organization. See [Configure automated investigation and response capabilities](m365d-configure-auto-investigation-response.md).
@@ -93,7 +93,7 @@ To view investigations, go to the **Incidents** page. Select an incident, and th
 
 The new Automated investigation & response card is available in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). This new card visibility to the total number of available remediation actions. The card also gives an overview of all the alerts and required approval time for each alert.
 
-:::image type="content" source="./media/automated-investigation-response-card.png" alt-text="Screenshot that shows the automated investigation & response card.":::
+:::image type="content" source="/defender/media/automated-investigation-response-card.png" alt-text="Screenshot that shows the automated investigation & response card.":::
 
 Using the Automated investigation & response card, your security operations team can quickly navigate to the Action center by selecting the **Approve in Action Center** link, and then taking appropriate actions. The card enables your security operations team to more effectively manage actions that are pending approval. 
 

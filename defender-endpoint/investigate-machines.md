@@ -47,7 +47,7 @@ When you investigate a specific device, you see:
 - Tabs (overview, alerts, timeline, security recommendations, software inventory, discovered vulnerabilities, missing KBs)
 - Cards (active alerts, logged on users, security assessment, device health status)
 
-:::image type="content" source="images/specific-device.png" alt-text="The device view" lightbox="images/specific-device.png":::
+:::image type="content" source="media/specific-device.png" alt-text="The device view" lightbox="media/specific-device.png":::
 
 > [!NOTE]
 > Due to product constrains, the device profile does not consider all cyber evidence when determining the 'Last Seen' timeframe (as seen on the device page as well).
@@ -118,7 +118,7 @@ The timeline also enables you to selectively drill down into events that occurre
 > - [5031](/windows/security/threat-protection/auditing/event-5031) - application blocked from accepting incoming connections on the network
 > - [5157](/windows/security/threat-protection/auditing/event-5157) - blocked connection
 
-:::image type="content" source="images/timeline-device.png" alt-text="The device timeline with events" lightbox="images/timeline-device.png":::
+:::image type="content" source="media/timeline-device.png" alt-text="The device timeline with events" lightbox="media/timeline-device.png":::
 
 Some of the functionality includes:
 
@@ -144,13 +144,13 @@ More details about certain events are provided in the **Additional information**
 
 Select an event to view relevant details about that event. A panel displays to show general event information. When applicable and data is available, a graph showing related entities and their relationships are also shown.
 
-To further inspect the event and related events, you can quickly run an [advanced hunting](advanced-hunting-overview.md) query by selecting **Hunt for related events**. The query returns the selected event and the list of other events that occurred around the same time on the same endpoint.
+To further inspect the event and related events, you can quickly run an [advanced hunting](/defender/advanced-hunting-overview) query by selecting **Hunt for related events**. The query returns the selected event and the list of other events that occurred around the same time on the same endpoint.
 
 :::image type="content" source="media/event-details.png" alt-text="The event details panel" lightbox="media/event-details.png":::
 
 ### Security recommendations
 
-**Security recommendations** are generated from Microsoft Defender for Endpoint's [Vulnerability Management](../defender-vulnerability-management/tvm-dashboard-insights.md) capability. Selecting a recommendation shows a panel where you can view relevant details such as description of the recommendation and the potential risks associated with not enacting it. See [Security recommendation](../defender-vulnerability-management/tvm-security-recommendation.md) for details.
+**Security recommendations** are generated from Microsoft Defender for Endpoint's [Vulnerability Management](/defender-vulnerability-management/tvm-dashboard-insights) capability. Selecting a recommendation shows a panel where you can view relevant details such as description of the recommendation and the potential risks associated with not enacting it. See [Security recommendation](/defender-vulnerability-management/ti-indicator) for details.
 
 
 
@@ -160,14 +160,14 @@ To further inspect the event and related events, you can quickly run an [advance
 The **Security policies** tab shows the endpoint security policies that are applied on the device. You see a list of policies, type, status, and last check-in time. Selecting the name of a policy takes you to the policy details page where you can see the policy settings status, applied devices, and assigned groups.
 
 
-:::image type="content" source="images/security-policies-tab.png" alt-text="The Security policies tab" lightbox="images/security-policies-tab.png":::
+:::image type="content" source="media/security-policies-tab.png" alt-text="The Security policies tab" lightbox="media/security-policies-tab.png":::
 
 
 ### Software inventory
 
-The **Software inventory** tab lets you view software on the device, along with any weaknesses or threats. Selecting the name of the software takes you to the software details page where you can view security recommendations, discovered vulnerabilities, installed devices, and version distribution. See [Software inventory](../defender-vulnerability-management/tvm-software-inventory.md) for details.
+The **Software inventory** tab lets you view software on the device, along with any weaknesses or threats. Selecting the name of the software takes you to the software details page where you can view security recommendations, discovered vulnerabilities, installed devices, and version distribution. See [Software inventory](/defender-vulnerability-management/tvm-software-inventory) for details.
 
-:::image type="content" source="images/software-inventory-device.png" alt-text="The Software inventory tab" lightbox="images/software-inventory-device.png":::
+:::image type="content" source="media/software-inventory-device.png" alt-text="The Software inventory tab" lightbox="media/software-inventory-device.png":::
 
 ### Discovered vulnerabilities
 
@@ -187,7 +187,7 @@ The **Missing KBs** tab lists the missing security updates for the device.
 
 The **Azure Advanced Threat Protection** card displays a high-level overview of alerts related to the device and their risk level, if you're using the Microsoft Defender for Identity feature, and there are any active alerts. More information is available in the **Alerts** drill down.
 
-:::image type="content" source="images/risk-level-small.png" alt-text="The active alerts card" lightbox="images/risk-level-small.png":::
+:::image type="content" source="media/risk-level-small.png" alt-text="The active alerts card" lightbox="media/risk-level-small.png":::
 
 > [!NOTE]
 > You'll need to enable the integration on both Microsoft Defender for Identity and Defender for Endpoint to use this feature. In Defender for Endpoint, you can enable this feature in advanced features. For more information on how to enable advanced features, see [Turn on advanced features](advanced-features.md).
@@ -206,7 +206,7 @@ The **Logged on users** card shows how many users logged on in the past 30 days,
 
 The **Security assessments** card shows the overall exposure level, security recommendations, installed software, and discovered vulnerabilities. A device's exposure level is determined by the cumulative impact of its pending security recommendations.
 
-:::image type="content" source="images/security-assessments.png" alt-text="The security assessments card" lightbox="images/security-assessments.png":::
+:::image type="content" source="media/security-assessments.png" alt-text="The security assessments card" lightbox="media/security-assessments.png":::
 
 ### Device health status
 
@@ -249,7 +249,7 @@ To gain an in-depth view of the device health report, you can go to **Reports > 
 - [Investigate an IP address associated with a Defender for Endpoint alert](investigate-ip.md)
 - [Investigate a domain associated with a Defender for Endpoint alert](investigate-domain.md)
 - [Investigate a user account in Defender for Endpoint](investigate-user.md)
-- [Security recommendation](../defender-vulnerability-management/tvm-security-recommendation.md)
-- [Software inventory](../defender-vulnerability-management/tvm-software-inventory.md)
+- [Security recommendation](/defender-vulnerability-management/ti-indicator)
+- [Software inventory](/defender-vulnerability-management/tvm-software-inventory)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

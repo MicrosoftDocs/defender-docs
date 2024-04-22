@@ -125,7 +125,7 @@ Method|Data type|Description
 
 ## See also
 
-[Export device antivirus health report](../device-health-export-antivirus-health-report-api.md)
+[Export device antivirus health report](device-health-export-antivirus-health-report-api.md)
 
 [Device health and compliance reporting](../device-health-reports.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

@@ -167,7 +167,7 @@ The **Download file** button can have the following states:
 
     Non-Portable Executable file (.txt, .docx, and others) 
     - Global admin or Advanced live response
-    - Tenants with [role-based access (RBAC) permissions](../defender/manage-rbac.md) enabled
+    - Tenants with [role-based access (RBAC) permissions](/defender/manage-rbac) enabled
 
 
 :::image type="content" source="media/atp-download-file-action.png" alt-text="The download file action" lightbox="media/atp-download-file-action.png":::
@@ -283,7 +283,7 @@ Results of deep analysis are matched against threat intelligence and any matches
 
 Use the deep analysis feature to investigate the details of any file, usually during an investigation of an alert or for any other reason where you suspect malicious behavior. This feature is available at the top of the file's page. Select the three dots to access the **Deep analysis** action.
 
-:::image type="content" source="../media/defender-endpoint/deep-analysis.png" alt-text="Screenshot of the Deep analysis action" lightbox="../media/defender-endpoint/deep-analysis.png":::
+:::image type="content" source="/defender/media/defender-endpoint/deep-analysis.png" alt-text="Screenshot of the Deep analysis action" lightbox="/defender/media/defender-endpoint/deep-analysis.png":::
 
 Learn about deep analysis in the following video:
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4aAYy?rel=0]
@@ -308,7 +308,7 @@ You can also submit a sample through the [Microsoft Defender portal](https://www
 
 2. In the **Deep analysis** tab of the file view, select **Submit**.
 
-   :::image type="content" source="images/submit-file.png" alt-text="The submit PE files button" lightbox="images/submit-file.png":::
+   :::image type="content" source="media/submit-file.png" alt-text="The submit PE files button" lightbox="media/submit-file.png":::
 
    > [!NOTE]
    > Only PE files are supported, including _.exe_ and _.dll_ files.

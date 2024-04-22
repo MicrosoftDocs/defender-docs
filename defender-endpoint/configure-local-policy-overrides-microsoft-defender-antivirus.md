@@ -64,10 +64,10 @@ To configure these settings:
 | Real-time protection|Configure local setting override to turn on real-time protection|[Enable and configure Microsoft Defender Antivirus always-on protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md) |
 | Remediation|Configure local setting override for the time of day to run a scheduled full scan to complete remediation|[Configure remediation for scans](configure-remediation-microsoft-defender-antivirus.md) |
 | Scan|Configure local setting override for maximum percentage of CPU utilization|[Configure and run scans](run-scan-microsoft-defender-antivirus.md) |
-| Scan|Configure local setting override for schedule scan day|[Configure scheduled scans](scheduled-catch-up-scans-microsoft-defender-antivirus.md) |
-| Scan|Configure local setting override for scheduled quick scan time|[Configure scheduled scans](scheduled-catch-up-scans-microsoft-defender-antivirus.md) |
-| Scan|Configure local setting override for scheduled scan time|[Configure scheduled scans](scheduled-catch-up-scans-microsoft-defender-antivirus.md) |
-| Scan|Configure local setting override for the scan type to use for a scheduled scan|[Configure scheduled scans](scheduled-catch-up-scans-microsoft-defender-antivirus.md) |
+| Scan|Configure local setting override for schedule scan day|[Configure scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for scheduled quick scan time|[Configure scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for scheduled scan time|[Configure scheduled scans](schedule-antivirus-scans.md) |
+| Scan|Configure local setting override for the scan type to use for a scheduled scan|[Configure scheduled scans](schedule-antivirus-scans.md) |
 
 <a id="merge-lists"></a>
 
@@ -115,6 +115,6 @@ By default, lists that have been configured in local group policy and the Window
 ## Related topics
 
 - [Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure)
-- [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-in-windows-10.md)
-- [Configure end-user interaction with Microsoft Defender Antivirus](configure-end-user-interaction-microsoft-defender-antivirus.md)
+- [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md)
+- [Configure end-user interaction with Microsoft Defender Antivirus](configure-local-policy-overrides-microsoft-defender-antivirus.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

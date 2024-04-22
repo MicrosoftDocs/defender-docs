@@ -42,7 +42,7 @@ Defender Experts for XDR augments your SOC by combining automation and Microsoft
 In addition to the constantly updated research and intelligence tailored for the threats currently seen across the various Microsoft Defender XDR signals, you'll receive managed response from our security analysts and support from Microsoft's security-focused service delivery managers (SDMs). This service lets you enjoy the following capabilities:
 
 - **Managed detection and response** - Expert analysts manage your Microsoft Defender XDR incident queue and handle triage and investigation on your behalf; they partner with you and your team to take action or guide you to respond to incidents
-- **Proactive threat hunting** - [Microsoft Defender Experts for Hunting](../defender/defender-experts-for-hunting.md) is built in to extend your team's threat hunting capabilities and prioritize significant threats
+- **Proactive threat hunting** - [Microsoft Defender Experts for Hunting](/defender/defender-experts-for-hunting) is built in to extend your team's threat hunting capabilities and prioritize significant threats
 - **Live dashboards and reports** - Transparent view of our operations on your behalf and noise free, actionable view into what matters for you coupled with detailed analytics
 - **Proactive check-ins for continuous security improvements** - Periodic check-ins with your named service delivery team to guide your Defender Experts for XDR experience and improve your security posture
 

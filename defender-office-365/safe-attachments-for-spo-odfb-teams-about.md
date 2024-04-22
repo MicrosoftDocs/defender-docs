@@ -20,8 +20,7 @@ ms.custom:
   - seo-marvel-apr2020
   - seo-marvel-jun2020
 description: Learn about Microsoft Defender for Office 365 for files in SharePoint Online, OneDrive for Business, and Microsoft Teams.
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 ms.date: 6/19/2023
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -40,17 +39,17 @@ Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is enabled by def
 
 When Safe Attachments for SharePoint, OneDrive, and Microsoft Teams is enabled and identifies a file as malicious, the file is locked using direct integration with the file stores. The following image shows an example of a malicious file detected in a library.
 
-:::image type="content" source="../../media/2bba71cc-7ad1-4799-8b9d-d56f923db3a7.png" alt-text="The files in OneDrive for Business with one detected as malicious" lightbox="../../media/2bba71cc-7ad1-4799-8b9d-d56f923db3a7.png":::
+:::image type="content" source="/defender/media/2bba71cc-7ad1-4799-8b9d-d56f923db3a7.png" alt-text="The files in OneDrive for Business with one detected as malicious" lightbox="/defender/media/2bba71cc-7ad1-4799-8b9d-d56f923db3a7.png":::
 
 Although the blocked file is still listed in the document library and in web, mobile, or desktop applications, people can't open, copy, move, or share the file. But, they can delete the blocked file.
 
 Here's an example of what a blocked file looks like on a mobile device:
 
-:::image type="content" source="../../media/cb1c1705-fd0a-45b8-9a26-c22503011d54.png" alt-text="The option to delete a blocked file from OneDrive for Business from the OneDrive mobile app" lightbox="../../media/cb1c1705-fd0a-45b8-9a26-c22503011d54.png":::
+:::image type="content" source="/defender/media/cb1c1705-fd0a-45b8-9a26-c22503011d54.png" alt-text="The option to delete a blocked file from OneDrive for Business from the OneDrive mobile app" lightbox="/defender/media/cb1c1705-fd0a-45b8-9a26-c22503011d54.png":::
 
 By default, people can download a blocked file. Here's what downloading a blocked file looks like on a mobile device:
 
-:::image type="content" source="../../media/be288a82-bdd8-4371-93d8-1783db3b61bc.png" alt-text="The option to download a blocked file in OneDrive for Business" lightbox="../../media/be288a82-bdd8-4371-93d8-1783db3b61bc.png":::
+:::image type="content" source="/defender/media/be288a82-bdd8-4371-93d8-1783db3b61bc.png" alt-text="The option to download a blocked file in OneDrive for Business" lightbox="/defender/media/be288a82-bdd8-4371-93d8-1783db3b61bc.png":::
 
 SharePoint Online admins can prevent people from downloading malicious files. For instructions, see [Use SharePoint Online PowerShell to prevent users from downloading malicious files](safe-attachments-for-spo-odfb-teams-configure.md#step-2-recommended-use-sharepoint-online-powershell-to-prevent-users-from-downloading-malicious-files).
 

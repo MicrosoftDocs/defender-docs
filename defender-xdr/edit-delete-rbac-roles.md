@@ -37,7 +37,7 @@ In Microsoft Defender XDR Unified role-based access control (RBAC), you can edit
 The following steps guide you on how to edit roles in Microsoft Defender XDR Unified RBAC:
 
 > [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](../defender/manage-rbac.md#permissions-pre-requisites).
+> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](/defender/manage-rbac#permissions-pre-requisites).
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as global administrator or security administrator.
 2. In the navigation pane, select **Permissions**.
@@ -45,7 +45,7 @@ The following steps guide you on how to edit roles in Microsoft Defender XDR Uni
 4. Select the role you want to edit. You can only edit one role at a time.
 5. Once selected, this opens a flyout pane where you can edit the role:
 
-    :::image type="content" source="./media/defender/m365-defender-rbac-edit-roles.png" alt-text="Screenshot of the edit roles flyout page" lightbox="./media/defender/m365-defender-rbac-edit-roles.png":::
+    :::image type="content" source="/defender/media/defender/m365-defender-rbac-edit-roles.png" alt-text="Screenshot of the edit roles flyout page" lightbox="/defender/media/defender/m365-defender-rbac-edit-roles.png":::
 
 > [!NOTE]
 > After editing an imported role, the changes made in Microsoft Defender XDR Unified RBAC will not be reflected back in the individual product RBAC model.
@@ -79,14 +79,14 @@ The following steps guide you on how to export roles in Microsoft Defender XDR U
 >[!Note]
 >To export roles, you must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have the **Authorization (manage)** permission assigned for all data sources in Microsoft Defender XDR Unified RBAC and have at least one workload activated for Unified RBAC.
 >
->For more information on permissions, see [Permission pre-requisites](../defender/manage-rbac.md#permissions-pre-requisites).
+>For more information on permissions, see [Permission pre-requisites](/defender/manage-rbac#permissions-pre-requisites).
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) with the required roles or permissions.
 2. In the navigation pane, select **Permissions**.
 3. Select **Roles** under Microsoft Defender XDR to get to the Permissions and roles page.
 4. Select the **Export** button.
 
-    :::image type="content" source="./media/defender/m365-defender-rbac-export-roles.png" alt-text="Screenshot of the export roles page" lightbox="./media/defender/m365-defender-rbac-export-roles.png":::
+    :::image type="content" source="/defender/media/defender/m365-defender-rbac-export-roles.png" alt-text="Screenshot of the export roles page" lightbox="/defender/media/defender/m365-defender-rbac-export-roles.png":::
 
 A CSV file containing all the roles data will be generated and downloaded to the local machine.
 

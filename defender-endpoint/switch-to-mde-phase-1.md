@@ -81,7 +81,7 @@ At this point, you're ready to grant access to your security administrators and 
 
 ## Step 3: Grant access to the Microsoft Defender portal
 
-The [Microsoft Defender portal](https://security.microsoft.com) is where you and your security team access and configure features and capabilities of Defender for Endpoint. To learn more, see [Overview of the Microsoft Defender portal](use.md).
+The [Microsoft Defender portal](https://security.microsoft.com) is where you and your security team access and configure features and capabilities of Defender for Endpoint. To learn more, see [Overview of the Microsoft Defender portal](/defender/microsoft-365-defender-portal).
 
 Permissions to the Microsoft Defender portal can be granted by using either basic permissions or role-based access control (RBAC). We recommend using RBAC so that you have more granular control over permissions.
 

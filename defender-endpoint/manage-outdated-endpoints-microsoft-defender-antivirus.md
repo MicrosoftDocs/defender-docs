@@ -125,7 +125,7 @@ You can set the number of consecutive scheduled scans that can be missed before 
 
 The process for enabling this feature is:
 
-1. Set up at least one scheduled scan (see the [Scheduled scans](scheduled-catch-up-scans-microsoft-defender-antivirus.md) article).
+1. Set up at least one scheduled scan (see the [Scheduled scans](schedule-antivirus-scans.md) article).
 
 2. Enable the catch-up scan feature.
 
@@ -158,7 +158,7 @@ You can use one of several methods to set up catch-up scans:
     - If you have set up scheduled quick scans, double-click the **Turn on catch-up quick scan** setting and set the option to **Enabled**.
     - If you have set up scheduled full scans, double-click the **Turn on catch-up full scan** setting and set the option to **Enabled**. Select **OK**.
     - Double-click the **Define the number of days after which a catch-up scan is forced** setting and set the option to **Enabled**.
-    - Enter the number of scans that can be missed before a scan will be automatically run when the user next signs in on the endpoint. The type of scan that is run is determined by the **Specify the scan type to use for a scheduled scan** (see the [Schedule scans](scheduled-catch-up-scans-microsoft-defender-antivirus.md) article). Select **OK**.
+    - Enter the number of scans that can be missed before a scan will be automatically run when the user next signs in on the endpoint. The type of scan that is run is determined by the **Specify the scan type to use for a scheduled scan** (see the [Schedule scans](schedule-antivirus-scans.md) article). Select **OK**.
 
 > [!NOTE]
 > The Group Policy setting title refers to the number of days. The setting, however, is applied to the number of scans (not days) before the catch-up scan will be run.
@@ -218,5 +218,5 @@ See the following article for more information and allowed parameters:
 - [Manage when protection updates should be downloaded and applied](manage-protection-update-schedule-microsoft-defender-antivirus.md)
 - [Manage event-based forced updates](manage-event-based-updates-microsoft-defender-antivirus.md)
 - [Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
-- [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-in-windows-10.md)
+- [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -1,13 +1,7 @@
 ---
 title: Optimize and correct security policies with configuration analyzer
 description: The steps to optimize and correct security policies with configuration analyzer. Configuration analyzer is a central location and single pane of glass for administering and viewing the email security policies you have configured in your tenant.
-search.product:
-ms.service: microsoft-365-security
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
-f1.keywords:
-  - NOCSH
+ms.service: defender-office-365
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
@@ -18,9 +12,8 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.subservice: mdo
 search.appverid: met150
-ms.date: 1/31/2023
+ms.date: 01/31/2023
 ---
 
 # Optimize and correct security policies with configuration analyzer
@@ -48,4 +41,4 @@ While in **Configuration analyzer** you can select **Configuration drift analysi
 
 The page which loads will show you the modifications to your security policies in the timeframe selected by the filters, along with data about the change and if it increased or decreased your overall posture.
 
-To learn more details about Configuration Analyzer, see [Configuration analyzer for security policies - Office 365 | Microsoft Docs](../../defender-office-365/configuration-analyzer-for-security-policies.md).
+To learn more details about Configuration Analyzer, see [Configuration analyzer for security policies - Office 365 | Microsoft Docs](/defender-office-365/configuration-analyzer-for-security-policies).

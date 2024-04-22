@@ -84,7 +84,7 @@ Once the service is provisioned, it adds:
 - [Advanced hunting](advanced-hunting-overview.md) capabilities
 - Threat analytics
 
-:::image type="content" source="./media/overview-incident.png" alt-text="The navigation pane in the Microsoft Defender portal with Microsoft Defender XDR features" lightbox="./media/overview-incident.png":::
+:::image type="content" source="/defender/media/overview-incident.png" alt-text="The navigation pane in the Microsoft Defender portal with Microsoft Defender XDR features" lightbox="/defender/media/overview-incident.png":::
 *Microsoft Defender portal with incidents management and other capabilities*
 
 ### Getting Microsoft Defender for Identity data 
@@ -104,9 +104,9 @@ Microsoft support staff can help provision or deprovision the service and relate
 - [Deploy supported services](deploy-supported-services.md)
 - [Setup guides for Microsoft Defender XDR](deploy-configure-m365-defender.md)
 - [Microsoft Defender XDR overview](microsoft-365-defender.md)
-- [Microsoft Defender for Endpoint overview](../defender-endpoint/microsoft-defender-endpoint.md)
-- [Defender for Office 365 overview](../defender-office-365/defender-for-office-365.md)
-- [Microsoft Defender for Cloud Apps overview](/defender-cloud-apps/what-is-cloud-app-security)
+- [Microsoft Defender for Endpoint overview](/defender-endpoint/microsoft-defender-endpoint)
+- [Defender for Office 365 overview](/defender-office-365/defender-for-office-365)
+- [Microsoft Defender for Cloud Apps overview](/cloud-app-security/what-is-cloud-app-security)
 - [Microsoft Defender for Identity overview](/azure-advanced-threat-protection/what-is-atp)
-- [Microsoft Defender for Endpoint data storage](../defender-endpoint/data-storage-privacy.md)
+- [Microsoft Defender for Endpoint data storage](/defender-endpoint/data-storage-privacy)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

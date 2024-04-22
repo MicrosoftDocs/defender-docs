@@ -15,8 +15,7 @@ ms.collection:
   - m365-security
   - tier1
 description: Admins and end-users can learn about submitting undetected malware or mis-identified malware attachments to Microsoft for analysis.
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 ms.date: 6/20/2023
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/eop-about" target="_blank">Exchange Online Protection</a>
@@ -51,13 +50,13 @@ But what can you do if you receive a message with a suspicious attachment or hav
 
 ## Submit malware files to Microsoft
 
-Organizations that have a Microsoft Defender XDR subscription, or Microsoft Defender XDR for Endpoint Plan 2 can submit files using the **Submissions** page in the Microsoft Defender portal. For more information, see [Use admin submission for submitting files in Microsoft Defender for Endpoint](../defender-endpoint/admin-submissions-mde.md).
+Organizations that have a Microsoft Defender XDR subscription, or Microsoft Defender XDR for Endpoint Plan 2 can submit files using the **Submissions** page in the Microsoft Defender portal. For more information, see [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
 Or, you can go to the Microsoft Security Intelligence page at <https://www.microsoft.com/wdsi/filesubmission> to submit the file. To receive analysis updates, sign in or enter a valid email address. We recommend using your Microsoft work or school account.
 
 After you've uploaded the file or files, note the **Submission ID** that's created for your sample submission (for example, `7c6c214b-17d4-4703-860b-7f1e9da03f7f`).
 
-:::image type="content" source="../../media/EOP-Malware-Protection-Center.png" alt-text="The submission details in the Windows Defender Security Intelligence website" lightbox="../../media/EOP-Malware-Protection-Center.png":::
+:::image type="content" source="/defender/media/EOP-Malware-Protection-Center.png" alt-text="The submission details in the Windows Defender Security Intelligence website" lightbox="/defender/media/EOP-Malware-Protection-Center.png":::
 
 After we receive the sample, we'll investigate. If we determine that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
 
@@ -65,7 +64,7 @@ If you continue receiving infected messages or attachments, then you should copy
 
 ## Submit good files to Microsoft
 
-Organizations that have a Microsoft Defender XDR Subscription or Microsoft Defender XDR for Endpoint Plan 2 can submit files using the **Submissions** page in the Microsoft Defender portal. For more information, see [Use admin submission for submitting files in Microsoft Defender for Endpoint](../defender-endpoint/admin-submissions-mde.md).
+Organizations that have a Microsoft Defender XDR Subscription or Microsoft Defender XDR for Endpoint Plan 2 can submit files using the **Submissions** page in the Microsoft Defender portal. For more information, see [Use admin submission for submitting files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
 Or, you can go to the Microsoft Security Intelligence page at <https://www.microsoft.com/wdsi/filesubmission> to submit the file. To receive analysis updates, sign in or enter a valid email address. We recommend using your Microsoft work or school account.
 

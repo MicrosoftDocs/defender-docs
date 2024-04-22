@@ -37,7 +37,7 @@ When an incident requires your attention, such as the incidents our experts issu
 
 The **Chat** tab within the Microsoft Defender XDR portal provides you with a space to engage with our experts and further understand the incident, our investigation, and the required actions we provided. You could ask about a malicious executable, malicious attachment, information about activity groups, advanced hunting queries, or any other information that would assist you with the incident resolution.
 
-:::image type="content" source="./media/xdr/in-portal-xdr-chat.png" alt-text="Screenshot of managed response in-portal chat." lightbox="./media/xdr/in-portal-xdr-chat.png":::
+:::image type="content" source="/defender/media/xdr/in-portal-xdr-chat.png" alt-text="Screenshot of managed response in-portal chat." lightbox="/defender/media/xdr/in-portal-xdr-chat.png":::
 
 ### Teams chat
 
@@ -45,7 +45,7 @@ Apart from using the in-portal chat, you can also engage in real-time chat conve
 
 Once you turn on chat on Teams, a new team named **Defender Experts team** is created and the Defender Experts Teams app is installed in it. Each incident that requires your attention is posted on this team's **Managed response** channel as a new post. To engage with our experts (for example, ask follow-up questions about the investigation summary or actions published by Defender Experts), use the **Reply** text bar to mention or tag *@Defender Experts* and type your message.
 
-:::image type="content" source="./media/xdr/teams-chat-managed-response-01.png" alt-text="Screenshot of managed response teams channel." lightbox="./media/xdr/teams-chat-managed-response-01.png":::
+:::image type="content" source="/defender/media/xdr/teams-chat-managed-response-01.png" alt-text="Screenshot of managed response teams channel." lightbox="/defender/media/xdr/teams-chat-managed-response-01.png":::
 
 **Important reminders when using the Teams chat:**
 
@@ -57,13 +57,13 @@ Once you turn on chat on Teams, a new team named **Defender Experts team** is cr
 
 ### Email
 
-The Defender Experts for XDR service typically sends automated emails whenever a managed response with completed or pending actions is published in the Microsoft XDR portal, or when it needs to remind you about incidents awaiting your action. 
+The Defender Experts for XDR service typically sends automated emails whenever a managed response with completed or pending actions is published in the Microsoft XDR portal, or when it needs to remind you about incidents awaiting your action.
 
 However, our experts could also send out emails to your identified notification contacts directly during any of the following situations:
 
 - When they require additional information or context to investigate an incident
 - When they detect a malicious or suspicious activity manually and outside of incidents or alerts in the Microsoft Defender XDR portal, and it requires a response action
-- When they reply to the requests or queries sent to them through email 
+- When they reply to the requests or queries sent to them through email
 
 > [!IMPORTANT]
 > Remember to verify emails claiming to be from Defender Experts.
@@ -74,7 +74,7 @@ In break-glass scenarios or matters that require immediate attention (for exampl
 
 ## Ask Defender Experts
 
-While the previous scenarios involve our experts initiating communication with you, you can also request advanced threat expertise on demand by selecting **Ask Defender Experts** directly inside the Microsoft Defender XDR portal. [Learn more](onboarding-defender-experts-for-hunting.md#collaborate-with-experts-on-demand)
+While the previous scenarios involve our experts initiating communication with you, you can also request advanced threat expertise on demand by selecting **Ask Defender Experts** directly inside the Microsoft Defender XDR portal. [Learn more](experts-on-demand.md)
 
 ## Collaborating with your service delivery manager
 

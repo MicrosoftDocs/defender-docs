@@ -143,7 +143,7 @@ For more information, see [Configure device proxy and Internet connectivity sett
 
 ## API
 
-Instead of the public URIs listed in our [API documentation](apis-intro.md), you'll need to use the following URIs:
+Instead of the public URIs listed in our [API documentation](/defender-vulnerability-management/tvm-supported-os), you'll need to use the following URIs:
 
 
 |Endpoint type|GCC|GCC High & DoD|

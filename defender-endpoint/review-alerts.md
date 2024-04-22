@@ -67,7 +67,7 @@ You can then also review the *automated investigation details* in your alert's d
 Other information available in the details pane when the alert opens includes MITRE techniques, source, and additional contextual details.
 
 > [!NOTE]
-> If you see an *Unsupported alert type* alert status, it means that automated investigation capabilities cannot pick up that alert to run an automated investigation. However, you can [investigate these alerts manually](../defender/investigate-incidents.md#alerts).
+> If you see an *Unsupported alert type* alert status, it means that automated investigation capabilities cannot pick up that alert to run an automated investigation. However, you can [investigate these alerts manually](/defender/investigate-incidents#alerts).
 
 ## Review affected assets
 
@@ -79,7 +79,7 @@ Selecting a device or a user card in the affected assets sections will switch to
 
 - **For users**, the details pane will display detailed user information, such as the user's SAM name and SID, as well as logon types performed by this user and any alerts and incidents related to it. You can select *Open user page* to continue the investigation from that user's point of view.
 
-   :::image type="content" source="images/user-page-details.png" alt-text="The details pane when a  user is selected" lightbox="images/user-page-details.png":::
+   :::image type="content" source="media/user-page-details.png" alt-text="The details pane when a  user is selected" lightbox="media/user-page-details.png":::
 
 ## Related topics
 

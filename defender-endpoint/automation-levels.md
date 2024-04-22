@@ -24,7 +24,7 @@ search.appverid: met150
 
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
+- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 Automated investigation and remediation (AIR) capabilities in Microsoft Defender for Business are preconfigured and aren't configurable. In Microsoft Defender for Endpoint, you can configure AIR to one of several levels of automation. Your automation level affects whether remediation actions following AIR investigations are taken automatically or only upon approval.
 
@@ -54,14 +54,14 @@ Automated investigation and remediation (AIR) capabilities in Microsoft Defender
 
 - New tenants (which include tenants that were created on or after August 16, 2020) with Defender for Endpoint are set to full automation by default.
 
-- [Defender for Business](../defender-business/mdb-overview.md) uses full automation by default. Defender for Business doesn't use device groups the same way as Defender for Endpoint. Thus, full automation is turned on and applied to all devices in Defender for Business.
+- [Defender for Business](/defender-business/mdb-overview) uses full automation by default. Defender for Business doesn't use device groups the same way as Defender for Endpoint. Thus, full automation is turned on and applied to all devices in Defender for Business.
 
 - If your security team has defined device groups with a level of automation, those settings aren't changed by the new default settings that are rolling out.
 
 - You can keep your default automation settings, or change them according to your organizational needs. To change your settings, [set your level of automation](/microsoft-365/security/defender-endpoint/configure-automated-investigations-remediation#set-up-device-groups).
 
 > [!NOTE]
-> [Defender for Business](../defender-business/mdb-overview.md) depends on real-time protection for automatic investigation. Real-time protection must be enabled and in active mode to enable automatic investigation.
+> [Defender for Business](/defender-business/mdb-overview) depends on real-time protection for automatic investigation. Real-time protection must be enabled and in active mode to enable automatic investigation.
 
 ## Next steps
 

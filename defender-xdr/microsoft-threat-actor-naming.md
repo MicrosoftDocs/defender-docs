@@ -16,14 +16,14 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 03/04/2024
+ms.date: 04/17/2024
 ---
 
 # How Microsoft names threat actors
 
 Microsoft shifted to a new naming taxonomy for threat actors aligned with the theme of weather. We intend to bring better clarity to customers and other security researchers with the nex taxonomy. We offer a more organized, articulate, and easy way to reference threat actors so that organizations can better prioritize and protect themselves and aid security researchers already confronted with an overwhelming amount of threat intelligence data.
 
-:::image type="content" source="./media/threat-actor-naming/threat-actor-categories.png" alt-text="Nation-state actors based on Microsoft naming" lightbox="./media/threat-actor-naming/threat-actor-categories-lg.png":::
+:::image type="content" source="/defender/media/threat-actor-naming/threat-actor-categories.png" alt-text="Nation-state actors based on Microsoft naming" lightbox="/defender/media/threat-actor-naming/threat-actor-categories-lg.png":::
 
 Microsoft categorizes threat actors into five key groups:
 
@@ -110,7 +110,7 @@ Use the following reference table to understand how our previously publicly disc
 |Salmon Typhoon|SODIUM|China|APT4, Maverick Panda|
 |Sangria Tempest|ELBRUS|Financially motivated|Carbon Spider, FIN7|
 |Sapphire Sleet|COPERNICIUM|North Korea|Genie Spider, BlueNoroff|
-|Seashell Blizzard|IRIDIUM|Russia|Sandworm|
+|Seashell Blizzard|IRIDIUM|Russia|APT44, Sandworm|
 |Secret Blizzard|KRYPTON|Russia|Venomous Bear, Turla, Snake|
 |Silk Typhoon|HAFNIUM|China||
 |Smoke Sandstorm|BOHRIUM|Iran||
@@ -166,7 +166,7 @@ Read our announcement about the new taxonomy for more information: [https://aka.
 
 ## Putting intelligence into the hands of security professionals
 
-[Intel profiles in Microsoft Defender Threat Intelligence](../defender/defender-threat-intelligence.md) bring crucial insights about threat actors. These insights enable security teams to get the context they need as they prepare for and respond to threats.
+[Intel profiles in Microsoft Defender Threat Intelligence](/defender/defender-threat-intelligence) bring crucial insights about threat actors. These insights enable security teams to get the context they need as they prepare for and respond to threats.
 
 Additionally, the Microsoft Defender Threat Intelligence Intel Profiles API provides the most up-to-date threat actor infrastructure visibility in the industry today. Updated information is crucial in enabling threat intelligence and security operations (SecOps) teams to streamline their advanced threat hunting and analysis workflows. Learn more about this API in the documentation: [Use the threat intelligence APIs in Microsoft Graph (preview)](/graph/api/resources/security-threatintelligence-overview).
 

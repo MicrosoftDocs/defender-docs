@@ -37,7 +37,7 @@ Microsoft Defender for Cloud Apps is a cloud access security broker (CASB). CASB
 
 Without Defender for Cloud Apps, cloud apps that are used by your organization are unmanaged and unprotected, as illustrated.
 
-:::image type="content" source="./media/defender/m365-defender-mcas-architecture-a.png" alt-text="The architecture for Microsoft Defender for Cloud Apps" lightbox="./media/defender/m365-defender-mcas-architecture-a.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-mcas-architecture-a.png" alt-text="The architecture for Microsoft Defender for Cloud Apps" lightbox="/defender/media/defender/m365-defender-mcas-architecture-a.png":::
 
 In the illustration:
 
@@ -48,7 +48,7 @@ In the illustration:
 
 The first step to managing the use of cloud apps is to discover which cloud apps are used by your organization. This next diagram illustrates how cloud discovery works with Defender for Cloud Apps.
 
-:::image type="content" source="./media/defender/m365-defender-mcas-architecture-b.png" alt-text="The architecture for Microsoft Defender for Cloud Apps in Cloud discovery" lightbox="./media/defender/m365-defender-mcas-architecture-b.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-mcas-architecture-b.png" alt-text="The architecture for Microsoft Defender for Cloud Apps in Cloud discovery" lightbox="/defender/media/defender/m365-defender-mcas-architecture-b.png":::
 
 In this illustration, there are two methods that can be used to monitor network traffic and discover cloud apps that are being used by your organization.
 
@@ -59,7 +59,7 @@ In this illustration, there are two methods that can be used to monitor network 
 
 After you discover cloud apps and analyze how these apps are used by your organization, you can begin managing cloud apps that you choose.
 
-:::image type="content" source="./media/defender/m365-defender-mcas-architecture-c.png" alt-text="The architecture for Microsoft Defender for Cloud Apps while the managing the Cloud apps" lightbox="./media/defender/m365-defender-mcas-architecture-c.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-mcas-architecture-c.png" alt-text="The architecture for Microsoft Defender for Cloud Apps while the managing the Cloud apps" lightbox="/defender/media/defender/m365-defender-mcas-architecture-c.png":::
 
 In this illustration:
 
@@ -70,7 +70,7 @@ In this illustration:
 
 Microsoft Defender for Cloud Apps serves as a reverse proxy, providing proxy access to sanctioned cloud apps. This provision allows Defender for Cloud Apps to apply session controls that you configure.
 
-:::image type="content" source="./media/defender/m365-defender-mcas-architecture-d.png" alt-text="The architecture for Microsoft Defender for Cloud Apps - Proxy access session control" lightbox="./media/defender/m365-defender-mcas-architecture-d.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-mcas-architecture-d.png" alt-text="The architecture for Microsoft Defender for Cloud Apps - Proxy access session control" lightbox="/defender/media/defender/m365-defender-mcas-architecture-d.png":::
 
 In this illustration:
 
@@ -86,7 +86,7 @@ Session controls allow you to apply parameters to how cloud apps are used by you
 
 You might already have SaaS apps added to your Microsoft Entra tenant to enforce multi-factor authentication and other conditional access policies. Microsoft Defender for Cloud Apps natively integrates with Microsoft Entra ID. All you have to do is configure a policy in Microsoft Entra ID to use Conditional Access App Control in Defender for Cloud Apps. This routes network traffic for these managed SaaS apps through Defender for Cloud Apps as a proxy, which allows Defender for Cloud Apps to monitor this traffic and to apply session controls.
 
-:::image type="content" source="./media/defender/m365-defender-mcas-architecture-e.png" alt-text="The architecture for the Microsoft Defender for Cloud Apps - SaaS apps" lightbox="./media/defender/m365-defender-mcas-architecture-e.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-mcas-architecture-e.png" alt-text="The architecture for the Microsoft Defender for Cloud Apps - SaaS apps" lightbox="/defender/media/defender/m365-defender-mcas-architecture-e.png":::
 
 In this illustration:
 
@@ -102,7 +102,7 @@ Defender for Cloud Apps provides powerful protection on its own. However, when c
 
 It's worth repeating this illustration from the overview to this Microsoft Defender XDR evaluation and pilot guide.
 
-:::image type="content" source="./media/defender/m365-defender-eval-threat-chain.png" alt-text="How Microsoft Defender XDR stops a chain of threats" lightbox="./media/defender/m365-defender-eval-threat-chain.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-eval-threat-chain.png" alt-text="How Microsoft Defender XDR stops a chain of threats" lightbox="/defender/media/defender/m365-defender-eval-threat-chain.png":::
 
 Focusing on the right side of this illustration, Microsoft Defender for Cloud Apps notices anomalous behavior like impossible-travel, credential access, and unusual download, file share, or mail forwarding activity and reports these behaviors to the security team. Therefore, Defender for Cloud Apps helps prevent lateral movement by hackers and exfiltration of sensitive data. Microsoft 356 Defender for Cloud correlates the signals from all the components to provide the full attack story.
 
@@ -112,11 +112,11 @@ The following table identified key concepts that are important to understand whe
 
 |Concept  |Description |More information  |
 |---------|---------|---------|
-| Defender for Cloud Apps Dashboard | Presents an overview of the most important information about your organization and gives links to deeper investigation.        | [Working with the dashboard](/defender-cloud-apps/daily-activities-to-protect-your-cloud-environment)       |
-| Conditional Access App Control    | Reverse proxy architecture that integrates with your Identity Provider (IdP) to give Microsoft Entra Conditional Access policies and selectively enforce session controls.        |  [Protect apps with Microsoft Defender for Cloud Apps Conditional Access App Control](/defender-cloud-apps/proxy-intro-aad)       |
-|  Cloud App Catalog   | The Cloud App Catalog gives you a full picture against Microsoft catalog of over 16,000 cloud apps that are ranked and scored based on more than 80 risk factors.    |  [Working with App risk scores](/defender-cloud-apps/risk-score)       |
-| Cloud Discovery Dashboard    | Cloud Discovery analyzes your traffic logs and is designed to give more insight into how cloud apps are being used in your organization as well as give alerts and risk levels.     |  [Working with discovered apps](/defender-cloud-apps/discovered-apps)    |
-|Connected Apps |Defender for Cloud Apps provides end-to-end protection for connected apps using Cloud-to-Cloud integration, API connectors, and real-time access and session controls using our Conditional App Access Controls. |[Protecting connected apps](/defender-cloud-apps/protect-connected-apps) |
+| Defender for Cloud Apps Dashboard | Presents an overview of the most important information about your organization and gives links to deeper investigation.        | [Working with the dashboard](/cloud-app-security/daily-activities-to-protect-your-cloud-environment)       |
+| Conditional Access App Control    | Reverse proxy architecture that integrates with your Identity Provider (IdP) to give Microsoft Entra Conditional Access policies and selectively enforce session controls.        |  [Protect apps with Microsoft Defender for Cloud Apps Conditional Access App Control](/cloud-app-security/proxy-intro-aad)       |
+|  Cloud App Catalog   | The Cloud App Catalog gives you a full picture against Microsoft catalog of over 16,000 cloud apps that are ranked and scored based on more than 80 risk factors.    |  [Working with App risk scores](/cloud-app-security/risk-score)       |
+| Cloud Discovery Dashboard    | Cloud Discovery analyzes your traffic logs and is designed to give more insight into how cloud apps are being used in your organization as well as give alerts and risk levels.     |  [Working with discovered apps](/cloud-app-security/discovered-apps)    |
+|Connected Apps |Defender for Cloud Apps provides end-to-end protection for connected apps using Cloud-to-Cloud integration, API connectors, and real-time access and session controls using our Conditional App Access Controls. |[Protecting connected apps](/cloud-app-security/protect-connected-apps) |
 
 ## Review architecture requirements
 
@@ -141,7 +141,7 @@ You can integrate Microsoft Defender for Cloud Apps with your generic SIEM serve
 
 Additionally, Microsoft Sentinel includes a Microsoft Defender for Cloud Apps connector to provide deeper integration with Microsoft Sentinel. This arrangement enables you to not only gain visibility into your cloud apps but to also get sophisticated analytics to identify and combat cyberthreats and to control how your data travels.
 
-- [Generic SIEM integration](/defender-cloud-apps/siem)
+- [Generic SIEM integration](/cloud-app-security/siem)
 - [Stream alerts and Cloud Discovery logs from Defender for Cloud Apps into Microsoft Sentinel](/azure/sentinel/connect-cloud-app-security)
 
 ### Next steps

@@ -193,7 +193,7 @@ DeviceEvents
 | where ThreatName startswith_cs 'PUA:'
 ```
 
-To learn more about advanced hunting, see [Proactively hunt for threats with advanced hunting](advanced-hunting-overview.md).
+To learn more about advanced hunting, see [Proactively hunt for threats with advanced hunting](/defender/advanced-hunting-overview).
 
 ## Exclude files from PUA protection
 
@@ -213,6 +213,6 @@ For more information, see [Configure and validate exclusions based on file exten
 
 ## See also
 
-- [Next-generation protection](microsoft-defender-antivirus-in-windows-10.md)
+- [Next-generation protection](microsoft-defender-antivirus-windows.md)
 - [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

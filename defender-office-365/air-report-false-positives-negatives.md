@@ -2,14 +2,11 @@
 title: "How to report false positives or false negatives following automated investigation in Microsoft Defender for Office 365"
 description: Was something missed or wrongly detected by AIR in Microsoft Defender for Office 365? Learn how to submit false positives or false negatives to Microsoft for analysis.
 search.appverid: met150
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords: 
 - NOCSH
 author: chrisda
 ms.author: chrisda
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 ms.date: 06/09/2023
 ms.localizationpriority: medium
 manager: deniseb
@@ -20,7 +17,6 @@ ms.collection:
 ms.topic: how-to
 ms.custom: 
 - autoir
-ms.subservice: mdo
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -30,7 +26,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-If [automated investigation and response (AIR) capabilities in Office 365](air-about-office.md) missed or wrongly detected something, there are steps your security operations team can take to fix it. Such actions include:
+If [automated investigation and response (AIR) capabilities in Office 365](air-about.md) missed or wrongly detected something, there are steps your security operations team can take to fix it. Such actions include:
 
 - [Reporting a false positive/negative to Microsoft](#report-a-false-positivenegative-to-microsoft-for-analysis);
 - [Adjusting alerts](#adjust-an-alert-to-prevent-false-positives-from-recurring) (if needed); and
@@ -46,7 +42,7 @@ You can also [Submit a file to Microsoft for malware analysis](https://www.micro
 
 ## Adjust an alert to prevent false positives from recurring
 
-If an alert is triggered by legitimate use, or the alert is inaccurate, you can [Manage alerts in the Defender for Cloud Apps portal](/defender-cloud-apps/managing-alerts).
+If an alert is triggered by legitimate use, or the alert is inaccurate, you can [Manage alerts in the Defender for Cloud Apps portal](/cloud-app-security/managing-alerts).
 
 If your organization is using [Microsoft Defender for Endpoint](/windows/security/threat-protection) in addition to Office 365, and a file, IP address, URL, or domain is treated as malware on a device, even though it's safe, you can [create a custom indicator with an "Allow" action for your device](/windows/security/threat-protection/microsoft-defender-atp/manage-indicators).
 

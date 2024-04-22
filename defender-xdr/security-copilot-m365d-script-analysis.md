@@ -16,11 +16,12 @@ audience: ITPro
 ms.collection:
   - m365-security
   - tier1
+  - security-copilot
 ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
-ms.date: 03/28/2024
+ms.date: 04/01/2024
 ---
 
 # Script analysis with Microsoft Copilot in Microsoft Defender
@@ -48,21 +49,21 @@ To begin analysis, perform the following steps:
 
 1. Open an incident page then select an item on the left pane to open the attack story below the incident graph. Within the attack story, select an event with a script or command line that you want to analyze. Click **Analyze** to start the analysis.
 
-   :::image type="content" source="./media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-incident-small.png" alt-text="Screenshot highlighting the script analysis button in the attack story view." lightbox="./media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-incident.png":::
+   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-incident-small.png" alt-text="Screenshot highlighting the script analysis button in the attack story view." lightbox="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-incident.png":::
 
    Alternately, you can select an event to inspect in the device timeline view. On the file details pane, select **Analyze** to run the script analysis capability.
 
-   :::image type="content" source="./media/copilot-in-defender/script-analyzer/copilot-defender-script-device-timeline-small.png" alt-text="Screenshot highlighting the Analyze button in the device timeline." lightbox="./media/copilot-in-defender/script-analyzer/copilot-defender-script-device-timeline.png":::
+   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-device-timeline-small.png" alt-text="Screenshot highlighting the Analyze button in the device timeline." lightbox="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-device-timeline.png":::
   
 2. Copilot runs script analysis and displays the results in the Copilot pane. Select **Show code** to expand the script, or **Hide code** to close the expansion.
 
-   :::image type="content" source="./media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-results-small.png" alt-text="Screenshot of the Copilot pane with script analysis results in the Microsoft Defender XDR incident page." lightbox="./media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-results.png":::
+   :::image type="content" source="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-results-small.png" alt-text="Screenshot of the Copilot pane with script analysis results in the Microsoft Defender XDR incident page." lightbox="/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-results.png":::
 
 3. Select the **More actions** ellipsis (...) on the upper right of the script analysis card to copy or regenerate the results, or view the results in the Copilot for Security standalone experience. Selecting **Open in Copilot for Security** opens a new tab to the Copilot standalone portal where you can input prompts and access other plugins.
   
-    ![Screenshot highlighting the More actions option in the Copilot script analysis card.](./media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-more-actions.png)
+    ![Screenshot highlighting the More actions option in the Copilot script analysis card.](/defender/media/copilot-in-defender/script-analyzer/copilot-defender-script-analysis-more-actions.png)
 
-4. Review the results. You can provide feedback on the results by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](./media/copilot-in-defender/copilot-defender-feedback.png) found at the end of the script analysis card.
+4. Review the results. You can provide feedback on the results by selecting the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](/defender/media/copilot-in-defender/copilot-defender-feedback.png) found at the end of the script analysis card.
 
 ## See also
 

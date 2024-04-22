@@ -50,7 +50,7 @@ For more information on using Defender for Endpoint CSP, see, [WindowsAdvancedTh
 >
 > - The **Health Status for onboarded devices** policy uses read-only properties and can't be remediated.
 > - Configuration of diagnostic data reporting frequency is only available for devices on Windows 10, version 1703.
-> - Onboarding to Defender for Endpoint will onboard the device to [Data Loss Prevention (DLP)](../../compliance/endpoint-dlp-learn-about.md), which is also a part of Microsoft 365 compliance.
+> - Onboarding to Defender for Endpoint will onboard the device to [Data Loss Prevention (DLP)](/Microsoft-365/compliance/endpoint-dlp-learn-about), which is also a part of Microsoft 365 compliance.
 
 
 ## Run a detection test to verify onboarding

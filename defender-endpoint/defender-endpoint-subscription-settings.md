@@ -36,7 +36,7 @@ In Defender for Endpoint, a mixed-licensing scenario is a situation in which an 
 You can also use a newly added license usage report to track status.
 
 > [!NOTE]
-> If you're using Microsoft Defender for Business and you want to switch to Defender for Endpoint Plan 2, see [Change your endpoint security subscription](../defender-business/mdb-manage-subscription.md).
+> If you're using Microsoft Defender for Business and you want to switch to Defender for Endpoint Plan 2, see [Change your endpoint security subscription](/defender-business/mdb-manage-subscription).
 
 ## [**Use mixed mode**](#tab/mixed)
 
@@ -71,7 +71,7 @@ You can also use a newly added license usage report to track status.
    | Tag devices manually | To tag devices manually, create a tag called `License MDE P1` and apply it to devices. To get help with this step, see [Create and manage device tags](machine-tags.md).<br/><br/>Note that devices that are tagged with the `License MDE P1` tag using the [registry key method](machine-tags.md#add-device-tags-by-setting-a-registry-key-value) will not receive downgraded functionality. If you want to tag devices by using the registry key method, use a dynamic rule instead of manual tagging.  |
    | Tag devices automatically by using a dynamic rule | *Dynamic rule functionality is new for mixed-license scenarios! It allows you to apply a dynamic and granular level of control over how you manage devices*. <br/><br/>To use a dynamic rule, you specify a set of criteria based on device name, domain, operating system platform, and/or device tags. Devices that meet the specified criteria will receive the Defender for Endpoint Plan 1 or Plan 2 capabilities according to your rule. <br/><br/>As you define your criteria, you can use the following condition operators: <br/>- `Equals` / `Not equals`<br/>- `Starts with`<br/>- `Contains` / `Does not contain` <br/><br/>For **Device name**, you can use freeform text.<br/><br/>For **Domain**, select from a list of domains.<br/><br/>For **OS platform**, select from a list of operating systems.<br/><br/>For **Tag**, use the freeform text option. Type the tag value that corresponds to the devices that should receive either Defender for Endpoint Plan 1 or Plan 2 capabilities. See the example in [More details about device tagging](#more-details-about-device-tagging). |
  
-   Device tags are visible in the **Device inventory** view and in the [Defender for Endpoint APIs](apis-intro.md).
+   Device tags are visible in the **Device inventory** view and in the [Defender for Endpoint APIs](/defender-vulnerability-management/tvm-supported-os).
 
    > [!NOTE]
    > Dynamically added Defender for Endpoint P1 tags are not currently filterable in the Device inventory view. 
@@ -92,7 +92,7 @@ For example, suppose that you want to use a tag called `VIP` for all the devices
 
    - [Add device tags using the portal](machine-tags.md#add-device-tags-using-the-portal).
    - [Add device tags by setting a registry key value](machine-tags.md#add-device-tags-by-setting-a-registry-key-value).
-   - [Add or remove machine tags by using the Defender for Endpoint API](add-or-remove-machine-tags.md).
+   - [Add or remove machine tags by using the Defender for Endpoint API](api/add-or-remove-machine-tags.md).
    - [Add device tags by creating a custom profile in Microsoft Intune](machine-tags.md#add-device-tags-by-creating-a-custom-profile-in-microsoft-intune).
 
 2. Set up a dynamic rule using the condition operator `Tag Does not contain VIP`. In this case, all devices that do not have the `VIP` tag will receive the `License MDE P1` tag and Defender for Endpoint Plan 1 capabilities. 
@@ -160,6 +160,6 @@ To reduce management overhead, there's no requirement for device-to-user mapping
 - [How to contact support for Defender for Endpoint](contact-support.md).
 - [Get started with Microsoft Security (trial offers)](https://www.microsoft.com/security/business/get-started/start-free-trial)
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](../defender-business/mdb-overview.md) (endpoint protection for small and medium-sized businesses)
+- [Microsoft Defender for Business](/defender-business/mdb-overview) (endpoint protection for small and medium-sized businesses)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

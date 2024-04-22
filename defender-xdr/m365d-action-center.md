@@ -38,7 +38,7 @@ Because the Action center provides a comprehensive view of Microsoft Defender XD
 
 The unified Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) lists pending and completed remediation actions for your devices, email & collaboration content, and identities in one location.
 
-:::image type="content" source="./media/m3d-action-center-unified.png" alt-text="The unified Action center in the Microsoft Defender portal." lightbox="./media/m3d-action-center-unified.png":::
+:::image type="content" source="/defender/media/m3d-action-center-unified.png" alt-text="The unified Action center in the Microsoft Defender portal." lightbox="/defender/media/m3d-action-center-unified.png":::
 
 For example: 
 
@@ -49,7 +49,7 @@ The unified Action center brings together remediation actions across Defender fo
 
 You can use the unified Action center if you have appropriate permissions and one or more of the following subscriptions:
 
-- [Defender for Endpoint](../defender-endpoint/microsoft-defender-endpoint.md)
+- [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
 - [Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365)
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
@@ -76,7 +76,7 @@ You can navigate to the list of actions pending approval in two different ways:
 
 4. You can customize, sort, filter, and export data in the Action center.
 
-   :::image type="content" source="./media/m3d-action-center-columnsfilters.png" alt-text="Screenshot that shows the sort, filter, and customize capabilities of the Action center." lightbox="./media/m3d-action-center-columnsfilters.png":::
+   :::image type="content" source="/defender/media/m3d-action-center-columnsfilters.png" alt-text="Screenshot that shows the sort, filter, and customize capabilities of the Action center." lightbox="/defender/media/m3d-action-center-columnsfilters.png":::
 
    - Select a column heading to sort items in ascending or descending order.
    - Use the time period filter to view data for the past day, week, 30 days, or 6 months.
@@ -108,14 +108,14 @@ In addition to remediation actions that are taken automatically as a result of [
 
 | Action source value | Description |
 |:-----|:---|
-| **Manual device action** | A manual action taken on a device. Examples include [device isolation](../defender-endpoint/respond-machine-alerts.md#isolate-devices-from-the-network) or [file quarantine](../defender-endpoint/respond-file-alerts.md#stop-and-quarantine-files). |
-| **Manual email action** | A manual action taken on email. An example includes soft-deleting email messages or [remediating an email message](../defender-office-365/remediate-malicious-email-delivered-office-365.md). |
-| **Automated device action** | An automated action taken on an entity, such as a file or process. Examples of automated actions include sending a file to quarantine, stopping a process, and removing a registry key. (See [Remediation actions in Microsoft Defender for Endpoint](../defender-endpoint/manage-auto-investigation.md#remediation-actions).) |
-| **Automated email action** | An automated action taken on email content, such as an email message, attachment, or URL. Examples of automated actions include soft-deleting email messages, blocking URLs, and turning off external mail forwarding. (See [Remediation actions in Microsoft Defender for Office 365](../defender-office-365/air-remediation-actions.md).) |
+| **Manual device action** | A manual action taken on a device. Examples include [device isolation](/defender-endpoint/respond-machine-alerts.md#isolate-devices-from-the-network) or [file quarantine](/defender-endpoint/respond-file-alerts#stop-and-quarantine-files). |
+| **Manual email action** | A manual action taken on email. An example includes soft-deleting email messages or [remediating an email message](/defender-office-365/remediate-malicious-email-delivered-office-365). |
+| **Automated device action** | An automated action taken on an entity, such as a file or process. Examples of automated actions include sending a file to quarantine, stopping a process, and removing a registry key. (See [Remediation actions in Microsoft Defender for Endpoint](/defender-endpoint/manage-auto-investigation#remediation-actions).) |
+| **Automated email action** | An automated action taken on email content, such as an email message, attachment, or URL. Examples of automated actions include soft-deleting email messages, blocking URLs, and turning off external mail forwarding. (See [Remediation actions in Microsoft Defender for Office 365](/defender-office-365/air-remediation-actions).) |
 | **Advanced hunting action** | Actions taken on devices or email with [advanced hunting](./advanced-hunting-overview.md). |
-| **Explorer action** | Actions taken on email content with [Explorer](../defender-office-365/threat-explorer-real-time-detections-about.md). |
-| **Manual live response action** | Actions taken on a device with [live response](../defender-endpoint/live-response.md). Examples include deleting a file, stopping a process, and removing a scheduled task. |
-| **Live response action** | Actions taken on a device with [Microsoft Defender for Endpoint APIs](../defender-endpoint/management-apis.md#microsoft-defender-for-endpoint-apis). Examples of actions include isolating a device, running an antivirus scan, and getting information about a file. |
+| **Explorer action** | Actions taken on email content with [Explorer](/defender-office-365/threat-explorer-real-time-detections-about). |
+| **Manual live response action** | Actions taken on a device with [live response](/defender-endpoint/live-response). Examples include deleting a file, stopping a process, and removing a scheduled task. |
+| **Live response action** | Actions taken on a device with [Microsoft Defender for Endpoint APIs](/defender-endpoint/management-apis#microsoft-defender-for-endpoint-apis). Examples of actions include isolating a device, running an antivirus scan, and getting information about a file. |
 
 ## Required permissions for Action center tasks
 
@@ -123,7 +123,7 @@ To perform tasks, such as approving or rejecting pending actions in the Action c
 
 |Remediation action |Required roles and permissions |
 |--|----|
-|Microsoft Defender for Endpoint remediation (devices) |**Security Administrator** role assigned in either Microsoft Entra ID ([https://portal.azure.com](https://portal.azure.com)) or the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com))<br/>--- or ---<br/>**Active remediation actions** role assigned in Microsoft Defender for Endpoint <br/> <br/> To learn more, see the following resources: <br/>- [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference)<br/>- [Create and manage roles for role-based access control (Microsoft Defender for Endpoint)](../defender-endpoint/user-roles.md)  |
+|Microsoft Defender for Endpoint remediation (devices) |**Security Administrator** role assigned in either Microsoft Entra ID ([https://portal.azure.com](https://portal.azure.com)) or the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com))<br/>--- or ---<br/>**Active remediation actions** role assigned in Microsoft Defender for Endpoint <br/> <br/> To learn more, see the following resources: <br/>- [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference)<br/>- [Create and manage roles for role-based access control (Microsoft Defender for Endpoint)](/defender-endpoint/user-roles)  |
 |Microsoft Defender for Office 365 remediation (Office content and email)  |**Security Administrator** role assigned in either Microsoft Entra ID ([https://portal.azure.com](https://portal.azure.com)) or the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com))<br/>--- and --- <br/>**Search and Purge** role assigned in the Microsoft Defender XDR > [Email & collaboration roles](https://security.microsoft.com/emailandcollabpermissions) <br/><br/>**IMPORTANT**: If you have the **Security Administrator** role assigned only in the Microsoft Defender XDR > [Email & collaboration roles](https://security.microsoft.com/emailandcollabpermissions), you will not be able to access the Action center or Microsoft Defender XDR capabilities. You must have the Security Administrator role assigned in Microsoft Entra ID or the Microsoft 365 admin center. <br/><br/>To learn more, see the following resources: <br/>- [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference)<br/>- [Permissions in the Security & Compliance Center](/microsoft-365/security/office-365-security/scc-permissions) |
 
 > [!TIP]

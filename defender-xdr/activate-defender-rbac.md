@@ -42,7 +42,7 @@ The following steps guide you on how to activate the Microsoft Defender XDR Unif
 2. [Activate in Microsoft Defender XDR settings](#activate-in-microsoft-365-defender-settings)
 
 > [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID to perform this task. For more information on permissions, see [Permission pre-requisites](../defender/manage-rbac.md#permissions-pre-requisites).
+> You must be a Global Administrator or Security Administrator in Microsoft Entra ID to perform this task. For more information on permissions, see [Permission pre-requisites](/defender/manage-rbac#permissions-pre-requisites).
 
 ### Activate from the Permissions and roles page
 
@@ -50,14 +50,14 @@ Sign in to the [Microsoft Defender portal](https://security.microsoft.com). In t
 
 You can activate your workloads in two ways from the Permissions and roles page:
 
-:::image type="content" source="./media/defender/m365-defender-rbac-activate-workloads1.png" alt-text="Screenshot of the activate workloads page" lightbox="./media/defender/m365-defender-rbac-activate-workloads1.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-rbac-activate-workloads1.png" alt-text="Screenshot of the activate workloads page" lightbox="/defender/media/defender/m365-defender-rbac-activate-workloads1.png":::
 
 1. **Activate workloads**
     - Select **Activate workloads** on the banner above the list of roles.
     - This will bring you directly to the **Activate workloads** screen.
     - You must activate each workload one by one. Once you select the individual toggle, you'll activate (or deactivate) that workload.
 
-    :::image type="content" source="./media/defender/m365-defender-rbac-activate-workload-selection1.png" alt-text="Screenshot of the choose workloads to activate screen" lightbox="./media/defender/m365-defender-rbac-activate-workload-selection1.png":::
+    :::image type="content" source="/defender/media/defender/m365-defender-rbac-activate-workload-selection1.png" alt-text="Screenshot of the choose workloads to activate screen" lightbox="/defender/media/defender/m365-defender-rbac-activate-workload-selection1.png":::
 
     > [!NOTE]
     > The **Activate workloads** button is only available when there is it at least one workload that's not active for Microsoft Defender XDR Unified RBAC.
@@ -66,7 +66,7 @@ You can activate your workloads in two ways from the Permissions and roles page:
     > Microsoft Defender for Cloud is active by default with Microsoft Defender XDR Unified RBAC.
 
     > [!NOTE]
-    > To activate Exchange Online (EXO) permissions in Microsoft Defender XDR Unified RBAC, Exchange Online Protection (EOP) permissions must be active. 
+    > To activate Exchange Online permissions in Microsoft Defender XDR Unified RBAC, Defender for Office 365 permissions must be active. 
 
 2. **Workload settings**
     - Select **Workload settings**.

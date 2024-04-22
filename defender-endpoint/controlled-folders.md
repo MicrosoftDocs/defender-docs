@@ -46,7 +46,7 @@ Controlled folder access helps protect your valuable data from malicious apps an
 Controlled folder access works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting into controlled folder access events and blocks as part of the usual [alert investigation scenarios](investigate-alerts.md).
 
 > [!TIP]
-> Controlled folder access blocks don't generate alerts in the [Alerts queue](alerts-queue.md). However, you can view information about controlled folder access blocks in the [device timeline view](investigate-machines.md), while using [advanced hunting](advanced-hunting-overview.md), or with [custom detection rules](custom-detection-rules.md).
+> Controlled folder access blocks don't generate alerts in the [Alerts queue](alerts-queue.md). However, you can view information about controlled folder access blocks in the [device timeline view](investigate-machines.md), while using [advanced hunting](/defender/advanced-hunting-overview), or with [custom detection rules](/defender-xdr/custom-detection-rules).
 
 ## How does controlled folder access work?
 
@@ -64,7 +64,7 @@ Controlled folder access is especially useful in helping to protect your documen
 
 The [protected folders](#review-controlled-folder-access-events-in-windows-event-viewer) include common system folders (including boot sectors), and you can [add more folders](customize-controlled-folders.md#protect-additional-folders). You can also [allow apps](customize-controlled-folders.md#allow-specific-apps-to-make-changes-to-controlled-folders) to give them access to the protected folders.
 
-You can use [audit mode](audit-windows-defender.md) to evaluate how controlled folder access would impact your organization if it were enabled.
+You can use [audit mode](overview-attack-surface-reduction.md) to evaluate how controlled folder access would impact your organization if it were enabled.
 
 Controlled folder access is supported on the following versions of Windows:
 
@@ -106,9 +106,9 @@ Controlled folder access requires enabling [Microsoft Defender Antivirus real-ti
 
 ## Review controlled folder access events in the Microsoft Defender portal
 
-Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md) in the Microsoft Defender portal; see [Microsoft Defender for Endpoint in Microsoft Defender XDR](../defender/microsoft-365-security-center-mde.md).
+Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md) in the Microsoft Defender portal; see [Microsoft Defender for Endpoint in Microsoft Defender XDR](/defender/microsoft-365-security-center-mde).
 
-You can query Microsoft Defender for Endpoint data by using [Advanced hunting](advanced-hunting-overview.md). If you're using [audit mode](audit-windows-defender.md), you can use [advanced hunting](advanced-hunting-overview.md) to see how controlled folder access settings would affect your environment if they were enabled.
+You can query Microsoft Defender for Endpoint data by using [Advanced hunting](/defender/advanced-hunting-overview). If you're using [audit mode](overview-attack-surface-reduction.md), you can use [advanced hunting](/defender/advanced-hunting-overview) to see how controlled folder access settings would affect your environment if they were enabled.
 
 Example query:
 
@@ -124,7 +124,7 @@ You can review the Windows event log to see events that are created when control
 1. Download the [Evaluation Package](https://aka.ms/mp7z2w) and extract the file *cfa-events.xml* to an easily accessible location on the device.
 2. Type **Event viewer** in the Start menu to open the Windows Event Viewer.
 3. On the left panel, under **Actions**, select **Import custom view...**.
-4. Navigate to where you extracted *cfa-events.xml* and select it. Alternatively, [copy the XML directly](event-views.md).
+4. Navigate to where you extracted *cfa-events.xml* and select it. Alternatively, [copy the XML directly](overview-attack-surface-reduction.md).
 5. Select **OK**.
 
 The following table shows events related to controlled folder access:

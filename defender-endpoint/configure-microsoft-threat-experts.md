@@ -44,15 +44,15 @@ If you're already a Defender for Endpoint customer, you can apply through the Mi
 
 2. Click **Apply**.
 
-   :::image type="content" source="images/mte-collaboratewithmte.png" alt-text="The Microsoft Defender Experts settings" lightbox="images/mte-collaboratewithmte.png":::
+   :::image type="content" source="media/mte-collaboratewithmte.png" alt-text="The Microsoft Defender Experts settings" lightbox="media/mte-collaboratewithmte.png":::
 
 3. Enter your name and email address so that Microsoft can get back to you on your application.
 
-   :::image type="content" source="images/mte-apply.png" alt-text="The Name field on the Microsoft Defender Experts application page" lightbox="images/mte-apply.png":::
+   :::image type="content" source="media/mte-apply.png" alt-text="The Name field on the Microsoft Defender Experts application page" lightbox="media/mte-apply.png":::
 
 4. Read the [privacy statement](https://privacy.microsoft.com/privacystatement), then click **Submit** when you're done. You'll receive a welcome email once your application is approved.
 
-   :::image type="content" source="images/mte-applicationconfirmation.png" alt-text="The Microsoft Defender Experts application confirmation message" lightbox="images/mte-applicationconfirmation.png":::
+   :::image type="content" source="media/mte-applicationconfirmation.png" alt-text="The Microsoft Defender Experts application confirmation message" lightbox="media/mte-applicationconfirmation.png":::
 
 When accepted, you'll receive a welcome email and you'll see the **Apply** button change to a toggle that is "on". In case you want to take yourself out of the Endpoint Attack Notifications service, slide the toggle "off" and click **Save preferences** at the bottom of the page.
 
@@ -70,7 +70,7 @@ To receive Endpoint Attack Notifications through email, create an email notifica
 
 ### Create an email notification rule
 
-You can create rules to send email notifications for notification recipients. See  [Configure alert notifications](configure-email-notifications.md) to create, edit, delete, or troubleshoot email notification, for details.
+You can create rules to send email notifications for notification recipients. See  [Configure alert notifications](/defender-xdr/configure-email-notifications) to create, edit, delete, or troubleshoot email notification, for details.
 
 ## View the Endpoint Attack Notifications
 
@@ -84,11 +84,11 @@ You'll start receiving Endpoint Attack Notifications from Microsoft Defender Exp
 
 You can filter your incidents and alerts if you want to only see the Endpoint Attack Notifications amongst the many alerts. To do so:
 
-1. On the navigation menu, go to **Incidents & alerts** > **Incidents**/**Alerts** > select the ![Filter to view Defender Experts notifications](../media/mte/defenderexperts/filter.png) icon.
+1. On the navigation menu, go to **Incidents & alerts** > **Incidents**/**Alerts** > select the ![Filter to view Defender Experts notifications](/defender/media/mte/defenderexperts/filter.png) icon.
 2. Scroll down to the Tags field > select the **Defender Experts** check box.
 3. Select **Apply**.
 
 #### To proactively hunt threats across endpoints, Office 365, cloud applications, and identity, refer to
 
-- [Microsoft Defender Experts in Microsoft 365 Overview](../defender/defender-experts-for-hunting.md)
+- [Microsoft Defender Experts in Microsoft 365 Overview](/defender/defender-experts-for-hunting)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -17,8 +17,7 @@ ms.custom:
 - seo-marvel-apr2020
 - adminvideo
 description: This article covers topics including external email forwarding, Automatic forwarding, 5.7.520 Access Denied messages, disabling external forwarding, 'Your administrator has disabled external forwarding' messages, as well as outbound anti-spam policy.
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 search.appverid: met150
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/eop-about" target="_blank">Exchange Online Protection</a>
@@ -87,7 +86,7 @@ The following information is required to create the mail flow rule in the Exchan
 - (Optional) **Do the following** (action): You can configure an optional action. For example, you can use the action **Modify the message properties** \> **set a message header**, with the header name **X-Forwarded** and the value **True**. But, configuring an action is not required.
 - Set **Audit this rule with severity level** to the value **Low**, **Medium**, or **High**. This setting allows you to use the [Exchange transport rule report](reports-email-security.md#exchange-transport-rule-report) to get details of users that are forwarding.
 
-:::image type="content" source="../../media/mail-flow-rule-for-forwarded-messages.png" alt-text="The Mail flow rule properties in the EAC for a rule to identify forwarded messages" lightbox="../../media/mail-flow-rule-for-forwarded-messages.png":::
+:::image type="content" source="/defender/media/mail-flow-rule-for-forwarded-messages.png" alt-text="The Mail flow rule properties in the EAC for a rule to identify forwarded messages" lightbox="/defender/media/mail-flow-rule-for-forwarded-messages.png":::
 
 ## Blocked email forwarding messages
 

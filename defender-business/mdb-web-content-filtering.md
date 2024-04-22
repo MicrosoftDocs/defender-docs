@@ -22,7 +22,7 @@ audience: Admin
 
 Web content filtering enables your security team to track and regulate access to websites based on content categories. When you set up your web content filtering policy, you enable web protection for your organization. 
 
-Web content filtering is available on the major web browsers, with blocks performed by Windows Defender SmartScreen (Microsoft Edge) and Network Protection (Chrome, Firefox, Brave, and Opera). For more information, see [Prerequisites for web content filtering](../defender-endpoint/web-content-filtering.md#prerequisites).
+Web content filtering is available on the major web browsers, with blocks performed by Windows Defender SmartScreen (Microsoft Edge) and Network Protection (Chrome, Firefox, Brave, and Opera). For more information, see [Prerequisites for web content filtering](/defender-endpoint/web-content-filtering#prerequisites).
 
 In Defender for Business, you can have one web content filtering policy and it's applied to all users.
 
@@ -42,7 +42,7 @@ In Defender for Business, you can have one web content filtering policy and it's
 5. Review the summary and save the policy. The policy refresh might take up to two hours to apply to your selected devices.
 
 > [!TIP]
-> To learn more about web content filtering, see [Web content filtering](../defender-endpoint/web-content-filtering.md).
+> To learn more about web content filtering, see [Web content filtering](/defender-endpoint/web-content-filtering).
 
 ## Categories for web content filtering
 

@@ -54,19 +54,19 @@ Microsoft Defender XDR uses the [Microsoft Purview auditing solution](/purview/a
     2. In the navigation pane, select **Settings** \> **Endpoints** \> **Advanced features**.
     3. Scroll own to **Unified audit log** and toggle the setting to **On**.
 
-   :::image type="content" source="./media/defender/unified-audit-log.png" alt-text="Screenshot of the unified audit log toggle in Microsoft Defender XDR advanced settings" lightbox="./media/defender/unified-audit-log.png":::
+   :::image type="content" source="/defender/media/defender/unified-audit-log.png" alt-text="Screenshot of the unified audit log toggle in Microsoft Defender XDR advanced settings" lightbox="/defender/media/defender/unified-audit-log.png":::
     4. Select **Save preferences**.
 
 ## Using the audit search in Microsoft Defender XDR
 
 1. To retrieve audit logs for Microsoft Defender XDR activities, navigate to the [Microsoft Defender XDR Audit page](https://security.microsoft.com/auditlogsearch) or go to the [Purview compliance portal](https://compliance.microsoft.com) and select **Audit**.
 
-   :::image type="content" source="./media/defender/unified-audit-log-xdr.png" alt-text="Screenshot of the unified audit log page in Microsoft Defender XDR " lightbox="./media/defender/unified-audit-log-xdr.png":::
+   :::image type="content" source="/defender/media/defender/unified-audit-log-xdr.png" alt-text="Screenshot of the unified audit log page in Microsoft Defender XDR " lightbox="/defender/media/defender/unified-audit-log-xdr.png":::
 
 2. On the **New Search** page, filter the activities, dates, and users you want to audit.
 3. Select **Search**
 
-   :::image type="content" source="./media/defender/unified-audit-search.png" alt-text="Screenshot of the unified audit log search options in Microsoft Defender XDR " lightbox="./media/defender/unified-audit-search.png":::
+   :::image type="content" source="/defender/media/defender/unified-audit-search.png" alt-text="Screenshot of the unified audit log search options in Microsoft Defender XDR " lightbox="/defender/media/defender/unified-audit-search.png":::
 
 4. Export your results to Excel for further analysis.
 

@@ -56,7 +56,7 @@ landingContent:
       - linkListType: deploy
         links:
           - text: Deployment guide
-            url: deployment-phases.md
+            url: mde-planning-guide.md
           - text: Onboard supported devices
             url: onboard-configure.md
           - text: Set up and configure Defender for Endpoint Plan 1
@@ -82,9 +82,9 @@ landingContent:
         - text: Automated investigation and response (AIR)
           url: automated-investigations.md
         - text: Advanced hunting
-          url: advanced-hunting-overview.md
+          url: /defender/advanced-hunting-overview
         - text: Microsoft Threat Experts
-          url: microsoft-threat-experts.md
+          url: /defender/microsoft-threat-experts
         - text: Threat analytics
           url: threat-analytics.md
 
@@ -109,7 +109,7 @@ landingContent:
       - linkListType: reference
         links:
         - text: Management and APIs
-          url: management-apis.md
+          url: api/management-apis.md
         - text: Partner integration
           url: partner-integration.md
 
@@ -119,7 +119,7 @@ landingContent:
       - linkListType: overview
         links:
         - text: Microsoft Defender Vulnerability Management
-          url: ../defender-vulnerability-management/defender-vulnerability-management.md
+          url: /defender-vulnerability-management/defender-vulnerability-management
         - text: Attack surface reduction
           url: overview-attack-surface-reduction.md
         - text: Next-generation protection

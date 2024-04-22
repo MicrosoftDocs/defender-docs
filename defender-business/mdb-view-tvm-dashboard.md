@@ -49,7 +49,7 @@ Vulnerability management features and capabilities in Microsoft Defender for Bus
 
 - **Event timeline**: Lists vulnerabilities that affect your organization in a timeline view.   
 
-[Learn more about Microsoft Defender Vulnerability Management](../defender-vulnerability-management/defender-vulnerability-management.md).
+[Learn more about Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).
 
 ## Next steps
 

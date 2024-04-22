@@ -25,7 +25,7 @@ ms.collection:
 
 Small and medium-sized businesses recognize that security is important, but they often don't have the capacity or expertise to have a dedicated security operations team. These customers often need help with setup and configuration, managing security for their devices and network, and addressing alerts or detected threats. Microsoft partners can help!
 
-If you're a Microsoft partner, and you're working with customers who have or need [Microsoft Defender for Business](mdb-overview.md), [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview), [Microsoft Defender for Endpoint](../defender-endpoint/microsoft-defender-endpoint.md), or [Microsoft 365 E3](/Microsoft-365/enterprise/microsoft-365-overview), this article is for you!
+If you're a Microsoft partner, and you're working with customers who have or need [Microsoft Defender for Business](mdb-overview.md), [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview.md), [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint), or [Microsoft 365 E3](/Microsoft-365/enterprise/microsoft-365-overview), this article is for you!
 
 - [Download our security guide and checklist](#download-our-security-guide-and-checklist-new) (NEW!)
 - [Learn how you can integrate Microsoft endpoint security with your RMM tools and PSA software](#integrate-microsoft-endpoint-security-with-your-rmm-tools-and-psa-software).
@@ -60,12 +60,12 @@ If you're a Microsoft Managed Service Provider (MSP), you can integrate Microsof
 - Fetch and view [incidents and alerts](mdb-view-manage-incidents.md) with your security information and event management (SIEM) tools.
 - Orchestrate [remediation actions](mdb-review-remediation-actions.md), such as approving actions following automated investigations, or taking manual response actions on a device.
 
-Integration can be done by using the [Defender for Endpoint APIs](../defender-endpoint/management-apis.md). Use the following resources to learn more:
+Integration can be done by using the [Defender for Endpoint APIs](/defender-endpoint/management-apis). Use the following resources to learn more:
 
 | Resource | Description |
 |:---|:---|
-| [Overview of management and APIs](../defender-endpoint/management-apis.md) | Defender for Business is built on Microsoft Defender for Endpoint, and is an integration-ready platform. This article describes how to automate workflows and innovate using the Defender for Endpoint APIs. |
-| [Configure managed security service provider integration](../defender-endpoint/configure-mssp-support.md) | Provides an overview of steps to take to successfully integrate a customer's tenant with your MSP solution. |
+| [Overview of management and APIs](/defender-endpoint/management-apis) | Defender for Business is built on Microsoft Defender for Endpoint, and is an integration-ready platform. This article describes how to automate workflows and innovate using the Defender for Endpoint APIs. |
+| [Configure managed security service provider integration](/defender-endpoint/configure-mssp-support) | Provides an overview of steps to take to successfully integrate a customer's tenant with your MSP solution. |
 
 ## Use Microsoft 365 Lighthouse to secure and manage your customers' devices and data
 

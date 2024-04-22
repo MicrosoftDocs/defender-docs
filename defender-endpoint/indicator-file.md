@@ -27,7 +27,7 @@ search.appverid: met150
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 - [Microsoft Defender for Endpoint Plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
+- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 > [!TIP]
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
@@ -38,7 +38,7 @@ There are three ways you can create indicators for files:
 
 - By creating an indicator through the settings page
 - By creating a contextual indicator using the add indicator button from the file details page
-- By creating an indicator through the [Indicator API](ti-indicator.md)
+- By creating an indicator through the [Indicator API](api/ti-indicator.md)
 
 > [!NOTE]
 > For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016). 
@@ -80,7 +80,7 @@ This feature is designed to prevent suspected malware (or potentially malicious 
 
    - Indicator: Specify the entity details and define the expiration of the indicator.
    - Action: Specify the action to be taken and provide a description.
-   - Scope: Define the scope of the device group (scoping isn't available in [Defender for Business](../defender-business/mdb-overview.md)).
+   - Scope: Define the scope of the device group (scoping isn't available in [Defender for Business](/defender-business/mdb-overview)).
 
    > [!NOTE]
    > Device Group creation is supported in both Defender for Endpoint Plan 1 and Plan 2
@@ -138,7 +138,7 @@ Timestamp > ago(30d)
 | where AdditionalFields contains "EUS:Win32/CustomEnterpriseBlock!cl"
 ```
 
-For more information about advanced hunting, see [Proactively hunt for threats with advanced hunting](advanced-hunting-overview.md).
+For more information about advanced hunting, see [Proactively hunt for threats with advanced hunting](/defender/advanced-hunting-overview).
 
 Below are other thread names that can be used in the sample query from above:
 

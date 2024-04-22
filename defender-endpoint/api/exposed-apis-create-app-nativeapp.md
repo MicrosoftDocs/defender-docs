@@ -28,7 +28,7 @@ search.appverid: met150
 
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Business](../../defender-business/index.yml)
+- [Microsoft Defender for Business](/defender-business)
 
 > [!IMPORTANT]
 > Advanced hunting capabilities are not included in Defender for Business.
@@ -183,7 +183,7 @@ Verify to make sure you got a correct token:
 - Validate you get a 'scp' claim with the desired app permissions.
 - In the screenshot below you can see a decoded token acquired from the app in the tutorial:
 
-  :::image type="content" source="../images/nativeapp-decoded-token.png" alt-text="The token validation page" lightbox="../images/nativeapp-decoded-token.png":::
+  :::image type="content" source="../media/nativeapp-decoded-token.png" alt-text="The token validation page" lightbox="../media/nativeapp-decoded-token.png":::
 
 ## Use the token to access Microsoft Defender for Endpoint API
 

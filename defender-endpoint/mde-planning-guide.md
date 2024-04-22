@@ -40,7 +40,7 @@ This guide provides five steps to help deploy Defender for Endpoint as your mult
 
 The steps to deploy Defender for Endpoint are:
 
-:::image type="content" source="../media/defender-endpoint/onboard-mde.png" alt-text="The deployment steps" lightbox="../media/defender-endpoint/onboard-mde.png":::
+:::image type="content" source="/defender/media/defender-endpoint/onboard-mde.png" alt-text="The deployment steps" lightbox="/defender/media/defender-endpoint/onboard-mde.png":::
 
 1. [Step 1 - Set up Microsoft Defender for Endpoint deployment](production-deployment.md): This step focuses on getting your environment ready for deployment.
 2. [Step 2 - Assign roles and permissions](prepare-deployment.md): Identify and assign roles and permissions to view and manage Defender for Endpoint.
