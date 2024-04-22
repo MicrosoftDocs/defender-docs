@@ -28,7 +28,7 @@ If your organization has a Security Operations Center (SOC), the ability to use 
 - [Azure Event Hubs](#use-the-streaming-api-with-event-hubs), a modern big data streaming platform and event ingestion service that can seamlessly integrate with other Azure and Microsoft services, such as Stream Analytics, Power BI, and Event Grid, along with outside services like Apache Spark.
 - [Azure Storage](/azure/storage/common/storage-introduction), Microsoft's cloud storage solution for modern data storage scenarios, with highly available, massively scalable, durable, and secure storage for a variety of data objects in the cloud. 
 
-With the streaming API, you can use [advanced hunting](/defender/advanced-hunting-overview.md) and [attack detection](../defender-endpoint/overview-endpoint-detection-response) with Defender for Business and Microsoft 365 Business Premium. The streaming API enables SOCs to view more data about devices, understand better how an attack occurred, and take steps to improve device security.
+With the streaming API, you can use [advanced hunting](/defender/advanced-hunting-overview.md) and [attack detection](/defender-endpoint/overview-endpoint-detection-response) with Defender for Business and Microsoft 365 Business Premium. The streaming API enables SOCs to view more data about devices, understand better how an attack occurred, and take steps to improve device security.
 
 ## Use the streaming API with Microsoft Sentinel
 

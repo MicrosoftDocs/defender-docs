@@ -77,7 +77,7 @@ You can choose from several options to change settings for your automated invest
 
 |To do this|Follow these steps|
 |---|---|
-|Specify automation levels for groups of devices|<ol><li>Set up one or more device groups. See [Create and manage device groups](/defender-endpoint/machine-groups.md). </li><li>In the Microsoft Defender portal, go to **Permissions** \> **Endpoints roles & groups** \> **Device groups**.</li><li>Select a device group and review its **Automation level** setting. (We recommend using **Full - remediate threats automatically**). See [Automation levels in automated investigation and remediation capabilities](../defender-endpoint/automation-levels).</li><li>Repeat steps 2 and 3 as appropriate for all your device groups. </li></ol>|
+|Specify automation levels for groups of devices|<ol><li>Set up one or more device groups. See [Create and manage device groups](/defender-endpoint/machine-groups.md). </li><li>In the Microsoft Defender portal, go to **Permissions** \> **Endpoints roles & groups** \> **Device groups**.</li><li>Select a device group and review its **Automation level** setting. (We recommend using **Full - remediate threats automatically**). See [Automation levels in automated investigation and remediation capabilities](/defender-endpoint/automation-levels).</li><li>Repeat steps 2 and 3 as appropriate for all your device groups. </li></ol>|
 
 ## Next steps
 

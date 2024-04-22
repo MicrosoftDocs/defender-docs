@@ -108,7 +108,7 @@ In addition to remediation actions that are taken automatically as a result of [
 
 | Action source value | Description |
 |:-----|:---|
-| **Manual device action** | A manual action taken on a device. Examples include [device isolation](/defender-endpoint/respond-machine-alerts.md#isolate-devices-from-the-network) or [file quarantine](../defender-endpoint/respond-file-alerts#stop-and-quarantine-files). |
+| **Manual device action** | A manual action taken on a device. Examples include [device isolation](/defender-endpoint/respond-machine-alerts.md#isolate-devices-from-the-network) or [file quarantine](/defender-endpoint/respond-file-alerts#stop-and-quarantine-files). |
 | **Manual email action** | A manual action taken on email. An example includes soft-deleting email messages or [remediating an email message](/defender-office-365/remediate-malicious-email-delivered-office-365). |
 | **Automated device action** | An automated action taken on an entity, such as a file or process. Examples of automated actions include sending a file to quarantine, stopping a process, and removing a registry key. (See [Remediation actions in Microsoft Defender for Endpoint](/defender-endpoint/manage-auto-investigation#remediation-actions).) |
 | **Automated email action** | An automated action taken on email content, such as an email message, attachment, or URL. Examples of automated actions include soft-deleting email messages, blocking URLs, and turning off external mail forwarding. (See [Remediation actions in Microsoft Defender for Office 365](/defender-office-365/air-remediation-actions).) |

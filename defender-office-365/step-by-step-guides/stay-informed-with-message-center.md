@@ -46,6 +46,6 @@ You're done.
 
 ## Learn More
 
-[Track new and changed features in the Microsoft 365 Message center](..//Microsoft-365/admin/manage/message-center)
+[Track new and changed features in the Microsoft 365 Message center](/Microsoft-365/admin/manage/message-center)
 
 [Track your message center tasks in Planner](/office365/planner/track-message-center-tasks-planner)
