@@ -109,7 +109,7 @@ landingContent:
       - linkListType: reference
         links:
         - text: Management and APIs
-          url: management-apis.md
+          url: api/management-apis.md
         - text: Partner integration
           url: partner-integration.md
 

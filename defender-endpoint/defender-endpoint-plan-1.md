@@ -174,7 +174,7 @@ To learn more, see [Get started with Microsoft Defender for Endpoint Plan 1](mde
 
 With the Defender for Endpoint APIs, you can automate workflows and integrate with your organization's custom solutions. 
 
-To learn more, see [Defender for Endpoint APIs](management-apis.md). 
+To learn more, see [Defender for Endpoint APIs](api/management-apis.md). 
 
 ## Cross-platform support
 

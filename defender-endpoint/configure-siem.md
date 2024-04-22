@@ -121,7 +121,7 @@ The below table provides a mapping between the SIEM API to the Microsoft Defende
 
 > [!NOTE]
 >
-> [Microsoft Defender for Endpoint Alert](api/alerts.md) is composed from one or more suspicious or malicious events that occurred on the device and their related details. The Microsoft Defender for Endpoint Alert API is the latest API for alert consumption and contains a detailed list of related evidence for each alert. For more information, see [Alert methods and properties](api/alerts.md) and [List alerts](get-alerts.md).
+> [Microsoft Defender for Endpoint Alert](api/alerts.md) is composed from one or more suspicious or malicious events that occurred on the device and their related details. The Microsoft Defender for Endpoint Alert API is the latest API for alert consumption and contains a detailed list of related evidence for each alert. For more information, see [Alert methods and properties](api/alerts.md) and [List alerts](api/get-alerts.md).
 
 Microsoft Defender for Endpoint supports security information and event management (SIEM) tools ingesting information from your enterprise tenant in Microsoft Entra ID using the OAuth 2.0 authentication protocol for a registered Microsoft Entra application representing the specific SIEM solution or connector installed in your environment.
 
@@ -130,6 +130,6 @@ For more information, see:
 - [Microsoft Defender for Endpoint APIs license and terms of use](/legal/microsoft-365/api-terms-of-use)
 - [Access the Microsoft Defender for Endpoint APIs](/defender-vulnerability-management/tvm-supported-os)
 - [Hello World example (describes how to register an application in Microsoft Entra ID)](api/api-hello-world.md)
-- [Get access with application context](exposed-apis-create-app-webapp.md)
+- [Get access with application context](api/exposed-apis-create-app-webapp.md)
 - [Microsoft Defender XDR SIEM integration](/defender/configure-siem-defender)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

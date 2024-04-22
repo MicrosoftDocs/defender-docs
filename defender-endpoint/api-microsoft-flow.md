@@ -85,5 +85,5 @@ The Alert trigger provides only the Alert ID and the Machine ID. You can use the
 You can also create a **scheduled** flow that runs Advanced Hunting queries and much more!
 
 ## Related topic
-- [Microsoft Defender for Endpoint APIs](api/tvm-supported-os)
+- [Microsoft Defender for Endpoint APIs](/defender-vulnerability-management/tvm-supported-os)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

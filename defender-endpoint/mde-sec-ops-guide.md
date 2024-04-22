@@ -68,7 +68,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 
     When Microsoft Defender for Endpoint identifies Indicators of compromise (IOCs) or Indicators of attack (IOAs) and generates an alert, the alert is included in an incident and displayed in the **Incidents** queue in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). 
     
-    Review these incidents to respond to any Microsoft Defender for Endpoint alerts and resolve once the incident has been remediated. See [Incident notifications by email](/defender/incidents-overview.md#incident-notifications-by-email) and [View and organize the Microsoft Defender for Endpoint Incidents queue](view-incidents-queue).
+    Review these incidents to respond to any Microsoft Defender for Endpoint alerts and resolve once the incident has been remediated. See [Incident notifications by email](/defender/incidents-overview.md#incident-notifications-by-email) and [View and organize the Microsoft Defender for Endpoint Incidents queue](view-incidents-queue.md).
 
 - **Manage false positive and false negative detections**
 

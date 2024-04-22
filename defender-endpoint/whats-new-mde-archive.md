@@ -145,7 +145,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Export assessments of vulnerabilities and secure configurations](api/get-assessment-methods-properties.md) API <br> Adds a collection of APIs that pull threat and vulnerability management data on a per-device basis. There are different API calls to get different types of data: secure configuration assessment, software inventory assessment, and software vulnerabilities assessment. Each API call contains the requisite data for devices in your organization.
 
-- [Remediation activity](get-remediation-methods-properties.md) API <br>  Adds a collection of APIs with responses that contain threat and vulnerability management remediation activities that have been created in your tenant. Response information types include one remediation activity by ID, all remediation activities, and exposed devices of one remediation activity.
+- [Remediation activity](api/get-remediation-methods-properties.md) API <br>  Adds a collection of APIs with responses that contain threat and vulnerability management remediation activities that have been created in your tenant. Response information types include one remediation activity by ID, all remediation activities, and exposed devices of one remediation activity.
 
 - [Device discovery](device-discovery.md) <br> Helps you find unmanaged devices connected to your corporate network without the need for extra appliances or cumbersome process changes. Using onboarded devices, you can find unmanaged devices in your network and assess vulnerabilities and risks. You can then onboard discovered devices to reduce risks associated with having unmanaged endpoints in your network.
 
@@ -214,7 +214,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Connected Azure AD applications](connected-applications.md)<br> The **Connected applications** page provides information about the Azure AD applications connected to Microsoft Defender for Endpoint in your organization.
 
-- [API Explorer](api-explorer.md)<br> The API explorer makes it easy to construct and execute API queries, and to test and send requests for any available Microsoft Defender for Endpoint API endpoint.
+- [API Explorer](api/api-explorer.md)<br> The API explorer makes it easy to construct and execute API queries, and to test and send requests for any available Microsoft Defender for Endpoint API endpoint.
 
 ## September 2019
 
@@ -247,7 +247,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Threat Experts Targeted Attack Notification capability](endpoint-attack-notifications.md) <BR> Microsoft Threat Experts' Targeted Attack Notification alerts are tailored for organizations to provide as much information as can be quickly delivered, including the timeline, scope of breach, and the methods of intrusion, thus bringing attention to critical threats in their network.
 
-- [Microsoft Defender for Endpoint API](api/tvm-supported-os) <BR> Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will enable you to automate workflows and innovate based on Microsoft Defender for Endpoint capabilities.
+- [Microsoft Defender for Endpoint API](/defender-vulnerability-management/tvm-supported-os) <BR> Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will enable you to automate workflows and innovate based on Microsoft Defender for Endpoint capabilities.
 
 ## February 2019
 

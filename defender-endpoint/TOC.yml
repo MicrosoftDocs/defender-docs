@@ -1028,7 +1028,7 @@
           - name: Microsoft Defender for Endpoint API license and terms
             href: /legal/microsoft-365/api-terms-of-use
           - name: Access the Microsoft Defender for Endpoint APIs
-            href: api/tvm-supported-os
+            href: /defender-vulnerability-management/tvm-supported-os
           - name: Hello World
             href: api/api-hello-world.md
           - name: Get access with application context
@@ -1159,7 +1159,7 @@
             - name: List Indicators
               href: api/get-ti-indicators-collection.md
             - name: Submit Indicator
-              href: api/post-api/ti-indicator.md
+              href: api/ti-indicator.md
             - name: Import Indicator
               href: api/import-ti-indicators.md
             - name: Delete Indicator
@@ -1380,7 +1380,7 @@
         - name: Connected applications
           href: connected-applications.md
         - name: API explorer
-          href: api/api-explorer.md
+          href: api/api/api-explorer.md
     - name: Managed security service provider (MSSP) integration
       items:
       - name: Configure managed security service provider integration
