@@ -127,7 +127,7 @@ Microsoft Defender for Endpoint supports security information and event manageme
 
 For more information, see:
 
-- [Microsoft Defender for Endpoint APIs license and terms of use](api-terms-of-use.md)
+- [Microsoft Defender for Endpoint APIs license and terms of use](/legal/microsoft-365/api-terms-of-use)
 - [Access the Microsoft Defender for Endpoint APIs](apis-intro.md)
 - [Hello World example (describes how to register an application in Microsoft Entra ID)](api-hello-world.md)
 - [Get access with application context](exposed-apis-create-app-webapp.md)

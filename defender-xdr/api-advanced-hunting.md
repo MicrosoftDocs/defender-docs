@@ -177,7 +177,7 @@ In the following example, a user sends the query below and receives an API respo
 - [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 
 - [Access the Microsoft Defender XDR APIs](api-access.md)
-- [Learn about API limits and licensing](api-terms.md)
+- [Learn about API limits and licensing](/legal/microsoft-365/api-terms)
 - [Understand error codes](api-error-codes.md)
 - [Advanced hunting overview](advanced-hunting-overview.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

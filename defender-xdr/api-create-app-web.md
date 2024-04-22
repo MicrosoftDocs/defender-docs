@@ -273,7 +273,7 @@ The following example shows how to send a request to get a list of incidents **u
 - [Create a 'Hello world' application](api-hello-world.md)
 - [Create an app to access Microsoft Defender XDR APIs on behalf of a user](api-create-app-user-context.md)
 - [Create an app with multi-tenant partner access to Microsoft Defender XDR APIs](api-partner-access.md)
-- [Learn about API limits and licensing](api-terms.md)
+- [Learn about API limits and licensing](/legal/microsoft-365/api-terms)
 - [Understand error codes](api-error-codes.md)
 - [Manage secrets in your server apps with Azure Key Vault](/training/modules/manage-secrets-with-azure-key-vault/)
 - [OAuth 2.0 authorization for user sign in and API access](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code)

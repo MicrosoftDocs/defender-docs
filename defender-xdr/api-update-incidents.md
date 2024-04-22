@@ -131,7 +131,7 @@ Here's an example of the request.
 - [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 
 - [Access the Microsoft Defender XDR APIs](api-access.md)
-- [Learn about API limits and licensing](api-terms.md)
+- [Learn about API limits and licensing](/legal/microsoft-365/api-terms)
 - [Understand error codes](api-error-codes.md)
 - [Incident APIs](api-incident.md)
 - [List incidents](api-list-incidents.md)

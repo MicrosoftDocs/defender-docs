@@ -1026,7 +1026,7 @@
         - name: Get started
           items:
           - name: Microsoft Defender for Endpoint API license and terms
-            href: api-terms-of-use.md
+            href: /legal/microsoft-365/api-terms-of-use
           - name: Access the Microsoft Defender for Endpoint APIs
             href: api/apis-intro.md
           - name: Hello World
@@ -1394,7 +1394,7 @@
       - name: Get partner application access
         href: exposed-apis-create-app-partners.md
       - name: Fetch alerts from customer tenant
-        href: fetch-alerts-mssp.md
+        href: ./api/fetch-alerts-mssp.md
       - name: Managed security service provider opportunity
         href: mssp-support.md
     - name: Partner integration scenarios
@@ -1535,7 +1535,7 @@
     - name: Microsoft Defender XDR
       href: /defender
     - name: Defender for Office 365
-      href: ../defender-office-365/index.yml
+      href: /defender-office-365
     - name: Defender for Identity
       href: /defender-for-identity/
     - name: Defender for Cloud Apps

@@ -39,7 +39,7 @@ Microsoft Defender XDR supports security information and event management (SIEM)
 
 For more information, see:
 
-- [Microsoft Defender XDR APIs license and terms of use](api-terms.md)
+- [Microsoft Defender XDR APIs license and terms of use](/legal/microsoft-365/api-terms)
 - [Access the Microsoft Defender XDR APIs](api-access.md)
 - [Hello World example](api-hello-world.md)
 - [Get access with application context](api-create-app-web.md)
