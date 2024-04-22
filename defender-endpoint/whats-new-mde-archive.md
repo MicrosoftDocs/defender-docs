@@ -210,7 +210,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Indicators for IP addresses, URLs/Domains](manage-indicators.md) <BR> You can now allow or block URLs/domains using your own threat intelligence.
 
-- [Microsoft Threat Experts - Experts on Demand](microsoft-threat-experts.md) <BR> You now have the option to consult with Microsoft Threat Experts from several places in the portal to help you in the context of your investigation.
+- [Microsoft Threat Experts - Experts on Demand](/defender/microsoft-threat-experts) <BR> You now have the option to consult with Microsoft Threat Experts from several places in the portal to help you in the context of your investigation.
 
 - [Connected Azure AD applications](connected-applications.md)<br> The **Connected applications** page provides information about the Azure AD applications connected to Microsoft Defender for Endpoint in your organization.
 

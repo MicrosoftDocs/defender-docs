@@ -31,7 +31,7 @@ ms.date: 12/18/2020
 
 After access the portal is granted, alert notification rules can be created so that emails are sent to MSSPs when alerts associated with the tenant are created and set conditions are met.
 
-For more information, see [Create rules for alert notifications](configure-email-notifications.md#create-rules-for-alert-notifications).
+For more information, see [Create rules for alert notifications](/defender-xdr/configure-email-notifications#create-rules-for-alert-notifications).
 
 These check boxes must be checked:
 
@@ -42,5 +42,5 @@ These check boxes must be checked:
 
 - [Grant MSSP access to the portal](grant-mssp-access.md)
 - [Access the MSSP customer portal](access-mssp-portal.md)
-- [Fetch alerts from customer tenant](fetch-alerts-mssp.md)
+- [Fetch alerts from customer tenant](api/fetch-alerts-mssp.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

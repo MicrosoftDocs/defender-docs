@@ -121,13 +121,13 @@ In conjunction with being able to quickly respond to advanced attacks, Microsoft
 
 <a name="ss"></a>
 
-**[Microsoft Secure Score for Devices](tvm-microsoft-secure-score-devices.md)**
+**[Microsoft Secure Score for Devices](/defender-vulnerability-management/tvm-microsoft-secure-score-devices)**
 
 Defender for Endpoint includes Microsoft Secure Score for Devices to help you dynamically assess the security state of your enterprise network, identify unprotected systems, and take recommended actions to improve the overall security of your organization.
 
 <a name="mte"></a>
 
-**[Microsoft Threat Experts](microsoft-threat-experts.md)**
+**[Microsoft Threat Experts](/defender/microsoft-threat-experts)**
 
 Microsoft Defender for Endpoint's new managed threat hunting service provides proactive hunting, prioritization, and additional context and insights that further empower Security operation centers (SOCs) to identify and respond to threats quickly and accurately.
 

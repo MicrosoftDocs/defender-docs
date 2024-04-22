@@ -245,5 +245,5 @@ You will still have the option to use the standard onboarding package within the
 ## Related topics
 
 - [Update data retention settings](preferences-setup.md)
-- [Configure alert notifications](configure-email-notifications.md)
+- [Configure alert notifications](/defender-xdr/configure-email-notifications)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

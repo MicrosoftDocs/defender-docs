@@ -39,7 +39,7 @@ Turn on the preview experience setting to be among the first to try upcoming fea
 ## Related topics
 - [Update general settings in Microsoft Defender for Endpoint](preferences-setup.md)
 - [Turn on advanced features in Microsoft Defender for Endpoint](advanced-features.md)
-- [Configure email notifications in Microsoft Defender for Endpoint](configure-email-notifications.md)
+- [Configure email notifications in Microsoft Defender for Endpoint](/defender-xdr/configure-email-notifications)
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

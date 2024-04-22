@@ -38,7 +38,7 @@ There are three ways you can create indicators for files:
 
 - By creating an indicator through the settings page
 - By creating a contextual indicator using the add indicator button from the file details page
-- By creating an indicator through the [Indicator API](ti-indicator.md)
+- By creating an indicator through the [Indicator API](api/ti-indicator.md)
 
 > [!NOTE]
 > For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016). 

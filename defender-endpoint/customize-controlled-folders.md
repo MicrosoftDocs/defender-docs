@@ -171,7 +171,7 @@ Microsoft Defender for Endpoint certificate and file indicators can allow signed
 
 ## Customize the notification
 
-For more information about customizing the notification when a rule is triggered and blocks an app or file, see [Configure alert notifications in Microsoft Defender for Endpoint](configure-email-notifications.md).
+For more information about customizing the notification when a rule is triggered and blocks an app or file, see [Configure alert notifications in Microsoft Defender for Endpoint](/defender-xdr/configure-email-notifications).
 
 ## See also
 

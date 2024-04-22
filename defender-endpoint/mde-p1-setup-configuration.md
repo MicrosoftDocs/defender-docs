@@ -265,7 +265,7 @@ You can configure Defender for Endpoint to block or allow removable devices and 
 10. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy will be applied to any endpoints that were onboarded to Defender for Endpoint shortly.
 
 > [!TIP]
-> For more information, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](mde-device-control-device-installation.md).
+> For more information, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](device-control-overview.md).
 
 ### Network protection
 

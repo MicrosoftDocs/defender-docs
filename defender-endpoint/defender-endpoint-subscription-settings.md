@@ -92,7 +92,7 @@ For example, suppose that you want to use a tag called `VIP` for all the devices
 
    - [Add device tags using the portal](machine-tags.md#add-device-tags-using-the-portal).
    - [Add device tags by setting a registry key value](machine-tags.md#add-device-tags-by-setting-a-registry-key-value).
-   - [Add or remove machine tags by using the Defender for Endpoint API](add-or-remove-machine-tags.md).
+   - [Add or remove machine tags by using the Defender for Endpoint API](api/add-or-remove-machine-tags.md).
    - [Add device tags by creating a custom profile in Microsoft Intune](machine-tags.md#add-device-tags-by-creating-a-custom-profile-in-microsoft-intune).
 
 2. Set up a dynamic rule using the condition operator `Tag Does not contain VIP`. In this case, all devices that do not have the `VIP` tag will receive the `License MDE P1` tag and Defender for Endpoint Plan 1 capabilities. 

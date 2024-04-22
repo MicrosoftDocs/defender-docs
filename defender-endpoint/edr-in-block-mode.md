@@ -51,7 +51,7 @@ This recommendation is primarily for devices using an active non-Microsoft antiv
    
 EDR in block mode works behind the scenes to remediate malicious artifacts that were detected by EDR capabilities. Such artifacts might have been missed by the primary, non-Microsoft antivirus product. EDR in block mode allows Microsoft Defender Antivirus to take actions on post-breach, behavioral EDR detections.
 
-EDR in block mode is integrated with [threat & vulnerability management](/defender-vulnerability-management/defender-vulnerability-management) capabilities. Your organization's security team gets a [security recommendation](tvm-security-recommendation.md) to turn EDR in block mode on if it isn't already enabled. 
+EDR in block mode is integrated with [threat & vulnerability management](/defender-vulnerability-management/defender-vulnerability-management) capabilities. Your organization's security team gets a [security recommendation](/defender-vulnerability-management/ti-indicator) to turn EDR in block mode on if it isn't already enabled. 
 
 :::image type="content" source="media/edrblockmode-TVMrecommendation.png" alt-text="The recommendation to turn on EDR in block mode" lightbox="media/edrblockmode-TVMrecommendation.png":::
 

@@ -70,7 +70,7 @@ To receive Endpoint Attack Notifications through email, create an email notifica
 
 ### Create an email notification rule
 
-You can create rules to send email notifications for notification recipients. See  [Configure alert notifications](configure-email-notifications.md) to create, edit, delete, or troubleshoot email notification, for details.
+You can create rules to send email notifications for notification recipients. See  [Configure alert notifications](/defender-xdr/configure-email-notifications) to create, edit, delete, or troubleshoot email notification, for details.
 
 ## View the Endpoint Attack Notifications
 

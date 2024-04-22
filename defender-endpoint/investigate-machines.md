@@ -150,7 +150,7 @@ To further inspect the event and related events, you can quickly run an [advance
 
 ### Security recommendations
 
-**Security recommendations** are generated from Microsoft Defender for Endpoint's [Vulnerability Management](defender-vulnerability-management/tvm-dashboard-insights) capability. Selecting a recommendation shows a panel where you can view relevant details such as description of the recommendation and the potential risks associated with not enacting it. See [Security recommendation](tvm-security-recommendation.md) for details.
+**Security recommendations** are generated from Microsoft Defender for Endpoint's [Vulnerability Management](defender-vulnerability-management/tvm-dashboard-insights) capability. Selecting a recommendation shows a panel where you can view relevant details such as description of the recommendation and the potential risks associated with not enacting it. See [Security recommendation](/defender-vulnerability-management/ti-indicator) for details.
 
 
 
@@ -249,7 +249,7 @@ To gain an in-depth view of the device health report, you can go to **Reports > 
 - [Investigate an IP address associated with a Defender for Endpoint alert](investigate-ip.md)
 - [Investigate a domain associated with a Defender for Endpoint alert](investigate-domain.md)
 - [Investigate a user account in Defender for Endpoint](investigate-user.md)
-- [Security recommendation](tvm-security-recommendation.md)
+- [Security recommendation](/defender-vulnerability-management/ti-indicator)
 - [Software inventory](defender-vulnerability-management/tvm-software-inventory)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
