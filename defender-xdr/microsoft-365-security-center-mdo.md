@@ -164,7 +164,7 @@ Also included is a link to the Security & Compliance Center for comparison. The 
 
 ## Related information
 
-- [Redirecting Security & Compliance Center to The Microsoft Defender portal](microsoft-365-security-mdo-redirection.md)
+- [Redirecting Security & Compliance Center to The Microsoft Defender portal](microsoft-365-security-center-mdo.md)
 - [The Action center](./m365d-action-center.md)
 - [Email & collaboration alerts](/Microsoft-365/compliance/alert-policies#default-alert-policies)
 - [Custom detection rules](/microsoft-365/security/defender-endpoint/custom-detection-rules)

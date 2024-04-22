@@ -200,6 +200,6 @@ Once you determine that the activities associated with this alert are malicious,
 
 ## See also
 
-- [Overview of alert classification](alert-grading-playbooks.md)
+- [Overview of alert classification](alert-classification-playbooks.md)
 - [Investigate alerts](investigate-alerts.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

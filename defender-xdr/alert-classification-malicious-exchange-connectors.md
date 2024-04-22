@@ -236,6 +236,6 @@ Once it's determined that the observed alert activities are part of TP, classify
 
 ## See also
 
-- [Overview of alert classification](alert-grading-playbooks.md)
+- [Overview of alert classification](alert-classification-playbooks.md)
 - [Investigate alerts](investigate-alerts.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

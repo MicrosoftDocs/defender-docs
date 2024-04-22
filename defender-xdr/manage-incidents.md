@@ -184,7 +184,7 @@ For new incidents, begin your [investigation](investigate-incidents.md).
 
 For in-process incidents, continue your [investigation](investigate-incidents.md).
 
-For resolved incidents, perform a [post-incident review](first-incident-post.md).
+For resolved incidents, perform a [post-incident review](respond-first-incident-remediate.md).
 
 ## See also
 

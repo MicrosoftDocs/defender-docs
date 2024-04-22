@@ -213,7 +213,7 @@
                  - name: Alert classification playbooks
                    items: 
                     - name: Overview
-                      href: alert-grading-playbooks.md
+                      href: alert-classification-playbooks.md
                     - name: Suspicious email forwarding activity
                       href: alert-grading-playbook-email-forwarding.md
                     - name: Suspicious inbox forwarding rules
@@ -221,11 +221,11 @@
                     - name: Suspicious inbox manipulation rules
                       href: alert-grading-playbook-inbox-manipulation-rules.md
                     - name: Suspicious password-spray-related IP address
-                      href: alert-grading-password-spray.md                      
+                      href: alert-classification-suspicious-ip-password-spray.md                      
                     - name: Malicious exchange connectors
-                      href: alert-grading-for-malicious-exchange-connectors.md
+                      href: alert-classification-malicious-exchange-connectors.md
                     - name: Password spray attacks
-                      href: alert-grading-password-spray-attack.md                    
+                      href: alert-classification-password-spray-attack.md                    
                  - name: Entity pages
                    items:
                    - name: User

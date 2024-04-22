@@ -31,7 +31,7 @@ Threat actors can use compromised user accounts for several malicious purposes i
 
 This playbook helps you investigate alerts for suspicious inbox forwarding rules and quickly grade them as either a true positive (TP) or a false positive (TP). You can then take recommended actions for the TP alerts to remediate the attack.
 
-For an overview of alert classification for Microsoft Defender for Office 365 and Microsoft Defender for Cloud Apps, see the [introduction article](alert-grading-playbooks.md).
+For an overview of alert classification for Microsoft Defender for Office 365 and Microsoft Defender for Cloud Apps, see the [introduction article](alert-classification-playbooks.md).
 
 The results of using this playbook are:
 
@@ -185,7 +185,7 @@ CloudAppEvents
 
 ## See also
 
-- [Overview of alert classification](alert-grading-playbooks.md)
+- [Overview of alert classification](alert-classification-playbooks.md)
 - [Suspicious email forwarding activity](alert-grading-playbook-email-forwarding.md)
 - [Suspicious inbox manipulation rules](alert-grading-playbook-inbox-manipulation-rules.md)
 - [Investigate alerts](investigate-alerts.md)

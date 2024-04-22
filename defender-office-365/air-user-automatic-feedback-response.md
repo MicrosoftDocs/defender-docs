@@ -100,5 +100,5 @@ To learn more about submissions and investigations in Defender for Microsoft 365
 
 - [Automated investigation and response in Microsoft Defender for Office 365](air-about.md)
 - [View the results of an automated investigation in Microsoft 365](air-view-investigation-results.md)
-- [Admin review for reported messages](admin-review-reported-message.md)
+- [Admin review for reported messages](submissions-admin-review-user-reported-messages.md)
 - [How automated investigation and response works in Microsoft Defender for Office 365](air-examples.md)

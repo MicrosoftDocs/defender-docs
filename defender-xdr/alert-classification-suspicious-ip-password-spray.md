@@ -193,7 +193,7 @@ AlertInfo
 
 ## See also
 
-- [Overview of alert classification](alert-grading-playbooks.md)
-- [Classifying password spray attacks](alert-grading-password-spray-attack.md)
+- [Overview of alert classification](alert-classification-playbooks.md)
+- [Classifying password spray attacks](alert-classification-password-spray-attack.md)
 - [Investigate alerts](investigate-alerts.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

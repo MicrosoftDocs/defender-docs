@@ -58,7 +58,7 @@ Currently, in Defender for Business, you can create a new device group while you
     2. Choose **+ Add** to create a new policy.
 
     > [!TIP]
-    > To get help creating or editing a policy, see [View or edit policies in Defender for Business](mdb-view-edit-policies.md).
+    > To get help creating or editing a policy, see [View or edit policies in Defender for Business](mdb-view-edit-create-policies.md).
 
 4. On the **General information** step, review the information, edit if necessary, and then choose **Next**.
 
@@ -88,7 +88,7 @@ Currently, in Defender for Business, you can view your existing device groups wh
     2. Choose **+ Add** to create a new policy.
 
     > [!TIP]
-    > To get help creating or editing a policy, see [View or edit policies in Defender for Business](mdb-view-edit-policies.md).
+    > To get help creating or editing a policy, see [View or edit policies in Defender for Business](mdb-view-edit-create-policies.md).
 
 4. On the **General information** step, review the information, edit if necessary, and then choose **Next**.
 
@@ -106,8 +106,8 @@ If you select this option, all devices that are enrolled in Microsoft Intune wil
 
 Choose one or more of the following tasks:
 
-- [View or edit policies](mdb-view-edit-policies.md)
-- [Create a new policy](mdb-create-new-policy.md)
+- [View or edit policies](mdb-view-edit-create-policies.md)
+- [Create a new policy](mdb-view-edit-create-policies.md)
 - [View and manage incidents in Defender for Business](mdb-view-manage-incidents.md)
 - [Respond to and mitigate threats in Defender for Business](mdb-respond-mitigate-threats.md)
 - [Review remediation actions in the Action center](mdb-review-remediation-actions.md)

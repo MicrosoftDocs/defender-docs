@@ -33,7 +33,7 @@ An incident in Microsoft Defender XDR is a collection of correlated alerts and a
 Microsoft 365 services and apps create alerts when they detect a suspicious or malicious event or activity. Individual alerts provide valuable clues about a completed or ongoing attack. However, attacks typically employ various techniques against different types of entities, such as devices, users, and mailboxes. The result is multiple alerts for multiple entities in your tenant.
 
 > [!NOTE]
-> If you are brand new to security analysis and incident response, see the [Respond to your first incident walkthrough](first-incident-overview.md) to get a guided tour of a typical process of analysis, remediation, and post-incident review.
+> If you are brand new to security analysis and incident response, see the [Respond to your first incident walkthrough](respond-first-incident-365-defender.md) to get a guided tour of a typical process of analysis, remediation, and post-incident review.
 
 <a name='simulate-attacks-with-the-microsoft-365-defender-portal'></a>
 
