@@ -49,7 +49,7 @@ Method|Data type|Description
 [List exposed devices of one remediation activity](get-remediation-exposed-devices-activities.md)|Investigation entity|Returns information about exposed devices for the specified remediation activity.
 [Get one remediation activity by ID](get-remediation-one-activity.md)|Investigation entity|Returns information for the specified remediation activity.
 
-Learn more about [remediation activities](../tvm-remediation.md).
+Learn more about [remediation activities](/defender-vulnerability-management/tvm-remediation).
 
 ## Properties
 
@@ -94,5 +94,5 @@ vendorId|String|Related vendor name
 
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
-- [Vulnerabilities in your organization](../tvm-weaknesses.md)
+- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

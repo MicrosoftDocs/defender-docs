@@ -110,7 +110,7 @@ In the **Mitigations** section, review the list of specific actionable recommend
   - Potentially unwanted application (PUA) protection
   - Real-time protection
 
-Mitigation information in this section incorporates data from [Microsoft Defender Vulnerability Management](defender-vulnerability-management.md), which also provides detailed drill-down information from various links in the report.
+Mitigation information in this section incorporates data from [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management), which also provides detailed drill-down information from various links in the report.
 
 :::image type="content" source="media/ta-mitigations.png" alt-text="The Mitigations section of a threat analytics report" lightbox="media/ta-mitigations.png":::
 
@@ -131,5 +131,5 @@ When using the reports, keep the following in mind:
 
 - [Proactively find threats with advanced hunting](/defender/advanced-hunting-overview)
 - [Understand the analyst report section](threat-analytics-analyst-reports.md)
-- [Assess and resolve security weaknesses and exposures](defender-vulnerability-management.md)
+- [Assess and resolve security weaknesses and exposures](/defender-vulnerability-management/defender-vulnerability-management)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

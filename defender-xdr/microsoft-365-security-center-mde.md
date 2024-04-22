@@ -167,11 +167,11 @@ View reports, change your settings, and modify user roles.
 
 ### SIEM API connections
 
-If you use the [Defender for Endpoint SIEM API](/defender-endpoint/enable-siem-integration.md), you can continue to do so. We've added new links on the API payload that point to the alert page or the incident page in the Microsoft 365 security portal. New API fields include LinkToMTP and IncidentLinkToMTP. For more information, see [Redirecting accounts from Microsoft Defender for Endpoint to The Microsoft Defender portal](./microsoft-365-security-mde-redirection).
+If you use the [Defender for Endpoint SIEM API](/defender-endpoint/enable-siem-integration.md), you can continue to do so. We've added new links on the API payload that point to the alert page or the incident page in the Microsoft 365 security portal. New API fields include LinkToMTP and IncidentLinkToMTP. For more information, see [Redirecting accounts from Microsoft Defender for Endpoint to The Microsoft Defender portal](microsoft-365-security-mde-redirection.md).
 
 ### Email alerts
 
-You can continue to use email alerts for Defender for Endpoint. We've added new links in the emails that point to the alert page or the incident page in The Microsoft Defender portal. For more information, see [Redirecting accounts from Microsoft Defender for Endpoint to The Microsoft Defender portal](./microsoft-365-security-mde-redirection.md).
+You can continue to use email alerts for Defender for Endpoint. We've added new links in the emails that point to the alert page or the incident page in The Microsoft Defender portal. For more information, see [Redirecting accounts from Microsoft Defender for Endpoint to The Microsoft Defender portal](microsoft-365-security-mde-redirection.md.md).
 
 ### Managed Security Service Providers (MSSP)
 

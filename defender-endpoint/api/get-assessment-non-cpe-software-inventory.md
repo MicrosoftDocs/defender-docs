@@ -235,5 +235,5 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryNonCp
 
 Other related
 - [Microsoft Defender Vulnerability Management](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
-- [Vulnerabilities in your organization](../tvm-weaknesses.md)
+- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
