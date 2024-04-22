@@ -70,19 +70,19 @@ Some capabilities in Defender for Office 365 are configured and turned on by def
 
 Some capabilities are *not yet* configured. You have the following options for configuring protection (which are easy to change later):
 
-- **Assign users to preset security policies**: [Preset security policies](../office-365-security/preset-security-policies.md) are the recommended method to quickly assign a uniform level of protection across all of the capabilities. You can choose from **Standard** or **Strict** protection. The settings for Standard and Strict are described in the tables [here](../office-365-security/recommended-settings-for-eop-and-office365.md). The differences between Standard and Strict are summarized in the table [here](../office-365-security/preset-security-policies.md#policy-settings-in-preset-security-policies).
+- **Assign users to preset security policies**: [Preset security policies](/defender-office-365/preset-security-policies.md) are the recommended method to quickly assign a uniform level of protection across all of the capabilities. You can choose from **Standard** or **Strict** protection. The settings for Standard and Strict are described in the tables [here](../office-365-security/recommended-settings-for-eop-and-office365.md). The differences between Standard and Strict are summarized in the table [here](../office-365-security/preset-security-policies#policy-settings-in-preset-security-policies).
 
   The advantages of preset security polices are you protect groups of users as quickly as possible using Microsoft's recommended settings based on observations in the datacenters. As new protection capabilities are added and as the security landscape changes, the settings in preset security policies are automatically updated to our recommended settings.
 
-  The disadvantage of preset security policies is you can't customize virtually any of the security settings in preset security policies (for example, you can't change an action from deliver to junk to quarantine, or vice-versa). The exception is entries and optional exceptions for [user impersonation and domain impersonation protection](../office-365-security/anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365), which you must configure manually.
+  The disadvantage of preset security policies is you can't customize virtually any of the security settings in preset security policies (for example, you can't change an action from deliver to junk to quarantine, or vice-versa). The exception is entries and optional exceptions for [user impersonation and domain impersonation protection](/defender-office-365/anti-phishing-policies-about#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365), which you must configure manually.
 
   Also, keep in mind that preset security policies are *always* applied before custom policies. So, if you want to create and use any custom policies, you'll need to exclude users in those custom policies from preset security policies.
 
-- **Configure *custom* protection policies**: If you prefer to configure the environment yourself, compare the default, Standard, and Strict settings in [Recommended settings for EOP and Microsoft Defender for Office 365 security](../office-365-security/recommended-settings-for-eop-and-office365.md). Keep a spreadsheet of where your custom build deviates.
+- **Configure *custom* protection policies**: If you prefer to configure the environment yourself, compare the default, Standard, and Strict settings in [Recommended settings for EOP and Microsoft Defender for Office 365 security](/defender-office-365/recommended-settings-for-eop-and-office365). Keep a spreadsheet of where your custom build deviates.
 
-  You can also use the [Configuration analyzer](../office-365-security/configuration-analyzer-for-security-policies.md) to compare the settings in your custom policies to the Standard and Strict values.
+  You can also use the [Configuration analyzer](/defender-office-365/configuration-analyzer-for-security-policies) to compare the settings in your custom policies to the Standard and Strict values.
 
-For detailed information about choosing preset security policies vs. custom policies, see [Determine your protection policy strategy](../office-365-security/mdo-deployment-guide.md#determine-your-protection-policy-strategy).
+For detailed information about choosing preset security policies vs. custom policies, see [Determine your protection policy strategy](/defender-office-365/mdo-deployment-guide#determine-your-protection-policy-strategy).
 
 ### Assign preset security policies
 
@@ -92,15 +92,15 @@ For example, an EOP condition for pilot evaluations could be applied if the reci
 
 Likewise, a Defender for Office 365 condition for pilot evaluations could be applied if the recipients are *members* of a defined *Defender for Office 365 Standard Protection* group and then managed by adding / removing accounts via the group.
 
-For complete instructions, see [Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users](../office-365-security/preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users).
+For complete instructions, see [Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users](/defender-office-365/preset-security-policies#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users).
 
 ### Configure custom protection policies
 
 The pre-defined *Standard* or *Strict* Defender for Office 365 policy templates give your pilot users the recommended baseline protection. However, you can also build and assign custom protection policies as part of your evaluation.
 
-It's *important* to be aware of the precedence these protection policies take when applied and enforced, as explained in [Order of precedence for preset security policies and other policies](../office-365-security/preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-policies).
+It's *important* to be aware of the precedence these protection policies take when applied and enforced, as explained in [Order of precedence for preset security policies and other policies](/defender-office-365/preset-security-policies#order-of-precedence-for-preset-security-policies-and-other-policies).
 
-The explanation and table in [Configure protection policies](../office-365-security/mdo-deployment-guide.md#step-2-configure-protection-policies) provides a handy reference for what you need to configure.
+The explanation and table in [Configure protection policies](/defender-office-365/mdo-deployment-guide#step-2-configure-protection-policies) provides a handy reference for what you need to configure.
 
 ## Step 3: Try out capabilities and get familiar with simulation, monitoring, and metrics
 
@@ -108,9 +108,9 @@ Now that your pilot is set up and configured, it's helpful to become familiar wi
 
 |Capability|Description|More information|
 |---|---|---|
-|Threat Explorer|Threat Explorer is a powerful near real-time tool to help Security Operations teams investigate and respond to threats and displays information about detected malware and phishing in email and files in Office 365, as well as other security threats and risks to your organization.|[About Threat Explorer](../office-365-security/threat-explorer-real-time-detections-about.md)|
-|Attack simulation training|You can use Attack simulation training in the Microsoft Defender portal to run realistic attack scenarios in your organization, which help you identify and find vulnerable users before a real attack impacts your environment.|[Get started using Attack simulation training](../office-365-security/attack-simulation-training-get-started.md)|
-|Reports dashboard|On the left navigation menu, click Reports and expand the Email & collaboration heading. The Email & collaboration reports are about spotting security trends some of which will allow you to take action (through buttons like 'Go to submissions'), and others that will show trends. These metrics are generated automatically.|[View email security reports in the Microsoft Defender portal](../office-365-security/reports-email-security.md) <br/><br/> [View Defender for Office 365 reports in the Microsoft Defender portal](../office-365-security/reports-defender-for-office-365.md)|
+|Threat Explorer|Threat Explorer is a powerful near real-time tool to help Security Operations teams investigate and respond to threats and displays information about detected malware and phishing in email and files in Office 365, as well as other security threats and risks to your organization.|[About Threat Explorer](/defender-office-365/threat-explorer-real-time-detections-about)|
+|Attack simulation training|You can use Attack simulation training in the Microsoft Defender portal to run realistic attack scenarios in your organization, which help you identify and find vulnerable users before a real attack impacts your environment.|[Get started using Attack simulation training](/defender-office-365/attack-simulation-training-get-started)|
+|Reports dashboard|On the left navigation menu, click Reports and expand the Email & collaboration heading. The Email & collaboration reports are about spotting security trends some of which will allow you to take action (through buttons like 'Go to submissions'), and others that will show trends. These metrics are generated automatically.|[View email security reports in the Microsoft Defender portal](/defender-office-365/reports-email-security.md) <br/><br/> [View Defender for Office 365 reports in the Microsoft Defender portal](../office-365-security/reports-defender-for-office-365)|
 
 ## Next steps
 

@@ -46,7 +46,7 @@ Selecting **Open alert page** takes you to the specific alert where various info
  
 :::image type="content" source="/defender/media/first-incident-path-phishing/first-incident-phishing-event-explorer.png" alt-text="The details of an alert" lightbox="/defender/media/first-incident-path-phishing/first-incident-phishing-event-explorer.png"::: 
 
-This takes the analyst to the Threat Management page where the email Subject, Recipient, Sender, and other information are displayed. **ZAP** under **Special Actions** tells the analyst that the Zero-hour auto purge feature was implemented. ZAP automatically detects and removes malicious and spam messages from mailboxes across the organization. For more information, see [Zero-hour auto purge (ZAP) in Exchange Online](../office-365-security/zero-hour-auto-purge.md).
+This takes the analyst to the Threat Management page where the email Subject, Recipient, Sender, and other information are displayed. **ZAP** under **Special Actions** tells the analyst that the Zero-hour auto purge feature was implemented. ZAP automatically detects and removes malicious and spam messages from mailboxes across the organization. For more information, see [Zero-hour auto purge (ZAP) in Exchange Online](/defender-office-365/zero-hour-auto-purge).
 
 Other actions can be taken on specific messages by selecting **Actions**. 
  

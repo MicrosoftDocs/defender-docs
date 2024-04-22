@@ -42,7 +42,7 @@ After you sign in, you'll be able to track your submissions.
 
 ### Submit a suspected email attachment
 
-Use the [Microsoft Defender portal](https://security.microsoft.com/) to submit suspected email attachments to Microsoft for review. For more information, see [Submit a suspected email attachment to Microsoft](../office-365-security/submissions-admin.md).
+Use the [Microsoft Defender portal](https://security.microsoft.com/) to submit suspected email attachments to Microsoft for review. For more information, see [Submit a suspected email attachment to Microsoft](/defender-office-365/submissions-admin).
 
 ### Submit a file or file hash
 

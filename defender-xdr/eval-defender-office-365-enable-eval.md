@@ -67,7 +67,7 @@ To effectively evaluate Microsoft Defender for Office 365, it's important that i
 
 Use the instructions here to activate your Microsoft Defender for Office 365 evaluation from the Microsoft Defender portal.
 
-For detailed information, see [Try Microsoft Defender for Office 365](../office-365-security/try-microsoft-defender-for-office-365.md).
+For detailed information, see [Try Microsoft Defender for Office 365](/defender-office-365/try-microsoft-defender-for-office-365).
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, expand *Email & collaboration* \> select **Policies & rules** \> select **Threat policies** \> scroll down to the *Others* section, and then select **Evaluation mode**. Or, to go directly to the *Evaluation mode* page, use <https://security.microsoft.com/atpEvaluation>.
 

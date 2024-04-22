@@ -42,7 +42,7 @@ You need to assign permissions before you can perform the procedures in this art
  - Submit files / file hashes: *"Alerts (Manage)" or "Core security settings (manage)"*
  - View submissions: _"Security data basics (read)"_
                         
-For more information about how you can submit spam, phish, URLs, and email attachments to Microsoft, see [Use the Submissions page to submit suspected spam, phish, URLs, legitimate email getting blocked, and email attachments to Microsoft](../office-365-security/submissions-admin.md).
+For more information about how you can submit spam, phish, URLs, and email attachments to Microsoft, see [Use the Submissions page to submit suspected spam, phish, URLs, legitimate email getting blocked, and email attachments to Microsoft](/defender-office-365/submissions-admin).
 
 ## Submit a file or file hash to Microsoft from the Defender portal
 
