@@ -65,7 +65,7 @@ Learn more about Zero Trust and how to build an enterprise-scale strategy and ar
 
 For endpoint protection concepts and deployment objectives, see [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints).
 
-For the steps to deploy Intune for Microsoft 365 with Zero Trust, see the [Manage devices with Intune and Microsoft 365](../../solutions/manage-devices-with-intune-overview.md) solution guidance.
+For the steps to deploy Intune for Microsoft 365 with Zero Trust, see the [Manage devices with Intune and Microsoft 365](/microsoft-365/solutions/manage-devices-with-intune-overview) solution guidance.
 
 For other Microsoft 365 capabilities that contribute to a strong Zero Trust strategy and architecture, see [Zero Trust deployment plan with Microsoft 365](/microsoft-365/security/microsoft-365-zero-trust).
 

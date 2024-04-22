@@ -245,6 +245,6 @@ GeneratedTime|String|The time that the export was generated.
 
 Other related
 
-- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management.md)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](../tvm-weaknesses.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

@@ -143,6 +143,6 @@ GET https://api.securitycenter.windows.com/api/remediationtasks/03942ef5-aecb-4c
 - [Remediation methods and properties](get-remediation-methods-properties.md)
 - [List all remediation activities](get-remediation-all-activities.md)
 - [List exposed devices of one remediation activity](get-remediation-exposed-devices-activities.md)
-- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management.md)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](../tvm-weaknesses.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

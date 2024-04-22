@@ -136,7 +136,7 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) The [unified Assets tab in the Incidents page](investigate-incidents.md) is now generally available.
 
-- Microsoft is using a new weather-based naming taxonomy for threat actors. This new naming schema will provide more clarity and will be easier to reference. [Learn more about the new naming taxonomy](../intelligence/microsoft-threat-actor-naming.md).
+- Microsoft is using a new weather-based naming taxonomy for threat actors. This new naming schema will provide more clarity and will be easier to reference. [Learn more about the new naming taxonomy](/defender/microsoft-threat-actor-naming).
 
 ## March 2023
 
