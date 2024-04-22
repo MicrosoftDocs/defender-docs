@@ -171,7 +171,7 @@ If you use the [Defender for Endpoint SIEM API](/defender-endpoint/enable-siem-i
 
 ### Email alerts
 
-You can continue to use email alerts for Defender for Endpoint. We've added new links in the emails that point to the alert page or the incident page in The Microsoft Defender portal. For more information, see [Redirecting accounts from Microsoft Defender for Endpoint to The Microsoft Defender portal](microsoft-365-security-mde-redirection.md.md).
+You can continue to use email alerts for Defender for Endpoint. We've added new links in the emails that point to the alert page or the incident page in The Microsoft Defender portal. For more information, see [Redirecting accounts from Microsoft Defender for Endpoint to The Microsoft Defender portal](microsoft-365-security-mde-redirection.md).
 
 ### Managed Security Service Providers (MSSP)
 

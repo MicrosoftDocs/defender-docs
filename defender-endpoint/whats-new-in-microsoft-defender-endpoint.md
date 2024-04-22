@@ -134,7 +134,7 @@ Two new ASR rules are now in public preview:
 
 - Live Response is now generally available for macOS and Linux. For more information, see [Investigate entities on devices using live response](live-response.md).
 
-- [Live response API and library API for Linux and macOS is now generally available](run-live-response.md) <br/> You can now run live response API commands on Linux and macOS.
+- [Live response API and library API for Linux and macOS is now generally available](api/run-live-response.md) <br/> You can now run live response API commands on Linux and macOS.
 
 ## Prior to 2023
 

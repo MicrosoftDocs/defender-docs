@@ -209,7 +209,7 @@ sudo mdatp diagnostic create
 
 - Microsoft Endpoint Manager doesn't support Linux at this time
 
-- [Manage Microsoft Defender for Endpoint configuration settings on devices with Microsoft Endpoint Manager](mde-security-integration.md)
+- [Manage Microsoft Defender for Endpoint configuration settings on devices with Microsoft Endpoint Manager](/mem/intune/protect/mde-security-integration)
 
 - [Microsoft Tech Community: Microsoft Defender for Endpoint Linux - Configuration and Operation Command List](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/microsoft-defender-for-endpoint-linux-configuration-and/ba-p/1577902)
 

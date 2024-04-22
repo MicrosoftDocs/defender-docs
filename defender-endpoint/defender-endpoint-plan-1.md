@@ -151,7 +151,7 @@ To learn more, see [Application control for Windows](/windows/security/threat-pr
 
 Defender for Endpoint Plan 1 includes the Microsoft Defender portal, which enables your security team to view current information about detected threats, take appropriate actions to mitigate threats, and centrally manage your organization's threat protection settings.
 
-To learn more, see [Microsoft Defender portal overview](microsoft-365-security-center-mde.md).
+To learn more, see [Microsoft Defender portal overview](/defender-xdr/microsoft-365-security-center-mde).
 
 ### Role-based access control
 

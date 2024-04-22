@@ -326,7 +326,7 @@
     - name: Create an onboarding or offboarding notification rule
       href: onboarding-notification.md
     - name: Manage Microsoft Defender for Endpoint configuration settings on devices with Microsoft Intune
-      href: api/mde-security-integration.md
+      href: api//mem/intune/protect/mde-security-integration
     - name: Manage Defender for Endpoint P1/P2 across devices
       href: defender-endpoint-subscription-settings.md
     - name: Onboarding using Microsoft Configuration Manager
@@ -1380,7 +1380,7 @@
         - name: Connected applications
           href: connected-applications.md
         - name: API explorer
-          href: api/api/api-explorer.md
+          href: api/api-explorer.md
     - name: Managed security service provider (MSSP) integration
       items:
       - name: Configure managed security service provider integration

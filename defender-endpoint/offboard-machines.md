@@ -44,7 +44,7 @@ Data, such as Timeline, Alerts, Vulnerabilities, etc., from devices that were of
 
 The device's profile (without data) remains in the [Device inventory](machines-view-overview.md) for no longer than 180 days.
 
-Devices that weren't active in the last 30 days aren't factored in on the data that reflects your organization's Defender Vulnerability Management [exposure score](tvm-exposure-score.md) and Microsoft Secure Score for Devices.
+Devices that weren't active in the last 30 days aren't factored in on the data that reflects your organization's Defender Vulnerability Management [exposure score](/defender-vulnerability-management/tvm-exposure-score) and Microsoft Secure Score for Devices.
 
 To view only active devices, you can filter by [sensor health state](machines-view-overview.md#use-filters-to-customize-the-device-inventory-views), [device tags](machine-tags.md), or [machine groups](machine-groups.md).
 
