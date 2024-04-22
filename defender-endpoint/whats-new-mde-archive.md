@@ -247,7 +247,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Threat Experts Targeted Attack Notification capability](endpoint-attack-notifications.md) <BR> Microsoft Threat Experts' Targeted Attack Notification alerts are tailored for organizations to provide as much information as can be quickly delivered, including the timeline, scope of breach, and the methods of intrusion, thus bringing attention to critical threats in their network.
 
-- [Microsoft Defender for Endpoint API](api/api/tvm-supported-os) <BR> Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will enable you to automate workflows and innovate based on Microsoft Defender for Endpoint capabilities.
+- [Microsoft Defender for Endpoint API](api/tvm-supported-os) <BR> Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will enable you to automate workflows and innovate based on Microsoft Defender for Endpoint capabilities.
 
 ## February 2019
 
