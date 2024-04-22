@@ -29,7 +29,7 @@ You can use the Defender Vulnerability Management dashboard in multi-tenant mana
 - Your exposure score and exposure level for devices across all tenants.
 - Your most exposed tenants along with details of the number of weaknesses, exposed devices, and available recommendations for each tenant.
 
-   :::image type="content" source="./media/defender/mto-mdvm-dashboard.png" alt-text="Screenshot of the defender vulnerability management dashboard in multi-tenant management in Microsoft Defender XDR" lightbox="./media/defender/mto-mdvm-dashboard.png":::
+   :::image type="content" source="/defender/media/defender/mto-mdvm-dashboard.png" alt-text="Screenshot of the defender vulnerability management dashboard in multi-tenant management in Microsoft Defender XDR" lightbox="/defender/media/defender/mto-mdvm-dashboard.png":::
 
 The Defender Vulnerability Management dashboard in multi-tenant management provides the following information across all the tenants you have access to:
 
@@ -45,7 +45,7 @@ The Defender Vulnerability Management dashboard in multi-tenant management provi
 
 The **Tenants page** under **Vulnerability management** includes vulnerability information for all tenants, and at a tenant-specific level, such as exposed devices, security recommendations, weaknesses, and critical CVEs.
 
-   :::image type="content" source="./media/defender/mto-multi-tenant-view.png" alt-text="Screenshot of multi-tenant vulnerability management in Microsoft Defender XDR" lightbox="./media/defender/mto-multi-tenant-view.png":::
+   :::image type="content" source="/defender/media/defender/mto-multi-tenant-view.png" alt-text="Screenshot of multi-tenant vulnerability management in Microsoft Defender XDR" lightbox="/defender/media/defender/mto-multi-tenant-view.png":::
 
 At the top of the page, you can view the number of tenants and the aggregate number of:
 
@@ -56,9 +56,9 @@ At the top of the page, you can view the number of tenants and the aggregate num
 
 Select a tenant name to navigate to the Defender Vulnerability Management dashboard for that tenant in the [Microsoft Defender XDR](https://security.microsoft.com/machines) portal.
 
-For more information, see [Microsoft Defender Vulnerability Management dashboard](../defender-vulnerability-management/../defender-vulnerability-management/tvm-dashboard-insights.md).
+For more information, see [Microsoft Defender Vulnerability Management dashboard](/defender-vulnerability-management/tvm-dashboard-insights).
 
 ## Related articles
 
-- [Exposure score](../defender-vulnerability-management/tvm-exposure-score.md)
-- [Security recommendations](../defender-vulnerability-management/../defender-vulnerability-management/tvm-security-recommendation.md)
+- [Exposure score](/defender-vulnerability-management/tvm-exposure-score)
+- [Security recommendations](/defender-vulnerability-management/tvm-security-recommendation)

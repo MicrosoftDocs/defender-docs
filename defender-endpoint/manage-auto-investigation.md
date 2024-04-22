@@ -22,7 +22,7 @@ search.appverid: met150
 
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
+- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 ## Remediation actions
 
@@ -71,7 +71,7 @@ Whether taken automatically or upon approval, an automated investigation and rem
    - Select **Open investigation page** to view more details about the investigation.
    - Select **Approve** to initiate a pending action.
    - Select **Reject** to prevent a pending action from being taken.
-   - Select **Go hunt** to go into [Advanced hunting](advanced-hunting-overview.md).
+   - Select **Go hunt** to go into [Advanced hunting](/defender/advanced-hunting-overview).
 
 ### Approve or reject remediation actions
 
@@ -86,7 +86,7 @@ For incidents with a remediation status of **Pending approval**, you can also ap
    - Select the Approve pending action option to initiate a pending action.
    - Select the Reject pending action option to prevent a pending action from being taken.
 
-:::image type="content" source="../media/defender/m365-defender-approve-reject-action.png" alt-text="The Approve\Reject option in the Evidence and Response management pane for an incident in the Microsoft Defender portal" lightbox="../media/defender/m365-defender-approve-reject-action.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-approve-reject-action.png" alt-text="The Approve\Reject option in the Evidence and Response management pane for an incident in the Microsoft Defender portal" lightbox="/defender/media/defender/m365-defender-approve-reject-action.png":::
 
 ## Review completed actions
 
@@ -107,7 +107,7 @@ If you've determined that a device or a file is not a threat, you can undo remed
 |<ul><li>Automated investigation</li><li>Manual response actions (see the note below)</li><li>Microsoft Defender Antivirus</li></ul>|<ul><li>Disable a driver</li><li>Isolate device</li><li>Quarantine a file</li><li>Remove a registry key</li><li>Remove a scheduled task</li><li>Restrict code execution</li><li>Stop a service</li></ul>|
 
 > [!NOTE]
-> [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) and [Microsoft Defender for Business](../defender-business/mdb-overview.md) include only the following manual response actions:
+> [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) and [Microsoft Defender for Business](/defender-business/mdb-overview) include only the following manual response actions:
 >
 > - Run antivirus scan
 > - Isolate device
@@ -148,12 +148,12 @@ Automation levels affect whether certain remediation actions are taken automatic
 All verdicts are tracked in the [Action center](auto-investigation-action-center.md#the-unified-action-center).
 
 > [!NOTE]
-> In [Defender for Business](../defender-business/mdb-overview.md), automated investigation and remediation capabilities are preset to use **Full - remediate threats automatically**. These capabilities are applied to all devices by default.
+> In [Defender for Business](/defender-business/mdb-overview), automated investigation and remediation capabilities are preset to use **Full - remediate threats automatically**. These capabilities are applied to all devices by default.
 
 ## Next steps
 
 - [Learn about live response capabilities](live-response.md)
-- [Proactively hunt for threats with advanced hunting](advanced-hunting-overview.md)
+- [Proactively hunt for threats with advanced hunting](/defender/advanced-hunting-overview)
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
 ## See also

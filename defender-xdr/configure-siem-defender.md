@@ -39,7 +39,7 @@ Microsoft Defender XDR supports security information and event management (SIEM)
 
 For more information, see:
 
-- [Microsoft Defender XDR APIs license and terms of use](api-terms.md)
+- [Microsoft Defender XDR APIs license and terms of use](/legal/microsoft-365/api-terms)
 - [Access the Microsoft Defender XDR APIs](api-access.md)
 - [Hello World example](api-hello-world.md)
 - [Get access with application context](api-create-app-web.md)
@@ -59,7 +59,7 @@ Microsoft Defender XDR currently supports the following SIEM solution integratio
 
 ### Incident schema
 
-For more information on Microsoft Defender XDR incident properties including contained alert and evidence entities metadata, see [Schema mapping](../defender/api-list-incidents.md#schema-mapping).
+For more information on Microsoft Defender XDR incident properties including contained alert and evidence entities metadata, see [Schema mapping](/defender/api-list-incidents#schema-mapping).
 
 ### Splunk
 
@@ -99,9 +99,9 @@ For more information on the Elastic connector, see: [Microsoft M365 Defender | E
 
 ## Ingesting streaming event data via Event Hubs
 
-First you need to stream events from your Microsoft Entra tenant to your Event Hubs or Azure Storage Account. For more information, see [Streaming API](../defender/streaming-api.md).
+First you need to stream events from your Microsoft Entra tenant to your Event Hubs or Azure Storage Account. For more information, see [Streaming API](/defender/streaming-api).
 
-For more information on the event types supported by the Streaming API, see [Supported streaming event types](../defender/supported-event-types.md).
+For more information on the event types supported by the Streaming API, see [Supported streaming event types](/defender/supported-event-types).
 
 ### Splunk
 

@@ -18,7 +18,7 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.date: 08/11/2023
+ms.date: 02/11/2024
 ---
 
 # Alert classification playbooks
@@ -87,8 +87,8 @@ See these playbooks for steps to more quickly classify alerts for the following 
 - [Suspicious email forwarding activity](alert-grading-playbook-email-forwarding.md)
 - [Suspicious inbox manipulation rules](alert-grading-playbook-inbox-manipulation-rules.md)
 - [Suspicious inbox forwarding rules](alert-grading-playbook-inbox-forwarding-rules.md)
-- [Suspicious IP addresses related to password spray activity](alert-grading-password-spray.md)
-- [Password spray attacks](alert-grading-password-spray-attack.md)
+- [Suspicious IP addresses related to password spray activity](alert-classification-suspicious-ip-password-spray.md)
+- [Password spray attacks](alert-classification-password-spray-attack.md)
 
 See [Investigate alerts](investigate-alerts.md) for information on how to examine alerts with the Microsoft Defender portal.
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

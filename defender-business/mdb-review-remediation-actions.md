@@ -25,7 +25,7 @@ As threats are detected, remediation actions come into play. Depending on the pa
 
 All remediation actions are tracked in the Action center.
 
-:::image type="content" source="../media/defender-business/mdb-actioncenter.png" alt-text="Screenshot of the Action center":::
+:::image type="content" source="/defender/media/defender-business/mdb-actioncenter.png" alt-text="Screenshot of the Action center":::
 
 **This article describes**:
 
@@ -52,9 +52,9 @@ The following table lists remediation actions that are available.
 | Source  | Actions  |
 |---------|---------|
 | [Automatic attack disruption](mdb-attack-disruption.md) | - Contain a device <br/>- Contain a user <br/>- Disable a user account |
-| [Automated investigations](../defender-endpoint/automated-investigations.md)      |- Quarantine a file<br/> - Remove a registry key<br/> - Kill a process<br/> - Stop a service<br/> - Disable a driver<br/> - Remove a scheduled task  |
-| [Manual response actions](../defender-endpoint/respond-machine-alerts.md)   |- Run antivirus scan<br/> - Isolate a device<br/> - Add an indicator to block or allow a file |
-| [Live response](../defender-endpoint/live-response.md)   |- Collect forensic data<br/> - Analyze a file<br/> - Run a script<br/> - Send a suspicious entity to Microsoft for analysis<br/> - Remediate a file <br/> - Proactively hunt for threats|
+| [Automated investigations](/defender-endpoint/automated-investigations)      |- Quarantine a file<br/> - Remove a registry key<br/> - Kill a process<br/> - Stop a service<br/> - Disable a driver<br/> - Remove a scheduled task  |
+| [Manual response actions](/defender-endpoint/respond-machine-alerts)   |- Run antivirus scan<br/> - Isolate a device<br/> - Add an indicator to block or allow a file |
+| [Live response](/defender-endpoint/live-response)   |- Collect forensic data<br/> - Analyze a file<br/> - Run a script<br/> - Send a suspicious entity to Microsoft for analysis<br/> - Remediate a file <br/> - Proactively hunt for threats|
 
 ## Next steps
 

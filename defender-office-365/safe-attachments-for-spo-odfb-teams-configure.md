@@ -19,8 +19,7 @@ ms.collection:
 description: Admins can learn how to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, including how to set alerts for detected files.
 ms.custom: 
 - seo-marvel-apr2020
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 ms.date: 6/19/2023
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -55,11 +54,11 @@ You turn on or turn off Safe Attachments for Office 365 for SharePoint, OneDrive
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Threat policies** \> **Safe Attachments** in the **Policies** section. Or, to go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
 
-2. On the **Safe Attachments** page, select :::image type="icon" source="../../media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**.
+2. On the **Safe Attachments** page, select :::image type="icon" source="/defender/media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**.
 
 3. In the **Global settings** flyout that opens, go to the **Protect files in SharePoint, OneDrive, and Microsoft Teams** section.
 
-   Move the **Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams** toggle to the right :::image type="icon" source="../../media/scc-toggle-on.png" border="false"::: to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
+   Move the **Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams** toggle to the right :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: to turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams.
 
    When you're finished in the **Global settings** flyout, select **Save**.
 
@@ -98,7 +97,7 @@ You can create an alert policy that notifies admins when Safe Attachments for Sh
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Policies & rules** \> **Alert policy**. To go directly to the **Alert policy** page, use <https://security.microsoft.com/alertpolicies>.
 
-2. On the **Alert policy** page, select :::image type="icon" source="../../media/m365-cc-sc-create-icon.png" border="false"::: **New alert policy** to start the new alert policy wizard.
+2. On the **Alert policy** page, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **New alert policy** to start the new alert policy wizard.
 
 3. On the **Name your alert, categorize it, and choose a severity** page, configure the following settings:
    - **Name**: Type a unique and descriptive name. For example, **Malicious Files in Libraries**.

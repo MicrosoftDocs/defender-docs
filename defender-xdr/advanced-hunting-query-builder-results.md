@@ -1,14 +1,9 @@
 ---
 title: Work with query results in guided mode for hunting in Microsoft Defender XDR
 description: Use and customize query results in guided mode for advanced hunting in Microsoft Defender XDR
-keywords: guided mode, advanced hunting, threat hunting, cyber threat hunting, Microsoft Defender XDR, microsoft 365, m365, search, query, telemetry, custom detections, schema, kusto
-search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords:
   - NOCSH
 ms.author: maccruz
@@ -20,7 +15,7 @@ ms.collection:
   - m365-security
   - tier2
 ms.topic: conceptual
-ms.date: 08/11/2022
+ms.date: 08/11/2023
 ---
 
 # Work with query results in guided mode
@@ -35,7 +30,7 @@ ms.date: 08/11/2022
 
 In hunting using guided mode, the results of the query appear in the **Results** tab.
 
-![Screenshot of results tab](./media/guided-hunting/35-query-results.png)
+![Screenshot of results tab](/defender/media/guided-hunting/35-query-results.png)
 
 You can work on the results further by exporting them to a CSV file by selecting **Export**. This downloads the CSV file for your use.
 
@@ -54,7 +49,7 @@ To view more columns:
 1. Select **Customize columns** in the upper right-hand portion of the results view.
 2. From here, select the columns to include in the results view and deselect columns to hide.
 
-   ![Screenshot of list of columns you can add to the results view](./media/guided-hunting/36-columns.png)
+   ![Screenshot of list of columns you can add to the results view](/defender/media/guided-hunting/36-columns.png)
 
 3. Select **Apply** to view results with the added columns. Use the scroll bars if necessary.
 

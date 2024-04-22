@@ -50,7 +50,7 @@ ms.date: 12/18/2020
 |[Find machines by IP](find-machines-by-ip.md)|[machine](machine.md) collection|Find machines seen with IP.|
 |[Find machines by tag](find-machines-by-tag.md)|[machine](machine.md) collection|Find machines by [Tag](../machine-tags.md).|
 |[Get missing KBs](get-missing-kbs-machine.md)|KB collection|Get a list of missing KBs associated with the machine ID|
-|[Set device value](set-device-value.md)|[machine](machine.md) collection|Set the [value of a device](../tvm-assign-device-value.md).|
+|[Set device value](set-device-value.md)|[machine](machine.md) collection|Set the [value of a device](/defender-vulnerability-management/tvm-assign-device-value).|
 |[Update machine](update-machine-method.md)|[machine](machine.md) collection|Get the update status of a machine.|
 
 ## Properties
@@ -75,7 +75,7 @@ ms.date: 12/18/2020
 |aadDeviceId|Nullable representation Guid|Microsoft Entra Device ID (when [machine](machine.md) is Microsoft Entra joined).|
 |machineTags|String collection|Set of [machine](machine.md) tags.|
 |exposureLevel|Nullable Enum|Exposure level as evaluated by Microsoft Defender for Endpoint. Possible values are: `None`, `Low`, `Medium`, and `High`.|
-|deviceValue|Nullable Enum|The [value of the device](../tvm-assign-device-value.md). Possible values are: `Normal`, `Low`, and `High`.|
+|deviceValue|Nullable Enum|The [value of the device](/defender-vulnerability-management/tvm-assign-device-value). Possible values are: `Normal`, `Low`, and `High`.|
 |ipAddresses|IpAddress collection|Set of ***IpAddress*** objects. See [Get machines API](get-machines.md).|
 |osArchitecture|String|Operating system architecture. Possible values are: `32-bit`, `64-bit`. Use this property instead of osProcessor.|
 

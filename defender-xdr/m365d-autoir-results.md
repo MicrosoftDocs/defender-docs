@@ -32,7 +32,7 @@ With Microsoft Defender XDR, when an [automated investigation](m365d-autoir.md) 
 
 ## (NEW) Unified investigation page
 
-The investigation page has recently been updated to include information across your devices, email, and collaboration content. The new, unified investigation page defines a common language and provides a unified experience for automatic investigations across [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) and [Microsoft Defender for Office 365](../defender-office-365/defender-for-office-365.md). To access the unified investigation page, select the link in the yellow banner you'll see on:
+The investigation page has recently been updated to include information across your devices, email, and collaboration content. The new, unified investigation page defines a common language and provides a unified experience for automatic investigations across [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) and [Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365). To access the unified investigation page, select the link in the yellow banner you'll see on:
 
 - Any investigation page in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview compliance portal</a>
 - Any investigation page in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com))
@@ -80,13 +80,13 @@ Use an incident details page to view detailed information about an incident, inc
 
 Here's an example.
 
-:::image type="content" source="./media/mtp-incidentdetails-tabs.png" alt-text="The investigation page in the Microsoft Defender portal" lightbox="./media/mtp-incidentdetails-tabs.png":::
+:::image type="content" source="/defender/media/mtp-incidentdetails-tabs.png" alt-text="The investigation page in the Microsoft Defender portal" lightbox="/defender/media/mtp-incidentdetails-tabs.png":::
 
 ## Investigation details
 
 Use the investigation details view to see past, current, and pending activity pertaining to an investigation. Here's an example.
 
-:::image type="content" source="./media/mtp-air-investdetails.png" alt-text="The investigation details page in the Microsoft Defender portal" lightbox="./media/mtp-air-investdetails.png":::
+:::image type="content" source="/defender/media/mtp-air-investdetails.png" alt-text="The investigation details page in the Microsoft Defender portal" lightbox="/defender/media/mtp-air-investdetails.png":::
 
 In the Investigation details view, you can see information on the **Investigation graph**, **Alerts**, **Devices**, **Identities**, **Key findings**, **Entities**, **Log**, and **Pending actions** tabs, described in the following table.
 

@@ -41,19 +41,19 @@ Endpoint Attack Notifications (previously referred to as Microsoft Threat Expert
 - Scope of compromise and as much context as can be quickly delivered to enable fast SOC response
 
 
-![Screenshot of the Endpoint Attack Notifications alert](../media/defender-endpoint/endpoint-attack-notification-alert.png)
+![Screenshot of the Endpoint Attack Notifications alert](/defender/media/defender-endpoint/endpoint-attack-notification-alert.png)
 
 ## Apply for Endpoint Attack Notifications
 If you're a Microsoft Defender for Endpoint customer, you can apply for Endpoint Attack Notifications. Go to **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Endpoint Attack Notifications** to apply. Once accepted, you'll get the benefits of Endpoint Attack Notifications.
 
-![How to enable Endpoint Attack Notifications in 365 Defender Portal](../media/defender-endpoint/enable-endpoint-attack-notifications.png)
+![How to enable Endpoint Attack Notifications in 365 Defender Portal](/defender/media/defender-endpoint/enable-endpoint-attack-notifications.png)
 
 ## Receive Endpoint Attack notifications
 Endpoint Attack Notifications are alerts that have been hand crafted by Microsoft's managed hunting service based on suspicious activity in your environment. They can be viewed through several mediums:
 - The alerts queue in the Microsoft Defender portal
-- Using the [API](../../security/defender-endpoint/get-alerts.md)
-- [DeviceAlertEvents](../../security/defender-endpoint/advanced-hunting-devicealertevents-table.md) table in Advanced hunting
-- Your email if you [configure an email notifications](../../security/defender-endpoint/configure-vulnerability-email-notifications.md) rule
+- Using the [API](/defender-endpoint/get-alerts)
+- [DeviceAlertEvents](/defender-endpoint/advanced-hunting-devicealertevents-table) table in Advanced hunting
+- Your email if you [configure an email notifications](/defender-endpoint/configure-vulnerability-email-notifications) rule
 
 Endpoint Attack Notifications can be identified by:
 - Have a tag named **Endpoint Attack Notification**
@@ -63,10 +63,10 @@ Endpoint Attack Notifications can be identified by:
 > If you have enrolled for Endpoint Attack Notifications but are not seeing any alerts from the service, it indicates that you have a strong security posture and are less prone to attacks.
 
 ## Create an email notification rule
-You can create rules to send email notifications for notification recipients. See [Configure alert notifications](configure-email-notifications.md) to create, edit, delete, or troubleshoot email notification, for details.
+You can create rules to send email notifications for notification recipients. See [Configure alert notifications](/defender-xdr/configure-email-notifications) to create, edit, delete, or troubleshoot email notification, for details.
 
 
 ## Next steps
 
-- To proactively hunt threats across endpoints, Office 365, cloud applications, and identity, refer to [Microsoft Defender Experts for Hunting](../defender/defender-experts-for-hunting.md).
+- To proactively hunt threats across endpoints, Office 365, cloud applications, and identity, refer to [Microsoft Defender Experts for Hunting](/defender/defender-experts-for-hunting).
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

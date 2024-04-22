@@ -104,7 +104,7 @@ To uninstall Microsoft Defender for Endpoint on macOS using JAMF Pro upload the 
 
 The **offboarding profile** should be uploaded without any modifications, and with Preference Domain name set to **com.microsoft.wdav.atp.offboarding**:
 
-   :::image type="content" source="../media/defender-endpoint/jamf-pro-offboarding.png" alt-text="Screenshot of the JAMF offboarding screen" lightbox="../media/defender-endpoint/jamf-pro-offboarding.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/jamf-pro-offboarding.png" alt-text="Screenshot of the JAMF offboarding screen" lightbox="/defender/media/defender-endpoint/jamf-pro-offboarding.png":::
 
 ## Configuring from the command line
 

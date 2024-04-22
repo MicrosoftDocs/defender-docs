@@ -190,7 +190,7 @@ You can select only one column for each entity type (mailbox, user, or device). 
 
 Your custom detection rule can automatically take actions on devices, files, users, or emails that are returned by the query.
 
-:::image type="content" source="./media/ah-custom-actions.png" alt-text="Screenshot that shows actions for custom detections in the Microsoft Defender portal." lightbox="./media/ah-custom-actions.png":::
+:::image type="content" source="/defender/media/ah-custom-actions.png" alt-text="Screenshot that shows actions for custom detections in the Microsoft Defender portal." lightbox="/defender/media/ah-custom-actions.png":::
 
 #### Actions on devices
 
@@ -274,7 +274,7 @@ To view all existing custom detection rules, navigate to **Hunting** > **Custom 
 
 To view comprehensive information about a custom detection rule, go to **Hunting** > **Custom detection rules** and then select the name of rule. You can then view general information about the rule, including information, its run status, and scope. The page also provides the list of triggered alerts and actions.
 
-:::image type="content" source="./media/custom-detect-rules-view.png" alt-text="The Custom detection rule details page in the Microsoft Defender portal" lightbox="./media/custom-detect-rules-view.png":::
+:::image type="content" source="/defender/media/custom-detect-rules-view.png" alt-text="The Custom detection rule details page in the Microsoft Defender portal" lightbox="/defender/media/custom-detect-rules-view.png":::
 
 You can also take the following actions on the rule from this page:
 

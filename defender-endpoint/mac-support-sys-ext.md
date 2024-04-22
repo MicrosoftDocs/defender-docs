@@ -27,7 +27,7 @@ ms.date: 06/07/2023
 - [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md)
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender XDR](../defender/microsoft-365-defender.md)
+- [Microsoft Defender XDR](/defender/microsoft-365-defender)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/get-started/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https%3a%2f%2faka.ms%2fMDEp2OpenTrial%3focid%3ddocs-wdatp-exposedapis-abovefoldlink&brandingId=28b276fb-d2a0-4379-a7c0-57dce33da0f9&ali=1&bac=1)
 
@@ -53,7 +53,7 @@ Click **Action needed**.
 
 The screen as shown in the following screenshot appears:
 
-:::image type="content" source="images/screen-on-clicking-action-needed.png" alt-text="The screen that is displayed on clicking the Action needed option." lightbox="images/screen-on-clicking-action-needed.png":::
+:::image type="content" source="media/screen-on-clicking-action-needed.png" alt-text="The screen that is displayed on clicking the Action needed option." lightbox="media/screen-on-clicking-action-needed.png":::
 
 You can also run **mdatp health**: It reports if real-time protection is enabled but not available. This report indicates that the system extension isn't approved to run on your device.
 
@@ -73,7 +73,7 @@ full_disk_access_enabled        : false
 ```
 The output report displayed on running **mdatp health** is shown in the following screenshot:
 
-:::image type="content" source="images/screen-on-clicking-fix.png" alt-text="The screen that is displayed on clicking the Fix button." lightbox="images/screen-on-clicking-fix.png":::
+:::image type="content" source="media/screen-on-clicking-fix.png" alt-text="The screen that is displayed on clicking the Fix button." lightbox="media/screen-on-clicking-fix.png":::
 
 ## Cause
 
@@ -129,7 +129,7 @@ This section describes the solution of approving the functions such system exten
 
 - [Intune](manage-profiles-approve-sys-extensions-intune.md#manage-profiles-and-approve-extensions-using-intune)
 - [JamF](manage-sys-extensions-using-jamf.md#manage-system-extensions-using-jamf)
-- [Other MDM](manage-sys-extensions-other-mdm.md#manage-system-extensions-using-other-mdm-solutions)
+- [Other MDM](mac-install-with-other-mdm.md)
 - [Manual deployment](manage-sys-extensions-manual-deployment.md#manage-system-extensions-using-the-manual-methods-of-deployment)
 
 ### Prerequisites
@@ -145,7 +145,7 @@ If you're using Intune, see [Manage macOS software update policies in Intune](/m
 1. Click the ellipses (three dots).
 1. Select **Refresh devices**. The screen as shown in the following screenshot appears:
 
-   :::image type="content" source="images/screen-on-clicking-refresh-devices.png" alt-text="The screen that appears on clicking Refresh devices." lightbox="images/screen-on-clicking-refresh-devices.png":::
+   :::image type="content" source="media/screen-on-clicking-refresh-devices.png" alt-text="The screen that appears on clicking Refresh devices." lightbox="media/screen-on-clicking-refresh-devices.png":::
 
 1. In Launchpad, type **System Preferences**.
 1. Double-click **Profiles**.

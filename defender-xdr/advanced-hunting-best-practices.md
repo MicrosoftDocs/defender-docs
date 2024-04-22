@@ -4,9 +4,6 @@ description: Learn how to construct fast, efficient, and error-free threat hunti
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords:
   - NOCSH
 ms.author: maccruz
@@ -18,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: conceptual
-ms.date: 02/16/2021
+ms.date: 02/16/2024
 ---
 
 # Advanced hunting query best practices
@@ -36,7 +33,7 @@ Depending on its size, each tenant has access to a set amount of CPU resources a
 
 After running your query, you can see the execution time and its resource usage (Low, Medium, High). High indicates that the query took more resources to run and could be improved to return results more efficiently.
 
-:::image type="content" source="./media/resource-usage.png" alt-text="The query details under **Results** tab in the Microsoft Defender portal" lightbox="./media/resource-usage.png":::
+:::image type="content" source="/defender/media/resource-usage.png" alt-text="The query details under **Results** tab in the Microsoft Defender portal" lightbox="/defender/media/resource-usage.png":::
 
 Customers who run multiple queries regularly should track consumption and apply the optimization guidance in this article to minimize disruption resulting from exceeding quotas or usage parameters.
 

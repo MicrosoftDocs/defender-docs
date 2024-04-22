@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 4/1/2024
+ms.date: 4/3/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -16,8 +16,7 @@ ms.collection:
 ms.topic: conceptual
 ms.custom: seo-marvel-apr2020
 ms.reviewer: vippand
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -35,10 +34,14 @@ To search the Microsoft 365 Roadmap for Defender for Office 365 features, use [t
 
 For more information on what's new with other Microsoft Defender security products, see:
 
-- [What's new in Microsoft Defender XDR](../defender/whats-new.md)
-- [What's new in Microsoft Defender for Endpoint](../defender-endpoint/whats-new-in-microsoft-defender-endpoint.md)
+- [What's new in Microsoft Defender XDR](/defender/whats-new)
+- [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
-- [What's new in Microsoft Defender for Cloud Apps](/defender-cloud-apps/release-notes)
+- [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+
+## April 2024
+
+- **Enhanced clarity in submissions results**: Admins and security operators now see enhanced results within submissions across email, Microsoft Teams messages, email attachments, URLs, and user-reported messages. These updates aim to eliminate any ambiguity associated with the current submission results. The results are refined to ensure clarity, consistency, and conciseness, making the submission results more actionable for you. [Learn more](submissions-admin.md).
 
 ## March 2024
 
@@ -47,7 +50,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## February 2024
 
-- **Hunting and responding to QR code-based attacks**: Security teams will now be able to see the URLs extracted from QR codes with "QR code" as URL source in Email Entity URL tab, and "QRCode" in "UrlLocation" column of EmailUrlInfo table in Advanced Hunting. Users can also filter for emails having URLs embedded within QR codes using "URL Source" filter in Threat Explorer which now supports "QR code" option.
+- **Hunting and responding to QR code-based attacks**: Security teams are now able to see the URLs extracted from QR codes with **QR code** as URL source on the **URL** tab of the [Email entity page](mdo-email-entity-page.md), and **QRCode** in the **UrlLocation** column of **EmailUrlInfo** table in [Advanced Hunting](/defender/advanced-hunting-overview.md). You can also filter for email with URLs embedded within QR codes using the **URL Source** filter value **QR code** in the **All email**, **Malware**, and **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md).
 
 ## January 2024
 
@@ -65,7 +68,7 @@ For more information on what's new with other Microsoft Defender security produc
 ## November 2023
 
 - **Enhanced Action experience from Email Entity/ Summary Panel**: As part of the change security admins can take multiple actions as part of FP/FN flows. [Learn more](mdo-email-entity-page.md).
-- The [Tenant Allow/Block List](tenant-allow-block-list.md) supports more entries in each category (Domains & email addresses, Files, and URLs:
+- The [Tenant Allow/Block List](tenant-allow-block-list-about.md) supports more entries in each category (Domains & email addresses, Files, and URLs:
   - Microsoft Defender for Office 365 Plan 2 supports 10,000 block entries and 5,000 allow entries (via admin submissions) in each category.
   - Microsoft Defender for Office 365 Plan 1 supports 1,000 block entries and 1,000 allow entries (via admin submissions) in each category.
   - Exchange Online Protection remains at 500 block entries and 500 allow entries (via admin submissions) in each category.
@@ -119,7 +122,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## December 2022
 
-- The new Microsoft Defender XDR role-based access control (RBAC) model, with support for Microsoft Defender for Office, is now available in public preview. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](../defender/manage-rbac.md).
+- The new Microsoft Defender XDR role-based access control (RBAC) model, with support for Microsoft Defender for Office, is now available in public preview. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender/manage-rbac).
 
 - [Use the built-in Report button in Outlook on the web](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook-on-the-web): Use the built-in Report button in Outlook on the web to report messages as phish, junk, and not junk.
 
@@ -164,7 +167,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## July 2022
 
-- [Introducing actions into the email entity page](mdo-email-entity-page.md): Admins can take preventative, remediation, and submission actions from the email entity page.
+- [Introducing actions into the Email entity page](mdo-email-entity-page.md): Admins can take preventative, remediation, and submission actions from the Email entity page.
 
 ## June 2022
 
@@ -174,7 +177,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - [Submit user reported messages to Microsoft for analysis](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis): Configure a reporting mailbox to intercept user-reported messages without sending the messages to Microsoft for analysis.
 
-- View the associated alerts for [user reported messages](submissions-admin.md#actions-for-user-reported-messages-in-defender-for-office-365-plan-2) and [admin submissions](submissions-admin.md#actions-for-admin-submissions-in-defender-for-office-365-plan-2): View the corresponding alert for each user reported phish message and admin email submission.
+- View the associated alerts for [user reported messages](submissions-admin.md#actions-for-user-reported-messages-in-defender-for-office-365) and [admin submissions](submissions-admin.md#actions-for-admin-submissions-in-defender-for-office-365): View the corresponding alert for each user reported phishing message and admin email submission.
 
 - [Configurable impersonation protection custom users and domains and increased scope within Preset policies](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/configurable-impersonation-protection-and-scope-for-preset/ba-p/3294459):
   - (Choose to) Apply Preset Strict/Standard policies to entire organization and avoid the hassle of selecting specific recipient users, groups, or domains, thereby securing all recipient users of your organization.
@@ -231,7 +234,7 @@ For more information on what's new with other Microsoft Defender security produc
   - Form blocked due to potential phishing attempt
   - Form flagged and confirmed as phishing
   - [New alert policies for ZAP](/purview/new-defender-alert-policies)
-- Microsoft Defender for Office 365 alerts is now integrated into Microsoft Defender XDR - [Microsoft Defender XDR Unified Alerts Queue and Unified Alerts Queue](../defender/investigate-alerts.md)
+- Microsoft Defender for Office 365 alerts is now integrated into Microsoft Defender XDR - [Microsoft Defender XDR Unified Alerts Queue and Unified Alerts Queue](/defender/investigate-alerts)
 - [User Tags](user-tags-about.md) are now integrated into Microsoft Defender for Office 365 alerting experiences, including: the alerts queue and details in Office 365 Security & Compliance, and scoping custom alert policies to user tags to create targeted alert policies.
   - Tags are also available in the unified alerts queue in the Microsoft Defender portal (Microsoft Defender for Office 365 Plan 2)
 

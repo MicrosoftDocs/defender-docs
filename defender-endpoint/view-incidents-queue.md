@@ -85,7 +85,7 @@ For example: *Multi-stage incident on multiple endpoints reported by multiple so
 
 
 ## See also
-- [Incidents queue](/microsoft-365/security/defender-endpoint/view-incidents-queue)
+- [Incidents queue](/microsoft-365/security/defender-endpoint/view-incidents-queue.md)
 - [Manage incidents](manage-incidents.md)
 - [Investigate incidents](investigate-incidents.md)
 

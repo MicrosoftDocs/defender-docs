@@ -28,7 +28,7 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
+- [Microsoft Defender for Business](/defender-business/mdb-overview)
 - [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)
 
 **Platforms**
@@ -43,7 +43,7 @@ search.appverid: met150
 
 ## Requirements for managing tamper protection in the Microsoft Defender portal
 
-- You must have appropriate permissions assigned through roles, such as Global Administrator or Security Administrator. (See [Microsoft Defender XDR role-based access control (RBAC)](../defender/manage-rbac.md).)
+- You must have appropriate permissions assigned through roles, such as Global Administrator or Security Administrator. (See [Microsoft Defender XDR role-based access control (RBAC)](/defender/manage-rbac).)
 
 - Devices must be running certain versions of Windows or macOS. (See [On what devices can tamper protection be enabled](prevent-changes-to-security-settings-with-tamper-protection.md#on-what-devices-can-tamper-protection-be-enabled)?)
 
@@ -60,7 +60,7 @@ search.appverid: met150
 
 ## Turn tamper protection on (or off) in the Microsoft Defender portal
 
-:::image type="content" source="../media/mde-turn-tamperprotectionon.png" alt-text="Turn tamper protection turned on in the Microsoft Defender portal" lightbox="../media/mde-turn-tamperprotectionon.png":::
+:::image type="content" source="/defender/media/mde-turn-tamperprotectionon.png" alt-text="Turn tamper protection turned on in the Microsoft Defender portal" lightbox="/defender/media/mde-turn-tamperprotectionon.png":::
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 

@@ -18,7 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 02/08/2023
+ms.date: 02/08/2024
 ---
 
 # Overview of Microsoft Defender XDR APIs
@@ -58,7 +58,7 @@ Watch this short video to learn how you can use Microsoft Defender XDR to automa
 | **Understand how to access the APIs** |
 |-|
 | [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview) |
-| [Learn about API quotas and licensing](api-terms.md) |
+| [Learn about API quotas and licensing](/legal/microsoft-365/api-terms) |
 | [Access the Microsoft Defender XDR APIs](api-access.md) |
 | **Build apps** |
 | [Create a 'Hello world' app](api-hello-world.md) |

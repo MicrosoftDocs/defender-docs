@@ -1,14 +1,9 @@
 ---
 title: UrlClickEvents table in the advanced hunting schema
 description: Learn how to hunt for phishing campaigns and suspicious clicks using the UrlClickEvents table in the advanced hunting schema.
-keywords: advanced hunting, threat hunting, cyber threat hunting, Microsoft Defender XDR, microsoft 365, m365, search, query, telemetry, schema reference, kusto, table, column, data type, description, UrlClickEvents, SafeLinks, phishing, malware, malicious clicks, outlook, teams, email, office365
-search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords: 
   - NOCSH
 ms.author: maccruz
@@ -32,7 +27,7 @@ ms.date: 01/16/2024
 - Microsoft Defender XDR
 
 
-The `UrlClickEvents` table in the advanced hunting schema contains information about [Safe Links](../defender-office-365/safe-links-about.md) clicks from email messages, Microsoft Teams, and Office 365 apps in supported desktop, mobile, and web apps.
+The `UrlClickEvents` table in the advanced hunting schema contains information about [Safe Links](/defender-office-365/safe-links-about) clicks from email messages, Microsoft Teams, and Office 365 apps in supported desktop, mobile, and web apps.
 
 > [!IMPORTANT]
 > This table is currently in public preview. Some information relates to a prereleased feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -68,6 +63,6 @@ UrlClickEvents
 ## Related articles
 - [Supported Microsoft Defender XDR streaming event types in event streaming API](supported-event-types.md)
 - [Proactively hunt for threats](advanced-hunting-overview.md)
-- [Safe Links in Microsoft Defender for Office 365](../defender-office-365/safe-links-about.md)
+- [Safe Links in Microsoft Defender for Office 365](/defender-office-365/safe-links-about)
 - [Take action on advanced hunting query results](advanced-hunting-take-action.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

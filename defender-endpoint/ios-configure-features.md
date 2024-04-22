@@ -133,7 +133,7 @@ Follow the below steps for setting up MAM config for unenrolled devices for Netw
 
 2. Provide a name and description to uniquely identify the policy. Then select **Select Public apps**, and choose **Microsoft Defender for Platform iOS/iPadOS**.
 
-   :::image type="content" source="images/nameiosconfig.png" alt-text="Name the configuration." lightbox="images/nameiosconfig.png":::
+   :::image type="content" source="media/nameiosconfig.png" alt-text="Name the configuration." lightbox="media/nameiosconfig.png":::
 
 3. On the Settings page, add **DefenderNetworkProtectionEnable** as the key and the value as `true` to enable network protection. (Network protection is disabled by default.)
 
@@ -299,7 +299,7 @@ Defender for Endpoint on iOS enables admins to configure custom indicators on iO
 
 ## Configure vulnerability assessment of apps
 
-Reducing cyber risk requires comprehensive risk-based vulnerability management to identify, assess, remediate, and track all your biggest vulnerabilities across your most critical assets, all in a single solution. Visit this [page](../defender-vulnerability-management/../defender-vulnerability-management/../defender-vulnerability-management/next-gen-threat-and-vuln-mgt.md) to learn more about Microsoft Defender Vulnerability Management in Microsoft Defender for Endpoint.
+Reducing cyber risk requires comprehensive risk-based vulnerability management to identify, assess, remediate, and track all your biggest vulnerabilities across your most critical assets, all in a single solution. Visit this [page](/defender-vulnerability-management/defender-vulnerability-management) to learn more about Microsoft Defender Vulnerability Management in Microsoft Defender for Endpoint.
 
 Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. Vulnerability assessment of iOS versions is available for both enrolled (MDM) and unenrolled (MAM) devices. Vulnerability assessment of apps is only for enrolled (MDM) devices. Admins can use the following steps to configure the vulnerability assessment of apps.
 
@@ -309,7 +309,7 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
 
 1. To enable the feature in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint Security** \> **Microsoft Defender for Endpoint** \> **Enable App sync for iOS/iPadOS devices**.
 
-     :::image type="content" source="images/tvm-app-sync-toggle.png" alt-text="App sync toggleSup" lightbox="images/tvm-app-sync-toggle.png":::
+     :::image type="content" source="media/tvm-app-sync-toggle.png" alt-text="App sync toggleSup" lightbox="media/tvm-app-sync-toggle.png":::
 
 > [!NOTE]
 > To get the list of all the apps including unmanaged apps, the admin has to enable **Send full application inventory data on personally owned iOS/iPadOS devices** in the Intune Admin Portal for the supervised devices marked as "Personal".
@@ -319,11 +319,11 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
 
 1. To enable the feature in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint Security** \> **Microsoft Defender for Endpoint** \> **Enable App sync for iOS/iPadOS devices**.
 
-   :::image type="content" source="images/tvm-app-sync-toggle.png" alt-text="App sync toggle" lightbox="images/tvm-app-sync-toggle.png":::
+   :::image type="content" source="media/tvm-app-sync-toggle.png" alt-text="App sync toggle" lightbox="media/tvm-app-sync-toggle.png":::
 
 1. To get the list of all the apps including unmanaged apps, enable the toggle **Send full application inventory data on personally owned iOS/iPadOS devices**.
 
-    :::image type="content" source="images/tvm-full-app-data.png" alt-text="Full App Data" lightbox="images/tvm-full-app-data.png":::
+    :::image type="content" source="media/tvm-full-app-data.png" alt-text="Full App Data" lightbox="media/tvm-full-app-data.png":::
 
 1. Use the following steps to configure the privacy setting.
     - Go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
@@ -340,7 +340,7 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
     - Privacy approval screen will come only for unsupervised devices.
     - Only if end-user approves the privacy, the app information is sent to the Defender for Endpoint console.
 
-        :::image type="content" source="images/tvm-user-privacy2.png" alt-text="Screenshot of the end user privacy screen." lightbox="images/tvm-user-privacy2.png":::
+        :::image type="content" source="media/tvm-user-privacy2.png" alt-text="Screenshot of the end user privacy screen." lightbox="media/tvm-user-privacy2.png":::
 
 Once the client versions are deployed to target iOS devices, the processing will start. Vulnerabilities found on those devices will start showing up in the Defender Vulnerability Management dashboard. The processing might take few hours (max 24 hours) to complete. Especially for the entire list of apps to show up in the software inventory.
 
@@ -410,7 +410,7 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 1. Click Next and assign this policy to targeted devices/users.
 
 > [!NOTE] 
-> The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take upto 18 hours for tags to reflect in the portal.
+> The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
 
 ## Configure option to send in-app feedback
 

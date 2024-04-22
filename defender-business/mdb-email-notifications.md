@@ -59,14 +59,14 @@ To view or edit email notification settings for your company, follow these steps
 
 3. Review the information on the **Alerts** and **Vulnerabilities** tabs.
 
-   - If you don't see any items listed on the **Alerts** tab, you can create a rule for people to be notified when alerts are generated. To get help with this task, see [Create rules for alert notifications](../defender-endpoint/configure-email-notifications.md).
+   - If you don't see any items listed on the **Alerts** tab, you can create a rule for people to be notified when alerts are generated. To get help with this task, see [Create rules for alert notifications](/defender-endpoint/configure-email-notifications).
 
-   - If you don't see any items listed on the **Vulnerabilities** tab, you can create a rule for people to be notified whenever a new vulnerability is discovered. To get help with this task, see [Create rules for vulnerability events](../defender-endpoint/configure-vulnerability-email-notifications.md).
+   - If you don't see any items listed on the **Vulnerabilities** tab, you can create a rule for people to be notified whenever a new vulnerability is discovered. To get help with this task, see [Create rules for vulnerability events](/defender-endpoint/configure-vulnerability-email-notifications).
 
    - If you do have rules created, select a rule to edit it. You can also delete a rule. 
 
 > [!IMPORTANT]
-> When you set up email notifications in Defender for Business, you must assign the notification rules to specific users. Defender for Business doesn't use [role-based access control like Defender for Endpoint does](../defender-endpoint/rbac.md). Also, email notifications cannot be applied to device groups in Defender for Business. 
+> When you set up email notifications in Defender for Business, you must assign the notification rules to specific users. Defender for Business doesn't use [role-based access control like Defender for Endpoint does](/defender-endpoint/rbac). Also, email notifications cannot be applied to device groups in Defender for Business. 
 
 ## Next steps
 

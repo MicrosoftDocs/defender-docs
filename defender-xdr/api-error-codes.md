@@ -18,7 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 02/08/2023
+ms.date: 02/08/2024
 ---
 
 # Common Microsoft Defender XDR REST API error codes
@@ -100,6 +100,6 @@ Each error response contains a unique ID parameter for tracking. The property na
 - [Microsoft Defender XDR APIs overview](api-overview.md)
 - [Supported Microsoft Defender XDR APIs](api-supported.md)
 - [Access the Microsoft Defender XDR APIs](api-access.md)
-- [Learn about API limits and licensing](api-terms.md)
+- [Learn about API limits and licensing](/legal/microsoft-365/api-terms)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

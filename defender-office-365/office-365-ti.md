@@ -19,8 +19,7 @@ ms.collection:
 ms.custom:
   - seo-marvel-apr2020
 description: Learn about threat investigation and response capabilities in Microsoft Defender for Office 365 Plan.
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -34,7 +33,7 @@ Threat investigation and response capabilities in [Microsoft Defender for Office
 - Making it easy to identify, monitor, and understand cyberattacks.
 - Helping to quickly address threats in Exchange Online, SharePoint Online, OneDrive for Business and Microsoft Teams.
 - Providing insights and knowledge to help security operations prevent cyberattacks against their organization.
-- Employing [automated investigation and response in Office 365](air-about-office.md) for critical email-based threats.
+- Employing [automated investigation and response in Office 365](air-about.md) for critical email-based threats.
 
 Threat investigation and response capabilities provide insights into threats and related response actions that are available in the Microsoft Defender portal. These insights can help your organization's security team protect users from email- or file-based attacks. The capabilities help monitor signals and gather data from multiple sources, such as user activity, authentication, email, compromised PCs, and security incidents. Business decision makers and your security operations team can use this information to understand and respond to threats against your organization and protect your intellectual property.
 
@@ -45,13 +44,13 @@ Threat investigation and response capabilities in the Microsoft Defender portal 
 - [Explorer](#explorer)
 - [Incidents](#incidents)
 - [Attack simulation training](attack-simulation-training-simulations.md)
-- [Automated investigation and response](air-about-office.md)
+- [Automated investigation and response](air-about.md)
 
 ### Explorer
 
 Use [Explorer (and real-time detections)](threat-explorer-real-time-detections-about.md) to analyze threats, see the volume of attacks over time, and analyze data by threat families, attacker infrastructure, and more. Explorer (also referred to as Threat Explorer) is the starting place for any security analyst's investigation workflow.
 
-:::image type="content" source="../../media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png" alt-text="The Threat explorer page" lightbox="../../media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png":::
+:::image type="content" source="/defender/media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png" alt-text="The Threat explorer page" lightbox="/defender/media/7a7cecee-17f0-4134-bcb8-7cee3f3c3890.png":::
 
 To view and use this report in the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Explorer**. Or, to go directly to the **Explorer** page, use <https://security.microsoft.com/threatexplorer>.
 
@@ -65,7 +64,7 @@ Data from Microsoft Defender for Office 365 is incorporated into Microsoft Defen
 
 Use the Incidents list (this is also called Investigations) to see a list of in flight security incidents. Incidents are used to track threats such as suspicious email messages, and to conduct further investigation and remediation.
 
-:::image type="content" source="../../media/acadd4c7-d2de-4146-aeb8-90cfad805a9c.png" alt-text="The list of current Threat Incidents in Office 365" lightbox="../../media/acadd4c7-d2de-4146-aeb8-90cfad805a9c.png":::
+:::image type="content" source="/defender/media/acadd4c7-d2de-4146-aeb8-90cfad805a9c.png" alt-text="The list of current Threat Incidents in Office 365" lightbox="/defender/media/acadd4c7-d2de-4146-aeb8-90cfad805a9c.png":::
 
 To view the list of current incidents for your organization in the Microsoft Defender portal at <https://security.microsoft.com>, go to **Incidents & alerts** \> **Incidents**. Or, to go directly to the **Incidents** page, use <https://security.microsoft.com/incidents>.
 
@@ -77,13 +76,13 @@ To view and use this feature in the Microsoft Defender portal at <https://securi
 
 ### Automated investigation and response
 
-Use automated investigation and response (AIR) capabilities to save time and effort correlating content, devices, and people at risk from threats in your organization. AIR processes can begin whenever certain alerts are triggered, or when started by your security operations team. To learn more, see [automated investigation and response in Office 365](air-about-office.md).
+Use automated investigation and response (AIR) capabilities to save time and effort correlating content, devices, and people at risk from threats in your organization. AIR processes can begin whenever certain alerts are triggered, or when started by your security operations team. To learn more, see [automated investigation and response in Office 365](air-examples.md).
 
 ## Threat intelligence widgets
 
 As part of the Microsoft Defender for Office 365 Plan 2 offering, security analysts can review details about a known threat. This is useful to determine whether there are additional preventative measures/steps that can be taken to keep users safe.
 
-:::image type="content" source="../../media/11e7d40d-139b-4c56-8d52-c091c8654151.png" alt-text="The Security trends pane showing information about recent threats" lightbox="../../media/11e7d40d-139b-4c56-8d52-c091c8654151.png":::
+:::image type="content" source="/defender/media/11e7d40d-139b-4c56-8d52-c091c8654151.png" alt-text="The Security trends pane showing information about recent threats" lightbox="/defender/media/11e7d40d-139b-4c56-8d52-c091c8654151.png":::
 
 ## How do we get these capabilities?
 

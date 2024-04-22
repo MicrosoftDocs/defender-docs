@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.date: 03/25/2024
 manager: deniseb
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier1
 ms.topic: conceptual
@@ -28,7 +28,6 @@ ms.topic: conceptual
 - [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-
 The following features were in preview or generally available (GA) in Microsoft Defender for Endpoint prior to the calendar year 2023.
 
 For more information on preview features, see [Preview features](preview.md).
@@ -38,10 +37,10 @@ For more information on what's new with Microsoft Defender for Endpoint on Windo
 
 For more information on what's new with other Microsoft Defender security products, see:
 
-- [What's new in Microsoft Defender XDR](../defender/whats-new.md)
-- [What's new in Microsoft Defender for Office 365](../defender-office-365/defender-for-office-365-whats-new.md)
+- [What's new in Microsoft Defender XDR](/defender/whats-new)
+- [What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
-- [What's new in Microsoft Defender for Cloud Apps](/defender-cloud-apps/release-notes)
+- [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For more information on Microsoft Defender for Endpoint on specific operating systems and on other operating systems:
 
@@ -130,24 +129,23 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 ## August 2021
 
 - [Microsoft Defender for Endpoint Plan 1 ](defender-endpoint-plan-1.md) (preview). Defender for Endpoint Plan 1 (preview) is an endpoint protection solution that includes next-generation protection, attack surface reduction, centralized management and reporting, and APIs. Defender for Endpoint Plan 1 (preview) is a new offering for customers who:
+  - Want to try our endpoint protection capabilities
+  - Have Microsoft 365 E3, and
+  - Don't yet have Microsoft 365 E5
 
-   - Want to try our endpoint protection capabilities
-   - Have Microsoft 365 E3, and
-   - Don't yet have Microsoft 365 E5
+  For more information on Defender for Endpoint Plan 1 (preview), see [Microsoft Defender for Endpoint Plan 1 (preview)](defender-endpoint-plan-1.md).
 
-   For more information on Defender for Endpoint Plan 1 (preview), see [Microsoft Defender for Endpoint Plan 1 (preview)](defender-endpoint-plan-1.md). 
-
-   Existing [Defender for Endpoint](microsoft-defender-endpoint.md) capabilities will be known as Defender for Endpoint Plan 2.
+  Existing [Defender for Endpoint](microsoft-defender-endpoint.md) capabilities will be known as Defender for Endpoint Plan 2.
 
 - (Preview) [Web Content Filtering](web-content-filtering.md)<br>  Web content filtering is part of web protection capabilities in Microsoft Defender for Endpoint. It enables your organization to track and regulate access to websites based on their content categories. Many of these websites, while not malicious, might be problematic because of compliance regulations, bandwidth usage, or other concerns.
 
 ## June 2021
 
-- [Delta export software vulnerabilities assessment](get-assessment-methods-properties.md#31-methods) API <br> An addition to the [Export assessments of vulnerabilities and secure configurations](get-assessment-methods-properties.md) API collection. <br> Unlike the full software vulnerabilities assessment (JSON response) - which is used to obtain an entire snapshot of the software vulnerabilities assessment of your organization by device - the delta export API call is used to fetch only the changes that have happened between a selected date and the current date (the "delta" API call). Instead of getting a full export with a large amount of data every time, you'll only get specific information on new, fixed, and updated vulnerabilities. Delta export API call can also be used to calculate different KPIs such as "how many vulnerabilities were fixed" or "how many new vulnerabilities were added to an organization."
+- [Delta export software vulnerabilities assessment](api/get-assessment-methods-properties.md#31-methods) API <br> An addition to the [Export assessments of vulnerabilities and secure configurations](api/get-assessment-methods-properties.md) API collection. <br> Unlike the full software vulnerabilities assessment (JSON response) - which is used to obtain an entire snapshot of the software vulnerabilities assessment of your organization by device - the delta export API call is used to fetch only the changes that have happened between a selected date and the current date (the "delta" API call). Instead of getting a full export with a large amount of data every time, you'll only get specific information on new, fixed, and updated vulnerabilities. Delta export API call can also be used to calculate different KPIs such as "how many vulnerabilities were fixed" or "how many new vulnerabilities were added to an organization."
 
-- [Export assessments of vulnerabilities and secure configurations](get-assessment-methods-properties.md) API <br> Adds a collection of APIs that pull threat and vulnerability management data on a per-device basis. There are different API calls to get different types of data: secure configuration assessment, software inventory assessment, and software vulnerabilities assessment. Each API call contains the requisite data for devices in your organization.
+- [Export assessments of vulnerabilities and secure configurations](api/get-assessment-methods-properties.md) API <br> Adds a collection of APIs that pull threat and vulnerability management data on a per-device basis. There are different API calls to get different types of data: secure configuration assessment, software inventory assessment, and software vulnerabilities assessment. Each API call contains the requisite data for devices in your organization.
 
-- [Remediation activity](get-remediation-methods-properties.md) API <br>  Adds a collection of APIs with responses that contain threat and vulnerability management remediation activities that have been created in your tenant. Response information types include one remediation activity by ID, all remediation activities, and exposed devices of one remediation activity.
+- [Remediation activity](api/get-remediation-methods-properties.md) API <br>  Adds a collection of APIs with responses that contain threat and vulnerability management remediation activities that have been created in your tenant. Response information types include one remediation activity by ID, all remediation activities, and exposed devices of one remediation activity.
 
 - [Device discovery](device-discovery.md) <br> Helps you find unmanaged devices connected to your corporate network without the need for extra appliances or cumbersome process changes. Using onboarded devices, you can find unmanaged devices in your network and assess vulnerabilities and risks. You can then onboard discovered devices to reduce risks associated with having unmanaged endpoints in your network.
 
@@ -160,7 +158,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Tunnel VPN integration](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN capabilities are now integrated with Microsoft Defender for Endpoint app for Android. This unification enables organizations to offer a simplified end-user experience with one security app – offering both mobile threat defense and the ability to access on-prem resources from their mobile device – while security and IT teams are able to maintain the same admin experiences they are familiar with.
 
-- [Jailbreak detection on iOS](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios) <br> Jailbreak detection capability in Microsoft Defender for Endpoint on iOS is now generally available. This adds to the phishing protection that already exists. For more information, see [Setup Conditional Access Policy based on device risk signals](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios).
+- [Jailbreak detection on iOS](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios) <br> Jailbreak detection capability in Microsoft Defender for Endpoint on iOS is now generally available. This adds to the phishing protection that already exists. For more information, see [Setup Conditional Access Policy based on device risk signals](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios).
 
 ## March 2021
 
@@ -178,7 +176,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md) <br> Microsoft Defender for Endpoint now adds support for Android. In addition to the provisions for you to install, configure, and use Microsoft Defender for Endpoint for Android (introducted in the previous sprint in August 2020), the provision to "update" Microsoft Defender for Endpoint for Android has been introduced in this sprint.
 
-- [Threat and vulnerability management macOS support](../defender-vulnerability-management/tvm-supported-os.md)<br> Threat and vulnerability management for macOS is now in public preview, and will continuously detect vulnerabilities on your macOS devices to help you prioritize remediation by focusing on risk. For more information, see [Microsoft Tech Community blog post](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-for-endpoint-adds-depth-and-breadth-to-threat/ba-p/1695824).
+- [Threat and vulnerability management macOS support](/defender-vulnerability-management/tvm-supported-os)<br> Threat and vulnerability management for macOS is now in public preview, and will continuously detect vulnerabilities on your macOS devices to help you prioritize remediation by focusing on risk. For more information, see [Microsoft Tech Community blog post](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-for-endpoint-adds-depth-and-breadth-to-threat/ba-p/1695824).
 
 ## August 2020
 
@@ -201,22 +199,22 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 ## November-December 2019
 
 - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md) <BR> Microsoft Defender for Endpoint for Mac brings the next-generation protection to Mac devices. Core components of the unified endpoint security platform will now be available for Mac devices, including [endpoint detection and response](overview-endpoint-detection-response.md).
- 
-- [Threat & Vulnerability Management application and application version end-of-life information](../defender-vulnerability-management/../defender-vulnerability-management/tvm-security-recommendation.md) <BR>Applications and application versions which have reached their end of life (EOL) are tagged or labeled as such; so, you are aware that they will no longer be supported, and can take action to either uninstall or replace. Doing so will help lessen the risks related to various vulnerability exposures due to unpatched applications.
 
-- [Threat & Vulnerability Management Advanced Hunting Schemas](../defender/advanced-hunting-schema-tables.md) <BR>Use the Threat & Vulnerability Management tables in the Advanced hunting schema to query about software inventory, vulnerability knowledgebase, security configuration assessment, and security configuration knowledgebase.
- 
- - [Threat & Vulnerability Management role-based access controls](user-roles.md) <BR>Use the new permissions to allow maximum flexibility to create SecOps-oriented roles, Threat & Vulnerability Management-oriented roles, or hybrid roles so that only authorized users are accessing specific data to do their task. You can also achieve even further granularity by specifying whether a Threat & Vulnerability Management role can only view vulnerability-related data, or can create and manage remediation and exceptions.
+- [Threat & Vulnerability Management application and application version end-of-life information](/defender-vulnerability-management/tvm-security-recommendation) <BR>Applications and application versions which have reached their end of life (EOL) are tagged or labeled as such; so, you are aware that they will no longer be supported, and can take action to either uninstall or replace. Doing so will help lessen the risks related to various vulnerability exposures due to unpatched applications.
+
+- [Threat & Vulnerability Management Advanced Hunting Schemas](/defender/advanced-hunting-schema-tables) <BR>Use the Threat & Vulnerability Management tables in the Advanced hunting schema to query about software inventory, vulnerability knowledgebase, security configuration assessment, and security configuration knowledgebase.
+
+- [Threat & Vulnerability Management role-based access controls](user-roles.md) <BR>Use the new permissions to allow maximum flexibility to create SecOps-oriented roles, Threat & Vulnerability Management-oriented roles, or hybrid roles so that only authorized users are accessing specific data to do their task. You can also achieve even further granularity by specifying whether a Threat & Vulnerability Management role can only view vulnerability-related data, or can create and manage remediation and exceptions.
 
 ## October 2019
 
 - [Indicators for IP addresses, URLs/Domains](manage-indicators.md) <BR> You can now allow or block URLs/domains using your own threat intelligence.
 
-- [Microsoft Threat Experts - Experts on Demand](microsoft-threat-experts.md) <BR> You now have the option to consult with Microsoft Threat Experts from several places in the portal to help you in the context of your investigation. 
+- [Microsoft Threat Experts - Experts on Demand](/defender/microsoft-threat-experts) <BR> You now have the option to consult with Microsoft Threat Experts from several places in the portal to help you in the context of your investigation.
 
-- [Connected Azure AD applications](connected-applications.md)<br> The **Connected applications** page provides information about the Azure AD applications connected to Microsoft Defender for Endpoint in your organization. 
+- [Connected Azure AD applications](connected-applications.md)<br> The **Connected applications** page provides information about the Azure AD applications connected to Microsoft Defender for Endpoint in your organization.
 
-- [API Explorer](api-explorer.md)<br> The API explorer makes it easy to construct and execute API queries, and to test and send requests for any available Microsoft Defender for Endpoint API endpoint.
+- [API Explorer](api/api-explorer.md)<br> The API explorer makes it easy to construct and execute API queries, and to test and send requests for any available Microsoft Defender for Endpoint API endpoint.
 
 ## September 2019
 
@@ -231,15 +229,15 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## June 2019
 
-- [Threat & Vulnerability Management](../defender-vulnerability-management/../defender-vulnerability-management/../defender-vulnerability-management/next-gen-threat-and-vuln-mgt.md) <BR> A new built-in capability that uses a risk-based approach to the discovery, prioritization, and remediation of endpoint vulnerabilities and misconfigurations.
-  
-- [Device health and compliance report](machine-reports.md)  The device health and compliance report provides high-level information about the devices in your organization.
+- [Threat & Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) <BR> A new built-in capability that uses a risk-based approach to the discovery, prioritization, and remediation of endpoint vulnerabilities and misconfigurations.
+
+- [Device health and compliance report](device-health-reports.md)  The device health and compliance report provides high-level information about the devices in your organization.
 
 ## May 2019
 
 - [Threat protection reports](threat-protection-reports.md)<BR>The threat protection report provides high-level information about alerts generated in your organization.
 
-- [Microsoft Threat Experts](endpoint-attack-notifications.md)<BR> Microsoft Threat Experts is the new managed threat hunting service in Microsoft Defender for Endpoint that provides proactive hunting, prioritization, and additional context and insights that further empower security operations centers (SOCs) to identify and respond to threats quickly and accurately. It provides an additional layer of expertise and optics that Microsoft customers can utilize to augment security operation capabilities as part of Microsoft 365.  
+- [Microsoft Threat Experts](endpoint-attack-notifications.md)<BR> Microsoft Threat Experts is the new managed threat hunting service in Microsoft Defender for Endpoint that provides proactive hunting, prioritization, and additional context and insights that further empower security operations centers (SOCs) to identify and respond to threats quickly and accurately. It provides an additional layer of expertise and optics that Microsoft customers can utilize to augment security operation capabilities as part of Microsoft 365.
 
 - [Indicators](api/ti-indicator.md) <BR> APIs for indicators are now generally available.
 
@@ -249,7 +247,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Threat Experts Targeted Attack Notification capability](endpoint-attack-notifications.md) <BR> Microsoft Threat Experts' Targeted Attack Notification alerts are tailored for organizations to provide as much information as can be quickly delivered, including the timeline, scope of breach, and the methods of intrusion, thus bringing attention to critical threats in their network.
 
-- [Microsoft Defender for Endpoint API](api/apis-intro.md) <BR> Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will enable you to automate workflows and innovate based on Microsoft Defender for Endpoint capabilities.
+- [Microsoft Defender for Endpoint API](/defender-vulnerability-management/tvm-supported-os) <BR> Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will enable you to automate workflows and innovate based on Microsoft Defender for Endpoint capabilities.
 
 ## February 2019
 
@@ -263,7 +261,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Controlled folder access](enable-controlled-folders.md)<BR> Controlled folder access is now supported on Windows Server 2019.
 
-- [Custom detection](../defender/custom-detections-overview.md)<BR>With custom detections, you can create custom queries to monitor events for any kind of behavior such as suspicious or emerging threats. This can be done by leveraging the power of advanced hunting through the creation of custom detection rules.
+- [Custom detection](/defender/custom-detections-overview)<BR>With custom detections, you can create custom queries to monitor events for any kind of behavior such as suspicious or emerging threats. This can be done by leveraging the power of advanced hunting through the creation of custom detection rules.
 
 - [Integration with Azure Security Center](configure-server-endpoints.md)<BR> Microsoft Defender for Endpoint integrates with Azure Security Center to provide a comprehensive server protection solution. With this integration, Azure Security Center can leverage the power of Microsoft Defender for Endpoint to provide improved threat detection for Windows Servers.
 
@@ -286,15 +284,15 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 
 - Antimalware Scan Interface (AMSI) was extended to cover Office VBA macros as well. [Office VBA + AMSI: Parting the veil on malicious macros](https://cloudblogs.microsoft.com/microsoftsecure/2018/09/12/office-vba-amsi-parting-the-veil-on-malicious-macros/).
 
-    - Microsoft Defender Antivirus, new in Windows 10 version 1809, can now [run within a sandbox](https://www.microsoft.com/security/blog/2018/10/26/windows-defender-antivirus-can-now-run-in-a-sandbox) (preview), increasing its security.
+  - Microsoft Defender Antivirus, new in Windows 10 version 1809, can now [run within a sandbox](https://www.microsoft.com/security/blog/2018/10/26/windows-defender-antivirus-can-now-run-in-a-sandbox) (preview), increasing its security.
 
-    - [Configure CPU priority settings](configure-advanced-scan-types-microsoft-defender-antivirus.md) for Microsoft Defender Antivirus scans.
+  - [Configure CPU priority settings](configure-advanced-scan-types-microsoft-defender-antivirus.md) for Microsoft Defender Antivirus scans.
 
 ## March 2018
 
-- [Advanced Hunting](../defender/advanced-hunting-query-language.md)<BR>Query data using advanced hunting in Microsoft Defender for Endpoint.
+- [Advanced Hunting](/defender/advanced-hunting-query-language)<BR>Query data using advanced hunting in Microsoft Defender for Endpoint.
 
-- [Attack surface reduction rules](attack-surface-reduction.md)<BR>The newly introduced attack surface reduction rules are: 
+- [Attack surface reduction rules](attack-surface-reduction.md)<BR>The newly introduced attack surface reduction rules are:
 
   - Use advanced protection against ransomware
 

@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 9/19/2023
+ms.date: 4/8/2024
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -26,8 +26,7 @@ search.appverid:
   - ZWD160
 ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
 description: Learn about Safe Links protection in Defender for Office 365 to protect an organization from phishing and other attacks that use malicious URLs. Discover Teams Safe Links, and see graphics of Safe Links messages.
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -38,7 +37,7 @@ appliesto:
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 > [!IMPORTANT]
-> This article is intended for business customers who have [Microsoft Defender for Office 365](mdo-about.md). If you're using .com, Microsoft 365 Family, or Microsoft 365 Personal, and you're looking for information about Safelinks in , see [Advanced .com security](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
+> This article is intended for business customers who have [Microsoft Defender for Office 365](mdo-about.md). If you're using Outlook.com, Microsoft 365 Family, or Microsoft 365 Personal, and you're looking for information about Safelinks in Outlook.com, see [Advanced Outlook.com security for Microsoft 365 subscribers](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
 In organizations with Microsoft Defender for Office 365, Safe Links scanning protects your organization from malicious links that are used in phishing and other attacks. Specifically, Safe Links provides URL scanning and rewriting of inbound email messages during mail flow, and time-of-click verification of URLs and links in email messages, Teams, and supported Office 365 apps. Safe Links scanning occurs in addition to regular [anti-spam](anti-spam-protection-about.md) and [anti-malware](anti-malware-protection-about.md) protection.
 
@@ -83,23 +82,27 @@ The following table describes scenarios for Safe Links in Microsoft 365 and Offi
 
 ## Recipient filters in Safe Links policies
 
-You need to specify the recipient conditions and exceptions that determine who the policy applies to. You can use these properties for conditions and exceptions:
+Recipient filters use conditions and exceptions to identify the internal recipients that the policy applies to. At least one condition is required. You can use the following recipient filters for conditions and exceptions:
 
-- **Users**
-- **Groups**
-- **Domains**
+- **Users**: One or more mailboxes, mail users, or mail contacts in the organization.
+- **Groups**:
+  - Members of the specified distribution groups or mail-enabled security groups (dynamic distribution groups aren't supported).
+  - The specified Microsoft 365 Groups.
+- **Domains**: One or more of the configured [accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) in Microsoft 365. The recipient's primary email address is in the specified domain.
 
-You can only use a condition or exception once, but the condition or exception can contain multiple values. Multiple values of the same condition or exception use OR logic (for example, _\<recipient1\>_ or _\<recipient2\>_). Different conditions or exceptions use AND logic (for example, _\<recipient1\>_ and _\<member of group 1\>_).
+You can use a condition or exception only once, but the condition or exception can contain multiple values:
 
-> [!IMPORTANT]
-> Multiple different types of conditions or exceptions are not additive; they're inclusive. The policy is applied _only_ to those recipients that match _all_ of the specified recipient filters. For example, you configure a recipient filter condition in the policy with the following values:
->
-> - Users: romain@contoso.com
-> - Groups: Executives
->
-> The policy is applied to romain@contoso.com _only_ if he's also a member of the Executives group. If he's not a member of the group, then the policy is not applied to him.
->
-> Likewise, if you use the same recipient filter as an exception to the policy, the policy is not applied to romain@contoso.com _only_ if he's also a member of the Executives group. If he's not a member of the group, then the policy still applies to him.
+- Multiple **values** of the **same condition or exception** use OR logic (for example, _\<recipient1\>_ or _\<recipient2\>_):
+  - **Conditions**: If the recipient matches **any** of the specified values, the policy is applied to them.
+  - **Exceptions**: If the recipient matches **any** of the specified values, the policy isn't applied to them.
+
+- Different **types of exceptions** use OR logic (for example, _\<recipient1\>_ or _\<member of group1\>_ or _\<member of domain1\>_). If the recipient matches **any** of the specified exception values, the policy isn't applied to them.
+
+- Different **types of conditions** use AND logic. The recipient must match **all** of the specified conditions for the policy to apply to them. For example, you configure a condition with the following values:
+  - Users: `romain@contoso.com`
+  - Groups: Executives
+
+  The policy is applied to `romain@contoso.com` _only_ if he's also a member of the Executives group. Otherwise, the policy isn't applied to him.
 
 ## Safe Links settings for email messages
 
@@ -169,7 +172,7 @@ URLs in Teams are checked against a list of known malicious links when the prote
 
 If the user who sent the link isn't protected by a Safe Links policy where Teams protection is turned on, the user is free to click through to the original URL on their computer or device.
 
-:::image type="content" source="../../media/tp-safe-links-for-teams-malicious.png" alt-text="A Safe Links for Teams page reporting a malicious link" lightbox="../../media/tp-safe-links-for-teams-malicious.png":::
+:::image type="content" source="/defender/media/tp-safe-links-for-teams-malicious.png" alt-text="A Safe Links for Teams page reporting a malicious link" lightbox="/defender/media/tp-safe-links-for-teams-malicious.png":::
 
 Clicking the **Go Back** button on the warning page returns the user to their original context or URL location. However, clicking on the original link again causes Safe Links to rescan the URL, so the warning page reappears.
 
@@ -292,7 +295,7 @@ This section contains examples of the various warning pages that are triggered b
 
 The clicked URL is being scanned by Safe Links. You might need to wait a few moments before trying the link again.
 
-:::image type="content" source="../../media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png" alt-text="The notification that the link is being scanned" lightbox="../../media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png":::
+:::image type="content" source="/defender/media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png" alt-text="The notification that the link is being scanned" lightbox="/defender/media/ee8dd5ed-6b91-4248-b054-12b719e8d0ed.png":::
 
 ### Suspicious message warning
 
@@ -306,10 +309,10 @@ The clicked URL was in an email message that has been identified as a phishing a
 
 The clicked URL points to a site that has been identified as malicious. We recommend that you don't proceed to the site.
 
-:::image type="content" source="../../media/058883c8-23f0-4672-9c1c-66b084796177.png" alt-text="The warning that states that the website is classified as malicious" lightbox="../../media/058883c8-23f0-4672-9c1c-66b084796177.png":::
+:::image type="content" source="/defender/media/058883c8-23f0-4672-9c1c-66b084796177.png" alt-text="The warning that states that the website is classified as malicious" lightbox="/defender/media/058883c8-23f0-4672-9c1c-66b084796177.png":::
 
 ### Error warning
 
 Some kind of error has occurred, and the URL can't be opened.
 
-:::image type="content" source="../../media/2f7465a4-1cf4-4c1c-b7d4-3c07e4b795b4.png" alt-text="The warning that states the page that you are trying to access cannot be loaded" lightbox="../../media/2f7465a4-1cf4-4c1c-b7d4-3c07e4b795b4.png":::
+:::image type="content" source="/defender/media/2f7465a4-1cf4-4c1c-b7d4-3c07e4b795b4.png" alt-text="The warning that states the page that you are trying to access cannot be loaded" lightbox="/defender/media/2f7465a4-1cf4-4c1c-b7d4-3c07e4b795b4.png":::

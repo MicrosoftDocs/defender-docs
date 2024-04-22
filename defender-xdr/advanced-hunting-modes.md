@@ -1,12 +1,8 @@
 ---
 title: Choose between guided and advanced modes for hunting in Microsoft Defender XDR
 description: Guided hunting in Microsoft Defender XDR does not require KQL knowledge while advanced hunting allows you to write a query from scratch.
-keywords: guided mode, advanced hunting, threat hunting, cyber threat hunting, Microsoft Defender XDR, microsoft 365, m365, search, query, telemetry, custom detections, schema, kusto
 ms.service: defender-xdr
 ms.subservice: adv-hunting
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords:
   - NOCSH
 ms.author: maccruz
@@ -21,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.custom: seo-marvel-apr2020
 search.appverid: met150
-ms.date: 08/04/2022
+ms.date: 04/02/2024
 ---
 
 # Choose between guided and advanced modes to hunt in Microsoft Defender XDR
@@ -31,7 +27,7 @@ ms.date: 08/04/2022
 **Applies to:**
 - Microsoft Defender XDR
 
-You can find the **advanced hunting** page by going to the left navigation bar in Microsoft Defender XDR and selecting **Hunting** > **Advanced hunting**. If the navigation bar is collapsed, select the hunting icon ![hunting icon](./media/guided-hunting/hunting-icon.png).
+You can find the **advanced hunting** page by going to the left navigation bar in Microsoft Defender XDR and selecting **Hunting** > **Advanced hunting**. If the navigation bar is collapsed, select the hunting icon ![hunting icon](/defender/media/guided-hunting/hunting-icon.png).
 
 In the **advanced hunting** page, two modes are supported:
 
@@ -53,13 +49,13 @@ When you open the advanced hunting page for the first time after guided hunting 
 
 To take the tour, select **Take tour** when this banner appears:
 
-[![banner inviting user to take the tour](./media/guided-hunting/1-guided-hunting-banner-tb.png)](./media/guided-hunting/1-guided-hunting-banner.png#lightbox)
+[![banner inviting user to take the tour](/defender/media/guided-hunting/1-guided-hunting-banner-tb.png)](/defender/media/guided-hunting/1-guided-hunting-banner.png#lightbox)
 
 Follow the blue teaching bubbles that appear throughout the page and select **Next** to move from one step to the next.
 
 You can take the tour again at any time by going to **Help resources** > **Learn more** and selecting **Take the tour**.
 
-![Screenshot of help resources](./media/guided-hunting/help-resources.png)
+![Screenshot of help resources](/defender/media/guided-hunting/help-resources.png)
 
 You can then start building your query to hunt for threats. The following articles can help you get the most out of hunting in guided mode:
 

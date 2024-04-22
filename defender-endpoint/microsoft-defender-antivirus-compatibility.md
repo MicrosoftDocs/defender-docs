@@ -144,7 +144,7 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 | [File scanning and detection information](review-scan-results-microsoft-defender-antivirus.md) | Yes | Yes <br/>[See note 2](#notes-about-protection-states) | No |
 | [Threat remediation](configure-remediation-microsoft-defender-antivirus.md) | Yes | [See note 3](#notes-about-protection-states) | No | 
 | [Security intelligence updates](microsoft-defender-antivirus-updates.md) | Yes | Yes <br/>[See note 4](#notes-about-protection-states) | No | 
-| [Data Loss Prevention](../../compliance/endpoint-dlp-learn-about.md) | Yes | Yes | No | 
+| [Data Loss Prevention](/Microsoft-365/compliance/endpoint-dlp-learn-about) | Yes | Yes | No | 
 | [Controlled folder access](controlled-folders.md) | Yes |No | No | 
 | [Web content filtering](web-content-filtering.md) | Yes | [See note 5](#notes-about-protection-states) | No | 
 | [Device control](device-control-report.md) | Yes | Yes | No | 
@@ -270,7 +270,7 @@ You might also use [limited periodic scanning](limited-periodic-scanning-microso
 
 ## See also
 
-- [Microsoft Defender Antivirus on Windows clients](microsoft-defender-antivirus-in-windows-10.md)
+- [Microsoft Defender Antivirus on Windows clients](microsoft-defender-antivirus-windows.md)
 - [EDR in block mode](edr-in-block-mode.md)
 - [Learn about Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

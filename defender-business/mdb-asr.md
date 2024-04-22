@@ -30,9 +30,9 @@ To help protect your network and devices, Microsoft Defender for Business includ
 
 There are lots of attack surface reduction rules available. You don't have to set them all up at once. And, you can set up some rules in audit mode just to see how they work for your organization, and change them to work in block mode later. That said, we recommend enabling the following standard protection rules as soon as possible:
 
-- [Block credential stealing from the Windows local security authority subsystem](../defender-endpoint/attack-surface-reduction-rules-reference.md#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
-- [Block abuse of exploited vulnerable signed drivers](../defender-endpoint/attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
-- [Block persistence through WMI event subscription](../defender-endpoint/attack-surface-reduction-rules-reference.md#block-persistence-through-wmi-event-subscription)
+- [Block credential stealing from the Windows local security authority subsystem](/defender-endpoint/attack-surface-reduction-rules-reference#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+- [Block abuse of exploited vulnerable signed drivers](/defender-endpoint/attack-surface-reduction-rules-reference#block-abuse-of-exploited-vulnerable-signed-drivers)
+- [Block persistence through WMI event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
 
 These rules help protect your network and devices but shouldn't cause disruption for users. Use Intune to set up your attack surface reduction rules.
 
@@ -64,7 +64,7 @@ These rules help protect your network and devices but shouldn't cause disruption
    5. On the **Review + create** step, review the information, and then choose **Create**.
 
 > [!TIP]
-> If you prefer, you can set up your attack surface reduction rules in audit mode at first to see detections before files or processes are actually blocked. For more detailed information about attack surface reduction rules, see [Attack surface reduction rules deployment overview](../defender-endpoint/attack-surface-reduction-rules-deployment.md).
+> If you prefer, you can set up your attack surface reduction rules in audit mode at first to see detections before files or processes are actually blocked. For more detailed information about attack surface reduction rules, see [Attack surface reduction rules deployment overview](/defender-endpoint/attack-surface-reduction-rules-deployment).
 
 ## View your attack surface reduction report
 
@@ -80,10 +80,10 @@ Defender for Business includes an attack surface reduction report that shows how
 
 To learn more about attack surface reduction rules, see the following articles:
 
-- [Attack surface reduction rules overview](../defender-endpoint/attack-surface-reduction.md)
-- [Attack surface reduction rules report](../defender-endpoint/attack-surface-reduction-rules-report.md)
-- [Attack surface reduction rules reference](../defender-endpoint/attack-surface-reduction-rules-reference.md)
-- [Attack surface reduction rules deployment overview](../defender-endpoint/attack-surface-reduction-rules-deployment.md)
+- [Attack surface reduction rules overview](/defender-endpoint/attack-surface-reduction)
+- [Attack surface reduction rules report](/defender-endpoint/attack-surface-reduction-rules-report)
+- [Attack surface reduction rules reference](/defender-endpoint/attack-surface-reduction-rules-reference)
+- [Attack surface reduction rules deployment overview](/defender-endpoint/attack-surface-reduction-rules-deployment)
 
 ## Attack surface reduction capabilities in Defender for Business
 

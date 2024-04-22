@@ -26,7 +26,7 @@ During and after an automated investigation, remediation actions for threat dete
 **Applies to:**
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
+- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 ## The unified Action center
 
@@ -51,7 +51,7 @@ You can use the unified Action center if you have appropriate permissions and on
 - [Microsoft Defender XDR](/microsoft-365/security/mtp/microsoft-threat-protection)
 - [Defender for Endpoint](microsoft-defender-endpoint.md)
 - [Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365)
-- [Defender for Business](../defender-business/mdb-overview.md)
+- [Defender for Business](/defender-business/mdb-overview)
 
 ## Using the Action center
 

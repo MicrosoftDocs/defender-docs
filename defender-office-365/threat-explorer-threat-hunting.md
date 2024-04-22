@@ -15,8 +15,7 @@ ms.collection:
 description: Learn about threat hunting and remediation in Microsoft Defender for Office 365 using Threat Explorer or Real-time detections in the Microsoft Defender portal.
 ms.custom:
 - seo-marvel-apr2020
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 search.appverid: met150
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -55,6 +54,8 @@ The following information is available in this article:
 >
 > - [Email security with Threat Explorer and Real-time detections in Microsoft Defender for Office 365](threat-explorer-email-security.md)
 > - [Investigate malicious email that was delivered in Microsoft 365](threat-explorer-investigate-delivered-malicious-email.md)
+>
+> If you're hunting for attacks based on malicious URLs embedded within QR codes, the **URL Source** filter value **QR code** in the **All email**, **Malware**, and **Phish** views in Threat Explorer or Real-time detections allows you to search for email message with URLs extracted from QR codes.
 
 ## What do you need to know before you begin?
 
@@ -70,11 +71,11 @@ Threat Explorer or Real-time detections is available in the **Email & collaborat
 
 - **Real-time detections** is available in _Defender for Office 365 Plan 1_. The **Real-time detections** page is available directly at <https://security.microsoft.com/realtimereportsv3>.
 
-  :::image type="content" source="../../media/te-rtd-select-real-time-detections.png" alt-text="Screenshot of the Real-time detections selection in the Email & collaboration section in the Microsoft Defender portal." lightbox="../../media/te-rtd-select-real-time-detections.png":::
+  :::image type="content" source="/defender/media/te-rtd-select-real-time-detections.png" alt-text="Screenshot of the Real-time detections selection in the Email & collaboration section in the Microsoft Defender portal." lightbox="/defender/media/te-rtd-select-real-time-detections.png":::
 
 - **Threat Explorer** is available in _Defender for Office 365 Plan 2_. The **Explorer** page is available directly at <https://security.microsoft.com/threatexplorerv3>.
 
-  :::image type="content" source="../../media/te-rtd-select-threat-explorer.png" alt-text="Screenshot of the Explorer selection in the Email & collaboration section in the Microsoft Defender portal." lightbox="../../media/te-rtd-select-threat-explorer.png":::
+  :::image type="content" source="/defender/media/te-rtd-select-threat-explorer.png" alt-text="Screenshot of the Explorer selection in the Email & collaboration section in the Microsoft Defender portal." lightbox="/defender/media/te-rtd-select-threat-explorer.png":::
 
 Threat Explorer contains the same information and capabilities as Real-time detections, but with the following additional features:
 
@@ -124,11 +125,11 @@ For example, in Threat Explorer the **All email** view, the **Email origin** and
 
 - For some audiences, the world map in the **Email origin** tab might do a better job of showing how widespread the detected threats are.
 
-  :::image type="content" source="../../media/te-rtd-all-email-view-details-area-email-origin-tab.png" alt-text="Screenshot of the world map in the Email origin view in the details area of the All email view in Threat Explorer." lightbox="../../media/te-rtd-all-email-view-details-area-email-origin-tab.png":::
+  :::image type="content" source="/defender/media/te-rtd-all-email-view-details-area-email-origin-tab.png" alt-text="Screenshot of the world map in the Email origin view in the details area of the All email view in Threat Explorer." lightbox="/defender/media/te-rtd-all-email-view-details-area-email-origin-tab.png":::
 
 - Others might find the detailed information in the table in the **Campaigns** tab more useful to convey the information.
 
-  :::image type="content" source="../../media/te-rtd-all-email-view-details-area-campaign-tab.png" alt-text="Screenshot of the details table in the Campaign tab in the All email view in Threat Explorer." lightbox="../../media/te-rtd-all-email-view-details-area-campaign-tab.png":::
+  :::image type="content" source="/defender/media/te-rtd-all-email-view-details-area-campaign-tab.png" alt-text="Screenshot of the details table in the Campaign tab in the All email view in Threat Explorer." lightbox="/defender/media/te-rtd-all-email-view-details-area-campaign-tab.png":::
 
 You can use this information for the following results:
 
@@ -139,15 +140,15 @@ You can use this information for the following results:
 
 In the **All email**, **Malware**, or **Phish** views in Threat Explorer or Real-time detections, email message results are shown in a table in the **Email** tab (view) of the details area below the chart.
 
-When you see a suspicious email message, click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="../../media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity** at the top of the flyout.
+When you see a suspicious email message, click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="/defender/media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity** at the top of the flyout.
 
-:::image type="content" source="../../media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="Screenshot of the actions available in the details tab after you select a Subject value in the Email tab of the details area in the All email view." lightbox="../../media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png":::
+:::image type="content" source="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="Screenshot of the actions available in the email details flyout after you select a Subject value in the Email tab of the details area in the All email view." lightbox="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png":::
 
 The Email entity page pulls together everything you need to know about the message and its contents so you can determine whether the message is a threat. For more information, see [Email entity page overview](mdo-email-entity-page.md).
 
 ### Email remediation
 
-After you determine that an email message is a threat, the next step is remediating the threat. You remediate the threat in Threat Explorer or Real-time detections using **Message actions** or :::image type="icon" source="../../media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**.
+After you determine that an email message is a threat, the next step is remediating the threat. You remediate the threat in Threat Explorer or Real-time detections using **Message actions** or :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**.
 
 These actions are available in the **All email**, **Malware**, or **Phish** views in Threat Explorer or Real-time detections in the **Email** tab (view) of the details area below the chart:
 
@@ -155,15 +156,15 @@ These actions are available in the **All email**, **Malware**, or **Phish** view
 
   - **Threat Explorer**:
 
-    :::image type="content" source="../../media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-threat-explorer.png" alt-text="Screenshot of the Email tab of the All email view in Threat Explorer showing a selected message and the available actions in Message actions." lightbox="../../media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-threat-explorer.png":::
+    :::image type="content" source="/defender/media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-threat-explorer.png" alt-text="Screenshot of the Email tab of the All email view in Threat Explorer showing a selected message and the available actions in Message actions." lightbox="/defender/media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-threat-explorer.png":::
 
   - **Real-time detections**:
 
-    :::image type="content" source="../../media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-real-time-detections.png" alt-text="Screenshot of the Email tab of the All email view in Real-time detections showing a selected message and the available actions in Message actions." lightbox="../../media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-real-time-detections.png":::
+    :::image type="content" source="/defender/media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-real-time-detections.png" alt-text="Screenshot of the Email tab of the All email view in Real-time detections showing a selected message and the available actions in Message actions." lightbox="/defender/media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-real-time-detections.png":::
 
-- Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="../../media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout. For more information, see [Remediate using Take action](#remediate-using-take-action).
+- Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout. For more information, see [Remediate using Take action](#remediate-using-take-action).
 
-  :::image type="content" source="../../media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="Screenshot of the actions available in the details flyout after you select a Subject value in the Email tab of the details area in the All email view." lightbox="../../media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png":::
+  :::image type="content" source="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="Screenshot of the actions available in the email details flyout after you select a Subject value in the Email tab of the details area in the All email view." lightbox="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png":::
 
 #### Remediate using Message actions
 
@@ -186,7 +187,7 @@ In Threat Explorer and Real-time detections, selecting one or more messages enab
   - **Start new submission**
     - Submit to Microsoft
 
-  ¹ The **Move & delete** actions require the **Search and Purge** role in [Email & collaboration permissions](mdo-portal-permissions.md). By default, this role is assigned to the **Data Investigator** and **Organization Management** role groups. Members of the **Security Administrators** role group don't see these actions. You can add the members of the group to the **Data Investigator** role group, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and then add the members of the **Security Administrators** role group.
+  ¹ The **Move & delete** actions require the **Search and Purge** role in [Email & collaboration permissions](mdo-portal-permissions.md). By default, this role is assigned only to the **Data Investigator** and **Organization Management** role groups. You can add users to those role groups, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
 - In Real-time detectionsAvailable, the available **Message actions** in the **Malware** and **Phish** views are described in the following list:
   - **Start new submission**
@@ -223,7 +224,7 @@ When you select an action, a remediation wizard opens:
 
 3. On the **Review and trigger action** page, review your previous selections.
 
-   Select :::image type="icon" source="../../media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the impacted assets to a CSV file. By default, the filename is **Impacted assets.csv** located in the **Downloads** folder.
+   Select :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the impacted assets to a CSV file. By default, the filename is **Impacted assets.csv** located in the **Downloads** folder.
 
    Select **Back** or **Edit** to change your selections.
 
@@ -237,7 +238,7 @@ When you select an action, a remediation wizard opens:
      - **Subject**
      - **Status**
 
-   When you're finished on the **Submit actions** page, select :::image type="icon" source="../../media/m365-cc-sc-close-icon.png" border="false"::: **Close**.
+   When you're finished on the **Submit actions** page, select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: **Close**.
 
 ##### Track & notify actions in Threat Explorer
 
@@ -252,7 +253,7 @@ When you select an action, a remediation wizard opens:
       - **Add to an existing remediation**: When you select **Next**, you go to the **Choose an existing remediation** page where you select the existing remediation from the **Submit emails to the following remediations** list, and then select **Next**.
 
    2. On the **Review the scope of this remediation** page, review the **Date**, **Recipient**, **Subject**, and **Sender** information on the page, and then select **Next**.
-   3. The **Submit actions** page repeats the information from the previous page, and includes a link to the **Pending** tab of the **Action center** page at <https://security.microsoft.com/action-center/history>. When you're finished on the **Submit actions** page, select :::image type="icon" source="../../media/m365-cc-sc-close-icon.png" border="false"::: **Close**.
+   3. The **Submit actions** page repeats the information from the previous page, and includes a link to the **Pending** tab of the **Action center** page at <https://security.microsoft.com/action-center/history>. When you're finished on the **Submit actions** page, select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: **Close**.
 
 - **Contact recipients**: Opens a new email message in the registered email client on your computer (for example, Microsoft Outlook) with the affected recipients in the Bcc box.
 
@@ -314,9 +315,9 @@ Selecting an action from the **Start new submission** category in Real-time dete
 
 #### Remediate using Take action
 
-After you click on the **Subject** value of an entry in the details table of the **Email** tab (view), selecting :::image type="icon" source="../../media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout opens the **Take action** wizard in a new flyout.
+After you click on the **Subject** value of an entry in the details table of the **Email** tab (view), selecting :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout opens the **Take action** wizard in a new flyout.
 
-:::image type="content" source="../../media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="Screenshot of the actions available in the details flyout after you select a Subject value in the Email tab of the details area in the All email, Malware, or Phish views in Threat Explorer or Real-time detections.":::
+:::image type="content" source="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="Screenshot of the actions available in the email details flyout after you select a Subject value in the Email tab of the details area in the All email, Malware, or Phish views in Threat Explorer or Real-time detections.":::
 
 The available actions in the **Take action** wizard in Threat Explorer and Real-time detections are listed in the following table:
 
@@ -327,7 +328,7 @@ The available actions in the **Take action** wizard in Threat Explorer and Real-
 |**Initiate automated investigation**|✔||
 |**Propose remediation**|✔|✔|
 
-¹ This action requires the **Search and Purge** role in [Email & collaboration permissions](mdo-portal-permissions.md). By default, this role is assigned to the **Data Investigator** and **Organization Management** role groups. Members of the **Security Administrators** role group don't see this action. You can add the members of the group to the **Data Investigator** role group, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and then add the members of the **Security Administrators** role group.
+¹ This action requires the **Search and Purge** role in [Email & collaboration permissions](mdo-portal-permissions.md). By default, this role is assigned only to the **Data Investigator** and **Organization Management** role groups. You can add users to those role groups, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
 1. On the **Choose response actions** page, select one or more of the following options in the **Email message actions** section:
 
@@ -361,10 +362,10 @@ The available actions in the **Take action** wizard in Threat Explorer and Real-
 
        Back on the **Choose response actions** page, select an expiration option for the block entries:
 
-       - :::image type="icon" source="../../media/scc-toggle-off.png" border="false"::: **Expire on**: Select a date for block entries to expire.
-       - :::image type="icon" source="../../media/scc-toggle-on.png" border="false"::: **Never expire**
+       - :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false"::: **Expire on**: Select a date for block entries to expire.
+       - :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: **Never expire**
 
-       The number of blocked entities is shown (for example, **4/4 entities to be blocked**). Select :::image type="icon" source="../../media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** to reopen the **Add to block rule** and make changes.
+       The number of blocked entities is shown (for example, **4/4 entities to be blocked**). Select :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** to reopen the **Add to block rule** and make changes.
 
    - **Initiate automated investigation**: Threat Explorer only. Select one of the following values that appear:
      - **Investigate email**
@@ -417,7 +418,7 @@ The available actions in the **Take action** wizard in Threat Explorer and Real-
 
 3. On the **Review and submit** page, review your previous selections.
 
-   Select :::image type="icon" source="../../media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the impacted assets to a CSV file. By default, the filename is **Impacted assets.csv** located in the **Downloads** folder.
+   Select :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the impacted assets to a CSV file. By default, the filename is **Impacted assets.csv** located in the **Downloads** folder.
 
    Select **Back** to go back and change your selections.
 
@@ -431,7 +432,7 @@ Threat Explorer or Real-time detections helps your security operations team inve
 
 The **Alerts** page is available in the Defender portal at **Incidents & alerts** \> **Alerts**, or directly at <https://security.microsoft.com/alerts>.
 
-Many alerts with the **Detection source** value **MDO** have the :::image type="icon" source="../../media/m365-cc-sc-show-trends-icon.png" border="false"::: **View messages in Explorer** action available at the top of the alert details flyout.
+Many alerts with the **Detection source** value **MDO** have the :::image type="icon" source="/defender/media/m365-cc-sc-show-trends-icon.png" border="false"::: **View messages in Explorer** action available at the top of the alert details flyout.
 
 The alert details flyout opens when you click anywhere on the alert other than the check box next to the first column. For example:
 
@@ -442,7 +443,7 @@ The alert details flyout opens when you click anywhere on the alert other than t
 - **Messages containing malicious entity not removed after delivery**
 - **Phish not zapped because ZAP is disabled**
 
-:::image type="content" source="../../media/alerts-mdo-details-flyout-actions.png" alt-text="Screenshot of the available actions in the alert details flyout of an alert with the Detections source value MDO from the Alerts page in the Defender portal." lightbox="../../media/alerts-mdo-details-flyout-actions.png":::
+:::image type="content" source="/defender/media/alerts-mdo-details-flyout-actions.png" alt-text="Screenshot of the available actions in the alert details flyout of an alert with the Detections source value MDO from the Alerts page in the Defender portal." lightbox="/defender/media/alerts-mdo-details-flyout-actions.png":::
 
 Selecting **View messages in Explorer** opens Threat Explorer in the **All email** view with the property filter **Alert ID** selected for the alert. The **Alert ID** value is a unique GUID value for the alert (for example, 89e00cdc-4312-7774-6000-08dc33a24419).
 
@@ -458,9 +459,9 @@ In those views, **Alert ID** is available as a selectable column in the details 
 - [The **Email** view for the details area of the **Malware** view in Threat Explorer and Real-time detections](threat-explorer-real-time-detections-about.md#email-view-for-the-details-area-of-the-malware-view-in-threat-explorer-and-real-time-detections)
 - [The **Email** view for the details area of the **Phish** view in Threat Explorer and Real-time detections](threat-explorer-real-time-detections-about.md#email-view-for-the-details-area-of-the-phish-view-in-threat-explorer-and-real-time-detections)
 
-In the [details flyout that opens when you click on a **Subject** value from one of the entries](threat-explorer-real-time-detections-about.md#subject-details-from-the-email-view-of-the-details-area-in-the-all-email-view), the **Alert ID** link is available in the **Email details** section of the flyout. Selecting the **Alert ID** link opens the **View alerts** page at <https://security.microsoft.com/viewalertsv2> with the alert selected and the details flyout open for the alert.
+In the [email details flyout that opens when you click on a **Subject** value from one of the entries](threat-explorer-real-time-detections-about.md#email-details-from-the-email-view-of-the-details-area-in-the-all-email-view), the **Alert ID** link is available in the **Email details** section of the flyout. Selecting the **Alert ID** link opens the **View alerts** page at <https://security.microsoft.com/viewalertsv2> with the alert selected and the details flyout open for the alert.
 
-:::image type="content" source="../../media/view-alerts-page-with-details-flyout.png" alt-text="Screenshot of the alert details flyout on the View alerts page after you select an Alert ID from the Subject details flyout of an entry in the Email tab from the All email, Malware, or Phish views in Threat Explorer or Real-time detections." lightbox="../../media/view-alerts-page-with-details-flyout.png":::
+:::image type="content" source="/defender/media/view-alerts-page-with-details-flyout.png" alt-text="Screenshot of the alert details flyout on the View alerts page after you select an Alert ID from the email details flyout of an entry in the Email tab from the All email, Malware, or Phish views in Threat Explorer or Real-time detections." lightbox="/defender/media/view-alerts-page-with-details-flyout.png":::
 
 ### Tags in Threat Explorer
 
@@ -471,25 +472,18 @@ User tags are available in the following locations in Threat Explorer:
 - **All email** view:
   - [As a filterable property](threat-explorer-real-time-detections-about.md#filterable-properties-in-the-all-email-view-in-threat-explorer).
   - [An available column in the **Email** tab (view) of the details area](threat-explorer-real-time-detections-about.md#email-view-for-the-details-area-of-the-all-email-view-in-threat-explorer).
-  - [The **Subject** details flyout from an entry in the **Email** tab (view)](threat-explorer-real-time-detections-about.md#subject-details-from-the-email-view-of-the-details-area-in-the-all-email-view)
+  - [The email details flyout from an entry in the **Email** tab (view)](threat-explorer-real-time-detections-about.md#email-details-from-the-email-view-of-the-details-area-in-the-all-email-view)
 - **Malware** view:
   - [As a filterable property](threat-explorer-real-time-detections-about.md#malware-view-in-threat-explorer-and-real-time-detections).
   - [An available column in the **Email** tab (view) of the details area in the **Malware** view](threat-explorer-real-time-detections-about.md#email-view-for-the-details-area-of-the-malware-view-in-threat-explorer-and-real-time-detections).
-  - [[The **Subject** details flyout from an entry in the **Email** tab (view)](threat-explorer-real-time-detections-about.md#subject-details-from-the-email-view-of-the-details-area-in-the-all-email-view)
+  - [[The email details flyout from an entry in the **Email** tab (view)](threat-explorer-real-time-detections-about.md#email-details-from-the-email-view-of-the-details-area-in-the-all-email-view)
 - **Phish** view:
   - [As a filterable property](threat-explorer-real-time-detections-about.md#phish-view-in-threat-explorer-and-real-time-detections).
   - [An available column in the **Email** tab (view) of the details](threat-explorer-real-time-detections-about.md#email-view-for-the-details-area-of-the-phish-view-in-threat-explorer-and-real-time-detections).
-  - [[The **Subject** details flyout from an entry in the **Email** tab (view)](threat-explorer-real-time-detections-about.md#subject-details-from-the-email-view-of-the-details-area-in-the-all-email-view)
+  - [The email details flyout from an entry in the **Email** tab (view)](threat-explorer-real-time-detections-about.md#email-details-from-the-email-view-of-the-details-area-in-the-all-email-view)
 - **URL clicks** view:
   - [As a filterable property](threat-explorer-real-time-detections-about.md#url-clicks-view-in-threat-explorer).
   - [An available column in the **Results** tab (view) of the details area in the **URL clicks** view](threat-explorer-real-time-detections-about.md#results-view-for-the-details-area-of-the-url-clicks-view-in-threat-explorer).
-
-<!--- ### Updated Timeline View
-
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="../../media/tags-urls.png" alt-text="Screenshot of the URL tags." lightbox="../../media/tags-urls.png":::
->
-Learn more by watching [this video](https://www.youtube.com/watch?v=UoVzN0lYbfY&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=4). --->
 
 ### Threat information for email messages
 
@@ -499,7 +493,7 @@ Pre-delivery and post-delivery actions on email messages are consolidated into a
 - Manual remediation (admin action).
 - [Dynamic Delivery](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies).
 
-[The **Subject** details flyout from the **Email** tab (view)](threat-explorer-real-time-detections-about.md#subject-details-from-the-email-view-of-the-details-area-in-the-all-email-view) in the **All email**, **Malware**, or **Phish** views shows the associated threats and the corresponding detection technologies that are associated with the email message. A message can have zero, one, or multiple threats.
+[The email details flyout from the **Email** tab (view)](threat-explorer-real-time-detections-about.md#email-details-from-the-email-view-of-the-details-area-in-the-all-email-view) in the **All email**, **Malware**, or **Phish** views shows the associated threats and the corresponding detection technologies that are associated with the email message. A message can have zero, one, or multiple threats.
 
 - In the **Delivery details** section, the **Detection technology** property shows the detection technology that identified the threat. **Detection technology** is also available as a chart pivot or a column in the details table for many views in Threat Explorer and Real-time detections.
 
@@ -508,20 +502,9 @@ Pre-delivery and post-delivery actions on email messages are consolidated into a
 > [!TIP]
 > Verdict analysis might not necessarily be tied to entities. The filters evaluate content and other details of an email message before assigning a verdict. For example, an email message might be classified as phishing or spam, but no URLs in the message are stamped with a phishing or spam verdict.
 
-:::image type="content" source="../../media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout.png" alt-text="Screenshot of the details tab after you select a subject in the Email tab of the details area in the All email view." lightbox="../../media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout.png":::
+Select :::image type="icon" source="/defender/media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity** at the top of the flyout to see exhaustive details about the email message. For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
 
-<!-- ### Updated timeline view (upcoming)
-
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="../../media/Email_Timeline.png" alt-text="Screenshot of the updated Timeline View." lightbox="../../media/Email_Timeline.png":::
-
-Timeline view identifies all delivery and post-delivery events. It includes information about the threat identified at that point of time for a subset of these events. Timeline view also provides information about any additional action taken (such as ZAP or manual remediation), along with the result of that action. Timeline view information includes:
-
-- **Source:** Source of the event. It can be admin/system/user.
-- **Event:** Includes top-level events like original delivery, manual remediation, ZAP, submissions, and Dynamic Delivery.
-- **Action:** The specific action that was taken either as part of ZAP or admin action (for example, soft delete).
-- **Threats:** Covers the threats (malware, phish, spam) identified at that point of time.
-- **Result/Details:** More information about the result of the action, such as whether it was performed as part of ZAP/admin action. --->
+:::image type="content" source="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout.png" alt-text="Screenshot of the email details flyout after you select a Subject value in the Email tab of the details area in the All email view." lightbox="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout.png":::
 
 ## Extended capabilities in Threat Explorer
 
@@ -577,6 +560,5 @@ For specific scenarios, see the following articles:
 In addition to the scenarios outlined in this article, you have more options in Explorer or Real-time detections. For more information, see the following articles:
 
 - [Threat protection status report](reports-email-security.md#threat-protection-status-report)
-- [Automated investigation and response in Microsoft Defender XDR](../defender/m365d-autoir.md)
-- [Trigger an investigation from Threat Explorer](air-about-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
-- [Investigate emails with the Email Entity Page](mdo-email-entity-page.md)
+- [Automated investigation and response in Microsoft Defender XDR](/defender/m365d-autoir)
+- [Trigger an investigation from Threat Explorer](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).

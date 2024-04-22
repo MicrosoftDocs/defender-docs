@@ -64,7 +64,7 @@ Microsoft Defender XDR is a Cloud-based, unified, pre- and post-breach enterpris
 
 In this illustration an attack is underway. Phishing email arrives at the Inbox of an employee in your organization, who unknowingly opens the email attachment. This installs malware, which leads to a chain of events that could end with the theft of sensitive data. But in this case, Defender for Office 365 is in operation.
 
-:::image type="content" source="./media/defender/m365-defender-eval-threat-chain.png" alt-text="The various attack attempts" lightbox="./media/defender/m365-defender-eval-threat-chain.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-eval-threat-chain.png" alt-text="The various attack attempts" lightbox="/defender/media/defender/m365-defender-eval-threat-chain.png":::
 
 In the illustration:
 
@@ -83,10 +83,10 @@ Microsoft Defender XDR is made up of these security technologies, operating in t
 |Component|Description|Reference material|
 |---|---|---|
 |Microsoft Defender for Identity|Microsoft Defender for Identity uses Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.|[What is Microsoft Defender for Identity?](/defender-for-identity/what-is)|
-|Exchange Online Protection|Exchange Online Protection is the native cloud-based SMTP relay and filtering service that helps protect your organization against spam and malware.|[Exchange Online Protection (EOP) overview - Office 365](../defender-office-365/eop-about.md)|
+|Exchange Online Protection|Exchange Online Protection is the native cloud-based SMTP relay and filtering service that helps protect your organization against spam and malware.|[Exchange Online Protection (EOP) overview - Office 365](/defender-office-365/eop-about)|
 |Microsoft Defender for Office 365|Microsoft Defender for Office 365 safeguards your organization against malicious threats posed by email messages, links (URLs) and collaboration tools.|[Microsoft Defender for Office 365 - Office 365](/microsoft-365/security/office-365-security/defender-for-office-365-whats-new)|
-|Microsoft Defender for Endpoint|Microsoft Defender for Endpoint is a unified platform for device protection, post-breach detection, automated investigation, and recommended response.|[Microsoft Defender for Endpoint - Windows security](../defender-endpoint/microsoft-defender-endpoint.md)|
-|Microsoft Defender for Cloud Apps|Microsoft Defender for Cloud Apps is a comprehensive cross-SaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps.|[What is Defender for Cloud Apps?](/defender-cloud-apps/what-is-cloud-app-security)|
+|Microsoft Defender for Endpoint|Microsoft Defender for Endpoint is a unified platform for device protection, post-breach detection, automated investigation, and recommended response.|[Microsoft Defender for Endpoint - Windows security](/defender-endpoint/microsoft-defender-endpoint)|
+|Microsoft Defender for Cloud Apps|Microsoft Defender for Cloud Apps is a comprehensive cross-SaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps.|[What is Defender for Cloud Apps?](/cloud-app-security/what-is-cloud-app-security)|
 |Microsoft Entra ID Protection|Microsoft Entra ID Protection evaluates risk data from billions of sign-in attempts and uses this data to evaluate the risk of each sign-in to your environment. This data is used by Microsoft Entra ID to allow or prevent account access, depending on how Conditional Access policies are configured. Microsoft Entra ID Protection is licensed separately from Microsoft Defender XDR. It is included with Microsoft Entra ID P2.|[What is Identity Protection?](/azure/active-directory/identity-protection/overview-identity-protection)|
 
 <a name='microsoft-365-defender-architecture'></a>
@@ -95,7 +95,7 @@ Microsoft Defender XDR is made up of these security technologies, operating in t
 
 The diagram below illustrates high-level architecture for key Microsoft Defender XDR components and integrations. *Detailed* architecture for each Defender component, and use-case scenarios, are given throughout this series of articles.
 
-:::image type="content" source="./media/defender/m365-defender-eval-architecture.png" alt-text="A high-level architecture of the Microsoft Defender portal" lightbox="./media/defender/m365-defender-eval-architecture.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-eval-architecture.png" alt-text="A high-level architecture of the Microsoft Defender portal" lightbox="/defender/media/defender/m365-defender-eval-architecture.png":::
 
 In this illustration:
 
@@ -122,7 +122,7 @@ Additional optional architecture components not included in this illustration:
 
 Microsoft recommends enabling the components of Microsoft 365 in the order illustrated:
 
-:::image type="content" source="./media/defender/m365-defender-eval-process.png" alt-text="A high-level evaluation process in the Microsoft Defender portal" lightbox="./media/defender/m365-defender-eval-process.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-eval-process.png" alt-text="A high-level evaluation process in the Microsoft Defender portal" lightbox="/defender/media/defender/m365-defender-eval-process.png":::
 
 The following table describes this illustration.
 

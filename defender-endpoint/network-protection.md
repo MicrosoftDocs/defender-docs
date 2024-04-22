@@ -86,7 +86,7 @@ Network protection is a part of the attack surface reduction group of solutions 
 Network protection is a critical part of the Microsoft protection and response stack.
 
 > [!TIP]
-> For details about network protection for Windows Server, Linux, MacOS and Mobile Threat Defense (MTD), see [Proactively hunt for threats with advanced hunting](advanced-hunting-overview.md).
+> For details about network protection for Windows Server, Linux, MacOS and Mobile Threat Defense (MTD), see [Proactively hunt for threats with advanced hunting](/defender/advanced-hunting-overview).
 
 ### Block Command and Control attacks
 
@@ -182,7 +182,7 @@ For information about network protection for Linux and macOS see: [Network prote
 
 ## Advanced hunting
 
-If you're using advanced hunting to identify audit events, you'll have up to 30 days history available from the console. See [Advanced hunting](advanced-hunting-overview.md).
+If you're using advanced hunting to identify audit events, you'll have up to 30 days history available from the console. See [Advanced hunting](/defender/advanced-hunting-overview).
 
 You can find the audit events in **Advanced hunting** in the Defender for Endpoint portal ([https://security.microsoft.com](https://security.microsoft.com)).  
 
@@ -253,7 +253,7 @@ Using this data you can make an informed decision on enabling Network protection
 
 For information about how to report false positives see [Report false positives](web-protection-overview.md#report-false-positives).
 
-For details on how to create your own Power BI reports, see [Create custom reports using Power BI](api-power-bi.md).
+For details on how to create your own Power BI reports, see [Create custom reports using Power BI](api/api-power-bi.md).
 
 ## Configuring network protection
 
@@ -270,19 +270,19 @@ Network protection works best with [Microsoft Defender for Endpoint](microsoft-d
 
 When network protection blocks a connection, a notification is displayed from the Action Center. Your security operations team can [customize the notification](attack-surface-reduction-rules-deployment-implement.md#customize-attack-surface-reduction-rules) with your organization's details and contact information. In addition, individual attack surface reduction rules can be enabled and customized to suit certain techniques to monitor.
 
-You can also use [audit mode](audit-windows-defender.md) to evaluate how network protection would impact your organization if it were enabled.
+You can also use [audit mode](overview-attack-surface-reduction.md) to evaluate how network protection would impact your organization if it were enabled.
 
 <a name='review-network-protection-events-in-the-microsoft-365-defender-portal'></a>
 
 ## Review network protection events in the Microsoft Defender portal
 
-Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md). You can view these details in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) in the [alerts queue](review-alerts.md) or by using [advanced hunting](advanced-hunting-overview.md). If you're using [audit mode](audit-windows-defender.md), you can use advanced hunting to see how network protection settings would affect your environment if they were enabled.
+Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md). You can view these details in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) in the [alerts queue](review-alerts.md) or by using [advanced hunting](/defender/advanced-hunting-overview). If you're using [audit mode](overview-attack-surface-reduction.md), you can use advanced hunting to see how network protection settings would affect your environment if they were enabled.
 
 ## Review network protection events in Windows Event Viewer
 
 You can review the Windows event log to see events that are created when network protection blocks (or audits) access to a malicious IP or domain:
 
-1. [Copy the XML directly](event-views.md).
+1. [Copy the XML directly](overview-attack-surface-reduction.md).
 
 2. Select **OK**.
 
@@ -296,7 +296,7 @@ This procedure creates a custom view that filters to only show the following eve
 
 ## Network protection and the TCP three-way handshake
 
-With network protection, the determination of whether to allow or block access to a site is made after the completion of the [three-way handshake via TCP/IP](/troubleshoot/windows-server/networking/three-way-handshake-via-tcpip). Thus, when a site is blocked by network protection, you might see an action type of `ConnectionSuccess` under [`DeviceNetworkEvents`](../defender/advanced-hunting-devicenetworkevents-table.md) in the Microsoft Defender portal, even though the site was blocked. `DeviceNetworkEvents` are reported from the TCP layer, and not from network protection. After the three-way handshake has completed, access to the site is allowed or blocked by network protection.
+With network protection, the determination of whether to allow or block access to a site is made after the completion of the [three-way handshake via TCP/IP](/troubleshoot/windows-server/networking/three-way-handshake-via-tcpip). Thus, when a site is blocked by network protection, you might see an action type of `ConnectionSuccess` under [`DeviceNetworkEvents`](/defender/advanced-hunting-devicenetworkevents-table) in the Microsoft Defender portal, even though the site was blocked. `DeviceNetworkEvents` are reported from the TCP layer, and not from network protection. After the three-way handshake has completed, access to the site is allowed or blocked by network protection.
 
 Here's an example of how that works:
 
@@ -304,7 +304,7 @@ Here's an example of how that works:
 
 2. The three-way handshake via TCP/IP commences. Before it completes, a `DeviceNetworkEvents` action is logged, and its `ActionType` is listed as `ConnectionSuccess`. However, as soon as the three-way handshake process completes, network protection blocks access to the site. All of this happens quickly. A similar process occurs with [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview); it's when the three-way handshake completes that a determination is made, and access to a site is either blocked or allowed.
 
-3. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `DeviceNetworkEvents` and [`AlertEvidence`](../defender/advanced-hunting-alertevidence-table.md). You can see that the site was blocked, even though you also have a `DeviceNetworkEvents` item with the ActionType of `ConnectionSuccess`.
+3. In the Microsoft Defender portal, an alert is listed in the [alerts queue](alerts-queue.md). Details of that alert include both `DeviceNetworkEvents` and [`AlertEvidence`](/defender/advanced-hunting-alertevidence-table). You can see that the site was blocked, even though you also have a `DeviceNetworkEvents` item with the ActionType of `ConnectionSuccess`.
 
 ## Considerations for Windows virtual desktop running Windows 10 Enterprise Multi-Session
 

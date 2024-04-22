@@ -17,8 +17,7 @@ ms.collection:
 ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to configure connection filtering in Exchange Online Protection (EOP) to allow or block emails from email servers.
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 ms.date: 11/2/2023
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/eop-about" target="_blank">Exchange Online Protection</a>
@@ -32,7 +31,7 @@ appliesto:
 
 In Microsoft 365 organizations with Exchange Online mailboxes or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, _connection filtering_ and the default connection filter policy identify good or bad source email servers by IP addresses. The key components of the default connection filter policy are:
 
-- **IP Allow List**: Skip spam filtering for all incoming messages from the specified source IP addresses or IP address ranges. All incoming messages are scanned for malware and high-confidence phishing. For other scenarios where spam filtering still occurs on messages from servers in the IP Allow List, see the [Scenarios where messages from sources in the IP Allow List are still filtered](#scenarios-where-messages-from-sources-in-the-ip-allow-list-are-still-filtered) section later in this article. For more information about how the IP Allow List should fit into your overall safe senders strategy, see [Create safe sender lists in EOP](create-safe-sender-lists-in-office-365.md).
+- **IP Allow List**: Skip spam filtering for all incoming messages from the specified source IP addresses or IP address ranges. All incoming messages are scanned for malware and high confidence phishing. For other scenarios where spam filtering still occurs on messages from servers in the IP Allow List, see the [Scenarios where messages from sources in the IP Allow List are still filtered](#scenarios-where-messages-from-sources-in-the-ip-allow-list-are-still-filtered) section later in this article. For more information about how the IP Allow List should fit into your overall safe senders strategy, see [Create safe sender lists in EOP](create-safe-sender-lists-in-office-365.md).
 
 - **IP Block List**: Block all incoming messages from the specified source IP addresses or IP address ranges. The incoming messages are rejected, aren't marked as spam, and no other filtering occurs. For more information about how the IP Block List should fit into your overall blocked senders strategy, see [Create block sender lists in EOP](create-block-sender-lists-in-office-365.md).
 
@@ -85,7 +84,7 @@ This article describes how to configure the default connection filter policy in 
        - IP range: For example, 192.168.0.1-192.168.0.254.
        - CIDR IP: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32. To skip spam filtering for /1 to /23, see the [Skip spam filtering for a CIDR IP outside of the available range](#skip-spam-filtering-for-a-cidr-ip-outside-of-the-available-range) section later in this article.
 
-       Repeat this step as many times as necessary. To remove an existing entry, select :::image type="icon" source="../../media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
+       Repeat this step as many times as necessary. To remove an existing entry, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
 
    - **Always block messages from the following IP addresses or address range**: This setting is the IP Block List. Enter a single IP, IP range, or CIDR IP in the box as previously described in the **Always allow messages from the following IP addresses or address range** setting.
 
@@ -106,9 +105,9 @@ On the **Anti-spam policies** page, the following properties are displayed in th
 - **Priority**: The value is **Lowest** for the default connection filter policy.
 - **Type**: The value is blank for the default connection filter policy.
 
-To change the list of policies from normal to compact spacing, select :::image type="icon" source="../../media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="../../media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+To change the list of policies from normal to compact spacing, select :::image type="icon" source="/defender/media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="/defender/media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
 
-Use the :::image type="icon" source="../../media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific policies.
+Use the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific policies.
 
 Select the default connection filter policy by clicking anywhere in the row other than the check box next to the name to open the details flyout for the policy.
 
@@ -161,7 +160,7 @@ To verify that you've successfully modified the default connection filter policy
 The following sections identify additional items that you need to know about when you configure the IP Allow List.
 
 > [!NOTE]
-> All incoming messages are scanned for malware and high-confidence phishing, regardless of whether the message source is in the IP Allow List.
+> All incoming messages are scanned for malware and high confidence phishing, regardless of whether the message source is in the IP Allow List.
 
 ### Skip spam filtering for a CIDR IP outside of the available range
 
@@ -204,4 +203,4 @@ If you encounter either of these scenarios, you can create a mail flow rule with
 
 ****
 
-:::image type="content" source="../../media/eac8a413-9498-4220-8544-1e37d1aaea13.png" alt-text="The short icon for LinkedIn Learning."::: **New to Microsoft 365?** Discover free video courses for **Microsoft 365 admins and IT pros**, brought to you by LinkedIn Learning.
+:::image type="content" source="/defender/media/eac8a413-9498-4220-8544-1e37d1aaea13.png" alt-text="The short icon for LinkedIn Learning."::: **New to Microsoft 365?** Discover free video courses for **Microsoft 365 admins and IT pros**, brought to you by LinkedIn Learning.

@@ -18,7 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 02/08/2023
+ms.date: 02/08/2024
 ---
 
 # List incidents API in Microsoft Defender XDR
@@ -722,7 +722,7 @@ GET https://api.security.microsoft.com/api/incidents
 - [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 
 - [Access the Microsoft Defender XDR APIs](api-access.md)
-- [Learn about API limits and licensing](api-terms.md)
+- [Learn about API limits and licensing](/legal/microsoft-365/api-terms)
 - [Understand error codes](api-error-codes.md)
 - [Incidents overview](incidents-overview.md)
 - [Incident APIs](api-incident.md)

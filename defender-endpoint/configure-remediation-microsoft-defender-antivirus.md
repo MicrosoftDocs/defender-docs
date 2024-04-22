@@ -42,7 +42,7 @@ When Microsoft Defender Antivirus runs a scan, it attempts to remediate or remov
 >
 > If you are certain Microsoft Defender Antivirus quarantined a file based on a false positive, you can restore the file from quarantine after the device reboots. See [Restore quarantined files in Microsoft Defender Antivirus](restore-quarantined-files-microsoft-defender-antivirus.md). To avoid this problem in the future, you can exclude files from the scans. See [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md).
 
-Also see [Configure remediation-required scheduled full Microsoft Defender Antivirus scans](scheduled-catch-up-scans-microsoft-defender-antivirus.md#remed) for more remediation-related settings.
+Also see [Schedule regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md) for more remediation-related settings.
 
 ## Configure remediation options using Intune
 

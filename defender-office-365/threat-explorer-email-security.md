@@ -15,8 +15,7 @@ ms.collection:
 description: Use Threat Explorer (Explorer) or Real-time detections to view and investigate malware and phishing attempts in email.
 ms.custom:
 - seo-marvel-apr2020
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 search.appverid: met150
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -88,13 +87,13 @@ Use the following steps to review phishing messages and search for impersonated 
 
    You can sort the entries and show more columns as described in [Email view for the details area of the Phish view in Threat Explorer and Real-time detections](threat-explorer-real-time-detections-about.md#email-view-for-the-details-area-of-the-phish-view-in-threat-explorer-and-real-time-detections).
 
-   If you select the **Subject** or **Recipient** value of an entry in the table, a details flyout opens. For more information, see [Subject details from the Email view of the details area in the Phish view](threat-explorer-real-time-detections-about.md#subject-details-from-the-email-view-of-the-details-area-in-the-phish-view) and [Recipient details from the Email view of the details area in the Phish view](threat-explorer-real-time-detections-about.md#recipient-details-from-the-email-view-of-the-details-area-in-the-phish-view).
+   - If you select the **Subject** value of an entry in the table, an email details flyout opens. This details flyout is known as the _Email summary panel_ and contains standardized summary information that's also available on the [Email entity page](mdo-email-entity-page.md) for the message.
 
-<!--- ### Email timeline
+     For details about the information in the Email summary panel, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
-The **Email timeline** is a new Explorer feature that improves the hunting experience for admins. It cuts the time spent checking different locations to try to understand the event. When multiple events happen at or close to the same time an email arrives, those events are displayed in a timeline view. Some events that happen to your email post-delivery are captured in the **Special action** column. Admins can combine  information from the timeline with the special action taken on the mail post-delivery to get insight into how their policies work, where the mail was finally routed, and, in some cases, what the final assessment was.
+     For information about the available actions at the top of the Email summary panel for Threat Explorer and Real-time detections, see [Email details from the Email view of the details area in the All email view](threat-explorer-real-time-detections-about.md#email-details-from-the-email-view-of-the-details-area-in-the-all-email-view) (the same actions are also available from the **Phish** view).
 
-For more information, see [Investigate and remediate malicious email that was delivered in Office 365](threat-explorer-investigate-delivered-malicious-email.md). -->
+   - If you select the **Recipient** value of an entry in the table, a different details flyout opens. For more information, see [Recipient details from the Email view of the details area in the Phish view](threat-explorer-real-time-detections-about.md#recipient-details-from-the-email-view-of-the-details-area-in-the-phish-view).
 
 ## Export URL click data
 
@@ -110,7 +109,7 @@ You can export URL click data to a CSV file to view the **Network Message ID** a
 
 4. In the details area, select the **Top URLs** or **Top clicks** tab (view).
 
-5. In the **Top URLs** or **Top clicks** view, select one or more entries from the table by selecting the check box next to the first column, and then select :::image type="icon" source="../../media/m365-cc-sc-download-icon.png" border="false"::: **Export**.
+5. In the **Top URLs** or **Top clicks** view, select one or more entries from the table by selecting the check box next to the first column, and then select :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export**.
 **Explorer** \> **Phish** \> **Clicks** \> **Top URLs** or **URL Top Clicks** \> select any record to open the URL flyout.
 
 You can use the Network Message ID value to search for specific messages in Threat Explorer or Real-time detections or external tools. These searches identify the email message that's associated with a click result. Having the correlated Network Message ID makes for quicker and more powerful analysis.
@@ -158,7 +157,7 @@ Or
 
 - Select a message from the details table in the **Email** tab (view) in the **All email**, **Malware**, or **Phish** views by clicking on the **Subject** value.
 
-  In the details flyout that opens, select :::image type="icon" source="../../media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** \> **Submit to Microsoft for review** \> **I've confirmed it's clean**. For further instructions, see [Remediate using Take action](threat-explorer-threat-hunting.md#remediate-using-take-action).
+  In the details flyout that opens, select :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** \> **Submit to Microsoft for review** \> **I've confirmed it's clean**. For further instructions, see [Remediate using Take action](threat-explorer-threat-hunting.md#remediate-using-take-action).
 
 ## View phishing URL and click verdict data
 
@@ -219,7 +218,7 @@ The verdict values are described in the following list:
 
 ## Start automated investigation and response in Threat Explorer
 
-[Automated investigation and response (AIR)](air-about-office.md) in Defender for Office 365 Plan 2 can save time and effort as you investigate and mitigate cyberattacks. You can configure alerts that trigger a security playbook, and you can start AIR in Threat Explorer. For details, see [Example: A security administrator triggers an investigation from Explorer](air-about-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
+[Automated investigation and response (AIR)](air-about.md) in Defender for Office 365 Plan 2 can save time and effort as you investigate and mitigate cyberattacks. You can configure alerts that trigger a security playbook, and you can start AIR in Threat Explorer. For details, see [Example: A security administrator triggers an investigation from Explorer](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
 ## Other articles
 

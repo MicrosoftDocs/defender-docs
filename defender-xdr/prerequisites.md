@@ -49,7 +49,7 @@ Any of these licenses gives you access to Microsoft Defender XDR features via th
 
 For more information, [view the Microsoft 365 Enterprise service plans](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
 
-> Don't have license yet? [Try or buy a Microsoft 365 subscription](/Microsoft-365/commerce/try-or-buy-microsoft-365)
+> Don't have license yet? [Try or buy a Microsoft 365 subscription](/commerce/try-or-buy-microsoft-365)
 
 ### Check your existing  licenses
 

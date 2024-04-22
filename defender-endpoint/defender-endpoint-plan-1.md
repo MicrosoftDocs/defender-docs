@@ -32,14 +32,14 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 
 The green boxes in the following image depict what's included in Defender for Endpoint Plan 1:
 
-:::image type="content" source="../media/mde-p1/mde-p1-overview-diagram.png" alt-text="A diagram showing what's included with Defender for Endpoint Plan 1" lightbox="../media/mde-p1/mde-p1-overview-diagram.png":::
+:::image type="content" source="/defender/media/mde-p1/mde-p1-overview-diagram.png" alt-text="A diagram showing what's included with Defender for Endpoint Plan 1" lightbox="/defender/media/mde-p1/mde-p1-overview-diagram.png":::
 
 Use this guide to:
 
 - [Get an overview of what's included in Defender for Endpoint Plan 1](#defender-for-endpoint-plan-1-capabilities)
 - [Learn how to set up and configure Defender for Endpoint Plan 1](mde-p1-setup-configuration.md)
 - [Get started using the Microsoft Defender portal, where you can view incidents and alerts, manage devices, and use reports about detected threats](mde-plan1-getting-started.md)
-- [Get an overview of maintenance and operations](manage-mde-post-migration.md)
+- [Get an overview of maintenance and operations](preferences-setup.md)
 
 ## Defender for Endpoint Plan 1 capabilities
 
@@ -114,7 +114,7 @@ To learn more, see [Protect important folders with controlled folder access](con
 
 Sometimes threats to your organization's devices come in the form of files on removable drives, such as USB drives. Defender for Endpoint includes capabilities to help prevent threats from unauthorized peripherals from compromising your devices. You can configure Defender for Endpoint to block or allow removable devices and files on removable devices. 
 
-To learn more, see [Control USB devices and removable media](control-usb-devices-using-intune.md).
+To learn more, see [Control USB devices and removable media](device-control-overview.md).
 
 ### Web protection
 
@@ -151,7 +151,7 @@ To learn more, see [Application control for Windows](/windows/security/threat-pr
 
 Defender for Endpoint Plan 1 includes the Microsoft Defender portal, which enables your security team to view current information about detected threats, take appropriate actions to mitigate threats, and centrally manage your organization's threat protection settings.
 
-To learn more, see [Microsoft Defender portal overview](portal-overview.md).
+To learn more, see [Microsoft Defender portal overview](/defender-xdr/microsoft-365-security-center-mde).
 
 ### Role-based access control
 
@@ -174,7 +174,7 @@ To learn more, see [Get started with Microsoft Defender for Endpoint Plan 1](mde
 
 With the Defender for Endpoint APIs, you can automate workflows and integrate with your organization's custom solutions. 
 
-To learn more, see [Defender for Endpoint APIs](management-apis.md). 
+To learn more, see [Defender for Endpoint APIs](api/management-apis.md). 
 
 ## Cross-platform support
 
@@ -191,7 +191,7 @@ Servers require an additional license, such as:
 
 - **Microsoft Defender for Servers Plan 1 or Plan 2** (*recommended for enterprise customers*) as part of the [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offering. To learn more. see [Overview of Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-introduction).
 - **Microsoft Defender for Endpoint for Servers** (*recommended for enterprise customers*). To learn more, see [Defender for Endpoint onboarding Windows Server](onboard-windows-server.md).
-- **Microsoft Defender for Business servers** (*for small and medium-sized businesses who have [Microsoft Defender for Business](../defender-business/mdb-overview.md)*). To learn more, see [How to get Microsoft Defender for Business servers](../defender-business/get-defender-business.md#how-to-get-microsoft-defender-for-business-servers).
+- **Microsoft Defender for Business servers** (*for small and medium-sized businesses who have [Microsoft Defender for Business](/defender-business/mdb-overview.md)*). To learn more, see [How to get Microsoft Defender for Business servers](/defender-business/get-defender-business#how-to-get-microsoft-defender-for-business-servers).
 
 See [Microsoft licensing and product terms](https://www.microsoft.com/en-us/licensing/product-licensing/products).
 
@@ -199,6 +199,6 @@ See [Microsoft licensing and product terms](https://www.microsoft.com/en-us/lice
 
 - [Set up and configure Defender for Endpoint Plan 1](mde-p1-setup-configuration.md)
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
-- [Manage Defender for Endpoint Plan 1](manage-mde-post-migration.md)
+- [Manage Defender for Endpoint Plan 1](preferences-setup.md)
 - [Learn about exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

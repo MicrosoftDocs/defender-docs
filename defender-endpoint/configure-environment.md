@@ -47,7 +47,7 @@ The following downloadable spreadsheet lists the services and their associated U
 > - To use the new onboarding method, devices must meet specific prerequisites and use a new onboarding package. For more information, see [prerequisites](configure-device-connectivity.md#prerequisites). You can migrate previously onboarded devices. See, [migrating devices to streamlined connectivity](migrate-devices-streamlined.md
 ).<br>
 > - Certain services are not included in this consolidation. You must verify that you maintain connectivity with the required services. For details on services **not** included in the consolidation, see the [streamlined URL sheet](https://go.microsoft.com/fwlink/?linkid=2248278) or [onboarding devices using streamlined method](configure-device-connectivity.md).
-> - Devices running the MMA agent are not supported under streamlined solution and must be onboarded using the down-level method. For a list of required URLs, see the MMA tab in the [streamlined URL list](https://go.microsoft.com/fwlink/?linkid=2248278). Devices running legacy Windows version 1607, 1703, 1709, or 1803 can onboard using the new onboarding package but still require a longer list of URLs. For more information, see the preceeding table.
+> - Devices running the MMA agent are not supported under streamlined solution and must be onboarded using the down-level method. For a list of required URLs, see the MMA tab in the [streamlined URL list](https://go.microsoft.com/fwlink/?linkid=2248278). Devices running legacy Windows version 1607, 1703, 1709, or 1803 can onboard using the new onboarding package but still require a longer list of URLs. For more information, see the preceding table.
 
 <br>
 
@@ -156,7 +156,7 @@ Depending on the operating system, the proxy to be used for Microsoft Defender f
 
 4. Check the Microsoft Defender for Endpoint URLs list for the complete list of requirements for your region (refer to the Service URLs [Spreadsheet](https://go.microsoft.com/fwlink/?linkid=2247417)).
 
-  :::image type="content" source="../media/defender-endpoint/admin-powershell.png" alt-text="This is admin PowerShell.":::
+  :::image type="content" source="/defender/media/defender-endpoint/admin-powershell.png" alt-text="This is admin PowerShell.":::
 
 The wildcards (\*) used in `*.ods.opinsights.azure.com`, `*.oms.opinsights.azure.com`, and `*.agentsvc.azure-automation.net` URL endpoints can be replaced with your specific Workspace ID. The Workspace ID is specific to your environment and workspace. It can be found in the Onboarding section of your tenant within the Microsoft Defender portal.
 

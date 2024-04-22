@@ -25,7 +25,7 @@ search.appverid: met150
 **Applies to:**
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
+- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 **Platforms**
 - Windows
@@ -75,7 +75,7 @@ All remediation actions, whether pending or completed, are tracked in the [Actio
 
 ## Requirements for AIR
 
-Your subscription must include [Defender for Endpoint](microsoft-defender-endpoint.md) or [Defender for Business](../defender-business/mdb-overview.md).
+Your subscription must include [Defender for Endpoint](microsoft-defender-endpoint.md) or [Defender for Business](/defender-business/mdb-overview).
 
 > [!NOTE]
 > Automated investigation and response requires Microsoft Defender Antivirus for running in passive mode or active mode. If Microsoft Defender Antivirus is disabled or uninstalled, Automated Investigation and Response will not function correctly.

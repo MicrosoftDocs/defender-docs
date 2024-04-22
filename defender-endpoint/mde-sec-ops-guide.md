@@ -48,9 +48,9 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
    - Device management 
    - Configure Microsoft Defender Security Center time zone settings 
 
-- **Set up Microsoft Defender XDR incident notifications** <p> To get email notifications on defined Microsoft Defender XDR incidents, it's recommended that you configure email notifications. See [Get incident notifications by email](../defender/incidents-overview.md#get-incident-notifications-by-email).
+- **Set up Microsoft Defender XDR incident notifications** <p> To get email notifications on defined Microsoft Defender XDR incidents, it's recommended that you configure email notifications. See [Incident notifications by email](/defender/incidents-overview#incident-notifications-by-email).
 
-- **Connect to SIEM (Sentinel)** <p> If you have existing security information and event management (SIEM) tools, you can integrate them with Microsoft Defender XDR. See [Integrate your SIEM tools with Microsoft Defender XDR](../defender/configure-siem-defender.md) and [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
+- **Connect to SIEM (Sentinel)** <p> If you have existing security information and event management (SIEM) tools, you can integrate them with Microsoft Defender XDR. See [Integrate your SIEM tools with Microsoft Defender XDR](/defender/configure-siem-defender) and [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
 
 - **Review data discovery configuration** <p> Review the Microsoft Defender for Endpoint device discovery configuration to ensure it's configured as required. See [Device discovery overview](device-discovery.md).
 
@@ -68,7 +68,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 
     When Microsoft Defender for Endpoint identifies Indicators of compromise (IOCs) or Indicators of attack (IOAs) and generates an alert, the alert is included in an incident and displayed in the **Incidents** queue in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). 
     
-    Review these incidents to respond to any Microsoft Defender for Endpoint alerts and resolve once the incident has been remediated. See [Get incident notifications by email](../defender/incidents-overview.md#get-incident-notifications-by-email) and [View and organize the Microsoft Defender for Endpoint Incidents queue](view-incidents-queue.md).
+    Review these incidents to respond to any Microsoft Defender for Endpoint alerts and resolve once the incident has been remediated. See [Incident notifications by email](/defender/incidents-overview.md#incident-notifications-by-email) and [View and organize the Microsoft Defender for Endpoint Incidents queue](view-incidents-queue.md).
 
 - **Manage false positive and false negative detections**
 
@@ -105,7 +105,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
       
     Review the Message center messages to understand any upcoming changes that impact your environment. 
      
-    You can access this in the Microsoft 365 admin center under the Health tab. See [How to check Microsoft 365 service health](/Microsoft-365/enterprise/view-service-health).
+    You can access this in the Microsoft 365 admin center under the Health tab. See [How to check Microsoft 365 service health](/enterprise/view-service-health).
 
 ### Security operations team  
 
@@ -121,7 +121,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 
 - **Review threat and vulnerability (TVM) status** 
 
-    Review TVM to identify any new vulnerabilities and recommendations that require action. See [Vulnerability management dashboard.](../defender-vulnerability-management/../defender-vulnerability-management/tvm-dashboard-insights.md)
+    Review TVM to identify any new vulnerabilities and recommendations that require action. See [Vulnerability management dashboard.](/defender-vulnerability-management/tvm-dashboard-insights)
 
 - **Review attack surface reduction reporting** 
 
@@ -178,7 +178,7 @@ These tasks are seen as maintenance for your security posture and are critical f
 
 - **Review custom detections** 
 
-    Periodically review whether the custom detections that have been created are still valid and effective. See [Review custom detection](../defender/custom-detection-rules.md).
+    Periodically review whether the custom detections that have been created are still valid and effective. See [Review custom detection](/defender/custom-detection-rules).
 
 - **Review alerts suppression**
 

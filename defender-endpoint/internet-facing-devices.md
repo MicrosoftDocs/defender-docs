@@ -50,7 +50,7 @@ For each onboarded device identified as internet-facing, the internet facing tag
 
 1. Go to **Assets** \> **Device** in the [Microsoft Defender portal](https://security.microsoft.com/machines/).
 
-   :::image type="content" source="../media/defender-endpoint/internet-facing-tag.png" alt-text="Screenshot of the internet-facing tag" lightbox="../media/defender-endpoint/internet-facing-tag.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-tag.png" alt-text="Screenshot of the internet-facing tag" lightbox="/defender/media/defender-endpoint/internet-facing-tag.png":::
 
 Hover over the internet-facing tag to see why it was applied, possible reasons are:
 
@@ -61,7 +61,7 @@ At the top of the page, you can view a counter that shows the number of devices 
 
 You can use filters to focus in on internet-facing devices and investigate the risk they may introduce into your organization.
 
-   :::image type="content" source="../media/defender-endpoint/internet-facing-filter.png" alt-text="Screenshot of the internet-facing filter" lightbox="../media/defender-endpoint/internet-facing-filter.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-filter.png" alt-text="Screenshot of the internet-facing filter" lightbox="/defender/media/defender-endpoint/internet-facing-filter.png":::
 
 > [!NOTE]
 > If no new events for a device occur for 48 hours, the Internet-facing tag is removed and it will no longer be visible in the Microsoft Defender portal.
@@ -70,7 +70,7 @@ You can use filters to focus in on internet-facing devices and investigate the r
 
 To learn more about an internet-facing device, select the device in the device inventory to open its flyout pane:
 
-   :::image type="content" source="../media/defender-endpoint/internet-facing-details.png" alt-text="Screenshot of the internet facing device details page" lightbox="../media/defender-endpoint/internet-facing-details.png":::
+   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-details.png" alt-text="Screenshot of the internet facing device details page" lightbox="/defender/media/defender-endpoint/internet-facing-details.png":::
 
 This pane includes details on whether the device was detected by a Microsoft external scan or received an external incoming communication. The external network interface address and port fields provide details on the external IP and port that were scanned at the time this device was identified as internet facing.
 
@@ -105,7 +105,7 @@ This query returns the following fields for each internet-facing device with the
 
 ### Get information on inbound connections
 
-For TCP connections, you can gain further insights into applications or services identified as listening on a device by querying [DeviceNetworkEvents](../defender/advanced-hunting-devicenetworkevents-table.md).
+For TCP connections, you can gain further insights into applications or services identified as listening on a device by querying [DeviceNetworkEvents](/defender/advanced-hunting-devicenetworkevents-table).
 
 Use the following query for devices tagged with the reason **This device received external incoming communication**:
 

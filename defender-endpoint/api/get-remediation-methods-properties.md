@@ -26,12 +26,12 @@ ms.date: 04/24/2021
 
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender Vulnerability Management](../../defender-vulnerability-management/index.yml)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](../../defender-vulnerability-management/get-defender-vulnerability-management.md).
+> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 [!Include[Prerelease information](../../includes/prerelease.md)]
 
@@ -39,7 +39,7 @@ ms.date: 04/24/2021
 
 [!Include[Improve request performance](../../includes/improve-request-performance.md)]
 
-The API response contains [Microsoft Defender Vulnerability Management](../../defender-vulnerability-management/../defender-vulnerability-management/../defender-vulnerability-management/next-gen-threat-and-vuln-mgt.md) remediation activities that have been created in your tenant.
+The API response contains [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) remediation activities that have been created in your tenant.
 
 ## Methods
 
@@ -49,7 +49,7 @@ Method|Data type|Description
 [List exposed devices of one remediation activity](get-remediation-exposed-devices-activities.md)|Investigation entity|Returns information about exposed devices for the specified remediation activity.
 [Get one remediation activity by ID](get-remediation-one-activity.md)|Investigation entity|Returns information for the specified remediation activity.
 
-Learn more about [remediation activities](../../defender-vulnerability-management/tvm-remediation.md).
+Learn more about [remediation activities](/defender-vulnerability-management/tvm-remediation).
 
 ## Properties
 
@@ -92,7 +92,7 @@ vendorId|String|Related vendor name
 
 - [List exposed devices of one remediation activity](get-remediation-exposed-devices-activities.md)
 
-- [Microsoft Defender Vulnerability Management](../../defender-vulnerability-management/../defender-vulnerability-management/../defender-vulnerability-management/next-gen-threat-and-vuln-mgt.md)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 
-- [Vulnerabilities in your organization](../../defender-vulnerability-management/tvm-weaknesses.md)
+- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

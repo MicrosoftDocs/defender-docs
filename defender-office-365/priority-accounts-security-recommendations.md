@@ -20,8 +20,7 @@ ms.collection:
   - tier1
 ms.custom:
 description: Admins can learn how to elevate the security settings and use reports, alerts, and investigations for priority accounts in their Microsoft 365 organizations.
-ms.subservice: mdo
-ms.service: microsoft-365-security
+ms.service: defender-office-365
 ms.date: 7/31/2023
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -40,15 +39,15 @@ For attackers, ordinary phishing attacks that cast a random net for ordinary or 
 
 Microsoft 365 and Microsoft Defender for Office 365 contain several key features that provide additional layers of security for your priority accounts. This article describes these capabilities and how to use them.
 
-:::image type="content" source="../../media/security-recommendations-for-priority-users.png" alt-text="The summary of the security recommendations in icon form" lightbox="../../media/security-recommendations-for-priority-users.png":::
+:::image type="content" source="/defender/media/security-recommendations-for-priority-users.png" alt-text="The summary of the security recommendations in icon form" lightbox="/defender/media/security-recommendations-for-priority-users.png":::
 
 |Task|All Office 365 Enterprise plans|Microsoft 365 E3|Microsoft 365 E5|
 |---|:---:|:---:|:---:|
-|[Increase sign-in security for priority accounts](#increase-sign-in-security-for-priority-accounts)|:::image type="icon" source="../../media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="../../media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="../../media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|
-|[Use Strict preset security policies for priority accounts](#use-strict-preset-security-policies-for-priority-accounts)|:::image type="icon" source="../../media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="../../media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="../../media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|
-|[Apply user tags to priority accounts](#apply-user-tags-to-priority-accounts)|||:::image type="icon" source="../../media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|
-|[Monitor priority accounts in alerts, reports, and detections](#monitor-priority-accounts-in-alerts-reports-and-detections)|||:::image type="icon" source="../../media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|
-|[Train users](#train-users)|:::image type="icon" source="../../media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="../../media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="../../media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|
+|[Increase sign-in security for priority accounts](#increase-sign-in-security-for-priority-accounts)|:::image type="icon" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|
+|[Use Strict preset security policies for priority accounts](#use-strict-preset-security-policies-for-priority-accounts)|:::image type="icon" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|
+|[Apply user tags to priority accounts](#apply-user-tags-to-priority-accounts)|||:::image type="icon" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|
+|[Monitor priority accounts in alerts, reports, and detections](#monitor-priority-accounts-in-alerts-reports-and-detections)|||:::image type="icon" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|
+|[Train users](#train-users)|:::image type="icon" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|:::image type="icon" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" border="false":::|
 
 > [!NOTE]
 > For information about securing _privileged accounts_ (admin accounts), see [this topic](/purview/privileged-access-management).

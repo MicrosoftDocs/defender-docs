@@ -59,7 +59,7 @@ If these prerequisites are met, proceed to the next step to test the rule in aud
 
 ## Use audit mode to test the rule
 
-Follow these instructions in [Use the demo tool to see how attack surface reduction rules work](evaluate-attack-surface-reduction.md) to test the specific rule you're encountering problems with.
+Follow these instructions in [Use the demo tool to see how attack surface reduction rules work](attack-surface-reduction-rules-deployment-test.md) to test the specific rule you're encountering problems with.
 
 1. Enable audit mode for the specific rule you want to test. Use Group Policy to set the rule to **Audit mode** (value: **2**) as described in [Enable attack surface reduction rules](enable-attack-surface-reduction.md). Audit mode allows the rule to report the file or process, but allows it to run.
 
@@ -113,5 +113,5 @@ When you report a problem with attack surface reduction rules, you're asked to c
 
 - [Attack surface reduction rules](attack-surface-reduction.md)
 - [Enable attack surface reduction rules](enable-attack-surface-reduction.md)
-- [Evaluate attack surface reduction rules](evaluate-attack-surface-reduction.md)
+- [Evaluate attack surface reduction rules](attack-surface-reduction-rules-deployment-test.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

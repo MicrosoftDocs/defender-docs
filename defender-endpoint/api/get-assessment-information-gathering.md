@@ -27,11 +27,11 @@ ms.date: 07/26/2022
 
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender Vulnerability Management](../../defender-vulnerability-management/index.yml)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink) <br/>
-> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](../../defender-vulnerability-management/get-defender-vulnerability-management.md).
+> Want to experience Microsoft Defender Vulnerability Management? Learn more about how you can sign up to the [Microsoft Defender Vulnerability Management public preview trial](/defender-vulnerability-management/get-defender-vulnerability-management).
 
 This API response returns all information gathering assessments for all devices, on a per-device basis. It returns a table with a separate entry for every DeviceId.
 
@@ -115,8 +115,8 @@ GET https://api.securitycenter.microsoft.com/api/machines/InfoGatheringExport?$s
 
 ## Other related
 
-- [DeviceTvmInfoGathering](../../defender/advanced-hunting-devicetvminfogathering-table.md)
-- [DeviceTvmInfoGatheringKB](../../defender/advanced-hunting-devicetvminfogatheringkb-table.md)
-- [Vulnerability management](../../defender-vulnerability-management/defender-vulnerability-management.md)
-- [Vulnerabilities in your organization](../../defender-vulnerability-management/../defender-vulnerability-management/tvm-weaknesses.md)
+- [DeviceTvmInfoGathering](/defender/advanced-hunting-devicetvminfogathering-table)
+- [DeviceTvmInfoGatheringKB](/defender/advanced-hunting-devicetvminfogatheringkb-table)
+- [Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)
+- [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

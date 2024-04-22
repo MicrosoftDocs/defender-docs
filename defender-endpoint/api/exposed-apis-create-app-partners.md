@@ -28,7 +28,7 @@ search.appverid: met150
 
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Business](../../defender-business/index.yml)
+- [Microsoft Defender for Business](/defender-business)
 
 > [!IMPORTANT]
 > Advanced hunting capabilities are not included in Defender for Business.
@@ -104,7 +104,7 @@ In the following example we use **'Read all alerts'** permission:
 
     **Important**: After you select **Add**, make sure to copy the generated secret value. You won't be able to retrieve it after you leave!
 
-     :::image type="content" source="../images/webapp-create-key2.png" alt-text="The create app key" lightbox="../images/webapp-create-key2.png":::
+     :::image type="content" source="../media/webapp-create-key2.png" alt-text="The create app key" lightbox="../media/webapp-create-key2.png":::
 
 4. Write down your application ID:
 
@@ -238,7 +238,7 @@ Confirm you received a correct token.
 
    The "tid" claim is the tenant ID the token belongs to.
 
-   :::image type="content" source="../images/webapp-decoded-token.png" alt-text="The token validation page" lightbox="../images/webapp-decoded-token.png":::
+   :::image type="content" source="../media/webapp-decoded-token.png" alt-text="The token validation page" lightbox="../media/webapp-decoded-token.png":::
 
 ## Use the token to access Microsoft Defender for Endpoint API
 

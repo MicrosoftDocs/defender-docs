@@ -87,7 +87,7 @@ conceptualContent:
         - title: Microsoft Defender for Office 365
           summary: Protect your email, prevent phishing attacks, and protect your collaboration tools
           links: 
-          - url: /defender-office-365/defender-for-office-365
+          - url: /defender-office-365/mdo-about
             itemType: overview
             text: Overview
           - url: /defender-office-365/defender-for-office-365-whats-new
@@ -111,10 +111,10 @@ conceptualContent:
           links: 
           - url: /defender-for-identity/what-is
             itemType: overview
-            text: overview
+            text: Overview
           - url: /defender-for-identity/whats-new
             itemType: whats-new
-            text: What's New
+            text: What's new
           - url: /defender-for-identity/deploy/quick-installation-guide
             itemType: get-started
             text: Get started
@@ -133,7 +133,7 @@ conceptualContent:
           links: 
           - url: /defender-cloud-apps/what-is-defender-for-cloud-apps
             itemType: overview
-            text: Microsoft Defender for Cloud Apps
+            text: Overview
           - url: /defender-cloud-apps/release-notes
             itemType: whats-new
             text: What's new
@@ -220,6 +220,3 @@ additionalContent:
           text: Microsoft Defender for Resource Manager
         - url: /azure/defender-for-cloud/defender-for-databases-introduction
           text: Microsoft Defender for open-source relational databases
-
-
-

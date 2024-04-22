@@ -31,15 +31,15 @@ Turn on the preview experience setting to be among the first to try upcoming fea
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Advanced features**.
 
-    :::image type="content" source="../media/atp-preview-features-new.png" alt-text="The settings and preview experience" lightbox="../media/atp-preview-features-new.png":::
+    :::image type="content" source="/defender/media/atp-preview-features-new.png" alt-text="The settings and preview experience" lightbox="/defender/media/atp-preview-features-new.png":::
 
 
 2. Toggle the setting between **On** and **Off** and select **Save preferences**.
 
 ## Related topics
-- [Update general settings in Microsoft Defender for Endpoint](data-retention-settings.md)
+- [Update general settings in Microsoft Defender for Endpoint](preferences-setup.md)
 - [Turn on advanced features in Microsoft Defender for Endpoint](advanced-features.md)
-- [Configure email notifications in Microsoft Defender for Endpoint](configure-email-notifications.md)
+- [Configure email notifications in Microsoft Defender for Endpoint](/defender-xdr/configure-email-notifications)
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

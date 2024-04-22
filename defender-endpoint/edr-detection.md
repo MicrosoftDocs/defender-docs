@@ -135,6 +135,6 @@ After a few minutes, a detection should be raised in Microsoft Defender XDR.
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 - [Manage suppression rules](manage-suppression-rules.md)
 - [Create indicators of compromise (IoC)](manage-indicators.md)
-- [Create and manage custom detections rules](../defender/custom-detection-rules.md)
+- [Create and manage custom detections rules](/defender/custom-detection-rules)
 
 Read through [Microsoft Defender for Endpoint Security Operations Guide](mde-sec-ops-guide.md).

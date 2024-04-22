@@ -42,7 +42,7 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 <td><center><a href="microsoft-defender-endpoint.md#ngp"><img src="media/ngp-icon.png" alt="Next-generation protection"><br> <b>Next-generation protection</b></a></center></td>
 <td><center><a href="microsoft-defender-endpoint.md#edr"><img src="media/edr-icon.png" alt="Endpoint detection and response"><br> <b>Endpoint detection and response</b></a></center></td>
 <td><center><a href="microsoft-defender-endpoint.md#ai"><img src="media/air-icon.png" alt="Automated investigation and remediation"><br> <b>Automated investigation and remediation</b></a></center></td>
-<td><center><a href="microsoft-defender-endpoint.md#mte"><img src="images/mte-icon.png" alt="Microsoft Threat Experts"><br> <b>Microsoft Threat Experts</b></a></center></td>
+<td><center><a href="microsoft-defender-endpoint.md#mte"><img src="media/mte-icon.png" alt="Microsoft Threat Experts"><br> <b>Microsoft Threat Experts</b></a></center></td>
 </tr>
 <tr>
 <td colspan="7">
@@ -92,7 +92,7 @@ Defender for Endpoint supports two ways to manage permissions:
 
 The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is where you can access your Defender for Endpoint capabilities.
 
-1. [Review what to expect](../defender/microsoft-365-defender-portal.md) in the Microsoft Defender portal.
+1. [Review what to expect](/defender/microsoft-365-defender-portal) in the Microsoft Defender portal.
 
 2. Go to [https://security.microsoft.com](https://security.microsoft.com) and sign in.
 

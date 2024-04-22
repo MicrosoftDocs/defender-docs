@@ -48,7 +48,7 @@ When our experts conclude their investigation on an incident, the incident's **C
 
 The **Determination** field corresponding to each classification is also updated to provide more insights on the findings that led our experts to determine the said classification.
 
-:::image type="content" source="./media/xdr/incidents-xdr-1.png" alt-text="Screenshot of Incidents page showing the Tags, Status, Assigned to, Classification, and Determination fields." lightbox="./media/xdr/incidents-xdr-1.png":::
+:::image type="content" source="/defender/media/xdr/incidents-xdr-1.png" alt-text="Screenshot of Incidents page showing the Tags, Status, Assigned to, Classification, and Determination fields." lightbox="/defender/media/xdr/incidents-xdr-1.png":::
 
 If an incident is classified as _False Positive_ or _Informational_, _Expected Activity_, then the incident's **Status** field gets updated to _Resolved_. Our experts then conclude their work on this incident and the **Assigned to** field gets updated to _Unassigned_. Our experts may share updates from their investigation and their conclusion when resolving an incident. These updates are posted in the incident's **Comments and history** flyout panel.
 
@@ -63,11 +63,11 @@ Otherwise, if an incident is classified as _True Positive_, our experts then ide
 
 You can check the number of incidents that require your action in the Defender Experts banner at the top of the Microsoft Defender homepage.
 
-:::image type="content" source="./media/xdr/view-incidents.png" alt-text="Screenshot of the Defender Experts card in Microsoft Defender portal showing the number of incidents awaiting customer action." lightbox="./media/xdr/view-incidents.png":::
+:::image type="content" source="/defender/media/xdr/view-incidents.png" alt-text="Screenshot of the Defender Experts card in Microsoft Defender portal showing the number of incidents awaiting customer action." lightbox="/defender/media/xdr/view-incidents.png":::
 
 To view the incidents our experts have investigated or are currently investigating, filter the incident queue in your Microsoft Defender portal using the _Defender Experts_ tag.
 
-:::image type="content" source="./media/xdr/incidents-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Defender Experts tag." lightbox="./media/xdr/incidents-filter.png":::
+:::image type="content" source="/defender/media/xdr/incidents-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Defender Experts tag." lightbox="/defender/media/xdr/incidents-filter.png":::
 
 <a name='how-to-use-managed-response-in-microsoft-365-defender'></a>
 
@@ -81,7 +81,7 @@ Select **View managed response** on the task card or on the top of the portal pa
 
 The **Investigation summary** section provides you with more context about the incident analyzed by our experts to provide you with visibility about its severity and potential impact if not addressed immediately. It could include the device timeline, indicators of attack, and indicators of compromise (IOCs) observed, and other details.
 
-:::image type="content" source="./media/xdr/investigation-summary.png" alt-text="Screenshot of managed response investigation summary." lightbox="./media/xdr/investigation-summary.png":::
+:::image type="content" source="/defender/media/xdr/investigation-summary.png" alt-text="Screenshot of managed response investigation summary." lightbox="/defender/media/xdr/investigation-summary.png":::
 
 #### Actions
 
@@ -106,18 +106,18 @@ Apart from these one-click actions, you can also receive managed responses from 
 
 1. Select the arrow buttons in an action card to expand it and read more information about the required action.
 
-   :::image type="content" source="./media/xdr/action-card-1.png" alt-text="Screenshot of managed response action to isolate the device prod server." lightbox="./media/xdr/action-card-1.png":::
+   :::image type="content" source="/defender/media/xdr/action-card-1.png" alt-text="Screenshot of managed response action to isolate the device prod server." lightbox="/defender/media/xdr/action-card-1.png":::
 
 2. For cards with one-click response actions, select the required action. The **Action status** in the card changes to **In progress**, then to **Failed** or **Completed**, depending on the action's outcome.
 
-   :::image type="content" source="./media/xdr/action-card-2.png" alt-text="Screenshot of managed response action showing in-progress to isolate the device prod server." lightbox="./media/xdr/action-card-2.png":::
+   :::image type="content" source="/defender/media/xdr/action-card-2.png" alt-text="Screenshot of managed response action showing in-progress to isolate the device prod server." lightbox="/defender/media/xdr/action-card-2.png":::
 
    > [!TIP]
    > You can also monitor the status of in-portal response actions in the [Action center](m365d-action-center.md). If a response action fails, try doing it again from the **View device details** page or [initiate a chat](communicate-defender-experts-xdr.md#in-portal-chat) with Defender Experts.
 
 3. For cards with required actions that you need to perform manually, select **I've completed this action** once you've performed them, then select **Yes, I've done it** in the confirmation dialog box that appears.
 
-   :::image type="content" source="./media/xdr/ive-completed-this-action.png" alt-text="Screenshot of managed response action to confirm action completion." lightbox="./media/xdr/ive-completed-this-action.png":::
+   :::image type="content" source="/defender/media/xdr/ive-completed-this-action.png" alt-text="Screenshot of managed response action to confirm action completion." lightbox="/defender/media/xdr/ive-completed-this-action.png":::
 
 4. If you don't want to complete a required action right away, select **Skip**, then select **Yes, skip this action** in the confirmation dialog box that appears.
 
@@ -147,11 +147,11 @@ The following section describes how an incident handled by our experts is update
 1. An incident that our experts have confirmed as a _True Positive_ has a managed response posted in Microsoft Defender XDR, and a **Tag** _Awaiting Customer Action_ and the **Owner** is listed as _Customer_. You need to act on the incident based on using the provided managed response.
 1. Once our experts have concluded their investigation and closed an incident as _False Positive_ or _Informational_, _Expected Activity_, the incident's **Status** is updated to _Resolved_, the **Owner** is updated to _Unassigned_, and a **Reason for closing** is provided.
 
-:::image type="content" source="./media/xdr/microsoft-sentinel-incidents.png" alt-text="Screenshot of Microsoft Sentinel incidents." lightbox="./media/xdr/microsoft-sentinel-incidents.png":::
+:::image type="content" source="/defender/media/xdr/microsoft-sentinel-incidents.png" alt-text="Screenshot of Microsoft Sentinel incidents." lightbox="/defender/media/xdr/microsoft-sentinel-incidents.png":::
 
 ### Other applications
 
-You could obtain visibility into incidents in your SIEM or ITSM application by using the [Microsoft Defender XDR API](api-overview.md) or [connectors in Sentinel](/azure/sentinel/data-connectors-reference).
+You could obtain visibility into incidents in your SIEM or ITSM application by using the [Microsoft Defender XDR API](/defender/api-overview) or [connectors in Sentinel](/azure/sentinel/data-connectors-reference).
 
 After configuring a connector, the updates by Defender Experts to an incident's **Status**, **Assigned to**, **Classification**, and **Determination** fields in Microsoft Defender XDR can be synchronized with the third-party SIEM or ITSM applications, depending on how the field mapping has been implemented. To illustrate, you can take a look at the [connector available from Sentinel to ServiceNow](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Servicenow/StoreApp).
 
@@ -159,7 +159,7 @@ After configuring a connector, the updates by Defender Experts to an incident's 
 
 Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of the work our expert analysts are doing on your behalf, aggregate information about your incident landscape, and granular details about specific incidents. Your service delivery manager (SDM) also uses the report to provide you with more context regarding the service during a monthly business review.
 
-:::image type="content" source="./media/xdr/defender-xdr-report.png" alt-text="Screenshot of Defender Experts for XDR report." lightbox="./media/xdr/defender-xdr-report.png":::
+:::image type="content" source="/defender/media/xdr/defender-xdr-report.png" alt-text="Screenshot of Defender Experts for XDR report." lightbox="/defender/media/xdr/defender-xdr-report.png":::
 
 Each section of the report is designed to provide more insights about the incidents our experts investigated and resolved in your environment in real time. You can also select the **Date range** to get detailed information about incidents based on severity, category, and understand the time taken to investigate and resolve an incident during a specific period.
 
@@ -197,11 +197,11 @@ The option to **Ask Defender Experts** is available in the incidents and alerts 
 
 - _**Alerts page flyout menu**_:
 
-:::image type="content" source="./media/mte/defenderexperts/alerts-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Alerts page flyout menu in the Microsoft Defender portal." lightbox="./media/mte/defenderexperts/alerts-flyout-menu.png":::  
+:::image type="content" source="/defender/media/mte/defenderexperts/alerts-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Alerts page flyout menu in the Microsoft Defender portal." lightbox="/defender/media/mte/defenderexperts/alerts-flyout-menu.png":::  
 
 - _**Incidents page actions menu**_:
 
-:::image type="content" source="./media/mte/defenderexperts/incidents-page-actions-menu.png" alt-text="IScreenshot of the Ask Defender Experts menu option in the Incidents page actions menu in the Microsoft Defender portal." lightbox="./media/mte/defenderexperts/incidents-page-actions-menu.png":::
+:::image type="content" source="/defender/media/mte/defenderexperts/incidents-page-actions-menu.png" alt-text="IScreenshot of the Ask Defender Experts menu option in the Incidents page actions menu in the Microsoft Defender portal." lightbox="/defender/media/mte/defenderexperts/incidents-page-actions-menu.png":::
 
 ### See also
 

@@ -1,12 +1,7 @@
 ---
 title: Getting started with defense in-depth configuration for email security
 description: Step-by-step configuration guidance on how to get security value from Microsoft Defender for Office 365 when you have third party email filtering.
-search.product:
-ms.service: microsoft-365-security
-ms.subservice: mdo
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
+ms.service: defender-office-365
 f1.keywords:
   - NOCSH
 ms.author: benharri
@@ -20,7 +15,7 @@ ms.collection:
 - tier3
 ms.topic: how-to
 search.appverid: met150
-ms.date: 1/31/2023
+ms.date: 01/31/2023
 ---
 
 # Getting the best security value from Microsoft Defender for Office 365 when you have third party email filtering
@@ -59,7 +54,7 @@ The following information details how to get the most out of your investment, br
 
 - Threat Analytics is our in-product, detailed threat intelligence solution from expert Microsoft security researchers. Threat Analytics contains detailed reports that are designed to get you up to speed on the latest threat groups, attack techniques, how to protect your organization with Indicators of Compromise (IOC) and much more.
 
-**Read more, watch an overview video and get started here :** [Threat analytics in Microsoft Defender XDR](../../defender/threat-analytics.md)
+**Read more, watch an overview video and get started here :** [Threat analytics in Microsoft Defender XDR](/defender/threat-analytics)
 
 - Explorer can be used to hunt threats, visualize mail flow patterns, spot trends, and identify the impact of changes you make during tuning Defender for Office 365. You can also quickly delete messages from your organization with a few simple clicks.
 
@@ -97,7 +92,7 @@ The following information details how to get the most out of your investment, br
 
 - Advanced hunting can be used to proactively hunt for threats in your organization, using shared queries from the community to help you get started. You can also use custom detections to set up alerts when personalized criteria are met.
 
-**Read more, watch an overview video and get started here:** [Overview - Advanced hunting](../../defender/advanced-hunting-overview.md)
+**Read more, watch an overview video and get started here:** [Overview - Advanced hunting](/defender/advanced-hunting-overview)
 
 ### Education features
 

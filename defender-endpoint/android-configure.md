@@ -71,7 +71,7 @@ Network protection in Microsoft Defender for endpoint is disabled by default. Ad
 1. In Settings page, select **'Use configuration designer'** and add **'Enable Network Protection in Microsoft Defender'** as the key and value as **'1'** to enable Network Protection. (Network protection is disabled by default)
 
     > [!div class="mx-imgBorder"]
-    > ![Image of how to select enable network protection policy](images/selectnp.png)
+    > ![Image of how to select enable network protection policy](media/selectnp.png)
 
     > [!div class="mx-imgBorder"]
     > ![Image of add configuration policy.](media/npvalue.png)
@@ -89,7 +89,7 @@ Network protection in Microsoft Defender for endpoint is disabled by default. Ad
 
    Any other separation characters are invalid.
 
-   > ![Image of trusted CA certificate.](images/trustca.png)
+   > ![Image of trusted CA certificate.](media/trustca.png)
 
 1. For other configurations related to Network protection, add the following keys and appropriate corresponding value.
 
@@ -173,7 +173,7 @@ Enabling/disabling the above privacy controls won't impact the device compliance
 From version 1.0.3425.0303 of Microsoft Defender for Endpoint on Android, you're able to run vulnerability assessments of the OS and apps installed on the onboarded mobile devices.
 
 > [!NOTE]
-> Vulnerability assessment is part of [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/defender-vulnerability-management.md) in Microsoft Defender for Endpoint.
+> Vulnerability assessment is part of [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) in Microsoft Defender for Endpoint.
 
 **Notes about privacy related to apps from personal devices (BYOD):**
 
@@ -329,7 +329,7 @@ Use the following steps to configure the Device tags:
 
 
 > [!NOTE] 
-> The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take upto 18 hours for tags to reflect in the portal.
+> The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
 
 ## Related articles
 

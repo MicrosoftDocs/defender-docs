@@ -15,7 +15,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: asr
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 12/18/2023
 ---
 
 # Optimize ASR rule deployment and detections
@@ -31,7 +31,7 @@ ms.date: 12/18/2020
 
 [Attack surface reduction rules](./attack-surface-reduction.md) identify and prevent typical malware exploits. They control when and how potentially malicious code can run. For example, they can prevent JavaScript or VBScript from launching a downloaded executable, block Win32 API calls from Office macros, and block processes that run from USB drives.
 
-:::image type="content" source="../media/attack-surface-mgmt.png" alt-text="Attack surface management card" lightbox="../media/attack-surface-mgmt.png":::
+:::image type="content" source="/defender/media/attack-surface-mgmt.png" alt-text="Attack surface management card" lightbox="/defender/media/attack-surface-mgmt.png":::
 
 > *Attack surface management card*
 
@@ -43,7 +43,7 @@ The *Attack surface management card* is an entry point to tools in <a href="http
 
 Select **Go to attack surface management** \> **Reports** \> **Attack surface reduction rules** \> **Add exclusions**. From there, you can navigate to other sections of Microsoft Defender portal.
 
-:::image type="content" source="images/secconmgmt_asr_m365exlusions.png" alt-text="Add exclusions tab in the Attack surface reduction rules page in the Microsoft Defender portal" lightbox="images/secconmgmt_asr_m365exlusions.png":::
+:::image type="content" source="media/secconmgmt-asr-m365exlusions.png" alt-text="Add exclusions tab in the Attack surface reduction rules page in the Microsoft Defender portal" lightbox="media/secconmgmt-asr-m365exlusions.png":::
 
 > *The **Add exclusions** tab in the Attack surface reduction rules page in Microsoft Defender portal*
 

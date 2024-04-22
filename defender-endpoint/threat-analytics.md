@@ -16,7 +16,7 @@ ms.collection:
   - mde-edr
 ms.topic: conceptual
 ms.subservice: edr
-ms.date: 12/18/2020
+ms.date: 12/18/2023
 ---
 
 # Track and respond to emerging threats through threat analytics
@@ -66,7 +66,7 @@ The threat analytics dashboard is a great jump off point for getting to the repo
 
 Select a threat from the dashboard to view the report for that threat.
 
-:::image type="content" source="images/ta_dashboard.png" alt-text="The threat analytics dashboard" lightbox="images/ta_dashboard.png":::
+:::image type="content" source="media/ta-dashboard.png" alt-text="The threat analytics dashboard" lightbox="media/ta-dashboard.png":::
 
 ## View a threat analytics report
 
@@ -76,7 +76,7 @@ Each threat analytics report provides information in three sections: **Overview*
 
 The **Overview** section provides a preview of the detailed analyst report. It also provides charts that highlight the impact of the threat to your organization and your exposure through misconfigured and unpatched devices.
 
-:::image type="content" source="images/ta-overview.png" alt-text="The Overview section of a threat analytics report" lightbox="images/ta-overview.png":::
+:::image type="content" source="media/ta-overview.png" alt-text="The Overview section of a threat analytics report" lightbox="media/ta-overview.png":::
 _Overview section of a threat analytics report_
 
 #### Assess the impact to your organization
@@ -95,7 +95,7 @@ Each report includes charts that provide an overview of how resilient your organ
 
 ### Analyst report: Get expert insight from Microsoft security researchers
 
-Go to the **Analyst report** section to read through the detailed expert write-up. Most reports provide detailed descriptions of attack chains, including tactics and techniques mapped to the MITRE ATT&CK framework, exhaustive lists of recommendations, and powerful [threat hunting](advanced-hunting-overview.md) guidance.
+Go to the **Analyst report** section to read through the detailed expert write-up. Most reports provide detailed descriptions of attack chains, including tactics and techniques mapped to the MITRE ATT&CK framework, exhaustive lists of recommendations, and powerful [threat hunting](/defender/advanced-hunting-overview) guidance.
 
 [Learn more about the analyst report](threat-analytics-analyst-reports.md)
 
@@ -110,9 +110,9 @@ In the **Mitigations** section, review the list of specific actionable recommend
   - Potentially unwanted application (PUA) protection
   - Real-time protection
 
-Mitigation information in this section incorporates data from [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/../defender-vulnerability-management/../defender-vulnerability-management/next-gen-threat-and-vuln-mgt.md), which also provides detailed drill-down information from various links in the report.
+Mitigation information in this section incorporates data from [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management), which also provides detailed drill-down information from various links in the report.
 
-:::image type="content" source="images/ta-mitigations.png" alt-text="The Mitigations section of a threat analytics report" lightbox="images/ta-mitigations.png":::
+:::image type="content" source="media/ta-mitigations.png" alt-text="The Mitigations section of a threat analytics report" lightbox="media/ta-mitigations.png":::
 
 
 _Mitigations section of a threat analytics report_
@@ -129,7 +129,7 @@ When using the reports, keep the following in mind:
 
 ## Related topics
 
-- [Proactively find threats with advanced hunting](advanced-hunting-overview.md)
+- [Proactively find threats with advanced hunting](/defender/advanced-hunting-overview)
 - [Understand the analyst report section](threat-analytics-analyst-reports.md)
-- [Assess and resolve security weaknesses and exposures](../defender-vulnerability-management/../defender-vulnerability-management/../defender-vulnerability-management/next-gen-threat-and-vuln-mgt.md)
+- [Assess and resolve security weaknesses and exposures](/defender-vulnerability-management/defender-vulnerability-management)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

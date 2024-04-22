@@ -39,7 +39,7 @@ There are two settings that are useful for these devices:
 - Prevent Security intelligence updates when running on battery power
 
 The following articles may also be useful in these situations:
-- [Configuring scheduled and catch-up scans](scheduled-catch-up-scans-microsoft-defender-antivirus.md)
+- [Configuring scheduled and catch-up scans](schedule-antivirus-scans.md)
 - [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md)
 - [Deployment guide for Microsoft Defender Antivirus in a virtual desktop infrastructure (VDI) environment](deployment-vdi-microsoft-defender-antivirus.md)
 

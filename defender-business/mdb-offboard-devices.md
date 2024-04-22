@@ -106,7 +106,7 @@ Choose the operating system for your server:
 7. Type `python MicrosoftDefenderATPOffboardingLinuxServer_valid_until_YYYY-MM-DD.py` in the terminal.
 
 > [!TIP]
-> For more information, see [Uninstall](../defender-endpoint/linux-resources.md) in the Microsoft Defender for Endpoint on Linux guidance.
+> For more information, see [Uninstall](/defender-endpoint/linux-resources) in the Microsoft Defender for Endpoint on Linux guidance.
 
 ## [**Mobile devices**](#tab/mobiles)
 

@@ -171,7 +171,7 @@ Microsoft Store apps cannot be blocked by Defender because they're signed by Mic
 
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 - [Create contextual IoC](respond-file-alerts.md#add-indicator-to-block-or-allow-a-file)
-- [Use the Microsoft Defender for Endpoint indicators API](ti-indicator.md)
+- [Use the Microsoft Defender for Endpoint indicators API](api/ti-indicator.md)
 - [Use partner integrated solutions](partner-applications.md)
 
 
