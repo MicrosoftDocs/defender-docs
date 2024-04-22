@@ -79,6 +79,6 @@ If you have any issues, let us know by posting in the [Security, Privacy & Compl
 
 - [Microsoft Secure Score overview](microsoft-secure-score.md)
 - [Assess your security posture](microsoft-secure-score-improvement-actions.md)
-- [What's coming](microsoft-secure-score-whats-coming.md)
+- [What's coming](whats-new.md)
 - [What's new](microsoft-secure-score-whats-new.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

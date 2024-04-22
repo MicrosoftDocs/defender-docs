@@ -151,7 +151,7 @@
           - name: Email and syslog notifications
             href: /defender-for-identity/notifications?toc=/microsoft-365/security/defender/toc.json&bc=/microsoft-365/security/defender/breadcrumb/toc.json
       - name: Protect your Office 365 workloads
-        href: ../office-365-security/index.yml
+        href: ../defender-office-365/index.yml
       - name: Create Custom Defender XDR reports
         href: defender-xdr-custom-reports.md
     - name: Investigate and respond to threats
@@ -667,7 +667,7 @@
     - name: Microsoft Defender XDR docs
       items: 
        - name: Defender for Office 365
-         href: ../office-365-security/index.yml
+         href: ../defender-office-365/index.yml
        - name: Defender for Endpoint
          href: /defender-endpoint
        - name: Defender for Identity

@@ -75,7 +75,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Maintain your environment
-            url: m365bp-mdb-maintain-environment.md
+            url: m365bp-m365bp-mdb-maintain-environment.md
           - text: View your reports
             url: mdb-reports.md
 
