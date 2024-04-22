@@ -57,7 +57,7 @@ You can do the same for command lines.
 
 ## Investigate related events
 
-To use [advanced hunting](advanced-hunting-overview.md) to find events related to the selected Technique, select **Hunt for related events**. This leads to the advanced hunting page with a query to find events related to the Technique.
+To use [advanced hunting](/defender/advanced-hunting-overview) to find events related to the selected Technique, select **Hunt for related events**. This leads to the advanced hunting page with a query to find events related to the Technique.
 
 :::image type="content" source="media/techniques-hunt-for-related-events.png" alt-text="The Hunt for related events option" lightbox="media/techniques-hunt-for-related-events.png":::
 

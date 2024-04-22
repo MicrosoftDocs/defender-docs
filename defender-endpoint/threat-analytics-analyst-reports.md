@@ -50,7 +50,7 @@ Each section of the analyst report is designed to provide actionable information
 |MITRE ATT&CK techniques observed|How observed techniques map to the [MITRE ATT&CK attack framework](https://attack.mitre.org/)|
 |[Mitigations](#apply-additional-mitigations)|Recommendations that can stop or help reduce the impact of the threat. This section also includes mitigations that aren't tracked dynamically as part of the threat analytics report.|
 |[Detection details](#understand-how-each-threat-can-be-detected)|Specific and generic detections provided by Microsoft security solutions that can surface activity or components associated with the threat.|
-|[Advanced hunting](#find-subtle-threat-artifacts-using-advanced-hunting)|[Advanced hunting queries](advanced-hunting-overview.md) for proactively identifying possible threat activity. Most queries are provided to supplement detections, especially for locating potentially malicious components or behaviors that couldn't be dynamically assessed to be malicious.|
+|[Advanced hunting](#find-subtle-threat-artifacts-using-advanced-hunting)|[Advanced hunting queries](/defender/advanced-hunting-overview) for proactively identifying possible threat activity. Most queries are provided to supplement detections, especially for locating potentially malicious components or behaviors that couldn't be dynamically assessed to be malicious.|
 |References|Microsoft and third-party publications referenced by analysts during the creation of the report. Threat analytics content is based on data validated by Microsoft researchers. Information from publicly available, third-party sources are identified clearly as such.|
 |Change log|The time the report was published and when significant changes were made to the report.|
 |
@@ -89,13 +89,13 @@ Like the list of antivirus detections, some EDR alerts are designed to generical
 
 While detections allow you to identify and stop the tracked threat automatically, many attack activities leave subtle traces that require additional inspection. Some attack activities exhibit behaviors that can also be normal, so detecting them dynamically can result in operational noise or even false positives.
 
-[Advanced hunting](advanced-hunting-overview.md) provides a query interface based on Kusto Query Language that simplifies locating subtle indicators of threat activity. It also allows you to surface contextual information and verify whether indicators are connected to a threat.
+[Advanced hunting](/defender/advanced-hunting-overview) provides a query interface based on Kusto Query Language that simplifies locating subtle indicators of threat activity. It also allows you to surface contextual information and verify whether indicators are connected to a threat.
 
 Advanced hunting queries in the analyst reports have been vetted by Microsoft analysts and are ready for you to run in the [advanced hunting query editor](https://security.microsoft.com/advanced-hunting). You can also use the queries to create [custom detection rules](custom-detection-rules.md) that trigger alerts for future matches.
 
 ## Related topics
 
 - [Threat analytics overview](threat-analytics.md)
-- [Proactively find threats with advanced hunting](advanced-hunting-overview.md)
+- [Proactively find threats with advanced hunting](/defender/advanced-hunting-overview)
 - [Custom detection rules](custom-detection-rules.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

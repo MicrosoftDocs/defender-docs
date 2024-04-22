@@ -86,7 +86,7 @@ Network protection is a part of the attack surface reduction group of solutions 
 Network protection is a critical part of the Microsoft protection and response stack.
 
 > [!TIP]
-> For details about network protection for Windows Server, Linux, MacOS and Mobile Threat Defense (MTD), see [Proactively hunt for threats with advanced hunting](advanced-hunting-overview.md).
+> For details about network protection for Windows Server, Linux, MacOS and Mobile Threat Defense (MTD), see [Proactively hunt for threats with advanced hunting](/defender/advanced-hunting-overview).
 
 ### Block Command and Control attacks
 
@@ -182,7 +182,7 @@ For information about network protection for Linux and macOS see: [Network prote
 
 ## Advanced hunting
 
-If you're using advanced hunting to identify audit events, you'll have up to 30 days history available from the console. See [Advanced hunting](advanced-hunting-overview.md).
+If you're using advanced hunting to identify audit events, you'll have up to 30 days history available from the console. See [Advanced hunting](/defender/advanced-hunting-overview).
 
 You can find the audit events in **Advanced hunting** in the Defender for Endpoint portal ([https://security.microsoft.com](https://security.microsoft.com)).  
 
@@ -276,7 +276,7 @@ You can also use [audit mode](overview-attack-surface-reduction.md) to evaluate 
 
 ## Review network protection events in the Microsoft Defender portal
 
-Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md). You can view these details in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) in the [alerts queue](review-alerts.md) or by using [advanced hunting](advanced-hunting-overview.md). If you're using [audit mode](overview-attack-surface-reduction.md), you can use advanced hunting to see how network protection settings would affect your environment if they were enabled.
+Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md). You can view these details in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) in the [alerts queue](review-alerts.md) or by using [advanced hunting](/defender/advanced-hunting-overview). If you're using [audit mode](overview-attack-surface-reduction.md), you can use advanced hunting to see how network protection settings would affect your environment if they were enabled.
 
 ## Review network protection events in Windows Event Viewer
 

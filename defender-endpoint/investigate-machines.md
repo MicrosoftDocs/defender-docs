@@ -144,7 +144,7 @@ More details about certain events are provided in the **Additional information**
 
 Select an event to view relevant details about that event. A panel displays to show general event information. When applicable and data is available, a graph showing related entities and their relationships are also shown.
 
-To further inspect the event and related events, you can quickly run an [advanced hunting](advanced-hunting-overview.md) query by selecting **Hunt for related events**. The query returns the selected event and the list of other events that occurred around the same time on the same endpoint.
+To further inspect the event and related events, you can quickly run an [advanced hunting](/defender/advanced-hunting-overview) query by selecting **Hunt for related events**. The query returns the selected event and the list of other events that occurred around the same time on the same endpoint.
 
 :::image type="content" source="media/event-details.png" alt-text="The event details panel" lightbox="media/event-details.png":::
 

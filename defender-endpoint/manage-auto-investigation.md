@@ -71,7 +71,7 @@ Whether taken automatically or upon approval, an automated investigation and rem
    - Select **Open investigation page** to view more details about the investigation.
    - Select **Approve** to initiate a pending action.
    - Select **Reject** to prevent a pending action from being taken.
-   - Select **Go hunt** to go into [Advanced hunting](advanced-hunting-overview.md).
+   - Select **Go hunt** to go into [Advanced hunting](/defender/advanced-hunting-overview).
 
 ### Approve or reject remediation actions
 
@@ -153,7 +153,7 @@ All verdicts are tracked in the [Action center](auto-investigation-action-center
 ## Next steps
 
 - [Learn about live response capabilities](live-response.md)
-- [Proactively hunt for threats with advanced hunting](advanced-hunting-overview.md)
+- [Proactively hunt for threats with advanced hunting](/defender/advanced-hunting-overview)
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 
 ## See also

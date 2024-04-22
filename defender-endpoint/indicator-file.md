@@ -138,7 +138,7 @@ Timestamp > ago(30d)
 | where AdditionalFields contains "EUS:Win32/CustomEnterpriseBlock!cl"
 ```
 
-For more information about advanced hunting, see [Proactively hunt for threats with advanced hunting](advanced-hunting-overview.md).
+For more information about advanced hunting, see [Proactively hunt for threats with advanced hunting](/defender/advanced-hunting-overview).
 
 Below are other thread names that can be used in the sample query from above:
 

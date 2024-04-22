@@ -124,7 +124,7 @@ You can use advanced hunting to view attack surface reduction events. To streaml
 
 For example, suppose that an attack surface reduction event occurs on 10 devices during the 2:00 PM hour. Suppose that the first event occurred at 2:15, and the last at 2:45. With advanced hunting, you see one instance of that event (even though it actually occurred on 10 devices), and its timestamp will be 2:15 PM.
 
-For more information about advanced hunting, see [Proactively hunt for threats with advanced hunting](advanced-hunting-overview.md).
+For more information about advanced hunting, see [Proactively hunt for threats with advanced hunting](/defender/advanced-hunting-overview).
 
 ## Attack surface reduction features across Windows versions
 

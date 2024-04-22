@@ -46,7 +46,7 @@ Controlled folder access helps protect your valuable data from malicious apps an
 Controlled folder access works best with [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), which gives you detailed reporting into controlled folder access events and blocks as part of the usual [alert investigation scenarios](investigate-alerts.md).
 
 > [!TIP]
-> Controlled folder access blocks don't generate alerts in the [Alerts queue](alerts-queue.md). However, you can view information about controlled folder access blocks in the [device timeline view](investigate-machines.md), while using [advanced hunting](advanced-hunting-overview.md), or with [custom detection rules](custom-detection-rules.md).
+> Controlled folder access blocks don't generate alerts in the [Alerts queue](alerts-queue.md). However, you can view information about controlled folder access blocks in the [device timeline view](investigate-machines.md), while using [advanced hunting](/defender/advanced-hunting-overview), or with [custom detection rules](custom-detection-rules.md).
 
 ## How does controlled folder access work?
 
@@ -108,7 +108,7 @@ Controlled folder access requires enabling [Microsoft Defender Antivirus real-ti
 
 Defender for Endpoint provides detailed reporting into events and blocks as part of its [alert investigation scenarios](investigate-alerts.md) in the Microsoft Defender portal; see [Microsoft Defender for Endpoint in Microsoft Defender XDR](/defender/microsoft-365-security-center-mde).
 
-You can query Microsoft Defender for Endpoint data by using [Advanced hunting](advanced-hunting-overview.md). If you're using [audit mode](overview-attack-surface-reduction.md), you can use [advanced hunting](advanced-hunting-overview.md) to see how controlled folder access settings would affect your environment if they were enabled.
+You can query Microsoft Defender for Endpoint data by using [Advanced hunting](/defender/advanced-hunting-overview). If you're using [audit mode](overview-attack-surface-reduction.md), you can use [advanced hunting](/defender/advanced-hunting-overview) to see how controlled folder access settings would affect your environment if they were enabled.
 
 Example query:
 
