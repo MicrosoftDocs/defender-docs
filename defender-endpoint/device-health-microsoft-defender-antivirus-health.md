@@ -162,7 +162,7 @@ For information on exporting using API, see the following articles:
 >
 > Currently, only the [Antivirus Health JSON Response](api/device-health-api-methods-properties.md#13-export-device-antivirus-health-details-api-properties-json-response) is generally available. [Antivirus Health API via files](api/device-health-api-methods-properties.md#14-export-device-antivirus-health-details-api-properties-via-files) is only available in public preview.
 >
-> [Advanced Hunting custom query](run-advanced-query-api.md) is currently only available in public preview, even if the queries are visible.
+> [Advanced Hunting custom query](api/run-advanced-query-api.md) is currently only available in public preview, even if the queries are visible.
 
 ### Microsoft Defender Antivirus version and update cards functionality
 
