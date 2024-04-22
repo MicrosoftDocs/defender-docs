@@ -129,7 +129,7 @@ This section describes the solution of approving the functions such system exten
 
 - [Intune](manage-profiles-approve-sys-extensions-intune.md#manage-profiles-and-approve-extensions-using-intune)
 - [JamF](manage-sys-extensions-using-jamf.md#manage-system-extensions-using-jamf)
-- [Other MDM](mac-install-with-other-mdm.md#manage-system-extensions-using-other-mdm-solutions)
+- [Other MDM](mac-install-with-other-mdm.md)
 - [Manual deployment](manage-sys-extensions-manual-deployment.md#manage-system-extensions-using-the-manual-methods-of-deployment)
 
 ### Prerequisites
