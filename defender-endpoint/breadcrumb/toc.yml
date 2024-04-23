@@ -1,3 +1,7 @@
-- name: Microsoft Defender XDR
-  tocHref: /microsoft-365/security/defender-endpoint/
-  topicHref: /microsoft-365/security/defender-endpoint/index
+- name: 'Microsoft Defender'
+  tocHref: /defender/
+  topicHref: /defender/index
+  items:
+    - name: 'Microsoft Defender for Endpoint'
+      tocHref: /defender-endpoint/
+      topicHref: /defender-endpoint/index
