@@ -130,7 +130,7 @@ You can use Group Policy and Intune to manage device control, but for one machin
 
 Yes, for Windows and Mac.
 
-To set up device control on Windows, use [attack surface reduction rules in Defender for Business](/microsoft-365/security/defender-business/mdb-asr). You'll need [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). The standalone version of Defender for Business does not include Intune, but it can be added on. [Microsoft 365 Business Premium](/microsoft-365/business-premium) does include Intune. See [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](device-control-overview.md).
+To set up device control on Windows, use [attack surface reduction rules in Defender for Business](/defender-business/mdb-asr). You'll need [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). The standalone version of Defender for Business does not include Intune, but it can be added on. [Microsoft 365 Business Premium](/microsoft-365/business-premium) does include Intune. See [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](device-control-overview.md).
 
 To set up device control on Mac, use Intune or Jamf. See [Device Control for macOS](mac-device-control-overview.md).
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

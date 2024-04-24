@@ -24,7 +24,7 @@ ms.service: defender-xdr
 
 **Applies to:**
 - [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365)
+- [Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365)
 
 This article describes the Defender for Office 365 experience in the Microsoft Defender portal. Formerly, Defender for Office 365 customers used the Office 365 Security & Compliance center ([https://protection.office.com](https://protection.office.com)).
 
@@ -123,7 +123,7 @@ View reports, change your settings, and modify user roles.
 > [!NOTE]
 > For Defender for Office 365 users, you can now *manage and rotate* DKIM keys in The Microsoft Defender portal at <https://security.microsoft.com/authentication?viewid=DKIM>.
 >
-> For more information, see [Use DKIM to validate outbound email sent from your custom domain](/microsoft-365/security/office-365-security/email-authentication-dkim-configure).
+> For more information, see [Use DKIM to validate outbound email sent from your custom domain](/defender-office-365/email-authentication-dkim-configure).
 
 ## What's changed
 
@@ -131,7 +131,7 @@ This table is a quick reference of Threat management where change has occurred b
 
 |Area|Description of change|
 |---|---|
-|[Investigation](/defender-office-365/air-about.md#the-overall-flow-of-air) |Brings together AIR capabilities in [Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365) and [Defender for Endpoint](/defender-endpoint/automated-investigations). With these updates and improvements, your security operations team will be able to view details about automated investigations and remediation actions across your email, collaboration content, user accounts, and devices, all in one place.|
+|[Investigation](/defender-office-365/air-about.md#the-overall-flow-of-air) |Brings together AIR capabilities in [Defender for Office 365](/defender-office-365/defender-for-office-365) and [Defender for Endpoint](/defender-endpoint/automated-investigations). With these updates and improvements, your security operations team will be able to view details about automated investigations and remediation actions across your email, collaboration content, user accounts, and devices, all in one place.|
 |[Alert queue](/Microsoft-365/compliance/alert-policies)|The **View alerts** flyout pane in the Security & Compliance Center now includes links to The Microsoft Defender portal. Click on the **Open Alert Page** link and The Microsoft Defender portal opens. You can access the **View alerts** page by clicking on any Office 365 alert in the Alerts queue.|
 |[Attack Simulation training](/defender-office-365/attack-simulation-training-insights)|Use Attack Simulation training to run realistic attack scenarios in your organization. These simulated attacks can help train your workforce before a real attack impacts your organization. Attack simulation training includes, more options, enhanced reports, and improved training flows help make your attack simulation and training scenarios easier to deliver and manage.|
 

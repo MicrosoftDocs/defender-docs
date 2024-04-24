@@ -55,19 +55,19 @@ Defender for Office 365 with Microsoft 365 E5 or Microsoft Defender for Office 3
 
 1. Create a simulation
 
-   For step by step instructions on how to create and launch a new simulation, see [Simulate a phishing attack](/microsoft-365/security/office-365-security/attack-simulation-training-simulations).
+   For step by step instructions on how to create and launch a new simulation, see [Simulate a phishing attack](/defender-office-365/attack-simulation-training-simulations).
 
 2. Create a payload
 
-   For step by step instructions on how to create a payload for use within a simulation, see [Create a custom payload for attack simulation training](/microsoft-365/security/office-365-security/attack-simulation-training-payloads).
+   For step by step instructions on how to create a payload for use within a simulation, see [Create a custom payload for attack simulation training](/defender-office-365/attack-simulation-training-payloads).
 
 3. Gaining insights
 
-   For step by step instructions on how to gain insights with reporting, see [Gain insights through attack simulation training](/microsoft-365/security/office-365-security/attack-simulation-training-insights).
+   For step by step instructions on how to gain insights with reporting, see [Gain insights through attack simulation training](/defender-office-365/attack-simulation-training-insights).
 
    > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWMhvB]
 
-For more information, see [Simulations](/microsoft-365/security/office-365-security/attack-simulation-training-get-started#simulations).
+For more information, see [Simulations](/defender-office-365/attack-simulation-training-get-started#simulations).
 
 ### Defender for Endpoint attack tutorials & simulations
 

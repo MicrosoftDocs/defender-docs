@@ -157,7 +157,7 @@ This feature enables you to incorporate data from Microsoft Defender for Office 
 > [!NOTE]
 > You'll need to have the appropriate license to enable this feature.
 
-To receive contextual device integration in Office 365 Threat Intelligence, you'll need to enable the Defender for Endpoint settings in the Security & Compliance dashboard. For more information, see [Threat investigation and response](/microsoft-365/security/office-365-security/office-365-ti).
+To receive contextual device integration in Office 365 Threat Intelligence, you'll need to enable the Defender for Endpoint settings in the Security & Compliance dashboard. For more information, see [Threat investigation and response](/defender-office-365/office-365-ti).
 
 ## Endpoint Attack Notifications
 

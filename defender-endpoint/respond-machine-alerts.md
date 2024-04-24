@@ -24,7 +24,7 @@ search.appverid: met150
 **Applies to:**
 
 - [Microsoft Defender for Endpoint Plans 1 and 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/microsoft-365/security/defender-business/mdb-overview)
+- [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 

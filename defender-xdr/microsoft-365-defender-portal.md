@@ -26,7 +26,7 @@ ms.date: 03/26/2024
 
 The Microsoft Defender portal at <https://security.microsoft.com> combines protection, detection, investigation, and response to threats across your entire organization and all its components, in a central place. The Defender portal emphasizes quick access to information, simpler layouts, and bringing related information together for easier use. It includes:
 
-- **[Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365)** helps organizations secure their enterprise with a set of prevention, detection, investigation and hunting features to protect email, and Office 365 resources.
+- **[Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365)** helps organizations secure their enterprise with a set of prevention, detection, investigation and hunting features to protect email, and Office 365 resources.
 - **[Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-advanced-threat-protection)** delivers preventative protection, post-breach detection, automated investigation, and response for devices in your organization.
 - **[Microsoft Defender for Identity](/defender-for-identity/what-is)** is a cloud-based security solution that uses your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.
 - **[Microsoft Defender for Cloud Apps](/cloud-app-security/)** is a comprehensive cross-SaaS and PaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps.
@@ -172,7 +172,7 @@ Keep exploring the features and capabilities in the Defender portal:
 - [Hunt for threats across devices, emails, apps, and identities](./advanced-hunting-query-emails-devices.md)
 - [Custom detection rules](./custom-detection-rules.md)
 - [Email & collaboration alerts](/Microsoft-365/compliance/alert-policies#default-alert-policies)
-- [Create a phishing attack simulation](/defender-office-365/attack-simulation-training-simulations) and [create a payload for training your teams](/microsoft-365/security/office-365-security/attack-simulation-training-payloads)
+- [Create a phishing attack simulation](/defender-office-365/attack-simulation-training-simulations) and [create a payload for training your teams](/defender-office-365/attack-simulation-training-payloads)
 
 To explore capabilities related to the Microsoft Sentinel integration with Microsoft Defender XDR in the unified security operations platform (preview), see [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690).
 

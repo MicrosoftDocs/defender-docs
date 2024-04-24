@@ -102,7 +102,7 @@ Other actions on devices are available through the following tutorial:
 
 The following tutorials enumerate steps and actions that you can apply when investigating entities or responding to specific threats:
 
-- [Responding to a compromised email account via Defender for Office 365](/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account)
+- [Responding to a compromised email account via Defender for Office 365](/defender-office-365/responding-to-a-compromised-email-account)
 - [Remediating vulnerabilities with Defender for Vulnerability Management](/microsoft-365/security/defender-vulnerability-management/tvm-remediation)
 - [Remediation actions for user accounts via Defender for Identity](/defender-for-identity/remediation-actions)
 - [Applying policies to control apps with Defender for Cloud Apps](/defender-cloud-apps/control-cloud-apps-with-policies)

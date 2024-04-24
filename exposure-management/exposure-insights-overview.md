@@ -143,7 +143,7 @@ In Security Exposure Management, the recommendations catalog serves as a central
 
 ### Recommendations sources
 
-Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [Secure score](/microsoft-365/security/defender-xdr/microsoft-secure-score), and from other Microsoft workloads. It also provides recommendations related to non-Microsoft workloads.
+Security Exposure Management integrates recommendations from Microsoft Defender for Cloud running the [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [Secure score](/defender-xdr/microsoft-secure-score), and from other Microsoft workloads. It also provides recommendations related to non-Microsoft workloads.
 
 ### Working with recommendations
 
@@ -175,11 +175,11 @@ New events appear at the top of the table and can include a new initiative event
 
 ## Secure score
 
-[Microsoft Secure score](/microsoft-365/security/defender-xdr/microsoft-secure-score) helps organizations to plan and improve overall security posture using Secure score as a tracking metric.
+[Microsoft Secure score](/defender-xdr/microsoft-secure-score) helps organizations to plan and improve overall security posture using Secure score as a tracking metric.
 
 Security Exposure Management uses Secure score as one of its sources for initiative scores.
 
-- Secure score has "recommended actions" for a [number of products](/microsoft-365/security/defender-xdr/microsoft-secure-score#products-included-in-secure-score).
+- Secure score has "recommended actions" for a [number of products](/defender-xdr/microsoft-secure-score#products-included-in-secure-score).
 - Selecting a recommendation to review allows you to remediate the problem in the specific product, including recommendations that derived from secure score.
 - For recommendations where secure score is relevant, if secure score isn't active, that recommendation doesn't display.
 

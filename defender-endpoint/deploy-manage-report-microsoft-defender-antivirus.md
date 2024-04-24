@@ -52,7 +52,7 @@ For reporting, you can choose from several options:
 
 ## Configuration Manager
 
-With Configuration Manager, you can manage security and malware on Configuration Manager client computers. Use the [Endpoint Protection point site system role](/mem/configmgr/protect/deploy-use/endpoint-protection-site-role) and [enable Endpoint Protection with custom client settings](/mem/configmgr/protect/deploy-use/endpoint-protection-configure-client). You can use [default and customized antimalware policies](/microsoft-365/security/office-365-security/anti-malware-policies-configure).
+With Configuration Manager, you can manage security and malware on Configuration Manager client computers. Use the [Endpoint Protection point site system role](/mem/configmgr/protect/deploy-use/endpoint-protection-site-role) and [enable Endpoint Protection with custom client settings](/mem/configmgr/protect/deploy-use/endpoint-protection-configure-client). You can use [default and customized antimalware policies](/defender-office-365/anti-malware-policies-configure).
 
 For reporting, you can choose from several options:
 

@@ -72,7 +72,7 @@ The following table shows the different ways to configure behavior monitoring.
 | PowerShell | Set-Preference -DisableBehaviorMonitoring | [Set-MpPreference](/powershell/module/defender/set-mppreference#-disablebehaviormonitoring) |
 | WMI | boolean  DisableBehaviorMonitoring;  | [MSFT\_MpPreference class](/previous-versions/windows/desktop/defender/msft-mppreference) |
 
-If you use Microsoft Defender for Business, see [Review or edit your next-generation protection policies in Microsoft Defender for Business](/microsoft-365/security/defender-business/mdb-next-generation-protection).
+If you use Microsoft Defender for Business, see [Review or edit your next-generation protection policies in Microsoft Defender for Business](/defender-business/mdb-next-generation-protection).
 
 ## Modify the behavior monitoring settings by using PowerShell
 

@@ -29,7 +29,7 @@ If your organization is using [Defender for Endpoint](/windows/security/threat-p
 If you're using Defender for Endpoint, you can specify an automation level so that when a threat is detected on a device, the entity can be remediated automatically or only upon approval by your security team. You can configure automated investigation and remediation with device groups. 
 
 > [!NOTE]
-> In Defender for Business, automated investigation is configured automatically. See [advanced features](/microsoft-365/security/defender-business/mdb-configure-security-settings#review-settings-for-advanced-features).
+> In Defender for Business, automated investigation is configured automatically. See [advanced features](/defender-business/mdb-configure-security-settings#review-settings-for-advanced-features).
 
 ## Set up device groups
 
