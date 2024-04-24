@@ -62,7 +62,7 @@ The navigation bar on the left side of the screen enables you to move easily bet
 
 | Navigation bar item | Description |
 |:---|:---|
-| **Home** | Navigates to the Home page of the [Microsoft Defender portal](/defender/microsoft-365-security-center-mde). |
+| **Home** | Navigates to the Home page of the [Microsoft Defender portal](/defender-xdr/microsoft-365-security-center-mde). |
 | **Incidents & alerts** | Expands to show **Incidents** and **Alerts**. |
 | **Incidents & alerts** > **Incidents** | Navigates to the **Incidents** list. Incidents are created when alerts are triggered and/or threats are detected. By default, the **Incidents** list displays data for the last 30 days, with the most recent incident listed first. <br/><br/> To learn more, see [Incidents](view-incidents-queue.md). |
 | **Incidents & alerts** > **Alerts** | Navigates to the **Alerts** list (also referred to as the **Alerts queue**). Alerts are triggered when a suspicious or malicious file, process, or behavior is detected. By default, the **Alerts** list displays data for the last 30 days, with the most recent alert listed first. <br/><br/> To learn more, see [Alerts](alerts-queue.md). |
@@ -84,7 +84,7 @@ The navigation bar on the left side of the screen enables you to move easily bet
 | **More resources** | Displays a list of more portals and centers, such as Microsoft Entra ID and the Microsoft Purview compliance portal. <br/><br/> To learn more, see [Microsoft security portals and admin centers](/defender/portals). |
 
 > [!TIP]
-> To learn more, see the [Microsoft Defender portal overview](/defender/microsoft-365-security-center-mde).
+> To learn more, see the [Microsoft Defender portal overview](/defender-xdr/microsoft-365-security-center-mde).
 
 ## View and manage incidents & alerts
 
