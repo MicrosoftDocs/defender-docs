@@ -134,6 +134,6 @@ Here is an example of the response.
 
 ## See also
 
-- [Microsoft Defender Vulnerability Management](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
-- [Vulnerability management security recommendations](/microsoft-365/security/defender-endpoint/tvm-security-recommendation)
+- [Microsoft Defender Vulnerability Management](/defender-endpoint/next-gen-threat-and-vuln-mgt)
+- [Vulnerability management security recommendations](/defender-endpoint/tvm-security-recommendation)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

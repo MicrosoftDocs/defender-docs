@@ -30,7 +30,7 @@ ms.date: 02/21/2024
 Investigate the details of an alert raised on a specific device to identify other behaviors or events that might be related to the alert or the potential scope of the breach.
 
 > [!NOTE]
-> As part of the investigation or response process, you can collect an investigation package from a device. Here's how: [Collect investigation package from devices](/microsoft-365/security/defender-endpoint/respond-machine-alerts#collect-investigation-package-from-devices).
+> As part of the investigation or response process, you can collect an investigation package from a device. Here's how: [Collect investigation package from devices](/defender-endpoint/respond-machine-alerts#collect-investigation-package-from-devices).
 
 You can select on affected devices whenever you see them in the portal to open a detailed report about that device. Affected devices are identified in the following areas:
 
@@ -233,7 +233,7 @@ A grey circle indicates that the data is unknown.
 > [!NOTE]
 > The overall status message for macOS and Linux devices currently shows up as 'Status not available for macOS & Linux'. Currently, the status summary is only available for Windows devices. All other information in the table is up to date to show the individual states of each device health signal for all supported platforms.
 
-To gain an in-depth view of the device health report, you can go to **Reports > Devices health**. For more information, see [Device health and compliance report in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/machine-reports).
+To gain an in-depth view of the device health report, you can go to **Reports > Devices health**. For more information, see [Device health and compliance report in Microsoft Defender for Endpoint](/defender-endpoint/machine-reports).
 
 > [!NOTE]
 > The date and time for Defender Antivirus mode is currently not available.

@@ -100,7 +100,7 @@ Microsoft Defender for Endpoint on Mac requires one of the following Microsoft V
 
 ### Configuring Exclusions
 
-When adding exclusions, be mindful of [common exclusion mistakes for Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus).
+When adding exclusions, be mindful of [common exclusion mistakes for Microsoft Defender Antivirus](/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus).
 
 ### Network connections
 

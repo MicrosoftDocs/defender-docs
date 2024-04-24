@@ -137,6 +137,6 @@ For more information, see [Use network protection to help prevent connections to
 - [Enable troubleshooting mode](enable-troubleshooting-mode.md)
 - [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)
 - [Set-MpPreference](/powershell/module/defender/set-mppreference)
-- [Get an overview of Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/)
+- [Get an overview of Microsoft Defender for Endpoint](/defender-endpoint/)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -107,6 +107,6 @@ Here is an example of the response.
 
 ## Related topics
 
-- [Microsoft Defender Vulnerability Management](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
-- [Defender Vulnerability Management software inventory](/microsoft-365/security/defender-endpoint/tvm-software-inventory)
+- [Microsoft Defender Vulnerability Management](/defender-endpoint/next-gen-threat-and-vuln-mgt)
+- [Defender Vulnerability Management software inventory](/defender-endpoint/tvm-software-inventory)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

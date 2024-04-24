@@ -72,11 +72,11 @@ If network protection fails to detect, make sure that the following prerequisite
 
 1. Microsoft Defender Antivirus is the primary antivirus app (active mode)
 
-2. [Behavior Monitoring is enabled](/microsoft-365/security/defender-endpoint/behavior-monitor)
+2. [Behavior Monitoring is enabled](/defender-endpoint/behavior-monitor)
 
-3. [Cloud Protection is enabled](/microsoft-365/security/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus)
+3. [Cloud Protection is enabled](/defender-endpoint/enable-cloud-protection-microsoft-defender-antivirus)
 
-4. [Cloud Protection network connectivity is functional](/microsoft-365/security/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
+4. [Cloud Protection network connectivity is functional](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
 
 ## Related articles
 

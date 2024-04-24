@@ -65,8 +65,8 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 **Attack Surface Reduction (ASR) Rules**
 
 Two new ASR rules are now in public preview: 
-- [Block rebooting machine in Safe Mode (preview)](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#block-rebooting-machine-in-safe-mode-preview): This rule prevents the execution of commands to restart machines in Safe Mode.
-- [Block use of copied or impersonated system tools (preview)](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#block-use-of-copied-or-impersonated-system-tools-preview): This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools.
+- [Block rebooting machine in Safe Mode (preview)](/defender-endpoint/attack-surface-reduction-rules-reference#block-rebooting-machine-in-safe-mode-preview): This rule prevents the execution of commands to restart machines in Safe Mode.
+- [Block use of copied or impersonated system tools (preview)](/defender-endpoint/attack-surface-reduction-rules-reference#block-use-of-copied-or-impersonated-system-tools-preview): This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools.
 
 **Microsoft Defender for Endpoint on macOS** features are in public preview:
 
@@ -81,13 +81,13 @@ Two new ASR rules are now in public preview:
    - Defender Boxed opens automatically when you go to the **Incidents** page in the Microsoft Defender portal. 
    - If you close Defender Boxed and you want to reopen it, in the Microsoft Defender portal, go to **Incidents**, and then select **Your Defender Boxed**.
    - Act quickly! Defender Boxed is available only for a short period of time.
-- (GA) [User Contain](https://www.microsoft.com/en-us/security/blog/2023/10/11/microsoft-defender-for-endpoint-now-stops-human-operated-attacks-on-its-own) can now contain compromised users automatically stopping Human Operated Ransomware in its track using [Automatic Attack Disruption](/microsoft-365/security/defender/automatic-attack-disruption).
+- (GA) [User Contain](https://www.microsoft.com/en-us/security/blog/2023/10/11/microsoft-defender-for-endpoint-now-stops-human-operated-attacks-on-its-own) can now contain compromised users automatically stopping Human Operated Ransomware in its track using [Automatic Attack Disruption](/defender-xdr/automatic-attack-disruption).
 
 
 ## November 2023
 
 - [Microsoft Defender Core service overview](microsoft-defender-core-service-overview.md) is now available for consumers and is planned to begin rolling out to enterprise customers in early 2024.
-- The [Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)](/microsoft-365/security/defender-endpoint/mde-plugin-wsl) is now available in public preview.
+- The [Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)](/defender-endpoint/mde-plugin-wsl) is now available in public preview.
 - Support for [mixed-license scenarios](defender-endpoint-subscription-settings.md) is now generally available in Defender for Endpoint.
 
 ## October 2023

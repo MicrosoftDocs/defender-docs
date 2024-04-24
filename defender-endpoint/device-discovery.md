@@ -132,7 +132,7 @@ DeviceInfo
 | project DeviceId, DeviceName, DeviceType, SeenBy
 ```
 
-For more information, see the [SeenBy()](/microsoft-365/security/defender/advanced-hunting-seenby-function) function.
+For more information, see the [SeenBy()](/defender-xdr/advanced-hunting-seenby-function) function.
 
 ### Query network related information
 

@@ -21,7 +21,7 @@ description: "Complete the steps for migrating from a third-party protection ser
 ms.service: defender-office-365
 ms.date: 6/15/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
 
 # Migrate to Microsoft Defender for Office 365 - Phase 3: Onboard
@@ -62,10 +62,10 @@ If your security response team collects and analyzes unfiltered messages, you ca
 
 For more information about integrating with your SIEM/SOAR, see the following articles:
 
-- [Overview of Microsoft Defender XDR APIs](/microsoft-365/security/defender/api-overview)
+- [Overview of Microsoft Defender XDR APIs](/defender-xdr/api-overview)
 - [Streaming API](//defender-xdr/streaming-api)
-- [Advanced Hunting API](/microsoft-365/security/defender/api-advanced-hunting)
-- [Incidents APIs](/microsoft-365/security/defender/api-incident)
+- [Advanced Hunting API](/defender-xdr/api-advanced-hunting)
+- [Incidents APIs](/defender-xdr/api-incident)
 
 If your organization doesn't have a security response team or existing process flows, you can use this time to familiarize yourself with basic hunting and response features in Defender for Office 365. For more information, see [Threat investigation and response](office-365-ti.md).
 
@@ -217,4 +217,4 @@ Now you begin the normal operation and maintenance of Defender for Office 365. M
 
 - Review user reported messages, especially [user-reported phishing messages](air-examples.md)
 - Review overrides in the [Threat protection status report](reports-email-security.md#threat-protection-status-report).
-- Use [Advanced Hunting](/microsoft-365/security/defender/advanced-hunting-example) queries to look for tuning opportunities and risky messages.
+- Use [Advanced Hunting](/defender-xdr/advanced-hunting-example) queries to look for tuning opportunities and risky messages.

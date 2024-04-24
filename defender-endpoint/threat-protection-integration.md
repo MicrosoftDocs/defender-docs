@@ -79,6 +79,6 @@ With Microsoft Defender XDR, Microsoft Defender for Endpoint, and various Micros
 
 - [Configure integration and other advanced features](advanced-features.md)
 - [Microsoft Defender XDR overview](/defender-xdr/microsoft-365-defender)
-- [Turn on Microsoft Defender XDR](/microsoft-365/security/defender/m365d-enable)
+- [Turn on Microsoft Defender XDR](/defender-xdr/m365d-enable)
 - [Protect users, data, and devices with Conditional Access](conditional-access.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

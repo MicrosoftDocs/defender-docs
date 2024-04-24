@@ -24,7 +24,7 @@ search.appverid: met150
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/microsoft-365/security/defender-business)
+- [Microsoft Defender for Business](/defender-business)
 
 
 This article provides answers to frequently asked questions about device control removable storage capabilities in Microsoft Defender for Endpoint.

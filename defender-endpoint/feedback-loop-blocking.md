@@ -37,7 +37,7 @@ ms.date: 12/18/2020
 
 ## Overview
 
-Feedback-loop blocking, also referred to as rapid protection, is a component of [behavioral blocking and containment capabilities](/microsoft-365/security/defender-endpoint/behavioral-blocking-containment) in [Microsoft Defender for Endpoint](/windows/security/threat-protection/). With feedback-loop blocking, devices across your organization are better protected from attacks. 
+Feedback-loop blocking, also referred to as rapid protection, is a component of [behavioral blocking and containment capabilities](/defender-endpoint/behavioral-blocking-containment) in [Microsoft Defender for Endpoint](/windows/security/threat-protection/). With feedback-loop blocking, devices across your organization are better protected from attacks. 
 
 ## How feedback-loop blocking works
 
@@ -50,13 +50,13 @@ With rapid protection in place, an attack can be stopped on a device, other devi
 
 If your organization is using Defender for Endpoint, feedback-loop blocking is enabled by default. However, rapid protection occurs through a combination of Defender for Endpoint capabilities, machine learning protection features, and signal-sharing across Microsoft security services. Make sure the following features and capabilities of Defender for Endpoint are enabled and configured:
 
-- [Microsoft Defender for Endpoint baselines](/microsoft-365/security/defender-endpoint/configure-machines-security-baseline)
+- [Microsoft Defender for Endpoint baselines](/defender-endpoint/configure-machines-security-baseline)
 
-- [Devices onboarded to Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/onboard-configure)
+- [Devices onboarded to Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure)
 
-- [EDR in block mode](/microsoft-365/security/defender-endpoint/edr-in-block-mode)
+- [EDR in block mode](/defender-endpoint/edr-in-block-mode)
 
-- [Attack surface reduction](/microsoft-365/security/defender-endpoint/attack-surface-reduction)
+- [Attack surface reduction](/defender-endpoint/attack-surface-reduction)
 
 - [Next-generation protection](/windows/security/threat-protection/microsoft-defender-antivirus/configure-microsoft-defender-antivirus-features) (antivirus)
 
@@ -76,5 +76,5 @@ If your organization is using Defender for Endpoint, feedback-loop blocking is e
 
 - [(Blog) Behavioral blocking and containment: Transforming optics into protection](https://www.microsoft.com/security/blog/2020/03/09/behavioral-blocking-and-containment-transforming-optics-into-protection/)
 
-- [Helpful Microsoft Defender for Endpoint resources](/microsoft-365/security/defender-endpoint/helpful-resources)
+- [Helpful Microsoft Defender for Endpoint resources](/defender-endpoint/helpful-resources)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

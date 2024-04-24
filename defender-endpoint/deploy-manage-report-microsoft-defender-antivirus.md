@@ -46,7 +46,7 @@ With Intune, you can manage device security through policies, such as a policy t
 
 For reporting, you can choose from several options:
 
-- [Use the Microsoft Defender portal](/defender/microsoft-365-defender-portal), which includes a [device inventory list](/microsoft-365/security/defender-endpoint/machines-view-overview). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
+- [Use the Microsoft Defender portal](/defender/microsoft-365-defender-portal), which includes a [device inventory list](/defender-endpoint/machines-view-overview). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
 
 - [Manage devices with Intune](/mem/intune/remote-actions/device-management), which includes the ability to view detailed information about devices and take action. [Available actions](/mem/intune/remote-actions/device-management#available-device-actions) include starting an antivirus scan, restarting a device, locating a device, wiping a device, and more. 
 
@@ -56,7 +56,7 @@ With Configuration Manager, you can manage security and malware on Configuration
 
 For reporting, you can choose from several options:
 
-- [Use the Microsoft Defender portal](/defender/microsoft-365-defender-portal), which includes a [device inventory list](/microsoft-365/security/defender-endpoint/machines-view-overview). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
+- [Use the Microsoft Defender portal](/defender/microsoft-365-defender-portal), which includes a [device inventory list](/defender-endpoint/machines-view-overview). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
 
 - [Use Intune to view device details](/mem/intune/remote-actions/device-inventory).
 
@@ -64,7 +64,7 @@ For reporting, you can choose from several options:
 
 - [Create email alerts](/configmgr/protect/deploy-use/endpoint-configure-alerts).
 
-- If your organization has Defender for Endpoint, you can also use the [Microsoft Defender portal](/defender/microsoft-365-defender-portal), which includes a [device inventory list](/microsoft-365/security/defender-endpoint/machines-view-overview). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
+- If your organization has Defender for Endpoint, you can also use the [Microsoft Defender portal](/defender/microsoft-365-defender-portal), which includes a [device inventory list](/defender-endpoint/machines-view-overview). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
 
 ## PowerShell
 
@@ -76,7 +76,7 @@ You can use PowerShell with Group Policy or Configuration Manager to manage Micr
 
 For reporting, you can choose from the following options:
 
-- [Use the Microsoft Defender portal](/defender/microsoft-365-defender-portal), which includes a [device inventory list](/microsoft-365/security/defender-endpoint/machines-view-overview). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
+- [Use the Microsoft Defender portal](/defender/microsoft-365-defender-portal), which includes a [device inventory list](/defender-endpoint/machines-view-overview). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
 
 - [Use Intune to view device details](/mem/intune/remote-actions/device-inventory).
 
@@ -86,13 +86,13 @@ For reporting, you can choose from the following options:
 
 ## Group Policy and Microsoft Entra ID
 
-You can use a Group Policy Object to deploy configuration changes and ensure Microsoft Defender Antivirus is enabled. Use Group Policy Objects (GPOs) to [configure update options for Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/manage-protection-update-schedule-microsoft-defender-antivirus) and [configure Windows Defender features](/microsoft-365/security/defender-endpoint/configure-microsoft-defender-antivirus-features).
+You can use a Group Policy Object to deploy configuration changes and ensure Microsoft Defender Antivirus is enabled. Use Group Policy Objects (GPOs) to [configure update options for Microsoft Defender Antivirus](/defender-endpoint/manage-protection-update-schedule-microsoft-defender-antivirus) and [configure Windows Defender features](/defender-endpoint/configure-microsoft-defender-antivirus-features).
 
 For reporting, keep in mind that device reporting isn't available with Group Policy. 
 
 - You can generate a list of Group Policies to determine if any settings or policies aren't applied. 
 
-- If your organization has Defender for Endpoint, you can also use the [Microsoft Defender portal](/defender/microsoft-365-defender-portal), which includes a [device inventory list](/microsoft-365/security/defender-endpoint/machines-view-overview). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
+- If your organization has Defender for Endpoint, you can also use the [Microsoft Defender portal](/defender/microsoft-365-defender-portal), which includes a [device inventory list](/defender-endpoint/machines-view-overview). To access the device inventory, in the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)), go to **Assets** > **Devices**. The device inventory list displays onboarded devices along with their health state and risk level.
 
 ## Windows Management Instrumentation
 
@@ -102,7 +102,7 @@ With Windows Management Instrumentation (WMI), you can manage Microsoft Defender
 
 - Use the [MSFT_MpComputerStatus](/previous-versions/windows/desktop/defender/msft-mpcomputerstatus) class and the get method of associated classes in the [Windows Defender WMIv2 Provider](/windows/win32/wmisdk/wmi-providers).
 
-For reporting, Windows events comprise several security event sources, including Security Account Manager (SAM) events ([enhanced for Windows 10](/windows/whats-new/whats-new-windows-10-version-1507-and-1511). Also see [Security auditing](/windows/security/threat-protection/auditing/security-auditing-overview) and [Windows Defender events](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
+For reporting, Windows events comprise several security event sources, including Security Account Manager (SAM) events ([enhanced for Windows 10](/windows/whats-new/whats-new-windows-10-version-1507-and-1511). Also see [Security auditing](/windows/security/threat-protection/auditing/security-auditing-overview) and [Windows Defender events](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
 
 ## See also
 

@@ -136,11 +136,11 @@ Nation-state attacks, attacks against critical infrastructure, and organizationa
 - [Identify and investigate lateral movement paths in Defender for Identity](/defender-for-identity/understand-lateral-movement-paths)
 - [Investigate devices in the Defender for Endpoint devices list](/defender-endpoint/investigate-machines)
 
-Attackers often use vulnerabilities to gain access to an organization. Some ransomware attacks initially take advantage of unpatched vulnerabilities like the [Log4Shell vulnerability](/microsoft-365/security/defender-vulnerability-management/tvm-manage-log4shell-guidance). The following resources help incident responders identify vulnerabilities and vulnerable devices in their organization through the Defender for Vulnerability Management service:
+Attackers often use vulnerabilities to gain access to an organization. Some ransomware attacks initially take advantage of unpatched vulnerabilities like the [Log4Shell vulnerability](/defender-vulnerability-management/tvm-manage-log4shell-guidance). The following resources help incident responders identify vulnerabilities and vulnerable devices in their organization through the Defender for Vulnerability Management service:
 
-- **Tutorial**: [Identify vulnerabilities in your organization](/microsoft-365/security/defender-vulnerability-management/tvm-weaknesses)
-- **Tutorial**: [Hunt for exposed devices](/microsoft-365/security/defender-vulnerability-management/tvm-hunt-exposed-devices)
-- **Tutorial**: [Assess your organization's risk through the Exposure score](/microsoft-365/security/defender-vulnerability-management/tvm-exposure-score)
+- **Tutorial**: [Identify vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
+- **Tutorial**: [Hunt for exposed devices](/defender-vulnerability-management/tvm-hunt-exposed-devices)
+- **Tutorial**: [Assess your organization's risk through the Exposure score](/defender-vulnerability-management/tvm-exposure-score)
 - **Video**: Threat and vulnerability management via Defender Vulnerability Management
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4XTiJ]

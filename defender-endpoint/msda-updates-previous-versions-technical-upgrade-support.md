@@ -43,7 +43,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Fixed installation failure on Windows Server 2016 due to existing Defender EventLog registry key
 - Added the ability to have [quick scans](schedule-antivirus-scans.md) ignore Microsoft Defender Antivirus exclusions
 - Fixed remediation for long running [on-demand scans](run-scan-microsoft-defender-antivirus.md) where the service may have been restarted
-- Fixed an issue with Microsoft Defender Vulnerability Management to allow the execution of a [blocked application](/microsoft-365/security/defender-vulnerability-management/tvm-block-vuln-apps) when the [warn option](/microsoft-365/security/defender-vulnerability-management/tvm-block-vuln-apps#block-or-warn-mitigation-action) is selected
+- Fixed an issue with Microsoft Defender Vulnerability Management to allow the execution of a [blocked application](/defender-vulnerability-management/tvm-block-vuln-apps) when the [warn option](/defender-vulnerability-management/tvm-block-vuln-apps#block-or-warn-mitigation-action) is selected
 - Added support for managing schedule day/time for [signature updates in Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows#updates) and [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration)
 - Fixed non-standard signature path loading across platforms ([Windows](microsoft-defender-antivirus-windows.md), [Mac](microsoft-defender-endpoint-mac.md), [Linux](microsoft-defender-endpoint-linux.md), [Android](microsoft-defender-endpoint-android.md), and [iOS](microsoft-defender-endpoint-ios.md))
 - Improved handling of cached detections in [attack surface reduction](overview-attack-surface-reduction.md) capabilities
@@ -201,7 +201,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 ### Known Issues
 
-- Users encounter slow loading webpages in non-Microsoft web browsers with [web content filtering](/microsoft-365/security/defender-endpoint/web-content-filtering) enabled
+- Users encounter slow loading webpages in non-Microsoft web browsers with [web content filtering](/defender-endpoint/web-content-filtering) enabled
 
 ## May-2023 (Platform: 4.18.23050.3 | Engine:  1.1.23050.2)
 
@@ -297,7 +297,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Fixed attack surface reduction rule output with [Get-MpPreference](/powershell/module/defender/get-mppreference)
 - Fixed threat DefaultAction outputs in Get-MpPreference
 - Improved Defender performance during file copy operations for .NET applications
-- Fixed [Microsoft Defender Vulnerability Management](/microsoft-365/security/defender-vulnerability-management/defender-vulnerability-management) app block warn feature
+- Fixed [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) app block warn feature
 - Added opt-in feature to allow users seeing exclusions
 - Fixed [ASR](overview-attack-surface-reduction.md) warn policy
 - Increased maximum size for quarantine archive file to 4 GB
@@ -305,7 +305,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Improved [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) hardening for temporary exclusions
 - Fixed time zone calculation in [Defender PowerShell](/powershell/module/defender) module
 - Fixed merging logic for exclusions in Defender PowerShell module
-- Improvements in the [contextual exclusions](/microsoft-365/security/defender-endpoint/configure-contextual-file-folder-exclusions-microsoft-defender-antivirus) syntax
+- Improvements in the [contextual exclusions](/defender-endpoint/configure-contextual-file-folder-exclusions-microsoft-defender-antivirus) syntax
 - Improved scheduled scan robustness
 - Improved serviceability for internal database files
 - Enhanced certificate indicators determination logic
@@ -406,7 +406,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Improved WARN mode for [ASR rule](attack-surface-reduction-rules-reference.md)
 - Improved certificate handling of OSX
 - Improved logging for scanning FilesStash location
-- Beginning with platform version 4.18.2208.0 and later: If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy setting](configure-endpoints-gp.md#update-endpoint-protection-configuration) will no longer completely disable Windows Defender Antivirus on Windows Server 2012 R2 and later operating systems. Instead, it is either ignored (if [ForceDefenderPassiveMode](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) is configured explicitly) or it places Microsoft Defender Antivirus into [passive mode](microsoft-defender-antivirus-windows.md#comparing-active-mode-passive-mode-and-disabled-mode) (if `ForceDefenderPassiveMode` isn't configured). Moreover, [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode via changing `ForceDefenderPassiveMode` to `0`, but not to passive mode. These changes apply only to servers onboarded to Microsoft Defender for Endpoint. For more information, please refer to [Microsoft Defender Antivirus compatibility with other security products](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-compatibility#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions)
+- Beginning with platform version 4.18.2208.0 and later: If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy setting](configure-endpoints-gp.md#update-endpoint-protection-configuration) will no longer completely disable Windows Defender Antivirus on Windows Server 2012 R2 and later operating systems. Instead, it is either ignored (if [ForceDefenderPassiveMode](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) is configured explicitly) or it places Microsoft Defender Antivirus into [passive mode](microsoft-defender-antivirus-windows.md#comparing-active-mode-passive-mode-and-disabled-mode) (if `ForceDefenderPassiveMode` isn't configured). Moreover, [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode via changing `ForceDefenderPassiveMode` to `0`, but not to passive mode. These changes apply only to servers onboarded to Microsoft Defender for Endpoint. For more information, please refer to [Microsoft Defender Antivirus compatibility with other security products](/defender-endpoint/microsoft-defender-antivirus-compatibility#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions)
 
 ### Known Issues
 
@@ -422,7 +422,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 ### What's new
 
-- Starting with platform version 4.18.2207.7, the default behavior of dynamic signature expiration reporting changes to reduce potential 2011 event notification flooding. See: **Event ID: 2011** in [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus/)
+- Starting with platform version 4.18.2207.7, the default behavior of dynamic signature expiration reporting changes to reduce potential 2011 event notification flooding. See: **Event ID: 2011** in [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/)
 - Fixed Unified agent installer issues on WS2012R2 Server and Windows Server 2016
 - Fixed remediation issue for custom detection
 - Fixed Race condition related to behavior monitoring
@@ -458,7 +458,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Added improvements for [troubleshooting mode](enable-troubleshooting-mode.md)
 - Added fix for Defender WINEVT channels across update/restarts. (For more information about WINEVT, see [Windows Event Log](/windows/win32/api/_wes/).)
 - Added fix for [Defender WMI management](use-wmi-microsoft-defender-antivirus.md) bug during startup/updates
-- Added fix for duplicated 2010/2011 in the [Windows Event Viewer Operational events](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus/)
+- Added fix for duplicated 2010/2011 in the [Windows Event Viewer Operational events](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/)
 - Added support for [Defender for Endpoint](microsoft-defender-endpoint.md) stack processes token hardening
 
 ### Known Issues
@@ -663,7 +663,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 ### What's new
 
 - Device control support added for Windows Portable Devices
-- Potentially unwanted applications (PUA) protection is turned on by default for consumers (See [Block potentially unwanted applications with Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).)
+- Potentially unwanted applications (PUA) protection is turned on by default for consumers (See [Block potentially unwanted applications with Microsoft Defender Antivirus](/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).)
 - Scheduled scans for Group Policy Object managed systems adhere to user configured scan time
 - Improvements to the behavior monitoring engine
 

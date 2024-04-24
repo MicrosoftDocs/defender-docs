@@ -20,7 +20,7 @@ ms.date: 02/22/2024
 # Protect Dev Drive using performance mode
 
 > [!NOTE]
-> Want to experience Microsoft Defender XDR? Learn more about how you can [evaluate and pilot Microsoft Defender XDR](/microsoft-365/security/defender/eval-overview?ocid=cx-docs-MTPtriallab).
+> Want to experience Microsoft Defender XDR? Learn more about how you can [evaluate and pilot Microsoft Defender XDR](/defender-xdr/eval-overview?ocid=cx-docs-MTPtriallab).
 
 **Applies to:**
 

@@ -70,7 +70,7 @@ If you need to install or reinstall Microsoft Defender Antivirus on Windows Serv
 | Use PowerShell to install Microsoft Defender Antivirus | 1. On your Windows Server, open Windows PowerShell as an administrator. <br/><br/>2. Run the following PowerShell cmdlet: `Install-WindowsFeature -Name Windows-Defender` |
 
 > [!NOTE]
-> Event messages for the antimalware engine included with Microsoft Defender Antivirus can be found in [Microsoft Defender Antivirus Events](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
+> Event messages for the antimalware engine included with Microsoft Defender Antivirus can be found in [Microsoft Defender Antivirus Events](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
 
 ## Verify Microsoft Defender Antivirus is running
 
@@ -206,8 +206,8 @@ If a non-Microsoft antivirus product was installed on Windows Server, Microsoft 
 > [!TIP]
 > If you still need help, see the following troubleshooting items:
 > 
-> - [Microsoft Defender Antivirus seems to be stuck in passive mode](/microsoft-365/security/defender-endpoint/switch-to-mde-troubleshooting#microsoft-defender-antivirus-seems-to-be-stuck-in-passive-mode).
-> - [I'm having trouble re-enabling Microsoft Defender Antivirus on Windows Server 2016](/microsoft-365/security/defender-endpoint/switch-to-mde-troubleshooting#i-am-having-trouble-re-enabling-microsoft-defender-antivirus-on-windows-server-2016).
+> - [Microsoft Defender Antivirus seems to be stuck in passive mode](/defender-endpoint/switch-to-mde-troubleshooting#microsoft-defender-antivirus-seems-to-be-stuck-in-passive-mode).
+> - [I'm having trouble re-enabling Microsoft Defender Antivirus on Windows Server 2016](/defender-endpoint/switch-to-mde-troubleshooting#i-am-having-trouble-re-enabling-microsoft-defender-antivirus-on-windows-server-2016).
 
 ## See also
 

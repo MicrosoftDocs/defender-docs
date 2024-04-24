@@ -69,7 +69,7 @@ In your enterprise, you can configure PUA protection from a management console, 
 
 ### Test PUA protection:
 
-You are able to test PUA protection by going to [Potentially unwanted applications (PUA) demonstration](/microsoft-365/security/defender-endpoint/defender-endpoint-demonstration-potentially-unwanted-applications).
+You are able to test PUA protection by going to [Potentially unwanted applications (PUA) demonstration](/defender-endpoint/defender-endpoint-demonstration-potentially-unwanted-applications).
 
 ## Related topics
 

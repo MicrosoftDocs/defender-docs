@@ -75,7 +75,7 @@ From a web browser, navigate to the <a href="https://go.microsoft.com/fwlink/p/?
 
 ## Data center location
 
-Microsoft Defender for Endpoint will store and process data in the [same location as used by Microsoft Defender XDR](/microsoft-365/security/defender/m365d-enable). If Microsoft Defender XDR has not been turned on yet, onboarding to Microsoft Defender for Endpoint will also turn on Microsoft Defender XDR and a new data center location is automatically selected based on the location of active Microsoft 365 security services. The selected data center location is shown on the screen.
+Microsoft Defender for Endpoint will store and process data in the [same location as used by Microsoft Defender XDR](/defender-xdr/m365d-enable). If Microsoft Defender XDR has not been turned on yet, onboarding to Microsoft Defender for Endpoint will also turn on Microsoft Defender XDR and a new data center location is automatically selected based on the location of active Microsoft 365 security services. The selected data center location is shown on the screen.
 
 ## Network configuration
 

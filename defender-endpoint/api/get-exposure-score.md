@@ -94,6 +94,6 @@ Here is an example of the response.
 
 ## See also
 
-- [Microsoft Defender Vulnerability Management](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
-- [Defender Vulnerability Management exposure score](/microsoft-365/security/defender-endpoint/tvm-exposure-score)
+- [Microsoft Defender Vulnerability Management](/defender-endpoint/next-gen-threat-and-vuln-mgt)
+- [Defender Vulnerability Management exposure score](/defender-endpoint/tvm-exposure-score)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

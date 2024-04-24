@@ -188,11 +188,11 @@ The following table lists the current static IP ranges. For latest list, refer t
 |AU|`68.218.120.64/28` <br/>`20.211.228.80/28`|
 
 > [!IMPORTANT]
-> In compliance with Defender for Endpoint security and compliance standards, your data will be processed and stored in accordance with your tenant's physical location. Based on client location, traffic may flow through any of these IP regions (which correspond to Azure datacenter regions). For more information, see [Data storage and privacy](/microsoft-365/security/defender-endpoint/data-storage-privacy).  
+> In compliance with Defender for Endpoint security and compliance standards, your data will be processed and stored in accordance with your tenant's physical location. Based on client location, traffic may flow through any of these IP regions (which correspond to Azure datacenter regions). For more information, see [Data storage and privacy](/defender-endpoint/data-storage-privacy).  
 
 ### Stage 2. Configure your devices to connect to Defender for Endpoint service
 
-Configure devices to communicate through your connectivity infrastructure. Ensure devices meet prerequisites and have updated sensor and Microsoft Defender Antivirus versions.  For more information, see [Configure device proxy and Internet connection settings ](/microsoft-365/security/defender-endpoint/configure-proxy-internet).
+Configure devices to communicate through your connectivity infrastructure. Ensure devices meet prerequisites and have updated sensor and Microsoft Defender Antivirus versions.  For more information, see [Configure device proxy and Internet connection settings ](/defender-endpoint/configure-proxy-internet).
 
 ### Stage 3. Verify client connectivity preonboarding
 

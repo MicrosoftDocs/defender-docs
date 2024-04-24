@@ -20,7 +20,7 @@ description: Learn how to get started with the initial deployment and configurat
 ms.service: defender-office-365
 ms.date: 01/31/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
@@ -237,7 +237,7 @@ When it comes to assigning permissions for tasks in EOP and Defender for Office 
 
 **For simplicity, we recommend using the [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator) role in Azure AD for others who need to configure settings in EOP and Defender for Office 365.**
 
-For instructions, see [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal) and [Manage access to Microsoft Defender XDR with Azure Active Directory global roles](/microsoft-365/security/defender/m365d-permissions).
+For instructions, see [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal) and [Manage access to Microsoft Defender XDR with Azure Active Directory global roles](/defender-xdr/m365d-permissions).
 
 ## Step 4: Priority accounts and user tags
 

@@ -26,7 +26,7 @@ f1.keywords: NOCSH
 
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/microsoft-365/security/defender-business)
+- [Microsoft Defender for Business](/defender-business)
 
 If you're using Group Policy to manage Defender for Endpoint settings, you can use it to deploy and manage device control.
 

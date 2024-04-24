@@ -19,7 +19,7 @@ description: SecOps personnel can learn how to use the Incidents queue in Micros
 ms.service: defender-office-365
 ms.date: 6/15/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
@@ -27,7 +27,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-An [incident](/microsoft-365/security/defender/incidents-overview) in Microsoft Defender XDR is a collection of correlated alerts and associated data that define the complete story of an attack. Defender for Office 365 [alerts](/purview/alert-policies#default-alert-policies), [automated investigation and response (AIR)](air-about.md#the-overall-flow-of-air), and the outcome of the investigations are natively integrated and correlated on the **Incidents** page in Microsoft Defender XDR at <https://security.microsoft.com/incidents-queue>. We refer to this page as the _Incidents queue_.
+An [incident](/defender-xdr/incidents-overview) in Microsoft Defender XDR is a collection of correlated alerts and associated data that define the complete story of an attack. Defender for Office 365 [alerts](/purview/alert-policies#default-alert-policies), [automated investigation and response (AIR)](air-about.md#the-overall-flow-of-air), and the outcome of the investigations are natively integrated and correlated on the **Incidents** page in Microsoft Defender XDR at <https://security.microsoft.com/incidents-queue>. We refer to this page as the _Incidents queue_.
 
 Alerts are created when malicious or suspicious activity affects an entity (for example, email, users, or mailboxes). Alerts provide valuable insights about in-progress or completed attacks. However, an ongoing attack can affect multiple entities, which results in multiple alerts from different sources. Some built-in alerts automatically trigger AIR playbooks. These playbooks do a series of investigation steps to look for other impacted entities or suspicious activity.
 
@@ -38,7 +38,7 @@ Defender for Office 365 alerts, investigations, and their data are automatically
 
 We strongly recommend that SecOps teams manage incidents and alerts from Defender for Office 365 in the Incidents queue at <https://security.microsoft.com/incidents-queue>. This approach has the following benefits:
 
-- Multiple options for [management](/microsoft-365/security/defender/manage-incidents):
+- Multiple options for [management](/defender-xdr/manage-incidents):
   - Prioritization
   - Filtering
   - Classification
@@ -118,7 +118,7 @@ Security teams can take wide variety of response actions on email using Defender
 
 Actions in Defender for Office 365 are seamlessly integrated into hunting experiences and the history of actions are visible on the **History** tab in the unified **Action center** at <https://security.microsoft.com/action-center/history>.
 
-The most effective way to take action is to use the built-in integration with Incidents in Microsoft Defender XDR. You can approve the actions that were recommended by AIR in Defender for Office 365 on the [Evidence and response](/microsoft-365/security/defender/investigate-incidents#evidence-and-response) tab of an incident in Microsoft Defender XDR. This method of tacking action is recommended for the following reasons:
+The most effective way to take action is to use the built-in integration with Incidents in Microsoft Defender XDR. You can approve the actions that were recommended by AIR in Defender for Office 365 on the [Evidence and response](/defender-xdr/investigate-incidents#evidence-and-response) tab of an incident in Microsoft Defender XDR. This method of tacking action is recommended for the following reasons:
 
 - You investigate the complete attack story.
 - You benefit from the built-in correlation with other workloads: Microsoft Defender for Endpoint, Microsoft Defender for Identity, and Microsoft Defender for Cloud Apps.

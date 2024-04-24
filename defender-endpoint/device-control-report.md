@@ -99,7 +99,7 @@ DeviceEvents
 **Applies to:** 
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](/microsoft-365/security/defender-business)
+- [Microsoft Defender for Business](/defender-business)
 
 With the device control report, you can view events that relate to media usage. Such events include:
 

@@ -37,15 +37,15 @@ The foundation for defending against tampering is following a [Zero Trust](/wind
 
 In order to provide an effective defense against tampering, devices must be healthy.
 
-- [Onboard devices to Defender for Endpoint](/microsoft-365/security/defender-endpoint/onboard-configure).
-- Make sure [security intelligence and antivirus updates](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-updates) are installed.
+- [Onboard devices to Defender for Endpoint](/defender-endpoint/onboard-configure).
+- Make sure [security intelligence and antivirus updates](/defender-endpoint/microsoft-defender-antivirus-updates) are installed.
 - Managed devices centrally, such as by [Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure), [Microsoft Defender for Endpoint Security Configuration Management](/mem/intune/protect/mde-security-integration), or [Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection-configure).
 
 > [!NOTE]
 > On Windows devices, Microsoft Defender Antivirus can be managed by using Group Policy, Windows Management Instrumentation (WMI), and PowerShell cmdlets. However, those methods are more susceptible to tampering than by using Microsoft Intune, Configuration Manager, or Microsoft Defender for Endpoint Security Configuration Management.
-> If you're using Group Policy, we recommend [disabling local overrides for Microsoft Defender Antivirus settings](/microsoft-365/security/defender-endpoint/configure-local-policy-overrides-microsoft-defender-antivirus#configure-local-overrides-for-microsoft-defender-antivirus-settings) and [disabling local list merging](/microsoft-365/security/defender-endpoint/configure-local-policy-overrides-microsoft-defender-antivirus#configure-how-locally-and-globally-defined-threat-remediation-and-exclusions-lists-are-merged).
+> If you're using Group Policy, we recommend [disabling local overrides for Microsoft Defender Antivirus settings](/defender-endpoint/configure-local-policy-overrides-microsoft-defender-antivirus#configure-local-overrides-for-microsoft-defender-antivirus-settings) and [disabling local list merging](/defender-endpoint/configure-local-policy-overrides-microsoft-defender-antivirus#configure-how-locally-and-globally-defined-threat-remediation-and-exclusions-lists-are-merged).
 
-You can view health status for [Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/device-health-microsoft-defender-antivirus-health) health and [sensors](/microsoft-365/security/defender-endpoint/device-health-sensor-health-os) in the [device health reports in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/device-health-reports).
+You can view health status for [Microsoft Defender Antivirus](/defender-endpoint/device-health-microsoft-defender-antivirus-health) health and [sensors](/defender-endpoint/device-health-sensor-health-os) in the [device health reports in Microsoft Defender for Endpoint](/defender-endpoint/device-health-reports).
 
 ## Preventing tampering on a single device
 
@@ -53,9 +53,9 @@ Attackers use various tampering techniques to disable Microsoft Defender for End
 
 | Control | OS | Technique Families |
 |--- |---| ---|
-| [Tamper protection](/microsoft-365/security/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) | Windows | - Terminating/suspending processes<br/>- Stopping/pausing/suspending services<br/>- Modifying registry settings including exclusions<br/>- Manipulating/hijacking DLLs<br/>- Manipulation/modification of the file system<br/>- Agent integrity |
-| [Tamper protection](/microsoft-365/security/defender-endpoint/tamperprotection-macos) | Mac | - Terminating/suspending processes<br/>- Manipulation/modification of the file system<br/>- Agent integrity|
-| [Attack surface reduction rules](attack-surface-reduction.md) | Windows | Kernel drivers (see [Block abuse of exploited vulnerable signed drivers](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#block-abuse-of-exploited-vulnerable-signed-drivers))|
+| [Tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) | Windows | - Terminating/suspending processes<br/>- Stopping/pausing/suspending services<br/>- Modifying registry settings including exclusions<br/>- Manipulating/hijacking DLLs<br/>- Manipulation/modification of the file system<br/>- Agent integrity |
+| [Tamper protection](/defender-endpoint/tamperprotection-macos) | Mac | - Terminating/suspending processes<br/>- Manipulation/modification of the file system<br/>- Agent integrity|
+| [Attack surface reduction rules](attack-surface-reduction.md) | Windows | Kernel drivers (see [Block abuse of exploited vulnerable signed drivers](/defender-endpoint/attack-surface-reduction-rules-reference#block-abuse-of-exploited-vulnerable-signed-drivers))|
 | [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-operational-guide) (WDAC) | Windows | Kernel drivers (see [Microsoft vulnerable driver blocklist](/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules))|
 
 
@@ -82,7 +82,7 @@ See [Vulnerable Driver blocklist XML](/windows/security/threat-protection/window
 
 This list of drivers blocked by the exploited and vulnerable drivers get updated more frequently than the recommended drivers blocklist. ASR rules can run in audit mode first to ensure that there's no impact before applying the rule in block mode.
 
-See [Block abuse of exploited vulnerable signed drivers rule](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#block-abuse-of-exploited-vulnerable-signed-drivers).
+See [Block abuse of exploited vulnerable signed drivers rule](/defender-endpoint/attack-surface-reduction-rules-reference#block-abuse-of-exploited-vulnerable-signed-drivers).
 
 ### Block other drivers - Windows Defender Application Control (WDAC)
 
@@ -95,9 +95,9 @@ WDAC also provides an audit mode to help understand the impact of applying the p
 A common technique used by attackers is to make unauthorized changes to anti-virus exclusions. Tamper protection prevents such attacks from occurring when all of the following conditions are met:
 
 - The device is managed by Intune; and
-- The device has [Disable Local Admin Merge enabled](/microsoft-365/security/defender-endpoint/configure-local-policy-overrides-microsoft-defender-antivirus#use-microsoft-intune-to-disable-local-list-merging).
+- The device has [Disable Local Admin Merge enabled](/defender-endpoint/configure-local-policy-overrides-microsoft-defender-antivirus#use-microsoft-intune-to-disable-local-list-merging).
 
-For more information, see [Tamper protection for antivirus exclusions](/microsoft-365/security/defender-endpoint/manage-tamper-protection-intune#tamper-protection-for-antivirus-exclusions).
+For more information, see [Tamper protection for antivirus exclusions](/defender-endpoint/manage-tamper-protection-intune#tamper-protection-for-antivirus-exclusions).
 
 Attackers can be preventing from discovering existing antivirus exclusions by enabling [HideExclusionsFromLocalAdmin](/windows/client-management/mdm/defender-csp#configurationhideexclusionsfromlocaladmins).
 
@@ -131,7 +131,7 @@ When tampering is detected, an alert is raised. Some of the alert titles for tam
 - Tampering with the Microsoft Defender for Endpoint sensor
 
 
-If the [Block abuse of exploited vulnerable signed drivers](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#block-abuse-of-exploited-vulnerable-signed-drivers) attack surface reduction rule is triggered, the event is viewable in the [ASR Report](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-report) and in [Advanced Hunting](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-deployment-operationalize#asr-rules-advanced-hunting)
+If the [Block abuse of exploited vulnerable signed drivers](/defender-endpoint/attack-surface-reduction-rules-reference#block-abuse-of-exploited-vulnerable-signed-drivers) attack surface reduction rule is triggered, the event is viewable in the [ASR Report](/defender-endpoint/attack-surface-reduction-rules-report) and in [Advanced Hunting](/defender-endpoint/attack-surface-reduction-rules-deployment-operationalize#asr-rules-advanced-hunting)
 
 If [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) (WDAC) is enabled, the [block and audit activity can be seen in Advanced Hunting](/windows/security/threat-protection/windows-defender-application-control/querying-application-control-events-centrally-using-advanced-hunting).
 

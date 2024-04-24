@@ -926,7 +926,7 @@
           href: monthly-security-summary-report.md
 
     - name: Advanced hunting
-      href: /microsoft-365/security/defender/advanced-hunting-overview
+      href: /defender-xdr/advanced-hunting-overview
 
     - name: Threat analytics overview
       href: threat-analytics.md
