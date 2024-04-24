@@ -23,8 +23,8 @@ ms.date: 03/20/2024
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
-- [Microsoft Defender for Endpoint Plan 1 and Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 
@@ -152,7 +152,7 @@ To troubleshoot and mitigate such issues, follow these steps:
 
 ## Troubleshoot performance issues using Microsoft Defender for Endpoint Client Analyzer
 
-The Microsoft Defender for Endpoint Client Analyzer (MDECA) can collect traces, logs, and diagnostic information in order to troubleshoot performance issues on [onboarded devices](/microsoft-365/security/defender-endpoint/onboard-configure) on macOS.
+The Microsoft Defender for Endpoint Client Analyzer (MDECA) can collect traces, logs, and diagnostic information in order to troubleshoot performance issues on [onboarded devices](/defender-endpoint/onboard-configure) on macOS.
 
 To run the client analyzer for troubleshooting performance issues, see [Run the client analyzer on macOS and Linux](run-analyzer-macos-linux.md).
 

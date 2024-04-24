@@ -22,9 +22,9 @@ ms.date: 01/24/2024
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 
 Investigate incidents that affect your network, understand what they mean, and collate evidence to resolve them.
@@ -97,7 +97,7 @@ You can click the circles on the incident graph to view the details of the malic
 
 ## Related topics
 
-- [Incidents queue](/microsoft-365/security/defender-endpoint/view-incidents-queue)
-- [Investigate incidents in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/investigate-incidents)
-- [Manage Microsoft Defender for Endpoint incidents](/microsoft-365/security/defender-endpoint/manage-incidents)
+- [Incidents queue](/defender-endpoint/view-incidents-queue)
+- [Investigate incidents in Microsoft Defender for Endpoint](/defender-endpoint/investigate-incidents)
+- [Manage Microsoft Defender for Endpoint incidents](/defender-endpoint/manage-incidents)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

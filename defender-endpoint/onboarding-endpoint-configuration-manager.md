@@ -26,9 +26,9 @@ ms.date: 12/18/2020
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
@@ -302,7 +302,7 @@ Below are more steps to verify whether attack surface reduction rules are correc
 
    :::image type="content" source="media/24bfb16ed561cbb468bd8ce51130ca9d.png" alt-text="The attack surface reduction rules reports2" lightbox="media/24bfb16ed561cbb468bd8ce51130ca9d.png":::
 
-See [Optimize attack surface reduction rule deployment and detections](/microsoft-365/security/defender-endpoint/configure-machines-asr) for more details.
+See [Optimize attack surface reduction rule deployment and detections](/defender-endpoint/configure-machines-asr) for more details.
 
 #### Set Network Protection rules in test mode
 

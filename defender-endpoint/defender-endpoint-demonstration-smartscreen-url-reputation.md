@@ -21,9 +21,9 @@ ms.date: 01/15/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 
 Test how Microsoft Defender SmartScreen helps you identify phishing and malware websites based on URL reputation.
 Scenario requirements and setup

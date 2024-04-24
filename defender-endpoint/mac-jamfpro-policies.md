@@ -24,8 +24,8 @@ ms.date: 12/18/2020
 
 **Applies to:**
 - [Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 This page will guide you through the steps you need to take to set up macOS policies in Jamf Pro.
 

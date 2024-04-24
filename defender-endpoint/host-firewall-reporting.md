@@ -23,15 +23,15 @@ search.appverid: met150
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 If you're a Global or security administrator, you can now host firewall reporting to the [Microsoft Defender portal](https://security.microsoft.com). This feature enables you to view Windows firewall reporting from a centralized location.
 
 ## What do you need to know before you begin?
 
-- Your devices must be running Windows 10 or later, or Windows Server 2012 R2 or later. For Windows Server 2012 R2 and Windows Server 2016 to appear in firewall reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution).
+- Your devices must be running Windows 10 or later, or Windows Server 2012 R2 or later. For Windows Server 2012 R2 and Windows Server 2016 to appear in firewall reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](/defender-endpoint/configure-server-endpoints#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution).
 
 - To onboard devices to the Microsoft Defender for Endpoint service, see [onboarding guidance](onboard-configure.md).
 

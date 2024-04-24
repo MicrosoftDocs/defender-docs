@@ -20,7 +20,7 @@ ms.date: 05/03/2021
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - Microsoft Defender for Cloud
 
 Microsoft Defender for Endpoint can integrate with Microsoft Defender for Cloud to provide a comprehensive Windows server protection solution. With this integration, Microsoft Defender for Cloud can use the power of Defender for Endpoint to provide improved threat detection for Windows Servers.

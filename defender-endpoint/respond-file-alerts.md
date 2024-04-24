@@ -24,7 +24,7 @@ ms.date: 08/07/2023
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
@@ -46,7 +46,7 @@ Response actions run along the top of the file page, and include:
 - Deep analysis
 
 > [!NOTE]
-> If you're using Defender for Endpoint Plan 1, you can take certain response actions manually. For more information, see [Manual response actions](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1#manual-response-actions).
+> If you're using Defender for Endpoint Plan 1, you can take certain response actions manually. For more information, see [Manual response actions](/defender-endpoint/defender-endpoint-plan-1#manual-response-actions).
 
 You can also submit files for deep analysis, to run the file in a secure cloud sandbox. When the analysis is complete, you'll get a detailed report that provides information about the behavior of the file. You can submit files for deep analysis and read past reports by selecting the **Deep analysis** action.
 

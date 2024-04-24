@@ -18,4 +18,4 @@ ms.topic: article
 ---
 
 > [!NOTE]
-> If you are a US Government customer, please use the URIs listed in [Microsoft Defender for Endpoint for US Government customers](/microsoft-365/security/defender-endpoint/gov#api).
+> If you are a US Government customer, please use the URIs listed in [Microsoft Defender for Endpoint for US Government customers](/defender-endpoint/gov#api).

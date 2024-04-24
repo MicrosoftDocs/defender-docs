@@ -23,8 +23,8 @@ search.appverid: met150
 **Applies to:**
 
 - Microsoft Defender Antivirus
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 **Platforms**
 - Windows
@@ -40,7 +40,7 @@ Microsoft Defender Antivirus is available on endpoints running the following ver
 
 Microsoft Defender Antivirus is also available for older versions of Windows under certain conditions.
 
-- On Windows Server 2012 R2, when onboarded using the [modern, unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints), Microsoft Defender Antivirus is installed in **Active mode**.
+- On Windows Server 2012 R2, when onboarded using the [modern, unified solution](/defender-endpoint/configure-server-endpoints), Microsoft Defender Antivirus is installed in **Active mode**.
 
 - On Windows 8.1, with [System Center Endpoint Protection](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)), enterprise-level endpoint antivirus protection is offered and managed through Microsoft Endpoint Configuration Manager. 
 
@@ -116,14 +116,14 @@ For example, [Endpoint detection and response (EDR) in block mode](edr-in-block-
 
 In order for Microsoft Defender Antivirus to run in passive mode, endpoints must meet the following requirements:
 
-- Operating system: Windows 10 or newer; Windows Server 2022, Windows Server 2019, or Windows Server, version 1803, or newer <br/>(Windows Server 2012 R2 and Windows Server 2016 if onboarded using the [modern, unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints)). 
+- Operating system: Windows 10 or newer; Windows Server 2022, Windows Server 2019, or Windows Server, version 1803, or newer <br/>(Windows Server 2012 R2 and Windows Server 2016 if onboarded using the [modern, unified solution](/defender-endpoint/configure-server-endpoints)). 
 - Microsoft Defender Antivirus must be installed. 
 - Another non-Microsoft antivirus/antimalware product must be installed and used as the primary antivirus solution. 
 - Endpoints must be onboarded to Defender for Endpoint. 
 
 > [!IMPORTANT]
 > - Microsoft Defender Antivirus is only available on devices running Windows 10 and 11, Windows Server 2022, Windows Server 2016, Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 2016, and Windows Server 2012 R2.
-> - Passive mode is only supported on Windows Server 2012 R2 & 2016 when the device is onboarded using the [modern, unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints). 
+> - Passive mode is only supported on Windows Server 2012 R2 & 2016 when the device is onboarded using the [modern, unified solution](/defender-endpoint/configure-server-endpoints). 
 > - In Windows 8.1, enterprise-level endpoint antivirus protection is offered as [System Center Endpoint Protection](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)), which is managed through Microsoft Endpoint Configuration Manager.
 > - Windows Defender is also offered for [consumer devices on Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender), although Windows Defender does not provide enterprise-level management.
 
@@ -246,7 +246,7 @@ In passive mode, Microsoft Defender Antivirus isn't used as the antivirus app, a
 
 When Microsoft Defender Antivirus is in passive mode, you can still [manage updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md); however, you can't move Microsoft Defender Antivirus into active mode if your devices have a non-Microsoft antivirus product that is providing real-time protection from malware.
 
-**Make sure to get your antivirus and antimalware updates, even if Microsoft Defender Antivirus is running in passive mode**. See [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md). Passive mode is only supported on Windows Server 2012 R2 & 2016 when the machine is onboarded using the [modern, unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints). 
+**Make sure to get your antivirus and antimalware updates, even if Microsoft Defender Antivirus is running in passive mode**. See [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md). Passive mode is only supported on Windows Server 2012 R2 & 2016 when the machine is onboarded using the [modern, unified solution](/defender-endpoint/configure-server-endpoints). 
 
 ### Disabled or uninstalled
 

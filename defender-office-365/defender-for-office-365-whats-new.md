@@ -18,8 +18,8 @@ ms.custom: seo-marvel-apr2020
 ms.reviewer: vippand
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
 # What's new in Microsoft Defender for Office 365
@@ -50,7 +50,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## February 2024
 
-- **Hunting and responding to QR code-based attacks**: Security teams are now able to see the URLs extracted from QR codes with **QR code** as URL source on the **URL** tab of the [Email entity page](mdo-email-entity-page.md), and **QRCode** in the **UrlLocation** column of **EmailUrlInfo** table in [Advanced Hunting](/defender/advanced-hunting-overview.md). You can also filter for email with URLs embedded within QR codes using the **URL Source** filter value **QR code** in the **All email**, **Malware**, and **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md).
+- **Hunting and responding to QR code-based attacks**: Security teams are now able to see the URLs extracted from QR codes with **QR code** as URL source on the **URL** tab of the [Email entity page](mdo-email-entity-page.md), and **QRCode** in the **UrlLocation** column of **EmailUrlInfo** table in [Advanced Hunting](/defender/advanced-hunting-overview). You can also filter for email with URLs embedded within QR codes using the **URL Source** filter value **QR code** in the **All email**, **Malware**, and **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md).
 
 ## January 2024
 
@@ -60,7 +60,7 @@ For more information on what's new with other Microsoft Defender security produc
 ## December 2023
 
 - **QR code related phishing protection within Exchange Online Protection and Microsoft Defender for Office 365**: New detection capabilities using image detection, threat signals, URL analysis now extracts QR codes from URLs and blocks QR code based phishing attacks from the body of an email. To learn more, see our [blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/protect-your-organizations-against-qr-code-phishing-with/ba-p/4007041).
-- **Microsoft Defender XDR Unified RBAC is now generally available**: Defender XDR Unified RBAC supports all Defender for Office 365 scenarios that were previously controlled by [Email & collaboration permissions](mdo-portal-permissions.md) and [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). To learn more about the supported workloads and data resources, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/microsoft-365/security/defender/manage-rbac).
+- **Microsoft Defender XDR Unified RBAC is now generally available**: Defender XDR Unified RBAC supports all Defender for Office 365 scenarios that were previously controlled by [Email & collaboration permissions](mdo-portal-permissions.md) and [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). To learn more about the supported workloads and data resources, see [Microsoft Defender XDR Unified role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
   > [!TIP]
   > Defender XDR Unified RBAC isn't generally available in Microsoft 365 Government Community Cloud High (GCC High) or Department of Defense (DoD).
@@ -76,7 +76,7 @@ For more information on what's new with other Microsoft Defender security produc
 ## October 2023
 
 - **Create and manage simulations using the Graph API** in Attack simulation training. [Learn more](/graph/api/attacksimulationroot-post-simulation)
-- **Exchange Online permission management in Defender for Office 365 is now supported in Microsoft Defender XDR Unified role-based access control (RBAC)**: In addition to the existing support for [Email & collaboration permissions](mdo-portal-permissions.md), Defender XDR Unified RBAC now also supports protection-related [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). To learn more about the supported Exchange Online permissions, see [Exchange Online permissions mapping](/microsoft-365/security/defender/compare-rbac-roles#exchange-online-permissions-mapping).
+- **Exchange Online permission management in Defender for Office 365 is now supported in Microsoft Defender XDR Unified role-based access control (RBAC)**: In addition to the existing support for [Email & collaboration permissions](mdo-portal-permissions.md), Defender XDR Unified RBAC now also supports protection-related [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). To learn more about the supported Exchange Online permissions, see [Exchange Online permissions mapping](/defender-xdr/compare-rbac-roles#exchange-online-permissions-mapping).
 
 ## September 2023
 
@@ -213,7 +213,7 @@ For more information on what's new with other Microsoft Defender security produc
   - [Video of admin experience](https://youtu.be/vnar4HowfpY)
   - [Video of end-user experience](https://youtu.be/s-vozLO43rI)
   - Other new capabilities coming to the quarantine experience are described in this blog post: [Simplifying the Quarantine experience](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/simplifying-the-quarantine-experience/ba-p/2676388).
-- Portal redirection by default begins, redirecting users from Security & Compliance to Microsoft Defender XDR <https://security.microsoft.com>. For more on this, see: [Redirecting accounts from Office 365 Security & Compliance Center to Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-mdo-redirection)
+- Portal redirection by default begins, redirecting users from Security & Compliance to Microsoft Defender XDR <https://security.microsoft.com>. For more on this, see: [Redirecting accounts from Office 365 Security & Compliance Center to Microsoft Defender XDR](/defender-xdr/microsoft-365-security-mdo-redirection)
 
 ## August 2021
 
@@ -249,7 +249,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - [Email entity page](mdo-email-entity-page.md): A unified 360-degree view of an email with enriched information around threats, authentication and detections, detonation details, and a brand-new email preview experience.
 - [Office 365 Management API](/office/office-365-management-api/office-365-management-activity-api-schema#email-message-events): Updates to EmailEvents (RecordType 28) to add delivery action, original and latest delivery locations, and updated detection details.
-- [Threat Analytics for Defender for Office 365](/microsoft-365/security/defender/threat-analytics): View active threat actors, popular techniques and attack surfaces, along with extensive reporting from Microsoft researchers around ongoing campaigns.
+- [Threat Analytics for Defender for Office 365](/defender-xdr/threat-analytics): View active threat actors, popular techniques and attack surfaces, along with extensive reporting from Microsoft researchers around ongoing campaigns.
 
 ## February/March 2021
 

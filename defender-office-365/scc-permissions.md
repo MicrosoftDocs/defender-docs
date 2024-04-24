@@ -27,7 +27,7 @@ ms.date: 04/18/2024
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-The [Microsoft Defender portal](/defender/microsoft-365-defender-portal), [Microsoft Purview portal](/purview/purview-portal), and the classic Microsoft Purview [compliance](/purview/microsoft-365-compliance-center) and [governance](/purview/use-microsoft-purview-governance-portal) portals have replaced the Security & Compliance Center as the places to manage Microsoft Defender for Office 365 and Microsoft Purview roles and role groups for your organization. For more information about permissions within these portals, see the following articles:
+The [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal), [Microsoft Purview portal](/purview/purview-portal), and the classic Microsoft Purview [compliance](/purview/microsoft-365-compliance-center) and [governance](/purview/use-microsoft-purview-governance-portal) portals have replaced the Security & Compliance Center as the places to manage Microsoft Defender for Office 365 and Microsoft Purview roles and role groups for your organization. For more information about permissions within these portals, see the following articles:
 
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md)
 - [Permissions in the Microsoft Purview portal](/purview/purview-portal)

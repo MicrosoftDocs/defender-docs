@@ -215,7 +215,7 @@
 			<text x="0" y="570.05" class="st12" v:langID="1033"><v:paragraph/><v:tabList/>Device <tspan x="0" dy="1.2em"
 						class="st7">type</tspan></text>		</g>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/microsoft-365-policies-configurations">
+				xlink:href="https://learn.microsoft.com/defender-office-365/microsoft-365-policies-configurations">
 			<g id="shape3214-37" v:mID="3214" v:groupContext="shape" v:layerMember="1" transform="translate(8.80357,-534.51)">
 				<title>Sheet.3214</title>
 				<desc>Zero Trust identity and device access policies</desc>
@@ -467,7 +467,7 @@
 			<rect v:rectContext="foreign" x="0" y="568.258" width="29.6175" height="22.742" class="st4"/>
 		</g>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/identity-access-policies#device-compliance-policies">
+				xlink:href="https://learn.microsoft.com/defender-office-365/zero-trust-identity-device-access-policies-common#device-compliance-policies">
 			<g id="shape3221-75" v:mID="3221" v:groupContext="shape" transform="translate(758.054,-64.9286)">
 				<title>Sheet.3221</title>
 				<desc>Define compliance policies (one for each platform)</desc>
@@ -505,7 +505,7 @@
 			<path d="M0 591 L83 591" class="st18"/>
 		</g>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/identity-access-policies#app-protection-policies">
+				xlink:href="https://learn.microsoft.com/defender-office-365/zero-trust-identity-device-access-policies-common#app-protection-policies">
 			<g id="shape3228-93" v:mID="3228" v:groupContext="shape" transform="translate(873.185,-206.679)">
 				<title>Sheet.3228</title>
 				<desc>Apply Level 2 APP data protection</desc>
@@ -519,7 +519,7 @@
 							x="8" dy="1.1em" class="st7">data protection</tspan></text>			</g>
 		</a>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/identity-access-policies#app-protection-policies">
+				xlink:href="https://learn.microsoft.com/defender-office-365/zero-trust-identity-device-access-policies-common#app-protection-policies">
 			<g id="shape3229-97" v:mID="3229" v:groupContext="shape" transform="translate(873.185,-64.9286)">
 				<title>Sheet.3229</title>
 				<desc>Apply Level 3 APP data protection</desc>
@@ -533,7 +533,7 @@
 							x="8" dy="1.1em" class="st7">data protection</tspan></text>			</g>
 		</a>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/identity-access-policies#app-protection-policies">
+				xlink:href="https://learn.microsoft.com/defender-office-365/zero-trust-identity-device-access-policies-common#app-protection-policies">
 			<g id="shape3230-101" v:mID="3230" v:groupContext="shape" transform="translate(873.185,-328.429)">
 				<title>Sheet.3230</title>
 				<desc>Apply Level 2 App Protection Policies (APP) data protection (...</desc>
@@ -590,7 +590,7 @@
 			<path d="M0 591 L225 591" class="st21"/>
 		</g>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/identity-access-policies#app-protection-policies">
+				xlink:href="https://learn.microsoft.com/defender-office-365/zero-trust-identity-device-access-policies-common#app-protection-policies">
 			<g id="shape3235-133" v:mID="3235" v:groupContext="shape" transform="translate(292.886,-206.679)">
 				<title>Sheet.3235</title>
 				<desc>Require approved apps</desc>
@@ -604,7 +604,7 @@
 							x="8" dy="1.1em" class="st7">approved apps</tspan></text>			</g>
 		</a>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/identity-access-policies#app-protection-policies">
+				xlink:href="https://learn.microsoft.com/defender-office-365/zero-trust-identity-device-access-policies-common#app-protection-policies">
 			<g id="shape3236-137" v:mID="3236" v:groupContext="shape" transform="translate(292.886,-325.929)">
 				<title>Sheet.3236</title>
 				<desc>Require approved apps This policy enforces mobile app protect...</desc>

@@ -23,9 +23,9 @@ ms.date: 12/18/2023
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-onboardconfigure-abovefoldlink)
 
@@ -48,7 +48,7 @@ Select **Go to attack surface management** \> **Reports** \> **Attack surface re
 > *The **Add exclusions** tab in the Attack surface reduction rules page in Microsoft Defender portal*
 
 > [!NOTE]
-> To access Microsoft Defender portal, you need a Microsoft 365 E3 or E5 license and an account that has certain roles on Microsoft Entra ID. [Read about required licenses and permissions](/microsoft-365/security/defender/prerequisites).
+> To access Microsoft Defender portal, you need a Microsoft 365 E3 or E5 license and an account that has certain roles on Microsoft Entra ID. [Read about required licenses and permissions](/defender-xdr/prerequisites).
 
 For more information about ASR rule deployment in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, see [Optimize ASR rule deployment and detections](configure-machines-asr.md).
 

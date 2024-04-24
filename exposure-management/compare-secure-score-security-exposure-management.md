@@ -11,7 +11,7 @@ ms.date: 03/12/2024
 
 # Compare Microsoft Security Exposure Management with secure score
 
-This article discusses the differences between Microsoft [secure score](/microsoft-365/security/defender/microsoft-secure-score) and [Microsoft Security Exposure Management](microsoft-security-exposure-management.md).
+This article discusses the differences between Microsoft [secure score](/defender-xdr/microsoft-secure-score) and [Microsoft Security Exposure Management](microsoft-security-exposure-management.md).
 
 Security Exposure Management is currently in public preview.
 

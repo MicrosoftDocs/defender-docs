@@ -59,7 +59,7 @@ To view or edit email notification settings for your company, follow these steps
 
 3. Review the information on the **Alerts** and **Vulnerabilities** tabs.
 
-   - If you don't see any items listed on the **Alerts** tab, you can create a rule for people to be notified when alerts are generated. To get help with this task, see [Create rules for alert notifications](/defender-endpoint/configure-email-notifications).
+   - If you don't see any items listed on the **Alerts** tab, you can create a rule for people to be notified when alerts are generated. To get help with this task, see [Create rules for alert notifications](/defender-endpoint/api/configure-email-notifications).
 
    - If you don't see any items listed on the **Vulnerabilities** tab, you can create a rule for people to be notified whenever a new vulnerability is discovered. To get help with this task, see [Create rules for vulnerability events](/defender-endpoint/configure-vulnerability-email-notifications).
 

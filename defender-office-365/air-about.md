@@ -21,8 +21,8 @@ ms.custom:
 - seo-marvel-mar2020
 ms.service: defender-office-365
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
 # Automated investigation and response (AIR) in Microsoft Defender for Office 365
@@ -101,7 +101,7 @@ Microsoft 365 provides many built-in alert policies that help identify Exchange 
 
 You need to be assigned permissions to use AIR. You have the following options:
 
-- [Microsoft Defender XDR Unified role based access control (RBAC)](/microsoft-365/security/defender/manage-rbac) (Affects the Defender portal only, not PowerShell):
+- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell):
   - _Start an automated investigation_ or _Approve or reject recommended actions_: **Security Operator/Email advanced remediation actions (manage)**.
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md):
   - _Set up AIR features_: Membership in the **Organization Management** or **Security Administrator** role groups.

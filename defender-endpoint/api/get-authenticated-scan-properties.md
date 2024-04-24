@@ -24,10 +24,10 @@ ms.date: 12/14/2022
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
+- ../microsoft-defender-endpoint.md
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
@@ -50,7 +50,7 @@ Method|Description
 [Get scan history by definition](get-scan-history-by-definition.md)|List scan definition history.
 [Get scan history by session](get-scan-history-by-session.md)|List scan history for a session.
 
-Learn more about [Windows authenticated scan](/defender-vulnerability-management/windows-authenticated-scan.md) and [Network authenticated scans](../network-devices.md).
+Learn more about [Windows authenticated scan](/defender-vulnerability-management/windows-authenticated-scan) and [Network authenticated scans](../network-devices.md).
 
 ## Properties
 

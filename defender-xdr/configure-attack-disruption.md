@@ -63,7 +63,7 @@ Review the configured automation level for your device group policies, wWhether 
 
 #### Device discovery configuration
 
-Device discovery settings must be activated to "Standard Discovery" at a minimum. Learn how to configure device discovery in [Set up device discovery](/microsoft-365/security/defender-endpoint/configure-device-discovery).
+Device discovery settings must be activated to "Standard Discovery" at a minimum. Learn how to configure device discovery in [Set up device discovery](/defender-endpoint/configure-device-discovery).
 
 >[!NOTE]
 >Attack disruption can act on devices independent of a device's Microsoft Defender Antivirus operating state. The operating state can be in Active, Passive, or EDR Block Mode.

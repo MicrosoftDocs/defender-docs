@@ -21,11 +21,11 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 
-To run a scan of Microsoft Defender Antivirus for Linux, see [Supported Commands](/microsoft-365/security/defender-endpoint/linux-resources#supported-commands).
+To run a scan of Microsoft Defender Antivirus for Linux, see [Supported Commands](/defender-endpoint/linux-resources#supported-commands).
 
 > [!NOTE]
 > This article supports Microsoft Defender for Endpoint on Linux for Red Hat Enterprise Linux distributions (RHEL).

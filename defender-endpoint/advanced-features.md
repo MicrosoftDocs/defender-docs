@@ -20,8 +20,8 @@ ms.date: 04/08/2024
 # Configure advanced features in Defender for Endpoint
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -157,11 +157,11 @@ This feature enables you to incorporate data from Microsoft Defender for Office 
 > [!NOTE]
 > You'll need to have the appropriate license to enable this feature.
 
-To receive contextual device integration in Office 365 Threat Intelligence, you'll need to enable the Defender for Endpoint settings in the Security & Compliance dashboard. For more information, see [Threat investigation and response](/microsoft-365/security/office-365-security/office-365-ti).
+To receive contextual device integration in Office 365 Threat Intelligence, you'll need to enable the Defender for Endpoint settings in the Security & Compliance dashboard. For more information, see [Threat investigation and response](/defender-office-365/office-365-ti).
 
 ## Endpoint Attack Notifications
 
-[Endpoint Attack Notifications](/microsoft-365/security/defender-endpoint/endpoint-attack-notifications) enable Microsoft to actively hunt for critical threats to be prioritized based on urgency and impact over your endpoint data. 
+[Endpoint Attack Notifications](/defender-endpoint/endpoint-attack-notifications) enable Microsoft to actively hunt for critical threats to be prioritized based on urgency and impact over your endpoint data. 
 
 For proactive hunting across the full scope of Microsoft Defender XDR, including threats that span email, collaboration, identity, cloud applications, and endpoints, [learn more](https://aka.ms/DefenderExpertsForHuntingGetStarted) about Microsoft Defender Experts.
 

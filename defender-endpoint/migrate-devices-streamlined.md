@@ -22,9 +22,9 @@ ms.date: 02/01/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 [!Include[Prerelease information](../includes/prerelease.md)]
 
@@ -93,13 +93,13 @@ Follow the guidance in [Configuration Manager](/mem/configmgr/protect/deploy-use
 
 ### VDI
 
-Use the guidance in [Onboard nonpersistent virtual desktop infrastructure (VDI) devices](/microsoft-365/security/defender-endpoint/configure-endpoints-vdi). After completing the steps, you must restart the device for device connectivity to switch over.
+Use the guidance in [Onboard nonpersistent virtual desktop infrastructure (VDI) devices](/defender-endpoint/configure-endpoints-vdi). After completing the steps, you must restart the device for device connectivity to switch over.
 
 ### [**Windows Server**](#tab/Windowsserver)
 
 ### Windows Server
 
-For general information on onboarding Windows server devices, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](/microsoft-365/security/defender-endpoint/configure-server-endpoints).
+For general information on onboarding Windows server devices, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](/defender-endpoint/configure-server-endpoints).
 
 Confirm prerequisites are met: [Prerequisites for streamlined method](configure-device-connectivity.md#prerequisites).
 
@@ -117,7 +117,7 @@ Follow the guidance in [Group policy](configure-endpoints-gp.md) using the strea
 
 ### VDI
 
-Follow the guidance in [Onboard nonpersistent virtual desktop infrastructure (VDI) devices](/microsoft-365/security/defender-endpoint/configure-endpoints-vdi). After completing the steps, you must restart the device for device connectivity to switch over.
+Follow the guidance in [Onboard nonpersistent virtual desktop infrastructure (VDI) devices](/defender-endpoint/configure-endpoints-vdi). After completing the steps, you must restart the device for device connectivity to switch over.
 
 ### [**macOS**](#tab/macOS)
 
@@ -135,7 +135,7 @@ After completing the steps, you must either reboot the device or restart the ser
 
 ### Microsoft Intune
 
-1. In Microsoft Intune, create a new onboarding policy using Custom Configuration profile. Don't assign it yet. Follow the instructions under [Intune-based deployment for Microsoft Defender for Endpoint on Mac](/microsoft-365/security/defender-endpoint/mac-install-with-intune).
+1. In Microsoft Intune, create a new onboarding policy using Custom Configuration profile. Don't assign it yet. Follow the instructions under [Intune-based deployment for Microsoft Defender for Endpoint on Mac](/defender-endpoint/mac-install-with-intune).
 
 2. Exclude the macOS device you're reonboarding from its existing onboarding policy. To learn more about excluding groups from policy assignments, see [Exclude groups from a policy assignment](/mem/intune/configuration/device-profile-assign#exclude-groups-from-a-policy-assignment).
 
@@ -272,7 +272,7 @@ Make sure to run a couple of basic commands post-connection to confirm connectiv
 
 #### Automated investigation and response
 
-Ensure that Automated investigation and response is working on your test device: [Configure automated investigation and response capabilities](/microsoft-365/security/defender/m365d-configure-auto-investigation-response).
+Ensure that Automated investigation and response is working on your test device: [Configure automated investigation and response capabilities](/defender-xdr/m365d-configure-auto-investigation-response).
 
 For Auto-IR testing labs, navigate to **Microsoft Defender XDR** \> **Evaluations & Tutorials** \> **Tutorials & Simulations** \> **Tutorials \> **Automated Investigation tutorials**.
 

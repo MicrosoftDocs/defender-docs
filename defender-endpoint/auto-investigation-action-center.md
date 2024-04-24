@@ -24,8 +24,8 @@ ms.date: 02/21/2024
 During and after an automated investigation, remediation actions for threat detections are identified. Depending on the particular threat and how [automated investigation and remediation capabilities are configured](configure-automated-investigations-remediation.md) for your organization, some remediation actions are taken automatically, and others require approval. If you're part of your organization's security operations team, you can view pending and completed [remediation actions](manage-auto-investigation.md#remediation-actions) in the **Action center**.
 
 **Applies to:**
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 ## The unified Action center
@@ -40,7 +40,7 @@ The following table compares the new, unified Action center to the previous Acti
 
 |The new, unified Action center  |The previous Action center  |
 |---------|---------|
-|Lists pending and completed actions for devices and email in one location <br/>([Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) plus [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365))|Lists pending and completed actions for devices <br/> ([Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) only)   |
+|Lists pending and completed actions for devices and email in one location <br/>([Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) plus [Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365))|Lists pending and completed actions for devices <br/> ([Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) only)   |
 |Is located at:<br/>[https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)         |Is located at:<br/>[https://securitycenter.windows.com/action-center](https://securitycenter.windows.com/action-center)     |
 | In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, choose **Action center**. <p>:::image type="content" source="media/action-center-nav-new.png" alt-text="The navigation pane to the Action Center in the Microsoft Defender portal" lightbox="media/action-center-nav-new.png"::: | In the Microsoft Defender portal, choose **Automated investigations** > **Action center**. <p>:::image type="content" source="media/action-center-nav-old.png" alt-text="An older version of the navigation pane to the Action Center in the Microsoft Defender portal" lightbox="media/action-center-nav-old.png":::  |
 
@@ -50,7 +50,7 @@ You can use the unified Action center if you have appropriate permissions and on
 
 - [Microsoft Defender XDR](/microsoft-365/security/mtp/microsoft-threat-protection)
 - [Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365)
+- [Defender for Office 365](/defender-office-365/defender-for-office-365)
 - [Defender for Business](/defender-business/mdb-overview)
 
 ## Using the Action center

@@ -23,9 +23,9 @@ search.appverid: met150
 # Troubleshooting issues when migrating to Microsoft Defender for Endpoint
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 This article provides troubleshooting information for security administrators who are experiencing issues when moving from a non-Microsoft endpoint protection solution to Microsoft Defender for Endpoint.
 

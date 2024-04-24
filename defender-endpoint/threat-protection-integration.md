@@ -22,9 +22,9 @@ ms.date: 12/18/2020
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
@@ -58,7 +58,7 @@ Suspicious activities are processes running under a user context. The integratio
 
 ### Microsoft Defender for Office
 
-[Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365) helps protect your organization from malware in email messages or files through Safe Links, Safe Attachments, advanced Anti-Phishing, and spoof intelligence capabilities. The integration between Microsoft Defender for Office 365 and Microsoft Defender for Endpoint enables security analysts to go upstream to investigate the entry point of an attack. Through threat intelligence sharing, attacks can be contained and blocked.
+[Defender for Office 365](/defender-office-365/defender-for-office-365) helps protect your organization from malware in email messages or files through Safe Links, Safe Attachments, advanced Anti-Phishing, and spoof intelligence capabilities. The integration between Microsoft Defender for Office 365 and Microsoft Defender for Endpoint enables security analysts to go upstream to investigate the entry point of an attack. Through threat intelligence sharing, attacks can be contained and blocked.
 
 > [!NOTE]
 > Defender for Office 365 data is displayed for events within the last 30 days. For alerts, Defender for Office 365 data is displayed based on first activity time. After that, the data is no longer available in Defender for Office 365.
@@ -73,12 +73,12 @@ The Skype for Business integration provides a way for analysts to communicate wi
 
 With Microsoft Defender XDR, Microsoft Defender for Endpoint, and various Microsoft security solutions form a unified pre- and post-breach enterprise defense suite that natively integrates across endpoint, identity, email, and applications to detect, prevent, investigate, and automatically respond to sophisticated attacks.
 
-[Learn more about Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender)
+[Learn more about Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 
 ## Related topics
 
 - [Configure integration and other advanced features](advanced-features.md)
-- [Microsoft Defender XDR overview](/microsoft-365/security/defender/microsoft-365-defender)
-- [Turn on Microsoft Defender XDR](/microsoft-365/security/defender/m365d-enable)
+- [Microsoft Defender XDR overview](/defender-xdr/microsoft-365-defender)
+- [Turn on Microsoft Defender XDR](/defender-xdr/m365d-enable)
 - [Protect users, data, and devices with Conditional Access](conditional-access.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

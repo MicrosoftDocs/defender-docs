@@ -37,7 +37,7 @@
         - name: Microsoft Sentinel
           items:
           - name: Experience in Defender portal
-            href: /azure/sentinel/microsoft-sentinel-defender-portal?toc=/microsoft-365/security/defender/toc.json&bc=/microsoft-365/security/defender/breadcrumb/toc.json
+            href: /azure/sentinel/microsoft-sentinel-defender-portal?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
           - name: Connect Microsoft Sentinel to Microsoft Defender
             href: microsoft-sentinel-onboard.md    
     - name: Plan
@@ -137,19 +137,19 @@
       - name: Protect your identities
         items:
           - name: Sensor settings and health
-            href: /defender-for-identity/sensor-settings?toc=/microsoft-365/security/defender/toc.json&bc=/microsoft-365/security/defender/breadcrumb/toc.json
+            href: /defender-for-identity/sensor-settings?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
           - name: Directory Services account
-            href: /defender-for-identity/deploy/directory-service-accounts?toc=/microsoft-365/security/defender/toc.json&bc=/microsoft-365/security/defender/breadcrumb/toc.json
+            href: /defender-for-identity/deploy/directory-service-accounts?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
           - name: VPN integration
-            href: /defender-for-identity/vpn-integration?toc=/microsoft-365/security/defender/toc.json&bc=/microsoft-365/security/defender/breadcrumb/toc.json
+            href: /defender-for-identity/vpn-integration?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
           - name: Set entity tags
-            href: /defender-for-identity/entity-tags?toc=/microsoft-365/security/defender/toc.json&bc=/microsoft-365/security/defender/breadcrumb/toc.json
+            href: /defender-for-identity/entity-tags?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
           - name: Investigate Defender for Identity alerts
-            href: /defender-for-identity/manage-security-alerts?toc=/microsoft-365/security/defender/toc.json&bc=/microsoft-365/security/defender/breadcrumb/toc.json
+            href: /defender-for-identity/manage-security-alerts?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
           - name: Configure detection exclusions
-            href: /defender-for-identity/exclusions?toc=/microsoft-365/security/defender/toc.json&bc=/microsoft-365/security/defender/breadcrumb/toc.json
+            href: /defender-for-identity/exclusions?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
           - name: Email and syslog notifications
-            href: /defender-for-identity/notifications?toc=/microsoft-365/security/defender/toc.json&bc=/microsoft-365/security/defender/breadcrumb/toc.json
+            href: /defender-for-identity/notifications?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
       - name: Protect your Office 365 workloads
         href: /defender-office-365
       - name: Create Custom Defender XDR reports

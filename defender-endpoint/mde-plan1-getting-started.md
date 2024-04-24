@@ -23,8 +23,8 @@ ms.custom: intro-get-started
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) enables you to view information about detected threats, manage your alerts and incidents, take any needed action on detected threats, and manage devices. The Microsoft Defender portal is where you can get started interacting with the threat protection capabilities you get with Defender for Endpoint Plan 1. The following sections describe how to get started:
 
@@ -62,14 +62,14 @@ The navigation bar on the left side of the screen enables you to move easily bet
 
 | Navigation bar item | Description |
 |:---|:---|
-| **Home** | Navigates to the Home page of the [Microsoft Defender portal](/defender/microsoft-365-security-center-mde). |
+| **Home** | Navigates to the Home page of the [Microsoft Defender portal](/defender-xdr/microsoft-365-security-center-mde). |
 | **Incidents & alerts** | Expands to show **Incidents** and **Alerts**. |
 | **Incidents & alerts** > **Incidents** | Navigates to the **Incidents** list. Incidents are created when alerts are triggered and/or threats are detected. By default, the **Incidents** list displays data for the last 30 days, with the most recent incident listed first. <br/><br/> To learn more, see [Incidents](view-incidents-queue.md). |
 | **Incidents & alerts** > **Alerts** | Navigates to the **Alerts** list (also referred to as the **Alerts queue**). Alerts are triggered when a suspicious or malicious file, process, or behavior is detected. By default, the **Alerts** list displays data for the last 30 days, with the most recent alert listed first. <br/><br/> To learn more, see [Alerts](alerts-queue.md). |
 | **Incidents & alerts** > **Email & collaboration alerts** | If your subscription includes [Microsoft Defender for Office 365](/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet), alerts are generated when potential threats are detected in email and Office files. |
 | **Actions & submissions** > **Action center** | Navigates to the Action center, which tracks remediation and manual response actions. The Action center tracks activities like these: <br/>- Microsoft Defender Antivirus encounters a malicious file and then blocks/removes that file. <br/>- Your security team isolates a device.<br/>- Defender for Endpoint detects and quarantines a file. <br/><br/> To learn more, see [Action center](auto-investigation-action-center.md). | 
 | **Actions & submissions** > **Submissions** | Navigates to the unified submissions portal, where admins can submit files to Microsoft for review. <br/><br/>To learn more, see [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md). | 
-| **Secure score** | Displays a representation of your organization's security posture along with a list of recommended actions and metrics. <br/><br/> To learn more, see [Microsoft Secure Score](/defender/microsoft-secure-score). |
+| **Secure score** | Displays a representation of your organization's security posture along with a list of recommended actions and metrics. <br/><br/> To learn more, see [Microsoft Secure Score](/defender-xdr/microsoft-secure-score). |
 | **Learning hub** | Navigates to a list of learning paths that you can access to learn more about Microsoft 365 security capabilities.  |
 | **Trials** | Navigates to a list of free Microsoft 365 trial subscriptions you can start. Starting a trial helps you make informed decisions about purchases or upgrades. Certain terms and conditions apply. See [Microsoft 365 trial terms and conditions](https://go.microsoft.com/fwlink/?linkid=2194722). |
 | **Partner catalog** | If you're looking for a Microsoft partner to help you with your security and other settings, check out the lists of partners in this catalog. |
@@ -80,11 +80,11 @@ The navigation bar on the left side of the screen enables you to move easily bet
 | **Health** > **Service health** | Navigates to the Service health page in the Microsoft 365 admin center. This page enables you to view health status across all the services available with your organization's subscriptions.   |
 | **Health** > **Message center** | Navigates to the Message center in the Microsoft 365 admin center. The Message center provides information about planned changes. Each message describes what's coming, how it might affect users, and how to manage changes. |  
 | **Permissions & roles** | Enables you to grant permissions to use the Microsoft Defender portal. Permissions are granted through roles in Microsoft Entra ID. Select a role, and a flyout pane appears. The flyout contains a link to Microsoft Entra ID where you can add or remove members in a role group. <br/><br/> To learn more, see [Manage portal access using role-based access control](rbac.md).  |
-| **Settings** | Navigates to general settings for your Microsoft Defender portal (listed as **Security center**) and Defender for Endpoint (listed as **Endpoints**). <br/><br/> To learn more, see [Settings](/defender/microsoft-365-defender-portal). |
+| **Settings** | Navigates to general settings for your Microsoft Defender portal (listed as **Security center**) and Defender for Endpoint (listed as **Endpoints**). <br/><br/> To learn more, see [Settings](/defender-xdr/microsoft-365-defender-portal). |
 | **More resources** | Displays a list of more portals and centers, such as Microsoft Entra ID and the Microsoft Purview compliance portal. <br/><br/> To learn more, see [Microsoft security portals and admin centers](/defender/portals). |
 
 > [!TIP]
-> To learn more, see the [Microsoft Defender portal overview](/defender/microsoft-365-security-center-mde).
+> To learn more, see the [Microsoft Defender portal overview](/defender-xdr/microsoft-365-security-center-mde).
 
 ## View and manage incidents & alerts
 

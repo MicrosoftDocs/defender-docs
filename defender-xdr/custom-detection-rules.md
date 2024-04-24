@@ -32,7 +32,7 @@ Custom detection rules are rules you can design and tweak using [advanced huntin
 
 To manage custom detections, you need to be assigned one of these roles:
 
-- **Security settings (manage)**—Users with this [Microsoft Defender XDR permission](/microsoft-365/security/defender/manage-rbac) can manage security settings in the Microsoft Defender portal.
+- **Security settings (manage)**—Users with this [Microsoft Defender XDR permission](/defender-xdr/manage-rbac) can manage security settings in the Microsoft Defender portal.
 - **Security administrator**—Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-administrator) can manage security settings in the Microsoft Defender portal and other portals and services.
 
 - **Security operator**—Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-operator) can manage alerts and have global read-only access to security-related features, including all information in the Microsoft Defender portal. This role is sufficient for managing custom detections only if role-based access control (RBAC) is turned off in Microsoft Defender for Endpoint. If you have RBAC configured, you also need the **manage security settings** permission for Defender for Endpoint.
@@ -200,7 +200,7 @@ These actions are applied to devices in the `DeviceId` column of the query resul
 - **Collect investigation package**—collects device information in a ZIP file. [Learn more about the Microsoft Defender for Endpoint investigation package](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#collect-investigation-package-from-devices)
 - **Run antivirus scan**—performs a full Microsoft Defender Antivirus scan on the device
 - **Initiate investigation**—initiates an [automated investigation](m365d-autoir.md) on the device
-- **Restrict app execution**—sets restrictions on device to allow only files that are signed with a Microsoft-issued certificate to run. [Learn more about app restrictions with Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/respond-machine-alerts#restrict-app-execution)
+- **Restrict app execution**—sets restrictions on device to allow only files that are signed with a Microsoft-issued certificate to run. [Learn more about app restrictions with Microsoft Defender for Endpoint](/defender-endpoint/respond-machine-alerts#restrict-app-execution)
 
 #### Actions on files
 

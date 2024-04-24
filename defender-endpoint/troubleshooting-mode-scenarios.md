@@ -22,9 +22,9 @@ ms.date: 10/26/2023
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
 
@@ -137,6 +137,6 @@ For more information, see [Use network protection to help prevent connections to
 - [Enable troubleshooting mode](enable-troubleshooting-mode.md)
 - [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)
 - [Set-MpPreference](/powershell/module/defender/set-mppreference)
-- [Get an overview of Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/)
+- [Get an overview of Microsoft Defender for Endpoint](/defender-endpoint/)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

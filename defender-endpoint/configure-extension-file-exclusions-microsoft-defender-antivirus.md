@@ -22,8 +22,8 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -310,7 +310,7 @@ MpCmdRun.exe -CheckExclusion -path <path>
 ```
 
 > [!NOTE]
-> Checking exclusions with `MpCmdRun` requires Microsoft Defender Antivirus [version 4.18.2111-5.0 (released in December 2021)](/microsoft-365/security/defender-endpoint/msda-updates-previous-versions-technical-upgrade-support#november-2021-platform-41821115--engine-11188004) or later.
+> Checking exclusions with `MpCmdRun` requires Microsoft Defender Antivirus [version 4.18.2111-5.0 (released in December 2021)](/defender-endpoint/msda-updates-previous-versions-technical-upgrade-support#november-2021-platform-41821115--engine-11188004) or later.
 
 ### Review the list of exclusions alongside all other Microsoft Defender Antivirus preferences by using PowerShell
 

@@ -22,8 +22,8 @@ search.appverid: met150
 # Run the client analyzer on macOS and Linux
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 The XMDEClientAnalyzer is used for diagnosing Microsoft Defender for Endpoint health or reliability issues on onboarded devices running either Linux, or macOS.
 
@@ -320,7 +320,7 @@ Usage example: `sudo ./mde_support_tool.sh skipfaultyrules -e true`
 
 - Audited_info.txt
 
-  Description: details on audited service and related components for [Linux](/microsoft-365/security/defender-endpoint/linux-resources) OS.
+  Description: details on audited service and related components for [Linux](/defender-endpoint/linux-resources) OS.
 
 - perf_benchmark.tar.gz
 

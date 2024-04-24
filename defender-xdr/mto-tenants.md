@@ -20,7 +20,7 @@ ms.date: 03/20/2024
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 ## View the tenants page
 

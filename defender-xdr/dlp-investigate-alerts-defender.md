@@ -97,7 +97,7 @@ The **CloudAppEvents** table contains all audit logs across all locations like S
 
 #### Before you begin
 
-If you're new to advanced hunting, you should review [Get started with advanced hunting](/microsoft-365/security/defender/advanced-hunting-overview).
+If you're new to advanced hunting, you should review [Get started with advanced hunting](/defender-xdr/advanced-hunting-overview).
 
 Before you can use advance hunting you must have [access to the **CloudAppEvents** table](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps) that contains the Microsoft Purview data.
 
@@ -130,7 +130,7 @@ If the alert is for a file in SharePoint Online or One Drive for Business, you c
 - Unshare
 - Delete
 - Apply sensitivity label
-- Download ([data classification content viewer role](/microsoft-365/security/office-365-security/scc-permissions#role-groups-in-microsoft-defender-for-office-365-and-microsoft-purview-compliance) is required for this action)
+- Download ([data classification content viewer role](/defender-office-365/scc-permissions#role-groups-in-microsoft-defender-for-office-365-and-microsoft-purview-compliance) is required for this action)
 - Withdraw feedback
 
 For remediation actions, select the **User card** on the top of the alert page to open the user details.

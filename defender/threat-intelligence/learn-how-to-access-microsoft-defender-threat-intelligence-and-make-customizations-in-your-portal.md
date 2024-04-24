@@ -30,7 +30,7 @@ This guide walks you through how to access Microsoft Threat Intelligence (Defend
 
 ## Open Defender TI in the Microsoft Defender portal
 
-1. Access the [Defender portal](https://security.microsoft.com/) and complete the Microsoft authentication process. [Learn more about the Defender portal](/microsoft-365/security/defender/microsoft-365-defender-portal)
+1. Access the [Defender portal](https://security.microsoft.com/) and complete the Microsoft authentication process. [Learn more about the Defender portal](/defender-xdr/microsoft-365-defender-portal)
 2. Navigate to **Threat intelligence**. You can access Defender TI in the following pages:
    - Intel profiles
    - Intel explorer

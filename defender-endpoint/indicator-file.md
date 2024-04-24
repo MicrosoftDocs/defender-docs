@@ -24,9 +24,9 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
-- [Microsoft Defender for Endpoint Plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 > [!TIP]
@@ -49,11 +49,11 @@ There are three ways you can create indicators for files:
 Understand the following prerequisites before you create indicators for files:
 
 - This feature is available if your organization uses [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md) (in active mode) 
-- [Behavior Monitoring is enabled](/microsoft-365/security/defender-endpoint/behavior-monitor)
+- [Behavior Monitoring is enabled](/defender-endpoint/behavior-monitor)
 
 - [Cloud-based protection is turned on](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus).
 
-- [Cloud Protection network connectivity is functional](/microsoft-365/security/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
+- [Cloud Protection network connectivity is functional](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
 
 - The Antimalware client version must be `4.18.1901.x` or later. See [Monthly platform and engine versions](microsoft-defender-antivirus-updates.md#monthly-platform-and-engine-versions)
 

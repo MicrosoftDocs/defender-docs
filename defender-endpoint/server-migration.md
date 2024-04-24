@@ -24,11 +24,11 @@ ms.subservice: onboard
 **Applies to:**
 - Windows Server 2012 R2
 - Windows Server 2016
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 > [!NOTE]
-> Always ensure the operating system, and Microsoft Defender Antivirus on Windows Server 2016, are fully updated before proceeding with installation or upgrade. To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved after installation. In addition, to keep protection components updated, please reference [Manage Microsoft Defender Antivirus updates and apply baselines](/microsoft-365/security/defender-endpoint/manage-updates-baselines-microsoft-defender-antivirus#monthly-platform-and-engine-versions).
+> Always ensure the operating system, and Microsoft Defender Antivirus on Windows Server 2016, are fully updated before proceeding with installation or upgrade. To receive regular product improvements and fixes for the EDR Sensor component, ensure Windows Update [KB5005292](https://go.microsoft.com/fwlink/?linkid=2168277) gets applied or approved after installation. In addition, to keep protection components updated, please reference [Manage Microsoft Defender Antivirus updates and apply baselines](/defender-endpoint/manage-updates-baselines-microsoft-defender-antivirus#monthly-platform-and-engine-versions).
 
 These instructions apply to the new unified solution and installer (MSI) package of Microsoft Defender for Endpoint for Windows Server 2012 R2 and Windows Server 2016. This article contains high-level instructions for various possible migration scenarios from the previous to the current solution. These high-level steps are intended as guidelines to be adjusted to the deployment and configuration tools available in your environment.
 
@@ -62,7 +62,7 @@ For more information on how to use the script, use the PowerShell command "get-h
 > [!NOTE]
 > You'll need Microsoft Endpoint Configuration Manager, version 2107 or later to perform Endpoint Protection policy configuration. From [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016) deployment and upgrades can be fully automated.
 
-For instructions on how to migrate using Microsoft Endpoint Configuration Manager older than version 2207 please see [Migrating servers from Microsoft Monitoring Agent to the unified solution.](/microsoft-365/security/defender-endpoint/application-deployment-via-mecm)
+For instructions on how to migrate using Microsoft Endpoint Configuration Manager older than version 2207 please see [Migrating servers from Microsoft Monitoring Agent to the unified solution.](/defender-endpoint/application-deployment-via-mecm)
 
 ## If you are running a non-Microsoft antivirus solution
 

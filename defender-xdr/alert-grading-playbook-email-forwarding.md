@@ -98,8 +98,8 @@ For more information, see the following articles:
 
 - [Autoforwarded messages report in the EAC](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report)
 - [New users forwarding email insight in the EAC](/exchange/monitoring/mail-flow-insights/mfi-new-users-forwarding-email-insight)
-- [Responding to a Compromised Email Account](/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account)
-- [Report false positives and false negatives in Outlook](/microsoft-365/security/office-365-security/submissions-outlook-report-messages)
+- [Responding to a Compromised Email Account](/defender-office-365/responding-to-a-compromised-email-account)
+- [Report false positives and false negatives in Outlook](/defender-office-365/submissions-outlook-report-messages)
 
 Here's the workflow to identify suspicious email forwarding activities.
 

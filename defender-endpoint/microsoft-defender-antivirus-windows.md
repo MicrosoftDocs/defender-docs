@@ -62,7 +62,7 @@ The following table summarizes Microsoft Defender Antivirus processes and servic
 | **Microsoft Defender Antivirus command-line utility** | - **Processes** tab: N/A <br/>- **Details** tab: `MpCmdRun.exe` <br/>- **Services** tab: N/A  | 
 | **Microsoft Security Client Policy Configuration Tool** | - **Processes** tab: N/A <br/>- **Details** tab: `ConfigSecurityPolicy.exe` <br/>- **Services** tab: N/A | 
 
-To learn more about the Microsoft Defender Core service, please visit [Microsoft Defender Core service overview](/microsoft-365/security/defender-endpoint/microsoft-defender-core-service-overview).
+To learn more about the Microsoft Defender Core service, please visit [Microsoft Defender Core service overview](/defender-endpoint/microsoft-defender-core-service-overview).
 
 For [Microsoft Endpoint Data Loss Prevention](/purview/endpoint-dlp-getting-started) (Endpoint DLP), the following table summarizes processes and services. You can view them in Task Manager in Windows.
 

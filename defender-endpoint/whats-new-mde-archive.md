@@ -22,11 +22,11 @@ ms.topic: conceptual
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
-- [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
+- [Microsoft 365 Defender](/defender-xdr)
 
 The following features were in preview or generally available (GA) in Microsoft Defender for Endpoint prior to the calendar year 2023.
 
@@ -88,7 +88,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Device health status](investigate-machines.md#device-health-status)<br>The Device health status card shows a summarized health report for the specific device.
 
-- [Device health reporting (Preview)](/microsoft-365/security/defender-endpoint/machine-reports)<br> The devices status report provides high-level information about the devices in your organization. The report includes trending information showing the sensor health state, antivirus status, OS platforms, and Windows 10 versions.
+- [Device health reporting (Preview)](/defender-endpoint/machine-reports)<br> The devices status report provides high-level information about the devices in your organization. The report includes trending information showing the sensor health state, antivirus status, OS platforms, and Windows 10 versions.
 
 - [Tamper protection on macOS is now generally available](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/tamper-protection-on-macOS-is-now-generally-available/ba-p/3595422)<br> This feature will be released with audit mode enabled by default, and you can decide whether to enforce (block) or turn off the capability. Later this year, we'll offer a gradual rollout mechanism that will automatically switch endpoints to "block" mode;  this mechanism applies only if you haven't made a choice to either enable ("block" mode) or disable the capability.
 
@@ -152,7 +152,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
    > [!IMPORTANT]
    > Standard discovery will be the default mode for all customers starting July 19, 2021. You can choose to retain the "basic mode" through the **Settings** page.
 
-- [Device group definitions](/microsoft-365/security/defender-endpoint/machine-groups) can now include multiple values for each condition. You can set multiple tags, device names, and domains to the definition of a single device group.
+- [Device group definitions](/defender-endpoint/machine-groups) can now include multiple values for each condition. You can set multiple tags, device names, and domains to the definition of a single device group.
 
 - [Mobile Application management support](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> This enhancement enables Microsoft Defender for Endpoint protect an organization's data within a managed application when Intune is being used to manage mobile applications. For more information about mobile application management, see [this documentation](/mem/intune/apps/mam-faq).
 
@@ -290,7 +290,7 @@ Threat Analytics is a set of interactive reports published by the Microsoft Defe
 
 ## March 2018
 
-- [Advanced Hunting](/defender/advanced-hunting-query-language)<BR>Query data using advanced hunting in Microsoft Defender for Endpoint.
+- [Advanced Hunting](/defender-xdr/advanced-hunting-query-language)<BR>Query data using advanced hunting in Microsoft Defender for Endpoint.
 
 - [Attack surface reduction rules](attack-surface-reduction.md)<BR>The newly introduced attack surface reduction rules are:
 

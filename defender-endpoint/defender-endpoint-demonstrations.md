@@ -21,9 +21,9 @@ ms.date: 01/15/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
@@ -46,17 +46,17 @@ The following table lists the available demonstrations alphabetically, with thei
 
 | # | Demonstration name | Protection area | Description |
 |:--|:---|:---|:---|
-| 1 |[Endpoint Detection and Response (EDR) detections](/microsoft-365/security/defender-endpoint/edr-detection)| EDR |Confirm that EDR is detecting cyber threats such as malware.|
-| 2 |[Validate antimalware](/microsoft-365/security/defender-endpoint/validate-antimalware)| NGP |Confirm that antivirus/antimalware is detecting and blocking malware. |
-| 3 |[Potentially unwanted applications (PUA) demonstration](/microsoft-365/security/defender-endpoint/defender-endpoint-demonstration-potentially-unwanted-applications)| NGP |Confirm that potentially unwanted applications (PUAs) are being blocked on your network by downloading a fake (safe) PUA file. |
-| 4 |[Cloud-delivered protection demonstration](/microsoft-365/security/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection)| NGP |Confirm that cloud-delivered protection is working properly on your computer. |
-| 5 |[App reputation demonstration](/microsoft-365/security/defender-endpoint/defender-endpoint-demonstration-app-reputation)| NGP | Navigate to the app reputation page to see the demonstration scenario using Microsoft Edge.|
-| 6 |[URL reputation demonstrations](/microsoft-365/security/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation)| NGP | Navigate to the URL Reputation page to see the demonstration scenarios using Microsoft Edge. |
-| 7 | [Network protection demonstrations](/microsoft-365/security/defender-endpoint/defender-endpoint-demonstration-network-protection)| ASR | Navigate to a suspicious URL to trigger network protection. |
-| 8 | [Attack surface reduction rules (ASR rules) demonstrations](/microsoft-365/security/defender-endpoint/defender-endpoint-demonstration-attack-surface-reduction-rules)| ASR | Download sample files to trigger each ASR rule. |
-| 9 | [Exploit protection (EP) demonstrations](/microsoft-365/security/defender-endpoint/defender-endpoint-demonstration-exploit-protection) | ASR | Apply custom exploit protection settings. |
-| 10 | [Controlled folder access (CFA) demonstration (block script)](/microsoft-365/security/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access-test-tool)| ASR | Download the CFA test tool. |
-| 11 | [Controlled folder access (CFA) demonstrations (block ransomware)](/microsoft-365/security/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access)|  ASR| Download and execute a sample file to trigger CFA ransomware protection.|
+| 1 |[Endpoint Detection and Response (EDR) detections](/defender-endpoint/edr-detection)| EDR |Confirm that EDR is detecting cyber threats such as malware.|
+| 2 |[Validate antimalware](/defender-endpoint/validate-antimalware)| NGP |Confirm that antivirus/antimalware is detecting and blocking malware. |
+| 3 |[Potentially unwanted applications (PUA) demonstration](/defender-endpoint/defender-endpoint-demonstration-potentially-unwanted-applications)| NGP |Confirm that potentially unwanted applications (PUAs) are being blocked on your network by downloading a fake (safe) PUA file. |
+| 4 |[Cloud-delivered protection demonstration](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection)| NGP |Confirm that cloud-delivered protection is working properly on your computer. |
+| 5 |[App reputation demonstration](/defender-endpoint/defender-endpoint-demonstration-app-reputation)| NGP | Navigate to the app reputation page to see the demonstration scenario using Microsoft Edge.|
+| 6 |[URL reputation demonstrations](/defender-endpoint/defender-endpoint-demonstration-smartscreen-url-reputation)| NGP | Navigate to the URL Reputation page to see the demonstration scenarios using Microsoft Edge. |
+| 7 | [Network protection demonstrations](/defender-endpoint/defender-endpoint-demonstration-network-protection)| ASR | Navigate to a suspicious URL to trigger network protection. |
+| 8 | [Attack surface reduction rules (ASR rules) demonstrations](/defender-endpoint/defender-endpoint-demonstration-attack-surface-reduction-rules)| ASR | Download sample files to trigger each ASR rule. |
+| 9 | [Exploit protection (EP) demonstrations](/defender-endpoint/defender-endpoint-demonstration-exploit-protection) | ASR | Apply custom exploit protection settings. |
+| 10 | [Controlled folder access (CFA) demonstration (block script)](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access-test-tool)| ASR | Download the CFA test tool. |
+| 11 | [Controlled folder access (CFA) demonstrations (block ransomware)](/defender-endpoint/defender-endpoint-demonstration-controlled-folder-access)|  ASR| Download and execute a sample file to trigger CFA ransomware protection.|
 ## See also
 
 [Attack surface protection \(ASR\) overview](overview-attack-surface-reduction.md)

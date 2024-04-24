@@ -22,7 +22,7 @@ ms.date: 01/15/2024
 
 #### Applies to:
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
 
 ## Scenario requirements and setup
@@ -135,6 +135,6 @@ After a few minutes, a detection should be raised in Microsoft Defender XDR.
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
 - [Manage suppression rules](manage-suppression-rules.md)
 - [Create indicators of compromise (IoC)](manage-indicators.md)
-- [Create and manage custom detections rules](/defender/custom-detection-rules)
+- [Create and manage custom detections rules](/defender-xdr/custom-detection-rules)
 
 Read through [Microsoft Defender for Endpoint Security Operations Guide](mde-sec-ops-guide.md).

@@ -23,9 +23,9 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -72,7 +72,7 @@ Network protection requires Windows 10 or 11 (Pro or Enterprise), Windows Server
 
 | Windows version | Microsoft Defender Antivirus |
 |:---|:---|
-| Windows 10 version 1709 or later, Windows 11, Windows Server 1803 or later | Make sure that [Microsoft Defender Antivirus real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), [behavior monitoring](/microsoft-365/security/defender-endpoint/behavior-monitor) and [cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) are enabled (active) |
+| Windows 10 version 1709 or later, Windows 11, Windows Server 1803 or later | Make sure that [Microsoft Defender Antivirus real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md), [behavior monitoring](behavior-monitor.md) and [cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) are enabled (active) |
 | Windows Server 2012 R2 and Windows Server 2016 with the unified agent | Platform Update version 4.18.2001.x.x or newer |
 
 ## Why network protection is important
@@ -296,7 +296,7 @@ This procedure creates a custom view that filters to only show the following eve
 
 ## Network protection and the TCP three-way handshake
 
-With network protection, the determination of whether to allow or block access to a site is made after the completion of the [three-way handshake via TCP/IP](/troubleshoot/windows-server/networking/three-way-handshake-via-tcpip). Thus, when a site is blocked by network protection, you might see an action type of `ConnectionSuccess` under [`DeviceNetworkEvents`](/defender/advanced-hunting-devicenetworkevents-table) in the Microsoft Defender portal, even though the site was blocked. `DeviceNetworkEvents` are reported from the TCP layer, and not from network protection. After the three-way handshake has completed, access to the site is allowed or blocked by network protection.
+With network protection, the determination of whether to allow or block access to a site is made after the completion of the [three-way handshake via TCP/IP](/troubleshoot/windows-server/networking/three-way-handshake-via-tcpip). Thus, when a site is blocked by network protection, you might see an action type of `ConnectionSuccess` under [`DeviceNetworkEvents`](/defender-xdr/advanced-hunting-devicenetworkevents-table) in the Microsoft Defender portal, even though the site was blocked. `DeviceNetworkEvents` are reported from the TCP layer, and not from network protection. After the three-way handshake has completed, access to the site is allowed or blocked by network protection.
 
 Here's an example of how that works:
 

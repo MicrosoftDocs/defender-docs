@@ -26,9 +26,9 @@ ms.date: 11/29/2023
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
@@ -75,7 +75,7 @@ From a web browser, navigate to the <a href="https://go.microsoft.com/fwlink/p/?
 
 ## Data center location
 
-Microsoft Defender for Endpoint will store and process data in the [same location as used by Microsoft Defender XDR](/microsoft-365/security/defender/m365d-enable). If Microsoft Defender XDR has not been turned on yet, onboarding to Microsoft Defender for Endpoint will also turn on Microsoft Defender XDR and a new data center location is automatically selected based on the location of active Microsoft 365 security services. The selected data center location is shown on the screen.
+Microsoft Defender for Endpoint will store and process data in the [same location as used by Microsoft Defender XDR](/defender-xdr/m365d-enable). If Microsoft Defender XDR has not been turned on yet, onboarding to Microsoft Defender for Endpoint will also turn on Microsoft Defender XDR and a new data center location is automatically selected based on the location of active Microsoft 365 security services. The selected data center location is shown on the screen.
 
 ## Network configuration
 

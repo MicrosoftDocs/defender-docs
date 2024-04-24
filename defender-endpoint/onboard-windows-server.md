@@ -30,8 +30,8 @@ ms.date: 05/19/2022
 - Windows Server 2019 core edition
 - Windows Server 2022
 - [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint)
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https:%2F%2Faka.ms%2FMDEp2OpenTrial)
 
@@ -62,10 +62,10 @@ You'll need to complete the following general steps to successfully onboard serv
 
 You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, and Windows Server 2019 Core edition with the same method available for Windows 10 client devices.
 
-- [Offboard devices using Configuration Manager](/microsoft-365/security/defender-endpoint/configure-endpoints-sccm#offboard-devices-using-configuration-manager)
-- [Offboard and monitor devices using Mobile Device Management tools](/microsoft-365/security/defender-endpoint/configure-endpoints-mdm#offboard-and-monitor-devices-using-mobile-device-management-tools)
-- [Offboard devices using Group Policy](/microsoft-365/security/defender-endpoint/configure-endpoints-gp#offboard-devices-using-group-policy)
-- [Offboard devices using a local script](/microsoft-365/security/defender-endpoint/configure-endpoints-script#offboard-devices-using-a-local-script)
+- [Offboard devices using Configuration Manager](/defender-endpoint/configure-endpoints-sccm#offboard-devices-using-configuration-manager)
+- [Offboard and monitor devices using Mobile Device Management tools](/defender-endpoint/configure-endpoints-mdm#offboard-and-monitor-devices-using-mobile-device-management-tools)
+- [Offboard devices using Group Policy](/defender-endpoint/configure-endpoints-gp#offboard-devices-using-group-policy)
+- [Offboard devices using a local script](/defender-endpoint/configure-endpoints-script#offboard-devices-using-a-local-script)
 
 After offboarding, you can proceed to uninstall the unified solution package on Windows Server 2012 R2 and Windows Server 2016.
 
@@ -74,7 +74,7 @@ For other Windows server versions, you have two options to offboard Windows serv
 - Remove the Defender for Endpoint workspace configuration
 
 > [!NOTE]
-> These offboarding instructions for other Windows server versions also apply if you are running the previous Microsoft Defender for Endpoint for Windows Server 2016 and Windows Server 2012 R2 that requires the MMA. Instructions to migrate to the new unified solution are at [Server migration scenarios in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/server-migration).
+> These offboarding instructions for other Windows server versions also apply if you are running the previous Microsoft Defender for Endpoint for Windows Server 2016 and Windows Server 2012 R2 that requires the MMA. Instructions to migrate to the new unified solution are at [Server migration scenarios in Microsoft Defender for Endpoint](/defender-endpoint/server-migration).
 
 ## Related topics
 

@@ -20,9 +20,9 @@ ms.date: 10/11/2023
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/microsoft-defender-endpoint)
+- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
 You can configure Microsoft Defender XDR to send email notifications to specified recipients for new alerts. This feature enables you to identify a group of individuals who will immediately be informed and can act on alerts based on their severity.

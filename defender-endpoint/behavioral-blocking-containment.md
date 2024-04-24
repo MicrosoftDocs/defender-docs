@@ -22,9 +22,9 @@ ms.date: 02/29/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -34,7 +34,7 @@ ms.date: 02/29/2024
 
 ## Overview
 
-Today's threat landscape is overrun by [fileless malware](/microsoft-365/security/defender-endpoint/malware/fileless-threats) and that lives off the land, highly polymorphic threats that mutate faster than traditional solutions can keep up with, and human-operated attacks that adapt to what adversaries find on compromised devices. Traditional security solutions aren't sufficient to stop such attacks; you need artificial intelligence (AI) and device learning (ML) backed capabilities, such as behavioral blocking and containment, included in [Defender for Endpoint](/windows/security).
+Today's threat landscape is overrun by [fileless malware](/defender-endpoint/malware/fileless-threats) and that lives off the land, highly polymorphic threats that mutate faster than traditional solutions can keep up with, and human-operated attacks that adapt to what adversaries find on compromised devices. Traditional security solutions aren't sufficient to stop such attacks; you need artificial intelligence (AI) and device learning (ML) backed capabilities, such as behavioral blocking and containment, included in [Defender for Endpoint](/windows/security).
 
 Behavioral blocking and containment capabilities can help identify and stop threats, based on their behaviors and process trees even when the threat has started execution. Next-generation protection, EDR, and Defender for Endpoint components and features work together in behavioral blocking and containment capabilities.
 
@@ -54,7 +54,7 @@ The following image shows an example of an alert that was triggered by behaviora
 
 ## Components of behavioral blocking and containment
 
-- **On-client, policy-driven [attack surface reduction rules](attack-surface-reduction.md)** Predefined common attack behaviors are prevented from executing, according to your attack surface reduction rules. When such behaviors attempt to execute, they can be seen in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> as informational alerts. Attack surface reduction rules aren't enabled by default; you configure your policies in the [Microsoft Defender portal](/microsoft-365/security/defender/microsoft-365-defender).
+- **On-client, policy-driven [attack surface reduction rules](attack-surface-reduction.md)** Predefined common attack behaviors are prevented from executing, according to your attack surface reduction rules. When such behaviors attempt to execute, they can be seen in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> as informational alerts. Attack surface reduction rules aren't enabled by default; you configure your policies in the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender).
 
 - **[Client behavioral blocking](client-behavioral-blocking.md)** Threats on endpoints are detected through machine learning, and then are blocked and remediated automatically. (Client behavioral blocking is enabled by default.)
 
@@ -91,7 +91,7 @@ Behavior-based device-learning models in Defender for Endpoint caught and stoppe
 - The first protection layer detected the exploit behavior. Device-learning classifiers in the cloud correctly identified the threat as and immediately instructed the client device to block the attack.
 - The second protection layer, which helped stop cases where the attack got past the first layer, detected process hollowing, stopped that process, and removed the corresponding files (such as Lokibot).
 
-While the attack was detected and stopped, alerts, such as an "initial access alert," were triggered and appeared in the [Microsoft Defender portal](/microsoft-365/security/defender/microsoft-365-defender).
+While the attack was detected and stopped, alerts, such as an "initial access alert," were triggered and appeared in the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender).
 
 :::image type="content" source="media/behavblockcontain-initialaccessalert.png" alt-text="Initial access alert in the Microsoft Defender portal" lightbox="media/behavblockcontain-initialaccessalert.png":::
 

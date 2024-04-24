@@ -23,7 +23,7 @@ ms.date: 04/18/2024
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 > [!IMPORTANT]
 > Microsoft Defender Experts for Hunting is sold separately from other Microsoft Defender XDR products. If you're a Microsoft Defender XDR customer and are interested in purchasing Defender Experts for Hunting, complete a [customer interest form](https://aka.ms/DEX4HuntingCustomerInterestForm).

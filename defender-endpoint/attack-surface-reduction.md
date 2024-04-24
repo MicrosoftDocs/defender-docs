@@ -23,9 +23,9 @@ ms.date: 11/22/2023
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -144,7 +144,7 @@ You can set attack surface reduction rules for devices that are running any of t
 Although attack surface reduction rules don't require a [Windows E5 license](/windows/deployment/deploy-enterprise-licenses), if you have Windows E5, you get advanced management capabilities. The advanced capabilities - available only in Windows E5 - include:
 
 - The monitoring, analytics, and workflows available in [Defender for Endpoint](microsoft-defender-endpoint.md)
-- The reporting and configuration capabilities in [Microsoft Defender XDR](/microsoft-365/security/defender/overview-security-center).
+- The reporting and configuration capabilities in [Microsoft Defender XDR](/defender-xdr/overview-security-center).
 
 These advanced capabilities aren't available with a Windows Professional or Windows E3 license. However, if you do have those licenses, you can use Event Viewer and Microsoft Defender Antivirus logs to review your attack surface reduction rule events.
 
@@ -154,7 +154,7 @@ These advanced capabilities aren't available with a Windows Professional or Wind
 
 Defender for Endpoint provides detailed reporting for events and blocks as part of alert investigation scenarios.
 
-You can query Defender for Endpoint data in [Microsoft Defender XDR](microsoft-defender-endpoint.md) by using [advanced hunting](/microsoft-365/security/defender/advanced-hunting-query-language).
+You can query Defender for Endpoint data in [Microsoft Defender XDR](microsoft-defender-endpoint.md) by using [advanced hunting](/defender-xdr/advanced-hunting-query-language).
 
 Here's an example query:
 

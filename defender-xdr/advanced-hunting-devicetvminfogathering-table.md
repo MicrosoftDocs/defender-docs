@@ -30,7 +30,7 @@ ms.date: 12/29/2023
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-The `DeviceTvmInfoGathering` table in the advanced hunting schema contains [Microsoft Defender Vulnerability Management](/microsoft-365/security/defender-vulnerability-management/defender-vulnerability-management) assessment events including the status of various configurations and attack surface area states of devices. You can use this table to hunt for assessment events related to mitigation for zero-days, posture assessment for emerging threats supporting threat analytics mitigation status reports, enabled TLS protocol versions on servers, and more. Use this reference to construct queries that return information from the table.
+The `DeviceTvmInfoGathering` table in the advanced hunting schema contains [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) assessment events including the status of various configurations and attack surface area states of devices. You can use this table to hunt for assessment events related to mitigation for zero-days, posture assessment for emerging threats supporting threat analytics mitigation status reports, enabled TLS protocol versions on servers, and more. Use this reference to construct queries that return information from the table.
 
 For information on other tables in the advanced hunting schema, see [the advanced hunting reference](advanced-hunting-schema-tables.md).
 
@@ -60,5 +60,5 @@ DeviceTvmInfoGathering
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Apply query best practices](advanced-hunting-best-practices.md)
 - [Overview of Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt)
-- [Learn how to manage the Log4Shell vulnerability in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/tvm-manage-log4shell-guidance)
+- [Learn how to manage the Log4Shell vulnerability in Microsoft Defender for Endpoint](/defender-endpoint/tvm-manage-log4shell-guidance)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

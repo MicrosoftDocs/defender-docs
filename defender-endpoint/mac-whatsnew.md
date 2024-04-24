@@ -24,9 +24,9 @@ ms.reviewer: mavel
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
@@ -46,7 +46,7 @@ Tamper protection is turned on in block mode by default. This setting helps secu
 
 **Network protection available for macOS**
 
-Network protection for macOS is now available for all Mac devices onboarded to Defender for Endpoint. Devices must meet the minimum requirements. To learn more, see [Use network protection to help prevent macOS connections to bad sites](/microsoft-365/security/defender-endpoint/network-protection-macos).
+Network protection for macOS is now available for all Mac devices onboarded to Defender for Endpoint. Devices must meet the minimum requirements. To learn more, see [Use network protection to help prevent macOS connections to bad sites](/defender-endpoint/network-protection-macos).
 
 **Known issues**
 

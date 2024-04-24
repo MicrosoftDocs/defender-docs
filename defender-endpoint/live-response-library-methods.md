@@ -23,7 +23,7 @@ ms.date: 06/03/2021
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:** [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2154037)
+**Applies to:** [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
