@@ -108,6 +108,6 @@ Here's an example of the response.
 
 ## Related topics
 
-- [Microsoft Defender Vulnerability Management](/defender-endpoint/next-gen-threat-and-vuln-mgt)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Defender Vulnerability Management security recommendation](/defender-endpoint/tvm-security-recommendation)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

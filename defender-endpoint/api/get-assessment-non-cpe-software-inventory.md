@@ -234,6 +234,6 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareInventoryNonCp
 - [Export software vulnerabilities assessment per device](get-assessment-software-vulnerabilities.md)
 
 Other related
-- [Microsoft Defender Vulnerability Management](/defender-endpoint/next-gen-threat-and-vuln-mgt)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

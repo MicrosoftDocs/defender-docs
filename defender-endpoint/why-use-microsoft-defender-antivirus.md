@@ -69,5 +69,5 @@ Although you can use a non-Microsoft antivirus solution with Microsoft Defender 
 
 [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
 
-[Microsoft Defender Vulnerability Management](/defender-endpoint/next-gen-threat-and-vuln-mgt)
+[Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
