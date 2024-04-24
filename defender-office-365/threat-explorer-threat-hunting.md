@@ -303,7 +303,7 @@ These actions are available in the **All email**, **Malware**, or **Phish** view
 
     :::image type="content" source="/defender/media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-real-time-detections.png" alt-text="Screenshot of the Email tab of the All email view in Real-time detections showing a selected message and the available actions in Message actions." lightbox="/defender/media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-real-time-detections.png":::
 
-- Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout. For more information, see [Remediate using Take action](#remediate-using-take-action).
+- Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout. For more information, see [Remediate using Take action](#email-remediation).
 
   :::image type="content" source="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="Screenshot of the actions available in the email details flyout after you select a Subject value in the Email tab of the details area in the All email view." lightbox="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png":::
 

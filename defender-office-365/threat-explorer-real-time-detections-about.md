@@ -371,7 +371,7 @@ The following actions are available at the top of the Email summary panel for Th
 
 - :::image type="icon" source="/defender/media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**
 - :::image type="icon" source="/defender/media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View header**
-- :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Remediate using Take action](threat-explorer-threat-hunting.md#remediate-using-take-action).
+- :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 - :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options**:
   - :::image type="icon" source="/defender/media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **Email preview**¹ ²
   - :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Download email**¹ ² ³
