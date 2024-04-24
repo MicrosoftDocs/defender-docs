@@ -172,7 +172,7 @@ Back on the **User tags** page, the custom tag is no longer listed.
 
 After you apply system tags or custom tags to users, you can use those tags as filters in the following features:
 
-- [Alerts](/defender-xdr/investigate-alerts)
+- [Alerts](/defender/investigate-alerts)
 - [Incidents](mdo-sec-ops-manage-incidents-and-alerts.md)
 - [Custom alert policies](/purview/alert-policies#view-alerts)
 - [Threat Explorer](threat-explorer-real-time-detections-about.md)

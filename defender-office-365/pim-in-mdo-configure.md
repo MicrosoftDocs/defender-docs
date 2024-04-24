@@ -68,7 +68,7 @@ Use one of the following methods:
 
 Or
 
-- Create a custom role in Microsoft Defender XDR Unified role based access control (RBAC). For information and instructions, see [Start using Microsoft Defender XDR Unified RBAC model](/defender-xdr/manage-rbac#start-using-microsoft-defender-xdr-unified-rbac-model).
+- Create a custom role in Microsoft Defender XDR Unified role based access control (RBAC). For information and instructions, see [Start using Microsoft Defender XDR Unified RBAC model](/defender/manage-rbac#start-using-microsoft-defender-xdr-unified-rbac-model).
 
 For either method:
 

@@ -28,7 +28,7 @@ appliesto:
 When an [automated investigation](air-about.md) occurs in [Microsoft Defender for Office 365](mdo-about.md), details about that investigation are available during and after the automated investigation process. If you have the necessary permissions, you can view those details in the Microsoft Defender portal. Investigation details provide you with up-to-date status, and the ability to approve any pending actions.
 
 > [!TIP]
-> Check out the new, unified investigation page in the Microsoft Defender portal. To learn more, see [(NEW!) Unified investigation page](/defender-xdr/m365d-autoir-results#new-unified-investigation-page).
+> Check out the new, unified investigation page in the Microsoft Defender portal. To learn more, see [(NEW!) Unified investigation page](/defender/m365d-autoir-results#new-unified-investigation-page).
 
 ## Investigation status
 
