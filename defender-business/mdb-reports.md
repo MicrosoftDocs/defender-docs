@@ -31,7 +31,7 @@ This article describes these reports, how you can use them, and how to find them
 The monthly security summary report (currently in preview) shows:
 
 - Threats that were detected and prevented by Defender for Business, so you can see how the service is working for you.
-- Your current status from [Microsoft Secure Score](/defender/microsoft-secure-score), which gives you an indication of your organization's security posture. 
+- Your current status from [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), which gives you an indication of your organization's security posture. 
 - Recommended actions you can take to improve your score and your security posture.
 
 To access this report, in the navigation pane, choose **Reports** > **Endpoints** > **Monthly Security Summary**. 

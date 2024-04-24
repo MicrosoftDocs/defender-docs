@@ -26,7 +26,7 @@ ms.date: 10/17/2023
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 Microsoft Defender Experts for Hunting layers human intelligence and expert-trained technology to help Microsoft Defender XDR customers understand the significant threats they face. It highlights how Defender Expert's threat hunting skills, thorough understanding of the threat landscape, and knowledge of emerging threats can help you identify, prioritize, and address those threats in your environment.
 
@@ -40,7 +40,7 @@ Refer to the following screenshot of a sample report:
 
 ## Identify prevalent threats and other potential attack entry points
 
-Signals from Microsoft Defender XDR and investigations by Defender Experts for Hunting help identify suspicious activities in your environment. Significant threat activities will have corresponding [Defender Experts Notifications](/microsoft-365/security/defender/onboarding-defender-experts-for-hunting#receive-defender-experts-notifications), which also provide recommendations to remediate and defend your organization. 
+Signals from Microsoft Defender XDR and investigations by Defender Experts for Hunting help identify suspicious activities in your environment. Significant threat activities will have corresponding [Defender Experts Notifications](/defender-xdr/onboarding-defender-experts-for-hunting#receive-defender-experts-notifications), which also provide recommendations to remediate and defend your organization. 
 
 The report provides you with the total number of Defender Experts Notifications our experts have sent for your chosen period: 
 

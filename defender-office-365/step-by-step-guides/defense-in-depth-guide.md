@@ -50,7 +50,7 @@ The following information details how to get the most out of your investment, br
 
 - When alerts fire in Microsoft Defender for Office 365, they're automatically correlated, and combined into Incidents to help reduce the alert fatigue on security staff. Automated Investigation and Response (AIR) triggers investigations to help remediate and contain threats.
 
-**Read more, watch an overview video and get started here :** [Incident response with Microsoft Defender XDR](/microsoft-365/security/defender/incidents-overview)
+**Read more, watch an overview video and get started here :** [Incident response with Microsoft Defender XDR](/defender-xdr/incidents-overview)
 
 - Threat Analytics is our in-product, detailed threat intelligence solution from expert Microsoft security researchers. Threat Analytics contains detailed reports that are designed to get you up to speed on the latest threat groups, attack techniques, how to protect your organization with Indicators of Compromise (IOC) and much more.
 

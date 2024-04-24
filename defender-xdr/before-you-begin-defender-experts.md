@@ -23,7 +23,7 @@ ms.date: 04/05/2024
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 This document outlines the key infrastructure requirements you must meet and important information on data access and compliance you must know before purchasing the Microsoft Defender Experts for Hunting service. Microsoft understands that customers who use our managed services entrust us with their most valued asset, their data.
 
@@ -51,7 +51,7 @@ The following product is **not** covered by this service:
 ### Server coverage
 
 Defender Experts for Hunting also covers servers—whether on premises or on a hyperscale cloud service provider—that have Defender for Endpoint deployed on them with a Microsoft Defender for Endpoint for Servers license. For Defender Experts coverage, a server is considered as a user account for billing. The service doesn't cover Microsoft Defender for Cloud.
-[Learn more about specific hardware and software requirements](/microsoft-365/security/defender-endpoint/minimum-requirements)
+[Learn more about specific hardware and software requirements](/defender-endpoint/minimum-requirements)
 
 ### Ask Defender Experts
 

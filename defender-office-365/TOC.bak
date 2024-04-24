@@ -509,6 +509,6 @@
        - name: Defender for Cloud Apps
          href: /cloud-app-security
        - name: Defender for Business
-         href: ../defender-business/index.yml
+         href: /defender-business/index.yml
        - name: Defender Vulnerability Management
          href: ../defender-vulnerability-management/index.yml

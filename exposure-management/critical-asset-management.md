@@ -37,7 +37,7 @@ Critical assets can be identified in different ways:
 
 - **Automatically:** The solution employs advanced analytics to automatically identify critical assets within your organization, in line with predefined classifications. This streamlines the identification process, enabling you to pinpoint assets that require heightened protection and immediate attention.
 - **With custom queries:** Writing custom queries allows you to pinpoint your organization’s "crown jewels" based on your unique criteria. With granular control, you can ensure that you can focus your security efforts precisely where they're needed.
-- **Manually:** Review assets in the [device inventory](/microsoft-365/security/defender-endpoint/machines-view-overview) sorted by criticality level, and identify assets that require attention.
+- **Manually:** Review assets in the [device inventory](/defender-endpoint/machines-view-overview) sorted by criticality level, and identify assets that require attention.
 
 ## Classifying assets
 

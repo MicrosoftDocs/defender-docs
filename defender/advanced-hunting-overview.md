@@ -81,7 +81,7 @@ Advanced hunting results are converted to the [timezone](/defender-xdr/m365d-tim
 ## Related topics
 - [Choose between guided and advanced hunting modes](/defender-xdr/advanced-hunting-modes)
 - [Build hunting queries using guided mode](/defender-xdr/advanced-hunting-query-builder)
-- [Learn the query language](/defender-xdr/advanced-hunting-query-language.)
+- [Learn the query language](/defender-xdr/advanced-hunting-query-language)
 - [Understand the schema](/defender-xdr/advanced-hunting-schema-tables)
 - [Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)
 - [Custom detections overview](/defender-xdr/custom-detections-overview)

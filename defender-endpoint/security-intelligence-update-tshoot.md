@@ -22,8 +22,8 @@ audience: ITPro
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
-- [Microsoft Defender for Endpoint Plan 1 and 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Endpoint Plan 1 and 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 - Microsoft Defender Antivirus
@@ -72,7 +72,7 @@ Use this article to learn how to troubleshoot security intelligence updates for 
 
    - Background Intelligence Transfer Service (BITS) 
 
-4. If you're using a [Fallback order](/microsoft-365/security/defender-endpoint/manage-protection-updates-microsoft-defender-antivirus) policy, make sure that *Microsoft Update* (`MicrosoftUpdateServer`) is the first item in the list.
+4. If you're using a [Fallback order](/defender-endpoint/manage-protection-updates-microsoft-defender-antivirus) policy, make sure that *Microsoft Update* (`MicrosoftUpdateServer`) is the first item in the list.
 
 5. Gather diagnostic data from the [Microsoft Defender for Endpoint Client Analyzer tool](download-client-analyzer.md). 
 

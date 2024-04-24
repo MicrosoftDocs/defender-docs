@@ -22,7 +22,7 @@ audience: ITPro
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 If your organization uses SAP, it's essential to understand the compatibility and support between [antivirus](microsoft-defender-antivirus-on-windows-server.md) and [EDR](overview-endpoint-detection-response.md) in Microsoft Defender for Endpoint and your SAP applications. This article helps you understand the support provided by SAP for endpoint protection security solutions like Defender for Endpoint and how they interact with SAP applications.
 
@@ -36,7 +36,7 @@ Enterprise security is a specialist role and the activities described in this ar
 
 ### Get an overview of Defender for Endpoint
 
-Defender for Endpoint is a component of [Microsoft Defender XDR](/microsoft-365/security/defender/), and can be integrated with your SIEM/SOAR solution. 
+Defender for Endpoint is a component of [Microsoft Defender XDR](/defender-xdr/), and can be integrated with your SIEM/SOAR solution. 
 
 Before you begin to plan or deploy Defender for Endpoint on Windows Server with SAP, take a moment to get an overview of Defender for Endpoint. The following video provides an overview:
 
@@ -49,13 +49,13 @@ For more detailed information about Defender for Endpoint and Microsoft security
 
 Defender for Endpoint includes capabilities that are beyond the scope of this article. In this article, we focus on two main areas:
 
-- **Next-generation protection** (which includes antivirus protection). [Next-generation protection](/microsoft-365/security/defender-endpoint/next-generation-protection) is an antivirus product like other antivirus solutions for Windows environments.
+- **Next-generation protection** (which includes antivirus protection). [Next-generation protection](/defender-endpoint/next-generation-protection) is an antivirus product like other antivirus solutions for Windows environments.
 - **Endpoint Detection and Response** (EDR). [EDR capabilities](overview-endpoint-detection-response.md) detect suspicious activity and system calls, and provide an extra layer of protection against threats that bypassed antivirus protection. 
 
 Microsoft and other security software vendors track threats and provide trend information. For information, see [Cyberthreats, viruses, and malware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/threats). 
 
 > [!NOTE]
-> For information on Microsoft Defender for SAP on Linux, see [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](/microsoft-365/security/defender-endpoint/mde-linux-deployment-on-sap). Defender for Endpoint on Linux is significantly different than the Windows version. 
+> For information on Microsoft Defender for SAP on Linux, see [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](/defender-endpoint/mde-linux-deployment-on-sap). Defender for Endpoint on Linux is significantly different than the Windows version. 
 
 ## SAP support statement on Defender for Endpoint and other security solutions
 
@@ -128,7 +128,7 @@ Here's a list of SAP articles you can use as needed:
 
 9. **Use tools, such as [Intune](/mem/intune/protect/endpoint-security) or [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) to set up Defender for Endpoint**. Such tools can help ensure that Defender for Endpoint is configured correctly and uniformly deployed. 
 
-   To use Defender for Endpoint security settings management, in the Microsoft Defender portal, go to **Endpoints** > **Configuration management** > **Endpoint security policies**, and then select **Create new Policy**. For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies). 
+   To use Defender for Endpoint security settings management, in the Microsoft Defender portal, go to **Endpoints** > **Configuration management** > **Endpoint security policies**, and then select **Create new Policy**. For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/manage-security-policies). 
 
 10. **Use the latest release of Defender for Endpoint**. Several new features are being implemented in Defender for Endpoint on Windows, and these features were tested with SAP systems. These new features reduce blocking and lower CPU consumption. For more information about new features, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
@@ -162,7 +162,7 @@ Here's a list of what to check:
 1. **Get an overview of [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)**. In particular, review information about [next-generation protection](next-generation-protection.md) and [EDR](overview-endpoint-detection-response.md).
 
    > [!NOTE]
-   > The term *Defender* is sometimes used to refer to an entire suite of products and solutions. See [What is Microsoft Defender XDR?](/microsoft-365/security/defender/microsoft-365-defender). In this article, we focus on antivirus and EDR capabilities in Defender for Endpoint.
+   > The term *Defender* is sometimes used to refer to an entire suite of products and solutions. See [What is Microsoft Defender XDR?](/defender-xdr/microsoft-365-defender). In this article, we focus on antivirus and EDR capabilities in Defender for Endpoint.
     
 2. **Check the status of Microsoft Defender Antivirus**. Open Command Prompt, and then run these PowerShell commands:
 
@@ -302,7 +302,7 @@ It isn't recommended to exclude files, paths, or processes from EDR as such excl
 > [!CAUTION]
 > It is not recommended to disable security software unless there is no alternative to solve or isolate a problem. 
 
-Defender for Endpoint should be configured with [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) turned on. To temporarily disable Defender for Endpoint to isolate problems, it's recommended to use [troubleshooting mode](/microsoft-365/security/defender-endpoint/enable-troubleshooting-mode).
+Defender for Endpoint should be configured with [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) turned on. To temporarily disable Defender for Endpoint to isolate problems, it's recommended to use [troubleshooting mode](/defender-endpoint/enable-troubleshooting-mode).
 
 To shut down various subcomponents of the Microsoft Defender Antivirus solution, run the following commands:
 

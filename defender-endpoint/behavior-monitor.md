@@ -18,8 +18,8 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 - Microsoft Defender Antivirus
@@ -72,7 +72,7 @@ The following table shows the different ways to configure behavior monitoring.
 | PowerShell | Set-Preference -DisableBehaviorMonitoring | [Set-MpPreference](/powershell/module/defender/set-mppreference#-disablebehaviormonitoring) |
 | WMI | boolean  DisableBehaviorMonitoring;  | [MSFT\_MpPreference class](/previous-versions/windows/desktop/defender/msft-mppreference) |
 
-If you use Microsoft Defender for Business, see [Review or edit your next-generation protection policies in Microsoft Defender for Business](/microsoft-365/security/defender-business/mdb-next-generation-protection).
+If you use Microsoft Defender for Business, see [Review or edit your next-generation protection policies in Microsoft Defender for Business](/defender-business/mdb-next-generation-protection).
 
 ## Modify the behavior monitoring settings by using PowerShell
 
@@ -133,7 +133,7 @@ withNames | join kind = fullouter DefUpdate on DeviceId
 
 ## Troubleshooting high CPU usage
 
-Detections related to behavior monitoring start with "[Behavior](/microsoft-365/security/defender/malware-naming#type)".
+Detections related to behavior monitoring start with "[Behavior](/defender-xdr/malware-naming#type)".
 
 When investigating high CPU usage in `MsMpEng.exe`, you can temporarily disable behavior monitoring to see if the issues continue.
 

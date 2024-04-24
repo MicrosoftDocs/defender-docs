@@ -219,7 +219,7 @@
 			<rect x="0" y="552.202" width="59.2837" height="33.5484" class="st4"/>
 			<text x="0" y="564.8" class="st12" v:langID="1033"><v:paragraph/><v:tabList/>Device <tspan x="0" dy="1.2em" class="st7">type</tspan></text>		</g>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/microsoft-365-policies-configurations">
+				xlink:href="https://learn.microsoft.com/defender-office-365/microsoft-365-policies-configurations">
 			<g id="shape3135-37" v:mID="3135" v:groupContext="shape" v:layerMember="1" transform="translate(8.30359,-529.635)">
 				<title>Sheet.3135</title>
 				<desc>Zero Trust identity and device access policies for Exchange</desc>
@@ -471,7 +471,7 @@
 			<rect v:rectContext="foreign" x="0" y="563.008" width="29.6175" height="22.742" class="st4"/>
 		</g>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/identity-access-policies#device-compliance-policies">
+				xlink:href="https://learn.microsoft.com/defender-office-365/zero-trust-identity-device-access-policies-common#device-compliance-policies">
 			<g id="shape3142-75" v:mID="3142" v:groupContext="shape" transform="translate(853.222,-60.0536)">
 				<title>Sheet.3142</title>
 				<desc>Define compliance policies (one for each platform)</desc>
@@ -509,7 +509,7 @@
 			<path d="M0 585.75 L83 585.75" class="st18"/>
 		</g>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/identity-access-policies#app-protection-policies">
+				xlink:href="https://learn.microsoft.com/defender-office-365/zero-trust-identity-device-access-policies-common#app-protection-policies">
 			<g id="shape3145-93" v:mID="3145" v:groupContext="shape" transform="translate(968.354,-201.804)">
 				<title>Sheet.3145</title>
 				<desc>Apply Level 2 APP data protection</desc>
@@ -523,7 +523,7 @@
 							x="8" dy="1.1em" class="st7">data protection</tspan></text>			</g>
 		</a>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/identity-access-policies#app-protection-policies">
+				xlink:href="https://learn.microsoft.com/defender-office-365/zero-trust-identity-device-access-policies-common#app-protection-policies">
 			<g id="shape3146-97" v:mID="3146" v:groupContext="shape" transform="translate(968.354,-60.0536)">
 				<title>Sheet.3146</title>
 				<desc>Apply Level 3 APP data protection</desc>
@@ -537,7 +537,7 @@
 							x="8" dy="1.1em" class="st7">data protection</tspan></text>			</g>
 		</a>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/identity-access-policies#app-protection-policies">
+				xlink:href="https://learn.microsoft.com/defender-office-365/zero-trust-identity-device-access-policies-common#app-protection-policies">
 			<g id="shape3147-101" v:mID="3147" v:groupContext="shape" transform="translate(968.354,-323.554)">
 				<title>Sheet.3147</title>
 				<desc>Apply Level 2 App Protection Policies (APP) data protection (...</desc>
@@ -594,7 +594,7 @@
 			<path d="M0 585.75 L225 585.75" class="st21"/>
 		</g>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/identity-access-policies#app-protection-policies">
+				xlink:href="https://learn.microsoft.com/defender-office-365/zero-trust-identity-device-access-policies-common#app-protection-policies">
 			<g id="shape3152-133" v:mID="3152" v:groupContext="shape" transform="translate(287.892,-201.804)">
 				<title>Sheet.3152</title>
 				<desc>Require approved apps</desc>
@@ -608,7 +608,7 @@
 							x="8" dy="1.1em" class="st7">approved apps</tspan></text>			</g>
 		</a>
 		<a
-				xlink:href="https://learn.microsoft.com/microsoft-365/security/office-365-security/identity-access-policies#app-protection-policies">
+				xlink:href="https://learn.microsoft.com/defender-office-365/zero-trust-identity-device-access-policies-common#app-protection-policies">
 			<g id="shape3153-137" v:mID="3153" v:groupContext="shape" transform="translate(287.892,-321.054)">
 				<title>Sheet.3153</title>
 				<desc>Require approved apps This policy enforces mobile app protect...</desc>

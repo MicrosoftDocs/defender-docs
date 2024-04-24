@@ -25,7 +25,7 @@ ms.date: 04/18/2023
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 
 
 [!include[Prerelease information](../../includes/prerelease.md)]

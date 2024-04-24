@@ -19,7 +19,7 @@ ms.date: 09/01/2023
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 This article describes the steps you need to take to start using multi-tenant management in Microsoft Defender XDR.
 

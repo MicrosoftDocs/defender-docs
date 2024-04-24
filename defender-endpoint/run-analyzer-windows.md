@@ -23,12 +23,12 @@ ms.date: 11/01/2023
 # Run the client analyzer on Windows
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 ## Option 1: Live response
 
-You can collect the Defender for Endpoint analyzer support logs remotely using [Live Response](/microsoft-365/security/defender-endpoint/troubleshoot-collect-support-log).
+You can collect the Defender for Endpoint analyzer support logs remotely using [Live Response](/defender-endpoint/troubleshoot-collect-support-log).
 
 ## Option 2: Run MDE Client Analyzer locally
 

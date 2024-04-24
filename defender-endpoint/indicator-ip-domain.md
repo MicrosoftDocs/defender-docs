@@ -23,9 +23,9 @@ ms.date: 10/06/2023
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 > [!TIP]
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-automationexclusionlist-abovefoldlink)
@@ -79,9 +79,9 @@ The _Antimalware client version_ must be 4.18.1906.x or later.
 
 Ensure that **Custom network indicators** is enabled in **Microsoft Defender XDR** \> **Settings** \> **Advanced features**. For more information, see [Advanced features](advanced-features.md).
 
-For support of indicators on iOS, see [Microsoft Defender for Endpoint on iOS](/microsoft-365/security/defender-endpoint/ios-configure-features#configure-custom-indicators).
+For support of indicators on iOS, see [Microsoft Defender for Endpoint on iOS](/defender-endpoint/ios-configure-features#configure-custom-indicators).
 
-For support of indicators on Android, see [Microsoft Defender for Endpoint on Android](/microsoft-365/security/defender-endpoint/android-configure#configure-custom-indicators).
+For support of indicators on Android, see [Microsoft Defender for Endpoint on Android](/defender-endpoint/android-configure#configure-custom-indicators).
 
 ### IoC indicator list limitations
 

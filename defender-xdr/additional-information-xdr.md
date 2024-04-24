@@ -25,7 +25,7 @@ ms.date: 11/10/2023
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 To realize the benefits of Microsoft Defender Experts for XDR, you and your security operations center (SOC) team must take note of the following considerations to ensure timely incident remediation, improve your organization's security posture, and protect your organization from threats.
 

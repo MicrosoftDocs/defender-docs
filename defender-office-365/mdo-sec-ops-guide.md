@@ -21,8 +21,8 @@ description: A prescriptive playbook for SecOps personnel to manage Microsoft De
 ms.service: defender-office-365
 ms.date: 01/19/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
 # Microsoft Defender for Office 365 Security Operations Guide
@@ -35,7 +35,7 @@ The rest of this guide describes the required activities for SecOps personnel. T
 
 A companion article to this guide provides an overview to [manage incidents and alerts from Defender for Office 365 on the Incidents page in the Microsoft Defender portal](mdo-sec-ops-manage-incidents-and-alerts.md).
 
-The [Microsoft Defender XDR Security Operations Guide](/microsoft-365/security/defender/integrate-microsoft-365-defender-secops) contains additional information that you can use for planning and development.
+The [Microsoft Defender XDR Security Operations Guide](/defender-xdr/integrate-microsoft-365-defender-secops) contains additional information that you can use for planning and development.
 
 For a video about this information, see <https://youtu.be/eQanpq9N1Ps>.
 
@@ -109,7 +109,7 @@ In Defender for Office 365, you can use the following reports to review email de
 
 ### Track and respond to emerging threats using Threat analytics
 
-Use [Threat analytics](/microsoft-365/security/defender-endpoint/threat-analytics) to review active, trending threats.
+Use [Threat analytics](/defender-endpoint/threat-analytics) to review active, trending threats.
 
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
@@ -143,8 +143,8 @@ Campaign Views reveals malware and phishing attacks against your organization. F
 
 |Activity|Cadence|Description|Persona|
 |---|---|---|---|
-|Regular, proactive hunting for threats at: <ul><li><https://security.microsoft.com/threatexplorer></li><li><https://security.microsoft.com/v2/advanced-hunting></li></ul>.|Ad-hoc|Search for threats using [Threat Explorer](threat-explorer-real-time-detections-about.md) and [Advanced hunting](/defender-endpoint/advanced-hunting-overview).|Security Operations Team <br/><br/> Threat hunting team|
-|Share hunting queries.|Ad-hoc|Actively share frequently used, useful queries within the security team for faster manual threat hunting and remediation. <br/><br/> Use [Threat trackers](threat-trackers.md) and [shared queries in Advanced hunting](/microsoft-365/security/defender/advanced-hunting-shared-queries).|Security Operations Team <br/><br/> Threat hunting team|
+|Regular, proactive hunting for threats at: <ul><li><https://security.microsoft.com/threatexplorer></li><li><https://security.microsoft.com/v2/advanced-hunting></li></ul>.|Ad-hoc|Search for threats using [Threat Explorer](threat-explorer-real-time-detections-about.md) and [Advanced hunting](/defender/advanced-hunting-overview).|Security Operations Team <br/><br/> Threat hunting team|
+|Share hunting queries.|Ad-hoc|Actively share frequently used, useful queries within the security team for faster manual threat hunting and remediation. <br/><br/> Use [Threat trackers](threat-trackers.md) and [shared queries in Advanced hunting](/defender-xdr/advanced-hunting-shared-queries).|Security Operations Team <br/><br/> Threat hunting team|
 |Create custom detection rules at <https://security.microsoft.com/custom_detection>.|Ad-hoc|[Create custom detection rules](/defender/custom-detections-overview) to proactively monitor events, patterns, and threats based on Defender for Office 365 data in Advance Hunting. Detection rules contain advanced hunting queries that generate alerts based on the matching criteria.|Security Operations Team <br/><br/> Threat hunting team|
 
 ### Review Defender for Office 365 policy configurations
@@ -217,27 +217,27 @@ The following permissions (roles and role groups) are available in Defender for 
 
 ### SIEM/SOAR integration
 
-Defender for Office 365 exposes most of its data through a set of programmatic APIs. These APIs help you automate workflows and make full use of Defender for Office 365 capabilities. Data is available through the [Microsoft Defender XDR APIs](/microsoft-365/security/defender/api-overview) and can be used to integrate Defender for Office 365 into existing SIEM/SOAR solutions.
+Defender for Office 365 exposes most of its data through a set of programmatic APIs. These APIs help you automate workflows and make full use of Defender for Office 365 capabilities. Data is available through the [Microsoft Defender XDR APIs](/defender-xdr/api-overview) and can be used to integrate Defender for Office 365 into existing SIEM/SOAR solutions.
 
-- [Incident API](/microsoft-365/security/defender/api-incident): Defender for Office 365 alerts and automated investigations are active parts of incidents in Microsoft Defender XDR. Security teams can focus on what's critical by grouping the full attack scope and all impacted assets together.
+- [Incident API](/defender-xdr/api-incident): Defender for Office 365 alerts and automated investigations are active parts of incidents in Microsoft Defender XDR. Security teams can focus on what's critical by grouping the full attack scope and all impacted assets together.
 
-- [Event streaming API](/microsoft-365/security/defender/streaming-api): Allows shipping of real-time events and alerts into a single data stream as they happen. Supported event types in Defender for Office 365 include:
-  - [EmailAttachmentInfo](/microsoft-365/security/defender/advanced-hunting-emailattachmentinfo-table)
-  - [EmailEvents](/microsoft-365/security/defender/advanced-hunting-emailevents-table)
-  - [EmailPostDeliveryEvents](/microsoft-365/security/defender/advanced-hunting-emailpostdeliveryevents-table)
-  - [EmailUrlInfo](/microsoft-365/security/defender/advanced-hunting-emailurlinfo-table)
+- [Event streaming API](/defender-xdr/streaming-api): Allows shipping of real-time events and alerts into a single data stream as they happen. Supported event types in Defender for Office 365 include:
+  - [EmailAttachmentInfo](/defender-xdr/advanced-hunting-emailattachmentinfo-table)
+  - [EmailEvents](/defender-xdr/advanced-hunting-emailevents-table)
+  - [EmailPostDeliveryEvents](/defender-xdr/advanced-hunting-emailpostdeliveryevents-table)
+  - [EmailUrlInfo](/defender-xdr/advanced-hunting-emailurlinfo-table)
 
   The events contain data from processing all email (including intra-org messages) in the last 30 days.
 
-- [Advance Hunting API](/microsoft-365/security/defender/api-advanced-hunting): Allows cross-product threat hunting.
+- [Advance Hunting API](/defender-xdr/api-advanced-hunting): Allows cross-product threat hunting.
 
 - [Threat Assessment API](/graph/api/resources/threatassessment-api-overview): Can be used to report spam, phishing URLs, or malware attachments directly to Microsoft.
 
 To connect Defender for Office 365 incidents and raw data with Microsoft Sentinel, you can use the [Microsoft Defender XDR (M365D) connector](/azure/sentinel/connect-microsoft-365-defender?tabs=MDO)
 
-You can use the following "Hello World" example to test API access to Microsoft Defender APIs: [Hello World for Microsoft Defender XDR REST API](/microsoft-365/security/defender/api-hello-world).
+You can use the following "Hello World" example to test API access to Microsoft Defender APIs: [Hello World for Microsoft Defender XDR REST API](/defender-xdr/api-hello-world).
 
-For more information about SIEM tool integration, see [Integrate your SIEM tools with Microsoft Defender XDR](/microsoft-365/security/defender/configure-siem-defender).
+For more information about SIEM tool integration, see [Integrate your SIEM tools with Microsoft Defender XDR](/defender-xdr/configure-siem-defender).
 
 ## Address false positives and false negatives in Defender for Office 365
 

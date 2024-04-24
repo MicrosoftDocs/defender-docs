@@ -72,28 +72,28 @@ While responding to an attack, security teams can leverage the portal's manual r
 
 ### Actions on devices
 
-- [**Isolate the device**](/microsoft-365/security/defender-endpoint/respond-machine-alerts#isolate-devices-from-the-network) - isolates an affected device by disconnecting the device from the network. The device remains connected to the Defender for Endpoint service for continued monitoring. 
-- [**Restrict app execution**](/microsoft-365/security/defender-endpoint/respond-machine-alerts#restrict-app-execution) - restricts an application by applying a code integrity policy that only allows files to run if they're signed by a Microsoft-issued certificate.
-- [**Run Antivirus scan**](/microsoft-365/security/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices) - initiates a Defender Antivirus scan remotely for a device. The scan can run alongside other antivirus solutions, whether Defender Antivirus is the active antivirus solution or not.
-- [**Collect investigation package**](/microsoft-365/security/defender-endpoint/respond-machine-alerts#collect-investigation-package-from-devices) - you can collect an investigation package from a device as part of the investigation or response process. By collecting the investigation package, you can identify the current state of the device and further understand the tools and techniques used by the attacker.
-- [**Initiate automated investigation**](/microsoft-365/security/defender-endpoint/respond-machine-alerts#initiate-automated-investigation) - starts a new general purpose automated investigation on the device. While an investigation is running, any other alert generated from the device will be added to an ongoing automated investigation until that investigation is completed. In addition, if the same threat is seen on other devices, those devices are added to the investigation.
-- [**Initiate live response**](/microsoft-365/security/defender-endpoint/respond-machine-alerts#initiate-live-response-session) -  gives you instantaneous access to a device by using a remote shell connection so you can do in-depth investigative work and take immediate response actions to promptly contain identified threats in real time. Live response is designed to enhance investigations by enabling you to collect forensic data, run scripts, send suspicious entities for analysis, remediate threats, and proactively hunt for emerging threats.
+- [**Isolate the device**](/defender-endpoint/respond-machine-alerts#isolate-devices-from-the-network) - isolates an affected device by disconnecting the device from the network. The device remains connected to the Defender for Endpoint service for continued monitoring. 
+- [**Restrict app execution**](/defender-endpoint/respond-machine-alerts#restrict-app-execution) - restricts an application by applying a code integrity policy that only allows files to run if they're signed by a Microsoft-issued certificate.
+- [**Run Antivirus scan**](/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices) - initiates a Defender Antivirus scan remotely for a device. The scan can run alongside other antivirus solutions, whether Defender Antivirus is the active antivirus solution or not.
+- [**Collect investigation package**](/defender-endpoint/respond-machine-alerts#collect-investigation-package-from-devices) - you can collect an investigation package from a device as part of the investigation or response process. By collecting the investigation package, you can identify the current state of the device and further understand the tools and techniques used by the attacker.
+- [**Initiate automated investigation**](/defender-endpoint/respond-machine-alerts#initiate-automated-investigation) - starts a new general purpose automated investigation on the device. While an investigation is running, any other alert generated from the device will be added to an ongoing automated investigation until that investigation is completed. In addition, if the same threat is seen on other devices, those devices are added to the investigation.
+- [**Initiate live response**](/defender-endpoint/respond-machine-alerts#initiate-live-response-session) -  gives you instantaneous access to a device by using a remote shell connection so you can do in-depth investigative work and take immediate response actions to promptly contain identified threats in real time. Live response is designed to enhance investigations by enabling you to collect forensic data, run scripts, send suspicious entities for analysis, remediate threats, and proactively hunt for emerging threats.
  
-- [**Ask Defender Experts**](/microsoft-365/security/defender-endpoint/respond-machine-alerts#consult-a-threat-expert) - you can consult a Microsoft Defender expert for more insights regarding potentially compromised or already compromised devices. Microsoft Defender experts can be engaged directly from within the portal for a timely and accurate response. This action is available for both devices and files.
+- [**Ask Defender Experts**](/defender-endpoint/respond-machine-alerts#consult-a-threat-expert) - you can consult a Microsoft Defender expert for more insights regarding potentially compromised or already compromised devices. Microsoft Defender experts can be engaged directly from within the portal for a timely and accurate response. This action is available for both devices and files.
 
 Other actions on devices are available through the following tutorial:
 
-- [Response actions on a device enabled through Defender for Endpoint](/microsoft-365/security/defender-endpoint/respond-machine-alerts)
+- [Response actions on a device enabled through Defender for Endpoint](/defender-endpoint/respond-machine-alerts)
 
 > [!NOTE]
 > You can take actions on devices straight from the graph within the attack story.
 
 ### Actions on files
 
-- [**Stop and quarantine file**](/microsoft-365/security/defender-endpoint/respond-file-alerts#stop-and-quarantine-files-in-your-network) - includes stopping running processes, quarantining files, and deleting persistent data like registry keys.
-- [**Add indicators to block or allow file**](/microsoft-365/security/defender-endpoint/respond-file-alerts#add-indicator-to-block-or-allow-a-file) - prevents an attack from spreading further by banning potentially malicious files or suspected malware. This operation prevents the file from being read, written, or executed on devices in your organization.
-- [**Download or collect file**](/microsoft-365/security/defender-endpoint/respond-file-alerts#download-or-collect-file) – allows analysts to download a file in a password protected .zip archive file for further analysis by the organization.
-- [**Deep analysis**](/microsoft-365/security/defender-endpoint/respond-file-alerts#deep-analysis) – executes a file in a secure, fully instrumented cloud environment. Deep analysis results show the file's activities, observed behaviors, and associated artifacts, such as dropped files, registry modifications, and communication with IP addresses.
+- [**Stop and quarantine file**](/defender-endpoint/respond-file-alerts#stop-and-quarantine-files-in-your-network) - includes stopping running processes, quarantining files, and deleting persistent data like registry keys.
+- [**Add indicators to block or allow file**](/defender-endpoint/respond-file-alerts#add-indicator-to-block-or-allow-a-file) - prevents an attack from spreading further by banning potentially malicious files or suspected malware. This operation prevents the file from being read, written, or executed on devices in your organization.
+- [**Download or collect file**](/defender-endpoint/respond-file-alerts#download-or-collect-file) – allows analysts to download a file in a password protected .zip archive file for further analysis by the organization.
+- [**Deep analysis**](/defender-endpoint/respond-file-alerts#deep-analysis) – executes a file in a secure, fully instrumented cloud environment. Deep analysis results show the file's activities, observed behaviors, and associated artifacts, such as dropped files, registry modifications, and communication with IP addresses.
 
 ## Remediating other attacks
 
@@ -102,8 +102,8 @@ Other actions on devices are available through the following tutorial:
 
 The following tutorials enumerate steps and actions that you can apply when investigating entities or responding to specific threats:
 
-- [Responding to a compromised email account via Defender for Office 365](/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account)
-- [Remediating vulnerabilities with Defender for Vulnerability Management](/microsoft-365/security/defender-vulnerability-management/tvm-remediation)
+- [Responding to a compromised email account via Defender for Office 365](/defender-office-365/responding-to-a-compromised-email-account)
+- [Remediating vulnerabilities with Defender for Vulnerability Management](/defender-vulnerability-management/tvm-remediation)
 - [Remediation actions for user accounts via Defender for Identity](/defender-for-identity/remediation-actions)
 - [Applying policies to control apps with Defender for Cloud Apps](/defender-cloud-apps/control-cloud-apps-with-policies)
 

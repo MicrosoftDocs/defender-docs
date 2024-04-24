@@ -24,8 +24,8 @@ ms.date: 12/18/2020
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
+- ../microsoft-defender-endpoint.md
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
@@ -115,6 +115,6 @@ Here is an example of the response.
 
 ## Related topics
 
-- [Microsoft Defender Vulnerability Management](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
-- [Defender Vulnerability Management security recommendation](/microsoft-365/security/defender-endpoint/tvm-security-recommendation)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
+- [Defender Vulnerability Management security recommendation](/defender-vulnerability-management/tvm-security-recommendation)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

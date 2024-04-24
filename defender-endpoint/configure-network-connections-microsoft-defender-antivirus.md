@@ -22,8 +22,8 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -90,7 +90,7 @@ Use the tables below to see error messages you might encounter along with inform
 
 ## Attempt to download a fake malware file from Microsoft
 
-You can download a [sample file](/microsoft-365/security/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection) that Microsoft Defender Antivirus will detect and block if you're properly connected to the cloud.
+You can download a [sample file](/defender-endpoint/defender-endpoint-demonstration-cloud-delivered-protection) that Microsoft Defender Antivirus will detect and block if you're properly connected to the cloud.
 
 > [!NOTE]
 > The downloaded file is not exactly malware. It's a fake file designed to test if you're properly connected to the cloud.
@@ -116,7 +116,7 @@ A similar message occurs if you're using Internet Explorer:
    > [!NOTE]
    > Versions of Windows 10 before version 1703 have a different user interface. See [Microsoft Defender Antivirus in the Windows Security app](microsoft-defender-security-center-antivirus.md).
 
-   The Windows event log will also show [Windows Defender client event ID 1116](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
+   The Windows event log will also show [Windows Defender client event ID 1116](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/).
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

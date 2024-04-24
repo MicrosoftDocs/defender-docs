@@ -23,9 +23,9 @@ ms.date: 02/18/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 - Microsoft Defender Antivirus
 
 **Platforms**
@@ -34,13 +34,13 @@ ms.date: 02/18/2024
 You can configure Microsoft Defender Antivirus with a number of tools, such as:
 
 - [Microsoft Defender for Endpoint Security Policy Management](/mem/intune/protect/mde-security-integration)
-- [Microsoft Intune](/microsoft-365/security/defender-endpoint/use-intune-config-manager-microsoft-defender-antivirus)
-- [Microsoft Configuration Manager](/microsoft-365/security/defender-endpoint/manage-mde-post-migration-configuration-manager)
+- [Microsoft Intune](/defender-endpoint/use-intune-config-manager-microsoft-defender-antivirus)
+- [Microsoft Configuration Manager](/defender-endpoint/manage-mde-post-migration-configuration-manager)
 - Microsoft Configuration Manager [Tenant attach](/mem/configmgr/tenant-attach/)
 
-- [Group Policy](/microsoft-365/security/defender-endpoint/use-group-policy-microsoft-defender-antivirus)
-- [PowerShell cmdlets](/microsoft-365/security/defender-endpoint/use-powershell-cmdlets-microsoft-defender-antivirus)
-- [Windows Management Instrumentation (WMI)](/microsoft-365/security/defender-endpoint/use-wmi-microsoft-defender-antivirus)
+- [Group Policy](/defender-endpoint/use-group-policy-microsoft-defender-antivirus)
+- [PowerShell cmdlets](/defender-endpoint/use-powershell-cmdlets-microsoft-defender-antivirus)
+- [Windows Management Instrumentation (WMI)](/defender-endpoint/use-wmi-microsoft-defender-antivirus)
 The following broad categories of features can be configured:
 
 - Cloud-delivered protection. See [Cloud-delivered protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md)

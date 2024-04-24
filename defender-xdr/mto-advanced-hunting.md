@@ -20,7 +20,7 @@ ms.date: 1/5/2024
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 Advanced hunting in multi-tenant management in Microsoft Defender XDR allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants at the same time.
 

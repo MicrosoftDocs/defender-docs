@@ -22,9 +22,9 @@ ms.date: 01/18/2024
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 
 **Platforms**
 - macOS
@@ -48,8 +48,8 @@ You can choose to onboard non-Windows devices through Microsoft Defender for End
 You'll need to take the following steps:
 
 1. Select your preferred method of onboarding:
-   - To onboard macOS devices using Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint on Mac](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac).
-   - To onboard Linux devices using Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux).
+   - To onboard macOS devices using Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint on Mac](/defender-endpoint/microsoft-defender-endpoint-mac).
+   - To onboard Linux devices using Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint on Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
    - To onboard non-windows devices using third party solution:
      1. In the navigation pane, select **Partners and APIs > Connected Applications**. Make sure the third-party solution is listed.
      2. In the **Connected Applications** page, select the partner that supports your non-Windows devices.

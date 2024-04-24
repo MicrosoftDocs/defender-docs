@@ -23,7 +23,7 @@ Security Exposure Management is currently in public preview.
 
 ## Build advanced hunting queries
 
-- Review [best practices for building advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-best-practices)
+- Review [best practices for building advanced hunting queries](/defender-xdr/advanced-hunting-best-practices)
 - Get started with [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/)
 
 ## Use the make-graph operator

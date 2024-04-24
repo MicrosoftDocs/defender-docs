@@ -61,9 +61,9 @@
        - name: Defender for Cloud Apps
          href: /cloud-app-security
        - name: Defender for Business
-         href: /microsoft-365/security/defender-business
+         href: /defender-business
        - name: Defender Vulnerability Management
-         href: /microsoft-365/security/defender-vulnerability-management
+         href: /defender-vulnerability-management
     - name: Related products
       items:
       - name: Defender for Cloud

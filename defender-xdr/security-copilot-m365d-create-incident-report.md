@@ -57,7 +57,7 @@ Copilot in Defender creates an incident report containing the following informat
 - Investigation and remediation actions
 - Follow up actions like recommendations, open issues, or next steps noted by the analysts in the incident logs
 
-Actions like device isolation, disabling a user, and soft delete of emails are included in the incident report. For a full list of actions included in the incident report, see the [Action center](m365d-action-center.md). The incident report also includes [Microsoft Sentinel playbooks ran](/azure/sentinel/automate-responses-with-playbooks). [Live response commands](/microsoft-365/security/defender-endpoint/live-response) and response actions coming from public API sources or from custom detections are not yet supported.
+Actions like device isolation, disabling a user, and soft delete of emails are included in the incident report. For a full list of actions included in the incident report, see the [Action center](m365d-action-center.md). The incident report also includes [Microsoft Sentinel playbooks ran](/azure/sentinel/automate-responses-with-playbooks). [Live response commands](/defender-endpoint/live-response) and response actions coming from public API sources or from custom detections are not yet supported.
 
 We recommend resolving the incident to view all actions that have been taken. Incidents that are not resolved will partially reflect the actions in the incident report.
 

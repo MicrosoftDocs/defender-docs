@@ -26,8 +26,8 @@ ms.date: 04/03/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 Protecting your environment requires taking inventory of the devices that are in your network. However, mapping devices in a network can often be expensive, challenging, and time-consuming.
 
@@ -132,7 +132,7 @@ DeviceInfo
 | project DeviceId, DeviceName, DeviceType, SeenBy
 ```
 
-For more information, see the [SeenBy()](/microsoft-365/security/defender/advanced-hunting-seenby-function) function.
+For more information, see the [SeenBy()](/defender-xdr/advanced-hunting-seenby-function) function.
 
 ### Query network related information
 

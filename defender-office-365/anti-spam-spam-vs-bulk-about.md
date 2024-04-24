@@ -20,9 +20,9 @@ description: Admins can learn about the differences between junk email (spam) an
 ms.service: defender-office-365
 ms.date: 3/22/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/eop-about" target="_blank">Exchange Online Protection</a>
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
 # What's the difference between junk email and bulk email in EOP?
@@ -55,7 +55,7 @@ Another option that's easy to overlook: if a user complains about receiving bulk
 
 ## How to tune bulk email
 
-As of September 2022, Microsoft Defender for Office 365 Plan 2 customers can access BCL from [advanced hunting](/microsoft-365/security/defender/advanced-hunting-overview). This feature allows admins to look at all bulk senders who sent mail to their organization, their corresponding BCL values, and the amount of email that was received. You can drill down into the bulk senders by using other columns in **EmailEvents** table in the **Email & collaboration** schema. For more information, see [EmailEvents](/microsoft-365/security/defender/advanced-hunting-emailevents-table).
+As of September 2022, Microsoft Defender for Office 365 Plan 2 customers can access BCL from [advanced hunting](/defender-xdr/advanced-hunting-overview). This feature allows admins to look at all bulk senders who sent mail to their organization, their corresponding BCL values, and the amount of email that was received. You can drill down into the bulk senders by using other columns in **EmailEvents** table in the **Email & collaboration** schema. For more information, see [EmailEvents](/defender-xdr/advanced-hunting-emailevents-table).
 
 For example, if Contoso has set their current bulk threshold to 7 in anti-spam policies, Contoso recipients receive email from all senders in their Inbox if the BCL value is 6 or less. Admins can run the following query to get a list of all bulk senders in the organization:
 

@@ -22,8 +22,8 @@ ms.date: 12/18/2020
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
@@ -90,5 +90,5 @@ You can filter your incidents and alerts if you want to only see the Endpoint At
 
 #### To proactively hunt threats across endpoints, Office 365, cloud applications, and identity, refer to
 
-- [Microsoft Defender Experts in Microsoft 365 Overview](/defender/defender-experts-for-hunting)
+- [Microsoft Defender Experts in Microsoft 365 Overview](/defender-xdr/defender-experts-for-hunting)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

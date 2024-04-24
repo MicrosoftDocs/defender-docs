@@ -23,11 +23,11 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 - [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/?LinkID=2198108)
 - [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/?LinkID=2158212)
-- [Microsoft Defender Vulnerability Management](https://go.microsoft.com/fwlink/?linkid=2229011)
+- [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
 
 Microsoft Defender XDR provides integrated threat protection, detection, and response across endpoints, email, identities, applications, and data within a single portal. Controlling a user's permissions around their access to view data or complete tasks is essential for organizations to minimize the risks associated with unauthorized access.
@@ -48,7 +48,7 @@ Centralized permissions management is supported for the following solutions:
 |Microsoft Defender for Office 365|Full support for all data and actions scenarios that are controlled by [Email & Collaboration roles](/defender-office-365/mdo-portal-permissions.md) and scenarios controlled by [Exchange Online permissions](/exchange/permissions-exo/permissions-exo). </br></br> **Note:** <ul><li>The Microsoft Defender XDR RBAC model is initially available for organizations with Microsoft Defender for Office 365 Plan 2 licenses only. This capability isn't available to users on trial licenses.</li><li>Granular delegated admin privileges (GDAP) aren't supported.</li><li>lets in Exchange Online PowerShell and Security & Compliance PowerShell continue to use the old RBAC models and aren't affected by Microsoft Defender XDR Unified RBAC.</li><li>Azure B2B invited guests aren't supported by experiences that were previously under Exchange Online RBAC.</li></ul>|
 |Microsoft Defender for Identity|Full support for all identity data and actions. </br></br> **Note:** Defender for Identity experiences also adhere to permissions granted from [Microsoft Defender for Cloud Apps](https://security.microsoft.com/cloudapps/permissions/roles). For more information, see [Microsoft Defender for Identity role groups](https://go.microsoft.com/fwlink/?linkid=2202729).|
 |Microsoft Defender for Cloud|Support access management for all Defender for Cloud data that is available in Microsoft Defender portal.|
-|Microsoft Secure Score|Full support for all Secure Score data from the [Products included in Secure Score](/defender/microsoft-secure-score#products-included-in-secure-score).|
+|Microsoft Secure Score|Full support for all Secure Score data from the [Products included in Secure Score](microsoft-secure-score.md#products-included-in-secure-score).|
 
 > [!NOTE]
 > Scenarios and experiences controlled by Compliance permissions are still managed in the Microsoft Purview compliance portal.

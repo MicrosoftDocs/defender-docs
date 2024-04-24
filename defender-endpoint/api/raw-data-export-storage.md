@@ -24,11 +24,11 @@ ms.date: 12/18/2020
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- ../microsoft-defender-endpoint.md
+- ../microsoft-defender-endpoint.md
 
 > [!NOTE]
-> For the full data streaming experience available, please visit [Stream Microsoft Defender XDR events | Microsoft Learn](/microsoft-365/security/defender/streaming-api).
+> For the full data streaming experience available, please visit [Stream Microsoft Defender XDR events | Microsoft Learn](/defender-xdr/streaming-api).
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configuresiem-abovefoldlink)
 
@@ -77,7 +77,7 @@ ms.date: 12/18/2020
 
 - Each row contains the event name, the time Defender for Endpoint received the event, the tenant it belongs (you get events only from your tenant), and the event in JSON format in a property called "properties".
 
-- For more information about the schema of Microsoft Defender for Endpoint events, see [Advanced Hunting overview](/defender/advanced-hunting-overview.md).
+- For more information about the schema of Microsoft Defender for Endpoint events, see [Advanced Hunting overview](/defender/advanced-hunting-overview).
 
 - In Advanced Hunting, the **DeviceInfo** table has a column named **MachineGroup** which contains the group of the device. Here, every event is decorated with this column as well. For more information, see [Device Groups](../machine-groups.md).
     > [!NOTE]
@@ -103,9 +103,9 @@ In order to get the data types for our events properties do the following:
 
 ## Related articles
 
-- [Stream Microsoft Defender XDR events | Microsoft Learn](/microsoft-365/security/defender/streaming-api)
+- [Stream Microsoft Defender XDR events | Microsoft Learn](/defender-xdr/streaming-api)
 
-- [Overview of Advanced Hunting](/defender/advanced-hunting-overview.md)
+- [Overview of Advanced Hunting](/defender/advanced-hunting-overview)
 - [Microsoft Defender for Endpoint Streaming API](raw-data-export.md)
 - [Stream Microsoft Defender for Endpoint events to your Azure storage account](raw-data-export-storage.md)
 - [Azure Storage Account documentation](/azure/storage/common/storage-account-overview)

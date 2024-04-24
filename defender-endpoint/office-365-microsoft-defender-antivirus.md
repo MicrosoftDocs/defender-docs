@@ -26,8 +26,8 @@ ms.date: 10/10/2023
 
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - Microsoft Defender Antivirus
 - Microsoft 365
 
@@ -66,7 +66,7 @@ Think of the time and hassle this can save.
 
 Microsoft Defender for Office 365 integrated with Microsoft Defender for Endpoint means better protection for your organization. Here's how:
 
-- [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365) safeguards your organization against malicious threats posed in email messages, email attachments, and links (URLs) in Office documents.
+- [Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365) safeguards your organization against malicious threats posed in email messages, email attachments, and links (URLs) in Office documents.
 
     AND
 
@@ -96,7 +96,7 @@ Protection from ransomware is one great reason to put your files in OneDrive. An
 
 - [OneDrive](/onedrive)
 
-- [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365)
+- [Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365)
 
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 

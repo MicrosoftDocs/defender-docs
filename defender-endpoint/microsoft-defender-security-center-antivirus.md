@@ -20,8 +20,8 @@ ms.date: 08/28/2023
 # Microsoft Defender Antivirus in the Windows Security app
 
 **Applies to:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus settings are viewable in the Windows Security app. See [Windows Security](/windows/security/operating-system-security/system-security/windows-defender-security-center/windows-defender-security-center) for more information about security features and settings that are built into Windows.
 
@@ -57,7 +57,7 @@ Beginning with Windows 10, version 1703 and later, Microsoft Defender Antivirus 
 
 2. Select the **Virus & threat protection** tile (or the shield icon on the left menu bar).
 
-3. Select **Virus & threat protection updates**. The currently installed version is displayed along with some information about when it was downloaded. You can check your current against the latest version available for manual download, or review the change log for that version. See [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](/microsoft-365/security/defender-endpoint/manage-updates-baselines-microsoft-defender-antivirus).
+3. Select **Virus & threat protection updates**. The currently installed version is displayed along with some information about when it was downloaded. You can check your current against the latest version available for manual download, or review the change log for that version. See [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](/defender-endpoint/manage-updates-baselines-microsoft-defender-antivirus).
 
 4. Select **Check for updates** to download new protection updates (if there are any).
 
@@ -117,7 +117,7 @@ To learn more, see the following resources:
 
 3. Under **Ransomware protection**, select **Manage ransomware protection**.
 
-4. To change **Controlled folder access** settings, see [Protect important folders with Controlled folder access](/microsoft-365/security/defender-endpoint/controlled-folders).
+4. To change **Controlled folder access** settings, see [Protect important folders with Controlled folder access](/defender-endpoint/controlled-folders).
 
 5. To set up ransomware recovery options, select **Set up** under **Ransomware data recovery** and follow the instructions for linking or setting up your OneDrive account so you can easily recover from a ransomware attack.
 
