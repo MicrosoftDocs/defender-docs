@@ -148,6 +148,147 @@ The Email entity page pulls together everything you need to know about the messa
 
 ### Email remediation
 
+After you determine that an email message is a threat, the next step is remediating the threat. You remediate the threat in Threat Explorer or Real-time detections using :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**.
+
+**Take action** is available in the **All email**, **Malware**, or **Phish** views in Threat Explorer or Real-time detections in the **Email** tab (view) of the details area below the chart:
+
+- Select one or more entries in the table by selecting the check box next to the first column. :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available directly in the tab.
+
+  > [!TIP]
+  > **Take action** replaces the **Message actions** drop down list.
+  >
+  > If you select 100 or less entries, you can take multiple actions on the messages in the **Take action** wizard. If you select 101 or more entries, you can take only one action on the message in the **Take action** wizard.
+
+  :::image type="content" source="/defender/media/te-rtd-all-email-view-details-area-email-tab-message-selected.png" alt-text="The Email tab of the All email view in Threat Explorer showing a selected message and Take action available." lightbox="/defender/media/te-rtd-all-email-view-details-area-email-tab-message-selected.png":::
+
+- Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout.
+
+  :::image type="content" source="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="The actions available in the details tab after you select a Subject value in the Email tab of the details area in the All email view." lightbox="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png":::
+
+Selecting :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** opens the **Take action** wizard in a flyout. The available actions in the **Take action** wizard in Threat Explorer (Defender for Office 365 Plan 2) and Real-time detections (Defender for Office 365 Plan 1) are listed in the following table:
+
+|Action|Threat<br/>Explorer|Real-time<br/>Detections|
+|---|:---:|:---:|
+|**Move to mailbox folder**|✔¹||
+|**Submit to Microsoft for review**|✔|✔|
+|**Initiate automated investigation**|✔||
+|**Propose remediation**|✔|✔|
+
+¹ This action requires the **Search and Purge** role in [Email & collaboration permissions](mdo-portal-permissions.md). By default, this role is assigned only to the **Data Investigator** and **Organization Management** role groups. You can add users to those role groups, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
+
+The **Take action** wizard is described in the following list:
+
+1. On the **Choose response actions** page, make the following selections:
+
+   - **Show all response actions**: This option is available only in Threat Explorer.
+
+     By default, some actions are unavailable based on the latest delivery location of the message. To show all available response actions, slide the toggle to :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: **On**.
+
+   - **Email message actions** section:
+
+     You can select multiple actions if you selected 100 or less messages from the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views when you selected :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**.
+
+     You can also select multiple actions if you selected :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in the details flyout after you clicked on the **Subject** value of an entry.
+
+     Select one or more of the available options:
+
+   - **Move to mailbox folder**: Select one of the available values that appear:
+     - **Junk**: Move the message to the Junk Email folder.
+     - **Inbox**: Move the message to the Inbox.
+
+       If the message has the value **Quarantine** for the **Latest delivery location** property, selecting **Inbox** releases the message from quarantine as described on the page. Select one of the following values that appears:
+
+       - **Release to one or more of the original recipients of the email**
+       - **Release to all recipients**.
+
+     - **Deleted items**: Move the message to the Deleted items folder.
+     - **Soft deleted items**: Delete the message from the Deleted items folder (move to the Recoverable Items\Deletions folder). The message is recoverable by the user and admins.
+     - **Hard deleted items**: Purge the deleted message. Admins can recover hard deleted items using single-item recovery. For more information about hard deleted and soft deleted items, see [Soft-deleted and hard-deleted items](/compliance/assurance/assurance-exchange-online-data-deletion#soft-deleted-and-hard-deleted-items).
+
+   - **Submit to Microsoft for review**: Select one of the available values that appear:
+     - **I've confirmed it's clean**: Select this value if you're sure that the message is clean. The following options appear:
+       - **Allow messages like this**: If you select this value, allow entries are added to the [Tenant Allow/Block List](tenant-allow-block-list-about.md) for the sender and any related URLs or attachments in the message. The following options also appear:
+         - **Remove entry after**: The default value is **1 day**, but you can also select **7 days**, **30 days**, or a **Specific date** that's less than 30 days.
+         - **Allow entry note**: Enter an optional note that contains additional information.
+     - **It appears clean** or **It appears suspicious**: Select one of these values if you're unsure and you want a verdict from Microsoft.
+     - **I've confirmed it's a threat**: Select this value if you're sure that the item is malicious, and then select one of the following values in the **Choose a category** section that appears:
+       - **Phish**
+       - **Malware**
+       - **Spam**
+
+       After you select one of those values, a **Select entities to block** flyout opens where you can select one or more entities associated with the message (sender address, sender domain, URLs, or file attachments) to add as block entries to the Tenant Allow/Block list.
+
+       After you select the items to block, select **Add to block rule** to close the **Select entities to block** flyout. Or, select no items and then select **Cancel**.
+
+       Back on the **Choose response actions** page, select an expiration option for the block entries:
+
+       - :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false"::: **Expire on**: Select a date for block entries to expire.
+       - :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: **Never expire**
+
+       The number of blocked entities is shown (for example, **4/4 entities to be blocked**). Select :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** to reopen the **Add to block rule** and make changes.
+
+   - **Initiate automated investigation**: Threat Explorer only. Select one of the following values that appear:
+     - **Investigate email**
+     - **Investigate recipient**
+     - **Investigate sender**
+     - **Contact recipients**
+
+   - **Propose remediation**: Select one of the following values that appear:
+     - **Create new**: This value triggers a soft delete email pending action that needs to be approved by an admin in the Action center.
+     - **Add to existing**: Use this value to apply actions to this email message from an existing remediation. In the **Submit email to the following remediations** box, select the existing remediation.
+
+   When you're finished on the **Choose response actions** page, select **Next**.
+
+2. On the **Choose target entities** page, configure the following options:
+
+   - **Name** and **Description**: Enter a unique, descriptive name and an optional description to track and identify the selected action.
+
+   The rest of the page is a table that lists the affected assets. The table is organized by the following columns:
+
+   - **Impacted asset**: The affected assets from the previous page. For example:
+     - **Recipient email address**
+     - **Entire tenant**
+   - **Action**: The selected actions for the assets from the previous page. For example:
+     - Values from **Submit to Microsoft for review**:
+       - **Report as clean**
+       - **Report**
+       - **Report as malware**, **Report as spam**, or **Report as phishing**
+       - **Block sender**
+       - **Block sender domain**
+       - **Block URL**
+     - Values from **Initiate automated investigation**:
+       - **Investigate email**
+       - **Investigate recipient**
+       - **Investigate sender**
+       - **Contact recipients**
+     - Values from **Propose remediation**:
+       - **Create new remediation**
+       - **Add to existing remediation**
+   - **Target entity**: For example:
+     - The **Network Message ID value** of the email message.
+     - The blocked sender email address.
+     - The blocked sender domain.
+     - The blocked URL.
+   - **Expires on**: Values exist only for allow or block entries in the Tenant/Allow Block List. For example:
+     - **Never expire** for block entries.
+     - The expiration date for allow or block entries.
+   - **Scope**: Typically, this value is **MDO**.
+
+   When you're finished on the **Choose target entities** page, select **Next**.
+
+3. On the **Review and submit** page, review your previous selections.
+
+   Select :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the impacted assets to a CSV file. By default, the filename is **Impacted assets.csv** located in the **Downloads** folder.
+
+   Select **Back** to go back and change your selections.
+
+   When you're finished on the **Review and submit** page, select **Submit**.
+
+> [!TIP]
+> The actions might take time for to appear on the related pages, but the speed of the remediation isn't affected.
+
+<!--- ### Email remediation
+
 After you determine that an email message is a threat, the next step is remediating the threat. You remediate the threat in Threat Explorer or Real-time detections using **Message actions** or :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**.
 
 These actions are available in the **All email**, **Malware**, or **Phish** views in Threat Explorer or Real-time detections in the **Email** tab (view) of the details area below the chart:
@@ -422,7 +563,7 @@ The available actions in the **Take action** wizard in Threat Explorer and Real-
 
    Select **Back** to go back and change your selections.
 
-   When you're finished on the **Review and submit** page, select **Submit**.
+   When you're finished on the **Review and submit** page, select **Submit**.--->
 
 ## The threat hunting experience using Threat Explorer and Real-time detections
 
