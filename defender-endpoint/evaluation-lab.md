@@ -205,7 +205,7 @@ You can simulate attack scenarios using:
 - The ["Do It Yourself" attack scenarios](https://security.microsoft.com/tutorials/all)
 - Threat simulators
 
-You can also use [Advanced hunting](/defender/advanced-hunting-overview) to query data and [Threat analytics](threat-analytics.md) to view reports about emerging threats.
+You can also use [Advanced hunting](/defender-xdr/advanced-hunting-overview) to query data and [Threat analytics](threat-analytics.md) to view reports about emerging threats.
 
 ### Do-it-yourself attack scenarios
 
