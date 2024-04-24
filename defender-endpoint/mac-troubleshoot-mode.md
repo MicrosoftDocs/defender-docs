@@ -98,7 +98,7 @@ or newer.
 
 ## Advanced hunting queries for detection
 
-There are some prebuilt advanced hunting queries to give you visibility into the troubleshooting events that are occurring in your environment. You can use these queries to [create detection rules](/defender/custom-detection-rules) to generate alerts when devices are in troubleshooting mode.
+There are some prebuilt advanced hunting queries to give you visibility into the troubleshooting events that are occurring in your environment. You can use these queries to [create detection rules](/defender-xdr/custom-detection-rules) to generate alerts when devices are in troubleshooting mode.
 
 ### Get troubleshooting events for a particular device
 

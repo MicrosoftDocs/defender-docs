@@ -178,7 +178,7 @@ These tasks are seen as maintenance for your security posture and are critical f
 
 - **Review custom detections** 
 
-    Periodically review whether the custom detections that have been created are still valid and effective. See [Review custom detection](/defender/custom-detection-rules).
+    Periodically review whether the custom detections that have been created are still valid and effective. See [Review custom detection](/defender-xdr/custom-detection-rules).
 
 - **Review alerts suppression**
 
