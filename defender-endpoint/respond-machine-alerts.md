@@ -373,6 +373,6 @@ All other related details are also shown, for example, submission date/time, sub
 
 - [Take response actions on a file](respond-file-alerts.md)
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
-- [Report inaccuracy](/defender-endpoint/tvm-security-recommendation#report-inaccuracy)
+- [Report inaccuracy](/defender-vulnerability-management/tvm-security-recommendation#report-inaccuracy)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
