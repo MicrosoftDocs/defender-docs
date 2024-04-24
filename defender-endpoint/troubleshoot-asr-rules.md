@@ -39,7 +39,7 @@ Here's a screenshot from the Microsoft Defender portal (under **Reports** \> **D
 
 ## Microsoft Defender for Endpoint - Advanced hunting
 
-One of the most powerful features of Microsoft Defender for Endpoint is advanced hunting. If you're unfamiliar with advanced hunting, refer [proactively hunt for threats with advanced hunting](/defender/advanced-hunting-overview).
+One of the most powerful features of Microsoft Defender for Endpoint is advanced hunting. If you're unfamiliar with advanced hunting, refer [proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
 
 Advanced hunting is a query-based (Kusto Query Language) threat-hunting tool that lets you explore up to 30 days of the captured (raw) data, that Defender for Endpoint collects from your devices. Through advanced hunting, you can proactively inspect events to locate interesting indicators and entities. The flexible access to data helps unconstrained hunting for both known and potential threats.
 

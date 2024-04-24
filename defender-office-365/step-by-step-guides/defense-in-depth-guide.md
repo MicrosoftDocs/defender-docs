@@ -92,7 +92,7 @@ The following information details how to get the most out of your investment, br
 
 - Advanced hunting can be used to proactively hunt for threats in your organization, using shared queries from the community to help you get started. You can also use custom detections to set up alerts when personalized criteria are met.
 
-**Read more, watch an overview video and get started here:** [Overview - Advanced hunting](/defender/advanced-hunting-overview)
+**Read more, watch an overview video and get started here:** [Overview - Advanced hunting](/defender-xdr/advanced-hunting-overview)
 
 ### Education features
 
