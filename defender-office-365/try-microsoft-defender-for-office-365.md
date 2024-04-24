@@ -437,7 +437,7 @@ A: No. The trial automatically provisions Defender for Office 365 Plan 2 license
 
 ### Q: How do I extend the trial?
 
-A: See [Extend your trial](/microsoft-365/commerce/try-or-buy-microsoft-365#extend-your-trial).
+A: See [Extend your trial](/microsoft-365/microsoft-365/commerce/try-or-buy-microsoft-365#extend-your-trial).
 
 ### Q: What happens to my data after the trial expires?
 
