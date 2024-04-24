@@ -156,7 +156,7 @@ Defender for Endpoint directly integrates with various Microsoft solutions, incl
 - Microsoft Defender for Office
 - Skype for Business
 
-**[Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender)**
+**[Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)**
 
 With Microsoft Defender XDR, Defender for Endpoint, and various Microsoft security solutions, form a unified pre- and post-breach enterprise defense suite that natively integrates across endpoint, identity, email, and applications to detect, prevent, investigate, and automatically respond to sophisticated attacks.
 

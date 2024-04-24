@@ -70,7 +70,7 @@ Microsoft Defender for Endpoint in the Microsoft Defender portal supports [grant
 >- US Government Community Cloud High (GCC High)
 >- US Department of Defense
 >- All US government institutions with commercial licenses
->- See availability for the above environments here: [Microsoft Defender for Endpoint for US Government customers](/microsoft-365/security/defender-endpoint/gov?view=o365-worldwide&preserve-view=true)
+>- See availability for the above environments here: [Microsoft Defender for Endpoint for US Government customers](/defender-endpoint/gov?view=o365-worldwide&preserve-view=true)
 
 Take a look in the Microsoft Defender portal at <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">https://security.microsoft.com</a>.
 

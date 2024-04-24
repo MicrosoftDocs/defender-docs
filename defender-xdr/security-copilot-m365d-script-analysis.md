@@ -43,7 +43,7 @@ This guide describes what the script analysis capability is and how it works, in
 
 ## Analyze a script
 
-You can access the script analysis capability within the attack story below the incident graph on an incident page and in the [device timeline](/microsoft-365/security/defender-endpoint/device-timeline-event-flag).
+You can access the script analysis capability within the attack story below the incident graph on an incident page and in the [device timeline](/defender-endpoint/device-timeline-event-flag).
 
 To begin analysis, perform the following steps:
 

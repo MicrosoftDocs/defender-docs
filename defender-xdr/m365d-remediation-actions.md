@@ -69,7 +69,7 @@ In addition to remediation actions that follow automated investigations, your se
 - [Advanced hunting](/defender-endpoint/advanced-hunting-overview) action on devices, users, or email
 - [Explorer](/defender-office-365/threat-explorer-real-time-detections-about) action on email content, such as moving email to junk, soft-deleting email, or hard-deleting email
 - Manual [live response](/windows/security/threat-protection/microsoft-defender-atp/live-response) action, such as deleting a file, stopping a process, and removing a scheduled task
-- Live response action with [Microsoft Defender for Endpoint APIs](/defender-endpoint/management-apis#microsoft-defender-for-endpoint-apis), such as isolating a device, running an antivirus scan, and getting information about a file
+- Live response action with [Microsoft Defender for Endpoint APIs](/defender-endpoint/api/management-apis#microsoft-defender-for-endpoint-apis), such as isolating a device, running an antivirus scan, and getting information about a file
 
 ## Next steps
 

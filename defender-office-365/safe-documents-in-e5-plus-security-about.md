@@ -20,14 +20,14 @@ description: Learn about Safe Documents in Microsoft 365 A5 or E5 Security.
 ms.service: defender-office-365
 ms.date: 10/13/2023
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
 # Safe Documents in Microsoft 365 A5 or E5 Security
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Safe Documents is a premium feature that uses the cloud back end of [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) to scan opened Office documents in [Protected View](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653) or [Application Guard for Office](https://support.microsoft.com/topic/9e0fb9c2-ffad-43bf-8ba3-78f785fdba46).
+Safe Documents is a premium feature that uses the cloud back end of [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to scan opened Office documents in [Protected View](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653) or [Application Guard for Office](https://support.microsoft.com/topic/9e0fb9c2-ffad-43bf-8ba3-78f785fdba46).
 
 Users don't need Defender for Endpoint installed on their local devices to get Safe Documents protection. Users get Safe Documents protection if all of the following requirements are met:
 
@@ -114,7 +114,7 @@ For more information, see the following articles:
 
 To enable auditing capabilities, the local device needs to have Microsoft Defender for Endpoint installed. To deploy Microsoft Defender for Endpoint, you need to go through the various phases of deployment. After onboarding, you can configure auditing capabilities in the Microsoft Defender portal.
 
-To learn more, see [Onboard to the Microsoft Defender for Endpoint service](/microsoft-365/security/defender-endpoint/onboarding). If you need help, see [Troubleshoot Microsoft Defender for Endpoint onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding).
+To learn more, see [Onboard to the Microsoft Defender for Endpoint service](/defender-endpoint/onboarding). If you need help, see [Troubleshoot Microsoft Defender for Endpoint onboarding issues](/defender-endpoint/troubleshoot-onboarding).
 
 ### How do I know this procedure worked?
 

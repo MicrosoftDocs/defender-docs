@@ -283,7 +283,7 @@ Before you create indicators for IP addresses, URLs, or domains, make sure the f
 - Antimalware client version is 4.18.1906.x or later
 - Devices are running Windows 10, version 1709, or later, or Windows 11
 
-Custom network indicators are turned on in the [Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender). To learn more, see [Advanced features](/microsoft-365/security/defender-endpoint/advanced-features).
+Custom network indicators are turned on in the [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender). To learn more, see [Advanced features](/microsoft-365/security/defender-endpoint/advanced-features).
 
 #### Indicators for application certificates
 

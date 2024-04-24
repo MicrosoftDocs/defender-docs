@@ -86,7 +86,7 @@ For each simulation or tutorial:
 
 3. Run the simulation file or script on the test device as instructed in the walk-through document.
 
- For more information, see [Experience Microsoft Defender for Endpoint through simulated attack](/microsoft-365/security/defender-endpoint/attack-simulations).
+ For more information, see [Experience Microsoft Defender for Endpoint through simulated attack](/defender-endpoint/attack-simulations).
 
 ## Simulate an attack with an isolated domain controller and client device (optional)
 

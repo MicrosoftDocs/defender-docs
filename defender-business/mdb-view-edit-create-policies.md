@@ -193,7 +193,7 @@ You can view your existing policies in either Microsoft Defender portal ([https:
 
    | Platform | Profile | Description |
    |---|---|---|
-   | Windows 10, Windows 11, and Windows Server | Microsoft Defender Antivirus exclusions | Select this template to define [exclusions for Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/defender-endpoint-antivirus-exclusions#microsoft-defender-antivirus-exclusions).  |
+   | Windows 10, Windows 11, and Windows Server | Microsoft Defender Antivirus exclusions | Select this template to define [exclusions for Microsoft Defender Antivirus](/defender-endpoint/defender-endpoint-antivirus-exclusions#microsoft-defender-antivirus-exclusions).  |
    | Windows 10, Windows 11, and Windows Server | Microsoft Defender Antivirus | Select this template to set up your [next-generation protection policy](mdb-next-generation-protection.md). |
    | Windows 10, Windows 11, and Windows Server | Windows Security Experience | Select this template to turn on [tamper protection](/defender-endpoint/prevent-changes-to-security-settings-with-tamper-protection) and to configure what users can see or do with the Windows Security app on their computer. | 
    | macOS | Antivirus | Select this template to set up your [next-generation protection policy](mdb-next-generation-protection.md) for devices running macOS. |

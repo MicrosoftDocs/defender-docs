@@ -73,12 +73,12 @@ The Skype for Business integration provides a way for analysts to communicate wi
 
 With Microsoft Defender XDR, Microsoft Defender for Endpoint, and various Microsoft security solutions form a unified pre- and post-breach enterprise defense suite that natively integrates across endpoint, identity, email, and applications to detect, prevent, investigate, and automatically respond to sophisticated attacks.
 
-[Learn more about Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender)
+[Learn more about Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 
 ## Related topics
 
 - [Configure integration and other advanced features](advanced-features.md)
-- [Microsoft Defender XDR overview](/microsoft-365/security/defender/microsoft-365-defender)
+- [Microsoft Defender XDR overview](/defender-xdr/microsoft-365-defender)
 - [Turn on Microsoft Defender XDR](/microsoft-365/security/defender/m365d-enable)
 - [Protect users, data, and devices with Conditional Access](conditional-access.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

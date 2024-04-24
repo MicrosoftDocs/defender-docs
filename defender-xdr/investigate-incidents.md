@@ -160,7 +160,7 @@ From the device page, you can gather additional information about the device, su
 :::image type="content" source="/defender/media/investigate-incidents/incident-devices-details.png" alt-text="The details of a device in the Device page in the Microsoft Defender portal." lightbox="/defender/media/investigate-incidents/incident-devices-details.png":::
 
 > [!TIP]
-> You can do on-demand scans on a device page. In the Microsoft Defender portal, choose **Endpoints > Device inventory**. Select a device that has alerts, and then run an antivirus scan. Actions, such as antivirus scans, are tracked and are visible on the **Device inventory** page. To learn more, see [Run Microsoft Defender Antivirus scan on devices](/microsoft-365/security/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices).
+> You can do on-demand scans on a device page. In the Microsoft Defender portal, choose **Endpoints > Device inventory**. Select a device that has alerts, and then run an antivirus scan. Actions, such as antivirus scans, are tracked and are visible on the **Device inventory** page. To learn more, see [Run Microsoft Defender Antivirus scan on devices](/defender-endpoint/respond-machine-alerts#run-microsoft-defender-antivirus-scan-on-devices).
 
 ### Users
 

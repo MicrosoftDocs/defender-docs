@@ -200,7 +200,7 @@ These actions are applied to devices in the `DeviceId` column of the query resul
 - **Collect investigation package**—collects device information in a ZIP file. [Learn more about the Microsoft Defender for Endpoint investigation package](/windows/security/threat-protection/microsoft-defender-atp/respond-machine-alerts#collect-investigation-package-from-devices)
 - **Run antivirus scan**—performs a full Microsoft Defender Antivirus scan on the device
 - **Initiate investigation**—initiates an [automated investigation](m365d-autoir.md) on the device
-- **Restrict app execution**—sets restrictions on device to allow only files that are signed with a Microsoft-issued certificate to run. [Learn more about app restrictions with Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/respond-machine-alerts#restrict-app-execution)
+- **Restrict app execution**—sets restrictions on device to allow only files that are signed with a Microsoft-issued certificate to run. [Learn more about app restrictions with Microsoft Defender for Endpoint](/defender-endpoint/respond-machine-alerts#restrict-app-execution)
 
 #### Actions on files
 

@@ -162,7 +162,7 @@ Here's a list of what to check:
 1. **Get an overview of [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)**. In particular, review information about [next-generation protection](next-generation-protection.md) and [EDR](overview-endpoint-detection-response.md).
 
    > [!NOTE]
-   > The term *Defender* is sometimes used to refer to an entire suite of products and solutions. See [What is Microsoft Defender XDR?](/microsoft-365/security/defender/microsoft-365-defender). In this article, we focus on antivirus and EDR capabilities in Defender for Endpoint.
+   > The term *Defender* is sometimes used to refer to an entire suite of products and solutions. See [What is Microsoft Defender XDR?](/defender-xdr/microsoft-365-defender). In this article, we focus on antivirus and EDR capabilities in Defender for Endpoint.
     
 2. **Check the status of Microsoft Defender Antivirus**. Open Command Prompt, and then run these PowerShell commands:
 

@@ -20,7 +20,7 @@ ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
 # Detect and Remediate Outlook Rules and Custom Forms Injections Attacks
@@ -233,7 +233,7 @@ The best way to protect user accounts (especially admin accounts) is to [set up 
 
   - **Unusual impersonated activity (by user)**: Triggers an alert when users perform multiple impersonated activities in a single session with respect to the baseline learned, which could indicate an attempted breach.
 
-- Use a tool like [Office 365 Secure Score](/microsoft-365/security/defender/microsoft-secure-score) to manage account security configurations and behaviors.
+- Use a tool like [Office 365 Secure Score](/microsoft-365/security/defender-xdr/microsoft-secure-score) to manage account security configurations and behaviors.
 
 ### Second: Keep Outlook clients current
 

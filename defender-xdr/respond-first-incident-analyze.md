@@ -84,7 +84,7 @@ Identifying and tracking modified, created, or stolen identities are essential t
 
 - **Tutorial**: [Investigate malicious email](/microsoft-365/security/office-365-security/threat-explorer-investigate-delivered-malicious-email)
 - **Tutorial**: [Investigate users](investigate-users.md)
-- **Tutorial**: [Investigate a user account](/microsoft-365/security/defender-endpoint/investigate-user)
+- **Tutorial**: [Investigate a user account](/defender-endpoint/investigate-user)
 - **Blog**: [Total Identity Compromise: Microsoft Incident Response lessons on securing Active Directory
 Identity compromise can also be investigated using Defender for Identity signals.](https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/total-identity-compromise-microsoft-incident-response-lessons-on/ba-p/3753391)
 - **Tutorial**: [Example of a phishing email attack](first-incident-path-phishing.md)
@@ -107,7 +107,7 @@ A malicious file's information and capabilities are key to investigating malware
 
 The following resources provide details on how to use the portal's capabilities in investigating files:
 
-- **Tutorial**: [Investigate files](/microsoft-365/security/defender-endpoint/investigate-files)
+- **Tutorial**: [Investigate files](/defender-endpoint/investigate-files)
 - **Video**: [Investigating malware in Microsoft Defender XDR](https://youtu.be/TTqFlnlwch0)
 
 ### Risky apps analysis and cloud-based threats prevention
@@ -129,12 +129,12 @@ Discover how you can protect your cloud apps in real time with this video of the
 
 Nation-state attacks, attacks against critical infrastructure, and organizational breaches often require an attacker to establish communication points once they are in a network. Incident responders look for clues by identifying suspicious traffic or exchanges between a source and a destination. Microsoft has the following tutorials for investigating communication components:
 
-- [Investigate domains and URLs](/microsoft-365/security/defender-endpoint/investigate-domain)
-- [Investigate an IP address](/microsoft-365/security/defender-endpoint/investigate-ip)
-- [Investigate connection events that occur behind forward proxies](/microsoft-365/security/defender-endpoint/investigate-behind-proxy)
+- [Investigate domains and URLs](/defender-endpoint/investigate-domain)
+- [Investigate an IP address](/defender-endpoint/investigate-ip)
+- [Investigate connection events that occur behind forward proxies](/defender-endpoint/investigate-behind-proxy)
 - [Investigate suspicious user and device activities through Defender for Identity](/defender-for-identity/investigate-assets)
 - [Identify and investigate lateral movement paths in Defender for Identity](/defender-for-identity/understand-lateral-movement-paths)
-- [Investigate devices in the Defender for Endpoint devices list](/microsoft-365/security/defender-endpoint/investigate-machines)
+- [Investigate devices in the Defender for Endpoint devices list](/defender-endpoint/investigate-machines)
 
 Attackers often use vulnerabilities to gain access to an organization. Some ransomware attacks initially take advantage of unpatched vulnerabilities like the [Log4Shell vulnerability](/microsoft-365/security/defender-vulnerability-management/tvm-manage-log4shell-guidance). The following resources help incident responders identify vulnerabilities and vulnerable devices in their organization through the Defender for Vulnerability Management service:
 

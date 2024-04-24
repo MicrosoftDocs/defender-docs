@@ -35,8 +35,8 @@ sections:
         answer: |
           Defender for Business is designed for small and medium-sized businesses who have up to 300 users. If you have more than 300 users, consider an enterprise solution, such as one of the following:
           
-          - [Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint)
-          - [Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender)
+          - [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
+          - [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
           - [Microsoft 365 for enterprise](/microsoft-365/enterprise/microsoft-365-overview)
 
       - question: How many devices can I onboard and secure with Defender for Business? 
@@ -88,18 +88,18 @@ sections:
 
       - question: Are device control capabilities available in Microsoft Defender for Business?
         answer: |
-          [Device control in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/device-control-removable-storage-protection) prevents users, endpoints, or both from using unauthorized removable storage media.
+          [Device control in Microsoft Defender for Endpoint](/defender-endpoint/device-control-removable-storage-protection) prevents users, endpoints, or both from using unauthorized removable storage media.
 
           These capabilities can be configured in Defender for Business, as described in the following table:
 
           | OS | Method | Notes |
           |---|---|---|
-          | Windows  | [Attack surface reduction rules](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-deployment) | On Windows devices, you can configure device control through ASR rules. You'll need [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to set up your ASR rules. Intune is not included in the standalone version of Defender for Business, but you can add it on. Intune is included in [Microsoft 365 Business Premium](/microsoft-365/business-premium). <br/><br/>[ASR capabilities in Defender for Business](mdb-asr.md) |
-          | Mac | Jamf or Intune | You can use Jamf or Intune to set up device control on Mac. See [Device Control for macOS](/microsoft-365/security/defender-endpoint/mac-device-control-overview). |
+          | Windows  | [Attack surface reduction rules](/defender-endpoint/attack-surface-reduction-rules-deployment) | On Windows devices, you can configure device control through ASR rules. You'll need [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to set up your ASR rules. Intune is not included in the standalone version of Defender for Business, but you can add it on. Intune is included in [Microsoft 365 Business Premium](/microsoft-365/business-premium). <br/><br/>[ASR capabilities in Defender for Business](mdb-asr.md) |
+          | Mac | Jamf or Intune | You can use Jamf or Intune to set up device control on Mac. See [Device Control for macOS](/defender-endpoint/mac-device-control-overview). |
 
       - question: How do I run custom reports with Defender for Business?
         answer: |
-          Defender for Business currently includes a set of APIs to support robust custom reporting, and a Power BI connector. You could schedule a PowerShell script to generate executive summaries formatted in HTML, and send those summaries via email. See [API reference information](/microsoft-365/security/defender-endpoint/exposed-apis-create-app-partners). Also see [Microsoft Defender for Business and Microsoft partner resources](mdb-partners.md).
+          Defender for Business currently includes a set of APIs to support robust custom reporting, and a Power BI connector. You could schedule a PowerShell script to generate executive summaries formatted in HTML, and send those summaries via email. See [API reference information](/defender-endpoint/exposed-apis-create-app-partners). Also see [Microsoft Defender for Business and Microsoft partner resources](mdb-partners.md).
 
       - question: I'm a Microsoft partner. Will I be able to manage multiple tenants from one control panel, or will I have to sign in to each tenant individually? 
         answer: |
@@ -129,9 +129,9 @@ sections:
 
       - question: What are the differences between Defender for Business and Defender for Endpoint Plans 1 and 2?
         answer: |
-          Both [Defender for Business](/microsoft-365/security/defender-business/mdb-overview) and [Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) provide strong threat protection capabilities for your company's devices (computers, phones, and tablets, which are also referred to as endpoints). Defender for Business was designed for small and medium-sized businesses (up to 300 employees). With a [simplified configuration process](mdb-setup-configuration.md) and [device onboarding options](mdb-onboard-devices.md), Defender for Business enables customers who don't necessarily have a security background to set up, configure, and use Defender for Business to protect company devices.  
+          Both [Defender for Business](/microsoft-365/security/defender-business/mdb-overview) and [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) provide strong threat protection capabilities for your company's devices (computers, phones, and tablets, which are also referred to as endpoints). Defender for Business was designed for small and medium-sized businesses (up to 300 employees). With a [simplified configuration process](mdb-setup-configuration.md) and [device onboarding options](mdb-onboard-devices.md), Defender for Business enables customers who don't necessarily have a security background to set up, configure, and use Defender for Business to protect company devices.  
 
-          Defender for Endpoint is an enterprise endpoint security platform designed to help organizations like yours to prevent, detect, investigate, and respond to advanced threats. To learn more, see [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint).
+          Defender for Endpoint is an enterprise endpoint security platform designed to help organizations like yours to prevent, detect, investigate, and respond to advanced threats. To learn more, see [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint).
 
       - question: What happens if I have a mix of Microsoft endpoint security subscriptions? 
         answer: |
@@ -145,7 +145,7 @@ sections:
         answer: |  
           *Suppose your company has grown from 250 users to 330 users, and you now have a mix of Microsoft endpoint security subscriptions, such as 300 Defender for Business licenses and 30 Microsoft 365 E3 licenses.*
 
-          [Defender for Business](mdb-overview.md) and [Microsoft 365 Business Premium](/microsoft-365/business-premium/) are for customers who have up to 300 users. If you now have more than 300 users, we recommend getting a subscription that includes [Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint) for all users. However, we understand that there are scenarios where a customer grows to more than 300 users within a license term. 
+          [Defender for Business](mdb-overview.md) and [Microsoft 365 Business Premium](/microsoft-365/business-premium/) are for customers who have up to 300 users. If you now have more than 300 users, we recommend getting a subscription that includes [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) for all users. However, we understand that there are scenarios where a customer grows to more than 300 users within a license term. 
           
           Referring to our example, suppose you started your license term with 250 Defender for Business licenses, and now you have 300 Defender for Business licenses and 30 Microsoft 365 E3 licenses (Microsoft 365 E3 includes Defender for Endpoint Plan 1). Defender for Business features and capabilities apply tenant wide. When it's time to renew your subscription, we recommend choosing an enterprise plan, such as one of the following subscriptions:
 

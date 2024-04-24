@@ -61,7 +61,7 @@ Because Microsoft Defender XDR components and technologies span various function
 
 To integrate the capabilities of Microsoft Defender XDR, you will need to refine the SOC services. For more information about the capabilities of Microsoft Defender XDR, see the following articles:
 
-- [What is Microsoft Defender for Endpoint?](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint)
+- [What is Microsoft Defender for Endpoint?](/defender-endpoint/microsoft-defender-endpoint)
 - [What is Microsoft Defender for Identity?](/defender-for-identity/what-is)
 - [What is Defender for Office 365?](/microsoft-365/security/defender/microsoft-365-defender)
 - [What is Microsoft Defender for Cloud Apps?](/cloud-app-security/what-is-cloud-app-security)

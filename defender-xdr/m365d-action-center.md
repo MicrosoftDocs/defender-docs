@@ -115,7 +115,7 @@ In addition to remediation actions that are taken automatically as a result of [
 | **Advanced hunting action** | Actions taken on devices or email with [advanced hunting](./advanced-hunting-overview.md). |
 | **Explorer action** | Actions taken on email content with [Explorer](/defender-office-365/threat-explorer-real-time-detections-about). |
 | **Manual live response action** | Actions taken on a device with [live response](/defender-endpoint/live-response). Examples include deleting a file, stopping a process, and removing a scheduled task. |
-| **Live response action** | Actions taken on a device with [Microsoft Defender for Endpoint APIs](/defender-endpoint/management-apis#microsoft-defender-for-endpoint-apis). Examples of actions include isolating a device, running an antivirus scan, and getting information about a file. |
+| **Live response action** | Actions taken on a device with [Microsoft Defender for Endpoint APIs](/defender-endpoint/api/management-apis#microsoft-defender-for-endpoint-apis). Examples of actions include isolating a device, running an antivirus scan, and getting information about a file. |
 
 ## Required permissions for Action center tasks
 

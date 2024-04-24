@@ -34,7 +34,7 @@ ms.date: 02/16/2021
 
 To implement a multi-tenant delegated access solution, take the following steps:
 
-1. Enable [role-based access control](/microsoft-365/security/defender-endpoint/rbac) for Defender for Endpoint via the Microsoft Defender portal and connect with Microsoft Entra groups.
+1. Enable [role-based access control](/defender-endpoint/rbac) for Defender for Endpoint via the Microsoft Defender portal and connect with Microsoft Entra groups.
 
 2. Configure [entitlement management for external users](/azure/active-directory/governance/entitlement-management-external-users) within Microsoft Entra ID Governance to enable access requests and provisioning.
 
@@ -66,9 +66,9 @@ To implement a multi-tenant delegated access solution, take the following steps:
       Perform all actions except for live response and manage security settings.
 
     - **Tier 2 Analysts** <br>
-      Tier 1 capabilities with the addition to [live response](/microsoft-365/security/defender-endpoint/live-response).
+      Tier 1 capabilities with the addition to [live response](/defender-endpoint/live-response).
 
-    For more information, see [Manage portal access using role-based access control](/microsoft-365/security/defender-endpoint/rbac).
+    For more information, see [Manage portal access using role-based access control](/defender-endpoint/rbac).
 
 ## Configure Governance Access Packages
 

@@ -19,7 +19,7 @@ ms.reviewer: vippand
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/office-365-security/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
-  - ✅ <a href="https://learn.microsoft.com/microsoft-365/security/defender/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
 # What's new in Microsoft Defender for Office 365
@@ -50,7 +50,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## February 2024
 
-- **Hunting and responding to QR code-based attacks**: Security teams are now able to see the URLs extracted from QR codes with **QR code** as URL source on the **URL** tab of the [Email entity page](mdo-email-entity-page.md), and **QRCode** in the **UrlLocation** column of **EmailUrlInfo** table in [Advanced Hunting](/defender/advanced-hunting-overview.md). You can also filter for email with URLs embedded within QR codes using the **URL Source** filter value **QR code** in the **All email**, **Malware**, and **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md).
+- **Hunting and responding to QR code-based attacks**: Security teams are now able to see the URLs extracted from QR codes with **QR code** as URL source on the **URL** tab of the [Email entity page](mdo-email-entity-page.md), and **QRCode** in the **UrlLocation** column of **EmailUrlInfo** table in [Advanced Hunting](/defender/advanced-hunting-overview). You can also filter for email with URLs embedded within QR codes using the **URL Source** filter value **QR code** in the **All email**, **Malware**, and **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md).
 
 ## January 2024
 

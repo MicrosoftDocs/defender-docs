@@ -81,11 +81,11 @@ Defender Experts for XDR currently supports the following one-click managed resp
 
 |**Action**|**Description**|
 |------------|-----------------|
-|[Isolate device](/microsoft-365/security/defender-endpoint/respond-machine-alerts##isolate-devices-from-the-network)|Isolates a device, which helps prevent an attacker from controlling it and performing further activities such as data exfiltration and lateral movement. The isolated device will still be connected to Microsoft Defender for Endpoint.|
-|[Quarantine file](/microsoft-365/security/defender-endpoint/respond-file-alerts##stop-and-quarantine-files)|Stops running processes, quarantines the files, and deletes persistent data such as registry keys.|
-|[Restrict app execution](/microsoft-365/security/defender-endpoint/respond-machine-alerts##restrict-app-execution)| Restricts the execution of potentially malicious programs and locks down the device to prevent further attempts.|
-|[Release from isolation](/microsoft-365/security/defender-endpoint/respond-machine-alerts#isolate-devices-from-the-network)| Undoes isolation of a device.|
-|[Remove app restriction](/microsoft-365/security/defender-endpoint/respond-machine-alerts#restrict-app-execution)| Undoes release from isolation.|
+|[Isolate device](/defender-endpoint/respond-machine-alerts##isolate-devices-from-the-network)|Isolates a device, which helps prevent an attacker from controlling it and performing further activities such as data exfiltration and lateral movement. The isolated device will still be connected to Microsoft Defender for Endpoint.|
+|[Quarantine file](/defender-endpoint/respond-file-alerts##stop-and-quarantine-files)|Stops running processes, quarantines the files, and deletes persistent data such as registry keys.|
+|[Restrict app execution](/defender-endpoint/respond-machine-alerts##restrict-app-execution)| Restricts the execution of potentially malicious programs and locks down the device to prevent further attempts.|
+|[Release from isolation](/defender-endpoint/respond-machine-alerts#isolate-devices-from-the-network)| Undoes isolation of a device.|
+|[Remove app restriction](/defender-endpoint/respond-machine-alerts#restrict-app-execution)| Undoes release from isolation.|
 
 Apart from these one-click actions, you can also receive managed responses from our experts that you need to perform manually.
 
