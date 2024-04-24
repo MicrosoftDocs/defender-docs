@@ -22,9 +22,9 @@ ms.date: 1/31/2024
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 > [!IMPORTANT]
 > The Microsoft Defender for Endpoint Threat Protection report page is now deprecated and is no longer available. Microsoft recommends that you transition to either the Defender XDR alerts or advanced hunting to understand endpoint threat protection details. See the following sections for more information.

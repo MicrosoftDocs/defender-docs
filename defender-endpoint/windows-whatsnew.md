@@ -21,9 +21,9 @@ ms.topic: reference
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- [Microsoft Defender XDR](/defender-xdr)
 
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink).
@@ -43,7 +43,7 @@ All updates contain:
 
 - Performance improvements
 - Serviceability improvements
-- Integration improvements (Cloud, [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804))
+- Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr))
 
 ## Dec-2023 (Release version: 10.8672.25926.1019)
 

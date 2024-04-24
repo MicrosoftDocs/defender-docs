@@ -32,8 +32,8 @@ Select each tab to learn more about advanced hunting and the device control repo
 
 **Applies to:** 
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 When a device control policy is triggered, an event is visible with advanced hunting, regardless of whether it was initiated by the system or by the user who signed in. This section includes some example queries you can use in advanced hunting.
 
@@ -97,8 +97,8 @@ DeviceEvents
 ## Device control report
 
 **Applies to:** 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](/microsoft-365/security/defender-business)
 
 With the device control report, you can view events that relate to media usage. Such events include:

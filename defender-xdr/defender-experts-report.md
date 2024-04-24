@@ -26,7 +26,7 @@ ms.date: 10/17/2023
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 Microsoft Defender Experts for Hunting layers human intelligence and expert-trained technology to help Microsoft Defender XDR customers understand the significant threats they face. It highlights how Defender Expert's threat hunting skills, thorough understanding of the threat landscape, and knowledge of emerging threats can help you identify, prioritize, and address those threats in your environment.
 

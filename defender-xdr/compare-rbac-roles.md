@@ -27,7 +27,7 @@ This article describes how existing roles and permissions in Microsoft Defender 
 
 **Applies to:**
 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2118804)
 - [Microsoft Defender for Identity](https://go.microsoft.com/fwlink/p/?LinkID=2198108)
 - [Microsoft Defender for Office 365 Plan 2](https://go.microsoft.com/fwlink/p/?LinkID=2158212)

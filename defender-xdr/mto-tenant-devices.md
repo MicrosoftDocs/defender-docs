@@ -20,7 +20,7 @@ ms.date: 03/15/2024
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 The **Devices** page in multitenant management enables you to quickly manage tenants and devices.
 

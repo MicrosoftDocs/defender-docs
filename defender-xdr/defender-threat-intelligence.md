@@ -22,7 +22,7 @@ ms.date: 03/28/2021
 [!include[Prerelease information](../includes/prerelease.md)]
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 Subscribers to Microsoft Defender Threat Intelligence (Defender TI) can now access threat intelligence from inside the Microsoft Defender portal.  
 

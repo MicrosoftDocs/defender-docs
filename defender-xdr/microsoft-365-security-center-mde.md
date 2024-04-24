@@ -27,7 +27,7 @@ ms.custom: admindeeplinkDEFENDER
 **Applies to:**
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
 
 This article describes the Defender for Endpoint experience in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Formerly, Defender for Endpoint customers used the Microsoft Defender Security Center ([https://securitycenter.windows.com](https://securitycenter.windows.com) or [https://securitycenter.microsoft.com](https://securitycenter.microsoft.com)).
 

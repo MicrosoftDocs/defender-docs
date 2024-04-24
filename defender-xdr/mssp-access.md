@@ -30,7 +30,7 @@ ms.date: 02/16/2021
 **Applies to:**
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
 
 To implement a multi-tenant delegated access solution, take the following steps:
 

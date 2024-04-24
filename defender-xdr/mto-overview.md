@@ -19,7 +19,7 @@ ms.date: 09/01/2023
 
 **Applies to:**
 
-- [Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender XDR](microsoft-365-defender.md)
 
 >[!Tip]
 >To learn how to turn on preview features, see [Microsoft Defender XDR preview features](preview.md).

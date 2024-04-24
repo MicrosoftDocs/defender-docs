@@ -25,8 +25,8 @@ ms.date: 08/18/2023
 - Microsoft Defender for Office 365
 - Microsoft Defender for Identity
 - Microsoft Defender for Cloud Apps
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
@@ -39,7 +39,7 @@ Managed security services that assist organizations to detect threats early and 
 
 |Service name|Vendor|Description|
 |---|---|---|
-|[Microsoft Defender Experts](https://go.microsoft.com/fwlink/?linkid=2203232)|Microsoft|Defender Experts for Hunting are a proactive threat hunting service for Microsoft Defender XDR.|
+|[Microsoft Defender Experts](/defender-xdr/defender-experts-for-hunting)|Microsoft|Defender Experts for Hunting are a proactive threat hunting service for Microsoft Defender XDR.|
 |[Cloud Security Operations Center](https://go.microsoft.com/fwlink/?linkid=2202671)|glueckkanja-gab AG|Monitors your Microsoft Security Solutions 24/7, responds to threats on your behalf and works closely with your IT to continuously improve your security posture.|
 |[Wortell Protect](https://go.microsoft.com/fwlink/?linkid=2202480)|Wortell|Wortell offers a 24.7.365 Managed Detection and Response service, SOC-as-a-service, to secure your Azure subscriptions and Microsoft 365 environment. With this managed service, Wortell provides security monitoring and incident response, and operate Microsoft Defender and (optionally) Microsoft Sentinel on your behalf. The service also includes threat intelligence feeds and custom machine learning models|
 |[CRITICALSTART® Managed Detection & Response Services for Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2202761)|CRITICALSTART|Critical Start Managed Detection and Response (MDR) services for Microsoft Defender XDR (M365D) extends security defenses to provide cross-domain threat protection and simplify breach prevention. Their team of Microsoft security experts uses integration with M365D to detect, investigate, and respond with the right actions to alerts from identity, to email and cloud – before they disrupt business operations.|
@@ -111,7 +111,7 @@ Protect your organization proactively by evaluating your organization's ability 
 
 |Service name|Vendor|Description|
 |---|---|---|
-|[Microsoft Defender Experts](https://go.microsoft.com/fwlink/?linkid=2203232)|Microsoft|Defender Experts for Hunting is a proactive threat hunting service for Microsoft Defender XDR.|
+|[Microsoft Defender Experts](/defender-xdr/defender-experts-for-hunting)|Microsoft|Defender Experts for Hunting is a proactive threat hunting service for Microsoft Defender XDR.|
 |[Microsoft Consulting Services - Security Operations and Threat Protection Services](https://www.microsoft.com/industrysolutions/solutions/security?activetab=pivot1:primaryr4)|Microsoft|The Microsoft Consulting Services (MCS) Security Operations and Threat Protection Services (SOTPS), provides a structured approach to modern Security Operations Center (SOC) design and implementation using effective change management techniques so your security professionals can detect attacks faster and respond more effectively.|
 |[Onevinn Threat Hunting](https://go.microsoft.com/fwlink/?linkid=2202584)|Onevinn|If your Internal SOC needs an extra pair of eyes looking for threats, Onevinn's Threat Hunters can be purchased as your extended hunting team.|
 |[Microsoft 365 Security Assessment](https://go.microsoft.com/fwlink/?linkid=2202389)|Nedscaper|The Microsoft 365 Security assessment provides a risk-based approach to scan and analyze the security baseline (prevention is better than the cure) and settings of the Microsoft 365 Security products, from Microsoft 365 E3 security products like Microsoft Entra Conditional Access and Microsoft Intune (Microsoft Defender Antivirus policies) to the Microsoft 365 E5 Security products like Microsoft Defender XDR, Microsoft Entra ID Protection and Microsoft Defender for Identity, Devices, Microsoft 365, and Cloud Apps.|
