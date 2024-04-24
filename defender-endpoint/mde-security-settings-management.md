@@ -1,16 +1,22 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
-author:      YongRhee-MSFT # GitHub alias
-ms.author:   yongrhee # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
-ms.date:     04/24/2024
+title: Manage Microsoft Defender Antivirus by using Defender for Endpoint Security Settings Management
+description: Learn how to use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: deniseb
+ms.service: defender-endpoint
+ms.topic: how-to
+ms.date: 04/24/2024
+ms.collection: 
+- m365-security
+- tier2
+- mde-ngp
+search.appverid: met150
+ms.localizationpriority: medium
+ms.custom: 
+- nextgen
+- partner-contribution
 ---
 
-Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus
+# Use Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus
+
