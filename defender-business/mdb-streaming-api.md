@@ -28,7 +28,7 @@ If your organization has a Security Operations Center (SOC), the ability to use 
 - [Azure Event Hubs](#use-the-streaming-api-with-event-hubs), a modern big data streaming platform and event ingestion service that can seamlessly integrate with other Azure and Microsoft services, such as Stream Analytics, Power BI, and Event Grid, along with outside services like Apache Spark.
 - [Azure Storage](/azure/storage/common/storage-introduction), Microsoft's cloud storage solution for modern data storage scenarios, with highly available, massively scalable, durable, and secure storage for a variety of data objects in the cloud. 
 
-With the streaming API, you can use [advanced hunting](/defender/advanced-hunting-overview) and [attack detection](/defender-endpoint/overview-endpoint-detection-response) with Defender for Business and Microsoft 365 Business Premium. The streaming API enables SOCs to view more data about devices, understand better how an attack occurred, and take steps to improve device security.
+With the streaming API, you can use [advanced hunting](/defender-xdr/advanced-hunting-overview) and [attack detection](/defender-endpoint/overview-endpoint-detection-response) with Defender for Business and Microsoft 365 Business Premium. The streaming API enables SOCs to view more data about devices, understand better how an attack occurred, and take steps to improve device security.
 
 ## Use the streaming API with Microsoft Sentinel
 
@@ -87,7 +87,7 @@ Here's what the schema of events in Azure Event Hubs looks like:
 }
 ```
 
-Each event hub message in Azure Event Hubs contains a list of records. Each record contains the event name, the time Defender for Business received the event, the tenant to which it belongs (you get events from your tenant only), and the event in JSON format in a property called "**properties**". For more information about the schema, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender/advanced-hunting-overview).
+Each event hub message in Azure Event Hubs contains a list of records. Each record contains the event name, the time Defender for Business received the event, the tenant to which it belongs (you get events from your tenant only), and the event in JSON format in a property called "**properties**". For more information about the schema, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 
 ## Use the streaming API with Azure Storage
 
@@ -122,7 +122,7 @@ A blob container is created for each event type. The schema of each row in a blo
   }
   ```
 
-Each blob contains multiple rows. Each row contains the event name, the time Defender for Business received the event, the tenant to which it belongs (you get events from your tenant only), and the event in JSON format properties. For more information about the schema of Microsoft Defender for Endpoint events, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender/advanced-hunting-overview).
+Each blob contains multiple rows. Each row contains the event name, the time Defender for Business received the event, the tenant to which it belongs (you get events from your tenant only), and the event in JSON format properties. For more information about the schema of Microsoft Defender for Endpoint events, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview).
 
 ## See also
 

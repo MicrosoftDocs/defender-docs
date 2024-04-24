@@ -37,7 +37,7 @@ ms.date: 12/18/2020
 
 ## Stream Advanced Hunting events to Event Hubs and/or Azure storage account
 
-Microsoft Defender for Endpoint supports streaming events available through [Advanced Hunting](/defender/advanced-hunting-overview) to an [Event Hubs](/azure/event-hubs/) and/or [Azure storage account](/azure/storage/common/storage-account-overview).
+Microsoft Defender for Endpoint supports streaming events available through [Advanced Hunting](/defender-xdr/advanced-hunting-overview) to an [Event Hubs](/azure/event-hubs/) and/or [Azure storage account](/azure/storage/common/storage-account-overview).
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4r4ga]
 
@@ -45,14 +45,14 @@ Microsoft Defender for Endpoint supports streaming events available through [Adv
 
 Topic|Description
 :---|:---
-[Stream Microsoft Defender for Endpoint events to Azure Event Hubs](raw-data-export-event-hub.md)|Learn about enabling the streaming API in your tenant and configure Defender for Endpoint to stream [Advanced Hunting](/defender/advanced-hunting-overview) to Event Hubs.
-[Stream Defender for Endpoint events to your Azure storage account](raw-data-export-storage.md)|Learn about enabling the streaming API in your tenant and configure Defender for Endpoint to stream [Advanced Hunting](/defender/advanced-hunting-overview) to your Azure storage account.
+[Stream Microsoft Defender for Endpoint events to Azure Event Hubs](raw-data-export-event-hub.md)|Learn about enabling the streaming API in your tenant and configure Defender for Endpoint to stream [Advanced Hunting](/defender-xdr/advanced-hunting-overview) to Event Hubs.
+[Stream Defender for Endpoint events to your Azure storage account](raw-data-export-storage.md)|Learn about enabling the streaming API in your tenant and configure Defender for Endpoint to stream [Advanced Hunting](/defender-xdr/advanced-hunting-overview) to your Azure storage account.
 
 ## Related topics
 
 - [Stream Microsoft Defender XDR events | Microsoft Learn](/defender-xdr/streaming-api)
 
-- [Overview of Advanced Hunting](/defender/advanced-hunting-overview)
+- [Overview of Advanced Hunting](/defender-xdr/advanced-hunting-overview)
 - [Azure Event Hubs documentation](/azure/event-hubs/)
 - [Azure Storage Account documentation](/azure/storage/common/storage-account-overview)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

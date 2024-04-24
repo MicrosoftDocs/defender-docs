@@ -111,7 +111,7 @@ To further reinforce the security perimeter of your network, Microsoft Defender 
 
 **[Endpoint detection and response](overview-endpoint-detection-response.md)**
 
-Endpoint detection and response capabilities are put in place to detect, investigate, and respond to advanced threats that may have made it past the first two security pillars. [Advanced hunting](/defender/advanced-hunting-overview) provides a query-based threat-hunting tool that lets you proactively find breaches and create custom detections.
+Endpoint detection and response capabilities are put in place to detect, investigate, and respond to advanced threats that may have made it past the first two security pillars. [Advanced hunting](/defender-xdr/advanced-hunting-overview) provides a query-based threat-hunting tool that lets you proactively find breaches and create custom detections.
 
 <a name="ai"></a>
 
