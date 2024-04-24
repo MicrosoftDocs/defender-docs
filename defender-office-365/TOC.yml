@@ -26,7 +26,7 @@
      - name: Mail flow in EOP
        href: mail-flow-about.md
      - name: Microsoft Defender portal overview
-       href: /defender/microsoft-365-defender-portal
+       href: /defender-xdr/microsoft-365-defender-portal
 
    - name: Evaluate
      items:
