@@ -28,7 +28,7 @@ ms.date: 12/18/2020
 - ../microsoft-defender-endpoint.md
 
 > [!NOTE]
-> For the full data streaming experience available, please visit [Stream Microsoft Defender XDR events | Microsoft Learn](/microsoft-365/security//defender-xdr/streaming-api).
+> For the full data streaming experience available, please visit [Stream Microsoft Defender XDR events | Microsoft Learn](//defender-xdr/streaming-api).
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configuresiem-abovefoldlink)
 
@@ -103,7 +103,7 @@ In order to get the data types for our events properties do the following:
 
 ## Related articles
 
-- [Stream Microsoft Defender XDR events | Microsoft Learn](/microsoft-365/security//defender-xdr/streaming-api)
+- [Stream Microsoft Defender XDR events | Microsoft Learn](//defender-xdr/streaming-api)
 
 - [Overview of Advanced Hunting](/defender/advanced-hunting-overview)
 - [Microsoft Defender for Endpoint Streaming API](raw-data-export.md)
