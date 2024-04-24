@@ -221,7 +221,7 @@ The following image illustrates how the Advanced Hunting query page opens from t
 
 >:::image type="content" source="media/attack-surface-reduction-rules-report-main-detections-flyout-hunting.png" alt-text="Shows the attack surface reduction rules report main detections tab flyout link opening Advanced Hunting" lightbox="media/attack-surface-reduction-rules-report-main-detections-flyout-hunting.png":::
 
-For more information about Advanced hunting, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender/advanced-hunting-overview)
+For more information about Advanced hunting, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview)
 
 ### Attack surface reduction rules main Configuration tab
 

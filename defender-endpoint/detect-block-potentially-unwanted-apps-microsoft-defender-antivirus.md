@@ -193,7 +193,7 @@ DeviceEvents
 | where ThreatName startswith_cs 'PUA:'
 ```
 
-To learn more about advanced hunting, see [Proactively hunt for threats with advanced hunting](/defender/advanced-hunting-overview).
+To learn more about advanced hunting, see [Proactively hunt for threats with advanced hunting](/defender-xdr/advanced-hunting-overview).
 
 ## Exclude files from PUA protection
 

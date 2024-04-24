@@ -120,7 +120,7 @@ Tampering attempts typically indicate that a larger cyberattack has taken place.
 
 Whenever a tampering attempt is detected, an alert is raised in the [Microsoft Defender portal](/defender-endpoint/portal-overview) ([https://security.microsoft.com](https://security.microsoft.com)).
 
-Using [endpoint detection and response](overview-endpoint-detection-response.md) and [advanced hunting](/defender/advanced-hunting-overview) capabilities in Microsoft Defender for Endpoint, your security operations team can investigate and address such attempts.
+Using [endpoint detection and response](overview-endpoint-detection-response.md) and [advanced hunting](/defender-xdr/advanced-hunting-overview) capabilities in Microsoft Defender for Endpoint, your security operations team can investigate and address such attempts.
 
 ## Review your security recommendations
 

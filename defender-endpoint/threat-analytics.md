@@ -95,7 +95,7 @@ Each report includes charts that provide an overview of how resilient your organ
 
 ### Analyst report: Get expert insight from Microsoft security researchers
 
-Go to the **Analyst report** section to read through the detailed expert write-up. Most reports provide detailed descriptions of attack chains, including tactics and techniques mapped to the MITRE ATT&CK framework, exhaustive lists of recommendations, and powerful [threat hunting](/defender/advanced-hunting-overview) guidance.
+Go to the **Analyst report** section to read through the detailed expert write-up. Most reports provide detailed descriptions of attack chains, including tactics and techniques mapped to the MITRE ATT&CK framework, exhaustive lists of recommendations, and powerful [threat hunting](/defender-xdr/advanced-hunting-overview) guidance.
 
 [Learn more about the analyst report](threat-analytics-analyst-reports.md)
 
@@ -129,7 +129,7 @@ When using the reports, keep the following in mind:
 
 ## Related topics
 
-- [Proactively find threats with advanced hunting](/defender/advanced-hunting-overview)
+- [Proactively find threats with advanced hunting](/defender-xdr/advanced-hunting-overview)
 - [Understand the analyst report section](threat-analytics-analyst-reports.md)
 - [Assess and resolve security weaknesses and exposures](/defender-vulnerability-management/defender-vulnerability-management)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -55,7 +55,7 @@ The improved [Action center](auto-investigation-action-center.md) brings togethe
    - Select **Open investigation page** to view more details about the investigation.
    - Select **Approve** to initiate a pending action.
    - Select **Reject** to prevent a pending action from being taken.
-   - Select **Go hunt** to go into [Advanced hunting](/defender/advanced-hunting-overview).
+   - Select **Go hunt** to go into [Advanced hunting](/defender-xdr/advanced-hunting-overview).
 
 ### Open an investigation from an incident details page
 
