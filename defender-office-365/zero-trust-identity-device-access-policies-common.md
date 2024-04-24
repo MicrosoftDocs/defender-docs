@@ -51,7 +51,7 @@ You can download this diagram as a [PDF](https://download.microsoft.com/download
 
 Here's a one-page PDF summary:
 
-[![Thumb image for the Zero Trust identity and device protection for Microsoft 365 handout.](/defender/media/microsoft-365-policies-configurations/zero-trust-id-device-protection-model-handout-thumbnail.png)](../../downloads/MSFT-cloud-architecture-identity-device-protection-handout.pdf) <br> [View as a PDF](../../downloads/MSFT-cloud-architecture-identity-device-protection-handout.pdf) \| [Download as a PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/MSFT-cloud-architecture-identity-device-protection-handout.pdf)
+[![Thumb image for the Zero Trust identity and device protection for Microsoft 365 handout.](/defender-xdr/media/microsoft-365-policies-configurations/zero-trust-id-device-protection-model-handout-thumbnail.png)](../../downloads/MSFT-cloud-architecture-identity-device-protection-handout.pdf) <br> [View as a PDF](../../downloads/MSFT-cloud-architecture-identity-device-protection-handout.pdf) \| [Download as a PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/MSFT-cloud-architecture-identity-device-protection-handout.pdf)
 
 -->
 
@@ -338,6 +338,6 @@ Follow the guidance in the article [Common Conditional Access policy: Require MF
 
 ## Next steps
 
-[![Step 3: Policies for guest and external users.](/defender/media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-3.png#lightbox)](zero-trust-identity-device-access-policies-guest-access.md)
+[![Step 3: Policies for guest and external users.](/defender-xdr/media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-3.png#lightbox)](zero-trust-identity-device-access-policies-guest-access.md)
 
 [Learn about policy recommendations for guest and external users](zero-trust-identity-device-access-policies-guest-access.md)
