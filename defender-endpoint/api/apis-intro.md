@@ -27,7 +27,7 @@ search.appverid: met150
 - ../microsoft-defender-endpoint.md
 - ../microsoft-defender-endpoint.md
 - [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Business](/defender-business)
+- [Microsoft Defender for Business](../defender-business)
 
 > [!IMPORTANT]
 > Advanced hunting capabilities are not included in Defender for Business. 
