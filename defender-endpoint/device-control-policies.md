@@ -762,44 +762,38 @@ With device control, you can store evidence of files that were copied to removab
 
 The `FileEvidenceLocation` field of has the location of the evidence file, if one is created. The evidence file has a name which ends in `.dup`, and its location is controlled by the `DataDuplicationFolder` setting.
 
-### Configuring File Evidence for Azure Blob Storage
+### Storing file evidence in Azure Blob Storage
 
+Create a Azure Blob Storage account and container
 
-
-Device control can upload file evidence to Azure blob storage.  To enable this capability perform the following steps
-
-1. Configure an [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction#blob-storage-resources) resource
-
-2.  Create a custom role called "Device Control Feature Evidence Providers".  These are the permissions that are required:
+Create a role for accessing the container.  The best practice is to create a custom role with only the permissions required to create the file evidence.
 
 
 ```json
-"permissions": [
-            {
-                "actions": [
-                    "Microsoft.Storage/storageAccounts/blobServices/containers/read",
-                    "Microsoft.Storage/storageAccounts/blobServices/containers/write",
-                    "Microsoft.Storage/storageAccounts/blobServices/read"
-                ],
-                "notActions": [],
-                "dataActions": [
-                    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/add/action",
-                    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write"
-                ],
-                "notDataActions": []
-            }
-        ]
+{
+
+        
+            {
+                
+                    
+                    
+                    
+                ],
+                
+                
+                    
+                    
+                ],
+                
+            }
+        ]
+    }
+
 ```
 
-See creating custom roles with [CLI](https://learn.microsoft.com/en-us/azure/role-based-access-control/tutorial-custom-role-cli) or [Powershell](https://learn.microsoft.com/en-us/azure/role-based-access-control/tutorial-custom-role-powershell)
+Assign the users of device control to that role
 
-> [!WARNING] 
-> The [Storage Blob Data Contributor Role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) has delete permissions.  Consider using [Immutable Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview) to prevent file evidence from being changed.
-
-3.  [Assign the role](https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access?tabs=powershell#assign-an-azure-role) to the users of device control.  
-
-
-1. Set the `RemoteFileEvidenceLocation` setting to the URL of the Azure Blob Storage container via Intune OMA-URI or GPO
+Set the `RemoteStorageFileEvent` to the URL of the Azure Blob Storage container.
 
 ## Next steps
 
