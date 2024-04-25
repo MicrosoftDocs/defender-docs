@@ -54,7 +54,7 @@ The name of the user (Alex in this scenario) appears under Eligible assignments 
 > [!NOTE]
 > For a quick review of Privileged Identity Management see [this video](https://www.youtube.com/watch?v=VQMAg0sa_lE).
 
-:::image type="content" source="/defender/media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.png" alt-text="The Role setting details - Security Reader page" lightbox="/defender/media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.png":::
+:::image type="content" source="../defender/media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.PNG" alt-text="The Role setting details - Security Reader page" lightbox="../defender/media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.PNG":::
 
 ***Step 2***. Create the required second (elevated) permission group for other tasks and assign eligibility.
 

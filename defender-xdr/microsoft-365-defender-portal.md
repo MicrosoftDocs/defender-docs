@@ -27,7 +27,7 @@ ms.date: 03/26/2024
 The Microsoft Defender portal at <https://security.microsoft.com> combines protection, detection, investigation, and response to threats across your entire organization and all its components, in a central place. The Defender portal emphasizes quick access to information, simpler layouts, and bringing related information together for easier use. It includes:
 
 - **[Microsoft Defender for Office 365]/defender-office-365/mdo-about** helps organizations secure their enterprise with a set of prevention, detection, investigation and hunting features to protect email, and Office 365 resources.
-- **[Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-advanced-threat-protection)** delivers preventative protection, post-breach detection, automated investigation, and response for devices in your organization.
+- **[Microsoft Defender for Endpoint](/defender-endpoint/)** delivers preventative protection, post-breach detection, automated investigation, and response for devices in your organization.
 - **[Microsoft Defender for Identity](/defender-for-identity/what-is)** is a cloud-based security solution that uses your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.
 - **[Microsoft Defender for Cloud Apps](/cloud-app-security/)** is a comprehensive cross-SaaS and PaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps.
 - **[Microsoft Sentinel](/azure/sentinel/)** is a cloud-native security information and event management (SIEM) solution that provides proactive threat detection, investigation, and response.
