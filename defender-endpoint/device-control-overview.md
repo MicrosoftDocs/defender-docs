@@ -124,6 +124,9 @@ Device control for MDE provides finer grain access control to a subset of USB de
 > Removable Media is different than all USBs.  Not **all** USB devices are removable media.  In order to be considered removable media and therefore in scope of MDE device control,  the device **must** create a disk (e.g.  E: ) in Windows. 
 Device control can restrict access to the device and files on that device by defining policies.  If a policy is configured with an audit entry, then an event will appear in Advanced Hunting with an *ActionType* of *RemovableStoragePolicyTriggered*
 
+> [!NOTE] 
+> To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](/purview/endpoint-dlp-learn-about) 
+
 
 ```kusto
 DeviceEvents
@@ -160,24 +163,35 @@ Windows provides the ability to deny write to all removable media or deny write 
 
 ### Device control policies for BitLocker (Preview)
 
-Device control for Microsoft Defender for Endpoint provides the ability to control access to a device based on its BitLocker encrypted state (encrypted or plain).  This allows for exceptions to be created to allow and audit access to non-BitLocker encrypted devices.
+Device control for Microsoft Defender for Endpoint controls access to a device based on its BitLocker encrypted state (encrypted or plain).  This allows for exceptions to be created to allow and audit access to non-BitLocker encrypted devices.
 
-## [**Printers**](#tab/Printers)
+## [**Controlling access to printers**](#tab/Printers)
 
-| Scenario | Device control policy |
-|---|---|
-| Block people from printing via noncorporate printers | Device control in Defender for Endpoint. See [Device control policies](device-control-policies.md). |
-| Only allow specific USB printer(s) by VID/PID | Device control in Defender for Endpoint. See [Device control policies](device-control-policies.md). |
-| Prevent installation of all printers | Device control in Windows. See [Device control policies](device-control-policies.md). |
-| Prevent installation of a specific printer | Device control in Windows. See [Device control policies](device-control-policies.md). |
-| Prevent installation of all printers while allowing a specific printer to be installed | Device control in Windows. See [Device control policies](device-control-policies.md). |
-| Block printing of sensitive documents to any printer | [Endpoint DLP](/purview/endpoint-dlp-learn-about) |
+### Printer installation restrictions
+The device installation restrictions of Windows can be applied to printers.
+
+### Device control policies for printing
+
+Device control for Microsoft Defender for Endpoint controls access to the printer based on the properties of the printer (VID/PID), the type of printer (Network, USB, Corporate etc.).
+
+Device control can also restrict the types of files that are printed.  Device control can also restrict printing on non-corporate environments. 
+
+### Endpoint DLP
+
+To block printing of documents based on information classification use [Endpoint DLP](/purview/endpoint-dlp-learn-about) 
 
 ## [**Bluetooth**](#tab/Bluetooth)
 
-| Scenario | Device control policy |
-|---|---|
-| Block copying of sensitive document to any Bluetooth Device | [Endpoint DLP](/purview/endpoint-dlp-learn-about) |
+### Controlling access to Bluetooth services on Windows
+Administrators can control the behavior of the Bluetooth service (Allowing advertising, discovery, preparing and prompting) as well as the Bluetooth services that are allowed.
+
+
+**Learn More**
+- [Windows Bluetooth](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-bluetooth)
+
+### Endpoint DLP
+
+To block copying of sensitive document to any Bluetooth Device use [Endpoint DLP](/purview/endpoint-dlp-learn-about) 
 
 
 
