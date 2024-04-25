@@ -124,7 +124,7 @@ Using [endpoint detection and response](overview-endpoint-detection-response.md)
 
 ## Review your security recommendations
 
-Tamper protection integrates with [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) capabilities. [Security recommendations](/defender-vulnerability-management/ti-indicator) include making sure tamper protection is turned on. For example, in your [Vulnerability Management dashboard](/defender-vulnerability-management/tvm-dashboard-insights#vulnerability-management-dashboard), you can search on *tamper*. In the results, you can select **Turn on Tamper Protection** to learn more and turn it on.
+Tamper protection integrates with [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) capabilities. [Security recommendations](api/ti-indicator.md) include making sure tamper protection is turned on. For example, in your [Vulnerability Management dashboard](/defender-vulnerability-management/tvm-dashboard-insights#vulnerability-management-dashboard), you can search on *tamper*. In the results, you can select **Turn on Tamper Protection** to learn more and turn it on.
 
 To learn more about Microsoft Defender Vulnerability Management, see [Dashboard insights - Defender Vulnerability Management](/defender-vulnerability-management/tvm-dashboard-insights#dashboard-insights---threat-and-vulnerability-management).
 
