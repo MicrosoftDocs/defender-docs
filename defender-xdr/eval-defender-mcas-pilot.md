@@ -3,7 +3,7 @@ title: Pilot Microsoft Defender for Cloud Apps with Microsoft Defender XDR
 description: Set up your Microsoft Defender XDR trial lab or pilot environment to test and experience the security solution designed to protect devices, identity, data, and applications.
 search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
+f1.keywords:
   - NOCSH
 ms.author: bcarter
 author: brendacarter
@@ -11,7 +11,7 @@ ms.date: 07/09/2021
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: 
+ms.collection:
   - m365-security
   - m365solution-scenario
   - m365solution-evalutatemtp
@@ -35,7 +35,7 @@ Use the following steps to set up and configure the pilot for Microsoft Defender
 :::image type="content" source="/defender/media/defender/m365-defender-mcas-pilot-steps.png" alt-text="The steps for piloting the Microsoft Defender for Cloud Apps" lightbox="/defender/media/defender/m365-defender-mcas-pilot-steps.png":::
 - [Step 1. Create the pilot group—Scope your pilot deployment to certain user groups](#step-1-create-the-pilot-groupscope-your-pilot-deployment-to-certain-user-groups)
 - [Step 2. Configure protection—Conditional Access App Control](#step-2-configure-protectionconditional-access-app-control)
-- [Step 3. Try out capabilities—Walk through tutorials for protecting your environment](#step-3-try-out-capabilitieswalk-through-tutorials-for-protecting-your-environment) 
+- [Step 3. Try out capabilities—Walk through tutorials for protecting your environment](#step-3-try-out-capabilitieswalk-through-tutorials-for-protecting-your-environment)
 
 ## Step 1: Create the pilot group—Scope your pilot deployment to certain user groups
 
@@ -44,7 +44,7 @@ Microsoft Defender for Cloud Apps enables you to scope your deployment. Scoping 
 
 ## Step 2: Configure protection—Conditional Access App Control
 
-One of the most powerful protections you can configure is Conditional Access App Control. This protection requires integration with Microsoft Entra ID. It allows you to apply Conditional Access policies, including related policies (like requiring healthy devices), to cloud apps you've sanctioned. 
+One of the most powerful protections you can configure is Conditional Access App Control. This protection requires integration with Microsoft Entra ID. It allows you to apply Conditional Access policies, including related policies (like requiring healthy devices), to cloud apps you've sanctioned.
 
 The first step in using Microsoft Defender for Cloud Apps to manage SaaS apps is to discover these apps and then add them to your Microsoft Entra tenant. If you need help with discovery, see [Discover and manage SaaS apps in your network](/cloud-app-security/tutorial-shadow-it). After you've discovered apps, [add these apps to your Microsoft Entra tenant](/azure/active-directory/manage-apps/add-application-portal).
 
@@ -53,13 +53,13 @@ You can begin to manage these apps by executing the following tasks:
 - First, in Microsoft Entra ID, create a new conditional access policy and configure it to "Use Conditional Access App Control." This configuration helps to redirect the request to Defender for Cloud Apps. You can create one policy and add all SaaS apps to this policy.
 - Next, in Defender for Cloud Apps, create session policies. Create one policy for each control you want to apply.
 
-For more information, including supported apps and clients, see [Protect apps with Microsoft Defender for Cloud Apps Conditional Access App Control](/cloud-app-security/proxy-intro-aad). 
+For more information, including supported apps and clients, see [Protect apps with Microsoft Defender for Cloud Apps Conditional Access App Control](/cloud-app-security/proxy-intro-aad).
 
-For example policies, see [Recommended Microsoft Defender for Cloud Apps policies for SaaS apps](/defender-office-365/zero-trust-identity-device-access-policies-mcas-saas.md). These policies build on a set of [common identity and device access policies](/defender-office-365/zero-trust-identity-device-access-policies-overview) that are recommended as a starting point for all customers. 
+For example policies, see [Recommended Microsoft Defender for Cloud Apps policies for SaaS apps](/defender-office-365/zero-trust-identity-device-access-policies-mcas-saas). These policies build on a set of [common identity and device access policies](/defender-office-365/zero-trust-identity-device-access-policies-overview) that are recommended as a starting point for all customers.
 
-## Step 3: Try out capabilities—Walk through tutorials for protecting your environment 
+## Step 3: Try out capabilities—Walk through tutorials for protecting your environment
 
-The Microsoft Defender for Cloud Apps documentation includes a series of tutorials to help you discover risk and protect your environment. 
+The Microsoft Defender for Cloud Apps documentation includes a series of tutorials to help you discover risk and protect your environment.
 
 Try out Defender for Cloud Apps tutorials:
 

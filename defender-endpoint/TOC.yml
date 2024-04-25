@@ -975,7 +975,7 @@
         - name: How Microsoft identifies malware and PUA
           href: /defender/criteria
         - name: Submit files for analysis
-          href: /defender/submission-guide
+          href: /defender-xdr/submission-guide
         - name: Troubleshoot MSI portal errors caused by admin block
           href: /defender/portal-submission-troubleshooting
         - name: Microsoft virus initiative

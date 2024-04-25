@@ -55,8 +55,9 @@ When your security team has decided on which categories of items that users can 
 1. In the **Actions** tab, select **Quarantine message** for categories. You notice another panel for *select quarantine policy*. Use the dropdown to select the quarantine policy you created earlier.
 1. Move on to the **Review** section and select the **Confirm** button to create the new policy.
 1. Repeat these same steps for the other policies: **Anti-phishing policy**, **Anti-Malware policy**, and **Safe Attachment policy**.
+
 > [!TIP]
-> For more detailed information on what you've learned so far, see [Configure spam filter policies - Office 365](/defender-office-365/anti-spam-policies-configure.md)| [Configure anti-phishing policies in EOP](/defender-offfice-365/anti-phishing-policies-eop-configure.md) | [Configure anti-malware policies](/defender-offfice-365/anti-malware-policies-configure.md)| [Set up Safe Attachments policies in Microsoft Defender for Office 365](/defender-offfice-365/safe-attachments-policies-configure)
+> For more detailed information on what you've learned so far, see [Configure spam filter policies - Office 365](../anti-spam-policies-configure.md)| [Configure anti-phishing policies in EOP](../anti-phishing-policies-eop-configure.md) | [Configure anti-malware policies](../anti-malware-policies-configure.md)| [Set up Safe Attachments policies in Microsoft Defender for Office 365](../safe-attachments-policies-configure.md)
 
 ## Next Steps
 
@@ -66,4 +67,3 @@ When your security team has decided on which categories of items that users can 
 ## More information
 
 Learn more about organization branding and notification settings here [Quarantine policies](/defender-office-365/quarantine-policies).
-

@@ -40,22 +40,25 @@ Endpoint Attack Notifications (previously referred to as Microsoft Threat Expert
 - Identifying the most important risks, helping SOCs maximize time and energy
 - Scope of compromise and as much context as can be quickly delivered to enable fast SOC response
 
-
 ![Screenshot of the Endpoint Attack Notifications alert](/defender/media/defender-endpoint/endpoint-attack-notification-alert.png)
 
 ## Apply for Endpoint Attack Notifications
+
 If you're a Microsoft Defender for Endpoint customer, you can apply for Endpoint Attack Notifications. Go to **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Endpoint Attack Notifications** to apply. Once accepted, you'll get the benefits of Endpoint Attack Notifications.
 
 ![How to enable Endpoint Attack Notifications in 365 Defender Portal](/defender/media/defender-endpoint/enable-endpoint-attack-notifications.png)
 
 ## Receive Endpoint Attack notifications
+
 Endpoint Attack Notifications are alerts that have been hand crafted by Microsoft's managed hunting service based on suspicious activity in your environment. They can be viewed through several mediums:
+
 - The alerts queue in the Microsoft Defender portal
-- Using the [API](/defender-endpoint/get-alerts)
+- Using the [API](/defender-endpoint/api/get-alerts)
 - [DeviceAlertEvents](/defender-xdr/advanced-hunting-migrate-from-mde#map-devicealertevents-table) table in Advanced hunting
 - Your email if you [configure an email notifications](/defender-endpoint/configure-vulnerability-email-notifications) rule
 
 Endpoint Attack Notifications can be identified by:
+
 - Have a tag named **Endpoint Attack Notification**
 - Have a service source of **Microsoft Defender for Endpoint** \> **Microsoft Defender Experts**
 
@@ -63,8 +66,8 @@ Endpoint Attack Notifications can be identified by:
 > If you have enrolled for Endpoint Attack Notifications but are not seeing any alerts from the service, it indicates that you have a strong security posture and are less prone to attacks.
 
 ## Create an email notification rule
-You can create rules to send email notifications for notification recipients. See [Configure alert notifications](/defender-xdr/configure-email-notifications) to create, edit, delete, or troubleshoot email notification, for details.
 
+You can create rules to send email notifications for notification recipients. See [Configure alert notifications](/defender-xdr/configure-email-notifications) to create, edit, delete, or troubleshoot email notification, for details.
 
 ## Next steps
 
