@@ -103,5 +103,5 @@ Here is an example of the response.
 ## Related topics
 
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management software inventory](/defender-endpoint/tvm-software-inventory)
+- [Defender Vulnerability Management software inventory](/defender-vulnerability-management/tvm-software-inventory)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
