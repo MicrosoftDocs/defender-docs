@@ -148,7 +148,19 @@ DeviceEvents
 
 ![User's image](media/device-control-overview/image1.png)
 
-## [**Controlling access to BitLocker encrypted removable media**](#tab/Bitlocker)
+## **[Controlling access to BitLocker encrypted removable media (Preview)](#tab/Bitlocker)**
+
+### BitLocker support for removable media
+
+Windows provides the ability to deny write to all removable media or deny write access unless a device is BitLocker encrypted.
+
+**Learn More**
+- [Configure BitLocker - Windows Security | Microsoft Learn](https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=removable#policy-settings-list)
+
+
+### Device control policies for BitLocker (Preview)
+
+Device control for Microsoft Defender for Endpoint provides the ability to control access to a device based on its BitLocker encrypted state (encrypted or plain).  This allows for exceptions to be created to allow and audit access to non-BitLocker encrypted devices.
 
 ## [**Printers**](#tab/Printers)
 
