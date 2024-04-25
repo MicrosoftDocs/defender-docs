@@ -764,36 +764,36 @@ The `FileEvidenceLocation` field of has the location of the evidence file, if on
 
 ### Storing file evidence in Azure Blob Storage
 
-Create a Azure Blob Storage account and container
+1. Create a Azure Blob Storage account and container
 
-Create a role for accessing the container.  The best practice is to create a custom role with only the permissions required to create the file evidence.
+1. Create a custom role called *Device Control Evidence Data Provider* for accessing the container.  The role should have the following permissions:
 
 
 ```json
-{
-
-        
-            {
-                
-                    
-                    
-                    
-                ],
-                
-                
-                    
-                    
-                ],
-                
-            }
-        ]
-    }
-
+"permissions": [
+            {
+                "actions": [
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/read",
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/write",
+                    "Microsoft.Storage/storageAccounts/blobServices/read"
+                ],
+                "notActions": [],
+                "dataActions": [
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/add/action",
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write"
+                ],
+                "notDataActions": []
+            }
+        ]
 ```
 
-Assign the users of device control to that role
+Custom roles can be created via [CLI](/azure/role-based-access-control/custom-roles-cli) or [PowerShell](/azure/role-based-access-control/custom-roles-powershell)
 
-Set the `RemoteStorageFileEvent` to the URL of the Azure Blob Storage container.
+> [!WARNING]
+> The [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor) role has permissions to delete file evidence.
+1. Assign the users of device control to that role
+
+1. Set the `RemoteStorageFileEvent` to the URL of the Azure Blob Storage container.
 
 ## Next steps
 
