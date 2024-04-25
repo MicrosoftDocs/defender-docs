@@ -75,7 +75,7 @@ Deploying each service typically requires provisioning to your tenant and some i
 
 | Service | Provisioning instructions | Initial configuration |
 | ------ | ------ | ------ |
-| Microsoft Defender for Endpoint | [Microsoft Defender for Endpoint deployment guide](/defender-endpoint/deployment-phases) | *See provisioning instructions* |
+| Microsoft Defender for Endpoint | [Microsoft Defender for Endpoint deployment guide](/defender-endpoint/mde-planning-guide) | *See provisioning instructions* |
 |Microsoft Defender for Office 365 | *None, provisioned with Office 365* | [Configure Defender for Office 365 protection policies](/defender-office-365/mdo-deployment-guide#step-2-configure-protection-policies) |
 | Microsoft Defender for Identity | [Quickstart: Create your Microsoft Defender for Identity instance](/azure-advanced-threat-protection/install-atp-step1) | *See provisioning instructions* |
 | Microsoft Defender for Cloud Apps | *None* | [Quickstart: Get started with Microsoft Defender for Cloud Apps](/cloud-app-security/getting-started-with-cloud-app-security) |

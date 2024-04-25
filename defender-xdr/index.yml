@@ -97,7 +97,7 @@ landingContent:
           - text: Defender for Endpoint in Microsoft Defender XDR
             url: microsoft-365-security-center-mde.md
           - text: Redirecting Defender for Endpoint in Microsoft Defender XDR
-            url: /defender/microsoft-365-security-mde-redirection
+            url: microsoft-365-security-mde-redirection.md
 
 
    # Card

@@ -44,7 +44,7 @@ You also need to grant our experts one or both of the following permissions:
 > [!IMPORTANT]
 > If you skip providing additional permissions, our experts won't be able to take certain response actions to secure your organization.  
 >
-> Even though our experts are granted these relatively powerful permissions, they will only have individual access to specific areas for a limited period. [Learn more about how Defender Experts for XDR permissions work](/defender/dex-xdr-permissions)
+> Even though our experts are granted these relatively powerful permissions, they will only have individual access to specific areas for a limited period. [Learn more about how Defender Experts for XDR permissions work](dex-xdr-permissions.md)
 
 **To grant our experts permissions:**
 
