@@ -138,7 +138,7 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) The [unified Assets tab in the Incidents page](investigate-incidents.md) is now generally available.
 
-- Microsoft is using a new weather-based naming taxonomy for threat actors. This new naming schema will provide more clarity and will be easier to reference. [Learn more about the new naming taxonomy](/defender/microsoft-threat-actor-naming).
+- Microsoft is using a new weather-based naming taxonomy for threat actors. This new naming schema will provide more clarity and will be easier to reference. [Learn more about the new threat actor taxonomy](microsoft-threat-actor-naming.md).
 
 ## March 2023
 
@@ -260,7 +260,7 @@ The security operations team can view all actions pending approval, and the stip
 
   Threat tags help you focus on specific threat categories and review the most relevant reports.
 
-- (Preview) [Streaming API](/defender-endpoint/raw-data-export)
+- (Preview) [Streaming API](/defender-endpoint/api/raw-data-export)
 
   Microsoft Defender XDR supports streaming all the events available through Advanced Hunting to an Event Hubs and/or Azure storage account.
 
