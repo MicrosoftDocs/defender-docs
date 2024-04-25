@@ -24,6 +24,7 @@ ms.date: 12/18/2020
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
+
 - ../microsoft-defender-endpoint.md
 - [Microsoft Defender XDR](/defender-xdr)
 
@@ -42,12 +43,14 @@ The first example demonstrates how to connect Power BI to Advanced Hunting API, 
 1. Open Microsoft Power BI.
 
 2. Select **Get Data** \> **Blank Query**.
+
    :::image type="content" source="../media/power-bi-create-blank-query.png" alt-text="The Blank Query option under the Get Data menu item" lightbox="../media/power-bi-create-blank-query.png":::
 
 3. Select **Advanced Editor**.
+
    :::image type="content" source="../media/power-bi-open-advanced-editor.png" alt-text="The Advanced Editor menu item" lightbox="../media/power-bi-open-advanced-editor.png":::
 
-4. Copy the below and paste it in the editor:
+4. Copy the code snippet below and paste it in the editor:
 
    ```
        let
@@ -103,36 +106,43 @@ The first example demonstrates how to connect Power BI to Advanced Hunting API, 
 
    :::image type="content" source="../media/power-bi-set-credentials-organizational-cont.png" alt-text="The sign-in confirmation message in the Organizational account menu item" lightbox="../media/power-bi-set-credentials-organizational-cont.png":::
 
-Now the results of your query appear as a table and you can start to build visualizations on top of it!
-
-You can duplicate this table, rename it, and edit the Advanced Hunting query inside to get any data you would like.
+Now the results of your query appear as a table and you can start to build visualizations on top of it! You can duplicate this table, rename it, and edit the Advanced Hunting query inside to get any data you would like.
 
 ## Connect Power BI to OData APIs
 
-The only difference from the previous example is the query inside the editor. Follow steps 1-3 above.
+The only difference from the previous example and this example is the query inside the editor. 
 
-At step 4, instead of the code in that example, copy the following code, and paste it in the editor to pull all **Machine Actions** from your organization:
+1. Open Microsoft Power BI.
 
-```
-    let
+2. Select **Get Data** \> **Blank Query**.
 
-        Query = "MachineActions",
+   :::image type="content" source="../media/power-bi-create-blank-query.png" alt-text="The Blank Query option under the Get Data menu item" lightbox="../media/power-bi-create-blank-query.png":::
 
-        Source = OData.Feed("https://api.securitycenter.microsoft.com/api/" & Query, null, [Implementation="2.0", MoreColumns=true])
-    in
-        Source
-```
+3. Select **Advanced Editor**.
 
-You can do the same for **Alerts** and **Machines**.
-You also can use OData queries for queries filters. See [Using OData Queries](exposed-apis-odata-samples.md).
+   :::image type="content" source="../media/power-bi-open-advanced-editor.png" alt-text="The Advanced Editor menu item" lightbox="../media/power-bi-open-advanced-editor.png":::
+
+4. Copy the following code, and paste it in the editor to pull all **Machine Actions** from your organization:
+
+   ```
+       let
+
+           Query = "MachineActions",
+
+           Source = OData.Feed("https://api.securitycenter.microsoft.com/api/" & Query, null, [Implementation="2.0", MoreColumns=true])
+       in
+           Source
+   ```
+
+   You can do the same for **Alerts** and **Machines**. You also can use OData queries for queries filters. See [Using OData Queries](exposed-apis-odata-samples.md).
 
 ## Power BI dashboard samples in GitHub
 
-For more information, see the [Power BI report templates](https://github.com/microsoft/MicrosoftDefenderATP-PowerBI).
+See the [Power BI report templates](https://github.com/microsoft/MicrosoftDefenderATP-PowerBI).
 
 ## Sample reports
 
-View the Microsoft Defender for Endpoint Power BI report samples. For more information, see [Browse code samples](/samples/browse/?products=mdatp).
+View the [Microsoft Defender for Endpoint Power BI report samples](/samples/browse/?products=mdatp).
 
 ## Related articles
 
