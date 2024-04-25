@@ -20,28 +20,6 @@ search.appverid: MET150
 f1.keywords: NOCSH 
 ---
 
----
-title: Device control in Microsoft Defender for Endpoint            
-description: Get an overview of device control, including removable storage access control and device installation policies in Defender for Endpoint           
-author: siosulli
-ms.author: siosulli
-manager: deniseb 
-ms.date: 02/14/2024
-ms.topic: overview
-ms.service: defender-endpoint
-ms.subservice: asr
-audience: ITPro
-ms.collection: 
-- m365-security
-- tier2
-- mde-asr
-ms.custom: 
-- partner-contribution
-ms.reviewer: joshbregman
-search.appverid: MET150
-f1.keywords: NOCSH 
----
-
 # Device control in Microsoft Defender for Endpoint
 
 **Applies to:**
@@ -75,15 +53,15 @@ Device control capabilities from Microsoft can be organized into three main cate
         
     - For more information on how to configure device installation with Group Policy, see [Manage Device Installation with Group Policy](/windows/client-management/client-tools/manage-device-installation-with-group-policy)
         
-- **Device control in Defender for Endpoint**. Device control in Defender for Endpoint provides more advanced capabilities and is cross platform. 
+- **Device control in Defender for Endpoint -**  Device control in Defender for Endpoint provides more advanced capabilities and is cross platform. 
 
-  - Granular access control - create policies to control access by device, device type, operation (read, write, execute), user group, network location or file type.
+     - Granular access control - create policies to control access by device, device type, operation (read, write, execute), user group, network location or file type.
   
-  - File evidence - store the file information and contents to audit files copied or accessed on devices.
+     - File evidence - store the file information and contents to audit files copied or accessed on devices.
   
-  - Reporting and advanced hunting - complete visibility into add device related activities
+     - Reporting and advanced hunting - complete visibility into add device related activities
   
-  - Device control in Microsoft Defender can be managed using Intune or [Group Policy](device-control-deploy-manage-gpo)
+     - Device control in Microsoft Defender can be managed using Intune or [Group Policy](device-control-deploy-manage-gpo)
   
     - **Device control in Microsoft Defender and Intune**. Intune provides a rich experience for managing complex device control policies for organizations. You can configure and deploy device restriction settings in Defender for Endpoint, for example. See [Deploy and manage device control with Microsoft Intune](device-control-deploy-manage-intune).
         
@@ -97,7 +75,78 @@ See the [device control scenarios](#device-control-in-windows) section (in this 
 
 Select a tab, review the scenarios, and then identify which Microsoft capability to use
 
-## [**Controlling access to USB devices**](#tab/Removable) 
+## **[Controlling access to USB devices](#tab/Removable)**
+
+### Device installation restrictions 
+
+The device installation restrictions available in Windows allow or deny the installation of drivers based on the device ID, device instance ID or set-up class.  This can block __any__ device in the device manager including all removable devices.  When device installation restrictions are applied, the device is blocked in the device manager.   
+
+![User's image](media/device-control-overview/image.png)
+
+There are more details available by clicking on the device.
+
+![Device installation details.](media/device-control-overview/device-installation-details.png)
+
+There will also be a record in Advanced Hunting
+
+
+```kusto
+DeviceEvents
+| extend parsed=parse_json(AdditionalFields)
+| extend MediaClass = tostring(parsed.ClassName)
+| extend MediaDeviceId = tostring(parsed.DeviceId)
+| extend MediaDescription = tostring(parsed.DeviceDescription)
+| extend MediaSerialNumber = tostring(parsed.SerialNumber)
+| extend DeviceInstanceId = tostring(parsed.DeviceInstanceId)
+| extend DriverName = tostring(parsed.DriverName)
+| extend ClassGUID = tostring(parsed.ClassGuid)
+| where ActionType contains "PnPDeviceBlocked"
+| project Timestamp, ActionType, DeviceInstanceId, DriverName, ClassGUID
+| order by Timestamp desc
+
+```
+
+![User's image](media/device-control-overview/image2.png)
+
+When a device installation restrictions are configured and a device is installed, an event with *ActionType* of _PnPDeviceAllowed_ is created
+
+**Learn more:** 
+
+- [Manage Device Installation with Group Policy - Windows Client Management | Microsoft Learn](/windows/client-management/client-tools/manage-device-installation-with-group-policy)
+
+- [Restrict USB devices and allow specific USB devices using ADMX templates in Intune](/mem/intune/configuration/administrative-templates-restrict-usb).
+
+### Controlling access to removable media with device control for Microsoft Defender for Endpoint
+
+Device control for MDE provides finer grain access control to a subset of USB devices.  Device control can only restrict access to Windows Portal Devices, Removable Media, CD/DVDs and Printers. 
+
+> [!NOTE]
+> Removable Media is different than all USBs.  Not **all** USB devices are removable media.  In order to be considered removable media and therefore in scope of MDE device control,  the device **must** create a disk (e.g.  E: ) in Windows. 
+Device control can restrict access to the device and files on that device by defining policies.  If a policy is configured with an audit entry, then an event will appear in Advanced Hunting with an *ActionType* of *RemovableStoragePolicyTriggered*
+
+
+```kusto
+DeviceEvents
+| extend parsed=parse_json(AdditionalFields)
+| extend MediaClass = tostring(parsed.ClassName)
+| extend MediaDeviceId = tostring(parsed.DeviceId)
+| extend MediaDescription = tostring(parsed.DeviceDescription)
+| extend SerialNumberId = tostring(parsed.SerialNumber)
+| extend RemovableStoragePolicy = tostring(parsed.RemovableStoragePolicy)
+| extend RemovableStorageAccess =tostring(parsed.RemovableStorageAccess)
+| extend RemovableStoragePolicyVerdict = tostring(parsed.RemovableStoragePolicyVerdict)
+| extend PID = tostring(parsed.ProductId)
+| extend VID = tostring(parsed.VendorId)
+| extend VID_PID = strcat(VID,"_",PID)
+| extend InstancePathId = tostring(parsed.DeviceInstanceId)
+| where ActionType == "RemovableStoragePolicyTriggered" 
+| project Timestamp, RemovableStoragePolicy, RemovableStorageAccess,RemovableStoragePolicyVerdict, SerialNumberId,VID, PID, VID_PID, InstancePathId
+| order by Timestamp desc
+```
+
+  This query returns the name of the policy, the access requested, and the verdict (allow, deny)
+
+![User's image](media/device-control-overview/image1.png)
 
 ## [**Controlling access to BitLocker encrypted removable media**](#tab/Bitlocker)
 
