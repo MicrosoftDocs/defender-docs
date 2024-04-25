@@ -131,7 +131,7 @@ This table is a quick reference of Threat management where change has occurred b
 
 |Area|Description of change|
 |---|---|
-|[Investigation](/defender-office-365/air-about.md#the-overall-flow-of-air) |Brings together AIR capabilities in [Defender for Office 365]/defender-office-365/mdo-about and [Defender for Endpoint](/defender-endpoint/automated-investigations). With these updates and improvements, your security operations team will be able to view details about automated investigations and remediation actions across your email, collaboration content, user accounts, and devices, all in one place.|
+|[Investigation](/defender-office-365/air-about#the-overall-flow-of-air) |Brings together AIR capabilities in [Defender for Office 365]/defender-office-365/mdo-about and [Defender for Endpoint](/defender-endpoint/automated-investigations). With these updates and improvements, your security operations team will be able to view details about automated investigations and remediation actions across your email, collaboration content, user accounts, and devices, all in one place.|
 |[Alert queue](/Microsoft-365/compliance/alert-policies)|The **View alerts** flyout pane in the Security & Compliance Center now includes links to The Microsoft Defender portal. Click on the **Open Alert Page** link and The Microsoft Defender portal opens. You can access the **View alerts** page by clicking on any Office 365 alert in the Alerts queue.|
 |[Attack Simulation training](/defender-office-365/attack-simulation-training-insights)|Use Attack Simulation training to run realistic attack scenarios in your organization. These simulated attacks can help train your workforce before a real attack impacts your organization. Attack simulation training includes, more options, enhanced reports, and improved training flows help make your attack simulation and training scenarios easier to deliver and manage.|
 
@@ -168,6 +168,6 @@ Also included is a link to the Security & Compliance Center for comparison. The 
 - [The Action center](./m365d-action-center.md)
 - [Email & collaboration alerts](/Microsoft-365/compliance/alert-policies#default-alert-policies)
 - [Custom detection rules](/defender-endpoint/custom-detection-rules)
-- [Create a phishing attack simulation](/defender-office-365/attack-simulation-training-simulations.md) and [create a payload for training your people](/defender-office-365/attack-simulation-training-payloads)
+- [Create a phishing attack simulation](/defender-office-365/attack-simulation-training-simulations) and [create a payload for training your people](/defender-office-365/attack-simulation-training-payloads)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
