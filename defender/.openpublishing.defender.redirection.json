@@ -3,7 +3,7 @@
 "redirections": [
     {
         "source_path": "defender/advanced-hunting-overview.md ",
-        "redirect_url": "defender-xdr/advanced-hunting-overview",
+        "redirect_url": "/defender-xdr/advanced-hunting-overview",
         "redirect_document_id": false
     }
   ]
