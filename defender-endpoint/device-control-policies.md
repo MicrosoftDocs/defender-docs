@@ -32,21 +32,6 @@ This article describes device control policies, rules, entries, groups, and adva
 
 By default device control is disabled, so access to all types of devices is allowed. To learn more about device control, see [Device control in Microsoft Defender for Endpoint](device-control-overview.md).
 
-## Supported devices for device control
-
-Device control supports Bluetooth devices, CD/ROMs and DVD devices, printers, USB devices, and other types of portable devices. On a Windows device, based on the driver, some peripheral devices are marked as removable. The following table lists examples of devices that device control supports with their `primary_id` values and media class names:
-
-| Device type | `PrimaryId` in Windows | `primary_id` in macOS | Media Class Name |
-|---|---|---|---|
-| Bluetooth devices |  | `bluetoothDevice` | `Bluetooth Devices` |
-| CD/ROMs, DVDs | `CdRomDevices` |  |  `CD-Roms` |
-| iOS devices |  | `appleDevice` | | 
-| Portable devices (such as cameras) |   | `portableDevice` | | 
-| Printers | `PrinterDevices` |  | `Printers` |
-| USB devices (removable media) | `RemovableMediaDevices` | `removableMedia` | `USB` | 
-| Windows Portable Devices | `WpdDevices` |  | `Windows Portable Devices (WPD)` |
-
-
 ## Controlling default behavior
 
 When device control is enabled, it's enabled for all device types by default. The default enforcement can also be changed from *Allow* to *Deny*. Your security team can also configure the types of devices that device control protects. The following table below illustrates how various combinations of settings change the access control decision.
@@ -404,7 +389,7 @@ The devices that are in scope for the policy determined by a list of included gr
 | `FriendlyNameId`  | The friendly name in Windows Device Manager | Y | N | Y |
 | `PrimaryId` | The type of the device | Y | Y | Y |
 | `VID_PID` | Vendor ID is the four-digit vendor code that the USB committee assigns to the vendor. Product ID is the four-digit product code that the vendor assigns to the device. Wildcards are supported. For example, `0751_55E0` | Y | N | Y |
-|`PrinterConnectionId` | The type of printer connection: <br/>- USB<br/>- Corporate<br/>- Network<br/>- Universal<br/>- File<br/>- Custom<br/>- Local | N | N | Y |
+`PrinterConnectionId` | The type of printer connection: <br/>- USB<br/>- Corporate<br/>- Network<br/>- Universal<br/>- File<br/>- Custom<br/>- Local | N | N | Y |
 | `BusId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
 | `DeviceId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
 | `HardwareId` | Information about the device (for more information, see the sections that follow this table) | Y | N | N |
@@ -412,7 +397,6 @@ The devices that are in scope for the policy determined by a list of included gr
 | `SerialNumberId` | Information about the device (for more information, see the sections that follow this table) | Y | Y | N |
 | `PID` | Product ID is the four-digit product code that the vendor assigns to the device | Y | Y | N |
 | `VID` | Vendor ID is the four-digit vendor code that the USB committee assigns to the vendor. | Y | Y | N |
-|`DeviceEncryptionStateId`| (Preview) The BitLocker encrypted state for the device.  Valid values are `BitlockerEncrypted` or `Plain` |Y|N|N|
 | `APFS Encrypted` | If the device is APFS encrypted | N | Y | N |
 
 ### Using Windows Device Manager to determine device properties
@@ -778,7 +762,36 @@ With device control, you can store evidence of files that were copied to removab
 
 The `FileEvidenceLocation` field of has the location of the evidence file, if one is created. The evidence file has a name which ends in `.dup`, and its location is controlled by the `DataDuplicationFolder` setting.
 
-## Next steps
+### Configuring File Evidence for Azure Blob Storage
+
+
+
+Device control can upload file evidence to Azure blob storage.  To enable this capability perform the following steps
+
+1. Configure an [Azure Blob Storage]([https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction#blob-storage-resources] resource
+
+2.  Create a role with the following permissions
+
+
+```json
+"permissions": [
+            {
+                "actions": [
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/read",
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/write",
+                    "Microsoft.Storage/storageAccounts/blobServices/read"
+                ],
+                "notActions": [],
+                "dataActions": [
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/add/action",
+                    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write"
+                ],
+                "notDataActions": []
+            }
+        ]
+```
+
+1. ## Next steps
 
 - [View device control events and information in Microsoft Defender for Endpoint](device-control-report.md)
 - [Deploy and manage device control in Microsoft Defender for Endpoint with Microsoft Intune](device-control-deploy-manage-intune.md)
