@@ -43,7 +43,7 @@ search.appverid: met150
 
 ## Requirements for managing tamper protection in the Microsoft Defender portal
 
-- You must have appropriate permissions assigned through roles, such as Global Administrator or Security Administrator. (See [Microsoft Defender XDR role-based access control (RBAC)](/defender/manage-rbac).)
+- You must have appropriate permissions assigned through roles, such as Global Administrator or Security Administrator. (See [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).)
 
 - Devices must be running certain versions of Windows or macOS. (See [On what devices can tamper protection be enabled](prevent-changes-to-security-settings-with-tamper-protection.md#on-what-devices-can-tamper-protection-be-enabled)?)
 
