@@ -768,9 +768,9 @@ The `FileEvidenceLocation` field of has the location of the evidence file, if on
 
 Device control can upload file evidence to Azure blob storage.  To enable this capability perform the following steps
 
-1. Configure an [Azure Blob Storage]([https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction#blob-storage-resources] resource
+1. Configure an [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction#blob-storage-resources) resource
 
-2.  Create a role with the following permissions
+2.  Create a custom role called "Device Control Feature Evidence Providers".  These are the permissions that are required:
 
 
 ```json
@@ -791,7 +791,17 @@ Device control can upload file evidence to Azure blob storage.  To enable this c
         ]
 ```
 
-1. ## Next steps
+See creating custom roles with [CLI](https://learn.microsoft.com/en-us/azure/role-based-access-control/tutorial-custom-role-cli) or [Powershell](https://learn.microsoft.com/en-us/azure/role-based-access-control/tutorial-custom-role-powershell)
+
+> [!WARNING] 
+> The [Storage Blob Data Contributor Role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) has delete permissions.  Consider using [Immutable Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview) to prevent file evidence from being changed.
+
+3.  [Assign the role](https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access?tabs=powershell#assign-an-azure-role) to the users of device control.  
+
+
+1. Set the `RemoteFileEvidenceLocation` setting to the URL of the Azure Blob Storage container via Intune OMA-URI or GPO
+
+## Next steps
 
 - [View device control events and information in Microsoft Defender for Endpoint](device-control-report.md)
 - [Deploy and manage device control in Microsoft Defender for Endpoint with Microsoft Intune](device-control-deploy-manage-intune.md)
