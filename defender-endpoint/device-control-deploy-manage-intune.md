@@ -84,6 +84,10 @@ You can add audit policies, and you can add Allow/Deny policies. It is recommend
 
 ## Defining Settings with OMA-URI
 
+> [!IMPORTANT]
+> Using Intune OMA-URI to configure device control requires the *Device Configuration* workload to be managed by Intune, if the device is co-managed with Configuration Manager
+> **Learn More**
+> - [How to switch Configuration Manager workloads to Intune](/mem/configmgr/comanage/how-to-switch-workloads)
 In the following table, identify the setting you want to configure, and then use the information in the OMA-URI and data type & values columns. Settings are listed in alphabetical order.
 
 | Setting | OMA-URI, data type, & values |
