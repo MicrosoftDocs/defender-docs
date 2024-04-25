@@ -217,4 +217,4 @@ Now you begin the normal operation and maintenance of Defender for Office 365. M
 
 - Review user reported messages, especially [user-reported phishing messages](air-examples.md)
 - Review overrides in the [Threat protection status report](reports-email-security.md#threat-protection-status-report).
-- Use [Advanced Hunting](/defender-xdr/advanced-hunting-example) queries to look for tuning opportunities and risky messages.
+- Use [Advanced Hunting](/defender-xdr/advanced-hunting-email-threats) queries to look for tuning opportunities and risky messages.

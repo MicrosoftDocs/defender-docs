@@ -54,14 +54,13 @@ The following table identified key concepts that are important to understand whe
 
 Concept | Description | More information
 :---|:---|:---|
-Administration Portal | Microsoft Defender portal to monitor and assist in responding to alerts of potential advanced persistent threat activity or data breaches. | [Microsoft Defender for Endpoint portal overview](/defender-endpoint/portal-overview)
+Administration Portal | Microsoft Defender portal to monitor and assist in responding to alerts of potential advanced persistent threat activity or data breaches. | [Microsoft Defender for Endpoint portal overview](/defender-xdr/microsoft-365-security-center-mde)
 Attack Surface Reduction | Help reduce your attack surfaces by minimizing the places where your organization is vulnerable to cyberthreats and attacks. | [Overview of attack surface reduction](/defender-endpoint/overview-attack-surface-reduction)
 Endpoint Detection and Response | Endpoint detection and response capabilities provide advanced attack detections that are near real-time and actionable. | [Overview of endpoint detection and response capabilities](/defender-endpoint/overview-endpoint-detection-response)
 Behavioral Blocking and Containment | Behavioral blocking and containment capabilities can help identify and stop threats, based on their behaviors and process trees even when the threat has started execution. | [Behavioral blocking and containment](/defender-endpoint/behavioral-blocking-containment)
 Automated Investigation and Response | Automated investigation uses various inspection algorithms based on processes that are used by security analysts and designed to examine alerts and take immediate action to resolve breaches. | [Use automated investigations to investigate and remediate threats](/defender-endpoint/automated-investigations)
-Advanced Hunting | Advanced hunting is a query-based threat-hunting tool that lets you explore up to 30 days of raw data so that you can proactively inspect events in your network to locate threat indicators and entities. | [Overview of advanced hunting](/defender/advanced-hunting-overview)
+Advanced Hunting | Advanced hunting is a query-based threat-hunting tool that lets you explore up to 30 days of raw data so that you can proactively inspect events in your network to locate threat indicators and entities. | [Overview of advanced hunting](advanced-hunting-overview.md)
 Threat Analytics | Threat analytics is a set of reports from expert Microsoft security researchers covering the most relevant threats. | [Track and respond to emerging threats](/defender-endpoint/threat-analytics)
-
 
 For more detailed information about the capabilities included with Microsoft Defender for Endpoint, see [What is Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint).
 
