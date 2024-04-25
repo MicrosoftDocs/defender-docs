@@ -59,7 +59,7 @@ Microsoft Defender XDR currently supports the following SIEM solution integratio
 
 ### Incident schema
 
-For more information on Microsoft Defender XDR incident properties including contained alert and evidence entities metadata, see [Schema mapping](/defender/api-list-incidents#schema-mapping).
+For more information on Microsoft Defender XDR incident properties including contained alert and evidence entities metadata, see [Schema mapping](api-list-incidents.md#schema-mapping).
 
 ### Splunk
 

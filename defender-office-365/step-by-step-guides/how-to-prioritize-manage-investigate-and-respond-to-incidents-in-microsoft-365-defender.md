@@ -57,7 +57,7 @@ You can start using *Action Center* to act on pending action items from all inci
 
 ## More Information
 
-[Manage incidents in Microsoft Defender XDR | Microsoft Docs](/defender/manage-incidents).
+[Manage incidents in Microsoft Defender XDR | Microsoft Docs](/defender-xdr/manage-incidents).
 
 [How automated investigation and response works in Microsoft Defender for Office 365](../air-examples.md).
 
