@@ -111,5 +111,10 @@
     }
   ],
   "branch_target_mapping": {},
-  "targets": {}
+  "targets": {},
+  "redirection_files": [
+    ".openpublishing.redirection.defender.json",
+    ".openpublishing.redirection.endpoint.json"
+  
+  ]
 }

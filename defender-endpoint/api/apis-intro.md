@@ -42,7 +42,7 @@ Watch this video for a quick overview of Defender for Endpoint's APIs.
 
 In general, you'll need to take the following steps to use the APIs:
 
-- Create a [Microsoft Entra application](/defender-endpoint/exposed-apis-create-app-nativeapp)
+- Create a [Microsoft Entra application](/defender-endpoint/api/exposed-apis-create-app-nativeapp)
 - Get an access token using this application
 - Use the token to access Defender for Endpoint API
 
