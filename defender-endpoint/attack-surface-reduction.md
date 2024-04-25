@@ -144,7 +144,7 @@ You can set attack surface reduction rules for devices that are running any of t
 Although attack surface reduction rules don't require a [Windows E5 license](/windows/deployment/deploy-enterprise-licenses), if you have Windows E5, you get advanced management capabilities. The advanced capabilities - available only in Windows E5 - include:
 
 - The monitoring, analytics, and workflows available in [Defender for Endpoint](microsoft-defender-endpoint.md)
-- The reporting and configuration capabilities in [Microsoft Defender XDR](/defender-xdr/overview-security-center).
+- The reporting and configuration capabilities in [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender).
 
 These advanced capabilities aren't available with a Windows Professional or Windows E3 license. However, if you do have those licenses, you can use Event Viewer and Microsoft Defender Antivirus logs to review your attack surface reduction rule events.
 

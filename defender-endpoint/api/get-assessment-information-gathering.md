@@ -115,7 +115,7 @@ GET https://api.securitycenter.microsoft.com/api/machines/InfoGatheringExport?$s
 
 ## Other related
 
-- [DeviceTvmInfoGathering](/defender/advanced-hunting-devicetvminfogathering-table)
+- [DeviceTvmInfoGathering](/defender-xdr/advanced-hunting-devicetvminfogathering-table)
 - [DeviceTvmInfoGatheringKB](/defender-xdr/advanced-hunting-devicetvminfogatheringkb-table)
 - [Vulnerability management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Vulnerabilities in your organization](/defender-vulnerability-management/tvm-weaknesses)
