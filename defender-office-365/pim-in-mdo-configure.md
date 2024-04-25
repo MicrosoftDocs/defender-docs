@@ -99,7 +99,7 @@ For either method:
 
 ## Test your configuration of PIM with Defender for Office 365
 
-1. Sign in with the test user (Alex), who should have no administrative access within the [Microsoft Defender portal](/defender-xdr/overview-security-center) at this point.
+1. Sign in with the test user (Alex), who should have no administrative access within the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender) at this point.
 2. Navigate to PIM, where the user can activate their day-to-day security reader role.
 3. If you try to purge an email using Threat Explorer, you get an error stating you need more permissions.
 4. PIM a second time into the more elevated role, after a short delay you should now be able to purge emails without issue.

@@ -50,7 +50,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
 
 - **Set up Microsoft Defender XDR incident notifications** <p> To get email notifications on defined Microsoft Defender XDR incidents, it's recommended that you configure email notifications. See [Incident notifications by email](/defender/incidents-overview#incident-notifications-by-email).
 
-- **Connect to SIEM (Sentinel)** <p> If you have existing security information and event management (SIEM) tools, you can integrate them with Microsoft Defender XDR. See [Integrate your SIEM tools with Microsoft Defender XDR](/defender/configure-siem-defender) and [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
+- **Connect to SIEM (Sentinel)** <p> If you have existing security information and event management (SIEM) tools, you can integrate them with Microsoft Defender XDR. See [Integrate your SIEM tools with Microsoft Defender XDR](/defender-xdr/configure-siem-defender) and [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration).
 
 - **Review data discovery configuration** <p> Review the Microsoft Defender for Endpoint device discovery configuration to ensure it's configured as required. See [Device discovery overview](device-discovery.md).
 
@@ -105,7 +105,7 @@ The Microsoft Defender Endpoint should be set up to support your regular securit
       
     Review the Message center messages to understand any upcoming changes that impact your environment. 
      
-    You can access this in the Microsoft 365 admin center under the Health tab. See [How to check Microsoft 365 service health](/enterprise/view-service-health).
+    You can access this in the Microsoft 365 admin center under the Health tab. See [How to check Microsoft 365 service health](/Microsoft-365//enterprise/view-service-health).
 
 ### Security operations team  
 
