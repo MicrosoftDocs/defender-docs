@@ -84,7 +84,7 @@ There are more details available by clicking on the device.
 
 ![Device installation details.](media/device-control-overview/device-installation-details.png)
 
-There will also be a record in Advanced Hunting
+There is also a record in Advanced Hunting. To view it, use the following query:
 
 
 ```kusto
@@ -144,7 +144,7 @@ DeviceEvents
 | order by Timestamp desc
 ```
 
-  This query returns the name of the policy, the access requested, and the verdict (allow, deny)
+This query returns the name of the policy, the access requested, and the verdict (allow, deny)
 
 ![User's image](media/device-control-overview/image1.png)
 
