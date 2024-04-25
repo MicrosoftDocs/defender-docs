@@ -89,7 +89,7 @@ Once the Storage account is created, you'll need to:
 
 - Each row contains the event name, the time Defender for Endpoint received the event, the tenant it belongs (you'll only get events from your tenant), and the event in JSON format in a property called "properties".
 
-- For more information about the schema of Microsoft Defender XDR events, see [Advanced Hunting overview](/defender/advanced-hunting-overview).
+- For more information about the schema of Microsoft Defender XDR events, see [Advanced Hunting overview](advanced-hunting-overview.md).
 
 ## Data types mapping
 
@@ -118,7 +118,7 @@ For more information, see [Monitor destinations - Azure Monitor | Microsoft Docs
 
 - [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 
-- [Overview of Advanced Hunting](/defender/advanced-hunting-overview)
+- [Overview of Advanced Hunting](advanced-hunting-overview.md)
 - [Microsoft Defender XDR Streaming API](streaming-api.md)
 - [Stream Microsoft Defender XDR events to your Azure storage account](streaming-api-storage.md)
 - [Azure Storage Account documentation](/azure/storage/common/storage-account-overview)
