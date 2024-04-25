@@ -118,7 +118,7 @@ Under certain conditions, tamper protection can protect exclusions that are defi
 
 Tampering attempts typically indicate that a larger cyberattack has taken place. Bad actors try to change security settings as a way to persist and stay undetected. If you're part of your organization's security team, you can view information about such attempts, and then take appropriate actions to mitigate threats.
 
-Whenever a tampering attempt is detected, an alert is raised in the [Microsoft Defender portal](/defender-endpoint/portal-overview) ([https://security.microsoft.com](https://security.microsoft.com)).
+Whenever a tampering attempt is detected, an alert is raised in the [Microsoft Defender portal](/defender-xdr/microsoft-365-security-center-mde) ([https://security.microsoft.com](https://security.microsoft.com)).
 
 Using [endpoint detection and response](overview-endpoint-detection-response.md) and [advanced hunting](/defender-xdr/advanced-hunting-overview) capabilities in Microsoft Defender for Endpoint, your security operations team can investigate and address such attempts.
 
