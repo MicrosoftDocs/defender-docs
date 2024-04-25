@@ -20,6 +20,28 @@ search.appverid: MET150
 f1.keywords: NOCSH 
 ---
 
+---
+title: Device control in Microsoft Defender for Endpoint            
+description: Get an overview of device control, including removable storage access control and device installation policies in Defender for Endpoint           
+author: siosulli
+ms.author: siosulli
+manager: deniseb 
+ms.date: 02/14/2024
+ms.topic: overview
+ms.service: defender-endpoint
+ms.subservice: asr
+audience: ITPro
+ms.collection: 
+- m365-security
+- tier2
+- mde-asr
+ms.custom: 
+- partner-contribution
+ms.reviewer: joshbregman
+search.appverid: MET150
+f1.keywords: NOCSH 
+---
+
 # Device control in Microsoft Defender for Endpoint
 
 **Applies to:**
@@ -39,30 +61,45 @@ This list is intended to provide some examples. It's not an exhaustive list; the
 
 Device control helps protect your organization from potential data loss, malware, or other cyberthreats by allowing or preventing certain devices to be connected to users' computers. With device control, your security team can determine whether and what peripheral devices users can install and use on their computers. 
 
-## Device control in Windows
+## Microsoft device control capabilities
 
-This section lists scenarios for device control in Windows. 
+Device control capabilities from Microsoft can be organized into three main categories: device control in Windows, device control in Defender for Endpoint, and Endpoint Data Loss Prevention (Endpoint DLP).
+
+- **Device control in Windows**. The Windows operating system has built-in device control capabilities. Your security team can configure device installation settings to prevent (or allow) users from installing certain devices on their computers. Policies are applied at the device level, and use various device properties to determine whether or not a user can install/use a device. Device control in Windows works with BitLocker and ADMX templates, and can be managed using Intune.
+
+  - **BitLocker -** [BitLocker](/windows/security/operating-system-security/data-protection/encrypted-hard-drive) is a Windows security feature that provides encryption for entire volumes.  BitLocker encryption can be required for writing to removable media. Together with [Intune](/mem/intune/fundamentals/what-is-intune), policies can be configured to enforce encryption on devices using BitLocker for Windows .  For more information, see [Disk encryption policy settings for endpoint security in Intune](/mem/intune/protect/endpoint-security-disk-encryption-profile-settings).
+    
+  - **Device Installation**. Windows provides the capability to prevent the installation of specific types of USB devices. 
+    
+    - For more information on how to configure device installation with Intune, see [Restrict USB devices and allow specific USB devices using ADMX templates in Intune](/mem/intune/configuration/administrative-templates-restrict-usb).
+        
+    - For more information on how to configure device installation with Group Policy, see [Manage Device Installation with Group Policy](/windows/client-management/client-tools/manage-device-installation-with-group-policy)
+        
+- **Device control in Defender for Endpoint**. Device control in Defender for Endpoint provides more advanced capabilities and is cross platform. 
+
+  - Granular access control - create policies to control access by device, device type, operation (read, write, execute), user group, network location or file type.
+  
+  - File evidence - store the file information and contents to audit files copied or accessed on devices.
+  
+  - Reporting and advanced hunting - complete visibility into add device related activities
+  
+  - Device control in Microsoft Defender can be managed using Intune or [Group Policy](device-control-deploy-manage-gpo)
+  
+    - **Device control in Microsoft Defender and Intune**. Intune provides a rich experience for managing complex device control policies for organizations. You can configure and deploy device restriction settings in Defender for Endpoint, for example. See [Deploy and manage device control with Microsoft Intune](device-control-deploy-manage-intune).
+        
+- **Endpoint data loss prevention** (Endpoint DLP). Endpoint DLP monitors sensitive information on devices that are onboarded to Microsoft Purview solutions. DLP policies can enforce protective actions on sensitive information and where it's stored or used. [Learn about Endpoint DLP](/purview/endpoint-dlp-learn-about).
+
+See the [device control scenarios](#device-control-in-windows) section (in this article) for more details about these capabilities.
+
 
 > [!TIP]
 > If you're using Mac, device control can control access to Bluetooth, iOS devices, portable devices such as cameras, and removable media such as USB devices. See [Device Control for macOS](mac-device-control-overview.md).
 
-Select a tab, review the scenarios, and then identify the type of device control policy to create.
+Select a tab, review the scenarios, and then identify which Microsoft capability to use
 
-## [**Removable storage**](#tab/Removable)
+## [**Controlling access to USB devices**](#tab/Removable) 
 
-| Scenario | Device control policy |
-|---|---|
-| Prevent installation of a specific USB device | Device control in Windows. See [Device control policies](device-control-policies.md). |
-| Prevent installation of all USB devices while allowing an installation of only an authorized USB | Device control in Windows. See [Device control policies](device-control-policies.md). |
-| Prevent Write and Execute access to all but allow specific approved USBs | Device control in Defender for Endpoint. See [Device control policies](device-control-policies.md). |
-| Audit Write and Execute access for all but block specific blocked USBs | Device control in Defender for Endpoint. See [Device control policies](device-control-policies.md). |
-| Block read and execute access to specific file extension | Device control in Microsoft Defender. See [Device control policies](device-control-policies.md). |
-| Block people from access removable storage when the machine isn't connecting corporate network | Device control in Microsoft Defender. See [Device control policies](device-control-policies.md). |
-| Block write access to removable data drives not protected by BitLocker | Device control in Windows. See [BitLocker](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=common). |
-| Block write access to devices configured in another organization | Device control in Windows. See [BitLocker](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=common). |
-| Prevent copying of sensitive files to USB | [Endpoint DLP](/purview/endpoint-dlp-learn-about) |
-
-
+## [**Controlling access to BitLocker encrypted removable media**](#tab/Bitlocker)
 
 ## [**Printers**](#tab/Printers)
 
@@ -75,12 +112,32 @@ Select a tab, review the scenarios, and then identify the type of device control
 | Prevent installation of all printers while allowing a specific printer to be installed | Device control in Windows. See [Device control policies](device-control-policies.md). |
 | Block printing of sensitive documents to any printer | [Endpoint DLP](/purview/endpoint-dlp-learn-about) |
 
-
 ## [**Bluetooth**](#tab/Bluetooth)
 
 | Scenario | Device control policy |
 |---|---|
 | Block copying of sensitive document to any Bluetooth Device | [Endpoint DLP](/purview/endpoint-dlp-learn-about) |
+
+
+
+## [**Removable storage**](#tab/Removable)
+
+| Scenario | Microsoft capability|
+|---|---|
+| Prevent installation of a specific USB device | Device installation in Windows. See [Device installation](/windows/client-management/client-tools/manage-device-installation-with-group-policy). |
+| Prevent installation of all USB devices while allowing an installation of only an authorized USB | Device installation in Windows. See [Device installation in Windows](device-control-policies.md). |
+| Prevent Write and Execute access to all but allow specific approved USBs | Device control in Defender for Endpoint. See [Device control policies](device-control-policies.md). |
+| Audit Write and Execute access for all but block specific blocked USBs | Device control in Defender for Endpoint. See [Device control policies](device-control-policies.md). |
+| Block read and execute access to specific file extension | Device control in Microsoft Defender. See [Device control policies](device-control-policies.md). |
+| Block people from access removable storage when the machine isn't connecting corporate network | Device control in Microsoft Defender. See [Device control policies](device-control-policies.md). |
+| Block write access to removable data drives not protected by BitLocker | Device control in Windows. See [BitLocker](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=common). |
+| Block write access to devices configured in another organization | Device control in Windows. See [BitLocker](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=common). |
+| Prevent copying of sensitive files to USB | [Endpoint DLP](/purview/endpoint-dlp-learn-about) |
+
+
+
+
+
 
 ---
 
@@ -97,25 +154,6 @@ Device control supports Bluetooth devices, CD/ROMs and DVD devices, printers, US
 | Printers | `PrinterDevices` |  | `Printers` |
 | USB devices (removable media) | `RemovableMediaDevices` | `removableMedia` | `USB` | 
 | Windows Portable Devices | `WpdDevices` |  | `Windows Portable Devices (WPD)` |
-
-## Categories of Microsoft device control capabilities
-
-Device control capabilities from Microsoft can be organized into three main categories: device control in Windows, device control in Defender for Endpoint, and Endpoint Data Loss Prevention (Endpoint DLP).
-
-- **Device control in Windows**. The Windows operating system has built-in device control capabilities. Your security team can configure device installation settings to prevent (or allow) users from installing certain devices on their computers. Policies are applied at the device level, and use various device properties to determine whether or not a user can install/use a device. Device control in Windows works with BitLocker and ADMX templates, and can be managed using Intune.
-
-   - **BitLocker and Intune**. [BitLocker](/windows/security/operating-system-security/data-protection/encrypted-hard-drive) is a Windows security feature that provides encryption for entire volumes. Together with [Intune](/mem/intune/fundamentals/what-is-intune), policies can be configured to enforce encryption on devices using BitLocker for Windows (and FileVault for Mac). For more information, see [Disk encryption policy settings for endpoint security in Intune](/mem/intune/protect/endpoint-security-disk-encryption-profile-settings).
-
-   - **Administrative Templates (ADMX) and Intune**. You can use ADMX templates to create policies that restrict or allow specific types of USB devices to be used with computers. For more information, see [Restrict USB devices and allow specific USB devices using ADMX templates in Intune](/mem/intune/configuration/administrative-templates-restrict-usb).
-
-- **Device control in Defender for Endpoint**. Device control in Defender for Endpoint provides more advanced capabilities and is cross platform. You can configure device control settings to prevent (or allow) users to have Read, Write, or Execute access to content on removable storage devices. You can define exceptions, and you can choose to employ audit policies that detect but don't block users from accessing their removable storage devices. Policies are applied at the device level, user level, or both. Device control in Microsoft Defender can be managed using Intune.
-
-   - **Device control in Microsoft Defender and Intune**. Intune provides a rich experience for managing complex device control policies for organizations. You can configure and deploy device restriction settings in Defender for Endpoint, for example. See [Configure device restriction settings in Microsoft Intune](/mem/intune/configuration/device-restrictions-configure).
-
-- **Endpoint data loss prevention** (Endpoint DLP). Endpoint DLP monitors sensitive information on devices that are onboarded to Microsoft Purview solutions. DLP policies can enforce protective actions on sensitive information and where it's stored or used. [Learn about Endpoint DLP](/purview/endpoint-dlp-learn-about).
-
-See the [device control scenarios](#device-control-in-windows) section (in this article) for more details about these capabilities.
-
 
 ## Device control samples and scenarios
 
@@ -146,3 +184,4 @@ Currently, device control is not supported on servers.
 - [Device control walkthroughs](device-control-walkthroughs.md)
 - [Learn about Device control policies](device-control-policies.md)
 - [View device control reports](device-control-report.md)
+
