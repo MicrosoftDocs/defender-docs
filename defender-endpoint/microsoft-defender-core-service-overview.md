@@ -48,19 +48,19 @@ If you are using the Microsoft Defender for Endpoint **standard** device connect
     
 - If you do not want to use the wildcards, you can use:
 
-  - us-mobile.events.data.microsoft.com/OneCollector/1.0
+  - `us-mobile.events.data.microsoft.com/OneCollector/1.0`
   
-  - eu-mobile.events.data.microsoft.com/OneCollector/1.0
+  - `eu-mobile.events.data.microsoft.com/OneCollector/1.0`
   
-  - uk-mobile.events.data.microsoft.com/OneCollector/1.0
+  - `uk-mobile.events.data.microsoft.com/OneCollector/1.0`
   
-  - au-mobile.events.data.microsoft.com/OneCollector/1.0
+  - `au-mobile.events.data.microsoft.com/OneCollector/1.0`
   
-  - mobile.events.data.microsoft.com/OneCollector/1.0
+  - `mobile.events.data.microsoft.com/OneCollector/1.0`
   
     and
     
-  - ecs.office.com/config/v1/MicrosoftWindowsDefenderClient
+  - `ecs.office.com/config/v1/MicrosoftWindowsDefenderClient`
   
 - Enterprise U.S. Government customers should allow the following URLs:
 
