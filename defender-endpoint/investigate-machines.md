@@ -150,7 +150,7 @@ To further inspect the event and related events, you can quickly run an [advance
 
 ### Security recommendations
 
-**Security recommendations** are generated from Microsoft Defender for Endpoint's [Vulnerability Management](/defender-vulnerability-management/tvm-dashboard-insights) capability. Selecting a recommendation shows a panel where you can view relevant details such as description of the recommendation and the potential risks associated with not enacting it. See [Security recommendation](/defender-vulnerability-management/ti-indicator) for details.
+**Security recommendations** are generated from Microsoft Defender for Endpoint's [Vulnerability Management](/defender-vulnerability-management/tvm-dashboard-insights) capability. Selecting a recommendation shows a panel where you can view relevant details such as description of the recommendation and the potential risks associated with not enacting it. See [Security recommendation](api/ti-indicator.md) for details.
 
 
 
@@ -233,7 +233,7 @@ A grey circle indicates that the data is unknown.
 > [!NOTE]
 > The overall status message for macOS and Linux devices currently shows up as 'Status not available for macOS & Linux'. Currently, the status summary is only available for Windows devices. All other information in the table is up to date to show the individual states of each device health signal for all supported platforms.
 
-To gain an in-depth view of the device health report, you can go to **Reports > Devices health**. For more information, see [Device health and compliance report in Microsoft Defender for Endpoint](/defender-endpoint/machine-reports).
+To gain an in-depth view of the device health report, you can go to **Reports > Devices health**. For more information, see [Device health and compliance report in Microsoft Defender for Endpoint](device-health-reports.md).
 
 > [!NOTE]
 > The date and time for Defender Antivirus mode is currently not available.
@@ -249,7 +249,7 @@ To gain an in-depth view of the device health report, you can go to **Reports > 
 - [Investigate an IP address associated with a Defender for Endpoint alert](investigate-ip.md)
 - [Investigate a domain associated with a Defender for Endpoint alert](investigate-domain.md)
 - [Investigate a user account in Defender for Endpoint](investigate-user.md)
-- [Security recommendation](/defender-vulnerability-management/ti-indicator)
+- [Security recommendation](api/ti-indicator.md)
 - [Software inventory](/defender-vulnerability-management/tvm-software-inventory)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

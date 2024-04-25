@@ -118,13 +118,13 @@ Under certain conditions, tamper protection can protect exclusions that are defi
 
 Tampering attempts typically indicate that a larger cyberattack has taken place. Bad actors try to change security settings as a way to persist and stay undetected. If you're part of your organization's security team, you can view information about such attempts, and then take appropriate actions to mitigate threats.
 
-Whenever a tampering attempt is detected, an alert is raised in the [Microsoft Defender portal](/defender-endpoint/portal-overview) ([https://security.microsoft.com](https://security.microsoft.com)).
+Whenever a tampering attempt is detected, an alert is raised in the [Microsoft Defender portal](/defender-xdr/microsoft-365-security-center-mde) ([https://security.microsoft.com](https://security.microsoft.com)).
 
 Using [endpoint detection and response](overview-endpoint-detection-response.md) and [advanced hunting](/defender-xdr/advanced-hunting-overview) capabilities in Microsoft Defender for Endpoint, your security operations team can investigate and address such attempts.
 
 ## Review your security recommendations
 
-Tamper protection integrates with [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) capabilities. [Security recommendations](/defender-vulnerability-management/ti-indicator) include making sure tamper protection is turned on. For example, in your [Vulnerability Management dashboard](/defender-vulnerability-management/tvm-dashboard-insights#vulnerability-management-dashboard), you can search on *tamper*. In the results, you can select **Turn on Tamper Protection** to learn more and turn it on.
+Tamper protection integrates with [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management) capabilities. [Security recommendations](api/ti-indicator.md) include making sure tamper protection is turned on. For example, in your [Vulnerability Management dashboard](/defender-vulnerability-management/tvm-dashboard-insights#vulnerability-management-dashboard), you can search on *tamper*. In the results, you can select **Turn on Tamper Protection** to learn more and turn it on.
 
 To learn more about Microsoft Defender Vulnerability Management, see [Dashboard insights - Defender Vulnerability Management](/defender-vulnerability-management/tvm-dashboard-insights#dashboard-insights---threat-and-vulnerability-management).
 

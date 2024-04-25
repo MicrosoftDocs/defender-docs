@@ -61,7 +61,7 @@ Whether automated investigations run, and whether remediation actions are taken 
 
 ## Review your security and alert policies in Office 365
 
-Microsoft provides built-in [alert policies](/defender-office-365/alert-policies-defender-portal.md) that help identify certain risks. These risks include Exchange admin permissions abuse, malware activity, potential external and internal threats, and data lifecycle management risks. Some alerts can trigger [automated investigation and response in Office 365](/defender-office-365/air-about.md). Make sure your [Defender for Office 365](/defender-office-365/defender-for-office-365) features are configured correctly.
+Microsoft provides built-in [alert policies](/defender-office-365/alert-policies-defender-portal.md) that help identify certain risks. These risks include Exchange admin permissions abuse, malware activity, potential external and internal threats, and data lifecycle management risks. Some alerts can trigger [automated investigation and response in Office 365](/defender-office-365/air-about.md). Make sure your [Defender for Office 365]/defender-office-365/mdo-about features are configured correctly.
 
 Although certain alerts and security policies can trigger automated investigations, *no remediation actions are taken automatically for email and content*. Instead, all remediation actions for email and email content await approval by your security operations team in the [Action center](m365d-action-center.md).
 
@@ -77,7 +77,7 @@ You can choose from several options to change settings for your automated invest
 
 |To do this|Follow these steps|
 |---|---|
-|Specify automation levels for groups of devices|<ol><li>Set up one or more device groups. See [Create and manage device groups](/defender-endpoint/machine-groups.md). </li><li>In the Microsoft Defender portal, go to **Permissions** \> **Endpoints roles & groups** \> **Device groups**.</li><li>Select a device group and review its **Automation level** setting. (We recommend using **Full - remediate threats automatically**). See [Automation levels in automated investigation and remediation capabilities](/defender-endpoint/automation-levels).</li><li>Repeat steps 2 and 3 as appropriate for all your device groups. </li></ol>|
+|Specify automation levels for groups of devices|<ol><li>Set up one or more device groups. See [Create and manage device groups](/defender-endpoint/machine-groups). </li><li>In the Microsoft Defender portal, go to **Permissions** \> **Endpoints roles & groups** \> **Device groups**.</li><li>Select a device group and review its **Automation level** setting. (We recommend using **Full - remediate threats automatically**). See [Automation levels in automated investigation and remediation capabilities](/defender-endpoint/automation-levels).</li><li>Repeat steps 2 and 3 as appropriate for all your device groups. </li></ol>|
 
 ## Next steps
 

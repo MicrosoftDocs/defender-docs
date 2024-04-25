@@ -103,5 +103,5 @@ Here is an example of the response.
 ## Related topics
 
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
-- [Defender Vulnerability Management exposure score](/defender-endpoint/tvm-exposure-score)
+- [Defender Vulnerability Management exposure score](/defender-vulnerability-management/tvm-exposure-score)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
