@@ -70,9 +70,6 @@ Device control capabilities from Microsoft can be organized into three main cate
 See the [device control scenarios](#device-control-in-windows) section (in this article) for more details about these capabilities.
 
 
-> [!TIP]
-> If you're using Mac, device control can control access to Bluetooth, iOS devices, portable devices such as cameras, and removable media such as USB devices. See [Device Control for macOS](mac-device-control-overview.md).
-
 Select a tab, review the scenarios, and then identify which Microsoft capability to use
 
 ## **[Controlling access to USB devices](#tab/Removable)**
@@ -121,12 +118,12 @@ When a device installation restrictions are configured and a device is installed
 Device control for MDE provides finer grain access control to a subset of USB devices.  Device control can only restrict access to Windows Portal Devices, Removable Media, CD/DVDs and Printers. 
 
 > [!NOTE]
-> Removable Media is different than all USBs.  Not **all** USB devices are removable media.  In order to be considered removable media and therefore in scope of MDE device control,  the device **must** create a disk (e.g.  E: ) in Windows. 
-Device control can restrict access to the device and files on that device by defining policies.  If a policy is configured with an audit entry, then an event will appear in Advanced Hunting with an *ActionType* of *RemovableStoragePolicyTriggered*
+> On Windows, the term *removable media devices* does not mean any USB device.  Not **all** USB devices are *removable media devices*.  In order to be considered a *removable media device* and therefore in scope of MDE device control, the device **must** create a disk (e.g.  E: ) in Windows. 
+Device control can restrict access to the device and files on that device by defining policies.  
 
-> [!NOTE] 
-> To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](/purview/endpoint-dlp-learn-about) 
-
+> [!IMPORTANT]
+> Some devices create multiple entries in the Windows device manager (for example a, removable media device and a Windows portable device).  In order for the device to function properly make sure to grant access for **all** **entries** associated with the physical device.  
+If a policy is configured with an audit entry, then an event will appear in Advanced Hunting with an *ActionType* of *RemovableStoragePolicyTriggered*
 
 ```kusto
 DeviceEvents
@@ -151,6 +148,12 @@ DeviceEvents
 
 ![User's image](media/device-control-overview/image1.png)
 
+> [!TIP]
+> Device control for Microsoft Defender for Endpoint on macOS can control access to iOS devices, portable devices such as cameras, and removable media such as USB devices. See [Device Control for macOS](mac-device-control-overview.md).
+### Endpoint DLP
+To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](/purview/endpoint-dlp-learn-about) 
+
+
 ## **[Controlling access to BitLocker encrypted removable media (Preview)](#tab/Bitlocker)**
 
 ### BitLocker support for removable media
@@ -165,6 +168,8 @@ Windows provides the ability to deny write to all removable media or deny write 
 
 Device control for Microsoft Defender for Endpoint controls access to a device based on its BitLocker encrypted state (encrypted or plain).  This allows for exceptions to be created to allow and audit access to non-BitLocker encrypted devices.
 
+> [!TIP]
+> If you're using Mac, device control can control access to removable media based on the APFS encryption state.  See **[Device Control for macOS](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fdevice-control-overview.md/main/d565b957-f2d8-dbf6-35a0-305e77bc1a95/mac-device-control-overview.md)**.
 ## [**Controlling access to printers**](#tab/Printers)
 
 ### Printer installation restrictions
@@ -182,6 +187,8 @@ To block printing of documents based on information classification use [Endpoint
 
 ## [**Bluetooth**](#tab/Bluetooth)
 
+> [!TIP]
+> If you're using Mac, device control can control access to Bluetooth.  See **[Device Control for macOS](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fdevice-control-overview.md/main/d565b957-f2d8-dbf6-35a0-305e77bc1a95/mac-device-control-overview.md)**.
 ### Controlling access to Bluetooth services on Windows
 Administrators can control the behavior of the Bluetooth service (Allowing advertising, discovery, preparing and prompting) as well as the Bluetooth services that are allowed.
 
@@ -193,42 +200,7 @@ Administrators can control the behavior of the Bluetooth service (Allowing adver
 
 To block copying of sensitive document to any Bluetooth Device use [Endpoint DLP](/purview/endpoint-dlp-learn-about) 
 
-
-
-## [**Removable storage**](#tab/Removable)
-
-| Scenario | Microsoft capability|
-|---|---|
-| Prevent installation of a specific USB device | Device installation in Windows. See [Device installation](/windows/client-management/client-tools/manage-device-installation-with-group-policy). |
-| Prevent installation of all USB devices while allowing an installation of only an authorized USB | Device installation in Windows. See [Device installation in Windows](device-control-policies.md). |
-| Prevent Write and Execute access to all but allow specific approved USBs | Device control in Defender for Endpoint. See [Device control policies](device-control-policies.md). |
-| Audit Write and Execute access for all but block specific blocked USBs | Device control in Defender for Endpoint. See [Device control policies](device-control-policies.md). |
-| Block read and execute access to specific file extension | Device control in Microsoft Defender. See [Device control policies](device-control-policies.md). |
-| Block people from access removable storage when the machine isn't connecting corporate network | Device control in Microsoft Defender. See [Device control policies](device-control-policies.md). |
-| Block write access to removable data drives not protected by BitLocker | Device control in Windows. See [BitLocker](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=common). |
-| Block write access to devices configured in another organization | Device control in Windows. See [BitLocker](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=common). |
-| Prevent copying of sensitive files to USB | [Endpoint DLP](/purview/endpoint-dlp-learn-about) |
-
-
-
-
-
-
 ---
-
-## Supported devices
-
-Device control supports Bluetooth devices, CD/ROMs and DVD devices, printers, USB devices, and other types of portable devices. On a Windows device, based on the driver, some peripheral devices are marked as removable. The following table lists examples of devices that device control supports with their `primary_id` values and media class names:
-
-| Device type | `PrimaryId` in Windows | `primary_id` in macOS | Media Class Name |
-|---|---|---|---|
-| Bluetooth devices |  | `bluetoothDevice` | `Bluetooth Devices` |
-| CD/ROMs, DVDs | `CdRomDevices` |  |  `CD-Roms` |
-| iOS devices |  | `appleDevice` | | 
-| Portable devices (such as cameras) |   | `portableDevice` | | 
-| Printers | `PrinterDevices` |  | `Printers` |
-| USB devices (removable media) | `RemovableMediaDevices` | `removableMedia` | `USB` | 
-| Windows Portable Devices | `WpdDevices` |  | `Windows Portable Devices (WPD)` |
 
 ## Device control samples and scenarios
 
