@@ -57,7 +57,7 @@ When your security team has decided on which categories of items that users can 
 1. Repeat these same steps for the other policies: **Anti-phishing policy**, **Anti-Malware policy**, and **Safe Attachment policy**.
 
 > [!TIP]
-> For more detailed information on what you've learned so far, see [Configure spam filter policies - Office 365](../anti-spam-policies-configure.md)| [Configure anti-phishing policies in EOP](../anti-phishing-policies-eop-configure.md) | [Configure anti-malware policies](../anti-malware-policies-configure.md)| [Set up Safe Attachments policies in Microsoft Defender for Office 365](../safe-attachments-policies-configure)
+> For more detailed information on what you've learned so far, see [Configure spam filter policies - Office 365](../anti-spam-policies-configure.md)| [Configure anti-phishing policies in EOP](../anti-phishing-policies-eop-configure.md) | [Configure anti-malware policies](../anti-malware-policies-configure.md)| [Set up Safe Attachments policies in Microsoft Defender for Office 365](../safe-attachments-policies-configure.md)
 
 ## Next Steps
 

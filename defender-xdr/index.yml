@@ -79,7 +79,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is Microsoft Defender for Office 365?
-            url: /defender-office-365/defender-for-office-365
+            url: /defender-office-365/mdo-about
           - text: Microsoft Defender for Office 365 service description
             url: /office365/servicedescriptions/office-365-advanced-threat-protection-service-description
           - text: Microsoft Defender for Office 365 in Microsoft Defender XDR
