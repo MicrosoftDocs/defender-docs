@@ -17,25 +17,6 @@ search.appverid: MET150
 
 ---
 
----
-title: Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
-description: Learn how to set up and use the MDE plugin for Windows Subsystem for Linux
-author: siosulli
-ms.author: siosulli
-manager: deniseb
-ms.reviewer: pahuijbr
-ms.service: defender-endpoint
-ms.topic: how-to
-ms.localizationpriority: medium
-ms.collection: 
-- m365-security
-- tier2
-audience: ITPro
-ms.date: 04/09/2024
-search.appverid: MET150
-
----
-
 # Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
 
 ## Overview
