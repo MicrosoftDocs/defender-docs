@@ -764,7 +764,7 @@ The `FileEvidenceLocation` field of has the location of the evidence file, if on
 
 ### Storing file evidence in Azure Blob Storage
 
-1. Create a Azure Blob Storage account and container
+1. Create an Azure Blob Storage account and container.
 
 1. Create a custom role called *Device Control Evidence Data Provider* for accessing the container.  The role should have the following permissions:
 
@@ -789,9 +789,11 @@ The `FileEvidenceLocation` field of has the location of the evidence file, if on
 
 Custom roles can be created via [CLI](/azure/role-based-access-control/custom-roles-cli) or [PowerShell](/azure/role-based-access-control/custom-roles-powershell)
 
-> [!WARNING]
-> The out of the box [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles) role has permissions to delete file evidence.  To ensure that the file evidence hasn't been changed, use [Azure Immutable Storage](/azure/storage/blobs/immutable-storage-overview)
-1. Assign the users of device control to that role
+> [!TIP]
+> The out of the box role [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles/storage) has delete permissions for the container, which is not required to store device control feature evidence.  The out of the box role [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles/storage) lacks the write permission required.  This is why a custom role is recommended.
+> [!IMPORTANT]
+> To ensure that the integrity of the file evidence use [Azure Immutable Storage](/azure/storage/blobs/immutable-storage-overview)
+1. Assign the users of device control to that *Device Control Evidence Data Provider*
 
 1. Set the `RemoteStorageFileEvent` to the URL of the Azure Blob Storage container.
 
