@@ -353,9 +353,7 @@ The **Email** view shows a details table. You can sort the entries by clicking o
 
 When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
-<!--- When you select one or more entries from the list by selecting the check box next to the first column, **Message actions** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
-
-:::image type="content" source="/defender/media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-threat-explorer.png" alt-text="Screenshot of the Email tab of the All email view in Threat Explorer showing a selected message and the available actions in Message actions." lightbox="/defender/media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-threat-explorer.png"::: --->
+:::image type="content" source="/defender/media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="/defender/media/te-rtd-all-email-view-take-action.png":::
 
 In the **Subject** value for the entry, the :::image type="icon" source="/defender/media/m365-cc-sc-open-icon.png" border="false"::: **Open in new window** action is available. This action opens the message in the [Email entity page](mdo-email-entity-page.md).
 
@@ -793,7 +791,7 @@ The following table shows the columns that are available in Threat Explorer and 
 
 When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
-<!--- When you select one or more entries from the list by selecting the check box next to the first column, **Message actions** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation). --->
+:::image type="content" source="/defender/media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="/defender/media/te-rtd-all-email-view-take-action.png":::
 
 When you click on the **Subject** or **Recipient** values in an entry, details flyouts open. These flyouts are described in the following subsections.
 
@@ -1080,7 +1078,7 @@ The following table shows the columns that are available in Threat Explorer and 
 
 When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
-<!--- When you select one or more entries from the list by selecting the check box next to the first column, **Message actions** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation). --->
+:::image type="content" source="/defender/media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="/defender/media/te-rtd-all-email-view-take-action.png":::
 
 When you click on the **Subject** or **Recipient** values in an entry, details flyouts open. These flyouts are described in the following subsections.
 
