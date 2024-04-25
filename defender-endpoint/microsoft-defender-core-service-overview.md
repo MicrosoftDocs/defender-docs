@@ -34,7 +34,7 @@ The Microsoft Defender Core service is releasing with [Microsoft Defender Antivi
     
   - Mid June 2024 to U.S. Government customers running Windows clients and Windows Servers.
     
-If you are using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you do not need to add any additional URL's.
+If you are using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you do not need to add any additional URLs.
 
 If you are using the Microsoft Defender for Endpoint **standard** device connectivity experience:
 
