@@ -7,7 +7,7 @@ f1.keywords:
   - NOCSH
 ms.author: dansimp
 author: dansimp
-ms.date: 07/09/2021
+ms.date: 04/26/2024
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -36,7 +36,7 @@ Before enabling Microsoft Defender for Endpoint, be sure you understand the arch
 
 The following diagram illustrates Microsoft Defender for Endpoint architecture and integrations.
 
-:::image type="content" source="/defender/media/defender/m365-defender-endpoint-architecture.png" alt-text="The steps for adding Microsoft Defender for Office to the Defender evaluation environment" lightbox="/defender/media/defender/m365-defender-endpoint-architecture.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-endpoint-architecture.svg" alt-text="A diagram showing the steps for adding Microsoft Defender for Office to the Defender XDR evaluation environment." lightbox="/defender/media/defender/m365-defender-endpoint-architecture.svg":::
 
 The following table describes the illustration.
 
