@@ -61,19 +61,19 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 
 ### Step 1: Approve system extensions
 
-1. In Microsoft Defender portal, go to **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
-
-   This profile is needed for Big Sur (11) or later. It is ignored on older macOS since they use the kernel extension.
+1. In the [Intune admin center](https://intune.microsoft.com), go to **Devices**, and under **Manage Devices**, select **Configuration**.
 
 1. Under **Configuration profiles**, select **Create Profile**.
+
+   This profile is needed for Big Sur (11) or later. It is ignored on older versions of macOS, because they use the kernel extension.
+
+1. On the **Policies** tab, select **Create** > **New Policy**. 
 
 1. Under **Platform**, select **macOS**.
 
 1. Under **Profile type**, select **Templates**.
 
-1. Under **Template name**, select **Extensions**.
-
-1. Select **Create**.
+1. Under **Template name**, select **Extensions**, and then select **Create**.
 
 1. On the **Basics** tab, **Name** the profile. For example, `SysExt-prod-macOS-Default-MDE`.
 
@@ -87,6 +87,8 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
     |`com.microsoft.wdav.netext`|`UBF8T346G9`|
 
     :::image type="content" source="media/mac-system-extension-intune2.png" alt-text="The settings of the system's extension" lightbox="media/mac-system-extension-intune2.png":::
+
+   Then select **Next**.
 
 1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or All Users and All devices.
 
