@@ -49,4 +49,4 @@ Attack simulation training lets you run benign attack simulations on your organi
 
 ## Learn More
 
-Full guidance can be found at [Simulation automations for Attack simulation training - Office 365 | Microsoft Docs](/defender-office-365/attack-simulation-training-simulation-automations).
+Full guidance can be found at [Simulation automations for Attack simulation training - Office 365 | Microsoft Docs](../attack-simulation-training-simulation-automations.md).
