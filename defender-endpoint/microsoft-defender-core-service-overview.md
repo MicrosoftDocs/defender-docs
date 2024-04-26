@@ -100,14 +100,14 @@ Q: Can I enforce keeping the Microsoft Defender Core service running as an Admin
 
 A: You can enforce it by using any of these management tools:
 
-- Configuration Manager Co-Management
+- Configuration Manager co-management
 - Group Policy
-- Powershell
+- PowerShell
 - Registry
 
-### Use Configuration Manager Co-Management (ConfigMgr, formerly MEMCM/SCCM) to update the policy for Microsoft Defender Core service
+### Use Configuration Manager co-management (ConfigMgr, formerly MEMCM/SCCM) to update the policy for Microsoft Defender Core service
 
-Use Microsoft [Configuration Manager](/mem/configmgr/core/understand/introduction) to update the policy for Microsoft Defender Core service Configuration Manager has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network
+Use Microsoft [Configuration Manager](/mem/configmgr/core/understand/introduction) to update the policy for Microsoft Defender Core service Configuration Manager has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network.
 
 1. Open the Microsoft Configuration Manager console. Select Software Library > Scripts > Create Script.
 
@@ -160,8 +160,8 @@ Add-Content -Path $LogFile -Value "------------------------------------
 $ExecutionTime - Execution Ends -------------------------------------------"
 ```
 
-3. When adding a new script, you must select and approve it. The approval state will change from "Waiting for approval" to "Approved".
-4. Once approved, right-click a single device or device collection and select Run script.
+3. When adding a new script, you must select and approve it. The approval state will change from *Waiting for approval* to *Approved*. Once approved, right-click a single device or device collection, and select **Run script**.
+
 5. On the script page of the Run Script wizard, choose your script from the list (Microsoft Defender Core service enforcement in our example). Only approved scripts are displayed. Select Next and complete the wizard.
 
 ### Use Group Policy Editor to update Group Policy for Microsoft Defender Core service
