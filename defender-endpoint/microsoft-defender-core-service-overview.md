@@ -110,7 +110,7 @@ A: You can enforce it by using any of these management tools:
 
 ### Use Configuration Manager Co-Management (ConfigMgr, formerly MEMCM/SCCM) to update the policy for Microsoft Defender Core service.
 
-Use Microsoft [Configuration Manager](https://learn.microsoft.com/mem/configmgr/core/understand/introduction) to update the policy for Microsoft Defender Core service Configuration Manager has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network
+Use Microsoft [Configuration Manager](/mem/configmgr/core/understand/introduction) to update the policy for Microsoft Defender Core service Configuration Manager has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network
 
 1. Open the Microsoft Configuration Manager console. Select Software Library > Scripts > Create Script.
 
