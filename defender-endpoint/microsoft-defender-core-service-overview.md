@@ -110,11 +110,11 @@ A: Yes, you can enforce it by using any of these management tools:
 
 ### Configuration Manager Co-Management (ConfigMgr, formerly MEMCM/SCCM)
 
-Use Microsoft [Configuration Manager](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fmem%2Fconfigmgr%2Fcore%2Funderstand%2Fintroduction&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170125399%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=WgxfHpdLBPLKKUwhP6cxpW%2FOW90oQEu5%2BUw5Qq9x2vo%3D&reserved=0) to update the policy for Microsoft Defender Core service Configuration Manager has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network
+Use Microsoft [Configuration Manager](https://learn.microsoft.com/mem/configmgr/core/understand/introduction) to update the policy for Microsoft Defender Core service Configuration Manager has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network
 
 1. Open the Microsoft Configuration Manager console. Select Software Library > Scripts > Create Script.
 
-1. Enter the script name (for example, Microsoft Defender Core service enforcement), description (Demo configuration to enable Microsoft Defender Core service settings), language (PowerShell), timeout seconds (180), and then paste in the following "Microsoft Defender Core service enforcement" script example to use as a template.
+2. Enter the script name (for example, Microsoft Defender Core service enforcement), description (Demo configuration to enable Microsoft Defender Core service settings), language (PowerShell), timeout seconds (180), and then paste in the following "Microsoft Defender Core service enforcement" script example to use as a template.
 
 ```powershell
 ######
