@@ -4,7 +4,7 @@ description: Learn about endpoint detection and response in block mode
 author: siosulli
 ms.author: siosulli
 manager: deniseb
-ms.reviewer: pahuijbr
+ms.reviewer: pahuijbr, kausd
 audience: ITPro
 ms.topic: conceptual
 ms.service: defender-endpoint
@@ -14,7 +14,7 @@ ms.custom:
 - next-gen
 - mde-edr
 - admindeeplinkDEFENDER
-ms.date: 04/11/2024
+ms.date: 04/26/2024
 ms.collection: 
 - m365-security
 - tier2
@@ -36,7 +36,7 @@ search.appverid: met150
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
-This recommendation is primarily for devices using an active non-Microsoft antivirus solution (with Microsoft Defender Antivirus in passive mode). There is little benefit to enabling EDR in block mode when Microsoft Defender Antivirus is the primary antivirus solution on devices.
+This article describes EDR in block mode, which helps protect devices that are running a non-Microsoft antivirus solution (with Microsoft Defender Antivirus in passive mode).
 
 ## What is EDR in block mode?
 
