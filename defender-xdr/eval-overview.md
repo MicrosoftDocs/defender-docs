@@ -95,7 +95,7 @@ Microsoft Defender XDR is made up of these security technologies, operating in t
 
 The diagram below illustrates high-level architecture for key Microsoft Defender XDR components and integrations. *Detailed* architecture for each Defender component, and use-case scenarios, are given throughout this series of articles.
 
-:::image type="content" source="/defender/media/defender/m365-defender-eval-architecture.svg" alt-text="A diagram showing the high-level architecture of the Microsoft Defender portal." lightbox="/defender/media/defender/m365-defender-eval-architecture.svg":::
+:::image type="content" source="/defender/media/defender/m365-defender-eval-architecture.svg" alt-text="A diagram showing the high-level architecture of Microsoft Defender XDR." lightbox="/defender/media/defender/m365-defender-eval-architecture.svg":::
 
 In this illustration:
 
@@ -122,7 +122,7 @@ Additional optional architecture components not included in this illustration:
 
 Microsoft recommends enabling the components of Microsoft 365 in the order illustrated:
 
-:::image type="content" source="/defender/media/defender/m365-defender-eval-process.png" alt-text="A diagram showing the high-level evaluation process in the Microsoft Defender portal." lightbox="/defender/media/defender/m365-defender-eval-process.png":::
+:::image type="content" source="/defender/media/defender/m365-defender-eval-process.png" alt-text="A diagram showing the high-level evaluation process for Microsoft Defender XDR." lightbox="/defender/media/defender/m365-defender-eval-process.png":::
 
 The following table describes this illustration.
 
