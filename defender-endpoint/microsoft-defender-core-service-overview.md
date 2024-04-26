@@ -86,7 +86,7 @@ The following table summarizes where you can view Microsoft Defender Antivirus p
 
 To learn more about the Microsoft Defender Core service configurations and experimentation (ECS), see [Microsoft Defender Core service configurations and experimentation](microsoft-defender-core-service-configurations-and-experimentation.md).
 
-Frequently Asked Questions (FAQ's):
+#### Frequently Asked Questions (FAQ's):
 
 Q: What's the recommendation for Microsoft Defender Core service?
 
@@ -98,7 +98,7 @@ A: Please review [Microsoft Defender for Endpoint data storage and privacy](/mic
 
 Q: Can I enforce keeping the Microsoft Defender Core service running as an Administrator?
 
-A: Yes, you can enforce it by using any of these management tools:
+A: You can enforce it by using any of these management tools:
 
 - Configuration Manager Co-Management
 
@@ -171,29 +171,29 @@ $ExecutionTime - Execution Ends -------------------------------------------"
 
 1. Download the latest Microsoft Defender Group Policy Administrative Templates from [here](https://github.com/YongRhee-MSFT/Microsoft-Defender-Antivirus-Group-Policy-Administrative-Templates).
 
-2. Setup the Domain Controller [Central Repository](https://learn.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store) 
+1. Setup the Domain Controller [Central Repository](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) 
 
-Copy the .admx and the .adml to the En-US folder.
-
+> [!NOTE]
+> Copy the .admx, and separately the .adml to the En-US folder.
 Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc
 
 Computer Configuration -> Administrative Templates -> Windows Components -> Microsoft Defender Antivirus
 
 - Turn on ECS integration for Defender core service  
-  ```
+  ```md
   Not configured or enabled (default), the Microsoft Defender core service will use ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software.
-
+  
   Disabled, the Microsoft Defender core service will stop using the Experimentation and Configuration Service (ECS) to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. For false positives, fixes will be delivered via "Security Intelligence updates", and for Platform and/or Engine updates, fixes will be delivered thru Microsoft Update, Microsoft Update Catalog or WSUS.  
   ```
+  
+- Turn on telemetry for Defender core service
 
-  - Turn on telemetry for Defender core service
-
-  ```
+  ```md
   Not configured or enabled (default), the Microsoft Defender core service will collect telemetry from Microsoft Defender Antivirus and other Defender software  
-
+  
   Disabled, the Microsoft Defender core service will stop collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.
-```
-
+  ```
+  
 ### Use Powershell to update the policies for Microsoft Defender Core service.
 Start, Powershell (Run as administrator)
 
@@ -201,7 +201,7 @@ Set-MpPreferences -DisableCoreServiceECSIntegration $true or $false
  e.g.
 
 
-```
+```powershell
 Set-MpPreferences -DisableCoreServiceECSIntegration $false 
 ```
 
@@ -209,7 +209,7 @@ Set-MpPreferences -DisableCoreServiceTelemetry $true or $false
  e.g.
 
 
-```
+```powershell
 Set-MpPreferences -DisableCoreServiceTelemetry $false
 ```
 
