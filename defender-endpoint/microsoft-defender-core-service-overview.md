@@ -116,7 +116,7 @@ Use Microsoft [Configuration Manager](https://nam06.safelinks.protection.outloo
 
 1. Enter the script name (for example, Microsoft Defender Core service enforcement), description (Demo configuration to enable Microsoft Defender Core service settings), language (PowerShell), timeout seconds (180), and then paste in the following "Microsoft Defender Core service enforcement" script example to use as a template.
 
-```
+```powershell
 ######
 #ConfigMgr Management of Microsoft Defender Core service enforcement
 #"Microsoft Defender Core service is a new service to help keep the reliability and performance of Microsoft Defender Antivirus.
@@ -163,15 +163,17 @@ Add-Content -Path $LogFile -Value "------------------------------------
 $ExecutionTime - Execution Ends -------------------------------------------"
 ```
 
-1. When adding a new script, you must select and approve it. The approval state will change from "Waiting for approval" to "Approved".
-2. Once approved, right-click a single device or device collection and select Run script.
-3. On the script page of the Run Script wizard, choose your script from the list (Microsoft Defender Core service enforcement in our example). Only approved scripts are displayed. Select Next and complete the wizard.
+3. When adding a new script, you must select and approve it. The approval state will change from "Waiting for approval" to "Approved".
+4. Once approved, right-click a single device or device collection and select Run script.
+5. On the script page of the Run Script wizard, choose your script from the list (Microsoft Defender Core service enforcement in our example). Only approved scripts are displayed. Select Next and complete the wizard.
 
-### Group Policy
+### Use Group Policy Editor to update Group Policy for Microsoft Defender Core service.
 
-1. Download the latest Microsoft Defender Group Policy Administrative Templates from [here](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FYongRhee-MSFT%2FMicrosoft-Defender-Antivirus-Group-Policy-Administrative-Templates&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170132859%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=ZCeqpGpoSPoLlbsDttbCUtTxY1FgF1VTdQqP4pyFVEw%3D&reserved=0).
+1. Download the latest Microsoft Defender Group Policy Administrative Templates from [here](https://github.com/YongRhee-MSFT/Microsoft-Defender-Antivirus-Group-Policy-Administrative-Templates).
 
-1. Setup the Domain Controller [Central Repository](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Ftroubleshoot%2Fwindows-client%2Fgroup-policy%2Fcreate-and-manage-central-store&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170140405%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=V4O9CmhHIeh8co474xWsg6qw%2B4pnhZu52KBV6v0W9Fc%3D&reserved=0) Copy the .admx and the .adml to the En-US folder.
+2. Setup the Domain Controller [Central Repository](https://learn.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store) 
+
+Copy the .admx and the .adml to the En-US folder.
 
 Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc
 
