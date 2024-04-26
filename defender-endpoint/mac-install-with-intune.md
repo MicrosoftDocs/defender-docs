@@ -187,7 +187,7 @@ To configure background services:
 
 1. Select **Create**.
 
-1. On the **Basics** tab, **Name** the profile. For example, `FullDiskAccess-prod-macOS-Default-MDE`.
+1. On the **Basics** tab, **Name** the profile. For example, `BackgroundServices-prod-macOS-Default-MDE`.
 
 1. Select **Next**.
 
