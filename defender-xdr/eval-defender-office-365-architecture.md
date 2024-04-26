@@ -32,7 +32,7 @@ Before enabling Defender for Office 365, be sure you understand the architecture
 
 ## Understand the architecture
 
-The following diagram illustrates baseline architecture for Microsoft Defender for Office, which can include a third-party SMTP gateway or on-premises integration. Hybrid coexistence scenarios (that is, production mailboxes are both on-premise and online) require more complex configurations and are not covered in this article or evaluation guidance.
+The following diagram illustrates baseline architecture for Microsoft Defender for Office 365, which can include a third-party SMTP gateway or on-premises integration. Hybrid coexistence scenarios (that is, production mailboxes are both on-premise and online) require more complex configurations and are not covered in this article or evaluation guidance.
 
 :::image type="content" source="/defender/media/defender/m365-defender-office-architecture.svg" alt-text="A diagram for the architecture for the Microsoft Defender for Office 365." lightbox="/defender/media/defender/m365-defender-office-architecture.svg":::
 
@@ -65,7 +65,7 @@ The following table identified key concepts that are important to understand whe
 |Safe Attachments for SharePoint, OneDrive, and Microsoft Teams|In addition, Safe Attachments for SharePoint, OneDrive, and Microsoft Teams offers an extra layer of protection for files that have been uploaded to cloud storage repositories.|[Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](/defender-office-365/safe-attachments-for-spo-odfb-teams-about)|
 |Safe Links|Safe Links is a feature that provides URL scanning and rewriting within inbound email messages and offers verification of those links before they are delivered or clicked.|[Safe Links in Microsoft Defender for Office 365](/defender-office-365/safe-links-about)|
 
-For more detailed information about the capabilities included with Microsoft Defender for Office, see [Microsoft Defender for Office 365 service description](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
+For more detailed information about the capabilities included with Microsoft Defender for Office 365, see [Microsoft Defender for Office 365 service description](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
 
 ## Review architecture requirements
 
