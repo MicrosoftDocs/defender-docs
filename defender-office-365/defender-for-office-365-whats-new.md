@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 4/3/2024
+ms.date: 4/26/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -45,14 +45,15 @@ For more information on what's new with other Microsoft Defender security produc
 - :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
   - SecOps personnel can now create tenant-level block entries on URLs and files via the [Tenant Allow/Block List](tenant-allow-block-list-about.md) directly from Threat Explorer.
   - For 100 or fewer messages selected in Threat Explorer, SecOps personnel can take multiple actions on the selected messages from the same page. For example:
-    - Purge email messages or Propose email remediation.
+    - Purge email messages or propose email remediation.
     - Submit messages to Microsoft.
     - Trigger investigations.
     - Block entries in the Tenant Allow/Block List.
   - Actions are contextual based on the latest delivery location of the message, but SecOps personnel can use the **Show all response actions** toggle to allow all available actions.
-- Only email purge and propose remediation options are possible for bulk action over 100.
+  - For 101 or more messages selected, only email purge and propose remediation options are available.
 
-  Note: A new panel allows SecOps to look for IoCs at the Tenant level block action easily.
+  > [!TIP]
+  > A new panel allows SecOps personnel to look for indicators of compromise at the tenant level, and the block action is readily available.
   
   For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
