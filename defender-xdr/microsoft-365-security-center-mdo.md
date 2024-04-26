@@ -167,7 +167,7 @@ Also included is a link to the Security & Compliance Center for comparison. The 
 - [Redirecting Security & Compliance Center to The Microsoft Defender portal](microsoft-365-security-center-mdo.md)
 - [The Action center](./m365d-action-center.md)
 - [Email & collaboration alerts](/Microsoft-365/compliance/alert-policies#default-alert-policies)
-- [Custom detection rules](/defender-endpoint/custom-detection-rules)
+- [Custom detection rules](custom-detection-rules.md)
 - [Create a phishing attack simulation](/defender-office-365/attack-simulation-training-simulations) and [create a payload for training your people](/defender-office-365/attack-simulation-training-payloads)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

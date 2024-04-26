@@ -99,9 +99,9 @@ For more information on the Elastic connector, see: [Microsoft M365 Defender | E
 
 ## Ingesting streaming event data via Event Hubs
 
-First you need to stream events from your Microsoft Entra tenant to your Event Hubs or Azure Storage Account. For more information, see [Streaming API](/defender/streaming-api).
+First you need to stream events from your Microsoft Entra tenant to your Event Hubs or Azure Storage Account. For more information, see [Streaming API](streaming-api.md).
 
-For more information on the event types supported by the Streaming API, see [Supported streaming event types](/defender/supported-event-types).
+For more information on the event types supported by the Streaming API, see [Supported streaming event types](supported-event-types.md).
 
 ### Splunk
 

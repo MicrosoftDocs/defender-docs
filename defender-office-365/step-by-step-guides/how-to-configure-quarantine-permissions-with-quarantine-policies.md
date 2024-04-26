@@ -39,7 +39,7 @@ Our custom policies give admins the ability to decide what items their users can
 1. It's **strongly recommended** that malware and high confidence phish items be assigned to **AdminOnlyPolicy**, regular confidence phish items be assigned *limited access with request release*, while bulk and spam can be left as full access for users.
 
 > [!IMPORTANT]
-> For more information on how granular custom policies can be created, see [Quarantine policies - Office 365 | Microsoft Docs](/defender-office-365/quarantine-policies).
+> For more information on how granular custom policies can be created, see [Quarantine policies - Office 365 | Microsoft Docs](../quarantine-policies.md).
 
 ## Assigning quarantine policies and enabling notification with organization branding
 
@@ -66,4 +66,4 @@ When your security team has decided on which categories of items that users can 
 
 ## More information
 
-Learn more about organization branding and notification settings here [Quarantine policies](/defender-office-365/quarantine-policies).
+Learn more about organization branding and notification settings here [Quarantine policies](../quarantine-policies.md).

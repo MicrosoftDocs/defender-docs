@@ -39,7 +39,7 @@ Run through this list of questions and tasks to discover the extent of the attac
 
 * Which user accounts might be compromised?
   * Which accounts were used to deliver the payload?
-* Which [onboarded](/defender-endpoint/investigate-machines.md) and [discovered](/defender-endpoint/device-discovery) devices are affected and how?
+* Which [onboarded](/defender-endpoint/investigate-machines) and [discovered](/defender-endpoint/device-discovery) devices are affected and how?
   * Originating devices
   * Impacted devices
   * Suspicious devices

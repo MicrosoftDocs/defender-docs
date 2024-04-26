@@ -31,6 +31,7 @@ You can also get product updates and important notifications through the [messag
 
 ## April 2024
 
+- (Preview) **Endpoint security policies** page in multitenant management is now available. Security administrators can manage security settings on their tenants' devices through the page. For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md).
 - (Preview) The **unified security operations platform** in the Microsoft Defender portal is now available. This release brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, and Microsoft Copilot in Microsoft Defender. For more information, see the following resources:
 
   - Blog announcement: [Unified security operations platform ready to revolutionize protection and efficiency](https://aka.ms/unified-soc-announcement)
@@ -46,6 +47,7 @@ You can also get product updates and important notifications through the [messag
 ## February 2024
 
 - (GA) **Dark mode** is now available in the Microsoft Defender portal. In the Defender portal, on the top right-hand side of the homepage, select **Dark mode**. Select **Light mode** to change the color mode back to the default.
+
 - (GA) **Assigning severity to incidents**, **assigning an incident to a group**, and the ***go hunt*** option from the attack story graph are now generally available. Guides to learn how to [assign or change incident severity](manage-incidents.md#assign-or-change-incident-severity) and [assign an incident to a group](manage-incidents.md#assign-an-incident) are in the [Manage incidents](manage-incidents.md) page. Learn how you can use the *go hunt* option by exploring [attack story](investigate-incidents.md#attack-story).
 
 - (Preview) **[Custom detection rules in Microsoft Graph security API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true#custom-detections)** are now available.  Create advanced hunting custom detection rules specific to your org to proactively monitor for threats and take action.
@@ -136,7 +138,7 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) The [unified Assets tab in the Incidents page](investigate-incidents.md) is now generally available.
 
-- Microsoft is using a new weather-based naming taxonomy for threat actors. This new naming schema will provide more clarity and will be easier to reference. [Learn more about the new naming taxonomy](/defender/microsoft-threat-actor-naming).
+- Microsoft is using a new weather-based naming taxonomy for threat actors. This new naming schema will provide more clarity and will be easier to reference. [Learn more about the new threat actor taxonomy](microsoft-threat-actor-naming.md).
 
 ## March 2023
 
@@ -258,7 +260,7 @@ The security operations team can view all actions pending approval, and the stip
 
   Threat tags help you focus on specific threat categories and review the most relevant reports.
 
-- (Preview) [Streaming API](/defender-endpoint/raw-data-export)
+- (Preview) [Streaming API](/defender-endpoint/api/raw-data-export)
 
   Microsoft Defender XDR supports streaming all the events available through Advanced Hunting to an Event Hubs and/or Azure storage account.
 
