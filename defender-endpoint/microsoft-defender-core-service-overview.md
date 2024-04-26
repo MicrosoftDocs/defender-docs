@@ -210,12 +210,12 @@ Set-MpPreferences -DisableCoreServiceTelemetry $true or $false
 Set-MpPreferences -DisableCoreServiceTelemetry $false
 ```
 
-$false = enabled  
-$true = disabled|
+`$false` = enabled  
+`$true` = disabled|
 
 ### Registry
 
-Start, Regedit.exe (Run as administrator) 
+Select **Start**, and then open Regedit.exe as an administrator.
 
 HKLM\Software\Policies\Microsoft\Windows Defender\Features
 
