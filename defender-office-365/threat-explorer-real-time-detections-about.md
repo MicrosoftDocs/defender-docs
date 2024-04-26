@@ -351,9 +351,9 @@ The **Email** view shows a details table. You can sort the entries by clicking o
 >
 > Customized column settings are saved per user. Customized column settings in Incognito or InPrivate browsing mode are saved until you close the web browser.
 
-When you select one or more entries from the list by selecting the check box next to the first column, **Message actions** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
-:::image type="content" source="/defender/media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-threat-explorer.png" alt-text="Screenshot of the Email tab of the All email view in Threat Explorer showing a selected message and the available actions in Message actions." lightbox="/defender/media/te-rtd-all-email-view-details-area-email-tab-message-selected-message-actions-threat-explorer.png":::
+:::image type="content" source="/defender/media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="/defender/media/te-rtd-all-email-view-take-action.png":::
 
 In the **Subject** value for the entry, the :::image type="icon" source="/defender/media/m365-cc-sc-open-icon.png" border="false"::: **Open in new window** action is available. This action opens the message in the [Email entity page](mdo-email-entity-page.md).
 
@@ -369,7 +369,7 @@ The following actions are available at the top of the Email summary panel for Th
 
 - :::image type="icon" source="/defender/media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**
 - :::image type="icon" source="/defender/media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View header**
-- :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Remediate using Take action](threat-explorer-threat-hunting.md#remediate-using-take-action).
+- :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 - :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options**:
   - :::image type="icon" source="/defender/media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **Email preview**¹ ²
   - :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Download email**¹ ² ³
@@ -789,7 +789,9 @@ The following table shows the columns that are available in Threat Explorer and 
 >
 > Customized column settings are saved per user. Customized column settings in Incognito or InPrivate browsing mode are saved until you close the web browser.
 
-When you select one or more entries from the list by selecting the check box next to the first column, **Message actions** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+
+:::image type="content" source="/defender/media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="/defender/media/te-rtd-all-email-view-take-action.png":::
 
 When you click on the **Subject** or **Recipient** values in an entry, details flyouts open. These flyouts are described in the following subsections.
 
@@ -1074,7 +1076,9 @@ The following table shows the columns that are available in Threat Explorer and 
 >
 > Customized column settings are saved per user. Customized column settings in Incognito or InPrivate browsing mode are saved until you close the web browser.
 
-When you select one or more entries from the list by selecting the check box next to the first column, **Message actions** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+When you select one or more entries from the list by selecting the check box next to the first column, the :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available. For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+
+:::image type="content" source="/defender/media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="/defender/media/te-rtd-all-email-view-take-action.png":::
 
 When you click on the **Subject** or **Recipient** values in an entry, details flyouts open. These flyouts are described in the following subsections.
 
