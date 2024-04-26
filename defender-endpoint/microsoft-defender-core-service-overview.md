@@ -108,7 +108,7 @@ A: Yes, you can enforce it by using any of these management tools:
 
 - Registry
 
-### Configuration Manager Co-Management (ConfigMgr, formerly MEMCM/SCCM)
+### Use Configuration Manager Co-Management (ConfigMgr, formerly MEMCM/SCCM) to update the policy for Microsoft Defender Core service.
 
 Use Microsoft [Configuration Manager](https://learn.microsoft.com/mem/configmgr/core/understand/introduction) to update the policy for Microsoft Defender Core service Configuration Manager has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network
 
@@ -182,17 +182,19 @@ Computer Configuration -> Administrative Templates -> Windows Components -> Micr
 - Turn on ECS integration for Defender core service  
   ```
   Not configured or enabled (default), the Microsoft Defender core service will use ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software.
-  
-  
-  Disabled, the Microsoft Defender core service will stop using the Experimentation and Configuration Service (ECS) to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. For false positives, fixes will be delivered via "Security Intelligence updates", and for Platform and/or Engine updates, fixes will be delivered thru Microsoft Update, Microsoft Update Catalog or WSUS.
-  ```- Turn on telemetry for Defender core service  
+
+  Disabled, the Microsoft Defender core service will stop using the Experimentation and Configuration Service (ECS) to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. For false positives, fixes will be delivered via "Security Intelligence updates", and for Platform and/or Engine updates, fixes will be delivered thru Microsoft Update, Microsoft Update Catalog or WSUS.  
+  ```
+
+  - Turn on telemetry for Defender core service
+
   ```
   Not configured or enabled (default), the Microsoft Defender core service will collect telemetry from Microsoft Defender Antivirus and other Defender software  
-  
-  
-  Disabled, the Microsoft Defender core service will stop collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.
-  ```### Powershell
 
+  Disabled, the Microsoft Defender core service will stop collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.
+```
+
+### Use Powershell to update the policies for Microsoft Defender Core service.
 Start, Powershell (Run as administrator)
 
 Set-MpPreferences -DisableCoreServiceECSIntegration $true or $false  
