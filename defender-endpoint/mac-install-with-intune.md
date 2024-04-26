@@ -147,7 +147,7 @@ To configure Full Disk Access:
 
 1. Select **Create**.
 
-1. On the **Basics** tab, **Name** the profile. For example, `FullDiskAccess-prod-macOS-Default-MDE`.
+1. On the **Basics** tab, **Name** the profile. For example, `Background_Services-prod-macOS-Default-MDE`.
 
 1. Select **Next**.
 
@@ -226,7 +226,7 @@ To configure notifications:
 
 1. Select **Create**.
 
-1. On the **Basics** tab, **Name** the profile. For example, `FullDiskAccess-prod-macOS-Default-MDE`.
+1. On the **Basics** tab, **Name** the profile. For example, `BackgroundServices-prod-macOS-Default-MDE`.
 
 1. Select **Next**.
 
@@ -294,7 +294,7 @@ This profile is used to update the Microsoft Defender for Endpoint on macOS via 
 
 For more information, see [Deploy updates for Microsoft Defender for Endpoint on macOS](mac-updates.md).
 
-Download [AutoUpdate2.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/settings/microsoft_auto_update/com.microsoft.autoupdate2.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
+Download [AutoUpdate2.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/settings/microsoft_auto_update/com.microsoft.autoupdate2.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/settings/microsoft_auto_update).
 
 > [!NOTE]
 > The sample AutoUpdate2.mobileconfig from the GitHub repository has it set to Current Channel (Production).
