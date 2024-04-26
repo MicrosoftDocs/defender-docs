@@ -63,7 +63,7 @@ User reported messages are also available to admins in the following locations i
 
 In Defender for Office 365, admins can also submit messages from the [Email entity page](mdo-email-entity-page.md#actions-on-the-email-entity-page) and from [Alerts](/defender-xdr/investigate-alerts) in the Defender portal.
 
-Admins can use the sample submission portal at <https://www.microsoft.com/wdsi/filesubmission> to submit other suspected files to Microsoft for analysis. For more information, see [Submit files for analysis](/defender/submission-guide).
+Admins can use the sample submission portal at <https://www.microsoft.com/wdsi/filesubmission> to submit other suspected files to Microsoft for analysis. For more information, see [Submit files for analysis](/defender-xdr/submission-guide).
 
 > [!TIP]
 > In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), admins can submit messages to Microsoft for analysis. The messages are analyzed for email authentication and policy checks only. Payload reputation, detonation, and grader analysis aren't done for compliance reasons (data isn't allowed to leave the organization boundary). If you report a message, URL, or email attachment to Microsoft from one of these organizations, you get the following message in the result details:

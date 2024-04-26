@@ -127,7 +127,7 @@ Defender for Endpoint includes Microsoft Secure Score for Devices to help you dy
 
 <a name="mte"></a>
 
-**[Microsoft Threat Experts](/defender/microsoft-threat-experts)**
+**[Microsoft Threat Experts](endpoint-attack-notifications.md)**
 
 Microsoft Defender for Endpoint's new managed threat hunting service provides proactive hunting, prioritization, and additional context and insights that further empower Security operation centers (SOCs) to identify and respond to threats quickly and accurately.
 

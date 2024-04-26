@@ -60,7 +60,7 @@ You can receive Defender Experts Notifications from Defender Experts through the
 
 - The Microsoft Defender portal's [Incidents](https://security.microsoft.com/incidents) page
 - The Microsoft Defender portal's [Alerts](https://security.microsoft.com/alerts) page
-- OData alerting [API](/defender-endpoint/get-alerts.md) and [REST API](/defender-endpoint/configure-siem)
+- OData alerting [API](/defender-endpoint/api/get-alerts) and [REST API](/defender-endpoint/configure-siem)
 - [DeviceAlertEvents](/defender-xdr/advanced-hunting-migrate-from-mde#map-devicealertevents-table) table in Advanced hunting
 - Your email if you [configure an email notifications rule](/defender-xdr/onboarding-defender-experts-for-hunting#set-up-defender-experts-email-notifications)
 
