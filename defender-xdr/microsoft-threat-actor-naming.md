@@ -166,7 +166,7 @@ Read our announcement about the new taxonomy for more information: [https://aka.
 
 ## Putting intelligence into the hands of security professionals
 
-[Intel profiles in Microsoft Defender Threat Intelligence](/defender/defender-threat-intelligence) bring crucial insights about threat actors. These insights enable security teams to get the context they need as they prepare for and respond to threats.
+[Intel profiles in Microsoft Defender Threat Intelligence](defender-threat-intelligence.md) bring crucial insights about threat actors. These insights enable security teams to get the context they need as they prepare for and respond to threats.
 
 Additionally, the Microsoft Defender Threat Intelligence Intel Profiles API provides the most up-to-date threat actor infrastructure visibility in the industry today. Updated information is crucial in enabling threat intelligence and security operations (SecOps) teams to streamline their advanced threat hunting and analysis workflows. Learn more about this API in the documentation: [Use the threat intelligence APIs in Microsoft Graph (preview)](/graph/api/resources/security-threatintelligence-overview).
 

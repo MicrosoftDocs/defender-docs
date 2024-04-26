@@ -54,7 +54,7 @@ The name of the user (Alex in this scenario) appears under Eligible assignments 
 > [!NOTE]
 > For a quick review of Privileged Identity Management see [this video](https://www.youtube.com/watch?v=VQMAg0sa_lE).
 
-:::image type="content" source="/defender/media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.png" alt-text="The Role setting details - Security Reader page" lightbox="/defender/media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.png":::
+:::image type="content" source="/defender/media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.PNG" alt-text="The Role setting details - Security Reader page" lightbox="/defender/media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.PNG":::
 
 ***Step 2***. Create the required second (elevated) permission group for other tasks and assign eligibility.
 
@@ -68,7 +68,7 @@ Use one of the following methods:
 
 Or
 
-- Create a custom role in Microsoft Defender XDR Unified role based access control (RBAC). For information and instructions, see [Start using Microsoft Defender XDR Unified RBAC model](/defender/manage-rbac#start-using-microsoft-defender-xdr-unified-rbac-model).
+- Create a custom role in Microsoft Defender XDR Unified role based access control (RBAC). For information and instructions, see [Start using Microsoft Defender XDR Unified RBAC model](/defender-xdr/manage-rbac#start-using-microsoft-defender-xdr-unified-rbac-model).
 
 For either method:
 
@@ -99,7 +99,7 @@ For either method:
 
 ## Test your configuration of PIM with Defender for Office 365
 
-1. Sign in with the test user (Alex), who should have no administrative access within the [Microsoft Defender portal](/defender-xdr/overview-security-center) at this point.
+1. Sign in with the test user (Alex), who should have no administrative access within the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender) at this point.
 2. Navigate to PIM, where the user can activate their day-to-day security reader role.
 3. If you try to purge an email using Threat Explorer, you get an error stating you need more permissions.
 4. PIM a second time into the more elevated role, after a short delay you should now be able to purge emails without issue.

@@ -694,6 +694,11 @@
         items:
         - name: Use Microsoft Intune to manage Microsoft Defender Antivirus
           href: use-intune-config-manager-microsoft-defender-antivirus.md
+        - name: Use Microsoft Defender for Endpoint Security Settings Management to manage
+            Microsoft Defender Antivirus
+          href: mde-security-settings-management.md
+          displayName: Use Microsoft Defender for Endpoint Security Settings Management to
+            manage Microsoft Defender Antivirus MDE Attach MDE Attach v2
         - name: Use Group Policy settings to manage Microsoft Defender Antivirus
           href: use-group-policy-microsoft-defender-antivirus.md
         - name: Use PowerShell cmdlets to manage Microsoft Defender Antivirus
@@ -970,7 +975,7 @@
         - name: How Microsoft identifies malware and PUA
           href: /defender/criteria
         - name: Submit files for analysis
-          href: /defender/submission-guide
+          href: /defender-xdr/submission-guide
         - name: Troubleshoot MSI portal errors caused by admin block
           href: /defender/portal-submission-troubleshooting
         - name: Microsoft virus initiative

@@ -61,7 +61,7 @@ The **Security settings** permission name has been updated to **Core security se
 
 ### Microsoft Defender Vulnerability Management permissions are now integrated with Microsoft Defender XDR Unified role-based access control (RBAC)
 
-You can now control access and grant granular permissions for Microsoft Defender Vulnerability Management as part of the Microsoft Defender XDR Unified RBAC model. For more information, see [Microsoft Defender 365 Unified role-based access control (RBAC)](/defender/manage-rbac.md). You can add the new permissions to a custom role by selecting them from the **Security posture** permissions group when creating the role. For more information, see [Create custom roles with Microsoft Defender XDR Unified RBAC](create-custom-rbac-roles.md).
+You can now control access and grant granular permissions for Microsoft Defender Vulnerability Management as part of the Microsoft Defender XDR Unified RBAC model. For more information, see [Microsoft Defender 365 Unified role-based access control (RBAC)](manage-rbac.md). You can add the new permissions to a custom role by selecting them from the **Security posture** permissions group when creating the role. For more information, see [Create custom roles with Microsoft Defender XDR Unified RBAC](create-custom-rbac-roles.md).
 
 <a name='microsoft-secure-score-permissions-integration-with-microsoft-365-defender-unified-role-based-access-control-rbac-is-now-in-public-preview'></a>
 
@@ -79,7 +79,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - [What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
-- [What's new in Microsoft Defender XDR](/defender/whats-new)
+- [What's new in Microsoft Defender XDR](whats-new.md)
 - [What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)

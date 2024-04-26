@@ -169,8 +169,8 @@ Respond efficiently using Automated investigation and response (AIR) to review, 
 
 Use Advanced hunting to write custom detection rules, proactively inspect events in your environment, and locate threat indicators. Explore raw data in your environment.
 
-- [Build custom detection rules](/defender/custom-detections-overview).
-- [Access shared queries](/defender/advanced-hunting-shared-queries) created by others.
+- [Build custom detection rules](/defender-xdr/custom-detections-overview).
+- [Access shared queries](/defender-xdr/advanced-hunting-shared-queries) created by others.
 
 Watch this video to learn more: [Threat hunting with Microsoft Defender XDR - YouTube](https://www.youtube.com/watch?v=l3OmH4U6XAs&list=PL3ZTgFEc7Lyt1O81TZol31YXve4e6lyQu&index=4).
 

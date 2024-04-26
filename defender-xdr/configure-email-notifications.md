@@ -57,7 +57,7 @@ You can create rules that determine the devices and alert severities to send ema
         > [!NOTE]
         > This information might be processed by recipient mail servers that are not in the geographic location you have selected for your Defender data.
 
-    - **Devices** - Choose whether to notify recipients for alerts on all devices (Global administrator role only) or on selected device groups. For more information, see [Create and manage device groups](/defender-endpoint/machine-groups.md). (If you're using [Defender for Business](/defender-business/mdb-overview), device groups do not apply.)
+    - **Devices** - Choose whether to notify recipients for alerts on all devices (Global administrator role only) or on selected device groups. For more information, see [Create and manage device groups](/defender-endpoint/machine-groups). (If you're using [Defender for Business](/defender-business/mdb-overview), device groups do not apply.)
     - **Alert severity** - Choose the alert severity level.
 
 4. Click **Next**.
@@ -96,7 +96,8 @@ This section lists various issues that you may encounter when using email notifi
 
 ## Related topics
 
-- [Update data retention settings](/defender-endpoint/data-retention-settings)
+- [Update data retention settings](/defender-endpoint/preferences-setup)
 - [Configure advanced features](/defender-endpoint/advanced-features)
 - [Configure vulnerability email notifications](/defender-endpoint/configure-vulnerability-email-notifications)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+
