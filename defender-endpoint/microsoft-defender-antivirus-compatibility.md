@@ -29,6 +29,7 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 **Platforms**
+
 - Windows
 
 Microsoft Defender Antivirus is available on endpoints running the following versions of Windows:
