@@ -4,12 +4,14 @@ description: Learn about Microsoft Defender Antivirus with other security produc
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 12/12/2023
+ms.date: 04/26/2024
 ms.topic: conceptual
 author: siosulli
 ms.author: siosulli
-ms.custom: nextgen
-ms.reviewer: mkaminska, pahuijbr
+ms.custom: 
+- nextgen
+- partner-contribution
+ms.reviewer: pahuijbr, dmcwee
 manager: deniseb
 ms.collection: 
 - m365-security
@@ -27,6 +29,7 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 **Platforms**
+
 - Windows
 
 Microsoft Defender Antivirus is available on endpoints running the following versions of Windows:
@@ -104,6 +107,12 @@ On Windows Server 2019, Windows Server, version 1803 or newer, Windows Server 20
 You can view your protection status in PowerShell by using the command [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus). Check the value for `AMRunningMode`. You should see **Normal**, **Passive**, or **EDR Block Mode** if Microsoft Defender Antivirus is enabled on the endpoint. 
 
 For passive mode to work on endpoints running Windows Server 2016 and Windows Server 2012 R2, those endpoints must be onboarded with the modern, unified solution described in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016). 
+
+
+> [!IMPORTANT]
+> Beginning with [platform version 4.18.2208.0 and later](/defender-endpoint/msda-updates-previous-versions-technical-upgrade-support#september-2022-platform-41822097--engine-11197003), if a server is onboarded to Microsoft Defender for Endpoint, [tamper protection](/editor/MicrosoftDocs/microsoft-365-docs-pr/microsoft-365%2Fsecurity%2Fdefender-endpoint%2Fmicrosoft-defender-antivirus-compatibility.md/main/9a5f8a9f-f5b9-cd00-0d21-171936a25b2b/prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode, but not to passive mode.
+>
+> Note the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is set to active mode, tamper protection prevents it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
 
 On Windows Server 2016, Windows Server 2012 R2, Windows Server version 1803 or newer, Windows Server 2019, and Windows Server 2022, if you're using a non-Microsoft antivirus product on an endpoint that *isn't* onboarded to Microsoft Defender for Endpoint, disable/uninstall Microsoft Defender Antivirus manually to prevent problems caused by having multiple antivirus products installed on a server. However, Defender for Endpoint includes capabilities that further extend the antivirus protection that is installed on your endpoint. If you have Defender for Endpoint, you can benefit from running Microsoft Defender Antivirus alongside another antivirus solution.
 
