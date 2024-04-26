@@ -69,4 +69,4 @@ Given the common scenarios, email remediation can be triggered in three differen
 
 ## More information
 
-[Learn more about email remediation](/defender-office-365/air-review-approve-pending-completed-actions).
+[Learn more about email remediation](../air-review-approve-pending-completed-actions.md).

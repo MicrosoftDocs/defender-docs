@@ -3,7 +3,7 @@ title: Go to the Action center to view and approve your automated investigation 
 description: Use the Action center to view details about automated investigation and approve pending actions
 search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
+f1.keywords:
 - NOCSH
 ms.author: diannegali
 author: diannegali
@@ -11,11 +11,11 @@ ms.localizationpriority: medium
 ms.date: 08/11/2023
 manager: dansimp
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.custom: 
+ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
@@ -40,12 +40,12 @@ The unified Action center ([https://security.microsoft.com/action-center](https:
 
 :::image type="content" source="/defender/media/m3d-action-center-unified.png" alt-text="The unified Action center in the Microsoft Defender portal." lightbox="/defender/media/m3d-action-center-unified.png":::
 
-For example: 
+For example:
 
 - If you were using the Action center in the Microsoft Defender Security Center ([https://securitycenter.windows.com/action-center](https://securitycenter.windows.com/action-center)), try the unified Action center in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
 - If you were already using the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, you'll see several improvements in the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)).
 
-The unified Action center brings together remediation actions across Defender for Endpoint and Defender for Office 365. It defines a common language for all remediation actions and provides a unified investigation experience. Your security operations team has a "single pane of glass" experience to view and manage remediation actions.  
+The unified Action center brings together remediation actions across Defender for Endpoint and Defender for Office 365. It defines a common language for all remediation actions and provides a unified investigation experience. Your security operations team has a "single pane of glass" experience to view and manage remediation actions.
 
 You can use the unified Action center if you have appropriate permissions and one or more of the following subscriptions:
 
@@ -63,7 +63,7 @@ You can navigate to the list of actions pending approval in two different ways:
 
 ## Using the Action center
 
-1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> and sign in. 
+1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> and sign in.
 
 2. In the navigation pane under **Actions and submissions**, choose **Action center**. Or, in the Automated investigation & response card, select **Approve in Action Center**.
 
@@ -89,15 +89,15 @@ You can navigate to the list of actions pending approval in two different ways:
 
 All actions, whether they're pending approval or were already taken, are tracked in the Action center. Available actions include the following:
 
-- Collect investigation package 
-- Isolate device (this action can be undone) 
-- Offboard machine 
-- Release code execution 
-- Release from quarantine 
-- Request sample 
-- Restrict code execution (this action can be undone) 
-- Run antivirus scan 
-- Stop and quarantine 
+- Collect investigation package
+- Isolate device (this action can be undone)
+- Offboard machine
+- Release code execution
+- Release from quarantine
+- Request sample
+- Restrict code execution (this action can be undone)
+- Run antivirus scan
+- Stop and quarantine
 - Contain devices from the network
 
 In addition to remediation actions that are taken automatically as a result of [automated investigations](m365d-autoir.md), the Action center also tracks actions your security team has taken to address detected threats, and actions that were taken as a result of threat protection features in Microsoft Defender XDR. For more information about automatic and manual remediation actions, see [Remediation actions](m365d-remediation-actions.md).
@@ -108,7 +108,7 @@ In addition to remediation actions that are taken automatically as a result of [
 
 | Action source value | Description |
 |:-----|:---|
-| **Manual device action** | A manual action taken on a device. Examples include [device isolation](/defender-endpoint/respond-machine-alerts.md#isolate-devices-from-the-network) or [file quarantine](/defender-endpoint/respond-file-alerts#stop-and-quarantine-files). |
+| **Manual device action** | A manual action taken on a device. Examples include [device isolation](/defender-endpoint/respond-machine-alerts#isolate-devices-from-the-network) or [file quarantine](/defender-endpoint/respond-file-alerts#stop-and-quarantine-files). |
 | **Manual email action** | A manual action taken on email. An example includes soft-deleting email messages or [remediating an email message](/defender-office-365/remediate-malicious-email-delivered-office-365). |
 | **Automated device action** | An automated action taken on an entity, such as a file or process. Examples of automated actions include sending a file to quarantine, stopping a process, and removing a registry key. (See [Remediation actions in Microsoft Defender for Endpoint](/defender-endpoint/manage-auto-investigation#remediation-actions).) |
 | **Automated email action** | An automated action taken on email content, such as an email message, attachment, or URL. Examples of automated actions include soft-deleting email messages, blocking URLs, and turning off external mail forwarding. (See [Remediation actions in Microsoft Defender for Office 365](/defender-office-365/air-remediation-actions).) |
@@ -129,7 +129,7 @@ To perform tasks, such as approving or rejecting pending actions in the Action c
 > [!TIP]
 > Users who have the **Global Administrator** role assigned in Microsoft Entra ID can approve or reject any pending action in the Action center. However, as a best practice, your organization should limit the number of people who have the **Global Administrator** role assigned. We recommend using the **Security Administrator**, **Active remediation actions**, and **Search and Purge** roles listed in the preceding table for Action center permissions.
 
-## Next step 
+## Next step
 
 - [View and manage remediation actions](m365d-autoir-actions.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
