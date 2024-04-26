@@ -34,9 +34,9 @@ To enhance your endpoint security experience, Microsoft is releasing the Microso
       
    - Mid June 2024 to U.S. Government customers running Windows clients.
       
-1. If you are using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you do not need to add any additional URLs.
+1. If you're using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you don't need to add any other URLs.
 
-1. If you are using the Microsoft Defender for Endpoint **standard** device connectivity experience:
+1. If you're using the Microsoft Defender for Endpoint **standard** device connectivity experience:
 
    Enterprise customers should allow the following URLs:
    
@@ -46,7 +46,7 @@ To enhance your endpoint security experience, Microsoft is releasing the Microso
       
    - `*.events.data.microsoft.com`
       
-   If you do not want to use the wildcards for `*.events.data.microsoft.com`, you can use:
+   If you don't want to use the wildcards for `*.events.data.microsoft.com`, you can use:
    
    - `us-mobile.events.data.microsoft.com/OneCollector/1.0`
       
@@ -86,15 +86,15 @@ The following table summarizes where you can view Microsoft Defender Antivirus p
 
 To learn more about the Microsoft Defender Core service configurations and experimentation (ECS), see [Microsoft Defender Core service configurations and experimentation](microsoft-defender-core-service-configurations-and-experimentation.md).
 
-#### Frequently Asked Questions (FAQ's):
+#### Frequently Asked Questions (FAQs):
 
 Q: What's the recommendation for Microsoft Defender Core service?
 
-A: We highly recommend to let the default settings of keeping the Microsoft Defender Core service running and reporting.
+A: We highly recommend letting the default settings of keeping the Microsoft Defender Core service running and reporting.
 
 Q: What data storage and privacy does the Microsoft Defender Core service adhere to?
 
-A: Please review [Microsoft Defender for Endpoint data storage and privacy](/microsoft-365/security/defender-endpoint/data-storage-privacy) 
+A: Review [Microsoft Defender for Endpoint data storage and privacy](/microsoft-365/security/defender-endpoint/data-storage-privacy).
 
 Q: Can I enforce keeping the Microsoft Defender Core service running as an Administrator?
 
