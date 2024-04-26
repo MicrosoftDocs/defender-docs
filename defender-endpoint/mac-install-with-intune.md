@@ -90,7 +90,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 
    Then select **Next**.
 
-1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or All Users and All devices.
+1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or select the **Add all users** and **Add all devices** options. Then select **Next**.
 
 1. Review the configuration profile. Select **Create**.
 
