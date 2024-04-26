@@ -160,7 +160,7 @@ Add-Content -Path $LogFile -Value "------------------------------------
 $ExecutionTime - Execution Ends -------------------------------------------"
 ```
 
-3. When adding a new script, you must select and approve it. The approval state will change from *Waiting for approval* to *Approved*. Once approved, right-click a single device or device collection, and select **Run script**.
+3. When adding a new script, you must select and approve it. The approval state changes from *Waiting for approval* to *Approved*. Once approved, right-click a single device or device collection, and select **Run script**.
 
 5. On the script page of the Run Script wizard, choose your script from the list (Microsoft Defender Core service enforcement in our example). Only approved scripts are displayed. Select Next and complete the wizard.
 
@@ -168,7 +168,7 @@ $ExecutionTime - Execution Ends -------------------------------------------"
 
 1. Download the latest Microsoft Defender Group Policy Administrative Templates from [here](https://github.com/YongRhee-MSFT/Microsoft-Defender-Antivirus-Group-Policy-Administrative-Templates).
 
-1. Setup the Domain Controller [Central Repository](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) 
+1. Set up the Domain Controller [Central Repository](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) 
 
 > [!NOTE]
 > Copy the .admx, and separately the .adml to the En-US folder.
@@ -191,11 +191,11 @@ Computer Configuration -> Administrative Templates -> Windows Components -> Micr
   Disabled, the Microsoft Defender core service will stop collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.
   ```
   
-### Use Powershell to update the policies for Microsoft Defender Core service.
-Start, Powershell (Run as administrator)
+### Use PowerShell to update the policies for Microsoft Defender Core service.
 
-Set-MpPreferences -DisableCoreServiceECSIntegration $true or $false  
- e.g.
+Go to Start, and run PowerShell as an administrator. Use the `Set-MpPreferences -DisableCoreServiceECSIntegration $true or $false` command.
+
+For example:
 
 
 ```powershell
