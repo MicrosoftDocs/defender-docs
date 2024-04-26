@@ -7,7 +7,7 @@ author: chrisda
 manager: deniseb
 audience: ITPro
 ms.topic: conceptual
-ms.date: 3/5/2024
+ms.date: 4/26/2024
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -164,7 +164,7 @@ After you determine that an email message is a threat, the next step is remediat
   > If you select 101 to 200,000 entries, only the following actions are available in the **Take action** wizard:
   >
   > - **Threat Explorer**: **Move to mailbox** and **Propose remediation** are available, but they're mutually exclusive (you can select one or the other).
-  > - **Real-time detections**: Only **Submit to mailbox** and **Tenant allow block list** are available. Note -TABL is a sub action of Submission. 
+  > - **Real-time detections**: Only **Submit to Microsoft for review** and creating corresponding allow/block entries in the Tenant Allow/Block list are available.
 
 - Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout.
 
@@ -176,7 +176,7 @@ Selecting :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-i
 |---|:---:|:---:|
 |**Move to mailbox folder**|✔¹||
 |**Submit to Microsoft for review**|✔|✔|
-|**Tenant level allow or block** 3|✔|✔|
+|&nbsp;&nbsp;**Allow or block entries in the Tenant Allow/Block List**³|✔|✔|
 |**Initiate automated investigation**|✔||
 |**Propose remediation**|✔|²|
 
@@ -184,7 +184,7 @@ Selecting :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-i
 
 ² Although this action might appear available in Real-time detections, it's not available in Defender for Office 365 Plan 1.
 
-3 This is under Submit to Microsoft for review.
+³ This action is available under **Submit to Microsoft for review**.
 
 The **Take action** wizard is described in the following list:
 
@@ -192,7 +192,7 @@ The **Take action** wizard is described in the following list:
 
    - **Show all response actions**: This option is available only in Threat Explorer.
 
-     By default, some actions are unavailable/ grayed out based on the latest delivery location of the message. To show all available response actions, slide the toggle to :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: **On**.
+     By default, some actions are unavailable/grayed out based on the latest delivery location of the message. To show all available response actions, slide the toggle to :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: **On**.
 
    - **Email message actions** section:
 
@@ -204,7 +204,7 @@ The **Take action** wizard is described in the following list:
 
    - **Move to mailbox folder**: Select one of the available values that appear:
      - **Junk**: Move the message to the Junk Email folder.
-     - **Inbox**: Move the message to the Inbox.     
+     - **Inbox**: Move the message to the Inbox.
      - **Deleted items**: Move the message to the Deleted items folder.
      - **Soft deleted items**: Delete the message from the Deleted items folder (move to the Recoverable Items\Deletions folder). The message is recoverable by the user and admins.
      - **Hard deleted items**: Purge the deleted message. Admins can recover hard deleted items using single-item recovery. For more information about hard deleted and soft deleted items, see [Soft-deleted and hard-deleted items](/compliance/assurance/assurance-exchange-online-data-deletion#soft-deleted-and-hard-deleted-items).
@@ -234,14 +234,16 @@ The **Take action** wizard is described in the following list:
    - **Initiate automated investigation**: Threat Explorer only. Select one of the following values that appear:
      - **Investigate email**
      - **Investigate recipient**
-     - **Investigate sender**
+     - **Investigate sender**: This value applies only to senders in your organization.
      - **Contact recipients**
-Note- Investigate sender will only apply for senders within your organization. 
 
    - **Propose remediation**: Select one of the following values that appear:
-     - **Create new**: This value triggers a soft delete email pending action that needs to be approved by an admin in the Action center, this is otherwise called as two step approval.
+     - **Create new**: This value triggers a soft delete email pending action that needs to be approved by an admin in the Action center. This result is otherwise known as _two-step approval_.
      - **Add to existing**: Use this value to apply actions to this email message from an existing remediation. In the **Submit email to the following remediations** box, select the existing remediation.
-       Note- SecOps who do not have enough permission can use this option to create remediation, but they need a higher tier persona to come to the Action center and approve this action.  
+
+       > [!TIP]
+       > SecOps personnel who don't have enough permsissions can use this option to create a remediation, but someone with permissions needs to approve the action in the Action center.
+
    When you're finished on the **Choose response actions** page, select **Next**.
 
 2. On the **Choose target entities** page, configure the following options:
@@ -275,12 +277,13 @@ Note- Investigate sender will only apply for senders within your organization.
      - The blocked sender email address.
      - The blocked sender domain.
      - The blocked URL.
-     - The blocked attachment. 
+     - The blocked attachment.
    - **Expires on**: Values exist only for allow or block entries in the Tenant/Allow Block List. For example:
      - **Never expire** for block entries.
      - The expiration date for allow or block entries.
    - **Scope**: Typically, this value is **MDO**.
-At this stage, you can also undo some action if you want. For example - If you only want to block the Tenant level without submitting. You can do that in this stage.
+
+   At this stage, you can also undo some actions. For example, if you only want to create a block entry in the Tenant Allow/Block List without submitting the entity to Microsoft, you can do that here.
 
    When you're finished on the **Choose target entities** page, select **Next**.
 
