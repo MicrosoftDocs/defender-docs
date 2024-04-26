@@ -202,9 +202,11 @@ For example:
 Set-MpPreferences -DisableCoreServiceECSIntegration $false 
 ```
 
+```powershell
 Set-MpPreferences -DisableCoreServiceTelemetry $true or $false  
- e.g.
+```
 
+Here's an example: 
 
 ```powershell
 Set-MpPreferences -DisableCoreServiceTelemetry $false
