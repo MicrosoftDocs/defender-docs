@@ -313,7 +313,7 @@ Download [AutoUpdate2.mobileconfig](https://github.com/microsoft/mdatp-xplat/blo
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Autoupdate.mobileconfig`.
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `com.microsoft.autoupdate2.mobileconfig`.
 
 1. Choose a **Deployment channel**.
 
