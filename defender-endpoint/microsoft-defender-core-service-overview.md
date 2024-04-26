@@ -22,61 +22,57 @@ Microsoft Defender Core service
 
 To enhance your endpoint security experience, Microsoft is releasing the Microsoft Defender Core service to help with the stability and performance of Microsoft Defender Antivirus. 
 
-The Microsoft Defender Core service is releasing with [Microsoft Defender Antivirus platform version 4.18.23110.2009](./msda-updates-previous-versions-technical-upgrade-support.md#october-2023-platform-418231002009--engine-11231002009).
+Pre-requisites
 
-- Rollout begins in:
+1. The Microsoft Defender Core service is releasing with [Microsoft Defender Antivirus platform version 4.18.23110.2009](./msda-updates-previous-versions-technical-upgrade-support.md#october-2023-platform-418231002009--engine-11231002009).
 
-  - November 2023 to prerelease customers,
-    
-  - Mid April 2024 to Enterprise customers running Windows clients.
-    
-  - Mid May 2024 to Enterprise customers running Windows Servers.
-    
-  - Mid June 2024 to U.S. Government customers running Windows clients and Windows Servers.
-    
-If you are using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you do not need to add any additional URLs.
+1. Rollout begins on:
 
-If you are using the Microsoft Defender for Endpoint **standard** device connectivity experience:
+   - November 2023 to prerelease customers,
+      
+   - Mid April 2024 to Enterprise customers running Windows clients.
+      
+   - Mid June 2024 to U.S. Government customers running Windows clients.
+      
+1. If you are using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you do not need to add any additional URLs.
 
-- Enterprise customers should allow the following URLs:
+1. If you are using the Microsoft Defender for Endpoint **standard** device connectivity experience:
 
-  - `*.events.data.microsoft.com`
-    
-  - `*.endpoint.security.microsoft.com`
-    
-  - `*.ecs.office.com` 
-    
-- If you do not want to use the wildcards, you can use:
+   Enterprise customers should allow the following URLs:
+   
+   - `*.endpoint.security.microsoft.com`
+      
+   - `ecs.office.com/config/v1/MicrosoftWindowsDefenderClient`
+      
+   - `*.events.data.microsoft.com`
+      
+   If you do not want to use the wildcards for `*.events.data.microsoft.com`, you can use:
+   
+   - `us-mobile.events.data.microsoft.com/OneCollector/1.0`
+      
+   - `eu-mobile.events.data.microsoft.com/OneCollector/1.0`
+      
+   - `uk-mobile.events.data.microsoft.com/OneCollector/1.0`
+      
+   - `au-mobile.events.data.microsoft.com/OneCollector/1.0`
+      
+   - `mobile.events.data.microsoft.com/OneCollector/1.0`
+   
+   Enterprise U.S. Government customers should allow the following URLs:
+   
+   - `*.events.data.microsoft.com`
+      
+   - `*.endpoint.security.microsoft.us (GCC-H & DoD)`
+      
+   - `*.gccmod.ecs.office.com (GCC-M)`
+      
+   - `*.config.ecs.gov.teams.microsoft.us (GCC-H)`
+      
+   - `*.config.ecs.dod.teams.microsoft.us (DoD)`
+      
+1. If you're using [Application Control for Windows](/windows/security/application-security/application-control/windows-defender-application-control/wdac), or you're running non-Microsoft antivirus or endpoint detection and response software, make sure to add the processes mentioned earlier to your allowlist. 
 
-  - `us-mobile.events.data.microsoft.com/OneCollector/1.0`
-  
-  - `eu-mobile.events.data.microsoft.com/OneCollector/1.0`
-  
-  - `uk-mobile.events.data.microsoft.com/OneCollector/1.0`
-  
-  - `au-mobile.events.data.microsoft.com/OneCollector/1.0`
-  
-  - `mobile.events.data.microsoft.com/OneCollector/1.0`
-  
-    and
-    
-  - `ecs.office.com/config/v1/MicrosoftWindowsDefenderClient`
-  
-- Enterprise U.S. Government customers should allow the following URLs:
-
-  - `*.events.data.microsoft.com`
-    
-  - `*.endpoint.security.microsoft.us (GCC-H & DoD)`
-    
-  - `*.gccmod.ecs.office.com (GCC-M)`
-    
-  - `*.config.ecs.gov.teams.microsoft.us (GCC-H)`
-    
-  - `*.config.ecs.dod.teams.microsoft.us (DoD)`
-    
-- If you're using [Application Control for Windows](/windows/security/application-security/application-control/windows-defender-application-control/wdac), or you're running non-Microsoft antivirus or endpoint detection and response software, make sure to add the processes mentioned earlier to your allowlist. 
-
-- Consumers don't need to take any actions to prepare. 
+1. Consumers don't need to take any actions to prepare.
 
 ## Microsoft Defender Antivirus processes and services
 
@@ -100,21 +96,569 @@ Q: What data storage and privacy does the Microsoft Defender Core service adhere
 
 A: Please review [Microsoft Defender for Endpoint data storage and privacy](/microsoft-365/security/defender-endpoint/data-storage-privacy) 
 
-Q: Does the [MDE Client Analyzer](/microsoft-365/security/defender-endpoint/run-analyzer-windows) check the URL's for Microsoft Defender for Endpoint **standard** device connectivity experience?
-
-A: Not yet, work is in progress to include these new URL's.
-
 Q: Can I enforce keeping the Microsoft Defender Core service running as an Administrator?
 
 A: Yes, you can enforce it by using any of these management tools:
 
 
-|Management tool| Description|
-| -------- | -------- |
-| Microsoft Defender for Endpoint Security Settings Management| On the roadmap|
-| Intune   | On the roadmap |
-| Configuration Manager Tenant Attach | On the roadmap |
-| Configuration Manager Co-Management | Info |
-| Group Policy   | Go to **Computer Configuration** > **Administrative Templates** > **Windows Components**  > **Microsoft Defender Antivirus**, and set Experimentation and Configuration Service (ECS) integration for Defender Core Service to either **Not configured** or **Enabled** (this is the default setting). <br/><br/>The Microsoft Defender Core Service uses ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. <br/><br/>When disabled, the Microsoft Defender Core Service stops using ECS. <br/><br/>For false positives, fixes are delivered via Security Intelligence updates. <br/><br/>For Platform and/or Engine updates, fixes are delivered thru Microsoft Update, Microsoft Update Catalog or WSUS. <br/><br/>When you set telemetry for the Microsoft Defender Core Service to **Not configured** or **Enabled** (this is the default setting), the Microsoft Defender Core Service collects telemetry from Microsoft Defender Antivirus and other Defender software. When disabled, the Microsoft Defender Core Service stops collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.|
-| Powershell | `Set-MpPreferences -DisableCoreServiceECSIntegration $true | $false`<br/><br/> `Set-MpPreferences -DisableCoreServiceTelemetry $true | $false` |
-| Registry | **HKLM\Software\Policies\Microsoft\Windows Defender\Features DisableCoreService1DSTelemetry** <br/>Set (dword) 0 (hex) 0 = Not Configured, enabled (default) 1 = disabled<br/><br/> `DisableCoreServiceECSIntegration`<br/>Set (dword) 0 (hex) 0 = Not Configured, enabled (default) 1 = disabled|
+- Configuration Manager Co-Management
+
+- Group Policy
+
+- Powershell
+
+- Registry
+
+Configuration Manager Co-Management (ConfigMgr, formerly MEMCM/SCCM)
+
+Use Microsoft [Configuration Manager](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fmem%2Fconfigmgr%2Fcore%2Funderstand%2Fintroduction&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170125399%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=WgxfHpdLBPLKKUwhP6cxpW%2FOW90oQEu5%2BUw5Qq9x2vo%3D&reserved=0) to update the policy for Microsoft Defender Core service Configuration Manager has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network
+
+1. Open the Microsoft Configuration Manager console. Select Software Library > Scripts > Create Script.
+
+1. Enter the script name (for example, Microsoft Defender Core service enforcement), description (Demo configuration to enable Microsoft Defender Core service settings), language (PowerShell), timeout seconds (180), and then paste in the following "Microsoft Defender Core service enforcement" script example to use as a template.
+
+
+```
+######
+```
+
+
+```
+#ConfigMgr Management of Microsoft Defender Core service enforcement
+```
+
+
+```
+#"Microsoft Defender Core service is a new service to help keep the reliability and performance of Microsoft Defender Antivirus.
+```
+
+
+```
+#Check Log File for enforcement status - C:\Windows\temp\ConfigDefenderCoreService-<TimeStamp>.log
+```
+
+
+```
+######
+```
+
+
+```
+ 
+```
+
+
+```
+Function Set-RegistryKeyValue{
+```
+
+
+```
+param (
+```
+
+
+```
+$KeyPath,
+```
+
+
+```
+$ValueName,
+```
+
+
+```
+$Value,
+```
+
+
+```
+$PropertyType,
+```
+
+
+```
+$LogFile
+```
+
+
+```
+)
+```
+
+
+```
+Try {
+```
+
+
+```
+    If (!(Test-path $KeyPath)) {
+```
+
+
+```
+    $Path = ($KeyPath.Split(':'))[1].TrimStart("\")
+```
+
+
+```
+    ([Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey([Microsoft.Win32.RegistryHive]::LocalMachine,$env:COMPUTERNAME)).CreateSubKey($Path)
+```
+
+
+```
+    New-ItemProperty -path $KeyPath -name $ValueName -value $Value -PropertyType $PropertyType -Force | Out-Null
+```
+
+
+```
+    }
+```
+
+
+```
+    Else {
+```
+
+
+```
+    New-ItemProperty -path $KeyPath -name $ValueName -value $Value -PropertyType $PropertyType -Force | Out-Null
+```
+
+
+```
+    }
+```
+
+
+```
+    $TestValue = (Get-ItemProperty -Path $KeyPath)."$ValueName"
+```
+
+
+```
+    If ($TestValue -eq $Value){ Add-Content -Path $LogFile -Value "$KeyPath,$ValueName,$Value,$PropertyType,$TestValue,Success" }
+```
+
+
+```
+    Else { Add-Content -Path $LogFile -Value "$KeyPath,$ValueName,$Value,$PropertyType,$TestValue,Failure" }
+```
+
+
+```
+    }
+```
+
+
+```
+    Catch {
+```
+
+
+```
+    $ExceptionMessage = $($PSItem.ToString()) -replace [Environment]::NewLine,"";
+```
+
+
+```
+    Add-Content -Path $LogFile -Value "$KeyPath,$ValueName,$Value,$PropertyType,$TestValue,Failure - $ExceptionMessage"
+```
+
+
+```
+    }
+```
+
+
+```
+}
+```
+
+
+```
+$ExecutionTime = Get-Date
+```
+
+
+```
+$StartTime = Get-Date $ExecutionTime -Format yyyyMMdd-HHmmss
+```
+
+
+```
+$LogFile = "C:\Windows\temp\ConfigDevDrive-$StartTime.log"
+```
+
+
+```
+Add-Content -Path $LogFile -Value "------------------------------------V 1.0 $ExecutionTime - Execution Starts -------------------------------------------"
+```
+
+
+```
+Add-Content -Path $LogFile -Value "RegistryKeyPath,ValueName,ExpectedValue,PropertyType,CurrentValue,ComparisonResult"
+```
+
+
+```
+#Set up a Dev Drive
+```
+
+
+```
+Set-RegistryKeyValue -KeyPath "HKLM:\Software\Policies\Microsoft\Windows Defender\Features\" -ValueName "DisableCoreService1DSTelemetry" -Value "1" -PropertyType "Dword" -LogFile $LogFile
+```
+
+
+```
+Set-RegistryKeyValue -KeyPath "HKLM:\Software\Policies\Microsoft\Windows Defender\Features\" -ValueName "DisableCoreServiceECSIntegration" -Value "1" -PropertyType "Dword" -LogFile $LogFile
+```
+
+
+```
+$ExecutionTime = Get-Date
+```
+
+
+```
+Add-Content -Path $LogFile -Value "------------------------------------ $ExecutionTime - Execution Ends -------------------------------------------"
+```
+
+1. When adding a new script, you must select and approve it. The approval state will change from "Waiting for approval" to "Approved".
+
+1. Once approved, right-click a single device or device collection and select Run script.
+
+1. On the script page of the Run Script wizard, choose your script from the list (Microsoft Defender Core service enforcement in our example). Only approved scripts are displayed. Select Next and complete the wizard.
+
+Group Policy
+
+1. Download the latest Microsoft Defender Group Policy Administrative Templates from [here](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FYongRhee-MSFT%2FMicrosoft-Defender-Antivirus-Group-Policy-Administrative-Templates&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170132859%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=ZCeqpGpoSPoLlbsDttbCUtTxY1FgF1VTdQqP4pyFVEw%3D&reserved=0).
+
+1. Setup the Domain Controller [Central Repository](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Ftroubleshoot%2Fwindows-client%2Fgroup-policy%2Fcreate-and-manage-central-store&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170140405%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=V4O9CmhHIeh8co474xWsg6qw%2B4pnhZu52KBV6v0W9Fc%3D&reserved=0) Copy the .admx and the .adml to the En-US folder.
+
+Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc
+
+Computer Configuration -> Administrative Templates -> Windows Components -> Microsoft Defender Antivirus
+
+- Turn on ECS integration for Defender core service Not configured or enabled (default), the Microsoft Defender core service will use ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. Disabled, the Microsoft Defender core service will stop using the Experimentation and Configuration Service (ECS) to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. For false positives, fixes will be delivered via "Security Intelligence updates", and for Platform and/or Engine updates, fixes will be delivered thru Microsoft Update, Microsoft Update Catalog or WSUS.
+
+- Turn on telemetry for Defender core service Not configured or enabled (default), the Microsoft Defender core service will collect telemetry from Microsoft Defender Antivirus and other Defender software Disabled, the Microsoft Defender core service will stop collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.|
+
+Powershell
+
+Start, Powershell (Run as administrator)
+
+Set-MpPreferences -DisableCoreServiceECSIntegration $true or $false e.g.
+
+
+```
+Set-MpPreferences -DisableCoreServiceECSIntegration $false 
+```
+
+Set-MpPreferences -DisableCoreServiceTelemetry $true or $false e.g.
+
+
+```
+Set-MpPreferences -DisableCoreServiceTelemetry $false
+```
+
+$false = enabled $true = disabled|
+
+Registry
+
+Start, Regedit.exe (Run as administrator) HKLM\Software\Policies\Microsoft\Windows Defender\Features
+
+DisableCoreService1DSTelemetry (dword) 0 (hex) 0 = Not configured, enabled (default) 1 = disabled
+
+DisableCoreServiceECSIntegration (dword) 0 (hex) 0 = Not configured, enabled (default) 1 = disabled|
+
+Yes, you can enforce it by using any of these management tools:
+
+- Configuration Manager      Co-Management
+
+- Group Policy
+
+- Powershell
+
+- Registry
+
+Configuration Manager Co-Management (ConfigMgr, formerly MEMCM/SCCM)
+
+Use Microsoft [Configuration Manager](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fmem%2Fconfigmgr%2Fcore%2Funderstand%2Fintroduction&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170125399%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=WgxfHpdLBPLKKUwhP6cxpW%2FOW90oQEu5%2BUw5Qq9x2vo%3D&reserved=0) to update the policy for Microsoft Defender Core service Configuration Manager has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network
+
+1. Open the Microsoft Configuration      Manager console. Select Software Library > Scripts > Create Script.
+
+1. Enter the script name (for      example, Microsoft Defender Core service enforcement), description (Demo      configuration to enable Microsoft Defender Core service settings),      language (PowerShell), timeout seconds (180), and then paste in the      following "Microsoft Defender Core service enforcement" script      example to use as a template.
+
+
+```
+######
+```
+
+
+```
+#ConfigMgr Management of Microsoft Defender Core service enforcement
+```
+
+
+```
+#"Microsoft Defender Core service is a new service to help keep the reliability and performance of Microsoft Defender Antivirus.
+```
+
+
+```
+#Check Log File for enforcement status - C:\Windows\temp\ConfigDefenderCoreService-<TimeStamp>.log
+```
+
+
+```
+######
+```
+
+
+```
+ 
+```
+
+
+```
+Function Set-RegistryKeyValue{
+```
+
+
+```
+param (
+```
+
+
+```
+$KeyPath,
+```
+
+
+```
+$ValueName,
+```
+
+
+```
+$Value,
+```
+
+
+```
+$PropertyType,
+```
+
+
+```
+$LogFile
+```
+
+
+```
+)
+```
+
+
+```
+Try {
+```
+
+
+```
+    If (!(Test-path $KeyPath)) {
+```
+
+
+```
+    $Path = ($KeyPath.Split(':'))[1].TrimStart("\")
+```
+
+
+```
+    ([Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey([Microsoft.Win32.RegistryHive]::LocalMachine,$env:COMPUTERNAME)).CreateSubKey($Path)
+```
+
+
+```
+    New-ItemProperty -path $KeyPath -name $ValueName -value $Value -PropertyType $PropertyType -Force | Out-Null
+```
+
+
+```
+    }
+```
+
+
+```
+    Else {
+```
+
+
+```
+    New-ItemProperty -path $KeyPath -name $ValueName -value $Value -PropertyType $PropertyType -Force | Out-Null
+```
+
+
+```
+    }
+```
+
+
+```
+    $TestValue = (Get-ItemProperty -Path $KeyPath)."$ValueName"
+```
+
+
+```
+    If ($TestValue -eq $Value){ Add-Content -Path $LogFile -Value "$KeyPath,$ValueName,$Value,$PropertyType,$TestValue,Success" }
+```
+
+
+```
+    Else { Add-Content -Path $LogFile -Value "$KeyPath,$ValueName,$Value,$PropertyType,$TestValue,Failure" }
+```
+
+
+```
+    }
+```
+
+
+```
+    Catch {
+```
+
+
+```
+    $ExceptionMessage = $($PSItem.ToString()) -replace [Environment]::NewLine,"";
+```
+
+
+```
+    Add-Content -Path $LogFile -Value "$KeyPath,$ValueName,$Value,$PropertyType,$TestValue,Failure - $ExceptionMessage"
+```
+
+
+```
+    }
+```
+
+
+```
+}
+```
+
+
+```
+$ExecutionTime = Get-Date
+```
+
+
+```
+$StartTime = Get-Date $ExecutionTime -Format yyyyMMdd-HHmmss
+```
+
+
+```
+$LogFile = "C:\Windows\temp\ConfigDevDrive-$StartTime.log"
+```
+
+
+```
+Add-Content -Path $LogFile -Value "------------------------------------V 1.0 $ExecutionTime - Execution Starts -------------------------------------------"
+```
+
+
+```
+Add-Content -Path $LogFile -Value "RegistryKeyPath,ValueName,ExpectedValue,PropertyType,CurrentValue,ComparisonResult"
+```
+
+
+```
+#Set up a Dev Drive
+```
+
+
+```
+Set-RegistryKeyValue -KeyPath "HKLM:\Software\Policies\Microsoft\Windows Defender\Features\" -ValueName "DisableCoreService1DSTelemetry" -Value "1" -PropertyType "Dword" -LogFile $LogFile
+```
+
+
+```
+Set-RegistryKeyValue -KeyPath "HKLM:\Software\Policies\Microsoft\Windows Defender\Features\" -ValueName "DisableCoreServiceECSIntegration" -Value "1" -PropertyType "Dword" -LogFile $LogFile
+```
+
+
+```
+$ExecutionTime = Get-Date
+```
+
+
+```
+Add-Content -Path $LogFile -Value "------------------------------------ $ExecutionTime - Execution Ends -------------------------------------------"
+```
+
+1. When adding a new script, you must select      and approve it. The approval state will change from "Waiting for      approval" to "Approved".
+
+1. Once approved, right-click a      single device or device collection and select Run script.
+
+1. On the script page of the Run      Script wizard, choose your script from the list (Microsoft Defender Core      service enforcement in our example). Only approved scripts are displayed.      Select Next and complete the wizard.
+
+Group Policy
+
+1. Download the latest Microsoft      Defender Group Policy Administrative Templates from [here](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FYongRhee-MSFT%2FMicrosoft-Defender-Antivirus-Group-Policy-Administrative-Templates&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170132859%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=ZCeqpGpoSPoLlbsDttbCUtTxY1FgF1VTdQqP4pyFVEw%3D&reserved=0).
+
+1. Setup the Domain Controller [Central Repository](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Ftroubleshoot%2Fwindows-client%2Fgroup-policy%2Fcreate-and-manage-central-store&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170140405%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=V4O9CmhHIeh8co474xWsg6qw%2B4pnhZu52KBV6v0W9Fc%3D&reserved=0) Copy the .admx and the .adml to the En-US folder.
+
+Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc
+
+Computer Configuration -> Administrative Templates -> Windows Components -> Microsoft Defender Antivirus
+
+- Turn on ECS integration for Defender core service  
+      Not configured or enabled (default), the Microsoft Defender core service      will use ECS to rapidly deliver critical, org-specific fixes for Microsoft      Defender Antivirus and other Defender software.  
+      Disabled, the Microsoft Defender core service will stop using the      Experimentation and Configuration Service (ECS) to rapidly deliver      critical, org-specific fixes for Microsoft Defender Antivirus and other      Defender software. For false positives, fixes will be delivered via      "Security Intelligence updates", and for Platform and/or Engine      updates, fixes will be delivered thru Microsoft Update, Microsoft Update      Catalog or WSUS.
+
+- Turn on telemetry for Defender core service  
+      Not configured or enabled (default), the Microsoft Defender core service      will collect telemetry from Microsoft Defender Antivirus and other      Defender software  
+      Disabled, the Microsoft Defender core service will stop collecting      telemetry from Microsoft Defender Antivirus and other Defender software.      Disabling this setting can impact Microsoft's ability to quickly recognize      and address problems, such as slow performance and false positives.|
+
+Powershell
+
+Start, Powershell (Run as administrator)
+
+Set-MpPreferences -DisableCoreServiceECSIntegration $true or $false  
+ e.g.
+
+
+```
+Set-MpPreferences -DisableCoreServiceECSIntegration $false 
+```
+
+Set-MpPreferences -DisableCoreServiceTelemetry $true or $false  
+ e.g.
+
+
+```
+Set-MpPreferences -DisableCoreServiceTelemetry $false
+```
+
+$false = enabled  
+ $true = disabled|
+
+Registry
+
+Start, Regedit.exe (Run as administrator) HKLM\Software\Policies\Microsoft\Windows Defender\Features
+
+DisableCoreService1DSTelemetry (dword) 0 (hex)  
+ 0 = Not configured, enabled (default)  
+ 1 = disabled
+
+DisableCoreServiceECSIntegration (dword) 0 (hex)  
+ 0 = Not configured, enabled (default)  
+ 1 = disabled|
+
