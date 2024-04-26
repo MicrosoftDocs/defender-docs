@@ -30,7 +30,7 @@ Be aware of the following before you start:
 
 2. As it takes a few minutes for the plug-in to fully instantiate and up to 30 minutes for a WSL2 instance to onboard itself, short-lived WSL container instances might result in the WSL2 instance not showing up in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Once a (any) distribution has been running long enough (at least 30 minutes), it does show up.
 
-3. The use of a custom kernel in combination with the plug-in is not supported. When you attempt to launch WSL with the plugin installed, you will encounter the error *A fatal error was returned by plugin 'DefenderforEndpointPlug-in'. Error message: 'Custom Kernel/Configuration not supported.'*. 
+3. The use of a custom kernel in combination with the plug-in isn't supported. When you attempt to launch WSL with the plugin installed, you'll encounter the error *A fatal error was returned by plugin 'DefenderforEndpointPlug-in'. Error message: 'Custom Kernel/Configuration not supported.'*. 
 
 ## Software prerequisites
 
@@ -139,7 +139,7 @@ The following procedure describes how to confirm that Defender in Endpoint in WS
    - **Name**: `ConnectivityTest`
    - **Type**: `REG_DWORD`
    - **Value**: `Number of seconds plug-in must wait before running test. (Recommended: 60 seconds)`
-   - **Path**: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss\Plugins\DefenderPlug-in`
+   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss\Plugins\DefenderPlug-in`
 
 3. Once the registry is set, restart wsl using the following steps:
 
@@ -149,7 +149,7 @@ The following procedure describes how to confirm that Defender in Endpoint in WS
 
 4. Wait for 5 minutes and then run `healthcheck.exe` (located at `C:\Program Files\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test).
 
-   If successful, you can see that the connectivity test was successful.
+   If successful, you can see that the connectivity test was successful. 
 
 > [!NOTE]
 > To set a proxy for use in WSL containers (the distributions running on the subsystem), see [Advanced settings configuration in WSL](/windows/wsl/wsl-config).
