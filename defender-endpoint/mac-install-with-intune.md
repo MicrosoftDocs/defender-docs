@@ -136,7 +136,8 @@ To configure network filter:
 Download [**fulldisk.mobileconfig**](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
 To configure Full Disk Access:
-1. Under **Configuration profiles**, select **Create Profile**.
+
+1. In the Intune admin center, under **Configuration profiles**, select **Create Profile**.
 
 1. Under **Platform**, select **macOS**.
 
@@ -150,7 +151,7 @@ To configure Full Disk Access:
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Fulldisk.mobileconfig`.
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `fulldisk.mobileconfig`.
 
 1. Choose a **Deployment channel**.
 
