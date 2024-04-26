@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.date: 04/09/2024
 manager: deniseb
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier1
 ms.topic: conceptual
@@ -37,7 +37,7 @@ For more information on what's new with Microsoft Defender for Endpoint on Windo
 
 For more information on what's new with other Microsoft Defender security products, see:
 
-- [What's new in Microsoft Defender XDR](/defender/whats-new)
+- [What's new in Microsoft Defender XDR](/defender-xdr/whats-new)
 - [What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
@@ -64,9 +64,10 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 **Attack Surface Reduction (ASR) Rules**
 
-Two new ASR rules are now in public preview: 
-- [Block rebooting machine in Safe Mode (preview)](/defender-endpoint/attack-surface-reduction-rules-reference#block-rebooting-machine-in-safe-mode-preview): This rule prevents the execution of commands to restart machines in Safe Mode.
-- [Block use of copied or impersonated system tools (preview)](/defender-endpoint/attack-surface-reduction-rules-reference#block-use-of-copied-or-impersonated-system-tools-preview): This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools.
+Two new ASR rules are now in public preview:
+
+- [Block rebooting machine in Safe Mode (preview)](attack-surface-reduction-rules-reference.md#block-rebooting-machine-in-safe-mode-preview): This rule prevents the execution of commands to restart machines in Safe Mode.
+- [Block use of copied or impersonated system tools (preview)](attack-surface-reduction-rules-reference.md#block-use-of-copied-or-impersonated-system-tools-preview): This rule blocks the use of executable files that are identified as copies of Windows system tools. These files are either duplicates or impostors of the original system tools.
 
 **Microsoft Defender for Endpoint on macOS** features are in public preview:
 
@@ -76,9 +77,9 @@ Two new ASR rules are now in public preview:
 
 ## January 2024
 
-- **Defender Boxed is available for a limited period of time**. Defender Boxed highlights your organization's security successes, improvements, and response actions during 2023. Take a moment to celebrate your organization's improvements in security posture, overall response to detected threats (manual and automatic), blocked emails, and more. 
+- **Defender Boxed is available for a limited period of time**. Defender Boxed highlights your organization's security successes, improvements, and response actions during 2023. Take a moment to celebrate your organization's improvements in security posture, overall response to detected threats (manual and automatic), blocked emails, and more.
 
-   - Defender Boxed opens automatically when you go to the **Incidents** page in the Microsoft Defender portal. 
+   - Defender Boxed opens automatically when you go to the **Incidents** page in the Microsoft Defender portal.
    - If you close Defender Boxed and you want to reopen it, in the Microsoft Defender portal, go to **Incidents**, and then select **Your Defender Boxed**.
    - Act quickly! Defender Boxed is available only for a short period of time.
 - (GA) [User Contain](https://www.microsoft.com/en-us/security/blog/2023/10/11/microsoft-defender-for-endpoint-now-stops-human-operated-attacks-on-its-own) can now contain compromised users automatically stopping Human Operated Ransomware in its track using [Automatic Attack Disruption](/defender-xdr/automatic-attack-disruption).
@@ -102,17 +103,17 @@ Two new ASR rules are now in public preview:
 
 ## August 2023
 
-- (GA) The [Monthly security summary report](monthly-security-summary-report.md) is now generally available. The report helps organizations get a visual summary of key findings and overall preventative actions taken to enhance the organization's overall security posture completed in the last month.  
+- (GA) The [Monthly security summary report](monthly-security-summary-report.md) is now generally available. The report helps organizations get a visual summary of key findings and overall preventative actions taken to enhance the organization's overall security posture completed in the last month.
 
 ## July 2023
 
 - The eBPF-based sensor for Microsoft Defender for Endpoint on Linux is available for public preview on all supported Linux devices. For more information, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](linux-support-ebpf.md).
 - [Manage endpoint security policies in Defender for Endpoint is now in public preview](manage-security-policies.md)  <br> You can now configure security settings directly in Microsoft Defender XDR.
 - A new file page is now available in Defender for Endpoint. The file page now includes information like file details and file content and capabilities. For more information, see [Investigate files](investigate-files.md).
- 
+
 ## June 2023
 
-- Microsoft Defender Antivirus scan response action is supported for macOS and Linux for client version 101.98.84 and above. It is in preview. See [Run Microsoft Defender Antivirus scan on devices](respond-machine-alerts.md#run-microsoft-defender-antivirus-scan-on-devices). 
+- Microsoft Defender Antivirus scan response action is supported for macOS and Linux for client version 101.98.84 and above. It is in preview. See [Run Microsoft Defender Antivirus scan on devices](respond-machine-alerts.md#run-microsoft-defender-antivirus-scan-on-devices).
 - Isolating devices from the network is supported for macOS for client version 101.98.84 and above. It is in preview. See [Isolate devices from the network](respond-machine-alerts.md#isolate-devices-from-the-network).
 - Forcibly releasing devices from isolation is now available for public preview. This new capability allows you to forcibly release devices from isolation, when isolated devices become unresponsive. For more information, see [Forcibly release device from isolation](respond-machine-alerts.md#forcibly-release-device-from-isolation).
 
@@ -125,7 +126,7 @@ Two new ASR rules are now in public preview:
 - Support for mixed-licensing scenarios is now in preview! With these capabilities, you can [Manage Microsoft Defender for Endpoint subscription settings across client devices (preview!)](defender-endpoint-subscription-settings.md).
 
 ## February 2023
- 
+
 - The Microsoft Defender for Identity integration toggle is now removed from the Microsoft Defender for Endpoint Settings > Advanced features page. Because Defender for Identity is now integrated with Microsoft Defender XDR, this toggle is no longer required. You don't need to manually configure integration between services. See [What's new - Microsoft Defender for Identity](/defender-for-identity/whats-new#defender-for-identity-release-2194).
 
 ## January 2023

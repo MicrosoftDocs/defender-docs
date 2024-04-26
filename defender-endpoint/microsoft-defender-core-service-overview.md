@@ -1,14 +1,13 @@
 ---
 title: Microsoft Defender Core service overview
 description: Get an overview of Microsoft Defender Core service.
-author: siosulli
-ms.author: siosulli
-ms.reviewer: yongrhee
+author: YongRhee-MSFT
+ms.author: yongrhee
 manager: deniseb
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: overview
-ms.date: 04/10/2024
+ms.date: 04/24/2024
 search.appverid: met150
 ms.localizationpriority: medium
 audience: ITPro
@@ -35,6 +34,10 @@ The Microsoft Defender Core service is releasing with [Microsoft Defender Antivi
     
   - Mid June 2024 to U.S. Government customers running Windows clients and Windows Servers.
     
+If you are using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you do not need to add any additional URLs.
+
+If you are using the Microsoft Defender for Endpoint **standard** device connectivity experience:
+
 - Enterprise customers should allow the following URLs:
 
   - `*.events.data.microsoft.com`
@@ -43,6 +46,22 @@ The Microsoft Defender Core service is releasing with [Microsoft Defender Antivi
     
   - `*.ecs.office.com` 
     
+- If you do not want to use the wildcards, you can use:
+
+  - `us-mobile.events.data.microsoft.com/OneCollector/1.0`
+  
+  - `eu-mobile.events.data.microsoft.com/OneCollector/1.0`
+  
+  - `uk-mobile.events.data.microsoft.com/OneCollector/1.0`
+  
+  - `au-mobile.events.data.microsoft.com/OneCollector/1.0`
+  
+  - `mobile.events.data.microsoft.com/OneCollector/1.0`
+  
+    and
+    
+  - `ecs.office.com/config/v1/MicrosoftWindowsDefenderClient`
+  
 - Enterprise U.S. Government customers should allow the following URLs:
 
   - `*.events.data.microsoft.com`
@@ -71,3 +90,31 @@ The following table summarizes where you can view Microsoft Defender Antivirus p
 
 To learn more about the Microsoft Defender Core service configurations and experimentation (ECS), see [Microsoft Defender Core service configurations and experimentation](microsoft-defender-core-service-configurations-and-experimentation.md).
 
+Frequently Asked Questions (FAQ's):
+
+Q: What's the recommendation for Microsoft Defender Core service?
+
+A: We highly recommend to let the default settings of keeping the Microsoft Defender Core service running and reporting.
+
+Q: What data storage and privacy does the Microsoft Defender Core service adhere to?
+
+A: Please review [Microsoft Defender for Endpoint data storage and privacy](/microsoft-365/security/defender-endpoint/data-storage-privacy) 
+
+Q: Does the [MDE Client Analyzer](/microsoft-365/security/defender-endpoint/run-analyzer-windows) check the URL's for Microsoft Defender for Endpoint **standard** device connectivity experience?
+
+A: Not yet, work is in progress to include these new URL's.
+
+Q: Can I enforce keeping the Microsoft Defender Core service running as an Administrator?
+
+A: Yes, you can enforce it by using any of these management tools:
+
+
+|Management tool| Description|
+| -------- | -------- |
+| Microsoft Defender for Endpoint Security Settings Management| On the roadmap|
+| Intune   | On the roadmap |
+| Configuration Manager Tenant Attach | On the roadmap |
+| Configuration Manager Co-Management | Info |
+| Group Policy   | Go to **Computer Configuration** > **Administrative Templates** > **Windows Components**  > **Microsoft Defender Antivirus**, and set Experimentation and Configuration Service (ECS) integration for Defender Core Service to either **Not configured** or **Enabled** (this is the default setting). <br/><br/>The Microsoft Defender Core Service uses ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. <br/><br/>When disabled, the Microsoft Defender Core Service stops using ECS. <br/><br/>For false positives, fixes are delivered via Security Intelligence updates. <br/><br/>For Platform and/or Engine updates, fixes are delivered thru Microsoft Update, Microsoft Update Catalog or WSUS. <br/><br/>When you set telemetry for the Microsoft Defender Core Service to **Not configured** or **Enabled** (this is the default setting), the Microsoft Defender Core Service collects telemetry from Microsoft Defender Antivirus and other Defender software. When disabled, the Microsoft Defender Core Service stops collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.|
+| Powershell | `Set-MpPreferences -DisableCoreServiceECSIntegration $true | $false`<br/><br/> `Set-MpPreferences -DisableCoreServiceTelemetry $true | $false` |
+| Registry | **HKLM\Software\Policies\Microsoft\Windows Defender\Features DisableCoreService1DSTelemetry** <br/>Set (dword) 0 (hex) 0 = Not Configured, enabled (default) 1 = disabled<br/><br/> `DisableCoreServiceECSIntegration`<br/>Set (dword) 0 (hex) 0 = Not Configured, enabled (default) 1 = disabled|
