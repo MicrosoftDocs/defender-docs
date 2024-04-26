@@ -217,12 +217,12 @@ Set-MpPreferences -DisableCoreServiceTelemetry $false
 
 Select **Start**, and then open Regedit.exe as an administrator.
 
-HKLM\Software\Policies\Microsoft\Windows Defender\Features
+`HKLM\Software\Policies\Microsoft\Windows Defender\Features`
 
-DisableCoreService1DSTelemetry (dword) 0 (hex)  
- 0 = Not configured, enabled (default)  
- 1 = Disabled
+`DisableCoreService1DSTelemetry` (dword) 0 (hex)  
+`0` = Not configured, enabled (default)  
+`1` = Disabled
 
-DisableCoreServiceECSIntegration (dword) 0 (hex)  
- 0 = Not configured, enabled (default)  
- 1 = Disabled
+`DisableCoreServiceECSIntegration` (dword) 0 (hex)  
+`0` = Not configured, enabled (default)  
+`1` = Disabled
