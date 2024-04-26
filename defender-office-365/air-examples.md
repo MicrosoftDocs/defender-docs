@@ -35,23 +35,23 @@ AIR enables your security operations team to operate more efficiently and effect
 
 This article describes how AIR works through several examples. When you're ready to get started using AIR, see [Automatically investigate and respond to threats](air-about.md).
 
-- [Example 1: A user-reported phish message launches an investigation playbook](#example-a-user-reported-phish-message-launches-an-investigation-playbook)
+- [Example 1: A user-reported phishing message launches an investigation playbook](#example-a-user-reported-phishing-message-launches-an-investigation-playbook)
 - [Example 2: A security administrator triggers an investigation from Threat Explorer](#example-a-security-administrator-triggers-an-investigation-from-threat-explorer)
 - [Example 3: A security operations team integrates AIR with their SIEM using the Office 365 Management Activity API](#example-a-security-operations-team-integrates-air-with-their-siem-using-the-office-365-management-activity-api)
 
-## Example: A user-reported phish message launches an investigation playbook
+## Example: A user-reported phishing message launches an investigation playbook
 
 Suppose that a user in your organization receives an email that they think is a phishing attempt. The user, trained to report such messages, uses the [Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md) to send it to Microsoft for analysis. The submission is also sent to your system and is visible in Explorer in the **Submissions** view (formerly referred to as the **User-reported** view). In addition, the user-reported message now triggers a system-based informational alert, which automatically launches the investigation playbook.
 
 During the root investigation phase, various aspects of the email are assessed. These aspects include:
 
-- A determination about what type of threat it might be;
-- Who sent it;
-- Where the email was sent from (sending infrastructure);
-- Whether other instances of the email were delivered or blocked;
-- An assessment from our analysts;
-- Whether the email is associated with any known campaigns;
-- and more.
+- A determination about what type of threat it might be.
+- Who sent it.
+- Where the email was sent from (sending infrastructure).
+- Whether other instances of the email were delivered or blocked.
+- An assessment from our analysts.
+- Whether the email is associated with any known campaigns.
+- And more.
 
 After the root investigation is complete, the playbook provides a list of recommended actions to take on the original email and the _entities_ associated with it (for example, files, URLs, and recipients).
 
