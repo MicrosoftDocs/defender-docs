@@ -151,7 +151,7 @@ To configure Full Disk Access:
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `fulldisk.mobileconfig`.
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `background_services.mobileconfig`.
 
 1. Choose a **Deployment channel**.
 
@@ -191,7 +191,7 @@ To configure background services:
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Fulldisk.mobileconfig`.
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `background_services.mobileconfig`.
 
 1. Choose a **Deployment channel**.
 
@@ -230,7 +230,7 @@ To configure notifications:
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Notification.mobileconfig`.
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Notif.mobileconfig`.
 
 1. Choose a **Deployment channel**.
 
