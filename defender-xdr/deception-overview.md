@@ -59,6 +59,7 @@ Attackers interacting with the fake network assets set up by the deception capab
 The built-in deception capability in the Microsoft Defender portal uses rules to make decoys and lures that match your environment. The feature applies machine learning to suggest decoys and lures that are tailored to your network. You can also use the deception feature to manually create the decoys and lures. These decoys and lures are then automatically deployed to your network and planted to devices you specify using PowerShell.
 
 :::image type="content" source="/defender/media/deception/fig1-deception.png" alt-text="Screenshot of an attack with lateral movement and where deception intercepts the attack" lightbox="/defender/media/deception/fig1-deception.png":::
+
 *Figure 1. Deception technology, through high confidence detections of human-operated lateral movement, alerts security teams when an attacker interacts with fake hosts or lures*
 
 **Decoys** are fake devices and accounts that appear to belong to your network. **Lures** are fake content planted on specific devices or accounts and are used to attract an attacker. The content can be a document, a configuration file, cached credentials, or any content that an attacker can likely read, steal, or interact with. Lures imitate important company information, settings, or credentials.
@@ -89,6 +90,7 @@ The alert details contain:
 - The type of attack like sign in attempts or lateral movement attempts
 
 :::image type="content" source="/defender/media/deception/fig2-deception.png" alt-text="Screenshot of a deception alert highlighting the tag and the attempt" lightbox="/defender/media/deception/fig2-deception.png":::
+
 *Figure 2. Details of a deception-related alert*
 
 ## Next step
