@@ -108,7 +108,7 @@ A: Yes, you can enforce it by using any of these management tools:
 
 - Registry
 
-Configuration Manager Co-Management (ConfigMgr, formerly MEMCM/SCCM)
+### Configuration Manager Co-Management (ConfigMgr, formerly MEMCM/SCCM)
 
 Use Microsoft [Configuration Manager](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fmem%2Fconfigmgr%2Fcore%2Funderstand%2Fintroduction&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170125399%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=WgxfHpdLBPLKKUwhP6cxpW%2FOW90oQEu5%2BUw5Qq9x2vo%3D&reserved=0) to update the policy for Microsoft Defender Core service Configuration Manager has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network
 
@@ -168,7 +168,7 @@ $ExecutionTime - Execution Ends -------------------------------------------"
 2. Once approved, right-click a single device or device collection and select Run script.
 3. On the script page of the Run Script wizard, choose your script from the list (Microsoft Defender Core service enforcement in our example). Only approved scripts are displayed. Select Next and complete the wizard.
 
-Group Policy
+### Group Policy
 
 1. Download the latest Microsoft      Defender Group Policy Administrative Templates from [here](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FYongRhee-MSFT%2FMicrosoft-Defender-Antivirus-Group-Policy-Administrative-Templates&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170132859%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=ZCeqpGpoSPoLlbsDttbCUtTxY1FgF1VTdQqP4pyFVEw%3D&reserved=0).
 
@@ -186,7 +186,7 @@ Computer Configuration -> Administrative Templates -> Windows Components -> Micr
       Not configured or enabled (default), the Microsoft Defender core service      will collect telemetry from Microsoft Defender Antivirus and other      Defender software  
       Disabled, the Microsoft Defender core service will stop collecting      telemetry from Microsoft Defender Antivirus and other Defender software.      Disabling this setting can impact Microsoft's ability to quickly recognize      and address problems, such as slow performance and false positives.|
 
-Powershell
+### Powershell
 
 Start, Powershell (Run as administrator)
 
@@ -209,7 +209,7 @@ Set-MpPreferences -DisableCoreServiceTelemetry $false
 $false = enabled  
  $true = disabled|
 
-Registry
+### Registry
 
 Start, Regedit.exe (Run as administrator) HKLM\Software\Policies\Microsoft\Windows Defender\Features
 
