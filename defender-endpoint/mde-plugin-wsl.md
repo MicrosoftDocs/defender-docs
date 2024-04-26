@@ -11,6 +11,8 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier2
+ms.custom:
+- partner-contribution
 audience: ITPro
 ms.date: 04/25/2024
 search.appverid: MET150
@@ -26,13 +28,11 @@ The Windows Subsystem for Linux (WSL) 2, which replaces the previous version of 
 
 Be aware of the following before you start:
 
-1. The plug-in doesn't yet automatically update. When a new plug-in version is released, the new MSI package needs to be applied to perform the update. You can apply the new package by using any tool that deploys software. Updates are coming soon through Microsoft Update. If preferred, you can continue to use the MSI package method.
+1. The plug-in does not currently support automatic updates. When a new version is released, a new MSI package needs to be applied to perform the update. This can be done through any of the software deployment tools. Updates will come through Microsoft updates.
 
 2. As it takes a few minutes for the plug-in to fully instantiate and up to 30 minutes for a WSL2 instance to onboard itself, short-lived WSL container instances might result in the WSL2 instance not showing up in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Once a (any) distribution has been running long enough (at least 30 minutes), it does show up.
 
-3. If you're using a proxy in your (test) environment, make sure that the plug-in is set up to use it correctly. WSL is typically not automatically configured to use a proxy. For more information, see the section, [Setting a proxy for Defender running in WSL](#setting-a-proxy-for-defender-running-in-wsl).
-
-4. The use of a custom kernel in combination with the plug-in isn't supported. When you attempt to launch WSL with the plugin installed, you'll encounter the error *A fatal error was returned by plugin 'DefenderforEndpointPlug-in'. Error message: 'Custom Kernel/Configuration not supported.'*. 
+3. The use of a custom kernel in combination with the plug-in isn't supported. When you attempt to launch WSL with the plugin installed, you'll encounter the error *A fatal error was returned by plugin 'DefenderforEndpointPlug-in'. Error message: 'Custom Kernel/Configuration not supported.'*. 
 
 ## Software prerequisites
 
@@ -42,7 +42,7 @@ Be aware of the following before you start:
 
 - Defender for Endpoint must be onboarded and running on the Windows host OS.
 
-- The host OS must be running Windows 10, version 2004 and higher (build 19044 and higher) or Windows 11 to support the Windows Subsystem for Linux versions that can work with the plug-in.
+- The host OS must be running Windows 10 Client, version 2004 and higher (build 19044 and higher) or Windows 11 Client to support the Windows Subsystem for Linux versions that can work with the plug-in.
 
 ## Software components and installer file names
 
@@ -68,19 +68,20 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
 2. Run the command `wsl -–install`.
 
-### Confirm WSL is installed and running
+    ### 1. Confirm WSL is installed and running
 
-1. Using Terminal or Command Prompt, run `wsl –update` to make sure you have the latest version.
+    1. Using Terminal or Command Prompt, run `wsl –update` to make sure you have the latest version.
 
-2. Run the `wsl` command to ensure WSL is running before testing.
+    2. Run the `wsl` command to ensure WSL is running before testing.
 
-### Install the plug-in
+    ### 2. Install the plug-in
 
-After WSL is running and fully up to date, follow these steps to install the plug-in:
 
-1. Install the MSI file downloaded from the onboarding section in the Microsoft Defender portal (**Settings** > **Endpoints** > **Onboarding** > **Windows Subsystem for Linux 2 (plug-in)**.)
+    After WSL is running and fully up to date, follow these steps to install the plug-in:
 
-2. Open a command prompt/terminal and run `wsl`.
+    1. Install the MSI file downloaded from the onboarding section in the Microsoft Defender portal (**Settings** > **Endpoints** > **Onboarding** > **Windows Subsystem for Linux 2 (plug-in)**.)
+
+    2. Open a command prompt/terminal and run `wsl`.
 
    You can [deploy the package using Microsoft Intune](/mem/intune/apps/lob-apps-windows).
 
@@ -108,11 +109,11 @@ After WSL is running and fully up to date, follow these steps to install the plu
 
 This section describes how to configure proxy connectivity for the Defender for Endpoint plug-in. If your enterprise uses a proxy to provide connectivity to Defender for Endpoint running on the Windows host, continue reading to determine whether you need to configure it for the plug-in.
 
-Reuse the Defender for Endpoint static proxy setting (`TelemetryProxyServer`).
+If you want to use the host [windows EDR telemetry proxy](configure-proxy-internet.md) configuration for MDE for the WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
 
-If you want to use the host [static proxy](configure-proxy-internet.md) configuration for MDE for the WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
+If you want to use the host [winhttp proxy](/defender-endpoint/configure-proxy-internet#configure-the-proxy-server-manually-using-netsh-command) configuration for MDE for WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
 
-If you want to use the host network and network proxy setting for MDE for WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
+If you want to use the host [network and network proxy setting](https://support.microsoft.com/windows/use-a-proxy-server-in-windows-03096c53-0554-4ffe-b6ab-8b1deee8dae1#ID0EFD=Windows_11&preserve-view=true) for MDE for WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
 
 ## Plug-in Proxy selection
 
@@ -126,6 +127,9 @@ If your host machine contains multiple proxy settings, the plug-in selects the p
 
 Example: If your host machine has both *Winhttp proxy* and *Network & Internet proxy*, the plug-in selects `Winhttp proxy` as the proxy configuration. 
 
+> [!NOTE]
+> The `DefenderProxyServer` registry key is no longer supported. Follow the above mentioned steps to configure proxy in plug-in.
+ 
 ## Connectivity test for Defender running in WSL
 
 The following procedure describes how to confirm that Defender in Endpoint in WSL has internet connectivity. 

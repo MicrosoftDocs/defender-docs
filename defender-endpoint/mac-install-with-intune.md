@@ -61,19 +61,19 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 
 ### Step 1: Approve system extensions
 
-1. In Microsoft Defender portal, go to **Settings** \> **Endpoints** \> **Device management** \> **Onboarding**.
-
-   This profile is needed for Big Sur (11) or later. It is ignored on older macOS since they use the kernel extension.
+1. In the [Intune admin center](https://intune.microsoft.com), go to **Devices**, and under **Manage Devices**, select **Configuration**.
 
 1. Under **Configuration profiles**, select **Create Profile**.
+
+   This profile is needed for Big Sur (11) or later. It is ignored on older versions of macOS, because they use the kernel extension.
+
+1. On the **Policies** tab, select **Create** > **New Policy**. 
 
 1. Under **Platform**, select **macOS**.
 
 1. Under **Profile type**, select **Templates**.
 
-1. Under **Template name**, select **Extensions**.
-
-1. Select **Create**.
+1. Under **Template name**, select **Extensions**, and then select **Create**.
 
 1. On the **Basics** tab, **Name** the profile. For example, `SysExt-prod-macOS-Default-MDE`.
 
@@ -88,7 +88,9 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 
     :::image type="content" source="media/mac-system-extension-intune2.png" alt-text="The settings of the system's extension" lightbox="media/mac-system-extension-intune2.png":::
 
-1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or All Users and All devices.
+   Then select **Next**.
+
+1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or select the **Add all users** and **Add all devices** options. Then select **Next**.
 
 1. Review the configuration profile. Select **Create**.
 
@@ -134,7 +136,8 @@ To configure network filter:
 Download [**fulldisk.mobileconfig**](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
 To configure Full Disk Access:
-1. Under **Configuration profiles**, select **Create Profile**.
+
+1. In the Intune admin center, under **Configuration profiles**, select **Create Profile**.
 
 1. Under **Platform**, select **macOS**.
 
@@ -144,11 +147,11 @@ To configure Full Disk Access:
 
 1. Select **Create**.
 
-1. On the **Basics** tab, **Name** the profile. For example, `FullDiskAccess-prod-macOS-Default-MDE`.
+1. On the **Basics** tab, **Name** the profile. For example, `Background_Services-prod-macOS-Default-MDE`.
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Fulldisk.mobileconfig`.
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `background_services.mobileconfig`.
 
 1. Choose a **Deployment channel**.
 
@@ -184,11 +187,11 @@ To configure background services:
 
 1. Select **Create**.
 
-1. On the **Basics** tab, **Name** the profile. For example, `FullDiskAccess-prod-macOS-Default-MDE`.
+1. On the **Basics** tab, **Name** the profile. For example, `BackgroundServices-prod-macOS-Default-MDE`.
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Fulldisk.mobileconfig`.
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `background_services.mobileconfig`.
 
 1. Choose a **Deployment channel**.
 
@@ -223,11 +226,11 @@ To configure notifications:
 
 1. Select **Create**.
 
-1. On the **Basics** tab, **Name** the profile. For example, `FullDiskAccess-prod-macOS-Default-MDE`.
+1. On the **Basics** tab, **Name** the profile. For example, `BackgroundServices-prod-macOS-Default-MDE`.
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Notification.mobileconfig`.
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Notif.mobileconfig`.
 
 1. Choose a **Deployment channel**.
 
@@ -291,7 +294,7 @@ This profile is used to update the Microsoft Defender for Endpoint on macOS via 
 
 For more information, see [Deploy updates for Microsoft Defender for Endpoint on macOS](mac-updates.md).
 
-Download [AutoUpdate2.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/settings/microsoft_auto_update/com.microsoft.autoupdate2.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
+Download [AutoUpdate2.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/settings/microsoft_auto_update/com.microsoft.autoupdate2.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/settings/microsoft_auto_update).
 
 > [!NOTE]
 > The sample AutoUpdate2.mobileconfig from the GitHub repository has it set to Current Channel (Production).
@@ -310,7 +313,7 @@ Download [AutoUpdate2.mobileconfig](https://github.com/microsoft/mdatp-xplat/blo
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `Autoupdate.mobileconfig`.
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `com.microsoft.autoupdate2.mobileconfig`.
 
 1. Choose a **Deployment channel**.
 
