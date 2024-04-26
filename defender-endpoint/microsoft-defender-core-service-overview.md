@@ -100,7 +100,7 @@ Q: Can I enforce keeping the Microsoft Defender Core service running as an Admin
 
 A: Yes, you can enforce it by using any of these management tools:
 
-- Configuration Manager      Co-Management
+- Configuration Manager Co-Management
 
 - Group Policy
 
@@ -114,8 +114,7 @@ Use Microsoft [Configuration Manager](https://nam06.safelinks.protection.outloo
 
 1. Open the Microsoft Configuration Manager console. Select Software Library > Scripts > Create Script.
 
-1. Enter the script name (for      example, Microsoft Defender Core service enforcement), description (Demo      configuration to enable Microsoft Defender Core service settings),      language (PowerShell), timeout seconds (180), and then paste in the      following "Microsoft Defender Core service enforcement" script      example to use as a template.
-
+1. Enter the script name (for example, Microsoft Defender Core service enforcement), description (Demo configuration to enable Microsoft Defender Core service settings), language (PowerShell), timeout seconds (180), and then paste in the following "Microsoft Defender Core service enforcement" script example to use as a template.
 
 ```
 ######
@@ -170,7 +169,7 @@ $ExecutionTime - Execution Ends -------------------------------------------"
 
 ### Group Policy
 
-1. Download the latest Microsoft      Defender Group Policy Administrative Templates from [here](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FYongRhee-MSFT%2FMicrosoft-Defender-Antivirus-Group-Policy-Administrative-Templates&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170132859%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=ZCeqpGpoSPoLlbsDttbCUtTxY1FgF1VTdQqP4pyFVEw%3D&reserved=0).
+1. Download the latest Microsoft Defender Group Policy Administrative Templates from [here](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FYongRhee-MSFT%2FMicrosoft-Defender-Antivirus-Group-Policy-Administrative-Templates&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170132859%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=ZCeqpGpoSPoLlbsDttbCUtTxY1FgF1VTdQqP4pyFVEw%3D&reserved=0).
 
 1. Setup the Domain Controller [Central Repository](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Ftroubleshoot%2Fwindows-client%2Fgroup-policy%2Fcreate-and-manage-central-store&data=05%7C02%7Cyongrhee%40microsoft.com%7C5b1cbdedcec441b8587108dc65896987%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638496888170140405%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=V4O9CmhHIeh8co474xWsg6qw%2B4pnhZu52KBV6v0W9Fc%3D&reserved=0) Copy the .admx and the .adml to the En-US folder.
 
@@ -179,14 +178,18 @@ Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc
 Computer Configuration -> Administrative Templates -> Windows Components -> Microsoft Defender Antivirus
 
 - Turn on ECS integration for Defender core service  
-      Not configured or enabled (default), the Microsoft Defender core service      will use ECS to rapidly deliver critical, org-specific fixes for Microsoft      Defender Antivirus and other Defender software.  
-      Disabled, the Microsoft Defender core service will stop using the      Experimentation and Configuration Service (ECS) to rapidly deliver      critical, org-specific fixes for Microsoft Defender Antivirus and other      Defender software. For false positives, fixes will be delivered via      "Security Intelligence updates", and for Platform and/or Engine      updates, fixes will be delivered thru Microsoft Update, Microsoft Update      Catalog or WSUS.
-
-- Turn on telemetry for Defender core service  
-      Not configured or enabled (default), the Microsoft Defender core service      will collect telemetry from Microsoft Defender Antivirus and other      Defender software  
-      Disabled, the Microsoft Defender core service will stop collecting      telemetry from Microsoft Defender Antivirus and other Defender software.      Disabling this setting can impact Microsoft's ability to quickly recognize      and address problems, such as slow performance and false positives.|
-
-### Powershell
+  ```
+  Not configured or enabled (default), the Microsoft Defender core service will use ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software.
+  
+  
+  Disabled, the Microsoft Defender core service will stop using the Experimentation and Configuration Service (ECS) to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. For false positives, fixes will be delivered via "Security Intelligence updates", and for Platform and/or Engine updates, fixes will be delivered thru Microsoft Update, Microsoft Update Catalog or WSUS.
+  ```- Turn on telemetry for Defender core service  
+  ```
+  Not configured or enabled (default), the Microsoft Defender core service will collect telemetry from Microsoft Defender Antivirus and other Defender software  
+  
+  
+  Disabled, the Microsoft Defender core service will stop collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.
+  ```### Powershell
 
 Start, Powershell (Run as administrator)
 
@@ -207,17 +210,18 @@ Set-MpPreferences -DisableCoreServiceTelemetry $false
 ```
 
 $false = enabled  
- $true = disabled|
+$true = disabled|
 
 ### Registry
 
-Start, Regedit.exe (Run as administrator) HKLM\Software\Policies\Microsoft\Windows Defender\Features
+Start, Regedit.exe (Run as administrator) 
+
+HKLM\Software\Policies\Microsoft\Windows Defender\Features
 
 DisableCoreService1DSTelemetry (dword) 0 (hex)  
  0 = Not configured, enabled (default)  
- 1 = disabled
+ 1 = Disabled
 
 DisableCoreServiceECSIntegration (dword) 0 (hex)  
  0 = Not configured, enabled (default)  
- 1 = disabled|
-
+ 1 = Disabled
