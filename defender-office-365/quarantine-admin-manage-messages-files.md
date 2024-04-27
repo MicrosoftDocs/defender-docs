@@ -91,6 +91,8 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Policy type**<sup>\*</sup> (see the possible values in the :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** description.)
 - **Expires**<sup>\*</sup>
 - **Recipient**: The recipient email address always resolves to the primary email address, even if the message was sent to a [proxy address](/exchange/recipients-in-exchange-online/manage-user-mailboxes/add-or-remove-email-addresses).
+- **Override reason**<sup>\*</sup>
+- **Released by**<sup>\*</sup>
 - **Message ID**
 - **Policy name**
 - **Message size**
@@ -124,18 +126,18 @@ To filter the entries, select :::image type="icon" source="/defender/media/m365-
   - **Spam**
   - **Data loss prevention**
   - **Malware**: Anti-malware policies in EOP or Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
+  - **Admin action - File type block**
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
   - **Admin action - File type block**: Messages blocked as malware by the common attachments filter in anti-malware policies. For more information, see [Anti-malware policies](anti-malware-protection-about.md#anti-malware-policies).
 - **Recipient**: **All users** or **Only me**. End users can only manage quarantined messages sent to them.
+- **Blocked sender**: Select **Don't show blocked senders** (default) or **Show all senders**.
 - **Release status**: Any of the following values:
   - **Needs review**
   - **Approved**
   - **Denied**
   - **Release requested**
   - **Released**
-  - **Preparing to release**
-  - **Error**
 - **Policy type**: Filter messages by policy type:
   - **Anti-malware policy**
   - **Safe Attachments policy**
