@@ -65,7 +65,7 @@ These tabs are described in the following subsections.
 
 The **Save queries** tab on the **Threat tracker** page at <https://security.microsoft.com/threattrackerv2> contains all of your saved queries from Threat Explorer. You can use these queries without having to re-create the search filters.
 
-The following information is shown on the **Save queries** tab. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The following information is shown on the **Save queries** tab. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Date created**
 - **Name**
@@ -77,15 +77,15 @@ The following information is shown on the **Save queries** tab. You can sort the
   - **Yes**: The query automatically runs periodically. The query and the results are also available on the **Tracked queries** page.
 - **Actions**: Select **Explore** to open and run the query in Threat Explorer, or to update or save a modified or unmodified copy of the query in Threat Explorer.
 
-If you select a query, the :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** and :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** actions that appear.
+If you select a query, the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** and :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** actions that appear.
 
-If you select :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**, you can update the date and **Track query** settings of the existing query in the details flyout that opens.
+If you select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**, you can update the date and **Track query** settings of the existing query in the details flyout that opens.
 
 ### Tracked queries
 
 The **Tracked queries** tab on the **Threat tracker** page at <https://security.microsoft.com/threattrackerv2> contains the results of queries that you created in Threat Explorer where you selected **Track this query**. Tracked queries run automatically, giving you up-to-date information without having to remember to run the queries.
 
-The following information is shown on the **Tracked queries** tab. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The following information is shown on the **Tracked queries** tab. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Date created**
 - **Name**
@@ -94,13 +94,13 @@ The following information is shown on the **Tracked queries** tab. You can sort 
 - **Trend: today vs. prior week**
 - **Actions**: Select **Explore** to open and run the query in Threat Explorer.
 
-If you select a query, the :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action appears. If you select this action, you can update the date and **Track query** settings of the existing query in the details flyout that opens.
+If you select a query, the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action appears. If you select this action, you can update the date and **Track query** settings of the existing query in the details flyout that opens.
 
 ### Trending campaigns tab
 
 The **Trending campaigns** tab on the **Threat tracker** page at <https://security.microsoft.com/threattrackerv2> automatically highlights new email threats that were recently received by your organization.
 
-The following information is shown on the **Trending campaigns** tab. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The following information is shown on the **Trending campaigns** tab. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Malware family**
 - **Prior day message count**

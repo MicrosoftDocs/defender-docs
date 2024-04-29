@@ -33,7 +33,7 @@ Welcome to the Microsoft Defender for Office 365 trial user guide! This user gui
 
 Defender for Office 365 helps organizations secure their enterprise by offering a comprehensive slate of capabilities, including threat protection policies, reports, threat investigation and response capabilities, and automated investigation and response capabilities.
 
-:::image type="content" source="/defender/media/microsoft-defender-for-office-365.png" alt-text="Microsoft Defender for Office 365 conceptual diagram." lightbox="/defender/media/microsoft-defender-for-office-365.png":::
+:::image type="content" source="media/microsoft-defender-for-office-365.png" alt-text="Microsoft Defender for Office 365 conceptual diagram." lightbox="media/microsoft-defender-for-office-365.png":::
 
 In addition to the detection of advanced threats, the following video shows how the SecOps capabilities of Defender for Office 365 can help your team respond to threats:
 
@@ -60,13 +60,13 @@ The key factors that determine which modes are available to you are:
 
   - Mail from the internet flows directly Microsoft 365, but your current subscription has only [Exchange Online Protection (EOP)](eop-about.md) or [Defender for Office 365 Plan 1](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet).
 
-    :::image type="content" source="/defender/media/mdo-trial-mail-flow.png" alt-text="Mail flows from the internet into Microsoft 365, with protection from EOP and/or Defender for Office 365 Plan 1." lightbox="/defender/media/mdo-trial-mail-flow.png":::
+    :::image type="content" source="media/mdo-trial-mail-flow.png" alt-text="Mail flows from the internet into Microsoft 365, with protection from EOP and/or Defender for Office 365 Plan 1." lightbox="media/mdo-trial-mail-flow.png":::
 
     In these environments, **audit mode** or **blocking mode** are available, [depending on your licensing](try-microsoft-defender-for-office-365.md#evaluation-vs-trial-for-defender-for-office-365).
 
   - You're currently using a third-party service or device for email protection of your Microsoft 365 mailboxes. Mail from the internet flows through the protection service before delivery into your Microsoft 365 organization. Microsoft 365 protection is as low as possible (it's never completely off; for example, malware protection is always enforced).
 
-    :::image type="content" source="/defender/media/mdo-migration-before.png" alt-text="Mail flows from the internet through the third-party protection service or device before delivery into Microsoft 365." lightbox="/defender/media/mdo-migration-before.png":::
+    :::image type="content" source="media/mdo-migration-before.png" alt-text="Mail flows from the internet through the third-party protection service or device before delivery into Microsoft 365." lightbox="media/mdo-migration-before.png":::
 
     In these environments, only **audit mode** is available. You don't need to change your mail flow (MX records) to evaluate Defender for Office 365 Plan 2.
 
@@ -107,7 +107,7 @@ Use the reporting capabilities in Defender for Office 365 to get more details ab
 - See where threats are blocked with the [Mailflow status report](reports-email-security.md#mailflow-status-report).
 - Use the [URL protection report](reports-defender-for-office-365.md#url-protection-report) to review links that were viewed by users or blocked by the system.
 
-:::image type="content" source="/defender/media/mdo-trial-playbook-reporting.png" alt-text="The Email & collaboration reports in the Microsoft Defender portal." lightbox="/defender/media/mdo-trial-playbook-reporting.png":::
+:::image type="content" source="media/mdo-trial-playbook-reporting.png" alt-text="The Email & collaboration reports in the Microsoft Defender portal." lightbox="media/mdo-trial-playbook-reporting.png":::
 
 ### Step 2: Intermediate steps in blocking mode
 
@@ -121,7 +121,7 @@ Protect your most targeted and most visible users with Priority Account Protecti
 
 Watch this video to learn more: [Protecting priority accounts in Microsoft Defender for Office 365 - YouTube](https://www.youtube.com/watch?v=tqnj0TlzQcI&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=11).
 
-:::image type="content" source="/defender/media/mdo-trial-playbook-alerts.png" alt-text="The Alerts in the Microsoft Defender portal." lightbox="/defender/media/mdo-trial-playbook-alerts.png":::
+:::image type="content" source="media/mdo-trial-playbook-alerts.png" alt-text="The Alerts in the Microsoft Defender portal." lightbox="media/mdo-trial-playbook-alerts.png":::
 
 ### Avoid costly breaches by preventing user compromise
 
@@ -130,7 +130,7 @@ Get alerted to potential compromise and automatically limit the impact of these 
 - Review [compromised user alerts](address-compromised-users-quickly.md#compromised-user-alerts).
 - [Investigate and respond](address-compromised-users-quickly.md) to compromised users.
 
-:::image type="content" source="/defender/media/mdo-trial-playbook-investigation.png" alt-text="The Investigate compromised users." lightbox="/defender/media/mdo-trial-playbook-investigation.png":::
+:::image type="content" source="media/mdo-trial-playbook-investigation.png" alt-text="The Investigate compromised users." lightbox="media/mdo-trial-playbook-investigation.png":::
 
 Watch this video to learn more: [Detect and respond to compromise in Microsoft Defender for Office 365 - YouTube](https://www.youtube.com/watch?v=Pc7y3a-wdR0&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=5).
 
@@ -149,7 +149,7 @@ See the bigger picture with Campaign Views in Defender for Office 365, which giv
 - [Visualize the scope](campaigns.md#campaigns-page-in-the-microsoft-defender-portal) of the attack.
 - [Track user interaction](campaigns.md#campaign-details) with these messages.
 
-  :::image type="content" source="/defender/media/mdo-trial-playbook-campaign-details.png" alt-text="The Campaign details in the Microsoft Defender portal." lightbox="/defender/media/mdo-trial-playbook-campaign-details.png":::
+  :::image type="content" source="media/mdo-trial-playbook-campaign-details.png" alt-text="The Campaign details in the Microsoft Defender portal." lightbox="media/mdo-trial-playbook-campaign-details.png":::
 
 Watch this video to learn more: [Campaign Views in Microsoft Defender for Office 365 - YouTube](https://www.youtube.com/watch?v=DvqzzYKu7cQ&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=14).
 
@@ -161,7 +161,7 @@ Respond efficiently using Automated investigation and response (AIR) to review, 
 - [View details and results](email-analysis-investigations.md) of an investigation.
 - Eliminate threats by [approving remediation actions](air-remediation-actions.md).
 
-:::image type="content" source="/defender/media/mdo-trial-playbook-investigation-results.png" alt-text="The investigation results." lightbox="/defender/media/mdo-trial-playbook-investigation-results.png":::
+:::image type="content" source="media/mdo-trial-playbook-investigation-results.png" alt-text="The investigation results." lightbox="media/mdo-trial-playbook-investigation-results.png":::
 
 ### Step 3: Advanced content in blocking mode
 
@@ -182,7 +182,7 @@ Equip your users with the right knowledge to identify threats and report suspici
 - [Assign training](attack-simulation-training-simulations.md#assign-training) to users based on simulation results.
 - [Track progress](attack-simulation-training-insights.md) of your organization in simulations and training completion.
 
-  :::image type="content" source="/defender/media/mdo-trial-playbook-attack-simulation-training-results.png" alt-text="The attack simulation training insights in the Microsoft Defender portal." lightbox="/defender/media/mdo-trial-playbook-attack-simulation-training-results.png":::
+  :::image type="content" source="media/mdo-trial-playbook-attack-simulation-training-results.png" alt-text="The attack simulation training insights in the Microsoft Defender portal." lightbox="media/mdo-trial-playbook-attack-simulation-training-results.png":::
 
 ## Auditing mode
 
@@ -241,7 +241,7 @@ Equip your users with the right knowledge to identify threats and report suspici
 - [Assign training](attack-simulation-training-simulations.md#assign-training) to users based on simulation results.
 - [Track progress](attack-simulation-training-insights.md) of your organization in simulations and training completion.
 
-  :::image type="content" source="/defender/media/mdo-trial-playbook-attack-simulation-training-results.png" alt-text="The attack simulation training insights in the Microsoft Defender portal." lightbox="/defender/media/mdo-trial-playbook-attack-simulation-training-results.png":::
+  :::image type="content" source="media/mdo-trial-playbook-attack-simulation-training-results.png" alt-text="The attack simulation training insights in the Microsoft Defender portal." lightbox="media/mdo-trial-playbook-attack-simulation-training-results.png":::
 
 ## Additional resources
 

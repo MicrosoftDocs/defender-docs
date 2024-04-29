@@ -102,7 +102,7 @@ Email from these blocked senders is marked as *high confidence phishing* and qua
 
 2. On the **Tenant Allow/Block Lists** page, verify that the **Domains & addresses** tab is selected.
 
-3. On the **Domains & addresses** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
+3. On the **Domains & addresses** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Block**.
 
 4. In the **Block domains & addresses** flyout that opens, configure the following settings:
 
@@ -152,18 +152,18 @@ On the **Domains & addresses** tab, you can sort the entries by clicking on an a
 - **Remove on**: The expiration date.
 - **Notes**
 
-To filter the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Action**: The values are **Allow** and **Block**.
-- **Never expire**: :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: or :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false":::
+- **Never expire**: :::image type="icon" source="media/scc-toggle-on.png" border="false"::: or :::image type="icon" source="media/scc-toggle-off.png" border="false":::
 - **Last updated**: Select **From** and **To** dates.
 - **Remove on**: Select **From** and **To** dates.
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
-To group the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
+To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select **Action**. To ungroup the entries, select **None**.
 
 #### Use PowerShell to view entries for domains and email addresses in the Tenant Allow/Block List
 
@@ -195,7 +195,7 @@ In existing domain and email address entries, you can change the expiration date
 
 2. Verify the **Domains & addresses** tab is selected.
 
-3. On the **Domains & addresses** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+3. On the **Domains & addresses** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
 
 4. In the **Edit domains & addresses** flyout that opens, the following settings are available:
    - **Block entries**:
@@ -217,7 +217,7 @@ In existing domain and email address entries, you can change the expiration date
    When you're finished in the **Edit domains & addresses** flyout, select **Save**.
 
 > [!TIP]
-> In the details flyout of an entry on the **Domains & addresses** tab, use :::image type="icon" source="/defender/media/m365-cc-sc-view-submission-icon.png" border="false"::: **View submission** at the top of the flyout to go to the details of the corresponding entry on the **Submissions** page. This action is available if a submission was responsible for creating the entry in the Tenant Allow/Block List.
+> In the details flyout of an entry on the **Domains & addresses** tab, use :::image type="icon" source="media/m365-cc-sc-view-submission-icon.png" border="false"::: **View submission** at the top of the flyout to go to the details of the corresponding entry on the **Submissions** page. This action is available if a submission was responsible for creating the entry in the Tenant Allow/Block List.
 
 #### Use PowerShell to modify entries for domains and email addresses in the Tenant Allow/Block List
 
@@ -243,11 +243,11 @@ For detailed syntax and parameter information, see [Set-TenantAllowBlockListItem
 
 3. On **Domains & addresses** tab, do one of the following steps:
 
-   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
-   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** at the top of the flyout.
+   - Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
+   - Select the entry from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** at the top of the flyout.
 
      > [!TIP]
-     > - To see details about other entries without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+     > - To see details about other entries without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
      > - You can select multiple entries by selecting each check box, or select all entries by selecting the check box next to the **Value** column header.
 
 4. In the warning dialog that opens, select **Delete**.
@@ -300,7 +300,7 @@ In the Tenant Allow/Block List, you can create allow entries for spoofed senders
 
 2. On the **Tenant Allow/Block Lists** page, select the **Spoofed senders** tab.
 
-3. On the **Spoofed senders** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Add**.
+3. On the **Spoofed senders** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add**.
 
 4. In the **Add new domain pairs** flyout that opens, configure the following settings:
 
@@ -386,16 +386,16 @@ On the **Spoofed senders** tab, you can sort the entries by clicking on an avail
 - **Spoof type**: The available values are **Internal** or **External**.
 - **Action**: The available values are **Block** or **Allow**.
 
-To filter the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Action**: The available values are **Allow** and **Block**.
 - **Spoof type**: The available values are **Internal** and **External**.
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
-To group the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
+To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
 
 - **Action**
 - **Spoof type**
@@ -438,7 +438,7 @@ When you modify an allow or block entry for spoofed senders in the Tenant Allow/
 
 2. Select the **Spoofed senders** tab.
 
-3. Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+3. Select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
 
 4. In the **Edit spoofed sender** flyout that opens, select **Allow** or **Block**, and then select **Save**.
 
@@ -464,7 +464,7 @@ For detailed syntax and parameter information, see [Set-TenantAllowBlockListSpoo
 
 2. Select the **Spoofed senders** tab.
 
-3. On the **Spoofed senders** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
+3. On the **Spoofed senders** tab, select the entry from the list by selecting the check box next to the first column, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
 
    > [!TIP]
    > You can select multiple entries by selecting each check box, or select all entries by selecting the check box next to the **Spoofed user** column header.
