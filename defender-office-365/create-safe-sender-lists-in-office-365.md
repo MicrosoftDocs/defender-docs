@@ -102,7 +102,7 @@ The following example assumes you need email from contoso.com to skip spam filte
 
 When a message skips spam filtering due to a mail flow rule, the value `SFV:SKN` value is stamped in the **X-Forefront-Antispam-Report** header. If the message is from a source that's on the IP Allow List, the value `IPV:CAL` is also added. These values can help you with troubleshooting.
 
-:::image type="content" source="/defender/media/1-AllowList-SkipFilteringFromContoso.png" alt-text="Example mail flow rule settings in the new EAC to bypassing spam filtering." lightbox="/defender/media/1-AllowList-SkipFilteringFromContoso.png":::
+:::image type="content" source="media/1-AllowList-SkipFilteringFromContoso.png" alt-text="Example mail flow rule settings in the new EAC to bypassing spam filtering." lightbox="media/1-AllowList-SkipFilteringFromContoso.png":::
 
 ## Use Outlook Safe Senders
 

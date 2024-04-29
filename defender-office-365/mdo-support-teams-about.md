@@ -50,10 +50,10 @@ In Microsoft 365 E5 and Defender for Office 365 Plan 2, we've extended Teams pro
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **Microsoft Teams protection**. Or, to go directly to the **Microsoft Teams protection** page, use <https://security.microsoft.com/securitysettings/teamsProtectionPolicy>.
 
 2. On the **Microsoft Teams protection** page, verify the toggle in the **Zero-hour auto purge (ZAP)** section:
-   - **Turn on ZAP for Teams**: Verify the toggle is **On** :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false":::.
-   - **Turn off ZAP for Teams**: Slide the toggle to **Off** :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false":::.
+   - **Turn on ZAP for Teams**: Verify the toggle is **On** :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
+   - **Turn off ZAP for Teams**: Slide the toggle to **Off** :::image type="icon" source="media/scc-toggle-off.png" border="false":::.
 
-3. When the toggle is **On** :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false":::, use the remaining settings on the page to customize ZAP for Teams protection:
+3. When the toggle is **On** :::image type="icon" source="media/scc-toggle-on.png" border="false":::, use the remaining settings on the page to customize ZAP for Teams protection:
 
    - **Quarantine policies** section: You can select the existing quarantine policy to use for messages that are quarantined by ZAP for Teams protection as **Malware** or **High confidence phishing**. Quarantine policies define what users are able to do to quarantined messages, and whether users receive quarantine notifications. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
 
@@ -69,7 +69,7 @@ In Microsoft 365 E5 and Defender for Office 365 Plan 2, we've extended Teams pro
 
 4. When you're finished on the **Microsoft Teams protection** page, select **Save**.
 
-:::image type="content" source="/defender/media/zap-teams-policy-mdo.png" alt-text="Image showing policy settings for Microsoft Teams." lightbox="/defender/media/zap-teams-policy-mdo.png":::
+:::image type="content" source="media/zap-teams-policy-mdo.png" alt-text="Image showing policy settings for Microsoft Teams." lightbox="media/zap-teams-policy-mdo.png":::
 
 ### Use Exchange Online PowerShell to configure ZAP for Teams protection
 

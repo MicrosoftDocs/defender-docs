@@ -51,13 +51,13 @@ To view or configure this setting, you need to be a member of the **Global Admin
 
 2. On the **Messaging policies** page, verify that the **Manage policies** tab is selected, and do either of the following actions to edit the appropriate policy (the **Global (Org-wide) default** policy or a custom policy):
    - Select the link in the **Name** column.
-   - Select the policy by clicking anywhere in the row other than the **Name** column, and then select :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
+   - Select the policy by clicking anywhere in the row other than the **Name** column, and then select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
 
-3. In the policy details page that opens, find the **Report a security concern** toggle. By default, it's :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: **On**. To turn it off, toggle the setting to :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false"::: **Off**.
+3. In the policy details page that opens, find the **Report a security concern** toggle. By default, it's :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**. To turn it off, toggle the setting to :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Off**.
 
 4. Select **Save**, and then select **Confirm** in the confirmation dialog that opens.
 
-:::image type="content" source="/defender/media/submissions-teams-turn-on-off-tac.png" alt-text="Screenshot of the 'Report a security concern' toggle in Messaging policies in the Teams admin center." lightbox="/defender/media/submissions-teams-turn-on-off-tac.png":::
+:::image type="content" source="media/submissions-teams-turn-on-off-tac.png" alt-text="Screenshot of the 'Report a security concern' toggle in Messaging policies in the Teams admin center." lightbox="media/submissions-teams-turn-on-off-tac.png":::
 
 For more information about messaging policies in Teams, see [Manage messaging policies in Teams](/microsoftteams/messaging-policies-in-teams).
 
@@ -73,7 +73,7 @@ The value of this setting is meaningful only if message reporting is turned on i
 
    As previously described, this setting is turned on by default for new tenants, and existing tenants need to enable it. Typically, you leave it turned on if message reporting is also turned on in Teams admin center. [Learn more about reported message destinations](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
 
-   :::image type="content" source="/defender/media/submissions-teams-turn-on-off-defender-portal.png" alt-text="Screenshot of the 'Monitor reported messages in Microsoft Teams' setting in the Microsoft Defender portal." lightbox="/defender/media/submissions-teams-turn-on-off-defender-portal.png":::
+   :::image type="content" source="media/submissions-teams-turn-on-off-defender-portal.png" alt-text="Screenshot of the 'Monitor reported messages in Microsoft Teams' setting in the Microsoft Defender portal." lightbox="media/submissions-teams-turn-on-off-defender-portal.png":::
 
 For more information about user reported message settings in the Defender portal, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
@@ -81,11 +81,11 @@ For more information about user reported message settings in the Defender portal
 
 1. In the Microsoft Teams client, hover over the malicious message without selecting it, and then select **... More options** \> **More actions** \> **Report this message**.
 
-   :::image type="content" source="/defender/media/submissions-user-report-message-in-teams-client-click-path.png" alt-text="Screenshot of the Select path to report a message in the Microsoft Teams client." lightbox="/defender/media/submissions-user-report-message-in-teams-client-click-path.png":::
+   :::image type="content" source="media/submissions-user-report-message-in-teams-client-click-path.png" alt-text="Screenshot of the Select path to report a message in the Microsoft Teams client." lightbox="media/submissions-user-report-message-in-teams-client-click-path.png":::
 
 2. In the **report this message** dialog that opens, verify **Security risk - Spam, phishing, malicious content** is selected, and then select **Report**.
 
-   :::image type="content" source="/defender/media/submissions-user-report-message-in-teams-client-click-report.png" alt-text="Screenshot of the final dialog to report a message in the Microsoft Teams client." lightbox="/defender/media/submissions-user-report-message-in-teams-client-click-report.png":::
+   :::image type="content" source="media/submissions-user-report-message-in-teams-client-click-report.png" alt-text="Screenshot of the final dialog to report a message in the Microsoft Teams client." lightbox="media/submissions-user-report-message-in-teams-client-click-report.png":::
 
    > [!NOTE]
    > If [reporting for Microsoft Purview Communication Compliance is turned off](/purview/communication-compliance-policies#user-reported-messages-policy), users might not have the dropdown list to select **Security risk - Spam, phishing, malicious content**. Instead, they're shown a confirmation pop-up.
@@ -115,7 +115,7 @@ For more information, see [User reported settings](submissions-user-reported-mes
   - Metadata from the reported Teams message (for example, senders, recipients, reported by, and message details) is available on the **User reported** tab on the **Submissions** page.
   - The alert policy named **Teams message reported by user as a security risk** generates an alert by default. For more information, see [Manage alerts](/purview/alert-policies#manage-alerts).
 
-  To view the corresponding alert for a user reported message in Teams, go to the **User reported** tab on the **Submission** page, and then double-click the message to open the submission flyout. Select :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** and then select **View alert**.
+  To view the corresponding alert for a user reported message in Teams, go to the **User reported** tab on the **Submission** page, and then double-click the message to open the submission flyout. Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** and then select **View alert**.
 
 > [!IMPORTANT]
 >

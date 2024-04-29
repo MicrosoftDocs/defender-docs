@@ -15,8 +15,7 @@ ms.reviewer: dansimp
 search.appverid: MET150
 f1.keywords:
 audience:
-ai-usage:
-- ai-assisted
+ai-usage: ai-assisted
 ---
 
 # Anti-malware Scan Interface (AMSI) integration with Microsoft Defender Antivirus
