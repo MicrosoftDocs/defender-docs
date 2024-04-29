@@ -18,7 +18,7 @@ ms.collection:
 description: Learn about how to define Safe Attachments policies to protect your organization from malicious files in email.
 ms.custom: seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 11/2/2023
+ms.date: 4/26/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -51,10 +51,10 @@ You configure Safe Attachments policies in the Microsoft Defender portal or in E
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md) and [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
-    - _Create, modify, and delete policies_: Membership in the **Organization Management** or **Security Administrator** role groups in Email & collaboration RBAC <u>and</u> membership in the **Organization Management** role group in Exchange Online RBAC.
+    - _Create, modify, and delete policies_: Membership in the **Organization Management** or **Security Administrator** role groups in Email & collaboration permissions <u>and</u> membership in the **Organization Management** role group in Exchange Online permissions.
     - _Read-only access to policies_: Membership in one of the following role groups:
-      - **Global Reader** or **Security Reader** in Email & collaboration RBAC.
-      - **View-Only Organization Management** in Exchange Online RBAC.
+      - **Global Reader** or **Security Reader** in Email & collaboration permissions.
+      - **View-Only Organization Management** in Exchange Online permissions.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
 - For our recommended settings for Safe Attachments policies, see [Safe Attachments settings](recommended-settings-for-eop-and-office365.md#safe-attachments-settings).
