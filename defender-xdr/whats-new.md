@@ -29,6 +29,10 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## May 2024
+
+- (Preview) **[Content distribution in multi-tenant management]** is now available. Content distribution helps you manage content at scale, across tenants in multi-tenant management in Microsoft Defender XDR. In content distribution, you can create tenant groups to copy existing content, like custom detection rules, from the source tenant to the target tenants you assign during tenant group creation. The content then runs on the target tenant's devices or device groups that you set in the tenant group scope.
+
 ## April 2024
 
 - (Preview) **Endpoint security policies** page in multitenant management is now available. Security administrators can manage security settings on their tenants' devices through the page. For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md).
