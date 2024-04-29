@@ -149,7 +149,7 @@ For instructions, see [Threat hunting: Email remediation](threat-explorer-threat
 
 To summarize:
 
-- Select :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** using one of the following methods:
+- Select :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** using one of the following methods:
   - Select one or more messages from the details table in the **Email** tab (view) in the **All email**, **Malware**, or **Phish** views by selecting the check boxes for the entries.
 
   Or
