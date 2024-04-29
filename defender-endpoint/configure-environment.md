@@ -77,7 +77,7 @@ If a proxy or firewall is blocking anonymous traffic from the Defender for Endpo
 > Microsoft does not provide a proxy server. These URLs are accessible via the proxy server that you configure.
 
 >[!IMPORTANT]
-> In compliance with Defender for Endpoint security and compliance standards, your data will be processed and stored in accordance with your tenant's physical location. Based on client location, traffic may flow through any of these IP regions (which correspond to Azure datacenter regions). For more information, see [Data storage and privacy](/defender-endpoint/data-storage-privacy). 
+> In compliance with Defender for Endpoint security and compliance standards, your data will be processed and stored in accordance with your tenant's physical location. Based on client location, traffic may flow through any of these IP regions (which correspond to Azure datacenter regions). For more information, see [Data storage and privacy](data-storage-privacy.md). 
 
 ## Microsoft Monitoring Agent (MMA) - proxy and firewall requirements for older versions of Windows client or Windows Server
 
@@ -96,7 +96,7 @@ The information in the list of proxy and firewall configuration information is r
 |`*.azure-automation.net`|Port 443|Outbound|Yes|
 
 > [!NOTE]
-> These connectivity requirements apply to the previous Microsoft Defender for Endpoint of Windows Server 2016, and Windows Server 2012 R2 that requires MMA. Instructions to onboard these operating systems with the new unified solution are at [Onboard Windows servers](configure-server-endpoints.md), or migrate to the new unified solution at [Server migration scenarios in Microsoft Defender for Endpoint](/defender-endpoint/server-migration).
+> These connectivity requirements apply to the previous Microsoft Defender for Endpoint of Windows Server 2016, and Windows Server 2012 R2 that requires MMA. Instructions to onboard these operating systems with the new unified solution are at [Onboard Windows servers](configure-server-endpoints.md), or migrate to the new unified solution at [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
 
 > [!NOTE]
 > As a cloud-based solution, the IP range can change. It's recommended, you move to DNS resolving setting.
@@ -111,8 +111,8 @@ For devices with no direct internet connection, the use of a proxy solution is t
 
 For more information about onboarding methods, see the following articles:
 
-- [Onboard previous versions of Windows](/defender-endpoint/onboard-downlevel)
-- [Onboard servers to the Microsoft Defender for Endpoint service](/defender-endpoint/configure-server-endpoints#windows-server-2008-r2-sp1-windows-server-2012-r2-and-windows-server-2016)
+- [Onboard previous versions of Windows](onboard-downlevel.md)
+- [Onboard servers to the Microsoft Defender for Endpoint service](configure-server-endpoints#windows-server-2008-r2-sp1-windows-server-2012-r2-and-windows-server-2016.md)
 
 > [!IMPORTANT]
 > - Microsoft Defender for Endpoint is a Cloud security solution. "Onboard devices without Internet access" means that Internet access for the endpoints must be configured through a proxy. Microsoft Defender for Endpoint does not support endpoints without direct or proxy Internet access. System wide proxy configuration recommended.
@@ -123,9 +123,9 @@ For more information about onboarding methods, see the following articles:
 
 Depending on the operating system, the proxy to be used for Microsoft Defender for Endpoint can be configured automatically, typically by using autodiscovery or an autoconfig file, or statically specific to Defender for Endpoint services running on the device.
 
-- For Windows devices, see [Configure device proxy and Internet connectivity settings](/defender-endpoint/configure-proxy-internet)
-- For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](/defender-endpoint/linux-static-proxy-configuration)
-- For macOS devices, see [Microsoft Defender for Endpoint on Mac](/defender-endpoint/microsoft-defender-endpoint-mac#network-connections)
+- For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md)
+- For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md)
+- For macOS devices, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac#network-connections.md)
 
 ### Windows devices running the previous MMA-based solution
 

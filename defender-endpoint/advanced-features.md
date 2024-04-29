@@ -161,7 +161,7 @@ To receive contextual device integration in Office 365 Threat Intelligence, you'
 
 ## Endpoint Attack Notifications
 
-[Endpoint Attack Notifications](/defender-endpoint/endpoint-attack-notifications) enable Microsoft to actively hunt for critical threats to be prioritized based on urgency and impact over your endpoint data. 
+[Endpoint Attack Notifications](endpoint-attack-notifications.md) enable Microsoft to actively hunt for critical threats to be prioritized based on urgency and impact over your endpoint data. 
 
 For proactive hunting across the full scope of Microsoft Defender XDR, including threats that span email, collaboration, identity, cloud applications, and endpoints, [learn more](https://aka.ms/DefenderExpertsForHuntingGetStarted) about Microsoft Defender Experts.
 
