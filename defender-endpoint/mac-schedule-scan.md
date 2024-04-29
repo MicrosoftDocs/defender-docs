@@ -188,6 +188,13 @@ The following code shows the schema you need to use to schedule scans according 
 ```
 
 2. Save the file as _com.microsoft.wdav.plist_.
+3. Check that the scheduled scan is configured via a "Set Preference"
+     
+     ```
+     mdatp health --details scheduled_scan
+     ```
+
+     In the results, you should be able to see [managed].
 
 ### Example 2: Schedule an hourly quick scan, a daily quick scan, and weekly full scan using a _plist_
 
@@ -312,6 +319,14 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
 ```
 
 2. Save the file as _com.microsoft.wdav.plist_.
+
+3. Check that the scheduled scan is configured via a "Set Preference"
+     
+     ```
+     mdatp health --details scheduled_scan
+     ```
+
+     In the results, you should be able to see [managed].
 
 ### Option 3: Configure scheduled scans through CLI tool
 
