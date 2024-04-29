@@ -74,12 +74,12 @@ Microsoft 365 encountered a connection error when it tried to connect to the des
     2. On the **Connectors** page, delete or disable the connector with the **From** value **Office 365** and the **To** value **Your organization's email server** by doing one of the following steps:
 
        - Select the connector from the list by selecting the round check box that appears next to the **Status** column.
-         1. Select the :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
+         1. Select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
          2. In the confirmation flyout that opens, select **Confirm**.
 
        - Select the connector from the list by clicking anywhere in the row other than the round check box that appears next to the **Status** column. In the connector details flyout that opens, do either of the following actions:
-         - Delete the connector by selecting :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** at the top of the flyout, and then select **Confirm** in the confirmation flyout that opens.
-         - Disable the connector by selecting :::image type="icon" source="/defender/media/m365-cc-sc-disable-icon.png" border="false"::: **Disable** at the top of the flyout, and then select **Confirm** in the confirmation flyout that opens.
+         - Delete the connector by selecting :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** at the top of the flyout, and then select **Confirm** in the confirmation flyout that opens.
+         - Disable the connector by selecting :::image type="icon" source="media/m365-cc-sc-disable-icon.png" border="false"::: **Disable** at the top of the flyout, and then select **Confirm** in the confirmation flyout that opens.
 
   - In Microsoft 365, change the accepted domain that's associated with your on-premises email environment from **Internal Relay** to **Authoritative**. For instructions, see [Manage accepted domains in Exchange Online](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 

@@ -73,11 +73,11 @@ In addition to automated investigations that are triggered by an alert, your org
 
 For example, suppose that you are using the **Malware** view in Explorer. Using the tabs below the chart, you select the **Email** tab. If you select one or more items in the list, the **+ Actions** button activates.
 
-:::image type="content" source="/defender/media/Explorer-Malware-Email-ActionsInvestigate.png" alt-text="The Explorer with selected messages" lightbox="/defender/media/Explorer-Malware-Email-ActionsInvestigate.png":::
+:::image type="content" source="media/Explorer-Malware-Email-ActionsInvestigate.png" alt-text="The Explorer with selected messages" lightbox="media/Explorer-Malware-Email-ActionsInvestigate.png":::
 
 Using the **Actions** menu, you can select **Trigger investigation**.
 
-:::image type="content" source="/defender/media/explorer-malwareview-selectedemails-actions.jpg" alt-text="The Actions menu for selected messages" lightbox="/defender/media/explorer-malwareview-selectedemails-actions.jpg":::
+:::image type="content" source="media/explorer-malwareview-selectedemails-actions.jpg" alt-text="The Actions menu for selected messages" lightbox="media/explorer-malwareview-selectedemails-actions.jpg":::
 
 Similar to playbooks triggered by an alert, automatic investigations that are triggered from a view in Explorer include a root investigation, steps to identify and correlate threats, and recommended actions to mitigate those threats.
 

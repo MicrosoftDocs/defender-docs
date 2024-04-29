@@ -69,7 +69,7 @@ EOP and Defender for Office 365 can be summarized with the following description
 
 However, you can also think about the _architecture_ of EOP and Defender for Office 365 as _cumulative layers of security_, where each layer has a different _security emphasis_. This architecture is shown in the following diagram:
 
-:::image type="content" source="/defender/media/eop-mdop1-mdop2-comparison.png" alt-text="Diagram about EOP and Defender for Office 365 and their relationships to one another with service emphasis, including a note for email authentication." lightbox="/defender/media/eop-mdop1-mdop2-comparison.png":::
+:::image type="content" source="media/eop-mdop1-mdop2-comparison.png" alt-text="Diagram about EOP and Defender for Office 365 and their relationships to one another with service emphasis, including a note for email authentication." lightbox="media/eop-mdop1-mdop2-comparison.png":::
 
 EOP and Defender for Office 365 are capable of protecting, detecting, investigating, and responding to threats. But as you move up the protection ladder, the _available features_ and _automation_ increase.
 
@@ -107,7 +107,7 @@ The additional features that you get in **Defender for Office 365 Plan 1** on to
 
 <sup>\*</sup> The presence of **Email & collaboration** \> **Real-time detections** in the Microsoft Defender portal is a quick way to differentiate between Defender for Office 365 Plan 1 and Plan 2.
 
-:::image type="content" source="/defender/media/te-rtd-select-real-time-detections.png" alt-text="Screenshot of the Real-time detections selection in the Email & collaboration section in the Microsoft Defender portal." lightbox="/defender/media/te-rtd-select-real-time-detections.png":::
+:::image type="content" source="media/te-rtd-select-real-time-detections.png" alt-text="Screenshot of the Real-time detections selection in the Email & collaboration section in the Microsoft Defender portal." lightbox="media/te-rtd-select-real-time-detections.png":::
 
 ### Defender for Office 365 Plan 2 capabilities
 
@@ -121,7 +121,7 @@ The additional features that you get in **Defender for Office 365 Plan 2** on to
 
 <sup>\*</sup> The presence of **Email & collaboration** \> **Explorer** in the Microsoft Defender portal is a quick way to differentiate between Defender for Office 365 Plan 2 and Plan 1.
 
-:::image type="content" source="/defender/media/te-rtd-select-threat-explorer.png" alt-text="Screenshot of the Explorer selection in the Email & collaboration section in the Microsoft Defender portal." lightbox="/defender/media/te-rtd-select-threat-explorer.png":::
+:::image type="content" source="media/te-rtd-select-threat-explorer.png" alt-text="Screenshot of the Explorer selection in the Email & collaboration section in the Microsoft Defender portal." lightbox="media/te-rtd-select-threat-explorer.png":::
 
 ## Defender for Office 365 Plan 1 vs. Plan 2 cheat sheet
 
