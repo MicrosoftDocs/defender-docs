@@ -45,7 +45,7 @@ Usage cards can help determine the following scenarios:
 
 2. On the **Email & collaboration reports and insights** page, go to the **Email & collaboration insights** section, and find the **Defender for Office 365 usage** card.
 
-   :::image type="content" source="/defender/media/usage-card-mdo.png" alt-text="The Defender for Office 365 usage card in the Defender portal." lightbox="/defender/media/usage-card-mdo.png":::
+   :::image type="content" source="media/usage-card-mdo.png" alt-text="The Defender for Office 365 usage card in the Defender portal." lightbox="media/usage-card-mdo.png":::
 
 For members of **Global Administrator** or **Billing Administrator** roles in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal), following items are available on the card:
 
@@ -58,7 +58,7 @@ These items aren't available for member of **Global Reader**, **Security Adminis
 
 On the **Defender for Office 365 usage** card, select **Show details**.
 
-:::image type="content" source="/defender/media/usage-card-detail-flyout.png" alt-text="The details flyout of the Defender for Office 365 usage card in the Defender portal." lightbox="/defender/media/usage-card-detail-flyout.png":::
+:::image type="content" source="media/usage-card-detail-flyout.png" alt-text="The details flyout of the Defender for Office 365 usage card in the Defender portal." lightbox="media/usage-card-detail-flyout.png":::
 
 The details flyout that opens contains the following information from the last 28 days:
 
@@ -107,7 +107,7 @@ If you have at least one Defender for Office 365 Plan 1 or Plan 2 license, but y
 
 If you see **Collecting license and usage data** status in your usage card, it means Microsoft is still collecting your current licensing and usage data. When it's available, you can see the full usage card and other details.
 
-:::image type="content" source="/defender/media/usage-card-collecting-data.png" alt-text="Screenshot of the usage card showing the collecting data status." lightbox="/defender/media/usage-card-collecting-data.png":::
+:::image type="content" source="media/usage-card-collecting-data.png" alt-text="Screenshot of the usage card showing the collecting data status." lightbox="media/usage-card-collecting-data.png":::
 
 ### Why does the Usage card show an overage even though you don't have Defender for Office 365 Plan 2 and no usage of SecOps capabilities?
 
