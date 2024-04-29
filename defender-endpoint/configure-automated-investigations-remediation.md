@@ -50,7 +50,7 @@ If you're using Defender for Endpoint, you can specify an automation level so th
 
 ## Next steps
 
-- [Visit the Action Center to view pending and completed remediation actions](auto-investigation-action-center#the-action-center.md)
+- [Visit the Action Center to view pending and completed remediation actions](auto-investigation-action-center.md#the-action-center)
 - [Review and approve pending actions](manage-auto-investigation.md)
 
 ## See also

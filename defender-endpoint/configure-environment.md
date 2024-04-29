@@ -53,7 +53,7 @@ The following downloadable spreadsheet lists the services and their associated U
 
 |Spreadsheet of domains list| Description|
 |--|--|
-| Microsoft Defender for Endpoint consolidated URL list (NEW - Streamlined) <br> | **IMPORTANT:** Currently in public preview. <br> Spreadsheet of consolidated URLs for streamlining device connectivity. <br>[Download the spreadsheet here.](https://go.microsoft.com/fwlink/?linkid=2248278)<br><br> **Applicable OS:** <br/>For complete list, see [streamlined connectivity](configure-device-connectivity.md#prerequisites). <br>- Windows 10 1809+<br>- Windows 11<br>- Windows Server 2019<br>- Windows Server 2022<br>- Windows Server 2012 R2, Windows Server 2016 R2  running [Defender for Endpoint modern unified solution](configure-server-endpoints.md) (requires installation through MSI). <br>- macOS supported versions running 101.23102.* +  <br/>- Linux supported versions running 101.23102.* + <br><br> **Minimum component versions:**<br/>- Antimalware client: 4.18.2211.5<br/>- Engine: 1.1.19900.2<br/>- Security intelligence: 1.391.345.0<br/> - Xplat version: 101.23102.* +<br/>- Sensor/ KB version: >10.8040.*/ March 8, 2022+<br><br>If you are moving previously onboarded devices to the streamlined approach, see [Migrating device connectivity](migrate-devices-streamlined.md).
+| Microsoft Defender for Endpoint consolidated URL list (NEW - Streamlined) <br> | **IMPORTANT:** Currently in public preview. <br> Spreadsheet of consolidated URLs for streamlining device connectivity. <br>[Download the spreadsheet here.](https://go.microsoft.com/fwlink/?linkid=2248278)<br><br> **Applicable OS:** <br/>For complete list, see [streamlined connectivity](configure-device-connectivity.md.md#prerequisites). <br>- Windows 10 1809+<br>- Windows 11<br>- Windows Server 2019<br>- Windows Server 2022<br>- Windows Server 2012 R2, Windows Server 2016 R2  running [Defender for Endpoint modern unified solution](configure-server-endpoints) (requires installation through MSI). <br>- macOS supported versions running 101.23102.* +  <br/>- Linux supported versions running 101.23102.* + <br><br> **Minimum component versions:**<br/>- Antimalware client: 4.18.2211.5<br/>- Engine: 1.1.19900.2<br/>- Security intelligence: 1.391.345.0<br/> - Xplat version: 101.23102.* +<br/>- Sensor/ KB version: >10.8040.*/ March 8, 2022+<br><br>If you are moving previously onboarded devices to the streamlined approach, see [Migrating device connectivity](migrate-devices-streamlined.md).
 |Microsoft Defender for Endpoint URL list for commercial customers (Standard)| Spreadsheet of specific DNS records for service locations, geographic locations, and OS for commercial customers. <p> [Download the spreadsheet here.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx) <p> Microsoft Defender for Endpoint Plan 1 and Plan 2 share the same proxy service URLs.
 | Microsoft Defender for Endpoint URL list for Gov/GCC/DoD | Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br> [Download the spreadsheet here.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx) |
 
@@ -112,7 +112,7 @@ For devices with no direct internet connection, the use of a proxy solution is t
 For more information about onboarding methods, see the following articles:
 
 - [Onboard previous versions of Windows](onboard-downlevel.md)
-- [Onboard servers to the Microsoft Defender for Endpoint service](configure-server-endpoints#windows-server-2008-r2-sp1-windows-server-2012-r2-and-windows-server-2016.md)
+- [Onboard servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md#windows-server-2008-r2-sp1-windows-server-2012-r2-and-windows-server-2016)
 
 > [!IMPORTANT]
 > - Microsoft Defender for Endpoint is a Cloud security solution. "Onboard devices without Internet access" means that Internet access for the endpoints must be configured through a proxy. Microsoft Defender for Endpoint does not support endpoints without direct or proxy Internet access. System wide proxy configuration recommended.
@@ -125,7 +125,7 @@ Depending on the operating system, the proxy to be used for Microsoft Defender f
 
 - For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md)
 - For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md)
-- For macOS devices, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac#network-connections.md)
+- For macOS devices, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md#network-connections)
 
 ### Windows devices running the previous MMA-based solution
 

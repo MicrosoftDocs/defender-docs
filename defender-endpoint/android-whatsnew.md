@@ -28,17 +28,16 @@ ms.date: 03/04/2024
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 > [!IMPORTANT]
+
 >  ## Network Protection – Update
-> Network protection feature will soon be enabled by default for all users. The update will be rolled out in a phased manner. As a result, users will be able to see Network Protection Card in the Defender app along with App Protection and Web Protection. Users are also required to provide Location permission to complete the set up. For more information, see [Network Protection](android-configure#network-protection.md).
 
-
-
+> Network protection feature will soon be enabled by default for all users. The update will be rolled out in a phased manner. As a result, users will be able to see Network Protection Card in the Defender app along with App Protection and Web Protection. Users are also required to provide Location permission to complete the set up. For more information, see [Network Protection](android-configure.md#network-protection).
 
 ## Device Tagging
 
 Mobile Device Tagging is now generally available. This feature enables bulk tagging the mobile devices by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the user installs and activates Defender, the client app passes the device tags to the Security Portal. The Device tags appear against the devices in the Device Inventory.
 
-This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. For more information, see [Device Tagging (MDM)](android-configure#device-tagging.md) and [Device Tagging (MAM)](android-configure-mam#device-tagging.md).
+This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. For more information, see [Device Tagging (MDM)](android-configure.md#device-tagging) and [Device Tagging (MAM)](android-configure-mam.md#device-tagging).
 
 ## Microsoft Defender for Endpoint on Company-owned personally enabled devices
 
@@ -53,15 +52,15 @@ Read the announcement [here](https://techcommunity.microsoft.com/t5/microsoft-de
 
 ## Privacy Controls
 
-Microsoft Defender for Endpoint on Android enables Privacy Controls for both the Admins and the End Users. This includes the controls for enrolled (MDM) and unenrolled (MAM) devices. Admins can configure the privacy in the alert report while End Users can configure the information shared to their organization. For more information, see [privacy controls(MDM)](android-configure#privacy-controls.md) and [privacy controls (MAM)](android-configure-mam#configure-privacy-controls.md).
+Microsoft Defender for Endpoint on Android enables Privacy Controls for both the Admins and the End Users. This includes the controls for enrolled (MDM) and unenrolled (MAM) devices. Admins can configure the privacy in the alert report while End Users can configure the information shared to their organization. For more information, see [privacy controls(MDM)](android-configure.md#privacy-controls) and [privacy controls (MAM)](android-configure-mam.md#configure-privacy-controls).
 
 ## Optional Permissions and Disable Web Protection
 
-Microsoft Defender for Endpoint on Android enables **Optional Permissions** in the onboarding flow. Currently the permissions required by MDE are mandatory in the onboarding flow. With this feature, admin can deploy MDE on devices without enforcing the mandatory **VPN** and **Accessibility** permissions during onboarding. End Users can onboard the app without the mandatory permissions and can later review these permissions. This feature is currently present only for unenrolled devices (MAM). For more information, see [optional permissions](android-configure-mam#optional-permissions.md).
+Microsoft Defender for Endpoint on Android enables **Optional Permissions** in the onboarding flow. Currently the permissions required by MDE are mandatory in the onboarding flow. With this feature, admin can deploy MDE on devices without enforcing the mandatory **VPN** and **Accessibility** permissions during onboarding. End Users can onboard the app without the mandatory permissions and can later review these permissions. This feature is currently present only for unenrolled devices (MAM). For more information, see [optional permissions](android-configure-mam.md#optional-permissions).
 
 ## Microsoft Defender on Android enterprise BYOD personal profile
 
-Microsoft Defender for Endpoint is now supported on Android Enterprise personal profile (BYOD only) with all the key features including malware scanning, protection from phishing links, network protection and vulnerability management. This support is coupled with [privacy controls](android-configure#privacy-controls.md) to ensure user privacy on personal profile. For more information, read the [announcement](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-the-public-preview-of-defender-for-endpoint-personal/ba-p/3370979) and the [deployment guide](android-intune#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode.md).
+Microsoft Defender for Endpoint is now supported on Android Enterprise personal profile (BYOD only) with all the key features including malware scanning, protection from phishing links, network protection and vulnerability management. This support is coupled with [privacy controls](android-configure.md.md#privacy-controls) to ensure user privacy on personal profile. For more information, read the [announcement](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-the-public-preview-of-defender-for-endpoint-personal/ba-p/3370979) and the [deployment guide](android-intune#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode).
 
 ## Network protection
 
@@ -77,7 +76,7 @@ To update, users can use the following steps:
 > 1. On your work profile, go to Managed Play Store.
 > 2. Tap on the profile icon on the top right corner and select "Manage apps and device".
 > 3. Locate MDE under updates available and select update.
-> If you encounter any issues, [submit in-app feedback](android-support-signin#send-in-app-feedback.md).
+> If you encounter any issues, [submit in-app feedback](android-support-signin.md#send-in-app-feedback).
 
 ## Microsoft Defender for Endpoint is now Microsoft Defender in the Play store
 

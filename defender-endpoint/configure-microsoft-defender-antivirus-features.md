@@ -34,13 +34,13 @@ ms.date: 02/18/2024
 You can configure Microsoft Defender Antivirus with a number of tools, such as:
 
 - [Microsoft Defender for Endpoint Security Policy Management](/mem/intune/protect/mde-security-integration)
-- [Microsoft Intune](/defender-endpoint/use-intune-config-manager-microsoft-defender-antivirus)
+- [Microsoft Intune](use-intune-config-manager-microsoft-defender-antivirus.md)
 - [Microsoft Configuration Manager](preferences-setup.md)
 - Microsoft Configuration Manager [Tenant attach](/mem/configmgr/tenant-attach/)
 
-- [Group Policy](/defender-endpoint/use-group-policy-microsoft-defender-antivirus)
-- [PowerShell cmdlets](/defender-endpoint/use-powershell-cmdlets-microsoft-defender-antivirus)
-- [Windows Management Instrumentation (WMI)](/defender-endpoint/use-wmi-microsoft-defender-antivirus)
+- [Group Policy](use-group-policy-microsoft-defender-antivirus.md)
+- [PowerShell cmdlets](use-powershell-cmdlets-microsoft-defender-antivirus.md)
+- [Windows Management Instrumentation (WMI)](use-wmi-microsoft-defender-antivirus.md)
 The following broad categories of features can be configured:
 
 - Cloud-delivered protection. See [Cloud-delivered protection and Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md)
