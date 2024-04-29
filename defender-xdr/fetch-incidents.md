@@ -179,7 +179,7 @@ You can now download the relevant configuration file for your SIEM and connect t
 
 ## Fetch alerts from MSSP customer's tenant using APIs
 
-For information on how to fetch alerts using REST API, see [Pull alerts using REST API](/defender-endpoint/pull-alerts-using-rest-api).
+For information on how to fetch alerts using REST API, see [Pull alerts using REST API](/defender-endpoint/configure-siem).
 
 ## Related topics
 

@@ -56,9 +56,11 @@ DeviceTvmInfoGathering
 ```
 
 ## Related topics
+
 - [DeviceTvmInfoGatheringKB](advanced-hunting-devicetvminfogatheringkb-table.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Apply query best practices](advanced-hunting-best-practices.md)
 - [Overview of Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt)
-- [Learn how to manage the Log4Shell vulnerability in Microsoft Defender for Endpoint](/defender-endpoint/tvm-manage-log4shell-guidance)
+- [Learn how to manage the Log4Shell vulnerability in Microsoft Defender for Endpoint](/defender-vulnerability-management/tvm-manage-Log4shell-guidance)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

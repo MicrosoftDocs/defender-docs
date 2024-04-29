@@ -3,7 +3,7 @@ title: Review Microsoft Defender for Endpoint architecture requirements and key 
 description: The technical diagram for Microsoft Defender for Endpoint in Microsoft Defender XDR will help you understand identity in Microsoft 365 before you build your trial lab or pilot environment.
 search.appverid: met150
 ms.service: defender-xdr
-f1.keywords: 
+f1.keywords:
   - NOCSH
 ms.author: dansimp
 author: dansimp
@@ -11,7 +11,7 @@ ms.date: 07/09/2021
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: 
+ms.collection:
   - m365-security
   - m365solution-scenario
   - m365solution-evalutatemtp
@@ -34,7 +34,7 @@ Before enabling Microsoft Defender for Endpoint, be sure you understand the arch
 
 ## Understand the architecture
 
-The following diagram illustrates Microsoft Defender for Endpoint architecture and integrations. 
+The following diagram illustrates Microsoft Defender for Endpoint architecture and integrations.
 
 :::image type="content" source="/defender/media/defender/m365-defender-endpoint-architecture.png" alt-text="The steps for adding Microsoft Defender for Office to the Defender evaluation environment" lightbox="/defender/media/defender/m365-defender-endpoint-architecture.png":::
 
@@ -42,7 +42,7 @@ The following table describes the illustration.
 
 Call-out | Description
 :---|:---|
-1 | Devices are on-boarded through one of the supported management tools. 
+1 | Devices are on-boarded through one of the supported management tools.
 2 | On-boarded devices provide and respond to Microsoft Defender for Endpoint signal data.
 3 | Managed devices are joined and/or enrolled in Microsoft Entra ID.
 4 | Domain-joined Windows devices are synchronized to Microsoft Entra ID using Microsoft Entra Connect.
@@ -50,7 +50,7 @@ Call-out | Description
 
 ## Understand key concepts
 
-The following table identified key concepts that are important to understand when evaluating, configuring, and deploying Microsoft Defender for Endpoint: 
+The following table identified key concepts that are important to understand when evaluating, configuring, and deploying Microsoft Defender for Endpoint:
 
 Concept | Description | More information
 :---|:---|:---|
@@ -59,20 +59,19 @@ Attack Surface Reduction | Help reduce your attack surfaces by minimizing the pl
 Endpoint Detection and Response | Endpoint detection and response capabilities provide advanced attack detections that are near real-time and actionable. | [Overview of endpoint detection and response capabilities](/defender-endpoint/overview-endpoint-detection-response)
 Behavioral Blocking and Containment | Behavioral blocking and containment capabilities can help identify and stop threats, based on their behaviors and process trees even when the threat has started execution. | [Behavioral blocking and containment](/defender-endpoint/behavioral-blocking-containment)
 Automated Investigation and Response | Automated investigation uses various inspection algorithms based on processes that are used by security analysts and designed to examine alerts and take immediate action to resolve breaches. | [Use automated investigations to investigate and remediate threats](/defender-endpoint/automated-investigations)
-Advanced Hunting | Advanced hunting is a query-based threat-hunting tool that lets you explore up to 30 days of raw data so that you can proactively inspect events in your network to locate threat indicators and entities. | [Overview of advanced hunting](/defender/advanced-hunting-overview)
+Advanced Hunting | Advanced hunting is a query-based threat-hunting tool that lets you explore up to 30 days of raw data so that you can proactively inspect events in your network to locate threat indicators and entities. | [Overview of advanced hunting](advanced-hunting-overview.md)
 Threat Analytics | Threat analytics is a set of reports from expert Microsoft security researchers covering the most relevant threats. | [Track and respond to emerging threats](/defender-endpoint/threat-analytics)
-
 
 For more detailed information about the capabilities included with Microsoft Defender for Endpoint, see [What is Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint).
 
 ## SIEM integration
 
-You can integrate Microsoft Defender for Endpoint with Microsoft Sentinel to more comprehensively analyze security events across your organization and build playbooks for effective and immediate response. 
+You can integrate Microsoft Defender for Endpoint with Microsoft Sentinel to more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
-Microsoft Defender for Endpoint can also be integrated into other Security Information and Event Management (SIEM) solutions. For more information, see [Enable SIEM integration in Microsoft Defender for Endpoint](/defender-endpoint/enable-siem-integration).
-
+Microsoft Defender for Endpoint can also be integrated into other Security Information and Event Management (SIEM) solutions. For more information, see [Enable SIEM integration in Microsoft Defender for Endpoint](/defender-endpoint/configure-siem).
 
 ## Next steps
+
 [Enable the evaluation](eval-defender-endpoint-enable-eval.md)
 
 Return to the overview for [Evaluate Microsoft Defender for Endpoint](eval-defender-endpoint-overview.md)
