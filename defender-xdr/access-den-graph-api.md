@@ -50,14 +50,14 @@ In Microsoft Graph security API, the following fields are also available:
 
 Your approach to consuming Defender Experts Notifications from the API will vary depending on the downstream system you intend to use and your specific requirements. However, the following is a basic implementation to help you get started:
 
-Starting from incidents in the Graph API
+**Starting from incidents in the Graph API**
 
 1. Get incidents from Graph security API.
 2. Check for new incidents where **displayName** starts with _Defender Experts_.
 3. Continue reading the remaining fields for such incidents.
 4. Synchronize the Defender Experts Notification (DEN) information into your downstream tool (for example, ServiceNow).
 
-Starting from alerts in the Graph API
+**Starting from alerts in the Graph API**
 
 1. Get alerts from Graph security API.
 2. Check for new alerts where **detectionSource** starts with _microsoftThreatExperts_.
