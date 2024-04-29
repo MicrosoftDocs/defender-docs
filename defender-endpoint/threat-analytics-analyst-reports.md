@@ -74,7 +74,7 @@ The analyst report also provides the detections from Microsoft Defender Antiviru
 
 ### Antivirus detections
 
-These detections are available on devices with [Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-windows) turned on. When these detections occur on devices that have been onboarded to Microsoft Defender for Endpoint, they also trigger alerts that light up the charts in the report.
+These detections are available on devices with [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md) turned on. When these detections occur on devices that have been onboarded to Microsoft Defender for Endpoint, they also trigger alerts that light up the charts in the report.
 
 > [!NOTE]
 > The analyst report also lists **generic detections** that can identify a wide-range of threats, in addition to components or behaviors specific to the tracked threat. These generic detections don't reflect in the charts.
