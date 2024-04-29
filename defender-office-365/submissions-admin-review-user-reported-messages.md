@@ -62,8 +62,8 @@ Admins can mark messages and notify users of review results only if the user [re
 
 3. On the **User reported** tab, select the user reported message by using either of the following methods:
 
-   - Select the message from the list by selecting the check box next to the first column, and then select :::image type="icon" source="/defender/media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify**.
-   - Select the message from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="/defender/media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** or :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="/defender/media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify**.
+   - Select the message from the list by selecting the check box next to the first column, and then select :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify**.
+   - Select the message from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify**.
 
 4. In the **Mark as and notify** dropdown list, select one of the following values:
 
@@ -94,7 +94,7 @@ To customize the notification email, see the next section.
 
      When you're finished in the **Customize admin review email notifications** flyout, select **Confirm** to return to the **User reported settings** page.
 
-     :::image type="content" source="/defender/media/admin-review-customize-message.png" alt-text="The Customize confirmation message flyout." lightbox="/defender/media/admin-review-customize-message.png":::
+     :::image type="content" source="media/admin-review-customize-message.png" alt-text="The Customize confirmation message flyout." lightbox="media/admin-review-customize-message.png":::
 
    - **Customize sender and branding** section:
      - **Specify a Microsoft 365 mailbox to use ads the From address of email notifications**: Select this option and enter the sender's email address in the box that appears. If you don't select this option, the default sender is `submissions@messaging.microsoft.com`.
