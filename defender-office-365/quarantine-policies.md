@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to use quarantine policies to control what users are able to do to quarantined messages.
 ms.service: defender-office-365
-ms.date: 11/16/2023
+ms.date: 4/26/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -545,7 +545,7 @@ Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-Quaranti
 This example configures the following settings:
 
 - Customized quarantine notifications for US English and Spanish.
-- The quarantine notification sender's email address is set to michelle@contoso.onmicrosoft.com.
+- The quarantine notification sender's email address is set to `michelle@contoso.onmicrosoft.com`.
 
 ```powershell
 Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy -MultiLanguageSetting ('Default','Spanish') -MultiLanguageCustomDisclaimer ('For more information, contact the Help Desk.','Para obtener más información, comuníquese con la mesa de ayuda.') -ESNCustomSubject ('You have quarantined messages','Tienes mensajes en cuarentena') -MultiLanguageSenderName ('Contoso administrator','Administradora de contoso') -EndUserSpamNotificationCustomFromAddress michelle@contoso.onmicrosoft.com
