@@ -37,7 +37,7 @@ Keeping Microsoft Defender Antivirus up to date is critical to assure your devic
 
 This article also includes:
 
-- [Microsoft Defender Antivirus platform support](#microsoft-defender-antivirus-platform-support)
+- [Microsoft Defender Antivirus platform support](#microsoft-defender-antivirus-platform-and-engine-support)
 - [How to roll back an update](#how-to-roll-back-an-update) (if necessary)
 - [Platform version included with Windows 10 releases](#platform-version-included-with-windows-10-releases)
 - [Updates for Deployment Image Servicing and Management (DISM)](#updates-for-deployment-image-servicing-and-management-dism)
