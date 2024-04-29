@@ -270,7 +270,7 @@ Admins in Microsoft 365 Government Community Cloud (GCC) or GCC High need to use
 
 1. Do either of the following steps:
 
-   - Open the Microsoft commercial marketplace at <https://appsource.microsoft.com/marketplace/apps>. On the **AppSource** page, enter **Report message** in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box, and then select the **Report Message** or **Report Phishing** in the results.
+   - Open the Microsoft commercial marketplace at <https://appsource.microsoft.com/en-us/marketplace/apps>. On the **AppSource** page, enter **Report message** in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box, and then select the **Report Message** or **Report Phishing** in the results.
 
    :::image type="content" source="media/microsoft-appsource-find-report-message-add-in.png" alt-text="Search results on the Microsoft commercial marketplace page for the Report Message add-in." lightbox="media/microsoft-appsource-find-report-message-add-in.png":::
 
