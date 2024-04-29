@@ -145,19 +145,18 @@ The report shows the results that malware detected in email, using the technolog
 
 You can use the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission> to [report messages as clean (false positives) to Microsoft](submissions-admin.md#report-good-email-to-microsoft). But you can also submit messages as clean to Microsoft from Explorer or Real-time detections.
 
-For instructions, see [Email remediation in Threat Explorer and Real-time detections](threat-explorer-threat-hunting.md#email-remediation).
+For instructions, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
 To summarize:
 
-- Select a message from the details table in the **Email** tab (view) in the **All email**, **Malware**, or **Phish** views by selecting the check box in the row, and then select **Message actions** and then one of the following options:
-  - **Threat Explorer**: Select **Submit to Microsoft** in the **Start new submission** section. For further instruction, see [Start new submission actions in Threat Explorer](threat-explorer-threat-hunting.md#start-new-submission-actions-in-threat-explorer).
-  - **Real-time detections**: Select **Report clean**. For further instruction, see [Start new submission actions in Real-time detections](threat-explorer-threat-hunting.md#start-new-submission-actions-in-real-time-detections).
+- Select :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** using one of the following methods:
+  - Select one or more messages from the details table in the **Email** tab (view) in the **All email**, **Malware**, or **Phish** views by selecting the check boxes for the entries.
 
-Or
+  Or
 
-- Select a message from the details table in the **Email** tab (view) in the **All email**, **Malware**, or **Phish** views by clicking on the **Subject** value.
+  - In the details flyout after you select a message from the details table in the **Email** tab (view) in the **All email**, **Malware**, or **Phish** views by clicking on the **Subject** value.
 
-  In the details flyout that opens, select :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** \> **Submit to Microsoft for review** \> **I've confirmed it's clean**. For further instructions, see [Remediate using Take action](threat-explorer-threat-hunting.md#remediate-using-take-action).
+- In the **Take action** wizard, select **Submit to Microsoft for review** \> **I've confirmed it's clean**.
 
 ## View phishing URL and click verdict data
 

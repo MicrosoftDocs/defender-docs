@@ -72,7 +72,7 @@ In the event that a campaign has targeted your organization and you'd like to le
 1. Below the flow diagram, select the **URL clicks** tab to display information regarding the click. Here you can see the user that clicked on a URL, if the user is tagged as a priority account user, the URL itself, and the time of click.
 1. If you want to learn more about the inboxed and clicked messages, select **Explore messages** \> **Inboxed messages**. A new tab will open and navigate to Threat Explorer.
 1. In the **details view** of Explorer you can reference **Latest delivery** to determine if a message is still in the inbox or was moved into quarantine by system ZAP. *To get more details about the specific message, select the message. The flyout provides extra information. Upon selecting the **Open email entity page** on the top left of the flyout, a new tab will open and give you further information about the message.*
-1. If you would like to take an action and move the messages out of the inbox, you can select the message and then select **Message actions** \> **Move to junk folder**. This will ensure your user doesn't continue to interact with the malicious message that could result in a potential breach.
+1. If you would like to take an action and move the messages out of the inbox, you can select the message and then select :::image type="icon" source="../media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** \> **Move to junk folder**. This will ensure your user doesn't continue to interact with the malicious message that could result in a potential breach.
 
 ## Next steps
 

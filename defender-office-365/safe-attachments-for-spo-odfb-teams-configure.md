@@ -20,7 +20,7 @@ description: Admins can learn how to turn on Safe Attachments for SharePoint, On
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 6/19/2023
+ms.date: 4/26/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -38,13 +38,16 @@ You turn on or turn off Safe Attachments for Office 365 for SharePoint, OneDrive
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
 
-- You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Safe Attachments** page, use <https://security.microsoft.com/safeattachmentv2>.
-
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-- To turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams, you need to be a member of the **Organization Management** or **Security Administrator** role groups in the Microsoft Defender portal. For more information, see [Permissions in the Microsoft Defender portal](mdo-portal-permissions.md).
-
-- To use SharePoint Online PowerShell to prevent people from downloading malicious files, you need to be member of the [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) or [SharePoint Administrator](/entra/identity/role-based-access-control/permissions-reference#sharepoint-administrator) roles in Microsoft Entra ID.
+- You need to be assigned permissions before you can do the procedures in this article. You have the following options:
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell):
+    - _Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams_: **Authorization and settings/Security settings/Core Security settings (manage)**.
+  - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md):
+    - _Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams_: Membership in the **Organization Management** or **Security Administrator** role groups.
+  - [Microsoft Entra permissions](/microsoft-365/admin/add-users/about-admin-roles): Membership in the the following roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+    - _Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams_: **Global Administrator** or **Security Administrator**.
+    - _Use SharePoint Online PowerShell to prevent people from downloading malicious files_: **Global Administrator** or **SharePoint Administrator**.
 
 - Verify that audit logging is enabled for your organization (it's on by default). For instructions, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
