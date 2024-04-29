@@ -148,11 +148,11 @@ The Email entity page pulls together everything you need to know about the messa
 
 ### Email remediation
 
-After you determine that an email message is a threat, the next step is remediating the threat. You remediate the threat in Threat Explorer or Real-time detections using :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**.
+After you determine that an email message is a threat, the next step is remediating the threat. You remediate the threat in Threat Explorer or Real-time detections using :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**.
 
 **Take action** is available in the **All email**, **Malware**, or **Phish** views in Threat Explorer or Real-time detections in the **Email** tab (view) of the details area below the chart:
 
-- Select one or more entries in the table by selecting the check box next to the first column. :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available directly in the tab.
+- Select one or more entries in the table by selecting the check box next to the first column. :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available directly in the tab.
 
   :::image type="content" source="../defender-office-365/media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active.":::
 
@@ -166,11 +166,11 @@ After you determine that an email message is a threat, the next step is remediat
   > - **Threat Explorer**: **Move to mailbox** and **Propose remediation** are available, but they're mutually exclusive (you can select one or the other).
   > - **Real-time detections**: Only **Submit to Microsoft for review** and creating corresponding allow/block entries in the Tenant Allow/Block list are available.
 
-- Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout.
+- Click on the **Subject** value of an entry in the table. The details flyout that opens contains :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** at the top of the flyout.
 
   :::image type="content" source="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png" alt-text="The actions available in the details tab after you select a Subject value in the Email tab of the details area in the All email view." lightbox="/defender/media/te-rtd-all-email-view-email-tab-details-area-subject-details-flyout-actions-only.png":::
 
-Selecting :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** opens the **Take action** wizard in a flyout. The available actions in the **Take action** wizard in Threat Explorer (Defender for Office 365 Plan 2) and Real-time detections (Defender for Office 365 Plan 1) are listed in the following table:
+Selecting :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** opens the **Take action** wizard in a flyout. The available actions in the **Take action** wizard in Threat Explorer (Defender for Office 365 Plan 2) and Real-time detections (Defender for Office 365 Plan 1) are listed in the following table:
 
 |Action|Threat<br/>Explorer|Real-time<br/>Detections|
 |---|:---:|:---:|
@@ -196,9 +196,9 @@ The **Take action** wizard is described in the following list:
 
    - **Email message actions** section:
 
-     You can select multiple actions if you selected 100 or less messages from the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views when you selected :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**.
+     You can select multiple actions if you selected 100 or less messages from the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views when you selected :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**.
 
-     You can also select multiple actions if you selected :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in the details flyout after you clicked on the **Subject** value of an entry.
+     You can also select multiple actions if you selected :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in the details flyout after you clicked on the **Subject** value of an entry.
 
      Select one or more of the available options:
 

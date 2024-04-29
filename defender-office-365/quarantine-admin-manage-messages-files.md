@@ -431,7 +431,7 @@ In organizations with Microsoft Defender for Office 365 (add-on licenses or incl
 
 - :::image type="icon" source="/defender/media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [What's on the Email entity page](mdo-email-entity-page.md#whats-on-the-email-entity-page).
 
-- :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take actions**: This action starts the same Action wizard that's available on the Email entity page. For more information, see [Actions on the Email entity page](mdo-email-entity-page.md#actions-on-the-email-entity-page).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take actions**: This action starts the same Action wizard that's available on the Email entity page. For more information, see [Actions on the Email entity page](mdo-email-entity-page.md#actions-on-the-email-entity-page).
 
 #### Take action on multiple quarantined email messages
 
