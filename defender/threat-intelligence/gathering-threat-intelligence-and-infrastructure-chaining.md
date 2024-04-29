@@ -65,8 +65,6 @@ Perform the following steps in the **Intel explorer** page in the Defender porta
  
       :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-article.png" alt-text="Tutorial infrastructure chain MyPillow.com article." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-article.png":::
 
-      ![Tutorial Infra Chain My Pillowcom Article](media/tutorial-infra-chain-mypillow-article.png)
-
 4. Select the article. The following information should be available about this related campaign:
    - This article was published on March 20, 2019. 
    - It provides insights as to how the Magecart threat actor group breached MyPillow in October 2018. 
@@ -79,17 +77,21 @@ Perform the following steps in the **Intel explorer** page in the Defender porta
 7. Select the **Host pairs** tab of the search results. 
 Host pairs reveal connections between websites that traditional data sources, such as passive domain name system (pDNS) and WHOIS, wouldn’t surface. They also let you see where your resources are being used and vice-versa.
 8. Sort the host pairs by **First seen**, and filter by *script.src* as the **Cause**. Page over until you find host pair relationships that took place in October 2018. Notice that *mypillow[.]com* is pulling content from the typosquatted domain, *mypiltow[.]com* on October 3-5, 2018 through a script. 
-        ![Tutorial InfraChain My Piltowcom Reputation](media/tutorial-infra-chain-mypillow-host-pair.png)
+   
+    :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-host-pair.png" alt-text="Tutorial InfraChain My Piltowcom Reputation." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-host-pair.png":::
 
 9. Select the **Resolutions** tab and pivot off the IP address that *mypiltow[.]com* resolved to in October 2018.
-          ![Tutorial Infra Chain My Piltow Ip Summary](media/tutorial-infra-chain-mypiltow-oct-ip.png)
+
+   :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypiltow-oct-ip.png" alt-text="Tutorial Infra Chain My Piltow Ip Summary." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypiltow-oct-ip.png":::
 
     Repeat this step for *mypillow[.]com*. You should notice the following differences  between the two domains’ IP addresses in October 2018:
    - The IP address *mypiltow[.]com* resolved to, 195.161.41[.]65, was hosted in Russia.
-        ![Tutorial infrastructure chain mypiltow RU ASN](media/tutorial-infra-chain-mypiltow-IP-RU.png)
-   - The two IP addresses used different autonomous system number (ASNs).
-       ![Tutorial infrastructure chain mypillow US ASN](media/tutorial-infra-chain-mypillow-IP-US.png)
 
+     :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypiltow-IP-RU.png" alt-text="Tutorial infrastructure chain mypiltow RU ASN." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypiltow-IP-RU.png":::
+
+   - The two IP addresses used different autonomous system number (ASNs).
+
+     :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-IP-US.png" alt-text="Tutorial infrastructure chain mypillow US ASN." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-IP-US.png":::
 
 10. Select the **Summary** tab and scroll down to the **Articles** section. You should see the following published articles related to *mypiltow[.]com*:
     - *RiskIQ: Magecart Injected URLs and C2 Domains, June 3-14, 2022*
@@ -100,14 +102,16 @@ Host pairs reveal connections between websites that traditional data sources, su
     - *Inter Skimming Kit Used in Homoglyph Attacks*
     - *Magecart Group 8 Blends into NutriBullet.com Adding To Their Growing List of Victims*
 
-     ![Tutorial Infra Chain My Piltowcom Articles](media/tutorial-infra-chain-mypiltow-articles.png)
-  Review each of these articles and take note of additional information--such as targets; tactics, techniques, and procedures (TTPs); and other IOCs--you can find about the Magecart threat actor group.
+    :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypiltow-articles.png" alt-text="Tutorial Infra Chain My Piltowcom Articles." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypiltow-articles.png":::
+
+    Review each of these articles and take note of additional information--such as targets; tactics, techniques, and procedures (TTPs); and other IOCs--you can find about the Magecart threat actor group.
 11. Select the **WHOIS** tab and compare the WHOIS information between *mypillow[.]com* and *mypiltow[.]com*. Take note of the following details:
       - The WHOIS record of *mypillow[.]com* from October 2011 indicates that My Pillow Inc. clearly owns the domain.
       - The WHOIS record of mypiltow[.]com from October 2018 indicates that the domain was registered in Hong Kong SAR and is privacy protected by Domain ID Shield Service CO.
       - The registrar of mypiltow[.]com is OnlineNIC, Inc.
-            ![Tutorial Infra Chain My Piltowcom 2 Whois](media/tutorial-infra-chain-mypiltow-nameservers.png)
 
+        :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypiltow-nameservers.png" alt-text="Tutorial Infra Chain My Piltowcom 2 Whois." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypiltow-nameservers.png":::
+        
     Given the address records and WHOIS details analyzed so far, an analyst should find it odd that a Chinese privacy service primarily guards a Russian IP address for a US-based company.
 12. Navigate back to the **Intel explorer** search bar and search *livechatinc[.]org*. The article *Magecart Group 8 Blends into NutriBullet.com Adding To Their Growing List of Victims* should now appear in the search results.
 13. Select the article. The following information should be available about this related campaign:
@@ -119,7 +123,9 @@ Host pairs reveal connections between websites that traditional data sources, su
 15. Navigate back to the **Intel explorer** search bar and search *mypillow[.]com*. Then, go to the **Host pairs** tab, sort the host pairs by **First seen**, and look for host pair relationships that occurred in October 2018.
 
     Notice how *www.mypillow[.]com* was first observed reaching out to *secure.livechatinc[.]org* on October 26, 2018, because a script GET request was observed from *www.mypillow[.]com* to *secure.livechatinc[.]org*. That relationship lasted until November 19, 2018.
-           ![Tutorial Infra Chain My Pillowcom Host Pairs Live Chat ScriptSrc](media/tutorial-infra-chain-mypillow-livechat.png)
+
+    :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-livechat.png" alt-text="Tutorial Infra Chain My Pillowcom Host Pairs Live Chat ScriptSrc." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-livechat.png":::
+    
     In addition, *secure.livechatinc[.]org* reached out to *www.mypillow[.]com* to access the latter’s server (*xmlhttprequest*).
 16. Review *mypillow[.]com*’s host pair relationships further. Notice how *mypillow[.]com* has host pair relationships with the following domains, which is similar to the domain name *secure.livechatinc[.]org*:
       - *cdn.livechatinc[.]com*
@@ -136,9 +142,12 @@ Host pairs reveal connections between websites that traditional data sources, su
       
       Livechat is a live support chat service that online retailers can add to their websites as a partner resource. Several e-commerce platforms, including MyPillow, use it. This fake domain is interesting because the  Livechat’s official site is actually *livechatinc[.]com*. Therefore, in this case, the threat actor used a top-level-domain typosquat to hide the fact they placed a second skimmer on the MyPillow website.
 17. Go back and find a host pair relationship with *secure.livechatinc[.]org* and pivot off that hostname. The **Resolutions** tab should indicate that this host resolved to 212.109.222[.]230 in October 2018.
-        ![Tutorial Infra Chain Secure Live Chat Inc Org Resolutions](media/tutorial-infra-chain-livechatinc-org.png)
-	  Notice that this IP address is also hosted in Russia and the ASN organization is JSC IOT.
-        ![Tutorial Infra Chain Secure Live Chat Inc Org ASN](media/tutorial-infra-chain-livechatinc-org-asn.png)
+
+       :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org.png" alt-text="Tutorial Infra Chain Secure Live Chat Inc Org Resolutions." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org.png":::
+        
+    Notice that this IP address is also hosted in Russia and the ASN organization is JSC IOT.
+        
+    :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org-asn.png" alt-text="Tutorial Infra Chain Secure Live Chat Inc Org ASN." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org-asn.png":::
 18. Navigate back to the **Intel explorer** search bar and search *secure.livechatinc[.]org*. Then, go to the **WHOIS** tab and select the record from December 25, 2018.
 
     The registrar used for this record is OnlineNIC Inc., which is the same one used to register *mypiltow[.]com* during the same campaign. Based on the record from December 25, 2018, notice that the domain also used the same Chinese privacy guarding service, Domain ID Shield Service, as *mypiltow[.]com*.
@@ -149,13 +158,13 @@ Host pairs reveal connections between websites that traditional data sources, su
     - ns3.jino.ru
     - ns4.jino.ru
     
-    ![Tutorial Infra Chain Secure Live Chat Inc Org Whois](media/tutorial-infra-chain-livechatinc-org-whois.png)
+    :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org-whois.png" alt-text="Tutorial Infra Chain Secure Live Chat Inc Org Whois." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org-whois.png":::
 19. Select the **Host pairs** tab. You should see the following host pair relationships from October to November 2018:
       - *secure.livechatinc[.]org* redirected users to *secure.livechatinc.com* on November 19, 2022. This redirection is more than likely an obfuscation technique to evade detection.
       - *www.mypillow[.]com* was pulling a script hosted on *secure.livechatinc[.]org* (the fake LiveChat site) from October 26, 2018 through November 19, 2022. During this timeframe, *www.mypillow[.]com*’s user purchases were potentially compromised.
       - *secure.livechatinc[.]org* was requesting data (*xmlhttprequest*) from the server *www.mypillow[.]com*, which hosts the real MyPillow website, from October 27 to 29, 2018.
     
-       ![Tutorial Infra Chain Secure Live Chat Inc Org Host Pairs](media/tutorial-infra-chain-livechatinc-org-hostpairs.png)
+    :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org-hostpairs.png" alt-text="Tutorial Infra Chain Secure Live Chat Inc Org Host Pairs." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org-hostpairs.png":::
    
 ## Clean up resources
 There are no resources to clean up in this section.
