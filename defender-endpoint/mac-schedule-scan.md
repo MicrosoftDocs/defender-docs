@@ -375,13 +375,10 @@ Use the following command:
 
 `mdatp scan list`
 
-:::image type="content" source="media/schedule-scans-mac/schedule-scan-pic4.png" alt-text="Screenshot of schedule ran.":::
-
-`\<snip\>`
+:::image type="content" source="media/schedule-scans-mac/schedule-scan-pic4.png" alt-text="Screenshot of schedule ran.":::`\<snip\>`
 
 :::image type="content" source="media/schedule-scans-mac/schedule-scan-pic5.png" alt-text="Screenshot of schedule ran successfully.":::  
 
- 
 > [!IMPORTANT]
 > Scheduled scans do not run at the scheduled time while the device is asleep. Instead, scheduled scans run when the device resumes from sleep mode.
 > If the device is turned off, the scan runs at the next scheduled scan time.
