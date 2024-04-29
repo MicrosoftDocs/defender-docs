@@ -73,6 +73,83 @@ The following code shows the schema you need to use to schedule scans according 
 
 1. Open a text editor and use this example as a guide for your own scheduled scan file.
 
+#### For Intune:
+
+``` XML
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
+<plist version="1.0"> 
+<dict> 
+     <key>PayloadUUID</key>
+     <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
+     <key>PayloadType</key>
+     <string>Configuration</string>
+     <key>PayloadOrganization</key>
+     <string>Microsoft</string>
+     <key>PayloadIdentifier</key>
+     <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
+     <key>PayloadDisplayName</key>
+     <string>Microsoft Defender for Endpoint settings</string>
+     <key>PayloadDescription</key>
+     <string>Microsoft Defender for Endpoint configuration settings</string>
+     <key>PayloadVersion</key>
+     <integer>1</integer>
+     <key>PayloadEnabled</key>
+     <true/>
+     <key>PayloadRemovalDisallowed</key>
+     <true/>
+     <key>PayloadScope</key>
+     <string>System</string>
+     <key>PayloadContent</key>
+     <array>
+       <dict>
+           <key>PayloadUUID</key>
+           <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
+           <key>PayloadType</key>
+           <string>com.microsoft.wdav</string>
+           <key>PayloadOrganization</key>
+           <string>Microsoft</string>
+           <key>PayloadIdentifier</key>
+           <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
+           <key>PayloadDisplayName</key>
+           <string>Microsoft Defender for Endpoint configuration settings</string>
+           <key>PayloadDescription</key>
+           <string/>
+           <key>PayloadVersion</key>
+           <integer>1</integer>
+           <key>PayloadEnabled</key>
+           <true/>
+    <key>features</key> 
+    <dict> 
+        <key>scheduledScan</key> 
+        <string>enabled</string> 
+    </dict> 
+    <key>scheduledScan</key> 
+    <dict> 
+        <key>ignoreExclusions</key> 
+        <true/> 
+        <key>lowPriorityScheduledScan</key> 
+        <true/> 
+        <key>dailyConfiguration</key> 
+        <dict> 
+            <key>timeOfDay</key> 
+            <integer>885</integer> 
+        </dict> 
+        <key>weeklyConfiguration</key> 
+        <dict> 
+            <key>dayOfWeek</key> 
+            <integer>4</integer> 
+            <key>timeOfDay</key> 
+            <integer>880</integer> 
+            <key>scanType</key> 
+            <string>full</string> 
+        </dict> 
+    </dict> 
+</dict> 
+</plist> 
+```
+
+#### For JamF and other 3rd-party MDMs:
 ``` XML
 <?xml version="1.0" encoding="UTF-8"?> 
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
@@ -113,6 +190,85 @@ The following code shows the schema you need to use to schedule scans according 
 ### Example 2: Schedule an hourly quick scan, a daily quick scan, and weekly full scan using a _plist_
 
 In the following example, an hourly quick scan will run every 6 hours, a daily quick scan configuration is set to run at 885 minutes after midnight (2:45 p.m.), and a weekly full scan will run on Wednesdays at 880 minutes after midnight (2:40 p.m).
+
+#### For Intune:
+```XML
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
+<plist version="1.0"> 
+<dict> 
+     <key>PayloadUUID</key>
+     <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
+     <key>PayloadType</key>
+     <string>Configuration</string>
+     <key>PayloadOrganization</key>
+     <string>Microsoft</string>
+     <key>PayloadIdentifier</key>
+     <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
+     <key>PayloadDisplayName</key>
+     <string>Microsoft Defender for Endpoint settings</string>
+     <key>PayloadDescription</key>
+     <string>Microsoft Defender for Endpoint configuration settings</string>
+     <key>PayloadVersion</key>
+     <integer>1</integer>
+     <key>PayloadEnabled</key>
+     <true/>
+     <key>PayloadRemovalDisallowed</key>
+     <true/>
+     <key>PayloadScope</key>
+     <string>System</string>
+     <key>PayloadContent</key>
+     <array>
+       <dict>
+           <key>PayloadUUID</key>
+           <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
+           <key>PayloadType</key>
+           <string>com.microsoft.wdav</string>
+           <key>PayloadOrganization</key>
+           <string>Microsoft</string>
+           <key>PayloadIdentifier</key>
+           <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
+           <key>PayloadDisplayName</key>
+           <string>Microsoft Defender for Endpoint configuration settings</string>
+           <key>PayloadDescription</key>
+           <string/>
+           <key>PayloadVersion</key>
+           <integer>1</integer>
+           <key>PayloadEnabled</key>
+           <true/>
+    <key>features</key> 
+    <dict> 
+        <key>scheduledScan</key> 
+        <string>enabled</string> 
+    </dict> 
+<key>scheduledScan</key> 
+<dict> 
+    <key>ignoreExclusions</key> 
+    <true/> 
+    <key>lowPriorityScheduledScan</key> 
+    <true/> 
+    <key>dailyConfiguration</key> 
+    <dict> 
+        <key>timeOfDay</key> 
+        <integer>885</integer> 
+        <key>interval</key> 
+        <string>1</string> 
+    </dict> 
+    <key>weeklyConfiguration</key> 
+    <dict> 
+        <key>dayOfWeek</key> 
+        <integer>4</integer> 
+        <key>timeOfDay</key> 
+        <integer>880</integer> 
+        <key>scanType</key> 
+        <string>full</string> 
+        </dict> 
+        </dict> 
+    </dict> 
+</plist> 
+```
+
+#### For JamF and other 3rd-party MDMs:
 1. Open a text editor and use this example.
 
 ```XML
