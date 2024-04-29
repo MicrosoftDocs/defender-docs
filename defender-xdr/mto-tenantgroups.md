@@ -19,14 +19,14 @@ appliesto:
 
 # Content distribution in multi-tenant management
 
+[!INCLUDE [Prerelease](../includes/prerelease.md)]
+
 Content distribution helps you manage content at scale, across tenants in multi-tenant management in Microsoft Defender XDR. In content distribution, you can create tenant groups to copy existing content, like custom detection rules, from the source tenant to the target tenants you assign during tenant group creation. The content then runs on the target tenant's devices or device groups that you set in the tenant group scope.
 
 Distributing content in this manner, across tenants, enables you to organize tenants and content based on categories like business groups or location.
 
 > [!NOTE]
-> Multi-tenant management currently only supports adding custom detection rules to a tenant group. Additional content types will be added in the future.
-
-[!include[Prerelease information](../../includes/prerelease.md)]
+> Multi-tenant management currently supports adding custom detection rules to a tenant group. Additional content types will be added in the future.
 
 ## Requirements
 
@@ -36,7 +36,7 @@ The following table lists the requirements for content distribution in multi-ten
 |:---|:---|
 |Microsoft Defender XDR license |To use content distribution, your organization must have a subscription to Microsoft 365 E5 or Office E5.|
 |Permissions |Users must be assigned the correct roles and permission at the individual tenant level to view and manage the associated data in multi-tenant management. <br/> Access to content distribution is granted through the Security settings (manage) or Security Data Basic (read) permission in [Microsoft 365 Defender Unified role-based access control (URBAC)](manage-rbac.md). Both of these roles are assigned to the Security Administrator and Security Reader Microsoft Entra built-in roles by default.|
-|Delegate access |Delegated access via [Azure B2B](/entra/external-id/add-users-administrator) or [GDAP (CSP Parters only)](../../lighthouse/m365-lighthouse-setup-gdap.md) must be obtained for at least one other tenant.|
+|Delegate access |Delegated access via [Azure B2B](/entra/external-id/add-users-administrator) or [GDAP (CSP Parters only)](/microsoft-365/lighthouse/m365-lighthouse-setup-gdap) must be obtained for at least one other tenant.|
 
 ## Create tenant groups
 
@@ -55,7 +55,7 @@ To create a new tenant group:
 
 5. The **Source tenant** column displays the tenant the detection rule comes from. Choose the detection rules you want to add to the assignment.
 
-    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups-select-rules-small.png" alt-text="Screenshot of the detection rules selection pane." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups/tenant-groups-select-rules.png":::
+    :::image type="content" source="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups-select-rules-small.png" alt-text="Screenshot of the detection rules selection pane." lightbox="/defender-xdr/media/multi-tenant/tenant-groups/tenant-groups-select-rules.png":::
 
 6. Select **Add to tenant group**.
 7. Select **Next** on the **Content** page.
@@ -118,6 +118,6 @@ If the issue is with the target tenant, try creating an identical custom detecti
 
 ## Additional resources
 
-- [Create and manage custom detections rules](../defender/custom-detection-rules.md)
+- [Create and manage custom detections rules](custom-detection-rules.md)
 - [Add Microsoft Entra B2B collaboration users in the Microsoft Entra admin center](/entra/external-id/add-users-administrator)
-- [Set up GDAP for your customers in Microsoft 365 Lighthouse](../../lighthouse/m365-lighthouse-setup-gdap.md)
+- [Set up GDAP for your customers in Microsoft 365 Lighthouse](/microsoft-365/lighthouse/m365-lighthouse-setup-gdap)
