@@ -166,13 +166,13 @@ All our updates contain
 
 After a new package version is released, support for the previous two versions is reduced to technical support only. For more information about previous versions, see [Microsoft Defender Antivirus updates: Previous versions for technical upgrade support](msda-updates-previous-versions-technical-upgrade-support.md).
 
-## Microsoft Defender Antivirus platform support
+## Microsoft Defender Antivirus platform and engine support
 
-Platform and engine updates are provided on a monthly cadence. To be fully supported, keep current with the latest platform updates. Our support structure is dynamic, evolving into two phases depending on the availability of the latest platform version:
+Platform and engine updates are provided on a monthly cadence. To be fully supported, keep current with the latest platform and engine updates. Our support structure is dynamic, evolving into two phases depending on the availability of the latest platform and engine version:
 
-- **Security and Critical Updates servicing phase** - When running the latest platform version, you're eligible to receive both Security and Critical updates to the anti-malware platform.
+- **Security and Critical Updates servicing phase** - When running the latest platform and engine version, you're eligible to receive both Security and Critical updates to the anti-malware platform.
 
-- **Technical Support (Only) phase** - After a new platform version is released, support for older versions (N-2) reduce to [technical support only](msda-updates-previous-versions-technical-upgrade-support.md). Platform versions older than N-2 are no longer supported. Technical support continues to be provided for upgrades from the Windows 10 release version (see [Platform version included with Windows 10 releases](#platform-version-included-with-windows-10-releases)) to the latest platform version.
+- **Technical Support (Only) phase** - After a new platform and engine version is released, support for older versions (N-2) reduce to [technical support only](msda-updates-previous-versions-technical-upgrade-support.md). Platform and engine versions older than N-2 are no longer supported. Technical support continues to be provided for upgrades from the Windows 10 release version (see [Platform version included with Windows 10 releases](#platform-version-included-with-windows-10-releases)) to the latest platform version.
 
 During the technical support (only) phase, commercially reasonable support incidents are provided through Microsoft Customer Service & Support and Microsoft's managed support offerings (such as Premier Support). If a support incident requires escalation to development for further guidance, requires a nonsecurity update, or requires a security update, customers are asked to upgrade to the latest platform version or an intermediate update (*).
 
