@@ -39,7 +39,7 @@ search.appverid: met150
 You can define an exclusion list for items that you don't want Microsoft Defender Antivirus to scan. However, excluded items could contain threats that make your device vulnerable. This article describes some common mistakes that you should avoid when defining exclusions.
 
 > [!TIP]
-> Before defining your exclusion lists, see [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md.md#important-points-about-exclusions) and review the detailed information in [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions).
+> Before defining your exclusion lists, see [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md#important-points-about-exclusions) and review the detailed information in [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions).
 
 ## Excluding certain trusted items
 
