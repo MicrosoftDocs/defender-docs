@@ -40,7 +40,7 @@ While the simulation creation and scheduling experience is designed to be free-f
 
 A URL reputation service might identify one or more of the URLs that are used by Attack simulation training as unsafe. Google Safe Browsing in Google Chrome blocks some of the simulated phishing URLs with a **Deceptive site ahead** message. While we work with many URL reputation vendors to always allow our simulation URLs, we don't always have full coverage.
 
-:::image type="content" source="/defender/media/attack-sim-training-faq-chrome-deceptive-site-message.png" alt-text="The Deceptive site ahead warning in Google Chrome" lightbox="/defender/media/attack-sim-training-faq-chrome-deceptive-site-message.png":::
+:::image type="content" source="media/attack-sim-training-faq-chrome-deceptive-site-message.png" alt-text="The Deceptive site ahead warning in Google Chrome" lightbox="media/attack-sim-training-faq-chrome-deceptive-site-message.png":::
 
 This issue doesn't affect Microsoft Edge.
 
@@ -104,11 +104,11 @@ Every simulation campaign has a lifecycle. When first created, the simulation is
 
 While a simulation is in the **Scheduled** state, the simulation reports are mostly empty. During this stage, the simulation engine is resolving the target user email addresses, expanding distribution groups, removing guest users from the list, etc.:
 
-:::image type="content" source="/defender/media/attack-sim-training-faq-scheduled-state.png" alt-text="Simulation details showing the simulation in the Scheduled state" lightbox="/defender/media/attack-sim-training-faq-scheduled-state.png":::
+:::image type="content" source="media/attack-sim-training-faq-scheduled-state.png" alt-text="Simulation details showing the simulation in the Scheduled state" lightbox="media/attack-sim-training-faq-scheduled-state.png":::
 
 Once the simulation enters the **In progress** stage, information starts trickling into the reporting:
 
-:::image type="content" source="/defender/media/attack-sim-training-faq-in-progress-state.png" alt-text="Simulation details showing the simulation in the In progress state" lightbox="/defender/media/attack-sim-training-faq-in-progress-state.png":::
+:::image type="content" source="media/attack-sim-training-faq-in-progress-state.png" alt-text="Simulation details showing the simulation in the In progress state" lightbox="media/attack-sim-training-faq-in-progress-state.png":::
 
 It can take up to 30 minutes for the individual simulation reports to update after the transition to the **In progress** state. The report data continues to build until the simulation reaches the **Completed** state. Reporting updates occur at the following intervals:
 
@@ -184,7 +184,7 @@ The configuration change might take up to 30 minutes to synchronize across all s
 
 A: Yes you can! On the last **Review Simulation** page in the new simulation wizard, select **Send a test**. This option sends a sample phishing simulation message to the currently logged in user. After you validate the phishing message in your Inbox, you can submit the simulation.
 
-:::image type="content" source="/defender/media/attack-sim-training-simulations-review-simulation.png" alt-text="The Send a test button on the Review simulation page" lightbox="/defender/media/attack-sim-training-simulations-review-simulation.png":::
+:::image type="content" source="media/attack-sim-training-simulations-review-simulation.png" alt-text="The Send a test button on the Review simulation page" lightbox="media/attack-sim-training-simulations-review-simulation.png":::
 
 ### Q: Can I target users that belong to a different tenant as part of the same simulation campaign?
 
