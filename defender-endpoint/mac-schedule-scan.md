@@ -149,6 +149,8 @@ The following code shows the schema you need to use to schedule scans according 
 </plist> 
 ```
 
+2. Save the file as _com.microsoft.wdav.mobileconfi_.
+
 #### For JamF and other 3rd-party MDMs:
 ``` XML
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -267,6 +269,7 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
     </dict> 
 </plist> 
 ```
+2. Save the file as _com.microsoft.wdav.mobileconfi_.
 
 #### For JamF and other 3rd-party MDMs:
 1. Open a text editor and use this example.
