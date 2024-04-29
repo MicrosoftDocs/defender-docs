@@ -15,7 +15,7 @@ ms.collection:
   - essentials-get-started
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 01/30/2024
+ms.date: 04/29/2024
 ---
 
 # Get started with Microsoft Defender Experts for XDR
@@ -153,7 +153,8 @@ To turn on Teams notifications and chat after the initial setup, go to **Setting
 
 :::image type="content" source="/defender/media/xdr/Teams-managed-response.png" alt-text="Screenshot of option to activate Teams for receiving managed response." lightbox="/defender/media/xdr/Teams-managed-response.png":::
 
-You can add new members to the channel by navigating to **Defender Experts team** \> **More options (...)** >  **Manage team** > **Add member**.
+- You can add new members to the channel by navigating to **Defender Experts team** \> **More options (...)** >  **Manage team** > **Add member**.
+- You can limit who can join this team by navigating to **Defender Experts team** > **More options (...)** > **Settings** > **Edit** > **Manage team** > **Private**.
 
 ## Prepare your environment for the Defender Experts service
 
