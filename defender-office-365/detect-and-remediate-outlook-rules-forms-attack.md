@@ -124,7 +124,7 @@ You need to be a member of the Global Administrator role in [Microsoft Entra ID]
 
 1. Use an account with local administrator rights to sign in to the computer where you intend to run the script.
 
-2. Download or copy the contents of the **Get-AllTenantRulesAndForms.ps1** script from GitHub to a folder that's easy to find and run the script from. The script creates two date stamped files in the folder: `MailboxFormsExport-yyyy-mm-dd.csv` and `MailboxRulesExport-yyyy-mm-dd.csv`.
+2. Download or copy the contents of the **Get-AllTenantRulesAndForms.ps1** script from GitHub to a folder that's easy to find and run the script from. The script creates two date stamped files in the folder: `MailboxFormsExport-yyyy-MM-dd.csv` and `MailboxRulesExport-yyyy-MM-dd.csv`.
 
    Remove lines 154 to 158 from the script, because that connection method no longer works as of July 2023.
 
@@ -138,14 +138,14 @@ You need to be a member of the Global Administrator role in [Microsoft Entra ID]
 
 #### Interpreting the output
 
-- **MailboxRulesExport-*yyyy-mm-dd*.csv**: Examine the rules (one per row) for action conditions that include applications or executables:
+- **MailboxRulesExport-*yyyy-MM-dd*.csv**: Examine the rules (one per row) for action conditions that include applications or executables:
   - **ActionType (column A)**: The rule is likely malicious if this column contains the value `ID_ACTION_CUSTOM`.
   - **IsPotentiallyMalicious (column D)**: The rule is likely malicious if this column contains the value `TRUE`.
   - **ActionCommand (column G)**: The rule is likely malicious if this column contains any of the following values:
     - An application.
     - An .exe or .zip file.
     - An unknown entry that refers to a URL.
-- **MailboxFormsExport-*yyyy-mm-dd*.csv**: In general, the use of custom forms is rare. If you find any in this workbook, open that user's mailbox and examine the form itself. If your organization didn't put it there intentionally, it's likely malicious.
+- **MailboxFormsExport-*yyyy-MM-dd*.csv**: In general, the use of custom forms is rare. If you find any in this workbook, open that user's mailbox and examine the form itself. If your organization didn't put it there intentionally, it's likely malicious.
 
 ## How to stop and remediate the Outlook Rules and Forms attack
 
