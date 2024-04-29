@@ -63,7 +63,7 @@ Perform the following steps in the **Intel explorer** page in the Defender porta
 2. Navigate to **Threat intelligence** > **Intel explorer**.
 3. Search *mypillow[.]com* on the **Intel explorer** search bar. You should see the article *Consumers May Lose Sleep Over These Two Magecart Breaches* associated with this domain.
  
-      :::image type="content" source="/media/tutorial-infra-chain-mypillow-article.png" alt-text="Tutorial infrastructure chain MyPillow.com article." lightbox="/media/tutorial-infra-chain-mypillow-article.png":::
+      :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-article.png" alt-text="Tutorial infrastructure chain MyPillow.com article." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-article.png":::
 
       ![Tutorial Infra Chain My Pillowcom Article](media/tutorial-infra-chain-mypillow-article.png)
 
@@ -86,9 +86,11 @@ Host pairs reveal connections between websites that traditional data sources, su
 
     Repeat this step for *mypillow[.]com*. You should notice the following differences  between the two domains’ IP addresses in October 2018:
    - The IP address *mypiltow[.]com* resolved to, 195.161.41[.]65, was hosted in Russia.
+        ![Tutorial infrastructure chain mypiltow RU ASN](media/tutorial-infra-chain-mypiltow-IP-RU.png)
    - The two IP addresses used different autonomous system number (ASNs).
-          ![Tutorial Infra Chain My Pillow Ip Summary](media/tutorial-infra-chain-mypiltow-IP-RU.png)
-          ![Tutorial Infra Chain My Pillow Ip Summary](media/tutorial-infra-chain-mypillow-IP-US.png)
+       ![Tutorial infrastructure chain mypillow US ASN](media/tutorial-infra-chain-mypillow-IP-US.png)
+
+
 10. Select the **Summary** tab and scroll down to the **Articles** section. You should see the following published articles related to *mypiltow[.]com*:
     - *RiskIQ: Magecart Injected URLs and C2 Domains, June 3-14, 2022*
     - *RiskIQ: Magecart injected URLs and C2 Domains, May 20-27, 2022*
