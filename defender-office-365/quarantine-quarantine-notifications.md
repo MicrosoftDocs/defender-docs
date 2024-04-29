@@ -93,4 +93,4 @@ The actions that are available for messages in the quarantine notification depen
   > [!TIP]
   > The organization can still receive mail from the blocked sender. Messages from the sender are delivered to user Junk Email folders or to quarantine. To delete messages from the sender upon arrival, use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
 
-:::image type="content" source="/defender/media/quarantine-notification.png" alt-text="A sample quarantine notification." lightbox="/defender/media/quarantine-notification.png":::
+:::image type="content" source="media/quarantine-notification.png" alt-text="A sample quarantine notification." lightbox="media/quarantine-notification.png":::
