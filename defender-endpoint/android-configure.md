@@ -134,7 +134,7 @@ Android low touch onboarding is disabled by default. Admins can enable it throug
 6.	Under configuration settings, select ‘Use Configuration designer’ and click on Add.
 7.	Select Low touch onboarding and User UPN. For User UPN, change the Value type to ‘Variable’ and Configuration value to ‘User Principal Name’ from the drop down Enable Low touch onboarding by changing the configuration value to 1.
     >[!div class="mx-imgBorder"]
-    >![Image of add configuration policy.](media/low-touch-user-upn.png)
+    >![Image of low touch onboarding configuration policy.](media/low-touch-user-upn.png)
 
 8.	Assign the policy to the target user group.
 9.	Review and create the policy.
