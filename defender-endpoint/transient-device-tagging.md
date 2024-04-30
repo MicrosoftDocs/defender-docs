@@ -37,7 +37,7 @@ Transient device tagging uses an internal algorithm to tag transient devices in 
 
 ## How do I work with transient tagging?
 
-Transient devices are filtered out of the device inventory by default. You can turn off the filter as needed. Turning off the filter doesn't affect transient device tagging. The tag remains on inventory assets identified as transient.
+Transient devices are filtered out of the device inventory by default. You can turn off the filter as needed. Note that turning off the filter doesn't affect tagging. The tag remains on inventory assets identified as transient.
 
 ## Next steps
 
