@@ -123,19 +123,19 @@ Admins can configure Microsoft Defender for Endpoint in Low Touch Onboarding mod
 
 Android low touch onboarding is disabled by default. Admins can enable it through app configuration policies on Intune by following these steps -
 
-1. Push Defender app to target user group by [following these steps](/microsoft-365/security/defender-endpoint/android-intune#add-microsoft-defender-for-endpoint-on-android-as-a-managed-google-play-app).
+1. Push the Microsoft Defender app to your target user group by [following these steps](/microsoft-365/security/defender-endpoint/android-intune#add-microsoft-defender-for-endpoint-on-android-as-a-managed-google-play-app).
 
 2. Push a VPN profile to the user’s device by [following the instructions here](/microsoft-365/security/defender-endpoint/android-intune#auto-setup-of-always-on-vpn).
 
-3. In Apps>Application configuration policies, select Managed Devices.
+3. In **Apps** > **Application configuration policies**, select **Managed Devices**.
 
-4. Provide a name to uniquely identify the policy. Select ‘Android Enterprise’ as the Platform, the required Profile type and ‘Microsoft Defender: Antivirus’ as the targeted app. Click on Next.
+4. Provide a name to uniquely identify the policy. Select **Android Enterprise** as the Platform. For the required Profile type, select **Microsoft Defender: Antivirus** as the targeted app. Select **Next**.
 
 5. Add runtime permissions. Select Location access (fine)(This permission is not supported for Android 13 and above), POST_NOTIFICATIONS and change the Permission state to ‘Auto grant’.
 
-6. Under configuration settings, select ‘Use Configuration designer’ and click on Add.
+6. Under configuration settings, select **Use Configuration designer** and select **Add**.
 
-7. Select Low touch onboarding and User UPN. For User UPN, change the Value type to ‘Variable’ and Configuration value to ‘User Principal Name’ from the drop down Enable Low touch onboarding by changing the configuration value to 1.
+7. Select **Low touch onboarding and User UPN**. For **User UPN**, change the value type to **Variable** and set the configuration value to **User Principal Name**. In the drop down, enable low touch onboarding by changing the configuration value to `1`.
 
 8. Assign the policy to the target user group.
 
