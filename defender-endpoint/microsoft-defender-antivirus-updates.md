@@ -98,6 +98,23 @@ All our updates contain
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### April-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
+
+- Security intelligence update version: **1.409.1.0**
+- Release date: **, 2024** (Engine) / **, 2024** (Platform)
+- Engine: **1.1.24030.4**
+- Platform: **4.18.24030.9**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Added an opt-out feature to Experimental Configuration Services (ECS) and One collector in the Core Service.
+- Fixed problem with exclusions occasionally not being honored when deployed via Intune and having Tamper protection enabled
+*** Going forward, this release onwards, the platform will only load an engine version that is not older then 2 months
+*** Fixed an engine loading crash when engine was greater than N-2 platform version. Older engines will no longer load. (https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-updates?view=o365-worldwide)
+- Improved health monitoring and telemetry for ASR exclusions.
+- Corrected incorrect statements regarding wildcard usage with Contextual exclusions (configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+
 ### March-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
 
 - Security intelligence update version: **1.409.1.0**
