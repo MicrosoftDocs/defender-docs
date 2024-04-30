@@ -41,5 +41,5 @@ Transient devices are filtered out of the device inventory by default. You can t
 
 ## Next steps
 
-[Review transient devices](initiatives.md) in the Defender for Endpoint device inventory.
+[Learn about tagging](machines-view-oveview.md) in the Defender for Endpoint device inventory.
 
