@@ -71,7 +71,7 @@ Selecting **View all simulations** takes you to the **Simulations** tab.
 
 Selecting **Launch a simulation** starts the new simulation wizard. For more information, see [Simulate a phishing attack in Defender for Office 365](attack-simulation-training-simulations.md).
 
-:::image type="content" source="/defender/media/attack-sim-training-overview-recent-simulations-card.png" alt-text="The Recent simulations card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="/defender/media/attack-sim-training-overview-recent-simulations-card.png":::
+:::image type="content" source="media/attack-sim-training-overview-recent-simulations-card.png" alt-text="The Recent simulations card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-overview-recent-simulations-card.png":::
 
 ### Recommendations card
 
@@ -79,7 +79,7 @@ The **Recommendations** card on the **Overview** tab suggests different types of
 
 Selecting **Launch now** starts the new simulation wizard with the specified simulation type automatically selected on the **Select technique** page. For more information, see [Simulate a phishing attack in Defender for Office 365](attack-simulation-training-simulations.md).
 
-:::image type="content" source="/defender/media/attack-sim-training-overview-recommendations-card.png" alt-text="The Recommendations card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="/defender/media/attack-sim-training-overview-recommendations-card.png":::
+:::image type="content" source="media/attack-sim-training-overview-recommendations-card.png" alt-text="The Recommendations card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-overview-recommendations-card.png":::
 
 ### Simulation coverage card
 
@@ -89,7 +89,7 @@ Selecting **View simulation coverage report** takes you to the [User coverage ta
 
 Selecting **Launch simulation for non-simulated users** starts the new simulation wizard where the users who didn't receive the simulation are automatically selected on the **Target user** page. For more information, see [Simulate a phishing attack in Defender for Office 365](attack-simulation-training-simulations.md).
 
-:::image type="content" source="/defender/media/attack-sim-training-overview-sim-coverage-card.png" alt-text="The Simulation coverage card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="/defender/media/attack-sim-training-overview-sim-coverage-card.png":::
+:::image type="content" source="media/attack-sim-training-overview-sim-coverage-card.png" alt-text="The Simulation coverage card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-overview-sim-coverage-card.png":::
 
 ### Training completion card
 
@@ -103,7 +103,7 @@ You can hover over a section in the chart to see the actual number of users in e
 
 Selecting **View training completion report** takes you to the [Training completion tab for the Attack simulation report](#training-completion-tab-for-the-attack-simulation-report).
 
-:::image type="content" source="/defender/media/attack-sim-training-overview-training-complete-card.png" alt-text="The Training completion card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="/defender/media/attack-sim-training-overview-training-complete-card.png":::
+:::image type="content" source="media/attack-sim-training-overview-training-complete-card.png" alt-text="The Training completion card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-overview-training-complete-card.png":::
 
 ### Repeat offenders card
 
@@ -120,7 +120,7 @@ The chart organizes repeat offender data by [simulation type](attack-simulation-
 
 Selecting **View repeat offender report** takes you to the [Repeat offenders tab for the Attack simulation report](#repeat-offenders-tab-for-the-attack-simulation-report).
 
-:::image type="content" source="/defender/media/attack-sim-training-overview-repeat-offenders-card.png" alt-text="The Repeat offenders card on the Overview tab in Attack simulation training in the Microsoft Defender portal" lightbox="/defender/media/attack-sim-training-overview-repeat-offenders-card.png":::
+:::image type="content" source="media/attack-sim-training-overview-repeat-offenders-card.png" alt-text="The Repeat offenders card on the Overview tab in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-overview-repeat-offenders-card.png":::
 
 ### Behavior impact on compromise rate card
 
@@ -135,7 +135,7 @@ If you hover over a data point in the chart, the actual percentage values are sh
 
 To see a detailed report, select **View simulations and training efficacy report**. This report is explained [later in this article](#training-efficacy-tab-for-the-attack-simulation-report).
 
-:::image type="content" source="/defender/media/attack-sim-training-overview-behavior-impact-card.png" alt-text="The Behavior impact on compromise rate card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="/defender/media/attack-sim-training-overview-behavior-impact-card.png":::
+:::image type="content" source="media/attack-sim-training-overview-behavior-impact-card.png" alt-text="The Behavior impact on compromise rate card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-overview-behavior-impact-card.png":::
 
 ## Attack simulation report
 
@@ -145,11 +145,11 @@ You can open the **Attack simulation report** from the **Overview** tab by selec
 
 The **Training efficacy** tab is selected by default on the **Attack simulation report** page. This tab provides the same information that's available in the **Behavior impact on compromise rate** card, with additional context from the simulation itself.
 
-:::image type="content" source="/defender/media/attack-sim-report-training-efficacy-view.png" alt-text="The Training efficacy tab in the Attack simulation report in the Microsoft Defender portal." lightbox="/defender/media/attack-sim-report-training-efficacy-view.png":::
+:::image type="content" source="media/attack-sim-report-training-efficacy-view.png" alt-text="The Training efficacy tab in the Attack simulation report in the Microsoft Defender portal." lightbox="media/attack-sim-report-training-efficacy-view.png":::
 
 The chart shows the **Actual compromised rate** and the **Predicted compromise rate**. If you hover over a section in the chart, the actual percentage values for are shown.
 
-The details table below the chart shows the following information. You can sort the simulations by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The details table below the chart shows the following information. You can sort the simulations by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Simulation name**
 - **Simulation technique**
@@ -159,17 +159,17 @@ The details table below the chart shows the following information. You can sort 
 - **Total users targeted**
 - **Count of clicked users**
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the results by **Simulation name** or **Simulation Technique**. Wildcards aren't supported.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the results by **Simulation name** or **Simulation Technique**. Wildcards aren't supported.
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
+Use the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
 
 ### User coverage tab for the Attack simulation report
 
 On the **User coverage** tab, the chart shows the **Simulated users** and **Non-simulated users**. If you hover over a data point in the chart, the actual values are shown.
 
-:::image type="content" source="/defender/media/attack-sim-report-user-coverage-view.png" alt-text="The User coverage tab in the Attack simulation report in the Microsoft Defender portal." lightbox="/defender/media/attack-sim-report-user-coverage-view.png":::
+:::image type="content" source="media/attack-sim-report-user-coverage-view.png" alt-text="The User coverage tab in the Attack simulation report in the Microsoft Defender portal." lightbox="media/attack-sim-report-user-coverage-view.png":::
 
-The details table below the chart shows the following information. You can sort the information by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The details table below the chart shows the following information. You can sort the information by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Username**
 - **Email address**
@@ -179,17 +179,17 @@ The details table below the chart shows the following information. You can sort 
 - **Count of clicked**
 - **Count of compromised**
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the results by **Username** or **Email address**. Wildcards aren't supported.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the results by **Username** or **Email address**. Wildcards aren't supported.
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
+Use the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
 
 ### Training completion tab for the Attack simulation report
 
 On the **Training completion** tab, the chart shows the number of **Completed**, **In progress**, and **Incomplete** simulations. If you hover over a section in the chart, the actual values are shown.
 
-:::image type="content" source="/defender/media/attack-sim-report-training-completion-view.png" alt-text="The Training completion tab in the Attack simulation report in the Microsoft Defender portal." lightbox="/defender/media/attack-sim-report-training-completion-view.png":::
+:::image type="content" source="media/attack-sim-report-training-completion-view.png" alt-text="The Training completion tab in the Attack simulation report in the Microsoft Defender portal." lightbox="media/attack-sim-report-training-completion-view.png":::
 
-The details table below the chart shows the following information. You can sort the information by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The details table below the chart shows the following information. You can sort the information by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Username**
 - **Email address**
@@ -200,13 +200,13 @@ The details table below the chart shows the following information. You can sort 
 - **Date completed**
 - **All trainings**
 
-Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the chart and details table by a **Status** values of the trainings: **Completed**, **In progress**, or **All**.
+Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the chart and details table by a **Status** values of the trainings: **Completed**, **In progress**, or **All**.
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the results by **Username** or **Email address**. Wildcards aren't supported.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the results by **Username** or **Email address**. Wildcards aren't supported.
 
-If you select the :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button, report generation progress is shown as a percentage of complete. In the dialog that opens, you can choose to open the .csv file, save the .csv file, and remember the selection.
+If you select the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button, report generation progress is shown as a percentage of complete. In the dialog that opens, you can choose to open the .csv file, save the .csv file, and remember the selection.
 
 ### Repeat offenders tab for the Attack simulation report
 
@@ -214,11 +214,11 @@ A _repeat offender_ is a user who was compromised by consecutive simulations. Th
 
 On the **Repeat offenders** tab, the chart shows the number of **Repeat offender users** and **Simulated users**.
 
-:::image type="content" source="/defender/media/attack-sim-report-repeat-offenders-view.png" alt-text="The Repeat offenders tab in the Attack simulation report in the Microsoft Defender portal." lightbox="/defender/media/attack-sim-report-repeat-offenders-view.png":::
+:::image type="content" source="media/attack-sim-report-repeat-offenders-view.png" alt-text="The Repeat offenders tab in the Attack simulation report in the Microsoft Defender portal." lightbox="media/attack-sim-report-repeat-offenders-view.png":::
 
 If you hover over a data point in the chart, the actual values are shown.
 
-The details table below the chart shows the following information. You can sort the information by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The details table below the chart shows the following information. You can sort the information by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **User**
 - **Simulation types**
@@ -231,18 +231,18 @@ The details table below the chart shows the following information. You can sort 
 - **Last training assigned**
 - **Last training status**
 
-Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the chart and details table by one or more simulation type values:
+Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the chart and details table by one or more simulation type values:
 
 - **Credential Harvest**
 - **Malware Attachment**
 - **Link in Attachment**
 - **Link to Malware**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the results by any of the column values. Wildcards aren't supported.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to filter the results by any of the column values. Wildcards aren't supported.
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
+Use the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export report** button to save the information to a CSV file. The default filename is Attack simulation report - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Attack simulation report - Microsoft Defender (1).csv).
 
 ## Simulation report in Attack simulation training
 
@@ -250,13 +250,13 @@ The simulation report shows the details of in-progress or completed simulations 
 
 - On the **Overview** tab of the **Attack simulation training** page at <https://security.microsoft.com/attacksimulator?viewid=overview>, select a simulation from the [Recent simulations card](#recent-simulations-card).
 
-  :::image type="content" source="/defender/media/attack-sim-training-overview-recent-simulations-card.png" alt-text="The Recent simulations card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="/defender/media/attack-sim-training-overview-recent-simulations-card.png":::
+  :::image type="content" source="media/attack-sim-training-overview-recent-simulations-card.png" alt-text="The Recent simulations card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-overview-recent-simulations-card.png":::
 
 - On the **Simulations** tab of the **Attack simulation training** page at <https://security.microsoft.com/attacksimulator?viewid=simulations>, select a simulation by clicking anywhere in the row other than the check box next to the name. For more information, see [View simulation reports](attack-simulation-training-simulations.md#view-simulation-reports).
 
   - On the **Training** tab of the **Attack simulation training** page at <https://security.microsoft.com/attacksimulator?viewid=trainingcampaign>, select the training campaign using either of the following methods:
   - Click anywhere in the row other than the check box next to the name.
-  - Select the check box next to the name, and then select :::image type="icon" source="/defender/media/m365-cc-sc-eye-icon.png" border="false"::: **View report**.
+  - Select the check box next to the name, and then select :::image type="icon" source="media/m365-cc-sc-eye-icon.png" border="false"::: **View report**.
 
   For more information, see [View Training campaign reports](attack-simulation-training-training-campaigns.md#view-training-campaign-reports).
 
@@ -277,7 +277,7 @@ For more information about the **Users** and **Details** tabs, see the following
 
 This section describes the information in the simulation report for regular simulations (not [Training campaigns](#simulation-report-for-training-campaigns)).
 
-:::image type="content" source="/defender/media/attack-sim-report-simulation-report-tab.png" alt-text="The Report tab in the simulation report in Attack simulation training." lightbox="/defender/media/attack-sim-report-simulation-report-tab.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab.png" alt-text="The Report tab in the simulation report in Attack simulation training." lightbox="media/attack-sim-report-simulation-report-tab.png":::
 
 #### Simulation impact section in the report for simulations
 
@@ -289,7 +289,7 @@ Select **View compromised users** to go to the [Users tab](attack-simulation-tra
 
 Select **View users who reported** to go to the [Users tab](attack-simulation-training-simulations.md#users-tab) tab in the report where the results are filtered by **Reported message: Yes**.
 
-:::image type="content" source="/defender/media/attack-sim-report-simulation-report-tab-simulation-impact.png" alt-text="The Simulation impact section on the Report tab of a simulation report for a simulation." lightbox="/defender/media/attack-sim-report-simulation-report-tab-simulation-impact.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab-simulation-impact.png" alt-text="The Simulation impact section on the Report tab of a simulation report for a simulation." lightbox="media/attack-sim-report-simulation-report-tab-simulation-impact.png":::
 
 #### All user activity section in the report for simulations
 
@@ -305,7 +305,7 @@ The **All user activity** section on **Report** tab** for a simulation shows num
 
 Select **View all users** to go to the [Users tab](attack-simulation-training-simulations.md#users-tab) tab in the report where the results are unfiltered.
 
-:::image type="content" source="/defender/media/attack-sim-report-simulation-report-tab-all-user-activity.png" alt-text="The All users activity section on the Report tab of a simulation report for a simulation." lightbox="/defender/media/attack-sim-report-simulation-report-tab-all-user-activity.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab-all-user-activity.png" alt-text="The All users activity section on the Report tab of a simulation report for a simulation." lightbox="media/attack-sim-report-simulation-report-tab-all-user-activity.png":::
 
 #### Delivery status section in the report for simulations
 
@@ -319,7 +319,7 @@ Select **View users to whom message delivery failed** to go to the [Users tab](a
 
 Select **View excluded users or groups** to open an **Excluded users or groups** flyout that shows the users or groups that were excluded from the simulation.
 
-:::image type="content" source="/defender/media/attack-sim-report-simulation-report-tab-delivery-status.png" alt-text="The Delivery status section on the Report tab of a simulation report for a simulation." lightbox="/defender/media/attack-sim-report-simulation-report-tab-delivery-status.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab-delivery-status.png" alt-text="The Delivery status section on the Report tab of a simulation report for a simulation." lightbox="media/attack-sim-report-simulation-report-tab-delivery-status.png":::
 
 #### Training completion section in the report for simulations
 
@@ -327,7 +327,7 @@ The **Training completion** section on the simulation details page shows the tra
 
 If no trainings were included in the simulation, the only value in this section is **Trainings were not part of this simulation**.
 
-:::image type="content" source="/defender/media/attack-sim-report-simulation-report-tab-training-completion.png" alt-text="The Training completion section on the Report tab of a simulation report for a simulation." lightbox="/defender/media/attack-sim-report-simulation-report-tab-training-completion.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab-training-completion.png" alt-text="The Training completion section on the Report tab of a simulation report for a simulation." lightbox="media/attack-sim-report-simulation-report-tab-training-completion.png":::
 
 #### First & average instance section in the report for simulations
 
@@ -338,25 +338,25 @@ The **First & average instance** section on **Report** tab** for a simulation sh
 - **First credential entered**
 - **Avg. credential entered**
 
-:::image type="content" source="/defender/media/attack-sim-report-simulation-report-tab-first-and-average-instances.png" alt-text="The First & average instance section on the Report tab of a simulation report for a simulation." lightbox="/defender/media/attack-sim-report-simulation-report-tab-first-and-average-instances.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab-first-and-average-instances.png" alt-text="The First & average instance section on the Report tab of a simulation report for a simulation." lightbox="media/attack-sim-report-simulation-report-tab-first-and-average-instances.png":::
 
 #### Recommendations section in the report for simulations
 
 The **Recommendations** section on **Report** tab** for a simulation shows recommendations for using Attack simulation training to help secure your organization.
 
-:::image type="content" source="/defender/media/attack-sim-report-simulation-report-tab-recommendations.png" alt-text="The Recommendations section on the Report tab of a simulation report for a simulation." lightbox="/defender/media/attack-sim-report-simulation-report-tab-recommendations.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab-recommendations.png" alt-text="The Recommendations section on the Report tab of a simulation report for a simulation." lightbox="media/attack-sim-report-simulation-report-tab-recommendations.png":::
 
 ### Simulation report for Training campaigns
 
 This section describes the information in the simulation report for Training campaigns (not [simulations](#simulation-report-for-simulations)).
 
-:::image type="content" source="/defender/media/attack-sim-report-training-campaign-report-tab.png" alt-text="The Report tab in the Training campaign report in Attack simulation training." lightbox="/defender/media/attack-sim-report-training-campaign-report-tab.png":::
+:::image type="content" source="media/attack-sim-report-training-campaign-report-tab.png" alt-text="The Report tab in the Training campaign report in Attack simulation training." lightbox="media/attack-sim-report-training-campaign-report-tab.png":::
 
 #### Training completion classification section in the report for Training campaigns
 
 The **Training completion classification** section on **Report** tab** for a Training campaign shows information about the completed Training modules in the Training campaign.
 
-:::image type="content" source="/defender/media/attack-sim-report-training-campaign-report-tab-training-completion-classification.png" alt-text="The Training completion classification section on the Report tab in the Training campaign report in Attack simulation training." lightbox="/defender/media/attack-sim-report-training-campaign-report-tab-training-completion-classification.png":::
+:::image type="content" source="media/attack-sim-report-training-campaign-report-tab-training-completion-classification.png" alt-text="The Training completion classification section on the Report tab in the Training campaign report in Attack simulation training." lightbox="media/attack-sim-report-training-campaign-report-tab-training-completion-classification.png":::
 
 #### Training completion summary section in the report for Training campaigns
 
@@ -370,7 +370,7 @@ The **Training completion summary** section on **Report** tab** for a Training c
 
 You can hover over a section in the chart to see the actual percentage in each category.
 
-:::image type="content" source="/defender/media/attack-sim-report-training-campaign-report-tab-training-completion-summary.png" alt-text="The Training completion summary section on the Report tab in the Training campaign report in Attack simulation training." lightbox="/defender/media/attack-sim-report-training-campaign-report-tab-training-completion-summary.png":::
+:::image type="content" source="media/attack-sim-report-training-campaign-report-tab-training-completion-summary.png" alt-text="The Training completion summary section on the Report tab in the Training campaign report in Attack simulation training." lightbox="media/attack-sim-report-training-campaign-report-tab-training-completion-summary.png":::
 
 #### All user activity section in the report for Training campaigns
 
@@ -378,7 +378,7 @@ The **All user activity** section on **Report** tab** for a Training campaign us
 
 You can hover over a section in the chart to see the actual numbers in each category.
 
-:::image type="content" source="/defender/media/attack-sim-report-training-campaign-report-tab-all-user-activity.png" alt-text="The All user activity section on the Report tab in the Training campaign report in Attack simulation training." lightbox="/defender/media/attack-sim-report-training-campaign-report-tab-all-user-activity.png":::
+:::image type="content" source="media/attack-sim-report-training-campaign-report-tab-all-user-activity.png" alt-text="The All user activity section on the Report tab in the Training campaign report in Attack simulation training." lightbox="media/attack-sim-report-training-campaign-report-tab-all-user-activity.png":::
 
 ## Related Links
 

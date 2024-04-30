@@ -23,7 +23,7 @@ search.appverid: met150
 
 **Applies to:**
 
-- ../microsoft-defender-endpoint.md
+- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
@@ -48,16 +48,16 @@ Retrieves a list of Microsoft Defender Antivirus device health details. This API
 Data that is collected using either '_JSON response_ or _via files_' is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
 
 > [!IMPORTANT]
-> For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](/defender-endpoint/configure-server-endpoints#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution).
+> For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution).
 >
 > For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft 365 Security dashboard, see: [Device health and antivirus report in Microsoft Defender for Endpoint](../device-health-reports.md).
 
 ### 1.1 Export device antivirus health details API methods
 
-Method|Data type|Description
-:---|:---|:---
-**(JSON response)**|Microsoft Defender Antivirus health per device collection. See: [1.2 Export device antivirus health details API properties (JSON response)](#13-export-device-antivirus-health-details-api-properties-json-response)|Returns a table with an entry for every unique combination of DeviceId, ConfigurationId. | The API pulls all data in your organization as JSON responses. This method is best for small organizations with less than 100-K devices. The response is paginated, so you can use the @odata.nextLink field from the response to fetch the next results.
-**(via files)**|Microsoft Defender Antivirus health per device collection. See: [1.3 Export device antivirus health details API properties \(via files\)](#14-export-device-antivirus-health-details-api-properties-via-files)|Returns a table with an entry for every unique combination of DeviceId, ConfigurationId. |This API solution enables pulling larger amounts of data faster and more reliably. So, it's recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows: <ol><li>Call the API to get a list of download URLs with all your organization data.</li><li>Download all the files using the download URLs and process the data as you like.</li></ol>
+|Method|Data type|Description|
+|---|---|---|
+|**(JSON response)**|Microsoft Defender Antivirus health per device collection. See: [1.2 Export device antivirus health details API properties (JSON response)](#13-export-device-antivirus-health-details-api-properties-json-response)|Returns a table with an entry for every unique combination of DeviceId, ConfigurationId. <br/><br/> The API pulls all data in your organization as JSON responses. This method is best for small organizations with less than 100-K devices. The response is paginated, so you can use the @odata.nextLink field from the response to fetch the next results.|
+|**(via files)**|Microsoft Defender Antivirus health per device collection. See: [1.3 Export device antivirus health details API properties \(via files\)](#14-export-device-antivirus-health-details-api-properties-via-files)|Returns a table with an entry for every unique combination of DeviceId, ConfigurationId. <br/><br/> This API solution enables pulling larger amounts of data faster and more reliably. So, it's recommended for large organizations, with more than 100-K devices. This API pulls all data in your organization as download files. The response contains URLs to download all the data from Azure Storage. This API enables you to download all your data from Azure Storage as follows: <ol><li>Call the API to get a list of download URLs with all your organization data.</li><li>Download all the files using the download URLs and process the data as you like.</li></ol>|
 
 ### 1.2 Limitations
 
@@ -73,7 +73,7 @@ Method|Data type|Description
 > - Some additional columns might be returned in the response. These columns can be temporary and might be removed; use only the documented columns.
 
 | Property (ID) | Data type | Description | Example of a returned value |
-|:----|:----|:----|:----|
+|---|---|---|---|
 | avEngineUpdateTime | DateTimeOffset | Datetime when AV engine was last updated on device | "2022-08-04T12:44:02Z" |
 | avEngineVersion | String | Antivirus engine version | "1.1.19400.3" |
 | avIsEngineUpToDate | String | Up-to-date status of AV engine | "True", "False", "Unknown" |
@@ -116,7 +116,7 @@ Method|Data type|Description
 > - Some additional columns might be returned in the response. These columns are temporary and might be removed, please use only the documented columns.
 
 | Property (ID) | Data type | Description | Example of a returned value |
-|:----|:----|:----|:----|
+|---|---|---|---|
 | Export files | array[string] | A list of download URLs for files holding the current snapshot of the organization. | ["https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"] |
 | GeneratedTime | String | The time that the export was generated. | 2022-05-20T08:00:00Z |
 

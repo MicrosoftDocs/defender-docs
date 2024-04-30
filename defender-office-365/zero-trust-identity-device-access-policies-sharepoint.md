@@ -37,7 +37,7 @@ In addition to implementing this guidance, be sure to configure SharePoint sites
 
 To protect files in SharePoint and OneDrive, the following diagram illustrates which policies to update from the common identity and device access policies.
 
-:::image type="content" source="/defender/media/microsoft-365-policies-configurations/identity-access-ruleset-sharepoint.svg" alt-text="The summary of policy updates for protecting the access to SharePoint" lightbox="/defender/media/microsoft-365-policies-configurations/identity-access-ruleset-sharepoint.svg":::
+:::image type="content" source="media/microsoft-365-policies-configurations/identity-access-ruleset-sharepoint.svg" alt-text="The summary of policy updates for protecting the access to SharePoint" lightbox="media/microsoft-365-policies-configurations/identity-access-ruleset-sharepoint.svg":::
 
 If you included SharePoint when you created the common policies, you only need to create the new policies. For Conditional Access policies, SharePoint includes OneDrive.
 
@@ -78,7 +78,7 @@ It's important to understand that SharePoint site permissions are typically base
 
 The following illustration provides an example of how SharePoint device access policies protect access to sites for a user.
 
-:::image type="content" source="/defender/media/microsoft-365-policies-configurations/sharepoint-rules-scenario.svg" alt-text="An example of how SharePoint device access policies protect sites" lightbox="/defender/media/microsoft-365-policies-configurations/sharepoint-rules-scenario.svg":::
+:::image type="content" source="media/microsoft-365-policies-configurations/sharepoint-rules-scenario.svg" alt-text="An example of how SharePoint device access policies protect sites" lightbox="media/microsoft-365-policies-configurations/sharepoint-rules-scenario.svg":::
 
 James has starting point Conditional Access policies assigned, but he can be given access to SharePoint sites with enterprise or specialized security protection.
 
@@ -88,7 +88,7 @@ James has starting point Conditional Access policies assigned, but he can be giv
 
 ## Next step
 
-:::image type="content" source="/defender/media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="The Step 4 - Policies for Microsoft 365 cloud apps" lightbox="/defender/media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
+:::image type="content" source="media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="The Step 4 - Policies for Microsoft 365 cloud apps" lightbox="media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
 
 Configure Conditional Access policies for:
 

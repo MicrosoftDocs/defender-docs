@@ -28,7 +28,7 @@ appliesto:
 
 <br/>
 
-|[:::image type="content" source="/defender/media/phase-diagrams/prepare.png" alt-text="Phase 1: Prepare." lightbox="/defender/media/phase-diagrams/prepare.png":::](migrate-to-defender-for-office-365-prepare.md) <br> [Phase 1: Prepare](migrate-to-defender-for-office-365-prepare.md)|:::image type="content" source="/defender/media/phase-diagrams/setup.png" alt-text="Phase 2: Set up." lightbox="/defender/media/phase-diagrams/setup.png"::: <br> Phase 2: Set up|[:::image type="content" source="/defender/media/phase-diagrams/onboard.png" alt-text="Phase 3: Onboard." lightbox="/defender/media/phase-diagrams/onboard.png":::](migrate-to-defender-for-office-365-onboard.md) <br> [Phase 3: Onboard](migrate-to-defender-for-office-365-onboard.md)|
+|[:::image type="content" source="media/phase-diagrams/prepare.png" alt-text="Phase 1: Prepare." lightbox="media/phase-diagrams/prepare.png":::](migrate-to-defender-for-office-365-prepare.md) <br> [Phase 1: Prepare](migrate-to-defender-for-office-365-prepare.md)|:::image type="content" source="media/phase-diagrams/setup.png" alt-text="Phase 2: Set up." lightbox="media/phase-diagrams/setup.png"::: <br> Phase 2: Set up|[:::image type="content" source="media/phase-diagrams/onboard.png" alt-text="Phase 3: Onboard." lightbox="media/phase-diagrams/onboard.png":::](migrate-to-defender-for-office-365-onboard.md) <br> [Phase 3: Onboard](migrate-to-defender-for-office-365-onboard.md)|
 |---|---|---|
 ||*You are here!*||
 
