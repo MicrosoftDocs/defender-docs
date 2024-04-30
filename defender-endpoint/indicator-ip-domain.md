@@ -79,9 +79,9 @@ The _Antimalware client version_ must be 4.18.1906.x or later.
 
 Ensure that **Custom network indicators** is enabled in **Microsoft Defender XDR** \> **Settings** \> **Advanced features**. For more information, see [Advanced features](advanced-features.md).
 
-For support of indicators on iOS, see [Microsoft Defender for Endpoint on iOS](/defender-endpoint/ios-configure-features#configure-custom-indicators).
+For support of indicators on iOS, see [Microsoft Defender for Endpoint on iOS](ios-configure-features.md#configure-custom-indicators).
 
-For support of indicators on Android, see [Microsoft Defender for Endpoint on Android](/defender-endpoint/android-configure#configure-custom-indicators).
+For support of indicators on Android, see [Microsoft Defender for Endpoint on Android](android-configure.md#configure-custom-indicators).
 
 ### IoC indicator list limitations
 

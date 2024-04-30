@@ -46,7 +46,7 @@ Tamper protection is turned on in block mode by default. This setting helps secu
 
 **Network protection available for macOS**
 
-Network protection for macOS is now available for all Mac devices onboarded to Defender for Endpoint. Devices must meet the minimum requirements. To learn more, see [Use network protection to help prevent macOS connections to bad sites](/defender-endpoint/network-protection-macos).
+Network protection for macOS is now available for all Mac devices onboarded to Defender for Endpoint. Devices must meet the minimum requirements. To learn more, see [Use network protection to help prevent macOS connections to bad sites](network-protection-macos.md).
 
 **Known issues**
 

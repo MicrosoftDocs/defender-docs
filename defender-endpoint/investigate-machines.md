@@ -30,7 +30,7 @@ ms.date: 02/21/2024
 Investigate the details of an alert raised on a specific device to identify other behaviors or events that might be related to the alert or the potential scope of the breach.
 
 > [!NOTE]
-> As part of the investigation or response process, you can collect an investigation package from a device. Here's how: [Collect investigation package from devices](/defender-endpoint/respond-machine-alerts#collect-investigation-package-from-devices).
+> As part of the investigation or response process, you can collect an investigation package from a device. Here's how: [Collect investigation package from devices](respond-machine-alerts.md#collect-investigation-package-from-devices).
 
 You can select on affected devices whenever you see them in the portal to open a detailed report about that device. Affected devices are identified in the following areas:
 

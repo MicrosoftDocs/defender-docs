@@ -28,7 +28,7 @@ ms.date: 11/01/2023
 
 ## Option 1: Live response
 
-You can collect the Defender for Endpoint analyzer support logs remotely using [Live Response](/defender-endpoint/troubleshoot-collect-support-log).
+You can collect the Defender for Endpoint analyzer support logs remotely using [Live Response](troubleshoot-collect-support-log.md).
 
 ## Option 2: Run MDE Client Analyzer locally
 

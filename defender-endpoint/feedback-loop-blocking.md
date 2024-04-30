@@ -37,7 +37,7 @@ ms.date: 12/18/2020
 
 ## Overview
 
-Feedback-loop blocking, also referred to as rapid protection, is a component of [behavioral blocking and containment capabilities](/defender-endpoint/behavioral-blocking-containment) in [Microsoft Defender for Endpoint](/windows/security/threat-protection/). With feedback-loop blocking, devices across your organization are better protected from attacks. 
+Feedback-loop blocking, also referred to as rapid protection, is a component of [behavioral blocking and containment capabilities](behavioral-blocking-containment.md) in [Microsoft Defender for Endpoint](/windows/security/threat-protection/). With feedback-loop blocking, devices across your organization are better protected from attacks. 
 
 ## How feedback-loop blocking works
 
@@ -50,13 +50,13 @@ With rapid protection in place, an attack can be stopped on a device, other devi
 
 If your organization is using Defender for Endpoint, feedback-loop blocking is enabled by default. However, rapid protection occurs through a combination of Defender for Endpoint capabilities, machine learning protection features, and signal-sharing across Microsoft security services. Make sure the following features and capabilities of Defender for Endpoint are enabled and configured:
 
-- [Microsoft Defender for Endpoint baselines](/defender-endpoint/configure-machines-security-baseline)
+- [Microsoft Defender for Endpoint baselines](configure-machines-security-baseline.md)
 
-- [Devices onboarded to Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure)
+- [Devices onboarded to Microsoft Defender for Endpoint](onboard-configure.md)
 
-- [EDR in block mode](/defender-endpoint/edr-in-block-mode)
+- [EDR in block mode](edr-in-block-mode.md)
 
-- [Attack surface reduction](/defender-endpoint/attack-surface-reduction)
+- [Attack surface reduction](attack-surface-reduction.md)
 
 - [Next-generation protection](/windows/security/threat-protection/microsoft-defender-antivirus/configure-microsoft-defender-antivirus-features) (antivirus)
 

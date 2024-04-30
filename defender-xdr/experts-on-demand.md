@@ -30,7 +30,7 @@ ms.date: 04/18/2024
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
 > [!NOTE]
-> Ask Defender Experts is included in your Defender Experts for Hunting subscription with [monthly allocations](/defender-xdr/before-you-begin-defender-experts#eligibility-and-licensing). However, it's not a security incident response service. It's intended to provide a better understanding of complex threats affecting your organization. Engage with your own security incident response team to address urgent security incident response issues. If you don't have your own security incident response team and would like Microsoft's help, create a support request in the [Premier Services Hub](/services-hub/).
+> Ask Defender Experts is included in your Defender Experts for Hunting subscription with [monthly allocations](before-you-begin-defender-experts.md#eligibility-and-licensing). However, it's not a security incident response service. It's intended to provide a better understanding of complex threats affecting your organization. Engage with your own security incident response team to address urgent security incident response issues. If you don't have your own security incident response team and would like Microsoft's help, create a support request in the [Premier Services Hub](/services-hub/).
 
 Select **Ask Defender Experts** directly inside the Microsoft 365 security portal to get swift and accurate responses to all your threat hunting questions. Experts can provide insight to better understand the complex threats your organization might face. Ask Defender Experts can help:
 
@@ -40,7 +40,7 @@ Select **Ask Defender Experts** directly inside the Microsoft 365 security porta
 
 ### Required permissions for submitting inquiries in the Ask Defender Experts panel
 
-You need to select one of the following permissions before submitting inquires to our Defender experts. For more details about role-based access control (RBAC) permissions, see: [Microsoft Defender for Endpoint and Microsoft Defender XDR RBAC permissions](/defender-xdr/compare-rbac-roles#map-defender-for-endpoint-and-defender-vulnerability-management-permissions-to-the-microsoft-defender-xdr-rbac-permissions).
+You need to select one of the following permissions before submitting inquires to our Defender experts. For more details about role-based access control (RBAC) permissions, see: [Microsoft Defender for Endpoint and Microsoft Defender XDR RBAC permissions](compare-rbac-roles.md#map-defender-for-endpoint-and-defender-vulnerability-management-permissions-to-the-microsoft-defender-xdr-rbac-permissions).
 
 |**Product name**|**Product RBAC permission**|
 |---|---|---|
