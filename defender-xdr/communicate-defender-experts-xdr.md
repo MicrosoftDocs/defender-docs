@@ -15,7 +15,7 @@ ms.collection:
   - essentials-manage
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 02/20/2024
+ms.date: 05/01/2024
 ---
 
 # Communicating with experts in the Microsoft Defender Experts for XDR service
@@ -54,6 +54,22 @@ Once you turn on chat on Teams, a new team named **Defender Experts team** is cr
 - While Defender Experts might have access to all messages in any channel in **Defender Experts team**, tag or mention our experts by typing *@Defender Experts* in your replies, so they're notified to join the chat conversation.
 - Don't attach any attachments (for example, files for analysis) in the chat. For security reasons, Defender Experts won't be able to view the attachments. Instead, send them to appropriate submissions channels or provide links where they can be found in Microsoft Defender XDR portal.
 - Conversations in the Teams chat about an incident are also synchronized with the incident's **Chat** tab in the Microsoft Defender XDR portal so that you can see messages and updates about an investigation wherever you go.
+
+**Troubleshooting Microsoft Defender Experts app permissions in Microsoft Teams**
+
+The Defender Experts app is available for Microsoft Teams by default, but some environments may have limitations that block the installation or affect the Teams app permissions.
+Once the user has joined the Defender Experts Teams feature, they should be able to @ mention Defender Experts in the channel where it has been set up. If the bot does not show up in the list of suggestions, then it may be that the Teams Permissions policies are preventing the app from functioning. Here is an example of the Defender Experts bot being missing:
+
+Checking if the Permission policies are a problem
+
+To see if a permission policy is causing a problem, follow these steps.
+
+1. In Microsoft Teams, select **Apps** on the left panel.
+2. Type **Defender Experts** in the top right corner and select **Request**.
+3. To verify if the Teams permission policies are preventing the Defender Experts app from working, go to the **Manage Apps** page for the Defender Experts app, and then to the **User Requests** tab. Learn more about [Manage app - Microsoft Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps/81769126-d9ed-4a77-a1e8-2ab8107adf03/user-requests).
+
+If you see a notification that says **This app is blocked in app permission policies. To approve a user's app request, review the app permission policies assigned to them and allow the app in any policies where it's blocked**, then the Teams permission policies are blocking the app usage.
+
 
 ### Email
 
