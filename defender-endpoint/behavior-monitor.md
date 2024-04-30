@@ -1,10 +1,9 @@
 ---
 title: Behavior monitoring in Microsoft Defender Antivirus
 description: Learn about Behavior monitoring in Microsoft Defender Antivirus and Defender for Endpoint.
-author: dansimp
-ms.author: dansimp
-manager: deniseb
-ms.reviewer:
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 audience: ITPro
 ms.topic: conceptual
 ms.service: defender-endpoint
@@ -26,7 +25,7 @@ search.appverid: met150
 
 Behavior monitoring is a critical detection and protection functionality of Microsoft Defender Antivirus.
 
-Monitors process behavior to detect and analyze potential threats based on the behavior of applications, services, and files. Rather than relying solely on signature-based detection (which identifies known malware patterns), behavior monitoring focuses on observing how software behaves in real-time. Here’s what it entails:
+Monitors process behavior to detect and analyze potential threats based on the behavior of applications, services, and files. Rather than relying solely on signature-based detection (which identifies known malware patterns), behavior monitoring focuses on observing how software behaves in real-time. Here's what it entails:
 
 1. Real-Time Threat Detection:
    - Continuously observe processes, file system activities, and interactions within the system.
@@ -36,11 +35,11 @@ Monitors process behavior to detect and analyze potential threats based on the b
 
 - Unlike static, signature-based detection, behavior monitoring adapts to new and evolving threats.
 
-- Microsoft Defender Antivirus uses predefined patterns, and observes how software behaves during execution.  For malware that doesn’t fit any predefined pattern, Microsoft Defender Antivirus uses anomaly detection.
+- Microsoft Defender Antivirus uses predefined patterns, and observes how software behaves during execution.  For malware that doesn't fit any predefined pattern, Microsoft Defender Antivirus uses anomaly detection.
 
 - If a program shows suspicious behavior (for example, attempting to modify critical system files), Microsoft Defender Antivirus can take action to prevent further harm, and revert some previous malware actions.
 
-Behavior monitoring enhances Defender Antivirus’s ability to proactively detect emerging threats by focusing on real-time actions and behaviors rather than relying solely on known signatures.
+Behavior monitoring enhances Defender Antivirus's ability to proactively detect emerging threats by focusing on real-time actions and behaviors rather than relying solely on known signatures.
 
 The following features depend on behavior monitoring.
 
