@@ -100,8 +100,8 @@ All our updates contain
 
 ### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.1)
 
-- Security intelligence update version: **1.409.1.0**
-- Release date: **, 2024** (Engine) / **, 2024** (Platform)
+- Security intelligence update version: **1.xxx.xx.0**
+- Release date: *xxx*, 2024** (Engine) / *xxx*, 2024** (Platform)
 - Engine: **1.1.24040.1**
 - Platform: **4.18.24040.1**
 - Support phase: **Security and Critical Updates**
@@ -112,7 +112,7 @@ All our updates contain
 - Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
 - After a new platform and engine version is released, support for older versions (N-2) will now reduce to technical support only. Platform and engine versions older than N-2 are no longer supported.
 - Improved health monitoring and telemetry for [Attack Surface Rules](overview-attack-surface-reduction.md) exclusions.
-- Updated inaccurate information regarding wildcard usage with contextual exclusions (configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+- Updated inaccurate information in [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) regarding wildcard usage with contextual exclusions.
 
 ### March-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
 
