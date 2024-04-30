@@ -1,9 +1,9 @@
 ---
 title: UEFI scanning in Defender for Endpoint
 description: Learn how Microsoft Defender for Endpoint is extending its protection capabilities to the firmware level with a new Unified Extensible Firmware Interface (UEFI) scanner.
-author: siosulli
-ms.author: siosulli
-manager: deniseb
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.reviewer: yongrhee
 audience: ITPro
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 04/16/2024
+ms.date: 04/30/2024
 ---
 
 # UEFI scanning in Defender for Endpoint
