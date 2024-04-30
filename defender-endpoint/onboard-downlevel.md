@@ -60,7 +60,7 @@ The following steps are required to enable this integration:
 
 - Install the [January 2017 anti-malware platform update for Endpoint Protection clients](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie)
 - Configure the SCEP client Cloud Protection Service membership to the **Advanced** setting
-- Configure your network to allow connections to the Microsoft Defender Antivirus cloud. For more information, see [Configure and validate Microsoft Defender Antivirus network connections](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
+- Configure your network to allow connections to the Microsoft Defender Antivirus cloud. For more information, see [Configure and validate Microsoft Defender Antivirus network connections](configure-network-connections-microsoft-defender-antivirus.md)
 
 ## Install and configure Microsoft Monitoring Agent (MMA)
 

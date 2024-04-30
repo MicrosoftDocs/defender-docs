@@ -4,7 +4,7 @@ description: Learn how to set up and use the MDE plugin for Windows Subsystem fo
 author: siosulli
 ms.author: siosulli
 manager: deniseb
-ms.reviewer: pahuijbr; gokulgiju
+ms.reviewer: pahuijbr; gokulgiju, priyankagill
 ms.service: defender-endpoint
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -28,7 +28,7 @@ The Windows Subsystem for Linux (WSL) 2, which replaces the previous version of 
 
 Be aware of the following before you start:
 
-1. The plug-in does not currently support automatic updates. When a new version is released, a new MSI package needs to be applied to perform the update. This can be done through any of the software deployment tools. Updates will come through Microsoft updates.
+1. The plug-in does not support automatic updates on versions prior to `0.24.426.1`. On version `0.24.426.1` and later, updates are supported through Windows Update across all rings. Updates through Windows Server Update services (WSUS), System Center Configuration Manager (SCCM) and Microsoft Update catalog are supported only in the Production ring to ensure package stability.
 
 2. As it takes a few minutes for the plug-in to fully instantiate and up to 30 minutes for a WSL2 instance to onboard itself, short-lived WSL container instances might result in the WSL2 instance not showing up in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Once a (any) distribution has been running long enough (at least 30 minutes), it does show up.
 
@@ -111,7 +111,7 @@ This section describes how to configure proxy connectivity for the Defender for 
 
 If you want to use the host [windows EDR telemetry proxy](configure-proxy-internet.md) configuration for MDE for the WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
 
-If you want to use the host [winhttp proxy](/defender-endpoint/configure-proxy-internet#configure-the-proxy-server-manually-using-netsh-command) configuration for MDE for WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
+If you want to use the host [winhttp proxy](configure-proxy-internet.md#configure-the-proxy-server-manually-using-netsh-command) configuration for MDE for WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
 
 If you want to use the host [network and network proxy setting](https://support.microsoft.com/windows/use-a-proxy-server-in-windows-03096c53-0554-4ffe-b6ab-8b1deee8dae1#ID0EFD=Windows_11&preserve-view=true) for MDE for WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
 
@@ -141,7 +141,7 @@ The following procedure describes how to confirm that Defender in Endpoint in WS
    - **Name**: `ConnectivityTest`
    - **Type**: `REG_DWORD`
    - **Value**: `Number of seconds plug-in must wait before running test. (Recommended: 60 seconds)`
-   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss\Plugins\DefenderPlug-in`
+   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint Plug-in for WSL`
 
 3. Once the registry is set, restart wsl using the following steps:
 
@@ -296,3 +296,10 @@ DeviceProcessEvents
    ```powershell
    wsl --set-default-version 2
    ```
+
+7. The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following:
+
+   - `Dogfood`
+   - `InsiderFast`
+   - `External`
+   - `Production`

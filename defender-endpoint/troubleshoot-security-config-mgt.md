@@ -36,7 +36,7 @@ For more information on Security Management for Microsoft Defender for Endpoint,
 For Security Management for Microsoft Defender for Endpoint onboarding instructions, see [Microsoft Defender for Endpoint Security Configuration Management](/mem/intune/protect/mde-security-integration)
 
 
-For more information about the client analyzer, see [Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer](/defender-endpoint/overview-client-analyzer).
+For more information about the client analyzer, see [Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer](overview-client-analyzer.md).
 
 <a name='registering-domain-joined-computers-with-azure-active-directory'></a>
 

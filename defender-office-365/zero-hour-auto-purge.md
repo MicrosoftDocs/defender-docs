@@ -146,11 +146,11 @@ ZAP for Teams protection is able to take action on messages for _all_ recipients
 
 **Sender view**:
 
-:::image type="content" source="/defender/media/zero-hour-auto-purge-sender.png" alt-text="Image showing how ZAP for Teams protection works for the sender." lightbox="/defender/media/zero-hour-auto-purge-sender.png":::
+:::image type="content" source="media/zero-hour-auto-purge-sender.png" alt-text="Image showing how ZAP for Teams protection works for the sender." lightbox="media/zero-hour-auto-purge-sender.png":::
 
 **Recipient view**:
 
-:::image type="content" source="/defender/media/zero-hour-auto-purge-recipient.png" alt-text="Image showing how ZAP for Teams protection works for the recipient." lightbox="/defender/media/zero-hour-auto-purge-recipient.png":::
+:::image type="content" source="media/zero-hour-auto-purge-recipient.png" alt-text="Image showing how ZAP for Teams protection works for the recipient." lightbox="media/zero-hour-auto-purge-recipient.png":::
 
 ### ZAP in Teams channels
 
@@ -165,7 +165,7 @@ To configure exceptions for ZAP protection for Teams channels, you need the reci
 
 To get the recipient email address to use for exceptions for Teams channel protection, use the **Name and email** value from the **Channel details** section of the Teams message entity panel. For more information, see [The Teams message entity panel in Microsoft Defender for Office 365](teams-message-entity-panel.md).
 
-:::image type="content" source="/defender/media/teams-message-entity-panel-channel-address.png" alt-text="The correct Teams channel email address from the Teams message entity panel." lightbox="/defender/media/teams-message-entity-panel-channel-address.png":::
+:::image type="content" source="media/teams-message-entity-panel-channel-address.png" alt-text="The correct Teams channel email address from the Teams message entity panel." lightbox="media/teams-message-entity-panel-channel-address.png":::
 
 To configure exceptions for Teams channels, see [Configure ZAP for Teams protection in Defender for Office 365 Plan 2](mdo-support-teams-about.md#configure-zap-for-teams-protection-in-defender-for-office-365-plan-2).
 

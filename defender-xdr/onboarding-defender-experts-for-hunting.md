@@ -61,8 +61,8 @@ You can receive Defender Experts Notifications from Defender Experts through the
 - The Microsoft Defender portal's [Incidents](https://security.microsoft.com/incidents) page
 - The Microsoft Defender portal's [Alerts](https://security.microsoft.com/alerts) page
 - OData alerting [API](/defender-endpoint/api/get-alerts) and [REST API](/defender-endpoint/configure-siem)
-- [DeviceAlertEvents](/defender-xdr/advanced-hunting-migrate-from-mde#map-devicealertevents-table) table in Advanced hunting
-- Your email if you [configure an email notifications rule](/defender-xdr/onboarding-defender-experts-for-hunting#set-up-defender-experts-email-notifications)
+- [DeviceAlertEvents](advanced-hunting-migrate-from-mde.md#map-devicealertevents-table) table in Advanced hunting
+- Your email if you [configure an email notifications rule](onboarding-defender-experts-for-hunting.md#set-up-defender-experts-email-notifications)
 
 ### Filter to view just the Defender Experts Notifications
 
@@ -74,10 +74,10 @@ You can filter your incidents and alerts if you want to only see the Defender Ex
 
 ### Set up Defender Experts email notifications
 
-You can set up Microsoft Defender XDR to notify you or your staff with an email about new incidents or updates to existing incidents, including those observed by Microsoft Defender Experts. [Learn more about getting incident notifications by email](/defender-xdr/incidents-overview#get-incident-notifications-by-email)
+You can set up Microsoft Defender XDR to notify you or your staff with an email about new incidents or updates to existing incidents, including those observed by Microsoft Defender Experts. [Learn more about getting incident notifications by email](incidents-overview.md#incident-notifications-by-email)
 
 1. In the Microsoft Defender XDR navigation pane, select **Settings** > **Microsoft Defender XDR** > **Email notifications** > **Incidents**.
-2. Update your existing email notification rules or create a new one. [Learn more about creating a rule for email notifications](/defender-xdr/incidents-overview#create-a-rule-for-email-notifications)
+2. Update your existing email notification rules or create a new one. For more information, see [Auditing](auditing.md).
 3. On the rule's **Notification settings** page, make sure to configure the following:
     - **Source** – Choose **Microsoft Defender Experts** under **Microsoft Defender XDR** and **Microsoft Defender for Endpoint**
     - **Alert severity** – Choose the alert severities that will trigger an incident notification. For example, if you only want to be informed about high-severity incidents, select High.

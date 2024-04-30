@@ -72,7 +72,7 @@ Use this article to learn how to troubleshoot security intelligence updates for 
 
    - Background Intelligence Transfer Service (BITS) 
 
-4. If you're using a [Fallback order](/defender-endpoint/manage-protection-updates-microsoft-defender-antivirus) policy, make sure that *Microsoft Update* (`MicrosoftUpdateServer`) is the first item in the list.
+4. If you're using a [Fallback order](manage-protection-updates-microsoft-defender-antivirus.md) policy, make sure that *Microsoft Update* (`MicrosoftUpdateServer`) is the first item in the list.
 
 5. Gather diagnostic data from the [Microsoft Defender for Endpoint Client Analyzer tool](download-client-analyzer.md). 
 

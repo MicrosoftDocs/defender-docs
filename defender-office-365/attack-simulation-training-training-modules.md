@@ -25,7 +25,7 @@ In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Offi
 
 To see the available Training modules, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Content library** tab \> and then select **Training modules**. Or, to go directly to the **Content library** tab where you can select **Training modules**, use <https://security.microsoft.com/attacksimulator?viewid=contentlibrary>.
 
-The **Training modules** page shows the following information for each module. You can sort the modules by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The **Training modules** page shows the following information for each module. You can sort the modules by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Training name**
 - **Languages**: The available values are: **Turkish**, **Polish**, **Persian**, **Danish**, **Slovak**, **Korean**, **Portuguese**, **Italian**, **German**, **French**, **Swedish**, **Spanish**, **Arabic**, **Norwegian Bokmål**, **Russian**, **Portuguese**, **Japanese**, **Czech**, **Greek**, **Spanish**, **Thai**, **Romanian**, **French**, **Hungarian**, **Chinese (Simplified)**, **English**, **Indonesian**, **Finnish**, **Malay**, **English**, **Hindi**, **Chinese (Traditional**, **Hong Kong)**, **Chinese (Traditional**, **Taiwan)**, **Macedonian**, **Ukrainian**, **Vietnamese**, **Hebrew**, **Serbian (Cyrillic)/Serbian (Latin)**, and **Dutch**
@@ -56,15 +56,15 @@ The **Training modules** page shows the following information for each module. Y
 > - Remove columns from the view.
 > - Zoom out in your web browser.
 
-To find a Training module in the list, type the name of the module in the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box, and then press the ENTER key.
+To find a Training module in the list, type the name of the module in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box, and then press the ENTER key.
 
-Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the information on the page. The following filters are available in the flyout that opens:
+Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the information on the page. The following filters are available in the flyout that opens:
 
 - **Source**
 - **Language**
 - **Add Tags**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
 When you select a Training module from the list by clicking anywhere in the row other than the check box next to the name, a details flyout appears with the following information:
 
@@ -82,4 +82,4 @@ When you select a Training module from the list by clicking anywhere in the row 
   - **End by**
 
 > [!TIP]
-> To see details about other training modules without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other training modules without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.

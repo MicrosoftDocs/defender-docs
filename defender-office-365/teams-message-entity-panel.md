@@ -47,7 +47,7 @@ There are no direct links to the Teams message entity panel from the top levels 
 
 - From the **Submissions** page at <https://security.microsoft.com/reportsubmission>:
   - Select the **Teams messages** tab \> select an entry by clicking anywhere in the row other than the check box.
-  - Select the **User reported** tab \> select a Teams entry by clicking anywhere in the row other than the check box. You can filter the entries by selecting :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Message type** \> **Teams**. The details flyout that opens is the Teams message entity panel.
+  - Select the **User reported** tab \> select a Teams entry by clicking anywhere in the row other than the check box. You can filter the entries by selecting :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Message type** \> **Teams**. The details flyout that opens is the Teams message entity panel.
 
 ## What's on the Teams message entity panel
 
@@ -59,7 +59,7 @@ The following information is available at the top of the Teams message entity pa
 - The actions that are available at the top of the flyout depend on where you opened the Teams message entity panel.
 
 > [!TIP]
-> To see details about other Teams messages without leaving the Email summary panel of the current message, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other Teams messages without leaving the Email summary panel of the current message, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 The next sections in the Teams message entity panel depend on where you opened it:
 
@@ -98,7 +98,7 @@ The rest of the Teams message entity panel contains the following information, r
 
   If the message has more than 10 URLs, select **View all URLs** to see all of them.
 
-:::image type="content" source="/defender/media/teams-message-entity-panel-shown-in-quarantine.png" alt-text="Screenshot of the Teams Message Entity panel from a quarantined Teams message showing the common sections." lightbox="/defender/media/teams-message-entity-panel-shown-in-quarantine.png":::
+:::image type="content" source="media/teams-message-entity-panel-shown-in-quarantine.png" alt-text="Screenshot of the Teams Message Entity panel from a quarantined Teams message showing the common sections." lightbox="media/teams-message-entity-panel-shown-in-quarantine.png":::
 
 ## For more information
 

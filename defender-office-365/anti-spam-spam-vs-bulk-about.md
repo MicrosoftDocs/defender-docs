@@ -77,7 +77,7 @@ If you have Defender for Office 365 Plan 1 or Plan 2, you can use the [Threat pr
 
 2. Select **View data by Email \> Spam** and **Chart breakdown by Detection Technology**.
 
-3. Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. In the **Filters** flyout that opens, select only **Bulk** in the **Detection** section.
+3. Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. In the **Filters** flyout that opens, select only **Bulk** in the **Detection** section.
 
    Use the **Bulk complaint level** slider to filter the bulk detections by BCL value.
 
@@ -85,7 +85,7 @@ If you have Defender for Office 365 Plan 1 or Plan 2, you can use the [Threat pr
 
 4. Back on the **Threat protection status** page, select one of the bulk messages from the details table below the chart by clicking anywhere in the row other than the check box next to the first column.
 
-   In the message details flyout that opens, select :::image type="icon" source="/defender/media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity** at the top of the flyout to see details about the message in [the Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
+   In the message details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity** at the top of the flyout to see details about the message in [the Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
 
 5. After you identify wanted and unwanted bulk senders, adjust the bulk threshold in the default anti-spam policy and in custom anti-spam policies. If some bulk senders don't fit within your bulk threshold, [report the messages to Microsoft for analysis](submissions-admin.md#report-good-email-to-microsoft).
 

@@ -20,12 +20,12 @@ ms.custom: api
 ms.date: 04/17/2024
 ---
 
-#  Delete a file from the live response library
+# Delete a file from the live response library
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
-- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
+- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 

@@ -109,7 +109,7 @@ You can export URL click data to a CSV file to view the **Network Message ID** a
 
 4. In the details area, select the **Top URLs** or **Top clicks** tab (view).
 
-5. In the **Top URLs** or **Top clicks** view, select one or more entries from the table by selecting the check box next to the first column, and then select :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export**.
+5. In the **Top URLs** or **Top clicks** view, select one or more entries from the table by selecting the check box next to the first column, and then select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export**.
 **Explorer** \> **Phish** \> **Clicks** \> **Top URLs** or **URL Top Clicks** \> select any record to open the URL flyout.
 
 You can use the Network Message ID value to search for specific messages in Threat Explorer or Real-time detections or external tools. These searches identify the email message that's associated with a click result. Having the correlated Network Message ID makes for quicker and more powerful analysis.
@@ -149,7 +149,7 @@ For instructions, see [Threat hunting: Email remediation](threat-explorer-threat
 
 To summarize:
 
-- Select :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** using one of the following methods:
+- Select :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** using one of the following methods:
   - Select one or more messages from the details table in the **Email** tab (view) in the **All email**, **Malware**, or **Phish** views by selecting the check boxes for the entries.
 
   Or
