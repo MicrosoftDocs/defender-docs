@@ -4,17 +4,17 @@ description: Learn how to manage, configure, Microsoft Defender Antivirus perfor
 ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
-ms.reviewer: pricci
-manager: deniseb
+author: yongrhee-MSFT
+ms.author: yongrhee
+ms.reviewer: pricci, yongrhee
+manager: dansimp
 ms.custom: nextgen02
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 02/22/2024
+ms.date: 04/30/2024
 ---
 
 # Protect Dev Drive using performance mode
@@ -97,7 +97,7 @@ Enable performance mode status via the OMA-URI settings shown in the following t
 
    :::image type="content" alt-text="Screenshot of Defender_Performance_Mode_10." source="media/microsoft-defender-endpoint-antivirus-performance-mode/defender-performance-mode-10.png" lightbox="media/microsoft-defender-endpoint-antivirus-performance-mode/defender-performance-mode-10.png":::
 
-1. Select **Enabled**.
+3. Select **Enabled**.
 
    ![Screenshot of Defender_Performance_Mode_11.](media/microsoft-defender-endpoint-antivirus-performance-mode/defender-performance-mode-11.png)
    
@@ -107,7 +107,7 @@ Enable performance mode status via the OMA-URI settings shown in the following t
 
 1. Open PowerShell as an administrator on the device.
 
-1. Type `set-MpPreference -PerformanceModeStatus Enabled`, and then press Enter.
+2. Type `set-MpPreference -PerformanceModeStatus Enabled`, and then press Enter.
 
    ![Screenshot of Defender_Performance_Mode_04.](media/microsoft-defender-endpoint-antivirus-performance-mode/defender-performance-mode-5.png)
    
