@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 4/26/2024
+ms.date: 4/30/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -41,6 +41,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## April 2024
 
+- **Last used date** added to Tenant Allow/Block List entries for domains and email addresses, files, and URLs.
 - **Enhanced clarity in submissions results**: Admins and security operators now see enhanced results within submissions across email, Microsoft Teams messages, email attachments, URLs, and user-reported messages. These updates aim to eliminate any ambiguity associated with the current submission results. The results are refined to ensure clarity, consistency, and conciseness, making the submission results more actionable for you. [Learn more](submissions-admin.md).
 - :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
   - SecOps personnel can now create tenant-level block entries on URLs and files via the [Tenant Allow/Block List](tenant-allow-block-list-about.md) directly from Threat Explorer.

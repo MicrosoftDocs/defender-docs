@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 11/27/2023
+ms.date: 4/30/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -149,6 +149,7 @@ On the **Domains & addresses** tab, you can sort the entries by clicking on an a
 - **Action**: The value **Allow** or **Block**.
 - **Modified by**
 - **Last updated**
+- **Last used date**: The date the entry was last used in the filtering system to override the verdict.
 - **Remove on**: The expiration date.
 - **Notes**
 
@@ -157,6 +158,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Action**: The values are **Allow** and **Block**.
 - **Never expire**: :::image type="icon" source="media/scc-toggle-on.png" border="false"::: or :::image type="icon" source="media/scc-toggle-off.png" border="false":::
 - **Last updated**: Select **From** and **To** dates.
+- **Last used date**: Select **From** and **To** dates.
 - **Remove on**: Select **From** and **To** dates.
 
 When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
