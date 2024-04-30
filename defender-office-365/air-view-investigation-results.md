@@ -161,7 +161,7 @@ The rest of the details page contains several tabs that contain detailed informa
 
 The tabs are described in the following subsections.
 
-:::image type="content" source="media/mdo-investigations-investigation-details-page.png" alt-text="Screenshot of the investigation details page in the Defender portal." lightbox="/media/mdo-investigations-investigation-details-page.png":::
+:::image type="content" source="media/mdo-investigations-investigation-details-page.png" alt-text="Screenshot of the investigation details page in the Defender portal." lightbox="media/mdo-investigations-investigation-details-page.png":::
 
 ### Investigation graph tab in the investigation details
 
@@ -222,7 +222,7 @@ The graph pane contains a visual representation of the elements and activities i
 
     A problem prevented the remediation of some malicious entities. Use the **Evidence** and **Entities** tabs to manually investigate and remediate any potential issues.
 
-:::image type="content" source="media/mdo-investigations-investigation-details-page-investigation-graph-tab.png" alt-text="Screenshot of the Investigation graph tab of the investigation details page." lightbox="/media/mdo-investigations-investigation-details-page-investigation-graph-tab.png":::
+:::image type="content" source="media/mdo-investigations-investigation-details-page-investigation-graph-tab.png" alt-text="Screenshot of the Investigation graph tab of the investigation details page." lightbox="media/mdo-investigations-investigation-details-page-investigation-graph-tab.png":::
 
 ### Alerts tab in the investigation details
 
@@ -287,7 +287,7 @@ When you're finished in the **Filter** flyout, select **Apply**. To clear the fi
 
 On the investigation details page, the **Entities** tab shows details about the different types of entities that were encountered and analyzed during the investigation.
 
-:::image type="content" source="media/mdo-investigations-investigation-details-page-entities-tab-evidence-summary-view.png" alt-text="Screenshot of the Entities tab of the investigation details page." lightbox="/media/mdo-investigations-investigation-details-page-entities-tab-evidence-summary-view.png":::
+:::image type="content" source="media/mdo-investigations-investigation-details-page-entities-tab-evidence-summary-view.png" alt-text="Screenshot of the Entities tab of the investigation details page." lightbox="media/mdo-investigations-investigation-details-page-entities-tab-evidence-summary-view.png":::
 
 The **Entities** tab is organized by a view selection pane (a summary view and a view for each entity type) and a corresponding details table for that view:
 

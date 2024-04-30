@@ -31,7 +31,7 @@ appliesto:
 
 As [security alerts](/defender-xdr/investigate-alerts) appear in a Microsoft 365 organization at <https://security.microsoft.com/alerts>, it's up to the security operations (SecOps) team to review, prioritize, and respond to those alerts. Keeping up with the volume of incoming alerts can be overwhelming. Automating some of those tasks can help.
 
-[Microsoft Defender for Office 365 Plan 2](defender-for-office-365.md) includes powerful automated investigation and response (AIR) capabilities that save time and effort for your organization's SecOps team. AIR includes the following capabilities:
+[Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-2-capabilities) includes powerful automated investigation and response (AIR) capabilities that save time and effort for your organization's SecOps team. AIR includes the following capabilities:
 
 - Automated investigation processes in response to well-known threats.
 - Appropriate remediation actions awaiting approval, enabling your SecOps team to respond effectively to detected threats.
