@@ -101,7 +101,7 @@ At the top of each device inventory tab, you can see:
 - The number of your business critical assets.
 - The number of devices that aren't yet onboarded.
 - The number of devices with high exposure.
-- The number of newly disocovered devices.
+- The number of newly discovered devices.
 
 You can use this information to help you prioritize devices for security posture improvements.
 
@@ -134,6 +134,7 @@ Filter | Description
 **Risk level** | The risk level reflects the overall risk assessment of the device based on a combination of factors, including the types and severity of active alerts on the device. Resolving active alerts, approving remediation activities, and suppressing subsequent alerts can lower the risk level.
 **Exposure level** | The exposure level reflects the current exposure of the device based on the cumulative impact of its pending security recommendations. The possible levels are low, medium, and high. Low exposure means your devices are less vulnerable from exploitation.</br></br> If the exposure level says "No data available," there are a few reasons why:</br>- Device stopped reporting for more than 30 days. In that case it's considered inactive, and the exposure isn't computed.</br>- Device OS not supported - see [minimum requirements for Microsoft Defender for Endpoint](/defender-endpoint/minimum-requirements).</br>- Device with stale agent (unlikely).
 **Criticality level** | The criticality level reflects how critical a device is for your organization. The possible levels are low, medium, high, or very high. Very high means that the device is considered a business critical asset. For more information, see [Overview of critical asset management](/security-exposure-management/critical-asset-management).
+**Transient devices** | By default transient devices are filtered out of the device inventory to reduce inventory noise. You can turn transient device filtering off using the *Transit device* tag. Learn more about [transient device filtering](transient-device-tagging.md).
 **OS Platform** | Filter by the OS platforms you're interested in investigating </br></br>(_Computers and mobile and IoT devices only_).
 **Windows version** | Filter by the Windows versions you're interested in investigating. If 'future version' appears in the Windows version field, it can mean:</br></br> - This is a pre-release build for a future Windows release</br> - The build has no version name</br> - The build version name isn't yet supported </br></br> In all these scenarios, where available, the full OS version can be seen in the device details page.</br></br> (_Computers and mobile only_).
 **Sensor health state** | Filter by the following sensor health states, for devices onboard to Microsoft Defender for Endpoint:</br> - **Active**: Devices that are actively reporting sensor data to the service.</br> - **Inactive**: Devices that stopped sending signals for more than seven days.</br> - **Misconfigured**: Devices that have impaired communications with service or are unable to send sensor data.</br> Misconfigured devices can further be classified to: </br>  - No sensor data </br>  - Impaired communications </br>  For more information on how to address issues on misconfigured devices, see, [Fix unhealthy sensors](/defender-endpoint/fix-unhealthy-sensors).</br></br> (_Computers and mobile only_).

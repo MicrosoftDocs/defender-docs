@@ -2,8 +2,9 @@
 title: Configure Microsoft Defender for Endpoint on Android features
 description: Describes how to configure Microsoft Defender for Endpoint on Android
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: priyankagill
+author: priyankagill
+ms.reviewer: priyankagill
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 04/30/2024
 ---
 
 # Configure Defender for Endpoint on Android features
@@ -137,9 +138,6 @@ Android low touch onboarding is disabled by default. Admins can enable it throug
 
 8.	Assign the policy to the target user group.
 9.	Review and create the policy.
-
-
-
 
 ## Privacy Controls
 
