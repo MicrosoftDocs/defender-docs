@@ -34,7 +34,7 @@ Before enabling Defender for Office 365, be sure you understand the architecture
 
 The following diagram illustrates baseline architecture for Microsoft Defender for Office 365, which can include a third-party SMTP gateway or on-premises integration. Hybrid coexistence scenarios (that is, production mailboxes are both on-premise and online) require more complex configurations and are not covered in this article or evaluation guidance.
 
-:::image type="content" source="/defender/media/defender/m365-defender-office-architecture.svg" alt-text="A diagram for the architecture for the Microsoft Defender for Office 365." lightbox="/defender/media/defender/m365-defender-office-architecture.svg":::
+:::image type="content" source="../defender/media/defender/m365-defender-office-architecture.svg" alt-text="A diagram for the architecture for the Microsoft Defender for Office 365." lightbox="../defender/media/defender/m365-defender-office-architecture.svg":::
 
 The following table describes this illustration.
 
