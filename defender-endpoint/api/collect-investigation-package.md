@@ -23,8 +23,8 @@ ms.date: 12/18/2020
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
-- ../microsoft-defender-endpoint.md
-- ../microsoft-defender-endpoint.md
+- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
 
