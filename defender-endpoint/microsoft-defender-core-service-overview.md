@@ -18,7 +18,7 @@ ms.collection:
 
 # Microsoft Defender Core service overview
 
-Microsoft Defender Core service
+## Microsoft Defender Core service
 
 To enhance your endpoint security experience, Microsoft is releasing the Microsoft Defender Core service to help with the stability and performance of Microsoft Defender Antivirus. 
 
@@ -26,17 +26,17 @@ To enhance your endpoint security experience, Microsoft is releasing the Microso
 
 1. The Microsoft Defender Core service is releasing with [Microsoft Defender Antivirus platform version 4.18.23110.2009](./msda-updates-previous-versions-technical-upgrade-support.md#october-2023-platform-418231002009--engine-11231002009).
 
-1. Rollout begins on:
+2. Rollout begins on:
 
-   - November 2023 to prerelease customers,
+   - November 2023 to prerelease customers.
       
    - Mid April 2024 to Enterprise customers running Windows clients.
       
    - Mid June 2024 to U.S. Government customers running Windows clients.
       
-1. If you're using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you don't need to add any other URLs.
+3. If you're using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you don't need to add any other URLs.
 
-1. If you're using the Microsoft Defender for Endpoint **standard** device connectivity experience:
+4. If you're using the Microsoft Defender for Endpoint **standard** device connectivity experience:
 
    Enterprise customers should allow the following URLs:
    
@@ -70,9 +70,9 @@ To enhance your endpoint security experience, Microsoft is releasing the Microso
       
    - `*.config.ecs.dod.teams.microsoft.us (DoD)`
       
-1. If you're using [Application Control for Windows](/windows/security/application-security/application-control/windows-defender-application-control/wdac), or you're running non-Microsoft antivirus or endpoint detection and response software, make sure to add the processes mentioned earlier to your allowlist. 
+5. If you're using [Application Control for Windows](/windows/security/application-security/application-control/windows-defender-application-control/wdac), or you're running non-Microsoft antivirus or endpoint detection and response software, make sure to add the processes mentioned earlier to your allowlist. 
 
-1. Consumers don't need to take any actions to prepare.
+6. Consumers don't need to take any actions to prepare.
 
 ## Microsoft Defender Antivirus processes and services
 
