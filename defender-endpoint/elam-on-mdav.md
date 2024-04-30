@@ -1,10 +1,9 @@
 ---
 title: Early Launch Antimalware (ELAM) and Microsoft Defender Antivirus
 description: How Microsoft Defender Antivirus incorporates Early Launch Antimalware (ELAM) for preventing rootkit and drivers with malware from loading before the antivirus service and drivers are loaded.
-author: siosulli
-ms.author: siosulli
-manager: deniseb
-ms.reviewer: yongrhee
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 02/26/2024
@@ -37,7 +36,7 @@ The ELAM detection is logged in the same location as the other Microsoft Defende
 
 ## How do I keep the MDAV ELAM driver up to date?
 
-The MDAV ELAM driver ships with the monthly “[Platform update](microsoft-defender-antivirus-updates.md).”
+The MDAV ELAM driver ships with the monthly "[Platform update](microsoft-defender-antivirus-updates.md)."
 
 ## Can the Early Launch Antimalware (ELAM) policy be modified?
 
