@@ -297,5 +297,9 @@ DeviceProcessEvents
    wsl --set-default-version 2
    ```
 
-7. The Plug-in uses Windows EDR ring by default. If you wish to switch to an earlier ring, set OverrideReleaseRing to either of the following-
-   'Dogfood', 'InsiderFast', 'External' or 'Production'
+7. The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following:
+
+   - `Dogfood`
+   - `InsiderFast`
+   - `External`
+   - `Production`
