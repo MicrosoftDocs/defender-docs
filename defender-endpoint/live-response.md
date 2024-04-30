@@ -185,6 +185,13 @@ The following commands are available for user roles that are granted the ability
 | `scan` | Runs a quick antivirus scan to help identify and remediate malware. | N | Y | Y |
 | `undo`  | Restores an entity that was remediated.  | Y  | N  | N  |
 
+> [!NOTE]
+> The following file size limits apply for `putfile` live response command:
+>
+> - Windows: 300 MB
+> - Other platforms: 10 MB
+
+
 ## Use live response commands
 
 The commands that you can use in the console follow similar principles as [Windows Commands](/windows-server/administration/windows-commands/windows-commands#BKMK_c).
