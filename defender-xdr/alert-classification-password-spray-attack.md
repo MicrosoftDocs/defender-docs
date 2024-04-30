@@ -84,7 +84,7 @@ This section contains step-by-step guidance to respond to the alert and take the
 
 ## Advanced hunting queries
 
-[Advanced hunting](/defender-xdr/advanced-hunting-overview) is a query-based threat hunting tool that lets you inspect events in your network and locate threat indicators.
+[Advanced hunting](advanced-hunting-overview.md) is a query-based threat hunting tool that lets you inspect events in your network and locate threat indicators.
 
 Use these queries to gather more information related to the alert and determine whether the activity is suspicious.
 

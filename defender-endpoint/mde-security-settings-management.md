@@ -26,7 +26,7 @@ ms.custom:
 
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
-- [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1)
+- [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
 
 **Platforms**
 
@@ -45,7 +45,7 @@ Use the Microsoft Defender for Endpoint Security Settings Management to manage M
 Please review the pre-requisites [here](/mem/intune/protect/mde-security-integration). 
 
 > [!NOTE]
-> The **Endpoint Security Policies** page in Microsoft Defender XDR is available only for [users with the security administrator role in Microsoft Defender XDR](/defender-endpoint/assign-portal-access). Any other user role, such as Security Reader, cannot access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and Microsoft Defender XDR.
+> The **Endpoint Security Policies** page in Microsoft Defender XDR is available only for [users with the security administrator role in Microsoft Defender XDR](assign-portal-access.md). Any other user role, such as Security Reader, cannot access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and Microsoft Defender XDR.
 
 As a security administrator, you can configure different Microsoft Defender Antivirus security policy settings in the [Microsoft Defender XDR](https://security.microsoft.com)portal.
 

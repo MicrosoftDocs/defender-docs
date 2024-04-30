@@ -47,7 +47,7 @@ search.appverid: met150
 
 - Devices must be running certain versions of Windows or macOS. (See [On what devices can tamper protection be enabled](prevent-changes-to-security-settings-with-tamper-protection.md#on-what-devices-can-tamper-protection-be-enabled)?)
 
-- Devices must be [onboarded to Microsoft Defender for Endpoint](/defender-endpoint/onboarding).
+- Devices must be [onboarded to Microsoft Defender for Endpoint](onboarding.md).
 
 - Devices must be using anti-malware platform version `4.18.2010.7` (or above) and anti-malware engine version `1.1.17600.5` (or above). ([Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).)
 
@@ -74,7 +74,7 @@ search.appverid: met150
 
 - When you enable tamper protection in the Microsoft Defender portal, the setting is applied tenant wide and restricts [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on) to their secure defaults. Any changes made to tamper-protected settings are ignored. Depending on your particular scenario, you have several options available: 
 
-   - If you must make changes to a device and those changes are blocked by tamper protection, you can use [troubleshooting mode](/defender-endpoint/enable-troubleshooting-mode) to temporarily disable tamper protection on the device.
+   - If you must make changes to a device and those changes are blocked by tamper protection, you can use [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device.
    
    - You can use [Intune](manage-tamper-protection-intune.md) or [Configuration Manager](manage-tamper-protection-configuration-manager.md) to exclude devices from tamper protection. 
    

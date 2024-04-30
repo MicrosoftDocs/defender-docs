@@ -97,7 +97,7 @@ The **CloudAppEvents** table contains all audit logs across all locations like S
 
 #### Before you begin
 
-If you're new to advanced hunting, you should review [Get started with advanced hunting](/defender-xdr/advanced-hunting-overview).
+If you're new to advanced hunting, you should review [Get started with advanced hunting](advanced-hunting-overview.md).
 
 Before you can use advance hunting you must have [access to the **CloudAppEvents** table](/defender-cloud-apps/protect-office-365#connect-microsoft-365-to-microsoft-defender-for-cloud-apps) that contains the Microsoft Purview data.
 
