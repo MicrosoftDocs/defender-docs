@@ -25,7 +25,7 @@ Defender for Endpoint addresses some of these issues by identifying and tagging 
 ## How does transient tagging work?
 
 
-Transient device tagging uses an internal algorithm to tag transient devices in the device inventory.
+Transient device tagging uses an internal algorithm to tag transient devices in the inventory.
 
 - The algorithm runs on unmanaged devices within the device inventory.
 - The algorithm excludes specific devices from tagging. Excluded device types include: Server, NetworkDevice, Printer, Industrial, Surveillance, SmartFacility, and SmartAppliance.
@@ -37,9 +37,9 @@ Transient device tagging uses an internal algorithm to tag transient devices in 
 
 ## How do I work with transient tagging?
 
-Transient devices are filtered out of the device inventory by default. You can turn off the filter as needed. Note that turning off the filter doesn't affect tagging. The tag remains on inventory assets identified as transient.
+Transient devices are filtered out of the inventory by default. You can turn off the filter as needed. Note that turning off the filter doesn't affect tagging. The tag remains on inventory assets identified as transient.
 
 ## Next steps
 
-[Learn about tagging](machines-view-overview.md) in the Defender for Endpoint device inventory.
+[Learn about filtering](machines-view-overview.md) in the Defender for Endpoint device inventory.
 
