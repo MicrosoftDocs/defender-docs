@@ -160,13 +160,13 @@ On the script page of the Run Script wizard, choose your script from the list (M
 > Copy the .admx, and separately the .adml to the En-US folder.
 Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc
 
-1. Go to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Microsoft Defender Antivirus**
+3. Go to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Microsoft Defender Antivirus**
    
-2. Turn on Experimentation and Configuration Service (ECS) integration for Defender core service  
+4. Turn on Experimentation and Configuration Service (ECS) integration for Defender core service  
    - Not configured or enabled (default): the Microsoft Defender core service will use ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software.
    - Disabled: the Microsoft Defender core service will stop using ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. For false positives, fixes will be delivered via "Security Intelligence updates", and for Platform and/or Engine updates, fixes will be delivered through Microsoft Update, Microsoft Update Catalog or WSUS.
    
-3. Turn on telemetry for Defender core service
+5. Turn on telemetry for Defender core service
    - Not configured or enabled (default): the Microsoft Defender Core service will collect telemetry from Microsoft Defender Antivirus and other Defender software
    - Disabled: the Microsoft Defender Core service will stop collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.
 
@@ -192,10 +192,10 @@ Set-MpPreferences -DisableCoreServiceTelemetry $true
 2. Go to `HKLM\Software\Policies\Microsoft\Windows Defender\Features`
 3. Set the values:
 
-`DisableCoreService1DSTelemetry` (dword) 0 (hex)  
-`0` = Not configured, enabled (default)  
-`1` = Disabled
-
-`DisableCoreServiceECSIntegration` (dword) 0 (hex)  
-`0` = Not configured, enabled (default)  
-`1` = Disabled
+   `DisableCoreService1DSTelemetry` (dword) 0 (hex)  
+   `0` = Not configured, enabled (default)  
+   `1` = Disabled
+   
+   `DisableCoreServiceECSIntegration` (dword) 0 (hex)  
+   `0` = Not configured, enabled (default)  
+   `1` = Disabled
