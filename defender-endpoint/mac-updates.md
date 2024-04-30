@@ -100,7 +100,45 @@ The `Current` channel contains the most stable version of the product.
 > defaults write com.microsoft.autoupdate2 Applications -dict-add "/Applications/Microsoft Defender.app" " { 'Application ID' = 'WDAV00' ; 'App Domain' = 'com.microsoft.wdav' ; LCID = 1033 ; ChannelName = '[channel-name]' ; }"
 > ```
 
+### Set update check frequency
 
+Change how often MAU searches for updates.
+<br>
+
+
+
+
+
+****
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.autoupdate2`|
+|**Key**|UpdateCheckFrequency|
+|**Data type**|Integer|
+|**Default value**|720 (minutes)|
+|**Comment**|This value is set in minutes. The allowed range is 240 minutes (4 hours) - 720 minutes (12 hours).|
+|||
+
+### Change how MAU interacts with updates
+
+Change how MAU searches for updates.
+<br>
+
+
+
+
+
+****
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.autoupdate2`|
+|**Key**|HowToCheck|
+|**Data type**|String|
+|**Possible values**|Manual <p> AutomaticCheck <p> AutomaticDownload|
+|**Comment**|Note that AutomaticDownload will download and install silently if possible.|
+|||
 ### Change whether the "Check for Updates" button is enabled
 
 Change whether local users are able to click the "Check for Updates" option in the Microsoft AutoUpdate user interface.
