@@ -211,7 +211,7 @@ This step of the setup process involves adding Defender for Endpoint to the excl
 
 ## 8. Keep the following points about exclusions in mind
 
-When you add [exclusions to Microsoft Defender Antivirus scans](/windows/security/threat-protection/microsoft-defender-antivirus/configure-exclusions-microsoft-defender-antivirus), you should add path and process exclusions.
+When you add [exclusions to Microsoft Defender Antivirus scans](/windows/security/threat-protection/microsoft-defender-antivirus/configure-exclusions-microsoft-defender-antivirus.md), you should add path and process exclusions.
 
 > [!NOTE]
 >
