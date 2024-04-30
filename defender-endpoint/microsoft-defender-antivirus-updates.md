@@ -110,7 +110,7 @@ All our updates contain
 
 - Added an opt-out feature for Experimental Configuration Services (ECS) and One collector in the Core Service.
 - Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
-- After a new platform and engine version is released, support for older versions (N-2) will now reduce to technical support only. Platform and engine versions older than N-2 are no longer supported.
+- After a new engine version is released, support for older versions (N-2) will now reduce to technical support only. Engine versions older than N-2 are no longer supported.
 - Improved health monitoring and telemetry for [Attack Surface Rules](overview-attack-surface-reduction.md) exclusions.
 - Updated inaccurate information in [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) regarding wildcard usage with contextual exclusions.
 
