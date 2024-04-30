@@ -29,9 +29,7 @@ To enhance your endpoint security experience, Microsoft is releasing the Microso
 2. Rollout begins on:
 
    - November 2023 to prerelease customers.
-      
    - Mid April 2024 to Enterprise customers running Windows clients.
-      
    - Mid June 2024 to U.S. Government customers running Windows clients.
       
 3. If you're using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you don't need to add any other URLs.
@@ -41,33 +39,23 @@ To enhance your endpoint security experience, Microsoft is releasing the Microso
    Enterprise customers should allow the following URLs:
    
    - `*.endpoint.security.microsoft.com`
-      
    - `ecs.office.com/config/v1/MicrosoftWindowsDefenderClient`
-      
    - `*.events.data.microsoft.com`
       
    If you don't want to use the wildcards for `*.events.data.microsoft.com`, you can use:
    
-   - `us-mobile.events.data.microsoft.com/OneCollector/1.0`
-      
+   - `us-mobile.events.data.microsoft.com/OneCollector/1.0`   
    - `eu-mobile.events.data.microsoft.com/OneCollector/1.0`
-      
    - `uk-mobile.events.data.microsoft.com/OneCollector/1.0`
-      
    - `au-mobile.events.data.microsoft.com/OneCollector/1.0`
-      
    - `mobile.events.data.microsoft.com/OneCollector/1.0`
    
    Enterprise U.S. Government customers should allow the following URLs:
    
    - `*.events.data.microsoft.com`
-      
    - `*.endpoint.security.microsoft.us (GCC-H & DoD)`
-      
    - `*.gccmod.ecs.office.com (GCC-M)`
-      
    - `*.config.ecs.gov.teams.microsoft.us (GCC-H)`
-      
    - `*.config.ecs.dod.teams.microsoft.us (DoD)`
       
 5. If you're using [Application Control for Windows](/windows/security/application-security/application-control/windows-defender-application-control/wdac), or you're running non-Microsoft antivirus or endpoint detection and response software, make sure to add the processes mentioned earlier to your allowlist. 
@@ -86,19 +74,16 @@ The following table summarizes where you can view Microsoft Defender Antivirus p
 
 To learn more about the Microsoft Defender Core service configurations and experimentation (ECS), see [Microsoft Defender Core service configurations and experimentation](microsoft-defender-core-service-configurations-and-experimentation.md).
 
-#### Frequently Asked Questions (FAQs):
+### Frequently Asked Questions (FAQs):
 
-Q: What's the recommendation for Microsoft Defender Core service?
+#### What's the recommendation for Microsoft Defender Core service?
+We highly recommend keeping the default settings of the Microsoft Defender Core service running and reporting.
 
-A: We highly recommend letting the default settings of keeping the Microsoft Defender Core service running and reporting.
+#### What data storage and privacy does the Microsoft Defender Core service adhere to?
+Review [Microsoft Defender for Endpoint data storage and privacy](/microsoft-365/security/defender-endpoint/data-storage-privacy).
 
-Q: What data storage and privacy does the Microsoft Defender Core service adhere to?
-
-A: Review [Microsoft Defender for Endpoint data storage and privacy](/microsoft-365/security/defender-endpoint/data-storage-privacy).
-
-Q: Can I enforce keeping the Microsoft Defender Core service running as an Administrator?
-
-A: You can enforce it by using any of these management tools:
+#### Can I enforce the Microsoft Defender Core service stays running as an Administrator?
+You can enforce it by using any of these management tools:
 
 - Configuration Manager co-management
 - Group Policy
