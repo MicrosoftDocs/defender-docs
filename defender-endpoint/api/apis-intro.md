@@ -24,8 +24,9 @@ search.appverid: met150
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
-- ../microsoft-defender-endpoint.md
-- ../microsoft-defender-endpoint.md
+- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 - [Microsoft Defender for Business](/defender-business)
 
@@ -42,7 +43,7 @@ Watch this video for a quick overview of Defender for Endpoint's APIs.
 
 In general, you'll need to take the following steps to use the APIs:
 
-- Create a [Microsoft Entra application](/defender-endpoint/api/exposed-apis-create-app-nativeapp)
+- Create a [Microsoft Entra application](exposed-apis-create-app-nativeapp.md)
 - Get an access token using this application
 - Use the token to access Defender for Endpoint API
 
