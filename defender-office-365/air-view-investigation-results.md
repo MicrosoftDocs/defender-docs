@@ -53,9 +53,9 @@ In the Defender portal at <https://security.microsoft.com>, go to **Email & coll
 
 By default, information about investigations from yesterday and today are shown, but you can change the date range.
 
-The following information about investigations is shown on the **Investigations** page. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
+The following information about investigations is shown on the **Investigations** page. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
 
-- **ID**: The unique ID of the investigation. Select :::image type="icon" source="/defender/m365-cc-sc-copy-icon.png" border="false"::: **Open in new window** to open the details of the investigation as described in the [View investigation details](#view-investigation-details) section.
+- **ID**: The unique ID of the investigation. Select :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Open in new window** to open the details of the investigation as described in the [View investigation details](#view-investigation-details) section.
 - **Status**: The available status values are described in the [Investigation Status values](#investigation-status-values) section.
 - **Detection Source**: This value is always **Office 365**.
 - **Investigation**
@@ -66,7 +66,7 @@ The following information about investigations is shown on the **Investigations*
 - **Action count**
 - **Duration of investigation**
 
-To filter the entries, select :::image type="icon" source="/defender/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Investigation type** section: Select one or more of the following values:
   - **Manual investigation**
@@ -90,11 +90,11 @@ To filter the entries, select :::image type="icon" source="/defender/m365-cc-sc-
   - **Queued By Throttling**
   - **Terminated By Throttling**
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="/defender/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="/defender/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find information on the page. Type text in the box and then press the ENTER key.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find information on the page. Type text in the box and then press the ENTER key.
 
-Use :::image type="icon" source="/defender/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the visible information to a CSV file. The default filename is Investigations - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Investigations - Microsoft Defender (1).csv).
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the visible information to a CSV file. The default filename is Investigations - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, Investigations - Microsoft Defender (1).csv).
 
 ### Investigation Status values
 
@@ -151,7 +151,7 @@ The **Status** values that are used in investigations are described in the follo
 
 ## View investigation details
 
-When you select :::image type="icon" source="/defender/m365-cc-sc-copy-icon.png" border="false"::: **Open in new window** in the **ID** value of an investigation on the **Investigations** page at <https://security.microsoft.com/airinvestigation>, a new page opens with the investigation details.
+When you select :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Open in new window** in the **ID** value of an investigation on the **Investigations** page at <https://security.microsoft.com/airinvestigation>, a new page opens with the investigation details.
 
 The tile of the page is the name of the investigation from the **Investigation** value on the **Investigations** page. For example, **Clicked url Verdict changed to malicious - \<URL\>**.
 
@@ -161,7 +161,7 @@ The rest of the details page contains several tabs that contain detailed informa
 
 The tabs are described in the following subsections.
 
-:::image type="content" source="/defender/mdo-investigations-investigation-details-page.png" alt-text="Screenshot of the investigation details page in the Defender portal." lightbox="/defender/mdo-investigations-investigation-details-page.png":::
+:::image type="content" source="media/mdo-investigations-investigation-details-page.png" alt-text="Screenshot of the investigation details page in the Defender portal." lightbox="/media/mdo-investigations-investigation-details-page.png":::
 
 ### Investigation graph tab in the investigation details
 
@@ -181,9 +181,9 @@ On the **Investigation graph** tab, the **Investigation summary** pane contains 
 
 The graph pane contains a visual representation of the elements and activities in the investigation. Some elements are common to all investigations, while others depend on the nature and progress of the investigation.
 
-- **Alert received**: Shows the related alerts. Select :::image type="icon" source="/defender/mdo-investigations-alert-received-icon.png" border="false"::: to go to the **Alerts** tab for more information.
+- **Alert received**: Shows the related alerts. Select :::image type="icon" source="media/mdo-investigations-alert-received-icon.png" border="false"::: to go to the **Alerts** tab for more information.
 
-- **Mailbox**: Shows the related mailboxes. Select :::image type="icon" source="/defender/mdo-investigations-mailbox-icon.png" border="false"::: to go to the **Mailboxes** tab for more information.
+- **Mailbox**: Shows the related mailboxes. Select :::image type="icon" source="media/mdo-investigations-mailbox-icon.png" border="false"::: to go to the **Mailboxes** tab for more information.
 
 - **Entities analyzed**: Shows the number and type of related entities that were analyzed during the investigation. For example:
   - URLs
@@ -191,15 +191,15 @@ The graph pane contains a visual representation of the elements and activities i
   - Files
   - Email clusters, which might include the number of malicious and the number of remediated.
 
-  Select :::image type="icon" source="/defender/mdo-investigations-entities-analyzed-icon.png" border="false"::: to go to the **Entities** tab for more information.
+  Select :::image type="icon" source="media/mdo-investigations-entities-analyzed-icon.png" border="false"::: to go to the **Entities** tab for more information.
 
-- **Evidence**: Shows the number of entities found. Select :::image type="icon" source="/defender/mdo-investigations-evidence-icon.png" border="false"::: to go to the **Evidence** tab for more information.
+- **Evidence**: Shows the number of entities found. Select :::image type="icon" source="media/mdo-investigations-evidence-icon.png" border="false"::: to go to the **Evidence** tab for more information.
 
-- **Pending approval**: Shows how long the system has been waiting for an admin to do the suggested manual remediation action (for example, soft delete an email message). Select :::image type="icon" source="/defender/mdo-investigations-pending-approval-icon.png" border="false"::: to go to the **Pending actions** tab tab for more information.
+- **Pending approval**: Shows how long the system has been waiting for an admin to do the suggested manual remediation action (for example, soft delete an email message). Select :::image type="icon" source="media/mdo-investigations-pending-approval-icon.png" border="false"::: to go to the **Pending actions** tab tab for more information.
 
   After an admin does the action, this item is replaced by **Waited for user approval**.
 
-- **Waited for user approval**: Shows how long it took for an admin to do the suggested manual remediation action. Select :::image type="icon" source="/defender/mdo-investigations-waited-for-user-approval-icon.png" border="false"::: to go to the **Pending actions history** tab for more information.
+- **Waited for user approval**: Shows how long it took for an admin to do the suggested manual remediation action. Select :::image type="icon" source="media/mdo-investigations-waited-for-user-approval-icon.png" border="false"::: to go to the **Pending actions history** tab for more information.
 
 - **Result**: This item is available after the investigation is finished, and is duplicated in the following locations on the page:
   - In the center of the graph. Select the icon to go to the **Log** tab.
@@ -208,27 +208,27 @@ The graph pane contains a visual representation of the elements and activities i
 
   For example:
 
-  - **Remediated** :::image type="icon" source="/defender/mdo-investigations-result-remediated-icon.png" border="false":::
+  - **Remediated** :::image type="icon" source="media/mdo-investigations-result-remediated-icon.png" border="false":::
 
-  - **Terminated by system**: :::image type="icon" source="/defender/mdo-investigations-result-terminated-by-system-icon.png" border="false":::
+  - **Terminated by system**: :::image type="icon" source="media/mdo-investigations-result-terminated-by-system-icon.png" border="false":::
 
-  - **No threats found** :::image type="icon" source="/defender/mdo-investigations-result-no-threats-found-icon.png" border="false":::
+  - **No threats found** :::image type="icon" source="media/mdo-investigations-result-no-threats-found-icon.png" border="false":::
 
-  - **Partially investigated** :::image type="icon" source="/defender/mdo-investigations-result-partially-investigate-icon.png" border="false":::
+  - **Partially investigated** :::image type="icon" source="media/mdo-investigations-result-partially-investigate-icon.png" border="false":::
   
     Some findings might require review. Use the **Evidence** and **Entities** tabs to manually investigate and remediate any potential issues.
 
-  - **Partially remediated** :::image type="icon" source="/defender/mdo-investigations-result-partially-remediated-icon.png" border="false":::
+  - **Partially remediated** :::image type="icon" source="media/mdo-investigations-result-partially-remediated-icon.png" border="false":::
 
     A problem prevented the remediation of some malicious entities. Use the **Evidence** and **Entities** tabs to manually investigate and remediate any potential issues.
 
-:::image type="content" source="/defender/mdo-investigations-investigation-details-page-investigation-graph-tab.png" alt-text="Screenshot of the Investigation graph tab of the investigation details page." lightbox="/defender/mdo-investigations-investigation-details-page-investigation-graph-tab.png":::
+:::image type="content" source="media/mdo-investigations-investigation-details-page-investigation-graph-tab.png" alt-text="Screenshot of the Investigation graph tab of the investigation details page." lightbox="/media/mdo-investigations-investigation-details-page-investigation-graph-tab.png":::
 
 ### Alerts tab in the investigation details
 
 On the investigation details page, the **Alerts** tab shows the alerts related to the investigation.
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk <sup>\*</sup>:
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk <sup>\*</sup>:
 
 - **Alert name**<sup>*</sup>
 - **Tags**<sup>*</sup>
@@ -251,7 +251,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 
 On the investigation details page, the **Mailboxes** tab is available if any mailboxes were inspected as part of the investigation.
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
 
 - **Username**
 - **Risk level**
@@ -264,7 +264,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 
 On the investigation details page, the **Evidence** tab shows the suspicious entities that were analyzed, and the results of the analysis.
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk <sup>\*</sup>:
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk <sup>\*</sup>:
 
 - **First seen**<sup>*</sup>
 - **Entity**<sup>*</sup>
@@ -275,25 +275,25 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Detection origin**<sup>*</sup>
 - **Threats**
 
-To filter the entries, select :::image type="icon" source="/defender/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Entity**: Type some or all of the entity name in the box.
 - **Verdict**: The values you can select depend on the **Verdict** values on the tab.
 - **Detection origin**: The values you can select depend on the **Detection origin** values on the tab.
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="/defender/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
 ### Entities tab in the investigation details
 
 On the investigation details page, the **Entities** tab shows details about the different types of entities that were encountered and analyzed during the investigation.
 
-:::image type="content" source="/defender/mdo-investigations-investigation-details-page-entities-tab-evidence-summary-view.png" alt-text="Screenshot of the Entities tab of the investigation details page." lightbox="/defender/mdo-investigations-investigation-details-page-entities-tab-evidence-summary-view.png":::
+:::image type="content" source="media/mdo-investigations-investigation-details-page-entities-tab-evidence-summary-view.png" alt-text="Screenshot of the Entities tab of the investigation details page." lightbox="/media/mdo-investigations-investigation-details-page-entities-tab-evidence-summary-view.png":::
 
 The **Entities** tab is organized by a view selection pane (a summary view and a view for each entity type) and a corresponding details table for that view:
 
 - **Evidence summary** view: This is the default view.
 
-  You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
+  You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
 
   - **Entity type** (you can't deselect this value): This colum acts as header rows for the corresponding data in the remaining columns. For example:
     - **Files**
@@ -316,7 +316,7 @@ The **Entities** tab is organized by a view selection pane (a summary view and a
     - **Unremediated**
     - **Partially Remediated**
 
-- **Files** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown.  The default columns are marked with an asterisk <sup>\*</sup>:
+- **Files** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown.  The default columns are marked with an asterisk <sup>\*</sup>:
   - **Verdict**<sup>\*</sup>
   - **Remediation status**<sup>\*</sup>
   - **Status details**
@@ -324,12 +324,12 @@ The **Entities** tab is organized by a view selection pane (a summary view and a
   - **File name**<sup>\*</sup> (you can't deselect this value)
   - **Device**<sup>\*</sup>
 
-- **URLs** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
+- **URLs** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
   - **Verdict**
   - **Remediation status**
   - **Address** (you can't deselect this value)
 
-- **Email submissions** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
+- **Email submissions** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
   - **Verdict**
   - **Remediation status**
   - **Subject**
@@ -338,7 +338,7 @@ The **Entities** tab is organized by a view selection pane (a summary view and a
   - **Reported by**
   - **Report type**
 
-- **Emails** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
+- **Emails** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
   - **Verdict**
   - **Remediation status**
   - **Email Received Date** (you can't deselect this value)
@@ -347,12 +347,12 @@ The **Entities** tab is organized by a view selection pane (a summary view and a
   - **Sender**
   - **Recipient**
 
-- **IP addresses** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
+- **IP addresses** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
   - **Verdict**
   - **Remediation status**
   - **Address** (you can't deselect this value)
 
-- **Email Clusters** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
+- **Email Clusters** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
   - **Verdict**
   - **Remediation status**
   - **Mail cluster name** (you can't deselect this value)
@@ -375,7 +375,7 @@ The **Entities** tab is organized by a view selection pane (a summary view and a
 
 On the investigation details page, the **Log** tab shows all actions that were taken during the investigation.
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk <sup>\*</sup>:
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk <sup>\*</sup>:
 
 - **ID**
 - **Action type**
@@ -390,7 +390,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Pending duration**
 - **Queued Duration**
 
-Use :::image type="icon" source="/defender/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the visible information to a CSV file. The default filename is AirLogs.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, AirLogs (1).csv).
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the visible information to a CSV file. The default filename is AirLogs.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, AirLogs (1).csv).
 
 ### Pending approval tab in the investigation details
 
@@ -398,7 +398,7 @@ On the investigation details page, the **Pending approval** tab shows pending ac
 
 The **Pending approval** tab is organized by a view selection pane (a view for each action type) and a corresponding details table for that view:
 
-- **Soft delete emails**: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk <sup>\*</sup>:
+- **Soft delete emails**: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk <sup>\*</sup>:
   - **Investigation ID**
   - **First seen**
   - **Details**
@@ -419,7 +419,7 @@ The **Pending approval** tab is organized by a view selection pane (a view for e
   - **Threat type**
   - **Subject**
 
-Use :::image type="icon" source="/defender/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the visible information to a CSV file. The default filename is AirActions.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, AirActions (1).csv).
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the visible information to a CSV file. The default filename is AirActions.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, AirActions (1).csv).
 
 #### Approve actions on the Pending approval tab in the investigation details
 
@@ -429,8 +429,8 @@ The details flyout that opens is named after the pending action (for example, **
 
 At the top of the details flyout, the following actions are available:
 
-- :::image type="icon" source="/defender/m365-cc-sc-check-mark-icon.png" border="false"::: **Approve**.
-- :::image type="icon" source="/defender/m365-cc-sc-close-icon.png" border="false"::: **Reject**.
+- :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Approve**.
+- :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Reject**.
 
 The rest of the flyout contains information about the email cluster (the flyout is one big **Email cluster details** section):
 
@@ -478,7 +478,7 @@ At the bottom of the flyout, the following buttons are available:
 
 On the investigation details page, the **Pending actions history** tab shows pending actions that were completed.
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
 
 - **Action type**
 - **Wait time**
@@ -487,7 +487,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Handled by**
 - **Time**
 
-Use :::image type="icon" source="/defender/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the visible information to a CSV file. The default filename is AirActions.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, AirActions (1).csv).
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the visible information to a CSV file. The default filename is AirActions.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, AirActions (1).csv).
 
 ## View details about an alert related to an investigation
 
