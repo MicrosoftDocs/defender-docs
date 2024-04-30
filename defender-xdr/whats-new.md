@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 04/03/2024
+ms.date: 04/30/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -28,6 +28,13 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Sentinel](/azure/sentinel/whats-new)
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
+
+## May 2024
+
+- (Preview) The **SOC optimizations** page in the Microsoft Defender portal is now available with the [unified security operations platform](https://go.microsoft.com/fwlink/p/?linkid=2263690). Integrate Microsoft Defender XDR and Microsoft Sentinel and use SOC optimizations to optimize both processes and outcomes, without having your SOC teams spend time on manual analysis and research. For more information, see:
+
+  - [Optimize your security operations](https://aka.ms/soc-opt-from-defender)
+  - [SOC optimization reference](https://aka.ms/soc-opt-ref)
 
 ## April 2024
 
