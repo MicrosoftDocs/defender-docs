@@ -20,7 +20,7 @@ Transient device tagging is currently in preview.
 
 Transient devices present challenges within device inventories. They appear for short times in the inventory, and are often unknown and unmanaged. They're difficult to effectively track, classify and audit, potentially causing inventory noise and reporting inaccuracies.
 
-By identifying and tagging transient devices, Defender for Endpoint addresses some of these issues, streamlining your device inventory and making it easier to manage.
+Defender for Endpoint addresses some of these issues by identifying and tagging transient devices, making the device inventory easier to manage.
 
 
 
@@ -34,7 +34,7 @@ Transient device tagging uses an internal algorithm to tag transient devices in 
 - The algorithm is mainly based on the frequency with which devices appear in the network.
 - Transient tagging doesn't delete any devices from the inventory. It simply tags them.
 
-After tagging transient devices, by default Defender for Endpoint filters them out of the device inventory.
+After Defender for Endpoint tags transient devices, it filters them out of the device inventory by default.
 
 ## How do I work with transient tagging?
 

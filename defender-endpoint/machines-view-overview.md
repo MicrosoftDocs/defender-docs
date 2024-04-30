@@ -101,7 +101,7 @@ At the top of each device inventory tab, you can see:
 - The number of your business critical assets.
 - The number of devices that aren't yet onboarded.
 - The number of devices with high exposure.
-- The number of newly disocovered devices.
+- The number of newly discovered devices.
 
 You can use this information to help you prioritize devices for security posture improvements.
 
