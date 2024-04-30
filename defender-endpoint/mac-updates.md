@@ -139,6 +139,7 @@ Change how MAU searches for updates.
 |**Possible values**|Manual <p> AutomaticCheck <p> AutomaticDownload|
 |**Comment**|Note that AutomaticDownload will download and install silently if possible.|
 |||
+
 ### Change whether the "Check for Updates" button is enabled
 
 Change whether local users are able to click the "Check for Updates" option in the Microsoft AutoUpdate user interface.
