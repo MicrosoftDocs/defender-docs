@@ -111,7 +111,7 @@ This section describes how to configure proxy connectivity for the Defender for 
 
 If you want to use the host [windows EDR telemetry proxy](configure-proxy-internet.md) configuration for MDE for the WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
 
-If you want to use the host [winhttp proxy](/defender-endpoint/configure-proxy-internet#configure-the-proxy-server-manually-using-netsh-command) configuration for MDE for WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
+If you want to use the host [winhttp proxy](configure-proxy-internet.md#configure-the-proxy-server-manually-using-netsh-command) configuration for MDE for WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
 
 If you want to use the host [network and network proxy setting](https://support.microsoft.com/windows/use-a-proxy-server-in-windows-03096c53-0554-4ffe-b6ab-8b1deee8dae1#ID0EFD=Windows_11&preserve-view=true) for MDE for WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
 

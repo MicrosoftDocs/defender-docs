@@ -223,7 +223,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading.
 Some customers (<1%) experience issues with this method.
@@ -267,7 +267,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading.
 Some customers (<1%) experience issues with this method.
@@ -343,7 +343,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading.
 Some customers (<1%) experience issues with this method.
@@ -392,7 +392,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading.
 Some customers (<1%) experience issues with this method.
@@ -450,7 +450,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading.
 Some customers (<1%) experience issues with this method.
@@ -499,7 +499,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading.
 Some customers (<1%) experience issues with this method.
@@ -550,7 +550,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading. 
 Some customers (<1%) experience issues with this method. 
@@ -604,7 +604,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading. 
 Caution: Some customers (<1%) experience issues with this method. 
@@ -661,7 +661,7 @@ Example:
 sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading. 
 Caution: Some customers (<1%) experience issues with this method. 
@@ -769,7 +769,7 @@ Example:
 sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
-As an alternative, you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+As an alternative, you can follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 In case you don't want to uninstall mdatp you can disable rtp and mdatp in sequence before upgrade. 
 Caution: Some customers(<1%) are experiencing issues with this method. 
@@ -829,7 +829,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-As an alternative to the above, you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+As an alternative to the above, you can follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 In case you don't want to uninstall mdatp you can disable rtp and mdatp in sequence before upgrade.
 Caution: Some customers(<1%) are experiencing issues with this method.
@@ -879,7 +879,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-As an alternative approach, follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+As an alternative approach, follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 In case you don't want to uninstall mdatp you can disable rtp and mdatp in sequence before upgrade.
 Caution: Some customers(<1%) are experiencing issues with this method.
@@ -918,7 +918,7 @@ sudo systemctl disable mdatp
 
 After executing the commands, use your package manager to perform the upgrade.
 
-As an alternative approach, follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+As an alternative approach, follow the instructions to [uninstall](linux-resources.md#uninstall), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 </br>
 
 <br/><br/>
