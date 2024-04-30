@@ -62,7 +62,7 @@ If you're using Intune, and you attempt to view or edit security policies in the
 
 :::image type="content" source="media/mdb-usingintune-switchquestion.png" alt-text="Screenshot showing a screen that prompts the user to keep using Intune or switch to the Microsoft Defender portal.":::
 
-In the preceding image, **Use Defender for Business configuration instead** refers to using the Microsoft Defender portal, which provides a simplified configuration experience designed for small and medium-sized businesses. If you opt to use the Microsoft Defender portal, you must delete any existing security policies in Intune to avoid policy conflicts. For more details, see [I need to resolve a policy conflict](/defender-business/mdb-troubleshooting#i-need-to-resolve-a-policy-conflict).
+In the preceding image, **Use Defender for Business configuration instead** refers to using the Microsoft Defender portal, which provides a simplified configuration experience designed for small and medium-sized businesses. If you opt to use the Microsoft Defender portal, you must delete any existing security policies in Intune to avoid policy conflicts. For more details, see [I need to resolve a policy conflict](mdb-troubleshooting.yml#i-need-to-resolve-a-policy-conflict).
 
 > [!NOTE]
 > If you're managing your security policies in the Microsoft Defender portal, you can view those policies in the Intune admin center, where they're listed as **Antivirus** or **Firewall** policies. When you view your firewall policies in the Intune admin center, you'll see two policies listed: one policy for firewall protection and another for custom rules.
@@ -77,4 +77,3 @@ In the preceding image, **Use Defender for Business configuration instead** refe
 4. [Set up your controlled folder access policy](mdb-controlled-folder-access.md) for ransomware protection.
 5. [Enable your attack surface reduction rules](mdb-asr.md).
 6. [Review settings for advanced features and the Microsoft Defender portal](mdb-portal-advanced-feature-settings.md).
-

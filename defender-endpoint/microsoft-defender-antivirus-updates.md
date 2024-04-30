@@ -132,9 +132,9 @@ All our updates contain
 
 - Improved support for virtualizing while compressing or decompressing zip files
 - Improved reporting in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) for block-only remediations
-- Reduced the number of false positives for [attack surface reduction rules](/defender-endpoint/attack-surface-reduction) for known trusted processes
+- Reduced the number of false positives for [attack surface reduction rules](attack-surface-reduction.md) for known trusted processes
 - Improved [Get-MpPreference](/powershell/module/defender/get-mppreference) logic for proxy bypass settings
-- Extended the toast notification support for [Indicators of Compromise](/defender-endpoint/manage-indicators#indicator-of-compromise-ioc-overview) (IoC) detections
+- Extended the toast notification support for [Indicators of Compromise](manage-indicators.md#indicator-of-compromise-ioc-overview) (IoC) detections
 
 #### Known issues
 
