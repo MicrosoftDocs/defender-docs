@@ -91,7 +91,7 @@ Host pairs reveal connections between websites that traditional data sources, su
 
    - The two IP addresses used different autonomous system number (ASNs).
 
-     :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-IP-US.png" alt-text="Tutorial infrastructure chain mypillow US ASN." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-IP-US.png":::
+     :::image type="content" source="media/tutorial-infra-chain-mypillow-IP-US.png" alt-text="Tutorial infrastructure chain mypillow US ASN." lightbox="media/tutorial-infra-chain-mypillow-IP-US.png":::
 
 10. Select the **Summary** tab and scroll down to the **Articles** section. You should see the following published articles related to *mypiltow[.]com*:
     - *RiskIQ: Magecart Injected URLs and C2 Domains, June 3-14, 2022*
