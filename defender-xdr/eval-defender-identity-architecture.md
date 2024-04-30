@@ -38,7 +38,7 @@ Defender for Identity protects your on-premises Active Directory users and/or us
 
 The following diagram illustrates the baseline architecture for Defender for Identity.
 
-:::image type="content" source="../defender/media/defender/m365-defender-identity-architecture.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Identity." lightbox="../defender/media/defender/m365-defender-identity-architecture.svg":::
+:::image type="content" source="./media/eval-defender-xdr/m365-defender-identity-architecture.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Identity." lightbox="./media/eval-defender-xdr/m365-defender-identity-architecture.svg":::
 
 In this illustration:
 
