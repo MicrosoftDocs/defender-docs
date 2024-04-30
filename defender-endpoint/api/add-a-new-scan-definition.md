@@ -24,7 +24,7 @@ ms.date: 12/14/2022
 
 **Applies to:**
 
-- ../microsoft-defender-endpoint.md
+- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management)
 - [Microsoft Defender XDR](/defender-xdr)
 
