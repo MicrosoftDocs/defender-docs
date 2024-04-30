@@ -83,7 +83,7 @@ We highly recommend keeping the default settings of the Microsoft Defender Core 
 Review [Microsoft Defender for Endpoint data storage and privacy](/microsoft-365/security/defender-endpoint/data-storage-privacy).
 
 #### Can I enforce the Microsoft Defender Core service stays running as an Administrator?
-You can enforce it by using any of these management tools:
+Yes, you can enforce it by using any of these management tools:
 
 - Configuration Manager co-management
 - Group Policy
@@ -92,15 +92,13 @@ You can enforce it by using any of these management tools:
 
 ### Use Configuration Manager co-management (ConfigMgr, formerly MEMCM/SCCM) to update the policy for Microsoft Defender Core service
 
-Microsoft[Configuration Manager](/mem/configmgr/core/understand/introduction) has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network.
+Microsoft [Configuration Manager](/mem/configmgr/core/understand/introduction) has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network.
 
 1. Open the Microsoft Configuration Manager console.
 2. Select Software Library > Scripts > Create Script.
-3. Enter the following details:
-      - Script name: for example, Microsoft Defender Core service enforcement
-      - Enter the description: for example, Demo configuration to enable Microsoft Defender Core service settings
-      - Enter the language: PowerShell and set the timeout seconds (180)
-4. Paste in the following "Microsoft Defender Core service enforcement" script example to use as a template:
+3. Enter the script name, for example, Microsoft Defender Core service enforcement and description, for example, Demo configuration to enable Microsoft Defender Core service settings.
+4. Select PowerShell and set the timeout seconds to 180
+5. Paste in the following "Microsoft Defender Core service enforcement" script example to use as a template:
 
 ```powershell
 ######
@@ -149,8 +147,9 @@ Add-Content -Path $LogFile -Value "------------------------------------
 $ExecutionTime - Execution Ends -------------------------------------------"
 ```
 
-5. When adding a new script, you must select and approve it. The approval state changes from *Waiting for approval* to *Approved*. Once approved, right-click a single device or device collection, and select **Run script**.
-6. On the script page of the Run Script wizard, choose your script from the list (Microsoft Defender Core service enforcement in our example). Only approved scripts are displayed. Select Next and complete the wizard.
+When adding a new script, you must select and approve it. The approval state changes from *Waiting for approval* to *Approved*. Once approved, right-click a single device or device collection, and select **Run script**.
+
+On the script page of the Run Script wizard, choose your script from the list (Microsoft Defender Core service enforcement in our example). Only approved scripts are displayed. Select Next and complete the wizard.
 
 ### Use Group Policy Editor to update Group Policy for Microsoft Defender Core service
 
@@ -161,20 +160,19 @@ $ExecutionTime - Execution Ends -------------------------------------------"
 > Copy the .admx, and separately the .adml to the En-US folder.
 Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc
 
-3. Go to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Microsoft Defender Antivirus**
-
-- Turn on Experimentation and Configuration Service (ECS) integration for Defender core service  
+1. Go to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Microsoft Defender Antivirus**
+   
+2. Turn on Experimentation and Configuration Service (ECS) integration for Defender core service  
    - Not configured or enabled (default): the Microsoft Defender core service will use ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software.
-   - Disabled: the Microsoft Defender core service will stop using ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. For false positives, fixes will be delivered via "Security Intelligence updates", and for Platform and/or Engine updates, fixes will be delivered through Microsoft Update, Microsoft Update Catalog or WSUS.  
-
-  
-- Turn on telemetry for Defender core service
+   - Disabled: the Microsoft Defender core service will stop using ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. For false positives, fixes will be delivered via "Security Intelligence updates", and for Platform and/or Engine updates, fixes will be delivered through Microsoft Update, Microsoft Update Catalog or WSUS.
+   
+3. Turn on telemetry for Defender core service
    - Not configured or enabled (default): the Microsoft Defender Core service will collect telemetry from Microsoft Defender Antivirus and other Defender software
    - Disabled: the Microsoft Defender Core service will stop collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.
 
 ### Use PowerShell to update the policies for Microsoft Defender Core service.
 
-Go to Start, and run PowerShell as an administrator. Use the `Set-MpPreferences -DisableCoreServiceECSIntegration $true or $false` command.
+Go to Start, and run PowerShell as an administrator. Use the `Set-MpPreferences -DisableCoreServiceECSIntegration $true or $false` command
 
 For example:
 
