@@ -28,7 +28,7 @@ The Windows Subsystem for Linux (WSL) 2, which replaces the previous version of 
 
 Be aware of the following before you start:
 
-1. The plug-in does not support automatic updates on versions below 0.24.426.1. On version 0.24.426.1 and above, updates are supported through Windows Update across all rings. Updates through Windows Server Update services (WSUS), System Center Configuration Manager (SCCM) and Microsoft Update catalog are supported only in Production ring to ensure package stability.
+1. The plug-in does not support automatic updates on versions prior to `0.24.426.1`. On version `0.24.426.1` and later, updates are supported through Windows Update across all rings. Updates through Windows Server Update services (WSUS), System Center Configuration Manager (SCCM) and Microsoft Update catalog are supported only in the Production ring to ensure package stability.
 
 2. As it takes a few minutes for the plug-in to fully instantiate and up to 30 minutes for a WSL2 instance to onboard itself, short-lived WSL container instances might result in the WSL2 instance not showing up in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Once a (any) distribution has been running long enough (at least 30 minutes), it does show up.
 
