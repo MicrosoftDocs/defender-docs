@@ -2,10 +2,10 @@
 title: macOS Device control policies frequently asked questions (FAQ)
 description: Get answers to common questions about device control policies using JAMF or Intune.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 03/31/2023
+ms.date: 04/30/2024
 ---
 
 # macOS Device Control policies frequently asked questions (FAQ)
