@@ -161,7 +161,7 @@ To receive contextual device integration in Office 365 Threat Intelligence, you'
 
 ## Endpoint Attack Notifications
 
-[Endpoint Attack Notifications](/defender-endpoint/endpoint-attack-notifications) enable Microsoft to actively hunt for critical threats to be prioritized based on urgency and impact over your endpoint data. 
+[Endpoint Attack Notifications](endpoint-attack-notifications.md) enable Microsoft to actively hunt for critical threats to be prioritized based on urgency and impact over your endpoint data. 
 
 For proactive hunting across the full scope of Microsoft Defender XDR, including threats that span email, collaboration, identity, cloud applications, and endpoints, [learn more](https://aka.ms/DefenderExpertsForHuntingGetStarted) about Microsoft Defender Experts.
 
@@ -200,7 +200,7 @@ You can **Turn on** Authenticated telemetry to prevent spoofing telemetry into y
 
 ## Microsoft Intune connection
 
-Defender for Endpoint can be integrated with [Microsoft Intune](/intune/what-is-intune) to [enable device risk-based conditional access](/intune/advanced-threat-protection#enable-windows-defender-atp-in-intune). When you [turn on this feature](configure-conditional-access.md), you'll be able to share Defender for Endpoint device information with Intune, enhancing policy enforcement.
+Defender for Endpoint can be integrated with [Microsoft Intune](/intune/what-is-intune) to [enable device risk-based conditional access](/intune/advanced-threat-protection). When you [turn on this feature](configure-conditional-access.md), you'll be able to share Defender for Endpoint device information with Intune, enhancing policy enforcement.
 
 > [!IMPORTANT]
 > You'll need to enable the integration on both Intune and Defender for Endpoint to use this feature. For more information on specific steps, see [Configure Conditional Access in Defender for Endpoint](configure-conditional-access.md).

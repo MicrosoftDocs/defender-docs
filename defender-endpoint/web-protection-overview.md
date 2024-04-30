@@ -78,7 +78,7 @@ Web content filtering includes **Web activity by category**, **Web content filte
 Web content filtering includes:
 
 - Users are prevented from accessing websites in blocked categories, whether they're browsing on-premises or away.
-- You can conveniently deploy varied policies to various sets of users using the device groups defined in the [Microsoft Defender for Endpoint role-based access control settings](/defender-endpoint/rbac).
+- You can conveniently deploy varied policies to various sets of users using the device groups defined in the [Microsoft Defender for Endpoint role-based access control settings](rbac.md).
     > [!NOTE]
     > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 - You can access web reports in the same central location, with visibility over actual blocks and web usage.

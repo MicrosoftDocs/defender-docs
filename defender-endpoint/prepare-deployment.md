@@ -60,7 +60,7 @@ Defender for Endpoint supports two ways to manage permissions:
 
 Microsoft recommends leveraging RBAC to ensure that only users that have a business justification can access Defender for Endpoint.
 
-You can find details on permission guidelines here: [Create roles and assign the role to a Microsoft Entra group](/defender-endpoint/user-roles#create-roles-and-assign-the-role-to-an-azure-active-directory-group).
+You can find details on permission guidelines here: [Create roles and assign the role to a Microsoft Entra group](user-roles.md#create-roles-and-assign-the-role-to-an-azure-active-directory-group).
 
 The following example table serves to identify the Cyber Defense Operations Center structure in your environment that will help you determine the RBAC structure required for your environment.
 

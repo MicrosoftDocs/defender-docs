@@ -68,7 +68,7 @@ As verdicts are reached, automated investigations can result in one or more reme
 
 Depending on the [level of automation](automation-levels.md) set for your organization, as well as other security settings, remediation actions can occur automatically or only upon approval by your security operations team. Additional security settings that can affect automatic remediation include [protection from potentially unwanted applications](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus) (PUA).
 
-All remediation actions, whether pending or completed, are tracked in the [Action center](auto-investigation-action-center.md). If necessary, your security operations team can undo a remediation action. To learn more, see [Review and approve remediation actions following an automated investigation](/defender-endpoint/manage-auto-investigation).
+All remediation actions, whether pending or completed, are tracked in the [Action center](auto-investigation-action-center.md). If necessary, your security operations team can undo a remediation action. To learn more, see [Review and approve remediation actions following an automated investigation](manage-auto-investigation.md).
 
 > [!TIP]
 > Check out the new, unified investigation page in the Microsoft Defender portal. To learn more, see [Unified investigation page](/defender-xdr/m365d-autoir-results#new-unified-investigation-page).
@@ -92,7 +92,7 @@ Currently, AIR only supports the following OS versions:
 - Windows 11
 
 > [!NOTE]
-> Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](/defender-endpoint/configure-server-endpoints#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) to be installed. 
+> Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) to be installed. 
 
 ## Next steps
 

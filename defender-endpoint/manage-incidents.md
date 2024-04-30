@@ -74,7 +74,7 @@ Added comments instantly appear on the pane.
 
 
 ## Related topics
-- [Incidents queue](/defender-endpoint/view-incidents-queue)
+- [Incidents queue](view-incidents-queue.md)
 - [View and organize the Incidents queue](view-incidents-queue.md)
 - [Investigate incidents](investigate-incidents.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

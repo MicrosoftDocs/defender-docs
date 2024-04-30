@@ -46,7 +46,7 @@ The following table lists the requirements to enable the deception capability in
 > |-------------|----------|
 > |Subscription requirements|One of these subscriptions:</br> - Microsoft 365 E5</br> - Microsoft Security E5</br> - Microsoft Defender for Endpoint Plan 2|
 > |Deployment requirements|Requirements:</br> - Defender for Endpoint is the primary EDR solution</br> - [Automated investigation and response capabilities in Defender for Endpoint](/defender-endpoint/configure-automated-investigations-remediation) is configured</br> - Devices are [joined](/entra/identity/devices/concept-directory-join/) or [hybrid joined](/entra/identity/devices/concept-hybrid-join/) in Microsoft Entra</br> - PowerShell is enabled on the devices</br> - The deception feature covers clients operating on Windows 10 RS5 and later in preview|
-> |Permissions|You must have one of the following roles assigned in the [Microsoft Entra admin center](https://entra.microsoft.com) or in the [Microsoft 365 admin center](https://admin.microsoft.com) to configure deception capabilities:</br> - Global administrator</br> - Security administrator|
+> |Permissions|You must have one of the following roles assigned in the [Microsoft Entra admin center](https://entra.microsoft.com) or in the [Microsoft 365 admin center](https://admin.microsoft.com) to configure deception capabilities:</br> - Global administrator</br> - Security administrator</br> - Manage portal system settings|
 
 ## What is deception technology?
 
@@ -59,6 +59,7 @@ Attackers interacting with the fake network assets set up by the deception capab
 The built-in deception capability in the Microsoft Defender portal uses rules to make decoys and lures that match your environment. The feature applies machine learning to suggest decoys and lures that are tailored to your network. You can also use the deception feature to manually create the decoys and lures. These decoys and lures are then automatically deployed to your network and planted to devices you specify using PowerShell.
 
 :::image type="content" source="/defender/media/deception/fig1-deception.png" alt-text="Screenshot of an attack with lateral movement and where deception intercepts the attack" lightbox="/defender/media/deception/fig1-deception.png":::
+
 *Figure 1. Deception technology, through high confidence detections of human-operated lateral movement, alerts security teams when an attacker interacts with fake hosts or lures*
 
 **Decoys** are fake devices and accounts that appear to belong to your network. **Lures** are fake content planted on specific devices or accounts and are used to attract an attacker. The content can be a document, a configuration file, cached credentials, or any content that an attacker can likely read, steal, or interact with. Lures imitate important company information, settings, or credentials.
@@ -89,6 +90,7 @@ The alert details contain:
 - The type of attack like sign in attempts or lateral movement attempts
 
 :::image type="content" source="/defender/media/deception/fig2-deception.png" alt-text="Screenshot of a deception alert highlighting the tag and the attempt" lightbox="/defender/media/deception/fig2-deception.png":::
+
 *Figure 2. Details of a deception-related alert*
 
 ## Next step

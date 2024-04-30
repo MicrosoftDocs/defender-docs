@@ -38,7 +38,7 @@ To address this new world of computing, Microsoft highly recommends the Zero Tru
 
 Here's the overall architecture of Zero Trust:
 
-:::image type="content" source="/defender/media/zero-trust/zero-trust-architecture.png" alt-text="Diagram that shows Microsoft Zero Trust architecture." lightbox="/defender/media/zero-trust/zero-trust-architecture.png":::
+:::image type="content" source="media/zero-trust/zero-trust-architecture.png" alt-text="Diagram that shows Microsoft Zero Trust architecture." lightbox="media/zero-trust/zero-trust-architecture.png":::
 
 Zero Trust identity and device access policies address the **Verify explicitly** guiding principle for:
 
@@ -107,7 +107,7 @@ Each industry also has their own set of specialized regulations. We aren't tryin
 - **Enterprise**: Some customers have a subset of data that must be protected at higher levels, or all data must be protected at a higher level. You can apply increased protection to all or specific data sets in your Microsoft 365 environment. We recommend protecting identities and devices that access sensitive data with comparable levels of security.
 - **Specialized security**: As needed, a few customers have a small amount of data that is highly classified, constitutes trade secrets, or is regulated. Microsoft provides capabilities to help these customers meet these requirements, including added protection for identities and devices.
 
-:::image type="content" source="/defender/media/microsoft-365-policies-configurations/M365-idquality-threetiers.png" alt-text="The Security cone" lightbox="/defender/media/microsoft-365-policies-configurations/M365-idquality-threetiers.png":::
+:::image type="content" source="media/microsoft-365-policies-configurations/M365-idquality-threetiers.png" alt-text="The Security cone" lightbox="media/microsoft-365-policies-configurations/M365-idquality-threetiers.png":::
 
 This guidance shows you how to implement Zero Trust protection for identities and devices for each of these levels of protection. Use this guidance as a minimum for your organization and adjust the policies to meet your organization's specific requirements.
 
@@ -116,7 +116,7 @@ It's important to use consistent levels of protection across your identities, de
 
 The **Zero Trust identity and device protection for Microsoft 365** architecture model shows you which capabilities are comparable.
 
-[![Thumb image for Zero Trust Identity and device protection for Microsoft 365 poster.](/defender/media/microsoft-365-policies-configurations/zero-trust-id-device-protection-model-thumbnail.png)](../../downloads/MSFT_cloud_architecture_identity&device_protection.pdf) <br> [View as a PDF](../../downloads/MSFT_cloud_architecture_identity&device_protection.pdf) \| [Download as a PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/MSFT_cloud_architecture_identity&device_protection.pdf)  \| [Download as a Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/MSFT_cloud_architecture_identity&device_protection.vsdx)
+[![Thumb image for Zero Trust Identity and device protection for Microsoft 365 poster.](media/microsoft-365-policies-configurations/zero-trust-id-device-protection-model-thumbnail.png)](../../downloads/MSFT_cloud_architecture_identity&device_protection.pdf) <br> [View as a PDF](../../downloads/MSFT_cloud_architecture_identity&device_protection.pdf) \| [Download as a PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/MSFT_cloud_architecture_identity&device_protection.pdf)  \| [Download as a Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/MSFT_cloud_architecture_identity&device_protection.vsdx)
 
 -->
 
@@ -126,7 +126,7 @@ Additionally, see the [Deploy information protection for data privacy regulation
 
 Implementing any security strategy requires trade-offs between security and productivity. It's helpful to evaluate how each decision affects the balance of security, functionality, and ease of use.
 
-:::image type="content" source="/defender/media/microsoft-365-policies-configurations/security-triad.png" alt-text="The Security triad balancing security, functionality, and ease of use" lightbox="/defender/media/microsoft-365-policies-configurations/security-triad.png":::
+:::image type="content" source="media/microsoft-365-policies-configurations/security-triad.png" alt-text="The Security triad balancing security, functionality, and ease of use" lightbox="media/microsoft-365-policies-configurations/security-triad.png":::
 
 The recommendations provided are based on the following principles:
 
@@ -155,7 +155,7 @@ Microsoft Entra ID provides a full suite of identity management capabilities. We
 
 Here are the components of Zero Trust identity and device access, including Intune and Microsoft Entra objects, settings, and subservices.
 
-:::image type="content" source="/defender/media/microsoft-365-policies-configurations/identity-device-access-components.png" alt-text="The Components of Zero Trust identity and device access" lightbox="/defender/media/microsoft-365-policies-configurations/identity-device-access-components.png":::
+:::image type="content" source="media/microsoft-365-policies-configurations/identity-device-access-components.png" alt-text="The Components of Zero Trust identity and device access" lightbox="media/microsoft-365-policies-configurations/identity-device-access-components.png":::
 
 ### Microsoft Intune
 
@@ -219,7 +219,7 @@ Microsoft recommends that you don't create policy sets that apply to all apps be
 
 ## Steps to configure Zero Trust identity and device access
 
-:::image type="content" source="/defender/media/microsoft-365-policies-configurations/identity-device-access-steps.png" alt-text="The steps to configure Zero Trust identity and device access" lightbox="/defender/media/microsoft-365-policies-configurations/identity-device-access-steps.png":::
+:::image type="content" source="media/microsoft-365-policies-configurations/identity-device-access-steps.png" alt-text="The steps to configure Zero Trust identity and device access" lightbox="media/microsoft-365-policies-configurations/identity-device-access-steps.png":::
 
 1. Configure prerequisite identity features and their settings.
 2. Configure the common identity and access Conditional Access policies.

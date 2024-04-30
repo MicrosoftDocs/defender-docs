@@ -60,45 +60,45 @@ In [Microsoft Defender for Office 365 Plan 2](mdo-about.md), open the Microsoft 
 1. On the **Explorer** page, verify that the **All email** tab is selected and then configure the following options:
    - Select the date/time range.
    - Select **Connector**.
-   - Enter the connector name in the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box.
+   - Enter the connector name in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box.
    - Select **Refresh**.
 
-    :::image type="content" source="/defender/media/connector-compromise-explorer.png" alt-text="Inbound connector explorer view" lightbox="/defender/media/connector-compromise-explorer.png":::
+    :::image type="content" source="media/connector-compromise-explorer.png" alt-text="Inbound connector explorer view" lightbox="media/connector-compromise-explorer.png":::
 
 2. Look for abnormal spikes or dips in email traffic.
 
-    :::image type="content" source="/defender/media/connector-compromise-abnormal-spike.png" alt-text="Number of emails delivered to junk folder" lightbox="/defender/media/connector-compromise-abnormal-spike.png":::
+    :::image type="content" source="media/connector-compromise-abnormal-spike.png" alt-text="Number of emails delivered to junk folder" lightbox="media/connector-compromise-abnormal-spike.png":::
 
 3. Answer the following questions:
     - Does the **Sender IP** match your organization's on-premises IP address?
     - Were a significant number of recent messages sent to the **Junk Email** folder? This result clearly indicates that a compromised connector was used to send spam.
     - Is it reasonable for the message recipients to receive email from senders in your organization?
 
-    :::image type="content" source="/defender/media/connector-compromise-sender-ip.png" alt-text="Sender IP and your organization's on-prem IP address" lightbox="/defender/media/connector-compromise-sender-ip.png":::
+    :::image type="content" source="media/connector-compromise-sender-ip.png" alt-text="Sender IP and your organization's on-prem IP address" lightbox="media/connector-compromise-sender-ip.png":::
 
 In [Microsoft Defender for Office 365](mdo-about.md) or [Exchange Online Protection](eop-about.md), use **Alerts** and **Message trace** to look for the symptoms of connector compromise:
 
 1. Open the Defender portal at <https://security.microsoft.com> and go to **Incidents & alerts** \> **Alerts**. Or, to go directly to the **Alerts** page, useOpen **Suspicious connector activity** alert in <https://security.microsoft.com/alerts>.
 
-2. On the **Alerts** page, use the :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Policy** \> **Suspicious connector activity** to find any alerts related to suspicious connector activity.
+2. On the **Alerts** page, use the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** \> **Policy** \> **Suspicious connector activity** to find any alerts related to suspicious connector activity.
 
 3. Select a suspicious connector activity alert by clicking anywhere in the row other than the check box next to the name. On the details page that opens, select an activity under **Activity list**, and copy the **Connector domain** and **IP address** values from the alert.
 
-    :::image type="content" source="/defender/media/connector-compromise-outbound-email-details.png" alt-text="Connector compromise outbound email details" lightbox="/defender/media/connector-compromise-outbound-email-details.png":::
+    :::image type="content" source="media/connector-compromise-outbound-email-details.png" alt-text="Connector compromise outbound email details" lightbox="media/connector-compromise-outbound-email-details.png":::
 
 4. Open the Exchange admin center at <https://admin.exchange.microsoft.com> and go to **Mail flow** \> **Message trace**. Or, to go directly to the **Message trace** page, use <https://admin.exchange.microsoft.com/#/messagetrace>.
 
-   On the **Message trace** page, select the **Custom queries** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Start a trace**, and use the **Connector domain** and **IP address** values from the previous step.
+   On the **Message trace** page, select the **Custom queries** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Start a trace**, and use the **Connector domain** and **IP address** values from the previous step.
 
    For more information about message trace, see [Message trace in the modern Exchange admin center in Exchange Online](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac).
 
-   :::image type="content" source="/defender/media/connector-compromise-new-message-trace.png" alt-text="New message trace flyout" lightbox="/defender/media/connector-compromise-new-message-trace.png":::
+   :::image type="content" source="media/connector-compromise-new-message-trace.png" alt-text="New message trace flyout" lightbox="media/connector-compromise-new-message-trace.png":::
 
 5. In the message trace results, look for the following information:
    - A significant number of messages were recently marked as **FilteredAsSpam**. This result clearly indicates that a compromised connector was used to send spam.
    - Whether it's reasonable for the message recipients to receive email from senders in your organization
 
-   :::image type="content" source="/defender/media/connector-compromise-message-trace-results.png" alt-text="New message trace search results" lightbox="/defender/media/connector-compromise-message-trace-results.png":::
+   :::image type="content" source="media/connector-compromise-message-trace-results.png" alt-text="New message trace search results" lightbox="media/connector-compromise-message-trace-results.png":::
 
 #### Investigate and validate connector-related activity
 

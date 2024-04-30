@@ -114,7 +114,7 @@ Each threat analytics report provides information in several sections:
 
 The **Overview** section provides a preview of the detailed analyst report. It also provides charts that highlight the impact of the threat to your organization, and your exposure through misconfigured and unpatched devices.
 
-:::image type="content" source="/defender/media/threat-analytics/ta_overview_mtp.png" alt-text="Screenshot of the overview section of a threat analytics report." lightbox="/defender/media/threat-analytics//defender/media/threat-analytics/ta_overview_mtp.png":::
+:::image type="content" source="/defender/media/threat-analytics/ta_overview_mtp.png" alt-text="Screenshot of the overview section of a threat analytics report." lightbox="/defender/media/threat-analytics/ta_overview_mtp.png":::
 
 
 #### Assess impact on your organization

@@ -85,7 +85,7 @@ Defender for Endpoint uses the following combination of technology built into Wi
 
 
 > [!IMPORTANT]
-> The capabilities on non-Windows platforms may be different from the ones for Windows. For more information on what capabilities are available for non-Windows platforms, see [Microsoft Defender for Endpoint for non-Windows platforms](/defender-endpoint/non-windows).
+> The capabilities on non-Windows platforms may be different from the ones for Windows. For more information on what capabilities are available for non-Windows platforms, see [Microsoft Defender for Endpoint for non-Windows platforms](non-windows.md).
 
 <a name="tvm"></a>
 

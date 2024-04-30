@@ -33,11 +33,11 @@ Detecting malware that starts early in the boot cycle was a challenge before Win
 
 ## Where are the ELAM detections logged?
 
-The ELAM detection is logged in the same location as the other Microsoft Defender Antivirus threats, such as [Event ID 1006](/defender-endpoint/troubleshoot-microsoft-defender-antivirus).
+The ELAM detection is logged in the same location as the other Microsoft Defender Antivirus threats, such as [Event ID 1006](troubleshoot-microsoft-defender-antivirus.yml).
 
 ## How do I keep the MDAV ELAM driver up to date?
 
-The MDAV ELAM driver ships with the monthly “[Platform update](/defender-endpoint/microsoft-defender-antivirus-updates).”
+The MDAV ELAM driver ships with the monthly “[Platform update](microsoft-defender-antivirus-updates.md).”
 
 ## Can the Early Launch Antimalware (ELAM) policy be modified?
 
@@ -52,7 +52,7 @@ BackupPath (string) C:\Windows\\[ELAMBKUP](/windows-hardware/drivers/install/ela
 
 ## How do I revert the MDAV ELAM driver to a previous version?
 
-C:\ProgramData\Microsoft\Windows Defender\Platform\<antimalware platform version>\MpCmdRun.exe -[RevertPlatform](/defender-endpoint/command-line-arguments-microsoft-defender-antivirus).
+C:\ProgramData\Microsoft\Windows Defender\Platform\<antimalware platform version>\MpCmdRun.exe -[RevertPlatform](command-line-arguments-microsoft-defender-antivirus.md).
 
 For example:
 
