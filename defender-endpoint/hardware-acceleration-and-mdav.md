@@ -1,10 +1,9 @@
 ---
 title: Hardware acceleration and Microsoft Defender Antivirus.
 description: How Microsoft Defender Antivirus incorporates hardware acceleration and Microsoft Defender Antivirus.
-author: siosulli
-ms.author: siosulli
-manager: deniseb
-ms.reviewer: yongrhee
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 02/26/2024
@@ -53,7 +52,7 @@ This table shows the Intel TDT technologies Microsoft collaborated with Intel on
 - lower CPU consumption
 - A reduction of System-on-a-chip (SoC) power consumption leading to longer battery life on laptops and tablets
 
-**Intel Threat Detection Technology (TDT) - Cryptojacking:** Enhanced detection by leveraging Intel’s Central Processing Unit (CPU) performance monitoring unit (PMU) and offloading to the integrated Graphics Processor Unit (integrated GPU) to detect the malware code execution (fingerprint) of repeated mathematical operations at runtime. The signals are processed by a layer of machine learning with minimal overhead.
+**Intel Threat Detection Technology (TDT) - Cryptojacking:** Enhanced detection by leveraging Intel's Central Processing Unit (CPU) performance monitoring unit (PMU) and offloading to the integrated Graphics Processor Unit (integrated GPU) to detect the malware code execution (fingerprint) of repeated mathematical operations at runtime. The signals are processed by a layer of machine learning with minimal overhead.
 
 ### How do you enable Intel TDT AMS or Cryptojacking integration?
 
