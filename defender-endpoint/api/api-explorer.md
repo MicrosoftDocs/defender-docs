@@ -24,7 +24,7 @@ ms.date: 12/18/2020
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 **Applies to:**
-- ../microsoft-defender-endpoint.md
+- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 
 The Microsoft Defender for Endpoint API Explorer is a tool that helps you explore various Defender for Endpoint APIs interactively.
 
