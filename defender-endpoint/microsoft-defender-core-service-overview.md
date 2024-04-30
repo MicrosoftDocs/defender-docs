@@ -74,15 +74,15 @@ The following table summarizes where you can view Microsoft Defender Antivirus p
 
 To learn more about the Microsoft Defender Core service configurations and experimentation (ECS), see [Microsoft Defender Core service configurations and experimentation](microsoft-defender-core-service-configurations-and-experimentation.md).
 
-### Frequently Asked Questions (FAQs):
+## Frequently Asked Questions (FAQs):
 
-#### What's the recommendation for Microsoft Defender Core service?
+### What's the recommendation for Microsoft Defender Core service?
 We highly recommend keeping the default settings of the Microsoft Defender Core service running and reporting.
 
-#### What data storage and privacy does the Microsoft Defender Core service adhere to?
+### What data storage and privacy does the Microsoft Defender Core service adhere to?
 Review [Microsoft Defender for Endpoint data storage and privacy](/microsoft-365/security/defender-endpoint/data-storage-privacy).
 
-#### Can I enforce the Microsoft Defender Core service stays running as an Administrator?
+### Can I enforce the Microsoft Defender Core service stays running as an Administrator?
 Yes, you can enforce it by using any of these management tools:
 
 - Configuration Manager co-management
@@ -90,7 +90,7 @@ Yes, you can enforce it by using any of these management tools:
 - PowerShell
 - Registry
 
-### Use Configuration Manager co-management (ConfigMgr, formerly MEMCM/SCCM) to update the policy for Microsoft Defender Core service
+#### Use Configuration Manager co-management (ConfigMgr, formerly MEMCM/SCCM) to update the policy for Microsoft Defender Core service
 
 Microsoft [Configuration Manager](/mem/configmgr/core/understand/introduction) has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network.
 
@@ -151,7 +151,7 @@ When adding a new script, you must select and approve it. The approval state cha
 
 On the script page of the Run Script wizard, choose your script from the list (Microsoft Defender Core service enforcement in our example). Only approved scripts are displayed. Select Next and complete the wizard.
 
-### Use Group Policy Editor to update Group Policy for Microsoft Defender Core service
+#### Use Group Policy Editor to update Group Policy for Microsoft Defender Core service
 
 1. Download the latest Microsoft Defender Group Policy Administrative Templates from [here](https://github.com/YongRhee-MSFT/Microsoft-Defender-Antivirus-Group-Policy-Administrative-Templates).
 2. Set up the Domain Controller [Central Repository](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
@@ -170,34 +170,27 @@ Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc
    - Not configured or enabled (default): the Microsoft Defender Core service will collect telemetry from Microsoft Defender Antivirus and other Defender software
    - Disabled: the Microsoft Defender Core service will stop collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.
 
-### Use PowerShell to update the policies for Microsoft Defender Core service.
+#### Use PowerShell to update the policies for Microsoft Defender Core service.
 
-Go to Start, and run PowerShell as an administrator. Use the `Set-MpPreferences -DisableCoreServiceECSIntegration $true or $false` command
-
-For example:
+1. Go to **Start**, and run PowerShell as an administrator.
+2. Use the `Set-MpPreferences`-DisableCoreServiceECSIntegration $true or $false` command, where `$false` = enabled and `$true` = disabled. For example:
 
 ```powershell
 Set-MpPreferences -DisableCoreServiceECSIntegration $false 
 ```
+3. Use the `Set-MpPreferences`-DisableCoreServiceTelemetry $true or $false` command:
+
+For example: 
 
 ```powershell
-Set-MpPreferences -DisableCoreServiceTelemetry $true or $false  
+Set-MpPreferences -DisableCoreServiceTelemetry $true
 ```
 
-Here's an example: 
+#### Use the Registry to update the policies for Microsoft Defender Core service.
 
-```powershell
-Set-MpPreferences -DisableCoreServiceTelemetry $false
-```
-
-`$false` = enabled  
-`$true` = disabled|
-
-### Registry
-
-Select **Start**, and then open Regedit.exe as an administrator.
-
-`HKLM\Software\Policies\Microsoft\Windows Defender\Features`
+1. Select **Start**, and then open Regedit.exe as an administrator.
+2. Go to `HKLM\Software\Policies\Microsoft\Windows Defender\Features`
+3. Set the values:
 
 `DisableCoreService1DSTelemetry` (dword) 0 (hex)  
 `0` = Not configured, enabled (default)  
