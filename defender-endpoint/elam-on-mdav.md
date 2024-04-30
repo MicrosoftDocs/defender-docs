@@ -33,7 +33,7 @@ Detecting malware that starts early in the boot cycle was a challenge before Win
 
 ## Where are the ELAM detections logged?
 
-The ELAM detection is logged in the same location as the other Microsoft Defender Antivirus threats, such as [Event ID 1006](troubleshoot-microsoft-defender-antivirus.md).
+The ELAM detection is logged in the same location as the other Microsoft Defender Antivirus threats, such as [Event ID 1006](troubleshoot-microsoft-defender-antivirus.yml).
 
 ## How do I keep the MDAV ELAM driver up to date?
 

@@ -73,8 +73,9 @@ Microsoft Defender for Endpoint is now available as **Microsoft Defender** in th
 On January 25, 2022, we announced the general availability of Vulnerability management on Android and iOS. For more information, see [the techcommunity post here](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-general-availability-of-vulnerability-management/ba-p/3071663).
 
 ## 1.1.28250101
+
 - **Integration with Tunnel** - Microsoft Defender for Endpoint on iOS can now integrate with Microsoft Tunnel, a VPN gateway solution to enable security and connectivity in a single app. For more information, see [Microsoft Tunnel Overview](/mem/intune/protect/microsoft-tunnel-overview).
-- **Zero-touch onboard for enrolled iOS devices** enrolled through Microsoft Intune is generally available. For more information, see [Zero touch onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-onboarding-of-microsoft-defender-for-endpoint).
+- **Zero-touch onboard for enrolled iOS devices** enrolled through Microsoft Intune is generally available. For more information, see [Zero touch onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-silent-onboarding-of-microsoft-defender-for-endpoint).
 - Bug fixes.
 
 ## 1.1.24210103

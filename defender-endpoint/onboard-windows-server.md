@@ -63,13 +63,14 @@ You'll need to complete the following general steps to successfully onboard serv
 You can offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC), Windows Server 2019, and Windows Server 2019 Core edition with the same method available for Windows 10 client devices.
 
 - [Offboard devices using Configuration Manager](configure-endpoints-sccm.md#offboard-devices-using-configuration-manager)
-- [Offboard and monitor devices using Mobile Device Management tools](configure-endpoints-mdm.md#offboard-and-monitor-devices-using-mobile-device-management-tools)
+- [Offboard devices using Mobile Device Management tools](configure-endpoints-mdm.md#offboard-devices-using-mobile-device-management-tools)
 - [Offboard devices using Group Policy](configure-endpoints-gp.md#offboard-devices-using-group-policy)
 - [Offboard devices using a local script](configure-endpoints-script.md#offboard-devices-using-a-local-script)
 
 After offboarding, you can proceed to uninstall the unified solution package on Windows Server 2012 R2 and Windows Server 2016.
 
 For other Windows server versions, you have two options to offboard Windows servers from the service:
+
 - Uninstall the MMA agent
 - Remove the Defender for Endpoint workspace configuration
 

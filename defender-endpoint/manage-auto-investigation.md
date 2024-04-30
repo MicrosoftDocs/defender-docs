@@ -45,7 +45,7 @@ Here are a few examples:
 
 - **Example 2**: Contoso's devices are included in a device group that is set for **Semi - require approval for any remediation**. In this case, Contoso's security operations team must review and approve all remediation actions following an automated investigation (see [Review pending actions](#review-pending-actions)).
 
-- **Example 3**: Tailspin Toys has their device groups set to **No automated response** (not recommended). In this case, automated investigations do not occur. No remediation actions are taken or pending, and no actions are logged in the [Action center](auto-investigation-action-center.md#the-action-center) for their devices (see [Manage device groups](machine-groups.md#manage-device-groups)).
+- **Example 3**: Tailspin Toys has their device groups set to **No automated response** (not recommended). In this case, automated investigations do not occur. No remediation actions are taken or pending, and no actions are logged in the [Action center](auto-investigation-action-center.md) for their devices (see [Manage device groups](machine-groups.md#manage-device-groups)).
 
 Whether taken automatically or upon approval, an automated investigation and remediation can result in one or more of the remediation actions:
 
