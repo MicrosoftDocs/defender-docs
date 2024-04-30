@@ -111,7 +111,7 @@ sections:
           We recommend enabling every possible rule. However, there are some cases where you shouldn't enable a rule. For example, we don't recommend enabling the Block process creations originating from PSExec and WMI commands rule, if you're using Microsoft Endpoint Configuration Manager (or, System Center Configuration Manager - SCCM) to manage your endpoints.
 
           We highly recommend you that you read each rule-specific information and/or warnings, which are available in our
-          [public documentation](/defender-endpoint/attack-surface-reduction).
+          [public documentation](attack-surface-reduction.md).
            spanning across multiple pillars of protection, like Office, Credentials, Scripts, E-Mail, etc. All attack surface reduction rules, except for Block persistence through WMI event subscription, are supported on Windows 1709 and later:
 
           * [Block abuse of exploited vulnerable signed drivers](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers)
