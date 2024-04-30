@@ -123,9 +123,9 @@ Admins can configure Microsoft Defender for Endpoint in Low Touch Onboarding mod
 
 Android low touch onboarding is disabled by default. Admins can enable it through app configuration policies on Intune by following these steps -
 
-1. Push Defender app to target user group by following these [steps](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/android-intune?view=o365-worldwide#add-microsoft-defender-for-endpoint-on-android-as-a-managed-google-play-app).
+1. Push Defender app to target user group by [following these steps](/microsoft-365/security/defender-endpoint/android-intune#add-microsoft-defender-for-endpoint-on-android-as-a-managed-google-play-app).
 
-2. Push a VPN profile to the user’s device by following the instructions [here](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/android-intune?view=o365-worldwide#auto-setup-of-always-on-vpn).
+2. Push a VPN profile to the user’s device by [following the instructions here](/microsoft-365/security/defender-endpoint/android-intune#auto-setup-of-always-on-vpn).
 
 3. In Apps>Application configuration policies, select Managed Devices.
 
