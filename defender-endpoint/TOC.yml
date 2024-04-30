@@ -454,7 +454,7 @@
         href: machines-view-overview.md
       - name: Exclude devices
         href: exclude-devices.md
-      - name: Identify transient devices
+      - name: Identifying transient devices
         href: transient-device-tagging.md
       - name: Internet facing devices
         href: internet-facing-devices.md
