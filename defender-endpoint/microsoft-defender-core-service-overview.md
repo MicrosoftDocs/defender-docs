@@ -178,9 +178,7 @@ Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc
    ```powershell
    Set-MpPreferences -DisableCoreServiceECSIntegration $false 
    ```
-3. Use the `Set-MpPreferences -DisableCoreServiceTelemetry` $true or $false command:
-
-For example: 
+3. Use the `Set-MpPreferences -DisableCoreServiceTelemetry` $true or $false command, for example: 
 
    ```powershell
    Set-MpPreferences -DisableCoreServiceTelemetry $true
