@@ -163,7 +163,7 @@ Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc
 3. Go to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Microsoft Defender Antivirus**
    
 4. Turn on Experimentation and Configuration Service (ECS) integration for Defender core service
-   -**Not configured or enabled (default)**: the Microsoft Defender core service will use ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software.
+   - **Not configured or enabled (default)**: the Microsoft Defender core service will use ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software.
    - **Disabled**: the Microsoft Defender core service will stop using ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. For false positives, fixes will be delivered via "Security Intelligence updates", and for Platform and/or Engine updates, fixes will be delivered through Microsoft Update, Microsoft Update Catalog or WSUS.
    
 5. Turn on telemetry for Defender core service
