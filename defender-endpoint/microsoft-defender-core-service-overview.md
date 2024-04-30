@@ -92,11 +92,15 @@ You can enforce it by using any of these management tools:
 
 ### Use Configuration Manager co-management (ConfigMgr, formerly MEMCM/SCCM) to update the policy for Microsoft Defender Core service
 
-Use Microsoft [Configuration Manager](/mem/configmgr/core/understand/introduction) to update the policy for Microsoft Defender Core service Configuration Manager has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network.
+Microsoft[Configuration Manager](/mem/configmgr/core/understand/introduction) has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network.
 
-1. Open the Microsoft Configuration Manager console. Select Software Library > Scripts > Create Script.
-
-2. Enter the script name (for example, Microsoft Defender Core service enforcement), description (Demo configuration to enable Microsoft Defender Core service settings), language (PowerShell), timeout seconds (180), and then paste in the following "Microsoft Defender Core service enforcement" script example to use as a template.
+1. Open the Microsoft Configuration Manager console.
+2. Select Software Library > Scripts > Create Script.
+3. Enter the following details:
+      - Script name: for example, Microsoft Defender Core service enforcement
+      - Enter the description: for example, Demo configuration to enable Microsoft Defender Core service settings
+      - Enter the language: PowerShell and set the timeout seconds (180)
+4. Paste in the following "Microsoft Defender Core service enforcement" script example to use as a template:
 
 ```powershell
 ######
@@ -145,21 +149,19 @@ Add-Content -Path $LogFile -Value "------------------------------------
 $ExecutionTime - Execution Ends -------------------------------------------"
 ```
 
-3. When adding a new script, you must select and approve it. The approval state changes from *Waiting for approval* to *Approved*. Once approved, right-click a single device or device collection, and select **Run script**.
-
-5. On the script page of the Run Script wizard, choose your script from the list (Microsoft Defender Core service enforcement in our example). Only approved scripts are displayed. Select Next and complete the wizard.
+5. When adding a new script, you must select and approve it. The approval state changes from *Waiting for approval* to *Approved*. Once approved, right-click a single device or device collection, and select **Run script**.
+6. On the script page of the Run Script wizard, choose your script from the list (Microsoft Defender Core service enforcement in our example). Only approved scripts are displayed. Select Next and complete the wizard.
 
 ### Use Group Policy Editor to update Group Policy for Microsoft Defender Core service
 
 1. Download the latest Microsoft Defender Group Policy Administrative Templates from [here](https://github.com/YongRhee-MSFT/Microsoft-Defender-Antivirus-Group-Policy-Administrative-Templates).
-
-1. Set up the Domain Controller [Central Repository](/troubleshoot/windows-client/group-policy/create-and-manage-central-store) 
+2. Set up the Domain Controller [Central Repository](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
 
 > [!NOTE]
 > Copy the .admx, and separately the .adml to the En-US folder.
 Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc
 
-Computer Configuration -> Administrative Templates -> Windows Components -> Microsoft Defender Antivirus
+3. Go to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Microsoft Defender Antivirus**
 
 - Turn on ECS integration for Defender core service  
   ```md
@@ -181,7 +183,6 @@ Computer Configuration -> Administrative Templates -> Windows Components -> Micr
 Go to Start, and run PowerShell as an administrator. Use the `Set-MpPreferences -DisableCoreServiceECSIntegration $true or $false` command.
 
 For example:
-
 
 ```powershell
 Set-MpPreferences -DisableCoreServiceECSIntegration $false 
