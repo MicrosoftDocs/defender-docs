@@ -24,8 +24,8 @@ ms.date: 10/24/2023
 
 **Applies to:**
 
-- ../microsoft-defender-endpoint.md
-- ../microsoft-defender-endpoint.md
+- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 
 > [!NOTE]
 > For the full data streaming experience available, please visit [Stream Microsoft Defender XDR events | Microsoft Learn](/defender-xdr/streaming-api).
