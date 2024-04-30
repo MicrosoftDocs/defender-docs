@@ -7,7 +7,7 @@ f1.keywords:
   - NOCSH
 ms.author: dansimp
 author: dansimp
-ms.date: 07/09/2021
+ms.date: 04/26/2024
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -38,11 +38,11 @@ Defender for Identity protects your on-premises Active Directory users and/or us
 
 The following diagram illustrates the baseline architecture for Defender for Identity.
 
-:::image type="content" source="/defender/media/defender/m365-defender-identity-architecture.png" alt-text="The identity architecture for Microsoft Defender for Identity" lightbox="/defender/media/defender/m365-defender-identity-architecture.png":::
+:::image type="content" source="./media/eval-defender-xdr/m365-defender-identity-architecture.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Identity." lightbox="./media/eval-defender-xdr/m365-defender-identity-architecture.svg":::
 
 In this illustration:
 
-- Sensors installed on AD domain controllers parse logs and network traffic and send them to Microsoft Defender for Identity for analysis and reporting.
+- Sensors installed on Active Directory Domain Services (AD DS) domain controllers parse logs and network traffic and send them to Microsoft Defender for Identity for analysis and reporting.
 - Sensors can also parse Active Directory Federation Services (AD FS) when Microsoft Entra ID is configured to use federated authentication (dotted line in illustration).
 - Microsoft Defender for Identity shares signals to Microsoft Defender XDR for extended detection and response (XDR).
 
