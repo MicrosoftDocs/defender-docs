@@ -87,7 +87,7 @@ Host pairs reveal connections between websites that traditional data sources, su
     Repeat this step for *mypillow[.]com*. You should notice the following differences  between the two domains’ IP addresses in October 2018:
    - The IP address *mypiltow[.]com* resolved to, 195.161.41[.]65, was hosted in Russia.
 
-     :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypiltow-IP-RU.png" alt-text="Tutorial infrastructure chain mypiltow RU ASN." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypiltow-IP-RU.png":::
+     :::image type="content" source="media/tutorial-infra-chain-mypiltow-IP-RU.png" alt-text="Tutorial infrastructure chain mypiltow RU ASN." lightbox="media/tutorial-infra-chain-mypiltow-IP-RU.png":::
 
    - The two IP addresses used different autonomous system number (ASNs).
 
