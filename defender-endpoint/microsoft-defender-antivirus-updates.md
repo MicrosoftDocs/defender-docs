@@ -98,22 +98,21 @@ All our updates contain
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### April-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
+### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.1)
 
 - Security intelligence update version: **1.409.1.0**
 - Release date: **, 2024** (Engine) / **, 2024** (Platform)
-- Engine: **1.1.24030.4**
-- Platform: **4.18.24030.9**
+- Engine: **1.1.24040.1**
+- Platform: **4.18.24040.1**
 - Support phase: **Security and Critical Updates**
 
 #### What's new
 
-- Added an opt-out feature to Experimental Configuration Services (ECS) and One collector in the Core Service.
-- Fixed problem with exclusions occasionally not being honored when deployed via Intune and having Tamper protection enabled
-*** Going forward, this release onwards, the platform will only load an engine version that is not older then 2 months
-*** Fixed an engine loading crash when engine was greater than N-2 platform version. Older engines will no longer load. (https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-updates?view=o365-worldwide)
-- Improved health monitoring and telemetry for ASR exclusions.
-- Corrected incorrect statements regarding wildcard usage with Contextual exclusions (configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+- Added an opt-out feature for Experimental Configuration Services (ECS) and One collector in the Core Service.
+- Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
+- After a new platform and engine version is released, support for older versions (N-2) will now reduce to technical support only. Platform and engine versions older than N-2 are no longer supported.
+- Improved health monitoring and telemetry for [Attack Surface Rules](overview-attack-surface-reduction.md) exclusions.
+- Updated inaccurate information regarding wildcard usage with contextual exclusions (configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
 ### March-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
 
