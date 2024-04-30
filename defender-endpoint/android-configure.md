@@ -4,6 +4,7 @@ description: Describes how to configure Microsoft Defender for Endpoint on Andro
 ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
+ms.reviewer: priyankagill
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
