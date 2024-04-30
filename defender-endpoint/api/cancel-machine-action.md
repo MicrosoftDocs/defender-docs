@@ -26,9 +26,9 @@ ms.date: 06/03/2021
 
 **Applies to:**
 
-- [ Microsoft Defender for Endpoint](/defender-xdr/microsoft-365-security-center-mde)
-- [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1)
-- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/defender-endpoint-plan-1)
+- [Microsoft Defender for Endpoint](/defender-xdr/microsoft-365-security-center-mde)
+- [Microsoft Defender for Endpoint Plan 1](../defender-endpoint-plan-1.md)
+- [Microsoft Defender for Endpoint Plan 2](../microsoft-defender-endpoint.md)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 

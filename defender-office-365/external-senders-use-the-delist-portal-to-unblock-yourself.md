@@ -56,7 +56,7 @@ There are good reasons for senders to wind up on the blocked senders list, but m
 
 4. A message that looks like the following example is sent to the email address that you entered on the **Office 365 Anti-Spam IP Delist Portal** page.
 
-    :::image type="content" source="/defender/media/bf13e4f7-f68c-4e46-baa7-b6ab4cfc13f3.png" alt-text="The email received when you submit a request through the delist portal" lightbox="/defender/media/bf13e4f7-f68c-4e46-baa7-b6ab4cfc13f3.png":::
+    :::image type="content" source="media/bf13e4f7-f68c-4e46-baa7-b6ab4cfc13f3.png" alt-text="The email received when you submit a request through the delist portal" lightbox="media/bf13e4f7-f68c-4e46-baa7-b6ab4cfc13f3.png":::
 
    Select the confirmation link in the email message to open the delist portal.
 

@@ -56,7 +56,7 @@ Or, you can go to the Microsoft Security Intelligence page at <https://www.micro
 
 After you've uploaded the file or files, note the **Submission ID** that's created for your sample submission (for example, `7c6c214b-17d4-4703-860b-7f1e9da03f7f`).
 
-:::image type="content" source="/defender/media/EOP-Malware-Protection-Center.png" alt-text="The submission details in the Windows Defender Security Intelligence website" lightbox="/defender/media/EOP-Malware-Protection-Center.png":::
+:::image type="content" source="media/EOP-Malware-Protection-Center.png" alt-text="The submission details in the Windows Defender Security Intelligence website" lightbox="media/EOP-Malware-Protection-Center.png":::
 
 After we receive the sample, we'll investigate. If we determine that the sample file is malicious, we take corrective action to prevent the malware from going undetected.
 
