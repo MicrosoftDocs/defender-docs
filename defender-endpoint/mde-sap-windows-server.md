@@ -214,7 +214,7 @@ Here's a list of what to check:
 
    For more information about updates, see [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).
 
-5. **Make sure [behavior monitoring](behavioral-blocking-containment.md) is turned on**. If tamper protection is enabled, behavior monitoring is turned on by default. Use the default configuration of tamper protection enabled, behavior monitoring enabled, and real-time monitoring enabled unless a specific problem is identified. 
+5. **Make sure [behavior monitoring](behavioral-blocking-containment.md) is turned on**. When tamper protection is enabled, behavior monitoring is turned on by default. Use the default configuration of tamper protection enabled, behavior monitoring enabled, and real-time monitoring enabled unless a specific problem is identified. 
 
    For more information, see [Built-in protection helps guard against ransomware](built-in-protection.md).
 
