@@ -46,7 +46,7 @@ Be aware of the following before you start:
 
 ## Software components and installer file names
 
-Installer: `DefenderPlugin-x64-0.23.1102.4.msi`. You can download it from the onboarding page in the [Microsoft Defender portal](https://security.microsoft.com).
+Installer: `DefenderPlugin-x64-0.24.426.1.msi`. You can download it from the onboarding page in the [Microsoft Defender portal](https://security.microsoft.com).
 
 Installation directories: 
 
@@ -100,9 +100,9 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
 5. Review the details of Defender and WSL and make sure they match or exceed the following requirements:
 
-   - **Defender Plug-in Version**: `0.23.1102.4`
+   - **Defender Plug-in Version**: `0.24.426.1`
    - **WSL Version**: `2.0.7.0` or later
-   - **WSL Defender Version**: `101.23092.0011`
+   - **WSL Defender Version**: `701.00000.1509`
    - **WSL Defender Health**: `Healthy`
 
 ## Setting a proxy for Defender running in WSL
@@ -200,17 +200,18 @@ In the Advanced Hunting schema, under the `DeviceInfo` table, there's a new attr
 #### Get all WSL device IDs for the current organization/tenant 
 
 ```kusto
-Get all WSL device ids for the current organization/tenant 
+//Get all WSL device ids for the current organization/tenant 
 let wsl_endpoints = DeviceInfo  
 | where OSPlatform == "Linux" and isempty(HostDeviceId) != true
 | distinct DeviceId; 
+
 wsl_endpoints
 ```
 
 #### Get WSL device IDs and their corresponding host device IDs 
 
 ```kusto
-Get WSL device ids and their corresponding host device ids 
+//Get WSL device ids and their corresponding host device ids 
 DeviceInfo  
 | where OSPlatform == "Linux" and isempty(HostDeviceId) != true
 | distinct WSLDeviceId=DeviceId, HostDeviceId
@@ -219,10 +220,11 @@ DeviceInfo
 #### Get a list of WSL device IDs where curl or wget was run
 
 ```kusto
-Get a list of WSL device ids where curl or wget was run
+//Get a list of WSL device ids where curl or wget was run
 let wsl_endpoints = DeviceInfo  
 | where OSPlatform == "Linux" and isempty(HostDeviceId) != true
 | distinct DeviceId; 
+
 DeviceProcessEvents   
 | where FileName == "curl" or FileName == "wget" 
 | where DeviceId in (wsl_endpoints) 
@@ -297,9 +299,9 @@ DeviceProcessEvents
    wsl --set-default-version 2
    ```
 
-7. The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following:
+7. The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following under registry and restart wsl:
 
-   - `Dogfood`
-   - `InsiderFast`
-   - `External`
-   - `Production`
+   - **Name**: `OverrideReleaseRing`
+   - **Type**: `REG_SZ`
+   - **Value**: `Dogfood or External or InsiderFast or Production`
+   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint Plug-in for WSL`
