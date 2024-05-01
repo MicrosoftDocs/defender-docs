@@ -25,6 +25,9 @@ In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Offi
 
 A Training campaign contains one or more built-in Training modules that you select. Currently, there are over 70 Training modules to select from. For more information about Training modules, see [Training modules for Training campaigns in Attack simulation training](attack-simulation-training-training-modules.md).
 
+Watch this short video to learn more about training campaigns in Attack simulation training
+> [!VIDEO https://www.youtube.com/embed/haWAG4TM1Io]
+
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
 To see the existing Training campaigns, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Training** tab. Or, to go directly to the **Training** tab, use <https://security.microsoft.com/attacksimulator?viewid=trainingcampaign>.
