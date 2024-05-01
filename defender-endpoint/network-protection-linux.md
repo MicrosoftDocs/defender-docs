@@ -4,9 +4,9 @@ description: Protect your network by preventing Linux users from accessing known
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
-author: siosulli
-ms.author: siosulli
-manager: deniseb
+author: dansimp
+ms.author: dansimp
+manager: dansimp
 ms.subservice: linux
 ms.topic: overview
 ms.collection: 
@@ -14,7 +14,7 @@ ms.collection:
 - tier2
 - mde-linux
 search.appverid: met150
-ms.date: 02/17/2023
+ms.date: 05/01/2024
 ---
 
 # Network protection for Linux
