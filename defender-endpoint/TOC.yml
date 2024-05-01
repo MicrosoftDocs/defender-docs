@@ -184,8 +184,8 @@
             href: mac-jamfpro-policies.md
           - name: Enroll devices
             href: mac-jamfpro-enroll-devices.md        
-          - name: Deployment with Mobile Device Management (MDM) systems
-            href: mac-install-with-other-mdm.md
+        - name: Deployment with other Mobile Device Management (MDM) systems
+          href: mac-install-with-other-mdm.md
         - name: Manual deployment
           href: mac-install-manually.md
       - name: Configure Defender for Endpoint on macOS

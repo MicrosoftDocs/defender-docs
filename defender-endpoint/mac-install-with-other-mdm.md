@@ -103,6 +103,76 @@ Note that Apple regularly creates new types of payloads with new versions of OS.
 You'll have to visit the above mentioned page, and publish new profiles once they became available.
 We post notifications to our [What's New page](mac-whatsnew.md) once we make changes like that.
 
+### Defender configuration settings
+
+To deploy Microsoft Defender configuration, you need a configuration profile.
+The ultimate goal is that:
+
+#### 1. MDM deploys configuration profile to enrolled machines
+
+You can view profiles in System Settings => Profiles => Look by the name that you used for Microsoft Defender configuration settings profile.
+If you do not see it, then please refer to your MDM manual for how to do that.
+
+#### 2. It ended up in the correct file
+
+Microsoft Defender reads `/Library/Managed Preferences/com.microsoft.wdav.plist` and `/Library/Managed Preferences/com.microsoft.wdav.ext.plist` files.
+It uses only those two files for managed settings.
+
+If you cannot see those files, but you ensured that the profiles was delivered (see the previous chapter),
+then it means that you misconfigured your profiles. Either you made this configuration profile "User Level" instead of "Computer Level", 
+or you used a different Preference Domain instead of those that Microsoft Defender expects ("com.microsoft.wdav" and "com.microsoft.wdav.ext").
+
+Please refer to your MDM manual for how to setup application configuration profiles.
+
+#### 3. It has the expected structure
+
+That can be the most tricky part to check. Microsoft Defender expects com.microsoft.wdav.plist with a strict structure.
+If you put settings to unexpected place, or misspell them, or use an invalid type, they will be silently ignored.
+
+1) You can check `mdatp health` and confirm that the settings you configured are reported as `[managed]`.
+2) You can inspect the content of `/Library/Managed Preferences/com.microsoft.wdav.plist` and make sure that it matches the expected settings:
+
+```shell
+plutil -p "/Library/Managed\ Preferences/com.microsoft.wdav.plist"
+
+{
+  "antivirusEngine" => {
+    "scanHistoryMaximumItems" => 10000
+  }
+  "edr" => {
+    "groupIds" => "my_favorite_group"
+    "tags" => [
+      0 => {
+        "key" => "GROUP"
+        "value" => "my_favorite_tag"
+      }
+    ]
+  }
+  "tamperProtection" => {
+    "enforcementLevel" => "audit"
+    "exclusions" => [
+      0 => {
+        "args" => [
+          0 => "/usr/local/bin/test.sh"
+        ]
+        "path" => "/bin/zsh"
+        "signingId" => "com.apple.zsh"
+        "teamId" => ""
+      }
+    ]
+  }
+}
+```
+
+You can use documented [Configuration profile structure](https://learn.microsoft.com/en-us/defender-endpoint/mac-preferences?view=o365-worldwide) as a guideline.
+It explains that "antivirusEngine", "edr", "tamperProtection" are settings at the top level of the configuration file. And e.g. "scanHistoryMaximumItems" are at the second level and are of integer type.
+That's what you can see in the output above. If you found out that e.g. "antivirusEngine" is nested under some other setting - then you misconfigured it. If you can see "antivirusengine" instead of "antivirusEngine", then you misspelled the name, and the whole subtree of settings will be ignored. If `"scanHistoryMaximumItems" => "10000"`, then you chose the wrong type, and the setting will be ignored.
+
+## Check that all profiles are deployed
+
+You can download and run [analyze_profiles.py](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mdm). It will collect and analyze all profiles deployed to a machine and warn about missed ones.
+Note that it can miss some errors, and it is not aware of some design decisions that system administrators are making deliberately, so use it for guidance, but always investigate if you see something marked as an error. (For example, the onboarding guide tells you to deploy a configuration profile for onboarding blob. Yet, some organizations decide to run the manual onboarding script instead. analyze_profile.py will warn you about the missed profile. You can either decide to onboard via configuration profile, or disregard the warning altogether. It is up to you.)
+
 ## Check installation status
 
 Run [Microsoft Defender for Endpoint](mac-install-with-jamf.md) on a client device to check the onboarding status.
