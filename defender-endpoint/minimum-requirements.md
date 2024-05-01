@@ -6,7 +6,7 @@ ms.author: siosulli
 author: siosulli
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 11/15/2023
+ms.date: 05/01/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -99,7 +99,7 @@ The following operating systems require the use of the [Log Analytics](/azure/az
 - Windows Server 2008 R2 SP1
 
 > [!NOTE]
-> Ensure you [stay up to date with the Microsoft Monitoring Agent](defender-endpoint/update-agent-mma-windows.md) (MMA, also known as the Log Analytics or Azure Monitor agent) to avoid service interruptions. 
+> Ensure you [stay up to date with the Microsoft Monitoring Agent](update-agent-mma-windows.md) (MMA, also known as the Log Analytics or Azure Monitor agent) to avoid service interruptions. 
 
 To add antimalware protection to these older operating systems, you can use [System Center Endpoint Protection](onboard-downlevel.md#configure-and-update-system-center-endpoint-protection-clients). 
 
