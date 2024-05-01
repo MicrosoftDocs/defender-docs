@@ -15,6 +15,7 @@ ms.topic: conceptual
 ms.date: 04/26/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+ROBOTS: NOINDEX, NOFOLLOW
 ---
 
 # Endpoint security policies in multitenant management
