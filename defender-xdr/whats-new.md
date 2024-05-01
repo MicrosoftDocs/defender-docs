@@ -31,7 +31,6 @@ You can also get product updates and important notifications through the [messag
 
 ## April 2024
 
-- (Preview) **Endpoint security policies** page in multitenant management is now available. Security administrators can manage security settings on their tenants' devices through the page. For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md).
 - (Preview) The **unified security operations platform** in the Microsoft Defender portal is now available. This release brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, and Microsoft Copilot in Microsoft Defender. For more information, see the following resources:
 
   - Blog announcement: [Unified security operations platform ready to revolutionize protection and efficiency](https://aka.ms/unified-soc-announcement)
