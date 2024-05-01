@@ -91,7 +91,7 @@ To grant consent automatically on a user's behalf, an administrator pushes syste
 
 We supply all policies that Microsoft Defender for Endpoint requires as mobileconfig files available at [https://github.com/microsoft/mdatp-xplat](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles). Mobileconfig is an Apple's import/export format that [Apple Configurator](https://support.apple.com/apple-configurator) or other products like [iMazing Profile Editor](https://imazing.com/profile-editor) support.
 
-Most MDM vendors support importing a mobileconfig file, creating a new custom configuration profile.
+Most MDM vendors support importing a mobileconfig file that creates a new custom configuration profile.
 
 To set up profiles:
 
@@ -99,35 +99,33 @@ To set up profiles:
 2) For all profiles from [https://github.com/microsoft/mdatp-xplat](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles), download a mobileconfig file and import it.
 3) Assign proper scope for each created configuration profile.
 
-Note that Apple regularly creates new types of payloads with new versions of OS.
-You'll have to visit the above mentioned page, and publish new profiles once they became available.
+Note that Apple regularly creates new types of payloads with new versions of an OS.
+You'll need to visit the above mentioned page, and publish new profiles once they became available.
 We post notifications to our [What's New page](mac-whatsnew.md) once we make changes like that.
 
-### Defender configuration settings
+### Defender for Endpoint configuration settings
 
-To deploy Microsoft Defender configuration, you need a configuration profile.
-The ultimate goal is that:
+To deploy Microsoft Defender for Endpoint configuration, you need a configuration profile.
 
-#### 1. MDM deploys configuration profile to enrolled machines
+The following steps show how to apply and verify applying a configuration profile.
 
-You can view profiles in System Settings => Profiles => Look by the name that you used for Microsoft Defender configuration settings profile.
-If you do not see it, then please refer to your MDM manual for how to do that.
+**1. MDM deploys configuration profile to enrolled machines**
+You can view profiles in System Settings > Profiles. Look for the name that you used for Microsoft Defender for Endpoint configuration settings profile.
+If you do not see it, then refer to your MDM documentation for troubleshooting tips. 
 
-#### 2. It ended up in the correct file
+**2. The configuration profile shows up in the correct file**
 
-Microsoft Defender reads `/Library/Managed Preferences/com.microsoft.wdav.plist` and `/Library/Managed Preferences/com.microsoft.wdav.ext.plist` files.
+Microsoft Defender for Endpoint reads `/Library/Managed Preferences/com.microsoft.wdav.plist` and `/Library/Managed Preferences/com.microsoft.wdav.ext.plist` files.
 It uses only those two files for managed settings.
 
-If you cannot see those files, but you ensured that the profiles was delivered (see the previous chapter),
-then it means that you misconfigured your profiles. Either you made this configuration profile "User Level" instead of "Computer Level", 
-or you used a different Preference Domain instead of those that Microsoft Defender expects ("com.microsoft.wdav" and "com.microsoft.wdav.ext").
+If you cannot see those files, but you verified that the profiles were delivered (see the previous section), then it means that your profiles are misconfigured. Either you made this configuration profile "User Level" instead of "Computer Level", or you used a different Preference Domain instead of those that Microsoft Defender for Endpoint expects ("com.microsoft.wdav" and "com.microsoft.wdav.ext").
 
-Please refer to your MDM manual for how to setup application configuration profiles.
+Refer to your MDM documentation for how to setup application configuration profiles.
 
-#### 3. It has the expected structure
+#### 3. The configuration profile contains the expected structure
 
-That can be the most tricky part to check. Microsoft Defender expects com.microsoft.wdav.plist with a strict structure.
-If you put settings to unexpected place, or misspell them, or use an invalid type, they will be silently ignored.
+This step can be tricky to verify. Microsoft Defender for Endpoint expects com.microsoft.wdav.plist with a strict structure.
+If you put settings to unexpected place, or misspell them, or use an invalid type, the settings will be silently ignored.
 
 1) You can check `mdatp health` and confirm that the settings you configured are reported as `[managed]`.
 2) You can inspect the content of `/Library/Managed Preferences/com.microsoft.wdav.plist` and make sure that it matches the expected settings:
@@ -164,14 +162,16 @@ plutil -p "/Library/Managed\ Preferences/com.microsoft.wdav.plist"
 }
 ```
 
-You can use documented [Configuration profile structure](mac-preferences.md) as a guideline.
-It explains that "antivirusEngine", "edr", "tamperProtection" are settings at the top level of the configuration file. And e.g. "scanHistoryMaximumItems" are at the second level and are of integer type.
-That's what you can see in the output above. If you found out that e.g. "antivirusEngine" is nested under some other setting - then you misconfigured it. If you can see "antivirusengine" instead of "antivirusEngine", then you misspelled the name, and the whole subtree of settings will be ignored. If `"scanHistoryMaximumItems" => "10000"`, then you chose the wrong type, and the setting will be ignored.
+You can use the documented [Configuration profile structure](mac-preferences.md) as a guideline.
+
+This article explains that "antivirusEngine", "edr", "tamperProtection" are settings at the top level of the configuration file. And e.g. "scanHistoryMaximumItems" are at the second level and are of integer type.
+
+You should see this information in the output of the previous command. If you found out that "antivirusEngine" is nested under some other setting - then the profile is misconfigured. If you can see "antivirusengine" instead of "antivirusEngine", the name is misspelled and the whole subtree of settings are ignored. If `"scanHistoryMaximumItems" => "10000"`, the wrong type is used and the setting will be ignored.
 
 ## Check that all profiles are deployed
 
-You can download and run [analyze_profiles.py](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mdm). It will collect and analyze all profiles deployed to a machine and warn about missed ones.
-Note that it can miss some errors, and it is not aware of some design decisions that system administrators are making deliberately, so use it for guidance, but always investigate if you see something marked as an error. (For example, the onboarding guide tells you to deploy a configuration profile for onboarding blob. Yet, some organizations decide to run the manual onboarding script instead. analyze_profile.py will warn you about the missed profile. You can either decide to onboard via configuration profile, or disregard the warning altogether. It is up to you.)
+You can download and run [analyze_profiles.py](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mdm). This script will collect and analyze all profiles deployed to a machine and warn you about missed ones.
+Note that it can miss some errors, and it is not aware of some design decisions that system administrators are making deliberately. Use this script for guidance, but always investigate if you see something marked as an error. For example, the onboarding guide tells you to deploy a configuration profile for onboarding blob. Yet, some organizations decide to run the manual onboarding script instead. analyze_profile.py will warn you about the missed profile. You can either decide to onboard via configuration profile, or disregard the warning altogether.
 
 ## Check installation status
 
