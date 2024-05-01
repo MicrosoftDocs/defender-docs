@@ -2,11 +2,11 @@
 title: Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux
 description: Troubleshoot missing events or alerts issues in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: dansimp
+author: dansimp
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -16,7 +16,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/02/2021
+ms.date: 05/01/2024
 ---
 
 # Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux
