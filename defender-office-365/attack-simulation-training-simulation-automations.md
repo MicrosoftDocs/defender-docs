@@ -27,6 +27,10 @@ For getting started information about Attack simulation training, see [Get start
 
 To see any existing simulation automations that you created, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Automations** tab \> and then select **Simulation automations**. To go directly to the **Automations** tab where you can select **Simulation automations**, use <https://security.microsoft.com/attacksimulator?viewid=automations>.
 
+Watch this short video to learn more about simulation automations in Attack simulation training
+> [!VIDEO https://www.youtube.com/embed/QXElYtr7ZJ0]
+
+
 The following information is shown for each simulation automation. You can sort the simulation automations by clicking on an available column header.
 
 - **Name campaign**
