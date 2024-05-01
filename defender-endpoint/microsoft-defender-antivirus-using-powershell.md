@@ -45,7 +45,7 @@ If you have any questions about a detection that Microsoft Defender AV makes, or
 
 ## Use PowerShell to enable the features
 
-This guide provides the [Microsoft Defender Antivirus cmdlets](/powershell/module/defender/?view=windowsserver2022-ps) that configure the features you should use to evaluate our protection.
+This guide provides the [Microsoft Defender Antivirus cmdlets](/powershell/module/defender/?view=windowsserver2022-ps&preserve-view=true) that configure the features you should use to evaluate our protection.
 
 To use these cmdlets:
 
@@ -53,7 +53,7 @@ To use these cmdlets:
 >
 > 2\. Enter the command listed in this guide and press Enter.
 
-You can check the status of all settings before you begin, or during your evaluation, by using the [Get-MpPreference PowerShell cmdlet](/powershell/module/defender/get-mppreference?view=windowsserver2022-ps).
+You can check the status of all settings before you begin, or during your evaluation, by using the [Get-MpPreference PowerShell cmdlet](/powershell/module/defender/get-mppreference?view=windowsserver2022-ps&preserve-view=true).
 
 Microsoft Defender AV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender AV app](review-scan-results-microsoft-defender-antivirus.md).
 
