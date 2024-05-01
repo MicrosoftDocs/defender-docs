@@ -164,7 +164,7 @@ plutil -p "/Library/Managed\ Preferences/com.microsoft.wdav.plist"
 }
 ```
 
-You can use documented [Configuration profile structure](https://learn.microsoft.com/en-us/defender-endpoint/mac-preferences?view=o365-worldwide) as a guideline.
+You can use documented [Configuration profile structure](mac-preferences.md) as a guideline.
 It explains that "antivirusEngine", "edr", "tamperProtection" are settings at the top level of the configuration file. And e.g. "scanHistoryMaximumItems" are at the second level and are of integer type.
 That's what you can see in the output above. If you found out that e.g. "antivirusEngine" is nested under some other setting - then you misconfigured it. If you can see "antivirusengine" instead of "antivirusEngine", then you misspelled the name, and the whole subtree of settings will be ignored. If `"scanHistoryMaximumItems" => "10000"`, then you chose the wrong type, and the setting will be ignored.
 
