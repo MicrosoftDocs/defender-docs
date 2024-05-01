@@ -302,7 +302,7 @@ It isn't recommended to exclude files, paths, or processes from EDR as such excl
 > [!CAUTION]
 > It is not recommended to disable security software unless there is no alternative to solve or isolate a problem. 
 
-Defender for Endpoint should be configured with [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) turned on. To temporarily disable Defender for Endpoint to isolate problems, it's recommended to use [troubleshooting mode](enable-troubleshooting-mode.md).
+Defender for Endpoint should be configured with [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) turned on. To temporarily disable Defender for Endpoint to isolate problems, use [troubleshooting mode](enable-troubleshooting-mode.md).
 
 To shut down various subcomponents of the Microsoft Defender Antivirus solution, run the following commands:
 
