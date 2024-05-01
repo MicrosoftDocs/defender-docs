@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
-description: Learn how to set up and use the MDE plugin for Windows Subsystem for Linux.
+description: Learn how to set up and use the MDE plug-in for Windows Subsystem for Linux.
 author: siosulli
 ms.author: siosulli
 manager: deniseb
@@ -32,7 +32,7 @@ Be aware of the following before you start:
 
 2. As it takes a few minutes for the plug-in to fully instantiate and up to 30 minutes for a WSL2 instance to onboard itself, short-lived WSL container instances might result in the WSL2 instance not showing up in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Once a (any) distribution has been running long enough (at least 30 minutes), it does show up.
 
-3. The use of a custom kernel in combination with the plug-in isn't supported. When you attempt to launch WSL with the plugin installed, you'll encounter the error *A fatal error was returned by plugin 'DefenderforEndpointPlug-in'. Error message: 'Custom Kernel/Configuration not supported.'*. 
+3. Custom Kernel or Custom Kernel configuration is not supported, however it is not blocked; This is best-effort support. 
 
 ## Software prerequisites
 
@@ -50,15 +50,15 @@ Installer: `DefenderPlugin-x64-0.24.426.1.msi`. You can download it from the onb
 
 Installation directories: 
 
-- `C:\Program Files\`
+- `%ProgramFiles%`
 
-- `C:\ProgramData\`
+- `%ProgramData%`
 
 Components installed:
 
-- `DefenderforEndpointPlug-in.dll`. This DLL is the library to load Defender for Endpoint to work within WSL. You can find it at **C:\Program Files\Microsoft Defender for Endpoint plug-in for WSL\plug-in**. 
+- `DefenderforEndpointPlug-in.dll`. This DLL is the library to load Defender for Endpoint to work within WSL. You can find it at **%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\plug-in**. 
 
-- `healthcheck.exe`. This program checks the health status of Defender for Endpoint and enables you to see the installed versions of WSL, plug-in, and Defender for Endpoint. You can find it at **C:\Program Files\Microsoft Defender for Endpoint plug-in for WSL\tools**.
+- `healthcheck.exe`. This program checks the health status of Defender for Endpoint and enables you to see the installed versions of WSL, plug-in, and Defender for Endpoint. You can find it at **%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools**.
 
 ## Installation steps
 
@@ -70,7 +70,7 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
     ### 1. Confirm WSL is installed and running
 
-    1. Using Terminal or Command Prompt, run `wsl –update` to make sure you have the latest version.
+    1. Using Terminal or Command Prompt, run `wsl –-update` to make sure you have the latest version.
 
     2. Run the `wsl` command to ensure WSL is running before testing.
 
@@ -79,7 +79,7 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
     After WSL is running and fully up to date, follow these steps to install the plug-in:
 
-    1. Install the MSI file downloaded from the onboarding section in the Microsoft Defender portal (**Settings** > **Endpoints** > **Onboarding** > **Windows Subsystem for Linux 2 (plug-in)**.)
+    1. Install the MSI file downloaded from the onboarding section in the Microsoft Defender portal (**Settings** > **Endpoints** > **Onboarding** > **Windows Subsystem for Linux 2 (plug-in)**).
 
     2. Open a command prompt/terminal and run `wsl`.
 
@@ -94,16 +94,16 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
 2. Open Terminal or Command Prompt. (In Windows, go to **Start** > **Command Prompt**. Or, right-click the start button and then select **Terminal**.) 
 
-3. Run the command: ```cd "C:\Program Files\Microsoft Defender for Endpoint plug-in for WSL\tools"```.
+3. Run the command: ```cd "%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools"```.
 
 4. Run the command `.\healthcheck.exe`.
 
 5. Review the details of Defender and WSL and make sure they match or exceed the following requirements:
 
-   - **Defender Plug-in Version**: `0.24.426.1`
+   - **Plug-in Version**: `0.24.426.1`
    - **WSL Version**: `2.0.7.0` or later
-   - **WSL Defender Version**: `701.00000.1509`
-   - **WSL Defender Health**: `Healthy`
+   - **Defender App Version**: `701.00000.1509`
+   - **Defender Health Status**: `Healthy`
 
 ## Setting a proxy for Defender running in WSL
 
@@ -140,8 +140,8 @@ The following procedure describes how to confirm that Defender in Endpoint in WS
 
    - **Name**: `ConnectivityTest`
    - **Type**: `REG_DWORD`
-   - **Value**: `Number of seconds plug-in must wait before running test. (Recommended: 60 seconds)`
-   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint Plug-in for WSL`
+   - **Value**: `Number of seconds plug-in must wait before running the test. (Recommended: 60 seconds)`
+   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
 
 3. Once the registry is set, restart wsl using the following steps:
 
@@ -149,7 +149,7 @@ The following procedure describes how to confirm that Defender in Endpoint in WS
 
    2. Run the command `wsl`.
 
-4. Wait for 5 minutes and then run `healthcheck.exe` (located at `C:\Program Files\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test).
+4. Wait for 5 minutes and then run `healthcheck.exe` (located at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test).
 
    If successful, you can see that the connectivity test was successful. 
 
@@ -255,7 +255,7 @@ DeviceProcessEvents
  
    - Make sure to use the right filters, and that you have the appropriate permissions assigned to view all device objects. (For example, is your account/group is restricted to a specific group?)
  
-   - Use the health check tool to provide an overview of overall plug-in health. Open Terminal, and run the `healthcheck.exe` tool from `C:\Program Files\Microsoft Defender for Endpoint plug-in for WSL\tools`.
+   - Use the health check tool to provide an overview of overall plug-in health. Open Terminal, and run the `healthcheck.exe` tool from `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools`.
 
       :::image type="content" source="media/mdeplugin-wsl/wsl-health-check-support.png" alt-text="Screenshot showing status in PowerShell." lightbox="media/mdeplugin-wsl/wsl-health-check-support.png":::
 
@@ -264,7 +264,7 @@ DeviceProcessEvents
 5. In case you face any other challenges or issues, open the terminal and run the following commands to generate the support bundle: 
 
    ```powershell
-   cd "C:\Program Files\Microsoft Defender for Endpoint plug-in for WSL\tools"
+   cd "%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools"
    ```
 
    ```powershell
@@ -304,4 +304,4 @@ DeviceProcessEvents
    - **Name**: `OverrideReleaseRing`
    - **Type**: `REG_SZ`
    - **Value**: `Dogfood or External or InsiderFast or Production`
-   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint Plug-in for WSL`
+   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
