@@ -30,7 +30,7 @@ ms.topic: conceptual
 
 The following features are in preview or generally available (GA) in the latest release of Microsoft Defender for Endpoint.
 
-For more information on preview features, see [Preview features](../defender-xdr/preview.mdpreview.md).
+For more information on preview features, see [Preview features](/defender-xdr/preview.md).
 
 For more information on what's new with Microsoft Defender for Endpoint on Windows, see:
 [What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md)
@@ -62,7 +62,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - **Turn preview options on in the main Microsoft 365 Defender settings** (Preview): Turn preview options on in the main Microsoft 365 Defender settings, together with other Microsoft 365 Defender preview features. Customers not yet using preview features continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**.
 
-    For more information, see [Microsoft 365 Defender preview features](../defender-xdr/preview.md).
+    For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview.md).
 
 ## February 2024
 

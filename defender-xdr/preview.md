@@ -69,7 +69,7 @@ In Microsoft Defender XDR, select **Settings > Microsoft Defender XDR > General 
 
 (Preview) If you already have preview features turned on, and you're a Microsoft Defender for Business, Microsoft Defender for Endpoint, or Microsoft Defender for Cloud Apps customer, you can also select to turn preview features on and off for specific services only. For example:
 
-:::image type="content" source="/defender/media/preview-features-settings.png" alt-text="Screenshot of the preview features settings.":::
+:::image type="content" source="../defender/media/preview-features-settings.png" alt-text="Screenshot of the preview features settings.":::
 
 If you don't yet have preview features turned on, manage Defender for Business and Defender for Endpoint preview features from the **Settings > Endpoints > Advanced features > Preview features** page, and Defender for Cloud Apps preview features from the **Settings > Cloud Apps > General > Preview features** page.
 
