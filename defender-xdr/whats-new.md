@@ -42,7 +42,13 @@ You can also get product updates and important notifications through the [messag
 - (GA) **[Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)** is now generally available. Copilot in Defender helps you investigate and respond to incidents faster and more effectively. Copilot provides guided responses, incident summaries and reports, helps you build KQL queries to hunt for threats, provide file and script analyses, and enable you to summarize relevant and actionable threat intelligence.
 - Copilot in Defender customers can now export incident data to PDF. Use the exported data to easily share incident data, facilitating discussions with your security teams and other stakeholders. For details, see **[Export incident data to PDF](manage-incidents.md#export-incident-data-to-pdf)**.
 - **Notifications in the Microsoft Defender portal** are now available. On the top right-hand side of the Defender portal, select the bell icon to view all your active notifications. Different types of notifications are supported such as success, info, warning, and error. Dismiss individual notifications or dismiss all from the notifications tab.
-- The `AzureResourceId` column, which shows the unique identifier of the Azure resource associated with a device, is now available in the [DeviceInfo](advanced-hunting-deviceinfo-table.md) table in advanced hunting. 
+- The `AzureResourceId` column, which shows the unique identifier of the Azure resource associated with a device, is now available in the [DeviceInfo](advanced-hunting-deviceinfo-table.md) table in advanced hunting.
+
+## March 2024
+
+- (Preview) **Toggle on preview features in a centralized location**, for Microsoft Defender XDR, Microsoft Defender for Identity, Microsoft Defender for Endpoint, and Microsoft Defender for Cloud Apps. Customers with multiple services can turn preview features on and off at the service level, from a single location. For more information, see [Microsoft Defender XDR preview features](preview.md).
+
+Customers who don't yet have preview features turned on see only a single option to turn preview features on and off, without granularity per service. In such cases, turn preview features on for Defender for Endpoint and Defender for Cloud Apps separately in the relevant service-specific settings areas.
 
 ## February 2024
 

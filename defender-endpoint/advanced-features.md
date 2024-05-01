@@ -230,6 +230,9 @@ Learn about new features in the Defender for Endpoint preview release. Try upcom
 
 You'll have access to upcoming features, which you can provide feedback on to help improve the overall experience before features are generally available.
 
+> [!NOTE]
+> If you already have preview features turned on, manage your settings from the main Defender XDR settings. For more information, see [Microsoft Defender XDR preview features](../defender-xdr/preview.md).
+
 ## Download quarantined files
 
 Backup quarantined files in a secure and compliant location so they can be downloaded directly from quarantine. The **Download file** button will always be available in the file page. This setting is turned on by default. [Learn more about requirements](respond-file-alerts.md#download-quarantined-files)

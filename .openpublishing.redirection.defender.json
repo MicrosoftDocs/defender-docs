@@ -4,6 +4,21 @@
         "source_path": "defender/advanced-hunting-overview.md",
         "redirect_url": "/defender-xdr/advanced-hunting-overview",
         "redirect_document_id": false
+    },
+    {
+        "source_path": "defender-endpoint/preview.md",
+        "redirect_url": "/defender-xdr/preview.md",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "defender-endpoint/preview-settings.md",
+        "redirect_url": "/defender-xdr/preview.md",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "defender-business/mdb-preview.md",
+        "redirect_url": "/defender-xdr/preview.md",
+        "redirect_document_id": false
     }
   ]
 }
