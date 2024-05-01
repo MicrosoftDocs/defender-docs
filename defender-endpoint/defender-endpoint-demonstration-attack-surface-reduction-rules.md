@@ -24,7 +24,7 @@ ms.date: 01/15/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-windows)
+- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
 Attack surface reduction rules target specific behaviors that are typically used by malware and malicious apps to infect machines, such as:
 

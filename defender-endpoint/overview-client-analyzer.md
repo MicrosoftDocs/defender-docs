@@ -25,7 +25,7 @@ ms.date: 02/27/2024
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
-The Microsoft Defender for Endpoint Client Analyzer (MDECA) can be useful when diagnosing sensor health or reliability issues on [onboarded devices](/defender-endpoint/onboard-configure) running either Windows, Linux, or macOS. For example, you may want to run the analyzer on a machine that appears to be unhealthy according to the displayed [sensor health status](/defender-endpoint/fix-unhealthy-sensors) (Inactive, No Sensor Data or Impaired Communications) in the security portal.
+The Microsoft Defender for Endpoint Client Analyzer (MDECA) can be useful when diagnosing sensor health or reliability issues on [onboarded devices](onboard-configure.md) running either Windows, Linux, or macOS. For example, you may want to run the analyzer on a machine that appears to be unhealthy according to the displayed [sensor health status](fix-unhealthy-sensors.md) (Inactive, No Sensor Data or Impaired Communications) in the security portal.
 
 Besides obvious sensor health issues, MDECA can collect other traces, logs, and diagnostic information for troubleshooting complex scenarios such as:
 
@@ -52,7 +52,7 @@ For more information about our privacy statement, see [Microsoft Privacy Stateme
 
 - The analyzer can run on supported editions of [Windows](minimum-requirements.md#supported-windows-versions), [Linux](microsoft-defender-endpoint-linux.md#system-requirements), or [macOS](microsoft-defender-endpoint-mac.md#system-requirements) either before of after onboarding to Microsoft Defender for Endpoint.
 
-- For Windows devices, if you are running the analyzer directly on specific machines and not remotely via [Live Response](/defender-endpoint/troubleshoot-collect-support-log), then SysInternals [PsExec.exe](/sysinternals/downloads/psexec) should be allowed (at least temporarily) to run. The analyzer calls into PsExec.exe tool to run cloud connectivity checks as Local System and emulate the behavior of the SENSE service.
+- For Windows devices, if you are running the analyzer directly on specific machines and not remotely via [Live Response](troubleshoot-collect-support-log.md), then SysInternals [PsExec.exe](/sysinternals/downloads/psexec) should be allowed (at least temporarily) to run. The analyzer calls into PsExec.exe tool to run cloud connectivity checks as Local System and emulate the behavior of the SENSE service.
 
   > [!NOTE]
   > On Windows devices, if you use the attack surface reduction rule [Block process creations originating from PSExec and WMI commands](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands), you might want to temporarily [configure an exclusion to the ASR rule](enable-attack-surface-reduction.md#exclude-files-and-folders-from-attack-surface-reduction-rules). Optionally, you can set the rule to **audit** or you can disable the rule. Making these configurations allows the analyzer to run connectivity checks to cloud without being blocked.

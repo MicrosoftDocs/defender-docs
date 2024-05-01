@@ -97,7 +97,7 @@ You can click the circles on the incident graph to view the details of the malic
 
 ## Related topics
 
-- [Incidents queue](/defender-endpoint/view-incidents-queue)
-- [Investigate incidents in Microsoft Defender for Endpoint](/defender-endpoint/investigate-incidents)
-- [Manage Microsoft Defender for Endpoint incidents](/defender-endpoint/manage-incidents)
+- [Incidents queue](view-incidents-queue.md)
+- [Investigate incidents in Microsoft Defender for Endpoint](investigate-incidents.md)
+- [Manage Microsoft Defender for Endpoint incidents](manage-incidents.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

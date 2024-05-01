@@ -62,7 +62,7 @@ For more information on how to use the script, use the PowerShell command "get-h
 > [!NOTE]
 > You'll need Microsoft Endpoint Configuration Manager, version 2107 or later to perform Endpoint Protection policy configuration. From [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016) deployment and upgrades can be fully automated.
 
-For instructions on how to migrate using Microsoft Endpoint Configuration Manager older than version 2207 please see [Migrating servers from Microsoft Monitoring Agent to the unified solution.](/defender-endpoint/application-deployment-via-mecm)
+For instructions on how to migrate using Microsoft Endpoint Configuration Manager older than version 2207 please see [Migrating servers from Microsoft Monitoring Agent to the unified solution.](application-deployment-via-mecm.md)
 
 ## If you are running a non-Microsoft antivirus solution
 
