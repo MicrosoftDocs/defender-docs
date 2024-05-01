@@ -45,7 +45,7 @@ Depending on your environment, some tools are better suited for certain architec
 
 ## Step 2: Select deployment method
 
-Once you have determined the architecture of your environment and have created an inventory as outlined in the [requirements section](/defender-endpoint/mde-planning-guide#requirements), use the table below to select the appropriate deployment tools for the endpoints in your environment. This will help you plan the deployment effectively.
+Once you have determined the architecture of your environment and have created an inventory as outlined in the [requirements section](mde-planning-guide.md#requirements), use the table below to select the appropriate deployment tools for the endpoints in your environment. This will help you plan the deployment effectively.
 
 |Endpoint|Deployment tool|
 |---|---|

@@ -522,8 +522,6 @@
           href: mto-dashboard.md
         - name: Manage tenants
           href: mto-tenants.md
-        - name: Manage endpoint security policies
-          href: mto-endpoint-security-policy.md
         - name: Distribute content via tenant groups
           href: mto-tenantgroups.md                      
     - name: Reference
@@ -567,7 +565,7 @@
             - name: Set up email notifications for Threat analytics reports
               href: m365d-threat-analytics-notifications.md              
             - name: Configure alert notifications
-              href: /defender-xdr/configure-email-notifications
+              href: configure-email-notifications.md
             - name: Asset rule management
               href: configure-asset-rules.md
             - name: Provide feedback

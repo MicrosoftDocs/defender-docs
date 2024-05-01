@@ -2,10 +2,10 @@
 title: Configure and validate exclusions for Microsoft Defender for Endpoint on Mac
 description: Provide and validate exclusions for Microsoft Defender for Endpoint on Mac. Exclusions can be set for files, folders, and processes.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
@@ -37,7 +37,7 @@ You can exclude certain files, folders, processes, and process-opened files from
 
 Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. They can also be useful for mitigating performance issues caused by Defender for Endpoint on Mac.
 
-To narrow down which process and/or path and/or extension you need to exclude, please use [real-time-protection-statistics](/defender-endpoint/mac-support-perf).
+To narrow down which process and/or path and/or extension you need to exclude, please use [real-time-protection-statistics](mac-support-perf.md).
 
 > [!WARNING]
 > Defining exclusions lowers the protection offered by Defender for Endpoint on Mac. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you are confident are not malicious.

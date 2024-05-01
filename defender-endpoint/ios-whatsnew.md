@@ -31,20 +31,20 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 > [!IMPORTANT]
 >  ## Network Protection – Update
-> Network protection feature will soon be enabled by default for all users. The update will be rolled out in a phased manner. As a result, users will be able to see Network Protection Card in the Defender app along with App Protection and Web Protection. Users are also required to provide **Local Network** permission. This permission is needed to enhance the existing rogue wifi detection. For more information, see [Network Protection](/defender-endpoint/ios-configure-features#configure-network-protection).
+> Network protection feature will soon be enabled by default for all users. The update will be rolled out in a phased manner. As a result, users will be able to see Network Protection Card in the Defender app along with App Protection and Web Protection. Users are also required to provide **Local Network** permission. This permission is needed to enhance the existing rogue wifi detection. For more information, see [Network Protection](ios-configure-features.md#configure-network-protection).
 ## Device Tagging
 
-Mobile Device Tagging is now generally available. This feature enables bulk tagging the mobile devices by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Security Portal. The Device tags appear against the devices in the Device Inventory. For more information, read [Configure Device Tagging](/defender-endpoint/ios-configure-features#device-tagging).
+Mobile Device Tagging is now generally available. This feature enables bulk tagging the mobile devices by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Security Portal. The Device tags appear against the devices in the Device Inventory. For more information, read [Configure Device Tagging](ios-configure-features.md#device-tagging).
 
 ## Vulnerability assessment of apps
 
-Vulnerability assessment of apps on Microsoft Defender for Endpoint for iOS is now generally available. Defender for Endpoint on iOS supports vulnerability assessments of apps only for enrolled (MDM) devices. For more information, see [Configure vulnerability assessment of apps](/defender-endpoint/ios-configure-features#configure-vulnerability-assessment-of-apps).
+Vulnerability assessment of apps on Microsoft Defender for Endpoint for iOS is now generally available. Defender for Endpoint on iOS supports vulnerability assessments of apps only for enrolled (MDM) devices. For more information, see [Configure vulnerability assessment of apps](ios-configure-features.md#configure-vulnerability-assessment-of-apps).
 
 ## Network protection
 
 Network Protection on Microsoft Defender for Endpoint is now generally available. Network protection provides protection against rogue Wi-Fi related threats, rogue hardware like pineapple devices and notifies the user if a related threat is detected. Users also see a guided experience to connect to secure networks and change networks when they're connected to an unsecure connection.
 
-It includes several admin controls to offer flexibility, such as the ability to configure the feature from within the Microsoft Intune admin center. Admins can also enable privacy controls to configure the data that's sent by Defender for Endpoint from iOS devices. For more information, read [Configure Network Protection](/defender-endpoint/ios-configure-features#configure-network-protection).
+It includes several admin controls to offer flexibility, such as the ability to configure the feature from within the Microsoft Intune admin center. Admins can also enable privacy controls to configure the data that's sent by Defender for Endpoint from iOS devices. For more information, read [Configure Network Protection](ios-configure-features.md#configure-network-protection).
 
 ## Privacy Controls
 
@@ -73,8 +73,9 @@ Microsoft Defender for Endpoint is now available as **Microsoft Defender** in th
 On January 25, 2022, we announced the general availability of Vulnerability management on Android and iOS. For more information, see [the techcommunity post here](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-general-availability-of-vulnerability-management/ba-p/3071663).
 
 ## 1.1.28250101
+
 - **Integration with Tunnel** - Microsoft Defender for Endpoint on iOS can now integrate with Microsoft Tunnel, a VPN gateway solution to enable security and connectivity in a single app. For more information, see [Microsoft Tunnel Overview](/mem/intune/protect/microsoft-tunnel-overview).
-- **Zero-touch onboard for enrolled iOS devices** enrolled through Microsoft Intune is generally available. For more information, see [Zero touch onboarding of Microsoft Defender for Endpoint](/defender-endpoint/ios-install#zero-touch-onboarding-of-microsoft-defender-for-endpoint).
+- **Zero-touch onboard for enrolled iOS devices** enrolled through Microsoft Intune is generally available. For more information, see [Zero touch onboarding of Microsoft Defender for Endpoint](ios-install.md#zero-touch-silent-onboarding-of-microsoft-defender-for-endpoint).
 - Bug fixes.
 
 ## 1.1.24210103

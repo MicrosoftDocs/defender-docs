@@ -60,7 +60,7 @@ To learn more about Microsoft 365 Apps update channels, see [Overview of update 
 
 2. In **Windows Features**, select **Microsoft Defender Application Guard**, and then select **OK**. Enabling the Application Guard feature prompts for a system reboot. You can reboot now or after step 3.
 
-   :::image type="content" source="/defender/media/ag03-deploy.png" alt-text="The Windows Features dialog box showing AG" lightbox="/defender/media/ag03-deploy.png":::
+   :::image type="content" source="media/ag03-deploy.png" alt-text="The Windows Features dialog box showing AG" lightbox="media/ag03-deploy.png":::
 
    You can also enable Application Guide in Windows PowerShell by running the following command as an administrator:
 
@@ -75,7 +75,7 @@ To learn more about Microsoft 365 Apps update channels, see [Overview of update 
    - **2**: Enable Microsoft Defender Application Guard for isolated Windows environments ONLY.
    - **3**: Enable Microsoft Defender Application Guard for Microsoft Edge AND isolated Windows environments.
 
-   :::image type="content" source="/defender/media/ag04-deploy.png" alt-text="The option to turn on AG in Managed Mode" lightbox="/defender/media/ag04-deploy.png":::
+   :::image type="content" source="media/ag04-deploy.png" alt-text="The option to turn on AG in Managed Mode" lightbox="media/ag04-deploy.png":::
 
    Alternatively, you can set the corresponding CSP policy:
 
@@ -109,17 +109,17 @@ To confirm that Application Guard for Office is enabled, open an untrusted docum
 
 When you first open an untrusted file, the following Office splash screen is shown. Application Guard for Office is being activated and the file is being opened. Subsequent openings of untrusted files are typically faster.
 
-:::image type="content" source="/defender/media/ag08-confirm.png" alt-text="The Office app splash page" lightbox="/defender/media/ag08-confirm.png":::
+:::image type="content" source="media/ag08-confirm.png" alt-text="The Office app splash page" lightbox="media/ag08-confirm.png":::
 
 After the file opens, there are a few visual indicators that signal that the file is open inside Application Guard for Office:
 
 - A callout in the ribbon
 
-  :::image type="content" source="/defender/media/ag09-confirm.png" alt-text="The Doc file showing small App Guard note" lightbox="/defender/media/ag09-confirm.png":::
+  :::image type="content" source="media/ag09-confirm.png" alt-text="The Doc file showing small App Guard note" lightbox="media/ag09-confirm.png":::
 
 - The application icon with a shield in the taskbar
 
-  :::image type="icon" source="/defender/media/ag12-limitations.png" border="false":::
+  :::image type="icon" source="media/ag12-limitations.png" border="false":::
 
 ## Configure Application Guard for Office
 
@@ -183,7 +183,7 @@ Application Guard for Office is integrated with Microsoft Defender for Endpoint 
 
 - Application Guard for Office is a protected mode that isolates untrusted documents so that they can't access trusted corporate resources. For example, an intranet, the user's identity, and arbitrary files on the computer. If a user tries an action that requires access to trusted resources (for example, inserting a local picture file), the action fails and displays a prompt like the following example. To enable an untrusted document to access trusted resources, users must remove Application Guard protection from the document.
 
-  :::image type="content" source="/defender/media/ag09-confirm.png" alt-text="The Dialog box stating safety message and the feature status" lightbox="/defender/media/ag09-confirm.png":::
+  :::image type="content" source="media/ag09-confirm.png" alt-text="The Dialog box stating safety message and the feature status" lightbox="media/ag09-confirm.png":::
 
   > [!NOTE]
   > Advise users to remove protection only if they trust the file and the source of the file.

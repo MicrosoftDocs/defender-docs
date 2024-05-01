@@ -28,8 +28,7 @@ Microsoft reimagines the analyst workflow by developing Defender TI, which aggre
 
 The following is a screenshot of Defender TI’s **Intel explorer** page in the Microsoft Defender portal. Analysts can quickly scan new featured articles and perform a keyword, indicator, or CVE ID search to begin their intelligence gathering, triage, incident response, and hunting efforts.
 
-
-![TI Overview Edge Screenshot](media/tiOverviewEdgeScreenshot.png)
+:::image type="content" source="/defender/threat-intelligence/media/intel-explorer.png" alt-text="ti Overview Home Page Chrome Screenshot." lightbox="/defender/threat-intelligence/media/intel-explorer.png":::
 
 ## Defender TI articles
 Articles are narratives that provide insight into threat actors, tooling, attacks, and vulnerabilities. Defender TI articles aren’t blog posts about threat intelligence; while these articles summarize different threats, they also link to actionable content and key IOCs to help users take action. Having this technical information in the threat summaries lets users continually track threat actors, tooling, attacks, and vulnerabilities as they change.
