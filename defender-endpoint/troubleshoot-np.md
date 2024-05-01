@@ -51,9 +51,9 @@ Network protection works on devices with the following conditions:
 > > - Endpoints are running Windows 10 Pro or Enterprise edition, version 1709 or higher.
 > - Endpoints are using Microsoft Defender Antivirus as the sole antivirus protection app. [See what happens when you're using a non-Microsoft antivirus solution](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-compatibility).
 > - [Real-time protection](/windows/security/threat-protection/microsoft-defender-antivirus/configure-real-time-protection-microsoft-defender-antivirus) is enabled.
-> - [Behavior Monitoring](/defender-endpoint/behavior-monitor) is enabled.
+> - [Behavior Monitoring](behavior-monitor.md) is enabled.
 > - [Cloud-delivered protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) is enabled.
-> - [Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus) is functional.
+> - [Cloud Protection network connectivity](configure-network-connections-microsoft-defender-antivirus.md) is functional.
 > - Audit mode isn't enabled. Use [Group Policy](enable-network-protection.md#group-policy) to set the rule to **Disabled** (value: **0**).
 
 ## Use audit mode
@@ -96,7 +96,7 @@ The current exclusion options are:
 
 In certain circumstances, a network protections component might contribute to slow network connections to Domain Controllers and/or Exchange servers. You might also notice Event ID 5783 NETLOGON errors.
 
-To attempt to solve these issues, change Network Protection from ‘block mode’ to either ‘[audit mode](troubleshoot-np.md)’ or 'disabled'. If your network issues are fixed, follow the next steps to find out which component in Network Protection is contributing to the behavior.
+To attempt to solve these issues, change Network Protection from 'block mode' to either '[audit mode](troubleshoot-np.md)' or 'disabled'. If your network issues are fixed, follow the next steps to find out which component in Network Protection is contributing to the behavior.
 
 Disable the following components in order and test your network connectivity performance after disabling each one:
 

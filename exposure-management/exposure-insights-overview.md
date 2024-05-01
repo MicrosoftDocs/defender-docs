@@ -99,7 +99,7 @@ Metrics include several properties that help contextualize them and make them ac
 |Property  |Description  |
 |---------|---------|
 |**Current value** | The percentage of affected assets out of the total assets. Zero percent is best since there's no exposure, while 100% is worst. |
-|**Affected items** | The number of items that comply with the metric’s logic. In most cases, these items would be assets that are exposed or that create a risk factor. In other cases, affected items would be the number of missing Microsoft secure score points to effectively implement recommended controls. |
+|**Affected items** | The number of items that comply with the metric's logic. In most cases, these items would be assets that are exposed or that create a risk factor. In other cases, affected items would be the number of missing Microsoft secure score points to effectively implement recommended controls. |
 |**Total** | The number of assets that is scoped for the metric. For example, for a given metric it might be all endpoints. For another, it could be all Windows endpoints. |
 |**Weight** | The importance of the metric and its effect over the initiative score. One is the lowest while 10 is the highest. Weight can be customized to have greater or lesser effect based on your organization's unique business priorities and considerations. Editing your metric weight value affects the metric and all related initiatives. |
 | **Score impact** | The effect that completing the metric has on the initiative score. Meaning if a given metric is completed, the score impact is the addition seen to the initiative score. |

@@ -2,11 +2,11 @@
 title: Configure Offline Security Intelligence Update for Microsoft Defender for Endpoint on Linux (preview)
 description: Offline Security Intelligence Update in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: dansimp
+author: dansimp
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: dansimp
 audience: ITPro
 ms.collection:
 - m365-security
@@ -17,7 +17,7 @@ search.appverid: met150
 ms.date: 03/12/2024
 ---
 
-# Configure Offline Security Intelligence Update for Microsoft Defender for Endpoint on Linux (preview)
+# Configure Offline Security Intelligence Update for Microsoft Defender for Endpoint on Linux 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
@@ -66,6 +66,8 @@ Fig. 2: Process flow diagram on the Linux endpoint for security intelligence upd
 
 - Defender for Endpoint version "101.24022.0001" or higher needs to be installed on the Linux endpoints.
 - The Linux endpoints need to have connectivity to the Mirror Server.
+- The Linux endpoint must be running any of the Defender for Endpoint supported distributions.
+
 - The Mirror Server can be either an HTTP/ HTTPS server or a network share server. For example, an NFS Server.
 - The Mirror Server needs to have access to the following URLs:
   - `https://github.com/microsoft/mdatp-xplat.git`
@@ -77,15 +79,12 @@ Fig. 2: Process flow diagram on the Linux endpoint for security intelligence upd
 - The Mirror Server should support bash or PowerShell.
 - The following minimum system specifications are required for the Mirror Server:
 
-    | CPU Core| RAM | Free disk  | Swap |
-    |--|--|--|--|
-    | 2 cores (Preferred 4 Core) | 1 GB Min (Preferred 4 GB)  | 2 GB  | System Dependent|
-
-    > [!NOTE]
-    > This configuration may vary depending on the number of requests that are served and the load each server must process.
-
-- The Linux endpoint must be running any of the Defender for Endpoint supported distributions.
-
+  | CPU Core| RAM | Free disk  | Swap |
+  |--|--|--|--|
+  | 2 cores (Preferred 4 Core) | 1 GB Min (Preferred 4 GB)  | 2 GB  | System Dependent|
+  
+  > [!NOTE]
+  > This configuration may vary depending on the number of requests that are served and the load each server must process.
 ## Configuring the Mirror Server
 
 > [!NOTE]
@@ -102,15 +101,17 @@ Follow these steps to get the downloader script:
 
 #### Option 1: Clone the repo (Preferred)
 
-- [Install git](https://kinsta.com/knowledgebase/install-git/) on the Mirror Server.
+- [Install git](https://kinsta.com/knowledgebase/install-git/)on the Mirror Server.
 - Navigate to the directory where you want to clone the repo.
 - Execute the command: `git clone https://github.com/microsoft/mdatp-xplat.git`
 
 #### Option 2: Download the zip file
 
-- Download the zip file of the repo [from here](https://github.com/microsoft/mdatp-xplat/archive/refs/heads/master.zip).
-- Copy the zip file to the folder where you want to keep the script.
-- Extract the zip.
+- Download the zip file of the repo [from here](https://github.com/microsoft/mdatp-xplat/archive/refs/heads/master.zip)
+
+- Copy the zip file to the folder where you want to keep the script
+
+- Extract the zip
 
 > [!NOTE]
 > Schedule a [cron job](#scheduling-a-cron-job) to keep the repo/downloaded zip file updated to the latest version at regular intervals.
@@ -289,6 +290,14 @@ offline_definition_update_fallback_to_cloud : false[managed]
   ```bash
   mdatp definitions update
   ```
+
+### Known Issues:
+
+Offline signature update might fail in the following scenario:  
+You enabled the feature, applied the signature updates, then disabled the feature to apply further signature updates from cloud, and subsequently re-enabled the feature for additional signature updates.
+
+Mitigation steps:  
+The fix for this will be available in the upcoming release. 
 
 ## Useful Links
 

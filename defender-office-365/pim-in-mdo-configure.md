@@ -54,7 +54,7 @@ The name of the user (Alex in this scenario) appears under Eligible assignments 
 > [!NOTE]
 > For a quick review of Privileged Identity Management see [this video](https://www.youtube.com/watch?v=VQMAg0sa_lE).
 
-:::image type="content" source="/defender/media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.PNG" alt-text="The Role setting details - Security Reader page" lightbox="/defender/media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.PNG":::
+:::image type="content" source="media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.PNG" alt-text="The Role setting details - Security Reader page" lightbox="media/pim-mdo-role-setting-details-for-security-reader-show-8-hr-duration.PNG":::
 
 ***Step 2***. Create the required second (elevated) permission group for other tasks and assign eligibility.
 
@@ -104,7 +104,7 @@ For either method:
 3. If you try to purge an email using Threat Explorer, you get an error stating you need more permissions.
 4. PIM a second time into the more elevated role, after a short delay you should now be able to purge emails without issue.
 
-   :::image type="content" source="/defender/media/pim-mdo-add-the-search-and-purge-role-assignment-to-this-pim-role.PNG" alt-text="The Actions pane under the Email tab" lightbox="/defender/media/pim-mdo-add-the-search-and-purge-role-assignment-to-this-pim-role.PNG":::
+   :::image type="content" source="media/pim-mdo-add-the-search-and-purge-role-assignment-to-this-pim-role.PNG" alt-text="The Actions pane under the Email tab" lightbox="media/pim-mdo-add-the-search-and-purge-role-assignment-to-this-pim-role.PNG":::
 
 Permanent assignment of administrative roles and permissions doesn't align with the Zero Trust security initiative. Instead, you can use PIM to grant just-in-time access to the required tools.
 

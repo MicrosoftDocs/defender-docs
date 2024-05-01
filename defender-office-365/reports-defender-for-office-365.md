@@ -67,7 +67,7 @@ Client-side latency and network latency aren't included in the results.
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Mail latency report**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/mailLatencyReport>.
 
-:::image type="content" source="/defender/media/mail-latency-report-widget.png" alt-text="The Mail latency report widget on the Email & collaboration reports page" lightbox="/defender/media/mail-latency-report-widget.png":::
+:::image type="content" source="media/mail-latency-report-widget.png" alt-text="The Mail latency report widget on the Email & collaboration reports page" lightbox="media/mail-latency-report-widget.png":::
 
 On the **Mail latency report** page, the following tabs are available:
 
@@ -78,11 +78,11 @@ On the **Mail latency report** page, the following tabs are available:
 Regardless of the tab you select, the chart shows messages organized into the following categories:
 
 - **Overall**
-- **Detonation** (these values are explained in the :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** values)
+- **Detonation** (these values are explained in the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** values)
 
 Hover over a category in the chart to see a breakdown of the latency in each category.
 
-:::image type="content" source="/defender/media/mail-latency-report-50th-percentile-view.png" alt-text="The 50th percentiles view of the Mail latency report" lightbox="/defender/media/mail-latency-report-50th-percentile-view.png":::
+:::image type="content" source="media/mail-latency-report-50th-percentile-view.png" alt-text="The 50th percentiles view of the Mail latency report" lightbox="media/mail-latency-report-50th-percentile-view.png":::
 
 In the details table below the chart, the following information is available:
 
@@ -93,7 +93,7 @@ In the details table below the chart, the following information is available:
 - **90th percentile**
 - **99th percentile**
 
-Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**
 - **Message view**: Select one of tne of the following values:
@@ -102,9 +102,9 @@ Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" 
     - **Inline detonation**: Links and attachments in messages are fully tested by Safe Links and Safe Attachments before delivery.
     - **Asynchronous detonation**: [Dynamic delivery](safe-attachments-about.md#dynamic-delivery-in-safe-attachments-policies) of attachments by Safe Attachments and links in email tested by Safe Links after delivery.
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-On the **Mail latency report** page, the :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** action is available.
+On the **Mail latency report** page, the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** action is available.
 
 ## Post-delivery activities report
 
@@ -114,7 +114,7 @@ The report shows real-time information with updated threat information.
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **Post-delivery activities**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/reports/ZapReport>.
 
-:::image type="content" source="/defender/media/post-delivery-activities-widget.png" alt-text="The Post-delivery activities widget on the Email & collaboration reports page." lightbox="/defender/media/post-delivery-activities-widget.png":::
+:::image type="content" source="media/post-delivery-activities-widget.png" alt-text="The Post-delivery activities widget on the Email & collaboration reports page." lightbox="media/post-delivery-activities-widget.png":::
 
 On the **Post-delivery activities** page, the chart shows the following information for the specified date range:
 
@@ -142,7 +142,7 @@ The details table below the graph shows the following information:
   - Narrow the width of appropriate columns.
   - Zoom out in your web browser.
 
-Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
 - **Updated threat**: Select one ore mor of the following values:
@@ -151,11 +151,11 @@ Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" 
   - **Phishing**
   - **Malware**
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-On the **Post delivery activities** page, the :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)** and :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
+On the **Post delivery activities** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)** and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
 
-:::image type="content" source="/defender/media/post-delivery-activities-report.png" alt-text="The Post-delivery activities report." lightbox="/defender/media/post-delivery-activities-report.png":::
+:::image type="content" source="media/post-delivery-activities-report.png" alt-text="The Post-delivery activities report." lightbox="media/post-delivery-activities-report.png":::
 
 ## Threat protection status report
 
@@ -171,13 +171,13 @@ The **URL protection report** provides summary and trend views for threats detec
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **URL protection report**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/URLProtectionActionReport>.
 
-:::image type="content" source="/defender/media/url-protection-report-widget.png" alt-text="The URL protection report widget on the Email & collaboration reports page" lightbox="/defender/media/url-protection-report-widget.png":::
+:::image type="content" source="media/url-protection-report-widget.png" alt-text="The URL protection report widget on the Email & collaboration reports page" lightbox="media/url-protection-report-widget.png":::
 
 The available views in the **URL threat protection** report are described in the following subsections.
 
 ### View data by URL click protection action in the URL protection report
 
-:::image type="content" source="/defender/media/url-threat-protection-report-url-click-protection-action-view.png" alt-text="The view namely URL click protection action in the URL protection report" lightbox="/defender/media/url-threat-protection-report-url-click-protection-action-view.png":::
+:::image type="content" source="media/url-threat-protection-report-url-click-protection-action-view.png" alt-text="The view namely URL click protection action in the URL protection report" lightbox="media/url-threat-protection-report-url-click-protection-action-view.png":::
 
 The **View data by URL click protection action** view shows the number of URL clicks by users in the organization and the results of the click:
 
@@ -201,7 +201,7 @@ The details table below the chart provides the following near-real-time view of 
 - **App**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
 
-Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
 - **Action**: The same URL click protection actions as previously described. By default, **Allowed** and **Allowed by tenant admin** aren't selected.
@@ -210,13 +210,13 @@ Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" 
 - **Recipients (separated by commas)**
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-On the **URL threat protection** page, the :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
+On the **URL threat protection** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
 
 ### View data by URL click by application in the URL protection report
 
-:::image type="content" source="/defender/media/url-threat-protection-report-url-click-by-application-view.png" alt-text="The URL click protection action view in the URL protection report" lightbox="/defender/media/url-threat-protection-report-url-click-by-application-view.png":::
+:::image type="content" source="media/url-threat-protection-report-url-click-by-application-view.png" alt-text="The URL click protection action view in the URL protection report" lightbox="media/url-threat-protection-report-url-click-by-application-view.png":::
 
 > [!TIP]
 > URL clicks by guest users are available in the report. Guest user accounts might be compromised or access malicious content inside the organization.
@@ -236,7 +236,7 @@ The details table below the chart provides the following near-real-time view of 
 - **App**
 - **Tags**: For more information about user tags, see [User tags](user-tags-about.md).
 
-Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
+Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
 - **Date (UTC)**: **Start date** and **End date**.
 - **Application**: The same click by application values as previously described.
@@ -246,9 +246,9 @@ Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" 
 - **Recipients (separated by commas)**
 - **Tag**: Leave the value **All** or remove it, double-click in the empty box, and then select **Priority account**. For more information about user tags, see [User tags](user-tags-about.md).
 
-When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-On the **URL threat protection** page, the :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
+On the **URL threat protection** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](reports-email-security.md#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](reports-email-security.md#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](reports-email-security.md#export-report-data)** actions are available.
 
 ## Additional reports to view
 

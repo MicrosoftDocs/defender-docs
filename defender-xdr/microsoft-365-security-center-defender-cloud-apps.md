@@ -33,7 +33,7 @@ Microsoft Defender for Cloud Apps is now part of Microsoft Defender XDR. The Mic
 
 SOC analysts will be able to triage, investigate and hunt across all Microsoft Defender XDR workloads, including cloud apps.
 
-Defender for Cloud Apps **alerts** will continue to appear in Microsoft Defender XDR's incidents queue and alerts queue, but now with relevant content inside the alert pages available in the Microsoft Defender portal, in a unified format with the proper adaptations to each alerts type. For more information, see [Investigate incidents in Microsoft Defender XDR](/defender-xdr/investigate-incidents).
+Defender for Cloud Apps **alerts** will continue to appear in Microsoft Defender XDR's incidents queue and alerts queue, but now with relevant content inside the alert pages available in the Microsoft Defender portal, in a unified format with the proper adaptations to each alerts type. For more information, see [Investigate incidents in Microsoft Defender XDR](investigate-incidents.md).
 
 Take a look in Microsoft Defender XDR at <https://security.microsoft.com>.
 

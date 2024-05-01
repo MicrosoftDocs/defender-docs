@@ -84,7 +84,7 @@ landingContent:
         - text: Advanced hunting
           url: /defender-xdr/advanced-hunting-overview
         - text: Microsoft Threat Experts
-          url: /defender-endpoint/endpoint-attack-notifications
+          url: endpoint-attack-notifications.md
         - text: Threat analytics
           url: threat-analytics.md
 

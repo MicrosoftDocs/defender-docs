@@ -33,7 +33,7 @@ Connected applications integrates with the Defender for Endpoint platform using 
 
 Applications use standard OAuth 2.0 protocol to authenticate and provide tokens for use with Microsoft Defender for Endpoint APIs. In addition, Microsoft Entra applications allow tenant admins to set explicit control over which APIs can be accessed using the corresponding app.
 
-You'll need to follow [these steps](/defender-endpoint/api/apis-intro) to use the APIs with the connected application.
+You'll need to follow [these steps](api/apis-intro.md) to use the APIs with the connected application.
 
 From the left navigation menu, select **Partners & APIs** (under **Endpoints**) > **Connected applications**.
 

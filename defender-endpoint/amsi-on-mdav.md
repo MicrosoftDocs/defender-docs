@@ -1,22 +1,18 @@
 ---
 title: "Anti-malware Scan Interface (AMSI) integration with Microsoft Defender Antivirus"
 description: Describes fileless malware and how Microsoft Defender Antivirus uses AMSI to protect against hidden threats.
-author:  dansimp
-ms.author: dansimp
-manager:  dansimp
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.date: 02/27/2024
 ms.topic: conceptual
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.localizationpriority:
-ms.collection:
 ms.custom: QuickDraft
-ms.reviewer: dansimp
 search.appverid: MET150
 f1.keywords:
 audience:
-ai-usage:
-- ai-assisted
+ai-usage: ai-assisted
 ---
 
 # Anti-malware Scan Interface (AMSI) integration with Microsoft Defender Antivirus
@@ -42,13 +38,13 @@ Fileless malware plays a critical role in modern cyberattacks, using stealthy te
 
 Fileless malware uses existing tools that are already present on a compromised device, such as PowerShell.exe or wmic.exe. Malware can infiltrate a process, executing code within its memory space, and invoking these built-in tools. Attackers significantly reduce their footprint and evade traditional detection mechanisms.
 
-Because memory is volatile, and fileless malware doesn't place files on disk, establishing persistence by using fileless malware can be tricky. One example of how fileless malware achieved persistence was to create a registry run key that launches a “one-liner” PowerShell cmdlet. This command launched an obfuscated PowerShell script that was stored in the registry BLOB. The obfuscated PowerShell script contained a reflective portable executable (PE) loader that loaded a Base64-encoded PE from the registry. The script stored in the registry ensured the malware persisted.
+Because memory is volatile, and fileless malware doesn't place files on disk, establishing persistence by using fileless malware can be tricky. One example of how fileless malware achieved persistence was to create a registry run key that launches a "one-liner" PowerShell cmdlet. This command launched an obfuscated PowerShell script that was stored in the registry BLOB. The obfuscated PowerShell script contained a reflective portable executable (PE) loader that loaded a Base64-encoded PE from the registry. The script stored in the registry ensured the malware persisted.
 
 Attackers use several fileless techniques that can make malware implants stealthy and evasive. These techniques include:
 
-- **Reflective DLL injection** Reflective DLL injection involves the manual loading of malicious DLLs into a process’ memory without the need for said DLLs to be on disk. The malicious DLL can be hosted on a remote attacker-controlled machine and delivered through a staged network channel (for example, Transport Layer Security (TLS) protocol), or embedded in obfuscated form inside infection vectors like macros and scripts. This results in the evasion of the OS mechanism that monitors and keeps track of loading executable modules. An example of malware that uses Reflective DLL injection is HackTool:Win32/Mikatz!dha.
+- **Reflective DLL injection** Reflective DLL injection involves the manual loading of malicious DLLs into a process' memory without the need for said DLLs to be on disk. The malicious DLL can be hosted on a remote attacker-controlled machine and delivered through a staged network channel (for example, Transport Layer Security (TLS) protocol), or embedded in obfuscated form inside infection vectors like macros and scripts. This results in the evasion of the OS mechanism that monitors and keeps track of loading executable modules. An example of malware that uses Reflective DLL injection is HackTool:Win32/Mikatz!dha.
 
-- **Memory exploits** Adversaries use fileless memory exploits to run arbitrary code remotely on victim machines. For example, the UIWIX threat uses the EternalBlue exploit, which was used by both Petya and WannaCry, to install the DoublePulsar backdoor, which lives entirely in the kernel’s memory (SMB Dispatch Table). Unlike Petya and Wannacry, UIWIX doesn't drop any files on disk.
+- **Memory exploits** Adversaries use fileless memory exploits to run arbitrary code remotely on victim machines. For example, the UIWIX threat uses the EternalBlue exploit, which was used by both Petya and WannaCry, to install the DoublePulsar backdoor, which lives entirely in the kernel's memory (SMB Dispatch Table). Unlike Petya and Wannacry, UIWIX doesn't drop any files on disk.
 
 - **Script-based techniques** Scripting languages provide powerful means for delivering memory-only executable payloads. Script files can embed encoded shell codes or binaries that they can decrypt on the fly at run time and execute via .NET objects or directly with APIs without requiring them to be written to disk. The scripts themselves can be hidden in the registry, read from network streams, or run manually in the command-line by an attacker, without ever touching the disk.
 

@@ -310,7 +310,7 @@ MpCmdRun.exe -CheckExclusion -path <path>
 ```
 
 > [!NOTE]
-> Checking exclusions with `MpCmdRun` requires Microsoft Defender Antivirus [version 4.18.2111-5.0 (released in December 2021)](/defender-endpoint/msda-updates-previous-versions-technical-upgrade-support#november-2021-platform-41821115--engine-11188004) or later.
+> Checking exclusions with `MpCmdRun` requires Microsoft Defender Antivirus [version 4.18.2111-5.0 (released in December 2021)](msda-updates-previous-versions-technical-upgrade-support.md#november-2021-platform-41821115--engine-11188004) or later.
 
 ### Review the list of exclusions alongside all other Microsoft Defender Antivirus preferences by using PowerShell
 

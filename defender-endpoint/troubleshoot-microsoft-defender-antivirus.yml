@@ -1046,7 +1046,7 @@ sections:
 
          User action: This error occurs when there's a problem updating definitions. To troubleshoot this event:
 
-           - [Update definitions](/defender-endpoint/microsoft-defender-antivirus-updates) and force a rescan directly on the endpoint.
+           - [Update definitions](microsoft-defender-antivirus-updates.md) and force a rescan directly on the endpoint.
 
            - Review the entries in the %Windir%\WindowsUpdate.log file for more information about this error.
 
@@ -1094,7 +1094,7 @@ sections:
 
          User action: The Microsoft Defender Antivirus client update failed. This event occurs when the client fails to update itself. This event is due to an interruption in network connectivity during an update. To troubleshoot this event:
 
-           - [Update definitions](/defender-endpoint/microsoft-defender-antivirus-updates) and force a rescan directly on the endpoint.
+           - [Update definitions](microsoft-defender-antivirus-updates.md) and force a rescan directly on the endpoint.
 
            - Contact [Microsoft Technical Support](/microsoft-365/admin/get-help-support).
 

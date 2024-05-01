@@ -37,11 +37,11 @@ ms.date: 12/18/2020
 
 ## Overview
 
-Feedback-loop blocking, also referred to as rapid protection, is a component of [behavioral blocking and containment capabilities](/defender-endpoint/behavioral-blocking-containment) in [Microsoft Defender for Endpoint](/windows/security/threat-protection/). With feedback-loop blocking, devices across your organization are better protected from attacks. 
+Feedback-loop blocking, also referred to as rapid protection, is a component of [behavioral blocking and containment capabilities](behavioral-blocking-containment.md) in [Microsoft Defender for Endpoint](/windows/security/threat-protection/). With feedback-loop blocking, devices across your organization are better protected from attacks. 
 
 ## How feedback-loop blocking works
 
-When a suspicious behavior or file is detected, such as by [Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-windows), information about that artifact is sent to multiple classifiers. The rapid protection loop engine inspects and correlates the information with other signals to arrive at a decision as to whether to block a file. Checking and classifying artifacts happens quickly. It results in rapid blocking of confirmed malware, and drives protection across the entire ecosystem. 
+When a suspicious behavior or file is detected, such as by [Microsoft Defender Antivirus in Windows](microsoft-defender-antivirus-windows.md), information about that artifact is sent to multiple classifiers. The rapid protection loop engine inspects and correlates the information with other signals to arrive at a decision as to whether to block a file. Checking and classifying artifacts happens quickly. It results in rapid blocking of confirmed malware, and drives protection across the entire ecosystem. 
 
 With rapid protection in place, an attack can be stopped on a device, other devices in the organization, and devices in other organizations, as an attack attempts to broaden its foothold.
 
@@ -50,13 +50,13 @@ With rapid protection in place, an attack can be stopped on a device, other devi
 
 If your organization is using Defender for Endpoint, feedback-loop blocking is enabled by default. However, rapid protection occurs through a combination of Defender for Endpoint capabilities, machine learning protection features, and signal-sharing across Microsoft security services. Make sure the following features and capabilities of Defender for Endpoint are enabled and configured:
 
-- [Microsoft Defender for Endpoint baselines](/defender-endpoint/configure-machines-security-baseline)
+- [Microsoft Defender for Endpoint baselines](configure-machines-security-baseline.md)
 
-- [Devices onboarded to Microsoft Defender for Endpoint](/defender-endpoint/onboard-configure)
+- [Devices onboarded to Microsoft Defender for Endpoint](onboard-configure.md)
 
-- [EDR in block mode](/defender-endpoint/edr-in-block-mode)
+- [EDR in block mode](edr-in-block-mode.md)
 
-- [Attack surface reduction](/defender-endpoint/attack-surface-reduction)
+- [Attack surface reduction](attack-surface-reduction.md)
 
 - [Next-generation protection](/windows/security/threat-protection/microsoft-defender-antivirus/configure-microsoft-defender-antivirus-features) (antivirus)
 

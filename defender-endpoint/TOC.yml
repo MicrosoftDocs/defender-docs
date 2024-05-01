@@ -363,7 +363,7 @@
     - name: General
       items:
       - name: Configure alert notifications
-        href: /defender/configure-email-notifications
+        href: /defender-xdr/configure-email-notifications
       - name: Configure vulnerability email notifications
         href: configure-vulnerability-email-notifications.md
       - name: Configure advanced features
@@ -454,6 +454,8 @@
         href: machines-view-overview.md
       - name: Exclude devices
         href: exclude-devices.md
+      - name: Identifying transient devices
+        href: transient-device-tagging.md
       - name: Internet facing devices
         href: internet-facing-devices.md
       - name: Device timeline

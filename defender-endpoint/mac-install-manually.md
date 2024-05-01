@@ -2,10 +2,10 @@
 title: Manual deployment for Microsoft Defender for Endpoint on macOS
 description: Install Microsoft Defender for Endpoint on macOS manually, from the command line.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 12/15/2023
+ms.date: 04/30/2024
 ---
 
 # Manual deployment for Microsoft Defender for Endpoint on macOS

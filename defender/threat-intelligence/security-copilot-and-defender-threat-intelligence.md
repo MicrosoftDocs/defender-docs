@@ -126,7 +126,7 @@ Get contextual information and threat intelligence on Common Vulnerabilities and
 
 ### Provide feedback
 
-Your feedback on the Defender TI integration with Copilot for Security helps with development. To provide feedback, in Copilot, select **How’s this response?** At the bottom of each completed prompt and choose any of the following options:
+Your feedback on the Defender TI integration with Copilot for Security helps with development. To provide feedback, in Copilot, select **How's this response?** At the bottom of each completed prompt and choose any of the following options:
 - **Looks right** - Select this button if the results are accurate, based on your assessment. 
 - **Needs improvement** - Select this button if any detail in the results is incorrect or incomplete, based on your assessment. 
 - **Inappropriate** - Select this button if the results contain questionable, ambiguous, or potentially harmful information.
@@ -144,7 +144,7 @@ Once you have access to Copilot for Security, the key features discussed in the 
 - Intel projects
 
 ### Key features
-Copilot in Defender brings Copilot for Security’s capability to look up threat intelligence into the portal, letting security teams understand, prioritize, and take action on threat intelligence information immediately.
+Copilot in Defender brings Copilot for Security's capability to look up threat intelligence into the portal, letting security teams understand, prioritize, and take action on threat intelligence information immediately.
 
 You can ask about a threat actor, attack campaign, or any other threat intelligence that you want to know more about, and Copilot generates responses based on threat analytics reports, intel profiles and articles, and other Defender TI content. You can also select any of the available built-in prompts that let you do the following actions:
 -	[Summarize](using-copilot-threat-intelligence-defender-xdr.md#summarize-the-latest-threats-related-to-your-organization) the latest threats related to your organization

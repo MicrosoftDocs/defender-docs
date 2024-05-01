@@ -6,7 +6,7 @@ ms.author: siosulli
 author: siosulli
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 11/15/2023
+ms.date: 05/01/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -63,7 +63,7 @@ Access to Defender for Endpoint is done through a browser. The following browser
 
 ## Hardware and software requirements
 
-Devices on your network must be running one of these editions. New features or capabilities are typically provided only on operating systems that haven't yet reached the end of their support lifecycle. For more information, see [Supported Microsoft Defender for Endpoint capabilities by platform](/defender-endpoint/supported-capabilities-by-platform). Microsoft recommends the installation of the latest available security patches for any operating system.
+Devices on your network must be running one of these editions. New features or capabilities are typically provided only on operating systems that haven't yet reached the end of their support lifecycle. For more information, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md). Microsoft recommends the installation of the latest available security patches for any operating system.
 
 ### Supported Windows versions
 
@@ -97,6 +97,9 @@ The following operating systems require the use of the [Log Analytics](/azure/az
 - Windows 7 SP1 Enterprise
 - Windows 7 SP1 Pro
 - Windows Server 2008 R2 SP1
+
+> [!NOTE]
+> Ensure you [stay up to date with the Microsoft Monitoring Agent](update-agent-mma-windows.md) (MMA, also known as the Log Analytics or Azure Monitor agent) to avoid service interruptions. 
 
 To add antimalware protection to these older operating systems, you can use [System Center Endpoint Protection](onboard-downlevel.md#configure-and-update-system-center-endpoint-protection-clients). 
 

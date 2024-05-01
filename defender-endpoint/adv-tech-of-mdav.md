@@ -1,10 +1,9 @@
 ---
 title: Advanced technologies at the core of Microsoft Defender Antivirus
 description: Microsoft Defender Antivirus engines and advanced technologies
-author: siosulli
-ms.author: siosulli
-ms.reviewer: yongrhee
-manager: deniseb
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.service: defender-endpoint
 ms.topic: overview
 ms.date: 02/28/2024
@@ -58,7 +57,7 @@ For more information, see [Microsoft 365 Defender demonstrates 100 percent prote
 
 ## How next-generation protection works with other Defender for Endpoint capabilities
 
-Together with [attack surface reduction](/defender-endpoint/overview-attack-surface-reduction), which includes advanced capabilities like hardware-based isolation, application control, exploit protection, network protection, controlled folder access, attack surface reduction rules, and network firewall, [next-generation protection](/defender-endpoint/microsoft-defender-antivirus-windows) engines deliver Microsoft Defender for Endpoint's prebreach capabilities, stopping attacks before they can infiltrate devices and compromise networks.
+Together with [attack surface reduction](overview-attack-surface-reduction.md), which includes advanced capabilities like hardware-based isolation, application control, exploit protection, network protection, controlled folder access, attack surface reduction rules, and network firewall, [next-generation protection](microsoft-defender-antivirus-windows.md) engines deliver Microsoft Defender for Endpoint's prebreach capabilities, stopping attacks before they can infiltrate devices and compromise networks.
 
 As part of Microsoft's defense-in-depth solution, the superior performance of these engines accrues to the [Microsoft Defender for Endpoint](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint) unified endpoint protection, where antivirus detections and other next-generation protection capabilities enrich endpoint detection and response, automated investigation and remediation, advanced hunting, threat and vulnerability management, managed threat hunting service, and other capabilities.
 

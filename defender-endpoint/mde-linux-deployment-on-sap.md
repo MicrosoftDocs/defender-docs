@@ -2,11 +2,11 @@
 title: Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP 
 description: Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP 
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: dansimp
+author: dansimp
 ms.reviewer: cgardin; shlomiakirav  
 ms.localizationpriority: medium
-manager: deniseb
+manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security

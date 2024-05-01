@@ -31,7 +31,7 @@ If you're a Global or security administrator, you can now host firewall reportin
 
 ## What do you need to know before you begin?
 
-- Your devices must be running Windows 10 or later, or Windows Server 2012 R2 or later. For Windows Server 2012 R2 and Windows Server 2016 to appear in firewall reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](/defender-endpoint/configure-server-endpoints#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution).
+- Your devices must be running Windows 10 or later, or Windows Server 2012 R2 or later. For Windows Server 2012 R2 and Windows Server 2016 to appear in firewall reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution).
 
 - To onboard devices to the Microsoft Defender for Endpoint service, see [onboarding guidance](onboard-configure.md).
 

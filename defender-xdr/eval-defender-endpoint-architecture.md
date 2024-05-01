@@ -7,7 +7,7 @@ f1.keywords:
   - NOCSH
 ms.author: dansimp
 author: dansimp
-ms.date: 07/09/2021
+ms.date: 04/26/2024
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -36,7 +36,7 @@ Before enabling Microsoft Defender for Endpoint, be sure you understand the arch
 
 The following diagram illustrates Microsoft Defender for Endpoint architecture and integrations.
 
-:::image type="content" source="/defender/media/defender/m365-defender-endpoint-architecture.png" alt-text="The steps for adding Microsoft Defender for Office to the Defender evaluation environment" lightbox="/defender/media/defender/m365-defender-endpoint-architecture.png":::
+:::image type="content" source="./media/eval-defender-xdr/m365-defender-endpoint-architecture.svg" alt-text="A diagram that shows the steps for adding Microsoft Defender for Endpoint to the Microsoft Defender XDR evaluation environment." lightbox="./media/eval-defender-xdr/m365-defender-endpoint-architecture.svg":::
 
 The following table describes the illustration.
 
@@ -54,7 +54,7 @@ The following table identified key concepts that are important to understand whe
 
 Concept | Description | More information
 :---|:---|:---|
-Administration Portal | Microsoft Defender portal to monitor and assist in responding to alerts of potential advanced persistent threat activity or data breaches. | [Microsoft Defender for Endpoint portal overview](/defender-xdr/microsoft-365-security-center-mde)
+Administration Portal | Microsoft Defender portal to monitor and assist in responding to alerts of potential advanced persistent threat activity or data breaches. | [Microsoft Defender for Endpoint portal overview](microsoft-365-security-center-mde.md)
 Attack Surface Reduction | Help reduce your attack surfaces by minimizing the places where your organization is vulnerable to cyberthreats and attacks. | [Overview of attack surface reduction](/defender-endpoint/overview-attack-surface-reduction)
 Endpoint Detection and Response | Endpoint detection and response capabilities provide advanced attack detections that are near real-time and actionable. | [Overview of endpoint detection and response capabilities](/defender-endpoint/overview-endpoint-detection-response)
 Behavioral Blocking and Containment | Behavioral blocking and containment capabilities can help identify and stop threats, based on their behaviors and process trees even when the threat has started execution. | [Behavioral blocking and containment](/defender-endpoint/behavioral-blocking-containment)

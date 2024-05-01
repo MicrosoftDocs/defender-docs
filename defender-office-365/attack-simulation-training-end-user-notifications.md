@@ -35,7 +35,7 @@ To see the available end-user notifications, open the Microsoft Defender portal 
 - **Global notifications**: Contains the built-in, unmodifiable notifications.
 - **Tenant notifications**: Contains the custom notifications that you created.
 
-The following information is shown for each notification. You can sort the notifications by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The following information is shown for each notification. You can sort the notifications by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Notifications**: The name of the notification.
 - **⋮** (**Actions** control): Take action on the notification. The available actions depend on the **Status** value of the notification as described in the procedure sections.
@@ -59,11 +59,11 @@ The following information is shown for each notification. You can sort the notif
 >
 > The **⋮** (**Actions** control) is associated with the **Notifications** column. If you remove that column from view, the **⋮** control goes away.
 
-To find a notification in the list, type part of the notification name in the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and then press the ENTER key.
+To find a notification in the list, type part of the notification name in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and then press the ENTER key.
 
-To group the notifications by type, select :::image type="icon" source="/defender/media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select **Notification type**. To ungroup the notifications, select **None**.
+To group the notifications by type, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select **Notification type**. To ungroup the notifications, select **None**.
 
-On the **Tenant notifications** tab only, select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: to filter the notifications by one or more languages.
+On the **Tenant notifications** tab only, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: to filter the notifications by one or more languages.
 
 When you select a notification from the list, a details flyout appears with the following information:
 
@@ -83,16 +83,16 @@ When you select a notification from the list, a details flyout appears with the 
 On the details flyout from the **Tenant notifications** tab only, select **Edit notification** to modify the notification.
 
 > [!TIP]
-> To see details about other notifications without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other notifications without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 ## Create end-user notifications
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Content library** tab \> **End user notifications** \> and then select the **Tenant notifications** tab. To go directly to the **Content library** tab where you can select **End user notifications**, use <https://security.microsoft.com/attacksimulator?viewid=contentlibrary>.
 
-2. On the **Tenant notifications** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Create new** to start the new end-user notification wizard.
+2. On the **Tenant notifications** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create new** to start the new end-user notification wizard.
 
    > [!NOTE]
-   > At any point after you name the notification during the new end-user notification wizard, you can select **Save and close** to save your progress and continue later. The incomplete notification has the **Status** value **Draft**. You can pick up where you left off by selecting the end-user notification from the list and then clicking the :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+   > At any point after you name the notification during the new end-user notification wizard, you can select **Save and close** to save your progress and continue later. The incomplete notification has the **Status** value **Draft**. You can pick up where you left off by selecting the end-user notification from the list and then clicking the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
    >
    > You can also create end-user notifications during the creation of simulations and simulation automations. For more information, see [Create a simulation: Select end user notifications](attack-simulation-training-simulations.md#select-end-user-notifications) and [Create a simulation automation: Select end user notifications](attack-simulation-training-simulation-automations.md#select-end-user-notifications).
 
@@ -121,7 +121,7 @@ On the details flyout from the **Tenant notifications** tab only, select **Edit 
    - **Import email**: You can optionally select this button and then select **Choose file** to import an existing plain text message file.
 
    - Email content area: Two tabs are available:
-     - **Text** tab: A rich text editor is available to create the notification. To see the typical font and formatting settings, toggle **Formatting controls** to :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: **On**.
+     - **Text** tab: A rich text editor is available to create the notification. To see the typical font and formatting settings, toggle **Formatting controls** to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
        The following controls are also available on the **Text** tab:
 
@@ -153,13 +153,13 @@ On the details flyout from the **Tenant notifications** tab only, select **Edit 
 
    When you're finished in new end-user notification wizard, select **Save**.
 
-   Back on the **Define content** page, the notification is listed on the page. In the **Action** column, you can select :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** or :::image type="icon" source="/defender/media/m365-cc-sc-eye-icon.png" border="false"::: **Preview** to edit or view the notification.
+   Back on the **Define content** page, the notification is listed on the page. In the **Action** column, you can select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** or :::image type="icon" source="media/m365-cc-sc-eye-icon.png" border="false"::: **Preview** to edit or view the notification.
 
-   Select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Add translation** to create up to 11 more translations of the notification in other languages (12 translations total).
+   Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add translation** to create up to 11 more translations of the notification in other languages (12 translations total).
 
    Other than the flyout title changing to **Add translation**, the same options are available as the **Add content in default language** flyout in the first notification you created. Now the **Mark this as default language** check box is available to select. Only one translation of the notification can be the default language.
 
-   When two or more translations of the notification are listed on the **Define content** page, the :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** icon is available in the **Actions** column to delete any notification translations that aren't designated as the default language.
+   When two or more translations of the notification are listed on the **Define content** page, the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** icon is available in the **Actions** column to delete any notification translations that aren't designated as the default language.
 
    When you're finished on the **Define content** page, select **Next**.
 
@@ -181,8 +181,8 @@ You can't modify built-in notifications on the **Global notifications** tab. You
 
 To modify an existing custom notification on the **Tenant notifications** tab, do one of the following steps:
 
-- Select the notification from the list by selecting the check box next to the name. Select the :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
-- Select **⋮** (**Actions**) next to the **Notifications** value, and then select :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
+- Select the notification from the list by selecting the check box next to the name. Select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+- Select **⋮** (**Actions**) next to the **Notifications** value, and then select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
 - Select the notification from the list by clicking anywhere in the row other than the check box. In the details flyout that opens, select **Edit notification** at the bottom of the flyout.
 
 The end-user notification wizard opens with the settings and values of the selected notification. The steps are the same as described in the [Create end-user notifications](#create-end-user-notifications) section.
@@ -191,8 +191,8 @@ The end-user notification wizard opens with the settings and values of the selec
 
 To copy an existing notification on the **Tenant notifications** or **Global notifications** tabs, do one of the following steps:
 
-- Select the notification from the list by clicking the check box, and then select the :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Create a copy** action that appears.
-- Select **⋮** (**Actions**) next to the **Notifications** value, and then select :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Create a copy**.
+- Select the notification from the list by clicking the check box, and then select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Create a copy** action that appears.
+- Select **⋮** (**Actions**) next to the **Notifications** value, and then select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Create a copy**.
 
 When you copy a custom notification on the **Tenant notifications** tab, a copy of the notification named "\<OriginalName\> - Copy" is added to the list.
 
@@ -209,8 +209,8 @@ You can't remove built-in notifications from the **Global notifications** tab. Y
 
 To remove an existing custom notification from the **Tenant notifications** tab, do one of the following steps:
 
-- Select the notification from the list by clicking the check box next to the name, and then select the :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
-- Select **⋮** (**Actions**) next to the **Notifications** value, and then select :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete**.
+- Select the notification from the list by clicking the check box next to the name, and then select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
+- Select **⋮** (**Actions**) next to the **Notifications** value, and then select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete**.
 
 In the confirmation dialog that opens, select **Delete**.
 

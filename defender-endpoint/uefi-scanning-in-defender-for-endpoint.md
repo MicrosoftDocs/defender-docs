@@ -1,9 +1,9 @@
 ---
 title: UEFI scanning in Defender for Endpoint
 description: Learn how Microsoft Defender for Endpoint is extending its protection capabilities to the firmware level with a new Unified Extensible Firmware Interface (UEFI) scanner.
-author: siosulli
-ms.author: siosulli
-manager: deniseb
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.reviewer: yongrhee
 audience: ITPro
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 04/16/2024
+ms.date: 04/30/2024
 ---
 
 # UEFI scanning in Defender for Endpoint
@@ -25,9 +25,9 @@ Recently, Microsoft Defender for Endpoint extended its protection capabilities t
 
 Hardware and firmware-level attacks have continued to rise in recent years, as modern security solutions made persistence and detection evasion on the operating system more difficult. Attackers compromise the boot flow to achieve low-level malware behavior that's hard to detect, posing a significant risk to an organization's security posture.
 
-[Windows Defender System Guard](/windows/security/hardware-security/how-hardware-based-root-of-trust-helps-protect-windows) helps defend against firmware attacks by providing guarantees for secure boot through hardware-backed security features like [hypervisor-level attestation](https://www.microsoft.com/security/blog/2018/04/19/introducing-windows-defender-system-guard-runtime-attestation/) and [Secure Launch](/windows/security/threat-protection/windows-defender-system-guard/system-guard-how-hardware-based-root-of-trust-helps-protect-windows), also known as Dynamic Root of Trust (DRTM), which are enabled by default in [Secured-core PCs](https://www.microsoft.com/en-us/windowsforbusiness/windows10-secured-core-computers). The new UEFI scan engine in Defender for Endpoint expands on these protections by making firmware scanning broadly available.
+[Windows Defender System Guard](/windows/security/hardware-security/how-hardware-based-root-of-trust-helps-protect-windows) helps defend against firmware attacks by providing guarantees for secure boot through hardware-backed security features like [hypervisor-level attestation](https://www.microsoft.com/security/blog/2018/04/19/introducing-windows-defender-system-guard-runtime-attestation/) and [Secure Launch](/windows/security/threat-protection/windows-defender-system-guard/system-guard-how-hardware-based-root-of-trust-helps-protect-windows), also known as Dynamic Root of Trust (DRTM), which are enabled by default in [Secured-core PCs](https://www.microsoft.com/windowsforbusiness/windows10-secured-core-computers). The new UEFI scan engine in Defender for Endpoint expands on these protections by making firmware scanning broadly available.
 
-The UEFI scanner is a new component of the [built-in antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/microsoft-defender-antivirus-windows) solution on Windows 10 and newer versions, and gives Defender for Endpoint the unique ability to scan inside of the firmware filesystem and perform security assessment. It integrates insights from our partner chipset manufacturers and further expands the comprehensive endpoint protection provided by Defender for Endpoint.
+The UEFI scanner is a new component of the [built-in antivirus](microsoft-defender-antivirus-windows.md) solution on Windows 10 and newer versions, and gives Defender for Endpoint the unique ability to scan inside of the firmware filesystem and perform security assessment. It integrates insights from our partner chipset manufacturers and further expands the comprehensive endpoint protection provided by Defender for Endpoint.
 
 ## Prerequisites
 
@@ -36,13 +36,13 @@ The UEFI scanner is a new component of the [built-in antivirus](/windows/securit
 - [Behavior monitoring](behavior-monitor.md) is turned on
 - Devices are running a current [Microsoft Defender Antivirus platform version](microsoft-defender-antivirus-updates.md#monthly-platform-and-engine-versions)
 - Devices are running one of the following versions of Windows:
-   - Windows 10, Windows 11 or newer on client devices
-   - Windows Server 2019, Windows Server 2022, or newer versions
-   - [Windows Server 2012 R2 and Windows Server 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292) with the [unified Defender for Endpoint client](/defender-endpoint/configure-server-endpoints#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) installed
+  - Windows 10, Windows 11 or newer on client devices
+  - Windows Server 2019, Windows Server 2022, or newer versions
+  - [Windows Server 2012 R2 and Windows Server 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292) with the [unified Defender for Endpoint client](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) installed
 
 ## What is the UEFI scanner?
 
-The Unified Extensible Firmware Interface (UEFI) is a replacement for [legacy BIOS](/windows-hardware/drivers/bringup/smbios). If the chipset is configured correctly ([UEFI](https://uefi.org/sites/default/files/resources/UEFI%20Spec%202_6.pdf) & chipset configuration itself) and [secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) is enabled, the firmware is reasonably secure. To perform a hardware-based attack, attackers exploit a vulnerable firmware or a misconfigured machine to deploy a [rootkit](https://www.microsoft.com/en-us/microsoft-365-life-hacks/privacy-and-safety/what-is-a-rootkit), which allows attackers to gain foothold on the machine.
+The Unified Extensible Firmware Interface (UEFI) is a replacement for [legacy BIOS](/windows-hardware/drivers/bringup/smbios). If the chipset is configured correctly ([UEFI](https://uefi.org/sites/default/files/resources/UEFI%20Spec%202_6.pdf) & chipset configuration itself) and [secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) is enabled, the firmware is reasonably secure. To perform a hardware-based attack, attackers exploit a vulnerable firmware or a misconfigured machine to deploy a [rootkit](https://www.microsoft.com/microsoft-365-life-hacks/privacy-and-safety/what-is-a-rootkit), which allows attackers to gain foothold on the machine.
 
 :::image type="content" source="media/expected-vs-attacker-boot-flow.jpg" alt-text="Screenshot that shows expected boot flow vs compromised boot flow ":::
 
