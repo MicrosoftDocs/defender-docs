@@ -60,8 +60,10 @@ You can use web content filtering for testing with Network protection for Linux.
 - Licensing: Microsoft Defender for Endpoint tenant (can be trial) and platform specific requirements found in [Microsoft Defender for Endpoint for non-Windows platforms](non-windows.md#licensing-requirements)
 - Onboarded Machines:
   - **Minimum Linux version**: For a list of supported distributions, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).
-  - **Microsoft Defender for Endpoint Linux client version**: 101.78.13 -insiderFast(Preview)
+  - **Microsoft Defender for Endpoint Linux client version**: 101.78.13 or later on Insiders-Slow or insiders-Fast channel.
     
+> [!IMPORTANT]
+> In order to evaluate network protection for Linux, please send email to "xplatpreviewsupport@microsoft.com" with your Org ID. We will enable the feature on your tenant per request basis.
 ## Instructions
 
 Deploy Linux manually, see [Deploy Microsoft Defender for Endpoint on Linux manually](linux-install-manually.md)
