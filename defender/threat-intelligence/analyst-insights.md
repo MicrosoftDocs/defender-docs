@@ -1,6 +1,6 @@
 ---
-title: 'Microsoft Defender Threat Intelligence (Defender TI) Analyst Insights'
-description: 'In this overview article, learn about the Microsoft Defender Threat Intelligence (Defender TI)'s analyst insights feature.'
+title: Microsoft Defender Threat Intelligence (Defender TI) Analyst Insights
+description: In this overview article, learn about the Microsoft Defender Threat Intelligence (Defender TI)'s analyst insights feature.
 author: alexroland24
 ms.author: aroland
 manager: dolmont

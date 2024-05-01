@@ -1,6 +1,6 @@
 ---
-title: 'Microsoft Defender Threat Intelligence (Defender TI) Reputation Scoring'
-description: 'In this overview article, learn about the Microsoft Defender Threat Intelligence (Defender TI)'s reputation scoring feature.'
+title: Microsoft Defender Threat Intelligence (Defender TI) Reputation Scoring
+description: In this overview article, learn about the Microsoft Defender Threat Intelligence (Defender TI)'s reputation scoring feature.
 author: alexroland24
 ms.author: aroland
 manager: dolmont
