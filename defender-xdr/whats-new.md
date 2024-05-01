@@ -47,7 +47,7 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) **Toggle on preview features in a centralized location**, for Microsoft Defender XDR, Microsoft Defender for Identity, Microsoft Defender for Endpoint, and Microsoft Defender for Cloud Apps. Customers with multiple services can turn preview features on and off at the service level, from a single location. For more information, see [Microsoft Defender XDR preview features](preview.md).
 
-Customers who don't yet have preview features turned on see only a single option to turn preview features on and off, without granularity per service. In such cases, turn preview features on for Defender for Endpoint and Defender for Cloud Apps separately in the relevant service-specific settings areas.
+   Customers who don't yet have preview features turned on see only a single option to turn preview features on and off, without granularity per service. In such cases, turn preview features on for Defender for Endpoint and Defender for Cloud Apps separately in the relevant service-specific settings areas.
 
 ## February 2024
 
