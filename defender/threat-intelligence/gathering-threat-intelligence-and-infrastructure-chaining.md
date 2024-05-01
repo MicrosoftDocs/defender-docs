@@ -33,7 +33,7 @@ Defender TI might include live, real-time observations and threat indicators, in
 
 ## Before you begin
 
-As the disclaimer states previously, suspicious and malicious indicators are defanged for your safety. Remove any brackets from IP addresses, domains, and hosts when searching in Defender TI. Don’t search these indicators directly in your browser.
+As the disclaimer states previously, suspicious and malicious indicators are defanged for your safety. Remove any brackets from IP addresses, domains, and hosts when searching in Defender TI. Don't search these indicators directly in your browser.
 
 ## Perform indicator searches and gather threat and adversary intelligence
 
@@ -49,11 +49,11 @@ Infrastructure chaining uses the highly connected nature of the internet to expa
 
 Microsoft has been profiling and following the activities of Magecart, a syndicate of cybercriminal groups behind hundreds of breaches of online retail platforms. Magecart injects scripts, which steal the sensitive data consumers enter into online payment forms, on e-commerce websites directly or through their compromised suppliers.
 
-Back in October 2018, Magecart infiltrated MyPillow’s online website, *mypillow[.]com*, to steal payment information by injecting a script into their web store. The script was hosted on a typosquatted domain *mypiltow[.]com*.
+Back in October 2018, Magecart infiltrated MyPillow's online website, *mypillow[.]com*, to steal payment information by injecting a script into their web store. The script was hosted on a typosquatted domain *mypiltow[.]com*.
 
-The MyPillow breach was a two-stage attack, with the first skimmer only active for a brief time before being identified as illicit and removed. However, the attackers still had access to MyPillow’s network and on October 26, 2018, Microsoft observed that they registered a new domain, *livechatinc[.]org*.
+The MyPillow breach was a two-stage attack, with the first skimmer only active for a brief time before being identified as illicit and removed. However, the attackers still had access to MyPillow's network and on October 26, 2018, Microsoft observed that they registered a new domain, *livechatinc[.]org*.
 
-Magecart actors typically register a domain that looks as similar as possible to the legitimate one. Thus, if an analyst looks at the JavaScript code, they might miss Magecart's injected script that’s capturing the credit card payment information and pushing it to Magecart's own infrastructure. However, Microsoft's virtual users capture the document object model (DOM) and find all the dynamic links and changes made by the JavaScript from the crawls on the backend. We can detect that activity and pinpoint that fake domain that was hosting the injected script into the MyPillow webstore.
+Magecart actors typically register a domain that looks as similar as possible to the legitimate one. Thus, if an analyst looks at the JavaScript code, they might miss Magecart's injected script that's capturing the credit card payment information and pushing it to Magecart's own infrastructure. However, Microsoft's virtual users capture the document object model (DOM) and find all the dynamic links and changes made by the JavaScript from the crawls on the backend. We can detect that activity and pinpoint that fake domain that was hosting the injected script into the MyPillow webstore.
 
 ### Gathering Magecart breach threat intelligence
 
@@ -75,7 +75,7 @@ Perform the following steps in the **Intel explorer** page in the Defender porta
    - *mypiltow[.]com*
 6. Go back to the **Intel explorer** search bar, select **All** in the dropdown, and query *mypillow[.]com* again. 
 7. Select the **Host pairs** tab of the search results. 
-Host pairs reveal connections between websites that traditional data sources, such as passive domain name system (pDNS) and WHOIS, wouldn’t surface. They also let you see where your resources are being used and vice-versa.
+Host pairs reveal connections between websites that traditional data sources, such as passive domain name system (pDNS) and WHOIS, wouldn't surface. They also let you see where your resources are being used and vice-versa.
 8. Sort the host pairs by **First seen**, and filter by *script.src* as the **Cause**. Page over until you find host pair relationships that took place in October 2018. Notice that *mypillow[.]com* is pulling content from the typosquatted domain, *mypiltow[.]com* on October 3-5, 2018 through a script. 
    
     :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-host-pair.png" alt-text="Tutorial InfraChain My Piltowcom Reputation." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-host-pair.png":::
@@ -84,7 +84,7 @@ Host pairs reveal connections between websites that traditional data sources, su
 
    :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypiltow-oct-ip.png" alt-text="Tutorial Infra Chain My Piltow Ip Summary." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypiltow-oct-ip.png":::
 
-    Repeat this step for *mypillow[.]com*. You should notice the following differences  between the two domains’ IP addresses in October 2018:
+    Repeat this step for *mypillow[.]com*. You should notice the following differences  between the two domains' IP addresses in October 2018:
    - The IP address *mypiltow[.]com* resolved to, 195.161.41[.]65, was hosted in Russia.
 
      :::image type="content" source="media/tutorial-infra-chain-mypiltow-IP-RU.png" alt-text="Tutorial infrastructure chain mypiltow RU ASN." lightbox="media/tutorial-infra-chain-mypiltow-IP-RU.png":::
@@ -126,8 +126,8 @@ Host pairs reveal connections between websites that traditional data sources, su
 
     :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-livechat.png" alt-text="Tutorial Infra Chain My Pillowcom Host Pairs Live Chat ScriptSrc." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-mypillow-livechat.png":::
     
-    In addition, *secure.livechatinc[.]org* reached out to *www.mypillow[.]com* to access the latter’s server (*xmlhttprequest*).
-16. Review *mypillow[.]com*’s host pair relationships further. Notice how *mypillow[.]com* has host pair relationships with the following domains, which is similar to the domain name *secure.livechatinc[.]org*:
+    In addition, *secure.livechatinc[.]org* reached out to *www.mypillow[.]com* to access the latter's server (*xmlhttprequest*).
+16. Review *mypillow[.]com*'s host pair relationships further. Notice how *mypillow[.]com* has host pair relationships with the following domains, which is similar to the domain name *secure.livechatinc[.]org*:
       - *cdn.livechatinc[.]com*
       - *secure.livechatinc[.]com*
       - *api.livechatinc[.]com*
@@ -140,7 +140,7 @@ Host pairs reveal connections between websites that traditional data sources, su
       - img.src
       - xmlhttprequest
       
-      Livechat is a live support chat service that online retailers can add to their websites as a partner resource. Several e-commerce platforms, including MyPillow, use it. This fake domain is interesting because the  Livechat’s official site is actually *livechatinc[.]com*. Therefore, in this case, the threat actor used a top-level-domain typosquat to hide the fact they placed a second skimmer on the MyPillow website.
+      Livechat is a live support chat service that online retailers can add to their websites as a partner resource. Several e-commerce platforms, including MyPillow, use it. This fake domain is interesting because the  Livechat's official site is actually *livechatinc[.]com*. Therefore, in this case, the threat actor used a top-level-domain typosquat to hide the fact they placed a second skimmer on the MyPillow website.
 17. Go back and find a host pair relationship with *secure.livechatinc[.]org* and pivot off that hostname. The **Resolutions** tab should indicate that this host resolved to 212.109.222[.]230 in October 2018.
 
        :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org.png" alt-text="Tutorial Infra Chain Secure Live Chat Inc Org Resolutions." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org.png":::
@@ -161,7 +161,7 @@ Host pairs reveal connections between websites that traditional data sources, su
     :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org-whois.png" alt-text="Tutorial Infra Chain Secure Live Chat Inc Org Whois." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org-whois.png":::
 19. Select the **Host pairs** tab. You should see the following host pair relationships from October to November 2018:
       - *secure.livechatinc[.]org* redirected users to *secure.livechatinc.com* on November 19, 2022. This redirection is more than likely an obfuscation technique to evade detection.
-      - *www.mypillow[.]com* was pulling a script hosted on *secure.livechatinc[.]org* (the fake LiveChat site) from October 26, 2018 through November 19, 2022. During this timeframe, *www.mypillow[.]com*’s user purchases were potentially compromised.
+      - *www.mypillow[.]com* was pulling a script hosted on *secure.livechatinc[.]org* (the fake LiveChat site) from October 26, 2018 through November 19, 2022. During this timeframe, *www.mypillow[.]com*'s user purchases were potentially compromised.
       - *secure.livechatinc[.]org* was requesting data (*xmlhttprequest*) from the server *www.mypillow[.]com*, which hosts the real MyPillow website, from October 27 to 29, 2018.
     
     :::image type="content" source="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org-hostpairs.png" alt-text="Tutorial Infra Chain Secure Live Chat Inc Org Host Pairs." lightbox="/defender/threat-intelligence/media/tutorial-infra-chain-livechatinc-org-hostpairs.png":::

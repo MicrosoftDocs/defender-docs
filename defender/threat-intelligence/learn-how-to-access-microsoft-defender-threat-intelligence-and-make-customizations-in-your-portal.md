@@ -16,7 +16,7 @@ ms.collection: essentials-get-started
 >[!IMPORTANT] 
 > On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) will be retired and will no longer be accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
-This guide walks you through how to access Microsoft Threat Intelligence (Defender TI) from the Microsoft Defender portal, adjust the portal’s theme to make it easier on your eyes when using it, and find sources for enrichment so you can see more results when gathering threat intelligence. 
+This guide walks you through how to access Microsoft Threat Intelligence (Defender TI) from the Microsoft Defender portal, adjust the portal's theme to make it easier on your eyes when using it, and find sources for enrichment so you can see more results when gathering threat intelligence. 
 
    :::image type="content" source="/defender/threat-intelligence/media/quickstart-intel-explorer.png" alt-text="Screenshot of the Microsoft Defender Threat Intelligence Intel explorer in the Microsoft Defender portal." lightbox="/defender/threat-intelligence/media/quickstart-intel-explorer.png":::
 
@@ -37,9 +37,9 @@ This guide walks you through how to access Microsoft Threat Intelligence (Defend
    - Intel projects
 
     :::image type="content" source="/defender/threat-intelligence/media/quickstart-navigation.png" alt-text="Screenshot of the Microsoft Defender portal with the Threat intelligence navigation  links highlighted." lightbox="/defender/threat-intelligence/media/quickstart-navigation.png":::
-## Adjust the Defender portal’s display theme to dark or light mode
+## Adjust the Defender portal's display theme to dark or light mode
 
-By default, the Defender portal’s display theme is set to light mode. To switch to dark mode, on the Defender portal, navigate to **Home** then select **Dark mode** on the upper right-right corner of the home page.
+By default, the Defender portal's display theme is set to light mode. To switch to dark mode, on the Defender portal, navigate to **Home** then select **Dark mode** on the upper right-right corner of the home page.
       
 ![Partial screenshot of the Defender portal home page with the Dark mode icon hightlighted.](media/quickstart-dark-mode.png)
 
@@ -54,7 +54,7 @@ Select the **Help** icon in the upper right-hand corner of the Defender portal. 
 
 :::image type="content" source="/defender/threat-intelligence/media/quickstart-help.png" alt-text="Screenshot of the Microsoft Defender portal with the Help side panel open and highlighted." lightbox="/defender/threat-intelligence/media/quickstart-help.png":::
 
-You can also review Microsoft’s [licensing resources](https://www.microsoft.com/licensing/docs) and [privacy statement](https://privacy.microsoft.com/privacystatement) by selecting **Legal** and **Privacy & Cookies**, respectively, at the lower right hand of the **Help** side panel.
+You can also review Microsoft's [licensing resources](https://www.microsoft.com/licensing/docs) and [privacy statement](https://privacy.microsoft.com/privacystatement) by selecting **Legal** and **Privacy & Cookies**, respectively, at the lower right hand of the **Help** side panel.
 
 ## Sign out of the Defender portal
 

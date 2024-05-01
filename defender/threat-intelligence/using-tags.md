@@ -55,7 +55,7 @@ Just as users can add tags, they can also modify or remove them. Once a tag is a
 
     ![Tags Search](media/tagsSearch.png)
 
-4. Select the ‘Edit Tags’ drop-down in the upper left-hand corner of the Defender TI portal.
+4. Select the 'Edit Tags' drop-down in the upper left-hand corner of the Defender TI portal.
 
     ![Tags Search Edit Tags](media/tagsSearchEditTags.png)
 
@@ -70,7 +70,7 @@ Just as users can add tags, they can also modify or remove them. Once a tag is a
 
     ![Tags Search Save Tags](media/tagsSearchSaveTags.png)
 
-7. To edit tags, repeat step 3. Remove any tags by selecting the ‘X’ at the end of the tag name or add new tags as you did in step 4.
+7. To edit tags, repeat step 3. Remove any tags by selecting the 'X' at the end of the tag name or add new tags as you did in step 4.
 
 8. Save your changes.
 
@@ -84,12 +84,12 @@ Users can view tags that were added by themselves or others within their tenant 
 
 1. Access the [Defender Threat Intelligence Portal](https://ti.defender.microsoft.com/).
 2. Complete Microsoft authentication to access portal.
-3. Users can search against custom tags via Defender TI’s Threat Intelligence Search by selecting the Tag search type in the Threat Intelligence search bar drop-down and searching against the tag value to identify all other indicators that share that same tag value.
+3. Users can search against custom tags via Defender TI's Threat Intelligence Search by selecting the Tag search type in the Threat Intelligence search bar drop-down and searching against the tag value to identify all other indicators that share that same tag value.
 
     ![Search Tag](media/searchTag.png)
 
 Common Tag Use Case Workflow
-Let’s say a triage analyst investigates an incident and finds that it is related to phishing. That analyst can add “phish” as a tag to the indicators of compromise related to that incident. Later, the incident response and threat hunting team can further analyze these indicators of compromise and work with their cyber threat intelligence counterparts to identify which actor group was responsible for their phishing incident. They can then add another “[actor name]” tag to those indicators of compromise or what infrastructure was used that connected them to other related indicators of compromise, such as a “[SHA-1 hash]” custom tag.
+Let's say a triage analyst investigates an incident and finds that it is related to phishing. That analyst can add "phish" as a tag to the indicators of compromise related to that incident. Later, the incident response and threat hunting team can further analyze these indicators of compromise and work with their cyber threat intelligence counterparts to identify which actor group was responsible for their phishing incident. They can then add another "[actor name]" tag to those indicators of compromise or what infrastructure was used that connected them to other related indicators of compromise, such as a "[SHA-1 hash]" custom tag.
 
 ## Next steps
 

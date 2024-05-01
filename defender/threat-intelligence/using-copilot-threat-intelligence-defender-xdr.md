@@ -34,7 +34,7 @@ Copilot for Security customers gain for each of their authenticated Copilot user
 
 ## Accessing Copilot in Defender for threat intelligence content
 
-You can experience Copilot for Security’s capability to look up threat intelligence in the following pages of the Defender portal:
+You can experience Copilot for Security's capability to look up threat intelligence in the following pages of the Defender portal:
 - Threat analytics
 - Intel profiles
 - Intel explorer

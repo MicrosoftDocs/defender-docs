@@ -1,6 +1,6 @@
 --- 
 title: 'Microsoft Defender Threat Intelligence (Defender TI) Data Sets'
-description: 'In this overview article, learn about Microsoft Defender Threat Intelligence (Defender TI)’s data sets feature.'
+description: 'In this overview article, learn about Microsoft Defender Threat Intelligence (Defender TI)'s data sets feature.'
 author: alexroland24
 ms.author: aroland
 manager: dolmont
@@ -12,9 +12,9 @@ ms.custom: template-concept
 
 # Data sets
 
-Microsoft centralizes numerous data sets into a single platform, Microsoft Defender Threat Intelligence (Defender TI), making it easier for Microsoft’s community and customers to conduct infrastructure analysis. Microsoft’s primary focus is to provide as much data as possible about Internet infrastructure to support a variety of security use cases.
+Microsoft centralizes numerous data sets into a single platform, Microsoft Defender Threat Intelligence (Defender TI), making it easier for Microsoft's community and customers to conduct infrastructure analysis. Microsoft's primary focus is to provide as much data as possible about Internet infrastructure to support a variety of security use cases.
 
-Microsoft collects, analyzes, and indexes internet data to assist users in detecting and responding to threats, prioritizing incidents, and proactively identifying adversaries’ infrastructure associated with actor groups targeting their organization. Microsoft collects internet data via its’ PDNS sensor network, global proxy network of virtual users, port scans, and leverages third-party sources for malware and added Domain Name System (DNS) data.
+Microsoft collects, analyzes, and indexes internet data to assist users in detecting and responding to threats, prioritizing incidents, and proactively identifying adversaries' infrastructure associated with actor groups targeting their organization. Microsoft collects internet data via its' PDNS sensor network, global proxy network of virtual users, port scans, and leverages third-party sources for malware and added Domain Name System (DNS) data.
 
 This internet data is categorized into two distinct groups: traditional and advanced. Traditional data sets include Resolutions, Whois, SSL Certificates, Subdomains, DNS, Reverse DNS, and Services. Advanced data sets include Trackers, Components, Host Pairs, and Cookies. Trackers, Components, Host Pairs, and Cookies data sets are collected from observing the Document Object Model (DOM) of web pages crawled. Additionally, Components and Trackers are also observed from detection rules that are triggered based on the banner responses from port scans or SSL Certificate details.
 
@@ -73,11 +73,11 @@ Our PDNS resolution data includes the following:
 
 ## Whois
 
-Thousands of times a day, domains are bought and/or transferred between individuals and organizations. The process to make all of this happen is easy and only takes a few minutes and roughly $7 depending on the registrar provider. Beyond payment details, you must supply additional information about yourself, some of which gets stored as part of a Whois record once the domain has been set up. This would be considered a public domain registration. However, there are private domain registration services, where you can hide your personal information from your domain’s Whois record. In these situations, the domain owner’s information is safe and replaced by their registrar’s information. More actor groups are performing private domain registrations to make it more difficult for analysts to find other domains that they own. Defender TI provides a variety of data sets to find actors’ shared infrastructure when Whois records don’t provide leads.
+Thousands of times a day, domains are bought and/or transferred between individuals and organizations. The process to make all of this happen is easy and only takes a few minutes and roughly $7 depending on the registrar provider. Beyond payment details, you must supply additional information about yourself, some of which gets stored as part of a Whois record once the domain has been set up. This would be considered a public domain registration. However, there are private domain registration services, where you can hide your personal information from your domain's Whois record. In these situations, the domain owner's information is safe and replaced by their registrar's information. More actor groups are performing private domain registrations to make it more difficult for analysts to find other domains that they own. Defender TI provides a variety of data sets to find actors' shared infrastructure when Whois records don't provide leads.
 
 Whois is a protocol that lets anyone query information about a domain, IP address, or subnet. One of the most common functions for Whois in threat infrastructure research is to identify or connect disparate entities based on unique data shared within Whois records. If you were reading carefully or ever purchased a domain yourself, you may have noticed that the content requested from the registrars is never verified. In fact, you could have put anything in the record (and a lot of people do) which would then be displayed to the world.
 
-Each Whois record has several different sections, all of which could include different information. Commonly found sections include “registrar”, “registrant”, “administrator”, and “technical” with each potentially corresponding to a different contact for the record. A lot of the time this data is duplicated across sections, but in some cases, there may be slight discrepancies, especially if an actor made a mistake. When viewing Whois information within Defender TI, you will see a condensed record that de-duplicates any data and notates which part of the record it came from. We have found this process greatly speeds up the analyst workflow and avoids any overlooking of data. The Defender TI's Whois information is powered by the WhoisIQ™ database.
+Each Whois record has several different sections, all of which could include different information. Commonly found sections include "registrar", "registrant", "administrator", and "technical" with each potentially corresponding to a different contact for the record. A lot of the time this data is duplicated across sections, but in some cases, there may be slight discrepancies, especially if an actor made a mistake. When viewing Whois information within Defender TI, you will see a condensed record that de-duplicates any data and notates which part of the record it came from. We have found this process greatly speeds up the analyst workflow and avoids any overlooking of data. The Defender TI's Whois information is powered by the WhoisIQ™ database.
 
 Our Whois data includes the following:
 - **Record Updated:** a timestamp that indicates the day a Whois record was last updated.
@@ -86,7 +86,7 @@ Our Whois data includes the following:
 - **Created:** the age of the current Whois record.
 - **Whois Server:** the server is set-up by an ICANN accredited registrar to acquire up-to-date information about domains that are registered within it. 
 - **Registrar:** the registrar service used to register the artifact.
-- **Domain Status:** the current status of the domain. An ”active" domain is live on the internet. 
+- **Domain Status:** the current status of the domain. An "active" domain is live on the internet. 
 - **Email:** any email addresses found in the Whois record, and the type of contact each one is associated with (e.g. admin, tech).
 - **Name:** the name of any contacts within the record, and the type of contact each is associated with.
 - **Organization:** the name of any organizations within the record, and the type of contact each is associated with.
@@ -102,13 +102,13 @@ Our Whois data includes the following:
 
 ![Data Tab WHOIS](media/dataTabWHOIS.png)
 
-Defender TI’s current Whois repository highlights all domains in Microsoft’s Whois collection that are currently registered and associated with the Whois attribute of interest. This data highlights the domain's registration and expiration date, along with the email address used to register the domain. This data is displayed in the Whois Search tab of the platform.
+Defender TI's current Whois repository highlights all domains in Microsoft's Whois collection that are currently registered and associated with the Whois attribute of interest. This data highlights the domain's registration and expiration date, along with the email address used to register the domain. This data is displayed in the Whois Search tab of the platform.
 
 ## Historical Whois lookups
 
 ![Search Whois History](media/searchWhoisHistory.png)
 
-Defender TI’s Whois History repository provides users with access to all known historical domain associations to Whois attributes based on the system’s observations. This data set highlights all domains associated with an attribute that a user pivots from displaying the first time and the last time we observed the association between the domain and attribute queried. This data is displayed in a separate tab next to the current Whois Search tab.
+Defender TI's Whois History repository provides users with access to all known historical domain associations to Whois attributes based on the system's observations. This data set highlights all domains associated with an attribute that a user pivots from displaying the first time and the last time we observed the association between the domain and attribute queried. This data is displayed in a separate tab next to the current Whois Search tab.
 
 **Questions this data set may help answer:**
 
@@ -157,7 +157,7 @@ Defender TI’s Whois History repository provides users with access to all known
 ## Certificates
 Beyond securing your data, SSL Certificates are a fantastic way for users to connect disparate network infrastructure. Modern scanning techniques allow us to perform data requests against every node on the Internet in a matter of hours, meaning we can easily associate a certificate to an IP address hosting it on a regular basis.
 
-Much like a Whois record, SSL certificates require information to be supplied by the user to generate the final product. Aside from the domain, the SSL certificate is being created for (unless self-signed), any of the additional information can be made up by the user. Where Microsoft’s users see the most value from SSL certificates is not necessarily the unique data someone may use when generating the certificate, but where it's hosted.
+Much like a Whois record, SSL certificates require information to be supplied by the user to generate the final product. Aside from the domain, the SSL certificate is being created for (unless self-signed), any of the additional information can be made up by the user. Where Microsoft's users see the most value from SSL certificates is not necessarily the unique data someone may use when generating the certificate, but where it's hosted.
 
 To access an SSL certificate, it needs to be associated with a web server and exposed through a particular port (most often 443). Using mass Internet scans on a weekly basis, it's possible to scan all IP addresses and obtain any certificate being hosted to build a historic repository of certificate data. Having a database of IP addresses to SSL certificate mappings provides users with a way to identify overlaps in infrastructure.
 
@@ -254,9 +254,9 @@ Our subdomain data includes the following:
 
 ## Trackers
 
-Trackers are unique codes or values found within web pages and often used to track user interaction. These codes can be used to correlate a disparate group of websites to a central entity. Often, actors will copy the source code of a victim’s website they are looking to impersonate for a phishing campaign. Seldomly will actors take the time to remove these IDs that allow users to identify these fraudulent sites using Microsoft’s Trackers data set. Actors may also deploy tracker IDs to see how successful their cyber-attack campaigns are. This is similar to marketers when they leverage SEO IDs, such as a Google Analytics Tracker ID, to track the success of their marketing campaign.
+Trackers are unique codes or values found within web pages and often used to track user interaction. These codes can be used to correlate a disparate group of websites to a central entity. Often, actors will copy the source code of a victim's website they are looking to impersonate for a phishing campaign. Seldomly will actors take the time to remove these IDs that allow users to identify these fraudulent sites using Microsoft's Trackers data set. Actors may also deploy tracker IDs to see how successful their cyber-attack campaigns are. This is similar to marketers when they leverage SEO IDs, such as a Google Analytics Tracker ID, to track the success of their marketing campaign.
 
-Microsoft’s Tracker data set includes IDs from providers like Google, Yandex, Mixpanel, New Relic, Clicky, and is continuing to grow on a regular basis.
+Microsoft's Tracker data set includes IDs from providers like Google, Yandex, Mixpanel, New Relic, Clicky, and is continuing to grow on a regular basis.
 
 Our tracker data includes the following:
 
@@ -345,11 +345,11 @@ Our component data includes the following:
 
 ## Host pairs
 
-Host pairs are two pieces of infrastructure (a parent and a child) that share a connection observed from a virtual user’s web crawl. The connection could range from a top-level redirect (HTTP 302) to something more complex like an iframe or script source reference.
+Host pairs are two pieces of infrastructure (a parent and a child) that share a connection observed from a virtual user's web crawl. The connection could range from a top-level redirect (HTTP 302) to something more complex like an iframe or script source reference.
 
 Our host pair data includes the following:
 
-- **Parent Hostname:** the host that is referencing an asset or “reaching out” to the child host
+- **Parent Hostname:** the host that is referencing an asset or "reaching out" to the child host
 - **Child Hostname:** the host that is being called on by the parent host
 - **First Seen:** a timestamp of the date that we first observed a relationship with the host.
 - **Last Seen:** a timestamp of the date that we last observed a relationship with the host.
