@@ -1,10 +1,10 @@
---- 
+---
 title: 'What is Microsoft Defender Threat Intelligence (Defender TI)? - Backup'
 description: 'In this overview article, learn about the main features that come with Microsoft Defender Threat Intelligence (Defender TI). - Backup'
 author: alexroland24
 ms.author: aroland
 manager: dolmont
-ms.service: threat-intelligence 
+ms.service: threat-intelligence
 ms.topic: overview
 ms.date: 08/02/2022
 ms.custom: template-overview
