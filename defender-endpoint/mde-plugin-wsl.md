@@ -46,7 +46,7 @@ Be aware of the following before you start:
 
 ## Software components and installer file names
 
-Installer: `DefenderPlugin-x64-0.23.1102.4.msi`. You can download it from the onboarding page in the [Microsoft Defender portal](https://security.microsoft.com).
+Installer: `DefenderPlugin-x64-0.24.426.1.msi`. You can download it from the onboarding page in the [Microsoft Defender portal](https://security.microsoft.com).
 
 Installation directories: 
 
