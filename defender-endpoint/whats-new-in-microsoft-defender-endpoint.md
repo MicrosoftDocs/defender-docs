@@ -58,9 +58,9 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## March 2024
 
-- **Built-in Scheduled scan for macOS (GA)**: For information on Scheduled Scan built-in for Microsoft Defender for Endpoint on macOS, see [How to schedule scans with Microsoft Defender for Endpoint on macOS](mac-schedule-scan.md)
+- (GA) **Built-in Scheduled scan for macOS**: For information on Scheduled Scan built-in for Microsoft Defender for Endpoint on macOS, see [How to schedule scans with Microsoft Defender for Endpoint on macOS](mac-schedule-scan.md)
 
-- **Turn preview options on in the main Microsoft 365 Defender settings** (Preview): Turn preview options on in the main Microsoft 365 Defender settings, together with other Microsoft 365 Defender preview features. Customers not yet using preview features continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
+- (Preview) **Turn preview options on in the main Microsoft 365 Defender settings**: Turn preview options on in the main Microsoft 365 Defender settings together with other Microsoft 365 Defender preview features. Customers who are not using preview features yet can continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
 
 ## February 2024
 
