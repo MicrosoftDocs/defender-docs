@@ -79,6 +79,6 @@ To reduce management overhead, there's no requirement for device-to-user mapping
 
 - [Licensing and product terms for Microsoft 365 subscriptions](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/MCA).
 - [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender for Business](/defender-business/mdb-overview) (endpoint protection for small and medium-sized businesses)
+- [Microsoft Defender for Business](mdb-overview.md) (endpoint protection for small and medium-sized businesses)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

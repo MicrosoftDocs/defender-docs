@@ -3,11 +3,11 @@ title: Set preferences for Microsoft Defender for Endpoint on Linux
 ms.reviewer: gopkr
 description: Describes how to configure Microsoft Defender for Endpoint on Linux in enterprises.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: dansimp
+author: dansimp
 ms.localizationpriority: medium
-ms.date: 07/07/2023
-manager: deniseb
+ms.date: 05/01/2024
+manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security

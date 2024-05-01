@@ -2,11 +2,11 @@
 title: What's new in Microsoft Defender for Endpoint on Mac
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Mac.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.localizationpriority: medium
 ms.date: 02/25/2024
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
@@ -46,7 +46,7 @@ Tamper protection is turned on in block mode by default. This setting helps secu
 
 **Network protection available for macOS**
 
-Network protection for macOS is now available for all Mac devices onboarded to Defender for Endpoint. Devices must meet the minimum requirements. To learn more, see [Use network protection to help prevent macOS connections to bad sites](/defender-endpoint/network-protection-macos).
+Network protection for macOS is now available for all Mac devices onboarded to Defender for Endpoint. Devices must meet the minimum requirements. To learn more, see [Use network protection to help prevent macOS connections to bad sites](network-protection-macos.md).
 
 **Known issues**
 

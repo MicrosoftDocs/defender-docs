@@ -50,7 +50,7 @@ Edges
 `NodeProperties` and `Categories` are dynamic columns.
 
 - Kusto knows those columns contain json-like content, and applies smart indexing.
-- However, not all Kusto operators use the index. For example, `set_has_element`, `isempty`, `isnotnull` don't use the index when they're applied to a dynamic column and `isnotnull(Properties[“containsSensitiveData”]` doesn't use the index.
+- However, not all Kusto operators use the index. For example, `set_has_element`, `isempty`, `isnotnull` don't use the index when they're applied to a dynamic column and `isnotnull(Properties["containsSensitiveData"]` doesn't use the index.
 - Instead, use the `has()` operator, which always uses the index.
 
 ### Example

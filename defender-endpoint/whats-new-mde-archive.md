@@ -152,7 +152,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
    > [!IMPORTANT]
    > Standard discovery will be the default mode for all customers starting July 19, 2021. You can choose to retain the "basic mode" through the **Settings** page.
 
-- [Device group definitions](/defender-endpoint/machine-groups) can now include multiple values for each condition. You can set multiple tags, device names, and domains to the definition of a single device group.
+- [Device group definitions](machine-groups.md) can now include multiple values for each condition. You can set multiple tags, device names, and domains to the definition of a single device group.
 
 - [Mobile Application management support](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> This enhancement enables Microsoft Defender for Endpoint protect an organization's data within a managed application when Intune is being used to manage mobile applications. For more information about mobile application management, see [this documentation](/mem/intune/apps/mam-faq).
 

@@ -49,7 +49,7 @@ Web content filtering is available on the major web browsers, with blocks perfor
 
 - Users are prevented from accessing websites in blocked categories, whether they're browsing on-premises or away.
 - Your security team can access web reports in the same central location, with visibility over actual blocks and web usage.
-- If you're using Defender for Endpoint, your security team can conveniently deploy policies to groups of users using device groups defined in [Microsoft Defender for Endpoint role-based access control settings](/defender-endpoint/rbac).
+- If you're using Defender for Endpoint, your security team can conveniently deploy policies to groups of users using device groups defined in [Microsoft Defender for Endpoint role-based access control settings](rbac.md).
 - If you're using Defender for Business, you can define one web content filtering policy that is applied to all users.
 
 ## Prerequisites
