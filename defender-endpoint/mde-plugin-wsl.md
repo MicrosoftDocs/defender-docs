@@ -32,7 +32,7 @@ Be aware of the following before you start:
 
 2. As it takes a few minutes for the plug-in to fully instantiate and up to 30 minutes for a WSL2 instance to onboard itself, short-lived WSL container instances might result in the WSL2 instance not showing up in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Once a (any) distribution has been running long enough (at least 30 minutes), it does show up.
 
-3. Custom Kernel or Custom Kernel configuration is not supported, however it is not blocked; This is best-effort support. 
+3. Running a custom kernel and custom kernel command line is supported in this version. However the plug-in doesn't provide any guarantees regarding the visibility within WSL when running a custom kernel and custom kernel command line.
 
 ## Software prerequisites
 
