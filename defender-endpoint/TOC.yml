@@ -31,7 +31,7 @@
         href: ios-whatsnew.md
 
     - name: Preview features
-      href: /defender-xdr/preview.md?toc=/microsoft-365/security/defender-endpoint/toc.json&bc=/microsoft-365/security/defender-endpoint/breadcrumb/toc.json
+      href: /defender-xdr/preview.md
     - name: Data storage and privacy
       href: data-storage-privacy.md
     - name: Defender for Endpoint Plan 1
