@@ -49,7 +49,7 @@ The following recommendations have been added as Microsoft Secure Score improvem
 
 **Admin Center:**
 
-- Ensure ‘User owned apps and services’ is restricted. 
+- Ensure 'User owned apps and services' is restricted. 
 
 **Microsoft Forms:** 
 
