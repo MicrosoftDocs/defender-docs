@@ -51,9 +51,9 @@ To create a new security policy, perform the following steps:
 3. Select a tenant, platform, and a template in the dropdown menus. Then select Create policy.
    :::image type="content" source="media/multi-tenant/endpoint-security-policy/mto-create-policy-small.png" alt-text="Screenshot of the policy creation page in endpoints security policy page in multitenant management." lightbox="media/multi-tenant/endpoint-security-policy/mto-create-policy.png":::
 4. On the **Basics** page, enter a name and description for the new policy, then choose **Next**.
-5. On the **Configuration settings** page, expand a group of settings and configure the settings you need to manage the endpoints in the tenant. Select **Next** once you’re done with the configuration.
+5. On the **Configuration settings** page, expand a group of settings and configure the settings you need to manage the endpoints in the tenant. Select **Next** once you're done with the configuration.
 6. On the **Assignments** page, select the groups where the policy will apply, then select **Next**.
-7. Review your new policy’s settings on the **Review + create** page, then select **Save** when you're done.
+7. Review your new policy's settings on the **Review + create** page, then select **Save** when you're done.
 
 After creating, the Microsoft Defender portal opens a new window showing the new policy's details.
 
@@ -66,7 +66,7 @@ To edit an existing security policy, perform the following steps:
 
 1. In the **Endpoint security policies** page, select the policy you want to edit and then select **Edit**.
 2. In the side panel, select **Edit** to edit the policy.
-3. Modify the policy’s settings and configuration in the next pages.
+3. Modify the policy's settings and configuration in the next pages.
 4. After you've made changes, select **Save** to save your edits.
 
 You can delete a security policy by selecting the policy in the Endpoint security policies page, then selecting **Delete**.
