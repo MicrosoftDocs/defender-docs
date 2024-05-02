@@ -1,7 +1,7 @@
 ---
 title: Improve request performance
 description: Improve request performance
-ms.service: defender-xdr
+ms.service: defender-endpoint
 ms.author: itsela
 author: itsela-ms
 ms.localizationpriority: medium
