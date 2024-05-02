@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 05/02/2024
 ---
 
 # Deploy updates for Microsoft Defender for Endpoint on macOS
@@ -61,7 +61,9 @@ This section describes the most common preferences that can be used to configure
 
 ### Set the channel name
 
-The channel determines the type and frequency of updates that are offered through MAU. Devices in `Beta` can try out new features before devices in `Preview` and `Current`. For the latest information on this setting, see: [ChannelName](/deployoffice/mac/mau-preferences#channelname)
+For the latest information on this setting, see [ChannelName](/deployoffice/mac/mau-preferences#channelname).
+
+The channel determines the type and frequency of updates that are offered through MAU. Devices in `Beta` can try out new features before devices in `Preview` and `Current`. 
 
 The `Current` channel contains the most stable version of the product.
 
@@ -100,7 +102,9 @@ The `Current` channel contains the most stable version of the product.
 
 ### Change whether the "Check for Updates" button is enabled
 
-Change whether local users are able to click the "Check for Updates" option in the Microsoft AutoUpdate user interface. For the latest information on this setting, see: [EnableCheckForUpdatesButton](/deployoffice/mac/mau-preferences#enablecheckforupdatesbutton)
+For the latest information on this setting, see [EnableCheckForUpdatesButton](/deployoffice/mac/mau-preferences#enablecheckforupdatesbutton).
+
+Change whether local users are able to click the "Check for Updates" option in the Microsoft AutoUpdate user interface. 
 <br>
 
 
@@ -119,7 +123,9 @@ Change whether local users are able to click the "Check for Updates" option in t
 
 ### Disable Insider checkbox
 
-Set to true to make the "Join the Office Insider Program..." checkbox unavailable / greyed out to users. For the latest information on this setting, see: [DisableInsiderCheckbox](/deployoffice/mac/mau-preferences#disableinsidercheckbox)
+For the latest information on this setting, see [DisableInsiderCheckbox](/deployoffice/mac/mau-preferences#disableinsidercheckbox).
+
+Set to true to make the "Join the Office Insider Program..." checkbox unavailable / greyed out to users.
 <br>
 
 
