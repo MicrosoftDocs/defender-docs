@@ -38,7 +38,7 @@ ms.date: 02/24/2023
 Adds or removes a tag for a specific [Machine](machine.md).
 
 > [!NOTE]
-> 
+> If you are looking for how to tag machines in bulk via API, please see [https://learn.microsoft.com/en-us/defender-endpoint/api/add-or-remove-multiple-machine-tags](/defender-endpoint/api/add-or-remove-multiple-machine-tags)
 ## Limitations
 
 1. You can post on machines last seen according to your configured retention period.
