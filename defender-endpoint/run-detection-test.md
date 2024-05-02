@@ -60,6 +60,6 @@ The Command Prompt window closes automatically. If successful, a new alert appea
 
 - [Onboard Windows devices](onboard-windows-client.md)
 - [Onboard servers](configure-server-endpoints.md)
-- [Troubleshoot Microsoft Defender for Endpoint onboarding issues](/defender-endpoint/troubleshoot-onboarding)
+- [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

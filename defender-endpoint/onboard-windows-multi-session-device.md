@@ -33,7 +33,7 @@ Microsoft Defender for Endpoint supports monitoring both VDI and Azure Virtual D
 
 ## Before you begin
 
-Familiarize yourself with the [considerations for non-persistent VDI](/defender-endpoint/configure-endpoints-vdi#onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-1). While [Azure Virtual Desktop](/azure/virtual-desktop/overview) doesn't provide non-persistence options, it does provide ways to use a golden Windows image that can be used to provision new hosts and redeploy machines. This increases volatility in the environment and thus impacts what entries are created and maintained in the Microsoft Defender for Endpoint portal, potentially reducing visibility for your security analysts.
+Familiarize yourself with the [considerations for non-persistent VDI](configure-endpoints-vdi.md#onboarding-non-persistent-virtual-desktop-infrastructure-vdi-devices). While [Azure Virtual Desktop](/azure/virtual-desktop/overview) doesn't provide non-persistence options, it does provide ways to use a golden Windows image that can be used to provision new hosts and redeploy machines. This increases volatility in the environment and thus impacts what entries are created and maintained in the Microsoft Defender for Endpoint portal, potentially reducing visibility for your security analysts.
 
 > [!NOTE]
 > Depending on your choice of onboarding method, devices can appear in Microsoft Defender for Endpoint portal as either:
@@ -137,6 +137,6 @@ Licensing requirements for Microsoft Defender for Endpoint can be found at: [Lic
 
 [FSLogix anti-malware exclusions](/fslogix/overview-prerequisites#configure-antivirus-file-and-folder-exclusions)
 
-[Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment](/defender-endpoint/deployment-vdi-microsoft-defender-antivirus)
+[Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment](deployment-vdi-microsoft-defender-antivirus.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

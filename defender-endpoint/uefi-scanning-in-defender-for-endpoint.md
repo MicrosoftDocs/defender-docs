@@ -1,9 +1,9 @@
 ---
 title: UEFI scanning in Defender for Endpoint
 description: Learn how Microsoft Defender for Endpoint is extending its protection capabilities to the firmware level with a new Unified Extensible Firmware Interface (UEFI) scanner.
-author: siosulli
-ms.author: siosulli
-manager: deniseb
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.reviewer: yongrhee
 audience: ITPro
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 04/16/2024
+ms.date: 04/30/2024
 ---
 
 # UEFI scanning in Defender for Endpoint
@@ -38,7 +38,7 @@ The UEFI scanner is a new component of the [built-in antivirus](microsoft-defend
 - Devices are running one of the following versions of Windows:
   - Windows 10, Windows 11 or newer on client devices
   - Windows Server 2019, Windows Server 2022, or newer versions
-  - [Windows Server 2012 R2 and Windows Server 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292) with the [unified Defender for Endpoint client](/defender-endpoint/configure-server-endpoints#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) installed
+  - [Windows Server 2012 R2 and Windows Server 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292) with the [unified Defender for Endpoint client](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) installed
 
 ## What is the UEFI scanner?
 

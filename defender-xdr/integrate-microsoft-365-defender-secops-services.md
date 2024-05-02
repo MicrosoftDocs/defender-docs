@@ -63,7 +63,7 @@ To integrate the capabilities of Microsoft Defender XDR, you will need to refine
 
 - [What is Microsoft Defender for Endpoint?](/defender-endpoint/microsoft-defender-endpoint)
 - [What is Microsoft Defender for Identity?](/defender-for-identity/what-is)
-- [What is Defender for Office 365?](/defender-xdr/microsoft-365-defender)
+- [What is Defender for Office 365?](microsoft-365-defender.md)
 - [What is Microsoft Defender for Cloud Apps?](/cloud-app-security/what-is-cloud-app-security)
 
 ## Next step

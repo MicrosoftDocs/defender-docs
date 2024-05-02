@@ -85,7 +85,7 @@ This section describes the steps to investigate an alert and remediate the secur
 
 ## Advanced hunting queries
 
-You can use [advanced hunting](/defender-xdr/advanced-hunting-overview?) queries to gather information related to an alert and determine whether the activity is suspicious.
+You can use [advanced hunting](advanced-hunting-overview.md) queries to gather information related to an alert and determine whether the activity is suspicious.
 
 Ensure you have access to the following tables:
 

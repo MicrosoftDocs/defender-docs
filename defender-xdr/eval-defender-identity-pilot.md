@@ -41,7 +41,7 @@ The following table describes the steps in the illustration.
 
 Microsoft provides security benchmark recommendations for customers using Microsoft Cloud services. The [Azure Security Benchmark](/security/benchmark/azure/overview) (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure.
 
-These benchmark recommendations include [Azure security baseline for Microsoft Defender for Identity](/security/benchmark/azure/baselines/defender-for-identity-security-baseline). Implementing these recommendations can take some time to plan and implement. While these recommendations greatly increase the security of your identity environment, they shouldn't prevent you from continuing to evaluate and implement Microsoft Defender for Identity. These recommendations are provided here for your awareness.
+Implementing these recommendations can take some time to plan and implement. While these recommendations greatly increase the security of your identity environment, they shouldn't prevent you from continuing to evaluate and implement Microsoft Defender for Identity. These recommendations are provided here for your awareness.
 
 ## Step 2: Try out capabilities — Walk through tutorials for identifying and remediating different attack types
 
@@ -63,7 +63,7 @@ Try out Defender for Identity tutorials:
 
 [Evaluate Microsoft Defender for Office 365.](eval-defender-office-365-overview.md)
 
-Return to the overview for [Evaluate Microsoft Defender for Office 365.](eval-defender-office-365-overview.md)
+Return to the overview for [Evaluate Microsoft Defender for Identity](eval-defender-identity-overview.md)
 
 Return to the overview for [Evaluate and pilot Microsoft Defender XDR](eval-overview.md)
 

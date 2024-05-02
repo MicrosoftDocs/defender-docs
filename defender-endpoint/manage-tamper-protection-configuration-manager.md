@@ -39,7 +39,7 @@ Using Configuration Manager with tenant attach, you can turn tamper protection o
 
 > [!IMPORTANT]
 > When tamper protection is turned on, [tamper-protected settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-is-tamper-protection) cannot be changed. To avoid breaking management experiences, including Intune and Configuration Manager, keep in mind that changes to tamper-protected settings might appear to succeed but are actually blocked by tamper protection. Depending on your particular scenario, you have several options available: 
-> - If you must make changes to a device and those changes are blocked by tamper protection, use [troubleshooting mode](/defender-endpoint/enable-troubleshooting-mode) to temporarily disable tamper protection on the device.
+> - If you must make changes to a device and those changes are blocked by tamper protection, use [troubleshooting mode](enable-troubleshooting-mode.md) to temporarily disable tamper protection on the device.
 > - Use [Intune](manage-tamper-protection-intune.md) or Configuration Manager to exclude devices from tamper protection. 
 
 :::image type="content" source="media/tamper-protect-configmgr.png" alt-text="Screenshot showing Windows Security settings with tamper protection enabled.":::

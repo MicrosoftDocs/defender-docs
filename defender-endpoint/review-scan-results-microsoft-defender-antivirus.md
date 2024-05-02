@@ -3,12 +3,11 @@ title: Review the results of Microsoft Defender Antivirus scans
 description: Review the results of scans using Microsoft Endpoint Configuration Manager, Microsoft Intune, or the Windows Security app
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-author: siosulli
-ms.author: siosulli
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.custom: nextgen
-ms.date: 12/11/2023
-ms.reviewer: 
-manager: deniseb
+ms.date: 04/30/2024
 ms.subservice: ngp
 ms.topic: conceptual
 ms.collection: 

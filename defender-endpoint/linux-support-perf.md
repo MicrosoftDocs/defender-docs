@@ -2,12 +2,12 @@
 title: Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux
 description: Troubleshoot performance issues in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: dansimp
+author: dansimp
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-ms.date: 01/18/2023
-manager: deniseb
+ms.date: 05/01/2024
+manager: dansimp
 audience: ITPro
 ms.collection:
 - m365-security
@@ -157,7 +157,7 @@ The following steps can be used to troubleshoot and mitigate these issues:
 **Applies to:**
 - Performance issues of all available Defender for Endpoint components such as AV and EDR
 
-The Microsoft Defender for Endpoint Client Analyzer (MDECA) can collect traces, logs, and diagnostic information in order to troubleshoot performance issues on [onboarded devices](/defender-endpoint/onboard-configure) on Linux.
+The Microsoft Defender for Endpoint Client Analyzer (MDECA) can collect traces, logs, and diagnostic information in order to troubleshoot performance issues on [onboarded devices](onboard-configure.md) on Linux.
 
 > [!NOTE]
 >
@@ -248,7 +248,7 @@ Contains important aggregated information that is useful when investigating Audi
 
 > [!NOTE]
 > Exclusions should be made only for low threat and high noise initiators or paths. For example, do not exclude /bin/bash which risks creating a large blind spot.
-> [Common mistakes to avoid when defining exclusions](/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus).
+> [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md).
 
 ### Exclusion Types
 

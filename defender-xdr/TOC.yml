@@ -521,9 +521,7 @@
         - name: Vulnerability management
           href: mto-dashboard.md
         - name: Manage tenants
-          href: mto-tenants.md
-        - name: Manage endpoint security policies
-          href: mto-endpoint-security-policy.md          
+          href: mto-tenants.md      
     - name: Reference
       items: 
       - name: Manage roles and permissions
@@ -565,7 +563,7 @@
             - name: Set up email notifications for Threat analytics reports
               href: m365d-threat-analytics-notifications.md              
             - name: Configure alert notifications
-              href: /defender-xdr/configure-email-notifications
+              href: configure-email-notifications.md
             - name: Asset rule management
               href: configure-asset-rules.md
             - name: Provide feedback

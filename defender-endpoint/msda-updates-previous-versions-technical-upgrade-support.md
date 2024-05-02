@@ -201,7 +201,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 ### Known Issues
 
-- Users encounter slow loading webpages in non-Microsoft web browsers with [web content filtering](/defender-endpoint/web-content-filtering) enabled
+- Users encounter slow loading webpages in non-Microsoft web browsers with [web content filtering](web-content-filtering.md) enabled
 
 ## May-2023 (Platform: 4.18.23050.3 | Engine:  1.1.23050.2)
 
@@ -305,7 +305,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Improved [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) hardening for temporary exclusions
 - Fixed time zone calculation in [Defender PowerShell](/powershell/module/defender) module
 - Fixed merging logic for exclusions in Defender PowerShell module
-- Improvements in the [contextual exclusions](/defender-endpoint/configure-contextual-file-folder-exclusions-microsoft-defender-antivirus) syntax
+- Improvements in the [contextual exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md) syntax
 - Improved scheduled scan robustness
 - Improved serviceability for internal database files
 - Enhanced certificate indicators determination logic
@@ -406,7 +406,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Improved WARN mode for [ASR rule](attack-surface-reduction-rules-reference.md)
 - Improved certificate handling of OSX
 - Improved logging for scanning FilesStash location
-- Beginning with platform version 4.18.2208.0 and later: If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy setting](configure-endpoints-gp.md#update-endpoint-protection-configuration) will no longer completely disable Windows Defender Antivirus on Windows Server 2012 R2 and later operating systems. Instead, it is either ignored (if [ForceDefenderPassiveMode](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) is configured explicitly) or it places Microsoft Defender Antivirus into [passive mode](microsoft-defender-antivirus-windows.md#comparing-active-mode-passive-mode-and-disabled-mode) (if `ForceDefenderPassiveMode` isn't configured). Moreover, [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode via changing `ForceDefenderPassiveMode` to `0`, but not to passive mode. These changes apply only to servers onboarded to Microsoft Defender for Endpoint. For more information, please refer to [Microsoft Defender Antivirus compatibility with other security products](/defender-endpoint/microsoft-defender-antivirus-compatibility#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions)
+- Beginning with platform version 4.18.2208.0 and later: If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy setting](configure-endpoints-gp.md#update-endpoint-protection-configuration) will no longer completely disable Windows Defender Antivirus on Windows Server 2012 R2 and later operating systems. Instead, it is either ignored (if [ForceDefenderPassiveMode](switch-to-mde-phase-2.md#set-microsoft-defender-antivirus-to-passive-mode-on-windows-server) is configured explicitly) or it places Microsoft Defender Antivirus into [passive mode](microsoft-defender-antivirus-windows.md#comparing-active-mode-passive-mode-and-disabled-mode) (if `ForceDefenderPassiveMode` isn't configured). Moreover, [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode via changing `ForceDefenderPassiveMode` to `0`, but not to passive mode. These changes apply only to servers onboarded to Microsoft Defender for Endpoint. For more information, please refer to [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions)
 
 ### Known Issues
 
@@ -663,7 +663,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 ### What's new
 
 - Device control support added for Windows Portable Devices
-- Potentially unwanted applications (PUA) protection is turned on by default for consumers (See [Block potentially unwanted applications with Microsoft Defender Antivirus](/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).)
+- Potentially unwanted applications (PUA) protection is turned on by default for consumers (See [Block potentially unwanted applications with Microsoft Defender Antivirus](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md).)
 - Scheduled scans for Group Policy Object managed systems adhere to user configured scan time
 - Improvements to the behavior monitoring engine
 
