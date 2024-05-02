@@ -17,8 +17,8 @@ search.appverid: MET150
 f1.keywords: NOCSH 
 audience: ITPro
 ---
-  
-# Microsoft Defender for Endpoint on Windows Server with SAP
+
+  # Microsoft Defender for Endpoint on Windows Server with SAP
 
 **Applies to:**
 
@@ -74,15 +74,10 @@ For more information about the SAP Support policy, see [3356389 - Antivirus or o
 Here's a list of SAP articles you can use as needed:
 
 - [3356389 - Antivirus or other security software affecting SAP operations - SAP for Me](https://me.sap.com/notes/3356389)
-
 - [106267 - Virus scanner software on Windows - SAP for Me](https://me.sap.com/notes/106267)
-
 - [690449 - Transport buffer lock file (.LOB) remains blocked on Windows - SAP for Me](https://me.sap.com/notes/690449)
-
 - [2311946 - Filesystem errors on Windows - SAP for Me](https://me.sap.com/notes/2311946)
-
 - [2496239 - Ransomware / malware on Windows - SAP for Me](https://me.sap.com/notes/2496239)
-
 - [1497394 - Which files and directories should be excluded from an antivirus scan for SAP BusinessObjects Business Intelligence Platform products in Windows? - SAP for Me](https://me.sap.com/notes/1497394/E)
 
 ## SAP applications on Windows Server: Top 10 recommendations
@@ -106,14 +101,14 @@ Here's a list of SAP articles you can use as needed:
    - The entire contents of the SAPLOC directory
    - The entire contents of the TRANS directory
    - The entire contents of directories for standalone engines such as TREX
-   
+
    Advanced users can consider using [contextual file and folder exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md). 
-   
+
    For more information about DBMS exclusions, use the following resources:
 
       - **SQL Server**: [Configure antivirus software to work with SQL Server](/troubleshoot/sql/database-engine/security/antivirus-and-sql-server)
       - **Oracle**: [How To Configure Anti-Virus On Oracle Database Server (Doc ID 782354.1)](https://support.oracle.com/knowledge/Oracle%20Database%20Products/782354_1.html)
-      - **DB2** – [Which DB2 directories to exclude from Linux Anti-virus software](https://www.ibm.com/support/pages/which-db2-directories-exclude-linux-anti-virus-software) (use the same commands on Windows Server) 
+      - **DB2**: [Which DB2 directories to exclude from Linux Anti-virus software](https://www.ibm.com/support/pages/which-db2-directories-exclude-linux-anti-virus-software) (use the same commands on Windows Server) 
       - **SAP ASE**: Contact SAP 
       - **MaxDB**: Contact SAP
 
@@ -164,29 +159,31 @@ Here's a list of what to check:
    > [!NOTE]
    > The term *Defender* is sometimes used to refer to an entire suite of products and solutions. See [What is Microsoft Defender XDR?](/defender-xdr/microsoft-365-defender). In this article, we focus on antivirus and EDR capabilities in Defender for Endpoint.
     
-2. **Check the status of Microsoft Defender Antivirus**. Open Command Prompt, and then run these PowerShell commands:
-
-   - `Get-MpComputerStatus`
-   - `Get-MpPreference`
-
-   The most significant settings for SAP are as follows:
+2. **Check the status of Microsoft Defender Antivirus**. Open Command Prompt. Use the following PowerShell commands:
 
    ```powershell
-
-   Get-MpPreference |Select-Object -Property  DisableCpuThrottleOnIdleScans, DisableRealtimeMonitoring, DisableScanningMappedNetworkDrivesForFullScan , DisableScanningNetworkFiles, ExclusionPath, MAPSReporting 
-
-   Get-MpComputerStatus |Select-Object -Property AMRunningMode, AntivirusEnabled, BehaviorMonitorEnabled, IsTamperProtected , OnAccessProtectionEnabled, RealTimeProtectionEnabled
-
+   Get-MpPreference |Select-Object -Property  DisableCpuThrottleOnIdleScans, DisableRealtimeMonitoring, DisableScanningMappedNetworkDrivesForFullScan , DisableScanningNetworkFiles, ExclusionPath, MAPSReporting
    ```
+
+   ```powershell
+   Get-MpComputerStatus |Select-Object -Property AMRunningMode, AntivirusEnabled, BehaviorMonitorEnabled, IsTamperProtected , OnAccessProtectionEnabled, RealTimeProtectionEnabled
+   ```
+
+   To learn more about these commands, see the following articles:
+
+      - [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?view=windowsserver2022-ps&preserve-view=true)
+      - [Get-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true)
+
    
 3. **Check the status of EDR**. Open Command Prompt, and then run the following command:
 
-   `PS C:\Windows\System32> Get-Service -Name sense | FL *`
+   ```powershell
+   PS C:\Windows\System32> Get-Service -Name sense | FL *
+   ```
 
    You should see output that resembles the following code snippet:
 
    ```powershell
-
    Name        : sense
    RequiredServices  : {}
    CanPauseAndContinue : False
@@ -203,7 +200,6 @@ Here's a list of what to check:
    StartType      : Automatic
    Site        :
    Container      :
-
    ```
 
    The values you want to see are `Status: Running` and `StartType: Automatic`.
@@ -242,12 +238,13 @@ The following sections describe how to confirm or configure Defender for Endpoin
 
 Use Windows Update, or run the following command:
 
-`PS C:\Program Files\Windows Defender> .\MpCmdRun.exe -SignatureUpdate`
-
+```powershell
+PS C:\Program Files\Windows Defender> .\MpCmdRun.exe -SignatureUpdate
+```
+ 
 You should see an output that resembles the following code snippet:
 
 ```properties
-
 Signature update started . . .
 Service Version: 4.18.23050.9
 Engine Version: 1.1.23060.1005
@@ -255,12 +252,13 @@ AntiSpyware Signature Version: 1.393.925.0
 Antivirus Signature Version: 1.393.925.0
 Signature update finished.
 PS C:\Program Files\Windows Defender>
-
 ```
 
 Another option is to use this command: 
 
-`PS C:\Program Files\Windows Defender> Update-MpSignature`
+```powershell
+PS C:\Program Files\Windows Defender> Update-MpSignature
+```
 
 For more information about these commands, see the following resources:
 
@@ -271,7 +269,9 @@ For more information about these commands, see the following resources:
 
 [EDR in block mode](edr-in-block-mode.md) provides added protection from malicious artifacts when Microsoft Defender Antivirus isn't the primary antivirus product and is running in passive mode. You can determine whether EDR in block mode is enabled by running the following command:
 
-`Get-MPComputerStatus|select AMRunningMode`
+```powershell
+Get-MPComputerStatus|select AMRunningMode
+```
 
 There are two modes: Normal and Passive Mode. Testing with SAP systems was done only with `AMRunningMode = Normal` for SAP systems. 
 
@@ -283,7 +283,9 @@ Before you configure exclusions, make sure that the SAP Basis team coordinates w
 
 To view exclusions, use the following command:
 
-`Get-MpPreference | Select-Object -Property ExclusionPath`
+```powershell
+Get-MpPreference | Select-Object -Property ExclusionPath
+```
 
 For more information about this command, see [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?view=windowsserver2022-ps&preserve-view=true).
 
@@ -307,14 +309,12 @@ Defender for Endpoint should be configured with [tamper protection](prevent-chan
 To shut down various subcomponents of the Microsoft Defender Antivirus solution, run the following commands:
 
 ```powershell
-
 Set-MPPreference -DisableTamperProtection $true
 Set-MpPreference -DisableRealtimeMonitoring $true
 Set-MpPreference -DisableBehaviorMonitoring $true
 Set-MpPreference -MAPSReporting Disabled
 Set-MpPreference -DisableIOAVProtection $true
 Set-MpPreference -EnableNetworkProtection Disabled 
-
 ```
 
 For more information about these commands, see [Set-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true).
@@ -325,10 +325,8 @@ For more information about these commands, see [Set-MpPreference](/powershell/mo
 To turn off [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) (Microsoft Advanced Protection Service, or MAPS), run the following commands:
 
 ```powershell
-
 PowerShell Set-MpPreference -MAPSReporting 0​
 PowerShell Set-MpPreference -MAPSReporting Disabled​
-
 ```
 
 For more information about cloud-delivered protection, see the following resources:
