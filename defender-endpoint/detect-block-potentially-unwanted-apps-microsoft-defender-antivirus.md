@@ -46,6 +46,8 @@ Potentially unwanted applications can increase the risk of your network being in
 
 [Learn more about Windows Enterprise subscriptions](https://www.microsoft.com/microsoft-365/windows/windows-11-enterprise).
 
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
 ## Microsoft Edge
 
 The [new Microsoft Edge](https://support.microsoft.com/microsoft-edge/get-to-know-microsoft-edge-3f4bb0ff-58de-2188-55c0-f560b7e20bea), which is Chromium-based, blocks potentially unwanted application downloads and associated resource URLs. This feature is provided via [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview).
