@@ -19,6 +19,27 @@ ms.date: 04/26/2024
 search.appverid: met150
 ---
 
+---
+title: Attack surface reduction rules reference
+description: Lists details about Microsoft Defender for Endpoint attack surface reduction rules on a per-rule basis.
+ms.service: defender-endpoint
+ms.subservice: asr
+ms.localizationpriority: medium
+audience: ITPro
+author: siosulli
+ms.author: siosulli
+ms.reviewer: sugamar, niwelton
+manager: deniseb
+ms.custom: asr
+ms.topic: reference
+ms.collection: 
+- m365-security
+- tier2
+- mde-asr
+ms.date: 04/26/2024
+search.appverid: met150
+---
+
 # Attack surface reduction rules reference
 
 **Applies to:**
@@ -43,6 +64,8 @@ This article provides information about Microsoft Defender for Endpoint attack s
 
 [!Include[Prerelease information](../includes/prerelease.md)]
 
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
 ## Attack surface reduction rules by type
 
 Attack surface reduction rules are categorized as one of two types:
