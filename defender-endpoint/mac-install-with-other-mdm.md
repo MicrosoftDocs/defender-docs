@@ -111,21 +111,21 @@ The following steps show how to apply and verify applying a configuration profil
 
 **1. MDM deploys configuration profile to enrolled machines**
 You can view profiles in System Settings > Profiles. Look for the name that you used for Microsoft Defender for Endpoint configuration settings profile.
-If you do not see it, then refer to your MDM documentation for troubleshooting tips. 
+If you don't see it, then refer to your MDM documentation for troubleshooting tips. 
 
 **2. The configuration profile shows up in the correct file**
 
 Microsoft Defender for Endpoint reads `/Library/Managed Preferences/com.microsoft.wdav.plist` and `/Library/Managed Preferences/com.microsoft.wdav.ext.plist` files.
 It uses only those two files for managed settings.
 
-If you cannot see those files, but you verified that the profiles were delivered (see the previous section), then it means that your profiles are misconfigured. Either you made this configuration profile "User Level" instead of "Computer Level", or you used a different Preference Domain instead of those that Microsoft Defender for Endpoint expects ("com.microsoft.wdav" and "com.microsoft.wdav.ext").
+If you can't see those files, but you verified that the profiles were delivered (see the previous section), then it means that your profiles are misconfigured. Either you made this configuration profile "User Level" instead of "Computer Level", or you used a different Preference Domain instead of those that Microsoft Defender for Endpoint expects ("com.microsoft.wdav" and "com.microsoft.wdav.ext").
 
-Refer to your MDM documentation for how to setup application configuration profiles.
+Refer to your MDM documentation for how to set up application configuration profiles.
 
 #### 3. The configuration profile contains the expected structure
 
 This step can be tricky to verify. Microsoft Defender for Endpoint expects com.microsoft.wdav.plist with a strict structure.
-If you put settings to unexpected place, or misspell them, or use an invalid type, the settings will be silently ignored.
+If you put settings to unexpected place, or misspell them, or use an invalid type, the settings are silently ignored.
 
 1) You can check `mdatp health` and confirm that the settings you configured are reported as `[managed]`.
 2) You can inspect the content of `/Library/Managed Preferences/com.microsoft.wdav.plist` and make sure that it matches the expected settings:
@@ -164,14 +164,14 @@ plutil -p "/Library/Managed\ Preferences/com.microsoft.wdav.plist"
 
 You can use the documented [Configuration profile structure](mac-preferences.md) as a guideline.
 
-This article explains that "antivirusEngine", "edr", "tamperProtection" are settings at the top level of the configuration file. And e.g. "scanHistoryMaximumItems" are at the second level and are of integer type.
+This article explains that "antivirusEngine", "edr", "tamperProtection" are settings at the top level of the configuration file. And, for example, "scanHistoryMaximumItems" are at the second level and are of integer type.
 
 You should see this information in the output of the previous command. If you found out that "antivirusEngine" is nested under some other setting - then the profile is misconfigured. If you can see "antivirusengine" instead of "antivirusEngine", the name is misspelled and the whole subtree of settings are ignored. If `"scanHistoryMaximumItems" => "10000"`, the wrong type is used and the setting will be ignored.
 
 ## Check that all profiles are deployed
 
 You can download and run [analyze_profiles.py](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mdm). This script will collect and analyze all profiles deployed to a machine and warn you about missed ones.
-Note that it can miss some errors, and it is not aware of some design decisions that system administrators are making deliberately. Use this script for guidance, but always investigate if you see something marked as an error. For example, the onboarding guide tells you to deploy a configuration profile for onboarding blob. Yet, some organizations decide to run the manual onboarding script instead. analyze_profile.py will warn you about the missed profile. You can either decide to onboard via configuration profile, or disregard the warning altogether.
+Note that it can miss some errors, and it isn't aware of some design decisions that system administrators are making deliberately. Use this script for guidance, but always investigate if you see something marked as an error. For example, the onboarding guide tells you to deploy a configuration profile for onboarding blob. Yet, some organizations decide to run the manual onboarding script instead. analyze_profile.py warns you about the missed profile. You can either decide to onboard via configuration profile, or disregard the warning altogether.
 
 ## Check installation status
 
