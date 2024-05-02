@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 02/24/2023
+ms.date: 05/02/2024
 ---
 
 # Add or remove a tag for a machine
@@ -35,10 +35,11 @@ ms.date: 02/24/2023
 
 ## API description
 
-Adds or removes a tag for a specific [Machine](machine.md).
+Adds or removes a tag for a specific [device](machine.md).
 
 > [!NOTE]
-> If you are looking for how to tag machines in bulk via API, please see [https://learn.microsoft.com/en-us/defender-endpoint/api/add-or-remove-multiple-machine-tags](/defender-endpoint/api/add-or-remove-multiple-machine-tags)
+> If you are looking for how to tag machines in bulk via API, see [Add or remove multiple machine tags](/defender-endpoint/api/add-or-remove-multiple-machine-tags).
+
 ## Limitations
 
 1. You can post on machines last seen according to your configured retention period.
