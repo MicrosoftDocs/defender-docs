@@ -177,7 +177,9 @@ Here's a list of what to check:
    
 3. **Check the status of EDR**. Open Command Prompt, and then run the following command:
 
-   `PS C:\Windows\System32> Get-Service -Name sense | FL *`
+   ```powershell
+   PS C:\Windows\System32> Get-Service -Name sense | FL *
+   ```
 
    You should see output that resembles the following code snippet:
 
