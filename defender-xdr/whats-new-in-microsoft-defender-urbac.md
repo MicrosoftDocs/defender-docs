@@ -19,6 +19,14 @@ ms.date: 11/8/2023
 
 This article provides information about new features and important product updates for the latest release of Microsoft Defender XDR Unified role-based access control (RBAC).
 
+## May 2024
+
+Permissions model to access ״Email & collaboration״ schema in Advanced Hunting for Microsoft Defender for Office 365 customers has been updated to align with Threat Explorer.
+
+As part of this change, customers who are using Unified RBAC with Defender for Office 365, will now have to use the "Security operations \ Raw data \ Email & collaboration metadata (read)" permission in order to grant analysts with an access to the ״Email & collaboration״ schema in Advanced Hunting.
+
+Users who are already assigned with the "Security operations \ Security data \ Security data basics (read)" permission for Defender for Office 365, will no longer have access to the "Email & collaboration" schema in Advanced Hunting but will keep access to the "Alerts & behaviors" scheme.
+
 ## January 2024
 
 Microsoft Defender XDR Unified RBAC is now generally available to GCC High and DoD customers. To learn more about the supported workloads and supported data sources, see [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md).
