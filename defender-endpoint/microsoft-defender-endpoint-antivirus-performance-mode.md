@@ -32,6 +32,8 @@ ms.date: 04/30/2024
 
 - Windows 11
 
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
 ## What is performance mode
 
 Performance mode is now available on Windows 11 as a new Microsoft Defender Antivirus capability. Performance mode reduces the performance impact of Microsoft Defender Antivirus scans for files stored on designated _Dev Drive_. The goal of performance mode is to improve functional performance for developers who use Windows 11 devices. 
@@ -97,7 +99,7 @@ Enable performance mode status via the OMA-URI settings shown in the following t
 
    :::image type="content" alt-text="Screenshot of Defender_Performance_Mode_10." source="media/microsoft-defender-endpoint-antivirus-performance-mode/defender-performance-mode-10.png" lightbox="media/microsoft-defender-endpoint-antivirus-performance-mode/defender-performance-mode-10.png":::
 
-3. Select **Enabled**.
+1. Select **Enabled**.
 
    ![Screenshot of Defender_Performance_Mode_11.](media/microsoft-defender-endpoint-antivirus-performance-mode/defender-performance-mode-11.png)
    
@@ -107,7 +109,7 @@ Enable performance mode status via the OMA-URI settings shown in the following t
 
 1. Open PowerShell as an administrator on the device.
 
-2. Type `set-MpPreference -PerformanceModeStatus Enabled`, and then press Enter.
+1. Type `set-MpPreference -PerformanceModeStatus Enabled`, and then press Enter.
 
    ![Screenshot of Defender_Performance_Mode_04.](media/microsoft-defender-endpoint-antivirus-performance-mode/defender-performance-mode-5.png)
    
