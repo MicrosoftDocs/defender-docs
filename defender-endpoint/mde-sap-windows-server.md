@@ -74,15 +74,10 @@ For more information about the SAP Support policy, see [3356389 - Antivirus or o
 Here's a list of SAP articles you can use as needed:
 
 - [3356389 - Antivirus or other security software affecting SAP operations - SAP for Me](https://me.sap.com/notes/3356389)
-
 - [106267 - Virus scanner software on Windows - SAP for Me](https://me.sap.com/notes/106267)
-
 - [690449 - Transport buffer lock file (.LOB) remains blocked on Windows - SAP for Me](https://me.sap.com/notes/690449)
-
 - [2311946 - Filesystem errors on Windows - SAP for Me](https://me.sap.com/notes/2311946)
-
 - [2496239 - Ransomware / malware on Windows - SAP for Me](https://me.sap.com/notes/2496239)
-
 - [1497394 - Which files and directories should be excluded from an antivirus scan for SAP BusinessObjects Business Intelligence Platform products in Windows? - SAP for Me](https://me.sap.com/notes/1497394/E)
 
 ## SAP applications on Windows Server: Top 10 recommendations
