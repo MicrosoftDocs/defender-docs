@@ -39,6 +39,9 @@ This list is intended to provide some examples. It's not an exhaustive list; the
 
 Device control helps protect your organization from potential data loss, malware, or other cyberthreats by allowing or preventing certain devices to be connected to users' computers. With device control, your security team can determine whether and what peripheral devices users can install and use on their computers. 
 
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
+> 
 ## Device control in Windows
 
 This section lists scenarios for device control in Windows. 
