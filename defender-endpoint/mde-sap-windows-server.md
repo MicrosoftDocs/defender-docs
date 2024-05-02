@@ -184,7 +184,6 @@ Here's a list of what to check:
    You should see output that resembles the following code snippet:
 
    ```powershell
-
    Name        : sense
    RequiredServices  : {}
    CanPauseAndContinue : False
@@ -201,7 +200,6 @@ Here's a list of what to check:
    StartType      : Automatic
    Site        :
    Container      :
-
    ```
 
    The values you want to see are `Status: Running` and `StartType: Automatic`.
@@ -258,7 +256,9 @@ PS C:\Program Files\Windows Defender>
 
 Another option is to use this command: 
 
-`PS C:\Program Files\Windows Defender> Update-MpSignature`
+```powershell
+PS C:\Program Files\Windows Defender> Update-MpSignature
+```
 
 For more information about these commands, see the following resources:
 
@@ -269,7 +269,9 @@ For more information about these commands, see the following resources:
 
 [EDR in block mode](edr-in-block-mode.md) provides added protection from malicious artifacts when Microsoft Defender Antivirus isn't the primary antivirus product and is running in passive mode. You can determine whether EDR in block mode is enabled by running the following command:
 
-`Get-MPComputerStatus|select AMRunningMode`
+```powershell
+Get-MPComputerStatus|select AMRunningMode
+```
 
 There are two modes: Normal and Passive Mode. Testing with SAP systems was done only with `AMRunningMode = Normal` for SAP systems. 
 
@@ -281,7 +283,9 @@ Before you configure exclusions, make sure that the SAP Basis team coordinates w
 
 To view exclusions, use the following command:
 
-`Get-MpPreference | Select-Object -Property ExclusionPath`
+```powershell
+Get-MpPreference | Select-Object -Property ExclusionPath
+```
 
 For more information about this command, see [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?view=windowsserver2022-ps&preserve-view=true).
 
@@ -305,14 +309,12 @@ Defender for Endpoint should be configured with [tamper protection](prevent-chan
 To shut down various subcomponents of the Microsoft Defender Antivirus solution, run the following commands:
 
 ```powershell
-
 Set-MPPreference -DisableTamperProtection $true
 Set-MpPreference -DisableRealtimeMonitoring $true
 Set-MpPreference -DisableBehaviorMonitoring $true
 Set-MpPreference -MAPSReporting Disabled
 Set-MpPreference -DisableIOAVProtection $true
 Set-MpPreference -EnableNetworkProtection Disabled 
-
 ```
 
 For more information about these commands, see [Set-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true).
@@ -323,10 +325,8 @@ For more information about these commands, see [Set-MpPreference](/powershell/mo
 To turn off [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) (Microsoft Advanced Protection Service, or MAPS), run the following commands:
 
 ```powershell
-
 PowerShell Set-MpPreference -MAPSReporting 0​
 PowerShell Set-MpPreference -MAPSReporting Disabled​
-
 ```
 
 For more information about cloud-delivered protection, see the following resources:
