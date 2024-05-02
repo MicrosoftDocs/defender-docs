@@ -161,8 +161,13 @@ Here's a list of what to check:
     
 2. **Check the status of Microsoft Defender Antivirus**. Open Command Prompt. Use the following PowerShell commands:
 
-   - `Get-MpPreference |Select-Object -Property  DisableCpuThrottleOnIdleScans, DisableRealtimeMonitoring, DisableScanningMappedNetworkDrivesForFullScan , DisableScanningNetworkFiles, ExclusionPath, MAPSReporting`
-   - `Get-MpComputerStatus |Select-Object -Property AMRunningMode, AntivirusEnabled, BehaviorMonitorEnabled, IsTamperProtected , OnAccessProtectionEnabled, RealTimeProtectionEnabled`
+   ```powershell
+   Get-MpPreference |Select-Object -Property  DisableCpuThrottleOnIdleScans, DisableRealtimeMonitoring, DisableScanningMappedNetworkDrivesForFullScan , DisableScanningNetworkFiles, ExclusionPath, MAPSReporting
+   ```
+
+   ```powershell
+   Get-MpComputerStatus |Select-Object -Property AMRunningMode, AntivirusEnabled, BehaviorMonitorEnabled, IsTamperProtected , OnAccessProtectionEnabled, RealTimeProtectionEnabled
+   ```
 
    To learn more about these commands, see the following articles:
 
