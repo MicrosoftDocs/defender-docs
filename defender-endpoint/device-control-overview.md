@@ -41,7 +41,6 @@ Device control helps protect your organization from potential data loss, malware
 
 > [!TIP]
 > As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
-> 
 ## Device control in Windows
 
 This section lists scenarios for device control in Windows. 
