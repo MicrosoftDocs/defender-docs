@@ -1,10 +1,10 @@
 ---
 title: Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
 description: Learn how to set up and use the MDE plug-in for Windows Subsystem for Linux.
-author: siosulli
-ms.author: siosulli
+author: pahuijbr
+ms.author: pahuijbr
 manager: deniseb
-ms.reviewer: pahuijbr; gokulgiju, priyankagill
+ms.reviewer: gokulgiju, priyankagill, kvitta
 ms.service: defender-endpoint
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ ms.collection:
 ms.custom:
 - partner-contribution
 audience: ITPro
-ms.date: 04/25/2024
+ms.date: 05/02/2024
 search.appverid: MET150
 ---
 
