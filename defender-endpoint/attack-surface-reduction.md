@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 11/22/2023
+ms.date: 05/02/2024
 ---
 
 # Attack surface reduction rules overview
@@ -30,6 +30,9 @@ ms.date: 11/22/2023
 
 **Platforms**
 - Windows
+
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268615) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268522).
 
 ## Why attack surface reduction rules are important
 
