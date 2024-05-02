@@ -17,8 +17,8 @@ search.appverid: MET150
 f1.keywords: NOCSH 
 audience: ITPro
 ---
-  
-# Microsoft Defender for Endpoint on Windows Server with SAP
+
+  # Microsoft Defender for Endpoint on Windows Server with SAP
 
 **Applies to:**
 
@@ -99,21 +99,21 @@ Here's a list of SAP articles you can use as needed:
 
 6. **Deploy the latest version of Defender for Endpoint and use the latest releases of Windows**, ideally Windows Server 2019 or newer. See [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md). 
 
-7. **Configure certain exclusions for Microsoft Defender Antivirus**. These include: 
+1. **Configure certain exclusions for Microsoft Defender Antivirus**. These include: 
 
-   - DBMS data files, log files, and temp files, including disks containing backup files
-   - The entire contents of the SAPMNT directory
-   - The entire contents of the SAPLOC directory
-   - The entire contents of the TRANS directory
-   - The entire contents of directories for standalone engines such as TREX
-   
+- DBMS data files, log files, and temp files, including disks containing backup files
+- The entire contents of the SAPMNT directory
+- The entire contents of the SAPLOC directory
+- The entire contents of the TRANS directory
+- The entire contents of directories for standalone engines such as TREX
+
    Advanced users can consider using [contextual file and folder exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md). 
-   
+
    For more information about DBMS exclusions, use the following resources:
 
       - **SQL Server**: [Configure antivirus software to work with SQL Server](/troubleshoot/sql/database-engine/security/antivirus-and-sql-server)
       - **Oracle**: [How To Configure Anti-Virus On Oracle Database Server (Doc ID 782354.1)](https://support.oracle.com/knowledge/Oracle%20Database%20Products/782354_1.html)
-      - **DB2** – [Which DB2 directories to exclude from Linux Anti-virus software](https://www.ibm.com/support/pages/which-db2-directories-exclude-linux-anti-virus-software) (use the same commands on Windows Server) 
+   - **DB2**: [Which DB2 directories to exclude from Linux Anti-virus software](https://www.ibm.com/support/pages/which-db2-directories-exclude-linux-anti-virus-software) (use the same commands on Windows Server) 
       - **SAP ASE**: Contact SAP 
       - **MaxDB**: Contact SAP
 
