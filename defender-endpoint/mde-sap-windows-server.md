@@ -94,13 +94,13 @@ Here's a list of SAP articles you can use as needed:
 
 6. **Deploy the latest version of Defender for Endpoint and use the latest releases of Windows**, ideally Windows Server 2019 or newer. See [Minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md). 
 
-1. **Configure certain exclusions for Microsoft Defender Antivirus**. These include: 
+7. **Configure certain exclusions for Microsoft Defender Antivirus**. These include: 
 
-- DBMS data files, log files, and temp files, including disks containing backup files
-- The entire contents of the SAPMNT directory
-- The entire contents of the SAPLOC directory
-- The entire contents of the TRANS directory
-- The entire contents of directories for standalone engines such as TREX
+   - DBMS data files, log files, and temp files, including disks containing backup files
+   - The entire contents of the SAPMNT directory
+   - The entire contents of the SAPLOC directory
+   - The entire contents of the TRANS directory
+   - The entire contents of directories for standalone engines such as TREX
 
    Advanced users can consider using [contextual file and folder exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md). 
 
