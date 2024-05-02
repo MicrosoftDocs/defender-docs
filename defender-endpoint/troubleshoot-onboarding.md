@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 04/01/2024
+ms.date: 05/02/2024
 ---
 
 # Troubleshoot Microsoft Defender for Endpoint onboarding issues
@@ -38,6 +38,7 @@ Before you start troubleshooting issues with onboarding tools, it's important to
 
 > [!TIP]
 > As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
+
 ## Troubleshoot issues with onboarding tools
 
 If you've completed the onboarding process and don't see devices in the [Devices list](investigate-machines.md) after an hour, it might indicate an onboarding or connectivity problem.
