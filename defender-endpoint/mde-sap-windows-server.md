@@ -159,20 +159,15 @@ Here's a list of what to check:
    > [!NOTE]
    > The term *Defender* is sometimes used to refer to an entire suite of products and solutions. See [What is Microsoft Defender XDR?](/defender-xdr/microsoft-365-defender). In this article, we focus on antivirus and EDR capabilities in Defender for Endpoint.
     
-2. **Check the status of Microsoft Defender Antivirus**. Open Command Prompt, and then run these PowerShell commands:
+2. **Check the status of Microsoft Defender Antivirus**. Open Command Prompt. You'll use the following PowerShell commands with certain parameters:
 
-   - `Get-MpComputerStatus`
-   - `Get-MpPreference`
+   - [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?view=windowsserver2022-ps&preserve-view=true)
+   - [Get-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true)
 
-   The most significant settings for SAP are as follows:
+   The following commands return information for the settings that are most relevant to SAP:
 
-   ```powershell
-
-   Get-MpPreference |Select-Object -Property  DisableCpuThrottleOnIdleScans, DisableRealtimeMonitoring, DisableScanningMappedNetworkDrivesForFullScan , DisableScanningNetworkFiles, ExclusionPath, MAPSReporting 
-
-   Get-MpComputerStatus |Select-Object -Property AMRunningMode, AntivirusEnabled, BehaviorMonitorEnabled, IsTamperProtected , OnAccessProtectionEnabled, RealTimeProtectionEnabled
-
-   ```
+      - `Get-MpPreference |Select-Object -Property  DisableCpuThrottleOnIdleScans, DisableRealtimeMonitoring, DisableScanningMappedNetworkDrivesForFullScan , DisableScanningNetworkFiles, ExclusionPath, MAPSReporting`
+      - `Get-MpComputerStatus |Select-Object -Property AMRunningMode, AntivirusEnabled, BehaviorMonitorEnabled, IsTamperProtected , OnAccessProtectionEnabled, RealTimeProtectionEnabled`
    
 3. **Check the status of EDR**. Open Command Prompt, and then run the following command:
 
