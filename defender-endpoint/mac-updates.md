@@ -40,9 +40,7 @@ Microsoft regularly publishes software updates to improve performance, security,
 > mdatp health --field product_expiration
 > ```
 
-To update Microsoft Defender for Endpoint on macOS, a program named Microsoft AutoUpdate (MAU) is used. MAU checks updates periodically, and automatically downloads and installs them.
-
-:::image type="content" source="media/MDATP-34-MAU.png" alt-text="MAU" lightbox="media/MDATP-34-MAU.png":::
+To update Microsoft Defender for Endpoint on macOS, Microsoft AutoUpdate (MAU) is used. MAU checks updates periodically, and automatically downloads and installs them.
 
 You can deploy preferences to configure how and when MAU checks for updates for the Macs in your organization.
 
@@ -63,7 +61,7 @@ This section describes the most common preferences that can be used to configure
 
 ### Set the channel name
 
-The channel determines the type and frequency of updates that are offered through MAU. Devices in `Beta` can try out new features before devices in `Preview` and `Current`.
+The channel determines the type and frequency of updates that are offered through MAU. Devices in `Beta` can try out new features before devices in `Preview` and `Current`. For the latest information on this setting, see: [ChannelName](/deployoffice/mac/mau-preferences#channelname)
 
 The `Current` channel contains the most stable version of the product.
 
@@ -102,7 +100,7 @@ The `Current` channel contains the most stable version of the product.
 
 ### Change whether the "Check for Updates" button is enabled
 
-Change whether local users are able to click the "Check for Updates" option in the Microsoft AutoUpdate user interface.
+Change whether local users are able to click the "Check for Updates" option in the Microsoft AutoUpdate user interface. For the latest information on this setting, see: [EnableCheckForUpdatesButton](/deployoffice/mac/mau-preferences#enablecheckforupdatesbutton)
 <br>
 
 
@@ -121,7 +119,7 @@ Change whether local users are able to click the "Check for Updates" option in t
 
 ### Disable Insider checkbox
 
-Set to true to make the "Join the Office Insider Program..." checkbox unavailable / greyed out to users.
+Set to true to make the "Join the Office Insider Program..." checkbox unavailable / greyed out to users. For the latest information on this setting, see: [DisableInsiderCheckbox](/deployoffice/mac/mau-preferences#disableinsidercheckbox)
 <br>
 
 
@@ -233,6 +231,8 @@ To configure MAU, you can deploy this configuration profile from the management 
 
 - From Jamf Pro, upload this configuration profile and set the Preference Domain to *com.microsoft.autoupdate2*.
 - From Intune, upload this configuration profile and set the custom configuration profile name to *com.microsoft.autoupdate2*.
+ 
+For more inoformation, see: [Configuring Preferences for Microsoft AutoUpdate (MAU) in Microsoft 365 Enterprise](/deployoffice/mac/mau-preferences#howtocheck)
 
 ## Resources
 
