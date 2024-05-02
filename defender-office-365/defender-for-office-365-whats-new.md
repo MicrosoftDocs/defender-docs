@@ -55,7 +55,7 @@ For more information on what's new with other Microsoft Defender security produc
 
   > [!TIP]
   > A new panel allows SecOps personnel to look for indicators of compromise at the tenant level, and the block action is readily available.
-  
+
   For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
 ## March 2024
@@ -229,8 +229,6 @@ For more information on what's new with other Microsoft Defender security produc
   - [Video of end-user experience](https://youtu.be/s-vozLO43rI)
   - Other new capabilities coming to the quarantine experience are described in this blog post: [Simplifying the Quarantine experience](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/simplifying-the-quarantine-experience/ba-p/2676388).
 - Portal redirection by default begins, redirecting users from Security & Compliance to Microsoft Defender XDR <https://security.microsoft.com>.
-
-
 
 ## August 2021
 

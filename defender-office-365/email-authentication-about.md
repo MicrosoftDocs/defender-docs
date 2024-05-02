@@ -274,7 +274,7 @@ The following examples focus on the results of email authentication only (the `c
      After you identify all email sources for your domain, you can update your SPF record to use the enforcement rule value "hard fail" (`-all`).
 
   3. Set up DKIM to digitally sign messages.
-  
+
   4. Set up DMARC to validate that the domains in the MAIL FROM and From addresses match, to specify what to do with messages that fail DMARC checks (reject or quarantine), and to identify reporting services to monitor DMARC results.
 
   5. If you use bulk senders to send email on your behalf, verify that the domain in the From address matches the domain that passes SPF or DMARC.
