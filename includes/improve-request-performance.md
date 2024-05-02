@@ -2,11 +2,11 @@
 title: Improve request performance
 description: Improve request performance
 ms.service: defender-xdr
-ms.author: macapara
-author: mjcaparas
+ms.author: itsela
+author: itsela-ms
 ms.localizationpriority: medium
 manager: dansimp
-ms.date: 05/02/2021
+ms.date: 05/02/2024
 audience: ITPro
 ms.collection: M365-security-compliance 
 ms.topic: article
