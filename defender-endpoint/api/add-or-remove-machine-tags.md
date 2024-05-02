@@ -37,6 +37,8 @@ ms.date: 02/24/2023
 
 Adds or removes a tag for a specific [Machine](machine.md).
 
+> [!NOTE]
+> 
 ## Limitations
 
 1. You can post on machines last seen according to your configured retention period.
