@@ -1,6 +1,6 @@
 ---
 title: Using Tags in Microsoft Defender Threat Intelligence (Defender TI)
-Description: In this how-to article, learn about the tag types and how to add, modify, delete, and search custom tags in Microsoft Defender Threat Intelligence (Defender TI).
+description: In this how-to article, learn about the tag types and how to add, modify, delete, and search custom tags in Microsoft Defender Threat Intelligence (Defender TI).
 author: alexroland24
 ms.author: aroland
 manager: dolmont
@@ -88,7 +88,8 @@ Users can view tags that were added by themselves or others within their tenant 
 
    ![Search Tag](media/searchTag.png)
 
-Common Tag Use Case Workflow
+**Common Tag Use Case Workflow**
+
 Let's say a triage analyst investigates an incident and finds that it's related to phishing. That analyst can add "phish" as a tag to the indicators of compromise related to that incident. Later, the incident response and threat hunting team can further analyze these indicators of compromise and work with their cyber threat intelligence counterparts to identify which actor group was responsible for their phishing incident. They can then add another "[actor name]" tag to those indicators of compromise or what infrastructure was used that connected them to other related indicators of compromise, such as an "[SHA-1 hash]" custom tag.
 
 ## Next steps
