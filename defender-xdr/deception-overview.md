@@ -37,7 +37,7 @@ The deception capability automatically generates authentic-looking decoy account
 
 For an overview of the deception capability, watch the following video.
 
-[!VIDEO https://www.youtube.com/watch?v=xoEP7SFEnJc]
+<https://www.youtube.com/watch?v=xoEP7SFEnJc>
 
 ## Prerequisites
 
