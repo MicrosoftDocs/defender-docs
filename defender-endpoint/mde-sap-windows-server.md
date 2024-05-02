@@ -240,12 +240,13 @@ The following sections describe how to confirm or configure Defender for Endpoin
 
 Use Windows Update, or run the following command:
 
-`PS C:\Program Files\Windows Defender> .\MpCmdRun.exe -SignatureUpdate`
-
+```powershell
+PS C:\Program Files\Windows Defender> .\MpCmdRun.exe -SignatureUpdate
+```
+ 
 You should see an output that resembles the following code snippet:
 
 ```properties
-
 Signature update started . . .
 Service Version: 4.18.23050.9
 Engine Version: 1.1.23060.1005
@@ -253,7 +254,6 @@ AntiSpyware Signature Version: 1.393.925.0
 Antivirus Signature Version: 1.393.925.0
 Signature update finished.
 PS C:\Program Files\Windows Defender>
-
 ```
 
 Another option is to use this command: 
