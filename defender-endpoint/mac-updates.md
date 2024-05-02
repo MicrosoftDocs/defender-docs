@@ -238,7 +238,7 @@ To configure MAU, you can deploy this configuration profile from the management 
 - From Jamf Pro, upload this configuration profile and set the Preference Domain to *com.microsoft.autoupdate2*.
 - From Intune, upload this configuration profile and set the custom configuration profile name to *com.microsoft.autoupdate2*.
  
-For more inoformation, see: [Configuring Preferences for Microsoft AutoUpdate (MAU) in Microsoft 365 Enterprise](/deployoffice/mac/mau-preferences#howtocheck)
+For more information, see: [Configuring Preferences for Microsoft AutoUpdate (MAU) in Microsoft 365 Enterprise](/deployoffice/mac/mau-preferences#howtocheck)
 
 ## Resources
 
