@@ -45,7 +45,7 @@ System tags can include:
 
 ## Custom tags
 
-Custom tags bring context to indicators of compromise (IOCs) and make analysis even simpler by identifying those domains that are known bad from public reporting or that you categorized as such. You create these tags based on your own investigations, and these tags let you share key insights about an artifact with other Defender TI premium license users within your tenant.
+Custom tags bring context to indicators of compromise (IOCs) and make analysis even simpler by identifying those domains that are known bad from public reporting or that you categorized as such. You create these tags manually based on your own investigations, and these tags let you share key insights about an artifact with other Defender TI premium license users within your tenant.
 
 ![Tags Custom](media/tagsCustom.png)
 
@@ -73,7 +73,7 @@ You can also modify or remove tags. Once you add a tag, you or another paid lice
 
    ![Tags Search Save Tags](media/tagsSearchSaveTags.png)
 
-7. Repeat step 3 to edit tags. Remove a tag by selecting **X** at the end it, then add new ones by repeating the steps 4 to 6.
+7. Repeat step 3 to edit tags. Remove a tag by selecting **X** at the end of it, then add new ones by repeating the steps 4 to 6.
 
 8. Save your changes.
 
@@ -81,7 +81,7 @@ You can also modify or remove tags. Once you add a tag, you or another paid lice
 
 ### Viewing and searching custom tags
 
-You can view tags that you or others added within their tenant after searching an IP, domain, or host artifact.
+You can view tags that you or others added within your tenant after searching an IP address, domain, or host artifact.
 
 ![Tags Custom](media/tagsCustom.png)
 

@@ -55,7 +55,7 @@ You also learn how to download indicators or artifacts from the following featur
 
 ## Sorting data
 
-The sorting function on each data tab lets users quickly sort our data sets by the column values. By default, most results are sorted by **Last seen** (descending) so that the most recently observed results appear at the top of the list. This default sorting order immediately provides insight on the current infrastructure of an artifact.
+The sorting function on each data tab lets you quickly sort our data sets by the column values. By default, most results are sorted by **Last seen** (descending) so that the most recently observed results appear at the top of the list. This default sorting order immediately provides insight on the current infrastructure of an artifact.
 
 Currently, all data sets are sortable by the following **First seen** and **Last seen** values:
 
@@ -73,7 +73,7 @@ Data can be sorted across each data set tab for each IP, domain, or host entity 
 
 ## Filtering data
 
-Data filtering lets you access a select group of data based on a particular metadata value. For instance, you can choose to view IP resolutions discovered from a select source only, or components of a particular type (for example, servers, frameworks). Data filtering enables you to narrow the query results to items of particular interest. 
+Data filtering lets you access a select group of data based on a particular metadata value. For instance, you can choose to view IP resolutions discovered from a select source only, or components of a particular type (for example, servers or frameworks). Data filtering enables you to narrow the query results to items of particular interest. 
 
 Because Defender TI provides specific metadata that coincides with particular data types, the filter options are different for each data set.
 
@@ -82,26 +82,28 @@ Because Defender TI provides specific metadata that coincides with particular da
 The following filters apply to resolution data:
 - **System tag**: Defender TI creates these tags based on insights discovered by our research team. [Learn more](using-tags.md#system-tags)
 - **Tag**: Custom tags that Defender TI users applied. [Learn more](using-tags.md#custom-tags)
-- **ASN**: Results that relate to a designated Autonomous System Number (ASN).
+- **ASN**: Results that relate to a designated autonomous system number (ASN).
 - **Network**: Results that relate to designated network.
 - **Source**: The data source that produced the result (for example, *riskiq*, *emerging_threats*).
 
 To filter resolution data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
-2. Go to the **Resolutions** tab, then apply filters to each of the types of filter options noted previously.
+2. Go to the **Resolutions** tab
+3. Apply filters to each of the types of filter options noted previously.
 
 ![Filters Resolutions](media/filtersResolutions.gif)
 
 ### Tracker filters
 
 The following filters apply to tracker data:
-- **Type**: The identified tracker type for each artifact (for example, *JarmFuzzyHash*, *GoogleAnalyticsID*).
+- **Type**: The identified tracker type for each artifact (for example, *JarmFuzzyHash* or *GoogleAnalyticsID*).
 - **Address**: The IP address that directly observed the tracker or has a resolving host that observed the tracker. This filter appears when you search an IP address.
 - **Hostname**: The host that observed this tracker value. This filter appears when you search a domain or host.
 
 To filter tracker data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
-2. Go to the **Trackers** tab, then apply filters to each of the types of filter options noted previously.
+2. Go to the **Trackers** tab
+3. Apply filters to each of the types of filter options noted previously.
 
 ![Filters Trackers](media/filtersTrackers.gif)
 
@@ -110,11 +112,12 @@ To filter tracker data:
 The following filters apply to component data:
 - **Ipaddressraw:** The IP address that coincides with the returned hostname.
 - **Type:** The designated component type (for example, remote access or operating system).
-- **Name:** The name of the detected component (for example, Cobalt Strike or PHP).
+- **Name:** The name of the detected component (for example, *Cobalt Strike* or *PHP*).
 
 To filter component data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
-2. Go to the **Components** tab, then apply filters to each of the types of filter options noted previously.
+2. Go to the **Components** tab
+3. Apply filters to each of the types of filter options noted previously.
 
 ![Filters Components](media/filtersComponents.gif)
 
@@ -123,12 +126,13 @@ To filter component data:
 The following filters apply to host pair data:
 - **Direction:** The direction of the observed connection, indicating whether the parent redirects to the child or the other way around.
 - **Parent hostname:** The hostname of the parent artifact.
-- **Cause:** The detected cause of the host parent-child relationship (for example, redirect or  *iframe.src*).
+- **Cause:** The detected cause of the host parent-child relationship (for example, *redirect* or  *iframe.src*).
 - **Child hostname:** The hostname of the child artifact.
 
 To filter host pair data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
-2. Go to the **Host pairs** tab, then apply filters to each of the types of filter options noted previously.
+2. Go to the **Host pairs** tab
+3. Apply filters to each of the types of filter options noted previously.
 
 ![Filters Host Pairs](media/filtersHostPairs.gif)
 
@@ -136,12 +140,13 @@ To filter host pair data:
 
 The following filters apply to DNS and reverse DNS data:
 
-- **Record Type:** The type of record detected in the DNS record (for example, NS or CNAME).
+- **Record Type:** The type of record detected in the DNS record (for example, *NS* or *CNAME*).
 - **Value:** The designated value of the record (for example, *nameserver.host.com*).
 
 To filter DNS and reverse DNS data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
-2. Go to the **DNS** and **Reverse DNS** tabs, then apply filters to each of the types of filter options noted previously.
+2. Go to the **DNS** and **Reverse DNS** tabs
+3. Apply filters to each of the types of filter options noted previously.
 
 ![Filters DNS](media/filtersDNS.gif)
 

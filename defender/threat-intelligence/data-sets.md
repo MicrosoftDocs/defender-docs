@@ -17,7 +17,12 @@ ms.custom: template-concept
 
 Microsoft centralizes numerous data sets into Microsoft Defender Threat Intelligence (Defender TI), making it easier for Microsoft’s customers and community to conduct infrastructure analysis. Microsoft’s primary focus is to provide as much data as possible about internet infrastructure to support various security use cases.
 
-Microsoft collects, analyzes, and indexes internet data to help you detect and respond to threats, prioritize incidents, and proactively identify adversaries’ infrastructure associated with actor groups targeting your organization. Microsoft collects internet data through its passive Domain Name System (PDNS) sensor network, global proxy network of virtual users, port scans, and other sources for malware and added DNS data.
+Microsoft collects, analyzes, and indexes internet data to help you: 
+- Detect and respond to threats
+- Prioritize incidents
+- Proactively identify infrastructure associated with actor groups targeting your organization
+
+Microsoft collects internet data through its passive Domain Name System (PDNS) sensor network, global proxy network of virtual users, port scans, and other sources for malware and added DNS data.
 
 This internet data is categorized into two distinct groups: traditional and advanced. Traditional data sets include:
 - [Resolutions](#resolutions)
@@ -34,7 +39,7 @@ Advanced data sets include:
 - [Host pairs](#host-pairs)
 - [Cookies](#cookies)
 
-Advanced data sets are collected from observing the Document Object Model (DOM) of crawled web pages. Additionally, components and trackers are also observed from detection rules that are triggered based on the banner responses from port scans or TLS/SSL certificate details.
+Advanced data sets are collected from observing the Document Object Model (DOM) of crawled web pages. Additionally, components and trackers are also observed from detection rules that are triggered based on the banner responses from port scans or TLS certificate details.
 
 ![Data Sets Edge Screenshot](media/dataSetsEdgeScreenshot.png)
 
@@ -42,7 +47,7 @@ Advanced data sets are collected from observing the Document Object Model (DOM) 
 
 PDNS is a record system that stores DNS resolution data for a given location, record, and timeframe. This historical resolution data set lets you view which domains resolved to an IP address and the other way around. This data set allows for time-based correlation based on domain or IP overlap.
 
-PDNS might enable the identification of previously unknown or newly stood-up threat actor infrastructure. Proactive addition of indicators to blocklists can cut off communication paths before campaigns take place. A record resolution data is available within the **Resolutions** tab. More types of DNS records are available in the **DNS** tab.
+PDNS might enable the identification of previously unknown or newly stood-up threat actor infrastructure. Proactive addition of indicators to blocklists can cut off communication paths before campaigns take place. A record resolution data is available within the **Resolutions** tab, which is located in the **Intel explorer** page in the Microsoft Defender portal. More types of DNS records are available in the **DNS** tab.
 
 Our PDNS resolution data includes the following information:
 
@@ -53,7 +58,7 @@ Our PDNS resolution data includes the following information:
 - **First seen**: A timestamp of the date that Microsoft first observed this resolution
 - **Last seen**: A timestamp of the date that Microsoft last observed this resolution
 - **Source**: The source that enabled the detection of the relationship.
-- **Tags**: Any tags applied to this artifact in the Defender TI system ([Learn more](using-tags.md))
+- **Tags**: Any tags applied to this artifact in Defender TI ([Learn more](using-tags.md))
 
 ![Data Tab Resolutions](media/dataTabResolutions.png)
 
@@ -67,7 +72,7 @@ Our PDNS resolution data includes the following information:
 
 - When was the last time Defender TI saw the domain actively resolving to an IP address?
 
-- What IP addresses does the domain currently resolve to?
+- What IP address or addresses does the domain currently resolve to?
     ![Data Sets Domain Active Re solutions](media/dataSetsDomainActiveResolutions.png)
   
 *IP addresses*
@@ -94,11 +99,11 @@ Our PDNS resolution data includes the following information:
 
 ## WHOIS
 
-Thousands of times a day, domains are bought and/or transferred between individuals and organizations. The process to make all of this purchase or transfer happen is easy and only takes a few minutes and roughly $7 depending on the registrar provider. Beyond payment details, one must supply additional information about themselves, some of which gets stored as part of a WHOIS record once the domain is set up. This would be considered a public domain registration. However, there are private domain registration services, where one can hide their personal information from their domain’s WHOIS record. In these situations, the domain owner’s information is safe and replaced by their registrar’s information. More actor groups are performing private domain registrations to make it more difficult for analysts to find other domains that they own. Defender TI provides various data sets to find actors’ shared infrastructure when WHOIS records don’t provide leads.
+Thousands of times a day, domains are bought and/or transferred between individuals and organizations. The process is easy, only takes a few minutes, and can be as low as $7, depending on the registrar provider. Beyond payment details, one must supply additional information about themselves. Some of this information is stored as part of a WHOIS record the domain has been set up. This action would be considered a public domain registration. However, there are private domain registration services, where one can hide their personal information from their domain’s WHOIS record. In these situations, the domain owner’s information is safe and replaced by their registrar’s information. More actor groups are performing private domain registrations to make it more difficult for analysts to find other domains that they own. Defender TI provides various data sets to find actors’ shared infrastructure when WHOIS records don’t provide leads.
 
-WHOIS is a protocol that lets anyone query information about a domain, IP address, or subnet. One of the most common functions for WHOIS in threat infrastructure research is to identify or connect disparate entities based on unique data shared within WHOIS records. If you're reading carefully or if you ever purchased a domain yourself, you might notice that the content requested from the registrars is never verified. In fact, you could put anything in the record (and many people do), which is then displayed to the world.
+WHOIS is a protocol that lets anyone query information about a domain, IP address, or subnet. One of the most common functions for WHOIS in threat infrastructure research is to identify or connect disparate entities based on unique data shared within WHOIS records. If you ever purchased a domain yourself, you might have noticed that the content requested from the registrars is never verified. In fact, you could have put anything in the record (and many people do), which would then be displayed to the world.
 
-Each WHOIS record has several different sections, all of which could include different information. Commonly found sections include *registrar*, *registrant*, *administrator*, and *technical*, with each potentially corresponding to a different contact for the record. This data is duplicated across sections in most cases but there might be some slight discrepancies, especially if an actor made a mistake. When viewing WWHOIS information within Defender TI, you see a condensed record that deduplicates any data and notes which part of the record it came from. We found that this process greatly speeds up the analyst workflow and avoids any overlooking of data. The Defender TI's WHOIS information is powered by the WhoisIQ™ database.
+Each WHOIS record has several different sections, all of which could include different information. Commonly found sections include *registrar*, *registrant*, *administrator*, and *technical*, with each potentially corresponding to a different contact for the record. This data is duplicated across sections in most cases but there might be some slight discrepancies, especially if an actor made a mistake. When viewing WHOIS information within Defender TI, you see a condensed record that deduplicates any data and notates which part of the record it came from. We found this process greatly speeds up the analyst workflow and avoids any overlooking of data. The Defender TI's WHOIS information is powered by the WhoisIQ™ database.
 
 Our WHOIS data includes the following information:
 - **Record updated:** A timestamp that indicates the day a WHOIS record was last updated
@@ -111,12 +116,12 @@ Our WHOIS data includes the following information:
 - **Email:** Any email addresses found in the WHOIS record, and the type of contact each one is associated with (for example, *admin* or *tech*)
 - **Name:** The name of any contacts within the record, and the type of contact each is associated with
 - **Organization:** The name of any organizations within the record, and the type of contact each is associated with
-- **Street:** Any street addresses associated with the record, and the type of contact it's associated with
-- **City:** Any city listed in an address associated with the record, and the type of contact it's associated with
-- **State:** Any states listed in an address associated with the record, and the type of contact it's associated with
-- **Postal code:** Any postal codes listed in an address associated with the record, and the type of contact it's associated with
-- **Country:** Any countries or regions listed in an address associated with the record, and the type of contact it's associated with
-- **Phone:** Any phone numbers listed in the record, and the type of contact it's associated with
+- **Street:** Any street addresses associated with the record, and the type of corresponding contact
+- **City:** Any city listed in an address associated with the record, and the type of corresponding contact
+- **State:** Any states listed in an address associated with the record, and the type of corresponding contact 
+- **Postal code:** Any postal codes listed in an address associated with the record, and the type of corresponding contact
+- **Country:** Any countries or regions listed in an address associated with the record, and the type of corresponding contact
+- **Phone:** Any phone numbers listed in the record, and the type of corresponding contact
 - **Name servers:** Any name servers associated to the registered entity
 
 ### Current WHOIS lookups
@@ -129,7 +134,7 @@ Defender TI’s current WHOIS repository highlights all domains in Microsoft’s
 
 ![Search Whois History](media/searchWhoisHistory.png)
 
-Defender TI’s **WHOIS history** repository provides users with access to all known historical domain associations to WHOIS attributes based on the system’s observations. This data set highlights all domains associated with an attribute that a user pivots from displaying the first time and the last time we observed the association between the domain and attribute queried. This data is displayed in a separate tab next to the current **WHOIS search** tab.
+Defender TI’s **WHOIS history** repository provides users with access to all known historical domain associations to WHOIS attributes based on the system’s observations. This data set highlights all domains associated with an attribute that a user pivots from displaying the first time and the last time we observed the association between the domain and attribute queried. This data is displayed in a separate tab next to the current WHOIS search tab.
 
 **Questions this data set might help answer**
 
@@ -176,21 +181,21 @@ Defender TI’s **WHOIS history** repository provides users with access to all k
   ![Data Sets Whois Shared Value Search](media/dataSetsWhoisSharedValueSearch.gif)
 
 ## Certificates
-Beyond securing your data, TLS/SSL certificates are a fantastic way for users to connect disparate network infrastructure. Modern scanning techniques let us perform data requests against every node on the internet in a matter of hours, meaning we can easily associate a certificate to an IP address hosting it regularly.
+Beyond securing your data, TLS certificates are a fantastic way for users to connect disparate network infrastructure. Modern scanning techniques let us perform data requests against every node on the internet in a matter of hours. In other words, we can associate a certificate to an IP address hosting it easily and regularly.
 
-Much like a WHOIS record, TLS/SSL certificates require information to be supplied by the user to generate the final product. Aside from the domain, the TLS/SSL certificate is being created for (unless self-signed), the user can make up any of the additional information. Where Microsoft’s users see the most value from TLS/SSL certificates isn't necessarily the unique data someone might use when generating the certificate, but where it's hosted.
+Much like a WHOIS record, TLS certificates require information to be supplied by the user to generate the final product. Aside from the domain, the TLS certificate includes who the certificate is being created for (unless self-signed). The user can make up the additional information. Where Microsoft’s users see the most value from TLS certificates isn't necessarily the unique data someone might use when generating the certificate, but where it's hosted.
 
-To access a TLS/SSL certificate, it needs to be associated with a web server and exposed through a particular port (most often 443). Using mass internet scans on a weekly basis, it's possible to scan all IP addresses and obtain any certificate being hosted to build a historic repository of certificate data. Having a database of IP addresses to TLS/SSL certificate mappings provides users with a way to identify overlaps in infrastructure.
+To access a TLS certificate, it needs to be associated with a web server and exposed through a particular port (most often 443). Using mass internet scans on a weekly basis, it's possible to scan all IP addresses and obtain any certificate being hosted to build a historic repository of certificate data. Having a database of IP addresses to TLS certificate mappings provides you with a way to identify overlaps in infrastructure.
 
-To further illustrate this concept, imagine an actor setting up a server with a self-signed TLS/SSL certificate. After several days, defenders become wise to their infrastructure and block the web server hosting malicious content. Instead of destroying all their hard work, the actor merely copies all the contents (including the TLS/SSL certificate) and places them on a new server. As a user, a connection can now be made using the unique SHA-1 value of the certificate to say that both web servers (one blocked, one unknown) are connected in some way.
+To further illustrate this concept, imagine an actor setting up a server with a self-signed TLS certificate. After several days, defenders become wise to their infrastructure and block the web server hosting malicious content. Instead of destroying all their hard work, the actor merely copies all the contents (including the TLS certificate) and places them on a new server. As a user, you can now make a connection using the unique SHA-1 value of the certificate and say that both web servers (one blocked, one unknown) are connected in some way.
 
-What makes TLS/SSL certificates more valuable is that they're capable of making connections that passive DNS or WHOIS data might miss. This means more ways of correlating potential malicious infrastructure and identifying potential operational security failures of actors. Defender TI has collected over 30 million certificates since 2013 and provides users with the tools to make correlations on certificate content and history.
+What makes TLS certificates more valuable is that they're capable of making connections that passive DNS or WHOIS data might miss. This means more ways of correlating potential malicious infrastructure and identifying potential operational security failures of actors. Defender TI has collected over 30 million certificates since 2013 and provides you with the tools to make correlations on certificate content and history.
 
-TLS/SSL certificates are files that digitally bind a cryptographic key to a set of user-provided details. Defender TI uses internet scanning techniques to collect TLS/SSL certificate associations from IP addresses on various ports. These certificates are stored inside of a local database and allow us to create a timeline for where a given TLS/SSL certificate appeared on the internet.
+TLS certificates are files that digitally bind a cryptographic key to a set of user-provided details. Defender TI uses internet scanning techniques to collect TLS certificate associations from IP addresses on various ports. These certificates are stored inside of a local database and allow us to create a timeline for where a given TLS certificate appeared on the internet.
 
 Our certificate data includes the following information:
 
-- **Sha1:** The SHA-1 algorithm hash for an TLS/SSL certificate asset
+- **Sha1:** The SHA-1 algorithm hash for an TLS certificate asset
 - **First seen:** A timestamp that displays the date that we first observed this certificate on an artifact
 - **Last seen:** A timestamp that displays the date that we last observed this certificate on an artifact
 - **Infrastructure:** Any related infrastructure associated with the certificate
@@ -198,16 +203,16 @@ Our certificate data includes the following information:
 ![Data Tab Certificates List](media/dataTabCertificatesList.png)
 
 When you expand on an SHA-1 hash, you see the following details:
-- **Serial number:** The serial number associated with an TLS/SSL certificate
+- **Serial number:** The serial number associated with an TLS certificate
 - **Issued:** The date when a certificate was issued
 - **Expires:** The date when a certificate expires
-- **Subject common name:** The subject common name for any associated TLS/SSL certificates
-- **Issuer common name:** The issuer common name for any associated TLS/SSL certificates
+- **Subject common name:** The subject common name for any associated TLS certificates
+- **Issuer common name:** The issuer common name for any associated TLS certificates
 - **Subject alternative name(s):** Any alternative common names for the certificate
 - **Issuer alternative name(s):** Any other names of the issuer
-- **Subject organization name:** The organization linked to the TLS/SSL certificate registration
+- **Subject organization name:** The organization linked to the TLS certificate registration
 - **Issuer organization name:** The name of the organization that orchestrated the issue of a certificate
-- **SSL version:** The version of TLS/SSL that the certificate was registered with
+- **SSL version:** The version of SSL/TLS that the certificate was registered with
 - **Subject organization unit:** Optional metadata that indicates the department within an organization that is responsible for the certificate
 - **Issuer organization unit:** Additional information about the organization issuing the certificate
 - **Subject street address:** The street address where the organization is located
@@ -246,7 +251,7 @@ When you expand on an SHA-1 hash, you see the following details:
 
 ## Subdomains
 
-A subdomain is an internet domain that's part of a primary domain. Subdomains are also referred to as "hosts." As an example,`learn.microsoft.com` is a subdomain of `microsoft.com`. For every subdomain, there could be a new set of IP addresses the domain resolves to, which could be great data sources for finding related infrastructure.
+A subdomain is an internet domain that's part of a primary domain. Subdomains are also referred to as "hosts." As an example, `learn.microsoft.com` is a subdomain of `microsoft.com`. For every subdomain, there could be a new set of IP addresses the domain resolves to, which could be great data sources for finding related infrastructure.
 
 Our subdomain data includes the following information:
 
@@ -275,9 +280,9 @@ Our subdomain data includes the following information:
 
 ## Trackers
 
-Trackers are unique codes or values found within web pages and often used to track user interaction. These codes could be used to correlate a disparate group of websites to a central entity. Often, actors copy the source code of a victim’s website they're looking to impersonate for a phishing campaign. Threat actors seldom take the time to remove these IDs, which could allow users to identify these fraudulent sites using Defender TI's **Trackers** data set. Actors might also deploy tracker IDs to see how successful their attack campaigns are, similar to how marketers use SEO IDs like a Google Analytics tracker ID to track the success of their marketing campaign.
+Trackers are unique codes or values found within web pages and often used to track user interaction. These codes could be used to correlate a disparate group of websites to a central entity. Often, threat actors copy the source code of a victim’s website they're looking to impersonate for a phishing campaign. They seldomly take the time to remove these IDs, which could allow users to identify these fraudulent sites using Defender TI's **Trackers** data set. Actors might also deploy tracker IDs to see how successful their attack campaigns are. This activity is similar to how marketers use SEO IDs, such as a Google Analytics tracker ID, to track the success of their marketing campaign.
 
-Our tracker data set includes IDs from providers like Google, Yandex, Mixpanel, New Relic, and Clicky. It includes the following information:
+Our tracker data set includes IDs from providers like Google, Yandex, Mixpanel, New Relic, and Clicky, and continues to grow. It includes the following information:
 
 - **Hostname**: The hostname that hosts the infrastructure where the tracker was detected
 - **First seen**: A timestamp of the date that Microsoft first observed this tracker on the artifact
@@ -296,7 +301,7 @@ Our tracker data set includes IDs from providers like Google, Yandex, Mixpanel, 
 
 - Are these resources associated with the organization, or are they attempting to conduct an infringement attack?
 
-- Is there any overlap between trackers--are they shared with other websites?
+- Is there any overlap between trackers–are they shared with other websites?
 
 - What are the types of trackers found within the web page?
 
@@ -306,13 +311,13 @@ Our tracker data set includes IDs from providers like Google, Yandex, Mixpanel, 
 
   ![Data Sets Trackers LengthOf Time](media/dataSetsTrackersLengthOfTime.png)
 
-- What is the frequency of change for tracker values--do they come, go, or remain?
+- What is the frequency of change for tracker values–do they come, go, or remain?
 
-- Are there any trackers linking to website cloning software (for example, MarkOfTheWeb or HTTrack)?
+- Are there any trackers linking to website cloning software (for example, *MarkOfTheWeb* or *HTTrack*)?
 
   ![Data Sets TrackersHt Track](media/dataSetsTrackersHtTrack.png)
 
-- Are there any trackers linking to malicious command-and-control (C2) server malware (for example, JARM)?
+- Are there any trackers linking to malicious command-and-control (C2) server malware (for example, *JARM*)?
 
   ![Data Sets Trackers JARM](media/dataSetsTrackersJARM.png)
 
@@ -446,7 +451,7 @@ Our cookie data includes the following information:
 
 ## Services
 
-Service names and port numbers are used to distinguish the different services that run over transport protocols such as TCP, UDP, DCCP, and SCTP. Port numbers can suggest the type of application running on a particular port. However, applications or services can be changed to use a different port to obfuscate or hide them on an IP address. Knowing the port and header/banner information can identify the true application/service and the combination of ports being used. Defender TI surfaces 14 days of history within the **Services** tab, displaying the last banner response associated with a port observed.
+Service names and port numbers are used to distinguish the different services that run over transport protocols such as TCP, UDP, DCCP, and SCTP. Port numbers can suggest the type of application running on a particular port. However, applications or services can be changed to use a different port to obfuscate or hide the application or service on an IP address. Knowing the port and header/banner information can identify the true application/service and the combination of ports being used. Defender TI surfaces 14 days of history within the **Services** tab, displaying the last banner response associated with a port observed.
 
 Our services data includes the following information:
 
