@@ -18,7 +18,7 @@ ms.collection:
 search.appverid: met150
 ---
 
-# Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)
+# Evaluate Microsoft Defender Antivirus using MDE Security Settings Management (Endpoint security policies)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -252,7 +252,7 @@ get-mpComputerStatus | ft AMProductVersion
 
 The latest 'Security Intelligence Update' version is available here:
 
-[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates)
+[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates)
 
 To check which 'Security Intelligence Update' version you have installed, use the following PowerShell command (Run as admin):
 
@@ -264,7 +264,7 @@ get-mpComputerStatus | ft AntivirusSignatureVersion
 
 The latest scan 'engine update' version is available here:
 
-[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates)
+[Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates)
 
 To check which 'Engine Update' version you have installed, use the following PowerShell command(Run as admin):
 
