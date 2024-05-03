@@ -12,7 +12,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to create automated simulations that contain specific techniques and payloads that launch when the specified conditions are met in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 3/14/2024
+ms.date: 5/2/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -36,6 +36,9 @@ The following information is shown for each simulation automation. You can sort 
 - **Created by**
 
 ## Create simulation automations
+
+> [!TIP]
+> For creation instructions, check out this short video: <https://youtu.be/QXElYtr7ZJ0>.
 
 To create a simulation automation, do the following steps:
 
