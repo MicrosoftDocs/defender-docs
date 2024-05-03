@@ -29,7 +29,7 @@ In this how-to article, you learn how to sort and filter data for the following 
 - Host pairs
 - Cookies
 - Services
-- Domain name systems (DNS)
+- Domain Name System (DNS)
 - Reverse DNS
 
 [Learn more about data sets](data-sets.md)
@@ -157,7 +157,7 @@ When you download data from the **Resolutions**, **DNS**, and **Reverse DNS** th
 
 | Header                    | Description                     |
 |----------------------------|----------------------------|
-| **Resolve**                | A record associated with the domain searched (resolving IP address) or domain that has resolved to an IP address when an IP address is searched |
+| **Resolve**                | A record associated with the domain searched (resolving IP address) or domain that resolves to an IP address when the IP address is searched |
 | **Location**               | Country or region the IP address is hosted in |
 | **Network**                | Netblock or subnet |
 | **autonomousSystemNumber** | ASN |
