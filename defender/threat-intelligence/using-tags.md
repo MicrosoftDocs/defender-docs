@@ -4,10 +4,10 @@ Description: 'In this how-to article, learn about the tag types and how to add, 
 author: alexroland24
 ms.author: aroland
 manager: dolmont
-ms.service: threat-intelligence 
-ms.topic: how-to 
+ms.service: threat-intelligence
+ms.topic: how-to
 ms.date: 08/02/2022
-ms.custom: template-how-to 
+ms.custom: template-how-to
 ---
 
 # Using tags
@@ -59,25 +59,25 @@ You can also modify or remove tags. Once you add a tag, you or another paid lice
 2. Navigate to **Threat intelligence** > **Intel explorer**.
 3. Search an indicator in the Intel explorer search bar that you would like to add tags for.
 
-    ![Tags Search](media/tagsSearch.png)
+   ![Tags Search](media/tagsSearch.png)
 
 4. Select **Edit tags** on the upper left-hand corner of the page.
 
-    ![Tags Search Edit Tags](media/tagsSearchEditTags.png)
+   ![Tags Search Edit Tags](media/tagsSearchEditTags.png)
 
 5. Add any tags you would like to associate with this indicator on the **Custom tags** pop-up window that appears. To add a new indicator, press the **Tab** key to add a new indicator.
 
-    ![Tags Search Add Tags](media/tagsSearchAddTags.png)
+   ![Tags Search Add Tags](media/tagsSearchAddTags.png)
 
 6. Select **Save** once you finish adding all your tags to save your changes.
 
-    ![Tags Search Save Tags](media/tagsSearchSaveTags.png)
+   ![Tags Search Save Tags](media/tagsSearchSaveTags.png)
 
 7. Repeat step 3 to edit tags. Remove a tag by selecting **X** at the end it, then add new ones by repeating the steps 4 to 6.
 
 8. Save your changes.
 
-    ![Tags Search Tags](media/tagsSearchTags.png)
+   ![Tags Search Tags](media/tagsSearchTags.png)
 
 ### Viewing and searching custom tags
 
@@ -89,11 +89,9 @@ You can view tags that you or others added within their tenant after searching a
 2. Navigate to **Threat intelligence** > **Intel explorer**.
 3. Select the **Tag** search type in the Intel explorer search bar drop-down then search the tag value to identify all other indicators that share that same tag value.
 
-    ![Search Tag](media/searchTag.png)
-
 ## Common tag use case workflow
-
-Let’s say you're investigating an incident and you find that it's related to phishing. You can add the tag *phish* to the IOCs related to that incident. Later, your incident response and threat hunting team can further analyze these IOCs and work with their threat intelligence counterparts to identify which actor group was responsible for the phishing incident. They can then add another *\[actor name\]* tag to those IOCs or what infrastructure was used that connected them to other related IOCs, such as a *\[SHA-1 hash\]* custom tag.
+=======
+Let's say a triage analyst investigates an incident and finds that it's related to phishing. That analyst can add "phish" as a tag to the indicators of compromise related to that incident. Later, the incident response and threat hunting team can further analyze these indicators of compromise and work with their cyber threat intelligence counterparts to identify which actor group was responsible for their phishing incident. They can then add another "[actor name]" tag to those indicators of compromise or what infrastructure was used that connected them to other related indicators of compromise, such as an "[SHA-1 hash]" custom tag.
 
 ### See also
 

@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 04/26/2024
+ms.date: 05/02/2024
 search.appverid: met150
 ---
 
@@ -43,11 +43,14 @@ This article provides information about Microsoft Defender for Endpoint attack s
 
 [!Include[Prerelease information](../includes/prerelease.md)]
 
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
+
 ## Attack surface reduction rules by type
 
 Attack surface reduction rules are categorized as one of two types:
 
-- **Standard protection rules**: Are the minimum set of rules which Microsoft recommends you always enable, while you're evaluating the affect and configuration needs of the other ASR rules. These rules typically have minimal-to-no noticeable impact on the end user.
+- **Standard protection rules**: Are the minimum set of rules which Microsoft recommends you always enable, while you're evaluating the effect and configuration needs of the other ASR rules. These rules typically have minimal-to-no noticeable impact on the end user.
 
 - **Other rules**: Rules that require some measure of following the documented deployment steps [Plan > Test (audit) > Enable (block/warn modes)], as documented in the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md)
 
