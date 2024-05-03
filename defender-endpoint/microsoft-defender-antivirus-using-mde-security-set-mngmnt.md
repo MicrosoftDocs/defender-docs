@@ -1,6 +1,6 @@
 ---
-title: Evaluate and test Microsoft Defender Antivirus using Group Policy
-description: Use this guide to evaluate and test the protection offered by Microsoft Defender Antivirus using Group Policy.
+title: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)
+description: Use this guide to evaluate and test the protection offered by Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies).
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: conceptual
@@ -18,7 +18,7 @@ ms.collection:
 search.appverid: met150
 ---
 
-# Evaluate Microsoft Defender Antivirus using Group Policy
+# Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -33,13 +33,15 @@ search.appverid: met150
 
 - Windows
 
+## Evaluate Microsoft Defender Antivirus using Group Policy
+
 In Windows 10 or newer and Windows Server 2016 or newer, you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG). 
 
 This topic explains how to enable and test the key protection features in Microsoft Defender AV and Microsoft Defender EG and provides you with guidance and links to more information. 
 
 This article describes configuration options in Windows 10 or newer and Windows Server 2016 or newer. 
 
-## Use Microsoft Defender Antivirus using Group Policy to enable the features 
+### Use Microsoft Defender Antivirus using Group Policy to enable the features 
 
 This guide provides the Microsoft Defender Antivirus Group Policy that configures the features you should use to evaluate our protection. 
 
@@ -65,7 +67,7 @@ This guide provides the Microsoft Defender Antivirus Group Policy that confi
 
    1. Go to **Group Policy Objects** and create a new Group Policy.
 
-   1. Right-click on the new policy created and select **Edit**.
+   1. Right-click the new policy created and select **Edit**.
 
    1. Navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
 
@@ -77,7 +79,7 @@ This guide provides the Microsoft Defender Antivirus Group Policy that confi
 
    2. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
 
-### MDAV and PUA
+## MDAV and PUA
 
 **Root:**
 
@@ -86,7 +88,7 @@ This guide provides the Microsoft Defender Antivirus Group Policy that confi
 | Turn off Microsoft Defender Antivirus | Disabled |
 | Configure detection for potentially unwanted applications | Enabled - Block |
 
-### Real-time protection (always-on protection, real-time scanning)
+## Real-time protection (always-on protection, real-time scanning)
 
 \\**Real-time protection:**
 
@@ -97,7 +99,7 @@ This guide provides the Microsoft Defender Antivirus Group Policy that confi
 | Turn on Behavior Monitoring | Enabled |
 | Monitor file and program activity on your computer | Enabled |
 
-### Cloud protection features
+## Cloud protection features
 
 Standard security intelligence updates can take hours to prepare and deliver; our cloud-delivered protection service can deliver this protection in seconds.
 
@@ -118,7 +120,7 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 | Select cloud protection level | Enabled, High blocking level |
 | Configure extended cloud check | Enabled, 50 |
 
-### Scans
+## Scans
 
 | Description | Setting |
 | --- | --- |
@@ -132,14 +134,14 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 | Scan removable drives | Enabled |
 | Turn on reparse point scanning | Enabled |
 
-### Security Intelligence updates
+## Security Intelligence updates
 
 | Description | Setting |
 | --- | --- |
 | Specify the interval to check for security intelligence updates | Enabled, 4 |
 | Define the order of sources for downloading security intelligence updates | Enabled, under 'Define the order of sources for downloading security intelligence updates'<br><br>InternalDefinitionUpdateServer \| MicrosoftUpdateServer \| MMPC<br><br>**Note:** Where InternalDefinitionUpdateServer is WSUS with Microsoft Defender Antivirus updates allowed.<br><br>MicrosoftUpdateServer == Microsoft Update (formerly Windows Update).<br><br>MMPC == https://www.microsoft.com/en-us/wdsi/definitions |
 
-### Disable local administrator AV settings 
+## Disable local administrator AV settings 
 
 Disable local administrator AV settings such as exclusions, and enforce the policies from the Microsoft Defender for Endpoint Security Settings Management.
 
@@ -150,11 +152,11 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 | Configure local administrator merge behavior for lists | Disabled |
 | Control whether or not exclusions are visible to local admins | Enabled |
 
-#### Threat Severity Default Action
+## Threat Severity Default Action
 
 \\**Threats**
 
-| Description | Setting |     |     |
+| Description | Setting | Alert level    | Action    |
 | --- | --- | --- | --- |
 | Specify threat alert levels at which default action shouldn't be taken when detected | Enabled |     |     |
 |     |     | 5 (Severe) | 2 (Quarantine) |
@@ -174,7 +176,7 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 | --- | --- |
 | Enable headless UI mode | Disabled |
 
-### Network Protection
+## Network Protection
 
 \\**Microsoft Defender Exploit Guard\\Network Protection:**
 
@@ -193,7 +195,7 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 
 \\**Network Inspection System**
 
-### Attack Surface Reduction Rules
+## Attack Surface Reduction Rules
 
 1. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction**.
 
@@ -224,7 +226,7 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 > [!TIP]
 > Some rules may block behavior you find acceptable in your organization. In these cases, change the rule from 'Enabled' to 'Audit' to prevent unwanted blocks.
 
-### Controlled Folder Access
+## Controlled Folder Access
 
 Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction**.
 
@@ -234,7 +236,7 @@ Navigate to **Computer Configuration** > **Administrative Templates** > **Window
 
 Assign the policies to the OU where the test machines are located.
 
-### Check the Platform Update version
+## Check the Platform Update version
 
 The latest 'Platform Update' version Production channel (GA) is available here:
 
@@ -246,7 +248,7 @@ To check which 'Platform Update' version you have installed, use the following P
 get-mpComputerStatus | ft AMProductVersion
 ```
 
-### Check the Security Intelligence Update version
+## Check the Security Intelligence Update version
 
 The latest 'Security Intelligence Update' version is available here:
 
@@ -258,7 +260,7 @@ To check which 'Security Intelligence Update' version you have installed, use th
 get-mpComputerStatus | ft AntivirusSignatureVersion
 ```
 
-### Check the Engine Update version
+## Check the Engine Update version
 
 The latest scan 'engine update' version is available here:
 
@@ -273,7 +275,7 @@ get-mpComputerStatus | ft AMEngineVersion
 If you're finding that your settings aren't taking effect, you might have a conflict. To resolve conflicts, refer: 
 [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
-### For False Negatives (FNs) submissions
+## For False Negatives (FNs) submissions
 
 If you have any questions about a detection that Microsoft Defender AV makes, or you discover a missed detection, you can submit a file to us.
 
