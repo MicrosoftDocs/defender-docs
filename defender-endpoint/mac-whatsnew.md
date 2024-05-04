@@ -258,7 +258,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Bug fixes
 - Discontinued support macOS Catalina [10.15]
 
-<br/>
+
 
 &ensp;Build: **101.96.85**<br/>
 &ensp;Release version: **20.122112.19413.0**<br/>
@@ -269,8 +269,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Bug and performance fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.90.97**<br/>
 &ensp;Release version: **20.122102.19097.0**<br/>
@@ -284,8 +283,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Decrease sysextd noise from Tamper Protection in Advanced Hunting
 - Bug and performance fixes
 
-<br/>
-</details>
+
 
 &ensp;Released: **Nov 5, 2022**<br/>
 &ensp;Published: **Nov 5, 2022**<br/>
@@ -299,8 +297,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Fix for some users experiencing performance issues and temporary system hangs
 - Bug and performance fixes
 
-<br/>
-</details>
+
 
 &ensp;Released: **Oct 25, 2022**<br/>
 &ensp;Published: **Oct 25, 2022**<br/>
@@ -313,8 +310,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Bug fix: Upgrade fails if `\_mdatp` user a member of `\_lpadmin` group
 
-<br/>
-</details>
+
 
 > [!IMPORTANT]
 > This is a minimal recommended MDE version for macOS Ventura.
@@ -352,8 +348,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Fix for definitions not getting downloaded right after install
 - Other bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Released: **Aug 3, 2022**<br/>
 &ensp;Published: **Aug 3, 2022**<br/>
@@ -368,8 +363,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Addressed a product bug where multiple detections of the same content could lead to duplicate entries in the threat history.
 - Other bug fixes.
 
-<br/>
-</details>
+
 
 &ensp;Released: **Jul 21, 2022**<br/>
 &ensp;Published: **Jul 21, 2022**<br/>
@@ -386,8 +380,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Performance improvements for file copy operations
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Released: **Jul 7, 2022**<br/>
 &ensp;Published: **Jul 7, 2022**<br/>
@@ -402,8 +395,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Performance improvements for file copy operations and built-in macOS applications
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Released: **Jun 14, 2022**<br/>
 &ensp;Published: **Jun 14, 2022**<br/>
@@ -415,8 +407,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Fixed a bug where threat-related notifications weren't always presented to the end user.
 - Performance improvements & other updates.
 
-<br/>
-</details>
+
 
 &ensp;Released: **Jun 2, 2022**<br/>
 &ensp;Published: **Jun 2, 2022**<br/>
@@ -429,8 +420,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Fixed a bug where the product sometimes was incorrectly detecting files inside the quarantine folder
 - Performance improvements & other bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Released: **May 11, 2022**<br/>
 &ensp;Published: **May 11, 2022**<br/>
@@ -442,8 +432,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Addressed an issue where `mdatp diagnostic real-time-protection-statistics` wasn't printing the correct process path in some cases.
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Released: **Apr 26, 2022**<br/>
 &ensp;Published: **Apr 26, 2022**<br/>
@@ -457,8 +446,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Fixed a bug in `mdatp device-control removable-media policy list` where vendor ID and product ID were displayed as decimal instead of hexadecimal
 - Performance improvements & other bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Released: **Mar 25, 2022**<br/>
 &ensp;Published: **Mar 25, 2022**<br/>
@@ -469,8 +457,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Released: **Mar 8, 2022**<br/>
 &ensp;Published: **Mar 8, 2022**<br/>
@@ -481,8 +468,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
 
-<br/>
-</details>
+
 
 &ensp;Released: **Feb 28, 2022**<br/>
 &ensp;Published: **Feb 28, 2022**<br/>
@@ -495,8 +481,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
   - Users must update Microsoft Defender for Endpoint for Mac to version 101.59.50 (or newer) before updating their devices to macOS Monterey 12.3 (or newer). This minimal version 101.59.50 is a prerequisite to eliminating Python-related issues with Microsoft Defender for Endpoint for Mac on macOS Monterey.
   - For remote deployments, existing MDM setups must be updated to Microsoft Defender for Endpoint for Mac version 101.59.50 (or newer). Pushing via MDM an older Microsoft Defender for Endpoint for Mac version to macOS Monterey 12.3 (or newer) results in an installation failure.
 \*\*\n
-<br/>
-</details>
+
 
 <details>
   <summary>Feb-2022 (Build: 101.59.10 | Release version: 20.122012.15910.0)</summary>
@@ -525,8 +510,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Released: **Jan 30, 2022**<br/>
 &ensp;Published: **Jan 30, 2022**<br/>
@@ -544,8 +528,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - `mdatp health` output has been extended with a more attribute called `full_disk_access_enabled` that can be used to determine whether Full Disk Access has been granted to all components of Microsoft Defender for Endpoint for Mac.
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Released: **Jan 12, 2022**<br/>
 &ensp;Published: **Jan 12, 2022**<br/>
@@ -558,8 +541,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - After a product setting stops being managed by the administrator through MDM, it now reverts to the value it had before it was managed (the value configured locally by the end user or, if no such local value was explicitly provided, the default value used by the product). Prior to this change, after a setting stopped being managed, its managed value persisted and was still used by the product.
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.49.25**<br/>
 &ensp;Release version: **20.121092.14925.0** <br/>
@@ -569,8 +551,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Added a new switch to the command-line tool to control whether archives are scanned during on-demand scans. This can be configured through `mdatp config scan-archives --value [enabled/disabled]`. By default, this is set to enabled.
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.47.27**<br/>
 &ensp;Release version: **20.121082.14727.0** <br/>
@@ -579,8 +560,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Fix for a system freeze occurring on shutdown on macOS Mojave and macOS Catalina. 
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.43.84**<br/>
 &ensp;Release version: **20.121082.14384.0** <br/>
@@ -590,8 +570,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Candidate build for macOS 12 (Monterey)
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.41.10**<br/>
 &ensp;Release version: **20.121072.14110.0** <br/>
@@ -604,8 +583,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Changing the product log level now requires elevation.
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.40.84**<br/>
 &ensp;Release version: **20.121071.14084.0** <br/>
@@ -615,8 +593,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - M1 chip native support
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.37.97**<br/>
 &ensp;Release version: **20.121062.13797.0** <br/>
@@ -625,8 +602,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.34.28**<br/>
 &ensp;Release version: **20.121061.13428.0** <br/>
@@ -635,8 +611,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.34.27**<br/>
 &ensp;Release version: **20.121052.13427.0** <br/>
@@ -645,8 +620,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.34.20**<br/>
 &ensp;Release version: **20.121051.13420.0** <br/>
@@ -657,8 +631,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Addressed an issue where a quick scan couldn't be started from the status menu on macOS 11 (Big Sur).
 - Other bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.32.69**<br/>
 &ensp;Release version: **20.121042.13269.0** <br/>
@@ -667,8 +640,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Addressed an issue where concurrent access to the keychain from Microsoft Defender for Endpoint and other applications can lead to keychain corruption.
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.29.64**<br/>
 &ensp;Release version: **20.121042.12964.0** <br/>
@@ -681,8 +653,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
   - `--top N`: displays the top N results (only works if `--sort` is also specified)
 - Performance improvements (specifically for when `YARN` is used) & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.27.50**<br/>
 &ensp;Release version: **20.121022.12750.0** <br/>
@@ -691,8 +662,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Fix to accommodate for Apple certificate expiration for macOS Catalina and earlier. This fix restores Microsoft Defender Vulnerability Management (MDVM) functionality. 
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.25.69**<br/>
 &ensp;Release version: **20.121022.12569.0** <br/>
@@ -702,8 +672,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Microsoft Defender for Endpoint on macOS is now available in preview for US Government customers. For more information, see [Microsoft Defender for Endpoint for US Government customers](gov.md).
 - Performance improvements (specifically for the situation when the XCode Simulator app is used) & bug fixes.
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.23.64**<br/>
 &ensp;Release version: **20.121021.12364.0** <br/>
@@ -713,8 +682,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Added a new option to the command-line tool to view information about the last on-demand scan. To view information about the last on-demand scan, run `mdatp health --details antivirus`.
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.22.79**<br>
 &ensp;Release version: **20.121012.12279.0**<br>
@@ -723,8 +691,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.19.88**<br>
 &ensp;Release version: **20.121011.11988.0**<br>
@@ -733,8 +700,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.19.48**<br>
 &ensp;Release version: **20.120121.11948.0**<br>
@@ -746,8 +712,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Added a new command-line switch to disable the network extension: `mdatp system-extension network-filter disable`. This command can be useful to troubleshoot networking issues that could be related to Microsoft Defender for Endpoint on Mac.
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.19.21**<br>
 &ensp;Release version: **20.120101.11921.0** <br>
@@ -756,8 +721,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.15.26**<br>
 &ensp;Release version: **20.120102.11526.0**<br>
@@ -768,8 +732,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Added a new command-line switch (`--ignore-exclusions`) to ignore AV exclusions during custom scans (`mdatp scan custom`).
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.13.75**<br>
 &ensp;Release version: **20.120101.11375.0**<br>
@@ -780,8 +743,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Fixed a memory leak in the Endpoint Security system extension when running on mac 11 (Big Sur).
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.10.72** <br>
 
@@ -789,8 +751,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.09.61**<br>
 
@@ -800,8 +761,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Status menu icon now shows a healthy state when the product settings are managed. Previously, the status menu icon was displaying a warning or error state, even though the product settings were managed by the administrator.
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.09.50**<br>
 
@@ -814,8 +774,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Extended `mdatp diagnostic create` with a new parameter (`--path [directory]`) that allows the diagnostic logs to be saved to a different directory.
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.09.49**<br>
 
@@ -825,8 +784,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Improved CPU utilization during on-demand scans.
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.07.23**<br>
 
@@ -841,8 +799,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Added new settings for controlling the retention of items in the antivirus scan history. You can now [specify the number of days to retain items in the scan history](mac-preferences.md#antivirus-scan-history-retention-in-days) and [specify the maximum number of items in the scan history](mac-preferences.md#maximum-number-of-items-in-the-antivirus-scan-history).
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.06.63**<br>
 
@@ -850,8 +807,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Addressed a performance regression introduced in version `101.05.17`. The regression was introduced with the fix to eliminate the kernel panics some customers have observed when accessing SMB shares. We have reverted this code change and are investigating alternative ways to eliminate the kernel panics.
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.05.17**<br>
 
@@ -863,8 +819,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Addressed a kernel panic that occurred sometimes when accessing SMB file shares.
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.05.16**<br>
 
@@ -874,8 +829,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Added [autocompletion support](mac-resources.md#how-to-enable-autocompletion) for the command-line tool.
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.03.12**<br>
 
@@ -883,8 +837,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.01.54**<br>
 
@@ -894,8 +847,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Accessibility improvements
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.00.31**<br>
 
@@ -907,8 +859,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - In-place product downgrades are now explicitly disallowed by the installer. If you need to downgrade, first uninstall the existing version and reconfigure your device.
 - Other performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **100.90.27**<br>
 
@@ -919,8 +870,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Other user experience improvements
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **100.86.92**<br>
 
@@ -931,8 +881,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Reduced the CPU utilization of the product when Microsoft products are updated through Microsoft AutoUpdate.
 - Other performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **100.86.91**<br>
 
@@ -945,8 +894,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **100.83.73**<br>
 
@@ -956,8 +904,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - When Full Disk Access isn't enabled on the device, a warning is now displayed in the status menu.
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **100.82.60**<br>
 
@@ -965,8 +912,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Addressed an issue where the product fails to start following a definition update.
 
-<br/>
-</details>
+
 
 &ensp;Build: **100.80.42**<br>
 
@@ -974,8 +920,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **100.79.42**<br>
 
@@ -990,8 +935,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Added ability to view the full threat history in the user interface (can be accessed from the **Protection history** view).
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **100.72.15**<br>
 
@@ -999,8 +943,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **100.70.99**<br>
 
@@ -1008,8 +951,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Addressed an issue that impacts the ability of some users to upgrade to macOS Catalina when real-time protection is enabled. This sporadic issue was caused by Microsoft Defender for Endpoint locking files within Catalina upgrade package while scanning them for threats, which led to failures in the upgrade sequence.
 
-<br/>
-</details>
+
 
 &ensp;Build: **100.68.99**<br>
 
@@ -1018,8 +960,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Added the ability to configure the antivirus functionality to run in [passive mode](mac-preferences.md#enforcement-level-for-antivirus-engine).
 - Performance improvements & bug fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **100.65.28**<br>
 
@@ -1037,11 +978,6 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Performance improvements & bug fixes
 
-<br/>
-</details>
-
-<br/><br/>
-</details>
 
 
 
