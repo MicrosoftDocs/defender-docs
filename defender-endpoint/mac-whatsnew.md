@@ -265,31 +265,6 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 &ensp;Engine version: **1.1.19900.2**<br/>
 &ensp;Signature version: **1.381.2029.0**<br/>
 
-&ensp;Build: **101.96.85**<br/>
-&ensp;Release version: **20.122112.19413.0**<br/>
-&ensp;Engine version: **1.1.19900.2**<br/>
-&ensp;Signature version: **1.381.2029.0**<br/>
-
-&ensp;Build: **101.96.85**<br/>
-&ensp;Release version: **20.122112.19413.0**<br/>
-&ensp;Engine version: **1.1.19900.2**<br/>
-&ensp;Signature version: **1.381.2029.0**<br/>
-
-&ensp;Build: **101.96.85**<br/>
-&ensp;Release version: **20.122112.19413.0**<br/>
-&ensp;Engine version: **1.1.19900.2**<br/>
-&ensp;Signature version: **1.381.2029.0**<br/>
-
-&ensp;Build: **101.96.85**<br/>
-&ensp;Release version: **20.122112.19413.0**<br/>
-&ensp;Engine version: **1.1.19900.2**<br/>
-&ensp;Signature version: **1.381.2029.0**<br/>
-
-&ensp;Build: **101.96.85**<br/>
-&ensp;Release version: **20.122112.19413.0**<br/>
-&ensp;Engine version: **1.1.19900.2**<br/>
-&ensp;Signature version: **1.381.2029.0**<br/>
-
 **What's new**
 
 - Bug and performance fixes
@@ -741,7 +716,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 <br/>
 </details>
 
-&ensp;Build: **101.22.79** <br>
+&ensp;Build: **101.22.79**<br>
 &ensp;Release version: **20.121012.12279.0**<br>
 
 **What's new**
@@ -751,7 +726,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 <br/>
 </details>
 
-&ensp;Build:**101.19.88**<br>
+&ensp;Build: **101.19.88**<br>
 &ensp;Release version: **20.121011.11988.0**<br>
 
 **What's new**
@@ -922,7 +897,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 <br/>
 </details>
 
-&ensp;Build: **101.00.31** <br>
+&ensp;Build: **101.00.31**<br>
 
 **What's new**
 
@@ -935,7 +910,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 <br/>
 </details>
 
-&ensp;Build: **100.90.27** <br>
+&ensp;Build: **100.90.27**<br>
 
 **What's new**
 
@@ -984,7 +959,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 <br/>
 </details>
 
-&ensp;Build: **100.82.60** <br>
+&ensp;Build: **100.82.60**<br>
 
 **What's new**
 
