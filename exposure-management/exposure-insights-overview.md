@@ -1,6 +1,6 @@
 ---
-title: Overview of exposure insights and secure scorein Microsoft Security Exposure Management
-description: Learn how to get exposure insights into your corporate attack surface with Microsoft Security Exposure MAnagement.
+title: Overview of exposure insights and secure score in Microsoft Security Exposure Management
+description: Learn how to get exposure insights into your corporate attack surface with Microsoft Security Exposure Management.
 ms.author: v-mjosephy
 author: mjosephym
 manager: rayne-wiselman
@@ -11,7 +11,7 @@ ms.date: 03/11/2024
 
 # Overview - Exposure insights
 
-Exposure insights in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) continuously aggregates security posture data and insights across workloads and resources, into a single pipeline.
+Exposure insights in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) continuously aggregate security posture data and insights across workloads and resources, into a single pipeline.
 
 Security Exposure Management is currently in public preview.
 
@@ -54,7 +54,7 @@ Security Exposure Management provides initiatives that currently include:
 
 **Element** | **Goal** | **Details**
 --- | --- | ---
-**Initiative** | Initiatives help you to gather similar resources and workloads into security projects, and to assess and remediate the security posture of each project.| Each security initiative provides an all-up score that provides a fast measure of how strong security posture is for the initiative at the current point in time.<br/><br/>	The all-up score also provides a target score indicator, the number of critical assets affectrf, and shows how the score has moved over the last 24 hours.
+**Initiative** | Initiatives help you to gather similar resources and workloads into security projects, and to assess and remediate the security posture of each project.| Each security initiative provides an all-up score that provides a fast measure of how strong security posture is for the initiative at the current point in time.<br/><br/>	The all-up score also provides a target score indicator, shows the number of critical assets affected, and how the score has moved over the last 24 hours.
 **Metric** | Metrics in security initiatives help you to measure exposure risk for different areas within the initiative.| Each metric gathers together one or more recommendations for similar assets.<br/><br/>Metrics can be associated with one or more initiatives.<br/><br/>**Important**: Threat analytics initiatives don't have metrics. They have recommendations only.
 **Recommendations** |Security recommendations help you to understand the compliance state for a specific security initiative.  | All security initiatives have recommendations associated with them.<br/><br/>Recommendations can be associated with one or more initiatives.<br/><br/> Within initiatives, recommendations are assigned a compliance state.
 **Events** |Security events help you to  monitor initiative changes.  | Events notify you when there's a drop in an all-up initiative score, or when a metric score drops because exposure risk grew.
@@ -74,7 +74,7 @@ On the **Metrics** tab of an initiative, or in the **Metrics** section of **Expo
     - **Total**:  Total number of assets under the metric scope.
     - **Weight**: The relative weight (importance) of the metric within the initiative, and its effect on the initiative score. From one (lowest) to ten (highest). 
     - **Score impact**: The impact that completing the metric (getting it to 0%) has on the security initiative. Meaning if a given metric is completed, the score impact is the addition seen to the initiative score.
-    - **State**: Shows whether the metrics needs attention, the risk was mitigated outside Security Exposure Management and shouldn't affect the initiative score, or was mitigated and the initiative score should be adjusted accordingly.
+    - **State**: Shows whether the metric needs attention, the risk was mitigated outside Security Exposure Management and shouldn't affect the initiative score, or was mitigated and the initiative score should be adjusted accordingly.
     - **Current value**: Current percentage of exposed assets within the total assets covered by the metric, with the state for each metric. Zero percent is best since there's no exposure, while 100% is worst.
     - **Recommendations**: Security recommendations associated with the metric.
     - **Last Updated** shows the last date the metric was updated.
@@ -166,7 +166,7 @@ Events measure the score drop or worsening in the metric status. Drifts in an in
 - **Initiative score drop events**: Issued when there's a decrease of at least 2% in initiative score since yesterday.
 
 
-On the **Events** page for an intiative, you can view and filter events.
+On the **Events** page for an initiative, you can view and filter events.
 
 
 ## Next steps
