@@ -11,7 +11,7 @@ ms.date: 03/11/2024
 
 # Investigate security metrics
 
-Security metrics in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) measure security exposure within a specific scope of assets.
+Security metrics in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) measure security exposure for a specific scope of assets or resources within a [security initiative](exposure-insights-overview.md). Most security initiatives (but not all) have metrics associated with them.
 
 Security Exposure Management is currently in public preview.
 
