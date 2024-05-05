@@ -31,7 +31,7 @@ Exposure insights provide visibility and granular context around security postur
 - Follow actionable remediation steps to improve security posture and reduce risk.
 - Track improvements in security initiatives in order to track security risk reduction.
 
-## Security nitiatives
+## Security initiatives
 
 Security initiatives help you to focus and prioritize specific security projects. They provide a simple way to assess security readiness, and to constantly track and measure exposure risk by area or workload over time.
 
@@ -58,6 +58,38 @@ Predefined initiatives include:
 
 ## Working with metrics
 
+On the Metrics tab of an initiative, you can see the security posture state for the metric, and recommendations to improve it.
+
+
+- Review metrics properties, including:
+    - 14-day trend: Shows the metric value changes over the last 14 days.
+    - Affected: Number of exposed assets and resources under the metric.
+    - Total:  Total number of assets under the metric.
+    - Weight: The relative weight of the metric within the initiative. From one (lowest) to ten (highest). Weight can be customized.
+    - Score impact: The impact that completing the metric (getting it to 0%) will have on the security initiative. 
+    - State: Shows whether the metrics needs attention, the risk was mitigated outside Security Exposure Management and shouldn't affect the initiative score, or was mitigated and the initiative score should be adjusted accordingly.
+    - Current value/State: Current percentage of exposed assets within the assets covered by the metric, with the state for each metric.
+    - Recommendations: Security recommendations associated with the metric.
+
+- Filter metrics to find specific areas.
+- Drill down into metrics to review and fix.
+- Suggest new metrics to the product team.
+
+## Working with initiatives
+
+
+
+
+Security Exposure Management provides predefined initiatives. Each predefined initiative contains one or more security metrics relevant to that initiative.
+
+Initiatives can relate to specific workload domains, measuring a specific area such as endpoint, identity, and cloud security. They might contribute to threat analysis by relating to a specific threat across multiple categories. For example, ransomware protection or [critical asset protection](critical-asset-management.md#critical-asset-protection-initiative). Initiatives can also focus on specific compliance standards.
+
+You can prioritize which initiatives to see on the **Overview** dashboard. The initiative score reflects the exposure status of the initiative. You can also drill down into initiatives to see their associated metrics and to understand where gaps or risks reside. The initiative score and recommendations are derived from metrics within the initiative.
+
+
+
+## Working with recommendations
+
 Security Exposure Management intakes security recommendations from multiple sources, Microsoft Defender for Cloud running the Defender for Cloud Security Posture Management (CSPM) plan, Defender XDR,  Secure score, Microsoft threat analytics, and other Microsoft workloads. Security Exposure Management integrates all of these recommendations into a single security catalog. 
 
 Recommendations provide practical steps to help you to fix detected issues and improve security posture. 
@@ -72,20 +104,7 @@ Security Exposure Management categorizes recommendations by compliance, as follo
 •	*Mitigated by org* displays when steps to mitigate recommendations were taken elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
 - *Not available* means there isn't enough information to determine the compliance status.
 
-## Reviewing initiative history
 
-On the **History** tab of an initiative, you can:
-
-- Track the history of changes greater than 2.5% that affect initiative score.
-- Filter for specific time points.
-- Drill down to specific changes.
-
-When you drill down into a specific change, you can see the percentage effects of metrics in the initiative score along with the change reason, including:
-
-- Property change - A change in the weight of the metric in the score.
-- Value change - A change in the value of the metric in the initiative score.
-- Metric removed - The metric is no longer relevant for that specific initiative. For instance, if a better suggestion is introduced or it becomes irrelevant.
-- Metric depreciated - The metric is removed globally.
 
 ## Monitoring initiative scores
 
@@ -97,18 +116,35 @@ You can assign an initiative owner to monitor the state of your security initiat
 
 Drifts in an initiative score, or within metrics for our initiative, can be monitored as events. On thethe **Events** page, you can view and filter events. 
 
+## Reviewing initiative history
+
+On the **History** tab of an initiative, you can:
+
+- Track the history of changes greater than 2.5% that affect initiative score.
+- Filter for specific time points.
+- Drill down to specific changes.
+
+
+:::image type="content" source="media/exposure-insights-overview/initiatives-history.png" alt-text="Screenshot of the Initiative history tab showing the graph and dates of changes." lightbox="media/exposure-insights-overview/initiatives-history.png":::
+
+When you drill down into a specific change, you can see the percentage effects of metrics in the initiative score along with the change reason, including:
+
+- *Property change* - A change in the weight of the metric in the score.
+- *Value change* - A change in the value of the metric in the initiative score.
+- *Metric removed* - The metric is no longer relevant for that specific initiative. For instance, if a better suggestion is introduced or it becomes irrelevant.
+- *Metric depreciated* - The metric is removed globally.
+
+
+
+Selecting the metric that changed provides more details about the change. For instance, it might display the new weight of a property change, or the number of affected assets before or after the change.
+
+:::image type="content" source="media/exposure-insights-overview/initiatives-history-details.png" alt-text="Screenshot of the metric change side panel in the Initiatives history tab." lightbox="media/exposure-insights-overview/initiatives-history-details.png":::
+
+You can't control the metric or score changes in advance.
 
 
 
 
-
-
-
-Security Exposure Management provides predefined initiatives. Each predefined initiative contains one or more security metrics relevant to that initiative.
-
-Initiatives can relate to specific workload domains, measuring a specific area such as endpoint, identity, and cloud security. They might contribute to threat analysis by relating to a specific threat across multiple categories. For example, ransomware protection or [critical asset protection](critical-asset-management.md#critical-asset-protection-initiative). Initiatives can also focus on specific compliance standards.
-
-You can prioritize which initiatives to see on the **Overview** dashboard. The initiative score reflects the exposure status of the initiative. You can also drill down into initiatives to see their associated metrics and to understand where gaps or risks reside. The initiative score and recommendations are derived from metrics within the initiative.
 
 ### Initiative score
 
@@ -118,22 +154,8 @@ The initiative score is calculated based on the value and weight of the metrics 
 - Recommendations are fixed, metrics rise, and in turn initiative scores rise to reflect improved security posture.
 - Changes in metrics, including deprecation/removal, value, and metric properties can affect the initiative score.
 
-### History
 
-You can track the history of changes greater than 2.5% that affect initiative score. You can filter for specific time points, and drill down to specific changes. History shows the percentage effects of metrics in the initiative score along with the change reason, including:
 
-- *Property change* - A change in the weight of the metric in the score.
-- *Value change* - A change in the value of the metric in the initiative score.
-- *Metric removed* - The metric is no longer relevant for that specific initiative. For instance, if a better suggestion is introduced or it becomes irrelevant.
-- *Metric depreciated* - The metric is removed globally.
-
-:::image type="content" source="media/exposure-insights-overview/initiatives-history.png" alt-text="Screenshot of the Initiative history tab showing the graph and dates of changes." lightbox="media/exposure-insights-overview/initiatives-history.png":::
-
-Selecting the metric that changed provides more details about the change. For instance, it might display the new weight of a property change, or the number of affected assets before or after the change.
-
-:::image type="content" source="media/exposure-insights-overview/initiatives-history-details.png" alt-text="Screenshot of the metric change side panel in the Initiatives history tab." lightbox="media/exposure-insights-overview/initiatives-history-details.png":::
-
-You can't control the metric or score changes in advance.
 
 ## Metrics
 
