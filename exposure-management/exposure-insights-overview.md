@@ -21,31 +21,34 @@ Security Exposure Management is currently in public preview.
 
 Exposure insights provide rich context around the security posture state of your asset inventory.
 
-Chief Information Security Officers (CISOs), decision makers, risk owners, and security teams can use security insights and context to manage exposure risk across the entire organization, and to prioritize security efforts and investment.
+Chief Information Security Officers (CISOs), decision makers, risk owners, and security teams can use security insights and context to understand and manage exposure risk across the entire organization, and to prioritize security efforts and investment.
 
 Exposure insights provide visibility and granular context around security posture state. Insights enable you to:
 
-- Break down organizational security posture into security projects based on similar workloads and resources.
-- Manage security projects as security initiatives in Security Exposure Management.
-- Measure and track risk exposure for each security initiative.
-- Follow actionable recommendations and remediation steps to improve security posture and reduce risk.
-- Monitor improvements in security initiatives in order to track security risk reduction.
+- Break down organizational security posture into manageable security projects.
+- Manage and track security projects as security initiatives in Security Exposure Management.
+- Review, measure, and track risk exposure for each security initiative.
+- Follow actionable recommendations and remediation steps to improve security posture and reduce risk for security projects.
+- Monitor improvements over time.
 
 ## Security initiatives
 
-Security initiatives help you to focus and prioritize specific security projects. They provide a simple way to assess security readiness, and to constantly track and measure exposure risk by area or workload over time.
+Security initiatives provide a simple way to assess security readiness for a specific area or workload, and to constantly track and measure exposure risk for that area or workload over time.
 
-Predefined initiatives include:
+Security Exposure Management provides initiatives that currently include:
 
-- **Workload initiatives**: Help you to assess the risk associated with specific workload domains, such as security for endpoints, identity resources, and cloud assets.
-- **Horizontal threat initiatives**: Help you to gather information about risk for specific threat areas, such as ransomware protection, or financial fraud.
-- **Threat analytics initiatives**: Get initiatives based on up-to-date threat research from Microsoft threat analytics. Microsoft threat analytics is a set of reports from expert Microsoft security researchers with information about relevant threats. These initiatives focus on:
+- **Workload initiatives**: Assess and manage the risk associated with specific workload domains, such as security for endpoints, identity resources, and cloud assets.
+- **Horizontal threat initiatives**: Assess and manage risk for specific threat areas, such as ransomware protection, or financial fraud.
+- **Threat analytics initiatives**: Assess threat risk based with initiatives based on up-to-date research from Microsoft threat analytics. Microsoft threat analytics is a set of reports from expert Microsoft security researchers with information about relevant threats. These threat initiatives focus on:
 
   - Threat actors and threat vectors.
   - Threat reports that have three or more recommendations.
 
-- **Zero trust initiative**: Get a summary of risk associated with zero trust compliance. This initiative aligns with guidance provided by the [zero trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview).
-- **Initiatives in preview**: Initiatives in preview are marked accordingly. These preview initiatives are still in development, and are subject to change.
+- **Zero trust initiative**: Assess the risk associated with zero trust compliance. This initiative aligns with guidance provided by the [zero trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview).
+
+> [!IMPORTANT]
+> Initiatives in preview are marked accordingly. These preview initiatives are still in development, and are subject to change.
+
 
 ### Initiative elements
 
