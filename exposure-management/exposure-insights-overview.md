@@ -28,18 +28,18 @@ Exposure insights provide visibility and granular context around security postur
 - Break down organizational security posture into manageable security projects.
 - Manage and track security projects as security initiatives in Security Exposure Management.
 - Review, measure, and track risk exposure for each security initiative.
-- Follow actionable recommendations and remediation steps to improve security posture and reduce risk for security projects.
-- Monitor improvements over time.
+- Follow actionable recommendations and remediation steps to improve security posture and reduce risk.
+- Monitor security posture state and improvements over time.
 
 ## Security initiatives
 
-Security initiatives provide a simple way to assess security readiness for a specific area or workload, and to constantly track and measure exposure risk for that area or workload over time.
+Security initiatives provide a simple way to assess security readiness for a specific security area or workload, and to constantly track and measure exposure risk for that area or workload over time.
 
 Security Exposure Management provides initiatives that currently include:
 
 - **Workload initiatives**: Assess and manage the risk associated with specific workload domains, such as security for endpoints, identity resources, and cloud assets.
 - **Horizontal threat initiatives**: Assess and manage risk for specific threat areas, such as ransomware protection, or financial fraud.
-- **Threat analytics initiatives**: Assess threat risk based with initiatives based on up-to-date research from Microsoft threat analytics. Microsoft threat analytics is a set of reports from expert Microsoft security researchers with information about relevant threats. These threat initiatives focus on:
+- **Threat analytics initiatives**: Assess threat risk based with initiatives that are based on up-to-date research from Microsoft threat analytics. Microsoft threat analytics is a set of reports from expert Microsoft security researchers that provide information about real and relevant threats. These threat initiatives focus on:
 
   - Threat actors and threat vectors.
   - Threat reports that have three or more recommendations.
@@ -47,7 +47,7 @@ Security Exposure Management provides initiatives that currently include:
 - **Zero trust initiative**: Assess the risk associated with zero trust compliance. This initiative aligns with guidance provided by the [zero trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview).
 
 > [!IMPORTANT]
-> Initiatives in preview are marked accordingly. These preview initiatives are still in development, and are subject to change.
+> Initiatives that are in preview are marked accordingly. These preview initiatives are still in development, and are subject to change.
 
 
 ### Initiative elements
@@ -57,16 +57,16 @@ Security Exposure Management provides initiatives that currently include:
 **Initiative** | Initiatives help you to gather similar resources and workloads into security projects, and to assess and remediate the security posture of each project.| Each security initiative provides an all-up score that provides a fast measure of how strong security posture is for the initiative at the current point in time.<br/><br/>	The all-up score also provides a target score indicator, the number of critical assets affectrf, and shows how the score has moved over the last 24 hours.
 **Metric** | Metrics in security initiatives help you to measure exposure risk for different areas within the initiative.| Each metric gathers together one or more recommendations for similar assets.<br/><br/>Metrics can be associated with one or more initiatives.<br/><br/>**Important**: Threat analytics initiatives don't have metrics. They have recommendations only.
 **Recommendations** |Security recommendations help you to understand the compliance state for a specific security initiative.  | All security initiatives have recommendations associated with them.<br/><br/>Recommendations can be associated with one or more initiatives.<br/><br/> Within initiatives, recommendations are assigned a compliance state.
-**Events** |Security events help you to  monitor initiative changes.  | Events notify you when there's a drop in an all-up initiative score, or when a metric score drops because exposure risk grew.<br/><br/>- **Metric score drop events**: Issued with there's a decrease of at least 2% in metric score (exposure grew by 2%) since yesterday.<br/><br/>- **Initiative score drop events**: Issued when there's a decrease of at least 2% in initiative score since yesterday.
+**Events** |Security events help you to  monitor initiative changes.  | Events notify you when there's a drop in an all-up initiative score, or when a metric score drops because exposure risk grew.
 
 
 ## Working with initiatives
 
-You can prioritize which initiatives to see on the **Overview** dashboard. The initiative score reflects the exposure status of the initiative. You can also drill down into initiatives to see their associated metrics, and to understand where gaps or risks reside. 
+You can prioritize which initiatives you want to see on the **Overview** dashboard. Review the initiative score, and drill down into initiatives to see their associated metrics, and to understand where gaps or risks reside. 
 
 ## Working with metrics
 
-On the **Metrics** tab of an initiative, or in the Metrics section of Exposure Insights, you can see the the security posture state for the metric, its effect and relative importance in the initiative, and recommendations to improve it. For each metric you can drill down to:
+On the **Metrics** tab of an initiative, or in the **Metrics** section of **Exposure Insights**, you can see the metric state, its effect and relative importance in an initiative, and recommendations to improve the metric. For each metric you can:
 
 - Review metrics properties, including:
     - **14-day trend**: Shows the metric value changes over the last 14 days.
@@ -79,41 +79,42 @@ On the **Metrics** tab of an initiative, or in the Metrics section of Exposure I
     - **Recommendations**: Security recommendations associated with the metric.
     - **Last Updated** shows the last date the metric was updated.
 
-- Filter metrics to find specific areas.
+- Filter metrics for specific findings.
 - Drill down into metrics to review and fix associated issues.
 - Suggest new metrics to the product team.
-- Customize metrics weight so that it has greater or lesser effect in the initiative, based on your business priorities. Editing a metric affects all the initiatives in which the metric is included.
+- Customize the weight of a metric so that it has greater or lesser effect in the initiative, based on your business priorities. Editing a metric affects all the initiatives in which the metric is included.
 
 ### Unavailable metrics
 
-In some cases, metrics display grayed out because the underlying data needed for this metric doesn't exist. For instance, when the required workload isn't onboarded or when a Secure score metric was set in Secure score to completed or risk accepted so that Security Exposure Management can't access the metric data.
+In some cases, metrics display grayed out because the underlying data for the metric doesn't exist. For instance, if a required workload isn't onboarded, or if a secure score metric is set to completed or risk accepted in secure score and Security Exposure Management can't access the metric data.
 
 Grayed out metrics aren't considered for score calculation.
 
 
 ## Working with recommendations
 
-Security Exposure Management ingests security recommendations from multiple sources, including Microsoft Defender for Cloud running the  [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [Secure score](/defender-xdr/microsoft-secure-score), Microsoft threat analytics, and other Microsoft workloads. Security Exposure Management integrates all of these recommendations into a single security catalog.
+Security Exposure Management ingests security recommendations from multiple sources, including Microsoft Defender for Cloud running the  [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [secure score](/defender-xdr/microsoft-secure-score), Microsoft threat analytics, and other Microsoft workloads. Security Exposure Management integrates all of these recommendations into a single security catalog.
 
 - You can view recommendations from the **Recommendations** tab, or review and remediate recommendations within a specific security initiative or metric.
-- Each recommendation provides remediation steps to fix detected issues.
-- Every action taken on a security recommendation helps to reduce exposure and risk, improve security posture, and directly influences related security initiatives and metrics.
+- Each recommendation provides remediation steps to fix detected compliance issues.
+- Every action taken on a security recommendation helps to reduce exposure and risk, improve security posture, and directly influence its related security initiatives and metrics.
 
-Security Exposure Management categorizes recommendations by compliance, as follows:
+Security Exposure Management categorizes recommendations by compliance status, as follows:
 
-- **Compliant** indicates that the recommendation was implemented successfully.
-•	**Mitigated by organization** displays when steps to mitigate recommendations were taken elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
-- **Not available** means there isn't enough information to determine the compliance status.
+- **Compliant**: Indicates that the recommendation was implemented successfully.
+- **Not complaint**: Indicates that the recommendation hasn't been fixed.
+- **Mitigated by organization**: Displays when steps to mitigate recommendations were taken elsewhere, and Security Exposure Management can't know whether recommendations are compliant. For example, by changing a status in Secure score.
+- **Not available**: Means there isn't enough information to determine the compliance status.
 
 :::image type="content" source="./media//exposure-insights-overview/recommendation-ransomeware-advanced-protection.png" alt-text="Screenshot of the ransomware advanced protection recommendation details ":::
 
 ### Secure score
 
-[Microsoft Secure score](/defender-xdr/microsoft-secure-score) helps organizations to plan and improve overall security posture using Secure score as a tracking metric.
+[Microsoft secure score](/defender-xdr/microsoft-secure-score) helps organizations to plan and improve overall security posture using secure score as a tracking metric.
 
-Security Exposure Management uses Secure score as one of its sources for initiative scores.
+Security Exposure Management uses secure score as one of its sources for initiative scores.
 
-- Secure score has "recommended actions" for a [number of products](/defender-xdr/microsoft-secure-score#products-included-in-secure-score).
+- Secure score has recommended actions for a [number of products](/defender-xdr/microsoft-secure-score#products-included-in-secure-score).
 - Selecting a recommendation to review allows you to remediate the problem in the specific product, including recommendations that derived from secure score.
 - For recommendations where secure score is relevant, if secure score isn't active, that recommendation doesn't display.
 
@@ -121,8 +122,8 @@ Security Exposure Management uses Secure score as one of its sources for initiat
 
 The exposure state for a security initiative is reflected in the initiative score. 
 
-- For initiatives with metrics, the score is calculated based on the value and weight of metrics within the initiative. A
-- For threat initiatives that don't have metrics, the initiative score is based on secure score.
+- **Initiatives with metrics**: For initiatives with metrics, the score is calculated based on the value and weight of metrics within the initiative. 
+- **Initiatives without metrics**: For threat initiatives that don't have metrics, the initiative score is based on secure score. As the secure score rises, the initiative score rises.
 
 For initiatives with metrics:
 
@@ -159,9 +160,13 @@ You can't control the metric or score changes in advance.
 ## Reviewing events
 
 
-Events measure the score drop or worsening in the metric status. Drifts in an initiative scores, or within metrics for an initiative, can be monitored as events. On the **Events** page, you can view and filter events.
+Events measure the score drop or worsening in the metric status. Drifts in an initiative scores, or within metrics for an initiative, can be monitored as events. Events include:
+
+- **Metric score drop events**: Issued with there's a decrease of at least 2% in metric score (exposure grew by 2%) since yesterday.
+- **Initiative score drop events**: Issued when there's a decrease of at least 2% in initiative score since yesterday.
 
 
+On the **Events** page for an intiative, you can view and filter events.
 
 
 ## Next steps
