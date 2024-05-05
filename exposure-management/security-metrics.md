@@ -19,7 +19,7 @@ Security Exposure Management is currently in public preview.
 
 ## Prerequisites
 
-- Learn about [security metrics](exposure-insights-overview.md#metrics).
+- Learn about [security metrics](exposure-insights-overview.md#working-with-metrics).
 - [Review permissions and prerequisites needed](prerequisites.md) for working with Security Exposure Management.
 - Note possible preview issues:
     - Some instances of affected assets information (largely information originating in Secure score) don't appear on the **Affected Items** tab in an individual metric.
