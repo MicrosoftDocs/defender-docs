@@ -283,7 +283,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Decrease sysextd noise from Tamper Protection in Advanced Hunting
 - Bug and performance fixes
 
-
+### Nov-2022 (Build: 101.87.30 | Release version: 20.122082.18681.0)
 
 &ensp;Released: **Nov 5, 2022**<br/>
 &ensp;Published: **Nov 5, 2022**<br/>
@@ -297,7 +297,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Fix for some users experiencing performance issues and temporary system hangs
 - Bug and performance fixes
 
-
+### Oct-2022 (Build: 101.86.81 | Release version: 20.122082.18681.0)
 
 &ensp;Released: **Oct 25, 2022**<br/>
 &ensp;Published: **Oct 25, 2022**<br/>
@@ -315,8 +315,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 > [!IMPORTANT]
 > This is a minimal recommended MDE version for macOS Ventura.
 
-<details>
-  <summary>Oct-2022 (Build: 101.82.21  | Release version: 20.122082.18221.0)</summary>
+### Oct-2022 (Build: 101.82.21  | Release version: 20.122082.18221.0)
 
 &ensp;Build: **101.82.21**<br/>
 &ensp;Release version: **20.122082.18221.0**<br/>
@@ -331,8 +330,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Ready for macOS Ventura (13.0)
 - Bug and performance fixes
 
-<br/>
-</details>
+
 
 &ensp;Build: **101.78.13**<br/>
 &ensp;Release version: **20.122072.17813.0**<br/>
@@ -348,7 +346,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Fix for definitions not getting downloaded right after install
 - Other bug fixes
 
-
+### Aug-2022 (Build: 101.75.90 | Release version: 20.122071.17590.0)
 
 &ensp;Released: **Aug 3, 2022**<br/>
 &ensp;Published: **Aug 3, 2022**<br/>
@@ -363,7 +361,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Addressed a product bug where multiple detections of the same content could lead to duplicate entries in the threat history.
 - Other bug fixes.
 
-
+### Jul-2022 (Build: 101.73.77 | Release version: 20.122062.17377.0)
 
 &ensp;Released: **Jul 21, 2022**<br/>
 &ensp;Published: **Jul 21, 2022**<br/>
@@ -380,7 +378,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Performance improvements for file copy operations
 - Bug fixes
 
-
+### Jul-2022 (Build: 101.71.18 | Release version: 20.122052.17118.0)
 
 &ensp;Released: **Jul 7, 2022**<br/>
 &ensp;Published: **Jul 7, 2022**<br/>
@@ -395,7 +393,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Performance improvements for file copy operations and built-in macOS applications
 - Bug fixes
 
-
+### Jun-2022 (Build: 101.70.19 | Release version: 20.122051.17019.0)
 
 &ensp;Released: **Jun 14, 2022**<br/>
 &ensp;Published: **Jun 14, 2022**<br/>
@@ -407,7 +405,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Fixed a bug where threat-related notifications weren't always presented to the end user.
 - Performance improvements & other updates.
 
-
+### Jun-2022 (Build: 101.70.18 | Release version: 20.122042.17018.0)
 
 &ensp;Released: **Jun 2, 2022**<br/>
 &ensp;Published: **Jun 2, 2022**<br/>
@@ -420,7 +418,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Fixed a bug where the product sometimes was incorrectly detecting files inside the quarantine folder
 - Performance improvements & other bug fixes
 
-
+### May-2022 (Build: 101.66.54 | Release version: 20.122041.16654.0)
 
 &ensp;Released: **May 11, 2022**<br/>
 &ensp;Published: **May 11, 2022**<br/>
@@ -432,7 +430,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Addressed an issue where `mdatp diagnostic real-time-protection-statistics` wasn't printing the correct process path in some cases.
 - Bug fixes
 
-
+### Apr-2022 (Build: 101.64.15 | Release version: 20.122032.16415.0)
 
 &ensp;Released: **Apr 26, 2022**<br/>
 &ensp;Published: **Apr 26, 2022**<br/>
@@ -446,7 +444,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Fixed a bug in `mdatp device-control removable-media policy list` where vendor ID and product ID were displayed as decimal instead of hexadecimal
 - Performance improvements & other bug fixes
 
-
+### Mar-2022 (Build: 101.61.69 | Release version: 20.122022.16169.0)
 
 &ensp;Released: **Mar 25, 2022**<br/>
 &ensp;Published: **Mar 25, 2022**<br/>
@@ -457,7 +455,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Bug fixes
 
-
+### Mar-2022 (Build: 101.60.91 | Release version: 20.122021.16091.0)
 
 &ensp;Released: **Mar 8, 2022**<br/>
 &ensp;Published: **Mar 8, 2022**<br/>
@@ -468,7 +466,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
 
-
+### Feb-2022 (Build: 101.59.50 | Release version: 20.122021.15950.0)
 
 &ensp;Released: **Feb 28, 2022**<br/>
 &ensp;Published: **Feb 28, 2022**<br/>
@@ -483,8 +481,8 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 \*\*\n
 
 
-<details>
-  <summary>Feb-2022 (Build: 101.59.10 | Release version: 20.122012.15910.0)</summary>
+
+### Feb-2022 (Build: 101.59.10 | Release version: 20.122012.15910.0)
 
 &ensp;Released: **Feb 22, 2022**<br/>
 &ensp;Published: **Feb 22, 2022**<br/>
@@ -498,8 +496,8 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Improved the handling of device control policies containing invalid vendor IDs and product IDs. Before this version, if the policy contained one or more invalid IDs, the entire policy was ignored. Starting from this version, only the invalid portions of the policy are ignored. Issues with the policy are surfaced through `mdatp device-control removable-media policy list`.
 - Bug fixes
 
-<br/>
-</details>
+
+### Feb-2022 (Build: 101.56.62 | Release version: 20.121122.15662.0)
 
 &ensp;Released: **Feb 7, 2022**<br/>
 &ensp;Published: **Feb 7, 2022**<br/>
@@ -510,7 +508,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - Bug fixes
 
-
+### Jan-2022 (Build: 101.56.35 | Release version: 20.121121.15635.0)
 
 &ensp;Released: **Jan 30, 2022**<br/>
 &ensp;Published: **Jan 30, 2022**<br/>
@@ -528,7 +526,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - `mdatp health` output has been extended with a more attribute called `full_disk_access_enabled` that can be used to determine whether Full Disk Access has been granted to all components of Microsoft Defender for Endpoint for Mac.
 - Performance improvements & bug fixes
 
-
+### Jan-2022 (Build: 101.54.16 | Release version: 20.121111.15416.0)
 
 &ensp;Released: **Jan 12, 2022**<br/>
 &ensp;Published: **Jan 12, 2022**<br/>
