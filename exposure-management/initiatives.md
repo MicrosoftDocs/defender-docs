@@ -51,7 +51,7 @@ Security Exposure Management is currently in public preview.
     - A metric trends graph and drift change, if applicable.
     - History of score changes
     - Related threats
-:::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot of the Ransomware initiative.":::
+:::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot of the ransomware initiative.":::
 
 ## Set target score
 1. To customize your initiative's target score, select **Initiatives.**
@@ -60,7 +60,7 @@ Security Exposure Management is currently in public preview.
 
 1. Set a new target score percentage and select **Apply**.
 
-:::image type="content" source="./media/initiatives/set-initiative-target-score.png" alt-text="Screenshot of the Set target score window.":::
+:::image type="content" source="./media/initiatives/set-initiative-target-score.png" alt-text="Screenshot of the window to set the initiative target.":::
 
 ## Check trends
 
