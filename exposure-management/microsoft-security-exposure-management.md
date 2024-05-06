@@ -12,7 +12,7 @@ ms.date: 03/11/2024
 
 # What is Microsoft Security Exposure Management?
 
-Microsoft Security Exposure Management is a security solution that provides a unified view of security posture across company assets and workloads. Security Exposure Management enriches asset information with security context that helps you to manage attack surfaces, protect critical assets, and explore and mitigate exposure risk.
+Microsoft Security Exposure Management is a security solution that provides a unified view of security posture across company assets and workloads. Security Exposure Management enriches asset information with security context that helps you to proactively manage attack surfaces, protect critical assets, and explore and mitigate exposure risk.
 
 Security Exposure Management is currently in public preview.
 
