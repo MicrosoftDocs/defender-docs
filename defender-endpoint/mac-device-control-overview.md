@@ -64,7 +64,7 @@ Example 1: JAMF using [schema.json](https://github.com/microsoft/mdatp-xplat/tre
 
 :::image type="content" source="media/macos-device-control-jamf-json.png" alt-text="Screenshot that shows how to enable Device Control in Microsoft Defender for Endpoint Data Loss Prevention / Features.":::
 
-<details><summary>Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/macOS/mobileconfig/demo.mobileconfig)</summary>
+Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/macOS/mobileconfig/demo.mobileconfig)
 
 ```xml
 <key>dlp</key>
@@ -80,7 +80,7 @@ Example 1: JAMF using [schema.json](https://github.com/microsoft/mdatp-xplat/tre
   </array>
 </dict>
 ```
-</details>
+
 
 - Minimum product version: 101.91.92 or higher
 - Run _mdatp version_ through Terminal to see the product version on your client machine:
@@ -117,6 +117,7 @@ Device control for macOS has similar capabilities to Device control for Windows,
 
 
 ### Settings
+
 Here are the properties you can use when you create the groups, rules, and settings in device control policy for macOS.
 
 | Property name | Description | Options |
