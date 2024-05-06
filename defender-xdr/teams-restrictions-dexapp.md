@@ -53,6 +53,8 @@ If you see the following notification, then the Teams app permission policies ar
 This app is blocked in app permission policies. To approve a user's app request, review the app permission policies assigned to them and allow the app in any policies where it's blocked.
 ```
 
+  :::image type="content" source="/defender-xdr/media/app-permissions-blocked.png" alt-text="Screenshot to request Defender Experts app in Microsoft Teams." lightbox="/defender-xdr/media/app-permissions-blocked.png":::
+
 ## Fix the Teams app permission policies
 
 You have two options to fix the Teams app permission policy that stops the Defender Experts app from running:
