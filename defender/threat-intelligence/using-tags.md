@@ -46,9 +46,7 @@ System tags can include:
 
 Custom tags bring context to indicators of compromise (IOCs) and make analysis even simpler by identifying those domains that are known bad from public reporting or that you categorized as such. You create these tags manually based on your own investigations, and these tags let you share key insights about an artifact with other Defender TI premium license users within your tenant.
 
-:::image type="content" source="/defender/threat-intelligence/media/system-tags.png" alt-text="System tags." lightbox="/defender/threat-intelligence/media/system-tags.png":::
-
-![Tags Custom](media/custom-tags.png)
+:::image type="content" source="/defender/threat-intelligence/media/custom-tags.png" alt-text="Custom tags." lightbox="/defender/threat-intelligence/media/custom-tags.png":::
 
 ### Adding, modifying, and removing custom tags
 
@@ -60,27 +58,19 @@ You can also modify or remove tags. Once you add a tag, you or another paid lice
 2. Navigate to **Threat intelligence** > **Intel explorer**.
 3. Search an indicator that you would like to add tags for in the Intel explorer search bar.
    
-   :::image type="content" source="/defender/threat-intelligence/media/system-tags.png" alt-text="System tags." lightbox="/defender/threat-intelligence/media/system-tags.png":::
-
-   ![Tags Search](media/edit-tags-01.png)
+   :::image type="content" source="/defender/threat-intelligence/media/edit-tags-01.png" alt-text="Tags search." lightbox="/defender/threat-intelligence/media/edit-tags-01.png":::
 
 4. Select **Edit tags** on the upper left-hand corner of the page.
    
-   :::image type="content" source="/defender/threat-intelligence/media/system-tags.png" alt-text="System tags." lightbox="/defender/threat-intelligence/media/system-tags.png":::
-
-   ![Tags Search Edit Tags](media/edit-tags-02.png)
+   :::image type="content" source="/defender/threat-intelligence/media/edit-tags-02.png" alt-text="Tags search Edit tags." lightbox="/defender/threat-intelligence/media/edit-tags-02.png":::
 
 5. Add any tags you would like to associate with this indicator on the **Custom tags** pop-up window that appears. To add a new indicator, press the **Tab** key to add a new indicator.
 
-   :::image type="content" source="/defender/threat-intelligence/media/system-tags.png" alt-text="System tags." lightbox="/defender/threat-intelligence/media/system-tags.png":::
-
-   ![Tags Search Add Tags](media/edit-tags-03.png)
+   :::image type="content" source="/defender/threat-intelligence/media/edit-tags-03.png" alt-text="Tags search Add tags." lightbox="/defender/threat-intelligence/media/edit-tags-03.png":::
 
 6. Select **Save** once you finish adding all your tags to save your changes.
 
-   :::image type="content" source="/defender/threat-intelligence/media/system-tags.png" alt-text="System tags." lightbox="/defender/threat-intelligence/media/system-tags.png":::
-
-   ![Tags Search Save Tags](media/edit-tags-04.png)
+   :::image type="content" source="/defender/threat-intelligence/media/edit-tags-04.png" alt-text="Tags search Save tags." lightbox="/defender/threat-intelligence/media/edit-tags-04.png":::
 
 7. Repeat step 3 to edit tags. Remove a tag by selecting **X** at the end of it, then add new ones by repeating the steps 4 to 6.
 
