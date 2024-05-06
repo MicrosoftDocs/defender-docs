@@ -11,7 +11,7 @@ ms.date: 03/11/2024
 
 # Investigate security metrics
 
-Security metrics in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) measure security exposure within a specific scope of assets.
+Security metrics in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) measure security exposure for a specific scope of assets or resources within a [security initiative](exposure-insights-overview.md). Most security initiatives (but not all) have metrics associated with them.
 
 Security Exposure Management is currently in public preview.
 
@@ -19,8 +19,16 @@ Security Exposure Management is currently in public preview.
 
 ## Prerequisites
 
-- Learn about [security metrics](exposure-insights-overview.md#metrics).
+- Learn about [security metrics](exposure-insights-overview.md#working-with-metrics).
 - [Review permissions and prerequisites needed](prerequisites.md) for working with Security Exposure Management.
+- Note possible preview issues:
+    - Some instances of affected assets information (largely information originating in Secure score) don't appear on the **Affected Items** tab in an individual metric.
+    - Some critical asset information for assets in the **Affected Items** tab doesn't show.
+    - Asset details are calculated on demand.
+    - Cloud-related metrics are only available if Microsoft Defender for Cloud is available in the subscription, and the Defender Cloud Security Posture Management (CSPM) plan is enabled.
+    - In some cases, metrics are more specific than the scope of the related recommendations. In this case, the asset detail shown doesn't align with the asset details of the related recommendations.
+    - If you remove a workload, you can't refresh the metric status and the asset details for the workload's related metrics.
+
 
 ## Review security metrics
 
