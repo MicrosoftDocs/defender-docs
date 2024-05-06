@@ -93,7 +93,7 @@ Grayed out metrics aren't considered for score calculation.
 
 ## Working with recommendations
 
-Security Exposure Management ingests security recommendations from multiple sources, including Microsoft Defender for Cloud running the  [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), Defender XDR [secure score](/defender-xdr/microsoft-secure-score), Microsoft threat analytics, and other Microsoft workloads. Security Exposure Management integrates all of these recommendations into a single security catalog.
+Security Exposure Management ingests security recommendations from multiple sources, including Microsoft Defender for Cloud running the  [Defender for Cloud Security Posture Management (CSPM) plan](/azure/defender-for-cloud/concept-cloud-security-posture-management), [Microsoft Secure Score](/defender-xdr/microsoft-secure-score), Microsoft threat analytics, and other Microsoft workloads. Security Exposure Management integrates all of these recommendations into a single security catalog.
 
 - You can view recommendations from the **Recommendations** tab, or review and remediate recommendations within a specific security initiative or metric.
 - Each recommendation provides remediation steps to fix detected compliance issues.
@@ -123,8 +123,7 @@ Security Exposure Management uses secure score as one of its sources for initiat
 The exposure state for a security initiative is reflected in the initiative score.
 
 - **Initiatives with metrics**: For initiatives with metrics, the score is calculated based on the value and weight of metrics within the initiative. 
-- **Initiatives without metrics**: For threat initiatives that don't have metrics, the initiative score is calculated in the same way that [Secure Score is calculated](../defender-xdr/microsoft-secure-score.md#how-recommended-actions-are-scored).
-
+- **Initiatives without metrics**: For threat initiatives that don't have metrics, the initiative score is calculated in the same way that [Secure Score is calculated](/defender-xdr/microsoft-secure-score.md#how-recommended-actions-are-scored).
 
 For initiatives with metrics:
 
