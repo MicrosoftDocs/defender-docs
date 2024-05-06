@@ -205,7 +205,7 @@ Disable local administrator antivirus settings such as exclusions, and enforce t
 | 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84<br/><br/>(Block Office applications from injecting code into other processes) | `1 (Block)` |
 | e6db77e5-3df2-4cf1-b95a-636979351e5b<br/><br/>(Block persistence through WMI event subscription) | `1 (Block)` |
 | c1db55ab-c21a-4637-bb3f-a12568109d35<br/><br/>(Use advanced protection against ransomware) | `1 (Block)` |
-| d1e49aac-8f56-4280-b9ba-993a6d77406c<br/><br/>(Block process creations originating from PSExec and WMI commands) | `1 (Block)`<br/><br/>If you have Configuration Manager (formerly SCCM), or other management tools that use WMI, you might need to set this to 2 (‘audit’) instead of 1(‘block’). |
+| d1e49aac-8f56-4280-b9ba-993a6d77406c<br/><br/>(Block process creations originating from PSExec and WMI commands) | `1 (Block)`<br/><br/>If you have Configuration Manager (formerly SCCM), or other management tools that use WMI, you might need to set this to `2 (Audit)` instead of `1 (Block)`. |
 | 33ddedf1-c6e0-47cb-833e-de6133960387<br/><br/>( [PREVIEW] Block rebooting machine in Safe Mode) | `1 (Block)` |
 
 > [!TIP]
