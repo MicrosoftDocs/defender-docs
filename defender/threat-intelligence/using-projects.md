@@ -20,7 +20,7 @@ Visiting a project's details shows a listing of all associated artifacts and a d
 
 The Defender TI platform allows users to develop multiple project types for organizing indicators of interest and indicators of compromise from an investigation.
 
-The owner of a project can add collaborators (users listed in their Azure tenant with a Defender TI Premium license). This grants the collaborator(s)’ permissions to make any changes to the project as if they were the owner of the project. The exception being that collaborators cannot delete projects. Collaborators will view projects that have been shared with them in the Shared Projects section of the Projects Home Page.
+The owner of a project can add collaborators (users listed in their Azure tenant with a Defender TI Premium license). This grants the collaborator(s)' permissions to make any changes to the project as if they were the owner of the project. The exception being that collaborators cannot delete projects. Collaborators will view projects that have been shared with them in the Shared Projects section of the Projects Home Page.
 
 Users can also download artifacts within a project by selecting the download icon. This is a great way for threat hunting teams to use their findings from an investigation to block indicators of compromise or build additional detection rules within their SIEM.
 
@@ -41,7 +41,7 @@ Users can also download artifacts within a project by selecting the download ico
     > [!NOTE]
     > Users without a Defender TI Premium license will still be able to log into the Defender Threat Intelligence Portal and access our free Defender TI offering.
 
-## Open Defender TI’s Threat Intelligence Home Page
+## Open Defender TI's Threat Intelligence Home Page
 
 1. Access the [Defender Threat Intelligence Portal](https://ti.defender.microsoft.com/).
 2. Complete Microsoft authentication to access portal.
@@ -52,15 +52,15 @@ Users can create a project in two different ways, through the Projects Home Page
 
 When logging into the Defender TI Projects Home Page, users are presented with a dashboard showing projects they own or that have been shared with other Defender TI users in their tenant. Directly from this view, users can decide to create a new project, simply by selecting the "+" icon or visit the project page using the left-hand drawer menu.
 
-1. To create a project from the Project Home Page, navigate to the ‘Projects’ icon and select the ‘Add New Project’ icon within the Projects Home Page.
+1. To create a project from the Project Home Page, navigate to the 'Projects' icon and select the 'Add New Project' icon within the Projects Home Page.
 
     ![Add to Project](media/projectsAddProject.png)
 
-    When conducting searches within Defender TI, users can select ‘Add to Project’ to add the artifact (indicator of compromise) to an existing project or create a new project to add the artifact to.
+    When conducting searches within Defender TI, users can select 'Add to Project' to add the artifact (indicator of compromise) to an existing project or create a new project to add the artifact to.
 
-2. To create a project through an investigation, perform an indicator search from the Threat Intelligence search bar and click on the ‘Add to Project’ icon.
+2. To create a project through an investigation, perform an indicator search from the Threat Intelligence search bar and click on the 'Add to Project' icon.
 
-3. If creating a new project, select the ‘Add New Project’ link, fill in the required fields and ‘Save’ your new project. If you already have an existing project you would like to add the artifact to, please select or scroll down and select the project you want.
+3. If creating a new project, select the 'Add New Project' link, fill in the required fields and 'Save' your new project. If you already have an existing project you would like to add the artifact to, please select or scroll down and select the project you want.
 
     ![Add New Project](media/projectsAddNewProjectDetails.png)
 
@@ -78,6 +78,6 @@ Once a user has created projects, they can manage them inside of the Projects po
 
 When it comes to using Defender TI to investigate potential threats, we recommend executing the following workflows as these steps will enable you to gather strategic and operational intelligence before diving into tactical intelligence.
 
-Users can perform various types of searches within Defender TI. As such, it’s important to approach your intelligence gathering method in a way that presents you with broad results before diving into investigating specific indicators. For example, if you search an IP address against the Defender TI Home Page, what articles have an association with that IP address? What information do these articles present about the IP address that you wouldn’t otherwise find navigating directly to the IP address’ Data tab for dataset enrichment. For example, has this IP address been identified as a possible C2, who is the threat actor, what other related indicators of compromise is listed in the article, what TTPs is the threat actor using and who are they targeting?
+Users can perform various types of searches within Defender TI. As such, it's important to approach your intelligence gathering method in a way that presents you with broad results before diving into investigating specific indicators. For example, if you search an IP address against the Defender TI Home Page, what articles have an association with that IP address? What information do these articles present about the IP address that you wouldn't otherwise find navigating directly to the IP address' Data tab for dataset enrichment. For example, has this IP address been identified as a possible C2, who is the threat actor, what other related indicators of compromise is listed in the article, what TTPs is the threat actor using and who are they targeting?
 
 In addition to performing various types of searches with Defender TI, users can collaborate on investigations together. That said, users are encouraged to create projects, add indicators related to an investigation to a project and add collaborators to a project if more than one person is working on the same investigation. This helps reduce time spent analyzing the same IOCs and should result in a quicker workflow observed.

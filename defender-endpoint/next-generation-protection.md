@@ -6,7 +6,7 @@ ms.localizationpriority: high
 ms.topic: conceptual
 author: siosulli
 ms.author: siosulli
-ms.reviewer: mkaminska
+ms.reviewer: yongrhee
 manager: deniseb
 ms.custom: nextgen
 ms.subservice: ngp
