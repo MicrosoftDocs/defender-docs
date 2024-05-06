@@ -22,7 +22,7 @@ ms.date: 04/04/2024
 
 Before you make changes to your security configuration, such as policies or transport rules, it's important to understand the impact of those changes so that you can plan and ensure *minimal* disruption to your organization.
 
-This step-by-step guide takes you through assessing a change, and exporting the impacted emails for assessment. 
+This step-by-step guide takes you through assessing a change, and exporting the impacted emails for assessment.
 
 ## What you need
 

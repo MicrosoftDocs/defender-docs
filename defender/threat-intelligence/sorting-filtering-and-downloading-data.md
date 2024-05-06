@@ -16,7 +16,7 @@ The Microsoft Defender Threat Intelligence (Defender TI) platform enables analys
 
 ![Sorting DataSets Chrome Screenshot](media/sortingDataSetsChromeScreenshot.png)
 
-In this how-to article, you’ll learn how to sort and filter data for the following data sets:
+In this how-to article, you'll learn how to sort and filter data for the following data sets:
 
 - Resolutions
 - WHOIS
@@ -32,7 +32,7 @@ In this how-to article, you’ll learn how to sort and filter data for the follo
 
 For more information, see [Data sets](data-sets.md).
 
-In this how-to article, you’ll also learn how to download indicators/artifacts from the following features:
+In this how-to article, you'll also learn how to download indicators/artifacts from the following features:
 
 - Projects
 - Articles
@@ -45,14 +45,14 @@ In this how-to article, you’ll also learn how to download indicators/artifacts
     > [!NOTE]
     > Users without a Defender TI Premium license will still be able to log into the Defender Threat Intelligence Portal and access our free Defender TI offering.
 
-## Open Defender TI’s Threat Intelligence Home Page
+## Open Defender TI's Threat Intelligence Home Page
 
 1. Access the [Defender Threat Intelligence Portal](https://ti.defender.microsoft.com/).
 2. Complete Microsoft authentication to access portal.
 
 ## Sorting data
 
-The sorting function on the Data tab enables users to quickly sort our datasets by the column values. By default, most results are sorted by “Last Seen” (descending) so that the most recently observed results appear at the top of the list; this surfaces the most recent data to immediately provide insight on the current infrastructure of an artifact. Currently, all data sets are sortable by the following “First Seen” and “Last Seen” values:
+The sorting function on the Data tab enables users to quickly sort our datasets by the column values. By default, most results are sorted by "Last Seen" (descending) so that the most recently observed results appear at the top of the list; this surfaces the most recent data to immediately provide insight on the current infrastructure of an artifact. Currently, all data sets are sortable by the following "First Seen" and "Last Seen" values:
 
 - Last Seen Descending (Default)
 - Last Seen Ascending
@@ -216,7 +216,7 @@ The following headers are exported as a result of downloading Cookies data:
 | **firstSeen**              | When the Cookie name was first observed to the hostname originating from the Cookie Domain (format: mm/dd/yyyy hh:mm) |
 | **lastSeen**               | Date / time when the Cookie name was last observed to the hostname originating from the Cookie Domain (format: mm/dd/yyyy hh:mm) |
 | **cookieName**             | Name of the cookie |
-| **cookieDomain**           | The domain name’s server the cookie name originated from |
+| **cookieDomain**           | The domain name's server the cookie name originated from |
 | **Tags**                   | Custom or system tags associated with the artifact |
 
 The following headers are exported as a result of downloading projects lists for my, team, and shared projects:
