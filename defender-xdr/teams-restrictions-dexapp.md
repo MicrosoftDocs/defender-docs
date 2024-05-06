@@ -49,14 +49,14 @@ If you see the following notification, then the Teams app permission policies ar
 This app is blocked in app permission policies. To approve a user's app request, review the app permission policies assigned to them and allow the app in any policies where it's blocked.
 </code></pre>
 
-### Fix the Teams app permission policies
+## Fix the Teams app permission policies
 
 You have two options to fix the Teams app permission policy that stops the Defender Experts app from running:
 
 - Change the policy that blocks the Defender Experts app from running
 - Add a new policy that lets the Defender Experts app run
 
-Change the policy that blocks the Defender Experts app from running
+### Change the policy that blocks the Defender Experts app from running
 
 1. Go to the App permission policies page. Read more about [App permission policies - Microsoft Teams admin center](/microsoftteams/manage-admin-app).
 2. Look at each policy and see if **Microsoft apps** is set to **Allow specific apps and block all others**.
