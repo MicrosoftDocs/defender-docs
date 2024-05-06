@@ -65,7 +65,7 @@ After you verify that the reporting mailbox meets all of these requirements, use
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Security operations/Security data/Response (manage)** or **Security operations/Security data/Security data basics (read)**.
-  - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Organization Management** or **Security Administrator** role groups.
+  - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo): Membership in the **Security Administrator** or **Hygiene Management** role groups.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator** or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
 - You need access to Exchange Online PowerShell. If your account doesn't have access to Exchange Online PowerShell, you get the following error: *Specify an email address in your domain*. For more information about enabling or disabling access to Exchange Online PowerShell, see the following articles:
