@@ -24,7 +24,7 @@ ms.service: defender-xdr
 
 **Applies to:**
 - [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Office 365]/defender-office-365/mdo-about
+- [Microsoft Defender for Office 365](/defender-office-365/mdo-about)
 
 This article describes the Defender for Office 365 experience in the Microsoft Defender portal. Formerly, Defender for Office 365 customers used the Office 365 Security & Compliance center ([https://protection.office.com](https://protection.office.com)).
 
