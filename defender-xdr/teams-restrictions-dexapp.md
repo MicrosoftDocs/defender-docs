@@ -1,7 +1,7 @@
 ---
 title: Configuring Microsoft Defender Experts app in Teams
 ms.reviewer:
-description: The Microsoft Defender Experts app may have restrictions that affect its permissions in Teams
+description: The Microsoft Defender Experts app might have restrictions that affect its permissions in Teams
 ms.service: defender-experts
 ms.subservice: dex-xdr
 ms.author: vpattnaik
@@ -31,7 +31,7 @@ When you join the Defender Experts Teams channel, you should be able to mention 
 
 The following screenshot is an example of the missing bot:
 
-:::image type="content" source="/defender-xdr/media/teams-app-bot.png" alt-text="Screenshot of Teams ap bot." lightbox="/defender-xdr/media/teams-app-bot.png":::
+:::image type="content" source="/defender-xdr/media/teams-app-bot.png" alt-text="Screenshot of Teams app bot." lightbox="/defender-xdr/media/teams-app-bot.png":::
 
 ## Check the Teams app permission policies
 
@@ -39,12 +39,15 @@ To verify if the Teams permission policies are preventing the Defender Experts a
 
 1. In Microsoft Teams, select **Apps** on the Teams workspace.
 
+<<<<<<< HEAD
 :::image type="content" source="/defender-xdr/media/apps-teams-workspace.png" alt-text="Screenshot of Apps options in Teams workspace." lightbox="/defender-xdr/media/apps-teams-workspace.png":::
+=======
+>>>>>>> cf16b75eab0ec0eb781f9fea0d37f6d50f8831dd
    :::image type="content" source="/defender-xdr/media/apps-teams-workspace.png" alt-text="Screenshot of Apps options in Teams workspace." lightbox="/defender-xdr/media/apps-teams-workspace.png":::
 
-2. Type **Defender Experts** in the search pane and you'll be able to see the Defender Experts app.
+2. Type **Defender Experts** in the search pane to see the Defender Experts app.
 3. Select **Request** to request for the Defender Experts service.
-4. If you have the Teams app installed already, go to the Manage apps page for the Defender Experts app, and then to the User requests tab. Learn more about [Manage app - Microsoft Teams admin center](/microsoftteams/manage-admin-app).
+4. If you have the Teams app installed already, go to the **Manage apps** page for the Defender Experts app, and then to the **User requests** tab. Learn more about [Manage app - Microsoft Teams admin center](/microsoftteams/manage-admin-app).
 
 If you see the following notification, then the Teams app permission policies are preventing you from using the Defender Experts app:
 
