@@ -17,6 +17,11 @@ Security Exposure Management is currently in public preview.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
+## Prerequisites
+
+- [Read about](cross-workload-attack-surfaces.md) attack surface management.
+- [Review required permissions](prerequisites.md#permissions) for working with the graph.
+
 ## Access the map
 
 1. In the device inventory, select a device.
