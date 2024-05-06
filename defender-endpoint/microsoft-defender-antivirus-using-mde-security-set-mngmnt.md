@@ -4,12 +4,12 @@ description: Use this guide to evaluate and test the protection offered by Micro
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: conceptual
-author: deniseb
-ms.author: deniseb
+author: YongRhee-MSFT
+ms.author: yongrhee
 ms.custom: nextgen
 ms.date: 05/06/2024
 ms.reviewer:
-manager: deniseb
+manager: dansimp
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -35,9 +35,9 @@ search.appverid: met150
 
 ## Evaluate Microsoft Defender Antivirus using Group Policy
 
-In Windows 10 or newer and Windows Server 2016 or newer, you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG). 
+In Windows 10 or newer and Windows Server 2016 or newer, you can use next-generation protection features offered by Microsoft Defender Antivirus and Microsoft Defender Exploit Guard. 
 
-This topic explains how to enable and test the key protection features in Microsoft Defender AV and Microsoft Defender EG and provides you with guidance and links to more information. 
+This topic explains how to enable and test the key protection features in Microsoft Defender Antivirus and Microsoft Defender EG and provides you with guidance and links to more information. 
 
 This article describes configuration options in Windows 10 or newer and Windows Server 2016 or newer. 
 
@@ -45,41 +45,30 @@ This article describes configuration options in Windows 10 or newer and Windows 
 
 This guide provides the Microsoft Defender Antivirus Group Policy that configures the features you should use to evaluate our protection. 
 
-1. Grab the latest 'Windows Group Policy Administrative Templates'. 
-
-   For more information, see [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version).
+1. Grab the latest Windows Group Policy Administrative Templates. See [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version).
 
    > [!TIP]
-   > 1. The Windows one works with the Windows Servers.
+   > 1. The Windows version works with the Windows Servers.
    >
-   > 2. Even if you are running a Windows 10 or Windows Server 2016, get the latest administrative templates for Windows 11 or newer.
+   > 2. If you're using Windows 10 or Windows Server 2016, get the latest administrative templates for Windows 11 or newer.
 
+2. Create a Central Store to host the latest `.admx` and `.adml` templates. For more information, see [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
 
-2. Create a 'Central Store' to host the latest .admx and .adml templates.
+   If joined to a domain, follow these steps:
 
-   For more information, see [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#the-central-store).
+      1. Create a new OU block policy inheritance.
 
-   If joined to a domain:
+      2. Open Group policy Management Console (GPMC.msc).
 
-   1. Create a new OU block policy inheritance.
+      3. Go to **Group Policy Objects** and create a new Group Policy.
 
-   1. Open Group policy Management Console (GPMC.msc).
+      4. Right-click the new policy created and select **Edit**.
 
-   1. Go to **Group Policy Objects** and create a new Group Policy.
+      5. Navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**. 
+      
+      Or, if you're joined to a workgroup, open your Group Policy Editor MMC (`GPEdit.msc`), and go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
 
-   1. Right-click the new policy created and select **Edit**.
-
-   1. Navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
-
-   or
-
-   If joined to a workgroup
-
-   1. Open Group Policy Editor MMC (GPEdit.msc).
-
-   2. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
-
-## MDAV and Potentially Unwanted Applications (PUA)
+## Microsoft Defender Antivirus and Potentially Unwanted Applications (PUA)
 
 **Root:**
 
@@ -89,8 +78,6 @@ This guide provides the Microsoft Defender Antivirus Group Policy that confi
 | Configure detection for potentially unwanted applications | Enabled - Block |
 
 ## Real-time protection (always-on protection, real-time scanning)
-
-\\**Real-time protection:**
 
 | Description | Setting |
 | --- | --- |
@@ -105,7 +92,7 @@ Standard security intelligence updates can take hours to prepare and deliver; ou
 
 For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](/windows/threat-protection/windows-defender-antivirus/utilize-microsoft-cloud-protection-windows-defender-antivirus).
 
-\\**MAPS:**
+ ### MAPS
 
 | Description | Setting |
 | --- | --- |
@@ -113,7 +100,7 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 | Configure the ‘Block at First Sight’ feature | Enabled |
 | Send file samples when further analysis is required | Enabled, Send all samples |
 
-\\**MpEngine:**
+ ### MpEngine
 
 | Description | Setting |
 | --- | --- |
@@ -138,12 +125,12 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 
 | Description | Setting |
 | --- | --- |
-| Specify the interval to check for security intelligence updates | Enabled, 4 |
-| Define the order of sources for downloading security intelligence updates | Enabled, under 'Define the order of sources for downloading security intelligence updates'<br><br>InternalDefinitionUpdateServer \| MicrosoftUpdateServer \| MMPC<br><br>**Note:** Where InternalDefinitionUpdateServer is WSUS with Microsoft Defender Antivirus updates allowed.<br><br>MicrosoftUpdateServer == Microsoft Update (formerly Windows Update).<br><br>MMPC == https://www.microsoft.com/en-us/wdsi/definitions |
+| Specify the interval to check for security intelligence updates | `Enabled`, `4` |
+| Define the order of sources for downloading security intelligence updates | Enabled, under **Define the order of sources for downloading security intelligence updates** <br/><br/> `InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC` <br/><br/> Where `InternalDefinitionUpdateServer` is WSUS with Microsoft Defender Antivirus updates allowed.<br/><br/>`MicrosoftUpdateServer == Microsoft Update` (formerly Windows Update). <br/><br/> `MMPC == https://www.microsoft.com/en-us/wdsi/definitions` |
 
-## Disable local administrator AV settings 
+## Disable local administrator antivirus settings 
 
-Disable local administrator AV settings such as exclusions, and enforce the policies from the Microsoft Defender for Endpoint Security Settings Management.
+Disable local administrator antivirus settings such as exclusions, and enforce the policies from the Microsoft Defender for Endpoint Security Settings Management.
 
 **Root:**
 
@@ -154,7 +141,7 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 
 ## Threat Severity Default Action
 
-\\**Threats**
+### Threats
 
 | Description | Setting | Alert level    | Action    |
 | --- | --- | --- | --- |
@@ -164,13 +151,13 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 |     |     | 2 (Medium) | 2 (Quarantine) |
 |     |     | 1 (Low) | 2 (Quarantine) |
 
-\\**Quarantine**
+### Quarantine
 
 | Description | Setting |
 | --- | --- |
 | Configure removal of items from Quarantine folder | Enabled, 60 |
 
-\\**Client Interface**
+### Client Interface
 
 | Description | Setting |
 | --- | --- |
@@ -178,7 +165,7 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 
 ## Network Protection
 
-\\**Microsoft Defender Exploit Guard\\Network Protection:**
+### Microsoft Defender Exploit Guard / Network Protection
 
 | Description | Setting |
 | --- | --- |
@@ -201,25 +188,25 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 
 | Description | Setting |
 | --- | --- |
-| be9ba2d9-53ea-4cdc-84e5-9b1eeee46550<br><br>**Note:** (Block executable content from email client and webmail) | 1 (Block) |
-| 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c<br><br>**Note:** (Block Adobe Reader from creating child processes) | 1 (Block) |
-| 5beb7efe-fd9a-4556-801d-275e5ffc04cc<br><br>**Note:** (Block execution of potentially obfuscated scripts) | 1 (Block) |
-| 56a863a9-875e-4185-98a7-b882c64b5ce5<br><br>**Note:** (Block abuse of exploited vulnerable signed drivers) | 1 (Block) |
-| 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b<br><br>**Note:** (Block Win32 API calls from Office macros) | 1 (Block) |
-| 01443614-cd74-433a-b99e-2ecdc07bfc25<br><br>**Note:** (Block executable files from running unless they meet a prevalence, age, or trusted list criterion) | 1 (Block) |
-| 26190899-1602-49e8-8b27-eb1d0a1ce869<br><br>**Note:** (Block Office communication application from creating child processes) | 1 (Block) |
-| d4f940ab-401b-4efc-aadc-ad5f3c50688a<br><br>**Note:** (Block all Office applications from creating child processes) | 1 (Block) |
-| c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb<br><br>**Note:** ( [PREVIEW] Block use of copied or impersonated system tools) | 1 (Block) |
-| d3e037e1-3eb8-44c8-a917-57927947596d<br><br>**Note:** (Block JavaScript or VBScript from launching downloaded executable content) | 1 (Block) |
-| 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2<br><br>**Note:** (Block credential stealing from the Windows local security authority subsystem) | 1 (Block) |
-| a8f5898e-1dc8-49a9-9878-85004b8a61e6<br><br>**Note:** (Block Webshell creation for Servers) | 1 (Block) |
-| 3b576869-a4ec-4529-8536-b80a7769e899<br><br>**Note:** (Block Office applications from creating executable content) | 1 (Block) |
-| b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4<br><br>**Note:** (Block untrusted and unsigned processes that run from USB) | 1 (Block) |
-| 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84<br><br>**Note:** (Block Office applications from injecting code into other processes) | 1 (Block) |
-| e6db77e5-3df2-4cf1-b95a-636979351e5b<br><br>**Note:** (Block persistence through WMI event subscription) | 1 (Block) |
-| c1db55ab-c21a-4637-bb3f-a12568109d35<br><br>**Note:** (Use advanced protection against ransomware) | 1 (Block) |
-| d1e49aac-8f56-4280-b9ba-993a6d77406c<br><br>**Note:** (Block process creations originating from PSExec and WMI commands) | 1 (Block)<br><br>**Note:** If you have Configuration Manager (formerly SCCM), or other management tools that use WMI, you might need to set this to 2 (‘audit’) instead of 1(‘block’). |
-| 33ddedf1-c6e0-47cb-833e-de6133960387<br><br>**Note:** ( [PREVIEW] Block rebooting machine in Safe Mode) | 1 (Block) |
+| `be9ba2d9-53ea-4cdc-84e5-9b1eeee46550`<br/><br/>(Block executable content from email client and webmail) | `1 (Block)` |
+| `7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c`<br/><br/>(Block Adobe Reader from creating child processes) | `1 (Block)` |
+| `5beb7efe-fd9a-4556-801d-275e5ffc04cc`<br/><br/>(Block execution of potentially obfuscated scripts) | `1 (Block)` |
+| `56a863a9-875e-4185-98a7-b882c64b5ce5`<br/><br/>(Block abuse of exploited vulnerable signed drivers) | `1 (Block)` |
+| `92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b`<br/><br/>(Block Win32 API calls from Office macros) | `1 (Block)` |
+| `01443614-cd74-433a-b99e-2ecdc07bfc25`<br/><br/>(Block executable files from running unless they meet a prevalence, age, or trusted list criterion) | `1 (Block)` |
+| `26190899-1602-49e8-8b27-eb1d0a1ce869`<br/><br/>(Block Office communication application from creating child processes) | `1 (Block)` |
+| `d4f940ab-401b-4efc-aadc-ad5f3c50688a`<br/><br/>(Block all Office applications from creating child processes) | `1 (Block)` |
+| `c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb`<br/><br/>( [PREVIEW] Block use of copied or impersonated system tools) | `1 (Block)` |
+| `d3e037e1-3eb8-44c8-a917-57927947596d`<br/><br/>(Block JavaScript or VBScript from launching downloaded executable content) | `1 (Block)` |
+| `9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2`<br/><br/>(Block credential stealing from the Windows local security authority subsystem) | `1 (Block)` |
+| `a8f5898e-1dc8-49a9-9878-85004b8a61e6`<br/><br/>(Block Webshell creation for Servers) | `1 (Block)` |
+| `3b576869-a4ec-4529-8536-b80a7769e899`<br/><br/>(Block Office applications from creating executable content) | `1 (Block)` |
+| b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4<br/><br/>(Block untrusted and unsigned processes that run from USB) | `1 (Block)` |
+| 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84<br/><br/>(Block Office applications from injecting code into other processes) | `1 (Block)` |
+| e6db77e5-3df2-4cf1-b95a-636979351e5b<br/><br/>(Block persistence through WMI event subscription) | `1 (Block)` |
+| c1db55ab-c21a-4637-bb3f-a12568109d35<br/><br/>(Use advanced protection against ransomware) | `1 (Block)` |
+| d1e49aac-8f56-4280-b9ba-993a6d77406c<br/><br/>(Block process creations originating from PSExec and WMI commands) | `1 (Block)`<br/><br/>If you have Configuration Manager (formerly SCCM), or other management tools that use WMI, you might need to set this to 2 (‘audit’) instead of 1(‘block’). |
+| 33ddedf1-c6e0-47cb-833e-de6133960387<br/><br/>( [PREVIEW] Block rebooting machine in Safe Mode) | `1 (Block)` |
 
 > [!TIP]
 > Some rules may block behavior you find acceptable in your organization. In these cases, change the rule from 'Enabled' to 'Audit' to prevent unwanted blocks.
@@ -275,14 +262,13 @@ If you're finding that your settings aren't taking effect, you might have a conf
 
 ## For False Negatives (FNs) submissions
 
-If you have any questions about a detection that Microsoft Defender AV makes, or you discover a missed detection, you can submit a file to us.
+If you have any questions about a detection that Microsoft Defender Antivirus makes, or you discover a missed detection, you can submit a file to us.
 
 If you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business: refer [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md).
 
-If you have Microsoft Defender Antivirus, refer:
-https://www.microsoft.com/security/portal/mmpc/help/submission-help.aspx
+If you have Microsoft Defender Antivirus, see [Submit files for analysis](../defender-xdr/submission-guide.md).
 
-Microsoft Defender AV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender AV app](review-scan-results-microsoft-defender-antivirus.md). 
+Microsoft Defender AV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender Antivirus app](review-scan-results-microsoft-defender-antivirus.md). 
 
 The Windows event log also records detection and engine events. See the [Microsoft Defender Antivirus events article for a list of event IDs](troubleshoot-microsoft-defender-antivirus.yml) and their corresponding actions.
 
