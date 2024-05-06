@@ -17,8 +17,6 @@ ms.custom: template-how-to
 
 Microsoft Defender Threat Intelligence (Defender TI) lets you access our vast collection of crawling data in an indexed and pivot table format. These data sets can be large, returning expansive amounts of historic and recent data. By letting you appropriately sort and filter the data, we help you surface the connections of interest easily.
 
-![Sorting DataSets Chrome Screenshot](media/sortingDataSetsChromeScreenshot.png)
-
 In this how-to article, you learn how to sort and filter data for the following data sets:
 - Resolutions
 - WHOIS information
@@ -31,6 +29,8 @@ In this how-to article, you learn how to sort and filter data for the following 
 - Services
 - Domain Name System (DNS)
 - Reverse DNS
+
+![Sorting DataSets Chrome Screenshot](media/data-sets-01.png)
 
 [Learn more about data sets](data-sets.md)
 
@@ -68,8 +68,7 @@ Data can be sorted across each data set tab for each IP, domain, or host entity 
 
 1. Search a domain, IP address, or host in **Intel explorer** search bar.
 2. Go to the **Resolutions** tab, then apply the sorting preferences to the **First seen** and **Last seen** columns.
-
-![Sorting Resolutions](media/sortingResolutions.gif)
+   ![Sorting Resolutions](media/data-sets-first-seen-last-seen.png)
 
 ## Filtering data
 
@@ -90,8 +89,7 @@ To filter resolution data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
 2. Go to the **Resolutions** tab
 3. Apply filters to each of the types of filter options noted previously.
-
-![Filters Resolutions](media/filtersResolutions.gif)
+   ![Filters Resolutions](media/data-sets-resolutions.png)
 
 ### Tracker filters
 
@@ -104,8 +102,7 @@ To filter tracker data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
 2. Go to the **Trackers** tab
 3. Apply filters to each of the types of filter options noted previously.
-
-![Filters Trackers](media/filtersTrackers.gif)
+   ![Filters Trackers](media/data-sets-trackers.png)
 
 ### Component filters
 
@@ -118,8 +115,7 @@ To filter component data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
 2. Go to the **Components** tab
 3. Apply filters to each of the types of filter options noted previously.
-
-![Filters Components](media/filtersComponents.gif)
+   ![Filters Components](media/data-sets-components.png)
 
 ### Host pair filters
 
@@ -133,8 +129,7 @@ To filter host pair data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
 2. Go to the **Host pairs** tab
 3. Apply filters to each of the types of filter options noted previously.
-
-![Filters Host Pairs](media/filtersHostPairs.gif)
+   ![Filters Host Pairs](media/data-sets-host-pairs.png)
 
 ### DNS and reverse DNS filters
 
@@ -147,8 +142,7 @@ To filter DNS and reverse DNS data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
 2. Go to the **DNS** and **Reverse DNS** tabs
 3. Apply filters to each of the types of filter options noted previously.
-
-![Filters DNS](media/filtersDNS.gif)
+   ![Filters DNS](media/data-sets-dns.png)
 
 ## Downloading data
 
