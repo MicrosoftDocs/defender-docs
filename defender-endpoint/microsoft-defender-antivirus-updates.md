@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 04/28/2024
+ms.date: 05/02/2024
 audience: ITPro
 ms.topic: reference
 author: siosulli
@@ -44,6 +44,8 @@ This article also includes:
 
 > [!TIP]
 > To see the most current engine, platform, and signature date, visit the [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates)
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268615) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268522).
 
 ## Security intelligence updates
 
@@ -108,13 +110,13 @@ All our updates contain
 
 #### What's new
 
-- Added manageability settings to opt-out for One Collector telemetry channel and Experimentation and Configuration Service (ECS).
+- Added manageability settings to opt out for One Collector telemetry channel and Experimentation and Configuration Service (ECS).
 - Microsoft Defender Core Service will be disabled when 3rd party Antivirus is installed (except when Defender for Endpoint is running in Passive mode).
 - The known issue in [4.18.24020.7](#february-2024-engine-11240209--platform-418240207) where enforcement of device level access policies wasn't working as expected no longer occurs.
 - Fixed high CPU issue caused by redetection done during Sense originating scans.
 - Fixed an issue with Security Intelligence Update disk cleanup.
 - Fixed an issue where the Signature date information on the Security Health report wasn't accurate.
-- Introducted performance improvements when processing paths for exclusions.
+- Introduced performance improvements when processing paths for exclusions.
 - Added improvements to allow recovering from erroneously added [Indicators of compromise (IoC)](manage-indicators.md).
 - Improved resilience in processing [attack surface reduction](attack-surface-reduction.md) exclusions for Anti Malware Scan Interface (AMSI) scans.
 - Fixed a high memory issue related to the [Behavior Monitoring](behavior-monitor.md) queue that occurred when MAPS is disabled.

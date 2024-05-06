@@ -2,11 +2,11 @@
 title: Deploy Microsoft Defender for Endpoint on Linux manually
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux manually from the command line.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: dansimp
+author: dansimp
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: dansimp
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/21/2024
+ms.date: 05/01/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
@@ -456,7 +456,7 @@ Download the onboarding package from Microsoft Defender portal.
    >
    > Please note that you may also need to configure a proxy after completing the initial installation. See [Configure Defender for Endpoint on Linux for static proxy discovery: Post-installation configuration](linux-static-proxy-configuration.md#post-installation-configuration).
 
-5. Run an AV detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
+1. Run an AV detection test to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
    - Ensure that real-time protection is enabled (denoted by a result of `true` from running the following command):
 
@@ -470,21 +470,28 @@ Download the onboarding package from Microsoft Defender portal.
      mdatp config real-time-protection --value enabled
      ```
 
-   - Open a Terminal window and execute the following command:
-
+   - Open a Terminal window and execute the following command to run a detection test:
+   
      ``` bash
      curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
      ```
-
-   - The file should be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats:
-
+     
+   - You can run additional detection tests on zip files using either of the following commands:
+      
+      ```bash
+      curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
+      curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
+      ```
+      
+   - The files should be quarantined by Defender for Endpoint on Linux. Use the following command to list all the detected threats:
+   
      ```bash
      mdatp threat list
      ```
+     
+1. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
 
-6. Run an EDR detection test and simulate a detection to verify that the device is properly onboarded and reporting to the service. Perform the following steps on the newly onboarded device:
-
-   - Verify that the onboarded Linux server appears in Microsoft Defender XDR. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
+- Verify that the onboarded Linux server appears in Microsoft Defender XDR. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
 
    - Download and extract the [script file](https://aka.ms/LinuxDIY) to an onboarded Linux server and run the following command: `./mde_linux_edr_diy.sh`
 
@@ -544,4 +551,5 @@ See [Uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux) for
 ## See also
 
 - [Investigate agent health issues](health-status.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -45,7 +45,7 @@ If you have any questions about a detection that Microsoft Defender AV makes, or
 
 ## Use PowerShell to enable the features
 
-This guide provides the [Microsoft Defender Antivirus cmdlets](/powershell/module/defender/?view=windowsserver2022-ps) that configure the features you should use to evaluate our protection.
+This guide provides the [Microsoft Defender Antivirus cmdlets](/powershell/module/defender/?view=windowsserver2022-ps&preserve-view=true) that configure the features you should use to evaluate our protection.
 
 To use these cmdlets:
 
@@ -53,7 +53,7 @@ To use these cmdlets:
 >
 > 2\. Enter the command listed in this guide and press Enter.
 
-You can check the status of all settings before you begin, or during your evaluation, by using the [Get-MpPreference PowerShell cmdlet](/powershell/module/defender/get-mppreference?view=windowsserver2022-ps).
+You can check the status of all settings before you begin, or during your evaluation, by using the [Get-MpPreference PowerShell cmdlet](/powershell/module/defender/get-mppreference?view=windowsserver2022-ps&preserve-view=true).
 
 Microsoft Defender AV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender AV app](review-scan-results-microsoft-defender-antivirus.md).
 
@@ -83,7 +83,7 @@ See [Configure behavioral, heuristic, and real-time protection](configure-protec
 | Description | PowerShell Command |
 |---|---|
 |Constantly monitor files and processes for known malware modifications | Set-MpPreference -DisableRealtimeMonitoring 0 |
-|Constantly monitor for known malware behaviors – even in ‘clean’ files and running programs | Set-MpPreference -DisableBehaviorMonitoring 0 |
+|Constantly monitor for known malware behaviors – even in 'clean' files and running programs | Set-MpPreference -DisableBehaviorMonitoring 0 |
 |Scan scripts as soon as they are seen or run | Set-MpPreference -DisableScriptScanning 0 |
 |Scan removable drives as soon as they are inserted or mounted | Set-MpPreference -DisableRemovableDriveScanning 0 |
 
@@ -128,7 +128,7 @@ Some rules may block behavior you find acceptable in your organization. In these
 
 ## One-click Microsoft Defender Offline Scan
 
-Microsoft Defender Offline Scan is a specialized tool that comes with Windows 10 or newer, and allows you to boot a machine into a dedicated environment outside of the normal operating system. It’s especially useful for potent malware, such as rootkits.
+Microsoft Defender Offline Scan is a specialized tool that comes with Windows 10 or newer, and allows you to boot a machine into a dedicated environment outside of the normal operating system. It's especially useful for potent malware, such as rootkits.
 
 See [Microsoft Defender Offline](microsoft-defender-offline.md) for more information on how this feature works.
 
