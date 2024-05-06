@@ -521,14 +521,20 @@ For more information, see [New device health reporting for Microsoft Defender an
 
 To ensure that the device is correctly onboarded and reported to the service, run the following detection test:
 
-- Antimalware detections:
+- Open a Terminal window and execute the following command to run an antimalware detection test:
 
   ```bash
-  curl -o /tmp/eicar.com.txt https://www.eicar.org/download/eicar.com.txt
+  curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
   ```
+  
+- You can run additional detection tests on zip files using either of the following commands:
 
-  If the detection doesn't show up, it could be that you have set "allowedThreats" to allow in preferences via Ansible or Puppet.
-
+  ```bash
+  curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
+  curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
+  ```
+> [!NOTE]
+> If the detections do not show up, it could be that you have set "allowedThreats" to allow in preferences via Ansible or Puppet.
 - Endpoint detection and response (EDR) detections:
   For more information, see [Experience Microsoft Defender for Endpoint through simulated attacks](attack-simulations.md).
   If the detection doesn't show up, then it could be that we're missing event or alerts in portal. For more information, see [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md).
