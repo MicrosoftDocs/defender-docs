@@ -79,7 +79,7 @@ This guide provides the Microsoft Defender Antivirus Group Policy that confi
 
    2. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
 
-## MDAV and PUA
+## MDAV and Potentially Unwanted Applications (PUA)
 
 **Root:**
 
@@ -192,8 +192,6 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 | Disable TLS parsing | TLS parsing is enabled |
 | Enable DNS Sinkhole | DNS Sinkhole is enabled |
 
-
-\\**Network Inspection System**
 
 ## Attack Surface Reduction Rules
 
