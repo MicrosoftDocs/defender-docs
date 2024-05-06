@@ -32,7 +32,7 @@ With Microsoft Defender XDR, when an [automated investigation](m365d-autoir.md) 
 
 ## (NEW) Unified investigation page
 
-The investigation page has recently been updated to include information across your devices, email, and collaboration content. The new, unified investigation page defines a common language and provides a unified experience for automatic investigations across [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) and [Microsoft Defender for Office 365]/defender-office-365/mdo-about. To access the unified investigation page, select the link in the yellow banner you'll see on:
+The investigation page has recently been updated to include information across your devices, email, and collaboration content. The new, unified investigation page defines a common language and provides a unified experience for automatic investigations across [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) and [Microsoft Defender for Office 365](/defender-office-365/mdo-about). To access the unified investigation page, select the link in the yellow banner you'll see on:
 
 - Any investigation page in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview compliance portal</a>
 - Any investigation page in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com))
