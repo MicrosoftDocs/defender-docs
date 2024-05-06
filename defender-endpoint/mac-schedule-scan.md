@@ -183,6 +183,8 @@ The following code shows the schema you need to use to schedule scans according 
         </dict> 
     </dict> 
 </dict> 
+</array>
+</dict>
 </plist> 
 ```
 
@@ -273,6 +275,8 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
         </dict> 
         </dict> 
     </dict> 
+</array>
+</dict>
 </plist> 
 ```
 2. Save the file as _com.microsoft.wdav.mobileconfig_.
