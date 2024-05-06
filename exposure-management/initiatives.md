@@ -19,8 +19,9 @@ Security Exposure Management is currently in public preview.
 
 ## Prerequisites
 
-- Learn about [initiatives](exposure-insights-overview.md#initiatives) before you start.
+- Learn about [initiatives](exposure-insights-overview.md#security-initiatives) before you start.
 - [Review prerequisites and permissions needed](prerequisites.md) for working with Security Exposure Management.
+- Initiatives that are in preview are marked accordingly. These preview initiatives are still in development, and are subject to change.
 
 ## View initiatives page
 
@@ -46,11 +47,11 @@ Security Exposure Management is currently in public preview.
     - A means to set a custom target score appropriate to your organization's needs
     - Description
     - Associated security recommendations
-    - All metrics related to the initiative
-    - A metric trends graph and drift change
+    - All metrics related to the initiative, if applicable.
+    - A metric trends graph and drift change, if applicable.
     - History of score changes
     - Related threats
-:::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot of the Ransomware initiative.":::
+:::image type="content" source="./media/initiatives/initiatives-ransomware.png" alt-text="Screenshot of the ransomware initiative.":::
 
 ## Set target score
 1. To customize your initiative's target score, select **Initiatives.**
@@ -59,14 +60,14 @@ Security Exposure Management is currently in public preview.
 
 1. Set a new target score percentage and select **Apply**.
 
-:::image type="content" source="./media/initiatives/set-initiative-target-score.png" alt-text="Screenshot of the Set target score window.":::
+:::image type="content" source="./media/initiatives/set-initiative-target-score.png" alt-text="Screenshot of the window to set the initiative target.":::
 
 ## Check trends
 
 The changes in your score provide you with useful feedback about how well you're meeting the goals of your initiatives.
 
 1. From your initiative page, check the overall **14 day change trend graph** and **14 day drift change** to track the changes in your initiative score, visually and as a percentage.
-1. You can examine this data per metric as well.
+1. For initiatives with metrics, you can examine this data per metric as well.
 
 ## Check history
 
@@ -75,7 +76,7 @@ The changes in your score provide you with useful feedback about how well you're
 1. Browse to the time table to choose a specific time point to examine.
     1. If needed, filter for specific time points.
     1. Choose the time point and select to examine the percent effect on the initiative score and the reason for the change.
-    1. Select a metric to explore the change's effect further.
+    1. Select a metric to explore the change's effect further, if applicable.
 
 :::image type="content" source="media/initiatives/history-details.png" alt-text="Screenshot of the history metric change details side panel.":::
 
