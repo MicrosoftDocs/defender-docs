@@ -533,11 +533,12 @@ To ensure that the device is correctly onboarded and reported to the service, ru
   curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
   curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
   ```
-> [!NOTE]
-> If the detections do not show up, it could be that you have set "allowedThreats" to allow in preferences via Ansible or Puppet.
-- Endpoint detection and response (EDR) detections:
-  For more information, see [Experience Microsoft Defender for Endpoint through simulated attacks](attack-simulations.md).
-  If the detection doesn't show up, then it could be that we're missing event or alerts in portal. For more information, see [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md).
+
+   > [!NOTE]
+   > If the detections do not show up, it could be that you have set "allowedThreats" to allow in preferences via Ansible or Puppet.
+
+- Endpoint detection and response (EDR) detections, see [Experience Microsoft Defender for Endpoint through simulated attacks](attack-simulations.md). If the detection doesn't show up, then it could be that we're missing event or alerts in portal. For more information, see [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md).
+
 - For more information about unified submissions in Microsoft Defender XDR and the ability to submit **False Positives** and **False Negatives** through the portal, see [Unified submissions in Microsoft Defender XDR now Generally Available! - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/unified-submissions-in-microsoft-365-defender-now-generally/ba-p/3270770).
 
 ## 20. Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux
