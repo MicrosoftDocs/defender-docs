@@ -15,7 +15,6 @@ ms.collection:
 - essentials-security
 - essentials-compliance
 ms.topic: conceptual
-ms.subservice: mde
 search.appverid: met150
 ms.date: 08/07/2023
 ---
