@@ -170,7 +170,7 @@ Disable local administrator antivirus settings such as exclusions, and enforce t
 | Description | Setting |
 | --- | --- |
 | Prevent users and apps from accessing dangerous websites | Enabled, Block |
-| This settings controls whether Network Protection is allowed to be configured into block or audit mode on Windows Server | Enabled |
+| This settings controls whether Network Protection can be configured into block or audit mode on Windows Server | Enabled |
 | Allow Network Protection Down Level | Network protection is enabled downlevel |
 | Allow Datagram Processing On Win Server | Datagram processing on Windows Server is enabled |
 | Disable DNS over TCP parsing | DNS over TCP parsing is enabled |
@@ -209,7 +209,7 @@ Disable local administrator antivirus settings such as exclusions, and enforce t
 | 33ddedf1-c6e0-47cb-833e-de6133960387<br/><br/>( [PREVIEW] Block rebooting machine in Safe Mode) | `1 (Block)` |
 
 > [!TIP]
-> Some rules may block behavior you find acceptable in your organization. In these cases, change the rule from 'Enabled' to 'Audit' to prevent unwanted blocks.
+> Some rules may block behavior you find acceptable in your organization. In these cases, change the rule from Enabled to Audit to prevent unwanted blocks.
 
 ## Controlled Folder Access
 
@@ -223,11 +223,11 @@ Assign the policies to the OU where the test machines are located.
 
 ## Check the Platform Update version
 
-The latest 'Platform Update' version Production channel (GA) is available here:
+The latest Platform Update version Production channel (GA) is available here:
 
 [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623+update)
 
-To check which 'Platform Update' version you have installed, use the following PowerShell command (Run as admin):
+To check which Platform Update version you have installed, use the following PowerShell command (Run as admin):
 
 ```powershell
 get-mpComputerStatus | ft AMProductVersion
@@ -235,11 +235,11 @@ get-mpComputerStatus | ft AMProductVersion
 
 ## Check the Security Intelligence Update version
 
-The latest 'Security Intelligence Update' version is available here:
+The latest Security Intelligence Update version is available here:
 
 [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates)
 
-To check which 'Security Intelligence Update' version you have installed, use the following PowerShell command (Run as admin):
+To check which Security Intelligence Update version you have installed, use the following PowerShell command (Run as admin):
 
 ```PowerShell
 get-mpComputerStatus | ft AntivirusSignatureVersion
@@ -247,11 +247,11 @@ get-mpComputerStatus | ft AntivirusSignatureVersion
 
 ## Check the Engine Update version
 
-The latest scan 'engine update' version is available here:
+The latest scan engine update version is available here:
 
 [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates)
 
-To check which 'Engine Update' version you have installed, use the following PowerShell command(Run as admin):
+To check which Engine Update version you have installed, use the following PowerShell command(Run as admin):
 
 ```PowerShell
 get-mpComputerStatus | ft AMEngineVersion
@@ -264,15 +264,14 @@ If you're finding that your settings aren't taking effect, you might have a conf
 
 If you have any questions about a detection that Microsoft Defender Antivirus makes, or you discover a missed detection, you can submit a file to us.
 
-If you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business: refer [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md).
+If you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business, see [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md).
 
 If you have Microsoft Defender Antivirus, see [Submit files for analysis](../defender-xdr/submission-guide.md).
 
-Microsoft Defender AV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender Antivirus app](review-scan-results-microsoft-defender-antivirus.md). 
+Microsoft Defender Antivirus indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender Antivirus app](review-scan-results-microsoft-defender-antivirus.md). 
 
 The Windows event log also records detection and engine events. See the [Microsoft Defender Antivirus events article for a list of event IDs](troubleshoot-microsoft-defender-antivirus.yml) and their corresponding actions.
 
 If your settings aren't applied properly, find out if there are conflicting policies that are enabled in your environment. For more information, see [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
-If you need to open a Microsoft support case:
-[Contact Microsoft Defender for Endpoint support](contact-support.md).
+If you need to open a Microsoft support case, see [Contact Microsoft Defender for Endpoint support](contact-support.md).
