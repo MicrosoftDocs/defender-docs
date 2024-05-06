@@ -39,10 +39,7 @@ To verify if the Teams permission policies are preventing the Defender Experts a
 
 1. In Microsoft Teams, select **Apps** on the Teams workspace.
 
-<<<<<<< HEAD
 :::image type="content" source="/defender-xdr/media/apps-teams-workspace.png" alt-text="Screenshot of Apps options in Teams workspace." lightbox="/defender-xdr/media/apps-teams-workspace.png":::
-=======
->>>>>>> cf16b75eab0ec0eb781f9fea0d37f6d50f8831dd
    :::image type="content" source="/defender-xdr/media/apps-teams-workspace.png" alt-text="Screenshot of Apps options in Teams workspace." lightbox="/defender-xdr/media/apps-teams-workspace.png":::
 
 2. Type **Defender Experts** in the search pane to see the Defender Experts app.
