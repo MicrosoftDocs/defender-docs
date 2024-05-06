@@ -29,7 +29,7 @@ When you join the Defender Experts Teams channel, you should be able to mention 
 
 The following screenshot is an example of the missing bot:
 
-:::image type="content" source="/defender-docs-pr/defender-xdr/media/teams-app-bot.png" alt-text="Screenshot of Teams ap bot." lightbox="defender-docs-pr/defender-xdr/media/teams-app-bot.png":::
+:::image type="content" source="/defender-xdr/media/teams-app-bot.png" alt-text="Screenshot of Teams ap bot." lightbox="/defender-xdr/media/teams-app-bot.png":::
 
 ## Check the Teams app permission policies
 
@@ -37,7 +37,7 @@ To verify if the Teams permission policies are preventing the Defender Experts a
 
 1. In Microsoft Teams, select **Apps** on the Teams workspace.
 
-:::image type="content" source="/defender-docs-pr/defender-xdr/media/apps-teams-workspace.png" alt-text="Screenshot of Apps options in Teams workspace." lightbox="/defender-docs-pr/defender-xdr/apps-teams-workspace.png":::
+:::image type="content" source="/defender-xdr/media/apps-teams-workspace.png" alt-text="Screenshot of Apps options in Teams workspace." lightbox="/defender-xdr/apps-teams-workspace.png":::
 
 2. Type **Defender Experts** in the search pane and you'll be able to see the Defender Experts app.
 3. Select **Request** to request for the Defender Experts service.
@@ -61,11 +61,11 @@ Change the policy that blocks the Defender Experts app from running
 1. Go to the App permission policies page. Read more about [App permission policies - Microsoft Teams admin center](/microsoftteams/manage-admin-app.md).
 2. Look at each policy and see if **Microsoft apps** is set to **Allow specific apps and block all others**.
 
-:::image type="content" source="/defender-docs-pr/defender-xdr/media/allow-apps-teams.png" alt-text="Screenshot of option to allow Teams app installation." lightbox="/defender-docs-pr/defender-xdr/media/allow-apps-teams.png":::
+:::image type="content" source="/defender-xdr/media/allow-apps-teams.png" alt-text="Screenshot of option to allow Teams app installation." lightbox="/defender-xdr/media/allow-apps-teams.png":::
 
 3. Select **Add apps**. On the flyout panel, look for **Defender Experts**, and select **Allow**.
 
-:::image type="content" source="/defender-docs-pr/defender-xdr/media/add-dex-app.png" alt-text="Screenshot to allow Defender Experts app installation." lightbox="/defender-docs-pr/defender-xdr/media/add-dex-app.png":::
+:::image type="content" source="/defender-xdr/media/add-dex-app.png" alt-text="Screenshot to allow Defender Experts app installation." lightbox="/defender-xdr/media/add-dex-app.png":::
 
 The app should start working after 24 hours.
 
@@ -74,6 +74,6 @@ The app should start working after 24 hours.
 1. Go to the **App permission policies** page and then select **Add**.
 2. In the flyout panel on the right side, search for and select **Defender Experts**, and then select **Allow**.
 
-:::image type="content" source="/defender-docs-pr/defender-xdr/media/add-dex-app-run.png" alt-text="Screenshot to allow Defender Experts app flyout panel." lightbox="/defender-docs-pr/defender-xdr/media/add-dex-app-run.png":::
+:::image type="content" source="/defender-xdr/media/add-dex-app-run.png" alt-text="Screenshot to allow Defender Experts app flyout panel." lightbox="/defender-xdr/media/add-dex-app-run.png":::
 
 3. Complete the rest of the fields as needed then select **Save**. If this policy is for a group of users, make sure that all the members in the channel are assigned to the policy. The app should start working after 24 hours.
