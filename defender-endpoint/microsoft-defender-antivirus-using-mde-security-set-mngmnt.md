@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: deniseb
 ms.author: deniseb
 ms.custom: nextgen
-ms.date: 05/01/2024
+ms.date: 05/06/2024
 ms.reviewer:
 manager: deniseb
 ms.subservice: ngp
@@ -52,7 +52,7 @@ This guide provides the Microsoft Defender Antivirus Group Policy that confi
    > [!TIP]
    > 1. The Windows one works with the Windows Servers.
    >
-   > 1. Even if you are running a Windows 10 or Windows Server 2016, get the latest administrative templates for Windows 11 or newer.
+   > 2. Even if you are running a Windows 10 or Windows Server 2016, get the latest administrative templates for Windows 11 or newer.
 
 
 2. Create a 'Central Store' to host the latest .admx and .adml templates.
