@@ -13,7 +13,7 @@ ms.collection:
 - mde-macos
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.subservice: mde
+ms.subservice: edr
 search.appverid: met150
 ms.date: 01/15/2024
 ---

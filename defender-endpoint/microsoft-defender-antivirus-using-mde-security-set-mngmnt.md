@@ -11,7 +11,7 @@ ms.date: 05/06/2024
 ms.reviewer:
 manager: dansimp
 ms.subservice: ngp
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
@@ -21,7 +21,6 @@ search.appverid: met150
 # Evaluate Microsoft Defender Antivirus using Group Policy
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
 
 **Applies to:**
 
@@ -35,15 +34,15 @@ search.appverid: met150
 
 ## Evaluate Microsoft Defender Antivirus using Group Policy
 
-In Windows 10 or newer and Windows Server 2016 or newer, you can use next-generation protection features offered by Microsoft Defender Antivirus and Microsoft Defender Exploit Guard. 
+In Windows 10 or newer and Windows Server 2016 or newer, you can use next-generation protection features offered by Microsoft Defender Antivirus and Microsoft Defender Exploit Guard.
 
-This article explains how to enable and test the key protection features in Microsoft Defender Antivirus and Microsoft Defender Exploit Guard and provides you with guidance and links to more information. 
+This article explains how to enable and test the key protection features in Microsoft Defender Antivirus and Microsoft Defender Exploit Guard and provides you with guidance and links to more information.
 
-This article describes configuration options in Windows 10 or newer and Windows Server 2016 or newer. 
+This article describes configuration options in Windows 10 or newer and Windows Server 2016 or newer.
 
-### Use Microsoft Defender Antivirus using Group Policy to enable the features 
+### Use Microsoft Defender Antivirus using Group Policy to enable the features
 
-This guide provides the Microsoft Defender Antivirus Group Policy that configures the features you should use to evaluate our protection. 
+This guide provides the Microsoft Defender Antivirus Group Policy that configures the features you should use to evaluate our protection.
 
 1. Grab the latest Windows Group Policy Administrative Templates. See [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version).
 
@@ -64,8 +63,8 @@ This guide provides the Microsoft Defender Antivirus Group Policy that confi
 
       4. Right-click the new policy created and select **Edit**.
 
-      5. Navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**. 
-      
+      5. Navigate to **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
+
       Or, if you're joined to a workgroup, open your Group Policy Editor MMC (`GPEdit.msc`), and go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus**.
 
 ## Microsoft Defender Antivirus and Potentially Unwanted Applications (PUA)
@@ -128,7 +127,7 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 | Specify the interval to check for security intelligence updates | `Enabled`, `4` |
 | Define the order of sources for downloading security intelligence updates | Enabled, under **Define the order of sources for downloading security intelligence updates** <br/><br/> `InternalDefinitionUpdateServer | MicrosoftUpdateServer | MMPC` <br/><br/> Where `InternalDefinitionUpdateServer` is WSUS with Microsoft Defender Antivirus updates allowed.<br/><br/>`MicrosoftUpdateServer == Microsoft Update` (formerly Windows Update). <br/><br/> `MMPC == https://www.microsoft.com/en-us/wdsi/definitions` |
 
-## Disable local administrator antivirus settings 
+## Disable local administrator antivirus settings
 
 Disable local administrator antivirus settings such as exclusions, and enforce the policies from the Microsoft Defender for Endpoint Security Settings Management.
 
@@ -178,7 +177,6 @@ Disable local administrator antivirus settings such as exclusions, and enforce t
 | Disable SSH parsing | SSH parsing is enabled |
 | Disable TLS parsing | TLS parsing is enabled |
 | Enable DNS Sinkhole | DNS Sinkhole is enabled |
-
 
 ## Attack Surface Reduction Rules
 
@@ -257,7 +255,7 @@ To check which Engine Update version you have installed, use the following Power
 get-mpComputerStatus | ft AMEngineVersion
 ```
 
-If you're finding that your settings aren't taking effect, you might have a conflict. To resolve conflicts, refer: 
+If you're finding that your settings aren't taking effect, you might have a conflict. To resolve conflicts, refer:
 [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
 ## For False Negatives (FNs) submissions
@@ -266,9 +264,9 @@ If you have any questions about a detection that Microsoft Defender Antivirus ma
 
 If you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business, see [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md).
 
-If you have Microsoft Defender Antivirus, see [Submit files for analysis](../defender-xdr/submission-guide.md).
+If you have Microsoft Defender Antivirus, see [Submit files for analysis](/defender-xdr/submission-guide).
 
-Microsoft Defender Antivirus indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender Antivirus app](review-scan-results-microsoft-defender-antivirus.md). 
+Microsoft Defender Antivirus indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender Antivirus app](review-scan-results-microsoft-defender-antivirus.md).
 
 The Windows event log also records detection and engine events. See the [Microsoft Defender Antivirus events article for a list of event IDs](troubleshoot-microsoft-defender-antivirus.yml) and their corresponding actions.
 
