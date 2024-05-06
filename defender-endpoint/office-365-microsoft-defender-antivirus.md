@@ -66,7 +66,7 @@ Think of the time and hassle this can save.
 
 Microsoft Defender for Office 365 integrated with Microsoft Defender for Endpoint means better protection for your organization. Here's how:
 
-- [Microsoft Defender for Office 365]/defender-office-365/mdo-about safeguards your organization against malicious threats posed in email messages, email attachments, and links (URLs) in Office documents.
+- [Microsoft Defender for Office 365](/defender-office-365/mdo-about) safeguards your organization against malicious threats posed in email messages, email attachments, and links (URLs) in Office documents.
 
     AND
 
@@ -96,7 +96,7 @@ Protection from ransomware is one great reason to put your files in OneDrive. An
 
 - [OneDrive](/onedrive)
 
-- [Microsoft Defender for Office 365]/defender-office-365/mdo-about
+- [Microsoft Defender for Office 365](/defender-office-365/mdo-about)
 
 - [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 

@@ -74,8 +74,6 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
   - _Search for Exchange mail flow rules (transport rules) by name in Threat Explorer_: Membership in the **Security Administrator** or **Security Reader** roles.
   - _Read-only access_: Membership in the **Global Reader** or **Security Reader** roles.
 
- 
-
 > [!TIP]
 > Audit log entries are generated when admins preview or download email messages. You can search the admin audit log by user for **AdminMailAccess** activity. For instructions, see [Audit New Search](/purview/audit-new-search).
 
@@ -404,7 +402,7 @@ When you select an entry by clicking on the **Recipient** value, a details flyou
     - Whether the user has permission to see archive information.
     - Whether the user has permission to see retention information.
     - Whether the user is covered by data loss prevention (DLP).
-    - Whether the user is covered by **Mobile management** at <https://portal.office.com/EAdmin/Device/IntuneInventory.aspx>. 
+    - Whether the user is covered by **Mobile management** at <https://portal.office.com/EAdmin/Device/IntuneInventory.aspx>.
 - **Email** section: A table showing the following related information for messages sent to the recipient:
   - **Date**
   - **Subject**
@@ -534,7 +532,7 @@ When you select an entry by clicking anywhere in the row other than the check bo
   - **Devices**
 
     If more than two devices are involved, select **View all devices** to see all of them.
-  
+
 :::image type="content" source="media/te-rtd-all-email-view-top-urls-tab-details-area-url-details-flyout.png" alt-text="Screenshot of the details flyout after selecting an entry in the Top URLs tab in the All email view in Threat Explorer." lightbox="media/te-rtd-all-email-view-top-urls-tab-details-area-url-details-flyout.png":::
 
 #### Top clicks view for the details area of the All email view in Threat Explorer
