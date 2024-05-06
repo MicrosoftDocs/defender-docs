@@ -7,7 +7,7 @@ ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
 manager: deniseb
-localization_priority: medium
+ms.localizationpriority: medium
 audience: ITPro
 ms.topic: how-to
 ms.collection: 

@@ -4,7 +4,7 @@ ms.reviewer:
 description: Get the Microsoft Safety Scanner tool to find and remove malware from Windows computers.
 keywords: security, malware
 ms.service: defender-endpoint
-ms.subservice: intelligence
+ms.subservice: reference
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
