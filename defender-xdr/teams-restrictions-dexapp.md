@@ -78,3 +78,8 @@ The app should start working after 24 hours.
    :::image type="content" source="/defender-xdr/media/add-dex-app-run.png" alt-text="Screenshot to allow Defender Experts app flyout panel." lightbox="/defender-xdr/media/add-dex-app-run.png":::
 
 3. Complete the rest of the fields as needed then select **Save**. If this policy is for a group of users, make sure that all the members in the channel are assigned to the policy. The app should start working after 24 hours.
+
+### See also
+
+- [Communicating with Defender Experts for XDR](communicate-defender-experts-xdr.md)
+- [Get started with Microsoft Defender Experts for XDR](get-started-xdr.md)
