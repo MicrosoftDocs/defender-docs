@@ -20,7 +20,8 @@ Security Exposure Management is currently in public preview.
 ## Prerequisites
 
 - Before you start, learn about [critical asset management](critical-asset-management.md) in Security Exposure Management.
-- To manage critical assets, you need one of these roles: Global Administrator, Security Administrator, Security Operator, Global Reader, Security Reader.
+- [Review required permissions](prerequisites.md#permissions) for working with the critical assets.
+
 
 ## Review critical assets
 
