@@ -37,7 +37,7 @@ search.appverid: met150
 
 In Windows 10 or newer and Windows Server 2016 or newer, you can use next-generation protection features offered by Microsoft Defender Antivirus and Microsoft Defender Exploit Guard. 
 
-This topic explains how to enable and test the key protection features in Microsoft Defender Antivirus and Microsoft Defender EG and provides you with guidance and links to more information. 
+This article explains how to enable and test the key protection features in Microsoft Defender Antivirus and Microsoft Defender Exploit Guard and provides you with guidance and links to more information. 
 
 This article describes configuration options in Windows 10 or newer and Windows Server 2016 or newer. 
 
@@ -196,7 +196,7 @@ Disable local administrator antivirus settings such as exclusions, and enforce t
 | `01443614-cd74-433a-b99e-2ecdc07bfc25`<br/><br/>(Block executable files from running unless they meet a prevalence, age, or trusted list criterion) | `1 (Block)` |
 | `26190899-1602-49e8-8b27-eb1d0a1ce869`<br/><br/>(Block Office communication application from creating child processes) | `1 (Block)` |
 | `d4f940ab-401b-4efc-aadc-ad5f3c50688a`<br/><br/>(Block all Office applications from creating child processes) | `1 (Block)` |
-| `c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb`<br/><br/>( [PREVIEW] Block use of copied or impersonated system tools) | `1 (Block)` |
+| `c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb`<br/><br/>((PREVIEW) Block use of copied or impersonated system tools) | `1 (Block)` |
 | `d3e037e1-3eb8-44c8-a917-57927947596d`<br/><br/>(Block JavaScript or VBScript from launching downloaded executable content) | `1 (Block)` |
 | `9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2`<br/><br/>(Block credential stealing from the Windows local security authority subsystem) | `1 (Block)` |
 | `a8f5898e-1dc8-49a9-9878-85004b8a61e6`<br/><br/>(Block Webshell creation for Servers) | `1 (Block)` |
