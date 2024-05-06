@@ -123,7 +123,8 @@ Security Exposure Management uses secure score as one of its sources for initiat
 The exposure state for a security initiative is reflected in the initiative score. 
 
 - **Initiatives with metrics**: For initiatives with metrics, the score is calculated based on the value and weight of metrics within the initiative. 
-- **Initiatives without metrics**: For threat initiatives that don't have metrics, the initiative score is based on secure score. As the secure score rises, the initiative score rises.
+- **Initiatives without metrics**: For threat initiatives that don't have metrics, the initiative score is calculated in the same way that [Microsoft Secure Score is calculated](../defender-xdr/microsoft-secure-score.md#how-it-works).
+
 
 For initiatives with metrics:
 
