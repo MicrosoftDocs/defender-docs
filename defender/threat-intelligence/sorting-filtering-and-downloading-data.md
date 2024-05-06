@@ -30,7 +30,7 @@ In this how-to article, you learn how to sort and filter data for the following 
 - Domain Name System (DNS)
 - Reverse DNS
 
-![Sorting DataSets Chrome Screenshot](media/data-sets-01.png)
+:::image type="content" source="/defender/threat-intelligence/media/data-sets-01.png" alt-text="Sorting data sets screenshot." lightbox="/defender/threat-intelligence/media/data-sets-01.png":::
 
 [Learn more about data sets](data-sets.md)
 
@@ -68,7 +68,9 @@ Data can be sorted across each data set tab for each IP, domain, or host entity 
 
 1. Search a domain, IP address, or host in **Intel explorer** search bar.
 2. Go to the **Resolutions** tab, then apply the sorting preferences to the **First seen** and **Last seen** columns.
-   ![Sorting Resolutions](media/data-sets-first-seen-last-seen.png)
+
+   :::image type="content" source="/defender/threat-intelligence/media/data-sets-first-seen-last-seen.png" alt-text="Sorting Resolutions." lightbox="/defender/threat-intelligence/media/data-sets-first-seen-last-seen.png":::
+
 
 ## Filtering data
 
@@ -89,7 +91,8 @@ To filter resolution data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
 2. Go to the **Resolutions** tab
 3. Apply filters to each of the types of filter options noted previously.
-   ![Filters Resolutions](media/data-sets-resolutions.png)
+
+   :::image type="content" source="/defender/threat-intelligence/media/data-sets-resolutions.png" alt-text="Filters Resolutions." lightbox="/defender/threat-intelligence/media/data-sets-resolutions.png":::
 
 ### Tracker filters
 
@@ -102,7 +105,8 @@ To filter tracker data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
 2. Go to the **Trackers** tab
 3. Apply filters to each of the types of filter options noted previously.
-   ![Filters Trackers](media/data-sets-trackers.png)
+   
+   :::image type="content" source="/defender/threat-intelligence/media/data-sets-trackers.png" alt-text="Filters Trackers." lightbox="/defender/threat-intelligence/media/data-sets-trackers.png":::
 
 ### Component filters
 
@@ -115,7 +119,8 @@ To filter component data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
 2. Go to the **Components** tab
 3. Apply filters to each of the types of filter options noted previously.
-   ![Filters Components](media/data-sets-components.png)
+   
+      :::image type="content" source="/defender/threat-intelligence/media/data-sets-components.png" alt-text="Filters Components." lightbox="/defender/threat-intelligence/media/data-sets-components.png":::
 
 ### Host pair filters
 
@@ -129,7 +134,8 @@ To filter host pair data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
 2. Go to the **Host pairs** tab
 3. Apply filters to each of the types of filter options noted previously.
-   ![Filters Host Pairs](media/data-sets-host-pairs.png)
+
+   :::image type="content" source="/defender/threat-intelligence/media/data-sets-host-pairs.png" alt-text="Filters Host pairs." lightbox="/defender/threat-intelligence/media/data-sets-host-pairs.png":::
 
 ### DNS and reverse DNS filters
 
@@ -142,11 +148,12 @@ To filter DNS and reverse DNS data:
 1. Search a domain, IP address, or host in the **Intel explorer** search bar. 
 2. Go to the **DNS** and **Reverse DNS** tabs
 3. Apply filters to each of the types of filter options noted previously.
-   ![Filters DNS](media/data-sets-dns.png)
+
+   :::image type="content" source="/defender/threat-intelligence/media/data-sets-dns.png" alt-text="Filters DNS." lightbox="/defender/threat-intelligence/media/data-sets-dns.png":::
 
 ## Downloading data
 
-There are various sections in Defender TI where you can export data as a CSV file. Look out for and select **Download** ![Download Icon](media/downloadIcon.png) in the following sections:
+There are various sections in Defender TI where you can export data as a CSV file. Look out for and select **Download** ![Download icon](media/downloadIcon.png) in the following sections:
 
 - Most data set tabs
 - Projects
