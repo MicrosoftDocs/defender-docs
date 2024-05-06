@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/04/2024
+ms.date: 05/06/2024
 ---
 
 # Advanced deployment guidance for Microsoft Defender for Endpoint on Linux
