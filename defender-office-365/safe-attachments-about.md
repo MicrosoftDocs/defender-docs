@@ -49,7 +49,7 @@ Safe Attachments scanning takes place in the same region where your Microsoft 36
 > - [Safe Documents in Microsoft 365 E5](safe-documents-in-e5-plus-security-about.md)
 
 > [!TIP]
-> Simplify *Microsoft Defender for Office 365* (MDO) deployment with our setup guide. Protect against email, link, and collaboration threats. Configure policies, access reports, and automate investigations. Features include Safe Links, Safe Attachments, and more. Login credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on setup.cloud.microsoft. Anyone, from potential Microsoft clients to partners and IT admins, may access the guides and use them freely (Login credentials are not required). 
+> Simplify *Microsoft Defender for Office 365* (MDO) deployment with our [setup guide](https://go.microsoft.com/fwlink/?linkid=2268341). Protect against email, link, and collaboration threats. Configure policies, access reports, and automate investigations. Features include Safe Links, Safe Attachments, and more. Login credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/?linkid=2268240). Anyone, from potential Microsoft clients to partners and IT admins, may access the guides and use them freely (Login credentials are not required). 
 ## Safe Attachments policy settings
 
 This section describes the settings in Safe Attachments policies:
