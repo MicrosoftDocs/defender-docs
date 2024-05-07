@@ -70,7 +70,7 @@ If you can reproduce a problem, increase the logging level, run the system for s
 
 ## Logging installation issues
 
-If an error occurs during installation, the installer reports a general failure only. The detailed log is saved to `/Library/Logs/Microsoft/mdatp/install.log`. If you experience issues during installation, give this file to your technical support agent so we can help diagnose the cause.
+If an error occurs during installation, the installer reports a general failure only. The detailed log is saved to `/Library/Logs/Microsoft/mdatp/install.log`. If you experience issues during installation, send us this file when you open your support case so we can help diagnose the cause.
 
 For further troubleshooting installation issues, see [Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](mac-support-install.md).
 
@@ -79,11 +79,11 @@ For further troubleshooting installation issues, see [Troubleshoot installation 
 > [!NOTE]
 > Before uninstalling Microsoft Defender for Endpoint on macOS, please offboard per [Offboard non-Windows devices](configure-endpoints-non-windows.md).
 
-There are several ways to uninstall Microsoft Defender for Endpoint on macOS. Note that while centrally managed uninstall is available on JAMF, it is not yet available for Microsoft Intune.
+There are several ways to uninstall Microsoft Defender for Endpoint on macOS. Although centrally managed uninstallation is available on JAMF, it's not yet available for Microsoft Intune.
 
 ### Interactive uninstallation
 
-- Open **Finder > Applications**. Right click on **Microsoft Defender for Endpoint > Move to Trash**.
+- Open **Finder > Applications**. Right click on **Microsoft Defender for Endpoint**, and then select **Move to Trash**.
 
 ### Supported output types
 
@@ -99,28 +99,27 @@ Supports table and JSON format output types. For each command, there's a default
 
 ### Using JAMF Pro
 
-To uninstall Microsoft Defender for Endpoint on macOS using JAMF Pro upload the **offboarding profile**. 
+To uninstall Microsoft Defender for Endpoint on macOS using JAMF Pro upload the offboarding profile. 
 
-The **offboarding profile** should be uploaded without any modifications, and with Preference Domain name set to **com.microsoft.wdav.atp.offboarding**:
+The offboarding profile should be uploaded without any modifications, and with Preference Domain name set to `com.microsoft.wdav.atp.offboarding`, as shown in the following image:
 
    :::image type="content" source="/defender/media/defender-endpoint/jamf-pro-offboarding.png" alt-text="Screenshot of the JAMF offboarding screen" lightbox="/defender/media/defender-endpoint/jamf-pro-offboarding.png":::
 
 
 > [!NOTE]
-> If you have trouble uninstalling Defender for Endpoint on Mac, and you see in your reports an item for Microsoft Defender Endpoint Security Extension, follow these steps:
+> If you have trouble uninstalling Defender for Endpoint on Mac, and you see in your reports an item for *Microsoft Defender Endpoint Security Extension*, follow these steps:
 > 1. Reinstall the Microsoft Defender app.
-> 1. Drag Microsoft Defender.app to Trash.
-> 1. Run this command: `sudo /Library/Application Support/Microsoft/Defender/uninstall/install_helper execute --path '/Library/Application Support/Microsoft/Defender/uninstall/uninstall' --args --post-uninstall-hook`
-> 1. Restart the device.
+> 2. Drag **Microsoft Defender.app** to **Trash**.
+> 3. Run this command: `sudo /Library/Application Support/Microsoft/Defender/uninstall/install_helper execute --path '/Library/Application Support/Microsoft/Defender/uninstall/uninstall' --args --post-uninstall-hook`.
+> 4. Restart the device.
 
-
-## Configuring from the command line
+## Configure Defender for Endpoint using the command line
 
 Important tasks, such as controlling product settings and triggering on-demand scans, can be done from the command line:
 
 |Group|Scenario|Command|
 |---|---|---|
-|Configuration|Turn on/off antivirus passive mode|`mdatp config passive-mode --value [enabled/disabled]`|
+|Configuration|Turn on/off antivirus in passive mode|`mdatp config passive-mode --value [enabled/disabled]`|
 |Configuration|Turn on/off real-time protection|`mdatp config real-time-protection --value [enabled/disabled]`|
 |Configuration|Turn on/off cloud protection|`mdatp config cloud --value [enabled/disabled]`|
 |Configuration|Turn on/off product diagnostics|`mdatp config cloud-diagnostic --value [enabled/disabled]`|
@@ -149,7 +148,7 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |Quarantine management|Remove all files from the quarantine|`mdatp threat quarantine remove-all`|
 |Quarantine management|Add a file detected as a threat to the quarantine|`mdatp threat quarantine add --id [threat-id]`|
 |Quarantine management|Remove a file detected as a threat from the quarantine|`mdatp threat quarantine remove --id [threat-id]`|
-|Quarantine management|Restore a file from the quarantine. Available in Defender for Endpoint version lower than 101.23092.0012.|`mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine. Available in Defender for Endpoint version before [101.23092.0012](mac-whatsnew#nov-2023-build-101230920007--release-version-2012309270).|`mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`|
 |Quarantine management|Restore a file from the quarantine with Threat ID. Available in Defender for Endpoint version 101.23092.0012 or higher.|`mdatp threat restore threat-id --id [threat-id] --destination-path [destination-folder]`|
 |Quarantine management|Restore a file from the quarantine with Threat Original Path. Available in Defender for Endpoint version 101.23092.0012 or higher.|`mdatp threat restore threat-path --path [threat-original-path] --destination-path [destination-folder]`|
 |Network Protection Configuration|Configure the Network Protection enforcement level|`mdatp config network-protection enforcement-level --value [Block/Audit/Disabled]`|
