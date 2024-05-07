@@ -36,18 +36,6 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 - [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
 
 
-**Troubleshooting mode for macOS**
-
-Troubleshooting mode helps you identify instances where antivirus might be causing issues with your applications or system resources. To learn more, see [Troubleshooting mode in Microsoft Defender for Endpoint on macOS](mac-troubleshoot-mode.md).  
-
-**Mac devices receive built-in protection**
-
-Tamper protection is turned on in block mode by default. This setting helps secure your Mac against threats. To learn more, see [Protect macOS security settings with tamper protection](built-in-protection.md).
-
-**Network protection available for macOS**
-
-Network protection for macOS is now available for all Mac devices onboarded to Defender for Endpoint. Devices must meet the minimum requirements. To learn more, see [Use network protection to help prevent macOS connections to bad sites](network-protection-macos.md).
-
 **Known issues**
 
 Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes), which is fixed with the latest OS update. The issue impacts Microsoft Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting its ability to function properly.
@@ -73,11 +61,16 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 ##### What's new
 
 - Improvements to `mdatp threat` command
+
 - Remove Big Sur from supported versions of macOS
 - [[device control](mac-device-control-overview.md)] Fix Bluetooth support on Sonoma (see Note below)
 - Bug and performance fixes
 
-    > [!NOTE]
+- **(GA) Troubleshooting mode for macOS**
+
+  Troubleshooting mode helps you identify instances where antivirus might be causing issues with your applications or system resources. To learn more, see [Troubleshooting mode in Microsoft Defender for Endpoint on macOS](mac-troubleshoot-mode.md).  
+  
+      > [!NOTE]
     > You need to deploy a new MDM configuration profile for Defender to access Bluetooth.
     > See details for [JAMF](mac-jamfpro-policies.md#step-10-grant-bluetooth-permissions) and [Intune](mac-install-with-intune.md#step-7-bluetooth-permissions)
 
@@ -165,6 +158,10 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Fix: Security Portal events might have missed ancestors details for short lived processes
 - Fix: Major performance issues on macOS when Network Protection is set to Audit mode
 
+- **(GA) Mac devices receive built-in protection**
+
+Tamper protection is turned on in block mode by default. This setting helps secure your Mac against threats. To learn more, see [Protect macOS security settings with tamper protection](built-in-protection.md).
+
 ### Aug-2023 (Build: 101.23062.0016  | Release version: 20.123062.16.0)
 
 | Build:             | **101.23062.0016**    |
@@ -204,6 +201,10 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 - System Extensions health command `mdatp health --details system_extensions`
 - Bug and performance fixes
+
+- **(GA) Network protection available for macOS**
+
+Network protection for macOS is now available for all Mac devices onboarded to Defender for Endpoint. Devices must meet the minimum requirements. To learn more, see [Use network protection to help prevent macOS connections to bad sites](network-protection-macos.md).
 
 ### May-2023 (Build: 101.98.71  | Release version: 20.123032.19871.0)
 
@@ -259,6 +260,31 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - Discontinued support macOS Catalina [10.15]
 
 <br/>
+
+&ensp;Build: **101.96.85**<br/>
+&ensp;Release version: **20.122112.19413.0**<br/>
+&ensp;Engine version: **1.1.19900.2**<br/>
+&ensp;Signature version: **1.381.2029.0**<br/>
+
+&ensp;Build: **101.96.85**<br/>
+&ensp;Release version: **20.122112.19413.0**<br/>
+&ensp;Engine version: **1.1.19900.2**<br/>
+&ensp;Signature version: **1.381.2029.0**<br/>
+
+&ensp;Build: **101.96.85**<br/>
+&ensp;Release version: **20.122112.19413.0**<br/>
+&ensp;Engine version: **1.1.19900.2**<br/>
+&ensp;Signature version: **1.381.2029.0**<br/>
+
+&ensp;Build: **101.96.85**<br/>
+&ensp;Release version: **20.122112.19413.0**<br/>
+&ensp;Engine version: **1.1.19900.2**<br/>
+&ensp;Signature version: **1.381.2029.0**<br/>
+
+&ensp;Build: **101.96.85**<br/>
+&ensp;Release version: **20.122112.19413.0**<br/>
+&ensp;Engine version: **1.1.19900.2**<br/>
+&ensp;Signature version: **1.381.2029.0**<br/>
 
 &ensp;Build: **101.96.85**<br/>
 &ensp;Release version: **20.122112.19413.0**<br/>
@@ -1067,6 +1093,8 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 <br/><br/>
 </details>
+
+
 
 
 
