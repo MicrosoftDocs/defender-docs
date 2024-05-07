@@ -5,9 +5,9 @@ search.appverid: met150
 ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
-ms.reviewer: noamhadash
+ms.reviewer: noamhadash, pahuijbr
 ms.localizationpriority: medium
-ms.date: 04/09/2024
+ms.date: 05/08/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
