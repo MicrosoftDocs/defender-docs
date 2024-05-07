@@ -49,7 +49,7 @@ Let us know what you think! Submit your feedback at the bottom of the page. We'l
 
 - [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)
 - [Microsoft Defender for Endpoint](/windows/security/threat-protection)
-- [Microsoft Defender for Office 365]/defender-office-365/mdo-about
+- [Microsoft Defender for Office 365](/defender-office-365/mdo-about)
 - [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)
 - [Microsoft Defender for Business](/defender-business/mdb-overview)
 
