@@ -77,7 +77,7 @@ For further troubleshooting installation issues, see [Troubleshoot installation 
 ## Uninstalling
 
 > [!NOTE]
-> Before uninstalling Microsoft Defender for Endpoint on macOS, please offboard per [Offboard non-Windows devices](configure-endpoints-non-windows.md).
+> Before uninstalling Microsoft Defender for Endpoint on macOS, offboard each device per [Offboard non-Windows devices](configure-endpoints-non-windows.md).
 
 There are several ways to uninstall Microsoft Defender for Endpoint on macOS. Although centrally managed uninstallation is available on JAMF, it's not yet available for Microsoft Intune.
 
@@ -149,8 +149,8 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |Quarantine management|Add a file detected as a threat to the quarantine|`mdatp threat quarantine add --id [threat-id]`|
 |Quarantine management|Remove a file detected as a threat from the quarantine|`mdatp threat quarantine remove --id [threat-id]`|
 |Quarantine management|Restore a file from the quarantine. Available in Defender for Endpoint version before [101.23092.0012](mac-whatsnew#nov-2023-build-101230920007--release-version-2012309270).|`mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`|
-|Quarantine management|Restore a file from the quarantine with Threat ID. Available in Defender for Endpoint version 101.23092.0012 or higher.|`mdatp threat restore threat-id --id [threat-id] --destination-path [destination-folder]`|
-|Quarantine management|Restore a file from the quarantine with Threat Original Path. Available in Defender for Endpoint version 101.23092.0012 or higher.|`mdatp threat restore threat-path --path [threat-original-path] --destination-path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine with Threat ID. Available in Defender for Endpoint version [101.23092.0012](mac-whatsnew#nov-2023-build-101230920007--release-version-2012309270) or later.|`mdatp threat restore threat-id --id [threat-id] --destination-path [destination-folder]`|
+|Quarantine management|Restore a file from the quarantine with Threat Original Path. Available in Defender for Endpoint version [101.23092.0012](mac-whatsnew#nov-2023-build-101230920007--release-version-2012309270) or later.|`mdatp threat restore threat-path --path [threat-original-path] --destination-path [destination-folder]`|
 |Network Protection Configuration|Configure the Network Protection enforcement level|`mdatp config network-protection enforcement-level --value [Block/Audit/Disabled]`|
 |Network Protection management|Check Network protection was started successfully|`mdatp health --field network_protection_status`|
 |Device Control management|Is Device Control enabled, and what is the Default Enforcement?|`mdatp device-control policy preferences list`|
