@@ -1,7 +1,7 @@
 ---
 title: EDR detection test for verifying device's onboarding and reporting service
 description: EDR detection test to verify the device's proper onboarding and reporting to the service.
-ms.service: microsoft-365-security
+ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
@@ -13,7 +13,7 @@ ms.collection:
 - mde-macos
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.subservice: mde
+ms.subservice: edr
 search.appverid: met150
 ms.date: 01/15/2024
 ---
