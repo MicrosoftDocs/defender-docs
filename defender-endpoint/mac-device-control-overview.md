@@ -64,7 +64,7 @@ Example 1: JAMF using [schema.json](https://github.com/microsoft/mdatp-xplat/tre
 
 :::image type="content" source="media/macos-device-control-jamf-json.png" alt-text="Screenshot that shows how to enable Device Control in Microsoft Defender for Endpoint Data Loss Prevention / Features.":::
 
-Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/macOS/mobileconfig/demo.mobileconfig)
+Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/mobileconfig/demo.mobileconfig)
 
 ```xml
 <key>dlp</key>
