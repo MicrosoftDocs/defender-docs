@@ -29,6 +29,12 @@ ms.date: 02/01/2024
 
 Before you onboard devices to Defender for Endpoint, make sure your network is configured to connect to the service. The first step of this process involves adding URLs to the allowed domains list if your proxy server or firewall rules prevent access to Defender for Endpoint. This article also includes information about proxy and firewall requirements for older versions of Windows client and Windows Server.
 
+> [!NOTE}
+> - Tenants created on or before May 8th, 2024 will have the option to select streamlined connectivity (consolidated set of URLs) as the default onboarding method or remain on standard through settings.
+> - If your tenant already had streamlined connectivity enabled as part of the public preview, it will remain enabled.
+> - New tenants created after May 8th, 2024, will default to streamlined connectivity.
+> - Read more about streamlined connectivity at [Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint](configure-device-connectivity.md)
+
 ## Enable access to Microsoft Defender for Endpoint service URLs in the proxy server
 
 The following downloadable spreadsheet lists the services and their associated URLs that devices in your network must be able to connect to. Ensure there are no firewall or network filtering rules to deny access for these URLs. Optionally, you may need to create an *allow* rule specifically for them.
