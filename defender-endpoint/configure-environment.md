@@ -29,11 +29,10 @@ ms.date: 02/01/2024
 
 Before you onboard devices to Defender for Endpoint, make sure your network is configured to connect to the service. The first step of this process involves adding URLs to the allowed domains list if your proxy server or firewall rules prevent access to Defender for Endpoint. This article also includes information about proxy and firewall requirements for older versions of Windows client and Windows Server.
 
-> [!NOTE}
-> - Tenants created on or before May 8th, 2024 will have the option to select streamlined connectivity (consolidated set of URLs) as the default onboarding method or remain on standard through settings.
+> [!NOTE]
+> - Tenants created on or before May 8th, 2024 will have the option to select streamlined connectivity (consolidated set of URLs) as the default onboarding method or remain on standard through settings. When you've verified prerequisites have been met and are ready to set the default onboarding package to streamlined, you can turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**). For onboarding through Intune & Microsoft Defender for Cloud, you will need to activate the relevant option. Devices already onboarded will not automatically re-onboard; you will need to create a new policy in Intune, where it is recommended to first assign the policy to a set of test devices to verify connectivity is successful, before expanding the audience. Devices in Defender for Cloud can be re-onboarded using the relevant onboarding script.
 > - If your tenant already had streamlined connectivity enabled as part of the public preview, it will remain enabled.
-> - New tenants created after May 8th, 2024, will default to streamlined connectivity.
-> - Read more about streamlined connectivity at [Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint](configure-device-connectivity.md)
+> - New tenants created after May 8th, 2024, will default to streamlined connectivity. Read more at [Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint](configure-device-connectivity.md)
 
 ## Enable access to Microsoft Defender for Endpoint service URLs in the proxy server
 
