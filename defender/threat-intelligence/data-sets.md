@@ -41,7 +41,7 @@ Advanced data sets include:
 
 Advanced data sets are collected from observing the Document Object Model (DOM) of crawled web pages. Additionally, components and trackers are also observed from detection rules that are triggered based on the banner responses from port scans or TLS certificate details.
 
-![Data Sets Edge Screenshot](media/dataSetsEdgeScreenshot.png)
+:::image type="content" source="/defender/threat-intelligence/media/data-sets-01.png" alt-text="Sorting data sets screenshot." lightbox="/defender/threat-intelligence/media/data-sets-01.png":::
 
 ## Resolutions
 
@@ -60,7 +60,7 @@ Our PDNS resolution data includes the following information:
 - **Source**: The source that enabled the detection of the relationship.
 - **Tags**: Any tags applied to this artifact in Defender TI ([Learn more](using-tags.md))
 
-![Data Tab Resolutions](media/dataTabResolutions.png)
+![Data Tab Resolutions](media/data-sets-info.png)
 
 **Questions this data set might help answer**
 
@@ -68,34 +68,34 @@ Our PDNS resolution data includes the following information:
 
 - When did Defender TI first observe the domain resolving to an IP address?
 
-  ![Data Sets Domain First Seen](media/dataSetsDomainFirstSeen.png)
+  ![Data Sets Domain First Seen](media/data-sets-resolutions-first-seen.png)
 
 - When was the last time Defender TI saw the domain actively resolving to an IP address?
 
 - What IP address or addresses does the domain currently resolve to?
-    ![Data Sets Domain Active Re solutions](media/dataSetsDomainActiveResolutions.png)
+    ![Data Sets Domain Active Re solutions](media/data-sets-resolutions-resolve.png)
   
 *IP addresses*
 
 - Is the IP address routable?
 
-  ![Data Sets Routable IPs](media/dataSetsRoutableIPs.png)
+  ![Data Sets Routable IPs](media/data-sets-resolutions-routable.png)
 
 - What subnet is the IP address part of?
 
-  ![Data Sets IP Subnet](media/dataSetsIPSubnet.png)
+  ![Data Sets IP Subnet](media/data-sets-resolutions-netblock.png)
 
 - Is there an owner associated with the subnet?
 
-  ![Data Sets IP Owner](media/dataSetsIPOwner.png)
+  ![Data Sets IP Owner](media/data-sets-resolutions-owner.png)
 
 - What AS is the IP address part of?
 
-  ![Data Sets IPASN](media/dataSetsIPASN.png)
+  ![Data Sets IPASN](media/data-sets-resolutions-asn.png)
 
 - Is there geolocation?
 
-  ![Data Sets IP Geo location](media/dataSetsIPGeolocation.png)
+  ![Data Sets IP Geo location](media/data-sets-resolutions-geoloc.png)
 
 ## WHOIS
 
@@ -126,59 +126,61 @@ Our WHOIS data includes the following information:
 
 ### Current WHOIS lookups
 
-![Data Tab WHOIS](media/dataTabWHOIS.png)
+![Data Tab WHOIS](media/data-sets-whois.png)
 
 Defender TI’s current WHOIS repository highlights all domains in Microsoft’s WHOIS collection that are currently registered and associated with the WHOIS attribute of interest. This data highlights the domain's registration and expiration date, along with the email address used to register the domain. This data is displayed in the WHOIS Search tab of the platform.
 
 ### Historical WHOIS lookups
 
-![Search Whois History](media/searchWhoisHistory.png)
+![Search Whois History](media/data-sets-whois-history.png)
 
-Defender TI’s **WHOIS history** repository provides users with access to all known historical domain associations to WHOIS attributes based on the system’s observations. This data set highlights all domains associated with an attribute that a user pivots from displaying the first time and the last time we observed the association between the domain and attribute queried. This data is displayed in a separate tab next to the current WHOIS search tab.
+Defender TI’s **WHOIS history** repository provides users with access to all known historical domain associations to WHOIS attributes based on the system’s observations. This data set highlights all domains associated with an attribute that a user pivots from displaying the first time and the last time we observed the association between the domain and attribute queried. This data is displayed in a separate tab next to the **WHOIS current** tab.
 
 **Questions this data set might help answer**
 
 - How old is the domain?
 
-  ![Data Sets Whois Domain Age](media/dataSetsWhoisDomainAge.png)
+  ![Data Sets Whois Domain Age](media/data-sets-whois-domain-age.png)
 
 - Does the information appear to be privacy protected?
 
-  ![Data Sets Whois Privacy Protected](media/dataSetsWhoisPrivacyProtected.png)
+  ![Data Sets Whois Privacy Protected](media/data-sets-whois-privacy.png)
 
 - Does any of the data appear to be unique?
 
-  ![Data Sets Whois Unique](media/dataSetsWhoisUnique.png)
+  ![Data Sets Whois Unique](media/data-sets-whois-unique.png)
 
 - What name servers are used?
 
-  ![Data Sets Whois Name Servers](media/dataSetsWhoisNameServers.png)
+  ![Data Sets Whois Name Servers](media/data-sets-whois-ns.png)
 
 - Is this domain a sinkhole domain?
 
-  ![Data Sets Whois Sinkhole](media/dataSetsWhoisSinkhole.png)
+  ![Data Sets Whois Sinkhole](media/data-sets-whois-sinkhole.png)
 
 - Is this domain a parked domain?
 
-  ![Data Sets Whois Parked Domain](media/dataSetsWhoisParkedDomain.png)
+  ![Data Sets Whois Parked Domain](media/data-sets-whois-parked.png)
 
 - Is this domain a honeypot domain?
 
-  ![Data Sets Whois Honeypot Domain](media/dataSetsWhoisHoneypotDomain.png)
+  ![Data Sets Whois Honeypot Domain](media/data-sets-whois-honeypot.png)
 
 - Is there any history?
 
-  ![Data Sets Whois History](media/dataSetsWhoisHistory.gif)
+  ![Data Sets Whois History](media/data-sets-whois-record-history.png)
 
 - Are there any fake privacy protection emails?
 
-  ![Data Sets Whois Fake Privacy Emails](media/dataSetsWhoisFakePrivacyEmails.png)
+  ![Data Sets Whois Fake Privacy Emails](media/data-sets-whois-privacy-emails.png)
 
 - Are there any fake names in the WHOIS record?
 
 - Are other related IOCs identified from searching against potentially shared WHOIS values across domains?
 
-  ![Data Sets Whois Shared Value Search](media/dataSetsWhoisSharedValueSearch.gif)
+  ![Data Sets Whois Shared Value Search](media/data-sets-whois-phone-01.png)
+
+    ![Data Sets Whois Shared Value Search phone](media/data-sets-whois-phone-02.png)
 
 ## Certificates
 Beyond securing your data, TLS certificates are a fantastic way for users to connect disparate network infrastructure. Modern scanning techniques let us perform data requests against every node on the internet in a matter of hours. In other words, we can associate a certificate to an IP address hosting it easily and regularly.
