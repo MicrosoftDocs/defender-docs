@@ -21,7 +21,8 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2, payload automations (also known as _payload harvesting_) collect information from real-world phishing attacks that were reported by users in your organization. You can specify the conditions to look for in phishing attacks (for example, recipients, social engineering technique, or sender information). Attack simulation training then mimics the messages and payloads used in the attack to automatically launch harmless simulations to targeted users.
+In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2, payload automations (also known as _payload harvesting_) collect information from real-world phishing attacks that were reported by users in your organization. You can specify the conditions to look for in phishing attacks (for example, recipients, social engineering technique, or sender information). Payload automation then mimics the messages and payloads used in the attack and stores it into the tenant payload section prepending the name of the created payload automation.
+This can then be used by in simulations or automations to automatically launch harmless simulations to targeted users.
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
