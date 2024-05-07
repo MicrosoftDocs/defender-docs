@@ -50,6 +50,10 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 - [What's new in Defender for Endpoint on Android](android-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 
+## May 2024
+
+- (GA) [Streamlined device connectivity for Defender for Endpoint](configure-device-connectivity.md) is now generally available for Windows, macOS, and Linux. This experience makes it easier to configure and manage Defender for Endpoint services by reducing the number of URLs required for connectivity, providing IP & Azure service tag support, and simplifying post-deployment network management.
+
 ## April 2024
 
 **Microsoft Defender for Endpoint on macOS** feature now in GA:
