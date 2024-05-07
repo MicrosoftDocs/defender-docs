@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 4/8/2024
+ms.date: 5/7/2024
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -60,6 +60,8 @@ Safe Links protection by Safe Links policies is available in the following locat
   > Safe Links doesn't provide protection for URLs in Rich Text Format (RTF) email messages.
   >
   > Safe Links supports only HTTP(S) and FTP formats.
+  >
+  > Although Safe Links no longer wraps URLs pointing to SharePoint sites, SharePoint URLs are still processed by Safe Links. This change improves the performance of loading SharePoint URLs without degrading protection.
   >
   > Using another service to wrap links before Defender for Office 365 might prevent Safe Links from process links, including wrapping, detonating, or otherwise validating the "maliciousness" of the link.
 
