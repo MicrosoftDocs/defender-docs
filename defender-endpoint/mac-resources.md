@@ -106,6 +106,15 @@ The **offboarding profile** should be uploaded without any modifications, and wi
 
    :::image type="content" source="/defender/media/defender-endpoint/jamf-pro-offboarding.png" alt-text="Screenshot of the JAMF offboarding screen" lightbox="/defender/media/defender-endpoint/jamf-pro-offboarding.png":::
 
+
+> [!NOTE]
+> If you have trouble uninstalling Defender for Endpoint on Mac, and you see in your reports an item for Microsoft Defender Endpoint Security Extension, follow these steps:
+> 1. Reinstall the Microsoft Defender app.
+> 1. Drag Microsoft Defender.app to Trash.
+> 1. Run this command: `sudo /Library/Application Support/Microsoft/Defender/uninstall/install_helper execute --path '/Library/Application Support/Microsoft/Defender/uninstall/uninstall' --args --post-uninstall-hook`
+> 1. Restart the device.
+
+
 ## Configuring from the command line
 
 Important tasks, such as controlling product settings and triggering on-demand scans, can be done from the command line:
