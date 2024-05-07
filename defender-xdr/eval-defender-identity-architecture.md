@@ -43,13 +43,19 @@ The following diagram illustrates the baseline architecture for Defender for Ide
 In this illustration:
 
 - Sensors installed on Active Directory Domain Services (AD DS) domain controllers and Active Directory Certificate Services (AD CS) servers parse logs and network traffic and send them to Microsoft Defender for Identity for analysis and reporting.
-- Sensors can also parse Active Directory Federation Services (AD FS) for third-party identity providers and when Microsoft Entra ID is configured to use federated authentication (the dotted lines in the illustration).
+- Sensors can also parse Active Directory Federation Services (AD FS) authentications for third-party identity providers and when Microsoft Entra ID is configured to use federated authentication (the dotted lines in the illustration).
 - Microsoft Defender for Identity shares signals to Microsoft Defender XDR for extended detection and response (XDR).
 
 Defender for Identity sensors can be directly installed on the following servers:
 
-- Domain controllers: The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
-- AD FS: The sensor directly monitors network traffic and authentication events.
+- AD DS domain controllers
+
+  The sensor directly monitors domain controller traffic, without the need for a dedicated server or the configuration of port mirroring.
+
+- AD CS servers
+- AD FS servers
+
+  The sensor directly monitors network traffic and authentication events.
 
 For a deeper look into the architecture of Defender for Identity, see [Microsoft Defender for Identity architecture](/defender-for-identity/architecture).
 
