@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 05/07/2024
 ---
 
 # Resources for Microsoft Defender for Endpoint on macOS
@@ -31,7 +31,7 @@ ms.date: 04/30/2024
 
 ## Collecting diagnostic information
 
-If you can reproduce a problem, increase the logging level, run the system for some time, and restore the logging level to the default.
+If you can reproduce a problem, increase the logging level, run the system for some time, and then restore the logging level to the default.
 
 1. Increase logging level:
 
@@ -43,9 +43,9 @@ If you can reproduce a problem, increase the logging level, run the system for s
    Log level configured successfully
    ```
 
-2. Reproduce the problem
+2. Reproduce the problem.
 
-3. Run `sudo mdatp diagnostic create` to back up the Microsoft Defender for Endpoint logs. The files will be stored inside a .zip archive. This command will also print out the file path to the backup after the operation succeeds.
+3. Run `sudo mdatp diagnostic create` to back up the Microsoft Defender for Endpoint logs. The files are stored inside a `.zip` archive. This command also prints out the file path to the backup after the operation succeeds.
 
    > [!TIP]
    > By default, diagnostic logs are saved to `/Library/Application Support/Microsoft/Defender/wdavdiag/`. To change the directory where diagnostic logs are saved, pass `--path [directory]` to the below command, replacing `[directory]` with the desired directory.
