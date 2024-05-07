@@ -313,7 +313,7 @@ If you select an entry in the **Attachments** view by clicking on the **Attachme
     - **Indicators of compromise**
 
   - **Screenshots section**: Show any screenshots that were captured during detonation. No screenshots are captured for container files like ZIP or RAR that contain other files.
-  
+
     If no detonation screenshots are available, the value **No screenshots to display** is shown. Otherwise, select the link to view the screenshot.
 
   - **Behavior details** section: Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation. There might not be any behavior details for container files like ZIP or RAR that contain other files.
@@ -392,7 +392,7 @@ If you select an entry in the **URL** view by clicking on the **URL** value, a d
     - **Verdict**: The verdict on the URL itself.
 
   - **Screenshots section**: Show any screenshots that were captured during detonation. No screenshots are captured if the URL opens into a link that directly downloads a file. However, you see the downloaded file in the detonation chain.
-  
+
     If no detonation screenshots are available, the value **No screenshots to display** is shown. Otherwise, select the link to view the screenshot.
 
   - **Behavior details** section: Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation.

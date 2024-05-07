@@ -2,11 +2,11 @@
 title: Configure Offline Security Intelligence Update for Microsoft Defender for Endpoint on Linux (preview)
 description: Offline Security Intelligence Update in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: dansimp
+author: dansimp
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: dansimp
 audience: ITPro
 ms.collection:
 - m365-security

@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 04/03/2024
+ms.date: 04/30/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -29,9 +29,15 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## May 2024
+
+- (Preview) The **SOC optimizations** page in the Microsoft Defender portal is now available with the [unified security operations platform](https://go.microsoft.com/fwlink/p/?linkid=2263690). Integrate Microsoft Defender XDR and Microsoft Sentinel and use SOC optimizations to optimize both processes and outcomes, without having your SOC teams spend time on manual analysis and research. For more information, see:
+
+  - [Optimize your security operations](https://aka.ms/soc-opt-from-defender)
+  - [SOC optimization reference](https://aka.ms/soc-opt-ref)
+
 ## April 2024
 
-- (Preview) **Endpoint security policies** page in multitenant management is now available. Security administrators can manage security settings on their tenants' devices through the page. For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md).
 - (Preview) The **unified security operations platform** in the Microsoft Defender portal is now available. This release brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, and Microsoft Copilot in Microsoft Defender. For more information, see the following resources:
 
   - Blog announcement: [Unified security operations platform ready to revolutionize protection and efficiency](https://aka.ms/unified-soc-announcement)

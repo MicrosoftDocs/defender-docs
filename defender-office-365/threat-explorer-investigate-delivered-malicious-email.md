@@ -91,7 +91,7 @@ This article explains how to use Threat Explorer and Real-time detections to fin
      - **Unknown**: For example, after delivery, an Inbox rule moved the message to a default folder (for example, Draft or Archive) instead of to the Inbox or Junk Email folder.
 
    - **Last delivery location**: Where email ended-up after any automatic or manual post-delivery actions by the system or admins. The same values are available from **Original delivery location**.
-  
+
    - **Directionality**: Valid values are:
      - **Inbound**
      - **Intra-org**

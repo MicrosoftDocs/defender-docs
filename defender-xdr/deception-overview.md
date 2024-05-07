@@ -16,7 +16,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 11/14/2023
+ms.date: 05/02/2023
 ---
 
 # Manage the deception capability in Microsoft Defender XDR
@@ -35,7 +35,9 @@ Microsoft Defender XDR, through built-in deception capability, delivers high con
 
 The deception capability automatically generates authentic-looking decoy accounts, hosts, and lures. The fake assets generated are then automatically deployed to specific clients. When an attacker interacts with the decoys or lures, the deception capability raises high confidence alerts, helping in security team's investigations and allowing them to observe an attacker's methods and strategies. All alerts raised by the deception capability are automatically correlated into incidents and are fully integrated into Microsoft Defender XDR. In addition, the deception technology is integrated into Defender for Endpoint, minimizing deployment needs.
 
-This article gives you an overview of Defender XDR's deception technology, prerequisites, and additional resources.
+For an overview of the deception capability, watch the following video.
+
+<iframe width="560" height="415" src="https://www.youtube.com/embed/xoEP7SFEnJc?si=OjweAYJo9cP1X-Yo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Prerequisites
 

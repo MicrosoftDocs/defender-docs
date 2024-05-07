@@ -560,7 +560,7 @@ Use any of the following methods to verify DKIM signing of outbound email from M
      - **s=**: The selector (public key in the DNS record in the domain) that was used to decrypt and verify the DKIM signature of the message.
 
   4. Find the **Authentication-Results** header field in the message header. Although destination email systems might use slightly different formats to stamp inbound mail, the header field should include **DKIM=pass** or **DKIM=OK**. For example:
-  
+
      ```text
      Authentication-Results: mx.google.com;
        dkim=pass header.i=@contoso.com header.s=selector1 header.b=NaHRSJOb;
