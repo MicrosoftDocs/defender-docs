@@ -45,7 +45,7 @@ If you can reproduce a problem, increase the logging level, run the system for s
 
 2. Reproduce the problem.
 
-3. Run `sudo mdatp diagnostic create` to back up the Microsoft Defender for Endpoint logs. The files are stored inside a `.zip` archive. This command also prints out the file path to the backup after the operation succeeds.
+3. Run `sudo mdatp diagnostic create` to back up the Microsoft Defender for Endpoint logs. The files are stored inside a `.zip` archive. This command also prints the file path to the backup after the operation succeeds.
 
    > [!TIP]
    > By default, diagnostic logs are saved to `/Library/Application Support/Microsoft/Defender/wdavdiag/`. To change the directory where diagnostic logs are saved, pass `--path [directory]` to the below command, replacing `[directory]` with the desired directory.
@@ -115,7 +115,7 @@ The offboarding profile should be uploaded without any modifications, and with P
 
 ## Configure Defender for Endpoint using the command line
 
-Important tasks, such as controlling product settings and triggering on-demand scans, can be done from the command line:
+Important tasks, such as controlling product settings and triggering on-demand scans, can be done by using the command line:
 
 |Group|Scenario|Command|
 |---|---|---|
@@ -152,7 +152,7 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |Quarantine management|Restore a file from the quarantine with Threat ID. Available in Defender for Endpoint version 101.23092.0012 or higher.|`mdatp threat restore threat-id --id [threat-id] --destination-path [destination-folder]`|
 |Quarantine management|Restore a file from the quarantine with Threat Original Path. Available in Defender for Endpoint version 101.23092.0012 or higher.|`mdatp threat restore threat-path --path [threat-original-path] --destination-path [destination-folder]`|
 |Network Protection Configuration|Configure the Network Protection enforcement level|`mdatp config network-protection enforcement-level --value [Block/Audit/Disabled]`|
-|Network Protection management|Check Network protection has been started successfully|`mdatp health --field network_protection_status`|
+|Network Protection management|Check Network protection was started successfully|`mdatp health --field network_protection_status`|
 |Device Control management|Is Device Control enabled, and what is the Default Enforcement?|`mdatp device-control policy preferences list`|
 |Device Control management|What Device Control policy is enabled?|`mdatp device-control policy rules list`|
 |Device Control management|What Device Control policy groups are enabled?|`mdatp device-control policy groups list`|
@@ -161,12 +161,12 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |Diagnostics|Generate diagnostic logs|`mdatp diagnostic create --path [directory]`|
 |Health|Check the product's health|`mdatp health`|
 |Health|Check for a specific product attribute|`mdatp health --field [attribute: healthy/licensed/engine_version...]`|
-|EDR|EDR list exclusions (root)|`mdatp edr exclusion list [processes|paths|extensions|all]`|
+|EDR|EDR list exclusions (root)| `mdatp edr exclusion list [processes|paths|extensions|all]` |
 |EDR|Set/Remove tag, only GROUP supported|`mdatp edr tag set --name GROUP --value [name]`|
 |EDR|Remove group tag from device|`mdatp edr tag remove --tag-name [name]`|
 |EDR|Add Group ID|`mdatp edr group-ids --group-id [group]`|
 
-### How to enable autocompletion
+### Enable autocompletion
 
 To enable autocompletion in bash, run the following command and restart the Terminal session:
 
@@ -182,7 +182,7 @@ To enable autocompletion in zsh:
    cat ~/.zshrc | grep autoload
    ```
 
-- If the preceding command does not produce any output, you can enable autocompletion using the following command:
+- If the preceding command doesn't produce any output, you can enable autocompletion using the following command:
 
    ```zsh
    echo "autoload -Uz compinit && compinit" >> ~/.zshrc
@@ -198,9 +198,12 @@ To enable autocompletion in zsh:
 
 ## Client Microsoft Defender for Endpoint quarantine directory
 
-`/Library/Application Support/Microsoft/Defender/quarantine/` contains the files quarantined by `mdatp`. The files are named after the threat trackingId. The current trackingIds is shown with `mdatp threat list`.
+`/Library/Application Support/Microsoft/Defender/quarantine/` contains the files quarantined by `mdatp`. The files are named after the threat trackingId. The current trackingIds are shown with `mdatp threat list`.
 
 ## Microsoft Defender for Endpoint portal information
+
 The Microsoft Defender for Endpoint blog,
 [EDR capabilities for macOS have now arrived](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/edr-capabilities-for-macos-have-now-arrived/ba-p/1047801) provides detailed guidance on what to expect.
+
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
