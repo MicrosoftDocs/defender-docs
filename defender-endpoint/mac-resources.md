@@ -113,7 +113,7 @@ The offboarding profile should be uploaded without any modifications, and with P
 > 3. Run this command: `sudo /Library/Application Support/Microsoft/Defender/uninstall/install_helper execute --path '/Library/Application Support/Microsoft/Defender/uninstall/uninstall' --args --post-uninstall-hook`.
 > 4. Restart the device.
 
-## Configure Defender for Endpoint using the command line
+## Configuring from the command line
 
 Important tasks, such as controlling product settings and triggering on-demand scans, can be done by using the command line:
 
