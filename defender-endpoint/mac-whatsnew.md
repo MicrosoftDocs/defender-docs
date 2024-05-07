@@ -6,7 +6,7 @@ author: YongRhee-MSFT
 ms.author: yongrhee
 manager: dansimp
 ms.localizationpriority: medium
-ms.date: 02/25/2024
+ms.date: 05/07/2024
 audience: ITPro
 ms.collection:
 - m365-security
@@ -69,10 +69,10 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 - **(GA) Troubleshooting mode for macOS**
 
   Troubleshooting mode helps you identify instances where antivirus might be causing issues with your applications or system resources. To learn more, see [Troubleshooting mode in Microsoft Defender for Endpoint on macOS](mac-troubleshoot-mode.md).  
-  
-      > [!NOTE]
-    > You need to deploy a new MDM configuration profile for Defender to access Bluetooth.
-    > See details for [JAMF](mac-jamfpro-policies.md#step-10-grant-bluetooth-permissions) and [Intune](mac-install-with-intune.md#step-7-bluetooth-permissions)
+
+     > [!NOTE]
+     > You need to deploy a new MDM configuration profile for Defender to access Bluetooth.
+     > See details for [JAMF](mac-jamfpro-policies.md#step-10-grant-bluetooth-permissions) and [Intune](mac-install-with-intune.md#step-7-bluetooth-permissions)
 
 ### Mar-2024 (Build: 101.24012.0010  | Release version: 20.124012.10.0)
 
