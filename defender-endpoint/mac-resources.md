@@ -58,7 +58,7 @@ If you can reproduce a problem, increase the logging level, run the system for s
    Diagnostic file created: "/Library/Application Support/Microsoft/Defender/wdavdiag/932e68a8-8f2e-4ad0-a7f2-65eb97c0de01.zip"
    ```
 
-4. Restore logging level:
+4. Restore logging level.
 
    ```bash
    mdatp log level set --level info
@@ -70,10 +70,9 @@ If you can reproduce a problem, increase the logging level, run the system for s
 
 ## Logging installation issues
 
-If an error occurs during installation, the installer will only report a general failure.
+If an error occurs during installation, the installer reports a general failure only. The detailed log is saved to `/Library/Logs/Microsoft/mdatp/install.log`. If you experience issues during installation, give this file to your technical support agent so we can help diagnose the cause.
 
-The detailed log will be saved to `/Library/Logs/Microsoft/mdatp/install.log`. If you experience issues during installation, send us this file so we can help diagnose the cause.
-For further troubleshooting installation issues, please review [Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](mac-support-install.md)
+For further troubleshooting installation issues, see [Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](mac-support-install.md).
 
 ## Uninstalling
 
