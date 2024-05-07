@@ -294,7 +294,7 @@ DeviceProcessEvents
 
    :::image type="content" source="media/mdeplugin-wsl/wsl-health-check-overview.png" alt-text="Screenshot showing status in PowerShell output." lightbox="media/mdeplugin-wsl/wsl-health-check-overview.png":::
 
-6. Microsoft Defender Endpoint for WSL supports Linux distributions running on WSL 2. If they're associated with WSL 1, you might encounter issues. Therefore, it is advised to disable WSL 1. To do so with the Intune policy, perform the following steps :
+6. Microsoft Defender Endpoint for WSL supports Linux distributions running on WSL 2. If they're associated with WSL 1, you might encounter issues. Therefore, it is advised to disable WSL 1. To do so with the Intune policy, perform the following steps:
 
    1. Navigate to your Microsoft Intune admin center portal.
 
