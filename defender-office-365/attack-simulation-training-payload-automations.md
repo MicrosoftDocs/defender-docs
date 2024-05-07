@@ -12,7 +12,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to use payload automations (payload harvesting) to collect and launch automated simulations for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 3/14/2024
+ms.date: 5/7/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -21,8 +21,9 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2, payload automations (also known as _payload harvesting_) collect information from real-world phishing attacks that were reported by users in your organization. You can specify the conditions to look for in phishing attacks (for example, recipients, social engineering technique, or sender information). Payload automation then mimics the messages and payloads used in the attack and stores it into the tenant payload section prepending the name of the created payload automation.
-This can then be used by in simulations or automations to automatically launch harmless simulations to targeted users.
+In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2, payload automations (also known as _payload harvesting_) collect information from real-world phishing attacks that were reported by users in your organization. You can specify the conditions to look for in phishing attacks (for example, recipients, social engineering technique, or sender information).
+
+Payload automation mimics the messages and payloads from the attack and stores them as custom payloads with identifiers in the payload name. You can then use the harvested payloads in simulations or automations to automatically launch harmless simulations to targeted users.
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
