@@ -166,7 +166,7 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |EDR|Remove group tag from device|`mdatp edr tag remove --tag-name [name]`|
 |EDR|Add Group ID|`mdatp edr group-ids --group-id [group]`|
 
-### Enable autocompletion
+### How to enable autocompletion
 
 To enable autocompletion in bash, run the following command and restart the Terminal session:
 
