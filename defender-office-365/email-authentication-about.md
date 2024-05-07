@@ -50,10 +50,15 @@ To prevent email authentication failures due to services that modify **inbound**
 The rest of this article explains:
 
 - [Why internet email needs authentication](#why-internet-email-needs-authentication)
+
 - [How SPF, DKIM, and DMARC work together to authenticate email message senders](#how-spf-dkim-and-dmarc-work-together-to-authenticate-email-message-senders)
+
 - [How Microsoft uses email authentication to check inbound mail sent to Microsoft 365](#inbound-email-authentication-for-mail-sent-to-microsoft-365)
+
 - [How to avoid email authentication failures when sending mail to Microsoft 365](#how-to-avoid-email-authentication-failures-when-sending-mail-to-microsoft-365)
 
+> [!TIP]
+> Simplify *Microsoft Defender for Office 365* (MDO) deployment with our [setup guide](https://go.microsoft.com/fwlink/?linkid=2268341). Protect against email, link, and collaboration threats. Configure policies, access reports, and automate investigations. Features include Safe Links, Safe Attachments, and more. Login credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/?linkid=2268240). Anyone, from potential Microsoft clients to partners and IT admins, may access the guides and use them freely (Login credentials are not required). 
 ## Why internet email needs authentication
 
 By design, Simple Mail Transfer Protocol (SMTP) email on the internet makes no effort to validate that the message sender is who they claim to be.
