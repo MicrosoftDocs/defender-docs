@@ -38,6 +38,8 @@ Microsoft Defender for Office 365 is a seamless integration into Microsoft 365 s
 This article is intended for Security Operations (SecOps) personnel, admins in Microsoft 365, or decisions makers who want to learn more about Defender for Office 365.
 
 > [!TIP]
+> 
+> [!TIP]
 > If you're using **Outlook.com**, **Microsoft 365 Family**, or **Microsoft 365 Personal**, and need information about _Safelinks_ or _advanced attachment scanning_, see [Advanced Outlook.com security for Microsoft 365 subscribers](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 >
 > If you're new to your Microsoft 365 subscription and would like to know your licenses before you begin, go the **Your products** page in the Microsoft 365 admin center at <https://admin.microsoft.com/Adminportal/Home#/subscriptions>.
