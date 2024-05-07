@@ -14,7 +14,7 @@ ms.collection:
 ms.custom:
 - partner-contribution
 audience: ITPro
-ms.date: 05/02/2024
+ms.date: 05/07/2024
 search.appverid: MET150
 ---
 
@@ -94,7 +94,7 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
 2. Open Terminal or Command Prompt. (In Windows, go to **Start** > **Command Prompt**. Or, right-click the start button and then select **Terminal**.) 
 
-3. Run the command: ```cd "%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools"```.
+3. Run the command: `cd "%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools"`.
 
 4. Run the command `.\healthcheck.exe`.
 
@@ -189,7 +189,7 @@ To test the plug-in after installation, follow these steps:
    An alert should appear in the portal after a few minutes for a detection on the WSL2 instance.
 
    > [!NOTE]
-   > It takes about 5 minutes for the events to appear on the Microsoft Defender portal
+   > It takes about 5 minutes for the events to appear on the Microsoft Defender portal.
 
 Treat the machine as if it were a regular Linux host in your environment to perform testing against. In particular, we would like to get your feedback on the ability to surface potentially malicious behavior using the new plug-in.
 
@@ -249,7 +249,7 @@ DeviceProcessEvents
 
    If that error occurs, wait for 5 minutes and rerun `healthcheck.exe`.
 
-4. If you don't see any devices in the Microsoft Defender portal, or you don't see any events in the timeline, check these things:
+4. If you don't see any devices in the Microsoft Defender portal, or you don't see any events in the timeline, check the following things:
 
    - If you aren't seeing a machine object, make sure sufficient time has passed for onboarding to complete (typically up to 10 minutes). 
  
@@ -259,7 +259,26 @@ DeviceProcessEvents
 
       :::image type="content" source="media/mdeplugin-wsl/wsl-health-check-support.png" alt-text="Screenshot showing status in PowerShell." lightbox="media/mdeplugin-wsl/wsl-health-check-support.png":::
 
-- Enable the connectivity test and check for Defender for Endpoint connectivity in WSL. If the connectivity test fails, provide the output of the health check tool to [mdeforwsl-preview@microsoft.com](mailto:mdeforwsl-preview@microsoft.com).
+   - Enable the connectivity test and check for Defender for Endpoint connectivity in WSL. If the connectivity test fails, provide the output of the health check tool to [mdeforwsl-preview@microsoft.com](mailto:mdeforwsl-preview@microsoft.com).
+
+   - If the connectivity test reports "invalid" in health check, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
+
+      - In Windows 11
+         ```bash
+         # Settings apply across all Linux distros running on WSL 2
+         [wsl2]
+
+         dnsTunneling=true
+
+         networkingMode=mirrored  
+         ```
+      - In Windows 10
+         ```bash
+         # Settings apply across all Linux distros running on WSL 2
+         [wsl2]
+
+         dnsProxy=false
+         ```
 
 5. In case you face any other challenges or issues, open the terminal and run the following commands to generate the support bundle: 
 
