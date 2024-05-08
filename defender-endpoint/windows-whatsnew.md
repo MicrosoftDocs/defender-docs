@@ -69,7 +69,7 @@ All updates contain:
    - Introduced multiple performance and stability fixes.
      
 - **Security Configuration Management**
-   - Policies which include special characters are now supported.   
+   - Policies that include special characters are now supported.   
 
 ## Dec-2023 (Release version: 10.8672.25926.1019)
 
