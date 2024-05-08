@@ -82,6 +82,26 @@ Specifies the enforcement preference of antivirus engine. There are three values
 |**Comments**|Available in Microsoft Defender for Endpoint version 101.10.72 or higher.|
 |||
 
+#### Enable/disable behavior-monitoring
+
+Determines whether behavior monitoring and blocking capability is enabled on the device or not.
+
+ Note
+This feature is applicable only when Real-Time Protection feature is enabled.
+
+<br>
+
+****
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.wdav`|
+|**Key**|behaviorMonitoring|
+|**Data type**|String|
+|**Possible values**|disabled <p> enabled (default)|
+|**Comments**|Available in Microsoft Defender for Endpoint version 101.24042.0002 or higher.|
+|||
+
 #### Configure file hash computation feature
 
 Enables or disables file hash computation feature. When this feature is enabled, Defender for Endpoint computes hashes for files it scans to enable better matching against the indicator rules. On macOS, only the script and Mach-O (32 and 64 bit) files are considered for this hash computation (from engine version 1.1.20000.2 or higher). Note that enabling this feature might impact device performance. For more details, please refer to: [Create indicators for files](indicator-file.md).
