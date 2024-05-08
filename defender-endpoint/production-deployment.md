@@ -85,7 +85,7 @@ Ensure devices can connect to the Defender for Endpoint cloud services. The use 
 [STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy](configure-proxy-internet.md).
 [STEP 3: Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
 
-In certain scenarios, you might want to allow traffic to IP addresses. Not all services are accessible in this way and you'll need to evaluate how to address this in your environment - for example, by centrally downloading then distributing updates. For more information, see [Option 2: Configure connectivity using static IP ranges](configure-device-connectivity#option-2-configure-connectivity-using-static-ip-ranges).
+In certain scenarios, you might want to allow traffic to IP addresses. Not all services are accessible in this way and you need to evaluate how to address this potential issue in your environment - for example, by centrally downloading then distributing updates. For more information, see [Option 2: Configure connectivity using static IP ranges](configure-device-connectivity#option-2-configure-connectivity-using-static-ip-ranges).
 
 ## Next step
 
