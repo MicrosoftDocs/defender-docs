@@ -17,7 +17,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 11/29/2023
+ms.date: 05/08/2024
 ---
 
 # Set up Microsoft Defender for Endpoint deployment
