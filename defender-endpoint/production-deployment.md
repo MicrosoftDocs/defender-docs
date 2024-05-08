@@ -1,6 +1,6 @@
 ---
 title: Set up Microsoft Defender for Endpoint deployment
-description: Learn how to set up the deployment for Microsoft Defender for Endpoint
+description: Learn how to set up the deployment for Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
@@ -34,7 +34,7 @@ ms.date: 05/08/2024
 
 The first step when deploying Microsoft Defender for Endpoint is to set up your Defender for Endpoint environment.
 
-In this deployment scenario, you'll be guided through the steps on:
+In this deployment scenario, you are guided through the steps on:
 
 - Licensing validation
 - Tenant configuration
@@ -53,7 +53,7 @@ Checking for the license state and whether it was properly provisioned can be do
 
 1. Alternately, in the admin center, navigate to **Billing** \> **Subscriptions**.
 
-    On the screen, you'll see all the provisioned licenses and their current **Status**.
+    On the screen, you see all the provisioned licenses and their current **Status**.
 
     :::image type="content" source="media/atp-billing-subscriptions.png" alt-text="The billing licenses page":::
 
@@ -63,7 +63,7 @@ To gain access into which licenses are provisioned to your company, and to check
 
 1. From the **Partner portal**, select **Administer services > Office 365**.
 
-2. Clicking on the **Partner portal** link will open the **Admin on behalf** option and will give you access to the customer admin center.
+2. Clicking on the **Partner portal** link opens the **Admin on behalf** option and gives you access to the customer admin center.
 
    :::image type="content" source="media/atp-O365-admin-portal-customer.png" alt-text="The Office 365 admin portal" lightbox="media/atp-O365-admin-portal-customer.png":::
 
