@@ -41,9 +41,9 @@ In most cases, full device offboarding isn't required when reonboarding. You can
 
 ### Migration recommendation
 
-- **Start small**. It's recommended to start with a small set of devices first, apply the onboarding blob using any of the supported deployment tools, then monitor for connectivity. If you are using a new onboarding policy, to prevent conflicts make sure to exclude device from any other existing onboarding policies.
+- **Start small**. It's recommended to start with a small set of devices first. Apply the onboarding blob using any of the supported deployment tools, then monitor for connectivity. If you're using a new onboarding policy, to prevent conflicts make sure to exclude device from any other existing onboarding policies.
 
-- **Validate and monitor**. After onboarding the small set of devices, validate that devices have successfully onboarded and are communicating with the service.
+- **Validate and monitor**. After onboarding the small set of devices, validate that devices are onboarded successfully and are communicating with the service.
 
 - **Complete migration**. At this stage, you can gradually roll out the migration to a larger set of devices. To complete the migration, you can replace previous onboarding policies and remove the old URLs from your network device.
 
