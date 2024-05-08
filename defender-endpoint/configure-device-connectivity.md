@@ -44,7 +44,7 @@ The Defender for Endpoint-recognized simplified domain: `*.endpoint.security.mic
 To support network devices without hostname resolution or wildcard support, you can alternatively configure connectivity using dedicated Defender for Endpoint static IP ranges. For more information, see [Configure connectivity using static IP ranges](#option-2-configure-connectivity-using-static-ip-ranges).
 
 > [!NOTE] 
-> - The simplified connectivity method will **not change how Microsoft Defender for Endpoint functions on a device nor will it change the end-user experience**. Only the URLs or IPs that a device uses to connect to the service will change.
+> - The streamlined connectivity method will **not change how Microsoft Defender for Endpoint functions on a device nor will it change the end-user experience**. Only the URLs or IPs that a device uses to connect to the service will change.
 > - There currently is no plan to deprecate the old, consolidated service URLs. Devices onboarded with "standard" connectivity will continue to function. It is important to ensure connectivity to *.endpoint.security.microsoft.com is and remains possible, as future services will require it. This new URL is included in all required URL lists.
 
 ## Consolidated services 
@@ -134,7 +134,7 @@ The following illustration shows the streamlined connectivity process and the co
 
 Once you confirm prerequisites are met, ensure your network environment is properly configured to support the streamlined connectivity method. Follow the steps outlined in [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md). 
 
-Defender for Endpoint services consolidated under the simplified method should no longer be required for connectivity. However, some URLs aren't included in the consolidation. 
+Defender for Endpoint service URLs consolidated under simplified domain the should no longer be required for connectivity. However, some URLs aren't included in the consolidation. 
 
 Streamlined connectivity allows you to use the following option to configure cloud connectivity:
 
@@ -208,12 +208,11 @@ Once you configure your network to communicate with the full list of services, y
 Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and have updated the sensor and Microsoft Defender Antivirus versions. 
 
 
-To get the new package, in Microsoft Defender XDR, select **Settings > Endpoints > Device management> Onboarding**.
+1. To get the new package, in Microsoft Defender XDR, select **Settings > Endpoints > Device management> Onboarding**.
 
+2. Select the applicable operating system and choose "Streamlined" from the Connectivity type dropdown menu.
 
-Select the applicable operating system and choose "Streamlined (preview)" from the Connectivity type dropdown menu.
-
- For new devices (not onboarded to Defender for Endpoint) supported under this method, follow onboarding steps from previous sections using the updated onboarded package with your preferred deployment method:
+3. For new devices (not onboarded to Defender for Endpoint) supported under this method, follow onboarding steps from previous sections using the updated onboarded package with your preferred deployment method:
 
 - [Onboard Windows Client](onboard-windows-client.md)
 - [Onboard Windows Server](configure-server-endpoints.md)
@@ -221,19 +220,22 @@ Select the applicable operating system and choose "Streamlined (preview)" from t
 - [Run a detection test on a device to verify it has been properly onboarded to Microsoft Defender for Endpoint](run-detection-test.md)
 
 
-Exclude devices from any existing onboarding policies that use the standard onboarding package.
+4. Exclude devices from any existing onboarding policies that use the standard onboarding package.
 
 For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow specific guidance here.  
 
-:::image type="content" source="media/migrate-devices-streamlined.png" alt-text="Screenshot of onboarding page with streamlined connectivity":::
+### Stage 5. Set the default onboarding package to streamlined connectivity
 
+When you're ready to set the default onboarding package to streamlined, you can turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**). 
 
-When you're ready to set the default onboarding package to streamlined, you can turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**). For onboarding through Intune & Microsoft Defender for Cloud, you will need to activate the relevant option. Devices already onboarded will not automatically re-onboard; you will need to create a new policy in Intune, where it is recommended to first assign the policy to a set of test devices to verify connectivity is successful, before expanding the audience. Devices in Defender for Cloud can be re-onboarded using the relevant onboarding script.
-
-> [!NOTE]
-> Before moving forward with this option, validate that your environment is ready and all devices meet prerequisites.
-
-
-:::image type="content" source="media/advanced-setting-streamlined-connectivity.png" alt-text="Screenshot of advanced settings page with streamlined connectivity option":::
+<img width="593" alt="image" src="https://github.com/MicrosoftDocs/defender-docs-pr/assets/30799281/3509aeec-bbab-4efd-a328-0608a11cc6d1">
 
 This setting sets the default onboarding package to 'streamlined' for applicable operating systems.  You can still use the standard onboarding package within the onboarding page but you must specifically select it in the drop-down.  
+
+For onboarding through Intune & Microsoft Defender for Cloud, you will need to activate the relevant option. Devices already onboarded will not automatically re-onboard; you will need to create a new policy in Intune, where it is recommended to first assign the policy to a set of test devices to verify connectivity is successful, before expanding the audience. Devices in Defender for Cloud can be re-onboarded using the relevant onboarding script.
+
+> [!NOTE]
+> - Only tenants created on or before May 8th, 2024 have the option to switch between standard and streamlined connectivity. Newer tenants will only support streamlined connectivity.
+> - Before moving forward with this option, validate that your environment is ready and all devices meet prerequisites.
+
+
