@@ -60,42 +60,43 @@ Our PDNS resolution data includes the following information:
 - **Source**: The source that enabled the detection of the relationship.
 - **Tags**: Any tags applied to this artifact in Defender TI ([Learn more](using-tags.md))
 
-![Data Tab Resolutions](media/data-sets-info.png)
+:::image type="content" source="/defender/threat-intelligence/media/data-sets-info.png" alt-text="Data tab Resolutions." lightbox="/defender/threat-intelligence/media/data-sets-info.png":::
 
 **Questions this data set might help answer**
 
 *Domains*
 
 - When did Defender TI first observe the domain resolving to an IP address?
-
-  ![Data Sets Domain First Seen](media/data-sets-resolutions-first-seen.png)
+   
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-resolutions-first-seen.png" alt-text="Data sets domain first seen." lightbox="/defender/threat-intelligence/media/data-sets-resolutions-first-seen.png":::
 
 - When was the last time Defender TI saw the domain actively resolving to an IP address?
 
 - What IP address or addresses does the domain currently resolve to?
-    ![Data Sets Domain Active Re solutions](media/data-sets-resolutions-resolve.png)
-  
+
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-resolutions-resolve.png" alt-text="Data sets domain active resolutions." lightbox="/defender/threat-intelligence/media/data-sets-resolutions-resolve.png":::
+
 *IP addresses*
 
 - Is the IP address routable?
-
-  ![Data Sets Routable IPs](media/data-sets-resolutions-routable.png)
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-resolutions-routable.png" alt-text="Data sets routable IPs." lightbox="/defender/threat-intelligence/media/data-sets-resolutions-routable.png":::
 
 - What subnet is the IP address part of?
-
-  ![Data Sets IP Subnet](media/data-sets-resolutions-netblock.png)
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-resolutions-netblock.png" alt-text="Data sets IP address subnet." lightbox="/defender/threat-intelligence/media/data-sets-resolutions-netblock.png":::
 
 - Is there an owner associated with the subnet?
 
-  ![Data Sets IP Owner](media/data-sets-resolutions-owner.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-resolutions-owner.png" alt-text="Data sets IP address owner." lightbox="/defender/threat-intelligence/media/data-sets-resolutions-owner.png":::
 
 - What AS is the IP address part of?
 
-  ![Data Sets IPASN](media/data-sets-resolutions-asn.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-resolutions-asn.png" alt-text="Data sets IP address ASN." lightbox="/defender/threat-intelligence/media/data-sets-resolutions-asn.png":::
 
 - Is there geolocation?
 
-  ![Data Sets IP Geo location](media/data-sets-resolutions-geoloc.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-resolutions-geoloc.png" alt-text="Data sets IP address geolocation." lightbox="/defender/threat-intelligence/media/data-sets-resolutions-geoloc.png":::
 
 ## WHOIS
 
@@ -126,61 +127,61 @@ Our WHOIS data includes the following information:
 
 ### Current WHOIS lookups
 
-![Data Tab WHOIS](media/data-sets-whois.png)
-
 Defender TI’s current WHOIS repository highlights all domains in Microsoft’s WHOIS collection that are currently registered and associated with the WHOIS attribute of interest. This data highlights the domain's registration and expiration date, along with the email address used to register the domain. This data is displayed in the WHOIS Search tab of the platform.
+
+:::image type="content" source="/defender/threat-intelligence/media/data-sets-whois.png" alt-text="Data tab WHOIS." lightbox="/defender/threat-intelligence/media/data-sets-whois.png":::
 
 ### Historical WHOIS lookups
 
-![Search Whois History](media/data-sets-whois-history.png)
-
 Defender TI’s **WHOIS history** repository provides users with access to all known historical domain associations to WHOIS attributes based on the system’s observations. This data set highlights all domains associated with an attribute that a user pivots from displaying the first time and the last time we observed the association between the domain and attribute queried. This data is displayed in a separate tab next to the **WHOIS current** tab.
+
+:::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-history.png" alt-text="Search WHOIS history." lightbox="/defender/threat-intelligence/media/data-sets-whois-history.png":::
 
 **Questions this data set might help answer**
 
 - How old is the domain?
 
-  ![Data Sets Whois Domain Age](media/data-sets-whois-domain-age.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-domain-age.png" alt-text="Data sets WHOIS domain age." lightbox="/defender/threat-intelligence/media/data-sets-whois-domain-age.png":::
 
 - Does the information appear to be privacy protected?
 
-  ![Data Sets Whois Privacy Protected](media/data-sets-whois-privacy.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-privacy.png" alt-text="Data sets WHOIS privacy protected." lightbox="/defender/threat-intelligence/media/data-sets-whois-privacy.png":::
 
 - Does any of the data appear to be unique?
 
-  ![Data Sets Whois Unique](media/data-sets-whois-unique.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-unique.png" alt-text="Data sets WHOIS unique." lightbox="/defender/threat-intelligence/media/data-sets-whois-unique.png":::
 
 - What name servers are used?
 
-  ![Data Sets Whois Name Servers](media/data-sets-whois-ns.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-ns.png" alt-text="Data sets WHOIS name servers." lightbox="/defender/threat-intelligence/media/data-sets-whois-ns.png":::
 
 - Is this domain a sinkhole domain?
 
-  ![Data Sets Whois Sinkhole](media/data-sets-whois-sinkhole.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-sinkhole.png" alt-text="Data sets WHOIS sinkhole." lightbox="/defender/threat-intelligence/media/data-sets-whois-sinkhole.png":::
 
 - Is this domain a parked domain?
 
-  ![Data Sets Whois Parked Domain](media/data-sets-whois-parked.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-parked.png" alt-text="Data sets WHOIS parked domain." lightbox="/defender/threat-intelligence/media/data-sets-whois-parked.png":::
 
 - Is this domain a honeypot domain?
 
-  ![Data Sets Whois Honeypot Domain](media/data-sets-whois-honeypot.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-honeypot.png" alt-text="Data sets WHOIS honeypot domain." lightbox="/defender/threat-intelligence/media/data-sets-whois-honeypot.png":::
 
 - Is there any history?
 
-  ![Data Sets Whois History](media/data-sets-whois-record-history.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-record-history.png" alt-text="Data sets WHOIS history." lightbox="/defender/threat-intelligence/media/data-sets-whois-record-history.png":::
 
 - Are there any fake privacy protection emails?
 
-  ![Data Sets Whois Fake Privacy Emails](media/data-sets-whois-privacy-emails.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-privacy-emails.png" alt-text="Data sets WHOIS fake privacy emails." lightbox="/defender/threat-intelligence/media/data-sets-whois-privacy-emails.png":::
 
 - Are there any fake names in the WHOIS record?
 
 - Are other related IOCs identified from searching against potentially shared WHOIS values across domains?
 
-  ![Data Sets Whois Shared Value Search](media/data-sets-whois-phone-01.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-phone-01.png" alt-text="Data sets WHOIS shared value search." lightbox="/defender/threat-intelligence/media/data-sets-whois-phone-01.png":::
 
-    ![Data Sets Whois Shared Value Search phone](media/data-sets-whois-phone-02.png)
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-phone-02.png" alt-text="Data sets WHOIS shared value search phone." lightbox="/defender/threat-intelligence/media/data-sets-whois-phone-02.png":::
 
 ## Certificates
 Beyond securing your data, TLS certificates are a fantastic way for users to connect disparate network infrastructure. Modern scanning techniques let us perform data requests against every node on the internet in a matter of hours. In other words, we can associate a certificate to an IP address hosting it easily and regularly.
