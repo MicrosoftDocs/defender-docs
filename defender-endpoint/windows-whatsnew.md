@@ -54,22 +54,22 @@ All updates contain:
 ### What's new
 
 - **Endpoint Detection and Response**
-  - Enable support for IPV6 connections in Live Response connection commands.
+  - Enabled support for IPV6 connections in [Live Response](troubleshoot-collect-support-log.md) connection commands.
   - Fixed an issue in Downlevel Unified Agent that caused ServerRoles not to be populated.
     
 - **Threat Vulnerability Management**
-  - An issue related to the agent's monitoring of deleted registry keys not longer occurs.
-    Introduce a new capability where you can now enable/disable registry monitoring through configuration settings.
+  - An issue related to the agent's monitoring of deleted registry keys no longer occurs.
+  - Added a new capability to enable/disable registry monitoring through configuration settings.
    
-- **NDR Performance Enhancemens** 
-  - Minimizing the CPU and memory footprint of the agent.
-  - Enhancing the accuracy of network detections.
+- **Network Detection and Response (NDR) Performance Enhancemens** 
+  - Introduced performance enhancemetns to minimize the CPU and memory footprint of the agent.
+  - Enhanced the accuracy of network detections.
     
-- **DLP**
-   - Multiple performance and stability fixes.
+- **Data Loss Prevention (DLP)**
+   - Introduction multiple performance and stability fixes.
      
 - **Security Configuration Management**
-   - Handling policies with special characters – Policies which include special characters are now supported.   
+   - Policies which include special characters are now supported.   
 
 ## Dec-2023 (Release version: 10.8672.25926.1019)
 
