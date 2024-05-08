@@ -52,7 +52,7 @@ As a local administrator on the server, perform the following steps:
 
 1. Open Command Prompt.
 2. Run the following command:
-   `MpCmdRun.exe -wdenable`.
+   `%ProgramFiles%\Windows Defender\MpCmdRun.exe -wdenable`.
 3. Restart the device.
 
 ## Re-enable Microsoft Defender Antivirus on Windows Server if it was uninstalled
