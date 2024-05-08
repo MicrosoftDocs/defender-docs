@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/06/2024
+ms.date: 05/08/2024
 ---
 
 # Advanced deployment guidance for Microsoft Defender for Endpoint on Linux
@@ -95,7 +95,7 @@ Add the Microsoft Defender for Endpoint URLs and/or IP addresses to the allowed 
 
 Use the following steps to check the network connectivity of Microsoft Defender for Endpoint:
 
-1. See [Allow destinations for the Microsoft Defender for Endpoint traffic](#step-1-allow-urls-for-the-microsoft-defender-for-endpoint-traffic) that are allowed for the Microsoft Defender for Endpoint traffic.
+1. See [Step 1: Allow destinations for the Microsoft Defender for Endpoint traffic](#step-1-allow-destinations-for-the-microsoft-defender-for-endpoint-traffic) that are allowed for the Microsoft Defender for Endpoint traffic.
 
 2. If the Linux servers are behind a proxy, then set the proxy settings. For more information, see [Set up proxy settings](#step-2-set-up-proxy-settings).
 
