@@ -28,7 +28,7 @@ ms.date: 05/08/2024
 
 This article describes how to migrate (reonboard) devices that had been previously onboarded to Defender for Endpoint to use the streamlined device connectivity method. For more information on streamlined connectivity, see [Onboarding devices using streamlined connectivity](configure-device-connectivity.md). Devices must meet the prerequisites listed in [Streamlined connectivity](configure-device-connectivity.md#prerequisites).
 
-In most cases, full device offboarding isn't required when reonboarding. You can run the updated onboarding package and reboot your device to switch connectivity over. See the following information for for details on individual operating systems.
+In most cases, full device offboarding isn't required when reonboarding. You can run the updated onboarding package and reboot your device to switch connectivity over. See the following information for details on individual operating systems.
 
 > [!IMPORTANT]
 > Limitations and known issues:
@@ -49,7 +49,7 @@ In most cases, full device offboarding isn't required when reonboarding. You can
 
 Validate [device prerequisites](configure-device-connectivity.md#prerequisites) before proceeding with any migrations. This information builds upon the previous article by focusing on migrating existing devices.
 
-To reonboard devices, you'll need to use the streamlined onboarding package. For more information on how to access the package, see [Streamlined connectivity](configure-device-connectivity.md).
+To reonboard devices, you need to use the streamlined onboarding package. For more information on how to access the package, see [Streamlined connectivity](configure-device-connectivity.md).
 
 Depending on the OS, migrations might require a device reboot or service restart once the onboarding package is applied:
 
@@ -83,7 +83,7 @@ Follow the guidance in [Group policy](configure-endpoints-gp.md) using the strea
 
 ### Microsoft Intune
 
-Follow the guidance in [Intune](/mem/intune/protect/endpoint-security-edr-policy#updating-the-onboarding-state-for-a-device) using the streamlined onboarding package. You can use the "auto from connector" option; however, this option doesn't automatically re-apply the onboarding package. Create a new onboarding policy and target a test group first. After completing the steps, you must restart the device for device connectivity to switch over.
+Follow the guidance in [Intune](/mem/intune/protect/endpoint-security-edr-policy#updating-the-onboarding-state-for-a-device) using the streamlined onboarding package. You can use the "auto from connector" option; however, this option doesn't automatically reapply the onboarding package. Create a new onboarding policy and target a test group first. After completing the steps, you must restart the device for device connectivity to switch over.
 
 ### Microsoft Configuration Manager
 
@@ -91,7 +91,7 @@ Follow the guidance in [Configuration Manager](/mem/configmgr/protect/deploy-use
 
 ### VDI
 
-Use the guidance in [Onboard nonpersistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md). After completing the steps, you must restart the device for device connectivity to switch over.
+Use the guidance in [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md). After completing the steps, you must restart the device for device connectivity to switch over.
 
 ### [**Windows Server**](#tab/Windowsserver)
 
@@ -103,7 +103,7 @@ Confirm prerequisites are met: [Prerequisites for streamlined method](configure-
 
 ### Microsoft Defender for Cloud
 
-Devices already onboarded will not automatically re-onboard. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices will start using the new onboarding information within ~48 hours. To re-onboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md).
+Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices will start using the new onboarding information within ~48 hours. To re-onboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md).
 
 ### Microsoft Configuration Manager
 
