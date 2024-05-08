@@ -66,7 +66,7 @@ All updates contain:
   - Enhanced the accuracy of network detections.
     
 - **Data Loss Prevention (DLP)**
-   - Introduction multiple performance and stability fixes.
+   - Introduced multiple performance and stability fixes.
      
 - **Security Configuration Management**
    - Policies which include special characters are now supported.   
