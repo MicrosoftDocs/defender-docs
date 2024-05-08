@@ -103,7 +103,7 @@ Confirm prerequisites are met: [Prerequisites for streamlined method](configure-
 
 ### Microsoft Defender for Cloud
 
-Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices will start using the new onboarding information within ~48 hours. To re-onboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md).
+Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices start using the new onboarding information within ~48 hours. To reonboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md).
 
 ### Microsoft Configuration Manager
 
@@ -115,7 +115,7 @@ Follow the guidance in [Group policy](configure-endpoints-gp.md) using the strea
 
 ### VDI
 
-Follow the guidance in [Onboard nonpersistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md). After completing the steps, you must restart the device for device connectivity to switch over.
+Follow the guidance in [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md). After completing the steps, you must restart the device for device connectivity to switch over.
 
 ### [**macOS**](#tab/macOS)
 
@@ -217,11 +217,11 @@ This information is found in the DeviceInfo table under the "ConnectivityType" c
 - Data type: String
 - Description: Type of connectivity from the device to the cloud
 
-Once a device is migrated to use the streamlined method and the device establishes successful communication with the EDR command & control channel, the value will be represented as "Streamlined".
+Once a device is migrated to use the streamlined method and the device establishes successful communication with the EDR command & control channel, the value is represented as "Streamlined".
 
-If you move the device back to the regular method, the value will be "standard".
+If you move the device back to the regular method, the value is "standard".
 
-For devices that have not yet attempted reonboard, the value will remain blank.
+For devices that haven't yet attempted reonboard, the value remains blank.
 
 ### Tracking locally on a device through Windows Event Viewer
 
@@ -247,7 +247,7 @@ Open the Defender for Endpoint service event log using the following steps:
    </EventData>
    ```
 
-4. Message1 contains the contacted URL. Confirm the event includes the streamlined URL (endpoint.security.microsoft, com).
+4. Message 1 contains the contacted URL. Confirm the event includes the streamlined URL (endpoint.security.microsoft, com).
 
 5. Event ID 5 tracks errors if applicable.
 
