@@ -86,9 +86,8 @@ Specifies the enforcement preference of antivirus engine. There are three values
 
 Determines whether behavior monitoring and blocking capability is enabled on the device or not.
 
- Note
-This feature is applicable only when Real-Time Protection feature is enabled.
-
+> [!NOTE]
+>  This feature is applicable only when Real-Time Protection feature is enabled.
 <br>
 
 ****
