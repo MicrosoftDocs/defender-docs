@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: high
-ms.date: 01/31/2024
+ms.date: 05/08/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -52,7 +52,7 @@ As a local administrator on the server, perform the following steps:
 
 1. Open Command Prompt.
 2. Run the following command:
-   `MpCmdRun.exe -wdenable`.
+   `%ProgramFiles%\Windows Defender\MpCmdRun.exe -wdenable`.
 3. Restart the device.
 
 ## Re-enable Microsoft Defender Antivirus on Windows Server if it was uninstalled
