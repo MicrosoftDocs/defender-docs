@@ -628,6 +628,10 @@
         href: adv-tech-of-mdav.md
       - name: Behavior monitoring with Microsoft Defender Antivirus
         href: behavior-monitor.md
+      - name: Behavior monitoring with Microsoft Defender Antivirus on macOS
+        href: behavior-monitor-macos.md
+        displayName: Behavior monitoring with Microsoft Defender for Endpoint on macOS,
+          BM, MDE on macOS
       - name: Detect and block potentially unwanted applications
         href: detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md
       - name: Enable and configure Microsoft Defender Antivirus always-on protection in Group Policy
