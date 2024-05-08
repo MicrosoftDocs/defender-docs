@@ -91,6 +91,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Policy type**<sup>\*</sup> (see the possible values in the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** description.)
 - **Expires**<sup>\*</sup>
 - **Recipient**<sup>\*</sup>
+- **Released by**<sup>\*</sup>
 - **Message ID**
 - **Policy name**
 - **Message size**
@@ -102,18 +103,18 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Sender address**
 - **Recipient address**
 - **Subject**
-- **Time received**:
+- **Time received**: Select one of the following values:
   - **Last 24 hours**
   - **Last 7 days**
   - **Last 14 days**
   - **Last 30 days** (default)
   - **Custom**: Enter a **Start time** and **End time** (date).
-- **Expires**: Filter messages by when they expire from quarantine:
+- **Expires**: Filter messages by when they expire from quarantine. Select one of the following values:
   - **Today**
   - **Next 2 days**
   - **Next 7 days**
   - **Custom**: Enter a **Start time** and **End time** (date).
-- **Quarantine reason**:
+- **Quarantine reason**: Select one or more of the following values:
   - **Transport rule** (mail flow rule)
   - **Bulk**
   - **Spam**
@@ -126,7 +127,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Denied**
   - **Release requested**
   - **Released**
-- **Policy Type**: Filter messages by policy type:
+- **Policy Type**: Filter messages by what type of protection policy quarantined the message. Select one or more of the following values:
   - **Anti-malware policy**
   - **Safe Attachments policy**
   - **Anti-phishing policy**
@@ -148,7 +149,7 @@ Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="f
 After you've entered the search criteria, press the enter ENTER key to filter the results.
 
 > [!NOTE]
-> The **Search** box searches for quarantined items in the current view, not all quarantined items. To search all quarantined items, use **Filter** and the resulting **Filters** flyout.
+> The **Search** box searches for quarantined items in the current view, not all quarantined items. To search all quarantined items, use :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and the resulting **Filters** flyout.
 
 After you find a specific quarantined message, select the message to view details about it and to take action on it (for example, view, release, download, or delete the message).
 
@@ -171,9 +172,11 @@ In the details flyout that opens, the following information is available:
   - **Subject**
   - **Quarantine reason**: Shows if a message has been identified as **Spam**, **Bulk**, **Phish**, matched a mail flow rule (**Transport rule**), or was identified as containing **Malware**.
   - **Policy type**
-  - **Policy name**
   - **Recipient count**
   - **Recipients**: If the message contains multiple recipients, you might need to select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Preview message** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **View message header** to see the complete list of recipients.
+  - **Released by**:
+    - If the user released the message themselves, the user's email address is shown.
+    - If the message was released by an admin, the value **Admin** is shown.
 - **Email details** section:
   - **Sender address**
   - **Time received**
@@ -291,8 +294,9 @@ After you select the message, use either of the following methods to preview it:
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: **Preview message**.
 
 In the flyout that opens, choose one of the following tabs:
-  - **Source**: Shows the HTML version of the message body with all links disabled.
-  - **Plain text**: Shows the message body in plain text.
+
+- **Source**: Shows the HTML version of the message body with all links disabled.
+- **Plain text**: Shows the message body in plain text.
 
 #### View email message headers
 
