@@ -63,7 +63,7 @@ The left navigation, or quick launch bar, will look familiar. However, there are
 
 With the unified Microsoft Defender XDR solution, you can stitch together the threat signals and determine the full scope and impact of the threat, and how it's currently impacting the organization.
 
-:::image type="content" source="../defender/media/mdo-m36d-nav-collapsed.png" alt-text="A screenshot that shows the left navigation pane of the M365 Defender portal." lightbox="../defender/media/mdo-m36d-nav-collapsed.png":::
+:::image type="content" source="../defender/media/mdo-m36d-nav-collapsed.png" alt-text="screenshot of the left navigation pane of the M365 Defender portal." lightbox="../defender/media/mdo-m36d-nav-collapsed.png":::
 
 Defender for Office 365 safeguards your organization against malicious threats posed by email messages, links (URLs), and collaboration tools.
 
