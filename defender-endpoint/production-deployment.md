@@ -75,17 +75,17 @@ From a web browser, navigate to the <a href="https://go.microsoft.com/fwlink/p/?
 
 ## Data center location
 
-Microsoft Defender for Endpoint stores and process data in the [same location as used by Microsoft Defender XDR](/defender-xdr/m365d-enable). If Microsoft Defender XDR has not been turned on yet, onboarding to Defender for Endpoint also turns on Defender XDR, and a new data center location is automatically selected based on the location of active Microsoft 365 security services. The selected data center location is shown on the screen.
+Microsoft Defender for Endpoint stores and process data in the [same location as used by Microsoft Defender XDR](/defender-xdr/m365d-enable). If Microsoft Defender XDR hasn't been turned on yet, onboarding to Defender for Endpoint also turns on Defender XDR, and a new data center location is automatically selected based on the location of active Microsoft 365 security services. The selected data center location is shown on the screen.
 
 ## Network configuration
 
 Ensure devices can connect to the Defender for Endpoint cloud services. The use of a proxy is recommended.
 
-[STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md)
-[STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy](configure-proxy-internet.md)
-[STEP 3: Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md)
+[STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
+[STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy](configure-proxy-internet.md).
+[STEP 3: Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
 
-In certain scenarios, you may want to allow traffic to IP addresses. Not all services are accessible in this way and you will need to evaluate how to address this in your environment - for example, by centrally downloading then distributing updates. For more information, see [Option 2: Configure connectivity using static IP ranges](configure-device-connectivity#option-2-configure-connectivity-using-static-ip-ranges).
+In certain scenarios, you might want to allow traffic to IP addresses. Not all services are accessible in this way and you'll need to evaluate how to address this in your environment - for example, by centrally downloading then distributing updates. For more information, see [Option 2: Configure connectivity using static IP ranges](configure-device-connectivity#option-2-configure-connectivity-using-static-ip-ranges).
 
 ## Next step
 
