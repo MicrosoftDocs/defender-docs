@@ -183,8 +183,6 @@ The following code shows the schema you need to use to schedule scans according 
         </dict> 
     </dict> 
 </dict> 
-</array>
-</dict>
 </plist> 
 ```
 
