@@ -44,7 +44,8 @@ The Defender for Endpoint-recognized simplified domain: `*.endpoint.security.mic
 To support network devices without hostname resolution or wildcard support, you can alternatively configure connectivity using dedicated Defender for Endpoint static IP ranges. For more information, see [Configure connectivity using static IP ranges](#option-2-configure-connectivity-using-static-ip-ranges).
 
 > [!NOTE] 
-> The simplified connectivity method will **not change how Microsoft Defender for Endpoint functions on a device nor will it change the end-user experience**. Only the URLs or IPs that a device uses to connect to the service will change. 
+> - The simplified connectivity method will **not change how Microsoft Defender for Endpoint functions on a device nor will it change the end-user experience**. Only the URLs or IPs that a device uses to connect to the service will change.
+> - There currently is no plan to deprecate the old, consolidated service URLs. Devices onboarded with "standard" connectivity will continue to function. It is important to ensure connectivity to *.endpoint.security.microsoft.com is and remains possible, as future services will require it. This new URL is included in all required URL lists.
 
 ## Consolidated services 
 
