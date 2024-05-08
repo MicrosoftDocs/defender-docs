@@ -36,9 +36,13 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 - [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
 
 
+_(Preview) Behavior Monitoring for macOS_
+
+_Behavior Monitoring helps you protect against malware, by looking for multiple processes for what it does instead of what it is. Adding another protection layer of security in addition to content matching.  To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](/defender-endpoint/behavior-monitor-macos)._
+
 **Known issues**
 
-Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes), which is fixed with the latest OS update. The issue impacts Microsoft Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting its ability to function properly.
+Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes), and [Sonoma upgrade](https://developer.apple.com/forums/thread/737824#773449022) which is fixed with the latest OS update. The issue impacts Microsoft Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting its ability to function properly.
 
 In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device controls ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS less than 14.3.1.
 
