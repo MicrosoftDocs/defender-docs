@@ -13,7 +13,7 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 02/01/2024
+ms.date: 05/08/2024
 ---
 
 # Migrate devices to use the streamlined connectivity method
@@ -26,14 +26,12 @@ ms.date: 02/01/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-[!Include[Prerelease information](../includes/prerelease.md)]
+This article describes how to migrate (reonboard) devices that had been previously onboarded to Defender for Endpoint to use the streamlined device connectivity method. For more information on streamlined connectivity, see [Onboarding devices using streamlined connectivity](configure-device-connectivity.md). Devices must meet the prerequisites listed in [Streamlined connectivity](configure-device-connectivity.md#prerequisites).
 
-This article describes how to migrate (reonboard) devices that are currently onboarded to Defender for Endpoint to use the streamlined device connectivity method. For more information on streamlined connectivity, see [Onboarding devices using streamlined connectivity](configure-device-connectivity.md). Devices must meet the prerequisites listed in [Streamlined connectivity](configure-device-connectivity.md#prerequisites).
-
-In most cases, full device offboarding isn't required when reonboarding. You can run the updated onboarding package and reboot your device to switch connectivity over. See below for details on individual operating systems.
+In most cases, full device offboarding isn't required when reonboarding. You can run the updated onboarding package and reboot your device to switch connectivity over. See the following information for details on individual operating systems.
 
 > [!IMPORTANT]
-> Preview limitations and known issues:
+> Limitations and known issues:
 >
 > - For device migrations (reonboarding): Offboarding is not required to switch over to streamlined connectivity method. Once the updated onboarding package is run, a full device reboot is required for Windows devices and a service restart for macOS and Linux. For more information, see the details included in this article.
 > - Windows 10 versions 1607, 1703, 1709, and 1803 do not support reonboarding. Offboard first and then onboard using the updated package. These versions also require a longer URL list.
@@ -43,17 +41,17 @@ In most cases, full device offboarding isn't required when reonboarding. You can
 
 ### Migration recommendation
 
-- **Start small**. It's recommended to start with a small set of devices first, apply the onboarding blob using any of the supported deployment tools, then monitor for connectivity. If you are using a new onboarding policy, to prevent conflicts make sure to exclude device from any other existing onboarding policies.
+- **Start small**. It's recommended to start with a small set of devices first. Apply the onboarding blob using any of the supported deployment tools, then monitor for connectivity. If you're using a new onboarding policy, to prevent conflicts make sure to exclude device from any other existing onboarding policies.
 
-- **Validate and monitor**. After onboarding the small set of devices, validate that devices have successfully onboarded and are communicating with the service.
+- **Validate and monitor**. After onboarding the small set of devices, validate that devices are onboarded successfully and are communicating with the service.
 
 - **Complete migration**. At this stage, you can gradually roll out the migration to a larger set of devices. To complete the migration, you can replace previous onboarding policies and remove the old URLs from your network device.
 
 Validate [device prerequisites](configure-device-connectivity.md#prerequisites) before proceeding with any migrations. This information builds upon the previous article by focusing on migrating existing devices.
 
-To reonboard devices, you will need to use the streamlined onboarding package. For more information on how to access the package, see [Streamlined connectivity](configure-device-connectivity.md).
+To reonboard devices, you need to use the streamlined onboarding package. For more information on how to access the package, see [Streamlined connectivity](configure-device-connectivity.md).
 
-Depending on the OS, migrations may require a device reboot or service restart once the onboarding package is applied:
+Depending on the OS, migrations might require a device reboot or service restart once the onboarding package is applied:
 
 - Windows: reboot the device
 - macOS: Reboot the device or restart the Defender for Endpoint service by running:
@@ -85,7 +83,7 @@ Follow the guidance in [Group policy](configure-endpoints-gp.md) using the strea
 
 ### Microsoft Intune
 
-Follow the guidance in [Intune](/mem/intune/protect/endpoint-security-edr-policy#updating-the-onboarding-state-for-a-device) using the streamlined onboarding package. After completing the steps, you must restart the device for device connectivity to switch over.
+Follow the guidance in [Intune](/mem/intune/protect/endpoint-security-edr-policy#updating-the-onboarding-state-for-a-device) using the streamlined onboarding package. You can use the "auto from connector" option; however, this option doesn't automatically reapply the onboarding package. Create a new onboarding policy and target a test group first. After completing the steps, you must restart the device for device connectivity to switch over.
 
 ### Microsoft Configuration Manager
 
@@ -93,7 +91,7 @@ Follow the guidance in [Configuration Manager](/mem/configmgr/protect/deploy-use
 
 ### VDI
 
-Use the guidance in [Onboard nonpersistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md). After completing the steps, you must restart the device for device connectivity to switch over.
+Use the guidance in [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md). After completing the steps, you must restart the device for device connectivity to switch over.
 
 ### [**Windows Server**](#tab/Windowsserver)
 
@@ -105,11 +103,11 @@ Confirm prerequisites are met: [Prerequisites for streamlined method](configure-
 
 ### Microsoft Defender for Cloud
 
-The streamlined connectivity method isn't currently supported through Microsoft Defender for Cloud.
+Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices start using the new onboarding information within ~48 hours. To reonboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md).
 
 ### Microsoft Configuration Manager
 
-Follow the guidance in [Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_updateatp).
+Follow the guidance in [Configuration Manager](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_updateatp) to deploy a new policy.
 
 ### Group policy
 
@@ -117,7 +115,7 @@ Follow the guidance in [Group policy](configure-endpoints-gp.md) using the strea
 
 ### VDI
 
-Follow the guidance in [Onboard nonpersistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md). After completing the steps, you must restart the device for device connectivity to switch over.
+Follow the guidance in [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md). After completing the steps, you must restart the device for device connectivity to switch over.
 
 ### [**macOS**](#tab/macOS)
 
@@ -219,11 +217,11 @@ This information is found in the DeviceInfo table under the "ConnectivityType" c
 - Data type: String
 - Description: Type of connectivity from the device to the cloud
 
-Once a device is migrated to use the streamlined method and the device establishes successful communication with the EDR command & control channel, the value will be represented as "Streamlined".
+Once a device is migrated to use the streamlined method and the device establishes successful communication with the EDR command & control channel, the value is represented as "Streamlined".
 
-If you move the device back to the regular method, the value will be "standard".
+If you move the device back to the regular method, the value is "standard".
 
-For devices that have not yet attempted reonboard, the value will remain blank.
+For devices that haven't yet attempted reonboard, the value remains blank.
 
 ### Tracking locally on a device through Windows Event Viewer
 
@@ -249,7 +247,7 @@ Open the Defender for Endpoint service event log using the following steps:
    </EventData>
    ```
 
-4. Message1 contains the contacted URL. Confirm the event includes the streamlined URL (endpoint.security.microsoft, com).
+4. Message 1 contains the contacted URL. Confirm the event includes the streamlined URL (endpoint.security.microsoft, com).
 
 5. Event ID 5 tracks errors if applicable.
 
