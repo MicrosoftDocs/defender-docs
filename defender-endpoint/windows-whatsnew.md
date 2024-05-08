@@ -54,7 +54,7 @@ All updates contain:
 ### What's new
 
 - **Endpoint Detection and Response**
-  - Enabled support for IPV6 connections in [Live Response](troubleshoot-collect-support-log.md) connection commands.
+  - Enabled support for IPV6 connections in Live Response connection commands.
   - Fixed an issue in Downlevel Unified Agent that caused ServerRoles not to be populated.
     
 - **Threat Vulnerability Management**
@@ -62,7 +62,7 @@ All updates contain:
   - Added a new capability to enable/disable registry monitoring through configuration settings.
    
 - **Network Detection and Response (NDR) Performance Enhancemens** 
-  - Introduced performance enhancemetns to minimize the CPU and memory footprint of the agent.
+  - Introduced performance enhancements to minimize the CPU and memory footprint of the agent.
   - Enhanced the accuracy of network detections.
     
 - **Data Loss Prevention (DLP)**
