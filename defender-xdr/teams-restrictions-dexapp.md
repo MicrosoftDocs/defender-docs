@@ -32,6 +32,7 @@ When you join the Defender Experts Teams channel, you should be able to mention 
 
 The following screenshot is an example of the missing bot:
 
+:::image type="content" source="/defender-xdr/media/teams-app-bot.png" alt-text="Screenshot of Teams app bot.":::
 :::image type="content" source="/defender-xdr/media/teams-app-bot.png" alt-text="Screenshot of Teams app bot." lightbox="/defender-xdr/media/teams-app-bot.png":::
 
 ## Check the Teams app permission policies
