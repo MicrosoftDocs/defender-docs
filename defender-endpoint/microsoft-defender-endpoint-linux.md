@@ -85,7 +85,14 @@ In general you need to take the following steps:
   - Red Hat Enterprise Linux 9.x
   - CentOS 6.7 or higher (In preview)
   - CentOS 7.2 or higher
-  - Ubuntu 16.04 LTS or higher LTS
+  - Ubuntu 16.04 LTS 
+    
+  - Ubuntu 18.04 LTS
+    
+  - Ubuntu 20.04 LTS
+    
+  - Ubuntu 22.04 LTS
+    
    - Debian 9 - 12
   - SUSE Linux Enterprise Server 12 or higher
   - SUSE Linux Enterprise Server 15 or higher
