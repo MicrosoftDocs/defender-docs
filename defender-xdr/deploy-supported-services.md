@@ -88,7 +88,7 @@ Once you've deployed the supported services, [turn on Microsoft Defender XDR](m3
 - [Turn on Microsoft Defender XDR](m365d-enable.md)
 - [Setup guides for Microsoft Defender XDR](deploy-configure-m365-defender.md)
 - [Microsoft Defender for Endpoint overview](/defender-endpoint/microsoft-defender-endpoint)
-- [Microsoft Defender for Office 365 overview]/defender-office-365/mdo-about
+- [Microsoft Defender for Office 365 overview](/defender-office-365/mdo-about)
 - [Microsoft Defender for Cloud Apps overview](/cloud-app-security/what-is-cloud-app-security)
 - [Microsoft Defender for Identity overview](/azure-advanced-threat-protection/what-is-atp)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
