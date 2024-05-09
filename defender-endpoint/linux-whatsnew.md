@@ -48,14 +48,12 @@ This article is updated frequently to let you know what's new in the latest rele
 
 There are multiple fixes and new changes in this release:
 
-- New Field in mdatp health - engine_load_status:
-  - The engine_load_status field in mdatp health will show the current status of engine process.
+- New Field in mdatp health - engine_load_status<br>
+  The engine_load_status field in mdatp health will show current status of engine process. 
 
     Healthy Scenarios:
-      - "Engine not loaded"  - we have brought down the engine. (applicable only in *passive* and *on_demand* mode for optimisation purposes)
-      - "Engine load succeeded" - engine is up and running
-    
-    In *passive* and *on_demand* modes engine will load for scans and definitions update. In this case the engine_load_status will be "Engine load succeeded"
+    - "Engine not loaded"  - we have brought down the engine process for optimisation purposes. 
+    - "Engine load succeeded" - engine is up and running
 - Bug fix to enhance behavioral detections.
 - Stability and performance improvements.
 - Other bug fixes.
