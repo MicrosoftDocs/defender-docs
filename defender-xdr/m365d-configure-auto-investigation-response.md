@@ -61,7 +61,7 @@ Whether automated investigations run, and whether remediation actions are taken 
 
 ## Review your security and alert policies in Office 365
 
-Microsoft provides built-in [alert policies](/defender-office-365/alert-policies-defender-portal) that help identify certain risks. These risks include Exchange admin permissions abuse, malware activity, potential external and internal threats, and data lifecycle management risks. Some alerts can trigger [automated investigation and response in Office 365](/defender-office-365/air-about). Make sure your [Defender for Office 365]/defender-office-365/mdo-about features are configured correctly.
+Microsoft provides built-in [alert policies](/defender-office-365/alert-policies-defender-portal) that help identify certain risks. These risks include Exchange admin permissions abuse, malware activity, potential external and internal threats, and data lifecycle management risks. Some alerts can trigger [automated investigation and response in Office 365](/defender-office-365/air-about). Make sure your [Defender for Office 365](/defender-office-365/mdo-about) features are configured correctly.
 
 Although certain alerts and security policies can trigger automated investigations, *no remediation actions are taken automatically for email and content*. Instead, all remediation actions for email and email content await approval by your security operations team in the [Action center](m365d-action-center.md).
 
