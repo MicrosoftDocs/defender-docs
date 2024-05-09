@@ -13,7 +13,7 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 05/08/2024
+ms.date: 05/09/2024
 ---
 
 # Migrate devices to use the streamlined connectivity method
