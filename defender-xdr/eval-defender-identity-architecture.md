@@ -37,7 +37,7 @@ Deploy Microsoft Defender for Identity to help your SecOp teams deliver a modern
 - Prevent breaches, using proactive identity security posture assessments
 - Detect threats, using real-time analytics and data intelligence
 - Investigate suspicious activities, using clear, actionable incident information
-- Respond to attacks, using automatic response to compromised identities For more information, see [What is Microsoft Defender for Identity?](/defender-for-identity/what-is)
+- Respond to attacks, using automatic response to compromised identities. For more information, see [What is Microsoft Defender for Identity?](/defender-for-identity/what-is)
 
 Defender for Identity protects your on-premises Active Directory users and/or users synced to your Microsoft Entra ID. To protect an environment made up of only Microsoft Entra users, see [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection).
 
