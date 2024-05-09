@@ -15,16 +15,12 @@ ms.subservice: ngp
 
 # Behavior monitoring in Microsoft Defender Antivirus on macOS
 
-__Applies to:__
+**Applies to:**
 
 - Microsoft Defender for XDR
-
 - [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
-
 - [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/microsoft-defender-endpoint)
-
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 - Microsoft Defender Antivirus
