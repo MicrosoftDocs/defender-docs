@@ -37,11 +37,11 @@ To be considered for the MVI program, your organization must meet all the follow
 |Test Provider|Lab Test Type|Minimum Level / Score|
 |---|---|---|
 |[AV-Comparatives](https://www.av-comparatives.org/testmethod/real-world-protection-tests)|Real-World Protection Test.|Approved rating|
-|[AV-Test](https://www.av-test.org/en/about-the-institute/certification)|Must pass tests for Windows. Certifications for Mac and Linux aren't accepted.|<ul><li>AV-TEST Certified (home)<li></li>AV-TEST Approved (corporate)</li></ul>|
+|[AV-Test](https://www.av-test.org/en/about-the-institute/certification)|Must pass tests for Windows. Certifications for Mac and Linux aren't accepted.|- AV-TEST Certified (home)<br/>- AV-TEST Approved (corporate)|
 |[SKD Labs](http://www.skdlabs.com)|Certification Requirements Product: Anti-virus or Antimalware.|Score >= 98.5% with On Demand, On Access and Total Detection tests|
 |[VB 100](https://www.virusbulletin.com/testing/vb100/vb100-methodology/vb100-methodology-ver1-1)|VB100 Certification Test V1.1|VB100 Certification|
 |[West Coast Labs](https://www.westcoastlabs.com/wclvalid)|West Coast Labs Verified|Product rating of A or higher with both Malware Detection and Malware Remediation|
-|[SE Labs](https://selabs.uk/en/reports/consumers)|Protection, Small Business, or Enterprise EP Protection Test.|<ul><li>Protection A rating<li></li>Small Business EP A rating<li></li>Enterprise EP Protection A rating</li></ul>|
+|[SE Labs](https://selabs.uk/en/reports/consumers)|Protection, Small Business, or Enterprise EP Protection Test.|- Protection A rating <br/>- Small Business EP A rating<br/>- Enterprise EP Protection A rating |
 
 ## Apply now
 
