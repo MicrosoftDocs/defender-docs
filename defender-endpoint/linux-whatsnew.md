@@ -35,6 +35,28 @@ This article is updated frequently to let you know what's new in the latest rele
 <details>
 <summary> March-2024 (Build: 101.24022.0001 | Release version: 30.124022.0001.0)</summary>
 
+## May-2024 Build: 101.24032.0007 | Release version: 30.124022.0001.0
+
+&ensp;Released: **TBD**<br/>
+&ensp;Published: **TBD**<br/>
+&ensp;Build: **101.24032.0007**<br/>
+&ensp;Release version: **From where to get this**<br/>
+&ensp;Engine version: **1.1.24020.3**<br/>
+&ensp;Signature version: **From where to get this**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release:
+
+- New Field in mdatp health - engine_load_status.
+- dlpdaemon crash fix on Sonoma 23E214.
+- Bug fix to enhance behavioral detections.
+
+</details>
+
+<details>
+<summary> March-2024 (Build: 101.24022.0001 | Release version: 30.124022.0001.0)</summary>
+
 ## March-2024 Build: 101.24022.0001 | Release version: 30.124022.0001.0
 
 &ensp;Released: **March 22,2024**<br/>
