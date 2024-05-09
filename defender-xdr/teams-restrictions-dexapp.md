@@ -49,7 +49,7 @@ The following screenshot is an example of the missing bot:
 
 **If you have the Teams app installed already, and you encounter a policy issue, do the following:**
 
-- Go to the **Manage apps** page for the Defender Experts app, and then to the **User requests** tab. Learn more about [Manage app - Microsoft Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps/81769126-d9ed-4a77-a1e8-2ab8107adf03/user-requests).
+- Go to the **Manage apps** page for the Defender Experts app, and then to the **User requests** tab. Learn more about [Manage app - Microsoft Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps/81769126-d9ed-4a77-a1e8-2ab8107adf03/user-requests)
 
 If you see the following notification, then the Teams app permission policies are preventing you from using the Defender Experts app:
 
@@ -68,7 +68,7 @@ You have two options to fix the Teams app permission policy that stops the Defen
 
 ### Change the policy that blocks the Defender Experts app from running
 
-1. Go to the [App permission policies page](https://admin.teams.microsoft.com/policies/app-permission). Read more about [App permission policies - Microsoft Teams admin center](/microsoftteams/teams-app-permission-policies).
+1. Go to the [App permission policies page](https://admin.teams.microsoft.com/policies/app-permission). Learn more about [App permission policies - Microsoft Teams admin center](/microsoftteams/teams-app-permission-policies)
 2. Look at each policy and see if **Microsoft apps** is set to **Allow specific apps and block all others**.
 
    :::image type="content" source="/defender-xdr/media/allow-apps-teams.png" alt-text="Screenshot of option to allow Teams app installation.":::
