@@ -45,11 +45,11 @@ The following screenshot is an example of the missing bot:
 2. Type **Defender Experts** in the search pane to see the Defender Experts app.
 3. Select **Request** to request for the Defender Experts service.
 
-:::image type="content" source="/defender-xdr/media/request-defender-experts.png" alt-text="Screenshot to request Defender Experts app in Microsoft Teams.":::
+   :::image type="content" source="/defender-xdr/media/request-defender-experts.png" alt-text="Screenshot to request Defender Experts app in Microsoft Teams.":::
 
 **If you have the Teams app installed already, and you encounter a policy issue, do the following:**
 
-- Go to the **Manage apps** page for the Defender Experts app, and then to the **User requests** tab. Learn more about [Manage app - Microsoft Teams admin center](/microsoftteams/manage-admin-app).
+- Go to the **Manage apps** page for the Defender Experts app, and then to the **User requests** tab. Learn more about [Manage app - Microsoft Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps/81769126-d9ed-4a77-a1e8-2ab8107adf03/user-requests).
 
 If you see the following notification, then the Teams app permission policies are preventing you from using the Defender Experts app:
 
