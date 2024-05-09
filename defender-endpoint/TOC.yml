@@ -17,7 +17,7 @@
     - name: What's new in Defender for Endpoint
       href: whats-new-in-microsoft-defender-endpoint.md
       items: 
-      - name: What's new in Sense (Windows)
+      - name: MsSense versions (Windows)
         href: windows-whatsnew.md
       - name: What's new in Defender for Endpoint on macOS
         href: mac-whatsnew.md
