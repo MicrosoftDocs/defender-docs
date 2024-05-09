@@ -13,7 +13,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 12/08/2023
+ms.date: 05/09/2024
 ---
 
 # Microsoft Virus Initiative
@@ -31,7 +31,7 @@ To be considered for the MVI program, your organization must meet all the follow
 4. Your organization must sign a non-disclosure agreement (NDA) with Microsoft.
 5. Your organization must sign a program license agreement. 
 6. Your organization must be active in the program and meet all program requirements.
-7. Your security solution must meet all program requirements, which requires use of [Trusted Signing](https://learn.microsoft.com/en-us/azure/trusted-signing).
+7. Your security solution must meet all program requirements, which requires use of [Trusted Signing](/azure/trusted-signing).
 8. Your security solution must have been certified within the last 12 months through independent testing by at least one of the organizations listed below. Yearly certification must be maintained.
 
 |Test Provider|Lab Test Type|Minimum Level / Score|
