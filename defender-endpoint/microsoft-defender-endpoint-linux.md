@@ -86,14 +86,10 @@ In general you need to take the following steps:
   - CentOS 6.7 or higher (In preview)
   - CentOS 7.2 or higher
   - Ubuntu 16.04 LTS 
-    
   - Ubuntu 18.04 LTS
-    
   - Ubuntu 20.04 LTS
-    
   - Ubuntu 22.04 LTS
-    
-   - Debian 9 - 12
+  - Debian 9 - 12
   - SUSE Linux Enterprise Server 12 or higher
   - SUSE Linux Enterprise Server 15 or higher
   - Oracle Linux 7.2 or higher
@@ -112,9 +108,10 @@ In general you need to take the following steps:
     > MDE Linux version 101.23082.0011 is the last MDE Linux release supporting RHEL 6.7 or higher versions (does not expire before June 30, 2024). Customers are advised to plan upgrades to their RHEL 6 infrastructure aligned with guidance from Red Hat. 
 
 - List of supported kernel versions
-  > [!NOTE]
-  > Microsoft Defender for Endpoint on Red Hat Enterprise Linux and CentOS - 6.7 to 6.10 is a Kernel based solution. You must verify that the kernel version is supported before updating to a newer kernel version.
-  > Microsoft Defender for Endpoint for all other supported distributions and versions is kernel-version-agnostic. With a minimal requirement for the kernel version to be at or greater than 3.10.0-327.
+
+   > [!NOTE]
+   > Microsoft Defender for Endpoint on Red Hat Enterprise Linux and CentOS - 6.7 to 6.10 is a Kernel based solution. You must verify that the kernel version is supported before updating to a newer kernel version.
+   > Microsoft Defender for Endpoint for all other supported distributions and versions is kernel-version-agnostic. With a minimal requirement for the kernel version to be at or greater than 3.10.0-327.
 
   - The `fanotify` kernel option must be enabled
   - Red Hat Enterprise Linux 6 and CentOS 6:
@@ -256,5 +253,6 @@ High I/O workloads from certain applications can experience performance issues w
 - [Protect your endpoints with Defender for Cloud's integrated EDR solution: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint)
 - [Connect your non-Azure machines to Microsoft Defender for Cloud](/azure/defender-for-cloud/quickstart-onboard-machines)
 - [Turn on network protection for Linux](network-protection-linux.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
