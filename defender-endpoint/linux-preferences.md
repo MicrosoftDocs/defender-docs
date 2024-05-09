@@ -429,7 +429,7 @@ Determines whether cloud-delivered protection is enabled on the device or not. T
 
 #### Diagnostic collection level
 
-Diagnostic data is used to keep Defender for Endpoint secure and up to date, detect, diagnose and fix problems, and also make product improvements. This setting determines the level of diagnostics sent by the product to Microsoft.
+Diagnostic data is used to keep Defender for Endpoint secure and up to date, detect, diagnose and fix problems, and also make product improvements. This setting determines the level of diagnostics sent by the product to Microsoft. For more details, please refer to: [Privacy for Microsoft Defender for Endpoint on Linux](https://learn.microsoft.com/en-us/defender-endpoint/linux-privacy).
 
 |Description|Value|
 |---|---|
