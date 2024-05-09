@@ -33,7 +33,7 @@ In most cases, full device offboarding isn't required when reonboarding. You can
 > [!IMPORTANT]
 > Limitations and known issues:
 >
-> - We found a backend issue with populating the ConnectivityType column in the DeviceInfo table in advanced hunting, that would allow you to track migration progress. We aim to resolve this as soon as possible.
+> - We found a back-end issue with populating the `ConnectivityType` column in the `DeviceInfo table` in advanced hunting so that you can track migration progress. We aim to resolve this issue as soon as possible.
 > - For device migrations (reonboarding): Offboarding is not required to switch over to streamlined connectivity method. Once the updated onboarding package is run, a full device reboot is required for Windows devices and a service restart for macOS and Linux. For more information, see the details included in this article.
 > - Windows 10 versions 1607, 1703, 1709, and 1803 do not support reonboarding. Offboard first and then onboard using the updated package. These versions also require a longer URL list.
 > - Devices running the MMA agent are not supported and must continue using the MMA onboarding method.
