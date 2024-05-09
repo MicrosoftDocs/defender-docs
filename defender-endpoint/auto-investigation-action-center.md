@@ -50,7 +50,7 @@ You can use the unified Action center if you have appropriate permissions and on
 
 - [Microsoft Defender XDR](/microsoft-365/security/mtp/microsoft-threat-protection)
 - [Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Defender for Office 365]/defender-office-365/mdo-about
+- [Defender for Office 365](/defender-office-365/mdo-about)
 - [Defender for Business](/defender-business/mdb-overview)
 
 ## Using the Action center
