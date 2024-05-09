@@ -30,7 +30,12 @@ This article is [Step 1 of 3](eval-defender-identity-overview.md) in the process
 
 Before enabling Microsoft Defender for Identity, be sure you understand the architecture and can meet the requirements.
 
-Microsoft Defender for Identity uses machine learning and behavioral analytics to identify attacks across your on-premises network along with detecting and proactively preventing user sign-in risks associated with cloud identities. For more information, see [What is Microsoft Defender for Identity?](/defender-for-identity/what-is)
+Microsoft Defender for Identity is fully integrated with Microsoft Defender XDR, and leverages signals from both on-premises Active Directory and cloud identities to help you better identify, detect, and investigate advanced threats directed at your organization.
+Deploy Microsoft Defender for Identity to help your SecOp teams deliver a modern identity threat detection (ITDR) solution across hybrid environments, including:
+- Prevent breaches, using proactive identity security posture assessments
+- Detect threats, using real-time analytics and data intelligence
+- Investigate suspicious activities, using clear, actionable incident information
+- Respond to attacks, using automatic response to compromised identities For more information, see [What is Microsoft Defender for Identity?](/defender-for-identity/what-is)
 
 Defender for Identity protects your on-premises Active Directory users and/or users synced to your Microsoft Entra ID. To protect an environment made up of only Microsoft Entra users, see [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection).
 
