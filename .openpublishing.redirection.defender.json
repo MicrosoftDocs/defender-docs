@@ -4,6 +4,12 @@
         "source_path": "defender/advanced-hunting-overview.md",
         "redirect_url": "/defender-xdr/advanced-hunting-overview",
         "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "defender-endpoint/evaluation-lab.md",
+      "redirect_url": "/defender-endpoint/evaluate-microsoft-defender-antivirus",
+      "redirect_document_id": true
+   }
+
   ]
 }
