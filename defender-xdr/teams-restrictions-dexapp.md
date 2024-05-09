@@ -24,7 +24,7 @@ ms.date: 05/09/2024
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
-The Microsoft Defender Experts app is available for Microsoft Teams by default, but some environments might have limitations that block the app's installation because of app policy permissions in Teams. [Learn how to check Teams app permissions policies](#check-the-teams-app-permission-policies).
+The Microsoft Defender Experts app is available for Microsoft Teams by default, but some environments might have limitations that block the app's installation because of app policy permissions in Teams. [Learn how to check Teams app permissions policies](#check-the-teams-app-permission-policies)
 
 **[Add screenshot]**
 
@@ -68,7 +68,7 @@ You have two options to fix the Teams app permission policy that stops the Defen
 
 ### Change the policy that blocks the Defender Experts app from running
 
-1. Go to the [App permission policies page](https://admin.teams.microsoft.com/policies/app-permission). Learn more about [App permission policies - Microsoft Teams admin center](/microsoftteams/teams-app-permission-policies)
+1. Go to the [App permission policies page](https://admin.teams.microsoft.com/policies/app-permission). Read more about [App permission policies - Microsoft Teams admin center](/microsoftteams/teams-app-permission-policies)
 2. Look at each policy and see if **Microsoft apps** is set to **Allow specific apps and block all others**.
 
    :::image type="content" source="/defender-xdr/media/allow-apps-teams.png" alt-text="Screenshot of option to allow Teams app installation.":::
