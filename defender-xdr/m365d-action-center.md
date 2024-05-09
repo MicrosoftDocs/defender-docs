@@ -141,7 +141,7 @@ To perform tasks, such as approving or rejecting pending actions in the Action c
   > [!TIP]
   > Membership in the **Security Administrator** role group Email & collaboration permissions doesn't grant access to the Action center or Microsoft Defender XDR capabilities. For those, you need to be a member of the **Security Administrator** role in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
 
-- [Defender for Endpoint permissions](s/defender-endpoint/rbac):
+- [Defender for Endpoint permissions](/defender-endpoint/rbac):
   - _Microsoft Defender for Endpoint remediation (devices)_: Membership in the **Active remediation actions** role.
 
 > [!TIP]
