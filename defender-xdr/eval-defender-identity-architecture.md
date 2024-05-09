@@ -31,7 +31,9 @@ This article is [Step 1 of 3](eval-defender-identity-overview.md) in the process
 Before enabling Microsoft Defender for Identity, be sure you understand the architecture and can meet the requirements.
 
 Microsoft Defender for Identity is fully integrated with Microsoft Defender XDR, and leverages signals from both on-premises Active Directory and cloud identities to help you better identify, detect, and investigate advanced threats directed at your organization.
+
 Deploy Microsoft Defender for Identity to help your SecOp teams deliver a modern identity threat detection (ITDR) solution across hybrid environments, including:
+
 - Prevent breaches, using proactive identity security posture assessments
 - Detect threats, using real-time analytics and data intelligence
 - Investigate suspicious activities, using clear, actionable incident information
