@@ -45,6 +45,32 @@ All updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr))
 
+## Feb-2024 (Release version: 10.8735.26020.1009)
+
+|OS  |KB  |Release version  |
+|---------|---------|---------|
+|Windows Server 2012 R2, 2016 |[KB 5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8735.26020.1009|
+
+### What's new
+
+- **Endpoint Detection and Response**
+  - Enabled support for IPV6 connections in Live Response connection commands.
+  - Fixed an issue in Downlevel Unified Agent that caused ServerRoles not to be populated.
+    
+- **Threat Vulnerability Management**
+  - An issue related to the agent's monitoring of deleted registry keys no longer occurs.
+  - Added a new capability to enable/disable registry monitoring through configuration settings.
+   
+- **Network Detection and Response (NDR) Performance Enhancemens** 
+  - Introduced performance enhancements to minimize the CPU and memory footprint of the agent.
+  - Enhanced the accuracy of network detections.
+    
+- **Data Loss Prevention (DLP)**
+   - Introduced multiple performance and stability fixes.
+     
+- **Security Configuration Management**
+   - Policies that include special characters are now supported.   
+
 ## Dec-2023 (Release version: 10.8672.25926.1019)
 
 |OS  |KB  |Release version  |
