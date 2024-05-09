@@ -19,9 +19,9 @@
       items: 
       - name: MsSense versions (Windows)
         href: windows-whatsnew.md
-      - name: What's new in Defender for Endpoint on macOS
+      - name: Defender for Endpoint on macOS releases
         href: mac-whatsnew.md
-      - name: What's new in Defender for Endpoint on Linux
+      - name: Defender for Endpoint on Linux releases
         href: linux-whatsnew.md
       - name: What's new in Defender for Endpoint on Android
         href: android-whatsnew.md
