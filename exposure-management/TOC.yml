@@ -1,4 +1,4 @@
-- name: Microsoft Security Exposure Management (public preview)
+- name: Microsoft Security Exposure Management (preview)
   href: index.yml
   expanded: true
   items: 
@@ -6,13 +6,13 @@
       items:
       - name: What is Microsoft Security Exposure Management?
         href: microsoft-security-exposure-management.md
-      - name: Compare secure score and Security Exposure Management
+      - name: Compare Secure Score and Security Exposure Management
         href: compare-secure-score-security-exposure-management.md      
     - name: Get started
       items:
       - name: Prerequisites and support
         href: prerequisites.md
-      - name: Start using Microsoft Security Exposure Management
+      - name: Start using Security Exposure Management
         href: get-started-exposure-management.md
     - name: Explore cross-workload attack surfaces
       items:

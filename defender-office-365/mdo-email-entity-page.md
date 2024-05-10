@@ -313,7 +313,7 @@ If you select an entry in the **Attachments** view by clicking on the **Attachme
     - **Indicators of compromise**
 
   - **Screenshots section**: Show any screenshots that were captured during detonation. No screenshots are captured for container files like ZIP or RAR that contain other files.
-  
+
     If no detonation screenshots are available, the value **No screenshots to display** is shown. Otherwise, select the link to view the screenshot.
 
   - **Behavior details** section: Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation. There might not be any behavior details for container files like ZIP or RAR that contain other files.
@@ -392,7 +392,7 @@ If you select an entry in the **URL** view by clicking on the **URL** value, a d
     - **Verdict**: The verdict on the URL itself.
 
   - **Screenshots section**: Show any screenshots that were captured during detonation. No screenshots are captured if the URL opens into a link that directly downloads a file. However, you see the downloaded file in the detonation chain.
-  
+
     If no detonation screenshots are available, the value **No screenshots to display** is shown. Otherwise, select the link to view the screenshot.
 
   - **Behavior details** section: Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation.
@@ -470,7 +470,7 @@ The following actions are available at the top of the Email entity page:
 
 ¹ The **Email preview** and **Download email** actions require the **Preview** role. You can assign this role in the following locations:
 
-- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Security operations/Raw data (email & collaboration)/Email & collaboration content (read)**.
+- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Raw data (email & collaboration)/Email & collaboration content (read)**.
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Data Investigator** or **eDiscovery Manager** role groups. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Preview** role assigned, and add the users to the custom role group.
 
 ² You can preview or download email messages that are available in Microsoft 365 mailboxes. Examples of when messages are no longer available in mailboxes include:

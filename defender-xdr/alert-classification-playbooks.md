@@ -40,7 +40,7 @@ As a security researcher or security operations center (SOC) analyst, you must h
 
 ## Microsoft Defender for Office 365
 
-[Microsoft Defender for Office 365]/defender-office-365/mdo-about safeguards your organization against malicious threats posed by email messages, links (URLs), and collaboration tools. Defender for Office 365 includes:
+[Microsoft Defender for Office 365](/defender-office-365/mdo-about) safeguards your organization against malicious threats posed by email messages, links (URLs), and collaboration tools. Defender for Office 365 includes:
 
 - Threat protection policies
 
