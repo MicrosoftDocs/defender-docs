@@ -37,6 +37,8 @@ Examples of Microsoft Defender for Office 365 organizations include:
 - [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business)
 - [Microsoft Defender for Office 365 as an add-on](https://products.office.com/exchange/advance-threat-protection)
 
+> [!TIP]
+> Strengthen your organization's security posture with our comprehensive [Security Analyzer setup guide](https://go.microsoft.com/fwlink/?linkid=2268615). Use the guide to scrutinize networks, endpoints, and servers, identifying vulnerabilities and potential breaches. With intuitive insights and step-by-step instructions, learn how to fortify defenses, improve compliance, and navigate the cybersecurity landscape with confidence. Login credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/?linkid=2268522). Anyone, from potential Microsoft clients to partners and IT admins, may access the guides and use them freely (Login credentials are not required). 
 The high-level differences between anti-phishing policies in EOP and anti-phishing policies in Defender for Office 365 are described in the following table:
 
 |Feature|Anti-phishing policies<br>in EOP|Anti-phishing policies<br>in Defender for Office 365|
