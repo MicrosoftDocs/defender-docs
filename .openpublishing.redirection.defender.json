@@ -5,5 +5,10 @@
         "redirect_url": "/defender-xdr/advanced-hunting-overview",
         "redirect_document_id": false
     }
+    {
+      "source_path": "defender-endpoint/microsoft-defender-antivirus-using-mde-security-set-mngmnt.md",
+      "redirect_url": "/defender-endpoint/evaluate-mda-using-gp",
+      "redirect_document_id": true
+    }
   ]
 }
