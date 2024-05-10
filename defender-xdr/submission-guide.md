@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 08/18/2023
+ms.date: 05/10/2024
 ---
 
 # Submit files for analysis
@@ -28,6 +28,9 @@ If you have a file that you suspect might be malware or is being incorrectly det
 
 ## How do I submit a file to Microsoft for analysis?
 
+> [!IMPORTANT]
+> Starting May 20, 2024, [file submissions](https://www.microsoft.com/en-us/wdsi/filesubmission) will be transitioning to a new [Microsoft Entra ID](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id). If your tenant requires admin consent to continue accessing this service, refer to [Overview of user and admin consent](/entra/identity/enterprise-apps/user-admin-consent-overview) and grant access to app ID: 6ba09155-cb24-475b-b24f-b4e28fc74365 with graph permissions for Directory.Read.All and User.Read.
+
 ### Send a malware file
 
 You can send files that you think might be malware or files that were incorrectly detected through the [sample submission portal](https://www.microsoft.com/wdsi/filesubmission).
@@ -37,7 +40,6 @@ You can complete a quick analysis by providing detailed information about the pr
 After you sign in, you'll be able to track your submissions.
 
 > [!NOTE]
->
 > You can use the Microsoft Security Intelligence submission feature even if you don't have Microsoft Defender for Endpoint Plan 2 or Microsoft Defender for Office Plan 2.
 
 ### Submit a suspected email attachment
