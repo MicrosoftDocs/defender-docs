@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 08/18/2023
+ms.date: 05/10/2024
 ---
 
 # Submit files for analysis
@@ -27,6 +27,9 @@ If you have a file that you suspect might be malware or is being incorrectly det
 > If your organization's subscription includes [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint), [Microsoft Defender for Office 365 Plan 2](/defender-office-365/mdo-about), or [Microsoft Defender XDR](microsoft-365-defender.md), you can use the [new unified submissions portal](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/unified-submissions-in-microsoft-365-defender-now-generally/ba-p/3270770). To learn more, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
 ## How do I submit a file to Microsoft for analysis?
+
+> [!NOTE]
+> **Attention**: We will be transitioning to a new AAD or [Microsoft Entra ID](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id) from the week of May 20, 2024. In case your tenant requires admin consent, please refer to this document located at [Overview of user and admin consent - Microsoft Entra ID | Microsoft Learn](/entra/identity/enterprise-apps/user-admin-consent-overview) and grant access to App ID: 6ba09155-cb24-475b-b24f-b4e28fc74365 with graph permissions for Directory.Read.All and User.Read for continued access.
 
 ### Send a malware file
 
