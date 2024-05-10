@@ -230,23 +230,12 @@ Microsoft Defender for Endpoint on macOS antivirus behavior monitoring seamlessl
 sudo mdatp threat list
 ```
 
-### Next steps during Preview
+Frequently Asked Questions (FAQ):
 
-- Keep an eye on [performance](/defender-endpoint/mac-support-perf-overview) such as cpu utilization, and memory utilization.  Please share your feedback and observations to help us improve.
+Q: Do the Behavior Monitoring protection alerts show up in the “Device timeline” and/or “Advanced Hunting”?
+A: Not at this time, it's in telemetry mode.
 
-- Do the BM protection alerts show up in the “Device timeline” and/or “Advanced Hunting”?  Not during “Preview”.  Once we go to GA, they will.
-
-- Continue running MacOS clients enrolled into evaluation as you normally would.
-
-### Feedback? 
-
-We welcome your feedback! You can submit feedback through the Microsoft Defender XDR portal ([https://security.microsoft.com](https://security.microsoft.com)).
-
- 
-
-### When will it be available in General Availability (GA)?
-
-Monitor the [What's new in Microsoft Defender for Endpoint on macOS page](/defender-endpoint/mac-whatsnew) for upcoming announcements which also includes GA of macOS antivirus behavior monitoring and blocking.
-
-Stay tuned to our [blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/bg-p/MicrosoftDefenderATPBlog) and [Twitter channel](https://twitter.com/MSThreatProtect) to stay up to date on additional Microsoft Defender for Endpoint advancements.
-
+Q: What if I see an increase in cpu utilization or memory utilization?
+A: Disable Behavior Monitoring and see if the issue goes away.
+If the issue does not go away, it's not related to Behavior Monitoring.
+If the issue goes away, please grab a aka.ms/xMDEClientAnalyzer and open a Microsoft support.
