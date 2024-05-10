@@ -74,8 +74,8 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `ConnectivityType` | `string` | Type of connectivity from the device to the cloud |
 | `HostDeviceId` | `string` | Device ID of the device running Windows Subsystem for Linux |
 | `AzureResourceId` | `string` | Unique identifier of the Azure resource associated with the device |
-
-
+| `AwsResourceName` | `string` | Unique identifier specific to Amazon Web Services devices, containing the Amazon resource name |
+| `GcpFullResourceName` | `string` | Unique identifier specific to Google Cloud Platform devices, containing a combination of zone and ID for GCP|
 
 
 

@@ -17,6 +17,11 @@ Security Exposure Management is currently in public preview.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
+## Prerequisites
+
+- [Read about](cross-workload-attack-surfaces.md) attack surface management.
+- [Review required permissions](prerequisites.md#permissions) for working with the graph.
+
 ## Access the map
 
 1. In the device inventory, select a device.
@@ -35,7 +40,7 @@ The exposure map gives you visibility into asset connections.
     - **Hovering**: Hover over nodes and edges to get additional information.
     - **Explore assets and their edges**. To explore assets and edge, select the plus sign. Or select the option to explore connected assets from the contextual menu.
     - **Asset details**: To view details, select the asset icon.
-    - **Focus on asset**: Provides a way to refocus the graph visualization on the specific node you want to explore, similar to the Graph view when selecting an individual [attack path](review-attack-paths.md).
+    - **Focus on asset**: Provides a way to refocus the graph visualization on the specific node you want to explore, similar to the **Graph** view when selecting an individual [attack path](review-attack-paths.md).
     - **Search**: Helps you to discover items by node type. By selecting **all results**, search the particular type for specific results. You can also filter your search by devices, identity, or cloud assets from the initial screen.
 
 
