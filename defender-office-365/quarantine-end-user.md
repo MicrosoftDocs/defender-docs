@@ -91,6 +91,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Policy type**<sup>\*</sup> (see the possible values in the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** description.)
 - **Expires**<sup>\*</sup>
 - **Recipient**<sup>\*</sup>
+- **Sender override reason**
 - **Message ID**
 - **Policy name**
 - **Message size**
@@ -104,7 +105,7 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Subject**
 - **Time received**:
   - **Last 24 hours**
-  - **Last 7 days**
+  - **Last 7 days** (default)
   - **Last 14 days**
   - **Last 30 days** (default)
   - **Custom**: Enter a **Start time** and **End time** (date).
@@ -120,6 +121,9 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Malware**: Anti-malware policies in EOP or Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
+- **Blocked sender**: One of the following values:
+  - **Don't show blocked senders** (default)
+  - **Show all senders**
 - **Release status**: Any of the following values:
   - **Needs review**
   - **Approved**
@@ -148,7 +152,7 @@ Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="f
 After you've entered the search criteria, press the enter ENTER key to filter the results.
 
 > [!NOTE]
-> The **Search** box searches for quarantined items in the current view, not all quarantined items. To search all quarantined items, use **Filter** and the resulting **Filters** flyout.
+> The **Search** box searches for quarantined items in the current view, not all quarantined items. To search all quarantined items, use :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and the resulting **Filters** flyout.
 
 After you find a specific quarantined message, select the message to view details about it and to take action on it (for example, view, release, download, or delete the message).
 
@@ -174,13 +178,15 @@ In the details flyout that opens, the following information is available:
   - **Policy name**
   - **Recipient count**
   - **Recipients**: If the message contains multiple recipients, you might need to select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Preview message** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **View message header** to see the complete list of recipients.
+  - **Sender override reason**
+
 - **Email details** section:
   - **Sender address**
   - **Time received**
   - **Network message ID**
   - **Recipients**
 
-:::image type="content" source="media/quarantine-user-message-details.png" alt-text="The details flyout of a quarantined message" lightbox="media/quarantine-user-message-details.png":::
+:::image type="content" source="media/quarantine-user-message-details-released-by.png" alt-text="The details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-released-by.png":::
 
 To take action on the message, see the next section.
 
