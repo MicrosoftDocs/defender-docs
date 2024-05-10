@@ -29,7 +29,7 @@ If you have a file that you suspect might be malware or is being incorrectly det
 ## How do I submit a file to Microsoft for analysis?
 
 > [!IMPORTANT]
-> We will be transitioning to a new AAD or [Microsoft Entra ID](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id) from the week of May 20, 2024. In case your tenant requires admin consent, please refer to this document located at [Overview of user and admin consent - Microsoft Entra ID | Microsoft Learn](/entra/identity/enterprise-apps/user-admin-consent-overview) and grant access to App ID: 6ba09155-cb24-475b-b24f-b4e28fc74365 with graph permissions for Directory.Read.All and User.Read for continued access.
+> We will be transitioning to a new [Microsoft Entra ID](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id) from the week of May 20, 2024. If your tenant requires admin consent, to continue accessing [WDSI](https://www.microsoft.com/en-us/wdsi/filesubmission), refer to [Overview of user and admin consent - Microsoft Entra ID](/entra/identity/enterprise-apps/user-admin-consent-overview) and grant access to App ID: 6ba09155-cb24-475b-b24f-b4e28fc74365 with graph permissions for Directory.Read.All and User.Read for continued access.
 
 ### Send a malware file
 
@@ -40,7 +40,6 @@ You can complete a quick analysis by providing detailed information about the pr
 After you sign in, you'll be able to track your submissions.
 
 > [!NOTE]
->
 > You can use the Microsoft Security Intelligence submission feature even if you don't have Microsoft Defender for Endpoint Plan 2 or Microsoft Defender for Office Plan 2.
 
 ### Submit a suspected email attachment
