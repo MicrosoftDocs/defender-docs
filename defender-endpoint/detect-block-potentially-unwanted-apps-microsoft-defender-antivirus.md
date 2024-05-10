@@ -48,7 +48,8 @@ Potentially unwanted applications can increase the risk of your network being in
 
 > [!TIP]
 > As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
-
+> 
+> Leverage our [setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) for *Microsoft Defender for Endpoint* (MDE) to streamline your implementation process. The guide includes essential tools and automated features such as attack surface reduction and next-generation protection. Configure with ease and gain access to Microsoft threat experts for enhanced security. Login credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/?linkid=2268087)*.* Anyone, from potential Microsoft clients to partners and IT admins, may access the guides and use them freely (Login credentials are not required).  
 ## Microsoft Edge
 
 The [new Microsoft Edge](https://support.microsoft.com/microsoft-edge/get-to-know-microsoft-edge-3f4bb0ff-58de-2188-55c0-f560b7e20bea), which is Chromium-based, blocks potentially unwanted application downloads and associated resource URLs. This feature is provided via [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview).
