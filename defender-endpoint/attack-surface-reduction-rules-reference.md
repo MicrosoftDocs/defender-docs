@@ -134,7 +134,7 @@ The following table lists the supported operating systems for rules that are cur
 | [Block rebooting machine in Safe Mode (preview)](#block-rebooting-machine-in-safe-mode-preview) | Y | Y | Y | Y | Y |
 | [Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y | Y | Y | Y | Y |
 | [Block use of copied or impersonated system tools (preview)](#block-use-of-copied-or-impersonated-system-tools-preview) | Y | Y | Y | Y | Y |
-| [Block Webshell creation for Servers](#block-webshell-creation-for-servers)  | N | Y <br>Exchange Role Only | Y <br>Exchange Role Only | Y <br>Exchange Role Only | N |
+| [Block Webshell creation for Servers](#block-webshell-creation-for-servers)  | N | Y <br>Exchange Role Only | Y <br>Exchange Role Only | Y <br>Exchange Role Only | Y <br>Exchange Role Only |
 | [Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) | Y | N | N | N | N |
 | [Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Y <br> version 1803 or later <sup>[[3](#fn1)]</sup> | Y | Y | Y | Y |
 
