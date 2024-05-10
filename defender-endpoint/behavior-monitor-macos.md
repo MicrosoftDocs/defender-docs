@@ -17,38 +17,27 @@ ms.subservice: ngp
 
 **Applies to:**
 
-- Microsoft Defender for XDR
+- [Microsoft Defender for XDR](../defender-xdr/microsoft-365-defender.md)
 - [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
-
 - Microsoft Defender Antivirus
-
 - Supported [versions of macOS](/defender-endpoint/microsoft-defender-endpoint-mac)
 
 > [!IMPORTANT]
 > Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-### Pre-requisites
+## Pre-requisites
 
-- Device needs to be onboarded to Microsoft Defender for Endpoint
-
-- Enable [preview features](/defender-endpoint/preview) in the Microsoft XDR portal ([https://security.microsoft.com](https://security.microsoft.com))
-
-- Device must be in the [Beta* channel ](/defender-endpoint/mac-updates)
-
-  * formerly InsiderFast. 
-  
-- __Minimal Microsoft Defender for Endpoint version__ number* must be (Beta (Insiders-Fast)):  101.24042.0002 or newer
-
-  - __*__ app_version, aka Platform update.
-  
+- Device is onboarded to Microsoft Defender for Endpoint
+- [preview features](/defender-endpoint/preview) is enabled in the Microsoft XDR portal ([https://security.microsoft.com](https://security.microsoft.com))
+- Device must be in the [Beta channel](/defender-endpoint/mac-updates) _Note: Beta channel was formerly InsiderFast._ 
+- Minimal Microsoft Defender for Endpoint version number must be (Beta (Insiders-Fast)): 101.24042.0002 or newer. Version number refers to the **app_version**, also referred to as **Platform update**.
 - Ensure that Real-Time Protection (RTP) is enabled
-
 - Ensure [cloud-delivered protection](/defender-endpoint/mac-preferences) is enabled
-
 - Device must be explicitly enrolled into the preview.
+
 ## Overview
 
 The new preventive antivirus functionality complements our existing strong content-based capabilities with behavior monitoring. This enhancement brings immediate ability to closely monitor processes, file system activities, and process interactions within the system. The enhanced ability to correlate events and behaviors across multiple processes allows us to more generically detect and block malware based on their behavioral classification. These behavior-based signals will act as additional runtime signals for behavioral cloud-powered machine learning models and for effective runtime protection.
