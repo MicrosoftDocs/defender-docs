@@ -47,8 +47,6 @@ Potentially unwanted applications can increase the risk of your network being in
 [Learn more about Windows Enterprise subscriptions](https://www.microsoft.com/microsoft-365/windows/windows-11-enterprise).
 
 > [!TIP]
-> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
-> 
 > Leverage our [setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) for *Microsoft Defender for Endpoint* (MDE) to streamline your implementation process. The guide includes essential tools and automated features such as attack surface reduction and next-generation protection. Configure with ease and gain access to Microsoft threat experts for enhanced security. Login credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/?linkid=2268087)*.* Anyone, from potential Microsoft clients to partners and IT admins, may access the guides and use them freely (Login credentials are not required).  
 ## Microsoft Edge
 
