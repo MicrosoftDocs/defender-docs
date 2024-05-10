@@ -32,8 +32,7 @@ ms.date: 05/02/2024
 - Windows
 
 > [!TIP]
-> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268615) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268522).
-
+> Leverage our [setup guide](https://go.microsoft.com/fwlink/?linkid=2268615) for *Microsoft Defender for Endpoint* (MDE) to streamline your implementation process. The guide includes essential tools and automated features such as attack surface reduction and next-generation protection. Configure with ease and gain access to Microsoft threat experts for enhanced security. Login credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/?linkid=2268522)*.* Anyone, from potential Microsoft clients to partners and IT admins, may access the guides and use them freely (Login credentials are not required).  
 ## Why attack surface reduction rules are important
 
 Your organization's attack surface includes all the places where an attacker could compromise your organization's devices or networks. Reducing your attack surface means protecting your organization's devices and network, which leaves attackers with fewer ways to perform attacks. Configuring attack surface reduction rules in Microsoft Defender for Endpoint can help!
