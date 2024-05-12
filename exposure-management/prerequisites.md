@@ -64,11 +64,11 @@ You can access Security Exposure Management in the Microsoft Defender portal usi
 
 ## Critical asset classification
 
-When classifying critical assets, we support devices running version 10.3740.XXXX of the Defender for Endpoint sensor or later. We recommended running a more recent sensor version, as listed on the Defender for Endpoint [What's New page](defender-endpoint/windows-whatsnew). You can check which sensor version a device is running as follows:
+When classifying critical assets, we support devices running version 10.3740.XXXX of the Defender for Endpoint sensor or later. We recommended running a more recent sensor version, as listed on the Defender for Endpoint [What's New page](/defender-endpoint/windows-whatsnew). You can check which sensor version a device is running as follows:
 
 - On a specific device, browse to the MsSense.exe file in
 C:\Program Files\Windows Defender Advanced Threat Protection. Right-click the file, and select Properties. On the Details tab, check the file version.
-- For multiple devices, it's easier to run an [advanced hunting Kusto query](defender-xdr/advanced-hunting-query-language) as follows:
+- For multiple devices, it's easier to run an [advanced hunting Kusto query](/defender-xdr/advanced-hunting-query-language) as follows:
 
     ``` DeviceInfo | project DeviceName, ClientVersion ```
 
