@@ -76,8 +76,7 @@ C:\Program Files\Windows Defender Advanced Threat Protection. Right-click the fi
 
         ``` DeviceInfo | project DeviceName, ClientVersion ```
 
-DeviceInfo
-| project DeviceName, ClientVersion
+
 
 ## Getting support
 
