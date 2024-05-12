@@ -27,7 +27,7 @@ You can check which sensor version a device is running as follows:
 
     - On a specific device, browse to the MsSense.exe file in
 C:\Program Files\Windows Defender Advanced Threat Protection. Right-click the file, and select Properties. On the Details tab, check the file version.
-    - For multiple devices, it's easier to run an [advanced hunting Kusto query](defender-xdr/advanced-hunting-query-language) as follows:
+    - For multiple devices, it's easier to run an [advanced hunting Kusto query](../defender-xdr/defender-xdr/advanced-hunting-query-language) as follows:
 
     ``` DeviceInfo | project DeviceName, ClientVersion ```
 
