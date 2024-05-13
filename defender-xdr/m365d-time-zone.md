@@ -16,7 +16,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 03/28/2024
+ms.date: 05/13/2024
 ---
 
 # Set the time zone for Microsoft Defender XDR
@@ -35,7 +35,7 @@ Microsoft Defender XDR can display date and time information using either your l
 - Advanced hunting results
 - Identity timeline
 
-To set the time zone for these features, go to **Settings** > **Security center** > **Time zone**
+To set the time zone for these features, go to **Settings** > **Microsoft Defender portal** > **Time zone**
 
 > [!NOTE]
 > The custom time range filter in advanced hunting remains in UTC regardless of the time zone setting. 

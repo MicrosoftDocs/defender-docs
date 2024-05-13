@@ -4,7 +4,7 @@ description: Understand how Microsoft Defender for Endpoint with EDR and other a
 author: cgardin
 ms.author: cgardin  
 manager: dansimp
-ms.date: 05/02/2024
+ms.date: 05/07/2024
 ms.topic: overview
 ms.service: defender-endpoint  
 ms.subservice: ngp
@@ -159,21 +159,41 @@ Here's a list of what to check:
    > [!NOTE]
    > The term *Defender* is sometimes used to refer to an entire suite of products and solutions. See [What is Microsoft Defender XDR?](/defender-xdr/microsoft-365-defender). In this article, we focus on antivirus and EDR capabilities in Defender for Endpoint.
     
-2. **Check the status of Microsoft Defender Antivirus**. Open Command Prompt. Use the following PowerShell commands:
+2. **Check the status of Microsoft Defender Antivirus**. Open Command Prompt, and run the following PowerShell commands:
+
+   **[Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?view=windowsserver2022-ps&preserve-view=true)**, as follows:
 
    ```powershell
    Get-MpPreference |Select-Object -Property  DisableCpuThrottleOnIdleScans, DisableRealtimeMonitoring, DisableScanningMappedNetworkDrivesForFullScan , DisableScanningNetworkFiles, ExclusionPath, MAPSReporting
    ```
 
+   Expected output for `Get-MpComputerStatus`:
+
+   ```output
+   DisableCpuThrottleOnIdleScans                 : True
+   DisableRealtimeMonitoring                     : False
+   DisableScanningMappedNetworkDrivesForFullScan : True
+   DisableScanningNetworkFiles                   : False
+   ExclusionPath                                 :   <<configured exclusions will show here>>
+   MAPSReporting                                 : 2
+   ```
+
+   **[Get-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true)**, as follows:
+
    ```powershell
    Get-MpComputerStatus |Select-Object -Property AMRunningMode, AntivirusEnabled, BehaviorMonitorEnabled, IsTamperProtected , OnAccessProtectionEnabled, RealTimeProtectionEnabled
    ```
 
-   To learn more about these commands, see the following articles:
+   Expected output for `Get-MpPreference`:
 
-      - [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?view=windowsserver2022-ps&preserve-view=true)
-      - [Get-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true)
-
+   ```output
+   AMRunningMode             : Normal
+   AntivirusEnabled          : True
+   BehaviorMonitorEnabled    : True
+   IsTamperProtected         : True
+   OnAccessProtectionEnabled : True
+   RealTimeProtectionEnabled : True
+   ```
    
 3. **Check the status of EDR**. Open Command Prompt, and then run the following command:
 
@@ -183,7 +203,7 @@ Here's a list of what to check:
 
    You should see output that resembles the following code snippet:
 
-   ```powershell
+   ```output
    Name        : sense
    RequiredServices  : {}
    CanPauseAndContinue : False
@@ -244,7 +264,7 @@ PS C:\Program Files\Windows Defender> .\MpCmdRun.exe -SignatureUpdate
  
 You should see an output that resembles the following code snippet:
 
-```properties
+```output
 Signature update started . . .
 Service Version: 4.18.23050.9
 Engine Version: 1.1.23060.1005
@@ -279,7 +299,7 @@ For more information about this command, see [Get-MpComputerStatus](/powershell/
 
 ### Configure antivirus exclusions
 
-Before you configure exclusions, make sure that the SAP Basis team coordinates with your security team. Exclusions should be configured centrally and not at the VM level. Exclusions such as the shared SAPMNT file system should be excluded via a policy using the Intune admin tool.
+Before you configure exclusions, make sure that the SAP Basis team coordinates with your security team. Exclusions should be configured centrally and not at the VM level. Exclusions such as the shared SAPMNT file system should be excluded via a policy using the [Intune admin portal](https://intune.microsoft.com).
 
 To view exclusions, use the following command:
 
