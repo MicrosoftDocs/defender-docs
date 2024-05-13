@@ -193,7 +193,7 @@ To test streamlined connectivity for devices not yet onboarded to Defender for E
 
 - Run `mdeclientanalyzer.cmd -g <GW_US, GW_UK, GW_EU>` , where parameter is of GW_US, GW_EU, GW_UK. GW refers to the streamlined option. Run with applicable tenant geo.
 
-As a supplementary check, you can also use the client analyzer to test whether a device meets pre-requisites: https://aka.ms/BetaMDEAnalyzer
+As a supplementary check, you can also use the client analyzer to test whether a device meets prerequisites: https://aka.ms/BetaMDEAnalyzer
  
 
 > [!NOTE]
@@ -203,7 +203,7 @@ As a supplementary check, you can also use the client analyzer to test whether a
 
 Once you configure your network to communicate with the full list of services, you can begin onboarding devices using the streamlined method. 
 
-Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and have updated the sensor and Microsoft Defender Antivirus versions. 
+Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and have updated sensor and Microsoft Defender Antivirus versions. 
 
 
 1. To get the new package, in Microsoft Defender XDR, select **Settings > Endpoints > Device management> Onboarding**.
@@ -230,7 +230,7 @@ When you're ready to set the default onboarding package to streamlined, you can 
 
 This setting sets the default onboarding package to 'streamlined' for applicable operating systems.  You can still use the standard onboarding package within the onboarding page but you must specifically select it in the drop-down.  
 
-For onboarding through Intune & Microsoft Defender for Cloud, you will need to activate the relevant option. Devices already onboarded will not automatically re-onboard; you will need to create a new policy in Intune, where it is recommended to first assign the policy to a set of test devices to verify connectivity is successful, before expanding the audience. Devices in Defender for Cloud can be re-onboarded using the relevant onboarding script.
+For onboarding through Intune & Microsoft Defender for Cloud, you need to activate the relevant option. Devices already onboarded don't automatically reonboard; you need to create a new policy in Intune, where it's recommended to first assign the policy to a set of test devices to verify connectivity is successful, before expanding the audience. Devices in Defender for Cloud can be reonboarded using the relevant onboarding script.
 
 > [!NOTE]
 > - Only tenants created on or before May 8th, 2024 have the option to switch between standard and streamlined connectivity. Newer tenants will only support streamlined connectivity.
