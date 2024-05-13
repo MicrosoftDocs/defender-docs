@@ -62,7 +62,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## March 2024
 
-**Built-in Scheduled scan for macOS**: For information on Scheduled Scan built-in for Microsoft Defender for Endpoint on macOS, see [How to schedule scans with Microsoft Defender for Endpoint on macOS](mac-schedule-scan.md)
+(GA) **Built-in Scheduled scan for macOS**: For information, see [How to schedule scans with Microsoft Defender for Endpoint on macOS](mac-schedule-scan.md)
 
 ## February 2024
 
