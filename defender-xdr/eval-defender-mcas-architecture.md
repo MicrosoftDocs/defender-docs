@@ -39,11 +39,6 @@ Without Defender for Cloud Apps, cloud apps that are used by your organization a
 
 :::image type="content" source="./media/eval-defender-xdr/m365-defender-mcas-architecture-a.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Cloud Apps." lightbox="./media/eval-defender-xdr/m365-defender-mcas-architecture-a.svg":::
 
-In the illustration:
-
-- The use of cloud apps by an organization is unmonitored and unprotected.
-- This use falls outside the protections achieved within a managed organization.
-
 ### Discovering cloud apps
 
 The first step to managing the use of cloud apps is to discover which cloud apps are used by your organization. This next diagram illustrates how cloud discovery works with Defender for Cloud Apps.
@@ -52,8 +47,8 @@ The first step to managing the use of cloud apps is to discover which cloud apps
 
 In this illustration, there are two methods that can be used to monitor network traffic and discover cloud apps that are being used by your organization.
 
-- A. Cloud App Discovery integrates with Microsoft Defender for Endpoint natively. Defender for Endpoint reports cloud apps and services being accessed from IT-managed Windows 10 and Windows 11 devices.
-- B. For coverage on all devices connected to a network, the Defender for Cloud Apps log collector is installed on firewalls and other proxies to collect data from endpoints. This data is sent to Defender for Cloud Apps for analysis.
+1. Cloud App Discovery integrates with Microsoft Defender for Endpoint natively. Defender for Endpoint reports cloud apps and services being accessed from IT-managed Windows 10 and Windows 11 devices.
+2. For coverage on all devices connected to a network, the Defender for Cloud Apps log collector is installed on firewalls and other proxies to collect data from endpoints. This data is sent to Defender for Cloud Apps for analysis.
 
 ### Managing cloud apps
 
