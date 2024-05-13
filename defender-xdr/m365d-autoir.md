@@ -80,7 +80,7 @@ In Microsoft Defender XDR, each automated investigation correlates signals acros
 |:---------|:---------|
 |Devices (also referred to as endpoints or machines) |[Defender for Endpoint](/defender-endpoint/automated-investigations) |      
 |On-premises Active Directory users, entity behavior, and activities     |[Defender for Identity](/azure-advanced-threat-protection/what-is-atp) |      
-|Email content (email messages that can contain files and URLs)     |[Defender for Office 365]/defender-office-365/mdo-about |
+|Email content (email messages that can contain files and URLs)     |[Defender for Office 365](/defender-office-365/mdo-about) |
 
 > [!NOTE]
 > Not every alert triggers an automated investigation, and not every investigation results in automated remediation actions. It depends on how automated investigation and response is configured for your organization. See [Configure automated investigation and response capabilities](m365d-configure-auto-investigation-response.md).
