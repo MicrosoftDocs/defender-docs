@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 05/08/2024
+ms.date: 04/11/2024
 ---
 
 # Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)
@@ -39,14 +39,15 @@ To configure the options that you must use to test the protection features, perf
 1. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
 1. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
 1. Select **Microsoft Defender Antivirus** from the **Select Template** drop-down list.
-1. Select **Create policy**.
-1. On the **Basics** page, enter a name and description for the profile; then, choose **Next**.
-1. On the **Settings** page, expand the groups of settings and configure those settings you want to manage with this profile. The groups of settings you can expand and the edits you can make in these settings are mentioned in the following tables:
+1. Select **Create policy**. The **Create a new policy** page appears.
+1. On the **Basics** page, enter a name and description for the profile in the **Name** and **Description** fields, respectively.
+1. Select **Next**.
+1. On the **Settings** page, expand the groups of settings.
+1. From these groups of settings, select those settings that you want to manage with this profile.
+1. Set the policies for the chosen groups of settings by configuring the settings as described in the following tables:
 
 **Real-time Protection (Always-on protection, real-time scanning)**
 
-To configure the Real-time protection service, set the policies as described in the following table:
-   
 |Description  |Settings  |
 |---------|---------|
 |Allow Realtime Monitoring|Allowed|
@@ -57,10 +58,6 @@ To configure the Real-time protection service, set the policies as described in 
 
 **Cloud protection features**
 
-Standard security intelligence updates can take hours to prepare and deliver; our cloud-delivered protection service can deliver this protection in seconds. 
-
-To configure the cloud-delivered protection service, set the policies as described in the following table:
-
 |Description|Setting  |
 |---------|---------|
 |Allow Cloud Protection     |  Allowed       |
@@ -68,11 +65,9 @@ To configure the cloud-delivered protection service, set the policies as describ
 |Cloud Extended Timeout     |Configured, 50         |
 |Submit Samples Consent     |   Send all samples automatically      |
 
-For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
+Standard security intelligence updates can take hours to prepare and deliver; our cloud-delivered protection service can deliver this protection in seconds. For more information, see [Use next-gen technologies in Microsoft Defender Antivirus through cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md).
 
 **Scans**
-
-To configure the "scans" feature, set the policies as described in the following table:
 
 |Description|Setting|
 |---------|---------|
@@ -84,8 +79,6 @@ To configure the "scans" feature, set the policies as described in the following
 |Allow Full Scan Removable Drive Scanning  | Allowed        |
 
 **Network Protection**
-
-To configure the "network protection" feature, set the policies as described in the following table:
 
 |Description  |Setting  |
 |---------|---------|
@@ -99,8 +92,6 @@ To configure the "network protection" feature, set the policies as described in 
 |Enable DNS Sinkhole     |      DNS Sinkhole is enabled.   |
 
 **Security Intelligence updates**
-
-To configure the security intelligence updates feature, set the policies as described in the following table:
 
 |Description  |Setting  |
 |---------|---------|
@@ -120,8 +111,6 @@ Disable local administrator AV settings such as exclusions, and set the policies
 |Disable Local Admin Merge     |   Disable Local Admin Merge      |
 
 **Threat severity default action**
-
-To configure the Threat severity default action settings, set the policies as described in the following tables:
 
 |Description  |Setting  |
 |---------|---------|
@@ -179,9 +168,10 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 > [!TIP]
 > Any of the rules may block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named “Attack Surface Reduction Only Exclusions”.  And, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
 
-9. Select **Next**.
-10. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**, and then choose **Next**.Platform Update” version Production channel (GA) is available here
-11. On the **Review + create** tab, review your policy settings, and then select **Save**.
+1. Select **Next**.
+1. On the **Assignments** tab, select **Device Group** or **User Group** or **All devices** or **All Users**.
+1. Select **Next**.
+1. On the **Review + create** tab, review your policy settings, and then select **Save**.
 
 #### Check the platform update version
 
