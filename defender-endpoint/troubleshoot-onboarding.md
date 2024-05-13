@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 04/01/2024
+ms.date: 05/02/2024
 ---
 
 # Troubleshoot Microsoft Defender for Endpoint onboarding issues
@@ -35,6 +35,9 @@ You might need to troubleshoot the Microsoft Defender for Endpoint onboarding pr
 This page provides detailed steps to troubleshoot onboarding issues that might occur when deploying with one of the deployment tools and common errors that might occur on the devices.
 
 Before you start troubleshooting issues with onboarding tools, it's important to check if the minimum requirements are met for onboarding devices to the services. [Learn about the licensing, hardware, and software requirements to onboard devices to the service](minimum-requirements.md).
+
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
 
 ## Troubleshoot issues with onboarding tools
 

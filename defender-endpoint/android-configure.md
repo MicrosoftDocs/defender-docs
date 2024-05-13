@@ -127,12 +127,12 @@ Admins can configure Microsoft Defender for Endpoint in low touch onboarding mod
 Android low touch onboarding is disabled by default. Admins can enable it through app configuration policies on Intune by following these steps:
 
 1.	Push the Defender app to target user group by following these [steps](android-intune.md#add-microsoft-defender-for-endpoint-on-android-as-a-managed-google-play-app).
-2.	Push a VPN profile to the user’s device by following the instructions [here](android-intune.md#auto-setup-of-always-on-vpn).
+2.	Push a VPN profile to the user's device by following the instructions [here](android-intune.md#auto-setup-of-always-on-vpn).
 3.	In Apps > Application configuration policies, select Managed Devices.
-4.	Provide a name to uniquely identify the policy. Select ‘Android Enterprise’ as the Platform, the required Profile type and ‘Microsoft Defender: Antivirus’ as the targeted app. Click on Next.
-5.	Add runtime permissions. Select Location access (fine)(This permission is not supported for Android 13 and above), POST_NOTIFICATIONS and change the Permission state to ‘Auto grant’.
-6.	Under configuration settings, select ‘Use Configuration designer’ and click on Add.
-7.	Select Low touch onboarding and User UPN. For User UPN, change the Value type to ‘Variable’ and Configuration value to ‘User Principal Name’ from the drop down Enable Low touch onboarding by changing the configuration value to 1.
+4.	Provide a name to uniquely identify the policy. Select 'Android Enterprise' as the Platform, the required Profile type and 'Microsoft Defender: Antivirus' as the targeted app. Click on Next.
+5.	Add runtime permissions. Select Location access (fine)(This permission is not supported for Android 13 and above), POST_NOTIFICATIONS and change the Permission state to 'Auto grant'.
+6.	Under configuration settings, select 'Use Configuration designer' and click on Add.
+7.	Select Low touch onboarding and User UPN. For User UPN, change the Value type to 'Variable' and Configuration value to 'User Principal Name' from the drop down Enable Low touch onboarding by changing the configuration value to 1.
     >[!div class="mx-imgBorder"]
     >![Image of low touch onboarding configuration policy.](media/low-touch-user-upn.png)
 

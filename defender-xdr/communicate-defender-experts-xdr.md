@@ -15,7 +15,7 @@ ms.collection:
   - essentials-manage
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 02/20/2024
+ms.date: 05/01/2024
 ---
 
 # Communicating with experts in the Microsoft Defender Experts for XDR service
@@ -43,7 +43,7 @@ The **Chat** tab within the Microsoft Defender XDR portal provides you with a sp
 
 Apart from using the in-portal chat, you can also engage in real-time chat conversations with Defender Experts directly within Microsoft Teams. This capability provides you and your security operations center (SOC) team more flexibility when responding to incidents that require managed response. [Learn more about turning on notifications and chat on Teams](get-started-xdr.md#receive-managed-response-notifications-and-updates-in-microsoft-teams)
 
-Once you turn on chat on Teams, a new team named **Defender Experts team** is created and the Defender Experts Teams app is installed in it. Each incident that requires your attention is posted on this team's **Managed response** channel as a new post. To engage with our experts (for example, ask follow-up questions about the investigation summary or actions published by Defender Experts), use the **Reply** text bar to mention or tag *@Defender Experts* and type your message.
+Once you turn on chat on Teams, a new team named **Defender Experts team** is created and the Defender Experts Teams app is installed in it. Each incident that requires your attention is posted on this team's **Managed response** channel as a new post. To engage with our experts (for example, ask follow-up questions about the investigation summary or actions published by Defender Experts), use the **Reply** text bar to mention or tag *@Defender Experts* and type your message. If you have issues setting up the Defender Experts channel or tagging @*Defender Experts*, see [troubleshooting Defender Experts app permissions in Microsoft Teams](../defender-xdr/teams-restrictions-dexapp.md).
 
 :::image type="content" source="/defender/media/xdr/teams-chat-managed-response-01.png" alt-text="Screenshot of managed response teams channel." lightbox="/defender/media/xdr/teams-chat-managed-response-01.png":::
 

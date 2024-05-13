@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 08/28/2023
+ms.date: 05/02/2024
 ---
 
 # Detect and block potentially unwanted applications
@@ -45,6 +45,9 @@ Here are some examples:
 Potentially unwanted applications can increase the risk of your network being infected with actual malware, make malware infections harder to identify, or cost your IT and security teams time and effort to clean them up. PUA protection is supported on Windows 11, Windows 10, Windows Server 2022, Windows Server 2019, and Windows Server 2016. If your organization's subscription includes [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), Microsoft Defender Antivirus blocks apps that are considered to be PUA by default on Windows devices. 
 
 [Learn more about Windows Enterprise subscriptions](https://www.microsoft.com/microsoft-365/windows/windows-11-enterprise).
+
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
 
 ## Microsoft Edge
 

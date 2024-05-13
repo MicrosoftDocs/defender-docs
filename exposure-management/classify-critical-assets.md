@@ -20,7 +20,17 @@ Security Exposure Management is currently in public preview.
 ## Prerequisites
 
 - Before you start, learn about [critical asset management](critical-asset-management.md) in Security Exposure Management.
-- To manage critical assets, you need one of these roles: Global Administrator, Security Administrator, Security Operator, Global Reader, Security Reader.
+- [Review required permissions](prerequisites.md#permissions) for working with the critical assets.
+- When classifying critical assets, we support devices running version 10.3740.XXXX of the Defender for Endpoint sensor or later. We recommended running a more recent sensor version, as listed on the Defender for Endpoint [What's New page](/defender-endpoint/windows-whatsnew).
+
+    You can check which sensor version a device is running as follows:
+
+    - On a specific device, browse to the MsSense.exe file in
+C:\Program Files\Windows Defender Advanced Threat Protection. Right-click the file, and select **Properties**. On the **Details** tab, check the file version.
+    - For multiple devices, it's easier to run an [advanced hunting Kusto query](/defender-xdr/advanced-hunting-query-language) to check device sensor versions, as follows:
+
+        ``` DeviceInfo | project DeviceName, ClientVersion ```
+
 
 ## Review critical assets
 

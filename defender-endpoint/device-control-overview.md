@@ -4,7 +4,7 @@ description: Get an overview of device control, including removable storage acce
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-ms.date: 02/14/2024
+ms.date: 05/02/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -38,6 +38,9 @@ Device control capabilities in Microsoft Defender for Endpoint enable your secur
 This list is intended to provide some examples. It's not an exhaustive list; there are other examples to consider (see the [device control in Windows](#device-control-in-windows) section in this article). 
 
 Device control helps protect your organization from potential data loss, malware, or other cyberthreats by allowing or preventing certain devices to be connected to users' computers. With device control, your security team can determine whether and what peripheral devices users can install and use on their computers. 
+
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
 
 ## Device control in Windows
 

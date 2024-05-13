@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 04/03/2024
+ms.date: 04/30/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -32,6 +32,10 @@ You can also get product updates and important notifications through the [messag
 ## May 2024
 
 - (Preview) **[Content distribution in multi-tenant management]** is now available. Content distribution helps you manage content at scale, across tenants in multi-tenant management in Microsoft Defender XDR. In content distribution, you can create tenant groups to copy existing content, like custom detection rules, from the source tenant to the target tenants you assign during tenant group creation. The content then runs on the target tenant's devices or device groups that you set in the tenant group scope.
+- (Preview) The **SOC optimizations** page in the Microsoft Defender portal is now available with the [unified security operations platform](https://go.microsoft.com/fwlink/p/?linkid=2263690). Integrate Microsoft Defender XDR and Microsoft Sentinel and use SOC optimizations to optimize both processes and outcomes, without having your SOC teams spend time on manual analysis and research. For more information, see:
+
+  - [Optimize your security operations](https://aka.ms/soc-opt-from-defender)
+  - [SOC optimization reference](https://aka.ms/soc-opt-ref)
 
 ## April 2024
 
