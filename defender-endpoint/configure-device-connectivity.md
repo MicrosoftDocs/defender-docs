@@ -132,7 +132,7 @@ The following illustration shows the streamlined connectivity process and the co
 
 Once you confirm prerequisites are met, ensure your network environment is properly configured to support the streamlined connectivity method. Follow the steps outlined in [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md). 
 
-Defender for Endpoint service URLs consolidated under simplified domain the should no longer be required for connectivity. However, some URLs aren't included in the consolidation. 
+Defender for Endpoint service URLs consolidated under simplified domain should no longer be required for connectivity. However, some URLs aren't included in the consolidation. 
 
 Streamlined connectivity allows you to use the following option to configure cloud connectivity:
 
@@ -157,12 +157,12 @@ With streamlined connectivity, IP-based solutions can be used as an alternative 
 > [!IMPORTANT]
 > The EDR Cyber data service must be configured separately if you are using the IP method (this service is only consolidated on a URL level).You must also maintain connectivity with other required services including SmartScreen, CRL, Windows Update, and other services.<br/>
 
-In order to stay up to date on IP ranges, it is recommended to refer to the following Azure service tags for Microsoft Defender for Endpoint services. The latest IP ranges will always be found in the service tag. For more information, see [Azure IP ranges](https://azureipranges.azurewebsites.net/).
+In order to stay up to date on IP ranges, it's recommended to refer to the following Azure service tags for Microsoft Defender for Endpoint services. The latest IP ranges are found in the service tag. For more information, see [Azure IP ranges](https://azureipranges.azurewebsites.net/).
 
 | Service tag name    |    Defender for Endpoint services included   |
 |:---|:---|
 | MicrosoftDefenderForEndpoint | MAPS, Malware Sample Submission Storage, Auto-IR Sample Storage,  Command and Control. |
-| OneDsCollector | EDR Cyberdata <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and may include diagnostic data traffic for other Microsoft services. |
+| OneDsCollector | EDR Cyberdata <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
 
 The following table lists the current static IP ranges. For latest list, refer to the Azure service tags.
 
