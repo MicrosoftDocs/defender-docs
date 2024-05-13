@@ -41,60 +41,33 @@ f1.keywords: NOCSH
 
 ## Pre-requisites
 
-- Device is onboarded to Microsoft Defender for Endpoint
-- [preview features](/defender-endpoint/preview) is enabled in the Microsoft XDR portal ([https://security.microsoft.com](https://security.microsoft.com))
-- Device must be in the [Beta channel](/defender-endpoint/mac-updates) _Note: Beta channel was formerly InsiderFast._ 
-- Minimal Microsoft Defender for Endpoint version number must be (Beta (Insiders-Fast)): 101.24042.0002 or newer. Version number refers to the **app_version**, also referred to as **Platform update**.
-- Ensure that Real-Time Protection (RTP) is enabled
-- Ensure [cloud-delivered protection](/defender-endpoint/mac-preferences) is enabled
+- Device is onboarded to Microsoft Defender for Endpoint.
+- [preview features](/defender-endpoint/preview) is enabled in the Microsoft XDR portal ([https://security.microsoft.com](https://security.microsoft.com)).
+- Device must be in the [Beta channel](/defender-endpoint/mac-updates) (formerly InsiderFast). 
+- Minimal Microsoft Defender for Endpoint version number must be Beta (Insiders-Fast): 101.24042.0002 or newer. Version number refers to the **app_version** (also know as **Platform update**).
+- Ensure that Real-Time Protection (RTP) is enabled.
+- Ensure [cloud-delivered protection](/defender-endpoint/mac-preferences) is enabled.
 - Device must be explicitly enrolled into the preview.
 
 ## Overview
 
 The new preventive antivirus functionality complements our existing strong content-based capabilities with behavior monitoring. This enhancement brings immediate ability to closely monitor processes, file system activities, and process interactions within the system. The enhanced ability to correlate events and behaviors across multiple processes allows us to more generically detect and block malware based on their behavioral classification. These behavior-based signals will act as additional runtime signals for behavioral cloud-powered machine learning models and for effective runtime protection.
 
-### Deployment instructions
+## Deployment instructions
 
 __Change the behavior monitoring policy__
 
-You can deploy behavior monitoring in Microsoft Defender for Endpoint on macOS feature in one of the following ways: 
+To deploy behavior monitoring in Microsoft Defender for Endpoint on macOS you must change the behavior monitoring policy using one of the following methods: 
 
-
-
-|__Management tool__|
-| -------- |
-|Intune|
-|JamF or other 3<sup>rd</sup> party MDM|
-|Manually|
+- [Intune](#intune-deployment)
+- [JamF or other 3<sup>rd</sup> party MDM](#via-jamf-intune-deployment)
+- [Manually](#manual-deployment)
 
 The following sections describe each of these methods in detail.
 
-#### Manual deployment
+### Intune deployment
 
-You can enable Behavior Monitoring on Microsoft Defender for Endpoint on macOS by running the following command from the Terminal: 
-
-
-```bash
-sudo mdatp config behavior-monitoring --value enabled
-```
-
-To disable:
-
-
-```bash
-sudo mdatp config behavior-monitoring --value disabled
-```
-
- 
-
-Reference: [Resources for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-resources)
-
-or
-
-_If managed via “Settings Preferences” (policy):_
-
-#### Intune deployment
-
+1. Copy the following XML and save it as **BehaviorMonitoring_for_MDE_on_macOS.mobileconfig**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -167,24 +140,17 @@ _If managed via “Settings Preferences” (policy):_
 </dict>
 ```
 
-Save as BehaviorMonitoring_for_MDE_on_macOS.mobileconfig
-
-1. Open **Devices** > **Configuration** profiles. Select **Create** profile. Select **New Policy**
-
-1. Choose a name for the profile. Change **Platform=macOS** to **Profile type=Templates** and choose **Custom** in the template name section. Select **Configure**.
-
-1. Save the .plist produced earlier as `com.microsoft.wdav.xml`.
-
-1. Enter `com.microsoft.wdav` as the **custom configuration profile name**.
-
-1. Open the configuration profile and upload the `com.microsoft.wdav.xml` file. (This file was created in step 3.)
-
-1. Select **OK**.
-
-1. Select **Manage** > **Assignments**. In the **Include** tab, select **Assign to All Users & All devices or to a Device Group or User Group.**
+2. Open **Devices** > **Configuration profiles**. 
+3. Select **Create profile** and select **New Policy**.
+4. Give the profile a name. Change **Platform=macOS** to **Profile type=Templates** and choose **Custom** in the template name section. Select **Configure**.
+5. Go to the plist file you saved earlier and save it as com.microsoft.wdav.xml.
+6. Enter `com.microsoft.wdav` as the **custom configuration profile name**.
+7. Open the configuration profile and upload the `com.microsoft.wdav.xml` file and select **OK**.
+8. Select **Manage** > **Assignments**. In the **Include** tab, select **Assign to All Users & All devices or to a Device Group or User Group.**
 
 #### Via JamF Intune deployment
 
+1. Copy the following XML and save it as **Save as BehaviorMonitoring_for_MDE_on_macOS.plist**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -216,35 +182,45 @@ Save as BehaviorMonitoring_for_MDE_on_macOS.mobileconfig
 </plist>
 ```
 
-Reference: [Set preferences for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-preferences)
+2. In **Computers** > **Configuration Profiles**, select **Options** > **Applications & Custom Settings**,
+3. Select **Upload File** (PLIST file).
+4. Set preference domain to *com.microsoft.wdav*
+5. Upload the plist file saved earlier.
 
-Save as BehaviorMonitoring_for_MDE_on_macOS.plist
+For more information, see: [Set preferences for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-preferences)
 
-1. In **Computers** > **Configuration Profiles**, select **Options** > **Applications & Custom Settings**
+#### Manual deployment
 
-1. Select **Upload File** (PLIST file)
+You can enable Behavior Monitoring on Microsoft Defender for Endpoint on macOS by running the following command from the Terminal: 
 
-1. Set preference domain to *com.microsoft.wdav*
+```bash
+sudo mdatp config behavior-monitoring --value enabled
+```
 
-1. Upload the following plist file
+To disable:
+
+```bash
+sudo mdatp config behavior-monitoring --value disabled
+```
+
+For more information, see: [Resources for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-resources)
+
 
 ### Verifying Behavior Monitoring detection
 
-See the following article to test for a behavior monitoring (prevention/block) detection: [Behavior Monitoring demonstration](/defender-endpoint/demonstration-behavior-monitoring)
-
 Microsoft Defender for Endpoint on macOS antivirus behavior monitoring seamlessly integrates into the existing preventive experiences. Behavior monitoring details and artifacts can be explored locally using the existing Microsoft Defender for Endpoint on macOS command line interface.
-
 
 ```bash
 sudo mdatp threat list
 ```
+For more information on to test for a behavior monitoring (prevention/block) detection, see [Behavior Monitoring demonstration](/defender-endpoint/demonstration-behavior-monitoring).
 
-Frequently Asked Questions (FAQ):
+### Frequently Asked Questions (FAQ):
 
-Q: Do the Behavior Monitoring protection alerts show up in the “Device timeline” and/or “Advanced Hunting”?
-A: Not at this time, it's in telemetry mode.
+#### Do Behavior Monitoring protection alerts show up in the “Device timeline” and/or “Advanced Hunting”?
+Not at this time, it's in telemetry mode.
 
-Q: What if I see an increase in cpu utilization or memory utilization?
-A: Disable Behavior Monitoring and see if the issue goes away.
-If the issue does not go away, it's not related to Behavior Monitoring.
-If the issue goes away, please grab a aka.ms/xMDEClientAnalyzer and open a Microsoft support.
+#### What if I see an increase in cpu utilization or memory utilization?
+Disable Behavior Monitoring and see if the issue goes away.
+- If the issue does not go away, it's not related to Behavior Monitoring.
+- If the issue goes away, please grab a aka.ms/xMDEClientAnalyzer and contact Microsoft support.
