@@ -14,7 +14,7 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 05/08/2024
+ms.date: 05/13/2024
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
@@ -31,7 +31,7 @@ The Microsoft Defender for Endpoint service may require the use of proxy configu
 
 This article describes the streamlined device connectivity method and how to onboard new devices to use a simpler deployment and management of Defender for Endpoint cloud connectivity services. For more information on migrating previously onboarded devices, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md). 
 
-To simplify network configuration and management, you now have the option of onboarding devices to Defender for Endpoint using a reduced URL set or static IP ranges. See, [streamlined URL list](https://go.microsoft.com/fwlink/?linkid=2248278)
+To simplify network configuration and management, you now have the option of onboarding devices to Defender for Endpoint using a reduced URL set or static IP ranges. See the [streamlined URL list](https://aka.ms/MDE-streamlined-urls).
 
 The Defender for Endpoint-recognized simplified domain: `*.endpoint.security.microsoft.com` replaces the following core Defender for Endpoint services:
 
@@ -45,7 +45,7 @@ To support network devices without hostname resolution or wildcard support, you 
 
 > [!NOTE] 
 > - The streamlined connectivity method will **not change how Microsoft Defender for Endpoint functions on a device nor will it change the end-user experience**. Only the URLs or IPs that a device uses to connect to the service will change.
-> - There currently is no plan to deprecate the old, consolidated service URLs. Devices onboarded with "standard" connectivity will continue to function. It is important to ensure connectivity to *.endpoint.security.microsoft.com is and remains possible, as future services will require it. This new URL is included in all required URL lists.
+> - There currently is no plan to deprecate the old, consolidated service URLs. Devices onboarded with "standard" connectivity will continue to function. It is important to ensure connectivity to `*.endpoint.security.microsoft.com` is and remains possible, as future services will require it. This new URL is included in all required URL lists.
 
 ## Consolidated services 
 
@@ -96,19 +96,18 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 
 **Supported Operating Systems**
 
--   Windows 10 version 1809 or later
-    -    Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [streamlined URL sheet](https://go.microsoft.com/fwlink/?linkid=2248278)
--   Windows 11
--   Windows Server 2019
--   Windows Server 2022
--   Windows Server 2012 R2, Server 2016 R2, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
+- Windows 10 version 1809 or later. Windows 10 versions 1607, 1703, 1709, 1803 are supported on the streamlined onboarding package but require a different URL list, see [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls)
+- Windows 11
+- Windows Server 2022
+- Windows Server 2019
+- Windows Server 2012 R2 or Windows Server 2016 R2, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
 - [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
 - [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
 
 > [!IMPORTANT]
 > - **Devices running on MMA agent are not supported** on the streamlined connectivity method and will need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 R2 not upgraded to modern unified agent). 
 > - Windows Server 2012 R2 and Server 2016 R2 will need to upgrade to unified agent to leverage the new method. <br/>
-> - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but will use a longer list. For more information, see [streamlined URL sheet](https://go.microsoft.com/fwlink/?linkid=2248278).
+> - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but will use a longer list. For more information, see the [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls).
 
 | Windows   OS    |     Minimum   KB Required (March 8, 2022)    |
 |:---|:---|
@@ -129,7 +128,6 @@ The following illustration shows the streamlined connectivity process and the co
 
 :::image type="content" source="media/streamlined-connectivity-process.png" alt-text="Illustration of  streamlined connectivity process":::
 
-
 ### Stage 1. Configure your network environment for cloud connectivity 
 
 Once you confirm prerequisites are met, ensure your network environment is properly configured to support the streamlined connectivity method. Follow the steps outlined in [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md). 
@@ -145,7 +143,7 @@ Streamlined connectivity allows you to use the following option to configure clo
 
 Configure your environment to allow connections with the simplified Defender for Endpoint domain: `*.endpoint.security.microsoft.com`. For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
-You must maintain connectivity with remaining required services listed under the [updated list](https://go.microsoft.com/fwlink/?linkid=2248278). For example, Certification Revocation List, Windows update, SmartScreen.
+You must maintain connectivity with remaining required services listed under the [updated list](https://aka.ms/MDE-streamlined-urls). For example, Certification Revocation List, Windows update, SmartScreen.
 
 #### Option 2: Configure connectivity using static IP ranges 
 
