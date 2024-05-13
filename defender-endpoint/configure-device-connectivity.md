@@ -31,7 +31,7 @@ The Microsoft Defender for Endpoint service may require the use of proxy configu
 
 This article describes the streamlined device connectivity method and how to onboard new devices to use a simpler deployment and management of Defender for Endpoint cloud connectivity services. For more information on migrating previously onboarded devices, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md). 
 
-To simplify network configuration and management, you now have the option of onboarding devices to Defender for Endpoint using a reduced URL set or static IP ranges. See, [streamlined URL list](https://aka.ms/MDE-streamlined-urls)
+To simplify network configuration and management, you now have the option of onboarding devices to Defender for Endpoint using a reduced URL set or static IP ranges. See the [streamlined URL list](https://aka.ms/MDE-streamlined-urls).
 
 The Defender for Endpoint-recognized simplified domain: `*.endpoint.security.microsoft.com` replaces the following core Defender for Endpoint services:
 
