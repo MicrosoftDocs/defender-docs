@@ -28,7 +28,7 @@ f1.keywords: NOCSH
 
 **Applies to:**
 
-- [Microsoft Defender for XDR](../defender-xdr/microsoft-365-defender.md)
+- [Microsoft Defender for XDR](../defender-xdr/microsoft-365-defender)
 - [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
