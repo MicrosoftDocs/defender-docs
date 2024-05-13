@@ -1,6 +1,6 @@
 ---
 title: Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
-description: Learn how to use a streamlined domain or static IP ranges during onboarding when connecting devices to Microsoft Defender for Endpoint         
+description: Learn how to use a streamlined domain or static IP ranges during onboarding when connecting devices to Microsoft Defender for Endpoint.         
 author: siosulli
 ms.author: siosulli 
 manager: deniseb 
@@ -27,7 +27,7 @@ ms.date: 05/13/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-The Microsoft Defender for Endpoint service may require the use of proxy configurations to report diagnostic data and communicate data to the service. Prior to the availability of the streamlined connectivity method, other URLs were required and Defender for Endpoint static IP ranges weren't supported. For more information on preparing your environment, see [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
+The Microsoft Defender for Endpoint service might require the use of proxy configurations to report diagnostic data and communicate data to the service. Prior to the availability of the streamlined connectivity method, other URLs were required and Defender for Endpoint static IP ranges weren't supported. For more information on preparing your environment, see [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
 This article describes the streamlined device connectivity method and how to onboard new devices to use a simpler deployment and management of Defender for Endpoint cloud connectivity services. For more information on migrating previously onboarded devices, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md). 
 
@@ -49,12 +49,12 @@ To support network devices without hostname resolution or wildcard support, you 
 
 ## Consolidated services 
 
-The following Defender for Endpoint URLs consolidated under the simplified domain should no longer be required for connectivity if `*.endpoint.security.microsoft.com` is allowed and devices are onboarded using the streamlined onboarding package. You will need to maintain connectivity with other required services not consolidated that are relevant to your organization (for example, CRL, SmartScreen/Network Protection, and Windows Update).
+The following Defender for Endpoint URLs consolidated under the simplified domain should no longer be required for connectivity if `*.endpoint.security.microsoft.com` is allowed and devices are onboarded using the streamlined onboarding package. You need to maintain connectivity with other required services not consolidated that are relevant to your organization (for example, CRL, SmartScreen/Network Protection, and Windows Update).
 
 For the updated list of required URLs, see [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
 > [!IMPORTANT]
-> If you are configuring using IP ranges, you will need to separately configure the EDR cyberdata service. This service is not consolidated on an IP level. See section below for more details.
+> If you are configuring using IP ranges, you will need to separately configure the EDR cyberdata service. This service is not consolidated on an IP level.
 
 | Category   | Consolidated URLs  |
 |------------|---------------|
@@ -85,9 +85,9 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 
 **Microsoft Defender Antivirus versions (Windows)**
 
-- **Antimalware Client:** 4.18.2211.5 
-- **Engine:** 1.1.19900.2 
-- **Antivirus (Security Intelligence):** 1.391.345.0
+- **Antimalware Client:** `4.18.2211.5` 
+- **Engine:** `1.1.19900.2` 
+- **Antivirus (Security Intelligence):** `1.391.345.0`
 
 **Defender Antivirus versions (macOS/Linux)**
 
