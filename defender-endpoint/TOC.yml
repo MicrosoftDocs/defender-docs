@@ -68,7 +68,7 @@
       - name: Evaluate Microsoft Defender Antivirus using PowerShell
         href: microsoft-defender-antivirus-using-powershell.md
       - name: Evaluate Microsoft Defender Antivirus using Group Policy 
-        href: evaluate-mda-using-gp.md  
+        href: evaluate-mdav-using-gp.md  
       - name: Microsoft Defender for Endpoint demonstration scenarios
         href: defender-endpoint-demonstrations.md
       - name: App reputation demonstration

@@ -7,7 +7,7 @@
     },
     {
       "source_path": "defender-endpoint/microsoft-defender-antivirus-using-mde-security-set-mngmnt.md",
-      "redirect_url": "/defender-endpoint/evaluate-mda-using-gp",
+      "redirect_url": "/defender-endpoint/evaluate-mdav-using-gp",
       "redirect_document_id": true
     }
   ]
