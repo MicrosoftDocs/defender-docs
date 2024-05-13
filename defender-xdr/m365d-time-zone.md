@@ -16,7 +16,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 03/28/2024
+ms.date: 05/13/2024
 ---
 
 # Set the time zone for Microsoft Defender XDR
