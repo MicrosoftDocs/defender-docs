@@ -16,7 +16,7 @@ ms.collection:
 ms.custom: 
 ms.topic: conceptual
 adobe-target: true
-ms.date: 04/24/2023
+ms.date: 05/10/2024
 ---
 
 # Zero Trust with Microsoft Defender XDR
