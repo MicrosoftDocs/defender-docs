@@ -7,10 +7,21 @@ title: Behavior Monitoring in Microsoft Defender Antivirus on macOS
 description: Behavior Monitoring in Microsoft Defender Antivirus on macOS
 author:      YongRhee-MSFT # GitHub alias
 ms.author:   yongrhee # Microsoft alias
+manager: deniseb
 ms.service: defender-endpoint
 ms.topic: overview
 ms.date:     05/08/2024
 ms.subservice: ngp
+audience: ITPro
+ms.collection: 
+- m365-security
+- tier2
+- mde-asr
+ms.custom: 
+- partner-contribution
+ms.reviewer: yongrhee
+search.appverid: MET150
+f1.keywords: NOCSH 
 ---
 
  # Behavior monitoring in Microsoft Defender Antivirus on macOS
@@ -41,8 +52,6 @@ ms.subservice: ngp
 ## Overview
 
 The new preventive antivirus functionality complements our existing strong content-based capabilities with behavior monitoring. This enhancement brings immediate ability to closely monitor processes, file system activities, and process interactions within the system. The enhanced ability to correlate events and behaviors across multiple processes allows us to more generically detect and block malware based on their behavioral classification. These behavior-based signals will act as additional runtime signals for behavioral cloud-powered machine learning models and for effective runtime protection.
-
-  
 
 ### Deployment instructions
 
