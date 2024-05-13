@@ -50,7 +50,7 @@ The following downloadable spreadsheet lists the services and their associated U
 > - In compliance with Defender for Endpoint security and compliance standards, your data will be processed and stored in accordance with your tenant's physical location. Based on client location, traffic may flow through any of the associated IP regions (which correspond to Azure datacenter regions). For more information, see [Data storage and privacy](data-storage-privacy.md). 
 
 ## Microsoft Monitoring Agent (MMA) - additional proxy and firewall requirements for older versions of Windows client or Windows Server
-The follwoing additional destinations are required to allow Defender for Endpoint communications through the Log Analytics agent (often referred to as Microsoft Monitoring Agent) on Windows 7 SP1, Windows 8.1, and Windows Server 2008 R2.
+The following destinations are required to allow Defender for Endpoint communications through the Log Analytics agent (often referred to as Microsoft Monitoring Agent) on Windows 7 SP1, Windows 8.1, and Windows Server 2008 R2.
 
 |Agent Resource|Ports|Direction|Bypass HTTPS inspection|
 |--|--|--|--|
@@ -64,7 +64,7 @@ The follwoing additional destinations are required to allow Defender for Endpoin
 
 ## For devices without Internet access / without a proxy
 
-For devices with no direct internet connection, the use of a proxy solution is the recommended approach. In specific cases, you can leverage firewall or gateway devices that allow access to IP ranges. For more information, see: [Streamlined device connectivity](configure-device-connectivity.md).
+For devices with no direct internet connection, the use of a proxy solution is the recommended approach. In specific cases, you can use firewall or gateway devices that allow access to IP ranges. For more information, see: [Streamlined device connectivity](configure-device-connectivity.md).
 
 > [!IMPORTANT]
 >
@@ -74,4 +74,4 @@ For devices with no direct internet connection, the use of a proxy solution is t
 
 ## Next step
 
-[STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy](configure-proxy-internet.md)
+[STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy](configure-proxy-internet.md).
