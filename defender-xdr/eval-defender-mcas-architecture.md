@@ -37,7 +37,7 @@ Microsoft Defender for Cloud Apps is a cloud access security broker (CASB). CASB
 
 Without Defender for Cloud Apps, your users access cloud apps directly without any managemement or security protection.
 
-:::image type="content" source="./media/eval-defender-xdr/m365-defender-mcas-architecture-a.svg" alt-text="A diagram that shows your users sending cloud app traffic without and management or protection." lightbox="./media/eval-defender-xdr/m365-defender-mcas-architecture-a.svg":::
+:::image type="content" source="./media/eval-defender-xdr/m365-defender-mcas-architecture-a.svg" alt-text="A diagram that shows your users sending cloud app traffic without any management or protection." lightbox="./media/eval-defender-xdr/m365-defender-mcas-architecture-a.svg":::
 
 ### Discovering cloud apps
 
