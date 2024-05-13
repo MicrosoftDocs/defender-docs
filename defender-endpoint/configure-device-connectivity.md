@@ -225,7 +225,6 @@ For migrating devices already onboarded to Defender for Endpoint, see [Migrating
 
 :::image type="content" source="media/migrate-devices-streamlined.png" alt-text="Screenshot of onboarding page with streamlined connectivity":::
 
-
 When you're ready to set the default onboarding package to streamlined, you can turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**). For onboarding through Intune & Microsoft Defender for Cloud, you will need to activate the relevant option. Devices already onboarded will not automatically re-onboard; you will need to create a new policy in Intune, where it is recommended to first assign the policy to a set of test devices to verify connectivity is successful, before expanding the audience. Devices in Defender for Cloud can be re-onboarded using the relevant onboarding script.
 
 > [!NOTE]
@@ -234,4 +233,4 @@ When you're ready to set the default onboarding package to streamlined, you can 
 
 :::image type="content" source="media/advanced-setting-streamlined-connectivity.png" alt-text="Screenshot of advanced settings page with streamlined connectivity option":::
 
-This setting sets the default onboarding package to *streamlined* for applicable operating systems.  You can still use the standard onboarding package within the onboarding page but you must specifically select it in the drop-down.  
+This setting sets the default onboarding package to *streamlined* for applicable operating systems.  You can still use the standard onboarding package within the onboarding page, but you must specifically select it in the drop-down.  
