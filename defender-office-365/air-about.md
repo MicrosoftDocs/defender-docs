@@ -101,7 +101,7 @@ Microsoft 365 provides many built-in alert policies that help identify Exchange 
 
 You need to be assigned permissions to use AIR. You have the following options:
 
-- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell):
+- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
   - _Start an automated investigation_ or _Approve or reject recommended actions_: **Security Operator/Email advanced remediation actions (manage)**.
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md):
   - _Set up AIR features_: Membership in the **Organization Management** or **Security Administrator** role groups.
