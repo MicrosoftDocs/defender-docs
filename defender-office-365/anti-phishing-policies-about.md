@@ -37,8 +37,6 @@ Examples of Microsoft Defender for Office 365 organizations include:
 - [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business)
 - [Microsoft Defender for Office 365 as an add-on](https://products.office.com/exchange/advance-threat-protection)
 
-> [!TIP]
-> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
 The high-level differences between anti-phishing policies in EOP and anti-phishing policies in Defender for Office 365 are described in the following table:
 
 |Feature|Anti-phishing policies<br>in EOP|Anti-phishing policies<br>in Defender for Office 365|
@@ -59,6 +57,9 @@ To configure anti-phishing policies, see the following articles:
 - [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md)
 
 The rest of this article describes the settings that are available in anti-phishing policies in EOP and Defender for Office 365.
+
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide customizes your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268087).
 
 ## Common policy settings
 
