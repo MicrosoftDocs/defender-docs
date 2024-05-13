@@ -61,6 +61,9 @@ To configure anti-phishing policies, see the following articles:
 
 The rest of this article describes the settings that are available in anti-phishing policies in EOP and Defender for Office 365.
 
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268088) when signed in to the Microsoft 365 admin center. This guide customizes your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268087).
+
 ## Common policy settings
 
 The following policy settings are available in anti-phishing policies in EOP and Defender for Office 365:
