@@ -107,7 +107,7 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 > [!IMPORTANT]
 > - **Devices running on MMA agent are not supported** on the streamlined connectivity method and will need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 R2 not upgraded to modern unified agent). 
 > - Windows Server 2012 R2 and Server 2016 R2 will need to upgrade to unified agent to leverage the new method. <br/>
-> - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but will use a longer list. For more information, see [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls).
+> - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but will use a longer list. For more information, see the [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls).
 
 | Windows   OS    |     Minimum   KB Required (March 8, 2022)    |
 |:---|:---|
@@ -127,7 +127,6 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 The following illustration shows the streamlined connectivity process and the corresponding stages:
 
 :::image type="content" source="media/streamlined-connectivity-process.png" alt-text="Illustration of  streamlined connectivity process":::
-
 
 ### Stage 1. Configure your network environment for cloud connectivity 
 
@@ -235,4 +234,4 @@ When you're ready to set the default onboarding package to streamlined, you can 
 
 :::image type="content" source="media/advanced-setting-streamlined-connectivity.png" alt-text="Screenshot of advanced settings page with streamlined connectivity option":::
 
-This setting sets the default onboarding package to 'streamlined' for applicable operating systems.  You can still use the standard onboarding package within the onboarding page but you must specifically select it in the drop-down.  
+This setting sets the default onboarding package to *streamlined* for applicable operating systems.  You can still use the standard onboarding package within the onboarding page but you must specifically select it in the drop-down.  
