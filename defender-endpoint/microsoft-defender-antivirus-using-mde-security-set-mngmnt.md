@@ -1,5 +1,5 @@
 ---
-title: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies)
+title: Evaluate Microsoft Defender Antivirus using Group Policy
 description: Use this guide to evaluate and test the protection offered by Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management (Endpoint security policies).
 ms.service: defender-endpoint
 ms.localizationpriority: medium
