@@ -36,7 +36,7 @@ You can also get product updates and important notifications through the [messag
   - [Optimize your security operations](https://aka.ms/soc-opt-from-defender)
   - [SOC optimization reference](https://aka.ms/soc-opt-ref)
 
-- (Preview) The **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** table is now available in advanced hunting. This allows you to hunt through cloud audit events in Microsoft Defender for Cloud and to create custom detections to surface suspicious Azure Resource Management and Kubernetes (KubeAudit) control plane activities.
+- (Preview) The **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** table is now available in advanced hunting. This allows you to hunt through cloud audit events in Microsoft Defender for Cloud and to create custom detections to surface suspicious Azure Resource Manager and Kubernetes (KubeAudit) control plane activities.
  
  
 ## April 2024

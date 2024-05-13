@@ -38,7 +38,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 |-------------|-----------|-------------|
 | `Timestamp` | `datetime` | Date and time when the event was recorded |
 | `ReportId` |	`string` | Unique identifier for the event |
-| `DataSource` | `string` | Data source for the cloud audit events, can be GCP (for Google Cloud Platform), AWS (for Amazon Web Services), Azure, Kubernetes Audit (for Kubernetes), or other cloud platforms |
+| `DataSource` | `string` | Data source for the cloud audit events, can be GCP (for Google Cloud Platform), AWS (for Amazon Web Services), Azure (for Azure Resource Manager), Kubernetes Audit (for Kubernetes), or other cloud platforms |
 | `ActionType` | `string` |	Type of activity that triggered the event, can be: Unknown, Create, Read, Update, Delete, Other |
 | `OperationName` |	`string` | Audit event operation name as it appears in the record, usually includes both resource type and operation |
 | `ResourceId` | `string` |	Unique identifier of the cloud resource accessed |
