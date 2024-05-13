@@ -25,31 +25,43 @@ ms.date: 12/29/2023
 **Applies to:**
 - Microsoft Defender XDR
 
-The `CloudAuditEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about [INSERT TEXT]. Use this reference to construct queries that return information from this table.
 
+
+The `CloudAuditEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud. Use this reference to construct queries that return information from this table.
+
+> [!IMPORTANT]
+> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 For information on other tables in the advanced hunting schema, [see the advanced hunting reference](advanced-hunting-schema-tables.md).
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
 | `Timestamp` | `datetime` | Date and time when the event was recorded |
-| `ReportId` |	`Guid`?? | GUID that uniquely identifies a record in a specific table |
-| `DataSource` | `string` | Data source for the cloud audit events, can be ‘GCP’, ‘AWS’, ‘Azure’, ‘Kubernetes Audit’ or other cloud platforms |
-| `ActionType` | `string` |	Required field by hunting schema, normalized identifier for the type of activity. Values aligned with OCSF schema  and can be: Unknown, Create, Read, Update, Delete, Other. |
-| `OperationName` |	`string` | Audit event operation name as appeared in the raw event schema. Usually includes both resource type and operation. |
-| `ResourceId` | `string` |	The cloud resource asset identifier, supporting Azure, GCP or AWS. |
-| `IPAddress` | `string` |	The client IP address used to access the cloud resource or control plane. |
-| `IsAnonymousProxy` |	`boolean` |	Indicates whether the IP address belongs to a known anonymous proxy |
+| `ReportId` |	`string` | Unique identifier for the event |
+| `DataSource` | `string` | Data source for the cloud audit events, can be GCP (for Google Cloud Platform), AWS (for Amazon Web Services), Azure, Kubernetes Audit (for Kubernetes), or other cloud platforms |
+| `ActionType` | `string` |	Type of activity that triggered the event, can be: Unknown, Create, Read, Update, Delete, Other |
+| `OperationName` |	`string` | Audit event operation name as it appears in the record, usually includes both resource type and operation |
+| `ResourceId` | `string` |	Unique identifier of the cloud resource accessed |
+| `IPAddress` | `string` | The client IP address used to access the cloud resource or control plane |
+| `IsAnonymousProxy` |`boolean` |	Indicates whether the IP address belongs to a known anonymous proxy (1) or no (0) |
 | `CountryCode` | `string` | Two-letter code indicating the country where the client IP address is geolocated |
 | `City` | `string` | City where the client IP address is geolocated |
 | `Isp` | `string` | Internet service provider (ISP) associated with the IP address |
 | `UserAgent` | `string` | User agent information from the web browser or other client application |
 | `RawEventData` | `dynamic` | Full raw event information from the data source in JSON format |
-| `AdditionalFields` |	`dynamic` |	Additional information about the event which is not contracted under the schema top level fields. In the first schema iteration, will contain ‘ResourceType’ as inner field, to hold the specific type of the cloud resource as extracted from the ResourceId. |
+| `AdditionalFields` |	`dynamic` |	Additional information about the audit event  |
 
-[INSERT SAMPLE QUERIES]
+## Sample query
 
+To get a sample list of VM creation commands performed in the last seven days:
 
+```kusto
+CloudAuditEvents
+| where Timestamp > ago(7d)
+| where OperationName startswith "Microsoft.Compute/virtualMachines/write"
+| extend Status = RawEventData["status"], SubStatus = RawEventData["subStatus"]
+| sample 10
+```
 
 ## Related topics
 
