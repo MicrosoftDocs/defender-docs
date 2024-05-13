@@ -42,7 +42,7 @@ f1.keywords: NOCSH
 ## Pre-requisites
 
 - Device is onboarded to Microsoft Defender for Endpoint.
-- [preview features](/defender-endpoint/preview) is enabled in the Microsoft XDR portal ([https://security.microsoft.com](https://security.microsoft.com)).
+- [Preview features](/defender-endpoint/preview) is enabled in the Microsoft XDR portal ([https://security.microsoft.com](https://security.microsoft.com)).
 - Device must be in the [Beta channel](/defender-endpoint/mac-updates) (formerly InsiderFast). 
 - Minimal Microsoft Defender for Endpoint version number must be Beta (Insiders-Fast): 101.24042.0002 or newer. Version number refers to the **app_version** (also know as **Platform update**).
 - Ensure that Real-Time Protection (RTP) is enabled.
@@ -54,8 +54,6 @@ f1.keywords: NOCSH
 The new preventive antivirus functionality complements our existing strong content-based capabilities with behavior monitoring. This enhancement brings immediate ability to closely monitor processes, file system activities, and process interactions within the system. The enhanced ability to correlate events and behaviors across multiple processes allows us to more generically detect and block malware based on their behavioral classification. These behavior-based signals will act as additional runtime signals for behavioral cloud-powered machine learning models and for effective runtime protection.
 
 ## Deployment instructions
-
-__Change the behavior monitoring policy__
 
 To deploy behavior monitoring in Microsoft Defender for Endpoint on macOS you must change the behavior monitoring policy using one of the following methods: 
 
@@ -187,7 +185,7 @@ The following sections describe each of these methods in detail.
 4. Set preference domain to *com.microsoft.wdav*
 5. Upload the plist file saved earlier.
 
-For more information, see: [Set preferences for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-preferences)
+For more information, see: [Set preferences for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-preferences).
 
 #### Manual deployment
 
@@ -203,17 +201,17 @@ To disable:
 sudo mdatp config behavior-monitoring --value disabled
 ```
 
-For more information, see: [Resources for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-resources)
+For more information, see: [Resources for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-resources).
 
 
 ### Verifying Behavior Monitoring detection
 
-Microsoft Defender for Endpoint on macOS antivirus behavior monitoring seamlessly integrates into the existing preventive experiences. Behavior monitoring details and artifacts can be explored locally using the existing Microsoft Defender for Endpoint on macOS command line interface.
+The existing Microsoft Defender for Endpoint on macOS command line interface can be used to review behavior monitoring details and artifacts.
 
 ```bash
 sudo mdatp threat list
 ```
-For more information on to test for a behavior monitoring (prevention/block) detection, see [Behavior Monitoring demonstration](/defender-endpoint/demonstration-behavior-monitoring).
+For more information on how to test for a behavior monitoring (prevention/block) detection, see [Behavior Monitoring demonstration](/defender-endpoint/demonstration-behavior-monitoring).
 
 ### Frequently Asked Questions (FAQ):
 
