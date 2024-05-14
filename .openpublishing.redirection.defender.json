@@ -37,7 +37,7 @@
    },
    {
      "source_path": "defender-office-365/zero-trust-identity-device-access-policies-prereq.md",
-     "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-prereq",
+     "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-prerequisite",
      "redirect_document_id": false
    },
    {
@@ -49,6 +49,11 @@
      "source_path": "defender-office-365/zero-trust-identity-device-access-policies-teams.md",
      "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-teams",
      "redirect_document_id": false
+   },
+   {
+      "source_path": "defender-endpoint/microsoft-defender-antivirus-using-mde-security-set-mngmnt.md",
+      "redirect_url": "/defender-endpoint/evaluate-mdav-using-gp",
+      "redirect_document_id": true
    }
   ]
 }

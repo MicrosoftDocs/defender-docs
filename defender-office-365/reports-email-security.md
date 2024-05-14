@@ -1043,7 +1043,7 @@ On the report page, the :::image type="icon" source="media/m365-cc-sc-download-i
 
 You need to be assigned permissions before you can view and use the reports that are described in this article. You have the following options:
 
-- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Security operations/Security data/Security data basics (read)** or **Authorization and settings/System settings/manage**.
+- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Security data/Security data basics (read)** or **Authorization and settings/System settings/manage**.
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in any of the following role groups:
   - **Organization Management**<sup>\*</sup>
   - **Security Administrator**
