@@ -44,7 +44,7 @@ f1.keywords: NOCSH
 - Device is onboarded to Microsoft Defender for Endpoint.
 - [Preview features](/defender-endpoint/preview) is enabled in the Microsoft XDR portal ([https://security.microsoft.com](https://security.microsoft.com)).
 - Device must be in the [Beta channel](/defender-endpoint/mac-updates) (formerly InsiderFast). 
-- Minimal Microsoft Defender for Endpoint version number must be Beta (Insiders-Fast): 101.24042.0002 or newer. Version number refers to the **app_version** (also know as **Platform update**).
+- Minimal Microsoft Defender for Endpoint version number must be Beta (Insiders-Fast): 101.24042.0002 or newer. Version number refers to the **app_version** (also known as **Platform update**).
 - Ensure that Real-Time Protection (RTP) is enabled.
 - Ensure [cloud-delivered protection](/defender-endpoint/mac-preferences) is enabled.
 - Device must be explicitly enrolled into the preview.
@@ -152,13 +152,13 @@ The following sections describe each of these methods in detail.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
 <plist version="1.0">
 <dict>
               <key>antivirusEngine</key>
               <dict>
-                            <key>behaviorMonitoring</key>
-                           <string>enabled</string>
+                            <key>behaviorMonitoring</key>  
+                           <string>enabled</string> 
               </dict>
               <key>features</key>
               <dict>
