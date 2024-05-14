@@ -27,7 +27,7 @@ The owner of a project can add collaborators (users listed in their Azure tenant
 
 Users can also download artifacts within a project by selecting the download icon. This is a great way for threat hunting teams to use their findings from an investigation to block IOCs or build more detection rules within their security information and event management (SIEM).
 
-**Questions Projects May Help Answer:**
+**Questions projects might help answer:**
 
 - Has one of my fellow team members created a Team project that includes this indicator?
 
@@ -69,7 +69,7 @@ When logging into the Defender TI Projects Home Page, users are presented with a
 
     ![Add New Project](media/projectsAddNewProjectDetails.png)
 
-## Managing Projects
+## Managing projects
 
 Once a user has created projects, they can manage them inside of the Projects portion of the platform. The initial Project Home page highlights all the projects the user can see and provides filtering methods based on project properties. The Project Home page defaults to the Team projects associated with Defender TI users in their tenant. They have the option to select any personal projects they have created as well as projects that have been shared with them to contribute to.
 
@@ -79,7 +79,7 @@ Once a user has created projects, they can manage them inside of the Projects po
 2. Depending on the level of access, users can then make changes to the project directly by clicking the edit button in the top right corner.
 3. Users might also delete a project if they're the owner of the project. They can also choose to manually add artifacts using the "Add Artifacts" button in the top right corner.
 
-## Best Practices
+## Best practices
 
 When it comes to using Defender TI to investigate potential threats, we recommend executing the following workflows as these steps enable you to gather strategic and operational intelligence before diving into tactical intelligence.
 
