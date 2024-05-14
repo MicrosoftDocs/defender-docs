@@ -39,7 +39,7 @@ This article describes how to onboard specific Windows servers to Microsoft Defe
 For guidance on how to download and use Windows Security Baselines for Windows servers, see [Windows Security Baselines](/windows/device-security/windows-security-baselines).
 
 > [!TIP]
-> Leverage our [setup guide](https://go.microsoft.com/fwlink/?linkid=2268615) for *Microsoft Defender for Endpoint* (MDE) to streamline your implementation process. The guide includes essential tools and automated features such as attack surface reduction and next-generation protection. Configure with ease and gain access to Microsoft threat experts for enhanced security. Login credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/?linkid=2268522)*.* Anyone, from potential Microsoft clients to partners and IT admins, may access the guides and use them freely (Login credentials are not required).  
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268615), which helps you utilize essential tools and automated features such as attack surface reduction and next-generation protection. When signed in to the Microsoft 365 admin center, this guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268522).
 ## Windows Server onboarding overview
 
 You'll need to complete the following general steps to successfully onboard servers.
@@ -149,7 +149,7 @@ You'll need to download both the **installation** and **onboarding** packages fr
 > [!NOTE]
 > On Windows Server 2012R2, Microsoft Defender Antivirus will get installed by the installation package and will be active unless you set it to passive mode. On Windows Server 2016, Microsoft Defender Antivirus must be installed as a feature (see [Switch to MDE](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016)) first and fully updated before proceeding with the installation.
 >
-> If you are running a non-Microsoft anti-malware solution ensure you add exclusions for Microsoft Defender Antivirus ([from this list of Microsoft Defender Processes on the Defender Processes tab](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx
+> If you are running a non-Microsoft anti-malware solution ensure you add exclusions for Microsoft Defender Antivirus ([from this list of Microsoft Defender Processes on the Defender Processes tab](https://aka.ms/MDE-standard-urls
 )) to the non-Microsoft solution before installation.  It is also recommended to add non-Microsoft security solutions to the Defender Antivirus exclusion list.
 
 The **installation package** contains an MSI file that installs the Microsoft Defender for Endpoint agent.
