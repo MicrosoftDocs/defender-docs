@@ -1,5 +1,5 @@
 --- 
-title: 'Searching &amp; pivoting with Microsoft Defender Threat Intelligence (Defender TI)'
+title: 'Searching and pivoting with Microsoft Defender Threat Intelligence (Defender TI)'
 description: 'Learn how to search and pivot across internet data sets, threat articles, vulnerability articles, and projects using Microsoft Defender Threat Intelligence (Defender TI).'
 author: alexroland24
 ms.author: aroland
@@ -15,100 +15,104 @@ ms.custom: template-how-to
 >[!IMPORTANT]
 > On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) will be retired and will no longer be accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
-Microsoft Defender Threat Intelligence (Defender TI) offers a robust and flexible search engine to streamline the investigation process. The platform is designed to allow users to pivot across a wide variety of indicators from different data sources, making it easier than ever to discover relationships between disparate infrastructure. This article will help users understand how to conduct a search and pivot across different data sets to discover relationships between different artifacts.
+Microsoft Defender Threat Intelligence (Defender TI) offers a robust and flexible search engine to streamline the investigation process. Defender TI is designed to let you pivot across various indicators from different data sources, making it easier than ever to discover relationships between disparate infrastructure. 
+
+This article helps you understand how to conduct a search and pivot across different data sets to discover relationships between different artifacts.
 
 ![Search HomePage Chrome Screenshot](media/searchHomePageChromeScreenshot.png)
 
 ## Prerequisites
 
 - A Microsoft Entra ID or personal Microsoft account. [Sign in or create an account](https://signup.microsoft.com/)
-- A Microsoft Defender Threat Intelligence (Defender TI) Premium license.
-    > [!Note]
-    > Users without a Defender TI Premium license will still be able to log into the Defender Threat Intelligence Portal and access our free Defender TI offering.
+- A Defender TI premium license.
 
-## Open Defender TI's Threat Intelligence Home Page
+    > [!NOTE]
+    > Users without a Defender TI premium license can still access our free Defender TI offering.
 
-1. Access the [Defender Threat Intelligence Portal](https://ti.defender.microsoft.com/).
-2. Complete Microsoft authentication to access portal.
+## Open Defender TI in the Microsoft Defender portal
+
+1. Access the [Defender portal](https://security.microsoft.com/) and complete the Microsoft authentication process. [Learn more about the Defender portal](/defender-xdr/microsoft-365-defender-portal)
+2. Navigate to **Threat intelligence** > **Intel explorer**. 
 
 ## Performing threat intelligence searches and pivots
 
-Defender TI's Threat Intelligence search is both simple and powerful, designed to surface immediate key insights while also allowing users to directly interact with the datasets that comprise these insights. The search bar supports a wide variety of different inputs; users can search for specific artifacts and Article or Project names.
+Defender TI's Intel explorer search is both simple and powerful, designed to surface immediate key insights while also letting you directly interact with the data sets that comprise these insights. The search bar supports different inputs; you can search for specific artifacts and article or project names.
 
 ### Search artifact types
-1. **IP address:** Search '195.161.141[.]65' in the Threat Intelligence Search bar. This action results in an IP Address search.
+
+1. **IP address:** Search *195.161.141[.]65* in the Intel explorer search bar. This action results in an IP address search.
 
     ![Search Ip Address](media/searchIpAddress.png)
 
-2. **Domain:** Search `fabrikam.com` in the Threat Intelligence Search bar. This action results in a Domain search.
+2. **Domain:** Search `fabrikam.com` in the Intel explorer search bar. This action results in a domain search.
 
     ![Search Domain](media/searchDomain.png)
 
-3. **Host:** Search `canary.fabrikam.com` in the Threat Intelligence Search bar. This action results in a Host search.
+3. **Host:** Search `canary.fabrikam.com` in the Intel explorer search bar. This action results in a host search.
 
     ![Search Host](media/searchHost.png)
 
-4. **Keyword:** Search 'apt29' in the Threat Intelligence Search bar. This action results in a Keyword search. Keyword searches cover any type of keyword, which might include a term, email address, etc. Keyword searches result in associations with articles, projects, and data sets.
+4. **Keyword:** Search *apt29* in the Intel explorer search bar. This action results in a keyword search. Keyword searches cover any type of keyword, which might include a term or email address, among others, and they result in associations with articles, projects, and data sets.
 
     ![Search Keyword](media/searchKeyword.png)
 
-5. **CVE-ID:** Search 'CVE-2021-40444' in the Threat Intelligence Search bar. This action results in a CVE-ID Keyword search.
+5. **CVE ID:** Search *CVE-2021-40444* in the Intel explorer search bar. This action results in a Common Vulnerabilities and Exposures (CVE) ID keyword search.
 
-6. **Article:** Search 'Commodity Skimming & Magecart Trends in First Quarter of 2022' in the Threat Intelligence Search bar. This action results in an Article search.
+6. **Article:** Search *Commodity Skimming & Magecart Trends in First Quarter of 2022* in the Intel explorer search bar. This action results in an article search.
 
     ![Search Ti Article](media/searchTiArticle.png)
 
-7. **Tag:** Select 'Tag' from the Threat Intelligence Search drop-down and type in *magecart* in the Threat Intelligence Search bar. Press Enter or select the right-hand arrow to perform the search. This action results in a Tag search.
+7. **Tag:** Choose **Tag** from the Intel explorer search bar drop-down menu and then search *magecart*. This action results in a tag search.
 
     > [!NOTE]
     > This does not return articles that share that tag value.
 
     ![Search Tag](media/searchTag.png)
 
-8. **Component:** Select 'Component' from the Threat Intelligence Search drop-down and type in 'cobalt strike' in the Threat Intelligence Search bar. Press Enter or select the right-hand arrow to perform the search. This action results in a Component search.
+8. **Component:** Choose **Component** from the Intel explorer search bar drop-down menu and then search *cobalt strike* This action results in a component search.
 
     ![Search Component](media/searchComponent.png)
 
-9. **Tracker:** Select 'Trackers' from the Threat Intelligence Search drop-down and type in '07d14d16d21d21d00042d41d00041d47e4e0ae17960b2a5b4fd6107fbb0926' in the Threat Intelligence Search bar. Press Enter or select the right-hand arrow to perform the search. This action results in a Tracker search. Note: In this example, this was a JarmHash Tracker type.
+9. **Tracker:** Choose **Trackers** from the Intel explorer search bar drop-down menu and then search *07d14d16d21d21d00042d41d00041d47e4e0ae17960b2a5b4fd6107fbb0926*. This action results in a tracker search. 
 
     > [!NOTE]
-    > In this example, this was a JarmHash Tracker type.
+    > This example is a *JarmHash* tracker type.
 
     ![Search Trackers](media/searchTrackers.png)
 
-10. **WHOIS Email:** Select 'WHOIS' > 'Email' from the Threat Intelligence Search drop-down and type in domains@microsoft.com in the Threat Intelligence Search bar. Press Enter or select the right-hand arrow to perform the search. This action results in a WHOIS Email search.
+10. **WHOIS email:** Choose **WHOIS** > **Email** from the Intel explorer search bar drop-down menu and then search *domains@microsoft.com*. This action results in a WHOIS email search.
 
     ![Search Whois Email](media/searchWhoisEmail.png)
 
-11. **WHOIS Name:** Select 'WHOIS' > 'Name' from the Threat Intelligence Search drop-down and type in 'MSN Hostmaster' in the Threat Intelligence Search bar. Press Enter or select the right-hand arrow to perform the search. This action results in a WHOIS Name search.
+11. **WHOIS name:** Choose **WHOIS** > **Name** from the Intel explorer search bar drop-down menu and then search *MSN Hostmaster*. This action results in a WHOIS name search.
 
     ![Search Whois Name](media/searchWhoisName.png)
 
-12. **WHOIS Organization:** Select 'WHOIS' > 'Organization' from the Threat Intelligence Search drop-down and type in 'Microsoft Corporation' in the Threat Intelligence Search bar. Press Enter or select the right-hand arrow to perform the search. This action results in a WHOIS Organization search.
+12. **WHOIS organization:** Choose **WHOIS** > **Organization** from the Intel explorer search bar drop-down menu and then search *Microsoft Corporation*. This action results in a WHOIS organization search.
 
     ![Search Whois Organization](media/searchWhoisOrganization.png)
 
-13. **WHOIS Address:** Select 'WHOIS' > 'Address' from the Threat Intelligence Search drop-down and type in 'One Microsoft Way' in the Threat Intelligence Search bar. Press Enter or select the right-hand arrow to perform the search. This action results in a WHOIS Address search.
+13. **WHOIS address:** Choose **WHOIS** > **Address** from the Intel explorer search bar drop-down menu and then search *One Microsoft Way*. This action results in a WHOIS address search.
 
     ![Search Whois Address](media/searchWhoisAddress.png)
 
-14. **WHOIS City:** Select 'WHOIS' > 'City' from the Threat Intelligence Search drop-down and type in 'Redmond' in the Threat Intelligence Search bar. Press Enter or select the right-hand arrow to perform the search. This action results in a WHOIS City search.
+14. **WHOIS city:** Choose **WHOIS** > **City** from the Intel explorer search bar drop-down menu and then search *Redmond*. This action results in a WHOIS city search.
 
     ![Search Whois City](media/searchWhoisCity.png)
 
-15. **WHOIS State:** Select 'WHOIS' > 'State' from the Threat Intelligence Search drop-down and type in 'WA' in the Threat Intelligence Search bar. Press Enter or select the right-hand arrow to perform the search. This action results in a WHOIS State search.
+15. **WHOIS state:** Choose **WHOIS** > **State** from the Intel explorer search bar drop-down menu and then search *WA*. This action results in a WHOIS state search.
 
     ![Search Whois State](media/searchWhoisState.png)
 
-16. **WHOIS Postal Code:** Select 'WHOIS' > 'Postal Code' from the Threat Intelligence Search drop-down and type in '98052' in the Threat Intelligence Search bar. Press Enter or select the right-hand arrow to perform the search. This action results in a WHOIS Postal Code search.
+16. **WHOIS postal code:** Choose **WHOIS** > **Postal code** from the Intel explorer search bar drop-down menu and then search *98052*. This action results in a WHOIS postal code search.
 
     ![Search Whois Postal Code](media/searchWhoisPostalCode.png)
 
-17. **WHOIS Country:** Select 'WHOIS' > 'Country' from the Threat Intelligence Search drop-down and type in 'US' in the Threat Intelligence Search bar. Press Enter or select the right-hand arrow to perform the search. This action results in a WHOIS Country/region search.
+17. **WHOIS country:** Choose **WHOIS** > **Country** from the Intel explorer search bar drop-down menu and then search *US*. This action results in a WHOIS country/region search.
 
     ![Search Whois Country](media/searchWhoisCountry.png)
 
-18. **WHOIS Phone:** Select 'WHOIS' > 'Phone' from the Threat Intelligence Search drop-down and type in '+1.4258828080' in the Threat Intelligence Search bar. Press Enter or select the right-hand arrow to perform the search. This action results in a WHOIS Phone search.
+18. **WHOIS phone:** Choose **WHOIS** > **Phone** from the Intel explorer search bar drop-down menu and then search *+1.4258828080*. This action results in a WHOIS phone search.
 
     ![Search Whois Phone](media/searchWhoisPhone.png)
 
@@ -180,7 +184,7 @@ The results of a Threat Intelligence search are grouped into two tabs: "Summary"
 Defender TI provides proprietary reputation scores for any Host, Domain, or IP Address. Whether validating the reputation of a known or unknown entity, this score helps users quickly understand any detected ties to malicious or suspicious infrastructure. Reputation Scores are displayed as a numerical score with a range from 0 to 100. An entity with a score of "0" has no known associations to suspicious activity or known indicators of compromise; a score of "100" indicates that the entity is malicious. 
 The platform provides a list of rules with a description and severity rating. In the example below, we see four "high severity" rules that are applicable to this domain.
 
-For more information, see [Reputation scoring](reputation-scoring.md).
+[Read more about Reputation scoring](reputation-scoring.md)
 
 ![Summary Tab Reputation](media/summaryTabReputation.png)
 
@@ -188,7 +192,7 @@ For more information, see [Reputation scoring](reputation-scoring.md).
 
 The Analyst Insights section provides quick insights about the artifact that might help determine the next step in an investigation. This section will list any insights that apply to the artifact and those that don't apply for more visibility. In the below example, we can quickly determine that the IP Address is routable, hosts a web server, and had an open port within the past five days. Furthermore, the system displays rules that weren't triggered, which can be equally helpful when kickstarting an investigation.
 
-For more information, see [Analyst insights](analyst-insights.md).
+[Read more about Analyst insights](analyst-insights.md)
 
 ![Summary Tab Analyst Insights](media/summaryTabAnalystInsights.png)
 
@@ -196,7 +200,7 @@ For more information, see [Analyst insights](analyst-insights.md).
 
 The Articles section displays any articles that might provide insight on how to best investigate and ultimately disarm the impacted artifact. These articles are written by researchers who study the behavior of known threat actors and their infrastructure, surfacing key findings that can help others mitigate risk to their organization. In this example, the searched IP Address has been identified as an IOC that relates to the findings within the article.
 
-For more information, see [What is Microsoft Defender Threat Intelligence (Defender TI)?](what-is-microsoft-defender-threat-intelligence-defender-ti.md)
+For more information, see [Read more about Defender TI articles](what-is-microsoft-defender-threat-intelligence-defender-ti.md#articles)
 
 ![Summary Tab Articles](media/summaryTabArticles.png)
 
