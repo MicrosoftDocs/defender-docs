@@ -20,7 +20,7 @@ Security Exposure Management is currently in public preview.
 ## Prerequisites
 
 - [Read about attack paths](work-attack-paths-overview.md) before you start.
-- [Review prerequisites and permissions](prerequisites.md) for working with Security Exposure Management.
+-- [Review required permissions](prerequisites.md#permissions) for working with attack paths.
 - The value of attack paths increases based on the data used as a source. If no data is available or the data doesn't reflect your organization's environment, attack paths might not appear. Attack paths might not be fully representative:
   - If you don't have licenses defined for workloads integrated and represented in the attack path.
   - If you don't fully define critical assets.

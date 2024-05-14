@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 04/28/2024
+ms.date: 05/08/2024
 audience: ITPro
 ms.topic: reference
 author: siosulli
@@ -44,6 +44,8 @@ This article also includes:
 
 > [!TIP]
 > To see the most current engine, platform, and signature date, visit the [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates)
+> [!TIP]
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268615) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268522).
 
 ## Security intelligence updates
 
@@ -83,10 +85,9 @@ For more information, see [Manage the sources for Microsoft Defender Antivirus p
 
 - To learn more about security intelligence updates, see [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
-- If you're looking for a list of Microsoft Defender processes, **[download the mde-urls workbook](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx
-)**, and then select the **Microsoft Defender Processes** worksheet. The `mde-urls` workbook also lists the services and their associated URLs that your network must be able to connect to, as described in [Enable access to Microsoft Defender for Endpoint service URLs in the proxy server](configure-proxy-internet.md).
+- If you're looking for a list of Microsoft Defender processes, see the spreadsheet provided at [Enable access to Microsoft Defender for Endpoint service URLs in the proxy server](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server). The sheet also lists the services and their associated URLs that your network must be able to connect to.
 
-- Platform updates can be temporarily postponed if other protection features (such as [Endpoint DLP](/Microsoft-365/compliance/endpoint-dlp-getting-started) or [Device Control](device-control-report.md) are actively monitoring running processes. Platform updates are retried after a reboot or when all monitored services are stopped.
+- Platform updates can be temporarily postponed if other protection features, such as [Endpoint DLP](/Microsoft-365/compliance/endpoint-dlp-getting-started) or [Device Control](device-control-report.md) are actively monitoring running processes. Platform updates are retried after a reboot or when all monitored services are stopped.
 
 - In the **Microsoft Endpoint Configuration Manager / Windows Server Update Services** (MECM/WSUS) catalog, the _category_ **Microsoft Defender for Endpoint** includes updates for the MSSense service in [KB5005292](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB5005292 includes updates and fixes to the Microsoft Defender for Endpoint **endpoint detection and response** (EDR) sensor. For more information, see [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) and [What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md).
 
@@ -98,6 +99,22 @@ All our updates contain
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### April-2024 (Engine: 1.1.24040.1 | Platform: coming soon)
+
+- Security intelligence update version: **1.411.7.0**
+- Release date: **May 07, 2024** (Engine) / **coming soon** (Platform)
+- Engine: **1.1.24040.1**
+- Platform: **coming soon**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Added an opt-out feature for Experimental Configuration Services (ECS) and One collector in the Core Service.
+- Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
+- After a new engine version is released, support for older versions (N-2) will now reduce to technical support only. Engine versions older than N-2 are no longer supported.
+- Improved health monitoring and telemetry for [Attack Surface Rules](overview-attack-surface-reduction.md) exclusions.
+- Updated inaccurate information in [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) regarding wildcard usage with contextual exclusions.
+
 ### March-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
 
 - Security intelligence update version: **1.409.1.0**
@@ -108,13 +125,13 @@ All our updates contain
 
 #### What's new
 
-- Added manageability settings to opt-out for One Collector telemetry channel and Experimentation and Configuration Service (ECS).
+- Added manageability settings to opt out for One Collector telemetry channel and Experimentation and Configuration Service (ECS).
 - Microsoft Defender Core Service will be disabled when 3rd party Antivirus is installed (except when Defender for Endpoint is running in Passive mode).
 - The known issue in [4.18.24020.7](#february-2024-engine-11240209--platform-418240207) where enforcement of device level access policies wasn't working as expected no longer occurs.
 - Fixed high CPU issue caused by redetection done during Sense originating scans.
 - Fixed an issue with Security Intelligence Update disk cleanup.
 - Fixed an issue where the Signature date information on the Security Health report wasn't accurate.
-- Introducted performance improvements when processing paths for exclusions.
+- Introduced performance improvements when processing paths for exclusions.
 - Added improvements to allow recovering from erroneously added [Indicators of compromise (IoC)](manage-indicators.md).
 - Improved resilience in processing [attack surface reduction](attack-surface-reduction.md) exclusions for Anti Malware Scan Interface (AMSI) scans.
 - Fixed a high memory issue related to the [Behavior Monitoring](behavior-monitor.md) queue that occurred when MAPS is disabled.

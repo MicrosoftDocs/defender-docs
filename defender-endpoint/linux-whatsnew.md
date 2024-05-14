@@ -1083,7 +1083,9 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Bug fixes
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Mar-2022 (Build: 101.62.74 | Release version: 30.122022.16274.0)</summary>
 
 &ensp;Released: **Mar 24, 2022**<br/>
@@ -1097,7 +1099,9 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Bug fixes
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Mar-2022 (Build: 101.60.93 | Release version: 30.122012.16093.0)</summary>
 
 ## Mar-2022 (Build: 101.60.93 | Release version: 30.122012.16093.0)
@@ -1112,7 +1116,9 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Mar-2022 (Build: 101.60.05 | Release version: 30.122012.16005.0)</summary>
 
 &ensp;Released: **Mar 3, 2022**<br/>
@@ -1126,7 +1132,9 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Bug fixes
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Feb-2022 (Build: 101.58.80 | Release version: 30.122012.15880.0)</summary>
 
 ## Feb-2022 (Build: 101.58.80 | Release version: 30.122012.15880.0)
@@ -1143,7 +1151,9 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Bug fixes
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Jan-2022 (Build: 101.56.62 | Release version: 30.121122.15662.0)</summary>
 
 ## Jan-2022 (Build: 101.56.62 | Release version: 30.121122.15662.0)
@@ -1158,7 +1168,9 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Fixed a product crash introduced in 101.53.02 and that has impacted multiple customers
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Jan-2022 (Build: 101.53.02 | Release version: (30.121112.15302.0)</summary>
 
 &ensp;Released: **Jan 8, 2022**<br/>
@@ -1331,4 +1343,4 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 
    </details>
 
-
+</details><!--This </details> closes "2021 releases"-->

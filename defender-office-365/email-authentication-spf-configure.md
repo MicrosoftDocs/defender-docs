@@ -103,7 +103,7 @@ v=spf1 ip4:192.168.0.10 ip4:192.168.0.12 include:spf.protection.outlook.com -all
 
 - **Enforcement rule**: Tells destination email systems what to do with messages from sources that aren't specified in the SPF TXT record for the domain. Valid values are:
   - `-all` (hard fail): Sources not specified in the SPF TXT record aren't authorized to send mail for the domain, so the messages should be rejected. What actually happens to the message depends on the destination email system, but the messages are typically discarded.
-  
+
      For Microsoft 365 domains, we recommend `-all` (hard fail) because we also recommend DKIM and DMARC for the domain. The DMARC policy specifies what to do to messages that fail SPF or DKIM, and DMARC reports allow you to validate the results.
 
      > [!TIP]

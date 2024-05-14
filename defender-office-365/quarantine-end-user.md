@@ -20,7 +20,7 @@ ms.custom:
 description: Users can learn how to view and manage quarantined messages in Exchange Online Protection (EOP) that should have been delivered to them.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 8/2/2023
+ms.date: 5/7/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -95,7 +95,6 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Policy name**
 - **Message size**
 - **Mail direction**
-- **Recipient tag**
 
 To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filters** flyout that opens:
 
@@ -114,17 +113,13 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Next 2 days**
   - **Next 7 days**
   - **Custom**: Enter a **Start time** and **End time** (date).
-- **Recipient tag**
 - **Quarantine reason**:
   - **Transport rule** (mail flow rule)
   - **Bulk**
   - **Spam**
-  - **Data loss prevention**
   - **Malware**: Anti-malware policies in EOP or Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
-  - **Admin action - File type block**: Messages blocked as malware by the common attachments filter in anti-malware policies. For more information, see [Anti-malware policies](anti-malware-protection-about.md#anti-malware-policies).
-- **Recipient**: **All users** or **Only me**. End users can only manage quarantined messages sent to them.
 - **Release status**: Any of the following values:
   - **Needs review**
   - **Approved**
@@ -296,8 +291,9 @@ After you select the message, use either of the following methods to preview it:
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: **Preview message**.
 
 In the flyout that opens, choose one of the following tabs:
-  - **Source**: Shows the HTML version of the message body with all links disabled.
-  - **Plain text**: Shows the message body in plain text.
+
+- **Source**: Shows the HTML version of the message body with all links disabled.
+- **Plain text**: Shows the message body in plain text.
 
 #### View email message headers
 
