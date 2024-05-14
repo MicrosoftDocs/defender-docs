@@ -39,7 +39,7 @@ f1.keywords: NOCSH
 > [!IMPORTANT]
 > Some information relates to pre-released product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-## Pre-requisites
+## Prerequisites
 
 - Device is onboarded to Microsoft Defender for Endpoint.
 - [Preview features](/defender-endpoint/preview) is enabled in the Microsoft XDR portal ([https://security.microsoft.com](https://security.microsoft.com)).
@@ -51,11 +51,11 @@ f1.keywords: NOCSH
 
 ## Overview
 
-Behavior monitoring, monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. 
+Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. 
 
 ## Deployment instructions
 
-To deploy behavior monitoring in Microsoft Defender for Endpoint on macOS you must change the behavior monitoring policy using one of the following methods: 
+To deploy behavior monitoring in Microsoft Defender for Endpoint on macOS, you must change the behavior monitoring policy using one of the following methods: 
 
 - [Intune](#intune-deployment)
 - [JamF or other 3<sup>rd</sup> party MDM](#via-jamf-intune-deployment)
@@ -181,7 +181,7 @@ The following sections describe each of these methods in detail.
 ```
 
 2. In **Computers** > **Configuration Profiles**, select **Options** > **Applications & Custom Settings**,
-3. Select **Upload File** ( _.plist_ file).
+3. Select **Upload File** (_.plist_ file).
 4. Set preference domain to *com.microsoft.wdav*
 5. Upload the plist file saved earlier.
 
@@ -215,10 +215,10 @@ For more information on how to test for a behavior monitoring (prevention/block)
 
 ### Frequently Asked Questions (FAQ):
 
-#### Do Behavior Monitoring protection alerts show up in the “Device timeline” and/or “Advanced Hunting”?
+#### Do Behavior Monitoring protection alerts show up in the Device timeline and/or Advanced Hunting?
 Not at this time, it's in telemetry mode.
 
 #### What if I see an increase in cpu utilization or memory utilization?
 Disable Behavior Monitoring and see if the issue goes away.
-- If the issue does not go away, it's not related to Behavior Monitoring.
-- If the issue goes away, please grab a aka.ms/xMDEClientAnalyzer and contact Microsoft support.
+- If the issue doesn't go away, it is not related to Behavior Monitoring.
+- If the issue goes away, take an aka.ms/xMDEClientAnalyzer and contact Microsoft support.
