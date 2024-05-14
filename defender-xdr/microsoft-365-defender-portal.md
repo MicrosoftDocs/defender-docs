@@ -19,7 +19,7 @@ ms.custom:
   - admindeeplinkDEFENDER
   - intro-overview
 ms.topic: conceptual
-ms.date: 05/10/2024
+ms.date: 05/14/2024
 ---
 
 # Microsoft Defender portal
@@ -135,7 +135,7 @@ The Microsoft Defender portal's search function is located at the top of the pag
 
 Search results are categorized by sections related to your search terms. You can search across the following entities in the Microsoft Defender portal:
 
-- **Devices** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud, and Microsoft Sentinel (Preview). Supports use of search operators.
+- **Devices** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud, and Microsoft Sentinel (Preview).
 - **Users** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, and Microsoft Sentinel (Preview).
 - **Files, IPs, and URLs** - same capabilities as in Defender for Endpoint.
 
@@ -144,7 +144,7 @@ Search results are categorized by sections related to your search terms. You can
 
 - **MDVM** - same capabilities as in Defender for Endpoint (vulnerabilities, software, and recommendations).
 
-Search also provides results from relevant links in the Microsoft Tech Community portal and relevant documentation in Microsoft Learn. Search history is stored in your browser and is accessible for the next 30 days.
+Search also provides results from relevant links in the Microsoft Tech Community portal, relevant documentation in Microsoft Learn, navigation items within the portal, and a link where you can provide feedback. Search history is stored in your browser and is accessible for the next 30 days.
 
 ### Notifications
 
