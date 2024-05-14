@@ -100,13 +100,13 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 - Windows 11
 - Windows Server 2022
 - Windows Server 2019
-- Windows Server 2012 R2 or Windows Server 2016 R2, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
+- Windows Server 2012 R2 or Windows Server 2016, fully updated running Defender for Endpoint modern unified solution (installation through MSI).
 - [macOS supported versions](microsoft-defender-endpoint-mac.md) with MDE product version 101.24022.*+
 - [Linux supported versions](microsoft-defender-endpoint-linux.md) with MDE product version 101.24022.*+
 
 > [!IMPORTANT]
-> - **Devices running on MMA agent are not supported** on the streamlined connectivity method and will need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 R2 not upgraded to modern unified agent). 
-> - Windows Server 2012 R2 and Server 2016 R2 will need to upgrade to unified agent to leverage the new method. <br/>
+> - **Devices running on MMA agent are not supported** on the streamlined connectivity method and will need to continue using the standard URL set (Windows 7, Windows 8.1, Windows Server 2008 R2 MMA, Server 2012 & 2016 not upgraded to modern unified agent). 
+> - Windows Server 2012 R2 and Server 2016 will need to upgrade to unified agent to leverage the new method. <br/>
 > - Windows 10 1607, 1703, 1709, 1803 can leverage the new onboarding option but will use a longer list. For more information, see the [streamlined URL sheet](https://aka.ms/MDE-streamlined-urls).
 
 | Windows   OS    |     Minimum   KB Required (March 8, 2022)    |
@@ -120,7 +120,6 @@ Devices must meet specific prerequisites to use the streamlined connectivity met
 |     Windows 10 1709*    |     < end of   service >     |
 |     Windows Server   2022    |     KB5011497   (March 8, 2022)    |
 |     Windows Server   2012 R2, 2016*    |     Unified Agent    |
-|     Windows Server   2016 R2    |     Unified Agent    |
 
 ## Streamlined connectivity process
 
