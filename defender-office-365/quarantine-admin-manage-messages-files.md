@@ -405,7 +405,7 @@ The **Allow sender** action adds the sender of the selected email message to the
 After you select the message, use either of the following methods to add the message sender to the Safe Senders list in **your own** mailbox:
 
 - **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Allow sender**.
-- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-allow-sender-iconn.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Allow sender**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Allow sender**.
 
 The flyout that opens indicates when the sender was successfully added to your Safe Senders list. Select **Done**.
 
@@ -436,7 +436,7 @@ Admins can remove senders from the Block Senders list of their own mailboxes (if
 
 After you select the message, use either of the following methods to remove the sender from the user's Block Senders list:
 
-- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** \> :::image type="icon" source="m365-cc-sc-remove-sender-icon.png" border="false"::: **Remove sender from user block list**.
+- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-remove-sender-icon.png" border="false"::: **Remove sender from user block list**.
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-remove-sender-icon.png" border="false"::: **Remove sender from user block list**.
 
 The flyout that opens indicates when the sender was successfully removed from the recipient's Blocked Senders list. Select **Done**.
