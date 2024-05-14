@@ -336,6 +336,8 @@ The flyout that opens indicates when the sender was successfully added to your S
 #### Block email senders from quarantine
 
 > [!TIP]
+> **Block sender** is available only if an admin created a custom quarantine policy with the **Block sender** permission enabled, and assigned that quarantine policy to the protection feature policy that quarantined the message.
+>
 > If the sender is already in your [Safe Senders list](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089), **Block sender** isn't available. **[Remove sender from user block list](#remove-senders-from-your-blocked-senders-list-from-quarantine)** is available instead.
 
 The **Block sender** action adds the message sender to the Blocked Senders list in your mailbox. For more information about blocking senders, see [Block a mail sender](https://support.microsoft.com/office/b29fd867-cac9-40d8-aed1-659e06a706e4).

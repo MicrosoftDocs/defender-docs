@@ -673,7 +673,8 @@ The relationship between permissions, permissions groups, and the default quaran
 |Permission|No access|Limited access|Full access|
 |---|:---:|:---:|:---:|
 |(_PermissionToViewHeader_)¹|✔|✔|✔|
-|**Block sender** (_PermissionToBlockSender_)||✔|✔|
+|**Allow sender** (_PermissionToAllowSender_)||✔|✔|
+|**Block sender** (_PermissionToBlockSender_)||||
 |**Delete** (_PermissionToDelete_)||✔|✔|
 |**Preview** (_PermissionToPreview_)²||✔|✔|
 |**Allow recipients to release a message from quarantine** (_PermissionToRelease_)³|||✔|
@@ -686,7 +687,7 @@ The relationship between permissions, permissions groups, and the default quaran
 |DefaultFullAccessWithNotificationPolicy⁴|Full access|Yes|
 |NotificationEnabledPolicy⁵|Full access|Yes|
 
-¹ This permission isn't available in the Defender portal. Turning off the permission in PowerShell doesn't affect the availability of the :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message header** action on quarantined messages. If the message is visible to a user in quarantine, the action is always available for the message.
+¹ This permission isn't available in the Defender portal. Turning off the permission in PowerShell doesn't affect the availability of the :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message header** action on quarantined messages. If the message is visible to a user in quarantine, **View message header** is always available for the message.
 
 ² The **Preview** permission is unrelated to the **Review message** action that's available in quarantine notifications.
 

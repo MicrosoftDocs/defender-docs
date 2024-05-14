@@ -414,6 +414,8 @@ The flyout that opens indicates when the sender was successfully added to your S
 > [!TIP]
 > The **Block sender** action is available to admins only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**.
 >
+> **Block sender** is available to users only if a custom quarantine policy with the **Block sender** permission assigned was used by the feature that quarantined the message.
+>
 > If the sender is already in the recipient's [safelist collection](configure-junk-email-settings-on-exo-mailboxes.md), **Block sender** isn't available. **[Remove sender from user block list](#remove-senders-from-user-blocked-senders-lists-from-quarantine)** is available instead.
 
 The **Block sender** action adds the sender of the selected email message to the Blocked Senders list **in the mailbox of whomever is signed in**. Typically, this action is for end-users if it's available to them by [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy). For more information about users blocking senders, see [Block a mail sender](https://support.microsoft.com/office/b29fd867-cac9-40d8-aed1-659e06a706e4)
