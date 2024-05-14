@@ -43,6 +43,9 @@ You view and manage quarantined messages in the Microsoft Defender portal or in 
 Watch this short video to learn how to manage quarantined messages as an admin.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGGPF]
 
+> [!TIP]
+> Simplify *Microsoft Defender for Office 365* deployment with our [setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268341). Protect against email, link, and collaboration threats. Configure policies, access reports, and automate investigations. Features include Safe Links, Safe Attachments, and more. Sign in credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/p/?linkid=2268240). Anyone, from potential Microsoft clients to partners and IT admins, can access the guides and use them freely (credentials aren't required).
+
 ## What do you need to know before you begin?
 
 - To open the Microsoft Defender portal, go to <https://security.microsoft.com>. To go directly to the **Quarantine** page, use <https://security.microsoft.com/quarantine>.
