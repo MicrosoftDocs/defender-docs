@@ -65,7 +65,7 @@ The following sections describe each of these methods in detail.
 
 ### Intune deployment
 
-1. Copy the following XML and save it as **BehaviorMonitoring_for_MDE_on_macOS.mobileconfig**
+1. Copy the following XML to create a _.plist_ file and save it as **BehaviorMonitoring_for_MDE_on_macOS.mobileconfig**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -148,7 +148,7 @@ The following sections describe each of these methods in detail.
 
 #### Via JamF Intune deployment
 
-1. Copy the following XML and save it as **Save as BehaviorMonitoring_for_MDE_on_macOS.plist**
+1. Copy the following XML to create a _.plist_ file and save it as **Save as BehaviorMonitoring_for_MDE_on_macOS.plist**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -181,7 +181,7 @@ The following sections describe each of these methods in detail.
 ```
 
 2. In **Computers** > **Configuration Profiles**, select **Options** > **Applications & Custom Settings**,
-3. Select **Upload File** (PLIST file).
+3. Select **Upload File** ( _.plist_ file).
 4. Set preference domain to *com.microsoft.wdav*
 5. Upload the plist file saved earlier.
 
