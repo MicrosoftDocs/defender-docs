@@ -146,7 +146,7 @@ The following sections describe each of these methods in detail.
 7. Open the configuration profile and upload the `com.microsoft.wdav.xml` file and select **OK**.
 8. Select **Manage** > **Assignments**. In the **Include** tab, select **Assign to All Users & All devices or to a Device Group or User Group.**
 
-#### Via JamF Intune deployment
+#### Via JamF deployment
 
 1. Copy the following XML to create a _.plist_ file and save it as **Save as BehaviorMonitoring_for_MDE_on_macOS.plist**
 
