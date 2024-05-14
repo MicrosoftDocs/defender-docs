@@ -189,7 +189,10 @@ Once the Mirror Server is set up, we need to propagate this URL to the Linux end
     "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/",
     "offlineDefintionUpdateFallbackToCloud":false,
     "offlineDefinitionUpdate": "enabled"
-  }
+  },
+"features": {
+"offlineDefinitionUpdateVerifySig": "enabled",
+}
 }
 ```
 
@@ -200,6 +203,7 @@ Once the Mirror Server is set up, we need to propagate this URL to the Linux end
 | `offlineDefinitionUpdateUrl`              | String               | URL value generated as part of the Mirror Server set up |
 | `offlineDefinitionUpdate`                 | enabled / disabled   | When set to `enabled`, the offline security intelligence update feature is enabled, and vice versa. |
 | `offlineDefinitionUpdateFallbackToCloud`  | True / False         | Determine Defender for Endpoint security intelligence update approach when offline Mirror Server fails to serve the update request. If set to true, the update is retried via the Microsoft cloud when offline security intelligence update failed, else vice versa. |
+|offlineDefinitionUpdateVerifySig  |enabled/disabled|When set to “enabled” ,  downloaded definitions are verified on the endpoints, else vice versa|
 
 > [!NOTE]
 > As of today the offline security intelligence update feature can be configured on Linux endpoints via managed json only. Integration with security settings management on the security portal is in our roadmap.
