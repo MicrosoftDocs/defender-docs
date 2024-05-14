@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to view, create, modify, and delete anti-spam policies in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 1/2/2024
+ms.date: 5/10/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -35,6 +35,9 @@ In Microsoft 365 organizations with mailboxes in Exchange Online or standalone E
 The default anti-spam policy automatically applies to all recipients in the organization. For greater granularity, you can also create custom anti-spam policies that apply to specific users, groups, or domains.
 
 You can configure anti-spam policies in the Microsoft Defender portal or in PowerShell (Exchange Online PowerShell for Microsoft 365 organizations with mailboxes in Exchange Online; standalone EOP PowerShell for organizations without Exchange Online mailboxes).
+
+> [!TIP]
+> Strengthen your organization's security posture with our comprehensive [Security Analyzer setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268615). Use the guide to scrutinize networks, endpoints, and servers, identifying vulnerabilities and potential breaches. With intuitive insights and step-by-step instructions, learn how to fortify defenses, improve compliance, and navigate the cybersecurity landscape with confidence. Sign in credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/p/?linkid=2268522). Anyone, from potential Microsoft clients to partners and IT admins, can access the guides and use them freely (credentials aren't required).
 
 ## What do you need to know before you begin?
 
