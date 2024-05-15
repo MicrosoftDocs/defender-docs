@@ -75,9 +75,9 @@ Select a tab, review the scenarios, and then identify which Microsoft capability
 
 ### Device installation restrictions 
 
-The device installation restrictions available in Windows allow or deny the installation of drivers based on the device ID, device instance ID or set-up class.  This can block __any__ device in the device manager including all removable devices.  When device installation restrictions are applied, the device is blocked in the device manager.   
+The device installation restrictions available in Windows allow or deny the installation of drivers based on the device ID, device instance ID or set-up class.  This can block *any* device in the device manager including all removable devices. When device installation restrictions are applied, the device is blocked in the device manager, as shown in the following screenshot
 
-![User's image](media/device-control-overview/image.png)
+![Screenshot showing the device manager with a blocked device highlighted](media/device-control-overview/image.png)
 
 There are more details available by clicking on the device.
 
@@ -102,7 +102,7 @@ DeviceEvents
 
 ```
 
-![User's image](media/device-control-overview/image2.png)
+![Screenshot showing a DeviceEvents query](media/device-control-overview/image2.png)
 
 When a device installation restrictions are configured and a device is installed, an event with *ActionType* of _PnPDeviceAllowed_ is created
 
