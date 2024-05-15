@@ -7,7 +7,7 @@ ms.author: siosulli
 author: siosulli
 ms.reviewer: noamhadash, pahuijbr
 ms.localizationpriority: medium
-ms.date: 05/08/2024
+ms.date: 05/15/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -30,7 +30,7 @@ ms.topic: conceptual
 
 The following features are in preview or generally available (GA) in the latest release of Microsoft Defender for Endpoint.
 
-For more information on preview features, see [Preview features](preview.md).
+For more information on preview features, see [Preview features](/defender-xdr/preview).
 
 For more information on what's new with Microsoft Defender for Endpoint on Windows, see:
 [What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md)
@@ -52,6 +52,9 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## May 2024
 
+- (Preview) **Turn preview options on in the main Microsoft 365 Defender settings** together with other Microsoft 365 Defender preview features. Customers who are not using preview features yet will continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
+
+
 - (GA) [Streamlined device connectivity for Defender for Endpoint](configure-device-connectivity.md) is now generally available for Windows, macOS, and Linux. This experience makes it easier to configure and manage Defender for Endpoint services by reducing the number of URLs required for connectivity, providing IP & Azure service tag support, and simplifying post-deployment network management.
 
 ## April 2024
@@ -62,7 +65,8 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## March 2024
 
-(GA) **Built-in Scheduled scan for macOS**: For information, see [How to schedule scans with Microsoft Defender for Endpoint on macOS](mac-schedule-scan.md)
+- (GA) **Built-in Scheduled scan for macOS**: For information on Scheduled Scan built-in for Microsoft Defender for Endpoint on macOS, see [How to schedule scans with Microsoft Defender for Endpoint on macOS](mac-schedule-scan.md)
+
 
 ## February 2024
 
