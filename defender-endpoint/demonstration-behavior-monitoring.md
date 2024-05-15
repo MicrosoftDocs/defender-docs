@@ -49,7 +49,7 @@ When RTP is enabled, the result shows a value of 1.
 
 ### Enable Behavior Monitoring for Microsoft Defender for Endpoint
 
-For more information on how to enable Behavior Monitoring for Defender for Endpoint, see [Deployment instructions](/defender-endpoint/behavior-monitor-macos#deployment-instructions).
+For more information on how to enable Behavior Monitoring for Defender for Endpoint, see [Deployment instructions](behavior-monitor-macos.md#deployment-instructions).
 
 ### Demonstration of how Behavior Monitoring works
 
