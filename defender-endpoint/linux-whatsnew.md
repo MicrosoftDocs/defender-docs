@@ -33,6 +33,34 @@ This article is updated frequently to let you know what's new in the latest rele
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 
 <details>
+<summary> May-2024 (Build: 101.24032.0007 | Release version: 30.124032.0007.0)</summary>
+
+## May-2024 Build: 101.24032.0007 | Release version: 30.124032.0007.0
+
+&ensp;Released: **TBD**<br/>
+&ensp;Published: **TBD**<br/>
+&ensp;Build: **101.24032.0007**<br/>
+&ensp;Release version: **30.124032.0007.0**<br/>
+&ensp;Engine version: **1.1.24020.3**<br/>
+&ensp;Signature version: **1.403.3500.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release:
+
+- New Field in mdatp health - engine_load_status<br>
+  To optimize performance, the unprivileged process will only run in specific scenarios. The field 'engine_load_status' indicates the following:
+
+    Healthy Scenarios:
+    - "Engine not loaded"  - The unprivileged process is not currently running.
+    - "Engine load succeeded" - The unprivileged process is up and running.
+- Bug fix to enhance behavioral detections.
+- Stability and performance improvements.
+- Other bug fixes.
+
+</details>
+
+<details>
 <summary> March-2024 (Build: 101.24022.0001 | Release version: 30.124022.0001.0)</summary>
 
 ## March-2024 Build: 101.24022.0001 | Release version: 30.124022.0001.0
