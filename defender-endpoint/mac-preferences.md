@@ -81,7 +81,7 @@ Specifies the enforcement preference of antivirus engine. There are three values
 |**Possible values**|real_time (default) <p> on_demand <p> passive|
 |**Comments**|Available in Microsoft Defender for Endpoint version 101.10.72 or higher.|
 
-#### Enable/disable behavior-monitoring
+#### Enable/disable behavior monitoring
 
 Determines whether behavior monitoring and blocking capability is enabled on the device or not.
 
