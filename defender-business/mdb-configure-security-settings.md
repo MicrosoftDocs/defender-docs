@@ -47,7 +47,7 @@ You can view and edit settings for advanced features, such as:
 
 - [Turning on (or off) advanced features](mdb-portal-advanced-feature-settings.md#view-settings-for-advanced-features);
 - [Specifying which time zone to use in the Microsoft Defender portal](mdb-portal-advanced-feature-settings.md#view-and-edit-other-settings-in-the-microsoft-365-defender-portal); and 
-- [Whether to receive preview features as they become available](mdb-preview.md#turn-on-preview-features).
+- [Whether to receive preview features as they become available](/defender-xdr/preview).
 
 ## Choose where to manage security policies and devices
 

@@ -484,6 +484,8 @@
                   href: additional-information-xdr.md
                 - name: How Defender Experts for XDR permissions work
                   href: dex-xdr-permissions.md
+                - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
+                  href: teams-restrictions-dexapp.md
        - name: Ransomware playbooks
          items: 
               - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR
