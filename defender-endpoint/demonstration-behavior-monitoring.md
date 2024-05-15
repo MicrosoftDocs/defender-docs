@@ -51,9 +51,9 @@ When RTP is enabled, the result shows a value of 1.
 
 For more information on how to enable Behavior Monitoring for Defender for Endpoint, see [Deployment instructions](/defender-endpoint/behavior-monitor-macos#deployment-instructions).
 
-### Example of how Behavior Monitoring works
+### Demonstration of how Behavior Monitoring works
 
-To see an example of how Behavior Monitoring blocks a payload:
+To demonstrate how Behavior Monitoring blocks a payload:
 
 1. Create a bash script using a script/text editor such as nano or Visual Studio Code (VS Code):
 
