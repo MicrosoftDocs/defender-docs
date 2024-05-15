@@ -197,7 +197,7 @@ You can use device control to control access to Bluetooth services on Windows de
 
 Administrators can control the behavior of the Bluetooth service (Allowing advertising, discovery, preparing and prompting) as well as the Bluetooth services that are allowed. For more information, see [Windows Bluetooth](/windows/client-management/mdm/policy-csp-bluetooth).
 
-### Endpoint DLP
+### Use Endpoint DLP to prevent document copying to devices
 
 To block copying of sensitive document to any Bluetooth Device use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
@@ -211,7 +211,7 @@ Device control in Defender for Endpoint provides your security team with a robus
 
 If you're new to device control, see [Device control walkthroughs](device-control-walkthroughs.md).
 
-## Prerequisites
+## Prerequisites for device control
 
 Device control in Defender for Endpoint can be applied to devices running Windows 10 or Windows 11 that have the anti-malware client version `4.18.2103.3` or later. (Currently, servers are not supported.)
 
