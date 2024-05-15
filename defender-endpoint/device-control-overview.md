@@ -51,7 +51,7 @@ Device control capabilities from Microsoft can be organized into three main cate
     
      For more information on how to configure device installation with Intune, see [Restrict USB devices and allow specific USB devices using ADMX templates in Intune](/mem/intune/configuration/administrative-templates-restrict-usb).
         
-     For more information on how to configure device installation with Group Policy, see [Manage Device Installation with Group Policy](/windows/client-management/client-tools/manage-device-installation-with-group-policy)
+     For more information on how to configure device installation with Group Policy, see [Manage Device Installation with Group Policy](/windows/client-management/client-tools/manage-device-installation-with-group-policy).
         
 - **Device control in Defender for Endpoint**. Device control in Defender for Endpoint provides more advanced capabilities and is cross platform. 
 
@@ -59,9 +59,9 @@ Device control capabilities from Microsoft can be organized into three main cate
   
      - File evidence - store the file information and contents to audit files copied or accessed on devices.
   
-     - Reporting and advanced hunting - complete visibility into add device related activities
+     - Reporting and advanced hunting - complete visibility into add device related activities.
   
-     - Device control in Microsoft Defender can be managed using Intune or [Group Policy](device-control-deploy-manage-gpo)
+     - Device control in Microsoft Defender can be managed using Intune or [Group Policy](device-control-deploy-manage-gpo).
   
     - **Device control in Microsoft Defender and Intune**. Intune provides a rich experience for managing complex device control policies for organizations. You can configure and deploy device restriction settings in Defender for Endpoint, for example. See [Deploy and manage device control with Microsoft Intune](device-control-deploy-manage-intune).
         
@@ -69,13 +69,13 @@ Device control capabilities from Microsoft can be organized into three main cate
 
 See the [device control scenarios](#device-control-in-windows) section (in this article) for more details about these capabilities.
 
-Select a tab, review the scenarios, and then identify which Microsoft capability to use
+Select a tab, review the scenarios, and then identify which Microsoft capability to use.
 
 ## **[Controlling access to USB devices](#tab/Removable)**
 
 ### Device installation restrictions 
 
-The device installation restrictions available in Windows allow or deny the installation of drivers based on the device ID, device instance ID or set-up class.  This can block *any* device in the device manager including all removable devices. When device installation restrictions are applied, the device is blocked in the device manager, as shown in the following screenshot
+The device installation restrictions available in Windows allow or deny the installation of drivers based on the device ID, device instance ID or set-up class.  This can block *any* device in the device manager including all removable devices. When device installation restrictions are applied, the device is blocked in the device manager, as shown in the following screenshot:
 
 ![Screenshot showing the device manager with a blocked device highlighted.](media/device-control-overview/image.png)
 
@@ -104,7 +104,7 @@ DeviceEvents
 
 ![Screenshot showing a DeviceEvents query.](media/device-control-overview/image2.png)
 
-When a device installation restrictions are configured and a device is installed, an event with *ActionType* of _PnPDeviceAllowed_ is created
+When a device installation restrictions are configured and a device is installed, an event with *ActionType* of `PnPDeviceAllowed` is created.
 
 **Learn more:** 
 
