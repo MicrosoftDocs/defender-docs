@@ -155,7 +155,7 @@ To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](
 
 ### BitLocker support for removable media
 
-Windows provides the ability to deny write to all removable media or deny write access unless a device is BitLocker encrypted. For more information, see [Configure BitLocker - Windows Security](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=removable#policy-settings-list).
+Windows provides the ability to deny write to all removable media or deny write access unless a device is BitLocker encrypted. For more information, see [Configure BitLocker - Windows Security](/windows/security/operating-system-security/data-protection/bitlocker/configure).
 
 
 ### Device control policies for BitLocker (Preview)
