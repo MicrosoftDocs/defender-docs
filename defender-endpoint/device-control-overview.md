@@ -157,10 +157,7 @@ To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](
 
 ### BitLocker support for removable media
 
-Windows provides the ability to deny write to all removable media or deny write access unless a device is BitLocker encrypted.
-
-**Learn More**
-- [Configure BitLocker - Windows Security](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=removable#policy-settings-list)
+Windows provides the ability to deny write to all removable media or deny write access unless a device is BitLocker encrypted. For more information, see [Configure BitLocker - Windows Security](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=removable#policy-settings-list).
 
 
 ### Device control policies for BitLocker (Preview)
@@ -169,6 +166,7 @@ Device control for Microsoft Defender for Endpoint controls access to a device b
 
 > [!TIP]
 > If you're using Mac, device control can control access to removable media based on the APFS encryption state.  See **[Device Control for macOS](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fdevice-control-overview.md/main/d565b957-f2d8-dbf6-35a0-305e77bc1a95/mac-device-control-overview.md)**.
+
 ## [**Controlling access to printers**](#tab/Printers)
 
 ### Printer installation restrictions
