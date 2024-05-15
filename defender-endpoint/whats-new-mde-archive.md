@@ -30,7 +30,7 @@ ms.topic: conceptual
 
 The following features were in preview or generally available (GA) in Microsoft Defender for Endpoint prior to the calendar year 2023.
 
-For more information on preview features, see [Preview features](preview.md).
+For more information on preview features, see [Preview features](/defender-xdr/preview).
 
 For more information on what's new with Microsoft Defender for Endpoint on Windows, see:
 [What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md)

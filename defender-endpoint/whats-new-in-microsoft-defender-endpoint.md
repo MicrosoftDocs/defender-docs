@@ -52,11 +52,10 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## May 2024
 
-- (GA) [Streamlined device connectivity for Defender for Endpoint](configure-device-connectivity.md) is now generally available for Windows, macOS, and Linux. This experience makes it easier to configure and manage Defender for Endpoint services by reducing the number of URLs required for connectivity, providing IP & Azure service tag support, and simplifying post-deployment network management.
-
-## May 2024
-
 - (Preview) **Turn preview options on in the main Microsoft 365 Defender settings** together with other Microsoft 365 Defender preview features. Customers who are not using preview features yet will continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
+
+
+- (GA) [Streamlined device connectivity for Defender for Endpoint](configure-device-connectivity.md) is now generally available for Windows, macOS, and Linux. This experience makes it easier to configure and manage Defender for Endpoint services by reducing the number of URLs required for connectivity, providing IP & Azure service tag support, and simplifying post-deployment network management.
 
 ## April 2024
 
