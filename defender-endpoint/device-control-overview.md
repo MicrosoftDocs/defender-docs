@@ -67,9 +67,9 @@ Device control capabilities from Microsoft can be organized into three main cate
         
 - **Endpoint data loss prevention** (Endpoint DLP). Endpoint DLP monitors sensitive information on devices that are onboarded to Microsoft Purview solutions. DLP policies can enforce protective actions on sensitive information and where it's stored or used. [Learn about Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
-Select a tab, review the scenarios, and then identify which Microsoft capability to use.
+In the following sections, review the scenarios, and then identify which Microsoft capability to use.
 
-## **[Controlling access to USB devices](#tab/Removable)**
+## Controlling access to USB devices
 
 ### Device installation restrictions 
 
@@ -151,12 +151,11 @@ This query returns the name of the policy, the access requested, and the verdict
 
 To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
-## **[Controlling access to BitLocker encrypted removable media (Preview)](#tab/Bitlocker)**
+## Controlling access to BitLocker encrypted removable media (Preview)
 
 ### BitLocker support for removable media
 
 Windows provides the ability to deny write to all removable media or deny write access unless a device is BitLocker encrypted. For more information, see [Configure BitLocker - Windows Security](/windows/security/operating-system-security/data-protection/bitlocker/configure).
-
 
 ### Device control policies for BitLocker (Preview)
 
@@ -165,7 +164,7 @@ Device control for Microsoft Defender for Endpoint controls access to a device b
 > [!TIP]
 > If you're using Mac, device control can control access to removable media based on the APFS encryption state. See **[Device Control for macOS](mac-device-control-overview.md)**.
 
-## [**Controlling access to printers**](#tab/Printers)
+## Controlling access to printers**
 
 ### Printer installation restrictions
 
@@ -181,19 +180,18 @@ Device control can also restrict the types of files that are printed. Device con
 
 To block printing of documents based on information classification use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
-## [**Bluetooth**](#tab/Bluetooth)
+## Bluetooth
 
 > [!TIP]
 > If you're using Mac, device control can control access to Bluetooth. See **[Device Control for macOS](mac-device-control-overview.md)**.
 
 ### Controlling access to Bluetooth services on Windows
+
 Administrators can control the behavior of the Bluetooth service (Allowing advertising, discovery, preparing and prompting) as well as the Bluetooth services that are allowed. For more information, see [Windows Bluetooth](/windows/client-management/mdm/policy-csp-bluetooth).
 
 ### Endpoint DLP
 
 To block copying of sensitive document to any Bluetooth Device use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
-
----
 
 ## Device control samples and scenarios
 
