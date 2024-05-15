@@ -6,7 +6,7 @@ ms.author: dansimp
 author: dansimp
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 03/28/2024
+ms.date: 04/26/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -31,6 +31,55 @@ This article is updated frequently to let you know what's new in the latest rele
 
 - [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
+
+<details>
+<summary> May-2024 (Build: 101.24032.0007 | Release version: 30.124032.0007.0)</summary>
+
+## May-2024 Build: 101.24032.0007 | Release version: 30.124032.0007.0
+
+&ensp;Released: **TBD**<br/>
+&ensp;Published: **TBD**<br/>
+&ensp;Build: **101.24032.0007**<br/>
+&ensp;Release version: **30.124032.0007.0**<br/>
+&ensp;Engine version: **1.1.24020.3**<br/>
+&ensp;Signature version: **1.403.3500.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release:
+
+- New Field in mdatp health - engine_load_status<br>
+  To optimize performance, the unprivileged process will only run in specific scenarios. The field 'engine_load_status' indicates the following:
+
+    Healthy Scenarios:
+    - "Engine not loaded"  - The unprivileged process is not currently running.
+    - "Engine load succeeded" - The unprivileged process is up and running.
+- Bug fix to enhance behavioral detections.
+- Stability and performance improvements.
+- Other bug fixes.
+
+</details>
+
+<details>
+<summary> March-2024 (Build: 101.24022.0001 | Release version: 30.124022.0001.0)</summary>
+
+## March-2024 Build: 101.24012.0001 | Release version: 30.124022.0001.0
+
+&ensp;Released: **March 25,2024**<br/>
+&ensp;Published: **March 25,2024**<br/>
+&ensp;Build: **101.24022.0001**<br/>
+&ensp;Release version: **30.124022.0001.0**<br/>
+&ensp;Engine version: **1.1.23110.4**<br/>
+&ensp;Signature version: **1.403.87.0**<br/>
+
+**What's new**
+There are multiple fixes and new changes in this release:
+
+- Addition for microsoft_defender_scan log file which logs scans mdatp is unable to complete due to any reason.
+- MdAttach support for Offline Security Intelligence Update.
+- Stability and performance improvements.
+- Bug fixes.
+</details>
 
 <details>
 <summary> March-2024 (Build: 101.24022.0001 | Release version: 30.124022.0001.0)</summary>

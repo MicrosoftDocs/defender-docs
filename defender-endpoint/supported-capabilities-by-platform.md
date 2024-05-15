@@ -63,7 +63,7 @@ The following table gives information about the supported Microsoft Defender for
 
 <sup>[1]</sup> Refers to the modern, unified solution for Windows Server 2012 R2 and 2016. For more information, see [Onboard Windows Servers to the Defender for Endpoint service](configure-server-endpoints.md).
 
-<sup>[2]</sup> Feature is currently in preview ([Microsoft Defender for Endpoint preview features](preview.md))
+<sup>[2]</sup> Feature is currently in preview ([Microsoft Defender for Endpoint preview features](/defender-xdr/preview))
 
 <sup>[3]</sup> Response capabilities using Live Response [2]
 

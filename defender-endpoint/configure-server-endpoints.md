@@ -6,25 +6,7 @@ ms.service: defender-endpoint
 author: siosulli
 ms.author: siosulli
 ms.localizationpriority: medium
-ms.date: 05/02/2024
-manager: deniseb
-audience: ITPro
-ms.collection: 
-- m365-security
-- tier2
-ms.topic: conceptual
-ms.subservice: onboard
----
-
----
-title: Onboard Windows servers to the Microsoft Defender for Endpoint service
-description: Onboard Windows servers so that they can send sensor data to the Microsoft Defender for Endpoint sensor.
-search.appverid: met150
-ms.service: defender-endpoint
-author: siosulli
-ms.author: siosulli
-ms.localizationpriority: medium
-ms.date: 05/02/2024
+ms.date: 05/15/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -56,8 +38,7 @@ This article describes how to onboard specific Windows servers to Microsoft Defe
 For guidance on how to download and use Windows Security Baselines for Windows servers, see [Windows Security Baselines](/windows/device-security/windows-security-baselines).
 
 > [!TIP]
-> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268615) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268522).
-
+> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268615), which helps you utilize essential tools and automated features such as attack surface reduction and next-generation protection. When signed in to the Microsoft 365 admin center, this guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268522).
 ## Windows Server onboarding overview
 
 You'll need to complete the following general steps to successfully onboard servers.
@@ -157,8 +138,7 @@ You'll need to download both the **installation** and **onboarding** packages fr
 > [!NOTE]
 > On Windows Server 2016, Microsoft Defender Antivirus must be installed as a feature (see [Switch to MDE](switch-to-mde-phase-2.md#are-you-using-windows-server-2012-r2-or-windows-server-2016)) first and fully updated before proceeding with the installation.
 > 
-> If you are running a non-Microsoft anti-malware solution ensure you add exclusions for Microsoft Defender Antivirus ([from this list of Microsoft Defender Processes on the Defender Processes tab](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx
-)) to the non-Microsoft solution before installation.  It is also recommended to add non-Microsoft security solutions to the Defender Antivirus exclusion list.
+> If you are running a non-Microsoft anti-malware solution ensure you add exclusions for Microsoft Defender Antivirus ([from this list of Microsoft Defender Processes on the Defender Processes tab](https://aka.ms/MDE-standard-urls)) to the non-Microsoft solution before installation.  It is also recommended to add non-Microsoft security solutions to the Defender Antivirus exclusion list.
 
 The **installation package** contains an MSI file that installs the Microsoft Defender for Endpoint agent.
 
