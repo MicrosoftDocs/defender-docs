@@ -193,7 +193,7 @@ Administrators can control the behavior of the Bluetooth service (Allowing adver
 
 To block copying of sensitive document to any Bluetooth Device use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
-## Device control samples and scenarios
+## Device control policy samples and scenarios
 
 Device control in Defender for Endpoint provides your security team with a robust access control model that enables a wide range of scenarios (see [Device control policies](device-control-policies.md)). We have put together a GitHub repository that contains samples and scenarios you can explore. See the following resources:
 
