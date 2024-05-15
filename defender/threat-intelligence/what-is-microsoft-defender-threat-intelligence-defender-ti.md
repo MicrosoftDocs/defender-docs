@@ -47,21 +47,21 @@ Selecting a featured article banner loads it full article content. The article's
 
 All articles (including the featured articles) are listed in the **Recent articles** section according to their publication date, with the most recent one on top.
 
-![TI Overview Articles](media/tiOverviewArticles.png)
+:::image type="content" source="/defender/threat-intelligence/media/intel-explorer-articles.png" alt-text="TI Overview Articles." lightbox="/defender/threat-intelligence/media/intel-explorer-articles.png":::
 
 The **Description** section of an article contains information about the profiled attack or threat actor. The content can be short—such as open-source intelligence (OSINT) bulletins—or long (for long-form reporting, especially when Microsoft augments the report with their own analysis). The longer descriptions might contain images, links to the underlying content, links to searches within Defender TI, attacker code snippets, and firewall rules to block the attack.
 
-![TI Overview Article Description](media/tiOverviewArticleDescription.png)
+:::image type="content" source="/defender/threat-intelligence/media/article-description.png" alt-text="TI Overview Article Description." lightbox="/defender/threat-intelligence/media/article-description.png":::
 
 The **Public indicators** section lists the known indicators related to the article. The links in these indicators take you to relevant Defender TI data or external sources.
 
-![TI Overview Article Public Indicators](media/tiOverviewArticlePublicIndicators.png)
+:::image type="content" source="/defender/threat-intelligence/media/article-public-indicators.png" alt-text="TI Overview Article Public Indicators." lightbox="/defender/threat-intelligence/media/article-public-indicators.png":::
 
 The **Defender TI indicators** section covers the indicators that Defender TI's own research team finds related to the articles. The links in these indicators also take you to relevant Defender TI data or external sources.
 
 These links also pivot into the relevant Defender TI data or the corresponding external source.
 
-![TI Overview Article Defender TI Indicators](media/tiOverviewArticleDefenderTiIndicators.png)
+:::image type="content" source="/defender/threat-intelligence/media/article-defender-ti-indicators.png" alt-text="TI Overview Article Defender TI Indicators." lightbox="/defender/threat-intelligence/media/article-defender-ti-indicators.png":::
 
 ### Vulnerability articles
 
@@ -122,7 +122,7 @@ Supported internet datasets include:
 
 Components and trackers are also observed from detection rules that are triggered based on the banner responses from port scans or SSL certificate details. Many of these data sets have various methods to sort, filter, and download data, making it easier to access information that might be associated with a specific indicator type or time in history.
 
-![ti Overview Data Sets](media/tiOverviewDataSets.png)
+:::image type="content" source="/defender/threat-intelligence/media/data-sets-01.png" alt-text="Sorting data sets screenshot." lightbox="/defender/threat-intelligence/media/data-sets-01.png":::
 
 Learn more:
 - [Sorting, filtering, and downloading data](sorting-filtering-and-downloading-data.md)

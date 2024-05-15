@@ -31,6 +31,12 @@ ms.date: 10/25/2023
 > [!IMPORTANT]
 > Devices that are configured for IPv6-only traffic are not supported.
 
+Depending on the operating system, the proxy to be used for Microsoft Defender for Endpoint can be configured automatically, typically by using autodiscovery or an autoconfig file, or statically specific to Defender for Endpoint services running on the device.
+
+- For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md) (this article)
+- For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md)
+- For macOS devices, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md#network-connections)
+
 The Defender for Endpoint sensor requires Microsoft Windows HTTP (WinHTTP) to report sensor data and communicate with the Defender for Endpoint service. The embedded Defender for Endpoint sensor runs in system context using the LocalSystem account.
 
 > [!TIP]
@@ -54,24 +60,16 @@ The WinHTTP configuration setting is independent of the Windows Internet (WinINe
   - WinHTTP configured using netsh command: Suitable only for desktops in a stable topology (for example: a desktop in a corporate network behind the same proxy)
 
 > [!NOTE]
-> Defender antivirus and EDR proxies can be set independently.  In the sections that follow, be aware of those distinctions.
+> Defender antivirus and EDR proxies can be set independently. In the sections that follow, be aware of those distinctions.
 
-## Configure the proxy server manually using a registry-based static proxy
+## Configure the proxy server manually using a registry-based static proxy setting
 
-Configure a registry-based static proxy for Defender for Endpoint detection and response (EDR) sensor to report diagnostic data and communicate with Defender for Endpoint services if a computer isn't permitted to connect to the Internet.
+Configure a registry-based static proxy for Defender for Endpoint detection and response (EDR) sensor to report diagnostic data and communicate with Defender for Endpoint services if a computer isn't permitted to directly connect to the Internet.
 
 > [!NOTE]
-> When using this option on Windows 10, or Windows 11, or Windows Server 2019, or Windows Server 2022, it is recommended to have the following (or later) build and cumulative update rollup:
->
-> - Windows 11
-> - Windows 10, version 1809 or Windows Server 2019, or Windows Server 2022  - <https://support.microsoft.com/kb/5001384>
-> - Windows 10, version 1909 - <https://support.microsoft.com/kb/4601380>
-> - Windows 10, version 2004 - <https://support.microsoft.com/kb/4601382>
-> - Windows 10, version 20H2 - <https://support.microsoft.com/kb/4601382>
->
-> These updates improve the connectivity and reliability of the CnC (Command and Control) channel.
+> Always ensure to apply the latest updates to ensure successful connectivity to Defender for Endpoint services. 
 
-The static proxy is configurable through group policy (GP), both the settings under group policy values should be configured to the proxy server for using EDR. The group policy is available in Administrative Templates.
+The static proxy settings are configurable through group policy (GP), both settings under group policy values should be configured. The group policy is available in Administrative Templates.
 
 - **Administrative Templates > Windows Components > Data Collection and Preview Builds > Configure Authenticated Proxy usage for the Connected User Experience and Telemetry Service**.
 
@@ -81,7 +79,7 @@ The static proxy is configurable through group policy (GP), both the settings un
 
 - **Administrative Templates > Windows Components > Data Collection and Preview Builds > Configure connected user experiences and telemetry**:
 
-  Configure the proxy.
+  Enter the proxy information.
 
   :::image type="content" source="media/atp-gpo-proxy2.png" alt-text="The Group Policy setting2 status pane" lightbox="media/atp-gpo-proxy2.png":::
 
@@ -108,7 +106,7 @@ The static proxy is configurable through group policy (GP), both the settings un
 
 ## Configure a static proxy for Microsoft Defender Antivirus
 
-Microsoft Defender Antivirus [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) provides near-instant, automated protection against new and emerging threats. Note, the connectivity is required for [custom indicators](manage-indicators.md) when Defender Antivirus is your active anti-malware solution. For [EDR in block mode](edr-in-block-mode.md) has primary anti-malware solution when using a non-Microsoft solution.
+Microsoft Defender Antivirus [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) provides near-instant, automated protection against new and emerging threats. Note, the connectivity is required for [custom indicators](manage-indicators.md) when Defender Antivirus is your active anti-malware solution as well as [EDR in block mode](edr-in-block-mode.md) which provides a fallback option when a non-Microsoft solution did not perform a block.
 
 Configure the static proxy using the Group Policy available in Administrative Templates:
 
@@ -174,6 +172,17 @@ netsh winhttp reset proxy
 ```
 
 See [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/technologies/netsh/netsh-contexts) to learn more.
+
+### Windows devices running the previous MMA-based solution
+Devices running on Windows 7, Windows 8.1, Windows Server 2008 R2, and servers not upgraded to Unified Agent leverage the Microsoft Monitoring Agent / also known as Log Analytics Agent to connect to the Defender for Endpoint service.
+
+You can either leverage a system-wide proxy setting, configure the agent to connect through a proxy or a log analytics gateway.
+
+- Configure the agent to use a proxy: [Proxy configuration](/azure/azure-monitor/agents/log-analytics-agent#proxy-configuration)
+
+- Set up Azure Log Analytics (formerly known as OMS Gateway) to act as proxy or hub: [Azure Log Analytics Agent](/azure/azure-monitor/platform/gateway#download-the-log-analytics-gateway)
+
+[Onboard previous versions of Windows](onboard-downlevel.md)
 
 ## Next step
 

@@ -48,15 +48,16 @@ The following table lists the available demonstrations alphabetically, with thei
 |:--|:---|:---|:---|
 | 1 |[Endpoint Detection and Response (EDR) detections](edr-detection.md)| EDR |Confirm that EDR is detecting cyber threats such as malware.|
 | 2 |[Validate antimalware](validate-antimalware.md)| NGP |Confirm that antivirus/antimalware is detecting and blocking malware. |
-| 3 |[Potentially unwanted applications (PUA) demonstration](defender-endpoint-demonstration-potentially-unwanted-applications.md)| NGP |Confirm that potentially unwanted applications (PUAs) are being blocked on your network by downloading a fake (safe) PUA file. |
-| 4 |[Cloud-delivered protection demonstration](defender-endpoint-demonstration-cloud-delivered-protection.md)| NGP |Confirm that cloud-delivered protection is working properly on your computer. |
-| 5 |[App reputation demonstration](defender-endpoint-demonstration-app-reputation.md)| NGP | Navigate to the app reputation page to see the demonstration scenario using Microsoft Edge.|
-| 6 |[URL reputation demonstrations](defender-endpoint-demonstration-smartscreen-url-reputation.md)| NGP | Navigate to the URL Reputation page to see the demonstration scenarios using Microsoft Edge. |
-| 7 | [Network protection demonstrations](defender-endpoint-demonstration-network-protection.md)| ASR | Navigate to a suspicious URL to trigger network protection. |
-| 8 | [Attack surface reduction rules (ASR rules) demonstrations](defender-endpoint-demonstration-attack-surface-reduction-rules.md)| ASR | Download sample files to trigger each ASR rule. |
-| 9 | [Exploit protection (EP) demonstrations](defender-endpoint-demonstration-exploit-protection.md) | ASR | Apply custom exploit protection settings. |
-| 10 | [Controlled folder access (CFA) demonstration (block script)](defender-endpoint-demonstration-controlled-folder-access-test-tool.md)| ASR | Download the CFA test tool. |
-| 11 | [Controlled folder access (CFA) demonstrations (block ransomware)](defender-endpoint-demonstration-controlled-folder-access.md)|  ASR| Download and execute a sample file to trigger CFA ransomware protection.|
+| 3 |[Behavior Monitoring demonstration](demonstration-behavior-monitoring.md)| NGP |Confirm that behavior monitoring is detecting and blocking malware. |
+| 4 |[Potentially unwanted applications (PUA) demonstration](defender-endpoint-demonstration-potentially-unwanted-applications.md)| NGP |Confirm that potentially unwanted applications (PUAs) are being blocked on your network by downloading a fake (safe) PUA file. |
+| 5 |[Cloud-delivered protection demonstration](defender-endpoint-demonstration-cloud-delivered-protection.md)| NGP |Confirm that cloud-delivered protection is working properly on your computer. |
+| 6 |[App reputation demonstration](defender-endpoint-demonstration-app-reputation.md)| NGP | Navigate to the app reputation page to see the demonstration scenario using Microsoft Edge.|
+| 7 |[URL reputation demonstrations](defender-endpoint-demonstration-smartscreen-url-reputation.md)| NGP | Navigate to the URL Reputation page to see the demonstration scenarios using Microsoft Edge. |
+| 8 | [Network protection demonstrations](defender-endpoint-demonstration-network-protection.md)| ASR | Navigate to a suspicious URL to trigger network protection. |
+| 9 | [Attack surface reduction rules (ASR rules) demonstrations](defender-endpoint-demonstration-attack-surface-reduction-rules.md)| ASR | Download sample files to trigger each ASR rule. |
+| 10 | [Exploit protection (EP) demonstrations](defender-endpoint-demonstration-exploit-protection.md) | ASR | Apply custom exploit protection settings. |
+| 11 | [Controlled folder access (CFA) demonstration (block script)](defender-endpoint-demonstration-controlled-folder-access-test-tool.md)| ASR | Download the CFA test tool. |
+| 12 | [Controlled folder access (CFA) demonstrations (block ransomware)](defender-endpoint-demonstration-controlled-folder-access.md)|  ASR| Download and execute a sample file to trigger CFA ransomware protection.|
 ## See also
 
 [Attack surface protection \(ASR\) overview](overview-attack-surface-reduction.md)

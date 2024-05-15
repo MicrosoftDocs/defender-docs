@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender Threat Intelligence (Defender TI) Reputation Scoring
+title: Microsoft Defender Threat Intelligence (Defender TI) reputation scoring
 description: In this overview article, learn about the Microsoft Defender Threat Intelligence (Defender TI)'s reputation scoring feature.
 author: alexroland24
 ms.author: aroland
@@ -11,6 +11,9 @@ ms.custom: template-overview
 ---
 
 # Reputation scoring
+
+>[!IMPORTANT]
+> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) will be retired and will no longer be accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
 Microsoft Defender Threat Intelligence (Defender TI) provides proprietary reputation scores for any Host, Domain, or IP Address. Whether validating the reputation of a known or unknown entity, this score helps users quickly understand any detected ties to malicious or suspicious infrastructure. The platform provides quick information about the activity of these entities (for example, First and Last Seen timestamps, ASN, associated infrastructure) and a list of rules that affect the reputation score when applicable.
 
@@ -26,7 +29,7 @@ Reputation Scores are determined by a series of algorithms designed to quickly q
 
 ## Detection methods
 
-Reputation Scores are determined by a series of factors, including known associations to blocklisted entities and a series of machine learning rules used to assess risk.
+A series of factors determine reputation scores, including known associations to blocklisted entities and a series of machine learning rules used to assess risk.
 
 ## Scoring brackets
 
@@ -44,7 +47,7 @@ Reputation Scores are displayed as a numerical score with a range from 0 to 100.
 
 Reputation scores are based on many factors that an analyst might reference to determine the relative quality of a domain or address. These factors are reflected in the machine learning rules that comprise the reputation scores. For example, `.xyz` or `.cc` top-level domains (TLDs) are generally more suspicious than `.com` or `.org` TLDs. An ASN (Autonomous System Number) hosted by a low-cost or free hosting provider is more likely to be associated with malicious activity, as would a self-signed TLS certificate. This reputation model was developed by looking at relative occurrences of these features among both malicious and benign indicators to score the overall reputation of an entity.
 
-Refer to the following table for examples of rules used to determine the suspiciousness of a host, domain, or IP address.
+Refer to the following table for examples of rules used to determine if a host, domain, or IP address is suspicious.
 
 > [!TIP]
 > This list isn't comprehensive and is constantly changing; our detection logic and consequent capabilities are dynamic as they reflect the evolving threat landscape. For this reason, we don't publish a comprehensive list of the machine learning rules used to assess an entity's reputation.
@@ -72,8 +75,8 @@ Defender TI's reputation score, classification, rules, and description of rules 
 
 ### Intelligence gathering
 
-Any associated articles can be shared with the analyst's cyber threat intelligence team, so they have a clearer understanding of who might be targeting their organization.
+Any associated articles can be shared with the analyst's threat intelligence team, so they have a clearer understanding of who might be targeting their organization.
 
-## Next steps
+### See also
 
-For more information, see [Analyst insights](analyst-insights.md).
+- [Analyst insights](analyst-insights.md)
