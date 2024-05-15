@@ -150,7 +150,8 @@ This query returns the name of the policy, the access requested, and the verdict
 > Device control for Microsoft Defender for Endpoint on macOS can control access to iOS devices, portable devices such as cameras, and removable media such as USB devices. See [Device Control for macOS](mac-device-control-overview.md).
 
 ### Endpoint DLP
-To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](/purview/endpoint-dlp-learn-about) 
+
+To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
 
 ## **[Controlling access to BitLocker encrypted removable media (Preview)](#tab/Bitlocker)**
@@ -181,7 +182,7 @@ Device control can also restrict the types of files that are printed. Device con
 
 ### Endpoint DLP
 
-To block printing of documents based on information classification use [Endpoint DLP](/purview/endpoint-dlp-learn-about) 
+To block printing of documents based on information classification use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
 ## [**Bluetooth**](#tab/Bluetooth)
 
@@ -193,7 +194,7 @@ Administrators can control the behavior of the Bluetooth service (Allowing adver
 
 ### Endpoint DLP
 
-To block copying of sensitive document to any Bluetooth Device use [Endpoint DLP](/purview/endpoint-dlp-learn-about) 
+To block copying of sensitive document to any Bluetooth Device use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
 ---
 
@@ -212,10 +213,10 @@ If you're new to device control, see [Device control walkthroughs](device-contro
 Device control in Defender for Endpoint can be applied to devices running Windows 10 or Windows 11 that have the anti-malware client version `4.18.2103.3` or later. (Currently, servers are not supported.)
 
 - `4.18.2104` or later: Add `SerialNumberId`, `VID_PID`, filepath-based GPO support, and `ComputerSid`
-- `4.18.2105` or later: Add Wildcard support for `HardwareId/DeviceId/InstancePathId/FriendlyNameId/SerialNumberId`, the combination of specific user on specific machine, removable SSD (a SanDisk Extreme SSD)/USB Attached SCSI (UAS) support
-- `4.18.2107` or later: Add Windows Portable Device (WPD) support (for mobile devices, such as tablets); add `AccountName` into advanced hunting
-- `4.18.2205` or later: Expand the default enforcement to Printer. If you set it to Deny, it blocks Printer as well, so if you only want to manage storage, make sure to create a custom policy to allow Printer
-- `4.18.2207` or later: Add File support; the common use case can be: block people from Read/Write/Execute access specific file on removable storage. Add Network and VPN Connection support; the common use case can be: block people from access removable storage when the machine isn't connecting corporate network.
+- `4.18.2105` or later: Add Wildcard support for `HardwareId/DeviceId/InstancePathId/FriendlyNameId/SerialNumberId`; the combination of specific users on specific machines, removable SSD (a SanDisk Extreme SSD)/USB Attached SCSI (UAS) support.
+- `4.18.2107` or later: Add Windows Portable Device (WPD) support (for mobile devices, such as tablets); add `AccountName` into advanced hunting.
+- `4.18.2205` or later: Expand the default enforcement to Printer. If you set it to Deny, it blocks Printer as well, so if you only want to manage storage, make sure to create a custom policy to allow Printer.
+- `4.18.2207` or later: Add File support; the common use case can be, "block people from Read/Write/Execute access specific file on removable storage." Add Network and VPN Connection support; the common use case can be, "block people from access removable storage when the machine isn't connecting corporate network."
 
 For Mac, see [Device Control for macOS](mac-device-control-overview.md).
 
