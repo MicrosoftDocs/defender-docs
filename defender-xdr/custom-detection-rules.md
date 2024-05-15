@@ -149,6 +149,7 @@ You can run a query continuously as long as:
 - The query references one table only.
 - The query uses an operator from the list of supported KQL operators. **[Supported KQL features](/azure/azure-monitor/essentials/data-collection-transformations-structure#supported-kql-features)**
 - The query doesn't use joins, unions, or the `externaldata` operator.
+- The query doesn't include any comments line/information.
 
 ###### Tables that support Continuous (NRT) frequency
 
