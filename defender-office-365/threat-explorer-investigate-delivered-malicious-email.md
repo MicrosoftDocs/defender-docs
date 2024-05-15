@@ -71,7 +71,7 @@ This article explains how to use Threat Explorer and Real-time detections to fin
 
 3. Select the date/time range. The default is yesterday and today.
 
-   :::image type="content" source="/defender/media/te-rtd-date-filter.png" alt-text="Screenshot of the date filter used in Threat Explorer and Real-time detections in the Defender portal." lightbox="/defender/media/te-rtd-date-filter.png":::
+   :::image type="content" source="media/te-rtd-date-filter.png" alt-text="Screenshot of the date filter used in Threat Explorer and Real-time detections in the Defender portal." lightbox="media/te-rtd-date-filter.png":::
 
 4. Create one or more filter conditions using some or all of the following targeted properties and values. For complete instructions, see [Property filters in Threat Explorer and Real-time detections](threat-explorer-real-time-detections-about.md#property-filters-in-threat-explorer-and-real-time-detections). For example:
 
@@ -91,7 +91,7 @@ This article explains how to use Threat Explorer and Real-time detections to fin
      - **Unknown**: For example, after delivery, an Inbox rule moved the message to a default folder (for example, Draft or Archive) instead of to the Inbox or Junk Email folder.
 
    - **Last delivery location**: Where email ended-up after any automatic or manual post-delivery actions by the system or admins. The same values are available from **Original delivery location**.
-  
+
    - **Directionality**: Valid values are:
      - **Inbound**
      - **Intra-org**
@@ -162,7 +162,7 @@ The **Email** tab (view) in the details area of the **[All email](threat-explore
 
 For example, Use the **Delivery Action**, **Original delivery location**, and **Last delivery location** columns in the **Email** tab (view) to get a complete picture of where the affected messages went. The values were explained in Step 4.
 
-Use :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to selectively export up to 200,000 filtered or unfiltered results to a CSV file.
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to selectively export up to 200,000 filtered or unfiltered results to a CSV file.
 
 ## Remediate malicious email that was delivered
 

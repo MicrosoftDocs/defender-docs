@@ -31,7 +31,7 @@ For more information about what Microsoft does to your submissions, [check this 
 
 In Microsoft 365 organizations with Exchange Online mailboxes, admins can use the **Submissions** page in the Microsoft Defender portal to submit messages, URLs, and attachments to Microsoft for analysis. There are two basic types of admin submissions:
 
-- **Admin-originated submissions**: Admins identify and report messages, attachments, or URLs (entities) by selecting :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis** from the tabs on the **Submissions** page as described in the [Admin-originated submissions](#admin-originated-submissions) section.
+- **Admin-originated submissions**: Admins identify and report messages, attachments, or URLs (entities) by selecting :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis** from the tabs on the **Submissions** page as described in the [Admin-originated submissions](#admin-originated-submissions) section.
 
   After the admin reports the entity, an entry appears on the corresponding tab on the **Submissions** page (anywhere except the **User reported** tab).
 
@@ -62,7 +62,7 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
 - You open the Microsoft Defender portal at <https://security.microsoft.com/>. To go directly to the **Submissions** page, use <https://security.microsoft.com/reportsubmission>.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Security operations/Security data/Response (manage)** or **Security operations/Security data/Security data basics (read)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Security data/Response (manage)** or **Security operations/Security data/Security data basics (read)**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Security Administrator** or **Security Reader** role groups.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Security Administrator** or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
@@ -80,7 +80,7 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
 ## Admin-originated submissions
 
 > [!TIP]
-> The tab where you select select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis** doesn't particularly matter, as long as you set **Select the submission type** to the correct value.
+> The tab where you select select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis** doesn't particularly matter, as long as you set **Select the submission type** to the correct value.
 
 ### Report questionable email to Microsoft
 
@@ -88,7 +88,7 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
 
 2. On the **Submissions** page, verify that the **Emails** tab is selected.
 
-3. On the **Emails** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**.
+3. On the **Emails** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**.
 
 4. On the first page of the **Submit to Microsoft for analysis** flyout that opens, enter the following information:
 
@@ -112,7 +112,7 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
 
        Select **Next**.
 
-       :::image type="content" source="/defender/media/admin-submission-email-block.png" alt-text="Submit a false negative (bad) email to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="/defender/media/admin-submission-email-block.png":::
+       :::image type="content" source="media/admin-submission-email-block.png" alt-text="Submit a false negative (bad) email to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="media/admin-submission-email-block.png":::
 
 5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, do one of the following steps:
    - Select **Submit**.
@@ -134,7 +134,7 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
 
      When you're finished on the second page of the **Submit to Microsoft for analysis** flyout, select **Submit**.
 
-     :::image type="content" source="/defender/media/admin-submission-email-block-page-2.png" alt-text="Choose whether to create a corresponding block entry for the sender domain or email address in the Tenant Allow/Block List." lightbox="/defender/media/admin-submission-email-block-page-2.png":::
+     :::image type="content" source="media/admin-submission-email-block-page-2.png" alt-text="Choose whether to create a corresponding block entry for the sender domain or email address in the Tenant Allow/Block List." lightbox="media/admin-submission-email-block-page-2.png":::
 
 6. Select **Done**.
 
@@ -146,13 +146,13 @@ After a few moments, the block entry is available on the **Domains & addresses**
 
 2. On the **Submissions** page, select the **Email attachments** tab.
 
-3. On the **Email attachments** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**.
+3. On the **Email attachments** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**.
 
 4. On the first page of the **Submit to Microsoft for analysis** flyout that opens, enter the following information:
 
    - **Select the submission type**: Verify the value **Email attachment** is selected.
 
-   - **File**: Select :::image type="icon" source="/defender/media/m365-cc-sc-import-icon.png" border="false"::: **Browse files** to find and select the file to submit.
+   - **File**: Select :::image type="icon" source="media/m365-cc-sc-import-icon.png" border="false"::: **Browse files** to find and select the file to submit.
 
    - **Why are you submitting this email attachment to Microsoft?**: Select one of the following values:
      - **It appears suspicious**: Select this value if you're unsure and you want a verdict from Microsoft, select **Submit**, and then go to Step 6.
@@ -165,7 +165,7 @@ After a few moments, the block entry is available on the **Domains & addresses**
 
        Select **Next**.
 
-       :::image type="content" source="/defender/media/admin-submission-file-block.png" alt-text="Submit a false negative (bad) email attachment to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="/defender/media/admin-submission-file-block.png":::
+       :::image type="content" source="media/admin-submission-file-block.png" alt-text="Submit a false negative (bad) email attachment to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="media/admin-submission-file-block.png":::
 
 5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, do one of the following steps:
    - Select **Submit**.
@@ -186,7 +186,7 @@ After a few moments, the block entry is available on the **Domains & addresses**
 
      When you're finished in the **Submit to Microsoft for analysis** flyout, select **Submit**.
 
-   :::image type="content" source="/defender/media/admin-submission-file-block-page-2.png" alt-text="Choose whether to create a corresponding block entry for the file in the Tenant Allow/Block List." lightbox="/defender/media/admin-submission-file-block-page-2.png":::
+   :::image type="content" source="media/admin-submission-file-block-page-2.png" alt-text="Choose whether to create a corresponding block entry for the file in the Tenant Allow/Block List." lightbox="media/admin-submission-file-block-page-2.png":::
 
 6. Select **Done**.
 
@@ -198,7 +198,7 @@ After a few moments, the block entry is available on the **Files** tab on the **
 
 2. On the **Submissions** page, select the **URLs** tab.
 
-3. On the **URLs** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**.
+3. On the **URLs** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**.
 
 4. In the **Submit to Microsoft for analysis** flyout that opens, enter the following information:
 
@@ -217,7 +217,7 @@ After a few moments, the block entry is available on the **Files** tab on the **
 
        Select **Next**.
 
-       :::image type="content" source="/defender/media/admin-submission-url-block.png" alt-text="Submit a false negative (bad) URL to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="/defender/media/admin-submission-url-block.png":::
+       :::image type="content" source="media/admin-submission-url-block.png" alt-text="Submit a false negative (bad) URL to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="media/admin-submission-url-block.png":::
 
 5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, do one of the following steps:
    - Select **Submit**.
@@ -238,7 +238,7 @@ After a few moments, the block entry is available on the **Files** tab on the **
 
      When you're finished in the **Submit to Microsoft for analysis** flyout, select **Submit**.
 
-   :::image type="content" source="/defender/media/admin-submission-url-block-page-2.png" alt-text="Choose whether to create a corresponding block entry for the URL in the Tenant Allow/Block List." lightbox="/defender/media/admin-submission-url-block-page-2.png":::
+   :::image type="content" source="media/admin-submission-url-block-page-2.png" alt-text="Choose whether to create a corresponding block entry for the URL in the Tenant Allow/Block List." lightbox="media/admin-submission-url-block-page-2.png":::
 
 6. Select **Done**.
 
@@ -250,7 +250,7 @@ After a few moments, the block entry is available on the **URL** tab on the **Te
 
 2. On the **Submissions** page, verify that the **Emails** tab is selected.
 
-3. On the **Emails** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**.
+3. On the **Emails** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**.
 
 4. In the first page of the **Submit to Microsoft for analysis** flyout that opens, enter the following information:
 
@@ -269,7 +269,7 @@ After a few moments, the block entry is available on the **URL** tab on the **Te
 
      - **I've confirmed it's clean**: In all other cases, select this value after you've already determined the message verdict as clean. Select **Next**.
 
-   :::image type="content" source="/defender/media/admin-submission-email-allow.png" alt-text="Submit a false positive (good) email to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="/defender/media/admin-submission-email-allow.png":::
+   :::image type="content" source="media/admin-submission-email-allow.png" alt-text="Submit a false positive (good) email to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="media/admin-submission-email-allow.png":::
 
 5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, do one of the following steps:
    - Select **Submit**.
@@ -292,7 +292,7 @@ After a few moments, the block entry is available on the **URL** tab on the **Te
 
      When you're finished on the second page of the **Submit to Microsoft for analysis** flyout, select **Submit**.
 
-     :::image type="content" source="/defender/media/admin-submission-email-allow-page-2.png" alt-text="Choose whether to create a corresponding allow entry for the elements of the message in the Tenant Allow/Block List." lightbox="/defender/media/admin-submission-email-block-page-2.png":::
+     :::image type="content" source="media/admin-submission-email-allow-page-2.png" alt-text="Choose whether to create a corresponding allow entry for the elements of the message in the Tenant Allow/Block List." lightbox="media/admin-submission-email-block-page-2.png":::
 
 6. Select **Done**.
 
@@ -314,7 +314,7 @@ After a few moments, the associated allow entries appear on the **Domains & addr
 
 2. On the **Submissions** page, select the **Email attachments** tab.
 
-3. On the **Email attachments** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**.
+3. On the **Email attachments** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**.
 
 4. On the **Submit to Microsoft for analysis** flyout that opens, enter the following information:
 
@@ -329,7 +329,7 @@ After a few moments, the associated allow entries appear on the **Domains & addr
 
      - **I've confirmed it's clean**: Select this value if you're sure that the item is clean, and then select **Next**.
 
-   :::image type="content" source="/defender/media/admin-submission-file-allow.png" alt-text="Submit a false positive (good) email attachment to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="/defender/media/admin-submission-file-allow.png":::
+   :::image type="content" source="media/admin-submission-file-allow.png" alt-text="Submit a false positive (good) email attachment to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="media/admin-submission-file-allow.png":::
 
 5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, do one of the following steps:
    - Select **Submit**.
@@ -349,7 +349,7 @@ After a few moments, the associated allow entries appear on the **Domains & addr
 
      When you're finished on the second page of the **Submit to Microsoft for analysis** flyout, select **Submit**.
 
-   :::image type="content" source="/defender/media/admin-submission-file-allow-page-2.png" alt-text="Choose whether to create a corresponding allow entry for the file in the Tenant Allow/Block List." lightbox="/defender/media/admin-submission-file-allow-page-2.png":::
+   :::image type="content" source="media/admin-submission-file-allow-page-2.png" alt-text="Choose whether to create a corresponding allow entry for the file in the Tenant Allow/Block List." lightbox="media/admin-submission-file-allow-page-2.png":::
 
 6. Select **Done**.
 
@@ -369,7 +369,7 @@ For URLs reported as false positives, we allow subsequent messages that contain 
 
 2. On the **Submissions** page, select the **URLs** tab
 
-3. On the **URLs** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**.
+3. On the **URLs** tab, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis**.
 
 4. In the **Submit to Microsoft for analysis** flyout that opens, enter the following information:
 
@@ -384,7 +384,7 @@ For URLs reported as false positives, we allow subsequent messages that contain 
 
      - **I've confirmed it's clean**: Select this value if you're sure that the item is clean, and then select **Next**.
 
-       :::image type="content" source="/defender/media/admin-submission-url-allow.png" alt-text="Submit a false positive (good) URL to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="/defender/media/admin-submission-url-allow.png":::
+       :::image type="content" source="media/admin-submission-url-allow.png" alt-text="Submit a false positive (good) URL to Microsoft for analysis on the Submissions page in the Defender portal." lightbox="media/admin-submission-url-allow.png":::
 
 5. On the second page of the **Submit to Microsoft for analysis** flyout that opens, do one of the following steps:
    - Select **Submit**.
@@ -404,7 +404,7 @@ For URLs reported as false positives, we allow subsequent messages that contain 
 
      When you're finished on the second page of the **Submit to Microsoft for analysis** flyout, select **Submit**.
 
-   :::image type="content" source="/defender/media/admin-submission-url-allow-page-2.png" alt-text="Choose whether to create a corresponding allow entry for the URL in the Tenant Allow/Block List." lightbox="/defender/media/admin-submission-url-allow-page-2.png":::
+   :::image type="content" source="media/admin-submission-url-allow-page-2.png" alt-text="Choose whether to create a corresponding allow entry for the URL in the Tenant Allow/Block List." lightbox="media/admin-submission-url-allow-page-2.png":::
 
 6. Select **Done**.
 
@@ -436,9 +436,9 @@ On the **Emails** tab, you can quickly filter the view by selecting one of the a
 - **Pending**
 - **Completed**
 
-:::image type="content" source="/defender/media/submissions-quick-filters.png" alt-text="The quick filters available for admin submissions on the Emails tab of the Submissions page." lightbox="/defender/media/submissions-quick-filters.png":::
+:::image type="content" source="media/submissions-quick-filters.png" alt-text="The quick filters available for admin submissions on the Emails tab of the Submissions page." lightbox="media/submissions-quick-filters.png":::
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
 
 - **Submission name**<sup>\*</sup>
 - **Sender**<sup>\*</sup>
@@ -460,7 +460,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Tags**<sup>\*</sup>: For more information about user tags, see [User tags](user-tags-about.md).
 - **Action**
 
-To group the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
+To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
 
 - **Reason**
 - **Status**
@@ -469,7 +469,7 @@ To group the entries, select :::image type="icon" source="/defender/media/m365-c
 
 To ungroup the entries, select **None**.
 
-To filter the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Date submitted**: **Start date** and **End date** values.
 - **Submission ID**: A GUID value that's assigned to every submission.
@@ -488,9 +488,9 @@ To filter the entries, select :::image type="icon" source="/defender/media/m365-
 - **Status**: **Pending** and **Completed**.
 - **Tags**: **All** or select [user tags](user-tags-about.md) from the dropdown list.
 
-When you're finished on the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished on the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-Use :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of entries to a CSV file.
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of entries to a CSV file.
 
 #### View email admin submission details
 
@@ -503,7 +503,7 @@ At the top of the details flyout, the following message information is available
 - In Defender for Office 365, the actions that are available at the top of the flyout are described in the [Actions for admin submissions in Defender for Office 365](#actions-for-admin-submissions-in-defender-for-office-365) section.
 
 > [!TIP]
-> To see details about other submissions without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other submissions without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 The next sections in the details flyout are related to email message submissions:
 
@@ -541,7 +541,7 @@ In the Microsoft Defender portal at <https://security.microsoft.com>, go to the 
 
 On the **Submissions** page, select the **Teams messages** tab.
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
 
 - **Submission name**<sup>\*</sup>
 - **Sender**<sup>\*</sup>
@@ -557,7 +557,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Phish simulation**
 - **Tags**<sup>\*</sup>: For more information about user tags, see [User tags](user-tags-about.md).
 
-To group the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
+To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
 
 - **Reason**
 - **Status**
@@ -566,7 +566,7 @@ To group the entries, select :::image type="icon" source="/defender/media/m365-c
 
 To ungroup the entries, select **None**.
 
-To filter the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Date submitted**: **Start date** and **End date**.
 - **Submission ID**: A GUID value that's assigned to every submission.
@@ -584,9 +584,9 @@ To filter the entries, select :::image type="icon" source="/defender/media/m365-
 - **Status**: **Pending** and **Completed**.
 - **Tags**: **All** or select [user tags](user-tags-about.md) from the dropdown list.
 
-When you're finished on the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished on the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-Use :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of entries to a CSV file.
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of entries to a CSV file.
 
 #### View Teams admin submission details
 
@@ -597,10 +597,10 @@ At the top of the details flyout, the following message information is available
 - The title of the flyout is the subject or the first 100 characters of the Teams message.
 - The current message verdict.
 - The number of links in the message.
-- :::image type="icon" source="/defender/media/m365-cc-sc-view-alert-icon.png" border="false"::: **View alert**. An alert is triggered when an admin submission is created or updated. Selecting this action takes you to the details of the alert.
+- :::image type="icon" source="media/m365-cc-sc-view-alert-icon.png" border="false"::: **View alert**. An alert is triggered when an admin submission is created or updated. Selecting this action takes you to the details of the alert.
 
 > [!TIP]
-> To see details about other submissions without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other submissions without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 The next sections in the details flyout are related to Teams submissions:
 
@@ -635,9 +635,9 @@ On the **Email attachments** tab, you can quickly filter the view by selecting o
 - **Pending**
 - **Completed**
 
-:::image type="content" source="/defender/media/submissions-quick-filters.png" alt-text="The quick filters available for admin submissions on the Email attachments tab of the Submissions page." lightbox="/defender/media/submissions-quick-filters.png":::
+:::image type="content" source="media/submissions-quick-filters.png" alt-text="The quick filters available for admin submissions on the Email attachments tab of the Submissions page." lightbox="media/submissions-quick-filters.png":::
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
 
 - **Attachment filename**<sup>\*</sup>
 - **Date submitted**<sup>\*</sup>
@@ -653,7 +653,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Tags**<sup>\*</sup>: For more information about user tags, see [User tags](user-tags-about.md).
 - **Action**
 
-To group the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
+To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
 
 - **Reason**
 - **Status**
@@ -662,7 +662,7 @@ To group the entries, select :::image type="icon" source="/defender/media/m365-c
 
 To ungroup the entries, select **None**.
 
-To filter the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Date submitted**: **Start date** and **End date**.
 - **Submission ID**: A GUID value that's assigned to every submission.
@@ -677,9 +677,9 @@ To filter the entries, select :::image type="icon" source="/defender/media/m365-
 - **Status**: **Pending** and **Completed**.
 - **Tags**: **All** or select [user tags](user-tags-about.md) from the dropdown list.
 
-When you're finished on the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished on the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-Use :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of entries to a CSV file.
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of entries to a CSV file.
 
 #### View email attachment admin submission details
 
@@ -689,10 +689,10 @@ At the top of the details flyout, the following message information is available
 
 - The title of the flyout is the filename of the attachment.
 - The **Status** and **Result** values of the submission.
-- :::image type="icon" source="/defender/media/m365-cc-sc-view-alert-icon.png" border="false"::: **View alert**. In Defender for Office 365, an alert is triggered when an admin submission is created or updated. Selecting this action takes you to the details of the alert.
+- :::image type="icon" source="media/m365-cc-sc-view-alert-icon.png" border="false"::: **View alert**. In Defender for Office 365, an alert is triggered when an admin submission is created or updated. Selecting this action takes you to the details of the alert.
 
 > [!TIP]
-> To see details about other submissions without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other submissions without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 The next sections in the details flyout are related to email attachment submissions:
 
@@ -725,9 +725,9 @@ On the **URLs** tab, you can quickly filter the view by selecting one of the ava
 - **Pending**
 - **Completed**
 
-:::image type="content" source="/defender/media/submissions-quick-filters.png" alt-text="The quick filters available for admin submissions on the URLs tab of the Submissions page." lightbox="/defender/media/submissions-quick-filters.png":::
+:::image type="content" source="media/submissions-quick-filters.png" alt-text="The quick filters available for admin submissions on the URLs tab of the Submissions page." lightbox="media/submissions-quick-filters.png":::
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
 
 - **URL**<sup>\*</sup>
 - **Date submitted**<sup>\*</sup>
@@ -743,7 +743,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Tags**<sup>\*</sup>: For more information about user tags, see [User tags](user-tags-about.md).
 - **Action**
 
-To group the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
+To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
 
 - **Reason**
 - **Status**
@@ -752,7 +752,7 @@ To group the entries, select :::image type="icon" source="/defender/media/m365-c
 
 To ungroup the entries, select **None**.
 
-To filter the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Date submitted**: **Start date** and **End date**.
 - **Submission ID**: A GUID value that's assigned to every submission.
@@ -767,9 +767,9 @@ To filter the entries, select :::image type="icon" source="/defender/media/m365-
 - **Status**: **Pending** and **Completed**.
 - **Tags**: **All** or select [user tags](user-tags-about.md) from the dropdown list.
 
-When you're finished on the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished on the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-Use :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of entries to a CSV file.
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of entries to a CSV file.
 
 #### View URL admin submission details
 
@@ -779,10 +779,10 @@ At the top of the details flyout, the following message information is available
 
 - The title of the flyout is the domain of the URL.
 - The **Status** and **Result** values of the submission.
-- :::image type="icon" source="/defender/media/m365-cc-sc-view-alert-icon.png" border="false"::: **View alert**. In Defender for Office 365, an alert is triggered when an admin submission is created or updated. Selecting this action takes you to the details of the alert.
+- :::image type="icon" source="media/m365-cc-sc-view-alert-icon.png" border="false"::: **View alert**. In Defender for Office 365, an alert is triggered when an admin submission is created or updated. Selecting this action takes you to the details of the alert.
 
 > [!TIP]
-> To see details about other submissions without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other submissions without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 The remaining sections in the details flyout are related to URL submissions:
 
@@ -821,11 +821,11 @@ If an override or policy configuration was found, the result should be available
 
 In organizations with Microsoft Defender for Office 365 (add-on licenses or included in subscriptions like Microsoft 365 E5 or Microsoft 365 Business Premium), the following actions are available for admin submissions in the details flyout that opens after you select an entry from the list by clicking anywhere in the row other than the check box:
 
-- :::image type="icon" source="/defender/media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: Available in the details flyout of entries on the **Emails** tab only. For more information, see [What's on the Email entity page](mdo-email-entity-page.md#whats-on-the-email-entity-page).
+- :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: Available in the details flyout of entries on the **Emails** tab only. For more information, see [What's on the Email entity page](mdo-email-entity-page.md#whats-on-the-email-entity-page).
 
-- :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take actions**: Available in the details flyout of entries on the **Emails** tab only. This action starts the same Action wizard that's available on the Email entity page. For more information, see [Actions on the Email entity page](mdo-email-entity-page.md#actions-on-the-email-entity-page).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take actions**: Available in the details flyout of entries on the **Emails** tab only. This action starts the same Action wizard that's available on the Email entity page. For more information, see [Actions on the Email entity page](mdo-email-entity-page.md#actions-on-the-email-entity-page).
 
-- :::image type="icon" source="/defender/media/m365-cc-sc-view-alert-icon.png" border="false"::: **View alert**. An alert is triggered when an admin submission is created or updated. Selecting this action takes you to the details of the alert.
+- :::image type="icon" source="media/m365-cc-sc-view-alert-icon.png" border="false"::: **View alert**. An alert is triggered when an admin submission is created or updated. Selecting this action takes you to the details of the alert.
 
 - In the **Result details** section, the following links for [Threat Explorer](threat-explorer-real-time-detections-about.md) might also be available, depending on the status and result of the reported item:
   - **View this message in Explorer**: **Emails** tab only.
@@ -867,9 +867,9 @@ On the **User reported** tab, you can quickly filter the view by selecting one o
 - **No threats**
 - **Simulations**
 
-:::image type="content" source="/defender/media/submissions-user-reported-quick-filters.png" alt-text="Quick filters on the User reported tab on the Submissions page." lightbox="/defender/media/submissions-user-reported-quick-filters.png":::
+:::image type="content" source="media/submissions-user-reported-quick-filters.png" alt-text="Quick filters on the User reported tab on the Submissions page." lightbox="media/submissions-user-reported-quick-filters.png":::
 
-You can sort the entries by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
+You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default values are marked with an asterisk (<sup>\*</sup>):
 
 - **Name and type**<sup>\*</sup>
 - **Reported by**<sup>\*</sup>
@@ -894,7 +894,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Date marked**
 - **Tags**<sup>\*</sup>: For more information about user tags, see [User tags](user-tags-about.md).
 
-To group the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
+To group the entries, select :::image type="icon" source="media/m365-cc-sc-group-icon.png" border="false"::: **Group** and then select one of the following values:
 
 - **Sender**
 - **Reported by**
@@ -905,7 +905,7 @@ To group the entries, select :::image type="icon" source="/defender/media/m365-c
 
 To ungroup the entries, select **None**.
 
-To filter the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Date reported**: **Start date** and **End date**.
 - **Reported by**
@@ -923,9 +923,9 @@ To filter the entries, select :::image type="icon" source="/defender/media/m365-
   - **Teams message** (Defender for Office 365 Plan 2 only; currently in Preview).
 - **Tags**: **All** or select one or more user tags (including Priority account) that are assigned to users. For more information about user tags, see [User tags in Microsoft Defender for Office 365](user-tags-about.md).
 
-When you're finished on the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished on the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-Use :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of entries to a CSV file.
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of entries to a CSV file.
 
 For more information about the actions that are available for messages on the **User reported** tab, see the next subsection.
 
@@ -940,7 +940,7 @@ At the top of the details flyout, the following message information is available
 - The actions that are available at the top of the flyout are described in the [Admin actions for user reported messages](#admin-actions-for-user-reported-messages) section.
 
 > [!TIP]
-> To see details about other submissions without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other submissions without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 The next sections in the details flyout are related to user reported submissions:
 
@@ -994,7 +994,7 @@ At the top of the details flyout, the following message information is available
 - The available actions are described in the [Admin actions for user reported messages](#admin-actions-for-user-reported-messages) section.
 
 > [!TIP]
-> To see details about other submissions without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other submissions without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 The next sections in the details flyout are related to user reported Teams submissions:
 
@@ -1033,25 +1033,25 @@ When you're finished in the details flyout, select **Close**.
 On the **User reported** tab, actions for user reported messages are available on the tab itself or in the details flyout of a selected entry:
 
 - Select the message from the list by selecting the check box next to the first column. The following actions are available on the **User reported** tab:
-  - :::image type="icon" source="/defender/media/m365-cc-sc-submit-user-reported-message-icon.png" border="false"::: **[Submit to Microsoft for analysis](#submit-user-reported-messages-to-microsoft-for-analysis)**
-  - :::image type="icon" source="/defender/media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **[Mark as and notify](#notify-users-about-admin-submitted-messages-to-microsoft)**
+  - :::image type="icon" source="media/m365-cc-sc-submit-user-reported-message-icon.png" border="false"::: **[Submit to Microsoft for analysis](#submit-user-reported-messages-to-microsoft-for-analysis)**
+  - :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **[Mark as and notify](#notify-users-about-admin-submitted-messages-to-microsoft)**
   - **[Trigger investigation](#trigger-an-investigation-in-defender-for-office-365-plan-2)** (Defender for Office 365 Plan 2 only)
 
 - Select the message from the list by clicking anywhere in the row other than the check box. The following actions are available in the details flyout that opens<sup>\*</sup>:
-  - :::image type="icon" source="/defender/media/m365-cc-sc-submit-user-reported-message-icon.png" border="false"::: **[Submit to Microsoft for analysis](#submit-user-reported-messages-to-microsoft-for-analysis)**
-  - :::image type="icon" source="/defender/media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **[Mark as and notify](#notify-users-about-admin-submitted-messages-to-microsoft)**
-  - :::image type="icon" source="/defender/media/m365-cc-sc-view-submission-icon.png" border="false"::: **[View the converted admin submission](#view-converted-admin-submissions)**
+  - :::image type="icon" source="media/m365-cc-sc-submit-user-reported-message-icon.png" border="false"::: **[Submit to Microsoft for analysis](#submit-user-reported-messages-to-microsoft-for-analysis)**
+  - :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **[Mark as and notify](#notify-users-about-admin-submitted-messages-to-microsoft)**
+  - :::image type="icon" source="media/m365-cc-sc-view-submission-icon.png" border="false"::: **[View the converted admin submission](#view-converted-admin-submissions)**
   - [Actions in Microsoft Defender for Office 365 only](#actions-for-user-reported-messages-in-defender-for-office-365):
-    - :::image type="icon" source="/defender/media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**
-    - :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take actions**
-    - :::image type="icon" source="/defender/media/m365-cc-sc-view-alert-icon.png" border="false"::: **View alert**
+    - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**
+    - :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take actions**
+    - :::image type="icon" source="media/m365-cc-sc-view-alert-icon.png" border="false"::: **View alert**
 
 [Actions for user reported messages in Defender for Office](#actions-for-user-reported-messages-in-defender-for-office-365)
 
   > [!TIP]
-  > To see details or take action on other user reported messages without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+  > To see details or take action on other user reported messages without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
-<sup>\*</sup> Depending on the nature and status of the message, some actions might not be available, are available directly at the top of the flyout, or are available under :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** at the top of the flyout.
+<sup>\*</sup> Depending on the nature and status of the message, some actions might not be available, are available directly at the top of the flyout, or are available under :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** at the top of the flyout.
 
 These actions are described in the following subsections.
 
@@ -1062,9 +1062,9 @@ These actions are described in the following subsections.
 
 After you select the message on the **User reported** tab, use either of the following methods to submit the message to Microsoft:
 
-- **On the User reported tab**: Select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis***.
+- **On the User reported tab**: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis***.
 
-- **In the details flyout of the selected message**: Select **Submit to Microsoft for analysis** or :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> **Submit to Microsoft for analysis** at the top of the flyout.
+- **In the details flyout of the selected message**: Select **Submit to Microsoft for analysis** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> **Submit to Microsoft for analysis** at the top of the flyout.
 
 In the **Submit to Microsoft for analysis** flyout that opens, do the following steps based on whether the message an email message or a Teams message:
 
@@ -1124,7 +1124,7 @@ In the **Submit to Microsoft for analysis** flyout that opens, do the following 
 
       When you're finished in the flyout, select **Submit**, and then select **Done**.
 
-  :::image type="content" source="/defender/media/admin-submission-user-reported-submit-button-options.png" alt-text="The available actions in the Submit to Microsoft for analysis dropdown list." lightbox="/defender/media/admin-submission-user-reported-submit-button-options.png":::
+  :::image type="content" source="media/admin-submission-user-reported-submit-button-options.png" alt-text="The available actions in the Submit to Microsoft for analysis dropdown list." lightbox="media/admin-submission-user-reported-submit-button-options.png":::
 
 - **Teams messages**: Select one of the following values:
   - **I've confirmed its clean**
@@ -1143,15 +1143,15 @@ After you submit a user reported message to Microsoft from the **User reported**
 
 #### Trigger an investigation in Defender for Office 365 Plan 2
 
-- **On the User reported tab**, select **Trigger investigation** in the dropdown list on :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis***.
+- **On the User reported tab**, select **Trigger investigation** in the dropdown list on :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Submit to Microsoft for analysis***.
 
-:::image type="content" source="/defender/media/admin-submission-user-reported-submit-button-options.png" alt-text="The Trigger investigation action in the Submit to Microsoft for analysis dropdown list." lightbox="/defender/media/admin-submission-user-reported-submit-button-options.png":::
+:::image type="content" source="media/admin-submission-user-reported-submit-button-options.png" alt-text="The Trigger investigation action in the Submit to Microsoft for analysis dropdown list." lightbox="media/admin-submission-user-reported-submit-button-options.png":::
 
 For more information, see [Trigger an investigation](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
 #### Notify users about admin submitted messages to Microsoft
 
-After an admin submits a user reported message to Microsoft from the **User reported** tab, admins can use the :::image type="icon" source="/defender/media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** action to mark the message with a verdict and send a templated notification message to the user who reported the message.
+After an admin submits a user reported message to Microsoft from the **User reported** tab, admins can use the :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** action to mark the message with a verdict and send a templated notification message to the user who reported the message.
 
 - Available verdicts for email messages:
   - **No threats found**
@@ -1168,7 +1168,7 @@ For more information, see [Notify users from within the portal](submissions-admi
 
 After an admin submits a user reported message to Microsoft from the **User reported** tab, the value of **Converted to admin submission** is **Yes**.
 
-If you select one of these messages by clicking anywhere in the row other than the check box next to the name, the details flyout contains :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> :::image type="icon" source="/defender/media/m365-cc-sc-view-submission-icon.png" border="false"::: **View the converted admin submission**.
+If you select one of these messages by clicking anywhere in the row other than the check box next to the name, the details flyout contains :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> :::image type="icon" source="media/m365-cc-sc-view-submission-icon.png" border="false"::: **View the converted admin submission**.
 
 This action takes you to the corresponding admin submission entry on the appropriate tab (for example, the **Emails** tab).
 
@@ -1176,8 +1176,8 @@ This action takes you to the corresponding admin submission entry on the appropr
 
 In organizations with Microsoft Defender for Office 365 (add-on licenses or included in subscriptions like Microsoft 365 E5 or Microsoft 365 Business Premium), the following actions might also be available in the details flyout of a user reported message on the **User reported** tab:
 
-- :::image type="icon" source="/defender/media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity** (email messages only): For more information, see [What's on the Email entity page](mdo-email-entity-page.md#whats-on-the-email-entity-page).
+- :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity** (email messages only): For more information, see [What's on the Email entity page](mdo-email-entity-page.md#whats-on-the-email-entity-page).
 
-- :::image type="icon" source="/defender/media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take actions** (email messages only): This action starts the same Action wizard that's available on the Email entity page. For more information, see [Actions on the Email entity page](mdo-email-entity-page.md#actions-on-the-email-entity-page).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take actions** (email messages only): This action starts the same Action wizard that's available on the Email entity page. For more information, see [Actions on the Email entity page](mdo-email-entity-page.md#actions-on-the-email-entity-page).
 
-- :::image type="icon" source="/defender/media/m365-cc-sc-view-alert-icon.png" border="false"::: **View alert**. An alert is triggered when an admin submission is created or updated. Selecting this action takes you to the details of the alert.
+- :::image type="icon" source="media/m365-cc-sc-view-alert-icon.png" border="false"::: **View alert**. An alert is triggered when an admin submission is created or updated. Selecting this action takes you to the details of the alert.

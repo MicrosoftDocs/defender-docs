@@ -115,7 +115,7 @@ Follow the procedures in [Reset a business password for someone](/microsoft-365/
 
 1. Sign in to the user's mailbox using Outlook on the web.
 
-2. Select **Settings** (gear icon), enter 'rules' in the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box, and then select **Inbox rules** from the results.
+2. Select **Settings** (gear icon), enter 'rules' in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box, and then select **Inbox rules** from the results.
 
 3. On the **Rules** tab of the flyout that opens, review the existing rules, and turn off or delete any suspicious rules.
 
@@ -133,18 +133,18 @@ To unblock a mailbox from sending email, follow the procedures in [Remove blocke
 1. Do the following steps in the Microsoft 365 admin center at <https://admin.microsoft.com>:
    1. Go to **Users** \> **Active users**. Or, to go directly to the **Active users** page, use <https://admin.microsoft.com/Adminportal/Home#/users>.
    2. On the **Active users** page, find and select the user account from the list by doing one of the following steps:
-      - Select the user by clicking anywhere in the row other than the check box next to the name. In the details flyout that opens, select :::image type="icon" source="/defender/media/m365-cc-sc-no-icon.png" border="false"::: **Block sign-in** at the top of the flyout.
-      - Select the user by selecting the check box next to the name. Select :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> :::image type="icon" source="/defender/media/m365-cc-sc-no-icon.png" border="false"::: **Edit sign-in status**.
-   3. In the **Block sign-in** flyout that opens, read the information, select **Block this user from signing in**, select **Save changes**, and then select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: **Close** at the top of the flyout.
+      - Select the user by clicking anywhere in the row other than the check box next to the name. In the details flyout that opens, select :::image type="icon" source="media/m365-cc-sc-no-icon.png" border="false"::: **Block sign-in** at the top of the flyout.
+      - Select the user by selecting the check box next to the name. Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> :::image type="icon" source="media/m365-cc-sc-no-icon.png" border="false"::: **Edit sign-in status**.
+   3. In the **Block sign-in** flyout that opens, read the information, select **Block this user from signing in**, select **Save changes**, and then select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Close** at the top of the flyout.
 
 2. Do the following steps in the Exchange admin center (EAC) at <https://admin.exchange.microsoft.com>:
    1. Go to **Recipients** \> **Mailboxes**. Or, to go directly to the **Mailboxes** page, use <https://admin.exchange.microsoft.com/#/mailboxes>.
    2. On the **Mailboxes** page, find and select the user from the list by doing one of the following steps:
       - Select the user by clicking anywhere in the row other than the round check box that appears next to the name.
-      - Select the user by selecting the round check box that appears next to the name, and then selecting the :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears on the page.
+      - Select the user by selecting the round check box that appears next to the name, and then selecting the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears on the page.
    3. In the details flyout that opens, do the following steps:
       1. Verify the **General** tab is selected, and then select **Manage email apps settings** in the **Email apps & mobile devices** section.
-      2. In the **Manage settings for email apps** flyout that opens, disable all of the available settings by changing the toggles to :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false"::: **Disabled**:
+      2. In the **Manage settings for email apps** flyout that opens, disable all of the available settings by changing the toggles to :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **Disabled**:
          - **Outlook desktop (MAPI)**
          - **Exchange Web Services**
          - **Mobile (Exchange ActiveSync)**
@@ -152,7 +152,7 @@ To unblock a mailbox from sending email, follow the procedures in [Remove blocke
          - **POP3**
          - **Outlook on the web**
 
-         When you're finished in the **Manage settings for email apps** flyout, select **Save**, and then select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: **Close** at the top of the flyout.
+         When you're finished in the **Manage settings for email apps** flyout, select **Save**, and then select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Close** at the top of the flyout.
 
 ### Step 6 Optional: Remove the suspected compromised account from all administrative role groups
 
@@ -163,7 +163,7 @@ To unblock a mailbox from sending email, follow the procedures in [Remove blocke
    1. Go to **Users** \> **Active users**. Or, to go directly to the **Active users** page, use <https://admin.microsoft.com/Adminportal/Home#/users>.
    2. On the **Active users** page, find and select the user account from the list by doing one of the following steps:
       - Select the user by clicking anywhere in the row other than the check box next to the name. In the details flyout that opens, verify the **Account** tab is selected, and then select **Manage roles** in the **Roles** section.
-      - Select the user by selecting the check box next to the name. Select :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> :::image type="icon" source="/defender/media/m365-cc-sc-manage-roles-icon.png" border="false"::: **Manage roles**.
+      - Select the user by selecting the check box next to the name. Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> :::image type="icon" source="media/m365-cc-sc-manage-roles-icon.png" border="false"::: **Manage roles**.
    3. In the **Manage admin roles** flyout that opens, do the following steps:
       - Record any information that you want to restore later.
       - Remove administrative role membership by selecting **User (no admin center access)**.
@@ -187,7 +187,7 @@ To unblock a mailbox from sending email, follow the procedures in [Remove blocke
    2. On the **Admin roles** page, select a role group from the list by clicking anywhere in the row other than the round check box that appears next to the name.
    3. In the details flyout that opens, select the **Assigned** tab, and then look for the user account. If the role group contains the user account, do the following steps:
       1. Select the user account.
-      2. Select the :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears, select **Yes, remove** in the warning dialog, and then select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: **Close** at the top of the flyout.
+      2. Select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears, select **Yes, remove** in the warning dialog, and then select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Close** at the top of the flyout.
 
    4. Repeat the previous steps for each role group in the list.
 

@@ -139,7 +139,7 @@ You can also add your own comments using the comment box available within the ac
 >
 > The export incident data feature is currently available to Microsoft Defender XDR and Microsoft Defender unified security operations center (SOC) platform customers with the Microsoft Copilot for security license.
 
-You can export an incident’s data to PDF through the **Export incident as PDF** function and save it into PDF format. This function allows security teams to review an incident’s details offline at any given time.
+You can export an incident's data to PDF through the **Export incident as PDF** function and save it into PDF format. This function allows security teams to review an incident's details offline at any given time.
 
 The incident data exported includes the following information:
 

@@ -16,12 +16,12 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/17/2024
+ms.date: 04/29/2024
 ---
 
 # How Microsoft names threat actors
 
-Microsoft shifted to a new naming taxonomy for threat actors aligned with the theme of weather. We intend to bring better clarity to customers and other security researchers with the nex taxonomy. We offer a more organized, articulate, and easy way to reference threat actors so that organizations can better prioritize and protect themselves and aid security researchers already confronted with an overwhelming amount of threat intelligence data.
+Microsoft shifted to a new naming taxonomy for threat actors aligned with the theme of weather. We intend to bring better clarity to customers and other security researchers with the new taxonomy. We offer a more organized, articulate, and easy way to reference threat actors so that organizations can better prioritize and protect themselves and aid security researchers already confronted with an overwhelming amount of threat intelligence data.
 
 :::image type="content" source="/defender/media/threat-actor-naming/threat-actor-categories.png" alt-text="Nation-state actors based on Microsoft naming" lightbox="/defender/media/threat-actor-naming/threat-actor-categories-lg.png":::
 
@@ -83,6 +83,7 @@ Use the following reference table to understand how our previously publicly disc
 |Jade Sleet|Storm-0954|North Korea|TraderTraitor, UNC4899|
 |Lace Tempest|DEV-0950|Financially motivated|FIN11, TA505|
 |Lemon Sandstorm|RUBIDIUM|Iran|Fox Kitten, UNC757, PioneerKitten|
+|Leopard Typhoon|LEAD|China|KAOS, Mana, Winnti, Red Diablo|
 |Lilac Typhoon|DEV-0234|China||
 |Manatee Tempest|DEV-0243|Financially motivated|EvilCorp, UNC2165, Indrik Spider|
 |Mango Sandstorm|MERCURY|Iran|MuddyWater, SeedWorm, Static Kitten, TEMP.Zagros|
@@ -144,10 +145,13 @@ Use the following reference table to understand how our previously publicly disc
 |Storm-1133||Palestinian Authority||
 |Storm-1152||Financially motivated||
 |Storm-1167||Indonesia||
+|Storm-1175||Financially motivated||
 |Storm-1283||Group in development||
 |Storm-1286||Group in development||
 |Storm-1295||Group in development|Greatness|
 |Storm-1364||Iran||
+|Storm-1376||China, Influence operations||
+|Storm-1516||Russia, Influence operations||
 |Storm-1567||Financially motivated|Akira|
 |Storm-1575||Group in development|Dadsec|
 |Storm-1674||Financially motivated||

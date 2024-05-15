@@ -31,7 +31,7 @@
         href: ios-whatsnew.md
 
     - name: Preview features
-      href: preview.md
+      href: /defender-xdr/preview
     - name: Data storage and privacy
       href: data-storage-privacy.md
     - name: Defender for Endpoint Plan 1
@@ -65,12 +65,16 @@
       items:
       - name: Overview
         href: evaluate-microsoft-defender-antivirus.md
-      - name: Evaluate Microsoft Defender Antivirus using Powershell
+      - name: Evaluate Microsoft Defender Antivirus using PowerShell
         href: microsoft-defender-antivirus-using-powershell.md
+      - name: Evaluate Microsoft Defender Antivirus using Group Policy 
+        href: evaluate-mdav-using-gp.md  
       - name: Microsoft Defender for Endpoint demonstration scenarios
         href: defender-endpoint-demonstrations.md
       - name: App reputation demonstration
         href: defender-endpoint-demonstration-app-reputation.md
+      - name: Behavior monitoring demonstrations
+        href: demonstration-behavior-monitoring.md
       - name: Validate antimalware
         href: validate-antimalware.md
       - name: Attack surface reduction rules demonstrations
@@ -184,8 +188,8 @@
             href: mac-jamfpro-policies.md
           - name: Enroll devices
             href: mac-jamfpro-enroll-devices.md        
-          - name: Deployment with Mobile Device Management (MDM) systems
-            href: mac-install-with-other-mdm.md
+        - name: Deployment with other Mobile Device Management (MDM) systems
+          href: mac-install-with-other-mdm.md
         - name: Manual deployment
           href: mac-install-manually.md
       - name: Configure Defender for Endpoint on macOS
@@ -363,7 +367,7 @@
     - name: General
       items:
       - name: Configure alert notifications
-        href: /defender/configure-email-notifications
+        href: /defender-xdr/configure-email-notifications
       - name: Configure vulnerability email notifications
         href: configure-vulnerability-email-notifications.md
       - name: Configure advanced features
@@ -454,6 +458,8 @@
         href: machines-view-overview.md
       - name: Exclude devices
         href: exclude-devices.md
+      - name: Identifying transient devices
+        href: transient-device-tagging.md
       - name: Internet facing devices
         href: internet-facing-devices.md
       - name: Device timeline
@@ -624,6 +630,8 @@
         href: adv-tech-of-mdav.md
       - name: Behavior monitoring with Microsoft Defender Antivirus
         href: behavior-monitor.md
+      - name: Behavior monitoring with Microsoft Defender Antivirus on macOS
+        href: behavior-monitor-macos.md
       - name: Detect and block potentially unwanted applications
         href: detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md
       - name: Enable and configure Microsoft Defender Antivirus always-on protection in Group Policy

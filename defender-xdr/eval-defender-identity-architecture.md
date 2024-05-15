@@ -7,7 +7,7 @@ f1.keywords:
   - NOCSH
 ms.author: dansimp
 author: dansimp
-ms.date: 07/09/2021
+ms.date: 04/26/2024
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -30,7 +30,14 @@ This article is [Step 1 of 3](eval-defender-identity-overview.md) in the process
 
 Before enabling Microsoft Defender for Identity, be sure you understand the architecture and can meet the requirements.
 
-Microsoft Defender for Identity uses machine learning and behavioral analytics to identify attacks across your on-premises network along with detecting and proactively preventing user sign-in risks associated with cloud identities. For more information, see [What is Microsoft Defender for Identity?](/defender-for-identity/what-is)
+Microsoft Defender for Identity is fully integrated with Microsoft Defender XDR, and leverages signals from both on-premises Active Directory and cloud identities to help you better identify, detect, and investigate advanced threats directed at your organization.
+
+Deploy Microsoft Defender for Identity to help your SecOp teams deliver a modern identity threat detection (ITDR) solution across hybrid environments, including:
+
+- Prevent breaches, using proactive identity security posture assessments
+- Detect threats, using real-time analytics and data intelligence
+- Investigate suspicious activities, using clear, actionable incident information
+- Respond to attacks, using automatic response to compromised identities. For more information, see [What is Microsoft Defender for Identity?](/defender-for-identity/what-is)
 
 Defender for Identity protects your on-premises Active Directory users and/or users synced to your Microsoft Entra ID. To protect an environment made up of only Microsoft Entra users, see [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection).
 
@@ -38,20 +45,26 @@ Defender for Identity protects your on-premises Active Directory users and/or us
 
 The following diagram illustrates the baseline architecture for Defender for Identity.
 
-:::image type="content" source="/defender/media/defender/m365-defender-identity-architecture.png" alt-text="The identity architecture for Microsoft Defender for Identity" lightbox="/defender/media/defender/m365-defender-identity-architecture.png":::
+:::image type="content" source="./media/eval-defender-xdr/m365-defender-identity-architecture.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Identity." lightbox="./media/eval-defender-xdr/m365-defender-identity-architecture.svg":::
 
 In this illustration:
 
-- Sensors installed on AD domain controllers parse logs and network traffic and send them to Microsoft Defender for Identity for analysis and reporting.
-- Sensors can also parse Active Directory Federation Services (AD FS) when Microsoft Entra ID is configured to use federated authentication (dotted line in illustration).
+- Sensors installed on Active Directory Domain Services (AD DS) domain controllers and Active Directory Certificate Services (AD CS) servers parse logs and network traffic and send them to Microsoft Defender for Identity for analysis and reporting.
+- Sensors can also parse Active Directory Federation Services (AD FS) authentications for third-party identity providers and when Microsoft Entra ID is configured to use federated authentication (the dotted lines in the illustration).
 - Microsoft Defender for Identity shares signals to Microsoft Defender XDR for extended detection and response (XDR).
 
 Defender for Identity sensors can be directly installed on the following servers:
 
-- Domain controllers: The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
-- AD FS: The sensor directly monitors network traffic and authentication events.
+- AD DS domain controllers
 
-For a deeper look into the architecture of Defender for Identity, including integration with Defender for Cloud Apps, see [Microsoft Defender for Identity architecture](/defender-for-identity/architecture).
+  The sensor directly monitors domain controller traffic, without the need for a dedicated server or the configuration of port mirroring.
+
+- AD CS servers
+- AD FS servers
+
+  The sensor directly monitors network traffic and authentication events.
+
+For a deeper look into the architecture of Defender for Identity, see [Microsoft Defender for Identity architecture](/defender-for-identity/architecture).
 
 ## Understand key concepts
 

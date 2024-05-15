@@ -15,9 +15,6 @@ appliesto:
 
 # Automatic user notifications for user reported phishing results in AIR
 
-> [!NOTE]
-> The features described in this article are currently in Public Preview, aren't available in all organizations, and are subject to change.
-
 In Microsoft 365 organizations with Exchange Online mailboxes, admins can configure the backend for messages that users report as malicious or not malicious in Outlook (send to Microsoft, send to a reporting mailbox, or both), and configure the various notification options for user reported messages. For more information, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
 In Microsoft 365 organizations with Microsoft Defender for Office 365 Plan 2, when a user reports a message as phishing, an investigation is automatically created in [automated investigation and response (AIR)](air-about.md). Admins can configure the user reported message settings to send an email notification to the user who reported the message based on the verdict from AIR. This notification is also known as _automatic feedback response_.
@@ -43,9 +40,9 @@ This article explains how to enable and customize automatic feedback response fo
    - **Spam**: An email notification is sent to the user who reported the message as phishing when AIR identifies the threat as spam.
    - **No threats found**: An email notification is sent to the user who reported the message as phishing when AIR identifies no threat.
 
-   :::image type="content" source="/defender/media/air-automatic-feedback.png" alt-text="Automatic feedback response options on the User reported settings page." lightbox="/defender/media/air-automatic-feedback.png":::
+   :::image type="content" source="media/air-automatic-feedback.png" alt-text="Automatic feedback response options on the User reported settings page." lightbox="media/air-automatic-feedback.png":::
 
-4. The notification email uses the same template as when an admin selects :::image type="icon" source="/defender/media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>.
+4. The notification email uses the same template as when an admin selects :::image type="icon" source="media/m365-cc-scc-mark-and-notify-icon.png" border="false"::: **Mark as and notify** on the **Submissions** page at <https://security.microsoft.com/reportsubmission>.
 
    You can customize the notification email by selecting the **Customize results email** link.
 
@@ -54,7 +51,7 @@ This article explains how to enable and customize automatic feedback response fo
    - **Email body results text**: Enter the custom text to use. You can use different text for **Phishing**, **Junk** and **No threats found**.
    - **Email footer text**: Enter the custom message footer text to use. The same text is used for **Phishing**, **Junk** and **No threats found**.
 
-   :::image type="content" source="/defender/media/air-automatic-feedback-customize-email-notifications.png" alt-text="The user email notification customization options on the User reported settings page." lightbox="/defender/media/air-automatic-feedback-customize-email-notifications.png":::
+   :::image type="content" source="media/air-automatic-feedback-customize-email-notifications.png" alt-text="The user email notification customization options on the User reported settings page." lightbox="media/air-automatic-feedback-customize-email-notifications.png":::
 
    When you're finished in the **Customize admin review email notifications** flyout, select **Confirm** to return to the **User reported settings** page.
 
@@ -67,11 +64,11 @@ After you enable automated feedback response, the user who reported the message 
 
 - **No threats found**: If a user reports a message as phishing, the submission triggers AIR on the reported message. If the investigation finds no threats, the user who reported the message receives a notification email that looks like this:
 
-  :::image type="content" source="/defender/media/air-automatic-feedback-no-threats-found-email.png" alt-text="An example notification email for No threats found." lightbox="/defender/media/air-automatic-feedback-no-threats-found-email.png":::
+  :::image type="content" source="media/air-automatic-feedback-no-threats-found-email.png" alt-text="An example notification email for No threats found." lightbox="media/air-automatic-feedback-no-threats-found-email.png":::
 
 - **Spam**: If a user reports a message as phishing, the submission triggers AIR on the reported message. If the investigation finds the message is spam, the user who reported the message receives a notification email that looks like this:
 
-  :::image type="content" source="/defender/media/air-automatic-feedback-spam-email.png" alt-text="An example notification email for spam found." lightbox="/defender/media/air-automatic-feedback-spam-email.png":::
+  :::image type="content" source="media/air-automatic-feedback-spam-email.png" alt-text="An example notification email for spam found." lightbox="media/air-automatic-feedback-spam-email.png":::
 
 - **Phishing or malware**: If a user reports a message as phishing, the submission triggers AIR on the reported message. What happens next depends on the results of the investigation:
   - **High confidence phishing or malware**: The message needs to be remediated using one of the following actions:
@@ -85,7 +82,7 @@ After you enable automated feedback response, the user who reported the message 
 
   - **Phishing**: The investigation creates no pending actions, but the user still receives a notification email that the message was found to be phishing. The notification email looks like this:
 
-    :::image type="content" source="/defender/media/air-automatic-feedback-phishing-or-malware-email.png" alt-text="An example notification email for phishing or malware found." lightbox="/defender/media/air-automatic-feedback-phishing-or-malware-email.png":::
+    :::image type="content" source="media/air-automatic-feedback-phishing-or-malware-email.png" alt-text="An example notification email for phishing or malware found." lightbox="media/air-automatic-feedback-phishing-or-malware-email.png":::
 
 When AIR reaches a verdict and the notification email is sent to the user who reported the message as phishing, the following property values are shown for the entry on the **User reported** tab on the **Submissions** page in the Defender portal:
 

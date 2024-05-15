@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender for Endpoint on Mac
-ms.reviewer: yongrhee
+ms.reviewer: yongrhee, pahuijbr
 description: Learn how to install, configure, update, and use Microsoft Defender for Endpoint on Mac.
 ms.service: defender-endpoint
 ms.author: siosulli
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 01/02/2024
+ms.date: 05/08/2024
 ---
 
 # Microsoft Defender for Endpoint on Mac
@@ -100,19 +100,13 @@ Microsoft Defender for Endpoint on Mac requires one of the following Microsoft V
 
 ### Configuring Exclusions
 
-When adding exclusions, be mindful of [common exclusion mistakes for Microsoft Defender Antivirus](/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus).
+When adding exclusions, be mindful of [common exclusion mistakes for Microsoft Defender Antivirus](common-exclusion-mistakes-microsoft-defender-antivirus.md).
 
 ### Network connections
 
-The following downloadable spreadsheet lists the services and their associated URLs that your network must be able to connect to. You should ensure that there are no firewall or network filtering rules that would deny access to these URLs, or you may need to create an *allow* rule specifically for them.
+Ensure that connectivity is possible from your devices to Microsoft Defender for Endpoint cloud services. To prepare your environment, please reference [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
-
-| Spreadsheet of domains list  | Description  |
-|---------|---------|
-|Microsoft Defender for Endpoint URL list for commercial customers| Spreadsheet of specific DNS records for service locations, geographic locations, and OS for commercial customers. <br/><br/> [Download the spreadsheet here](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx). |
-| Microsoft Defender for Endpoint URL list for Gov/GCC/DoD | Spreadsheet of specific DNS records for service locations, geographic locations, and OS for Gov/GCC/DoD customers. <br/><br/> [Download the spreadsheet here](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx). |
-
-Microsoft Defender for Endpoint can discover a proxy server by using the following discovery methods:
+Microsoft Defender for Endpoint can connect through a proxy server by using the following methods:
 
 - Proxy autoconfig (PAC)
 - Web Proxy Autodiscovery Protocol (WPAD)

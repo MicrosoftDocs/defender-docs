@@ -36,6 +36,9 @@ For more information about reporting messages to Microsoft, see [Report messages
 
 Admins configure user reported messages to go to a specified reporting mailbox, to Microsoft, or both. These user reported messages are available on the **User reported** tab on the **Submissions** page in the Microsoft Defender portal. For more information, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
+> [!TIP]
+> Simplify *Microsoft Defender for Office 365* deployment with our [setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268341). Protect against email, link, and collaboration threats. Configure policies, access reports, and automate investigations. Features include Safe Links, Safe Attachments, and more. Sign in credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/p/?linkid=2268240). Anyone, from potential Microsoft clients to partners and IT admins, can access the guides and use them freely (credentials aren't required).
+
 ## Use the built-in Report button in Outlook on the web
 
 - The built-in **Report** button is available in Outlook on the web *only* if user reporting is turned on *and* the built-in **Report** button in Outlook (not a non-Microsoft add-in button) are configured in the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) at <https://security.microsoft.com/securitysettings/userSubmission>:
@@ -56,7 +59,7 @@ Admins configure user reported messages to go to a specified reporting mailbox, 
 In Outlook on the web, select one or more messages, select **Report**, and then select **Report phishing** or **Report junk** in the dropdown list.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="/defender/media/owa-report-junk-phishing.png" alt-text="The results of selecting the Report button after selecting multiple messages in Outlook on the web." lightbox="/defender/media/owa-report-junk-phishing.png":::
+> :::image type="content" source="media/owa-report-junk-phishing.png" alt-text="The results of selecting the Report button after selecting multiple messages in Outlook on the web." lightbox="media/owa-report-junk-phishing.png":::
 
 Based on the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in your organization, the messages are sent to the reporting mailbox, to Microsoft, or both. The following actions are also taken on the reported messages in the mailbox:
 
@@ -68,7 +71,7 @@ Based on the [User reported settings](submissions-user-reported-messages-custom-
 In Outlook on the web, select one or more messages in the Junk Email folder, select **Report**, and then select **Not junk** in the dropdown list.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="/defender/media/owa-report-as-not-junk.png" alt-text="The results of selecting the Report button after selecting multiple messages in the Junk Email folder in Outlook on the web." lightbox="/defender/media/owa-report-as-not-junk.png":::
+> :::image type="content" source="media/owa-report-as-not-junk.png" alt-text="The results of selecting the Report button after selecting multiple messages in the Junk Email folder in Outlook on the web." lightbox="media/owa-report-as-not-junk.png":::
 
 Based on the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in your organization, the messages are sent to the reporting mailbox, to Microsoft, or both. The messages are also moved out of Junk Email to the Inbox.
 
@@ -91,12 +94,12 @@ Based on the [User reported settings](submissions-user-reported-messages-custom-
    - **Classic Ribbon**: Select **Report Message**, and then select **Junk** or **Phishing** in the dropdown list.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="/defender/media/OutlookReportMessage-classic-expanded.png" alt-text="Select a message and then select the Report Message button in the Classic Ribbon in Outlook." lightbox="/defender/media/OutlookReportMessage-classic-expanded.png":::
+     > :::image type="content" source="media/OutlookReportMessage-classic-expanded.png" alt-text="Select a message and then select the Report Message button in the Classic Ribbon in Outlook." lightbox="media/OutlookReportMessage-classic-expanded.png":::
 
-   - **Simplified Ribbon**: Select :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More commands** \> **Protection** section \> **Report Message** \> select **Junk** or **Phishing**.
+   - **Simplified Ribbon**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More commands** \> **Protection** section \> **Report Message** \> select **Junk** or **Phishing**.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="/defender/media/OutlookReportMessage-simplified-expanded.png" alt-text="Select a message and then select the Report Message button in the Simplified Ribbon in Outlook." lightbox="/defender/media/OutlookReportMessage-simplified-expanded.png":::
+     > :::image type="content" source="media/OutlookReportMessage-simplified-expanded.png" alt-text="Select a message and then select the Report Message button in the Simplified Ribbon in Outlook." lightbox="media/OutlookReportMessage-simplified-expanded.png":::
 
 Based on the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) in your organization, the messages are sent to the reporting mailbox, to Microsoft, or both. The following actions are also taken on the reported messages in the mailbox:
 
@@ -111,12 +114,12 @@ Based on the [user reported settings](submissions-user-reported-messages-custom-
    - **Classic Ribbon**: Select **Report Message**, and then select **Not Junk** in the dropdown list.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="/defender/media/OutlookReportMessage-classic-expanded.png" alt-text="Select a message in the Junk Email folder, and then select the Report Message button in the Classic Ribbon in Outlook." lightbox="/defender/media/OutlookReportMessage-classic-expanded.png":::
+     > :::image type="content" source="media/OutlookReportMessage-classic-expanded.png" alt-text="Select a message in the Junk Email folder, and then select the Report Message button in the Classic Ribbon in Outlook." lightbox="media/OutlookReportMessage-classic-expanded.png":::
 
-   - **Simplified Ribbon**: Select :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More commands** \> **Protection** section \> **Report Message** \> select **Not Junk**.
+   - **Simplified Ribbon**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More commands** \> **Protection** section \> **Report Message** \> select **Not Junk**.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="/defender/media/OutlookReportMessage-simplified-expanded.png" alt-text="Select a message in the Junk Email folder, and then select the Report Message button in the Simplified Ribbon in Outlook." lightbox="/defender/media/OutlookReportMessage-simplified-expanded.png":::
+     > :::image type="content" source="media/OutlookReportMessage-simplified-expanded.png" alt-text="Select a message in the Junk Email folder, and then select the Report Message button in the Simplified Ribbon in Outlook." lightbox="media/OutlookReportMessage-simplified-expanded.png":::
 
 Based on the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) in your organization, the messages are sent to the reporting mailbox, to Microsoft, or both. The messages are also moved out of Junk Email to the Inbox.
 
@@ -132,12 +135,12 @@ Users can report phishing messages from any email folder.
    - **Classic Ribbon**: Select **Report Phishing**.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="/defender/media/Outlook-ReportPhishing.png" alt-text="Select a message and then select the Report Phishing button in the Classic Ribbon in Outlook." lightbox="/defender/media/Outlook-ReportPhishing.png":::
+     > :::image type="content" source="media/Outlook-ReportPhishing.png" alt-text="Select a message and then select the Report Phishing button in the Classic Ribbon in Outlook." lightbox="media/Outlook-ReportPhishing.png":::
 
-   - **Simplified Ribbon**: Select :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More commands** \> **Protection** section \> **Phishing**
+   - **Simplified Ribbon**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More commands** \> **Protection** section \> **Phishing**
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="/defender/media/Outlook-ReportPhishing-simplified.png" alt-text="Select a message and then select the Report Phishing button in the Simplified Ribbon in Outlook." lightbox="/defender/media/Outlook-ReportPhishing-simplified.png":::
+     > :::image type="content" source="media/Outlook-ReportPhishing-simplified.png" alt-text="Select a message and then select the Report Phishing button in the Simplified Ribbon in Outlook." lightbox="media/Outlook-ReportPhishing-simplified.png":::
 
 Based on the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in your organization, the messages are sent to the reporting mailbox, to Microsoft, or both. The messages are also deleted.
 

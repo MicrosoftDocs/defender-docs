@@ -12,7 +12,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to create training campaigns in Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 3/11/2024
+ms.date: 5/2/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -29,7 +29,7 @@ For getting started information about Attack simulation training, see [Get start
 
 To see the existing Training campaigns, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Training** tab. Or, to go directly to the **Training** tab, use <https://security.microsoft.com/attacksimulator?viewid=trainingcampaign>.
 
-The **Training** tab sows the following information for each Training campaign that you created. You can sort the Training campaigns by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
+The **Training** tab sows the following information for each Training campaign that you created. You can sort the Training campaigns by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
 - **Campaign name**
 - **Description**
@@ -58,26 +58,29 @@ The **Training** tab sows the following information for each Training campaign t
 > - Remove columns from the view.
 > - Zoom out in your web browser.
 
-Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png"::: **Filter** to filter the information on the page by the **Status** value of the Training campaign.
+Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png"::: **Filter** to filter the information on the page by the **Status** value of the Training campaign.
 
 <sup>\*\*</sup> The total count of Training campaigns with these **Status** values is also shown at the top of the page. But if you filter the information (for example, exclude on of these **Status** values), the count at the top of the page is **0** for that excluded **Status** value.
 
-To find a Training campaign in the list, type part of the campaign name in the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png"::: **Search** box and then press the ENTER key.
+To find a Training campaign in the list, type part of the campaign name in the :::image type="icon" source="media/m365-cc-sc-search-icon.png"::: **Search** box and then press the ENTER key.
 
 To see details about in-progress or completed Training campaigns, see the [View Training campaign reports](#view-training-campaign-reports) section.
 
 ## Create Training campaigns
 
+> [!TIP]
+> For creation instructions, check out this short video: <https://youtu.be/haWAG4TM1Io>.
+
 To create a Training campaign, do the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Training** tab. Or, to go directly to the **Training** tab, use <https://security.microsoft.com/attacksimulator?viewid=trainingcampaign>.
 
-2. On the **Training** tab, select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png"::: **Create new** to start the new Training campaign wizard.
+2. On the **Training** tab, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png"::: **Create new** to start the new Training campaign wizard.
 
    The following sections describe the steps and configuration options to create a Training campaign.
 
    > [!NOTE]
-   > At any point after you name the Training campaign during the new Training campaign wizard, you can select **Save and close** to save your progress and continue later. The incomplete Training campaign has the **Status** value **Draft**. You can pick up where you left off by selecting the Training campaign and then clicking the :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+   > At any point after you name the Training campaign during the new Training campaign wizard, you can select **Save and close** to save your progress and continue later. The incomplete Training campaign has the **Status** value **Draft**. You can pick up where you left off by selecting the Training campaign and then clicking the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
 
 ### Name and describe the Training campaign
 
@@ -92,16 +95,16 @@ When you're finished on the **Name Training campaign** page, select **Next**.
 
 On the **Target users** page, select who receives the Training campaign. Use the following options to select users:
 
-- **Include all users in my organization**: The unmodifiable list of users is show in groups of 10. You can use **Next** and **Previous** directly below the list of users to scroll through the list. You can also use :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** to find specific users.
+- **Include all users in my organization**: The unmodifiable list of users is show in groups of 10. You can use **Next** and **Previous** directly below the list of users to scroll through the list. You can also use :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** to find specific users.
 
   > [!TIP]
   > Although you can't remove users from the list on this page, you can use the next **Exclude users** page to exclude specific users.
 
 - **Include only specific users and groups**: At first, no users or groups are shown on the **Targeted users** page. To add users or groups to the Training campaign, choose one of the following options:
 
-  - :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Add users**: In the **Add users** flyout that opens, you find and select users and groups to include in the Training campaign. **Dynamic distribution groups are not supported**. The following search tools are available:
+  - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add users**: In the **Add users** flyout that opens, you find and select users and groups to include in the Training campaign. **Dynamic distribution groups are not supported**. The following search tools are available:
 
-    - **Search for users or groups**: If you click in the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and do one of the following actions, the **Filter users by categories** options on the **Add users** flyout are replaced by a **User list** section:
+    - **Search for users or groups**: If you click in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and do one of the following actions, the **Filter users by categories** options on the **Add users** flyout are replaced by a **User list** section:
 
       - Type three or more characters and then press the ENTER key. Any users or group names that contain those characters are shown in the **User list** section by **Name**, **Email**, **Job title**, and **Type**.
       - Type less than three characters or no characters and then press the ENTER key. No users are shown in the **User list** section, but you can type three or more characters in the **Search** box to search for users and groups.
@@ -123,31 +126,31 @@ On the **Target users** page, select who receives the Training campaign. Use the
         - **Repeat offenders**: For more information, see [Configure the repeat offender threshold](attack-simulation-training-settings.md#configure-the-repeat-offender-threshold).
 
       - **User tags**: User tags are identifiers for specific groups of users (for example, Priority accounts). For more information, see [User tags in Microsoft Defender for Office 365](user-tags-about.md). Use the following options:
-        - **Search**: In :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search by user tags**, you can type part of the user tag name and then press Enter. You can select some or all of the results.
+        - **Search**: In :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search by user tags**, you can type part of the user tag name and then press Enter. You can select some or all of the results.
         - Select **All user tags**
         - Select existing user tags. If the link is available, select **See all user tags** to see the complete list of available tags.
 
       - **City**: Use the following options:
-        - **Search**: In :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search by City**, you can type part of the City value and then press Enter. You can select some or all of the results.
+        - **Search**: In :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search by City**, you can type part of the City value and then press Enter. You can select some or all of the results.
         - Select **All City**
         - Select existing City values. If the link is available, select **See all Cities** to see the complete list of available City values.
 
       - **Country**: Use the following options:
-        - **Search**: In :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search by Country**, you can type part of the Country/region value and then press Enter. You can select some or all of the results.
+        - **Search**: In :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search by Country**, you can type part of the Country/region value and then press Enter. You can select some or all of the results.
         - Select **All Country**
         - Select existing City values. If the link is available, select **See all Countries** to see the complete list of available Country/region values.
 
       - **Department**: Use the following options:
-        - **Search**: In :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search by Department**, you can type part the Department value and then press Enter. You can select some or all of the results.
+        - **Search**: In :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search by Department**, you can type part the Department value and then press Enter. You can select some or all of the results.
         - Select **All Department**
         - Select existing Department values. If the link is available, select **See all Departments** to see the complete list of available Department values.
 
       - **Title**: Use the following options:
-        - **Search**: In :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search by Title**, you can type part of the Title value and then press Enter. You can select some or all of the results.
+        - **Search**: In :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search by Title**, you can type part of the Title value and then press Enter. You can select some or all of the results.
         - Select **All Title**
         - Select existing Title values. If the link is available, select **See all Titles** to see the complete list of available Title values.
 
-      :::image type="content" source="/defender/media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="The User filtering on the Target users page in Attack simulation training in the Microsoft Defender portal" lightbox="/defender/media/attack-sim-training-simulations-target-users-filter-by-category.png":::
+      :::image type="content" source="media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="The User filtering on the Target users page in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-simulations-target-users-filter-by-category.png":::
 
       You can use some or all of the search categories to find users and groups. If you select multiple categories, the AND operator is used. Any users or groups must match both values to be returned in the results (which is virtually impossible if you use the value **All** in multiple categories).
 
@@ -162,13 +165,13 @@ On the **Target users** page, select who receives the Training campaign. Use the
 
       Select the **Add x users** button to add the selected users or groups on the **Target users** page and to return to the **Target users** page.
 
-  - :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Import**: In the dialog that opens, specify a CSV file that contains one email address per line.
+  - :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Import**: In the dialog that opens, specify a CSV file that contains one email address per line.
 
     After you find a select the CSV file, the users are imported and shown on the **Targeted users** page.
 
-  On the main **Target users** page, you can use the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find selected users. You can also select :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Delete** and then **Confirm** in the confirmation dialog to remove specific users.
+  On the main **Target users** page, you can use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box to find selected users. You can also select :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Delete** and then **Confirm** in the confirmation dialog to remove specific users.
 
-  To add more users and groups, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Add users** or :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Import** on the **Target users** page and repeat the previous steps.
+  To add more users and groups, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add users** or :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Import** on the **Target users** page and repeat the previous steps.
 
 When you're finished on the **Target users** page, select **Next**.
 
@@ -176,7 +179,7 @@ When you're finished on the **Target users** page, select **Next**.
 
 On the **Exclude users** page, you can exclude some of the previously selected users from the Training campaign by selecting **Exclude some of the target users from this simulation**.
 
-The selection options are identical to the previous step when you select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png"::: **Add users to exclude** or :::image type="icon" source="/defender/media/m365-cc-sc-import-icon.png"::: **Import**.
+The selection options are identical to the previous step when you select :::image type="icon" source="media/m365-cc-sc-filter-icon.png"::: **Add users to exclude** or :::image type="icon" source="media/m365-cc-sc-import-icon.png"::: **Import**.
 
 When you're finished on the **Exclude users** page, select **Next**.
 
@@ -184,7 +187,7 @@ When you're finished on the **Exclude users** page, select **Next**.
 
 On the **Select training modules** page, select one of the following options:
 
-- **Training catalog**: Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png"::: **Add trainings**.
+- **Training catalog**: Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png"::: **Add trainings**.
 
   In the **Add Training** flyout that opens, select one or more Training modules to include in the Training campaign by selecting the check box next to the module name, and then select **Add**.
 
@@ -195,9 +198,9 @@ On the **Select training modules** page, select one of the following options:
   - **Training name**
   - **Source**
   - **Duration (mins)**
-  - **Delete**: Use the :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png"::: **Delete** icon to remove the entry from the list. Select **Confirm** in the confirmation dialog**.
+  - **Delete**: Use the :::image type="icon" source="media/m365-cc-sc-delete-icon.png"::: **Delete** icon to remove the entry from the list. Select **Confirm** in the confirmation dialog**.
 
-- **Redirect to a custom URL**: Select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png"::: **Add trainings**.
+- **Redirect to a custom URL**: Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png"::: **Add trainings**.
 
   In the **Custom training URL** flyout that opens, the following options are available:
 
@@ -229,7 +232,7 @@ On the **Select end user notification** page, select from the following notifica
     - **Training reminder notification**
   - **Delivery preferences**: You need to configure the following delivery preferences before you can continue:
     - For **Microsoft default training only campaign-training reminder notification**, select **Twice a week** or **Weekly**.
-  - **Actions**: If you select :::image type="icon" source="/defender/media/m365-cc-sc-view-icon.png" border="false"::: **View**, a **Review notification** page opens with the following information:
+  - **Actions**: If you select :::image type="icon" source="media/m365-cc-sc-view-icon.png" border="false"::: **View**, a **Review notification** page opens with the following information:
     - **Preview** tab: View the notification message as users see it. To view the message in different languages, use the **Select notification language** box.
     - **Details** tab: View details about the notification:
       - **Notification description**
@@ -267,7 +270,7 @@ For more information, see [End-user notifications for Attack simulation training
 Do one of the following steps:
 
 - Select an existing notification to use:
-  - To search for an existing notification in the list, type part of the notification name in the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and then press the ENTER key.
+  - To search for an existing notification in the list, type part of the notification name in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and then press the ENTER key.
   - When you select a notification by clicking  anywhere in the row other than the check box, a details flyout opens that shows more information about the notification:
     - The **Preview** tab shows what the notification looks like to users.
     - The **Details** tab shows the properties of the notification.
@@ -276,7 +279,7 @@ Do one of the following steps:
 
   On the **Training assignment notification** page, select a notification to use by selecting the check box next to the name.
 
-- Create a new notification to use: Select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Create new**. The creation steps are identical to [Create end-user notifications](attack-simulation-training-end-user-notifications.md#create-end-user-notifications).
+- Create a new notification to use: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create new**. The creation steps are identical to [Create end-user notifications](attack-simulation-training-end-user-notifications.md#create-end-user-notifications).
 
   > [!NOTE]
   > On the **Define details** page of the new notification wizard, be sure to select the value **Training assignment notification** for the notification type.
@@ -306,7 +309,7 @@ For more information, see [End-user notifications for Attack simulation training
 In **Set frequency for reminder notification**, select **Weekly** (the default value) or **Twice a week**, and then do one of the following steps:
 
 - Select an existing notification to use:
-  - To search for an existing notification in the list, type part of the notification name in the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and then press the ENTER key.
+  - To search for an existing notification in the list, type part of the notification name in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and then press the ENTER key.
   - When you select a notification by clicking  anywhere in the row other than the check box, a details flyout opens that shows more information about the notification:
     - The **Preview** tab shows what the notification looks like to users.
     - The **Details** tab shows the properties of the notification.
@@ -315,7 +318,7 @@ In **Set frequency for reminder notification**, select **Weekly** (the default v
 
   On the **Training reminder notification** page, select a notification to use by selecting the check box next to the name.
 
-- Create a new notification to use: Select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Create new**. The creation steps are identical to [Create end-user notifications](attack-simulation-training-end-user-notifications.md#create-end-user-notifications).
+- Create a new notification to use: Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create new**. The creation steps are identical to [Create end-user notifications](attack-simulation-training-end-user-notifications.md#create-end-user-notifications).
 
   > [!NOTE]
   > On the **Define details** page of the new notification wizard, be sure to select the value **Training reminder notification** for the notification type.
@@ -345,7 +348,7 @@ When you're finished on the **Schedule** page, select **Next**.
 
 On the **Review** page, you can review the details of the Training campaign.
 
-Select the :::image type="icon" source="/defender/media/m365-cc-sc-send-icon.png" border="false"::: **Send a test** button to send a copy of the Training campaign to yourself (the currently signed in user) for inspection.
+Select the :::image type="icon" source="media/m365-cc-sc-send-icon.png" border="false"::: **Send a test** button to send a copy of the Training campaign to yourself (the currently signed in user) for inspection.
 
 You can select **Edit** in each section to modify the settings within the section. Or you can select **Back** or the specific page in the wizard to modify the settings.
 
@@ -364,7 +367,7 @@ All actions on existing Training campaigns start on the **Training** tab. To go 
 
 You can cancel Training campaigns with the **Status** value **In progress** or **Scheduled**.
 
-To cancel an existing Training campaign on the **Training tab**, select the Training campaign by selecting the check box next to the name, select the :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: **Cancel** action that appears, and then select **Confirm** in the confirmation dialog.
+To cancel an existing Training campaign on the **Training tab**, select the Training campaign by selecting the check box next to the name, select the :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Cancel** action that appears, and then select **Confirm** in the confirmation dialog.
 
 After you cancel the Training campaign, the **Status** value changes to **Canceled**.
 
@@ -372,7 +375,7 @@ After you cancel the Training campaign, the **Status** value changes to **Cancel
 
 You can't remove Training campaigns with the **Status** value **In progress** or **Scheduled**.
 
-To remove an existing Training campaign from the **Training** tab, select the Training campaign by selecting the check box next to the name, select the :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears, and then select **Confirm** in the confirmation dialog.
+To remove an existing Training campaign from the **Training** tab, select the Training campaign by selecting the check box next to the name, select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears, and then select **Confirm** in the confirmation dialog.
 
 After you remove the Training campaign, it's no longer listed on the **Training** tab.
 
@@ -413,7 +416,7 @@ To set the training threshold on the **Settings** tab, do the following steps:
 For Training campaigns with the **Status** value **In progress** or **Completed**, you can view the report for the Training campaign by using either of the following methods on the **Training campaigns** tab at <https://security.microsoft.com/attacksimulator?viewid=trainingcampaign>
 
 - Select the campaign by clicking anywhere in the row other than the check box next to the name.
-- Select the campaign by selecting the check box next to the name, and then select :::image type="icon" source="/defender/media/m365-cc-sc-eye-icon.png" border="false"::: **View report**.
+- Select the campaign by selecting the check box next to the name, and then select :::image type="icon" source="media/m365-cc-sc-eye-icon.png" border="false"::: **View report**.
 
 A details page for the Training campaign opens with the following tabs:
 
@@ -423,7 +426,7 @@ A details page for the Training campaign opens with the following tabs:
 
 These tabs are described in the following subsections.
 
-To close the Training campaign report, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false"::: **Close**.
+To close the Training campaign report, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: **Close**.
 
 ### Report tab
 
@@ -431,7 +434,7 @@ For a description of what's on the **Report** tab for Training campaigns, see [S
 
 ### Users tab
 
-The **Users** tab contains the following information for each user in the campaign. You can sort the users by clicking on an available column header. Select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk (<sup>\*</sup>):
+The **Users** tab contains the following information for each user in the campaign. You can sort the users by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk (<sup>\*</sup>):
 
 - **Name**<sup>\*</sup> (you can't deselect this value)
 - **Training status**<sup>\*</sup>: One of the following values:
@@ -443,9 +446,9 @@ The **Users** tab contains the following information for each user in the campai
 - **Username**<sup>\*</sup> (you can't deselect this value)
 - **Department**
 
-To change the list of users from normal to compact spacing, select :::image type="icon" source="/defender/media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="/defender/media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+To change the list of users from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
 
-Select :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png"::: **Export** to download the displayed results to a RecordExport.csv file in the local Downloads folder.
+Select :::image type="icon" source="media/m365-cc-sc-download-icon.png"::: **Export** to download the displayed results to a RecordExport.csv file in the local Downloads folder.
 
 If you select a user from the list by clicking anywhere in the row other than the check box next to the name, the following user information appears in a details flyout:
 
@@ -463,7 +466,7 @@ If you select a user from the list by clicking anywhere in the row other than th
   - **Training completed date**
 
 > [!TIP]
-> To see details about other users in the Training campaign without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other users in the Training campaign without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 ### Details tab
 

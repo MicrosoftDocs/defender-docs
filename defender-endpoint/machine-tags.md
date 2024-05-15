@@ -127,7 +127,7 @@ Use the following registry key entry to add a tag on a device:
 You can use Defender for Endpoint security settings management to define and apply device tags for macOS and Linux. You can perform this task by creating Endpoint detection and response security policy. Please refer to following documentation for details.
 
 - [Manage endpoint security policies on devices onboarded to Microsoft Defender for Endpoint](/mem/intune/protect/mde-security-integration)
-- [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/manage-security-policies)
+- [Manage endpoint security policies in Microsoft Defender for Endpoint](manage-security-policies.md)
 
 ## Add device tags by creating a configuration profile
 
@@ -139,9 +139,9 @@ You can use Defender for Endpoint security settings management to define and app
 
 You can use configuration profile to set device tag for macOS and Linux. Please refer to following documentation for details.
 
-- **For macOS**, create configuration profile (.plist file) and deploy it manually or through management tool including Intune. See the guidance in [Set preferences for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-preferences). To deploy configuration profile with Intune, follow the guidance in [Use custom settings for macOS devices in Microsoft Intune](/mem/intune/configuration/custom-settings-macos).
+- **For macOS**, create configuration profile (.plist file) and deploy it manually or through management tool including Intune. See the guidance in [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md). To deploy configuration profile with Intune, follow the guidance in [Use custom settings for macOS devices in Microsoft Intune](/mem/intune/configuration/custom-settings-macos).
 
-- **For Linux**, create configuration profile (.json file) and deploy it manually or through management tool. See the guidance in [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences)
+- **For Linux**, create configuration profile (.json file) and deploy it manually or through management tool. See the guidance in [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 
 ## Add device tags by creating a custom profile in Microsoft Intune
 
@@ -171,7 +171,7 @@ You can use Microsoft Intune to define and apply tag for mobile devices. You can
 
 - [Tag mobile devices with Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-mobile-device-tagging-for-ios-and-android/ba-p/3897368)
 
-- **For iOS**, follow the guidance in [Configure Microsoft Defender for Endpoint on iOS features](/defender-endpoint/ios-configure-features).
-- **For Android**, follow the guidance on [Configure Defender for Endpoint on Android features](/defender-endpoint/android-configure).
+- **For iOS**, follow the guidance in [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md).
+- **For Android**, follow the guidance on [Configure Defender for Endpoint on Android features](android-configure.md).
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

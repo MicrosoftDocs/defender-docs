@@ -2,11 +2,11 @@
 title: How to Deploy Defender for Endpoint on Linux with Chef
 description: Learn how to deploy Defender for Endpoint on Linux with Chef.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: dansimp
+author: dansimp
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: deniseb
+manager: dansimp
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/07/2021
+ms.date: 05/01/2024
 ---
 
 # Deploy Defender for Endpoint on Linux with Chef
@@ -119,7 +119,7 @@ end
 
 Make sure to update the path name to the location of the onboarding file.
 To test deploy it on the Chef workstation, run ``sudo chef-client -z -o mdatp``.
-After your deployment, you should consider creating and deploying a configuration file to the servers based on [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
+After your deployment, you should consider creating and deploying a configuration file to the servers based on [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md).
 After creating and testing your configuration file, you can put it into the `cookbook/mdatp/files` folder where you also placed the onboarding package. Then you can create a settings_mdatp.rb file in the mdatp/recipies folder and add this text:
 
 ```powershell

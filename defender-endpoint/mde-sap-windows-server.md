@@ -1,10 +1,10 @@
----  
+---
 title: "Microsoft Defender Endpoint on Windows Server with SAP"  
 description: Understand how Microsoft Defender for Endpoint with EDR and other advanced security capabilities interacts with SAP applications.
-author: denisebmsft
-ms.author: deniseb  
+author: cgardin
+ms.author: cgardin  
 manager: dansimp
-ms.date: 04/17/2024
+ms.date: 05/07/2024
 ms.topic: overview
 ms.service: defender-endpoint  
 ms.subservice: ngp
@@ -16,9 +16,9 @@ ms.reviewer: cgardin; shlomiakirav
 search.appverid: MET150  
 f1.keywords: NOCSH 
 audience: ITPro
----  
+---
 
-# Microsoft Defender for Endpoint on Windows Server with SAP
+  # Microsoft Defender for Endpoint on Windows Server with SAP
 
 **Applies to:**
 
@@ -26,9 +26,9 @@ audience: ITPro
 
 If your organization uses SAP, it's essential to understand the compatibility and support between [antivirus](microsoft-defender-antivirus-on-windows-server.md) and [EDR](overview-endpoint-detection-response.md) in Microsoft Defender for Endpoint and your SAP applications. This article helps you understand the support provided by SAP for endpoint protection security solutions like Defender for Endpoint and how they interact with SAP applications.
 
-This article applies to Microsoft Defender for Endpoint running on Windows Server with SAP applications such, as NetWeaver, S4 Hana, and SAP standalone engines, such as LiveCache. In this article, we focus on antivirus and EDR capabilities in Defender for Endpoint. For an overview of all of the Defender for Endpoint capabilities, see [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md). 
+This article describes how to use Microsoft Defender for Endpoint on Windows Server alongside SAP applications, such as NetWeaver and S4 Hana, and SAP standalone engines, such as LiveCache. In this article, we focus on antivirus and EDR capabilities in Defender for Endpoint. For an overview of all of the Defender for Endpoint capabilities, see [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md). 
 
-This article doesn't cover SAP client software, such as SAPGUI or Microsoft Defender Antivirus on Windows client devices. 
+This article doesn't cover SAP client software, such as SAPGUI or Microsoft Defender Antivirus on Windows client devices.
 
 ## Enterprise security and your SAP Basis team
 
@@ -49,13 +49,13 @@ For more detailed information about Defender for Endpoint and Microsoft security
 
 Defender for Endpoint includes capabilities that are beyond the scope of this article. In this article, we focus on two main areas:
 
-- **Next-generation protection** (which includes antivirus protection). [Next-generation protection](/defender-endpoint/next-generation-protection) is an antivirus product like other antivirus solutions for Windows environments.
+- **Next-generation protection** (which includes antivirus protection). [Next-generation protection](next-generation-protection.md) is an antivirus product like other antivirus solutions for Windows environments.
 - **Endpoint Detection and Response** (EDR). [EDR capabilities](overview-endpoint-detection-response.md) detect suspicious activity and system calls, and provide an extra layer of protection against threats that bypassed antivirus protection. 
 
 Microsoft and other security software vendors track threats and provide trend information. For information, see [Cyberthreats, viruses, and malware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/threats). 
 
 > [!NOTE]
-> For information on Microsoft Defender for SAP on Linux, see [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](/defender-endpoint/mde-linux-deployment-on-sap). Defender for Endpoint on Linux is significantly different than the Windows version. 
+> For information on Microsoft Defender for SAP on Linux, see [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md). Defender for Endpoint on Linux is significantly different than the Windows version. 
 
 ## SAP support statement on Defender for Endpoint and other security solutions
 
@@ -74,15 +74,10 @@ For more information about the SAP Support policy, see [3356389 - Antivirus or o
 Here's a list of SAP articles you can use as needed:
 
 - [3356389 - Antivirus or other security software affecting SAP operations - SAP for Me](https://me.sap.com/notes/3356389)
-
 - [106267 - Virus scanner software on Windows - SAP for Me](https://me.sap.com/notes/106267)
-
 - [690449 - Transport buffer lock file (.LOB) remains blocked on Windows - SAP for Me](https://me.sap.com/notes/690449)
-
 - [2311946 - Filesystem errors on Windows - SAP for Me](https://me.sap.com/notes/2311946)
-
 - [2496239 - Ransomware / malware on Windows - SAP for Me](https://me.sap.com/notes/2496239)
-
 - [1497394 - Which files and directories should be excluded from an antivirus scan for SAP BusinessObjects Business Intelligence Platform products in Windows? - SAP for Me](https://me.sap.com/notes/1497394/E)
 
 ## SAP applications on Windows Server: Top 10 recommendations
@@ -106,14 +101,14 @@ Here's a list of SAP articles you can use as needed:
    - The entire contents of the SAPLOC directory
    - The entire contents of the TRANS directory
    - The entire contents of directories for standalone engines such as TREX
-   
+
    Advanced users can consider using [contextual file and folder exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md). 
-   
+
    For more information about DBMS exclusions, use the following resources:
 
       - **SQL Server**: [Configure antivirus software to work with SQL Server](/troubleshoot/sql/database-engine/security/antivirus-and-sql-server)
       - **Oracle**: [How To Configure Anti-Virus On Oracle Database Server (Doc ID 782354.1)](https://support.oracle.com/knowledge/Oracle%20Database%20Products/782354_1.html)
-      - **DB2** – [Which DB2 directories to exclude from Linux Anti-virus software](https://www.ibm.com/support/pages/which-db2-directories-exclude-linux-anti-virus-software) (use the same commands on Windows Server) 
+      - **DB2**: [Which DB2 directories to exclude from Linux Anti-virus software](https://www.ibm.com/support/pages/which-db2-directories-exclude-linux-anti-virus-software) (use the same commands on Windows Server) 
       - **SAP ASE**: Contact SAP 
       - **MaxDB**: Contact SAP
 
@@ -128,7 +123,7 @@ Here's a list of SAP articles you can use as needed:
 
 9. **Use tools, such as [Intune](/mem/intune/protect/endpoint-security) or [Defender for Endpoint security settings management](/mem/intune/protect/mde-security-integration) to set up Defender for Endpoint**. Such tools can help ensure that Defender for Endpoint is configured correctly and uniformly deployed. 
 
-   To use Defender for Endpoint security settings management, in the Microsoft Defender portal, go to **Endpoints** > **Configuration management** > **Endpoint security policies**, and then select **Create new Policy**. For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/defender-endpoint/manage-security-policies). 
+   To use Defender for Endpoint security settings management, in the Microsoft Defender portal, go to **Endpoints** > **Configuration management** > **Endpoint security policies**, and then select **Create new Policy**. For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](manage-security-policies.md). 
 
 10. **Use the latest release of Defender for Endpoint**. Several new features are being implemented in Defender for Endpoint on Windows, and these features were tested with SAP systems. These new features reduce blocking and lower CPU consumption. For more information about new features, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
@@ -164,29 +159,51 @@ Here's a list of what to check:
    > [!NOTE]
    > The term *Defender* is sometimes used to refer to an entire suite of products and solutions. See [What is Microsoft Defender XDR?](/defender-xdr/microsoft-365-defender). In this article, we focus on antivirus and EDR capabilities in Defender for Endpoint.
     
-2. **Check the status of Microsoft Defender Antivirus**. Open Command Prompt, and then run these PowerShell commands:
+2. **Check the status of Microsoft Defender Antivirus**. Open Command Prompt, and run the following PowerShell commands:
 
-   - `Get-MpComputerStatus`
-   - `Get-MpPreference`
-
-   The most significant settings for SAP are as follows:
+   **[Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?view=windowsserver2022-ps&preserve-view=true)**, as follows:
 
    ```powershell
+   Get-MpPreference |Select-Object -Property  DisableCpuThrottleOnIdleScans, DisableRealtimeMonitoring, DisableScanningMappedNetworkDrivesForFullScan , DisableScanningNetworkFiles, ExclusionPath, MAPSReporting
+   ```
 
-   Get-MpPreference |Select-Object -Property  DisableCpuThrottleOnIdleScans, DisableRealtimeMonitoring, DisableScanningMappedNetworkDrivesForFullScan , DisableScanningNetworkFiles, ExclusionPath, MAPSReporting 
+   Expected output for `Get-MpComputerStatus`:
 
+   ```output
+   DisableCpuThrottleOnIdleScans                 : True
+   DisableRealtimeMonitoring                     : False
+   DisableScanningMappedNetworkDrivesForFullScan : True
+   DisableScanningNetworkFiles                   : False
+   ExclusionPath                                 :   <<configured exclusions will show here>>
+   MAPSReporting                                 : 2
+   ```
+
+   **[Get-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true)**, as follows:
+
+   ```powershell
    Get-MpComputerStatus |Select-Object -Property AMRunningMode, AntivirusEnabled, BehaviorMonitorEnabled, IsTamperProtected , OnAccessProtectionEnabled, RealTimeProtectionEnabled
+   ```
 
+   Expected output for `Get-MpPreference`:
+
+   ```output
+   AMRunningMode             : Normal
+   AntivirusEnabled          : True
+   BehaviorMonitorEnabled    : True
+   IsTamperProtected         : True
+   OnAccessProtectionEnabled : True
+   RealTimeProtectionEnabled : True
    ```
    
 3. **Check the status of EDR**. Open Command Prompt, and then run the following command:
 
-   `PS C:\Windows\System32> Get-Service -Name sense | FL *`
+   ```powershell
+   PS C:\Windows\System32> Get-Service -Name sense | FL *
+   ```
 
    You should see output that resembles the following code snippet:
 
-   ```powershell
-
+   ```output
    Name        : sense
    RequiredServices  : {}
    CanPauseAndContinue : False
@@ -203,7 +220,6 @@ Here's a list of what to check:
    StartType      : Automatic
    Site        :
    Container      :
-
    ```
 
    The values you want to see are `Status: Running` and `StartType: Automatic`.
@@ -214,7 +230,7 @@ Here's a list of what to check:
 
    For more information about updates, see [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).
 
-5. **Make sure [behavior monitoring](behavioral-blocking-containment.md) is turned on**. If tamper protection is enabled, behavior monitoring is turned on by default. Use the default configuration of tamper protection enabled, behavior monitoring enabled, and real-time monitoring enabled unless a specific problem is identified. 
+5. **Make sure [behavior monitoring](behavioral-blocking-containment.md) is turned on**. When tamper protection is enabled, behavior monitoring is turned on by default. Use the default configuration of tamper protection enabled, behavior monitoring enabled, and real-time monitoring enabled unless a specific problem is identified. 
 
    For more information, see [Built-in protection helps guard against ransomware](built-in-protection.md).
 
@@ -242,12 +258,13 @@ The following sections describe how to confirm or configure Defender for Endpoin
 
 Use Windows Update, or run the following command:
 
-`PS C:\Program Files\Windows Defender> .\MpCmdRun.exe -SignatureUpdate`
-
+```powershell
+PS C:\Program Files\Windows Defender> .\MpCmdRun.exe -SignatureUpdate
+```
+ 
 You should see an output that resembles the following code snippet:
 
-```properties
-
+```output
 Signature update started . . .
 Service Version: 4.18.23050.9
 Engine Version: 1.1.23060.1005
@@ -255,12 +272,13 @@ AntiSpyware Signature Version: 1.393.925.0
 Antivirus Signature Version: 1.393.925.0
 Signature update finished.
 PS C:\Program Files\Windows Defender>
-
 ```
 
 Another option is to use this command: 
 
-`PS C:\Program Files\Windows Defender> Update-MpSignature`
+```powershell
+PS C:\Program Files\Windows Defender> Update-MpSignature
+```
 
 For more information about these commands, see the following resources:
 
@@ -271,7 +289,9 @@ For more information about these commands, see the following resources:
 
 [EDR in block mode](edr-in-block-mode.md) provides added protection from malicious artifacts when Microsoft Defender Antivirus isn't the primary antivirus product and is running in passive mode. You can determine whether EDR in block mode is enabled by running the following command:
 
-`Get-MPComputerStatus|select AMRunningMode`
+```powershell
+Get-MPComputerStatus|select AMRunningMode
+```
 
 There are two modes: Normal and Passive Mode. Testing with SAP systems was done only with `AMRunningMode = Normal` for SAP systems. 
 
@@ -279,11 +299,13 @@ For more information about this command, see [Get-MpComputerStatus](/powershell/
 
 ### Configure antivirus exclusions
 
-Before you configure exclusions, make sure that the SAP Basis team coordinates with your security team. Exclusions should be configured centrally and not at the VM level. Exclusions such as the shared SAPMNT file system should be excluded via a policy using the Intune admin tool.
+Before you configure exclusions, make sure that the SAP Basis team coordinates with your security team. Exclusions should be configured centrally and not at the VM level. Exclusions such as the shared SAPMNT file system should be excluded via a policy using the [Intune admin portal](https://intune.microsoft.com).
 
 To view exclusions, use the following command:
 
-`Get-MpPreference | Select-Object -Property ExclusionPath`
+```powershell
+Get-MpPreference | Select-Object -Property ExclusionPath
+```
 
 For more information about this command, see [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus?view=windowsserver2022-ps&preserve-view=true).
 
@@ -302,19 +324,17 @@ It isn't recommended to exclude files, paths, or processes from EDR as such excl
 > [!CAUTION]
 > It is not recommended to disable security software unless there is no alternative to solve or isolate a problem. 
 
-Defender for Endpoint should be configured with [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) turned on. To temporarily disable Defender for Endpoint to isolate problems, it's recommended to use [troubleshooting mode](/defender-endpoint/enable-troubleshooting-mode).
+Defender for Endpoint should be configured with [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) turned on. To temporarily disable Defender for Endpoint to isolate problems, use [troubleshooting mode](enable-troubleshooting-mode.md).
 
 To shut down various subcomponents of the Microsoft Defender Antivirus solution, run the following commands:
 
 ```powershell
-
 Set-MPPreference -DisableTamperProtection $true
 Set-MpPreference -DisableRealtimeMonitoring $true
 Set-MpPreference -DisableBehaviorMonitoring $true
 Set-MpPreference -MAPSReporting Disabled
 Set-MpPreference -DisableIOAVProtection $true
 Set-MpPreference -EnableNetworkProtection Disabled 
-
 ```
 
 For more information about these commands, see [Set-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true).
@@ -325,10 +345,8 @@ For more information about these commands, see [Set-MpPreference](/powershell/mo
 To turn off [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) (Microsoft Advanced Protection Service, or MAPS), run the following commands:
 
 ```powershell
-
 PowerShell Set-MpPreference -MAPSReporting 0​
 PowerShell Set-MpPreference -MAPSReporting Disabled​
-
 ```
 
 For more information about cloud-delivered protection, see the following resources:

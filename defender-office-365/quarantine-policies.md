@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to use quarantine policies to control what users are able to do to quarantined messages.
 ms.service: defender-office-365
-ms.date: 11/16/2023
+ms.date: 4/26/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -55,7 +55,7 @@ You create and assign quarantine policies in the Microsoft Defender portal or in
 - How long messages that were quarantined by anti-spam and anti-phishing protection are held before they expire is controlled by the **Retain spam in quarantine for this many days** (_QuarantineRetentionPeriod_) in anti-spam policies. For more information, see the table in [Quarantine retention](quarantine-about.md#quarantine-retention).
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)**, or **Security operations/Security Data/Email & collaboration quarantine (manage)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)**, or **Security operations/Security Data/Email & collaboration quarantine (manage)**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Quarantine Administrator**, **Security Administrator**, or **Organization Management** role groups.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator** or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
@@ -65,9 +65,9 @@ You create and assign quarantine policies in the Microsoft Defender portal or in
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & Rules** \> **Threat policies** \> **Quarantine policy** in the **Rules** section. Or, to go directly to the **Quarantine policy** page, use <https://security.microsoft.com/quarantinePolicies>.
 
-   :::image type="content" source="/defender/media/mdo-quarantine-policy-page.png" alt-text="Quarantine policy page in the Microsoft Defender portal." lightbox="/defender/media/mdo-quarantine-policy-page.png":::
+   :::image type="content" source="media/mdo-quarantine-policy-page.png" alt-text="Quarantine policy page in the Microsoft Defender portal." lightbox="media/mdo-quarantine-policy-page.png":::
 
-2. On the **Quarantine policies** page, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Add custom policy** to start the new quarantine policy wizard.
+2. On the **Quarantine policies** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add custom policy** to start the new quarantine policy wizard.
 
 3. On the **Policy name** page, enter a brief but unique name in the **Policy name** box. The policy name is selectable in dropdown lists in upcoming steps.
 
@@ -93,7 +93,7 @@ You create and assign quarantine policies in the Microsoft Defender portal or in
 5. On the **Quarantine notification** page, select **Enable** to turn on quarantine notifications.
 
    > [!NOTE]
-   > If you turn on quarantine notifications for **No access** permissions (on the **Recipient message access** page, you selected **Set specific access (Advanced)** \> **Select release action preference** \> blank), users can view their messages in quarantine, but the only available action for the messages is :::image type="icon" source="/defender/media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers).
+   > If you turn on quarantine notifications for **No access** permissions (on the **Recipient message access** page, you selected **Set specific access (Advanced)** \> **Select release action preference** \> blank), users can view their messages in quarantine, but the only available action for the messages is :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers).
 
    When you're finished on the **Quarantine notification** page, select **Next**.
 
@@ -137,7 +137,7 @@ New-QuarantinePolicy -Name "<UniqueName>" -EndUserQuarantinePermissionsValue <0 
   |PermissionToPreview|2|00000010|
   |PermissionToDelete|1|00000001|
 
-  ¹ The value 0 for this permission doesn't hide the :::image type="icon" source="/defender/media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message header** action in quarantine. If the message is visible to a user in quarantine, the action is always available for the message.
+  ¹ The value 0 for this permission doesn't hide the :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message header** action in quarantine. If the message is visible to a user in quarantine, the action is always available for the message.
 
   ² This permission isn't used (the value 0 or 1 does nothing).
 
@@ -158,7 +158,7 @@ New-QuarantinePolicy -Name "<UniqueName>" -EndUserQuarantinePermissionsValue <0 
   |Binary value|00011011|
   |Decimal value to use|27|
 
-- If you set the _ESNEnabled_ parameter to the value `$true` when the value of the _EndUserQuarantinePermissionsValue_ parameter is 0 (**No access** where all permissions are turned off), users can see their messages in quarantine, but the only available action for the messages is :::image type="icon" source="/defender/media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers).
+- If you set the _ESNEnabled_ parameter to the value `$true` when the value of the _EndUserQuarantinePermissionsValue_ parameter is 0 (**No access** where all permissions are turned off), users can see their messages in quarantine, but the only available action for the messages is :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers).
 
 This example creates a new quarantine policy named LimitedAccess with quarantine notifications turned on that assigns the Limited access permissions as described in the previous table.
 
@@ -210,13 +210,13 @@ The rest of this step explains how to assign quarantine policies for supported f
 
 2. On the **Anti-spam policies** page, use either of the following methods:
    - Select an existing **inbound** anti-spam policy by clicking anywhere in the row other than the check box next to the name. In the policy details flyout that opens, go to the **Actions** section and then select **Edit actions**.
-   - Select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Create policy**, select **Inbound** from the dropdown list to start the new anti-spam policy wizard, and then get to the **Actions** page.
+   - Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create policy**, select **Inbound** from the dropdown list to start the new anti-spam policy wizard, and then get to the **Actions** page.
 
 3. On the **Actions** page or flyout, every verdict that has the **Quarantine message** action selected also has the **Select quarantine policy** box for you to select a quarantine policy.
 
    During the creation of the anti-spam policy, if you _change_ the action of a spam filtering verdict to **Quarantine message**, the **Select quarantine policy** box is blank by default. A blank value means the default quarantine policy for that verdict is used. When you later view or edit the anti-spam policy settings, the quarantine policy name is shown. The default quarantine policies are listed in the [supported features table](#step-2-assign-a-quarantine-policy-to-supported-features).
 
-   :::image type="content" source="/defender/media/quarantine-tags-in-anti-spam-policies.png" alt-text="The Quarantine policy selections in an anti-spam policy" lightbox="/defender/media/quarantine-tags-in-anti-spam-policies.png":::
+   :::image type="content" source="media/quarantine-tags-in-anti-spam-policies.png" alt-text="The Quarantine policy selections in an anti-spam policy" lightbox="media/quarantine-tags-in-anti-spam-policies.png":::
 
 Full instructions for creating and modifying anti-spam policies are described in [Configure anti-spam policies in EOP](anti-spam-policies-configure.md).
 
@@ -273,7 +273,7 @@ Spoof intelligence is available in EOP and Defender for Office 365. User imperso
 
 2. On the **Anti-phishing** page, use either of the following methods:
    - Select an existing anti-phishing policy by clicking anywhere in the row other than the check box next to the name. In the policy details flyout that opens, select the **Edit** link in the relevant section as described in the next steps.
-   - Select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Create** to start the new anti-phishing policy wizard. The relevant pages are described in the next steps.
+   - Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create** to start the new anti-phishing policy wizard. The relevant pages are described in the next steps.
 
 3. On the **Phishing threshold & protection** page or flyout, verify that the following settings are turned on and configured as required:
    - **Enabled users to protect**: Specify users.
@@ -286,7 +286,7 @@ Spoof intelligence is available in EOP and Defender for Office 365. User imperso
 
    During the creation of the anti-phishing policy, if you don't select a quarantine policy, the default quarantine policy is used. When you later view or edit the anti-phishing policy settings, the quarantine policy name is shown. The default quarantine policies are listed in the [supported features table](#step-2-assign-a-quarantine-policy-to-supported-features).
 
-   :::image type="content" source="/defender/media/quarantine-tags-in-anti-phishing-policies.png" alt-text="The Quarantine policy selections in an anti-phishing policy." lightbox="/defender/media/quarantine-tags-in-anti-phishing-policies.png":::
+   :::image type="content" source="media/quarantine-tags-in-anti-phishing-policies.png" alt-text="The Quarantine policy selections in an anti-phishing policy." lightbox="media/quarantine-tags-in-anti-phishing-policies.png":::
 
 Full instructions for creating and modifying anti-phishing policies are available in the following articles:
 
@@ -346,7 +346,7 @@ For detailed syntax and parameter information, see [Set-AntiPhishPolicy](/powers
 
 2. On the **Anti-malware** page, use either of the following methods:
    - Select an existing anti-malware policy by clicking anywhere in the row other than the check box next to the name. In the policy details flyout that opens, go to the **Protection settings** section, and then select **Edit protection settings**.
-   - Select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Create** to start the new anti-malware policy wizard and get to the **Protection settings** page.
+   - Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create** to start the new anti-malware policy wizard and get to the **Protection settings** page.
 
 3. On the **Protection settings** page or flyout, view or select a quarantine policy in the **Quarantine policy** box.
 
@@ -354,7 +354,7 @@ For detailed syntax and parameter information, see [Set-AntiPhishPolicy](/powers
 
    Users can't release their own messages that were quarantined as malware by anti-malware policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware messages.
 
-   :::image type="content" source="/defender/media/quarantine-tags-in-anti-malware-policies.png" alt-text="The Quarantine policy selections in an anti-malware policy." lightbox="/defender/media/quarantine-tags-in-anti-malware-policies.png":::
+   :::image type="content" source="media/quarantine-tags-in-anti-malware-policies.png" alt-text="The Quarantine policy selections in an anti-malware policy." lightbox="media/quarantine-tags-in-anti-malware-policies.png":::
 
 Full instructions for creating and modifying anti-malware policies are available in [Configure anti-malware policies](anti-malware-policies-configure.md).
 
@@ -402,13 +402,13 @@ For detailed syntax and parameter information, see [Set-MalwareFilterPolicy](/po
 
 2. On the **Safe Attachments** page, use either of the following methods:
    - Select an existing Safe Attachments policy by clicking anywhere in the row other than the check box next to the name. In the policy details flyout that opens, select the **Edit settings** link in **Settings** section.
-   - Select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Create** to start the new Safe Attachments policy wizard and get to the **Settings** page.
+   - Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create** to start the new Safe Attachments policy wizard and get to the **Settings** page.
 
 3. On the **Settings** page or flyout, view or select a quarantine policy in the **Quarantine policy** box.
 
    Users can't release their own messages that were quarantined as malware by Safe Attachments policies, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware messages.
 
-   :::image type="content" source="/defender/media/quarantine-tags-in-safe-attachments-policies.png" alt-text="The Quarantine policy selections in a Safe Attachments policy." lightbox="/defender/media/quarantine-tags-in-safe-attachments-policies.png":::
+   :::image type="content" source="media/quarantine-tags-in-safe-attachments-policies.png" alt-text="The Quarantine policy selections in a Safe Attachments policy." lightbox="media/quarantine-tags-in-safe-attachments-policies.png":::
 
 Full instructions for creating and modifying Safe Attachments policies are described in [Set up Safe Attachments policies in Microsoft Defender for Office 365](safe-attachments-policies-configure.md).
 
@@ -464,13 +464,13 @@ You can use the procedures in this section to customize the **Sender display nam
 
 - The **Sender display name** as shown in the following screenshot:
 
-  :::image type="content" source="/defender/media/quarantine-tags-esn-customization-display-name.png" alt-text="A customized sender display name in a quarantine notification." lightbox="/defender/media/quarantine-tags-esn-customization-display-name.png":::
+  :::image type="content" source="media/quarantine-tags-esn-customization-display-name.png" alt-text="A customized sender display name in a quarantine notification." lightbox="media/quarantine-tags-esn-customization-display-name.png":::
 
 - The **Subject** field of quarantine notification messages.
 
 - The **Disclaimer** text that's added to the bottom of quarantine notifications. The localized text, **A disclaimer from your organization:** is always included first, followed by the text you specify as show in the following screenshot:
 
-:::image type="content" source="/defender/media/quarantine-tags-esn-customization-disclaimer.png" alt-text="A custom disclaimer at the bottom of a quarantine notification." lightbox="/defender/media/quarantine-tags-esn-customization-disclaimer.png":::
+:::image type="content" source="media/quarantine-tags-esn-customization-disclaimer.png" alt-text="A custom disclaimer at the bottom of a quarantine notification." lightbox="media/quarantine-tags-esn-customization-disclaimer.png":::
 
 > [!TIP]
 > Quarantine notifications aren't localized for on-premises mailboxes.
@@ -485,7 +485,7 @@ To create customized quarantine notifications for up to three languages, do the 
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Quarantine policies** in the **Rules** section. Or, to go directly to the **Quarantine policies** page, use <https://security.microsoft.com/quarantinePolicies>.
 
-2. On the **Quarantine policies** page, select :::image type="icon" source="/defender/media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**.
+2. On the **Quarantine policies** page, select :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Global settings**.
 
 3. In the **Quarantine notification settings** flyout that opens, do the following steps:
 
@@ -497,15 +497,15 @@ To create customized quarantine notifications for up to three languages, do the 
 
    3. Select the **Add** button near the **Choose language** box.
 
-      After you select **Add**, the configured settings for the language appear in the **Click the language to show the previously configured settings** box. To reload the settings, click on the language name. To remove the language, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false":::.
+      After you select **Add**, the configured settings for the language appear in the **Click the language to show the previously configured settings** box. To reload the settings, click on the language name. To remove the language, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false":::.
 
-      :::image type="content" source="/defender/media/quarantine-tags-esn-customization-selected-languages.png" alt-text="The selected languages in the global quarantine notification settings of quarantine policies." lightbox="/defender/media/quarantine-tags-esn-customization-selected-languages.png":::
+      :::image type="content" source="media/quarantine-tags-esn-customization-selected-languages.png" alt-text="The selected languages in the global quarantine notification settings of quarantine policies." lightbox="media/quarantine-tags-esn-customization-selected-languages.png":::
 
    4. Repeat the previous steps to create a maximum of three customized quarantine notifications based on the recipient's language.
 
 4. When you're finished on the **Quarantine notifications** flyout, select **Save**.
 
-   :::image type="content" source="/defender/media/mdo-quarantine-policy-quarantine-notification-settings.png" alt-text="Quarantine notification settings flyout in the Microsoft Defender portal." lightbox="/defender/media/mdo-quarantine-policy-quarantine-notification-settings.png":::
+   :::image type="content" source="media/mdo-quarantine-policy-quarantine-notification-settings.png" alt-text="Quarantine notification settings flyout in the Microsoft Defender portal." lightbox="media/mdo-quarantine-policy-quarantine-notification-settings.png":::
 
 For information about the **Specify sender address**
 
@@ -519,7 +519,7 @@ Even if you don't customize quarantine notifications for different languages, se
 
   A custom logo in a quarantine notification is shown in the following screenshot:
 
-  :::image type="content" source="/defender/media/quarantine-tags-esn-customization-logo.png" alt-text="A custom logo in a quarantine notification" lightbox="/defender/media/quarantine-tags-esn-customization-logo.png":::
+  :::image type="content" source="media/quarantine-tags-esn-customization-logo.png" alt-text="A custom logo in a quarantine notification" lightbox="media/quarantine-tags-esn-customization-logo.png":::
 
 - **Send end-user spam notification every (days)**: Select the frequency for quarantine notifications. You can select **Within 4 hours**, **Daily**, or **Weekly**.
 
@@ -545,7 +545,7 @@ Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-Quaranti
 This example configures the following settings:
 
 - Customized quarantine notifications for US English and Spanish.
-- The quarantine notification sender's email address is set to michelle@contoso.onmicrosoft.com.
+- The quarantine notification sender's email address is set to `michelle@contoso.onmicrosoft.com`.
 
 ```powershell
 Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy -MultiLanguageSetting ('Default','Spanish') -MultiLanguageCustomDisclaimer ('For more information, contact the Help Desk.','Para obtener más información, comuníquese con la mesa de ayuda.') -ESNCustomSubject ('You have quarantined messages','Tienes mensajes en cuarentena') -MultiLanguageSenderName ('Contoso administrator','Administradora de contoso') -EndUserSpamNotificationCustomFromAddress michelle@contoso.onmicrosoft.com
@@ -595,7 +595,7 @@ You can't modify the default quarantine policies named AdminOnlyAccessPolicy, De
 
 2. On the **Quarantine policies** page, select the policy by clicking the check box next to the name.
 
-3. Select the :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit policy** action that appears.
+3. Select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit policy** action that appears.
 
 The policy wizard opens with the settings and values of the selected quarantine policy. The steps are virtually the same as described in the [Create quarantine policies in the Microsoft Defender portal](#step-1-create-quarantine-policies-in-the-microsoft-defender-portal) section. The main difference is: you can't rename an existing policy.
 
@@ -628,7 +628,7 @@ For detailed syntax and parameter information, see [Set-QuarantinePolicy](/power
 
 2. On the **Quarantine policies** page, select the policy by clicking the check box next to the name.
 
-3. Select the :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete policy** action that appears.
+3. Select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete policy** action that appears.
 
 4. Select **Remove policy** in the confirmation dialog.
 
@@ -692,7 +692,7 @@ The relationship between permissions, permissions groups, and the default quaran
 |DefaultFullAccessWithNotificationPolicy⁴|Full access|Yes|
 |NotificationEnabledPolicy⁵|Full access|Yes|
 
-¹ This permission isn't available in the Defender portal. Turning off the permission in PowerShell doesn't affect the availability of the :::image type="icon" source="/defender/media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message header** action on quarantined messages. If the message is visible to a user in quarantine, the action is always available for the message.
+¹ This permission isn't available in the Defender portal. Turning off the permission in PowerShell doesn't affect the availability of the :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message header** action on quarantined messages. If the message is visible to a user in quarantine, the action is always available for the message.
 
 ² The **Preview** permission is unrelated to the **Review message** action that's available in quarantine notifications.
 
@@ -741,7 +741,7 @@ The effect of **No access** permissions (admin only access) on user capabilities
   - **In quarantine notifications**: Users don't receive quarantine notifications for the messages.
 
 - **Quarantine notifications turned on**:
-  - **On the Quarantine page**: Quarantined messages are visible to users, but the only available action is :::image type="icon" source="/defender/media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers).
+  - **On the Quarantine page**: Quarantined messages are visible to users, but the only available action is :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers).
   - **In quarantine notifications**: Users receive quarantine notifications, but the only available action is **Review message**.
 
 ##### Limited access
@@ -749,11 +749,11 @@ The effect of **No access** permissions (admin only access) on user capabilities
 If the quarantine policy assigns **Limited access** permissions, users get the following capabilities:
 
 - **On the Quarantine page and in the message details in quarantine**: The following actions are available:
-  - :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) (the difference from **Full access** permissions)
-  - :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: [Delete](quarantine-end-user.md#delete-email-from-quarantine)
-  - :::image type="icon" source="/defender/media/m365-cc-sc-preview-message-icon.png" border="false"::: [Preview message](quarantine-end-user.md#preview-email-from-quarantine)
-  - :::image type="icon" source="/defender/media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers)
-  - :::image type="icon" source="/defender/media/m365-cc-sc-block-sender-icon.png" border="false":::  [Block sender](quarantine-end-user.md#block-email-senders-from-quarantine)
+  - :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) (the difference from **Full access** permissions)
+  - :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: [Delete](quarantine-end-user.md#delete-email-from-quarantine)
+  - :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: [Preview message](quarantine-end-user.md#preview-email-from-quarantine)
+  - :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers)
+  - :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false":::  [Block sender](quarantine-end-user.md#block-email-senders-from-quarantine)
 
 - **In quarantine notifications**: The following actions are available:
   - **Review message**
@@ -765,11 +765,11 @@ If the quarantine policy assigns **Limited access** permissions, users get the f
 If the quarantine policy assigns **Full access** permissions (all available permissions), users get the following capabilities:
 
 - **On the Quarantine page and in the message details in quarantine**: The following actions are available:
-  - :::image type="icon" source="/defender/media/m365-cc-sc-check-mark-icon.png" border="false"::: [Release](quarantine-end-user.md#release-quarantined-email)  (the difference from **Limited access** permissions)
-  - :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: [Delete](quarantine-end-user.md#delete-email-from-quarantine)
-  - :::image type="icon" source="/defender/media/m365-cc-sc-preview-message-icon.png" border="false"::: [Preview message](quarantine-end-user.md#preview-email-from-quarantine)
-  - :::image type="icon" source="/defender/media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers)
-  - :::image type="icon" source="/defender/media/m365-cc-sc-block-sender-icon.png" border="false"::: [Block sender](quarantine-end-user.md#block-email-senders-from-quarantine)
+  - :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: [Release](quarantine-end-user.md#release-quarantined-email)  (the difference from **Limited access** permissions)
+  - :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: [Delete](quarantine-end-user.md#delete-email-from-quarantine)
+  - :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: [Preview message](quarantine-end-user.md#preview-email-from-quarantine)
+  - :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers)
+  - :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: [Block sender](quarantine-end-user.md#block-email-senders-from-quarantine)
 
 - **In quarantine notifications**: The following actions are available:
   - **Review message**
@@ -784,7 +784,7 @@ The **Block sender** permission (_PermissionToBlockSender_) allows users to add 
 
 If the **Block sender** permission is enabled:
 
-- :::image type="icon" source="/defender/media/m365-cc-sc-block-sender-icon.png" border="false"::: [Block sender](quarantine-end-user.md#block-email-senders-from-quarantine) is available on the **Quarantine** page and in the message details in quarantine.
+- :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: [Block sender](quarantine-end-user.md#block-email-senders-from-quarantine) is available on the **Quarantine** page and in the message details in quarantine.
 - **Blocked sender** is available in quarantine notifications.
 
   For this permission to work correctly in quarantine notifications, users need to be enabled for remote PowerShell. For instructions, see [Enable or disable access to Exchange Online PowerShell](/powershell/exchange/disable-access-to-exchange-online-powershell).
@@ -802,7 +802,7 @@ The **Delete** permission (_PermissionToDelete_) allows users to delete their ow
 
 If the **Delete** permission is enabled:
 
-- :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: [Delete](quarantine-end-user.md#delete-email-from-quarantine) is available on the **Quarantine** page and in the message details in quarantine.
+- :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: [Delete](quarantine-end-user.md#delete-email-from-quarantine) is available on the **Quarantine** page and in the message details in quarantine.
 - No effect in quarantine notifications. Deleting a quarantined message from the quarantine notification is not possible.
 
 If the **Delete** permission is disabled, users can't delete their own messages from quarantine (the action isn't available).
@@ -816,7 +816,7 @@ The **Preview** permission (_PermissionToPreview_) allows users to preview their
 
 If the **Preview** permission is enabled:
 
-- :::image type="icon" source="/defender/media/m365-cc-sc-preview-message-icon.png" border="false"::: [Preview message](quarantine-end-user.md#preview-email-from-quarantine) is available on the **Quarantine** page and in the message details in quarantine.
+- :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: [Preview message](quarantine-end-user.md#preview-email-from-quarantine) is available on the **Quarantine** page and in the message details in quarantine.
 - No effect in quarantine notifications. Previewing a quarantined message from the quarantine notification isn't possible. The **Review message** action in quarantine notifications takes users to the details flyout of the message in quarantine where they can preview the message.
 
 If the **Preview** permission is disabled, users can't preview their own messages in quarantine (the action isn't available).
@@ -830,7 +830,7 @@ The **Allow recipients to release a message from quarantine** permission (_Permi
 
 If the **Allow recipients to release a message from quarantine** permission is enabled:
 
-- :::image type="icon" source="/defender/media/m365-cc-sc-check-mark-icon.png" border="false"::: [Release](quarantine-end-user.md#release-quarantined-email) is available on the **Quarantine** page and in the message details in quarantine.
+- :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: [Release](quarantine-end-user.md#release-quarantined-email) is available on the **Quarantine** page and in the message details in quarantine.
 - **Release** is available in quarantine notifications.
 
 If the **Allow recipients to release a message from quarantine** permission is disabled, users can't release their own messages from quarantine or in quarantine notifications (the action isn't available).
@@ -841,7 +841,7 @@ The **Allow recipients to request a message to be released from quarantine** per
 
 If the **Allow recipients to request a message to be released from quarantine** permission is enabled:
 
-- :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) is available on the **Quarantine** page and in the message details in quarantine.
+- :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) is available on the **Quarantine** page and in the message details in quarantine.
 - **Request release** is available in quarantine notifications.
 
 If the **Allow recipients to request a message to be released from quarantine** permission is disabled, users can't request the release of their own messages from quarantine or in quarantine notifications (the action isn't available).

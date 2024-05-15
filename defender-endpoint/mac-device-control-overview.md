@@ -2,10 +2,10 @@
 title: Device control for macOS
 description: Learn how to configure Microsoft Defender for Endpoint on Mac to reduce threats from removable storage such as USB devices.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+author: YongRhee-MSFT
+ms.author: yongrhee
+manager: dansimp
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/03/2023
+ms.date: 04/30/2024
 ---
 
 # Device Control for macOS
@@ -54,33 +54,33 @@ Microsoft Defender for Endpoint Device Control feature enables you to:
 - Deploy Full Disk Access: you may already have previously created and deployed this [https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) for other MDE features. You need to grant Full Disk Access permission for a new application: `com.microsoft.dlp.daemon`.
 - Enable Device Control on the MDE Preference setting:
 
-   Data Loss Prevention (DLP)/Features/
+  - Data Loss Prevention (DLP)/Features/
 
-   For **Feature Name**, enter "DC_in_dlp"
+  - For **Feature Name**, enter "DC_in_dlp"
 
-   For **State**, enter "enabled"
+  - For **State**, enter "enabled"
 
-Example 1: JAMF using [schema.json](https://github.com/microsoft/mdatp-xplat/tree/master/macos/schema)
+Example 1: JAMF using [schema.json](https://github.com/microsoft/mdatp-xplat/tree/master/macos/schema).
 
 :::image type="content" source="media/macos-device-control-jamf-json.png" alt-text="Screenshot that shows how to enable Device Control in Microsoft Defender for Endpoint Data Loss Prevention / Features.":::
 
-<details><summary>Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/macOS/mobileconfig/demo.mobileconfig)</summary>
+Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/mobileconfig/demo.mobileconfig)
 
 ```xml
-   <key>dlp</key>
-    <dict> 
-      <key>features</key>
-      <array> 
-        <dict> 
-          <key>name</key>
-          <string>DC_in_dlp</string>
-          <key>state</key>
-          <string>enabled</string>
-        </dict>
-      </array>
-    </dict>
+<key>dlp</key>
+<dict> 
+  <key>features</key>
+  <array> 
+	<dict> 
+	  <key>name</key>
+	  <string>DC_in_dlp</string>
+	  <key>state</key>
+	  <string>enabled</string>
+	</dict>
+  </array>
+</dict>
 ```
-</details>
+
 
 - Minimum product version: 101.91.92 or higher
 - Run _mdatp version_ through Terminal to see the product version on your client machine:
@@ -117,6 +117,7 @@ Device control for macOS has similar capabilities to Device control for Windows,
 
 
 ### Settings
+
 Here are the properties you can use when you create the groups, rules, and settings in device control policy for macOS.
 
 | Property name | Description | Options |
@@ -280,38 +281,38 @@ In this scenario, you need to create two groups: one group for any removable med
 #### Step 1: Settings: enable Device Control and set Default Enforcement
 
 ```json
-    "settings": { 
+"settings": { 
 
-        "features": { 
+	"features": { 
 
-            "removableMedia": { 
+		"removableMedia": { 
 
-                "disable": false 
+			"disable": false 
 
-            } 
+		} 
 
-        }, 
+	}, 
 
-        "global": { 
+	"global": { 
 
-            "defaultEnforcement": "allow" 
+		"defaultEnforcement": "allow" 
 
-        }, 
+	}, 
 
-        "ux": { 
+	"ux": { 
 
-            "navigationTarget": "http://www.deskhelp.com" 
+		"navigationTarget": "http://www.deskhelp.com" 
 
-        } 
+	} 
 
-    } 
+} 
 ```
 
 #### Step 2: Groups: Create any removable media group and approved-USBs group
 
--1. Create a group to cover any removable media devices
--1. Create a group for approved USBs
--1. Combine those groups into one 'groups'
+1. Create a group to cover any removable media devices.
+1. Create a group for approved USBs.
+1. Combine those groups into one `groups`.
 
 ```json
 "groups": [ 
@@ -377,95 +378,95 @@ In this scenario, you need to create two groups: one group for any removable med
 
 #### Step 3: Rules: Create Deny policy for unallowed USBs
 
-Create access policy rule and put into 'rules':
+Create access policy rule and put into `rules`:
 
 ```json
-   "rules": [ 
+"rules": [ 
 
-        { 
+	{ 
 
-            "id": "772cef80-229f-48b4-bd17-a69130092981", 
+		"id": "772cef80-229f-48b4-bd17-a69130092981", 
 
-            "name": "Deny RWX to all Removable Media Devices except Kingston", 
+		"name": "Deny RWX to all Removable Media Devices except Kingston", 
 
-            "includeGroups": [ 
+		"includeGroups": [ 
 
-                "3f082cd3-f701-4c21-9a6a-ed115c28e211" 
+			"3f082cd3-f701-4c21-9a6a-ed115c28e211" 
 
-            ], 
+		], 
 
-            "excludeGroups": [ 
+		"excludeGroups": [ 
 
-                "3f082cd3-f701-4c21-9a6a-ed115c28e212" 
+			"3f082cd3-f701-4c21-9a6a-ed115c28e212" 
 
-            ], 
+		], 
 
-            "entries": [ 
+		"entries": [ 
 
-                { 
+			{ 
 
-                    "$type": "removableMedia", 
+				"$type": "removableMedia", 
 
-                    "id": "A7CEE2F8-CE34-4B34-9CFE-4133F0361035", 
+				"id": "A7CEE2F8-CE34-4B34-9CFE-4133F0361035", 
 
-                    "enforcement": { 
+				"enforcement": { 
 
-                        "$type": "deny" 
+					"$type": "deny" 
 
-                    }, 
+				}, 
 
-                    "access": [ 
+				"access": [ 
 
-                        "read", 
+					"read", 
 
-                        "write", 
+					"write", 
 
-                        "execute" 
+					"execute" 
 
-                    ] 
+				] 
 
-                }, 
+			}, 
 
-                { 
+			{ 
 
-                    "$type": "removableMedia", 
+				"$type": "removableMedia", 
 
-                    "id": "18BA3DD5-4C9A-458B-A756-F1499FE94FB4", 
+				"id": "18BA3DD5-4C9A-458B-A756-F1499FE94FB4", 
 
-                    "enforcement": { 
+				"enforcement": { 
 
-                        "$type": "auditDeny", 
+					"$type": "auditDeny", 
 
-                        "options": [ 
+					"options": [ 
 
-                            "send_event", 
+						"send_event", 
 
-                            "show_notification" 
+						"show_notification" 
 
-                        ] 
+					] 
 
-                    }, 
+				}, 
 
-                    "access": [ 
+				"access": [ 
 
-                        "read", 
+					"read", 
 
-                        "write", 
+					"write", 
 
-                        "execute" 
+					"execute" 
 
-                    ] 
+				] 
 
-                } 
+			} 
 
-            ] 
+		] 
 
-        } 
+	} 
 
-    ] 
+] 
 ```
 
-In this case, only have one access rule policy, but if you have multiple, make sure to add all into 'rules'.
+In this case, only have one access rule policy, but if you have multiple, make sure to add all into `rules`.
 
 
 ## Known Issues
@@ -474,7 +475,7 @@ In this case, only have one access rule policy, but if you have multiple, make s
 >In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device controls ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS less than 14.3.1.
 
 >[!WARNING]
->Device Control on macOS restricts Android devices that are connected using PTP mode **only**.  Device control does not restrict other modes such as File Transfer, USB Tethering and MIDI
+>Device Control on macOS restricts Android devices that are connected using PTP mode **only**.  Device control does not restrict other modes such as File Transfer, USB Tethering and MIDI.
 
 
 

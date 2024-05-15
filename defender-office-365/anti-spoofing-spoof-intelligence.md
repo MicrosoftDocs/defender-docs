@@ -69,7 +69,7 @@ The rest of this article explains how to use the spoof intelligence insight in t
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Allow or block spoofed senders or turn on or turn off spoof intelligence_: Membership in one of the following role groups:
       - **Organization Management**
@@ -91,7 +91,7 @@ The rest of this article explains how to use the spoof intelligence insight in t
 
 3. On the **Spoofed senders** tab, the spoof intelligence insight looks like this:
 
-   :::image type="content" source="/defender/media/m365-sc-spoof-intelligence-insight.png" alt-text="The Spoof intelligence insight on the Anti-phishing policy page" lightbox="/defender/media/m365-sc-spoof-intelligence-insight.png":::
+   :::image type="content" source="media/m365-sc-spoof-intelligence-insight.png" alt-text="The Spoof intelligence insight on the Anti-phishing policy page" lightbox="media/m365-sc-spoof-intelligence-insight.png":::
 
    The insight has two modes:
 
@@ -123,18 +123,18 @@ On the **Spoof intelligence insight** page, you can sort the entries by clicking
   - **Allowed**: The domain failed explicit email authentication checks [SPF](email-authentication-spf-configure.md), [DKIM](email-authentication-dkim-configure.md), and [DMARC](email-authentication-dmarc-configure.md). However, the domain passed our implicit email authentication checks ([composite authentication](email-authentication-about.md#composite-authentication)). As a result, no anti-spoofing action was taken on the message.
   - **Blocked**: Messages from the combination of the spoofed domain _and_ sending infrastructure are marked as bad by spoof intelligence. The action that's taken on the spoofed messages with malicious intent is controlled by the [Standard or Strict preset security policies](preset-security-policies.md), the default anti-phishing policy, or custom anti-phishing policies. For more information, see [Configure anti-phishing policies in Microsoft Defender for Office 365](anti-phishing-policies-mdo-configure.md).
 
-To change the list of spoofed senders from normal to compact spacing, select :::image type="icon" source="/defender/media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="/defender/media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+To change the list of spoofed senders from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
 
-To filter the entries, select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
+To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. The following filters are available in the **Filter** flyout that opens:
 
 - **Spoof type**: The available values are **Internal** and **External**.
 - **Action**: The available values are **Allow** and **Block**
 
-When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="/defender/media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific entries.
 
-Use :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of spoof detections to a CSV file.
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of spoof detections to a CSV file.
 
 ### View details about spoof detections
 
@@ -154,7 +154,7 @@ When you select a spoof detection from the list by clicking anywhere in the row 
   Select **Customize columns** to remove the columns that are shown. When you're finished, select **Apply**.
 
 > [!TIP]
-> To see details about other entries without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other entries without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 To change the spoof detection from **Allow** to **Block** or vice-versa, see the next section.
 
@@ -163,7 +163,7 @@ To change the spoof detection from **Allow** to **Block** or vice-versa, see the
 On the **Spoof intelligence insight** page at <https://security.microsoft.com/spoofintelligence>, use either of the following methods to override the spoof intelligence verdict:
 
 - Select one or more entries from the list by selecting the check box next to the first column.
-  1. Select the :::image type="icon" source="/defender/media/m365-cc-sc-bulk-actions-icon.png" border="false"::: **Bulk actions** action that appears.
+  1. Select the :::image type="icon" source="media/m365-cc-sc-bulk-actions-icon.png" border="false"::: **Bulk actions** action that appears.
   2. In the **Bulk actions** flyout that opens, select **Allow to spoof** or **Block from spoofing**, and then select **Apply**.
 
 - Select the entry from the list by clicking anywhere in the row other than the check box.

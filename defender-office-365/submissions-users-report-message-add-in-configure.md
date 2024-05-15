@@ -47,39 +47,39 @@ After the add-in is installed and enabled, users see the following icons based o
   - <u>The **Report Message** icon in the Classic Ribbon</u>:
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="/defender/media/OutlookReportMessageIcon.png" alt-text="The Report Message add-in using the Classic Ribbon in Outlook." lightbox="/defender/media/OutlookReportMessageIcon.png":::
+    > :::image type="content" source="media/OutlookReportMessageIcon.png" alt-text="The Report Message add-in using the Classic Ribbon in Outlook." lightbox="media/OutlookReportMessageIcon.png":::
 
-  - <u>The **Report Message** icon in the Simplified Ribbon</u>: Select :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More commands** \> **Report Message** in the **Protection** section.
+  - <u>The **Report Message** icon in the Simplified Ribbon</u>: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More commands** \> **Report Message** in the **Protection** section.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="/defender/media/OutlookReportMessage-simplified.png" alt-text="The Report Message add-in using the Simplified Ribbon in Outlook." lightbox="/defender/media/OutlookReportMessage-simplified.png":::
+     > :::image type="content" source="media/OutlookReportMessage-simplified.png" alt-text="The Report Message add-in using the Simplified Ribbon in Outlook." lightbox="media/OutlookReportMessage-simplified.png":::
 
   - <u>The **Report Phishing** icon in the Classic Ribbon</u>:
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="/defender/media/Outlook-ReportPhishing.png" alt-text="The Report Phishing add-in in Outlook." lightbox="/defender/media/Outlook-ReportPhishing.png":::
+    > :::image type="content" source="media/Outlook-ReportPhishing.png" alt-text="The Report Phishing add-in in Outlook." lightbox="media/Outlook-ReportPhishing.png":::
 
-  - <u>The **Report Phishing** icon in the Simplified Ribbon</u>: Select :::image type="icon" source="/defender/media/m365-cc-sc-more-actions-icon.png" border="false"::: **More commands** \> **Report phishing** in the **Protection** section.
+  - <u>The **Report Phishing** icon in the Simplified Ribbon</u>: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More commands** \> **Report phishing** in the **Protection** section.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="/defender/media/Outlook-ReportPhishing-simplified.png" alt-text="The Report Phishing add-in using the Simplified Ribbon in Outlook." lightbox="/defender/media/Outlook-ReportPhishing-simplified.png":::
+     > :::image type="content" source="media/Outlook-ReportPhishing-simplified.png" alt-text="The Report Phishing add-in using the Simplified Ribbon in Outlook." lightbox="media/Outlook-ReportPhishing-simplified.png":::
 
 - **Outlook on the web**:
 
   - <u>The Report Message add-in</u>:
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="/defender/media/owa-report-message-icon.png" alt-text="The Report Message add-in icon in Outlook on the web." lightbox="/defender/media/owa-report-message-icon.png":::
+    > :::image type="content" source="media/owa-report-message-icon.png" alt-text="The Report Message add-in icon in Outlook on the web." lightbox="media/owa-report-message-icon.png":::
 
   - <u>The Report Phishing add-in</u>:
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="/defender/media/OWA-ReportPhishing.png" alt-text="The Report Phishing add-in icon in Outlook on the web." lightbox="/defender/media/OWA-ReportPhishing.png":::
+    > :::image type="content" source="media/OWA-ReportPhishing.png" alt-text="The Report Phishing add-in icon in Outlook on the web." lightbox="media/OWA-ReportPhishing.png":::
 
 ## What do you need to know before you begin?
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Security operations/Security data/Response (manage)** or **Security operations/Security data/Read-only**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Security data/Response (manage)** or **Security operations/Security data/Read-only**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Organization Management** role group.
   - [Exchange Online permissions](/Exchange/permissions-exo/permissions-exo): Membership in the **Organization Management** role group.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator** role gives users the required permissions _and_ permissions for other features in Microsoft 365.
@@ -130,55 +130,55 @@ Install and configure the Report Message or Report Phishing add-ins for the orga
 
 1. In the Microsoft 365 admin center at <https://admin.microsoft.com>, expand **Show all** if necessary, and then go to **Settings** \> **Integrated apps**. Or, to go directly to the **Integrated apps** page, use <https://admin.microsoft.com/Adminportal/Home#/Settings/IntegratedApps>.
 
-2. On the **Integrated apps** page, select :::image type="icon" source="/defender/media/m365-cc-sc-get-apps-icon.png" border="false"::: **Get apps**.
+2. On the **Integrated apps** page, select :::image type="icon" source="media/m365-cc-sc-get-apps-icon.png" border="false"::: **Get apps**.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="/defender/media/microsoft-365-admin-center-integrated-apps.png" alt-text="The Integrated apps page in the Microsoft 365 admin center where you select Get apps." lightbox="/defender/media/microsoft-365-admin-center-integrated-apps.png":::
+    > :::image type="content" source="media/microsoft-365-admin-center-integrated-apps.png" alt-text="The Integrated apps page in the Microsoft 365 admin center where you select Get apps." lightbox="media/microsoft-365-admin-center-integrated-apps.png":::
 
-3. In the **Microsoft 365 Apps** page that opens, enter **Report Message** in the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box.
+3. In the **Microsoft 365 Apps** page that opens, enter **Report Message** in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box.
 
    In the search results, select **Get it now** in the **Report Message** entry or the **Report Phishing** entry to start the **Deploy New App** wizard.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="/defender/media/microsoft-365-admin-center-report-message.png" alt-text="Search results for Report Message showing the Report Message and Report Phishing add-ins, and the Get it now buttons on each." lightbox="/defender/media/microsoft-365-admin-center-report-message.png":::
+    > :::image type="content" source="media/microsoft-365-admin-center-report-message.png" alt-text="Search results for Report Message showing the Report Message and Report Phishing add-ins, and the Get it now buttons on each." lightbox="media/microsoft-365-admin-center-report-message.png":::
 
    > [!NOTE]
    > Although the screenshots in the remaining steps show the **Report Message** add-in, the steps are identical for the **Report Phishing** add-in.
 
 4. On the **Add users** page, configure the following settings:
 
-   - **Is this a test deployment?**: Leave the toggle at :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false"::: **No**, or set the toggle to :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: **Yes**.
+   - **Is this a test deployment?**: Leave the toggle at :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **No**, or set the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Yes**.
 
    - **Assign users**: Select one of the following values:
      - **Just me**
      - **Entire organization**
-     - **Specific users/groups**: Find and select users and groups in the search box. After each selection, the user or group appears in the **To be added** section that appears below the search box. To remove a selection, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false"::: on the entry.
+     - **Specific users/groups**: Find and select users and groups in the search box. After each selection, the user or group appears in the **To be added** section that appears below the search box. To remove a selection, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: on the entry.
 
    - **Email notification**: By default, **Send email notification to assigned users** is selected. Select **View email sample** to open [Add-in deployment email alerts](/Microsoft-365/admin/manage/add-in-deployment-email-alerts).
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="/defender/media/microsoft-365-admin-center-deploy-new-app-add-users.png" alt-text="The Add users page of Deploy New App." lightbox="/defender/media/microsoft-365-admin-center-deploy-new-app-add-users.png":::
+   > :::image type="content" source="media/microsoft-365-admin-center-deploy-new-app-add-users.png" alt-text="The Add users page of Deploy New App." lightbox="media/microsoft-365-admin-center-deploy-new-app-add-users.png":::
 
    When you're finished on the **Add users** page, select **Next**.
 
 5. On the **Accept permissions requests** page, read the app permissions and capabilities information carefully before you select **Next**.
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="/defender/media/microsoft-365-admin-center-deploy-new-app-accept-permissions-requests.png" alt-text="The Accept permissions requests page of Deploy New App." lightbox="/defender/media/microsoft-365-admin-center-deploy-new-app-accept-permissions-requests.png":::
+   > :::image type="content" source="media/microsoft-365-admin-center-deploy-new-app-accept-permissions-requests.png" alt-text="The Accept permissions requests page of Deploy New App." lightbox="media/microsoft-365-admin-center-deploy-new-app-accept-permissions-requests.png":::
 
 6. On the **Review and finish deployment** page, review your settings. Select **Back** to make changes.
 
    When you're finished on the **Review and finish deployment** page, select **Finish deployment**.
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="/defender/media/microsoft-365-admin-center-deploy-new-app-review-and-finish.png" alt-text="The Review and finish deployment page of Deploy New App." lightbox="/defender/media/microsoft-365-admin-center-deploy-new-app-review-and-finish.png":::
+   > :::image type="content" source="media/microsoft-365-admin-center-deploy-new-app-review-and-finish.png" alt-text="The Review and finish deployment page of Deploy New App." lightbox="media/microsoft-365-admin-center-deploy-new-app-review-and-finish.png":::
 
    A progress indicator appears on the **Review and finish deployment** page.
 
 7. On the **Deployment completed page**, you can select **view this deployment** to close the page and go to [the details of the add-in](#view-and-edit-settings-for-the-report-message-or-report-phishing-add-ins). Or, select **Done** to close the page.
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="/defender/media/microsoft-365-admin-center-deployment-complete.png" alt-text="The notification message of the deployment completed." lightbox="/defender/media/microsoft-365-admin-center-deployment-complete.png":::
+   > :::image type="content" source="media/microsoft-365-admin-center-deployment-complete.png" alt-text="The notification message of the deployment completed." lightbox="media/microsoft-365-admin-center-deployment-complete.png":::
 
 ### Get the Report Message or the Report Phishing add-ins for your Microsoft 365 GCC or GCC High organization
 
@@ -199,7 +199,7 @@ Admins in Microsoft 365 Government Community Cloud (GCC) or GCC High need to use
 
    When you're finished, select **Install**. In the success dialog, select **OK**.
 
-4. Back on the **Add-ins** page, select the add-in you installed, and then select :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
+4. Back on the **Add-ins** page, select the add-in you installed, and then select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit**.
 
 5. In the add-in properties dialog that opens, confirm or modify the following settings:
    - **Make this add-in available to users in your organization**.
@@ -222,11 +222,11 @@ Admins in Microsoft 365 Government Community Cloud (GCC) or GCC High need to use
 2. On the **Deployed apps** tab of the **Integrated apps** page, select the **Report Message** add-in or the **Report Phishing** add-in by doing one of the following steps:
 
    - In the **Name** column, select the icon or text for the add-in. This selection takes you to the **Overview** tab in the details flyout as described in the next steps.
-   - In the **Name** column, select **⋮** **Edit row**, and then select :::image type="icon" source="/defender/media/m365-cc-sc-add-internal-icon.png" border="false"::: **Edit users** to go to the **Users** tab in the details flyout as described in the next step.
-   - In the **Name** column, select **⋮** **Edit row**, and then select :::image type="icon" source="/defender/media/m365-cc-sc-show-trends-icon.png" border="false"::: **Check usage data** to go to the **Usage** tab in the details flyout as described in the next step.
+   - In the **Name** column, select **⋮** **Edit row**, and then select :::image type="icon" source="media/m365-cc-sc-add-internal-icon.png" border="false"::: **Edit users** to go to the **Users** tab in the details flyout as described in the next step.
+   - In the **Name** column, select **⋮** **Edit row**, and then select :::image type="icon" source="media/m365-cc-sc-show-trends-icon.png" border="false"::: **Check usage data** to go to the **Usage** tab in the details flyout as described in the next step.
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="/defender/media/microsoft-365-admin-center-select-report-message-add-in.png" alt-text="Select the Report Message add-in on the Integrated apps page in the Microsoft 365 admin center." lightbox="/defender/media/microsoft-365-admin-center-select-report-message-add-in.png":::
+   > :::image type="content" source="media/microsoft-365-admin-center-select-report-message-add-in.png" alt-text="Select the Report Message add-in on the Integrated apps page in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-select-report-message-add-in.png":::
 
 3. The details flyout that opens contains the following tabs:
 
@@ -242,27 +242,27 @@ Admins in Microsoft 365 Government Community Cloud (GCC) or GCC High need to use
      - **Usage** section: Select **Check usage data** to got to the **Usage** tab.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="/defender/media/microsoft-365-admin-center-report-message-add-in-details-overview-tab.png" alt-text="The Overview tab on the details flyout of the Report Message add-in in the Microsoft 365 admin center." lightbox="/defender/media/microsoft-365-admin-center-report-message-add-in-details-overview-tab.png":::
+     > :::image type="content" source="media/microsoft-365-admin-center-report-message-add-in-details-overview-tab.png" alt-text="The Overview tab on the details flyout of the Report Message add-in in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-report-message-add-in-details-overview-tab.png":::
 
    - **Users** tab:
-     - **Is this a test deployment?**: Leave the toggle at :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false"::: **No**, or set the toggle to :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: **Yes**.
+     - **Is this a test deployment?**: Leave the toggle at :::image type="icon" source="media/scc-toggle-off.png" border="false"::: **No**, or set the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Yes**.
      - **Assign users** section: Select one of the following values:
        - **Just me**
        - **Entire organization**
-       - **Specific users/groups**: Find and select users and groups in the search box. After each selection, the user or group appears in the **Added users** section that appears below the search box. To remove a selection, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-icon.png" border="false"::: on the entry.
+       - **Specific users/groups**: Find and select users and groups in the search box. After each selection, the user or group appears in the **Added users** section that appears below the search box. To remove a selection, select :::image type="icon" source="media/m365-cc-sc-remove-icon.png" border="false"::: on the entry.
 
      - **Email notification** section: **Send email notification to assigned users** and **View email sample** aren't selectable.
 
      If you made any updates on this tab, select **Update** to save your changes.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="/defender/media/microsoft-365-admin-center-report-message-add-in-details-users-tab.png" alt-text="The Users tab on the details flyout of the Report Message add-in in the Microsoft 365 admin center." lightbox="/defender/media/microsoft-365-admin-center-report-message-add-in-details-users-tab.png":::
+     > :::image type="content" source="media/microsoft-365-admin-center-report-message-add-in-details-users-tab.png" alt-text="The Users tab on the details flyout of the Report Message add-in in the Microsoft 365 admin center." lightbox="media/microsoft-365-admin-center-report-message-add-in-details-users-tab.png":::
 
    - **Usage** tab: The chart and details table shows the number of active users over time.
      - Filter the **Date range** to **7 days**, **30 days** (default), or **90 days**.
-     - In the **Report** column, select :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Download** to download the information filtered by **Date range** to the file named **UsageData.csv**.
+     - In the **Report** column, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Download** to download the information filtered by **Date range** to the file named **UsageData.csv**.
 
-   When you're finished viewing the information on the tabs, select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: **Close** to close the details flyout.
+   When you're finished viewing the information on the tabs, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Close** to close the details flyout.
 
 ## User instructions
 
@@ -270,9 +270,9 @@ Admins in Microsoft 365 Government Community Cloud (GCC) or GCC High need to use
 
 1. Do either of the following steps:
 
-   - Open the Microsoft commercial marketplace at <https://appsource.microsoft.com/marketplace/apps>. On the **AppSource** page, enter **Report message** in the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box, and then select the **Report Message** or **Report Phishing** in the results.
+   - Open the Microsoft commercial marketplace at <https://appsource.microsoft.com/en-us/marketplace/apps>. On the **AppSource** page, enter **Report message** in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box, and then select the **Report Message** or **Report Phishing** in the results.
 
-   :::image type="content" source="/defender/media/microsoft-appsource-find-report-message-add-in.png" alt-text="Search results on the Microsoft commercial marketplace page for the Report Message add-in." lightbox="/defender/media/microsoft-appsource-find-report-message-add-in.png":::
+   :::image type="content" source="media/microsoft-appsource-find-report-message-add-in.png" alt-text="Search results on the Microsoft commercial marketplace page for the Report Message add-in." lightbox="media/microsoft-appsource-find-report-message-add-in.png":::
 
    - Use one of the following URLs to go directly to the download page for the add-in:
      - **Report Message**: <https://appsource.microsoft.com/product/office/WA104381180>
@@ -283,13 +283,13 @@ Admins in Microsoft 365 Government Community Cloud (GCC) or GCC High need to use
 
 2. On the details page of the add-in, select **Get it now**.
 
-   :::image type="content" source="/defender/media/ReportMessageGETITNOW.png" alt-text="The details page of the Report Message add-in where you select Get it now." lightbox="/defender/media/ReportMessageGETITNOW.png":::
+   :::image type="content" source="media/ReportMessageGETITNOW.png" alt-text="The details page of the Report Message add-in where you select Get it now." lightbox="media/ReportMessageGETITNOW.png":::
 
 3. If prompted, sign in with your Microsoft account credentials.
 
 4. When the installation is finished, you get the following **Launch** page:
 
-   :::image type="content" source="/defender/media/report-message-add-in-launch-page.png" alt-text="The Launch page of the Report Message add-in." lightbox="/defender/media/report-message-add-in-launch-page.png":::
+   :::image type="content" source="media/report-message-add-in-launch-page.png" alt-text="The Launch page of the Report Message add-in." lightbox="media/report-message-add-in-launch-page.png":::
 
 ### Get the Report Message or the Report Phishing add-ins for yourself in Microsoft 365 GCC or GCC High
 

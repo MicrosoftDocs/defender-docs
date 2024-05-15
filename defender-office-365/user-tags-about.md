@@ -49,7 +49,7 @@ To see how user tags are part of the strategy to help protect high-impact user a
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **User tags** page, use <https://security.microsoft.com/securitysettings/userTags>.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Authorization and settings/System settings/manage** or **Authorization and settings/System settings/Read-only**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/System settings/manage** or **Authorization and settings/System settings/Read-only**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md):
     - _Create, modify, and delete custom user tags_: Membership in the **Organization Management** or **Security Administrator** role groups.
     - _Apply and remove the Priority account tag from users_: Membership in the **Security Administrator** and **Exchange Admin** role groups.
@@ -67,7 +67,7 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **User tags**. Or, to go directly to the **User tags** page, use <https://security.microsoft.com/securitysettings/userTags>.
 
-2. On the **User tags** page, select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Create** to start the new tag wizard.
+2. On the **User tags** page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create** to start the new tag wizard.
 
 3. On the **Define tag** page, configure the following settings:
    - **Name**: Enter a unique, descriptive name for the tag. You can't rename a tag after you create it.
@@ -77,21 +77,21 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
 4. On the **Assign members** page, do either of the following steps:
 
-   - Select :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Add members**. In the **Add members** flyout that opens, do any of the following steps to add individual users or groups in the **Search users and groups to add** box:
+   - Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add members**. In the **Add members** flyout that opens, do any of the following steps to add individual users or groups in the **Search users and groups to add** box:
      - Click in the box and scroll through the list to select a user or group.
      - Click in the box, start typing a name to filter the list, and then select the value below the box.select a user or group.
 
      To add more members, click in an empty area in the box and repeat the previous step.
 
-     To remove individual entries from the box, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
+     To remove individual entries from the box, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
 
-     To remove all entries, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false"::: in the **Selected nn users and nn groups** item below the box.
+     To remove all entries, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: in the **Selected nn users and nn groups** item below the box.
 
      When you're finished on the **Add members** flyout, select **Add**.
 
-     Back on the **Assign members** page, the users and groups that you added are listed by **Name** and **Type**. To remove entries from the list, select :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** next to the entry.
+     Back on the **Assign members** page, the users and groups that you added are listed by **Name** and **Type**. To remove entries from the list, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** next to the entry.
 
-   - Select :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Import** to select a text file that contains the email addresses of the users or groups (one entry per line).
+   - Select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Import** to select a text file that contains the email addresses of the users or groups (one entry per line).
 
    When you're finished on the **Assign members** page, select **Next**.
 
@@ -116,9 +116,9 @@ On the **User tags** page, you can sort the entries by clicking on an available 
 - **Last modified**
 - **Created on**
 
-Use :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the user tags by **Last modified date**.
+Use :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to filter the user tags by **Last modified date**.
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific user tag.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific user tag.
 
 Select a user tag by clicking anywhere in the row other than the check box next to the name to open the details flyout for the user tag.
 
@@ -147,8 +147,8 @@ After you select the user tag, the available actions are described in the follow
 
 After you select the user tag, use either of the following methods to modify it:
 
-- **On the User tags page**: Select the :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
-- **In the details flyout of the selected user tag**: Select the :::image type="icon" source="/defender/media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action at the top of the flyout.
+- **On the User tags page**: Select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action that appears.
+- **In the details flyout of the selected user tag**: Select the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit** action at the top of the flyout.
 
 The same wizard and most of the same settings are available as described in the [Use the Microsoft Defender portal to create user tags](#use-the-microsoft-defender-portal-to-create-user-tags) section earlier in this article, with the following exceptions:
 
@@ -161,8 +161,8 @@ You can't remove the built-in Priority account tag.
 
 After you select the custom tag, use either of the following methods to remove it:
 
-- **On the User tags page**: Select the :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
-- **In the details flyout of the selected user tag**: Select the :::image type="icon" source="/defender/media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action at the top of the flyout.
+- **On the User tags page**: Select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action that appears.
+- **In the details flyout of the selected user tag**: Select the :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete** action at the top of the flyout.
 
 Read the warning in the confirmation dialog that opens, and then select **Yes, remove**.
 

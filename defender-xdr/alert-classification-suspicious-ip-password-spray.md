@@ -92,7 +92,7 @@ Filter all successful attempts to sign in from the IP address around and shortly
 
 ## Advanced hunting queries
 
-[Advanced hunting](/defender-xdr/advanced-hunting-overview) is a query-based threat hunting tool that lets you inspect events in your network and locate threat indicators.
+[Advanced hunting](advanced-hunting-overview.md) is a query-based threat hunting tool that lets you inspect events in your network and locate threat indicators.
 
 Use this query to find accounts with attempts to sign in with the highest risk scores that came from the malicious IP. This query also filters all successful attempts to sign in with corresponding risk scores.
 

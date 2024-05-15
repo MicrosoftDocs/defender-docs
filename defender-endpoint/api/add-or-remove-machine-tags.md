@@ -15,15 +15,15 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 02/24/2023
+ms.date: 05/02/2024
 ---
 
 # Add or remove a tag for a machine
 
 **Applies to:**
 
-- ../microsoft-defender-endpoint.md
-- ../microsoft-defender-endpoint.md
+- [Microsoft Defender for Endpoint Plan 1](../microsoft-defender-endpoint.md)
+- [Microsoft Defender for Endpoint](../microsoft-defender-endpoint.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
@@ -35,7 +35,10 @@ ms.date: 02/24/2023
 
 ## API description
 
-Adds or removes a tag for a specific [Machine](machine.md).
+Adds or removes a tag for a specific [device](machine.md).
+
+> [!NOTE]
+> If you are looking for how to tag machines in bulk via API, see [Add or remove multiple machine tags](/defender-endpoint/api/add-or-remove-multiple-machine-tags).
 
 ## Limitations
 

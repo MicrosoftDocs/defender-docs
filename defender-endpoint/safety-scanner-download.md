@@ -3,8 +3,8 @@ title: Microsoft Safety Scanner Download
 ms.reviewer: 
 description: Get the Microsoft Safety Scanner tool to find and remove malware from Windows computers.
 keywords: security, malware
-ms.service: microsoft-365-security
-ms.subservice: intelligence
+ms.service: defender-endpoint
+ms.subservice: reference
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
@@ -63,4 +63,4 @@ For more information about the Safety Scanner, see the support article on [how t
 - [Microsoft Security Essentials](https://support.microsoft.com/help/14210/security-essentials-download)
 - [Removing difficult threats](https://support.microsoft.com/help/4466982/windows-10-troubleshoot-problems-with-detecting-and-removing-malware)
 - [Submit file for malware analysis](https://www.microsoft.com/wdsi/filesubmission)
-- [Microsoft antimalware and threat protection solutions](/defender-endpoint/microsoft-defender-endpoint)
+- [Microsoft antimalware and threat protection solutions](microsoft-defender-endpoint.md)

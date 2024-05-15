@@ -56,7 +56,7 @@ A campaign might be short-lived, or could span several days, weeks, or months wi
 
 - The campaigns feature is available in organizations with Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5).
 - You need to be assigned permissions to view information about campaigns as described in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Security operations/Raw data (email & collaboration)/Email message headers (read)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Raw data (email & collaboration)/Email message headers (read)**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Organization Management**, **Security Administrator**, or **Security Reader** role group.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**, **Security Administrator**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
@@ -70,7 +70,7 @@ The **Campaigns** page consists of the following elements:
 - A chart area where you can use the available pivots to organize the chart in different ways. By default, the chart uses the **Campaign Type** pivot, even though that pivot doesn't appear to be selected.
 - A details area, which is set to the **Campaign** tab by default
 
-:::image type="content" source="/defender/media/campaigns-overview.png" alt-text="Screenshot that shows the Campaigns in the Microsoft Defender portal." lightbox="/defender/media/campaigns-overview.png":::
+:::image type="content" source="media/campaigns-overview.png" alt-text="Screenshot that shows the Campaigns in the Microsoft Defender portal." lightbox="media/campaigns-overview.png":::
 
 > [!TIP]
 >
@@ -102,12 +102,12 @@ Change the organization of the chart by selecting **Campaign Type**, and then se
 - **URL domain**
 - **URL domain and path**
 
-Use :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export chart data** to export the data in the chart to a CSV file.
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export chart data** to export the data in the chart to a CSV file.
 
 To remove the chart from the page (which maximizes the size of the details area), do either of the following steps:
 
-- Select :::image type="icon" source="/defender/media/m365-cc-sc-chart-view-icon.png" border="false"::: **Chart View** \> :::image type="icon" source="/defender/media/m365-cc-sc-list-view-icon.png" border="false"::: **List View** at the top of the page.
-- Select :::image type="icon" source="/defender/media/m365-cc-sc-show-list-view-icon.png" border="false"::: **Show list view** between the chart and the views for the details table.
+- Select :::image type="icon" source="media/m365-cc-sc-chart-view-icon.png" border="false"::: **Chart View** \> :::image type="icon" source="media/m365-cc-sc-list-view-icon.png" border="false"::: **List View** at the top of the page.
+- Select :::image type="icon" source="media/m365-cc-sc-show-list-view-icon.png" border="false"::: **Show list view** between the chart and the views for the details table.
 
 ### Details area on the Campaigns page
 
@@ -129,9 +129,9 @@ On the **Campaigns** page, the **Campaign** tab below the chart shows the follow
 - **Click rate**: In phishing campaigns, the percentage as calculated by "**Clicked** / **Inboxed**". This value is an indicator of the effectiveness of the campaign. In other words, were the recipients able to identify the message as phishing, and therefore avoided the payload URL? **Click rate** isn't used in malware campaigns.
 - **Visited**: How many users actually made it through to the payload website. If there are **Clicked** values, but [Safe Links](safe-links-about.md) blocked access to the website, this value is zero.
 
-Select a column header to sort by that column. To remove columns, select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**. By default, all available columns are selected.
+Select a column header to sort by that column. To remove columns, select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**. By default, all available columns are selected.
 
-Use :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the data in the details table to a CSV file.
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the data in the details table to a CSV file.
 
 On the **Campaigns** page, the **Campaign origin** tab below the chart shows the message sources on a map of the world.
 
@@ -141,7 +141,7 @@ At the top of the **Campaign** page, there are several filter settings to help y
 
 By default, the view is filtered by yesterday and today. To change the date filter, select the date range, and then select **Start Date** and **End date** values up to 30 days ago.
 
-:::image type="content" source="/defender/media/campaign-filters-and-settings.png" alt-text="Campaign filters on the Campaigns page." lightbox="/defender/media/campaign-filters-and-settings.png":::
+:::image type="content" source="media/campaign-filters-and-settings.png" alt-text="Campaign filters on the Campaigns page." lightbox="media/campaign-filters-and-settings.png":::
 
 You can also filter the results by one or more message or campaign properties. The basic syntax is:
 
@@ -199,15 +199,15 @@ The available properties and their associated values are described in the follow
 
 After you select a property from the **Campaign Type** dropdown, select **Equal any of** or **Not equal any of**, and then enter or select a value in the property box, the filter query appears below the filter area.
 
-:::image type="content" source="/defender/media/campaign-filters-selected.png" alt-text="Screenshot showing a campaign filter selected." lightbox="/defender/media/campaign-filters-selected.png":::
+:::image type="content" source="media/campaign-filters-selected.png" alt-text="Screenshot showing a campaign filter selected." lightbox="media/campaign-filters-selected.png":::
 
 To add more conditions, select another property/value pair, and then select **AND** or **OR**. Repeat these steps as many times as necessary.
 
-To remove existing property/value pairs, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
+To remove existing property/value pairs, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
 
 When you're finished building your filter query, select **Refresh**.
 
-To save your filter query, select **Save query** \> :::image type="icon" source="/defender/media/m365-cc-sc-save-icon.png" border="false"::: **Save query**. In the **Save query** flyout that opens, configure the following settings:
+To save your filter query, select **Save query** \> :::image type="icon" source="media/m365-cc-sc-save-icon.png" border="false"::: **Save query**. In the **Save query** flyout that opens, configure the following settings:
 
 - **Query name**: Enter a unique value.
 - Select one of the following values:
@@ -217,7 +217,7 @@ To save your filter query, select **Save query** \> :::image type="icon" source=
 
 When you're finished in the **Save query** flyout, select **Save**, and then select **OK** in the confirmation dialog.
 
-When you return to the **Campaigns** page, you can load a saved filter by selecting **Save query** \> :::image type="icon" source="/defender/media/m365-cc-sc-gear-icon.png" border="false"::: **Saved query settings**.
+When you return to the **Campaigns** page, you can load a saved filter by selecting **Save query** \> :::image type="icon" source="media/m365-cc-sc-gear-icon.png" border="false"::: **Saved query settings**.
 
 ## Campaign details
 
@@ -241,7 +241,7 @@ At the top of the campaign details flyout, the following campaign information is
 - Start date/time and end data/time filters for the campaign flow as described in the next section.
 - An interactive timeline of campaign activity: The timeline shows activity over the entire lifetime of the campaign. You can hover over the data points in the graph to see the number of detected messages.
 
-:::image type="content" source="/defender/media/campaign-details-campaign-info.png" alt-text="The Campaign information" lightbox="/defender/media/campaign-details-campaign-info.png":::
+:::image type="content" source="media/campaign-details-campaign-info.png" alt-text="The Campaign information" lightbox="media/campaign-details-campaign-info.png":::
 
 ### Campaign flow
 
@@ -250,7 +250,7 @@ In the middle of the campaign details flyout, important details about the campai
 > [!TIP]
 > The information that's displayed in the flow diagram is controlled by the date range filter in the timeline as described in the previous section.
 
-:::image type="content" source="/defender/media/campaign-details-no-recipient-actions.png" alt-text="The Campaign details that don't contain user URL clicks" lightbox="/defender/media/campaign-details-no-recipient-actions.png":::
+:::image type="content" source="media/campaign-details-no-recipient-actions.png" alt-text="The Campaign details that don't contain user URL clicks" lightbox="media/campaign-details-no-recipient-actions.png":::
 
 If you hover over a horizontal band in the diagram, you see the number of related messages (for example, messages from a particular source IP, messages from the source IP using the specified sender domain, etc.).
 
@@ -345,7 +345,7 @@ The tabs in the campaign details flyout allow you to further investigate the cam
 
 <sup>\*</sup> Selecting this value opens a new flyout that contains more details about the specified item (user, URL, etc.) on top of the campaign details view. To return to the campaign details flyout, select **Done** in the new flyout.
 
-On each tab, select a column header to sort by that column. To remove columns, select :::image type="icon" source="/defender/media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**. By default, all available columns on each tab are selected.
+On each tab, select a column header to sort by that column. To remove columns, select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns**. By default, all available columns on each tab are selected.
 
 ### Additional actions
 

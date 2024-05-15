@@ -2,12 +2,12 @@
 title: What's new in Microsoft Defender for Endpoint on Linux
 description: List of major changes for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: dansimp
+author: dansimp
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
 ms.date: 03/28/2024
-manager: deniseb
+manager: dansimp
 audience: ITPro
 ms.collection:
 - m365-security
@@ -31,6 +31,34 @@ This article is updated frequently to let you know what's new in the latest rele
 
 - [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
+
+<details>
+<summary> May-2024 (Build: 101.24032.0007 | Release version: 30.124032.0007.0)</summary>
+
+## May-2024 Build: 101.24032.0007 | Release version: 30.124032.0007.0
+
+&ensp;Released: **TBD**<br/>
+&ensp;Published: **TBD**<br/>
+&ensp;Build: **101.24032.0007**<br/>
+&ensp;Release version: **30.124032.0007.0**<br/>
+&ensp;Engine version: **1.1.24020.3**<br/>
+&ensp;Signature version: **1.403.3500.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release:
+
+- New Field in mdatp health - engine_load_status<br>
+  To optimize performance, the unprivileged process will only run in specific scenarios. The field 'engine_load_status' indicates the following:
+
+    Healthy Scenarios:
+    - "Engine not loaded"  - The unprivileged process is not currently running.
+    - "Engine load succeeded" - The unprivileged process is up and running.
+- Bug fix to enhance behavioral detections.
+- Stability and performance improvements.
+- Other bug fixes.
+
+</details>
 
 <details>
 <summary> March-2024 (Build: 101.24022.0001 | Release version: 30.124022.0001.0)</summary>
@@ -223,7 +251,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading.
 Some customers (<1%) experience issues with this method.
@@ -267,7 +295,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading.
 Some customers (<1%) experience issues with this method.
@@ -343,7 +371,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading.
 Some customers (<1%) experience issues with this method.
@@ -392,7 +420,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading.
 Some customers (<1%) experience issues with this method.
@@ -450,7 +478,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading.
 Some customers (<1%) experience issues with this method.
@@ -499,7 +527,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading.
 Some customers (<1%) experience issues with this method.
@@ -550,7 +578,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading. 
 Some customers (<1%) experience issues with this method. 
@@ -604,7 +632,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading. 
 Caution: Some customers (<1%) experience issues with this method. 
@@ -661,7 +689,7 @@ Example:
 sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
-2. As an alternative you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+2. As an alternative you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 If you don't want to uninstall mdatp, you can disable rtp and mdatp in sequence before upgrading. 
 Caution: Some customers (<1%) experience issues with this method. 
@@ -769,7 +797,7 @@ Example:
 sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
-As an alternative, you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+As an alternative, you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 In case you don't want to uninstall mdatp you can disable rtp and mdatp in sequence before upgrade. 
 Caution: Some customers(<1%) are experiencing issues with this method. 
@@ -829,7 +857,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-As an alternative to the above, you can follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+As an alternative to the above, you can follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 In case you don't want to uninstall mdatp you can disable rtp and mdatp in sequence before upgrade.
 Caution: Some customers(<1%) are experiencing issues with this method.
@@ -879,7 +907,7 @@ sudo apt purge mdatp
 sudo apt-get install mdatp
 ```
 
-As an alternative approach, follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+As an alternative approach, follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 
 In case you don't want to uninstall mdatp you can disable rtp and mdatp in sequence before upgrade.
 Caution: Some customers(<1%) are experiencing issues with this method.
@@ -918,7 +946,7 @@ sudo systemctl disable mdatp
 
 After executing the commands, use your package manager to perform the upgrade.
 
-As an alternative approach, follow the instructions to [uninstall](/defender-endpoint/linux-resources#uninstall), then [install](/defender-endpoint/linux-install-manually#application-installation) the latest version of the package.
+As an alternative approach, follow the instructions to [uninstall](linux-resources.md#uninstall-defender-for-endpoint-on-linux), then [install](linux-install-manually.md#application-installation) the latest version of the package.
 </br>
 
 <br/><br/>
@@ -1083,7 +1111,9 @@ As an alternative approach, follow the instructions to [uninstall](/defender-end
 - Bug fixes
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Mar-2022 (Build: 101.62.74 | Release version: 30.122022.16274.0)</summary>
 
 &ensp;Released: **Mar 24, 2022**<br/>
@@ -1097,7 +1127,9 @@ As an alternative approach, follow the instructions to [uninstall](/defender-end
 - Bug fixes
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Mar-2022 (Build: 101.60.93 | Release version: 30.122012.16093.0)</summary>
 
 ## Mar-2022 (Build: 101.60.93 | Release version: 30.122012.16093.0)
@@ -1112,7 +1144,9 @@ As an alternative approach, follow the instructions to [uninstall](/defender-end
 - This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Mar-2022 (Build: 101.60.05 | Release version: 30.122012.16005.0)</summary>
 
 &ensp;Released: **Mar 3, 2022**<br/>
@@ -1126,7 +1160,9 @@ As an alternative approach, follow the instructions to [uninstall](/defender-end
 - Bug fixes
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Feb-2022 (Build: 101.58.80 | Release version: 30.122012.15880.0)</summary>
 
 ## Feb-2022 (Build: 101.58.80 | Release version: 30.122012.15880.0)
@@ -1143,7 +1179,9 @@ As an alternative approach, follow the instructions to [uninstall](/defender-end
 - Bug fixes
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Jan-2022 (Build: 101.56.62 | Release version: 30.121122.15662.0)</summary>
 
 ## Jan-2022 (Build: 101.56.62 | Release version: 30.121122.15662.0)
@@ -1158,7 +1196,9 @@ As an alternative approach, follow the instructions to [uninstall](/defender-end
 - Fixed a product crash introduced in 101.53.02 and that has impacted multiple customers
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Jan-2022 (Build: 101.53.02 | Release version: (30.121112.15302.0)</summary>
 
 &ensp;Released: **Jan 8, 2022**<br/>
@@ -1331,4 +1371,4 @@ As an alternative approach, follow the instructions to [uninstall](/defender-end
 
    </details>
 
-
+</details><!--This </details> closes "2021 releases"-->

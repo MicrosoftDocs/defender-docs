@@ -32,7 +32,7 @@ Custom detection rules are rules you can design and tweak using [advanced huntin
 
 To manage custom detections, you need to be assigned one of these roles:
 
-- **Security settings (manage)**—Users with this [Microsoft Defender XDR permission](/defender-xdr/manage-rbac) can manage security settings in the Microsoft Defender portal.
+- **Security settings (manage)**—Users with this [Microsoft Defender XDR permission](manage-rbac.md) can manage security settings in the Microsoft Defender portal.
 - **Security administrator**—Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-administrator) can manage security settings in the Microsoft Defender portal and other portals and services.
 
 - **Security operator**—Users with this [Microsoft Entra role](/azure/active-directory/roles/permissions-reference#security-operator) can manage alerts and have global read-only access to security-related features, including all information in the Microsoft Defender portal. This role is sufficient for managing custom detections only if role-based access control (RBAC) is turned off in Microsoft Defender for Endpoint. If you have RBAC configured, you also need the **manage security settings** permission for Defender for Endpoint.
@@ -149,6 +149,7 @@ You can run a query continuously as long as:
 - The query references one table only.
 - The query uses an operator from the list of supported KQL operators. **[Supported KQL features](/azure/azure-monitor/essentials/data-collection-transformations-structure#supported-kql-features)**
 - The query doesn't use joins, unions, or the `externaldata` operator.
+- The query doesn't include any comments line/information.
 
 ###### Tables that support Continuous (NRT) frequency
 

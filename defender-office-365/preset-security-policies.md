@@ -48,7 +48,7 @@ The rest of this article how to configure preset security policies.
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Configure preset security policies_: Membership in the **Organization Management** or **Security Administrator** role groups.
     - _Read-only access to preset security policies_: Membership in the **Global Reader** role group.
@@ -58,9 +58,9 @@ The rest of this article how to configure preset security policies.
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Preset Security Policies** in the **Templated policies** section. Or, to go directly to the **Preset security policies** page, use <https://security.microsoft.com/presetSecurityPolicies>.
 
-2. If this is your first time on the **Preset security policies** page, it's likely that **Standard protection** and **Strict protection** are turned off :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false":::.
+2. If this is your first time on the **Preset security policies** page, it's likely that **Standard protection** and **Strict protection** are turned off :::image type="icon" source="media/scc-toggle-off.png" border="false":::.
 
-   Slide the toggle of the one you want to configure to :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false":::, and then select **Manage protection settings** to start the configuration wizard.
+   Slide the toggle of the one you want to configure to :::image type="icon" source="media/scc-toggle-on.png" border="false":::, and then select **Manage protection settings** to start the configuration wizard.
 
 3. On the **Apply Exchange Online Protection** page, identify the internal recipients that the [EOP protections](#policies-in-preset-security-policies) apply to (recipient conditions):
 
@@ -73,7 +73,7 @@ The rest of this article how to configure preset security policies.
        - The specified Microsoft 365 Groups.
      - **Domains**: All recipients in the organization with a primary email address in the specified [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains).
 
-   Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+   Click in the appropriate box, start typing a value, and select the value that you want from the results. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
 
    For users or groups, you can use most identifiers (name, display name, alias, email address, account name, etc.), but the corresponding display name is shown in the results. For users or groups, enter an asterisk (\*) by itself to see all available values.
 
@@ -127,9 +127,9 @@ The rest of this article how to configure preset security policies.
 
    Repeat these steps as many times as necessary.
 
-   The users you added are listed on the page by **Display name** and **Sender email address**. To remove a user, select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
+   The users you added are listed on the page by **Display name** and **Sender email address**. To remove a user, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
 
-   Use the :::image type="icon" source="/defender/media/m365-cc-sc-create-icon.png" border="false"::: **Search** box to find entries on the page.
+   Use the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Search** box to find entries on the page.
 
    When you're finished on the **Apply Defender for Office 365 protection** page, select **Next**.
 
@@ -140,13 +140,13 @@ The rest of this article how to configure preset security policies.
    >
    > You can specify a maximum of 50 custom domains for domain impersonation protection in the Standard or Strict preset security policy.
 
-   Click in the **Add domains** box, enter a domain value, press the ENTER key or select the value that's displayed below the box. To remove a domain from the box and start over, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the domain. When you're ready to add the domain, select **Add**. Repeat this step as many times as necessary.
+   Click in the **Add domains** box, enter a domain value, press the ENTER key or select the value that's displayed below the box. To remove a domain from the box and start over, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the domain. When you're ready to add the domain, select **Add**. Repeat this step as many times as necessary.
 
-   The domains you added are listed on the page. To remove the domain, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+   The domains you added are listed on the page. To remove the domain, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
 
-   The domains you added are listed on the page. To remove a domain, select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
+   The domains you added are listed on the page. To remove a domain, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
 
-   To remove an existing entry from the list, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-icon.png" border="false"::: next to the entry.
+   To remove an existing entry from the list, select :::image type="icon" source="media/m365-cc-sc-remove-icon.png" border="false"::: next to the entry.
 
    When you're finished on the **Add domains to flag when impersonated by attackers**, select **Next**.
 
@@ -155,9 +155,9 @@ The rest of this article how to configure preset security policies.
    > [!NOTE]
    > Trusted domain entries don't include subdomains of the specified domain. You need to add an entry for each subdomain.
 
-   Enter the email address or domain in the box, and then press the ENTER key or select the value that's displayed below the box. To remove a value from the box and start over, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value. When you're ready to add the user or domain, select **Add**. Repeat this step as many times as necessary.
+   Enter the email address or domain in the box, and then press the ENTER key or select the value that's displayed below the box. To remove a value from the box and start over, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value. When you're ready to add the user or domain, select **Add**. Repeat this step as many times as necessary.
 
-   The users and domains you added are listed on the page by **Name** and **Type**. To remove an entry, select :::image type="icon" source="/defender/media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
+   The users and domains you added are listed on the page by **Name** and **Type**. To remove an entry, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: next to the entry.
 
    When you're finished on the **Add trusted email addresses and domains to not flag as impersonation** page, select **Next**.
 
@@ -171,7 +171,7 @@ The rest of this article how to configure preset security policies.
 
 The steps to modify the assignment of the **Standard protection** or **Strict protection** preset security policy are the same as when you initially [assigned the preset security policies to users](#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users).
 
-To disable the **Standard protection** or **Strict protection** preset security policies while still preserving the existing conditions and exceptions, slide the toggle to :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false":::. To enable the policies, slide the toggle to :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false":::.
+To disable the **Standard protection** or **Strict protection** preset security policies while still preserving the existing conditions and exceptions, slide the toggle to :::image type="icon" source="media/scc-toggle-off.png" border="false":::. To enable the policies, slide the toggle to :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
 
 ## Use the Microsoft Defender portal to add exclusions to the Built-in protection preset security policy
 
@@ -191,7 +191,7 @@ To disable the **Standard protection** or **Strict protection** preset security 
        - The specified Microsoft 365 Groups.
    - **Domains**
 
-   Click in the appropriate box, start typing a value, and then select the value that's displayed below the box. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="/defender/media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+   Click in the appropriate box, start typing a value, and then select the value that's displayed below the box. Repeat this process as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
 
    For users or groups, you can use most identifiers (name, display name, alias, email address, account name, etc.), but the corresponding display name is shown in the results. For users, enter an asterisk (\*) by itself to see all available values.
 

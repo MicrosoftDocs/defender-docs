@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 04/04/2024
+ms.date: 05/08/2024
 ---
 
 # Advanced deployment guidance for Microsoft Defender for Endpoint on Linux
@@ -39,7 +39,7 @@ To learn about other ways to deploy Microsoft Defender for Endpoint on Linux, se
 
 Learn about the general guidance on a typical Microsoft Defender for Endpoint on Linux deployment. The applicability of some steps is determined by the requirements of your Linux environment.
 
-1. [Work with your Firewall, Proxy, and Networking admin](#1-work-with-your-firewall-proxy-and-networking-admin).
+1. [Prepare your network environment](#1-prepare-your-network-environment).
 
 2. [Capture performance data from the endpoint](#2-capture-performance-data-from-the-endpoint).
 
@@ -86,39 +86,31 @@ Learn about the general guidance on a typical Microsoft Defender for Endpoint on
 
 22. [Uninstall your non-Microsoft solution](#22-uninstall-your-non-microsoft-solution).
 
-## 1. Work with your Firewall, Proxy, and Networking admin
+## 1. Prepare your network environment
 
-Work with your Firewall, Proxy, and Networking admin to add the Microsoft Defender for Endpoint URLs to the allowed list, and prevent it from being SSL inspected.
+Add the Microsoft Defender for Endpoint URLs and/or IP addresses to the allowed list, and prevent traffic from being SSL inspected.
 
-For more information, see, [Troubleshoot cloud connectivity issues](#troubleshoot-cloud-connectivity-issues).
 
 ### Network connectivity of Microsoft Defender for Endpoint
 
 Use the following steps to check the network connectivity of Microsoft Defender for Endpoint:
 
-1. See [Allow URLs for the Microsoft Defender for Endpoint traffic](#step-1-allow-urls-for-the-microsoft-defender-for-endpoint-traffic) that are allowed for the Microsoft Defender for Endpoint traffic.
+1. See [Step 1: Allow destinations for the Microsoft Defender for Endpoint traffic](#step-1-allow-destinations-for-the-microsoft-defender-for-endpoint-traffic) that are allowed for the Microsoft Defender for Endpoint traffic.
 
 2. If the Linux servers are behind a proxy, then set the proxy settings. For more information, see [Set up proxy settings](#step-2-set-up-proxy-settings).
 
 3. Verify that the traffic isn't being inspected by SSL inspection (TLS inspection). This is the most common network related issue when setting up Microsoft Defender Endpoint, see [Verify SSL inspection isn't being performed on the network traffic](#step-3-verify-ssl-inspection-isnt-being-performed-on-the-network-traffic).
 
 > [!NOTE]
-> It is generally recommended that traffic for Defender for Endpoint is not inspected by SSL inspection (TLS inspection). This applies to all supported operating systems (Windows, Linux, and MacOS).
+> - It is generally recommended that traffic for Defender for Endpoint is not inspected by SSL inspection (TLS inspection). This applies to all supported operating systems (Windows, Linux, and MacOS).
+> - To allow connectivity to the consolidated set of URLs or IP addresses, ensure your devices are running the latest component versions. See [Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint](configure-device-connectivity.md) for more information.
 
-#### Step 1: Allow URLs for the Microsoft Defender for Endpoint traffic
+For more information see [Troubleshoot cloud connectivity issues](#troubleshoot-cloud-connectivity-issues).
 
-1. Download the [Microsoft Defender for Endpoint URL list for commercial customers](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx
-) or the [Microsoft Defender for Endpoint URL list for Gov/GCC/DoD](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx) for a list of services and their associated URLs that your network must be able to connect.
+#### Step 1: Allow destinations for the Microsoft Defender for Endpoint traffic
 
-2. Under **Geography** column, ensure the following checkboxes are selected:
-    - EU, or UK, or US
-    - WW
-    - (Blanks)
-
-    > [!NOTE]
-    > You should ensure that there are no firewall or network filtering rules that would deny access to these URLs. If there are, you may need to create an allow rule specifically for them.
-
-3. Work with the Firewall/Proxy/Networking admins to allow the relevant URLs.
+1. Go to [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md) to find the relevant destinations that need to be accessible to devices inside your network environment
+2. Configure your Firewall/Proxy/Network to allow the relevant URLs and/or IP addresses
 
 #### Step 2: Set up proxy settings
 
@@ -132,8 +124,8 @@ The following table lists the supported proxy settings:
 |Manual static proxy configuration |Web proxy autodiscovery protocol (WPAD, a type of authenticated proxy)|
 
 - [Network connections](microsoft-defender-endpoint-linux.md#network-connections)
-- [Full configuration profile](/defender-endpoint/linux-preferences#full-configuration-profile-example)
-- [Static proxy configuration](/defender-endpoint/linux-static-proxy-configuration)
+- [Full configuration profile](linux-preferences.md#full-configuration-profile-example)
+- [Static proxy configuration](linux-static-proxy-configuration.md)
 - [Troubleshooting connectivity issues in static proxy scenario](linux-support-connectivity.md#troubleshooting-steps-for-environments-with-static-proxy)
 
 #### Step 3: Verify SSL inspection isn't being performed on the network traffic
@@ -226,7 +218,7 @@ Keep the following points in mind:
 - If you list each executable as both a path exclusion and a process exclusion, the process and whatever it touches are excluded.
 
 > [!TIP]
-> Review "Common mistakes to avoid when defining exclusions", specifically [Folder locations and Processes the sections for Linux and macOS Platforms](/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus#folder-locations).
+> Review "Common mistakes to avoid when defining exclusions", specifically [Folder locations and Processes the sections for Linux and macOS Platforms](common-exclusion-mistakes-microsoft-defender-antivirus.md#folder-locations).
 
 ## 9. Create device groups
 
@@ -234,7 +226,7 @@ Set up your device groups, device collections, and organizational units Device g
 
 |Collection type|What to do|
 |---|---|
-|[Device groups](/defender-endpoint/machine-groups) (formerly called *machine groups*) enable your security operations team to configure security capabilities, such as automated investigation and remediation. <br/><br/> Device groups are also useful for assigning access to those devices so that your security operations team can take remediation actions if needed. <br/><br/> Device groups are created while the attack was detected and stopped, alerts, such as an "initial access alert," were triggered and appeared in the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender).|1. Go to the Microsoft Defender portal (<https://security.microsoft.com>).<br/><br/>2. In the navigation pane on the left, choose **Settings** \> **Endpoints** \> **Permissions** \> **Device groups**.<br/><br/>3. Choose **+ Add device group**.<br/><br/>4. Specify a name and description for the device group.<br/><br/>5. In the **Automation level** list, select an option. (We recommend **Full - remediate threats automatically**.) To learn more about the various automation levels, see [How threats are remediated](/defender-endpoint/automated-investigations#how-threats-are-remediated).<br/><br/>6. Specify conditions for a matching rule to determine which devices belong to the device group. For example, you can choose a domain, OS versions, or even use [device tags](/defender-endpoint/machine-tags).<br/><br/>7. On the **User access** tab, specify roles that should have access to the devices that are included in the device group.<br/><br/>8. Choose **Done**.|
+|[Device groups](machine-groups.md) (formerly called *machine groups*) enable your security operations team to configure security capabilities, such as automated investigation and remediation. <br/><br/> Device groups are also useful for assigning access to those devices so that your security operations team can take remediation actions if needed. <br/><br/> Device groups are created while the attack was detected and stopped, alerts, such as an "initial access alert," were triggered and appeared in the [Microsoft Defender portal](/defender-xdr/microsoft-365-defender).|1. Go to the Microsoft Defender portal (<https://security.microsoft.com>).<br/><br/>2. In the navigation pane on the left, choose **Settings** \> **Endpoints** \> **Permissions** \> **Device groups**.<br/><br/>3. Choose **+ Add device group**.<br/><br/>4. Specify a name and description for the device group.<br/><br/>5. In the **Automation level** list, select an option. (We recommend **Full - remediate threats automatically**.) To learn more about the various automation levels, see [How threats are remediated](automated-investigations.md#how-threats-are-remediated).<br/><br/>6. Specify conditions for a matching rule to determine which devices belong to the device group. For example, you can choose a domain, OS versions, or even use [device tags](machine-tags.md).<br/><br/>7. On the **User access** tab, specify roles that should have access to the devices that are included in the device group.<br/><br/>8. Choose **Done**.|
 |[Device collections](/mem/configmgr/core/clients/manage/collections/introduction-to-collections) enable your security operations team to manage applications, deploy compliance settings, or install software updates on the devices in your organization. <br/><br/> Device collections are created by using [Configuration Manager](/mem/configmgr/).|Follow the steps in [Create a collection](/mem/configmgr/core/clients/manage/collections/create-collections#bkmk_create).|
 |[Organizational units](/azure/active-directory-domain-services/create-ou) enable you to logically group objects such as user accounts, service accounts, or computer accounts. <br/><br/> You can then assign administrators to specific organizational units, and apply group policy to enforce targeted configuration settings. <br/><br/> Organizational units are defined in [Microsoft Entra Domain Services](/azure/active-directory-domain-services).|Follow the steps in [Create an Organizational Unit in a Microsoft Entra Domain Services managed domain](/azure/active-directory-domain-services/create-ou).|
 
@@ -400,7 +392,7 @@ The following table describes the settings that are recommended as part of `mdat
 
 ### Applications that Microsoft Defender for Endpoint can impact
 
-High I/O workloads such as Postgres, OracleDB, Jira, and Jenkins might require other exclusions, depending on the amount of activity that is being processed (and monitored by Defender for Endpoint). It's best to follow guidance from non-Microsoft application providers for their exclusions if you experience performance degradation after installing Defender for Endpoint. Also keep in mind [Common Exclusion Mistakes for Microsoft Defender Antivirus](/defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus).
+High I/O workloads such as Postgres, OracleDB, Jira, and Jenkins might require other exclusions, depending on the amount of activity that is being processed (and monitored by Defender for Endpoint). It's best to follow guidance from non-Microsoft application providers for their exclusions if you experience performance degradation after installing Defender for Endpoint. Also keep in mind [Common Exclusion Mistakes for Microsoft Defender Antivirus](common-exclusion-mistakes-microsoft-defender-antivirus.md).
 
 If you experience performance degradation, see the following resources:
 
@@ -521,17 +513,24 @@ For more information, see [New device health reporting for Microsoft Defender an
 
 To ensure that the device is correctly onboarded and reported to the service, run the following detection test:
 
-- Antimalware detections:
+- Open a Terminal window and execute the following command to run an antimalware detection test:
 
   ```bash
-  curl -o /tmp/eicar.com.txt https://www.eicar.org/download/eicar.com.txt
+  curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
+  ```
+  
+- You can run additional detection tests on zip files using either of the following commands:
+
+  ```bash
+  curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
+  curl -o /tmp/eicarcom2.zip https://secure.eicar.org/eicarcom2.zip
   ```
 
-  If the detection doesn't show up, it could be that you have set "allowedThreats" to allow in preferences via Ansible or Puppet.
+   > [!NOTE]
+   > If the detections do not show up, it could be that you have set "allowedThreats" to allow in preferences via Ansible or Puppet.
 
-- Endpoint detection and response (EDR) detections:
-  For more information, see [Experience Microsoft Defender for Endpoint through simulated attacks](attack-simulations.md).
-  If the detection doesn't show up, then it could be that we're missing event or alerts in portal. For more information, see [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md).
+- Endpoint detection and response (EDR) detections, see [Experience Microsoft Defender for Endpoint through simulated attacks](attack-simulations.md). If the detection doesn't show up, then it could be that we're missing event or alerts in portal. For more information, see [Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux](linux-support-events.md).
+
 - For more information about unified submissions in Microsoft Defender XDR and the ability to submit **False Positives** and **False Negatives** through the portal, see [Unified submissions in Microsoft Defender XDR now Generally Available! - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/unified-submissions-in-microsoft-365-defender-now-generally/ba-p/3270770).
 
 ## 20. Troubleshoot missing events or alerts issues for Microsoft Defender for Endpoint on Linux

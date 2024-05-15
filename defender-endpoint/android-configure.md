@@ -2,8 +2,9 @@
 title: Configure Microsoft Defender for Endpoint on Android features
 description: Describes how to configure Microsoft Defender for Endpoint on Android
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: priyankagill
+author: priyankagill
+ms.reviewer: priyankagill
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 04/30/2024
 ---
 
 # Configure Defender for Endpoint on Android features
@@ -54,7 +55,7 @@ Defender for Endpoint on Android allows IT Administrators the ability to configu
 
 This feature provides protection against rogue Wi-Fi related threats and rogue certificates, which are the primary attack vector for Wi-Fi networks. Admins can list the root Certificate Authority (CA) and private root CA certificates in Microsoft Intune admin center and establish trust with endpoints. It provides the user a guided experience to connect to secure networks and also notifies them if a related threat is detected.
 
-It includes several admin controls to offer flexibility, such as the ability to configure the feature from within the Microsoft Intune admin center and add trusted certificates. Admins can enable [privacy controls](/defender-endpoint/android-configure#privacy-controls) to configure the data sent to Defender for Endpoint from Android devices.
+It includes several admin controls to offer flexibility, such as the ability to configure the feature from within the Microsoft Intune admin center and add trusted certificates. Admins can enable [privacy controls](android-configure.md#privacy-controls) to configure the data sent to Defender for Endpoint from Android devices.
 
 Network protection in Microsoft Defender for endpoint is disabled by default. Admins can use the following steps to **configure Network protection in Android devices.**
 
@@ -119,6 +120,24 @@ Network protection in Microsoft Defender for endpoint is disabled by default. Ad
 > [!NOTE]
 > Users need to enable location permission (which is an optional permission); this enables Defender for Endpoint to scan their networks and alert them when there are WIFI-related threats. If the location permission is denied by the user, Defender for Endpoint will only be able to provide limited protection against network threats and will only protect the users from rogue certificates.
 
+## Configure Low Touch Onboarding
+
+Admins can configure Microsoft Defender for Endpoint in low touch onboarding mode. In this scenario, administrators creates a deployment profile and the user is simply required to provide a reduced set of permissions to complete onboarding. 
+
+Android low touch onboarding is disabled by default. Admins can enable it through app configuration policies on Intune by following these steps:
+
+1.	Push the Defender app to target user group by following these [steps](android-intune.md#add-microsoft-defender-for-endpoint-on-android-as-a-managed-google-play-app).
+2.	Push a VPN profile to the user's device by following the instructions [here](android-intune.md#auto-setup-of-always-on-vpn).
+3.	In Apps > Application configuration policies, select Managed Devices.
+4.	Provide a name to uniquely identify the policy. Select 'Android Enterprise' as the Platform, the required Profile type and 'Microsoft Defender: Antivirus' as the targeted app. Click on Next.
+5.	Add runtime permissions. Select Location access (fine)(This permission is not supported for Android 13 and above), POST_NOTIFICATIONS and change the Permission state to 'Auto grant'.
+6.	Under configuration settings, select 'Use Configuration designer' and click on Add.
+7.	Select Low touch onboarding and User UPN. For User UPN, change the Value type to 'Variable' and Configuration value to 'User Principal Name' from the drop down Enable Low touch onboarding by changing the configuration value to 1.
+    >[!div class="mx-imgBorder"]
+    >![Image of low touch onboarding configuration policy.](media/low-touch-user-upn.png)
+
+8.	Assign the policy to the target user group.
+9.	Review and create the policy.
 
 ## Privacy Controls
 

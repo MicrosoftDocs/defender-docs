@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: high
-ms.date: 01/31/2024
+ms.date: 05/08/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -42,7 +42,7 @@ To enable and update Microsoft Defender Antivirus on Windows Server, perform the
 
 ## Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled
 
-First, ensure that Microsoft Defender Antivirus is not disabled either through Group Policy or registry. For more information, see [Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution](/defender-endpoint/troubleshoot-microsoft-defender-antivirus-when-migrating).
+First, ensure that Microsoft Defender Antivirus is not disabled either through Group Policy or registry. For more information, see [Troubleshoot Microsoft Defender Antivirus while migrating from a third-party solution](troubleshoot-microsoft-defender-antivirus-when-migrating.yml).
 
 If Microsoft Defender Antivirus features and installation files were previously removed from Windows Server 2016, follow the guidance in [Configure a Windows Repair Source](/windows-hardware/manufacture/desktop/configure-a-windows-repair-source) to restore the feature installation files.
 
@@ -52,7 +52,7 @@ As a local administrator on the server, perform the following steps:
 
 1. Open Command Prompt.
 2. Run the following command:
-   `MpCmdRun.exe -wdenable`.
+   `%ProgramFiles%\Windows Defender\MpCmdRun.exe -wdenable`.
 3. Restart the device.
 
 ## Re-enable Microsoft Defender Antivirus on Windows Server if it was uninstalled

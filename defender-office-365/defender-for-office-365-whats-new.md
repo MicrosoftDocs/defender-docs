@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 4/3/2024
+ms.date: 4/30/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -41,7 +41,22 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## April 2024
 
+- **Last used date** added to Tenant Allow/Block List entries for domains and email addresses, files, and URLs.
 - **Enhanced clarity in submissions results**: Admins and security operators now see enhanced results within submissions across email, Microsoft Teams messages, email attachments, URLs, and user-reported messages. These updates aim to eliminate any ambiguity associated with the current submission results. The results are refined to ensure clarity, consistency, and conciseness, making the submission results more actionable for you. [Learn more](submissions-admin.md).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** replaces the **Message actions** drop down list on the **Email** tab (view) of the details area of the **All email**, **Malware**, or **Phish** views in [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md):
+  - SecOps personnel can now create tenant-level block entries on URLs and files via the [Tenant Allow/Block List](tenant-allow-block-list-about.md) directly from Threat Explorer.
+  - For 100 or fewer messages selected in Threat Explorer, SecOps personnel can take multiple actions on the selected messages from the same page. For example:
+    - Purge email messages or propose email remediation.
+    - Submit messages to Microsoft.
+    - Trigger investigations.
+    - Block entries in the Tenant Allow/Block List.
+  - Actions are contextual based on the latest delivery location of the message, but SecOps personnel can use the **Show all response actions** toggle to allow all available actions.
+  - For 101 or more messages selected, only email purge and propose remediation options are available.
+
+  > [!TIP]
+  > A new panel allows SecOps personnel to look for indicators of compromise at the tenant level, and the block action is readily available.
+
+  For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
 ## March 2024
 
@@ -214,8 +229,6 @@ For more information on what's new with other Microsoft Defender security produc
   - [Video of end-user experience](https://youtu.be/s-vozLO43rI)
   - Other new capabilities coming to the quarantine experience are described in this blog post: [Simplifying the Quarantine experience](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/simplifying-the-quarantine-experience/ba-p/2676388).
 - Portal redirection by default begins, redirecting users from Security & Compliance to Microsoft Defender XDR <https://security.microsoft.com>.
-
-
 
 ## August 2021
 

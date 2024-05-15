@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 08/18/2023
+ms.date: 05/10/2024
 ---
 
 # Submit files for analysis
@@ -24,9 +24,12 @@ ms.date: 08/18/2023
 If you have a file that you suspect might be malware or is being incorrectly detected, you can submit it to us for analysis. This page has answers to some common questions about submitting a file for analysis.
 
 > [!TIP]
-> If your organization's subscription includes [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint), [Microsoft Defender for Office 365 Plan 2]/defender-office-365/mdo-about, or [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender), you can use the [new unified submissions portal](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/unified-submissions-in-microsoft-365-defender-now-generally/ba-p/3270770). To learn more, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
+> If your organization's subscription includes [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint), [Microsoft Defender for Office 365 Plan 2](/defender-office-365/mdo-about), or [Microsoft Defender XDR](microsoft-365-defender.md), you can use the [new unified submissions portal](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/unified-submissions-in-microsoft-365-defender-now-generally/ba-p/3270770). To learn more, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde).
 
 ## How do I submit a file to Microsoft for analysis?
+
+> [!IMPORTANT]
+> Starting May 20, 2024, [file submissions](https://www.microsoft.com/en-us/wdsi/filesubmission) will be transitioning to a new [Microsoft Entra ID](https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id). If your tenant requires admin consent to continue accessing this service, refer to [Overview of user and admin consent](/entra/identity/enterprise-apps/user-admin-consent-overview) and grant access to app ID: 6ba09155-cb24-475b-b24f-b4e28fc74365 with graph permissions for Directory.Read.All and User.Read.
 
 ### Send a malware file
 
@@ -37,7 +40,6 @@ You can complete a quick analysis by providing detailed information about the pr
 After you sign in, you'll be able to track your submissions.
 
 > [!NOTE]
->
 > You can use the Microsoft Security Intelligence submission feature even if you don't have Microsoft Defender for Endpoint Plan 2 or Microsoft Defender for Office Plan 2.
 
 ### Submit a suspected email attachment

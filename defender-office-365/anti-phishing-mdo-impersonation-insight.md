@@ -45,7 +45,7 @@ Admins can use the impersonation insight in the Microsoft Defender portal to qui
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Anti-phishing** page, use <https://security.microsoft.com/antiphishing>. To go directly to the **Impersonation insight** page, use <https://security.microsoft.com/impersonationinsight>.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in any of the following role groups:
     - **Organization Management**
     - **Security Administrator**
@@ -63,7 +63,7 @@ In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Em
 
 On the **Anti-phishing** page, the impersonation insight looks like this:
 
-:::image type="content" source="/defender/media/m365-sc-impersonation-insight.png" alt-text="The impersonation insight on the Anti-phishing policy page in the Microsoft Defender portal." lightbox="/defender/media/m365-sc-impersonation-insight.png":::
+:::image type="content" source="media/m365-sc-impersonation-insight.png" alt-text="The impersonation insight on the Anti-phishing policy page in the Microsoft Defender portal." lightbox="media/m365-sc-impersonation-insight.png":::
 
 The insight has two modes:
 
@@ -96,11 +96,11 @@ You can sort the entries by clicking on an available column header. The followin
 - Narrow the width of appropriate columns.
 - Zoom out in your web browser.
 
-To change the list of domain impersonation detections from normal to compact spacing, select :::image type="icon" source="/defender/media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="/defender/media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+To change the list of domain impersonation detections from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a comma-separated list of values to find specific domain impersonation detections.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a comma-separated list of values to find specific domain impersonation detections.
 
-Use :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of domain impersonation detections to a CSV file.
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of domain impersonation detections to a CSV file.
 
 ### View details about a domain impersonation detection
 
@@ -128,7 +128,7 @@ The following information is available in the details flyout:
   - **Delivery action**
 
 > [!TIP]
-> To see details about other domain impersonation entries without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other domain impersonation entries without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 To prevent senders in a detected domain from being identified as domain impersonation, see the next subsection.
 
@@ -141,9 +141,9 @@ Select the entry from the list by clicking anywhere in the row other than the ch
 In the details flyout that opens, use the **Select impersonation policy to modify** and **Add to the allowed to impersonation list** settings at the top of the flyout. These settings work together to add the domain to the [Trusted senders and domains](anti-phishing-policies-about.md#trusted-senders-and-domains) list in the policy that incorrectly identified the message as domain impersonation:
 
 - Select the anti-phishing policy in the dropdown list. The anti-phishing policy that was responsible for detecting the message is shown in the **Policy** value on the **Domain** tab.
-- Slide the toggle to on: :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: to add the domain to the **Trusted senders and domains** list in the selected policy.
+- Slide the toggle to on: :::image type="icon" source="media/scc-toggle-on.png" border="false"::: to add the domain to the **Trusted senders and domains** list in the selected policy.
 
-  To remove the domain from the **Trusted senders and domains** list, slide the toggle back to :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false":::
+  To remove the domain from the **Trusted senders and domains** list, slide the toggle back to :::image type="icon" source="media/scc-toggle-off.png" border="false":::
 
 When you're finished in the details flyout, select **Close**.
 
@@ -171,11 +171,11 @@ You can sort the entries by clicking on an available column header. The followin
 - Narrow the width of appropriate columns.
 - Zoom out in your web browser.
 
-To change the list of user impersonation detections from normal to compact spacing, select :::image type="icon" source="/defender/media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="/defender/media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
+To change the list of user impersonation detections from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
 
-Use the :::image type="icon" source="/defender/media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a comma-separated list of values to find specific user impersonation detections.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a comma-separated list of values to find specific user impersonation detections.
 
-Use :::image type="icon" source="/defender/media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of user impersonation detections to a CSV file.
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to export the list of user impersonation detections to a CSV file.
 
 ### View details about a user impersonation detection
 
@@ -198,7 +198,7 @@ The following information is available in the details flyout:
   - **Delivery action**
 
 > [!TIP]
-> To see details about other user impersonation entries without leaving the details flyout, use :::image type="icon" source="/defender/media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+> To see details about other user impersonation entries without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
 
 To prevent a detected sender from being identified as user impersonation, see the next subsection.
 
@@ -211,8 +211,8 @@ Select the entry from the list by clicking anywhere in the row other than the ch
 In the details flyout that opens, use the **Select impersonation policy to modify** and **Add to the allowed to impersonation list** settings at the top of the flyout. These settings work together to add the sender to the [Trusted senders and domains](anti-phishing-policies-about.md#trusted-senders-and-domains) list in the policy that incorrectly identified the message as user impersonation:
 
 - Select the anti-phishing policy in the dropdown list. The anti-phishing policy that was responsible for detecting the message is shown in the **Policy** value on the **Domain** tab.
-- Slide the toggle to on: :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false"::: to add the sender to the **Trusted senders and domains** list in the selected policy.
+- Slide the toggle to on: :::image type="icon" source="media/scc-toggle-on.png" border="false"::: to add the sender to the **Trusted senders and domains** list in the selected policy.
 
-  To remove the sender from the **Trusted senders and domains** list, slide the toggle back to :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false":::
+  To remove the sender from the **Trusted senders and domains** list, slide the toggle back to :::image type="icon" source="media/scc-toggle-off.png" border="false":::
 
 When you're finished in the details flyout, select **Close**.

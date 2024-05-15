@@ -39,7 +39,7 @@ This article describes how to confirm that priority account protection is turned
 - You open the Microsoft Defender portal at <https://security.microsoft.com>.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Authorization and settings/System settings/Read and manage** or **Authorization and settings/System settings/Read-only**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/System settings/Read and manage** or **Authorization and settings/System settings/Read-only**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo): Membership in the **Organization Management** or **Security Administrator** role groups.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator** or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
@@ -54,9 +54,9 @@ This article describes how to confirm that priority account protection is turned
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **Priority account protection**. Or, to go directly to the **Priority account protection** page, use <https://security.microsoft.com/securitysettings/priorityAccountProtection>.
 
-2. On the **Priority account protection** page, verify that **Priority account protection** is turned on (:::image type="icon" source="/defender/media/scc-toggle-on.png" border="false":::).
+2. On the **Priority account protection** page, verify that **Priority account protection** is turned on (:::image type="icon" source="media/scc-toggle-on.png" border="false":::).
 
-   :::image type="content" source="/defender/media/mdo-priority-account-protection.png" alt-text="Turn on Priority account protection." lightbox="/defender/media/mdo-priority-account-protection.png":::
+   :::image type="content" source="media/mdo-priority-account-protection.png" alt-text="Turn on Priority account protection." lightbox="media/mdo-priority-account-protection.png":::
 
 ### Review or turn on priority account protection in Exchange Online PowerShell
 
@@ -95,7 +95,7 @@ For information about where the Priority account tag and other user tags are ava
 
 The **Threat protection status** report brings together information about malicious content and malicious email detected and blocked by Exchange Online Protection and Defender for Office 365. For more information, see [Threat protection status report](reports-email-security.md#threat-protection-status-report).
 
-In the previously mentioned views in the report, the option **Priority account protection** and the value **Yes** is available when you select :::image type="icon" source="/defender/media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. This option allows you to filter the data in the report by priority account protection detections.
+In the previously mentioned views in the report, the option **Priority account protection** and the value **Yes** is available when you select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter**. This option allows you to filter the data in the report by priority account protection detections.
 
 ### Threat Explorer
 
@@ -107,7 +107,7 @@ To view the results of priority account protection in Threat Explorer, do the fo
 
 2. On the **Explorer** page, on the **All email**, **Malware**, or **Phish** tabs, select **Context** \> **Equal any of** \> **Priority account protection**, and then select **Refresh**.
 
-   :::image type="content" source="/defender/media/threat-explorer-context-filter.png" alt-text="Context filter within Threat Explorer." lightbox="/defender/media/threat-explorer-context-filter.png":::
+   :::image type="content" source="media/threat-explorer-context-filter.png" alt-text="Context filter within Threat Explorer." lightbox="media/threat-explorer-context-filter.png":::
 
 ### Email entity page
 
@@ -115,7 +115,7 @@ The Email entity page is available from many locations in the Defender portal, i
 
 On the Email entity page, select the **Analysis** tab. **Priority account protection** is listed in the **Threat detection details** section.
 
-:::image type="content" source="/defender/media/email-entity-priority-account-protection.png" alt-text="The Analysis tab of the Email entity page showing Priority account protection results." lightbox="/defender/media/email-entity-priority-account-protection.png":::
+:::image type="content" source="media/email-entity-priority-account-protection.png" alt-text="The Analysis tab of the Email entity page showing Priority account protection results." lightbox="media/email-entity-priority-account-protection.png":::
 
 ## More information
 

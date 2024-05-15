@@ -40,7 +40,7 @@ Refer to the following screenshot of a sample report:
 
 ## Identify prevalent threats and other potential attack entry points
 
-Signals from Microsoft Defender XDR and investigations by Defender Experts for Hunting help identify suspicious activities in your environment. Significant threat activities will have corresponding [Defender Experts Notifications](/defender-xdr/onboarding-defender-experts-for-hunting#receive-defender-experts-notifications), which also provide recommendations to remediate and defend your organization. 
+Signals from Microsoft Defender XDR and investigations by Defender Experts for Hunting help identify suspicious activities in your environment. Significant threat activities will have corresponding [Defender Experts Notifications](onboarding-defender-experts-for-hunting.md#receive-defender-experts-notifications), which also provide recommendations to remediate and defend your organization. 
 
 The report provides you with the total number of Defender Experts Notifications our experts have sent for your chosen period: 
 

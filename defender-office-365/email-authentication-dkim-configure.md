@@ -146,9 +146,9 @@ You need to create two CNAME records in each custom domain, for a total of four 
 
 To use the procedures in this section, the custom domain or subdomain must appear on the **DKIM** tab of the **Email authentication settings** page at <https://security.microsoft.com/authentication?viewid=DKIM>. The properties of the domain in the details flyout must contain the following values:
 
-:::image type="content" source="/defender/media/email-auth-dkim-domain-properties-create-dkim-unavailable.png" alt-text="The domain details tab showing DKIM signing disabled and no DKIM signatures configured for the domain." lightbox="/defender/media/email-auth-dkim-domain-properties-create-dkim-unavailable.png":::
+:::image type="content" source="media/email-auth-dkim-domain-properties-create-dkim-unavailable.png" alt-text="The domain details tab showing DKIM signing disabled and no DKIM signatures configured for the domain." lightbox="media/email-auth-dkim-domain-properties-create-dkim-unavailable.png":::
 
-- The **Sign messages for this domain with DKIM signatures** toggle is set to **Disabled** :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false":::.
+- The **Sign messages for this domain with DKIM signatures** toggle is set to **Disabled** :::image type="icon" source="media/scc-toggle-off.png" border="false":::.
 - The **Status** value is **Not signing DKIM signatures for the domain**.
 - **Create DKIM keys** isn't present. **Rotate DKIM keys** is visible, but is grayed out.
 
@@ -160,9 +160,9 @@ Proceed if the domain satisfies these requirements.
 
 3. On the **DKIM** tab, select the custom domain to configure by clicking anywhere in the row other than the check box next to the name.
 
-   :::image type="content" source="/defender/media/email-auth-dkim-domain-list.png" alt-text="The DKIM tab of the Email authentication page in the Defender portal." lightbox="/defender/media/email-auth-dkim-domain-list.png":::
+   :::image type="content" source="media/email-auth-dkim-domain-list.png" alt-text="The DKIM tab of the Email authentication page in the Defender portal." lightbox="media/email-auth-dkim-domain-list.png":::
 
-4. In the domain details flyout that opens, select the **Sign messages for this domain with DKIM signatures** toggle that's currently set to **Disabled** :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false":::.
+4. In the domain details flyout that opens, select the **Sign messages for this domain with DKIM signatures** toggle that's currently set to **Disabled** :::image type="icon" source="media/scc-toggle-off.png" border="false":::.
 
    Note the **Last checked date** value.
 
@@ -202,16 +202,16 @@ Proceed if the domain satisfies these requirements.
 
    After a few seconds, the following dialog opens:
 
-   :::image type="content" source="/defender/media/email-auth-dkim-domain-properties-cname-detected.png" alt-text="The dialog that opens when you try to enable DKIM signing for the domain." lightbox="/defender/media/email-auth-dkim-domain-properties-cname-detected.png":::
+   :::image type="content" source="media/email-auth-dkim-domain-properties-cname-detected.png" alt-text="The dialog that opens when you try to enable DKIM signing for the domain." lightbox="media/email-auth-dkim-domain-properties-cname-detected.png":::
 
    After you select **OK** to close the dialog, verify the following settings on the details flyout:
 
-   - The **Sign messages for this domain with DKIM signatures** toggle is set to **Enabled** :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false":::.
+   - The **Sign messages for this domain with DKIM signatures** toggle is set to **Enabled** :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
    - The **Status** value is **Signing DKIM signatures for this domain**.
    - **Rotate DKIM keys** is available.
    - **Last checked date**: The date and time should be more recent than the original value in Step 4.
 
-   :::image type="content" source="/defender/media/email-auth-dkim-domain-properties-rotate-keys.png" alt-text="The domain details flyout after DKIM is enabled for the domain." lightbox="/defender/media/email-auth-dkim-domain-properties-create-dkim.png":::
+   :::image type="content" source="media/email-auth-dkim-domain-properties-rotate-keys.png" alt-text="The domain details flyout after DKIM is enabled for the domain." lightbox="media/email-auth-dkim-domain-properties-create-dkim.png":::
 
 ### Use the Defender portal to customize DKIM signing of outbound messages using the \*.onmicrosoft.com domain
 
@@ -224,7 +224,7 @@ But, you can also use the procedures in this section to affect DKIM signing usin
 
 To use the procedures in this section, the \*.onmicrosoft.com domain must appear on the **DKIM** tab of the **Email authentication settings** page at <https://security.microsoft.com/authentication?viewid=DKIM>. The properties of the \*.onmicrosoft.com domain in the details flyout must contain the following values:
 
-:::image type="content" source="/defender/media/email-auth-dkim-domain-properties-create-dkim.png" alt-text="The domain details flyout with the Create DKIM keys button." lightbox="/defender/media/email-auth-dkim-domain-properties-create-dkim.png":::
+:::image type="content" source="media/email-auth-dkim-domain-properties-create-dkim.png" alt-text="The domain details flyout with the Create DKIM keys button." lightbox="media/email-auth-dkim-domain-properties-create-dkim.png":::
 
 - The **Sign messages for this domain with DKIM signatures** toggle isn't available.
 - The **Status** value is **No DKIM keys saved for this domain**.
@@ -238,23 +238,23 @@ Proceed if the domain satisfies these requirements.
 
 3. On the **DKIM** tab, select the \*.onmicrosoft.com domain to configure by clicking anywhere in the row other than the check box next to the name.
 
-   :::image type="content" source="/defender/media/email-auth-dkim-domain-list.png" alt-text="The DKIM tab of the Email authentication page in the Defender portal." lightbox="/defender/media/email-auth-dkim-domain-list.png":::
+   :::image type="content" source="media/email-auth-dkim-domain-list.png" alt-text="The DKIM tab of the Email authentication page in the Defender portal." lightbox="media/email-auth-dkim-domain-list.png":::
 
 4. In the domain details flyout that opens, select **Create DKIM keys**.
 
-   :::image type="content" source="/defender/media/email-auth-dkim-domain-properties-create-dkim.png" alt-text="The domain details flyout with the Create DKIM keys button." lightbox="/defender/media/email-auth-dkim-domain-properties-create-dkim.png":::
+   :::image type="content" source="media/email-auth-dkim-domain-properties-create-dkim.png" alt-text="The domain details flyout with the Create DKIM keys button." lightbox="media/email-auth-dkim-domain-properties-create-dkim.png":::
 
 5. When DKIM key creation is finished, the **Publish CNAMEs dialog** opens. Select **Close**.
 
    You can't create the CNAME records for the \*.onmicrosoft.com domain, so you don't need to copy the values. Microsoft takes care of the required DNS configuration for you.
 
-6. After you select **Close**, you're back on the domain details flyout where the **Sign messages for this domain with DKIM signatures** toggle is **Disabled** :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false":::.
+6. After you select **Close**, you're back on the domain details flyout where the **Sign messages for this domain with DKIM signatures** toggle is **Disabled** :::image type="icon" source="media/scc-toggle-off.png" border="false":::.
 
-   :::image type="content" source="/defender/media/email-auth-dkim-domain-properties-create-dkim-unavailable.png" alt-text="The domain details tab with DKIM signing disabled." lightbox="/defender/media/email-auth-dkim-domain-properties-create-dkim-unavailable.png":::
+   :::image type="content" source="media/email-auth-dkim-domain-properties-create-dkim-unavailable.png" alt-text="The domain details tab with DKIM signing disabled." lightbox="media/email-auth-dkim-domain-properties-create-dkim-unavailable.png":::
 
-   Slide the **Sign messages for this domain with DKIM signatures** toggle to **Enabled** :::image type="icon" source="/defender/media/scc-toggle-on.png" border="false":::, and then select **OK** in the confirmation dialog that opens.
+   Slide the **Sign messages for this domain with DKIM signatures** toggle to **Enabled** :::image type="icon" source="media/scc-toggle-on.png" border="false":::, and then select **OK** in the confirmation dialog that opens.
 
-   :::image type="content" source="/defender/media/email-auth-dkim-domain-properties-rotate-keys.png" alt-text="The domain details tab with DKIM signing enabled and DKIM signatures configured for the domain." lightbox="/defender/media/email-auth-dkim-domain-properties-rotate-keys.png":::
+   :::image type="content" source="media/email-auth-dkim-domain-properties-rotate-keys.png" alt-text="The domain details tab with DKIM signing enabled and DKIM signatures configured for the domain." lightbox="media/email-auth-dkim-domain-properties-rotate-keys.png":::
 
    When you're finished in the domain details flyout, select **Close**.
 
@@ -420,11 +420,11 @@ To confirm the corresponding public key that's used to verify the DKIM signature
 
 3. On the **DKIM** tab, select the domain to configure by clicking anywhere in the row other than the check box next to the name.
 
-   :::image type="content" source="/defender/media/email-auth-dkim-domain-list.png" alt-text="The DKIM tab of the Email authentication page in the Defender portal." lightbox="/defender/media/email-auth-dkim-domain-list.png":::
+   :::image type="content" source="media/email-auth-dkim-domain-list.png" alt-text="The DKIM tab of the Email authentication page in the Defender portal." lightbox="media/email-auth-dkim-domain-list.png":::
 
 4. In the domain details flyout that opens, select **Rotate DKIM keys**.
 
-   :::image type="content" source="/defender/media/email-auth-dkim-domain-properties-rotate-keys.png" alt-text="The domain details flyout with the Rotate DKIM keys button." lightbox="/defender/media/email-auth-dkim-domain-properties-rotate-keys.png":::
+   :::image type="content" source="media/email-auth-dkim-domain-properties-rotate-keys.png" alt-text="The domain details flyout with the Rotate DKIM keys button." lightbox="media/email-auth-dkim-domain-properties-rotate-keys.png":::
 
 5. The settings in the details flyout change to the following values:
    - **Status**: Rotating keys for this domain and signing DKIM signatures.
@@ -498,9 +498,9 @@ When you disable DKIM signing using a custom domain, you aren't completely disab
 
 3. On the **DKIM** tab, select the domain to configure by clicking anywhere in the row other than the check box next to the name.
 
-4. In the domain details flyout that opens, slide the **Sign messages for this domain with DKIM signatures** toggle to **Disabled** :::image type="icon" source="/defender/media/scc-toggle-off.png" border="false":::.
+4. In the domain details flyout that opens, slide the **Sign messages for this domain with DKIM signatures** toggle to **Disabled** :::image type="icon" source="media/scc-toggle-off.png" border="false":::.
 
-   :::image type="content" source="/defender/media/email-auth-dkim-domain-properties-rotate-keys.png" alt-text="The domain details flyout with the Rotate DKIM keys button." lightbox="/defender/media/email-auth-dkim-domain-properties-create-dkim.png":::
+   :::image type="content" source="media/email-auth-dkim-domain-properties-rotate-keys.png" alt-text="The domain details flyout with the Rotate DKIM keys button." lightbox="media/email-auth-dkim-domain-properties-create-dkim.png":::
 
 #### Use Exchange Online PowerShell to disable DKIM signing of outbound messages using a custom domain
 
@@ -560,7 +560,7 @@ Use any of the following methods to verify DKIM signing of outbound email from M
      - **s=**: The selector (public key in the DNS record in the domain) that was used to decrypt and verify the DKIM signature of the message.
 
   4. Find the **Authentication-Results** header field in the message header. Although destination email systems might use slightly different formats to stamp inbound mail, the header field should include **DKIM=pass** or **DKIM=OK**. For example:
-  
+
      ```text
      Authentication-Results: mx.google.com;
        dkim=pass header.i=@contoso.com header.s=selector1 header.b=NaHRSJOb;
@@ -587,7 +587,7 @@ Use any of the following methods to verify DKIM signing of outbound email from M
   <p><a href="https://admin.microsoft.com/AdminPortal/?searchSolutions=DKIM#/homepage" data-linktype="external">Run Tests: DKIM</a></p>
   </div>
 
-  :::image type="content" source="/defender/media/email-auth-dkim-m365-test.png" alt-text="The DKIM diagnostics test in Microsoft 365 help." lightbox="/defender/media/email-auth-dkim-m365-test.png":::
+  :::image type="content" source="media/email-auth-dkim-m365-test.png" alt-text="The DKIM diagnostics test in Microsoft 365 help." lightbox="media/email-auth-dkim-m365-test.png":::
 
 ## DKIM signing of mail from your custom domain at other email services
 

@@ -302,7 +302,7 @@ Below are more steps to verify whether attack surface reduction rules are correc
 
    :::image type="content" source="media/24bfb16ed561cbb468bd8ce51130ca9d.png" alt-text="The attack surface reduction rules reports2" lightbox="media/24bfb16ed561cbb468bd8ce51130ca9d.png":::
 
-See [Optimize attack surface reduction rule deployment and detections](/defender-endpoint/configure-machines-asr) for more details.
+See [Optimize attack surface reduction rule deployment and detections](configure-machines-asr.md) for more details.
 
 #### Set Network Protection rules in test mode
 

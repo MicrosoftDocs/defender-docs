@@ -320,7 +320,7 @@ Usage example: `sudo ./mde_support_tool.sh skipfaultyrules -e true`
 
 - Audited_info.txt
 
-  Description: details on audited service and related components for [Linux](/defender-endpoint/linux-resources) OS.
+  Description: details on audited service and related components for [Linux](linux-resources.md) OS.
 
 - perf_benchmark.tar.gz
 

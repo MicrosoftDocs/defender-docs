@@ -484,28 +484,39 @@
                   href: additional-information-xdr.md
                 - name: How Defender Experts for XDR permissions work
                   href: dex-xdr-permissions.md
+                - name: Troubleshooting Defender Experts app permissions in Microsoft Teams
+                  href: teams-restrictions-dexapp.md
        - name: Ransomware playbooks
          items: 
               - name: Detecting human-operated ransomware attacks with Microsoft Defender XDR
                 href: playbook-detecting-ransomware-m365-defender.md
               - name: Responding to ransomware attacks
                 href: playbook-responding-ransomware-m365-defender.md
-    - name: Security operations guide
-      items: 
-       - name: Overview
-         href: integrate-microsoft-365-defender-secops.md
-       - name: Step 1. Operations readiness
-         href: integrate-microsoft-365-defender-secops-plan.md
-       - name: Step 2. Readiness assessment using Zero Trust
-         href: integrate-microsoft-365-defender-secops-readiness.md
-       - name: Step 3. Integration with your SOC services
-         href: integrate-microsoft-365-defender-secops-services.md
-       - name: Step 4. Roles, responsibilities, and oversight
-         href: integrate-microsoft-365-defender-secops-roles.md
-       - name: Step 5. Test use cases
-         href: integrate-microsoft-365-defender-secops-use-cases.md
-       - name: Step 6. SOC maintenance tasks
-         href: integrate-microsoft-365-defender-secops-tasks.md
+    - name: Enhance security operations
+      items:
+      - name: Security operations guide
+        items: 
+        - name: Overview
+          href: integrate-microsoft-365-defender-secops.md
+        - name: Step 1. Operations readiness
+          href: integrate-microsoft-365-defender-secops-plan.md
+        - name: Step 2. Readiness assessment using Zero Trust
+          href: integrate-microsoft-365-defender-secops-readiness.md
+        - name: Step 3. Integration with your SOC services
+          href: integrate-microsoft-365-defender-secops-services.md
+        - name: Step 4. Roles, responsibilities, and oversight
+          href: integrate-microsoft-365-defender-secops-roles.md
+        - name: Step 5. Test use cases
+          href: integrate-microsoft-365-defender-secops-use-cases.md
+        - name: Step 6. SOC maintenance tasks
+          href: integrate-microsoft-365-defender-secops-tasks.md
+      - name: Optimize your security operations
+        items:
+        - name: SOC optimization overview
+          display name: SOC optimization
+          href: https://aka.ms/soc-opt-from-defender
+        - name: SOC optimization reference
+          href: https://aka.ms/soc-opt-ref
     - name: Multitenant management in Microsoft Defender XDR
       items:
         - name: Multitenant management in Microsoft Defender XDR
@@ -521,7 +532,7 @@
         - name: Vulnerability management
           href: mto-dashboard.md
         - name: Manage tenants
-          href: mto-tenants.md
+          href: mto-tenants.md      
     - name: Reference
       items: 
       - name: Manage roles and permissions
@@ -563,7 +574,7 @@
             - name: Set up email notifications for Threat analytics reports
               href: m365d-threat-analytics-notifications.md              
             - name: Configure alert notifications
-              href: /defender-xdr/configure-email-notifications
+              href: configure-email-notifications.md
             - name: Asset rule management
               href: configure-asset-rules.md
             - name: Provide feedback

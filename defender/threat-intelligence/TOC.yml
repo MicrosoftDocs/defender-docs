@@ -17,9 +17,9 @@
     href: infrastructure-chaining.md
 - name: Quickstart
   items:
-  - name: Learn how to access Microsoft Defender Threat Intelligence and make customizations in your portal
+  - name: Access Defender TI and make customizations
     href: learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal.md
-- name: How-to
+- name: How-tos
   items:
   - name: Searching and pivoting
     href: searching-and-pivoting.md
@@ -30,7 +30,7 @@
   - name: Using projects
     href: using-projects.md
   - name: Using Microsoft Copilot in Defender for threat intelligence
-    href: /defender/threat-intelligence/using-copilot-threat-intelligence-defender-xdr
+    href: using-copilot-threat-intelligence-defender-xdr.md
 - name: Tutorials
   items:
   - name: Gathering threat intelligence and infrastructure chaining
