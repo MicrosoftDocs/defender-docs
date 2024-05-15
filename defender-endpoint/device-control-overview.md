@@ -143,12 +143,13 @@ DeviceEvents
 | order by Timestamp desc
 ```
 
-This query returns the name of the policy, the access requested, and the verdict (allow, deny)
+This query returns the name of the policy, the access requested, and the verdict (allow, deny), as shown in the following screenshot:
 
-![User's image](media/device-control-overview/image1.png)
+![Screenshot showing a device control query](media/device-control-overview/image1.png)
 
 > [!TIP]
 > Device control for Microsoft Defender for Endpoint on macOS can control access to iOS devices, portable devices such as cameras, and removable media such as USB devices. See [Device Control for macOS](mac-device-control-overview.md).
+
 ### Endpoint DLP
 To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](/purview/endpoint-dlp-learn-about) 
 
@@ -165,7 +166,7 @@ Windows provides the ability to deny write to all removable media or deny write 
 Device control for Microsoft Defender for Endpoint controls access to a device based on its BitLocker encrypted state (encrypted or plain).  This allows for exceptions to be created to allow and audit access to non-BitLocker encrypted devices.
 
 > [!TIP]
-> If you're using Mac, device control can control access to removable media based on the APFS encryption state.  See **[Device Control for macOS](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fdevice-control-overview.md/main/d565b957-f2d8-dbf6-35a0-305e77bc1a95/mac-device-control-overview.md)**.
+> If you're using Mac, device control can control access to removable media based on the APFS encryption state.  See **[Device Control for macOS](mac-device-control-overview.md)**.
 
 ## [**Controlling access to printers**](#tab/Printers)
 
