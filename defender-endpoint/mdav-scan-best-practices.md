@@ -114,8 +114,8 @@ The CPU load factor for Microsoft Defender isn't a hard limit but rather guidanc
 
 - CPU throttling on idle scans (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) for DisableCpuThrottleOnIdleScans setting) controls whether the CPU will be throttled for scheduled scans while the device is idle. This setting is disabled by default to ensure that the CPU will not be throttled for scheduled scans when the device is idle, regardless of what CPU throttling is set to.
 
-> [!NOTE]
-> See the idle state criteria in [Task idle conditions - Win32 apps](/windows/win32/taskschd/task-idle-conditions).
+   > [!NOTE]
+   > See the idle state criteria in [Task idle conditions - Win32 apps](/windows/win32/taskschd/task-idle-conditions).
 
 ### Scanning and exclusions
 
