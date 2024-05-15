@@ -4,7 +4,7 @@ description: Learn about Device control policies in Defender for Endpoint
 author: siosulli
 ms.author: siosulli
 manager: deniseb
-ms.date: 04/09/2024
+ms.date: 05/15/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -766,36 +766,37 @@ The `FileEvidenceLocation` field of has the location of the evidence file, if on
 
 1. Create an Azure Blob Storage account and container.
 
-1. Create a custom role called *Device Control Evidence Data Provider* for accessing the container.  The role should have the following permissions:
+2. Create a custom role called `Device Control Evidence Data Provider` for accessing the container.  The role should have the following permissions:
 
+   ```json
+   "permissions": [
+               {
+                   "actions": [
+                       "Microsoft.Storage/storageAccounts/blobServices/containers/read",
+                       "Microsoft.Storage/storageAccounts/blobServices/containers/write",
+                       "Microsoft.Storage/storageAccounts/blobServices/read"
+                   ],
+                   "notActions": [],
+                   "dataActions": [
+                       "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/add/action",
+                       "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write"
+                   ],
+                   "notDataActions": []
+               }
+           ]
+   ```
 
-```json
-"permissions": [
-            {
-                "actions": [
-                    "Microsoft.Storage/storageAccounts/blobServices/containers/read",
-                    "Microsoft.Storage/storageAccounts/blobServices/containers/write",
-                    "Microsoft.Storage/storageAccounts/blobServices/read"
-                ],
-                "notActions": [],
-                "dataActions": [
-                    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/add/action",
-                    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write"
-                ],
-                "notDataActions": []
-            }
-        ]
-```
+   Custom roles can be created via [CLI](/azure/role-based-access-control/custom-roles-cli) or [PowerShell](/azure/role-based-access-control/custom-roles-powershell)
 
-Custom roles can be created via [CLI](/azure/role-based-access-control/custom-roles-cli) or [PowerShell](/azure/role-based-access-control/custom-roles-powershell)
+   > [!TIP]
+   > The built-in role, [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles/storage) has delete permissions for the container, which is not required to store device control feature evidence. The built-in role, [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles/storage) lacks the write permissions that are required. This is why a custom role is recommended.
 
-> [!TIP]
-> The out of the box role [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles/storage) has delete permissions for the container, which is not required to store device control feature evidence.  The out of the box role [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles/storage) lacks the write permission required.  This is why a custom role is recommended.
-> [!IMPORTANT]
-> To ensure that the integrity of the file evidence use [Azure Immutable Storage](/azure/storage/blobs/immutable-storage-overview)
-1. Assign the users of device control to that *Device Control Evidence Data Provider*
+   > [!IMPORTANT]
+   > To ensure that the integrity of the file evidence use [Azure Immutable Storage](/azure/storage/blobs/immutable-storage-overview)
 
-1. Set the `RemoteStorageFileEvent` to the URL of the Azure Blob Storage container.
+3. Assign the users of device control to the `Device Control Evidence Data Provider` role.
+
+4. Set the `RemoteStorageFileEvent` to the URL of the Azure Blob Storage container.
 
 ## Next steps
 
