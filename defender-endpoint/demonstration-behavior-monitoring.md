@@ -1,6 +1,6 @@
 ---
-title: AV detection test for verifying device's onboarding and reporting services
-description: AV detection test to verify the device's proper onboarding and reporting to the service.
+title: Behavior Monitoring demonstration
+description: Behavior Monitoring demonstration
 ms.service: defender-endpoint
 ms.subservice: ngp
 author: YongRhee-MSFT
@@ -28,22 +28,18 @@ ms.date: 15/05/2024
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
-Scenario requirements and setup
+
+The Behavior Monitoring protection feature in Microsoft Defender Antivirus monitors process behavior to detect and analyze potential threats based on the behavior of applications, services, and files. Rather than relying solely on content matching, which identifies known malware patterns, behavior monitoring focuses on observing how software behaves in real-time.
+
+## Scenario requirements and setup
 
 - macOS
-
 - Microsoft Defender Real-time protection is enabled
-
-## Behavior Monitoring (BM) protection feature in Microsoft Defender Antivirus
-
-Behavior Monitoring (BM) protection feature in Microsoft Defender Antivirus Monitors process behavior to detect and analyze potential threats based on the behavior of applications, services, and files. Rather than relying solely on content matching, which identifies known malware patterns), behavior monitoring focuses on observing how software behaves in real-time.
 
 ### macOS
 
 1. Ensure that real-time protection (RTP) is enabled.
-
-Open a Terminal window. Copy and execute the following command:
-
+2. Open a Terminal window. Copy and execute the following command:
 
   ```bash
   mdatp health --field real_time_protection_enabled
@@ -60,11 +56,11 @@ When RTP is enabled, the result shows a value of 1.
   sudo mdatp config behavior-monitoring --value enabled
   ```
 
-The result should show "Configuration property updated."
+The result should show 'Configuration property updated.'
 
 _or_
 
-              _If managed via “Settings Preferences” (aka Managed Preferences and policy):_
+              _If managed via “Settings Preferences” (also known as Managed Preferences and policy):_
 
  
 
@@ -182,14 +178,11 @@ _or_
   mdatp health --details features
   ```
   
-The result should show
+The result should show:
 
-behavior_monitoring "enabled"
+behavior_monitoring 'enabled'
 
-4. Create a bash script
-
-With your favorite script/text editor such as nano or Visual Studio Code (VS Code)
-
+4. Create a bash script using a script/text editor such as nano or Visual Studio Code (VS Code):
 
   ```bash
   #! /usr/bin/bash
@@ -217,22 +210,22 @@ Save as BM_test.sh
   sudo bash BM_test.sh
   ```
 
-The result will show you:
+The result shows:
 
 zsh: killed      sudo bash BM_test.sh
 
-1. The file has been quarantined by Defender for Endpoint on Mac. Use the following command to list all the detected threats:
+1. The file was quarantined by Defender for Endpoint on Mac. Use the following command to list all the detected threats:
 
 
 ```bash
 mdatp threat list
 ```
 
-The result will show you:
+The result shows:
 
-Id: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+ID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
-Name: Behavior:MacOS/MacOSChangeFileTest
+Name: Behavior: MacOS/MacOSChangeFileTest
 
 Type: "behavior"
 
@@ -240,5 +233,5 @@ Detection time: Tue May 7 20:23:41 2024
 
 Status: "quarantined"
 
-8. If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the Microsoft Defender XDR portal ([https://security.microsoft.com](https://security.microsoft.com)), and you will see an Alert named: "Suspicious 'MacOSChangeFileTest' behavior was blocked.
+8. If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the Microsoft Defender XDR portal ([https://security.microsoft.com](https://security.microsoft.com)), and you'll see an alert named: "Suspicious 'MacOSChangeFileTest' behavior was blocked."
 
