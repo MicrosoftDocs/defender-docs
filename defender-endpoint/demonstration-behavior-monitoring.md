@@ -98,5 +98,5 @@ Detection time: Tue May 7 20:23:41 2024
 
 Status: "quarantined"
 
-If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the Microsoft Defender XDR portal ([https://security.microsoft.com](https://security.microsoft.com)), and you'll see an alert named: "Suspicious 'MacOSChangeFileTest' behavior was blocked."
+If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the [Microsoft Defender XDR portal](https://security.microsoft.com), and you'll see an alert named: "Suspicious 'MacOSChangeFileTest' behavior was blocked."
 
