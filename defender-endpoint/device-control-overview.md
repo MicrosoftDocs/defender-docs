@@ -153,7 +153,6 @@ This query returns the name of the policy, the access requested, and the verdict
 
 To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
-
 ## **[Controlling access to BitLocker encrypted removable media (Preview)](#tab/Bitlocker)**
 
 ### BitLocker support for removable media
@@ -212,7 +211,7 @@ If you're new to device control, see [Device control walkthroughs](device-contro
 
 Device control in Defender for Endpoint can be applied to devices running Windows 10 or Windows 11 that have the anti-malware client version `4.18.2103.3` or later. (Currently, servers are not supported.)
 
-- `4.18.2104` or later: Add `SerialNumberId`, `VID_PID`, filepath-based GPO support, and `ComputerSid`
+- `4.18.2104` or later: Add `SerialNumberId`, `VID_PID`, filepath-based GPO support, and `ComputerSid`.
 - `4.18.2105` or later: Add Wildcard support for `HardwareId/DeviceId/InstancePathId/FriendlyNameId/SerialNumberId`; the combination of specific users on specific machines, removable SSD (a SanDisk Extreme SSD)/USB Attached SCSI (UAS) support.
 - `4.18.2107` or later: Add Windows Portable Device (WPD) support (for mobile devices, such as tablets); add `AccountName` into advanced hunting.
 - `4.18.2205` or later: Expand the default enforcement to Printer. If you set it to Deny, it blocks Printer as well, so if you only want to manage storage, make sure to create a custom policy to allow Printer.
