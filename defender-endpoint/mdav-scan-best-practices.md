@@ -90,12 +90,12 @@ The followings are Microsoft’s recommendations:
 - The full scan performance can be impacted by CPU throttling. Our recommendation is to leave CPU limit settings at the default.
 Note 1: By design Microsoft Defender inspects the internal content type as file extensions are often misleading and can be easily spoofed by attackers.
 Note 2: The scanning performance is heavily dependent on the actual content type that is being scanned. In general, more complex file types require more time and cycle, while more unusual content types require even more time (e.g., JavaScript files).
-Note 3: Microsoft Defender Performance Analyzer tool helps determine files, file extensions, and processes that might be causing performance issues on individual endpoints during antivirus scans. If you are running Microsoft Defender Antivirus and experiencing performance issues, you can use performance analyzer to optimize performance (see Performance analyzer for Microsoft Defender Antivirus | Microsoft Learn).
-Note 4: A trusted image identifier for Microsoft Defender can help improve the performance of your devices right out of the box. See Configure a Trusted Image Identifier for Microsoft Defender | Microsoft Learn.
+Note 3: Microsoft Defender Performance Analyzer tool helps determine files, file extensions, and processes that might be causing performance issues on individual endpoints during antivirus scans. If you are running Microsoft Defender Antivirus and experiencing performance issues, you can use performance analyzer to optimize performance (see Performance analyzer for Microsoft Defender Antivirus).
+Note 4: A trusted image identifier for Microsoft Defender can help improve the performance of your devices right out of the box. See Configure a Trusted Image Identifier for Microsoft Defender.
 
 ### Scanning and CPU throttling
 
-The CPU usage limit, also known as CPU throttling, setting is used to set the maximum CPU usage for Microsoft Defender on-demand scans. The CPU throttling setting is enabled by default and is applies only to scheduled scans, and optionally to custom scans as well. It's recommended to fine tune this setting (see Set-MpPreference (Defender) | Microsoft Learn for ScanAverageCPULoadFactor setting) depending on the actual CPU usage values obtained in your specific environment. 
+The CPU usage limit, also known as CPU throttling, setting is used to set the maximum CPU usage for Microsoft Defender on-demand scans. The CPU throttling setting is enabled by default and is applies only to scheduled scans, and optionally to custom scans as well. It's recommended to fine tune this setting (see Set-MpPreference (Defender) for ScanAverageCPULoadFactor setting) depending on the actual CPU usage values obtained in your specific environment. 
 
 The CPU load factor for Microsoft Defender is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum. For this scan policy setting you can specify a value as a percentage the maximum CPU utilization during scan. The value of 0 or 100 indicates no throttling. For instance, if this value is reduced to 20, it implies that the scanning engine will aim to keep the average CPU load of the system below 20% during the scan and it takes longer to be completed. 
 
@@ -103,9 +103,9 @@ The CPU load factor for Microsoft Defender is not a hard limit but rather a guid
 
 - Changing the value has both pros and cons. Higher values mean the scans will perform faster however, it could slow down your system during the scan, while lower values mean the scan will take longer to finish, but you will have more CPU resources available for your system during the scan. For instance, if you are running critical workloads on a server, this setting should be set to a value that doesn’t interfere with the functioning of the workloads.
 
-- Manual scans ignore the CPU throttling setting and run without any CPU limits. However, there is a scan policy setting (see Set-MpPreference (Defender) | Microsoft Learn  for ThrottleForScheduledScanOnly setting) that if it is disabled, then manual scans will adhere to the same CPU limits as a scheduled scan.
+- Manual scans ignore the CPU throttling setting and run without any CPU limits. However, there is a scan policy setting (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) for ThrottleForScheduledScanOnly setting) that if it is disabled, then manual scans will adhere to the same CPU limits as a scheduled scan.
 
-- CPU throttling on idle scans (see Set-MpPreference (Defender) | Microsoft Learn for DisableCpuThrottleOnIdleScans setting) controls whether the CPU will be throttled for scheduled scans while the device is idle. This setting is disabled by default to ensure that the CPU will not be throttled for scheduled scans when the device is idle, regardless of what CPU throttling is set to.
+- CPU throttling on idle scans (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) for DisableCpuThrottleOnIdleScans setting) controls whether the CPU will be throttled for scheduled scans while the device is idle. This setting is disabled by default to ensure that the CPU will not be throttled for scheduled scans when the device is idle, regardless of what CPU throttling is set to.
 
 > [!NOTE]
 > See the idle state criteria in [Task idle conditions - Win32 apps](/windows/win32/taskschd/task-idle-conditions).
