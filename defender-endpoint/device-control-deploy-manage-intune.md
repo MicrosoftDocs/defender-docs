@@ -4,7 +4,7 @@ description: Learn how to deploy and manage device control in Defender for Endpo
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-ms.date: 02/23/2024
+ms.date: 05/15/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -83,6 +83,9 @@ You can add audit policies, and you can add Allow/Deny policies. It is recommend
 > - The order in the which policies are listed in the user interface isn't preserved for policy enforcement. The best practice is to use **Allow/Deny policies**. Ensure that the **Allow/Deny policies** option is non-intersecting by explicitly adding devices to be excluded. Using Intune's graphical interface, you cannot change the default enforcement. If you change the default enforcement to Deny, any allow policy results in blocking actions.
 
 ## Defining Settings with OMA-URI
+
+> [!IMPORTANT]
+> Using Intune OMA-URI to configure device control requires the *Device Configuration* workload to be managed by Intune, if the device is co-managed with Configuration Manager. For more information, see [How to switch Configuration Manager workloads to Intune](/mem/configmgr/comanage/how-to-switch-workloads).
 
 In the following table, identify the setting you want to configure, and then use the information in the OMA-URI and data type & values columns. Settings are listed in alphabetical order.
 
