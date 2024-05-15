@@ -234,9 +234,6 @@ If you already have preview features turned on, manage your settings from the ma
 
 For more information, see [Microsoft Defender XDR preview features](/defender-xdr/preview)
 
-> [!NOTE]
-> .
-
 ## Download quarantined files
 
 Backup quarantined files in a secure and compliant location so they can be downloaded directly from quarantine. The **Download file** button will always be available in the file page. This setting is turned on by default. [Learn more about requirements](respond-file-alerts.md#download-quarantined-files)
