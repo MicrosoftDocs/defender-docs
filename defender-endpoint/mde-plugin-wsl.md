@@ -309,17 +309,17 @@ DeviceProcessEvents
    
    5. Set the **Allow WSL1** setting to **Disabled**, to ensure that only WSL 2 distributions can be used.
 
-   Alternately, if you want to keep using WSL 1, or not use the Intune Policy, you can selectively associate your installed distributions to run on WSL 2, by running the command in PowerShell: 
-   
-   ```powershell
-   wsl --set-version <YourDistroName> 2
-   ```
+      Alternately, if you want to keep using WSL 1, or not use the Intune Policy, you can selectively associate your installed distributions to run on WSL 2, by running the command in PowerShell: 
 
-   To have WSL 2 as your default WSL version for new distributions to be installed in the system, run the following command in PowerShell: 
+      ```powershell
+      wsl --set-version <YourDistroName> 2
+      ```
+
+      To have WSL 2 as your default WSL version for new distributions to be installed in the system, run the following command in PowerShell: 
    
-   ```powershell
-   wsl --set-default-version 2
-   ```
+      ```powershell
+      wsl --set-default-version 2
+      ```
 
 7. The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following under registry and restart wsl:
 
