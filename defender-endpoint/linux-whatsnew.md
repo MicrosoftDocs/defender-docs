@@ -49,11 +49,11 @@ This article is updated frequently to let you know what's new in the latest rele
 There are multiple fixes and new changes in this release:
 
 - New Field in mdatp health - engine_load_status<br>
-  The engine_load_status field in mdatp health will show current status of engine process. 
+  To optimize performance, the unprivileged process will only run in specific scenarios. The field 'engine_load_status' indicates the following:
 
     Healthy Scenarios:
-    - "Engine not loaded"  - we have brought down the engine process for optimisation purposes. 
-    - "Engine load succeeded" - engine is up and running
+    - "Engine not loaded"  - The unprivileged process is not currently running.. 
+    - "Engine load succeeded" - The unprivileged process is up and running.
 - Bug fix to enhance behavioral detections.
 - Stability and performance improvements.
 - Other bug fixes.
