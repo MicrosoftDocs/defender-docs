@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 11/01/2023
+ms.date: 05/05/2024
 ---
 
 # Run the client analyzer on Windows
