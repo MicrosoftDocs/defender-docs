@@ -108,7 +108,7 @@ When a device installation restrictions are configured and a device is installed
 
 **Learn more:** 
 
-- [Manage Device Installation with Group Policy - Windows Client Management | Microsoft Learn](/windows/client-management/client-tools/manage-device-installation-with-group-policy)
+- [Manage Device Installation with Group Policy - Windows Client Management](/windows/client-management/client-tools/manage-device-installation-with-group-policy)
 
 - [Restrict USB devices and allow specific USB devices using ADMX templates in Intune](/mem/intune/configuration/administrative-templates-restrict-usb).
 
@@ -160,7 +160,7 @@ To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](
 Windows provides the ability to deny write to all removable media or deny write access unless a device is BitLocker encrypted.
 
 **Learn More**
-- [Configure BitLocker - Windows Security | Microsoft Learn](https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=removable#policy-settings-list)
+- [Configure BitLocker - Windows Security](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=removable#policy-settings-list)
 
 
 ### Device control policies for BitLocker (Preview)
@@ -193,7 +193,7 @@ To block printing of documents based on information classification use [Endpoint
 Administrators can control the behavior of the Bluetooth service (Allowing advertising, discovery, preparing and prompting) as well as the Bluetooth services that are allowed.
 
 **Learn More**
-- [Windows Bluetooth](https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-bluetooth)
+- [Windows Bluetooth](/windows/client-management/mdm/policy-csp-bluetooth)
 
 ### Endpoint DLP
 
