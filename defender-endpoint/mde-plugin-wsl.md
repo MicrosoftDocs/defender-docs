@@ -34,6 +34,12 @@ Be aware of the following before you start:
 
 3. Running a custom kernel and custom kernel command line is supported in this version. However the plug-in doesn't provide any guarantees regarding the visibility within WSL when running a custom kernel and custom kernel command line.
 
+4. OS Distribution is displayed **None** in Device overview page of WSL device in Microsoft Defender portal.
+
+5. `MDE Connectivity Test: invalid` in healthcheck output indicates that the client connectivity from WSL to Defender for Endpoint service URLs is failing.
+
+6. The plug-in software is not supported in ARM64 processor machines.
+
 ## Software prerequisites
 
 - WSL version 2.0.7 or later must be running with at least one active distro.
