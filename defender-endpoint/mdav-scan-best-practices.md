@@ -36,7 +36,7 @@ This article explains the considerations and best practices for Antivirus Full S
 
 Real-time protection in Microsoft Defender is a feature that continuously scans your computer to help detect and stop malware infections in real time. It uses heuristic and behavior-based detection methods to monitor the activity on your device and protect against threats as they happen. Our recommendation for scheduled scans is to configure Quick Scan together with always-on Real-time Protection and Cloud Protection, as this combination provides strong coverage against malware that starts with the system and kernel-level malware. This is the default configuration. In general, there's no need to schedule a full scan and most our users never need to manually run full scans.
 
-However, some customers want to run full scans to meet their organization’s specific requirements. A full scan starts with a Quick Scan and then continues with a sequential file scan of all the fixed and removable network drives that are mounted. A full scan can last from several hours to several days, depending on the content volume, type of content, and the resources that Microsoft Defender has been allocated to perform the scan (see [Schedule regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md)). Scan performance is not solely a function of file size and is mostly determined by the type and complexity of the content.
+However, some customers want to run full scans to meet their organization’s specific requirements. A full scan starts with a Quick Scan and then continues with a sequential file scan of all the fixed and removable network drives that are mounted. A full scan can last from several hours to several days, depending on the content volume, type of content, and the resources that Microsoft Defender has been allocated to perform the scan (see [Schedule regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md)). Scan performance isn't solely a function of file size and is mostly determined by the type and complexity of the content.
 
 ## Protection efficiency and performance impact
 
@@ -63,7 +63,7 @@ To configure scanning options for Microsoft Defender Antivirus, you can use vari
 
 | Setting | Default | PowerShell/WMI parameter | Details |
 |--|--|--|--|
-| Archive/Container (e.g., ISOs) Scanning | Enabled | | Defender is optimized to minimize the scan time of a single object. Containers may contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
+| Archive/Container (for example, ISOs) Scanning | Enabled | | Defender is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
 | Archive files (.zip, .rar, etc.) | Scanned | `DisableArchiveScanning` | By turning on `DisableArchiveScanning`, the following archive types are excluded from antivirus scans: <br/>- `ZIP`<br/>- `Ace`<br/>- `Arc`<br/>- `Arj`<br/>- `BZip2`<br/>- `Cab`<br/>- `CF`<br/>- `CPIO`<br/>- `CPT`<br/>- `GZip`<br/>- `Hap`<br/>- `ISO`<br/>- `Lharc`<br/>- `PSF`<br/>- `Quantum`<br/>- `Rar`<br/>- `Stuff`-It<br/>- `Zoo`<br/>- `ZCompress`<br/>- `Compress`<br/>- `VC4`<br/>- `RPM`<br/>- `BGA`<br/>- `BH`<br/>- `Universal Disk Format`<br/>- `7z` <br/><br/>For more information, see [DisableArchiveScanning](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true#-disablearchivescanning) |
 | Level of subfolders within an archive folder to scan | 0 | NA | 0 means unlimited. |
 | Max size of archive for scan | 0 | NA | 0 means unlimited. |
@@ -107,7 +107,7 @@ The CPU usage limit, also known as CPU throttling, setting is used to set the ma
 
 The CPU load factor for Microsoft Defender isn't a hard limit but rather guidance for the scanning engine to not exceed this maximum. For this scan policy setting you can specify a value as a percentage the maximum CPU utilization during scan. The value of 0 or 100 indicates no throttling. For instance, if this value is reduced to 20, it implies that the scanning engine aims to keep the average CPU load of the system below 20% during the scan and it takes longer to be completed. 
 
-- If you set the percentage value to 0 or 100, CPU throttling will be disabled, and Windows Defender can use up to 100% of CPU during the scheduled and custom scans. This isn't recommended as it can lead to unresponsive apps, and even overheating so proceed with extreme caution.
+- If you set the percentage value to 0 or 100, CPU throttling is disabled, and Windows Defender can use up to 100% of CPU during the scheduled and custom scans. This isn't recommended as it can lead to unresponsive apps, and even overheating so proceed with extreme caution.
 
 - Changing the value has both pros and cons. Higher values mean the scans perform faster; however, it could slow down your system during the scan, while lower values mean the scan takes longer to finish, but you have more CPU resources available for your system during the scan. For instance, if you're running critical workloads on a server, this setting should be set to a value that doesn’t interfere with the functioning of the workloads.
 
@@ -128,7 +128,7 @@ Microsoft Defender has the following features that help enhance scan performance
 
 - Microsoft Defender Performance Analyzer tool can be used to determine exclusions that help optimize performance. See [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
-Microsoft Defender has a built-in optimization for content that is highly reputable (e.g. signed by trusted sources). When it encounters such content, it simply shifts away from scanning the content to validating the signature to ensure the file wasn’t tampered with.
+Microsoft Defender has a built-in optimization for content that is highly reputable (for example, signed by trusted sources). When it encounters such content, it simply shifts away from scanning the content to validating the signature to ensure the file wasn’t tampered with.
 
 > [!NOTE]
 > On Windows Server 2016 and Windows Server 2019, automatic exclusions help reduce CPU load during real-time scanning. The automatic exclusions are applied in addition to any custom exclusions you configure. The automatic exclusions are based on server role, such as DNS, AD DS, Hyper-V host, File Server, Print Server, Web Server, etc. Automatic exclusions only apply to Real-time protection (RTP) scanning and are not honored during a Full/Quick or On-demand scans. See [Microsoft Defender Antivirus exclusions on Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md).
@@ -137,9 +137,9 @@ Microsoft Defender has a built-in optimization for content that is highly reputa
 
 Excluding certain locations from scanning can shorten the scan time. There are two types of exclusions: process exclusions and file/folder exclusions. Only file/folder exclusions apply to full scan. Scan exclusions should be carefully developed to reduce scan time while minimizing risk.
 
-- Do not exclude compressed files if disallowed by your compliance requirements.
+- Don't exclude compressed files if disallowed by your compliance requirements.
 
-- Do not exclude the User Profile temp folder or the System temp folder, commonly used by malware:
+- Don't exclude the User Profile temp folder or the System temp folder, commonly used by malware:
 
    - `C:\Users<UserProfileName>\AppData\Local\Temp\`
    - `C:\Users<UserProfileName>\AppData\LocalLow\Temp\`
@@ -149,4 +149,4 @@ Excluding certain locations from scanning can shorten the scan time. There are t
    - `C:\Windows\System32\CatRoot2`
    - `%Windir%\Temp`
 
-- The use of environment variables as a wildcard in exclusion lists is limited to system variables only. Do not use user-scoped environment variables when adding Microsoft Defender Antivirus folder and process exclusions. 
+- The use of environment variables as a wildcard in exclusion lists is limited to system variables only. Don't use user-scoped environment variables when adding Microsoft Defender Antivirus folder and process exclusions. 
