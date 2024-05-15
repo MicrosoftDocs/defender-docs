@@ -1,5 +1,5 @@
 ---
-title: Device control in Microsoft Defender for Endpoint            
+title: Device control in Microsoft Defender for Endpoint
 description: Get an overview of device control, including removable storage access control and device installation policies in Defender for Endpoint.
 author: siosulli
 ms.author: siosulli
@@ -55,7 +55,7 @@ Device control capabilities from Microsoft can be organized into three main cate
         
 - **Device control in Defender for Endpoint**. Device control in Defender for Endpoint provides more advanced capabilities and is cross platform. 
 
-     - Granular access control - create policies to control access by device, device type, operation (read, write, execute), user group, network location or file type.
+     - Granular access control - create policies to control access by device, device type, operation (read, write, execute), user group, network location, or file type.
   
      - File evidence - store the file information and contents to audit files copied or accessed on devices.
   
