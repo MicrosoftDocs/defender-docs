@@ -36,20 +36,14 @@ You can collect the Defender for Endpoint analyzer support logs remotely using [
 
    The file is saved to your Downloads folder by default.
 
-1. Open your Downloads folder, right-click on **MDEClientAnalyzer.zip**, and then select **Properties**.
+2. Extract the contents of MDEClientAnalyzer.zip to an available folder.
 
-Where it says "This file came from another computer and might be blocked to help protect this computer", check the box to '**Unblock**"
-
-Click on Ok.
-
-4. Extract the contents of MDEClientAnalyzer.zip to an available folder.
-
-5. Open a command line with administrator permissions: 
+3. Open a command line with administrator permissions: 
 
    1. Go to **Start** and type **cmd**.
    1. Right-click **Command prompt** and select **Run as administrator**.
 
-6. Type the following command and then press **Enter**:
+4. Type the following command and then press **Enter**:
 
    ```cmd
    *DrivePath*\MDEClientAnalyzer.cmd
