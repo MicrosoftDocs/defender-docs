@@ -40,6 +40,10 @@ Be aware of the following before you start:
 
 3. Running a custom kernel and custom kernel command line is supported in this version; however, the plug-in doesn't guarantee visibility within WSL when you're running a custom kernel and custom kernel command line.
 
+4. OS Distribution is displayed **None** in Device overview page of WSL device in Microsoft Defender portal.
+
+5. The plug-in is not supported on machines with ARM64 processor.
+
 ## Software prerequisites
 
 - WSL version 2.0.7 or later must be running with at least one active distro.
@@ -154,7 +158,7 @@ The following procedure describes how to confirm that Defender in Endpoint in WS
 
 4. Wait for 5 minutes and then run `healthcheck.exe` (located at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test).
 
-   If successful, you can see that the connectivity test was successful. 
+   If successful, you can see that the connectivity test was successful. If failed, you can see that the connectivity test was `invalid` indicating that the client connectivity from WSL to Defender for Endpoint service URLs is failing.
 
 > [!NOTE]
 > To set a proxy for use in WSL containers (the distributions running on the subsystem), see [Advanced settings configuration in WSL](/windows/wsl/wsl-config).
