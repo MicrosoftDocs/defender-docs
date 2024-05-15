@@ -186,12 +186,10 @@ To block printing of documents based on information classification use [Endpoint
 ## [**Bluetooth**](#tab/Bluetooth)
 
 > [!TIP]
-> If you're using Mac, device control can control access to Bluetooth.  See **[Device Control for macOS](/editor/MicrosoftDocs/defender-docs-pr/defender-endpoint%2Fdevice-control-overview.md/main/d565b957-f2d8-dbf6-35a0-305e77bc1a95/mac-device-control-overview.md)**.
-### Controlling access to Bluetooth services on Windows
-Administrators can control the behavior of the Bluetooth service (Allowing advertising, discovery, preparing and prompting) as well as the Bluetooth services that are allowed.
+> If you're using Mac, device control can control access to Bluetooth.  See **[Device Control for macOS](mac-device-control-overview.md)**.
 
-**Learn More**
-- [Windows Bluetooth](/windows/client-management/mdm/policy-csp-bluetooth)
+### Controlling access to Bluetooth services on Windows
+Administrators can control the behavior of the Bluetooth service (Allowing advertising, discovery, preparing and prompting) as well as the Bluetooth services that are allowed. For more information, see [Windows Bluetooth](/windows/client-management/mdm/policy-csp-bluetooth).
 
 ### Endpoint DLP
 
