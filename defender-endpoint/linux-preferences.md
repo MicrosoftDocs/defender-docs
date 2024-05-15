@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: dansimp
 author: dansimp
 ms.localizationpriority: medium
-ms.date: 05/01/2024
+ms.date: 05/13/2024
 manager: dansimp
 audience: ITPro
 ms.collection: 
@@ -63,7 +63,7 @@ Specifies the enforcement preference of antivirus engine. There are three values
 - Real-time (`real_time`): Real-time protection (scan files as they're modified) is enabled.
 - On-demand (`on_demand`): Files are scanned only on demand. In this:
   - Real-time protection is turned off.
-- [Passive (`passive`)](microsoft-defender-antivirus-compatibility.md#passive-mode-or-edr-block-mode): Runs the antivirus engine in passive mode. In this:
+- Passive (`passive`): Runs the antivirus engine in passive mode. In this:
   - Real-time protection is turned off: Threats are not remediated by Microsoft Defender Antivirus.
   - On-demand scanning is turned on: Still use the scan capabilities on the endpoint.
   - Automatic threat remediation is turned off: No files will be moved and security admin is expected to take required action.
@@ -429,7 +429,7 @@ Determines whether cloud-delivered protection is enabled on the device or not. T
 
 #### Diagnostic collection level
 
-Diagnostic data is used to keep Defender for Endpoint secure and up to date, detect, diagnose and fix problems, and also make product improvements. This setting determines the level of diagnostics sent by the product to Microsoft.
+Diagnostic data is used to keep Defender for Endpoint secure and up to date, detect, diagnose and fix problems, and also make product improvements. This setting determines the level of diagnostics sent by the product to Microsoft. For more details, see [Privacy for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-privacy).
 
 |Description|Value|
 |---|---|

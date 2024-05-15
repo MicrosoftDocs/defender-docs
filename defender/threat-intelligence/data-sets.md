@@ -249,8 +249,9 @@ When you expand on an SHA-1 hash, you see the following details:
   ![Data Sets CertificateFree Provider](media/dataSetsCertificateFreeProvider.png)
 
 - Over what timeframe has the certificate been observed in use?
+   
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-cert-first-last-seen.png" alt-text="Data Sets Certificates Observation Dates." lightbox="/defender/threat-intelligence/media/data-sets-cert-first-last-seen.png":::
 
-  ![Data Sets Certificates Observation Dates](media/dataSetsCertificatesObservationDates.png)
 
 ## Subdomains
 
@@ -266,12 +267,12 @@ Our subdomain data includes the following information:
 **Questions this data set might help answer**
 
 - Are there more subdomains associated with the higher-level domain?
-
-  ![Data Sets Sub domains](media/dataSetsSubdomains.png)
+ 
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-subdomains-01.png" alt-text="Data Sets Subdomains." lightbox="/defender/threat-intelligence/media/data-sets-subdomains-01.png":::
 
 - Are any of the subdomains associated with malicious activity?
-
-  ![Data Sets Sub domains Malicious](media/dataSetsSubdomainsMalicious.png)
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-subdomains-02.png" alt-text="Data Sets Subdomains Malicious." lightbox="/defender/threat-intelligence/media/data-sets-subdomains-02.png":::
 
 - If I own this domain, do any of the subdomains look unfamiliar?
 
@@ -299,31 +300,31 @@ Our tracker data set includes IDs from providers like Google, Yandex, Mixpanel, 
 **Questions this data set might help answer**
 
 - Are there other resources using the same analytics IDs?
-
-  ![Data Sets Trackers Pivot Analytics Account](media/dataSetsTrackersPivotAnalyticsAccount.gif)
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-trackers-analytics.png" alt-text="Data Sets Trackers Pivot Analytics Account." lightbox="/defender/threat-intelligence/media/data-sets-trackers-analytics.png":::
 
 - Are these resources associated with the organization, or are they attempting to conduct an infringement attack?
 
 - Is there any overlap between trackers–are they shared with other websites?
 
-- What are the types of trackers found within the web page?
-
-  ![Data Sets Trackers Types](media/dataSetsTrackersTypes.png)
-
+- What are the types of trackers found within the web page?  
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-trackers-types.png" alt-text="Data Sets Trackers Types." lightbox="/defender/threat-intelligence/media/data-sets-trackers-types.png":::
+  
 - What is the length of time for trackers?
-
-  ![Data Sets Trackers LengthOf Time](media/dataSetsTrackersLengthOfTime.png)
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-trackers-first-last-seen.png" alt-text="Data Sets Trackers Length Of Time." lightbox="/defender/threat-intelligence/media/data-sets-trackers-first-last-seen.png":::
 
 - What is the frequency of change for tracker values–do they come, go, or remain?
 
 - Are there any trackers linking to website cloning software (for example, *MarkOfTheWeb* or *HTTrack*)?
-
-  ![Data Sets TrackersHt Track](media/dataSetsTrackersHtTrack.png)
-
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-trackers-httrack.png" alt-text="Data Sets Trackers HtTrack." lightbox="/defender/threat-intelligence/media/data-sets-trackers-httrack.png":::
+  
 - Are there any trackers linking to malicious command-and-control (C2) server malware (for example, *JARM*)?
-
-  ![Data Sets Trackers JARM](media/dataSetsTrackersJARM.png)
-
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-trackers-jarm.png" alt-text="Data Sets Trackers JARM." lightbox="/defender/threat-intelligence/media/data-sets-trackers-jarm.png":::
+  
 ## Components
 
 Web components are details describing a web page or server infrastructure gleaned from Microsoft performing a web crawl or scan. These components let you understand the makeup of a webpage or the technology and services driving a specific piece of infrastructure.
@@ -400,17 +401,17 @@ Our host pair data includes the following information:
 - Have any of the connected artifacts been blocklisted?
 - Have any of the connected artifacts been tagged (for example, phishing, APT, malicious, suspicious, specific threat actor)?
 - Is this host redirecting users to malicious content?
-
-  ![Data Sets Host Pairs Malicious Redirect](media/dataSetsHostPairsMaliciousRedirect.png)
-
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-host-pairs-redirect.png" alt-text="Data Sets Host Pairs Malicious Redirect." lightbox="/defender/threat-intelligence/media/data-sets-host-pairs-redirect.png":::
+  
 - Are resources pulling in CSS or images to set up infringement attacks?
-
-  ![Data Sets Host Pairs Infringement Attack](media/dataSetsHostPairsInfringementAttack.png)
-
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-host-pairs-img.png" alt-text="Data Sets Host Pairs Infringement Attack." lightbox="/defender/threat-intelligence/media/data-sets-host-pairs-img.png":::
+  
 - Are resources pulling in a script or referencing a *link.href* to set up a Magecart or skimming attack?
-
-  ![Data Sets Host Pairs Skimmer Reference](media/dataSetsHostPairsSkimmerReference.png)
-
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-host-pairs-href.png" alt-text="Data Sets Host Pairs Skimmer Reference." lightbox="/defender/threat-intelligence/media/data-sets-host-pairs-href.png":::
+  
 - Where are users being redirected from/to?
 
 - What type of redirection is taking place?
@@ -433,19 +434,19 @@ Our cookie data includes the following information:
 **Questions this data set might help answer**
 
 - What other websites are issuing the same cookies?
-
-  ![Data Sets Cookies Domains Issuing Same Cookie](media/dataSetsCookiesDomainsIssuingSameCookie.png)
-
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-cookies-issue.png" alt-text="Data Sets Cookies Domains Issuing Same Cookie." lightbox="/defender/threat-intelligence/media/data-sets-cookies-issue.png":::
+  
 - What other websites are tracking the same cookies?
-
-  ![Data Sets Cookies Domains Tracking Same Cookie](media/dataSetsCookiesDomainsTrackingSameCookie.png)
-
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-cookies-same.png" alt-text="Data Sets Cookies Domains Tracking Same Cookie." lightbox="/defender/threat-intelligence/media/data-sets-cookies-same.png":::
+  
 - Does the cookie domain match my query?
 
 - How many cookies are associated with the artifact?
-
-  ![Data Sets Cookies Number Associated with Artifact](media/dataSetsCookiesNumberAssociatedwithArtifact.png)
-
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-cookies-number.png" alt-text="Data Sets Cookies Number Associated with Artifact." lightbox="/defender/threat-intelligence/media/data-sets-cookies-number.png":::
+ 
 - Are there unique cookie names or domains?
 
 - What are the time periods associated with cookies?
@@ -475,21 +476,19 @@ Our services data includes the following information:
 **Questions this data set might help answer**
 
 - What applications are running on a particular port for a given IP address?
-
-  ![Data Sets Services Applications Running](media/dataSetsServicesApplicationsRunning.png)
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-services-ssh.png" alt-text="Data Sets Services Applications Running." lightbox="/defender/threat-intelligence/media/data-sets-services-ssh.png":::
 
 - What version of applications are in use?
 
-  ![Data Sets Services Version Running](media/dataSetsServicesVersionRunning.png)
-
 - Are there recent changes in the open, filtered, or closed status for a given port?
-
-  ![Data Sets Services Port Statuses](media/dataSetsServicesPortStatuses.png)
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-services-open-close.png" alt-text="Data Sets Services Port Statuses." lightbox="/defender/threat-intelligence/media/data-sets-services-open-close.png":::
 
 - Was a certificate associated with the connection?
-
-  ![Data Sets Services Certificate Associations](media/dataSetsServicesCertificateAssociations.png)
-
+  
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-services-cert.png" alt-text="Data Sets Services Certificate Associations." lightbox="/defender/threat-intelligence/media/data-sets-services-cert.png":::
+ 
 - Are vulnerable or deprecated technologies in use on a given asset?
 
   ![Data Sets Services Applications Running](media/dataSetsServicesApplicationsRunning.png)
