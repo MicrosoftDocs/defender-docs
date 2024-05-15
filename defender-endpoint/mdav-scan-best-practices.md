@@ -34,19 +34,19 @@ This article explains the considerations and best practices for Antivirus Full S
 
 ## Overview
 
-Real-time protection in Microsoft Defender is a feature that continuously scans your computer to help detect and stop malware infections in real time. It uses heuristic and behavior-based detection methods to monitor the activity on your device and protect against threats as they happen. Our recommendation for scheduled scans is to configure Quick Scan together with always-on Real-time Protection and Cloud Protection, as this combination provides strong coverage against malware that starts with the system and kernel-level malware. This is the default configuration. In general, there is no need to schedule a full scan and the majority of our users never need to manually run full scans.
+Real-time protection in Microsoft Defender is a feature that continuously scans your computer to help detect and stop malware infections in real time. It uses heuristic and behavior-based detection methods to monitor the activity on your device and protect against threats as they happen. Our recommendation for scheduled scans is to configure Quick Scan together with always-on Real-time Protection and Cloud Protection, as this combination provides strong coverage against malware that starts with the system and kernel-level malware. This is the default configuration. In general, there's no need to schedule a full scan and most our users never need to manually run full scans.
 
 However, some customers want to run full scans to meet their organization’s specific requirements. A full scan starts with a Quick Scan and then continues with a sequential file scan of all the fixed and removable network drives that are mounted. A full scan can last from several hours to several days, depending on the content volume, type of content, and the resources that Microsoft Defender has been allocated to perform the scan (see [Schedule regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md)). Scan performance is not solely a function of file size and is mostly determined by the type and complexity of the content.
 
 ## Protection efficiency and performance impact
 
-Protection and system resource usage entails tradeoffs. Device performance is highly dependent on the customers’ environment. It is quite natural that running a full scan on a device with lots of complex content would lead to an increased time to completion. The following table summarizes scenarios where we’ve made decisions to use more system resources to increase our protection efficiency.
+Protection and system resource usage entails tradeoffs. Device performance is highly dependent on the customers’ environment. It's natural that running a full scan on a device with lots of complex content would lead to an increased time to completion. The following table summarizes scenarios where we’ve made decisions to use more system resources to increase our protection efficiency.
 
 | Setting | Default | Details |
 |--|--|--|
-| Archive/Container (e.g., ISOs) Scanning | Enabled | Defender is optimized to minimize the scan time of a single object. Containers may contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
+| Archive/Container (for example, ISOs) Scanning | Enabled | Defender is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
 | Max size of archive scanning | Unlimited | |
-| Mapped Network (e.g., UNC, SMB, CIFS) | Enabled | By default, Defender scans mapped network drives. |
+| Mapped Network (for example, UNC, SMB, CIFS) | Enabled | By default, Defender scans mapped network drives. |
 | OneDrive sync | Enabled | By default, Defender scans desktops, documents, or downloads that are synchronized via OneDrive or folder sync. |
 | Client-side cache/offline files | Enabled | By default, Defender scans client-side cache. |
 | Scan Average CPU Load Factor | 50 | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
@@ -63,7 +63,7 @@ To configure scanning options for Microsoft Defender Antivirus, you can use vari
 
 | Setting | Default | PowerShell/WMI parameter | Details |
 |--|--|--|--|
-| Archive files (.zip, .rar, etc) | Scanned	DisableArchiveScanning | By turning “DisableArchiveScanning” on, the following archive types are excluded from AV scanning: ZIP, Ace, Arc, Arj, BZip2, Cab, CF, CPIO, CPT, GZip, Hap, ISO, Lharc, PSF, Quantum, Rar, Stuff-It, Zoo, ZCompress, Compress, VC4, RPM, BGA, BH, Universal Disk Format, 7z.
+| Archive files (.zip, .rar, etc.) | Scanned	DisableArchiveScanning | By turning on “DisableArchiveScanning”, the following archive types are excluded from AV scanning: ZIP, Ace, Arc, Arj, BZip2, Cab, CF, CPIO, CPT, GZip, Hap, ISO, Lharc, PSF, Quantum, Rar, Stuff-It, Zoo, ZCompress, Compress, VC4, RPM, BGA, BH, Universal Disk Format, 7z.
 https://learn.microsoft.com/en-us/powershell/module/defender/set-mppreference?view=windowsserver2022-ps#-disablearchivescanning |
 | Level of subfolders within an archive folder to scan | 0 | NA | 0 means unlimited. |
 | Max size of archive for scan | 0 | NA | 0 means unlimited. |
@@ -82,13 +82,13 @@ The followings are Microsoft’s recommendations:
 
 ### Full scans
 
-- Running a full scan once after you have just enabled or installed Microsoft Defender Antivirus can be useful to scan systems to detect existing threats.
+- Running a full scan once after you have enabled or installed Microsoft Defender Antivirus can be useful to scan systems to detect existing threats.
 
-- We recommend configuring scan policies based on device type and role, e.g., SQL Server Collection, IIS Server Collection, Restricted Workstation Collection, Standard Workstation Collection.
+- We recommend configuring scan policies based on device type and role, for example, SQL Server Collection, IIS Server Collection, Restricted Workstation Collection, Standard Workstation Collection.
 
 - Avoid using domain controllers in a file server role. This lowers AV scanning activities on file shares and minimizes performance overhead.
 
-- Microsoft Defender Antivirus has the file hash computation feature that computes file hashes for every executable file that is scanned if it wasn’t previously computed. This will have a performance cost especially when copying large files from a network share. See configure File Hash Computation to learn more about the impact on indicators.
+- Microsoft Defender Antivirus has the file hash computation feature that computes file hashes for every executable file that is scanned if it wasn’t previously computed. This has a performance cost especially when copying large files from a network share. See configure File Hash Computation to learn more about the impact on indicators.
 
 - The full scan performance can be impacted by CPU throttling. Our recommendation is to leave CPU limit settings at the default.
 
@@ -105,11 +105,11 @@ The followings are Microsoft’s recommendations:
 
 The CPU usage limit, also known as CPU throttling, setting is used to set the maximum CPU usage for Microsoft Defender on-demand scans. The CPU throttling setting is enabled by default and is applies only to scheduled scans, and optionally to custom scans as well. It's recommended to fine tune this setting (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) for `ScanAverageCPULoadFactor` setting) depending on the actual CPU usage values obtained in your specific environment. 
 
-The CPU load factor for Microsoft Defender is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum. For this scan policy setting you can specify a value as a percentage the maximum CPU utilization during scan. The value of 0 or 100 indicates no throttling. For instance, if this value is reduced to 20, it implies that the scanning engine will aim to keep the average CPU load of the system below 20% during the scan and it takes longer to be completed. 
+The CPU load factor for Microsoft Defender isn't a hard limit but rather guidance for the scanning engine to not exceed this maximum. For this scan policy setting you can specify a value as a percentage the maximum CPU utilization during scan. The value of 0 or 100 indicates no throttling. For instance, if this value is reduced to 20, it implies that the scanning engine aims to keep the average CPU load of the system below 20% during the scan and it takes longer to be completed. 
 
-- If you set the percentage value to 0 or 100, CPU throttling will be disabled, and Windows Defender can use up to 100% of CPU during the scheduled and custom scans. This is not recommended as it can lead to unresponsive apps, and even overheating so proceed with extreme caution.
+- If you set the percentage value to 0 or 100, CPU throttling will be disabled, and Windows Defender can use up to 100% of CPU during the scheduled and custom scans. This isn't recommended as it can lead to unresponsive apps, and even overheating so proceed with extreme caution.
 
-- Changing the value has both pros and cons. Higher values mean the scans will perform faster however, it could slow down your system during the scan, while lower values mean the scan will take longer to finish, but you will have more CPU resources available for your system during the scan. For instance, if you are running critical workloads on a server, this setting should be set to a value that doesn’t interfere with the functioning of the workloads.
+- Changing the value has both pros and cons. Higher values mean the scans perform faster; however, it could slow down your system during the scan, while lower values mean the scan will take longer to finish, but you will have more CPU resources available for your system during the scan. For instance, if you are running critical workloads on a server, this setting should be set to a value that doesn’t interfere with the functioning of the workloads.
 
 - Manual scans ignore the CPU throttling setting and run without any CPU limits. However, there is a scan policy setting (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) for ThrottleForScheduledScanOnly setting) that if it is disabled, then manual scans will adhere to the same CPU limits as a scheduled scan.
 
