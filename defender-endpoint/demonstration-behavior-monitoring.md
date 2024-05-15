@@ -15,7 +15,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 15/05/2024
+ms.date: 05/15/2024
 ---
 
 # Behavior Monitoring demonstration
@@ -29,17 +29,17 @@ ms.date: 15/05/2024
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 
-The Behavior Monitoring protection feature in Microsoft Defender Antivirus monitors process behavior to detect and analyze potential threats based on the behavior of applications, services, and files. Rather than relying solely on content matching, which identifies known malware patterns, behavior monitoring focuses on observing how software behaves in real-time.
+Behavior Monitoring in Microsoft Defender Antivirus monitors process behavior to detect and analyze potential threats based on the behavior of applications, services, and files. Rather than relying solely on content matching, which identifies known malware patterns, behavior monitoring focuses on observing how software behaves in real-time.
 
 ## Scenario requirements and setup
 
-- macOS
-- Microsoft Defender Real-time protection is enabled
+- This demonstration only runs on macOS
+- [Microsoft Defender Real-time protection is enabled](#microsoft-defender-real-time-protection-is-enabled)
+- [Behavior Monitoring is enabled](#enable-behavior-monitoring-for-microsoft-defender-for-endpoint)
 
-### macOS
+### Verify Microsoft Defender Real-time protection is enabled
 
-1. Ensure that real-time protection (RTP) is enabled.
-2. Open a Terminal window. Copy and execute the following command:
+To verify real-time protection (RTP) is enabled, open a terminal window and copy and execute the following command:
 
   ```bash
   mdatp health --field real_time_protection_enabled
@@ -47,142 +47,16 @@ The Behavior Monitoring protection feature in Microsoft Defender Antivirus monit
 
 When RTP is enabled, the result shows a value of 1.
 
-1. Enable Behavior Monitoring for Microsoft Defender for Endpoint on macOS
+## Enable Behavior Monitoring for Microsoft Defender for Endpoint
+
+For more information on hoe to enable Behavior Monitoring for Defender for Endpoint, see [Deployment instructions](/defender-endpoint/behavior-monitor-macos#deployment-instructions).
+
+### Example of how Behavior Monitoring works
+
+To see an example of how Behavior Monitoring blocks a payload:
 
 
-   `Manually`
-   
-  ```bash
-  sudo mdatp config behavior-monitoring --value enabled
-  ```
-
-The result should show 'Configuration property updated.'
-
-_or_
-
-              _If managed via “Settings Preferences” (also known as Managed Preferences and policy):_
-
- 
-
-              _Via Intune:_
-
-
-  ```xml
-  <?xml version="1.0" encoding="UTF-8"?>
-  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-  <plist version="1.0">
-  <dict>
-          <key>PayloadUUID</key>
-          <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
-          <key>PayloadType</key>
-          <string>Configuration</string>
-          <key>PayloadOrganization</key>
-          <string>Microsoft</string>
-          <key>PayloadIdentifier</key>
-          <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
-          <key>PayloadDisplayName</key>
-          <string>Microsoft Defender for Endpoint settings</string>
-          <key>PayloadDescription</key>
-          <string>Microsoft Defender for Endpoint configuration settings</string>
-          <key>PayloadVersion</key>
-          <integer>1</integer>
-          <key>PayloadEnabled</key>
-          <true/>
-          <key>PayloadRemovalDisallowed</key>
-          <true/>
-          <key>PayloadScope</key>
-          <string>System</string>
-          <key>PayloadContent</key>
-          <array>
-              <dict>
-                  <key>PayloadUUID</key>
-                  <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
-                  <key>PayloadType</key>
-                  <string>com.microsoft.wdav</string>
-                  <key>PayloadOrganization</key>
-                  <string>Microsoft</string>
-                  <key>PayloadIdentifier</key>
-                  <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
-                  <key>PayloadDisplayName</key>
-                  <string>Microsoft Defender for Endpoint configuration settings</string>
-                  <key>PayloadDescription</key>
-                  <string/>
-                  <key>PayloadVersion</key>
-                  <integer>1</integer>
-                  <key>PayloadEnabled</key>
-                  <true/>
-                <key>antivirusEngine</key>
-                <dict>
-                              <key>behaviorMonitoring</key>
-                             <string>enabled</string>
-                </dict>
-                <key>features</key>
-                <dict>
-                              <key>behaviorMonitoring</key>
-                             <string>enabled</string>
-                <key>behaviorMonitoringConfigurations</key>
-                             <dict>
-                                           <key>blockExecution</key>
-                                           <string>enabled</string>
-                                           <key>notifyForks</key>
-                                           <string>enabled</string>
-                                           <key>forwardRtpToBm</key>
-                                           <string>enabled</string>
-                                           <key>avoidOpenCache</key>
-                                           <string>enabled</string>
-                             </dict>
-                </dict>
-                </dict>
-          </array>
-  </dict>
-  </plist>
-  ```
-
-              _Via JAMF or other 3<sup>rd</sup> party MDM:_
-
-
-  ```xml
-  <?xml version="1.0" encoding="UTF-8"?>
-  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-  <plist version="1.0">
-  <dict>
-                <key>antivirusEngine</key>
-                <dict>
-                              <key>behaviorMonitoring</key>
-                             <string>enabled</string>
-                </dict>
-                <key>features</key>
-                <dict>
-                              <key>behaviorMonitoring</key>
-                             <string>enabled</string>
-                <key>behaviorMonitoringConfigurations</key>
-                             <dict>
-                                           <key>blockExecution</key>
-                                           <string>enabled</string>
-                                           <key>notifyForks</key>
-                                           <string>enabled</string>
-                                           <key>forwardRtpToBm</key>
-                                           <string>enabled</string>
-                                           <key>avoidOpenCache</key>
-                                           <string>enabled</string>
-                             </dict>
-                </dict>
-  </dict>
-  </plist>
-  ```
-
-3. Verify that Behavior Monitor is enabled
-
-
-  ```bash
-  mdatp health --details features
-  ```
-  
-The result should show:
-
-behavior_monitoring 'enabled'
-
-4. Create a bash script using a script/text editor such as nano or Visual Studio Code (VS Code):
+1. Create a bash script using a script/text editor such as nano or Visual Studio Code (VS Code):
 
   ```bash
   #! /usr/bin/bash
@@ -191,20 +65,13 @@ behavior_monitoring 'enabled'
   sleep 5
   ```
 
-Save as BM_test.sh
-
-5. Make the bash script executable
-
+2. Save as BM_test.sh
+3. Run the following command to make the bash script executable.
 
   ```bash
   sudo chmod u+x BM_test.sh
   ```
-  
-6. Run the bash script 
-
-
-6. Run the bash script 
-
+4. . Run the bash script 
 
   ```bash
   sudo bash BM_test.sh
@@ -214,7 +81,7 @@ The result shows:
 
 zsh: killed      sudo bash BM_test.sh
 
-1. The file was quarantined by Defender for Endpoint on Mac. Use the following command to list all the detected threats:
+The file was quarantined by Defender for Endpoint on macOS. Use the following command to list all the detected threats:
 
 
 ```bash
