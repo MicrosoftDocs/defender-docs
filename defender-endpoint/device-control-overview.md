@@ -1,6 +1,6 @@
 ---
 title: Device control in Microsoft Defender for Endpoint            
-description: Get an overview of device control, including removable storage access control and device installation policies in Defender for Endpoint           
+description: Get an overview of device control, including removable storage access control and device installation policies in Defender for Endpoint.
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
@@ -45,7 +45,7 @@ Device control capabilities from Microsoft can be organized into three main cate
 
 - **Device control in Windows**. The Windows operating system has built-in device control capabilities. Your security team can configure device installation settings to prevent (or allow) users from installing certain devices on their computers. Policies are applied at the device level, and use various device properties to determine whether or not a user can install/use a device. Device control in Windows works with BitLocker and ADMX templates, and can be managed using Intune.
 
-  **BitLocker** [BitLocker](/windows/security/operating-system-security/data-protection/encrypted-hard-drive) is a Windows security feature that provides encryption for entire volumes.  BitLocker encryption can be required for writing to removable media. Together with [Intune](/mem/intune/fundamentals/what-is-intune), policies can be configured to enforce encryption on devices using BitLocker for Windows .  For more information, see [Disk encryption policy settings for endpoint security in Intune](/mem/intune/protect/endpoint-security-disk-encryption-profile-settings).
+  **BitLocker** [BitLocker](/windows/security/operating-system-security/data-protection/encrypted-hard-drive) is a Windows security feature that provides encryption for entire volumes. BitLocker encryption can be required for writing to removable media. Together with [Intune](/mem/intune/fundamentals/what-is-intune), policies can be configured to enforce encryption on devices using BitLocker for Windows . For more information, see [Disk encryption policy settings for endpoint security in Intune](/mem/intune/protect/endpoint-security-disk-encryption-profile-settings).
     
   **Device Installation**. Windows provides the capability to prevent the installation of specific types of USB devices. 
     
@@ -118,10 +118,10 @@ Device control for MDE provides finer grain access control to a subset of USB de
 
 > [!NOTE]
 > On Windows, the term *removable media devices* does not mean any USB device.  Not **all** USB devices are *removable media devices*.  In order to be considered a *removable media device* and therefore in scope of MDE device control, the device **must** create a disk (e.g.  E: ) in Windows. 
-Device control can restrict access to the device and files on that device by defining policies.  
+Device control can restrict access to the device and files on that device by defining policies.
 
 > [!IMPORTANT]
-> Some devices create multiple entries in the Windows device manager (for example a, removable media device and a Windows portable device).  In order for the device to function properly make sure to grant access for **all** **entries** associated with the physical device.  
+> Some devices create multiple entries in the Windows device manager (for example a, removable media device and a Windows portable device). In order for the device to function properly make sure to grant access for **all** **entries** associated with the physical device. 
 If a policy is configured with an audit entry, then an event will appear in Advanced Hunting with an *ActionType* of *RemovableStoragePolicyTriggered*
 
 ```kusto
@@ -163,10 +163,10 @@ Windows provides the ability to deny write to all removable media or deny write 
 
 ### Device control policies for BitLocker (Preview)
 
-Device control for Microsoft Defender for Endpoint controls access to a device based on its BitLocker encrypted state (encrypted or plain).  This allows for exceptions to be created to allow and audit access to non-BitLocker encrypted devices.
+Device control for Microsoft Defender for Endpoint controls access to a device based on its BitLocker encrypted state (encrypted or plain). This allows for exceptions to be created to allow and audit access to non-BitLocker encrypted devices.
 
 > [!TIP]
-> If you're using Mac, device control can control access to removable media based on the APFS encryption state.  See **[Device Control for macOS](mac-device-control-overview.md)**.
+> If you're using Mac, device control can control access to removable media based on the APFS encryption state. See **[Device Control for macOS](mac-device-control-overview.md)**.
 
 ## [**Controlling access to printers**](#tab/Printers)
 
@@ -178,7 +178,7 @@ The device installation restrictions of Windows can be applied to printers.
 
 Device control for Microsoft Defender for Endpoint controls access to the printer based on the properties of the printer (VID/PID), the type of printer (Network, USB, Corporate etc.).
 
-Device control can also restrict the types of files that are printed.  Device control can also restrict printing on non-corporate environments. 
+Device control can also restrict the types of files that are printed. Device control can also restrict printing on non-corporate environments. 
 
 ### Endpoint DLP
 
@@ -187,7 +187,7 @@ To block printing of documents based on information classification use [Endpoint
 ## [**Bluetooth**](#tab/Bluetooth)
 
 > [!TIP]
-> If you're using Mac, device control can control access to Bluetooth.  See **[Device Control for macOS](mac-device-control-overview.md)**.
+> If you're using Mac, device control can control access to Bluetooth. See **[Device Control for macOS](mac-device-control-overview.md)**.
 
 ### Controlling access to Bluetooth services on Windows
 Administrators can control the behavior of the Bluetooth service (Allowing advertising, discovery, preparing and prompting) as well as the Bluetooth services that are allowed. For more information, see [Windows Bluetooth](/windows/client-management/mdm/policy-csp-bluetooth).
