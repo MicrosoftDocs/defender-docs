@@ -84,18 +84,27 @@ The followings are Microsoft’s recommendations:
 ### Full scans
 
 - Running a full scan once after you have just enabled or installed Microsoft Defender Antivirus can be useful to scan systems to detect existing threats.
+
 - We recommend configuring scan policies based on device type and role, e.g., SQL Server Collection, IIS Server Collection, Restricted Workstation Collection, Standard Workstation Collection.
+
 - Avoid using domain controllers in a file server role. This lowers AV scanning activities on file shares and minimizes performance overhead.
+
 - Microsoft Defender Antivirus has the file hash computation feature that computes file hashes for every executable file that is scanned if it wasn’t previously computed. This will have a performance cost especially when copying large files from a network share. See configure File Hash Computation to learn more about the impact on indicators.
+
 - The full scan performance can be impacted by CPU throttling. Our recommendation is to leave CPU limit settings at the default.
-Note 1: By design Microsoft Defender inspects the internal content type as file extensions are often misleading and can be easily spoofed by attackers.
-Note 2: The scanning performance is heavily dependent on the actual content type that is being scanned. In general, more complex file types require more time and cycle, while more unusual content types require even more time (e.g., JavaScript files).
-Note 3: Microsoft Defender Performance Analyzer tool helps determine files, file extensions, and processes that might be causing performance issues on individual endpoints during antivirus scans. If you are running Microsoft Defender Antivirus and experiencing performance issues, you can use performance analyzer to optimize performance (see Performance analyzer for Microsoft Defender Antivirus).
-Note 4: A trusted image identifier for Microsoft Defender can help improve the performance of your devices right out of the box. See Configure a Trusted Image Identifier for Microsoft Defender.
+
+> [!NOTE]
+> - By design, Microsoft Defender inspects the internal content type as file extensions are often misleading and can be easily spoofed by attackers.
+> 
+> - The scanning performance is heavily dependent on the actual content type that is being scanned. In general, more complex file types require more time and cycle, while more unusual content types require even more time (e.g., JavaScript files).
+> 
+> - Microsoft Defender Performance Analyzer tool helps determine files, file extensions, and processes that might be causing performance issues on individual endpoints during antivirus scans. If you are running Microsoft Defender Antivirus and experiencing performance issues, you can use performance analyzer to optimize performance (see [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)).
+> 
+> - A trusted image identifier for Microsoft Defender can help improve the performance of your devices right out of the box. See [Configure a Trusted Image Identifier for Microsoft Defender](/windows-hardware/manufacture/desktop/configure-a-trusted-image-identifier-for-windows-defender?view=windows-11).
 
 ### Scanning and CPU throttling
 
-The CPU usage limit, also known as CPU throttling, setting is used to set the maximum CPU usage for Microsoft Defender on-demand scans. The CPU throttling setting is enabled by default and is applies only to scheduled scans, and optionally to custom scans as well. It's recommended to fine tune this setting (see Set-MpPreference (Defender) for ScanAverageCPULoadFactor setting) depending on the actual CPU usage values obtained in your specific environment. 
+The CPU usage limit, also known as CPU throttling, setting is used to set the maximum CPU usage for Microsoft Defender on-demand scans. The CPU throttling setting is enabled by default and is applies only to scheduled scans, and optionally to custom scans as well. It's recommended to fine tune this setting (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) for `ScanAverageCPULoadFactor` setting) depending on the actual CPU usage values obtained in your specific environment. 
 
 The CPU load factor for Microsoft Defender is not a hard limit but rather a guidance for the scanning engine to not exceed this maximum. For this scan policy setting you can specify a value as a percentage the maximum CPU utilization during scan. The value of 0 or 100 indicates no throttling. For instance, if this value is reduced to 20, it implies that the scanning engine will aim to keep the average CPU load of the system below 20% during the scan and it takes longer to be completed. 
 
