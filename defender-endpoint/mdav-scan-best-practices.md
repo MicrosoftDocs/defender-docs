@@ -88,7 +88,7 @@ The followings are Microsoft’s recommendations:
 
 - Avoid using domain controllers in a file server role. This lowers AV scanning activities on file shares and minimizes performance overhead.
 
-- Microsoft Defender Antivirus has the file hash computation feature that computes file hashes for every executable file that is scanned if it wasn’t previously computed. This has a performance cost especially when copying large files from a network share. See configure File Hash Computation to learn more about the impact on indicators.
+- Microsoft Defender Antivirus has the file hash computation feature that computes file hashes for every executable file that is scanned if it wasn’t previously computed. This has a performance cost especially when copying large files from a network share. See [Configure File Hash Computation](/windows/client-management/mdm/defender-csp) to learn more about the impact on indicators.
 
 - The full scan performance can be impacted by CPU throttling. Our recommendation is to leave CPU limit settings at the default.
 
