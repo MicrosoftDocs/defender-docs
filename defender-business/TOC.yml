@@ -10,7 +10,7 @@
     - name: What's new in Defender for Business?
       href: /Microsoft-365/business-premium/m365bp-mdb-whats-new?toc=/defender-business/toc.json&bc=/defender-business/breadcrumb/toc.json
     - name: Preview features
-      href: mdb-preview.md
+      href: /defender-xdr/preview
   - name: Resources for partners
     items:
     - name: Resources for Microsoft partners
