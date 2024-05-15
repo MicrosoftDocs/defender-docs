@@ -14,11 +14,17 @@ ms.collection:
 ms.custom:
 - partner-contribution
 audience: ITPro
-ms.date: 05/07/2024
+ms.date: 05/15/2024
 search.appverid: MET150
 ---
 
 # Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
+
+**Applies to:**
+
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- Windows 11 
+- Windows 10, version 2004 and later (build 19044 and later)
 
 ## Overview
 
@@ -42,7 +48,7 @@ Be aware of the following before you start:
 
 - Defender for Endpoint must be onboarded and running on the Windows host OS.
 
-- The host OS must be running Windows 10 Client, version 2004 and higher (build 19044 and higher) or Windows 11 Client to support the Windows Subsystem for Linux versions that can work with the plug-in.
+- The host OS must be running Windows 10 Client, version 2004 and later (build 19044 and later) or Windows 11 Client to support the Windows Subsystem for Linux versions that can work with the plug-in.
 
 ## Software components and installer file names
 
