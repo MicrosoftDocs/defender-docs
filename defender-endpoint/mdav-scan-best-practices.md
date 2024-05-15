@@ -63,8 +63,7 @@ To configure scanning options for Microsoft Defender Antivirus, you can use vari
 
 | Setting | Default | PowerShell/WMI parameter | Details |
 |--|--|--|--|
-| Archive files (.zip, .rar, etc.) | Scanned	DisableArchiveScanning | By turning on “DisableArchiveScanning”, the following archive types are excluded from AV scanning: ZIP, Ace, Arc, Arj, BZip2, Cab, CF, CPIO, CPT, GZip, Hap, ISO, Lharc, PSF, Quantum, Rar, Stuff-It, Zoo, ZCompress, Compress, VC4, RPM, BGA, BH, Universal Disk Format, 7z.
-https://learn.microsoft.com/en-us/powershell/module/defender/set-mppreference?view=windowsserver2022-ps#-disablearchivescanning |
+| Archive files (.zip, .rar, etc.) | Scanned	DisableArchiveScanning | By turning on “DisableArchiveScanning”, the following archive types are excluded from AV scanning: ZIP, Ace, Arc, Arj, BZip2, Cab, CF, CPIO, CPT, GZip, Hap, ISO, Lharc, PSF, Quantum, Rar, Stuff-It, Zoo, ZCompress, Compress, VC4, RPM, BGA, BH, Universal Disk Format, 7z. <br/><br/>For more information, see [DisableArchiveScanning](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true#-disablearchivescanning) |
 | Level of subfolders within an archive folder to scan | 0 | NA | 0 means unlimited. |
 | Max size of archive for scan | 0 | NA | 0 means unlimited. |
 | Mapped network drives | Scanned | DisableScanningMappedNetworkDrivesForFullScan | See details here: https://learn.microsoft.com/en-us/powershell/module/defender/set-mppreference?view=windowsserver2022-ps#-disablescanningmappednetworkdrivesforfullscan |
