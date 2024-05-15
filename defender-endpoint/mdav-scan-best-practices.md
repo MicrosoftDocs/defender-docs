@@ -65,8 +65,8 @@ To configure scanning options for Microsoft Defender Antivirus, you can use vari
 |--|--|--|--|
 | Archive/Container (for example, ISOs) Scanning | Enabled | | Defender is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
 | Archive files (.zip, .rar, etc.) | Scanned | `DisableArchiveScanning` | By turning on `DisableArchiveScanning`, the following archive types are excluded from antivirus scans: <br/>- `ZIP`<br/>- `Ace`<br/>- `Arc`<br/>- `Arj`<br/>- `BZip2`<br/>- `Cab`<br/>- `CF`<br/>- `CPIO`<br/>- `CPT`<br/>- `GZip`<br/>- `Hap`<br/>- `ISO`<br/>- `Lharc`<br/>- `PSF`<br/>- `Quantum`<br/>- `Rar`<br/>- `Stuff`-It<br/>- `Zoo`<br/>- `ZCompress`<br/>- `Compress`<br/>- `VC4`<br/>- `RPM`<br/>- `BGA`<br/>- `BH`<br/>- `Universal Disk Format`<br/>- `7z` <br/><br/>For more information, see [DisableArchiveScanning](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true#-disablearchivescanning) |
-| Level of subfolders within an archive folder to scan | 0 | NA | 0 means unlimited. |
-| Max size of archive for scan | 0 | NA | 0 means unlimited. |
+| Level of subfolders within an archive folder to scan | 0 | N/A | 0 means unlimited. |
+| Max size of archive for scan | 0 | N/A | 0 means unlimited. |
 | Mapped network drives | Scanned | `DisableScanningMappedNetworkDrivesForFullScan` | See [DisableScanningMappedNetworkDrivesForFullScan](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true&#-disablescanningmappednetworkdrivesforfullscan) |
 | Network files | Scanned | `DisableScanningNetworkFiles` |  |
 | Max CPU load % during scan | 50 | `ScanAvgCPULoadFactor` | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
