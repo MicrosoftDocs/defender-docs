@@ -28,7 +28,7 @@ f1.keywords: NOCSH
 
 **Applies to:**
 
-- [Microsoft Defender for XDR](../defender-xdr/microsoft-365-defender)
+- [Microsoft Defender for XDR](/defender-xdr/microsoft-365-defender)
 - [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Endpoint Plan 1](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
@@ -58,7 +58,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 To deploy behavior monitoring in Microsoft Defender for Endpoint on macOS, you must change the behavior monitoring policy using one of the following methods: 
 
 - [Intune](#intune-deployment)
-- [JamF or other 3<sup>rd</sup> party MDM](#via-jamf-intune-deployment)
+- [JamF or other 3<sup>rd</sup> party MDM](#via-jamf-deployment)
 - [Manually](#manual-deployment)
 
 The following sections describe each of these methods in detail.
@@ -211,7 +211,7 @@ The existing Microsoft Defender for Endpoint on macOS command line interface can
 ```bash
 sudo mdatp threat list
 ```
-For more information on how to test for a behavior monitoring (prevention/block) detection, see [Behavior Monitoring demonstration](/defender-endpoint/demonstration-behavior-monitoring).
+For more information on how to test for a behavior monitoring (prevention/block) detection, see [Behavior Monitoring demonstration](demonstration-behavior-monitoring.md).
 
 ### Frequently Asked Questions (FAQ):
 
