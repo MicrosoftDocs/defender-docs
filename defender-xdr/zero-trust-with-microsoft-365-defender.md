@@ -48,7 +48,7 @@ Microsoft Defender XDR helps you apply the principles of Zero Trust in the follo
 | Use least privileged access | If used with Microsoft Entra ID Protection, Microsoft Defender XDR blocks users based on the level of risk posed by an identity. Microsoft Entra ID Protection is licensed separately from Microsoft Defender XDR and is included with Microsoft Entra ID P2.  |
 | Assume breach | Microsoft Defender XDR continuously scans the environment for threats and vulnerabilities. It can implement automated remediation tasks, including automated investigations and isolating endpoints. |
 
-To add Microsoft Defender XDR to your Zero Trust strategy and architecture, go to [Evaluate and pilot Microsoft Defender XDR](eval-overview.md) for a methodical guide to piloting and deploying Microsoft Defender XDR components. The following table summarizes what these topics include.
+To add Microsoft Defender XDR to your Zero Trust strategy and architecture, go to [Pilot and deploy Microsoft Defender XDR](pilot-deploy-overview.md) for a methodical guide to piloting and deploying Microsoft Defender XDR components. The following table summarizes what these topics include.
 
 |Includes|Prerequisites|Doesn't include|
 |---------|---------|---------|

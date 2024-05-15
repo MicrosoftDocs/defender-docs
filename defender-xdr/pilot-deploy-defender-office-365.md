@@ -1,6 +1,6 @@
 ---
-title: Step 3. Evaluate Microsoft Defender for Office 365 overview
-description: Use this overview to learn the steps to set up an MDO pilot, including requirements, enabling or activating the eval, and setting up the pilot.
+title: Step 2. Pilot and deploy Defender for Office 365
+description: Pilot and deploy Defender for Office 365.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
@@ -18,15 +18,15 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: conceptual
-ms.date: 05/27/2021
+ms.date: 05/15/2024
 ---
 
-# Step 3. Enable and pilot Microsoft Defender for Office 365
+# Step 2. Pilot and deploy Defender for Office 365
 
 **Applies to:**
 - Microsoft Defender XDR
 
-This article outlines the process to enable and pilot Microsoft Defender for Office 365. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](eval-overview.md), and you've [created the Microsoft Defender XDR evaluation environment](eval-create-eval-environment.md).
+This article outlines the process to enable and pilot Microsoft Defender for Office 365. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md), and you've [created the Microsoft Defender XDR evaluation environment](eval-create-eval-environment.md).
 
 Use the following steps to enable and pilot Microsoft Defender for Office 365.
 
@@ -36,7 +36,225 @@ The following table describes the steps in the illustration.
 
 |Step number|Link|Description|
 |---|---|---|
-|1|[Review architecture requirements and key concepts](eval-defender-office-365-architecture.md)|Understand the Defender for Office architecture and be sure your Exchange Online environment meets the architecture prerequisites.|
+|1|[Review architecture requirements and key concepts](XXX)|Understand the Defender for Office architecture and be sure your Exchange Online environment meets the architecture prerequisites.|
 |2|[Enable the evaluation environment](eval-defender-office-365-enable-eval.md)|Follow the steps to set up the evaluation environment.|
-|3|[Set up the pilot](eval-defender-office-365-pilot.md)|Create pilot groups, configure protection, and become familiar with key features and dashboards.|
+|3|[Set up the pilot](XXX)|Create pilot groups, configure protection, and become familiar with key features and dashboards.|
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Before enabling Defender for Office 365, be sure you understand the architecture and can meet the requirements. This article describes the architecture, key concepts, and the prerequisites that your Exchange Online environment must meet.
+
+## Understand the architecture
+
+The following diagram illustrates baseline architecture for Microsoft Defender for Office 365, which can include a third-party SMTP gateway or on-premises integration. Hybrid coexistence scenarios (that is, production mailboxes are both on-premises and online) require more complex configurations and aren't covered in this article or evaluation guidance.
+
+:::image type="content" source="./media/eval-defender-xdr/m365-defender-office-architecture.svg" alt-text="A diagram for the architecture for the Microsoft Defender for Office 365." lightbox="./media/eval-defender-xdr/m365-defender-office-architecture.svg":::
+
+The following table describes this illustration.
+
+|Call-out|Description|
+|---|---|
+|1|The host server for the external sender typically performs a public DNS lookup for an MX record, which provides the target server to relay the message. This referral can either be Exchange Online (EXO) directly or an SMTP gateway configured to relay against EXO.|
+|2|Exchange Online Protection negotiates and validates the inbound connection and inspects the message headers and content to determine what extra policies, tagging, or processing is required.|
+|3|Exchange Online integrates with Microsoft Defender for Office 365 to offer more advanced threat protection, mitigation, and remediation.|
+|4|A message that isn't malicious, blocked, or quarantined is processed and delivered to the recipient in EXO where user preferences related to junk mail, mailbox rules, or other settings are evaluated and triggered.|
+|5|Integration with on-premises Active Directory can be enabled using Microsoft Entra Connect to synchronize and provision mail-enabled objects and accounts to Microsoft Entra ID and ultimately Exchange Online.|
+|6|When integrating an on-premises environment, it's encouraged to use an Exchange server for supported management and administration of mail-related attributes, settings, and configurations|
+|7|Microsoft Defender for Office 365 shares signals to Microsoft Defender XDR for extended detection and response (XDR).|
+
+On-premises integration is common but optional. If your environment is cloud-only, this guidance also works for you.
+
+## Understand key concepts
+
+The following table identified key concepts that are important to understand when evaluating, configuring, and deploying Defender for Office 365.
+
+|Concept|Description|More information|
+|---|---|---|
+|Exchange Online Protection|Exchange Online Protection (EOP) is the cloud-based filtering service that helps protect your organization against spam and malware in email. EOP is included in all Microsoft 365 licenses that include Exchange Online.|[Exchange Online Protection overview](/defender-office-365/eop-about)|
+|Anti-malware protection|Organizations with mailboxes in Exchange Online are automatically protected against malware.|[Anti-malware protection in EOP](/defender-office-365/anti-malware-protection-about)|
+|Anti-spam protection|Organizations with mailboxes in Exchange Online are automatically protected against junk mail and spam.|[Anti-spam protection in EOP](/defender-office-365/anti-spam-protection-about)|
+|Anti-phishing protection|Defender for Office 365 offers more advanced anti-phishing protection related to spear phishing, whaling, ransomware, and other malicious activities.|[Extra anti-phishing protection in Microsoft Defender for Office 365](/defender-office-365/anti-phishing-protection-about)|
+|Anti-spoofing protection|EOP includes features to help protect your organization from spoofed (forged) senders.|[Anti-spoofing protection in EOP](/defender-office-365/anti-phishing-protection-spoofing-about)|
+|Safe Attachments|Safe Attachments provides an extra layer of protection by using a virtual environment to check and "detonate" attachments in email messages before they're delivered.|[Safe Attachments in Microsoft Defender for Office 365](/defender-office-365/safe-attachments-about)|
+|Safe Attachments for SharePoint, OneDrive, and Microsoft Teams|In addition, Safe Attachments for SharePoint, OneDrive, and Microsoft Teams offers an extra layer of protection for files that have been uploaded to cloud storage repositories.|[Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](/defender-office-365/safe-attachments-for-spo-odfb-teams-about)|
+|Safe Links|Safe Links is a feature that provides URL scanning and rewriting within inbound email messages and offers verification of those links before they're delivered or clicked.|[Safe Links in Microsoft Defender for Office 365](/defender-office-365/safe-links-about)|
+
+For more detailed information about the capabilities included with Microsoft Defender for Office 365, see [Microsoft Defender for Office 365 service description](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
+
+## Review architecture requirements
+
+A successful Defender for Office 365 evaluation or production pilot assumes the following prerequisites:
+
+- All your recipient mailboxes are currently in Exchange Online.
+- Your public MX record resolves directly to EOP or a third-party Simple Mail Transfer Protocol (SMTP) gateway that then relays inbound external email directly to EOP.
+- Your primary email domain is configured as *authoritative* in Exchange Online.
+- You successfully deployed and configured *Directory-Based Edge Blocking* (DBEB) as appropriate. For more information, see [Use Directory-Based Edge Blocking to reject messages sent to invalid recipients](/exchange/mail-flow-best-practices/use-directory-based-edge-blocking).
+
+> [!IMPORTANT]
+> If these requirements aren't applicable or you are still in a hybrid coexistence scenario, then a Microsoft Defender for Office 365 evaluation can require more complex or advanced configurations which aren't fully covered in this guidance.
+
+## SIEM integration
+
+You can integrate Microsoft Defender for Office 365 with Microsoft Sentinel to more comprehensively analyze security events across your organization and build playbooks for effective and immediate response. For more information, see [Connect alerts from Microsoft Defender for Office 365](/azure/sentinel/connect-office-365-advanced-threat-protection).
+
+Microsoft Defender for Office 365 can also be integrated into other Security Information and Event Management (SIEM) solutions using the [Office 365 Activity Management API](/office/office-365-management-api/office-365-management-activity-api-reference).
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Use the following steps to enable the evaluation for Microsoft Defender for Office 365.
+
+:::image type="content" source="/defender/media/defender/m365-defender-office-eval-enable-steps.png" alt-text="The steps to enable Microsoft Defender for Office 365 in the Microsoft Defender evaluation environment." lightbox="/defender/media/defender/m365-defender-office-eval-enable-steps.png":::
+
+- [Step 1: Audit and verify the public MX record](#step-1-audit-and-verify-the-public-mx-record)
+- [Step 2: Audit accepted domains](#step-2-audit-accepted-domains)
+- [Step 3: Audit inbound connectors](#step-3-audit-inbound-connectors)
+- [Step 4: Activate the evaluation](#step-4-activate-the-evaluation)
+
+## Step 1: Audit and verify the public MX record
+
+To effectively evaluate Microsoft Defender for Office 365, it's important that inbound external email is relayed through the Exchange Online Protection (EOP) instance associated with your tenant.
+
+1. In the M365 Admin Portal at <https://admin.microsoft.com>, expand *...Show all* if necessary, expand *Settings*, and then select **Domains**. Or, to go directly to the *Domains* page, use <https://admin.microsoft.com/Adminportal/Home#/Domains>.
+2. On the *Domains* page, select your verified email domain by clicking anywhere on the entry other than the check box.
+3. In the domain details flyout that opens, select the **DNS records** tab. Make note of the MX record that's generated and assigned to your EOP tenant.
+4. Access your external (public) DNS zone and check the primary MX record associated with your email domain:
+    - *If your public MX record currently matches the assigned EOP address (for example, contoso-com.mail.protection.outlook.com) then no further routing changes should be required*.
+    - If your public MX record currently resolves to a third-party or on-premises SMTP gateway, then additional routing configurations may be required.
+    - If your public MX record currently resolves to on-premises Exchange, then you may still be in a hybrid model where some recipient mailboxes haven't yet been migrated to EXO.
+
+## Step 2: Audit accepted domains
+
+1. In the Exchange admin center (EAC) at <https://admin.exchange.microsoft.com>, expand *Mail flow*, and then click **Accepted domains**.Or, to go directly to the *Accepted domains* page, use <https://admin.exchange.microsoft.com/#/accepteddomains>.
+2. On the *Accepted domains* page, make note of the **Domain type** value for your primary email domain.
+    - If the domain type is set to **Authoritative**, then it's assumed all recipient mailboxes for your organization currently reside in Exchange Online.
+    - If the domain type is set to **InternalRelay**, then you may still be in a hybrid model where some recipient mailboxes still reside on-premises.
+
+## Step 3: Audit inbound connectors
+
+1. In the Exchange admin center (EAC) at <https://admin.exchange.microsoft.com>, expand *Mail flow*, and then click **Connectors**. Or, to go directly to the *Connectors* page, use <https://admin.exchange.microsoft.com/#/connectors>.
+2. On the *Connectors* page, make note of any connectors with the following settings:
+   - The **From** value is **Partner org** that might correlate to a third-party SMTP gateway.
+   - The **From** value is **Your org** that might indicate you're still in a hybrid scenario.
+
+## Step 4: Activate the evaluation
+
+Use the instructions here to activate your Microsoft Defender for Office 365 evaluation from the Microsoft Defender portal.
+
+For detailed information, see [Try Microsoft Defender for Office 365](/defender-office-365/try-microsoft-defender-for-office-365).
+
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, expand *Email & collaboration* \> select **Policies & rules** \> select **Threat policies** \> scroll down to the *Others* section, and then select **Evaluation mode**. Or, to go directly to the *Evaluation mode* page, use <https://security.microsoft.com/atpEvaluation>.
+
+2. On the *Evaluation mode* page, click **Start evaluation**.
+
+   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_05.png" alt-text="The Evaluation mode page and the Start evaluation button to click." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_05.png":::
+
+3. In the *Turn on protection* dialog, select **No, I only want reporting**, and then click **Continue**.
+
+   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_06.png" alt-text="The Turn on protection dialog and the No, I only want reporting option to select." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_06.png":::
+
+4. In the *Select the users you want to include* dialog, select **All users**, and then click **Continue**.
+
+   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_07.png" alt-text="The Select the users you want to include dialog and the All users option to select." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_07.png":::
+
+5. In the *Help us understand your mail flow* dialog, one of the following options is automatically selected based on our detection of the MX record for your domain:
+
+   - **I'm only using Microsoft Exchange Online**: The MX records for your domain point to Microsoft 365. There's nothing left to configure, so click **Finish**.
+
+     :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_08a.png" alt-text="The Help us understand your mail flow dialog with the I'm only using Microsoft Exchange Online option selected." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_08a.png":::
+
+   - **I'm using a third-party and/or on-premises service provider**: In the upcoming screens, select the vendor name along with the inbound connector that accepts mail from that solution. You also decide if you need an Exchange Online mail flow rule (also known as a transport rule) that skips spam filtering for incoming messages from the third-party protection service or device. When you're finished, click **Finish**.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Use the following steps to set up and configure the pilot for Microsoft Defender for Office 365.
+
+:::image type="content" source="/defender/media/defender/m365-defender-office-pilot.png" alt-text="The steps for creating the pilot in the Microsoft Defender for Office 365 portal." lightbox="/defender/media/defender/m365-defender-office-pilot.png":::
+
+- [Step 1: Create pilot groups](#step-1-create-pilot-groups)
+- [Step 2: Configure protection](#step-2-configure-protection)
+- [Step 3: Try out capabilities — Get familiar with simulation, monitoring, and metrics](#step-3-try-out-capabilities-and-get-familiar-with-simulation-monitoring-and-metrics)
+
+When you evaluate Microsoft Defender for Office 365, you might choose to pilot specific users before enabling and enforcing policies for your entire organization. Creating distribution groups can help manage the deployment processes. For example, create groups such as *Defender for Office 365 Users - Standard Protection*, *Defender for Office 365 Users - Strict Protection*, *Defender for Office 365 Users - Custom Protection*, or *Defender for Office 365 Users - Exceptions*.
+
+It might not be evident why 'Standard' and 'Strict' are the terms used for these groups, but that will become clear when you explore more about Defender for Office 365 security presets. Naming groups 'custom' and 'exceptions' speak for themselves, and though most of your users should fall under *standard* and *strict*, custom and exception groups will collect valuable data for you regarding managing risk.
+
+## Step 1: Create pilot groups
+
+Distribution groups can be created and defined directly in Exchange Online or synchronized from on-premises Active Directory.
+
+1. Sign in to the Exchange Admin Center (EAC) at <https://admin.exchange.microsoft.com> using an account that has been granted Recipient Administrator role or been delegated group management permissions.
+2. Go to **Recipients** \> **Groups**.
+
+   :::image type="content" source="/defender/media/mdo-eval/1_mdo-eval-pilot.png" alt-text=" The Groups menu item to be clicked." lightbox="/defender/media/mdo-eval/1_mdo-eval-pilot.png":::
+
+3. On the **Groups** page, select ![Add a group icon.](/defender/media/m365-cc-sc-add-internal-icon.png) **Add a group**.
+
+   :::image type="content" source="/defender/media/mdo-eval/2_mdo-eval-pilot-add-group.png" alt-text="The Add a group option to be clicked." lightbox="/defender/media/mdo-eval/2_mdo-eval-pilot-add-group.png":::
+
+4. For group type, select **Distribution**, and then click **Next**.
+
+   :::image type="content" source="/defender/media/mdo-eval/3-mdo-eval-pilot-group-type.png" alt-text=" The Choose a group type section." lightbox="/defender/media/mdo-eval/3-mdo-eval-pilot-group-type.png":::
+
+5. Give the group a **Name** and optional **Description**, and then click Next.
+
+   :::image type="content" source="/defender/media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png" alt-text="The Set up the basics section." lightbox="/defender/media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png":::
+
+6. On the remaining pages, assign an owner, add members to the group, set the email address, join-depart restrictions, and other settings.
+
+## Step 2: Configure protection
+
+Some capabilities in Defender for Office 365 are configured and turned on by default, but security operations might want to raise the level of protection from the default.
+
+Some capabilities are *not yet* configured. You have the following options for configuring protection (which are easy to change later):
+
+- **Assign users to preset security policies**: [Preset security policies](/defender-office-365/preset-security-policies) are the recommended method to quickly assign a uniform level of protection across all of the capabilities. You can choose from **Standard** or **Strict** protection. The settings for Standard and Strict are described in the tables [here](/defender-office-365/recommended-settings-for-eop-and-office365). The differences between Standard and Strict are summarized in the table [here](/defender-office-365/preset-security-policies#policy-settings-in-preset-security-policies).
+
+  The advantages of preset security polices are you protect groups of users as quickly as possible using Microsoft's recommended settings based on observations in the datacenters. As new protection capabilities are added and as the security landscape changes, the settings in preset security policies are automatically updated to our recommended settings.
+
+  The disadvantage of preset security policies is you can't customize virtually any of the security settings in preset security policies (for example, you can't change an action from deliver to junk to quarantine, or vice-versa). The exception is entries and optional exceptions for [user impersonation and domain impersonation protection](/defender-office-365/anti-phishing-policies-about#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365), which you must configure manually.
+
+  Also, keep in mind that preset security policies are *always* applied before custom policies. So, if you want to create and use any custom policies, you'll need to exclude users in those custom policies from preset security policies.
+
+- **Configure *custom* protection policies**: If you prefer to configure the environment yourself, compare the default, Standard, and Strict settings in [Recommended settings for EOP and Microsoft Defender for Office 365 security](/defender-office-365/recommended-settings-for-eop-and-office365). Keep a spreadsheet of where your custom build deviates.
+
+  You can also use the [Configuration analyzer](/defender-office-365/configuration-analyzer-for-security-policies) to compare the settings in your custom policies to the Standard and Strict values.
+
+For detailed information about choosing preset security policies vs. custom policies, see [Determine your protection policy strategy](/defender-office-365/mdo-deployment-guide#determine-your-protection-policy-strategy).
+
+### Assign preset security policies
+
+We recommended you begin with the *preset security policies* in EOP and Defender for Office 365 fast by assigning them to specific pilot users or defined groups as part of your evaluation. Preset policies offer a baseline **Standard** protection template or a more aggressive **Strict** protection template, which can be assigned independently.
+
+For example, an EOP condition for pilot evaluations could be applied if the recipients are *members* of a defined *EOP Standard Protection* group, and then managed by adding accounts to, or removing account from, the group.
+
+Likewise, a Defender for Office 365 condition for pilot evaluations could be applied if the recipients are *members* of a defined *Defender for Office 365 Standard Protection* group and then managed by adding / removing accounts via the group.
+
+For complete instructions, see [Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users](/defender-office-365/preset-security-policies#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users).
+
+### Configure custom protection policies
+
+The pre-defined *Standard* or *Strict* Defender for Office 365 policy templates give your pilot users the recommended baseline protection. However, you can also build and assign custom protection policies as part of your evaluation.
+
+It's *important* to be aware of the precedence these protection policies take when applied and enforced, as explained in [Order of precedence for preset security policies and other policies](/defender-office-365/preset-security-policies#order-of-precedence-for-preset-security-policies-and-other-policies).
+
+The explanation and table in [Configure protection policies](/defender-office-365/mdo-deployment-guide#step-2-configure-protection-policies) provides a handy reference for what you need to configure.
+
+## Step 3: Try out capabilities and get familiar with simulation, monitoring, and metrics
+
+Now that your pilot is set up and configured, it's helpful to become familiar with the reporting, monitoring, and attack simulation tools that are unique to Microsoft Defender for Microsoft 365.
+
+|Capability|Description|More information|
+|---|---|---|
+|Threat Explorer|Threat Explorer is a powerful near real-time tool to help Security Operations teams investigate and respond to threats and displays information about detected malware and phishing in email and files in Office 365, as well as other security threats and risks to your organization.|[About Threat Explorer](/defender-office-365/threat-explorer-real-time-detections-about)|
+|Attack simulation training|You can use Attack simulation training in the Microsoft Defender portal to run realistic attack scenarios in your organization, which help you identify and find vulnerable users before a real attack impacts your environment.|[Get started using Attack simulation training](/defender-office-365/attack-simulation-training-get-started)|
+|Reports dashboard|On the left navigation menu, click Reports and expand the Email & collaboration heading. The Email & collaboration reports are about spotting security trends some of which will allow you to take action (through buttons like 'Go to submissions'), and others that will show trends. These metrics are generated automatically.|[View email security reports in the Microsoft Defender portal](/defender-office-365/reports-email-security) <br/><br/> [View Defender for Office 365 reports in the Microsoft Defender portal](/defender-office-365/reports-defender-for-office-365)|
+
+## Next steps
+
+[Evaluate Microsoft Defender for Endpoint](pilot-deploy-defender-endpoint.md)
+
+Return to the overview for [Evaluate Microsoft Defender for Office 365](pilot-deploy-defender-office-365.md)
+
+Return to the overview for [Pilot and deploy Microsoft Defender XDR](pilot-deploy-overview.md)

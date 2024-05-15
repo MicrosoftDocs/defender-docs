@@ -35,11 +35,11 @@ If you're new to thinking about XDR security, you can scan the 7 linked articles
 
 - [How to create the environment](eval-create-eval-environment.md)
 - Set up or learn about each technology of this Microsoft XDR
-  - [Microsoft Defender for Identity](eval-defender-identity-overview.md)
-  - [Microsoft Defender for Office](eval-defender-office-365-overview.md)
-  - [Microsoft Defender for Endpoint](eval-defender-endpoint-overview.md)
+  - [Microsoft Defender for Identity]()
+  - [Microsoft Defender for Office](pilot-deploy-defender-office-365.md)
+  - [Microsoft Defender for Endpoint](pilot-deploy-defender-endpoint.md)
   - [Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)
-- [How to investigate and respond using this XDR](eval-defender-investigate-respond.md)
+- [How to investigate and respond using this XDR](pilot-deploy-investigate-respond.md)
 - [Promote the trial environment to production](eval-defender-promote-to-production.md)
 
 <a name='microsoft-365-defender-is-a-microsoft-xdr-cyber-security-solution'></a>
@@ -129,11 +129,11 @@ The following table describes this illustration.
 |Serial Number|Step|Description|
 |---|---|---|
 |1|[Create the evaluation environment](eval-create-eval-environment.md)|This step ensures you have the trial license for Microsoft Defender XDR.|
-|2|[Enable Defender for Identity](eval-defender-identity-overview.md)|Review the architecture requirements, enable the evaluation, and walk through tutorials for identifying and remediating different attack types.|
-|3|[Enable Defender for Office 365](eval-defender-office-365-overview.md)|Ensure you meet the architecture requirements, enable the evaluation, and then create the pilot environment. This component includes Exchange Online Protection and so you will actually evaluate *both* here.|
-|4|[Enable Defender for Endpoint](eval-defender-endpoint-overview.md)|Ensure you meet the architecture requirements, enable the evaluation, and then create the pilot environment.|
+|2|[Enable Defender for Identity](pilot-deploy-defender-identity.md)|Review the architecture requirements, enable the evaluation, and walk through tutorials for identifying and remediating different attack types.|
+|3|[Enable Defender for Office 365](pilot-deploy-defender-office-365.md)|Ensure you meet the architecture requirements, enable the evaluation, and then create the pilot environment. This component includes Exchange Online Protection and so you will actually evaluate *both* here.|
+|4|[Enable Defender for Endpoint](pilot-deploy-defender-endpoint.md)|Ensure you meet the architecture requirements, enable the evaluation, and then create the pilot environment.|
 |5|[Enable Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)|Ensure you meet the architecture requirements, enable the evaluation, and then create the pilot environment.|
-|6|[Investigate and respond to threats](eval-defender-investigate-respond.md)|Simulate an attack and begin using incident response capabilities.|
+|6|[Investigate and respond to threats](pilot-deploy-investigate-respond.md)|Simulate an attack and begin using incident response capabilities.|
 |7|[Promote the trial to production](eval-defender-promote-to-production.md)|Promote the Microsoft 365 components to production one-by-one.|
 
 This order is commonly recommended and designed to leverage the value of the capabilities quickly based on how much effort is typically required to deploy and configure the capabilities. For example, Defender for Office 365 can be configured in less time than it takes to enroll devices in Defender for Endpoint. Of course, you should prioritize the components to meet your business needs, and can enable these in a different order.
@@ -144,13 +144,13 @@ You can learn about and build out this Microsoft Defender XDR solution in steps 
 
 - [How to create the environment](eval-create-eval-environment.md)
 - Set up or learn about each technology of this Microsoft XDR
-    - [Microsoft Defender for Identity](eval-defender-identity-overview.md)
-    - [Microsoft Defender for Office](eval-defender-office-365-overview.md)
-    - [Microsoft Defender for Endpoint](eval-defender-endpoint-overview.md)
+    - [Microsoft Defender for Identity]()
+    - [Microsoft Defender for Office](pilot-deploy-defender-office-365.md)
+    - [Microsoft Defender for Endpoint](pilot-deploy-defender-endpoint.md)
     - [Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)
-- [How to investigate and respond using this XDR](eval-defender-investigate-respond.md)
+- [How to investigate and respond using this XDR](pilot-deploy-investigate-respond.md)
 - [Promote the trial environment to production](eval-defender-promote-to-production.md)
-- [Back to the Overview](eval-overview.md)
+- [Back to the Overview](pilot-deploy-overview.md)
 
 The steps in this series run end-to-end, from learning the concepts behind the Microsoft Defender XDR to building it, and into taking the evaluation environment live to production.
 
@@ -178,14 +178,44 @@ The second is to  [Set up your Microsoft Defender XDR trial lab environment](set
 
 ## Go to the next step
 
-[Learn how to enable Microsoft 365 for Identity](eval-defender-identity-overview.md)
+[Learn how to enable Microsoft 365 for Identity]()
 
-Or return to the Overview for [Evaluate and pilot Microsoft Defender XDR](eval-overview.md)
+Or return to the Overview for [Pilot and deploy Microsoft Defender XDR](pilot-deploy-overview.md)
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 
-==============================
 
-## Go to the Next Step
+=====================================================================
 
-[Learn about and/or create the Microsoft Defender XDR Evaluation Environment](eval-create-eval-environment.md)
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+To promote your Microsoft Defender XDR evaluation environment to production, first purchase the necessary license. Follow the steps in [Create the eval environment](eval-create-eval-environment.md) and purchase the Office 365 E5 license (instead of selecting Start free trial).
+
+Next, complete any other configuration and expand your pilot groups until these reach full production.
+
+## Microsoft Defender for Identity
+
+Defender for Identity doesn't require any other configuration. Just make sure to purchase the necessary licenses and install the sensor on all of your Active Directory domain controllers and Active Directory Federation Services (AD FS) servers.
+
+## Microsoft Defender for Office 365
+
+After successfully evaluating or piloting Defender for Office 365, it can be promoted to your entire production environment.
+
+1. Purchase and provision the necessary licenses and assign them to your production users.
+2. Rerun recommended baseline policy configurations (either Standard or Strict) against your production email domain or specific groups of users.
+3. Optionally create and configure any custom Defender for Office 365 policies against your production email domain or groups of users.  However, remember that any assigned baseline policies will always take precedence over custom policies.
+4. Update the public MX record for your production email domain to resolve directly to EOP.
+5. Decommission any third-party SMTP gateways and disable or delete any EXO connectors associated with this relay.
+
+## Microsoft Defender for Endpoint
+
+To promote Microsoft Defender for Endpoint evaluation environment from a pilot to production, onboard more endpoints to the service using any of the [supported tools and methods](/defender-endpoint/onboard-configure).
+
+Use the following general guidelines to onboard more devices to Microsoft Defender for Endpoint.
+
+1. Verify that the device fulfills the [minimum requirements](/defender-endpoint/minimum-requirements).
+2. Depending on the device, follow the configuration steps provided in the onboarding section of the Defender for Endpoint portal.
+3. Use the appropriate management tool and deployment method for your devices.
+4. Run a detection test to verify that the devices are properly onboarded and reporting to the service.
+
+## Microsoft Defender for Cloud Apps
+
+Microsoft Defender for Cloud Apps doesn't require any other configuration. Just make sure to purchase the necessary licenses. If you've scoped the deployment to certain user groups, increase the scope of these groups until you reach production scale.
+

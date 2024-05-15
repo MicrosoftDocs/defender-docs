@@ -26,7 +26,7 @@ ms.topic: conceptual
 **Applies to:**
 - Microsoft Defender XDR
 
-This article outlines the process to enable and pilot Microsoft Defender for Cloud Apps alongside Microsoft Defender XDR. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](eval-overview.md) and you have [created the Microsoft Defender XDR evaluation environment](eval-create-eval-environment.md).
+This article outlines the process to enable and pilot Microsoft Defender for Cloud Apps alongside Microsoft Defender XDR. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md) and you have [created the Microsoft Defender XDR evaluation environment](eval-create-eval-environment.md).
 
 Use the following steps to enable and pilot Microsoft Defender for Cloud Apps.
 
@@ -34,7 +34,7 @@ Use the following steps to enable and pilot Microsoft Defender for Cloud Apps.
 
 |Step  |Description  |
 |---------|---------|
-|[Review architecture requirements and key concepts](eval-defender-mcas-architecture.md)    | Understand the Defender for Cloud Apps architecture and how it integrates with Microsoft Defender XDR, Microsoft Defender for Endpoint, and Microsoft Entra ID.        |
-|[Enable the evaluation environment](eval-defender-mcas-enable-eval.md)     | Connect to the portal, configure integration with Defender for Identity and/or your organization's network devices, and begin to view and manage cloud apps.         |
-|[Set up the pilot](eval-defender-mcas-pilot.md)    | Scope your deployment to certain user groups, configure Conditional Access App Control, and try out tutorials for protecting your environment.       |
+|[Review architecture requirements and key concepts](XXX)    | Understand the Defender for Cloud Apps architecture and how it integrates with Microsoft Defender XDR, Microsoft Defender for Endpoint, and Microsoft Entra ID.        |
+|[Enable the evaluation environment](XXX)     | Connect to the portal, configure integration with Defender for Identity and/or your organization's network devices, and begin to view and manage cloud apps.         |
+|[Set up the pilot](XXX)    | Scope your deployment to certain user groups, configure Conditional Access App Control, and try out tutorials for protecting your environment.       |
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

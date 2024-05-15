@@ -44,9 +44,9 @@ landingContent:
       - linkListType: get-started
         links:
         - text: Create a trial lab
-          url: eval-overview.md
+          url: pilot-deploy-overview.md
         - text: Run pilot project in production
-          url: eval-overview.md
+          url: pilot-deploy-overview.md
 
 # Card
   - title: Get started
