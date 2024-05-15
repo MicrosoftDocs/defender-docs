@@ -323,7 +323,8 @@ DeviceProcessEvents
 
 7. The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following under registry and restart wsl:
 
-   - **Name**: `OverrideReleaseRing`
-   - **Type**: `REG_SZ`
-   - **Value**: `Dogfood or External or InsiderFast or Production`
-   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
+  - **Name**: `OverrideReleaseRing`
+  - **Type**: `REG_SZ`
+  - **Value**: `Dogfood or External or InsiderFast or Production`
+  - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
+
