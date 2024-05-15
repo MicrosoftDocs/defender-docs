@@ -129,17 +129,23 @@ Microsoft Defender has the following features that help enhance scan performance
 
 Microsoft Defender has a built-in optimization for content that is highly reputable (e.g. signed by trusted sources). When it encounters such content, it simply shifts away from scanning the content to validating the signature to ensure the file wasn’t tampered with.
 
-Note: On Windows Server 2016 and Windows Server 2019, automatic exclusions help reduce CPU load during real-time scanning. The automatic exclusions are applied in addition to any custom exclusions you configure. The automatic exclusions are based on server role, such as DNS, AD DS, Hyper-V host, File Server, Print Server, Web Server, etc. Automatic exclusions only apply to Real-time protection (RTP) scanning and are not honored during a Full/Quick or On-demand scans. See [Microsoft Defender Antivirus exclusions on Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md).
-
+> [!NOTE]
+> On Windows Server 2016 and Windows Server 2019, automatic exclusions help reduce CPU load during real-time scanning. The automatic exclusions are applied in addition to any custom exclusions you configure. The automatic exclusions are based on server role, such as DNS, AD DS, Hyper-V host, File Server, Print Server, Web Server, etc. Automatic exclusions only apply to Real-time protection (RTP) scanning and are not honored during a Full/Quick or On-demand scans. See [Microsoft Defender Antivirus exclusions on Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md).
+> 
 ### Antivirus exclusions recommendations
-Excluding certain locations from scanning can shorten the scan time. There are two types of exclusions, process exclusions and file/folder exclusions. Only file/folder exclusions apply to full scan. Scan exclusions should be carefully developed to reduce scan time while minimizing risk. 
+
+Excluding certain locations from scanning can shorten the scan time. There are two types of exclusions: process exclusions and file/folder exclusions. Only file/folder exclusions apply to full scan. Scan exclusions should be carefully developed to reduce scan time while minimizing risk.
+
 - Do not exclude compressed files if disallowed by your compliance requirements.
+
 - Do not exclude the User Profile temp folder or the System temp folder, commonly used by malware:
-o	C:\Users<UserProfileName>\AppData\Local\Temp\
-o	C:\Users<UserProfileName>\AppData\LocalLow\Temp\
-o	C:\Users<UserProfileName>\AppData\Roaming\Temp\
-o	%Windir%\Prefetch
-o	%Windir%\System32\Spool
-o	C:\Windows\System32\CatRoot2
-o	%Windir%\Temp
+
+   - `C:\Users<UserProfileName>\AppData\Local\Temp\`
+   - `C:\Users<UserProfileName>\AppData\LocalLow\Temp\`
+   - `C:\Users<UserProfileName>\AppData\Roaming\Temp\`
+   - `%Windir%\Prefetch`
+   - `%Windir%\System32\Spool`
+   - `C:\Windows\System32\CatRoot2`
+   - `%Windir%\Temp`
+
 - The use of environment variables as a wildcard in exclusion lists is limited to system variables only. Do not use user-scoped environment variables when adding Microsoft Defender Antivirus folder and process exclusions. 
