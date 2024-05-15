@@ -74,6 +74,7 @@ In the following sections, review the scenarios, and then identify which Microso
 - [Control access to USB devices](#control-access-to-usb-devices)
 - [Control access to BitLocker encrypted removable media (Preview)](#control-access-to-bitlocker-encrypted-removable-media-preview)
 - [Control access to printers](#control-access-to-printers)
+- [Control access to Bluetooth devices](#control-access-to-bluetooth-devices)
 
 ## Control access to USB devices
 
