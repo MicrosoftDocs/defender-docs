@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 04/30/2024
-manager: dansimp
+ms.date: 05/15/2024
+manager: deniseb
 audience: ITPro
 ms.collection:
 - M365-security-compliance
@@ -31,12 +31,16 @@ You can also get product updates and important notifications through the [messag
 
 ## May 2024
 
+- (Preview) The endpoint security policies page is now available in multitenant management in Microsoft Defender XDR. Create, edit, and delete security policies for your tenants' devices from the **Endpoint security policies** page. For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md).
+
 - (Preview) **Turn preview options on in the main Microsoft 365 Defender settings** together with other Microsoft 365 Defender preview features. Customers who are not using preview features yet will continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
 
 - (Preview) The **SOC optimizations** page in the Microsoft Defender portal is now available with the [unified security operations platform](https://go.microsoft.com/fwlink/p/?linkid=2263690). Integrate Microsoft Defender XDR and Microsoft Sentinel and use SOC optimizations to optimize both processes and outcomes, without having your SOC teams spend time on manual analysis and research. For more information, see:
 
   - [Optimize your security operations](https://aka.ms/soc-opt-from-defender)
   - [SOC optimization reference](https://aka.ms/soc-opt-ref)
+
+- (Preview) **Search** in the Microsoft Defender portal now includes the ability to search for devices and users in Microsoft Sentinel. Use the search bar to search for incidents, alerts, and other data across Microsoft Defender XDR and Microsoft Sentinel. For more information, see [Search in Microsoft Defender](microsoft-365-defender-portal.md#global-search).
 
 ## April 2024
 
@@ -49,7 +53,7 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) **[Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)** is now generally available. Copilot in Defender helps you investigate and respond to incidents faster and more effectively. Copilot provides guided responses, incident summaries and reports, helps you build KQL queries to hunt for threats, provide file and script analyses, and enable you to summarize relevant and actionable threat intelligence.
 - Copilot in Defender customers can now export incident data to PDF. Use the exported data to easily share incident data, facilitating discussions with your security teams and other stakeholders. For details, see **[Export incident data to PDF](manage-incidents.md#export-incident-data-to-pdf)**.
-- **Notifications in the Microsoft Defender portal** are now available. On the top right-hand side of the Defender portal, select the bell icon to view all your active notifications. Different types of notifications are supported such as success, info, warning, and error. Dismiss individual notifications or dismiss all from the notifications tab.
+- **Notifications in the Microsoft Defender portal** are now available. On the top right-hand side of the Defender portal, select the bell icon to view all your active notifications. Learn more about **[notifications in the Microsoft Defender portal](microsoft-365-defender-portal.md#notifications)**.
 - The `AzureResourceId` column, which shows the unique identifier of the Azure resource associated with a device, is now available in the [DeviceInfo](advanced-hunting-deviceinfo-table.md) table in advanced hunting.
 
 ## February 2024
