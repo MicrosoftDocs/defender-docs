@@ -31,7 +31,7 @@
         href: ios-whatsnew.md
 
     - name: Preview features
-      href: preview.md
+      href: /defender-xdr/preview
     - name: Data storage and privacy
       href: data-storage-privacy.md
     - name: Defender for Endpoint Plan 1
@@ -73,6 +73,8 @@
         href: defender-endpoint-demonstrations.md
       - name: App reputation demonstration
         href: defender-endpoint-demonstration-app-reputation.md
+      - name: Behavior monitoring demonstrations
+        href: demonstration-behavior-monitoring.md
       - name: Validate antimalware
         href: validate-antimalware.md
       - name: Attack surface reduction rules demonstrations
@@ -628,6 +630,8 @@
         href: adv-tech-of-mdav.md
       - name: Behavior monitoring with Microsoft Defender Antivirus
         href: behavior-monitor.md
+      - name: Behavior monitoring with Microsoft Defender Antivirus on macOS
+        href: behavior-monitor-macos.md
       - name: Detect and block potentially unwanted applications
         href: detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md
       - name: Enable and configure Microsoft Defender Antivirus always-on protection in Group Policy
