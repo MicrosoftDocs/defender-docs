@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 11/01/2023
+ms.date: 05/05/2024
 ---
 
 # Run the client analyzer on Windows
@@ -36,16 +36,14 @@ You can collect the Defender for Endpoint analyzer support logs remotely using [
 
    The file is saved to your Downloads folder by default.
 
-2. Open your Downloads folder, right-click on **MDEClientAnalyzer.zip**, and then select **Properties**.
+2. Extract the contents of MDEClientAnalyzer.zip to an available folder.
 
-4. Extract the contents of MDEClientAnalyzer.zip to an available folder.
-
-5. Open a command line with administrator permissions: 
+3. Open a command line with administrator permissions: 
 
    1. Go to **Start** and type **cmd**.
    1. Right-click **Command prompt** and select **Run as administrator**.
 
-6. Type the following command and then press **Enter**:
+4. Type the following command and then press **Enter**:
 
    ```cmd
    *DrivePath*\MDEClientAnalyzer.cmd
