@@ -73,7 +73,7 @@ In the following sections, review the scenarios, and then identify which Microso
 
 You can control access to USB devices by using device installation restrictions, removable media device control, or Endpoint DLP.
 
-### Device installation restrictions 
+### Configure device installation restrictions 
 
 The device installation restrictions available in Windows allow or deny the installation of drivers based on the device ID, device instance ID or set-up class.  This can block *any* device in the device manager including all removable devices. When device installation restrictions are applied, the device is blocked in the device manager, as shown in the following screenshot:
 
@@ -149,13 +149,13 @@ This query returns the name of the policy, the access requested, and the verdict
 > [!TIP]
 > Device control for Microsoft Defender for Endpoint on macOS can control access to iOS devices, portable devices such as cameras, and removable media such as USB devices. See [Device Control for macOS](mac-device-control-overview.md).
 
-### Endpoint DLP
+### Use Endpoint DLP to prevent file copying to USB
 
 To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
 ## Control access to BitLocker encrypted removable media (Preview)
 
-You use BitLocker to control access to removable media.
+You use BitLocker to control access to removable media or to ensure that devices are encrypted.
 
 ### BitLocker support for removable media
 
@@ -172,17 +172,17 @@ Device control for Microsoft Defender for Endpoint controls access to a device b
 
 You can control access to printers by using printer installation restrictions, device control policies for printing, or Endpoint DLP.
 
-### Printer installation restrictions
+### Set up printer installation restrictions
 
 The device installation restrictions of Windows can be applied to printers.
 
-### Device control policies for printing
+### Configure device control policies for printing
 
 Device control for Microsoft Defender for Endpoint controls access to the printer based on the properties of the printer (VID/PID), the type of printer (Network, USB, Corporate etc.).
 
 Device control can also restrict the types of files that are printed. Device control can also restrict printing on non-corporate environments. 
 
-### Endpoint DLP
+### Use Endpoint DLP to prevent classified document printing
 
 To block printing of documents based on information classification use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
