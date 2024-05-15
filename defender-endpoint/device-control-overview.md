@@ -53,7 +53,7 @@ Device control capabilities from Microsoft can be organized into three main cate
         
      For more information on how to configure device installation with Group Policy, see [Manage Device Installation with Group Policy](/windows/client-management/client-tools/manage-device-installation-with-group-policy)
         
-- **Device control in Defender for Endpoint -**  Device control in Defender for Endpoint provides more advanced capabilities and is cross platform. 
+- **Device control in Defender for Endpoint**  Device control in Defender for Endpoint provides more advanced capabilities and is cross platform. 
 
      - Granular access control - create policies to control access by device, device type, operation (read, write, execute), user group, network location or file type.
   
@@ -117,12 +117,11 @@ When a device installation restrictions are configured and a device is installed
 Device control for MDE provides finer grain access control to a subset of USB devices.  Device control can only restrict access to Windows Portal Devices, Removable Media, CD/DVDs and Printers. 
 
 > [!NOTE]
-> On Windows, the term *removable media devices* does not mean any USB device.  Not **all** USB devices are *removable media devices*.  In order to be considered a *removable media device* and therefore in scope of MDE device control, the device **must** create a disk (e.g.  E: ) in Windows. 
+> On Windows, the term *removable media devices* does not mean any USB device.  Not **all** USB devices are *removable media devices*.  In order to be considered a *removable media device* and therefore in scope of MDE device control, the device **must** create a disk (such as `E:` ) in Windows. 
 Device control can restrict access to the device and files on that device by defining policies.
 
 > [!IMPORTANT]
-> Some devices create multiple entries in the Windows device manager (for example a, removable media device and a Windows portable device). In order for the device to function properly make sure to grant access for **all** **entries** associated with the physical device. 
-If a policy is configured with an audit entry, then an event will appear in Advanced Hunting with an *ActionType* of *RemovableStoragePolicyTriggered*
+> Some devices create multiple entries in the Windows device manager (for example a removable media device and a Windows portable device). In order for the device to function properly make sure to grant access for **all entries** associated with the physical device. If a policy is configured with an audit entry, then an event will appear in Advanced Hunting with an `ActionType` of `RemovableStoragePolicyTriggered`.
 
 ```kusto
 DeviceEvents
