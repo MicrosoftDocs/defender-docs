@@ -38,7 +38,7 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
 **Behavior Monitoring for macOS is now in public preview**
 
-Behavior Monitoring helps you protect against malware, by looking for multiple processes for what it does instead of what it is. Adding another protection layer of security in addition to content matching.  To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](defender-endpoint/behavior-monitor-macos.md)._
+Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
 
 **Known issues**
 
