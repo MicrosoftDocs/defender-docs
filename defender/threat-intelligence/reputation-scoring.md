@@ -33,7 +33,7 @@ A series of factors determines reputation scores, including known associations t
 
 ## Scoring brackets
 
-Reputation scores are displayed as a numerical score with a range from 0 to 100. An entity with a score of `0` doesn't have associations to suspicious activity or known IOCs; a score of `100` indicates that the entity is malicious. Hosts, domains, and IP addresses are grouped into the following categories depending on their numerical score:
+Reputation scores are displayed as a numerical score with a range from zero to 100. An entity with a score of `0` doesn't have associations to suspicious activity or known IOCs; a score of `100` indicates that the entity is malicious. Hosts, domains, and IP addresses are grouped into the following categories depending on their numerical score:
 
 |Score|Category|Description|
 |---|---|---|
