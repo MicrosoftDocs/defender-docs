@@ -112,11 +112,15 @@ The CPU load factor for Microsoft Defender is not a hard limit but rather a guid
 
 ### Scanning and exclusions
 
-- Microsoft Defender has the following features that help enhance scan performance and efficiency:
-o	Containers/archives can take a long time to scan as certain optimizations (e.g. parallel scans) are not possible in these situations. Whenever possible, we recommend extracting the content of these containers which would allow the full scan to process items in parallel.
-o	Scan exclusions where you can exclude containers from scanning if this is allowed by your compliance requirements.
-o	Microsoft Defender Performance Analyzer tool can be used to determine exclusions that help optimize performance. See Performance analyzer for Microsoft Defender Antivirus - Microsoft Defender for Endpoint | Microsoft Learn.
-- Microsoft Defender has a built-in optimization for content that is highly reputable (e.g. signed by trusted sources). When it encounters such content, it simply shifts away from scanning the content to validating the signature to ensure the file wasn’t tampered with.
+Microsoft Defender has the following features that help enhance scan performance and efficiency:
+
+- Containers/archives can take a long time to scan as certain optimizations (e.g. parallel scans) are not possible in these situations. Whenever possible, we recommend extracting the content of these containers which would allow the full scan to process items in parallel.
+
+- Scan exclusions where you can exclude containers from scanning if this is allowed by your compliance requirements.
+
+- Microsoft Defender Performance Analyzer tool can be used to determine exclusions that help optimize performance. See [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
+
+Microsoft Defender has a built-in optimization for content that is highly reputable (e.g. signed by trusted sources). When it encounters such content, it simply shifts away from scanning the content to validating the signature to ensure the file wasn’t tampered with.
 
 Note: On Windows Server 2016 and Windows Server 2019, automatic exclusions help reduce CPU load during real-time scanning. The automatic exclusions are applied in addition to any custom exclusions you configure. The automatic exclusions are based on server role, such as DNS, AD DS, Hyper-V host, File Server, Print Server, Web Server, etc. Automatic exclusions only apply to Real-time protection (RTP) scanning and are not honored during a Full/Quick or On-demand scans. See [Microsoft Defender Antivirus exclusions on Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md).
 
