@@ -121,6 +121,7 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |---|---|---|
 |Configuration|Turn on/off antivirus in passive mode|`mdatp config passive-mode --value [enabled/disabled]`|
 |Configuration|Turn on/off real-time protection|`mdatp config real-time-protection --value [enabled/disabled]`|
+|Configuration|Turn on/off behavior monitoring|`mdatp config behavior-monitoring --value [enabled\|disabled]`|
 |Configuration|Turn on/off cloud protection|`mdatp config cloud --value [enabled/disabled]`|
 |Configuration|Turn on/off product diagnostics|`mdatp config cloud-diagnostic --value [enabled/disabled]`|
 |Configuration|Turn on/off automatic sample submission|`mdatp config cloud-automatic-sample-submission --value [enabled/disabled]`|

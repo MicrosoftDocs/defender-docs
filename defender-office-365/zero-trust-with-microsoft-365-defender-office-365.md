@@ -14,7 +14,7 @@ ms.collection:
   - m365-security
   - tier1
   - zerotrust-services
-ms.date: 10/5/2023
+ms.date: 05/10/2024
 ms.topic: conceptual
 adobe-target: true
 appliesto:

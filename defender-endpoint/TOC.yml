@@ -31,7 +31,7 @@
         href: whats-new-mde-archive.md
 
     - name: Preview features
-      href: preview.md
+      href: /defender-xdr/preview
     - name: Data storage and privacy
       href: data-storage-privacy.md
     - name: Defender for Endpoint Plan 1
@@ -61,36 +61,40 @@
 
   - name: Microsoft Defender for Endpoint demonstrations
     items:
-    - name: Overview
-      href: evaluate-microsoft-defender-antivirus.md
-    - name: Evaluate Microsoft Defender Antivirus using PowerShell
-      href: microsoft-defender-antivirus-using-powershell.md
-    - name: Evaluate Microsoft Defender Antivirus using MDE Security Settings Management 
-      href: microsoft-defender-antivirus-using-mde-security-set-mngmnt.md  
-    - name: Microsoft Defender for Endpoint demonstration scenarios
-      href: defender-endpoint-demonstrations.md
-    - name: App reputation demonstration
-      href: defender-endpoint-demonstration-app-reputation.md
-    - name: Validate antimalware
-      href: validate-antimalware.md
-    - name: Attack surface reduction rules demonstrations
-      href: defender-endpoint-demonstration-attack-surface-reduction-rules.md
-    - name: Cloud-delivered protection demonstration
-      href: defender-endpoint-demonstration-cloud-delivered-protection.md
-    - name: Controlled folder access (CFA) demonstration (block script)
-      href: defender-endpoint-demonstration-controlled-folder-access-test-tool.md
-    - name: Controlled folder access (CFA) demonstrations (block ransomware)
-      href: defender-endpoint-demonstration-controlled-folder-access.md
-    - name: EDR detections
-      href: edr-detection.md
-    - name: Exploit protection (EP) demonstrations
-      href: defender-endpoint-demonstration-exploit-protection.md
-    - name: Network protection demonstrations
-      href: defender-endpoint-demonstration-network-protection.md
-    - name: Potentially unwanted applications (PUA) demonstration
-      href: defender-endpoint-demonstration-potentially-unwanted-applications.md
-    - name: URL reputation demonstrations
-      href: defender-endpoint-demonstration-smartscreen-url-reputation.md
+    - name: Microsoft Defender for Endpoint demonstrations
+      items:
+      - name: Overview
+        href: evaluate-microsoft-defender-antivirus.md
+      - name: Evaluate Microsoft Defender Antivirus using PowerShell
+        href: microsoft-defender-antivirus-using-powershell.md
+      - name: Evaluate Microsoft Defender Antivirus using Group Policy 
+        href: evaluate-mdav-using-gp.md  
+      - name: Microsoft Defender for Endpoint demonstration scenarios
+        href: defender-endpoint-demonstrations.md
+      - name: App reputation demonstration
+        href: defender-endpoint-demonstration-app-reputation.md
+      - name: Behavior monitoring demonstrations
+        href: demonstration-behavior-monitoring.md
+      - name: Validate antimalware
+        href: validate-antimalware.md
+      - name: Attack surface reduction rules demonstrations
+        href: defender-endpoint-demonstration-attack-surface-reduction-rules.md
+      - name: Cloud-delivered protection demonstration
+        href: defender-endpoint-demonstration-cloud-delivered-protection.md
+      - name: Controlled folder access (CFA) demonstration (block script)
+        href: defender-endpoint-demonstration-controlled-folder-access-test-tool.md
+      - name: Controlled folder access (CFA) demonstrations (block ransomware)
+        href: defender-endpoint-demonstration-controlled-folder-access.md
+      - name: EDR detections
+        href: edr-detection.md
+      - name: Exploit protection (EP) demonstrations
+        href: defender-endpoint-demonstration-exploit-protection.md
+      - name: Network protection demonstrations
+        href: defender-endpoint-demonstration-network-protection.md
+      - name: Potentially unwanted applications (PUA) demonstration
+        href: defender-endpoint-demonstration-potentially-unwanted-applications.md
+      - name: URL reputation demonstrations
+        href: defender-endpoint-demonstration-smartscreen-url-reputation.md
  
   - name: Deploy Defender for Endpoint
     items:
@@ -622,6 +626,8 @@
         href: adv-tech-of-mdav.md
       - name: Behavior monitoring with Microsoft Defender Antivirus
         href: behavior-monitor.md
+      - name: Behavior monitoring with Microsoft Defender Antivirus on macOS
+        href: behavior-monitor-macos.md
       - name: Detect and block potentially unwanted applications
         href: detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md
       - name: Enable and configure Microsoft Defender Antivirus always-on protection in Group Policy
