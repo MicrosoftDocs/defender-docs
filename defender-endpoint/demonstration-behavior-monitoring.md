@@ -34,7 +34,7 @@ Behavior Monitoring in Microsoft Defender Antivirus monitors process behavior to
 ## Scenario requirements and setup
 
 - This demonstration only runs on macOS
-- [Microsoft Defender Real-time protection is enabled](#microsoft-defender-real-time-protection-is-enabled)
+- [Microsoft Defender Real-time protection is enabled](#verify-microsoft-defender-real-time-protection-is-enabled)
 - [Behavior Monitoring is enabled](#enable-behavior-monitoring-for-microsoft-defender-for-endpoint)
 
 ### Verify Microsoft Defender Real-time protection is enabled
@@ -47,14 +47,13 @@ To verify real-time protection (RTP) is enabled, open a terminal window and copy
 
 When RTP is enabled, the result shows a value of 1.
 
-## Enable Behavior Monitoring for Microsoft Defender for Endpoint
+### Enable Behavior Monitoring for Microsoft Defender for Endpoint
 
-For more information on hoe to enable Behavior Monitoring for Defender for Endpoint, see [Deployment instructions](/defender-endpoint/behavior-monitor-macos#deployment-instructions).
+For more information on how to enable Behavior Monitoring for Defender for Endpoint, see [Deployment instructions](/defender-endpoint/behavior-monitor-macos#deployment-instructions).
 
 ### Example of how Behavior Monitoring works
 
 To see an example of how Behavior Monitoring blocks a payload:
-
 
 1. Create a bash script using a script/text editor such as nano or Visual Studio Code (VS Code):
 
@@ -83,7 +82,6 @@ zsh: killed      sudo bash BM_test.sh
 
 The file was quarantined by Defender for Endpoint on macOS. Use the following command to list all the detected threats:
 
-
 ```bash
 mdatp threat list
 ```
@@ -100,5 +98,5 @@ Detection time: Tue May 7 20:23:41 2024
 
 Status: "quarantined"
 
-8. If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the Microsoft Defender XDR portal ([https://security.microsoft.com](https://security.microsoft.com)), and you'll see an alert named: "Suspicious 'MacOSChangeFileTest' behavior was blocked."
+If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the Microsoft Defender XDR portal ([https://security.microsoft.com](https://security.microsoft.com)), and you'll see an alert named: "Suspicious 'MacOSChangeFileTest' behavior was blocked."
 
