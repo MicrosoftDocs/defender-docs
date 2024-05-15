@@ -45,12 +45,12 @@ For example:
 - If you were using the Action center in the Microsoft Defender Security Center ([https://securitycenter.windows.com/action-center](https://securitycenter.windows.com/action-center)), try the unified Action center in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
 - If you were already using the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, you'll see several improvements in the Action center ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)).
 
-The unified Action center brings together remediation actions across Defender for Endpoint and Defender for Office 365. It defines a common language for all remediation actions and provides a unified investigation experience. Your security operations team has a "single pane of glass" experience to view and manage remediation actions.
+The unified Action center brings together remediation actions across Microsoft Defender for Endpoint and Microsoft Defender for Office 365. It defines a common language for all remediation actions and provides a unified investigation experience. Your security operations team has a "single pane of glass" experience to view and manage remediation actions.
 
 You can use the unified Action center if you have appropriate permissions and one or more of the following subscriptions:
 
-- [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
-- [Defender for Office 365](/defender-office-365/mdo-about)
+- [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
+- [Microsoft Defender for Office 365](/defender-office-365/mdo-about)
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
 > [!TIP]
@@ -123,7 +123,7 @@ To perform tasks, such as approving or rejecting pending actions in the Action c
 
 - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
   - _Microsoft Defender for Endpoint remediation (devices)_: Membership in the **Security Administrator** role.
-  - _Defender for Office 365 remediation (Office content and email)_:
+  - _Microsoft Defender for Office 365 remediation (Office content and email)_:
     - Membership in the **Security Administrator** role.
 
     _and_
@@ -131,13 +131,19 @@ To perform tasks, such as approving or rejecting pending actions in the Action c
     - Membership in a role group in [Email & collaboration permissions](/defender-office-365/mdo-portal-permissions) with the **Search and Purge** role assigned. By default, this role is assigned only to the **Data Investigator** and **Organization Management** role groups in Email & collaboration permissions. You can add users to those role groups, or you can [create a new role group in Email & collaboration permissions](/defender-office-365/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
 - [Email & collaboration permissions in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions):
-  - _Defender for Office 365 remediation (Office content and email)_:
+  - _Microsoft Defender for Office 365 remediation (Office content and email)_:
     - Membership in the **Security Administrator** role group
 
     _and_
 
     - Membership in a role group in [Email & collaboration permissions](/defender-office-365/mdo-portal-permissions) with the **Search and Purge** role assigned. By default, this role is assigned only to the **Data Investigator** and **Organization Management** role groups in Email & collaboration permissions. You can add users to those role groups, or you can [create a new role group in Email & collaboration permissions](/defender-office-365/mdo-portal-permissions#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
+- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac)
+   - _Microsoft Defender for Endpoint remediation_: **Security operations \ Security data \ Response (manage)**.
+   - _Microsoft Defender for Office 365 remediation_ (Office content and email, if **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="/defender-office-365/media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell):
+     - _Read access for email and Teams message headers_: **Security operations/Raw data (email & collaboration)/Email & collaboration metadata (read)**.
+     - _Remediate malicious email_: **Security operations/Security data/Email & collaboration advanced actions (manage)**. 
+    
   > [!TIP]
   > Membership in the **Security Administrator** role group Email & collaboration permissions doesn't grant access to the Action center or Microsoft Defender XDR capabilities. For those, you need to be a member of the **Security Administrator** role in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
 

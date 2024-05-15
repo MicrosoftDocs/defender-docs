@@ -31,7 +31,7 @@
         href: ios-whatsnew.md
 
     - name: Preview features
-      href: preview.md
+      href: /defender-xdr/preview
     - name: Data storage and privacy
       href: data-storage-privacy.md
     - name: Defender for Endpoint Plan 1
@@ -67,8 +67,8 @@
         href: evaluate-microsoft-defender-antivirus.md
       - name: Evaluate Microsoft Defender Antivirus using PowerShell
         href: microsoft-defender-antivirus-using-powershell.md
-      - name: Evaluate Microsoft Defender Antivirus using MDE Security Settings Management 
-        href: microsoft-defender-antivirus-using-mde-security-set-mngmnt.md  
+      - name: Evaluate Microsoft Defender Antivirus using Group Policy 
+        href: evaluate-mdav-using-gp.md  
       - name: Microsoft Defender for Endpoint demonstration scenarios
         href: defender-endpoint-demonstrations.md
       - name: App reputation demonstration

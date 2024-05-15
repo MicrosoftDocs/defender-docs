@@ -4,6 +4,26 @@
         "source_path": "defender/advanced-hunting-overview.md",
         "redirect_url": "/defender-xdr/advanced-hunting-overview",
         "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/microsoft-defender-antivirus-using-mde-security-set-mngmnt.md",
+      "redirect_url": "/defender-endpoint/evaluate-mdav-using-gp",
+      "redirect_document_id": false
+    },
+    {   
+        "source_path": "defender-endpoint/preview.md",
+        "redirect_url": "/defender-xdr/preview",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "defender-endpoint/preview-settings.md",
+        "redirect_url": "/defender-xdr/preview",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "defender-business/mdb-preview.md",
+        "redirect_url": "/defender-xdr/preview",
+        "redirect_document_id": false
     }
   ]
 }
