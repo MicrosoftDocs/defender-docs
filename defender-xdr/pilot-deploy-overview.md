@@ -1,5 +1,5 @@
 ---
-title: Evaluate and pilot Microsoft Defender XDR security, an XDR solution that unifies threat data so you can take action.
+title: Pilot and deploy Microsoft Defender XDR
 description: What is XDR security? How can you evaluate a Microsoft XDR in Microsoft Defender XDR? Use this blog series to plan your Microsoft Defender XDR trial lab or pilot environment and test and pilot a security solution designed to protect devices, identity, data, and applications. Take that XDR seccurity test to production.
 search.appverid: met150
 ms.service: defender-xdr
@@ -21,7 +21,7 @@ ms.collection:
 ms.topic: conceptual
 ---
 
-# Evaluate and pilot Microsoft Defender XDR security
+# Pilot and deploy Microsoft Defender XDR
 
 **Applies to:**
 
@@ -137,6 +137,53 @@ The following table describes this illustration.
 |7|[Promote the trial to production](eval-defender-promote-to-production.md)|Promote the Microsoft 365 components to production one-by-one.|
 
 This order is commonly recommended and designed to leverage the value of the capabilities quickly based on how much effort is typically required to deploy and configure the capabilities. For example, Defender for Office 365 can be configured in less time than it takes to enroll devices in Defender for Endpoint. Of course, you should prioritize the components to meet your business needs, and can enable these in a different order.
+
+==============================
+
+You can learn about and build out this Microsoft Defender XDR solution in steps that are distributed through the rest of this series:
+
+- [How to create the environment](eval-create-eval-environment.md)
+- Set up or learn about each technology of this Microsoft XDR
+    - [Microsoft Defender for Identity](eval-defender-identity-overview.md)
+    - [Microsoft Defender for Office](eval-defender-office-365-overview.md)
+    - [Microsoft Defender for Endpoint](eval-defender-endpoint-overview.md)
+    - [Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)
+- [How to investigate and respond using this XDR](eval-defender-investigate-respond.md)
+- [Promote the trial environment to production](eval-defender-promote-to-production.md)
+- [Back to the Overview](eval-overview.md)
+
+The steps in this series run end-to-end, from learning the concepts behind the Microsoft Defender XDR to building it, and into taking the evaluation environment live to production.
+
+There are two common ways to do this next step in evaluation. This series assumes you already have a production Microsoft 365 tenant and are activating Microsoft 365 E5 trial licenses to evaluate Microsoft Defender XDR in *the current environment*. An in-place evaluation will let you keep any security methods with the purchase of licenses after the evaluation period.
+
+The second is to  [Set up your Microsoft Defender XDR trial lab environment](setup-m365deval.md) for evaluation. It might not have many real signals from the business while in testing.
+
+<a name='you-will-need-to-activate-e5-trial-licenses-to-evaluate-microsoft-365-defender'></a>
+
+## You need to activate Microsoft 365 E5 trial licenses to evaluate Microsoft Defender XDR
+
+1. Sign in your existing Microsoft 365 tenant administration portal.
+2. Select **Purchase Services** from the navigation menu.
+3. Scroll down to the Office 365 section and select **Details** button under Office 365 E5 license.
+
+   :::image type="content" source="/defender/media/mdo-eval/2_mdo-eval-license-details.png" alt-text="The Details button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/2_mdo-eval-license-details.png":::
+
+4. Select **Start free trial** link.
+
+   :::image type="content" source="/defender/media/mdo-eval/3-m365-purchase-button.png" alt-text="The Start free trial button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/3-m365-purchase-button.png":::
+
+5. Confirm your request and select **Try now** button.
+
+   :::image type="content" source="/defender/media/mdo-eval/4_mdo-trial-order.png" alt-text="The Try Now button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/4_mdo-trial-order.png":::
+
+## Go to the next step
+
+[Learn how to enable Microsoft 365 for Identity](eval-defender-identity-overview.md)
+
+Or return to the Overview for [Evaluate and pilot Microsoft Defender XDR](eval-overview.md)
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+
+==============================
 
 ## Go to the Next Step
 
