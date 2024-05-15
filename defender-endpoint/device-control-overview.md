@@ -67,7 +67,13 @@ Device control capabilities from Microsoft can be organized into three main cate
         
 - **Endpoint data loss prevention** (Endpoint DLP). Endpoint DLP monitors sensitive information on devices that are onboarded to Microsoft Purview solutions. DLP policies can enforce protective actions on sensitive information and where it's stored or used. [Learn about Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
+## Common device control scenarios
+
 In the following sections, review the scenarios, and then identify which Microsoft capability to use.
+
+- [Control access to USB devices](#control-access-to-usb-devices)
+- [Control access to BitLocker encrypted removable media (Preview)](#control-access-to-bitlocker-encrypted-removable-media-preview)
+- [Control access to printers](#control-access-to-printers)
 
 ## Control access to USB devices
 
@@ -157,11 +163,11 @@ To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](
 
 You use BitLocker to control access to removable media or to ensure that devices are encrypted.
 
-### BitLocker support for removable media
+### Use BitLocker to deny access to removable media
 
 Windows provides the ability to deny write to all removable media or deny write access unless a device is BitLocker encrypted. For more information, see [Configure BitLocker - Windows Security](/windows/security/operating-system-security/data-protection/bitlocker/configure).
 
-### Device control policies for BitLocker (Preview)
+### Configure device control policies for BitLocker (Preview)
 
 Device control for Microsoft Defender for Endpoint controls access to a device based on its BitLocker encrypted state (encrypted or plain). This allows for exceptions to be created to allow and audit access to non-BitLocker encrypted devices.
 
@@ -186,7 +192,7 @@ Device control can also restrict the types of files that are printed. Device con
 
 To block printing of documents based on information classification use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
-## Bluetooth
+## Control access to Bluetooth devices
 
 You can use device control to control access to Bluetooth services on Windows devices or by using Endpoint DLP.
 
