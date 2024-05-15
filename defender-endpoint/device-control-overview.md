@@ -69,7 +69,7 @@ Device control capabilities from Microsoft can be organized into three main cate
 
 In the following sections, review the scenarios, and then identify which Microsoft capability to use.
 
-## Controlling access to USB devices
+## Control access to USB devices
 
 ### Device installation restrictions 
 
@@ -110,7 +110,7 @@ When a device installation restrictions are configured and a device is installed
 
 - [Restrict USB devices and allow specific USB devices using ADMX templates in Intune](/mem/intune/configuration/administrative-templates-restrict-usb).
 
-### Controlling access to removable media with device control for Microsoft Defender for Endpoint
+### Controll access to removable media with device control for Microsoft Defender for Endpoint
 
 Device control for Defender for Endpoint provides finer grain access control to a subset of USB devices.  Device control can only restrict access to Windows Portal Devices, Removable Media, CD/DVDs and Printers. 
 
@@ -151,7 +151,7 @@ This query returns the name of the policy, the access requested, and the verdict
 
 To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
-## Controlling access to BitLocker encrypted removable media (Preview)
+## Control access to BitLocker encrypted removable media (Preview)
 
 ### BitLocker support for removable media
 
@@ -164,7 +164,7 @@ Device control for Microsoft Defender for Endpoint controls access to a device b
 > [!TIP]
 > If you're using Mac, device control can control access to removable media based on the APFS encryption state. See **[Device Control for macOS](mac-device-control-overview.md)**.
 
-## Controlling access to printers**
+## Control access to printers
 
 ### Printer installation restrictions
 
@@ -185,7 +185,7 @@ To block printing of documents based on information classification use [Endpoint
 > [!TIP]
 > If you're using Mac, device control can control access to Bluetooth. See **[Device Control for macOS](mac-device-control-overview.md)**.
 
-### Controlling access to Bluetooth services on Windows
+### Control access to Bluetooth services on Windows
 
 Administrators can control the behavior of the Bluetooth service (Allowing advertising, discovery, preparing and prompting) as well as the Bluetooth services that are allowed. For more information, see [Windows Bluetooth](/windows/client-management/mdm/policy-csp-bluetooth).
 
