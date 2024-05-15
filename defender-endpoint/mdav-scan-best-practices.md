@@ -40,8 +40,7 @@ However, some customers want to run full scans to meet their organization’s sp
 
 ## Protection efficiency and performance impact
 
-Protection and system resource usage entails tradeoffs. Device performance is highly dependent on the customers’ environment. It is quite natural that running a full scan on a device with lots of complex content would lead to an increased time to completion. Here is a list of scenarios where we’ve made decisions to use more system resources to increase our protection efficiency.
-
+Protection and system resource usage entails tradeoffs. Device performance is highly dependent on the customers’ environment. It is quite natural that running a full scan on a device with lots of complex content would lead to an increased time to completion. The following table summarizes scenarios where we’ve made decisions to use more system resources to increase our protection efficiency.
 
 | Setting | Default | Details |
 |--|--|--|
@@ -50,7 +49,7 @@ Protection and system resource usage entails tradeoffs. Device performance is hi
 | Mapped Network (e.g., UNC, SMB, CIFS) | Enabled | By default, Defender scans mapped network drives. |
 | OneDrive sync | Enabled | By default, Defender scans desktops, documents, or downloads that are synchronized via OneDrive or folder sync. |
 | Client-side cache/offline files | Enabled | By default, Defender scans client-side cache. |
-| Scan Average CPU Load Factor | 50 | See the “Scanning and CPU throttling” section of this page. |
+| Scan Average CPU Load Factor | 50 | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
 
 > [!NOTE]
 > If real-time protection is turned on, files are scanned before they are accessed and executed. Scan occurs regardless where the files are located (see [Configure scanning options for Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)).
