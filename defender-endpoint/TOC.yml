@@ -75,7 +75,6 @@
         href: defender-endpoint-demonstration-app-reputation.md
       - name: Behavior monitoring demonstrations
         href: demonstration-behavior-monitoring.md
-        displayName: Behavior Monitoring, BM
       - name: Validate antimalware
         href: validate-antimalware.md
       - name: Attack surface reduction rules demonstrations

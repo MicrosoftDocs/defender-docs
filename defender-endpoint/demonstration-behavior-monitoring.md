@@ -2,8 +2,9 @@
 title: AV detection test for verifying device's onboarding and reporting services
 description: AV detection test to verify the device's proper onboarding and reporting to the service.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.subservice: ngp
+author: YongRhee-MSFT
+ms.author: yongrhee
 ms.localizationpriority: normal
 manager: deniseb
 audience: ITPro
@@ -14,7 +15,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 01/31/2024
+ms.date: 15/05/2024
 ---
 
 # Behavior Monitoring demonstration
@@ -22,13 +23,9 @@ ms.date: 01/31/2024
 **Applies to:**
 
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
-
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
 Scenario requirements and setup
