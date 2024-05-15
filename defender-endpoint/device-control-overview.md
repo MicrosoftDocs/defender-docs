@@ -71,6 +71,8 @@ In the following sections, review the scenarios, and then identify which Microso
 
 ## Control access to USB devices
 
+You can control access to USB devices by using device installation restrictions, removable media device control, or Endpoint DLP.
+
 ### Device installation restrictions 
 
 The device installation restrictions available in Windows allow or deny the installation of drivers based on the device ID, device instance ID or set-up class.  This can block *any* device in the device manager including all removable devices. When device installation restrictions are applied, the device is blocked in the device manager, as shown in the following screenshot:
@@ -110,7 +112,7 @@ When a device installation restrictions are configured and a device is installed
 
 - [Restrict USB devices and allow specific USB devices using ADMX templates in Intune](/mem/intune/configuration/administrative-templates-restrict-usb).
 
-### Controll access to removable media with device control for Microsoft Defender for Endpoint
+### Control access to removable media using device control
 
 Device control for Defender for Endpoint provides finer grain access control to a subset of USB devices.  Device control can only restrict access to Windows Portal Devices, Removable Media, CD/DVDs and Printers. 
 
@@ -153,6 +155,8 @@ To prevent copying of files to USB based on file sensitivity use [Endpoint DLP](
 
 ## Control access to BitLocker encrypted removable media (Preview)
 
+You use BitLocker to control access to removable media.
+
 ### BitLocker support for removable media
 
 Windows provides the ability to deny write to all removable media or deny write access unless a device is BitLocker encrypted. For more information, see [Configure BitLocker - Windows Security](/windows/security/operating-system-security/data-protection/bitlocker/configure).
@@ -165,6 +169,8 @@ Device control for Microsoft Defender for Endpoint controls access to a device b
 > If you're using Mac, device control can control access to removable media based on the APFS encryption state. See **[Device Control for macOS](mac-device-control-overview.md)**.
 
 ## Control access to printers
+
+You can control access to printers by using printer installation restrictions, device control policies for printing, or Endpoint DLP.
 
 ### Printer installation restrictions
 
@@ -181,6 +187,8 @@ Device control can also restrict the types of files that are printed. Device con
 To block printing of documents based on information classification use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
 ## Bluetooth
+
+You can use device control to control access to Bluetooth services on Windows devices or by using Endpoint DLP.
 
 > [!TIP]
 > If you're using Mac, device control can control access to Bluetooth. See **[Device Control for macOS](mac-device-control-overview.md)**.
