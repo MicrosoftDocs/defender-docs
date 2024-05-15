@@ -109,7 +109,7 @@ The CPU load factor for Microsoft Defender isn't a hard limit but rather guidanc
 
 - If you set the percentage value to 0 or 100, CPU throttling will be disabled, and Windows Defender can use up to 100% of CPU during the scheduled and custom scans. This isn't recommended as it can lead to unresponsive apps, and even overheating so proceed with extreme caution.
 
-- Changing the value has both pros and cons. Higher values mean the scans perform faster; however, it could slow down your system during the scan, while lower values mean the scan takes longer to finish, but you'll have more CPU resources available for your system during the scan. For instance, if you're running critical workloads on a server, this setting should be set to a value that doesn’t interfere with the functioning of the workloads.
+- Changing the value has both pros and cons. Higher values mean the scans perform faster; however, it could slow down your system during the scan, while lower values mean the scan takes longer to finish, but you have more CPU resources available for your system during the scan. For instance, if you're running critical workloads on a server, this setting should be set to a value that doesn’t interfere with the functioning of the workloads.
 
 - Manual scans ignore the CPU throttling setting and run without any CPU limits. However, there's a scan policy setting (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) for ThrottleForScheduledScanOnly setting) that if it's disabled, then manual scans adhere to the same CPU limits as a scheduled scan.
 
@@ -122,9 +122,9 @@ The CPU load factor for Microsoft Defender isn't a hard limit but rather guidanc
 
 Microsoft Defender has the following features that help enhance scan performance and efficiency:
 
-- Containers/archives can take a long time to scan as certain optimizations (e.g. parallel scans) are not possible in these situations. Whenever possible, we recommend extracting the content of these containers which would allow the full scan to process items in parallel.
+- Containers/archives can take a long time to scan as certain optimizations (for example, parallel scans) aren't possible in these situations. Whenever possible, we recommend extracting the content of these containers that would allow the full scan to process items in parallel.
 
-- Scan exclusions where you can exclude containers from scanning if this is allowed by your compliance requirements.
+- Scan exclusions where you can exclude containers from scanning, if this option is allowed by your compliance requirements.
 
 - Microsoft Defender Performance Analyzer tool can be used to determine exclusions that help optimize performance. See [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
