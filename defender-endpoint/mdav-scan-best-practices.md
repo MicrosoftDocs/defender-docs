@@ -46,15 +46,15 @@ Protection and system resource usage entails tradeoffs. Device performance is hi
 
 | Setting | Default | Details |
 |--|--|--|
-| Archive/Container (for example, ISOs) Scanning | Enabled | Microsoft Defender Antivirus is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
-| Max size of archive scanning | Unlimited | |
-| Mapped Network (for example, UNC, SMB, CIFS) | Enabled | By default, Microsoft Defender Antivirus scans mapped network drives. |
-| OneDrive sync | Enabled | By default, Microsoft Defender Antivirus scans desktops, documents, or downloads that are synchronized via OneDrive or folder sync. |
-| Client-side cache/offline files | Enabled | By default, Defender scans client-side cache. |
-| Scan Average CPU Load Factor | 50 | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
+| Archive/Container (for example, ISOs) Scanning | `Enabled` | Microsoft Defender Antivirus is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
+| Max size of archive scanning | `Unlimited` | |
+| Mapped Network (for example, UNC, SMB, CIFS) | `Enabled` | By default, Microsoft Defender Antivirus scans mapped network drives. |
+| OneDrive sync | `Enabled` | By default, Microsoft Defender Antivirus scans desktops, documents, or downloads that are synchronized via OneDrive or folder sync. |
+| Client-side cache/offline files | `Enabled` | By default, Defender scans client-side cache. |
+| Scan Average CPU Load Factor | `50` | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
 
 > [!NOTE]
-> - If real-time protection is turned on, files are scanned before they are accessed and executed. Scan occurs regardless where the files are located (see [Configure scanning options for Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)).
+> - If real-time protection is turned on, files are scanned before they are accessed and executed. Scan occurs regardless of where the files are located (see [Configure scanning options for Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)).
 >
 > - Actual CPU usage may vary depending on number of CPU cores, I/O performance, memory pressure etc. Limiting CPU usage can cause full scan to take longer to complete, so customers should fine tune this value depending on the actual CPU usage values obtained in their specific environment.
 
