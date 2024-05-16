@@ -157,9 +157,9 @@ Read the warning in the confirmation dialog that opens, and then select **Yes, r
 
 Back on the **User tags** page, the custom tag is no longer listed.
 
-## User tags in reports and features in the Microsoft Defender portal
+## User tags in reports and features
 
-After you apply system tags or custom tags to users, you can use those tags as filters in the following features:
+After you apply system tags or custom tags to users, you can use those tags as filters in the following features in Defender for Office 365:
 
 - [Alerts](/defender-xdr/investigate-alerts)
 - [Incidents](mdo-sec-ops-manage-incidents-and-alerts.md)
