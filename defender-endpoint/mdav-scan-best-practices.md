@@ -112,7 +112,7 @@ The CPU load factor for Microsoft Defender isn't a hard limit but rather guidanc
 
 - Changing the value has both pros and cons. Higher values mean the scans perform faster; however, it could slow down your system during the scan, while lower values mean the scan takes longer to finish, but you have more CPU resources available for your system during the scan. For instance, if you're running critical workloads on a server, this setting should be set to a value that doesn’t interfere with the functioning of the workloads.
 
-- Manual scans ignore the CPU throttling setting and run without any CPU limits. However, there's a scan policy setting (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) for ThrottleForScheduledScanOnly setting) that if it's disabled, then manual scans adhere to the same CPU limits as a scheduled scan.
+- Manual scans ignore the CPU throttling setting and run without any CPU limits. However, there's a scan policy setting (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference) for ThrottleForScheduledScanOnly setting) that if it's disabled, then manual scans adhere to the same CPU limits as a scheduled scan.
 
 - CPU throttling on idle scans controls whether the CPU is throttled for scheduled scans while the device is idle. This setting is disabled by default to ensure that the CPU isn't throttled for scheduled scans when the device is idle, regardless of what CPU throttling is set to. For more information, see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) and review the `DisableCpuThrottleOnIdleScans` setting.
 
