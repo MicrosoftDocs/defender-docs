@@ -48,12 +48,19 @@ This article is updated frequently to let you know what's new in the latest rele
 
 There are multiple fixes and new changes in this release:
 
-- New Field in mdatp health - engine_load_status<br>
-  To optimize performance, the unprivileged process will only run in specific scenarios. The field 'engine_load_status' indicates the following:
+- In passive and on-demand modes, antivirus engine remains in idle state and is used only during scheduled custom scans. Thus as part of performance improvements, we have made changes to keep the AV engine down  in passive and on-demand mode except during scheduled custom scans. If the real time protection is enabled, antivirus engine will always be up and running. This will have no impact on your server protection in any mode.
+ 
+To keep users informed of the state of antivirus engine, we have introduced a new field called "engine_load_status" as part of MDATP health. It indicates whether antivirus engine is currently running or not.
 
-    Healthy Scenarios:
-    - "Engine not loaded"  - The unprivileged process is not currently running.
-    - "Engine load succeeded" - The unprivileged process is up and running.
+| Field name | engine_load_status | 
+|---|---|
+| Possible values | Engine not loaded (AV engine process is down),  Engine load succeeded (AV engine process up and running) | 
+
+Healthy scenarios:
+  - If RTP is enabled, engine_load_status should be "Engine load succeeded"
+  - If MDE is in on-demand or passive mode, and custom scan isn't running then "engine_load_status" should be "Engine not loaded"
+  - If MDE is in on-demand or passive mode, and custom scan is running then "engine_load_status" should be "Engine load succeeded"    
+
 - Bug fix to enhance behavioral detections.
 - Stability and performance improvements.
 - Other bug fixes.
