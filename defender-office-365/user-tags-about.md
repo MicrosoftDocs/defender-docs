@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 11/2/2023
+ms.date: 5/16/2024
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -58,12 +58,12 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
   > [!NOTE]
   > User tag management is controlled by the **Tag Reader** and **Tag Manager** roles.
-  
+
 - You can also manage and monitor the Priority account tag in the Microsoft 365 admin center. For instructions, see [Manage and monitor priority accounts](/microsoft-365/admin/setup/priority-accounts).
 
 - For information about securing _privileged accounts_ (admin accounts), see [this article](/purview/privileged-access-management).
 
-## Create user tags in the Microsoft Defender portal
+## Use the Microsoft Defender portal to create user tags
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **User tags**. Or, to go directly to the **User tags** page, use <https://security.microsoft.com/securitysettings/userTags>.
 
@@ -103,10 +103,10 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
    > [!NOTE]
    > It can take up to 8 hours to completely apply tags.
-   > If assiging a Group to a User Tag, the users assigned to the group in the time of the Tag creation will get the tag. Users added to the Group after creation will not get the Use tag automatically. 
+   >
+   > If you assign a group to a user tag, members of the group at the time of tag creation are assigned tag. Users later added to the group aren't automatically assigned the user tag. 
 
-
-## View the configured user tags in the Microsoft Defender portal
+## Use the Microsoft Defender portal to view user tags
 
 In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **User tags**. Or, to go directly to the **User tags** page, use <https://security.microsoft.com/securitysettings/userTags>.
 
@@ -132,9 +132,7 @@ The details flyout of the user tag contains the following information, based on 
   - **Applied to**
 - **Custom tags**: The details flyout for a custom tag contains the same information as the **User tags** page, plus the list of users and groups that the tag applies to.
 
-To take action on user tags, see the next section.
-
-### Modify user tags in the Microsoft Defender portal
+## Use the Microsoft Defender portal to modify user tags
 
 After you select the user tag, use either of the following methods to modify it:
 
@@ -146,7 +144,7 @@ The same wizard and most of the same settings are available as described in the 
 - You can't rename or change the description of the Priority account tag, so the **Define tag** page isn't available for the Priority account tag.
 - The **Define tag** page is available for custom tags, but you can't rename the tag; you can only change the description.
 
-## Remove user tags the Microsoft Defender portal
+## Use the Microsoft Defender portal to remove user tags
 
 You can't remove the built-in Priority account tag.
 
@@ -159,7 +157,7 @@ Read the warning in the confirmation dialog that opens, and then select **Yes, r
 
 Back on the **User tags** page, the custom tag is no longer listed.
 
-## User tags availability in Microsoft Defender portal
+## User tags in reports and features in the Microsoft Defender portal
 
 After you apply system tags or custom tags to users, you can use those tags as filters in the following features:
 
@@ -167,7 +165,7 @@ After you apply system tags or custom tags to users, you can use those tags as f
 - [Incidents](mdo-sec-ops-manage-incidents-and-alerts.md)
 - [Threat Explorer](threat-explorer-real-time-detections-about.md)
 - [Email entity page](mdo-email-entity-page.md)
-- [Quarantine](quarantine-admin-manage-messages-files.md) Currently, tag selection on the Quarantine filter page supports only the Priority account tag.
+- [Quarantine](quarantine-admin-manage-messages-files.md) Currently, tag selection on the Quarantine filter page supports the Priority tag only.
 - [Admin submissions and user reported messages](submissions-admin.md)
 - [Email security reports](reports-email-security.md)
   - [Compromised user report](reports-email-security.md#compromised-users-report)
