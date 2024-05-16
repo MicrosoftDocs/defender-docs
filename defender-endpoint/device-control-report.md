@@ -3,7 +3,7 @@ title: View device control events and information in Microsoft Defender for Endp
 description: Monitor your organization's data security through device control reports.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 02/01/2024
+ms.date: 05/16/2024
 ms.author: siosulli
 author: siosulli
 ms.topic: conceptual
