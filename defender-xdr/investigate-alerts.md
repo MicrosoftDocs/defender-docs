@@ -197,78 +197,81 @@ Alert tuning, previously known as *alert suppression*, provides the ability to t
 
 Alert tuning rules support conditions based on *evidence types* such as files, processes, scheduled tasks, and other types of evidence that trigger alerts. After creating an alert tuning rule, apply it to the selected alert or any alert type that meets the defined conditions to tune the alert.
 
-Alert tuning as General Availability captures alerts only from Defender for Endpoint. However, in preview, alert tuning is also extended to other Microsoft Defender XDR services, including Defender for Office 365, Defender for Identity, Defender for Cloud Apps, Microsoft Entra ID Protection (Microsoft Entra IP), and others if they are available on your platform and plan.
+Alert tuning as general availability captures alerts only from Defender for Endpoint. However, in preview, alert tuning is also extended to other Microsoft Defender XDR services, including Defender for Office 365, Defender for Identity, Defender for Cloud Apps, Microsoft Entra ID Protection (Microsoft Entra IP), and others if they are available on your platform and plan.
 
 > [!CAUTION]
-> We recommend using alert tuning with caution, for where known, internal business applications or security tests trigger an expected activity and you don't want to see the alerts.
+> We recommend using alert tuning with caution, for scenarios where known, internal business applications or security tests trigger an expected activity and you don't want to see the alerts.
 
 ### Create rule conditions to tune alerts
 
-<!--what permissions do i need to tune alerts?-->
 Create alert tuning rules from the Microsoft Defender XDR **Settings** area or from an alert details page. Select one of the following tabs to continue.
 
 #### [Settings page](#tab/settings)
 
 1. In the Microsoft Defender portal, select **Settings > Microsoft Defender XDR > Alert tuning**.
 
-    :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-settings.png" lightbox="/defender/media/investigate-alerts/alert-tuning-settings.png" alt-text="Screenshot of Alert tuning option in Microsoft Defender XDR's Settings page.":::
+    :::image type="content" source="../defender/media/investigate-alerts/alert-tuning-settings.png" lightbox="/defender/media/investigate-alerts/alert-tuning-settings.png" alt-text="Screenshot of Alert tuning option in Microsoft Defender XDR's Settings page.":::
 
-1. Select **Add new rule** to tune a new alert, or select an existing rule to make changes. For example:
-   
-     :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-add-new.png" lightbox="/defender/media/investigate-alerts/alert-tuning-add-new.png" alt-text="Screenshot of adding new rules in the Alert tuning page.":::
+1. Select **Add new rule** to tune a new alert, or select an existing rule row to make changes. Selecting the rule title opens a rule details page, where you can view a list of associated alerts, edit conditions, or turn the rule on and off.
 
 1. In the **Tune alert** pane, under **Select service sources**, select the service sources where you want to the rule to apply. Only services where you have permissions are shown in the list. For example:
 
-     :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-select-service.png" lightbox="/defender/media/investigate-alerts/alert-tuning-select-service.png" alt-text="Screenshot of service source dropdown menu in Tune an alert page.":::
+     :::image type="content" source="../defender/media/investigate-alerts/alert-tuning-select-service.png" lightbox="/defender/media/investigate-alerts/alert-tuning-select-service.png" alt-text="Screenshot of service source dropdown menu in Tune an alert page.":::
 
 1. In the **Conditions** area, add a condition for the alert's triggers. For example, if you want to prevent an alert from being triggered when a specific file is created, define a condition for the **File:Custom** trigger, and define the file details:
 
-     :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-choose-ioc2.png" lightbox="/defender/media/investigate-alerts/alert-tuning-choose-ioc2.png" alt-text="Screenshot of the IOC menu in Tune an alert page.":::
+     :::image type="content" source="../defender/media/investigate-alerts/alert-tuning-choose-ioc2.png" lightbox="/defender/media/investigate-alerts/alert-tuning-choose-ioc2.png" alt-text="Screenshot of the IOC menu in Tune an alert page.":::
 
    - Listed triggers differ, depending on the service sources you selected. Triggers are all indicators of compromise (IOCs), such as files, processes, scheduled tasks, and other evidence types that might trigger an alert, including AntiMalware Scan Interface (AMSI) scripts, Windows Management Instrumentation (WMI) events, or scheduled tasks.
+
    - To set multiple rule conditions, select **Add filter** and use **AND**, **OR**, and grouping options to define the relationships between the multiple evidence types that trigger the alert. Further evidence properties are automatically populated as a new subgroup, where you can define your condition values. Condition values aren't case sensitive, and some properties support wildcards.
-   - Each alert tuning rule must have at least one trigger defined.
 
 1. In the **Action** area of the **Tune alert** pane, select the relevant action you want the rule to take, either **Hide alert** or **Resolve alert**.
 
 1. Enter a meaningful name for your alert and a comment to describe the alert, and then select **Save**.
 
-   :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-choose-action2.png" lightbox="/defender/media/investigate-alerts/alert-tuning-choose-action2.png" alt-text="Screenshot of the Action menu in the Tune an alert page.":::
+#### [Alerts page](#tab/alerts)
 
-   > [!NOTE]
-   > The **alert title (Name)** is based on the **alert type (IoaDefinitionId)**, which decides the alert title. Two alerts that have the same alert type can change to a different alert title.
+1. In the Microsoft Defender portal, go to the **Alerts** page or an alert details page. If you're on the **Alerts** page, first select the alert you want to tune, and then select **Tune alert**. Depending on your screen resolution, you might need to select the ellipsis (**...**) to see the **Tune alert** option. For example:
 
-#### [Alert details page](#tab/alerts)
+   :::image type="content" source="../defender/media/investigate-alerts/tune-alert-alert-details.png" alt-text="Screenshot of the Tune alert option from an alert details pane.":::
 
-1. In the Microsoft Defender portal, go to an alert details page, either from an incident details page, or from the **Investigation & response > Incidents & alerts > Alerts** page. The **Tune alert** pane opens automatically.
+   The **Tune alert** pane opens on the side, where you can define conditions for the alert. For example:
 
-   :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-tune-pane2.png" lightbox="/defender/media/investigate-alerts/alert-tuning-tune-pane2.png" alt-text="Screenshot of Tune an alert pane within an Alert page.":::
+   :::image type="content" source="../defender/media/investigate-alerts/tune-alert-pane-alert-details.png" alt-text="Screenshot of the Tune alert pane from the Alerts page.":::
 
-1. In the **Alert types** area, select to apply the alert tuning rule only to alerts of the selected type, or any alert type based on the same indicator of compromise (IOC) conditions.
+1. Configure the following details:
 
-   :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-alert-types.png" lightbox="/defender/media/investigate-alerts/alert-tuning-alert-types.png" alt-text="Screenshot of Tune an alert pane highlighting the Alert types section.":::
+   - In the **Alert types** area, select to apply the alert tuning rule only to alerts of the selected type, or any alert type based on the same conditions. If you select **Any alert type based on certain conditions**, also select the service sources where you want the rule to apply. Only services where you have permissions are shown in the list. For example:
 
-1. If your alert tuning rule in specific to Defender for Endpoint, in the **Scope (Endpoint only)** section, select whether to apply the rule to all devices in the organization, or define conditions to configure the scope more narrowly. Selecting **All organization** requires an administrative role, as does defining the scope conditions for a **User** value only. Admin permissions are not required when the scope conditions are set for a **User** together with a **Device** or **Device groups**.
+      :::image type="content" source="../defender/media/investigate-alerts/alert-tuning-alert-details-service-sources.png" alt-text="Screenshot of the Service sources area showing in the Tune alert pane.":::
 
-   :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-scope.png" lightbox="/defender/media/investigate-alerts/alert-tuning-scope.png" alt-text="Screenshot of Tune an alert pane highlighting the Scope section.":::
+    1. In the **Conditions** area, add a condition for the alert's triggers. For example, if you want to prevent an alert from being triggered when a specific file is created, define a condition for the **File:Custom** trigger, and define the file details:
 
-1. In the **IOCs** area, select whether to use any IOC as a rule condition, or select **Choose IOCs** to define your conditions more narrowly. Select **Any IOC** to prevent an alert from being triggered, regardless of the evidence that caused the alert.
-   
-   :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-any-ioc.png" lightbox="/defender/media/investigate-alerts/alert-tuning-any-ioc.png" alt-text="Screenshot of Tune an alert pane highlighting the IOCs section.":::
+      :::image type="content" source="../defender/media/investigate-alerts/alert-tuning-alert-details-conditions.png" alt-text="Screenshot of the Conditions area in the Alert tuning pane.":::
+
+      - Listed triggers differ, depending on the service sources you selected. Triggers are all indicators of compromise (IOCs), such as files, processes, scheduled tasks, and other evidence types that might trigger an alert, including AntiMalware Scan Interface (AMSI) scripts, Windows Management Instrumentation (WMI) events, or scheduled tasks.
+
+      - To set multiple rule conditions, select **Add filter** and use **AND**, **OR**, and grouping options to define the relationships between the multiple evidence types that trigger the alert. Further evidence properties are automatically populated as a new subgroup, where you can define your condition values. Condition values aren't case sensitive, and some properties support wildcards.
 
 1. In the **Action** area of the **Tune alert** pane, select the relevant action you want the rule to take, either **Hide alert** or **Resolve alert**.
 
 1. Enter a meaningful name for your alert and a comment to describe the alert, and then select **Save**.
 
-   :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-tune-pane-action.png" alt-text="Screenshot of Action section in the Tune alert pane." lightbox="/defender/media/investigate-alerts/alert-tuning-tune-pane-action.png":::
+---
 
+> [!NOTE]
+> The **alert title (Name)** is based on the **alert type (IoaDefinitionId)**, which decides the alert title. Two alerts that have the same alert type can change to a different alert title. 
+
+<!--what does this mean?-->
+
+<!--i don't see how to validate this?>
 After creating your alert tuning rule from an alert details page, in the **Successful rule creation** page that appears, add any of the alert-related IOCs as indicators to an *allow list* to prevent them from being blocked in the future. IOCs that are configured as part of the alert tuning rule are selected by default. For example:
 
 1. Add a file to the **Select evidence (IOC) to allow** list. By default, the file that triggered the alert is already selected.
 1. Define a scope for the **Select scope to apply to** value. By default, the scope that applies to your alert is selected.
 1. Select **Save** to add the file to an allow list and prevent it from being blocked.
-
----
+-->
 
 ## Resolve an alert
 
