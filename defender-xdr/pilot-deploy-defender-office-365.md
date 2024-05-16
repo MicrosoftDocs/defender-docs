@@ -26,7 +26,7 @@ ms.date: 05/15/2024
 **Applies to:**
 - Microsoft Defender XDR
 
-This article outlines the process to enable and pilot Microsoft Defender for Office 365. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md), and you've [created the Microsoft Defender XDR evaluation environment](eval-create-eval-environment.md).
+This article outlines the process to enable and pilot Microsoft Defender for Office 365. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md), and you've  and you have created the Microsoft Defender XDR pilot environment.
 
 Use the following steps to enable and pilot Microsoft Defender for Office 365.
 
@@ -36,9 +36,10 @@ The following table describes the steps in the illustration.
 
 |Step number|Link|Description|
 |---|---|---|
-|1|[Review architecture requirements and key concepts](XXX)|Understand the Defender for Office architecture and be sure your Exchange Online environment meets the architecture prerequisites.|
-|2|[Enable the evaluation environment](eval-defender-office-365-enable-eval.md)|Follow the steps to set up the evaluation environment.|
-|3|[Set up the pilot](XXX)|Create pilot groups, configure protection, and become familiar with key features and dashboards.|
+|1|Review architecture requirements and key concepts|Understand the Defender for Office architecture and be sure your Exchange Online environment meets the architecture prerequisites.|
+|2|Enable the evaluation environment|Follow the steps to set up the evaluation environment.|
+|3|Set up the pilot|Create pilot groups, configure protection, and become familiar with key features and dashboards.|
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 
 

@@ -26,7 +26,7 @@ ms.topic: conceptual
 **Applies to:**
 - Microsoft Defender XDR
 
-This article outlines the process to enable and pilot Microsoft Defender for Cloud Apps alongside Microsoft Defender XDR. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md) and you have [created the Microsoft Defender XDR evaluation environment](eval-create-eval-environment.md).
+This article outlines the process to enable and pilot Microsoft Defender for Cloud Apps alongside Microsoft Defender XDR. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md) and you have created the Microsoft Defender XDR pilot environment.
 
 Use the following steps to enable and pilot Microsoft Defender for Cloud Apps.
 

@@ -26,7 +26,7 @@ ms.topic: conceptual
 **Applies to:**
 - Microsoft Defender XDR
 
-This article outlines the process to create incidents with attack simulations and tutorials and use Microsoft Defender XDR to investigate and respond. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md) and you have [created the Microsoft Defender XDR evaluation environment](eval-create-eval-environment.md).
+This article outlines the process to create incidents with attack simulations and tutorials and use Microsoft Defender XDR to investigate and respond. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md) and you have  and you have created the Microsoft Defender XDR pilot environment.
 
 Use the following steps.
 
@@ -36,8 +36,8 @@ The following table describes the steps in the illustration.
 
 |Step|Description|
 |---------|---------|
-|1. [Simulate attacks](pilot-deploy-investigate-respond.md)|Simulate attacks on your evaluation environment and use the Microsoft Defender portal to perform incident response.|
-|2. [Try incident response capabilities](eval-defender-investigate-respond-additional.md)|Try additional incident response features and capabilities in Microsoft Defender XDR.|
+|1. Simulate attacks|Simulate attacks on your evaluation environment and use the Microsoft Defender portal to perform incident response.|
+|2. Try incident response capabilities|Try additional incident response features and capabilities in Microsoft Defender XDR.|
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -336,11 +336,6 @@ When the incident is resolved, it resolves all of the associated alerts in the M
 
 This wraps up attack simulations for incident analysis, automated investigation, and incident resolution.
 
-## Next step
-
-[:::image type="content" source="/defender/media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-step2.png" alt-text="The Microsoft Defender XDR incident response capabilities" lightbox="/defender/media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-step2.png":::](eval-defender-investigate-respond-additional.md)
-
-Step 2 of 2: [Try Microsoft Defender XDR incident response capabilities](eval-defender-investigate-respond-additional.md)
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 

@@ -27,7 +27,7 @@ ms.topic: conceptual
 
 - Microsoft Defender XDR
 
-This article outlines the process to enable and pilot Microsoft Defender for Endpoint. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md), and you've [created the Microsoft Defender XDR evaluation environment](eval-create-eval-environment.md).
+This article outlines the process to enable and pilot Microsoft Defender for Endpoint. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md), and you've and you have created the Microsoft Defender XDR pilot environment.
 
 Use the following steps to enable and pilot Microsoft Defender for Endpoint.
 
@@ -191,4 +191,4 @@ To run any of the provided simulations, you need at least [one onboarded device]
 > Simulation files or scripts mimic attack activity but are actually benign and will not harm or compromise the test device.
 
 ## Next steps
-[Pilot and deploy Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)
+[Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)

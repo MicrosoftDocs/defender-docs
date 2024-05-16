@@ -92,7 +92,9 @@ The following table describes key concepts that are important to understand when
 
 Defender for Identity requires some prerequisite work to ensure that your on-premises identity and networking components meet minimum requirements. Use the [Microsoft Defender for Identity prerequisites](/defender-for-identity/prerequisites) article as a checklist to ensure your environment is ready.
 
-### Step 1: Set up the Defender for Identity Instance
+:::image type="content" source="./media/eval-defender-xdr/defender-identity-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Identity." lightbox="./media/eval-defender-xdr/defender-identity-pilot-deploy-steps.svg":::
+
+### Step 1: Set up the Defender for Identity instance
 
 Sign in to the Defender for Identity portal to create your instance and then connect this instance to your Active Directory environment.
 
@@ -135,7 +137,7 @@ Microsoft provides security benchmark recommendations for customers using Micros
 
 Implementing these recommendations can take some time to plan and implement. While these recommendations greatly increase the security of your identity environment, they shouldn't prevent you from continuing to evaluate and implement Microsoft Defender for Identity. These recommendations are provided here for your awareness.
 
-### Step 6: Try out capabilities — Walk through tutorials for identifying and remediating different attack types
+### Step 6: Try out capabilities
 
 The Microsoft Defender for Identity documentation includes a series of tutorials that walk through the process of identifying and remediating various attack types.
 
