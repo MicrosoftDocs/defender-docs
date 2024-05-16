@@ -28,16 +28,10 @@ ms.topic: conceptual
 
 This article outlines the process to create incidents with attack simulations and tutorials and use Microsoft Defender XDR to investigate and respond. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md) and you have  and you have created the Microsoft Defender XDR pilot environment.
 
-Use the following steps.
+This article is part of the end-to-end process of piloting and deploying Microsoft Defender XDR.
 
-:::image type="content" source="/defender/media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png" alt-text="The steps for performing simulated incident response in the Microsoft Defender XDR evaluation environment" lightbox="/defender/media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg" alt-text="A diagram that shows the Microsoft Defender for Identity step in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg":::
 
-The following table describes the steps in the illustration.
-
-|Step|Description|
-|---------|---------|
-|1. Simulate attacks|Simulate attacks on your evaluation environment and use the Microsoft Defender portal to perform incident response.|
-|2. Try incident response capabilities|Try additional incident response features and capabilities in Microsoft Defender XDR.|
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 

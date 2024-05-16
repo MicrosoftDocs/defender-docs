@@ -227,7 +227,7 @@
 						x="13.82" dy="1.2em" class="st13">Office 365</tspan></text>		</g>
 		<g id="shape1056-65" v:mID="1056" v:groupContext="shape" v:layerMember="2" transform="translate(259.99,-25.7634)">
 			<title>Sheet.1056</title>
-			<desc>Defender for Endpoints</desc>
+			<desc>Defender for Endpoint</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(20000):26"/>
 			</v:userDefs>
@@ -235,7 +235,7 @@
 			<v:textRect cx="34.0305" cy="194.071" width="68.07" height="23.1073"/>
 			<rect x="0" y="182.518" width="68.0609" height="23.1073" rx="4.5" ry="4.5" class="st11"/>
 			<text x="6" y="191.07" class="st12" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Defender for <tspan
-						x="12" dy="1.2em" class="st13">Endpoints </tspan> </text>		</g>
+						x="14.12" dy="1.2em" class="st13">Endpoint</tspan></text>		</g>
 		<g id="shape1057-69" v:mID="1057" v:groupContext="shape" v:layerMember="2" transform="translate(325.445,-25.7634)">
 			<title>Sheet.1057</title>
 			<desc>Defender for Cloud Apps</desc>

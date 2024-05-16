@@ -29,6 +29,10 @@ ms.topic: conceptual
 
 This article outlines the process to enable and pilot Microsoft Defender for Endpoint. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md), and you've and you have created the Microsoft Defender XDR pilot environment.
 
+This article is part of the end-to-end process of piloting and deploying Microsoft Defender XDR.
+
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows the Microsoft Defender for Endpoint step in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg":::
+
 Use the following steps to enable and pilot Microsoft Defender for Endpoint.
 
 :::image type="content" source="/defender/media/defender/m365-defender-endpoint-eval-steps.png" alt-text="The steps for adding Microsoft Defender for Endpoint to the Microsoft Defender evaluation environment" lightbox="/defender/media/defender/m365-defender-endpoint-eval-steps.png":::
@@ -190,5 +194,8 @@ To run any of the provided simulations, you need at least [one onboarded device]
 > [!NOTE]
 > Simulation files or scripts mimic attack activity but are actually benign and will not harm or compromise the test device.
 
-## Next steps
-[Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)
+## Next step
+
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Cloud Apps." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg":::
+
+See [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md).

@@ -28,20 +28,11 @@ ms.date: 05/15/2024
 
 This article outlines the process to enable and pilot Microsoft Defender for Office 365. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md), and you've  and you have created the Microsoft Defender XDR pilot environment.
 
-Use the following steps to enable and pilot Microsoft Defender for Office 365.
+This article is part of the end-to-end process of piloting and deploying Microsoft Defender XDR.
 
-:::image type="content" source="/defender/media/defender/m365-defender-office-eval-steps.png" alt-text="The steps for adding Microsoft Defender for Office to the Microsoft Defender evaluation environment." lightbox="/defender/media/defender/m365-defender-office-eval-steps.png":::
-
-The following table describes the steps in the illustration.
-
-|Step number|Link|Description|
-|---|---|---|
-|1|Review architecture requirements and key concepts|Understand the Defender for Office architecture and be sure your Exchange Online environment meets the architecture prerequisites.|
-|2|Enable the evaluation environment|Follow the steps to set up the evaluation environment.|
-|3|Set up the pilot|Create pilot groups, configure protection, and become familiar with key features and dashboards.|
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" alt-text="A diagram that shows the Microsoft Defender for Office 365 step in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg":::
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
-
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -252,7 +243,10 @@ Now that your pilot is set up and configured, it's helpful to become familiar wi
 |Attack simulation training|You can use Attack simulation training in the Microsoft Defender portal to run realistic attack scenarios in your organization, which help you identify and find vulnerable users before a real attack impacts your environment.|[Get started using Attack simulation training](/defender-office-365/attack-simulation-training-get-started)|
 |Reports dashboard|On the left navigation menu, click Reports and expand the Email & collaboration heading. The Email & collaboration reports are about spotting security trends some of which will allow you to take action (through buttons like 'Go to submissions'), and others that will show trends. These metrics are generated automatically.|[View email security reports in the Microsoft Defender portal](/defender-office-365/reports-email-security) <br/><br/> [View Defender for Office 365 reports in the Microsoft Defender portal](/defender-office-365/reports-defender-for-office-365)|
 
-## Next steps
+## Next step
 
-[Pilot and deploy Microsoft Defender for Endpoint](pilot-deploy-defender-endpoint.md)
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows the Microsoft Defender for Endpoint step in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg":::
+
+
+See [Pilot and deploy Microsoft Defender for Endpoint](pilot-deploy-defender-endpoint.md).
 
