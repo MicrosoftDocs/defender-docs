@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.localizationpriority: high
 ms.date: 05/15/2024
 audience: ITPro
-ms.topic: reference
+ms.topic: conceptual
 author: siosulli
 ms.author: siosulli
 ms.custom: 
