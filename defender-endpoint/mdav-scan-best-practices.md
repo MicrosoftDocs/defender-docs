@@ -12,7 +12,7 @@ ms.custom:
 - nextgen
 - partner-contribution
 ms.reviewer: pahuijbr, tudobril, yongrhee, bsabetghadam
-manager: deniseb
+manager: dansimp
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -36,9 +36,9 @@ This article explains the considerations and best practices for running full ant
 
 ## Overview
 
-Real-time protection in Microsoft Defender is a feature that continuously scans your computer to help detect and stop malware infections in real time. It uses heuristic and behavior-based detection methods to monitor the activity on your device and protect against threats as they happen. Our recommendation for scheduled scans is to configure Quick Scan together with always-on Real-time Protection and Cloud Protection, as this combination provides strong coverage against malware that starts with the system and kernel-level malware. This configuration is the default configuration. In general, there's no need to schedule a full scan, and most users never need to manually run full scans.
+[Real-time protection](configure-protection-features-microsoft-defender-antivirus.md) in Defender for Endpoint is a feature that continuously scans your computer to help detect and stop malware infections in real time. It uses heuristic and behavior-based detection methods to monitor the activity on your device and protect against threats as they happen. Our recommendation for scheduled scans is to configure quick scan together with always-on real-time protection and [cloud protection](cloud-protection-microsoft-defender-antivirus.md), as this combination provides strong coverage against malware that starts with the system and kernel-level malware. This configuration is the default configuration. In general, there's no need to schedule a full scan, and most users never need to manually run full scans.
 
-However, you might want to run full scans to meet your organization’s specific requirements. A full scan starts with a Quick Scan and then continues with a sequential file scan of all the fixed and removable network drives that are mounted. A full scan can last from several hours to several days, depending on the content volume, type of content, and the resources that Microsoft Defender has been allocated to perform the scan (see [Schedule regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md)). Scan performance isn't solely a function of file size and is mostly determined by the type and complexity of the content.
+However, you might have to run full scans to meet your organization’s specific requirements. A full scan starts with a quick scan, and then continues with a sequential file scan of all the fixed and removable network drives that are mounted. A full scan can last from several hours to several days, depending on the content volume, type of content, and the resources that Microsoft Defender has been allocated to perform the scan (see [Schedule regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md)). Scan performance isn't solely a function of file size, and is mostly determined by the type and complexity of the content.
 
 ## Protection efficiency and performance impact
 
