@@ -17,7 +17,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 11/01/2023
+ms.date: 05/05/2024
 ---
 
 # Run the client analyzer on Windows
@@ -36,16 +36,14 @@ You can collect the Defender for Endpoint analyzer support logs remotely using [
 
    The file is saved to your Downloads folder by default.
 
-2. Open your Downloads folder, right-click on **MDEClientAnalyzer.zip**, and then select **Properties**.
+2. Extract the contents of MDEClientAnalyzer.zip to an available folder.
 
-4. Extract the contents of MDEClientAnalyzer.zip to an available folder.
-
-5. Open a command line with administrator permissions: 
+3. Open a command line with administrator permissions: 
 
    1. Go to **Start** and type **cmd**.
    1. Right-click **Command prompt** and select **Run as administrator**.
 
-6. Type the following command and then press **Enter**:
+4. Type the following command and then press **Enter**:
 
    ```cmd
    *DrivePath*\MDEClientAnalyzer.cmd
@@ -60,7 +58,7 @@ You can collect the Defender for Endpoint analyzer support logs remotely using [
 In addition to the previous procedure, you can also [collect the analyzer support logs using live response.](troubleshoot-collect-support-log.md).
 
 > [!NOTE]
-> On Windows 10 and 11, Windows Server 2019 and 2022, or Windows Server 2012R2 and 2016 with the [modern unified solution](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) installed, the client analyzer script calls into an executable file called `MDEClientAnalyzer.exe` to run the connectivity tests to cloud service URLs.
+> On Windows 10 and 11, Windows Server 2019 and 2022, or Windows Server 2012R2 and 2016 with the [modern unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution) installed, the client analyzer script calls into an executable file called `MDEClientAnalyzer.exe` to run the connectivity tests to cloud service URLs.
 >
 > On Windows 8.1, Windows Server 2016 or any previous OS edition where Microsoft Monitoring Agent (MMA) is used for onboarding, the client analyzer script calls into an executable file called `MDEClientAnalyzerPreviousVersion.exe` to run connectivity tests for Command and Control (CnC) URLs while also calling into Microsoft Monitoring Agent connectivity tool `TestCloudConnection.exe` for Cyber Data channel URLs.
 

@@ -92,7 +92,7 @@ Currently, AIR only supports the following OS versions:
 - Windows 11
 
 > [!NOTE]
-> Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) to be installed. 
+> Automated investigation and response on Windows Server 2012 R2 and Windows Server 2016 requires the [Unified Agent](configure-server-endpoints.md#functionality-in-the-modern-unified-solution) to be installed. 
 
 ## Next steps
 

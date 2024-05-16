@@ -69,6 +69,11 @@
         "source_path": "defender-business/mdb-preview.md",
         "redirect_url": "/defender-xdr/preview",
         "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/evaluation-lab.md",
+      "redirect_url": "/defender-endpoint/evaluate-microsoft-defender-antivirus",
+      "redirect_document_id": true
     }
   ]
 }
