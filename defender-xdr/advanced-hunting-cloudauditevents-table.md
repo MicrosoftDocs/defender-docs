@@ -27,7 +27,7 @@ ms.date: 12/29/2023
 
 
 
-The `CloudAuditEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about cloud audit events for various cloud platforms protected by the organization's Microsoft Defender for Cloud. Use this reference to construct queries that return information from this table.
+The `CloudAuditEvents` table in the [advanced hunting](advanced-hunting-overview.md) schema contains information about cloud audit events for various cloud platforms protected by the organization's [Microsoft Defender for Cloud](azure/defender-for-cloud/concept-integration-365#advanced-hunting-in-xdr). Use this reference to construct queries that return information from this table.
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
