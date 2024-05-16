@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 author: siosulli
 ms.author: siosulli
 ms.custom: nextgen
-ms.date: 04/10/2024
-ms.reviewer: pauhijbr, ksarens, yongrhee
+ms.date: 05/16/2024
+ms.reviewer: pauhijbr, ksarens, yongrhee, bsabetghadam
 manager: deniseb
 ms.subservice: ngp
 ms.topic: how-to
@@ -46,7 +46,7 @@ The following table describes the different types of scans you can configure. Fo
 
 ## How to choose a scan type
 
-Use the following table to choose a scan type.
+Use the following table to choose a scan type. Also see [Microsoft Defender Antivirus scan considerations and best practices](mdav-scan-best-practices.md).
 
 |Scenario|Recommended scan type|
 |---|---|
@@ -96,6 +96,8 @@ This optimization applies to machines running Windows 10 Anniversary Update (ver
 
 ## See also
 
+- [Microsoft Defender Antivirus scan considerations and best practices](mdav-scan-best-practices.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 - [Onboard non-Windows devices](configure-endpoints-non-windows.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
