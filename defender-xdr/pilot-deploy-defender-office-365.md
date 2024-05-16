@@ -253,8 +253,5 @@ Now that your pilot is set up and configured, it's helpful to become familiar wi
 
 ## Next steps
 
-[Evaluate Microsoft Defender for Endpoint](pilot-deploy-defender-endpoint.md)
+[Pilot and deploy Microsoft Defender for Endpoint](pilot-deploy-defender-endpoint.md)
 
-Return to the overview for [Evaluate Microsoft Defender for Office 365](pilot-deploy-defender-office-365.md)
-
-Return to the overview for [Pilot and deploy Microsoft Defender XDR](pilot-deploy-overview.md)

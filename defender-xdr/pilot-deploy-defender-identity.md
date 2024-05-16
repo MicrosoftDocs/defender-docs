@@ -1,5 +1,5 @@
 ---
-title: Step 2. Pilot and deploy Microsoft Defender for Identity
+title: Pilot and deploy Microsoft Defender for Identity
 description: Pilot and deploy Microsoft Defender for Identity.
 search.appverid: met150
 ms.service: defender-xdr
@@ -21,34 +21,31 @@ ms.collection:
 ms.topic: conceptual
 ---
 
-# Step 2. Pilot and deploy Microsoft Defender for Identity
+# Pilot and deploy Microsoft Defender for Identity
 
 
 **Applies to:**
 - Microsoft Defender XDR
 
 > [!NOTE]
-> This article is also part of the Microsoft Defender XDR XDR solution we talk about in this [Overview](pilot-deploy-overview.md).
+> This article is also part of the Microsoft Defender XDR solution we talk about in this [Overview](pilot-deploy-overview.md).
 
- Before starting the process that enables and pilots Microsoft Defender for Identity, if you intend to evaluate *Microsoft Defender XDR as an eXtended Detection and Response (XDR) solution*, make sure you've reviewed the process from the beginning: [evaluating Microsoft Defender XDR](pilot-deploy-overview.md) including [created the Microsoft Defender XDR evaluation environment](eval-create-eval-environment.md).
-<br>
+Before starting the process pilot and deploy Microsoft Defender for Identity, if you intend to evaluate Microsoft Defender XDR as an eXtended Detection and Response (XDR) solution, make sure you've reviewed the process from the beginning: [evaluating Microsoft Defender XDR](pilot-deploy-overview.md) including creating the Microsoft Defender XDR pilot environment.
 
-Use the steps below to enable and pilot Microsoft Defender for Identity.
+This article is part of the end-to-end process of piloting and deploying Microsoft Defender XDR.
 
-:::image type="content" source="/defender/media/defender/m365-defender-identity-eval-steps.png" alt-text="The steps for adding Microsoft Defender for Identity to the Microsoft Defender evaluation environment" lightbox="/defender/media/defender/m365-defender-identity-eval-steps.png":::
-
-Before enabling Microsoft Defender for Identity, be sure you understand the architecture and can meet the requirements.
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" alt-text="A diagram that shows the Microsoft Defender for Identity step in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg":::
 
 Microsoft Defender for Identity is fully integrated with Microsoft Defender XDR, and leverages signals from both on-premises Active Directory and cloud identities to help you better identify, detect, and investigate advanced threats directed at your organization.
 
-Deploy Microsoft Defender for Identity to help your SecOp teams deliver a modern identity threat detection (ITDR) solution across hybrid environments, including:
+Deploy Microsoft Defender for Identity to help your SecOp teams deliver a modern identity threat detection and response (ITDR) solution across hybrid environments, including:
 
 - Prevent breaches, using proactive identity security posture assessments
 - Detect threats, using real-time analytics and data intelligence
 - Investigate suspicious activities, using clear, actionable incident information
 - Respond to attacks, using automatic response to compromised identities. For more information, see [What is Microsoft Defender for Identity?](/defender-for-identity/what-is)
 
-Defender for Identity protects your on-premises Active Directory users and/or users synced to your Microsoft Entra ID. To protect an environment made up of only Microsoft Entra users, see [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection).
+Defender for Identity protects your on-premises Active Directory Domain Services (AD DS) user accounts and user accounts synchronized to your Microsoft Entra ID tenant. To protect an environment made up of only Microsoft Entra user accounts, see [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection).
 
 ## Understand the architecture
 
@@ -58,9 +55,9 @@ The following diagram illustrates the baseline architecture for Defender for Ide
 
 In this illustration:
 
-- Sensors installed on Active Directory Domain Services (AD DS) domain controllers and Active Directory Certificate Services (AD CS) servers parse logs and network traffic and send them to Microsoft Defender for Identity for analysis and reporting.
+- Sensors installed on AD DS domain controllers and Active Directory Certificate Services (AD CS) servers parse logs and network traffic and send them to Microsoft Defender for Identity for analysis and reporting.
 - Sensors can also parse Active Directory Federation Services (AD FS) authentications for third-party identity providers and when Microsoft Entra ID is configured to use federated authentication (the dotted lines in the illustration).
-- Microsoft Defender for Identity shares signals to Microsoft Defender XDR for extended detection and response (XDR).
+- Microsoft Defender for Identity shares signals to Microsoft Defender XDR.
 
 Defender for Identity sensors can be directly installed on the following servers:
 
@@ -75,9 +72,9 @@ Defender for Identity sensors can be directly installed on the following servers
 
 For a deeper look into the architecture of Defender for Identity, see [Microsoft Defender for Identity architecture](/defender-for-identity/architecture).
 
-## Understand key concepts
+### Understand key concepts
 
-The following table identified key concepts that are important to understand when evaluating, configuring, and deploying Microsoft Defender for Identity.
+The following table describes key concepts that are important to understand when piloting and deploying Microsoft Defender for Identity.
 
 |Concept  |Description |More information  |
 |---------|---------|---------|
@@ -91,22 +88,11 @@ The following table identified key concepts that are important to understand whe
 | Administrative portal    |  In addition to the Microsoft Defender portal, the Defender for Identity portal can be used to monitor and respond to suspicious activity.      | [Working with the Microsoft Defender for Identity portal](/defender-for-identity/workspace-portal)        |
 | Microsoft Defender for Cloud Apps integration   | Microsoft Defender for Cloud Apps integrates with Microsoft Defender for Identity to provide user entity behavioral analytics (UEBA) across a hybrid environment - both cloud app and on-premises   | Microsoft Defender for Identity integration  |
 
-## Review prerequisites
+## Steps to pilot and deploy Defender for Identity
 
-Defender for Identity requires some prerequisite work to ensure that your on-premises identity and networking components meet minimum requirements. Use this article as a checklist to ensure your environment is ready: [Microsoft Defender for Identity prerequisites](/defender-for-identity/prerequisites).
+Defender for Identity requires some prerequisite work to ensure that your on-premises identity and networking components meet minimum requirements. Use the [Microsoft Defender for Identity prerequisites](/defender-for-identity/prerequisites) article as a checklist to ensure your environment is ready.
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-Use the following steps to set up your Microsoft Defender for Identity environment.
-
-:::image type="content" source="/defender/media/defender/m365-defender-identity-eval-enable-steps.png" alt-text="The steps to enable Microsoft Defender for Identity in the Microsoft Defender evaluation environment" lightbox="/defender/media/defender/m365-defender-identity-eval-enable-steps.png":::
-
-- [Step 1. Set up the Defender for Identity Instance](#step-1-set-up-the-defender-for-identity-instance)
-- [Step 2. Install and configure the sensor](#step-2-install-and-configure-the-sensor)
-- [Step 3. Configure event log and proxy settings on machines with the sensor](#step-3-configure-event-log-and-proxy-settings-on-machines-with-the-sensor)
-- [Step 4. Allow Defender for Identity to identify local admins on other computers](#step-4-allow-defender-for-identity-to-identify-local-admins-on-other-computers)
-
-## Step 1: Set up the Defender for Identity Instance
+### Step 1: Set up the Defender for Identity Instance
 
 Sign in to the Defender for Identity portal to create your instance and then connect this instance to your Active Directory environment.
 
@@ -115,9 +101,9 @@ Sign in to the Defender for Identity portal to create your instance and then con
 |1|Create the Defender for Identity instance|[Quickstart: Create your Microsoft Defender for Identity instance](/defender-for-identity/install-step1)|
 |2|Connect the Defender for Identity instance to your Active Directory forest|[Quickstart: Connect to your Active Directory Forest](/defender-for-identity/install-step2)|
 
-## Step 2: Install and configure the sensor
+### Step 2: Install and configure sensors
 
-Next, download, install, and configure the Defender for Identity sensor on the domain controllers and AD FS servers in your on-premises environment.
+Next, download, install, and configure the Defender for Identity sensor on the domain controllers, AD FS, and AD CS servers in your on-premises environment.
 
 |Step|Description|More information|
 |---|---|---|
@@ -126,7 +112,7 @@ Next, download, install, and configure the Defender for Identity sensor on the d
 |3|Install the Defender for Identity sensor|[Quickstart: Install the Microsoft Defender for Identity sensor](/defender-for-identity/install-step4)|
 |4|Configure the sensor|[Configure Microsoft Defender for Identity sensor settings](/defender-for-identity/install-step5)|
 
-## Step 3: Configure event log and proxy settings on machines with the sensor
+### Step 3: Configure event log and proxy settings on machines with the sensor
 
 On the machines that you installed the sensor on, configure Windows event log collection and Internet proxy settings to enable and enhance detection capabilities.
 
@@ -135,7 +121,7 @@ On the machines that you installed the sensor on, configure Windows event log co
 |1|Configure Windows event log collection|[Configure Windows Event collection](/defender-for-identity/configure-windows-event-collection)|
 |2|Configure Internet proxy settings|[Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity Sensor](/defender-for-identity/configure-proxy)|
 
-## Step 4: Allow Defender for Identity to identify local admins on other computers
+### Step 4: Allow Defender for Identity to identify local admins on other computers
 
 Microsoft Defender for Identity lateral movement path detection relies on queries that identify local admins on specific machines. These queries are performed with the SAM-R protocol, using the Defender for Identity Service account.
 
@@ -143,25 +129,13 @@ To ensure Windows clients and servers allow your Defender for Identity account t
 
 For instructions on how to do this, see [Configure Microsoft Defender for Identity to make remote calls to SAM](/defender-for-identity/install-step8-samr).
 
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-Use the following steps to set up and configure the pilot for Microsoft Defender for identity. The recommendations don't include setting up a pilot group. The best practice is to install the sensor on all of your servers running Active Directory Domain Services (AD DS) and Active Directory Federated Services (AD FS).
-
-:::image type="content" source="/defender/media/defender/m365-defender-identity-pilot-steps.png" alt-text="The steps for piloting Microsoft Defender for Identity in the Microsoft Defender evaluation environment" lightbox="/defender/media/defender/m365-defender-identity-pilot-steps.png":::
-
-The following table describes the steps in the illustration.
-
-- [Step 1: Configure benchmark recommendations for your identity environment](#step-1-configure-benchmark-recommendations-for-your-identity-environment)
-- [Step 2: Try out capabilities — Walk through tutorials for identifying and remediating different attack types](#step-2-try-out-capabilities--walk-through-tutorials-for-identifying-and-remediating-different-attack-types)
-
-## Step 1: Configure benchmark recommendations for your identity environment
+### Step 5: Configure benchmark recommendations for your identity environment
 
 Microsoft provides security benchmark recommendations for customers using Microsoft Cloud services. The [Azure Security Benchmark](/security/benchmark/azure/overview) (ASB) provides prescriptive best practices and recommendations to help improve the security of workloads, data, and services on Azure.
 
 Implementing these recommendations can take some time to plan and implement. While these recommendations greatly increase the security of your identity environment, they shouldn't prevent you from continuing to evaluate and implement Microsoft Defender for Identity. These recommendations are provided here for your awareness.
 
-## Step 2: Try out capabilities — Walk through tutorials for identifying and remediating different attack types
+### Step 6: Try out capabilities — Walk through tutorials for identifying and remediating different attack types
 
 The Microsoft Defender for Identity documentation includes a series of tutorials that walk through the process of identifying and remediating various attack types.
 
@@ -177,11 +151,8 @@ Try out Defender for Identity tutorials:
 - [Investigate lateral movement paths](/defender-for-identity/investigate-lateral-movement-path)
 - [Investigate entities](/defender-for-identity/investigate-entity)
 
-## Next steps
+## Next step
 
-[Evaluate Microsoft Defender for Office 365.](pilot-deploy-defender-office-365.md)
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" alt-text="A diagram that shows the Microsoft Defender for Office 365 step in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg":::
 
-Return to the overview for [Evaluate Microsoft Defender for Identity]()
-
-Return to the overview for [Pilot and deploy Microsoft Defender XDR](pilot-deploy-overview.md)
-
+See [Pilot and deploy Microsoft Defender for Office 365](pilot-deploy-defender-office-365.md).

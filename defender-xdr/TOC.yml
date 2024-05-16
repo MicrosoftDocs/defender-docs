@@ -52,15 +52,15 @@
       items: 
         - name: Overview
           href: pilot-deploy-overview.md 
-        - name: Step 1. Defender for Identity
+        - name: Defender for Identity
           href: pilot-deploy-defender-identity.md 
-        - name: Step 2. Defender for Office 365
+        - name: Defender for Office 365
           href: pilot-deploy-defender-office-365.md
-        - name: Step 3. Defender for Endpoint
+        - name: Defender for Endpoint
           href: pilot-deploy-defender-endpoint.md
-        - name: Step 4. Defender for Cloud Apps
+        - name: Defender for Cloud Apps
           href: pilot-deploy-defender-cloud-apps.md
-        - name: Step 5. Investigate and respond to threats 
+        - name: Investigate and respond to threats 
           href: pilot-deploy-investigate-respond.md  
     - name: Get started
       items:

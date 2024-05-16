@@ -7,7 +7,7 @@ f1.keywords:
   - NOCSH
 ms.author: tracyp
 author: MSFTTracyP
-ms.date: 02/26/2024
+ms.date: 05/15/2024
 ms.localizationpriority: medium
 manager: dansimp 
 audience: ITPro
@@ -27,44 +27,31 @@ ms.topic: conceptual
 
 - Microsoft Defender XDR
 
-## How this article series works
-
-This series is designed to step you through the entire process of setting up a trial XDR environment, *end-to-end*, so you can evaluate the features and capabilities of Microsoft Defender XDR and even promote the evaluation environment straight to production when you're ready.
-
-If you're new to thinking about XDR security, you can scan the 7 linked articles in this series to get a feel for how comprehensive the solution is.
-
-- [How to create the environment](eval-create-eval-environment.md)
-- Set up or learn about each technology of this Microsoft XDR
-  - [Microsoft Defender for Identity]()
-  - [Microsoft Defender for Office](pilot-deploy-defender-office-365.md)
-  - [Microsoft Defender for Endpoint](pilot-deploy-defender-endpoint.md)
-  - [Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)
-- [How to investigate and respond using this XDR](pilot-deploy-investigate-respond.md)
-- [Promote the trial environment to production](eval-defender-promote-to-production.md)
+This series of articles is designed to step you through the entire process of setting up a pilot XDR environment, *end-to-end*, so you can evaluate the features and capabilities of Microsoft Defender XDR and then deploying the evaluation environment to production when you're ready.
 
 <a name='microsoft-365-defender-is-a-microsoft-xdr-cyber-security-solution'></a>
 
-## What is XDR and Microsoft Defender XDR?
+## Microsoft Defender XDR
 
-XDR security is a step forward in cyber security because it takes the threat data from systems that were once isolated and unifies them so that you can see patterns and act on them faster.
+An eXtended detection and response (XDR) solution is a step forward in cyber security because it takes the threat data from systems that were once isolated and unifies them so that you can see patterns and act on suspected cyberattacks faster.
 
-For example, Microsoft XDR unifies endpoint (endpoint detection and response or EDR), email, app, and identity security in one place.
-
-Microsoft Defender XDR is an **eXtended detection and response (XDR) solution** that automatically collects, correlates, and analyzes signal, threat, and alert data from *across* your Microsoft 365 environment, including *endpoint, email, applications, and identities*. It leverages **artificial intelligence (AI) and automation to *automatically* stop attacks**, and remediate affected assets to a safe state.
+For example, Microsoft Defender XDR is an XDR solution that combines the information on cyberattacks for identities, endpoints, email, and cloud apps in one place. It leverages artificial intelligence (AI) and automation to automatically stop some types of attacks and remediate affected assets to a safe state.
 
 <a name='microsoft-recommendations-for-evaluating-microsoft-365-defender'></a>
 
-## Microsoft recommendations for evaluating Microsoft Defender XDR security
+### Microsoft recommendations for evaluating Microsoft Defender XDR security
 
-Microsoft recommends you create your evaluation in an existing production subscription of Office 365. This way you will gain real-world insights immediately and can tune settings to work against current threats in your environment. After you've gained experience and are comfortable with the platform, simply promote each component, one at a time, to production.
+Microsoft recommends you create your evaluation in an existing production subscription of Microsoft 365 to gain real-world insights immediately and you can tune settings to work against current threats in your environment. After you've gained experience and are comfortable with the platform, simply promote each component, one at a time, to production.
 
 ## The anatomy of a cyber security attack
 
-Microsoft Defender XDR is a Cloud-based, unified, pre- and post-breach enterprise defense suite. It coordinates *prevention*, *detection*, *investigation*, and *response* across endpoints, identities, apps, email, collaborative applications, and all of their data.
+Microsoft Defender XDR is a cloud-based, unified, pre- and post-breach enterprise defense suite. It coordinates prevention, detection, investigation, and response across identities, endpoints, email, cloud apps, and their data.
 
-In this illustration an attack is underway. Phishing email arrives at the Inbox of an employee in your organization, who unknowingly opens the email attachment. This installs malware, which leads to a chain of events that could end with the theft of sensitive data. But in this case, Defender for Office 365 is in operation.
+This diagram show a common cyber-attack and the components of Microsoft Defender XDR that help detect and remediate it.
 
 :::image type="content" source="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg" alt-text="A diagram that shows the various attempts of a cyber security attack." lightbox="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg":::
+
+The cyber attack starts with a phishing email that arrives at the Inbox of an employee in your organization, who unknowingly opens the email attachment. This attachment installs malware, which can lead to a chain of attack attempts that could lead to the theft of sensitive data. But in this case, Defender for Office 365 is in operation.
 
 In the illustration:
 
@@ -76,11 +63,11 @@ In the illustration:
 
 <a name='microsoft-365-defender-components-secure-devices-identity-data-and-applications'></a>
 
-### Microsoft Defender XDR components secure devices, identity, data, and applications
+## Microsoft Defender XDR components
 
 Microsoft Defender XDR is made up of these security technologies, operating in tandem. You don't need all of these components to benefit from the capabilities of XDR and Microsoft Defender XDR. You will realize gains and efficiencies through using one or two as well.
 
-|Component|Description|Reference material|
+|Component|Description|For more information|
 |---|---|---|
 |Microsoft Defender for Identity|Microsoft Defender for Identity uses Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.|[What is Microsoft Defender for Identity?](/defender-for-identity/what-is)|
 |Exchange Online Protection|Exchange Online Protection is the native cloud-based SMTP relay and filtering service that helps protect your organization against spam and malware.|[Exchange Online Protection (EOP) overview - Office 365](/defender-office-365/eop-about)|
@@ -93,7 +80,7 @@ Microsoft Defender XDR is made up of these security technologies, operating in t
 
 ## Microsoft Defender XDR architecture
 
-The diagram below illustrates high-level architecture for key Microsoft Defender XDR components and integrations. *Detailed* architecture for each Defender component, and use-case scenarios, are given throughout this series of articles.
+The diagram below illustrates high-level architecture for key Microsoft Deender XDR components and integrations. *Detailed* architecture for each Defender component, and use-case scenarios, are given throughout this series of articles.
 
 :::image type="content" source="./media/eval-defender-xdr/m365-defender-eval-architecture.svg" alt-text="A diagram that shows the high-level architecture of Microsoft Defender XDR." lightbox="./media/eval-defender-xdr/m365-defender-eval-architecture.svg":::
 
@@ -108,93 +95,82 @@ In this illustration:
 
 <a name='microsoft-siem-and-soar-can-use-data-from-microsoft-365-defender'></a>
 
-## Microsoft SIEM and SOAR can use data from Microsoft Defender XDR
+### Microsoft SIEM and SOAR can use data from Microsoft Defender XDR
 
 Additional optional architecture components not included in this illustration:
 
-- **Detailed signal data from all Microsoft Defender XDR components can be integrated into Microsoft Sentinel** and combined with other logging sources to offer full SIEM and SOAR capabilities and insights.
-- **For more reading on using Microsoft Sentinel, an Azure SIEM, with Microsoft Defender XDR** as an XDR, take a look at this [Overview article](/azure/sentinel/microsoft-365-defender-sentinel-integration) and the Microsoft Sentinel and Microsoft Defender XDR [integration steps](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
+- Detailed signal data from all Microsoft Defender XDR components can be integrated into Microsoft Sentinel and combined with other logging sources to offer full SIEM and SOAR capabilities and insights.
+- For more reading on using Microsoft Sentinel, an Azure SIEM, with Microsoft Defender XDR as an XDR, take a look at this [Overview article](/azure/sentinel/microsoft-365-defender-sentinel-integration) and the Microsoft Sentinel and Microsoft Defender XDR [integration steps](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
 - For more on SOAR in Microsoft Sentinel (including links to playbooks in the Microsoft Sentinel GitHub Repository), please read [this article](/azure/sentinel/automate-responses-with-playbooks).
 
 <a name='the-evaluation-process-for-microsoft-365-defender-cyber-security'></a>
 
-## The evaluation process for Microsoft Defender XDR cyber security
+## The pilot and deploy process for Microsoft Defender XDR
 
 Microsoft recommends enabling the components of Microsoft 365 Defender in the order illustrated:
 
-:::image type="content" source="/defender/media/defender/m365-defender-eval-process.png" alt-text="A diagram that shows the high-level evaluation process for Microsoft Defender XDR." lightbox="/defender/media/defender/m365-defender-eval-process.png":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg" alt-text="A diagram that shows the pilot and deploy process for Microsoft Defender XDR." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg":::
 
 The following table describes this illustration.
 
-|Serial Number|Step|Description|
-|---|---|---|
-|1|[Create the evaluation environment](eval-create-eval-environment.md)|This step ensures you have the trial license for Microsoft Defender XDR.|
-|2|[Enable Defender for Identity](pilot-deploy-defender-identity.md)|Review the architecture requirements, enable the evaluation, and walk through tutorials for identifying and remediating different attack types.|
-|3|[Enable Defender for Office 365](pilot-deploy-defender-office-365.md)|Ensure you meet the architecture requirements, enable the evaluation, and then create the pilot environment. This component includes Exchange Online Protection and so you will actually evaluate *both* here.|
-|4|[Enable Defender for Endpoint](pilot-deploy-defender-endpoint.md)|Ensure you meet the architecture requirements, enable the evaluation, and then create the pilot environment.|
-|5|[Enable Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)|Ensure you meet the architecture requirements, enable the evaluation, and then create the pilot environment.|
-|6|[Investigate and respond to threats](pilot-deploy-investigate-respond.md)|Simulate an attack and begin using incident response capabilities.|
-|7|[Promote the trial to production](eval-defender-promote-to-production.md)|Promote the Microsoft 365 components to production one-by-one.|
+|Step|Description|
+|---|---|
+|A. Create the pilot environment | Activate the trial licenses for Microsoft Defender XDR.|
+|B. Pilot and deploy Microsoft Defender XDR tools | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)  |
+|C. Investigate and respond to threats | [Investigate and respond to threats](pilot-deploy-investigate-respond.md) |
 
-This order is commonly recommended and designed to leverage the value of the capabilities quickly based on how much effort is typically required to deploy and configure the capabilities. For example, Defender for Office 365 can be configured in less time than it takes to enroll devices in Defender for Endpoint. Of course, you should prioritize the components to meet your business needs, and can enable these in a different order.
+This order is commonly recommended and designed to leverage the value of the capabilities quickly based on how much effort is typically required to deploy and configure the capabilities. For example, Defender for Office 365 can be configured in less time than it takes to enroll devices in Defender for Endpoint. Prioritize the components to meet your business needs.
 
-==============================
+## Create the pilot environment
 
-You can learn about and build out this Microsoft Defender XDR solution in steps that are distributed through the rest of this series:
+This series of articles assumes that you already have a production Microsoft 365 tenant and are activating Microsoft 365 E5 trial licenses to pilot Microsoft Defender XDR in your current environment. An in-place pilot will let you keep any security methods with the purchase of licenses after the pilot.
 
-- [How to create the environment](eval-create-eval-environment.md)
-- Set up or learn about each technology of this Microsoft XDR
-    - [Microsoft Defender for Identity]()
-    - [Microsoft Defender for Office](pilot-deploy-defender-office-365.md)
-    - [Microsoft Defender for Endpoint](pilot-deploy-defender-endpoint.md)
-    - [Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)
-- [How to investigate and respond using this XDR](pilot-deploy-investigate-respond.md)
-- [Promote the trial environment to production](eval-defender-promote-to-production.md)
-- [Back to the Overview](pilot-deploy-overview.md)
-
-The steps in this series run end-to-end, from learning the concepts behind the Microsoft Defender XDR to building it, and into taking the evaluation environment live to production.
-
-There are two common ways to do this next step in evaluation. This series assumes you already have a production Microsoft 365 tenant and are activating Microsoft 365 E5 trial licenses to evaluate Microsoft Defender XDR in *the current environment*. An in-place evaluation will let you keep any security methods with the purchase of licenses after the evaluation period.
-
-The second is to  [Set up your Microsoft Defender XDR trial lab environment](setup-m365deval.md) for evaluation. It might not have many real signals from the business while in testing.
+An alternative is to  [Set up your Microsoft Defender XDR trial lab environment](setup-m365deval.md). However, it won't show any real cyber security information such as threats or attacks on your production Microsoft 365 tenant while you are piloting.
 
 <a name='you-will-need-to-activate-e5-trial-licenses-to-evaluate-microsoft-365-defender'></a>
 
-## You need to activate Microsoft 365 E5 trial licenses to evaluate Microsoft Defender XDR
+### Activate your Microsoft 365 E5 trial licenses
+
+To take advantage of Microsoft 365 E5 trial licenses during your pilot:
 
 1. Sign in your existing Microsoft 365 tenant administration portal.
 2. Select **Purchase Services** from the navigation menu.
-3. Scroll down to the Office 365 section and select **Details** button under Office 365 E5 license.
+3. From the Office 365 section select **Details** under Office 365 E5 license.
 
    :::image type="content" source="/defender/media/mdo-eval/2_mdo-eval-license-details.png" alt-text="The Details button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/2_mdo-eval-license-details.png":::
 
-4. Select **Start free trial** link.
+4. Select **Start free trial**.
 
    :::image type="content" source="/defender/media/mdo-eval/3-m365-purchase-button.png" alt-text="The Start free trial button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/3-m365-purchase-button.png":::
 
-5. Confirm your request and select **Try now** button.
+5. Confirm your request and select **Try now**.
 
    :::image type="content" source="/defender/media/mdo-eval/4_mdo-trial-order.png" alt-text="The Try Now button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/4_mdo-trial-order.png":::
 
 ## Go to the next step
 
-[Learn how to enable Microsoft 365 for Identity]()
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" alt-text="A diagram that shows the Microsoft Defender for Identity step in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg":::
 
-Or return to the Overview for [Pilot and deploy Microsoft Defender XDR](pilot-deploy-overview.md)
+See [Pilot and deploy Microsoft Defender for Identity](pilot-deploy-defender-identity.md).
+
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 
+<!---
 
 =====================================================================
+
+## Deploy your pilot environment into production
 
 To promote your Microsoft Defender XDR evaluation environment to production, first purchase the necessary license. Follow the steps in [Create the eval environment](eval-create-eval-environment.md) and purchase the Office 365 E5 license (instead of selecting Start free trial).
 
 Next, complete any other configuration and expand your pilot groups until these reach full production.
 
-## Microsoft Defender for Identity
+### Microsoft Defender for Identity
 
 Defender for Identity doesn't require any other configuration. Just make sure to purchase the necessary licenses and install the sensor on all of your Active Directory domain controllers and Active Directory Federation Services (AD FS) servers.
 
-## Microsoft Defender for Office 365
+### Microsoft Defender for Office 365
 
 After successfully evaluating or piloting Defender for Office 365, it can be promoted to your entire production environment.
 
@@ -204,7 +180,7 @@ After successfully evaluating or piloting Defender for Office 365, it can be pro
 4. Update the public MX record for your production email domain to resolve directly to EOP.
 5. Decommission any third-party SMTP gateways and disable or delete any EXO connectors associated with this relay.
 
-## Microsoft Defender for Endpoint
+### Microsoft Defender for Endpoint
 
 To promote Microsoft Defender for Endpoint evaluation environment from a pilot to production, onboard more endpoints to the service using any of the [supported tools and methods](/defender-endpoint/onboard-configure).
 
@@ -215,7 +191,9 @@ Use the following general guidelines to onboard more devices to Microsoft Defend
 3. Use the appropriate management tool and deployment method for your devices.
 4. Run a detection test to verify that the devices are properly onboarded and reporting to the service.
 
-## Microsoft Defender for Cloud Apps
+### Microsoft Defender for Cloud Apps
 
 Microsoft Defender for Cloud Apps doesn't require any other configuration. Just make sure to purchase the necessary licenses. If you've scoped the deployment to certain user groups, increase the scope of these groups until you reach production scale.
 
+
+--->
