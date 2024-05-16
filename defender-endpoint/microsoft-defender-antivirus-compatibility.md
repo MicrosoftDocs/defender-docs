@@ -163,7 +163,7 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 
 1. In general, when Microsoft Defender Antivirus is in passive mode, real-time protection doesn't provide any blocking or enforcement, even though it's enabled and in passive mode.
 
-1. When Microsoft Defender Antivirus is in passive mode, scans aren't scheduled. If scans *are* scheduled in your configuration, the schedule is ignored. Unless:
+2. When Microsoft Defender Antivirus is in passive mode, scans aren't scheduled. If scans *are* scheduled in your configuration, the schedule is ignored. Unless:
 
    a. "Start the scheduled scan only when computer is on but not in use" is set to "Not configured or enabled". A Windows Task Scheduler is created unless you set "Start the scheduled scan only when computer is on but not in use" to disabled.
    
@@ -171,11 +171,11 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
    
    c. "Turn on scan after security intelligence update" is set to "Not configured or enabled".  By default, a quick scan occurs after a "Security Intelligence Update" unless you set "Turn on scan after security intelligence update" to disabled.
    
-1. When Microsoft Defender Antivirus is in passive mode, it doesn't remediate threats. However, [Endpoint detection and response (EDR) in block mode](edr-in-block-mode.md) can remediate threats. In this case, you might see alerts showing Microsoft Defender Antivirus as a source, even when Microsoft Defender Antivirus is in passive mode.
+3. When Microsoft Defender Antivirus is in passive mode, it doesn't remediate threats. However, [Endpoint detection and response (EDR) in block mode](edr-in-block-mode.md) can remediate threats. In this case, you might see alerts showing Microsoft Defender Antivirus as a source, even when Microsoft Defender Antivirus is in passive mode.
 
-1. The security intelligence update cadence is controlled by Windows Update settings only. Defender-specific update schedulers (daily/weekly at specific time, interval-based) settings only work when Microsoft Defender Antivirus is in active mode. They're ignored in passive mode.
+4. The security intelligence update cadence is controlled by Windows Update settings only. Defender-specific update schedulers (daily/weekly at specific time, interval-based) settings only work when Microsoft Defender Antivirus is in active mode. They're ignored in passive mode.
 
-1. When Microsoft Defender Antivirus is in passive mode, web content filtering only works with the Microsoft Edge browser. 
+5. When Microsoft Defender Antivirus is in passive mode, web content filtering only works with the Microsoft Edge browser. 
 
 > [!IMPORTANT]
 > - [Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about) protection continues to operate normally when Microsoft Defender Antivirus is in either active or passive mode.
