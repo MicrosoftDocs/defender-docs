@@ -215,9 +215,6 @@ For more information on how to test for a behavior monitoring (prevention/block)
 
 ### Frequently Asked Questions (FAQ):
 
-#### Do Behavior Monitoring protection alerts show up in the Device timeline and/or Advanced Hunting?
-Not at this time, it's in telemetry mode.
-
 #### What if I see an increase in cpu utilization or memory utilization?
 Disable Behavior Monitoring and see if the issue goes away.
 - If the issue doesn't go away, it is not related to Behavior Monitoring.
