@@ -39,6 +39,7 @@ For guidance on how to download and use Windows Security Baselines for Windows s
 
 > [!TIP]
 > As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268615), which helps you utilize essential tools and automated features such as attack surface reduction and next-generation protection. When signed in to the Microsoft 365 admin center, this guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268522).
+
 ## Windows Server onboarding overview
 
 You'll need to complete the following general steps to successfully onboard servers.
