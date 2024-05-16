@@ -3,7 +3,7 @@ title: View device control events and information in Microsoft Defender for Endp
 description: Monitor your organization's data security through device control reports.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 02/01/2024
+ms.date: 05/16/2024
 ms.author: siosulli
 author: siosulli
 ms.topic: conceptual
@@ -69,7 +69,7 @@ DeviceEvents
 
 ### Example 2: Removable storage file event
 
-When a RemovableStorageFileEvent action occurs, information about the evidence file is available for both printer protection and removable storage. Here's an example query you can use with advanced hunting:
+If a policy is configured to gather file evidence, then a `RemovableStorageFileEvent` is created. The event is generated for both printers and removable storage devices. Here's an example query you can use with advanced hunting:
 
 ```kusto
 
@@ -91,6 +91,9 @@ DeviceEvents
 | order by Timestamp desc
 
 ```
+
+> [!NOTE]
+> The `RemovableStorageFileEvent` does not appear immediately after a file is copied to the device. It may take as long as 24 hours to appear.
 
 ## [**Device control report**](#tab/report)
 
