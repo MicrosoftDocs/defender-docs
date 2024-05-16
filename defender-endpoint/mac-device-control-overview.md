@@ -471,10 +471,7 @@ In this case, only have one access rule policy, but if you have multiple, make s
 
 ## Known Issues
 
->[!WARNING]
->In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device controls ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS less than 14.3.1.
-
->[!WARNING]
+> >[!WARNING]
 >Device Control on macOS restricts Android devices that are connected using PTP mode **only**.  Device control does not restrict other modes such as File Transfer, USB Tethering and MIDI.
 
 
