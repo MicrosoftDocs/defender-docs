@@ -64,20 +64,20 @@ Device performance is an important factor in the rate of security event processi
 
 To configure scanning options for Microsoft Defender Antivirus, you can use various tools (see [Configure scanning options for Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)). Here are some of the available settings and switches that you can use to configure Microsoft Defender Antivirus full scans:
 
-| Setting | Default | PowerShell/WMI parameter | Details |
-|--|--|--|--|
-| Archive/Container (for example, ISOs) Scanning | `Enabled` | | Microsoft Defender Antivirus is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
-| Archive files (.zip, .rar, etc.) | `Scanned` | `DisableArchiveScanning` | By turning on `DisableArchiveScanning`, the following archive types are excluded from antivirus scans: <br/>- `ZIP`<br/>- `Ace`<br/>- `Arc`<br/>- `Arj`<br/>- `BZip2`<br/>- `Cab`<br/>- `CF`<br/>- `CPIO`<br/>- `CPT`<br/>- `GZip`<br/>- `Hap`<br/>- `ISO`<br/>- `Lharc`<br/>- `PSF`<br/>- `Quantum`<br/>- `Rar`<br/>- `Stuff`-It<br/>- `Zoo`<br/>- `ZCompress`<br/>- `Compress`<br/>- `VC4`<br/>- `RPM`<br/>- `BGA`<br/>- `BH`<br/>- `Universal Disk Format`<br/>- `7z` <br/><br/>For more information, see [DisableArchiveScanning](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true#-disablearchivescanning) |
-| Level of subfolders within an archive folder to scan | `0` | N/A | `0` means unlimited. |
-| Max size of archive for scan | `0` | N/A | `0` means unlimited. |
-| Mapped network drives | `Scanned` | `DisableScanningMappedNetworkDrivesForFullScan` | See [DisableScanningMappedNetworkDrivesForFullScan](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true&#-disablescanningmappednetworkdrivesforfullscan) |
-| Network files | `Scanned` | `DisableScanningNetworkFiles` |  |
-| Max CPU load % during scan | `50` | `ScanAvgCPULoadFactor` | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
-| Disable CPU throttle on idle scans | `Unthrottled` | `DisableCpuThrottleOnIdleScans` | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
-| Signature checks before scanning | `Disabled` | `CheckForSignaturesBeforeRunningScan` | Microsoft Defender Antivirus periodically checks for signature updates and performs scheduled scans automatically. By default, scan begins with existing definitions. This setting applies only to scheduled scans. |
-| Removable drives during full scans | `Scanned` | `DisableRemovableDriveScanning` | Indicates whether to scan removable drives, such as flash drives, during a full scan. |
-| Email | `Scanned` | `DisableEmailScanning` | Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments. |
-| Script | `Scanned` | `DisableScriptScanning` | Specifies whether to disable the scanning of script files. |
+| Setting | Default | PowerShell/WMI parameter |
+|--|--|--|
+| Archive/Container (for example, ISOs) Scanning | `Enabled` | Microsoft Defender Antivirus is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
+| Archive files (.zip, .rar, etc.) | `Scanned` | `DisableArchiveScanning`<br/><br/>By turning on `DisableArchiveScanning`, the following archive types are excluded from antivirus scans: <br/>- `ZIP`<br/>- `Ace`<br/>- `Arc`<br/>- `Arj`<br/>- `BZip2`<br/>- `Cab`<br/>- `CF`<br/>- `CPIO`<br/>- `CPT`<br/>- `GZip`<br/>- `Hap`<br/>- `ISO`<br/>- `Lharc`<br/>- `PSF`<br/>- `Quantum`<br/>- `Rar`<br/>- `Stuff`-It<br/>- `Zoo`<br/>- `ZCompress`<br/>- `Compress`<br/>- `VC4`<br/>- `RPM`<br/>- `BGA`<br/>- `BH`<br/>- `Universal Disk Format`<br/>- `7z` <br/><br/>For more information, see [DisableArchiveScanning](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true#-disablearchivescanning) |
+| Level of subfolders within an archive folder to scan | `0` | `0` means unlimited. |
+| Max size of archive for scan | `0` | `0` means unlimited. |
+| Mapped network drives | `Scanned` | `DisableScanningMappedNetworkDrivesForFullScan`<br/><br/>See [DisableScanningMappedNetworkDrivesForFullScan](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true&#-disablescanningmappednetworkdrivesforfullscan) |
+| Network files | `Scanned` | `DisableScanningNetworkFiles`  |
+| Max CPU load % during scan | `50` | `ScanAvgCPULoadFactor`<br/><br/>See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
+| Disable CPU throttle on idle scans | `Unthrottled` | `DisableCpuThrottleOnIdleScans`<br/><br/>See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
+| Signature checks before scanning | `Disabled` | `CheckForSignaturesBeforeRunningScan`<br/><br/>Microsoft Defender Antivirus periodically checks for signature updates and performs scheduled scans automatically. By default, scan begins with existing definitions. This setting applies only to scheduled scans. |
+| Removable drives during full scans | `Scanned` | `DisableRemovableDriveScanning`<br/><br/>Indicates whether to scan removable drives, such as flash drives, during a full scan. |
+| Email | `Scanned` | `DisableEmailScanning`<br/><br/>Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments. |
+| Script | `Scanned` | `DisableScriptScanning`<br/><br/>Specifies whether to disable the scanning of script files. |
 
 ## Best practices and considerations
 
