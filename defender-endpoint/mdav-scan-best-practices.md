@@ -106,7 +106,7 @@ The followings are Microsoft’s recommendations:
 
 ### Scanning and CPU throttling
 
-The CPU usage limit, also known as CPU throttling, setting is used to set the maximum CPU usage for Microsoft Defender on-demand scans. The CPU throttling setting is enabled by default and is applies only to scheduled scans, and optionally to custom scans as well. It's recommended to fine tune this setting (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference) for `ScanAverageCPULoadFactor` setting) depending on the actual CPU usage values obtained in your specific environment. 
+The CPU usage limit, also known as CPU throttling, setting is used to set the maximum CPU usage for Microsoft Defender on-demand scans. The CPU throttling setting is enabled by default and is applies only to scheduled scans, and optionally to custom scans as well. It's recommended to fine tune this setting (see the `ScanAverageCPULoadFactor` setting in [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference)), depending on the actual CPU usage values obtained in your specific environment. 
 
 The CPU load factor for Microsoft Defender Antivirus isn't a hard limit but rather guidance for the scanning engine to not exceed this maximum. For this scan policy setting you can specify a value as a percentage the maximum CPU utilization during scan. The value of 0 or 100 indicates no throttling. For instance, if this value is reduced to 20, it implies that the scanning engine aims to keep the average CPU load of the system below 20% during the scan and it takes longer to be completed. 
 
