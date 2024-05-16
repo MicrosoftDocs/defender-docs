@@ -94,7 +94,7 @@ DeviceEvents
 
 > [!NOTE]
 > The `RemovableStorageFileEvent` does not appear immediately after a file is copied to the device. It may take as long as 24 hours to appear.
-> 
+
 ## [**Device control report**](#tab/report)
 
 ## Device control report
