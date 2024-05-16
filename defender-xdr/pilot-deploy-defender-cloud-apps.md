@@ -1,5 +1,5 @@
 ---
-title: Step 5. Evaluate Microsoft Defender for Cloud Apps overview
+title: Evaluate Microsoft Defender for Cloud Apps overview
 description: Steps to set up your Microsoft Defender XDR trial lab or pilot environment to try out and experience the security solution designed to protect devices, identity, data, and applications in your organization.
 search.appverid: met150
 ms.service: defender-xdr
@@ -21,7 +21,7 @@ ms.collection:
 ms.topic: conceptual
 ---
 
-# Step 5. Evaluate Microsoft Defender for Cloud Apps
+# Evaluate Microsoft Defender for Cloud Apps
 
 **Applies to:**
 - Microsoft Defender XDR

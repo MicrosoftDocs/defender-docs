@@ -1,5 +1,5 @@
 ---
-title: Step 5. Investigate and respond using Microsoft Defender XDR
+title: Investigate and respond using Microsoft Defender XDR
 description: Investigate and respond using Microsoft Defender XDR.
 search.appverid: met150
 ms.service: defender-xdr
@@ -21,7 +21,7 @@ ms.collection:
 ms.topic: conceptual
 ---
 
-# Step 5. Investigate and respond using Microsoft Defender XDR
+# Investigate and respond using Microsoft Defender XDR
 
 **Applies to:**
 - Microsoft Defender XDR

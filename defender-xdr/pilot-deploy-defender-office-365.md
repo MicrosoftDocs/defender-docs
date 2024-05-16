@@ -1,5 +1,5 @@
 ---
-title: Step 2. Pilot and deploy Defender for Office 365
+title: Pilot and deploy Defender for Office 365
 description: Pilot and deploy Defender for Office 365.
 search.appverid: met150
 ms.service: defender-xdr
@@ -21,7 +21,7 @@ ms.topic: conceptual
 ms.date: 05/15/2024
 ---
 
-# Step 2. Pilot and deploy Defender for Office 365
+# Pilot and deploy Defender for Office 365
 
 **Applies to:**
 - Microsoft Defender XDR

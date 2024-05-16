@@ -1,5 +1,5 @@
 ---
-title: Step 3. Pilot and deploy Microsoft Defender for Endpoint
+title: Pilot and deploy Microsoft Defender for Endpoint
 description: Pilot and deploy Microsoft Defender for Endpoint.
 search.appverid: met150
 ms.service: defender-xdr
@@ -21,7 +21,7 @@ ms.collection:
 ms.topic: conceptual
 ---
 
-# Step 3. Pilot and deploy Microsoft Defender for Endpoint
+# Pilot and deploy Microsoft Defender for Endpoint
 
 **Applies to:**
 
