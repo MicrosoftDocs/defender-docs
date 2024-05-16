@@ -8,7 +8,9 @@ audience: ITPro
 ms.topic: reference
 author: siosulli
 ms.author: siosulli
-ms.custom: nextgen
+ms.custom: 
+- nextgen
+- partner-contribution
 ms.reviewer: pahuijbr, tudobril, yongrhee, bsabetghadam
 manager: deniseb
 ms.subservice: ngp
