@@ -46,10 +46,10 @@ Protection and system resource usage entails tradeoffs. Device performance is hi
 
 | Setting | Default | Details |
 |--|--|--|
-| Archive/Container (for example, ISOs) Scanning | Enabled | Defender is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
+| Archive/Container (for example, ISOs) Scanning | Enabled | Microsoft Defender Antivirus is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
 | Max size of archive scanning | Unlimited | |
-| Mapped Network (for example, UNC, SMB, CIFS) | Enabled | By default, Defender scans mapped network drives. |
-| OneDrive sync | Enabled | By default, Defender scans desktops, documents, or downloads that are synchronized via OneDrive or folder sync. |
+| Mapped Network (for example, UNC, SMB, CIFS) | Enabled | By default, Microsoft Defender Antivirus scans mapped network drives. |
+| OneDrive sync | Enabled | By default, Microsoft Defender Antivirus scans desktops, documents, or downloads that are synchronized via OneDrive or folder sync. |
 | Client-side cache/offline files | Enabled | By default, Defender scans client-side cache. |
 | Scan Average CPU Load Factor | 50 | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
 
@@ -66,18 +66,18 @@ To configure scanning options for Microsoft Defender Antivirus, you can use vari
 
 | Setting | Default | PowerShell/WMI parameter | Details |
 |--|--|--|--|
-| Archive/Container (for example, ISOs) Scanning | Enabled | | Defender is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
-| Archive files (.zip, .rar, etc.) | Scanned | `DisableArchiveScanning` | By turning on `DisableArchiveScanning`, the following archive types are excluded from antivirus scans: <br/>- `ZIP`<br/>- `Ace`<br/>- `Arc`<br/>- `Arj`<br/>- `BZip2`<br/>- `Cab`<br/>- `CF`<br/>- `CPIO`<br/>- `CPT`<br/>- `GZip`<br/>- `Hap`<br/>- `ISO`<br/>- `Lharc`<br/>- `PSF`<br/>- `Quantum`<br/>- `Rar`<br/>- `Stuff`-It<br/>- `Zoo`<br/>- `ZCompress`<br/>- `Compress`<br/>- `VC4`<br/>- `RPM`<br/>- `BGA`<br/>- `BH`<br/>- `Universal Disk Format`<br/>- `7z` <br/><br/>For more information, see [DisableArchiveScanning](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true#-disablearchivescanning) |
-| Level of subfolders within an archive folder to scan | 0 | N/A | 0 means unlimited. |
-| Max size of archive for scan | 0 | N/A | 0 means unlimited. |
-| Mapped network drives | Scanned | `DisableScanningMappedNetworkDrivesForFullScan` | See [DisableScanningMappedNetworkDrivesForFullScan](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true&#-disablescanningmappednetworkdrivesforfullscan) |
-| Network files | Scanned | `DisableScanningNetworkFiles` |  |
-| Max CPU load % during scan | 50 | `ScanAvgCPULoadFactor` | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
-| Disable CPU throttle on idle scans | Unthrottled | `DisableCpuThrottleOnIdleScans` | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
-| Signature checks before scanning | Disabled | `CheckForSignaturesBeforeRunningScan` | Defender periodically checks for signature updates and performs scheduled scans automatically. By default, scan begins with existing definitions. This setting applies only to scheduled scans. |
-| Removable drives during full scans | Scanned | `DisableRemovableDriveScanning` | Indicates whether to scan removable drives, such as flash drives, during a full scan. |
-| Email | Scanned | `DisableEmailScanning` | Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments. |
-| Script | Scanned | `DisableScriptScanning` | Specifies whether to disable the scanning of script files. |
+| Archive/Container (for example, ISOs) Scanning | `Enabled` | | Microsoft Defender Antivirus is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
+| Archive files (.zip, .rar, etc.) | `Scanned` | `DisableArchiveScanning` | By turning on `DisableArchiveScanning`, the following archive types are excluded from antivirus scans: <br/>- `ZIP`<br/>- `Ace`<br/>- `Arc`<br/>- `Arj`<br/>- `BZip2`<br/>- `Cab`<br/>- `CF`<br/>- `CPIO`<br/>- `CPT`<br/>- `GZip`<br/>- `Hap`<br/>- `ISO`<br/>- `Lharc`<br/>- `PSF`<br/>- `Quantum`<br/>- `Rar`<br/>- `Stuff`-It<br/>- `Zoo`<br/>- `ZCompress`<br/>- `Compress`<br/>- `VC4`<br/>- `RPM`<br/>- `BGA`<br/>- `BH`<br/>- `Universal Disk Format`<br/>- `7z` <br/><br/>For more information, see [DisableArchiveScanning](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true#-disablearchivescanning) |
+| Level of subfolders within an archive folder to scan | `0` | N/A | `0` means unlimited. |
+| Max size of archive for scan | `0` | N/A | `0` means unlimited. |
+| Mapped network drives | `Scanned` | `DisableScanningMappedNetworkDrivesForFullScan` | See [DisableScanningMappedNetworkDrivesForFullScan](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true&#-disablescanningmappednetworkdrivesforfullscan) |
+| Network files | `Scanned` | `DisableScanningNetworkFiles` |  |
+| Max CPU load % during scan | `50` | `ScanAvgCPULoadFactor` | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
+| Disable CPU throttle on idle scans | `Unthrottled` | `DisableCpuThrottleOnIdleScans` | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
+| Signature checks before scanning | `Disabled` | `CheckForSignaturesBeforeRunningScan` | Microsoft Defender Antivirus periodically checks for signature updates and performs scheduled scans automatically. By default, scan begins with existing definitions. This setting applies only to scheduled scans. |
+| Removable drives during full scans | `Scanned` | `DisableRemovableDriveScanning` | Indicates whether to scan removable drives, such as flash drives, during a full scan. |
+| Email | `Scanned` | `DisableEmailScanning` | Indicates whether Windows Defender parses the mailbox and mail files, according to their specific format, in order to analyze mail bodies and attachments. |
+| Script | `Scanned` | `DisableScriptScanning` | Specifies whether to disable the scanning of script files. |
 
 ## Best practices and considerations
 
@@ -89,32 +89,32 @@ The followings are Microsoft’s recommendations:
 
 - We recommend configuring scan policies based on device type and role, for example, SQL Server Collection, IIS Server Collection, Restricted Workstation Collection, Standard Workstation Collection.
 
-- Avoid using domain controllers in a file server role. This lowers AV scanning activities on file shares and minimizes performance overhead.
+- Avoid using domain controllers in a file server role. This lowers antivirus scanning activities on file shares and minimizes performance overhead.
 
 - Microsoft Defender Antivirus has the file hash computation feature that computes file hashes for every executable file that is scanned if it wasn’t previously computed. This has a performance cost especially when copying large files from a network share. See [Configure File Hash Computation](/windows/client-management/mdm/defender-csp) to learn more about the impact on indicators.
 
 - The full scan performance can be impacted by CPU throttling. Our recommendation is to leave CPU limit settings at the default.
 
 > [!NOTE]
-> - By design, Microsoft Defender inspects the internal content type as file extensions are often misleading and can be easily spoofed by attackers.
+> - By design, Microsoft Defender Antivirus inspects the internal content type as file extensions are often misleading and can be easily spoofed by attackers.
 > 
 > - The scanning performance is heavily dependent on the actual content type that is being scanned. In general, more complex file types require more time and cycle, while more unusual content types require even more time (e.g., JavaScript files).
 > 
-> - Microsoft Defender Performance Analyzer tool helps determine files, file extensions, and processes that might be causing performance issues on individual endpoints during antivirus scans. If you are running Microsoft Defender Antivirus and experiencing performance issues, you can use performance analyzer to optimize performance (see [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)).
+> - The performance analyzer tool for Microsoft Defender Antivirus helps determine files, file extensions, and processes that might be causing performance issues on individual endpoints during antivirus scans. If you are running Microsoft Defender Antivirus and experiencing performance issues, you can use performance analyzer to optimize performance (see [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)).
 > 
-> - A trusted image identifier for Microsoft Defender can help improve the performance of your devices right out of the box. See [Configure a Trusted Image Identifier for Microsoft Defender](/windows-hardware/manufacture/desktop/configure-a-trusted-image-identifier-for-windows-defender).
+> - A trusted image identifier for Microsoft Defender Antivirus can help improve the performance of your devices. See [Configure a Trusted Image Identifier for Microsoft Defender](/windows-hardware/manufacture/desktop/configure-a-trusted-image-identifier-for-windows-defender).
 
 ### Scanning and CPU throttling
 
 The CPU usage limit, also known as CPU throttling, setting is used to set the maximum CPU usage for Microsoft Defender on-demand scans. The CPU throttling setting is enabled by default and is applies only to scheduled scans, and optionally to custom scans as well. It's recommended to fine tune this setting (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference) for `ScanAverageCPULoadFactor` setting) depending on the actual CPU usage values obtained in your specific environment. 
 
-The CPU load factor for Microsoft Defender isn't a hard limit but rather guidance for the scanning engine to not exceed this maximum. For this scan policy setting you can specify a value as a percentage the maximum CPU utilization during scan. The value of 0 or 100 indicates no throttling. For instance, if this value is reduced to 20, it implies that the scanning engine aims to keep the average CPU load of the system below 20% during the scan and it takes longer to be completed. 
+The CPU load factor for Microsoft Defender Antivirus isn't a hard limit but rather guidance for the scanning engine to not exceed this maximum. For this scan policy setting you can specify a value as a percentage the maximum CPU utilization during scan. The value of 0 or 100 indicates no throttling. For instance, if this value is reduced to 20, it implies that the scanning engine aims to keep the average CPU load of the system below 20% during the scan and it takes longer to be completed. 
 
 - If you set the percentage value to 0 or 100, CPU throttling is disabled, and Windows Defender can use up to 100% of CPU during the scheduled and custom scans. This isn't recommended as it can lead to unresponsive apps, and even overheating so proceed with extreme caution.
 
 - Changing the value has both pros and cons. Higher values mean the scans perform faster; however, it could slow down your system during the scan, while lower values mean the scan takes longer to finish, but you have more CPU resources available for your system during the scan. For instance, if you're running critical workloads on a server, this setting should be set to a value that doesn’t interfere with the functioning of the workloads.
 
-- Manual scans ignore the CPU throttling setting and run without any CPU limits. However, there's a scan policy setting (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference) for ThrottleForScheduledScanOnly setting) that if it's disabled, then manual scans adhere to the same CPU limits as a scheduled scan.
+- Manual scans ignore the CPU throttling setting and run without any CPU limits. However, there's a scan policy setting (see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference) for `ThrottleForScheduledScanOnly` setting) that if it's disabled, then manual scans adhere to the same CPU limits as a scheduled scan.
 
 - CPU throttling on idle scans controls whether the CPU is throttled for scheduled scans while the device is idle. This setting is disabled by default to ensure that the CPU isn't throttled for scheduled scans when the device is idle, regardless of what CPU throttling is set to. For more information, see [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) and review the `DisableCpuThrottleOnIdleScans` setting.
 
@@ -123,15 +123,15 @@ The CPU load factor for Microsoft Defender isn't a hard limit but rather guidanc
 
 ### Scanning and exclusions
 
-Microsoft Defender has the following features that help enhance scan performance and efficiency:
+Microsoft Defender Antivirus has the following features that help enhance scan performance and efficiency:
 
 - Containers/archives can take a long time to scan as certain optimizations (for example, parallel scans) aren't possible in these situations. Whenever possible, we recommend extracting the content of these containers that would allow the full scan to process items in parallel.
 
 - Scan exclusions where you can exclude containers from scanning, if this option is allowed by your compliance requirements.
 
-- Microsoft Defender Performance Analyzer tool can be used to determine exclusions that help optimize performance. See [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
+- The performance analyzer tool for Microsoft Defender Antivirus can be used to determine exclusions that help optimize performance. See [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
-Microsoft Defender has a built-in optimization for content that is highly reputable (for example, signed by trusted sources). When it encounters such content, it simply shifts away from scanning the content to validating the signature to ensure the file wasn’t tampered with.
+Microsoft Defender Antivirus has a built-in optimization for content that is highly reputable (for example, signed by trusted sources). When it encounters such content, it simply shifts away from scanning the content to validating the signature to ensure the file wasn’t tampered with.
 
 > [!NOTE]
 > On Windows Server 2016 and Windows Server 2019, automatic exclusions help reduce CPU load during real-time scanning. The automatic exclusions are applied in addition to any custom exclusions you configure. The automatic exclusions are based on server role, such as DNS, AD DS, Hyper-V host, File Server, Print Server, Web Server, etc. Automatic exclusions only apply to Real-time protection (RTP) scanning and are not honored during a Full/Quick or On-demand scans. See [Microsoft Defender Antivirus exclusions on Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md).
