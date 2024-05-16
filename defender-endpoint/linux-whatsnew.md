@@ -52,7 +52,8 @@ There are multiple fixes and new changes in this release:
  
   To keep users informed of the state of antivirus engine, we have introduced a new field called "engine_load_status" as part of MDATP health. It indicates whether antivirus engine is currently running or not.
 
-  | Field name | engine_load_status | 
+  | `Field name` | `engine_load_status` | 
+  |---|---|
   | Possible values | Engine not loaded (AV engine process is down),  Engine load succeeded (AV engine process up and running) | 
 
   Healthy scenarios:
