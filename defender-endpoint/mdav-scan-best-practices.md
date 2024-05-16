@@ -32,7 +32,7 @@ search.appverid: met150
 
 - Windows
 
-This article explains the considerations and best practices for Antivirus Full Scans with Microsoft Defender for Endpoint. The article outlines the factors that impact scan performance, and describes scenarios were increased resource consumption results in increased protection efficacy.
+This article explains the considerations and best practices for running full antivirus scans with Microsoft Defender for Endpoint. This article outlines factors that impact scan performance and describes scenarios where increased resource consumption results in increased protection efficacy.
 
 ## Overview
 
