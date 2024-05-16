@@ -94,7 +94,7 @@ Depending on the server that you're onboarding, the unified solution installs Mi
 If you've previously onboarded your servers using MMA, follow the guidance provided in [Server migration](server-migration.md) to migrate to the new solution.
 
 > [!IMPORTANT]
-> Before proceeding with onboarding, see the section [Known issues and limitations in the new, unified solution package for Windows Server 2012 R2 and Windows Server 2016](#known-issues-and-limitations-in-the-new-unified-solution-package-for-windows-server-2016).
+> Before proceeding with onboarding, see the section [Known issues and limitations in the new, unified solution package for Windows Server 2012 R2 and Windows Server 2016](#known-issues-and-limitations-in-the-new-unified-solution-package-for-windows-server-2016-and-windows-server-2012-r2).
 
 ### Prerequisites
 
@@ -132,7 +132,7 @@ You'll need to download both the **installation** and **onboarding** packages fr
 
 > [!NOTE]
 > The installation package is updated monthly. Be sure to download the latest package before usage.
-> To update after installation, you do not have to run the installer package again. If you do, the installer will ask you to offboard first as that is a requirement for uninstallation. See [Update packages for Microsoft Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-microsoft-defender-for-endpoint-on-windows-server-2016).
+> To update after installation, you do not have to run the installer package again. If you do, the installer will ask you to offboard first as that is a requirement for uninstallation. See [Update packages for Microsoft Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-microsoft-defender-for-endpoint-on-windows-server-2016-and-windows-server-2012-r2).
 
 :::image type="content" alt-text="Image of onboarding dashboard" source="media/install-agent-onboard.png" lightbox="media/install-agent-onboard.png":::
 
