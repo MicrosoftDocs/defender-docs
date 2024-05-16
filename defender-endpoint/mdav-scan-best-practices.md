@@ -64,7 +64,7 @@ Device performance is an important factor in the rate of security event processi
 
 To configure scanning options for Microsoft Defender Antivirus, you can use various tools (see [Configure scanning options for Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)). Here are some of the available settings and switches that you can use to configure Microsoft Defender Antivirus full scans:
 
-| Setting | Default | PowerShell/WMI parameter |
+| Setting | Default | PowerShell/WMI parameter and details |
 |--|--|--|
 | Archive/Container (for example, ISOs) Scanning | `Enabled` | Microsoft Defender Antivirus is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
 | Archive files (.zip, .rar, etc.) | `Scanned` | `DisableArchiveScanning`<br/><br/>Turning on `DisableArchiveScanning` excludes the following archive types from antivirus scans: <br/>- `ZIP`<br/>- `Ace`<br/>- `Arc`<br/>- `Arj`<br/>- `BZip2`<br/>- `Cab`<br/>- `CF`<br/>- `CPIO`<br/>- `CPT`<br/>- `GZip`<br/>- `Hap`<br/>- `ISO`<br/>- `Lharc`<br/>- `PSF`<br/>- `Quantum`<br/>- `Rar`<br/>- `Stuff`-It<br/>- `Zoo`<br/>- `ZCompress`<br/>- `Compress`<br/>- `VC4`<br/>- `RPM`<br/>- `BGA`<br/>- `BH`<br/>- `Universal Disk Format`<br/>- `7z` <br/><br/>For more information, see [DisableArchiveScanning](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true#-disablearchivescanning) |
