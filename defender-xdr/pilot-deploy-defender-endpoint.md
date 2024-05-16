@@ -37,9 +37,9 @@ The following table describes the steps in the illustration.
 
 |Step|Description|
 |---|---|
-|[Step 1. Review architecture requirements and key concepts](XXX)|Understand the Defender for Endpoint architecture and the capabilities available to you.|
-|[Step 2. Enable the evaluation environment](XXX)|Follow the steps to set up the evaluation environment.|
-|[Step 3. Set up the pilot](XXX)|Verify your pilot group, run simulations, and become familiar with key features and dashboards.|
+|Step 1. Review architecture requirements and key concepts|Understand the Defender for Endpoint architecture and the capabilities available to you.|
+|Step 2. Enable the evaluation environment|Follow the steps to set up the evaluation environment.|
+|Step 3. Set up the pilot|Verify your pilot group, run simulations, and become familiar with key features and dashboards.|
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -151,7 +151,7 @@ When you pilot Microsoft Defender for Endpoint, you may choose to onboard a few 
 You can then try out capabilities that are available such as running attack simulations and seeing how Defender for Endpoint surfaces malicious activities and enables you to conduct an efficient response. 
 
 ## Step 1: Verify pilot group
-After completing the onboarding steps outlined in the [Enable evaluation](XXX) section, you should see the devices in the Device inventory list approximately after an hour. 
+After completing the onboarding steps outlined in the Enable evaluation section, you should see the devices in the Device inventory list approximately after an hour. 
 
 When you see your onboarded devices you can then proceed with trying out capabilities. 
 
