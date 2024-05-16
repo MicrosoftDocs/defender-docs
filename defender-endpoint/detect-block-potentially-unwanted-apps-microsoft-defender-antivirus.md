@@ -192,6 +192,10 @@ Setting the value for this cmdlet to `Disabled` turns off the feature if it has 
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/index).
 
+## Test and make sure that PUA blocking works
+
+Once you have PUA enabled in block mode, you can test to make sure that it's working properly.  For details, please visit [Potentially unwanted applications (PUA) demonstration](https://learn.microsoft.com/defender-endpoint/defender-endpoint-demonstration-potentially-unwanted-applications)
+
 ## View PUA events using PowerShell
 
 PUA events are reported in the Windows Event Viewer, but not in Microsoft Configuration Manager or in Intune. You can also use the `Get-MpThreat` cmdlet to view threats that Microsoft Defender Antivirus handled. Here's an example:
