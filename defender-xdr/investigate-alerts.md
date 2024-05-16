@@ -27,7 +27,7 @@ ms.date: 05/16/2023
 
 # Investigate alerts in Microsoft Defender XDR
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](/includes/microsoft-defender.md)]
 
 **Applies to:**
 
@@ -210,17 +210,17 @@ Create alert tuning rules from the Microsoft Defender XDR **Settings** area or f
 
 1. In the Microsoft Defender portal, select **Settings > Microsoft Defender XDR > Alert tuning**.
 
-    :::image type="content" source="../defender/media/investigate-alerts/alert-tuning-settings.png" lightbox="/defender/media/investigate-alerts/alert-tuning-settings.png" alt-text="Screenshot of Alert tuning option in Microsoft Defender XDR's Settings page.":::
+    :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-settings.png" lightbox="/defender/media/investigate-alerts/alert-tuning-settings.png" alt-text="Screenshot of Alert tuning option in Microsoft Defender XDR's Settings page.":::
 
 1. Select **Add new rule** to tune a new alert, or select an existing rule row to make changes. Selecting the rule title opens a rule details page, where you can view a list of associated alerts, edit conditions, or turn the rule on and off.
 
 1. In the **Tune alert** pane, under **Select service sources**, select the service sources where you want to the rule to apply. Only services where you have permissions are shown in the list. For example:
 
-     :::image type="content" source="../defender/media/investigate-alerts/alert-tuning-select-service.png" lightbox="/defender/media/investigate-alerts/alert-tuning-select-service.png" alt-text="Screenshot of service source dropdown menu in Tune an alert page.":::
+     :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-select-service.png" lightbox="/defender/media/investigate-alerts/alert-tuning-select-service.png" alt-text="Screenshot of service source dropdown menu in Tune an alert page.":::
 
 1. In the **Conditions** area, add a condition for the alert's triggers. For example, if you want to prevent an alert from being triggered when a specific file is created, define a condition for the **File:Custom** trigger, and define the file details:
 
-     :::image type="content" source="../defender/media/investigate-alerts/alert-tuning-choose-ioc2.png" lightbox="/defender/media/investigate-alerts/alert-tuning-choose-ioc2.png" alt-text="Screenshot of the IOC menu in Tune an alert page.":::
+     :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-choose-ioc2.png" lightbox="/defender/media/investigate-alerts/alert-tuning-choose-ioc2.png" alt-text="Screenshot of the IOC menu in Tune an alert page.":::
 
    - Listed triggers differ, depending on the service sources you selected. Triggers are all indicators of compromise (IOCs), such as files, processes, scheduled tasks, and other evidence types that might trigger an alert, including AntiMalware Scan Interface (AMSI) scripts, Windows Management Instrumentation (WMI) events, or scheduled tasks.
 
@@ -234,21 +234,21 @@ Create alert tuning rules from the Microsoft Defender XDR **Settings** area or f
 
 1. In the Microsoft Defender portal, go to the **Alerts** page or an alert details page. If you're on the **Alerts** page, first select the alert you want to tune, and then select **Tune alert**. Depending on your screen resolution, you might need to select the ellipsis (**...**) to see the **Tune alert** option. For example:
 
-   :::image type="content" source="../defender/media/investigate-alerts/tune-alert-alert-details.png" alt-text="Screenshot of the Tune alert option from an alert details pane.":::
+   :::image type="content" source="/defender/media/investigate-alerts/tune-alert-alert-details.png" alt-text="Screenshot of the Tune alert option from an alert details pane.":::
 
    The **Tune alert** pane opens on the side, where you can define conditions for the alert. For example:
 
-   :::image type="content" source="../defender/media/investigate-alerts/tune-alert-pane-alert-details.png" alt-text="Screenshot of the Tune alert pane from the Alerts page.":::
+   :::image type="content" source="/defender/media/investigate-alerts/tune-alert-pane-alert-details.png" alt-text="Screenshot of the Tune alert pane from the Alerts page.":::
 
 1. Configure the following details:
 
    - In the **Alert types** area, select to apply the alert tuning rule only to alerts of the selected type, or any alert type based on the same conditions. If you select **Any alert type based on certain conditions**, also select the service sources where you want the rule to apply. Only services where you have permissions are shown in the list. For example:
 
-      :::image type="content" source="../defender/media/investigate-alerts/alert-tuning-alert-details-service-sources.png" alt-text="Screenshot of the Service sources area showing in the Tune alert pane.":::
+      :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-alert-details-service-sources.png" alt-text="Screenshot of the Service sources area showing in the Tune alert pane.":::
 
     1. In the **Conditions** area, add a condition for the alert's triggers. For example, if you want to prevent an alert from being triggered when a specific file is created, define a condition for the **File:Custom** trigger, and define the file details:
 
-      :::image type="content" source="../defender/media/investigate-alerts/alert-tuning-alert-details-conditions.png" alt-text="Screenshot of the Conditions area in the Alert tuning pane.":::
+      :::image type="content" source="/defender/media/investigate-alerts/alert-tuning-alert-details-conditions.png" alt-text="Screenshot of the Conditions area in the Alert tuning pane.":::
 
       - Listed triggers differ, depending on the service sources you selected. Triggers are all indicators of compromise (IOCs), such as files, processes, scheduled tasks, and other evidence types that might trigger an alert, including AntiMalware Scan Interface (AMSI) scripts, Windows Management Instrumentation (WMI) events, or scheduled tasks.
 
@@ -316,4 +316,4 @@ As needed for in-process incidents, continue your [investigation](investigate-in
 - [Investigate data loss prevention alerts in Defender](dlp-investigate-alerts-defender.md)
 - [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE [Microsoft Defender XDR rebranding](/includes/defender-m3d-techcommunity.md)]
