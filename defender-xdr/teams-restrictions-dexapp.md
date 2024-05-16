@@ -15,7 +15,7 @@ ms.collection:
   - essentials-manage
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/09/2024
+ms.date: 05/15/2024
 ---
 
 # Troubleshooting Microsoft Defender Experts app permissions in Microsoft Teams
@@ -25,6 +25,8 @@ ms.date: 05/09/2024
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
 The Microsoft Defender Experts app is available for Microsoft Teams by default, but some environments might have limitations that block the app's installation because of app policy permissions in Teams. [Learn how to check Teams app permissions policies](#check-the-teams-app-permission-policies)
+
+:::image type="content" source="/defender-xdr/media/teams-communication-issues.png" alt-text="Screenshot of Teams communication restrictions." lightbox="media/teams-communication-issues.png":::
 
 When you join the Defender Experts Teams channel, you should be able to mention or tag the Defender Experts bot in the channel by typing _@Defender Experts_. If the bot doesn't show up in the list of suggestions, then it might be that the Teams permissions policies are preventing the app from functioning. Learn more about [communicating with Defender Experts for XDR](../defender-xdr/communicate-defender-experts-xdr.md)
 

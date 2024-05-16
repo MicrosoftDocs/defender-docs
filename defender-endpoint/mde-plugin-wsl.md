@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
-description: Learn how to set up and use the MDE plug-in for Windows Subsystem for Linux.
+description: Learn how to set up and use the Defender for Endpoint plug-in for Windows Subsystem for Linux.
 author: pahuijbr
 ms.author: pahuijbr
 manager: deniseb
@@ -14,25 +14,35 @@ ms.collection:
 ms.custom:
 - partner-contribution
 audience: ITPro
-ms.date: 05/07/2024
+ms.date: 05/15/2024
 search.appverid: MET150
 ---
 
 # Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)
 
+**Applies to:**
+
+- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- Windows 11 
+- Windows 10, version 2004 and later (build 19044 and later)
+
 ## Overview
 
-The Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL (supported by Microsoft Defender for Endpoint without a plug-in), provides a Linux environment that is seamlessly integrated with Windows yet isolated using virtualization technology. The Microsoft Defender for Endpoint for Windows Subsystem for Linux 2 (WSL) plug-in enables Defender for Endpoint to provide more visibility into all running WSL containers, by plugging into the isolated subsystem.
+Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL (supported by Microsoft Defender for Endpoint without a plug-in), provides a Linux environment that is seamlessly integrated with Windows, yet is isolated using virtualization technology. The Defender for Endpoint for WSL plug-in enables Defender for Endpoint to provide more visibility into all running WSL containers by plugging into the isolated subsystem.
 
 ## Known issues and limitations
 
 Be aware of the following before you start:
 
-1. The plug-in does not support automatic updates on versions prior to `0.24.426.1`. On version `0.24.426.1` and later, updates are supported through Windows Update across all rings. Updates through Windows Server Update services (WSUS), System Center Configuration Manager (SCCM) and Microsoft Update catalog are supported only in the Production ring to ensure package stability.
+1. The plug-in doesn't support automatic updates on versions prior to `0.24.426.1`. On version `0.24.426.1` and later; updates are supported through Windows Update across all rings. Updates through Windows Server Update services (WSUS), System Center Configuration Manager (SCCM) and Microsoft Update catalog are supported only in the Production ring to ensure package stability.
 
-2. As it takes a few minutes for the plug-in to fully instantiate and up to 30 minutes for a WSL2 instance to onboard itself, short-lived WSL container instances might result in the WSL2 instance not showing up in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Once a (any) distribution has been running long enough (at least 30 minutes), it does show up.
+2. It takes a few minutes for the plug-in to fully instantiate, and up to 30 minutes for a WSL2 instance to onboard itself. Short-lived WSL container instances might result in the WSL2 instance not showing up in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Once any distribution has been running long enough (at least 30 minutes), it does show up.
 
-3. Running a custom kernel and custom kernel command line is supported in this version. However the plug-in doesn't provide any guarantees regarding the visibility within WSL when running a custom kernel and custom kernel command line.
+3. Running a custom kernel and custom kernel command line is supported in this version; however, the plug-in doesn't guarantee visibility within WSL when you're running a custom kernel and custom kernel command line.
+
+4. OS Distribution is displayed **None** in Device overview page of WSL device in Microsoft Defender portal.
+
+5. The plug-in is not supported on machines with ARM64 processor.
 
 ## Software prerequisites
 
@@ -40,9 +50,9 @@ Be aware of the following before you start:
 
    Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than 2.0.7, run `wsl -–update –pre-release` to get the latest update.
 
-- Defender for Endpoint must be onboarded and running on the Windows host OS.
+- The Windows client device must be onboarded to Defender for Endpoint.
 
-- The host OS must be running Windows 10 Client, version 2004 and higher (build 19044 and higher) or Windows 11 Client to support the Windows Subsystem for Linux versions that can work with the plug-in.
+- The Windows client device must be running Windows 10, version 2004 and later (build 19044 and later), or Windows 11 to support the WSL versions that can work with the plug-in.
 
 ## Software components and installer file names
 
@@ -68,16 +78,13 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
 2. Run the command `wsl -–install`.
 
-    ### 1. Confirm WSL is installed and running
+3. Confirm that WSL is installed and running.
 
     1. Using Terminal or Command Prompt, run `wsl –-update` to make sure you have the latest version.
 
     2. Run the `wsl` command to ensure WSL is running before testing.
 
-    ### 2. Install the plug-in
-
-
-    After WSL is running and fully up to date, follow these steps to install the plug-in:
+4. Install the plug-in by following these steps:
 
     1. Install the MSI file downloaded from the onboarding section in the Microsoft Defender portal (**Settings** > **Endpoints** > **Onboarding** > **Windows Subsystem for Linux 2 (plug-in)**).
 
@@ -151,7 +158,7 @@ The following procedure describes how to confirm that Defender in Endpoint in WS
 
 4. Wait for 5 minutes and then run `healthcheck.exe` (located at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test).
 
-   If successful, you can see that the connectivity test was successful. 
+   If successful, you can see that the connectivity test was successful. If failed, you can see that the connectivity test was `invalid` indicating that the client connectivity from WSL to Defender for Endpoint service URLs is failing.
 
 > [!NOTE]
 > To set a proxy for use in WSL containers (the distributions running on the subsystem), see [Advanced settings configuration in WSL](/windows/wsl/wsl-config).
@@ -294,9 +301,9 @@ DeviceProcessEvents
 
    :::image type="content" source="media/mdeplugin-wsl/wsl-health-check-overview.png" alt-text="Screenshot showing status in PowerShell output." lightbox="media/mdeplugin-wsl/wsl-health-check-overview.png":::
 
-6. Microsoft Defender Endpoint for WSL supports Linux distributions running on WSL 2. If they're associated with WSL 1, you might encounter issues. Therefore, it is advised to disable WSL 1. To do so with the Intune policy, perform the following steps:
+6. Microsoft Defender Endpoint for WSL supports Linux distributions running on WSL 2. If they're associated with WSL 1, you might encounter issues. Therefore, it's advised to disable WSL 1. To do so with the Intune policy, perform the following steps:
 
-   1. Navigate to your Microsoft Intune admin center portal.
+   1. Go to your [Microsoft Intune admin center](https://intune.microsoft.com).
 
    2. Go to **Devices** > **Configuration Profiles** > **Create** > **New Policy**.
 
@@ -306,21 +313,22 @@ DeviceProcessEvents
    
    5. Set the **Allow WSL1** setting to **Disabled**, to ensure that only WSL 2 distributions can be used.
 
-   Alternately, if you want to keep using WSL 1, or not use the Intune Policy, you can selectively associate your installed distributions to run on WSL 2, by running the command in PowerShell: 
+      Alternately, if you want to keep using WSL 1, or not use the Intune Policy, you can selectively associate your installed distributions to run on WSL 2, by running the command in PowerShell: 
+
+      ```powershell
+      wsl --set-version <YourDistroName> 2
+      ```
+
+      To have WSL 2 as your default WSL version for new distributions to be installed in the system, run the following command in PowerShell: 
    
-   ```powershell
-   wsl --set-version <YourDistroName> 2
-   ```
+      ```powershell
+      wsl --set-default-version 2
+      ```
 
-   To have WSL 2 as your default WSL version for new distributions to be installed in the system, run the following command in PowerShell: 
-   
-   ```powershell
-   wsl --set-default-version 2
-   ```
+7. The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following under registry and restart WSL:
 
-7. The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following under registry and restart wsl:
+  - **Name**: `OverrideReleaseRing`
+  - **Type**: `REG_SZ`
+  - **Value**: `Dogfood or External or InsiderFast or Production`
+  - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
 
-   - **Name**: `OverrideReleaseRing`
-   - **Type**: `REG_SZ`
-   - **Value**: `Dogfood or External or InsiderFast or Production`
-   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
