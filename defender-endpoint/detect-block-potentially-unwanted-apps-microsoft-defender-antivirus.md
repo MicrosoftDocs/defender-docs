@@ -179,7 +179,7 @@ For more information, see [Use PowerShell cmdlets to configure and run Microsoft
 
 ## Test and make sure that PUA blocking works
 
-Once you have PUA enabled in block mode, you can test to make sure that it's working properly.  For more information, see [Potentially unwanted applications (PUA) demonstration](/defender-endpoint/defender-endpoint-demonstration-potentially-unwanted-applications)
+Once you have PUA enabled in block mode, you can test to make sure that it's working properly.  For more information, see [Potentially unwanted applications (PUA) demonstration](/defender-endpoint/defender-endpoint-demonstration-potentially-unwanted-applications).
 
 ## View PUA events using PowerShell
 
