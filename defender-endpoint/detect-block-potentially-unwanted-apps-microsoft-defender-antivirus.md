@@ -24,43 +24,30 @@ ms.date: 05/02/2024
 **Applies to:**
 
 - [Microsoft Defender XDR](/defender-xdr)
-
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
+- [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
-
 - [Microsoft Edge](/microsoft-edge/deploy/microsoft-edge)
-
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
-
 - Microsoft Defender Antivirus
 
 **Platforms**
+
 - Windows
 
 Microsoft Defender Antivirus is available in the following editions/versions of Windows and Windows Server:
 
 - Windows Server 2022
-
 - Windows Server 2019
-
 - Windows Server, version 1803 or later
-
 - Windows Server 2016
-
 - Windows Server 2012 R2 (Requires Microsoft Defender for Endpoint)
-
 - Windows 11
-
 - Windows 10
-
 - Windows 8.1
 
-For macOS please visit [Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-pua)
+For macOS, see [Detect and block potentially unwanted applications with Defender for Endpoint on macOS](/defender-endpoint/mac-pua).
 
-For Linux please visit [Detect and block potentially unwanted applications with Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-pua)
+For Linux, see [Detect and block potentially unwanted applications with Defender for Endpoint on Linux](/defender-endpoint/linux-pua).
 
 Potentially unwanted applications (PUA) are a category of software that can cause your machine to run slowly, display unexpected ads, or at worst, install other software that might be unexpected or unwanted. PUA isn't considered a virus, malware, or other type of threat, but it might perform actions on endpoints that adversely affect endpoint performance or use. The term *PUA* can also refer to an application that has a poor reputation, as assessed by Microsoft Defender for Endpoint, due to certain kinds of undesirable behavior.
 
