@@ -156,28 +156,6 @@ All our updates contain
 
 - For [device control](device-control-overview.md) customers using removable media policies with disk/device-level access only (masks that include the values 1, 2, 3, 4, and 7), enforcement might not work as expected. In such situations, we recommend customers roll back to the previous version of the Defender platform.
 
-### January-2024 (Platform: 4.18.24010.12 | Engine: 1.1.24010.10)
-
-- Security intelligence update version: **1.405.702.0**
-- Release date:  **February 27, 2024**
-- Platform: **4.18.24010.12**
-- Engine: **1.1.24010.10**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Microsoft Defender Antivirus now caches the Mark of the Web (MoTW) Alternative Data Stream (ADS) for better performance while scanning.
-- Fixed an issue that occurred in [attack surface reduction](attack-surface-reduction-rules-reference.md) in warn mode when removing scan results from the real-time protection cache.
-- Performance improvement added for `OneNote.exe`.
-- Cloud-based entries are regularly removed from the persistent user mode cache in Windows Defender to prevent an uncommon issue where a user could still add a certificate, based on an Indicator of compromise (IoC), to the cache after a file with that certificate had already been added via cloud signature.
-- The Sense onboarding event is now sent in passive mode for operating systems with the old Sense client.
-- Improved performance for logs created/accessed by powershell.
-- Improved performance for folders included in [Controlled folder access(CFA)](controlled-folders.md) when accessing network files.
-- Fixed a deadlock that occurred at shutdown for Data Loss Prevention (DLP) enabled devices.
-- Fixed an issue to remove a vulnerability in the Microsoft Defender Core service.
-- Fixed an onboarding issue in the Unified Agent installation script [install.ps1](https://github.com/microsoft/mdefordownlevelserver).
-- Fixed a memory leak that impacted some devices that received platform update `4.18.24010.7`
-
 ### Previous version updates: Technical upgrade support only
 
 After a new package version is released, support for the previous two versions is reduced to technical support only. For more information about previous versions, see [Microsoft Defender Antivirus updates: Previous versions for technical upgrade support](msda-updates-previous-versions-technical-upgrade-support.md).
