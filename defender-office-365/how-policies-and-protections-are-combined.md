@@ -58,6 +58,7 @@ There are two major factors that determine which policy is applied to a message:
   3. Custom anti-spam, anti-malware, anti-phishing, Safe Links<sup>\*</sup>, and Safe Attachments<sup>\*</sup> policies (when created).
 
      Custom policies are assigned a default priority value when you create the policy (newer equals higher), but you can change the priority value at any time. This priority value affects the order that *custom policies* of that type (anti-spam, anti-malware, anti-phishing, etc.) are applied, but doesn't affect where custom policies are applied in the overall order.
+
   4. Anti-phishing, Safe Links, and Safe Attachments in [Defender for Office 365 evaluation policies](try-microsoft-defender-for-office-365.md#audit-mode-vs-blocking-mode-for-defender-for-office-365) (when enabled).
 
   5. Of equal value:
