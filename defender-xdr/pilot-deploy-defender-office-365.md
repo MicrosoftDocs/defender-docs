@@ -29,16 +29,9 @@ ms.date: 05/15/2024
 - > [!NOTE]
 > This article is also part of the Microsoft Defender XDR solution we talk about in this [Overview](pilot-deploy-overview.md).
 
-
 This article is part of the end-to-end process of piloting and deploying Microsoft Defender XDR.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" alt-text="A diagram that shows Microsoft Defender for Office 365 in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg":::
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-Before enabling Defender for Office 365, be sure you understand the architecture and can meet the requirements. This article describes the architecture, key concepts, and the prerequisites that your Exchange Online environment must meet.
 
 ## Understand the architecture
 
@@ -48,19 +41,19 @@ The following diagram illustrates baseline architecture for Microsoft Defender f
 
 The following table describes this illustration.
 
-|Call-out|Description|
+| Call-out | Description |
 |---|---|
-|1|The host server for the external sender typically performs a public DNS lookup for an MX record, which provides the target server to relay the message. This referral can either be Exchange Online (EXO) directly or an SMTP gateway configured to relay against EXO.|
-|2|Exchange Online Protection negotiates and validates the inbound connection and inspects the message headers and content to determine what extra policies, tagging, or processing is required.|
-|3|Exchange Online integrates with Microsoft Defender for Office 365 to offer more advanced threat protection, mitigation, and remediation.|
-|4|A message that isn't malicious, blocked, or quarantined is processed and delivered to the recipient in EXO where user preferences related to junk mail, mailbox rules, or other settings are evaluated and triggered.|
-|5|Integration with on-premises Active Directory can be enabled using Microsoft Entra Connect to synchronize and provision mail-enabled objects and accounts to Microsoft Entra ID and ultimately Exchange Online.|
-|6|When integrating an on-premises environment, it's encouraged to use an Exchange server for supported management and administration of mail-related attributes, settings, and configurations|
-|7|Microsoft Defender for Office 365 shares signals to Microsoft Defender XDR for extended detection and response (XDR).|
+| 1 | The host server for the external sender typically performs a public DNS lookup for an MX record, which provides the target server to relay the message. This referral can either be Exchange Online (EXO) directly or an SMTP gateway configured to relay against EXO. |
+| 2 | Exchange Online Protection negotiates and validates the inbound connection and inspects the message headers and content to determine what extra policies, tagging, or processing is required. |
+| 3 | Exchange Online integrates with Microsoft Defender for Office 365 to offer more advanced threat protection, mitigation, and remediation. |
+| 4  |A message that isn't malicious, blocked, or quarantined is processed and delivered to the recipient in EXO where user preferences related to junk mail, mailbox rules, or other settings are evaluated and triggered. |
+| 5 | Integration with on-premises Active Directory can be enabled using Microsoft Entra Connect to synchronize and provision mail-enabled objects and accounts to Microsoft Entra ID and ultimately Exchange Online. |
+| 6 | When integrating an on-premises environment, it's encouraged to use an Exchange server for supported management and administration of mail-related attributes, settings, and configurations. |
+| 7 | Microsoft Defender for Office 365 shares signals to Microsoft Defender XDR for extended detection and response (XDR). |
 
 On-premises integration is common but optional. If your environment is cloud-only, this guidance also works for you.
 
-## SIEM integration
+### SIEM integration
 
 You can integrate Microsoft Defender for Office 365 with Microsoft Sentinel to more comprehensively analyze security events across your organization and build playbooks for effective and immediate response. For more information, see [Connect alerts from Microsoft Defender for Office 365](/azure/sentinel/connect-office-365-advanced-threat-protection).
 
@@ -83,7 +76,7 @@ The following table identified key concepts that are important to understand whe
 
 For more detailed information about the capabilities included with Microsoft Defender for Office 365, see [Microsoft Defender for Office 365 service description](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description).
 
-## Review architecture requirements
+## Architecture requirements and steps
 
 A successful Defender for Office 365 evaluation or production pilot assumes the following prerequisites:
 
@@ -95,10 +88,7 @@ A successful Defender for Office 365 evaluation or production pilot assumes the 
 > [!IMPORTANT]
 > If these requirements aren't applicable or you are still in a hybrid coexistence scenario, then a Microsoft Defender for Office 365 evaluation can require more complex or advanced configurations which aren't fully covered in this guidance.
 
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-Use the following steps to enable the evaluation for Microsoft Defender for Office 365.
+After verifying architecture requirements, use the following steps to enable the evaluation for Microsoft Defender for Office 365.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-office-365-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Office 365." lightbox="./media/eval-defender-xdr/defender-office-365-pilot-deploy-steps.svg":::
 
@@ -164,21 +154,11 @@ For detailed information, see [Try Microsoft Defender for Office 365](/defender-
 
    - **I'm using a third-party and/or on-premises service provider**: In the upcoming screens, select the vendor name along with the inbound connector that accepts mail from that solution. You also decide if you need an Exchange Online mail flow rule (also known as a transport rule) that skips spam filtering for incoming messages from the third-party protection service or device. When you're finished, click **Finish**.
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+## Step 5: Create pilot groups
 
-Use the following steps to set up and configure the pilot for Microsoft Defender for Office 365.
-
-:::image type="content" source="/defender/media/defender/m365-defender-office-pilot.png" alt-text="The steps for creating the pilot in the Microsoft Defender for Office 365 portal." lightbox="/defender/media/defender/m365-defender-office-pilot.png":::
-
-- [Step 1: Create pilot groups](#step-1-create-pilot-groups)
-- [Step 2: Configure protection](#step-2-configure-protection)
-- [Step 3: Try out capabilities — Get familiar with simulation, monitoring, and metrics](#step-3-try-out-capabilities-and-get-familiar-with-simulation-monitoring-and-metrics)
-
-When you evaluate Microsoft Defender for Office 365, you might choose to pilot specific users before enabling and enforcing policies for your entire organization. Creating distribution groups can help manage the deployment processes. For example, create groups such as *Defender for Office 365 Users - Standard Protection*, *Defender for Office 365 Users - Strict Protection*, *Defender for Office 365 Users - Custom Protection*, or *Defender for Office 365 Users - Exceptions*.
+When you pilot Microsoft Defender for Office 365, you might choose to pilot specific users before enabling and enforcing policies for your entire organization. Creating distribution groups can help manage the deployment processes. For example, create groups such as *Defender for Office 365 Users - Standard Protection*, *Defender for Office 365 Users - Strict Protection*, *Defender for Office 365 Users - Custom Protection*, or *Defender for Office 365 Users - Exceptions*.
 
 It might not be evident why 'Standard' and 'Strict' are the terms used for these groups, but that will become clear when you explore more about Defender for Office 365 security presets. Naming groups 'custom' and 'exceptions' speak for themselves, and though most of your users should fall under *standard* and *strict*, custom and exception groups will collect valuable data for you regarding managing risk.
-
-## Step 5: Create pilot groups
 
 Distribution groups can be created and defined directly in Exchange Online or synchronized from on-premises Active Directory.
 
@@ -254,3 +234,5 @@ Now that your pilot is set up and configured, it's helpful to become familiar wi
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows Microsoft Defender for Endpoint in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg":::
 
 See [Pilot and deploy Microsoft Defender for Endpoint](pilot-deploy-defender-endpoint.md).
+
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

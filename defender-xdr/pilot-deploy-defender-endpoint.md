@@ -33,18 +33,7 @@ This article is part of the end-to-end process of piloting and deploying Microso
 
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows Microsoft Defender for Endpoint in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg":::
 
-The following table describes the steps.
-
-|Step|Description|
-|---|---|
-|Step 1. Review architecture requirements and key concepts|Understand the Defender for Endpoint architecture and the capabilities available to you.|
-|Step 2. Enable the evaluation environment|Follow the steps to set up the evaluation environment.|
-|Step 3. Set up the pilot|Verify your pilot group, run simulations, and become familiar with key features and dashboards.|
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-Before enabling Microsoft Defender for Endpoint, be sure you understand the architecture and can meet the requirements.
+Before piloting Microsoft Defender for Endpoint, be sure you understand the architecture and can meet the requirements.
 
 ## Understand the architecture
 
@@ -54,44 +43,47 @@ The following diagram illustrates Microsoft Defender for Endpoint architecture a
 
 The following table describes the illustration.
 
-Call-out | Description
-:---|:---|
-1 | Devices are on-boarded through one of the supported management tools.
-2 | On-boarded devices provide and respond to Microsoft Defender for Endpoint signal data.
-3 | Managed devices are joined and/or enrolled in Microsoft Entra ID.
-4 | Domain-joined Windows devices are synchronized to Microsoft Entra ID using Microsoft Entra Connect.
-5 | Microsoft Defender for Endpoint alerts, investigations, and responses are managed in Microsoft Defender XDR.
+| Call-out | Description |
+| :---|:---|
+| 1 | Devices are on-boarded through one of the supported management tools. |
+| 2 | On-boarded devices provide and respond to Microsoft Defender for Endpoint signal data. |
+| 3 | Managed devices are joined and/or enrolled in Microsoft Entra ID. |
+| 4 | Domain-joined Windows devices are synchronized to Microsoft Entra ID using Microsoft Entra Connect. |
+| 5 | Microsoft Defender for Endpoint alerts, investigations, and responses are managed in Microsoft Defender XDR. |
 
-## Understand key concepts
-
-The following table identified key concepts that are important to understand when evaluating, configuring, and deploying Microsoft Defender for Endpoint:
-
-Concept | Description | More information
-:---|:---|:---|
-Administration Portal | Microsoft Defender portal to monitor and assist in responding to alerts of potential advanced persistent threat activity or data breaches. | [Microsoft Defender for Endpoint portal overview](microsoft-365-security-center-mde.md)
-Attack Surface Reduction | Help reduce your attack surfaces by minimizing the places where your organization is vulnerable to cyberthreats and attacks. | [Overview of attack surface reduction](/defender-endpoint/overview-attack-surface-reduction)
-Endpoint Detection and Response | Endpoint detection and response capabilities provide advanced attack detections that are near real-time and actionable. | [Overview of endpoint detection and response capabilities](/defender-endpoint/overview-endpoint-detection-response)
-Behavioral Blocking and Containment | Behavioral blocking and containment capabilities can help identify and stop threats, based on their behaviors and process trees even when the threat has started execution. | [Behavioral blocking and containment](/defender-endpoint/behavioral-blocking-containment)
-Automated Investigation and Response | Automated investigation uses various inspection algorithms based on processes that are used by security analysts and designed to examine alerts and take immediate action to resolve breaches. | [Use automated investigations to investigate and remediate threats](/defender-endpoint/automated-investigations)
-Advanced Hunting | Advanced hunting is a query-based threat-hunting tool that lets you explore up to 30 days of raw data so that you can proactively inspect events in your network to locate threat indicators and entities. | [Overview of advanced hunting](advanced-hunting-overview.md)
-Threat Analytics | Threat analytics is a set of reports from expert Microsoft security researchers covering the most relevant threats. | [Track and respond to emerging threats](/defender-endpoint/threat-analytics)
-
-For more detailed information about the capabilities included with Microsoft Defender for Endpoint, see [What is Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint).
-
-## SIEM integration
+### SIEM integration
 
 You can integrate Microsoft Defender for Endpoint with Microsoft Sentinel to more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
 Microsoft Defender for Endpoint can also be integrated into other Security Information and Event Management (SIEM) solutions. For more information, see [Enable SIEM integration in Microsoft Defender for Endpoint](/defender-endpoint/configure-siem).
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+## Understand key concepts
 
-This article will guide you through the steps on setting up the evaluation environment for Microsoft Defender for Endpoint using production devices.
+The following table identified key concepts that are important to understand when evaluating, configuring, and deploying Microsoft Defender for Endpoint:
+
+| Concept | Description | More information |
+|:---|:---|:---|
+| Administration Portal | Microsoft Defender portal to monitor and assist in responding to alerts of potential advanced persistent threat activity or data breaches. | [Microsoft Defender for Endpoint portal overview](microsoft-365-security-center-mde.md) |
+| Attack Surface Reduction | Help reduce your attack surfaces by minimizing the places where your organization is vulnerable to cyberthreats and attacks. | [Overview of attack surface reduction](/defender-endpoint/overview-attack-surface-reduction) |
+| Endpoint Detection and Response | Endpoint detection and response capabilities provide advanced attack detections that are near real-time and actionable. | [Overview of endpoint detection and response capabilities](/defender-endpoint/overview-endpoint-detection-response) |
+| Behavioral Blocking and Containment | Behavioral blocking and containment capabilities can help identify and stop threats, based on their behaviors and process trees even when the threat has started execution. | [Behavioral blocking and containment](/defender-endpoint/behavioral-blocking-containment) |
+| Automated Investigation and Response | Automated investigation uses various inspection algorithms based on processes that are used by security analysts and designed to examine alerts and take immediate action to resolve breaches. | [Use automated investigations to investigate and remediate threats](/defender-endpoint/automated-investigations) |
+| Advanced Hunting | Advanced hunting is a query-based threat-hunting tool that lets you explore up to 30 days of raw data so that you can proactively inspect events in your network to locate threat indicators and entities. | [Overview of advanced hunting](advanced-hunting-overview.md) |
+| Threat Analytics | Threat analytics is a set of reports from expert Microsoft security researchers covering the most relevant threats. | [Track and respond to emerging threats](/defender-endpoint/threat-analytics) |
+
+For more detailed information about the capabilities included with Microsoft Defender for Endpoint, see [What is Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint).
 
 > [!TIP]
 > Microsoft Defender for Endpoint also comes with an in-product evaluation lab where you can add pre-configured devices and run simulations to evaluate the capabilities of the platform. The lab comes with a simplified set-up experience that can help quickly demonstrate the value of Microsoft Defender for Endpoint including guidance for many features like advanced hunting and threat analytics. For more information, see [Evaluate capabilities](/defender-endpoint/evaluation-lab). <br> The main difference between the guidance provided in this article and the evaluation lab is the evaluation environment uses production devices whereas the evaluation lab uses non-production devices.
 
+Use the following steps to pilot and deploy Microsoft Defender for Endpoint.
+
 :::image type="content" source="./media/eval-defender-xdr/defender-endpoint-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Endpoint." lightbox="./media/eval-defender-xdr/defender-endpoint-pilot-deploy-steps.svg":::
+
+- [Step 1: Check license state](#step-1-check-license-state)
+- [Step 2: Onboard endpoints using any of the supported management tools](#step-2-onboard-endpoints-using-any-of-the-supported-management-tools)
+- [Step 3: Verify pilot group](#step-3-verify-pilot-group)
+- [Step 4: Try out capabilities](#step-4-try-out-capabilities)
 
 ## Step 1: Check license state
 
@@ -131,8 +123,6 @@ The following table lists the available tools based on the endpoint that you nee
 | **macOS** | - [Local scripts](/defender-endpoint/mac-install-manually)<br/>- [Microsoft Intune](/defender-endpoint/mac-install-with-intune)<br/>- [JAMF Pro](/defender-endpoint/mac-install-with-jamf)<br/>- [Mobile Device Management](/defender-endpoint/mac-install-with-other-mdm) |
 | **iOS** | [App-based](/defender-endpoint/ios-install) |
 | **Android** | [Microsoft Intune](/defender-endpoint/android-intune) |
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 When you pilot Microsoft Defender for Endpoint, you may choose to onboard a few devices to the service before onboarding your entire organization.  
 
@@ -185,3 +175,5 @@ To run any of the provided simulations, you need at least [one onboarded device]
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg" alt-text="A diagram that shows Microsoft Defender for Cloud Apps in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg":::
 
 See [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md).
+
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
