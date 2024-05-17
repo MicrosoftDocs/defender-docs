@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-ngp
 search.appverid: met150
-ms.date: 05/02/2024
+ms.date: 05/17/2024
 ---
 
 # Detect and block potentially unwanted applications
