@@ -76,6 +76,8 @@ Use the following argument with the Microsoft Defender Antivirus command-line ut
 
 For more information, see [Manage Microsoft Defender Antivirus with the mpcmdrun.exe commandline tool](command-line-arguments-microsoft-defender-antivirus.md).
 
+#### Error messages
+
 Here are some error messages you might see: 
 
 ```console
@@ -99,7 +101,12 @@ ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80072EFE h
 MpCmdRun.exe: hr = 0x80072EFE
 ```
 
+#### Root causes
+
 The root cause of these error messages is that the device doesn't have its system-wide `WinHttp` proxy configured. If you don't set this proxy, then the operating system isn't aware of the proxy and can't fetch the CRL (the operating system does this, not Defender for Endpoint), which means that TLS connections to URLs like `http://cp.wd.microsoft.com/` don't succeed. You see successful (response 200) connections to the endpoints, but the MAPS connections would still fail.
+
+
+#### Solutions
 
 The following table lists solutions:
 
