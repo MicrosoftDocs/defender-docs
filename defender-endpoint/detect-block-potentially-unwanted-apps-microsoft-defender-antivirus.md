@@ -141,13 +141,11 @@ For System Center 2012 Configuration Manager, see [How to Deploy Potentially Unw
 
 5. Expand the tree to **Windows Components** \> **Microsoft Defender Antivirus**.
 
-6. Double-click **Configure detection for potentially unwanted applications**.
+6. Double-click **Configure detection for potentially unwanted applications**, and set it to **Enabled**.
 
-7. Select **Enabled** to enable PUA protection.
+7. In **Options**, select **Block** to block potentially unwanted applications, or select **Audit Mode** to test how the setting works in your environment. Select **OK**.
 
-8. In **Options**, select **Block** to block potentially unwanted applications, or select **Audit Mode** to test how the setting works in your environment. Select **OK**.
-
-9. Deploy your Group Policy object as you usually do.
+8. Deploy your Group Policy object as you usually do.
 
 ### Use PowerShell cmdlets to configure PUA protection
 
@@ -181,7 +179,7 @@ For more information, see [Use PowerShell cmdlets to configure and run Microsoft
 
 ## Test and make sure that PUA blocking works
 
-Once you have PUA enabled in block mode, you can test to make sure that it's working properly.  For details, please visit [Potentially unwanted applications (PUA) demonstration](https://learn.microsoft.com/defender-endpoint/defender-endpoint-demonstration-potentially-unwanted-applications)
+Once you have PUA enabled in block mode, you can test to make sure that it's working properly.  For more information, see [Potentially unwanted applications (PUA) demonstration](/defender-endpoint/defender-endpoint-demonstration-potentially-unwanted-applications)
 
 ## View PUA events using PowerShell
 
