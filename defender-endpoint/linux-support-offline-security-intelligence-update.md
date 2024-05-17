@@ -14,7 +14,7 @@ ms.collection:
 - mde-linux
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 03/12/2024
+ms.date: 05/17/2024
 ---
 
 # Configure Offline Security Intelligence Update for Microsoft Defender for Endpoint on Linux 
@@ -67,7 +67,6 @@ Fig. 2: Process flow diagram on the Linux endpoint for security intelligence upd
 - Defender for Endpoint version "101.24022.0001" or higher needs to be installed on the Linux endpoints.
 - The Linux endpoints need to have connectivity to the Mirror Server.
 - The Linux endpoint must be running any of the Defender for Endpoint supported distributions.
-
 - The Mirror Server can be either an HTTP/ HTTPS server or a network share server. For example, an NFS Server.
 - The Mirror Server needs to have access to the following URLs:
   - `https://github.com/microsoft/mdatp-xplat.git`
@@ -85,6 +84,7 @@ Fig. 2: Process flow diagram on the Linux endpoint for security intelligence upd
   
   > [!NOTE]
   > This configuration may vary depending on the number of requests that are served and the load each server must process.
+
 ## Configuring the Mirror Server
 
 > [!NOTE]
@@ -138,7 +138,7 @@ The `settings.json` file consists of a few variables that the user can configure
 | Field Name               | Value  | Description                                            |
 |--------------------------|--------|--------------------------------------------------------|
 | `downloadFolder`         | string | Maps to the location where the script downloads the files to |
-| `downloadLinuxUpdates`   | bool   | When set to true, the script downloads the Linux specific updates to the `downloadFolder` |
+| `downloadLinuxUpdates`   | bool   | When set to `true`, the script downloads the Linux specific updates to the `downloadFolder` |
 | `logFilePath`            | string | Sets up the diagnostic logs at a given folder. This file can be shared with Microsoft for debugging the script if there are any issues |
 | `downloadMacUpdates`     | bool   | The script downloads the Mac specific updates to the `downloadFolder` |
 | `downloadPreviewUpdates` | bool   | Downloads the preview version of the updates available for the specific OS |
@@ -198,12 +198,12 @@ Once the Mirror Server is set up, we need to propagate this URL to the Linux end
 
 | Field Name                                | Values               | Comments                                            |
 |-------------------------------------------|----------------------|-----------------------------------------------------|
-| `automaticDefinitionUpdateEnabled`        | True / False         | Determines the behavior of Defender for Endpoint attempting to perform updates automatically, is turned on or off respectively. |
+| `automaticDefinitionUpdateEnabled`        | `True` / `False`         | Determines the behavior of Defender for Endpoint attempting to perform updates automatically, is turned on or off respectively. |
 | `definitionUpdatesInterval`               | Numeric              | Time of interval between each automatic update of signatures (in seconds). |
 | `offlineDefinitionUpdateUrl`              | String               | URL value generated as part of the Mirror Server set up. |
-| `offlineDefinitionUpdate`                 | enabled / disabled   | When set to `enabled`, the offline security intelligence update feature is enabled, and vice versa. |
-| `offlineDefinitionUpdateFallbackToCloud`  | True / False         | Determine Defender for Endpoint security intelligence update approach when offline Mirror Server fails to serve the update request. If set to true, the update is retried via the Microsoft cloud when offline security intelligence update failed, else vice versa. |
-| `offlineDefinitionUpdateVerifySig`        | enabled/disabled     | When set to `enabled`, downloaded definitions are verified on the endpoints, else vice versa. |
+| `offlineDefinitionUpdate`                 | `enabled` / `disabled`   | When set to `enabled`, the offline security intelligence update feature is enabled, and vice versa. |
+| `offlineDefinitionUpdateFallbackToCloud`  | `True` / `False`         | Determine Defender for Endpoint security intelligence update approach when offline Mirror Server fails to serve the update request. If set to true, the update is retried via the Microsoft cloud when offline security intelligence update failed, else vice versa. |
+| `offlineDefinitionUpdateVerifySig`        | `enabled` / `disabled`     | When set to `enabled`, downloaded definitions are verified on the endpoints, else vice versa. |
 
 > [!NOTE]
 > As of today the offline security intelligence update feature can be configured on Linux endpoints via managed json only. Integration with security settings management on the security portal is in our roadmap.
