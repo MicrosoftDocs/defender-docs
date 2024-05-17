@@ -149,7 +149,7 @@ To take advantage of Microsoft 365 E5 trial licenses during your pilot:
 
 ## Go to the next step
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" alt-text="A diagram that shows the Microsoft Defender for Identity step in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" alt-text="A diagram that shows Microsoft Defender for Identity in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg":::
 
 See [Pilot and deploy Microsoft Defender for Identity](pilot-deploy-defender-identity.md).
 

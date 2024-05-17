@@ -30,7 +30,7 @@ This article outlines the process to enable and pilot Microsoft Defender for Off
 
 This article is part of the end-to-end process of piloting and deploying Microsoft Defender XDR.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" alt-text="A diagram that shows the Microsoft Defender for Office 365 step in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" alt-text="A diagram that shows Microsoft Defender for Office 365 in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg":::
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 
@@ -97,12 +97,15 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 Use the following steps to enable the evaluation for Microsoft Defender for Office 365.
 
-:::image type="content" source="/defender/media/defender/m365-defender-office-eval-enable-steps.png" alt-text="The steps to enable Microsoft Defender for Office 365 in the Microsoft Defender evaluation environment." lightbox="/defender/media/defender/m365-defender-office-eval-enable-steps.png":::
+:::image type="content" source="./media/eval-defender-xdr/defender-office-365-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Office 365." lightbox="./media/eval-defender-xdr/defender-office-365-pilot-deploy-steps.svg":::
 
 - [Step 1: Audit and verify the public MX record](#step-1-audit-and-verify-the-public-mx-record)
 - [Step 2: Audit accepted domains](#step-2-audit-accepted-domains)
 - [Step 3: Audit inbound connectors](#step-3-audit-inbound-connectors)
 - [Step 4: Activate the evaluation](#step-4-activate-the-evaluation)
+- Step 5
+- Step 6
+- Step 7
 
 ## Step 1: Audit and verify the public MX record
 
@@ -172,7 +175,7 @@ When you evaluate Microsoft Defender for Office 365, you might choose to pilot s
 
 It might not be evident why 'Standard' and 'Strict' are the terms used for these groups, but that will become clear when you explore more about Defender for Office 365 security presets. Naming groups 'custom' and 'exceptions' speak for themselves, and though most of your users should fall under *standard* and *strict*, custom and exception groups will collect valuable data for you regarding managing risk.
 
-## Step 1: Create pilot groups
+## Step 5: Create pilot groups
 
 Distribution groups can be created and defined directly in Exchange Online or synchronized from on-premises Active Directory.
 
@@ -195,7 +198,7 @@ Distribution groups can be created and defined directly in Exchange Online or sy
 
 6. On the remaining pages, assign an owner, add members to the group, set the email address, join-depart restrictions, and other settings.
 
-## Step 2: Configure protection
+## Step 6: Configure protection
 
 Some capabilities in Defender for Office 365 are configured and turned on by default, but security operations might want to raise the level of protection from the default.
 
@@ -233,7 +236,7 @@ It's *important* to be aware of the precedence these protection policies take wh
 
 The explanation and table in [Configure protection policies](/defender-office-365/mdo-deployment-guide#step-2-configure-protection-policies) provides a handy reference for what you need to configure.
 
-## Step 3: Try out capabilities and get familiar with simulation, monitoring, and metrics
+## Step 7: Try out capabilities and get familiar with simulation, monitoring, and metrics
 
 Now that your pilot is set up and configured, it's helpful to become familiar with the reporting, monitoring, and attack simulation tools that are unique to Microsoft Defender for Microsoft 365.
 
@@ -245,8 +248,6 @@ Now that your pilot is set up and configured, it's helpful to become familiar wi
 
 ## Next step
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows the Microsoft Defender for Endpoint step in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg":::
-
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows Microsoft Defender for Endpoint in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg":::
 
 See [Pilot and deploy Microsoft Defender for Endpoint](pilot-deploy-defender-endpoint.md).
-

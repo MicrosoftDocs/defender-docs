@@ -31,13 +31,9 @@ This article outlines the process to enable and pilot Microsoft Defender for End
 
 This article is part of the end-to-end process of piloting and deploying Microsoft Defender XDR.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows the Microsoft Defender for Endpoint step in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows Microsoft Defender for Endpoint in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg":::
 
-Use the following steps to enable and pilot Microsoft Defender for Endpoint.
-
-:::image type="content" source="/defender/media/defender/m365-defender-endpoint-eval-steps.png" alt-text="The steps for adding Microsoft Defender for Endpoint to the Microsoft Defender evaluation environment" lightbox="/defender/media/defender/m365-defender-endpoint-eval-steps.png":::
-
-The following table describes the steps in the illustration.
+The following table describes the steps.
 
 |Step|Description|
 |---|---|
@@ -95,12 +91,7 @@ This article will guide you through the steps on setting up the evaluation envir
 > [!TIP]
 > Microsoft Defender for Endpoint also comes with an in-product evaluation lab where you can add pre-configured devices and run simulations to evaluate the capabilities of the platform. The lab comes with a simplified set-up experience that can help quickly demonstrate the value of Microsoft Defender for Endpoint including guidance for many features like advanced hunting and threat analytics. For more information, see [Evaluate capabilities](/defender-endpoint/evaluation-lab). <br> The main difference between the guidance provided in this article and the evaluation lab is the evaluation environment uses production devices whereas the evaluation lab uses non-production devices.
 
-Use the following steps to enable the evaluation for Microsoft Defender for Endpoint.
-
-:::image type="content" source="/defender/media/defender/m365-defender-endpoint-eval-enable-steps.png" alt-text="The steps to enable Microsoft Defender for Endpoint in the Microsoft Defender evaluation environment" lightbox="/defender/media/defender/m365-defender-endpoint-eval-enable-steps.png":::
-
-- [Step 1. Check license state](#step-1-check-license-state)
-- [Step 2. Onboard endpoints](#step-2-onboard-endpoints-using-any-of-the-supported-management-tools)
+:::image type="content" source="./media/eval-defender-xdr/defender-endpoint-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Endpoint." lightbox="./media/eval-defender-xdr/defender-endpoint-pilot-deploy-steps.svg":::
 
 ## Step 1: Check license state
 
@@ -143,23 +134,18 @@ The following table lists the available tools based on the endpoint that you nee
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-Use the following steps to setup and configure the pilot for Microsoft Defender for Endpoint. 
-
-:::image type="content" source="/defender/media/defender/m365-defender-endpoint-pilot-steps.png" alt-text="The steps for adding Microsoft Defender for Identity to the Microsoft Defender evaluation environment" lightbox="/defender/media/defender/m365-defender-endpoint-pilot-steps.png":::
-
-- Step 1. Verify pilot group
-- Step 2. Try out capabilities
-
 When you pilot Microsoft Defender for Endpoint, you may choose to onboard a few devices to the service before onboarding your entire organization.  
 
 You can then try out capabilities that are available such as running attack simulations and seeing how Defender for Endpoint surfaces malicious activities and enables you to conduct an efficient response. 
 
-## Step 1: Verify pilot group
+## Step 3: Verify pilot group
+
 After completing the onboarding steps outlined in the Enable evaluation section, you should see the devices in the Device inventory list approximately after an hour. 
 
 When you see your onboarded devices you can then proceed with trying out capabilities. 
 
-## Step 2: Try out capabilities
+## Step 4: Try out capabilities
+
 Now that you've completed onboarding some devices and verified that they are reporting to the service, familiarize yourself with the product by trying out the powerful capabilities that are available right out of the box.
 
 During the pilot, you can easily get started with trying out some of the features to see the product in action without going through complex configuration steps.
@@ -196,6 +182,6 @@ To run any of the provided simulations, you need at least [one onboarded device]
 
 ## Next step
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Cloud Apps." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg" alt-text="A diagram that shows Microsoft Defender for Cloud Apps in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg":::
 
 See [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md).
