@@ -1,9 +1,9 @@
 ---
-title: Microsoft Defender Antivirus scan considerations and best practices
+title: Microsoft Defender Antivirus full scan considerations and best practices
 description: Understand when and how to use full scans with Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 05/16/2024
+ms.date: 05/17/2024
 audience: ITPro
 ms.topic: conceptual
 author: bsabetghadam
@@ -21,7 +21,7 @@ ms.collection:
 search.appverid: met150
 ---
 
-# Microsoft Defender Antivirus scan considerations and best practices
+# Microsoft Defender Antivirus full scan considerations and best practices
 
 **Applies to:**
 
@@ -67,7 +67,7 @@ To configure scanning options for Microsoft Defender Antivirus, you can use vari
 | Setting | Default | PowerShell/WMI parameter and details |
 |--|--|--|
 | Archive/Container (for example, ISOs) Scanning | `Enabled` | Microsoft Defender Antivirus is optimized to minimize the scan time of a single object. Containers might contain many objects and scanning them may take more time than expected due to the overhead of extracting the items in the container. |
-| Archive files (.zip, .rar, etc.) | `Scanned` | `DisableArchiveScanning`<br/><br/>Turning on `DisableArchiveScanning` excludes the following archive types from antivirus scans: <br/>- `ZIP`<br/>- `Ace`<br/>- `Arc`<br/>- `Arj`<br/>- `BZip2`<br/>- `Cab`<br/>- `CF`<br/>- `CPIO`<br/>- `CPT`<br/>- `GZip`<br/>- `Hap`<br/>- `ISO`<br/>- `Lharc`<br/>- `PSF`<br/>- `Quantum`<br/>- `Rar`<br/>- `Stuff`-It<br/>- `Zoo`<br/>- `ZCompress`<br/>- `Compress`<br/>- `VC4`<br/>- `RPM`<br/>- `BGA`<br/>- `BH`<br/>- `Universal Disk Format`<br/>- `7z` <br/><br/>For more information, see [DisableArchiveScanning](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true#-disablearchivescanning) |
+| Archive files | `Scanned` | `DisableArchiveScanning`<br/><br/>Turning on `DisableArchiveScanning` excludes the following archive types from antivirus scans: <br/>- `ZIP`<br/>- `Ace`<br/>- `Arc`<br/>- `Arj`<br/>- `BZip2`<br/>- `Cab`<br/>- `CF`<br/>- `CPIO`<br/>- `CPT`<br/>- `GZip`<br/>- `Hap`<br/>- `ISO`<br/>- `Lharc`<br/>- `PSF`<br/>- `Quantum`<br/>- `Rar`<br/>- `Stuffit`<br/>- `Zoo`<br/>- `ZCompress`<br/>- `Compress`<br/>- `VC4`<br/>- `RPM`<br/>- `BGA`<br/>- `BH`<br/>- `Universal Disk Format`<br/>- `7z` <br/><br/>For more information, see [DisableArchiveScanning](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true#-disablearchivescanning) |
 | Level of subfolders within an archive folder to scan | `0` | `0` means unlimited. |
 | Max size of archive for scan | `0` | `0` means unlimited. |
 | Mapped network drives | `Scanned` | `DisableScanningMappedNetworkDrivesForFullScan`<br/><br/>See [DisableScanningMappedNetworkDrivesForFullScan](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true&#-disablescanningmappednetworkdrivesforfullscan) |
@@ -114,7 +114,7 @@ The CPU load factor for Microsoft Defender Antivirus isn't a hard limit but rath
 
 - Changing the value has both pros and cons. Higher values mean the scans perform faster; however, it could slow down your system during the scan, while lower values mean the scan takes longer to finish, but you have more CPU resources available for your system during the scan. For instance, if you're running critical workloads on a server, this setting should be set to a value that doesn’t interfere with the functioning of the workloads.
 
-- Manual scans ignore the CPU throttling setting and run without any CPU limits. However, there's a scan policy setting (see the `ThrottleForScheduledScanOnly` setting [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference)) that if it's disabled, then manual scans adhere to the same CPU limits as a scheduled scan.
+- Manual scans ignore the CPU throttling setting and run without any CPU limits. However, there's a scan policy setting (see the `ThrottleForScheduledScanOnly` setting in [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference)) that if it's disabled, then manual scans adhere to the same CPU limits as a scheduled scan.
 
 - CPU throttling on idle scans controls whether the CPU is throttled for scheduled scans while the device is idle. This setting is disabled by default to ensure that the CPU isn't throttled for scheduled scans when the device is idle, regardless of what CPU throttling is set to. For more information, see the `DisableCpuThrottleOnIdleScans` setting in [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true).
 
@@ -133,9 +133,6 @@ Microsoft Defender Antivirus has the following features that help enhance scan p
 
 Microsoft Defender Antivirus has a built-in optimization for content that is highly reputable (for example, signed by trusted sources). When it encounters such content, it simply shifts away from scanning the content to validating the signature to ensure the file wasn’t tampered with.
 
-> [!NOTE]
-> On Windows Server 2016 and Windows Server 2019, automatic exclusions help reduce CPU load during real-time scanning. The automatic exclusions are applied in addition to any custom exclusions you configure. The automatic exclusions are based on server role, such as DNS, AD DS, Hyper-V host, File Server, Print Server, Web Server, etc. Automatic exclusions only apply to Real-time protection (RTP) scanning and are not honored during a Full/Quick or On-demand scans. See [Microsoft Defender Antivirus exclusions on Windows Server](configure-server-exclusions-microsoft-defender-antivirus.md).
-> 
 ### Antivirus exclusions recommendations
 
 Excluding certain locations from scanning can shorten the scan time. There are two types of exclusions: process exclusions and file/folder exclusions. Only file/folder exclusions apply to full scan. Scan exclusions should be carefully developed to reduce scan time while minimizing risk.
