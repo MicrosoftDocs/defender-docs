@@ -9,8 +9,8 @@ manager: deniseb
 ms.author: siosulli
 ms.topic: conceptual
 ms.custom: nextgen
-ms.date: 06/26/2023
-ms.reviewer: mkaminska; pahuijbr
+ms.date: 05/17/2024
+ms.reviewer: yongrhee; pahuijbr
 ms.collection:
 - m365-security
 - tier2
