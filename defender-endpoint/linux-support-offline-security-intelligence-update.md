@@ -203,7 +203,7 @@ Once the Mirror Server is set up, we need to propagate this URL to the Linux end
 | `offlineDefinitionUpdateUrl`              | String               | URL value generated as part of the Mirror Server set up. |
 | `offlineDefinitionUpdate`                 | enabled / disabled   | When set to `enabled`, the offline security intelligence update feature is enabled, and vice versa. |
 | `offlineDefinitionUpdateFallbackToCloud`  | True / False         | Determine Defender for Endpoint security intelligence update approach when offline Mirror Server fails to serve the update request. If set to true, the update is retried via the Microsoft cloud when offline security intelligence update failed, else vice versa. |
-| `offlineDefinitionUpdateVerifySig`        | enabled/disabled     | When set to `enabled`,  downloaded definitions are verified on the endpoints, else vice versa. |
+| `offlineDefinitionUpdateVerifySig`        | enabled/disabled     | When set to `enabled`, downloaded definitions are verified on the endpoints, else vice versa. |
 
 > [!NOTE]
 > As of today the offline security intelligence update feature can be configured on Linux endpoints via managed json only. Integration with security settings management on the security portal is in our roadmap.
@@ -216,9 +216,9 @@ To test if the settings are applied correctly on the Linux endpoints, run the fo
 mdatp health --details definitions
 ```
 
-For example, a sample output would look like:
+A sample output would look like the following code snippet:
 
-```console
+```output
 user@vm:~$ mdatp health --details definitions
 automatic_definition_update_enabled         : true [managed]
 definitions_updated                         : Mar 14, 2024 at 12:13:17 PM
@@ -266,8 +266,8 @@ offline_definition_update_fallback_to_cloud : false[managed]
 
 ### Issues: MDATP update failure
 
-- Update stuck or update didn't trigger
-- Update failed
+- Update stuck, or update didn't trigger.
+- Update failed.
 
 ### Common Troubleshooting Steps
 
@@ -298,10 +298,12 @@ offline_definition_update_fallback_to_cloud : false[managed]
 ### Known Issues:
 
 Offline signature update might fail in the following scenario:  
-You enabled the feature, applied the signature updates, then disabled the feature to apply further signature updates from cloud, and subsequently re-enabled the feature for additional signature updates.
+
+   You enabled the feature, applied the signature updates, then disabled the feature to apply further signature updates from cloud, and subsequently re-enabled the feature for additional signature updates.
 
 Mitigation steps:  
-The fix for this will be available in the upcoming release. 
+
+A fix for this issue is planned to release soon. 
 
 ## Useful Links
 
