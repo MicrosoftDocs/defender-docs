@@ -27,69 +27,45 @@ ms.topic: conceptual
 
 - Microsoft Defender XDR
 
-This series of articles is designed to step you through the entire process of setting up a pilot XDR environment, *end-to-end*, so you can evaluate the features and capabilities of Microsoft Defender XDR and then deploying the evaluation environment to production when you're ready.
+This series of articles steps you through the entire process of setting up a pilot XDR environment so you can evaluate the features and capabilities of Microsoft Defender XDR and then deploying the evaluation environment into production.
 
 <a name='microsoft-365-defender-is-a-microsoft-xdr-cyber-security-solution'></a>
-
-## Microsoft Defender XDR
 
 An eXtended detection and response (XDR) solution is a step forward in cyber security because it takes the threat data from systems that were once isolated and unifies them so that you can see patterns and act on suspected cyberattacks faster.
 
 For example, Microsoft Defender XDR is an XDR solution that combines the information on cyberattacks for identities, endpoints, email, and cloud apps in one place. It leverages artificial intelligence (AI) and automation to automatically stop some types of attacks and remediate affected assets to a safe state.
 
-<a name='microsoft-recommendations-for-evaluating-microsoft-365-defender'></a>
-
-### Microsoft recommendations for evaluating Microsoft Defender XDR security
-
-Microsoft recommends you create your evaluation in an existing production subscription of Microsoft 365 to gain real-world insights immediately and you can tune settings to work against current threats in your environment. After you've gained experience and are comfortable with the platform, simply promote each component, one at a time, to production.
-
-## The anatomy of a cyber security attack
-
 Microsoft Defender XDR is a cloud-based, unified, pre- and post-breach enterprise defense suite. It coordinates prevention, detection, investigation, and response across identities, endpoints, email, cloud apps, and their data.
-
-This diagram show a common cyber-attack and the components of Microsoft Defender XDR that help detect and remediate it.
-
-:::image type="content" source="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg" alt-text="A diagram that shows the various attempts of a cyber security attack." lightbox="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg":::
-
-The cyber attack starts with a phishing email that arrives at the Inbox of an employee in your organization, who unknowingly opens the email attachment. This attachment installs malware, which can lead to a chain of attack attempts that could lead to the theft of sensitive data. But in this case, Defender for Office 365 is in operation.
-
-In the illustration:
-
-- **Exchange Online Protection**, part of Microsoft Defender for Office 365, can detect the phishing email and use mail flow rules (also known as transport rules) to make certain it never arrives in the Inbox.
-- **Defender for Office 365** uses Safe Attachments to test the attachment and determine that it's harmful, so the mail that arrives either isn't actionable by the user, or policies prevent the mail from arriving at all.
-- **Defender for Endpoint** manages devices that connect to the corporate network and detect device and network vulnerabilities that might otherwise be exploited.
-- **Defender for Identity** takes note of sudden account changes like privilege escalation, or high-risk lateral movement. It also reports on easily exploited identity issues like unconstrained Kerberos delegation, for correction by the security team.
-- **Microsoft Defender for Cloud Apps** notices anomalous behavior like impossible-travel, credential access, and unusual download, file share, or mail forwarding activity and reports these to the security team.
 
 <a name='microsoft-365-defender-components-secure-devices-identity-data-and-applications'></a>
 
 ## Microsoft Defender XDR components
 
-Microsoft Defender XDR is made up of these security technologies, operating in tandem. You don't need all of these components to benefit from the capabilities of XDR and Microsoft Defender XDR. You will realize gains and efficiencies through using one or two as well.
+This table shows the Microsoft Defender XDR operating together.
 
 |Component|Description|For more information|
 |---|---|---|
-|Microsoft Defender for Identity|Microsoft Defender for Identity uses Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.|[What is Microsoft Defender for Identity?](/defender-for-identity/what-is)|
-|Exchange Online Protection|Exchange Online Protection is the native cloud-based SMTP relay and filtering service that helps protect your organization against spam and malware.|[Exchange Online Protection (EOP) overview - Office 365](/defender-office-365/eop-about)|
-|Microsoft Defender for Office 365|Microsoft Defender for Office 365 safeguards your organization against malicious threats posed by email messages, links (URLs) and collaboration tools.|[Microsoft Defender for Office 365 - Office 365](/defender-office-365/defender-for-office-365-whats-new)|
-|Microsoft Defender for Endpoint|Microsoft Defender for Endpoint is a unified platform for device protection, post-breach detection, automated investigation, and recommended response.|[Microsoft Defender for Endpoint - Windows security](/defender-endpoint/microsoft-defender-endpoint)|
-|Microsoft Defender for Cloud Apps|Microsoft Defender for Cloud Apps is a comprehensive cross-SaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps.|[What is Defender for Cloud Apps?](/cloud-app-security/what-is-cloud-app-security)|
-|Microsoft Entra ID Protection|Microsoft Entra ID Protection evaluates risk data from billions of sign-in attempts and uses this data to evaluate the risk of each sign-in to your environment. This data is used by Microsoft Entra ID to allow or prevent account access, depending on how Conditional Access policies are configured. Microsoft Entra ID Protection is licensed separately from Microsoft Defender XDR. It is included with Microsoft Entra ID P2.|[What is Identity Protection?](/azure/active-directory/identity-protection/overview-identity-protection)|
+| Microsoft Defender for Identity | Uses signals from your on-premises Active Directory Domain Services (AD DS) and Active Directory Federation Services (AD FS) to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization. | [What is Microsoft Defender for Identity?](/defender-for-identity/what-is) |
+| Exchange Online Protection | The native cloud-based SMTP relay and filtering service that helps protect your organization against spam and malware. | [Exchange Online Protection (EOP) overview - Office 365](/defender-office-365/eop-about) |
+| Microsoft Defender for Office 365 | Safeguards your organization against malicious threats posed by email messages, links (URLs) and collaboration tools. | [Microsoft Defender for Office 365 - Office 365](/defender-office-365/defender-for-office-365-whats-new) |
+| Microsoft Defender for Endpoint | A unified platform for device protection, post-breach detection, automated investigation, and recommended response. | [Microsoft Defender for Endpoint - Windows security](/defender-endpoint/microsoft-defender-endpoint) |
+| Microsoft Defender for Cloud Apps | A comprehensive cross-SaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps. | [What is Defender for Cloud Apps?](/cloud-app-security/what-is-cloud-app-security) |
+| Microsoft Entra ID Protection | Evaluates risk data from billions of sign-in attempts and uses this data to evaluate the risk of each sign-in to your environment. This data is used by Microsoft Entra ID to allow or prevent account access, depending on how Conditional Access policies are configured. Microsoft Entra ID Protection is licensed separately from Microsoft Defender XDR. It is included with Microsoft Entra ID P2 licenses.| [What is Identity Protection?](/azure/active-directory/identity-protection/overview-identity-protection) |
 
 <a name='microsoft-365-defender-architecture'></a>
 
 ## Microsoft Defender XDR architecture
 
-The diagram below illustrates high-level architecture for key Microsoft Deender XDR components and integrations. *Detailed* architecture for each Defender component, and use-case scenarios, are given throughout this series of articles.
+The following diagram illustrates architecture for Microsoft Defender XDR components and integrations.
 
 :::image type="content" source="./media/eval-defender-xdr/m365-defender-eval-architecture.svg" alt-text="A diagram that shows the high-level architecture of Microsoft Defender XDR." lightbox="./media/eval-defender-xdr/m365-defender-eval-architecture.svg":::
 
 In this illustration:
 
-- Microsoft Defender XDR combines the signals from all of the Defender components to provide extended detection and response (XDR) across domains. This includes a unified incident queue, automated response to stop attacks, self-healing (for compromised devices, user identities, and mailboxes), cross-threat hunting, and threat analytics.
+- Microsoft Defender XDR combines the signals from all of the Defender components to provide XDR across domains. This includes a unified incident queue, automated response to stop attacks, self-healing (for compromised devices, user identities, and mailboxes), cross-threat hunting, and threat analytics.
 - Microsoft Defender for Office 365 safeguards your organization against malicious threats posed by email messages, links (URLs), and collaboration tools. It shares signals resulting from these activities with Microsoft Defender XDR. Exchange Online Protection (EOP) is integrated to provide end-to-end protection for incoming email and attachments.
-- Microsoft Defender for Identity gathers signals from servers running Active Directory Federated Services (AD FS) and on-premises Active Directory Domain Services (AD DS). It uses these signals to protect your hybrid identity environment, including protecting against hackers that use compromised accounts to move laterally across workstations in the on-premises environment.
-- Microsoft Defender for Endpoint gathers signals from and protects devices used by your organization.
+- Microsoft Defender for Identity gathers signals from AD DS domain controllers and servers running AD FS and AD CS. It uses these signals to protect your hybrid identity environment, including protecting against hackers that use compromised accounts to move laterally across workstations in the on-premises environment.
+- Microsoft Defender for Endpoint gathers signals from and protects devices managed by your organization.
 - Microsoft Defender for Cloud Apps gathers signals from your organization's use of cloud apps and protects data flowing between your environment and these apps, including both sanctioned and unsanctioned cloud apps.
 - Microsoft Entra ID Protection evaluates risk data from billions of sign-in attempts and uses this data to evaluate the risk of each sign-in to your environment. This data is used by Microsoft Entra ID to allow or prevent account access, depending on how Conditional Access policies are configured. Microsoft Entra ID Protection is licensed separately from Microsoft Defender XDR. It is included with Microsoft Entra ID P2.
 
@@ -99,31 +75,45 @@ In this illustration:
 
 Additional optional architecture components not included in this illustration:
 
-- Detailed signal data from all Microsoft Defender XDR components can be integrated into Microsoft Sentinel and combined with other logging sources to offer full SIEM and SOAR capabilities and insights.
-- For more reading on using Microsoft Sentinel, an Azure SIEM, with Microsoft Defender XDR as an XDR, take a look at this [Overview article](/azure/sentinel/microsoft-365-defender-sentinel-integration) and the Microsoft Sentinel and Microsoft Defender XDR [integration steps](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
-- For more on SOAR in Microsoft Sentinel (including links to playbooks in the Microsoft Sentinel GitHub Repository), please read [this article](/azure/sentinel/automate-responses-with-playbooks).
+- Detailed signal data from all Microsoft Defender XDR components can be integrated into Microsoft Sentinel and combined with other logging sources to offer full  security information and event management (SIEM) and security orchestration, automation, and response (SOAR) capabilities and insights.
+- For more information on using Microsoft Sentinel, an Azure-based SIEM, with Microsoft Defender XDR as an XDR, see [Overview of Microsoft Defender XDR and Microsoft Sentinel integration](/azure/sentinel/microsoft-365-defender-sentinel-integration) and [integration steps for Microsoft Sentinel and Microsoft Defender XDR](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
+- For more information about SOAR in Microsoft Sentinel (including links to playbooks in the Microsoft Sentinel GitHub Repository), see [Automate threat response with playbooks in Microsoft Sentinel](/azure/sentinel/automate-responses-with-playbooks).
+
+## Microsoft Defender XDR and an example cyber security attack
+
+This diagram show a common cyber-attack and the components of Microsoft Defender XDR that help detect and remediate it.
+
+:::image type="content" source="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg" alt-text="A diagram that shows the various attempts of a cyber security attack." lightbox="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg":::
+
+The cyber attack starts with a phishing email that arrives at the Inbox of an employee in your organization, who unknowingly opens the email attachment. This attachment installs malware, which can lead to a chain of attack attempts that leads to the theft of sensitive data.
+
+In the illustration:
+
+- **Exchange Online Protection**, part of Microsoft Defender for Office 365, can detect the phishing email and use mail flow rules (also known as transport rules) to make certain it never arrives in the Inbox.
+- **Defender for Office 365** uses Safe Attachments to test the attachment and determine that it's harmful, so the mail that arrives either isn't actionable by the user, or policies prevent the mail from arriving at all.
+- **Defender for Endpoint** detects device and network vulnerabilities that might otherwise be exploited for devices managed by your organization.
+- **Defender for Identity** takes note of sudden on-premises user account changes like privilege escalation or high-risk lateral movement. It also reports on easily exploited identity issues like unconstrained Kerberos delegation, for correction by your security team.
+- **Microsoft Defender for Cloud Apps** detects anomalous behavior such as impossible-travel, credential access, and unusual downloading, file sharing, or mail forwarding activity and reports these to your security team.
 
 <a name='the-evaluation-process-for-microsoft-365-defender-cyber-security'></a>
 
 ## The pilot and deploy process for Microsoft Defender XDR
 
-Microsoft recommends enabling the components of Microsoft 365 Defender in the order illustrated:
+Microsoft recommends enabling the components of Microsoft 365 Defender in the following order.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg" alt-text="A diagram that shows the pilot and deploy process for Microsoft Defender XDR." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg":::
 
-The following table describes this illustration.
-
-|Step|Description|
+| Phase | Description |
 |---|---|
-|A. Create the pilot environment | Activate the trial licenses for Microsoft Defender XDR.|
-|B. Pilot and deploy Microsoft Defender XDR tools | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
-|C. Investigate and respond to threats | [Investigate and respond to threats](pilot-deploy-investigate-respond.md) |
+| A. Create the pilot environment | [Activate the trial licenses for Microsoft Defender XDR](#create-the-pilot-environment)|
+| B. Pilot and deploy Microsoft Defender XDR tools | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
+|C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
-This order is commonly recommended and designed to leverage the value of the capabilities quickly based on how much effort is typically required to deploy and configure the capabilities. For example, Defender for Office 365 can be configured in less time than it takes to enroll devices in Defender for Endpoint. Prioritize the components to meet your business needs.
+This order is designed to leverage the value of the capabilities quickly based on how much effort is typically required to deploy and configure the capabilities. For example, Defender for Office 365 can be configured in less time than it takes to enroll devices in Defender for Endpoint. Prioritize the components to meet your business needs.
 
 ## Create the pilot environment
 
-This series of articles assumes that you already have a production Microsoft 365 tenant and are activating Microsoft 365 E5 trial licenses to pilot Microsoft Defender XDR in your current environment. An in-place pilot will let you keep any security methods with the purchase of licenses after the pilot.
+This series of articles assumes that you already have a production Microsoft 365 tenant and are activating Microsoft 365 E5 trial licenses to pilot Microsoft Defender XDR in your current environment. An in-place pilot will let you keep any security methods with the purchase of licenses after the pilot. Microsoft recommends you create your evaluation in an existing production subscription of Microsoft 365 to gain real-world insights immediately and you can tune settings to work against current threats in your environment. After you've gained experience and are comfortable with the platform, simply promote each component, one at a time, to production.
 
 An alternative is to  [Set up your Microsoft Defender XDR trial lab environment](setup-m365deval.md). However, it won't show any real cyber security information such as threats or attacks on your production Microsoft 365 tenant while you are piloting.
 
@@ -147,12 +137,11 @@ To take advantage of Microsoft 365 E5 trial licenses during your pilot:
 
    :::image type="content" source="/defender/media/mdo-eval/4_mdo-trial-order.png" alt-text="The Try Now button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/4_mdo-trial-order.png":::
 
-## Go to the next step
+## Next step
 
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" alt-text="A diagram that shows Microsoft Defender for Identity in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg":::
 
 See [Pilot and deploy Microsoft Defender for Identity](pilot-deploy-defender-identity.md).
-
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 

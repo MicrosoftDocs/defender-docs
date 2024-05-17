@@ -98,8 +98,6 @@ The following table identified key concepts that are important to understand whe
 | Cloud Discovery Dashboard    | Cloud Discovery analyzes your traffic logs and is designed to give more insight into how cloud apps are being used in your organization as well as give alerts and risk levels.     |  [Working with discovered apps](/cloud-app-security/discovered-apps)    |
 |Connected Apps |Defender for Cloud Apps provides end-to-end protection for connected apps using Cloud-to-Cloud integration, API connectors, and real-time access and session controls using our Conditional App Access Controls. |[Protecting connected apps](/cloud-app-security/protect-connected-apps) |
 
-:::image type="content" source="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Cloud Apps." lightbox="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg":::
-
 <a name="step-1"></a>
 
 ## Step 1. Connect to the Defender for Cloud Apps portal

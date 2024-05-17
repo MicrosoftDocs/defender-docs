@@ -25,8 +25,10 @@ ms.date: 05/15/2024
 
 **Applies to:**
 - Microsoft Defender XDR
+- 
+- > [!NOTE]
+> This article is also part of the Microsoft Defender XDR solution we talk about in this [Overview](pilot-deploy-overview.md).
 
-This article outlines the process to enable and pilot Microsoft Defender for Office 365. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md), and you've  and you have created the Microsoft Defender XDR pilot environment.
 
 This article is part of the end-to-end process of piloting and deploying Microsoft Defender XDR.
 
@@ -58,6 +60,12 @@ The following table describes this illustration.
 
 On-premises integration is common but optional. If your environment is cloud-only, this guidance also works for you.
 
+## SIEM integration
+
+You can integrate Microsoft Defender for Office 365 with Microsoft Sentinel to more comprehensively analyze security events across your organization and build playbooks for effective and immediate response. For more information, see [Connect alerts from Microsoft Defender for Office 365](/azure/sentinel/connect-office-365-advanced-threat-protection).
+
+Microsoft Defender for Office 365 can also be integrated into other Security Information and Event Management (SIEM) solutions using the [Office 365 Activity Management API](/office/office-365-management-api/office-365-management-activity-api-reference).
+
 ## Understand key concepts
 
 The following table identified key concepts that are important to understand when evaluating, configuring, and deploying Defender for Office 365.
@@ -87,11 +95,6 @@ A successful Defender for Office 365 evaluation or production pilot assumes the 
 > [!IMPORTANT]
 > If these requirements aren't applicable or you are still in a hybrid coexistence scenario, then a Microsoft Defender for Office 365 evaluation can require more complex or advanced configurations which aren't fully covered in this guidance.
 
-## SIEM integration
-
-You can integrate Microsoft Defender for Office 365 with Microsoft Sentinel to more comprehensively analyze security events across your organization and build playbooks for effective and immediate response. For more information, see [Connect alerts from Microsoft Defender for Office 365](/azure/sentinel/connect-office-365-advanced-threat-protection).
-
-Microsoft Defender for Office 365 can also be integrated into other Security Information and Event Management (SIEM) solutions using the [Office 365 Activity Management API](/office/office-365-management-api/office-365-management-activity-api-reference).
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -103,9 +106,9 @@ Use the following steps to enable the evaluation for Microsoft Defender for Offi
 - [Step 2: Audit accepted domains](#step-2-audit-accepted-domains)
 - [Step 3: Audit inbound connectors](#step-3-audit-inbound-connectors)
 - [Step 4: Activate the evaluation](#step-4-activate-the-evaluation)
-- Step 5
-- Step 6
-- Step 7
+- [Step 5: Create pilot groups](#step-5-create-pilot-groups)
+- [Step 6: Configure protection](#step-6-configure-protection)
+- [Step 7: Try out capabilities](#step-7-try-out-capabilities)
 
 ## Step 1: Audit and verify the public MX record
 
@@ -236,7 +239,7 @@ It's *important* to be aware of the precedence these protection policies take wh
 
 The explanation and table in [Configure protection policies](/defender-office-365/mdo-deployment-guide#step-2-configure-protection-policies) provides a handy reference for what you need to configure.
 
-## Step 7: Try out capabilities and get familiar with simulation, monitoring, and metrics
+## Step 7: Try out capabilities
 
 Now that your pilot is set up and configured, it's helpful to become familiar with the reporting, monitoring, and attack simulation tools that are unique to Microsoft Defender for Microsoft 365.
 
