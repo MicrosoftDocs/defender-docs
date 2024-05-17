@@ -78,7 +78,7 @@ Specifies the enforcement preference of antivirus engine. There are three values
 
 
 > [!NOTE]
-> Real-time enforcement level is not a complete security solution. It needs to be supplemented by other features like scheduled scans.
+> It is recommended to also use [scheduled scans](https://learn.microsoft.com/en-us/defender-endpoint/linux-schedule-scan-mde?view=o365-worldwide) as per requirement.
 
 #### Enable/disable behavior-monitoring 
 
@@ -104,6 +104,9 @@ Specifies whether to start a process scan after new security intelligence update
 |**Data type**|Boolean|
 |**Possible values**|true (default) <p> false|
 |**Comments**|Available in Defender for Endpoint version 101.45.00 or higher.|
+
+> [!NOTE]
+> This feature only works when enforcement level is real-time.
 
 #### Scan archives (on-demand antivirus scans only)
 
