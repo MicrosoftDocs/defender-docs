@@ -17,7 +17,7 @@ ms.custom:
 description: Admins can learn how the order of protection settings and the priority order of security policies affect the application of security policies in Microsoft 365.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 10/20/2023
+ms.date: 05/16/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -114,8 +114,8 @@ Entries in a user's _safelist collection_ (the Safe Senders list, the Safe Recip
 |Malware|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
 |High confidence phishing|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
 |Phishing|**User wins**: Email delivered to user's Inbox|**Tenant wins**: The applicable anti-spam policy determines the action|
-|High confidence spam|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
-|Spam|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
+|High confidence spam|**User wins**: Email delivered to user's Inbox|**Tenant wins**: The applicable anti-spam policy determines the action|
+|Spam|**User wins**: Email delivered to user's Inbox|**Tenant wins**: The applicable anti-spam policy determines the action|
 |Bulk|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
 |Not spam|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
 
