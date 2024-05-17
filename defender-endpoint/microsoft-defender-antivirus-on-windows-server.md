@@ -9,7 +9,7 @@ ms.author: siosulli
 ms.reviewer: pahuijbr
 manager: deniseb
 ms.topic: conceptual
-ms.date: 04/03/2024
+ms.date: 05/17/2024
 ms.collection: 
 - m365-security
 - tier2
@@ -95,7 +95,7 @@ To view all the services that aren't running, run the following PowerShell cmdle
 sc query state= all
 ```
 
-## Update antimalware Security intelligence
+## Update antimalware security intelligence
 
 > [!IMPORTANT]
 > Beginning with [platform version 4.18.2208.0 and later](microsoft-defender-antivirus-updates.md#monthly-platform-and-engine-versions): If a server has been onboarded to Microsoft Defender for Endpoint, the "Turn off Windows Defender" [group policy](configure-endpoints-gp.md#update-endpoint-protection-configuration) setting will no longer completely disable Windows Defender Antivirus on Windows Server 2012 R2 and later. Instead, it will place it into passive mode. In addition, the [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) feature will allow a switch to active mode but not to passive mode.
@@ -161,10 +161,12 @@ See [Configure exclusions in Microsoft Defender Antivirus on Windows Server](con
 
 ## Passive mode and Windows Server
 
-If you're using a non-Microsoft antivirus product as your primary antivirus solution on Windows Server, you must set Microsoft Defender Antivirus to passive mode or disabled mode manually. If your Windows Server endpoint is onboarded to Microsoft Defender for Endpoint, you can set Microsoft Defender Antivirus to passive mode. If you're not using Microsoft Defender for Endpoint, set Microsoft Defender Antivirus to disabled mode. 
+If you're using a non-Microsoft antivirus product as your primary antivirus solution on Windows Server, you must set Microsoft Defender Antivirus to passive mode or disable it manually. 
 
-> [!TIP]
-> See [Microsoft Defender Antivirus compatibility with other security products](microsoft-defender-antivirus-compatibility.md).
+- If your Windows Server endpoint is onboarded to Microsoft Defender for Endpoint, you can set Microsoft Defender Antivirus to passive mode. 
+- If you're not using Microsoft Defender for Endpoint, set Microsoft Defender Antivirus to disabled mode. 
+
+If you uninstall your non-Microsoft antivirus product, make sure to re-enable Microsoft Defender Antivirus. See [Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](/defender-endpoint/enable-update-mdav-to-latest-ws#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled).
 
 The following table describes methods to set Microsoft Defender Antivirus to passive mode, disable Microsoft Defender Antivirus, and uninstall Microsoft Defender Antivirus:
 
