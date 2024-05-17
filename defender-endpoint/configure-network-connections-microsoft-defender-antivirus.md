@@ -76,21 +76,38 @@ Use the following argument with the Microsoft Defender Antivirus command-line ut
 
 For more information, see [Manage Microsoft Defender Antivirus with the mpcmdrun.exe commandline tool](command-line-arguments-microsoft-defender-antivirus.md).
 
-Use the tables below to see error messages you might encounter along with information on the root cause and possible solutions:
+Here are some error messages you might see: 
 
-|Error messages|
-|:---|
-|Start Time: <Day_of_the_week> MM DD YYYY HH:MM:SS <br/> MpEnsureProcessMitigationPolicy: hr = 0x1 <br/> ValidateMapsConnection<br/> <br/> ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80070006 httpcore=451)<br/> MpCmdRun.exe: hr = **0x80070006**<br/><br/> ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80072F8F httpcore=451)<br/>MpCmdRun.exe: hr = **0x80072F8F** <br/><br/> ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80072EFE httpcore=451)<br/> MpCmdRun.exe: hr = **0x80072EFE**|
+```console
+Start Time: <Day_of_the_week> MM DD YYYY HH:MM:SS 
+MpEnsureProcessMitigationPolicy: hr = 0x1 
+ValidateMapsConnection
+```
 
-|Root cause|
-|:---|
-The root cause of these error messages is that the device doesn't have its system-wide WinHttp proxy configured. If you don't set the system-wide WinHttp proxy, then the operating system isn't aware of the proxy and can't fetch the CRL (the operating system does this, not Defender for Endpoint), which means that TLS connections to URLs like `http://cp.wd.microsoft.com/` will not fully succeed. You'll see successful (response 200) connections to the endpoints but the MAPS connections would still fail.|
+```console
+ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80070006 httpcore=451)
+MpCmdRun.exe: hr = 0x80070006
+```
+
+```console
+ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80072F8F httpcore=451)
+MpCmdRun.exe: hr = 0x80072F8F
+```
+
+```output
+ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80072EFE httpcore=451)
+MpCmdRun.exe: hr = 0x80072EFE
+```
+
+The root cause of these error messages is that the device doesn't have its system-wide `WinHttp` proxy configured. If you don't set this proxy, then the operating system isn't aware of the proxy and can't fetch the CRL (the operating system does this, not Defender for Endpoint), which means that TLS connections to URLs like `http://cp.wd.microsoft.com/` don't succeed. You see successful (response 200) connections to the endpoints, but the MAPS connections would still fail.
+
+The following table lists solutions:
 
 |Solution|Description|
 |:---|:---|
-|Solution (Preferred) | Configure the system-wide WinHttp proxy that allows the CRL check.|
-|Solution (Preferred 2) | - [Setup Redirect the Microsoft Automatic Update URL for a disconnected environment](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)?redirectedfrom=MSDN) <br/> - [Configure a server that has access to the Internet to retrieve the CTL files](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)?redirectedfrom=MSDN) <br/> - [Redirect the Microsoft Automatic Update URL for a disconnected environment](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)?redirectedfrom=MSDN) <br/> <br/> _Useful references:_ <br/> - Go to **Computer Configuration > Windows Settings > Security Settings > Public Key Policies > Certificate Path Validation Settings** > **Select the Network Retrieval tab** > **Select Define these policy settings** > **Select to clear the Automatically update certificates in the Microsoft Root Certificate Program (recommended) check box.** <br/> - [Certificate Revocation List (CRL) Verification - an Application Choice](https://social.technet.microsoft.com/wiki/contents/articles/964.certificate-revocation-list-crl-verification-an-application-choice.aspx) <br/> - [https://support.microsoft.com/help/931125/how-to-get-a-root-certificate-update-for-windows](https://support.microsoft.com/help/931125/how-to-get-a-root-certificate-update-for-windows) <br/> - [https://technet.microsoft.com/library/dn265983(v=ws.11).aspx](https://technet.microsoft.com/library/dn265983(v=ws.11).aspx) <br/> - [/dotnet/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element](/dotnet/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element) - [https://blogs.msdn.microsoft.com/amolravande/2008/07/20/improving-application-start-up-time-generatepublisherevidence-setting-in-machine-config/](https://blogs.msdn.microsoft.com/amolravande/2008/07/20/improving-application-start-up-time-generatepublisherevidence-setting-in-machine-config/)|
-|Work-around solution (Alternative) <br/> _Not best practice since you'll no longer check for revoked certificates or certificate pinning_.| Disable CRL check only for SPYNET. <br/> Configuring this registry SSLOption disables CRL check only for SPYNET reporting. It won't impact other services.<br/><br/> To to this: <br/> Go to **HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet** > set SSLOptions (dword) to 2 (hex). <br/> - 0 – disable pinning and revocation checks <br/> - 1 – disable pinning <br/>  - 2 – disable revocation checks only <br/> - 3 – enable revocation checks and pinning (default)|
+| Solution (Preferred) | Configure the system-wide WinHttp proxy that allows the CRL check.|
+| Solution (Preferred 2) | - [Setup Redirect the Microsoft Automatic Update URL for a disconnected environment](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)?redirectedfrom=MSDN) <br/> - [Configure a server that has access to the Internet to retrieve the CTL files](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)?redirectedfrom=MSDN) <br/> - [Redirect the Microsoft Automatic Update URL for a disconnected environment](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)?redirectedfrom=MSDN) <br/> <br/>Go to **Computer Configuration** > **Windows Settings** > **Security Settings** > **Public Key Policies** > **Certificate Path Validation Settings**. Select the **Network Retrieval** tab, and then select **Define these policy settings**. Clear the **Automatically update certificates in the Microsoft Root Certificate Program (recommended)** check box.<br/><br/> Here are some useful resources: <br/> - [Certificate Revocation List (CRL) Verification - an Application Choice](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) <br/> - [Configure Trusted Roots and Disallowed Certificates](https://support.microsoft.com/help/931125/how-to-get-a-root-certificate-update-for-windows) <br/> - [<generatePublisherEvidence> Element](/dotnet/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element) - [Improving application Start up time: GeneratePublisherEvidence setting in Machine.config](/archive/blogs/amolravande/improving-application-start-up-time-generatepublisherevidence-setting-in-machine-config)|
+| Work-around solution (Alternative) <br/> *This is not a best practice since you're no longer checking for revoked certificates or certificate pinning.*| Disable CRL check only for SPYNET. <br/> Configuring this registry SSLOption disables CRL check only for SPYNET reporting. It won't impact other services.<br/><br/> To to this: <br/> Go to **HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet** > set SSLOptions (dword) to 2 (hex). <br/> - 0 – disable pinning and revocation checks <br/> - 1 – disable pinning <br/>  - 2 – disable revocation checks only <br/> - 3 – enable revocation checks and pinning (default)|
 
 ## Attempt to download a fake malware file from Microsoft
 
