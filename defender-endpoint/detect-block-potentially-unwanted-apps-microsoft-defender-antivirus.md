@@ -202,9 +202,7 @@ PSComputerName   :
 
 ## Get email notifications about PUA detections
 
-You can turn on email notifications to receive mail about PUA detections.
-
-See [Troubleshoot event IDs](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/) for details on viewing Microsoft Defender Antivirus events. PUA events are recorded under event ID **1160**.
+You can turn on email notifications to receive mail about PUA detections. For more information about Microsoft Defender Antivirus events, see [Troubleshoot event IDs](/defender-endpoint/troubleshoot-microsoft-defender-antivirus/). PUA events are recorded under event ID **1160**.
 
 ## View PUA events using advanced hunting
 
@@ -228,10 +226,7 @@ For more information, see [Configure and validate exclusions based on file exten
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
-> - [Set preferences for Microsoft Defender for Endpoint on macOS](mac-preferences.md)
 > - [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md)
-> - [macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
-> - [Set preferences for Microsoft Defender for Endpoint on Linux](linux-preferences.md)
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
@@ -240,4 +235,5 @@ For more information, see [Configure and validate exclusions based on file exten
 
 - [Next-generation protection](microsoft-defender-antivirus-windows.md)
 - [Configure behavioral, heuristic, and real-time protection](configure-protection-features-microsoft-defender-antivirus.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
