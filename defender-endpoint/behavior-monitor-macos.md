@@ -71,71 +71,71 @@ The following sections describe each of these methods in detail.
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-        <key>PayloadUUID</key>
-        <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
-        <key>PayloadType</key>
-        <string>Configuration</string>
-        <key>PayloadOrganization</key>
-        <string>Microsoft</string>
-        <key>PayloadIdentifier</key>
-        <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
-        <key>PayloadDisplayName</key>
-        <string>Microsoft Defender for Endpoint settings</string>
-        <key>PayloadDescription</key>
-        <string>Microsoft Defender for Endpoint configuration settings</string>
-        <key>PayloadVersion</key>
-        <integer>1</integer>
-        <key>PayloadEnabled</key>
-        <true/>
-        <key>PayloadRemovalDisallowed</key>
-        <true/>
-        <key>PayloadScope</key>
-        <string>System</string>
-        <key>PayloadContent</key>
-        <array>
-            <dict>
-                <key>PayloadUUID</key>
-                <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
-                <key>PayloadType</key>
-                <string>com.microsoft.wdav</string>
-                <key>PayloadOrganization</key>
-                <string>Microsoft</string>
-                <key>PayloadIdentifier</key>
-                <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
-                <key>PayloadDisplayName</key>
-                <string>Microsoft Defender for Endpoint configuration settings</string>
-                <key>PayloadDescription</key>
-                <string/>
-                <key>PayloadVersion</key>
-                <integer>1</integer>
-                <key>PayloadEnabled</key>
-                <true/>
-              <key>antivirusEngine</key>
-              <dict>
-                            <key>behaviorMonitoring</key>
-                           <string>enabled</string>
-              </dict>
-              <key>features</key>
-              <dict>
-                            <key>behaviorMonitoring</key>
-                           <string>enabled</string>
-              <key>behaviorMonitoringConfigurations</key>
-                           <dict>
-                                 <key>blockExecution</key>
-                                 <string>enabled</string>
-                                 <key>notifyForks</key>
-                                 <string>enabled</string>
-                                 <key>forwardRtpToBm</key>
-                                 <string>enabled</string>
-                                 <key>avoidOpenCache</key>
-                                 <string>enabled</string>
-                           </dict>
-              </dict>
-</dict>
+    <dict>
+        <key>PayloadUUID</key>
+        <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
+        <key>PayloadType</key>
+        <string>Configuration</string>
+        <key>PayloadOrganization</key>
+        <string>Microsoft</string>
+        <key>PayloadIdentifier</key>
+        <string>C4E6A782-0C8D-44AB-A025-EB893987A295</string>
+        <key>PayloadDisplayName</key>
+        <string>Microsoft Defender for Endpoint settings</string>
+        <key>PayloadDescription</key>
+        <string>Microsoft Defender for Endpoint configuration settings</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>PayloadEnabled</key>
+        <true/>
+        <key>PayloadRemovalDisallowed</key>
+        <true/>
+        <key>PayloadScope</key>
+        <string>System</string>
+        <key>PayloadContent</key>
+        <array>
+            <dict>
+                <key>PayloadUUID</key>
+                <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
+                <key>PayloadType</key>
+                <string>com.microsoft.wdav</string>
+                <key>PayloadOrganization</key>
+                <string>Microsoft</string>
+                <key>PayloadIdentifier</key>
+                <string>99DBC2BC-3B3A-46A2-A413-C8F9BB9A7295</string>
+                <key>PayloadDisplayName</key>
+                <string>Microsoft Defender for Endpoint configuration settings</string>
+                <key>PayloadDescription</key>
+                <string/>
+                <key>PayloadVersion</key>
+                <integer>1</integer>
+                <key>PayloadEnabled</key>
+                <true/>
+                <key>antivirusEngine</key>
+                <dict>
+                <key>behaviorMonitoring</key>
+                <string>enabled</string>
+                </dict>
+                <key>features</key>
+                <dict>
+                <key>behaviorMonitoring</key>
+                <string>enabled</string>
+                <key>behaviorMonitoringConfigurations</key>
+                <dict>
+                <key>blockExecution</key>
+                <string>enabled</string>
+                <key>notifyForks</key>
+                <string>enabled</string>
+                <key>forwardRtpToBm</key>
+                <string>enabled</string>
+                <key>avoidOpenCache</key>
+                <string>enabled</string>
+                                 </dict>
+                    </dict>
+            </dict>
+        </array>
+    </dict>
 </plist>
-</array>
-</dict>
 ```
 
 2. Open **Devices** > **Configuration profiles**. 
@@ -154,29 +154,29 @@ The following sections describe each of these methods in detail.
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> 
 <plist version="1.0">
-<dict>
-              <key>antivirusEngine</key>
-              <dict>
-                            <key>behaviorMonitoring</key>  
-                           <string>enabled</string> 
-              </dict>
-              <key>features</key>
-              <dict>
-                            <key>behaviorMonitoring</key>
-                           <string>enabled</string>
-              <key>behaviorMonitoringConfigurations</key>
-                           <dict>
-                                 <key>blockExecution</key>
-                                         <string>enabled</string>
-                                 <key>notifyForks</key>
-                                         <string>enabled</string>
-                                 <key>forwardRtpToBm</key>
-                                         <string>enabled</string>
-                                 <key>avoidOpenCache</key>
-                                         <string>enabled</string>
-                           </dict>
-              </dict>
-</dict>
+    <dict>
+        <key>antivirusEngine</key>
+            <dict>
+                <key>behaviorMonitoring</key>  
+                <string>enabled</string> 
+            </dict>
+                <key>features</key>
+                     <dict>
+                         <key>behaviorMonitoring</key>
+                         string>enabled</string>
+                         <key>behaviorMonitoringConfigurations</key>
+                             <dict>
+                                 <key>blockExecution</key>
+                                 <string>enabled</string>
+                                 <key>notifyForks</key>
+                                 <string>enabled</string>
+                                 <key>forwardRtpToBm</key>
+                                 <string>enabled</string>
+                                 <key>avoidOpenCache</key>
+                                 <string>enabled</string>
+                             </dict>
+                     </dict>
+    </dict>
 </plist>
 ```
 
@@ -214,9 +214,6 @@ sudo mdatp threat list
 For more information on how to test for a behavior monitoring (prevention/block) detection, see [Behavior Monitoring demonstration](demonstration-behavior-monitoring.md).
 
 ### Frequently Asked Questions (FAQ):
-
-#### Do Behavior Monitoring protection alerts show up in the Device timeline and/or Advanced Hunting?
-Not at this time, it's in telemetry mode.
 
 #### What if I see an increase in cpu utilization or memory utilization?
 Disable Behavior Monitoring and see if the issue goes away.
