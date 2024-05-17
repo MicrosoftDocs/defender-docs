@@ -191,7 +191,7 @@ Once the Mirror Server is set up, we need to propagate this URL to the Linux end
     "offlineDefinitionUpdate": "enabled"
   },
 "features": {
-"offlineDefinitionUpdateVerifySig": "enabled",
+"offlineDefinitionUpdateVerifySig": "enabled"
 }
 }
 ```
