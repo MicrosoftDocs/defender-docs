@@ -76,6 +76,10 @@ Specifies the enforcement preference of antivirus engine. There are three values
 |**Possible values**|real_time <p> on_demand <p> passive (default)|
 |**Comments**|Available in Defender for Endpoint version 101.10.72 or higher. Default is changed from real_time to passive for Endpoint version 101.23062.0001 or higher.|
 
+
+> [!NOTE]
+> Real-time enforcement level is not a complete security solution. It needs to be supplemented by other features like scheduled scans.
+
 #### Enable/disable behavior-monitoring 
 
 Determines whether behavior monitoring and blocking capability is enabled on the device or not. 
