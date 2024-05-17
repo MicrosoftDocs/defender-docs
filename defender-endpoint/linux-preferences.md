@@ -105,7 +105,7 @@ Specifies whether to start a process scan after new security intelligence update
 |**Comments**|Available in Defender for Endpoint version 101.45.00 or higher.|
 
 > [!NOTE]
-> This feature only works when enforcement level is real-time.
+> This feature only works when the enforcement level is set to `real-time`.
 
 #### Scan archives (on-demand antivirus scans only)
 
