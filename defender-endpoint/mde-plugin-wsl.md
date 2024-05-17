@@ -270,8 +270,7 @@ DeviceProcessEvents
 
    - If the connectivity test reports "invalid" in health check, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
 
-      For Windows 11:
-
+      - In Windows 11
          ```bash
          # Settings apply across all Linux distros running on WSL 2
          [wsl2]
@@ -280,9 +279,7 @@ DeviceProcessEvents
 
          networkingMode=mirrored  
          ```
-      
-      For Windows 10:
-
+      - In Windows 10
          ```bash
          # Settings apply across all Linux distros running on WSL 2
          [wsl2]
@@ -330,8 +327,8 @@ DeviceProcessEvents
 
 7. The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following under registry and restart WSL:
 
-   - **Name**: `OverrideReleaseRing`
-   - **Type**: `REG_SZ`
-   - **Value**: `Dogfood or External or InsiderFast or Production`
-   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
+  - **Name**: `OverrideReleaseRing`
+  - **Type**: `REG_SZ`
+  - **Value**: `Dogfood or External or InsiderFast or Production`
+  - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
 
