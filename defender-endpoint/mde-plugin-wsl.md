@@ -332,7 +332,7 @@ DeviceProcessEvents
   - **Value**: `Dogfood or External or InsiderFast or Production`
   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
 
-8. If you see an error on launching wsl like "A fatal error was returned by plugin 'DefenderforEndpointPlug-in' Error code: Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_FILE_NOT_FOUND". It means the installation is faulty. Please run repair from Control Panel -> Programs -> Programs and Features -> Search and select "Microsoft Defender for Endpoint plug-in for WSL" -> click Repair.
+8. If you see an error on launching wsl like "A fatal error was returned by plugin 'DefenderforEndpointPlug-in' Error code: Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_FILE_NOT_FOUND". It means the MDE plug-in for WSL installation is faulty. Please run repair from Control Panel -> Programs -> Programs and Features -> Search and select "Microsoft Defender for Endpoint plug-in for WSL" -> click Repair.
 This should fix the problem by placing the right files in the expected directories.
 
 :::image type="content" source="media/mdeplugin-wsl/plug-in-missing-error-wsl.png" alt-text="Screenshot showing plugin error not found in powerShell window." lightbox="media/mdeplugin-wsl/plug-in-missing-error-wsl.png":::
