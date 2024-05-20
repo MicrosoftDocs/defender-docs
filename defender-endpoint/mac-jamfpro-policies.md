@@ -846,7 +846,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
     :::image type="content" source="media/847b70e54ed04787e415f5180414b310.png" alt-text="The configuration settings new policy." lightbox="media/847b70e54ed04787e415f5180414b310.png":::
 
-11. In **General**, enter the Display name **MDATP Onboarding Contoso 200329 v100.86.92 or later**.
+11. In **General**, for the **Display name**, use `MDATP Onboarding Contoso 200329 v100.86.92 or later`.
 
       :::image type="content" source="media/625ba6d19e8597f05e4907298a454d28.png" alt-text="The configuration settings - MDATP onboard." lightbox="media/625ba6d19e8597f05e4907298a454d28.png":::
 
@@ -856,7 +856,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
 13. Select **Save**.
 
-14. Select **Packages > Configure**.
+14. Select **Packages** > **Configure**.
 
     :::image type="content" source="media/8fb4cc03721e1efb4a15867d5241ebfb.png" alt-text="The option to configure packages." lightbox="media/8fb4cc03721e1efb4a15867d5241ebfb.png":::
 
@@ -870,22 +870,25 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
 17. Create a smart group for machines with Microsoft Defender profiles.
 
-    For better user experience, configuration profiles to enrolled machines must be installed before Microsoft Defender's package.
-    In most cases JAMF Prof pushes configuration profiles immediately, which policies are executed after some time (i.e. during check-in).
+    For a better user experience, configuration profiles to enrolled machines must be installed before Microsoft Defender's package. In most cases JAMF Prof pushes configuration profiles immediately, and those policies are executed after some time (i.e. during check-in). However, in some cases, configuration profiles deployment can be deployed with a significant delay (i.e. if a user's machine is locked).
 
-    However, in some cases, configuration profiles deployment can be deployed with a significant delay (i.e. if a user's machine is locked).
+    JAMF Pro provides a way to ensure the correct order. You can create a smart group for machines that already received Microsoft Defender's configuration profile, and install Microsoft Defender's package only to those machines (and as soon as they receive this profile).
 
-    JAMF Pro provides a way to ensure the correct order.
-    You can create a smart group for machines that already received Microsoft Defender's configuration profile, and install Microsoft Defender's package only to those machines (and as soon as they receive this profile!)
+    Follow these steps:
 
-    To do it, create a smart group first. In the new browser window open **Smart Computers Groups** from the left menu, click **New**.
-    Assign some name, switch to the **Criteria** tab, click **Add** and **Show Advanced Criteria**.
+    1. Create a smart group. In a new browser window, open **Smart Computers Groups**. 
+    
+    2. Select **New**, and give your group a name.
 
-    Select **Profile Name** as a criterion, and use the name of a previously created configuration profile as Value:
+    3. On the **Criteria** tab, select **Add**, and then select **Show Advanced Criteria**.
 
-    :::image type="content" source="media/ffae2332be230870f865585c84733225.png" alt-text="Creating a smart group." lightbox="media/ffae2332be230870f865585c84733225.png":::
+    4. Select **Profile Name** as a criterion, and use the name of a previously created configuration profile as the value:
 
-    Click **Save**. Return back to the window where you configure a package policy.
+       :::image type="content" source="media/ffae2332be230870f865585c84733225.png" alt-text="Creating a smart group." lightbox="media/ffae2332be230870f865585c84733225.png":::
+
+    5. Select **Save**. 
+    
+    6. Go back to the window where you configure a package policy.
 
 18. Select the **Scope** tab.
 
@@ -899,11 +902,11 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
     :::image type="content" source="media/1c08d097829863778d562c10c5f92b67.png" alt-text="The configuration settings - ad1." lightbox="media/1c08d097829863778d562c10c5f92b67.png":::
 
-    Switch to the **Computer Groups** tab. Find the smart group you created, and **Add** it.
+    Switch to the **Computer Groups** tab. Find the smart group you created, and then select **Add**.
 
     :::image type="content" source="media/216253cbfb6ae738b9f13496b9c799fd.png" alt-text="The configuration settings - ad2." lightbox="media/216253cbfb6ae738b9f13496b9c799fd.png":::
 
-    Select **Self-Service**, if you want users to install Microsoft Defender voluntarily, on demand.
+    If you want users to install Defender for Endpoint voluntarily (or on demand), select **Self-Service**.
 
     :::image type="content" source="media/c9f85bba3e96d627fe00fc5a8363b83a.png" alt-text="The Self Service tab for configuration settings." lightbox="media/c9f85bba3e96d627fe00fc5a8363b83a.png":::
 
@@ -915,8 +918,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
 ## Configuration profile scope
 
-JAMF requires you to define a set of machines for a configuration profile.
-You need to make sure that all machines receiving Defender's package, also receive *all* configuration profiles listed above.
+JAMF requires you to define a set of machines for a configuration profile. You need to make sure that all machines receiving Defender's package, also receive *all* configuration profiles listed above.
 
 > [!WARNING]
 > JAMF supports Smart Computer Groups that allow deploying, such as configuration profiles or policies to all machines matching certain criteria evaluated dynamically.
@@ -929,4 +931,5 @@ You need to make sure that all machines receiving Defender's package, also recei
 > Making configuration profiles depending on Defender's presence effectively delays deployment of configuration profiles, and results in an initially unhealthy product and/or prompts for manual approval of certain application permissions, that are otherwise auto approved by profiles.
 
 Deploying a policy with Microsoft Defender's package *after* deploying configuration profiles ensures the end user's best experience, because all required configurations will be applied before the package installs.
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
