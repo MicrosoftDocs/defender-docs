@@ -19,7 +19,7 @@ Microsoft Defender Threat Intelligence (Defender TI) offers a robust and flexibl
 
 This article helps you understand how to conduct a search and pivot across different data sets to discover relationships between different artifacts.
 
-![Search HomePage Chrome Screenshot](media/searchHomePageChromeScreenshot.png)
+:::image type="content" source="/defender/threat-intelligence/media/intel-explorer-search.png" alt-text="Intel explorer search screenshot." lightbox="/defender/threat-intelligence/media/intel-explorer-search.png":::
 
 ## Prerequisites
 
@@ -41,118 +41,44 @@ Defender TI's **Intel explorer** search is both simple and powerful, designed to
 ### Search artifact types
 
 1. **IP address:** Search *195.161.141[.]65* in the Intel explorer search bar. This action results in an IP address search.
-
-    ![Search Ip Address](media/searchIpAddress.png)
-
 2. **Domain:** Search `fabrikam.com` in the Intel explorer search bar. This action results in a domain search.
-
-    ![Search Domain](media/searchDomain.png)
-
 3. **Host:** Search `canary.fabrikam.com` in the Intel explorer search bar. This action results in a host search.
-
-    ![Search Host](media/searchHost.png)
-
 4. **Keyword:** Search *apt29* in the Intel explorer search bar. This action results in a keyword search. Keyword searches cover any type of keyword, which might include a term or email address, among others, and they result in associations with articles, projects, and data sets.
-
-    ![Search Keyword](media/searchKeyword.png)
-
 5. **Common Vulnerabilities and Exposures (CVE) ID:** Search *CVE-2021-40444* in the Intel explorer search bar. This action results in a CVE ID keyword search.
-
 6. **Article:** Search *Commodity Skimming & Magecart Trends in First Quarter of 2022* in the Intel explorer search bar. This action results in an article search.
-
-    ![Search Ti Article](media/searchTiArticle.png)
-
 7. **Tag:** Choose **Tag** from the Intel explorer search bar drop-down menu and then search *magecart*. This action results in a tag search.
 
     > [!NOTE]
-    > This does not return articles that share that tag value.
-
-    ![Search Tag](media/searchTag.png)
+    > This search doesn't return articles that share that tag value.
 
 8. **Component:** Choose **Component** from the Intel explorer search bar drop-down menu and then search *cobalt strike* This action results in a component search.
-
-    ![Search Component](media/searchComponent.png)
-
 9. **Tracker:** Choose **Trackers** from the Intel explorer search bar drop-down menu and then search *07d14d16d21d21d00042d41d00041d47e4e0ae17960b2a5b4fd6107fbb0926*. This action results in a tracker search. 
 
     > [!NOTE]
     > This example is a *JarmHash* tracker type.
 
-    ![Search Trackers](media/searchTrackers.png)
-
 10. **WHOIS email:** Choose **WHOIS** > **Email** from the Intel explorer search bar drop-down menu and then search *domains@microsoft.com*. This action results in a WHOIS email search.
-
-    ![Search Whois Email](media/searchWhoisEmail.png)
-
 11. **WHOIS name:** Choose **WHOIS** > **Name** from the Intel explorer search bar drop-down menu and then search *MSN Hostmaster*. This action results in a WHOIS name search.
-
-    ![Search Whois Name](media/searchWhoisName.png)
-
 12. **WHOIS organization:** Choose **WHOIS** > **Organization** from the Intel explorer search bar drop-down menu and then search *Microsoft Corporation*. This action results in a WHOIS organization search.
-
-    ![Search Whois Organization](media/searchWhoisOrganization.png)
-
 13. **WHOIS address:** Choose **WHOIS** > **Address** from the Intel explorer search bar drop-down menu and then search *One Microsoft Way*. This action results in a WHOIS address search.
-
-    ![Search Whois Address](media/searchWhoisAddress.png)
-
 14. **WHOIS city:** Choose **WHOIS** > **City** from the Intel explorer search bar drop-down menu and then search *Redmond*. This action results in a WHOIS city search.
-
-    ![Search Whois City](media/searchWhoisCity.png)
-
 15. **WHOIS state:** Choose **WHOIS** > **State** from the Intel explorer search bar drop-down menu and then search *WA*. This action results in a WHOIS state search.
-
-    ![Search Whois State](media/searchWhoisState.png)
-
 16. **WHOIS postal code:** Choose **WHOIS** > **Postal code** from the Intel explorer search bar drop-down menu and then search *98052*. This action results in a WHOIS postal code search.
-
-    ![Search Whois Postal Code](media/searchWhoisPostalCode.png)
-
 17. **WHOIS country:** Choose **WHOIS** > **Country** from the Intel explorer search bar drop-down menu and then search *US*. This action results in a WHOIS country/region search.
-
-    ![Search Whois Country](media/searchWhoisCountry.png)
-
 18. **WHOIS phone:** Choose **WHOIS** > **Phone** from the Intel explorer search bar drop-down menu and then search *+1.4258828080*. This action results in a WHOIS phone search.
-
-    ![Search Whois Phone](media/searchWhoisPhone.png)
-
 19. **WHOIS nameserver:** Choose **WHOIS** > **Nameserver** from the Intel explorer search bar drop-down menu and then search  `ns1-03.azure-dns.com`. This action results in a WHOIS nameserver search.
-
-    ![Search Whois Name server](media/searchWhoisNameserver.png)
-
 20. **Certificate SHA-1:** Choose **Certificate** > **SHA-1** from the Intel explorer search bar drop-down menu and then search *35cd04a03ef86664623581cbd56e45ed07729678*. This action results in a certificate SHA-1 search.
-
-    ![Search Certificate Sha1](media/searchCertificateSha1.png)
-
 21. **Certificate serial number:** Choose **Certificate** > **Serial number** from the Intel explorer search bar drop-down menu and then search *1137354899731266880939192213383415094395905558*. This action results in a certificate Serial Number search.
-
-    ![Search Certificate Serial Number](media/searchCertificateSerialNumber.png)
-
 22. **Certificate issuer common name:** Choose **Certificate** > **Issuer common name** from the Intel explorer search bar drop-down menu and then search *Microsoft Azure TLS Issuing CA 05*. This action results in a certificate issuer common name search.
-
-    ![Search Certificate Issuer CommonName](media/searchCertificateIssuerCommonName.png)
-
 23. **Certificate issuer alternative name:** Choose **Certificate** > **Issuer alternative name** from the Intel explorer search bar drop-down menu and then search a certificate issuer alternative name. This action results in a certificate issuer alternative name search.
-
 24. **Certificate subject common name:** Choose **Certificate** > **Subject common name** from the Intel explorer search bar drop-down menu and then search `*.oneroute.microsoft.com`. This action results in a certificate subject common name search.
-
-    ![Search Certificate Subject CommonName](media/searchCertificateSubjectCommonName.png)
-
 25. **Certificate subject alternative name:** Choose **Certificate** > **Subject alternative name** from the Intel explorer search bar drop-down menu and then search `oneroute.microsoft.com`. This action results in a certificate subject alternative name search.
-
-    ![Search Certificate Subject Alternative Name](media/searchCertificateSubjectAlternativeName.png)
-
 26. **Cookie name:** Choose **Cookie** > **Name** from the Intel explorer search bar drop-down menu and then search *ARRAffinity*. This action results in a cookie name search.
-
-    ![Search Cookie Name](media/searchCookieName.png)
-
 27. **Cookie domain:** Choose **Cookie** > **Domain** from the Intel explorer search bar drop-down menu and then search `portal.fabrikam.com`. This action results in a cookie domain search.
-
-    ![Search Cookie Domain](media/searchCookieDomain.png)
 
 ### Pivots
 
-For any of the searches performed in the previous steps, there are artifacts with hyperlinks that you can pivot off to discover further enriched results associated with those indicators. Feel free to experiment with this on your own.
+For any of the searches performed in the previous steps, there are artifacts with hyperlinks that you can pivot off to discover further enriched results associated with those indicators. Feel free to experiment with pivots on your own.
 
 ## Search results
 
@@ -160,13 +86,12 @@ The results of a threat intelligence search can be grouped into the following se
 - [Key insights](#key-insights)
 - [Summary](#summary)
 - [Data sets](#data-sets)
-- [Intelligence](#intelligence)
 
 ### Key insights
 
 Defender TI provides some basic information about the artifact at the top of the search results page. This information could include any of the following, depending on the artifact type.
 
-![Search IP Key Insights](media/searchIPKeyInsights.png)
+:::image type="content" source="/defender/threat-intelligence/media/intel-explorer-key-insights.png" alt-text="Search results key insights." lightbox="/defender/threat-intelligence/media/intel-explorer-key-insights.png":::
 
 - **Country/Region:** The flag next to the IP address indicates the country or region of origin for the artifact, which can help determine its reputability or security posture. In the preceding sample screenshot, the IP address is hosted on infrastructure within the United States.
 - **Reputation:** In the example, the IP address is tagged *Malicious*, which indicates that Defender TI detected connections between this artifact and known adversary infrastructure. Artifacts can also be tagged as *Suspicious*, *Neutral*, or *Unknown*. 
@@ -202,7 +127,7 @@ The **Summary** tab surfaces key findings about an artifact that Defender TI der
 
   [Learn more about analyst insights](analyst-insights.md)
 
-- **Articles:** This section displays any articles that might provide insight on how to best investigate and ultimately disarm the impacted artifact. These articles are written by researchers who study the behavior of known threat actors and their infrastructure, surfacing key findings that could help you and others mitigate risks to their organization. 
+- **Articles:** This section displays any articles that might provide insight on how to best investigate and ultimately disarm the impacted artifact. Researchers who study the behavior of known threat actors and their infrastructure write these articles, surfacing key findings that could help you and others mitigate risks to their organization. 
 
   In the following example, the searched IP address is identified as an IOC that relates to the findings within the article.
 
@@ -216,11 +141,11 @@ The **Summary** tab surfaces key findings about an artifact that Defender TI der
 
 - **Resolutions:** Resolutions are individual Domain Name System (DNS) records captured using passive sensors distributed throughout the world. These values reveal a history of how a domain or IP address changes infrastructure over time. They can be used to discover other infrastructure and measure risk based on levels of connection. For each resolution, we provide **First seen** and **Last seen** timestamps to showcase the lifecycle of the resolutions.
 
-![Summary Tab Re solutions](media/summaryTabResolutions.png)
+  ![Summary Tab Re solutions](media/summaryTabResolutions.png)
 
 - **Certificates:** Beyond securing your data, TLS certificates are a fantastic way for users to connect disparate network infrastructure. TLS certificates can make connections that passive DNS or WHOIS data might miss. This means more ways of correlating potential malicious infrastructure and identifying potential operational security failures of actors. For each TLS certificate, we provide the certificate name, expiration date, subject common name, and subject organization name.
 
-![Summary Tab Certificates](media/summaryTabCertificates.png)
+  ![Summary Tab Certificates](media/summaryTabCertificates.png)
 
 - **Projects:** Defender TI lets you create projects for organizing indicators of interest or compromise from an investigation. Projects are also created to monitor connecting artifacts for improved visibility. Projects contain a listing of all associated artifacts and a detailed history that retains the names, descriptions, collaborators, and monitoring profiles.
 
@@ -234,9 +159,9 @@ The **Summary** tab surfaces key findings about an artifact that Defender TI der
 
 Data sets help you deep-dive into the tangible connections observed by Defender TI. While the **Summary** tab surfaces key findings to provide immediate context about an artifact, the various data sets, which appear as separate tabs in the search results, enables you to study these connections much more granularly. 
 
-You can select any of the returned values to pivot quicky across related metadata and unveil insights that might have been missed with traditional investigative methods.
+You can select any of the returned values to pivot quickly across related metadata and unveil insights that you might miss with traditional investigative methods.
 
-![Data Sets Edge Screenshot](media/dataSetsEdgeScreenshot.png)
+:::image type="content" source="/defender/threat-intelligence/media/data-sets-01.png" alt-text="Sorting data sets screenshot." lightbox="/defender/threat-intelligence/media/data-sets-01.png":::
 
 The following data sets are available in Defender TI:
 
@@ -253,12 +178,6 @@ The following data sets are available in Defender TI:
 - Reverse DNS
 
 [Learn more about data sets](data-sets.md)
-
-### Intelligence
-
-The intelligence section highlights any curated insights in Defender TI, whether derived from our research team through the **Articles** and **Profiles** tabs, or from your own team through the **Projects** tab. This section provides you with more context about a queried artifact; you can learn from the investigation efforts of the larger security community to jumpstart their own.
-
-![Data Tab Intelligence](media/dataTabIntelligence.png)
 
 ## Next steps
 

@@ -19,7 +19,7 @@ In Microsoft Defender Threat Intelligence (Defender TI), the **Analyst insights*
 
 In the following example, you can quickly determine that the IP address is routable, hosts a web server, and had an open port within the past five days. Furthermore, the system displays rules that weren't triggered, which can be equally helpful when kick starting an investigation.
 
-![Analyst Insights Edge Screenshot](media/analystInsightsEdgeScreenshot.png)
+:::image type="content" source="/defender/threat-intelligence/media/analyst-insights.png" alt-text="Analyst insights screenshot." lightbox="/defender/threat-intelligence/media/analyst-insights.png":::
 
 ## Analyst insight types and questions they can address
 

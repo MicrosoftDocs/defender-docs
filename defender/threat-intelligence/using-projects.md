@@ -35,7 +35,7 @@ You can also download artifacts within a project by selecting the **Download** i
 
 - When did this team member last edit the project?
 
-    ![Projects Detailed Project Chrome Screenshot](media/projectsDetailedProjectChromeScreenshot.png)
+:::image type="content" source="/defender/threat-intelligence/media/project-details.png" alt-text="Project details screenshot." lightbox="/defender/threat-intelligence/media/project-details.png":::
 
 ## Prerequisites
 
@@ -48,7 +48,7 @@ You can also download artifacts within a project by selecting the **Download** i
 
 ## Open Defender TI Intel projects page in the Microsoft Defender portal
 
-The Intel projects page shows you the projects you own or that were shared with you by other Defender TI users in your tenant. 
+The **Intel projects** page shows you the projects you own or that were shared with you by other Defender TI users in your tenant. 
 
 1. Access the [Defender portal](https://security.microsoft.com/) and complete the Microsoft authentication process. [Learn more about the Defender portal](/defender-xdr/microsoft-365-defender-portal)
 2. Navigate to **Threat intelligence** > **Intel projects**. 
@@ -59,13 +59,15 @@ You can create a project in the Defender portal in two ways:
 
 1. To create a project from the **Intel projects** page, select **New project**.
 
-    ![Add to Project](media/projectsAddProject.png)
+    :::image type="content" source="/defender/threat-intelligence/media/new-project-01.png" alt-text="Create new project from Intel projects page." lightbox="/defender/threat-intelligence/media/new-project-01.png":::
 
 2. To create a new project while performing an investigation in the **Intel explorer** page, perform an indicator search from the Intel explorer search then select **Add to project** > **Add new project** on the search results.
 
+     :::image type="content" source="/defender/threat-intelligence/media/new-project-02.png" alt-text="Create new project from search results." lightbox="/defender/threat-intelligence/media/new-project-02.png":::
+
 On the **New project** side panel that appears, fill out the required fields and select **Save**.
 
-![Add New Project](media/projectsAddNewProjectDetails.png)
+:::image type="content" source="/defender/threat-intelligence/media/new-project-03.png" alt-text="Add new project." lightbox="/defender/threat-intelligence/media/new-project-03.png":::
 
 ## Managing projects
 
@@ -73,7 +75,7 @@ Once you create a project, you can manage it in the **Intel projects** page. Thi
 
 By default, the Intel projects page displays the team projects associated with all the Defender TI users in your tenant. You can choose to view just the personal projects you created or the projects that were shared with you to contribute to.
 
-![Managing Projects](media/projectsHomePage.png)
+:::image type="content" source="/defender/threat-intelligence/media/manage-projects.png" alt-text="Managing projects." lightbox="/defender/threat-intelligence/media/manage-projects.png":::
 
 - To view the details of a project, select the project's name. 
 - To make changes to the project directly, select **Edit** on the top right corner of the project page. You can only edit projects if you have the sufficient access level to them. 

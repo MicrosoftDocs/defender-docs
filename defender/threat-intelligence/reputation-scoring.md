@@ -19,13 +19,13 @@ Microsoft Defender Threat Intelligence (Defender TI) provides proprietary reputa
 
 Reputation data is important to understanding the trustworthiness of your own attack surface and is also useful when assessing unknown hosts, domains, or IP addresses that appear in investigations. These scores uncover any prior malicious or suspicious activity that affected the entity, or other known indicators of compromise (IOCs) that should be considered.
 
-![Reputation Edge Screenshot](media/reputationEdgeScreenshot.png)
+:::image type="content" source="/defender/threat-intelligence/media/reputation-scoring.png" alt-text="Reputation scoring screenshot." lightbox="/defender/threat-intelligence/media/reputation-scoring.png":::
 
 ## Understanding reputation scores
 
 Reputation scores are determined by a series of algorithms designed to quantify the risk associated with an entity quickly. We develop reputation scores based on our proprietary data by using our crawling infrastructure and on IP information collected from external sources.
 
-![Reputation Summary Card](media/reputationSummaryCard.png)
+:::image type="content" source="/defender/threat-intelligence/media/reputation-score-summary-card.png" alt-text="Reputation summary card." lightbox="/defender/threat-intelligence/media/reputation-score-summary-card.png":::
 
 ## Detection methods
 
