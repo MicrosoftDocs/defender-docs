@@ -14,7 +14,7 @@ ms.collection:
 ms.custom:
 - partner-contribution
 audience: ITPro
-ms.date: 05/15/2024
+ms.date: 05/17/2024
 search.appverid: MET150
 ---
 
@@ -287,7 +287,7 @@ DeviceProcessEvents
          dnsProxy=false
          ```
 
-5. In case you face any other challenges or issues, open the terminal and run the following commands to generate the support bundle: 
+5. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle: 
 
    ```powershell
    cd "%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools"
@@ -310,17 +310,17 @@ DeviceProcessEvents
    3. Select **Windows 10 and later** > **Settings catalog**.
 
    4. Create a name for the new profile, and search for **Windows Subsystem for Linux** to see and add the full list of available settings.
-   
+
    5. Set the **Allow WSL1** setting to **Disabled**, to ensure that only WSL 2 distributions can be used.
 
-      Alternately, if you want to keep using WSL 1, or not use the Intune Policy, you can selectively associate your installed distributions to run on WSL 2, by running the command in PowerShell: 
+      Alternately, if you want to keep using WSL 1, or not use the Intune Policy, you can selectively associate your installed distributions to run on WSL 2, by running the command in PowerShell:
 
       ```powershell
       wsl --set-version <YourDistroName> 2
       ```
 
       To have WSL 2 as your default WSL version for new distributions to be installed in the system, run the following command in PowerShell: 
-   
+
       ```powershell
       wsl --set-default-version 2
       ```
@@ -332,3 +332,12 @@ DeviceProcessEvents
   - **Value**: `Dogfood or External or InsiderFast or Production`
   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
 
+8. If you see an error on launching WSL, such as "A fatal error was returned by plugin 'DefenderforEndpointPlug-in' Error code: Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_FILE_NOT_FOUND", it means the Defender for Endpoint plug-in for WSL installation is faulty. To repair it, follow these steps:
+
+   1. In Control Panel, go to **Programs** > **Programs and Features**.
+
+   2. Search for and select **Microsoft Defender for Endpoint plug-in for WSL**. Then select **Repair**.
+
+   This should fix the problem by placing the right files in the expected directories.
+
+   :::image type="content" source="media/mdeplugin-wsl/plug-in-repair-control-panel.png" alt-text="Screenshot showing MDE plug-in for WSL repair option in control panel." lightbox="media/mdeplugin-wsl/plug-in-repair-control-panel.png":::

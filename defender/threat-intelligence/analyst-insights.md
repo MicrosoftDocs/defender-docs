@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender Threat Intelligence (Defender TI) Analyst Insights
-description: In this overview article, learn about the Microsoft Defender Threat Intelligence (Defender TI)'s analyst insights feature.
+title: Microsoft Defender Threat Intelligence (Defender TI) Analyst insights
+description: Learn about the Microsoft Defender Threat Intelligence (Defender TI)'s Analyst insights feature.
 author: alexroland24
 ms.author: aroland
 manager: dolmont
@@ -15,9 +15,11 @@ ms.custom: template-overview
 >[!IMPORTANT]
 > On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) will be retired and will no longer be accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
-In Microsoft Defender Threat Intelligence (Defender TI), the Analyst Insights section provides quick insights about the artifact that might help determine the next step in an investigation. This section lists any insights that apply to the artifact, and insights that don't apply for extra visibility. In the below example, we can quickly determine that the IP Address is routable, hosts a web server, and had an open port within the past five days. Furthermore, the system displays rules that weren't triggered, which can be equally helpful when kick starting an investigation.
+In Microsoft Defender Threat Intelligence (Defender TI), the **Analyst insights** section provides you with quick insights about an artifact that might help determine your next step in an investigation. This section lists any insights that apply to the artifact, and insights that don't apply for extra visibility. 
 
-![Analyst Insights Edge Screenshot](media/analystInsightsEdgeScreenshot.png)
+In the following example, you can quickly determine that the IP address is routable, hosts a web server, and had an open port within the past five days. Furthermore, the system displays rules that weren't triggered, which can be equally helpful when kick starting an investigation.
+
+:::image type="content" source="/defender/threat-intelligence/media/analyst-insights.png" alt-text="Analyst insights screenshot." lightbox="/defender/threat-intelligence/media/analyst-insights.png":::
 
 ## Analyst insight types and questions they can address
 
