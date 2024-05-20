@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 11/2/2023
+ms.date: 5/16/2024
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -79,13 +79,11 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
    - Select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add members**. In the **Add members** flyout that opens, do any of the following steps to add individual users or groups in the **Search users and groups to add** box:
      - Click in the box and scroll through the list to select a user or group.
-     - Click in the box, start typing a name to filter the list, and then select the value below the box.select a user or group.
+     - Click in the box, start typing a name to filter the list, and then select the value below the box. select a user or group.
 
      To add more members, click in an empty area in the box and repeat the previous step.
 
      To remove individual entries from the box, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the entry.
-
-     To remove all entries, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: in the **Selected nn users and nn groups** item below the box.
 
      When you're finished on the **Add members** flyout, select **Add**.
 
@@ -103,7 +101,10 @@ To see how user tags are part of the strategy to help protect high-impact user a
 
    When you're finished on the **New tag created** page, select **Done**.
 
-   Back on the **User tags** page, the new tag is listed.
+   > [!NOTE]
+   > It can take up to 8 hours to completely apply tags.
+   >
+   > If you assign a group to a user tag, members of the group at the time of tag creation are assigned tag. Users later added to the group aren't automatically assigned the user tag. 
 
 ## Use the Microsoft Defender portal to view user tags
 
@@ -131,19 +132,7 @@ The details flyout of the user tag contains the following information, based on 
   - **Applied to**
 - **Custom tags**: The details flyout for a custom tag contains the same information as the **User tags** page, plus the list of users and groups that the tag applies to.
 
-To take action on user tags, see the next section.
-
-## Use the Microsoft Defender portal to take action on user tags
-
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Email & collaboration** \> **User tags**. Or, to go directly to the **User tags** page, use <https://security.microsoft.com/securitysettings/userTags>.
-
-2. On the **User tags** page, select the user tag by using either of the following methods:
-   - Select the tag from the list by selecting the check box next to the name. The available actions appear on the page.
-   - Select the tag from the list by clicking anywhere in the row other than the check box next to the name. The available actions are in the details flyout that opens.
-
-After you select the user tag, the available actions are described in the following subsections.
-
-### Use the Microsoft Defender portal to modify user tags
+## Use the Microsoft Defender portal to modify user tags
 
 After you select the user tag, use either of the following methods to modify it:
 
@@ -170,27 +159,27 @@ Back on the **User tags** page, the custom tag is no longer listed.
 
 ## User tags in reports and features
 
-After you apply system tags or custom tags to users, you can use those tags as filters in the following features:
+After you apply system tags or custom tags to users, you can use those tags as filters in the following features in Defender for Office 365:
 
 - [Alerts](/defender-xdr/investigate-alerts)
 - [Incidents](mdo-sec-ops-manage-incidents-and-alerts.md)
-- [Custom alert policies](/purview/alert-policies#view-alerts)
 - [Threat Explorer](threat-explorer-real-time-detections-about.md)
-- [Campaign Views](campaigns.md)
 - [Email entity page](mdo-email-entity-page.md)
+- [Quarantine](quarantine-admin-manage-messages-files.md) Currently, tag selection on the Quarantine filter page supports the Priority tag only.
+- [Admin submissions and user reported messages](submissions-admin.md)
 - [Email security reports](reports-email-security.md)
   - [Compromised user report](reports-email-security.md#compromised-users-report)
   - [Submissions report](reports-email-security.md#submissions-report)
   - [Threat protection status report](reports-email-security.md#threat-protection-status-report)
   - [Top senders and recipients report](reports-email-security.md#top-senders-and-recipients-report)
+- [Campaigns](campaigns.md)
+- [Custom alert policies](/purview/alert-policies#view-alerts)
 - [Attack simulation training](attack-simulation-training-get-started.md)
   - [Simulations](attack-simulation-training-simulations.md)
   - [Simulation automations](attack-simulation-training-simulation-automations.md)
   - [Payloads](attack-simulation-training-payloads.md)
   - [Training campaigns](attack-simulation-training-training-campaigns.md)
   - [Training modules](attack-simulation-training-training-modules.md)
-- [Quarantine](quarantine-admin-manage-messages-files.md) Currently, tag selection on the Quarantine filter page supports only the Priority account tag.
-- [Admin submissions and user reported messages](submissions-admin.md)
 - In organizations above a certain size, the [Email issues for priority accounts report](/exchange/monitoring/mail-flow-reports/mfr-email-issues-for-priority-accounts-report) is available in the Exchange admin center (EAC).
 
 For information about where the effects of priority account protection are visible, see [Review differentiated protection from priority account protection](priority-accounts-turn-on-priority-account-protection.md#review-differentiated-protection-from-priority-account-protection).
