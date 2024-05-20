@@ -118,6 +118,36 @@ You'll need to take the following steps:
 
 ## Step 3: Configure Microsoft Defender for Endpoint settings
 
+In this step, we go over the "Preferences," which enables you to configure anti-malware and EDR policies using Microsoft Defender XDR portal ([https://security.microsoft.com](https://security.microsoft.com)) or JamF.
+
+> [!IMPORTANT]
+> Microsoft Defender for Endpoint Security Settings Management policies take precedence over JamF set (and other 3rd party MDM) policies.
+### 3a) Set policies using Microsoft Defender portal
+
+Go through [Configure Microsoft Defender for Endpoint in Intune](/mem/intune/protect/advanced-threat-protection-configure) before setting the security policies using Microsoft Defender.
+
+In the [Microsoft Defender portal](https://sip.security.microsoft.com/homepage?tid=72f988bf-86f1-41af-91ab-2d7cd011db47):
+
+Go to **Configuration management** > **Endpoint security policies** > **Mac policies** > **Create new policy**.
+
+Under **Select Platform**, select **macOS**.
+
+Under **Select Template**, choose a template and select **Create Policy**.
+
+Enter the Name and Description of the policy.
+
+Select **Next**.
+
+On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or **All Users** and **All devices**.
+
+For more information about managing security settings, see:
+
+- [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration?pivots=mdssc-ga)
+
+- [Manage security settings for Windows, macOS, and Linux natively in Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/manage-security-settings-for-windows-macos-and-linux-natively-in/ba-p/3870617)
+
+### 3b) Set policies using JamF
+
 You can either use JAMF Pro GUI to edit individual settings of the Microsoft Defender for Endpoint configuration, or use the legacy method by creating a configuration Plist in a text editor, and uploading it to JAMF Pro.
 
 Note that you must use exact `com.microsoft.wdav` as the **Preference Domain**, Microsoft Defender for Endpoint uses only this name and `com.microsoft.wdav.ext` to load its managed settings!
@@ -377,10 +407,10 @@ All you need to do to have updates is to download an updated schema, edit existi
 
     :::image type="content" source="media/6f093e42856753a3955cab7ee14f12d9.png" alt-text="The notification of configuration settings." lightbox="media/6f093e42856753a3955cab7ee14f12d9.png":::
 
-16. Select **Done**. You'll see the new **Configuration profile**.
+1. Select **Done**. You'll see the new **Configuration profile**.
 
-    ![Image of configuration settings config profile image.](media/dd55405106da0dfc2f50f8d4525b01c8.png)
-    :::image type="content" source="media/dd55405106da0dfc2f50f8d4525b01c8.png" alt-text="The config profile's settings." lightbox="media/dd55405106da0dfc2f50f8d4525b01c8.png":::
+   ![Image of configuration settings config profile image.](media/dd55405106da0dfc2f50f8d4525b01c8.png)
+       :::image type="content" source="media/dd55405106da0dfc2f50f8d4525b01c8.png" alt-text="The config profile's settings." lightbox="media/dd55405106da0dfc2f50f8d4525b01c8.png":::
 
 ## Step 4: Configure notifications settings
 
