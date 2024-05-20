@@ -344,6 +344,7 @@ For more information about managing security settings, see:
 
 > [!IMPORTANT]
 > The policies set via Intune will take precedence over the Microsoft Defender for Endpoint Security Settings Management.
+
 #### Set policies using Microsoft Intune
 
 You can manage the security settings for Microsoft Defender for Endpoint on macOS under **Setting Preferences** in Microsoft Intune.
