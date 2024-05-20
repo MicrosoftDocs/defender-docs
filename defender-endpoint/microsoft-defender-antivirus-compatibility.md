@@ -4,7 +4,7 @@ description: Learn about Microsoft Defender Antivirus with other security produc
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 05/16/2024
+ms.date: 05/17/2024
 ms.topic: conceptual
 author: siosulli
 ms.author: siosulli
@@ -69,6 +69,7 @@ The following table summarizes what to expect:
 > [!NOTE]
 > On Windows Server, if you're running a non-Microsoft antivirus product, you can uninstall Microsoft Defender Antivirus by using the following PowerShell cmdlet (as an administrator): `Uninstall-WindowsFeature Windows-Defender`. Restart your server to finish removing Microsoft Defender Antivirus.
 > On Windows Server 2016, you might see *Windows Defender Antivirus* instead of *Microsoft Defender Antivirus*.
+> If you uninstall your non-Microsoft antivirus product, make sure that Microsoft Defender Antivirus is re-enabled. See [Re-enable Microsoft Defender Antivirus on Windows Server if it was disabled](enable-update-mdav-to-latest-ws.md#re-enable-microsoft-defender-antivirus-on-windows-server-if-it-was-disabled).
 
 If the device is onboarded to Microsoft Defender for Endpoint, you can use Microsoft Defender Antivirus in passive mode as described later in this article.
 
