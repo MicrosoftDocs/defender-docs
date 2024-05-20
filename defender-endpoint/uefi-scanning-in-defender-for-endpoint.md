@@ -38,7 +38,7 @@ The UEFI scanner is a new component of the [built-in antivirus](microsoft-defend
 - Devices are running one of the following versions of Windows:
   - Windows 10, Windows 11 or newer on client devices
   - Windows Server 2019, Windows Server 2022, or newer versions
-  - [Windows Server 2012 R2 and Windows Server 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292) with the [unified Defender for Endpoint client](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) installed
+  - [Windows Server 2012 R2 and Windows Server 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292) with the [unified Defender for Endpoint client](configure-server-endpoints.md#functionality-in-the-modern-unified-solution) installed
 
 ## What is the UEFI scanner?
 

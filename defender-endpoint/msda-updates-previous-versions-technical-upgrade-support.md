@@ -6,7 +6,7 @@ ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 04/03/2024
+ms.date: 05/17/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -26,6 +26,28 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions is reduced to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
+
+## January-2024 (Platform: 4.18.24010.12 | Engine: 1.1.24010.10)
+
+- Security intelligence update version: **1.405.702.0**
+- Release date:  **February 27, 2024**
+- Platform: **4.18.24010.12**
+- Engine: **1.1.24010.10**
+- Support phase: **Security and Critical Updates**
+
+### What's new
+
+- Microsoft Defender Antivirus now caches the Mark of the Web (MoTW) Alternative Data Stream (ADS) for better performance while scanning.
+- Fixed an issue that occurred in [attack surface reduction](attack-surface-reduction-rules-reference.md) in warn mode when removing scan results from the real-time protection cache.
+- Performance improvement added for `OneNote.exe`.
+- Cloud-based entries are regularly removed from the persistent user mode cache in Windows Defender to prevent an uncommon issue where a user could still add a certificate, based on an Indicator of compromise (IoC), to the cache after a file with that certificate had already been added via cloud signature.
+- The Sense onboarding event is now sent in passive mode for operating systems with the old Sense client.
+- Improved performance for logs created/accessed by powershell.
+- Improved performance for folders included in [Controlled folder access(CFA)](controlled-folders.md) when accessing network files.
+- Fixed a deadlock that occurred at shutdown for Data Loss Prevention (DLP) enabled devices.
+- Fixed an issue to remove a vulnerability in the Microsoft Defender Core service.
+- Fixed an onboarding issue in the Unified Agent installation script [install.ps1](https://github.com/microsoft/mdefordownlevelserver).
+- Fixed a memory leak that impacted some devices that received platform update `4.18.24010.7`
 
 ## November-2023 (Platform: 4.18.23110.3 | Engine: 1.1.23110.2)
 
@@ -145,7 +167,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Addressed a deadlock caused by Microsoft Defender Antivirus in rare cases
 - Added `ProcessId` to ASR Warn exclusion events (see [ASR rules configuration summary card](attack-surface-reduction-rules-report.md#asr-rules-configuration-summary-card))
 - Fixed an issue where values specified in [ThreatSeverityDefaultAction](/windows-hardware/customize/desktop/unattend/security-malware-windows-defender-threatseveritydefaultaction) weren't honored intermittently
-- Improved error reporting in the [modern, unified agent installer](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution)
+- Improved error reporting in the [modern, unified agent installer](configure-server-endpoints.md#functionality-in-the-modern-unified-solution)
 - Fixed the overriding logic in the ASR rule [Block all Office applications from creating child processes](attack-surface-reduction-rules-reference.md#block-all-office-applications-from-creating-child-processes) configured in warn mode
 - Added support for scanning Zstandard (Zstd) containers/archives
 

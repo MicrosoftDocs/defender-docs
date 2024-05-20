@@ -1,8 +1,8 @@
 ---
 title: Prerequisites and support in Microsoft Security Exposure Management
 description: Review the prerequisites for Microsoft Security Exposure Management.
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: dlanger
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
