@@ -388,7 +388,7 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
     :::image type="content" source="media/6f093e42856753a3955cab7ee14f12d9.png" alt-text="The notification of configuration settings." lightbox="media/6f093e42856753a3955cab7ee14f12d9.png":::
 
-1. Select **Done**. You'll see the new **Configuration profile**.
+1. Select **Done**. You see the new **Configuration profile**.
 
    ![Image of configuration settings config profile image.](media/dd55405106da0dfc2f50f8d4525b01c8.png)
        :::image type="content" source="media/dd55405106da0dfc2f50f8d4525b01c8.png" alt-text="The config profile's settings." lightbox="media/dd55405106da0dfc2f50f8d4525b01c8.png":::
@@ -741,7 +741,7 @@ Download [bluetooth.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/
    > and it will fail to apply to client machines. You need to sign downloaded mobileconfig first, after that JAMF Pro will consider it "sealed" and will not 
    > tamper with it. See instructions below:
 
-- You need to have at least one signing certificate installed into your KeyChain, even a self-signed certificate will work. You can inspect what you have with:
+- You need to have at least one signing certificate installed into your KeyChain, even a self-signed certificate works. You can inspect what you have with:
 
 ```bash
 > /usr/bin/security find-identity -p codesigning -v
@@ -797,7 +797,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
 6. In the **General tab**, enter the following details in **New Package**:
 
-    - **Display Name**: Leave it blank for now. Because it will be reset when you choose your pkg.
+    - **Display Name**: Leave it blank for now. Because it is reset when you choose your pkg.
     - **Category**: `None (default)`
     - **Filename**: `Choose File`
 
@@ -809,7 +809,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
 7. Select **Open**. Set the **Display Name** to **Microsoft Defender Advanced Threat Protection and Microsoft Defender Antivirus**.
 
-   - **Manifest File** is not required. Microsoft Defender for Endpoint works without Manifest File.
+   - **Manifest File** isn't required. Microsoft Defender for Endpoint works without Manifest File.
    - **Options tab**: Keep default values.
    - **Limitations tab**: Keep default values.
 
@@ -855,7 +855,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
 17. Create a smart group for machines with Microsoft Defender profiles.
 
-    For a better user experience, configuration profiles to enrolled machines must be installed before Microsoft Defender's package. In most cases JAMF Prof pushes configuration profiles immediately, and those policies are executed after some time (i.e. during check-in). However, in some cases, configuration profiles deployment can be deployed with a significant delay (i.e. if a user's machine is locked).
+    For a better user experience, configuration profiles to enrolled machines must be installed before Microsoft Defender's package. In most cases JAMF Pro pushes configuration profiles immediately, and those policies are executed after some time (that is, during check-in). However, in some cases, configuration profiles deployment can be deployed with a significant delay (that is, if a user's machine is locked).
 
     JAMF Pro provides a way to ensure the correct order. You can create a smart group for machines that already received Microsoft Defender's configuration profile, and install Microsoft Defender's package only to those machines (and as soon as they receive this profile).
 
