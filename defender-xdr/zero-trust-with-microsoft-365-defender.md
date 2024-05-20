@@ -1,6 +1,6 @@
 ---
 title: Zero Trust with Microsoft Defender XDR
-description: Microsoft Defender XDR contributes to a strong Zero Trust strategy and architecture
+description: Microsoft Defender XDR contributes to a strong Zero Trust strategy and architecture.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
@@ -29,7 +29,7 @@ ms.date: 05/10/2024
 
 Microsoft Defender XDR contributes to a strong Zero Trust strategy and architecture by providing extended detection and response (XDR). Microsoft Defender XDR works together with other Microsoft XDR tools and services and can be integrated with Microsoft Sentinel as a security information and event management (SIEM) source for a complete XDR/SIEM solution.
 
-Microsoft Defender XDR is an XDR solution that automatically collects, correlates, and analyzes signal, threat, and alert data from across your Microsoft 365 environment, including endpoint, email, applications, and identities.
+Microsoft Defender XDR is an XDR solution that automatically collects, correlates, and analyzes signal, threat, and alert data from across your Microsoft 365 environment, including endpoints, email, applications, and identities.
 
 :::image type="content" source="/defender/media/zero-trust/m365-zero-trust-architecture-defender.png" alt-text="Diagram that shows the Microsoft Defender XDR in the Zero Trust architecture." lightbox="/defender/media/zero-trust/m365-zero-trust-architecture-defender.png":::
 
@@ -52,7 +52,7 @@ To add Microsoft Defender XDR to your Zero Trust strategy and architecture, go t
 
 |Includes|Prerequisites|Doesn't include|
 |---------|---------|---------|
-| Set up the evaluation and pilot environment for all components: <ul><li>Defender for Identity</li><li>Defender for Office 365</li><li>Defender for Endpoint</li><li>Microsoft Defender for Cloud Apps</li></ul> <br> Protect against threats <br><br> Investigate and respond to threats | See the guidance for the architecture requirements for each component of Microsoft Defender XDR. | Microsoft Entra ID Protection is not included in this solution guide. It is included in [Step 1. Configure Zero Trust identity and device access protection](/microsoft-365/security/microsoft-365-zero-trust#step-1-configure-zero-trust-identity-and-device-access-protection-starting-point-policies). |
+| Set up the evaluation and pilot environment for all components: <ul><li>Defender for Identity</li><li>Defender for Office 365</li><li>Defender for Endpoint</li><li>Microsoft Defender for Cloud Apps</li></ul> <br> Protect against threats <br><br> Investigate and respond to threats | See the guidance for the architecture requirements for each component of Microsoft Defender XDR. | Microsoft Entra ID Protection isn't included in this solution guide. It's included in [Step 1. Configure Zero Trust identity and device access protection](/microsoft-365/security/microsoft-365-zero-trust#step-1-configure-zero-trust-identity-and-device-access-protection-starting-point-policies). |
 
 ## Next steps
 

@@ -171,6 +171,16 @@
         "redirect_document_id": false
     },
     {
+        "source_path": "defender-xdr/eval-defender-investigate-respond.md",
+        "redirect_url": "/defender-xdr/pilot-deploy-investigate-respond",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "defender-xdr/eval-defender-promote-to-production.md",
+        "redirect_url": "/defender-xdr/pilot-deploy-overview",
+        "redirect_document_id": false
+    },
+    {
       "source_path": "defender-endpoint/evaluation-lab.md",
       "redirect_url": "/defender-endpoint/evaluate-microsoft-defender-antivirus",
       "redirect_document_id": true

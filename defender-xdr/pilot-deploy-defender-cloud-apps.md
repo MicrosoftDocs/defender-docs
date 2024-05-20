@@ -37,14 +37,12 @@ This is article 5 of 6 in a series to help you deploy the components of Microsof
 
 Articles in this series:
 
->> Add links
-
-1. Create the pilot environment
-1. Pilot and deploy *Defender for Identity*
-1. Pilot and deploy *Defender for Office*
-1. Pilot and deploy *Defender for Endpoint*
+1. [Create the pilot environment](pilot-deploy-investigate-respond.md)
+1. [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md)
+1. [Pilot and deploy Defender for Office 365](pilot-deploy-defender-office-365.md)
+1. [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md)
 1. Pilot and deploy **Defender for Cloud Apps** (this article)
-1. Investigate and respond to threats
+1. [Investigate and respond to threats](pilot-deploy-investigate-respond.md)
 
 ## Pilot and deploy workflow for Defender for Cloud Apps
 
@@ -56,7 +54,7 @@ Follow these steps:
 
 1. Connect to the Defender for Cloud Apps portal
 1. Integrate with Microsoft Defender for Endpoint
-1. Deploy the log collector on your firewallos and other proxies
+1. Deploy the log collector on your firewalls and other proxies
 1. Create a pilot group
 1. Discover and manage cloud apps
 1. Configure Conditional Access App Control
@@ -121,7 +119,7 @@ If you're still having trouble, review [Network requirements](/cloud-app-securit
 
 ## Step 2: Integrate with Microsoft Defender for Endpoint
 
-Microsoft Defender for Cloud Apps integrates with Microsoft Defender for Endpoint natively. The integration simplifies roll out of Cloud Discovery, extends Cloud Discovery capabilities beyond your corporate network, and enables device-based investigation. This integration reveals cloud apps and services being accessed from IT-managed Windows 10 and Windows 11 devices.
+Microsoft Defender for Cloud Apps integrates with Microsoft Defender for Endpoint natively. The integration simplifies roll out of Cloud Discovery, extends Cloud Discovery capabilities beyond your corporate network and enables device-based investigation. This integration reveals cloud apps and services being accessed from IT-managed Windows 10 and Windows 11 devices.
 
 If you've already set up Microsoft Defender for Endpoint, configuring integration with Defender for Cloud Apps is a toggle in Microsoft Defender XDR. After integration is turned on, you can return to the Defender for Cloud Apps portal and view rich data in the Cloud Discovery Dashboard.
 
@@ -188,7 +186,7 @@ You can begin managing apps by sanctioning, unsanctioning, or outright blocking 
 
 One of the most powerful protections you can configure is Conditional Access App Control. This protection requires integration with Microsoft Entra ID. It allows you to apply Conditional Access policies, including related policies (like requiring healthy devices), to cloud apps you've sanctioned.
 
-You might already have SaaS apps added to your Microsoft Entra tenant to enforce multi-factor authentication and other conditional access policies. Microsoft Defender for Cloud Apps natively integrates with Microsoft Entra ID. All you have to do is configure a policy in Microsoft Entra ID to use Conditional Access App Control in Defender for Cloud Apps. This routes network traffic for these managed SaaS apps through Defender for Cloud Apps as a proxy, which allows Defender for Cloud Apps to monitor this traffic and to apply session controls.
+You might already have SaaS apps added to your Microsoft Entra tenant to enforce multi-factor authentication and other conditional access policies. Microsoft Defender for Cloud Apps natively integrates with Microsoft Entra ID. All you must do is configure a policy in Microsoft Entra ID to use Conditional Access App Control in Defender for Cloud Apps. This routes network traffic for these managed SaaS apps through Defender for Cloud Apps as a proxy, which allows Defender for Cloud Apps to monitor this traffic and to apply session controls.
 
 :::image type="content" source="./media/eval-defender-xdr/m365-defender-mcas-architecture-e.svg" alt-text="A diagram that shows the architecture for the Microsoft Defender for Cloud Apps with SaaS apps." lightbox="./media/eval-defender-xdr/m365-defender-mcas-architecture-e.svg":::
 
@@ -251,7 +249,7 @@ Additionally, Microsoft Sentinel includes a Defender for Cloud Apps connector to
 - [Generic SIEM integration](/cloud-app-security/siem)
 - [Stream alerts and Cloud Discovery logs from Defender for Cloud Apps into Microsoft Sentinel](/azure/sentinel/connect-cloud-app-security)
 
-## Next step for end-to-end deployment of Microsoft Defender XDR
+## Next step for the end-to-end deployment of Microsoft Defender XDR
 
 >> Add
 
