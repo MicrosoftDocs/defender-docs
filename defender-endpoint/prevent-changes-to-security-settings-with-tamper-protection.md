@@ -5,7 +5,7 @@ manager: deniseb
 description: Use tamper protection to prevent malicious apps from changing important security settings.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 02/13/2024
+ms.date: 05/17/2024
 audience: ITPro
 ms.topic: conceptual
 author: siosulli
@@ -55,7 +55,7 @@ When tamper protection is turned on, these tamper-protected settings can't be ch
 - Automatic actions are taken on detected threats.
 - Notifications are visible in the Windows Security app on Windows devices.
 - Archived files are scanned.
-- [Exclusions cannot be modified or added ](manage-tamper-protection-intune.md#tamper-protection-for-antivirus-exclusions)
+- [Exclusions cannot be modified or added ](manage-tamper-protection-intune.md#tamper-protection-for-antivirus-exclusions) (Applies to Intune or Configuration Manager)
 
 *As of signature release `1.383.1159.0`, due to confusion around the default value for "Allow Scanning Network Files", tamper protection no longer locks this setting to its default value. In managed environments, the default value is `enabled`.*
 

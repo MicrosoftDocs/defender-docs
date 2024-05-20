@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 04/30/2024
+ms.date: 05/15/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -31,6 +31,8 @@ You can also get product updates and important notifications through the [messag
 
 ## May 2024
 
+- Create alert tuning rules using **Alert severity** and **Alert title** values as conditions. Alert tuning can help you streamline the alert queue, saving triage time by hiding or resolving alerts automatically, each time a certain expected organizational behavior occurs, and rule conditions are met. For more information, see [Tune an alert](investigate-alerts.md#tune-an-alert).
+
 - (Preview) **Turn preview options on in the main Microsoft 365 Defender settings** together with other Microsoft 365 Defender preview features. Customers who are not using preview features yet will continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
 
 - (Preview) The **SOC optimizations** page in the Microsoft Defender portal is now available with the [unified security operations platform](https://go.microsoft.com/fwlink/p/?linkid=2263690). Integrate Microsoft Defender XDR and Microsoft Sentinel and use SOC optimizations to optimize both processes and outcomes, without having your SOC teams spend time on manual analysis and research. For more information, see:
@@ -38,6 +40,9 @@ You can also get product updates and important notifications through the [messag
   - [Optimize your security operations](https://aka.ms/soc-opt-from-defender)
   - [SOC optimization reference](https://aka.ms/soc-opt-ref)
 
+- (Preview) The **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** table is now available in advanced hunting. This allows you to hunt through cloud audit events in Microsoft Defender for Cloud and to create custom detections to surface suspicious Azure Resource Manager and Kubernetes (KubeAudit) control plane activities.
+ 
+ 
 ## April 2024
 
 - (Preview) The **unified security operations platform** in the Microsoft Defender portal is now available. This release brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, and Microsoft Copilot in Microsoft Defender. For more information, see the following resources:
