@@ -195,8 +195,8 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
     - `enableRealTimeProtection`
     - `passiveMode`
 
-    > [!NOTE]
-    > Not turned on by default, if you are planning to run a third-party antivirus for macOS, set it to `true`.
+      > [!NOTE]
+      > Not turned on by default, if you are planning to run a third-party antivirus for macOS, set it to `true`.
 
     - `exclusions`
     - `excludedPath`
@@ -205,8 +205,8 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
     - `exclusionsMergePolicy`
     - `allowedThreats`
 
-    > [!NOTE]
-    > EICAR is on the sample, if you are going through a proof-of-concept, remove it especially if you are testing EICAR.
+      > [!NOTE]
+      > EICAR is on the sample, if you are going through a proof-of-concept, remove it especially if you are testing EICAR.
 
     - `disallowedThreatActions`
     - `potentially_unwanted_application`
@@ -407,7 +407,7 @@ These steps are applicable on macOS 11 (Big Sur) or later.
    - **Distribution Method**: `Install Automatically *(default)*`
    - **Level**: `Computer Level *(default)*`
 
-   :::image type="content" source="media/c9820a5ff84aaf21635c04a23a97ca93.png" alt-text="The new macOS configuration profile page." lightbox="media/c9820a5ff84aaf21635c04a23a97ca93.png":::
+     :::image type="content" source="media/c9820a5ff84aaf21635c04a23a97ca93.png" alt-text="The new macOS configuration profile page." lightbox="media/c9820a5ff84aaf21635c04a23a97ca93.png":::
 
     - Tab **Notifications**, select **Add**, and enter the following values:
         - **Bundle ID**: `com.microsoft.wdav.tray`
@@ -418,15 +418,15 @@ These steps are applicable on macOS 11 (Big Sur) or later.
         - **Notifications in Notification Center**: Select **Display**
         - **Badge app icon**: Select **Display**
 
-        :::image type="content" source="media/7f9138053dbcbf928e5182ee7b295ebe.png" alt-text="The configuration settings mdatpmdav notifications tray." lightbox="media/7f9138053dbcbf928e5182ee7b295ebe.png":::
+          :::image type="content" source="media/7f9138053dbcbf928e5182ee7b295ebe.png" alt-text="The configuration settings mdatpmdav notifications tray." lightbox="media/7f9138053dbcbf928e5182ee7b295ebe.png":::
 
     - Tab **Notifications**, select **Add** one more time, scroll down to **New Notifications Settings**
         - **Bundle ID**: `com.microsoft.autoupdate.fba`
         - Configure the rest of the settings to the same values mentioned earlier
 
-        :::image type="content" source="media/4bac6ce277aedfb4a674f2d9fcb2599a.png" alt-text="The configuration settings mdatpmdav notifications mau." lightbox="media/4bac6ce277aedfb4a674f2d9fcb2599a.png":::
+          :::image type="content" source="media/4bac6ce277aedfb4a674f2d9fcb2599a.png" alt-text="The configuration settings mdatpmdav notifications mau." lightbox="media/4bac6ce277aedfb4a674f2d9fcb2599a.png":::
 
-        Note that now you have two tables with notification configurations, one for **Bundle ID: com.microsoft.wdav.tray**, and another for **Bundle ID: com.microsoft.autoupdate.fba**. While you can configure alert settings per your requirements, Bundle IDs must be exactly the same as described before, and **Include** switch must be **On** for **Notifications**.
+          Note that now you have two tables with notification configurations, one for **Bundle ID: com.microsoft.wdav.tray**, and another for **Bundle ID: com.microsoft.autoupdate.fba**. While you can configure alert settings per your requirements, Bundle IDs must be exactly the same as described before, and **Include** switch must be **On** for **Notifications**.
 
 3. Select the **Scope** tab, and then select **Add**.
 
@@ -448,7 +448,7 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
 1. Use the following Microsoft Defender for Endpoint configuration settings:
 
-      ```XML
+   ```XML
    <?xml version="1.0" encoding="UTF-8"?>
    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
    <plist version="1.0">
@@ -490,7 +490,6 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 7. In **Preference Domain** type `com.microsoft.autoupdate2`, and then select **Upload PLIST File**.
 
    :::image type="content" source="media/1213872db5833aa8be535da57653219f.png" alt-text="The configuration setting preference domain." lightbox="media/1213872db5833aa8be535da57653219f.png":::
-    
 
 8. Select **Choose File**.
 
@@ -677,24 +676,24 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 2. Select **New**, and enter the following details for **Options**:
 
     - Tab **General**:
-        - **Name**: `Microsoft Defender Network Extension`
-        - **Description**: `macOS 11 (Big Sur) or later`
-        - **Category**: `None *(default)*`
-        - **Distribution Method**: `Install Automatically *(default)*`
-        - **Level**: `Computer Level *(default)*`
+      - **Name**: `Microsoft Defender Network Extension`
+      - **Description**: `macOS 11 (Big Sur) or later`
+      - **Category**: `None *(default)*`
+      - **Distribution Method**: `Install Automatically *(default)*`
+      - **Level**: `Computer Level *(default)*`
 
     - Tab **Content Filter**:
-        - **Filter Name**: `Microsoft Defender Content Filter`
-        - **Identifier**: `com.microsoft.wdav`
-        - Leave **Service Address**, **Organization**, **User Name**, **Password**, **Certificate** blank (**Include** is *not* selected)
-        - **Filter Order**: `Inspector`
-        - **Socket Filter**: `com.microsoft.wdav.netext`
-        - **Socket Filter Designated Requirement**: `identifier "com.microsoft.wdav.netext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
-        - Leave **Network Filter** fields blank (**Include** is *not* selected)
+      - **Filter Name**: `Microsoft Defender Content Filter`
+      - **Identifier**: `com.microsoft.wdav`
+      - Leave **Service Address**, **Organization**, **User Name**, **Password**, **Certificate** blank (**Include** is *not* selected)
+      - **Filter Order**: `Inspector`
+      - **Socket Filter**: `com.microsoft.wdav.netext`
+      - **Socket Filter Designated Requirement**: `identifier "com.microsoft.wdav.netext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
+      - Leave **Network Filter** fields blank (**Include** is *not* selected)
 
-        Note that **Identifier**, **Socket Filter** and **Socket Filter Designated Requirement** exact values as specified above.
+      Note that **Identifier**, **Socket Filter** and **Socket Filter Designated Requirement** exact values as specified above.
 
-        :::image type="content" source="media/netext-create-profile.png" alt-text="The mdatpmdav configuration setting." lightbox="media/netext-create-profile.png":::
+      :::image type="content" source="media/netext-create-profile.png" alt-text="The mdatpmdav configuration setting." lightbox="media/netext-create-profile.png":::
 
 3. Select the **Scope** tab.
 
@@ -720,10 +719,10 @@ Alternatively, you can download [netfilter.mobileconfig](https://github.com/micr
 
 ## Step 9: Configure Background Services
 
-   > [!CAUTION]
-   > macOS 13 (Ventura) contains new privacy enhancements. Beginning with this version, by default, applications cannot run in background without explicit consent. Microsoft Defender for Endpoint must run its daemon process in background.
-   >
-   > This configuration profile grants Background Service permissions to Microsoft Defender for Endpoint. If you previously configured Microsoft Defender for Endpoint through JAMF, we recommend you update the deployment with this configuration profile.
+> [!CAUTION]
+> macOS 13 (Ventura) contains new privacy enhancements. Beginning with this version, by default, applications cannot run in background without explicit consent. Microsoft Defender for Endpoint must run its daemon process in background.
+>
+> This configuration profile grants Background Service permissions to Microsoft Defender for Endpoint. If you previously configured Microsoft Defender for Endpoint through JAMF, we recommend you update the deployment with this configuration profile.
 
 Download [**background_services.mobileconfig**](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/background_services.mobileconfig) from [our GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
@@ -731,38 +730,38 @@ Upload downloaded mobileconfig to JAMF Configuration Profiles as described in [D
 
 ## Step 10: Grant Bluetooth Permissions
 
-   > [!CAUTION]
-   > macOS 14 (Sonoma) contains new privacy enhancements. Beginning with this version, by default, applications cannot access Bluetooth without explicit consent. Microsoft Defender for Endpoint uses it if you configure Bluetooth policies for Device Control.
+> [!CAUTION]
+> macOS 14 (Sonoma) contains new privacy enhancements. Beginning with this version, by default, applications cannot access Bluetooth without explicit consent. Microsoft Defender for Endpoint uses it if you configure Bluetooth policies for Device Control.
 
 Download [bluetooth.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/bluetooth.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
-   > [!WARNING]
-   > Current version of JAMF Pro does not support this kind of payload yet. If you upload this mobileconfig as-is, JAMF Pro will remove unsupported payload,
-   > and it will fail to apply to client machines. You need to sign downloaded mobileconfig first, after that JAMF Pro will consider it "sealed" and will not 
-   > tamper with it. See instructions below:
+> [!WARNING]
+> Current version of JAMF Pro does not support this kind of payload yet. If you upload this mobileconfig as-is, JAMF Pro will remove unsupported payload,
+> and it will fail to apply to client machines. You need to sign downloaded mobileconfig first, after that JAMF Pro will consider it "sealed" and will not 
+> tamper with it. See instructions below:
 
 - You need to have at least one signing certificate installed into your KeyChain, even a self-signed certificate works. You can inspect what you have with:
 
-```bash
-> /usr/bin/security find-identity -p codesigning -v
+  ```bash
+  > /usr/bin/security find-identity -p codesigning -v
 
-  1) 70E46A47F552EA8D58521DAC1E7F5144BA3012BC "DevCert"
-  2) 67FC43F3FAB77662BB7688C114585BAA37CA8175 "Mac Developer: John Doe (1234XX234)"
-  3) E142DFD879E5EB60FA249FB5B24CEAE3B370394A "Apple Development: Jane Doe 7XX7778888)"
-  4) 21DE31645BBF1D9F5C46E82E87A6968111E41C75 "Apple Development: me@example.com (8745XX123)"
-     4 valid identities found
-```
+    1) 70E46A47F552EA8D58521DAC1E7F5144BA3012BC "DevCert"
+    2) 67FC43F3FAB77662BB7688C114585BAA37CA8175 "Mac Developer: John Doe (1234XX234)"
+    3) E142DFD879E5EB60FA249FB5B24CEAE3B370394A "Apple Development: Jane Doe 7XX7778888)"
+    4) 21DE31645BBF1D9F5C46E82E87A6968111E41C75 "Apple Development: me@example.com (8745XX123)"
+       4 valid identities found
+  ```
 
 - Choose any of them, and provide the quoted text as the -N parameter:
 
-```bash
-/usr/bin/security cms -S -N "DevCert" -i bluetooth.mobileconfig -o bluetooth-signed.mobileconfig
-```
+  ```bash
+  /usr/bin/security cms -S -N "DevCert" -i bluetooth.mobileconfig -o bluetooth-signed.mobileconfig
+  ```
 
 - Now you can upload the generated bluetooth-signed.mobileconfig to JAMF Pro as described in [Deploying Custom Configuration Profiles using Jamf Pro|Method 2: Upload a Configuration Profile to Jamf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
 
-> [!NOTE]
-> Bluetooth granted through Apple MDM Configuration Profile is not reflected in System Settings => Privacy & Security => Bluetooth.
+  > [!NOTE]
+  > Bluetooth granted through Apple MDM Configuration Profile is not reflected in System Settings => Privacy & Security => Bluetooth.
 
 ## Step 11: Schedule scans with Microsoft Defender for Endpoint on macOS
 
@@ -813,7 +812,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
    - **Options tab**: Keep default values.
    - **Limitations tab**: Keep default values.
 
-    :::image type="content" source="media/56dac54634d13b2d3948ab50e8d3ef21.png" alt-text="The limitation tab for the configuration settings." lightbox="media/56dac54634d13b2d3948ab50e8d3ef21.png":::
+   :::image type="content" source="media/56dac54634d13b2d3948ab50e8d3ef21.png" alt-text="The limitation tab for the configuration settings." lightbox="media/56dac54634d13b2d3948ab50e8d3ef21.png":::
 
 8. Select **Save**. The package is uploaded to Jamf Pro.
 
@@ -833,7 +832,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
 11. In **General**, for the **Display name**, use `MDATP Onboarding Contoso 200329 v100.86.92 or later`.
 
-      :::image type="content" source="media/625ba6d19e8597f05e4907298a454d28.png" alt-text="The configuration settings - MDATP onboard." lightbox="media/625ba6d19e8597f05e4907298a454d28.png":::
+    :::image type="content" source="media/625ba6d19e8597f05e4907298a454d28.png" alt-text="The configuration settings - MDATP onboard." lightbox="media/625ba6d19e8597f05e4907298a454d28.png":::
 
 12. Select **Recurring Check-in**.
 
