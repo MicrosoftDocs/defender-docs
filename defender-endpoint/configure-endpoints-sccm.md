@@ -191,7 +191,7 @@ Follow the steps to enable endpoint protection and configuration of custom clien
 Clients are configured with these settings when they next download client policy. For more information, see [Initiate policy retrieval for a Configuration Manager client.](/mem/configmgr/core/clients/manage/manage-clients)
 
 > [!NOTE]
-> For Windows Server 2012R2 and Windows Server 2016 managed by Configuration Manager 2207 and later versions, onboard using the [Microsoft Defender for Endpoint (MDE) Client (recommended)](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_2207) setting. Alternatively, you can leverage older versions of Configuration Manager to perform a migration. See [Migrating servers from Microsoft Monitoring Agent to the unified solution](application-deployment-via-mecm.md) for more information.
+> For Windows Server 2012 R2 and Windows Server 2016 managed by Configuration Manager 2207 and later versions, onboard using the [Microsoft Defender for Endpoint (MDE) Client (recommended)](/mem/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_2207) setting. Alternatively, you can use older versions of Configuration Manager to perform a migration. For more information, see [Migrating servers from Microsoft Monitoring Agent to the unified solution](application-deployment-via-mecm.md).
      
 
 ##### Installation of Endpoint Protection client from a command prompt
