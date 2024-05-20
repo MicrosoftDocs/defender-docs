@@ -1,6 +1,6 @@
 ---
 title: Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
-description: Learn how to set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
+description: Learn how to set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro.
 ms.service: defender-endpoint
 author: YongRhee-MSFT
 ms.author: yongrhee
@@ -27,22 +27,7 @@ ms.date: 05/20/2024
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
-This article guides you through the steps you need to take to set up macOS policies in Jamf Pro.
-
-You'll need to take the following steps:
-
-1. [Get the Microsoft Defender for Endpoint onboarding package](#step-1-get-the-microsoft-defender-for-endpoint-onboarding-package)
-2. [Create a configuration profile in Jamf Pro using the onboarding package](#step-2-create-a-configuration-profile-in-jamf-pro-using-the-onboarding-package)
-3. [Configure Microsoft Defender for Endpoint settings](#step-3-configure-microsoft-defender-for-endpoint-settings)
-4. [Configure Microsoft Defender for Endpoint notification settings](#step-4-configure-notifications-settings)
-5. [Configure Microsoft AutoUpdate (MAU)](#step-5-configure-microsoft-autoupdate-mau)
-6. [Grant full disk access to Microsoft Defender for Endpoint](#step-6-grant-full-disk-access-to-microsoft-defender-for-endpoint)
-7. [Approve System extensions for Microsoft Defender for Endpoint](#step-7-approve-system-extensions-for-microsoft-defender-for-endpoint)
-8. [Configure Network Extension](#step-8-configure-network-extension)
-9. [Configure Background Services](#step-9-configure-background-services)
-10. [Grant Bluetooth Permissions](#step-10-grant-bluetooth-permissions)
-11. [Schedule scans with Microsoft Defender for Endpoint on macOS](#step-11-schedule-scans-with-microsoft-defender-for-endpoint-on-macos)
-12. [Deploy Microsoft Defender for Endpoint on macOS](#step-12-deploy-microsoft-defender-for-endpoint-on-macos)
+Use this article to set up policies for Defender for Endpoint on Mac using Jamf Pro. 
 
 ## Step 1: Get the Microsoft Defender for Endpoint onboarding package
 
