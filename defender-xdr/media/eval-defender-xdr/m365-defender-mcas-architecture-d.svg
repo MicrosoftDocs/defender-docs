@@ -11,7 +11,7 @@
 		.st1 {fill:#ffffff;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
 		.st2 {fill:#e6e6e6;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
 		.st3 {fill:#0078d4;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
-		.st4 {fill:#ffffff;font-family:Segoe UI Semibold;font-size:1.16666em}
+		.st4 {fill:#ffffff;font-family:Segoe UI Semibold;font-size:1.00001em}
 		.st5 {fill:#ffffff;stroke:#0078d4;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
 		.st6 {fill:#0078d4;font-family:Segoe UI;font-size:0.833336em}
 		.st7 {fill:#ffffff;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
@@ -78,7 +78,7 @@
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="117.066" cy="250.98" width="234.14" height="21.5399"/>
 			<rect x="0" y="240.21" width="234.133" height="21.5399" class="st3"/>
-			<text x="39.52" y="255.18" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Microsoft Defender XDR</text>		</g>
+			<text x="50.6" y="254.58" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Microsoft Defender XDR</text>		</g>
 		<g id="shape1125-8" v:mID="1125" v:groupContext="shape" transform="translate(32.5757,-201.708)">
 			<title>Sheet.1125</title>
 			<desc>Shared signals</desc>
@@ -259,7 +259,7 @@
 			</v:userDefs>
 			<path d="M0 261.75 L55.53 261.75" class="st16"/>
 		</g>
-		<g id="shape1141-46" v:mID="1141" v:groupContext="shape" transform="translate(81.2083,-3.7083)">
+		<g id="shape1141-46" v:mID="1141" v:groupContext="shape" transform="translate(229.258,-14.1861)">
 			<title>Sheet.1141</title>
 			<desc>Cloud app traffic</desc>
 			<v:userDefs>
@@ -278,7 +278,7 @@
 		</g>
 		<g id="shape1143-52" v:mID="1143" v:groupContext="shape" transform="translate(66.4162,-107.208)">
 			<title>Sheet.1143</title>
-			<desc>Proxy access Session controls</desc>
+			<desc>Proxy access session policies</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(87000):26"/>
 			</v:userDefs>
@@ -286,7 +286,7 @@
 			<v:textRect cx="55.2259" cy="247.348" width="110.46" height="28.8046"/>
 			<rect x="0" y="232.945" width="110.452" height="28.8046" rx="14.4023" ry="14.4023" class="st5"/>
 			<text x="30.41" y="244.65" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Proxy access<v:newlineChar/><tspan
-						x="23.17" dy="1.2em" class="st11">Session controls</tspan></text>		</g>
+						x="24.75" dy="1.2em" class="st11">session policies</tspan></text>		</g>
 		<g id="shape1144-56" v:mID="1144" v:groupContext="shape" transform="translate(-141.986,208.848) rotate(-90)">
 			<title>Sheet.1144</title>
 			<v:userDefs>
@@ -634,5 +634,15 @@
 			</switch>
 			<rect v:rectContext="foreign" x="0" y="239.804" width="30.4385" height="21.9456" class="st8"/>
 		</g>
+		<g id="shape1300-89" v:mID="1300" v:groupContext="shape" transform="translate(119.308,-53.7861)">
+			<title>Sheet.1300</title>
+			<desc>Cloud app traffic</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(212000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)"/>
+			<v:textRect cx="40.5" cy="254.228" width="81.01" height="15.0445"/>
+			<rect x="0" y="246.706" width="81" height="15.0445" class="st8"/>
+			<text x="7.38" y="256.93" class="st18" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Cloud app traffic</text>		</g>
 	</g>
 </svg>
