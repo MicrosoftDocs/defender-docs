@@ -12,7 +12,7 @@ ms.collection:
 - tier1
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 09/22/2021
+ms.date: 05/20/2024
 ms.subservice: onboard
 search.appverid: met150
 ---
