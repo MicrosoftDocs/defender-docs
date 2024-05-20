@@ -316,11 +316,11 @@ Download [AutoUpdate2.mobileconfig](https://github.com/microsoft/mdatp-xplat/blo
 
 ### Step 9: Microsoft Defender for Endpoint configuration settings
 
-In this step, we go over the "Preferences," which enables you to configure anti-malware and EDR policies using Microsoft Defender portal and Microsoft Intune.
+In this step, we go over the "Preferences," which enables you to configure anti-malware and EDR policies using Microsoft Defender XDR portal ([https://security.microsoft.com](https://security.microsoft.com)) **or** Microsoft Intune ([https://intune.microsoft.com](https://intune.microsoft.com)).
 
-#### Set policies using Microsoft Defender portal
+#### 9a) Set policies using Microsoft Defender portal
 
-Go through [Configure Microsoft Defender for Endpoint in Intune](/mem/intune/protect/advanced-threat-protection-configure) before setting the security policies using Microsoft Defender.
+Go through [Configure Microsoft Defender for Endpoint in Intune](/mem/intune/protect/advanced-threat-protection-configure) before setting the security policies using Microsoft Defender for Endpoint Security Settings Management.
 
 In the [Microsoft Defender portal](https://sip.security.microsoft.com/homepage?tid=72f988bf-86f1-41af-91ab-2d7cd011db47):
 
@@ -342,6 +342,8 @@ For more information about managing security settings, see:
 - [Manage security settings for Windows, macOS, and Linux natively in Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/manage-security-settings-for-windows-macos-and-linux-natively-in/ba-p/3870617)
 
 
+> [!IMPORTANT]
+> The policies set via Intune will take precedence over the Microsoft Defender for Endpoint Security Settings Management.
 #### Set policies using Microsoft Intune
 
 You can manage the security settings for Microsoft Defender for Endpoint on macOS under **Setting Preferences** in Microsoft Intune.
