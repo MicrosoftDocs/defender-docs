@@ -126,11 +126,6 @@
         "redirect_document_id": false
     },
     {
-        "source_path": "defender-xdr/eval-defender-investigate-respond-simulate-attack.md",
-        "redirect_url": "/defender-xdr/pilot-deploy-investigate-respond",
-        "redirect_document_id": false
-    },
-    {
         "source_path": "defender-xdr/eval-defender-mcas-architecture.md",
         "redirect_url": "/defender-xdr/pilot-deploy-defender-cloud-apps",
         "redirect_document_id": false

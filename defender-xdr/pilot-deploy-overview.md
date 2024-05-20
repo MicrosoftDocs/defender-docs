@@ -81,7 +81,7 @@ Additional optional architecture components not included in this illustration:
 
 ## Microsoft Defender XDR and an example cyber security attack
 
-This diagram show a common cyber-attack and the components of Microsoft Defender XDR that help detect and remediate it.
+This diagram shows a common cyber-attack and the components of Microsoft Defender XDR that help detect and remediate it.
 
 :::image type="content" source="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg" alt-text="A diagram that shows the various attempts of a cyber security attack." lightbox="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg":::
 
