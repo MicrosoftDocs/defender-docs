@@ -134,7 +134,7 @@ You can either use JAMF Pro GUI to edit individual settings of the Microsoft Def
 
 Note that you must use exact `com.microsoft.wdav` as the **Preference Domain**; Microsoft Defender for Endpoint uses only this name and `com.microsoft.wdav.ext` to load its managed settings.
 
-(The `com.microsoft.wdav.ext` version may be used in rare cases when you prefer to use GUI method, but also need to configure a setting that has not been added to the schema yet.)
+(The `com.microsoft.wdav.ext` version may be used in rare cases when you prefer to use GUI method, but also need to configure a setting that hasn't been added to the schema yet.)
 
 ### GUI method
 
@@ -144,29 +144,29 @@ Note that you must use exact `com.microsoft.wdav` as the **Preference Domain**; 
     curl -o ~/Documents/schema.json https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/schema/schema.json
     ```
 
-2. Create a new Configuration Profile under Computers -> Configuration Profiles, enter the following details on the **General** tab:
+2. Create a new configuration profile. Under **Computers**, go to **Configuration Profiles**, and then specify the following details on the **General** tab:
 
    :::image type="content" source="media/644e0f3af40c29e80ca1443535b2fe32.png" alt-text="A new profile." lightbox="media/644e0f3af40c29e80ca1443535b2fe32.png":::
 
-    - Name: MDATP MDAV configuration settings
-    - Description:\<blank\>
-    - Category: None (default)
-    - Level: Computer Level (default)
-    - Distribution Method: Install Automatically (default)
+    - **Name**: `MDATP MDAV configuration settings`
+    - **Description**: `<blank\>`
+    - **Category**: `None (default)`
+    - **Level**: `Computer Level (default)`
+    - **Distribution Method**: `Install Automatically (default)`
 
-3. Scroll down to the **Application & Custom Settings** tab, select **External Applications**, click **Add** and use **Custom Schema** as Source to use for the preference domain.
+3. Scroll down to the **Application & Custom Settings** tab, select **External Applications**, select **Add**, and then use **Custom Schema** as the source for the preference domain.
 
    :::image type="content" source="media/4137189bc3204bb09eed3aabc41afd78.png" alt-text="Add custom schema." lightbox="media/4137189bc3204bb09eed3aabc41afd78.png":::
 
-4. Enter `com.microsoft.wdav` as the Preference Domain, select **Add Schema** and **Upload** the schema.json file downloaded on Step 1. Click **Save**.
+4. Type `com.microsoft.wdav` for the Preference Domain, select **Add Schema** and then upload the `schema.json` file downloaded on Step 1. Select **Save**.
 
    :::image type="content" source="media/a6f9f556037c42fabcfdcb1b697244cf.png" alt-text="Upload schema." lightbox="media/a6f9f556037c42fabcfdcb1b697244cf.png":::
 
-5. You can see all supported Microsoft Defender for Endpoint configuration settings below, under **Preference Domain Properties**. Click **Add/Remove properties** to select the settings that you want to be managed, and click **Ok** to save your changes. (Settings left unselected will not be included into the managed configuration, an end user will be able to configure those settings on their machines.)
+5. You can see all supported Microsoft Defender for Endpoint configuration settings under **Preference Domain Properties**. Select **Add/Remove properties** to select the settings that you want to be managed, and then select **OK** to save your changes. (Settings left unselected aren't included into the managed configuration, an end user can configure those settings on their machines.)
 
    :::image type="content" source="media/817b3b760d11467abe9bdd519513f54f.png" alt-text="The chosen managed settings." lightbox="media/817b3b760d11467abe9bdd519513f54f.png":::
 
-6. Change values of the settings to desired values. You can click **More information** to get documentation for a particular setting. (You may click **Plist preview** to inspect what the configuration plist will look like. Click **Form editor** to return to the visual editor.)
+6. Change values of the settings to desired values. You can select **More information** to get documentation for a particular setting. (You can select **Plist preview** to inspect what the configuration plist will look like. Select **Form editor** to return to the visual editor.)
 
    :::image type="content" source="media/a14a79efd5c041bb8974cb5b12b3a9b6.png" alt-text="The page on which you change the settings values." lightbox="media/a14a79efd5c041bb8974cb5b12b3a9b6.png":::
 
@@ -321,7 +321,7 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 2. Save the file as `MDATP_MDAV_configuration_settings.plist`.
 
-3. In the Jamf Pro dashboard, open **Computers**, and their **Configuration Profiles**. Click **New** and switch to the **General** tab.
+3. In the Jamf Pro dashboard, open **Computers**, and their **Configuration Profiles**. Select **New** and switch to the **General** tab.
 
    :::image type="content" source="media/644e0f3af40c29e80ca1443535b2fe32.png" alt-text="The page displaying a new profile." lightbox="media/644e0f3af40c29e80ca1443535b2fe32.png":::
 
@@ -399,7 +399,7 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
 1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
 
-2. Click **New**, and enter the following details in the **General** tab for **Options**:
+2. Select **New**, and enter the following details in the **General** tab for **Options**:
 
    - **Name**: `MDATP MDAV Notification settings`
    - **Description**: `macOS 11 (Big Sur) or later`
@@ -567,7 +567,7 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
    :::image type="content" source="media/6de50b4a897408ddc6ded56a09c09fe2.png" alt-text="The save operation for the configuration setting." lightbox="media/6de50b4a897408ddc6ded56a09c09fe2.png":::
 
-8. Click the `+` sign next to **App Access** to add a new entry.
+8. Select the `+` sign next to **App Access** to add a new entry.
 
    :::image type="content" source="media/tcc-add-entry.png" alt-text="The save operation relating to the configuration setting." lightbox="media/tcc-add-entry.png":::
 
@@ -674,7 +674,7 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
 1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
 
-2. Click **New**, and enter the following details for **Options**:
+2. Select **New**, and enter the following details for **Options**:
 
     - Tab **General**:
         - **Name**: `Microsoft Defender Network Extension`
@@ -787,7 +787,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
    :::image type="content" source="media/990742cd9a15ca9fdd37c9f695d1b9f4.png" alt-text="The configuration settings for jamfpro." lightbox="media/990742cd9a15ca9fdd37c9f695d1b9f4.png":::
 
-4. Select your computer and click the gear icon at the top, and then select **Computer Management**.
+4. Select your computer and select the gear icon at the top, and then select **Computer Management**.
 
    :::image type="content" source="media/b6d671b2f18b89d96c1c8e2ea1991242.png" alt-text="The configuration settings - computer management." lightbox="media/b6d671b2f18b89d96c1c8e2ea1991242.png":::
 
