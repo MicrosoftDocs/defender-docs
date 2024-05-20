@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 author: siosulli
 ms.author: siosulli
 ms.localizationpriority: medium
-ms.date: 05/16/2024
+ms.date: 05/20/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -348,6 +348,7 @@ For other Windows server versions, you have two options to offboard Windows serv
 
 ## Related articles
 
+- [Onboard Windows servers to the Microsoft Defender for Endpoint service](configure-server-endpoints.md)
 - [Onboard previous versions of Windows](onboard-downlevel.md)
 - [Onboard Windows 10 devices](onboard-windows-client.md)
 - [Onboard non-Windows devices](configure-endpoints-non-windows.md)
@@ -356,4 +357,5 @@ For other Windows server versions, you have two options to offboard Windows serv
 - [Troubleshooting Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 - [Microsoft Entra seamless single sign-on](/azure/active-directory/hybrid/how-to-connect-sso-quick-start)
 - [Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint](troubleshoot-security-config-mgt.md#troubleshoot-onboarding-issues-related-to-security-management-for-microsoft-defender-for-endpoint)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
