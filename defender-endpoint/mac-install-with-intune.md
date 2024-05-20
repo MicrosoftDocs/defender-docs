@@ -387,7 +387,7 @@ To set Device Control for Microsoft Defender for Endpoint on macOS, follow the s
 
 To set Purview's Data Loss Prevention (DLP) for endpoint on macOS, follow the steps in [Onboard and offboard macOS devices into Compliance solutions using Microsoft Intune](/purview/device-onboarding-offboarding-macos-intune-mde).
 
-### Step 13: Check status of PList(.mobileconfig)
+### Step 13: Check status of PList (.mobileconfig)
 
 After completing the profile configuration, you'll be able to review the status of the policies.
 
