@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/26/2024
+ms.date: 05/20/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
@@ -316,31 +316,29 @@ Download [AutoUpdate2.mobileconfig](https://github.com/microsoft/mdatp-xplat/blo
 
 ### Step 9: Microsoft Defender for Endpoint configuration settings
 
-In this step, we go over the "Preferences," which enables you to configure anti-malware and EDR policies using Microsoft Defender portal and Microsoft Intune.
+In this step, we go over *Preferences* that enables you to configure anti-malware and EDR policies using Microsoft Defender XDR portal ([https://security.microsoft.com](https://security.microsoft.com)) **or** Microsoft Intune ([https://intune.microsoft.com](https://intune.microsoft.com)).
 
-#### Set policies using Microsoft Defender portal
+#### 9a. Set policies using Microsoft Defender portal
 
-Go through [Configure Microsoft Defender for Endpoint in Intune](/mem/intune/protect/advanced-threat-protection-configure) before setting the security policies using Microsoft Defender.
+1. Go through [Configure Microsoft Defender for Endpoint in Intune](/mem/intune/protect/advanced-threat-protection-configure) before setting the security policies using Microsoft Defender for Endpoint Security Settings Management.
 
-In the [Microsoft Defender portal](https://sip.security.microsoft.com/homepage?tid=72f988bf-86f1-41af-91ab-2d7cd011db47):
+2. In the [Microsoft Defender portal](https://sip.security.microsoft.com/homepage?tid=72f988bf-86f1-41af-91ab-2d7cd011db47), go to **Configuration management** > **Endpoint security policies** > **Mac policies** > **Create new policy**.
 
-1. Go to **Configuration management** > **Endpoint security policies** > **Mac policies** > **Create new policy**.
+3. Under **Select Platform**, select **macOS**.
 
-1. Under **Select Platform**, select **macOS**.
+4. Under **Select Template**, choose a template and select **Create Policy**.
 
-1. Under **Select Template**, choose a template and select **Create Policy**.
+5. Specify a name and description for the policy, and then select **Next**.
 
-1. Enter the Name and Description of the policy.
-
-1. Select **Next**.
-
-1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or **All Users** and **All devices**.
+6. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or **All Users** and **All devices**.
 
 For more information about managing security settings, see:
 
 - [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration?pivots=mdssc-ga)
 - [Manage security settings for Windows, macOS, and Linux natively in Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/manage-security-settings-for-windows-macos-and-linux-natively-in/ba-p/3870617)
 
+> [!IMPORTANT]
+> The policies set via Intune will take precedence over the Microsoft Defender for Endpoint Security Settings Management.
 
 #### Set policies using Microsoft Intune
 
@@ -389,7 +387,7 @@ To set Device Control for Microsoft Defender for Endpoint on macOS, follow the s
 
 To set Purview's Data Loss Prevention (DLP) for endpoint on macOS, follow the steps in [Onboard and offboard macOS devices into Compliance solutions using Microsoft Intune](/purview/device-onboarding-offboarding-macos-intune-mde).
 
-### Step 13: Check status of PList(.mobileconfig)
+### Step 13: Check status of PList (.mobileconfig)
 
 After completing the profile configuration, you'll be able to review the status of the policies.
 
