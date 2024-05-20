@@ -624,3 +624,6 @@ As described in [How SPF, DKIM, and DMARC work together to authenticate email me
 - [Use DMARC to validate email](email-authentication-dmarc-configure.md)
 
 For mail coming _into_ Microsoft 365, you might also need to configure trusted ARC sealers if you use services that modify messages in transit before delivery to your organization. For more information, see [Configure trusted ARC sealers](email-authentication-arc-configure.md).
+
+> [!TIP]
+> Exchange 2016 and Exchange 2019 are known to modify messages that flow through them, which can impact DKIM.
