@@ -80,6 +80,8 @@ Apart from device-focused remediation steps, you can also take some actions on e
 
 - `Delete email` - select this to move email messages to the Deleted items folder (**Soft delete**) or delete them permanently (**Hard delete**)
 
+   Selecting **Soft delete** also offers the option to **Delete sender's copy**, which also tries to soft delete the message from the sender's Sent Items folder if the sender is the organization.
+
    :::image type="content" source="/defender/media/advanced-hunting-take-actions-email-del.png" alt-text="The Take actions option in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-take-actions-email-del.png":::
 
 You can also provide a remediation name and a short description of the action taken to easily track it in the action center history. You can also use the Approval ID to filter for these actions in the action center. This ID is provided at the end of the wizard:
