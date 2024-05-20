@@ -390,8 +390,7 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 1. Select **Done**. You see the new **Configuration profile**.
 
-   ![Image of configuration settings config profile image.](media/dd55405106da0dfc2f50f8d4525b01c8.png)
-       :::image type="content" source="media/dd55405106da0dfc2f50f8d4525b01c8.png" alt-text="The config profile's settings." lightbox="media/dd55405106da0dfc2f50f8d4525b01c8.png":::
+   :::image type="content" source="media/dd55405106da0dfc2f50f8d4525b01c8.png" alt-text="Image of configuration settings config profile image." lightbox="media/dd55405106da0dfc2f50f8d4525b01c8.png":::
 
 ## Step 4: Configure notifications settings
 
