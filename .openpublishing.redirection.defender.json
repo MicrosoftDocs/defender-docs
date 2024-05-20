@@ -6,8 +6,73 @@
         "redirect_document_id": false
     },
     {
+      "source_path": "defender-office-365/zero-trust-continuous-access-evaluation-microsoft-365.md",
+      "redirect_url": "/security/zero-trust/zero-trust-continuous-access-evaluation-microsoft-365",
+      "redirect_document_id": false
+   },
+   {
+     "source_path": "defender-office-365/zero-trust-identity-device-access-policies-common.md",
+     "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-common",
+     "redirect_document_id": false
+   },
+   {
+     "source_path": "defender-office-365/zero-trust-identity-device-access-policies-exchange.md",
+     "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-exchange",
+     "redirect_document_id": false
+   },
+   {
+     "source_path": "defender-office-365/zero-trust-identity-device-access-policies-guest-access.md",
+     "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-guest-access",
+     "redirect_document_id": false
+   },
+   {
+     "source_path": "defender-office-365/zero-trust-identity-device-access-policies-mcas-saas.md",
+     "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-mcas-saas",
+     "redirect_document_id": false
+   },
+   {
+     "source_path": "defender-office-365/zero-trust-identity-device-access-policies-overview.md",
+     "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-overview",
+     "redirect_document_id": false
+   },
+   {
+     "source_path": "defender-office-365/zero-trust-identity-device-access-policies-prereq.md",
+     "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-prerequisite",
+     "redirect_document_id": false
+   },
+   {
+     "source_path": "defender-office-365/zero-trust-identity-device-access-policies-sharepoint.md",
+     "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-sharepoint",
+     "redirect_document_id": false
+   },
+   {
+     "source_path": "defender-office-365/zero-trust-identity-device-access-policies-teams.md",
+     "redirect_url": "/security/zero-trust/zero-trust-identity-device-access-policies-teams",
+     "redirect_document_id": false
+   },
+   {
       "source_path": "defender-endpoint/microsoft-defender-antivirus-using-mde-security-set-mngmnt.md",
       "redirect_url": "/defender-endpoint/evaluate-mdav-using-gp",
+      "redirect_document_id": false
+    },
+    {   
+        "source_path": "defender-endpoint/preview.md",
+        "redirect_url": "/defender-xdr/preview",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "defender-endpoint/preview-settings.md",
+        "redirect_url": "/defender-xdr/preview",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "defender-business/mdb-preview.md",
+        "redirect_url": "/defender-xdr/preview",
+        "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/evaluation-lab.md",
+      "redirect_url": "/defender-endpoint/evaluate-microsoft-defender-antivirus",
       "redirect_document_id": true
     }
   ]

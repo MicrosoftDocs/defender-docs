@@ -8,7 +8,7 @@ f1.keywords:
 ms.author: bagol
 author: batamig
 manager: raynew
-ms.date: 12/17/2023
+ms.date: 05/15/2024
 audience: ITPro
 ms.topic: conceptual
 search.appverid: 
@@ -128,25 +128,6 @@ As part of the creation of a dedicated **Assets** section that spans the entire 
 
 <a name='redirection-from-the-classic-microsoft-defender-for-cloud-apps-portal-to-microsoft-365-defender'></a>
 
-### Preview features in Defender for Cloud Apps
-
-Turn on the preview experience setting to be among the first to try upcoming features.
-
-> [!NOTE]
-> This feature is now available in public preview.
-
-1. Sign into Microsoft Defender XDR as a Global administrator, Security administrator, or Security Operator.
-
-1. Select **Settings** > **Cloud apps** > **Preview features** > **Enable preview features**.
-
-1. Select **Save** to save your changes.
-
-You'll know you have preview features turned on when you see that the **Enable preview features** check box is selected. For example:
-
-:::image type="content" source="/defender/media/preview-features.png" alt-text="Screenshot that shows how to enable preview features.":::
-
-For more information, see [Microsoft Defender for Cloud Apps preview features](/defender-cloud-apps/preview-features).
-
 ### Redirection from the classic Microsoft Defender for Cloud Apps portal to Microsoft Defender XDR
 
 Customers still using the classic Microsoft Defender for Cloud Apps portal are all automatically redirected to Microsoft 365, and customers using preview features with the classic portal now have no option to switch back. If you're not using preview features, admins can still update the redirect setting as needed to continue using the classic Defender for Cloud Apps portal.
@@ -159,7 +140,7 @@ Customers still using the classic Microsoft Defender for Cloud Apps portal are a
 
 1. Sign in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> as a Global administrator, Security administrator, or Cloud App Security administrator in Azure Active directory, or a local global admin in Microsoft Defender for Cloud Apps.
 
-1. Make sure that you don't have Preview features turned on for your tenant. For more information, see [Preview features in Microsoft Defender for Cloud Apps](/defender-cloud-apps/preview-features).
+1. Make sure that you don't have Preview features turned on for your tenant. For more information, see [Microsoft Defender XDR preview features](preview.md).
 
 1. Navigate to **Settings** > **Cloud Apps** > **System** > **Redirection to Microsoft Defender XDR** or [go directly to the Redirection setting](https://security.microsoft.com/cloudapps/settings?tabid=autoRedirection).
 
