@@ -130,10 +130,14 @@ As part of the creation of a dedicated **Assets** section that spans the entire 
 
 ### Redirection from the classic Microsoft Defender for Cloud Apps portal to Microsoft Defender XDR
 
-Customers still using the classic Microsoft Defender for Cloud Apps portal are all automatically redirected to Microsoft 365, and customers using preview features with the classic portal now have no option to switch back. If you're not using preview features, admins can still update the redirect setting as needed to continue using the classic Defender for Cloud Apps portal.
+The Defender for Cloud Apps experience in the Microsoft Defender portal is generally available, and the automatic redirection from the classic portal is on by default for all customers. Customers using preview features with the classic portal have no option to switch back. If you're not using preview features, admins can still update the redirect setting as needed to continue using the classic Defender for Cloud Apps portal.
+
+Starting June 16th, 2024, the redirection toggle will no longer be available for any customers. From then on, all users accessing the classic Microsoft Defender for Cloud Apps portal will be automatically rerouted to the Microsoft Defender portal, with no option to opt-out.
+
+To prepare for this change, we recommend that any customers still using the classic portal move operations to the Microsoft Defender portal.
 
 > [!NOTE]
-> If something isn't working for you or if there's anything you're unable to complete through Microsoft Defender XDR, we want to hear about it. If you've encountered any issues with redirection, we encourage you to let us know by using the Give feedback submission form.
+> If something isn't working for you or if there's anything you're unable to complete using the Microsoft Defender portal, we want to hear about it. If you've encountered any issues with redirection, we encourage you to let us know by using the Give feedback submission form.
 >
 
 **To revert to the former Microsoft Defender for Cloud Apps portal**:
