@@ -176,15 +176,13 @@ Selecting :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" b
 |---|:---:|:---:|
 |**Move to mailbox folder**|✔¹||
 |**Submit to Microsoft for review**|✔|✔|
-|&nbsp;&nbsp;**Allow or block entries in the Tenant Allow/Block List**³|✔|✔|
+|&nbsp;&nbsp;**Allow or block entries in the Tenant Allow/Block List**²|✔|✔|
 |**Initiate automated investigation**|✔||
-|**Propose remediation**|✔|²|
+|**Propose remediation**|✔||
 
 ¹ This action requires the **Search and Purge** role in [Email & collaboration permissions](mdo-portal-permissions.md). By default, this role is assigned only to the **Data Investigator** and **Organization Management** role groups. You can add users to those role groups, or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
-² Although this action might appear available in Real-time detections, it's not available in Defender for Office 365 Plan 1.
-
-³ This action is available under **Submit to Microsoft for review**.
+² This action is available under **Submit to Microsoft for review**.
 
 The **Take action** wizard is described in the following list:
 
