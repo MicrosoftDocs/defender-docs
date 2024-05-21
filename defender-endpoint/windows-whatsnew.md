@@ -55,8 +55,7 @@ All updates contain:
 
 **Configuration Management**
 
-- Fixed an issue that caused empty policies to appear in the UI.
-- Change registry keys to configure Attack Surface Reduction (ASR) rules.  
+- Fixed an issue that caused empty policies to appear in the UI. 
 - Configured Windows Defender Application Control(WDAC) policies to block undesired applications from running on the device. 
 
 ## Feb-2024 (Release version: 10.8735.26020.1009)
