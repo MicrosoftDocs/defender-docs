@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to use quarantine policies to control what users are able to do to quarantined messages.
 ms.service: defender-office-365
-ms.date: 5/13/2024
+ms.date: 05/21/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -170,7 +170,7 @@ New-QuarantinePolicy -Name LimitedAccess -EndUserQuarantinePermissionsValue 43 -
 For custom permissions, use the previous table to get the binary value that corresponds to the permissions you want. Convert the binary value to a decimal value and use the decimal value for the _EndUserQuarantinePermissionsValue_ parameter.
 
 > [!TIP]
-> Always the equivalent decimal value for _EndUserQuarantinePermissionsValue_. Don't use the raw binary value.
+> Use the equivalent **decimal** value for _EndUserQuarantinePermissionsValue_. Don't use the raw binary value.
 
 For detailed syntax and parameter information, see [New-QuarantinePolicy](/powershell/module/exchange/new-quarantinepolicy).
 
@@ -780,8 +780,6 @@ If the **Allow sender** permission is enabled:
 :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false":::
 
 - :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false"::: [Allow sender](quarantine-end-user.md#allow-email-senders-from-quarantine) is available on the **Quarantine** page and in the message details in quarantine.
-
-  For this permission to work correctly in quarantine notifications, users need to be enabled for remote PowerShell. For instructions, see [Enable or disable access to Exchange Online PowerShell](/powershell/exchange/disable-access-to-exchange-online-powershell).
 
 If the **Allow sender** permission is disabled, users can't allow senders from quarantine (the action isn't available).
 
