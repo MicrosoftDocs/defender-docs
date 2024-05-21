@@ -84,7 +84,7 @@ Vulnerability articles also include a **Defender TI priority score** and severit
 
 IP reputation data is important to understanding the trustworthiness of your own attack surface and is also useful when assessing unknown hosts, domains, or IP addresses that appear in investigations. Defender TI provides proprietary reputation scores for any host, domain, or IP address. Whether validating the reputation of a known or unknown entity, these scores helps you understand any detected ties to malicious or suspicious infrastructure quickly. 
 
-![Reputation Summary Card](media/reputationSummaryCard.png)
+:::image type="content" source="/defender/threat-intelligence/media/reputation-score-summary-card.png" alt-text="Reputation summary card." lightbox="/defender/threat-intelligence/media/reputation-score-summary-card.png":::
 
 Defender TI provides quick information about the activity of these entities, such as first- and last-seen timestamps, Autonomous System Number (ASN), country or region, associated infrastructure, and a list of rules that impact the reputation score, when applicable. 
 
@@ -96,7 +96,7 @@ Analyst insights distill Microsoft's vast data set into a handful of observation
 
 Insights are meant to be small facts or observations about a domain or IP address. They provide you with the ability to assess the queried indicator and improve your ability to determine if an indicator you're investigating is malicious, suspicious, or benign.
 
-![Summary Tab Analyst Insights](media/summaryTabAnalystInsights.png)
+:::image type="content" source="/defender/threat-intelligence/media/analyst-insights-01.png" alt-text="Analyst insights summary card." lightbox="/defender/threat-intelligence/media/analyst-insights-01.png":::
 
 [Read more about analyst insights](analyst-insights.md)
 
@@ -142,9 +142,9 @@ Defender TI offers two types of tags: system tags and custom tags.
 
 Defender TI lets users develop multiple project types for organizing indicators of interest and indicators of compromise from an investigation. **Projects** contain a list of all associated indicators and a detailed history that retains the names, descriptions, and collaborators.
 
-When you search an IP address, domain, or host in Defender TI, and if that indicator is listed within a project you have access to, you can see a link to the project from the Projects section, in the **Summary** and **Data** tabs. From there, you can navigate to the details of the project for more context about the indicator before reviewing the other data sets for more information. You can therefore avoid reinventing the wheel of an investigation that one of your Defender TI tenant users might have already started. If someone adds you as a collaborator to a project, you can also add onto that investigation by adding new IOCs.
+When you search an IP address, domain, or host in Defender TI, and if that indicator is listed within a project you have access to, you can see a link to the project from the **Intel projects** page, in the **Summary** and **Data** tabs. From there, you can navigate to the details of the project for more context about the indicator before reviewing the other data sets for more information. You can therefore avoid reinventing the wheel of an investigation that one of your Defender TI tenant users might have already started. If someone adds you as a collaborator to a project, you can also add onto that investigation by adding new IOCs.
 
-![Defender TI Overview Projects](media/defenderTIOverviewProjects.png)
+:::image type="content" source="/defender/threat-intelligence/media/project-details.png" alt-text="Project details screenshot." lightbox="/defender/threat-intelligence/media/project-details.png":::
 
 [Learn more about using projects](using-projects.md)
 
