@@ -91,13 +91,16 @@ To detect unknown threats in SPI flash, signals from the UEFI scanner are analyz
 These events can likewise be queried through advanced hunting as shown:
 
 ```kusto
-DeviceAlertEvents
-
+let AlertStats = AlertInfo
+| where Timestamp > ago(30d)
+| where ServiceSource == "Microsoft Defender for Endpoint"
+| where DetectionSource == "Antivirus"
 | where Title has "UEFI"
-
+| join AlertEvidence on AlertId;
+AlertStats
+| join DeviceInfo on DeviceId
+| distinct DeviceName, DeviceId, AlertId, Title, Severity, DetectionSource, Timestamp
 | summarize Titles=makeset(Title) by DeviceName, DeviceId, bin(Timestamp, 1d)
-
-| limit 100
 ```
 
 ## Comprehensive security levels up with low-level protections
