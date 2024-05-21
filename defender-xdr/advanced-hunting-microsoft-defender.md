@@ -147,7 +147,9 @@ For Microsoft Defender XDR data, you can take further action by selecting the ch
 - Custom detections, links to incidents, and take actions capabilities are supported for Defender XDR data only.
 - Bookmarks aren't supported in the advanced hunting experience. They're supported in the **Microsoft Sentinel > Threat management > Hunting** feature.
 - If you're streaming Defender XDR tables to Log Analytics, there might be a difference between the`Timestamp` and `TimeGenerated` columns. In case the data arrives to Log Analytics after 48 hours, it's being overridden upon ingestion to `now()`. Therefore, to get the actual time the event happened, we recommend relying on the `Timestamp` column.
-- The Microsoft Graph API for running an advanced hunting query doesn't support querying data from Microsoft Sentinel yet. 
+- The Microsoft Graph API for running an advanced hunting query doesn't support querying data from Microsoft Sentinel yet.
+- When prompting [Copilot for Security](advanced-hunting-security-copilot.md) for advanced hunting queries, you might find that not all Microsoft Sentinel tables are currently supported. However, support for these tables can be expected in the future.
+
 
 
 

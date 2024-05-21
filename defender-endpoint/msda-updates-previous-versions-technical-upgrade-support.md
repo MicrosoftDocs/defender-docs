@@ -6,7 +6,7 @@ ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 05/17/2024
+ms.date: 05/20/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -33,7 +33,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Release date:  **February 27, 2024**
 - Platform: **4.18.24010.12**
 - Engine: **1.1.24010.10**
-- Support phase: **Security and Critical Updates**
+- Support phase: **Technical upgrade support (only)**
 
 ### What's new
 

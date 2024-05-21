@@ -12,7 +12,6 @@ ms.service:                microsoft-365-security
 ms.subservice:             m365d
 ms.localizationpriority:   medium
 ms.collection: 
-  - zerotrust-solution
   - msftsolution-secops
   - tier1
 f1.keywords:               NOCSH
