@@ -118,7 +118,7 @@ Learn about the changes that have come with the integration of Defender for Clou
 
 ### Global search
 
-Use the Microsoft Defender portal's global serach bar at the top of the page to search for connected apps in Defender for Cloud Apps.
+Use the Microsoft Defender portal's global search bar at the top of the page to search for connected apps in Defender for Cloud Apps.
 
 :::image type="content" source="/defender/media/global-search-apps.png" alt-text="Search for connected apps.":::
 
