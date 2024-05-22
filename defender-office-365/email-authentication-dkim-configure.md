@@ -344,7 +344,7 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
 5. After a while, return to Exchange Online PowerShell, replace \<Domain\> with the domain that you configured, and run the following command:
 
    ```powerShell
-   Set-DkimConfig -Identity \<Domain\> -Enabled $true [-BodyCanonicalization <Relaxed | Simple>] [-HeaderCanonicalization <Relaxed | Simple>]
+   Set-DkimSigningConfig -Identity \<Domain\> -Enabled $true [-BodyCanonicalization <Relaxed | Simple>] [-HeaderCanonicalization <Relaxed | Simple>]
    ```
 
    - The _BodyCanonicalization_ parameter specifies the sensitivity level to changes in the message body:
@@ -357,13 +357,13 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
    For example:
 
    ```powerShell
-   Set-DkimConfig -Identity contoso.com -Enabled $true
+   Set-DkimSigningConfig -Identity contoso.com -Enabled $true
    ```
 
    Or
 
    ```powerShell
-   Set-DkimConfig -Identity contoso.onmicrosoft.com -Enabled $true
+   Set-DkimSigningConfig -Identity contoso.onmicrosoft.com -Enabled $true
    ```
 
    - For a custom domain, if Microsoft 365 is able to detect the CNAME records at the domain registrar, the command runs without error, and the domain is now used to DKIM sign outbound messages from the domain.
