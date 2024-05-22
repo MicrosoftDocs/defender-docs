@@ -107,7 +107,7 @@ Two new ASR rules are now in public preview:
 
 ## September 2023
 
-(GA) The [Protecting Dev Drive using performance mode](microsoft-defender-endpoint-antivirus-performance-mode.md) is now generally available. The goal of Performance mode is to improve functional performance for developers who use Windows 11.  Performance mode which reduces the performance impact of Microsoft Defender Antivirus scans for files stored on designated Dev Drive.
+(GA) [Protecting Dev Drive using performance mode](microsoft-defender-endpoint-antivirus-performance-mode.md) is now generally available. The goal of Performance mode is to improve functional performance for developers who use Windows 11.  Performance mode reduces the performance impact of Microsoft Defender Antivirus scans for files stored on designated Dev Drive.
 
 ## August 2023
 
