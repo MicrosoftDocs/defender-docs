@@ -6,13 +6,14 @@ ms.author: dansimp
 author: dansimp
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 05/16/2024
+ms.date: 05/22/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
+ms.custom: partner-contribution
 ms.topic: reference
 ms.subservice: linux
 search.appverid: met150
