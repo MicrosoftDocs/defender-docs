@@ -69,7 +69,7 @@ URL/IP allow and block requires that the Microsoft Defender for Endpoint compone
 
 ### Windows Server 2016 and Windows Server 2012 R2 requirements
 
-Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016).
+Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2).
 
 ### Microsoft Defender Antivirus version requirements
 

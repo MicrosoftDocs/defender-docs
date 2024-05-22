@@ -55,7 +55,7 @@ landingContent:
           - text: See the trial user guide
             url: trial-playbook-defender-business.md
           - text: Turn on preview features
-            url: mdb-preview.md
+            url: /defender-xdr/preview
 
   # Card
   - title: Setup information

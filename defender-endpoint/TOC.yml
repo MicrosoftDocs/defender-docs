@@ -17,21 +17,21 @@
     - name: What's new in Defender for Endpoint
       href: whats-new-in-microsoft-defender-endpoint.md
       items: 
-      - name: What's new in Defender for Endpoint - archive
-        href: whats-new-mde-archive.md
-    - name: What's new in Microsoft Defender for Endpoint on Windows
-      href: windows-whatsnew.md
-    - name: What's new in Microsoft Defender for Endpoint on other platforms
-      items:
-      - name: What's new in Defender for Endpoint on Linux
+      - name: MsSense versions (Windows)
+        href: windows-whatsnew.md
+      - name: Defender for Endpoint on macOS releases
+        href: mac-whatsnew.md
+      - name: Defender for Endpoint on Linux releases
         href: linux-whatsnew.md
       - name: What's new in Defender for Endpoint on Android
         href: android-whatsnew.md
       - name: What's new in Defender for Endpoint on iOS
         href: ios-whatsnew.md
+      - name: Previous Defender for Endpoint releases (archive)
+        href: whats-new-mde-archive.md
 
     - name: Preview features
-      href: preview.md
+      href: /defender-xdr/preview
     - name: Data storage and privacy
       href: data-storage-privacy.md
     - name: Defender for Endpoint Plan 1
@@ -44,23 +44,23 @@
         href: mde-plan1-getting-started.md
     - name: Microsoft Defender for Endpoint for US Government customers
       href: gov.md
-    - name: Overview of Microsoft Defender for Endpoint on other platforms
+    - name: Microsoft Defender for Endpoint on other platforms
       href: non-windows.md
       items: 
-      - name: Microsoft Defender for Endpoint on Linux
+      - name: macOS
+        href: microsoft-defender-endpoint-mac.md
+      - name: Linux
         href: microsoft-defender-endpoint-linux.md
-      - name: Microsoft Defender for Endpoint on Android
+      - name: Android
         href: microsoft-defender-endpoint-android.md
-      - name: Microsoft Defender for Endpoint on iOS
+      - name: iOS
         href: microsoft-defender-endpoint-ios.md
 
     - name: Antivirus solution compatibility with Defender for Endpoint
       href: defender-compatibility.md
 
-  - name: Evaluate capabilities
+  - name: Microsoft Defender for Endpoint demonstrations
     items:
-    - name: Evaluate capabilities overview
-      href: evaluation-lab.md
     - name: Microsoft Defender for Endpoint demonstrations
       items:
       - name: Overview
@@ -73,6 +73,8 @@
         href: defender-endpoint-demonstrations.md
       - name: App reputation demonstration
         href: defender-endpoint-demonstration-app-reputation.md
+      - name: Behavior monitoring demonstrations
+        href: demonstration-behavior-monitoring.md
       - name: Validate antimalware
         href: validate-antimalware.md
       - name: Attack surface reduction rules demonstrations
@@ -131,6 +133,8 @@
       items:
       - name: Onboarding Windows Client overview
         href: onboard-windows-client.md
+      - name: Defender for Endpoint plug-in for WSL
+        href: mde-plugin-wsl.md
       - name: Onboard Windows devices to Defender for Endpoint using Intune
         href: configure-endpoints-mdm.md
       - name: Onboard Windows devices to Defender for Endpoint using Microsoft Configuration Manager
@@ -166,10 +170,6 @@
       href: configure-endpoints-non-windows.md
     - name: Defender for Endpoint on macOS
       items:
-      - name: Microsoft Defender for Endpoint on macOS
-        href: microsoft-defender-endpoint-mac.md
-      - name: What's new in Defender for Endpoint on macOS
-        href: mac-whatsnew.md
       - name: Deploy Defender for Endpoint on macOS
         items:
         - name: Deployment with Microsoft Intune
@@ -247,8 +247,6 @@
       items:
        - name: Deploy Defender for Endpoint on Linux
          items:
-         - name: Defender for Endpoint plug-in for WSL
-           href: mde-plugin-wsl.md
          - name: Puppet based deployment
            href: linux-install-with-puppet.md
          - name: Ansible based deployment
@@ -628,6 +626,8 @@
         href: adv-tech-of-mdav.md
       - name: Behavior monitoring with Microsoft Defender Antivirus
         href: behavior-monitor.md
+      - name: Behavior monitoring with Microsoft Defender Antivirus on macOS
+        href: behavior-monitor-macos.md
       - name: Detect and block potentially unwanted applications
         href: detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md
       - name: Enable and configure Microsoft Defender Antivirus always-on protection in Group Policy

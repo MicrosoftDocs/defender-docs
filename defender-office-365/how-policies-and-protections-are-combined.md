@@ -17,7 +17,7 @@ ms.custom:
 description: Admins can learn how the order of protection settings and the priority order of security policies affect the application of security policies in Microsoft 365.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 10/20/2023
+ms.date: 05/16/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -55,10 +55,11 @@ There are two major factors that determine which policy is applied to a message:
 
   1. The anti-spam, anti-malware, anti-phishing, Safe Links<sup>\*</sup>, and Safe Attachments<sup>\*</sup> policies in the [Strict preset security policy](preset-security-policies.md#profiles-in-preset-security-policies) (when enabled).
   2. The anti-spam, anti-malware, anti-phishing, Safe Links<sup>\*</sup>, and Safe Attachments<sup>\*</sup> policies in the [Standard preset security policy](preset-security-policies.md#profiles-in-preset-security-policies) (when enabled).
-  3. Anti-phishing, Safe Links, and Safe Attachments in [Defender for Office 365 evaluation policies](try-microsoft-defender-for-office-365.md#audit-mode-vs-blocking-mode-for-defender-for-office-365) (when enabled).
-  4. Custom anti-spam, anti-malware, anti-phishing, Safe Links<sup>\*</sup>, and Safe Attachments<sup>\*</sup> policies (when created).
+  3. Custom anti-spam, anti-malware, anti-phishing, Safe Links<sup>\*</sup>, and Safe Attachments<sup>\*</sup> policies (when created).
 
      Custom policies are assigned a default priority value when you create the policy (newer equals higher), but you can change the priority value at any time. This priority value affects the order that *custom policies* of that type (anti-spam, anti-malware, anti-phishing, etc.) are applied, but doesn't affect where custom policies are applied in the overall order.
+
+  4. Anti-phishing, Safe Links, and Safe Attachments in [Defender for Office 365 evaluation policies](try-microsoft-defender-for-office-365.md#audit-mode-vs-blocking-mode-for-defender-for-office-365) (when enabled).
 
   5. Of equal value:
      - The Safe Links and Safe Attachments policies in the [Built-in protection preset security policy](preset-security-policies.md#profiles-in-preset-security-policies)<sup>\*</sup>.
@@ -114,8 +115,8 @@ Entries in a user's _safelist collection_ (the Safe Senders list, the Safe Recip
 |Malware|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
 |High confidence phishing|**Filter wins**: Email quarantined|**Filter wins**: Email quarantined|
 |Phishing|**User wins**: Email delivered to user's Inbox|**Tenant wins**: The applicable anti-spam policy determines the action|
-|High confidence spam|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
-|Spam|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
+|High confidence spam|**User wins**: Email delivered to user's Inbox|**Tenant wins**: The applicable anti-spam policy determines the action|
+|Spam|**User wins**: Email delivered to user's Inbox|**Tenant wins**: The applicable anti-spam policy determines the action|
 |Bulk|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
 |Not spam|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
 

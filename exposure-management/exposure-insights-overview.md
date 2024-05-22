@@ -2,7 +2,7 @@
 title: Overview of exposure insights and secure score in Microsoft Security Exposure Management
 description: Learn how to get exposure insights into your corporate attack surface with Microsoft Security Exposure Management.
 ms.author: v-mjosephy
-author: mjosephym
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management

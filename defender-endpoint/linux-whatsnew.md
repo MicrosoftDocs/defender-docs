@@ -6,7 +6,7 @@ ms.author: dansimp
 author: dansimp
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 03/28/2024
+ms.date: 05/16/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -31,6 +31,41 @@ This article is updated frequently to let you know what's new in the latest rele
 
 - [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
+
+<details>
+<summary> May-2024 (Build: 101.24032.0007 | Release version: 30.124032.0007.0)</summary>
+
+## May-2024 Build: 101.24032.0007 | Release version: 30.124032.0007.0
+
+&ensp;Released: **May 15, 2024**<br/>
+&ensp;Published: **May 15, 2024**<br/>
+&ensp;Build: **101.24032.0007**<br/>
+&ensp;Release version: **30.124032.0007.0**<br/>
+&ensp;Engine version: **1.1.24020.3**<br/>
+&ensp;Signature version: **1.403.3500.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release:
+
+- In passive and on-demand modes, antivirus engine remains in idle state and is used only during scheduled custom scans. Thus as part of performance improvements, we have made changes to keep the AV engine down  in passive and on-demand mode except during scheduled custom scans. If the real time protection is enabled, antivirus engine will always be up and running. This will have no impact on your server protection in any mode.
+ 
+  To keep users informed of the state of antivirus engine, we have introduced a new field called "engine_load_status" as part of MDATP health. It indicates whether antivirus engine is currently running or not.
+
+  | `Field name` | `engine_load_status` | 
+  |---|---|
+  | Possible values | Engine not loaded (AV engine process is down),  Engine load succeeded (AV engine process up and running) | 
+
+  Healthy scenarios:
+    - If RTP is enabled, engine_load_status should be "Engine load succeeded"
+    - If MDE is in on-demand or passive mode, and custom scan isn't running then "engine_load_status" should be "Engine not loaded"
+    - If MDE is in on-demand or passive mode, and custom scan is running then "engine_load_status" should be "Engine load succeeded"    
+
+- Bug fix to enhance behavioral detections.
+- Stability and performance improvements.
+- Other bug fixes.
+
+</details>
 
 <details>
 <summary> March-2024 (Build: 101.24022.0001 | Release version: 30.124022.0001.0)</summary>
