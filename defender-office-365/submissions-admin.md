@@ -27,7 +27,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-For more information about what Microsoft does to your submissions, [check this out](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
+For more information about how Microsoft stores and handle your submissions, [check this out](submissions-report-messages-files-to-microsoft.md#report-suspicious-email-messages-to-microsoft).
 
 In Microsoft 365 organizations with Exchange Online mailboxes, admins can use the **Submissions** page in the Microsoft Defender portal to submit messages, URLs, and attachments to Microsoft for analysis. There are two basic types of admin submissions:
 
@@ -39,7 +39,7 @@ In Microsoft 365 organizations with Exchange Online mailboxes, admins can use th
 
   After an admin submits the message from the **User reported** tab, an entry is also created on the corresponding tab on the **Submissions** page (for example, the **Emails** tab). These types of admin submissions are described in the [Admin options for user reported messages](#admin-options-for-user-reported-messages) section.
 
-When admins submit messages to Microsoft for analysis, we do the following checks:
+When admins submit messages or sends user report to Microsoft for analysis, we do the following checks:
 
 - **Email authentication check** (email messages only): Whether email authentication passed or failed when it was delivered.
 - **Policy hits**: Information about any policies or overrides that might have allowed or blocked the incoming email into the organization, thus overriding our filtering verdicts.

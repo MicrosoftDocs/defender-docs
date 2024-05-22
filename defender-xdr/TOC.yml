@@ -306,6 +306,8 @@
                   href: advanced-hunting-behaviorinfo-table.md                                    
                 - name: CloudAppEvents
                   href: advanced-hunting-cloudappevents-table.md
+                - name: CloudAuditEvents
+                  href: advanced-hunting-cloudauditevents-table.md                  
                 - name: DeviceEvents
                   href: advanced-hunting-deviceevents-table.md
                 - name: DeviceFileCertificateInfo
