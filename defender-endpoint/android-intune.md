@@ -194,43 +194,37 @@ Follow the steps below to add Microsoft Defender for Endpoint app into your mana
 
 Defender for Endpoint supports Device configuration policies for managed devices via Microsoft Intune. This capability can be leveraged to **Auto setup of Always-on VPN** on Android Enterprise enrolled devices, so the end user does not need to set up VPN service while onboarding.
 
-1. On **Devices**, select **Configuration Profiles** \> **Create Profile** \> **Platform** \> **Android Enterprise**
+1. On **Devices**, select **Configuration Profiles** \> **Create Profile** \> **Platform** \> **Android Enterprise**. Select **Device restrictions** under one of the following, based on your device enrollment type:
 
-   Select **Device restrictions** under one of the following, based on your device enrollment type:
    - **Fully Managed, Dedicated, and Corporate-Owned Work Profile**
    - **Personally owned Work Profile**
 
-   Select **Create**.
+   Then, select **Create**.
 
    :::image type="content" source="media/1autosetupofvpn.png" alt-text="The Configuration profiles menu item in the Policy pane" lightbox="media/1autosetupofvpn.png":::
 
-2. **Configuration Settings**
-  Provide a **Name** and a **Description** to uniquely identify the configuration profile.
+2. **Configuration Settings**. Provide a **Name** and a **Description** to uniquely identify the configuration profile.
 
    :::image type="content" source="media/2autosetupofvpn.png" alt-text="The devices configuration profile Name and Description fields in the Basics pane" lightbox="media/2autosetupofvpn.png":::
 
-3. Select **Connectivity** and configure VPN:
+3. Select **Connectivity** and configure your VPN:
 
-   - Enable **Always-on VPN**
+   - Enable **Always-on VPN**. Set up a VPN client in the work profile to automatically connect and reconnect to the VPN whenever possible. Only one VPN client can be configured for always-on VPN on a given device, so be sure to have no more than one always-on VPN policy deployed to a single device.
 
-     Set up a VPN client in the work profile to automatically connect and reconnect to the VPN whenever possible. Only one VPN client can be configured for always-on VPN on a given device, so be sure to have no more than one always-on VPN policy deployed to a single device.
-
-   - Select **Custom** in VPN client dropdown list
-
-     Custom VPN in this case is Defender for Endpoint VPN which is used to provide the Web Protection feature.
+   - Select **Custom** in VPN client dropdown list. Custom VPN in this case is Defender for Endpoint VPN which is used to provide the Web Protection feature.
 
      > [!NOTE]
      > Microsoft Defender for Endpoint app must be installed on user's device, in order to functioning of auto setup of this VPN.
 
-   - Enter **Package ID** of the Microsoft Defender for Endpoint app in Google Play store. For the Defender app URL <https://play.google.com/store/apps/details?id=com.microsoft.scmx>, Package ID is **com.microsoft.scmx**
+   - Enter **Package ID** of the Microsoft Defender for Endpoint app in Google Play store. For the [Defender app URL](https://play.google.com/store/apps/details?id=com.microsoft.scmx), the package ID is `com.microsoft.scmx`.
 
-   - **Lockdown mode** Not configured (Default)
+   - Set **Lockdown mode** to **Not configured (Default)**.
 
      :::image type="content" source="media/3autosetupofvpn.png" alt-text="The Connectivity pane under the Configuration settings tab" lightbox="media/3autosetupofvpn.png":::
 
-4. **Assignment**
+4. **Assignment**. On the **Assignments** page, select the user group to which this app config policy would be assigned. Choose **Select groups** to include and selecting the applicable group and then select **Next**. 
 
-   In the **Assignments** page, select the user group to which this app config policy would be assigned. Choose **Select groups** to include and selecting the applicable group and then select **Next**. The group selected here is usually the same group to which you would assign Microsoft Defender for Endpoint Android app.
+   The group selected here is usually the same group to which you would assign Microsoft Defender for Endpoint Android app.
 
    :::image type="content" source="media/4autosetupofvpn.png" alt-text="Screenshot of the devices configuration profile Assignment pane in the Device restrictions." lightbox="media/4autosetupofvpn.png":::
 
@@ -258,7 +252,7 @@ The device configuration profile is now assigned to the selected user group.
 
     :::image type="content" source="media/9fe378a1dce0f143005c3aa53d8c4f51.png" alt-text="The Microsoft Defender for Endpoint portal" lightbox="media/9fe378a1dce0f143005c3aa53d8c4f51.png":::
 
-## Configure Low Touch Onboarding
+## Configure low-touch onboarding
 
 > [!NOTE]
 > This feature is currently in preview. Information in this section relates to a prerelease product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -267,18 +261,26 @@ Admins can configure Microsoft Defender for Endpoint in low touch onboarding mod
 
 Android low touch onboarding is disabled by default. Admins can enable it through app configuration policies on Intune by following these steps:
 
-1.	Push the Defender app to target user group by following these [steps](android-intune.md#add-microsoft-defender-for-endpoint-on-android-as-a-managed-google-play-app).
-2.	Push a VPN profile to the user's device by following the instructions [here](android-intune.md#auto-setup-of-always-on-vpn).
-3.	In Apps > Application configuration policies, select Managed Devices.
-4.	Provide a name to uniquely identify the policy. Select 'Android Enterprise' as the Platform, the required Profile type and 'Microsoft Defender: Antivirus' as the targeted app. Click on Next.
-5.	Add runtime permissions. Select Location access (fine)(This permission is not supported for Android 13 and above), POST_NOTIFICATIONS and change the Permission state to 'Auto grant'.
-6.	Under configuration settings, select 'Use Configuration designer' and click on Add.
-7.	Select Low touch onboarding and User UPN. For User UPN, change the Value type to 'Variable' and Configuration value to 'User Principal Name' from the drop down Enable Low touch onboarding by changing the configuration value to 1.
+1. Push the Defender app to target user group by following the steps in the section, [Add Microsoft Defender for Endpoint on Android as a Managed Google Play app](#add-microsoft-defender-for-endpoint-on-android-as-a-managed-google-play-app) (in this article).
+
+2. Push a VPN profile to the user's device by following the instructions in the section, [Auto Setup of Always-on VPN](#auto-setup-of-always-on-vpn) (in this article).
+
+3. In **Apps** > **Application configuration policies**, select **Managed Devices**.
+
+4. Provide a name to uniquely identify the policy. Select `Android Enterprise` as the Platform, the required Profile type and `Microsoft Defender: Antivirus` as the targeted app. Then select **Next**.
+
+5. Add runtime permissions. Select **Location access (fine)**, **POST_NOTIFICATIONS** and change the **Permission state** to `Auto grant`. (This permission is not supported for Android 13 and later.)
+
+6. Under **Configuration settings**, select `Use Configuration designer`, and then select **Add**.
+
+7. Select **Low touch onboarding and User UPN**. For User UPN, change the value type to `Variable`, and set the configuration value to `User Principal Name`. Enable low-touch onboarding by changing its configuration value to `1`.
+
     >[!div class="mx-imgBorder"]
     >![Image of low touch onboarding configuration policy.](media/low-touch-user-upn.png)
 
-8.	Assign the policy to the target user group.
-9.	Review and create the policy.
+8. Assign the policy to the target user group.
+
+9. Review and create the policy.
 
 ## Set up Microsoft Defender in Personal Profile on Android Enterprise in BYOD mode
 
@@ -291,22 +293,22 @@ Admins can go to the [Microsoft Endpoint Management admin center](https://endpoi
     > [!div class="mx-imgBorder"]
     > ![Image of adding app configuration policy.](media/addpolicy.png)
 
-1. Enter **Name** and **Description** to uniquely identify the configuration policy. Select platform as **'Android Enterprise'**, Profile type as **'Personally-owned work profile only'** and Targeted app as **'Microsoft Defender'**.
+2. Enter **Name** and **Description** to uniquely identify the configuration policy. Select platform as **'Android Enterprise'**, Profile type as **'Personally-owned work profile only'** and Targeted app as **'Microsoft Defender'**.
 
     > [!div class="mx-imgBorder"]
     > ![Image of naming configuration policy.](media/selectapp.png)
 
-1. On the settings page, in **'Configuration settings format'**, select **'Use configuration designer'** and click on **Add**. From the list of configurations that are displayed, select **'Microsoft Defender in Personal profile'**.
+3. On the settings page, in **'Configuration settings format'**, select **'Use configuration designer'** and click on **Add**. From the list of configurations that are displayed, select **'Microsoft Defender in Personal profile'**.
 
     > [!div class="mx-imgBorder"]
     > ![Image of configuring personal profile.](media/addconfiguration.png)
 
-1. The selected configuration will be listed. Change the **configuration value to 1** to enable Microsoft Defender support personal profiles. A notification will appear informing the admin about the same. Click on **Next**.
+4. The selected configuration will be listed. Change the **configuration value to 1** to enable Microsoft Defender support personal profiles. A notification will appear informing the admin about the same. Click on **Next**.
 
     > [!div class="mx-imgBorder"]
     > ![Image of changing config value.](media/changeconfigvalue.png)
 
-1. **Assign** the configuration policy to a group of users. **Review and create** the policy.
+5. **Assign** the configuration policy to a group of users. **Review and create** the policy.
 
     > [!div class="mx-imgBorder"]
     > ![Image of reviewing and creating policy.](media/savepolicy.png)
@@ -317,23 +319,27 @@ Organizations can communicate to their users to protect Personal profile with Mi
 
 - Pre-requisite: Microsoft Defender must be already installed and active in work profile to enabled Microsoft Defender in personal profiles.
 
-### To complete onboarding a device
+### Finish onboarding a device
 
 1. Install the Microsoft Defender application in a personal profile with a personal Google Play store account.
+
 2. Install the Company portal application on personal profile. No sign-in is required.
+
 3. When a user launches the application, they'll see the sign-in screen. **Login using corporate account only**.
-4. On a successful login, users will see the following screens:
+
+4. After signing in successfully, users see the following screens:
+
    1. **EULA screen**: Presented only if the user has not consented already in the Work profile.
    2. **Notice screen**: Users need to provide consent on this screen to move forward with onboarding the application. This is required only during the first run of the app.
+
 5. Provide the required permissions to complete onboarding.
 
-> [!NOTE]
-> **Pre-requisite:**
->
-> 1. The Company portal needs to be enabled on personal profile.
-> 2. Microsoft Defender needs to be already installed and active in work profile.
+   > [!NOTE]
+   > **Pre-requisites**:
+   > 1. The Company portal needs to be enabled on personal profile.
+   > 2. Microsoft Defender needs to be already installed and active in work profile.
 
-## Related topics
+## Related articles
 
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
 - [Configure Microsoft Defender for Endpoint on Android features](android-configure.md)
