@@ -42,7 +42,7 @@ However, you might have to run full scans to meet your organization’s specific
 
 ## Protection efficiency and performance impact
 
-Protection and system resource usage entails tradeoffs. Device performance is highly dependent on the your environment. It's natural that running a full scan on a device with lots of complex content would lead to an increased time to completion. The following table summarizes scenarios where we’ve made decisions to use more system resources to increase our protection efficiency.
+Protection and system resource usage entails tradeoffs. Device performance is highly dependent on your environment. It's natural that running a full scan on a device with lots of complex content would lead to an increased time to completion. The following table summarizes scenarios where we’ve made decisions to use more system resources to increase our protection efficiency.
 
 | Setting | Default | Details |
 |--|--|--|
