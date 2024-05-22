@@ -37,6 +37,8 @@ For example, Microsoft Defender XDR is an XDR solution that combines the informa
 
 Microsoft Defender XDR is a cloud-based, unified, pre- and post-breach enterprise defense suite. It coordinates prevention, detection, investigation, and response across identities, endpoints, email, cloud apps, and their data.
 
+Microsoft Defender XDR contributes to a strong Zero Trust architecture by providing threat protection and detection. It helps prevent or reduce business damage from a breach. For more information, see the Microsoft Zero Trust adoption framework — [Implement threat protection and XDR](/security/zero-trust-adopt/prevent-reduce-business-damage-breach-threat-protection).
+
 <a name='microsoft-365-defender-components-secure-devices-identity-data-and-applications'></a>
 
 ## Microsoft Defender XDR components
