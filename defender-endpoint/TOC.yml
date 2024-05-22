@@ -643,6 +643,8 @@
           href: schedule-antivirus-scans-powershell.md
         - name: Schedule scans using WMI
           href: schedule-antivirus-scans-wmi.md
+        - name: Full scan best practices
+          href: mdav-scan-best-practices.md
       - name: Use limited periodic scanning in Microsoft Defender Antivirus
         href: limited-periodic-scanning-microsoft-defender-antivirus.md
       - name: Protect Dev Drive using performance mode
