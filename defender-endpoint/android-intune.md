@@ -11,6 +11,7 @@ ms.collection:
 - m365-security
 - tier3
 - mde-android
+ms.custom: partner-contribution
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
