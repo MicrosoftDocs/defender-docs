@@ -96,7 +96,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Policy type**<sup>\*</sup> (see the possible values in the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** description.)
 - **Expires**<sup>\*</sup>
 - **Recipient**: The recipient email address always resolves to the primary email address, even if the message was sent to a [proxy address](/exchange/recipients-in-exchange-online/manage-user-mailboxes/add-or-remove-email-addresses).
-- **Sender override reason**<sup>\*</sup>: One of the following values:
+- **Sender address override reason**<sup>\*</sup>: One of the following values:
   - **None**
   - **Message sender is blocked by recipient settings**
   - **Message sender is blocked by administrator settings**
