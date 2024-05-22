@@ -39,6 +39,13 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## May 2024
+
+- We are introducing Sender's copy clean-up features in Threat Explorer, email entity, Summary Panel, and Advanced hunting. These new features will streamline the process of managing Sent items, particularly for admins who use Soft delete and Move to inbox actions. For more information, see [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md). Key highlights:
+  - Integration with Soft delete: Sender's copy clean-up will be incorporated as part of the Soft delete action.
+  - Wide support: This action will be supported across various Defender XDR platforms including Threat Explorer, Take Action wizard from the email entity, Summary Panel, Advanced hunting, and through Microsoft Graph API.
+  - Undo capability: An undo action will be available, allowing you to reverse the clean-up by moving items back to the Sent folder.
+
 ## April 2024
 
 - **Last used date** added to Tenant Allow/Block List entries for domains and email addresses, files, and URLs.

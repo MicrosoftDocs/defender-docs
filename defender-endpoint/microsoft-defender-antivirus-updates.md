@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 05/17/2024
+ms.date: 05/20/2024
 audience: ITPro
 ms.topic: reference
 author: siosulli
@@ -217,6 +217,21 @@ To avoid a gap in protection, keep your OS installation images up to date with t
 Updates are released for x86, x64, and ARM64 Windows architecture.
 
 For more information, see [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
+
+### 1.411.9.0
+
+- Defender package version: **1.411.9.0**
+- Security intelligence version: **1.411.9.0**
+- Engine version: **1.24040.1**
+- Platform version: **4.18.24040.4**
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
 
 ### 20230809.1
 

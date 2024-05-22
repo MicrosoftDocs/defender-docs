@@ -10,7 +10,6 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection:
-  - zerotrust-solution
   - msftsolution-secops
   - tier2
 ms.topic: conceptual
