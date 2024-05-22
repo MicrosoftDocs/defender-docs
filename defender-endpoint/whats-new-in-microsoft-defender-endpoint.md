@@ -52,8 +52,6 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## May 2024
 
-## May 2024
-
 - (GA) [Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)](/defender-endpoint/mde-plugin-wsl) is now generally available. The plug-in enables Defender for Endpoint to provide more visibility into all running WSL containers by plugging into the isolated subsystem.
 
 - (Preview) **Turn preview options on in the main Microsoft 365 Defender settings** together with other Microsoft 365 Defender preview features. Customers who aren't using preview features yet continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
