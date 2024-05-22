@@ -208,7 +208,7 @@ In the details flyout that opens, the following information is available:
   - **Released to** or **Not yet released to**: If the message requires review by an admin before it's released:
     - **Released to**: Email addresses of recipients that the message was released to.
     - **Not yet released to**:  Email addresses of recipients that the message hasn't been released to.
-  - **Sender override reason**
+  - **Sender address override reason**
 
 The rest of the details flyout contains the **Delivery details**, **Email details**, **URLs**, and **Attachments** sections that are part of the _Email summary panel_. For more information, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
