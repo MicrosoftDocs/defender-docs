@@ -70,7 +70,7 @@ Learn how to deploy Defender for Endpoint on Android with Microsoft Intune Compa
 
     :::image type="content" source="media/86cbe56f88bb6e93e9c63303397fc24f.png" alt-text="The application status pane in the Microsoft Intune admin center portal" lightbox="media/86cbe56f88bb6e93e9c63303397fc24f.png":::
 
-5. In the app information page that is displayed, in the **Monitor** section, select **Device install status** to verify that the device installation has completed successfully.
+5. In the app information page that is displayed, in the **Monitor** section, select **Device install status** to verify that the device installation completed successfully.
 
     :::image type="content" source="media/513cf5d59eaaef5d2b5bc122715b5844.png" alt-text="The Device install status page in the Microsoft Defender 365 portal" lightbox="media/513cf5d59eaaef5d2b5bc122715b5844.png":::
 
@@ -80,7 +80,7 @@ Learn how to deploy Defender for Endpoint on Android with Microsoft Intune Compa
 
    :::image type="content" source="media/7cf9311ad676ec5142002a4d0c2323ca.jpg" alt-text="The Microsoft Defender ATP icon listed in the Search pane" lightbox="media/7cf9311ad676ec5142002a4d0c2323ca.jpg":::
 
-2. Tap the Microsoft Defender for Endpoint app icon and follow the on-screen instructions to complete onboarding the app. The details include end-user acceptance of Android permissions required by Defender for Endpoint on Android.
+2. Tap the Microsoft Defender for Endpoint app icon, and follow the on-screen instructions to complete onboarding the app. The details include end-user acceptance of Android permissions required by Defender for Endpoint on Android.
 
 3. Upon successful onboarding, the device shows up in the list of devices in the Microsoft Defender portal.
 
