@@ -192,7 +192,7 @@ Follow the steps below to add Microsoft Defender for Endpoint app into your mana
 
 ### Auto Setup of Always-on VPN
 
-Defender for Endpoint supports Device configuration policies for managed devices via Microsoft Intune. This capability can be leveraged to **Auto setup of Always-on VPN** on Android Enterprise enrolled devices, so the end user does not need to set up VPN service while onboarding.
+Defender for Endpoint supports Device configuration policies for managed devices via Microsoft Intune. This capability can be used to **Auto setup of Always-on VPN** on Android Enterprise enrolled devices, so the end user doesn't need to set up VPN service while onboarding.
 
 1. On **Devices**, select **Configuration Profiles** \> **Create Profile** \> **Platform** \> **Android Enterprise**. Select **Device restrictions** under one of the following, based on your device enrollment type:
 
@@ -211,7 +211,7 @@ Defender for Endpoint supports Device configuration policies for managed devices
 
    - Enable **Always-on VPN**. Set up a VPN client in the work profile to automatically connect and reconnect to the VPN whenever possible. Only one VPN client can be configured for always-on VPN on a given device, so be sure to have no more than one always-on VPN policy deployed to a single device.
 
-   - Select **Custom** in VPN client dropdown list. Custom VPN in this case is Defender for Endpoint VPN which is used to provide the Web Protection feature.
+   - Select **Custom** in VPN client dropdown list. Custom VPN in this case is Defender for Endpoint VPN, which is used to provide the Web Protection feature.
 
      > [!NOTE]
      > Microsoft Defender for Endpoint app must be installed on user's device, in order to functioning of auto setup of this VPN.
@@ -224,7 +224,7 @@ Defender for Endpoint supports Device configuration policies for managed devices
 
 4. **Assignment**. On the **Assignments** page, select the user group to which this app config policy would be assigned. Choose **Select groups** to include and selecting the applicable group and then select **Next**. 
 
-   The group selected here is usually the same group to which you would assign Microsoft Defender for Endpoint Android app.
+   The group to select is typically the same group to which you would assign Microsoft Defender for Endpoint Android app.
 
    :::image type="content" source="media/4autosetupofvpn.png" alt-text="Screenshot of the devices configuration profile Assignment pane in the Device restrictions." lightbox="media/4autosetupofvpn.png":::
 
