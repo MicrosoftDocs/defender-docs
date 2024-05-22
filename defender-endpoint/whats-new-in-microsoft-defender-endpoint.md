@@ -147,4 +147,4 @@ Two new ASR rules are now in public preview:
 
 ## Prior to 2023
 
-For information about features released prior to 2023, see [Archive - What's new in Defender for Endpoint, December 2022 and earlier](whats-new-mde-archive.md#whats-new-in-microsoft-defender-for-endpoint---before-2023)
+For information about features released prior to 2023, see [Archive - What's new in Defender for Endpoint, December 2022 and earlier](whats-new-mde-archive.md#whats-new-in-microsoft-defender-for-endpoint---before-2023).
