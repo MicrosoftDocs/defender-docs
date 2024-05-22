@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 02/22/2023
+ms.date: 05/22/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
@@ -259,6 +259,28 @@ The device configuration profile is now assigned to the selected user group.
 
     :::image type="content" source="media/9fe378a1dce0f143005c3aa53d8c4f51.png" alt-text="The Microsoft Defender for Endpoint portal" lightbox="media/9fe378a1dce0f143005c3aa53d8c4f51.png":::
 
+## Configure Low Touch Onboarding
+
+> [!NOTE]
+> This feature is currently in preview. Information in this section relates to a prerelease product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
+Admins can configure Microsoft Defender for Endpoint in low touch onboarding mode. In this scenario, administrators creates a deployment profile and the user is simply required to provide a reduced set of permissions to complete onboarding. 
+
+Android low touch onboarding is disabled by default. Admins can enable it through app configuration policies on Intune by following these steps:
+
+1.	Push the Defender app to target user group by following these [steps](android-intune.md#add-microsoft-defender-for-endpoint-on-android-as-a-managed-google-play-app).
+2.	Push a VPN profile to the user's device by following the instructions [here](android-intune.md#auto-setup-of-always-on-vpn).
+3.	In Apps > Application configuration policies, select Managed Devices.
+4.	Provide a name to uniquely identify the policy. Select 'Android Enterprise' as the Platform, the required Profile type and 'Microsoft Defender: Antivirus' as the targeted app. Click on Next.
+5.	Add runtime permissions. Select Location access (fine)(This permission is not supported for Android 13 and above), POST_NOTIFICATIONS and change the Permission state to 'Auto grant'.
+6.	Under configuration settings, select 'Use Configuration designer' and click on Add.
+7.	Select Low touch onboarding and User UPN. For User UPN, change the Value type to 'Variable' and Configuration value to 'User Principal Name' from the drop down Enable Low touch onboarding by changing the configuration value to 1.
+    >[!div class="mx-imgBorder"]
+    >![Image of low touch onboarding configuration policy.](media/low-touch-user-upn.png)
+
+8.	Assign the policy to the target user group.
+9.	Review and create the policy.
+
 ## Set up Microsoft Defender in Personal Profile on Android Enterprise in BYOD mode
 
 ### Set up Microsoft Defender in Personal Profile
@@ -316,4 +338,5 @@ Organizations can communicate to their users to protect Personal profile with Mi
 
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
 - [Configure Microsoft Defender for Endpoint on Android features](android-configure.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
