@@ -5,9 +5,9 @@ search.appverid: met150
 ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
-ms.reviewer: noamhadash, pahuijbr
+ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 05/15/2024
+ms.date: 05/22/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -56,6 +56,8 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 
 - (GA) [Streamlined device connectivity for Defender for Endpoint](configure-device-connectivity.md) is now generally available for Windows, macOS, and Linux. This experience makes it easier to configure and manage Defender for Endpoint services by reducing the number of URLs required for connectivity, providing IP & Azure service tag support, and simplifying post-deployment network management.
+
+- (GA) [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) is now generally available on Windows clients.  Helps with the stability and performance of Microsoft Defender Antivirus.
 
 ## April 2024
 
