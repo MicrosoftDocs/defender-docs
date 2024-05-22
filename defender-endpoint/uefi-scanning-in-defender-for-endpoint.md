@@ -11,12 +11,13 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.custom:
-  - admindeeplinkDEFENDER
+- admindeeplinkDEFENDER
+ - partner-contribution
 ms.collection: 
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 05/22/2024
 ---
 
 # UEFI scanning in Defender for Endpoint
