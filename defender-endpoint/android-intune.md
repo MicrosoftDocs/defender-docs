@@ -240,7 +240,7 @@ The device configuration profile is now assigned to the selected user group.
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="media/900c0197aa59f9b7abd762ab2b32e80c.png" alt-text="The device installation status pane" lightbox="media/900c0197aa59f9b7abd762ab2b32e80c.png":::
 
-2. On the device, you can validate the onboarding status by going to the **work profile**. Confirm that Defender for Endpoint is available and that you are enrolled to the **Personally owned devices with work profile**. If you're enrolled to a **Corporate-owned, fully managed user device**, you have a single profile on the device where you can confirm that Defender for Endpoint is available.
+2. On the device, you can validate the onboarding status by going to the **work profile**. Confirm that Defender for Endpoint is available and that you're enrolled to the **Personally owned devices with work profile**. If you're enrolled to a **Corporate-owned, fully managed user device**, you have a single profile on the device where you can confirm that Defender for Endpoint is available.
 
     :::image type="content" source="media/c2e647fc8fa31c4f2349c76f2497bc0e.png" alt-text="The application display pane" lightbox="media/c2e647fc8fa31c4f2349c76f2497bc0e.png":::
 
@@ -257,7 +257,7 @@ The device configuration profile is now assigned to the selected user group.
 > [!NOTE]
 > This feature is currently in preview. Information in this section relates to a prerelease product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-Admins can configure Microsoft Defender for Endpoint in low touch onboarding mode. In this scenario, administrators creates a deployment profile and the user is simply required to provide a reduced set of permissions to complete onboarding. 
+Admins can configure Microsoft Defender for Endpoint in low touch onboarding mode. In this scenario, administrators creates a deployment profile and the user is required to provide a reduced set of permissions to complete onboarding. 
 
 Android low touch onboarding is disabled by default. Admins can enable it through app configuration policies on Intune by following these steps:
 
@@ -267,7 +267,13 @@ Android low touch onboarding is disabled by default. Admins can enable it throug
 
 3. In **Apps** > **Application configuration policies**, select **Managed Devices**.
 
-4. Provide a name to uniquely identify the policy. Select `Android Enterprise` as the Platform, the required Profile type and `Microsoft Defender: Antivirus` as the targeted app. Then select **Next**.
+4. Provide a name to uniquely identify the policy. 
+
+   - For **Platform**, select `Android Enterprise`.
+   - Select the required profile type.
+   - For the targeted app, select `Microsoft Defender: Antivirus`.
+   
+   Then select **Next**.
 
 5. Add runtime permissions. Select **Location access (fine)**, **POST_NOTIFICATIONS** and change the **Permission state** to `Auto grant`. (This permission is not supported for Android 13 and later.)
 
