@@ -35,8 +35,7 @@ appliesto:
 
 Microsoft Defender for Office 365 is a seamless integration into Microsoft 365 subscriptions that protects against threats in email, links (URLS), file attachments, and collaboration tools. This article explains the _protection ladder_ in Microsoft 365 organizations. The protection ladder starts with Exchange Online Protection (EOP) and continues through to Defender for Office 365, which includes Defender for Office 365 Plan 1 and Defender for Office 365 Plan 2.
 
-> [!TIP]
-> Simplify *Microsoft Defender for Office 365* deployment with our [setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268341). Protect against email, link, and collaboration threats. Configure policies, access reports, and automate investigations. Features include Safe Links, Safe Attachments, and more. Sign in credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/p/?linkid=2268240). Anyone, from potential Microsoft clients to partners and IT admins, can access the guides and use them freely (credentials aren't required).
+[!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
 
 This article is intended for Security Operations (SecOps) personnel, admins in Microsoft 365, or decisions makers who want to learn more about Defender for Office 365.
 
