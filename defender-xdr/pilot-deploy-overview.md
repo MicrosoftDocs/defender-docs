@@ -107,7 +107,7 @@ Microsoft recommends enabling the components of Microsoft 365 Defender in the fo
 
 | Phase | Link |
 |---|---|
-| A. Start the pilot | [Start the pilot](#start-the-pilot)|
+| A. Start the pilot | [Start the pilot](#start-your-pilot)|
 | B. Pilot and deploy Microsoft Defender XDR tools | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
 |C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
