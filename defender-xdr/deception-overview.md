@@ -3,20 +3,20 @@ title: Manage the deception capability in Microsoft Defender XDR
 description: Detect human-operated attacks with lateral movement in the early stages using high confidence signals from the deception feature in Microsoft Defender XDR.
 ms.service: defender-xdr
 f1.keywords: 
-  - NOCSH
+- NOCSH
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - m365-security
-  - tier1
+- m365-security
+- tier1
 ms.topic: conceptual
 search.appverid: 
-  - MOE150
-  - MET150
-ms.date: 05/02/2023
+- MOE150
+- MET150
+ms.date: 05/23/2024
 ---
 
 # Manage the deception capability in Microsoft Defender XDR
