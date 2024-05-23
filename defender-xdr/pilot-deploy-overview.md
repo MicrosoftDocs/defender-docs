@@ -105,7 +105,7 @@ Microsoft recommends enabling the components of Microsoft 365 Defender in the fo
 
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg" alt-text="A diagram that shows the pilot and deploy process for Microsoft Defender XDR." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg":::
 
-| Phase | Description |
+| Phase | Link |
 |---|---|
 | A. Start the pilot | [Start the pilot](#start-the-pilot)|
 | B. Pilot and deploy Microsoft Defender XDR tools | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
@@ -113,7 +113,7 @@ Microsoft recommends enabling the components of Microsoft 365 Defender in the fo
 
 This order is designed to leverage the value of the capabilities quickly based on how much effort is typically required to deploy and configure the capabilities. For example, Defender for Office 365 can be configured in less time than it takes to enroll devices in Defender for Endpoint. Prioritize the components to meet your business needs.
 
-## Start the pilot
+## Start your pilot
 
 Microsoft recommends you start your pilot in your existing production subscription of Microsoft 365 to gain real-world insights immediately and you can tune settings to work against current threats in your Microsoft 365 tenant. After you've gained experience and are comfortable with the platform, simply expand the use of each component, one at a time, to full deployment.
 
