@@ -426,7 +426,7 @@ After you select the message, use either of the following methods to add the mes
 In the **Block sender** flyout that opens, review the information about the sender, and then select **Block**.
 
 > [!TIP]
-> The organization can still receive mail from the blocked sender. Messages from the sender are delivered to user Junk Email folders or to quarantine. To delete messages from the sender upon arrival, use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
+> The organization can still receive mail from the blocked sender. Messages from the sender are delivered to user Junk Email folders or to quarantine depending on the policy precedence as described in [User allows and blocks](how-policies-and-protections-are-combined.md#user-allows-and-blocks). To delete messages from the sender upon arrival, use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
 
 #### Remove senders from user Blocked Senders lists from quarantine
 
