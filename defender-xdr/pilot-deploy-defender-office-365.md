@@ -25,8 +25,9 @@ ms.date: 05/15/2024
 
 **Applies to:**
 - Microsoft Defender XDR
-- 
-- > [!NOTE]
+
+
+> [!NOTE]
 > This article is also part of the Microsoft Defender XDR solution we talk about in this [Overview](pilot-deploy-overview.md).
 
 This article is part of the end-to-end process of piloting and deploying Microsoft Defender XDR.

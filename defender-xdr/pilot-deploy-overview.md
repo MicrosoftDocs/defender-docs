@@ -33,9 +33,13 @@ This series of articles steps you through the entire process of setting up a pil
 
 An eXtended detection and response (XDR) solution is a step forward in cyber security because it takes the threat data from systems that were once isolated and unifies them so that you can see patterns and act on suspected cyberattacks faster.
 
-For example, Microsoft Defender XDR is an XDR solution that combines the information on cyberattacks for identities, endpoints, email, and cloud apps in one place. It leverages artificial intelligence (AI) and automation to automatically stop some types of attacks and remediate affected assets to a safe state.
+Microsoft Defender XDR:
 
-Microsoft Defender XDR is a cloud-based, unified, pre- and post-breach enterprise defense suite. It coordinates prevention, detection, investigation, and response across identities, endpoints, email, cloud apps, and their data.
+- Is an XDR solution that combines the information on cyberattacks for identities, endpoints, email, and cloud apps in one place. It leverages artificial intelligence (AI) and automation to automatically stop some types of attacks and remediate affected assets to a safe state.
+
+- Is a cloud-based, unified, pre- and post-breach enterprise defense suite. It coordinates prevention, detection, investigation, and response across identities, endpoints, email, cloud apps, and their data.
+
+- Contributes to a strong Zero Trust architecture by providing threat protection and detection. It helps prevent or reduce business damage from a breach. For more information, see the Microsoft Zero Trust adoption framework — [Implement threat protection and XDR](/security/zero-trust/adopt/prevent-reduce-business-damage-breach-threat-protection).
 
 <a name='microsoft-365-defender-components-secure-devices-identity-data-and-applications'></a>
 
