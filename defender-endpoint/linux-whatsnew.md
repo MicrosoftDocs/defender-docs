@@ -65,6 +65,13 @@ There are multiple fixes and new changes in this release:
 - Stability and performance improvements.
 - Other bug fixes.
 
+**Known Issues**
+
+- There's a known issue with enrolling devices to MDE Security Management using "Device Tagging" mechanism in 24032.007 using mdatp_managed.json
+Mitigation - use mdatp CLI command to tag devices using "sudo mdatp edr tag set --name GROUP --value MDE-Management"
+
+The issue has been fixed in 24042
+
 </details>
 
 <details>
