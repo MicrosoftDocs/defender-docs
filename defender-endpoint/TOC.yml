@@ -1414,6 +1414,8 @@
         href: partner-integration.md
       - name: Become a Microsoft Defender for Endpoint partner
         href: get-started-partner-integration.md
+      - name: Professional security services that integrate with Defender for Endpoint
+        href: professional-services.md
     - name: Integrations
       items:
       - name: Microsoft Defender for Endpoint integrations
@@ -1555,10 +1557,6 @@
       href: /defender-business
     - name: Defender Vulnerability Management
       href: /defender-vulnerability-management
-
-
-
-
               
               
                 
