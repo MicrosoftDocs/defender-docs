@@ -163,7 +163,7 @@ The following sections describe each of these methods in detail.
                 <key>features</key>
                      <dict>
                          <key>behaviorMonitoring</key>
-                         string>enabled</string>
+                         <string>enabled</string>
                          <key>behaviorMonitoringConfigurations</key>
                              <dict>
                                  <key>blockExecution</key>
@@ -204,6 +204,10 @@ sudo mdatp config behavior-monitoring --value disabled
 For more information, see: [Resources for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-resources).
 
 
+### To test behavior monitoring (prevention/block) detection
+
+Please see [Behavior Monitoring demonstration](demonstration-behavior-monitoring.md).
+
 ### Verifying Behavior Monitoring detection
 
 The existing Microsoft Defender for Endpoint on macOS command line interface can be used to review behavior monitoring details and artifacts.
@@ -211,8 +215,6 @@ The existing Microsoft Defender for Endpoint on macOS command line interface can
 ```bash
 sudo mdatp threat list
 ```
-For more information on how to test for a behavior monitoring (prevention/block) detection, see [Behavior Monitoring demonstration](demonstration-behavior-monitoring.md).
-
 ### Frequently Asked Questions (FAQ):
 
 #### What if I see an increase in cpu utilization or memory utilization?
