@@ -41,7 +41,7 @@ Depending on the applications that you're running and your device characteristic
 
 **Applies to:**
 
-- Only performance issues related to Microsoft Defender Antivirus (`wdavdaemon_unpriviliged`).
+- Only performance issues related to Microsoft Defender Antivirus (`wdavdaemon_unprivileged`).
 
 Real-time protection (RTP) is a feature of Defender for Endpoint on macOS that continuously monitors and protects your device against threats. It consists of file and process monitoring and other heuristics.
 
