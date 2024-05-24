@@ -31,16 +31,16 @@ ms.date: 05/24/2024
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
 
-The following professional services can be integrated with the Microsoft Defenders products:
+The following professional services can be integrated with the Microsoft Defender products:
 
 ## Manage
 
-Managed security services that assist organizations to detect threats early and help minimize the affects of a breach.
+Managed security services that assist organizations to detect threats early and help minimize the effects of a breach.
 
 |Service name|Vendor|Description|
 |---|---|---|
 |[Microsoft Defender Experts](/defender-xdr/defender-experts-for-hunting)|Microsoft|Defender Experts for Hunting are a proactive threat hunting service for Microsoft Defender XDR.|
-|[Cloud Security Operations Center](https://go.microsoft.com/fwlink/?linkid=2202671)|glueckkanja-gab AG|Monitors your Microsoft Security Solutions 24/7, responds to threats on your behalf and works closely with your IT to continuously improve your security posture.|
+|[Cloud Security Operations Center](https://go.microsoft.com/fwlink/?linkid=2202671)|glueckkanja-gab AG|Monitors your Microsoft Security Solutions 24/7, responds to threats on your behalf, and works closely with your IT to continuously improve your security posture.|
 |[Wortell Protect](https://go.microsoft.com/fwlink/?linkid=2202480)|Wortell|Wortell offers a 24.7.365 Managed Detection and Response service, SOC-as-a-service, to secure your Azure subscriptions and Microsoft 365 environment. With this managed service, Wortell provides security monitoring and incident response, and operate Microsoft Defender and (optionally) Microsoft Sentinel on your behalf. The service also includes threat intelligence feeds and custom machine learning models|
 |[CRITICALSTART® Managed Detection & Response Services for Microsoft Defender XDR](https://go.microsoft.com/fwlink/?linkid=2202761)|CRITICALSTART|Critical Start Managed Detection and Response (MDR) services for Microsoft Defender XDR (M365D) extends security defenses to provide cross-domain threat protection and simplify breach prevention. Their team of Microsoft security experts uses integration with M365D to detect, investigate, and respond with the right actions to alerts from identity, to email and cloud – before they disrupt business operations.|
 |[CRITICALSTART® Managed Detection & Response Services for Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2202844)|CRITICALSTART|Critical Start Managed Detection & Response (MDR) service for Microsoft Defender for Endpoint simplifies security across an expanded attack surface area. It combines Microsoft's cross-enterprise visibility threat detection, and auto investigation capabilities with optimized threat detection and response to deliver an 80% reduction in false positives on the first day of production monitoring.|
