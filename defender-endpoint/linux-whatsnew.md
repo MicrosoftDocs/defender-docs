@@ -72,7 +72,6 @@ There are multiple fixes and new changes in this release:
    ```bash
    sudo mdatp edr tag set --name GROUP --value MDE-Management
    ```
-   The issue has been fixed in 24042 release.
 
 </details>
 
