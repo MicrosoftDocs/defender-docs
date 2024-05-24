@@ -6,7 +6,7 @@ ms.author: dansimp
 author: dansimp
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 05/16/2024
+ms.date: 05/24/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -67,13 +67,12 @@ There are multiple fixes and new changes in this release:
 
 **Known Issues**
 
-- There's a known issue with enrolling devices to MDE Security Management using "Device Tagging" mechanism in 24032.007 using mdatp_managed.json
+- There's a known issue with enrolling devices to MDE Security Management using "Device Tagging" mechanism in 24032.007 using mdatp_managed.json. To mitigate this issue, use the following mdatp CLI command to tag devices:
 
-Mitigation - use the following mdatp CLI command to tag devices:
-```bash
-sudo mdatp edr tag set --name GROUP --value MDE-Management
-```
-The issue has been fixed in 24042 release
+   ```bash
+   sudo mdatp edr tag set --name GROUP --value MDE-Management
+   ```
+   The issue has been fixed in 24042 release.
 
 </details>
 
