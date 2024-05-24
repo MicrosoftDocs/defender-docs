@@ -73,8 +73,7 @@ Mitigation - use the following mdatp CLI command to tag devices:
 ```bash
 sudo mdatp edr tag set --name GROUP --value MDE-Management
 ```
-
-The issue has been fixed in 24042
+The issue has been fixed in 24042 release
 
 </details>
 
