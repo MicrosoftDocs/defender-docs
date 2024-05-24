@@ -35,7 +35,7 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-          - text: Start using Microsoft Security Posture Management
+          - text: Start using Microsoft Security Exposure Management
             url: get-started-exposure-management.md
           - text: Review prerequisites
             url: prerequisites.md
