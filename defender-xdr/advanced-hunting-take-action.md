@@ -80,7 +80,7 @@ Apart from device-focused remediation steps, you can also take some actions on e
 
 - `Delete email` - select this to move email messages to the Deleted items folder (**Soft delete**) or delete them permanently (**Hard delete**)
 
-   Selecting **Soft delete** for the email message also automatically soft deletes the message from the sender's Sent Items folder if the sender is in the organization.
+   Selecting **Soft delete** also automatically soft deletes the messages from the sender's Sent Items folder if the sender is in the organization.
 
    :::image type="content" source="/defender/media/soft-delete-sender-copy.png" alt-text="The Take actions option in the Microsoft Defender portal" lightbox="/defender/media/soft-delete-sender-copy.png":::
 
