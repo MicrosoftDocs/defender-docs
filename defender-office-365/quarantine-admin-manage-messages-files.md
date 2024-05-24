@@ -94,6 +94,7 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Policy type**<sup>\*</sup> (see the possible values in the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** description.)
 - **Expires**<sup>\*</sup>
 - **Recipient**: The recipient email address always resolves to the primary email address, even if the message was sent to a [proxy address](/exchange/recipients-in-exchange-online/manage-user-mailboxes/add-or-remove-email-addresses).
+- **Released by**<sup>\*</sup>
 - **Message ID**
 - **Policy name**
 - **Message size**
@@ -109,19 +110,19 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Sender address**
 - **Recipient address**
 - **Subject**
-- **Time received**:
+- **Time received**: Select one of the following values:
   - **Last 24 hours**
   - **Last 7 days**
   - **Last 14 days**
   - **Last 30 days** (default)
   - **Custom**: Enter a **Start time** and **End time** (date).
-- **Expires**: Filter messages by when they expire from quarantine:
+- **Expires**: Filter messages by when they expire from quarantine. Select one of the following values:
   - **Today**
   - **Next 2 days**
   - **Next 7 days**
   - **Custom**: Enter a **Start time** and **End time** (date).
 - **Recipient tag**: Currently, the only selectable [user tag](user-tags-about.md) is Priority account.
-- **Quarantine reason**:
+- **Quarantine reason**: Select one or more of the following values:
   - **Transport rule** (mail flow rule)
   - **Bulk**
   - **Spam**
@@ -130,16 +131,16 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Admin action - File type block**: Messages blocked as malware by the common attachments filter in anti-malware policies. For more information, see [Anti-malware policies](anti-malware-protection-about.md#anti-malware-policies).
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
-- **Recipient**: The following values are available:
-  - **All users**: This is default value for admins.
+- **Recipient**: Select one of the following values:
+  - **All users** (this is default value)
   - **Only me**: Show only messages where whomever is signed in is a recipient.
-- **Release status**: Any of the following values:
+- **Release status**: Select one or more of the following values
   - **Needs review**
   - **Approved**
   - **Denied**
   - **Release requested**
   - **Released**
-- **Policy type**: Filter messages by policy type:
+- **Policy type**: Filter messages by what type of protection policy quarantined the message. Select one or more of the following values:
   - **Anti-malware policy**
   - **Safe Attachments policy**
   - **Anti-phishing policy**
@@ -162,7 +163,7 @@ Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="f
 After you've entered the search criteria, press Enter to filter the results.
 
 > [!NOTE]
-> The **Search** box searches for quarantined items in the current view (which is limited to 100 items), not all quarantined items. To search all quarantined items, use **Filter** and the resulting **Filters** flyout.
+> The **Search** box searches for quarantined items in the current view (which is limited to 100 items), not all quarantined items. To search all quarantined items, use :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and the resulting **Filters** flyout.
 
 After you find a specific quarantined message, select the message to view details about it and to take action on it (for example, view, release, download, or delete the message).
 
@@ -196,13 +197,14 @@ In the details flyout that opens, the following information is available:
 
     Recipient email addresses always resolve to the primary email address, even if the message was sent to a [proxy address](/exchange/recipients-in-exchange-online/manage-user-mailboxes/add-or-remove-email-addresses).
 
-  - **Released to** or **Not yet released to**: If the message requires review by an admin before it's released:
-    - **Released to**: Email addresses of recipients that the message was released to.
-    - **Not yet released to**:  Email addresses of recipients that the message hasn't been released to.
+  - **Not yet released to**, **Released to**, and/or **Released by**: Depending on the state of the message, one or more of the following values might be available:
+    - **Not yet released to**: Email addresses of recipients that the message hasn't been released to.
+    - **Released to**: Email addresses of recipients that the message has been released to.
+    - **Released by**: The admin that released the message using the format: `<email address of admin who released the message> released for <recipient>`. For example, `admin@contoso.onmicrosoft.com released to laura@contoso.onmicrosoft.com`.
 
 The rest of the details flyout contains the **Delivery details**, **Email details**, **URLs**, and **Attachments** sections that are part of the _Email summary panel_. For more information, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
-:::image type="content" source="media/quarantine-message-details-flyout.png" alt-text="Screenshot of the details flyout that opens after you select a quarantined email message from the Email tab of the Quarantine page." lightbox="media/quarantine-message-details-flyout.png":::
+:::image type="content" source="media/quarantine-message-details-flyout-released-by.png" alt-text="Screenshot of the details flyout that opens after you select a quarantined email message from the Email tab of the Quarantine page." lightbox="media/quarantine-message-details-flyout-released-by.png":::
 
 To take action on the message, see the next section.
 
