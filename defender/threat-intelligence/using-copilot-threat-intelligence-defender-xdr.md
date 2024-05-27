@@ -71,7 +71,7 @@ Copilot in Defender also has the following built-in prompts when accessing the *
 
 - [Summarize](#summarize-the-latest-threats-related-to-your-organization)
 - [Prioritize](#prioritize-which-threats-to-focus-on)
-- [Ask](#ask-about-the-threat-actors-targeting-the-communications-infrastructure)
+- [Ask](#ask-about-the-threat-actors-targeting-the-communications-infrastructure-industry)
 
 :::image type="content" source="/defender/threat-intelligence/media/defender-ti-and-copilot/copilot-defender-prompts.png" alt-text="Screenshot of the Microsoft Defender portal Threat analytics page with the built-in prompts in the open Copilot in Defender side pane highlighted." lightbox="/defender/threat-intelligence/media/defender-ti-and-copilot/copilot-defender-prompts.png":::
 
