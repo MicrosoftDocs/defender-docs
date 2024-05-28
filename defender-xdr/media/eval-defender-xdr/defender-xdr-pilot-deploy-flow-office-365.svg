@@ -187,7 +187,7 @@
 		</g>
 		<g id="shape1052-50" v:mID="1052" v:groupContext="shape" v:layerMember="2" transform="translate(159.593,-120.578)">
 			<title>Sheet.1052</title>
-			<desc>Pilot and deploy Microsoft Defender XDR tools</desc>
+			<desc>Pilot and deploy Microsoft Defender XDR components</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(6000):26"/>
 			</v:userDefs>
@@ -195,7 +195,7 @@
 			<v:textRect cx="93.7349" cy="194.071" width="187.47" height="23.1073"/>
 			<rect x="0" y="182.518" width="187.47" height="23.1073" rx="4.5" ry="4.5" class="st11"/>
 			<text x="0" y="191.07" class="st12" v:langID="1033"><v:paragraph/><v:tabList/>Pilot and deploy Microsoft Defender XDR <tspan
-						x="0" dy="1.2em" class="st13">tools</tspan></text>		</g>
+						x="0" dy="1.2em" class="st13">components</tspan></text>		</g>
 		<g id="shape1053-54" v:mID="1053" v:groupContext="shape" v:layerMember="2" transform="translate(132.3,-25.7634)">
 			<title>Sheet.1053</title>
 			<desc>Defender for Identity</desc>
@@ -357,28 +357,27 @@
 		</g>
 		<g id="shape1069-101" v:mID="1069" v:groupContext="shape" v:layerMember="2" transform="translate(37.1414,-120.578)">
 			<title>Sheet.1069</title>
-			<desc>Create the pilot environment</desc>
+			<desc>Start the pilot</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(4000):26"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(0,0,0,0)"/>
 			<v:textRect cx="42.75" cy="194.071" width="85.5" height="23.1073"/>
 			<rect x="0" y="182.518" width="85.5" height="23.1073" rx="4.5" ry="4.5" class="st11"/>
-			<text x="0" y="191.07" class="st12" v:langID="1033"><v:paragraph/><v:tabList/>Create the pilot <tspan x="0" dy="1.2em"
-						class="st13">environment</tspan></text>		</g>
-		<g id="shape1070-105" v:mID="1070" v:groupContext="shape" v:layerMember="0" transform="translate(11.0414,-150.165)">
+			<text x="0" y="197.07" class="st12" v:langID="1033"><v:paragraph/><v:tabList/>Start the pilot</text>		</g>
+		<g id="shape1070-104" v:mID="1070" v:groupContext="shape" v:layerMember="0" transform="translate(11.0414,-150.165)">
 			<title>Sheet.1070</title>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(13000):26"/>
 			</v:userDefs>
 			<path d="M0 205.63 L111.6 205.63" class="st21"/>
 		</g>
-		<g id="group1071-108" transform="translate(155.555,-65.4561)" v:mID="1071" v:groupContext="group" v:layerMember="0">
+		<g id="group1071-107" transform="translate(155.555,-65.4561)" v:mID="1071" v:groupContext="group" v:layerMember="0">
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:val="VT0(25000):26"/>
 			</v:userDefs>
 			<title>Sheet.1071</title>
-			<g id="shape1072-109" v:mID="1072" v:groupContext="shape" v:layerMember="0">
+			<g id="shape1072-108" v:mID="1072" v:groupContext="shape" v:layerMember="0">
 				<title>Sheet.1072</title>
 				<path d="M1.89 205.62 C1.64 205.62 1.4 205.57 1.17 205.47 C0.94 205.37 0.74 205.24 0.57 205.07 C0.4 204.9 0.26 204.69
 							 0.15 204.46 C0.05 204.22 0 203.98 0.01 203.73 L0.01 189.89 C0.01 189.64 0.06 189.39 0.15 189.17 C0.25
@@ -426,7 +425,7 @@
 							 10.53 200.79 C10.73 200.51 10.83 200.13 10.84 199.66 Z" class="st22"/>
 			</g>
 		</g>
-		<g id="shape1073-111" v:mID="1073" v:groupContext="shape" v:layerMember="0" transform="translate(11.0414,-122.165)">
+		<g id="shape1073-110" v:mID="1073" v:groupContext="shape" v:layerMember="0" transform="translate(11.0414,-122.165)">
 			<title>Sheet.1073</title>
 			<desc>A</desc>
 			<v:userDefs>
@@ -436,7 +435,7 @@
 			<v:textRect cx="10.6308" cy="194.995" width="21.27" height="21.2608"/>
 			<rect x="0" y="184.364" width="21.2616" height="21.2608" rx="4.5" ry="4.5" class="st11"/>
 			<text x="1.9" y="204.09" class="st23" v:langID="1033"><v:paragraph v:spLine="-1.4" v:horizAlign="1"/><v:tabList/>A</text>		</g>
-		<g id="shape1074-114" v:mID="1074" v:groupContext="shape" v:layerMember="0" transform="translate(133.493,-122.165)">
+		<g id="shape1074-113" v:mID="1074" v:groupContext="shape" v:layerMember="0" transform="translate(133.493,-122.165)">
 			<title>Sheet.1074</title>
 			<desc>B</desc>
 			<v:userDefs>
@@ -446,7 +445,7 @@
 			<v:textRect cx="10.6308" cy="194.995" width="21.27" height="21.2608"/>
 			<rect x="0" y="184.364" width="21.2616" height="21.2608" rx="4.5" ry="4.5" class="st11"/>
 			<text x="2.78" y="204.09" class="st24" v:langID="1033"><v:paragraph v:spLine="-1.4" v:horizAlign="1"/><v:tabList/>B</text>		</g>
-		<g id="shape1075-117" v:mID="1075" v:groupContext="shape" v:layerMember="0" transform="translate(399.944,-122.165)">
+		<g id="shape1075-116" v:mID="1075" v:groupContext="shape" v:layerMember="0" transform="translate(399.944,-122.165)">
 			<title>Sheet.1075</title>
 			<desc>C</desc>
 			<v:userDefs>

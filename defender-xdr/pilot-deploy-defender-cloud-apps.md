@@ -27,7 +27,11 @@ ms.topic: conceptual
 
 - Microsoft Defender XDR
 
-This article provides a workflow for piloting and deploying Microsoft Defender for Cloud Apps.
+This article provides a workflow for piloting and deploying Microsoft Defender for Cloud Apps in your organization. You can use these recommendations to onboard Microsoft Defender for Cloud Apps as an individual cybersecurity tool or as part of an end-to-end solution with Microsoft Defender XDR.
+
+This article assumes you have a production Microsoft 365 tenant and are piloting and deploying Microsoft Defender for Cloud Apps in this environment. This practice will maintain any settings and customizations you configure during your pilot for your full deployment.
+
+Defender for Cloud Apps contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the Implement threat protection and XDR business scenario in the Microsoft Zero Trust adoption framework.
 
 ## End-to-end deployment for Microsoft Defender XDR
 
@@ -37,14 +41,19 @@ This is article 5 of 6 in a series to help you deploy the components of Microsof
 
 Articles in this series:
 
-1. [Create the pilot environment](pilot-deploy-investigate-respond.md)
-1. [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md)
-1. [Pilot and deploy Defender for Office 365](pilot-deploy-defender-office-365.md)
-1. [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md)
-1. Pilot and deploy **Defender for Cloud Apps** (this article)
-1. [Investigate and respond to threats](pilot-deploy-investigate-respond.md)
+| Phase | Link |
+|---|---|
+| A. Start the pilot | [Start the pilot](#start-your-pilot)|
+| B. Pilot and deploy Microsoft Defender XDR tools | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - **Pilot and deploy Microsoft Defender for Cloud Apps** (this article)  |
+|C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
 ## Pilot and deploy workflow for Defender for Cloud Apps
+
+The following diagram illustrates a common process to deploy a product or service in an IT environment.
+
+:::image type="content" source="./media/eval-defender-xdr/adoption-phases.svg" alt-text="Diagram of the pilot, evaluate, and full deployment adoption phases." lightbox="./media/eval-defender-xdr/adoption-phases.svg":::
+
+You start by evaluating the product or service and how it will work within your organization. Then, you pilot the product or service with a suitably small subset of your production infrastructure for testing, learning, and customization. Then, gradually increase the scope of the deployment until your entire infrastructure or organization is covered.
 
 Here is the workflow for piloting and deploying Defender for Cloud Apps in your production environment.
 
@@ -52,14 +61,22 @@ Here is the workflow for piloting and deploying Defender for Cloud Apps in your 
 
 Follow these steps:
 
-1. Connect to the Defender for Cloud Apps portal
-1. Integrate with Microsoft Defender for Endpoint
-1. Deploy the log collector on your firewalls and other proxies
-1. Create a pilot group
-1. Discover and manage cloud apps
-1. Configure Conditional Access App Control
-1. Apply session policies to cloud apps
-1. Try out additional capabilities
+1. [Connect to the Defender for Cloud Apps portal](#step-1)
+1. [Integrate with Microsoft Defender for Endpoint](#step-2)
+1. [Deploy the log collector on your firewalls and other proxies](#step-3)
+1. [Create a pilot group](#step-4)
+1. [Discover and manage cloud apps](#step-5)
+1. [Configure Conditional Access App Control](#step-6)
+1. [Apply session policies to cloud apps](#step-7)
+1. [Try out additional capabilities](#step-8)
+
+Here are the recommended steps for each deployment stage.
+
+| Deployment stage | Description |
+| --- | --- |
+| Evaluate | Perform product evaluation for Defender for Cloud Apps. |
+| Pilot | Perform Steps 1-4 and then 5-8 for a suitable subset of cloud apps in your production environment. |
+| Full deployment | Perform Steps 5-8 for your remaining cloud apps, adjusting the scoping for pilot user groups or adding user groups to expand beyond the pilot. |
 
 ### Protecting your organization from hackers
 
@@ -69,13 +86,13 @@ Here's an example of a cyber-attack and how the components of Microsoft Defender
 
 :::image type="content" source="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg" alt-text="A diagram that shows how Microsoft Defender XDR stops a threat chain." lightbox="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg":::
 
-Defender for Cloud Apps detects anomalous behavior like impossible-travel, credential access, and unusual download, file share, or mail forwarding activity and displays these behaviors in the Defender for Cloud Apps portal. Defender for Cloud Apps also helps prevent lateral movement by hackers and exfiltration of sensitive data. 
+Defender for Cloud Apps detects anomalous behavior like impossible-travel, credential access, and unusual download, file share, or mail forwarding activity and displays these behaviors in the Defender for Cloud Apps portal. Defender for Cloud Apps also helps prevent lateral movement by hackers and exfiltration of sensitive data.
 
 Microsoft Defender XDR correlates the signals from all the Microsoft Defender components to provide the full attack story.
 
-### About the workflow
+### Defender for Cloud Apps role as a cloud access security broker
 
-Defender for Cloud Apps is a cloud access security broker (CASB). CASBs act a gatekeeper to broker access in real time between your enterprise users and cloud resources they use, wherever your users are located and regardless of the device they are using. Defender for Cloud Apps natively integrates with Microsoft security capabilities, including Microsoft Defender XDR.
+A cloud access security broker (CASB) acts as a gatekeeper to broker access in real time between your enterprise users and cloud resources they use, wherever your users are located and regardless of the device they are using. Defender for Cloud Apps is a CASB for your organization's cloud apps. Defender for Cloud Apps natively integrates with Microsoft security capabilities, including Microsoft Defender XDR.
 
 Without Defender for Cloud Apps, cloud apps that are used by your organization are unmanaged and unprotected, as illustrated.
 
@@ -93,25 +110,13 @@ To discover cloud apps used in your environment, you can implement one or both o
 
 This article includes guidance for both methods.
 
-### Understand key concepts
-
-The following table identified key concepts that are important to understand when evaluating, configuring, and deploying Defender for Cloud Apps.
-
-|Concept  |Description |More information  |
-|---------|---------|---------|
-| Defender for Cloud Apps Dashboard | Presents an overview of the most important information about your organization and gives links to deeper investigation.        | [Working with the dashboard](/cloud-app-security/daily-activities-to-protect-your-cloud-environment)       |
-| Conditional Access App Control    | Reverse proxy architecture that integrates with your Identity Provider (IdP) to give Microsoft Entra Conditional Access policies and selectively enforce session policies.        |  [Protect apps with Defender for Cloud Apps Conditional Access App Control](/cloud-app-security/proxy-intro-aad)       |
-|  Cloud App Catalog   | The Cloud App Catalog gives you a full picture against Microsoft catalog of over 16,000 cloud apps that are ranked and scored based on more than 80 risk factors.    |  [Working with App risk scores](/cloud-app-security/risk-score)       |
-| Cloud Discovery Dashboard    | Cloud Discovery analyzes your traffic logs and is designed to give more insight into how cloud apps are being used in your organization as well as give alerts and risk levels.     |  [Working with discovered apps](/cloud-app-security/discovered-apps)    |
-|Connected Apps |Defender for Cloud Apps provides end-to-end protection for connected apps using Cloud-to-Cloud integration, API connectors, and real-time access and session policies using our Conditional App Access Controls. |[Protecting connected apps](/cloud-app-security/protect-connected-apps) |
-
 <a name="step-1"></a>
 
 ## Step 1. Connect to the Defender for Cloud Apps portal
 
 To verify licensing and to connect to the Defender for Cloud Apps portal, see [Quickstart: Get started with Microsoft Defender for Cloud Apps](/cloud-app-security/getting-started-with-cloud-app-security).
 
-If you're not immediately able to connect to the portal, you might need to add the IP address to the allowlist of your firewall. See [Basic setup for Defender for Cloud Apps](/cloud-app-security/general-setup).
+If you're not immediately able to connect to the portal, you might need to add the IP address to the allow list of your firewall. See [Basic setup for Defender for Cloud Apps](/cloud-app-security/general-setup).
 
 If you're still having trouble, review [Network requirements](/cloud-app-security/network-requirements).
 
@@ -150,7 +155,7 @@ Microsoft Defender for Cloud Apps enables you to scope your deployment. Scoping 
 
 ## Step 5. Discover and manage cloud apps
 
->> Add intro
+For Defender for Cloud Apps to provide the maximum amount of protection, you must discover all the cloud apps in your organization and manage how they are used.
 
 ### Discover cloud apps
 
@@ -160,8 +165,9 @@ The first step to managing the use of cloud apps is to discover which cloud apps
 
 In this illustration, there are two methods that can be used to monitor network traffic and discover cloud apps that are being used by your organization.
 
-- A. Cloud App Discovery integrates with Microsoft Defender for Endpoint natively. Defender for Endpoint reports cloud apps and services being accessed from IT-managed Windows 10 and Windows 11 devices.
-- B. For coverage on all devices connected to a network, the Defender for Cloud Apps log collector is installed on firewalls and other proxies to collect data from endpoints. This data is sent to Defender for Cloud Apps for analysis.
+1. Cloud App Discovery integrates with Microsoft Defender for Endpoint natively. Defender for Endpoint reports cloud apps and services being accessed from IT-managed Windows 10 and Windows 11 devices.
+
+2. For coverage on all devices connected to a network, you install the Defender for Cloud Apps log collector on firewalls and other proxies to collect data from endpoints. The collector sends this data to Defender for Cloud Apps for analysis.
 
 View the Cloud Discovery dashboard to see what apps are being used in your organization
 
@@ -177,16 +183,20 @@ After you discover cloud apps and analyze how these apps are used by your organi
 
 In this illustration:
 
-- Some apps are sanctioned for use. This sanction is a simple way of beginning to manage apps.
+- Some apps are sanctioned for use. Sanctioning is a simple way of beginning to manage apps.
 - You can enable greater visibility and control by connecting apps with app connectors. App connectors use the APIs of app providers.
 
 You can begin managing apps by sanctioning, unsanctioning, or outright blocking apps. To begin managing apps, see [Govern discovered apps](/defender-cloud-apps/governance-discovery).
+
+<a name="step-6"></a>
 
 ## Step 6. Configure Conditional Access App Control
 
 One of the most powerful protections you can configure is Conditional Access App Control. This protection requires integration with Microsoft Entra ID. It allows you to apply Conditional Access policies, including related policies (like requiring healthy devices), to cloud apps you've sanctioned.
 
 You might already have SaaS apps added to your Microsoft Entra tenant to enforce multi-factor authentication and other conditional access policies. Microsoft Defender for Cloud Apps natively integrates with Microsoft Entra ID. All you must do is configure a policy in Microsoft Entra ID to use Conditional Access App Control in Defender for Cloud Apps. This routes network traffic for these managed SaaS apps through Defender for Cloud Apps as a proxy, which allows Defender for Cloud Apps to monitor this traffic and to apply session controls.
+
+>> Rework figure
 
 :::image type="content" source="./media/eval-defender-xdr/m365-defender-mcas-architecture-e.svg" alt-text="A diagram that shows the architecture for the Microsoft Defender for Cloud Apps with SaaS apps." lightbox="./media/eval-defender-xdr/m365-defender-mcas-architecture-e.svg":::
 
@@ -209,6 +219,8 @@ For more information, including supported apps and clients, see [Protect apps wi
 
 For example policies, see [Recommended Microsoft Defender for Cloud Apps policies for SaaS apps](/defender-office-365/zero-trust-identity-device-access-policies-mcas-saas). These policies build on a set of [common identity and device access policies](/defender-office-365/zero-trust-identity-device-access-policies-overview) that are recommended as a starting point for all customers.
 
+<a name="step-7"></a>
+
 ## Step 7. Apply session policies to cloud apps
 
 Microsoft Defender for Cloud Apps serves as a reverse proxy, providing proxy access to sanctioned cloud apps. This provision allows Defender for Cloud Apps to apply session policies that you configure.
@@ -224,6 +236,8 @@ In the illustration:
 Session policies allow you to apply parameters to how cloud apps are used by your organization. For example, if your organization is using Salesforce, you can configure a session policy that allows only managed devices to access your organization's data at Salesforce. A simpler example could be configuring a policy to monitor traffic from unmanaged devices so you can analyze the risk of this traffic before applying stricter policies.
 
 For more information, see [Create session policies](/defender-cloud-apps/session-policy-aad).
+
+<a name="step-8"></a>
 
 ## Step 8. Try out additional capabilities
 
@@ -242,20 +256,23 @@ For more information on advanced hunting in Microsoft Defender for Cloud Apps da
 
 ## SIEM integration
 
-You can integrate Defender for Cloud Apps with your generic SIEM server or with Microsoft Sentinel to enable centralized monitoring of alerts and activities from connected apps.
+You can integrate Defender for Cloud Apps with Microsoft Sentinel or a generic SIEM service to enable centralized monitoring of alerts and activities from connected apps.
 
-Additionally, Microsoft Sentinel includes a Defender for Cloud Apps connector to provide deeper integration with Microsoft Sentinel. This arrangement enables you to not only gain visibility into your cloud apps but to also get sophisticated analytics to identify and combat cyberthreats and to control how your data travels.
+:::image type="content" source="./media/eval-defender-xdr/defender-cloud-apps-siem-integration.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Cloud Apps with SIEM integration." lightbox="./media/eval-defender-xdr/defender-cloud-apps-siem-integration.svg":::
 
-- [Generic SIEM integration](/cloud-app-security/siem)
-- [Stream alerts and Cloud Discovery logs from Defender for Cloud Apps into Microsoft Sentinel](/azure/sentinel/connect-cloud-app-security)
+Microsoft Sentinel includes a Defender for Cloud Apps connector. This allows you to not only gain visibility into your cloud apps but to also get sophisticated analytics to identify and combat cyberthreats and to control how your data travels. For more information, see [Microsoft Sentinel integration](/defender-cloud-apps/siem-sentinel) and [Stream alerts and Cloud Discovery logs from Defender for Cloud Apps into Microsoft Sentinel](/azure/sentinel/connect-cloud-app-security).
+
+For information about integration with third-party SIEM systems, see [Generic SIEM integration](/cloud-app-security/siem).
+
+## Next step
+
+Perform [lifecycle management for Defender for Cloud Apps](/defender-cloud-apps/lifecycle-management).
 
 ## Next step for the end-to-end deployment of Microsoft Defender XDR
 
->> Add
+Continue your end-to-end deployment of Microsoft Defender XDR with [Investigate and respond using Microsoft Defender XDR](pilot-deploy-investigate-respond.md).
 
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg" alt-text="A diagram that shows incident investigation and response in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg":::
-
-See [Investigate and respond using Microsoft Defender XDR](pilot-deploy-investigate-respond.md).
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 
