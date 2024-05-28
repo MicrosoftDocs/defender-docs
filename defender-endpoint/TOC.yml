@@ -969,19 +969,19 @@
     - name: Microsoft Security Resources
       items: 
         - name: Threat actor naming
-          href: /defender/microsoft-threat-actor-naming
+          href: /defender-xdr/microsoft-threat-actor-naming
         - name: Malware names
-          href: /defender/malware-naming
+          href: /defender-xdr/malware-naming
         - name: How Microsoft identifies malware and PUA
-          href: /defender/criteria
+          href: /defender-xdr/criteria
         - name: Submit files for analysis
           href: /defender-xdr/submission-guide
         - name: Troubleshoot MSI portal errors caused by admin block
-          href: /defender/portal-submission-troubleshooting
+          href: /defender-xdr/portal-submission-troubleshooting
         - name: Microsoft virus initiative
-          href: /defender/virus-initiative-criteria
+          href: /defender-xdr/virus-initiative-criteria
         - name: Software developer FAQ
-          href: /defender/developer-faq
+          href: /defender-xdr/developer-faq
     - name: Malware information
       items: 
        - name: Coinminers
