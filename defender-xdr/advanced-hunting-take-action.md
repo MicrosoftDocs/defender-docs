@@ -82,7 +82,7 @@ Apart from device-focused remediation steps, you can also take some actions on e
 
    Selecting **Soft delete** also automatically soft deletes the messages from the sender's Sent Items folder if the sender is in the organization.
 
-   :::image type="content" source="/defender/media/soft-delete-sender-copy.png" alt-text="The Take actions option in the Microsoft Defender portal" lightbox="/defender/media/soft-delete-sender-copy.png":::
+   :::image type="content" source="/defender/media/soft-delete-sender-copy.png" alt-text="Screenshot of take actions option in the Microsoft Defender portal" lightbox="/defender/media/soft-delete-sender-copy.png":::
 
     Automatic soft-deletion of the sender's copy is available for results using the `EmailEvents` and `EmailPostDeliveryEvents` tables but not the `UrlClickEvents` table. Furthermore, the result should contain the columns `EmailDirection` and `SenderFromAddress` columns for this action option to show up in the Take actions wizard. Sender's copy clean-up applies to intra-organization emails and outbound emails, ensuring that only the sender's copy is soft-deleted for these email messages. Inbound messages are out of scope.
 
