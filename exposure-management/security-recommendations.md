@@ -19,7 +19,7 @@ Security Exposure Management is currently in public preview.
 
 ## Prerequisites
 
-- Learn about the [recommendations catalog](exposure-insights-overview.md#security-recommendations) before you start.
+- Learn about the [recommendations catalog](exposure-insights-overview.md#working-with-recommendations) before you start.
 - [Review permissions and prerequisites needed](prerequisites.md) for working with Security Exposure Management.
 
 ## Review recommendations

@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus in Windows Overview
 description: Learn how to manage, configure, and use Microsoft Defender Antivirus, built-in antimalware and antivirus protection.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 01/16/2024
+ms.date: 05/02/2024
 ms.topic: conceptual
 author: siosulli
 ms.author: siosulli
@@ -33,6 +33,8 @@ search.appverid: met150
 Microsoft Defender Antivirus is available in Windows 10 and Windows 11, and in versions of Windows Server.
 
 Microsoft Defender Antivirus is a major component of your next-generation protection in Microsoft Defender for Endpoint. This protection brings together machine learning, big-data analysis, in-depth threat resistance research, and the Microsoft cloud infrastructure to protect devices (or endpoints) in your organization. Microsoft Defender Antivirus is built into Windows, and it works with Microsoft Defender for Endpoint to provide protection on your device and in the cloud.
+
+[!INCLUDE [MDE automated setup guide](../includes/mde-automated-setup-guide.md)]
 
 ## Microsoft Defender Antivirus capabilities
 

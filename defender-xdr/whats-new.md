@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 04/03/2024
+ms.date: 05/15/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -29,6 +29,21 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## May 2024
+
+- Create alert tuning rules using **Alert severity** and **Alert title** values as conditions. Alert tuning can help you streamline the alert queue, saving triage time by hiding or resolving alerts automatically, each time a certain expected organizational behavior occurs, and rule conditions are met. For more information, see [Tune an alert](investigate-alerts.md#tune-an-alert).
+
+- (Preview) **Turn preview options on in the main Microsoft 365 Defender settings** together with other Microsoft 365 Defender preview features. Customers who are not using preview features yet will continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
+
+- (Preview) The **SOC optimizations** page in the Microsoft Defender portal is now available with the [unified security operations platform](https://go.microsoft.com/fwlink/p/?linkid=2263690). Integrate Microsoft Defender XDR and Microsoft Sentinel and use SOC optimizations to optimize both processes and outcomes, without having your SOC teams spend time on manual analysis and research. For more information, see:
+
+  - [Optimize your security operations](https://aka.ms/soc-opt-from-defender)
+  - [SOC optimization reference](https://aka.ms/soc-opt-ref)
+
+- (Preview) The **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** table is now available in advanced hunting. This allows you to hunt through cloud audit events in Microsoft Defender for Cloud and to create custom detections to surface suspicious Azure Resource Manager and Kubernetes (KubeAudit) control plane activities.
+- (GA) Automatic soft-deletion of sender's copy when *Soft delete* is selected as an action for email messages is now available in the Take actions wizard in advanced hunting. This new feature streamlines the process of managing Sent items, particularly admins who use *Soft delete* and *Move to inbox* actions. Read [Take actions on emails](advanced-hunting-take-action.md#take-various-actions-on-emails) for details.
+ 
+ 
 ## April 2024
 
 - (Preview) The **unified security operations platform** in the Microsoft Defender portal is now available. This release brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, and Microsoft Copilot in Microsoft Defender. For more information, see the following resources:
@@ -41,7 +56,7 @@ You can also get product updates and important notifications through the [messag
 - (GA) **[Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)** is now generally available. Copilot in Defender helps you investigate and respond to incidents faster and more effectively. Copilot provides guided responses, incident summaries and reports, helps you build KQL queries to hunt for threats, provide file and script analyses, and enable you to summarize relevant and actionable threat intelligence.
 - Copilot in Defender customers can now export incident data to PDF. Use the exported data to easily share incident data, facilitating discussions with your security teams and other stakeholders. For details, see **[Export incident data to PDF](manage-incidents.md#export-incident-data-to-pdf)**.
 - **Notifications in the Microsoft Defender portal** are now available. On the top right-hand side of the Defender portal, select the bell icon to view all your active notifications. Different types of notifications are supported such as success, info, warning, and error. Dismiss individual notifications or dismiss all from the notifications tab.
-- The `AzureResourceId` column, which shows the unique identifier of the Azure resource associated with a device, is now available in the [DeviceInfo](advanced-hunting-deviceinfo-table.md) table in advanced hunting. 
+- The `AzureResourceId` column, which shows the unique identifier of the Azure resource associated with a device, is now available in the [DeviceInfo](advanced-hunting-deviceinfo-table.md) table in advanced hunting.
 
 ## February 2024
 

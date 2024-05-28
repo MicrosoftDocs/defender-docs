@@ -19,14 +19,14 @@ ms.custom:
   - admindeeplinkDEFENDER
   - intro-overview
 ms.topic: conceptual
-ms.date: 03/26/2024
+ms.date: 05/14/2024
 ---
 
 # Microsoft Defender portal
 
 The Microsoft Defender portal at <https://security.microsoft.com> combines protection, detection, investigation, and response to threats across your entire organization and all its components, in a central place. The Defender portal emphasizes quick access to information, simpler layouts, and bringing related information together for easier use. It includes:
 
-- **[Microsoft Defender for Office 365]/defender-office-365/mdo-about** helps organizations secure their enterprise with a set of prevention, detection, investigation and hunting features to protect email, and Office 365 resources.
+- **[Microsoft Defender for Office 365](/defender-office-365/mdo-about)** helps organizations secure their enterprise with a set of prevention, detection, investigation and hunting features to protect email, and Office 365 resources.
 - **[Microsoft Defender for Endpoint](/defender-endpoint/)** delivers preventative protection, post-breach detection, automated investigation, and response for devices in your organization.
 - **[Microsoft Defender for Identity](/defender-for-identity/what-is)** is a cloud-based security solution that uses your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.
 - **[Microsoft Defender for Cloud Apps](/cloud-app-security/)** is a comprehensive cross-SaaS and PaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps.
@@ -124,21 +124,51 @@ This at-a-glance information helps you keep up with the latest activities in you
 
 You can add and remove different cards depending on your needs.
 
-### Search across entities (Preview)
+### Global search
 
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here. The search bar is located at the top of the page. As you type, suggestions are provided so that it's easier to find entities. The enhanced search results page centralizes the results from all entities.
 
-You can search across the following entities in Defender for Endpoint and Defender for Identity:
+The Microsoft Defender portal's search function is located at the top of the page. As you type, suggestions are provided so that it's easier to find entities. The enhanced search results page centralizes the results from all entities.
 
-- **Devices** - supported for both Defender for Endpoint and Defender for Identity. Supports use of search operators.
-- **Users** - supported for Defender for Endpoint, Defender for Identity, and Defender for Cloud Apps.
+:::image type="content" source="/defender/media/microsoft-365-defender-portal/search-panel.png" alt-text="Screenshot of the search bar in the Microsoft Defender portal." lightbox="/defender/media/microsoft-365-defender-portal/search-panel.png":::
+
+Search results are categorized by sections related to your search terms. You can search across the following entities in the Microsoft Defender portal:
+
+- **Devices** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud, and Microsoft Sentinel (Preview).
+- **Users** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, and Microsoft Sentinel (Preview).
 - **Files, IPs, and URLs** - same capabilities as in Defender for Endpoint.
 
   > [!NOTE]
   > IP and URL searches are exact match and don't appear in the search results page – they lead directly to the entity page.
 
 - **MDVM** - same capabilities as in Defender for Endpoint (vulnerabilities, software, and recommendations).
+
+Search also provides results from relevant links in the Microsoft Tech Community portal, relevant documentation in Microsoft Learn, navigation items within the portal, and a link where you can provide feedback. Search history is stored in your browser and is accessible for the next 30 days.
+
+### Notifications
+
+Notifications are messages that inform you about important events or updates in the Defender portal. They help you stay on top of your security tasks and alerts.
+
+:::image type="content" source="/defender/media/microsoft-365-defender-portal/notifications-panel.png" alt-text="Screenshot of the notifications icon in the Microsoft Defender portal." lightbox="/defender/media/microsoft-365-defender-portal/notifications-panel.png":::
+
+Notifications are in the top bar of the portal's user interface. You can access them by clicking on the notification icon, which looks like a bell. A number on the icon indicates that you have that number of unread notifications.
+
+Notifications can tell you about various types of events or updates:
+
+- Success: when an action or task has been completed successfully like scanning a device or applying a policy.
+- Ongoing: when an action is in progress.
+- Information: when there is some information that you might find useful.
+- Warning: when there is a potential issue or risk that you should be aware of like a device that is out of compliance or a policy that needs to be updated.
+- Error: when there is an error or failure that requires your attention like an incident is deleted or merged, a scan that failed, or a policy that could not be applied.
+
+Each notification has a title and content that provides relevant information about the event or update. Each notification also has a timestamp that shows when the notification was generated.
+
+You can hide notifications from your view. You can dismiss a single notification by clicking on the *x* icon on the right side of the notification. You can also dismiss all notifications in the list with a single click by using *dismiss all* at the top of the notification panel.
+
+Dismissing a notification does not delete it from the portal. You can always view your dismissed notifications by selecting  *show dismissed* at the bottom of the notification panel.
+
+Notifications are sorted by their generated time in the notification panel, with the most recent ones displayed first. You can scroll through the list of notifications to see older ones.
 
 ## Threat analytics
 

@@ -40,7 +40,7 @@ The following table compares the new, unified Action center to the previous Acti
 
 |The new, unified Action center  |The previous Action center  |
 |---------|---------|
-|Lists pending and completed actions for devices and email in one location <br/>([Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) plus [Microsoft Defender for Office 365]/defender-office-365/mdo-about|Lists pending and completed actions for devices <br/> ([Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) only)   |
+|Lists pending and completed actions for devices and email in one location <br/>([Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) plus [Microsoft Defender for Office 365](/defender-office-365/mdo-about)|Lists pending and completed actions for devices <br/> ([Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) only)   |
 |Is located at:<br/>[https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)         |Is located at:<br/>[https://securitycenter.windows.com/action-center](https://securitycenter.windows.com/action-center)     |
 | In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, choose **Action center**. <p>:::image type="content" source="media/action-center-nav-new.png" alt-text="The navigation pane to the Action Center in the Microsoft Defender portal" lightbox="media/action-center-nav-new.png"::: | In the Microsoft Defender portal, choose **Automated investigations** > **Action center**. <p>:::image type="content" source="media/action-center-nav-old.png" alt-text="An older version of the navigation pane to the Action Center in the Microsoft Defender portal" lightbox="media/action-center-nav-old.png":::  |
 
@@ -50,7 +50,7 @@ You can use the unified Action center if you have appropriate permissions and on
 
 - [Microsoft Defender XDR](/microsoft-365/security/mtp/microsoft-threat-protection)
 - [Defender for Endpoint](microsoft-defender-endpoint.md)
-- [Defender for Office 365]/defender-office-365/mdo-about
+- [Defender for Office 365](/defender-office-365/mdo-about)
 - [Defender for Business](/defender-business/mdb-overview)
 
 ## Using the Action center

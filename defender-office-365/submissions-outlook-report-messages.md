@@ -36,6 +36,8 @@ For more information about reporting messages to Microsoft, see [Report messages
 
 Admins configure user reported messages to go to a specified reporting mailbox, to Microsoft, or both. These user reported messages are available on the **User reported** tab on the **Submissions** page in the Microsoft Defender portal. For more information, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
+[!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
+
 ## Use the built-in Report button in Outlook on the web
 
 - The built-in **Report** button is available in Outlook on the web *only* if user reporting is turned on *and* the built-in **Report** button in Outlook (not a non-Microsoft add-in button) are configured in the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) at <https://security.microsoft.com/securitysettings/userSubmission>:

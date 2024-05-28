@@ -28,7 +28,7 @@ Remediation means to take a prescribed action against a threat. Malicious email 
 ## What you need to know before you begin
 
 - You need to be assigned permissions before you can do the procedures in this article. Admins can take the required action on email messages, but the **Search and Purge** role is required to get those actions approved. To assign the **Search and Purge** role, you have the following options:
-  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell): **Security operations/Security data/Email & collaboration advanced actions (manage)**.
+  - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Security data/Email & collaboration advanced actions (manage)**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Organization Management** or **Data Investigator** role groups. Or, you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
 
 - Verify **Automated Investigation** is turned on at <https://security.microsoft.com/securitysettings/endpoints/integration>.
@@ -79,11 +79,8 @@ Open any remediation item to view details about it, including its remediation na
   - **Actionable**: Emails in the following cloud mailbox locations can be acted on and moved:
     - Inbox
     - Junk
-    - Deleted folder
-    - Soft-deleted folder
-
-      > [!NOTE]
-      > Currently, only a user with access to the mailbox can recover items from a soft-deleted folder.
+    - Deleted Items folder
+    - Recoverable Items\Deletions folder (soft deleted items)
 
   - **Not actionable**: Emails in the following locations can't be acted on or moved in remediation actions:
     - Quarantine
@@ -96,8 +93,11 @@ Open any remediation item to view details about it, including its remediation na
     - **Move to junk folder**: Moves messages to the user's Junk Email folder.
     - **Move to inbox**: Moves messages to the users Inbox folder.
     - **Move to deleted items**: Moves messages to the user's Deleted Items folder.
-    - **Soft delete**: Moves messages to a deleted folder in the cloud.
-    - **Hard delete**: Permanently deletes the messages.
+    - **Soft delete**: Delete the message from the Deleted items folder (move to the Recoverable Items\Deletions folder). The message is recoverable by the user and admins.
+
+      **Delete sender's copy**: Also try to soft delete the message from the sender's Sent Items folder if the sender is the organization.
+
+    - **Hard delete**: Purge the deleted message. Admins can recover hard deleted items using single-item recovery. For more information about hard deleted and soft deleted items, see [Soft-deleted and hard-deleted items](/compliance/assurance/assurance-exchange-online-data-deletion#soft-deleted-and-hard-deleted-items).
 
   Suspicious messages are categorized as either remediable or nonremediable. In most cases, remediable and nonremediable messages combine equals total messages submitted. But in rare cases this may not be true. This can happen because of system delays, timeouts, or expired messages. Messages expire based on the Explorer retention period for your organization.
 

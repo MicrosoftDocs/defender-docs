@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 05/16/2024
 ---
 
 # Device Control for macOS
@@ -64,7 +64,7 @@ Example 1: JAMF using [schema.json](https://github.com/microsoft/mdatp-xplat/tre
 
 :::image type="content" source="media/macos-device-control-jamf-json.png" alt-text="Screenshot that shows how to enable Device Control in Microsoft Defender for Endpoint Data Loss Prevention / Features.":::
 
-<details><summary>Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/macOS/mobileconfig/demo.mobileconfig)</summary>
+Example 2: [demo.mobileconfig](https://github.com/microsoft/mdatp-devicecontrol/blob/main/macOS/mobileconfig/demo.mobileconfig)
 
 ```xml
 <key>dlp</key>
@@ -80,7 +80,7 @@ Example 1: JAMF using [schema.json](https://github.com/microsoft/mdatp-xplat/tre
   </array>
 </dict>
 ```
-</details>
+
 
 - Minimum product version: 101.91.92 or higher
 - Run _mdatp version_ through Terminal to see the product version on your client machine:
@@ -117,6 +117,7 @@ Device control for macOS has similar capabilities to Device control for Windows,
 
 
 ### Settings
+
 Here are the properties you can use when you create the groups, rules, and settings in device control policy for macOS.
 
 | Property name | Description | Options |
@@ -470,11 +471,8 @@ In this case, only have one access rule policy, but if you have multiple, make s
 
 ## Known Issues
 
->[!WARNING]
->In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device controls ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS less than 14.3.1.
-
->[!WARNING]
->Device Control on macOS restricts Android devices that are connected using PTP mode **only**.  Device control does not restrict other modes such as File Transfer, USB Tethering and MIDI.
+> >[!WARNING]
+> Device Control on macOS restricts Android devices that are connected using PTP mode **only**.  Device control does not restrict other modes such as File Transfer, USB Tethering and MIDI.
 
 
 

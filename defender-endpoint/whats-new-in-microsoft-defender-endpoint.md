@@ -5,9 +5,9 @@ search.appverid: met150
 ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
-ms.reviewer: noamhadash
+ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 04/09/2024
+ms.date: 05/23/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -30,7 +30,7 @@ ms.topic: conceptual
 
 The following features are in preview or generally available (GA) in the latest release of Microsoft Defender for Endpoint.
 
-For more information on preview features, see [Preview features](preview.md).
+For more information on preview features, see [Preview features](/defender-xdr/preview).
 
 For more information on what's new with Microsoft Defender for Endpoint on Windows, see:
 [What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md)
@@ -50,15 +50,25 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 - [What's new in Defender for Endpoint on Android](android-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 
+## May 2024
+
+- (GA) [Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)](/defender-endpoint/mde-plugin-wsl) is now generally available (GA version - 1.24.522.2). The plug-in enables Defender for Endpoint to provide more visibility into all running WSL containers by plugging into the isolated subsystem.
+
+- (Preview) **Turn preview options on in the main Microsoft 365 Defender settings** together with other Microsoft 365 Defender preview features. Customers who aren't using preview features yet continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
+
+- (GA) [Streamlined device connectivity for Defender for Endpoint](configure-device-connectivity.md) is now generally available for Windows, macOS, and Linux. This experience makes it easier to configure and manage Defender for Endpoint services by reducing the number of URLs required for connectivity, providing IP & Azure service tag support, and simplifying post-deployment network management.
+
+- (GA) [Microsoft Defender Core service](/defender-endpoint/microsoft-defender-core-service-overview) is now generally available on Windows clients.  Helps with the stability and performance of Microsoft Defender Antivirus.
+
 ## April 2024
 
 **Microsoft Defender for Endpoint on macOS** feature now in GA:
 
 - **Troubleshooting mode for macOS** : Troubleshooting mode helps you identify instances where antivirus might be causing issues with your applications or system resources. To learn more, see [Troubleshooting mode in Microsoft Defender for Endpoint on macOS](mac-troubleshoot-mode.md).
 
-## (GA) March 2024
+## March 2024
 
-**Built-in Scheduled scan for macOS**: For information on Scheduled Scan built-in for Microsoft Defender for Endpoint on macOS, see [How to schedule scans with Microsoft Defender for Endpoint on macOS](mac-schedule-scan.md)
+- (GA) **Built-in Scheduled scan for macOS**: For information on Scheduled Scan built-in for Microsoft Defender for Endpoint on macOS, see [How to schedule scans with Microsoft Defender for Endpoint on macOS](mac-schedule-scan.md)
 
 ## February 2024
 
@@ -93,13 +103,13 @@ Two new ASR rules are now in public preview:
 
 ## October 2023
 
-- (GA) The device isolation and run AV scan responses in macOS and Linux are now generally available. You can now remotely [run an AV scan](respond-machine-alerts.md#run-microsoft-defender-antivirus-scan-on-devices) or [isolate devices](respond-machine-alerts.md#isolate-devices-from-the-network) when responding to attacks.
+- (GA) The device isolation and run antivirus scan responses in macOS and Linux are now generally available. You can now remotely [run an AV scan](respond-machine-alerts.md#run-microsoft-defender-antivirus-scan-on-devices) or [isolate devices](respond-machine-alerts.md#isolate-devices-from-the-network) when responding to attacks.
 - (Public Preview) [Streamlined device connectivity for Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-a-streamlined-device-connectivity-experience-for/ba-p/3956236) is available in public preview for Windows, macOS, and Linux. This experience makes it easier to configure and manage Defender for Endpoint services by reducing the number of URLs required for connectivity, providing IP & Azure service tag support, and simplifying post-deployment network management.
 - (Public Preview) [User Contain](https://www.microsoft.com/en-us/security/blog/2023/10/11/microsoft-defender-for-endpoint-now-stops-human-operated-attacks-on-its-own) can now contain compromised users automatically stopping Human Operated Ransomware in its track using Automatic Attack Disruption.
 
 ## September 2023
 
-(GA) The [Protecting Dev Drive using performance mode](microsoft-defender-endpoint-antivirus-performance-mode.md) is now generally available. The goal of Performance mode is to improve functional performance for developers who use Windows 11.  Performance mode which reduces the performance impact of Microsoft Defender Antivirus scans for files stored on designated Dev Drive.
+(GA) [Protecting Dev Drive using performance mode](microsoft-defender-endpoint-antivirus-performance-mode.md) is now generally available. The goal of Performance mode is to improve functional performance for developers who use Windows 11.  Performance mode reduces the performance impact of Microsoft Defender Antivirus scans for files stored on designated Dev Drive.
 
 ## August 2023
 
@@ -139,4 +149,4 @@ Two new ASR rules are now in public preview:
 
 ## Prior to 2023
 
-For information about features released prior to 2023, see [Archive - What's new in Defender for Endpoint, December 2022 and earlier](whats-new-mde-archive.md#whats-new-in-microsoft-defender-for-endpoint---before-2023)
+For information about features released prior to 2023, see [Archive - What's new in Defender for Endpoint, December 2022 and earlier](whats-new-mde-archive.md#whats-new-in-microsoft-defender-for-endpoint---before-2023).

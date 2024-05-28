@@ -24,7 +24,7 @@ ms.service: defender-xdr
 
 **Applies to:**
 - [Microsoft Defender XDR](microsoft-365-defender.md)
-- [Microsoft Defender for Office 365]/defender-office-365/mdo-about
+- [Microsoft Defender for Office 365](/defender-office-365/mdo-about)
 
 This article describes the Defender for Office 365 experience in the Microsoft Defender portal. Formerly, Defender for Office 365 customers used the Office 365 Security & Compliance center ([https://protection.office.com](https://protection.office.com)).
 
@@ -63,11 +63,11 @@ The left navigation, or quick launch bar, will look familiar. However, there are
 
 With the unified Microsoft Defender XDR solution, you can stitch together the threat signals and determine the full scope and impact of the threat, and how it's currently impacting the organization.
 
-![The The Microsoft Defender portal converged experience.](/defender/media/mdo-m36d-nav-collapsed.png)
+:::image type="content" source="/defender/media/mdo-m36d-nav-collapsed.png" alt-text="A screenshot of the left navigation pane of the M365 Defender portal." lightbox="/defender/media/mdo-m36d-nav-collapsed.png":::
 
 Defender for Office 365 safeguards your organization against malicious threats posed by email messages, links (URLs), and collaboration tools.
 
-![The Defender for Office 365 portal.](/defender/media/mdo-m365d-nav.png)
+:::image type="content" source="/defender/media/mdo-m365d-nav.png" alt-text="A screenshot that shows the Defender for Office 365 navigation pane options." lightbox="/defender/media/mdo-m365d-nav.png":::
 
 ### Incidents and alerts
 
@@ -76,7 +76,7 @@ Brings together incident and alert management across your email, devices, and id
 - [Learn more about Investigations](incidents-overview.md)
 - [Learn more about managing alerts](/windows/security/threat-protection/microsoft-defender-atp/review-alerts)
 
-![Alerts and Actions quick launch bar in the Microsoft Defender portal.](/defender/media/m365d-incident-nav.png)
+:::image type="content" source="/defender/media/m365d-incident-nav.png" alt-text="A screenshot that shows the M365 Defender portal navigation pane emphasizing Incidents & alerts as well as Hunting capabilities." lightbox="/defender/media/m365d-incident-nav.png":::
 
 ### Hunting
 
@@ -108,7 +108,7 @@ Learn more about how to [track and respond to emerging threats with threat analy
 
 Track and investigate threats to your users' email, track campaigns, and more. If you've used the Security & Compliance Center, this will be familiar.
 
-![The quick launch menu for Email & collab, on the left navigation pane in the Microsoft Defender portal.](/defender/media/mdo-m365d-nav.png)
+:::image type="content" source="/defender/media/mdo-m365d-nav.png" alt-text="A screenshot that shows the left navigation pane of the M365 Defender portal focused on Email & collaboration." lightbox="/defender/media/mdo-m365d-nav.png":::
   
 #### Email entity page
 
@@ -118,7 +118,7 @@ The [Email entity page](/defender-office-365/mdo-email-entity-page) *unifies* em
 
 View reports, change your settings, and modify user roles.
 
-![The quick launch menu for The Microsoft Defender portal permissions and reporting, on the left navigation pane in the Microsoft Defender portal.](/defender/media/m365d-settings-nav.png)
+:::image type="content" source="/defender/media/m365d-settings-nav.png" alt-text="A screenshot that shows the left navigation pane of the M365 Defender portal highlighting Access and Reports capabilities." lightbox="/defender/media/m365d-settings-nav.png":::
   
 > [!NOTE]
 > For Defender for Office 365 users, you can now *manage and rotate* DKIM keys in The Microsoft Defender portal at <https://security.microsoft.com/authentication?viewid=DKIM>.
@@ -131,7 +131,7 @@ This table is a quick reference of Threat management where change has occurred b
 
 |Area|Description of change|
 |---|---|
-|[Investigation](/defender-office-365/air-about#the-overall-flow-of-air) |Brings together AIR capabilities in [Defender for Office 365]/defender-office-365/mdo-about and [Defender for Endpoint](/defender-endpoint/automated-investigations). With these updates and improvements, your security operations team will be able to view details about automated investigations and remediation actions across your email, collaboration content, user accounts, and devices, all in one place.|
+|[Investigation](/defender-office-365/air-about#the-overall-flow-of-air) |Brings together AIR capabilities in [Defender for Office 365](/defender-office-365/mdo-about) and [Defender for Endpoint](/defender-endpoint/automated-investigations). With these updates and improvements, your security operations team will be able to view details about automated investigations and remediation actions across your email, collaboration content, user accounts, and devices, all in one place.|
 |[Alert queue](/Microsoft-365/compliance/alert-policies)|The **View alerts** flyout pane in the Security & Compliance Center now includes links to The Microsoft Defender portal. Click on the **Open Alert Page** link and The Microsoft Defender portal opens. You can access the **View alerts** page by clicking on any Office 365 alert in the Alerts queue.|
 |[Attack Simulation training](/defender-office-365/attack-simulation-training-insights)|Use Attack Simulation training to run realistic attack scenarios in your organization. These simulated attacks can help train your workforce before a real attack impacts your organization. Attack simulation training includes, more options, enhanced reports, and improved training flows help make your attack simulation and training scenarios easier to deliver and manage.|
 

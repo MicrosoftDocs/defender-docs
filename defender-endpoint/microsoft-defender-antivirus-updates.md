@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 04/28/2024
+ms.date: 05/20/2024
 audience: ITPro
 ms.topic: reference
 author: siosulli
@@ -45,6 +45,8 @@ This article also includes:
 > [!TIP]
 > To see the most current engine, platform, and signature date, visit the [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates)
 
+[!INCLUDE [MDE automated setup guide](../includes/mde-automated-setup-guide.md)]
+
 ## Security intelligence updates
 
 Microsoft Defender Antivirus uses [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) (also called the *Microsoft Advanced Protection Service*, or MAPS) and periodically downloads dynamic security intelligence updates to provide more protection. These dynamic updates don't take the place of regular security intelligence updates via security intelligence update KB2267602.
@@ -83,10 +85,9 @@ For more information, see [Manage the sources for Microsoft Defender Antivirus p
 
 - To learn more about security intelligence updates, see [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
-- If you're looking for a list of Microsoft Defender processes, **[download the mde-urls workbook](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx
-)**, and then select the **Microsoft Defender Processes** worksheet. The `mde-urls` workbook also lists the services and their associated URLs that your network must be able to connect to, as described in [Enable access to Microsoft Defender for Endpoint service URLs in the proxy server](configure-proxy-internet.md).
+- If you're looking for a list of Microsoft Defender processes, see the spreadsheet provided at [Enable access to Microsoft Defender for Endpoint service URLs in the proxy server](configure-environment.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server). The sheet also lists the services and their associated URLs that your network must be able to connect to.
 
-- Platform updates can be temporarily postponed if other protection features (such as [Endpoint DLP](/Microsoft-365/compliance/endpoint-dlp-getting-started) or [Device Control](device-control-report.md) are actively monitoring running processes. Platform updates are retried after a reboot or when all monitored services are stopped.
+- Platform updates can be temporarily postponed if other protection features, such as [Endpoint DLP](/Microsoft-365/compliance/endpoint-dlp-getting-started) or [Device Control](device-control-report.md) are actively monitoring running processes. Platform updates are retried after a reboot or when all monitored services are stopped.
 
 - In the **Microsoft Endpoint Configuration Manager / Windows Server Update Services** (MECM/WSUS) catalog, the _category_ **Microsoft Defender for Endpoint** includes updates for the MSSense service in [KB5005292](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5005292). KB5005292 includes updates and fixes to the Microsoft Defender for Endpoint **endpoint detection and response** (EDR) sensor. For more information, see [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) and [What's new in Microsoft Defender for Endpoint on Windows](windows-whatsnew.md).
 
@@ -98,6 +99,22 @@ All our updates contain
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.4)
+
+- Security intelligence update version: **1.411.7.0**
+- Release date: **May 07, 2024** (Engine) / **May 16, 2024** (Platform)
+- Engine: **1.1.24040.1**
+- Platform: **4.18.24040.4**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Added an opt-out feature for Experimental Configuration Services (ECS) and One collector in the Core Service.
+- Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
+- After a new engine version is released, support for older versions (N-2) will now reduce to technical support only. Engine versions older than N-2 are no longer supported.
+- Improved health monitoring and telemetry for [Attack Surface Rules](overview-attack-surface-reduction.md) exclusions.
+- Updated inaccurate information in [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) regarding wildcard usage with contextual exclusions.
+
 ### March-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
 
 - Security intelligence update version: **1.409.1.0**
@@ -108,13 +125,13 @@ All our updates contain
 
 #### What's new
 
-- Added manageability settings to opt-out for One Collector telemetry channel and Experimentation and Configuration Service (ECS).
+- Added manageability settings to opt out for One Collector telemetry channel and Experimentation and Configuration Service (ECS).
 - Microsoft Defender Core Service will be disabled when 3rd party Antivirus is installed (except when Defender for Endpoint is running in Passive mode).
 - The known issue in [4.18.24020.7](#february-2024-engine-11240209--platform-418240207) where enforcement of device level access policies wasn't working as expected no longer occurs.
 - Fixed high CPU issue caused by redetection done during Sense originating scans.
 - Fixed an issue with Security Intelligence Update disk cleanup.
 - Fixed an issue where the Signature date information on the Security Health report wasn't accurate.
-- Introducted performance improvements when processing paths for exclusions.
+- Introduced performance improvements when processing paths for exclusions.
 - Added improvements to allow recovering from erroneously added [Indicators of compromise (IoC)](manage-indicators.md).
 - Improved resilience in processing [attack surface reduction](attack-surface-reduction.md) exclusions for Anti Malware Scan Interface (AMSI) scans.
 - Fixed a high memory issue related to the [Behavior Monitoring](behavior-monitor.md) queue that occurred when MAPS is disabled.
@@ -139,28 +156,6 @@ All our updates contain
 #### Known issues
 
 - For [device control](device-control-overview.md) customers using removable media policies with disk/device-level access only (masks that include the values 1, 2, 3, 4, and 7), enforcement might not work as expected. In such situations, we recommend customers roll back to the previous version of the Defender platform.
-
-### January-2024 (Platform: 4.18.24010.12 | Engine: 1.1.24010.10)
-
-- Security intelligence update version: **1.405.702.0**
-- Release date:  **February 27, 2024**
-- Platform: **4.18.24010.12**
-- Engine: **1.1.24010.10**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Microsoft Defender Antivirus now caches the Mark of the Web (MoTW) Alternative Data Stream (ADS) for better performance while scanning.
-- Fixed an issue that occurred in [attack surface reduction](attack-surface-reduction-rules-reference.md) in warn mode when removing scan results from the real-time protection cache.
-- Performance improvement added for `OneNote.exe`.
-- Cloud-based entries are regularly removed from the persistent user mode cache in Windows Defender to prevent an uncommon issue where a user could still add a certificate, based on an Indicator of compromise (IoC), to the cache after a file with that certificate had already been added via cloud signature.
-- The Sense onboarding event is now sent in passive mode for operating systems with the old Sense client.
-- Improved performance for logs created/accessed by powershell.
-- Improved performance for folders included in [Controlled folder access(CFA)](controlled-folders.md) when accessing network files.
-- Fixed a deadlock that occurred at shutdown for Data Loss Prevention (DLP) enabled devices.
-- Fixed an issue to remove a vulnerability in the Microsoft Defender Core service.
-- Fixed an onboarding issue in the Unified Agent installation script [install.ps1](https://github.com/microsoft/mdefordownlevelserver).
-- Fixed a memory leak that impacted some devices that received platform update `4.18.24010.7`
 
 ### Previous version updates: Technical upgrade support only
 
@@ -223,6 +218,21 @@ To avoid a gap in protection, keep your OS installation images up to date with t
 Updates are released for x86, x64, and ARM64 Windows architecture.
 
 For more information, see [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
+
+### 1.411.9.0
+
+- Defender package version: **1.411.9.0**
+- Security intelligence version: **1.411.9.0**
+- Engine version: **1.24040.1**
+- Platform version: **4.18.24040.4**
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
 
 ### 20230809.1
 
