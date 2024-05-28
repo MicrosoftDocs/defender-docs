@@ -75,7 +75,11 @@ In this illustration:
 
 You can integrate Microsoft Defender XDR components with Microsoft Sentinel or a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps.
 
-Microsoft Sentinel is a cloud-native solution that provides SIEM and security orchestration, automation, and response (SOAR) capabilities. Together, Microsoft Sentinel and Microsoft Defender XDR components provide a comprehensive solution to help organizations defend against modern attacks. Microsoft Sentinel includes a Defender for Cloud Apps connector. This allows you to not only gain visibility into your cloud apps but to also get sophisticated analytics to identify and combat cyberthreats and to control how your data travels. For more information, see [Overview of Microsoft Defender XDR and Microsoft Sentinel integration](/azure/sentinel/microsoft-365-defender-sentinel-integration) and [integration steps for Microsoft Sentinel and Microsoft Defender XDR](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-siem-integration.svg" alt-text="A diagram that shows Microsoft Defender XDR integration with SIEM." lightbox="./media/eval-defender-xdr/defender-xdr-siem-integration.svg":::
+
+Microsoft Sentinel is a cloud-native solution that provides SIEM and security orchestration, automation, and response (SOAR) capabilities. Together, Microsoft Sentinel and Microsoft Defender XDR components provide a comprehensive solution to help organizations defend against modern attacks. 
+
+Microsoft Sentinel includes connectors for Microsoft Defender components. This allows you to not only gain visibility into your cloud apps but to also get sophisticated analytics to identify and combat cyberthreats and to control how your data travels. For more information, see [Overview of Microsoft Defender XDR and Microsoft Sentinel integration](/azure/sentinel/microsoft-365-defender-sentinel-integration) and [integration steps for Microsoft Sentinel and Microsoft Defender XDR](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
 
 For more information about SOAR in Microsoft Sentinel (including links to playbooks in the Microsoft Sentinel GitHub Repository), see [Automate threat response with playbooks in Microsoft Sentinel](/azure/sentinel/automate-responses-with-playbooks).
 
@@ -108,7 +112,7 @@ Microsoft recommends enabling the components of Microsoft 365 Defender in the fo
 | Phase | Link |
 |---|---|
 | A. Start the pilot | [Start the pilot](#start-your-pilot)|
-| B. Pilot and deploy Microsoft Defender XDR tools | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
+| B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
 |C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
 This order is designed to leverage the value of the capabilities quickly based on how much effort is typically required to deploy and configure the capabilities. For example, Defender for Office 365 can be configured in less time than it takes to enroll devices in Defender for Endpoint. Prioritize the components to meet your business needs.

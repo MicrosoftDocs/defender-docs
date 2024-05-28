@@ -31,7 +31,7 @@ This article provides a workflow for piloting and deploying Microsoft Defender f
 
 This article assumes you have a production Microsoft 365 tenant and are piloting and deploying Microsoft Defender for Cloud Apps in this environment. This practice will maintain any settings and customizations you configure during your pilot for your full deployment.
 
-Defender for Cloud Apps contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the Implement threat protection and XDR business scenario in the Microsoft Zero Trust adoption framework.
+Defender for Cloud Apps contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Implement threat protection and XDR](/security/zero-trust/adopt/prevent-reduce-business-damage-breach-threat-protection) business scenario in the Microsoft Zero Trust adoption framework.
 
 ## End-to-end deployment for Microsoft Defender XDR
 
@@ -44,7 +44,7 @@ Articles in this series:
 | Phase | Link |
 |---|---|
 | A. Start the pilot | [Start the pilot](#start-your-pilot)|
-| B. Pilot and deploy Microsoft Defender XDR tools | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - **Pilot and deploy Microsoft Defender for Cloud Apps** (this article)  |
+| B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - **Pilot and deploy Microsoft Defender for Cloud Apps** (this article)  |
 |C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
 ## Pilot and deploy workflow for Defender for Cloud Apps
