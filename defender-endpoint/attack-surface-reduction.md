@@ -31,7 +31,7 @@ ms.date: 05/02/2024
 **Platforms**
 - Windows
 
-[!INCLUDE [MDE automated setup guide](../includes/mde-automated-setup-guide.md)]
+[!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
 ## Why attack surface reduction rules are important
 
