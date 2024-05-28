@@ -26,7 +26,7 @@ ms.date: 05/28/2024
 
 For onboarding instructions, check out this short video.
 
-> [!VIDEO https://www.youtube.com/watch?v=eLEXPZ1mUwQ]
+> [!VIDEO https://www.youtube.com/embed/eLEXPZ1mUwQ]
 
 Once the Defender Experts for XDR team is ready to onboard your organization, you'll receive a welcome email to continue the setup and get you started.
 
