@@ -960,13 +960,8 @@
         href: configure-automated-investigations-remediation.md
       - name: View the details and results of an automated investigation
         href: autoir-investigation-results.md
-
-    - name: Next generation protection
-      href: autoir-investigation-results.md
-      items:
-      - name: Run and customize scheduled and on-demand scans
-        href: customize-run-review-remediate-scans-microsoft-defender-antivirus.md
-
+    - name: Run and customize scheduled and on-demand scans
+      href: customize-run-review-remediate-scans-microsoft-defender-antivirus.md
     - name: Endpoint Attack Notifications
       href: endpoint-attack-notifications.md
 
