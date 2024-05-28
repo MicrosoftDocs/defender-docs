@@ -30,7 +30,7 @@ ms.date: 05/28/2024
 
 For Defender Experts for XDR reports instructions, check out this short video.
 
-> [!VIDEO https://www.youtube.com/watch?v=Ymm6g_Eis34]
+> [!VIDEO https://www.youtube.com/embed/Ymm6g_Eis34]
 
 Defender Experts for XDR includes an interactive, on-demand report that provides a clear summary of the work our expert analysts are doing on your behalf, aggregate information about your incident landscape, and granular details about specific incidents. Your service delivery manager (SDM) also uses the report to provide you with more context regarding the service during a monthly business review.
 
