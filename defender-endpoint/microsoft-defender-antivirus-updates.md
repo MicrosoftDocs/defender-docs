@@ -45,7 +45,7 @@ This article also includes:
 > [!TIP]
 > To see the most current engine, platform, and signature date, visit the [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates)
 
-[!INCLUDE [MDE automated setup guide](../includes/mde-automated-setup-guide.md)]
+[!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
 ## Security intelligence updates
 

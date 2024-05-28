@@ -38,7 +38,7 @@ This article describes how to onboard specific Windows servers to Microsoft Defe
 
 For guidance on how to download and use Windows Security Baselines for Windows servers, see [Windows Security Baselines](/windows/device-security/windows-security-baselines).
 
-[!INCLUDE [MDE automated setup guide](../includes/mde-automated-setup-guide.md)]
+[!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
 ## Windows Server onboarding overview
 
