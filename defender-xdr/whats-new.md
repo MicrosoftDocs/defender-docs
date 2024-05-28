@@ -42,6 +42,7 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) The **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** table is now available in advanced hunting. This allows you to hunt through cloud audit events in Microsoft Defender for Cloud and to create custom detections to surface suspicious Azure Resource Manager and Kubernetes (KubeAudit) control plane activities.
 - (GA) Automatic soft-deletion of sender's copy when *Soft delete* is selected as an action for email messages is now available in the Take actions wizard in advanced hunting. This new feature streamlines the process of managing Sent items, particularly admins who use *Soft delete* and *Move to inbox* actions. Read [Take actions on emails](advanced-hunting-take-action.md#take-various-actions-on-emails) for details.
+- (Preview) You can now query Microsoft Sentinel data using the [advanced hunting query API](/graph/api/security-security-runhuntingquery?view=graph-rest-1.0&tabs=http&preserve-view=true). You can use the `timespan` parameter to query Defender XDR and Microsoft Sentinel data that have longer data retention than the Defender XDR default of 30 days.
  
  
 ## April 2024
