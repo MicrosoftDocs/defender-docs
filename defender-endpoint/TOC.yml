@@ -987,6 +987,8 @@
           href: /defender-xdr/developer-faq
     - name: Malware information
       items: 
+       - name: Understanding malware
+         href: malware/understanding-malware.md
        - name: Coinminers
          href: malware/coinminer-malware.md
        - name: Exploits and Exploit Kits
@@ -1009,8 +1011,6 @@
          href: malware/support-scams.md
        - name: Trojans
          href: malware/trojans-malware.md
-       - name: Understanding malware
-         href: malware/understanding-malware.md
        - name: Unwanted software
          href: malware/unwanted-software.md
        - name: Worms
