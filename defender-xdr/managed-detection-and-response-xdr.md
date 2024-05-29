@@ -15,7 +15,7 @@ ms.collection:
   - essentials-manage
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/03/2024
+ms.date: 05/28/2024
 ---
 
 # Managed detection and response
@@ -24,8 +24,9 @@ ms.date: 05/03/2024
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
-> [!TIP]
-> For managed detection and response instructions, check out this short video: <https://www.youtube.com/watch?v=fYzquW2hE5I>
+For managed detection and response instructions, check out this short video.
+
+> [!VIDEO https://www.youtube.com/embed/fYzquW2hE5I]
 
 Through a combination of automation and human expertise, Microsoft Defender Experts for XDR triages Microsoft Defender XDR incidents, prioritizes them on your behalf, filters out the noise, carries out detailed investigations, and provides actionable managed response to your security operations center (SOC) teams.
 
