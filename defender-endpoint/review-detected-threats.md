@@ -102,7 +102,6 @@ AlertEvidence
 | where Timestamp > ago(15d)
 | where ServiceSource == "Microsoft Defender for Endpoint"
 | where DetectionSource == "Antivirus"
-DeviceName
 | distinct DeviceName, DeviceId, Title, AlertId, Timestamp
 ```
 
