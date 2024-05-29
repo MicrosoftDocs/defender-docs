@@ -3,7 +3,7 @@ title: Microsoft Defender Core service overview
 description: Get an overview of Microsoft Defender Core service.
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: deniseb
+manager: dansimp
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: overview
@@ -92,7 +92,7 @@ You can enforce it by using any of these management tools:
 
 #### Use Configuration Manager co-management (ConfigMgr, formerly MEMCM/SCCM) to update the policy for Microsoft Defender Core service
 
-Microsoft [Configuration Manager](/mem/configmgr/core/understand/introduction) has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network.
+Microsoft [Configuration Manager](/mem/configmgr/core/understand/introduction) has an integrated ability to run PowerShell scripts to update Microsoft Defender Antivirus policy settings across all computers in your network.
 
 1. Open the Microsoft Configuration Manager console.
 2. Select **Software Library > Scripts > Create Script**.
@@ -115,22 +115,22 @@ $PropertyType,
 $LogFile
 )
 Try {
-    If (!(Test-path $KeyPath)) {
-    $Path = ($KeyPath.Split(':'))[1].TrimStart("\")
-    ([Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey([Microsoft.Win32.RegistryHive]::LocalMachine,$env:COMPUTERNAME)).CreateSubKey($Path)
-    New-ItemProperty -path $KeyPath -name $ValueName -value $Value -PropertyType $PropertyType -Force | Out-Null
-    }
-    Else {
-    New-ItemProperty -path $KeyPath -name $ValueName -value $Value -PropertyType $PropertyType -Force | Out-Null
-    }
-    $TestValue = (Get-ItemProperty -Path $KeyPath)."$ValueName"
-    If ($TestValue -eq $Value){ Add-Content -Path $LogFile -Value "$KeyPath,$ValueName,$Value,$PropertyType,$TestValue,Success" }
-    Else { Add-Content -Path $LogFile -Value "$KeyPath,$ValueName,$Value,$PropertyType,$TestValue,Failure" }
-    }
-    Catch {
-    $ExceptionMessage = $($PSItem.ToString()) -replace [Environment]::NewLine,"";
-    Add-Content -Path $LogFile -Value "$KeyPath,$ValueName,$Value,$PropertyType,$TestValue,Failure - $ExceptionMessage"
-    }
+    If (!(Test-path $KeyPath)) {
+    $Path = ($KeyPath.Split(':'))[1].TrimStart("\")
+    ([Microsoft.Win32.RegistryKey]::OpenRemoteBaseKey([Microsoft.Win32.RegistryHive]::LocalMachine,$env:COMPUTERNAME)).CreateSubKey($Path)
+    New-ItemProperty -path $KeyPath -name $ValueName -value $Value -PropertyType $PropertyType -Force | Out-Null
+    }
+    Else {
+    New-ItemProperty -path $KeyPath -name $ValueName -value $Value -PropertyType $PropertyType -Force | Out-Null
+    }
+    $TestValue = (Get-ItemProperty -Path $KeyPath)."$ValueName"
+    If ($TestValue -eq $Value){ Add-Content -Path $LogFile -Value "$KeyPath,$ValueName,$Value,$PropertyType,$TestValue,Success" }
+    Else { Add-Content -Path $LogFile -Value "$KeyPath,$ValueName,$Value,$PropertyType,$TestValue,Failure" }
+    }
+    Catch {
+    $ExceptionMessage = $($PSItem.ToString()) -replace [Environment]::NewLine,"";
+    Add-Content -Path $LogFile -Value "$KeyPath,$ValueName,$Value,$PropertyType,$TestValue,Failure - $ExceptionMessage"
+    }
 }
 $ExecutionTime = Get-Date
 $StartTime = Get-Date $ExecutionTime -Format yyyyMMdd-HHmmss
@@ -153,11 +153,11 @@ On the script page of the Run Script wizard, choose your script from the list (M
 
 #### Use Group Policy Editor to update Group Policy for Microsoft Defender Core service
 
-1. Download the latest Microsoft Defender Group Policy Administrative Templates from [here](https://github.com/YongRhee-MSFT/Microsoft-Defender-Antivirus-Group-Policy-Administrative-Templates).
-2. Set up the Domain Controller [Central Repository](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
+1. Download the latest Microsoft Defender Group Policy Administrative Templates from [here](https://github.com/YongRhee-MSFT/Microsoft-Defender-Antivirus-Group-Policy-Administrative-Templates).
+2. Set up the Domain Controller [Central Repository](/troubleshoot/windows-client/group-policy/create-and-manage-central-store).
 
-> [!NOTE]
-> Copy the .admx, and separately the .adml to the En-US folder.
+   > [!NOTE]
+   > Copy the .admx, and separately the .adml to the En-US folder.
 
 3. Start, GPMC.msc (e.g. Domain Controller or ) or GPEdit.msc   
 4. Go to **Computer Configuration** -> **Administrative Templates** -> **Windows Components** -> **Microsoft Defender Antivirus**
@@ -165,7 +165,7 @@ On the script page of the Run Script wizard, choose your script from the list (M
 5. Turn on Experimentation and Configuration Service (ECS) integration for Defender core service
    - **Not configured or enabled (default)**: the Microsoft Defender core service will use ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software.
    - **Disabled**: the Microsoft Defender core service will stop using ECS to rapidly deliver critical, org-specific fixes for Microsoft Defender Antivirus and other Defender software. For false positives, fixes will be delivered via "Security Intelligence updates", and for Platform and/or Engine updates, fixes will be delivered through Microsoft Update, Microsoft Update Catalog or WSUS.
-   
+
 6. Turn on telemetry for Defender core service
    - **Not configured or enabled (default)**: the Microsoft Defender Core service will collect telemetry from Microsoft Defender Antivirus and other Defender software
    - **Disabled**: the Microsoft Defender Core service will stop collecting telemetry from Microsoft Defender Antivirus and other Defender software. Disabling this setting can impact Microsoft's ability to quickly recognize and address problems, such as slow performance and false positives.
@@ -178,6 +178,7 @@ On the script page of the Run Script wizard, choose your script from the list (M
    ```powershell
    Set-MpPreferences -DisableCoreServiceECSIntegration $false 
    ```
+
 3. Use the `Set-MpPreferences -DisableCoreServiceTelemetry` $true or $false command, for example: 
 
    ```powershell
@@ -193,7 +194,7 @@ On the script page of the Run Script wizard, choose your script from the list (M
    `DisableCoreService1DSTelemetry` (dword) 0 (hex)  
    `0` = Not configured, enabled (default)  
    `1` = Disabled
-   
+
    `DisableCoreServiceECSIntegration` (dword) 0 (hex)  
    `0` = Not configured, enabled (default)  
    `1` = Disabled

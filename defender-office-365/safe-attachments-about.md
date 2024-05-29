@@ -48,6 +48,8 @@ Safe Attachments scanning takes place in the same region where your Microsoft 36
 > - [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](safe-attachments-for-spo-odfb-teams-about.md).
 > - [Safe Documents in Microsoft 365 E5](safe-documents-in-e5-plus-security-about.md)
 
+[!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
+
 ## Safe Attachments policy settings
 
 This section describes the settings in Safe Attachments policies:

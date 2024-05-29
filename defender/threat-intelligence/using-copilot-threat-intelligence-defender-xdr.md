@@ -34,7 +34,7 @@ Copilot for Security customers gain for each of their authenticated Copilot user
 
 ## Accessing Copilot in Defender for threat intelligence content
 
-You can experience Copilot for Security’s capability to look up threat intelligence in the following pages of the Defender portal:
+You can experience Copilot for Security's capability to look up threat intelligence in the following pages of the Defender portal:
 - Threat analytics
 - Intel profiles
 - Intel explorer
@@ -71,7 +71,7 @@ Copilot in Defender also has the following built-in prompts when accessing the *
 
 - [Summarize](#summarize-the-latest-threats-related-to-your-organization)
 - [Prioritize](#prioritize-which-threats-to-focus-on)
-- [Ask](#ask-about-the-threat-actors-targeting-the-communications-infrastructure)
+- [Ask](#ask-about-the-threat-actors-targeting-the-communications-infrastructure-industry)
 
 :::image type="content" source="/defender/threat-intelligence/media/defender-ti-and-copilot/copilot-defender-prompts.png" alt-text="Screenshot of the Microsoft Defender portal Threat analytics page with the built-in prompts in the open Copilot in Defender side pane highlighted." lightbox="/defender/threat-intelligence/media/defender-ti-and-copilot/copilot-defender-prompts.png":::
 
@@ -81,9 +81,9 @@ Gathering and digesting threat intelligence data and trends can be a daunting ta
 ### Prioritize which threats to focus on
 Copilot provides insights on which threats you should prioritize and focus on based on your environment's highest exposure level to these threats. Choose the **Prioritize** prompt if you want to find out which threats are likely to significantly impact your organization. This prompt gives you a starting point and could thus make triaging, investigating, and mitigating incidents less complex.
 
-### Ask about the threat actors targeting the communications infrastructure
+### Ask about the threat actors targeting the communications infrastructure industry
 
-An important aspect of threat intelligence is keeping up to date with the global threat landscape. Choose the **Ask** prompt if you want Copilot to summarize the latest threat articles about threat actors that target the communications infrastructure so you can gather information on their latest TTPs or campaigns, and promptly assess and apply mitigation or prevention strategies. 
+An important aspect of threat intelligence is keeping up to date with the global threat landscape. Choose the **Ask** prompt if you want Copilot to summarize the latest threat articles about threat actors that target the communications infrastructure industry so you can gather information on their latest TTPs or campaigns, and promptly assess and apply mitigation or prevention strategies. 
 
 ### See also
 - [What is Microsoft Copilot for Security?](/security-copilot/microsoft-security-copilot)

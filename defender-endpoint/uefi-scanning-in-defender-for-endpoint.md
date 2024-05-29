@@ -11,12 +11,13 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.custom:
-  - admindeeplinkDEFENDER
+- admindeeplinkDEFENDER
+ - partner-contribution
 ms.collection: 
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 05/22/2024
 ---
 
 # UEFI scanning in Defender for Endpoint
@@ -38,7 +39,7 @@ The UEFI scanner is a new component of the [built-in antivirus](microsoft-defend
 - Devices are running one of the following versions of Windows:
   - Windows 10, Windows 11 or newer on client devices
   - Windows Server 2019, Windows Server 2022, or newer versions
-  - [Windows Server 2012 R2 and Windows Server 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292) with the [unified Defender for Endpoint client](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) installed
+  - [Windows Server 2012 R2 and Windows Server 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/ba-p/2783292) with the [unified Defender for Endpoint client](configure-server-endpoints.md#functionality-in-the-modern-unified-solution) installed
 
 ## What is the UEFI scanner?
 
@@ -91,13 +92,16 @@ To detect unknown threats in SPI flash, signals from the UEFI scanner are analyz
 These events can likewise be queried through advanced hunting as shown:
 
 ```kusto
-DeviceAlertEvents
-
+let AlertStats = AlertInfo
+| where Timestamp > ago(30d)
+| where ServiceSource == "Microsoft Defender for Endpoint"
+| where DetectionSource == "Antivirus"
 | where Title has "UEFI"
-
+| join AlertEvidence on AlertId;
+AlertStats
+| join DeviceInfo on DeviceId
+| distinct DeviceName, DeviceId, AlertId, Title, Severity, DetectionSource, Timestamp
 | summarize Titles=makeset(Title) by DeviceName, DeviceId, bin(Timestamp, 1d)
-
-| limit 100
 ```
 
 ## Comprehensive security levels up with low-level protections

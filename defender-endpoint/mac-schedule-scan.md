@@ -6,7 +6,7 @@ author: YongRhee-MSFT
 ms.author: yongrhee
 manager: dansimp
 ms.localizationpriority: medium
-ms.date: 04/28/2024
+ms.date: 05/06/2024
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -273,6 +273,8 @@ In the following example, an hourly quick scan will run every 6 hours, a daily q
         </dict> 
         </dict> 
     </dict> 
+</array>
+</dict>
 </plist> 
 ```
 2. Save the file as _com.microsoft.wdav.mobileconfig_.

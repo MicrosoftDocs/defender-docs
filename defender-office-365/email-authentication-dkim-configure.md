@@ -344,7 +344,7 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
 5. After a while, return to Exchange Online PowerShell, replace \<Domain\> with the domain that you configured, and run the following command:
 
    ```powerShell
-   Set-DkimConfig -Identity \<Domain\> -Enabled $true [-BodyCanonicalization <Relaxed | Simple>] [-HeaderCanonicalization <Relaxed | Simple>]
+   Set-DkimSigningConfig -Identity \<Domain\> -Enabled $true [-BodyCanonicalization <Relaxed | Simple>] [-HeaderCanonicalization <Relaxed | Simple>]
    ```
 
    - The _BodyCanonicalization_ parameter specifies the sensitivity level to changes in the message body:
@@ -357,13 +357,13 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
    For example:
 
    ```powerShell
-   Set-DkimConfig -Identity contoso.com -Enabled $true
+   Set-DkimSigningConfig -Identity contoso.com -Enabled $true
    ```
 
    Or
 
    ```powerShell
-   Set-DkimConfig -Identity contoso.onmicrosoft.com -Enabled $true
+   Set-DkimSigningConfig -Identity contoso.onmicrosoft.com -Enabled $true
    ```
 
    - For a custom domain, if Microsoft 365 is able to detect the CNAME records at the domain registrar, the command runs without error, and the domain is now used to DKIM sign outbound messages from the domain.
@@ -560,7 +560,7 @@ Use any of the following methods to verify DKIM signing of outbound email from M
      - **s=**: The selector (public key in the DNS record in the domain) that was used to decrypt and verify the DKIM signature of the message.
 
   4. Find the **Authentication-Results** header field in the message header. Although destination email systems might use slightly different formats to stamp inbound mail, the header field should include **DKIM=pass** or **DKIM=OK**. For example:
-  
+
      ```text
      Authentication-Results: mx.google.com;
        dkim=pass header.i=@contoso.com header.s=selector1 header.b=NaHRSJOb;
@@ -624,3 +624,6 @@ As described in [How SPF, DKIM, and DMARC work together to authenticate email me
 - [Use DMARC to validate email](email-authentication-dmarc-configure.md)
 
 For mail coming _into_ Microsoft 365, you might also need to configure trusted ARC sealers if you use services that modify messages in transit before delivery to your organization. For more information, see [Configure trusted ARC sealers](email-authentication-arc-configure.md).
+
+> [!TIP]
+> Exchange 2016 and Exchange 2019 are known to modify messages that flow through them, which can impact DKIM.

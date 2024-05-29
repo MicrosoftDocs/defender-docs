@@ -5,7 +5,7 @@ search.appverid: met150
 ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 06/12/2023
 manager: deniseb
 audience: ITPro

@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 04/26/2024
+ms.date: 05/02/2024
 search.appverid: met150
 ---
 
@@ -42,12 +42,13 @@ This article provides information about Microsoft Defender for Endpoint attack s
 - [Per-rule-descriptions](#per-rule-descriptions)
 
 [!Include[Prerelease information](../includes/prerelease.md)]
+[!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
 
 ## Attack surface reduction rules by type
 
 Attack surface reduction rules are categorized as one of two types:
 
-- **Standard protection rules**: Are the minimum set of rules which Microsoft recommends you always enable, while you're evaluating the affect and configuration needs of the other ASR rules. These rules typically have minimal-to-no noticeable impact on the end user.
+- **Standard protection rules**: Are the minimum set of rules which Microsoft recommends you always enable, while you're evaluating the effect and configuration needs of the other ASR rules. These rules typically have minimal-to-no noticeable impact on the end user.
 
 - **Other rules**: Rules that require some measure of following the documented deployment steps [Plan > Test (audit) > Enable (block/warn modes)], as documented in the [Attack surface reduction rules deployment guide](attack-surface-reduction-rules-deployment.md)
 
@@ -111,7 +112,7 @@ The following table lists the supported operating systems for rules that are cur
 >
 > Unless otherwise indicated, the minimum Windows&nbsp;10 build is version 1709 (RS3, build 16299) or later; the minimum Windows&nbsp;Server build is version 1809 or later.
 >
-> Attack surface reduction rules in Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 are available for devices onboarded using the modern unified solution package. For more information, see [New Windows Server 2012 R2 and 2016 functionality in the modern unified solution](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution).
+> Attack surface reduction rules in Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 are available for devices onboarded using the modern unified solution package. For more information, see [New Windows Server 2012 R2 and 2016 functionality in the modern unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
 
 | Rule name| Windows&nbsp;11 <br>and<br> Windows&nbsp;10 | Windows&nbsp;Server <br> 2022 <br>and<br>  Windows&nbsp;Server <br> 2019 | Windows Server | Windows&nbsp;Server <br> 2016 <sup>[[1, 2](#fn1)]</sup> | Windows&nbsp;Server <br> 2012&nbsp;R2 <sup>[[1, 2](#fn1)]</sup> |
 |:---|:---:|:---:|:---:|:---:|:---:|
@@ -131,7 +132,7 @@ The following table lists the supported operating systems for rules that are cur
 | [Block rebooting machine in Safe Mode (preview)](#block-rebooting-machine-in-safe-mode-preview) | Y | Y | Y | Y | Y |
 | [Block untrusted and unsigned processes that run from USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y | Y | Y | Y | Y |
 | [Block use of copied or impersonated system tools (preview)](#block-use-of-copied-or-impersonated-system-tools-preview) | Y | Y | Y | Y | Y |
-| [Block Webshell creation for Servers](#block-webshell-creation-for-servers)  | N | Y <br>Exchange Role Only | Y <br>Exchange Role Only | Y <br>Exchange Role Only | N |
+| [Block Webshell creation for Servers](#block-webshell-creation-for-servers)  | N | Y <br>Exchange Role Only | Y <br>Exchange Role Only | Y <br>Exchange Role Only | Y <br>Exchange Role Only |
 | [Block Win32 API calls from Office macros](#block-win32-api-calls-from-office-macros) | Y | N | N | N | N |
 | [Use advanced protection against ransomware](#use-advanced-protection-against-ransomware) | Y <br> version 1803 or later <sup>[[3](#fn1)]</sup> | Y | Y | Y | Y |
 

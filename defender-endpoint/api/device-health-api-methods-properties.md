@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: siosulli 
 author: siosulli
 ms.localizationpriority: medium 
-ms.date: 02/28/2024
+ms.date: 05/15/2024
 manager: deniseb 
 ms.reviewr: mkaminska
 audience: ITPro 
@@ -48,7 +48,7 @@ Retrieves a list of Microsoft Defender Antivirus device health details. This API
 Data that is collected using either '_JSON response_ or _via files_' is the current snapshot of the current state. It doesn't contain historic data. To collect historic data, customers must save the data in their own data storages.
 
 > [!IMPORTANT]
-> For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution).
+> For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
 >
 > For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft 365 Security dashboard, see: [Device health and antivirus report in Microsoft Defender for Endpoint](../device-health-reports.md).
 

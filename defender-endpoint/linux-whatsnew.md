@@ -2,12 +2,12 @@
 title: What's new in Microsoft Defender for Endpoint on Linux
 description: List of major changes for Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: dansimp
+author: dansimp
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 03/28/2024
-manager: deniseb
+ms.date: 05/24/2024
+manager: dansimp
 audience: ITPro
 ms.collection:
 - m365-security
@@ -31,6 +31,70 @@ This article is updated frequently to let you know what's new in the latest rele
 
 - [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
+<details>
+<summary> May-2024 (Build: 101.24042.0002 | Release version: 30.24042.0002.0)</summary>
+
+## May-2024 Build: 101.24042.0002 | Release version: 30.124042.0002.0
+
+&ensp;Released: **May 29, 2024**<br/>
+&ensp;Published: **May 29, 2024**<br/>
+&ensp;Build: **101.24042.0002**<br/>
+&ensp;Release version: **30.24042.0002.0**<br/>
+&ensp;Engine version: **1.1.24030.4**<br/>
+&ensp;Signature version: **1.407.521.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release:
+
+- In version 24032.0007, there was a known issue where the enrollment of devices to MDE Security Management failed when using the "Device Tagging" mechanism via the mdatp_managed.json file. This issue has been resolved in the current release.
+- Stability and performance improvements.
+- Other bug fixes.
+
+</details>
+<details>
+<summary> May-2024 (Build: 101.24032.0007 | Release version: 30.124032.0007.0)</summary>
+
+## May-2024 Build: 101.24032.0007 | Release version: 30.124032.0007.0
+
+&ensp;Released: **May 15, 2024**<br/>
+&ensp;Published: **May 15, 2024**<br/>
+&ensp;Build: **101.24032.0007**<br/>
+&ensp;Release version: **30.124032.0007.0**<br/>
+&ensp;Engine version: **1.1.24020.3**<br/>
+&ensp;Signature version: **1.403.3500.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release:
+
+- In passive and on-demand modes, antivirus engine remains in idle state and is used only during scheduled custom scans. Thus as part of performance improvements, we have made changes to keep the AV engine down  in passive and on-demand mode except during scheduled custom scans. If the real time protection is enabled, antivirus engine will always be up and running. This will have no impact on your server protection in any mode.
+ 
+  To keep users informed of the state of antivirus engine, we have introduced a new field called "engine_load_status" as part of MDATP health. It indicates whether antivirus engine is currently running or not.
+
+  | `Field name` | `engine_load_status` | 
+  |---|---|
+  | Possible values | Engine not loaded (AV engine process is down),  Engine load succeeded (AV engine process up and running) | 
+
+  Healthy scenarios:
+    - If RTP is enabled, engine_load_status should be "Engine load succeeded"
+    - If MDE is in on-demand or passive mode, and custom scan isn't running then "engine_load_status" should be "Engine not loaded"
+    - If MDE is in on-demand or passive mode, and custom scan is running then "engine_load_status" should be "Engine load succeeded"    
+
+- Bug fix to enhance behavioral detections.
+- Stability and performance improvements.
+- Other bug fixes.
+
+**Known Issues**
+
+- There's a known issue where enrolling devices to MDE Security Management via "Device Tagging" mechanism using mdatp_managed.json is failing in 24032.0007. To mitigate this issue, use the following mdatp CLI command to tag devices:
+
+   ```bash
+   sudo mdatp edr tag set --name GROUP --value MDE-Management
+   ```
+    **The issue has been fixed in Build: 101.24042.0002**
+
+</details>
 
 <details>
 <summary> March-2024 (Build: 101.24022.0001 | Release version: 30.124022.0001.0)</summary>
@@ -1083,7 +1147,9 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Bug fixes
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Mar-2022 (Build: 101.62.74 | Release version: 30.122022.16274.0)</summary>
 
 &ensp;Released: **Mar 24, 2022**<br/>
@@ -1097,7 +1163,9 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Bug fixes
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Mar-2022 (Build: 101.60.93 | Release version: 30.122012.16093.0)</summary>
 
 ## Mar-2022 (Build: 101.60.93 | Release version: 30.122012.16093.0)
@@ -1112,7 +1180,9 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - This version contains a security update for [CVE-2022-23278](https://msrc-blog.microsoft.com/2022/03/08/guidance-for-cve-2022-23278-spoofing-in-microsoft-defender-for-endpoint/)
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Mar-2022 (Build: 101.60.05 | Release version: 30.122012.16005.0)</summary>
 
 &ensp;Released: **Mar 3, 2022**<br/>
@@ -1126,7 +1196,9 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Bug fixes
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Feb-2022 (Build: 101.58.80 | Release version: 30.122012.15880.0)</summary>
 
 ## Feb-2022 (Build: 101.58.80 | Release version: 30.122012.15880.0)
@@ -1143,7 +1215,9 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Bug fixes
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Jan-2022 (Build: 101.56.62 | Release version: 30.121122.15662.0)</summary>
 
 ## Jan-2022 (Build: 101.56.62 | Release version: 30.121122.15662.0)
@@ -1158,7 +1232,9 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 - Fixed a product crash introduced in 101.53.02 and that has impacted multiple customers
 
 <br/><br/>
-</details><details>
+</details>
+
+<details>
 <summary>Jan-2022 (Build: 101.53.02 | Release version: (30.121112.15302.0)</summary>
 
 &ensp;Released: **Jan 8, 2022**<br/>
@@ -1331,4 +1407,4 @@ As an alternative approach, follow the instructions to [uninstall](linux-resourc
 
    </details>
 
-
+</details><!--This </details> closes "2021 releases"-->

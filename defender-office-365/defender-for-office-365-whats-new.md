@@ -39,6 +39,15 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## May 2024
+
+- **Automated end user feedback**: The user submission automatic feedback response capability in Microsoft Defender for Office 365 enables organizations to automatically respond to end user submissions of phishing based on the verdict from the automated investigation. [Learn more](air-user-automatic-feedback-response.md).
+
+- We are introducing **Sender's copy clean-up features** in Threat Explorer, email entity, Summary Panel, and Advanced hunting. These new features will streamline the process of managing Sent items, particularly for admins who use Soft delete and Move to inbox actions. For more information, see [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md). Key highlights:
+- Integration with Soft delete: Sender's copy clean-up will be incorporated as part of the Soft delete action.
+  - Wide support: This action will be supported across various Defender XDR platforms including Threat Explorer, Take Action wizard from the email entity, Summary Panel, Advanced hunting, and through Microsoft Graph API.
+  - Undo capability: An undo action will be available, allowing you to reverse the clean-up by moving items back to the Sent folder.
+
 ## April 2024
 
 - **Last used date** added to Tenant Allow/Block List entries for domains and email addresses, files, and URLs.
@@ -55,7 +64,7 @@ For more information on what's new with other Microsoft Defender security produc
 
   > [!TIP]
   > A new panel allows SecOps personnel to look for indicators of compromise at the tenant level, and the block action is readily available.
-  
+
   For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
 
 ## March 2024
@@ -229,8 +238,6 @@ For more information on what's new with other Microsoft Defender security produc
   - [Video of end-user experience](https://youtu.be/s-vozLO43rI)
   - Other new capabilities coming to the quarantine experience are described in this blog post: [Simplifying the Quarantine experience](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/simplifying-the-quarantine-experience/ba-p/2676388).
 - Portal redirection by default begins, redirecting users from Security & Compliance to Microsoft Defender XDR <https://security.microsoft.com>.
-
-
 
 ## August 2021
 

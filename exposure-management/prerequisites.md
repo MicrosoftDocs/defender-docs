@@ -1,8 +1,8 @@
 ---
 title: Prerequisites and support in Microsoft Security Exposure Management
 description: Review the prerequisites for Microsoft Security Exposure Management.
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: dlanger
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
@@ -22,8 +22,9 @@ Security Exposure Management is currently in public preview.
 Permissions are based on [Microsoft Entra ID RBAC](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
 
 - For full Security Exposure Management access, user roles need access to all Defender for Endpoint  [device groups](/microsoft-365/security//defender-endpoint/machine-groups).
-- Users with scope restrictions to access, such as limits to a specific device group or multiple device groups, can view global exposure insight information, but not specific device information.
-- Users with a defined scope don't have access to attack paths and Security Exposure Management advanced hunting tables.
+- Users who have access restricted to specific device groups can:
+    - Access global exposure insights data. They can't access specific device information and attack paths
+    - Access the Security Exposure Management attack surface map and advanced hunting schemas (ExposureGraphNodes and ExposureGraphEdges) for the device groups to which they have access.
 
 ### Permissions for Security Exposure Management tasks
 
@@ -61,6 +62,22 @@ Permission levels are summarized in the table.
 ## Browser requirements
 
 You can access Security Exposure Management in the Microsoft Defender portal using Microsoft Edge, Internet Explorer 11, or any HTML 5 compliant web browser.
+
+## Critical asset classification
+
+- Before you start, learn about [critical asset management](critical-asset-management.md) in Security Exposure Management.
+- [Review required permissions](prerequisites.md#permissions) for working with the critical assets.
+- When classifying critical assets, we support devices running version 10.3740.XXXX of the Defender for Endpoint sensor or later. We recommended running a more recent sensor version, as listed on the Defender for Endpoint [What's New page](/defender-endpoint/windows-whatsnew).
+
+    You can check which sensor version a device is running as follows:
+
+    - On a specific device, browse to the MsSense.exe file in
+C:\Program Files\Windows Defender Advanced Threat Protection. Right-click the file, and select **Properties**. On the **Details** tab, check the file version.
+    - For multiple devices, it's easier to run an [advanced hunting Kusto query](/defender-xdr/advanced-hunting-query-language) to check device sensor versions, as follows:
+
+        ``` DeviceInfo | project DeviceName, ClientVersion ```
+
+
 
 ## Getting support
 

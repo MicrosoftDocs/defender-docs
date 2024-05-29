@@ -16,7 +16,7 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 11/22/2023
+ms.date: 05/02/2024
 ---
 
 # Attack surface reduction rules overview
@@ -30,6 +30,8 @@ ms.date: 11/22/2023
 
 **Platforms**
 - Windows
+
+[!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
 ## Why attack surface reduction rules are important
 
@@ -139,7 +141,7 @@ You can set attack surface reduction rules for devices that are running any of t
 - [Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh801901(v=ws.11))
 
   > [!NOTE]
-  > Windows Server 2016 and Windows Server 2012 R2 will need to be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016) for this feature to work.
+  > Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2) for this feature to work.
 
 Although attack surface reduction rules don't require a [Windows E5 license](/windows/deployment/deploy-enterprise-licenses), if you have Windows E5, you get advanced management capabilities. The advanced capabilities - available only in Windows E5 - include:
 

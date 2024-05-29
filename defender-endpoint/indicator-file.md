@@ -41,7 +41,7 @@ There are three ways you can create indicators for files:
 - By creating an indicator through the [Indicator API](api/ti-indicator.md)
 
 > [!NOTE]
-> For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016). 
+> For this feature to work on Windows Server 2016 and Windows Server 2012 R2, those devices must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2). 
 > Custom file indicators with the Allow, Block and Remediate actions are now also available in the [enhanced antimalware engine capabilities for macOS and Linux](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enhanced-antimalware-engine-capabilities-for-linux-and-macos/ba-p/3292003).
 
 ## Before you begin

@@ -15,7 +15,7 @@ ms.collection:
   - essentials-get-started
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/29/2024
+ms.date: 05/28/2024
 ---
 
 # Get started with Microsoft Defender Experts for XDR
@@ -23,6 +23,10 @@ ms.date: 04/29/2024
 **Applies to:**
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
+
+For onboarding instructions, check out this short video.
+
+> [!VIDEO https://www.youtube.com/embed/eLEXPZ1mUwQ]
 
 Once the Defender Experts for XDR team is ready to onboard your organization, you'll receive a welcome email to continue the setup and get you started.
 
