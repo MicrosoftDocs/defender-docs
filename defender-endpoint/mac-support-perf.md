@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 03/20/2024
+ms.date: 05/29/2024
 ---
 
 # Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
@@ -26,7 +26,6 @@ ms.date: 03/20/2024
 - [Microsoft Defender XDR](/defender-xdr)
 - [Microsoft Defender for Endpoint Plan 1 and Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
-
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
@@ -52,7 +51,8 @@ Prerequisites:
 
 > [!TIP]
 > As a general best practice, it is recommended to update the [Microsoft Defender for Endpoint agent to latest available version](linux-whatsnew.md) and confirming that the issue still persists before investigating further.
-To troubleshoot and mitigate such issues, follow these steps:
+
+To troubleshoot and mitigate performance issues, follow these steps:
 
 1. Disable real-time protection by using one of the methods in the following table, and then observe whether performance improves. This approach helps narrow down whether Microsoft Defender for Endpoint on macOS is contributing to the performance issues.
 
@@ -89,7 +89,8 @@ To troubleshoot and mitigate such issues, follow these steps:
    ```
    
    > [!TIP]
-   > Before proceeding to capture the data, make sure that the high cpu utilization is occurring in the wdavdaemon_unprivileged by either running top or opening 'activity    monitor'
+   > Before proceeding to capture the data, make sure that the high cpu utilization is occurring in the wdavdaemon_unprivileged by either running top or opening `activity monitor`.
+
 5. To output to a json file, run the following command: 
 
    ```bash
