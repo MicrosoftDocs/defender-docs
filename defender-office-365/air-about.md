@@ -43,47 +43,32 @@ AIR in Defender for Office 365 Plan 2 requires that [audit logging is turned on]
 
 An alert is triggered, and a security playbook starts an automated investigation, which results in findings and recommended actions. Here's the overall flow of AIR, step by step:
 
-1. An automated investigation is initiated in one of the following ways:
-   - Either [an alert is triggered](#which-alert-policies-trigger-automated-investigations) by something suspicious in email (such as a message, attachment, URL, or compromised user account). An incident is created, and an automated investigation begins; or
-   - A security analyst [starts an automated investigation](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer) while using [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md).
+1. An automated investigation is started initiated in one of the following ways:
+   - [An alert is triggered](#which-alert-policies-trigger-automated-investigations) by something suspicious in email (for example, the message itself, an attachment, a URL, or a compromised user account). An incident is created, and an automated investigation begins.
 
-2. While an automated investigation runs, it gathers data about the email in question and _entities_ related to that email (for example, files, URLs, and recipients). The investigation's scope can increase as new and related alerts are triggered.
+     > [!TIP]
+     > Be sure to regularly review the alerts your organization. For more information about alerts and alerts that trigger automated investigations, see the [default alert policies in the Threat management category](/purview/alert-policies#default-alert-policies). The entries that contain the value **Yes** for **Automated investigation** trigger an automated investigation.
 
-3. During and after an automated investigation, [details and results](air-view-investigation-results.md) are available to view. Results might include [recommended actions](air-remediation-actions.md) that can be taken to respond to and remediate any existing threats that were found.
+   - A security analyst manually triggers the investigation. For examples, see [How automated investigation and response works in Defender for Office 365 Plan 2](air-examples.md).
 
-4. Your security operations team reviews the [investigation results and recommendations](air-view-investigation-results.md), and [approves or rejects remediation actions](air-review-approve-pending-completed-actions.md).
+2. A running automated investigation gathers data about the specified email message and the related _entities_ (for example, attached files, included URLs, and recipients). The scope of the investigation can increase as new and related alerts are triggered.
 
-5. As pending remediation actions are approved (or rejected), the automated investigation completes.
+3. During and after an automated investigation, [details and results](air-view-investigation-results.md) are available to view. Results might include [recommended actions](air-remediation-actions.md) for SecOps personnel to take to respond to and remediate any existing threats that were found.
 
-> [!NOTE]
-> If the investigation does not result in recommended actions the automated investigation will close and the details of what was reviewed as part of the automated investigation will still be available on the investigation page.
+4. The SecOps team reviews the [investigation results and recommendations](air-view-investigation-results.md), and [approves or rejects the remediation actions](air-review-approve-pending-completed-actions.md).
 
-In Microsoft Defender for Office 365, no remediation actions are taken automatically. Remediation actions are taken only upon approval by your organization's security team. AIR capabilities save your security operations team time by identifying remediation actions and providing the details needed to make an informed decision.
+   > [!TIP]
+   > No remediation actions happen automatically in Defender for Office 365 Plan 2. Remediation actions require manual approval by SecOps personnel. AIR capabilities save time by getting to the recommended remediation actions with the details to make an informed decision.
 
-During and after each automated investigation, your security operations team can:
+5. As pending remediation actions are approved or rejected, the automated investigation completes.
+
+   The automated investigation automatically closes if no recommended actions are identified. The details of the investigation are still available on the **Investigations** page at <>.
+
+During and after each automated investigation, the SecOps team can do the following tasks:
 
 - [View details about an alert related to an investigation](air-view-investigation-results.md#view-details-about-an-alert-related-to-an-investigation)
 - [View the results details of an investigation](air-view-investigation-results.md#view-investigation-details)
 - [Review and approve actions as a result of an investigation](air-review-approve-pending-completed-actions.md)
-
-> [!TIP]
-> For a more detailed overview, see [How AIR works](air-examples.md).
-
-## How to get AIR
-
-AIR capabilities are included in [Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet), as long as [audit logging is turned on](/purview/audit-log-enable-disable) (it's on by default).
-
-In addition, make sure to review your organization's [alert policies](alert-policies-defender-portal.md), especially the [default policies in the Threat management category](/purview/alert-policies#default-alert-policies).
-
-## Which alert policies trigger automated investigations?
-
-Microsoft 365 includes built-in [alert policies](alert-policies-defender-portal.md) that help identify different types of internal and external threats. For example:
-
-- Suspicious email sending patterns were detected.
-- Delivered messages were removed by [zero-hour auto purge (ZAP)](zero-hour-auto-purge.md).
-- Users report messages as malware or phishing.
-
-Some alert policies trigger automated investigations. For more information, see the table for [Threat management alert policies](/purview/alert-policies#threat-management-alert-policies). The entries that contain the value **Yes** for **Automated investigation** trigger an automated investigation.
 
 ## Required permissions and licensing for AIR
 

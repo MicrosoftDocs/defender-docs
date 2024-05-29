@@ -25,7 +25,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Details about active and completed [automated investigations](air-about.md) in Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-2-capabilities) are available on the **Investigations** page in the Microsoft Defender portal. Investigation details provide you with up-to-date status and (with the right permissions) the ability to approve any pending actions.
+Details about active and completed [automated investigations](air-about.md) in Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-2-capabilities) are available on the **Investigations** page in the Microsoft Defender portal at <https://security.microsoft.com/airinvestigation>. Investigation details provide you with up-to-date status and (with the right permissions) the ability to approve any pending actions.
 
 > [!TIP]
 > Check out the unified investigation page in the Microsoft Defender portal. To learn more, see [Unified investigation page](/defender-xdr/m365d-autoir-results#new-unified-investigation-page).
@@ -57,7 +57,7 @@ The following information about investigations is shown on the **Investigations*
 
 - **ID**: The unique ID of the investigation. Select :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Open in new window** to open the details of the investigation as described in the [View investigation details](#view-investigation-details) section.
 - **Status**: The available status values are described in the [Investigation Status values](#investigation-status-values) section.
-- **Detection Source**: This value is always **Office 365**.
+- **Detection Source**: This value is always **Office365**.
 - **Investigation**
 - **Users**
 - **Creation Time**
@@ -80,15 +80,15 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Starting**
   - **Running**
   - **No Threats Found**
-  - **Terminated By System**
+  - **Terminated by System**
   - **Pending Action**
   - **Threats Found**
   - **Remediated**
   - **Partially Remediated**
-  - **Terminated By User**
+  - **Terminated by User**
   - **Failed**
-  - **Queued By Throttling**
-  - **Terminated By Throttling**
+  - **Queued by Throttling**
+  - **Terminated by Throttling**
 
 When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
@@ -511,9 +511,9 @@ The [investigation details page](#view-investigation-details) opens.
 
   Showing both count historical and current counts in different views is done to indicate the email impact at the time of investigation and the current impact up until the time that remediation is run.
 
-- In the context of email, you might see a volume anomaly threat surface as part of the investigation. A volume anomaly indicates a spike in similar email messages around the investigation event time compared to earlier timeframes. A spike in email traffic together with certain characteristics (for example, subject and sender domain, body similarity, and sender IP) is typical of the start of email campaigns or attacks. However, bulk, spam, and legitimate email campaigns commonly share these characteristics.
+- In the context of email, you might see a volume anomaly threat surface as part of the investigation. A volume anomaly indicates a spike in similar email messages around the investigation event time compared to earlier time frames. A spike in email traffic together with certain characteristics (for example, subject and sender domain, body similarity, and sender IP) is typical of the start of email campaigns or attacks. However, bulk, spam, and legitimate email campaigns commonly share these characteristics.
 
-- Volume anomalies represent a potential threat, and accordingly could be less severe compared to malware or phish threats that are identified using anti-virus engines, detonation, or malicious reputation.
+- Volume anomalies represent a _potential_ threat, and could be less severe compared to malware or phishing threats that are identified using anti-virus engines, detonation, or malicious reputation.
 
 - You don't have to approve every action. If you don't agree with the recommended action or your organization doesn't choose certain types of actions, then you can choose to **Reject** the actions or simply ignore them and take no action.
 
