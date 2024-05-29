@@ -1,16 +1,12 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
 title: Behavior Monitoring in Microsoft Defender Antivirus on macOS
 description: Behavior Monitoring in Microsoft Defender Antivirus on macOS
-author:      YongRhee-MSFT # GitHub alias
-ms.author:   yongrhee # Microsoft alias
+author: YongRhee-MSFT # GitHub alias
+ms.author: yongrhee # Microsoft alias
 manager: deniseb
 ms.service: defender-endpoint
 ms.topic: overview
-ms.date:     05/08/2024
+ms.date: 05/29/2024
 ms.subservice: ngp
 audience: ITPro
 ms.collection: 
@@ -139,11 +135,17 @@ The following sections describe each of these methods in detail.
 ```
 
 2. Open **Devices** > **Configuration profiles**. 
+
 3. Select **Create profile** and select **New Policy**.
+
 4. Give the profile a name. Change **Platform=macOS** to **Profile type=Templates** and choose **Custom** in the template name section. Select **Configure**.
-5. Go to the plist file you saved earlier and save it as com.microsoft.wdav.xml.
+
+5. Go to the plist file you saved earlier and save it as `com.microsoft.wdav.xml`.
+
 6. Enter `com.microsoft.wdav` as the **custom configuration profile name**.
+
 7. Open the configuration profile and upload the `com.microsoft.wdav.xml` file and select **OK**.
+
 8. Select **Manage** > **Assignments**. In the **Include** tab, select **Assign to All Users & All devices or to a Device Group or User Group.**
 
 #### Via JamF deployment
@@ -203,10 +205,9 @@ sudo mdatp config behavior-monitoring --value disabled
 
 For more information, see: [Resources for Microsoft Defender for Endpoint on macOS](/defender-endpoint/mac-resources).
 
-
 ### To test behavior monitoring (prevention/block) detection
 
-Please see [Behavior Monitoring demonstration](demonstration-behavior-monitoring.md).
+See [Behavior Monitoring demonstration](demonstration-behavior-monitoring.md).
 
 ### Verifying Behavior Monitoring detection
 
@@ -218,6 +219,8 @@ sudo mdatp threat list
 ### Frequently Asked Questions (FAQ):
 
 #### What if I see an increase in cpu utilization or memory utilization?
+
 Disable Behavior Monitoring and see if the issue goes away.
+
 - If the issue doesn't go away, it is not related to Behavior Monitoring.
 - If the issue goes away, take an aka.ms/xMDEClientAnalyzer and contact Microsoft support.
