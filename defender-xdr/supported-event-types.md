@@ -33,13 +33,16 @@ ms.date: 09/09/2021
 [!include[Prerelease information](../includes/prerelease.md)]
 
 
-The Event Streaming API is constantly being expanded to support more event types. Learn which Hunting tables are generally available, currently in public preview, or not yet supported. 
+The Event Streaming API is constantly being expanded to support more event types. Learn which hunting tables are generally available, currently in public preview, or not yet supported. 
 
-**New - Identity and CloudApp event types/tables are now GA**.
 
 ## Hunting tables support status in Event Streaming API
 
 The following table only includes the list of the tables supported in the streaming API, and is not inclusive of all AH schema. For a full list of the API see, [Learn the schema tables](advanced-hunting-schema-tables.md#learn-the-schema-tables).
+
+
+> [!NOTE]
+> Streaming data is only available for columns or fields that are in preview or general availability in Microsoft Defender XDR. 
 
 | Table name | Status<br>(Commercial) | GCC | GCC High | DoD |
 |----|----|----|----|----|
