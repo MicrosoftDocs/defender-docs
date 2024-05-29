@@ -534,7 +534,9 @@
         - name: Vulnerability management
           href: mto-dashboard.md
         - name: Manage tenants
-          href: mto-tenants.md      
+          href: mto-tenants.md
+        - name: Create and manage endpoint security policies
+          href: mto-endpoint-security-policy.md               
     - name: Reference
       items: 
       - name: Manage roles and permissions
