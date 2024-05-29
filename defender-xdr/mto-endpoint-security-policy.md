@@ -12,15 +12,13 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: conceptual
-ms.date: 05/28/2024
+ms.date: 05/29/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
   - ✅ <a href="https://learn.microsoft.com/defender-endpoint/microsoft-defender-endpoint" target="_blank">Microsoft Defender for Endpoint</a>
 ---
 
 # Endpoint security policies in multitenant management
-
-[!INCLUDE [Prerelease](../includes/prerelease.md)]
 
 An aggregated view of all security policies from all tenants is now available through the **Endpoint security policies** page in multitenant management. The page gives you access to manage security settings on your tenants' devices, allowing you to create, edit, or delete security policies. Navigate to the page through **Endpoint > Configuration management > Endpoint security policies**.
 
