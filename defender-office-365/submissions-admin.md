@@ -39,7 +39,7 @@ In Microsoft 365 organizations with Exchange Online mailboxes, admins can use th
 
   After an admin submits the message from the **User reported** tab, an entry is also created on the corresponding tab on the **Submissions** page (for example, the **Emails** tab). These types of admin submissions are described in the [Admin options for user reported messages](#admin-options-for-user-reported-messages) section.
 
-When admins submit messages or sends user report to Microsoft for analysis, we do the following checks:
+##When admins submit messages or sends user report to Microsoft for analysis, we do the following checks:
 
 - **Email authentication check** (email messages only): Whether email authentication passed or failed when it was delivered.
 - **Policy hits**: Information about any policies or overrides that might have allowed or blocked the incoming email into the organization, thus overriding our filtering verdicts.
@@ -845,18 +845,7 @@ For email messages, admins can see what users are reporting on the **User report
 
 **Notes**:
 
-- User reported messages that are sent to Microsoft only or to Microsoft and the [reporting mailbox](submissions-user-reported-messages-custom-mailbox.md) appear on the **User reported** tab. Although these messages have already been reported to Microsoft, administrators should review and resubmit user submissions as admin submissions. 
-
-  
-When admins submit messages or sends user report to Microsoft for analysis, we do the following checks:
-
-  - **Email authentication check** (email messages only): Whether email authentication passed or failed when it was delivered.
-  
-  - **Policy hits**: Information about any policies or overrides that might have allowed or blocked the incoming email into the organization, thus overriding our filtering verdicts.
-  
-  - **Payload reputation/detonation**: Up-to-date examination of any URLs and attachments in the message.
-  
-  - **Grader analysis**: Review done by human graders to confirm whether or not messages are malicious.
+- User reported messages that are sent to Microsoft only or to Microsoft and the [reporting mailbox](submissions-user-reported-messages-custom-mailbox.md) appear on the **User reported** tab. Although these messages have already been reported to Microsoft, administrators should review and resubmit user submissions as admin submissions. Following checks are done when admin makes a submission which have been explained in this section.[Admin-Submission](##When admins submit messages or sends user report to Microsoft for analysis, we do the following checks:)
   
 - User reported messages that are sent only to the reporting mailbox appear on the **User reported** tab with the **Result** value **Not Submitted to Microsoft**. Admins should report these messages to Microsoft for analysis.
 
