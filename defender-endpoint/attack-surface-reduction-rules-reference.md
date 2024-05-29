@@ -42,7 +42,7 @@ This article provides information about Microsoft Defender for Endpoint attack s
 - [Per-rule-descriptions](#per-rule-descriptions)
 
 [!Include[Prerelease information](../includes/prerelease.md)]
-[!Include [mde-automated-setup-guide.md>](../includes/mde-automated-setup-guide.md)]
+[!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
 
 ## Attack surface reduction rules by type
 
