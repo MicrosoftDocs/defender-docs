@@ -99,6 +99,21 @@ All our updates contain
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### May-2024 (Engine: 1.1.24050.x | Platform: 4.18.24050.xxxx)
+
+- Security intelligence update version: **x.x.x.0**
+- Release date: **May 29, 2024** (Engine) / **May 29, 2024** (Platform)
+- Engine: **1.1.24050.x**
+- Platform: **4.18.24050.xxxx**
+- Support phase: **Security and Critical Updates**
+
+#### What's new
+
+- Improved performance when running configuration queries.
+- Optimized how scans are prioritized.
+- A crash caused by a race condition with a device control driver no longer occurs. 
+- Added Event Viewer Logging for scan start event where the scan originates from Powershell.
+
 ### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.4)
 
 - Security intelligence update version: **1.411.7.0**
