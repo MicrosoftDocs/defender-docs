@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 05/02/2024
+ms.date: 05/29/2024
 ---
 
 # Protect Dev Drive using performance mode
