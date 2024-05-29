@@ -98,7 +98,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## July 2022
 
-- [Add domain controller devices - Evaluation lab enhancement](evaluate-microsoft-defender-antivirus.md#add-a-domain-controller)<br>Now generally available - Add a domain controller to run complex scenarios such as lateral movement and multistage attacks across multiple devices.
+- [Add domain controller devices - Evaluation lab enhancement](evaluate-microsoft-defender-antivirus.md)<br>Now generally available - Add a domain controller to run complex scenarios such as lateral movement and multistage attacks across multiple devices.
 
 - [Announcing File page enhancements in Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-file-page-enhancements-in-microsoft-defender-for/ba-p/3584004)<br>Have you ever investigated files in Microsoft Defender for Endpoint? We now make it even easier with our recent announcement of enhancements to the File page and side panel. Users can now streamline processes by having a more efficient navigation experience that hosts all this information in one place.
 
@@ -190,7 +190,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) <br> Microsoft Defender for Endpoint now adds support for Linux. This article [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md) enables you learn how to install, configure, update, and use Microsoft Defender for Endpoint for Linux.
 
-- [Attack simulators in the evaluation lab](evaluate-microsoft-defender-antivirus.md#threat-simulator-scenarios) <br> Microsoft Defender for Endpoint has partnered with various threat simulation platforms to give you convenient access to test the capabilities of the platform right from within the portal.
+- [Attack simulators in the evaluation lab](evaluate-microsoft-defender-antivirus.md) <br> Microsoft Defender for Endpoint has partnered with various threat simulation platforms to give you convenient access to test the capabilities of the platform right from within the portal.
 
 ## April 2020
 
