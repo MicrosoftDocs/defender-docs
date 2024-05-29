@@ -27,11 +27,54 @@ ms.topic: conceptual
 
 - Microsoft Defender XDR
 
-This article outlines the process to enable and pilot Microsoft Defender for Endpoint. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md), and you've and you have created the Microsoft Defender XDR pilot environment.
+This article provides a workflow for piloting and deploying Microsoft Defender for Endpoint in your organization. You can use these recommendations to onboard Microsoft Defender for Endpoint as an individual cybersecurity tool or as part of an end-to-end solution with Microsoft Defender XDR.
 
-This article is part of the end-to-end process of piloting and deploying Microsoft Defender XDR.
+This article assumes you have a production Microsoft 365 tenant and are piloting and deploying Microsoft Defender for Endpoint in this environment. This practice will maintain any settings and customizations you configure during your pilot for your full deployment.
+
+Defender for Endpoint contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Secure remote and hybrid work with Zero Trust](/security/zero-trust/adopt/secure-remote-hybrid-work) business scenario in the Microsoft Zero Trust adoption framework.
+
+## End-to-end deployment for Microsoft Defender XDR
+
+This is article 2 of 6 in a series to help you deploy the components of Microsoft Defender XDR, including investigating and responding to incidents.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows Microsoft Defender for Endpoint in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg":::
+
+Articles in this series:
+
+| Phase | Link |
+|---|---|
+| A. Start the pilot | [Start the pilot](pilot-deploy-overview.md#start-the-pilot)|
+| B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - **Pilot and deploy Defender for Endpoint**  (this article) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
+|C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
+
+## Pilot and deploy workflow for Defender for Identity
+
+The following diagram illustrates a common process to deploy a product or service in an IT environment.
+
+:::image type="content" source="./media/eval-defender-xdr/adoption-phases.svg" alt-text="Diagram of the pilot, evaluate, and full deployment adoption phases." lightbox="./media/eval-defender-xdr/adoption-phases.svg":::
+
+You start by evaluating the product or service and how it will work within your organization. Then, you pilot the product or service with a suitably small subset of your production infrastructure for testing, learning, and customization. Then, gradually increase the scope of the deployment until your entire infrastructure or organization is covered.
+
+Here is the workflow for piloting and deploying Defender for Identity in your production environment.
+
+:::image type="content" source="./media/eval-defender-xdr/defender-identity-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Identity." lightbox="./media/eval-defender-xdr/defender-identity-pilot-deploy-steps.svg":::
+
+Follow these steps:
+
+1. [Set up the Defender for Identity instance](#step-1)
+1. [Install and configure sensors](#step-2)
+1. [Configure event log and proxy settings on machines with the sensor](#step-3)
+1. [Allow Defender for Identity to identify local admins on other computers](#step-4)
+1. [Configure benchmark recommendations for your identity environment](#step-5)
+1. [Try out capabilities](#step-6)
+
+Here are the recommended steps for each deployment stage.
+
+| Deployment stage | Description |
+| --- | --- |
+| Evaluate | Perform product evaluation for Defender for Identity. |
+| Pilot | Perform Steps 1-6 for a suitable subset of servers with sensors in your production environment. |
+| Full deployment | Perform Steps 2-5 for your remaining servers, expanding beyond the pilot to include all of them. |
 
 Before piloting Microsoft Defender for Endpoint, be sure you understand the architecture and can meet the requirements.
 

@@ -43,7 +43,7 @@ Articles in this series:
 
 | Phase | Link |
 |---|---|
-| A. Start the pilot | [Start the pilot](#start-your-pilot)|
+| A. Start the pilot | [Start the pilot](#start-the-pilot)|
 | B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - **Pilot and deploy Microsoft Defender for Cloud Apps** (this article)  |
 |C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
@@ -76,7 +76,7 @@ Here are the recommended steps for each deployment stage.
 | --- | --- |
 | Evaluate | Perform product evaluation for Defender for Cloud Apps. |
 | Pilot | Perform Steps 1-4 and then 5-8 for a suitable subset of cloud apps in your production environment. |
-| Full deployment | Perform Steps 5-8 for your remaining cloud apps, adjusting the scoping for pilot user groups or adding user groups to expand beyond the pilot. |
+| Full deployment | Perform Steps 5-8 for your remaining cloud apps, adjusting the scoping for pilot user groups or adding user groups to expand beyond the pilot and include all of your user accounts. |
 
 ### Protecting your organization from hackers
 
@@ -256,7 +256,7 @@ For more information on advanced hunting in Microsoft Defender for Cloud Apps da
 
 ## SIEM integration
 
-You can integrate Defender for Cloud Apps with Microsoft Sentinel or a generic SIEM service to enable centralized monitoring of alerts and activities from connected apps.
+You can integrate Defender for Cloud Apps with Microsoft Sentinel or a generic Security Information and Event Management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-cloud-apps-siem-integration.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Cloud Apps with SIEM integration." lightbox="./media/eval-defender-xdr/defender-cloud-apps-siem-integration.svg":::
 

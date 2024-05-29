@@ -43,7 +43,7 @@ Articles in this series:
 
 | Phase | Link |
 |---|---|
-| A. Start the pilot | [Start the pilot](#start-your-pilot)|
+| A. Start the pilot | [Start the pilot](pilot-deploy-overview.md#start-the-pilot)|
 | B. Pilot and deploy Microsoft Defender XDR components | - **Pilot and deploy Defender for Identity**  (this article) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
 |C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
@@ -74,7 +74,7 @@ Here are the recommended steps for each deployment stage.
 | --- | --- |
 | Evaluate | Perform product evaluation for Defender for Identity. |
 | Pilot | Perform Steps 1-6 for a suitable subset of servers with sensors in your production environment. |
-| Full deployment | Perform Steps 2-5 for your remaining servers, expanding beyond the pilot to eventually include all of them. |
+| Full deployment | Perform Steps 2-5 for your remaining servers, expanding beyond the pilot to include all of them. |
 
 ### Protecting your organization from hackers
 
@@ -84,14 +84,15 @@ Here's an example of a cyber-attack and how the components of Microsoft Defender
 
 :::image type="content" source="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg" alt-text="A diagram that shows how Microsoft Defender XDR stops a threat chain." lightbox="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg":::
 
-Defender for Identity detects anomalous behavior like impossible-travel, credential access, and unusual download, file share, or mail forwarding activity and displays these behaviors in the Defender for Identity portal. Defender for Identity also helps prevent lateral movement by hackers and exfiltration of sensitive data.
+Defender for Identity gathers signals from AD DS domain controllers and servers running AD FS and AD CS. It uses these signals to protect your hybrid identity environment, including protecting against hackers that use compromised accounts to move laterally across workstations in the on-premises environment.
 
 Microsoft Defender XDR correlates the signals from all the Microsoft Defender components to provide the full attack story.
+
 ## Defender for Identity architecture
 
 Microsoft Defender for Identity is fully integrated with Microsoft Defender XDR and leverages signals from on-premises Active Directory identities to help you better identify, detect, and investigate advanced threats directed at your organization.
 
-Deploy Microsoft Defender for Identity to help your SecOp teams deliver a modern identity threat detection and response (ITDR) solution across hybrid environments, including:
+Deploy Microsoft Defender for Identity to help your Security Operations (SecOp) teams deliver a modern identity threat detection and response (ITDR) solution across hybrid environments, including:
 
 - Prevent breaches, using proactive identity security posture assessments
 - Detect threats, using real-time analytics and data intelligence
@@ -122,7 +123,6 @@ Defender for Identity sensors can be directly installed on the following servers
   The sensor directly monitors network traffic and authentication events.
 
 For a deeper look into the architecture of Defender for Identity, see [Microsoft Defender for Identity architecture](/defender-for-identity/architecture).
-
 
 <a name="step-1"></a>
 
@@ -199,34 +199,25 @@ Try out Defender for Identity tutorials:
 
 ## SIEM integration
 
-You can integrate Defender for Identity with Microsoft Sentinel or a generic SIEM service to enable centralized monitoring of alerts and activities from connected apps.
+You can integrate Defender for Identity with Microsoft Sentinel or a generic Security Information and Event Management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-identity-siem-integration.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Identity with SIEM integration." lightbox="./media/eval-defender-xdr/defender-identity-siem-integration.svg":::
 
-Microsoft Sentinel includes a Defender for Identity connector. For more information, see [Microsoft Sentinel integration](/defender-cloud-apps/siem-sentinel) and [Stream alerts and Cloud Discovery logs from Defender for Cloud Apps into Microsoft Sentinel](/azure/sentinel/connect-cloud-app-security).
-
->> Rework above links
+Microsoft Sentinel includes a Defender for Identity connector. For more information, see [Microsoft Defender for Identity connector for Microsoft Sentinel](/azure/sentinel/data-connectors/microsoft-defender-for-identity).
 
 For information about integration with third-party SIEM systems, see [Generic SIEM integration](/cloud-app-security/siem).
 
 ## Next step
 
->> ADD
+Incorporate the following into your SecOps processes:
 
+- [View the ITDR dashboard](/defender-for-identity/dashboard)
+- [View and manage Defender for Identity health issues](/defender-for-identity/health-alerts)
 
 ## Next step for the end-to-end deployment of Microsoft Defender XDR
 
 Continue your end-to-end deployment of Microsoft Defender XDR with [Pilot and deploy Defender for Office 365](pilot-deploy-defender-office-365.md).
 
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" alt-text="A diagram that shows Microsoft Defender for Office 365 in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg":::
-
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
-
-
-## Next step
-
-
-
-See [Pilot and deploy Microsoft Defender for Office 365](pilot-deploy-defender-office-365.md).
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
