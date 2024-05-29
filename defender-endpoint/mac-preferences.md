@@ -512,19 +512,17 @@ This setting determines how aggressive Defender for Endpoint will be in blocking
 
 #### Enable / disable automatic sample submissions
 
-Determines whether suspicious samples (that are likely to contain threats) are sent to Microsoft. You're prompted if the submitted file is likely to contain personal information.
+Determines whether suspicious samples (that are likely to contain threats) are sent to Microsoft. There are three levels for controlling sample submission:
 
-<br>
+- **None**: no suspicious samples are submitted to Microsoft.
+- **Safe**: only suspicious samples that don't contain personally identifiable information (PII) are submitted automatically. This is the default value for this setting.
+- **All**: all suspicious samples are submitted to Microsoft.
 
-****
-
-|Section|Value|
+|Description|Value|
 |---|---|
-|**Domain**|`com.microsoft.wdav`|
-|**Key**|automaticSampleSubmission|
-|**Data type**|Boolean|
-|**Possible values**|true (default) <p> false|
-|||
+|**Key**|automaticSampleSubmissionConsent|
+|**Data type**|String|
+|**Possible values**|none <p> safe (default) <p> all|
 
 #### Enable / disable automatic security intelligence updates
 
