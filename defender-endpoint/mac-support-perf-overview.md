@@ -1,13 +1,15 @@
 ---
 title: Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
-description: Troubleshoot performance issues overview for Microsoft Defender for Endpoint on macOS
+description: Troubleshoot performance issues overview for Microsoft Defender for Endpoint on macOS.
 author: YongRhee-MSFT 
 ms.author: yongrhee 
 ms.service: defender-endpoint
 ms.topic: overview
-ms.date: 03/01/2024
-ms.subservice: ngp
+ms.localizationpriority: medium
+ms.date: 05/29/2024
+ms.subservice: macos
 manager: dansimp
+ms.custom: partner-contribution
 ---
 
 # Overview for how to troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
@@ -25,6 +27,7 @@ Depending on the applications that you're running and your device characteristic
 
 > [!TIP]
 > As a general best practice, it is recommended to [update the Microsoft Defender for Endpoint agent to latest available version](/defender-endpoint/mac-whatsnew) and confirming that the issue still persists before investigating further.
+
 > [!CAUTION]
 > Running other third-party endpoint protection products alongside Microsoft Defender for Endpoint on MacOS is likely to lead to performance problems and unpredictable side effects. If non-Microsoft endpoint protection is an absolute requirement in your environment, you can configure Microsoft Defender Antivirus to run in **[Passive mode](mac-preferences.md)**. After you configure Passive mode, you can use Defender for Endpoint on Mac EDR functionality.
 
