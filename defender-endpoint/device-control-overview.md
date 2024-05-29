@@ -39,6 +39,8 @@ This list is intended to provide some examples. It's not an exhaustive list; the
 
 Device control helps protect your organization from potential data loss, malware, or other cyberthreats by allowing or preventing certain devices to be connected to users' computers. With device control, your security team can determine whether and what peripheral devices users can install and use on their computers. 
 
+[!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
+
 ## Microsoft device control capabilities
 
 Device control capabilities from Microsoft can be organized into three main categories: device control in Windows, device control in Defender for Endpoint, and Endpoint Data Loss Prevention (Endpoint DLP).
