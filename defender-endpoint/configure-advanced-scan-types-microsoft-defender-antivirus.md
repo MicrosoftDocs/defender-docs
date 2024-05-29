@@ -23,7 +23,7 @@ search.appverid: met150
 **Applies to:**
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender Antivirus](https://learn.microsoft.com/defender-endpoint/microsoft-defender-antivirus-windows)
+- [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
 **Platforms**
 - Windows 
