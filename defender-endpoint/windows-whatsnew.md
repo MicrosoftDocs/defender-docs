@@ -45,7 +45,7 @@ All updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr))
 
-## April-2024 (Release version: 10.8750)
+## May-2024 (Release version: 10.8750)
 
 |OS  |KB  |Release version |
 | -------- | -------- | -------- |
