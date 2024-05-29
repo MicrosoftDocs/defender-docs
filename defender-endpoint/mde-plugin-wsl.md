@@ -14,7 +14,7 @@ ms.collection:
 ms.custom:
 - partner-contribution
 audience: ITPro
-ms.date: 05/17/2024
+ms.date: 05/23/2024
 search.appverid: MET150
 ---
 
@@ -34,7 +34,7 @@ Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL 
 
 Be aware of the following before you start:
 
-1. The plug-in doesn't support automatic updates on versions prior to `0.24.426.1`. On version `0.24.426.1` and later; updates are supported through Windows Update across all rings. Updates through Windows Server Update services (WSUS), System Center Configuration Manager (SCCM) and Microsoft Update catalog are supported only in the Production ring to ensure package stability.
+1. The plug-in doesn't support automatic updates on versions prior to `1.24.522.2`. On version `1.24.522.2` and later; updates are supported through Windows Update across all rings. Updates through Windows Server Update services (WSUS), System Center Configuration Manager (SCCM) and Microsoft Update catalog are supported only in the Production ring to ensure package stability.
 
 2. It takes a few minutes for the plug-in to fully instantiate, and up to 30 minutes for a WSL2 instance to onboard itself. Short-lived WSL container instances might result in the WSL2 instance not showing up in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Once any distribution has been running long enough (at least 30 minutes), it does show up.
 
@@ -46,9 +46,9 @@ Be aware of the following before you start:
 
 ## Software prerequisites
 
-- WSL version 2.0.7 or later must be running with at least one active distro.
+- WSL version 2.0.7.0 or later must be running with at least one active distro.
 
-   Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than 2.0.7, run `wsl -–update –pre-release` to get the latest update.
+   Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than 2.0.7.0, run `wsl -–update –pre-release` to get the latest update.
 
 - The Windows client device must be onboarded to Defender for Endpoint.
 
@@ -107,9 +107,9 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
 5. Review the details of Defender and WSL and make sure they match or exceed the following requirements:
 
-   - **Plug-in Version**: `0.24.426.1`
+   - **Plug-in Version**: `1.24.522.2`
    - **WSL Version**: `2.0.7.0` or later
-   - **Defender App Version**: `701.00000.1509`
+   - **Defender App Version**: `101.24032.0007`
    - **Defender Health Status**: `Healthy`
 
 ## Setting a proxy for Defender running in WSL
@@ -266,7 +266,7 @@ DeviceProcessEvents
 
       :::image type="content" source="media/mdeplugin-wsl/wsl-health-check-support.png" alt-text="Screenshot showing status in PowerShell." lightbox="media/mdeplugin-wsl/wsl-health-check-support.png":::
 
-   - Enable the connectivity test and check for Defender for Endpoint connectivity in WSL. If the connectivity test fails, provide the output of the health check tool to [mdeforwsl-preview@microsoft.com](mailto:mdeforwsl-preview@microsoft.com).
+   - Enable the connectivity test and check for Defender for Endpoint connectivity in WSL. If the connectivity test fails, provide the output of the health check tool to our support team.
 
    - If the connectivity test reports "invalid" in health check, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
 
