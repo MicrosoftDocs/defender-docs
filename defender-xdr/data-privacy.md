@@ -19,7 +19,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 02/16/2021
+ms.date: 05/14/2024
 ---
 
 # Microsoft Defender XDR data security and privacy
@@ -30,7 +30,7 @@ ms.date: 02/16/2021
 **Applies to:**
 - Microsoft Defender XDR
 
-Microsoft Defender XDR operates in Microsoft Azure data centers in the European Union, the United Kingdom, the United States, and in Australia. Customer data collected by the service is stored at rest in (a) the geo-location of the tenant as identified during provisioning or, (b) the geo-location as defined by the data storage rules of an online service if this online service is used by Microsoft Defender XDR to process such data.
+Microsoft Defender XDR operates in Microsoft Azure data centers in the European Union, the United Kingdom, the United States, Australia, and Switzerland. Customer data collected by the service is stored at rest in (a) the geo-location of the tenant as identified during provisioning or, (b) the geo-location as defined by the data storage rules of an online service if this online service is used by Microsoft Defender XDR to process such data.
 
 Customer data in pseudonymized form might also be stored in central storage and processing systems in the United States.
 
@@ -39,4 +39,5 @@ For more information on the data storage and privacy information of the specific
 - [Microsoft Defender for Cloud Apps data security and privacy](/cloud-app-security/cas-compliance-trust)
 - [Microsoft Defender for Identity data security and privacy](/defender-for-identity/privacy-compliance)
 - [Microsoft 365 privacy, security, and transparency](/office365/servicedescriptions/office-365-platform-service-description/privacy-security-and-transparency#advanced-threat-protection)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

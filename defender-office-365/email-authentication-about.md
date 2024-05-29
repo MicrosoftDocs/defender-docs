@@ -54,6 +54,8 @@ The rest of this article explains:
 - [How Microsoft uses email authentication to check inbound mail sent to Microsoft 365](#inbound-email-authentication-for-mail-sent-to-microsoft-365)
 - [How to avoid email authentication failures when sending mail to Microsoft 365](#how-to-avoid-email-authentication-failures-when-sending-mail-to-microsoft-365)
 
+[!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
+
 ## Why internet email needs authentication
 
 By design, Simple Mail Transfer Protocol (SMTP) email on the internet makes no effort to validate that the message sender is who they claim to be.

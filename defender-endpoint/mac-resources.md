@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/07/2024
+ms.date: 05/17/2024
 ---
 
 # Resources for Microsoft Defender for Endpoint on macOS
@@ -121,6 +121,7 @@ Important tasks, such as controlling product settings and triggering on-demand s
 |---|---|---|
 |Configuration|Turn on/off antivirus in passive mode|`mdatp config passive-mode --value [enabled/disabled]`|
 |Configuration|Turn on/off real-time protection|`mdatp config real-time-protection --value [enabled/disabled]`|
+|Configuration|Turn on/off behavior monitoring|`mdatp config behavior-monitoring --value [enabled/disabled]`|
 |Configuration|Turn on/off cloud protection|`mdatp config cloud --value [enabled/disabled]`|
 |Configuration|Turn on/off product diagnostics|`mdatp config cloud-diagnostic --value [enabled/disabled]`|
 |Configuration|Turn on/off automatic sample submission|`mdatp config cloud-automatic-sample-submission --value [enabled/disabled]`|

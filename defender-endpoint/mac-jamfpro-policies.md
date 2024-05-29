@@ -1,6 +1,6 @@
 ---
 title: Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
-description: Learn how to set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
+description: Learn how to set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro.
 ms.service: defender-endpoint
 author: YongRhee-MSFT
 ms.author: yongrhee
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 05/20/2024
 ---
 
 # Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
@@ -27,22 +27,7 @@ ms.date: 04/30/2024
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
-This page will guide you through the steps you need to take to set up macOS policies in Jamf Pro.
-
-You'll need to take the following steps:
-
-1. [Get the Microsoft Defender for Endpoint onboarding package](#step-1-get-the-microsoft-defender-for-endpoint-onboarding-package)
-2. [Create a configuration profile in Jamf Pro using the onboarding package](#step-2-create-a-configuration-profile-in-jamf-pro-using-the-onboarding-package)
-3. [Configure Microsoft Defender for Endpoint settings](#step-3-configure-microsoft-defender-for-endpoint-settings)
-4. [Configure Microsoft Defender for Endpoint notification settings](#step-4-configure-notifications-settings)
-5. [Configure Microsoft AutoUpdate (MAU)](#step-5-configure-microsoft-autoupdate-mau)
-6. [Grant full disk access to Microsoft Defender for Endpoint](#step-6-grant-full-disk-access-to-microsoft-defender-for-endpoint)
-7. [Approve System extensions for Microsoft Defender for Endpoint](#step-7-approve-system-extensions-for-microsoft-defender-for-endpoint)
-8. [Configure Network Extension](#step-8-configure-network-extension)
-9. [Configure Background Services](#step-9-configure-background-services)
-10. [Grant Bluetooth Permissions](#step-10-grant-bluetooth-permissions)
-11. [Schedule scans with Microsoft Defender for Endpoint on macOS](#step-11-schedule-scans-with-microsoft-defender-for-endpoint-on-macos)
-12. [Deploy Microsoft Defender for Endpoint on macOS](#step-12-deploy-microsoft-defender-for-endpoint-on-macos)
+Use this article to set up policies for Defender for Endpoint on Mac using Jamf Pro. 
 
 ## Step 1: Get the Microsoft Defender for Endpoint onboarding package
 
@@ -70,17 +55,17 @@ You'll need to take the following steps:
 
 3. Enter the following details in the **General** tab:
    
-   - Name: MDE onboarding for macOS
-   - Description: MDE EDR onboarding for macOS
-   - Category: None
-   - Distribution Method: Install Automatically
-   - Level: Computer Level
+   - **Name**: `MDE onboarding for macOS`
+   - **Description**: `MDE EDR onboarding for macOS`
+   - **Category**: `None`
+   - **Distribution Method**: `Install Automatically`
+   - **Level**: `Computer Level`
 
-4.  Navigate to the **Application & Custom Settings** page and select **Upload** > **Add**.
+4.  Navigate to the **Application & Custom Settings** page, select **Upload**, and then select **Add**.
 
     :::image type="content" source="media/jamfpro-mac-profile.png" alt-text="The configuration app and custom settings." lightbox="media/jamfpro-mac-profile.png":::
 
-5. Select **Upload File (PLIST file)** then in **Preference Domain** enter: `com.microsoft.wdav.atp`.
+5. Select **Upload File (PLIST file)** then in **Preference Domain**, type `com.microsoft.wdav.atp`.
 
    :::image type="content" source="media/jamfpro-plist-upload.png" alt-text="The jamfpro plist upload file." lightbox="media/jamfpro-plist-upload.png":::
 
@@ -118,11 +103,38 @@ You'll need to take the following steps:
 
 ## Step 3: Configure Microsoft Defender for Endpoint settings
 
+In this step, we go over *Preferences* so you can configure anti-malware and EDR policies using Microsoft Defender XDR portal ([https://security.microsoft.com](https://security.microsoft.com)) or JamF.
+
+> [!IMPORTANT]
+> Microsoft Defender for Endpoint Security Settings Management policies take precedence over JamF set (and other 3rd party MDM) policies.
+
+### 3a. Set policies using Microsoft Defender portal
+
+1. Follow the guidance in [Configure Microsoft Defender for Endpoint in Intune](/mem/intune/protect/advanced-threat-protection-configure) before setting the security policies using Microsoft Defender.
+
+2. In the [Microsoft Defender portal](https://sip.security.microsoft.com/homepage?tid=72f988bf-86f1-41af-91ab-2d7cd011db47), go to **Configuration management** > **Endpoint security policies** > **Mac policies** > **Create new policy**.
+
+3. Under **Select Platform**, select **macOS**.
+
+4. Under **Select Template**, choose a template and select **Create Policy**.
+
+5. Specify a name and description for the policy, and then select **Next**.
+
+6. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or **All Users** and **All devices**.
+
+For more information about managing security settings, see the following articles:
+
+- [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration?pivots=mdssc-ga)
+
+- [Manage security settings for Windows, macOS, and Linux natively in Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/manage-security-settings-for-windows-macos-and-linux-natively-in/ba-p/3870617)
+
+### 3b. Set policies using JamF
+
 You can either use JAMF Pro GUI to edit individual settings of the Microsoft Defender for Endpoint configuration, or use the legacy method by creating a configuration Plist in a text editor, and uploading it to JAMF Pro.
 
-Note that you must use exact `com.microsoft.wdav` as the **Preference Domain**, Microsoft Defender for Endpoint uses only this name and `com.microsoft.wdav.ext` to load its managed settings!
+Note that you must use exact `com.microsoft.wdav` as the **Preference Domain**; Microsoft Defender for Endpoint uses only this name and `com.microsoft.wdav.ext` to load its managed settings.
 
-(The `com.microsoft.wdav.ext` version may be used in rare cases when you prefer to use GUI method, but also need to configure a setting that has not been added to the schema yet.)
+(The `com.microsoft.wdav.ext` version may be used in rare cases when you prefer to use GUI method, but also need to configure a setting that hasn't been added to the schema yet.)
 
 ### GUI method
 
@@ -132,29 +144,29 @@ Note that you must use exact `com.microsoft.wdav` as the **Preference Domain**, 
     curl -o ~/Documents/schema.json https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/schema/schema.json
     ```
 
-2. Create a new Configuration Profile under Computers -> Configuration Profiles, enter the following details on the **General** tab:
+2. Create a new configuration profile. Under **Computers**, go to **Configuration Profiles**, and then specify the following details on the **General** tab:
 
    :::image type="content" source="media/644e0f3af40c29e80ca1443535b2fe32.png" alt-text="A new profile." lightbox="media/644e0f3af40c29e80ca1443535b2fe32.png":::
 
-    - Name: MDATP MDAV configuration settings
-    - Description:\<blank\>
-    - Category: None (default)
-    - Level: Computer Level (default)
-    - Distribution Method: Install Automatically (default)
+    - **Name**: `MDATP MDAV configuration settings`
+    - **Description**: `<blank\>`
+    - **Category**: `None (default)`
+    - **Level**: `Computer Level (default)`
+    - **Distribution Method**: `Install Automatically (default)`
 
-3. Scroll down to the **Application & Custom Settings** tab, select **External Applications**, click **Add** and use **Custom Schema** as Source to use for the preference domain.
+3. Scroll down to the **Application & Custom Settings** tab, select **External Applications**, select **Add**, and then use **Custom Schema** as the source for the preference domain.
 
    :::image type="content" source="media/4137189bc3204bb09eed3aabc41afd78.png" alt-text="Add custom schema." lightbox="media/4137189bc3204bb09eed3aabc41afd78.png":::
 
-4. Enter `com.microsoft.wdav` as the Preference Domain, select **Add Schema** and **Upload** the schema.json file downloaded on Step 1. Click **Save**.
+4. Type `com.microsoft.wdav` for the Preference Domain, select **Add Schema** and then upload the `schema.json` file downloaded on Step 1. Select **Save**.
 
    :::image type="content" source="media/a6f9f556037c42fabcfdcb1b697244cf.png" alt-text="Upload schema." lightbox="media/a6f9f556037c42fabcfdcb1b697244cf.png":::
 
-5. You can see all supported Microsoft Defender for Endpoint configuration settings below, under **Preference Domain Properties**. Click **Add/Remove properties** to select the settings that you want to be managed, and click **Ok** to save your changes. (Settings left unselected will not be included into the managed configuration, an end user will be able to configure those settings on their machines.)
+5. You can see all supported Microsoft Defender for Endpoint configuration settings under **Preference Domain Properties**. Select **Add/Remove properties** to select the settings that you want to be managed, and then select **OK** to save your changes. (Settings left unselected aren't included into the managed configuration, an end user can configure those settings on their machines.)
 
    :::image type="content" source="media/817b3b760d11467abe9bdd519513f54f.png" alt-text="The chosen managed settings." lightbox="media/817b3b760d11467abe9bdd519513f54f.png":::
 
-6. Change values of the settings to desired values. You can click **More information** to get documentation for a particular setting. (You may click **Plist preview** to inspect what the configuration plist will look like. Click **Form editor** to return to the visual editor.)
+6. Change values of the settings to desired values. You can select **More information** to get documentation for a particular setting. (You can select **Plist preview** to inspect what the configuration plist will look like. Select **Form editor** to return to the visual editor.)
 
    :::image type="content" source="media/a14a79efd5c041bb8974cb5b12b3a9b6.png" alt-text="The page on which you change the settings values." lightbox="media/a14a79efd5c041bb8974cb5b12b3a9b6.png":::
 
@@ -174,36 +186,35 @@ Note that you must use exact `com.microsoft.wdav` as the **Preference Domain**, 
 
     :::image type="content" source="media/dd55405106da0dfc2f50f8d4525b01c8.png" alt-text="The page on which you complete the Configuration settings." lightbox="media/dd55405106da0dfc2f50f8d4525b01c8.png":::
 
-Microsoft Defender for Endpoint adds new settings over time. These new settings will be added to the schema, and a new version will be published to GitHub.
-All you need to do to have updates is to download an updated schema, edit existing configuration profile, and **Edit schema** at the **Application & Custom Settings** tab.
+Microsoft Defender for Endpoint adds new settings over time. These new settings are added to the schema, and a new version is published to GitHub. To get updates, download an updated schema and edit your existing configuration profile. On the **Application & Custom Settings** tab, select **Edit schema**.
 
 ### Legacy method
 
 1. Use the following Microsoft Defender for Endpoint configuration settings:
 
-    - enableRealTimeProtection
-    - passiveMode
+    - `enableRealTimeProtection`
+    - `passiveMode`
 
-    > [!NOTE]
-    > Not turned on by default, if you are planning to run a third-party AV for macOS, set it to `true`.
+      > [!NOTE]
+      > Not turned on by default, if you are planning to run a third-party antivirus for macOS, set it to `true`.
 
-    - exclusions
-    - excludedPath
-    - excludedFileExtension
-    - excludedFileName
-    - exclusionsMergePolicy
-    - allowedThreats
+    - `exclusions`
+    - `excludedPath`
+    - `excludedFileExtension`
+    - `excludedFileName`
+    - `exclusionsMergePolicy`
+    - `allowedThreats`
 
-    > [!NOTE]
-    > EICAR is on the sample, if you are going through a proof-of-concept, remove it especially if you are testing EICAR.
+      > [!NOTE]
+      > EICAR is on the sample, if you are going through a proof-of-concept, remove it especially if you are testing EICAR.
 
-    - disallowedThreatActions
-    - potentially_unwanted_application
-    - archive_bomb
-    - cloudService
-    - automaticSampleSubmission
-    - tags
-    - hideStatusMenuIcon
+    - `disallowedThreatActions`
+    - `potentially_unwanted_application`
+    - `archive_bomb`
+    - `cloudService`
+    - `automaticSampleSubmission`
+    - `tags`
+    - `hideStatusMenuIcon`
 
      For information, see [Property list for JAMF full configuration profile](mac-preferences.md#property-list-for-jamf-full-configuration-profile).
 
@@ -310,17 +321,17 @@ All you need to do to have updates is to download an updated schema, edit existi
 
 2. Save the file as `MDATP_MDAV_configuration_settings.plist`.
 
-3. In the Jamf Pro dashboard, open **Computers**, and their **Configuration Profiles**. Click **New** and switch to the **General** tab.
+3. In the Jamf Pro dashboard, open **Computers**, and their **Configuration Profiles**. Select **New** and switch to the **General** tab.
 
    :::image type="content" source="media/644e0f3af40c29e80ca1443535b2fe32.png" alt-text="The page displaying a new profile." lightbox="media/644e0f3af40c29e80ca1443535b2fe32.png":::
 
 4. Enter the following details on the **General** tab:
 
-    - Name: MDATP MDAV configuration settings
-    - Description:\<blank\>
-    - Category: None (default)
-    - Distribution Method: Install Automatically (default)
-    - Level: Computer Level (default)
+    - **Name**: `MDATP MDAV configuration settings`
+    - **Description**: `<blank>`
+    - **Category**: `None (default)`
+    - **Distribution Method**: `Install Automatically (default)`
+    - **Level**: `Computer Level (default)`
 
 5. In **Application & Custom Settings**, select **Configure**.
 
@@ -332,7 +343,7 @@ All you need to do to have updates is to download an updated schema, edit existi
 
    :::image type="content" source="media/6f85269276b2278eca4bce84f935f87b.png" alt-text="The configuration settings plist file." lightbox="media/6f85269276b2278eca4bce84f935f87b.png":::
 
-7. In **Preferences Domain**, enter `com.microsoft.wdav`, then select  **Upload PLIST File**.
+7. In **Preferences Domain**, type `com.microsoft.wdav`, and then select  **Upload PLIST File**.
 
    :::image type="content" source="media/db15f147dd959e872a044184711d7d46.png" alt-text="The configuration settings preferences domain." lightbox="media/db15f147dd959e872a044184711d7d46.png":::
 
@@ -340,7 +351,7 @@ All you need to do to have updates is to download an updated schema, edit existi
 
    :::image type="content" source="media/526e978761fc571cca06907da7b01fd6.png" alt-text="The prompt to choose the plist file." lightbox="media/526e978761fc571cca06907da7b01fd6.png":::
 
-9. Select the **MDATP_MDAV_configuration_settings.plist**, then select **Open**.
+9. Select the **MDATP_MDAV_configuration_settings.plist**, and then select **Open**.
 
    :::image type="content" source="media/98acea3750113b8dbab334296e833003.png" alt-text="The mdatpmdav configuration settings." lightbox="media/98acea3750113b8dbab334296e833003.png":::
 
@@ -377,10 +388,9 @@ All you need to do to have updates is to download an updated schema, edit existi
 
     :::image type="content" source="media/6f093e42856753a3955cab7ee14f12d9.png" alt-text="The notification of configuration settings." lightbox="media/6f093e42856753a3955cab7ee14f12d9.png":::
 
-16. Select **Done**. You'll see the new **Configuration profile**.
+1. Select **Done**. You see the new **Configuration profile**.
 
-    ![Image of configuration settings config profile image.](media/dd55405106da0dfc2f50f8d4525b01c8.png)
-    :::image type="content" source="media/dd55405106da0dfc2f50f8d4525b01c8.png" alt-text="The config profile's settings." lightbox="media/dd55405106da0dfc2f50f8d4525b01c8.png":::
+   :::image type="content" source="media/dd55405106da0dfc2f50f8d4525b01c8.png" alt-text="Image of configuration settings config profile image." lightbox="media/dd55405106da0dfc2f50f8d4525b01c8.png":::
 
 ## Step 4: Configure notifications settings
 
@@ -388,48 +398,48 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
 1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
 
-2. Click **New**, and enter the following details in the **General** tab for **Options**:
+2. Select **New**, and enter the following details in the **General** tab for **Options**:
 
-   - **Name**: MDATP MDAV Notification settings
-   - **Description**: macOS 11 (Big Sur) or later
-   - **Category**: None *(default)*
-   - **Distribution Method**: Install Automatically *(default)*
-   - **Level**: Computer Level *(default)*
+   - **Name**: `MDATP MDAV Notification settings`
+   - **Description**: `macOS 11 (Big Sur) or later`
+   - **Category**: `None *(default)*`
+   - **Distribution Method**: `Install Automatically *(default)*`
+   - **Level**: `Computer Level *(default)*`
 
-   :::image type="content" source="media/c9820a5ff84aaf21635c04a23a97ca93.png" alt-text="The new macOS configuration profile page." lightbox="media/c9820a5ff84aaf21635c04a23a97ca93.png":::
+     :::image type="content" source="media/c9820a5ff84aaf21635c04a23a97ca93.png" alt-text="The new macOS configuration profile page." lightbox="media/c9820a5ff84aaf21635c04a23a97ca93.png":::
 
-    - Tab **Notifications**, click **Add**, and enter the following values:
+    - Tab **Notifications**, select **Add**, and enter the following values:
         - **Bundle ID**: `com.microsoft.wdav.tray`
-        - **Critical Alerts**: Click **Disable**
-        - **Notifications**: Click **Enable**
+        - **Critical Alerts**: Select **Disable**
+        - **Notifications**: Select **Enable**
         - **Banner alert type**: Select **Include** and **Temporary** *(default)*
-        - **Notifications on lock screen**: Click **Hide**
-        - **Notifications in Notification Center**: Click **Display**
-        - **Badge app icon**: Click **Display**
+        - **Notifications on lock screen**: Select **Hide**
+        - **Notifications in Notification Center**: Select **Display**
+        - **Badge app icon**: Select **Display**
 
-        :::image type="content" source="media/7f9138053dbcbf928e5182ee7b295ebe.png" alt-text="The configuration settings mdatpmdav notifications tray." lightbox="media/7f9138053dbcbf928e5182ee7b295ebe.png":::
+          :::image type="content" source="media/7f9138053dbcbf928e5182ee7b295ebe.png" alt-text="The configuration settings mdatpmdav notifications tray." lightbox="media/7f9138053dbcbf928e5182ee7b295ebe.png":::
 
-    - Tab **Notifications**, click **Add** one more time, scroll down to **New Notifications Settings**
+    - Tab **Notifications**, select **Add** one more time, scroll down to **New Notifications Settings**
         - **Bundle ID**: `com.microsoft.autoupdate.fba`
-        - Configure the rest of the settings to the same values as above
+        - Configure the rest of the settings to the same values mentioned earlier
 
-        :::image type="content" source="media/4bac6ce277aedfb4a674f2d9fcb2599a.png" alt-text="The configuration settings mdatpmdav notifications mau." lightbox="media/4bac6ce277aedfb4a674f2d9fcb2599a.png":::
+          :::image type="content" source="media/4bac6ce277aedfb4a674f2d9fcb2599a.png" alt-text="The configuration settings mdatpmdav notifications mau." lightbox="media/4bac6ce277aedfb4a674f2d9fcb2599a.png":::
 
-        Note that now you have two 'tables' with notification configurations, one for **Bundle ID: com.microsoft.wdav.tray**, and another for **Bundle ID: com.microsoft.autoupdate.fba**. While you can configure alert settings per your requirements, Bundle IDs must be exactly the same as described before, and **Include** switch must be **On** for **Notifications**.
+          Note that now you have two tables with notification configurations, one for **Bundle ID: com.microsoft.wdav.tray**, and another for **Bundle ID: com.microsoft.autoupdate.fba**. While you can configure alert settings per your requirements, Bundle IDs must be exactly the same as described before, and **Include** switch must be **On** for **Notifications**.
 
-3. Select the **Scope** tab, then select **Add**.
+3. Select the **Scope** tab, and then select **Add**.
 
    :::image type="content" source="media/441aa2ecd36abadcdd8aed03556080b5.png" alt-text="The page on which you can add values for the configuration settings." lightbox="media/441aa2ecd36abadcdd8aed03556080b5.png":::
 
 4. Select **Contoso's Machine Group**.
 
-5. Select **Add**, then select **Save**.
+5. Select **Add**, and then select **Save**.
 
    :::image type="content" source="media/09a275e321268e5e3ac0c0865d3e2db5.png" alt-text="The page on which you can save values for the configuration settings contoso machine group." lightbox="media/09a275e321268e5e3ac0c0865d3e2db5.png":::
 
    :::image type="content" source="media/4d2d1d4ee13d3f840f425924c3df0d51.png" alt-text="The page that displays the completion notification of the configuration settings." lightbox="media/4d2d1d4ee13d3f840f425924c3df0d51.png":::
 
-6. Select **Done**. You'll see the new **Configuration profile**.
+6. Select **Done**. You should see the new **Configuration profile**.
 
    :::image type="content" source="media/633ad26b8bf24ec683c98b2feb884bdf.png" alt-text="The completed configuration settings." lightbox="media/633ad26b8bf24ec683c98b2feb884bdf.png":::
 
@@ -437,7 +447,7 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
 1. Use the following Microsoft Defender for Endpoint configuration settings:
 
-      ```XML
+   ```XML
    <?xml version="1.0" encoding="UTF-8"?>
    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
    <plist version="1.0">
@@ -464,11 +474,11 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
 4. Enter the following details on the **General** tab:
 
-    - Name: MDATP MDAV MAU settings
-    - Description: Microsoft AutoUpdate settings for MDATP for macOS
-    - Category: None (default)
-    - Distribution Method: Install Automatically(default)
-    - Level: Computer Level(default)
+    - **Name**: `MDATP MDAV MAU settings`
+    - **Description**: `Microsoft AutoUpdate settings for MDATP for macOS`
+    - **Category**: `None (default)`
+    - **Distribution Method**: `Install Automatically (default)`
+    - **Level**: `Computer Level (default)`
 
 5. In **Application & Custom Settings** select **Configure**.
 
@@ -476,10 +486,9 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
 6. Select **Upload File (PLIST file)**.
 
-7. In **Preference Domain** enter: `com.microsoft.autoupdate2`, then select **Upload PLIST File**.
+7. In **Preference Domain** type `com.microsoft.autoupdate2`, and then select **Upload PLIST File**.
 
    :::image type="content" source="media/1213872db5833aa8be535da57653219f.png" alt-text="The configuration setting preference domain." lightbox="media/1213872db5833aa8be535da57653219f.png":::
-    
 
 8. Select **Choose File**.
 
@@ -524,11 +533,11 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
 3. Enter the following details on the **General** tab:
 
-    - Name: MDATP MDAV - grant Full Disk Access to EDR and AV
-    - Description: On macOS 11 (Big Sur) or later, the new Privacy Preferences Policy Control 
-    - Category: None
-    - Distribution method: Install Automatically
-    - Level: Computer level
+    - **Name**: `MDATP MDAV - grant Full Disk Access to EDR and AV`
+    - **Description**: `On macOS 11 (Big Sur) or later, the new Privacy Preferences Policy Control`
+    - **Category**: `None`
+    - **Distribution method**: `Install Automatically`
+    - **Level**: `Computer level`
 
     :::image type="content" source="media/ba3d40399e1a6d09214ecbb2b341923f.png" alt-text="The configuration setting in general." lightbox="media/ba3d40399e1a6d09214ecbb2b341923f.png":::
     
@@ -539,9 +548,9 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
 5. In **Privacy Preferences Policy Control**, enter the following details:
 
-    - Identifier: `com.microsoft.wdav`
-    - Identifier Type: Bundle ID
-    - Code Requirement: `identifier "com.microsoft.wdav" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
+    - **Identifier**: `com.microsoft.wdav`
+    - **Identifier Type**: `Bundle ID`
+    - **Code Requirement**: `identifier "com.microsoft.wdav" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
 
     :::image type="content" source="media/22cb439de958101c0a12f3038f905b27.png" alt-text="The configuration setting privacy preference policy control details." lightbox="media/22cb439de958101c0a12f3038f905b27.png":::
 
@@ -549,31 +558,29 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
    :::image type="content" source="media/bd93e78b74c2660a0541af4690dd9485.png" alt-text="The configuration setting add system policy all files option." lightbox="media/bd93e78b74c2660a0541af4690dd9485.png":::
 
-    - Under App or service: Set to **SystemPolicyAllFiles**
-
-    - Under "access": Set to **Allow**
+    - Under **App or service**, select **SystemPolicyAllFiles**.
+    - Under **access**, select **Allow**.
 
 7. Select **Save** (not the one at the bottom right).
 
    :::image type="content" source="media/6de50b4a897408ddc6ded56a09c09fe2.png" alt-text="The save operation for the configuration setting." lightbox="media/6de50b4a897408ddc6ded56a09c09fe2.png":::
 
-8. Click the `+` sign next to **App Access** to add a new entry.
+8. Select the `+` sign next to **App Access** to add a new entry.
 
    :::image type="content" source="media/tcc-add-entry.png" alt-text="The save operation relating to the configuration setting." lightbox="media/tcc-add-entry.png":::
 
 9. Enter the following details:
 
-    - Identifier: `com.microsoft.wdav.epsext`
-    - Identifier Type: Bundle ID
-    - Code Requirement: `identifier "com.microsoft.wdav.epsext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
+    - **Identifier**: `com.microsoft.wdav.epsext`
+    - **Identifier Type**: `Bundle ID`
+    - **Code Requirement**: `identifier "com.microsoft.wdav.epsext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
 
 10. Select **+ Add**.
 
     :::image type="content" source="media/tcc-epsext-entry.png" alt-text="The configuration setting tcc epsext entry." lightbox="media/tcc-epsext-entry.png":::
 
-    - Under App or service: Set to **SystemPolicyAllFiles**
-
-    - Under "access": Set to **Allow**
+    - Under **App or service**, select **SystemPolicyAllFiles**.
+    - Under **access**, select **Allow**.
 
 11. Select **Save** (not the one at the bottom right).
 
@@ -587,7 +594,7 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
     :::image type="content" source="media/57cef926d1b9260fb74a5f460cee887a.png" alt-text="The page depicting the configuration setting." lightbox="media/57cef926d1b9260fb74a5f460cee887a.png":::
 
-14. Select **Computer Groups** > under **Group Name** > select **Contoso's MachineGroup**.
+14. Select **Computer Groups**, and under **Group Name**, select **Contoso's MachineGroup**.
 
     :::image type="content" source="media/368d35b3d6179af92ffdbfd93b226b69.png" alt-text="The configuration setting contoso machine group." lightbox="media/368d35b3d6179af92ffdbfd93b226b69.png":::
 
@@ -614,11 +621,11 @@ Alternatively, you can download [fulldisk.mobileconfig](https://github.com/micro
 
 2. Enter the following details on the **General** tab:
 
-    - Name: MDATP MDAV System Extensions
-    - Description: MDATP system extensions
-    - Category: None
-    - Distribution Method: Install Automatically
-    - Level: Computer Level
+    - **Name**: `MDATP MDAV System Extensions`
+    - **Description**: `MDATP system extensions`
+    - **Category**: `None`
+    - **Distribution Method**: `Install Automatically`
+    - **Level**: `Computer Level`
 
     :::image type="content" source="media/sysext-new-profile.png" alt-text="The configuration settings sysext new profile." lightbox="media/sysext-new-profile.png":::
 
@@ -628,12 +635,12 @@ Alternatively, you can download [fulldisk.mobileconfig](https://github.com/micro
 
 4. In **System Extensions**, enter the following details:
 
-   - Display Name: Microsoft Corp. System Extensions
-   - System Extension Types: Allowed System Extensions
-   - Team Identifier: UBF8T346G9
-   - Allowed System Extensions:
-     - **com.microsoft.wdav.epsext**
-     - **com.microsoft.wdav.netext**
+   - **Display Name**: `Microsoft Corp. System Extensions`
+   - **System Extension Types**: `Allowed System Extensions`
+   - **Team Identifier**: `UBF8T346G9`
+   - **Allowed System Extensions**:
+     - `com.microsoft.wdav.epsext`
+     - `com.microsoft.wdav.netext`
 
     :::image type="content" source="media/sysext-configure2.png" alt-text="The MDATP MDAV system extensions pane." lightbox="media/sysext-configure2.png":::
 
@@ -665,27 +672,27 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
 1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
 
-2. Click **New**, and enter the following details for **Options**:
+2. Select **New**, and enter the following details for **Options**:
 
     - Tab **General**:
-        - **Name**: Microsoft Defender Network Extension
-        - **Description**: macOS 11 (Big Sur) or later
-        - **Category**: None *(default)*
-        - **Distribution Method**: Install Automatically *(default)*
-        - **Level**: Computer Level *(default)*
+      - **Name**: `Microsoft Defender Network Extension`
+      - **Description**: `macOS 11 (Big Sur) or later`
+      - **Category**: `None *(default)*`
+      - **Distribution Method**: `Install Automatically *(default)*`
+      - **Level**: `Computer Level *(default)*`
 
     - Tab **Content Filter**:
-        - **Filter Name**: Microsoft Defender Content Filter
-        - **Identifier**: `com.microsoft.wdav`
-        - Leave **Service Address**, **Organization**, **User Name**, **Password**, **Certificate** blank (**Include** is *not* selected)
-        - **Filter Order**: Inspector
-        - **Socket Filter**: `com.microsoft.wdav.netext`
-        - **Socket Filter Designated Requirement**: `identifier "com.microsoft.wdav.netext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
-        - Leave **Network Filter** fields blank (**Include** is *not* selected)
+      - **Filter Name**: `Microsoft Defender Content Filter`
+      - **Identifier**: `com.microsoft.wdav`
+      - Leave **Service Address**, **Organization**, **User Name**, **Password**, **Certificate** blank (**Include** is *not* selected)
+      - **Filter Order**: `Inspector`
+      - **Socket Filter**: `com.microsoft.wdav.netext`
+      - **Socket Filter Designated Requirement**: `identifier "com.microsoft.wdav.netext" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UBF8T346G9`
+      - Leave **Network Filter** fields blank (**Include** is *not* selected)
 
-        Note that **Identifier**, **Socket Filter** and **Socket Filter Designated Requirement** exact values as specified above.
+      Note that **Identifier**, **Socket Filter** and **Socket Filter Designated Requirement** exact values as specified above.
 
-        :::image type="content" source="media/netext-create-profile.png" alt-text="The mdatpmdav configuration setting." lightbox="media/netext-create-profile.png":::
+      :::image type="content" source="media/netext-create-profile.png" alt-text="The mdatpmdav configuration setting." lightbox="media/netext-create-profile.png":::
 
 3. Select the **Scope** tab.
 
@@ -711,10 +718,10 @@ Alternatively, you can download [netfilter.mobileconfig](https://github.com/micr
 
 ## Step 9: Configure Background Services
 
-   > [!CAUTION]
-   > macOS 13 (Ventura) contains new privacy enhancements. Beginning with this version, by default, applications cannot run in background without explicit consent. Microsoft Defender for Endpoint must run its daemon process in background.
-   >
-   > This configuration profile grants Background Service permissions to Microsoft Defender for Endpoint. If you previously configured Microsoft Defender for Endpoint through JAMF, we recommend you update the deployment with this configuration profile.
+> [!CAUTION]
+> macOS 13 (Ventura) contains new privacy enhancements. Beginning with this version, by default, applications cannot run in background without explicit consent. Microsoft Defender for Endpoint must run its daemon process in background.
+>
+> This configuration profile grants Background Service permissions to Microsoft Defender for Endpoint. If you previously configured Microsoft Defender for Endpoint through JAMF, we recommend you update the deployment with this configuration profile.
 
 Download [**background_services.mobileconfig**](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/background_services.mobileconfig) from [our GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
@@ -722,38 +729,38 @@ Upload downloaded mobileconfig to JAMF Configuration Profiles as described in [D
 
 ## Step 10: Grant Bluetooth Permissions
 
-   > [!CAUTION]
-   > macOS 14 (Sonoma) contains new privacy enhancements. Beginning with this version, by default, applications cannot access Bluetooth without explicit consent. Microsoft Defender for Endpoint uses it if you configure Bluetooth policies for Device Control.
+> [!CAUTION]
+> macOS 14 (Sonoma) contains new privacy enhancements. Beginning with this version, by default, applications cannot access Bluetooth without explicit consent. Microsoft Defender for Endpoint uses it if you configure Bluetooth policies for Device Control.
 
 Download [bluetooth.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/bluetooth.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
-   > [!WARNING]
-   > Current version of JAMF Pro does not support this kind of payload yet. If you upload this mobileconfig as-is, JAMF Pro will remove unsupported payload,
-   > and it will fail to apply to client machines. You need to sign downloaded mobileconfig first, after that JAMF Pro will consider it "sealed" and will not 
-   > tamper with it. See instructions below:
+> [!WARNING]
+> Current version of JAMF Pro does not support this kind of payload yet. If you upload this mobileconfig as-is, JAMF Pro will remove unsupported payload,
+> and it will fail to apply to client machines. You need to sign downloaded mobileconfig first, after that JAMF Pro will consider it "sealed" and will not 
+> tamper with it. See instructions below:
 
-- You need to have at least one signing certificate installed into your KeyChain, even a self-signed certificate will work. You can inspect what you have with:
+- You need to have at least one signing certificate installed into your KeyChain, even a self-signed certificate works. You can inspect what you have with:
 
-```bash
-> /usr/bin/security find-identity -p codesigning -v
+  ```bash
+  > /usr/bin/security find-identity -p codesigning -v
 
-  1) 70E46A47F552EA8D58521DAC1E7F5144BA3012BC "DevCert"
-  2) 67FC43F3FAB77662BB7688C114585BAA37CA8175 "Mac Developer: John Doe (1234XX234)"
-  3) E142DFD879E5EB60FA249FB5B24CEAE3B370394A "Apple Development: Jane Doe 7XX7778888)"
-  4) 21DE31645BBF1D9F5C46E82E87A6968111E41C75 "Apple Development: me@example.com (8745XX123)"
-     4 valid identities found
-```
+    1) 70E46A47F552EA8D58521DAC1E7F5144BA3012BC "DevCert"
+    2) 67FC43F3FAB77662BB7688C114585BAA37CA8175 "Mac Developer: John Doe (1234XX234)"
+    3) E142DFD879E5EB60FA249FB5B24CEAE3B370394A "Apple Development: Jane Doe 7XX7778888)"
+    4) 21DE31645BBF1D9F5C46E82E87A6968111E41C75 "Apple Development: me@example.com (8745XX123)"
+       4 valid identities found
+  ```
 
 - Choose any of them, and provide the quoted text as the -N parameter:
 
-```bash
-/usr/bin/security cms -S -N "DevCert" -i bluetooth.mobileconfig -o bluetooth-signed.mobileconfig
-```
+  ```bash
+  /usr/bin/security cms -S -N "DevCert" -i bluetooth.mobileconfig -o bluetooth-signed.mobileconfig
+  ```
 
 - Now you can upload the generated bluetooth-signed.mobileconfig to JAMF Pro as described in [Deploying Custom Configuration Profiles using Jamf Pro|Method 2: Upload a Configuration Profile to Jamf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
 
-> [!NOTE]
-> Bluetooth granted through Apple MDM Configuration Profile is not reflected in System Settings => Privacy & Security => Bluetooth.
+  > [!NOTE]
+  > Bluetooth granted through Apple MDM Configuration Profile is not reflected in System Settings => Privacy & Security => Bluetooth.
 
 ## Step 11: Schedule scans with Microsoft Defender for Endpoint on macOS
 
@@ -778,18 +785,19 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
    :::image type="content" source="media/990742cd9a15ca9fdd37c9f695d1b9f4.png" alt-text="The configuration settings for jamfpro." lightbox="media/990742cd9a15ca9fdd37c9f695d1b9f4.png":::
 
-4. Select your computer and click the gear icon at the top, then select **Computer Management**.
+4. Select your computer and select the gear icon at the top, and then select **Computer Management**.
 
    :::image type="content" source="media/b6d671b2f18b89d96c1c8e2ea1991242.png" alt-text="The configuration settings - computer management." lightbox="media/b6d671b2f18b89d96c1c8e2ea1991242.png":::
 
 5. In **Packages**, select **+ New**.
+
    :::image type="content" source="media/57aa4d21e2ccc65466bf284701d4e961.png" alt-text="The bird Description for an automatically generated package." lightbox="media/57aa4d21e2ccc65466bf284701d4e961.png":::
 
 6. In the **General tab**, enter the following details in **New Package**:
 
-    - Display Name: Leave it blank for now. Because it will be reset when you choose your pkg.
-    - Category: None (default)
-    - Filename: Choose File
+    - **Display Name**: Leave it blank for now. Because it is reset when you choose your pkg.
+    - **Category**: `None (default)`
+    - **Filename**: `Choose File`
 
     :::image type="content" source="media/21de3658bf58b1b767a17358a3f06341.png" alt-text="The General tab for configuration settings." lightbox="media/21de3658bf58b1b767a17358a3f06341.png":::
 
@@ -799,13 +807,11 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
 7. Select **Open**. Set the **Display Name** to **Microsoft Defender Advanced Threat Protection and Microsoft Defender Antivirus**.
 
-    **Manifest File** is not required. Microsoft Defender for Endpoint works without Manifest File.
+   - **Manifest File** isn't required. Microsoft Defender for Endpoint works without Manifest File.
+   - **Options tab**: Keep default values.
+   - **Limitations tab**: Keep default values.
 
-    **Options tab**: Keep default values.
-
-    **Limitations tab**: Keep default values.
-
-    :::image type="content" source="media/56dac54634d13b2d3948ab50e8d3ef21.png" alt-text="The limitation tab for the configuration settings." lightbox="media/56dac54634d13b2d3948ab50e8d3ef21.png":::
+   :::image type="content" source="media/56dac54634d13b2d3948ab50e8d3ef21.png" alt-text="The limitation tab for the configuration settings." lightbox="media/56dac54634d13b2d3948ab50e8d3ef21.png":::
 
 8. Select **Save**. The package is uploaded to Jamf Pro.
 
@@ -823,9 +829,9 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
     :::image type="content" source="media/847b70e54ed04787e415f5180414b310.png" alt-text="The configuration settings new policy." lightbox="media/847b70e54ed04787e415f5180414b310.png":::
 
-11. In **General**, enter the Display name **MDATP Onboarding Contoso 200329 v100.86.92 or later**.
+11. In **General**, for the **Display name**, use `MDATP Onboarding Contoso 200329 v100.86.92 or later`.
 
-      :::image type="content" source="media/625ba6d19e8597f05e4907298a454d28.png" alt-text="The configuration settings - MDATP onboard." lightbox="media/625ba6d19e8597f05e4907298a454d28.png":::
+    :::image type="content" source="media/625ba6d19e8597f05e4907298a454d28.png" alt-text="The configuration settings - MDATP onboard." lightbox="media/625ba6d19e8597f05e4907298a454d28.png":::
 
 12. Select **Recurring Check-in**.
 
@@ -833,7 +839,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
 13. Select **Save**.
 
-14. Select **Packages > Configure**.
+14. Select **Packages** > **Configure**.
 
     :::image type="content" source="media/8fb4cc03721e1efb4a15867d5241ebfb.png" alt-text="The option to configure packages." lightbox="media/8fb4cc03721e1efb4a15867d5241ebfb.png":::
 
@@ -847,22 +853,25 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
 17. Create a smart group for machines with Microsoft Defender profiles.
 
-    For better user experience, configuration profiles to enrolled machines must be installed before Microsoft Defender's package.
-    In most cases JAMF Prof pushes configuration profiles immediately, which policies are executed after some time (i.e. during check-in).
+    For a better user experience, configuration profiles to enrolled machines must be installed before Microsoft Defender's package. In most cases JAMF Pro pushes configuration profiles immediately, and those policies are executed after some time (that is, during check-in). However, in some cases, configuration profiles deployment can be deployed with a significant delay (that is, if a user's machine is locked).
 
-    However, in some cases, configuration profiles deployment can be deployed with a significant delay (i.e. if a user's machine is locked).
+    JAMF Pro provides a way to ensure the correct order. You can create a smart group for machines that already received Microsoft Defender's configuration profile, and install Microsoft Defender's package only to those machines (and as soon as they receive this profile).
 
-    JAMF Pro provides a way to ensure the correct order.
-    You can create a smart group for machines that already received Microsoft Defender's configuration profile, and install Microsoft Defender's package only to those machines (and as soon as they receive this profile!)
+    Follow these steps:
 
-    To do it, create a smart group first. In the new browser window open **Smart Computers Groups** from the left menu, click **New**.
-    Assign some name, switch to the **Criteria** tab, click **Add** and **Show Advanced Criteria**.
+    1. Create a smart group. In a new browser window, open **Smart Computers Groups**. 
+    
+    2. Select **New**, and give your group a name.
 
-    Select **Profile Name** as a criterion, and use the name of a previously created configuration profile as Value:
+    3. On the **Criteria** tab, select **Add**, and then select **Show Advanced Criteria**.
 
-    :::image type="content" source="media/ffae2332be230870f865585c84733225.png" alt-text="Creating a smart group." lightbox="media/ffae2332be230870f865585c84733225.png":::
+    4. Select **Profile Name** as a criterion, and use the name of a previously created configuration profile as the value:
 
-    Click **Save**. Return back to the window where you configure a package policy.
+       :::image type="content" source="media/ffae2332be230870f865585c84733225.png" alt-text="Creating a smart group." lightbox="media/ffae2332be230870f865585c84733225.png":::
+
+    5. Select **Save**. 
+    
+    6. Go back to the window where you configure a package policy.
 
 18. Select the **Scope** tab.
 
@@ -876,11 +885,11 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
     :::image type="content" source="media/1c08d097829863778d562c10c5f92b67.png" alt-text="The configuration settings - ad1." lightbox="media/1c08d097829863778d562c10c5f92b67.png":::
 
-    Switch to the **Computer Groups** tab. Find the smart group you created, and **Add** it.
+    Switch to the **Computer Groups** tab. Find the smart group you created, and then select **Add**.
 
     :::image type="content" source="media/216253cbfb6ae738b9f13496b9c799fd.png" alt-text="The configuration settings - ad2." lightbox="media/216253cbfb6ae738b9f13496b9c799fd.png":::
 
-    Select **Self-Service**, if you want users to install Microsoft Defender voluntarily, on demand.
+    If you want users to install Defender for Endpoint voluntarily (or on demand), select **Self-Service**.
 
     :::image type="content" source="media/c9f85bba3e96d627fe00fc5a8363b83a.png" alt-text="The Self Service tab for configuration settings." lightbox="media/c9f85bba3e96d627fe00fc5a8363b83a.png":::
 
@@ -892,8 +901,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
 ## Configuration profile scope
 
-JAMF requires you to define a set of machines for a configuration profile.
-You need to make sure that all machines receiving Defender's package, also receive *all* configuration profiles listed above.
+JAMF requires you to define a set of machines for a configuration profile. You need to make sure that all machines receiving Defender's package, also receive *all* configuration profiles listed above.
 
 > [!WARNING]
 > JAMF supports Smart Computer Groups that allow deploying, such as configuration profiles or policies to all machines matching certain criteria evaluated dynamically.
@@ -906,4 +914,5 @@ You need to make sure that all machines receiving Defender's package, also recei
 > Making configuration profiles depending on Defender's presence effectively delays deployment of configuration profiles, and results in an initially unhealthy product and/or prompts for manual approval of certain application permissions, that are otherwise auto approved by profiles.
 
 Deploying a policy with Microsoft Defender's package *after* deploying configuration profiles ensures the end user's best experience, because all required configurations will be applied before the package installs.
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

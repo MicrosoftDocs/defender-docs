@@ -35,10 +35,9 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 - [What's new in Microsoft Defender for Endpoint on Linux](linux-whatsnew.md)
 - [What's new in Microsoft Defender for Endpoint on iOS](ios-whatsnew.md)
 
-
 **Known issues**
 
-Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes), which is fixed with the latest OS update. The issue impacts Microsoft Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting its ability to function properly.
+Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes), and [Sonoma upgrade](https://developer.apple.com/forums/thread/737824#773449022) with the latest OS update. The issue impacts Microsoft Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting its ability to function properly.
 
 In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device controls ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS less than 14.3.1.
 
@@ -50,6 +49,10 @@ Microsoft Defender supports macOS Sonoma (14.0) in the current Defender release.
 
 Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
+### Behavior Monitoring for macOS is now in public preview
+
+Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
+
 ### Apr-2024 (Build: 101.24032.0006  | Release version: 20.124032.06.0)
 
 | Build:             | **101.24032.0006**    |
@@ -57,6 +60,7 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 | Release version:   | **20.124012.10.0**    |
 | Engine version:    | **1.1.24030.4**       |
 | Signature version: | **1.407.521.0**       |
+
 
 #### What's new
 

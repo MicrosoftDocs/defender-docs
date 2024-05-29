@@ -44,6 +44,8 @@ The configuration profile is a *.plist* file that consists of entries identified
 
 The top level of the configuration profile includes product-wide preferences and entries for subareas of Microsoft Defender for Endpoint, which are explained in more detail in the next sections.
 
+****
+
 ### Antivirus engine preferences
 
 The *antivirusEngine* section of the configuration profile is used to manage the preferences of the antivirus component of Microsoft Defender for Endpoint.
@@ -71,8 +73,6 @@ Specifies the enforcement preference of antivirus engine. There are three values
 
 <br>
 
-****
-
 |Section|Value|
 |---|---|
 |**Domain**|`com.microsoft.wdav`|
@@ -80,7 +80,22 @@ Specifies the enforcement preference of antivirus engine. There are three values
 |**Data type**|String|
 |**Possible values**|real_time (default) <p> on_demand <p> passive|
 |**Comments**|Available in Microsoft Defender for Endpoint version 101.10.72 or higher.|
-|||
+
+#### Enable/disable behavior monitoring
+
+Determines whether behavior monitoring and blocking capability is enabled on the device or not.
+
+> [!NOTE]
+>  This feature is applicable only when Real-Time Protection feature is enabled.
+<br>
+
+|Section|Value|
+|---|---|
+|**Domain**|`com.microsoft.wdav`|
+|**Key**|behaviorMonitoring|
+|**Data type**|String|
+|**Possible values**|disabled <p> enabled (default)|
+|**Comments**|Available in Microsoft Defender for Endpoint version 101.24042.0002 or higher.|
 
 #### Configure file hash computation feature
 

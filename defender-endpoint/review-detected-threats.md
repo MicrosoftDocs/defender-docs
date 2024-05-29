@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: conceptual
-ms.date: 02/02/2024
+ms.date: 05/29/2024
 ms.subservice: edr
 search.appverid: met150
 ---
@@ -101,8 +101,8 @@ DeviceInfo
 AlertEvidence
 | where Timestamp > ago(15d)
 | where ServiceSource == "Microsoft Defender for Endpoint"
-| where DetectionSource == "Antivirus"
-DeviceName
+| where DetectionSource == "Antivirus")
+on DeviceName
 | distinct DeviceName, DeviceId, Title, AlertId, Timestamp
 ```
 

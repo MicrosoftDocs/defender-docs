@@ -348,6 +348,8 @@
                   href: advanced-hunting-behaviorinfo-table.md                                    
                 - name: CloudAppEvents
                   href: advanced-hunting-cloudappevents-table.md
+                - name: CloudAuditEvents
+                  href: advanced-hunting-cloudauditevents-table.md                  
                 - name: DeviceEvents
                   href: advanced-hunting-deviceevents-table.md
                 - name: DeviceFileCertificateInfo
@@ -532,7 +534,9 @@
         - name: Vulnerability management
           href: mto-dashboard.md
         - name: Manage tenants
-          href: mto-tenants.md      
+          href: mto-tenants.md
+        - name: Create and manage endpoint security policies
+          href: mto-endpoint-security-policy.md               
     - name: Reference
       items: 
       - name: Manage roles and permissions
