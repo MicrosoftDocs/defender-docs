@@ -50,6 +50,9 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) You can now query Microsoft Sentinel data using the [advanced hunting query API](/graph/api/security-security-runhuntingquery?view=graph-rest-1.0&tabs=http&preserve-view=true). You can use the `timespan` parameter to query Defender XDR and Microsoft Sentinel data that have longer data retention than the Defender XDR default of 30 days.
 
+- (Preview) In the unified Microsoft Defender portal, you can now create custom detections in querying data that spans Microsoft Sentinel and Defender XDR tables. Read [Create custom analytics and detection rules](advanced-hunting-microsoft-defender.md#create-custom-analytics-and-detection-rules) for more information.
+ 
+ 
 ## April 2024
 
 - (Preview) The **unified security operations platform** in the Microsoft Defender portal is now available. This release brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, and Microsoft Copilot in Microsoft Defender. For more information, see the following resources:
