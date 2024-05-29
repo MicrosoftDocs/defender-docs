@@ -111,7 +111,7 @@ All our updates contain
 
 - Improved performance when running configuration queries.
 - Optimized how scans are prioritized.
-- A crash caused by a race condition with a device control driver no longer occurs. 
+- Fixed a crash caused by a race condition with a device control driver.
 - Added Event Viewer Logging for scan start event where the scan originates from Powershell.
 
 ### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.4)
