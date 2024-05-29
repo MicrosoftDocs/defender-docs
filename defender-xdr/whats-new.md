@@ -31,7 +31,7 @@ You can also get product updates and important notifications through the [messag
 
 ## May 2024
 
-- (Preview) The endpoint security policies page is now available in multitenant management in Microsoft Defender XDR. Create, edit, and delete security policies for your tenants' devices from the **Endpoint security policies** page. For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md).
+- The endpoint security policies page is now available in multitenant management in Microsoft Defender XDR. Create, edit, and delete security policies for your tenants' devices from the **Endpoint security policies** page. For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md).
 
 - Create alert tuning rules using **Alert severity** and **Alert title** values as conditions. Alert tuning can help you streamline the alert queue, saving triage time by hiding or resolving alerts automatically, each time a certain expected organizational behavior occurs, and rule conditions are met. For more information, see [Tune an alert](investigate-alerts.md#tune-an-alert).
 
@@ -43,6 +43,12 @@ You can also get product updates and important notifications through the [messag
   - [SOC optimization reference](https://aka.ms/soc-opt-ref)
 
 - (Preview) **Search** in the Microsoft Defender portal now includes the ability to search for devices and users in Microsoft Sentinel. Use the search bar to search for incidents, alerts, and other data across Microsoft Defender XDR and Microsoft Sentinel. For more information, see [Search in Microsoft Defender](microsoft-365-defender-portal.md#global-search).
+
+- (Preview) The **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** table is now available in advanced hunting. This allows you to hunt through cloud audit events in Microsoft Defender for Cloud and to create custom detections to surface suspicious Azure Resource Manager and Kubernetes (KubeAudit) control plane activities.
+
+- (GA) Automatic soft-deletion of sender's copy when *Soft delete* is selected as an action for email messages is now available in the Take actions wizard in advanced hunting. This new feature streamlines the process of managing Sent items, particularly admins who use *Soft delete* and *Move to inbox* actions. Read [Take actions on emails](advanced-hunting-take-action.md#take-various-actions-on-emails) for details.
+
+- (Preview) You can now query Microsoft Sentinel data using the [advanced hunting query API](/graph/api/security-security-runhuntingquery?view=graph-rest-1.0&tabs=http&preserve-view=true). You can use the `timespan` parameter to query Defender XDR and Microsoft Sentinel data that have longer data retention than the Defender XDR default of 30 days.
 
 ## April 2024
 

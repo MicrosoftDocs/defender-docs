@@ -30,15 +30,14 @@ appliesto:
 
 Policies to configure anti-phishing protection settings are available in Microsoft 365 organizations with Exchange Online mailboxes, standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, and Microsoft Defender for Office 365 organizations.
 
-> [!TIP]
-> Strengthen your organization's security posture with our comprehensive [Security Analyzer setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268615). Use the guide to scrutinize networks, endpoints, and servers, identifying vulnerabilities and potential breaches. With intuitive insights and step-by-step instructions, learn how to fortify defenses, improve compliance, and navigate the cybersecurity landscape with confidence. Sign in credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/p/?linkid=2268522). Anyone, from potential Microsoft clients to partners and IT admins, can access the guides and use them freely (credentials aren't required).
-
 Examples of Microsoft Defender for Office 365 organizations include:
 
 - Microsoft 365 Enterprise E5, Microsoft 365 Education A5, etc.
 - [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home)
 - [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business)
 - [Microsoft Defender for Office 365 as an add-on](https://products.office.com/exchange/advance-threat-protection)
+
+[!INCLUDE [Security Analyzer setup guide](../includes/security-analyzer-setup-guide.md)]
 
 The high-level differences between anti-phishing policies in EOP and anti-phishing policies in Defender for Office 365 are described in the following table:
 

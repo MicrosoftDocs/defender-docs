@@ -77,6 +77,10 @@ Users with access to Copilot for Security have access to this capability in adva
 > [!TIP]
 > Providing feedback is an important way to let the Copilot for Security team know how well the query assistant was able to help in generating a useful KQL query. Feel free to articulate what could have made the query better, what adjustments you had to make before running the generated KQL query, or share the KQL query that you eventually used.
 
+
+> [!NOTE]
+> In the [unified Microsoft Defender portal](advanced-hunting-microsoft-defender.md), you can prompt Copilot for Security to generate advanced hunting queries for both Defender XDR and Microsoft Sentinel tables. Not all Microsoft Sentinel tables are currently supported, but support for these tables can be expected in the future.
+
 ## Query sessions
 
 You can start your first session anytime by asking a question in the Copilot side pane in advanced hunting. Your session contains the requests you made using your user account. Closing the side pane or refreshing the advanced hunting page does not discard the session. You can still access the generated queries should you need them.

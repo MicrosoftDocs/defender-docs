@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view and manage quarantined messages for all users in Exchange Online Protection (EOP). Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint Online, OneDrive for Business, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 5/7/2024
+ms.date: 05/21/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -41,10 +41,10 @@ Admins and also users (depending on the [user reported settings](submissions-use
 You view and manage quarantined messages in the Microsoft Defender portal or in PowerShell (Exchange Online PowerShell for Microsoft 365 organizations with mailboxes in Exchange Online; standalone EOP PowerShell for organizations without Exchange Online mailboxes).
 
 Watch this short video to learn how to manage quarantined messages as an admin.
+
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGGPF]
 
-> [!TIP]
-> Simplify *Microsoft Defender for Office 365* deployment with our [setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268341). Protect against email, link, and collaboration threats. Configure policies, access reports, and automate investigations. Features include Safe Links, Safe Attachments, and more. Sign in credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/p/?linkid=2268240). Anyone, from potential Microsoft clients to partners and IT admins, can access the guides and use them freely (credentials aren't required).
+[!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
 
 ## What do you need to know before you begin?
 
@@ -58,13 +58,13 @@ Watch this short video to learn how to manage quarantined messages as an admin.
     - _Read-only access to quarantined messages for all users_: **Security operations / Security data / Security data basics (read)**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md):
     - _Take action on quarantined messages for all users_: Membership in the **Quarantine Administrator**, **Security Administrator**, or **Organization Management** role groups.
-      - _Submit messages from quarantine to Microsoft_: Membership in the **Quarantine Administrator** or **Security Administrator** role groups.
-      - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: By default, all users have the required permissions. Whether the **Block sender** action is available to non-admins is typically controlled by the [Block sender permission](quarantine-policies.md#block-sender-permission) in quarantine policies. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine.
+      - _Submit messages from quarantine to Microsoft_: Membership in the **Security Administrator** role groups.
+      - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine if the user filters the quarantine results by **Recipient** \> **Only me**.
     - _Read-only access to quarantined messages for all users_: Membership in the **Security Reader** or **Global Reader** role groups.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
-    - _Take action on quarantined messages for all users_: Membership in the **Security Administrator or **Global Administrator** roles.
+    - _Take action on quarantined messages for all users_: Membership in the **Security Administrator** or **Global Administrator** roles.
       - _Submit messages from quarantine to Microsoft_:  Membership in the **Security Administrator** role.
-      - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: By default, all users have the required permissions. Whether the **Block sender** action is available to non-admins is typically controlled by the [Block sender permission](quarantine-policies.md#block-sender-permission) in quarantine policies. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine.
+      - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine if the user filters the quarantine results by **Recipient** \> **Only me**.
     - _Read-only access to quarantined messages for all users_: Membership in the **Global Reader** or **Security Reader** roles.
 
   > [!TIP]
@@ -73,6 +73,8 @@ Watch this short video to learn how to manage quarantined messages as an admin.
   > Guest admins from other organizations can't manage quarantined messages. The admin needs to be in the same organization as the recipients.
 
 - Quarantined messages and files are retained for a default period of time based on why they were quarantined. After the retention period expires, the messages are automatically deleted and aren't recoverable. For more information, see [Quarantine retention](quarantine-about.md#quarantine-retention).
+
+- For information about the order of precedence for user allows and blocks and organization allows and blocks, see [User and tenant settings conflict](how-policies-and-protections-are-combined.md#user-and-tenant-settings-conflict).
 
 - All actions taken by admins or users on quarantined messages are audited. For more information about audited quarantine events, see [Quarantine schema in the Office 365 Management API](/office/office-365-management-api/office-365-management-activity-api-schema#quarantine-schema).
 
@@ -94,6 +96,11 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Policy type**<sup>\*</sup> (see the possible values in the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** description.)
 - **Expires**<sup>\*</sup>
 - **Recipient**: The recipient email address always resolves to the primary email address, even if the message was sent to a [proxy address](/exchange/recipients-in-exchange-online/manage-user-mailboxes/add-or-remove-email-addresses).
+- **Sender address override reason**<sup>\*</sup>: One of the following values:
+  - **None**
+  - **Message sender is blocked by recipient settings**
+  - **Message sender is blocked by administrator settings**
+- **Released by**<sup>\*</sup>
 - **Message ID**
 - **Policy name**
 - **Message size**
@@ -109,19 +116,19 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Sender address**
 - **Recipient address**
 - **Subject**
-- **Time received**:
+- **Time received**: Select one of the following values:
   - **Last 24 hours**
-  - **Last 7 days**
+  - **Last 7 days** (default)
   - **Last 14 days**
-  - **Last 30 days** (default)
+  - **Last 30 days**
   - **Custom**: Enter a **Start time** and **End time** (date).
-- **Expires**: Filter messages by when they expire from quarantine:
+- **Expires**: Filter messages by when they expire from quarantine. Select one of the following values:
   - **Today**
   - **Next 2 days**
   - **Next 7 days**
   - **Custom**: Enter a **Start time** and **End time** (date).
 - **Recipient tag**: Currently, the only selectable [user tag](user-tags-about.md) is Priority account.
-- **Quarantine reason**:
+- **Quarantine reason**: Select one or more of the following values:
   - **Transport rule** (mail flow rule)
   - **Bulk**
   - **Spam**
@@ -130,16 +137,19 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
   - **Admin action - File type block**: Messages blocked as malware by the common attachments filter in anti-malware policies. For more information, see [Anti-malware policies](anti-malware-protection-about.md#anti-malware-policies).
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
-- **Recipient**: The following values are available:
-  - **All users**: This is default value for admins.
-  - **Only me**: Show only messages where whomever is signed in is a recipient.
-- **Release status**: Any of the following values:
+- **Recipient**: Select one of the following values:
+  - **All users** (this is default value, even if it doesn't appear selected)
+  - **Only me**: Show only messages where whomever is signed in is a recipient. This value is required for administrators to see the [Allow sender](#allow-email-senders-from-quarantine) and [Block sender](#block-email-senders-from-quarantine) actions.
+- **Blocked sender**: One of the following values:
+  - **Don't show blocked senders** (default)
+  - **Show all senders**
+- **Release status**: Select one or more of the following values
   - **Needs review**
   - **Approved**
   - **Denied**
   - **Release requested**
   - **Released**
-- **Policy type**: Filter messages by policy type:
+- **Policy type**: Filter messages by what type of protection policy quarantined the message. Select one or more of the following values:
   - **Anti-malware policy**
   - **Safe Attachments policy**
   - **Anti-phishing policy**
@@ -162,7 +172,7 @@ Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="f
 After you've entered the search criteria, press Enter to filter the results.
 
 > [!NOTE]
-> The **Search** box searches for quarantined items in the current view (which is limited to 100 items), not all quarantined items. To search all quarantined items, use **Filter** and the resulting **Filters** flyout.
+> The **Search** box searches for quarantined items in the current view (which is limited to 100 items), not all quarantined items. To search all quarantined items, use :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and the resulting **Filters** flyout.
 
 After you find a specific quarantined message, select the message to view details about it and to take action on it (for example, view, release, download, or delete the message).
 
@@ -196,13 +206,14 @@ In the details flyout that opens, the following information is available:
 
     Recipient email addresses always resolve to the primary email address, even if the message was sent to a [proxy address](/exchange/recipients-in-exchange-online/manage-user-mailboxes/add-or-remove-email-addresses).
 
-  - **Released to** or **Not yet released to**: If the message requires review by an admin before it's released:
-    - **Released to**: Email addresses of recipients that the message was released to.
-    - **Not yet released to**:  Email addresses of recipients that the message hasn't been released to.
+  - **Not yet released to**, **Released to**, and/or **Released by**: Depending on the state of the message, one or more of the following values might be available:
+    - **Not yet released to**: Email addresses of recipients that the message hasn't been released to.
+    - **Released to**: Email addresses of recipients that the message has been released to.
+    - **Released by**: The admin that released the message using the format: `<email address of admin who released the message> released for <recipient>`. For example, `admin@contoso.onmicrosoft.com released to laura@contoso.onmicrosoft.com`.
 
 The rest of the details flyout contains the **Delivery details**, **Email details**, **URLs**, and **Attachments** sections that are part of the _Email summary panel_. For more information, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
-:::image type="content" source="media/quarantine-message-details-flyout.png" alt-text="Screenshot of the details flyout that opens after you select a quarantined email message from the Email tab of the Quarantine page." lightbox="media/quarantine-message-details-flyout.png":::
+:::image type="content" source="media/quarantine-message-details-flyout-released-by.png" alt-text="Screenshot of the details flyout that opens after you select a quarantined email message from the Email tab of the Quarantine page." lightbox="media/quarantine-message-details-flyout-released-by.png":::
 
 To take action on the message, see the next section.
 
@@ -217,7 +228,7 @@ To take action on the message, see the next section.
 
    - Select the message from the list by selecting the check box next to the first column. The available actions are no longer grayed out.
 
-     :::image type="content" source="media/quarantine-message-selected-message-actions.png" alt-text="Screenshot of the available actions after you select the check box of a quarantined message on the Email tab on the Quarantine page." lightbox="media/quarantine-message-selected-message-actions.png":::
+     :::image type="content" source="media/quarantine-message-selected-message-actions-remove-blocked.png" alt-text="Screenshot of the available actions after you select the check box of a quarantined message on the Email tab on the Quarantine page." lightbox="media/quarantine-message-selected-message-actions-remove-blocked.png":::
 
    - Select the message from the list by clicking anywhere in the row other than the check box. The available actions are in the details flyout that opens.
 
@@ -383,11 +394,32 @@ When you're finished on the **Submit to Microsoft for analysis** flyout, select 
 > [!TIP]
 > Users can report false positives to Microsoft from quarantine, depending on the value of the **Reporting from quarantine** setting in [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
+#### Allow email senders from quarantine
+
+> [!TIP]
+> The **Allow sender** action is available to admins only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**.
+>
+> If the sender is already in the recipient's [safelist collection](configure-junk-email-settings-on-exo-mailboxes.md), **Allow sender** isn't available.
+
+The **Allow sender** action adds the sender of the selected email message to the Safe Senders list **in the mailbox of whomever is signed in**. Typically, this action is for end-users if it's available to them by [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy). For more information about users allowing senders, see [Add recipients of my email messages to the Safe Senders List](https://support.microsoft.com/office/be1baea0-beab-4a30-b968-9004332336ce).
+
+After you select the message, use either of the following methods to add the message sender to the Safe Senders list in **your own** mailbox:
+
+- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Allow sender**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Allow sender**.
+
+The flyout that opens indicates when the sender was successfully added to your Safe Senders list. Select **Done**.
+
 #### Block email senders from quarantine
 
-The Block senders action adds the sender of the selected email message to the Blocked Senders list **in the mailbox of whomever is signed in**. Typically, this action is used by end-users if it's available to them by [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy). For more information about users blocking senders, see [Block a mail sender](https://support.microsoft.com/office/b29fd867-cac9-40d8-aed1-659e06a706e4)
+> [!TIP]
+> The **Block sender** action is available to admins only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**.
+>
+> If the sender is already in the recipient's [safelist collection](configure-junk-email-settings-on-exo-mailboxes.md), **Block sender** isn't available. **[Remove sender from user block list](#remove-senders-from-user-blocked-senders-lists-from-quarantine)** is available instead.
 
-After you select the message, use either of the following methods to add the message sender to the Blocked Senders list in **your** mailbox:
+The **Block sender** action adds the sender of the selected email message to the Blocked Senders list **in the mailbox of whomever is signed in**. Typically, this action is for end-users if it's available to them by [quarantine policies](quarantine-policies.md#anatomy-of-a-quarantine-policy). For more information about users blocking senders, see [Block a mail sender](https://support.microsoft.com/office/b29fd867-cac9-40d8-aed1-659e06a706e4)
+
+After you select the message, use either of the following methods to add the message sender to the Blocked Senders list in **your own** mailbox:
 
 - **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Block sender**.
 - **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Block sender**.
@@ -395,7 +427,20 @@ After you select the message, use either of the following methods to add the mes
 In the **Block sender** flyout that opens, review the information about the sender, and then select **Block**.
 
 > [!TIP]
-> The organization can still receive mail from the blocked sender. Messages from the sender are delivered to user Junk Email folders or to quarantine. To delete messages from the sender upon arrival, use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
+> The organization can still receive mail from the blocked sender. Messages from the sender are delivered to user Junk Email folders or to quarantine depending on the policy precedence as described in [User allows and blocks](how-policies-and-protections-are-combined.md#user-allows-and-blocks). To delete messages from the sender upon arrival, use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
+
+#### Remove senders from user Blocked Senders lists from quarantine
+
+The **Remove sender from user block list** is available only if the sender of the quarantined message is already in the recipient's [Block Senders list](configure-junk-email-settings-on-exo-mailboxes.md).
+
+Admins can remove senders from the Block Senders list of their own mailboxes (if quarantine is filtered by **Recipient** \> **Only me**) or from the mailboxes of other users (if quarantine is filtered by **Recipient** \> **All users**).
+
+After you select the message, use either of the following methods to remove the sender from the user's Block Senders list:
+
+- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-remove-sender-icon.png" border="false"::: **Remove sender from user block list**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-remove-sender-icon.png" border="false"::: **Remove sender from user block list**.
+
+The flyout that opens indicates when the sender was successfully removed from the recipient's Blocked Senders list. Select **Done**.
 
 #### Share email from quarantine
 

@@ -20,6 +20,8 @@ ms.date: 09/01/2023
 **Applies to:**
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
+- [Microsoft Defender for Endpoint Plan 2](/defender-endpoint/microsoft-defender-endpoint)
+- [Microsoft Defender for Office 365 P2](https://go.microsoft.com/fwlink/p/?LinkID=2158212)
 
 >[!Tip]
 >To learn how to turn on preview features, see [Microsoft Defender XDR preview features](preview.md).
