@@ -204,4 +204,4 @@ If you're finding that your settings aren't taking effect, you might have a conf
 To information on how to make False Negatives (FNs) submissions, see:
 
 - [Submit files in Microsoft Defender for Endpoint](admin-submissions-mde.md) if you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft Defender for Business.
-- [Submit files for analysis](../defender-xdr/submission-guide.md) if you have Microsoft Defender Antivirus.
+- [Submit files for analysis](/defender-xdr/submission-guide.md) if you have Microsoft Defender Antivirus.
