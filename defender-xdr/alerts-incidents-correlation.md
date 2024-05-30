@@ -34,16 +34,18 @@ Here is a summary of the main attributes of incidents and alerts, and the differ
 **Incidents:**
 
 - Are the main "unit of measure" of the work of the Security Operations Center (SOC).
-- Display the broader context of an attack.
+- Display the broader context of an attack&mdash;the **attack story**.
 - Represent "case files" of all the information needed to investigate the threat and the findings of the investigation.
-- Trigger automatic series of responses to the threat.
+- Are created by Microsoft Defender XDR to contain at least one alert, and in many cases, contain many alerts.
+- Trigger automatic series of responses to the threat, using [automation rules](/azure/sentinel/automate-incident-handling-with-automation-rules?tabs=onboarded), [attack disruption](automatic-attack-disruption.md), and [playbooks](/azure/sentinel/automation/automate-responses-with-playbooks).
 - Record all activity related to the threat and its investigation and resolution.
 
 **Alerts:**
 
-- Represent the individual pieces of evidence that are essential to understanding and investigating the incident.
+- Represent the individual pieces of the story that are essential to understanding and investigating the incident.
+- Are created by many different sources both internal and external to the Defender portal.
 - Can be analyzed by themselves to add value when deeper analysis is required.
-- Can trigger automatic mini-investigations and responses to minimize the potential threat impact.
+- Can trigger [automatic investigations and responses](m365d-autoir.md) at the alert level, to minimize the potential threat impact.
 
 ## Alert sources
 
@@ -62,7 +64,7 @@ Microsoft Defender XDR alerts can come from many sources:
   - Microsoft Sentinel
   - Microsoft Defender for Cloud
 
-Alerts' sources can be indicated by sets of characters prepended to the alert ID. The table shown [here](link) helps you understand the mapping of alert sources based on the prepended character on the alert.
+When alerts from different sources are displayed together, each alert's source is indicated by sets of characters prepended to the alert ID. The [**Alert sources**](investigate-alerts.md#alert-sources) table maps the alert sources to the alert ID prefix.
 
 ## Incident creation and alert correlation
 
@@ -95,7 +97,7 @@ Even when the correlation logic indicates that two incidents should be merged, D
 - One of the incidents has a status of "Closed". Incidents that are resolved don’t get reopened.
 - The two incidents eligible for merging are assigned to two different people.
 - Merging the two incidents would raise the number of entities in the merged incident above the maximum allowed.
-- The two incidents contain devices in different device groups as defined by the organization. This criterion is in effect only when [enabled](link-to-procedure).
+- The two incidents contain devices in different device groups as defined by the organization. This criterion is in effect only when enabled.
 - One of the incidents was created by a custom detection, and the other was not.
 
 ### What happens when incidents are merged?
@@ -104,8 +106,7 @@ When two or more incidents are merged, the contents of one incident are migrated
 
 - Alerts contained in the closed incident are moved to the consolidated incident.
 - Entities (assets etc.) follow the alerts they’re linked to.
-- Tags? ***awaiting answer from PM***
-- Other?
+- Analytics rules recorded as involved in the creation of the abandoned incident are added to the rules recorded in the consolidated incident.
 - Comments and activity log entries in the abandoned incident are *not* moved to the new one.
 
 ## Manual correlation
