@@ -4,8 +4,6 @@
   href: index.yml
   expanded: true
   items:
-  - name: Defender for IoT
-    items:
     - name: Overview
       items:
       - name: What is Microsoft Defender for IoT?
