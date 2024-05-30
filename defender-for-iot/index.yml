@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
-title: Microsoft Defender for Iot documentation # < 60 chars
-summary: Microsoft Defender for Iot delivers preventative protection, post-breach detection, automated investigation, and response. # < 160 chars
+title: Microsoft Defender for IoT documentation # < 60 chars
+summary: Microsoft Defender for IoT delivers preventative protection, post-breach detection, automated investigation, and response. # < 160 chars
 
 metadata:
   title: Microsoft Defender for Endpoint documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
@@ -13,8 +13,8 @@ metadata:
   - m365-security
   - essentials-navigation
   ms.custom: intro-hub-or-landing
-  author: tarTech23 #Required; your GitHub user alias, with correct capitalization.
-  ms.author: tarTech23 #Required; microsoft alias of author; optional team alias.
+  author: lwainstein #Required; your GitHub user alias, with correct capitalization.
+  ms.author: lwainstein #Required; microsoft alias of author; optional team alias.
   ms.date: 05/28/2024
   ms.localizationpriority: high
 
@@ -24,27 +24,6 @@ landingContent:
 # Cards and links should be based on top customer tasks or top subjects
 # Start card title with a verb
   # Card (optional)
-  - title: Microsoft Defender for Endpoint
-    linkLists:
-      - linkListType: overview
-        links:
-        - text: What is Microsoft Defender for Endpoint?
-          url:  microsoft-defender-endpoint.md
-        - text: What is Defender for Endpoint plan 1?
-          url: defender-endpoint-plan-1.md
-      - linkListType: whats-new
-        links:
-          - text: What's new in Microsoft Defender for Endpoint
-            url: whats-new-in-microsoft-defender-endpoint.md
-          - text: Announcing Microsoft Defender for Endpoint Plan 1
-            url: defender-endpoint-plan-1.md
-      - linkListType: video
-        links:
-          - text: Overview video
-            url:  https://www.microsoft.com/videoplayer/embed/RE4vnC4?rel=0
-
- 
-# Card
   - title: Defender for IoT
     linkLists:
       - linkListType: get-started
