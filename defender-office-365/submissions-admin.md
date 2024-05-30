@@ -845,9 +845,9 @@ For email messages, admins can see what users are reporting on the **User report
 
 **Notes**:
 
-- User reported messages that are sent to Microsoft only or to Microsoft and the [reporting mailbox](submissions-user-reported-messages-custom-mailbox.md) appear on the **User reported** tab. Although these messages have already been reported to Microsoft, administrators should review and resubmit user submissions as admin submissions. Following checks are done when admin makes a submission which have been explained in this section.[Admin-Submission](##When admins submit messages or sends user report to Microsoft for analysis, we do the following checks:)
-  
-- User reported messages that are sent only to the reporting mailbox appear on the **User reported** tab with the **Result** value **Not Submitted to Microsoft**. Admins should report these messages to Microsoft for analysis.
+- User reported messages that are sent to Microsoft only or to Microsoft and the [reporting mailbox](submissions-user-reported-messages-custom-mailbox.md) appear on the **User reported** tab.
+
+- User reported messages that are sent only to the reporting mailbox appear on the **User reported** tab with the **Result** value **Not Submitted to Microsoft**. Admins should report these messages to Microsoft for analysis. Although these messages have already been reported to Microsoft, admins can resubmit the reported messages.
 
 In organizations with Microsoft Defender for Office 365 Plan 2 (add-on licenses or included in subscriptions like Microsoft 365 E5), admins can also see [user reported messages in Microsoft Teams in Defender for Office 365 Plan 2](submissions-teams.md) (currently in Preview).
 
