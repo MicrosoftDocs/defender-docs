@@ -25,7 +25,7 @@
     - name: Monitor site security
       items:
       - name: Monitor site and investigate recommendations
-        href: monitor-state-recommendations.md             
+        href: monitor-site-security-and-investigate-recommendations.md         
       - name: Investigate and remediate vulnerabilities
         items:
         - name: How to navigate weakness page

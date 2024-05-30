@@ -19,7 +19,7 @@ ms.topic: how-to
 The SOC admin or other users with access <!-- name/ title?--> will regularly check the information presented in the **Site security** dashboard to see the up-to-date security state of their network. Understanding the different features here guides the SOC to decide how to prioritize security issues for the rest of the security team. <!-- is thiere a team? -->
 
 Short procedure reviewing the main site security page:
-
+ 
 ## Monitoring
 
 The dashboard has six sections.
