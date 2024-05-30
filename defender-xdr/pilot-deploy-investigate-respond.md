@@ -26,27 +26,41 @@ ms.topic: conceptual
 **Applies to:**
 - Microsoft Defender XDR
 
-This article outlines the process to create incidents with attack simulations and tutorials and use Microsoft Defender XDR to investigate and respond. Before starting this process, be sure you've reviewed the overall process for [evaluating Microsoft Defender XDR](pilot-deploy-overview.md) and you have  and you have created the Microsoft Defender XDR pilot environment.
+This article outlines the process to create incidents with attack simulations and tutorials and use Microsoft Defender XDR to investigate and respond. Before starting this process, be sure you've reviewed the overall process for [piloting and deploying Microsoft Defender XDR](pilot-deploy-overview.md) and you have at least piloted some of the components of Microsoft Defender XDR.
 
-This article is part of the end-to-end process of piloting and deploying Microsoft Defender XDR.
-
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg" alt-text="A diagram that shows incident investigation and response in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg":::
-
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-After preparing your [pilot environment](pilot-deploy-investigate-respond.md), it's time to test Microsoft Defender XDR's incident response and automated investigation and remediation capabilities by creating an incident with a simulated attack and using the Microsoft Defender portal to investigate and respond.
-
-An incident in Microsoft Defender XDR is a collection of correlated alerts and associated data that make up the story of an attack.
-
-Microsoft 365 services and apps create alerts when they detect a suspicious or malicious event or activity. Individual alerts provide valuable clues about a completed or ongoing attack. However, attacks typically employ various techniques against different types of entities, such as devices, users, and mailboxes. The result is multiple alerts for multiple entities in your tenant.
+An incident in Microsoft Defender XDR is a collection of correlated alerts and associated data that make up the story of an attack. Microsoft 365 services and apps create alerts when they detect a suspicious or malicious event or activity. Individual alerts provide valuable clues about a completed or ongoing attack. However, attacks typically employ various techniques against different types of entities, such as devices, users, and mailboxes. The result is multiple alerts for multiple entities in your tenant.
 
 > [!NOTE]
 > If you are brand new to security analysis and incident response, see the [Respond to your first incident walkthrough](respond-first-incident-365-defender.md) to get a guided tour of a typical process of analysis, remediation, and post-incident review.
 
-<a name='simulate-attacks-with-the-microsoft-365-defender-portal'></a>
+
+## End-to-end deployment for Microsoft Defender XDR
+
+This is article 6 of 6 in a series to help you deploy the components of Microsoft Defender XDR, including investigating and responding to incidents.
+
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg" alt-text="A diagram that shows incident investigation and response in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg":::
+
+At any time during your pilot and deployment, you can test Microsoft Defender XDR's incident response and automated investigation and remediation capabilities by creating an incident with a simulated attack and using the Microsoft Defender portal to investigate and respond.
+
+## Workflow for incident investigation and response using Microsoft Defender XDR
+
+Here is the workflow for investigating and responding to incidents using Microsoft Defender XDR in your production environment.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-investigate-respond-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to do incident investigation and response." lightbox="./media/eval-defender-xdr/defender-investigate-respond-pilot-deploy-steps.svg":::
+
+>> Update figure
+
+Follow these steps:
+
+1. [Simulate attacks with the Microsoft Defender portal](#step-1)
+1. [Prioritize incidents](#step-2)
+1. [Manage incidents](#step-3)
+1. [Examine automated investigation and response with the Action center](#step-4)
+1. [Use advanced hunting](#step-5)
+
+<a name='simulate-attacks-with-the-microsoft-365-defender-portal'></a>
+
+<a name="step-1"></a>
 
 ## Step 1. Simulate attacks with the Microsoft Defender portal
 
@@ -60,7 +74,7 @@ The Microsoft Defender portal has built-in capabilities to create simulated atta
 
   In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>, select **Endpoints > Tutorials & simulations**.
 
-### Defender for Office 365 Attack simulation training
+### Defender for Office 365 attack simulation training
 
 Defender for Office 365 with Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 includes attack simulation training for phishing attacks. The basic steps are:
 
@@ -332,26 +346,13 @@ When the incident is resolved, it resolves all of the associated alerts in the M
 
 This wraps up attack simulations for incident analysis, automated investigation, and incident resolution.
 
+<a name="step-2"></a>
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
-Once you have performed an [incident response for a simulated attack](pilot-deploy-investigate-respond.md), here are some Microsoft Defender XDR capabilities to explore:
-
-|Capability |Description |
-|:-------|:-----|
-| [Prioritizing incidents](#prioritize-incidents) | Use filtering and sorting of the incidents queue to determine which incidents to address next. |
-| [Managing incidents](#manage-incidents) | Modify incident properties to ensure correct assignment, add tags and comments, and to resolve an incident. |
-| [Automated investigation and response](#examine-automated-investigation-and-response-with-the-action-center) | Use automated investigation and response (AIR) capabilities to help your security operations team address threats more efficiently and effectively. The Action center is a "single pane of glass" experience for incident and alert tasks such as approving pending remediation actions. |
-| [Advanced hunting](#use-advanced-hunting) | Use queries to proactively inspect events in your network and locate threat indicators and entities. You also use advanced hunting during the investigation and remediation of an incident. |
-
-
-## Prioritize incidents
+## Step 2. Prioritize incidents
 
 You get to the incident queue from **Incidents & alerts > Incidents** on the quick launch of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>. Here's an example.
 
 :::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents.png" alt-text="The Incidents & alerts section in the Microsoft Defender portal" lightbox="/defender/media/incidents-queue/incidents-ss-incidents.png":::
-
 
 The **Most recent incidents and alerts** section shows a graph of the number of alerts received and incidents created in the last 24 hours.
 
@@ -367,7 +368,9 @@ From the default incident queue, select **Filters** to see a **Filters** pane, f
 
 For more information, see [Prioritize incidents](incident-queue.md).
 
-## Manage incidents
+<a name="step-3"></a>
+
+## Step 3. Manage incidents
 
 You can manage incidents from the **Manage incident** pane for an incident. Here's an example.
 
@@ -406,7 +409,9 @@ Here are the ways you can manage your incidents:
 
 For more information, see [Manage incidents](manage-incidents.md).
 
-## Examine automated investigation and response with the Action center
+<a name="step-4"></a>
+
+## Step 4. Examine automated investigation and response with the Action center
 
 Depending on how automated investigation and response capabilities are configured for your organization, remediation actions are taken automatically or only upon approval by your security operations team. All actions, whether pending or completed, are listed in the [Action center](m365d-action-center.md), which lists pending and completed remediation actions for your devices, email & collaboration content, and identities in one location.
 
@@ -423,7 +428,9 @@ Approve (or reject) pending actions as soon as possible so that your automated i
 
 For more information, see [Automated investigation and response](m365d-autoir.md) and [Action center](m365d-action-center.md).
 
-## Use advanced hunting
+<a name="step-5"></a>
+
+## Step 5. Use advanced hunting
 
 > [!NOTE]
 > Before we walk you through the advanced hunting simulation, watch the following video to understand advanced hunting concepts, see where you can find it in the portal, and know how it can help you in your security operations.
@@ -603,3 +610,6 @@ Custom detections will run the query according to the frequency you set, and the
 
 See [Get expert training on advanced hunting](advanced-hunting-expert-training.md) to get started.
 
+## Next step
+
+Incorporate information from [Investigate and respond with Microsoft Defender XDR](incident-response-overview.md) into your SecOps processes.
