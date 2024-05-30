@@ -32,7 +32,7 @@ For more information, see [the general prerequisites needed for Microsoft Defend
 
 In the site listings, press the Ellipsis menu? and select **Edit site**.
 
-:::image type="content" source="/media/site-security-edit-devices.png" alt-text="Screenshot showing the edit device and delete device menu option for a site listed in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
+:::image type="content" source="media/site-security-edit-devices.png" alt-text="Screenshot showing the edit device and delete device menu option for a site listed in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
 
 ## Delete site
 
