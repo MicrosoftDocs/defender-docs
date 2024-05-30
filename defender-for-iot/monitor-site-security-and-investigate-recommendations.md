@@ -27,7 +27,6 @@ Review all areas of the page
 
 ### The main top bar
 
-
 ### Risks
 
 ### Exposure

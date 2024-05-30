@@ -29,12 +29,12 @@ landingContent:
       - linkListType: get-started
         links:
         - text: Evaluate Microsoft Defender for IoT
-          url: d4iot-set-up-sites.md
-        - text: D4IoT Set up Sites
-          url: d4iot-set-up-sites.md
+          url: compare-defender-azure.md
+        - text: Set up Sites
+          url: set-up-sites.md
       - linkListType: deploy
         links:
-          - text: Site security - Overview
+          - text: Site security overview
             url: site-security-overview.md
       - linkListType: how-to-guide
         links:
