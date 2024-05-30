@@ -1,5 +1,5 @@
-- name: Index
-  href: index.md
+###- name: Index
+###  href: index.md
 - name: Microsoft Defender for Endpoint
   href: index.yml
   expanded: true
