@@ -1,10 +1,9 @@
 ###- name: Index
 ###  href: index.md
-- name: Microsoft Defender for Endpoint
+- name: Microsoft Defender for IoT
   href: index.yml
-  expanded: true
   items:
-  - name: Defender for IoT Demo
+  - name: Defender for IoT
     items:
     - name: Overview
       items:

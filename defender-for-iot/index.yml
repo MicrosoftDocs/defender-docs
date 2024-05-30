@@ -49,19 +49,19 @@ landingContent:
       - linkListType: get-started
         links:
         - text: Evaluate Microsoft Defender for Endpoint
-          url: evaluation-lab.md
+          url: /defender-endpoint/evaluation-lab.md
       - linkListType: deploy
         links:
           - text: Deployment guide
-            url: mde-planning-guide.md
+            url: /defender-endpoint/mde-planning-guide.md
           - text: Onboard supported devices
-            url: onboard-configure.md
+            url: /defender-endpoint/onboard-configure.md
           - text: Set up and configure Defender for Endpoint Plan 1
-            url: mde-p1-setup-configuration.md
+            url: /defender-endpoint/mde-p1-setup-configuration.md
       - linkListType: how-to-guide
         links:
           - text: Migration guide
-            url: migration-guides.md
+            url: /defender-endpoint/migration-guides.md
       - linkListType: video
         links:
           - text: Onboarding video
@@ -73,17 +73,17 @@ landingContent:
       - linkListType: overview
         links:
         - text: Endpoint detection and response
-          url: overview-endpoint-detection-response.md
+          url: /defender-endpoint/overview-endpoint-detection-response.md
         - text: Behavioral blocking and containment
-          url: behavioral-blocking-containment.md
+          url: /defender-endpoint/behavioral-blocking-containment.md
         - text: Automated investigation and response (AIR)
-          url: automated-investigations.md
+          url: /defender-endpoint/automated-investigations.md
         - text: Advanced hunting
           url: /defender-xdr/advanced-hunting-overview
         - text: Microsoft Threat Experts
-          url: endpoint-attack-notifications.md
+          url: /defender-endpoint/endpoint-attack-notifications.md
         - text: Threat analytics
-          url: threat-analytics.md
+          url: /defender-endpoint/threat-analytics.md
 
   # Card
   - title: Use Microsoft Defender for IoT on other platforms
@@ -91,13 +91,13 @@ landingContent:
       - linkListType: overview
         links:
         - text: Microsoft Defender for Endpoint on Mac
-          url: microsoft-defender-endpoint-mac.md
+          url: /defender-endpoint/microsoft-defender-endpoint-mac.md
         - text: Microsoft Defender for Endpoint on iOS
-          url: microsoft-defender-endpoint-ios.md
+          url: /defender-endpoint/microsoft-defender-endpoint-ios.md
         - text: Microsoft Defender for Endpoint on Linux
-          url: microsoft-defender-endpoint-linux.md
+          url: /defender-endpoint/microsoft-defender-endpoint-linux.md
         - text: Microsoft Defender for Endpoint on Android
-          url: microsoft-defender-endpoint-android.md
+          url: /defender-endpoint/microsoft-defender-endpoint-android.md
 
 
 # Card
@@ -106,9 +106,9 @@ landingContent:
       - linkListType: reference
         links:
         - text: Management and APIs
-          url: api/management-apis.md
+          url: /defender-endpoint/api/management-apis.md
         - text: Partner integration
-          url: partner-integration.md
+          url: /defender-endpoint/partner-integration.md
 
 # Card
   - title: Security administration
@@ -118,6 +118,6 @@ landingContent:
         - text: Microsoft Defender Vulnerability Management
           url: /defender-vulnerability-management/defender-vulnerability-management
         - text: Attack surface reduction
-          url: overview-attack-surface-reduction.md
+          url: /defender-endpoint/overview-attack-surface-reduction.md
         - text: Next-generation protection
-          url: next-generation-protection.md         
+          url: /defender-endpoint/next-generation-protection.md         
