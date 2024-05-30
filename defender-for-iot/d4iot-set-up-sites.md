@@ -47,7 +47,7 @@ Finally review the site details before creating the site. Once the site is creat
 - Site description - describe the purpose of the site, what activities occur there, the types and number of devices used, and other important information about the site.
 - Owners - the contact emails of any users administering the site, who must be contacted when problems occur.
 
-    :::image type="content" source="/site-security-set-up-details.png" alt-text="Screenshot showing the details for a new site in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
+    :::image type="content" source="media/site-security-set-up-details.png" alt-text="Screenshot showing the details for a new site in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
 
 1. When completed, select **Next**.
 
@@ -62,7 +62,7 @@ OT devices are associated with the site allowing Microsoft Defender for IoT to c
 
     1. Review the devices and select the rows to be added to your site. You might need to choose more than one item.
 
-    :::image type="content" source="/site-security-associate-devices.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location in the site set up page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
+    :::image type="content" source="media/site-security-associate-devices.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location in the site set up page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
 
 1. Select **Next**.
 
@@ -76,7 +76,7 @@ OT devices are associated with the site allowing Microsoft Defender for IoT to c
 
 The site is now set up and appears in the Site security page.
 
-:::image type="content" source="/site-security-dashboard-with-new-site.png" alt-text="Screenshot showing the newly added site in the Site security dashboard of Microsoft Defender for IoT in the Microsoft Defender portal.":::
+:::image type="content" source="media/site-security-dashboard-with-new-site.png" alt-text="Screenshot showing the newly added site in the Site security dashboard of Microsoft Defender for IoT in the Microsoft Defender portal.":::
 
 ## Add device group
 

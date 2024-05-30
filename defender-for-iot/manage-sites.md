@@ -8,9 +8,10 @@ ms.localizationpriority: medium
 ms.date: 05/19/2024
 ms.topic: how-to
 ---
-This article really is small. I would add it to another section.
 
 # Manage sites
+
+<!--This article really is small. I would add it to another section.-->
 
 Once a site is in use, you might still need to manage, edit, or delete the site information listed in the Site security table.
 
@@ -19,7 +20,7 @@ Once a site is in use, you might still need to manage, edit, or delete the site 
 What is the prereqs? Are these correct, are there other items needed here? What level of roles are needed?
 What do we need for this section?
 
-- OT Security Admin with MDE P2/E5. For more information, see [Microsoft Defender for Endpoint subscriptions settings](defender-endpoint/defender-endpoint-subscription-settings.md).
+- OT Security Admin with MDE P2/E5. For more information, see [Microsoft Defender for Endpoint subscriptions settings](/defender-endpoint/defender-endpoint-subscription-settings.md).
 
 For more information, see [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
 

@@ -9,6 +9,6 @@ ms.date: 05/19/2024
 ms.topic: how-to
 ---
 
-## Discover vulnerabilities
+# Discover vulnerabilities
 
 Here are some words.

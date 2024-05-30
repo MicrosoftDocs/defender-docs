@@ -12,7 +12,6 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: concept-article
-ms.subservice: onboard
 ---
 
 # Site Security in the XDR portal
@@ -24,8 +23,8 @@ Site security is part of Defender for IoT in the Defender XDR portal and offers 
 Are these correct, are there other items needed here? What level of roles are needed?
 What do we need this for?
 
-- OT Security Admin with MDE P2/E5. For more information, see [Microsoft Defender for Endpoint subscriptions settings](defender-endpoint/defender-endpoint-subscription-settings.md).
-- Microsoft Defender for IoT license with at least one site license available. For more information, see [Microsoft Defender for IoT subscriptions settings](license-admin-senter.md).<!-- is this really a prereq at this stage? You can buy the site license later? -but i think it is probably best to keep. -->
+- OT Security Admin with MDE P2/E5. For more information, see [Microsoft Defender for Endpoint subscriptions settings](/defender-endpoint/defender-endpoint-subscription-settings.md).
+- Microsoft Defender for IoT license with at least one site license available. For more information, see [Microsoft Defender for IoT subscriptions settings](license-admin-center.md).<!-- is this really a prereq at this stage? You can buy the site license later? -but i think it is probably best to keep. -->
 
 For more information, see [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
 
@@ -39,7 +38,7 @@ The summarized data for a specific site can also be displayed on this dashboard 
 
 In Defender, all your devices are associated with a site. OT devices use Microsoft Defender for Endpoints agents to identify, scan, and assess the status of the devices on your network.  
 
-:::image type="content" source="{../media/site-security-dashbaord.png}" alt-text="{Screenshot of the Microsoft Defender for IoT Security sites dashboard in the Microsoft Defender portal.}":::
+:::image type="content" source="media/site-security-associate-devices.png" alt-text="Screenshot of the Microsoft Defender for IoT Security sites dashboard in the Microsoft Defender portal.":::
 
 ## Site security features
 

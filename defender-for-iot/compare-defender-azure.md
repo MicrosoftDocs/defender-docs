@@ -12,7 +12,6 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: concept-article
-ms.subservice: onboard
 ---
 
 # Comparing Microsoft Defender for IoT in XDR Defender portal with Defender for IoT in the Azure portal

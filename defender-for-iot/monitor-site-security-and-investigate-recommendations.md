@@ -12,7 +12,6 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: conceptual
-ms.subservice: onboard
 ---
 
 # Monitor site security and investigate recommendations

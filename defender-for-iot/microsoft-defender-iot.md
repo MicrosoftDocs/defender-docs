@@ -20,7 +20,8 @@ ms.date: 01/19/2024
 # Microsoft Defender for IoT
 
 Microsoft Defender for Endpoint is an enterprise endpoint security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats.
-
+<!-- THis is a placeholder document. Presume we will need to rewrite something similar so i have kept the old content for the moment.-->
+<!--
 > [!NOTE]
 > Example endpoints may include laptops, phones, tablets, PCs, access points, routers, and firewalls.
 
@@ -108,6 +109,7 @@ Integrate Microsoft Defender for Endpoint into your existing workflows.
 <a name="mtp"></a>
 
 **[Integration with Microsoft solutions](threat-protection-integration.md)**
+-->
 
 Defender for Endpoint directly integrates with various Microsoft solutions, including:
 

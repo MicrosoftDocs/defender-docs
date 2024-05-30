@@ -29,17 +29,13 @@ landingContent:
       - linkListType: get-started
         links:
         - text: Evaluate Microsoft Defender for IoT
-          url: evaluation-lab.md
+          url: d4iot-set-up-sites.md
         - text: D4IoT Set up Sites
           url: d4iot-set-up-sites.md
       - linkListType: deploy
         links:
           - text: Site security - Overview
             url: site-security-overview.md
-          - text: Onboard supported devices
-            url: onboard-configure.md
-          - text: Set up and configure Defender for Endpoint Plan 1
-            url: mde-p1-setup-configuration.md
       - linkListType: how-to-guide
         links:
           - text: Manage sites
@@ -54,8 +50,6 @@ landingContent:
         links:
         - text: Evaluate Microsoft Defender for Endpoint
           url: evaluation-lab.md
-        - text: Plan your deployment
-          url: deployment-strategy.md
       - linkListType: deploy
         links:
           - text: Deployment guide
