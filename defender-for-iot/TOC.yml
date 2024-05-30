@@ -2,6 +2,7 @@
 ###  href: index.md
 - name: Microsoft Defender for IoT
   href: index.yml
+  expanded: true
   items:
   - name: Defender for IoT
     items:
@@ -9,10 +10,6 @@
       items:
       - name: What is Microsoft Defender for IoT?
         href: microsoft-defender-iot.md
-      - name: Compare Defender and Azure
-        href: compare-defender-azure.md
-      - name: Set up sites
-        href: d4iot-set-up-sites.md
       - name: Compare Defender and Azure
         href: compare-defender-azure.md
       - name: Site security
@@ -24,7 +21,7 @@
       - name: Onboard DIoT
         href: onboard-diot.md 
       - name: License admin center
-        href: license-admin-center.md      
+        href: license-admin-center.md   
       - name: Set up sites
         href: set-up-sites.md
     - name: Monitor site security

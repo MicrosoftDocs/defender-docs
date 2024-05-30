@@ -11,13 +11,29 @@ audience: ITPro
 ms.collection:
 - m365-security
 - tier2
-ms.topic: conceptual
+ms.topic: how-to
 ---
 
 # Monitor site security and investigate recommendations
 
-This is the fourth article.
+The SOC admin or other users with access <!-- name/ title?--> will regularly check the information presented in the **Site security** dashboard to see the up-to-date security state of their network. Understanding the different features here guides the SOC to decide how to prioritize security issues for the rest of the security team. <!-- is thiere a team? -->
+
+Short procedure reviewing the main site security page:
 
 ## Monitoring
 
-Here are some words.
+The dashboard has six sections.
+Review all areas of the page
+
+### The main top bar
+
+
+### Risks
+
+### Exposure
+
+### Critical
+
+### View aggregated site data
+
+### View recommendations
