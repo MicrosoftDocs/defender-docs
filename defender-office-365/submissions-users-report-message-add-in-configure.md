@@ -93,7 +93,7 @@ After the add-in is installed and enabled, users see the following icons based o
   - Outlook included with Microsoft 365 apps for Enterprise
   - Outlook for iOS and Android
 
-- Currently, reporting messages in shared mailboxes or other mailboxes by a delegate using the add-ins isn't supported. Messages aren't sent to the [reporting mailbox](submissions-user-reported-messages-custom-mailbox.md) or to Microsoft. Built-in reporting in Outlook on the web or new Windows Outlook client (Monarch) in shared mailboxes or other mailboxes by a delegate is supported. Messages are sent as per the reported message destination in user reported settings .
+- Currently, reporting messages in shared mailboxes or other mailboxes by a delegate using the add-ins isn't supported. Messages aren't sent to the [reporting mailbox](submissions-user-reported-messages-custom-mailbox.md) or to Microsoft. Built-in reporting in Outlook on the web or the new Outlook for Windows in shared mailboxes or other mailboxes by a delegate is supported. Messages are sent according to the reported message destination in user reported settings.
 
 - The add-ins aren't available for on-premises Exchange mailboxes.
 
