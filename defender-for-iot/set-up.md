@@ -1,7 +1,7 @@
 ---
 title: Set up something for Microsoft Defender for IoT in XDR Defender portal
 description: This article describes how to set up something in Microsoft Defender for IoT in XDR Defender portal
-ms.service: defender-iot
+ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium

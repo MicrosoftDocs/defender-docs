@@ -1,7 +1,7 @@
 ---
 title: Glossary for Site security for Microsoft Defender for IoT in XDR Defender portal
 description: This article describes the glossary how to set up a new site in the Site security feature of Microsoft Defender for IoT in XDR Defender portal
-ms.service: defender-iot
+ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium

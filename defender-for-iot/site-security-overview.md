@@ -1,7 +1,7 @@
 ---
 title: Site security for Microsoft Defender for IoT in XDR Defender portal
 description: Read this article to get an overview of benefits of the new Site Security features in the XDR portal.
-ms.service: defender-iot
+ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium

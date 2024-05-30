@@ -1,7 +1,7 @@
 ---
 title: Zero Trust with Microsoft Defender for Iot
 description: Microsoft Defender for Iot contributes to a strong Zero Trust strategy and architecture.
-ms.service: defender-iot
+ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium

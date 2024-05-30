@@ -1,7 +1,7 @@
 ---
 title: Compare the new Microsoft Defender for IoT in XDR Defender portal with Defender for IoT in the Azure portal.
 description: This article compares the new Microsoft Defender for IoT in XDR Defender portal with Defender for IoT in the Azure portal.
-ms.service: defender-iot
+ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium

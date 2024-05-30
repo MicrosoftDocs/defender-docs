@@ -1,7 +1,7 @@
 ---
 title: Monitor site security and investigate recommendations for Microsoft Defender for IoT in XDR Defender portal
 description: Read this article to get an overview of Monitor site security and investigate recommendations of the new Site Security feature.
-ms.service: defender-iot
+ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
