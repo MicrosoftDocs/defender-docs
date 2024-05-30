@@ -22,11 +22,11 @@
       - name: Prerequisites
         href: prerequisites.md            
       - name: Onboard DIoT
-      - href: onboard-diot.md 
+        href: onboard-diot.md 
       - name: License admin center
-      - href: license-admin-center.md      
+        href: license-admin-center.md      
       - name: Set up sites
-      - href: set-up-sites.md
+        href: set-up-sites.md
     - name: Monitor site security
       items:
       - name: Monitor site and investigate recommendations
@@ -40,7 +40,7 @@
       - name: Investigate and remediate threats
         items:
         - name: Investigate alerts
-        - href: investigate-threats.md
+          href: investigate-threats.md
       - name: Manage
         items:
         - name: Manage sites
@@ -50,8 +50,8 @@
       - name: Resources
         items:
         - name: Glossary
-        - href: glossary.md
+          href: glossary.md
         - name: FAQ
-        - href: faq.md
+          href: faq.md
         - name: Troubleshooting
-        - href: troubleshooting.md
+          href: troubleshooting.md
