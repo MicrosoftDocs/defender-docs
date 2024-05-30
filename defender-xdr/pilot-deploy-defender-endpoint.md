@@ -31,7 +31,7 @@ This article provides a workflow for piloting and deploying Microsoft Defender f
 
 This article assumes you have a production Microsoft 365 tenant and are piloting and deploying Microsoft Defender for Endpoint in this environment. This practice will maintain any settings and customizations you configure during your pilot for your full deployment.
 
-Defender for Endpoint contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Secure remote and hybrid work with Zero Trust](/security/zero-trust/adopt/secure-remote-hybrid-work) business scenario in the Microsoft Zero Trust adoption framework.
+Defender for Endpoint contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Prevent or reduce business damage from a breach](/security/zero-trust/adopt/prevent-reduce-business-damage-breach) business scenario in the Microsoft Zero Trust adoption framework.
 
 ## End-to-end deployment for Microsoft Defender XDR
 
@@ -203,7 +203,7 @@ To run any of the provided simulations, you need at least [one onboarded device]
 
 ## SIEM integration
 
-You can integrate Defender for Endpoint with Microsoft Sentinel or a generic Security Information and Event Management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
+You can integrate Defender for Endpoint with Microsoft Sentinel or a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-endpoint-siem-integration.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Endpoint with SIEM integration." lightbox="./media/eval-defender-xdr/defender-endpoint-siem-integration.svg":::
 
@@ -213,12 +213,12 @@ For information about integration with generic SIEM systems, see [Enable SIEM in
 
 ## Next step
 
-Incorporate the information in [Defender for Endpoint Security Operations Guide](defender-endpoint/mde-sec-ops-guide) into your SecOps processes.
+Incorporate the information in [Defender for Endpoint Security Operations Guide](/defender-endpoint/mde-sec-ops-guide) into your SecOps processes.
 
 ## Next step for the end-to-end deployment of Microsoft Defender XDR
 
-Continue your end-to-end deployment of Microsoft Defender XDR with [Practice incident investigation and response](pilot-deploy-investigate-respond.md).
+Continue your end-to-end deployment of Microsoft Defender XDR with [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md).
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg" alt-text="A diagram that shows the investigate and respond to threats phase of the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg" alt-text="A diagram that shows Microsoft Defender for Cloud Apps in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg":::
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

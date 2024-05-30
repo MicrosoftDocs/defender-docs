@@ -31,7 +31,7 @@ This article provides a workflow for piloting and deploying Microsoft Defender f
 
 This article assumes you have a production Microsoft 365 tenant and are piloting and deploying Microsoft Defender for Cloud Apps in this environment. This practice will maintain any settings and customizations you configure during your pilot for your full deployment.
 
-Defender for Cloud Apps contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Implement threat protection and XDR](/security/zero-trust/adopt/prevent-reduce-business-damage-breach-threat-protection) business scenario in the Microsoft Zero Trust adoption framework.
+Defender for Office 365 contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Prevent or reduce business damage from a breach](/security/zero-trust/adopt/prevent-reduce-business-damage-breach) business scenario in the Microsoft Zero Trust adoption framework.
 
 ## End-to-end deployment for Microsoft Defender XDR
 
@@ -43,7 +43,7 @@ Articles in this series:
 
 | Phase | Link |
 |---|---|
-| A. Start the pilot | [Start the pilot](#start-the-pilot)|
+| A. Start the pilot | [Start the pilot](pilot-deploy-overview.md#start-the-pilot)|
 | B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - **Pilot and deploy Microsoft Defender for Cloud Apps** (this article)  |
 |C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
@@ -90,11 +90,11 @@ Defender for Cloud Apps detects anomalous behavior like impossible-travel, crede
 
 Microsoft Defender XDR correlates the signals from all the Microsoft Defender components to provide the full attack story.
 
-### Defender for Cloud Apps role as a cloud access security broker
+### Defender for Cloud Apps role as a CASB
 
 A cloud access security broker (CASB) acts as a gatekeeper to broker access in real time between your enterprise users and cloud resources they use, wherever your users are located and regardless of the device they are using. Defender for Cloud Apps is a CASB for your organization's cloud apps. Defender for Cloud Apps natively integrates with Microsoft security capabilities, including Microsoft Defender XDR.
 
-Without Defender for Cloud Apps, cloud apps that are used by your organization are unmanaged and unprotected, as illustrated.
+Without Defender for Cloud Apps, cloud apps that are used by your organization are unmanaged and unprotected.
 
 :::image type="content" source="./media/eval-defender-xdr/m365-defender-mcas-architecture-a.svg" alt-text="A diagram that shows cloud apps that are not managed and protected by your organization." lightbox="./media/eval-defender-xdr/m365-defender-mcas-architecture-a.svg":::
 
@@ -256,7 +256,7 @@ For more information on advanced hunting in Microsoft Defender for Cloud Apps da
 
 ## SIEM integration
 
-You can integrate Defender for Cloud Apps with Microsoft Sentinel or a generic Security Information and Event Management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
+You can integrate Defender for Cloud Apps with Microsoft Sentinel or a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-cloud-apps-siem-integration.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Cloud Apps with SIEM integration." lightbox="./media/eval-defender-xdr/defender-cloud-apps-siem-integration.svg":::
 

@@ -31,7 +31,7 @@ This article provides a workflow for piloting and deploying Microsoft Defender f
 
 This article assumes you have a production Microsoft 365 tenant and are piloting and deploying Microsoft Defender for Identity in this environment. This practice will maintain any settings and customizations you configure during your pilot for your full deployment.
 
-Defender for Identity contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Secure remote and hybrid work with Zero Trust](/security/zero-trust/adopt/secure-remote-hybrid-work) business scenario in the Microsoft Zero Trust adoption framework.
+Defender for Office 365 contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Prevent or reduce business damage from a breach](/security/zero-trust/adopt/prevent-reduce-business-damage-breach) business scenario in the Microsoft Zero Trust adoption framework.
 
 ## End-to-end deployment for Microsoft Defender XDR
 
@@ -84,7 +84,7 @@ Here's an example of a cyber-attack and how the components of Microsoft Defender
 
 :::image type="content" source="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg" alt-text="A diagram that shows how Microsoft Defender XDR stops a threat chain." lightbox="./media/eval-defender-xdr/m365-defender-eval-threat-chain.svg":::
 
-Defender for Identity gathers signals from AD DS domain controllers and servers running AD FS and AD CS. It uses these signals to protect your hybrid identity environment, including protecting against hackers that use compromised accounts to move laterally across workstations in the on-premises environment.
+Defender for Identity gathers signals from Active Directory Domain Services (AD DS) domain controllers and servers running Active Directory Federation Services (AD FS) and Active Directory Certificate Services (AD CS). It uses these signals to protect your hybrid identity environment, including protecting against hackers that use compromised accounts to move laterally across workstations in the on-premises environment.
 
 Microsoft Defender XDR correlates the signals from all the Microsoft Defender components to provide the full attack story.
 
@@ -99,7 +99,7 @@ Deploy Microsoft Defender for Identity to help your Security Operations (SecOp) 
 - Investigate suspicious activities, using clear, actionable incident information
 - Respond to attacks, using automatic response to compromised identities. For more information, see [What is Microsoft Defender for Identity?](/defender-for-identity/what-is)
 
-Defender for Identity protects your on-premises Active Directory Domain Services (AD DS) user accounts and user accounts synchronized to your Microsoft Entra ID tenant. To protect an environment made up of only Microsoft Entra user accounts, see [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection).
+Defender for Identity protects your on-premises AD DS user accounts and user accounts synchronized to your Microsoft Entra ID tenant. To protect an environment made up of only Microsoft Entra user accounts, see [Microsoft Entra ID Protection](/azure/active-directory/identity-protection/overview-identity-protection).
 
 The following diagram illustrates the architecture for Defender for Identity.
 
@@ -107,8 +107,8 @@ The following diagram illustrates the architecture for Defender for Identity.
 
 In this illustration:
 
-- Sensors installed on AD DS domain controllers and Active Directory Certificate Services (AD CS) servers parse logs and network traffic and send them to Microsoft Defender for Identity for analysis and reporting.
-- Sensors can also parse Active Directory Federation Services (AD FS) authentications for third-party identity providers and when Microsoft Entra ID is configured to use federated authentication (the dotted lines in the illustration).
+- Sensors installed on AD DS domain controllers and AD CS servers parse logs and network traffic and send them to Microsoft Defender for Identity for analysis and reporting.
+- Sensors can also parse AD FS authentications for third-party identity providers and when Microsoft Entra ID is configured to use federated authentication (the dotted lines in the illustration).
 - Microsoft Defender for Identity shares signals to Microsoft Defender XDR.
 
 Defender for Identity sensors can be directly installed on the following servers:
@@ -197,7 +197,7 @@ The Defender for Identity documentation includes the following tutorials that wa
 
 ## SIEM integration
 
-You can integrate Defender for Identity with Microsoft Sentinel or a generic Security Information and Event Management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
+You can integrate Defender for Identity with Microsoft Sentinel or a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-identity-siem-integration.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Identity with SIEM integration." lightbox="./media/eval-defender-xdr/defender-identity-siem-integration.svg":::
 

@@ -31,7 +31,7 @@ This article provides a workflow for piloting and deploying Microsoft Defender f
 
 This article assumes you have a production Microsoft 365 tenant and are piloting and deploying Microsoft Defender for Office 365 in this environment. This practice will maintain any settings and customizations you configure during your pilot for your full deployment.
 
-Defender for Office 365 contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Secure remote and hybrid work with Zero Trust](/security/zero-trust/adopt/secure-remote-hybrid-work) business scenario in the Microsoft Zero Trust adoption framework.
+Defender for Office 365 contributes to a Zero Trust architecture by helping to prevent or reduce business damage from a breach. For more information, see the [Prevent or reduce business damage from a breach](/security/zero-trust/adopt/prevent-reduce-business-damage-breach) business scenario in the Microsoft Zero Trust adoption framework.
 
 ## End-to-end deployment for Microsoft Defender XDR
 
@@ -47,7 +47,7 @@ Articles in this series:
 | B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - **Pilot and deploy  Defender for Office 365** (this article) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
 |C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
-## Pilot and deploy workflow for Defender for Office
+## Pilot and deploy workflow for Defender for Office 365
 
 The following diagram illustrates a common process to deploy a product or service in an IT environment.
 
@@ -76,7 +76,7 @@ Here are the recommended steps for each deployment stage.
 | Pilot | Perform Steps 1-7 for pilot groups. |
 | Full deployment | Configure the pilot user groups in Step 5 or add user groups to expand beyond the pilot and eventually include all of your user accounts. |
 
-## Defender for Office 365 architecture
+## Defender for Office 365 architecture and requirements
 
 The following diagram illustrates baseline architecture for Microsoft Defender for Office 365, which can include a third-party SMTP gateway or on-premises integration. Hybrid coexistence scenarios (that is, production mailboxes are both on-premises and online) require more complex configurations and aren't covered in this article or evaluation guidance.
 
@@ -96,9 +96,7 @@ The following table describes this illustration.
 
 On-premises integration is common but optional. If your environment is cloud-only, this guidance also works for you.
 
-## Architecture requirements and steps
-
-A successful Defender for Office 365 evaluation or production pilot assumes the following prerequisites:
+A successful Defender for Office 365 evaluation or production pilot requires the following prerequisites:
 
 - All your recipient mailboxes are currently in Exchange Online.
 - Your public MX record resolves directly to EOP or a third-party Simple Mail Transfer Protocol (SMTP) gateway that then relays inbound external email directly to EOP.
@@ -183,11 +181,11 @@ Distribution groups can be created and defined directly in Exchange Online or sy
 1. Sign in to the Exchange Admin Center (EAC) at <https://admin.exchange.microsoft.com> using an account that has been granted Recipient Administrator role or been delegated group management permissions.
 2. Go to **Recipients** \> **Groups**.
 
-   :::image type="content" source="/defender/media/mdo-eval/1_mdo-eval-pilot.png" alt-text=" Screenshot of the Groups menu item to be clicked." lightbox="/defender/media/mdo-eval/1_mdo-eval-pilot.png":::
+   :::image type="content" source="/defender/media/mdo-eval/1_mdo-eval-pilot.png" alt-text=" Screenshot of the Groups menu item." lightbox="/defender/media/mdo-eval/1_mdo-eval-pilot.png":::
 
 3. On the **Groups** page, select ![Add a group icon.](/defender/media/m365-cc-sc-add-internal-icon.png) **Add a group**.
 
-   :::image type="content" source="/defender/media/mdo-eval/2_mdo-eval-pilot-add-group.png" alt-text="Screenshot of the Add a group option to be clicked." lightbox="/defender/media/mdo-eval/2_mdo-eval-pilot-add-group.png":::
+   :::image type="content" source="/defender/media/mdo-eval/2_mdo-eval-pilot-add-group.png" alt-text="Screenshot of the Add a group option." lightbox="/defender/media/mdo-eval/2_mdo-eval-pilot-add-group.png":::
 
 4. For group type, select **Distribution**, and then click **Next**.
 
@@ -253,7 +251,7 @@ Now that your pilot is set up and configured, it's helpful to become familiar wi
 
 ## SIEM integration
 
-You can integrate Defender for Office 365 with Microsoft Sentinel or a generic Security Information and Event Management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
+You can integrate Defender for Office 365 with Microsoft Sentinel or a generic security information and event management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-office-365-siem-integration.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Office 365 with SIEM integration." lightbox="./media/eval-defender-xdr/defender-office-365-siem-integration.svg":::
 
