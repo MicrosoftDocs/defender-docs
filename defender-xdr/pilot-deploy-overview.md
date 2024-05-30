@@ -79,7 +79,7 @@ You can integrate Microsoft Defender XDR components with Microsoft Sentinel or a
 
 Microsoft Sentinel is a cloud-native solution that provides SIEM and security orchestration, automation, and response (SOAR) capabilities. Together, Microsoft Sentinel and Microsoft Defender XDR components provide a comprehensive solution to help organizations defend against modern attacks. 
 
-Microsoft Sentinel includes connectors for Microsoft Defender components. This allows you to not only gain visibility into your cloud apps but to also get sophisticated analytics to identify and combat cyberthreats and to control how your data travels. For more information, see [Overview of Microsoft Defender XDR and Microsoft Sentinel integration](/azure/sentinel/microsoft-365-defender-sentinel-integration) and [integration steps for Microsoft Sentinel and Microsoft Defender XDR](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
+Microsoft Sentinel includes connectors for Microsoft Defender components. This allows you to not only gain visibility into your cloud apps but to also get sophisticated analytics to identify and combat cyberthreats and to control how your data travels. For more information, see [Overview of Microsoft Defender XDR and Microsoft Sentinel integration](/azure/sentinel/microsoft-365-defender-sentinel-integration) and [Integration steps for Microsoft Sentinel and Microsoft Defender XDR](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
 
 For more information about SOAR in Microsoft Sentinel (including links to playbooks in the Microsoft Sentinel GitHub Repository), see [Automate threat response with playbooks in Microsoft Sentinel](/azure/sentinel/automate-responses-with-playbooks).
 
@@ -133,21 +133,21 @@ If you do not have Microsoft 365 E5 and want to advantage of Microsoft 365 E5 tr
 2. Select **Purchase Services** from the navigation menu.
 3. From the Office 365 section select **Details** under Office 365 E5 license.
 
-   :::image type="content" source="/defender/media/mdo-eval/2_mdo-eval-license-details.png" alt-text="The Details button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/2_mdo-eval-license-details.png":::
+   :::image type="content" source="/defender/media/mdo-eval/2_mdo-eval-license-details.png" alt-text="Screenshot of the Details button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/2_mdo-eval-license-details.png":::
 
 4. Select **Start free trial**.
 
-   :::image type="content" source="/defender/media/mdo-eval/3-m365-purchase-button.png" alt-text="The Start free trial button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/3-m365-purchase-button.png":::
+   :::image type="content" source="/defender/media/mdo-eval/3-m365-purchase-button.png" alt-text="Screenshot of the Start free trial button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/3-m365-purchase-button.png":::
 
 5. Confirm your request and select **Try now**.
 
-   :::image type="content" source="/defender/media/mdo-eval/4_mdo-trial-order.png" alt-text="The Try Now button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/4_mdo-trial-order.png":::
+   :::image type="content" source="/defender/media/mdo-eval/4_mdo-trial-order.png" alt-text="Screenshot of the Try Now button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/4_mdo-trial-order.png":::
 
 Your pilot using Microsoft 365 E5 trial licenses in your existing production tenant will let you keep any security settings and methods when the trial expires and you purchase equivalent licenses.
 
 ## Next step
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" alt-text="A diagram that shows Microsoft Defender for Identity in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" alt-text="A diagram showing Microsoft Defender for Identity in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg":::
 
 See [Pilot and deploy Microsoft Defender for Identity](pilot-deploy-defender-identity.md).
 

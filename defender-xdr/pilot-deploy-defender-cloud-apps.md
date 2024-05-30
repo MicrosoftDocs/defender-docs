@@ -256,7 +256,7 @@ For more information on advanced hunting in Microsoft Defender for Cloud Apps da
 
 ## SIEM integration
 
-You can integrate Defender for Cloud Apps with Microsoft Sentinel or a generic Security Information and Event Management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps.
+You can integrate Defender for Cloud Apps with Microsoft Sentinel or a generic Security Information and Event Management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-cloud-apps-siem-integration.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Cloud Apps with SIEM integration." lightbox="./media/eval-defender-xdr/defender-cloud-apps-siem-integration.svg":::
 

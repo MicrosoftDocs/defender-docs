@@ -183,9 +183,7 @@ Implementing these recommendations can take some time to plan and implement. Whi
 
 ## Step 6: Try out capabilities
 
-The Defender for Identity documentation includes a series of tutorials that walk through the process of identifying and remediating various attack types.
-
-Try out Defender for Identity tutorials:
+The Defender for Identity documentation includes the following tutorials that walk through the process of identifying and remediating various attack types:
 
 - [Reconnaissance alerts](/defender-for-identity/reconnaissance-alerts)
 - [Compromised credential alerts](/defender-for-identity/compromised-credentials-alerts)
@@ -199,7 +197,7 @@ Try out Defender for Identity tutorials:
 
 ## SIEM integration
 
-You can integrate Defender for Identity with Microsoft Sentinel or a generic Security Information and Event Management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps.
+You can integrate Defender for Identity with Microsoft Sentinel or a generic Security Information and Event Management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-identity-siem-integration.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Identity with SIEM integration." lightbox="./media/eval-defender-xdr/defender-identity-siem-integration.svg":::
 

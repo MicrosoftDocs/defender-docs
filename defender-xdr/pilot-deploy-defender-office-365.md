@@ -44,7 +44,7 @@ Articles in this series:
 | Phase | Link |
 |---|---|
 | A. Start the pilot | [Start the pilot](pilot-deploy-overview.md#start-the-pilot)|
-| B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - **Pilot and deploy  Defender for Office 365 (this article)** <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
+| B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - **Pilot and deploy  Defender for Office 365** (this article) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
 |C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
 ## Pilot and deploy workflow for Defender for Office
@@ -76,7 +76,7 @@ Here are the recommended steps for each deployment stage.
 | Pilot | Perform Steps 1-7 for pilot groups. |
 | Full deployment | Configure the pilot user groups in Step 5 or add user groups to expand beyond the pilot and eventually include all of your user accounts. |
 
-## Understand the architecture
+## Defender for Office 365 architecture
 
 The following diagram illustrates baseline architecture for Microsoft Defender for Office 365, which can include a third-party SMTP gateway or on-premises integration. Hybrid coexistence scenarios (that is, production mailboxes are both on-premises and online) require more complex configurations and aren't covered in this article or evaluation guidance.
 
@@ -152,21 +152,21 @@ For detailed information, see [Try Microsoft Defender for Office 365](/defender-
 
 2. On the *Evaluation mode* page, click **Start evaluation**.
 
-   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_05.png" alt-text="The Evaluation mode page and the Start evaluation button to click." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_05.png":::
+   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_05.png" alt-text="Screenshot of the Evaluation mode page and the Start evaluation button to click." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_05.png":::
 
 3. In the *Turn on protection* dialog, select **No, I only want reporting**, and then click **Continue**.
 
-   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_06.png" alt-text="The Turn on protection dialog and the No, I only want reporting option to select." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_06.png":::
+   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_06.png" alt-text="Screenshot of the Turn on protection dialog and the No, I only want reporting option to select." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_06.png":::
 
 4. In the *Select the users you want to include* dialog, select **All users**, and then click **Continue**.
 
-   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_07.png" alt-text="The Select the users you want to include dialog and the All users option to select." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_07.png":::
+   :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_07.png" alt-text="Screenshot of the Select the users you want to include dialog and the All users option to select." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_07.png":::
 
 5. In the *Help us understand your mail flow* dialog, one of the following options is automatically selected based on our detection of the MX record for your domain:
 
    - **I'm only using Microsoft Exchange Online**: The MX records for your domain point to Microsoft 365. There's nothing left to configure, so click **Finish**.
 
-     :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_08a.png" alt-text="The Help us understand your mail flow dialog with the I'm only using Microsoft Exchange Online option selected." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_08a.png":::
+     :::image type="content" source="/defender/media/mdo-eval/mdo-eval-activate-eval_08a.png" alt-text="Screenshot of the Help us understand your mail flow dialog with the I'm only using Microsoft Exchange Online option selected." lightbox="/defender/media/mdo-eval/mdo-eval-activate-eval_08a.png":::
 
    - **I'm using a third-party and/or on-premises service provider**: In the upcoming screens, select the vendor name along with the inbound connector that accepts mail from that solution. You also decide if you need an Exchange Online mail flow rule (also known as a transport rule) that skips spam filtering for incoming messages from the third-party protection service or device. When you're finished, click **Finish**.
 
@@ -183,19 +183,19 @@ Distribution groups can be created and defined directly in Exchange Online or sy
 1. Sign in to the Exchange Admin Center (EAC) at <https://admin.exchange.microsoft.com> using an account that has been granted Recipient Administrator role or been delegated group management permissions.
 2. Go to **Recipients** \> **Groups**.
 
-   :::image type="content" source="/defender/media/mdo-eval/1_mdo-eval-pilot.png" alt-text=" The Groups menu item to be clicked." lightbox="/defender/media/mdo-eval/1_mdo-eval-pilot.png":::
+   :::image type="content" source="/defender/media/mdo-eval/1_mdo-eval-pilot.png" alt-text=" Screenshot of the Groups menu item to be clicked." lightbox="/defender/media/mdo-eval/1_mdo-eval-pilot.png":::
 
 3. On the **Groups** page, select ![Add a group icon.](/defender/media/m365-cc-sc-add-internal-icon.png) **Add a group**.
 
-   :::image type="content" source="/defender/media/mdo-eval/2_mdo-eval-pilot-add-group.png" alt-text="The Add a group option to be clicked." lightbox="/defender/media/mdo-eval/2_mdo-eval-pilot-add-group.png":::
+   :::image type="content" source="/defender/media/mdo-eval/2_mdo-eval-pilot-add-group.png" alt-text="Screenshot of the Add a group option to be clicked." lightbox="/defender/media/mdo-eval/2_mdo-eval-pilot-add-group.png":::
 
 4. For group type, select **Distribution**, and then click **Next**.
 
-   :::image type="content" source="/defender/media/mdo-eval/3-mdo-eval-pilot-group-type.png" alt-text=" The Choose a group type section." lightbox="/defender/media/mdo-eval/3-mdo-eval-pilot-group-type.png":::
+   :::image type="content" source="/defender/media/mdo-eval/3-mdo-eval-pilot-group-type.png" alt-text="Screenshot of the Choose a group type section." lightbox="/defender/media/mdo-eval/3-mdo-eval-pilot-group-type.png":::
 
 5. Give the group a **Name** and optional **Description**, and then click Next.
 
-   :::image type="content" source="/defender/media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png" alt-text="The Set up the basics section." lightbox="/defender/media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png":::
+   :::image type="content" source="/defender/media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png" alt-text="Screenshot of the Set up the basics section." lightbox="/defender/media/mdo-eval/4_mdo-eval-pilot-set-up-basics.png":::
 
 6. On the remaining pages, assign an owner, add members to the group, set the email address, join-depart restrictions, and other settings.
 
@@ -227,7 +227,7 @@ We recommended you begin with the *preset security policies* in EOP and Defender
 
 For example, an EOP condition for pilot evaluations could be applied if the recipients are *members* of a defined *EOP Standard Protection* group, and then managed by adding accounts to, or removing account from, the group.
 
-Likewise, a Defender for Office 365 condition for pilot evaluations could be applied if the recipients are *members* of a defined *Defender for Office 365 Standard Protection* group and then managed by adding / removing accounts via the group.
+Likewise, a Defender for Office 365 condition for pilot evaluations could be applied if the recipients are *members* of a defined *Defender for Office 365 Standard Protection* group and then managed by adding or removing accounts via the group.
 
 For complete instructions, see [Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users](/defender-office-365/preset-security-policies#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users).
 
@@ -253,17 +253,17 @@ Now that your pilot is set up and configured, it's helpful to become familiar wi
 
 ## SIEM integration
 
-You can integrate Defender for Office 365 with Microsoft Sentinel or a generic Security Information and Event Management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps.
+You can integrate Defender for Office 365 with Microsoft Sentinel or a generic Security Information and Event Management (SIEM) service to enable centralized monitoring of alerts and activities from connected apps. With Microsoft Sentinel, you can more comprehensively analyze security events across your organization and build playbooks for effective and immediate response.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-office-365-siem-integration.svg" alt-text="A diagram that shows the architecture for Microsoft Defender for Office 365 with SIEM integration." lightbox="./media/eval-defender-xdr/defender-office-365-siem-integration.svg":::
 
 Microsoft Sentinel includes a Defender for Office 365 connector. For more information, see [Connect alerts from Microsoft Defender for Office 365](/azure/sentinel/connect-office-365-advanced-threat-protection).
 
-Microsoft Defender for Office 365 can also be integrated into other SIEM solutions using the [Office 365 Activity Management API](/office/office-365-management-api/office-365-management-activity-api-reference). For information about integration with third-party SIEM systems, see [Generic SIEM integration](/cloud-app-security/siem).
+Microsoft Defender for Office 365 can also be integrated into other SIEM solutions using the [Office 365 Activity Management API](/office/office-365-management-api/office-365-management-activity-api-reference). For information about integration with generic SIEM systems, see [Generic SIEM integration](/cloud-app-security/siem).
 
 ## Next step
 
-Incorporate the information in [Defender for Endpoint Security Operations Guide](defender-endpoint/mde-sec-ops-guide) into your SecOps processes.
+Incorporate the information in [Microsoft Defender for Office 365 Security Operations Guide](/defender-office-365/mdo-sec-ops-guide) into your SecOps processes.
 
 ## Next step for the end-to-end deployment of Microsoft Defender XDR
 
