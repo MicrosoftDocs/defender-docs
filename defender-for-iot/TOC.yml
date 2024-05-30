@@ -1,2 +1,52 @@
-- name: Index
-  href: index.md
+###- name: Index
+###  href: index.md
+- name: Microsoft Defender for IoT
+  href: index.yml
+  expanded: true
+  items:
+    - name: Overview
+      items:
+      - name: What is Microsoft Defender for IoT?
+        href: microsoft-defender-iot.md
+      - name: Compare Defender and Azure
+        href: compare-defender-azure.md
+      - name: Site security
+        href: site-security-overview.md
+    - name: Get started
+      items:
+      - name: Prerequisites
+        href: prerequisites.md            
+      - name: Onboard DIoT
+        href: onboard-diot.md 
+      - name: License admin center
+        href: license-admin-center.md   
+      - name: Set up sites
+        href: set-up-sites.md
+    - name: Monitor site security
+      items:
+      - name: Monitor site and investigate recommendations
+        href: monitor-site-security-and-investigate-recommendations.md         
+      - name: Investigate and remediate vulnerabilities
+        items:
+        - name: How to navigate weakness page
+          href: navigate-weakness-page.md
+        - name: Discover vulnerabilities
+          href: discover-vulnerabilities.md
+      - name: Investigate and remediate threats
+        items:
+        - name: Investigate alerts
+          href: investigate-threats.md
+      - name: Manage
+        items:
+        - name: Manage sites
+          href: manage-sites.md
+        - name: Manage OT devices in the inventory
+          href: manage-devices-inventory.md
+      - name: Resources
+        items:
+        - name: Glossary
+          href: glossary.md
+        - name: FAQ
+          href: faq.md
+        - name: Troubleshooting
+          href: troubleshooting.md
