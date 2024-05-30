@@ -45,9 +45,9 @@ This article describes how admins can manage entries for email senders in the Mi
 
 - Entries for spoofed senders never expire.
 
-- For blocking inbound and outbound emails from domain, any subdomain in that domain, any email address in that domain, please create the block entry in the format *.<TLD>, where <TLD> can be any top-level domainin, inside domains and email addresses. 
+- For blocking inbound and outbound email from a domain, any subdomains in that domain, and any email addresses in that domain, create the block entry using the syntax: `*.TLD`, where `TLD` can be any top-level domain, interal domain, or email address domain.
 
-- For blocking inbound and outbound emails from a sudomain in a domain, any email address in that subdomain, please create the block entry in the format *.SD1.TLD, *.SD2.SD1.TLD, *.SD3.SD2.SD1.TLD, or similar patterns, inside domains and email addresses.
+- For blocking inbound and outbound email from a sudomain in a domain and any email addresses in that subdomain, create the block entry using the syntax: `*.SD1.TLD`, `*.SD2.SD1.TLD`, `*.SD3.SD2.SD1.TLD`, etc. for internal domains and email address domains.
 
 - For details about the syntax for spoofed sender entries, see the [Domain pair syntax for spoofed sender entries](#domain-pair-syntax-for-spoofed-sender-entries) section later in this article.
 
