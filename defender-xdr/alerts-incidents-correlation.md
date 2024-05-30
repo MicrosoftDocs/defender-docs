@@ -32,6 +32,7 @@ In Microsoft Defender XDR, ***alerts*** are signals from a collection of sources
 Here is a summary of the main attributes of incidents and alerts, and the differences between them:
 
 **Incidents:**
+
 - Are the main "unit of measure" of the work of the Security Operations Center (SOC).
 - Display the broader context of an attack.
 - Represent "case files" of all the information needed to investigate the threat and the findings of the investigation.
@@ -39,6 +40,7 @@ Here is a summary of the main attributes of incidents and alerts, and the differ
 - Record all activity related to the threat and its investigation and resolution.
 
 **Alerts:**
+
 - Represent the individual pieces of evidence that are essential to understanding and investigating the incident.
 - Can be analyzed by themselves to add value when deeper analysis is required.
 - Can trigger automatic mini-investigations and responses to minimize the potential threat impact.
@@ -48,17 +50,17 @@ Here is a summary of the main attributes of incidents and alerts, and the differ
 Microsoft Defender XDR alerts can come from many sources:
 
 - Solutions that are part of Microsoft Defender XDR
-    - Microsoft Defender for Endpoint
-    - Microsoft Defender for Office 365
-    - Microsoft Defender for Identity
-    - Microsoft Defender for Cloud Apps
-    - The app governance add-on for Microsoft Defender for Cloud Apps
-    - Microsoft Entra ID Protection
-    - Microsoft Data Loss Prevention.  
+  - Microsoft Defender for Endpoint
+  - Microsoft Defender for Office 365
+  - Microsoft Defender for Identity
+  - Microsoft Defender for Cloud Apps
+  - The app governance add-on for Microsoft Defender for Cloud Apps
+  - Microsoft Entra ID Protection
+  - Microsoft Data Loss Prevention
 
 - Other services that have integrations with the Microsoft Defender security portal
-    - Microsoft Sentinel
-    - Microsoft Defender for Cloud
+  - Microsoft Sentinel
+  - Microsoft Defender for Cloud
 
 Alerts' sources can be indicated by sets of characters prepended to the alert ID. The table shown [here](link) helps you understand the mapping of alert sources based on the prepended character on the alert.
 
@@ -81,21 +83,33 @@ Microsoft Defender XDR’s correlation activities don’t stop when incidents ar
 
 Defender XDR’s correlation engine merges incidents when it recognizes common elements between alerts in separate incidents, based on its deep knowledge of the data and the attack behavior. Some of these elements include:
 
- - Entities&mdash;assets like users, devices, mailboxes, and others
- - Artifacts&mdash;files, processes, email senders, and others
- - Time frames
- - Sequences of events that point to multistage attacks
+- Entities&mdash;assets like users, devices, mailboxes, and others
+- Artifacts&mdash;files, processes, email senders, and others
+- Time frames
+- Sequences of events that point to multistage attacks&mdash;for example, a malicious email click event that follows closely on a phishing email detection.
 
 ### When are incidents *not* merged?
 
+Even when the correlation logic indicates that two incidents should be merged, Defender XDR doesn’t merge the incidents under the following circumstances:
 
+- One of the incidents has a status of "Closed". Incidents that are resolved don’t get reopened.
+- The two incidents eligible for merging are assigned to two different people.
+- Merging the two incidents would raise the number of entities in the merged incident above the maximum allowed.
+- The two incidents contain devices in different device groups as defined by the organization. This criterion is in effect only when [enabled](link-to-procedure).
+- One of the incidents was created by a custom detection, and the other was not.
 
+### What happens when incidents are merged?
 
+When two or more incidents are merged, the contents of one incident are migrated into the other incident. A new incident is not created. The incident abandoned in the process is automatically deleted. If the abandoned incident originated in Microsoft Sentinel, it will be closed but not deleted. Any references to the closed or deleted incident are redirected to the consolidated incident. The contents of the incidents are handled in the following ways:
 
+- Alerts contained in the closed incident are moved to the consolidated incident.
+- Entities (assets etc.) follow the alerts they’re linked to.
+- Tags? ***awaiting answer from PM***
+- Other?
+- Comments and activity log entries in the abandoned incident are *not* moved to the new one.
 
+## Manual correlation
 
-
-
-
+While Microsoft Defender XDR already uses advanced correlation mechanisms, you might want to decide differently whether a given alert belongs with a particular incident or not. In such a case, you can unlink an alert from one incident and link it to another. Every alert must belong to an incident, so you can either link the alert to another existing incident, or to a new incident that you create on the spot.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
