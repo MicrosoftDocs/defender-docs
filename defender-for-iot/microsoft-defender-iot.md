@@ -2,8 +2,8 @@
 title: Microsoft Defender for IoT
 description: Microsoft Defender for IoT is an enterprise endpoint security platform that helps defend against advanced persistent threats.
 ms.service: defender-iot
-ms.author: siosulli
-author: siosulli
+ms.author: lwainstein
+author: lwainstein
 ms.localizationpriority: high
 manager: deniseb
 audience: ITPro
