@@ -162,10 +162,14 @@ Defender for Endpoint directly integrates with various Microsoft solutions, incl
 
 With Microsoft Defender XDR, Defender for Endpoint, and various Microsoft security solutions, form a unified pre- and post-breach enterprise defense suite that natively integrates across endpoint, identity, email, and applications to detect, prevent, investigate, and automatically respond to sophisticated attacks.
 
-## More resources
+## Security, privacy, and compliance information
 
-[Zero Trust with Microsoft Defender for Endpoint](zero-trust-with-microsoft-defender-endpoint.md)
+- [Zero Trust with Microsoft Defender for Endpoint](zero-trust-with-microsoft-defender-endpoint.md)
 
+- [Microsoft Trust Center - Data protection and privacy](https://www.microsoft.com/trust-center/privacy)
 
+- [Privacy at Microsoft](https://privacy.microsoft.com/)
+
+- [Privacy & data management overview](/compliance/assurance/assurance-privacy)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
