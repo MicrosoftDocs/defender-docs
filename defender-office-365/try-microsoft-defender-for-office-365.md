@@ -439,6 +439,10 @@ A: No. The trial automatically provisions Defender for Office 365 Plan 2 license
 
 A: See [Extend your trial](/microsoft-365/commerce/try-or-buy-microsoft-365#extend-your-trial).
 
+### Q: Why do I not see options to cancel or extend the trial?
+
+A: You don't see options to cancel or extend your trial if your subscription is part of the New Commerce Experience (NCE). Currently, only customers on legacy subscriptions have the capability to cancel or extend their trials. 
+
 ### Q: What happens to my data after the trial expires?
 
 A: After your trial expires, you have access to your trial data (data from features in Defender for Office 365 that you didn't have previously) for 30 days. After this 30 day period, all policies and data that were associated with the Defender for Office 365 trial are deleted.
