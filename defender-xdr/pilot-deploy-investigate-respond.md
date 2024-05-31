@@ -421,7 +421,7 @@ Here's an example.
 
 From the Action center, you can select pending actions and then approve or reject them in the flyout pane. Here's an example.
 
-:::image type="content" source="/defender/media/air-actioncenter-itemselected.png" alt-text="A screenshot of the pane displaying the options to approve or reject an action in the Microsoft Defender portal. lightbox="/defender/media/air-actioncenter-itemselected.png":::
+:::image type="content" source="/defender/media/air-actioncenter-itemselected.png" alt-text="A screenshot of the pane displaying the options to approve or reject an action in the Microsoft Defender portal." lightbox="/defender/media/air-actioncenter-itemselected.png":::
 
 
 Approve (or reject) pending actions as soon as possible so that your automated investigations can proceed and complete in a timely manner.
@@ -509,7 +509,7 @@ There's a single internal mailbox and device required for this simulation. You'l
 
    1. Click the resulting rows from the query so you can inspect the record.
 
-      :::image type="content" source="/defender/media/advanced-hunting-incident-response-try-2.png" alt-text="A screenshot of the Inspect record section of the Advanced Hunting page in the Microsoft Defender portal. lightbox="/defender/media/advanced-hunting-incident-response-try-2.png":::
+      :::image type="content" source="/defender/media/advanced-hunting-incident-response-try-2.png" alt-text="A screenshot of the Inspect record section of the Advanced Hunting page in the Microsoft Defender portal." lightbox="/defender/media/advanced-hunting-incident-response-try-2.png":::
 
 4. Now that you have verified that you can see the email, add a filter for the attachments. Focus on all emails with attachments in the environment. For this simulation, focus on inbound emails, not those that are being sent out from your environment. Remove any filters you have added to locate your message and add "| where **AttachmentCount > 0** and **EmailDirection** == **"Inbound""**
 
