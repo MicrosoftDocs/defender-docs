@@ -7,7 +7,7 @@ f1.keywords:
   - NOCSH
 ms.author: dansimp
 author: dansimp
-ms.date: 05/15/2024
+ms.date: 05/31/2024
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -92,7 +92,7 @@ Microsoft Defender XDR correlates the signals from all the Microsoft Defender co
 
 Microsoft Defender for Identity is fully integrated with Microsoft Defender XDR and leverages signals from on-premises Active Directory identities to help you better identify, detect, and investigate advanced threats directed at your organization.
 
-Deploy Microsoft Defender for Identity to help your Security Operations (SecOp) teams deliver a modern identity threat detection and response (ITDR) solution across hybrid environments, including:
+Deploy Microsoft Defender for Identity to help your Security Operations (SecOps) teams deliver a modern identity threat detection and response (ITDR) solution across hybrid environments, including:
 
 - Prevent breaches, using proactive identity security posture assessments
 - Detect threats, using real-time analytics and data intelligence

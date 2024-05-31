@@ -18,7 +18,7 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: conceptual
-ms.date: 05/15/2024
+ms.date: 05/31/2024
 ---
 
 # Pilot and deploy Defender for Office 365
@@ -124,7 +124,7 @@ To effectively evaluate Microsoft Defender for Office 365, it's important that i
 
 ## Step 2: Audit accepted domains
 
-1. In the Exchange admin center (EAC) at <https://admin.exchange.microsoft.com>, expand *Mail flow*, and then click **Accepted domains**.Or, to go directly to the *Accepted domains* page, use <https://admin.exchange.microsoft.com/#/accepteddomains>.
+1. In the Exchange admin center (EAC) at <https://admin.exchange.microsoft.com>, expand *Mail flow*, and then click **Accepted domains**. Or, to go directly to the *Accepted domains* page, use <https://admin.exchange.microsoft.com/#/accepteddomains>.
 2. On the *Accepted domains* page, make note of the **Domain type** value for your primary email domain.
     - If the domain type is set to **Authoritative**, then it's assumed all recipient mailboxes for your organization currently reside in Exchange Online.
     - If the domain type is set to **InternalRelay**, then you may still be in a hybrid model where some recipient mailboxes still reside on-premises.
@@ -207,7 +207,7 @@ Some capabilities are *not yet* configured. You have the following options for c
 
 - **Assign users to preset security policies**: [Preset security policies](/defender-office-365/preset-security-policies) are the recommended method to quickly assign a uniform level of protection across all of the capabilities. You can choose from **Standard** or **Strict** protection. The settings for Standard and Strict are described in the tables [here](/defender-office-365/recommended-settings-for-eop-and-office365). The differences between Standard and Strict are summarized in the table [here](/defender-office-365/preset-security-policies#policy-settings-in-preset-security-policies).
 
-  The advantages of preset security polices are you protect groups of users as quickly as possible using Microsoft's recommended settings based on observations in the datacenters. As new protection capabilities are added and as the security landscape changes, the settings in preset security policies are automatically updated to our recommended settings.
+  The advantages of preset security policies are you protect groups of users as quickly as possible using Microsoft's recommended settings based on observations in the datacenters. As new protection capabilities are added and as the security landscape changes, the settings in preset security policies are automatically updated to our recommended settings.
 
   The disadvantage of preset security policies is you can't customize virtually any of the security settings in preset security policies (for example, you can't change an action from deliver to junk to quarantine, or vice-versa). The exception is entries and optional exceptions for [user impersonation and domain impersonation protection](/defender-office-365/anti-phishing-policies-about#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365), which you must configure manually.
 
@@ -221,7 +221,7 @@ For detailed information about choosing preset security policies vs. custom poli
 
 ### Assign preset security policies
 
-We recommended you begin with the *preset security policies* in EOP and Defender for Office 365 fast by assigning them to specific pilot users or defined groups as part of your evaluation. Preset policies offer a baseline **Standard** protection template or a more aggressive **Strict** protection template, which can be assigned independently.
+We recommend you begin with the *preset security policies* in EOP and Defender for Office 365 fast by assigning them to specific pilot users or defined groups as part of your evaluation. Preset policies offer a baseline **Standard** protection template or a more aggressive **Strict** protection template, which can be assigned independently.
 
 For example, an EOP condition for pilot evaluations could be applied if the recipients are *members* of a defined *EOP Standard Protection* group, and then managed by adding accounts to, or removing account from, the group.
 

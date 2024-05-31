@@ -172,7 +172,7 @@ Let's start by checking out the dashboards.
 
 ### View the device inventory
 
-The device inventory is where you'll see the list of endpoints, network devices, and IoT devices in your network. Not only does it provide you with a view of the devices in your network, but it also gives your in-depth information about them such as  domain, risk level, OS platform, and other details for easy identification of devices most at risk.
+The device inventory is where you'll see the list of endpoints, network devices, and IoT devices in your network. Not only does it provide you with a view of the devices in your network, but it also gives you in-depth information about them such as  domain, risk level, OS platform, and other details for easy identification of devices most at risk.
 
 ### View the Microsoft Defender Vulnerability Management dashboard 
 
