@@ -208,21 +208,20 @@ We recommend using Intune to configure controlled folder access.
 
 :::image type="content" source="/defender/media/mde-p1/mem-asrpolicies.png" alt-text="attack surface reduction policies in the Intune portal" lightbox="/defender/media/mde-p1/mem-asrpolicies.png":::
 
-1. Go to the Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) and sign in. 
+1. Go to the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign in. 
 
 2. Select **Endpoint Security**, and then select **Attack Surface Reduction**.
 
 3. Choose **+ Create Policy**. 
 
-4. For **Platform**, select **Windows 10 and later**, and for **Profile**, select **Attack surface reduction rules**. Then choose **Create**. 
+4. For **Platform**, select **Windows 10, Windows 11, and Windows Server**, and for **Profile**, select **Attack surface reduction rules**. Then choose **Create**. 
 
 5. On the **Basics** tab, name the policy and add a description. Select **Next**. 
 
-6. On the **Configuration settings** tab, in the **Attack Surface Reduction Rules** section, scroll down to the bottom. In the **Enable folder protection** drop-down, select **Enable**. You can optionally specify these other settings:
+6. On the **Configuration settings** tab, in the **Attack Surface Reduction Rules** section, scroll down to the bottom. In the **Enable Controlled Folder Access** drop-down, select **Enable**. You can optionally specify these other settings:
 
-   - Next to **List of additional folders that need to be protected**, select the drop-down menu, and then add folders that need to be protected.
-   - Next to **List of apps that have access to protected folders**, select the drop-down menu, and then add apps that should have access to protected folders.
-   - Next to **Exclude files and paths from attack surface reduction rules**, select the drop-down menu, and then add the files and paths that need to be excluded from attack surface reduction rules.
+   - Next to **Controlled Folder Access Protected Folders**, toggle the switch to **Configured**, and then add folders that need to be protected.
+   - Next to **Controlled Folder Access Allowed Applications**, toggle the switch to **Configured**, and then add apps that should have access to protected folders.
 
    Then choose **Next**.
 
