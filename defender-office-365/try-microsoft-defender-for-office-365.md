@@ -441,7 +441,7 @@ A: See [Extend your trial](/microsoft-365/commerce/try-or-buy-microsoft-365#exte
 
 ### Q: Why do I not see options to cancel or extend the trial?
 
-A: You may not see options to cancel or extend your trials because your subscription is part of the New Commerce Experience (NCE). Currently, only customers on legacy subscriptions have the capability to cancel or extend their trials. 
+A: You don't see options to cancel or extend your trial if your subscription is part of the New Commerce Experience (NCE). Currently, only customers on legacy subscriptions have the capability to cancel or extend their trials. 
 
 ### Q: What happens to my data after the trial expires?
 
