@@ -41,6 +41,8 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## May 2024
 
+- **Top level domain and subdomain blocking in Tenant Allow/Block List**: You will be able to create block entries under domains & email addresses, using the format *.<TLD>, where <TLD> can be any top-level domain or *.SD1.TLD, *.SD2.SD1.TLD, *.SD3.SD2.SD1.TLD, and similar pattern for subdomain blocking. It will block all emails received from or sent to any email address or email addresses under that domain or subdomain respectively during mail flow.
+
 - **Automated end user feedback**: The user submission automatic feedback response capability in Microsoft Defender for Office 365 enables organizations to automatically respond to end user submissions of phishing based on the verdict from the automated investigation. [Learn more](air-user-automatic-feedback-response.md).
 
 - We are introducing **Sender's copy clean-up features** in Threat Explorer, email entity, Summary Panel, and Advanced hunting. These new features will streamline the process of managing Sent items, particularly for admins who use Soft delete and Move to inbox actions. For more information, see [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md). Key highlights:
