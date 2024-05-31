@@ -43,10 +43,10 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-        - text: Create a trial lab
-          url: eval-overview.md
-        - text: Run pilot project in production
-          url: eval-overview.md
+        - text: Pilot Microsoft Defender XDR components
+          url: pilot-deploy-overview.md
+        - text: Microsoft Defender XDR trial lab environment
+          url: setup-m365deval.md
 
 # Card
   - title: Get started
