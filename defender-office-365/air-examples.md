@@ -67,9 +67,9 @@ Next, several threat investigation and hunting steps are done:
 - Determine whether similar messages were reported by other users in [Exchange Online Protection](eop-about.md) (EOP) and [Microsoft Defender for Office 365](mdo-about.md).
 - Determine whether a user has been compromised. This check leverages signals across Office 365, [Microsoft Defender for Cloud Apps](/cloud-app-security), and [Microsoft Entra ID](/azure/active-directory), correlating any related user activity anomalies.
 
-During the hunting phase, risks and threats are assigned to various hunting steps.
+During the hunting phase, risks and threats are assigned to various hunting steps. For more information, see [Details and results of an automated investigation](air-view-investigation-results.md).
 
-Remediation is the final phase of the playbook. During this phase, remediation steps are taken, based on the investigation and hunting phases.
+Remediation is the final phase of the playbook. During this phase, remediation steps are taken, based on the investigation and hunting phases. For more information, see [Remediation actions in Microsoft Defender for Office 365](air-remediation-actions.md).
 
 ## Example: A security administrator triggers an investigation from Threat Explorer
 

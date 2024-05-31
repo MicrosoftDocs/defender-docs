@@ -47,7 +47,7 @@ An alert is triggered, and a security playbook starts an automated investigation
    - An alert is triggered by an alert policy that identified something suspicious in email (for example, the message itself, an attachment, a URL, or a compromised user account). An incident is created, and an automated investigation begins.
 
      > [!TIP]
-     > Be sure to regularly review the alerts your organization. For more information about alerts and alerts that trigger automated investigations, see the [default alert policies in the Threat management category](/purview/alert-policies#default-alert-policies). The entries that contain the value **Yes** for **Automated investigation** trigger an automated investigation.
+     > Be sure to regularly review the alerts your organization. For more information about alert policies that trigger automated investigations, see the [default alert policies in the Threat management category](/purview/alert-policies#default-alert-policies). The entries that contain the value **Yes** for **Automated investigation** trigger automated investigations.
 
    - A security analyst manually triggers the investigation. For examples, see [Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2](air-examples.md).
 
@@ -95,7 +95,7 @@ AIR contains data for users with Defender for Office 365 licenses assigned to th
 
 ## Next steps
 
-- [Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2](air-examples.md)
+- [AIR examples](air-examples.md)
 - [See details and results of an automated investigation](air-view-investigation-results.md#view-investigation-details)
 - [Review and approve pending actions](air-remediation-actions.md)
 - [View pending or completed remediation actions](air-review-approve-pending-completed-actions.md)
