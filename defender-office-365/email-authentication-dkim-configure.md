@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 1/29/2024
+ms.date: 05/31/2024
 audience: ITPro
 ms.topic: conceptual
 
@@ -31,7 +31,7 @@ appliesto:
 
 DomainKeys Identified Mail (DKIM) is a method of [email authentication](email-authentication-about.md) that helps validate mail sent from your Microsoft 365 organization to prevent spoofed senders that are used in business email compromise (BEC), ransomware, and other phishing attacks.
 
-The primary purpose of DKIM is to verify that a message hasn't been altered in transit. Specifically:
+The primary purpose of DKIM is to verify that a message wasn't altered in transit. Specifically:
 
 1. One or more private keys are generated for a domain and are used by the source email system to digitally sign important parts of outbound messages. These message parts include:
    - From, To, Subject, MIME-Version, Content-Type, Date, and other message header fields (depending on the source email system).
@@ -100,7 +100,7 @@ Points to address or value: selector2-<CustomDomain>._domainkey.<InitialDomain>
 
 - In Microsoft 365, two public-private key pairs are generated when DKIM signing using a custom domain or subdomain is enabled. The private keys that are used to sign the message are inaccessible. The CNAME records point to the corresponding public keys that are used to verify the DKIM signature. These records are known as _selectors_.
   - Only one selector is active and used when DKIM signing using a custom domain is enabled.
-  - The second selector is inactive. It's activated and used only after any future [DKIM key rotation](#rotate-dkim-keys), and then only after the original selector is deactivated.
+  - The other selector is inactive. It's activated and used only after any future [DKIM key rotation](#rotate-dkim-keys), and then only after the original selector is deactivated.
 
   The selector that's used to verify the DKIM signature (which infers the private key that was used to sign the message) is stored in the **s=** value in the **DKIM-Signature** header field (for example, `s=selector1-contoso-com`).
 
@@ -115,7 +115,7 @@ For example, your organization has the following domains in Microsoft 365:
 - **Initial domain**: cohovineyardandwinery.onmicrosoft.com
 - **Custom domains**: cohovineyard.com and cohowinery.com
 
-You need to create two CNAME records in each custom domain, for a total of four CNAME records:
+You need to create two CNAME records in DNS in each custom domain, for a total of four CNAME records:
 
 - **CNAME records in the cohovineyard.com domain**:
 
@@ -265,7 +265,7 @@ If you'd rather use PowerShell to enable DKIM signing of outbound messages using
 > [!TIP]
 > Before you can configure DKIM signing using the custom domain, you need to add the domain to Microsoft 365. For instructions, see [Add a domain](/microsoft-365/admin/setup/add-domain#add-a-domain). To confirm that the custom domain is available for DKIM configuration, run the following command: `Get-AcceptedDomain`.
 >
-> As described earlier in this article, your \*.onmicrosoft.com domain is already signing outbound email by default. Typically, unless you've manually configured DKIM signing for the \*.onmicrosoft.com domain in the Defender portal or in PowerShell, the \*.onmicrosoft.com doesn't appear in the output of **Get-DkimSigningConfig**.
+> As described earlier in this article, your \*.onmicrosoft.com domain is already signing outbound email by default. Typically, unless you manually configured DKIM signing for the \*.onmicrosoft.com domain in the Defender portal or in PowerShell, the \*.onmicrosoft.com doesn't appear in the output of **Get-DkimSigningConfig**.
 
 1. Run the following command to verify the availability and DKIM status of all domains in the organization:
 
@@ -432,7 +432,7 @@ To confirm the corresponding public key that's used to verify the DKIM signature
 
 6. After four days (96 hours), the new DKIM key begins to sign outbound messages for the custom domain. Until then, the current DKIM key is used.
 
-   You can tell when the new DKIM key is being used when the **Status** value changes from **Rotating keys for this domain and signing DKIM signatures** to **Signing DKIM signatures for this domain**.
+   The new DKIM key is being used to sign message when the **Status** value changes from **Rotating keys for this domain and signing DKIM signatures** to **Signing DKIM signatures for this domain**.
 
   To confirm the corresponding public key that's used to verify the DKIM signature (which infers the private key that was used to sign the message), check the **s=** value in the **DKIM-Signature** header field (the selector; for example, `s=selector1-contoso-com`).
 
@@ -613,7 +613,7 @@ In this example, the following steps are required:
 4. If the destination email system checks DKIM on inbound messages, the messages pass DKIM because they're DKIM signed.
 5. If the destination email system checks DMARC on inbound messages, the domain in the DKIM signature (the **d=** value in the **DKIM-Signature** header field) matches the domain in the From address that's shown in email clients, so the messages can also pass DMARC:
 
-   **From**: sender@marketing.contoso.com<br>
+   **From**: `sender@marketing.contoso.com`<br>
    **d=**: marketing.contoso.com
 
 ## Next steps
@@ -626,4 +626,4 @@ As described in [How SPF, DKIM, and DMARC work together to authenticate email me
 For mail coming _into_ Microsoft 365, you might also need to configure trusted ARC sealers if you use services that modify messages in transit before delivery to your organization. For more information, see [Configure trusted ARC sealers](email-authentication-arc-configure.md).
 
 > [!TIP]
-> Exchange 2016 and Exchange 2019 are known to modify messages that flow through them, which can impact DKIM.
+> Exchange 2016 and Exchange 2019 are known to modify messages that flow through them, which can affect DKIM.
