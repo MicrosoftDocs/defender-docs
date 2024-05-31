@@ -129,7 +129,7 @@ To run any of the provided simulations, you need at least [one onboarded device]
 The Microsoft Defender for Endpoint evaluation lab is designed to eliminate the complexities of device and environment configuration so that you can focus on evaluating the capabilities of the platform, running simulations, and seeing the prevention, detection, and remediation features in action. Using the simplified set-up experience in evaluation lab, you can focus on running your own test scenarios and the pre-made simulations to see how Defender for Endpoint performs.
 
 - [Watch the video overview](https://www.microsoft.com/videoplayer/embed/RE4qLUM) of the evaluation lab
-- [Get started with the lab](evaluation-lab.md) 
+- [Get started with the lab](evaluate-microsoft-defender-antivirus.md) 
 
 
 ## See also
