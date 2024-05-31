@@ -133,15 +133,15 @@ If you do not have Microsoft 365 E5 and want to advantage of Microsoft 365 E5 tr
 2. Select **Purchase Services** from the navigation menu.
 3. From the Office 365 section select **Details** under Office 365 E5 license.
 
-   :::image type="content" source="/defender/media/mdo-eval/2_mdo-eval-license-details.png" alt-text="Screenshot of the Details button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/2_mdo-eval-license-details.png":::
+   :::image type="content" source="/defender/media/mdo-eval/2_mdo-eval-license-details.png" alt-text="Screenshot of the Details button in the Microsoft Defender portal." lightbox="/defender/media/mdo-eval/2_mdo-eval-license-details.png":::
 
 4. Select **Start free trial**.
 
-   :::image type="content" source="/defender/media/mdo-eval/3-m365-purchase-button.png" alt-text="Screenshot of the Start free trial button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/3-m365-purchase-button.png":::
+   :::image type="content" source="/defender/media/mdo-eval/3-m365-purchase-button.png" alt-text="Screenshot of the Start free trial button in the Microsoft Defender portal." lightbox="/defender/media/mdo-eval/3-m365-purchase-button.png":::
 
 5. Confirm your request and select **Try now**.
 
-   :::image type="content" source="/defender/media/mdo-eval/4_mdo-trial-order.png" alt-text="Screenshot of the Try Now button in the Microsoft Defender portal" lightbox="/defender/media/mdo-eval/4_mdo-trial-order.png":::
+   :::image type="content" source="/defender/media/mdo-eval/4_mdo-trial-order.png" alt-text="Screenshot of the Try Now button in the Microsoft Defender portal." lightbox="/defender/media/mdo-eval/4_mdo-trial-order.png":::
 
 Your pilot using Microsoft 365 E5 trial licenses in your existing production tenant will let you keep any security settings and methods when the trial expires and you purchase equivalent licenses.
 
