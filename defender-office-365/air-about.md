@@ -7,7 +7,7 @@ ms.author: chrisda
 manager: deniseb
 audience: ITPro
 ms.topic: conceptual
-ms.date: 06/09/2023
+ms.date: 05/30/2024
 ms.localizationpriority: medium
 search.appverid:
 - MET150
@@ -31,7 +31,7 @@ appliesto:
 
 As [security alerts](/defender-xdr/investigate-alerts) appear in a Microsoft 365 organization at <https://security.microsoft.com/alerts>, it's up to the security operations (SecOps) team to review, prioritize, and respond to those alerts. Keeping up with the volume of incoming alerts can be overwhelming. Automating some of those tasks can help.
 
-[Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-2-capabilities) includes powerful automated investigation and response (AIR) capabilities that save time and effort for your organization's SecOps team. AIR includes the following capabilities:
+[Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-2-capabilities) includes powerful automated investigation and response (AIR) capabilities that save time and effort for SecOps teams. AIR includes the following capabilities:
 
 - Automated investigation processes in response to well-known threats.
 - Appropriate remediation actions awaiting approval, enabling your SecOps team to respond effectively to detected threats.
@@ -44,21 +44,21 @@ AIR in Defender for Office 365 Plan 2 requires that [audit logging is turned on]
 An alert is triggered, and a security playbook starts an automated investigation, which results in findings and recommended actions. Here's the overall flow of AIR, step by step:
 
 1. An automated investigation is started initiated in one of the following ways:
-   - [An alert is triggered](#which-alert-policies-trigger-automated-investigations) by something suspicious in email (for example, the message itself, an attachment, a URL, or a compromised user account). An incident is created, and an automated investigation begins.
+   - An alert is triggered by an alert policy that identified something suspicious in email (for example, the message itself, an attachment, a URL, or a compromised user account). An incident is created, and an automated investigation begins.
 
      > [!TIP]
      > Be sure to regularly review the alerts your organization. For more information about alerts and alerts that trigger automated investigations, see the [default alert policies in the Threat management category](/purview/alert-policies#default-alert-policies). The entries that contain the value **Yes** for **Automated investigation** trigger an automated investigation.
 
-   - A security analyst manually triggers the investigation. For examples, see [How automated investigation and response works in Defender for Office 365 Plan 2](air-examples.md).
+   - A security analyst manually triggers the investigation. For examples, see [Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2](air-examples.md).
 
 2. A running automated investigation gathers data about the specified email message and the related _entities_ (for example, attached files, included URLs, and recipients). The scope of the investigation can increase as new and related alerts are triggered.
 
-3. During and after an automated investigation, [details and results](air-view-investigation-results.md) are available to view. Results might include [recommended actions](air-remediation-actions.md) for SecOps personnel to take to respond to and remediate any existing threats that were found.
+3. During and after an automated investigation, [details and results](air-view-investigation-results.md) are available. Results might include [recommended actions](air-remediation-actions.md) for SecOps personnel to remediate the threats that were found.
 
 4. The SecOps team reviews the [investigation results and recommendations](air-view-investigation-results.md), and [approves or rejects the remediation actions](air-review-approve-pending-completed-actions.md).
 
    > [!TIP]
-   > No remediation actions happen automatically in Defender for Office 365 Plan 2. Remediation actions require manual approval by SecOps personnel. AIR capabilities save time by getting to the recommended remediation actions with the details to make an informed decision.
+   > No remediation actions happen automatically. Remediation actions require manual approval by SecOps personnel. AIR capabilities save time by getting to the recommended remediation actions with all the details to make an informed decision.
 
 5. As pending remediation actions are approved or rejected, the automated investigation completes.
 
@@ -95,7 +95,7 @@ AIR contains data for users with Defender for Office 365 licenses assigned to th
 
 ## Next steps
 
-- [Get started using AIR](air-examples.md)
+- [Automated investigation and response (AIR) examples in Microsoft Defender for Office 365 Plan 2](air-examples.md)
 - [See details and results of an automated investigation](air-view-investigation-results.md#view-investigation-details)
 - [Review and approve pending actions](air-remediation-actions.md)
 - [View pending or completed remediation actions](air-review-approve-pending-completed-actions.md)

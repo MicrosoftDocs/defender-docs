@@ -1,6 +1,6 @@
 ---
 title: Security Operations Guide for Defender for Office 365
-f1.keywords: 
+f1.keywords:
   - NOCSH
 ms.author: chrisda
 author: chrisda
@@ -8,10 +8,10 @@ manager: deniseb
 audience: Admin
 ms.topic: conceptual
 ms.localizationpriority: medium
-search.appverid: 
+search.appverid:
   - MET150
   - MOE150
-ms.collection: 
+ms.collection:
   - zerotrust-solution
   - msftsolution-secops
   - tier1

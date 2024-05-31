@@ -1,6 +1,6 @@
 ---
 title: Custom reporting solutions with automated investigation and response
-f1.keywords: 
+f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
@@ -8,15 +8,15 @@ manager: deniseb
 audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium
-search.appverid: 
+search.appverid:
 - MET150
 - MOE150
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 description: Learn how to integrate automated investigation and response with a custom or third-party reporting solution.
 ms.date: 06/09/2023
-ms.custom: 
+ms.custom:
 - air
 ms.service: defender-office-365
 appliesto:
