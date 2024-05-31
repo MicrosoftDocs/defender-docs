@@ -70,5 +70,7 @@ For more detailed information about what's included in each subscription, see th
 - [Try the interactive guide: Get started with Defender for Business](https://aka.ms/MDB-GetStartedGuide)
 - [Learn more about the simplified configuration process in Defender for Business](mdb-setup-configuration.md)
 - [Find out how to get Defender for Business](get-defender-business.md)
+- [Learn about security, privacy, and compliance in Microsoft Defender for Business](mdb-security-privacy-compliance.md)
 - [Get an overview of Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview)
+
 

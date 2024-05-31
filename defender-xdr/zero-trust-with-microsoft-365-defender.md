@@ -13,10 +13,13 @@ audience: ITPro
 ms.collection:
   - m365-security
   - tier1
+  - essentials-privacy
+  - essentials-security
+  - essentials-compliance
 ms.custom: 
 ms.topic: conceptual
 adobe-target: true
-ms.date: 05/10/2024
+ms.date: 05/31/2024
 ---
 
 # Zero Trust with Microsoft Defender XDR
