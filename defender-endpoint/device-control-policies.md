@@ -143,8 +143,7 @@ The following code snippet shows the syntax for a device control policy rule in 
   <Entry Id="{34413b98-8198-4e16-accf-c95c3c775ba3}">
     ...
   </Entry>
-</PolicyRule>
-
+</PolicyRule> 
 ```
 
 The following table provides more context for the XML code snippet:
@@ -174,8 +173,7 @@ The following code snippet shows the syntax for a device control policy rule in 
       "entries": [
         ...
       ]
-    }
-
+    } 
 ```
 
 The following table provides more context for the XML code snippet:
@@ -247,8 +245,7 @@ The following code snippet shows the syntax for a device control entry in XML:
     <Type>Allow</Type>
     <Options>0</Options>
     <AccessMask>1</AccessMask>
-  </Entry>
-
+  </Entry> 
 ```
 
 The following table provides more context for the XML code snippet:
@@ -304,8 +301,7 @@ The following code snippet shows the syntax for a device control entry in JSON f
           "access": [
             "generic_read"
           ]
-}
-
+} 
 ```
 
 The following table provides more context for the JSON code snippet:
@@ -464,8 +460,7 @@ The following XML snippet shows the syntax for matching groups:
   <DescriptorIdList>
    ...
   </DescriptorIdList>
-</Group>
-
+</Group> 
 ```
 
 The following table describes properties for groups.
@@ -513,8 +508,7 @@ The following JSON snippet shows the syntax for defining groups on Mac:
     ...
         ]
       }
-    }
-
+    } 
 ```
 
 The following table describes properties for groups:
@@ -551,8 +545,7 @@ Here's an example query:
             "value": "FBH1111183300731"
           }
         ]
-      }
-
+      } 
 ```
 
 Our example query can be edited to get behavior equivalent to the ExcludedMatchAll and ExcludedMatchAny by using the "not" type, as follows:
@@ -571,8 +564,7 @@ Our example query can be edited to get behavior equivalent to the ExcludedMatchA
                     ]
               }
 
-}
-
+} 
 ```
 
 This query matches all devices that don't have the specified serial number.
@@ -606,7 +598,6 @@ These properties are added to the DescriptorIdList of a group of type Network. H
         <NetworkDomainId>NonDomain</PathId>
     </DescriptorIdList>
 </Group>
-
 ```
 
 The group is then referenced as parameters in the entry, as illustrated in the following snippet:
@@ -623,7 +614,6 @@ The group is then referenced as parameters in the entry, as illustrated in the f
             </Network>
       </Parameters>
    </Entry>
-
 ```
 
 ### VPN Connection Conditions
@@ -651,7 +641,6 @@ These properties are added to the DescriptorIdList of a group of type VPNConnect
             <VPNConnectionStatusId>Connected</VPNConnectionStatusId>
         </DescriptorIdList>
     </Group>
-
 ```
 
 Then the group is then referenced as parameters in an entry, as illustrated in the following snippet:
@@ -668,7 +657,6 @@ Then the group is then referenced as parameters in an entry, as illustrated in t
             </VPNConnection>
         </Parameters>
        </Entry>
-
 ```
 
 ### File Conditions
@@ -689,7 +677,6 @@ The following table illustrates how properties are added to the `DescriptorIdLis
         <PathId>*.dll</PathId>
     </DescriptorIdList>
 </Group>
-
 ```
 
 The group is then referenced as parameters in an entry, as illustrated in the following snippet:
@@ -706,7 +693,6 @@ The group is then referenced as parameters in an entry, as illustrated in the fo
             </File>
       </Parameters>
    </Entry>
-
 ```
 
 ### Print Job Conditions
@@ -729,7 +715,6 @@ These properties are added to the `DescriptorIdList` of a group of type `PrintJo
 <PrintDocumentNameId>*.docx</PrintDocumentNameId>
     </DescriptorIdList>
 </Group>
-
 ```
 
 The group is then referenced as parameters in an entry, as illustrated in the following snippet:
@@ -746,7 +731,6 @@ The group is then referenced as parameters in an entry, as illustrated in the fo
             </PrintJob>
       </Parameters>
    </Entry>
-
 ```
 
 ## File evidence
@@ -764,7 +748,7 @@ The `FileEvidenceLocation` field of has the location of the evidence file, if on
 
 1. Create an Azure Blob Storage account and container.
 
-2. Create a custom role called `Device Control Evidence Data Provider` for accessing the container.  The role should have the following permissions:
+2. Create a custom role called `Device Control Evidence Data Provider` for accessing the container.  The role should have the following permissions:
 
    ```json
    "permissions": [
@@ -792,7 +776,7 @@ The `FileEvidenceLocation` field of has the location of the evidence file, if on
    > [!IMPORTANT]
    > To ensure that the integrity of the file evidence use [Azure Immutable Storage](/azure/storage/blobs/immutable-storage-overview)
 
-3. Assign the users of device control to the `Device Control Evidence Data Provider` role.
+3. Assign the users of device control to the `Device Control Evidence Data Provider` role.
 
 4. Set the `RemoteStorageFileEvent` to the URL of the Azure Blob Storage container.
 

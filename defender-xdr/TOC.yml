@@ -116,6 +116,8 @@
       items: 
        - name: Overview
          href: incident-response-overview.md
+       - name: Alerts, incidents, and correlation
+         href: alerts-incidents-correlation.md
        - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
          items:
               - name: Overview
