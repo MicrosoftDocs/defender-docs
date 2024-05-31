@@ -51,4 +51,4 @@ To learn more, read [Step 2: (*Recommended*) Use SharePoint Online PowerShell to
 
 ### Further reading
 
-[Policy recommendations for securing SharePoint sites and files](../zero-trust-identity-device-access-policies-sharepoint.md)
+[Policy recommendations for securing SharePoint sites and files](/security/zero-trust/zero-trust-identity-device-access-policies-sharepoint)
