@@ -10,7 +10,7 @@ ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-ms.date: 09/13/2023
+ms.date: 05/31/2024
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: 
