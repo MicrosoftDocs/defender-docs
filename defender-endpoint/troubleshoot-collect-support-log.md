@@ -27,6 +27,8 @@ ms.date: 12/18/2020
 
 When contacting support, you may be asked to provide the output package of the Microsoft Defender for Endpoint Client Analyzer tool.
 
+## Windows
+
 This topic provides instructions on how to run the tool via Live Response.
 
 1. Download and fetch the required scripts available from within the 'Tools' sub-directory of the [Microsoft Defender for Endpoint Client Analyzer](https://aka.ms/BetaMDEAnalyzer). <br>
@@ -47,15 +49,15 @@ If you also require Defender Antivirus support logs (MpSupportFiles.cab), then f
 
    :::image type="content" source="media/analyzer-file.png" alt-text="The choose file button-2" lightbox="media/analyzer-file.png":::
 
-6. While still in the LiveResponse session, use the commands below to run the analyzer and collect the result file:
+1. While still in the LiveResponse session, use the commands below to run the analyzer and collect the result file:
 
-    ```console
+       ```console
     Run MDELiveAnalyzer.ps1
     GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDEClientAnalyzerResult.zip"
     ```
 
     [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
-
+   
 > [!NOTE]
 >
 > - The latest preview version of MDEClientAnalyzer can be downloaded here: <https://aka.ms/Betamdeanalyzer>.
@@ -76,6 +78,22 @@ If you also require Defender Antivirus support logs (MpSupportFiles.cab), then f
 >   ```console
 >   Run MDELiveAnalyzer.ps1&
 >   ```
+
+## Linux
+
+This topic provides instructions on how to run the tool via Live Response on Linux. The Client Analyzer for Linux is available as a binary and Python versions can both run on Linux during a Live Response session.
+
+### Prerequisites
+
+The Client Analyzer tool on Linux requires the `acl` package.
+
+### Installing 
+
+blah blah blah
+
+### Running Client Analyzer
+
+blah blah blah
 
 ## See also
 
