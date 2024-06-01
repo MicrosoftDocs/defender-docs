@@ -109,7 +109,7 @@ If your Windows Subsystem for Linux isn't installed yet, follow these steps:
 
    - **Plug-in Version**: `1.24.522.2`
    - **WSL Version**: `2.0.7.0` or later
-   - **Defender App Version**: `1.1.24032.0007`
+   - **Defender App Version**: `101.24032.0007`
    - **Defender Health Status**: `Healthy`
 
 ## Setting a proxy for Defender running in WSL
