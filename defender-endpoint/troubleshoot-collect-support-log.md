@@ -230,13 +230,12 @@ The Python Client Analyzer accepts command line parameters to perform different 
 
 4. Select the downloaded file named `MDESupportTool.sh`, and then select **Confirm**.
 
-1. While still in the Live Response session, use the commands below to run the analyzer and collect the result file:
+5. While still in the Live Response session, use the following commands to run the analyzer and collect the resulting file.
 
-
-```
-run MDESupportTool.sh -parameters "--bypass-disclaimer -d"
-GetFile "/tmp/your_archive_file_name_here.zip"
-```
+   ```
+   run MDESupportTool.sh -parameters "--bypass-disclaimer -d"
+   GetFile "/tmp/your_archive_file_name_here.zip"
+   ```
 
 ## See also
 
@@ -245,6 +244,6 @@ GetFile "/tmp/your_archive_file_name_here.zip"
 - [Run the client analyzer on Windows](run-analyzer-windows.md)
 - [Run the client analyzer on macOS or Linux](run-analyzer-macos-linux.md)
 - [Data collection for advanced troubleshooting on Windows](data-collection-analyzer.md)
-
 - [Understand the analyzer HTML report](analyzer-report.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
