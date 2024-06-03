@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: edr
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 06/03/2024
 ---
 
 # Collect support logs in Microsoft Defender for Endpoint using live response
@@ -31,9 +31,11 @@ This topic provides instructions on how to run the tool via Live Response on Win
 
 ## Windows
 
-1. Download and fetch the required scripts available from within the 'Tools' sub-directory of the [Microsoft Defender for Endpoint Client Analyzer](https://aka.ms/BetaMDEAnalyzer). <br>
-For example, to get the basic sensor and device health logs, fetch "..\Tools\MDELiveAnalyzer.ps1".<br>
-If you also require Defender Antivirus support logs (MpSupportFiles.cab), then fetch "..\Tools\MDELiveAnalyzerAV.ps1"
+1. Download and fetch the required scripts available from within the **Tools** sub-directory of the [Microsoft Defender for Endpoint Client Analyzer](https://aka.ms/BetaMDEAnalyzer). 
+
+   For example, to get the basic sensor and device health logs, fetch `..\Tools\MDELiveAnalyzer.ps1`.
+   
+   If you also require Microsoft Defender Antivirus support logs (`MpSupportFiles.cab`), then fetch `..\Tools\MDELiveAnalyzerAV.ps1`.
 
 2. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you need to investigate.
 
