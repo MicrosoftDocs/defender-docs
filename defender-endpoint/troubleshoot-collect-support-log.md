@@ -60,26 +60,27 @@ This article provides instructions on how to run the tool via Live Response on W
 
    [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
    
-> [!NOTE]
->
-> - The latest preview version of MDEClientAnalyzer can be downloaded here: <https://aka.ms/Betamdeanalyzer>.
-> - The LiveAnalyzer script downloads the troubleshooting package on the destination machine from: `https://mdatpclientanalyzer.blob.core.windows.net`.
->
->   If you cannot allow the machine to reach the above URL, then upload `MDEClientAnalyzerPreview.zip` file to the library before running the LiveAnalyzer script:
->
->   ```console
->   PutFile MDEClientAnalyzerPreview.zip -overwrite
->   Run MDELiveAnalyzer.ps1
->   GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDEClientAnalyzerResult.zip"
->   ```
->
-> - For more information on gathering data locally on a machine in case the machine isn't communicating with Microsoft Defender for Endpoint cloud services, or does not appear in Microsoft Defender for Endpoint portal as expected, see [Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
->
-> - As described in [Live response command examples](live-response-command-examples.md), you may want to use the '&' symbol at the end of the command to collect logs as a background action:
->
->   ```console
->   Run MDELiveAnalyzer.ps1&
->   ```
+### Additional information
+
+- The latest preview version of MDEClientAnalyzer can be downloaded here: <https://aka.ms/Betamdeanalyzer>.
+
+- The LiveAnalyzer script downloads the troubleshooting package on the destination machine from: `https://mdatpclientanalyzer.blob.core.windows.net`.
+
+- If you cannot allow the machine to reach the above URL, then upload `MDEClientAnalyzerPreview.zip` file to the library before running the LiveAnalyzer script:
+
+   ```console
+   PutFile MDEClientAnalyzerPreview.zip -overwrite
+   Run MDELiveAnalyzer.ps1
+   GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDEClientAnalyzerResult.zip"
+   ```
+
+- For more information on gathering data locally on a machine in case the machine isn't communicating with Microsoft Defender for Endpoint cloud services, or does not appear in Microsoft Defender for Endpoint portal as expected, see [Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
+
+- As described in [Live response command examples](live-response-command-examples.md), you may want to use the '&' symbol at the end of the command to collect logs as a background action:
+
+   ```console
+   Run MDELiveAnalyzer.ps1&
+   ```
 
 ## Linux
 
