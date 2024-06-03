@@ -54,8 +54,8 @@ This article provides instructions on how to run the tool via Live Response on W
 6. While still in the LiveResponse session, use the following commands to run the analyzer and collect the resulting file.
 
    ```console
-    Run MDELiveAnalyzer.ps1
-    GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDEClientAnalyzerResult.zip"
+   Run MDELiveAnalyzer.ps1
+   GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDEClientAnalyzerResult.zip"
    ```
 
    [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
@@ -178,10 +178,10 @@ The following script performs the first 6 steps of the [Running the Python versi
 
 ### Running the XMDE Client Analyzer
 
-Live Response does not support running the XMDE Client Analyzer or Python directly, so an execution script is necessary.
+Live Response doesn't support running the XMDE Client Analyzer or Python directly, so an execution script is necessary.
 
 > [!IMPORTANT]
-> The scripts below assume the XMDE Client Analyzer was installed using the same locations from the scripts above. If your organization has chosen to install the scripts into a different location, then the scripts below need to be updated to align with your organization's chosen installation location.
+> The following scripts assume the XMDE Client Analyzer was installed using the same locations from the scripts mentioned earlier. If your organization has chosen to install the scripts into a different location, then the scripts below need to be updated to align with your organization's chosen installation location.
 
 #### Binary Client Analyzer Run Script
 
