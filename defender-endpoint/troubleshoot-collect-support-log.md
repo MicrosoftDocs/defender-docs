@@ -27,11 +27,11 @@ ms.date: 06/03/2024
 
 When contacting support, you may be asked to provide the output package of the Microsoft Defender for Endpoint Client Analyzer tool.
 
-This topic provides instructions on how to run the tool via Live Response on Windows and on Linux machines.
+This article provides instructions on how to run the tool via Live Response on Windows and on Linux machines.
 
 ## Windows
 
-1. Download and fetch the required scripts available from within the **Tools** sub-directory of the [Microsoft Defender for Endpoint Client Analyzer](https://aka.ms/BetaMDEAnalyzer). 
+1. Download and fetch the required scripts available from within the **Tools** subdirectory of the [Microsoft Defender for Endpoint Client Analyzer](https://aka.ms/BetaMDEAnalyzer). 
 
    For example, to get the basic sensor and device health logs, fetch `..\Tools\MDELiveAnalyzer.ps1`.
    
@@ -101,14 +101,14 @@ Both versions of XMDE Client Analyzer, binary and Python, a self-contained packa
 
 - [Running the Python version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux)
 
-Due to the limited commands available in Live Response the steps detailed must be executed in a bash script, and by splitting the installation and execution portion of these commands it is possible to run the install script once, while running the execution script multiple times.
+Due to the limited commands available in Live Response the steps detailed must be executed in a bash script, and by splitting the installation and execution portion of these commands it's possible to run the install script once, while running the execution script multiple times.
 
 > [!IMPORTANT]
 > The example scripts assume the machine has direct internet access and can retrieve the XMDE Client Analyzer from Microsoft. If the machine does not have direct internet access then the installation scripts will need to be updated to fetch the XMDE Client Analyzer from a location the machines can access successfully.
 
 #### Binary Client Analyzer Install Script
 
-The following script performs the first 6 steps of the [Running the Binary version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Binary version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
@@ -134,7 +134,7 @@ The following script performs the first 6 steps of the [Running the Binary versi
 
 #### Python Client Analyzer Install Script
 
-The script below performs the first 6 steps of the [Running the Python version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux). When complete the XMDE Client Analyzer Python scripts will be available from the `/tmp/XMDEClientAnalyzer` directory.
+The following script performs the first 6 steps of the [Running the Python version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
