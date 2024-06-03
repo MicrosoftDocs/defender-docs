@@ -74,9 +74,9 @@ This article provides instructions on how to run the tool via Live Response on W
    GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDEClientAnalyzerResult.zip"
    ```
 
-- For more information on gathering data locally on a machine in case the machine isn't communicating with Microsoft Defender for Endpoint cloud services, or does not appear in Microsoft Defender for Endpoint portal as expected, see [Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
+- For more information on gathering data locally on a machine in case the machine isn't communicating with Microsoft Defender for Endpoint cloud services, or doesn't appear in Microsoft Defender for Endpoint portal as expected, see [Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).
 
-- As described in [Live response command examples](live-response-command-examples.md), you may want to use the '&' symbol at the end of the command to collect logs as a background action:
+- As described in [Live response command examples](live-response-command-examples.md), you might want to use the `&` symbol at the end of the command to collect logs as a background action:
 
    ```console
    Run MDELiveAnalyzer.ps1&
