@@ -94,6 +94,7 @@ The XMDE Client Analyzer tool can be downloaded as a [binary](https://aka.ms/XMD
 
 > [!IMPORTANT]
 > Window uses the Carriage Return and Line Feed invisible characters to represent the end of one line and beginning of a new line in a file, but Linux systems uses only the Line Feed invisible character at the end of its file lines. When creating the scripts below, if done on Windows, this difference can result in errors and failures of the scripts to run. A potential solution to this is to utilize the Windows Subsystem for Linux and the `dos2unix` package to reformat the script so it aligns with the Unix and Linux format standard.
+
 ### Installing the XMDE Client Analyzer
 
 Both versions of XMDE Client Analyzer, binary and Python, a self-contained package that must be downloaded and extracted before executing, and the complete set of steps for this process can be found:
