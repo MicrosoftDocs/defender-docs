@@ -25,7 +25,7 @@ ms.date: 06/03/2024
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink)
 
-When contacting support, you may be asked to provide the output package of the Microsoft Defender for Endpoint Client Analyzer tool.
+When contacting support, you might be asked to provide the output package of the Microsoft Defender for Endpoint Client Analyzer tool.
 
 This article provides instructions on how to run the tool via Live Response on Windows and on Linux machines.
 
@@ -66,7 +66,7 @@ This article provides instructions on how to run the tool via Live Response on W
 
 - The LiveAnalyzer script downloads the troubleshooting package on the destination machine from: `https://mdatpclientanalyzer.blob.core.windows.net`.
 
-- If you cannot allow the machine to reach the above URL, then upload `MDEClientAnalyzerPreview.zip` file to the library before running the LiveAnalyzer script:
+- If you can't allow the machine to reach the above URL, then upload `MDEClientAnalyzerPreview.zip` file to the library before running the LiveAnalyzer script:
 
    ```console
    PutFile MDEClientAnalyzerPreview.zip -overwrite
