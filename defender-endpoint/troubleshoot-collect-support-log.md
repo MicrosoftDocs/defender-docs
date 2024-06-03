@@ -135,7 +135,7 @@ The following script performs the first six steps of the [Running the Binary ver
 
 #### Python Client Analyzer Install Script
 
-The following script performs the first 6 steps of the [Running the Python version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
+The following script performs the first six steps of the [Running the Python version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux). When complete, the XMDE Client Analyzer Python scripts are available from the `/tmp/XMDEClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
@@ -171,7 +171,7 @@ The following script performs the first 6 steps of the [Running the Python versi
 
 4. Select the downloaded file named `InstallXMDEClientAnalyzer.sh`, and then select **Confirm**.
 
-5. While still in the LiveResponse session, use the commands below to install the analyzer:
+5. While still in the LiveResponse session, use the following commands to install the analyzer:
 
    ```console
    run InstallXMDEClientAnalyzer.sh
@@ -182,7 +182,7 @@ The following script performs the first 6 steps of the [Running the Python versi
 Live Response doesn't support running the XMDE Client Analyzer or Python directly, so an execution script is necessary.
 
 > [!IMPORTANT]
-> The following scripts assume the XMDE Client Analyzer was installed using the same locations from the scripts mentioned earlier. If your organization has chosen to install the scripts into a different location, then the scripts below need to be updated to align with your organization's chosen installation location.
+> The following scripts assume the XMDE Client Analyzer was installed using the same locations from the scripts mentioned earlier. If your organization has chosen to install the scripts into a different location, then the following scripts need to be updated to align with your organization's chosen installation location.
 
 #### Binary Client Analyzer Run Script
 
