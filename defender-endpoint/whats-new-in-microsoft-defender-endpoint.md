@@ -50,6 +50,10 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 - [What's new in Defender for Endpoint on Android](android-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 
+## June 2024
+
+- (Preview) [BitLocker support for Device control](https://learn.microsoft.com/en-us/defender-endpoint/device-control-overview?view=o365-worldwide#control-access-to-bitlocker-encrypted-removable-media-preview):  Allows device control to apply policy based on the BitLocker encrypted state of a device.  
+
 ## May 2024
 
 - (GA) [Microsoft Defender for Endpoint plug-in for Windows Subsystem for Linux (WSL)](/defender-endpoint/mde-plugin-wsl) is now generally available (GA version - 1.24.522.2). The plug-in enables Defender for Endpoint to provide more visibility into all running WSL containers by plugging into the isolated subsystem.
