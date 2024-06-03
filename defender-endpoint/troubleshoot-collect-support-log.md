@@ -47,25 +47,25 @@ This topic provides instructions on how to run the tool via Live Response on Win
 
    :::image type="content" source="media/choose-file.png" alt-text="The choose file button-1" lightbox="media/choose-file.png":::
 
-5. Select the downloaded file named MDELiveAnalyzer.ps1 and then click on **Confirm**
+5. Select the downloaded file named `MDELiveAnalyzer.ps1`, and then select on **Confirm**.
 
    :::image type="content" source="media/analyzer-file.png" alt-text="The choose file button-2" lightbox="media/analyzer-file.png":::
 
-1. While still in the LiveResponse session, use the commands below to run the analyzer and collect the result file:
+6. While still in the LiveResponse session, use the following commands to run the analyzer and collect the resulting file.
 
-       ```console
+   ```console
     Run MDELiveAnalyzer.ps1
     GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDEClientAnalyzerResult.zip"
-    ```
+   ```
 
-    [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
+   [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
    
 > [!NOTE]
 >
 > - The latest preview version of MDEClientAnalyzer can be downloaded here: <https://aka.ms/Betamdeanalyzer>.
 > - The LiveAnalyzer script downloads the troubleshooting package on the destination machine from: `https://mdatpclientanalyzer.blob.core.windows.net`.
 >
->   If you cannot allow the machine to reach the above URL, then upload MDEClientAnalyzerPreview.zip file to the library before running the LiveAnalyzer script:
+>   If you cannot allow the machine to reach the above URL, then upload `MDEClientAnalyzerPreview.zip` file to the library before running the LiveAnalyzer script:
 >
 >   ```console
 >   PutFile MDEClientAnalyzerPreview.zip -overwrite
@@ -105,32 +105,32 @@ Due to the limited commands available in Live Response the steps detailed must b
 
 > [!IMPORTANT]
 > The example scripts assume the machine has direct internet access and can retrieve the XMDE Client Analyzer from Microsoft. If the machine does not have direct internet access then the installation scripts will need to be updated to fetch the XMDE Client Analyzer from a location the machines can access successfully.
+
 #### Binary Client Analyzer Install Script
 
-The script below performs the first 6 steps of the [Running the Binary version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux). When complete the XMDE Client Analyzer binary will be available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
+The following script performs the first 6 steps of the [Running the Binary version of the Client Analyzer](/defender-endpoint/run-analyzer-macos-linux). When complete, the XMDE Client Analyzer binary is available from the `/tmp/XMDEClientAnalyzerBinary/ClientAnalyzer` directory.
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
+   ```bash
+   #! /usr/bin/bash
 
-```bash
-#! /usr/bin/bash
+   echo "Starting Client Analyzer Script. Running As:"
+   whoami
 
-echo "Starting Client Analyzer Script. Running As:"
-whoami
+   echo "Getting XMDEClientAnalyzerBinary"
+   wget --quiet -O /tmp/XMDEClientAnalyzerBinary.zip https://aka.ms/XMDEClientAnalyzerBinary
+   echo '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
 
-echo "Getting XMDEClientAnalyzerBinary"
-wget --quiet -O /tmp/XMDEClientAnalyzerBinary.zip https://aka.ms/XMDEClientAnalyzerBinary
-echo '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469 /tmp/XMDEClientAnalyzerBinary.zip' | sha256sum -c
+   echo "Unzipping XMDEClientAnalyzerBinary.zip"
+   unzip -q /tmp/XMDEClientAnalyzerBinary.zip -d /tmp/XMDEClientAnalyzerBinary
 
-echo "Unzipping XMDEClientAnalyzerBinary.zip"
-unzip -q /tmp/XMDEClientAnalyzerBinary.zip -d /tmp/XMDEClientAnalyzerBinary
+   echo "Unzipping SupportToolLinuxBinary.zip"
+   unzip -q /tmp/XMDEClientAnalyzerBinary/SupportToolLinuxBinary.zip -d /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
 
-echo "Unzipping SupportToolLinuxBinary.zip"
-unzip -q /tmp/XMDEClientAnalyzerBinary/SupportToolLinuxBinary.zip -d /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
+   echo "MDESupportTool installed at /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer"
 
-echo "MDESupportTool installed at /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer"
-
-```
+   ```
 
 #### Python Client Analyzer Install Script
 
@@ -138,45 +138,43 @@ The script below performs the first 6 steps of the [Running the Python version o
 
 1. Create a bash file `InstallXMDEClientAnalyzer.sh` and paste the following content into it.
 
+   ```bash
+   #! /usr/bin/bash
 
-```bash
-#! /usr/bin/bash
-
-echo "Starting Client Analyzer Install Script. Running As:"
-whoami
+   echo "Starting Client Analyzer Install Script. Running As:"
+   whoami
   
-echo "Getting XMDEClientAnalyzer.zip"
-wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer 
-echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66 XMDEClientAnalyzer.zip' | sha256sum -c  
+   echo "Getting XMDEClientAnalyzer.zip"
+   wget --quiet -O XMDEClientAnalyzer.zip https://aka.ms/XMDEClientAnalyzer 
+   echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66 XMDEClientAnalyzer.zip' | sha256sum -c  
 
-echo "Unzipping XMDEClientAnalyzer.zip"
-unzip -q XMDEClientAnalyzer.zip -d /tmp/XMDEClientAnalyzer  
+   echo "Unzipping XMDEClientAnalyzer.zip"
+   unzip -q XMDEClientAnalyzer.zip -d /tmp/XMDEClientAnalyzer  
 
-echo "Setting execute permissions on mde_support_tool.sh script"
-cd /tmp/XMDEClientAnalyzer 
-chmod a+x mde_support_tool.sh  
+   echo "Setting execute permissions on mde_support_tool.sh script"
+   cd /tmp/XMDEClientAnalyzer 
+   chmod a+x mde_support_tool.sh  
 
-echo "Performing final support tool setup"
-./mde_support_tool.sh
+   echo "Performing final support tool setup"
+   ./mde_support_tool.sh
 
-```
+   ```
 
 #### Running the Client Analyzer Install Scripts
 
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you need to investigate.
 
-1. Select **Upload file to library**.
+2. Select **Upload file to library**.
 
-1. Select **Choose file**.
+3. Select **Choose file**.
 
-1. Select the downloaded file named `InstallXMDEClientAnalyzer.sh` and then click on **Confirm**
+4. Select the downloaded file named `InstallXMDEClientAnalyzer.sh`, and then select **Confirm**.
 
-1. While still in the LiveResponse session, use the commands below to install the analyzer:
+5. While still in the LiveResponse session, use the commands below to install the analyzer:
 
-
-```console
-run InstallXMDEClientAnalyzer.sh
-```
+   ```console
+   run InstallXMDEClientAnalyzer.sh
+   ```
 
 ### Running the XMDE Client Analyzer
 
@@ -184,23 +182,23 @@ Live Response does not support running the XMDE Client Analyzer or Python direct
 
 > [!IMPORTANT]
 > The scripts below assume the XMDE Client Analyzer was installed using the same locations from the scripts above. If your organization has chosen to install the scripts into a different location, then the scripts below need to be updated to align with your organization's chosen installation location.
+
 #### Binary Client Analyzer Run Script
 
 The Binary Client Analyzer accepts command line parameters to perform different analysis tests. To provide similar capabilities during Live Response the execution script takes advantage of the `$@` bash variable to pass all input parameters provided to the script to the XMDE Client Analyzer.
 
 1. Create a bash file `MDESupportTool.sh` and paste the following content into it.
 
+   ```bash
+   #! /usr/bin/bash
 
-```bash
-#! /usr/bin/bash
+   echo "cd /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer"
+   cd /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
 
-echo "cd /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer"
-cd /tmp/XMDEClientAnalyzerBinary/ClientAnalyzer
+   echo "Running MDESupportTool"
+   ./MDESupportTool $@
 
-echo "Running MDESupportTool"
-./MDESupportTool $@
-
-```
+   ```
 
 #### Python Client Analyzer Run Script
 
@@ -208,29 +206,29 @@ The Python Client Analyzer accepts command line parameters to perform different 
 
 1. Create a bash file `MDESupportTool.sh` and paste the following content into it.
 
+   ```bash
+   #! /usr/bin/bash  
 
-```
-#! /usr/bin/bash  
+   echo "cd /tmp/XMDEClientAnalyzer"
+   cd /tmp/XMDEClientAnalyzer 
 
-echo "cd /tmp/XMDEClientAnalyzer"
-cd /tmp/XMDEClientAnalyzer 
+   echo "Running mde_support_tool"
+   ./mde_support_tool.sh $@
 
-echo "Running mde_support_tool"
-./mde_support_tool.sh $@
-
-```
+   ```
 
 #### Running the Client Analyzer Script
 
 > [!NOTE]
 > If you have an active Live Response session you can skip Step 1.
+
 1. Initiate a [Live Response session](live-response.md#initiate-a-live-response-session-on-a-device) on the machine you need to investigate. 
 
-1. Select **Upload file to library**.
+2. Select **Upload file to library**.
 
-1. Select **Choose file**.
+3. Select **Choose file**.
 
-1. Select the downloaded file named `MDESupportTool.sh` and then click on **Confirm**
+4. Select the downloaded file named `MDESupportTool.sh`, and then select **Confirm**.
 
 1. While still in the Live Response session, use the commands below to run the analyzer and collect the result file:
 
