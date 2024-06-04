@@ -31,7 +31,7 @@ You can also get product updates and important notifications through the [messag
 
 ## June 2024
 
-- (Preview) Microsoft Defender for Cloud alerts are now available in the Incidents and Alerts queues through the **alert subscription ID** filter. Use the filter to view Defender for Cloud alerts and incidents in the Microsoft Defender portal. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
+- (Preview) You can now filter your Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
 
 ## May 2024
 
