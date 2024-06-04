@@ -57,3 +57,4 @@ For example, you can check whether a particular asset has unwanted connections, 
 - Review [enterprise exposure schemas and operators](schemas-operators.md).
 - [Query the enterprise exposure graph](query-enterprise-exposure-graph.md).
 - Explore the [attack surface map](enterprise-exposure-map.md).
+- Read the blog [Microsoft Security Exposure Management Graph: unveiling the power](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-security-exposure-management-graph-unveiling-the-power/ba-p/4148546).

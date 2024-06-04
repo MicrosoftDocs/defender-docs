@@ -11,10 +11,13 @@ ms.collection:
 - m365-security
 - tier1
 - essentials-overview
+- essentials-privacy
+- essentials-security
+- essentials-compliance
 ms.custom: intro-overview
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 01/19/2024
+ms.date: 05/31/2024
 ---
 
 # Microsoft Defender for Endpoint
@@ -41,7 +44,6 @@ Microsoft Defender for Endpoint is an enterprise endpoint security platform desi
 >
 > For more information on the features and capabilities included in each plan, including the new Defender Vulnerability Management add-on, see [Microsoft 365 guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
-<p><p>
 
 Watch the following video to learn more about Defender for Endpoint:
 
@@ -159,5 +161,15 @@ Defender for Endpoint directly integrates with various Microsoft solutions, incl
 **[Microsoft Defender XDR](/defender-xdr/microsoft-365-defender)**
 
 With Microsoft Defender XDR, Defender for Endpoint, and various Microsoft security solutions, form a unified pre- and post-breach enterprise defense suite that natively integrates across endpoint, identity, email, and applications to detect, prevent, investigate, and automatically respond to sophisticated attacks.
+
+## Security, privacy, and compliance information
+
+- [Zero Trust with Microsoft Defender for Endpoint](zero-trust-with-microsoft-defender-endpoint.md)
+
+- [Microsoft Trust Center - Data protection and privacy](https://www.microsoft.com/trust-center/privacy)
+
+- [Privacy at Microsoft](https://privacy.microsoft.com/)
+
+- [Privacy & data management overview](/compliance/assurance/assurance-privacy)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

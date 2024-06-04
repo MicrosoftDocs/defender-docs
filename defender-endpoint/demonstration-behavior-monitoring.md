@@ -28,7 +28,6 @@ ms.date: 05/15/2024
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
-
 Behavior Monitoring in Microsoft Defender Antivirus monitors process behavior to detect and analyze potential threats based on the behavior of applications, services, and files. Rather than relying solely on content matching, which identifies known malware patterns, behavior monitoring focuses on observing how software behaves in real-time.
 
 ## Scenario requirements and setup
@@ -57,20 +56,21 @@ To demonstrate how Behavior Monitoring blocks a payload:
 
 1. Create a bash script using a script/text editor such as nano or Visual Studio Code (VS Code):
 
-  ```bash
-  #! /usr/bin/bash
-  echo " " >> /tmp/9a74c69a-acdc-4c6d-84a2-0410df8ee480.txt 
-  echo " " >>  /tmp/f918b422-751c-423e-bfe1-dbbb2ab4385a.txt 
-  sleep 5
-  ```
+   ```bash
+   #! /usr/bin/bash
+   echo " " >> /tmp/9a74c69a-acdc-4c6d-84a2-0410df8ee480.txt
+   echo " " >> /tmp/f918b422-751c-423e-bfe1-dbbb2ab4385a.txt
+   sleep 5
+   ```
 
 2. Save as BM_test.sh
-3. Run the following command to make the bash script executable.
+3. Run the following command to make the bash script executable:
 
-  ```bash
-  sudo chmod u+x BM_test.sh
-  ```
-4. . Run the bash script 
+   ```bash
+   sudo chmod u+x BM_test.sh
+   ```
+
+4. Run the bash script:
 
   ```bash
   sudo bash BM_test.sh
@@ -99,4 +99,3 @@ Detection time: Tue May 7 20:23:41 2024
 Status: "quarantined"
 
 If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the [Microsoft Defender XDR portal](https://security.microsoft.com), and you'll see an alert named: "Suspicious 'MacOSChangeFileTest' behavior was blocked."
-

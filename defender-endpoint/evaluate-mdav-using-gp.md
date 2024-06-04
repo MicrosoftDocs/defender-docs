@@ -11,7 +11,7 @@ ms.date: 05/10/2024
 ms.reviewer:
 manager: deniseb
 ms.subservice: ngp
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 - mde-ngp
@@ -22,28 +22,27 @@ search.appverid: met150
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-
 **Applies to:**
 
 - Microsoft Defender Antivirus
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
-**Platforms**
+**Platforms**:
 
 - Windows
 
-In Windows 10 or newer and Windows Server 2016 or newer, you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG). 
+In Windows 10 or newer and Windows Server 2016 or newer, you can use next-generation protection features offered by Microsoft Defender Antivirus (MDAV) and Microsoft Defender Exploit Guard (Microsoft Defender EG).
 
-This topic explains how to enable and test the key protection features in Microsoft Defender AV and Microsoft Defender EG and provides you with guidance and links to more information. 
+This topic explains how to enable and test the key protection features in Microsoft Defender AV and Microsoft Defender EG and provides you with guidance and links to more information.
 
-This article describes configuration options in Windows 10 or newer and Windows Server 2016 or newer. 
+This article describes configuration options in Windows 10 or newer and Windows Server 2016 or newer.
 
-## Use Microsoft Defender Antivirus using Group Policy to enable the features 
+## Use Microsoft Defender Antivirus using Group Policy to enable the features
 
-This guide provides the Microsoft Defender Antivirus Group Policy that configures the features you should use to evaluate our protection. 
+This guide provides the Microsoft Defender Antivirus Group Policy that configures the features you should use to evaluate our protection.
 
-1. Grab the latest 'Windows Group Policy Administrative Templates'. 
+1. Grab the latest 'Windows Group Policy Administrative Templates'.
 
    For more information, see [Create and manage Central Store - Windows Client](/troubleshoot/windows-client/group-policy/create-and-manage-central-store#links-to-download-the-administrative-templates-files-based-on-the-operating-system-version).
 
@@ -51,7 +50,6 @@ This guide provides the Microsoft Defender Antivirus Group Policy that confi
    > 1. The Windows one works with the Windows Servers.
    >
    > 1. Even if you are running a Windows 10 or Windows Server 2016, get the latest administrative templates for Windows 11 or newer.
-
 
 2. Create a 'Central Store' to host the latest .admx and .adml templates.
 
@@ -108,7 +106,7 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 | Description | Setting |
 | --- | --- |
 | Join Microsoft MAPS | Enabled, Advanced MAPS |
-| Configure the ‘Block at First Sight’ feature | Enabled |
+| Configure the 'Block at First Sight' feature | Enabled |
 | Send file samples when further analysis is required | Enabled, Send all samples |
 
 \\**MpEngine:**
@@ -139,7 +137,7 @@ For more information, see [Use next-gen technologies in Microsoft Defender Antiv
 | Specify the interval to check for security intelligence updates | Enabled, 4 |
 | Define the order of sources for downloading security intelligence updates | Enabled, under 'Define the order of sources for downloading security intelligence updates'<br><br>InternalDefinitionUpdateServer \| MicrosoftUpdateServer \| MMPC<br><br>**Note:** Where InternalDefinitionUpdateServer is WSUS with Microsoft Defender Antivirus updates allowed.<br><br>MicrosoftUpdateServer == Microsoft Update (formerly Windows Update).<br><br>MMPC == https://www.microsoft.com/en-us/wdsi/definitions |
 
-## Disable local administrator AV settings 
+## Disable local administrator AV settings
 
 Disable local administrator AV settings such as exclusions, and enforce the policies from the Microsoft Defender for Endpoint Security Settings Management.
 
@@ -190,7 +188,6 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 | Disable TLS parsing | TLS parsing is enabled |
 | Enable DNS Sinkhole | DNS Sinkhole is enabled |
 
-
 ## Attack Surface Reduction Rules
 
 1. Navigate to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Microsoft Defender Antivirus** > **Microsoft Defender Exploit Guard** > **Attack Surface Reduction**.
@@ -216,7 +213,7 @@ Disable local administrator AV settings such as exclusions, and enforce the poli
 | 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84<br><br>**Note:** (Block Office applications from injecting code into other processes) | 1 (Block) |
 | e6db77e5-3df2-4cf1-b95a-636979351e5b<br><br>**Note:** (Block persistence through WMI event subscription) | 1 (Block) |
 | c1db55ab-c21a-4637-bb3f-a12568109d35<br><br>**Note:** (Use advanced protection against ransomware) | 1 (Block) |
-| d1e49aac-8f56-4280-b9ba-993a6d77406c<br><br>**Note:** (Block process creations originating from PSExec and WMI commands) | 1 (Block)<br><br>**Note:** If you have Configuration Manager (formerly SCCM), or other management tools that use WMI, you might need to set this to 2 (‘audit’) instead of 1(‘block’). |
+| d1e49aac-8f56-4280-b9ba-993a6d77406c<br><br>**Note:** (Block process creations originating from PSExec and WMI commands) | 1 (Block)<br><br>**Note:** If you have Configuration Manager (formerly SCCM), or other management tools that use WMI, you might need to set this to 2 ('audit') instead of 1('block'). |
 | 33ddedf1-c6e0-47cb-833e-de6133960387<br><br>**Note:** ( \[PREVIEW\] Block rebooting machine in Safe Mode) | 1 (Block) |
 
 > [!TIP]
@@ -268,7 +265,7 @@ To check which 'Engine Update' version you have installed, use the following Pow
 get-mpComputerStatus | ft AMEngineVersion
 ```
 
-If you're finding that your settings aren't taking effect, you might have a conflict. To resolve conflicts, refer: 
+If you're finding that your settings aren't taking effect, you might have a conflict. To resolve conflicts, refer:
 [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md).
 
 ## For False Negatives (FNs) submissions
@@ -280,7 +277,7 @@ If you have Microsoft XDR, Microsoft Defender for Endpoint P2/P1, or Microsoft D
 If you have Microsoft Defender Antivirus, refer:
 https://www.microsoft.com/security/portal/mmpc/help/submission-help.aspx
 
-Microsoft Defender AV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender AV app](review-scan-results-microsoft-defender-antivirus.md). 
+Microsoft Defender AV indicates a detection through [standard Windows notifications](configure-notifications-microsoft-defender-antivirus.md). You can also [review detections in the Microsoft Defender AV app](review-scan-results-microsoft-defender-antivirus.md).
 
 The Windows event log also records detection and engine events. See the [Microsoft Defender Antivirus events article for a list of event IDs](troubleshoot-microsoft-defender-antivirus.yml) and their corresponding actions.
 
