@@ -4,7 +4,7 @@ description: Learn about Device control policies in Defender for Endpoint
 author: siosulli
 ms.author: siosulli
 manager: deniseb
-ms.date: 05/16/2024
+ms.date: 06/04/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -486,6 +486,7 @@ The properties described in the following table can be included in the `Descript
 | `BusId` | For example, `USB`, `SCSI` |
 | `SerialNumberId` | You can find `SerialNumberId` from Device instance path in Device Manager in Windows. For example, `03003324080520232521` is `SerialNumberId` in `USBSTOR\DISK&VEN__USB&PROD__SANDISK_3.2GEN1&REV_1.00\03003324080520232521&0` |
 | `VID_PID` | - Vendor ID is the four-digit vendor code that the USB committee assigns to the vendor. <br/>- Product ID is the four-digit product code that the vendor assigns to the device. It supports wildcards.<br/>- To transform Device instance path to Vendor ID and Product ID format, use Standard USB Identifiers. Here are some examples: <br/>`0751_55E0`: match this exact VID/PID pair <br/>`_55E0`: match any media with `PID=55E0` <br/>`0751_`: match any media with `VID=0751` |
+| `DeviceEncryptionStateId` | The BitLocker encryption state - `Plain` or `BitlockerEncrpted`|
 
 Here are some examples of device group definitions in the device control samples repository:
 
