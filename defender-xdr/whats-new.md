@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 05/29/2024
+ms.date: 06/05/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -28,6 +28,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Sentinel](/azure/sentinel/whats-new)
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
+
+## June 2024
+
+- (Preview) You can now filter your Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
 
 ## May 2024
 

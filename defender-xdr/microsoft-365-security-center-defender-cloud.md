@@ -7,8 +7,8 @@ f1.keywords:
 - NOCSH
 ms.author: diannegali
 author: diannegali
-manager: dansimp
-ms.date: 02/14/2024
+manager: deniseb
+ms.date: 06/05/2024
 audience: ITPro
 ms.topic: conceptual
 search.appverid: 
@@ -44,7 +44,7 @@ To ensure access to Defender for Cloud alerts in the Microsoft Defender portal, 
 You must be a global administrator or a security administrator in Azure Active Directory to view Defender for Cloud alerts and correlations. For users that don't have these roles, the integration is available only by applying [unified role-based access control (RBAC) roles](manage-rbac.md) for Defender for Cloud.
 
 > [!NOTE]
-> The permission to view Defender for Cloud alerts and correlations is automatic for the entire tenant. Viewing for specific subscriptions is not supported.
+> The permission to view Defender for Cloud alerts and correlations is automatic for the entire tenant. Viewing for specific subscriptions is not supported. You can use the **alert subscription ID** filter to view Defender for Cloud alerts associated with a specific Defender for Cloud subscription in the alert and incident queues. Learn more about [filters](incident-queue.md#filters-).
 
 ## Investigation experience in the Microsoft Defender portal
 
