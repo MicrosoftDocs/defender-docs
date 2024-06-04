@@ -1,5 +1,5 @@
 ---
-title: Connect Microsoft Sentinel to Microsoft Defender XDR (preview)
+title: Connect Microsoft Sentinel to Microsoft Defender XDR
 description: Learn how to connect your Microsoft Sentinel environment to Microsoft Defender XDR to unify your security operations.
 ms.service: defender-xdr
 f1.keywords: 
@@ -22,25 +22,23 @@ search.appverid:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 04/03/2024
+ms.date: 05/29/2024
 ---
 
-# Connect Microsoft Sentinel to Microsoft Defender XDR (preview)
+# Connect Microsoft Sentinel to Microsoft Defender XDR
 
-Microsoft Sentinel is available as part of the public preview for the unified security operations platform in the Microsoft Defender portal. When you onboard Microsoft Sentinel to the Microsoft Defender portal, you unify capabilities with Microsoft Defender XDR like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. For more information, see:
+Microsoft Sentinel is available as part of the unified security operations platform in the Microsoft Defender portal. Microsoft Sentinel in the Defender portal is now supported for production use. When you onboard Microsoft Sentinel to the Microsoft Defender portal, you unify capabilities with Microsoft Defender XDR like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. For more information, see:
 
 - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
 - [Unified security operations platform with Microsoft Sentinel and Defender XDR](https://aka.ms/unified-soc-announcement)
 
-> [!IMPORTANT]
-> Information in this article relates to a prerelease product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 ## Prerequisites
 
-Before you begin, review the feature documentation to understand the product changes and limitations: 
-   - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
-   - [Advanced hunting in the Microsoft Defender portal](advanced-hunting-microsoft-defender.md)
-   - [Automation with the unified security operations platform](/azure/sentinel/automation#automation-with-the-unified-security-operations-platform)
+Before you begin, review the feature documentation to understand the product changes and limitations:
+
+- [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
+- [Advanced hunting in the Microsoft Defender portal](advanced-hunting-microsoft-defender.md)
+- [Automation with the unified security operations platform](/azure/sentinel/automation#automation-with-the-unified-security-operations-platform)
 
 The Microsoft Defender portal supports a single Microsoft Entra tenant and the connection to one workspace at a time. In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
 
@@ -133,3 +131,4 @@ If you want to connect to a different workspace, from the **Workspaces** page, s
 - [Advanced hunting in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2264410)
 - [Automatic attack disruption in Microsoft Defender XDR](automatic-attack-disruption.md)
 - [Investigate incidents in Microsoft Defender XDR](investigate-incidents.md)
+- [Optimize your security operations](/azure/sentinel/soc-optimization/soc-optimization-access?tabs=defender-portal)

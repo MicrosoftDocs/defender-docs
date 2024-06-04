@@ -204,7 +204,7 @@ Keep exploring the features and capabilities in the Defender portal:
 - [Email & collaboration alerts](/Microsoft-365/compliance/alert-policies#default-alert-policies)
 - [Create a phishing attack simulation](/defender-office-365/attack-simulation-training-simulations) and [create a payload for training your teams](/defender-office-365/attack-simulation-training-payloads)
 
-To explore capabilities related to the Microsoft Sentinel integration with Microsoft Defender XDR in the unified security operations platform (preview), see [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690).
+To explore capabilities related to the Microsoft Sentinel integration with Microsoft Defender XDR in the unified security operations platform, see [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690).
 
 ## Training for security analysts
 
