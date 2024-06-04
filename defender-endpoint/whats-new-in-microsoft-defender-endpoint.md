@@ -52,7 +52,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## June 2024
 
-- (Preview) [BitLocker support for Device control](https://learn.microsoft.com/en-us/defender-endpoint/device-control-overview?view=o365-worldwide#control-access-to-bitlocker-encrypted-removable-media-preview):  Allows device control to apply policy based on the BitLocker encrypted state of a device.  
+- (Preview) [BitLocker support for Device control](device-control-overview.md#control-access-to-bitlocker-encrypted-removable-media-preview):  Allows device control to apply policy based on the BitLocker encrypted state of a device.  
 
 ## May 2024
 
