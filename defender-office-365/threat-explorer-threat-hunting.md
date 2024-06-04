@@ -204,6 +204,11 @@ The **Take action** wizard is described in the following list:
      - **Junk**: Move the message to the Junk Email folder.
      - **Inbox**: Move the message to the Inbox.
 
+       If you selected a message with the value **Quarantine** for the **Latest delivery location** property, selecting **Inbox** reveals the following options to release the message from quarantine:
+
+       - **Release to one or more of the original recipients of the e-mail**
+       - **Release to all recipients**
+
        **Move back to Sent Items folder**: Also try to move the message from the sender's Recoverable Items\Deletions folder to the Sent Items folder if the sender is the organization.
 
      - **Deleted items**: Move the message to the Deleted items folder.
