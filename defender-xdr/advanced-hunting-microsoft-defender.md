@@ -112,13 +112,16 @@ For editable queries, more options are available:
 
 To help discover threats and anomalous behaviors in your environment, you can create custom detection policies. 
 
-For analytics rules that apply to data ingested through the connected Microsoft Sentinel workspace, select **Manage rules > Create analytics rule**. 
+For analytics rules that apply to data ingested through the connected Microsoft Sentinel workspace, select **Manage rules > Create analytics rule**.
 
 :::image type="content" source="/defender/media/advanced-hunting-unified-rules.png" alt-text="Screenshot of the options to create custom analytics or detections in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-unified-rules.png":::
 
 The **Analytics rule wizard** appears. Fill up the required details as described in [Analytics rule wizard—General tab](/azure/sentinel/detect-threats-custom#analytics-rule-wizardgeneral-tab).
 
-For custom detection rules that apply to Microsoft Defender XDR data, select **Manage rules > Create custom detection**. Read [Create and manage custom detection rules](custom-detection-rules.md) for more information. 
+You can also create custom detection rules that query data from both Microsoft Sentinel and Defender XDR tables. Select **Manage rules > Create custom detection**. Read [Create and manage custom detection rules](custom-detection-rules.md) for more information. 
+
+If your Defender XDR data is ingested into Microsoft Sentinel, you have the option to choose between **Create custom detection** and **Create analytics rule**.
+
 
 ## Explore results
 
@@ -143,11 +146,16 @@ For Microsoft Defender XDR data, you can take further action by selecting the ch
 
 - The `IdentityInfo table` from [Microsoft Sentinel](/azure/sentinel/ueba-reference#identityinfo-table) isn't available, as the `IdentityInfo` table remains as is in Defender XDR. Microsoft Sentinel features like analytics rules that query this table aren't impacted as they're querying the Log Analytics workspace directly.
 - The Microsoft Sentinel `SecurityAlert` table is replaced by `AlertInfo` and `AlertEvidence` tables, which both contain all the data on alerts. While SecurityAlert isn't available in the schema tab, you can still use it in queries using the advanced hunting editor. This provision is made so as not to break existing queries from Microsoft Sentinel that use this table. 
-- Guided hunting mode is supported for Defender XDR data only.
-- Custom detections, links to incidents, and take actions capabilities are supported for Defender XDR data only.
+- Guided hunting mode, links to incidents, and take actions capabilities are supported for Defender XDR data only.
+- Custom detections have the following limitations:
+    - Custom detections are not available for KQL queries that do not include Defender XDR data.
+    - Near real-time detection frequency is not available for detections that include Microsoft Sentinel data. 
+    - Custom functions that were created and saved in Microsoft Sentinel are not supported.
+    - Defining entities from Sentinel data is not yet supported in custom detections.
 - Bookmarks aren't supported in the advanced hunting experience. They're supported in the **Microsoft Sentinel > Threat management > Hunting** feature.
 - If you're streaming Defender XDR tables to Log Analytics, there might be a difference between the`Timestamp` and `TimeGenerated` columns. In case the data arrives to Log Analytics after 48 hours, it's being overridden upon ingestion to `now()`. Therefore, to get the actual time the event happened, we recommend relying on the `Timestamp` column.
-- The Microsoft Graph API for running an advanced hunting query doesn't support querying data from Microsoft Sentinel yet. 
+- When prompting [Copilot for Security](advanced-hunting-security-copilot.md) for advanced hunting queries, you might find that not all Microsoft Sentinel tables are currently supported. However, support for these tables can be expected in the future.
+
 
 
 

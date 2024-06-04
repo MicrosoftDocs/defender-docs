@@ -109,7 +109,7 @@ The following tutorials enumerate steps and actions that you can apply when inve
 
 ## Next steps
 
-- [Simulate attacks through the attack simulation training](eval-defender-investigate-respond-simulate-attack.md)
+- [Simulate attacks through the attack simulation training](pilot-deploy-investigate-respond.md)
 - Explore Microsoft Defender XDR through the [Virtual Ninja training](https://adoption.microsoft.com/ninja-show/)
 
 ## See also

@@ -115,7 +115,7 @@ The **Summary** tab surfaces key findings about an artifact that Defender TI der
 
   Defender TI displays reputation scores as a numerical value between zero and 100. An entity with a score of `0` doesn't have associations with suspicious activity or known indicators of compromise (IOCs), while a score of `100` indicates that the entity is malicious. Defender TI also provides a list of rules with corresponding descriptions and severity ratings. In the following example, four "high severity" rules are applicable to the domain.
 
-  ![Summary Tab Reputation](media/summaryTabReputation.png)
+  :::image type="content" source="/defender/threat-intelligence/media/reputation-score-summary-card.png" alt-text="Reputation summary card." lightbox="/defender/threat-intelligence/media/reputation-score-summary-card.png":::
 
   [Learn more about reputation scoring](reputation-scoring.md)
 
@@ -123,7 +123,7 @@ The **Summary** tab surfaces key findings about an artifact that Defender TI der
 
   In the following screenshot, we can quickly determine that the IP address is routable, hosts a web server, and had an open port within the past five days. Furthermore, the Defender TI displays rules that weren't triggered, which can be equally helpful when kick starting an investigation.
 
-  ![Summary Tab Analyst Insights](media/summaryTabAnalystInsights.png)
+  :::image type="content" source="/defender/threat-intelligence/media/analyst-insights-01.png" alt-text="Analyst insights summary card." lightbox="/defender/threat-intelligence/media/analyst-insights-01.png":::
 
   [Learn more about analyst insights](analyst-insights.md)
 
