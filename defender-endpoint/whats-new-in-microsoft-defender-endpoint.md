@@ -7,7 +7,7 @@ ms.author: siosulli
 author: siosulli
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 05/23/2024
+ms.date: 06/04/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -49,6 +49,10 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 - [What's new in Defender for Endpoint on Linux](linux-whatsnew.md)
 - [What's new in Defender for Endpoint on Android](android-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
+
+## June 2024
+
+- (Preview) [BitLocker support for Device control](device-control-overview.md#control-access-to-bitlocker-encrypted-removable-media-preview):  Allows device control to apply policy based on the BitLocker encrypted state of a device.  
 
 ## May 2024
 
