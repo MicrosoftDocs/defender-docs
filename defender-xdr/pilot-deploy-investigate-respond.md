@@ -48,8 +48,6 @@ Here is the workflow for investigating and responding to incidents using Microso
 
 :::image type="content" source="./media/eval-defender-xdr/defender-investigate-respond-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to do incident investigation and response." lightbox="./media/eval-defender-xdr/defender-investigate-respond-pilot-deploy-steps.svg":::
 
->> Update figure
-
 Follow these steps:
 
 1. [Simulate attacks with the Microsoft Defender portal](#step-1)
