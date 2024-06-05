@@ -14,7 +14,7 @@ ms.collection:
 - mde-edr
 ms.topic: conceptual
 ms.subservice: edr
-ms.date: 01/24/2024
+ms.date: 06/05/2024
 ---
 
 # Manage Microsoft Defender for Endpoint incidents
