@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 04/04/2024
+ms.date: 05/31/2024
 ms.collection:
 - m365-security
 - tier2
@@ -74,9 +74,9 @@ Device discovery settings must be activated to "Standard Discovery" at a minimum
 
 Learn how to set up auditing in domain controllers in [Configure audit policies for Windows event logs](/defender-for-identity/deploy/configure-windows-event-collection) to ensure that required audit events are configured on the domain controllers where the Defender for Identity sensor is deployed. 
 
-#### Configure action accounts
+#### Validate action accounts
 
-Defender for Identity allows you to take remediation actions targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Defender for Identity needs to have the required permissions to do so. By default, the Defender for Identity sensor impersonates the LocalSystem account of the domain controller and performs the actions. Since the default can be changed, validate that Defender for Identity has the required permissions.
+Defender for Identity allows you to take remediation actions targeting on-premises Active Directory accounts in the event that an identity is compromised. To take these actions, Defender for Identity needs to have the required permissions to do so. By default, the Defender for Identity sensor impersonates the LocalSystem account of the domain controller and performs the actions. Since the default can be changed, validate that Defender for Identity has the required permissions or uses the default LocalSystem account.
 
 You can find more information on the action accounts in [Configure Microsoft Defender for Identity action accounts](/defender-for-identity/deploy/manage-action-accounts)
 
