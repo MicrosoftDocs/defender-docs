@@ -98,7 +98,7 @@
     - name: Top 10 ways to secure your business data
       href: /Microsoft-365/business-premium/secure-your-business-data?bc=%2Fdefender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fdefender-business%2Ftoc.json
     - name: How to get help or contact support
-      href: /microsoft-365/admin/get-help-support.md
+      href: /microsoft-365/admin/get-help-support
     - name: Frequently asked questions
       href: mdb-faq.yml
     - name: Troubleshooting
