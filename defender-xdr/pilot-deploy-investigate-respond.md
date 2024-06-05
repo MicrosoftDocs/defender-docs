@@ -99,7 +99,7 @@ Here are the Defender for Endpoint simulations from Microsoft:
 - Document drops backdoor
 - Automated investigation (backdoor)
 
-There are additional simulations from third-party sources. There are also a set of tutorials.
+There are additional simulations from third-party sources. There is also a set of tutorials.
 
 For each simulation or tutorial:
 
