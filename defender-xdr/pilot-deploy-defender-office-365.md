@@ -91,7 +91,7 @@ The following table describes this illustration.
 | 3 | Exchange Online integrates with Microsoft Defender for Office 365 to offer more advanced threat protection, mitigation, and remediation. |
 | 4  |A message that isn't malicious, blocked, or quarantined is processed and delivered to the recipient in EXO where user preferences related to junk mail, mailbox rules, or other settings are evaluated and triggered. |
 | 5 | Integration with on-premises Active Directory can be enabled using Microsoft Entra Connect to synchronize and provision mail-enabled objects and accounts to Microsoft Entra ID and ultimately Exchange Online. |
-| 6 | When integrating an on-premises environment, it's encouraged to use an Exchange server for supported management and administration of mail-related attributes, settings, and configurations. |
+| 6 | When integrating an on-premises environment, it's best to use an Exchange server for supported management and administration of mail-related attributes, settings, and configurations. |
 | 7 | Microsoft Defender for Office 365 shares signals to Microsoft Defender XDR for extended detection and response (XDR). |
 
 On-premises integration is common but optional. If your environment is cloud-only, this guidance also works for you.
