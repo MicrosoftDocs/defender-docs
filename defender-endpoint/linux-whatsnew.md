@@ -6,7 +6,7 @@ ms.author: dansimp
 author: dansimp
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 05/16/2024
+ms.date: 06/05/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -36,8 +36,8 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## May-2024 Build: 101.24042.0002 | Release version: 30.124042.0002.0
 
-&ensp;Released: **TBD**<br/>
-&ensp;Published: **TBD**<br/>
+&ensp;Released: **May 29, 2024**<br/>
+&ensp;Published: **May 29, 2024**<br/>
 &ensp;Build: **101.24042.0002**<br/>
 &ensp;Release version: **30.24042.0002.0**<br/>
 &ensp;Engine version: **1.1.24030.4**<br/>
@@ -47,11 +47,11 @@ This article is updated frequently to let you know what's new in the latest rele
 
 There are multiple fixes and new changes in this release:
 
+- In version 24032.0007, there was a known issue where the enrollment of devices to MDE Security Management failed when using the "Device Tagging" mechanism via the mdatp_managed.json file. This issue has been resolved in the current release.
 - Stability and performance improvements.
 - Other bug fixes.
 
 </details>
-
 <details>
 <summary> May-2024 (Build: 101.24032.0007 | Release version: 30.124032.0007.0)</summary>
 
@@ -84,6 +84,15 @@ There are multiple fixes and new changes in this release:
 - Bug fix to enhance behavioral detections.
 - Stability and performance improvements.
 - Other bug fixes.
+
+**Known Issues**
+
+- There's a known issue where enrolling devices to MDE Security Management via "Device Tagging" mechanism using mdatp_managed.json is failing in 24032.0007. To mitigate this issue, use the following mdatp CLI command to tag devices:
+
+   ```bash
+   sudo mdatp edr tag set --name GROUP --value MDE-Management
+   ```
+    **The issue has been fixed in Build: 101.24042.0002**
 
 </details>
 
