@@ -1,6 +1,6 @@
 ---
-title: Pilot and deploy Microsoft Defender for Cloud Apps
-description: Microsoft Defender for Cloud Apps technical diagrams explain the architecture in Microsoft Defender XDR, which will help you build a pilot environment.
+title: How do I pilot and deploy Microsoft Defender for Cloud Apps?
+description: How to pilot and deploy Microsoft Defender for Cloud Apps in your production Microsoft 365 tenant.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:

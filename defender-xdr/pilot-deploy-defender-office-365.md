@@ -1,6 +1,6 @@
 ---
-title: Pilot and deploy Defender for Office 365
-description: Pilot and deploy Defender for Office 365.
+title: How do I pilot and deploy Defender for Office 365?
+description: How to pilot and deploy Microsoft Defender for Office 365 in your production Microsoft 365 tenant.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:

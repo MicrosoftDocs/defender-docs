@@ -1,6 +1,6 @@
 ---
-title: Investigate and respond using Microsoft Defender XDR
-description: Investigate and respond using Microsoft Defender XDR.
+title: How do I investigate and respond using Microsoft Defender XDR?
+description: How to investigate and respond to cyberattacks using Microsoft Defender XDR.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
