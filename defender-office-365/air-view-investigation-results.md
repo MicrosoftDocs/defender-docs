@@ -1,5 +1,5 @@
 ---
-title: View the results of an automated investigation in Microsoft 365
+title: Details and results of AIR in Defender for Office 365 Plan 2
 f1.keywords: 
 - NOCSH
 author: chrisda
@@ -14,38 +14,25 @@ search.appverid:
 ms.collection: 
 - m365-security
 - tier2
-description: During and after an automated investigation in Microsoft 365, you can view the results and key findings.
-ms.date: 06/09/2023
+description: Learn about the information that's available from automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2.
+ms.date: 06/04/2024
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
 
-# Details and results of an automated investigation in Microsoft 365
+# Details and results of automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Details about active and completed [automated investigations](air-about.md) in Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-2-capabilities) are available on the **Investigations** page in the Microsoft Defender portal at <https://security.microsoft.com/airinvestigation>. Investigation details provide you with up-to-date status and (with the right permissions) the ability to approve any pending actions.
+In Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-2-capabilities), details about active and completed investigations from [automated investigation and response (AIR)](air-about.md) are available on the **Investigations** page in the Microsoft Defender portal at <https://security.microsoft.com/airinvestigation>. Investigation details provide you with up-to-date status and (with the right permissions) the ability to approve any pending actions.
 
 > [!TIP]
 > Check out the unified investigation page in the Microsoft Defender portal. To learn more, see [Unified investigation page](/defender-xdr/m365d-autoir-results#new-unified-investigation-page).
 
 ## What do you need to know before you begin?
 
-You need to be assigned permissions to view the results of an automated investigation. You have the following options:
-
-- [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (Affects the Defender portal only, not PowerShell):
-  - Approve or reject recommended actions_: **Security Operator/Email advanced remediation actions (manage)**.
-- [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md):
-  - _Approve or reject recommended actions_:
-    - Membership in the **Organization Management**, **Security Administrator**, **Security Operator**, **Security Reader**, or **Global Reader** role groups.
-      and
-    - The **Search and Purge** role, which is assigned only to the **Data Investigator** or **Organization Management** role groups by default. Or you can [create a new role group](mdo-portal-permissions.md#create-email--collaboration-role-groups-in-the-microsoft-defender-portal) with the **Search and Purge** role assigned, and add the users to the custom role group.
-- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Give users the required permissions _and_ permissions for other features in Microsoft 365:
-  - _Start an automated investigation_ or _Approve or reject recommended actions_:
-    - Membership in the **Global Administrator**, **Security Administrator**, **Security Operator**, **Security Reader**, or **Global Reader** roles.
-      and
-    - Membership in an Email & collaboration role group with the **Search and Purge** role assigned as previously described
+To see the permissions and licensing requirement for AIR, see [Required permissions and licensing for AIR](air-about.md#required-permissions-and-licensing-for-air).
 
 ## The Investigations page in the Defender portal
 

@@ -17,23 +17,31 @@ ms.collection:
 ms.custom:
 description: Learn about remediation actions in automated investigation and response capabilities in Microsoft Defender for Office 365 Plan 2.
 ms.service: defender-office-365
-ms.date: 06/09/2023
+ms.date: 06/04/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
 
-# Review and manage remediation actions in Office 365
+# Review and manage remediation actions in automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-As automated investigations on email & collaboration content result in verdicts, such as *Malicious* or *Suspicious*, certain remediation actions are created. In Microsoft Defender for Office 365, remediation actions can include:
+In Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet), automated investigation and response (AIR) often results in pending remediation actions. For example:
 
-- Soft deleting email messages or clusters
-- Turning off external mail forwarding
+- Soft deleting email messages or clusters.
+- Turning off external mail forwarding.
 
-These remediation actions are not taken unless and until your security operations team approves them. We recommend reviewing and approving any pending actions as soon as possible so that your automated investigations complete in a timely manner. You need to be part of Search & purge role before taking any actions.
+These remediation actions aren't automatically done; they need to be approved by a member of your security operations (SecOps) team. The rest of this article explains how to approve or reject pending remediation actions.
 
-We've added additional checks for duplicate or overlapping investigations with the same clusters approved multiple times. If the same investigation cluster is already approved in the previous hour, new duplicate remediation will not be processed again. This behavior doesn't remove duplicate investigations or investigation evidence - it simply de-duplicates approved actions to improve remediation processing speed. For the duplicate approved cluster investigations, you won't see action details in the [action center](https://security.microsoft.com/action-center/history) side panel.
+> [!TIP]
+> We recommend reviewing and approving or rejecting pending remediations actions as soon as possible so your automated investigations complete in a timely manner.
+>
+> The system checks for duplicate or overlapping investigations where the same clusters were approved multiple times. If the same investigation cluster was already approved within the previous hour, new duplicate remediations aren't processed again. This behavior doesn't remove duplicate investigations or investigation evidence, it simply de-duplicates approved actions to improve remediation processing speed. For duplicate approved cluster investigations, you don't see the action details the fly from the **History** tab on the **Action center** page in the Microsoft Defender portal at <https://security.microsoft.com/action-center/history>.
+
+## What do you need to know before you begin?
+
+To see the permissions and licensing requirement for AIR, see [Required permissions and licensing for AIR](air-about.md#required-permissions-and-licensing-for-air).
+
 
 ## Approve (or reject) pending actions
 
@@ -44,10 +52,15 @@ There are four different ways to find and take auto investigation actions:
 - [Action center](https://security.microsoft.com/action-center/pending)
 - [Investigation and remediation investigations queue](https://security.microsoft.com/airinvestigation)
 
-## Incident queue
+## Approve or reject pending actions from the Incident queue
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Incidents** page at **Incidents & alerts** \> **Incidents**. To go directly to the **Incidents** page, use <https://security.microsoft.com/incidents>.
-2. Filter on **Pending action** for the Automated investigation state (optional).
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Incidents** page at **Incidents & alerts** \> **Incidents**. Or, to go directly to the **Incidents** page, use <https://security.microsoft.com/incidents>.
+2. If it helps, filter the results on the **Incidents** page by **Pending action**:
+   1. Clear any existing unwanted filters on the **Incidents** page by selecting :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: **Clear**.
+   2. Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Add filter**.
+   3. In the **Add filter** dialog that opens, select **Automated investigation state**, and then select **Add**.
+   4. Select the **Automated investigation state: Any** filter on the **Incidents** page.
+   5. In the drop down list that opens, select **Pending action**, and then select **Apply**.
 3. On the **Incidents** page, select an incident name to open its summary page.
 4. Select the **Evidence and Response** tab.
 5. Select an item in the list to open its flyout pane.
