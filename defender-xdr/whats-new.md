@@ -31,7 +31,7 @@ You can also get product updates and important notifications through the [messag
 
 ## June 2024
 
-- (Preview) **[Content distribution in multi-tenant management]** is now available. Content distribution helps you manage content at scale, across tenants in multi-tenant management in Microsoft Defender XDR. In content distribution, you can create tenant groups to copy existing content, like custom detection rules, from the source tenant to the target tenants you assign during tenant group creation. The content then runs on the target tenant's devices or device groups that you set in the tenant group scope.
+- (Preview) **[Content distribution in multi-tenant management](mto-tenantgroups.md)** is now available. Content distribution helps you manage content at scale, across tenants in multi-tenant management in Microsoft Defender XDR. In content distribution, you can create tenant groups to copy existing content, like custom detection rules, from the source tenant to the target tenants you assign during tenant group creation. The content then runs on the target tenant's devices or device groups that you set in the tenant group scope.
 
 - (Preview) You can now filter your Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
 
