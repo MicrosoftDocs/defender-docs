@@ -100,11 +100,11 @@ To use [advanced hunting](/defender-xdr/advanced-hunting-overview) to find event
 > [!NOTE]
 > Querying using the **Hunt for related events** button from a Technique side pane displays all the events related to the identified technique but does not include the Technique itself in the query results.
  
- ### EDR sensor (MsSense.exe) Resource Manager 
+ ### EDR client (MsSense.exe) Resource Manager 
 
-If the resource usage on a device approaches the threshold for the EDR sensor, the EDR sensor switches to critical mode. The device won't process new events until the EDR sensor returns to a normal state. A new event appears in the **Timeline** for that device indicating that the EDR sensor switched to **Critical** mode.
+When the EDR client on a device is running low on resources, it enters critical mode to maintain the normal working operation of the device. The device won't process new events until the EDR client returns to a normal state. A new event appears in the **Timeline** for that device indicating that the EDR client switched to **Critical** mode. 
 
-When resource utilization for the EDR sensor falls below the threshold, the EDR sensor state will automatically switch back to normal mode.
+When the EDR client's resource usage goes back to normal levels, it will automatically return to normal mode.
 
 ### Customize your device timeline
 
