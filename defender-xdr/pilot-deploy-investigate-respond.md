@@ -1,6 +1,6 @@
 ---
-title: Investigate and respond using Microsoft Defender XDR
-description: Investigate and respond using Microsoft Defender XDR.
+title: How do I investigate and respond using Microsoft Defender XDR?
+description: How to investigate and respond to cyberattacks using Microsoft Defender XDR.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
@@ -47,8 +47,6 @@ At any time during your pilot and deployment, you can test Microsoft Defender XD
 Here is the workflow for investigating and responding to incidents using Microsoft Defender XDR in your production environment.
 
 :::image type="content" source="./media/eval-defender-xdr/defender-investigate-respond-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to do incident investigation and response." lightbox="./media/eval-defender-xdr/defender-investigate-respond-pilot-deploy-steps.svg":::
-
->> Update figure
 
 Follow these steps:
 
@@ -101,7 +99,7 @@ Here are the Defender for Endpoint simulations from Microsoft:
 - Document drops backdoor
 - Automated investigation (backdoor)
 
-There are additional simulations from third-party sources. There are also a set of tutorials.
+There are additional simulations from third-party sources. There is also a set of tutorials.
 
 For each simulation or tutorial:
 
