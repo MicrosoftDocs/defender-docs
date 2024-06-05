@@ -1,6 +1,6 @@
 ---
-title: Pilot and deploy Microsoft Defender for Cloud Apps
-description: Microsoft Defender for Cloud Apps technical diagrams explain the architecture in Microsoft Defender XDR, which will help you build a pilot environment.
+title: How do I pilot and deploy Microsoft Defender for Cloud Apps?
+description: How to pilot and deploy Microsoft Defender for Cloud Apps in your production Microsoft 365 tenant.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
@@ -195,8 +195,6 @@ You can begin managing apps by sanctioning, unsanctioning, or outright blocking 
 One of the most powerful protections you can configure is Conditional Access App Control. This protection requires integration with Microsoft Entra ID. It allows you to apply Conditional Access policies, including related policies (like requiring healthy devices), to cloud apps you've sanctioned.
 
 You might already have SaaS apps added to your Microsoft Entra tenant to enforce multi-factor authentication and other conditional access policies. Microsoft Defender for Cloud Apps natively integrates with Microsoft Entra ID. All you must do is configure a policy in Microsoft Entra ID to use Conditional Access App Control in Defender for Cloud Apps. This routes network traffic for these managed SaaS apps through Defender for Cloud Apps as a proxy, which allows Defender for Cloud Apps to monitor this traffic and to apply session controls.
-
->> Rework figure
 
 :::image type="content" source="./media/eval-defender-xdr/m365-defender-mcas-architecture-e.svg" alt-text="A diagram that shows the architecture for the Microsoft Defender for Cloud Apps with SaaS apps." lightbox="./media/eval-defender-xdr/m365-defender-mcas-architecture-e.svg":::
 
