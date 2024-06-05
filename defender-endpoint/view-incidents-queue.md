@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 01/24/2024
+ms.date: 06/05/2024
 ---
 
 # View and organize the Microsoft Defender for Endpoint Incidents queue
