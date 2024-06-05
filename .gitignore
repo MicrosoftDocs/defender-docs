@@ -8,6 +8,6 @@ common/
 .vscode/
 *.ini
 .DS_Store
-*.db
+*.dbtest
  
 .openpublishing.buildcore.ps1
