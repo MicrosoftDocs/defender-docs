@@ -116,6 +116,8 @@
       items: 
        - name: Overview
          href: incident-response-overview.md
+       - name: Alerts, incidents, and correlation
+         href: alerts-incidents-correlation.md
        - name: Investigate and respond with Microsoft Copilot in Microsoft Defender
          items:
               - name: Overview
@@ -493,8 +495,6 @@
           href: mto-dashboard.md
         - name: Manage tenants
           href: mto-tenants.md
-        - name: Distribute content via tenant groups
-          href: mto-tenantgroups.md                      
         - name: Create and manage endpoint security policies
           href: mto-endpoint-security-policy.md               
     - name: Reference
