@@ -1,6 +1,6 @@
 ---
-title: Pilot and deploy Microsoft Defender for Endpoint
-description: Pilot and deploy Microsoft Defender for Endpoint.
+title: How do I pilot and deploy Microsoft Defender for Endpoint?
+description: How to pilot and deploy Microsoft Defender for Endpoint in your production Microsoft 365 tenant.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
