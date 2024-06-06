@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 11/06/2023
+ms.date: 05/30/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -44,6 +44,19 @@ All updates contain:
 - Performance improvements
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr))
+
+## May-2024 (Release version: 10.8750)
+
+|OS  |KB  |Release version |
+| -------- | -------- | -------- |
+|Windows Server 2012 R2, 2016 |[KB 5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8750|
+
+### What's new
+
+**Configuration Management**
+
+- Fixed an issue that caused empty policies to appear in the UI. 
+- Configured Windows Defender Application Control(WDAC) policies to block undesired applications from running on the device. 
 
 ## Feb-2024 (Release version: 10.8735.26020.1009)
 
