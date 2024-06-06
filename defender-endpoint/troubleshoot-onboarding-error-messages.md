@@ -55,7 +55,7 @@ If while accessing Microsoft Defender XDR you get a **Your subscription has expi
 You can choose to renew or extend the license at any point in time. When accessing the portal after the expiration date a **Your subscription has expired** message will be presented with an option to download the device offboarding package, should you choose to not renew the license.
 
 > [!NOTE]
-> For security reasons, the package used to Offboard devices will expire 30 days after the date it was downloaded. Expired offboarding packages sent to a device will be rejected. When downloading an offboarding package you will be notified of the packages expiry date and it will also be included in the package name.
+> For security reasons, the package used to Offboard devices will expire 7 days after the date it was downloaded. Expired offboarding packages sent to a device will be rejected. When downloading an offboarding package you will be notified of the packages expiry date and it will also be included in the package name.
 
 :::image type="content" source="media/atp-subscription-expired.png" alt-text="The subscription expired notification message" lightbox="media/atp-subscription-expired.png":::
 

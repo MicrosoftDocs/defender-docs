@@ -61,9 +61,9 @@ The [Microsoft Defender portal learning hub](https://security.microsoft.com/lear
 
 ## Hands-on with a trial environment
 
-One of the best ways to learn is by configuring and testing Microsoft Defender XDR and its associated services in a trial environment. See [Evaluate and pilot Microsoft Defender XDR](eval-overview.md) for the details.
+One of the best ways to learn is by configuring and testing Microsoft Defender XDR and its associated services in a trial environment. See [Pilot and deploy Microsoft Defender XDR](pilot-deploy-overview.md) for the details.
 
 ## Simulating an attack
 
-To test your security staff on their ability to detect and respond to a cyberattack, use a simulated attack. See [Simulate attacks with the Microsoft Defender portal](eval-defender-investigate-respond-simulate-attack.md#simulate-attacks-with-the-microsoft-365-defender-portal) for more information. 
+To test your security staff on their ability to detect and respond to a cyberattack, use a simulated attack. See [Simulate attacks with the Microsoft Defender portal](pilot-deploy-investigate-respond.md#simulate-attacks-with-the-microsoft-365-defender-portal) for more information. 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

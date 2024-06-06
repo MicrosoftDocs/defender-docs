@@ -11,7 +11,7 @@ f1.keywords:
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
   - m365-security
@@ -22,7 +22,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - met150
-ms.date: 12/18/2023
+ms.date: 06/05/2024
 ---
 
 # Investigate alerts in Microsoft Defender XDR
@@ -44,7 +44,7 @@ The **Alerts queue** shows the current set of alerts. You get to the alerts queu
 
 :::image type="content" source="/defender/media/investigate-alerts/alerts-ss-alerts-queue.png" alt-text="The Alerts section in the Microsoft Defender portal" lightbox="/defender/media/investigate-alerts/alerts-ss-alerts-queue.png":::
 
-Alerts from different Microsoft security solutions like Microsoft Defender for Endpoint, Microsoft Defender for Office 365, and Microsoft Defender XDR appear here.
+Alerts from different Microsoft security solutions like Microsoft Defender for Endpoint, Defender for Office 365, Microsoft Sentinel, Defender for Cloud, Defender for Identity, Defender for Cloud Apps, Defender XDR, App Governance, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention appear here.
 
 By default, the alerts queue in the Microsoft Defender portal displays the new and in progress alerts from the last 30 days. The most recent alert is at the top of the list so you can see it first.
 
@@ -56,9 +56,13 @@ You can filter alerts according to these criteria:
 
 - Severity
 - Status
-- Service sources
+- Categories
+- Service/detection sources
+- Tags
+- Policy
 - Entities (the impacted assets)
 - Automated investigation state
+- Alert subscription IDs
 
 ## Required roles for Defender for Office 365 alerts
 
@@ -94,7 +98,7 @@ Throughout an alert page, you can select the ellipses (**...**) beside any entit
 
 ### Alert sources
 
-Microsoft Defender XDR alerts may come from solutions like Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, the app governance add-on for Microsoft Defender for Cloud Apps, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention. You may notice alerts with prepended characters in the alert. The following table provides guidance to help you understand the mapping of alert sources based on the prepended character on the alert.
+Microsoft Defender XDR alerts come from solutions like Microsoft Defender for Endpoint, Defender for Office 365, Defender for Identity, Defender for Cloud Apps, the app governance add-on for Microsoft Defender for Cloud Apps, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention. You might notice alerts with prepended characters in the alert. The following table provides guidance to help you understand the mapping of alert sources based on the prepended character on the alert.
 
 > [!NOTE]
 >
@@ -111,6 +115,7 @@ Microsoft Defender XDR alerts may come from solutions like Microsoft Defender fo
 | Microsoft Entra ID Protection | `ad` |
 | App Governance | `ma` |
 | Microsoft Data Loss Prevention | `dl` |
+| Microsoft Defender for Cloud| `dc` |
 
 <a name='configure-aad-ip-alert-service'></a>
 

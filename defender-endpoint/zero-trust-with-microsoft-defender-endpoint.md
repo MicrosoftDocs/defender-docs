@@ -15,6 +15,9 @@ ms.collection:
   - m365-security
   - tier1
   - zerotrust-services
+  - essentials-privacy
+  - essentials-security
+  - essentials-compliance
 ms.custom: 
 ms.topic: conceptual
 adobe-target: true
