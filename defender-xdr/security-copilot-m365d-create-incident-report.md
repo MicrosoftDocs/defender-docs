@@ -57,9 +57,9 @@ Copilot in Defender creates an incident report containing the following informat
 - Investigation and remediation actions
 - Follow up actions like recommendations, open issues, or next steps noted by the analysts in the incident logs
 
-Actions like device isolation, disabling a user, and soft delete of emails are included in the incident report. For a full list of actions included in the incident report, see the [Action center](m365d-action-center.md). The incident report also includes [Microsoft Sentinel playbooks ran](/azure/sentinel/automate-responses-with-playbooks). [Live response commands](/defender-endpoint/live-response) and response actions coming from public API sources or from custom detections aren't yet supported.
+Actions like device isolation, disabling a user, and soft delete of emails are included in the incident report. For a full list of actions included in the incident report, see the [Action center](m365d-action-center.md). The incident report also includes [Microsoft Sentinel playbooks ran](/azure/sentinel/automate-responses-with-playbooks). [Live response commands](/defender-endpoint/live-response) and response actions coming from public API sources or from custom detections are not yet supported.
 
-We recommend resolving the incident to view all actions that have been taken. Incidents that aren't resolved will partially reflect the actions in the incident report.
+We recommend resolving the incident to view all actions that have been taken. Incidents that are not resolved will partially reflect the actions in the incident report.
 
 ## Create an incident report
 
@@ -77,7 +77,7 @@ To create an incident report with Copilot in Defender, perform the following ste
 
    :::image type="content" source="/defender/media/copilot-in-defender/create-report/incident-report-main2-small.png" alt-text="Screenshot of the incident report card in the incident page showing the lower bottom of the card." lightbox="/defender/media/copilot-in-defender/create-report/incident-report-main2.png":::
 
-4. Select the More actions ellipsis (...) located on the upper right of the incident report card. To copy the report, select **Copy to clipboard** and paste the report to your preferred system, **Post to activity log** to add the report to the activity login the Microsoft Defender portal, or **Export incident as PDF** to [export the incident data to PDF](manage-incidents.md#export-incident-data-to-pdf). Select **Regenerate** to restart report creation. You can also **Open in Copilot for Security** to view the results and continue accessing other plugins available in the Copilot for Security standalone portal.
+4. Select the More actions ellipsis (...) located on the upper right of the incident report card. To copy the report, select **Copy to clipboard** and paste the report to your preferred system, **Post to activity log** to add the report to the activity log in the Microsoft Defender portal, or **Export incident as PDF** to [export the incident data to PDF](manage-incidents.md#export-incident-data-to-pdf). Select **Regenerate** to restart report creation. You can also **Open in Copilot for Security** to view the results and continue accessing other plugins available in the Copilot for Security standalone portal.
 
    ![Screenshot of additional actions in the incident report results card.](/defender/media/copilot-in-defender/create-report/incident-report-more-actions1.png)
 
@@ -96,15 +96,15 @@ Here are some recommendations to consider to ensure that Copilot generates a com
 - Classify and resolve the incident before generating the incident report.
 - Ensure that you write and save comments in the Microsoft Sentinel activity log or in the [Microsoft Defender XDR incident activity log](manage-incidents.md#activity-log) to include the comments in the incident report.
 - Write comments using comprehensive and clear language. In-depth and clear comments provide better context about the response actions. See the following steps to know how to access the comments field:
-  - [Add comments to incidents in the Microsoft Defender portal](manage-incidents.md#add-comments).
+  - [Add comments to incidents in the Microsoft Defender portal](manage-incidents.md#add-comments)
   - Add comments to incidents in Microsoft Sentinel
 - For ServiceNow users, [enable the Microsoft Sentinel and ServiceNow bi-directional sync](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/what-s-new-introducing-microsoft-sentinel-solution-for/ba-p/3692840) to get more robust incident data.
-- Copy the generated incident report and post it to the activity login the Microsoft Defender portal to ensure that the incident report is saved in the incident page.
+- Copy the generated incident report and post it to the activity log in the Microsoft Defender portal to ensure that the incident report is saved in the incident page.
 
 ## See also
 
-- [Get started with Microsoft Copilot for Security](/security-copilot/get-started-security-copilot).
-- [Learn about other Copilot for Security embedded experiences](/security-copilot/experiences-security-copilot).
-- Know more about [preinstalled plugins in Copilot for Security](/security-copilot/manage-plugins#preinstalled-plugins).
+- [Get started with Microsoft Copilot for Security](/security-copilot/get-started-security-copilot)
+- [Learn about other Copilot for Security embedded experiences](/security-copilot/experiences-security-copilot)
+- Know more about [preinstalled plugins in Copilot for Security](/security-copilot/manage-plugins#preinstalled-plugins)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
