@@ -14,7 +14,7 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 05/13/2024
+ms.date: 06/06/2024
 ---
 
 # STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service
