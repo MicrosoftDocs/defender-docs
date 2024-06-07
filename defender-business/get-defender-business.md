@@ -5,7 +5,6 @@ search.appverid: MET150
 author: siosulli
 ms.author: siosulli
 manager: deniseb
-
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
@@ -13,9 +12,7 @@ ms.localizationpriority: medium
 ms.date: 06/07/2024
 ms.reviewer: efratka
 f1.keywords: NOCSH
-
 ms.collection:
-
 - SMB
 - m365-security
 - tier1
