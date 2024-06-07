@@ -5,17 +5,14 @@ search.appverid: MET150
 author: siosulli
 ms.author: siosulli
 manager: deniseb
-
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 09/07/2023
+ms.date: 06/07/2024
 ms.reviewer: efratka
 f1.keywords: NOCSH
-
 ms.collection:
-
 - SMB
 - m365-security
 - tier1
@@ -33,9 +30,6 @@ Sections include:
 - **[How get Microsoft Defender for Business servers](#how-to-get-microsoft-defender-for-business-servers)**, an add-on that enables you to onboard and protect Windows and Linux servers
 - **[Portals that you use](#portals-you-use-for-setup-and-management)** to set up, configure, and manage Defender for Business
 - **[Next steps](#next-step)**, such as adding users and assigning licenses.
-
-> [!IMPORTANT]
-> You should be a global administrator to complete the tasks described in this article. The person who signs your company up for Microsoft 365 is a global administrator. [Learn more about admin roles in the Microsoft 365 admin center](/Microsoft-365/admin/add-users/about-admin-roles).
 
 ## How to get Microsoft Defender for Business
 
@@ -107,7 +101,7 @@ Microsoft has a list of solution providers who are authorized to sell offerings,
 
 Microsoft Defender for Business servers is an add-on to Defender for Business that enables you to secure your server operating systems with the same protection that you get for client devices in Defender for Business.
 
-1. Go to the Microsoft 365 admin center ([https://admin.microsoft.com/](https://admin.microsoft.com/)), and sign in.
+1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com), and sign in.
 
 2. In the navigation pane, choose **Billing** > **Purchase services**.
 
@@ -118,7 +112,6 @@ Microsoft Defender for Business servers is an add-on to Defender for Business th
 > [!IMPORTANT]
 >
 > - In order to add on Microsoft Defender for Business servers, you'll need at least one paid license for [Defender for Business](mdb-overview.md) (standalone) or [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview).
->
 > - There's a limit of 60 Microsoft Defender for Business servers licenses per subscription to Microsoft 365 Business Premium or Defender for Business.
 > - If preferred, you could use [Microsoft Defender for Servers Plan 1 or Plan 2](/azure/defender-for-cloud/plan-defender-for-servers) instead to onboard your servers. To learn more, see [What happens if I have a mix of Microsoft endpoint security subscriptions](mdb-faq.yml#what-happens-if-i-have-a-mix-of-microsoft-endpoint-security-subscriptions)?
 
@@ -133,10 +126,12 @@ If your subscription also includes Microsoft Intune, you use the Intune admin ce
 
 |Portal|Description|
 |---|---|
-|The Microsoft 365 admin center ([https://admin.microsoft.com/](https://admin.microsoft.com/))|Use the Microsoft 365 admin center to activate your trial and sign in for the first time. You can also use the Microsoft 365 admin center to: <br/>- Add or remove users.<br/>- Assign user licenses.<br/>- View your products and services.<br/>- Complete setup tasks for your Microsoft 365 subscription.<br/><br/>To learn more, see [Overview of the Microsoft 365 admin center](/Microsoft-365/admin/admin-overview/admin-center-overview).|
-|The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com))|Use the Microsoft Defender portal to set up and configure Defender for Business, and to monitor your devices and threat detections. You use the Microsoft Defender portal to: <br/>- View your devices and device protection policies.<br/>- View detected threats and take action.<br/>- View security recommendations and manage your security settings.<br/><br/>To learn more, see [Get started using the Microsoft Defender portal](mdb-get-started.md).|
-|The Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com/))|Use the Intune admin center to set up multifactor authentication (MFA), onboard iOS and Android devices, and configure certain capabilities, such as [attack surface reduction rules](mdb-asr.md).<br/><br/>To learn more about Intune, see [Microsoft Intune is an MDM and MAM provider for your devices](/mem/intune/fundamentals/what-is-intune).|
+|The [Microsoft 365 admin center](https://admin.microsoft.com/)|Use the Microsoft 365 admin center to activate your trial and sign in for the first time. You can also use the Microsoft 365 admin center to: <br/>- Add or remove users.<br/>- Assign user licenses.<br/>- View your products and services.<br/>- Complete setup tasks for your Microsoft 365 subscription.<br/><br/>To learn more, see [Overview of the Microsoft 365 admin center](/Microsoft-365/admin/admin-overview/admin-center-overview).|
+|The [Microsoft Defender portal](https://security.microsoft.com)|Use the Microsoft Defender portal to set up and configure Defender for Business, and to monitor your devices and threat detections. You use the Microsoft Defender portal to: <br/>- View your devices and device protection policies.<br/>- View detected threats and take action.<br/>- View security recommendations and manage your security settings.<br/><br/>To learn more, see [Get started using the Microsoft Defender portal](mdb-get-started.md).|
+|The [Intune admin center](https://intune.microsoft.com/)|Use the Intune admin center to set up multifactor authentication (MFA), onboard iOS and Android devices, and configure certain capabilities, such as [attack surface reduction rules](mdb-asr.md).<br/><br/>To learn more about Intune, see [Microsoft Intune is an MDM and MAM provider for your devices](/mem/intune/fundamentals/what-is-intune).|
 
 ## Next step
+
+- [Assign administrator roles](/microsoft-365/admin/add-users/assign-admin-roles)
 
 - Proceed to [Step 2: Add users and assign licenses in Microsoft Defender for Business](mdb-add-users.md).
