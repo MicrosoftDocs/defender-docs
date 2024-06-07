@@ -100,15 +100,13 @@ process: pid:6132,ProcessStart:133621698624737241
 Learn more	Actions
 ```
 
-In the Microsoft Defender XDR portal (security.microsoft.com), you will see:
+In the [Microsoft Defender portal](https://security.microsoft.com), you should see information like this: 
 
-> Suspicious 'BmTestOfflineUI' behavior was blocked
+   `Suspicious 'BmTestOfflineUI' behavior was blocked`
 
-Once you click on it, you will see the alert tree that has the following information:
+When you select it, you see the alert tree that has the following information:
 
-> Defender detected and terminated active 'Behavior:Win32/BmTestOfflineUI' in process 'powershell.exe' during behavior monitoring
-
-## 
+   `Defender detected and terminated active 'Behavior:Win32/BmTestOfflineUI' in process 'powershell.exe' during behavior monitoring`
 
 ## macOS
 
@@ -124,7 +122,7 @@ When RTP is enabled, the result shows a value of 1.
 
 ### Enable Behavior Monitoring for Microsoft Defender for Endpoint
 
-For more information on how to enable Behavior Monitoring for Defender for Endpoint, see [Deployment instructions](behavior-monitor-macos.md#deployment-instructions).
+For more information on how to enable behavior monitoring for Defender for Endpoint, see [Deployment instructions](behavior-monitor-macos.md#deployment-instructions).
 
 ### Demonstration of how Behavior Monitoring works
 
@@ -139,7 +137,8 @@ To demonstrate how Behavior Monitoring blocks a payload:
    sleep 5
    ```
 
-2. Save as BM_test.sh
+2. Save as `BM_test.sh`.
+
 3. Run the following command to make the bash script executable:
 
    ```bash
@@ -152,9 +151,9 @@ To demonstrate how Behavior Monitoring blocks a payload:
   sudo bash BM_test.sh
   ```
 
-The result shows:
+The result should look like this
 
-zsh: killed      sudo bash BM_test.sh
+   `zsh: killed      sudo bash BM_test.sh`
 
 The file was quarantined by Defender for Endpoint on macOS. Use the following command to list all the detected threats:
 
@@ -162,7 +161,9 @@ The file was quarantined by Defender for Endpoint on macOS. Use the following co
 mdatp threat list
 ```
 
-The result shows:
+The result shows information like this:
+
+```output
 
 ID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
@@ -174,4 +175,6 @@ Detection time: Tue May 7 20:23:41 2024
 
 Status: "quarantined"
 
-If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the [Microsoft Defender XDR portal](https://security.microsoft.com), and you'll see an alert named: "Suspicious 'MacOSChangeFileTest' behavior was blocked."
+```
+
+If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the [Microsoft Defender portal](https://security.microsoft.com), and you'll see an alert titled, *Suspicious 'MacOSChangeFileTest' behavior was blocked*.
