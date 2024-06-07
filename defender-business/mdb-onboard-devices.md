@@ -358,9 +358,6 @@ You can use the following methods to onboard an instance of Linux Server to Defe
 
 ## View a list of onboarded devices
 
-> [!IMPORTANT]
-> You must be assigned an appropriate role, such as Global Administrator, Security Administrator, or Security Reader to perform the following procedure. For more information, see [Roles in Defender for Business](mdb-roles-permissions.md#roles-in-defender-for-business).
-
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.
 
 2. In the navigation pane, go to **Assets** > **Devices**. The **Device inventory** view opens.
