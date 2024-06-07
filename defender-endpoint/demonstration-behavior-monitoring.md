@@ -181,4 +181,4 @@ Status: "quarantined"
 
 ```
 
-If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the [Microsoft Defender portal](https://security.microsoft.com), and you'll see an alert titled, *Suspicious 'MacOSChangeFileTest' behavior was blocked*.
+If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the [Microsoft Defender portal](https://security.microsoft.com), and you see an alert titled, *Suspicious 'MacOSChangeFileTest' behavior was blocked*.
