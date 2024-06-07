@@ -152,26 +152,6 @@ All our updates contain
 - Fixed a high memory issue related to the [Behavior Monitoring](behavior-monitor.md) queue that occurred when MAPS is disabled.
 - A possible deadlock when receiving a [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) configuration change from the [Microsoft Defender portal](https://security.microsoft.com) no longer occurs.
 
-### February-2024 (Engine: 1.1.24020.9 | Platform: 4.18.24020.7)
-
-- Security intelligence update version: **1.407.46.0**
-- Release date: **March 6, 2024** (Engine) / **March 12, 2024** (Platform)
-- Engine: **1.1.24020.9**
-- Platform: **4.18.24020.7**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Improved support for virtualizing while compressing or decompressing zip files
-- Improved reporting in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) for block-only remediations
-- Reduced the number of false positives for [attack surface reduction rules](attack-surface-reduction.md) for known trusted processes
-- Improved [Get-MpPreference](/powershell/module/defender/get-mppreference) logic for proxy bypass settings
-- Extended the toast notification support for [Indicators of Compromise](manage-indicators.md#indicator-of-compromise-ioc-overview) (IoC) detections
-
-#### Known issues
-
-- For [device control](device-control-overview.md) customers using removable media policies with disk/device-level access only (masks that include the values 1, 2, 3, 4, and 7), enforcement might not work as expected. In such situations, we recommend customers roll back to the previous version of the Defender platform.
-
 ### Previous version updates: Technical upgrade support only
 
 After a new package version is released, support for the previous two versions is reduced to technical support only. For more information about previous versions, see [Microsoft Defender Antivirus updates: Previous versions for technical upgrade support](msda-updates-previous-versions-technical-upgrade-support.md).
