@@ -4,7 +4,7 @@ description:  The Defender for Endpoint streaming API is available for Defender 
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-ms.date: 12/12/2023
+ms.date: 06/07/2024
 ms.topic: how-to
 ms.service:  microsoft-365-security
 ms.localizationpriority: medium 
