@@ -60,11 +60,6 @@ The license usage report is estimated based on sign-in activities on the device.
 
 To reduce management overhead, there's no requirement for device-to-user mapping and assignment. Instead, the license report provides a utilization estimation that is calculated based on device usage seen across your organization. It might take up to one day for your usage report to reflect the active usage of your devices.
 
-> [!IMPORTANT]
-> To access license information, you must have one of the following roles assigned in Microsoft Entra ID:
-> - Security Admin
-> - Global Admin
-
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
 2. Choose **Settings** > **Endpoints** > **Licenses**.
