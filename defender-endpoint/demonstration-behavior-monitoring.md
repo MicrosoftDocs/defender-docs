@@ -28,7 +28,7 @@ ms.date: 05/15/2024
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
-Behavior Monitoring in Microsoft Defender Antivirus monitors process behavior to detect and analyze potential threats based on the behavior of applications, services, and files. Rather than relying solely on content matching, which identifies known malware patterns, behavior monitoring focuses on observing how software behaves in real-time.
+Behavior monitoring in Microsoft Defender Antivirus monitors process behavior to detect and analyze potential threats based on the behavior of applications, services, and files. Rather than relying solely on content matching, which identifies known malware patterns, behavior monitoring focuses on observing how software behaves in real-time.
 
 ## Scenario requirements and setup
 
@@ -44,16 +44,16 @@ Behavior Monitoring in Microsoft Defender Antivirus monitors process behavior to
 
 ## Windows
 
-### Verify Microsoft Defender Real-time protection is enabled
+### Verify Microsoft Defender real-time protection is enabled
 
-To verify real-time protection (RTP) is enabled, open a Powershell (Run as admin) command and copy and execute the following command:
+To verify real-time protection is enabled, open Powershell as an administrator, and then run the following command:
 
 
 ```powershell
 get-mpComputerStatus |ft RealTimeProtectionEnabled
 ```
 
-When RTP is enabled, the result shows a value of True.
+When real-time protection is enabled, the result shows a value of `True`.
 
 ### Enable Behavior Monitoring for Microsoft Defender for Endpoint
 
@@ -61,42 +61,44 @@ For more information on how to enable Behavior Monitoring for Defender for Endpo
 
 ### Demonstration of how Behavior Monitoring works in Windows and Windows Server
 
-To demonstrate how Behavior Monitoring blocks a payload:
-
+To demonstrate how Behavior Monitoring blocks a payload, run the following PowerShell command:
 
 ```powershell
 powershell.exe -NoExit -Command "powershell.exe hidden 12154dfe-61a5-4357-ba5a-efecc45c34c4"
 ```
 
-> [!NOTE]
-> Note: On the output this error is expected, otherwise, the Powershell commandline would just close: 
-> hidden : The term 'hidden' is not recognized as the name of a cmdlet, function, script, script file, or operable program.  Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
-> At line:1 char:1
-> +hidden 12154dfe-61a5-4357-ba5a-efecc45c34c4
-> +""""""
-> - CategoryInfo             : ObjectNotFound: (hidden:String) [], CommandNotFoundException
-> - FullyQualifiedErrorId : CommandNotFoundException
-The result shows:
+The output contains an expected error as follows:
 
-In Action Center, you will see:
+hidden : The term 'hidden' is not recognized as the name of a cmdlet, function, script, script file, or operable program.  Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++hidden 12154dfe-61a5-4357-ba5a-efecc45c34c4
++""""""
+CategoryInfo             : ObjectNotFound: (hidden:String) [], CommandNotFoundException
+FullyQualifiedErrorId : CommandNotFoundException
 
-> Windows Security
-> Threats found
-> Microsoft Defender Antivirus found threats.  Get details.
-> Dismiss
+In the Microsoft Defender portal, in the Action center, you should see the following information:
 
-If you click on it, Windows Security will open up.  Click on "Protection history"
+- Windows Security
+- Threats found
+- Microsoft Defender Antivirus found threats. Get details.
+- Dismiss
 
-> Threat blocked
-> Detected: Behavior:Win32/BmTestOfflineUI
-> Status: Removed
-> A threat or app was removed from this device.
-> Date: 6/7/2024 11:51 AM
-> Details: This program is dangerous and executes command from an attacker.
-> Affected items:
-> behavior: process: C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe, pid:6132:118419370780344
-> process: pid:6132,ProcessStart:133621698624737241
-> Learn more	Actions
+If you select the link, your Windows Security app opens. Select **Protection history**.
+
+You should see information that resembles the following output:
+
+```Output
+Threat blocked
+Detected: Behavior:Win32/BmTestOfflineUI
+Status: Removed
+A threat or app was removed from this device.
+Date: 6/7/2024 11:51 AM
+Details: This program is dangerous and executes command from an attacker.
+Affected items:
+behavior: process: C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe, pid:6132:118419370780344
+process: pid:6132,ProcessStart:133621698624737241
+Learn more	Actions
+```
 
 In the Microsoft Defender XDR portal (security.microsoft.com), you will see:
 
