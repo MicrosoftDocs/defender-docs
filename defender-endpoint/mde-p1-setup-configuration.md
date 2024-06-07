@@ -358,7 +358,7 @@ With web protection, you can protect your organization's devices from web threat
 
 Network firewall helps reduce the risk of network security threats. Your security team can set rules that determine which traffic is permitted to flow to or from your organization's devices. We recommend using Intune to configure your network firewall. 
 
-:::image type="content" source="/defender/media/mde-p1/mem-firewallpolicy.png" alt-text="Firewall policy in the Intune portal" lightbox="/defender/media/mde-p1/mem-firewallpolicy.png":::
+::: ![image](https://github.com/MicrosoftDocs/defender-docs/assets/40171398/b80a84b9-fcb2-4c6e-9763-cb7aeb71153a) alt-text="Firewall policy in the Intune portal"::: 
 
 To configure basic firewall settings, follow these steps:
 
@@ -366,17 +366,17 @@ To configure basic firewall settings, follow these steps:
 
 2. Choose **Endpoint security** > **Firewall**, and then choose **+ Create Policy**.
 
-3. Select a platform, such as **Windows 10 and later**, select the **Microsoft Defender Firewall** profile, and then choose **Create**. 
+3. Select a platform, such as **Windows 10, Windows 11, and Windows Server**, select the **Microsoft Firewall** profile, and then choose **Create**. 
 
 4. On the **Basics** tab, specify a name and description, and then choose **Next**.
 
-5. Expand **Microsoft Defender Firewall**, and then scroll down to the bottom of the list.
+5. Expand **Firewall**, and then scroll down to the bottom of the list.
 
-6. Set each of the following settings to **Yes**:
+6. Set each of the following settings to **True**:
 
-   - **Turn on Microsoft Defender Firewall for domain networks** 
-   - **Turn on Microsoft Defender Firewall for private networks**
-   - **Turn on Microsoft Defender Firewall for public networks**
+   - **Enable Domain Network Firewall** 
+   - **Enable Private Network Firewall**
+   - **Enable Public Network Firewall**
    
    Review the list of settings under each of domain networks, private networks, and public networks. You can leave them set to **Not configured**, or change them to suit your organization's needs.
 
