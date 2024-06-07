@@ -46,7 +46,7 @@ Behavior monitoring in Microsoft Defender Antivirus monitors process behavior to
 
 ### Verify Microsoft Defender real-time protection is enabled
 
-To verify real-time protection is enabled, open Powershell as an administrator, and then run the following command:
+To verify real-time protection is enabled, open PowerShell as an administrator, and then run the following command:
 
 
 ```powershell
@@ -69,12 +69,16 @@ powershell.exe -NoExit -Command "powershell.exe hidden 12154dfe-61a5-4357-ba5a-e
 
 The output contains an expected error as follows:
 
+```output
+
 hidden : The term 'hidden' is not recognized as the name of a cmdlet, function, script, script file, or operable program.  Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 At line:1 char:1
 +hidden 12154dfe-61a5-4357-ba5a-efecc45c34c4
 +""""""
 CategoryInfo             : ObjectNotFound: (hidden:String) [], CommandNotFoundException
 FullyQualifiedErrorId : CommandNotFoundException
+
+```
 
 In the Microsoft Defender portal, in the Action center, you should see the following information:
 
