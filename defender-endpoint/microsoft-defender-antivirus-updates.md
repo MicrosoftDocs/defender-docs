@@ -142,7 +142,7 @@ All our updates contain
 
 - Added manageability settings to opt out for One Collector telemetry channel and Experimentation and Configuration Service (ECS).
 - Microsoft Defender Core Service will be disabled when 3rd party Antivirus is installed (except when Defender for Endpoint is running in Passive mode).
-- The known issue in [4.18.24020.7](#february-2024-engine-11240209--platform-418240207) where enforcement of device level access policies wasn't working as expected no longer occurs.
+- The known issue in [4.18.24020.7](msda-updates-previous-versions-technical-upgrade-support.md#february-2024-engine-11240209--platform-418240207) where enforcement of device level access policies wasn't working as expected no longer occurs.
 - Fixed high CPU issue caused by redetection done during Sense originating scans.
 - Fixed an issue with Security Intelligence Update disk cleanup.
 - Fixed an issue where the Signature date information on the Security Health report wasn't accurate.
