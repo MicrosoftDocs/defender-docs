@@ -33,11 +33,6 @@ In Defender for Business, you can manage devices as follows:
 
 :::image type="content" source="/defender/media/defender-business/mdb-device-inventory.png" alt-text="Screenshot of device inventory":::
 
-> [!IMPORTANT]
-> In order to view the list of onboarded devices, you must have one of the following [roles](mdb-roles-permissions.md) assigned: 
-> - Security Administrator
-> - Security Reader
-
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
 2. In the navigation pane, go to **Assets** > **Devices**.
