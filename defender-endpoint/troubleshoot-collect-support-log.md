@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: edr
 search.appverid: met150
-ms.date: 06/03/2024
+ms.date: 06/05/2024
 ---
 
 # Collect support logs in Microsoft Defender for Endpoint using live response
@@ -63,8 +63,6 @@ This article provides instructions on how to run the tool via Live Response on W
 ### Additional information
 
 - The latest preview version of MDEClientAnalyzer can be downloaded here: <https://aka.ms/Betamdeanalyzer>.
-
-- The LiveAnalyzer script downloads the troubleshooting package on the destination machine from: `https://mdatpclientanalyzer.blob.core.windows.net`.
 
 - If you can't allow the machine to reach the above URL, then upload `MDEClientAnalyzerPreview.zip` file to the library before running the LiveAnalyzer script:
 

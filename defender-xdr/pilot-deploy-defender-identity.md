@@ -1,6 +1,6 @@
 ---
-title: Pilot and deploy Microsoft Defender for Identity
-description: Pilot and deploy Microsoft Defender for Identity.
+title: How do I pilot and deploy Microsoft Defender for Identity>
+description: How to pilot and deploy Microsoft Defender for Identity in your production Microsoft 365 tenant.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
