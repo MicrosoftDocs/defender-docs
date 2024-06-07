@@ -4,7 +4,7 @@ description: Learn about automatic attack disruption in Microsoft Defender for B
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-ms.date: 10/12/2023
+ms.date: 06/07/2024
 ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium 
@@ -41,8 +41,8 @@ Automated response actions include:
 - Containing a user account by disconnecting current user connections at the device level
 
 > [!IMPORTANT]
-> - To view information about a detected advanced attack, you must have the Security Reader, Security Administrator, or Global Administrator role assigned.
-> - To take remediation actions, release a contained device/user, or re-enable a user account, you must have either the Security Administrator or Global Administrator role assigned.
+> - To view information about a detected advanced attack, you must have an appropriate role, such as Security Reader or Security Administrator assigned.
+> - To take remediation actions, release a contained device/user, or re-enable a user account, you must have the Security Administrator role assigned.
 > - See [Security roles and permissions in Defender for Business](mdb-roles-permissions.md).
 
 <a name='view-details-about-an-attack-in-the-microsoft-365-defender-portal'></a>
