@@ -32,9 +32,83 @@ Behavior Monitoring in Microsoft Defender Antivirus monitors process behavior to
 
 ## Scenario requirements and setup
 
-- This demonstration only runs on macOS
+- Windows 11, Windows 10, Windows 8.1, Windows 7 SP1
+
+- Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012, and Windows Server 2008 R2
+
+- macOS
+
 - [Microsoft Defender Real-time protection is enabled](#verify-microsoft-defender-real-time-protection-is-enabled)
+
 - [Behavior Monitoring is enabled](#enable-behavior-monitoring-for-microsoft-defender-for-endpoint)
+
+## Windows
+
+### Verify Microsoft Defender Real-time protection is enabled
+
+To verify real-time protection (RTP) is enabled, open a Powershell (Run as admin) command and copy and execute the following command:
+
+
+```powershell
+get-mpComputerStatus |ft RealTimeProtectionEnabled
+```
+
+When RTP is enabled, the result shows a value of True.
+
+### Enable Behavior Monitoring for Microsoft Defender for Endpoint
+
+For more information on how to enable Behavior Monitoring for Defender for Endpoint, see [how to enable Behavior Monitoring](/defender-endpoint/behavior-monitor).
+
+### Demonstration of how Behavior Monitoring works in Windows and Windows Server
+
+To demonstrate how Behavior Monitoring blocks a payload:
+
+
+```powershell
+powershell.exe -NoExit -Command "powershell.exe hidden 12154dfe-61a5-4357-ba5a-efecc45c34c4"
+```
+
+> [!NOTE]
+> Note: On the output this error is expected, otherwise, the Powershell commandline would just close: 
+> hidden : The term 'hidden' is not recognized as the name of a cmdlet, function, script, script file, or operable program.  Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+> At line:1 char:1
+> +hidden 12154dfe-61a5-4357-ba5a-efecc45c34c4
+> +""""""
+> - CategoryInfo             : ObjectNotFound: (hidden:String) [], CommandNotFoundException
+> - FullyQualifiedErrorId : CommandNotFoundException
+The result shows:
+
+In Action Center, you will see:
+
+> Windows Security
+> Threats found
+> Microsoft Defender Antivirus found threats.  Get details.
+> Dismiss
+
+If you click on it, Windows Security will open up.  Click on "Protection history"
+
+> Threat blocked
+> Detected: Behavior:Win32/BmTestOfflineUI
+> Status: Removed
+> A threat or app was removed from this device.
+> Date: 6/7/2024 11:51 AM
+> Details: This program is dangerous and executes command from an attacker.
+> Affected items:
+> behavior: process: C:\Windows\System32\WindowsPowershell\v1.0\powershell.exe, pid:6132:118419370780344
+> process: pid:6132,ProcessStart:133621698624737241
+> Learn more	Actions
+
+In the Microsoft Defender XDR portal (security.microsoft.com), you will see:
+
+> Suspicious 'BmTestOfflineUI' behavior was blocked
+
+Once you click on it, you will see the alert tree that has the following information:
+
+> Defender detected and terminated active 'Behavior:Win32/BmTestOfflineUI' in process 'powershell.exe' during behavior monitoring
+
+## 
+
+## macOS
 
 ### Verify Microsoft Defender Real-time protection is enabled
 
