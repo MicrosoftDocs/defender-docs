@@ -152,28 +152,28 @@ To demonstrate how Behavior Monitoring blocks a payload:
   sudo bash BM_test.sh
   ```
 
-The result should look like this
+  The result should look like this
 
-`zsh: killed      sudo bash BM_test.sh`
+  `zsh: killed      sudo bash BM_test.sh`
 
-The file was quarantined by Defender for Endpoint on macOS. Use the following command to list all the detected threats:
+  The file was quarantined by Defender for Endpoint on macOS. Use the following command to list all the detected threats:
 
-```bash
-mdatp threat list
-```
+  ```bash
+  mdatp threat list
+  ```
 
-The result shows information like this:
+  The result shows information like this:
 
-```console
-ID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  ```console
+  ID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
-Name: Behavior: MacOS/MacOSChangeFileTest
+  Name: Behavior: MacOS/MacOSChangeFileTest
 
-Type: "behavior"
+  Type: "behavior"
 
-Detection time: Tue May 7 20:23:41 2024
+  Detection time: Tue May 7 20:23:41 2024
 
-Status: "quarantined"
-```
+  Status: "quarantined"
+  ```
 
 If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the [Microsoft Defender portal](https://security.microsoft.com), and you see an alert titled, *Suspicious 'MacOSChangeFileTest' behavior was blocked*.
