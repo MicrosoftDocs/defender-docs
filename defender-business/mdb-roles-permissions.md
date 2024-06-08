@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 06/28/2023
+ms.date: 06/07/2024
 ms.reviewer: efratka, nehabha
 f1.keywords: NOCSH 
 ms.collection: 
@@ -45,13 +45,17 @@ Permissions are granted through certain roles in the [Microsoft Entra ID](/azure
 
 ## Roles in Defender for Business
 
-The following table describes the three roles that can be assigned in Defender for Business. [Learn more about admin roles](/Microsoft-365/admin/add-users/about-admin-roles).
+The following table describes the main roles that are assigned in Defender for Business. 
 
 | Permission level | Description |
 |:---|:---|
-| **Global administrators** (also referred to as global admins) <br/><br/> *As a best practice, limit the number of global admins. See [Security guidelines for assigning roles](/microsoft-365/admin/add-users/about-admin-roles#security-guidelines-for-assigning-roles).* | Global admins can perform all kinds of tasks. The person who signed up your company for Microsoft 365 or for Defender for Business is a global administrator by default. Global admins typically complete the setup and configuration process in Defender for Business, including onboarding devices.<br/><br/> Global admins are able to modify settings across all Microsoft 365 portals, such as: <br/>- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com))<br/>- Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) |
-| **Security administrators** (also referred to as security admins) | Security admins can perform the following tasks: <br/>- View and manage security policies<br/>- View, respond to, and manage alerts <br/>- Take response actions on devices with detected threats<br/>- View security information and reports <br/><br/>In general, security admins use the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) to perform security tasks. |
-| **Security reader** | Security readers can perform the following tasks:<br/>- View a list of onboarded devices<br/>- View security policies<br/>- View alerts and detected threats<br/>- View security information and reports <br/><br/>Security readers can't add or edit security policies, nor can they onboard devices. |
+| **Security Administrator**  | Security Administrators can perform the following tasks: <br/>- View and manage security policies<br/>- View, respond to, and manage alerts <br/>- Take response actions on devices with detected threats<br/>- View security information and reports <br/><br/>In general, security admins use the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) to perform security tasks. |
+| **Security Reader** | Security Readers can perform the following tasks:<br/>- View a list of onboarded devices<br/>- View security policies<br/>- View alerts and detected threats<br/>- View security information and reports <br/><br/>Security readers can't add or edit security policies, nor can they onboard devices. |
+
+For more information about roles, see the following articles:
+
+- [About admin roles](/Microsoft-365/admin/add-users/about-admin-roles)
+- [Security guidelines for assigning roles](/microsoft-365/admin/add-users/about-admin-roles#security-guidelines-for-assigning-roles)
 
 ## View and edit role assignments
 
@@ -74,7 +78,7 @@ You can use the Microsoft 365 admin center or the Microsoft Entra admin center t
 
    | Task | Procedure |
    |---|---|
-   | Add a role to a user account | 1. Select **Admin center access**, scroll down, and then expand **Show all by category**.<br/><br/>2. Select one of the following roles:<br/><br/>- Global Administrator (listed under **Global**)<br/>- Security Administrator (listed under **Security & Compliance**)<br/>- Security Reader (listed under **Read-only**)<br/><br/>3. Select **Save changes**. |
+   | Add a role to a user account | 1. Select **Admin center access**, scroll down, and then expand **Show all by category**.<br/><br/>2. Select one of the following roles:<br/><br/>- Security Administrator (listed under **Security & Compliance**)<br/>- Security Reader (listed under **Read-only**)<br/><br/>3. Select **Save changes**. |
    | Remove a role from a user account | 1. Either select **User (no admin center access)** to remove *all* admin roles, or clear the checkbox next to one or more of the assigned roles. <br/><br/>2. Select **Save changes**. |
 
 ## [**Microsoft Entra admin center**](#tab/Entra)
@@ -89,7 +93,7 @@ You can use the Microsoft 365 admin center or the Microsoft Entra admin center t
 
    | Task | Procedure |
    |---|---|
-   | Add a role to a user account | 1. Under **Manage**, select **Assigned roles**, and then choose **+ Add assignments**.<br/><br/>2. Search for one of the following roles, select it, and then choose **Add** to assign that role to the user account.<br/><br/>- Global Administrator<br/>- Security Administrator<br/>- Security Reader |
+   | Add a role to a user account | 1. Under **Manage**, select **Assigned roles**, and then choose **+ Add assignments**.<br/><br/>2. Search for one of the following roles, select it, and then choose **Add** to assign that role to the user account.<br/><br/>- Security Administrator<br/>- Security Reader |
    | Remove a role from a user account | 1. Under **Manage**, select **Assigned roles**.<br/><br/>2. Select one or more administrative roles, and then select **X Remove assignments**. |
 
 ---

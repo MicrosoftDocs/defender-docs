@@ -12,7 +12,7 @@ ms.collection:
 - tier1
 - essentials-get-started
 ms.localizationpriority: high
-ms.date: 04/10/2024
+ms.date: 06/07/2024
 ms.service: defender-business
 search.appverid: 
 - MOE150
@@ -47,9 +47,6 @@ Here's how to set up your trial subscription:
 ### Step 1: Add users and assign licenses
 
 After you sign up for Defender for Business, the first step is to **[add users and assign licenses](mdb-add-users.md)**.
-
-> [!NOTE]
-> You must be a global administrator to perform this task. The person who signed your company up for Microsoft 365 or Defender for Business is the global administrator by default. [Learn more about roles and permissions](mdb-roles-permissions.md).
 
 <a name='step-2-visit-the-microsoft-365-defender-portal'></a>
 

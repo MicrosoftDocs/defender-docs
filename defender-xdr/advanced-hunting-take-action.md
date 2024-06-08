@@ -68,7 +68,7 @@ To learn more about how quarantine actions are taken and how files can be restor
 
 To take any of the described actions, select one or more records in your query results and then select **Take actions**. A wizard will guide you through the process of selecting and then submitting your preferred actions.
 
-:::image type="content" source="/defender/media/take-action-multiple.png" alt-text="Take actions option in the Microsoft Defender portal" lightbox="/defender/media/take-action-multiple.png":::
+:::image type="content" source="media/take-action-multiple.png" alt-text="Screenshot of the take actions option in the Microsoft Defender portal." lightbox="media/take-action-multiple.png":::
 
 ## Take various actions on emails
 
@@ -76,13 +76,13 @@ Apart from device-focused remediation steps, you can also take some actions on e
 
 - `Move to mailbox folder` - select this to move the email messages to Junk, Inbox, or Deleted items folder
 
-   :::image type="content" source="/defender/media/advanced-hunting-take-actions-email.png" alt-text="The option Take actions in the Microsoft Defender portal" lightbox="/defender/media/advanced-hunting-take-actions-email.png":::
+   :::image type="content" source="media/advanced-hunting-take-actions-email.png" alt-text="Screenshot of the option Take actions in the Microsoft Defender portal." lightbox="media/advanced-hunting-take-actions-email.png":::
 
 - `Delete email` - select this to move email messages to the Deleted items folder (**Soft delete**) or delete them permanently (**Hard delete**)
 
    Selecting **Soft delete** also automatically soft deletes the messages from the sender's Sent Items folder if the sender is in the organization.
 
-   :::image type="content" source="media/soft-delete-sender-copy.png" alt-text="Screenshot of take actions option in the Microsoft Defender portal" lightbox="media/soft-delete-sender-copy.png":::
+   :::image type="content" source="media/soft-delete-sender-copy.png" alt-text="Screenshot of take actions option in the Microsoft Defender portal." lightbox="media/soft-delete-sender-copy.png":::
 
    Automatic soft-deletion of the sender's copy is available for results using the `EmailEvents` and `EmailPostDeliveryEvents` tables but not the `UrlClickEvents` table. Furthermore, the result should contain the columns `EmailDirection` and `SenderFromAddress` columns for this action option to show up in the Take actions wizard. Sender's copy clean-up applies to intra-organization emails and outbound emails, ensuring that only the sender's copy is soft-deleted for these email messages. Inbound messages are out of scope.
 
@@ -97,7 +97,7 @@ Apart from device-focused remediation steps, you can also take some actions on e
 
 You can also provide a remediation name and a short description of the action taken to easily track it in the action center history. You can also use the Approval ID to filter for these actions in the action center. This ID is provided at the end of the wizard:
 
-:::image type="content" source="/defender/media/choose-email-actions-entities.png" alt-text="take actions wizard showing choose actions for entities" lightbox="/defender/media/choose-email-actions-entities.png":::
+:::image type="content" source="media/choose-email-actions-entities.png" alt-text="take actions wizard showing choose actions for entities" lightbox="media/choose-email-actions-entities.png":::
 
 These email actions are applicable to [custom detections](custom-detections-overview.md) as well.
 
