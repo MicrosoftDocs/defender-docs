@@ -42,7 +42,6 @@ These remediation actions aren't automatically done; they need to be approved by
 
 To see the permissions and licensing requirement for AIR, see [Required permissions and licensing for AIR](air-about.md#required-permissions-and-licensing-for-air).
 
-
 ## Approve (or reject) pending actions
 
 There are four different ways to find and take auto investigation actions:
@@ -52,7 +51,7 @@ There are four different ways to find and take auto investigation actions:
 - [Action center](https://security.microsoft.com/action-center/pending)
 - [Investigation and remediation investigations queue](https://security.microsoft.com/airinvestigation)
 
-## Approve or reject pending actions from the Incident queue
+## Approve or reject pending actions from the Incidents page
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Incidents** page at **Incidents & alerts** \> **Incidents**. Or, to go directly to the **Incidents** page, use <https://security.microsoft.com/incidents>.
 2. If it helps, filter the results on the **Incidents** page by **Pending action**:
@@ -61,8 +60,8 @@ There are four different ways to find and take auto investigation actions:
    3. In the **Add filter** dialog that opens, select **Automated investigation state**, and then select **Add**.
    4. Select the **Automated investigation state: Any** filter on the **Incidents** page.
    5. In the drop down list that opens, select **Pending action**, and then select **Apply**.
-3. On the **Incidents** page, select an incident name to open its summary page.
-4. Select the **Evidence and Response** tab.
+3. In the **ID** column of the incident, select :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open in new window**.
+4. On the incident details page that opens, select the **Evidence** tab.Select the **Evidence and Response** tab.
 5. Select an item in the list to open its flyout pane.
 6. Review the information, and then take one of the following steps:
    - Select the Approve pending action option to initiate a pending action.
@@ -70,7 +69,7 @@ There are four different ways to find and take auto investigation actions:
 
 ## Action center
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Action center** page by selecting **Action center**. To go directly to the **Action center** page, use <https://security.microsoft.com/action-center/pending>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to the **Action center** page by selecting **Action center**. Or, to go directly to the **Action center** page, use <https://security.microsoft.com/action-center/pending>.
 2. On the **Action center** page, verify that the **Pending** tab is selected, and then review the list of actions that are awaiting approval.
    - Select **Open investigation page** to view more details about the investigation.
    - Select **Approve** to initiate a pending action.
