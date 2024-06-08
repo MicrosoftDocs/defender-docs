@@ -48,7 +48,6 @@ Behavior monitoring in Microsoft Defender Antivirus monitors process behavior to
 
 To verify real-time protection is enabled, open PowerShell as an administrator, and then run the following command:
 
-
 ```powershell
 get-mpComputerStatus |ft RealTimeProtectionEnabled
 ```
@@ -69,15 +68,13 @@ powershell.exe -NoExit -Command "powershell.exe hidden 12154dfe-61a5-4357-ba5a-e
 
 The output contains an expected error as follows:
 
-```output
-
+```console
 hidden : The term 'hidden' is not recognized as the name of a cmdlet, function, script, script file, or operable program.  Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 At line:1 char:1
 +hidden 12154dfe-61a5-4357-ba5a-efecc45c34c4
 +""""""
 CategoryInfo             : ObjectNotFound: (hidden:String) [], CommandNotFoundException
 FullyQualifiedErrorId : CommandNotFoundException
-
 ```
 
 In the Microsoft Defender portal, in the Action center, you should see the following information:
@@ -91,7 +88,7 @@ If you select the link, your Windows Security app opens. Select **Protection his
 
 You should see information that resembles the following output:
 
-```Output
+```console
 Threat blocked
 Detected: Behavior:Win32/BmTestOfflineUI
 Status: Removed
@@ -106,11 +103,11 @@ Learn more	Actions
 
 In the [Microsoft Defender portal](https://security.microsoft.com), you should see information like this: 
 
-   `Suspicious 'BmTestOfflineUI' behavior was blocked`
+`Suspicious 'BmTestOfflineUI' behavior was blocked`
 
 When you select it, you see the alert tree that has the following information:
 
-   `Defender detected and terminated active 'Behavior:Win32/BmTestOfflineUI' in process 'powershell.exe' during behavior monitoring`
+`Defender detected and terminated active 'Behavior:Win32/BmTestOfflineUI' in process 'powershell.exe' during behavior monitoring`
 
 ## macOS
 
@@ -118,9 +115,9 @@ When you select it, you see the alert tree that has the following information:
 
 To verify real-time protection (RTP) is enabled, open a terminal window and copy and execute the following command:
 
-  ```bash
-  mdatp health --field real_time_protection_enabled
-  ```
+```bash
+mdatp health --field real_time_protection_enabled
+```
 
 When RTP is enabled, the result shows a value of 1.
 
@@ -157,7 +154,7 @@ To demonstrate how Behavior Monitoring blocks a payload:
 
 The result should look like this
 
-   `zsh: killed      sudo bash BM_test.sh`
+`zsh: killed      sudo bash BM_test.sh`
 
 The file was quarantined by Defender for Endpoint on macOS. Use the following command to list all the detected threats:
 
@@ -167,8 +164,7 @@ mdatp threat list
 
 The result shows information like this:
 
-```output
-
+```console
 ID: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
 Name: Behavior: MacOS/MacOSChangeFileTest
@@ -178,7 +174,6 @@ Type: "behavior"
 Detection time: Tue May 7 20:23:41 2024
 
 Status: "quarantined"
-
 ```
 
 If you have Microsoft Defender for Endpoint P2/P1 or Microsoft Defender for Business, go to the [Microsoft Defender portal](https://security.microsoft.com), and you see an alert titled, *Suspicious 'MacOSChangeFileTest' behavior was blocked*.
