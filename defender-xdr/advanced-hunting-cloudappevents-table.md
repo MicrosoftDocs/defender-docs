@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: reference
-ms.date: 12/29/2023
+ms.date: 06/09/2024
 ---
 
 # CloudAppEvents
@@ -65,6 +65,8 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `AdditionalFields` | `dynamic` | Additional information about the entity or event |
 | `LastSeenForUser` | `string` | Shows how many days back the attribute was recently in use by the user in days (i.e. ISP, ActionType etc.)  |
 | `UncommonForUser` | `string` | Lists the attributes in the event that are uncommon for the user, using this data to help rule out false positives and find out anomalies |
+| `AuditSource` | `string` | Audit data source, including one of the following: <br>- Defender for Cloud Apps access control <br>- Defender for Cloud Apps session control <br>- Defender for Cloud Apps app connector |
+| `SessionData` |`dynamic` | The Defender for Cloud Apps session ID for access or session control. For example: `{InLineSessionId:"232342"}` |
 
 ## Apps and services covered
 
