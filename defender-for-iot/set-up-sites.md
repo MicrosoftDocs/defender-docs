@@ -87,16 +87,14 @@ It's important that only the correct users have access to the site. Access and p
 1. Select **Done**.
 <!-- do we need an image of any of the above stages? -->
 Your device group is now set up and appears in the Device group list.
-<!-- not sure how to deal with the rank detail. could use a note, or just a normal line and then have the click here line lower down. -->
+
+Device groups may list different preferences for the same user, in which case you need to rank the importance of each Device group.
+
+To move a group up or down, drag that row to the correct position in the list. For more information, see [ranking device groups in Microsoft Defender for Endpoint](/defender-endpoint/machine-groups.md).
+
+To get the full benefit of the Device group you may need to create roles and permission settings. For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac.md).
 For more information, see [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles.md).
-
-NOTE: Move the groups up or down to make the group with the highest rank list higher than the other groups. For more information, see [ranking device groups in Microsoft Defender for Endpoint](/defender-endpoint/machine-groups.md).
-
-For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac.md).<!-- Or this link /defender-endpoint/user-roles.md , which is better? Site security and RBAC - Mia -->
-
-For more information, see [ranking device groups in Microsoft Defender for Endpoint](/defender-endpoint/machine-groups.md).
-
-Information about ranking and RBAC. - look for the documentation for this - MDE documentation for rank in the endpoint device group page.
+<!-- Or this link /defender-endpoint/user-roles.md , which is better? Site security and RBAC - Mia -->
 
 Next step or related content.
 
