@@ -11,32 +11,18 @@ ms.topic: how-to
 
 # Set up a new site for Site security/ Defender for IoT?
 
-In this article you learn how to set up a new site in the Site security feature. Microsoft Defender for IoT uses *sites* to group Operational Technology (OT) devices located at a specific physical location, such as an office or factory building.
+In this article you learn how to set up a new site in the Site security dashboard. Microsoft Defender for IoT uses *sites* to group Operational Technology (OT) devices located at a specific physical location, such as an office or factory building. The Site security dashboard allows the CISO and SOC analyst an at-a-glance view of the most important security issues affecting your network to make quick, highly informed decisions about which security problems need of an immediate response.
+
+Defender for IoT uses the MDE agent to identify and locate other OT and IoT devices at the same location and adds them to the Device inventory, so it is recommended that you know the IP address of at least one OT device.
 
 ## Prerequisites
 
-Are these correct, are there other items needed here? What level of roles are needed?
-What do we need here?
-
+- Review [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
 - OT Security Admin with MDE P2/E5. For more information, see [Microsoft Defender for Endpoint subscriptions settings](/defender-endpoint/defender-endpoint-subscription-settings.md).
 - Microsoft Defender for IoT license with at least one site license available. For more information, see [Microsoft Defender for IoT subscriptions settings](license-admin-center.md).
-- You might also need IP or MAC address details of at least one OT device at the site.
+- We recommend you have IP or MAC address details of at least one OT device at the site.
 
-For more information, see [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
-
-## Three stages of setup
-
-Defender for IoT works by connecting to the OT devices on your network and use the MDE agent to identify and locate other OT and IoT devices at the same location and adds them to the Device inventory. Before setting up a Defender for IoT site, OT devices listed in the Device inventory show minimal data. Once the OT devices are associated with a site, they show the full range of security related data available, including risk and exposure data.
-
-There are three stages to setting up a site. <!-- not sure to keep this or not, or move to a concept intro article -->
-
-First, enter the site details and the owners of the site.
-
-Second, associate OT devices located at a specific physical location to this new site. This allows Microsoft Defender for IoT in the XDR portal to suggest a list of other OT devices it identifies at the same location. You might need to choose more than one suggested list of OT devices. The list also shows the number of total IoT devices Defender for IoT predicts are at the site, which helps you identify if the location matches the known number of devices there. If the numbers are significantly different this indicates that this isn't part of your site.
-
-Finally review the site details before creating the site. Once the site is created, you can also make a device group to give access permissions to users of this site. For more details, see [RBAC and user permissions in XDR](/defender-endpoint/user-roles.md). <!-- what link goes here? -->
-
-## Create a new site
+## Set up a new site
 
 1. In the Site security dashboard, select **Create new site** or **Create Your First Site**.
 
@@ -58,7 +44,7 @@ OT devices are associated with the site allowing Microsoft Defender for IoT to c
 1. In the Search bar, type either a public IP address or the IP/MAC address for a specific OT device that is located at this site. A list of suggested sites appears in the table.
     1. If you don't know any of the OT device addresses, select **Show all suggested sites**, and a list of all possible sites appears in the table.
 
-    Each row in the table is a group of OT devices at the same specific location. Open the drop-down list of OT devices, and check to see which devices exist at your site. You should include any row that has your OT devices listed in it, as Defender for IoT might suggest several groups of devices for your location. You can't edit the list of devices at a location.
+    Each row in the table is a suggested location based on the OT devices found there. Open the location to see the list of OT devices identified there, and check to see which devices exist at your site. You should look through each location, as Defender for IoT could find your OT devices in more than one suggested locations. You can't edit the list of devices at a location.
 
     1. Review the devices and select the rows to be added to your site. You might need to choose more than one item.
 
@@ -74,15 +60,18 @@ OT devices are associated with the site allowing Microsoft Defender for IoT to c
 
 1. Select **Complete**.
 
+You have the option to create a Device group now or finish the site set up. A Device group can also be set up at a later stage or it may need to be created by a different team member. For more information, see [add a device grouip](#add-device-group). 
+
 The site is now set up and appears in the Site security page.
 
 :::image type="content" source="media/site-security-dashboard-with-new-site.png" alt-text="Screenshot showing the newly added site in the Site security dashboard of Microsoft Defender for IoT in the Microsoft Defender portal.":::
 
 ## Add device group
-
+<!-- maybe this should be added to manage sites? and the link above move to that article??? -->
+A device group can be made using the link at the end of the Site set up process. Or can be 
 Create a device group based on a site location to restrict users to that specific site.<!-- OR -->
 
-It's important that only the correct users have access to the site. Access and permission controls can be set for groups of users to restrict access a specific site or group of sites. Create a **Device group** and set the access per user. <!-- should device group be bolded? -->
+It's important that only the correct users have access to the site. Access and permission controls can be set for groups of users to restrict access to a specific site or group of sites. Create a **Device group** and set the access per user. <!-- should device group be bolded? -->
 
 1. Select **Create device group**. The Settings > Endpoints > Device groups page opens.
 1. Select **Add device group**.
