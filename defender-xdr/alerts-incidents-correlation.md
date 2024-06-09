@@ -29,6 +29,8 @@ In Microsoft Defender XDR, ***alerts*** are signals from a collection of sources
 
 ***Incidents*** provide the full picture of an attack. Microsoft Defender XDR's algorithms automatically correlate signals (alerts) from all Microsoft security and compliance solutions, as well as from vast numbers of external solutions through Microsoft Sentinel and Microsoft Defender for Cloud. Defender XDR identifies multiple signals as belonging to the same attack story, using AI to continually monitor its telemetry sources and add more evidence to already open incidents.
 
+Incidents also function as "case files," providing you a platform for managing and documenting your investigations. For more information about incidents' functionality in this regard, see [Incident response in the Microsoft Defender portal](incidents-overview.md).
+
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
 Here is a summary of the main attributes of incidents and alerts, and the differences between them:
