@@ -27,6 +27,8 @@ appliesto:
 
 In Microsoft Defender XDR, ***alerts*** are signals from a collection of sources that result from various threat detection activities. These signals indicate the occurrence of malicious or suspicious events in your environment. Alerts can often be part of a broader, complex attack story, and related alerts are aggregated and correlated together to form ***incidents*** that represent these attack stories.
 
+***Incidents*** provide the full picture of an attack. Microsoft Defender XDR's algorithms automatically correlate signals (alerts) from all Microsoft security and compliance solutions, as well as from vast numbers of external solutions through Microsoft Sentinel and Microsoft Defender for Cloud. Defender XDR identifies multiple signals as belonging to the same attack story, using AI to continually monitor its telemetry sources and add more evidence to already open incidents.
+
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
 Here is a summary of the main attributes of incidents and alerts, and the differences between them:
@@ -97,8 +99,8 @@ Even when the correlation logic indicates that two incidents should be merged, D
 - One of the incidents has a status of "Closed". Incidents that are resolved don’t get reopened.
 - The two incidents eligible for merging are assigned to two different people.
 - Merging the two incidents would raise the number of entities in the merged incident above the maximum allowed.
-- The two incidents contain devices in different device groups as defined by the organization. This criterion is in effect only when enabled.
-- One of the incidents was created by a custom detection, and the other was not.
+- The two incidents contain devices in different [device groups](../defender-endpoint/machine-groups.md) as defined by the organization. <br>(This criterion is not in effect by default; it must be enabled.)
+- One of the incidents was created by a custom detection, and the other was not. <br>(If two incidents were *both* created by custom detections, they can be merged.)
 
 ### What happens when incidents are merged?
 
@@ -114,3 +116,12 @@ When two or more incidents are merged, the contents of one incident are migrated
 While Microsoft Defender XDR already uses advanced correlation mechanisms, you might want to decide differently whether a given alert belongs with a particular incident or not. In such a case, you can unlink an alert from one incident and link it to another. Every alert must belong to an incident, so you can either link the alert to another existing incident, or to a new incident that you create on the spot.
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+
+## Next steps
+
+Read more about incidents, investigation, and response: [Incident response in the Microsoft Defender portal](incidents-overview.md)
+
+## See also
+
+- [The power of incidents in Microsoft Defender XDR](https://techcommunity.microsoft.com/t5/microsoft-defender-xdr-blog/the-power-of-incidents-in-microsoft-365-defender/ba-p/3515483)
+- [Inside Microsoft Defender XDR: Correlating and consolidating attacks into incidents](https://www.microsoft.com/en-us/security/blog/2020/07/09/inside-microsoft-threat-protection-correlating-and-consolidating-attacks-into-incidents/)
