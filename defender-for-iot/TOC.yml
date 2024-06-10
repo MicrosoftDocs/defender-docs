@@ -24,7 +24,7 @@
         href: set-up-sites.md
     - name: Monitor site security
       items:
-      - name: Monitor site security
+      - name: Monitor site security1
         href: monitor-site-security.md         
       - name: Investigate and remediate vulnerabilities
         items:
