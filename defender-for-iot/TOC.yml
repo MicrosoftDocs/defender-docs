@@ -24,8 +24,8 @@
         href: set-up-sites.md
     - name: Monitor site security
       items:
-      - name: Monitor site and investigate recommendations
-        href: monitor-site-security-and-investigate-recommendations.md         
+      - name: Monitor site security
+        href: monitor-site-security.md         
       - name: Investigate and remediate vulnerabilities
         items:
         - name: How to navigate weakness page
