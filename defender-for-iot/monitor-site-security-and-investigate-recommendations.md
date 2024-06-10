@@ -91,4 +91,12 @@ This shows the number of high risk devices at this site and the change that has 
 
 Select the number in the column which opens the Device inventory filtered according to the site name and high risk level. <!-- check this will appear correctly, when there is test data to use -->
 
-### View recommendations
+### View security recommendations
+<!-- recommendations arent being released yet!! should change the heading - Amit-->
+To view the security recommendations for a site:
+
+1. Select the *Site name* to open the site insights panel.
+1. Under **Insights**, select **View recommendations**.
+    The page will open the Endpoint > Security recommendations page filtered to the site. <!-- if relevant, how are the recommendations filtered? OR are they found somewhere else?-->
+
+## What next?
