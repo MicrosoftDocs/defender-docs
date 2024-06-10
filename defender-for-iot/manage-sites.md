@@ -33,7 +33,14 @@ Microsoft Defender for IoT uses *sites* to group Operational Technology (OT) dev
 1. In the site listings, press the :::image type="icon" source="media/menu-ellipsis.png" alt-text="menu vertical ellipsis button"::: menu and select **Delete site**.
 1. The Site is removed from the table.
 
-## Should the instructions for Device group go here? Or a link to add device group?
+## Add Device group
+
+Create a device group based on a site location to restrict access to a specific site or group of sites. Access and permission controls can be set for groups of users. It's important that the correct users have access to a site.
+
+For more information, see [add a device group](set-up-sites.md#add-device-group).
+
+To get the full benefit of the Device group, you might need to create roles and permission settings. For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac.md).
+Also see [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles.md).
 
 ## Next steps
 
