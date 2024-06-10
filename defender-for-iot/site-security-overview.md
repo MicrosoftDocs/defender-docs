@@ -16,21 +16,11 @@ ms.topic: concept-article
 
 # Site Security in the XDR portal
 
-The Site security page in the Defender XDR portal is a dashboard that offers an <!--high level -->overview of the security state of your entire OT/IoT network. CISO's and SOC analysts can use this dashboard to identify the most critical areas to work on and prevent and respond to advanced threats. <!--to including exposure to potential security threats and risks.  enterprise OT/IoT security platform designed to help enterprise networks prevent, detect, investigate, and respond to advanced threats. -->
-REmove all together:
-## Prerequisites
-
-<!--Are these correct, are there other items needed here? What level of roles are needed?
-What do we need this for?-->
-
-- OT Security Admin with MDE P2/E5. For more information, see [Microsoft Defender for Endpoint subscriptions settings](/defender-endpoint/defender-endpoint-subscription-settings.md).
-- Microsoft Defender for IoT license with at least one site license available. For more information, see [Microsoft Defender for IoT subscriptions settings](license-admin-center.md).<!-- is this really a prereq at this stage? You can buy the site license later? -but i think it is probably best to keep. -->
-
-For more information, see [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
+The Site security page in the Defender XDR portal is a dashboard that offers an <!--high level -->overview of the security state of your entire OT/IoT network. The CISO and security site manager can use this dashboard to identify the most critical areas to work on and prevent and respond to advanced threats.
 
 ## Site security features and benefits
 
-The Site security dashboard allows the CISO and SOC analyst an at-a-glance view of the most important security issues affecting your network. To help save time for the ... manager or the OT security admin users(SOC?) the dashboard lists each site and the number and type of threats that could affect it. This allows the user to make quick and highly informed decisions about which security problems are higher priority and in need of an immediate response.
+The Site security dashboard allows the CISO and SOC analyst an at-a-glance view of the most important security issues affecting your network. To help save time for security management and site managers the dashboard lists each site and the number and type of threats that could affect it. This allows the user to make quick and highly informed decisions about which security problems are higher priority and in need of an immediate response.
 
 The aggregated view shows data for sites with the highest exposure and incident levels, which also helps in making fast decisions to protect your network.
 
@@ -54,7 +44,7 @@ This dashboard is especially important for two positions in your company. The CI
 
 Summarized data for a specific site can be displayed on the dashboard allowing further analysis without having to filter through the more detailed device inventory.  
 
-Next Steps/ Related topics
+## Next Steps
 
 - [Set up sites in Defender for IoT](set-up-sites.md)
 - [Manage sites](manage-sites.md)

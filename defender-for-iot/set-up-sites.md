@@ -11,7 +11,7 @@ ms.topic: how-to
 
 # Set up a new site for Site security/ Defender for IoT?
 
-In this article you learn how to set up a new site in the Site security dashboard. Microsoft Defender for IoT uses *sites* to group Operational Technology (OT) devices located at a specific physical location, such as an office or factory building. The Site security dashboard allows the CISO and SOC analyst an at-a-glance view of the most important security issues affecting your network to make quick, highly informed decisions about which security problems need of an immediate response.
+In this article you learn how to set up a new site in the Site security dashboard. Microsoft Defender for IoT uses *sites* to group Operational Technology (OT) devices located at a specific physical location, such as an office or factory building. The Site security dashboard allows the security site management team an at-a-glance view of the most important security issues affecting your network to make quick, highly informed decisions about which security problems need of an immediate response.
 
 Defender for IoT uses the MDE agent to identify and locate other OT and IoT devices at the same location and adds them to the Device inventory, so it is recommended that you know the IP address of at least one OT device.
 
@@ -96,6 +96,6 @@ To get the full benefit of the Device group you may need to create roles and per
 For more information, see [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles.md).
 <!-- Or this link /defender-endpoint/user-roles.md , which is better? Site security and RBAC - Mia -->
 
-Next step or related content.
+## Next steps
 
 Information about ranking

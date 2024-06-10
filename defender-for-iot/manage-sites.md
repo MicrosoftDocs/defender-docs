@@ -12,7 +12,7 @@ ms.topic: how-to
 # Manage sites
 
 Once a site is in use, you might need to edit or delete the site information listed in the Site security table.
-Microsoft Defender for IoT uses *sites* to group Operational Technology (OT) devices located at a specific physical location, such as an office or factory building. The Site security dashboard allows the CISO and SOC analyst an at-a-glance view of the most important security issues affecting your network to make quick, highly informed decisions about which security problems need of an immediate response.
+Microsoft Defender for IoT uses *sites* to group Operational Technology (OT) devices located at a specific physical location, such as an office or factory building. The Site security dashboard allows the security site management team an at-a-glance view of the most important security issues affecting your network to make quick, highly informed decisions about which security problems need of an immediate response.
 
 ## Prerequisites
 
@@ -33,6 +33,8 @@ Microsoft Defender for IoT uses *sites* to group Operational Technology (OT) dev
 1. In the site listings, press the :::image type="icon" source="media/menu-ellipsis.png" alt-text="menu vertical ellipsis button"::: menu and select **Delete site**.
 1. The Site is removed from the table.
 
-Link to add device group?
+## Should the instructions for Device group go here? Or a link to add device group?
 
-What other information is needed on this page?
+## Next steps
+
+What should go here?
