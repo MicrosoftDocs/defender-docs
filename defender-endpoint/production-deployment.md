@@ -42,6 +42,7 @@ In this deployment scenario, you're guided through the steps on:
 
 > [!NOTE]
 > For the purpose of guiding you through a typical deployment, this scenario will only cover the use of Microsoft Configuration Manager. Defender for Endpoint supports the use of other onboarding tools but we won't cover those scenarios in the deployment guide. For more information, see [Identify Defender for Endpoint architecture and deployment method](deployment-strategy.md).
+[!INCLUDE [defender-endpoint-setup-guide](../includes/mde-automated-setup-guide.md)]
 
 ## Check license state
 
