@@ -67,34 +67,6 @@ DeviceEvents
 
 ```
 
-### Example 2: Removable storage file event
-
-If a policy is configured to gather file evidence, then a `RemovableStorageFileEvent` is created. The event is generated for both printers and removable storage devices. Here's an example query you can use with advanced hunting:
-
-```kusto
-
-//information of the evidence file
-DeviceEvents
-| where ActionType contains "RemovableStorageFileEvent"
-| extend parsed=parse_json(AdditionalFields)
-| extend Policy = tostring(parsed.Policy)
-| extend PolicyRuleId = tostring(parsed.PolicyRuleId)
-| extend MediaClassName = tostring(parsed.ClassName)
-| extend MediaInstanceId = tostring(parsed.InstanceId)
-| extend MediaName = tostring(parsed.MediaName)
-| extend MediaProductId = tostring(parsed.ProductId)
-| extend MediaVendorId = tostring(parsed.VendorId)
-| extend MediaSerialNumber = tostring(parsed.SerialNumber)
-| extend FileInformationOperation = tostring(parsed.DuplicatedOperation)
-| extend FileEvidenceLocation = tostring(parsed.TargetFileLocation)
-| project Timestamp, DeviceId, DeviceName, InitiatingProcessAccountName, ActionType, Policy, PolicyRuleId, FileInformationOperation, MediaClassName, MediaInstanceId, MediaName, MediaProductId, MediaVendorId, MediaSerialNumber, FileName, FolderPath, FileSize, FileEvidenceLocation, AdditionalFields
-| order by Timestamp desc
-
-```
-
-> [!NOTE]
-> The `RemovableStorageFileEvent` does not appear immediately after a file is copied to the device. It may take as long as 24 hours to appear.
-
 ## [**Device control report**](#tab/report)
 
 ## Device control report
