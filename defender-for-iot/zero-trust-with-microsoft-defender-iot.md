@@ -6,7 +6,7 @@ author: lwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 05/19/2024
-ms.topic: concept
+ms.topic: concept-article
 ---
 
 # Zero Trust with Microsoft Defender for IoT for Defender portal
