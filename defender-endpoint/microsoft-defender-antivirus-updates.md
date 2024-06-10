@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 05/20/2024
+ms.date: 06/07/2024
 audience: ITPro
 ms.topic: reference
 author: siosulli
@@ -142,7 +142,7 @@ All our updates contain
 
 - Added manageability settings to opt out for One Collector telemetry channel and Experimentation and Configuration Service (ECS).
 - Microsoft Defender Core Service will be disabled when 3rd party Antivirus is installed (except when Defender for Endpoint is running in Passive mode).
-- The known issue in [4.18.24020.7](#february-2024-engine-11240209--platform-418240207) where enforcement of device level access policies wasn't working as expected no longer occurs.
+- The known issue in [4.18.24020.7](msda-updates-previous-versions-technical-upgrade-support.md#february-2024-engine-11240209--platform-418240207) where enforcement of device level access policies wasn't working as expected no longer occurs.
 - Fixed high CPU issue caused by redetection done during Sense originating scans.
 - Fixed an issue with Security Intelligence Update disk cleanup.
 - Fixed an issue where the Signature date information on the Security Health report wasn't accurate.
@@ -151,26 +151,6 @@ All our updates contain
 - Improved resilience in processing [attack surface reduction](attack-surface-reduction.md) exclusions for Anti Malware Scan Interface (AMSI) scans.
 - Fixed a high memory issue related to the [Behavior Monitoring](behavior-monitor.md) queue that occurred when MAPS is disabled.
 - A possible deadlock when receiving a [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) configuration change from the [Microsoft Defender portal](https://security.microsoft.com) no longer occurs.
-
-### February-2024 (Engine: 1.1.24020.9 | Platform: 4.18.24020.7)
-
-- Security intelligence update version: **1.407.46.0**
-- Release date: **March 6, 2024** (Engine) / **March 12, 2024** (Platform)
-- Engine: **1.1.24020.9**
-- Platform: **4.18.24020.7**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Improved support for virtualizing while compressing or decompressing zip files
-- Improved reporting in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) for block-only remediations
-- Reduced the number of false positives for [attack surface reduction rules](attack-surface-reduction.md) for known trusted processes
-- Improved [Get-MpPreference](/powershell/module/defender/get-mppreference) logic for proxy bypass settings
-- Extended the toast notification support for [Indicators of Compromise](manage-indicators.md#indicator-of-compromise-ioc-overview) (IoC) detections
-
-#### Known issues
-
-- For [device control](device-control-overview.md) customers using removable media policies with disk/device-level access only (masks that include the values 1, 2, 3, 4, and 7), enforcement might not work as expected. In such situations, we recommend customers roll back to the previous version of the Defender platform.
 
 ### Previous version updates: Technical upgrade support only
 
@@ -233,6 +213,21 @@ To avoid a gap in protection, keep your OS installation images up to date with t
 Updates are released for x86, x64, and ARM64 Windows architecture.
 
 For more information, see [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
+
+### 1.411.111.0
+
+- Defender package version: **1.411.111.0**
+- Security intelligence version: **1.411.111.0**
+- Engine version: **1.24050.2**
+- Platform version: **4.18.24050.7**
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
 
 ### 1.411.9.0
 

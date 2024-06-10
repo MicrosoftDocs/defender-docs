@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 08/08/2023
+ms.date: 06/07/2024
 ms.reviewer: efratka, nehabha, muktaagarwal
 f1.keywords: NOCSH 
 ms.collection: 
@@ -357,9 +357,6 @@ You can use the following methods to onboard an instance of Linux Server to Defe
 ---
 
 ## View a list of onboarded devices
-
-> [!IMPORTANT]
-> You must be assigned an appropriate role, such as Global Administrator, Security Administrator, or Security Reader to perform the following procedure. For more information, see [Roles in Defender for Business](mdb-roles-permissions.md#roles-in-defender-for-business).
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.
 
