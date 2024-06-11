@@ -477,7 +477,7 @@
           href: https://aka.ms/soc-opt-from-defender
         - name: SOC optimization reference
           href: https://aka.ms/soc-opt-ref
-    - name: Multitenant management in Microsoft Defender XDR
+    - name: Manage multitenant environments
       items:
         - name: Multitenant management in Microsoft Defender XDR
           href: mto-overview.md
@@ -497,49 +497,55 @@
           href: mto-tenantgroups.md                      
         - name: Create and manage endpoint security policies
           href: mto-endpoint-security-policy.md               
-    - name: Reference
+    - name: Manage roles and permissions
       items: 
-      - name: Manage roles and permissions
-        items: 
-            - name: Manage access to Microsoft Defender XDR
+        - name: Manage access and roles in Microsoft Defender XDR
+          items:
+            - name: Manage access
               href: m365d-permissions.md
             - name: Custom roles in role-based access 
               href: custom-roles.md
-            - name: Manage permissions with Microsoft Defender XDR Unified RBAC
-              items: 
-              - name: Overview
-                href: manage-rbac.md
-              - name: What's new in Microsoft Defender XDR Unified RBAC
-                href: whats-new-in-microsoft-defender-urbac.md
-              - name: Create custom roles 
-                href: create-custom-rbac-roles.md
-              - name: Import roles
-                href: Import-rbac-roles.md
-              - name: Activate Microsoft Defender XDR Unified RBAC 
-                href: activate-defender-rbac.md
-              - name: Edit, delete and export roles
-                href: edit-delete-rbac-roles.md
-              - name: Map Unified RBAC permission
-                href: compare-rbac-roles.md
-              - name: About Unified RBAC custom permission
-                href: custom-permissions-details.md
-      - name: Portal settings
-        items: 
+        - name: Manage permissions with Unified RBAC
+          items: 
+            - name: Overview
+              href: manage-rbac.md
+            - name: What's new
+              href: whats-new-in-microsoft-defender-urbac.md
+            - name: Create custom roles 
+              href: create-custom-rbac-roles.md
+            - name: Import roles
+              href: Import-rbac-roles.md
+            - name: Activate Unified RBAC 
+              href: activate-defender-rbac.md
+            - name: Edit, delete and export roles
+              href: edit-delete-rbac-roles.md
+            - name: Map Unified RBAC permissions
+              href: compare-rbac-roles.md
+            - name: About Unified RBAC custom permissions
+              href: custom-permissions-details.md
+    - name: Reference
+      items:
+        - name: Audit activities and events
+          href: microsoft-xdr-auditing.md 
+        - name: Portal actions
+          items:
+            - name: Configure notifications
+              items:
+              - name: Get notified about new and updated incidents
+                href: m365d-notifications-incidents.md
+              - name: Set up email notifications for response actions
+                href: m365d-response-actions-notifications.md
+              - name: Set up email notifications for Threat analytics reports
+                href: m365d-threat-analytics-notifications.md              
+              - name: Configure alert notifications
+                href: configure-email-notifications.md
             - name: Set time zone
               href: m365d-time-zone.md
             - name: View device profiles
               href: device-profile.md
-            - name: Troubleshoot Microsoft Defender XDR service issues
+            - name: Troubleshoot service issues
               href: troubleshoot.md
-            - name: Get notified about new and updated incidents
-              href: m365d-notifications-incidents.md
-            - name: Set up email notifications for response actions
-              href: m365d-response-actions-notifications.md
-            - name: Set up email notifications for Threat analytics reports
-              href: m365d-threat-analytics-notifications.md              
-            - name: Configure alert notifications
-              href: configure-email-notifications.md
-            - name: Asset rule management
+            - name: Set up dynamic rules for devices
               href: configure-asset-rules.md
             - name: Provide feedback
               href: feedback.md
@@ -547,17 +553,15 @@
               href: mssp-access.md
             - name: Create ServiceNow tickets and tasks
               items: 
-               - name: ServiceNow integration overview
-                 href: ./tickets.md
-      - name: Use auditing in Microsoft Defender XDR
-        href: microsoft-xdr-auditing.md
-      - name: Microsoft Defender XDR APIs
-        items: 
-            - name: Overview of Microsoft Defender XDR APIs
+              - name: ServiceNow integration overview
+                href: ./tickets.md
+        - name: Microsoft Defender XDR APIs
+          items: 
+            - name: Overview
               href: api-overview.md
             - name: Supported Microsoft Defender XDR APIs
               href: api-supported.md
-            - name: Get started with Microsoft Defender XDR APIs 
+            - name: Get started
               items: 
                 - name: Microsoft Defender XDR API license and terms of use
                   href: /legal/microsoft-365/api-terms
@@ -619,24 +623,24 @@
                  href: /defender-endpoint/professional-services           
             - name: Understand threat intelligence concepts
               href: /defender-endpoint/threat-indicator-concepts 
-      - name: Bi-directional connector for Microsoft Sentinel
-        href: microsoft-365-defender-integration-with-azure-sentinel.md 
-      - name: Microsoft Security Resources
-        items: 
-          - name: Threat actor naming
-            href: microsoft-threat-actor-naming.md
-          - name: Malware names
-            href: malware-naming.md
-          - name: How Microsoft identifies malware and PUA
-            href: criteria.md
-          - name: Submit files for analysis
-            href: submission-guide.md
-          - name: Troubleshoot MSI portal errors caused by admin block
-            href: portal-submission-troubleshooting.md
-          - name: Microsoft virus initiative
-            href: virus-initiative-criteria.md
-          - name: Software developer FAQ
-            href: developer-faq.yml
+        - name: Bi-directional connector for Microsoft Sentinel
+          href: microsoft-365-defender-integration-with-azure-sentinel.md 
+    - name: Resources
+      items: 
+        - name: Threat actor naming
+          href: microsoft-threat-actor-naming.md
+        - name: Malware names
+          href: malware-naming.md
+        - name: How Microsoft identifies malware and PUA
+          href: criteria.md
+        - name: Submit files for analysis
+          href: submission-guide.md
+        - name: Troubleshoot MSI portal errors caused by admin block
+          href: portal-submission-troubleshooting.md
+        - name: Microsoft virus initiative
+          href: virus-initiative-criteria.md
+        - name: Software developer FAQ
+          href: developer-faq.yml
     - name: Microsoft Sentinel docs
       href: /azure/sentinel
     - name: Microsoft Defender XDR docs
