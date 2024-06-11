@@ -11,4 +11,22 @@ ms.topic: how-to
 
 # Prerequisites for Defender for IoT in the Defender portal
 
-Suggested OT devices at a site.
+Prerequisites
+
+A valid Defender for IoT - OT site Based License (trial or paid).
+
+Security Admin, Global administrator or MDE admin (Manage security settings in Security Center & scoped to all device groups)
+
+Passive or active discovery using your MDE
+
+To be included in this article:
+
+1. instructions on how to get started,
+
+1. including steps such as purchasing a license,
+
+1. creating the first site for more information see [set up a new site](set-up-sites.md).
+
+1. establishing site-based RBAC (Role-Based Access Control),
+
+1. and so on.
