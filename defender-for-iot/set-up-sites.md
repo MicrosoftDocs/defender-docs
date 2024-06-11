@@ -1,6 +1,6 @@
 ---
-title: Set up a new site for Site security for Microsoft Defender for IoT in XDR Defender portal
-description: This article describes the set-up procedure for a new site in the Site security feature of Microsoft Defender for IoT in XDR Defender portal
+title: Set up a new site for Site security for Microsoft Defender for IoT
+description: This article describes the set-up procedure for a new site in the Site security feature of Microsoft Defender for IoT in Defender portal
 ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
@@ -9,7 +9,7 @@ ms.date: 05/19/2024
 ms.topic: how-to
 ---
 
-# Set up a new site for Site security/ Defender for IoT?
+# Set up a new site
 
 In this article, you learn how to set up a new site in the Site security dashboard. Microsoft Defender for IoT uses *sites* to group Operational Technology (OT) devices located at a specific physical location, such as an office or factory building. The Site security dashboard allows the security site management team an overview of the most important security issues affecting your network to make quick, highly informed decisions about which security problems need an immediate response.
 

@@ -40,8 +40,8 @@ landingContent:
         links:
           - text: Manage sites
             url: manage-sites.md
-          - text: Monitor site security1
-            url: monitor-site-security.md 
+          - text: Monitor site security
+            url: monitor-site-security.md
 
 # Card
   - title: Evaluate & deploy the service
