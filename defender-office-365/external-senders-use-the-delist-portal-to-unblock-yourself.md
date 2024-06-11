@@ -70,8 +70,8 @@ For these delivery failures, we provide the **Office 365 Anti-Spam IP Delist Por
 
 After the IP address is removed from the blocked senders list, email messages that pass the protection filters in [Exchange Online Protection (EOP)](eop-about.md) and [Microsoft Defender for Office 365](mdo-about.md) (including [composite authentication](email-authentication-about.md#composite-authentication)) are delivered to Microsoft 365 recipients. Verify that messages aren't abusive or malicious. Otherwise, the IP address might be blocked again.
 
-    > [!NOTE]
-    > Results can vary widely before the restrictions are removed. It might take up to 24 hours or longer.
+> [!NOTE]
+> Results can vary widely before the restrictions are removed. It might take up to 24 hours or longer.
 
 ### How to fix error code 5.7.511
 
