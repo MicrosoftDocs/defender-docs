@@ -358,7 +358,7 @@ With web protection, you can protect your organization's devices from web threat
 
 Network firewall helps reduce the risk of network security threats. Your security team can set rules that determine which traffic is permitted to flow to or from your organization's devices. We recommend using Intune to configure your network firewall. 
 
-::: ![image](https://github.com/MicrosoftDocs/defender-docs/assets/40171398/b80a84b9-fcb2-4c6e-9763-cb7aeb71153a) alt-text="Firewall policy in the Intune portal"::: 
+::: ![image](https://github.com/MicrosoftDocs/defender-docs/assets/40171398/b80a84b9-fcb2-4c6e-9763-cb7aeb71153a) alt-text="Screenshot of Firewall policy in the Intune portal."::: 
 
 To configure basic firewall settings, follow these steps:
 
