@@ -22,8 +22,6 @@
         items:
         - name: Portal overview
           href: microsoft-365-defender-portal.md
-        - name: Microsoft Defender Security Center to the Microsoft Defender portal
-          href: microsoft-365-security-mde-redirection.md
         - name: Defender for Endpoint
           href: microsoft-365-security-center-mde.md
         - name: Defender for Office 365
