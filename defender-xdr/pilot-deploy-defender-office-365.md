@@ -56,7 +56,8 @@ The following diagram illustrates a common process to deploy a product or servic
 You start by evaluating the product or service and how it will work within your organization. Then, you pilot the product or service with a suitably small subset of your production infrastructure for testing, learning, and customization. Then, gradually increase the scope of the deployment until your entire infrastructure or organization is covered.
 
 Here is the workflow for piloting and deploying Defender for Office 365 in your production environment.
-:::image type="content" source="./media/eval-defender-xdr/defender-office-365-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Office 365." lightbox="./media/eval-defender-xdr/defender-office-365-pilot-deploy-steps.svg":::
+
+:::image type="content" source="./media/eval-defender-xdr/defender-office-365-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Office 365." lightbox="./media/eval-defender-xdr/defender-office-365-pilot-deploy-steps.svg" border="false":::
 
 Follow these steps:
 

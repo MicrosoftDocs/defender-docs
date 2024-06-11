@@ -57,7 +57,7 @@ You start by evaluating the product or service and how it will work within your 
 
 Here is the workflow for piloting and deploying Defender for Cloud Apps in your production environment.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg" alt-text="A diagram that shows the pilot and deploy workflow for Microsoft Defender for Cloud Apps." lightbox="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg" alt-text="A diagram that shows the pilot and deploy workflow for Microsoft Defender for Cloud Apps." lightbox="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg" border="false":::
 
 Follow these steps:
 

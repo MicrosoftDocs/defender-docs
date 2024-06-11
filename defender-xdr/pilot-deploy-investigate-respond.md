@@ -46,7 +46,7 @@ At any time during your pilot and deployment, you can test Microsoft Defender XD
 
 Here is the workflow for investigating and responding to incidents using Microsoft Defender XDR in your production environment.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-investigate-respond-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to do incident investigation and response." lightbox="./media/eval-defender-xdr/defender-investigate-respond-pilot-deploy-steps.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-investigate-respond-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to do incident investigation and response." lightbox="./media/eval-defender-xdr/defender-investigate-respond-pilot-deploy-steps.svg" border="false":::
 
 Follow these steps:
 
