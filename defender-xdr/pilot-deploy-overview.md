@@ -107,7 +107,7 @@ In the illustration:
 
 Microsoft recommends enabling the components of Microsoft 365 Defender in the following order.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg" alt-text="A diagram that shows the pilot and deploy process for Microsoft Defender XDR." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg" border=”false”:::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg" alt-text="A diagram that shows the pilot and deploy process for Microsoft Defender XDR." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg" border="false":::
 
 | Phase | Link |
 |---|---|
