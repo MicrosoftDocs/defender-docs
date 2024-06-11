@@ -29,7 +29,7 @@ This article describes how to set up and configure Defender for Endpoint Plan 1.
 
 ## The setup and configuration process
 
-:::image type="content" source="media/mde-p1-deploymentflow.png" alt-text="Setup and deployment flow for Microsoft Defender for Endpoint Plan 1" lightbox="media/mde-p1-deploymentflow.png":::
+:::image type="content" source="media/mde-p1-deploymentflow.png" alt-text="Screenshot of setup and deployment flow for Microsoft Defender for Endpoint Plan 1." lightbox="media/mde-p1-deploymentflow.png":::
 
 The general setup and configuration process for Defender for Endpoint Plan 1 is as follows: <br/><br/>
 
@@ -78,7 +78,7 @@ When you plan your deployment, you can choose from several different architectur
 
 To learn more about your deployment options, see [Plan your Defender for Endpoint deployment](deployment-strategy.md). And, download the following poster: 
 
-[:::image type="content" source="/defender/media/defender-endpoint/mde-deployment-strategy.png" alt-text="Deployment strategy poster thumbnail":::](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)
+[:::image type="content" source="/defender/media/defender-endpoint/mde-deployment-strategy.png" alt-text="Screnshot of deployment strategy poster thumbnail.":::](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)
 
 **[Get the deployment poster](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)**
 
@@ -137,7 +137,7 @@ Then, proceed to configure your next-generation protection and attack surface re
 
 We recommend using [Intune](/mem) to manage your organization's devices and security settings, as shown in the following image:
  
-:::image type="content" source="/defender/media/mde-p1/endpoint-policies.png" alt-text="Endpoint security policies in the Intune portal" lightbox="/defender/media/mde-p1/endpoint-policies.png":::
+:::image type="content" source="/defender/media/mde-p1/endpoint-policies.png" alt-text="Screenshot of endpoint security policies in the Intune portal." lightbox="/defender/media/mde-p1/endpoint-policies.png":::
 
 To configure your next-generation protection in Intune, follow these steps:
 
@@ -170,7 +170,7 @@ Attack surface reduction is all about reducing the places and ways your organiza
 
 Attack surface reduction rules are available on devices running Windows. We recommend using Intune, as shown in the following image:
 
-:::image type="content" source="/defender/media/mde-p1/mem-asrpolicies.png" alt-text="Attack surface reduction rules in the Intune portal" lightbox="/defender/media/mde-p1/mem-asrpolicies.png":::
+:::image type="content" source="/defender/media/mde-p1/mem-asrpolicies.png" alt-text="Screenshot of attack surface reduction rules in the Intune portal." lightbox="/defender/media/mde-p1/mem-asrpolicies.png":::
 
 1. Go to the Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) and sign in.
 
@@ -206,7 +206,7 @@ You get ransomware mitigation through [controlled folder access](controlled-fold
 
 We recommend using Intune to configure controlled folder access.
 
-:::image type="content" source="/defender/media/mde-p1/mem-asrpolicies.png" alt-text="attack surface reduction policies in the Intune portal" lightbox="/defender/media/mde-p1/mem-asrpolicies.png":::
+:::image type="content" source="/defender/media/mde-p1/mem-asrpolicies.png" alt-text="Screenshot of attack surface reduction policies in the Intune portal." lightbox="/defender/media/mde-p1/mem-asrpolicies.png":::
 
 1. Go to the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign in. 
 
@@ -237,7 +237,7 @@ We recommend using Intune to configure controlled folder access.
 
 You can configure Defender for Endpoint to block or allow removable devices and files on removable devices. We recommend using Intune to configure your device control settings.
 
-:::image type="content" source="/defender/media/mde-p1/mem-admintemplates.png" alt-text="Intune administrative templates" lightbox="/defender/media/mde-p1/mem-admintemplates.png":::
+:::image type="content" source="/defender/media/mde-p1/mem-admintemplates.png" alt-text="Screenshot of Intune administrative templates." lightbox="/defender/media/mde-p1/mem-admintemplates.png":::
 
 1. Go to the Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) and sign in. 
 
@@ -270,7 +270,7 @@ You can configure Defender for Endpoint to block or allow removable devices and 
 
 With network protection, you can help protect your organization against dangerous domains that might host phishing scams, exploits, and other malicious content on the Internet. We recommend using Intune to turn on network protection.
 
-:::image type="content" source="/defender/media/mde-p1/mem-endpointprotectionprofile.png" alt-text="Endpoint protection profile in the Intune portal" lightbox="/defender/media/mde-p1/mem-endpointprotectionprofile.png":::
+:::image type="content" source="/defender/media/mde-p1/mem-endpointprotectionprofile.png" alt-text="Screenshot of endpoint protection profile in the Intune portal." lightbox="/defender/media/mde-p1/mem-endpointprotectionprofile.png":::
 
 1. Go to the Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) and sign in. 
 
