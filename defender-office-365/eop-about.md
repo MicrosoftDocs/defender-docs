@@ -92,7 +92,6 @@ For information about requirements, important limits, and feature availability a
 
 - EOP uses several URL block lists that help detect known malicious links within messages.
 - EOP uses a vast list of domains that are known to send spam.
-- EOP uses multiple anti-malware engines help to automatically protect our customers.
 - EOP inspects the active payload in the message body and all message attachments for malware.
 
 |Feature|Comments|
