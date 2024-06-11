@@ -107,7 +107,7 @@ In the illustration:
 
 Microsoft recommends enabling the components of Microsoft 365 Defender in the following order.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg" alt-text="A diagram that shows the pilot and deploy process for Microsoft Defender XDR." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg" alt-text="A diagram that shows the pilot and deploy process for Microsoft Defender XDR." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow.svg" border="false":::
 
 | Phase | Link |
 |---|---|
@@ -147,7 +147,7 @@ Your pilot using Microsoft 365 E5 trial licenses in your existing production ten
 
 ## Next step
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" alt-text="A diagram showing Microsoft Defender for Identity in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" alt-text="A diagram showing Microsoft Defender for Identity in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" border="false":::
 
 See [Pilot and deploy Microsoft Defender for Identity](pilot-deploy-defender-identity.md).
 
