@@ -66,30 +66,32 @@ For more information about disabling local list merging, see [Prevent or allow u
 > - This method is not available on Windows Server 2012 R2 or Windows Server 2016. If controlled folder access is configured with Group Policy, PowerShell, or MDM CSPs, the state changes in the Windows Security app only after restarting the device. If the feature is set to **Audit mode** with any of those tools, the Windows Security app shows the state as **Off**.
 > 
 > - If you are protecting user profile data, the user profile should be on the default Windows installation drive.
+
 ## Microsoft Intune
 
 1. Sign in to the [Microsoft Intune admin center](https://endpoint.microsoft.com) and open **Endpoint Security**.
 
-1. Go to **Attack Surface Reduction** > **Policy**.
+2. Go to **Attack Surface Reduction** > **Policy**.
 
-1. Select **Platform**, choose **Windows 10, Windows 11, and Windows Server**, and select the profile **Attack Surface Reduction rules** > **Create**.
+3. Select **Platform**, choose **Windows 10, Windows 11, and Windows Server**, and select the profile **Attack Surface Reduction rules** > **Create**.
 
-1. Name the policy and add a description. Select **Next**.
+4. Name the policy and add a description. Select **Next**.
 
-1. Scroll down, and in the **Enable Controlled Folder Access** drop-down, select an option, such as **Audit Mode**.   
+5. Scroll down, and in the **Enable Controlled Folder Access** drop-down, select an option, such as **Audit Mode**.   
   
-We recommend enabling controlled folder access in audit mode first to see how it'll work in your organization. You can set it to another mode, such as **Enabled**, later.
+   We recommend enabling controlled folder access in audit mode first to see how it'll work in your organization. You can set it to another mode, such as **Enabled**, later.
 
-1. To optionally add folders that should be protected, select **Controlled Folder Access Protected Folders** and then add folders. Files in these folders can't be modified or deleted by untrusted applications. Keep in mind that your default system folders are automatically protected. You can view the list of default system folders in the Windows Security app on a Windows device. To learn more about this setting, see [Policy CSP - Defender: ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender?#controlledfolderaccessprotectedfolders).
+6. To optionally add folders that should be protected, select **Controlled Folder Access Protected Folders** and then add folders. Files in these folders can't be modified or deleted by untrusted applications. Keep in mind that your default system folders are automatically protected. You can view the list of default system folders in the Windows Security app on a Windows device. To learn more about this setting, see [Policy CSP - Defender: ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender?#controlledfolderaccessprotectedfolders).
 
-1. To optionally add applications that should be trusted, select **Controlled Folder Access Allowed Applications** and then add the apps can access protected folders. Microsoft Defender Antivirus automatically determines which applications should be trusted. Only use this setting to specify additional applications. To learn more about this setting, see [Policy CSP - Defender: ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#controlledfolderaccessallowedapplications).
+7. To optionally add applications that should be trusted, select **Controlled Folder Access Allowed Applications** and then add the apps can access protected folders. Microsoft Defender Antivirus automatically determines which applications should be trusted. Only use this setting to specify additional applications. To learn more about this setting, see [Policy CSP - Defender: ControlledFolderAccessAllowedApplications](/windows/client-management/mdm/policy-csp-defender#controlledfolderaccessallowedapplications).
 
-1. Select the profile **Assignments**, assign to **All Users & All Devices**, and select **Save**.
+8. Select the profile **Assignments**, assign to **All Users & All Devices**, and select **Save**.
 
 9. Select **Next** to save each open blade and then **Create**.
 
 > [!NOTE]
 > Wildcards are supported for applications, but not for folders. Allowed apps continue to trigger events until they are restarted.
+
 ## Mobile Device Management (MDM)
 
 Use the [./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders](/windows/client-management/mdm/policy-csp-defender) configuration service provider (CSP) to allow apps to make changes to protected folders.
@@ -106,6 +108,7 @@ Use the [./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders](/wi
 
    > [!NOTE]
    > Wildcard is supported for applications, but not for folders. Allowed apps will continue to trigger events until they are restarted.
+
 1. Review the settings and select **Next** to create the policy.
 
 6. After the policy is created, **Close**.
