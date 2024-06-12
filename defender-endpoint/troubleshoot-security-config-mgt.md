@@ -34,8 +34,6 @@ Security Management for Microsoft Defender for Endpoint is a capability for devi
 - For Security Management for Microsoft Defender for Endpoint onboarding instructions, see [Microsoft Defender for Endpoint Security Configuration Management](/mem/intune/protect/mde-security-integration).
 - For more information about the client analyzer, see [Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer](overview-client-analyzer.md).
 
-<a name='registering-domain-joined-computers-with-azure-active-directory'></a>
-
 ## Run Microsoft Defender for Endpoint Client Analyzer on Windows
 
 Consider running the Client Analyzer on endpoints that are failing to complete the Security Management for Microsoft Defender for Endpoint onboarding flow. For more information about the client analyzer, see [Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer](overview-client-analyzer.md).
