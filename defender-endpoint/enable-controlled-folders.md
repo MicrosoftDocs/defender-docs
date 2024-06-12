@@ -136,9 +136,9 @@ Use the [./Vendor/MSFT/Policy/Config/ControlledFolderAccessProtectedFolders](/wi
 
 2. Type the following cmdlet:
 
-       ```PowerShell
-    Set-MpPreference -EnableControlledFolderAccess Enabled
-    ```
+   ```PowerShell
+   Set-MpPreference -EnableControlledFolderAccess Enabled
+   ```
 
    You can enable the feature in audit mode by specifying `AuditMode` instead of `Enabled`. Use `Disabled` to turn off the feature.
 
