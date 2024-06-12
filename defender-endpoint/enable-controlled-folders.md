@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: siosulli
 ms.author: siosulli
-ms.reviewer: sugamar
+ms.reviewer: sugamar; moeghasemi
 manager: deniseb
 ms.subservice: asr
 ms.collection: 
@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 - mde-asr
 search.appverid: met150
-ms.date: 08/15/2023
+ms.date: 06/11/2024
 ---
 
 # Enable controlled folder access
