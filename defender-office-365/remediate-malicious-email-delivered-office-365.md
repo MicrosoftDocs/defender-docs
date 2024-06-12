@@ -83,7 +83,6 @@ Open any remediation item to view details about it, including its remediation na
     - Recoverable Items\Deletions folder (soft deleted items)
 
   - **Not actionable**: Emails in the following locations can't be acted on or moved in remediation actions:
-    - Quarantine
     - Hard-deleted folder
     - On-premises/external
     - Failed/dropped
