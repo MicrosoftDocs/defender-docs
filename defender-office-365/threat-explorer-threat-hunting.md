@@ -174,7 +174,7 @@ After you determine that an email message is a threat, the next step is remediat
 
 Selecting :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** opens the **Take action** wizard in a flyout. The available actions in the **Take action** wizard in Defender for Office 365 Plan 2 and Defender for Office 365 Plan 1 are listed in the following table:
 
-|Action|Defender for Office<br/>365 Plan 2|Real-time<br/>Detections|
+|Action|Defender for<br/>Office 365 Plan 2|Defender for<br/>Office 365 Plan 1|
 |---|:---:|:---:|
 |**Move to mailbox folder**|✔¹||
 |&nbsp;&nbsp;Release quarantined messages to some or all original recipients*²|✔||
