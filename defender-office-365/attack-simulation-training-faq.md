@@ -75,6 +75,12 @@ If you use distribution groups or mail-enabled security groups to target users, 
 
 ## Issues with Attack simulation training reporting
 
+### Differences in user activity data from Attack simulation training reports and other reports
+
+For reporting on user activity related to simulation messages, we recommend using the [built-in simulation reports](attack-simulation-training-insights.md). Reports from other sources (for example, [Advanced hunting](/defender-xdr/advanced-hunting-overview)) might not be accurate.
+
+Simulation URLs aren't wrapped by Safe Links and are considered unwrapped links. Not all clicks on unwrapped links go through Safe Links, so user activity related to simulation messages might not be recorded in the [UrlClickEvents logs](/defender-xdr/advanced-hunting-urlclickevents-table).
+
 ### Attack simulation training reports don't contain any activity details
 
 Attack simulation training comes with rich, actionable insights that keep you informed of the threat readiness progress of your employees. If Attack simulation training reports aren't populated with data, verify that audit logging is turned on in your organization (it's on by default).
@@ -132,10 +138,10 @@ Simulation reports in Attack simulator training provide details on user activity
 
 If messages that users reported as phishing aren't captured in Attack simulation training simulation reports, there might be an Exchange mail flow rule (also known as a transport rule) that's blocking the delivery of the reported messages to Microsoft. Verify that any mail flow rules aren't blocking delivery to the following email addresses:
 
-- junk@office365.microsoft.com
-- abuse@messaging.microsoft.com
-- phish@office365.microsoft.com
-- not\_junk@office365.microsoft.com
+- `junk@office365.microsoft.com`
+- `abuse@messaging.microsoft.com`
+- `phish@office365.microsoft.com`
+- `not_junk@office365.microsoft.com`
 
 ### Users are assigned training after they report a simulated message
 

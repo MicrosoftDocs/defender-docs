@@ -25,6 +25,8 @@ In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Offi
 
 Payload automation mimics the messages and payloads from the attack and stores them as custom payloads with identifiers in the payload name. You can then use the harvested payloads in simulations or automations to automatically launch harmless simulations to targeted users.
 
+For details about how payload automations are collected, see the [Appendix](#appendix) section at the end of this article.
+
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
 To see any existing payload automations that you created, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Automations** tab \> and then select **Payload automations**. To go directly to the **Automations** tab where you can select **Payload automations**, use <https://security.microsoft.com/attacksimulator?viewid=automations>.
@@ -145,6 +147,19 @@ For payload automations with the **Status** value **Ready**, select the payload 
 
 > [!TIP]
 > To see details about other payload automations without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+
+## Appendix
+
+Payload automation relies on email messages that are identified as campaigns by Defender for Office 365:
+
+- Admins [marking messages as phishing](submissions-admin.md#notify-users-about-admin-submitted-messages-to-microsoft) doesn't result in payload harvesting.
+
+- Payload automation requires access to the raw payload, which can include user reported messages that meet the following criteria:
+  - The message was delivered to the Inbox (false negative).
+  - The user reported the message as phishing.
+  - The reported message was submitted to Microsoft (directly by the user or [by an admin from the Submissions portal](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis)), and Microsoft determined that the message was phishing.
+
+- Eligible payloads are harvested if the messages meet the criteria of the payload automation as described earlier in this article (Step 4 in [Create payload automations](#create-payload-automations)).
 
 ## Related links
 

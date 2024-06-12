@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to create and manage payloads for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 3/11/2024
+ms.date: 06/12/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -32,7 +32,7 @@ To see the available payloads, open the Microsoft Defender portal at <https://se
 
 - **Global payloads**: Contains the built-in, unmodifiable payloads.
 - **Tenant payloads**: Contains the custom payloads that you created.
-- **MDO recommendations**: Payloads that are recommended by Defender for Office 365 as having considerable impact when used by attackers. This list is refreshed monthly.
+- **MDO recommendations**: Payloads that are recommended by Defender for Office 365 as having considerable impact when used by attackers. The recommendations are based on identified campaigns and a high predicted compromise rate. This list is refreshed monthly. If there's no recent campaign activity in your organization (less than 60 days), the **MDO recommendations** tab might be empty.
 
 The information that's available on the tabs is described in the following list:
 
