@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/16/2024
+ms.date: 06/12/2024
 ---
 
 # Device Control for macOS
