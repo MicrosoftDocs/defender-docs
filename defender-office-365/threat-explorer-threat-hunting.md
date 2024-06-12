@@ -177,7 +177,7 @@ Selecting :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" b
 |Action|Defender for<br/>Office 365 Plan 2|Defender for<br/>Office 365 Plan 1|
 |---|:---:|:---:|
 |**Move to mailbox folder**|✔¹||
-|&nbsp;&nbsp;Release quarantined messages to some or all original recipients*²|✔||
+|&nbsp;&nbsp;Release quarantined messages to some or all original recipients²|✔||
 |**Submit to Microsoft for review**|✔|✔|
 |&nbsp;&nbsp;**Allow or block entries in the Tenant Allow/Block List**³|✔|✔|
 |**Initiate automated investigation**|✔||
