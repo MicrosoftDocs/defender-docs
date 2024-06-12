@@ -31,7 +31,12 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 > [!IMPORTANT]
 >  ## Network Protection – Update
-> Network protection feature will soon be enabled by default for all users. The update will be rolled out in a phased manner. As a result, users will be able to see Network Protection Card in the Defender app along with App Protection and Web Protection. Users are also required to provide **Local Network** permission. This permission is needed to enhance the existing rogue wifi detection. For more information, see [Network Protection](ios-configure-features.md#configure-network-protection).
+> Network protection feature is enabled by default for all users now. As a result, users will be able to see Network Protection Card in the Defender app along with App Protection and Web Protection. Users are also required to provide **Local Network** permission. This permission is needed to enhance the existing rogue wifi detection. For admins, they can still turn off the Network Protection feature if they decide not to use it via the Intune App Configuration policies. For more information, see [Network Protection](ios-configure-features.md#configure-network-protection).
+
+##User Enrollment
+
+Microsoft Defender iOS app can now be deployed on the Intune User Enrolled devices. This new feature offers security and IT teams the flexibility to deploy Defender for Endpoint to user-enrolled devices so that work data and applications are protected, while end-user privacy is upheld on those devices. For more information, see [User Enrollment setup](ios-install.md#user-enrollment-setup-only-for-intune-user-enrolled-devices).  
+
 ## Device Tagging
 
 Mobile Device Tagging is now generally available. This feature enables bulk tagging the mobile devices by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Security Portal. The Device tags appear against the devices in the Device Inventory. For more information, read [Configure Device Tagging](ios-configure-features.md#device-tagging).
