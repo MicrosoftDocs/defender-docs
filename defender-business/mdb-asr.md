@@ -4,7 +4,7 @@ description: Get an overview of attack surface reduction capabilities, including
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-ms.date: 11/30/2023
+ms.date: 06/07/2024
 ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium 
@@ -38,7 +38,7 @@ These rules help protect your network and devices but shouldn't cause disruption
 
 ## Set up ASR rules using Intune
 
-1. As a global administrator, in the Microsoft Intune admin center ([https://intune.microsoft.com/](https://intune.microsoft.com/)), go to **Endpoint security** > **Attack surface reduction**.
+1. In the [Microsoft Intune admin center](https://intune.microsoft.com/), go to **Endpoint security** > **Attack surface reduction**.
 
 2. Choose **Create policy** to create a new policy.
 
@@ -70,7 +70,7 @@ These rules help protect your network and devices but shouldn't cause disruption
 
 Defender for Business includes an attack surface reduction report that shows how attack surface reduction rules are working for you.
 
-1. As a global administrator, in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), in the navigation pane, choose **Reports**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com), in the navigation pane, choose **Reports**.
 
 2. Under **Endpoints**, choose **Attack surface reduction rules**. The report opens and includes three tabs:
 

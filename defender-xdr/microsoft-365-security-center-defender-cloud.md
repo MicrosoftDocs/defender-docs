@@ -7,8 +7,8 @@ f1.keywords:
 - NOCSH
 ms.author: diannegali
 author: diannegali
-manager: dansimp
-ms.date: 02/14/2024
+manager: deniseb
+ms.date: 06/05/2024
 audience: ITPro
 ms.topic: conceptual
 search.appverid: 
@@ -44,14 +44,20 @@ To ensure access to Defender for Cloud alerts in the Microsoft Defender portal, 
 You must be a global administrator or a security administrator in Azure Active Directory to view Defender for Cloud alerts and correlations. For users that don't have these roles, the integration is available only by applying [unified role-based access control (RBAC) roles](manage-rbac.md) for Defender for Cloud.
 
 > [!NOTE]
-> The permission to view Defender for Cloud alerts and correlations is automatic for the entire tenant. Viewing for specific subscriptions is not supported.
+> The permission to view Defender for Cloud alerts and correlations is automatic for the entire tenant. Viewing for specific subscriptions is not supported. You can use the **alert subscription ID** filter to view Defender for Cloud alerts associated with a specific Defender for Cloud subscription in the alert and incident queues. Learn more about [filters](incident-queue.md#filters-).
 
 ## Investigation experience in the Microsoft Defender portal
+
+> [!IMPORTANT]
+> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
 
 The following section describes the detection and investigation experience in the Microsoft Defender portal with Defender for Cloud alerts.
 
 > [!NOTE]
 > Informational alerts from Defender for Cloud are not integrated to the Microsoft Defender portal to allow focus on the relevant and high severity alerts. This strategy streamlines management of incidents and reduces alert fatigue.
+
+
 
 > [!div class="mx-tdCol2BreakAl"]
 > |Area   |Description   |
@@ -61,6 +67,7 @@ The following section describes the detection and investigation experience in th
 > |Alert and incident correlation|Alerts and incidents are automatically correlated, providing robust context to security operations teams to understand the complete attack story in their cloud environment.|
 > |Threat detection|Accurate matching of virtual entities to device entities to ensure precision and effective threat detection.|
 > |Unified API|Defender for Cloud alerts and incidents are now included in [Microsoft Defender XDR's public API](api-overview.md), allowing customers to export their security alerts data into other systems using one API.|
+> |Advanced hunting (Preview)| Information about cloud audit events for various cloud platforms protected by the organization's Defender for Cloud is available through the [CloudAuditEvents](advanced-hunting-cloudauditevents-table.md) table in [advanced hunting](advanced-hunting-overview.md).|
 
 ## Impact to Microsoft Sentinel users
 

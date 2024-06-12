@@ -113,17 +113,21 @@ To get the data types for event properties, do the following steps:
   :::image type="content" source="/defender-endpoint/media/machine-info-datatype-example.png" alt-text="An example query for device info" lightbox="/defender-endpoint/media/machine-info-datatype-example.png":::
 
 ## Estimating initial Event Hub capacity
-The following Advanced Hunting query can help provide a rough estimate of data volume throughput and initial event hub capacity based on events/sec and estimated MB/sec. We recommend running the query during regular business hours so as to capture 'real' throughput.
+The following advanced hunting query can help provide a rough estimate of data volume throughput and initial event hub capacity based on events/sec and estimated MB/sec. We recommend running the query during regular business hours so as to capture 'real' throughput.
  
-```kusto 
-let bytes_ = 500;
-union withsource=MDTables *
-| where Timestamp > startofday(ago(6h))
+```kusto
+let bytes_ = 1000;
+union withsource=MDTables MyDefenderTable // TODO: Insert desired tables one by one separated by a comma (for example: DeviceEvents, DeviceInfo) or with a wildcard (Device*)
+| where Timestamp > startofday(ago(7d))
 | summarize count() by bin(Timestamp, 1m), MDTables
-| extend EPS = count_ /60
-| summarize avg(EPS), estimatedMBPerSec = (avg(EPS) * bytes_ ) / (1024*1024) by MDTables
+| extend EPS = count_ /60 
+| summarize avg(EPS), estimatedMBPerSec = avg(EPS) * bytes_ / (1024*1024) by MDTables, bin(Timestamp, 3h)
+| summarize avg_EPS=max(avg_EPS), estimatedMBPerSec = max(estimatedMBPerSec) by MDTables
 | sort by toint(estimatedMBPerSec) desc
+| project MDTables, avg_EPS, estimatedMBPerSec
 ```
+
+To check the different Event Hub limits, review [Azure Event Hubs quota and limits](/azure/event-hubs/event-hubs-quotas).
 
 ## Monitoring created resources
 

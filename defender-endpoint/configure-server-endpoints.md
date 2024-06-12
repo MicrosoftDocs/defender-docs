@@ -5,8 +5,9 @@ search.appverid: met150
 ms.service: defender-endpoint
 author: siosulli
 ms.author: siosulli
+ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 05/16/2024
+ms.date: 05/20/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -37,8 +38,7 @@ This article describes how to onboard specific Windows servers to Microsoft Defe
 
 For guidance on how to download and use Windows Security Baselines for Windows servers, see [Windows Security Baselines](/windows/device-security/windows-security-baselines).
 
-> [!TIP]
-> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268615), which helps you utilize essential tools and automated features such as attack surface reduction and next-generation protection. When signed in to the Microsoft 365 admin center, this guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268522).
+[!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
 ## Windows Server onboarding overview
 
@@ -270,9 +270,13 @@ The following steps are only applicable if you're using a third-party anti-malwa
 > Always download the latest installer package from the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) before performing a new installation and ensure prerequisites have been met. After installation, ensure to regularly update using component updates described in the section [Update packages for Microsoft Defender for Endpoint on Windows Server 2012 R2 and 2016](#update-packages-for-microsoft-defender-for-endpoint-on-windows-server-2016-and-windows-server-2012-r2).
 
 - An operating system update can introduce an installation issue on machines with slower disks due to a timeout with service installation. Installation fails with the message "Could not find c:\program files\windows defender\mpasdesc.dll, - 310 WinDefend". Use the latest installation package, and the latest [install.ps1](https://github.com/microsoft/mdefordownlevelserver) script to help clear the failed installation if necessary.
+
 - the user interface on Windows Server 2016 and Windows Server 2012 R2 only allows for basic operations. To perform operations on a device locally, refer to [Manage Microsoft Defender for Endpoint with PowerShell, WMI, and MPCmdRun.exe](preferences-setup.md). As a result, features that specifically rely on user interaction, such as where the user is prompted to make a decision or perform a specific task, may not work as expected. It's recommended to disable or not enable the user interface nor require user interaction on any managed server as it may impact protection capability.
+
 - Not all Attack Surface Reduction rules are applicable to all operating systems. See [Attack surface reduction rules](attack-surface-reduction-rules-reference.md).
+
 - Operating system upgrades aren't supported. Offboard then uninstall before upgrading. The installer package can only be used to upgrade installations that have not yet been updated with new antimalware platform or EDR sensor update packages.
+
 - To automatically deploy and onboard the new solution using Microsoft Endpoint Configuration Manager (MECM) you need to be on [version 2207 or later](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2207#improved-microsoft-defender-for-endpoint-mde-onboarding-for-windows-server-2012-r2-and-windows-server-2016). You can still configure and deploy using version 2107 with the hotfix rollup, but this requires additional deployment steps. See [Microsoft Endpoint Configuration Manager migration scenarios](server-migration.md#microsoft-endpoint-configuration-manager-migration-scenarios) for more information.
 
 ## Windows Server Semi-Annual Enterprise Channel (SAC), Windows Server 2019 and Windows Server 2022
@@ -348,6 +352,7 @@ For other Windows server versions, you have two options to offboard Windows serv
 
 ## Related articles
 
+- [Onboard Windows devices using Configuration Manager](configure-endpoints-sccm.md)
 - [Onboard previous versions of Windows](onboard-downlevel.md)
 - [Onboard Windows 10 devices](onboard-windows-client.md)
 - [Onboard non-Windows devices](configure-endpoints-non-windows.md)
@@ -356,4 +361,5 @@ For other Windows server versions, you have two options to offboard Windows serv
 - [Troubleshooting Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
 - [Microsoft Entra seamless single sign-on](/azure/active-directory/hybrid/how-to-connect-sso-quick-start)
 - [Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint](troubleshoot-security-config-mgt.md#troubleshoot-onboarding-issues-related-to-security-management-for-microsoft-defender-for-endpoint)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

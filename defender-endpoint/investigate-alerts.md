@@ -47,6 +47,10 @@ Expand entities to view details at a glance. Selecting an entity will switch the
 
 :::image type="content" source="media/alert-story-tree.png" alt-text="an alert story with an alert in focus and some expanded cards" lightbox="media/alert-story-tree.png":::
 
+## Investigate using the alert timeline
+
+The alert timeline complements the existing 'process tree' view by offering users a comprehensive perspective on each alert. While the process tree provides a detailed breakdown of the alert's associated processes and activities, the alert timeline presents a condensed chronological view that facilitates rapid triage and decision-making.
+
 ## Take action from the details pane
 
 Once you've selected an entity of interest, the details pane will change to display information about the selected entity type, historic information when it's available, and offer controls to **take action** on this entity directly from the alert page.

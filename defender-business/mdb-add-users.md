@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 05/01/2023
+ms.date: 06/07/2024
 ms.collection: 
 - m365-security
 - tier1
@@ -25,10 +25,7 @@ As soon as you have signed up for Defender for Business, your first step is to a
 
 ## Add users and assign licenses
 
-> [!IMPORTANT]
-> You must be a global administrator to perform this task.  The person who signed up your company for Microsoft 365 or for Defender for Business is a global administrator by default.
-
-1. Go to the Microsoft 365 admin center at [https://admin.microsoft.com](https://admin.microsoft.com) and sign in.
+1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com) and sign in.
 
 2. Go to **Users** > **Active users**, and then select **Add a user**.
 
@@ -49,9 +46,6 @@ As soon as you have signed up for Defender for Business, your first step is to a
 ## Make sure MFA is enabled
 
 One good way to make sure MFA is enabled for all users is by using [security defaults](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults). If your tenant was created on or after October 22, 2019, security defaults might be enabled automatically in your tenant. Use the following procedure to confirm or enable security defaults.
-
-> [!IMPORTANT]
-> You must be a security administrator, Conditional Access administrator, or Global Administrator to perform this task.
 
 1. Go to the Azure portal ([https://portal.azure.com/](https://portal.azure.com/)) and sign in.
 

@@ -6,7 +6,7 @@ ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 04/03/2024
+ms.date: 06/07/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -26,6 +26,48 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions is reduced to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
+
+## February-2024 (Engine: 1.1.24020.9 | Platform: 4.18.24020.7)
+
+- Security intelligence update version: **1.407.46.0**
+- Release date: **March 6, 2024** (Engine) / **March 12, 2024** (Platform)
+- Engine: **1.1.24020.9**
+- Platform: **4.18.24020.7**
+- Support phase: **Technical upgrade support (only)**
+
+### What's new
+
+- Improved support for virtualizing while compressing or decompressing zip files
+- Improved reporting in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) for block-only remediations
+- Reduced the number of false positives for [attack surface reduction rules](attack-surface-reduction.md) for known trusted processes
+- Improved [Get-MpPreference](/powershell/module/defender/get-mppreference) logic for proxy bypass settings
+- Extended the toast notification support for [Indicators of Compromise](manage-indicators.md#indicator-of-compromise-ioc-overview) (IoC) detections
+
+### Known issues
+
+- For [device control](device-control-overview.md) customers using removable media policies with disk/device-level access only (masks that include the values 1, 2, 3, 4, and 7), enforcement might not work as expected. In such situations, we recommend customers roll back to the previous version of the Defender platform.
+
+## January-2024 (Platform: 4.18.24010.12 | Engine: 1.1.24010.10)
+
+- Security intelligence update version: **1.405.702.0**
+- Release date:  **February 27, 2024**
+- Platform: **4.18.24010.12**
+- Engine: **1.1.24010.10**
+- Support phase: **Technical upgrade support (only)**
+
+### What's new
+
+- Microsoft Defender Antivirus now caches the Mark of the Web (MoTW) Alternative Data Stream (ADS) for better performance while scanning.
+- Fixed an issue that occurred in [attack surface reduction](attack-surface-reduction-rules-reference.md) in warn mode when removing scan results from the real-time protection cache.
+- Performance improvement added for `OneNote.exe`.
+- Cloud-based entries are regularly removed from the persistent user mode cache in Windows Defender to prevent an uncommon issue where a user could still add a certificate, based on an Indicator of compromise (IoC), to the cache after a file with that certificate had already been added via cloud signature.
+- The Sense onboarding event is now sent in passive mode for operating systems with the old Sense client.
+- Improved performance for logs created/accessed by powershell.
+- Improved performance for folders included in [Controlled folder access(CFA)](controlled-folders.md) when accessing network files.
+- Fixed a deadlock that occurred at shutdown for Data Loss Prevention (DLP) enabled devices.
+- Fixed an issue to remove a vulnerability in the Microsoft Defender Core service.
+- Fixed an onboarding issue in the Unified Agent installation script [install.ps1](https://github.com/microsoft/mdefordownlevelserver).
+- Fixed a memory leak that impacted some devices that received platform update `4.18.24010.7`
 
 ## November-2023 (Platform: 4.18.23110.3 | Engine: 1.1.23110.2)
 
