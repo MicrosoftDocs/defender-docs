@@ -13,25 +13,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 12/14/2023
----
-
----
-title: Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint
-description: Troubleshoot issues that might arise during the onboarding of devices using Security Management for Microsoft Defender for Endpoint.
-ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
-ms.localizationpriority: medium
-manager: deniseb
-audience: ITPro
-ms.collection: 
-- m365-security
-- tier3
-ms.topic: troubleshooting
-ms.subservice: onboard
-search.appverid: met150
-ms.date: 12/14/2023
+ms.date: 06/12/2024
 ---
 
 # Troubleshoot onboarding issues related to Security Management for Microsoft Defender for Endpoint
@@ -46,19 +28,13 @@ ms.date: 12/14/2023
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
-
-
 Security Management for Microsoft Defender for Endpoint is a capability for devices that aren't managed by Microsoft Intune to receive security configurations.
-For more information on Security Management for Microsoft Defender for Endpoint, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration).
 
-For Security Management for Microsoft Defender for Endpoint onboarding instructions, see [Microsoft Defender for Endpoint Security Configuration Management](/mem/intune/protect/mde-security-integration)
-
-
-For more information about the client analyzer, see [Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer](overview-client-analyzer.md).
+- For more information on Security Management for Microsoft Defender for Endpoint, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration).
+- For Security Management for Microsoft Defender for Endpoint onboarding instructions, see [Microsoft Defender for Endpoint Security Configuration Management](/mem/intune/protect/mde-security-integration).
+- For more information about the client analyzer, see [Troubleshoot sensor health using Microsoft Defender for Endpoint Client Analyzer](overview-client-analyzer.md).
 
 <a name='registering-domain-joined-computers-with-azure-active-directory'></a>
-
-
 
 ## Run Microsoft Defender for Endpoint Client Analyzer on Windows
 
