@@ -1,6 +1,6 @@
 ---
-title: Pilot and deploy Defender for Office 365
-description: Pilot and deploy Defender for Office 365.
+title: How do I pilot and deploy Defender for Office 365?
+description: How to pilot and deploy Microsoft Defender for Office 365 in your production Microsoft 365 tenant.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
@@ -37,7 +37,7 @@ Defender for Office 365 contributes to a Zero Trust architecture by helping to p
 
 This is article 3 of 6 in a series to help you deploy the components of Microsoft Defender XDR, including investigating and responding to incidents.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" alt-text="A diagram that shows Microsoft Defender for Office 365 in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" alt-text="A diagram that shows Microsoft Defender for Office 365 in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" border="false":::
 
 Articles in this series:
 
@@ -91,7 +91,7 @@ The following table describes this illustration.
 | 3 | Exchange Online integrates with Microsoft Defender for Office 365 to offer more advanced threat protection, mitigation, and remediation. |
 | 4  |A message that isn't malicious, blocked, or quarantined is processed and delivered to the recipient in EXO where user preferences related to junk mail, mailbox rules, or other settings are evaluated and triggered. |
 | 5 | Integration with on-premises Active Directory can be enabled using Microsoft Entra Connect to synchronize and provision mail-enabled objects and accounts to Microsoft Entra ID and ultimately Exchange Online. |
-| 6 | When integrating an on-premises environment, it's encouraged to use an Exchange server for supported management and administration of mail-related attributes, settings, and configurations. |
+| 6 | When integrating an on-premises environment, it's best to use an Exchange server for supported management and administration of mail-related attributes, settings, and configurations. |
 | 7 | Microsoft Defender for Office 365 shares signals to Microsoft Defender XDR for extended detection and response (XDR). |
 
 On-premises integration is common but optional. If your environment is cloud-only, this guidance also works for you.
@@ -267,6 +267,6 @@ Incorporate the information in [Microsoft Defender for Office 365 Security Opera
 
 Continue your end-to-end deployment of Microsoft Defender XDR with [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md).
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows Microsoft Defender for Endpoint in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows Microsoft Defender for Endpoint in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" border="false":::
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

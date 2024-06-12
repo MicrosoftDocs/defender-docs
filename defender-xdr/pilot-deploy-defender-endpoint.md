@@ -1,6 +1,6 @@
 ---
-title: Pilot and deploy Microsoft Defender for Endpoint
-description: Pilot and deploy Microsoft Defender for Endpoint.
+title: How do I pilot and deploy Microsoft Defender for Endpoint?
+description: How to pilot and deploy Microsoft Defender for Endpoint in your production Microsoft 365 tenant.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
@@ -37,7 +37,7 @@ Defender for Endpoint contributes to a Zero Trust architecture by helping to pre
 
 This is article 4 of 6 in a series to help you deploy the components of Microsoft Defender XDR, including investigating and responding to incidents.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows Microsoft Defender for Endpoint in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows Microsoft Defender for Endpoint in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" border="false":::
 
 Articles in this series:
 
@@ -219,6 +219,6 @@ Incorporate the information in [Defender for Endpoint Security Operations Guide]
 
 Continue your end-to-end deployment of Microsoft Defender XDR with [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md).
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg" alt-text="A diagram that shows Microsoft Defender for Cloud Apps in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg" alt-text="A diagram that shows Microsoft Defender for Cloud Apps in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg" border="false":::
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

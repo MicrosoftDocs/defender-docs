@@ -251,7 +251,7 @@ The **Take action** wizard is described in the following list:
      - **Add to existing**: Use this value to apply actions to this email message from an existing remediation. In the **Submit email to the following remediations** box, select the existing remediation.
 
        > [!TIP]
-       > SecOps personnel who don't have enough permsissions can use this option to create a remediation, but someone with permissions needs to approve the action in the Action center.
+       > SecOps personnel who don't have enough permissions can use this option to create a remediation, but someone with permissions needs to approve the action in the Action center.
 
    When you're finished on the **Choose response actions** page, select **Next**.
 

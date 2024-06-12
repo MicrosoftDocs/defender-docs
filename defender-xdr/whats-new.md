@@ -31,6 +31,8 @@ You can also get product updates and important notifications through the [messag
 
 ## June 2024
 
+- (Preview) **[Content distribution through tenant groups in multitenant management](mto-tenantgroups.md)** is now available. Content distribution helps you manage content at scale, across tenants in multitenant management in Microsoft Defender XDR. In content distribution, you can create tenant groups to copy existing content, like custom detection rules, from the source tenant to the target tenants you assign during tenant group creation. The content then runs on the target tenant's devices or device groups that you set in the tenant group scope.
+
 - (Preview) You can now filter your Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
 
 ## May 2024
@@ -38,9 +40,7 @@ You can also get product updates and important notifications through the [messag
 - (GA) The endpoint security policies page is now available in multitenant management in Microsoft Defender XDR. Create, edit, and delete security policies for your tenants' devices from the **Endpoint security policies** page. For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md).
 
 - Create alert tuning rules using **Alert severity** and **Alert title** values as conditions. Alert tuning can help you streamline the alert queue, saving triage time by hiding or resolving alerts automatically, each time a certain expected organizational behavior occurs, and rule conditions are met. For more information, see [Tune an alert](investigate-alerts.md#tune-an-alert).
-
 - (Preview) **Turn preview options on in the main Microsoft 365 Defender settings** together with other Microsoft 365 Defender preview features. Customers who are not using preview features yet will continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
-
 - (Preview) The **SOC optimizations** page in the Microsoft Defender portal is now available with the [unified security operations platform](https://go.microsoft.com/fwlink/p/?linkid=2263690). Integrate Microsoft Defender XDR and Microsoft Sentinel and use SOC optimizations to optimize both processes and outcomes, without having your SOC teams spend time on manual analysis and research. For more information, see:
 
   - [Optimize your security operations](https://aka.ms/soc-opt-from-defender)

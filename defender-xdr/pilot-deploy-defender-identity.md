@@ -1,6 +1,6 @@
 ---
-title: Pilot and deploy Microsoft Defender for Identity
-description: Pilot and deploy Microsoft Defender for Identity.
+title: How do I pilot and deploy Microsoft Defender for Identity>
+description: How to pilot and deploy Microsoft Defender for Identity in your production Microsoft 365 tenant.
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords: 
@@ -37,7 +37,7 @@ Defender for Office 365 contributes to a Zero Trust architecture by helping to p
 
 This is article 2 of 6 in a series to help you deploy the components of Microsoft Defender XDR, including investigating and responding to incidents.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" alt-text="A diagram that shows Microsoft Defender for Identity in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" alt-text="A diagram that shows Microsoft Defender for Identity in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-identity.svg" border="false":::
 
 Articles in this series:
 
@@ -216,6 +216,6 @@ Incorporate the following into your SecOps processes:
 
 Continue your end-to-end deployment of Microsoft Defender XDR with [Pilot and deploy Defender for Office 365](pilot-deploy-defender-office-365.md).
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" alt-text="A diagram that shows Microsoft Defender for Office 365 in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" alt-text="A diagram that shows Microsoft Defender for Office 365 in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-office-365.svg" border="false":::
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
