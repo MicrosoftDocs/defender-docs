@@ -44,7 +44,7 @@ Be aware of the following before you start:
 
 5. The plug-in is not supported on machines with ARM64 processor.
 
-6. The plug-in provides visibility into events from WSL but other features like anti malware, threat vulnerability management and response commands are not available for the WSL logical device.
+6. The plug-in provides visibility into events from WSL but other features like antimalware, threat and vulnerability management and response commands are not available for the WSL logical device.
 
 ## Software prerequisites
 
@@ -292,7 +292,7 @@ DeviceProcessEvents
          dnsProxy=false
          ```
 
-5. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle: 
+5. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
 
    ```powershell
    cd "%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools"
@@ -324,7 +324,7 @@ DeviceProcessEvents
       wsl --set-version <YourDistroName> 2
       ```
 
-      To have WSL 2 as your default WSL version for new distributions to be installed in the system, run the following command in PowerShell: 
+      To have WSL 2 as your default WSL version for new distributions to be installed in the system, run the following command in PowerShell:
 
       ```powershell
       wsl --set-default-version 2
@@ -332,10 +332,10 @@ DeviceProcessEvents
 
 7. The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following under registry and restart WSL:
 
-  - **Name**: `OverrideReleaseRing`
-  - **Type**: `REG_SZ`
-  - **Value**: `Dogfood or External or InsiderFast or Production`
-  - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
+   - **Name**: `OverrideReleaseRing`
+   - **Type**: `REG_SZ`
+   - **Value**: `Dogfood or External or InsiderFast or Production`
+   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
 
 8. If you see an error on launching WSL, such as "A fatal error was returned by plugin 'DefenderforEndpointPlug-in' Error code: Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_FILE_NOT_FOUND", it means the Defender for Endpoint plug-in for WSL installation is faulty. To repair it, follow these steps:
 
@@ -346,4 +346,3 @@ DeviceProcessEvents
    This should fix the problem by placing the right files in the expected directories.
 
    :::image type="content" source="media/mdeplugin-wsl/plug-in-repair-control-panel.png" alt-text="Screenshot showing MDE plug-in for WSL repair option in control panel." lightbox="media/mdeplugin-wsl/plug-in-repair-control-panel.png":::
-   
