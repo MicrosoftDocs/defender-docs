@@ -186,6 +186,11 @@
         "redirect_document_id": false
     },
     {
+      "source_path": "defender-xdr/microsoft-365-security-mde-redirection.md",
+      "redirect_url": "/defender-xdr/",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "defender-endpoint/evaluation-lab.md",
       "redirect_url": "/defender-endpoint/evaluate-microsoft-defender-antivirus",
       "redirect_document_id": true
