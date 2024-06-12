@@ -31,7 +31,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 > [!IMPORTANT]
 >  ## Network Protection – Update
-> Network protection feature is enabled by default for all users now. As a result, users will be able to see Network Protection Card in the Defender app along with App Protection and Web Protection. Users are also required to provide **Local Network** permission. This permission is needed to enhance the existing rogue wifi detection. For admins, they can still change the default value for the Network Protection feature later if they decide not to use it via the Intune App Configuration policies. For more information, see [Network Protection](ios-configure-features.md#configure-network-protection).
+> Network protection feature is now enabled by default for all users. As a result, users will be able to see the Network Protection Card in the Defender app along with App Protection and Web Protection. Users are also required to provide **Local Network** permission. This permission is needed to enhance the existing rogue wifi detection. Admins can change the default value for the Network Protection feature if they decide not to use it via the Intune App Configuration policies. For more information, see [Network Protection](ios-configure-features.md#configure-network-protection).
 
 ## User Enrollment
 
