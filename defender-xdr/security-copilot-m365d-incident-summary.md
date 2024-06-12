@@ -33,7 +33,7 @@ ms.date: 04/01/2024
 - Microsoft Defender XDR
 - Microsoft Defender unified security operations center (SOC) platform
 
-Microsoft Defender XDR applies the capabilities of [Copilot for Security](/security-copilot/microsoft-security-copilot) to summarize incidents, delivering impactful information and insights to simplify investigation tasks. Attack investigation is a crucial step for incident response teams to successfully defend an organization against further damage from a cyber threat. Investigations can oftentimes be time-consuming as it involves numerous steps. Incident response teams need to understand how the attack happened: sort through numerous alerts, identify which assets and entities are involved, and assess the scope and impact of an attack.
+Microsoft Defender XDR applies the capabilities of [Copilot for Security](/security-copilot/microsoft-security-copilot) to summarize incidents, delivering impactful information and insights to simplify investigation tasks. Attack investigation is a crucial step for incident response teams to successfully defend an organization against further damage from a cyber threat. Investigations can often be time-consuming as it involves numerous steps. Incident response teams need to understand how the attack happened: sort through numerous alerts, identify which assets and entities are involved, and assess the scope and impact of an attack.
 
 Incident responders can easily gain the right context to investigate and remediate incidents through Defender XDR's correlation capabilities and Copilot for Security's AI-powered data processing and contextualization. With an incident summary, responders can quickly get important information to help in their investigation.
 

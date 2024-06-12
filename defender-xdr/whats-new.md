@@ -40,7 +40,7 @@ You can also get product updates and important notifications through the [messag
 - (GA) The endpoint security policies page is now available in multitenant management in Microsoft Defender XDR. Create, edit, and delete security policies for your tenants' devices from the **Endpoint security policies** page. For more information, see [Endpoint security policies in multitenant management](mto-endpoint-security-policy.md).
 
 - Create alert tuning rules using **Alert severity** and **Alert title** values as conditions. Alert tuning can help you streamline the alert queue, saving triage time by hiding or resolving alerts automatically, each time a certain expected organizational behavior occurs, and rule conditions are met. For more information, see [Tune an alert](investigate-alerts.md#tune-an-alert).
-- (Preview) **Turn preview options on in the main Microsoft 365 Defender settings** together with other Microsoft 365 Defender preview features. Customers who are not using preview features yet will continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
+- (Preview) **Turn preview options on in the main Microsoft 365 Defender settings** together with other Microsoft 365 Defender preview features. Customers who aren't using preview features yet will continue to see the legacy settings under **Settings > Endpoints > Advanced features > Preview features**. For more information, see [Microsoft 365 Defender preview features](/defender-xdr/preview).
 - (Preview) The **SOC optimizations** page in the Microsoft Defender portal is now available with the [unified security operations platform](https://go.microsoft.com/fwlink/p/?linkid=2263690). Integrate Microsoft Defender XDR and Microsoft Sentinel and use SOC optimizations to optimize both processes and outcomes, without having your SOC teams spend time on manual analysis and research. For more information, see:
 
   - [Optimize your security operations](https://aka.ms/soc-opt-from-defender)
@@ -65,7 +65,7 @@ You can also get product updates and important notifications through the [messag
   - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
   - [Microsoft Security Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)
 
-- (GA) **[Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)** is now generally available. Copilot in Defender helps you investigate and respond to incidents faster and more effectively. Copilot provides guided responses, incident summaries and reports, helps you build KQL queries to hunt for threats, provide file and script analyses, and enable you to summarize relevant and actionable threat intelligence.
+- (GA) **[Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)** is now generally available. Copilot in Defender helps you investigate and respond to incidents faster and more effectively. Copilot provides guided responses, incident summaries, and reports, helps you build KQL queries to hunt for threats, provide file and script analyses, and enable you to summarize relevant and actionable threat intelligence.
 - Copilot in Defender customers can now export incident data to PDF. Use the exported data to easily share incident data, facilitating discussions with your security teams and other stakeholders. For details, see **[Export incident data to PDF](manage-incidents.md#export-incident-data-to-pdf)**.
 - **Notifications in the Microsoft Defender portal** are now available. On the top right-hand side of the Defender portal, select the bell icon to view all your active notifications. Learn more about **[notifications in the Microsoft Defender portal](microsoft-365-defender-portal.md#notifications)**.
 - The `AzureResourceId` column, which shows the unique identifier of the Azure resource associated with a device, is now available in the [DeviceInfo](advanced-hunting-deviceinfo-table.md) table in advanced hunting.
@@ -76,7 +76,7 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) **Assigning severity to incidents**, **assigning an incident to a group**, and the ***go hunt*** option from the attack story graph are now generally available. Guides to learn how to [assign or change incident severity](manage-incidents.md#assign-or-change-incident-severity) and [assign an incident to a group](manage-incidents.md#assign-an-incident) are in the [Manage incidents](manage-incidents.md) page. Learn how you can use the *go hunt* option by exploring [attack story](investigate-incidents.md#attack-story).
 
-- (Preview) **[Custom detection rules in Microsoft Graph security API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true#custom-detections)** are now available.  Create advanced hunting custom detection rules specific to your org to proactively monitor for threats and take action.
+- (Preview) **[Custom detection rules in Microsoft Graph security API](/graph/api/resources/security-api-overview?view=graph-rest-beta&preserve-view=true#custom-detections)** are now available. Create advanced hunting custom detection rules specific to your org to proactively monitor for threats and take action.
 
 > [!Warning]
 > The 2024-02 platform release causes inconsistent results for device control customers using removable media policies with disk/device-level access only (masks that are less of equal to 7). The enforcement might not work as expected.
@@ -138,7 +138,7 @@ You can also get product updates and important notifications through the [messag
 
 - (Preview) [Asset rule management - Dynamic rules for devices](./configure-asset-rules.md) is now in public preview. Dynamic rules can help manage device context by assigning tags and device values automatically based on certain criteria.
 
-- (Preview) The [DeviceInfo](advanced-hunting-deviceinfo-table.md) table in advanced hunting now also includes the columns `DeviceManualTags` and `DeviceDynamicTags` in public preview to surface both manually and dynamically assigned tags related to the device you are investigating.
+- (Preview) The [DeviceInfo](advanced-hunting-deviceinfo-table.md) table in advanced hunting now also includes the columns `DeviceManualTags` and `DeviceDynamicTags` in public preview to surface both manually and dynamically assigned tags related to the device you're investigating.
 
 - The **Guided response** feature in Microsoft Defender Experts for XDR has been renamed to **[Managed response](managed-detection-and-response-xdr.md)**. We have also added a [new FAQ section](faq-incident-notifications-xdr.md#understanding-and-managing-defender-experts-for-xdr-incident-updates) on incident updates.
 
@@ -172,9 +172,9 @@ You can also get product updates and important notifications through the [messag
 
 This change introduces a new navigation menu within the Microsoft Defender portal named **Threat Intelligence**. [Learn more](defender-threat-intelligence.md)
 
-- (Preview) Complete device reports for the [`DeviceInfo` table](advanced-hunting-deviceinfo-table.md) in advanced hunting are now sent *every hour* (instead of the previous daily cadence). In addition, complete device reports are also sent whenever there is a change to any previous report. New columns were also added to the `DeviceInfo` table, along with several improvements to existing data in `DeviceInfo` and [DeviceNetworkInfo](advanced-hunting-devicenetworkinfo-table.md) tables.
+- (Preview) Complete device reports for the [`DeviceInfo` table](advanced-hunting-deviceinfo-table.md) in advanced hunting are now sent *every hour* (instead of the previous daily cadence). In addition, complete device reports are also sent whenever there's a change to any previous report. New columns were also added to the `DeviceInfo` table, along with several improvements to existing data in `DeviceInfo` and [DeviceNetworkInfo](advanced-hunting-devicenetworkinfo-table.md) tables.
 
-- (Preview) Near real-time custom detection is now available for public preview in advanced hunting custom detections. There is a new [Continuous (NRT)](custom-detection-rules.md) frequency, which checks data from events as they are collected and processed in near real-time.
+- (Preview) Near real-time custom detection is now available for public preview in advanced hunting custom detections. There's a new [Continuous (NRT)](custom-detection-rules.md) frequency, which checks data from events as they're collected and processed in near real-time.
 
 - (Preview) [Behaviors in Microsoft Defender for Cloud Apps](/defender-cloud-apps/behaviors) is now available for public preview. Preview customers can now also hunt for behaviors in advanced hunting using the [BehaviorEntities](advanced-hunting-behaviorentities-table.md) and [BehaviorInfo](advanced-hunting-behaviorinfo-table.md) tables.
 
@@ -210,7 +210,7 @@ This change introduces a new navigation menu within the Microsoft Defender porta
 
 - (GA) [Microsoft Defender Experts for Hunting](defender-experts-for-hunting.md) is now generally available. If you're a Microsoft Defender XDR customer with a robust security operations center but want Microsoft to help you proactively hunt for threats across endpoints, Office 365, cloud applications, and identity using Microsoft Defender data, then learn more about applying, setting up, and using the service. Defender Experts for Hunting is sold separately from other Microsoft Defender XDR products.
 
-- (Preview) [Guided mode](advanced-hunting-modes.md#get-started-with-guided-hunting-mode) is now available for public preview in advanced hunting. Analysts can now start querying their database for endpoint, identities, email & collaboration, and cloud apps data *without knowing Kusto Query Language (KQL)*.  Guided mode features a friendly, easy-to-use, building-block style of constructing queries through dropdown menus containing available filters and conditions. See [Get started with query builder](advanced-hunting-query-builder.md).
+- (Preview) [Guided mode](advanced-hunting-modes.md#get-started-with-guided-hunting-mode) is now available for public preview in advanced hunting. Analysts can now start querying their database for endpoint, identities, email & collaboration, and cloud apps data *without knowing Kusto Query Language (KQL)*. Guided mode features a friendly, easy-to-use, building-block style of constructing queries through dropdown menus containing available filters and conditions. See [Get started with query builder](advanced-hunting-query-builder.md).
 
 ## July 2022
 
@@ -248,7 +248,7 @@ The security operations team can view all actions pending approval, and the stip
 
 - (Preview) The [advanced hunting](advanced-hunting-overview.md) page now has multitab support, smart scrolling, streamlined schema tabs, quick edit options for queries, a query resource usage indicator, and other improvements to make querying smoother and easier to fine-tune.
 
-- (Preview) You can now use the [link to incident](advanced-hunting-link-to-incident.md) feature to include events or records from the advanced hunting query results right into a new or existing incident that you are investigating.
+- (Preview) You can now use the [link to incident](advanced-hunting-link-to-incident.md) feature to include events or records from the advanced hunting query results right into a new or existing incident that you're investigating.
 
 ## October 2021
 
@@ -306,7 +306,7 @@ The security operations team can view all actions pending approval, and the stip
 
 - [New alert page in the Microsoft Defender portal](https://techcommunity.microsoft.com/t5/microsoft-365-defender/easily-find-anomalies-in-incidents-and-alerts/ba-p/2339243)
 
-  Provides enhanced information for the context into an attack. You can see which other triggered alert caused the current alert and all the affected entities and activities involved in the attack, including files, users and mailboxes. See [Investigate alerts](investigate-alerts.md) for more information.
+  Provides enhanced information for the context into an attack. You can see which other triggered alert caused the current alert and all the affected entities and activities involved in the attack, including files, users, and mailboxes. See [Investigate alerts](investigate-alerts.md) for more information.
 
 - [Trend graph for incidents and alerts in the Microsoft Defender portal](https://techcommunity.microsoft.com/t5/microsoft-365-defender/new-alert-page-for-microsoft-365-defender-incident-detections/ba-p/2350425)
 
