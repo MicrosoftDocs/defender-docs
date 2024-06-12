@@ -38,11 +38,13 @@ Be aware of the following before you start:
 
 2. It takes a few minutes for the plug-in to fully instantiate, and up to 30 minutes for a WSL2 instance to onboard itself. Short-lived WSL container instances might result in the WSL2 instance not showing up in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Once any distribution has been running long enough (at least 30 minutes), it does show up.
 
-3. Running a custom kernel and custom kernel command line is supported in this version; however, the plug-in doesn't guarantee visibility within WSL when you're running a custom kernel and custom kernel command line.
+3. Running a custom kernel and custom kernel command line is not supported. Although the plug-in does not block running in that configuration, it does not guarantee visibility within WSL when you're running a custom kernel and custom kernel command line. We recommend to block such configurations with help of [Intune settings](https://learn.microsoft.com/en-us/windows/wsl/intune).
 
 4. OS Distribution is displayed **None** in Device overview page of WSL device in Microsoft Defender portal.
 
 5. The plug-in is not supported on machines with ARM64 processor.
+
+6. The plug-in only supports EDR capabilities as of now, other capabilities like anti-malware, TVM are not yet supported.
 
 ## Software prerequisites
 
