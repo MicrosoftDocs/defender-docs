@@ -471,8 +471,11 @@ In this case, only have one access rule policy, but if you have multiple, make s
 
 ## Known Issues
 
-> >[!WARNING]
+> [!WARNING]
 > Device Control on macOS restricts Android devices that are connected using PTP mode **only**.  Device control does not restrict other modes such as File Transfer, USB Tethering and MIDI.
+
+> [!WARNING]
+> Device Control on macOS does not prevent software developed on XCode from being transferred to an external device.
 
 
 
