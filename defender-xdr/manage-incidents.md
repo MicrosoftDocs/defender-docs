@@ -34,23 +34,23 @@ Incident management is critical to ensuring that incidents are named, assigned, 
 
 You can manage incidents from **Incidents & alerts > Incidents** on the quick launch of the Microsoft Defender portal ([security.microsoft.com](https://security.microsoft.com)). Here's an example.
 
-:::image type="content" source="/defender/media/incidents-queue/fig1-manageincidents.png" alt-text="Highlighting the manage incident option within the incident queue and quick launch pane in the Microsoft Defender portal" lightbox="/defender/media/incidents-queue/fig1-manageincidents.png":::
+:::image type="content" source="/defender/media/incidents-queue/fig1-manageincidents.png" alt-text="Screenshot highlighting the manage incident option within the incident queue and quick launch pane in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/fig1-manageincidents.png":::
 
 Here are the ways you can manage your incidents:
 
-- [Edit the incident name](#edit-the-incident-name)
-- [Assign or change severity](#assign-or-change-incident-severity)
-- [Add incident tags](#add-incident-tags)
-- [Assign the incident to a user account](#assign-an-incident)
-- [Resolve them](#resolve-an-incident)
-- [Specify its classification](#specify-the-classification)
-- [Add comments](#add-comments)
-- Assess the activity audit and add comments in the [Activity log](#activity-log)
-- [Export incident data to PDF](#export-incident-data-to-pdf)
+- [Edit the incident name](#edit-the-incident-name).
+- [Assign or change severity](#assign-or-change-incident-severity).
+- [Add incident tags](#add-incident-tags).
+- [Assign the incident to a user account](#assign-an-incident).
+- [Resolve them](#resolve-an-incident).
+- [Specify its classification](#specify-the-classification).
+- [Add comments](#add-comments).
+- Assess the activity audit and add comments in the [Activity log](#activity-log).
+- [Export incident data to PDF](#export-incident-data-to-pdf).
 
 You can manage incidents from the **Manage incident** pane for an incident. Here's an example.
 
-:::image type="content" source="/defender/media/incidents-queue/fig2-new-manageincidents.png" alt-text="The Manage incident pane in the Microsoft Defender portal" lightbox="/defender/media/incidents-queue/fig2-new-manageincidents.png":::
+:::image type="content" source="/defender/media/incidents-queue/fig2-new-manageincidents.png" alt-text="Screenshot showing the Manage incident pane in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/fig2-new-manageincidents.png":::
 
 You can display this pane from the **Manage incident** link on the:
 
@@ -72,13 +72,13 @@ You can edit the incident name from the **Incident name** field on the **Manage 
 
 ## Assign or change incident severity
 
-You can assign or change the severity of an incident from the **Severity** field on the **Manage incident** pane. The severity of an incident is determined by the highest severity of the alerts associated with it. The severity of an incident can be set to high, medium, low, or informational.
+You can assign or change the severity of an incident from the **Severity** field on the **Manage incident** pane. The severity of an incident is determined by the highest severity of the alerts associated with it. The severity of an incident can be set to *high*, *medium*, *low*, or *informational*.
 
 ## Add incident tags
 
 You can add custom tags to an incident, for example to flag a group of incidents with a common characteristic. You can later filter the incident queue for all incidents that contain a specific tag.
 
-The option to select from a list of previously-used and selected tags appear after you start typing.
+The option to select from a list of previously used and selected tags appear after you start typing.
 
 ## Assign an incident
 
@@ -119,15 +119,15 @@ All comments are added to the historical events of the incident. You can see the
 
 The **Activity log** displays a list of all the comments and actions performed on the incident, known as *Audits and comments*. All changes made to the incident, whether by a user or by the system, are recorded in the activity log. The activity log is available from the **Activity log** option on the incident page or on the incident side pane.
 
-:::image type="content" source="/defender/media/incidents-queue/fig3-manageincidents-new.png" alt-text="Highlighting the activity log option from the incident page in the Microsoft Defender portal" lightbox="/defender/media/incidents-queue/fig3-manageincidents-new.png":::
+:::image type="content" source="/defender/media/incidents-queue/fig3-manageincidents-new.png" alt-text="Screenshot highlighting the activity log option from the incident page in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/fig3-manageincidents-new.png":::
 
 You can filter the activities within the log by comments and actions. Click the **Content: Audits, Comments** then select the content type to filter activities. Here's an example.
 
-:::image type="content" source="/defender/media/incidents-queue/fig4-manageincidents.png" alt-text="Highlighting the filter options within the activity log pane from the incident page in the Microsoft Defender portal" lightbox="/defender/media/incidents-queue/fig4-manageincidents.png":::
+:::image type="content" source="/defender/media/incidents-queue/fig4-manageincidents.png" alt-text="Screenshot highlighting the filter options within the activity log pane from the incident page in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/fig4-manageincidents.png":::
 
 You can also add your own comments using the comment box available within the activity log. The comment box accepts text and formatting, links, and images.
 
-:::image type="content" source="/defender/media/incidents-queue/fig5-res-manageincidents.png" alt-text="Highlighting the comment box from the incident page in the Microsoft Defender portal" lightbox="/defender/media/incidents-queue/fig5-manageincidents.png":::
+:::image type="content" source="/defender/media/incidents-queue/fig5-res-manageincidents.png" alt-text="Screenshot highlighting the comment box from the incident page in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/fig5-manageincidents.png":::
 
 ## Export incident data to PDF
 
