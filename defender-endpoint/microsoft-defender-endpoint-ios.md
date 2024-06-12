@@ -73,10 +73,7 @@ ms.date: 02/22/2024
 - The device is either enrolled with the [Intune Company Portal app](https://apps.apple.com/us/app/intune-company-portal/id719171358) or is registered with Microsoft Entra ID through [Microsoft Authenticator](https://apps.apple.com/app/microsoft-authenticator/id983156458) with the same account.
 
 > [!NOTE]
->
 > - Microsoft Defender for Endpoint on iOS isn't supported on user-less or shared devices.
-> - Microsoft Defender for Endpoint on iOS isn't supported currently while using iOS User Enrollment.
-
 ## Installation instructions
 
 Deployment of Microsoft Defender for Endpoint on iOS can be done via Microsoft Intune and both supervised and unsupervised devices are supported. End-users can also directly install the app from the [Apple app store](https://aka.ms/mdatpiosappstore).
