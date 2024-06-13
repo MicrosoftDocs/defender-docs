@@ -66,7 +66,9 @@ To view the incidents our experts have investigated and handed over to your team
 :::image type="content" source="media/awaiting-customer-action-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Awaiting customer action tag." lightbox="media/awaiting-customer-action-filter.png":::
 
 Finally, to view the incidents our experts have completed their investigated on (and either directly resolved or assigned to your team for pending remediation actions), filter the incident queue in your Microsoft Defender portal using the _Defender Experts_ tag.
-_
+
+:::image type="content" source="media/defender-experts-tag.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show the Defender Experts tag." lightbox="media/defender-experts-tag.png":::
+
 <a name='how-to-use-managed-response-in-microsoft-365-defender'></a>
 
 ## How to use managed response in Microsoft Defender XDR
