@@ -1,6 +1,6 @@
 ---
-title: Set up a new site for Site security for Microsoft Defender for IoT in XDR Defender portal
-description: This article describes the set-up procedure for a new site in the Site security feature of Microsoft Defender for IoT in XDR Defender portal
+title: Set up a new site for Site security for Microsoft Defender for IoT
+description: This article describes the set-up procedure for a new site in the Site security feature of Microsoft Defender for IoT in Defender portal
 ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
@@ -9,7 +9,7 @@ ms.date: 05/19/2024
 ms.topic: how-to
 ---
 
-# Set up a new site for Site security/ Defender for IoT?
+# Set up a new site
 
 In this article, you learn how to set up a new site in the Site security dashboard. Microsoft Defender for IoT uses *sites* to group Operational Technology (OT) devices located at a specific physical location, such as an office or factory building. The Site security dashboard allows the security site management team an overview of the most important security issues affecting your network to make quick, highly informed decisions about which security problems need an immediate response.
 
@@ -24,14 +24,19 @@ Defender for IoT uses the MDE agent to identify and locate other OT and IoT devi
 
 ## Set up a new site
 
+<!-- do we need to first .. .lines? - LImor -->
+
+1. Log into Microsoft Defender XDR portal [XDR ??].
+1. Select **Operational Technology** in the side menu bar.
+1. Select **Site security**.
 1. In the Site security dashboard, select **Create new site** or **Create Your First Site**.
 
 1. Enter the following details:
 
-- Site name - a name for the site, for example, San Franscico Main office.
-- Location - the physical location of the office.
-- Site description - describe the purpose of the site, what activities occur there, the types and number of devices used, and other important information about the site.
-- Owners - the contact emails of any users administering the site, who must be contacted when problems occur.
+    - Site name - a name for the site, for example, San Franscico Main office.
+    - Location - the physical location of the office.
+    - Site description - describe the purpose of the site, what activities occur there, the types and number of devices used, and other important information about the site.
+    - Owners - the contact emails of any users administering the site, who must be contacted when problems occur.
 
     :::image type="content" source="media/site-security-set-up-details.png" alt-text="Screenshot showing the details for a new site in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
 
@@ -44,7 +49,7 @@ OT devices are associated with the site allowing Microsoft Defender for IoT to c
 1. In the Search bar, type either a public IP address or the IP/MAC address for a specific OT device that is located at this site. A list of suggested sites appears in the table.
     1. If you don't know any of the OT device addresses, select **Show all suggested sites**, and a list of all possible sites appears in the table.
 
-    Each row in the table is a suggested location based on the OT devices found there. Open the location to see the list of OT devices identified there, and check to see which devices exist at your site. You should look through each location, as Defender for IoT could find your OT devices in more than one suggested locations. You can't edit the list of devices at a location.
+        Each row in the table is a suggested location based on the OT devices found there. Open the location to see the list of OT devices identified there, and check to see which devices exist at your site. You should look through each location, as Defender for IoT could find your OT devices in more than one suggested locations. You can't edit the list of devices at a location.
 
     1. Review the devices and select the rows to be added to your site. You might need to choose more than one item.
 
@@ -65,6 +70,9 @@ OT devices are associated with the site allowing Microsoft Defender for IoT to c
 The site is now set up and appears in the Site security page.
 
 :::image type="content" source="media/site-security-dashboard-with-new-site.png" alt-text="Screenshot showing the newly added site in the Site security dashboard of Microsoft Defender for IoT in the Microsoft Defender portal.":::
+
+>[!NOTE]
+> Once the site is created any new devices added to the network will automatically be detected and added to the device inventory. Also, if a device is moved to a different or new location within the network, these changes are automatically made to the network.
 
 ## Add device group
 

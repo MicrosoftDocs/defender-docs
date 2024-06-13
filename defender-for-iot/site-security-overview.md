@@ -1,6 +1,6 @@
 ---
-title: Site security for Microsoft Defender for IoT in XDR Defender portal
-description: Read this article to get an overview of benefits of the new Site Security features in the XDR portal.
+title: Site security overview 
+description: Read this article to get an overview of benefits of the new Site Security features in Defender for IoT.
 ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
@@ -14,9 +14,9 @@ ms.collection:
 ms.topic: concept-article
 ---
 
-# Site Security in the XDR portal
+# Site Security
 
-The Site security page in the Defender XDR portal is a dashboard that offers an <!--high level -->overview of the security state of your entire OT/IoT network. The CISO and security site manager can use this dashboard to identify the most critical areas to work on and prevent and respond to advanced threats.
+The Site security page in the Defender portal is a dashboard that offers an <!--high level -->overview of the security state of your entire OT/IoT network. The CISO and security site manager can use this dashboard to identify the most critical areas to work on and prevent and respond to advanced threats.
 
 ## Site security features and benefits
 
