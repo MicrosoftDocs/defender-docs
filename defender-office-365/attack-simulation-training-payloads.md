@@ -30,7 +30,7 @@ To see the available payloads, open the Microsoft Defender portal at <https://se
 
 **Payloads** in the **Content library** tab has three tabs:
 
-- **Global payloads**: Contains the built-in, unmodifiable payloads.
+- **Global payloads**: Contains the built-in, unmodifiable payloads. These payloads are based on real-world attacks that were observed in the Microsoft data centers. Although there's no specific release schedule, we typically average 30 to 40 new payloads every month.
 - **Tenant payloads**: Contains the custom payloads that you created.
 - **MDO recommendations**: Payloads that are recommended by Defender for Office 365 as having considerable impact when used by attackers. The recommendations are based on identified campaigns and a high predicted compromise rate. This list is refreshed monthly. If there's no recent campaign activity in your organization (less than 60 days), the **MDO recommendations** tab might be empty.
 

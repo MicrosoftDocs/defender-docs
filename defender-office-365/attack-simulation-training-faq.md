@@ -73,6 +73,12 @@ It's possible that the number of users who actually receive the simulation email
 
 If you use distribution groups or mail-enabled security groups to target users, you can use the [Get-DistributionGroupMember](/powershell/module/exchange/get-distributiongroupmember) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to view and validate distribution group members.
 
+### Trainings unexpectedly assigned or not assigned to users
+
+The training threshold in training campaigns prevents users from having the same trainings assigned to them during a specific interval (90 days by default). For more information, see [Set the training threshold](attack-simulation-training-settings.md#configure-the-training-threshold).
+
+If you created a [simulation](attack-simulation-training-simulations.md#assign-training) or a [simulation automation](attack-simulation-training-simulation-automations.md#assign-training) with the training assignment value **Assign training for me (Recommended)**, we assign training based on a user's previous simulation and training results. To assign training based on specific criteria, select **Select training courses and modules myself**.
+
 ## Issues with Attack simulation training reporting
 
 ### Differences in user activity data from Attack simulation training reports and other reports
