@@ -744,7 +744,7 @@ The effect of **No access** permissions (admin only access) on user capabilities
 If the quarantine policy assigns **Limited access** permissions, users get the following capabilities:
 
 - **On the Quarantine page and in the message details in quarantine**: The following actions are available:
-  - :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) (the difference from **Full access** permissions)
+  - :::image type="icon" source="media/m365-cc-sc-request-release-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) (the difference from **Full access** permissions)
   - :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: [Delete](quarantine-end-user.md#delete-email-from-quarantine)
   - :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: [Preview message](quarantine-end-user.md#preview-email-from-quarantine)
   - :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers)
@@ -848,7 +848,7 @@ The **Allow recipients to request a message to be released from quarantine** per
 
 If the **Allow recipients to request a message to be released from quarantine** permission is enabled:
 
-- :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) is available on the **Quarantine** page and in the message details in quarantine.
+- :::image type="icon" source="media/m365-cc-sc-request-release-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) is available on the **Quarantine** page and in the message details in quarantine.
 - **Request release** is available in quarantine notifications.
 
 If the **Allow recipients to request a message to be released from quarantine** permission is disabled, users can't request the release of their own messages from quarantine or in quarantine notifications (the action isn't available).
