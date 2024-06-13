@@ -59,11 +59,11 @@ You can check the number of incidents that require your action in the Defender E
 - To view the incidents our experts are currently investigating, filter the incident queue in your Microsoft Defender portal using the **Incident assignment** > **Assigned To Defender Experts** filter.
 - To view the incidents our experts have investigated and handed over to your team to complete pending remediation actions, filter the incident queue in your Microsoft Defender portal using the **Incident assignment** > **Assigned To customer team** filter.
 
-:::image type="content" source="media/new-incidents-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Defender Experts tag." lightbox="media/new-incidents-filter.png":::
+:::image type="content" source="media/new-incidents-filter.png" alt-text="Screenshot of the Incidents queue filtered to only show those with the Assigned to Defender Experts tag." lightbox="media/new-incidents-filter.png":::
 
 To view the incidents our experts have investigated and handed over to your team to act on pending remediation actions, filter the incident queue in your Microsoft Defender portal using the **Status** > **Awaiting Customer Action**.
 
-:::image type="content" source="media/awaiting-customer-action-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Defender Experts tag." lightbox="media/awaiting-customer-action-filter.png":::
+:::image type="content" source="media/awaiting-customer-action-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Awaiting customer action tag." lightbox="media/awaiting-customer-action-filter.png":::
 
 Finally, to view the incidents our experts have completed their investigated on (and either directly resolved or assigned to your team for pending remediation actions), filter the incident queue in your Microsoft Defender portal using the _Defender Experts_ tag.
 _
