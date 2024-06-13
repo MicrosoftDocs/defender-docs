@@ -59,6 +59,8 @@ The following destinations are required to allow Defender for Endpoint communica
 |`*.blob.core.windows.net`|Port 443|Outbound|Yes|
 |`*.azure-automation.net`|Port 443|Outbound|Yes|
 
+To determine the exact destinations in use for your subscription within the domains listed above, please refer to [Microsoft Monitoring Agent (MMA) Service URL connections](/verify-connectivity#microsoft-monitoring-agent-mma-service-url-connections).
+
 > [!NOTE]
 > Services using MMA-based solutions are not able to leverage the new streamlined connectivity solution (consolidated URL and option to use static IPs). For Windows Server 2016 and Windows Server 2012 R2, you will need to update to the new unified solution. Instructions to onboard these operating systems with the new unified solution are at [Onboard Windows servers](configure-server-endpoints.md), or migrate already onboarded devices to the new unified solution at [Server migration scenarios in Microsoft Defender for Endpoint](server-migration.md).
 
