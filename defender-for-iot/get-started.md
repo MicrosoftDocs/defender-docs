@@ -1,5 +1,5 @@
 ---
-title: Get started with the set up of Microsoft Defender for IoT in Defender portal
+title: Get started with the setup of Microsoft Defender for IoT in Defender portal
 description: This article describes how to set up Microsoft Defender for IoT in Defender portal
 ms.service: defender-for-iot
 author: lwainstein
@@ -55,7 +55,7 @@ Use the Microsoft 365 admin center manage your users, billing details, and more.
 
 ## Calculate number of devices
 
-waiting for Belle feedback
+Waiting for Belle feedback
 
 You now know the number of devices you need to protect in your network.
 
@@ -63,12 +63,12 @@ You now know the number of devices you need to protect in your network.
 
 Purchase the license for your network from the Microsoft 365 admin center, by ensuring it covers enough devices for your site needs.
 
-1. Go to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog) **Billing > Purcahse services**. If you don't have this option select **Marcketplace** instead.
+1. Go to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog) **Billing > Purchase services**. If you don't have this option select **Marketplace** instead.
 1. Search for **Defender for IoT**.
-1. Choose the license approriate for the size of your site. There are 5 sized licenses ranging from *Extra-large* for up to 5000 devices, to *extra-small* covering a maximum of 100 devices.
+1. Choose the license appropriate for the size of your site. There are five different sized licenses ranging from *Extra-large* for up to 5000 devices, to *extra-small* covering a maximum of 100 devices.
 
-    Make sure to select the number of licenses you want to purchase, based on the number of sites you are monitoring. You might need to select various licenses of different sizes if the number of divices at each site is significantly different.
-    [Question: Do we document a situation where a company has eg 12000 devices, for 1 site. How should they be advised to purchase?]
+    Make sure to select the number of licenses you want to purchase, based on the number of sites you're monitoring. You might need to select various licenses of different sizes if the number of devices at each site is different.
+    [Question: Do we document a situation where a company has eg 12000 devices, for one site. How should they be advised to purchase?]
 
 1. Complete the purchasing instructions.
 
@@ -76,4 +76,4 @@ Purchase the license for your network from the Microsoft 365 admin center, by en
 
 ## What next
 
-[Set up a new site](set-up-site.md).
+[Set up a new site](set-up-sites.md).
