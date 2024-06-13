@@ -4,7 +4,7 @@
   items: 
     - name: Overview
       items:
-      - name: What is Microsoft Defender XDR
+      - name: What is Microsoft Defender XDR?
         href: microsoft-365-defender.md
       - name: What's new
         href: whats-new.md
@@ -68,20 +68,36 @@
           href: m365d-enable.md
         - name: 2. Deploy supported services
           href: deploy-supported-services.md
-        - name: Setup guides for Microsoft Defender XDR
-          href: deploy-configure-m365-defender.md  
-        - name: Turning on Microsoft Defender XDR FAQs
-          href: m365d-enable-faq.md              
-        - name: Train your security staff
-          href: microsoft-365-defender-train-security-staff.md              
+        - name: 3. Train your security staff
+          href: microsoft-365-defender-train-security-staff.md
+        - name : Guides and FAQs
+          items:              
+          - name: Setup guides for Microsoft Defender XDR
+            href: deploy-configure-m365-defender.md  
+          - name: Turning on Microsoft Defender XDR FAQs
+            href: m365d-enable-faq.md
+          - name: Guides for your security staff
+            items: 
+            - name: Respond to your first incident
+              href: respond-first-incident-365-defender.md
+            - name: Analyze your first incident
+              href: respond-first-incident-analyze.md
+            - name: Remediate your first incident
+              href: respond-first-incident-remediate.md
+            - name: Additional incident examples
+              items: 
+              - name: Phishing email
+                href: first-incident-path-phishing.md
+              - name: Identity
+                href: first-incident-path-identity.md                          
     - name: Protect against threats
       items: 
       - name: Microsoft Secure Score
         items: 
-          - name: What's new
-            href: microsoft-secure-score-whats-new.md
           - name: Overview
             href: microsoft-secure-score.md
+          - name: What's new
+            href: microsoft-secure-score-whats-new.md
           - name: Assess your security posture
             href: microsoft-secure-score-improvement-actions.md
           - name: Track your score history and meet goals
@@ -124,20 +140,6 @@
                 href: manage-incidents.md
               - name: Export incidents queue to CSV file
                 href: export-incidents-queue.md
-              - name: Respond to your first incident
-                items: 
-                 - name: Overview
-                   href: respond-first-incident-365-defender.md
-                 - name: Analyze your first incident
-                   href: respond-first-incident-analyze.md
-                 - name: Remediate your first incident
-                   href: respond-first-incident-remediate.md
-                 - name: Additional incident examples
-                   items: 
-                    - name: Phishing email
-                      href: first-incident-path-phishing.md
-                    - name: Identity
-                      href: first-incident-path-identity.md
               - name: Investigate incidents
                 items: 
                  - name: Incidents
