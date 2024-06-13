@@ -3,7 +3,7 @@ title: Import roles to Microsoft Defender XDR Unified role-based access control 
 description: Create custom Microsoft Defender XDR Security portal role-based access control (RBAC)
 ms.service: defender-xdr
 ms.author: diannegali
-author: diannegali
+author: siosulli
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

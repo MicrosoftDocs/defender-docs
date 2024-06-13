@@ -3,7 +3,7 @@ title: Edit or delete roles Microsoft Defender XDR Unified role-based access con
 description: Edit or delete roles in Microsoft Defender XDR Security portal experiences using role-based access control (RBAC)
 ms.service: defender-xdr
 ms.author: diannegali
-author: dianngelia
+author: siosulli
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

@@ -3,7 +3,7 @@ title: Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Manage permissions and access to Microsoft Defender XDR Security portal experiences using unified role-based access control (RBAC).
 ms.service: defender-xdr
 ms.author: diannegali
-author: diannegali
+author: siosulli
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
