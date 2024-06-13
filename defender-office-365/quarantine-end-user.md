@@ -268,8 +268,8 @@ If you don't release or remove a message, it's automatically deleted from quaran
 
 After you select the message, use either of the following methods to request its release:
 
-- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Request release**.
-- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Request release**.
+- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-request-release-icon.png" border="false"::: **Request release**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-request-release-icon.png" border="false"::: **Request release**.
 
 In the **Request release** flyout that opens, review the information, select **Request release**. In the **Release requested** flyout that opens, select **Done**.
 
