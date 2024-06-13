@@ -30,6 +30,8 @@ landingContent:
         links:
         - text: Evaluate Microsoft Defender for IoT
           url: compare-defender-azure.md
+        - text: Get started
+          url: get-started.md
         - text: Set up Sites
           url: set-up-sites.md
       - linkListType: deploy
