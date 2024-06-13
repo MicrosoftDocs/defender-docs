@@ -15,7 +15,7 @@ ms.collection:
   - essentials-manage
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/28/2024
+ms.date: 06/13/2024
 ---
 
 # Managed detection and response
@@ -42,16 +42,13 @@ When our experts conclude their investigation on an incident, the incident's **C
 
 The **Determination** field corresponding to each classification is also updated to provide more insights on the findings that led our experts to determine the said classification.
 
-:::image type="content" source="/defender/media/xdr/incidents-xdr-1.png" alt-text="Screenshot of Incidents page showing the Tags, Status, Assigned to, Classification, and Determination fields." lightbox="/defender/media/xdr/incidents-xdr-1.png":::
+:::image type="content" source="media/incidents-xdr-1.png" alt-text="Screenshot of Incidents page showing the Tags, Status, Assigned to, Classification, and Determination fields." lightbox="media/incidents-xdr-1.png":::
 
-If an incident is classified as _False Positive_ or _Informational_, _Expected Activity_, then the incident's **Status** field gets updated to _Resolved_. Our experts then conclude their work on this incident and the **Assigned to** field gets updated to _Unassigned_. Our experts may share updates from their investigation and their conclusion when resolving an incident. These updates are posted in the incident's **Comments and history** flyout panel.
-
-> [!NOTE]
-> Incident comments are one-way posts. Defender Experts can't respond to any comments or questions you add in the **Comments and history** panel. For more information about how to correspond with our experts, see [Communicating with experts in the Microsoft Defender Experts for XDR service](communicate-defender-experts-xdr.md).
+If an incident is classified as _False Positive_ or _Informational_, _Expected Activity_, then the incident's **Status** field gets updated to _Resolved_. Our experts then conclude their work on this incident and the **Assigned to** field gets updated to _Unassigned_. Our experts may share updates from their investigation and their conclusion when resolving an incident. These updates are posted under _Investigation Summary_ in the incident's **Managed Response** flyout panel.
 
 Otherwise, if an incident is classified as _True Positive_, our experts then identify the required response actions that need to be performed. The method in which the actions are performed depends on the permissions and access levels you have given the Defender Experts for XDR service. [Learn more about granting permissions to our experts](get-started-xdr.md#grant-permissions-to-our-experts).
 
-- If you have granted Defender Experts for XDR the recommended Security Operator access permissions, our experts could perform the required response actions on the incident on your behalf. These actions, along with an **Investigation summary**, show up in the incident's [Managed response](#how-to-use-managed-response-in-microsoft-365-defender) flyout panel in your Microsoft Defender portal for you or your SOC team to review. All actions that are completed by Defender Experts for XDR appear under the **Completed actions** section. Any pending actions that require you or you SOC team to complete are listed under the **Pending actions** section. For more information, see the [Actions](#actions) section. Once our experts have taken all the necessary actions on the incident, its **Status** field is then updated to _Resolved_ and the **Assigned to** field is updated to _Unassigned_.
+- If you have granted Defender Experts for XDR the recommended Security Operator access permissions, our experts could perform the required response actions on the incident on your behalf. These actions, along with an **Investigation summary**, show up in the incident's [Managed response](#how-to-use-managed-response-in-microsoft-365-defender) flyout panel in your Microsoft Defender portal for you or your SOC team to review. All actions that are completed by Defender Experts for XDR appear under the **Completed actions** section. Any pending actions that require you or you SOC team to complete are listed under the **Pending actions** section. For more information, see the [Actions](#actions) section. Once our experts have taken all the necessary actions on the incident, its **Status** field is then updated to _Resolved_ and the **Assigned to** field is updated to _Customer_.
 
 - If you have granted Defender Experts for XDR the default Security Reader access, then the required response actions, along with an **Investigation summary**, show up in the incident's **Managed response** flyout panel under the **Pending actions** section in your Microsoft Defender portal for you or your SOC team to perform. For more information, see the [Actions](#actions) section. To identify this handover, the incident's **Status** field is updated to _Awaiting Customer Action_ and the **Assigned to** field is updated to _Customer_.
 
@@ -59,10 +56,17 @@ You can check the number of incidents that require your action in the Defender E
 
 :::image type="content" source="/defender/media/xdr/view-incidents.png" alt-text="Screenshot of the Defender Experts card in Microsoft Defender portal showing the number of incidents awaiting customer action." lightbox="/defender/media/xdr/view-incidents.png":::
 
-To view the incidents our experts have investigated or are currently investigating, filter the incident queue in your Microsoft Defender portal using the _Defender Experts_ tag.
+- To view the incidents our experts are currently investigating, filter the incident queue in your Microsoft Defender portal using the **Incident assignment** > **Assigned To Defender Experts** filter.
+- To view the incidents our experts have investigated and handed over to your team to complete pending remediation actions, filter the incident queue in your Microsoft Defender portal using the **Incident assignment** > **Assigned To customer team** filter.
 
-:::image type="content" source="/defender/media/xdr/incidents-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Defender Experts tag." lightbox="/defender/media/xdr/incidents-filter.png":::
+:::image type="content" source="media/new-incidents-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Defender Experts tag." lightbox="media/new-incidents-filter.png":::
 
+To view the incidents our experts have investigated and handed over to your team to act on pending remediation actions, filter the incident queue in your Microsoft Defender portal using the **Status** > **Awaiting Customer Action**.
+
+:::image type="content" source="media/awaiting-customer-action-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Defender Experts tag." lightbox="media/awaiting-customer-action-filter.png":::
+
+Finally, to view the incidents our experts have completed their investigated on (and either directly resolved or assigned to your team for pending remediation actions), filter the incident queue in your Microsoft Defender portal using the _Defender Experts_ tag.
+_
 <a name='how-to-use-managed-response-in-microsoft-365-defender'></a>
 
 ## How to use managed response in Microsoft Defender XDR
