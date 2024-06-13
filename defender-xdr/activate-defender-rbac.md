@@ -2,17 +2,17 @@
 title: Activate Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Activate Microsoft Defender XDR Security unified role-based access control(RBAC)
 ms.service: defender-xdr
-ms.author: siosulli
-author: siosulli
+ms.author: diannegali
+author: diannegali
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 08/03/2023
+ms.date: 06/13/2024
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -42,7 +42,7 @@ The following steps guide you on how to activate the Microsoft Defender XDR Unif
 2. [Activate in Microsoft Defender XDR settings](#activate-in-microsoft-365-defender-settings)
 
 > [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-pre-requisites).
+> You must be a Global Administrator or Security Administrator in Microsoft Entra ID to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
 
 ### Activate from the Permissions and roles page
 

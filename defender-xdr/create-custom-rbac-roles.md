@@ -2,17 +2,17 @@
 title: Create custom roles with Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Create custom roles in Microsoft Defender XDR Security portal role-based access control (RBAC)
 ms.service: defender-xdr
-ms.author: siosulli
-author: siosulli
+ms.author: diannegali
+author: diannegali
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 08/03/2023
+ms.date: 06/13/2024
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -35,7 +35,7 @@ search.appverid: met150
 The following steps guide you on how to create custom roles in Microsoft Defender XDR Unified RBAC.
 
 > [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-pre-requisites).
+> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 2. In the navigation pane, select **Permissions**.
