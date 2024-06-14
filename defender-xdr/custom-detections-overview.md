@@ -12,8 +12,8 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m
-    - m365-security
-    - tier2
+- m365-security
+- tier2
 ms.topic: conceptual
 ms.date: 02/16/2021
 ---
