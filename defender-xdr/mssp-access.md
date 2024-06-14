@@ -104,7 +104,7 @@ To implement a multitenant delegated access solution, take the following steps:
 
 4. **Provide access request link to MSSP resources from Customer Microsoft Entra ID: Identity Governance**
 
-    The My Access portal link is used by MSSP SOC analysts to request access via the access packages created. The link is durable, meaning the same link may be used over time for new analysts. The analyst request goes into a queue for approval by the **MSSP Analyst Approvers**.
+    The My Access portal link is used by MSSP SOC analysts to request access via the access packages created. The link is durable, meaning the same link might be used over time for new analysts. The analyst request goes into a queue for approval by the **MSSP Analyst Approvers**.
 
     :::image type="content" source="/defender/media/access-properties.png" alt-text="The access properties in the Microsoft Defender portal" lightbox="/defender/media/access-properties.png":::
 
