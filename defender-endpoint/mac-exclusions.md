@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 02/29/2024
+ms.date: 06/14/2024
 ---
 
 # Configure and validate exclusions for Microsoft Defender for Endpoint on macOS
@@ -57,7 +57,7 @@ File, folder, and process exclusions support the following wildcards:
 
 |Wildcard|Description|Examples|
 |---|---|---|
-|\*|Matches any number of any characters including none (note if this wildcard is not used at the end of the path then it will substitute only one folder)| `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It does not include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` includes any file in `/var` and its subdirectories.|
+|\*|Matches any number of any characters including none (note if this wildcard isn't used at the end of the path then it substitutes only one folder)| `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It doesn't include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` includes any file in `/var` and its subdirectories.|
 |?|Matches any single character|`file?.log` includes `file1.log` and `file2.log`, but not `file123.log`|
 
 > [!NOTE]
@@ -67,9 +67,7 @@ File, folder, and process exclusions support the following wildcards:
 
 ## Best practices for adding antimalware exclusions for Microsoft Defender for Endpoint on macOS.
 
-1. Write down why an exclusion was added to a central location where only SecOps and/or Security Administrator have access.
-
-   e.g. Submitter, date, app name, reason, and exclusion information.
+1. Write down why an exclusion was added to a central location where only SecOps and/or Security Administrator have access. For example, list the submitter, date, app name, reason, and exclusion information.
 
 1. Make sure to have an expiration date* for the exclusions
 
