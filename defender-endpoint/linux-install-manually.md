@@ -6,7 +6,7 @@ ms.author: dansimp
 author: dansimp
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security

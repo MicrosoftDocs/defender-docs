@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: dansimp
 ms.author: dansimp
-manager: dansimp
+manager: deniseb
 ms.subservice: linux
 ms.topic: overview
 ms.collection: 

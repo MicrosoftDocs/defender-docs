@@ -7,7 +7,7 @@ f1.keywords:
 ms.author: benharri
 author: MSFTBen
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-guidance-templates
