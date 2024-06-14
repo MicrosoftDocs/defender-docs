@@ -56,7 +56,7 @@ You can check the number of incidents that require your action in the Defender E
 
    :::image type="content" source="/defender/media/xdr/view-incidents.png" alt-text="Screenshot of the Defender Experts card in Microsoft Defender portal showing the number of incidents awaiting customer action." lightbox="/defender/media/xdr/view-incidents.png":::
 
-You can view the incidents related to Defender Experts by filtering the incident queue in your Microsoft Defender portal using several filter sets. [Learn more about adding incident queue filters](incident-queue.md#filters)
+You can view the incidents related to Defender Experts by filtering the incident queue in your Microsoft Defender portal using several filter sets. [Learn more about adding incident queue filters](incident-queue.md#filters-)
 
 - To view the incidents our experts are currently investigating, use the **Incident assignment** filter, select **Assigned To Defender Experts**.
 - To view the incidents our experts have investigated and handed over to your team to act on pending remediation actions, using the **Incident assignment** filter, choose **Assigned To customer team**.
