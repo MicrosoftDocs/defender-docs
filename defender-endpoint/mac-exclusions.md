@@ -71,9 +71,9 @@ File, folder, and process exclusions support the following wildcards:
 
 1. Make sure to have an expiration date* for the exclusions
 
-   *except for apps that the ISV stated that there is no additional tweaking that could be done to prevent the false positive or higher cpu utilization from occurring.
+   *except for apps that the ISV stated that there's no other tweaking that could be done to prevent the false positive or higher cpu utilization from occurring.
 
-1. Avoid migrating 3rd party antimalware exclusions since they may no longer be applicable nor applicable to Microsoft Defender for Endpoint on macOS.
+1. Avoid migrating non-Microsoft antimalware exclusions since they may no longer be applicable nor applicable to Microsoft Defender for Endpoint on macOS.
 
 1. Order of exclusions to consider top (more secure) to bottom (least secure):
 
