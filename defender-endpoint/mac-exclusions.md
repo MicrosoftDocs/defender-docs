@@ -37,7 +37,7 @@ You can exclude certain files, folders, processes, and process-opened files from
 
 Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. They can also be useful for mitigating performance issues caused by Defender for Endpoint on Mac.
 
-To narrow down which process and/or path and/or extension you need to exclude, please use [real-time-protection-statistics](mac-support-perf.md).
+To narrow down which process and/or path and/or extension you need to exclude, use [real-time-protection-statistics](mac-support-perf.md).
 
 > [!WARNING]
 > Defining exclusions lowers the protection offered by Defender for Endpoint on Mac. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you are confident are not malicious.
@@ -83,7 +83,7 @@ File, folder, and process exclusions support the following wildcards:
 
    1. Indicators - File hash - allow
 
-      1. If a process or daemon doesn't change often, e.g. the app doesn't have a monthly security update.
+      1. If a process or daemon doesn't change often, for example, the app doesn't have a monthly security update.
 
    1. Path & Process
 
@@ -95,7 +95,7 @@ File, folder, and process exclusions support the following wildcards:
 
 ## How to configure the list of exclusions
 
-### From the Microsoft Defender for Endpoint Security Settings management console
+### Use the Microsoft Defender for Endpoint Security Settings management console
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
@@ -134,21 +134,21 @@ For more information on how to configure exclusions from JAMF, Intune, or anothe
 
 You can validate that your exclusion lists are working by using `curl` to download a test file.
 
-In the following Bash snippet, replace `test.txt` with a file that conforms to your exclusion rules. For example, if you have excluded the `.testing` extension, replace `test.txt` with `test.testing`. If you are testing a path, ensure that you run the command within that path.
+In the following Bash snippet, replace `test.txt` with a file that conforms to your exclusion rules. For example, if you have excluded the `.testing` extension, replace `test.txt` with `test.testing`. If you're testing a path, ensure that you run the command within that path.
 
 ```bash
 curl -o test.txt https://secure.eicar.org/eicar.com.txt
 ```
 
-If Defender for Endpoint on Mac reports malware, then the rule is not working. If there is no report of malware, and the downloaded file exists, then the exclusion is working. You can open the file to confirm that the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
+If Defender for Endpoint on Mac reports malware, then the rule isn't working. If there's no report of malware, and the downloaded file exists, then the exclusion is working. You can open the file to confirm that the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
 
-If you do not have Internet access, you can create your own EICAR test file. Write the EICAR string to a new text file with the following Bash command:
+If you don't have Internet access, you can create your own EICAR test file. Write the EICAR string to a new text file with the following Bash command:
 
 ```bash
 echo 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' > test.txt
 ```
 
-You can also copy the string into a blank text file and attempt to save it with the file name or in the folder you are attempting to exclude.
+You can also copy the string into a blank text file and attempt to save it with the file name or in the folder you're attempting to exclude.
 
 ## Allow threats
 
