@@ -54,22 +54,22 @@ Otherwise, if an incident is classified as _True Positive_, our experts then ide
 
 You can check the number of incidents that require your action in the Defender Experts banner at the top of the Microsoft Defender homepage.
 
-:::image type="content" source="/defender/media/xdr/view-incidents.png" alt-text="Screenshot of the Defender Experts card in Microsoft Defender portal showing the number of incidents awaiting customer action." lightbox="/defender/media/xdr/view-incidents.png":::
+   :::image type="content" source="/defender/media/xdr/view-incidents.png" alt-text="Screenshot of the Defender Experts card in Microsoft Defender portal showing the number of incidents awaiting customer action." lightbox="/defender/media/xdr/view-incidents.png":::
 
 You can view the incidents related to Defender Experts by filtering the incident queue in your Microsoft Defender portal using several filter sets. [Learn more about adding incident queue filters](../defender-xdr/incident-queue.md#filters)
 
 - To view the incidents our experts are currently investigating, use the **Incident assignment** filter, select **Assigned To Defender Experts**.
 - To view the incidents our experts have investigated and handed over to your team to act on pending remediation actions, using the **Incident assignment** filter, choose **Assigned To customer team**.
 
-:::image type="content" source="media/new-incidents-filter.png" alt-text="Screenshot of the Incidents queue filtered to only show those with the Assigned to Defender Experts tag." lightbox="media/new-incidents-filter.png":::
+   :::image type="content" source="media/new-incidents-filter.png" alt-text="Screenshot of the Incidents queue filtered to only show those with the Assigned to Defender Experts tag." lightbox="media/new-incidents-filter.png":::
 
 - To view the incidents our experts have investigated and handed over to your team to act on pending remediation actions, using the **Status** filter, choose **Awaiting Customer Action**.
 
-:::image type="content" source="media/awaiting-customer-action-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Awaiting customer action tag." lightbox="media/awaiting-customer-action-filter.png":::
+   :::image type="content" source="media/awaiting-customer-action-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Awaiting customer action tag." lightbox="media/awaiting-customer-action-filter.png":::
 
 - To view the incidents our experts have completed their investigation on (and either directly resolved or assigned to your team for pending remediation actions), using the **Tags** filter, choose **Defender Experts**.
 
-:::image type="content" source="media/defender-experts-tag.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show the Defender Experts tag." lightbox="media/defender-experts-tag.png":::
+   :::image type="content" source="media/defender-experts-tag.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show the Defender Experts tag." lightbox="media/defender-experts-tag.png":::
 
 <a name='how-to-use-managed-response-in-microsoft-365-defender'></a>
 
@@ -108,18 +108,18 @@ Apart from these one-click actions, you can also receive managed responses from 
 
 1. Select the arrow buttons in an action card to expand it and read more information about the required action.
 
-:::image type="content" source="/defender/media/xdr/action-card-1.png" alt-text="Screenshot of managed response action to isolate the device prod server." lightbox="/defender/media/xdr/action-card-1.png":::
+   :::image type="content" source="/defender/media/xdr/action-card-1.png" alt-text="Screenshot of managed response action to isolate the device prod server." lightbox="/defender/media/xdr/action-card-1.png":::
 
 2. For cards with one-click response actions, select the required action. The **Action status** in the card changes to **In progress**, then to **Failed** or **Completed**, depending on the action's outcome.
 
-:::image type="content" source="/defender/media/xdr/action-card-2.png" alt-text="Screenshot of managed response action showing in-progress to isolate the device prod server." lightbox="/defender/media/xdr/action-card-2.png":::
+   :::image type="content" source="/defender/media/xdr/action-card-2.png" alt-text="Screenshot of managed response action showing in-progress to isolate the device prod server." lightbox="/defender/media/xdr/action-card-2.png":::
 
 > [!TIP]
 > You can also monitor the status of in-portal response actions in the [Action center](m365d-action-center.md). If a response action fails, try doing it again from the **View device details** page or [initiate a chat](communicate-defender-experts-xdr.md#in-portal-chat) with Defender Experts.
 
 3. For cards with required actions that you need to perform manually, select **I've completed this action** once you've performed them, then select **Yes, I've done it** in the confirmation dialog box that appears.
 
-:::image type="content" source="/defender/media/xdr/ive-completed-this-action.png" alt-text="Screenshot of managed response action to confirm action completion." lightbox="/defender/media/xdr/ive-completed-this-action.png":::
+   :::image type="content" source="/defender/media/xdr/ive-completed-this-action.png" alt-text="Screenshot of managed response action to confirm action completion." lightbox="/defender/media/xdr/ive-completed-this-action.png":::
 
 4. If you don't want to complete a required action right away, select **Skip**, then select **Yes, skip this action** in the confirmation dialog box that appears.
 
@@ -146,7 +146,7 @@ The following section describes how an incident handled by our experts is update
 1. An incident that our experts have confirmed as a _True Positive_, with all remediation actions taken by Defender Experts, has the incident's Status updated to _Resolved_ and the **Owner** is listed as _Customer_. You can review the actions completed on the incident using the provided managed response in the Defender portal.
 1. Once our experts have concluded their investigation and closed an incident as _False Positive_ or _Informational_, _Expected Activity_, the incident's **Status** is updated to _Resolved_, the **Owner** is updated to _Unassigned_, and a **Reason for closing** is provided.
 
-:::image type="content" source="/defender/media/xdr/microsoft-sentinel-incidents.png" alt-text="Screenshot of Microsoft Sentinel incidents." lightbox="/defender/media/xdr/microsoft-sentinel-incidents.png":::
+   :::image type="content" source="/defender/media/xdr/microsoft-sentinel-incidents.png" alt-text="Screenshot of Microsoft Sentinel incidents." lightbox="/defender/media/xdr/microsoft-sentinel-incidents.png":::
 
 ### Other applications
 
