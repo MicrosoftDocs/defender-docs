@@ -1,11 +1,7 @@
 ---
 title: Triage and investigate incidents with guided responses with Microsoft Copilot in Microsoft Defender
 description: Resolve incidents using guided responses delivered by Microsoft Copilot in Microsoft Defender.
-keywords: security copilot, Microsoft Defender XDR, embedded experience, incident summary, script analyzer, script analysis, query assistant, m365, incident report, guided response, incident response playbooks, incident response, incident response playbooks, remediate incident, remediation actions, incident solution, resolve incidents, guided responses, security copilot guided response, copilot in security guided response, security copilot guided response in Microsoft Defender XDR, Microsoft Copilot for Security, Microsoft Defender, Copilot in Defender
 ms.service: defender-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords:
   - NOCSH
 ms.author: diannegali

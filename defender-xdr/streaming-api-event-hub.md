@@ -1,13 +1,8 @@
 ---
 title: Stream Microsoft Defender XDR events to Azure Event Hubs
 description: Learn how to configure Microsoft Defender XDR to stream Advanced Hunting events to your Event Hubs.
-keywords: raw data export, streaming API, API, Azure Event Hubs, Azure storage, storage account, Advanced Hunting, raw data sharing
-search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.service: defender-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 ms.author: macapara
 author: mjcaparas
 ms.localizationpriority: medium
