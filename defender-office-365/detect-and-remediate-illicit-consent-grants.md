@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.topic: conceptual
 ms.collection:

@@ -3,7 +3,7 @@ title:       Understanding detection technology within the email entity page in 
 description: Guide to understanding the detection technology shown on the email entity page in Microsoft Defender for Office 365, what the detection technologies mean, how they're triggered, and how to resolve false positives (see the admin submission video).
 author: chrisda
 ms.author: chrisda
-manager: dansimp
+manager: deniseb
 ms.service:  microsoft-365-security
 ms.topic:    how-to
 ms.date:     07/03/2023

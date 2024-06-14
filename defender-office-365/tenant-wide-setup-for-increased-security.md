@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 ms.author: bcarter
 author: BrendaCarter
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium

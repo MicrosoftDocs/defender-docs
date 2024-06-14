@@ -7,7 +7,7 @@ author: dansimp
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
 ms.date: 06/05/2024
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
