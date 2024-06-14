@@ -97,19 +97,26 @@ File, folder, and process exclusions support the following wildcards:
 
 ### From the Microsoft Defender for Endpoint Security Settings management console
 
-1. Login to the [Microsoft Defender portal](https://security.microsoft.com).
-2. Go to **Configuration management > Endpoint Security Policies > Create new Policy**
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
+
+2. Go to **Configuration management** > **Endpoint Security Policies** > **Create new Policy**.
+
    - Select Platform: macOS
    - Select Template: Microsoft Defender Antivirus exclusions
-3. Select **Create Policy**
-4. Enter a name and description and select **Next**
-5. Expand **Antivirus engine**
-6. Select **Add**
-7. Select **Path** or **File extension** or **File name**
-8. Select **Configure instance** and add the exclusions as needed
-9. Select **Next**
-10. Assign the exclusion to a group and Select **Next**
-11. Select **Save**
+
+3. Select **Create Policy**.
+
+4. Enter a name and description and select **Next**.
+
+5. Expand **Antivirus engine**, and then select **Add**.
+
+6. Select **Path** or **File extension** or **File name**.
+
+7. Select **Configure instance** and add the exclusions as needed. Then select **Next**.
+
+8. Assign the exclusion to a group and Select **Next**.
+
+9. Select **Save**.
 
 ### From the management console
 
