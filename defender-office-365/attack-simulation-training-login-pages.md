@@ -121,6 +121,13 @@ When you select a login page from the list by clicking anywhere in the row other
 
      - **Code** tab: You can view and modify the HTML code directly.
 
+       > [!TIP]
+       > To avoid sending passwords in plain text from custom login pages, avoid using the variable **name** in HTML code. Instead, use **type**, **id**, or **class**. For example:
+       >
+       > ```html
+       > <input id="input-field-loginPage" type="password" placeholder="Password">
+       > ```
+
    You can preview the results by clicking the **Preview email** button at the top of the page.
 
    When you're finished on the **Review login page** page, select **Next**.

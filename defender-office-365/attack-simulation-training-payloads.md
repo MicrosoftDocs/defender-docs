@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to create and manage payloads for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 06/12/2024
+ms.date: 06/14/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -377,15 +377,15 @@ The create payload wizard opens with the settings and values of the selected pay
 
 ## Archive payloads
 
-You can't delete custom payloads from the **Tenant payloads** tab, but you can archive them.
-
 To archive an existing payload on the **Tenant payloads** tab, select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/m365-cc-sc-archive-icon.png" border="false"::: **Archive**.
 
 The **Status** value of the payload changes to **Archive**, and the payload is no longer visible on the **Tenant payloads** table when **Show archived payloads** is toggled off :::image type="icon" source="media/scc-toggle-off.png" border="false":::.
 
 To see archived payloads on the **Tenant payloads** tab, toggle **Show archived payloads** to on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
 
-## Restore archived payloads
+After you archive a payload, you can restore it or remove it as described in the following subsections.
+
+### Restore archived payloads
 
 To restore an archive payload on the **Tenant payloads** tab, do the following steps:
 
@@ -393,6 +393,13 @@ To restore an archive payload on the **Tenant payloads** tab, do the following s
 2. Select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/m365-cc-sc-archive-icon.png" border="false"::: **Restore**.
 
 After you restore the archived payload, the **Status** value changes to **Draft**. Toggle **Show archived payloads** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the restored payload. To return the payload to the **Status** value **Ready**, [edit the payload](#modify-payloads), review or change the settings, and then select **Submit**.
+
+### Remove archived payloads
+
+To remove an archived payload from the **Tenant payloads** tab, do the following steps:
+
+1. Set the **Show archived payloads** toggle to on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
+2. Select the payload by clicking **⋮** (**Actions**) at the end of the row, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete**, and then select **Confirm** in the confirmation dialog.
 
 ## Send a test
 

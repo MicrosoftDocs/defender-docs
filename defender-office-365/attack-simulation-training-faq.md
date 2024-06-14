@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about deployment considerations and frequently asked questions regarding Attack simulation and training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 6/22/2023
+ms.date: 06/14/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -144,7 +144,16 @@ There are no built-in options to add safety tips to payloads, but you can use th
 
 Yes. For more information, see [Training campaigns in Attack simulation training](attack-simulation-training-training-campaigns.md).
 
+### How do I find out about simulation messages that weren't delivered?
+
+The [Users tab](attack-simulation-training-simulations.md#users-tab) for the simulation is filterable by **Simulation message delivery: Failed to deliver**.
+
+If you won the sender domain, the undelivered simulation report is returned in a non-delivery report (also known as an NDR or bounce message). For more information about the codes in the NDR, see [Email non-delivery reports and SMTP errors in Exchange Online](/exchange/troubleshoot/email-delivery/ndr/non-delivery-reports-in-exchange-online).
+
 ## Issues with Attack simulation training reporting
+
+> [!TIP]
+> Simulation data recording start a few minutes after the simulation is launched and after users begin interacting with the simulation messages. There's no fixed start time. Events are still captured after the simulation ends.
 
 ### Differences in user activity data from Attack simulation training reports and other reports
 
@@ -176,6 +185,9 @@ Attack simulation training supports on-premises mailboxes, but with reduced repo
 
 - Data on whether users read, forwarded, or deleted the simulation email isn't available for on-premises mailboxes.
 - The number of users who reported the simulation email isn't available for on-premises mailboxes.
+
+> [!TIP]
+> Other than the simulation messages being sent via the transport pipeline vs. direct injection in Microsoft 365, the training, automation, and content management experiences are the same for on-premises mailboxes.
 
 ### Simulation reports aren't updated immediately
 
@@ -251,6 +263,12 @@ Managing a large CSV file or adding many individual recipients can be cumbersome
 
 > [!TIP]
 > Currently, shared mailboxes aren't supported in Attack simulation training. Simulations should target user mailboxes or groups containing user mailboxes.
+>
+> Distribution groups are expanded and the list of users is generated at the time of saving the simulation or simulation automation.
+
+### Q: Are the limits for the number of simulations that can be deployed during a specific time interval?
+
+A. No, although you might experience slowness if you launch many parallel simulations. Message rates (including simulation message rates) are constrained by the [message rate limits of the service](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#receiving-and-sending-limits).
 
 ### Q: Does Microsoft provide payloads in other languages?
 
@@ -293,27 +311,40 @@ At 9:00 AM on the same day, the simulation message is sent to UserB. With region
 
 So, on the initial run of a campaign with region aware delivery enabled, it might appear that the simulation message was sent only to users in a specific time zone. But, as time passes and more users come into scope, the targeted users increase.
 
+If you don't use region aware delivery, the campaign starts based on the time zone of the user who's setting it up.
+
 ### Q: Does Microsoft collect or store any information that users enter at the Credential Harvest sign-in page, used in the Credential Harvest simulation technique?
 
 A: No. Any information entered at the credential harvest sign-in page is discarded silently. Only the 'click' is recorded to capture the compromise event. Microsoft doesn't collect, log or store any details that users enter at this step.
 
 ### Q: How long is simulation information retained? Can I delete simulation data?
 
-A: Simulation data is retained for 18 months from the date of generation. Data includes:
+A: See the following table:
 
-- Simulation metadata
-- User activity
-- Aggregate reports
+|Data type|Retention|
+|---|---|
+|Simulation metadata|18 months unless the [simulation is deleted sooner by an admin](attack-simulation-training-simulations.md#remove-simulations).|
+|Simulation automation|18 months unless the [simulation automation is deleted sooner by an admin](attack-simulation-training-simulation-automations.md#remove-simulation-automations).|
+|Payload automation|18 months unless the [payload automation is deleted sooner by an admin](attack-simulation-training-payload-automations.md#remove-payload-automations).|
+|User activity in simulation metadata|18 months unless deleted by an admin.|
+|Global payloads|Persisted unless deleted by Microsoft.|
+|Tenant payloads|18 months unless the [archived payload is deleted sooner by an admin](attack-simulation-training-payloads.md#remove-archived-payloads).|
+|User activity in training metadata|18 months unless the [simulation is deleted sooner by an admin](attack-simulation-training-simulations.md#remove-simulations).|
+|MDO recommended payloads|6 months.|
+|Global end user notifications|Persisted unless deleted by Microsoft.|
+|Tenant end user notifications|18 months unless the [notification is deleted sooner by an admin](attack-simulation-training-end-user-notifications.md#remove-end-user-notifications).|
+|Global login pages|Persisted unless deleted by the service.|
+|Tenant login pages|18 months unless the [login page is deleted sooner by an admin](attack-simulation-training-login-pages.md#remove-login-pages).|
+|Global landing pages|Persisted unless deleted by Microsoft|
+|Tenant landing pages|18 months unless the [landing page is deleted sooner by an admin](attack-simulation-training-landing-pages.md#remove-landing-pages).|
 
-The following data is retained until you [delete the simulation](attack-simulation-training-simulations.md#remove-simulations):
+If the entire tenant is deleted, attack simulation training data is deleted after 90 days.
 
-- Tenant payloads
-- Notifications
-- Login pages
+For more information, see [Data retention information for Microsoft Defender for Office 365](mdo-data-retention.md).
 
 ### Q: Can I create, view, and manage simulations using an API?
 
-A: Read and write scenarios are supported using the Microsoft Graph API:
+A: Yes. Read and write scenarios are supported using the Microsoft Graph API:
 
 - `AttackSimulation.Read.All`:
   - Read simulation metadata
@@ -323,3 +354,11 @@ A: Read and write scenarios are supported using the Microsoft Graph API:
 - `AttackSimulation.ReadWrite.All`: Run simulations using the specified payloads, notifications, and login pages.
 
 For more information, see [List simulations](/graph/api/attacksimulationroot-list-simulations) and [Reports API overview for attack simulation training as part of Microsoft Defender for Office 365](/graph/api/resources/report-m365defender-reports-overview).
+
+### Q: Can I delete custom payloads?
+
+A: Yes. First you archive the payload, then you delete the archived payload. For instructions, see [Archive payloads](attack-simulation-training-payloads.md#archive-payloads).
+
+### Q: Can I modify the built-in payloads?
+
+A: Not directly. You can copy the payload and then modify the copy. For instructions, see [Copy payloads](attack-simulation-training-payloads.md#copy-payloads).
