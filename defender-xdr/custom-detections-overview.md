@@ -1,6 +1,6 @@
 ---
 title: Overview of custom detections in Microsoft Defender XDR
-description: Understand how you can use advanced hunting to create custom detections and generate alerts
+description: Understand how you can use advanced hunting to create custom detections and generate alerts.
 search.appverid: met150
 ms.service: defender-xdr
 ms.subservice: adv-hunting
@@ -11,9 +11,9 @@ author: schmurky
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: m
-    - m365-security
-    - tier2
+ms.collection:
+- m365-security
+- tier2
 ms.topic: conceptual
 ms.date: 02/16/2021
 ---

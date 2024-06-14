@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: yongrhee-MSFT
 ms.author: yongrhee
 ms.reviewer: pricci, yongrhee
-manager: dansimp
+manager: deniseb
 ms.custom: nextgen02
 ms.subservice: ngp
 ms.collection: 
