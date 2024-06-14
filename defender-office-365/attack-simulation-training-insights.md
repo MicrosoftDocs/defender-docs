@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how Attack simulation training in the Microsoft Defender portal affects users and can gain insights from simulation and training outcomes.
 search.appverid: met150
-ms.date: 3/14/2024
+ms.date: 06/14/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -51,7 +51,7 @@ To go to the **Overview** tab, open the Microsoft Defender portal at <https://se
 The distribution of insights on the tabs is described in the following table:
 
 |Report|Overview tab|Reports tab|
-|---|:---:|:---:.|
+|---|:---:|:---:|
 |[Recent simulations card](#recent-simulations-card)|✔||
 |[Recommendations card](#recommendations-card)|✔||
 |[Simulation coverage card](#simulation-coverage-card)|✔|✔|
