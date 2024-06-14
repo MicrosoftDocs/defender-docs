@@ -61,7 +61,7 @@ You can view the incidents related to Defender Experts by filtering the incident
 - To view the incidents our experts are currently investigating, use the **Incident assignment** filter, select **Assigned To Defender Experts**.
 - To view the incidents our experts have investigated and handed over to your team to act on pending remediation actions, using the **Incident assignment** filter, choose **Assigned To customer team**.
 
-   :::image type="content" source="media/new-incidents-filter.png" alt-text="Screenshot of the Incidents queue filtered to only show those with the Assigned to Defender Experts tag." lightbox="media/new-incidents-filter.png":::
+    :::image type="content" source="media/new-incidents-filter.png" alt-text="Screenshot of the Incidents queue filtered to only show those with the Assigned to Defender Experts tag." lightbox="media/new-incidents-filter.png":::
 
 - To view the incidents our experts have investigated and handed over to your team to act on pending remediation actions, using the **Status** filter, choose **Awaiting Customer Action**.
 
