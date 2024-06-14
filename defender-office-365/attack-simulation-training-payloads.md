@@ -245,6 +245,9 @@ To see payloads that have been archived (the **Status** value is **Archive**), u
 
            The name value that you entered is added to the message body as a link to the phishing URL. On the **Code** tab, the link value is `<a href="${phishingUrl}" target="_blank">Name value you specified</a>`.
 
+         > [!TIP]
+         > To add images, copy (CTRL+C) and paste (CTRL+V) the image into the editor on the **Text** tab. The editor automatically converts the image to Base64 as part of the HTML code. The maximum payload size for a simulation is 4MB.
+
        - **Code** tab: You can view and modify the HTML code directly.
 
        - **Replace all links in the email message with the phishing link** (**Credential Harvest**, **Link to Malware**, **Drive-by URL**, or **OAuth Consent Grant** techniques only): This toggle can save time by replacing all links in the message with the previously selected **Phishing link** or **Link for attachment** URL. To take this action, toggle the setting to on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
@@ -389,7 +392,7 @@ To restore an archive payload on the **Tenant payloads** tab, do the following s
 1. Set the **Show archived payloads** toggle to on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
 2. Select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/m365-cc-sc-archive-icon.png" border="false"::: **Restore**.
 
-After you've restored the archived payload, the **Status** value changes to **Draft**. Toggle **Show archived payloads** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the restored payload. To return the payload to the **Status** value **Ready**, [edit the payload](#modify-payloads), review or change the settings, and then select **Submit**.
+After you restore the archived payload, the **Status** value changes to **Draft**. Toggle **Show archived payloads** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the restored payload. To return the payload to the **Status** value **Ready**, [edit the payload](#modify-payloads), review or change the settings, and then select **Submit**.
 
 ## Send a test
 

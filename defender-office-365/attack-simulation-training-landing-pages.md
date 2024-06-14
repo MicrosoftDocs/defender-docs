@@ -122,6 +122,9 @@ In custom landing pages only, an **Edit landing page** link is available at the 
 
         - **Import from library**: Select an available template to start with. You can modify the text and layout in the editing area. To reset the landing page back to the default text and layout of the template, select **Reset to default**.
 
+       > [!TIP]
+       > To add images, copy (CTRL+C) and paste (CTRL+V) the image into the editor on the **Text** tab. The editor automatically converts the image to Base64 as part of the HTML code.
+
      - **Code** tab: You can view and modify the HTML code directly.
 
    You can preview the results by selecting **Preview phish landing page** at the top of the page.

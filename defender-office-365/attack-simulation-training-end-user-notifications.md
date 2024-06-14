@@ -147,6 +147,9 @@ On the details flyout from the **Tenant notifications** tab only, select **Edit 
 
        - **Use from default**: Select an available template to start with. You can modify the text and layout in the editing area. To reset the notification back to the default text and layout of the template, select **Reset to default**.
 
+       > [!TIP]
+       > To add images, copy (CTRL+C) and paste (CTRL+V) the image into the editor on the **Text** tab. The editor automatically converts the image to Base64 as part of the HTML code.
+
      - **Code** tab: You can view and modify the HTML code directly.
 
    You can preview the results by selecting **Preview email** at the top of the page.

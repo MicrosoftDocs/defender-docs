@@ -12,7 +12,7 @@ search.appverid:
   - MET150
   - MOE150
 ms.assetid:
-ms.collection: 
+ms.collection:
 - m365-security
 - tier2
 ms.custom:
@@ -79,6 +79,71 @@ The training threshold in training campaigns prevents users from having the same
 
 If you created a [simulation](attack-simulation-training-simulations.md#assign-training) or a [simulation automation](attack-simulation-training-simulation-automations.md#assign-training) with the training assignment value **Assign training for me (Recommended)**, we assign training based on a user's previous simulation and training results. To assign training based on specific criteria, select **Select training courses and modules myself**.
 
+### What happens when a user replies to or forwards a simulation message?
+
+If a user replies to or forwards a simulation message to another mailbox, the message is treated like a normal email message (including detonation by Safe Links or Safe Attachments). The [Simulation report](attack-simulation-training-insights.md#simulation-report-for-simulations) shows whether the simulation message was replied to or forwarded. Each URL in the simulation email is tied to an individual user, so Safe Links detonations are identified as clicks by the user.
+
+If you use a dedicated security operations (SecOps) mailbox, be sure to identify it as a SecOps in the [advanced delivery policy](advanced-delivery-policy-configure.md#use-the-microsoft-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy) so messages are delivered unfiltered.
+
+### How can I stagger the delivery of simulation messages?
+
+- Simulations offer [region aware delivery](#q-how-does-region-aware-delivery-work).
+- Simulation automations have a [simulation schedule page](attack-simulation-training-simulation-automations.md#simulation-schedule) where you can randomize delivery and configure other delivery details.
+
+Either way, it's important to use different payloads to avoid discussion and identification among users.
+
+### Why are images in simulation messages being blocked by Outlook?
+
+By default, Outlook is configured to block automatic image downloads in messages from the internet. Although you can [configure Outlook to automatically download images](https://support.microsoft.com/office/15e08854-6808-49b1-9a0a-50b81f2d617a), we don't recommend it due to the security implications (potential automatic download of malicious code or web bugs, also known as web beacons or tracking pixels).
+
+### I see clicks or compromise events from users who insist they didn't click the link in the simulation message
+
+Third-party filtering services might be to blame. For any non-Microsoft filtering systems that you use, you need to allow or exempt the following items:
+
+- All [Attack simulation training URLs](attack-simulation-training-get-started.md#simulations) and the corresponding domains. Currently, we don't send simulation messages from a static list of IP addresses.
+- Any other domains that you use in custom payloads.
+
+### Can I add the External tag or safety tips to simulation messages?
+
+Custom payloads have the option to add the External tag to messages. For more information, see Step 5 in [Create payloads](attack-simulation-training-payloads.md#create-payloads).
+
+There are no built-in options to add safety tips to payloads, but you can use the following methods on the **Configure payload** page of the payload setup wizard::
+
+- Use an existing email message that contains the safety tip as a template. Safe the message as HTML and copy the information.
+- Use the following sample code for the First contact safety tip:
+
+  ```html
+  <table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" align="left" width="100%" style="width:100.0%;mso-cellspacing:0in;mso-yfti-tbllook:1184;
+  mso-table-lspace:2.25pt;mso-table-rspace:2.25pt;mso-table-anchor-vertical:
+  paragraph;mso-table-anchor-horizontal:column;mso-table-left:left;mso-padding-alt:
+  0in 0in 0in 0in">
+  <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes">
+    <td style="background:#A6A6A6;padding:5.25pt 1.5pt 5.25pt 1.5pt"></td>
+    <td width="100%" style="width:100.0%;background:#EAEAEA;padding:5.25pt 3.75pt 5.25pt 11.25pt" cellpadding="7px 5px 7px 15px" color="#212121">
+    <div>
+    <p class="MsoNormal" style="mso-element:frame;mso-element-frame-hspace:2.25pt;
+    mso-element-wrap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizontal:
+    column;mso-height-rule:exactly"><span style="font-size:9.0pt;font-family:
+    wf_segoe-ui_normal;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+    Aptos;color:#212121;mso-ligatures:none">You don't often get email from
+    this sender <a rel="noopener" href="https://aka.ms/LearnAboutSenderIdentification" tabindex="-1" target="_blank">Learn why
+    this is important</a></span></p>
+    </div>
+    </td>
+    <td width="75" style="width:56.25pt;background:#EAEAEA;padding:5.25pt 3.75pt 5.25pt 3.75pt;
+    align:left" cellpadding="7px 5px 7px 5px" color="#212121"></td>
+   </tr>
+  </tbody></table>
+  <div>
+  <p class="MsoNormal"><span lang="DA" style="font-size:12.0pt;font-family:&quot;Georgia&quot;,serif;
+  color:black;mso-ansi-language:DA">Insert payload content here,</span></p>
+  </div>
+  ```
+
+### Can I assign training modules without putting users through a simulation?
+
+Yes. For more information, see [Training campaigns in Attack simulation training](attack-simulation-training-training-campaigns.md).
+
 ## Issues with Attack simulation training reporting
 
 ### Differences in user activity data from Attack simulation training reports and other reports
@@ -98,8 +163,12 @@ Audit logging is required by Attack simulation training so events can be capture
 
 To verify that audit logging is on or to turn it on, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
-> [!NOTE]
-> Empty activity details can also be caused by no E5 licenses being assigned to users. Verify at least one E5 license is assigned to an active user to ensure that reporting events are captured and recorded.
+> [!TIP]
+> Empty activity details are also caused by no E5 licenses being assigned to users. Verify at least one E5 license is assigned to an active user to ensure that reporting events are captured and recorded.
+>
+> User actions and admin actions are audited. In the Management Activity API, look for the [AuditLogRecordType](/office/office-365-management-api/office-365-management-activity-api-schema) values 85, 88, and 218.
+>
+> Some auditing information might also be available in the [CloudAppEvents table](/defender-xdr/advanced-hunting-cloudappevents-table) in Microsoft Defender XDR Advanced hunting via the Defender portal or the [Streaming API](/defender-xdr/streaming-api).
 
 ### Reporting issues with on-premises mailboxes
 
@@ -166,15 +235,22 @@ A: Several options are available to target users:
 - Select users from a CSV file (one email address per line).
 - Microsoft Entra group-based targeting.
 
-We've found that campaigns where the targeted users are identified by Microsoft Entra groups are easier to manage.
+We find that campaigns where the targeted users are identified by Microsoft Entra groups are easier to manage.
+
+### Q: How many training modules are there?
+
+Currently, there are 94 built-in trainings on the [Training modules](attack-simulation-training-training-modules.md) page.
 
 ### Q: Are there any limits in targeting users while importing from a CSV or adding users?
 
 A: The limit for importing recipients from a CSV file or adding individual recipients to a simulation is 40,000.
 
-A recipient can be an individual user or a group. A group might contain hundreds or thousands of recipients, so an actual limit isn't placed on the number of individual users.
+A recipient can be an individual user or a group. A group might contain hundreds or thousands of recipients. The upper limit on the number of users is 400,000, but we recommend a limit of 200,000 users for each simulation for best performance.
 
 Managing a large CSV file or adding many individual recipients can be cumbersome. Using Microsoft Entra groups simplify the overall management of the simulation.
+
+> [!TIP]
+> Currently, shared mailboxes aren't supported in Attack simulation training. Simulations should target user mailboxes or groups containing user mailboxes.
 
 ### Q: Does Microsoft provide payloads in other languages?
 
@@ -198,6 +274,9 @@ A: Yes you can! On the last **Review Simulation** page in the new simulation wiz
 
 :::image type="content" source="media/attack-sim-training-simulations-review-simulation.png" alt-text="The Send a test button on the Review simulation page" lightbox="media/attack-sim-training-simulations-review-simulation.png":::
 
+> [!TIP]
+> You can also use [Send a test](attack-simulation-training-payloads.md#send-a-test) from the **Payloads** page. But, if you ever use the selected payload in a simulation, the test message appears in the aggregate reports. You can export the results or use the [Microsoft Graph API](/graph/api/resources/report-m365defender-reports-overview) to filter the results.
+
 ### Q: Can I target users that belong to a different tenant as part of the same simulation campaign?
 
 A: No. Currently, cross-tenant simulations aren't supported. Verify that all of your targeted users are in the same tenant. Any cross-tenant users or guest users are excluded from the simulation campaign.
@@ -217,3 +296,30 @@ So, on the initial run of a campaign with region aware delivery enabled, it migh
 ### Q: Does Microsoft collect or store any information that users enter at the Credential Harvest sign-in page, used in the Credential Harvest simulation technique?
 
 A: No. Any information entered at the credential harvest sign-in page is discarded silently. Only the 'click' is recorded to capture the compromise event. Microsoft doesn't collect, log or store any details that users enter at this step.
+
+### Q: How long is simulation information retained? Can I delete simulation data?
+
+A: Simulation data is retained for 18 months from the date of generation. Data includes:
+
+- Simulation metadata
+- User activity
+- Aggregate reports
+
+The following data is retained until you [delete the simulation](attack-simulation-training-simulations.md#remove-simulations):
+
+- Tenant payloads
+- Notifications
+- Login pages
+
+### Q: Can I create, view, and manage simulations using an API?
+
+A: Read and write scenarios are supported using the Microsoft Graph API:
+
+- `AttackSimulation.Read.All`:
+  - Read simulation metadata
+  - Read user activity
+  - Read training data
+  - Read repeat offenders
+- `AttackSimulation.ReadWrite.All`: Run simulations using the specified payloads, notifications, and login pages.
+
+For more information, see [List simulations](/graph/api/attacksimulationroot-list-simulations) and [Reports API overview for attack simulation training as part of Microsoft Defender for Office 365](/graph/api/resources/report-m365defender-reports-overview).

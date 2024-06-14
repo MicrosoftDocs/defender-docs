@@ -116,6 +116,9 @@ When you select a login page from the list by clicking anywhere in the row other
 
        - **Add Next button**: Available only on **Page 1** of two-page logins. Select this link to add the 'Next' button to the login page. The default text on the button is **Next**, but you can change it.
 
+       > [!TIP]
+       > To add images, copy (CTRL+C) and paste (CTRL+V) the image into the editor on the **Text** tab. The editor automatically converts the image to Base64 as part of the HTML code.
+
      - **Code** tab: You can view and modify the HTML code directly.
 
    You can preview the results by clicking the **Preview email** button at the top of the page.
