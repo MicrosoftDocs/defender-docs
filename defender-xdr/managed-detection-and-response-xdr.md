@@ -15,7 +15,7 @@ ms.collection:
   - essentials-manage
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 06/13/2024
+ms.date: 06/14/2024
 ---
 
 # Managed detection and response
@@ -44,7 +44,7 @@ The **Determination** field corresponding to each classification is also updated
 
 :::image type="content" source="media/incidents-xdr-1.png" alt-text="Screenshot of Incidents page showing the Tags, Status, Assigned to, Classification, and Determination fields." lightbox="media/incidents-xdr-1.png":::
 
-If an incident is classified as _False Positive_ or _Informational_, _Expected Activity_, then the incident's **Status** field gets updated to _Resolved_. Our experts then conclude their work on this incident and the **Assigned to** field gets updated to _Unassigned_. Our experts may share updates from their investigation and their conclusion when resolving an incident. These updates are posted under _Investigation Summary_ in the incident's **Managed Response** flyout panel.
+If an incident is classified as _False Positive_ or _Informational_, _Expected Activity_, then the incident's **Status** field gets updated to _Resolved_. Our experts then conclude their work on this incident and the **Assigned to** field gets updated to _Unassigned_. Our experts might share updates from their investigation and their conclusion when resolving an incident. These updates are posted under _Investigation Summary_ in the incident's **Managed response** flyout panel.
 
 Otherwise, if an incident is classified as _True Positive_, our experts then identify the required response actions that need to be performed. The method in which the actions are performed depends on the permissions and access levels you have given the Defender Experts for XDR service. [Learn more about granting permissions to our experts](get-started-xdr.md#grant-permissions-to-our-experts).
 
@@ -56,16 +56,18 @@ You can check the number of incidents that require your action in the Defender E
 
 :::image type="content" source="/defender/media/xdr/view-incidents.png" alt-text="Screenshot of the Defender Experts card in Microsoft Defender portal showing the number of incidents awaiting customer action." lightbox="/defender/media/xdr/view-incidents.png":::
 
-- To view the incidents our experts are currently investigating, filter the incident queue in your Microsoft Defender portal using the **Incident assignment** > **Assigned To Defender Experts** filter.
-- To view the incidents our experts have investigated and handed over to your team to complete pending remediation actions, filter the incident queue in your Microsoft Defender portal using the **Incident assignment** > **Assigned To customer team** filter.
+You can view the incidents related to Defender Experts by filtering the incident queue in your Microsoft Defender portal using several filter sets. [Learn more about adding incident queue filters](../defender-xdr/incident-queue.md#filters)
+
+- To view the incidents our experts are currently investigating, use the **Incident assignment** filter, select **Assigned To Defender Experts**.
+- To view the incidents our experts have investigated and handed over to your team to act on pending remediation actions, using the **Incident assignment** filter, choose **Assigned To customer team**.
 
 :::image type="content" source="media/new-incidents-filter.png" alt-text="Screenshot of the Incidents queue filtered to only show those with the Assigned to Defender Experts tag." lightbox="media/new-incidents-filter.png":::
 
-To view the incidents our experts have investigated and handed over to your team to act on pending remediation actions, filter the incident queue in your Microsoft Defender portal using the **Status** > **Awaiting Customer Action**.
+- To view the incidents our experts have investigated and handed over to your team to act on pending remediation actions, using the **Status** filter, choose **Awaiting Customer Action**.
 
 :::image type="content" source="media/awaiting-customer-action-filter.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show those with the Awaiting customer action tag." lightbox="media/awaiting-customer-action-filter.png":::
 
-Finally, to view the incidents our experts have completed their investigated on (and either directly resolved or assigned to your team for pending remediation actions), filter the incident queue in your Microsoft Defender portal using the _Defender Experts_ tag.
+- To view the incidents our experts have completed their investigation on (and either directly resolved or assigned to your team for pending remediation actions), using the **Tags** filter, choose **Defender Experts**.
 
 :::image type="content" source="media/defender-experts-tag.png" alt-text="Screenshot of the Incidents queue in Microsoft Defender portal filtered to only show the Defender Experts tag." lightbox="media/defender-experts-tag.png":::
 
