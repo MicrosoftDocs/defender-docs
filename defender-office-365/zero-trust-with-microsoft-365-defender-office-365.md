@@ -8,7 +8,7 @@ f1.keywords:
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
   - m365-security

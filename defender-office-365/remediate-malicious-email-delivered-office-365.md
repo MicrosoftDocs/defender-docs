@@ -2,7 +2,7 @@
 title: Remediate malicious email that was delivered in Office 365
 author: chrisda
 ms.author: chrisda
-manager: dansimp
+manager: deniseb
 ms.topic: conceptual
 ms.collection:
 - m365-security
