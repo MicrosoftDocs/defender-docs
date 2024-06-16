@@ -57,7 +57,7 @@ Use the Microsoft 365 admin center manage your users, billing details, and more.
 
 Waiting for Belle feedback
 
-You now know the number of devices you need to protect in your network.
+You now know the number of devices in your network.
 
 ## Select license type (size) in admin center
 
