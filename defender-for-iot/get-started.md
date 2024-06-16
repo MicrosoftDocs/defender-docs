@@ -57,26 +57,6 @@ Use the Microsoft 365 admin center manage your users, billing details, and more.
 
 Belle - why are we documenting this for a trial license? Doesnt that come with a fixed size and time lenght. This should only be for later on when I am setting the fulll permanatnt license. for a trial version - how can we choose the devices if my site has more than the max of the trial license?
 
-## Calculate number of devices
-
-Waiting for Belle feedback
-
-You now know the number of devices in your network.
-
-## Select license type (size) in admin center
-
-Purchase the license for your network from the Microsoft 365 admin center, by ensuring it covers enough devices for your site needs.
-
-1. Go to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog) **Billing > Purchase services**. If you don't have this option select **Marketplace** instead.
-1. Search for **Defender for IoT**.
-1. Choose the license appropriate for the size of your site. There are five different sized licenses ranging from *Extra-large* for up to 5000 devices, to *extra-small* covering a maximum of 100 devices.
-
-    Make sure to select the number of licenses you want to purchase, based on the number of sites you're monitoring. You might need to select various licenses of different sizes if the number of devices at each site is different.
-    [Question: Do we document a situation where a company has eg 12000 devices, for one site. How should they be advised to purchase?]
-
-1. Complete the purchasing instructions.
-
-:::image type="content" source="media/365-center-iot-license.png" alt-text="Screenshot showing the license choices for Microsoft Defender for IoT.":::
 
 ## What next
 
