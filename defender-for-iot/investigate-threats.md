@@ -10,9 +10,10 @@ ms.topic: how-to
 ---
 
 # Investigate incidents and alerts
+<!-- change title  to investigate-alerts.md ?? LIMOR-->
+The **Incidents** page lists the type of treats that have or might compromise your network. The incident page displays a history of the alerts connected to the incident and an incident graph showing the other devices connected to the affected OT device which might also be compromised. The alert description explains the type of security issue detected and lists remidiation options to solve the security problem.
 
-overview of the alerts - help you understand what threats aexist
-in this article you learn .//.
+In this article you learn to investigate an incident and its associated alerts, and to remidiate them.
 
 ## Investigate alerts
 

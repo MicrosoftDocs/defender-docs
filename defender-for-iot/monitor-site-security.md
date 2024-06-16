@@ -87,7 +87,7 @@ This displays the number of high risk devices at this site and the change that o
 Select the number in the column, which opens the Device inventory filtered according to the site name and high risk level. <!-- check this will appear correctly, when there is test data to use -->
 
 ### View security recommendations
-<!-- recommendations arent being released yet!! should change the heading - Amit-->
+<!-- recommendations arent being released yet!! should change the heading - Amit will this be in general -->
 To view the security recommendations for a site:
 
 1. Select Assets > Devices in the menu to open the Device inventory.
