@@ -55,15 +55,16 @@ For more information, see the [Microsoft 365 admin center help](/microsoft-365/a
 
 Use the Microsoft 365 admin center to manage your users, billing details, and more. For more information, see the [Microsoft 365 admin center help](/microsoft-365/admin/).
 
->[!NOTE] This trial license covers up to 1,000 devices. When moving to a permanent license you will need to know the total number of devices and choose the appropriate license to cover the needs of your network.
->This might mean choosing a larger or smaller sized license package.
+>[!NOTE]
+>This trial license covers up to 1,000 devices. When moving to a permanent license you will need to know the total number of devices and choose the appropriate license to cover the needs of your network. This might mean choosing a larger or smaller sized license package.
 > For more information, see [license admin center ](license-admin.md).
 
 Belle - for a trial version - how can we choose the devices if my site has more than the max of the trial license?
 
 Once you have a trial license, go to [Set up a new site](set-up-sites.md) so that Microsoft Defender for IoT sends data to the XDR portal.
 
-## What next
+## Next steps
 
-[Set up a new site](set-up-sites.md)
-[Buy a permanant license](license-admin.md)
+> [!div class="step-by-step"]
+> [Set up a new site](set-up-sites.md)
+> [Buy a permanant license](license-admin.md)

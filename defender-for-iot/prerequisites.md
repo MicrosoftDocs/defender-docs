@@ -40,11 +40,8 @@ This article is relevant for commercial Defender for IoT customers. If you're a 
 
 ## Next steps
 
-[Get started](get-started.md)
-[Set up a site](set-up-site.md)
-[Set up a permanant license](license-admin.md)
 > [!div class="step-by-step"]
 > [Defender for IoT OT deployment path »](/ot-deploy/ot-deploy-path.md)
->[Get started](get-started.md)
-[Set up a site](set-up-site.md)
-[Set up a permanant license](license-admin.md)
+> [Get started »](get-started.md)
+> [Set up a site »](set-up-site.md)
+> [Set up a permanant license »](license-admin.md)
