@@ -16,7 +16,7 @@ Defender for IoT monitors and secures network traffic across your OT networks. T
 
 A trial supports a **Large** sized site with up to 1,000 devices, and lasts for 90 days. You might want to use this trial with your existing OT devices to monitor traffic, analyze data, generate alerts, understand network risks and vulnerabilities, and more.
 
-For more information, see [ is there an article to link to or should this be removed?]]
+For more information, see [ is there an article to link to or should this be removed?]
 
 ## Prerequisites
 
