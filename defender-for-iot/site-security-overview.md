@@ -16,7 +16,7 @@ ms.topic: concept-article
 
 # Site Security
 
-The Site security page in the Defender portal is a dashboard that offers an <!--high level -->overview of the security state of your entire OT/IoT network. The CISO and security site manager can use this dashboard to identify the most critical areas to work on and prevent and respond to advanced threats.
+The Site security page in the Defender portal is a dashboard that offers an overview of the security state of your entire OT/IoT network. The CISO and security site manager can use this dashboard to identify the most critical areas to work on and prevent and respond to advanced threats.
 
 ## Site security features and benefits
 
@@ -26,9 +26,11 @@ The aggregated view shows data for sites with the highest exposure and incident 
 
 The Site security features include:
 
-- Speedy set up: Defender for IoT identifies all OT/IoT devices it can identify at a specific physical location and assigns them to a **Site**. Defender for IoT uses Microsoft for Endpoint agents already on your network to identify all of the OT devices and automatically add them to the site. This enables the faster and more accurate onboarding of devices into the XDR portal, which means your network starts to be secured and monitored without the need to add new equipment or a lengthy process of logging each of your OT devices.
+- Speedy set up: Defender for IoT identifies all OT/IoT devices it can at a specific physical location and assigns them to a **Site**. Defender for IoT uses Microsoft for Endpoint agents already on your network to identify all of the OT devices and automatically add them to the site. This enables the faster and more accurate onboarding of devices into the XDR portal, which means your network starts to be secured and monitored without the need to add new equipment or a lengthy process of logging each of your OT devices.
 - Associate OT devices: You can add specific OT devices to the site, which then identify other devices to be added to the device inventory.
 - Authorized users: Device group's can restrict a specific group of users based on site access or security policies and can apply across the entire XDR portal. [A device group is a collection of devices that share common attributes or security policies.]
+- Seemless site and device management: The Site security dashboard enables administrators to easily add and manage new sites and devices to the existing network set up.
+- Quick response to risks: The data and links from the dashboard take the user to other relevant areas in the XDR portal, helping to swiftly deal with security risks and complete tasks.
 
 ## Site security dashboard
 
