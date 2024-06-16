@@ -9,4 +9,27 @@ ms.date: 05/19/2024
 ms.topic: how-to
 ---
 
-# Investigate threats
+# Investigate incidents and alerts
+<!-- change title  to investigate-alerts.md ?? LIMOR-->
+The **Incidents** page lists the type of treats that have or might compromise your network. The incident page displays a history of the alerts connected to the incident and an incident graph showing the other devices connected to the affected OT device which might also be compromised. The alert description explains the type of security issue detected and lists remidiation options to solve the security problem.
+
+In this article you learn to investigate an incident and its associated alerts, and to remidiate them.
+
+## Investigate alerts
+
+Investigate threats to your OT/IoT devices using the **Incidents** page, which shows the list of security events affecting your IT and OT devices.
+
+1. In the Defender portal, go to **Incidents & alerts > Incidents**.
+
+1. Set any filter settings as you need them.
+
+1. Locate and select an incident.
+
+    The specific incident page shows the Attack story made up of the alert timeline, an Incident graph and the Incident details panel. The Incident graph will show you the OT device and the other IT or IoT devices that it connects with to show the possible vulnerabilities.
+
+1. Choose an alert from the Alerts list and the Incident graph and Incident details panel updates with specific data for this alert.
+
+1. In the Incident panel, scroll through the information, read the **Alert description** and follow the **Alert recommended actions** to remediate the problem.
+
+<!-- screen shots - any examples - for 3 and 5 AMIT - we will wait to see if there is updates to the environment, if not add these afterwards. -->
+## Next steps
