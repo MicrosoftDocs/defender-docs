@@ -53,12 +53,17 @@ For more information, see the [Microsoft 365 admin center help](/microsoft-365/a
 
 ---
 
-Use the Microsoft 365 admin center manage your users, billing details, and more. For more information, see the [Microsoft 365 admin center help](/microsoft-365/admin/).
+Use the Microsoft 365 admin center to manage your users, billing details, and more. For more information, see the [Microsoft 365 admin center help](/microsoft-365/admin/).
 
-Belle - why are we documenting this for a trial license? Doesnt that come with a fixed size and time lenght. This should only be for later on when I am setting the fulll permanatnt license. for a trial version - how can we choose the devices if my site has more than the max of the trial license?
+>[!NOTE] This trial license covers up to 1,000 devices. When moving to a permanent license you will need to know the total number of devices and choose the appropriate license to cover the needs of your network.
+>This might mean choosing a larger or smaller sized license package.
+> For more information, see [license admin center ](license-admin.md).
 
+Belle - for a trial version - how can we choose the devices if my site has more than the max of the trial license?
+
+Once you have a trial license, go to [Set up a new site](set-up-sites.md) so that Microsoft Defender for IoT sends data to the XDR portal.
 
 ## What next
 
-[Set up a new site](set-up-sites.md).
-Buy a permanant license <!-- when and where do we need to add or discuss a permanant license? Can we wait until the next stage to add this information? How will it be done? -->
+[Set up a new site](set-up-sites.md)
+[Buy a permanant license](license-admin.md)

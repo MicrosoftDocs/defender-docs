@@ -41,7 +41,7 @@
       - name: Manage OT devices in the inventory
         href: manage-devices-inventory.md
       - name: License admin centre
-        href: license.md  
+        href: license-admin.md  
     - name: Resources
       items:
       - name: Glossary
