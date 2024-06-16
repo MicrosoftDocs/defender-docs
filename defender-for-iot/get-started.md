@@ -66,5 +66,5 @@ Once you have a trial license, go to [Set up a new site](set-up-sites.md) so tha
 ## Next steps
 
 > [!div class="step-by-step"]
-> [Set up a new site](set-up-sites.md)
-> [Buy a permanant license](license-admin.md)
+> [Set up a new site](set-up-sites.md)<br>
+> [Buy a permanant license](license-admin.md)<br>
