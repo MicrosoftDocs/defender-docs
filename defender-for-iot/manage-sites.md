@@ -44,4 +44,4 @@ Also see [create and manage roles in Microsoft Defender for Endpoint](/defender-
 
 ## Next steps
 
-What should go here?
+> [!div class="step-by-step"]

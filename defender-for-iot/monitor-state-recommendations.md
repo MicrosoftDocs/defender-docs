@@ -21,3 +21,7 @@ This is the fourth article.
 ## Monitoring
 
 Here are some words.
+
+## Next steps
+
+> [!div class="step-by-step"]

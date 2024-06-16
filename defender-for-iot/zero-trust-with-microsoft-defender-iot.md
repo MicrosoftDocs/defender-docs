@@ -49,6 +49,7 @@ Defender for Endpoint provides the following threat protections:
 
 ## Next steps
 
+> [!div class="step-by-step"]
 Learn more about Zero Trust and how to build an enterprise-scale strategy and architecture with the [Zero Trust Guidance Center](/security/zero-trust).
 
 For endpoint protection concepts and deployment objectives, see [Secure endpoints with Zero Trust](/security/zero-trust/deploy/endpoints).

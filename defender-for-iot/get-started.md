@@ -11,14 +11,16 @@ ms.topic: how-to
 
 # Get started with Defender for IoT
 
-intro lines
+This article explains how to create a trial license for Microsoft Defender for IoT. Once you have a trial license you can continue to set up a site to monitor the OT devices at that location. The trial license is limited to a maximum of 1,000 OT devices, and when fully set up, shows you the features and security insights available for your network.
+
+## Prerequisites
+
+To sign up for a trial license you need to have a global or billing Admin Entra account. [Is this correct?]
 
 ## Add a trial license
 
-This procedure describes how to add a trial license for Defender for IoT. One trial license is available per tenant.
-
-To add a trial license with a new tenant, we recommend that you use the Trial wizard. If you already have a tenant, use the Microsoft 365 Marketplace to add a trial license to your tenant.
-
+To add a trial license with a new tenant, we recommend that you use the Trial wizard. One trial license is available per tenant. If you already have a tenant, use the Microsoft 365 Marketplace to add a trial license to your tenant.
+<!-- Change the tabs to h3 headings -->
 # [Add a trial with the Trial wizard](#tab/wizard)
 
 **To add a trial license with a new tenant**:
@@ -66,5 +68,5 @@ Once you have a trial license, go to [Set up a new site](set-up-sites.md) so tha
 ## Next steps
 
 > [!div class="step-by-step"]
-> [Set up a new site](set-up-sites.md)<br>
+> [Set up a new site](set-up-sites.md)<br><br>
 > [Buy a permanant license](license-admin.md)<br>

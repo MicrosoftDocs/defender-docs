@@ -24,3 +24,7 @@ After the initial setup, provide a guide on understanding:
 
 - the business impact and security concerns related to the sites.
 - This includes the sites grid, site side panel and the cross-site banner metrics.
+
+## Next steps
+
+> [!div class="step-by-step"]
