@@ -33,3 +33,5 @@ Investigate threats to your OT/IoT devices using the **Incidents** page, which s
 
 <!-- screen shots - any examples - for 3 and 5 AMIT - we will wait to see if there is updates to the environment, if not add these afterwards. -->
 ## Next steps
+
+> [!div class="step-by-step"]

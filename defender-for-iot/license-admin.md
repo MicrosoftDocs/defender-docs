@@ -44,6 +44,6 @@ Purchase the license for your network from the Microsoft 365 admin center, by en
 
 :::image type="content" source="media/365-center-iot-license.png" alt-text="Screenshot showing the license choices for Microsoft Defender for IoT.":::
 
-Next Steps
+## Next steps
 
-What is here?
+> [!div class="step-by-step"]

@@ -28,9 +28,9 @@ Before you start, you need:
 
     For more information, see [Buy or remove licenses for a icrosoft business subscription](/microsoft-365/commerce/licenses/buy-licenses) and [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles).
 
-1. Credit card details for your new [Azure - REMOVE] subscription, although you aren't charged until you switch from the **Free Trial** to the **Pay-As-You-Go** plan.
-
-1. An understanding of your site size. For more information, see [Calculate devices in your network](best-practices/plan-prepare-deploy.md#calculate-devices-in-your-network). [waiting for update to this from Belle [link to here](get-started.md#calculate-number-of-devices)].
+1. Credit card details for your new subscription, although you aren't charged until you switch from the **Free Trial** to the **Pay-As-You-Go** plan.
+<!-->
+1. An understanding of your site size. For more information, see [Calculate devices in your network](best-practices/plan-prepare-deploy.md#calculate-devices-in-your-network). [waiting for update to this from Belle [link to here](get-started.md#calculate-number-of-devices)]. [Remove this, it isnt needed at this stage] -->
 
 This article is relevant for commercial Defender for IoT customers. If you're a government customer, contact your Microsoft sales representative for more information. [Is there a link for this? or not needed?]
 
@@ -41,7 +41,7 @@ This article is relevant for commercial Defender for IoT customers. If you're a 
 ## Next steps
 
 > [!div class="step-by-step"]
-> [Defender for IoT OT deployment path »](/ot-deploy/ot-deploy-path.md)<br>
-> [Get started »](get-started.md)<br>
-> [Set up a site »](set-up-sites.md)<br>
-> [Set up a permanant license »](license-admin.md)<br>
+> [Defender for IoT OT deployment path »](/ot-deploy/ot-deploy-path.md)<br><br>
+> [Get started »](get-started.md)<br><br>
+> [Set up a site »](set-up-sites.md)<br><br>
+> [Set up a permanant license »](license-admin.md)

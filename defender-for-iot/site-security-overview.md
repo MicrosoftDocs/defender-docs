@@ -46,10 +46,12 @@ This dashboard is especially important for two positions in your company. The CI
 
 Summarized data for a specific site can be displayed on the dashboard allowing further analysis without having to filter through the more detailed device inventory.  
 
-## Next Steps
+## Next steps
 
-- [Set up sites in Defender for IoT](set-up-sites.md)
-- [Manage sites](manage-sites.md)
+> [!div class="step-by-step"]
+>
+> [Set up sites in Defender for IoT](set-up-sites.md)<br><br>
+> [Manage sites](manage-sites.md)
 
 <!-- do i need any of this, i think it has all be written above 
 Defender for IoT uses the MDE agent to identify and locate other OT and IoT devices at the same location and adds them to the Device inventory. Before setting up a Defender for IoT site, OT devices listed in the Device inventory show minimal data. Once the OT devices are associated with a site, they show the full range of security related data available, including risk and exposure data.
