@@ -33,7 +33,6 @@ Before you start, you need:
 1. An understanding of your site size. For more information, see [Calculate devices in your network](best-practices/plan-prepare-deploy.md#calculate-devices-in-your-network). [waiting for update to this from Belle [link to here](get-started.md#calculate-number-of-devices)].
 
 This article is relevant for commercial Defender for IoT customers. If you're a government customer, contact your Microsoft sales representative for more information. [Is there a link for this? or not needed?]
-<!-- I have also copied this to the getting started article, which is where I think it belongs can be deleted from here?? Limor-->
 
 ## Permissions - Mia
 
@@ -41,7 +40,11 @@ This article is relevant for commercial Defender for IoT customers. If you're a 
 
 ## Next steps
 
-Get started and set up a license
-
+[Get started](get-started.md)
+[Set up a site](set-up-site.md)
+[Set up a permanant license](license-admin.md)
 > [!div class="step-by-step"]
 > [Defender for IoT OT deployment path »](/ot-deploy/ot-deploy-path.md)
+>[Get started](get-started.md)
+[Set up a site](set-up-site.md)
+[Set up a permanant license](license-admin.md)
