@@ -11,12 +11,14 @@ ms.topic: how-to
 
 # Get started with Defender for IoT
 
-## Add trial license/permanent license
-<!-- where do we talk about permanent licenses? not here yet? What does that include doing? -->
-This procedure describes how to add a trial license for Defender for IoT [to your Azure subscription - CHANGE to the Defender portal?]. One trial license is available per tenant.
+intro lines
+
+## Add a trial license
+
+This procedure describes how to add a trial license for Defender for IoT. One trial license is available per tenant.
 
 To add a trial license with a new tenant, we recommend that you use the Trial wizard. If you already have a tenant, use the Microsoft 365 Marketplace to add a trial license to your tenant.
-<!-- Limor, we can remove the tabs and present as two options? -->
+
 # [Add a trial with the Trial wizard](#tab/wizard)
 
 **To add a trial license with a new tenant**:
@@ -53,6 +55,8 @@ For more information, see the [Microsoft 365 admin center help](/microsoft-365/a
 
 Use the Microsoft 365 admin center manage your users, billing details, and more. For more information, see the [Microsoft 365 admin center help](/microsoft-365/admin/).
 
+Belle - why are we documenting this for a trial license? Doesnt that come with a fixed size and time lenght. This should only be for later on when I am setting the fulll permanatnt license. for a trial version - how can we choose the devices if my site has more than the max of the trial license?
+
 ## Calculate number of devices
 
 Waiting for Belle feedback
@@ -77,3 +81,4 @@ Purchase the license for your network from the Microsoft 365 admin center, by en
 ## What next
 
 [Set up a new site](set-up-sites.md).
+Buy a permanant license <!-- when and where do we need to add or discuss a permanant license? Can we wait until the next stage to add this information? How will it be done? -->
