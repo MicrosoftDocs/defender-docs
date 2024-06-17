@@ -102,7 +102,7 @@ Even when the correlation logic indicates that two incidents should be merged, D
 - One of the incidents has a status of "Closed". Incidents that are resolved don’t get reopened.
 - The two incidents eligible for merging are assigned to two different people.
 - Merging the two incidents would raise the number of entities in the merged incident above the maximum allowed.
-- The two incidents contain devices in different [device groups](../defender-endpoint/machine-groups.md) as defined by the organization. <br>(This condition is not in effect by default; it must be enabled.)
+- The two incidents contain devices in different [device groups](/defender-endpoint/machine-groups) as defined by the organization. <br>(This condition is not in effect by default; it must be enabled.)
 - One of the incidents was created by a custom detection, and the other was not. <br>(If two incidents were *both* created by custom detections, they can be merged.)
 
 ### What happens when incidents are merged?
