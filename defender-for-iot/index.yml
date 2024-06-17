@@ -26,16 +26,16 @@ landingContent:
   # Card (optional)
   - title: Defender for IoT
     linkLists:
-      - linkListType: get-started
+      - linkListType: overview
         links:
-        - text: Evaluate Microsoft Defender for IoT
+        - text: What is Microsoft Defender for IoT?
+          url: microsoft-defender-iot.md
+      - linkListType: concept
+        links:
+        - text: Whats new in Defender for IoT?
           url: compare-defender-azure.md
-        - text: Set up Sites
-          url: set-up-sites.md
-      - linkListType: deploy
-        links:
-          - text: Site security overview
-            url: site-security-overview.md
+        - text: Site security overview
+          url: site-security-overview.md
       - linkListType: how-to-guide
         links:
           - text: Manage sites
@@ -44,46 +44,36 @@ landingContent:
             url: monitor-site-security.md
 
 # Card
-  - title: Evaluate & deploy the service
+  - title: Get started
     linkLists:
       - linkListType: get-started
         links:
-        - text: Evaluate Microsoft Defender for Endpoint
-          url: /defender-endpoint/evaluation-lab.md
-      - linkListType: deploy
-        links:
-          - text: Deployment guide
-            url: /defender-endpoint/mde-planning-guide.md
-          - text: Onboard supported devices
-            url: /defender-endpoint/onboard-configure.md
-          - text: Set up and configure Defender for Endpoint Plan 1
-            url: /defender-endpoint/mde-p1-setup-configuration.md
-      - linkListType: how-to-guide
-        links:
-          - text: Migration guide
-            url: /defender-endpoint/migration-guides.md
-      - linkListType: video
-        links:
-          - text: Onboarding video
-            url:  https://www.microsoft.com/videoplayer/embed/RE4bGqr
+        - text: Microsoft Defender for IoT Prerequisites
+          url: prerequisites.md
+      - linkListType: get-started
+        links: 
+        - text: Get started
+          url: get-started.md
+      - linkListType: quickstart
+        links: 
+        - text: Set up Sites
+          url: set-up-sites.md
 
 # Card
-  - title: Security operations
+  - title: How-to
     linkLists:
-      - linkListType: overview
+      - linkListType: how-to-guide
         links:
-        - text: Endpoint detection and response
-          url: /defender-endpoint/overview-endpoint-detection-response.md
-        - text: Behavioral blocking and containment
-          url: /defender-endpoint/behavioral-blocking-containment.md
-        - text: Automated investigation and response (AIR)
-          url: /defender-endpoint/automated-investigations.md
-        - text: Advanced hunting
-          url: /defender-xdr/advanced-hunting-overview
-        - text: Microsoft Threat Experts
-          url: /defender-endpoint/endpoint-attack-notifications.md
-        - text: Threat analytics
-          url: /defender-endpoint/threat-analytics.md
+        - text: Monitor site security
+          url: monitor-site-security.md
+        - text: Navigate the weakness page
+          url: navigate-weakness-page.md
+        - text: Discover vulnerabilities
+          url: discover-vulnerabilities.md
+        - text: Investigate incidents and alerts
+          url: investigate-threats.md
+        - text: Manage sites
+          url: manage-sites.md
 
   # Card
   - title: Use Microsoft Defender for IoT on other platforms
@@ -101,7 +91,7 @@ landingContent:
 
 
 # Card
-  - title: Reference
+  - title: Resources
     linkLists:
       - linkListType: reference
         links:
@@ -109,15 +99,3 @@ landingContent:
           url: /defender-endpoint/api/management-apis.md
         - text: Partner integration
           url: /defender-endpoint/partner-integration.md
-
-# Card
-  - title: Security administration
-    linkLists:
-      - linkListType: overview
-        links:
-        - text: Microsoft Defender Vulnerability Management
-          url: /defender-vulnerability-management/defender-vulnerability-management
-        - text: Attack surface reduction
-          url: /defender-endpoint/overview-attack-surface-reduction.md
-        - text: Next-generation protection
-          url: /defender-endpoint/next-generation-protection.md         

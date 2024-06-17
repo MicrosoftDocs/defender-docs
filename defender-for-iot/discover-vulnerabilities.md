@@ -12,3 +12,7 @@ ms.topic: how-to
 # Discover vulnerabilities
 
 Here are some words.
+
+## Next steps
+
+> [!div class="step-by-step"]
