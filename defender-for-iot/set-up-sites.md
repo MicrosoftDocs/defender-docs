@@ -19,14 +19,14 @@ Defender for IoT uses the MDE agent to identify and locate other OT and IoT devi
 
 - Review [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
 - OT Security Admin with MDE P2/E5. For more information, see [Microsoft Defender for Endpoint subscriptions settings](/defender-endpoint/defender-endpoint-subscription-settings.md).
-- Microsoft Defender for IoT license with at least one site license available. For more information, see [Microsoft Defender for IoT subscriptions settings](license-admin-center.md).
+- Microsoft Defender for IoT trial license or a permanant license with at least one site license available. For more information, see [Microsoft Defender for IoT subscriptions settings](get-started.md).
 - We recommend you have IP or MAC address details of at least one OT device at the site.
 
-## Set up a new site
+## Create a site
 
-<!-- do we need to first .. .lines? - LImor -->
+To set up a site and associate the OT devices in your network to it:
 
-1. Log into Microsoft Defender XDR portal [XDR ??].
+1. Log into Microsoft Defender portal.
 1. Select **Operational Technology** in the side menu bar.
 1. Select **Site security**.
 1. In the Site security dashboard, select **Create new site** or **Create Your First Site**.
@@ -107,4 +107,5 @@ Also see [create and manage roles in Microsoft Defender for Endpoint](/defender-
 
 ## Next steps
 
+> [!div class="step-by-step"]
 Information about ranking

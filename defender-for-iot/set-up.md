@@ -10,3 +10,7 @@ ms.topic: how-to
 ---
 
 # Set up - what goes here?
+
+## Next steps
+
+> [!div class="step-by-step"]
