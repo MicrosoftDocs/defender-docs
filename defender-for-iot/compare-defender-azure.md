@@ -2,8 +2,8 @@
 title: Compare Defender for IoT in the Azure portal with Defender for IoT in the Defender portal
 description: TBD
 ms.service: defender-for-iot
-ms.author: limwainstein
-author: lwainstein
+ms.author: lwainstein
+author: limwainstein
 ms.localizationpriority: medium
 manager: rayne-wiselman
 ms.topic: conceptual
