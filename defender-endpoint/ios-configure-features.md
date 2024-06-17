@@ -411,8 +411,8 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 > [!NOTE] 
 > The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
 
-## Suppress Operating Systems update Notification
-A configuration is available for customers to suppress OS update notification in Defender for Endpoint on iOS. Once the config key is set in Intune App configuration policies, Defender for Endpoint will not send any notifications on the device for OS updates. However, if you do open the Defender app the Device Health card will be visible and show the state of your OS. 
+## Suppress OS update Notification
+A configuration is available for customers to suppress OS update notification in Defender for Endpoint on iOS. Once the config key is set in the Intune App configuration policies, Defender for Endpoint will not send any notifications on the device for OS updates. However, if you do open the Defender app the Device Health card will be visible and show the state of your OS. 
 
 This configuration is available for both the enrolled (MDM) devices as well as unenrolled (MAM) devices. Admins can use the following steps to suppress the OS update Notification.
 
@@ -421,7 +421,7 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 **For enrolled devices(MDM)**
 
 1. In the Microsoft Intune admin center, navigate to Apps \> App configuration policies \> Add \> Managed devices.
-1. Give the policy a name, select Platform \> iOS/iPadOS
+1. Give the policy a name, select Platform \> iOS/iPadOS.
 1. Select Microsoft Defender for Endpoint as the target app. 
 1. In Settings page, select Use configuration designer and add **SuppressOSUpdateNotification** as the key and value type as **String**.
 1. By default, SuppressOSUpdateNotification = false.
