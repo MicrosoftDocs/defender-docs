@@ -69,7 +69,7 @@ Enterprise IoT devices can include devices such as printers, smart TVs, and conf
 
 For more information, see Securing IoT devices in the enterprise.
 
-## What are the supported service regions?
+## Which regions does Defender for IoT support?
 
 Defender for IoT routes all traffic from all European regions to the West Europe regional datacenter. It routes traffic from all remaining regions to the East US regional datacenter.
 
