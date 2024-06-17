@@ -26,7 +26,7 @@ Defender for IoT monitors IoT networks and devices, and integrates with both ind
 
 - Use the [**Site security**](site-security-overview.md) dashboard to gain valuable insights into OT risks in production sites, make better-informed security investment decisions​, and streamline communication between IT and OT security stakeholders​.
 - [**Discover OT devices**](manage-devices-inventory.md) to gain a full overview of IT, IoT, and OT assets across the entire organization, identify vulnerabilities and mitigate risks, reduce downtime and monitor your top assets, and support regulatory compliance.​
-- **Investigate key incidents and alerts** to address OT threats, context and multi-stage IT-OT incidents, without the need for expertise in complex investigation tools.
+- [**Investigate key incidents and alerts**](investigate-threats.md) to address OT threats, context and multi-stage IT-OT incidents, without the need for expertise in complex investigation tools.
 
 ## Who uses Defender for IoT?
 
@@ -57,9 +57,9 @@ You can deploy Defender for IoT in one of three verticals:
 - **Hybrid**. Connect some of your OT sensors to the cloud and view data on the Azure portal, and keep other sensors managed on-premises only.
 - **Air-gapped and on-premises**. Connect your OT network sensors to an on-premises management console for central visibility and control.
 
-## Defender for IoT on Azure and Defender for IoT in the Defender portal
+## What's the difference between Defender for IoT on Azure and Defender for IoT in the Defender portal?
 
-See [Compare Defender for IoT in the Azure portal with Defender for IoT in the Defender portal](compare-defender-azure.md)
+See [Compare Defender for IoT in the Azure portal with Defender for IoT in the Defender portal](compare-defender-azure.md).
 
 ## Protect enterprise IoT networks
 
@@ -69,7 +69,7 @@ Enterprise IoT devices can include devices such as printers, smart TVs, and conf
 
 For more information, see Securing IoT devices in the enterprise.
 
-## Supported service regions
+## What are the supported service regions?
 
 Defender for IoT routes all traffic from all European regions to the West Europe regional datacenter. It routes traffic from all remaining regions to the East US regional datacenter.
 
