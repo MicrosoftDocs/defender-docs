@@ -5,7 +5,7 @@ f1.keywords:
 - NOCSH
 author: dansimp
 ms.author: dansimp
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -33,6 +33,9 @@ In organizations with Microsoft Defender for Office 365, the usage card is avail
 > [!TIP]
 > The usage card is enabled for tenants with at least one paid Defender for Office 365 Plan 1 or Defender for Office 365 Plan 2 license.
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 Usage cards can help determine the following scenarios:
 
 - The active usage of Exchange Online licenses and how many of those licenses are active usage of Microsoft Defender for Office 365.
@@ -47,7 +50,7 @@ Usage cards can help determine the following scenarios:
 
    :::image type="content" source="media/usage-card-mdo.png" alt-text="The Defender for Office 365 usage card in the Defender portal." lightbox="media/usage-card-mdo.png":::
 
-For members of **Global Administrator** or **Billing Administrator** roles in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal), following items are available on the card:
+For members of **Billing Administrator** and **Global Administrator** roles in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal), following items are available on the card:
 
 - **Add more licenses**
 - **See licensing details**
@@ -74,7 +77,7 @@ The details flyout that opens contains the following information from the last 2
 
 **Threat protection status report** takes you to the [Threat protection status report](reports-email-security.md#threat-protection-status-report).
 
-**See licensing details** is available for members of the **Global Administrators** or **Security Operator** roles in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
+**See licensing details** is available for members of the **Security Operator** and  **Global Administrators** roles in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
 
 ## Frequently asked questions
 

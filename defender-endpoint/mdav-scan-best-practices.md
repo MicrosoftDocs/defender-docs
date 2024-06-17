@@ -12,7 +12,7 @@ ms.custom:
 - nextgen
 - partner-contribution
 ms.reviewer: pahuijbr, tudobril, yongrhee, bsabetghadam
-manager: dansimp
+manager: deniseb
 ms.subservice: ngp
 ms.collection: 
 - m365-security
