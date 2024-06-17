@@ -1,26 +1,33 @@
 ---
-title: Compare the new Microsoft Defender for IoT in Defender portal with the Azure portal.
-description: This article compares the new Microsoft Defender for IoT in XDR Defender portal with the Azure portal.
+title: Compare Defender for IoT in the Azure portal with Defender for IoT in the Defender portal
+description: TBD
 ms.service: defender-for-iot
+ms.author: limwainstein
 author: lwainstein
-ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 05/19/2024
-manager: deniseb
-audience: ITPro
-ms.collection:
-- m365-security
-- tier2
-ms.topic: concept-article
+manager: rayne-wiselman
+ms.topic: conceptual
+ms.date: 06/17/2024
 ---
 
-# Comparing Microsoft Defender for IoT in Defender portal with the Azure portal
+# Compare Defender for IoT in the Azure portal with Defender for IoT in the Defender portal
 
-[From Amit - I think this will go well in this article]
+This article discusses the differences between Defender for IoT in the Azure portal with Defender for IoT in the Defender portal.
 
-Understanding Business Impact and Security Concerns:
+Defender for IoT in the Defender portal is currently in public preview.
 
-After the initial setup, provide a guide on understanding:
+[!INCLUDE [prerelease](../includes//prerelease.md)]
 
-- the business impact and security concerns related to the sites.
-- This includes the sites grid, site side panel and the cross-site banner metrics.
+## Comparison
+
+**Area** | **Azure portal** | **Defender portal**
+--- | --- | ---
+**Business goal** | TBD | TBD
+**Site security and monitoring** | TBD | TBD
+**Device discovery** | TBD | TBD
+**Incidents and alerts** | TBD | TBD
+**Licensing** | TBD |  TBD
+
+## Next steps
+
+Review the [prerequisites](prerequisites.md) to get started with Defender for IoT.
