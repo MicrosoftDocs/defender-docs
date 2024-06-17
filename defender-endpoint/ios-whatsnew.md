@@ -32,7 +32,7 @@ Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](
 
 ## User Enrollment
 
-Microsoft Defender iOS app can now be deployed on the Intune User Enrolled devices. This new feature offers security and IT teams the flexibility to deploy Defender for Endpoint to user-enrolled devices so that work data and applications are protected, while end-user privacy is upheld on those devices. For more information, see [User Enrollment setup](ios-install.md#user-enrollment-setup-only-for-intune-user-enrolled-devices).  
+Microsoft Defender for Endpoint iOS can now be deployed on Intune User Enrolled devices. This new feature offers security and IT teams the flexibility to deploy Defender for Endpoint for iOS to user-enrolled devices so that work data and applications are protected, while end-user privacy is upheld on those devices. For more information, see [User Enrollment setup](ios-install.md#user-enrollment-setup-only-for-intune-user-enrolled-devices).  
 
 ## Device Tagging
 
