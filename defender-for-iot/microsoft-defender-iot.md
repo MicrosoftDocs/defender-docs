@@ -14,6 +14,10 @@ ms.date: 06/11/2024
 
 Microsoft Defender for IoT is a unified security solution built specifically to identify IoT and OT devices, vulnerabilities, and threats. In this article, you learn how Defender for IoT secures your entire Internet of Things (IoT) and operational technology (OT) environments, the Defender for IoT main scenarios and personas, architecture, and more.
 
+Microsoft Defender for IoT is a unified security solution built specifically to identify IoT and OT devices, vulnerabilities, and threats. Use Defender for IoT to secure your entire IoT/OT environment, including existing devices that might not have built-in security agents.
+
+[IMAGE]
+
 ## What is OT security and what are the main OT security challenges?
 
 The Internet of Things (IoT) supports billions of connected devices that use both operational technology (OT) and IoT networks. IoT/OT devices and networks are often built using specialized protocols, and might prioritize operational challenges over security.
