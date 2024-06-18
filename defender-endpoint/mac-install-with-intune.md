@@ -6,7 +6,6 @@ author: YongRhee-MSFT
 ms.author: yongrhee
 manager: deniseb
 ms.localizationpriority: medium
-manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
