@@ -8,12 +8,15 @@ f1.keywords:
 author: chrisda
 ms.author: chrisda
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
   - m365-security
   - tier1
   - zerotrust-services
+  - essentials-privacy
+  - essentials-security
+  - essentials-compliance
 ms.date: 05/10/2024
 ms.topic: conceptual
 adobe-target: true

@@ -12,7 +12,7 @@ ms.custom:
 - nextgen
 - partner-contribution
 ms.reviewer: pahuijbr, tudobril, yongrhee, bsabetghadam
-manager: dansimp
+manager: deniseb
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -38,11 +38,11 @@ This article explains the considerations and best practices for running full ant
 
 [Real-time protection](configure-protection-features-microsoft-defender-antivirus.md) in Defender for Endpoint is a feature that continuously scans your computer to help detect and stop malware infections in real time. It uses heuristic and behavior-based detection methods to monitor the activity on your device and protect against threats as they happen. Our recommendation for scheduled scans is to configure quick scan together with always-on real-time protection and [cloud protection](cloud-protection-microsoft-defender-antivirus.md), as this combination provides strong coverage against malware that starts with the system and kernel-level malware. This configuration is the default configuration. In general, there's no need to schedule a full scan, and most users never need to manually run full scans (see [Comparing quick scan, full scan, and custom scan](/defender-endpoint/schedule-antivirus-scans#comparing-the-quick-scan-full-scan-and-custom-scan)).
 
-However, you might have to run full scans to meet your organization’s specific requirements. A full scan starts with a quick scan, and then continues with a sequential file scan of all the fixed and removable network drives that are mounted. A full scan can last from several hours to several days, depending on the content volume, type of content, and the resources that Microsoft Defender has been allocated to perform the scan (see [Schedule regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md)). Scan performance isn't solely a function of file size, and is mostly determined by the type and complexity of the content.
+However, you might have to run full scans to meet your organization's specific requirements. A full scan starts with a quick scan, and then continues with a sequential file scan of all the fixed and removable network drives that are mounted. A full scan can last from several hours to several days, depending on the content volume, type of content, and the resources that Microsoft Defender has been allocated to perform the scan (see [Schedule regular quick and full scans with Microsoft Defender Antivirus](schedule-antivirus-scans.md)). Scan performance isn't solely a function of file size, and is mostly determined by the type and complexity of the content.
 
 ## Protection efficiency and performance impact
 
-Protection and system resource usage entails tradeoffs. Device performance is highly dependent on your environment. It's natural that running a full scan on a device with lots of complex content would lead to an increased time to completion. The following table summarizes scenarios where we’ve made decisions to use more system resources to increase our protection efficiency.
+Protection and system resource usage entails tradeoffs. Device performance is highly dependent on your environment. It's natural that running a full scan on a device with lots of complex content would lead to an increased time to completion. The following table summarizes scenarios where we've made decisions to use more system resources to increase our protection efficiency.
 
 | Setting | Default | Details |
 |--|--|--|
@@ -54,8 +54,8 @@ Protection and system resource usage entails tradeoffs. Device performance is hi
 | Scan Average CPU Load Factor | `50` | See the [Scanning and CPU throttling](#scanning-and-cpu-throttling) section of this article. |
 
 > [!NOTE]
-> - If real-time protection is turned on, files are scanned before they are accessed and executed. Scan occurs regardless of where the files are located (see [Configure scanning options for Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)).
 >
+> - If real-time protection is turned on, files are scanned before they are accessed and executed. Scan occurs regardless of where the files are located (see [Configure scanning options for Microsoft Defender Antivirus](configure-advanced-scan-types-microsoft-defender-antivirus.md)).
 > - Actual CPU usage may vary depending on number of CPU cores, I/O performance, memory pressure etc. Limiting CPU usage can cause full scan to take longer to complete, so customers should fine tune this value depending on the actual CPU usage values obtained in their specific environment.
 
 ## Full scan performance optimization settings and switches
@@ -81,7 +81,7 @@ To configure scanning options for Microsoft Defender Antivirus, you can use vari
 
 ## Best practices and considerations
 
-The followings are Microsoft’s recommendations:
+The followings are Microsoft's recommendations:
 
 ### Full scans
 
@@ -91,17 +91,15 @@ The followings are Microsoft’s recommendations:
 
 - Avoid using domain controllers in a file server role. This lowers antivirus scanning activities on file shares and minimizes performance overhead.
 
-- Microsoft Defender Antivirus has the file hash computation feature that computes file hashes for every executable file that is scanned if it wasn’t previously computed. This has a performance cost especially when copying large files from a network share. See [Configure File Hash Computation](/windows/client-management/mdm/defender-csp) to learn more about the impact on indicators.
+- Microsoft Defender Antivirus has the file hash computation feature that computes file hashes for every executable file that is scanned if it wasn't previously computed. This has a performance cost especially when copying large files from a network share. See [Configure File Hash Computation](/windows/client-management/mdm/defender-csp) to learn more about the impact on indicators.
 
 - The full scan performance can be impacted by CPU throttling. Our recommendation is to leave CPU limit settings at the default.
 
 > [!NOTE]
+>
 > - By design, Microsoft Defender Antivirus inspects the internal content type as file extensions are often misleading and can be easily spoofed by attackers.
-> 
 > - The scanning performance is heavily dependent on the actual content type that is being scanned. In general, more complex file types require more time and cycle, while more unusual content types require even more time (e.g., JavaScript files).
-> 
 > - The performance analyzer tool for Microsoft Defender Antivirus helps determine files, file extensions, and processes that might be causing performance issues on individual endpoints during antivirus scans. If you are running Microsoft Defender Antivirus and experiencing performance issues, you can use performance analyzer to optimize performance (see [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)).
-> 
 > - A trusted image identifier for Microsoft Defender Antivirus can help improve the performance of your devices. See [Configure a Trusted Image Identifier for Microsoft Defender](/windows-hardware/manufacture/desktop/configure-a-trusted-image-identifier-for-windows-defender).
 
 ### Scanning and CPU throttling
@@ -112,7 +110,7 @@ The CPU load factor for Microsoft Defender Antivirus isn't a hard limit but rath
 
 - If you set the percentage value to 0 or 100, CPU throttling is disabled, and Windows Defender can use up to 100% of CPU during the scheduled and custom scans. This isn't recommended as it can lead to unresponsive apps, and even overheating so proceed with extreme caution.
 
-- Changing the value has both pros and cons. Higher values mean the scans perform faster; however, it could slow down your system during the scan, while lower values mean the scan takes longer to finish, but you have more CPU resources available for your system during the scan. For instance, if you're running critical workloads on a server, this setting should be set to a value that doesn’t interfere with the functioning of the workloads.
+- Changing the value has both pros and cons. Higher values mean the scans perform faster; however, it could slow down your system during the scan, while lower values mean the scan takes longer to finish, but you have more CPU resources available for your system during the scan. For instance, if you're running critical workloads on a server, this setting should be set to a value that doesn't interfere with the functioning of the workloads.
 
 - Manual scans ignore the CPU throttling setting and run without any CPU limits. However, there's a scan policy setting (see the `ThrottleForScheduledScanOnly` setting in [Set-MpPreference (Defender)](/powershell/module/defender/set-mppreference)) that if it's disabled, then manual scans adhere to the same CPU limits as a scheduled scan.
 
@@ -131,7 +129,7 @@ Microsoft Defender Antivirus has the following features that help enhance scan p
 
 - The performance analyzer tool for Microsoft Defender Antivirus can be used to determine exclusions that help optimize performance. See [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
-Microsoft Defender Antivirus has a built-in optimization for content that is highly reputable (for example, signed by trusted sources). When it encounters such content, it simply shifts away from scanning the content to validating the signature to ensure the file wasn’t tampered with.
+Microsoft Defender Antivirus has a built-in optimization for content that is highly reputable (for example, signed by trusted sources). When it encounters such content, it simply shifts away from scanning the content to validating the signature to ensure the file wasn't tampered with.
 
 ### Antivirus exclusions recommendations
 
@@ -140,13 +138,12 @@ Excluding certain locations from scanning can shorten the scan time. There are t
 - Don't exclude compressed files if disallowed by your compliance requirements.
 
 - Don't exclude the User Profile temp folder or the System temp folder, commonly used by malware:
-
-   - `C:\Users<UserProfileName>\AppData\Local\Temp\`
-   - `C:\Users<UserProfileName>\AppData\LocalLow\Temp\`
-   - `C:\Users<UserProfileName>\AppData\Roaming\Temp\`
-   - `%Windir%\Prefetch`
-   - `%Windir%\System32\Spool`
-   - `C:\Windows\System32\CatRoot2`
-   - `%Windir%\Temp`
+  - `C:\Users<UserProfileName>\AppData\Local\Temp\`
+  - `C:\Users<UserProfileName>\AppData\LocalLow\Temp\`
+  - `C:\Users<UserProfileName>\AppData\Roaming\Temp\`
+  - `%Windir%\Prefetch`
+  - `%Windir%\System32\Spool`
+  - `C:\Windows\System32\CatRoot2`
+  - `%Windir%\Temp`
 
 - The use of environment variables as a wildcard in exclusion lists is limited to system variables only. Don't use user-scoped environment variables when adding Microsoft Defender Antivirus folder and process exclusions. 

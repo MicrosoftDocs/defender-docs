@@ -1,12 +1,7 @@
 ---
 title: Remediate your first incident in Microsoft Defender XDR
 description: How to get started in remediating your first incident in Microsoft Defender XDR.
-keywords: incidents, alerts, attack story, investigate, correlation, attack, machines, devices, users, identities, identity, mailbox, email, 365, microsoft, m365, incident response, cyber-attack, incident response, remediation, remediate attack, remediate incident
-search.product: eADQiWindows 10XVcnh
 ms.service: defender-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords: 
   - NOCSH
 ms.author: diannegali
@@ -109,7 +104,7 @@ The following tutorials enumerate steps and actions that you can apply when inve
 
 ## Next steps
 
-- [Simulate attacks through the attack simulation training](eval-defender-investigate-respond-simulate-attack.md)
+- [Simulate attacks through the attack simulation training](pilot-deploy-investigate-respond.md)
 - Explore Microsoft Defender XDR through the [Virtual Ninja training](https://adoption.microsoft.com/ninja-show/)
 
 ## See also

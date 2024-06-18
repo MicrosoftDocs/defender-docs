@@ -6,7 +6,7 @@ ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 05/20/2024
+ms.date: 06/07/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -26,6 +26,26 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions is reduced to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
+
+## February-2024 (Engine: 1.1.24020.9 | Platform: 4.18.24020.7)
+
+- Security intelligence update version: **1.407.46.0**
+- Release date: **March 6, 2024** (Engine) / **March 12, 2024** (Platform)
+- Engine: **1.1.24020.9**
+- Platform: **4.18.24020.7**
+- Support phase: **Technical upgrade support (only)**
+
+### What's new
+
+- Improved support for virtualizing while compressing or decompressing zip files
+- Improved reporting in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) for block-only remediations
+- Reduced the number of false positives for [attack surface reduction rules](attack-surface-reduction.md) for known trusted processes
+- Improved [Get-MpPreference](/powershell/module/defender/get-mppreference) logic for proxy bypass settings
+- Extended the toast notification support for [Indicators of Compromise](manage-indicators.md#indicator-of-compromise-ioc-overview) (IoC) detections
+
+### Known issues
+
+- For [device control](device-control-overview.md) customers using removable media policies with disk/device-level access only (masks that include the values 1, 2, 3, 4, and 7), enforcement might not work as expected. In such situations, we recommend customers roll back to the previous version of the Defender platform.
 
 ## January-2024 (Platform: 4.18.24010.12 | Engine: 1.1.24010.10)
 

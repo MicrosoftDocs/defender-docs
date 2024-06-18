@@ -4,7 +4,7 @@ description: Use the Microsoft Defender for Endpoint Antivirus and Intune integr
 ms.service: defender-endpoint
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: conceptual
-ms.date: 02/02/2024
+ms.date: 05/29/2024
 ms.subservice: edr
 search.appverid: met150
 ---
@@ -101,8 +101,8 @@ DeviceInfo
 AlertEvidence
 | where Timestamp > ago(15d)
 | where ServiceSource == "Microsoft Defender for Endpoint"
-| where DetectionSource == "Antivirus"
-DeviceName
+| where DetectionSource == "Antivirus")
+on DeviceName
 | distinct DeviceName, DeviceId, Title, AlertId, Timestamp
 ```
 
