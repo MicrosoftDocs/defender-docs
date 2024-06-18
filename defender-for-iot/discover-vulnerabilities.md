@@ -20,11 +20,9 @@ Vulnerabilities are listed based on their publicly registered Common Vulnerabili
 The Weaknesses page lists each CVE and gives it a severity rating, a CVSS score (10 is most severe), and lists the number of exposed devices. Use the metrics to prioritize dealing with these security vulnerabilities.
 The Weaknesses page is found in the Vulnerability management section of the Endpoints menu.
 
-For more details, see [weaknesses page in the Microsoft Defender Vulnerabiltiiy Management](/defender-vulnerability-management/tvm-weaknesses.md).
+For more details, see [Weaknesses page in the Microsoft Defender Vulnerabiltiiy Management](/defender-vulnerability-management/tvm-weaknesses.md).
 
 ## Investigate vulnerabiltites
-
-this is the task of the security admin. who will eventually make a request to the IT administrator to remdiate a vulnerabiltity.
 
 1. In the Defender portal, go to **Endpoints > Vulnerability managemenr > Weaknesses**.
 
