@@ -137,7 +137,7 @@ When using a terminal, unzip the file by entering one of the following commands 
     echo '2B8EBB39857BA24E84E332366B42E041B46AB130F8C8FD4E6D68B195022FD61E  XMDEClientAnalyzer.zip' | shasum -a 256 -c
     ```
 
-3. Extract the contents of XMDEClientAnalyzer.zip on the machine.\
+3. Extract the contents of XMDEClientAnalyzer.zip on the machine.
     If you're using a terminal, extract the files by using the following command:
 
     ```console
