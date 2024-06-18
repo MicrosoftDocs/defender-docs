@@ -54,8 +54,8 @@ Set-MpPreference -EnableControlledFolderAccess AuditMode
 > If you want to fully audit how controlled folder access will work in your organization, use a management tool to deploy this setting to devices in your networks. You can also use Group Policy, Intune, mobile device management (MDM), or Microsoft Configuration Manager to configure and deploy the setting, as described in the main [controlled folder access topic](controlled-folders.md).
 
 > [!NOTE]
-> - If your workflow involves usage of shared network folders, enabling controlled folder access may result in significant performance reduction, particularly many queries to the file share server.
-> - Some types of endpoint security or asset management software inject code into every process that starts on the system. These may result in CFA no longer trusting known applications like office programs. You can see the reason for CFA detections using the MDEClientAnalyzer tool's `-cfa` argument. If you're impacted, consider adding an AV exclusion for the injecting process or consult the vendor of your management software about signing all their binaries.
+> - If your workflow involves usage of shared network folders, enabling controlled folder access can result in significant performance reduction, particularly because of many queries to the file share server.
+> - Some types of endpoint security or asset management software inject code into every process that starts on the system. These may result in controlled folder access no longer trusting known applications like Office programs. You can see the reason for controlled folder access detections by using the MDEClientAnalyzer tool's `-cfa` argument (see [Run the client analyzer on Windows](run-analyzer-windows.md)). If you're affected, consider adding an [antivirus exclusion](configure-exclusions-microsoft-defender-antivirus.md) for the injecting process, or consult your management software vendor about signing all their binaries.
 
 ## Review controlled folder access events in Windows Event Viewer
 
