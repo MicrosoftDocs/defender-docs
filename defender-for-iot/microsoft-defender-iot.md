@@ -12,7 +12,7 @@ ms.date: 06/11/2024
 
 # What is Microsoft Defender for IoT?
 
-Microsoft Defender for IoT is a unified security solution built specifically to identify IoT and OT devices, vulnerabilities, and threats. In this article, you learn how Defender for IoT secures your entire Internet of Things (IoT) and operational technology (OT) environments, the Defender for IoT main scenarios and personas, architecture, and more.
+Microsoft Defender for IoT is a unified security solution built specifically to identify IoT and OT devices, vulnerabilities, and threats. In this article, you learn how Defender for IoT secures your entire Internet of Things (IoT) and operational technology (OT) environments, main scenarios and personas, architecture, and more.
 
 Microsoft Defender for IoT is a unified security solution built specifically to identify IoT and OT devices, vulnerabilities, and threats. Use Defender for IoT to secure your entire IoT/OT environment, including existing devices that might not have built-in security agents.
 
@@ -24,9 +24,9 @@ The Internet of Things (IoT) supports billions of connected devices that use bot
 
 Specifically, OT network challenges include: poor visibility into assets and networks, difficulty to create network segmentation, vulnerable legacy systems, dependence on external vendors, and lack of security expertise. When IoT/OT devices can't be protected by traditional security monitoring systems, each new wave of innovation increases the risk and possible attack surfaces across those IoT devices and OT networks.
 
-## How does Defender for IoT protect operational networks?
+## How does Defender for IoT protect OT networks?
 
-Defender for IoT monitors IoT networks and devices, and integrates with both industrial equipment and security operation center (SOC) tools, so your organization can identify all IoT and OT devices, vulnerabilities, and threats.
+Defender for IoT monitors IoT/OT networks and devices, and integrates with both industrial equipment and security operation center (SOC) tools. Your organization uses Defender for IoT to identify all relevant devices, vulnerabilities, and threats.
 
 - Use the [**Site security**](site-security-overview.md) dashboard to gain valuable insights into OT risks in production sites, make better-informed security investment decisions​, and streamline communication between IT and OT security stakeholders​.
 - [**Discover OT devices**](manage-devices-inventory.md) to gain a full overview of IT, IoT, and OT assets across the entire organization, identify vulnerabilities and mitigate risks, reduce downtime and monitor your top assets, and support regulatory compliance.​
