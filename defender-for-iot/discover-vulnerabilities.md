@@ -47,5 +47,3 @@ For more details, see [Weaknesses page in the Microsoft Defender Vulnerabiltiiy 
 ## Apply recommendations
 
 for more info see [remediations](/defender-vulnerability-management/tvm-remediation)
-
-why would we do this - pre breach which persona use this ? SOC?  
