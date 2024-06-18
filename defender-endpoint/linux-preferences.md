@@ -115,7 +115,7 @@ Specifies whether to scan archives during on-demand antivirus scans.
 |---|---|---|
 |**Key**|scanArchives|Enable scanning of archives|
 |**Data type**|Boolean|Drop down|
-|**Possible values**|true (default) <p> false|Not configured<br>Disabled<br>Enabled (Default)|
+|**Possible values**|`true` (default) <p>`false`|Not configured<br>Disabled<br>Enabled (Default)|
 
 > [!NOTE]
 > Available in Microsoft Defender for Endpoint version 101.45.00 or higher.
@@ -142,7 +142,7 @@ Specifies the merge policy for exclusions. It can be a combination of administra
 |---|---|---|
 |**Key**|exclusionsMergePolicy|Exclusions merge|
 |**Data type**|String|Drop down|
-|**Possible values**|merge (default) <p> admin_only|Not configured<br>merge (Default)<br>admin_only|
+|**Possible values**|`merge` (default) <p>`admin_only`|Not configured<br>merge (Default)<br>admin_only|
 
 > [!NOTE]
 > Available in Defender for Endpoint version 100.83.73 or higher.
@@ -166,7 +166,7 @@ Specifies the type of content excluded from the scan.
 |---|---|---|
 |**Key**|$type|Type|
 |**Data type**|String|Drop Down|
-|**Possible values**|excludedPath <p> excludedFileExtension <p> excludedFileName|Path<br>File extension<br>Process name|
+|**Possible values**|`excludedPath` <p>`excludedFileExtension` <p>`excludedFileName`|Path<br>File extension<br>Process name|
 
 ##### Path to excluded content
 
@@ -187,7 +187,7 @@ Indicates if the *path* property refers to a file or directory.
 |---|---|---|
 |**Key**|isDirectory|Is directory|
 |**Data type**|Boolean|Drop down|
-|**Possible values**|false (default) <p> true|Enabled<br>Disabled|
+|**Possible values**|`false` (default) <p>`true`|Enabled<br>Disabled|
 |**Comments**|Applicable only if *$type* is *excludedPath*|Accessed in *Edit instance* popup|
 
 ##### File extension excluded from the scan
@@ -226,7 +226,7 @@ Specifies the behavior of RTP on mount point marked as noexec. There are two val
 |---|---|---|
 |**Key**|nonExecMountPolicy|non execute mount mute|
 |**Data type**|String|Drop down|
-|**Possible values**|`unmute` (default) <p> `mute`|Not configured <br>unmute (Default) <br>mute|
+|**Possible values**|`unmute` (default) <p>`mute`|Not configured <br>unmute (Default) <br>mute|
 
 > [!NOTE] 
 > Available in Defender for Endpoint version 101.85.27 or higher.
@@ -277,7 +277,7 @@ Enables or disables file hash computation feature. When this feature is enabled,
 |---|---|---|
 |**Key**|enableFileHashComputation|Enable file hash computation|
 |**Data type**|Boolean|Drop down|
-|**Possible values**|`false` (default) <p> `true`|Not configured<br>Disabled (default)<br>Enabled|
+|**Possible values**|`false` (default) <p>`true`|Not configured<br>Disabled (default)<br>Enabled|
 
 > [!NOTE] 
 > Available in Defender for Endpoint version 101.85.27 or higher.
@@ -299,7 +299,7 @@ Restricts the actions that the local user of a device can take when threats are 
 |---|---|---|
 |**Key**|disallowedThreatActions|Disallowed threat actions|
 |**Data type**|Array of strings|Dynamic String List|
-|**Possible values**|allow (restricts users from allowing threats) <p> restore (restricts users from restoring threats from the quarantine)|allow (restricts users from allowing threats) <p> restore (restricts users from restoring threats from the quarantine)|
+|**Possible values**|`allow` (restricts users from allowing threats) <p>`restore` (restricts users from restoring threats from the quarantine)|allow (restricts users from allowing threats) <p>restore (restricts users from restoring threats from the quarantine)|
 
 > [!NOTE] 
 > Available in Defender for Endpoint version 100.83.73 or higher.
@@ -322,7 +322,7 @@ Type of threat for which the behavior is configured.
 |---|---|---|
 |**Key**|key|Threat type|
 |**Data type**|String|Drop down|
-|**Possible values**|`potentially_unwanted_application` <p> `archive_bomb`|potentially_unwanted_application <p> archive_bomb|
+|**Possible values**|`potentially_unwanted_application` <p>`archive_bomb`|potentially_unwanted_application <p>archive_bomb|
 
 ##### Action to take
 
@@ -336,7 +336,7 @@ Action to take when coming across a threat of the type specified in the precedin
 |---|---|---|
 |**Key**|value|Action to take|
 |**Data type**|String|Drop down|
-|**Possible values**|`audit` (default) <p> `block` <p> `off`|audit <p> block <p> off|
+|**Possible values**|`audit` (default) <p>`block` <p>`off`|audit <p>block <p>off|
 
 #### Threat type settings merge policy
 
@@ -359,7 +359,7 @@ Specify the number of days that results are retained in the scan history on the 
 |---|---|---|
 |**Key**|scanResultsRetentionDays|Scan results retention|
 |**Data type**|String|Toggle switch and Integer|
-|**Possible values**|90 (default). Allowed values are from 1 day to 180 days.|Not configured (toggle off - 90 day default)<br>Configured (toggle on) and allowed value 1 to 180 days.|
+|**Possible values**|90 (default). Allowed values are from 1 day to 180 days.|Not configured (toggle off - 90-day default)<br>Configured (toggle on) and allowed value 1 to 180 days.|
 
 > [!NOTE] 
 > Available in Defender for Endpoint version 101.04.76 or higher.
@@ -454,7 +454,7 @@ Determines whether cloud-delivered protection is enabled on the device or not. T
 |---|---|---|
 |**Key**|enabled|Enable cloud delivered protection|
 |**Data type**|Boolean|Drop down|
-|**Possible values**|true (default) <p> false|Not configured<br>Disabled<br>Enabled (Default)|
+|**Possible values**|`true` (default) <p>`false`|Not configured<br>Disabled<br>Enabled (Default)|
 
 #### Diagnostic collection level
 
@@ -464,7 +464,7 @@ Diagnostic data is used to keep Defender for Endpoint secure and up to date, det
 |---|---|---|
 |**Key**|diagnosticLevel|Diagnostic data collection level|
 |**Data type**|String|Drop down|
-|**Possible values**|optional <p> required (default)|Not configured<br>optional (Default)<br>required|
+|**Possible values**|`optional` <p>`required` (default)|Not configured<br>optional (Default)<br>required|
 
 #### Configure cloud block level
 
@@ -482,7 +482,7 @@ There are five values for setting cloud block level:
 |---|---|---|
 |**Key**|cloudBlockLevel|Configure cloud block level|
 |**Data type**|String|Drop down|
-|**Possible values**|normal (default) <p> moderate <p> high <p> high_plus <p> zero_tolerance|Not configured<br>Normal (default) <br> Moderate <br> High <br> High_Plus <br> Zero_Tolerance|
+|**Possible values**|`normal` (default) <p>`moderate` <p>`high` <p>`high_plus` <p>`zero_tolerance`|Not configured<br>Normal (default) <br>Moderate <br>High <br>High_Plus <br>Zero_Tolerance|
 
 > [!NOTE] 
 > Available in Defender for Endpoint version 101.56.62 or higher.
@@ -499,7 +499,7 @@ Determines whether suspicious samples (that are likely to contain threats) are s
 |---|---|---|
 |**Key**|automaticSampleSubmissionConsent|Enable automatic sample submissions|
 |**Data type**|String|Drop down|
-|**Possible values**|none <p> safe (default) <p> all|Not configured<br>None<br>Safe (Default)<br>All|
+|**Possible values**|`none` <p>`safe` (default) <p>`all`|Not configured<br>None<br>Safe (Default)<br>All|
 
 #### Enable / disable automatic security intelligence updates
 
@@ -509,7 +509,7 @@ Determines whether security intelligence updates are installed automatically:
 |---|---|---|
 |**Key**|automaticDefinitionUpdateEnabled|Automatic security intelligence updates|
 |**Data type**|Boolean|Drop down|
-|**Possible values**|true (default) <p> false|Not configured<br>Disabled<br>Enabled (Default)|
+|**Possible values**|`true` (default) <p>`false`|Not configured<br>Disabled<br>Enabled (Default)|
 
 
 ### Advanced optional features
@@ -672,6 +672,14 @@ The following settings can be used to configure advanced Network Protection insp
 |**Data type**|Dictionary (nested preference)|Collapsed section|
 |**Comments**|See the following sections for a description of the dictionary contents.|See the following sections for a description of the policy settings.|
 
+#### Enforcement Level
+
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|enforcementLevel|Enforcement Level|
+|**Data type**|String|Drop down|
+|**Possible values**|`disabled` (default) <br>`audit` <br>`block`|Not configured<br>disabled (default)<br>audit<br>block|
+
 #### Configure ICMP inspection
 
 Determines whether ICMP events are monitored and scanned.
@@ -681,10 +689,10 @@ Determines whether ICMP events are monitored and scanned.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|disableIcmpInspection|
-|**Data type**|Boolean|
-|**Possible values**|true (default) <p> false|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
+|**Key**|disableIcmpInspection|*Not available*|
+|**Data type**|Boolean|*n/a*|
+|**Possible values**|`true` (default) <p>`false`|*n/a*|
+|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.||
 
 ## Recommended configuration profile
 
