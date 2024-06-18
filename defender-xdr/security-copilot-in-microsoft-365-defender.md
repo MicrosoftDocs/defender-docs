@@ -1,11 +1,7 @@
 ---
 title: Microsoft Copilot in Microsoft Defender
 description: Learn about Microsoft Copilot for Security capabilities embedded in Microsoft Defender.
-keywords: security copilot, Microsoft Defender XDR, embedded experience, incident summary, script analyzer, script analysis, query assistant, m365, incident report, guided response, incident response automated, automatic incident response, summarize incidents, summarize incident report, plugins, Microsoft plugins, preinstalled plugins, Microsoft Copilot for Security, Copilot for Security, file analysis, file analyzer, summarize device, device summary, summarize device information, device report, file information report, Microsoft Defender, Copilot in Defender
 ms.service: defender-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords:
   - NOCSH
 ms.author: diannegali

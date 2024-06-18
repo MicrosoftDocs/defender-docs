@@ -4,7 +4,7 @@ description: Deploying Microsoft Defender for Endpoint on macOS with Jamf Pro
 ms.service: defender-endpoint
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
