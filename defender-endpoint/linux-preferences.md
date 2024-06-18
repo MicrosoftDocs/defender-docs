@@ -50,11 +50,11 @@ The top level of the configuration profile includes product-wide preferences and
 
 The *antivirusEngine* section of the configuration profile is used to manage the preferences of the antivirus component of the product.
 
-|Description|Value|
-|---|---|
-|**Key**|antivirusEngine|
-|**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|antivirusEngine|Antivirus Engine|
+|**Data type**|Dictionary (nested preference)|Collapsed Section|
+|**Comments**|See the following sections for a description of the dictionary contents.|See the following sections for a description of the policy properties.|
 
 #### Enforcement level for antivirus engine
 
@@ -69,144 +69,148 @@ Specifies the enforcement preference of antivirus engine. There are three values
   - Automatic threat remediation is turned off: No files will be moved and security admin is expected to take required action.
   - Security intelligence updates are turned on: Alerts will be available on security admins tenant.
 
-|Description|Value|
-|---|---|
-|**Key**|enforcementLevel|
-|**Data type**|String|
-|**Possible values**|real_time <p> on_demand <p> passive (default)|
-|**Comments**|Available in Defender for Endpoint version 101.10.72 or higher. Default is changed from real_time to passive for Endpoint version 101.23062.0001 or higher.|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|enforcementLevel|Enforcement Level|
+|**Data type**|String|Drop down|
+|**Possible values**|`real_time`<br>`on_demand`<br>`passive` (default)|Not configured<br>Realtime<br>OnDemand<br>Passive (Default)|
 
 > [!NOTE]
+> Available in Defender for Endpoint version 101.10.72 or higher. Default is changed from real_time to passive for Endpoint version 101.23062.0001 or higher.
 > It is recommended to also use [scheduled scans](/defender-endpoint/linux-schedule-scan-mde) as per requirement.
 
 #### Enable/disable behavior-monitoring 
 
 Determines whether behavior monitoring and blocking capability is enabled on the device or not. 
 
-> [!NOTE]
-> This feature is applicable only when Real-Time Protection feature is enabled.
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|behaviorMonitoring|Enable behavior monitoring|
+|**Data type**|String|Drop down|
+|**Possible values**|`disabled` (default) <p> `enabled`|Not configured<br>Disabled (Default)<br>Enabled|
 
-|Description|Value|
-|---|---|
-|**Key**|behaviorMonitoring|
-|**Data type**|String|
-|**Possible values**|disabled (default) <p> enabled|
-|**Comments**|Available in Defender for Endpoint version 101.45.00 or higher.|
+> [!NOTE]
+> Available in Defender for Endpoint version 101.45.00 or higher.
+> This feature is applicable only when Real-Time Protection feature is enabled.
 
 #### Run a scan after definitions are updated
 
 Specifies whether to start a process scan after new security intelligence updates are downloaded on the device. Enabling this setting triggers an antivirus scan on the running processes of the device.
 
-|Description|Value|
-|---|---|
-|**Key**|scanAfterDefinitionUpdate|
-|**Data type**|Boolean|
-|**Possible values**|true (default) <p> false|
-|**Comments**|Available in Defender for Endpoint version 101.45.00 or higher.|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|scanAfterDefinitionUpdate|Enable Scanning after definition update|
+|**Data type**|Boolean|Drop down|
+|**Possible values**|`true` (default) <p> `false`|Not configured<br>Disabled<br>Enabled (Default)|
 
 > [!NOTE]
+> Available in Defender for Endpoint version 101.45.00 or higher.
 > This feature only works when the enforcement level is set to `real-time`.
 
 #### Scan archives (on-demand antivirus scans only)
 
 Specifies whether to scan archives during on-demand antivirus scans.
 
-> [!NOTE]
-> Archive files are never scanned during real time protection. When the files in an archive are extracted, they are scanned. The *scanArchives* option can be used to force the scan of archives only during on-demand scan.
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|scanArchives|Enable scanning of archives|
+|**Data type**|Boolean|Drop down|
+|**Possible values**|true (default) <p> false|Not configured<br>Disabled<br>Enabled (Default)|
 
-|Description|Value|
-|---|---|
-|**Key**|scanArchives|
-|**Data type**|Boolean|
-|**Possible values**|true (default) <p> false|
-|**Comments**|Available in Microsoft Defender for Endpoint version 101.45.00 or higher.|
+> [!NOTE]
+> Available in Microsoft Defender for Endpoint version 101.45.00 or higher.
+> Archive files are never scanned during real time protection. When the files in an archive are extracted, they are scanned. The *scanArchives* option can be used to force the scan of archives only during on-demand scan.
 
 #### Degree of parallelism for on-demand scans
 
 Specifies the degree of parallelism for on-demand scans. This corresponds to the number of threads used to perform the scan and impacts the CPU usage, and the duration of the on-demand scan.
 
-|Description|Value|
-|---|---|
-|**Key**|maximumOnDemandScanThreads|
-|**Data type**|Integer|
-|**Possible values**|2 (default). Allowed values are integers between 1 and 64.|
-|**Comments**|Available in Microsoft Defender for Endpoint version 101.45.00 or higher.|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|maximumOnDemandScanThreads|maximum on demand scan threads|
+|**Data type**|Integer|Toggle Switch & Integer|
+|**Possible values**|2 (default). Allowed values are integers between 1 and 64.|Not Configured (Default toggle off defaults to 2)<br>Configured (toggle on) and integer between 1 and 64.|
+
+> [!NOTE]
+> Available in Microsoft Defender for Endpoint version 101.45.00 or higher.
 
 #### Exclusion merge policy
 
 Specifies the merge policy for exclusions. It can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). This setting can be used to restrict local users from defining their own exclusions.
 
-|Description|Value|
-|---|---|
-|**Key**|exclusionsMergePolicy|
-|**Data type**|String|
-|**Possible values**|merge (default) <p> admin_only|
-|**Comments**|Available in Defender for Endpoint version 100.83.73 or higher.|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|exclusionsMergePolicy|Exclusions merge|
+|**Data type**|String|Drop down|
+|**Possible values**|merge (default) <p> admin_only|Not configured<br>merge (Default)<br>admin_only|
+
+> [!NOTE]
+> Available in Defender for Endpoint version 100.83.73 or higher.
 
 #### Scan exclusions
 
 Entities that have been excluded from the scan. Exclusions can be specified by full paths, extensions, or file names.
 (Exclusions are specified as an array of items, administrator can specify as many elements as necessary, in any order.)
 
-|Description|Value|
-|---|---|
-|**Key**|exclusions|
-|**Data type**|Dictionary (nested preference)|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|exclusions|Scan exclusions|
+|**Data type**|Dictionary (nested preference)|Dynamic Properties List|
 |**Comments**|See the following sections for a description of the dictionary contents.|
 
 ##### Type of exclusion
 
 Specifies the type of content excluded from the scan.
 
-|Description|Value|
-|---|---|
-|**Key**|$type|
-|**Data type**|String|
-|**Possible values**|excludedPath <p> excludedFileExtension <p> excludedFileName|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|$type|Type|
+|**Data type**|String|Drop Down|
+|**Possible values**|excludedPath <p> excludedFileExtension <p> excludedFileName|Path<br>File extension<br>Process name|
 
 ##### Path to excluded content
 
 Used to exclude content from the scan by full file path.
 
-|Description|Value|
-|---|---|
-|**Key**|path|
-|**Data type**|String|
-|**Possible values**|valid paths|
-|**Comments**|Applicable only if *$type* is *excludedPath*|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|path|Path|
+|**Data type**|String|String|
+|**Possible values**|valid paths|valid paths|
+|**Comments**|Applicable only if *$type* is *excludedPath*|Accessed in *Edit instance* popup|
 
 ##### Path type (file / directory)
 
 Indicates if the *path* property refers to a file or directory.
 
-|Description|Value|
-|---|---|
-|**Key**|isDirectory|
-|**Data type**|Boolean|
-|**Possible values**|false (default) <p> true|
-|**Comments**|Applicable only if *$type* is *excludedPath*|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|isDirectory|Is directory|
+|**Data type**|Boolean|Drop down|
+|**Possible values**|false (default) <p> true|Enabled<br>Disabled|
+|**Comments**|Applicable only if *$type* is *excludedPath*|Accessed in *Edit instance* popup|
 
 ##### File extension excluded from the scan
 
 Used to exclude content from the scan by file extension.
 
-|Description|Value|
-|---|---|
-|**Key**|extension|
-|**Data type**|String|
-|**Possible values**|valid file extensions|
-|**Comments**|Applicable only if *$type* is *excludedFileExtension*|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|extension|File extension|
+|**Data type**|String|String|
+|**Possible values**|valid file extensions|valid file extensions|
+|**Comments**|Applicable only if *$type* is *excludedFileExtension*|Accessed in *Configure instance* popup|
 
 ##### Process excluded from the scan*
 
 Specifies a process for which all file activity is excluded from scanning. The process can be specified either by its name (for example, `cat`) or full path (for example, `/bin/cat`).
 
-|Description|Value|
-|---|---|
-|**Key**|name|
-|**Data type**|String|
-|**Possible values**|any string|
-|**Comments**|Applicable only if *$type* is *excludedFileName*|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|name|File name|
+|**Data type**|String|String|
+|**Possible values**|any string|any string|
+|**Comments**|Applicable only if *$type* is *excludedFileName*|Accessed in *Configure instance* popup|
 
 #### Muting Non Exec mounts 
  
@@ -218,22 +222,26 @@ Specifies the behavior of RTP on mount point marked as noexec. There are two val
   - File server can keep data files mountpoints with noexec option.
   - Back up can keep data files mountpoints with noexec option.
 
-|Description|Value|
-|---|---|
-|**Key**|nonExecMountPolicy|
-|**Data type**|String|
-|**Possible values**|unmute (default) <p> mute|
-|**Comments**|Available in Defender for Endpoint version 101.85.27 or higher.|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|nonExecMountPolicy|non execute mount mute|
+|**Data type**|String|Drop down|
+|**Possible values**|`unmute` (default) <p> `mute`|Not configured <br>unmute (Default) <br>mute|
+
+> [!NOTE] 
+> Available in Defender for Endpoint version 101.85.27 or higher.
 
 #### Unmonitor Filesystems
 
 Configure filesystems to be unmonitored/excluded from Real Time Protection(RTP). The filesystems configured are validated against Microsoft Defender's list of permitted filesystems. Only post successful validation, will the filesystem be allowed to be unmonitored. These configured unmonitored filesystems will still be scanned by Quick, Full, and custom scans.
 
-|Description|Value|
-|---|---|
-|**Key**|unmonitoredFilesystems|
-|**Data type**|Array of strings|
-|**Comments**|Configured filesystem will be unmonitored only if it is present in Microsoft's list of permitted unmonitored filesystems.|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
+|**Key**|unmonitoredFilesystems|Unmonitored Filesystems|
+|**Data type**|Array of strings|Dynamic String List|
+
+> [!NOTE] 
+> Configured filesystem will be unmonitored only if it is present in Microsoft's list of permitted unmonitored filesystems.
 
 By default, NFS and Fuse are unmonitored from RTP, Quick, and Full scans. However, they can still be scanned by a custom scan. For example, to remove NFS from the list of unmonitored filesystems list, update the managed config file as shown below. This will automatically add NFS to the list of monitored filesystems for RTP.
 
@@ -265,8 +273,8 @@ To remove both NFS and Fuse from unmonitored list of filesystems, do the followi
 
 Enables or disables file hash computation feature. When this feature is enabled, Defender for Endpoint computes hashes for files it scans. Note that enabling this feature might impact device performance. For more details, please refer to: [Create indicators for files](indicator-file.md).
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|enableFileHashComputation|
 |**Data type**|Boolean|
 |**Possible values**|false (default) <p> true|
@@ -275,8 +283,8 @@ Enables or disables file hash computation feature. When this feature is enabled,
 
 List of threats (identified by their name) that aren't blocked by the product and are instead allowed to run.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|allowedThreats|
 |**Data type**|Array of strings|
 
@@ -284,8 +292,8 @@ List of threats (identified by their name) that aren't blocked by the product an
 
 Restricts the actions that the local user of a device can take when threats are detected. The actions included in this list aren't displayed in the user interface.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|disallowedThreatActions|
 |**Data type**|Array of strings|
 |**Possible values**|allow (restricts users from allowing threats) <p> restore (restricts users from restoring threats from the quarantine)|
@@ -295,8 +303,8 @@ Restricts the actions that the local user of a device can take when threats are 
 
 The *threatTypeSettings* preference in the antivirus engine is used to control how certain threat types are handled by the product.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|threatTypeSettings|
 |**Data type**|Dictionary (nested preference)|
 |**Comments**|See the following sections for a description of the dictionary contents.|
@@ -305,8 +313,8 @@ The *threatTypeSettings* preference in the antivirus engine is used to control h
 
 Type of threat for which the behavior is configured.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|key|
 |**Data type**|String|
 |**Possible values**|potentially_unwanted_application <p> archive_bomb|
@@ -319,8 +327,8 @@ Action to take when coming across a threat of the type specified in the precedin
 - **Block**: The device is protected against this type of threat and you're notified in the security console.
 - **Off**: The device isn't protected against this type of threat and nothing is logged.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|value|
 |**Data type**|String|
 |**Possible values**|audit (default) <p> block <p> off|
@@ -329,8 +337,8 @@ Action to take when coming across a threat of the type specified in the precedin
 
 Specifies the merge policy for threat type settings. This can be a combination of administrator-defined and user-defined settings (`merge`) or only administrator-defined settings (`admin_only`). This setting can be used to restrict local users from defining their own settings for different threat types.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|threatTypeSettingsMergePolicy|
 |**Data type**|String|
 |**Possible values**|merge (default) <p> admin_only|
@@ -340,8 +348,8 @@ Specifies the merge policy for threat type settings. This can be a combination o
 
 Specify the number of days that results are retained in the scan history on the device. Old scan results are removed from the history. Old quarantined files that are also removed from the disk.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|scanResultsRetentionDays|
 |**Data type**|String|
 |**Possible values**|90 (default). Allowed values are from 1 day to 180 days.|
@@ -351,8 +359,8 @@ Specify the number of days that results are retained in the scan history on the 
 
 Specify the maximum number of entries to keep in the scan history. Entries include all on-demand scans performed in the past and all antivirus detections.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|scanHistoryMaximumItems|
 |**Data type**|String|
 |**Possible values**|10000 (default). Allowed values are from 5000 items to 15000 items.|
@@ -372,8 +380,8 @@ When this feature is enabled, Defender for Endpoint will scan files when their p
 > [!NOTE]
 > This feature is applicable only when the `enableFilePermissionEvents` feature is enabled. For more information, see [Advanced optional features](linux-preferences.md#configure-monitoring-of-file-modify-permissions-events) section below for details.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|scanFileModifyPermissions|
 |**Data type**|Boolean|
 |**Possible values**|false (default) <p> true|
@@ -386,8 +394,8 @@ When this feature is enabled, Defender for Endpoint will scan files for which ow
 > [!NOTE]
 > This feature is applicable only when the `enableFileOwnershipEvents` feature is enabled. For more information, see [Advanced optional features](linux-preferences.md#configure-monitoring-of-file-modify-ownership-events) section below for details.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|scanFileModifyOwnership|
 |**Data type**|Boolean|
 |**Possible values**|false (default) <p> true|
@@ -401,8 +409,8 @@ When this feature is enabled, Defender for Endpoint will scan network socket eve
 > This feature is applicable only when Behavior Monitoring is enabled.
 > This feature is applicable only when the `enableRawSocketEvent` feature is enabled. For more information, see [Advanced optional features](linux-preferences.md#configure-monitoring-of-raw-socket-events) section below for details.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|scanNetworkSocketEvent|
 |**Data type**|Boolean|
 |**Possible values**|false (default) <p> true|
@@ -416,8 +424,8 @@ The *cloudService* entry in the configuration profile is used to configure the c
 > [!NOTE]
 > Cloud-delivered protection is applicable with any Enforcement level settings (real_time, on_demand, passive).
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|cloudService|
 |**Data type**|Dictionary (nested preference)|
 |**Comments**|See the following sections for a description of the dictionary contents.|
@@ -426,8 +434,8 @@ The *cloudService* entry in the configuration profile is used to configure the c
 
 Determines whether cloud-delivered protection is enabled on the device or not. To improve the security of your services, we recommend keeping this feature turned on.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|enabled|
 |**Data type**|Boolean|
 |**Possible values**|true (default) <p> false|
@@ -436,8 +444,8 @@ Determines whether cloud-delivered protection is enabled on the device or not. T
 
 Diagnostic data is used to keep Defender for Endpoint secure and up to date, detect, diagnose and fix problems, and also make product improvements. This setting determines the level of diagnostics sent by the product to Microsoft. For more details, see [Privacy for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-privacy).
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|diagnosticLevel|
 |**Data type**|String|
 |**Possible values**|optional <p> required (default)|
@@ -454,8 +462,8 @@ There are five values for setting cloud block level:
 - High Plus (`high_plus`): Aggressively blocks unknown files and applies additional protection measures (might impact client device performance).
 - Zero Tolerance (`zero_tolerance`): Blocks all unknown programs.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|cloudBlockLevel|
 |**Data type**|String|
 |**Possible values**|normal (default) <p> moderate <p> high <p> high_plus <p> zero_tolerance|
@@ -468,8 +476,8 @@ Determines whether suspicious samples (that are likely to contain threats) are s
 - **Safe**: only suspicious samples that don't contain personally identifiable information (PII) are submitted automatically. This is the default value for this setting.
 - **All**: all suspicious samples are submitted to Microsoft.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|automaticSampleSubmissionConsent|
 |**Data type**|String|
 |**Possible values**|none <p> safe (default) <p> all|
@@ -478,8 +486,8 @@ Determines whether suspicious samples (that are likely to contain threats) are s
 
 Determines whether security intelligence updates are installed automatically:
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|automaticDefinitionUpdateEnabled|
 |**Data type**|Boolean|
 |**Possible values**|true (default) <p> false|
@@ -492,8 +500,8 @@ The following settings can be configured to enable certain advanced features.
 >[!NOTE]
 >Enabling these features might impact device performance. It is recommended to keep the defaults.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|features|
 |**Data type**|Dictionary (nested preference)|
 |**Comments**|See the following sections for a description of the dictionary contents.|
@@ -505,8 +513,8 @@ Determines whether module load events (file open events on shared libraries) are
 > [!NOTE]
 > This feature is applicable only when Behavior Monitoring is enabled.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|moduleLoad|
 |**Data type**|String|
 |**Possible values**|disabled (default) <p> enabled|
@@ -516,8 +524,8 @@ Determines whether module load events (file open events on shared libraries) are
 
 The following settings can be used to configure certain advanced supplementary sensor features.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|supplementarySensorConfigurations|
 |**Data type**|Dictionary (nested preference)|
 |**Comments**|See the following sections for a description of the dictionary contents.|
@@ -529,8 +537,8 @@ Determines whether file modify permissions events (`chmod`) are monitored.
 > [!NOTE]
 > When this feature is enabled, Defender for Endpoint will monitor changes to the execute bits of files, but not scan these events. For more information, see [Advanced scanning features](linux-preferences.md#configure-scanning-of-file-modify-permissions-events) section for more details.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|enableFilePermissionEvents|
 |**Data type**|String|
 |**Possible values**|disabled (default) <p> enabled|
@@ -543,8 +551,8 @@ Determines whether file modify ownership events (chown) are monitored.
 > [!NOTE]
 > When this feature is enabled, Defender for Endpoint will monitor changes to the ownership of files, but not scan these events. For more information, see [Advanced scanning features](linux-preferences.md#configure-scanning-of-file-modify-ownership-events) section for more details.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|enableFileOwnershipEvents|
 |**Data type**|String|
 |**Possible values**|disabled (default) <p> enabled|
@@ -558,8 +566,8 @@ Determines whether network socket events involving creation of raw sockets / pac
 > This feature is applicable only when Behavior Monitoring is enabled.
 > When this feature is enabled, Defender for Endpoint will monitor these network socket events, but not scan these events. For more information, see [Advanced scanning features](linux-preferences.md#configure-scanning-of-raw-socket-events) section above for more details.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|enableRawSocketEvent|
 |**Data type**|String|
 |**Possible values**|disabled (default) <p> enabled|
@@ -572,8 +580,8 @@ Determines whether boot loader events are monitored and scanned.
 > [!NOTE]
 > This feature is applicable only when Behavior Monitoring is enabled.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|enableBootLoaderCalls|
 |**Data type**|String|
 |**Possible values**|disabled (default) <p> enabled|
@@ -586,8 +594,8 @@ Determines whether ptrace events are monitored and scanned.
 > [!NOTE]
 > This feature is applicable only when Behavior Monitoring is enabled.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|enableProcessCalls|
 |**Data type**|String|
 |**Possible values**|disabled (default) <p> enabled|
@@ -600,8 +608,8 @@ Determines whether pseudofs events are monitored and scanned.
 > [!NOTE]
 > This feature is applicable only when Behavior Monitoring is enabled.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|enablePseudofsCalls|
 |**Data type**|String|
 |**Possible values**|disabled (default) <p> enabled|
@@ -614,8 +622,8 @@ Determines whether module load events are monitored using eBPF and scanned.
 > [!NOTE]
 > This feature is applicable only when Behavior Monitoring is enabled.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|enableEbpfModuleLoadEvents|
 |**Data type**|String|
 |**Possible values**|disabled (default) <p> enabled|
@@ -625,8 +633,8 @@ Determines whether module load events are monitored using eBPF and scanned.
 
 Determines whether suspicious events from Antivirus are reported to EDR.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|sendLowfiEvents|
 |**Data type**|String|
 |**Possible values**|disabled (default) <p> enabled|
@@ -639,8 +647,8 @@ The following settings can be used to configure advanced Network Protection insp
 > [!NOTE]
 > For these to be effective, Network Protection has to be turned on. For more information, see [Turn on network protection for Linux](network-protection-linux.md).
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|networkProtection|
 |**Data type**|Dictionary (nested preference)|
 |**Comments**|See the following sections for a description of the dictionary contents.|
@@ -652,8 +660,8 @@ Determines whether ICMP events are monitored and scanned.
 > [!NOTE]
 > This feature is applicable only when Behavior Monitoring is enabled.
 
-|Description|Value|
-|---|---|
+|Description|JSON Value|Defender Portal Value|
+|---|---|---|
 |**Key**|disableIcmpInspection|
 |**Data type**|Boolean|
 |**Possible values**|true (default) <p> false|
