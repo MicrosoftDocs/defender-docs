@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 ms.author: dansimp
 author: dansimp
-manager: dansimp
+manager: deniseb
 ms.date: 6/15/2023
 audience: ITPro
 ms.topic: conceptual

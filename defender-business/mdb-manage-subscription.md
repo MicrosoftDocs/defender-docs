@@ -29,10 +29,6 @@ This article describes how to apply either Defender for Business or Defender for
 - You should have active trial or paid licenses for both Defender for Business and Defender for Endpoint Plan 2. 
 
 - If you're using Defender for Business only, you can continue using it. In this case, no changes are needed. But if you're considering switching to Defender for Endpoint Plan 2, follow the guidance in this article.
-- To access license information, you must have one of the following roles assigned in Microsoft Entra ID:
-   
-   - Global Admin
-   - Security Admin
 
 ## View and manage your endpoint security subscription settings
 
@@ -63,11 +59,6 @@ This article describes how to apply either Defender for Business or Defender for
 The license usage report is estimated based on sign-in activities on the device. Defender for Endpoint Plan 2 licenses are assigned to users, and each user can have up to five concurrent, onboarded devices. To learn more about license terms, see [Microsoft Licensing](https://www.microsoft.com/en-us/licensing/default).  
 
 To reduce management overhead, there's no requirement for device-to-user mapping and assignment. Instead, the license report provides a utilization estimation that is calculated based on device usage seen across your organization. It might take up to one day for your usage report to reflect the active usage of your devices.
-
-> [!IMPORTANT]
-> To access license information, you must have one of the following roles assigned in Microsoft Entra ID:
-> - Security Admin
-> - Global Admin
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
