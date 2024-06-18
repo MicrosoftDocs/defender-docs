@@ -5,3 +5,6 @@
     - name: 'Microsoft Defender for Endpoint'
       tocHref: /defender-endpoint/
       topicHref: /defender-endpoint/index
+    - name: 'Microsoft Defender for Endpoint'
+      tocHref: /mem/intune/protect/
+      topicHref: /mem/intune/protect/
