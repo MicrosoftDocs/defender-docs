@@ -1,12 +1,12 @@
 ---
 title: Set preferences for Microsoft Defender for Endpoint on Linux
-ms.reviewer: gopkr, dmcwee
+ms.reviewer: gopkr
 description: Describes how to configure Microsoft Defender for Endpoint on Linux in enterprises.
 ms.service: defender-endpoint
 ms.author: dansimp
 author: dansimp
 ms.localizationpriority: medium
-ms.date: 06/18/2024
+ms.date: 05/17/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -275,18 +275,21 @@ Enables or disables file hash computation feature. When this feature is enabled,
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|enableFileHashComputation|
-|**Data type**|Boolean|
-|**Possible values**|false (default) <p> true|
-|**Comments**|Available in Defender for Endpoint version 101.85.27 or higher.|
+|**Key**|enableFileHashComputation|Enable file hash computation|
+|**Data type**|Boolean|Drop down|
+|**Possible values**|`false` (default) <p> `true`|Not configured<br>Disabled (default)<br>Enabled|
+
+> [!NOTE] 
+> Available in Defender for Endpoint version 101.85.27 or higher.
+
 #### Allowed threats
 
 List of threats (identified by their name) that aren't blocked by the product and are instead allowed to run.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|allowedThreats|
-|**Data type**|Array of strings|
+|**Key**|allowedThreats|Allowed threats|
+|**Data type**|Array of strings|Dynamic String List|
 
 #### Disallowed threat actions
 
@@ -294,10 +297,12 @@ Restricts the actions that the local user of a device can take when threats are 
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|disallowedThreatActions|
-|**Data type**|Array of strings|
-|**Possible values**|allow (restricts users from allowing threats) <p> restore (restricts users from restoring threats from the quarantine)|
-|**Comments**|Available in Defender for Endpoint version 100.83.73 or higher.|
+|**Key**|disallowedThreatActions|Disallowed threat actions|
+|**Data type**|Array of strings|Dynamic String List|
+|**Possible values**|allow (restricts users from allowing threats) <p> restore (restricts users from restoring threats from the quarantine)|allow (restricts users from allowing threats) <p> restore (restricts users from restoring threats from the quarantine)|
+
+> [!NOTE] 
+> Available in Defender for Endpoint version 100.83.73 or higher.
 
 #### Threat type settings
 
@@ -305,9 +310,9 @@ The *threatTypeSettings* preference in the antivirus engine is used to control h
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|threatTypeSettings|
-|**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|**Key**|threatTypeSettings|Threat type settings|
+|**Data type**|Dictionary (nested preference)|Dynamic Properties List|
+|**Comments**|See the following sections for a description of the dictionary contents.|See the following sections for a description of the dynamic properties.
 
 ##### Threat type
 
@@ -315,23 +320,23 @@ Type of threat for which the behavior is configured.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|key|
-|**Data type**|String|
-|**Possible values**|potentially_unwanted_application <p> archive_bomb|
+|**Key**|key|Threat type|
+|**Data type**|String|Drop down|
+|**Possible values**|`potentially_unwanted_application` <p> `archive_bomb`|potentially_unwanted_application <p> archive_bomb|
 
 ##### Action to take
 
 Action to take when coming across a threat of the type specified in the preceding section. Can be:
 
-- **Audit**: The device isn't protected against this type of threat, but an entry about the threat is logged.
+- **Audit**: The device isn't protected against this type of threat, but an entry about the threat is logged. (Default)
 - **Block**: The device is protected against this type of threat and you're notified in the security console.
 - **Off**: The device isn't protected against this type of threat and nothing is logged.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|value|
-|**Data type**|String|
-|**Possible values**|audit (default) <p> block <p> off|
+|**Key**|value|Action to take|
+|**Data type**|String|Drop down|
+|**Possible values**|`audit` (default) <p> `block` <p> `off`|audit <p> block <p> off|
 
 #### Threat type settings merge policy
 
@@ -339,10 +344,12 @@ Specifies the merge policy for threat type settings. This can be a combination o
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|threatTypeSettingsMergePolicy|
-|**Data type**|String|
-|**Possible values**|merge (default) <p> admin_only|
-|**Comments**|Available in Defender for Endpoint version 100.83.73 or higher.|
+|**Key**|threatTypeSettingsMergePolicy|Threat type settings merge|
+|**Data type**|String|Drop down|
+|**Possible values**|merge (default) <p> admin_only|Not configured<br>merge (Default)<br>admin_only|
+
+> [!NOTE] 
+> Available in Defender for Endpoint version 100.83.73 or higher.
 
 #### Antivirus scan history retention (in days)
 
@@ -350,10 +357,12 @@ Specify the number of days that results are retained in the scan history on the 
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|scanResultsRetentionDays|
-|**Data type**|String|
-|**Possible values**|90 (default). Allowed values are from 1 day to 180 days.|
-|**Comments**|Available in Defender for Endpoint version 101.04.76 or higher.|
+|**Key**|scanResultsRetentionDays|Scan results retention|
+|**Data type**|String|Toggle switch and Integer|
+|**Possible values**|90 (default). Allowed values are from 1 day to 180 days.|Not configured (toggle off - 90 day default)<br>Configured (toggle on) and allowed value 1 to 180 days.|
+
+> [!NOTE] 
+> Available in Defender for Endpoint version 101.04.76 or higher.
 
 #### Maximum number of items in the antivirus scan history
 
@@ -361,10 +370,12 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|scanHistoryMaximumItems|
-|**Data type**|String|
-|**Possible values**|10000 (default). Allowed values are from 5000 items to 15000 items.|
-|**Comments**|Available in Defender for Endpoint version 101.04.76 or higher.|
+|**Key**|scanHistoryMaximumItems|Scan history size|
+|**Data type**|String|Toggle and Integer|
+|**Possible values**|10000 (default). Allowed values are from 5000 items to 15000 items.|Not configured (toggle off - 10000 default)<br>Configured (toggle on) and allowed value from 5000 to 15000 items.|
+
+> [!NOTE] 
+> Available in Defender for Endpoint version 101.04.76 or higher.
 
 #### Advanced scan options
 
