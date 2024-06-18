@@ -39,6 +39,7 @@ For more details, see [Weaknesses page in the Microsoft Defender Vulnerabiltiiy 
 1. Select a recommendation. The side panel opens.
 
     1. Select **Request remediation** and then follow the [Request mediation instructions](/defender-vulnerability-management/tvm-remediation#request-remediation).
+
     Or
     1. Select **Exception options**, fill out the form and select **Submit**.
 
