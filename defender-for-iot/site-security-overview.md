@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: concept-article
 ---
 
-# Site Security
+# Site security
 
 The Site security page in the Defender portal is a dashboard that offers an overview of the security state of your entire OT/IoT network. The CISO and security site manager can use this dashboard to identify the most critical areas to work on and prevent and respond to advanced threats.
 
@@ -45,21 +45,3 @@ The dashboard also shows how many critical devices each site has. A critical dev
 This dashboard is especially important for two positions in your company. The CISO managers, who need to see a high level view of the security status of their systems and sites. Also for the OT security admin users/SOCs in charge of security implementation who needs to be able to make quick and highly informed decisions about which security problems are higher priority and in need of immediate responses.  
 
 Summarized data for a specific site can be displayed on the dashboard allowing further analysis without having to filter through the more detailed device inventory.  
-
-## Next steps
-
-> [!div class="step-by-step"]
->
-> [Set up sites in Defender for IoT](set-up-sites.md)<br><br>
-> [Manage sites](manage-sites.md)
-
-<!-- do i need any of this, i think it has all be written above 
-Defender for IoT uses the MDE agent to identify and locate other OT and IoT devices at the same location and adds them to the Device inventory. Before setting up a Defender for IoT site, OT devices listed in the Device inventory show minimal data. Once the OT devices are associated with a site, they show the full range of security related data available, including risk and exposure data.
-
-There are three stages to setting up a site. <!-- not sure to keep this or not, or move to a concept intro article -->
-<!--
-First, enter the site details and the owners of the site.
-
-Second, associate OT devices located at a specific physical location to this new site. This allows Microsoft Defender for IoT in the XDR portal to suggest a list of other OT devices it identifies at the same location. You might need to choose more than one suggested list of OT devices. The list also shows the number of total IoT devices Defender for IoT predicts are at the site, which helps you identify if the location matches the known number of devices there. If the numbers are significantly different this indicates that this isn't part of your site.
-
-Finally review the site details before creating the site. Once the site is created, you can also make a device group to give access permissions to users of this site. For more details, see [RBAC and user permissions in XDR](/defender-endpoint/user-roles.md). <!-- what link goes here? -->

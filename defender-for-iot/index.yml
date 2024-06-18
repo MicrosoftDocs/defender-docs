@@ -66,8 +66,6 @@ landingContent:
         links:
         - text: Monitor site security
           url: monitor-site-security.md
-        - text: Navigate the weakness page
-          url: navigate-weakness-page.md
         - text: Discover vulnerabilities
           url: discover-vulnerabilities.md
         - text: Investigate incidents and alerts
