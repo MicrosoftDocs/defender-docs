@@ -54,6 +54,12 @@ Set-MpPreference -EnableControlledFolderAccess AuditMode
 > If you want to fully audit how controlled folder access will work in your organization, you'll need to use a management tool to deploy this setting to devices in your network(s).
 You can also use Group Policy, Intune, mobile device management (MDM), or Microsoft Configuration Manager to configure and deploy the setting, as described in the main [controlled folder access topic](controlled-folders.md).
 
+> [!NOTE]
+> If your workflow involves usage of shared network folders, enabling CFA may result in significant performance reduction, particularly many queries to the file share server.
+
+> [!NOTE]
+> Some endpoint security or asset management softwares inject code into every process that starts on the system. These may result in CFA no longer trusting known applications like office programs. You can see the reason for CFA detections using the MDEClientAnalyzer tool's `-cfa` argument. If you're impacted, consider adding an AV exclusion for the injecting process or consult the vendor of your management software about signing all their binaries.
+
 ## Review controlled folder access events in Windows Event Viewer
 
 The following controlled folder access events appear in Windows Event Viewer under Microsoft/Windows/Windows Defender/Operational folder.
