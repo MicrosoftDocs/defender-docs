@@ -45,18 +45,18 @@ If you're using a terminal, download the tool by entering the following command:
 2. Verify the download.
 
     > [!NOTE]
-    > The current SHA256 hash of 'XMDEClientAnalyzerBinary.zip' that is downloaded from this link is: '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469'
+    > The current SHA256 hash of 'XMDEClientAnalyzerBinary.zip' that is downloaded from this link is: '51EC534507729D3A5056D596644FE5768BF1CCED266C8AC514CFCF11A6F12B97'
 
    - Linux
 
     ```console
-    echo '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469 XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo '51EC534507729D3A5056D596644FE5768BF1CCED266C8AC514CFCF11A6F12B97 XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
    - macOS
 
     ```console
-    echo '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
+    echo '51EC534507729D3A5056D596644FE5768BF1CCED266C8AC514CFCF11A6F12B97  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
     ```
 
 
@@ -128,13 +128,13 @@ When using a terminal, unzip the file by entering one of the following commands 
    - Linux
 
     ```console
-    echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66 XMDEClientAnalyzer.zip' | sha256sum -c
+    echo '2B8EBB39857BA24E84E332366B42E041B46AB130F8C8FD4E6D68B195022FD61E XMDEClientAnalyzer.zip' | sha256sum -c
     ```
 
    - macOS
 
     ```console
-    echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66  XMDEClientAnalyzer.zip' | shasum -a 256 -c
+    echo '2B8EBB39857BA24E84E332366B42E041B46AB130F8C8FD4E6D68B195022FD61E  XMDEClientAnalyzer.zip' | shasum -a 256 -c
     ```
 
 3. Extract the contents of XMDEClientAnalyzer.zip on the machine.\
@@ -183,6 +183,9 @@ Use the following command to get the machine diagnostic.
 --force, -f           Will overwrite if output directory exists
 --diagnostic, -d      Collect extensive machine diagnostic information
 --bypass-disclaimer   Do not display disclaimer banner
+--interactive, -i     Interactive diagnostic
+--delay DELAY, -dd DELAY
+                      Set MDATP log level. If you use interactive or delay mode, the log level will set to debug automatically, and reset after 48h.
 --mdatp-log {info,debug,verbose,error,trace,warning}
                       Set MDATP log level
 --max-log-size MAX_LOG_SIZE
@@ -190,6 +193,8 @@ Use the following command to get the machine diagnostic.
 ```
 
 Usage example: `sudo ./MDESupportTool -d`
+
+NOTE: The log level auto-reset feature only available in 2405 or newer client version.
 
 ### Positional arguments
 
