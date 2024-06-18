@@ -18,7 +18,9 @@ The Microsoft Defender portal displays Microsoft Defender for IoT security vulne
 Vulnerabilities are listed based on their publicly registered Common Vulnerabilitiy and Exposures(CVEs) ID. The public registry of CVEs can be accessed from [https://www.cve.org/](https://www.cve.org/).  
 
 The Weaknesses page lists each CVE and gives it a severity rating, a CVSS score (10 is most severe), and lists the number of exposed devices. Use the metrics to prioritize dealing with these security vulnerabilities.
-The Weaknesses page is found in the Vulnerability management section of the Endpoints menu. For more details, see [weaknesses page in the Microsoft Defender Vulnerabiltiiy Management](/defender-vulnerability-management/tvm-weaknesses.md).
+The Weaknesses page is found in the Vulnerability management section of the Endpoints menu.
+
+For more details, see [weaknesses page in the Microsoft Defender Vulnerabiltiiy Management](/defender-vulnerability-management/tvm-weaknesses.md).
 
 ## Investigate vulnerabiltites
 
@@ -32,7 +34,7 @@ this is the task of the security admin. who will eventually make a request to th
 
     The panel also displays the **Exposed devices** and **Affected software** tabs. Examine the details in the pane and decide which security recommendations to act on.
 
-    :::image type="content" source="/media/weaknesses-detail-panel.png" alt-text="Screenshot of the Weaknesses page with the open Vulnerabilities detail side panel.":::
+    :::image type="content" source="media/weaknesses-detail-panel.png" alt-text="Screenshot of the Weaknesses page with the open Vulnerabilities detail side panel.":::
 
 1. Select the **Go to related security recommenations** button. The Security recommendations page opens filtered for the CVE ID you were investigating.
 
@@ -41,7 +43,7 @@ this is the task of the security admin. who will eventually make a request to th
     1. Select **Request remediation** and then follow the [Request mediation instructions](/defender-vulnerability-management/tvm-remediation#request-remediation).
     1. Select **Exception options**, fill out the form and select **Submit**.
 
-    :::image type="content" source="/media/recommendations-panel-remediate.png" alt-text="Screenshot of the Security recommendations page filtered for a specific CVE with remediation panel open.":::
+    :::image type="content" source="media/recommendations-panel-remediate.png" alt-text="Screenshot of the Security recommendations page filtered for a specific CVE with remediation panel open.":::
 
 ## Apply recommendations
 
