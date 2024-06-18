@@ -393,10 +393,11 @@ When this feature is enabled, Defender for Endpoint will scan files when their p
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|scanFileModifyPermissions|
-|**Data type**|Boolean|
-|**Possible values**|false (default) <p> true|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
+|**Key**|scanFileModifyPermissions|Not available|
+|**Data type**|Boolean|n/a|
+|**Possible values**|false (default) <p> true|n/a|
+> [!NOTE] 
+> Available in Defender for Endpoint version 101.23062.0010 or higher.
 
 ##### Configure scanning of file modify ownership events
 
@@ -407,10 +408,12 @@ When this feature is enabled, Defender for Endpoint will scan files for which ow
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|scanFileModifyOwnership|
-|**Data type**|Boolean|
-|**Possible values**|false (default) <p> true|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
+|**Key**|scanFileModifyOwnership|Not available|
+|**Data type**|Boolean|n/a|
+|**Possible values**|false (default) <p> true|n/a|
+
+> [!NOTE] 
+> Available in Defender for Endpoint version 101.23062.0010 or higher.
 
 ##### Configure scanning of raw socket events
 
@@ -422,24 +425,26 @@ When this feature is enabled, Defender for Endpoint will scan network socket eve
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|scanNetworkSocketEvent|
-|**Data type**|Boolean|
-|**Possible values**|false (default) <p> true|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
+|**Key**|scanNetworkSocketEvent|Not available|
+|**Data type**|Boolean|n/a|
+|**Possible values**|false (default) <p> true|n/a|
+
+> [!NOTE] 
+> Available in Defender for Endpoint version 101.23062.0010 or higher.
 
 
 ### Cloud-delivered protection preferences
 
-The *cloudService* entry in the configuration profile is used to configure the cloud-driven protection feature of the product.
+The *cloudService* entry in the configuration profile is used to configure the cloud-driven protection feature of the product. 
 
 > [!NOTE]
 > Cloud-delivered protection is applicable with any Enforcement level settings (real_time, on_demand, passive).
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|cloudService|
-|**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|**Key**|cloudService|Cloud delivered protection preferences|
+|**Data type**|Dictionary (nested preference)|Collapsed section|
+|**Comments**|See the following sections for a description of the dictionary contents.|See the following sections for a description of the policy's settings.|
 
 #### Enable / disable cloud delivered protection
 
@@ -447,9 +452,9 @@ Determines whether cloud-delivered protection is enabled on the device or not. T
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|enabled|
-|**Data type**|Boolean|
-|**Possible values**|true (default) <p> false|
+|**Key**|enabled|Enable cloud delivered protection|
+|**Data type**|Boolean|Drop down|
+|**Possible values**|true (default) <p> false|Not configured<br>Disabled<br>Enabled (Default)|
 
 #### Diagnostic collection level
 
@@ -457,9 +462,9 @@ Diagnostic data is used to keep Defender for Endpoint secure and up to date, det
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|diagnosticLevel|
-|**Data type**|String|
-|**Possible values**|optional <p> required (default)|
+|**Key**|diagnosticLevel|Diagnostic data collection level|
+|**Data type**|String|Drop down|
+|**Possible values**|optional <p> required (default)|Not configured<br>optional (Default)<br>required|
 
 #### Configure cloud block level
 
@@ -475,10 +480,13 @@ There are five values for setting cloud block level:
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|cloudBlockLevel|
-|**Data type**|String|
-|**Possible values**|normal (default) <p> moderate <p> high <p> high_plus <p> zero_tolerance|
-|**Comments**|Available in Defender for Endpoint version 101.56.62 or higher.|
+|**Key**|cloudBlockLevel|Configure cloud block level|
+|**Data type**|String|Drop down|
+|**Possible values**|normal (default) <p> moderate <p> high <p> high_plus <p> zero_tolerance|Not configured<br>Normal (default) <br> Moderate <br> High <br> High_Plus <br> Zero_Tolerance|
+
+> [!NOTE] 
+> Available in Defender for Endpoint version 101.56.62 or higher.
+
 #### Enable / disable automatic sample submissions
 
 Determines whether suspicious samples (that are likely to contain threats) are sent to Microsoft. There are three levels for controlling sample submission:
@@ -489,9 +497,9 @@ Determines whether suspicious samples (that are likely to contain threats) are s
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|automaticSampleSubmissionConsent|
-|**Data type**|String|
-|**Possible values**|none <p> safe (default) <p> all|
+|**Key**|automaticSampleSubmissionConsent|Enable automatic sample submissions|
+|**Data type**|String|Drop down|
+|**Possible values**|none <p> safe (default) <p> all|Not configured<br>None<br>Safe (Default)<br>All|
 
 #### Enable / disable automatic security intelligence updates
 
@@ -499,9 +507,9 @@ Determines whether security intelligence updates are installed automatically:
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|automaticDefinitionUpdateEnabled|
-|**Data type**|Boolean|
-|**Possible values**|true (default) <p> false|
+|**Key**|automaticDefinitionUpdateEnabled|Automatic security intelligence updates|
+|**Data type**|Boolean|Drop down|
+|**Possible values**|true (default) <p> false|Not configured<br>Disabled<br>Enabled (Default)|
 
 
 ### Advanced optional features
@@ -513,8 +521,8 @@ The following settings can be configured to enable certain advanced features.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|features|
-|**Data type**|Dictionary (nested preference)|
+|**Key**|features|*Not available*|
+|**Data type**|Dictionary (nested preference)|*n/a*|
 |**Comments**|See the following sections for a description of the dictionary contents.|
 
 #### Module load feature
@@ -526,10 +534,10 @@ Determines whether module load events (file open events on shared libraries) are
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|moduleLoad|
-|**Data type**|String|
-|**Possible values**|disabled (default) <p> enabled|
-|**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
+|**Key**|moduleLoad|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
+|**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.||
 
 #### Supplementary sensor configurations
 
@@ -537,8 +545,8 @@ The following settings can be used to configure certain advanced supplementary s
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|supplementarySensorConfigurations|
-|**Data type**|Dictionary (nested preference)|
+|**Key**|supplementarySensorConfigurations|*Not available*|
+|**Data type**|Dictionary (nested preference)|*n/a*|
 |**Comments**|See the following sections for a description of the dictionary contents.|
 
 ##### Configure monitoring of file modify permissions events
@@ -550,9 +558,9 @@ Determines whether file modify permissions events (`chmod`) are monitored.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|enableFilePermissionEvents|
-|**Data type**|String|
-|**Possible values**|disabled (default) <p> enabled|
+|**Key**|enableFilePermissionEvents|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
 |**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
 
 ##### Configure monitoring of file modify ownership events
@@ -564,9 +572,9 @@ Determines whether file modify ownership events (chown) are monitored.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|enableFileOwnershipEvents|
-|**Data type**|String|
-|**Possible values**|disabled (default) <p> enabled|
+|**Key**|enableFileOwnershipEvents|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
 |**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
 
 ##### Configure monitoring of raw socket events
@@ -579,9 +587,9 @@ Determines whether network socket events involving creation of raw sockets / pac
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|enableRawSocketEvent|
-|**Data type**|String|
-|**Possible values**|disabled (default) <p> enabled|
+|**Key**|enableRawSocketEvent|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
 |**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
 
 ##### Configure monitoring of boot loader events
@@ -593,9 +601,9 @@ Determines whether boot loader events are monitored and scanned.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|enableBootLoaderCalls|
-|**Data type**|String|
-|**Possible values**|disabled (default) <p> enabled|
+|**Key**|enableBootLoaderCalls|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
 |**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
 
 ##### Configure monitoring of ptrace events
@@ -607,9 +615,9 @@ Determines whether ptrace events are monitored and scanned.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|enableProcessCalls|
-|**Data type**|String|
-|**Possible values**|disabled (default) <p> enabled|
+|**Key**|enableProcessCalls|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
 |**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
 
 ##### Configure monitoring of pseudofs events
@@ -621,9 +629,9 @@ Determines whether pseudofs events are monitored and scanned.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|enablePseudofsCalls|
-|**Data type**|String|
-|**Possible values**|disabled (default) <p> enabled|
+|**Key**|enablePseudofsCalls|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
 |**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
 
 ##### Configure monitoring of module load events using eBPF
@@ -635,9 +643,9 @@ Determines whether module load events are monitored using eBPF and scanned.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|enableEbpfModuleLoadEvents|
-|**Data type**|String|
-|**Possible values**|disabled (default) <p> enabled|
+|**Key**|enableEbpfModuleLoadEvents|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
 |**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
 
 #### Report AV Suspicious Events to EDR
@@ -646,9 +654,9 @@ Determines whether suspicious events from Antivirus are reported to EDR.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|sendLowfiEvents|
-|**Data type**|String|
-|**Possible values**|disabled (default) <p> enabled|
+|**Key**|sendLowfiEvents|*Not available*|
+|**Data type**|String|*n/a*|
+|**Possible values**|disabled (default) <p> enabled|*n/a*|
 |**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
 
 ### Network protection configurations
@@ -660,9 +668,9 @@ The following settings can be used to configure advanced Network Protection insp
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
-|**Key**|networkProtection|
-|**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|**Key**|networkProtection|Network protection|
+|**Data type**|Dictionary (nested preference)|Collapsed section|
+|**Comments**|See the following sections for a description of the dictionary contents.|See the following sections for a description of the policy settings.|
 
 #### Configure ICMP inspection
 
