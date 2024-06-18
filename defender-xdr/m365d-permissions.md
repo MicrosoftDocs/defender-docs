@@ -44,6 +44,9 @@ Accounts assigned the following **Global Microsoft Entra roles** can access Micr
 - Global Reader
 - Security Reader
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 To review accounts with these roles, [view Permissions in the Microsoft Defender portal](https://security.microsoft.com/permissions).
 
 **Custom role** access is a capability in Microsoft Defender XDR that allows you to manage access to specific data, tasks, and capabilities in Microsoft Defender XDR. Custom roles offer more control than global Microsoft Entra roles, providing users only the access they need with the least-permissive roles necessary.  Custom roles can be created in addition to global Microsoft Entra roles. [Learn more about custom roles](custom-roles.md).

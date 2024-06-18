@@ -4,7 +4,7 @@ f1.keywords:
   - NOCSH
 ms.author: deniseb
 author: denisebmsft
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.topic: conceptual
 ms.date: 6/20/2023

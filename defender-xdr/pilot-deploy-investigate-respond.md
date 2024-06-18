@@ -38,7 +38,7 @@ An incident in Microsoft Defender XDR is a collection of correlated alerts and a
 
 This is article 6 of 6 in a series to help you deploy the components of Microsoft Defender XDR, including investigating and responding to incidents.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg" alt-text="A diagram that shows incident investigation and response in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg" alt-text="A diagram that shows incident investigation and response in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg" border="false":::
 
 At any time during your pilot and deployment, you can test Microsoft Defender XDR's incident response and automated investigation and remediation capabilities by creating an incident with a simulated attack and using the Microsoft Defender portal to investigate and respond.
 

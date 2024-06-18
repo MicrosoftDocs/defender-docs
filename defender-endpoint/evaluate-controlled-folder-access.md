@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: conceptual
 author: siosulli
 ms.author: siosulli
-ms.reviewer: sugamar
+ms.reviewer: sugamar, moeghasemi
 manager: deniseb
 ms.subservice: asr
 ms.collection: 
@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 - mde-asr
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 06/18/2024
 ---
 
 # Evaluate controlled folder access
@@ -34,7 +34,7 @@ ms.date: 12/18/2020
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
 
-[Controlled folder access](controlled-folders.md) is a feature that helps protect your documents and files from modification by suspicious or malicious apps. Controlled folder access is supported on Windows Server 2019, Windows Server 2022, Windows 10, and Windows 11 clients.
+[Controlled folder access](controlled-folders.md) is a feature that helps protect your documents and files from modification by suspicious or malicious apps. Controlled folder access is supported on Windows Server 2022, Windows Server 2019, and client devices running Windows 10 or Windows 11.
 
 It's especially useful in helping protect against [ransomware](https://www.microsoft.com/wdsi/threats) that attempts to encrypt your files and hold them hostage.
 
@@ -51,8 +51,11 @@ Set-MpPreference -EnableControlledFolderAccess AuditMode
 ```
 
 > [!TIP]
-> If you want to fully audit how controlled folder access will work in your organization, you'll need to use a management tool to deploy this setting to devices in your network(s).
-You can also use Group Policy, Intune, mobile device management (MDM), or Microsoft Configuration Manager to configure and deploy the setting, as described in the main [controlled folder access topic](controlled-folders.md).
+> If you want to fully audit how controlled folder access will work in your organization, use a management tool to deploy this setting to devices in your networks. You can also use Group Policy, Intune, mobile device management (MDM), or Microsoft Configuration Manager to configure and deploy the setting, as described in the main [controlled folder access topic](controlled-folders.md).
+
+> [!NOTE]
+> - If your workflow involves usage of shared network folders, enabling controlled folder access can result in significant performance reduction, particularly because of many queries to the file share server.
+> - Some types of endpoint security or asset management software inject code into every process that starts on the system. These may result in controlled folder access no longer trusting known applications like Office programs. You can see the reason for controlled folder access detections by using the MDEClientAnalyzer tool's `-cfa` argument (see [Run the client analyzer on Windows](run-analyzer-windows.md)). If you're affected, consider adding an [antivirus exclusion](configure-exclusions-microsoft-defender-antivirus.md) for the injecting process, or consult your management software vendor about signing all their binaries.
 
 ## Review controlled folder access events in Windows Event Viewer
 
@@ -60,9 +63,9 @@ The following controlled folder access events appear in Windows Event Viewer und
 
 | Event ID | Description |
 | --|--|
-| 5007 | Event when settings are changed |
-| 1124 | Audited controlled folder access event |
-| 1123 | Blocked controlled folder access event |
+| `5007` | Event when settings are changed |
+| `1124` | Audited controlled folder access event |
+| `1123` | Blocked controlled folder access event |
 
 > [!TIP]
 > You can configure a [Windows Event Forwarding subscription](/windows/win32/wec/setting-up-a-source-initiated-subscription) to collect the logs centrally. 
