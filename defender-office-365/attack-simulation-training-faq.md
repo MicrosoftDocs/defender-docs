@@ -192,7 +192,7 @@ A: No. Currently, cross-tenant simulations aren't supported. Verify that all of 
 
 ### Q: How does region aware delivery work?
 
-A: Region aware delivery uses the TimeZone attribute of the targeted user's mailbox and 'not before' logic to determine when to deliver the message. For example, consider the following scenario:
+A: Region aware delivery uses the time zone attribute of the targeted user's mailbox to determine when to deliver the message. There might be a time difference of ± one hour in the email delivery based on the user's time zone. For example, consider the following scenario:
 
 - At 7:00 AM in the Pacific time zone (UTC-8), an admin creates and schedules a campaign to start at 9:00 AM on the same day.
 - UserA is in the Eastern time zone (UTC-5).
