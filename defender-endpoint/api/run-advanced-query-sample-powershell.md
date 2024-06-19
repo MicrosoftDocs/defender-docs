@@ -85,7 +85,7 @@ Run the following query:
 $token = $aadToken
 $query = 'DeviceRegistryEvents | limit 10' # Paste your own query here
 
-$url = "https://api.securitycenter.microsoft.com/api/advancedhunting/run"
+$url = "https://api.securitycenter.microsoft.com/api/advancedqueries/run"
 $headers = @{ 
     'Content-Type' = 'application/json'
     Accept = 'application/json'
