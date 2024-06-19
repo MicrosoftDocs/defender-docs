@@ -40,6 +40,14 @@ This is article 6 of 6 in a series to help you deploy the components of Microsof
 
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg" alt-text="A diagram that shows incident investigation and response in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-investigate-respond.svg" border="false":::
 
+The articles in this series correspond to the following phases of end-to-end deployment:
+
+| Phase | Link |
+|---|---|
+| A. Start the pilot | [Start the pilot](pilot-deploy-overview.md#start-the-pilot)|
+| B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
+|C. Investigate and respond to threats | **Practice incident investigation and response** (this article) |
+
 At any time during your pilot and deployment, you can test Microsoft Defender XDR's incident response and automated investigation and remediation capabilities by creating an incident with a simulated attack and using the Microsoft Defender portal to investigate and respond.
 
 ## Workflow for incident investigation and response using Microsoft Defender XDR
