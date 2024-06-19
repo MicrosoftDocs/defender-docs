@@ -14,7 +14,7 @@ ms.collection:
   - tier1
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 11/10/2023
+ms.date: 06/19/2023
 ---
 
 # Before you begin
@@ -80,8 +80,6 @@ Microsoft experts hunt over [advanced hunting logs](advanced-hunting-schema-tabl
 ### Security and compliance
 
 When you purchase and onboard to Defender Experts for XDR, you're granting permission to Microsoft experts to access your advanced hunting data.
-
-This service has been developed in alignment with existing security and privacy standards and is working towards several certifications, including ISO 27001 and ISO 27018.
 
 ### Availability
 

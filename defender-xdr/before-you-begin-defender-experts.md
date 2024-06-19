@@ -14,7 +14,7 @@ ms.collection:
   - tier1
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/05/2024
+ms.date: 06/19/2024
 ---
 
 # Before you begin using Defender Experts for Hunting
@@ -80,8 +80,6 @@ Microsoft experts hunt over [advanced hunting logs](advanced-hunting-schema-tabl
 ### Security and compliance
 
 When you purchase and onboard to Defender Experts for Hunting, you're granting permission to Microsoft experts to access your advanced hunting data.
-
-This service has been developed in alignment with existing security and privacy standards and is working towards several certifications, including ISO 27001 and ISO 27018.
 
 ### Availability
 
