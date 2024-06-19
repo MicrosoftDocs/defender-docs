@@ -46,4 +46,4 @@ For more information, see [Weaknesses page in the Microsoft Defender Vulnerabili
     Or
     1. Select **Exception options**, fill out the form. For more information, see [justification for an exception](/defender-vulnerability-management/tvm-security-recommendation.md#explore-security-recommendation-options). To complete, select **Submit**.
 
-    :::image type="content" source="media/create-expection.png" alt-text="Screenshot of the expection form in the remediation panel of the Security recommendations page for a specific CVE.":::
+    :::image type="content" source="media/create-exception.png" alt-text="Screenshot of the expection form in the remediation panel of the Security recommendations page for a specific CVE.":::
