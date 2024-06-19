@@ -36,10 +36,12 @@ For more information, see [Weaknesses page in the Microsoft Defender Vulnerabili
 
 1. Select the **Go to related security recommendations** button. The Security recommendations page opens filtered for the CVE ID you were investigating.
 
+    :::image type="content" source="media/recommendations-panel-remediate.png" alt-text="Screenshot of the Security recommendations page filtered for a specific CVE with remediation panel open.":::
+
 1. Select a recommendation. The side panel opens.
 
-    1. Select **Request remediation** and then follow the [Request mediation instructions](/defender-vulnerability-management/tvm-remediation#request-remediation).<br>
+    1. Select **Request remediation** and then follow the [Request mediation instructions](/defender-vulnerability-management/tvm-remediation#request-remediation). This sends a request to a team member to perform the requested remediation.<br>
     Or
-    1. Select **Exception options**, fill out the form and select **Submit**.
+    1. Select **Exception options**, fill out the form. For more information, see [justification for an exception](/defender-vulnerability-management/tvm-security-recommendation.md#explore-security-recommendation-options). To complete, select **Submit**.
 
-    :::image type="content" source="media/recommendations-panel-remediate.png" alt-text="Screenshot of the Security recommendations page filtered for a specific CVE with remediation panel open.":::
+    :::image type="content" source="media/create-expection.png" alt-text="Screenshot of the expection form in the remediation panel of the Security recommendations page for a specific CVE.":::
