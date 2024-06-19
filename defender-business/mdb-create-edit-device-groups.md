@@ -30,7 +30,6 @@ In Defender for Business, policies are applied to devices through certain collec
 - [How to view an existing device group](#view-an-existing-device-group)
 - [What the Add All Devices option does](#what-does-the-add-all-devices-option-do)
 
-
 ## What is a device group?
 
 A device group is a collection of devices that are grouped together because of certain specified criteria, such as operating system version. Devices that meet the criteria are included in that device group, unless you exclude them. In Defender for Business, policies are applied to devices by using device groups.
