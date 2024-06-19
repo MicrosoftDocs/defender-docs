@@ -63,9 +63,9 @@ Apple iOS doesn't support multiple **device-wide** VPNs to be active simultaneou
 
 To help ensure protection from web-based threats is active, Defender for Endpoint needs to run in the background at all times. This might lead to a minor increase in overall battery consumption of your device. In case you're seeing significant battery drain, [send us feedback](ios-troubleshoot.md#send-in-app-feedback) and we'll investigate.
 
-Also, in the Settings app, iOS only shows battery usage of apps that are visible to the user for a specific duration of time. The battery usage by apps shown on the screen is only for that time duration and is computed by iOS based on a multitude of factors, including CPU and Network usage. Microsoft Defender for Endpoint uses a local/loop-back VPN in the background to check web traffic for any malicious websites or connections. Network packets from any app go through this check and that causes the battery usage of Microsoft Defender for Endpoint to be computed inaccurately. The actual battery consumption of Microsoft Defender for Endpoint is lesser than what is shown on the Battery Settings page on the device.
+Also, in the **Settings** app, iOS only shows battery usage of apps that are visible to the user for a specific duration of time. The battery usage by apps shown on the screen is only for that time duration and is computed by iOS based on a multitude of factors, including CPU and Network usage. Microsoft Defender for Endpoint uses a local/loop-back VPN in the background to check web traffic for any malicious websites or connections. Network packets from any app go through this check and that causes the battery usage of Microsoft Defender for Endpoint to be computed inaccurately. The actual battery consumption of Microsoft Defender for Endpoint is lesser than what is shown on the Battery Settings page on the device.
 
-Note that the VPN used is a local VPN and unlike a traditional VPN, network traffic isn't sent outside the device.
+The VPN used is a local VPN and unlike a traditional VPN, network traffic isn't sent outside the device.
 
 ## Data usage
 
@@ -101,7 +101,7 @@ For details about data collected and privacy, see [Privacy Information - Microso
 
 ## Connectivity issue on cellular network
 
-If you are facing internet connectivity issues on cellular network, check if Microsoft Defender for Endpoint has cellular data enabled: Open Settings app > MS Defender > ensure that "Cellular data" is enabled for MS Defender.
+If you're facing internet connectivity issues on cellular network, check if Microsoft Defender for Endpoint has cellular data enabled: Open Settings app > MS Defender > ensure that "Cellular data" is enabled for MS Defender.
 
 If you still have connectivity issues, check if turning on/off Airplane mode helps resolve the issue. If the issue persists, [send us logs](ios-troubleshoot.md#send-in-app-feedback).
 
@@ -122,11 +122,11 @@ If you observe issues when the app is updated through the app store (either auto
 
 ## Send in-app feedback
 
-If a user faces an issue which isn't already addressed in the above sections or is unable to resolve using the listed steps, the user can provide in-app feedback along with diagnostic data. Our team will then investigate the logs to provide the right solution. 
+If a user faces an issue that isn't already addressed in the above sections or is unable to resolve using the listed steps, the user can provide in-app feedback along with diagnostic data. Our team will then investigate the logs to provide the right solution. 
 
 1. Users can use the following steps to send feedback if they are signed in to the app and can see the Send Feedback option:
 
-   1. Open MSDefender app on the iOS/iPadOS device.
+   1. Open the MS Defender app on the iOS/iPadOS device.
    
    2. Select the menu (profile icon) on the top-left corner, and then select **Send Feedback**.
    
