@@ -33,6 +33,29 @@ This article is updated frequently to let you know what's new in the latest rele
 - [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 <details>
+<summary> June-2024 (Build: 101.24052.0002 | Release version: 30.24052.0002.0)</summary>
+
+## June-2024 Build: 101.24052.0002 | Release version: 30.124052.0002.0
+
+&ensp;Released: **June 24, 2024**<br/>
+&ensp;Published: **June 24, 2024**<br/>
+&ensp;Build: **101.24052.0002**<br/>
+&ensp;Release version: **30.24052.0002.0**<br/>
+&ensp;Engine version: **1.1.24040.2**<br/>
+&ensp;Signature version: **1.411.153.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release:
+
+- This release fixes the bug related to memory leak issue in kernel space due to ebpf maps and progs not getting closed/unloaded whenever ebpf sensor is reloaded during the service. This will impact only the kernels 3.10x and <= 4.16x.
+- Simplified output of `mdatp health --details features`
+- Stability and performance improvements.
+- Other bug fixes.
+
+</details>
+
+<details>
 <summary> May-2024 (Build: 101.24042.0002 | Release version: 30.24042.0002.0)</summary>
 
 ## May-2024 Build: 101.24042.0002 | Release version: 30.124042.0002.0
