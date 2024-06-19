@@ -167,21 +167,23 @@ When you run the local script on Mac, it creates a trust with Microsoft Entra ID
 
 2. In the navigation pane, choose **Settings** > **Endpoints**, and then under **Device management**, choose **Onboarding**.
 
-3. Select **macOS**. In the **Deployment method** section, choose **Local script**. 
+3. Select **macOS**. 
 
-4. Select **Download onboarding package**, and save it to a removable drive. Also select **Download installation package**, and save it to your removable device.
+4. Under **Connectivity type**, select **Streamlined**.
 
-5. On Mac, save the installation package as `wdav.pkg` to a local directory.
+5. In the **Deployment method** section, choose **Local script**, and then select **Download onboarding package**. Save the package to a removable drive. Also select **Download installation package**, and save it to your removable device.
 
-6. Save the onboarding package as `WindowsDefenderATPOnboardingPackage.zip` to the same directory you used for the installation package.
+6. On your Mac, save the installation package as `wdav.pkg` to a local directory.
 
-7. Use Finder to navigate to `wdav.pkg` you saved, and then open it.
+7. Save the onboarding package as `WindowsDefenderATPOnboardingPackage.zip` to the same directory you used for the installation package.
 
-8. Select **Continue**, agree with the license terms, and then enter your password when prompted.
+8. Use Finder to navigate to `wdav.pkg` you saved, and then open it.
 
-9. You're prompted to allow installation of a driver from Microsoft (either *System Extension Blocked* or *Installation is on hold*, or both). You must allow the driver installation. Select **Open Security Preferences** or **Open System Preferences** > **Security & Privacy**, and then select **Allow**.
+9. Select **Continue**, agree with the license terms, and then enter your password when prompted.
 
-10. Use the following Bash command to run the onboarding package:
+10. You're prompted to allow installation of a driver from Microsoft (either *System Extension Blocked* or *Installation is on hold*, or both). You must allow the driver installation. Select **Open Security Preferences** or **Open System Preferences** > **Security & Privacy**, and then select **Allow**.
+
+11. Use the following Bash command to run the onboarding package:
 
    ```bash
    /usr/bin/unzip WindowsDefenderATPOnboardingPackage.zip \
