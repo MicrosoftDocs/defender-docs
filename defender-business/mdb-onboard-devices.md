@@ -137,9 +137,7 @@ After you've onboarded Windows devices to Defender for Business, you can run a d
 
 1. On the Windows device, create a folder: `C:\test-MDATP-test`.
 
-2. Open Command Prompt as an administrator.
-
-3. In the Command Prompt window, run the following PowerShell command:
+2. Open Command Prompt as an administrator, and then run the following command:
 
    ```powershell
    powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe');Start-Process 'C:\\test-MDATP-test\\invoice.exe'
