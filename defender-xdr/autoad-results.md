@@ -93,7 +93,7 @@ IdentityDirectoryEvents
 | project TimeGenerated, TargetAccountUpn, ACTOR_DEVICE
 ```
 
-The above query was adapted from a [Microsoft Defender for Identity - Attack Disruption query](https://github.com/alexverboon/Hunting-Queries-Detection-Rules/blob/main/Defender For Identity/MDI-AttackDisruption.md#microsoft-365-defender).
+The above query was adapted from a [Microsoft Defender for Identity - Attack Disruption query](https://github.com/alexverboon/Hunting-Queries-Detection-Rules/blob/main/Defender%20For%20Identity/MDI-AttackDisruption.md#microsoft-365-defender).
 
 ## Next step
 
