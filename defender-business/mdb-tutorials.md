@@ -37,7 +37,7 @@ The following table summarizes several scenarios to try with Defender for Busine
 
 ## Recommended training for Defender for Business
 
-The following table describes the recommended tutorials for Defender for Business customers.
+The following table describes the recommended learning resources for Defender for Business customers.
 
 | Training  | Description  |
 |---------|---------|

@@ -53,7 +53,7 @@ Vulnerability management features and capabilities in Microsoft Defender for Bus
 
 ## Next steps
 
-- [Try tutorials and simulations in Defender for Business](mdb-tutorials.md)
+- [Try training and learning resources for Defender for Business](mdb-tutorials.md)
 - [Onboard devices to Defender for Business](mdb-onboard-devices.md)
 - [View or edit policies in Defender for Business](mdb-view-edit-create-policies.md)
 
