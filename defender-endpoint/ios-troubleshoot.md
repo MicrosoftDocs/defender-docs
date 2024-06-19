@@ -39,11 +39,11 @@ This article provides troubleshooting information to help you address issues tha
 
 There are some apps that stop functioning when an active VPN is detected. You can disable the VPN during the time you're using such apps.
 
-By default, Defender for Endpoint on iOS includes and enables the web protection feature. [Web protection](web-protection-overview.md) helps to secure devices against web threats and protect users from phishing attacks. Defender for Endpoint on iOS uses a VPN in order to provide this protection. Note that this is a local VPN and unlike traditional VPN, network traffic isn't sent outside the device.
+By default, Defender for Endpoint on iOS includes and enables the web protection feature. [Web protection](web-protection-overview.md) helps to secure devices against web threats and protect users from phishing attacks. Defender for Endpoint on iOS uses a VPN in order to provide this protection. This is a local VPN and unlike traditional VPN, network traffic isn't sent outside the device.
 
 While enabled by default, there might be some cases that require you to disable VPN. For example, you want to run some apps that don't work when a VPN is configured. In such cases, you can choose to disable the VPN directly from the Defender for Endpoint app or using the following steps:
 
-1. On your iOS device, open the **Settings** app, click or tap **General** and then **VPN**.
+1. On your iOS device, open the **Settings** app, select **General**, and then select **VPN**.
 
 1. Select the "i" button for Microsoft Defender for Endpoint.
 
@@ -126,23 +126,28 @@ If a user faces an issue which isn't already addressed in the above sections or 
 
 1. Users can use the following steps to send feedback if they are signed in to the app and can see the Send Feedback option:
 
-- Open MSDefender app on the iOS/iPadOS device.
-- Tap on Menu (profile icon) on the top-left corner.
-- Tap **Send Feedback**.
-- Choose from the given options. To report an issue, select **I don't like something**.
-- Provide details of the issue that you're facing and check **Send diagnostic data**. We recommend that you include your email address so that the team can contact you for a solution or a follow-up.
-- Tap **Submit** to successfully send the feedback.
+   1. Open MSDefender app on the iOS/iPadOS device.
+   
+   2. Select the menu (profile icon) on the top-left corner, and then select **Send Feedback**.
+   
+   3. Choose from the given options. To report an issue, select **I don't like something**.
 
-2. Users can use the following steps to send feedback if they are having sign in issues or Send Feedback option is disabled (example GCC customers):
+      Provide details of the issue that you're facing and check **Send diagnostic data**. We recommend that you include your email address so that the team can contact you for a solution or a follow-up.
 
-- Sign out of MSDefender app (applicable when Send Feedback option is disabled).
-- Click on “Sign in with a different account”.
-- Click on “Get help signing in”.
-- Click on “Report a problem”.
-- Provide details about the issue you are facing.
-- Do not include any personal information like email iD. 
-- Toggle on include diagnostic data
-- Send feedback
-- Sign back in to the app (applicable if user has signed out).
+   4. Select **Submit** to successfully send your feedback.
+
+2. Users can use the following steps to send feedback if they are having sign in issues or the **Send Feedback** option is disabled (example GCC customers):
+
+   1. Sign out of MSDefender app (applicable when Send Feedback option is disabled).
+
+   2. Select **Sign in with a different account**.
+
+   3. Select **Get help signing in**.
+
+   4. Select **Report a problem**, and provide details about the issue you are facing. Don't include personal information, such as your email account.
+
+   5. Select the toggle to include diagnostic data, and submit your feedback. 
+   
+   6. Sign back in to the app (applicable if user has signed out).
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
