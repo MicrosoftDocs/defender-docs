@@ -44,14 +44,16 @@ By default, Defender for Endpoint on iOS includes and enables the web protection
 While enabled by default, there might be some cases that require you to disable VPN. For example, you want to run some apps that don't work when a VPN is configured. In such cases, you can choose to disable the VPN directly from the Defender for Endpoint app or using the following steps:
 
 1. On your iOS device, open the **Settings** app, click or tap **General** and then **VPN**.
-1. Click or tap the "i" button for Microsoft Defender for Endpoint.
+
+1. Select the "i" button for Microsoft Defender for Endpoint.
+
 1. Toggle off **Connect On Demand** to disable VPN.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="media/ios-vpn-config.png" alt-text="The Connect on demand option" lightbox="media/ios-vpn-config.png":::
 
 > [!NOTE]
-> Web Protection will not be available when VPN is disabled. To re-enable Web Protection, open the Microsoft Defender for Endpoint app on the device and Enable Web Protection.
+> Web Protection isn't available when VPN is disabled. To re-enable Web Protection, open the Defender for Endpoint app on the device and enable Web Protection.
 
 ## Coexistence with multiple VPN profiles
 
