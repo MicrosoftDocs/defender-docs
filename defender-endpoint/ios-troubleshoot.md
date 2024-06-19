@@ -45,9 +45,9 @@ While enabled by default, there might be some cases that require you to disable 
 
 1. On your iOS device, open the **Settings** app, select **General**, and then select **VPN**.
 
-1. Select the "i" button for Microsoft Defender for Endpoint.
+2. Select the **i** button for Defender for Endpoint.
 
-1. Toggle off **Connect On Demand** to disable VPN.
+3. Toggle off **Connect On Demand** to disable VPN.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="media/ios-vpn-config.png" alt-text="The Connect on demand option" lightbox="media/ios-vpn-config.png":::
