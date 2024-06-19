@@ -11,7 +11,7 @@ ms.topic: how-to
 
 # Discover vulnerabilities
 
-The Security administrator uses the list of detected vulnerabilities to create recommendations that are send to IT administrators to remediate.
+The Security administrator uses the list of detected vulnerabilities, in the Defender for Endpoints **Weaknesses** page, to create a remediation request that is sent to an IT administrator to perform.
   
 The Microsoft Defender portal displays Microsoft Defender for IoT security vulnerabilities in the **Weaknesses** page of the Endpoints navigation menu. The **Weaknesses** page lists the detected security vulnerabilities across all devices, endpoints, applications and other sources on your network.
 
@@ -24,13 +24,13 @@ For more details, see [Weaknesses page in the Microsoft Defender Vulnerabiltiiy 
 
 ## Investigate vulnerabiltites
 
-1. In the Defender portal, go to **Endpoints > Vulnerability managemenr > Weaknesses**.
+1. In the Defender portal, go to **Endpoints > Vulnerability management > Weaknesses**.
 
 1. Set filter settings as you need them.
 
 1. Select a CVE name and the Vulnerabiltity details open in the side panel.
 
-    The panel also displays the **Exposed devices** and **Affected software** tabs. Examine the details in the pane and decide which security recommendations to act on.
+    The panel also displays the **Exposed devices** and **Affected software** tabs.
 
     :::image type="content" source="media/weaknesses-detail-panel.png" alt-text="Screenshot of the Weaknesses page with the open Vulnerabilities detail side panel.":::
 
