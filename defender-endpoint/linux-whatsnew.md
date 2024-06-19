@@ -54,7 +54,6 @@ There are multiple fixes and new changes in this release:
 - Other bug fixes.
 
 </details>
-
 <details>
 <summary> May-2024 (Build: 101.24042.0002 | Release version: 30.24042.0002.0)</summary>
 
