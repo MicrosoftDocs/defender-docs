@@ -138,7 +138,7 @@ If a user faces an issue that isn't already addressed in the above sections or i
 
 2. Users can use the following steps to send feedback if they are having sign in issues or the **Send Feedback** option is disabled (example GCC customers):
 
-   1. Sign out of MSDefender app (applicable when Send Feedback option is disabled).
+   1. Sign out of the MS Defender app (applicable when Send Feedback option is disabled).
 
    2. Select **Sign in with a different account**.
 
