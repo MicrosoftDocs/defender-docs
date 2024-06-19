@@ -49,44 +49,43 @@ The Action center ([https://security.microsoft.com/action-center](https://securi
 After you mitigate the risk and complete the investigation of an incident, you can release the contained assets from the action details pane (e.g., enable a disabled user account or release a device from containment). For more information about the action center, see [Action center](m365d-action-center.md).
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 
-## Track the actions in Advanced Hunting
+## Track the actions in advanced hunting
 
-### Hunting for Contain Device / Contain User actions
+You can use specific queries in [advanced hunting](advanced-hunting-overview.md) to track contain device or user, and disable user account actions.
 
-Contain actions triggered by attack disruption can also be found in the DeviceEvents table in Advanced Hunting.
+### Hunt for contain actions
 
-For Device Contain actions :
+Contain actions triggered by attack disruption are found in the [DeviceEvents table](advanced-hunting-deviceevents-table.md) in advanced hunting. Use the following queries to hunt for these specific contain actions:
 
-DeviceEvents
-| where ActionType contains "ContainDevice”
+- Device contain actions:
+        > DeviceEvents
+        > | where ActionType contains "ContainDevice”
 
-For User Contain actions :
+- User contain actions:
+        > DeviceEvents
+        > | where ActionType contains "ContainUser"
 
-DeviceEvents
-| where ActionType contains "ContainUser"
+### Hunt for disable user account actions
 
-### Hunting for Disable User Account Actions
+Attack disruption uses the remediation action capability of Microsoft Defender for Identity to disable accounts. Defender for Identity by default uses the LocalSystem account of the domain controller for all remediation actions. The following query looks for account disable events performed by a domain controller and returns accounts that were disabled by automatic attack disruption by manually triggering account disable in Microsoft Defender XDR: 
 
-Attack disruption uses the remediation action capability of Defender for Identity to disable accounts. Defender for Identity by default uses the LocalSystem account of the domain controller for all remediation actions. The following query looks for account disable events that were performed by a domain controller, and therefore returns accounts that were disabled by Disrupt and by manually triggering account disable in Microsoft XDR. 
+> let AllDomainControllers =
+>        DeviceNetworkEvents
+>        | where TimeGenerated > ago(7d)
+>        | where LocalPort == 88
+>        | where LocalIPType == "FourToSixMapping"
+>        | extend DCDevicename = tostring(split(DeviceName,".")[0])
+>        | distinct DCDevicename;
+> IdentityDirectoryEvents
+> | where TimeGenerated > ago(90d)
+> | where ActionType == "Account disabled"
+> | where Application == "Active Directory"
+> | extend ACTOR_DEVICE = tolower(tostring(AdditionalFields.["ACTOR.DEVICE"]))
+> | where isnotempty( ACTOR_DEVICE)
+> | where ACTOR_DEVICE in (AllDomainControllers)
+> | project TimeGenerated, TargetAccountUpn, ACTOR_DEVICE
 
-let AllDomainControllers =
-        DeviceNetworkEvents
-        | where TimeGenerated > ago(7d)
-        | where LocalPort == 88
-        | where LocalIPType == "FourToSixMapping"
-        | extend DCDevicename = tostring(split(DeviceName,".")[0])
-        | distinct DCDevicename;
-IdentityDirectoryEvents
-| where TimeGenerated > ago(90d)
-| where ActionType == "Account disabled"
-| where Application == "Active Directory"
-| extend ACTOR_DEVICE = tolower(tostring(AdditionalFields.["ACTOR.DEVICE"]))
-| where isnotempty( ACTOR_DEVICE)
-| where ACTOR_DEVICE in (AllDomainControllers)
-| project TimeGenerated, TargetAccountUpn, ACTOR_DEVICE
-
-The query has been adapted from (https://github.com/alexverboon/Hunting-Queries-Detection-Rules/blob/main/Defender For Identity/MDI-AttackDisruption.md#microsoft-365-defender)
-
+The above query was adapted from a [Microsoft Defender for Identity - Attack Disruption query](https://github.com/alexverboon/Hunting-Queries-Detection-Rules/blob/main/Defender For Identity/MDI-AttackDisruption.md#microsoft-365-defender).
 
 ## Next step
 
