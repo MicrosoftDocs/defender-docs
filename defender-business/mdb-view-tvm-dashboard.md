@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 08/02/2022
+ms.date: 06/19/2024
 ms.reviewer: nehabha
 f1.keywords: NOCSH 
 ms.collection: 

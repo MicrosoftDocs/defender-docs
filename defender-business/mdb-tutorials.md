@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.reviewer: efratka, nehabha, yaelbenari
-ms.date: 04/10/2024
+ms.date: 06/19/2024
 f1.keywords: NOCSH 
 ms.collection: 
 - SMB

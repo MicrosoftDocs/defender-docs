@@ -10,7 +10,7 @@ ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.reviewer: nehabha
-ms.date: 05/17/2023
+ms.date: 06/19/2024
 f1.keywords: NOCSH 
 ms.collection: 
 - SMB

@@ -12,7 +12,7 @@ ms.collection:
 - tier1
 - essentials-get-started
 ms.localizationpriority: high
-ms.date: 06/07/2024
+ms.date: 06/19/2024
 ms.service: defender-business
 search.appverid: 
 - MOE150
