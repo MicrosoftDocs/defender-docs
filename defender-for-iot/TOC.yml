@@ -42,11 +42,3 @@
         href: manage-devices-inventory.md
       - name: License admin centre
         href: license-admin.md  
-    - name: Resources
-      items:
-      - name: Glossary
-        href: glossary.md
-      - name: FAQ
-        href: faq.md
-      - name: Troubleshooting
-        href: troubleshooting.md

@@ -43,7 +43,3 @@ Purchase the license for your network from the Microsoft 365 admin center, by en
 [ Is there a confirmation stage? How does the user know the transaction is complete and what else do they need to know?]
 
 :::image type="content" source="media/365-center-iot-license.png" alt-text="Screenshot showing the license choices for Microsoft Defender for IoT.":::
-
-## Next steps
-
-> [!div class="step-by-step"]
