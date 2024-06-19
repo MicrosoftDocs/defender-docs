@@ -28,11 +28,11 @@ ms.reviewer: evaldm, isco
 **Applies to:**
 - Microsoft Defender XDR
 
-With Microsoft Defender XDR, when an automatic attack disruption triggers, details about the risk and the containment status of compromised assets are available during and after the process. You can view these on the Incident page, which provides the full details of the attack and the up-to-date status of associated assets.
+When an automatic attack disruption triggers in Microsoft Defender XDR, The details about the risk and the containment status of compromised assets are available during and after the process. You can view these on the incident page, which provides the full details of the attack and the up-to-date status of associated assets.
 
 ## Review the incident graph
 
-Microsoft Defender XDR automatic attack disruption is built-in in the Incident view. Reviewing the incident graph enables you to get the entire attack story and assess the attack disruption impact and status.
+Microsoft Defender XDR automatic attack disruption is built-in in the incident view. Review the incident graph to get the entire attack story and assess the attack disruption impact and status.
 
 Here are some examples of what it looks like:
 
@@ -71,7 +71,7 @@ DeviceEvents
 
 ### Hunt for disable user account actions
 
-Attack disruption uses the remediation action capability of Microsoft Defender for Identity to disable accounts. Defender for Identity by default uses the LocalSystem account of the domain controller for all remediation actions. The following query looks for account disable events performed by a domain controller and returns accounts that were disabled by automatic attack disruption by manually triggering account disable in Microsoft Defender XDR: 
+Attack disruption uses the remediation action capability of Microsoft Defender for Identity to disable accounts. Defender for Identity uses the LocalSystem account of the domain controller by default for all remediation actions. The following query looks for account disable events performed by a domain controller and returns accounts that were disabled by automatic attack disruption by manually triggering account disable in Microsoft Defender XDR: 
 
 ```
 let AllDomainControllers =
