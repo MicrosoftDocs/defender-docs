@@ -70,17 +70,19 @@ You can use a local script to onboard Windows client devices. When you run the o
 
 2. In the navigation pane, choose **Settings** > **Endpoints**, and then under **Device management**, choose **Onboarding**.
 
-3. Select **Windows 10 and 11**, and then, in the **Deployment method** section, choose **Local script**. 
+3. Select **Windows 10 and 11**.
 
-4. Select **Download onboarding package**. We recommend that you save the onboarding package to a removable drive.
+4. Under **Connectivity type**, select **Streamlined**.
 
-5. On a Windows device, extract the contents of the configuration package to a location, such as the Desktop folder. You should have a file named `WindowsDefenderATPLocalOnboardingScript.cmd`. 
+5. In the **Deployment method** section, choose **Local script**, and then select **Download onboarding package**. We recommend that you save the onboarding package to a removable drive.
 
-6. Open a command prompt as an administrator.
+6. On a Windows device, extract the contents of the configuration package to a location, such as the Desktop folder. You should have a file named `WindowsDefenderATPLocalOnboardingScript.cmd`. 
 
-7. Type the location of the script file. For example, if you copied the file to the Desktop folder, you would type `%userprofile%\Desktop\WindowsDefenderATPLocalOnboardingScript.cmd`, and then press the Enter key (or select **OK**).
+7. Open a command prompt as an administrator.
 
-8. After the script runs, [Run a detection test](#run-a-detection-test-on-a-windows-10-or-11-device).
+8. Type the location of the script file. For example, if you copied the file to the Desktop folder, you would type `%userprofile%\Desktop\WindowsDefenderATPLocalOnboardingScript.cmd`, and then press the Enter key (or select **OK**).
+
+9. After the script runs, [Run a detection test](#run-a-detection-test-on-a-windows-10-or-11-device).
 
 ### Group Policy for Windows 10 and 11
 
