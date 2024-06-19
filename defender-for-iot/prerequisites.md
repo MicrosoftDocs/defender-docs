@@ -21,7 +21,7 @@ Before you start, you need:
 
 1. An email address to be used as the contact for your new Microsoft Tenant.
 
-1. A Microsoft 365 tenant, with access to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog) as Global or Billing admin. <!--A Global [or Billing - ADD?] Admin permissions (Entra ID role on the tenant) [do we want this link?  [Entra](/entra/identity/role-based-access-control/permissions-reference.md#global-administrator) ].-->
+1. A Microsoft 365 tenant, with access to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog) as Global or Billing admin.
 
     For more information, see [Buy or remove licenses for a Microsoft business subscription](/microsoft-365/commerce/licenses/buy-licenses) and [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles).
 
@@ -29,11 +29,7 @@ Before you start, you need:
 
 1. We recommend you have IP or MAC address details of at least one OT device at the site.
 
-## Additional prerequisites for a permanent license
-
-1. An understanding of your site size. For more information, see [Calculate devices in your network](/best-practices/plan-prepare-deploy.md#calculate-devices-in-your-network). <!-- waiting for update to this from Belle [link to here](get-started.md#calculate-number-of-devices)]. -->
-
-## Permissions - Mia
+## Permissions
 
 TBD go over Mia doc
 
