@@ -28,15 +28,13 @@ ms.date: 05/15/2021
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-> [!NOTE]
-> **Control Filter not working as expected on Supervised devices**
-Control Filter is not working as expected from iOS 16.1 onwards. This has impacted the Web Protection capability for Supervised devices without local loopback VPN. The issue has been resolved with iOS 16.3. Support for Control Filter is re-enabled with the new version - 1.1.38010102.
  
 
 This topic provides troubleshooting information to help you address issues that may arise as you use Microsoft Defender for Endpoint on iOS.
 
 > [!NOTE]
-> Defender for Endpoint on iOS would use a VPN in order to provide the Web Protection feature. This is not a regular VPN and is a local/self-looping VPN that does not take traffic outside the device.
+> - Defender for Endpoint on iOS would use a VPN in order to provide the Web Protection feature. This is not a regular VPN and is a local/self-looping VPN that does not take traffic outside the device.
+> - For customers who don't want to set up a VPN, there's an option to disable Web Protection and deploy Defender for Endpoint without that feature. In such scenario, Defender sends the heartbeat to the Microsoft Defender portal whenever user opens the app.
 
 ## Apps don't work when VPN is turned on
 
@@ -106,9 +104,6 @@ If you are facing internet connectivity issues on cellular network, check if Mic
 
 If you still have connectivity issues, check if turning on/off Airplane mode helps resolve the issue. If the issue persists, [send us logs](ios-troubleshoot.md#send-in-app-feedback).
 
-## Issues on supervised devices with content filter profile installed
-
-There's an issue on supervised devices with Defender for Endpoint content filter installed. If you observe slowness or latency in internet connectivity on such devices, uninstall or delete the content filter profile from the device. We're working to resolve this issue and will update this place once we've a resolution. 
 
 ## Issues during app updates from the app store
 
@@ -126,7 +121,9 @@ If you observe issues when the app is updated through the app store (either auto
 
 ## Send in-app feedback
 
-If a user faces an issue which isn't already addressed in the above sections or is unable to resolve using the listed steps, the user can provide in-app feedback along with diagnostic data. Our team will then investigate the logs to provide the right solution. Users can use the following steps to send feedback:
+If a user faces an issue which isn't already addressed in the above sections or is unable to resolve using the listed steps, the user can provide in-app feedback along with diagnostic data. Our team will then investigate the logs to provide the right solution. 
+
+1. Users can use the following steps to send feedback if they are signed in to the app and can see the Send Feedback option:
 
 - Open MSDefender app on the iOS/iPadOS device.
 - Tap on Menu (profile icon) on the top-left corner.
@@ -134,4 +131,17 @@ If a user faces an issue which isn't already addressed in the above sections or 
 - Choose from the given options. To report an issue, select **I don't like something**.
 - Provide details of the issue that you're facing and check **Send diagnostic data**. We recommend that you include your email address so that the team can contact you for a solution or a follow-up.
 - Tap **Submit** to successfully send the feedback.
+
+2. Users can use the following steps to send feedback if they are having sign in issues or Send Feedback option is disabled (example GCC customers):
+
+- Sign out of MSDefender app (applicable when Send Feedback option is disabled).
+- Click on “Sign in with a different account”.
+- Click on “Get help signing in”.
+- Click on “Report a problem”.
+- Provide details about the issue you are facing.
+- Do not include any personal information like email iD. 
+- Toggle on include diagnostic data
+- Send feedback
+- Sign back in to the app (applicable if user has signed out).
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
