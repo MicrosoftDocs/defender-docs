@@ -39,7 +39,7 @@ This is article 5 of 6 in a series to help you deploy the components of Microsof
 
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg" alt-text="A diagram that shows Microsoft Defender for Cloud Apps in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg" border="false":::
 
-Articles in this series:
+The articles in this series correspond to the following phases of end-to-end deployment:
 
 | Phase | Link |
 |---|---|
@@ -57,7 +57,7 @@ You start by evaluating the product or service and how it will work within your 
 
 Here is the workflow for piloting and deploying Defender for Cloud Apps in your production environment.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg" alt-text="A diagram that shows the pilot and deploy workflow for Microsoft Defender for Cloud Apps." lightbox="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg" alt-text="A diagram that shows the pilot and deploy workflow for Microsoft Defender for Cloud Apps." lightbox="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg" border="false":::
 
 Follow these steps:
 
