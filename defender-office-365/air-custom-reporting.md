@@ -24,11 +24,9 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# Custom or third-party reporting solutions for Microsoft Defender for Office 365
+# Custom or third-party reporting solutions for Microsoft Defender for Office 365 Plan 2
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
-
-[Defender for Office 365 Plan 1 vs. Plan 2 cheat sheet]
 
 Automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2 returns detailed information about the results. For more information, see [Details and results of automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2](air-view-investigation-results.md).
 
