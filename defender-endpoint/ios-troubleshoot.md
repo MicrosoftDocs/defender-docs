@@ -61,7 +61,7 @@ Apple iOS doesn't support multiple **device-wide** VPNs to be active simultaneou
 
 ## Battery consumption
 
-In order to provide you all-time protection from web-based threats, Microsoft Defender for Endpoint needs to run in the background at all times. This might lead to a minor increase in overall battery consumption of your device. In case you're seeing significant battery drain, [send us feedback](ios-troubleshoot.md#send-in-app-feedback) and we'll investigate.
+To help ensure protection from web-based threats is active, Defender for Endpoint needs to run in the background at all times. This might lead to a minor increase in overall battery consumption of your device. In case you're seeing significant battery drain, [send us feedback](ios-troubleshoot.md#send-in-app-feedback) and we'll investigate.
 
 Also, in the Settings app, iOS only shows battery usage of apps that are visible to the user for a specific duration of time. The battery usage by apps shown on the screen is only for that time duration and is computed by iOS based on a multitude of factors, including CPU and Network usage. Microsoft Defender for Endpoint uses a local/loop-back VPN in the background to check web traffic for any malicious websites or connections. Network packets from any app go through this check and that causes the battery usage of Microsoft Defender for Endpoint to be computed inaccurately. The actual battery consumption of Microsoft Defender for Endpoint is lesser than what is shown on the Battery Settings page on the device.
 
