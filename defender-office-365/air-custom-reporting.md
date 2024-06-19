@@ -28,7 +28,11 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-With [Microsoft Defender for Office 365](mdo-about.md), you get [detailed information about automated investigations](air-view-investigation-results.md). However, some organizations also use a custom or third-party reporting solution. If your organization wants to integrate information about [automated investigations](air-about.md) with such a solution, you can use the Office 365 Management Activity API.
+[Defender for Office 365 Plan 1 vs. Plan 2 cheat sheet]
+
+Automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2 returns detailed information about the results. For more information, see [Details and results of automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2](air-view-investigation-results.md).
+
+However, some Microsoft 365 organizations use custom or third-party reporting solutions. Those organizations can use the **Office 365 Management Activity APIs** to integrate information from AIR into other reporting solutions.
 
 |Resource|Description|
 |:---|:---|

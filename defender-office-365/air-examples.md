@@ -35,9 +35,9 @@ AIR enables your SecOps team to operate more efficiently and effectively. AIR in
 
 This article describes how AIR works through several examples:
 
-- [Example 1: A user-reported phishing message launches an investigation playbook](#example-a-user-reported-phishing-message-launches-an-investigation-playbook)
-- [Example 2: A security administrator triggers an investigation from Threat Explorer](#example-a-security-administrator-triggers-an-investigation-from-threat-explorer)
-- [Example 3: A security operations team integrates AIR with their SIEM using the Office 365 Management Activity API](#example-a-security-operations-team-integrates-air-with-their-siem-using-the-office-365-management-activity-api)
+- [Example: A user-reported phishing message launches an investigation playbook](#example-a-user-reported-phishing-message-launches-an-investigation-playbook)
+- [Example: A security administrator triggers an investigation from Threat Explorer](#example-a-security-administrator-triggers-an-investigation-from-threat-explorer)
+- [Example: A security operations team integrates AIR with their SIEM using the Office 365 Management Activity API](#example-a-security-operations-team-integrates-air-with-their-siem-using-the-office-365-management-activity-api)
 
 ## Example: A user-reported phishing message launches an investigation playbook
 
