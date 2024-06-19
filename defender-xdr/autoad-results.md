@@ -8,7 +8,7 @@ f1.keywords:
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 02/22/2023
+ms.date: 06/19/2024
 manager: dansimp
 audience: ITPro
 ms.collection: 
@@ -58,33 +58,37 @@ You can use specific queries in [advanced hunting](advanced-hunting-overview.md)
 Contain actions triggered by attack disruption are found in the [DeviceEvents table](advanced-hunting-deviceevents-table.md) in advanced hunting. Use the following queries to hunt for these specific contain actions:
 
 - Device contain actions:
-        ```DeviceEvents
-           | where ActionType contains "ContainDevice"
-        ```
+```
+DeviceEvents
+| where ActionType contains "ContainDevice"
+```
+
 - User contain actions:
-        ```DeviceEvents
-           | where ActionType contains "ContainUser"
-        ```
+```
+DeviceEvents
+| where ActionType contains "ContainUser"
+```
 
 ### Hunt for disable user account actions
 
 Attack disruption uses the remediation action capability of Microsoft Defender for Identity to disable accounts. Defender for Identity by default uses the LocalSystem account of the domain controller for all remediation actions. The following query looks for account disable events performed by a domain controller and returns accounts that were disabled by automatic attack disruption by manually triggering account disable in Microsoft Defender XDR: 
 
-```let AllDomainControllers =
-   DeviceNetworkEvents
-   | where TimeGenerated > ago(7d)
-   | where LocalPort == 88
-   | where LocalIPType == "FourToSixMapping"
-   | extend DCDevicename = tostring(split(DeviceName,".")[0])
-   | distinct DCDevicename;
-   IdentityDirectoryEvents
-   | where TimeGenerated > ago(90d)
-   | where ActionType == "Account disabled"
-   | where Application == "Active Directory"
-   | extend ACTOR_DEVICE = tolower(tostring(AdditionalFields.["ACTOR.DEVICE"]))
-   | where isnotempty( ACTOR_DEVICE)
-   | where ACTOR_DEVICE in (AllDomainControllers)
-   | project TimeGenerated, TargetAccountUpn, ACTOR_DEVICE
+```
+let AllDomainControllers =
+DeviceNetworkEvents
+| where TimeGenerated > ago(7d)
+| where LocalPort == 88
+| where LocalIPType == "FourToSixMapping"
+| extend DCDevicename = tostring(split(DeviceName,".")[0])
+| distinct DCDevicename;
+IdentityDirectoryEvents
+| where TimeGenerated > ago(90d)
+| where ActionType == "Account disabled"
+| where Application == "Active Directory"
+| extend ACTOR_DEVICE = tolower(tostring(AdditionalFields.["ACTOR.DEVICE"]))
+| where isnotempty( ACTOR_DEVICE)
+| where ACTOR_DEVICE in (AllDomainControllers)
+| project TimeGenerated, TargetAccountUpn, ACTOR_DEVICE
 ```
 
 The above query was adapted from a [Microsoft Defender for Identity - Attack Disruption query](https://github.com/alexverboon/Hunting-Queries-Detection-Rules/blob/main/Defender For Identity/MDI-AttackDisruption.md#microsoft-365-defender).
