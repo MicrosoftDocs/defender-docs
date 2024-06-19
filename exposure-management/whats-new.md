@@ -20,12 +20,12 @@ This page is updated frequently with the latest updates in Microsoft Security Ex
 
 |Date | Update |
 |--|--|
-| June 19 | [SOMETHING SOMETHING (Preview)](#copilot-for-security-in-defender-for-cloud-preview) |
+| June 19 | [SOMETHING SOMETHING (Preview)](#something-something-preview) |
 
 ### SOMETHING SOMETHING (Preview)
 
 June 19, 2024
 
-We're announcing the integration of Microsoft Copilot for Security into Defender for Cloud in public preview. Copilot's embedded experience in Defender for Cloud provides users with the ability to ask questions and get answers in natural language. Copilot can help you understand the context of a recommendation, the effect of implementing a recommendation, the steps needed to take to implement a recommendation, assist with the delegation of recommendations, and assist with the remediation of misconfigurations in code.
+ADD CONTENT
 
-Learn more about [Copilot for Security in Defender for Cloud](copilot-security-in-defender-for-cloud.md).
+Learn more about.
