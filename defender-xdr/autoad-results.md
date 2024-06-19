@@ -58,22 +58,24 @@ You can use specific queries in [advanced hunting](advanced-hunting-overview.md)
 Contain actions triggered by attack disruption are found in the [DeviceEvents table](advanced-hunting-deviceevents-table.md) in advanced hunting. Use the following queries to hunt for these specific contain actions:
 
 - Device contain actions:
-```
+```Kusto
 DeviceEvents
 | where ActionType contains "ContainDevice"
 ```
 
 - User contain actions:
-```
+```Kusto
 DeviceEvents
 | where ActionType contains "ContainUser"
 ```
 
 ### Hunt for disable user account actions
 
-Attack disruption uses the remediation action capability of Microsoft Defender for Identity to disable accounts. Defender for Identity uses the LocalSystem account of the domain controller by default for all remediation actions. The following query looks for account disable events performed by a domain controller and returns accounts that were disabled by automatic attack disruption by manually triggering account disable in Microsoft Defender XDR: 
+Attack disruption uses the remediation action capability of Microsoft Defender for Identity to disable accounts. Defender for Identity uses the LocalSystem account of the domain controller by default for all remediation actions. 
 
-```
+The following query looks for account disable events performed by a domain controller and returns accounts that were disabled by automatic attack disruption by manually triggering account disable in Microsoft Defender XDR: 
+
+```Kusto
 let AllDomainControllers =
 DeviceNetworkEvents
 | where TimeGenerated > ago(7d)
