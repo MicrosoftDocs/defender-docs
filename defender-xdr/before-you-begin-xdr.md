@@ -56,7 +56,6 @@ As part of the service's built-in [Microsoft Defender Experts for Hunting](defen
 
 [Learn more about Microsoft's commercial licensing terms](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/MCA).
 
-
 ## Access requirements
 
 Work with your Commercial Executive to transact the Defender Experts for XDR SKU.
@@ -91,10 +90,10 @@ This service is currently delivered in English language only.
 
 ### Next step
 
-[Get started with Microsoft Defender Experts for XDR](get-started-xdr.md)
+- [Get started with Microsoft Defender Experts for XDR](get-started-xdr.md)
 
 ### See also
 
-[General information on Defender Experts for XDR service](frequently-asked-questions.md)
+- [General information on Defender Experts for XDR service](frequently-asked-questions.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
