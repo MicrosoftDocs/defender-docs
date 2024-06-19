@@ -1,0 +1,7 @@
+- name: 'Microsoft Defender'
+  tocHref: /defender/
+  topicHref: /defender/index
+  items:
+    - name: 'Microsoft Defender for IoT'
+      tocHref: /defender-for-iot/
+      topicHref: /defender-for-iot/index

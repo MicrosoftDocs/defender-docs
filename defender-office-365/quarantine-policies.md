@@ -744,7 +744,7 @@ The effect of **No access** permissions (admin only access) on user capabilities
 If the quarantine policy assigns **Limited access** permissions, users get the following capabilities:
 
 - **On the Quarantine page and in the message details in quarantine**: The following actions are available:
-  - :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) (the difference from **Full access** permissions)
+  - :::image type="icon" source="media/m365-cc-sc-request-release-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) (the difference from **Full access** permissions)
   - :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: [Delete](quarantine-end-user.md#delete-email-from-quarantine)
   - :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: [Preview message](quarantine-end-user.md#preview-email-from-quarantine)
   - :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers)
@@ -801,7 +801,7 @@ If the **Block sender** permission is disabled, users can't block senders from q
 For more information about the Blocked Senders list, see [Block messages from someone](https://support.microsoft.com/office/274ae301-5db2-4aad-be21-25413cede077#__toc304379667) and [Use Exchange Online PowerShell to configure the safelist collection on a mailbox](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox).
 
 > [!TIP]
-> The organization can still receive mail from the blocked sender. Messages from the sender are delivered to user Junk Email folders or to quarantine. To delete messages from the sender upon arrival, use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
+> The organization can still receive mail from the blocked sender. Messages from the sender are delivered to user Junk Email folders or to quarantine depending on the policy precedence as described in [User allows and blocks](how-policies-and-protections-are-combined.md#user-allows-and-blocks). To delete messages from the sender upon arrival, use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
 
 ##### Delete permission
 
@@ -848,7 +848,7 @@ The **Allow recipients to request a message to be released from quarantine** per
 
 If the **Allow recipients to request a message to be released from quarantine** permission is enabled:
 
-- :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) is available on the **Quarantine** page and in the message details in quarantine.
+- :::image type="icon" source="media/m365-cc-sc-request-release-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) is available on the **Quarantine** page and in the message details in quarantine.
 - **Request release** is available in quarantine notifications.
 
 If the **Allow recipients to request a message to be released from quarantine** permission is disabled, users can't request the release of their own messages from quarantine or in quarantine notifications (the action isn't available).

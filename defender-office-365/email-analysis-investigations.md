@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 author: dansimp
 ms.author: dansimp
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium
