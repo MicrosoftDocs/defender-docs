@@ -297,7 +297,7 @@ Usage example: `sudo ./mde_support_tool.sh skipfaultyrules -e true`
 
 - report.html
 
-  Description: The main HTML output file that contains the findings and guidance that the analyzer script run on the machine can produce.
+  Description: The main HTML output file that contains the findings and guidance that the analyzer script run on the machine can produce. This file is generated only when running the Python-based version of the client analyzer tool.
 
 - mde_diagnostic.zip
 
