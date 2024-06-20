@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.reviewer: mavel
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 

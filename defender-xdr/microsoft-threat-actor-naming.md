@@ -2,7 +2,6 @@
 title: How Microsoft names threat actors
 ms.reviewer: 
 description: Learn how Microsoft names threat actors and how to use the naming convention to identify associated intelligence.
-keywords: security, threat actor, security intelligence, naming convention, taxonomy, weather, threat actor naming, motivation, attribution, nation-state, financially motivated, private sector offensive actor, influence operations, groups in development, DEV-, nation state
 ms.service: defender-xdr
 ms.mktglfcycl: secure
 ms.sitesec: library
