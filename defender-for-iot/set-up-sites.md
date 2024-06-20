@@ -19,7 +19,7 @@ Defender for IoT uses the MDE agent to identify and locate other OT and IoT devi
 
 - Review [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
 - OT Security Admin with MDE P2/E5. For more information, see [Microsoft Defender for Endpoint subscriptions settings](/defender-endpoint/defender-endpoint-subscription-settings.md).
-- Microsoft Defender for IoT trial license or a permanant license with at least one site license available. For more information, see [Microsoft Defender for IoT subscriptions settings](get-started.md).
+- Microsoft Defender for IoT trial license. For more information, see [Microsoft Defender for IoT subscriptions settings](get-started.md).
 - We recommend you have IP or MAC address details of at least one OT device at the site.
 
 ## Create a site
@@ -86,7 +86,7 @@ It's important that only the correct users have access to the site. Access and p
 1. Select **Add device group**.
 1. Type a **Device group name**.
 1. Select the **Remediation level**.
-1. Type a **Description**.<!-- optional -->
+1. Type a **Description**.
 1. Select **Next**. The Devices page opens.
 1. Type the value for the **Tag** condition. Type the term **Site:** and then the name of the site. For example, Site: San Francisco.
 1. Select **Next**. The Preview devices page opens.
@@ -94,18 +94,12 @@ It's important that only the correct users have access to the site. Access and p
 1. Filter the user groups or choose the user groups to add to the device group.
 1. Select **Submit**. The device group is created.
 1. Select **Done**.
-<!-- do we need an image of any of the above stages? -->
+
 Your device group is now set up and appears in the Device group list.
 
 Device groups might list different preferences for the same user, in which case you need to rank the importance of each Device group.
 
 To move a group up or down, drag that row to the correct position in the list. For more information, see [ranking device groups in Microsoft Defender for Endpoint](/defender-endpoint/machine-groups.md).
 
-To get the full benefit of the Device group, you might need to create roles and permission settings. For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac.md).
-Also see [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles.md).
+To get the full benefit of the Device group, you might need to create roles and permission settings. For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac.md), and [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles.md).
 <!-- Or this link /defender-endpoint/user-roles.md , which is better? Site security and RBAC - Mia -->
-
-## Next steps
-
-> [!div class="step-by-step"]
-Information about ranking
