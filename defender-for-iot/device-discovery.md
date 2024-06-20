@@ -9,9 +9,11 @@ ms.date: 06/19/2024
 ms.topic: conceptual
 ---
 
-# Device discovery in Defender for IoT
+# Device discovery
 
-The device inventory helps you identify details about specific devices, such as manufacturer, type, serial number, firmware, and more. Gathering details about your devices helps your teams proactively investigate vulnerabilities that can compromise your most critical assets.
+Your team uses the **Device inventory page** to discover and proactively investigate vulnerabilities that can compromise your most critical assets.
+
+This article describes the benefits and capabilities for device discovery in Defender for IoT.
 
 > [!NOTE]
 >
@@ -19,7 +21,15 @@ The device inventory helps you identify details about specific devices, such as 
 > 
 > In this case, [onboard Defender for IoT](get-started.md) to get security value for your OT devices.
 
+## Device inventory page
+
+The **Device inventory** page helps you identify details about specific devices, such as manufacturer, type, serial number, firmware, and more. Using these details, you your team can discover and proactively investigate vulnerabilities that can compromise your most critical assets.
+
 [IMAGE]
+
+Learn how to [manage your IoT/OT devices](manage-devices-inventory.md) in the device inventory.
+
+Learn more about the [device inventory in Microsoft Defender for Endpoint](/defender-endpoint/machines-view-overview.md#device-inventory-overview).
 
 ## Device discovery capabilities
 
@@ -33,8 +43,6 @@ The device inventory helps you identify details about specific devices, such as 
 
 - **Create device groups** to allow different teams in your organization to monitor and manage relevant assets only.​ Learn more about [creating a device group](/defender-endpoint/machine-groups.md#create-a-device-group).
 
-Learn more about the [device inventory in Microsoft Defender for Endpoint](/defender-endpoint/machines-view-overview.md#device-inventory-overview).
-
 ## Next steps
 
-[Manage devices in the device inventory](device-discovery.md)
+[Manage devices in the device inventory](manage-devices-inventory.md)

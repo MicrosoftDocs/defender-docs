@@ -12,6 +12,8 @@
         href: compare-defender-azure.md
       - name: Site security
         href: site-security-overview.md
+      - name: Device discovery
+        href: device-discovery.md
     - name: Get started
       items:
       - name: Prerequisites

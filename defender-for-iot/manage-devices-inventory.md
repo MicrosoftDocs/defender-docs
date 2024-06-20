@@ -15,26 +15,21 @@ The device inventory helps you identify details about specific OT devices. Gathe
 
 [IMAGE]
 
-Learn more about how the helps you [discover IoT/OT devices](device-discovery.md).
+Learn more about the benefits of OT [device discovery](device-discovery.md).
 
 ## Access the Device inventory page
 
 Access the device inventory page by selecting Devices from the Assets navigation menu in the [Microsoft Defender portal](https://security.microsoft.com/machines).
 
-## Ensure you can view OT device data
-
-If you have a Defender for IoT license, continue to the prerequisites.
-
-If you don't yet have a Defender for IoT license, the Device inventory page shows:
-
-- OT devices with regular device data, and without security data. For example, the device name, IP, and category are visible, while the risk level isn't visible.
-- A note at the top of the page that indicates the number of unprotected OT devices.
-
-In this case, [onboard Defender for IoT](get-started.md) to get security value for your OT devices.
-
 ## Prerequisites
 
 Review the [Defender for IoT prerequisites](prerequisites.md).
+
+> [!NOTE]
+>
+> If you don't yet have a Defender for IoT license, the Device inventory page lists OT devices without security data. For example, the device name, IP, and category are visible, while the risk level isn't visible. A note is also visible at the top of the **Device inventory** page that indicates the number of unprotected OT devices.
+> 
+> In this case, [onboard Defender for IoT](get-started.md) to get security value for your OT devices.
 
 ## View OT devices
 
