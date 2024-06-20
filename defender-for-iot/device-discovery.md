@@ -17,7 +17,7 @@ This article describes the benefits and capabilities for device discovery in Def
 
 > [!NOTE]
 >
-> If you don't yet have a Defender for IoT license, the Device inventory page lists OT devices without security data. For example, the device name, IP, and category are visible, while the risk level isn't visible. A note is also visible at the top of the **Device inventory** page that indicates the number of unprotected OT devices.
+> If you don't yet have a Defender for IoT license, the **Device inventory** page lists OT devices without security data. For example, the device name, IP, and category are visible, while the risk level isn't visible. The device inventory also displays a note at the top of the page that indicates the number of unprotected OT devices.
 > 
 > In this case, [onboard Defender for IoT](get-started.md) to get security value for your OT devices.
 
@@ -32,6 +32,8 @@ Learn how to [manage your IoT/OT devices](manage-devices-inventory.md) in the de
 Learn more about the [device inventory in Microsoft Defender for Endpoint](/defender-endpoint/machines-view-overview.md#device-inventory-overview).
 
 ## Device discovery capabilities
+
+With device discovery, you can:
 
 - **Manage your IoT/OT devices** by building up-to-date inventory that includes all your managed and unmanaged devices. Classify critical devices to ensure that the most important assets in your organization are protected.​
 
