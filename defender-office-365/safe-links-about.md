@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 5/7/2024
+ms.date: 06/19/2024
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -108,7 +108,7 @@ You can use a condition or exception only once, but the condition or exception c
 
 ## Safe Links settings for email messages
 
-Safe Links scans incoming email for known malicious hyperlinks. Scanned URLs are rewritten or _wrapped_ using the Microsoft standard URL prefix: `https://nam01.safelinks.protection..com`. After the link is rewritten, it's analyzed for potentially malicious content.
+Safe Links scans incoming email for known malicious hyperlinks. Scanned URLs are rewritten or _wrapped_ using the Microsoft standard URL prefix: `https://<DataCenterLocation>.safelinks.protection.outlook.com` (for example, `https://nam01.safelinks.protection.outlook.com`). After the link is rewritten, it's analyzed for potentially malicious content.
 
 After Safe Links rewrites a URL, the URL is rewritten even if the message is _manually_ forwarded or replied to. Wrapping is done per message recipient (both internal and external recipients). Additional links that are added to the forwarded or replied-to message are also rewritten.
 

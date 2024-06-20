@@ -3,7 +3,7 @@ title: Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Manage permissions and access to Microsoft Defender XDR Security portal experiences using unified role-based access control (RBAC).
 ms.service: defender-xdr
 ms.author: diannegali
-author: diannegali
+author: siosulli
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: overview
-ms.date: 03/28/2024
+ms.date: 06/13/2024
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -59,7 +59,7 @@ Centralized permissions management is supported for the following solutions:
 
 This section provides useful information on what you need to know before you start using Microsoft Defender XDR Unified RBAC.
 
-### Permissions pre-requisites
+### Permissions prerequisites
 
 - You must be a Global Administrator or Security Administrator in Microsoft Entra ID to:
   - Gain initial access to [Permissions and roles](https://security.microsoft.com/mtp_roles) in the Microsoft Defender portal.
@@ -68,7 +68,10 @@ This section provides useful information on what you need to know before you sta
 
   - Create a custom role that can grant access to security groups or individual users to manage roles and permissions in Microsoft Defender XDR unified RBAC. This removes the need for Microsoft Entra global roles to manage permissions. To do this, you need to assign the **Authorization** permission in Microsoft Defender XDR Unified RBAC. For details on how to assign the Authorization permission, see [Create a role to access and manage roles and permissions](create-custom-rbac-roles.md#create-a-role-to-access-and-manage-roles-and-permissions).
 
-- The Microsoft Defender XDR security solution continues to respect existing Microsoft Entra global roles when you activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads, that is, Global Admins retain assigned admin privileges.
+- The Microsoft Defender XDR security solution continues to respect existing Microsoft Entra global roles when you activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads, that is, Global Administrators retain assigned administrator privileges.
+
+> [!IMPORTANT]
+> Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role.
 
 ### Migration of existing roles and permissions
 

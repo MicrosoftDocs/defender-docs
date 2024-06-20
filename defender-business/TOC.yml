@@ -25,7 +25,7 @@
       href: trial-playbook-defender-business.md
     - name: Visit the Microsoft Defender portal
       href: mdb-get-started.md
-    - name: Try tutorials and simulations
+    - name: Find training and learning resources
       href: mdb-tutorials.md
   - name: Set up and configure Defender for Business
     items:
@@ -90,19 +90,21 @@
     - name: Understand policy order
       href: mdb-policy-order.md
   - name: Maintain your environment
-    href: /Microsoft-365/business-premium/m365bp-mdb-maintain-environment?bc=%2Fmicrosoft-365%2Fsecurity%2Fdefender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fmicrosoft-365%2Fsecurity%2Fdefender-business%2Ftoc.json
+    href: /Microsoft-365/business-premium/m365bp-mdb-maintain-environment?bc=%2defender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fdefender-business%2Ftoc.json
   - name: Reference information
     items: 
+    - name: Security, privacy, and compliance
+      href: mdb-security-privacy-compliance.md
     - name: Top 10 ways to secure your business data
-      href: /Microsoft-365/business-premium/secure-your-business-data?bc=%2Fmicrosoft-365%2Fsecurity%2Fdefender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fmicrosoft-365%2Fsecurity%2Fdefender-business%2Ftoc.json
+      href: /Microsoft-365/business-premium/secure-your-business-data?bc=%2Fdefender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fdefender-business%2Ftoc.json
     - name: How to get help or contact support
-      href: /microsoft-365/admin/get-help-support.md
+      href: /microsoft-365/admin/get-help-support
     - name: Frequently asked questions
       href: mdb-faq.yml
     - name: Troubleshooting
       href: mdb-troubleshooting.yml
     - name: API reference information
-      href: /defender-endpoint/api/exposed-apis-create-app-partners?bc=%2Fmicrosoft-365%2Fsecurity%2Fdefender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fmicrosoft-365%2Fsecurity%2Fdefender-business%2Ftoc.json
+      href: /defender-endpoint/api/exposed-apis-create-app-partners?bc=%2Fdefender-business%2Fbreadcrumb%2Ftoc.json&toc=%2Fsecurity%2Fdefender-business%2Ftoc.json
     - name: Microsoft 365 Business Premium
       href: /microsoft-365/business-premium/
     - name: Microsoft 365 Lighthouse

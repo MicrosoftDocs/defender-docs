@@ -4,7 +4,7 @@ description:  The Defender for Endpoint streaming API is available for Defender 
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-ms.date: 12/12/2023
+ms.date: 06/07/2024
 ms.topic: how-to
 ms.service:  microsoft-365-security
 ms.localizationpriority: medium 
@@ -50,7 +50,7 @@ With the streaming API, you can use [advanced hunting](/defender-xdr/advanced-hu
 > [Azure Event Hubs](/azure/event-hubs/event-hubs-about) requires an Azure subscription. Before you begin, make sure to create an [event hub](/azure/event-hubs/) in your tenant. Then, sign in to the [Azure portal](https://ms.portal.azure.com/), go to **Subscriptions** > **Your subscription** > **Resource Providers** > **Register to Microsoft.insights**.
 > 
 
-1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in as a ***Global Administrator*** or ***Security Administrator***.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 2. Go to the [Data export settings page](https://security.microsoft.com/interoperability/dataexport).
 
@@ -95,7 +95,7 @@ Azure Storage requires an Azure subscription. Before you begin, make sure to cre
 
 ### Enable raw data streaming
 
-1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in as a ***Global Administrator*** or ***Security Administrator***.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
 2. Go to [Data export settings page](https://security.microsoft.com/settings/mtp_settings/raw_data_export) in Microsoft Defender XDR.
 

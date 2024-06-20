@@ -4,7 +4,7 @@ description: Get an overview of mobile threat defense in Defender for Business. 
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-ms.date: 07/19/2023
+ms.date: 06/19/2024
 ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium 
@@ -37,18 +37,16 @@ The following table summarizes the capabilities that are included in mobile thre
 | **Microsoft Defender Vulnerability Management**<br/>Vulnerability assessment of onboarded mobile devices. Includes vulnerability assessments for operating systems and apps for Android and iOS. <br/>See [Use your vulnerability management dashboard in Microsoft Defender for Business](mdb-view-tvm-dashboard.md). | :::image type="content" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" alt-text="Included checkmark."::: |  See note 1 (below) |
 | **Network Protection** <br/>Protection against rogue Wi-Fi related threats and rogue certificates. <br/>Network protection is turned on by default with [next-generation protection](mdb-next-generation-protection.md). <br/>As part of mobile threat defense, network protection also includes the ability to allow root certification authority and private root certification authority certificates in Intune. It also establishes trust with endpoints. | See note 2 (below) | See note 2 (below) |
 | **Unified alerting** <br/>Alerts from all platforms are listed in the unified Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). In the navigation pane, choose **Incidents**). <br/>See [View and manage incidents in Microsoft Defender for Business](mdb-view-manage-incidents.md) | :::image type="content" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" alt-text="Included checkmark."::: | :::image type="content" source="/defender/media/d238e041-6854-4a78-9141-049224df0795.png" alt-text="Included checkmark."::: |
-| **Conditional Access** and **conditional launch** <br/>[Conditional Access](/mem/intune/protect/conditional-access) and [conditional launch](/mem/intune/apps/app-protection-policies-access-actions) block risky devices from accessing corporate resources.<br/>-  Conditional Access policies require certain criteria to be met before a user can access company data on their mobile device. <br/>- Conditional launch policies enable your security team to block access or wipe devices that don't meet certain criteria.<br/>Defender for Business risk signals can also be added to app protection policies. | Requires Intune <br/>(see note 3 below) | Requires Intune <br/>(see note 3 below) |
-| **Privacy controls** <br/>Configure privacy in threat reports by controlling the data sent by Defender for Business. Privacy controls are available for admin and end users, and for both enrolled and unenrolled devices. | Requires Intune (see note 3 below) | Requires Intune (see note 3 below) |
-| **Integration with Microsoft Tunnel** <br/>Integration with [Microsoft Tunnel](/mem/intune/protect/microsoft-tunnel-overview), a VPN gateway solution for Intune. | Requires Intune VPN Tunnel <br/>(see note 4 below) | Requires Intune VPN Tunnel <br/>(see note 4 below) |
+| **Conditional Access** and **conditional launch** <br/>[Conditional Access](/mem/intune/protect/conditional-access) and [conditional launch](/mem/intune/apps/app-protection-policies-access-actions) block risky devices from accessing corporate resources.<br/>-  Conditional Access policies require certain criteria to be met before a user can access company data on their mobile device. <br/>- Conditional launch policies enable your security team to block access or wipe devices that don't meet certain criteria.<br/>Defender for Business risk signals can also be added to app protection policies. | Requires Intune  | Requires Intune |
+| **Privacy controls** <br/>Configure privacy in threat reports by controlling the data sent by Defender for Business. Privacy controls are available for admin and end users, and for both enrolled and unenrolled devices. | Requires Intune | Requires Intune |
+| **Integration with Microsoft Tunnel** <br/>Integration with [Microsoft Tunnel](/mem/intune/protect/microsoft-tunnel-overview), a VPN gateway solution for Intune. | Requires Intune VPN Tunnel <br/>(see note 3 below) | Requires Intune VPN Tunnel <br/>(see note 3 below) |
 
 > [!NOTE]
 > 1. Intune is required for software/app vulnerabilities to be reported. Operating system vulnerabilities are included by default.
 > 
 > 2. Intune is required to configure or manage an allow list of root certification authority and private root certification authority certificates.
 > 
-> 3. Intune is included in [Microsoft 365 Business Premium](/Microsoft-365/business-premium/m365bp-overview). Intune can be added on to Defender for Business.
-> 
-> 4. See [Prerequisites for the Microsoft Tunnel in Intune](/mem/intune/protect/microsoft-tunnel-prerequisites).
+> 3. See [Prerequisites for the Microsoft Tunnel in Intune](/mem/intune/protect/microsoft-tunnel-prerequisites).
 >
 
 ## How to get mobile threat defense capabilities
