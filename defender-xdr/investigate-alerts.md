@@ -105,17 +105,18 @@ Microsoft Defender XDR alerts come from solutions like Microsoft Defender for En
 > - The prepended GUIDs are specific only to unified experiences such as unified alerts queue, unified alerts page, unified investigation, and unified incident.
 > - The prepended character does not change the GUID of the alert. The only change to the GUID is the prepended component.
 
-| Alert source | Prepended character |
+| Alert source | Alert ID with prepended characters |
 | :---|:--- |
-| Microsoft Defender XDR | `ra` <br> `ta` for ThreatExperts <br> `ea` for DetectionSource = DetectionSource.CustomDetection |
+| Microsoft Defender XDR | `ra{GUID}` <br> `ta{GUID}` for alerts from ThreatExperts <br> `ea{GUID}` for alerts from custom detections |
 | Microsoft Defender for Office 365 | `fa{GUID}` <br> Example: `fa123a456b-c789-1d2e-12f1g33h445h6i` |
-| Microsoft Defender for Endpoint | `da` or `ed` for custom detection alerts <br> |
+| Microsoft Defender for Endpoint | `da{GUID}` <br> `ed{GUID}` for alerts from custom detections |
 | Microsoft Defender for Identity | `aa{GUID}` <br> Example: `aa123a456b-c789-1d2e-12f1g33h445h6i` |
 | Microsoft Defender for Cloud Apps |`ca{GUID}` <br> Example: `ca123a456b-c789-1d2e-12f1g33h445h6i` |
-| Microsoft Entra ID Protection | `ad` |
-| App Governance | `ma` |
-| Microsoft Data Loss Prevention | `dl` |
-| Microsoft Defender for Cloud| `dc` |
+| Microsoft Entra ID Protection | `ad{GUID}` |
+| App Governance | `ma{GUID}` |
+| Microsoft Data Loss Prevention | `dl{GUID}` |
+| Microsoft Defender for Cloud | `dc{GUID}` |
+| Microsoft Sentinel | `sn{GUID}` |
 
 <a name='configure-aad-ip-alert-service'></a>
 
