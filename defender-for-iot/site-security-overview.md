@@ -28,7 +28,7 @@ The Site security features include:
 
 - Speedy set up: Defender for IoT identifies all OT/IoT devices it can at a specific physical location and assigns them to a **Site**. Defender for IoT uses Microsoft for Endpoint agents already on your network to identify all of the OT devices and automatically add them to the site. This enables the faster and more accurate onboarding of devices into the XDR portal, which means your network starts to be secured and monitored without the need to add new equipment or a lengthy process of logging each of your OT devices.
 - Associate OT devices: You can add specific OT devices to the site, which then identify other devices to be added to the device inventory.
-- Authorized users: Device group's can restrict a specific group of users based on site access or security policies and can apply across the entire XDR portal. [A device group is a collection of devices that share common attributes or security policies.]
+- Authorized users: Device group's can restrict a specific group of users based on site access or security policies and can apply across the entire Defender portal. [A device group is a collection of devices that share common attributes or security policies.]
 - Seemless site and device management: The Site security dashboard enables administrators to easily add and manage new sites and devices to the existing network set up.
 - Quick response to risks: The data and links from the dashboard take the user to other relevant areas in the XDR portal, helping to swiftly deal with security risks and complete tasks.
 
@@ -36,7 +36,7 @@ The Site security features include:
 
 In the Defender for IoT, all your devices are associated with a site. OT devices use Microsoft Defender for Endpoints agents to identify, scan, and assess the status of the devices on your network, which is displayed in the Site security dashboard.  
 
-The Site security dashboard gives an outline of the security status for each site that you create in the XDR portal. The information shows how secure your site is, by displaying the pre breach, **Exposure** data and post breach, **Risk**, data. This information helps you classify and assign security related actions to your security team.
+The Site security dashboard gives an outline of the security status for each site that you create in the Defender portal. The information shows how secure your site is, by displaying the pre breach, **Exposure** data and post breach, **Risk**, data. This information helps you classify and assign security related actions to your security team.
 
 The dashboard also shows how many critical devices each site has. A critical device is a self assigned device that has extra importance to your business or system, such as a server that contains confidential data. As such, you must protect these devices more than devices of lesser importance. Knowing which sites have more critical devices should also be a factor in prioritizing security issues.
 

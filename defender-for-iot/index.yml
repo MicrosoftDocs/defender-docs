@@ -86,14 +86,3 @@ landingContent:
           url: /defender-endpoint/microsoft-defender-endpoint-linux.md
         - text: Microsoft Defender for Endpoint on Android
           url: /defender-endpoint/microsoft-defender-endpoint-android.md
-
-
-# Card
-  - title: Resources
-    linkLists:
-      - linkListType: reference
-        links:
-        - text: Management and APIs
-          url: /defender-endpoint/api/management-apis.md
-        - text: Partner integration
-          url: /defender-endpoint/partner-integration.md
