@@ -48,7 +48,7 @@ This article is updated frequently to let you know what's new in the latest rele
 
 There are multiple fixes and new changes in this release:
 
-- This release fixes the bug related to memory leak issue in kernel space due to ebpf maps and progs not getting closed/unloaded whenever ebpf sensor is reloaded during the service. This will impact only the kernels 3.10x and <= 4.16x.
+- This release fixes a bug related to memory leak in kernel space which slowly impacted the main memory. This impacted only kernels 3.10x and <= 4.16x.
 - Simplified output of `mdatp health --details features`
 - Stability and performance improvements.
 - Other bug fixes.
