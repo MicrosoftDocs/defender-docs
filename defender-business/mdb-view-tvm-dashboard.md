@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 08/02/2022
+ms.date: 06/19/2024
 ms.reviewer: nehabha
 f1.keywords: NOCSH 
 ms.collection: 
@@ -53,7 +53,7 @@ Vulnerability management features and capabilities in Microsoft Defender for Bus
 
 ## Next steps
 
-- [Try tutorials and simulations in Defender for Business](mdb-tutorials.md)
+- [Try training and learning resources for Defender for Business](mdb-tutorials.md)
 - [Onboard devices to Defender for Business](mdb-onboard-devices.md)
 - [View or edit policies in Defender for Business](mdb-view-edit-create-policies.md)
 
