@@ -31,7 +31,24 @@ Before you start, you need:
 
 ## Permissions
 
-TBD go over Mia doc
+Microsoft Defender for IoT is part of Microsoft Defender XDR, in order to access the Defender for IoT features, permissions and roles must be assigned to the correct users.
+
+### Access management options
+
+There are 2 ways to manage access to Microsoft Defender XDR:
+
+1. Global Microsoft Entra roles: For more information, see [Microsoft Entra built-in roles](entra/identity/role-based-access-control/permissions-reference.md).
+
+1. Custom role access: a capability in Microsoft Defender XDR that allows you to manage access to specific data, tasks, and capabilities in Microsoft Defender XDR. For more information, see [custom roles in Microsoft Defender XDR](defender-xdr/custom-roles.md).
+
+### RBAC roles in XDR
+
+Tenants in XDR can manage RBAC in three different modes:
+
+1. RBAC version 1: Go to Setting -> Endpoints -> Roles -> See roles are disabled
+1. RBAC version 2: Go to Setting -> Endpoints -> Roles -> See the following screen
+    fff
+1. RBAC unified: 
 
 ## Supported protocols
 
