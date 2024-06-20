@@ -15,7 +15,7 @@ ms.collection:
   - essentials-manage
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 06/14/2024
+ms.date: 06/20/2024
 ---
 
 # Managed detection and response
