@@ -48,7 +48,7 @@ This article is updated frequently to let you know what's new in the latest rele
 
 There are multiple fixes and new changes in this release.
 
-- This release fixes a bug related to high memory usage eventually leading to high CPU due to eBPF memory leak in kernel space resulting in servers going into unusable states". This only impacted the kernel versions 3.10x and <= 4.16x, majorly on RHEL/CentOS distros. Please update to the latest MDE version to avoid any impact.
+- This release fixes a bug related to high memory usage eventually leading to high CPU due to eBPF memory leak in kernel space resulting in servers going into unusable states. This only impacted the kernel versions 3.10x and <= 4.16x, majorly on RHEL/CentOS distros. Please update to the latest MDE version to avoid any impact.
 - We have now simplified the output of `mdatp health --detail features`
 - Stability and performance improvements.
 - Other bug fixes.
