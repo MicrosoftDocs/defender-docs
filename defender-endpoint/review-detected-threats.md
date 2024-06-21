@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: conceptual
-ms.date: 05/29/2024
+ms.date: 06/21/2024
 ms.subservice: edr
 search.appverid: met150
 ---
@@ -39,7 +39,7 @@ In the Microsoft Defender portal, you can view and manage threat detections usin
 
 1. Visit [Microsoft XDR portal](https://security.microsoft.com/) and sign-in.
 
-    On the landing page, you'll see the **Devices with active malware** card with the following information:
+    On the landing page, you see the **Devices with active malware** card with the following information:
 
     - Display text: Applies to Intune-managed devices. Devices with multiple malware detections may be counted more than once.
     - Last updated date and time.
@@ -47,7 +47,7 @@ In the Microsoft Defender portal, you can view and manage threat detections usin
 
     You can select **View Details** for more information.
 
-2. Once remediated, you'll see the following text being displayed:
+2. Once remediated, you see the following text being displayed:
 
     *Malware found on your devices have been remediated successfully*.
 
@@ -83,7 +83,7 @@ To see when the malware was detected, you can do the following:
 
 #### In the devices with malware detections report, why can't I see any information about which malware was detected on the device.
 
-To see the malware name, visit the [Intune portal](https://intune.microsoft.com) as this is an integration with Intune, select **Antivirus**,  and select **Active malware** tab and you'll see a column named **Malware name**.
+To see the malware name, visit the [Intune portal](https://intune.microsoft.com) as this is an integration with Intune, select **Antivirus**,  and select **Active malware** tab and you see a column named **Malware name**.
 
 #### I see a different number for active malware in Devices with active malware report, when compared to numbers I see using Reports > Detected malware, and Intune > Antivirus > Active malware.
 
@@ -116,7 +116,7 @@ It might be that the URL's [Cloud Protection](configure-network-connections-micr
 
 You need to ensure that when you run `%ProgramFiles%\Windows Defender\MpCmdRun.exe -ValidateMapsConnection` on your device, the reporting is Ok.
 
-#### I see a device that has been inactive for 180+ days but still showing up on the report for 'Devices with active malware'.  The device does not show in the "Device inventory", cannot be turned on and cannot be offboarded from Microsoft Defender for Endpoint.
+#### I see a device that has been inactive for 180+ days but still showing up on the report for 'Devices with active malware'.  The device doesn't show in the "Device inventory", can't be turned on and can't be offboarded from Microsoft Defender for Endpoint.
 
   
 The device has not been [retired](/mem/intune/remote-actions/devices-wipe) from Intune.
