@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 04/08/2024
+ms.date: 06/21/2024
 ---
 
 # Configure advanced features in Defender for Endpoint
@@ -32,7 +32,7 @@ Depending on the Microsoft security products that you use, some advanced feature
 
 ## Enable advanced features
 
-1. Log in to [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2077139) using an account with the Security administrator or Global administrator role assigned.
+1. Go to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) and sign in. 
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Advanced features**.
 
@@ -41,6 +41,28 @@ Depending on the Microsoft security products that you use, some advanced feature
 4. Select **Save preferences**.
 
 Use the following advanced features to get better protected from potentially malicious files and gain better insight during security investigations.
+
+## Restrict correlation to within scoped device groups
+
+This configuration can be used for scenarios where local SOC operations would like to limit alert correlations only to device groups that they can access. By turning on this setting, an incident composed of alerts that cross-device groups will no longer be considered a single incident. The local SOC can then take action on the incident because they have access to one of the device groups involved. However, global SOC will see several different incidents by device group instead of one incident. We don't recommend turning on this setting unless doing so outweighs the benefits of incident correlation across the entire organization.
+
+> [!NOTE]
+> - Changing this setting impacts future alert correlations only.
+>
+> - Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+
+## Enable EDR in block mode
+
+Endpoint detection and response (EDR) in block mode provides protection from malicious artifacts, even when Microsoft Defender Antivirus is running in passive mode. When turned on, EDR in block mode blocks malicious artifacts or behaviors that are detected on a device. EDR in block mode works behind the scenes to remediate malicious artifacts that are detected post breach.
+
+## Automatically resolve alerts
+
+Turn this setting on to automatically resolve alerts where no threats were found or where detected threats were remediated. If you don't want to have alerts auto resolved, you'll need to manually turn off the feature.
+
+> [!NOTE]
+> - The result of the auto-resolve action may influence the Device risk level calculation which is based on the active alerts found on a device.
+> - If a security operations analyst manually sets the status of an alert to "In progress" or "Resolved" the auto-resolve capability will not overwrite it.
+
 
 ## Live response
 
@@ -58,30 +80,7 @@ For more information about role assignments, see [Create and manage roles](user-
 
 Enabling this feature allows you to run unsigned scripts in a live response session.
 
-## Restrict correlation to within scoped device groups
 
-This configuration can be used for scenarios where local SOC operations would like to limit alert correlations only to device groups that they can access. By turning on this setting, an incident composed of alerts that cross-device groups will no longer be considered a single incident. The local SOC can then take action on the incident because they have access to one of the device groups involved. However, global SOC will see several different incidents by device group instead of one incident. We don't recommend turning on this setting unless doing so outweighs the benefits of incident correlation across the entire organization.
-
-> [!NOTE]
-> - Changing this setting impacts future alert correlations only.
->
-> - Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
-
-## Enable EDR in block mode
-
-Endpoint detection and response (EDR) in block mode provides protection from malicious artifacts, even when Microsoft Defender Antivirus is running in passive mode. When turned on, EDR in block mode blocks malicious artifacts or behaviors that are detected on a device. EDR in block mode works behind the scenes to remediate malicious artifacts that are detected post breach.
-
-## Autoresolve remediated alerts
-
-For tenants created on or after Windows 10, version 1809, the automated investigation, and remediation capability is configured by default to resolve alerts where the automated analysis result status is "No threats found" or "Remediated". If you don't want to have alerts auto resolved, you'll need to manually turn off the feature.
-
-> [!TIP]
-> For tenants created prior to that version, you'll need to manually turn this feature on from the [Advanced features](https://security.microsoft.com//preferences2/integration) page.
-
-> [!NOTE]
->
-> - The result of the auto-resolve action may influence the Device risk level calculation which is based on the active alerts found on a device.
-> - If a security operations analyst manually sets the status of an alert to "In progress" or "Resolved" the auto-resolve capability will not overwrite it.
 
 ## Allow or block file
 
@@ -94,13 +93,13 @@ This feature enables you to block potentially malicious files in your network. B
 
 To turn **Allow or block** files on:
 
-1. In the navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Allow or block file**.
+1. In the Microsoft Defender portal, in navigation pane, select **Settings** \> **Endpoints** \> **General** \> **Advanced features** \> **Allow or block file**.
 
-1. Toggle the setting between **On** and **Off**.
+2. Toggle the setting between **On** and **Off**.
  
     :::image type="content" source="/defender/media/alloworblockfile.png" alt-text="The Endpoints screen" lightbox="/defender/media/alloworblockfile.png":::
 
-1. Select **Save preferences** at the bottom of the page.
+3. Select **Save preferences** at the bottom of the page.
 
 After turning on this feature, you can [block files](respond-file-alerts.md#allow-or-block-file) via the **Add Indicator** tab on a file's profile page.
 
