@@ -59,7 +59,7 @@ You can manage threat detections for any devices that are [enrolled in Microsoft
 
 2. In the navigation pane, select **Endpoint security**.
 
-3. Under **Manage**, select **Antivirus**. You'll see tabs for **Summary**, **Unhealthy endpoints**, and **Active malware**.
+3. Under **Manage**, select **Antivirus**. You see tabs for **Summary**, **Unhealthy endpoints**, and **Active malware**.
 
 4. Review the information on the available tabs, and then take action as necessary.
 
@@ -74,11 +74,14 @@ You can manage threat detections for any devices that are [enrolled in Microsoft
 
 #### In the Microsoft XDR portal > Devices with active malware > Devices with malware detections report, why does the Last update seem to be occurring today?
 
-To see when the malware was detected, you can do the following:
+To see when the malware was detected, you can take the following steps:
 
 1. Since this is an integration with Intune, visit [**Intune portal**](https://intune.microsoft.com) and select **Antivirus** and then select **Active malware** tab.
+
 2. Select **Export**.
-3. On your device, go to Downloads, and extract the Active malware_YYYY_MM_DD_THH_MM_SS.0123Z.csv.zip.
+
+3. On your device, go to Downloads, and extract the `Active malware_YYYY_MM_DD_THH_MM_SS.0123Z.csv.zip` file.
+
 4. Open the CSV and find the **LastStateChangeDateTime** column to see when malware was detected.
 
 #### In the devices with malware detections report, why can't I see any information about which malware was detected on the device.
