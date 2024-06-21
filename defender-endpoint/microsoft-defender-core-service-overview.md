@@ -7,7 +7,7 @@ manager: deniseb
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: overview
-ms.date: 04/24/2024
+ms.date: 06/21/2024
 search.appverid: met150
 ms.localizationpriority: medium
 audience: ITPro
