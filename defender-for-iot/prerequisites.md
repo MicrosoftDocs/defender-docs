@@ -55,11 +55,11 @@ Assign the following roles and permissions to give users access the additional *
 For Site security assign the following permissions:
 
 1. The **Write** permissions:
-    1. MDE roles: Core security settings (manage) under Authorization and Settings & scoped to all device groups.
-    1. Entra ID roles: Global Administrator, Security Administrator, Security Operator & scoped to all device groups.
+    1. MDE roles: Core security settings scoped to all device groups.
+    1. Entra ID roles: Global Administrator, Security Administrator, Security Operator scoped to all device groups.
 1. The **Read** permissions:
     1. Write roles (including those that are non scoped to all device groups).
-    1. MDE Roles: Security data basics (under Security Operations).
+    1. MDE Roles: Security data basics (under Security Operations). <!-- keep this? -->
     1. Entra ID roles: Global Reader, Security Reader.
 <!-- Do we need the following table here, is there a better place to put it, or introduce it? -->
 This table shows the full roles and permissions needed for all features of MDE and Defender for IoT:
