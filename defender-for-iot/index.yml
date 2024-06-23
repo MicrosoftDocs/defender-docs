@@ -31,9 +31,7 @@ landingContent:
         - text: What is Microsoft Defender for IoT?
           url: microsoft-defender-iot.md
       - linkListType: concept
-        links:
-        - text: Whats new in Defender for IoT?
-          url: compare-defender-azure.md
+        links:        
         - text: Site security overview
           url: site-security-overview.md
       - linkListType: how-to-guide
