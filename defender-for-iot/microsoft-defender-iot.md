@@ -16,7 +16,7 @@ Microsoft Defender for IoT in the Defender portal (Preview) is a unified securit
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
-:::image type="content" source="media/microsoft-defender-iot.png/end-to-end-coverage.png" alt-text="Image of Microsoft Defender for IoT end-to-end security coverage." border="false":::
+:::image type="content" source="media/microsoft-defender-for-iot/end-to-end-coverage.png" alt-text="Image of Microsoft Defender for IoT end-to-end security coverage." border="false":::
 
 ## What is OT security and what are the main OT security challenges?
 
