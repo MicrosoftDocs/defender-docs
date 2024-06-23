@@ -1,21 +1,18 @@
 ### YamlMime:Landing
 
-title: Microsoft Defender for IoT documentation # < 60 chars
-summary: Microsoft Defender for IoT delivers preventative protection, post-breach detection, automated investigation, and response. # < 160 chars
+title: Microsoft Defender for IoT (Preview) documentation # < 60 chars
+summary: Microsoft Defender for IoT is a unified security solution that identifies IoT and OT devices, vulnerabilities, and threats, at the site and device level. # < 160 chars
 
 metadata:
-  title: Microsoft Defender for IoT documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  title: Microsoft Defender for IoT (Preview) documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Learn about Microsoft Defender for IoT and maximize the built-in security capabilities to protect devices, detect malicious activity, and remediate threats# Required; article description that is displayed in search results. < 160 chars.
   services: office-365-security-compliance
   ms.service: defender-for-iot
   ms.topic: landing-page # Required
-  ms.collection: 
-  - m365-security
-  - essentials-navigation
   ms.custom: intro-hub-or-landing
-  author: lwainstein #Required; your GitHub user alias, with correct capitalization.
+  author: limwainstein #Required; your GitHub user alias, with correct capitalization.
   ms.author: lwainstein #Required; microsoft alias of author; optional team alias.
-  ms.date: 05/28/2024
+  ms.date: 06/23/2024
   ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
