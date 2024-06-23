@@ -12,47 +12,19 @@ ms.date: 06/11/2024
 
 # What is Microsoft Defender for IoT in the Defender portal (Preview)?
 
-Microsoft Defender for IoT in the Defender portal (Preview) is a unified security solution built specifically to identify Internet of Things (IoT) and operational technology (OT) devices, vulnerabilities, and threats. In this article, you learn how Defender for IoT secures your IoT and OT environments, main scenarios and personas, architecture, and more.
+The Internet of Things (IoT) supports billions of connected devices that use both operational technology (OT) and IoT networks. IoT/OT devices and networks are often built using specialized protocols, and might prioritize operational challenges over security.
+
+In this article, you learn how Defender for IoT and secures your IoT and OT environments, solving these challenges.
 
 [!INCLUDE [prerelease](../includes//prerelease.md)]
 
 :::image type="content" source="media/microsoft-defender-for-iot/end-to-end-coverage.png" alt-text="Image of Microsoft Defender for IoT end-to-end security coverage." border="false":::
 
-## What is OT security and what are the main OT security challenges?
-
-The Internet of Things (IoT) supports billions of connected devices that use both operational technology (OT) and IoT networks. IoT/OT devices and networks are often built using specialized protocols, and might prioritize operational challenges over security.
-
-Specifically, OT network challenges include: poor visibility into assets and networks, difficulty to create network segmentation, vulnerable legacy systems, dependence on external vendors, and lack of security expertise. When IoT/OT devices can't be protected by traditional security monitoring systems, each new wave of innovation increases the risk and possible attack surfaces across those IoT devices and OT networks.
-
-## What is agent-based discovery for OT?
-
-If your IoT and OT devices don't have embedded security agents, they might remain unpatched, misconfigured, and invisible to IT and security teams. Unmonitored devices can be soft targets for threat actors looking to pivot deeper into corporate networks.
-
-Defender for IoT uses agent-based monitoring to provide visibility and security across your network, and identifies specialized protocols, devices, or machine-to-machine (M2M) behaviors.
-
-- **[**Discover OT devices**](manage-devices-inventory.md)** to gain a full overview of IT, IoT, and OT assets across the entire organization.
- 
-    - Discover device details, and how devices communicate.
-    - Identify device vulnerabilities and mitigate risks.
-    - Reduce downtime and monitor your top assets.
-    - Support regulatory compliance.​
-    - Gather data from Microsoft Defender for Endpoint and third-party sources.
-
-- Monitor you [**site security**](site-security-overview.md): 
-
-    - Gain valuable insights into OT risks in production sites
-    - Make better-informed security investment decisions​
-    - Streamline communication between IT and OT security stakeholders​.
-
-- **Assess risks and manage vulnerabilities** using machine learning, threat intelligence, and behavioral analytics. For example:
-
-    - Identify unpatched devices, open ports, unauthorized applications, unauthorized connections, changes to device configurations, PLC code, firmware, and more.
-    - Run searches in historical traffic across all relevant dimensions and protocols. Access full-fidelity PCAPs to drill down further.
-    - Detect advanced threats that you might have missed by static indicators of compromise (IOCs), such as zero-day malware, fileless malware, and living-off-the-land tactics.
-
-- **Respond to threats** by integrating with Microsoft services such as Microsoft Sentinel, other partner systems, and APIs. Integrate with security information and event management (SIEM) services, security operations and response (SOAR) services, extended detection and response (XDR) services, and more.
-
-Defender for IoT's centralized user experience in the Defender portal lets the security and OT monitoring teams visualize and secure all their IT, IoT, and OT devices regardless of where the devices are located.
+> [!TIP]
+> Defender for IoT provides two types of protection:
+>
+> - **Protection for OT devices**, as part of the Defender portal (Preview). [Get started](get-started.md) with OT device protection on the Defender portal.
+> - **Protection for enterprise IoT devices**, like printers, smart TVs, and conferencing systems and purpose-built, proprietary devices. [Learn more](/azure/defender-for-iot/organizations/eiot-sensor).
 
 ## Who uses Defender for IoT?
 
@@ -61,23 +33,63 @@ Defender for IoT is intended for:
 - **CISOs** or security leaders that want to gain an overview of their organization's IoT network and asset security.
 - **OT security admins, industrial engineers, risk managers, and SOC analysts​** that want to gain a high-level view of a site's risks, incidents, and vulnerabilities, get recommendations for remediation actions, manage and discover protected OT devices, and more.
 
-### How do I deploy Defender for IoT?
+## What are the main OT security challenges?
 
-With Defender for IoT cloud-based deployment, you can view data from all connected sensors, and integrate with other Microsoft services, like Microsoft Sentinel.
+OT network challenges include: poor visibility into assets and networks, difficulty to create network segmentation, vulnerable legacy systems, dependence on external vendors, and lack of security expertise. When IoT/OT devices can't be protected by traditional security monitoring systems, each new wave of innovation increases the risk and possible attack surfaces across those IoT devices and OT networks.
+
+Microsoft Defender for IoT in the Defender portal (Preview) is a unified security solution built specifically to identify Internet of Things (IoT) and operational technology (OT) devices, vulnerabilities, and threats.
+
+## How does it work?
+
+Defender for IoT in the Defender portal uses the following combination of technology built into Microsoft Defender for Endpoint and Microsoft's cloud service:
+
+- **Endpoint network sensors**: Embedded in Windows 10, these sensors collect and process IoT/OT network signals and send sensor data to your cloud tenant.
+
+- **Cloud security analytics**: Leveraging big-data and device learning, network signals are translated into insights, detections, and recommended responses to advanced threats.
+
+- **Threat intelligence**: Generated by Microsoft IoT/OT security research teams, and augmented by threat intelligence provided by partners, threat intelligence enables Defender for IoT to identify IoT/OT attacks and techniques and generate alerts when they are observed.
+
+### Device and network visibility
+
+**[**Discover OT devices**](manage-devices-inventory.md)** to gain a full overview of IT, IoT, and OT assets across the entire organization.
+ 
+- Discover device details, and how devices communicate.
+- Identify device vulnerabilities and mitigate risks.
+- Reduce downtime and monitor your top assets.
+- Support regulatory compliance.​
+- Gather data from Microsoft Defender for Endpoint and third-party sources.
+
+### Vulnerability management
+
+**Assess risks and manage vulnerabilities** using machine learning, threat intelligence, and behavioral analytics. For example:
+
+- **[Detect advanced threats that you might have missed](discover-vulnerabilities.md)** by static indicators of compromise (IOCs), such as zero-day malware, fileless malware, and living-off-the-land tactics.
+- Identify unpatched devices, open ports, unauthorized applications, unauthorized connections, changes to device configurations, PLC code, firmware, and more.
+- Run searches in historical traffic across all relevant dimensions and protocols. Access full-fidelity PCAPs to drill down further.
+
+### Continuous threat monitoring
+
+**Respond to threats** by integrating with Microsoft services such as Microsoft Sentinel, other partner systems, and APIs. Integrate with security information and event management (SIEM) services, security operations and response (SOAR) services, extended detection and response (XDR) services, and more.
+
+Defender for IoT's centralized user experience in the Defender portal lets the security and OT monitoring teams visualize and secure all their IT, IoT, and OT devices regardless of where the devices are located.
+
+### Site security monitoring
+
+Monitor your [**site security**](site-security-overview.md): 
+
+- Gain valuable insights into OT risks in production sites
+- Make better-informed security investment decisions​
+- Streamline communication between IT and OT security stakeholders​.
+
+### Microsoft Defender XDR
+
+With Microsoft Defender XDR, Defender for IoT and different Microsoft security solutions form a unified pre- and post-breach enterprise defense suite. This suite natively integrates across endpoint, IoT/OT, identity, email, and applications to detect, prevent, investigate, and automatically respond to sophisticated attacks.
 
 ## What's the difference between Defender for IoT in the Defender portal and Defender for IoT on Azure?
 
 Microsoft Defender for IoT in the Defender portal (Preview) is designed for customers who want to extend their XDR/EDR protection to OT, and want to gain a unified security solution for IT and OT.
 
 Microsoft Defender for IoT on Azure is the standalone OT security portal. Existing customers can continue working on Azure as usual.
-
-## How do I protect my enterprise IoT devices?
-
-Extend Defender for IoT's security features beyond OT environments to enterprise IoT devices by using enterprise IoT security with Microsoft Defender for Endpoint, and view related alerts, vulnerabilities, and recommendations for IoT devices in Microsoft Defender XDR.
-
-Enterprise IoT devices can include devices such as printers, smart TVs, and conferencing systems and purpose-built, proprietary devices.
-
-For more information, see [Securing IoT devices in the enterprise](/azure/defender-for-iot/organizations/eiot-sensor).
 
 ## Which regions does Defender for IoT support?
 
