@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 02/08/2023
+ms.date: 06/21/2024
 ---
 
 # Configure your Event Hubs
@@ -135,7 +135,7 @@ For these Event Hubs (not namespace), you'll need to configure a Shared Access P
 
     - Contributor role at the Event Hubs *Namespace* Resource level or higher for the Event Hubs that you'll be exporting to. Without this permission, you'll get an export error when you try to save the settings.
 
-    - Global Admin or Security Admin Role on the tenant tied to Microsoft Defender XDR and Azure.
+    - Security Admin Role on the tenant tied to Microsoft Defender XDR and Azure.
 
       :::image type="content" source="/defender/media/55d5b1c21dd58692fb12a6c1c35bd4fa.png" alt-text="The Settings page of the Microsoft Defender portal" lightbox="/defender/media/55d5b1c21dd58692fb12a6c1c35bd4fa.png":::
 
