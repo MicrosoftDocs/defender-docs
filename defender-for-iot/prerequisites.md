@@ -66,11 +66,11 @@ This table shows the full roles and permissions needed for all features of MDE a
 
 | Feature | Write permissions | Read permissions |
 |---|----|---|
-|Alerts and incidents| MDE Roles: Alerts (manage) <br> Entra ID roles: Global Administrator, Security Administrator, Security Operator| Write roles<br> MDE Roles: Security data basics<br>Entra ID roles: Global Reader, Security Reader |
-|Vulnerabilities | MDE Roles: Response (manage)\ Security operations \ Security data <br>Entra ID roles: Global Administrator, Security Administrator, Security Operator | Write roles<br> MDE Roles: Vulnerability management (read) <br> Entra ID roles: Global Reader, Security Reader |
-|Inventory| MDE Roles: Onboard offboard device: Detection tuning (manage) <br> Manage device tags: Alerts (manage) <br>Entra ID roles: Global Administrator, Security Administrator, Security Operator | Write roles <br>MDE Roles: Security data basics/Security operations \ Security data <br> Entra ID roles: Global Reader, Security Reader |
-|Device group| MDE Roles: Authorization (Read and manage) <br>Entra ID roles: Global Administrator, Security Administrator |MDE Roles: Authorization (write roles, Read-only) |
-|Defender for IoT| MDE roles: Core security settings. <br> Entra ID roles: Global Administrator, Security Administrator, Security Operator & scoped to all device groups.|Write roles (including those that are non scoped to all device groups). <br> MDE Roles: Security data basics (under Security Operations).<br> Entra ID roles: Global Reader, Security Reader.|
+|Alerts and incidents| **MDE Roles**: Alerts (manage) <br> **Entra ID roles**: Global Administrator, Security Administrator, Security Operator| Write roles<br> **MDE Roles**: Security data basics<br>**Entra ID roles**: Global Reader, Security Reader |
+|Vulnerabilities | **MDE Roles**: Response (manage)\ Security operations \ Security data <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator | Write roles<br> **MDE Roles**: Vulnerability management (read) <br> **Entra ID roles**: Global Reader, Security Reader |
+|Inventory| **MDE Roles**: Onboard offboard device: Detection tuning (manage) <br> Manage device tags: Alerts (manage) <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator | Write roles <br>**MDE Roles**: Security data basics/Security operations \ Security data <br> **Entra ID roles**: Global Reader, Security Reader |
+|Device group| **MDE Roles**: Authorization (Read and manage) <br>**Entra ID roles**: Global Administrator, Security Administrator |**MDE Roles**: Authorization (write roles, Read-only) |
+|Defender for IoT| **MDE roles**: Core security settings. <br> **Entra ID roles**: Global Administrator, Security Administrator, Security Operator scoped to all device groups.|Write roles (including those that are non scoped to all device groups). <br> **MDE Roles**: Security data basics (under Security Operations).<br> **Entra ID roles**: Global Reader, Security Reader.|
 
 ## Supported protocols
 
