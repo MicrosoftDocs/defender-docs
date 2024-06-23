@@ -11,7 +11,22 @@ ms.topic: how-to
 
 # Discover vulnerabilities
 
-The Security administrator uses the list of detected vulnerabilities, in the **Weaknesses** page, to create a remediation request that is sent to an IT administrator to perform.
+Microsoft Defender for IoT extends vulnerability management capabilities by providing comprehensive coverage for OT networks and gathering the data into one place, displaying them with the other devices on your network.
+The OT security user proactively manages risks based on the vulnerability details and recommendations for remediation.
+
+The key vulnerability features are:
+
+| Feature | Description|
+|----|----|
+|Extended Vulnerability Coverage| Defender for IoT uses detailed OT device firmware information to discover its vendor, model, and version to identify known vulnerabilities.|
+|Security Recommendations Page| Offers actionable steps to update and mitigate vulnerable products.|
+|Weaknesses Page| Includes a comprehensive list of vulnerabilities such as zero-days and known exploits.|
+|Management| The vulnerabilities can be managed and controlled globally, per device, or per vulnerable product.|
+|Exception Handling| Create exceptions for recommendations that cannot be patched.|
+|Customizable Vulnerability Notifications| Alert key stakeholders with customizable notifications.|
+|Reporting Inaccuracies| Users can report inaccuracies on discovered CVEs or request support for new vulnerabilities.|
+
+The Security administrator uses the list of detected vulnerabilities, in the **Weaknesses** page, to create a remediation request that is sent to an IT administrator to implement.
   
 The Microsoft Defender portal displays Microsoft Defender for IoT security vulnerabilities in the **Weaknesses** page of the Endpoints navigation menu. The **Weaknesses** page lists the detected security vulnerabilities across all devices, endpoints, applications and other sources on your network.
 
@@ -46,4 +61,4 @@ For more information, see [Weaknesses page in the Microsoft Defender Vulnerabili
     Or
     1. Select **Exception options**, fill out the form. For more information, see [justification for an exception](/defender-vulnerability-management/tvm-security-recommendation.md#explore-security-recommendation-options). To complete, select **Submit**.
 
-    :::image type="content" source="media/create-exception.png" alt-text="Screenshot of the expection form in the remediation panel of the Security recommendations page for a specific CVE.":::
+    :::image type="content" source="media/create-exception.png" alt-text="Screenshot of the exception form in the remediation panel of the Security recommendations page for a specific CVE.":::
