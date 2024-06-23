@@ -63,9 +63,9 @@ Defender for IoT is intended for:
 
 With Defender for IoT cloud-based deployment, you can view data from all connected sensors, and integrate with other Microsoft services, like Microsoft Sentinel.
 
-## What's the difference between Defender for IoT on Azure and Defender for IoT in the Defender portal?
+## What's the difference between Defender for IoT in the Defender portal and Defender for IoT on Azure?
 
-Microsoft Defender for IoT in the Defender portal (Preview) is designed for customer who want to extend their XDR/EDR protection to OT, and gain a unified security solution for IT and OT.
+Microsoft Defender for IoT in the Defender portal (Preview) is designed for customers who want to extend their XDR/EDR protection to OT, and want to gain a unified security solution for IT and OT.
 
 Microsoft Defender for IoT on Azure is the standalone OT security portal. Existing customers can continue working on Azure as usual.
 
