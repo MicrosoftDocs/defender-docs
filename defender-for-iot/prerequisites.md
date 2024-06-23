@@ -39,9 +39,9 @@ To assign roles and permissions for other Microsoft MDE features, such as alerts
 
 There are 2 ways to manage access to Microsoft Defender portal:
 
-1. Global Microsoft Entra roles: For more information, see [Microsoft Entra built-in roles](entra/identity/role-based-access-control/permissions-reference.md).
+1. Global Microsoft Entra roles: For more information, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference.md).
 
-1. Custom role access: a capability in Microsoft Defender that allows you to manage access to specific data, tasks, and capabilities in Microsoft Defender XDR. For more information, see [custom roles in Microsoft Defender](defender-xdr/custom-roles.md).
+1. Custom role access: a capability in Microsoft Defender that allows you to manage access to specific data, tasks, and capabilities in Microsoft Defender XDR. For more information, see [custom roles in Microsoft Defender](/defender-xdr/custom-roles.md).
 
 If you're using the Defender portal for the first time you need to set up all of your roles and permissions. For more information, see [setting up RBAC in the Defender portal]().
 
@@ -50,7 +50,7 @@ If you're using the Defender portal for the first time you need to set up all of
 Assign the following roles and permissions to give users access the additional **Site security** features. This article describes assigning site security roles and permission settings with the RBAC unified version.
 
 >[!Note]
->Depending on your tenant you may have access to RBAC version 1 or 2. For more information, see [permissions for RBAC version 1](defender-endpoint/prepare-deployment), or [permissions for RBAC version 2](/defender-endpoint/user-roles#permission-options).  
+>Depending on your tenant you may have access to RBAC version 1 or 2. For more information, see [permissions for RBAC version 1](/defender-endpoint/prepare-deployment), or [permissions for RBAC version 2](/defender-endpoint/user-roles#permission-options).  
 
 For Site security assign the following permissions:
 
