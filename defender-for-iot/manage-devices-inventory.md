@@ -10,9 +10,3 @@ ms.topic: how-to
 ---
 
 # Manage the device inventory
-
-Here are some words.
-
-## Next steps
-
-> [!div class="step-by-step"]
