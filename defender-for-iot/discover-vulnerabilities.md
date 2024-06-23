@@ -1,6 +1,6 @@
 ---
 title: Discover vulnerabilities with Microsoft Defender for IoT in Defender portal
-description: This article describes how to discover vulnerabilities in the Site security feature of Microsoft Defender for IoT in XDR Defender portal
+description: This article describes how to discover vulnerabilities in the Site security feature of Microsoft Defender for IoT in Defender portal
 ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
@@ -11,8 +11,8 @@ ms.topic: how-to
 
 # Discover vulnerabilities
 
-Microsoft Defender for IoT extends vulnerability management capabilities by providing comprehensive coverage for OT networks and gathering the data into one place, displaying them with the other devices on your network.
-The OT security user proactively manages risks based on the vulnerability details and recommendations for remediation.
+Microsoft Defender for IoT extends vulnerability management capabilities by providing comprehensive coverage for OT networks, gathering OT device data into one place, and displaying it with the other devices on your network.
+The OT security user<!-- IT security technician --> proactively manages network risks based on the vulnerability details and recommended remediation advice.
 
 The key vulnerability features are:
 
@@ -22,13 +22,11 @@ The key vulnerability features are:
 |Security Recommendations Page| Offers actionable steps to update and mitigate vulnerable products.|
 |Weaknesses Page| Includes a comprehensive list of vulnerabilities such as zero-days and known exploits.|
 |Management| The vulnerabilities can be managed and controlled globally, per device, or per vulnerable product.|
-|Exception Handling| Create exceptions for recommendations that cannot be patched.|
+|Exception Handling| Create exceptions for recommendations that can't be patched.|
 |Customizable Vulnerability Notifications| Alert key stakeholders with customizable notifications.|
 |Reporting Inaccuracies| Users can report inaccuracies on discovered CVEs or request support for new vulnerabilities.|
 
-The Security administrator uses the list of detected vulnerabilities, in the **Weaknesses** page, to create a remediation request that is sent to an IT administrator to implement.
-  
-The Microsoft Defender portal displays Microsoft Defender for IoT security vulnerabilities in the **Weaknesses** page of the Endpoints navigation menu. The **Weaknesses** page lists the detected security vulnerabilities across all devices, endpoints, applications and other sources on your network.
+The Microsoft Defender portal displays Microsoft Defender for IoT security vulnerabilities in the **Weaknesses** page of the Endpoints navigation menu. The **Weaknesses** page lists the detected security vulnerabilities across all devices, endpoints, applications and other sources on your network. <!--The Security administrator uses the list of detected vulnerabilities in the **Weaknesses** page, to create a remediation request that is sent to the IT administrator to implement.-->
 
 Vulnerabilities are listed based on their publicly registered Common Vulnerability and Exposures(CVEs) ID. The public registry of CVEs can be accessed from [https://www.cve.org/](https://www.cve.org/).  
 
