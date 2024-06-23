@@ -7,9 +7,7 @@
     - name: Overview
       items:
       - name: What is Microsoft Defender for IoT?
-        href: microsoft-defender-iot.md
-      - name: Compare Defender and Azure
-        href: compare-defender-azure.md
+        href: microsoft-defender-iot.md      
       - name: Site security
         href: site-security-overview.md
     - name: Get started
