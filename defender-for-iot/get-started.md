@@ -11,11 +11,7 @@ ms.topic: how-to
 
 # Get started with Defender for IoT
 
-This article explains how to create a trial license for Microsoft Defender for IoT. Once you have a trial license you can continue to set up a site to monitor the OT devices at that location. The trial license is limited to a maximum of 1,000 OT devices, and when fully set up, shows you the features and security insights available for your network.
-
-## Prerequisites
-
-To sign up for a trial license you need to have a global or billing Admin Entra account. [Is this correct?]
+This article explains how to create a trial license for Microsoft Defender for IoT. Once you have a trial license you can continue to set up a site to monitor the OT devices at that location. The trial license is limited to a maximum of 1,000 OT devices, and once set up, shows you the Defender for IoT security insights available for your network.
 
 ## Add a trial license
 
@@ -61,12 +57,5 @@ Use the Microsoft 365 admin center to manage your users, billing details, and mo
 >This trial license covers up to 1,000 devices. When moving to a permanent license you will need to know the total number of devices and choose the appropriate license to cover the needs of your network. This might mean choosing a larger or smaller sized license package.
 > For more information, see [license admin center ](license-admin.md).
 
-Belle - for a trial version - how can we choose the devices if my site has more than the max of the trial license?
-
-Once you have a trial license, go to [Set up a new site](set-up-sites.md) so that Microsoft Defender for IoT sends data to the XDR portal.
-
-## Next steps
-
-> [!div class="step-by-step"]
-> [Set up a new site](set-up-sites.md)<br><br>
-> [Buy a permanant license](license-admin.md)<br>
+<!-- Belle - for a trial version - how can we choose the devices if my site has more than the max of the trial license?-->
+Once you have a trial license, go to [Set up a new site](set-up-sites.md) so that Microsoft Defender for IoT sends data to the Defender portal.

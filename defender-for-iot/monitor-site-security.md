@@ -95,7 +95,3 @@ To view the security recommendations for a site:
 1. Select the device.
 1. Select the **Security recommendations** tab.
 1. Follow the actions listed.
-
-## Next steps
-
-> [!div class="step-by-step"]
