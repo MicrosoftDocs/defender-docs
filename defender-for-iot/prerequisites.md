@@ -11,9 +11,11 @@ ms.topic: get-started
 
 # Prerequisites for Defender for IoT
 
-Defender for IoT monitors and secures network traffic across your OT networks. To see how Defender for IoT can help your network you can sign up to a free, 90 day, trial version. This article describes the prerequisites needed to set up a trial license for Microsoft Defender for IoT.
+Defender for IoT monitors and secures network traffic across your OT networks and allows you to analyze OT data, generate alerts, identify network risks, and more.
 
-A trial supports a **Large** sized site with up to 1,000 devices, and lasts for 90 days. You might want to use this trial with your existing OT devices to monitor traffic, analyze data, generate alerts, understand network risks and vulnerabilities, and more.
+To see how Defender for IoT can help your network you can sign up to a free, 90 day, trial version. This article describes the prerequisites needed to set up a trial license for Microsoft Defender for IoT.
+
+A trial supports a **Large** sized site with up to 1,000 devices, and lasts for 90 days.
 
 ## Prerequisites for a trial license
 
