@@ -185,16 +185,17 @@ Done! You've successfully registered an application!
   ($alerts | ConvertFrom-Json) | Export-CSV $outputCsvPath -NoTypeInformation
   ```
 
-You're all done! You have just successfully:
+You're all done! You have successfully:
 
 - Created and registered and application
 - Granted permission for that application to read alerts
 - Connected the API
 - Used a PowerShell script to return alerts created in the past 48 hours
 
-## Related topic
+## Related articles
 
 - [Microsoft Defender for Endpoint APIs](exposed-apis-list.md)
 - [Access Microsoft Defender for Endpoint with application context](exposed-apis-create-app-webapp.md)
 - [Access Microsoft Defender for Endpoint with user context](exposed-apis-create-app-nativeapp.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
