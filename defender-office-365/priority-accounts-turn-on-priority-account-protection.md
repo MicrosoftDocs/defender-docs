@@ -41,7 +41,10 @@ This article describes how to confirm that priority account protection is turned
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/System settings/Read and manage** or **Authorization and settings/System settings/Read-only**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo): Membership in the **Organization Management** or **Security Administrator** role groups.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator** or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+
+    > [!IMPORTANT]
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - As previously described, priority account protection is applied to accounts that have the **Priority account** tag applied to them. For instructions, see [Manage and monitor priority accounts](/microsoft-365/admin/setup/priority-accounts).
 
