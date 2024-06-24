@@ -59,8 +59,6 @@ landingContent:
         links:
         - text: Monitor site security
           url: monitor-site-security.md
-        - text: Discover devices
-          url: manage-devices-inventory.md
         - text: Discover vulnerabilities
           url: discover-vulnerabilities.md
         - text: Investigate incidents and alerts
