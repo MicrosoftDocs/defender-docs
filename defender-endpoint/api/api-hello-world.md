@@ -81,7 +81,7 @@ For the Application registration stage, you must have the **Global administrator
 
      - To [run advanced queries](run-advanced-query-api.md), select 'Run advanced queries' permission.
      - To [isolate a machine](isolate-machine.md), select 'Isolate machine' permission.
-     - To determine which permission you need, please look at the **Permissions** section in the API you are interested to call.
+     - To determine which permission you need, please look at the **Permissions** section in the API you're interested to call.
 
 5. Select **Grant consent**.
 
@@ -92,7 +92,7 @@ For the Application registration stage, you must have the **Global administrator
 
 6. Add a secret to the application.
 
-    Select **Certificates & secrets**, add description to the secret and click **Add**.
+    Select **Certificates & secrets**, add description to the secret and select **Add**.
 
     > [!IMPORTANT]
     > After click Add, **copy the generated secret value**. You won't be able to retrieve after you leave!
@@ -109,8 +109,8 @@ Done! You have successfully registered an application!
 
 ### Step 2 - Get a token using the App and use this token to access the API.
 
-- Copy the script below to PowerShell ISE or to a text editor, and save it as **Get-Token.ps1**.
-- Running this script will generate a token and will save it in the working folder under the name **Latest-token.txt**.
+- Copy the script below to PowerShell ISE or to a text editor, and save it as `Get-Token.ps1`.
+- Running this script generates a token and saves it in the working folder under the name `Latest-token.txt`.
 
    ```powershell
    # That code gets the App Context Token and save it to a file named "Latest-token.txt" under the current directory
