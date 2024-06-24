@@ -24,6 +24,8 @@
         href: monitor-site-security.md         
     - name: Investigate and remediate vulnerabilities
       items:
+      - name: Overview
+        href: discover-vulnerabilities-overview.md
       - name: Discover vulnerabilities
         href: discover-vulnerabilities.md
     - name: Investigate and remediate threats
