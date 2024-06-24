@@ -9,9 +9,9 @@ ms.date: 05/19/2024
 ms.topic: how-to
 ---
 
-# License admin centre
+# Upgrade to a permanent license
 
-After using a trial license, and deciding that you would like to use Microsoft Defender for IoT premanantly, you need to purchase a full license. In order to purchase the correct license you need to know to total number of devices within your network. Based on this you should choose the correct sized and priced license for your network.
+After using a trial license for up to 90 days, you'll need to purchase a full license. In order to purchase the correct license you need to know to total number of devices within your network. Based on this you should choose the correct sized and priced license for your network.
 
 This article shows how to make changes to your license, including the correct steps to choice the best size license to purchase and upgrading from a trial to permanant license.
 
