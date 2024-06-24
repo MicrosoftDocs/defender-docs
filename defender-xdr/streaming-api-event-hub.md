@@ -13,7 +13,7 @@ ms.collection:
 - tier3
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 02/08/2023
+ms.date: 06/21/2024
 ---
 
 # Configure Microsoft Defender XDR to stream Advanced Hunting events to your Azure Event Hub
@@ -43,7 +43,10 @@ Prior to configuring Microsoft Defender XDR to stream data to Event Hubs, ensure
 
 ## Enable raw data streaming
 
-1. Log on to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> as a ***Global Administrator*** or ***Security Administrator***.
+1. Log on to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> as a ***Security Administrator*** at a minimum.
+
+  >[!IMPORTANT]
+  >Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 2. Go to the [Streaming API settings page](https://sip.security.microsoft.com/settings/mtp_settings/raw_data_export).
 
