@@ -10,7 +10,7 @@ ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-ms.date: 05/31/2024
+ms.date: 06/24/2024
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: 
@@ -102,8 +102,8 @@ In order to access the Microsoft Defender portal, configure settings for Defende
 
 Microsoft recommends assigning users only the level of permission they need to perform their tasks. You can assign permissions by using basic permissions management, or by using [role-based access control](rbac.md) (RBAC). 
 
-- With basic permissions management, global admins and security admins have full access, whereas security readers read-only access.
-- With RBAC, you can set more granular permissions through more roles. For example, you can have security readers, security operators, security admins, endpoint administrators, and more.
+- With basic permissions management, Global Administrators and Security Administrators have full access, whereas Security Readers have read-only access.
+- With RBAC, you can set more granular permissions through more roles. For example, you can have Security Readers, Security Operators, Security Administrators, Endpoint Administrators, and more.
 
 
 The following table describes key roles to consider for Defender for Endpoint in your organization: <br/><br/>
