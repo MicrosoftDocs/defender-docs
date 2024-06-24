@@ -104,7 +104,7 @@ The default alert policy named **Suspicious connector activity** automatically n
 
      - On the **Decide if you want to notify people when this alert is triggered** page of the wizard that opens, verify or change the following settings:
        - Verify **Opt-in for email notifications** is selected.
-       - **Email recipients**: The default value is **TenantAdmins** (meaning, **Global Administrator** members). To add more recipients, click in the empty area of the box. A list of recipients appears, and you can start typing a name to filter and select a recipient. Remove an existing recipient from the box by selecting :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to their name.
+       - **Email recipients**: The default value is **TenantAdmins** (**Global Administrator** members). To add more recipients, click in the empty area of the box. A list of recipients appears, and you can start typing a name to filter and select a recipient. Remove an existing recipient from the box by selecting :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to their name.
        - **Daily notification limit**: The default value is **No limit**.
 
        When you're finished on the **Decide if you want to notify people when this alert is triggered** page, select **Next**.
