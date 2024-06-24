@@ -81,7 +81,7 @@ For the Application registration stage, you must have the **Global administrator
 
      - To [run advanced queries](run-advanced-query-api.md), select 'Run advanced queries' permission.
      - To [isolate a machine](isolate-machine.md), select 'Isolate machine' permission.
-     - To determine which permission you need, please look at the **Permissions** section in the API you're interested to call.
+     - To determine which permission you need, see the **Permissions** section in the API you're interested to call.
 
 5. Select **Grant consent**.
 
@@ -105,11 +105,11 @@ For the Application registration stage, you must have the **Global administrator
 
    :::image type="content" source="../media/app-and-tenant-ids.png" alt-text="The application details pane under the Overview menu item in the Microsoft Entra admin center" lightbox="../media/app-and-tenant-ids.png":::
 
-Done! You have successfully registered an application!
+Done! You've successfully registered an application!
 
 ### Step 2 - Get a token using the App and use this token to access the API.
 
-- Copy the script below to PowerShell ISE or to a text editor, and save it as `Get-Token.ps1`.
+- Copy the following script to PowerShell ISE or to a text editor, and save it as `Get-Token.ps1`.
 - Running this script generates a token and saves it in the working folder under the name `Latest-token.txt`.
 
    ```powershell
@@ -145,8 +145,8 @@ Done! You have successfully registered an application!
 
 ### Let's get the Alerts!
 
-- The script below will use **Get-Token.ps1** to access the API and will get the past 48 hours Alerts.
-- Save this script in the same folder you saved the previous script **Get-Token.ps1**.
+- The following script uses `Get-Token.ps1` to access the API and gets alerts for the past 48 hours.
+- Save this script in the same folder you saved the previous script `Get-Token.ps1`.
 - The script creates two files (json and csv) with the data in the same folder as the scripts.
 
   ```powershell
