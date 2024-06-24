@@ -50,12 +50,15 @@ Watch this short video to learn more about Attack simulation training.
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): You need membership in one of the following roles:
-    - **Global Administrator**
+    - **Global Administrator**¹
     - **Security Administrator**
-    - **Attack Simulation Administrators**<sup>\*</sup>: Create and manage all aspects of attack simulation campaigns.
-    - **Attack Payload Author**<sup>\*</sup>: Create attack payloads that an admin can initiate later.
+    - **Attack Simulation Administrators**²: Create and manage all aspects of attack simulation campaigns.
+    - **Attack Payload Author**²: Create attack payloads that an admin can initiate later.
 
-    <sup>\*</sup> Adding users to this role group in [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md) is currently unsupported.
+    > [!IMPORTANT]
+    > ¹ Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+    ² Adding users to this role group in [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md) is currently unsupported.
 
     Currently, [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) isn't supported.
 

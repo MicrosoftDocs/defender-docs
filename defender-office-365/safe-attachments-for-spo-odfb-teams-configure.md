@@ -46,8 +46,11 @@ You turn on or turn off Safe Attachments for Office 365 for SharePoint, OneDrive
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md):
     - _Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams_: Membership in the **Organization Management** or **Security Administrator** role groups.
   - [Microsoft Entra permissions](/microsoft-365/admin/add-users/about-admin-roles): Membership in the the following roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
-    - _Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams_: **Global Administrator** or **Security Administrator**.
-    - _Use SharePoint Online PowerShell to prevent people from downloading malicious files_: **Global Administrator** or **SharePoint Administrator**.
+    - _Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams_: **Global Administrator**<sup>\*</sup> or **Security Administrator**.
+    - _Use SharePoint Online PowerShell to prevent people from downloading malicious files_: **Global Administrator**<sup>\*</sup> or **SharePoint Administrator**.
+
+    > [!IMPORTANT]
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - Verify that audit logging is enabled for your organization (it's on by default). For instructions, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
@@ -117,7 +120,7 @@ You can create an alert policy that notifies admins when Safe Attachments for Sh
    When you're finished on the **Choose an activity, conditions and when to trigger the alert** page, select **Next**.
 
 5. On the **Decide if you want to notify people when this alert is triggered** page, configure the following settings:
-   - Verify **Opt-in for email notifications** is selected. In the **Email recipients** box, select one or more global administrators, security administrators, or security readers who should receive notification when a malicious file is detected.
+   - Verify **Opt-in for email notifications** is selected. In the **Email recipients** box, select one or more admins who should receive notification when a malicious file is detected.
    - **Daily notification limit**: Leave the default value **No limit** selected.
 
    When you're finished on the **Decide if you want to notify people when this alert is triggered** page, select **Next**.
