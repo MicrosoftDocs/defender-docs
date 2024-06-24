@@ -56,7 +56,7 @@ Defender for IoT in the Defender portal uses the following combination of techno
 
 |Use case  |Capabilities  |
 |---------|---------|
-|**[Device and network visibility](manage-devices-inventory.md)**     |Gather data from network sensors, Microsoft Defender for Endpoint, and third-party sources. Identify device vulnerabilities and mitigate risks. |
+|**[Discover devices](manage-devices-inventory.md)**     |Gather data from network sensors, Microsoft Defender for Endpoint, and third-party sources. Identify device vulnerabilities and mitigate risks. |
 |**[Monitor site security](site-security-overview.md)** |Get an overview of your production sites to gain insights into OT risks, make better-informed security investment decisions​, and streamline communication between stakeholders. |
 |**[Assess risks and manage vulnerabilities](discover-vulnerabilities.md)**     |Proactively manage network risks based on the vulnerability details and recommended remediation advice.         |
 |**Analyze incidents and respond to threats**     |Review incidents and alerts with real-time details about events logged in your network, and take recommended remediation actions.         |         |
