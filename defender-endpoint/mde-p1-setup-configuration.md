@@ -182,23 +182,21 @@ Attack surface reduction rules are available on devices running Windows. We reco
 
 5. On the **Basics** tab, specify a name and description for the policy, and then choose **Next**.
 
-6. On the **Configuration settings** tab, expand under **Defender**, configure your attack surface reduction rules.
+6. On the **Configuration settings** tab, expand under **Defender**, configure your attack surface reduction rules, and then choose **Next**. For more information about attack surface reduction rules, see [Attack surface reduction rules deployment overview](attack-surface-reduction-rules-deployment.md).
 
    At a minimum, we recommend enabling the following three standard protection rules:
 
-   - [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](/defender-endpoint/attack-surface-reduction-rules-reference#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
    - [Block abuse of exploited vulnerable signed drivers](/defender-endpoint/attack-surface-reduction-rules-reference#block-abuse-of-exploited-vulnerable-signed-drivers)
+   - [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](/defender-endpoint/attack-surface-reduction-rules-reference#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
    - [Block persistence through Windows Management Instrumentation (WMI) event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
 
-7. Specify settings for each rule, and then choose **Next**. (For more information about what each rule does, see [Attack surface reduction rules](attack-surface-reduction.md).) 
-
-8. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
+7. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
    
    To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
-9. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (To learn more about assignments, see [Assign user and device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign).)
+8. On the **Assignments** tab, specify the users and groups to whom your policy should be applied, and then choose **Next**. (To learn more about assignments, see [Assign user and device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign).)
 
-10. On the **Review + create** tab, review the settings, and then choose **Create**.
+9. On the **Review + create** tab, review the settings, and then choose **Create**.
 
 > [!TIP]
 > To learn more about attack surface reduction rules, see the following resources:
