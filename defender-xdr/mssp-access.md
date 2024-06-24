@@ -16,7 +16,7 @@ search.appverid:
 ms.collection: 
 - m365-security
 - tier2 
-ms.date: 02/16/2021
+ms.date: 06/21/2024
 ---
 
 # Provide managed security service provider (MSSP) access 
@@ -52,7 +52,7 @@ To implement a multitenant delegated access solution, take the following steps:
 
 2. Create Defender for Endpoint roles for appropriate access levels in Customer Defender for Endpoint in Microsoft Defender portal roles and groups.
 
-    To enable RBAC in the customer Microsoft Defender portal, access **Permissions >  Endpoints roles & groups > Roles** with a user account with Global Administrator or Security Administrator rights.
+    To enable RBAC in the customer Microsoft Defender portal, access **Permissions >  Endpoints roles & groups > Roles** with a user account with Security Administrator rights.
 
     :::image type="content" source="/defender/media/mssp-access.png" alt-text="The details of the MSSP access in the Microsoft Defender portal" lightbox="/defender/media/mssp-access.png":::
 
