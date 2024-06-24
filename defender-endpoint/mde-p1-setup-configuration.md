@@ -105,18 +105,18 @@ Microsoft recommends assigning users only the level of permission they need to p
 - With basic permissions management, Global Administrators and Security Administrators have full access, whereas Security Readers have read-only access.
 - With RBAC, you can set more granular permissions through more roles. For example, you can have Security Readers, Security Operators, Security Administrators, Endpoint Administrators, and more.
 
-
 The following table describes key roles to consider for Defender for Endpoint in your organization: <br/><br/>
 
 | Role | Description |
 |:---|:---|
-| Global administrators (also referred to as global admins) <br/><br/> *As a best practice, limit the number of global administrators.* | Global admins can perform all kinds of tasks. The person who signed up your company for Microsoft 365 or for Microsoft Defender for Endpoint Plan 1 is a global administrator by default. <br/><br/> Global admins are able to access/change settings across all Microsoft 365 portals, such as: <br/>- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) <br/>- Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com))  |
-| Security administrators (also referred to as security admins) | Security admins can perform security operator tasks plus the following tasks: <br/>- Monitor security-related policies <br/>- Manage security threats and alerts <br/>- View reports |
-| Security operator | Security operators can perform security reader tasks plus the following tasks: <br/>- View information about detected threats <br/>- Investigate and respond to detected threats  |
-| Security reader | Security readers can perform the following tasks: <br/>- View security-related policies across Microsoft 365 services <br/>- View security threats and alerts <br/>- View reports  |
+| Global Administrators <br/><br/> *As a best practice, limit the number of Global Administrators.* | Global Administrators can perform all kinds of tasks. The person who signed up your company for Microsoft 365 or for Microsoft Defender for Endpoint Plan 1 is a Global Administrator by default. <br/><br/> Global Administrators are able to access/change settings across all Microsoft 365 portals, such as: <br/>- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) <br/>- Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com))  |
+| Security Administrators | Security Administrators can perform Security Operator tasks plus the following tasks: <br/>- Monitor security-related policies <br/>- Manage security threats and alerts <br/>- View reports |
+| Security Operator | Security Operators can perform Security Reader tasks plus the following tasks: <br/>- View information about detected threats <br/>- Investigate and respond to detected threats  |
+| Security Reader | Security Readers can perform the following tasks: <br/>- View security-related policies across Microsoft 365 services <br/>- View security threats and alerts <br/>- View reports  |
 
-
-> [!TIP]
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> 
 > To learn more about roles in Microsoft Entra ID, see [Assign administrator and non-administrator roles to users with Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal). And, more information about roles for Defender for Endpoint, see [Role-based access control](prepare-deployment.md#role-based-access-control).
 
 ## Onboard to Defender for Endpoint
@@ -172,11 +172,11 @@ Attack surface reduction rules are available on devices running Windows. We reco
 
 :::image type="content" source="/defender/media/mde-p1/mem-asrpolicies.png" alt-text="Screenshot of attack surface reduction rules in the Intune portal." lightbox="/defender/media/mde-p1/mem-asrpolicies.png":::
 
-1. Go to the Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) and sign in.
+1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in.
 
 2. Choose **Endpoint security** > **Attack surface reduction** > **+ Create policy**.
 
-3. For **Platform**, select **Windows 10 and later**.
+3. For **Platform**, select **Windows 10, Windows 11, and Windows Server**.
 
 4. For **Profile**, select **Attack surface reduction rules**, and then choose **Create**.
 
