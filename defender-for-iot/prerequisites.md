@@ -39,6 +39,10 @@ Before you start, you need:
 
 1. We recommend you have IP or MAC address details of at least one OT device at the site that is listed in MDE.
 
+### Public preview features
+
+We recommend that you also turn on the Preview features to be amonth the first to try out new features. For more information, see [turn on preview features](/defender-xdr/preview.md#turn-on-preview-features).
+
 ## Permissions
 
 Microsoft Defender for IoT is part of Microsoft Defender portal and users should already have permissions for alerts, incidents, inventory, device groups and vulnerabilities configured. In order to access the Defender for IoT features, extra permissions and roles must be assigned to the correct users.
