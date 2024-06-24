@@ -44,11 +44,11 @@ This page describes how to create an application to get programmatic access to D
 
 If you need programmatic access Microsoft Defender for Endpoint without a user, refer to [Access Microsoft Defender for Endpoint with application context](exposed-apis-create-app-webapp.md).
 
-If you are not sure which access you need, read the [Introduction page](apis-intro.md).
+If you're not sure which access you need, read the [Introduction page](apis-intro.md).
 
-Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will enable you to automate work flows and innovate based on Microsoft Defender for Endpoint capabilities. The API access requires OAuth2.0 authentication. For more information, see [OAuth 2.0 Authorization Code Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
+Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs enable you to automate work flows and innovate based on Microsoft Defender for Endpoint capabilities. The API access requires OAuth2.0 authentication. For more information, see [OAuth 2.0 Authorization Code Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
 
-In general, you'll need to take the following steps to use the APIs:
+In general, you need to take the following steps to use the APIs:
 
 - Create a Microsoft Entra application
 - Get an access token using this application
@@ -65,7 +65,7 @@ This page explains how to create a Microsoft Entra application, get an access to
 
 ## Create an app
 
-1. Log on to [Azure](https://portal.azure.com) with a user account that has the **Global Administrator** role.
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 2. Navigate to **Microsoft Entra ID** \> **App registrations** \> **New registration**.
 
