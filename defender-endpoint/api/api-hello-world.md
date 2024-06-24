@@ -16,7 +16,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 06/24/2024
 ---
 
 # Microsoft Defender for Endpoint API - Hello World
@@ -47,13 +47,13 @@ It only takes 5 minutes done in two steps:
 
 ### Do I need a permission to connect?
 
-For the Application registration stage, you must have a **Global administrator** role in your Microsoft Entra tenant.
+For the Application registration stage, you must have the **Global administrator** role assigned in your Microsoft Entra tenant.
 
 <a name='step-1---create-an-app-in-azure-active-directory'></a>
 
 ### Step 1 - Create an App in Microsoft Entra ID
 
-1. Log on to [Azure](https://portal.azure.com) with your **Global administrator** user.
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 2. Navigate to **Microsoft Entra ID** \> **App registrations** \> **New registration**.
 
@@ -83,7 +83,7 @@ For the Application registration stage, you must have a **Global administrator**
      - To [isolate a machine](isolate-machine.md), select 'Isolate machine' permission.
      - To determine which permission you need, please look at the **Permissions** section in the API you are interested to call.
 
-5. Click **Grant consent**.
+5. Select **Grant consent**.
 
    > [!NOTE]
    > Every time you add permission, you must click on **Grant consent** for the new permission to take effect.
@@ -92,7 +92,7 @@ For the Application registration stage, you must have a **Global administrator**
 
 6. Add a secret to the application.
 
-    Click **Certificates & secrets**, add description to the secret and click **Add**.
+    Select **Certificates & secrets**, add description to the secret and click **Add**.
 
     > [!IMPORTANT]
     > After click Add, **copy the generated secret value**. You won't be able to retrieve after you leave!
