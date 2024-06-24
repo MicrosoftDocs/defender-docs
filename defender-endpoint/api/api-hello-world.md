@@ -59,23 +59,23 @@ For the Application registration stage, you must have the **Global administrator
 
    :::image type="content" source="../media/atp-azure-new-app2.png" alt-text="The App registrations option under the Manage pane in the Microsoft Entra admin center"  lightbox="../media/atp-azure-new-app2.png":::
 
-3. In the registration form, choose a name for your application and then click **Register**.
+3. In the registration form, choose a name for your application and then select **Register**.
 
 4. Allow your Application to access Defender for Endpoint and assign it **'Read all alerts'** permission:
 
-   - On your application page, click **API Permissions** \> **Add permission** \> **APIs my organization uses** > type **WindowsDefenderATP** and click on **WindowsDefenderATP**.
+   - On your application page, select **API Permissions** \> **Add permission** \> **APIs my organization uses** > type **WindowsDefenderATP** and select **WindowsDefenderATP**.
 
      > [!NOTE]
      > WindowsDefenderATP does not appear in the original list. You need to start writing its name in the text box to see it appear.
 
      :::image type="content" source="../media/add-permission.png" alt-text="The API permissions option under the Manage pane in the Microsoft Entra admin center" lightbox="../media/add-permission.png":::
 
-   - Choose **Application permissions** \> **Alert.Read.All** > Click on **Add permissions**.
+   - Choose **Application permissions** \> **Alert.Read.All**, and then select **Add permissions**.
 
      :::image type="content" source="../media/application-permissions.png" alt-text="The permission type and settings panes in the Request API permissions page" lightbox="../media/application-permissions.png":::
 
      > [!IMPORTANT]
-     > You need to select the relevant permissions. 'Read All Alerts' is only an example!
+     > You need to select the relevant permissions. **Read All Alerts** is only an example.
 
      For example:
 
