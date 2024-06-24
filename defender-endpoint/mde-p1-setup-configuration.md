@@ -212,7 +212,7 @@ We recommend using Intune to configure controlled folder access.
 
 :::image type="content" source="/defender/media/mde-p1/mem-asrpolicies.png" alt-text="Screenshot of attack surface reduction policies in the Intune portal." lightbox="/defender/media/mde-p1/mem-asrpolicies.png":::
 
-1. Go to the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign in. 
+1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in. 
 
 2. Select **Endpoint Security**, and then select **Attack Surface Reduction**.
 
@@ -243,11 +243,11 @@ You can configure Defender for Endpoint to block or allow removable devices and 
 
 :::image type="content" source="/defender/media/mde-p1/mem-admintemplates.png" alt-text="Screenshot of Intune administrative templates." lightbox="/defender/media/mde-p1/mem-admintemplates.png":::
 
-1. Go to the Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) and sign in. 
+1. Go to the [Intune admin center](https://endpoint.microsoft.com) and sign in. 
 
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **+ Create** > **Create policy**.
 
-3. For **Platform**, select **Windows 10 and later**, and for **Profile type**, select **Templates**. 
+3. For **Platform**, select a profile, such as **Windows 10 and later**, and for **Profile type**, select **Templates**. 
 
    Under **Template name**, select **Administrative Templates**, and then choose **Create**. 
 
