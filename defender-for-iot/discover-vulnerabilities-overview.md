@@ -1,5 +1,5 @@
 ---
-title: Overview of vulnerability discovery with Microsoft Defender for IoT in the Defender portal
+title: Overview of vulnerability management with Microsoft Defender for IoT in the Defender portal
 description: This article describes the features and benefits of Microsoft Defender for IoT vulnerability management.
 ms.service: defender-for-iot
 author: limwainstein
@@ -9,15 +9,15 @@ ms.date: 06/24/2024
 ms.topic: conceptual
 ---
 
-# Overview of vulnerability discovery
+# Overview of vulnerability management
 
-With vulnerability discovery, Microsoft Defender for IoT in the Defender portal provides extended coverage for OT networks, gathers OT device data into one place, and displays the data with the other devices on your network.
+With vulnerability management, Microsoft Defender for IoT in the Defender portal provides extended coverage for OT networks, gathers OT device data into one place, and displays the data with the other devices on your network.
 
 The OT security administrator proactively manages network risks based on the vulnerability details and recommended remediation actions.
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
-## Vulnerability discovery capabilities
+## Vulnerability management capabilities
 
 The key vulnerability discovery capabilities are:
 
