@@ -214,24 +214,20 @@ We recommend using Intune to configure controlled folder access.
 
 1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in. 
 
-2. Select **Endpoint Security**, and then select **Attack Surface Reduction**.
+2. Go to **Endpoint Security** > **Attack Surface Reduction**, and then choose **+ Create Policy**. 
 
-3. Choose **+ Create Policy**. 
+3. For **Platform**, select **Windows 10, Windows 11, and Windows Server**, and for **Profile**, select **Attack surface reduction rules**. Then choose **Create**. 
 
-4. For **Platform**, select **Windows 10, Windows 11, and Windows Server**, and for **Profile**, select **Attack surface reduction rules**. Then choose **Create**. 
+4. On the **Basics** tab, name the policy and add a description. Select **Next**. 
 
-5. On the **Basics** tab, name the policy and add a description. Select **Next**. 
+5. On the **Configuration settings** tab, under **Defender** section, scroll down to the bottom. In the **Enable Controlled Folder Access** drop-down, select **Enabled**, and then choose **Next**. 
 
-6. On the **Configuration settings** tab, in the **Attack Surface Reduction Rules** section, scroll down to the bottom. In the **Enable Controlled Folder Access** drop-down, select **Enable**. You can optionally specify these other settings:
+   You can optionally specify these other settings:
 
-   - Next to **Controlled Folder Access Protected Folders**, toggle the switch to **Configured**, and then add folders that need to be protected.
-   - Next to **Controlled Folder Access Allowed Applications**, toggle the switch to **Configured**, and then add apps that should have access to protected folders.
+      - Next to **Controlled Folder Access Protected Folders**, toggle the switch to **Configured**, and then add folders that need to be protected.
+      - Next to **Controlled Folder Access Allowed Applications**, toggle the switch to **Configured**, and then add apps that should have access to protected folders.
 
-   Then choose **Next**.
-
-7. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. 
-   
-   To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+7. On the **Scope tags** tab, if your organization is using scope tags, choose **+ Select scope tags**, and then select the tags you want to use. Then, choose **Next**. To learn more about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
 
 8. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
 
