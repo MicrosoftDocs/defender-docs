@@ -60,7 +60,7 @@ The following table summarizes the values of **AuditLogRecordType** that are rel
 > [!IMPORTANT]
 > You must have either the Global Administrator<sup>\*</sup> or Security Administrator role assigned to set up SIEM integration with Microsoft Defender for Office 365. For more information, see [Permissions in the Microsoft Defender portal](mdo-portal-permissions.md).
 >
-> <sup>\*</sup>Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup>Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 >
 > Audit logging must be turned on for your Microsoft 365 environment (it's on by default). To verify that audit logging is turned on or to turn it on, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 

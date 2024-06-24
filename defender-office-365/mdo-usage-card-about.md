@@ -55,7 +55,7 @@ For members of **Billing Administrator** and **Global Administrator**<sup>\*</su
 These items aren't available for member of **Global Reader**, **Security Administrator**, **Security Operator**, or **Security Reader** roles.
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Understand usage details
 
@@ -80,7 +80,7 @@ The details flyout that opens contains the following information from the last 2
 **See licensing details** is available for members of the **Security Operator** and  **Global Administrators**<sup>\*</sup> roles in [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal).
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Frequently asked questions
 
