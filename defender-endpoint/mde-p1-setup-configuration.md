@@ -182,7 +182,13 @@ Attack surface reduction rules are available on devices running Windows. We reco
 
 5. On the **Basics** tab, specify a name and description for the policy, and then choose **Next**.
 
-6. On the **Configuration settings** tab, expand **Attack Surface Reduction Rules**.
+6. On the **Configuration settings** tab, expand under **Defender**, configure your attack surface reduction rules.
+
+   At a minimum, we recommend enabling the following three standard protection rules:
+
+   - [Block credential stealing from the Windows local security authority subsystem (lsass.exe)](/defender-endpoint/attack-surface-reduction-rules-reference#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+   - [Block abuse of exploited vulnerable signed drivers](/defender-endpoint/attack-surface-reduction-rules-reference#block-abuse-of-exploited-vulnerable-signed-drivers)
+   - [Block persistence through Windows Management Instrumentation (WMI) event subscription](/defender-endpoint/attack-surface-reduction-rules-reference#block-persistence-through-wmi-event-subscription)
 
 7. Specify settings for each rule, and then choose **Next**. (For more information about what each rule does, see [Attack surface reduction rules](attack-surface-reduction.md).) 
 
