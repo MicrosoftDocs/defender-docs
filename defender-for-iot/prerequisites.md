@@ -26,6 +26,8 @@ Before you start, you need:
     For more information, see [Buy or remove licenses for a Microsoft business subscription](/microsoft-365/commerce/licenses/buy-licenses.md) and [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles.md).
 
 1. Credit card details for your new subscription, although you aren't charged until you switch from the **Free Trial** to the **Pay-As-You-Go** plan.
+<!-- should this be added?-->
+### Prerequisite for creating a site 
 
 1. We recommend you have IP or MAC address details of at least one OT device at the site.
 
