@@ -85,7 +85,7 @@ After the add-in is installed and enabled, users see the following icons based o
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> role gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - For organizational installs, the organization needs to be configured to use OAuth authentication. For more information, see [Determine if Centralized Deployment of add-ins works for your organization](/Microsoft-365/admin/manage/centralized-deployment-of-add-ins).
 

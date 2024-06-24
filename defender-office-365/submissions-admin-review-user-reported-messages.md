@@ -51,7 +51,7 @@ Admins can mark messages and notify users of review results only if the user [re
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Global Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - You need access to Exchange Online PowerShell. If your account doesn't have access to Exchange Online PowerShell, you get the following error: _Specify an email address in your domain_. For more information about enabling or disabling access to Exchange Online PowerShell, see the following articles:
   - [Enable or disable access to Exchange Online PowerShell](/powershell/exchange/disable-access-to-exchange-online-powershell)

@@ -430,7 +430,7 @@ The following permissions are required in [Microsoft Entra ID](/entra/identity/r
 For more information about Microsoft Entra permissions in the Microsoft Defender portal, see [Microsoft Entra roles in the Microsoft Defender portal](mdo-portal-permissions.md#microsoft-entra-roles-in-the-microsoft-defender-portal)
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Frequently asked questions
 

@@ -44,7 +44,7 @@ To use Threat trackers, you need to be assigned permissions. You have the follow
   - _Read-only access to Threat Explorer queries on the Threat tracker page_: Membership in the **Security Reader** or **Global Reader** roles.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To remediate messages in Threat Explorer, you need additional permissions. For more information, see [Permissions and licensing for Threat Explorer and Real-time detections](threat-explorer-real-time-detections-about.md#permissions-and-licensing-for-threat-explorer-and-real-time-detections).
 

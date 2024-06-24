@@ -107,7 +107,7 @@ Microsoft Defender for Office 365 uses role-based access control. Permissions ar
 |Integrate Microsoft Defender for Office 365 Plan 2 with Microsoft Defender for Endpoint <br/><br/> Integrate Microsoft Defender for Office 365 Plan 2 with a SIEM server|Either the **Global Administrator**<sup>\*</sup> or the **Security Administrator** role assigned in either Microsoft Entra ID (<https://portal.azure.com>) or the Microsoft 365 admin center (<https://admin.microsoft.com>). <br/><br/> --- **plus** --- <br/><br/> An appropriate role assigned in additional applications (such as [Microsoft Defender Security Center](/windows/security/threat-protection/microsoft-defender-atp/user-roles) or your SIEM server).|
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Next steps
 

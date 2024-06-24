@@ -50,7 +50,7 @@ You turn on or turn off Safe Attachments for Office 365 for SharePoint, OneDrive
     - _Use SharePoint Online PowerShell to prevent people from downloading malicious files_: **Global Administrator**<sup>\*</sup> or **SharePoint Administrator**.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - Verify that audit logging is enabled for your organization (it's on by default). For instructions, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 

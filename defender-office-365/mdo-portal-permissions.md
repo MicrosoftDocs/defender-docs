@@ -42,7 +42,7 @@ You need to be member of the **Global Administrator**<sup>\*</sup> role in Micro
 - For information about permissions in the Microsoft Purview compliance portal, see [Permissions in the Microsoft Purview compliance portal](/purview/microsoft-365-compliance-center-permissions).
 
 > [!IMPORTANT]
-> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Relationship of members, roles, and role groups
 

@@ -75,7 +75,7 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
   - _Read-only access_: Membership in the **Global Reader** or **Security Reader** roles.
 
     > [!IMPORTANT]
-    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 > [!TIP]
 > Audit log entries are generated when admins preview or download email messages. You can search the admin audit log by user for **AdminMailAccess** activity. For instructions, see [Audit New Search](/purview/audit-new-search).
