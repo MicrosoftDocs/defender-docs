@@ -47,12 +47,12 @@
 		<v:layer v:name="Connector" v:index="0" v:glue="false"/>
 		<v:layer v:name="Text" v:index="1"/>
 		<v:layer v:name="Drawing" v:index="2"/>
-		<g id="shape1001-1" v:mID="1001" v:groupContext="shape" transform="translate(8.89621,-1)">
+		<g id="shape1001-1" v:mID="1001" v:groupContext="shape" transform="translate(4.78129,-1)">
 			<title>Sheet.1001</title>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(2000):26"/>
 			</v:userDefs>
-			<rect x="0" y="2" width="540" height="203.857" rx="4.5" ry="4.5" class="st1"/>
+			<rect x="0" y="2" width="544.115" height="203.857" rx="4.5" ry="4.5" class="st1"/>
 		</g>
 		<g id="shape1002-3" v:mID="1002" v:groupContext="shape" v:layerMember="0" transform="translate(14.182,-162.093)">
 			<title>Dynamic connector.1100</title>
@@ -284,19 +284,7 @@
 			<text x="6" y="167.74" class="st11" v:langID="1033"><v:paragraph/><v:tabList/>Deploy the log <tspan x="6" dy="1.2em"
 						class="st12">collector on your </tspan><tspan x="6" dy="1.2em" class="st12">firewalls and other </tspan><tspan
 						x="6" dy="1.2em" class="st12">proxies</tspan></text>		</g>
-		<g id="shape1024-105" v:mID="1024" v:groupContext="shape" v:layerMember="1;2" transform="translate(233.634,-114.171)">
-			<title>Sheet.1024</title>
-			<desc>View the dashboard to discover cloud apps</desc>
-			<v:userDefs>
-				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(25000):26"/>
-			</v:userDefs>
-			<v:textBlock v:margins="rect(6,6,6,6)"/>
-			<v:textRect cx="36.5024" cy="181.896" width="73.01" height="47.9223"/>
-			<rect x="0" y="157.935" width="73.0048" height="47.9223" rx="4.5" ry="4.5" class="st3"/>
-			<text x="6" y="166.9" class="st11" v:langID="1033"><v:paragraph/><v:tabList/>View the <tspan x="6" dy="1.2em"
-						class="st12">dashboard to </tspan><tspan x="6" dy="1.2em" class="st12">discover </tspan><tspan x="6"
-						dy="1.2em" class="st12">cloud apps</tspan></text>		</g>
-		<g id="shape1025-111" v:mID="1025" v:groupContext="shape" v:layerMember="1;2" transform="translate(337.991,-138.358)">
+		<g id="shape1025-105" v:mID="1025" v:groupContext="shape" v:layerMember="1;2" transform="translate(337.991,-138.358)">
 			<title>Sheet.1025</title>
 			<desc>Begin managing cloud apps</desc>
 			<v:userDefs>
@@ -307,7 +295,7 @@
 			<rect x="0" y="182.122" width="95.4" height="23.7348" rx="4.5" ry="4.5" class="st3"/>
 			<text x="6" y="190.99" class="st11" v:langID="1033"><v:paragraph/><v:tabList/>Begin managing <tspan x="6" dy="1.2em"
 						class="st12">cloud apps</tspan></text>		</g>
-		<g id="shape1026-115" v:mID="1026" v:groupContext="shape" v:layerMember="1;2" transform="translate(443.321,-138.921)">
+		<g id="shape1026-109" v:mID="1026" v:groupContext="shape" v:layerMember="1;2" transform="translate(443.321,-138.921)">
 			<title>Sheet.1026</title>
 			<desc>Try out additional capabilities</desc>
 			<v:userDefs>
@@ -318,7 +306,7 @@
 			<rect x="0" y="182.685" width="95.4" height="23.1723" rx="4.5" ry="4.5" class="st3"/>
 			<text x="6" y="191.27" class="st11" v:langID="1033"><v:paragraph/><v:tabList/>Try out additional <tspan x="6"
 						dy="1.2em" class="st12">capabilities</tspan></text>		</g>
-		<g id="shape1027-119" v:mID="1027" v:groupContext="shape" v:layerMember="1;2" transform="translate(75.3951,-11.0627)">
+		<g id="shape1027-113" v:mID="1027" v:groupContext="shape" v:layerMember="1;2" transform="translate(75.3951,-11.0627)">
 			<title>Sheet.1027</title>
 			<desc>Integrate with Microsoft Defender for Endpoint</desc>
 			<v:userDefs>
@@ -330,7 +318,7 @@
 			<text x="6" y="167.57" class="st11" v:langID="1033"><v:paragraph/><v:tabList/>Integrate with <tspan x="6" dy="1.2em"
 						class="st12">Microsoft </tspan><tspan x="6" dy="1.2em" class="st12">Defender for </tspan><tspan x="6"
 						dy="1.2em" class="st12">Endpoint</tspan></text>		</g>
-		<g id="shape1028-125" v:mID="1028" v:groupContext="shape" v:layerMember="1;2" transform="translate(180.725,-11.0627)">
+		<g id="shape1028-119" v:mID="1028" v:groupContext="shape" v:layerMember="1;2" transform="translate(180.725,-11.0627)">
 			<title>Sheet.1028</title>
 			<desc>Create a pilot group</desc>
 			<v:userDefs>
@@ -341,7 +329,7 @@
 			<rect x="0" y="182.91" width="64.6767" height="22.9476" rx="4.5" ry="4.5" class="st3"/>
 			<text x="6" y="191.38" class="st11" v:langID="1033"><v:paragraph/><v:tabList/>Create a <tspan x="6" dy="1.2em"
 						class="st12">pilot group</tspan></text>		</g>
-		<g id="shape1029-129" v:mID="1029" v:groupContext="shape" v:layerMember="1;2" transform="translate(285.083,-11.0627)">
+		<g id="shape1029-123" v:mID="1029" v:groupContext="shape" v:layerMember="1;2" transform="translate(285.083,-11.0627)">
 			<title>Sheet.1029</title>
 			<desc>Configure Conditional Access App Control</desc>
 			<v:userDefs>
@@ -352,9 +340,9 @@
 			<rect x="0" y="169.972" width="95.4" height="35.8851" rx="4.5" ry="4.5" class="st3"/>
 			<text x="6" y="178.91" class="st11" v:langID="1033"><v:paragraph/><v:tabList/>Configure <tspan x="6" dy="1.2em"
 						class="st12">Conditional Access </tspan><tspan x="6" dy="1.2em" class="st12">App Control</tspan></text>		</g>
-		<g id="shape1030-134" v:mID="1030" v:groupContext="shape" v:layerMember="1;2" transform="translate(389.926,-11.0627)">
+		<g id="shape1030-128" v:mID="1030" v:groupContext="shape" v:layerMember="1;2" transform="translate(389.926,-12.6991)">
 			<title>Sheet.1030</title>
-			<desc>Apply session controls to cloud apps</desc>
+			<desc>Apply session policies to cloud apps</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(31000):26"/>
 			</v:userDefs>
@@ -362,6 +350,17 @@
 			<v:textRect cx="39.1508" cy="188.864" width="78.31" height="33.9871"/>
 			<rect x="0" y="171.87" width="78.3017" height="33.9871" rx="4.5" ry="4.5" class="st3"/>
 			<text x="6" y="179.86" class="st11" v:langID="1033"><v:paragraph/><v:tabList/>Apply session <tspan x="6" dy="1.2em"
-						class="st12">controls to </tspan><tspan x="6" dy="1.2em" class="st12">cloud apps</tspan></text>		</g>
+						class="st12">policies to </tspan><tspan x="6" dy="1.2em" class="st12">cloud apps</tspan></text>		</g>
+		<g id="shape1070-133" v:mID="1070" v:groupContext="shape" v:layerMember="1;2" transform="translate(234.138,-130.473)">
+			<title>Sheet.1070</title>
+			<desc>Discover and manage cloud apps</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(63000):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(6,6,6,6)"/>
+			<v:textRect cx="47.7" cy="190.047" width="95.4" height="31.6202"/>
+			<rect x="0" y="174.237" width="95.4" height="31.6202" rx="4.5" ry="4.5" class="st3"/>
+			<text x="6" y="181.05" class="st11" v:langID="1033"><v:paragraph/><v:tabList/>Discover and <tspan x="6" dy="1.2em"
+						class="st12">manage <v:lf/></tspan><tspan x="6" dy="1.2em" class="st12">cloud apps</tspan></text>		</g>
 	</g>
 </svg>

@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
-ms.date: 03/29/2024
+ms.date: 06/05/2024
 appliesto: 
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -59,9 +59,6 @@ The unified security operations platform in the Microsoft Defender portal includ
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
 ## Incidents and alerts in the Microsoft Defender portal
-
-> [!TIP]
-> For a limited time during January 2024, when you visit the **Incidents** page, Defender Boxed appears. Defender Boxed highlights your organization's security successes, improvements, and response actions during 2023. To reopen Defender Boxed, in the Microsoft Defender portal, go to **Incidents**, and then select **Your Defender Boxed**.
 
 You manage incidents from **Investigation & response > Incidents & alerts > Incidents** on the quick launch of the [Microsoft Defender portal](https://security.microsoft.com). Here's an example:
 

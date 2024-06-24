@@ -1,13 +1,8 @@
 ---
 title: Stream Microsoft Defender XDR events to Azure Event Hubs
 description: Learn how to configure Microsoft Defender XDR to stream Advanced Hunting events to your Event Hubs.
-keywords: raw data export, streaming API, API, Azure Event Hubs, Azure storage, storage account, Advanced Hunting, raw data sharing
-search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.service: defender-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 ms.author: macapara
 author: mjcaparas
 ms.localizationpriority: medium
@@ -18,7 +13,7 @@ ms.collection:
 - tier3
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 02/08/2023
+ms.date: 06/21/2024
 ---
 
 # Configure Microsoft Defender XDR to stream Advanced Hunting events to your Azure Event Hub
@@ -48,7 +43,10 @@ Prior to configuring Microsoft Defender XDR to stream data to Event Hubs, ensure
 
 ## Enable raw data streaming
 
-1. Log on to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> as a ***Global Administrator*** or ***Security Administrator***.
+1. Log on to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> as a ***Security Administrator*** at a minimum.
+
+  >[!IMPORTANT]
+  >Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 2. Go to the [Streaming API settings page](https://sip.security.microsoft.com/settings/mtp_settings/raw_data_export).
 
@@ -113,17 +111,21 @@ To get the data types for event properties, do the following steps:
   :::image type="content" source="/defender-endpoint/media/machine-info-datatype-example.png" alt-text="An example query for device info" lightbox="/defender-endpoint/media/machine-info-datatype-example.png":::
 
 ## Estimating initial Event Hub capacity
-The following Advanced Hunting query can help provide a rough estimate of data volume throughput and initial event hub capacity based on events/sec and estimated MB/sec. We recommend running the query during regular business hours so as to capture 'real' throughput.
+The following advanced hunting query can help provide a rough estimate of data volume throughput and initial event hub capacity based on events/sec and estimated MB/sec. We recommend running the query during regular business hours so as to capture 'real' throughput.
  
-```kusto 
-let bytes_ = 500;
-union withsource=MDTables *
-| where Timestamp > startofday(ago(6h))
+```kusto
+let bytes_ = 1000;
+union withsource=MDTables MyDefenderTable // TODO: Insert desired tables one by one separated by a comma (for example: DeviceEvents, DeviceInfo) or with a wildcard (Device*)
+| where Timestamp > startofday(ago(7d))
 | summarize count() by bin(Timestamp, 1m), MDTables
-| extend EPS = count_ /60
-| summarize avg(EPS), estimatedMBPerSec = (avg(EPS) * bytes_ ) / (1024*1024) by MDTables
+| extend EPS = count_ /60 
+| summarize avg(EPS), estimatedMBPerSec = avg(EPS) * bytes_ / (1024*1024) by MDTables, bin(Timestamp, 3h)
+| summarize avg_EPS=max(avg_EPS), estimatedMBPerSec = max(estimatedMBPerSec) by MDTables
 | sort by toint(estimatedMBPerSec) desc
+| project MDTables, avg_EPS, estimatedMBPerSec
 ```
+
+To check the different Event Hub limits, review [Azure Event Hubs quota and limits](/azure/event-hubs/event-hubs-quotas).
 
 ## Monitoring created resources
 

@@ -3,11 +3,11 @@ title: Microsoft Defender Core service overview
 description: Get an overview of Microsoft Defender Core service.
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.topic: overview
-ms.date: 04/24/2024
+ms.date: 06/21/2024
 search.appverid: met150
 ms.localizationpriority: medium
 audience: ITPro
@@ -26,11 +26,11 @@ To enhance your endpoint security experience, Microsoft is releasing the Microso
 
 1. The Microsoft Defender Core service is releasing with [Microsoft Defender Antivirus platform version 4.18.23110.2009](./msda-updates-previous-versions-technical-upgrade-support.md#october-2023-platform-418231002009--engine-11231002009).
 
-2. Rollout begins on:
+1. Rollout is planned to begin as follows:
 
    - November 2023 to prerelease customers.
    - Mid April 2024 to Enterprise customers running Windows clients.
-   - Mid June 2024 to U.S. Government customers running Windows clients.
+   - Beginning of July 2024 to U.S. Government customers running Windows clients.
       
 3. If you're using the Microsoft Defender for Endpoint **streamlined** device connectivity experience, you don't need to add any other URLs.
 

@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 05/11/2023
+ms.date: 06/07/2024
 ms.reviewer: efratka, nehabha
 f1.keywords: NOCSH 
 ms.collection: 
@@ -48,9 +48,6 @@ When you're ready to set up and configure Defender for Business, you can choose 
 
 ## [**Setup wizard**](#tab/Wizard)
 
-> [!IMPORTANT]
-> You must be a global administrator to complete setup tasks, including running the setup wizard. See [Security roles and permissions in Defender for Business](mdb-roles-permissions.md).
-
 1. **Get Defender for Business**. Start a trial or paid subscription today. You can choose from the standalone version of Defender for Business, or get it as part of Microsoft 365 Business Premium. See [Get Microsoft Defender for Business](get-defender-business.md). And, if you're planning to onboard servers, see [How to get Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers).
 
    In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), in the navigation pane, select **Assets** > **Devices**. If Defender for Business isn't provisioned yet, that process begins now. 
@@ -69,7 +66,6 @@ When you're ready to set up and configure Defender for Business, you can choose 
 
    In Defender for Business, members of your security team can be assigned one of the following three roles:<br/>
    
-   - **Global Admin**: A global admin can view and edit all settings across your Microsoft 365 tenant. The global admin does the initial setup and configuration for your company's Microsoft 365 subscription. 
    - **Security Administrator**: A security administrator can view and edit security settings, and take action when threats are detected.
    - **Security Reader**: A security reader can view information in reports, but can't change any security settings. 
 
@@ -87,9 +83,6 @@ When you're ready to set up and configure Defender for Business, you can choose 
 8. **Select your next step**. After the setup wizard has completed, you're prompted to choose a next step. For example, you can onboard devices, view your security dashboard, or view your security policies.
 
 ## [**Manual setup**](#tab/Manual)
-
-> [!IMPORTANT]
-> You must be a global administrator to complete setup tasks. See [Security roles and permissions in Defender for Business](mdb-roles-permissions.md).
 
 1. **Get Defender for Business**. Start a trial or paid subscription today. You can choose from the standalone version of Defender for Business, or get it as part of Microsoft 365 Business Premium. See [Get Microsoft Defender for Business](get-defender-business.md). And, if you're planning to onboard servers, see [How to get Microsoft Defender for Business servers](get-defender-business.md#how-to-get-microsoft-defender-for-business-servers).
 

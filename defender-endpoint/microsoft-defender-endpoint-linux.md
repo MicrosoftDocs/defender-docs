@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: dansimp
 author: dansimp
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/30/2024
+ms.date: 06/07/2024
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -101,13 +101,12 @@ In general you need to take the following steps:
   - Rocky 8.7 and higher
   - Alma 8.4 and higher
   - Mariner 2
-
+  
     > [!NOTE]
     > Distributions and version that are not explicitly listed are unsupported (even if they are derived from the officially supported distributions).
     > With RHEL 6 support for 'extended end of life' coming to an end by June 30, 2024; MDE Linux support for RHEL 6 will also be deprecated by June 30, 2024
     > MDE Linux version 101.23082.0011 is the last MDE Linux release supporting RHEL 6.7 or higher versions (does not expire before June 30, 2024). Customers are advised to plan upgrades to their RHEL 6 infrastructure aligned with guidance from Red Hat.
-    >
-    > Microsoft Defender Vulnerablity Management is not supported on Alma currently.
+    > Microsoft Defender Vulnerablity Management is not supported on Rocky and Alma currently.
 
 - List of supported kernel versions
 

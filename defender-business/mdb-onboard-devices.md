@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 08/08/2023
+ms.date: 06/19/2024
 ms.reviewer: efratka, nehabha, muktaagarwal
 f1.keywords: NOCSH 
 ms.collection: 
@@ -70,17 +70,19 @@ You can use a local script to onboard Windows client devices. When you run the o
 
 2. In the navigation pane, choose **Settings** > **Endpoints**, and then under **Device management**, choose **Onboarding**.
 
-3. Select **Windows 10 and 11**, and then, in the **Deployment method** section, choose **Local script**. 
+3. Select **Windows 10 and 11**.
 
-4. Select **Download onboarding package**. We recommend that you save the onboarding package to a removable drive.
+4. Under **Connectivity type**, select **Streamlined**.
 
-5. On a Windows device, extract the contents of the configuration package to a location, such as the Desktop folder. You should have a file named `WindowsDefenderATPLocalOnboardingScript.cmd`. 
+5. In the **Deployment method** section, choose **Local script**, and then select **Download onboarding package**. We recommend that you save the onboarding package to a removable drive.
 
-6. Open a command prompt as an administrator.
+6. On a Windows device, extract the contents of the configuration package to a location, such as the Desktop folder. You should have a file named `WindowsDefenderATPLocalOnboardingScript.cmd`. 
 
-7. Type the location of the script file. For example, if you copied the file to the Desktop folder, you would type `%userprofile%\Desktop\WindowsDefenderATPLocalOnboardingScript.cmd`, and then press the Enter key (or select **OK**).
+7. Open a command prompt as an administrator.
 
-8. After the script runs, [Run a detection test](#run-a-detection-test-on-a-windows-10-or-11-device).
+8. Type the location of the script file. For example, if you copied the file to the Desktop folder, you would type `%userprofile%\Desktop\WindowsDefenderATPLocalOnboardingScript.cmd`, and then press the Enter key (or select **OK**).
+
+9. After the script runs, [Run a detection test](#run-a-detection-test-on-a-windows-10-or-11-device).
 
 ### Group Policy for Windows 10 and 11
 
@@ -135,9 +137,7 @@ After you've onboarded Windows devices to Defender for Business, you can run a d
 
 1. On the Windows device, create a folder: `C:\test-MDATP-test`.
 
-2. Open Command Prompt as an administrator.
-
-3. In the Command Prompt window, run the following PowerShell command:
+2. Open Command Prompt as an administrator, and then run the following command:
 
    ```powershell
    powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference = 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-MDATP-test\\invoice.exe');Start-Process 'C:\\test-MDATP-test\\invoice.exe'
@@ -165,21 +165,23 @@ When you run the local script on Mac, it creates a trust with Microsoft Entra ID
 
 2. In the navigation pane, choose **Settings** > **Endpoints**, and then under **Device management**, choose **Onboarding**.
 
-3. Select **macOS**. In the **Deployment method** section, choose **Local script**. 
+3. Select **macOS**. 
 
-4. Select **Download onboarding package**, and save it to a removable drive. Also select **Download installation package**, and save it to your removable device.
+4. Under **Connectivity type**, select **Streamlined**.
 
-5. On Mac, save the installation package as `wdav.pkg` to a local directory.
+5. In the **Deployment method** section, choose **Local script**, and then select **Download onboarding package**. Save the package to a removable drive. Also select **Download installation package**, and save it to your removable device.
 
-6. Save the onboarding package as `WindowsDefenderATPOnboardingPackage.zip` to the same directory you used for the installation package.
+6. On your Mac, save the installation package as `wdav.pkg` to a local directory.
 
-7. Use Finder to navigate to `wdav.pkg` you saved, and then open it.
+7. Save the onboarding package as `WindowsDefenderATPOnboardingPackage.zip` to the same directory you used for the installation package.
 
-8. Select **Continue**, agree with the license terms, and then enter your password when prompted.
+8. Use Finder to navigate to `wdav.pkg` you saved, and then open it.
 
-9. You're prompted to allow installation of a driver from Microsoft (either *System Extension Blocked* or *Installation is on hold*, or both). You must allow the driver installation. Select **Open Security Preferences** or **Open System Preferences** > **Security & Privacy**, and then select **Allow**.
+9. Select **Continue**, agree with the license terms, and then enter your password when prompted.
 
-10. Use the following Bash command to run the onboarding package:
+10. You're prompted to allow installation of a driver from Microsoft (either *System Extension Blocked* or *Installation is on hold*, or both). You must allow the driver installation. Select **Open Security Preferences** or **Open System Preferences** > **Security & Privacy**, and then select **Allow**.
+
+11. Use the following Bash command to run the onboarding package:
 
    ```bash
    /usr/bin/unzip WindowsDefenderATPOnboardingPackage.zip \
@@ -357,9 +359,6 @@ You can use the following methods to onboard an instance of Linux Server to Defe
 ---
 
 ## View a list of onboarded devices
-
-> [!IMPORTANT]
-> You must be assigned an appropriate role, such as Global Administrator, Security Administrator, or Security Reader to perform the following procedure. For more information, see [Roles in Defender for Business](mdb-roles-permissions.md#roles-in-defender-for-business).
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.
 
