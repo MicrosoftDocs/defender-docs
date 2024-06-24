@@ -276,11 +276,11 @@ With network protection, you can help protect your organization against dangerou
 
 :::image type="content" source="/defender/media/mde-p1/mem-endpointprotectionprofile.png" alt-text="Screenshot of endpoint protection profile in the Intune portal." lightbox="/defender/media/mde-p1/mem-endpointprotectionprofile.png":::
 
-1. Go to the Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) and sign in. 
+1. Go to the [Intune admin center](https://endpoint.microsoft.com) and sign in. 
 
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **+ Create** > **Create policy**.
 
-3. For **Platform**, select **Windows 10 and later**, and for **Profile type**, select **Templates**. 
+3. For **Platform**, select a profile, such as **Windows 10 and later**, and for **Profile type**, select **Templates**. 
 
    Under **Template name**, select **Endpoint protection**, and then choose **Create**. 
 
@@ -311,7 +311,7 @@ With web protection, you can protect your organization's devices from web threat
 
 #### Configure web threat protection
 
-1. Go to the Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), and sign in.
+1. Go to the [Intune admin center](https://endpoint.microsoft.com), and sign in.
  
 2. Choose **Endpoint security** > **Attack surface reduction**, and then choose **+ Create policy**.
 
@@ -341,7 +341,7 @@ With web protection, you can protect your organization's devices from web threat
 
 #### Configure web content filtering
 
-1. Go to the Microsoft Defender portal ([https://security.microsoft.com/](https://security.microsoft.com/)) and sign in.
+1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
 
 2. Choose **Settings** > **Endpoints**.
 
@@ -366,7 +366,7 @@ Network firewall helps reduce the risk of network security threats. Your securit
 
 To configure basic firewall settings, follow these steps:
 
-1. Go to the Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), and sign in.
+1. Go to the [Intune admin center](https://endpoint.microsoft.com), and sign in.
 
 2. Choose **Endpoint security** > **Firewall**, and then choose **+ Create Policy**.
 
@@ -414,4 +414,5 @@ To help with planning your WDAC deployment, see the following resources:
 Now that you have gone through the setup and configuration process, your next step is to get started using Defender for Endpoint. 
 
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
