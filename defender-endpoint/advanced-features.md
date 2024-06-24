@@ -138,7 +138,7 @@ Block access to websites containing unwanted content and track web activity acro
 
 ## Unified audit log
 
-Search in Microsoft Purview enables your security and compliance team to view critical audit log event data to gain insight and investigate user activities. Whenever an audited activity is performed by a user or an admin, an audit record is generated and stored in the Microsoft 365 audit log for your organization. For more information, see the [Search the audit log](/purview/audit-search?view=o365-worldwide&tabs=microsoft-purview-portal).
+Search in Microsoft Purview enables your security and compliance team to view critical audit log event data to gain insight and investigate user activities. Whenever an audited activity is performed by a user or an admin, an audit record is generated and stored in the Microsoft 365 audit log for your organization. For more information, see the [Search the audit log](/purview/audit-search).
 
 ## Device discovery
 
@@ -174,7 +174,7 @@ Enabling this feature allows you to run unsigned scripts in a live response sess
 
 ## Deception
 
-Deception enables your security team to manage and deploy lures and decoys to catch attackers in your environment. After you turn this on, go to Rules > Deception rules to run deception campaigns. See [Manage the deception capability in Microsoft Defender XDR](../defender-xdr/deception-overview.md).
+Deception enables your security team to manage and deploy lures and decoys to catch attackers in your environment. After you turn this on, go to Rules > Deception rules to run deception campaigns. See [Manage the deception capability in Microsoft Defender XDR](/defender-xdr/deception-overview).
 
 ## Share endpoint alerts with Microsoft Compliance Center
 
