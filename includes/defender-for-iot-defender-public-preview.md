@@ -10,7 +10,7 @@ ms.service: microsoft-defender-iot
 > 
 > This article discusses Defender for IoT in the Defender portal (Preview). This solution is intended for Microsoft Defender customers looking to extend protection to OT environments.
 > 
-> **[Get started](get-started.md) with Defender for IoT in the Defender portal** or review other options:
+> **[Get started](/defender-for-iot/get-started.md) with Defender for IoT in the Defender portal** or review other options:
 >
 > - If you're an existing customer, you can continue working on the **classic Defender for IoT portal** (Azure portal) as usual. See the [Defender for IoT on Azure documentation](/azure/defender-for-iot/organizations/overview).
 > - As a separate offering, you can enable **protection for enterprise IoT devices**, like printers, smart TVs, and conferencing systems and purpose-built, proprietary devices. [Learn more](/azure/defender-for-iot/organizations/eiot-sensor).
