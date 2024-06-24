@@ -235,7 +235,7 @@ We recommend using Intune to configure controlled folder access.
 
 8. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
 
-9. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy will be applied to any endpoints that were onboarded to Defender for Endpoint shortly.
+9. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
 
 ### Device control
 
@@ -255,7 +255,7 @@ You can configure Defender for Endpoint to block or allow removable devices and 
 
 5. On the **Configuration settings** tab, select **All Settings**. Then in the search box, type `Removable` to see all the settings that pertain to removable devices.
 
-6. Select an item in the list, such as **All Removable Storage classes: Deny all access**, to open its flyout pane. The flyout for each setting explains what happens when it is enabled, disabled, or not configured. Select a setting, and then choose **OK**. 
+6. Select an item in the list, such as **All Removable Storage classes: Deny all access**, to open its flyout pane. The flyout for each setting explains what happens when it's enabled, disabled, or not configured. Select a setting, and then choose **OK**. 
 
 7. Repeat step 6 for each setting that you want to configure. Then choose **Next**.
 
@@ -265,7 +265,7 @@ You can configure Defender for Endpoint to block or allow removable devices and 
 
 9. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
 
-10. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy will be applied to any endpoints that were onboarded to Defender for Endpoint shortly.
+10. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
 
 > [!TIP]
 > For more information, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](device-control-overview.md).
@@ -288,19 +288,19 @@ With network protection, you can help protect your organization against dangerou
 
 5. On the **Configuration settings** tab, expand **Microsoft Defender Exploit Guard**, and then expand **Network filtering**.
 
-   Set **Network protection** to **Enable**. (You can alternately choose **Audit** to see how network protection will work in your environment at first.)
+   Set **Network protection** to **Enable**. (You can alternately choose **Audit** to see how network protection works in your environment at first.)
 
    Then choose **Next**.
 
 6. On the **Assignments** tab, select **Add all users** and **+ Add all devices**, and then choose **Next**. (You can alternately specify specific groups of users or devices.)
 
-7. On the **Applicability Rules** tab, set up a rule. The profile you are configuring will be applied only to devices that meet the combined criteria you specify. 
+7. On the **Applicability Rules** tab, set up a rule. The profile you're configuring is applied only to devices that meet the combined criteria you specify. 
 
    For example, you might choose to assign the policy to endpoints that are running a certain OS edition only.
 
    Then choose **Next**. 
 
-8. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy will be applied to any endpoints that were onboarded to Defender for Endpoint shortly.
+8. On the **Review + create** tab, review the settings for your policy, and then choose **Create**. The policy is applied to any endpoints that were onboarded to Defender for Endpoint shortly.
 
 > [!TIP]
 > You can use other methods, such as Windows PowerShell or Group Policy, to enable network protection. To learn more, see [Turn on network protection](enable-network-protection.md).
@@ -323,7 +323,7 @@ With web protection, you can protect your organization's devices from web threat
 
    | Setting | Recommendation |
    |:---|:---|
-   | **Enable network protection** | Set to **Enabled**. Prevents users from visiting malicious sites or domains. <br/><br/>Alternately, you can set network protection to **Audit mode** to see how it will work in your environment. In audit mode, network protection does not prevent users from visiting sites or domains, but it does track detections as events. |
+   | **Enable network protection** | Set to **Enabled**. Prevents users from visiting malicious sites or domains. <br/><br/>Alternately, you can set network protection to **Audit mode** to see how it works in your environment. In audit mode, network protection doesn't prevent users from visiting sites or domains, but it does track detections as events. |
    | **Require SmartScreen for Microsoft Edge Legacy** | Set to **Yes**. Helps protect users from potential phishing scams and malicious software. |
    | **Block malicious site access** | Set to **Yes**. Prevents users from bypassing warnings about potentially malicious sites. |
    | **Block unverified file download** | Set to **Yes**. Prevents users from bypassing the warnings and downloading unverified files. |
@@ -411,7 +411,7 @@ To help with planning your WDAC deployment, see the following resources:
 
 ## Next steps
 
-Now that you have gone through the setup and configuration process, your next step is to get started using Defender for Endpoint. 
+Now that you've finished the setup and configuration process, your next step is to get started using Defender for Endpoint. 
 
 - [Get started with Defender for Endpoint Plan 1](mde-plan1-getting-started.md)
 
