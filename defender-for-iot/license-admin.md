@@ -1,5 +1,5 @@
 ---
-title: Get started with the licenses of Microsoft Defender for IoT in Defender portal
+title: Upgrade from a trial license to a full license of Microsoft Defender for IoT in Defender portal
 description: This article describes how to make license changes for Microsoft Defender for IoT in Defender portal
 ms.service: defender-for-iot
 author: lwainstein
@@ -9,7 +9,7 @@ ms.date: 05/19/2024
 ms.topic: how-to
 ---
 
-# License admin centre
+# Upgrade to a full license
 
 After using a trial license, and deciding that you would like to use Microsoft Defender for IoT premanantly, you need to purchase a full license. In order to purchase the correct license you need to know to total number of devices within your network. Based on this you should choose the correct sized and priced license for your network.
 
@@ -35,11 +35,12 @@ Purchase the license for your network from the Microsoft 365 admin center, by en
 1. Search for **Defender for IoT**.
 1. Choose the license appropriate for the size of your site. There are five different sized licenses ranging from *Extra-large* for up to 5000 devices, to *extra-small* covering a maximum of 100 devices.
 
-    Make sure to select the number of licenses you want to purchase, based on the number of sites you're monitoring. You might need to select various licenses of different sizes if the number of devices at each site is different.
+    Make sure to select the number of licenses you want to purchase, based on the number of sites you're monitoring. You might need to select licenses of different sizes if the number of devices at each site is different.
     [Question: Do we document a situation where a company has eg 12000 devices, for one site. How should they be advised to purchase?]
 
 1. Complete the purchasing instructions.
-
-[ Is there a confirmation stage? How does the user know the transaction is complete and what else do they need to know?]
-
+<!--Is there a confirmation stage? How does the user know the transaction is complete and what else do they need to know?-->
 :::image type="content" source="media/365-center-iot-license.png" alt-text="Screenshot showing the license choices for Microsoft Defender for IoT.":::
+
+>[!Note]
+>If your site is larger that 5,000 OT devices, purchase extra sites and they can be connected together. For more information, see []().<!-- get details for this -->
