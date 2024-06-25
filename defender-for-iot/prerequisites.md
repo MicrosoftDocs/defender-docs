@@ -17,6 +17,8 @@ To see how Defender for IoT can help and protect your network you can sign up to
 
 A trial supports a **Large** sized site with up to 1,000 devices, and lasts for 90 days.
 
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+
 ## Prerequisites for a trial license
 
 Before you start, you need:

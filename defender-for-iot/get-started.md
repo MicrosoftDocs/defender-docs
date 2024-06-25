@@ -15,6 +15,8 @@ This article explains how to create a trial license for Microsoft Defender for I
 
 Once you have a trial license, you can continue to set up a site to monitor the OT devices at that location. The trial license is limited to a maximum of 1,000 OT devices, and once set up, shows you the Defender for IoT security insights available for your network.
 
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+
 ## Add a trial license
 
 To add a trial license for Microsoft Defender for IoT:
