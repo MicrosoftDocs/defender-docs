@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/11/2024
+ms.date: 06/24/2024
 ---
 
 # Prerequisites and support
@@ -53,7 +53,7 @@ Permission levels are summarized in the table.
 |  **Manage recommendations**  |    ✔    | -  |  ✔  |   -      | - |
 |  **View recommendations**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
 |  **Export events**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
-|  **Change criticality level**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
+|  **Change criticality level**  | ✔       |  ✔       |   ✔      | ✔ | - |
 | **Set critical asset rule** | ✔       |  -       |   -      | - | - |
 |  **Create criticality rule**  | ✔       |    -    |   ✔      | - | - |
 |  **Turn criticality rule on/off**  | ✔       |    -    |   ✔      | ✔ | - |
