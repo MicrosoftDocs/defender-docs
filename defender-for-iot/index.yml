@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: Microsoft Defender for IoT (Preview) documentation # < 60 chars
+title: Microsoft Defender for IoT in the Defender portal (Preview) documentation # < 60 chars
 summary: Microsoft Defender for IoT provides visibility and threat protection for IoT/OT environments while reducing cyber risk through continuous vulnerability discovery, risk-based prioritization, and remediation. # < 160 chars
 
 metadata:
-  title: Microsoft Defender for IoT (Preview) documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Learn about Microsoft Defender for IoT and maximize the built-in security capabilities to protect devices, detect malicious activity, and remediate threats# Required; article description that is displayed in search results. < 160 chars.
+  title: Microsoft Defender for IoT in the Defender portal (Preview) documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Learn about Microsoft Defender for IoT in the Defender portal, and maximize the built-in security capabilities to protect devices, detect malicious activity, and remediate threats# Required; article description that is displayed in search results. < 160 chars.
   services: office-365-security-compliance
   ms.service: defender-for-iot
   ms.topic: landing-page # Required
@@ -25,7 +25,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-        - text: What is Microsoft Defender for IoT?
+        - text: What is Microsoft Defender for IoT in the Defender portal?
           url: microsoft-defender-iot.md
       - linkListType: concept
         links:        
@@ -41,7 +41,7 @@ landingContent:
     linkLists:
       - linkListType: get-started
         links:
-        - text: Microsoft Defender for IoT Prerequisites
+        - text: Prerequisites
           url: prerequisites.md
       - linkListType: get-started
         links: 
@@ -59,9 +59,9 @@ landingContent:
         links:
         - text: Monitor site security
           url: monitor-site-security.md
-        - text: Discover vulnerabilities
+        - text: Prioritize and remediate vulnerabilities
           url: discover-vulnerabilities.md
-        - text: Investigate incidents and alerts
+        - text: Investigate incidents
           url: investigate-threats.md
         - text: Manage sites
           url: manage-sites.md
