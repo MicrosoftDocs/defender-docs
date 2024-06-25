@@ -11,15 +11,17 @@ ms.topic: how-to
 
 # Get started with Defender for IoT
 
-This article explains how to create a trial license for Microsoft Defender for IoT using your XDR tenant Id. One trial license is available per tenant.
+This article explains how to create a trial license for Microsoft Defender for IoT using your XDR tenant. One trial license is available per tenant. Defender for IoT allows you to analyze OT data, generate alerts, identify network risks, and more.
 
-Once you have a trial license you can continue to set up a site to monitor the OT devices at that location. The trial license is limited to a maximum of 1,000 OT devices, and once set up, shows you the Defender for IoT security insights available for your network.
+Once you have a trial license, you can continue to set up a site to monitor the OT devices at that location. The trial license is limited to a maximum of 1,000 OT devices, and once set up, shows you the Defender for IoT security insights available for your network.
 
 ## Add a trial license
 
-To add a trial license for Microsoft Defender for IoT.  use the Microsoft 365 Marketplace to add a trial license to your tenant.
+To add a trial license for Microsoft Defender for IoT use the Microsoft 365 Marketplace.
 
 1. In a browser, open the [Microsoft Defender for IoT - OT Site License (1000 max devices per site) Trial wizard](https://signup.microsoft.com/get-started/signup?products=d2bdd05f-4856-4569-8474-2f9ec298923b).
+
+    :::image type="content" source="media/get-started/trial-license-get-started.png" alt-text="Screenshot of the set up page for the Microsoft Defender for IoT trial license.":::
 
 1. In the **Email** box, enter the email address you want to associate with the trial license, and select **Next**.
 
