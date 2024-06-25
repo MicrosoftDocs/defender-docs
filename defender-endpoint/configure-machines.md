@@ -34,7 +34,7 @@ With properly configured devices, you can boost overall resilience against threa
 - Meet or exceed the Defender for Endpoint security baseline configuration
 - Have strategic attack surface mitigations in place
 
-In the Microsoft Defender portal, go to **Endpoints** > **Configuration management** > **Dashboard**. 
+In the [Microsoft Defender portal](https://security.microsoft.com), go to **Endpoints** > **Configuration management** > **Dashboard**. 
 
 :::image type="content" source="media/secconmgmt-main.png" alt-text="The Security configuration management page" lightbox="media/secconmgmt-main.png":::
 
