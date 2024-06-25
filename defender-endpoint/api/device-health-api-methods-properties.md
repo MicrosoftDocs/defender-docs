@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: siosulli 
 author: siosulli
 ms.localizationpriority: medium 
-ms.date: 05/15/2024
+ms.date: 06/25/2024
 manager: deniseb 
 ms.reviewr: mkaminska
 audience: ITPro 
@@ -128,4 +128,5 @@ Data that is collected using either '_JSON response_ or _via files_' is the curr
 [Export device antivirus health report](device-health-export-antivirus-health-report-api.md)
 
 [Device health and compliance reporting](../device-health-reports.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
