@@ -13,7 +13,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: conceptual
-ms.date: 3/30/2023
+ms.date: 06/25/2024
 ---
 
 # Assign user access 
@@ -37,14 +37,15 @@ Defender for Endpoint supports two ways to manage permissions:
 
 > [!NOTE]
 > If you have already assigned basic permissions, you may switch to RBAC anytime. Consider the following before making the switch:
-> - Users with full access (users that are assigned the Global Administrator or Security Administrator directory role in Microsoft Entra ID), are automatically assigned the default Defender for Endpoint administrator role, which also has full access. Additional Microsoft Entra user groups can be assigned to the Defender for Endpoint administrator role after switching to RBAC. Only users assigned to the Defender for Endpoint administrator role can manage permissions using RBAC. 
-> - Users that have read-only access (Security Readers) will lose access to the portal until they are assigned a role. Note that only Microsoft Entra user groups can be assigned a role under RBAC.
+> - Users who have full access (users who are assigned the Global Administrator or Security Administrator directory role in Microsoft Entra ID), are automatically assigned the default Defender for Endpoint administrator role, which also has full access. Other Microsoft Entra user groups can be assigned to the Defender for Endpoint administrator role after switching to RBAC. Only users who are assigned the Defender for Endpoint administrator role can manage permissions using RBAC. 
+> - Users who have read-only access (Security Readers) lose access to the portal until they are assigned a role. Only Microsoft Entra user groups can be assigned a role under RBAC.
 > - After switching to RBAC, you will not be able to switch back to using basic permissions management.
 >
->  Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+> Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 ## Related topics
 
 - [Use basic permissions to access the portal](basic-permissions.md)
 - [Manage portal access using RBAC](rbac.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
