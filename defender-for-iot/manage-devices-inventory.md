@@ -1,6 +1,6 @@
 ---
-title: Manage the device inventory for Microsoft Defender for IoT in the Defender portal
-description: This article describes how to discover devices in the device inventory for Microsoft Defender for IoT in the Defender portal
+title: Discover and manage devices for Microsoft Defender for IoT in the Defender portal
+description: This article describes how to discover and manage devices in the device inventory for Microsoft Defender for IoT in the Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
@@ -45,5 +45,5 @@ To customize the device inventory views:
 - [Explore the device inventory](/defender-endpoint/machines-view-overview.md#explore-the-device-inventory) including search, export to CSV, and more.
 - [Onboard devices](/defender-endpoint/onboarding.md#onboard-devices-using-any-of-the-supported-management-tools).
 - [Offboard devices](/defender-endpoint/offboard-machines.md).
-- [Investigate the device details](/defender-endpoint/investigate-machines.md) to identify other behaviors or events that might be related to the alert or the potential scope of the breach.
+- [Investigate the device details](/defender-endpoint/investigate-machines.md) to identify behaviors or events that might be related to the alert.
 - In the device details pane, select the ellipsis on the top right to [take response actions on a device](/defender-endpoint/respond-machine-alerts.md).
