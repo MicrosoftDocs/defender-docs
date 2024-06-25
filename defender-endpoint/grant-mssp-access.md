@@ -34,7 +34,7 @@ To implement a multitenant delegated access solution, take the following steps:
 
 2. Configure [Governance Access Packages](/azure/active-directory/governance/identity-governance-overview) for access request and provisioning.
 
-3. Manage access requests and audits in [Microsoft Myaccess](/azure/active-directory/governance/entitlement-management-request-approve).
+3. Manage access requests and audits in [Microsoft MyAccess](/azure/active-directory/governance/entitlement-management-request-approve).
 
 ## Enable role-based access controls in Microsoft Defender for Endpoint
 
@@ -48,19 +48,13 @@ To implement a multitenant delegated access solution, take the following steps:
 
 2. Create Defender for Endpoint roles for appropriate access levels in Customer Defender for Endpoint.
 
-    To enable RBAC in the customer Microsoft Defender portal, access **Settings > Endpoints > Permissions > Roles** and "Turn on roles", from a user account with Global Administrator or Security Administrator rights.
+    To enable RBAC in the customer [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **Permissions** > **Roles**, and then select **Turn on roles**. 
 
-    Then, create RBAC roles to meet MSSP SOC Tier needs. Link these roles to the created user groups via "Assigned user groups".
+    Then, create RBAC roles to meet MSSP SOC Tier needs. Link these roles to the created user groups via assigned user groups. There are two possible roles: Tier 1 Analysts, and Tier 2 Analysts.
 
-    Two possible roles:
+    - **Tier 1 Analysts** - Perform all actions except for live response and manage security settings.
 
-    - **Tier 1 Analysts**
-
-      Perform all actions except for live response and manage security settings.
-
-    - **Tier 2 Analysts**
-
-      Tier 1 capabilities with the addition to [live response](live-response.md)
+    - **Tier 2 Analysts** - Tier 1 capabilities with the addition to [live response](live-response.md)
 
     For more information, see [Use role-based access control](rbac.md).
 
@@ -121,9 +115,10 @@ To implement a multitenant delegated access solution, take the following steps:
 
     At this point, analyst access has been provisioned, and each analyst should be able to access the customer's Microsoft Defender portal: `https://security.microsoft.com/?tid=<CustomerTenantId>`
 
-## Related topics
+## Related articles
 
 - [Access the MSSP customer portal](access-mssp-portal.md)
 - [Configure alert notifications](configure-mssp-notifications.md)
 - [Fetch alerts from customer tenant](api/fetch-alerts-mssp.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
