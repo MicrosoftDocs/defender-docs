@@ -34,6 +34,9 @@ ms.date: 06/25/2024
 
 ## Create roles and assign the role to a Microsoft Entra group
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 The following steps guide you on how to create roles in the Microsoft Defender portal. It assumes that you have already created Microsoft Entra user groups.
 
 1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security administrator role assigned.
