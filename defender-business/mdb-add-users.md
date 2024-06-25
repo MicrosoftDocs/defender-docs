@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 06/07/2024
+ms.date: 06/19/2024
 ms.collection: 
 - m365-security
 - tier1
@@ -59,8 +59,8 @@ One good way to make sure MFA is enabled for all users is by using [security def
 
 4. On the right side of the screen, in the **Security defaults** pane, see whether security defaults are turned on (**Enabled**) or off (**Disabled**). To turn security defaults on, use the drop-down menu to select **Enabled**. 
 
-   > [!CAUTION]
-   > If your organization is using Conditional Access policies, you won't be able to enable security defaults. You'll see a message that indicates you're using classic policies instead. You can use *either* security defaults *or* Conditional Access, but not both. For most organizations, security defaults offer a good level of sign-in security. But if your organization must meet more stringent requirements, you can use Conditional Access policies instead. To learn more, see the following articles:
+   > [!NOTE]
+   > If your organization is using Conditional Access policies, don't enable security defaults. In this case, you might see a message that indicates you're using classic policies. To learn more, see the following articles:
    > - [Multi-factor authentication](/Microsoft-365/business-premium/m365bp-turn-on-mfa) (in the Microsoft 365 Business Premium documentation)
    > - [Security defaults in Microsoft Entra ID](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)
 
@@ -69,5 +69,6 @@ One good way to make sure MFA is enabled for all users is by using [security def
 ## Next steps
 
 - [Step 3: Assign security roles and permissions in Microsoft Defender for Business](mdb-roles-permissions.md).
+
 - [Step 4: Set up email notifications for your security team](mdb-email-notifications.md).
 

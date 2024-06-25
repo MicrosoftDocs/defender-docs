@@ -72,7 +72,7 @@ To connect a workspace that has Microsoft Sentinel enabled to Defender XDR, comp
 
    - Log tables, queries, and functions in the Microsoft Sentinel workspace are also available in advanced hunting within Defender XDR.
    - The Microsoft Sentinel Contributor role is assigned to the Microsoft Threat Protection and WindowsDefenderATP apps within the subscription.
-   - Active [Microsoft security incident creation rules](/azure/sentinel/create-incidents-from-alerts#using-microsoft-security-incident-creation-analytics-rules) are deactivated to avoid duplicate incidents. This change only applies to incident creation rules for Microsoft alerts and not to other analytics rules.
+   - Active [Microsoft security incident creation rules](/azure/sentinel/threat-detection#microsoft-security-rules) are deactivated to avoid duplicate incidents. This change only applies to incident creation rules for Microsoft alerts and not to other analytics rules.
    - All alerts related to Defender XDR products are streamed directly from the main Defender XDR data connector to ensure consistency. Make sure you have incidents and alerts from this connector turned on in the workspace.
 
 1. Select **Connect**.
@@ -103,7 +103,7 @@ Many of the existing Microsoft Sentinel features are integrated into the Defende
   - [Deploy custom content from your repository](/azure/sentinel/ci-cd)
 - Configuration
   - [Find your Microsoft Sentinel data connector](/azure/sentinel/data-connectors-reference)
-  - [Create custom analytics rules to detect threats](/azure/sentinel/detect-threats-custom?tabs=defender-portal)
+  - [Create custom analytics rules to detect threats](/azure/sentinel/create-analytics-rules?tabs=defender-portal)
   - [Work with near-real-time (NRT) detection analytics rules in Microsoft Sentinel](/azure/sentinel/create-nrt-rules?tabs=defender-portal)
   - [Create watchlists](/azure/sentinel/watchlists-create?tabs=defender-portal)
   - [Manage watchlists in Microsoft Sentinel](/azure/sentinel/watchlists-manage)

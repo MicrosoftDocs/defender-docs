@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 01/26/2023
+ms.date: 06/19/2024
 ms.reviewer: nehabha
 f1.keywords: NOCSH 
 ms.collection: 
@@ -60,9 +60,20 @@ As devices are replaced or retired, or your business needs change, you can offbo
 
 ## Mac
 
-1. Go to **Finder** > **Applications**. 
+1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
-2. Right click on **Microsoft Defender for Business**, and then choose **Move to Trash**. <br/>--- or --- <br/> Use the following command: `sudo '/Library/Application Support/Microsoft/Defender/uninstall/uninstall'`.
+2. In the navigation pane, choose **Settings**, and then choose **Endpoints**.
+
+3. Under **Device management**, choose **Offboarding**.
+
+4. In the **Select operating system to start the offboarding process** list, select **macOS**.
+
+5. In the **Deployment method** section, select either **Local Script** or **Mobile Device Management / Microsoft Intune**, depending on your preferred method.
+
+6. Select **Download package**. We recommend saving the offboarding package to a removable drive.
+
+7. Run the script on each Mac computer that you want to offboard.
+
 
 ## [**Servers**](#tab/Servers)
 

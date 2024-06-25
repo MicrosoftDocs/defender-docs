@@ -45,7 +45,10 @@ User reporting of messages in Teams is made of two separate settings:
 
 ### Turn off or turn on user reporting in the Teams admin center
 
-To view or configure this setting, you need to be a member of the **Global Administrator** or **Teams Administrator** roles. For more information about permissions in Teams, see [Use Microsoft Teams administrator roles to manage Teams](/microsoftteams/using-admin-roles).
+To view or configure this setting, you need to be a member of the **Global Administrator**<sup>\*</sup> or **Teams Administrator** roles. For more information about permissions in Teams, see [Use Microsoft Teams administrator roles to manage Teams](/microsoftteams/using-admin-roles).
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 1. In the Teams admin center at <https://admin.teams.microsoft.com>, go to **Messaging policies**. Or, to go directly to the **Messaging policies** page, use <https://admin.teams.microsoft.com/policies/messaging>.
 

@@ -6,7 +6,7 @@ author: YongRhee-MSFT
 ms.author: yongrhee
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 06/17/2024
+ms.date: 06/21/2024
 audience: ITPro
 ms.collection:
 - m365-security
@@ -58,7 +58,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 | Build:             | **101.24042.0008**    |
 |--------------------|-----------------------|
 | Release version:   | **20.124042.8.0**    |
-| Engine version:    | **1.1.24050.7**       |
+| Engine version:    | **1.1.24040.1**       |
 | Signature version: | **1.413.13.0**       |
 
 #### What's new
