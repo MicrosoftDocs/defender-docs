@@ -11,7 +11,7 @@ ms.topic: get-started
 
 # Prerequisites for Defender for IoT
 
-Microsoft Defender for IoT in the Defender portal monitors and secures network traffic across your OT networks and allows you to analyze OT data, generate alerts, identify network risks, and more.
+Microsoft Defender for IoT in the Defender portal monitors and secures network traffic across your operational technology (OT) networks and allows you to analyze OT data, generate alerts, identify network risks, and more.
 
 To see how Defender for IoT can help and protect your network sign up to a free, 90 day, trial version. This article describes the prerequisites needed to set up a trial license for Microsoft Defender for IoT.
 
@@ -65,7 +65,7 @@ The unified RBAC roles and permissions to give users access to **Site security**
 
 |Write permissions| Read permissions|
 |----|----|
-| **MDE Roles**: Core security settings scoped to all device groups. <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator scoped to all device groups.| Write roles (including roles that are not scoped to all device groups). <br> **MDE Roles**: Security data basics (under Security Operations).<br>**Entra ID roles**: Global Reader, Security Reader.|
+| **MDE Roles**: Core security settings scoped to all device groups. <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator scoped to all device groups.| Write roles (including roles that aren't scoped to all device groups). <br> **MDE Roles**: Security data basics (under Security Operations).<br>**Entra ID roles**: Global Reader, Security Reader.|
 
 This table shows the full roles and permissions needed for all MDE features that are used with Defender for IoT:
 
@@ -75,7 +75,7 @@ This table shows the full roles and permissions needed for all MDE features that
 |Vulnerabilities | **MDE Roles**: Response (manage)\ Security operations \ Security data <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator | Write roles<br> **MDE Roles**: Vulnerability management (read) <br> **Entra ID roles**: Global Reader, Security Reader |
 |Inventory| **MDE Roles**: Onboard offboard device: Detection tuning (manage) <br> Manage device tags: Alerts (manage) <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator | Write roles <br>**MDE Roles**: Security data basics/Security operations \ Security data <br> **Entra ID roles**: Global Reader, Security Reader |
 |Device group| **MDE Roles**: Authorization (Read and manage) <br>**Entra ID roles**: Global Administrator, Security Administrator |**MDE Roles**: Authorization (write roles, Read-only) |
-|Defender for IoT| **MDE roles**: Core security settings. <br> **Entra ID roles**: Global Administrator, Security Administrator, Security Operator scoped to all device groups.|Write roles (including roles that are not scoped to all device groups). <br> **MDE Roles**: Security data basics (under Security Operations).<br> **Entra ID roles**: Global Reader, Security Reader.|
+|Defender for IoT| **MDE roles**: Core security settings. <br> **Entra ID roles**: Global Administrator, Security Administrator, Security Operator scoped to all device groups.|Write roles (including roles that aren't scoped to all device groups). <br> **MDE Roles**: Security data basics (under Security Operations).<br> **Entra ID roles**: Global Reader, Security Reader.|
 
 To assign roles and permissions for other Microsoft Defender for Endpoints features, such as alerts, incidents and inventory, see [assign roles and permissions for MDE](/defender-endpoint/prepare-deployment.md).
 
