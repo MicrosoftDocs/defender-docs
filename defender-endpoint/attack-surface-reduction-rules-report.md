@@ -63,25 +63,12 @@ To access the attack surface reduction rules report in the Microsoft Defender po
 | Application | `Machine.Read.All` | `Read all machine profiles` |
 | Delegated (work or school account) | `Machine.Read` | `Read machine information` |
 
-### Assign permissions
+You can assign permissions by using Microsoft Entra ID or the Microsoft Defender portal.
 
-1. Sign in to [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) using account that has the Security Administrator role assigned.
+- To use Microsoft Entra ID, see [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal)
+- To use the Microsoft Defender portal, see [Assign user access](assign-portal-access.md).
 
-2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
-
-3. Select the role you'd like to edit.
-
-4. Select **Edit**.
-
-5. In **Edit role**, on the **General** tab, in **Role name**, type a name for the role.
-
-6. In **Description** type a brief summary of the role.
-
-7. In **Permissions**, select **View Data**, and under **View Data** select **Attack surface reduction**.
-
-For more information about user role management, see [Create and manage roles for role-based access control](user-roles.md).
-
-## Navigation
+## Navigate to the attack surface reduction rules report
 
 To navigate to the summary cards for the attack surface reduction rules report
 
