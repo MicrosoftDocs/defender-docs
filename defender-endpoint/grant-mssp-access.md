@@ -103,17 +103,17 @@ To implement a multitenant delegated access solution, take the following steps:
 
 ## Manage access
 
-1. Review and authorize access requests in Customer and/or MSSP myaccess.
+1. Review and authorize access requests in Customer and/or MSSP MyAccess.
 
     Access requests are managed in the customer My Access, by members of the MSSP Analyst Approvers group.
 
-    To do so, access the customer's myaccess using: `https://myaccess.microsoft.com/@<Customer Domain>`.
+    To do so, access the customer's MyAccess using: `https://myaccess.microsoft.com/@<Customer Domain>`.
 
     Example: `https://myaccess.microsoft.com/@M365x440XXX.onmicrosoft.com#/`
 
 2. Approve or deny requests in the **Approvals** section of the UI.
 
-    At this point, analyst access has been provisioned, and each analyst should be able to access the customer's Microsoft Defender portal: `https://security.microsoft.com/?tid=<CustomerTenantId>`
+    At this point, analyst access is provisioned, and each analyst should be able to access the customer's Microsoft Defender portal: `https://security.microsoft.com/?tid=<CustomerTenantId>`
 
 ## Related articles
 
