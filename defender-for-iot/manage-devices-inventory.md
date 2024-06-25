@@ -9,7 +9,7 @@ ms.date: 05/19/2024
 ms.topic: how-to
 ---
 
-# Discover devices
+# Discover and manage devices
 
 The device inventory helps you identify details about specific OT devices. Gathering details about your devices helps your teams proactively investigate vulnerabilities that can compromise your most critical assets. This article describes how to discover and manage your devices in the device inventory. You can filter data in the inventory, explore the inventory, investigate device details, and more.
 
