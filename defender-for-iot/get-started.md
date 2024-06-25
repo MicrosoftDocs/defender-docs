@@ -1,6 +1,6 @@
 ---
-title: Get started with the setup of Microsoft Defender for IoT in Defender portal
-description: This article describes how to set up Microsoft Defender for IoT in Defender portal
+title: Get started with the setup of Microsoft Defender for IoT in the Microsoft Defender portal
+description: This article describes how to set up Microsoft Defender for IoT in Microsoft Defender portal
 ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
@@ -9,9 +9,9 @@ ms.date: 05/19/2024
 ms.topic: how-to
 ---
 
-# Get started with Defender for IoT
+# Get started with Microsoft Defender for IoT
 
-This article explains how to create a trial license for Microsoft Defender for IoT using your XDR tenant. One trial license is available per tenant. Defender for IoT allows you to analyze OT data, generate alerts, identify network risks, and more.
+This article explains how to create a trial license for Microsoft Defender for IoT in the Microsoft Defender portal using your XDR tenant. One trial license is available per tenant. Defender for IoT allows you to analyze OT data, generate alerts, identify network risks, and more.
 
 Once you have a trial license, you can continue to set up a site to monitor the OT devices at that location. The trial license is limited to a maximum of 1,000 OT devices, and once set up, shows you the Defender for IoT security insights available for your network.
 
