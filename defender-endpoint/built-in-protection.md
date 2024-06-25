@@ -75,4 +75,7 @@ Built-in protection is a set of default settings. Your security team isn't requi
 | Change tamper protection settings using a Mobile Device Management (MDM) solution | To change the tamper protection mode using an MDM, go to the configuration profile and change the enforcement level in  [Intune](tamperprotection-macos.md#intune) or [JAMF](tamperprotection-macos.md#jamf).<br/><br/>The configuration profile set with the MDM will be your first point of reference. Any settings defined in the profile will be enforced on the device, and built-in-protection default settings won't override these applied settings.  |
 | Temporarily disable tamper protection on a device for troubleshooting purposes | See the following articles:<br/>- [Get started with troubleshooting mode in Microsoft Defender for Endpoint](enable-troubleshooting-mode.md)<br/>- [Troubleshooting mode scenarios in Microsoft Defender for Endpoint](troubleshooting-mode-scenarios.md) |
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
