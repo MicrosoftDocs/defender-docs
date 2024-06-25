@@ -1,6 +1,6 @@
 ---
-title: Investigate threat in Site security for Microsoft Defender for IoT in XDR Defender portal
-description: This article describes how to investigate threats in the Site security feature of Microsoft Defender for IoT in XDR Defender portal
+title: Investigate incidents and alerts in Site security for Microsoft Defender for IoT in the Defender portal
+description: This article describes how to investigate incidents and alerts in the Site security feature of Microsoft Defender for IoT in the Defender portal
 ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
@@ -10,18 +10,33 @@ ms.topic: how-to
 ---
 
 # Investigate incidents and alerts
-<!-- change title  to investigate-alerts.md ?? LIMOR-->
-The **Incidents** page lists the type of treats that have or might compromise your network. The incident page displays a history of the alerts connected to the incident and an incident graph showing the other devices connected to the affected OT device which might also be compromised. The alert description explains the type of security issue detected and lists remidiation options to solve the security problem.
 
-In this article you learn to investigate an incident and its associated alerts, and to remidiate them.
+Incidents and alerts are an integral part of the Microsoft Defender portal and Defender for Endpoints. For more information, see [Investigate alerts in Defender XDR](/defender-xdr/investigate-alerts.md).
+
+The **Incidents** page lists the type of treats that have or might compromise your network. The incident page displays a history of the alerts connected to the incident and an incident graph showing the other devices connected to the affected OT device which might also be compromised. The alert description explains the type of security issue detected and lists remidiation options to solve the security problem. The Incident page alerts are based on the MDE network signals and uniquely combine IT and OT environment signals to detect potential threats and data leaks across this boundary.
+
+In this article you learn to investigate a Defender for IoT incident, it's associated alerts, and to remidiate them.
+
+## Prerequisites
+
+- Review [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
+- At least one active Microsoft Defender for IoT site set up and receiving data.
+- Site security permissions according to RBAC requirements. For more information, see [RBAC permissions for Defender for IoT](prerequisites.md#permissions).
+
+>[!Note]
+>Incident and alert data for Defender for IoT will only appear once you have a site set up and the devices are sending data to the MDE portal.
 
 ## Investigate alerts
 
-Investigate threats to your OT/IoT devices using the **Incidents** page, which shows the list of security events affecting your IT and OT devices.
+Investigate threats that impact on your operational environment using the **Incidents** page, which shows the list of security events affecting your IT and OT devices.
 
 1. In the Defender portal, go to **Incidents & alerts > Incidents**.
 
-1. Set any filter settings as you need them.
+1. To display OT related incidents:
+    1. Select **Add filter**.
+    1. Check the **Product name** box, select **Add**.
+    1. Select the new **Product names** tab that appears and type **Defender for IoT**.
+    1. Select **Apply**.
 
 1. Locate and select an incident.
 
@@ -31,4 +46,10 @@ Investigate threats to your OT/IoT devices using the **Incidents** page, which s
 
 1. In the Incident panel, scroll through the information, read the **Alert description** and follow the **Alert recommended actions** to remediate the problem.
 
-<!-- screen shots - any examples - for 3 and 5 AMIT - we will wait to see if there is updates to the environment, if not add these afterwards. -->
+## Defender for IoT alerts in Defender for Endpoints
+
+Defender for IoT produces its own unique alert. This is described in the table below:
+
+| Name | Description |
+|----|----|
+| Possible OT device impact due to compromised device | A compromised endpoint device was observed recently communicating with an OT device. An attacker might be trying to cross from an IT to OT device and cause operational impact.  |
