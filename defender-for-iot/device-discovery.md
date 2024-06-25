@@ -9,23 +9,30 @@ ms.date: 06/19/2024
 ms.topic: conceptual
 ---
 
-# Device discovery
+# Overview of device discovery
 
-Your team uses the **Device inventory page** to discover and proactively investigate vulnerabilities that can compromise your most critical assets.
+To protect your environment, you need to take inventory of the devices in your network. However, mapping these devices can often be expensive, challenging, and time-consuming.
 
-This article describes the benefits and capabilities for device discovery in Defender for IoT.
+Microsoft Defender for IoT integrates with Microsoft Defender for Endpoint device discovery, allowing you to discover devices connected to your operational technologies (OT) network without using extra appliances or complex process changes. Defender for IoT uses onboarded endpoints to collect, probe, or scan your network to discover devices.
 
-> [!NOTE]
->
-> If you don't yet have a Defender for IoT license, the **Device inventory** page lists OT devices without security data. For example, the device name, IP, and category are visible, while the risk level isn't visible. The device inventory also displays a note at the top of the page that indicates the number of unprotected OT devices.
-> 
-> In this case, [onboard Defender for IoT](get-started.md) to get security value for your OT devices.
+This article describes the benefits and capabilities of device discovery in Defender for IoT in the Defender portal.
+
+Learn more:
+ 
+- [Manage your IoT/OT devices](manage-devices-inventory.md) in the device inventory.
+- [Device inventory in Microsoft Defender for Endpoint](/defender-endpoint/machines-view-overview.md#device-inventory-overview).
+
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+
+## Device inventory - initial view
+
+If you don't yet have a Defender for IoT license, the **Device inventory** page detects your OT devices and lists them without security data. For example, the device name, IP, and category are visible, while the risk level isn't visible. The device inventory also displays a note at the top of the page that indicates the number of unprotected OT devices.
+ 
+In this case, [onboard Defender for IoT](get-started.md) to get security value for your OT devices.
 
 ## Device inventory page
 
 The **Device inventory** page helps you identify details about specific devices, such as manufacturer, type, serial number, firmware, and more. Using these details, you your team can discover and proactively investigate vulnerabilities that can compromise your most critical assets.
-
-[IMAGE]
 
 Learn how to [manage your IoT/OT devices](manage-devices-inventory.md) in the device inventory.
 
@@ -33,17 +40,17 @@ Learn more about the [device inventory in Microsoft Defender for Endpoint](/defe
 
 ## Device discovery capabilities
 
-With device discovery, you can:
+The key device discovery capabilities are:
 
-- **Manage your IoT/OT devices** by building up-to-date inventory that includes all your managed and unmanaged devices. Classify critical devices to ensure that the most important assets in your organization are protected.​
+|Capability  |Description  |
+|---------|---------|
+|OT device management     |- Build an up-to-date inventory that includes all your managed and unmanaged devices.<br>- Classify critical devices to ensure that the most important assets in your organization are protected.​<br>- Add organization-specific information to emphasize your organization preferences. |
+|Device protection with risk-based approach  |Identify risks such as missing patches, vulnerabilities and prioritize fixes based on risk scoring and automated threat modeling. |
+|Device alignment with physical sites     |Allows contextual security monitoring. Use the **Site** filter to manage each site separately. Learn more about [filters](/defender-endpoint/machines-view-overview.md#use-filters-to-customize-the-device-inventory-views). |
+|Device groups     |Allows different teams in your organization to monitor and manage relevant assets only.​ Learn more about [creating a device group](/defender-endpoint/machine-groups.md#create-a-device-group). |
+|Device criticality     |Reflects how critical a device is for your organization and allows you to identify a device as a business critical asset. Learn more about [device criticality](/defender-endpoint/machines-view-overview.md#device-inventory-overview). |
 
-- **Protect devices with risk-based approach** to identify risks such as missing patches, vulnerabilities and prioritize fixes based on risk scoring and automated threat modeling
-
-- **Update your inventory** by deleting irrelevant devices and adding organization-specific information to emphasize your organization preferences
-
-- **Attach devices to physical sites** to allow contextual security monitoring. Use the **Site** filter to manage each site separately. Learn more about [filters](/defender-endpoint/machines-view-overview.md#use-filters-to-customize-the-device-inventory-views). ​
-
-- **Create device groups** to allow different teams in your organization to monitor and manage relevant assets only.​ Learn more about [creating a device group](/defender-endpoint/machine-groups.md#create-a-device-group).
+## Supported device types
 
 ## Next steps
 
