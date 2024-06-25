@@ -50,7 +50,24 @@ The key device discovery capabilities are:
 |Device groups     |Allows different teams in your organization to monitor and manage relevant assets only.​ Learn more about [creating a device group](/defender-endpoint/machine-groups.md#create-a-device-group). |
 |Device criticality     |Reflects how critical a device is for your organization and allows you to identify a device as a business critical asset. Learn more about [device criticality](/defender-endpoint/machines-view-overview.md#device-inventory-overview). |
 
-## Supported device types
+## Supported devices
+
+Defender for IoT's device inventory supports the following device classes:
+
+|Devices  |Example |
+|---------|---------|
+|**Manufacturing**| Industrial and operational devices, such as pneumatic devices,  packaging systems, industrial packaging systems, industrial robots        |
+|**Building**     | Access panels,  surveillance devices, HVAC systems, elevators, smart lighting systems    |
+|**Health care**     |  Glucose meters, monitors       |
+|**Transportation / Utilities**     |  Turnstiles, people counters, motion sensors, fire and safety systems, intercoms       |
+|**Energy and resources**     |  DCS controllers, PLCs, historian devices, HMIs      |
+|**Endpoint devices**     |  Workstations, servers, or mobile devices        |
+| **Enterprise** | Smart devices, printers,  communication devices, or audio/video devices |
+| **Retail** | Barcode scanners, humidity sensor, punch clocks | 
+
+A *transient* device type indicates a device that was detected for only a short time. We recommend investigating these devices carefully to understand their impact on your network.
+
+*Unclassified* devices are devices that don't otherwise have an out-of-the-box category defined.
 
 ## Next steps
 
