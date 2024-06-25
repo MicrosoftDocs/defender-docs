@@ -34,13 +34,13 @@ ms.date: 06/25/2024
 
 ## Create roles and assign the role to a Microsoft Entra group
 
-The following steps guide you on how to create roles in Microsoft Defender XDR. It assumes that you have already created Microsoft Entra user groups.
+The following steps guide you on how to create roles in the Microsoft Defender portal. It assumes that you have already created Microsoft Entra user groups.
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with a Security administrator or Global administrator role assigned.
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
-3. Select **Add item**.
+3. Select **Add role**.
 
 4. Enter the role name, description, and permissions you'd like to assign to the role.
 
@@ -97,7 +97,7 @@ For more information on the available commands, see [Investigate devices using L
 
 ## Edit roles
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with Security administrator or Global administrator role assigned.
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
@@ -111,7 +111,7 @@ For more information on the available commands, see [Investigate devices using L
 
 ## Delete roles
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with Security administrator or Global administrator role assigned.
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
@@ -119,8 +119,10 @@ For more information on the available commands, see [Investigate devices using L
 
 4. Click the drop-down button and select **Delete role**.
 
-## Related topic
+## Related articles
 
-- [User basic permissions to access the portal](basic-permissions.md)
+- [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal)
+- [Assign user access](assign-portal-access.md)
 - [Create and manage device groups](machine-groups.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
