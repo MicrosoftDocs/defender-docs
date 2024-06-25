@@ -41,7 +41,7 @@ The Device Health report provides information about the devices in your organiza
 >
 > For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
 
-In the Microsoft 365 Security dashboard navigation panel, select **Reports**, and then open **Device health and compliance**. The [**Microsoft Defender Antivirus health** tab](#microsoft-defender-antivirus-health-tab) has eight cards that report on the following aspects of Microsoft Defender Antivirus:
+In the Microsoft Defender portal, in the navigation pane, select **Reports**, and then open **Device health and compliance**. The [**Microsoft Defender Antivirus health** tab](#microsoft-defender-antivirus-health-tab) has eight cards that report on the following aspects of Microsoft Defender Antivirus:
 
 - [Antivirus mode card](#antivirus-mode-card)
 - [Antivirus engine version card](#antivirus-engine-version-card)
@@ -54,20 +54,30 @@ In the Microsoft 365 Security dashboard navigation panel, select **Reports**, an
 
 ## Report access permissions
 
-To access the Device health and antivirus compliance report in the Microsoft 365 Security dashboard, the following permissions are required:
+To access the Device health and antivirus compliance report in the Microsoft Defender portal, the following permissions are required:
 
 | Permission name | Permission type |
 |:---|:---|
 | View Data | Threat and vulnerability management (TVM) |
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+
 To Assign these permissions:
 
-1. Sign in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> using account with Security administrator or Global administrator role assigned.
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with Security administrator or Global administrator role assigned.
+
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
+
 1. Select the role you'd like to edit.
+
 1. Select **Edit**.
+
 1. In **Edit role**, on the **General** tab, in **Role name**, type a name for the role.
+
 1. In **Description** type a brief summary of the role.
+
 1. In **Permissions**, select **View Data**, and under **View Data** select **Threat and vulnerability management** (TVM).
 
 For more information about user role management, see [Create and manage roles for role-based access control](user-roles.md).
@@ -254,17 +264,14 @@ For more information about the aforementioned terms, refer back to the section: 
 
 > [!NOTE]
 >
-> Up to date reporting **prerequisites**
->
 > Up to date reporting generates information for devices that meet the following criteria:
 >
-> - Engine version: 1.1.19300.2+
-> - Platform version: 4.18.2202.1+
+> - Engine version: `1.1.19300.2` or later
+> - Platform version: `4.18.2202.1` or later
 > - Cloud protection enabled
-> - Windows OS*
+> - Windows OS
 >
->*Currently up to date reporting is only available for Windows devices. Cross platform devices such as Mac and Linux are listed under "no data available"
->
+> Currently up to date reporting is only available for Windows devices. Cross platform devices such as Mac and Linux are listed under `no data available`.>
 
 ##### Up-to-date definitions
 
