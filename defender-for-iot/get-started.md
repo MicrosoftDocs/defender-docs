@@ -45,5 +45,4 @@ Use the Microsoft 365 admin center to upgrade to a full license, manage your use
 >This trial license covers up to 1,000 devices. When moving to a permanent license you need to know the total number of OT devices in your network and choose the appropriate license to cover the needs of your network. This might mean choosing a larger or smaller sized license package.
 > For more information, see [upgrade to a full license](license-admin.md).
 
-<!-- Belle - for a trial version - how can we choose the devices if my site has more than the max of the trial license?-->
 Once you have a trial license, go to [Set up a new site](set-up-sites.md) so that Microsoft Defender for IoT sends data to the Defender portal.
