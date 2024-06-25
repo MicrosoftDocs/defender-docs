@@ -43,10 +43,10 @@ Permission levels are summarized in the table.
 | **Grant permissions to others** | ✔       |  -       |   -      | - | -|
 |  **Onboard your organization to the Microsoft Defender External Attack Surface Management (EASM) initiative**   | ✔       |  ✔       |   ✔      | ✔ | ✔ |
 |  **Mark initiative as a favorite**   | ✔       |  ✔       |   ✔      | ✔ | ✔ |
-| **Set initiative target score** | ✔       |  -       |   -      | - | - |
+| **Set initiative target score** | ✔       |  -       |   ✔      | - | - |
 |  **View general initiatives**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
 |  **Share metric/Recommendations**   | ✔       |  ✔       |   ✔      | ✔ | ✔ |
-| **Edit metric weight** | ✔       |  -       |   -      | - | - |
+| **Edit metric weight** | ✔       |  -       |   ✔     | - | - |
 | **Export metric (PDF)** | ✔       |  ✔       |   ✔      | ✔ | ✔ |
 |  **View metrics**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
 | **Export assets (metric/recommendation)**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
@@ -54,7 +54,7 @@ Permission levels are summarized in the table.
 |  **View recommendations**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
 |  **Export events**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
 |  **Change criticality level**  | ✔       |  -       |   ✔      | ✔ | - |
-| **Set critical asset rule** | ✔       |  -       |   -      | - | - |
+| **Set critical asset rule** | ✔       |  -       |   ✔      | - | - |
 |  **Create criticality rule**  | ✔       |    -    |   ✔      | - | - |
 |  **Turn criticality rule on/off**  | ✔       |    -    |   ✔      | ✔ | - |
 |  **Run a query on exposure graph data**  |    ✔    |   ✔     |  ✔       | ✔ | ✔ |
