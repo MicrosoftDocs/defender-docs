@@ -58,7 +58,7 @@ Data that is collected using either '_JSON response_ or _via files_' is the curr
 
 > [!NOTE]
 >
-> For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft 365 Security dashboard, see: [Device health and antivirus compliance report in Microsoft Defender for Endpoint](../device-health-reports.md).
+> For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft Defender portal, see: [Device health and antivirus compliance report in Microsoft Defender for Endpoint](../device-health-reports.md).
 >
 
 ## 1 Export health reporting (JSON response)

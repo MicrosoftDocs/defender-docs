@@ -53,7 +53,7 @@ The following list provides a brief description of each endpoint security policy
 >[!NOTE]
 >Currently, only antivirus policies are supported. 
 
-1. Sign in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> using at least a security admin role.
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using at least a security admin role.
 
 2. Select **Endpoints > Configuration management > Endpoint security policies** and then select **Create new Policy**. 
 
