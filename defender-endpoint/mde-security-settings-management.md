@@ -6,7 +6,7 @@ ms.author: yongrhee
 manager: deniseb
 ms.service: defender-endpoint
 ms.topic: how-to
-ms.date: 04/24/2024
+ms.date: 06/25/2024
 ms.collection: 
 - m365-security
 - tier2
@@ -23,19 +23,14 @@ ms.custom:
 **Applies to:**
 
 - [Microsoft Defender XDR](/defender-xdr)
-
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
 - [Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md)
 
 **Platforms**
 
 - Windows
-
-- Windows Servers
-
+- Windows Server
 - macOS
-
 - Linux
 
 Use the Microsoft Defender for Endpoint Security Settings Management to manage Microsoft Defender Antivirus security policies on devices. 
@@ -45,11 +40,14 @@ Use the Microsoft Defender for Endpoint Security Settings Management to manage M
 Please review the pre-requisites [here](/mem/intune/protect/mde-security-integration). 
 
 > [!NOTE]
-> The **Endpoint Security Policies** page in Microsoft Defender XDR is available only for [users with the security administrator role in Microsoft Defender XDR](assign-portal-access.md). Any other user role, such as Security Reader, cannot access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and Microsoft Defender XDR.
+> The **Endpoint Security Policies** page in  the Microsoft Defender portal is available only for [users with the Security Administrator role assigned](assign-portal-access.md). Any other user role, such as Security Reader, cannot access the portal. When a user has the required permissions to view policies in the Microsoft Defender portal, the data is presented based on Intune permissions. If the user is in scope for Intune role-based access control, it applies to the list of policies presented in the Microsoft Defender portal. We recommend granting security administrators with the [Intune built-in role, "Endpoint Security Manager"](/mem/intune/fundamentals/role-based-access-control#built-in-roles) to effectively align the level of permissions between Intune and  the Microsoft Defender portal.
 
-As a security administrator, you can configure different Microsoft Defender Antivirus security policy settings in the [Microsoft Defender XDR](https://security.microsoft.com)portal.
+As a security administrator, you can configure different Microsoft Defender Antivirus security policy settings in the [Microsoft Defender portal](https://security.microsoft.com).
 
-You'll find endpoint security policies under **Endpoints > Configuration management > Endpoint security policies**.
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+You'll find endpoint security policies under **Endpoints** > **Configuration management** > **Endpoint security policies**.
 
 :::image type="content" source="./media/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Defender portal":::
 
@@ -65,18 +63,15 @@ The following list provides a brief description of each endpoint security policy
 
 - **Attack surface reduction** - When Microsoft Defender Antivirus is in use on your Windows 10/11 devices, use Intune endpoint security policies for attack surface reduction to manage those settings for your devices.
 
-
 ## Create an endpoint security policy
 
-1. Sign in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> using at least a security admin role.
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using at least a Security Administrator role.
 
-2. Select **Endpoints > Configuration management > Endpoint security policies** and then select **Create new Policy**. 
-
+2. Select **Endpoints** > **Configuration management** > **Endpoint security policies** and then select **Create new Policy**. 
 
 3. Select a platform from the dropdown list.
 
 4. Select a template, then select **Create policy**.
-
 
 5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
@@ -90,10 +85,8 @@ The following list provides a brief description of each endpoint security policy
 
 8. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-
->[!NOTE]
->To edit the scope tags, you'll need to go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
+> [!NOTE]
+> To edit the scope tags, you'll need to go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## To edit an endpoint security policy
 
@@ -108,15 +101,12 @@ The following list provides a brief description of each endpoint security policy
 
 4. After you've made changes, select **Save** to save your edits.  Edits to one category must be saved before you can introduce edits to additional categories.
 
-
-
-
 ## Verify endpoint security policies
 
 To verify that you have successfully created a policy, select a policy name from the list of endpoint security policies.
 
->[!NOTE]
->It can take up to 90 minutes for a policy to reach a device. To expedite the process, for devices Managed by Defender for Endpoint, you can select **Policy sync** from the actions menu so that it is applied in approximately 10 minutes.
+> [!NOTE]
+> It can take up to 90 minutes for a policy to reach a device. To expedite the process, for devices Managed by Defender for Endpoint, you can select **Policy sync** from the actions menu so that it is applied in approximately 10 minutes.
 > :::image type="content" source="./media/policy-sync.png" alt-text="Image showing policy sync button":::
 
 The policy page displays details that summarize the status of the policy. You can view a policy's status, which devices it has been applied to, and assigned groups.

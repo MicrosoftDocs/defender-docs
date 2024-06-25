@@ -3,7 +3,7 @@ title: View device control events and information in Microsoft Defender for Endp
 description: Monitor your organization's data security through device control reports.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 05/16/2024
+ms.date: 06/25/2024
 ms.author: siosulli
 author: siosulli
 ms.topic: conceptual
@@ -20,7 +20,11 @@ search.appverid: met150
 
 # View device control events and information in Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint device control helps protect your organization from potential data loss, malware, or other cyberthreats by allowing or preventing certain devices to be connected to users' computers. You can view information about device control events with advanced hunting or by using the device control report. 
+Microsoft Defender for Endpoint device control helps protect your organization from potential data loss, malware, or other cyberthreats by allowing or preventing certain devices to be connected to users' computers. Your security team can view information about device control events with advanced hunting or by using the device control report.
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+ 
 
 To access the [Microsoft Defender portal](https://security.microsoft.com/advanced-hunting), your subscription must include Microsoft 365 for E5 reporting.
 
@@ -100,7 +104,7 @@ In the **Reports** dashboard, the **Device protection** card shows the number of
 
 The **View details** button shows more media usage data in the **Device control report** page.
 
-The page provides a dashboard with aggregated number of events per type and a list of events and shows 500 events per page, but if you're an administrator (such as a global administrator or security administrator), you can scroll down to see more events and can filter on time range, media class name, and device ID.
+The page provides a dashboard with aggregated number of events per type and a list of events and shows 500 events per page, but if you're an administrator (such as a Security Administrator), you can scroll down to see more events and can filter on time range, media class name, and device ID.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="media/Detaileddevicecontrolreport.png" alt-text="The Device Control Report Details page in the Microsoft Defender portal" lightbox="media/Detaileddevicecontrolreport.png":::
