@@ -14,22 +14,23 @@ ms.date: 06/11/2024
 
 The Internet of Things (IoT) supports billions of connected devices that use both operational technology (OT) and IoT networks. IoT/OT devices and networks are often built using specialized protocols, and might prioritize operational challenges over security.
 
-Microsoft Defender for IoT is a unified security solution built specifically to identify IoT and OT devices, vulnerabilities, and threats. Use Defender for IoT to secure your entire IoT/OT environment, including existing devices that might not have built-in security agents.
+Microsoft Defender for IoT in the Defender portal is a unified security solution built specifically to identify IoT and OT devices, vulnerabilities, and threats. Use Defender for IoT to secure your entire IoT/OT environment, including existing devices that might not have built-in security agents.
 
 In this article, you learn how Defender for IoT and secures your IoT and OT environments, solving these challenges.
 
 :::image type="content" source="media/microsoft-defender-for-iot/end-to-end-coverage.png" alt-text="Image of Microsoft Defender for IoT end-to-end security coverage." border="false":::
 
-> [!IMPORTANT]
-> 
-> This article discusses Defender for IoT in the Defender portal (Preview). This solution is intended for Microsoft Defender customers looking to extend protection to OT environments.
-> 
-> **[Get started](get-started.md) with Defender for IoT in the Defender portal** or review other options:
->
-> - If you're an existing customer, you can continue working on the **classic Defender for IoT portal** (Azure portal) as usual. See the [Defender for IoT on Azure documentation](/azure/defender-for-iot/organizations/overview).
-> - As a separate offering, you can enable **protection for enterprise IoT devices**, like printers, smart TVs, and conferencing systems and purpose-built, proprietary devices. [Learn more](/azure/defender-for-iot/organizations/eiot-sensor).
->
-> Some information in this article relates to a prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+
+## What are the different flavors for Microsoft Defender for IoT?
+
+You can work with one of these different flavors of Defender for IoT:
+
+|Flavor  |Details  |Next steps  |
+|---------|---------|---------|
+|Defender for IoT in the Defender portal (Preview)  |New customers can use this flavor for a unified experience, extending Defender XDR protection to OT environments. [Learn about the main use cases](#what-are-the-main-defender-for-iot-use-cases).  |[Get started](get-started.md) with Defender for IoT in the Defender portal. |
+|Defender for IoT in the classic, Azure portal    |Existing customers can use this flavor to identify IoT and OT devices, vulnerabilities, and threats in the Azure portal.  |See the [Defender for IoT on Azure overview](/azure/defender-for-iot/organizations/overview).         |
+|Protection for enterprise IoT devices     |New or existing customers can enable protection for enterprise IoT devices, like printers, smart TVs, and conferencing systems and purpose-built, proprietary devices. |[Get started](/azure/defender-for-iot/organizations/eiot-sensor) with enterprise IoT monitoring.         |
 
 ## Who uses Defender for IoT?
 
