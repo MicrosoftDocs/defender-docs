@@ -41,29 +41,23 @@ You'll need to know the exact Linux distros and macOS versions that are compatib
 
 ## Onboarding non-Windows devices
 
-You can choose to onboard non-Windows devices through Microsoft Defender for Endpoint or through a third-party solution.
+You can choose to onboard non-Windows devices through Microsoft Defender for Endpoint or through a third-party (non-Microsoft) solution.
+
+- To onboard macOS devices using Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md).
+
+- To onboard Linux devices using Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).
+
+- To onboard non-windows devices using a non-Microsoft solution:
+
+   1. In the navigation pane, select **Partners and APIs** > **Connected Applications**. Make sure the non-Microsoft solution is listed.
+      
+   2. In the **Connected Applications** page, select the partner that supports your non-Windows devices.
+      
+   3. Select **View** to open the partner's page. Follow the instructions provided on the page.
+      
+   4. After creating an account or subscribing to the partner solution, you should get to a stage where a tenant admin (or Global Administrator) is asked to accept a permission request from the partner application. Read the permission request carefully to make sure that it's aligned with the service that you require.
 
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
-
-You'll need to take the following steps:
-
-1. Select your preferred method of onboarding:
-
-   - To onboard macOS devices using Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md).
-
-   - To onboard Linux devices using Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).
-
-   - To onboard non-windows devices using a non-Microsoft solution:
-
-      1. In the navigation pane, select **Partners and APIs** > **Connected Applications**. Make sure the non-Microsoft solution is listed.
-      
-      2. In the **Connected Applications** page, select the partner that supports your non-Windows devices.
-      
-      3. Select **View** to open the partner's page. Follow the instructions provided on the page.
-      
-      4. After creating an account or subscribing to the partner solution, you should get to a stage where a tenant admin (or Global Administrator) is asked to accept a permission request from the partner application. Read the permission request carefully to make sure that it's aligned with the service that you require.
-
-2. Run a detection test.
 
 ## Offboard non-Windows devices
 
