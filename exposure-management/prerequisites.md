@@ -53,7 +53,7 @@ Permission levels are summarized in the table.
 |  **Manage recommendations**  |    ✔    | -  |  ✔  |   -      | - |
 |  **View recommendations**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
 |  **Export events**  | ✔       |  ✔       |   ✔      | ✔ | ✔ |
-|  **Change criticality level**  | ✔       |  ✔       |   ✔      | ✔ | - |
+|  **Change criticality level**  | ✔       |  -       |   ✔      | ✔ | - |
 | **Set critical asset rule** | ✔       |  -       |   -      | - | - |
 |  **Create criticality rule**  | ✔       |    -    |   ✔      | - | - |
 |  **Turn criticality rule on/off**  | ✔       |    -    |   ✔      | ✔ | - |
