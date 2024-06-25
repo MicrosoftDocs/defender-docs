@@ -52,7 +52,10 @@ The rest of this article how to configure preset security policies.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Configure preset security policies_: Membership in the **Organization Management** or **Security Administrator** role groups.
     - _Read-only access to preset security policies_: Membership in the **Global Reader** role group.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**, **Security Administrator**, or **Global Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, or **Global Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+
+    > [!IMPORTANT]
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users
 

@@ -12,8 +12,9 @@ ms.topic: how-to
 # Manage sites
 
 Once a site is in use, you might need to edit or delete the site information listed in the Site security table.
-Microsoft Defender for IoT uses *sites* to group Operational Technology (OT) devices located at a specific physical location, such as an office or factory building. The Site security dashboard allows the security site management team an at-a-glance view of the most important security issues affecting your network to make quick, highly informed decisions about which security problems need of an immediate response.
 
+Microsoft Defender for IoT uses *sites* to group Operational Technology (OT) devices located at a specific physical location, such as an office or factory building. The Site security dashboard allows the security site management team an at-a-glance view of the most important security issues affecting your network to make quick, highly informed decisions about which security problems need of an immediate response.
+<!-- do we need prerequisites here as well or should they be removed? -->
 ## Prerequisites
 
 - Review [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
@@ -41,7 +42,3 @@ For more information, see [add a device group](set-up-sites.md#add-device-group)
 
 To get the full benefit of the Device group, you might need to create roles and permission settings. For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac.md).
 Also see [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles.md).
-
-## Next steps
-
-> [!div class="step-by-step"]

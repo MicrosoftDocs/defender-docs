@@ -1,21 +1,18 @@
 ### YamlMime:Landing
 
-title: Microsoft Defender for IoT documentation # < 60 chars
-summary: Microsoft Defender for IoT delivers preventative protection, post-breach detection, automated investigation, and response. # < 160 chars
+title: Microsoft Defender for IoT (Preview) documentation # < 60 chars
+summary: Microsoft Defender for IoT provides visibility and threat protection for IoT/OT environments while reducing cyber risk through continuous vulnerability discovery, risk-based prioritization, and remediation. # < 160 chars
 
 metadata:
-  title: Microsoft Defender for IoT documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  title: Microsoft Defender for IoT (Preview) documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Learn about Microsoft Defender for IoT and maximize the built-in security capabilities to protect devices, detect malicious activity, and remediate threats# Required; article description that is displayed in search results. < 160 chars.
   services: office-365-security-compliance
   ms.service: defender-for-iot
   ms.topic: landing-page # Required
-  ms.collection: 
-  - m365-security
-  - essentials-navigation
   ms.custom: intro-hub-or-landing
-  author: lwainstein #Required; your GitHub user alias, with correct capitalization.
+  author: limwainstein #Required; your GitHub user alias, with correct capitalization.
   ms.author: lwainstein #Required; microsoft alias of author; optional team alias.
-  ms.date: 05/28/2024
+  ms.date: 06/23/2024
   ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -31,17 +28,13 @@ landingContent:
         - text: What is Microsoft Defender for IoT?
           url: microsoft-defender-iot.md
       - linkListType: concept
-        links:
-        - text: Whats new in Defender for IoT?
-          url: compare-defender-azure.md
-        - text: Site security overview
+        links:        
+        - text: Site security
           url: site-security-overview.md
       - linkListType: how-to-guide
         links:
           - text: Manage sites
             url: manage-sites.md
-          - text: Monitor site security
-            url: monitor-site-security.md
 
 # Card
   - title: Get started
@@ -56,7 +49,7 @@ landingContent:
           url: get-started.md
       - linkListType: quickstart
         links: 
-        - text: Set up Sites
+        - text: Set up sites
           url: set-up-sites.md
 
 # Card
@@ -66,36 +59,9 @@ landingContent:
         links:
         - text: Monitor site security
           url: monitor-site-security.md
-        - text: Navigate the weakness page
-          url: navigate-weakness-page.md
         - text: Discover vulnerabilities
           url: discover-vulnerabilities.md
         - text: Investigate incidents and alerts
           url: investigate-threats.md
         - text: Manage sites
           url: manage-sites.md
-
-  # Card
-  - title: Use Microsoft Defender for IoT on other platforms
-    linkLists:
-      - linkListType: overview
-        links:
-        - text: Microsoft Defender for Endpoint on Mac
-          url: /defender-endpoint/microsoft-defender-endpoint-mac.md
-        - text: Microsoft Defender for Endpoint on iOS
-          url: /defender-endpoint/microsoft-defender-endpoint-ios.md
-        - text: Microsoft Defender for Endpoint on Linux
-          url: /defender-endpoint/microsoft-defender-endpoint-linux.md
-        - text: Microsoft Defender for Endpoint on Android
-          url: /defender-endpoint/microsoft-defender-endpoint-android.md
-
-
-# Card
-  - title: Resources
-    linkLists:
-      - linkListType: reference
-        links:
-        - text: Management and APIs
-          url: /defender-endpoint/api/management-apis.md
-        - text: Partner integration
-          url: /defender-endpoint/partner-integration.md

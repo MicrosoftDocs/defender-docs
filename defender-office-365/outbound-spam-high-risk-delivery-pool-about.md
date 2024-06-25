@@ -84,6 +84,9 @@ If the MX record for your domain points to a third party service or an on-premis
 
 ### Find out which outbound pool was used
 
-As an Exchange Service Administrator or Global Administrator, you might want to find out which outbound pool was used to send a message from Microsoft 365 to an external recipient.
+As an Exchange Service Administrator or Global Administrator<sup>\*</sup>, you might want to find out which outbound pool was used to send a message from Microsoft 365 to an external recipient.
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 To do so, you can [use Message trace](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac) and look for the `OutboundIpPoolName` property in the output. This property contains a friendly name value for the outbound pool that was used.
