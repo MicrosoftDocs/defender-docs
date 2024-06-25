@@ -6,7 +6,7 @@ ms.author: yongrhee
 manager: deniseb
 ms.service: defender-endpoint
 ms.topic: how-to
-ms.date: 04/24/2024
+ms.date: 06/25/2024
 ms.collection: 
 - m365-security
 - tier2
