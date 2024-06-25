@@ -1,6 +1,6 @@
 ---
-title: What is Microsoft Defender for IoT?
-description: Microsoft Defender for IoT is a unified security solution built specifically to identify IoT and OT devices, vulnerabilities, and threats.
+title: What is Microsoft Defender for IoT in the Defender portal?
+description: Microsoft Defender for IoT in the Defender portal is a unified security solution built specifically to identify IoT and OT devices, vulnerabilities, and threats.
 ms.service: defender-for-iot
 ms.author: lwainstein
 author: limwainstein
