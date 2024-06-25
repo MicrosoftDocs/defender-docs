@@ -40,13 +40,13 @@ You need to make sure that all your devices are enrolled in Intune. You can use 
 - End-user: For more information on how to enroll your Windows 10 and Windows 11 device in Intune, see [Enroll your Windows 10 device in Intune](/intune/quickstart-enroll-windows-device)
 - End-user alternative: For more information on joining a Microsoft Entra domain, see [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/azureadjoin-plan).
 
-There are steps you'll need to take in Microsoft Defender XDR, the Intune portal, and Microsoft Entra admin center.
+There are steps you'll need to take in the Microsoft Defender portal, the Intune portal, and Microsoft Entra admin center.
 
 It's important to note the required roles to access these portals and implement Conditional access:
 
-- **Microsoft Defender XDR** - You'll need to sign into the portal with a global administrator role to turn on the integration.
-- **Intune** - You'll need to sign in to the portal with security administrator rights with management permissions.
-- **Microsoft Entra admin center** - You'll need to sign in as a global administrator, security administrator, or Conditional Access administrator.
+- **Microsoft Defender portal** - You'll need to sign into the portal with a Global Administrator role to turn on the integration.
+- **Intune** - You'll need to sign in to the portal with Security Administrator rights with management permissions.
+- **Microsoft Entra admin center** - You'll need to sign in as a Global Administrator, Security Administrator, or Conditional Access administrator.
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
