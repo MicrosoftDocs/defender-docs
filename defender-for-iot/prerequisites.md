@@ -27,7 +27,7 @@ Before you start, you need:
 
     For more information, see [Buy or remove licenses for a Microsoft business subscription](/microsoft-365/commerce/licenses/buy-licenses.md) and [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles.md).
 
-- An E5/MDE P2 license.
+- An Microsoft 365 E5/Defender for Endpoint Plan 2 license.
 
 - Microsoft Defender for Endpoints agents deployed in your environment.
 
