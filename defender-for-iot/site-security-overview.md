@@ -16,7 +16,7 @@ ms.topic: concept-article
 
 # Site security
 
-The Site security page in the Defender portal offers an overview of the security state of your entire OT/IoT network. Site security is based on creating a **site** that represents a specific physical location in your organization, for example, a manufacturing facility. The Site security page gives the security team management tools to effectively understand and analyze the state of each site. Site security also provides a unified view of all operational sites across your entire organization. Together this enables the security team to make better informed decisions when dealing with security issues either at a so 
+The Site security page in the Defender portal offers an overview of the security state of your entire OT/IoT network. Site security is based on creating a **site** that represents a specific physical location in your organization, for example, a manufacturing facility. The Site security page gives the security team management tools to effectively understand and analyze the state of each site. Site security also provides a unified view of all operational sites across your entire organization. Together this enables the security team to make better informed decisions when dealing with security issues.
 
 Using Microsoft Defender for Endpoint agents already installed on your network, Site security then detects all of the devices at that location and adds them to the site. This set up allows you to:
 
