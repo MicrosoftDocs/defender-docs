@@ -14,7 +14,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 04/04/2024
+ms.date: 06/25/2024
 ---
 
 # Ensure your devices are configured properly
@@ -34,7 +34,7 @@ With properly configured devices, you can boost overall resilience against threa
 - Meet or exceed the Defender for Endpoint security baseline configuration
 - Have strategic attack surface mitigations in place
 
-Click **Configuration management** from the navigation menu to open the Device configuration management page.
+Select **Configuration management** from the navigation menu to open the Device configuration management page.
 
 :::image type="content" source="media/secconmgmt-main.png" alt-text="The Security configuration management page" lightbox="media/secconmgmt-main.png":::
 
