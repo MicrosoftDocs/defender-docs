@@ -47,4 +47,4 @@ Learn more about the [Weaknesses page in the Microsoft Defender Vulnerability Ma
 
 ## Next steps
 
-[Discover and investigate vulnerabilities](discover-vulnerabilities.md) in Microsoft Defender for IoT.
+[Prioritize and investigate vulnerabilities](prioritize-vulnerabilities.md) in Microsoft Defender for IoT.
