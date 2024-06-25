@@ -57,6 +57,10 @@ You can choose to onboard non-Windows devices through Microsoft Defender for End
       
    4. After creating an account or subscribing to the partner solution, you should get to a stage where a tenant admin (or Global Administrator) is asked to accept a permission request from the partner application. Read the permission request carefully to make sure that it's aligned with the service that you require.
 
+      > [!IMPORTANT]
+      > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
 ## Offboard non-Windows devices
