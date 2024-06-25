@@ -51,7 +51,7 @@ You can opt out of built-in protection by specifying your own security settings.
 
 > [!CAUTION]
 > **We do not recommend turning tamper protection off**. Tamper protection provides you with better ransomware protection.
-> You must be a global administrator or security administrator to perform the following procedure.
+> You must have the Security Administrator role assigned to perform the following procedure.
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
