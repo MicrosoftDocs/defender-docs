@@ -18,8 +18,9 @@ Defender for IoT uses the MDE agent to identify and locate other OT and IoT devi
 ## Prerequisites
 
 - Review [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
-- OT Security Admin with MDE P2/E5. For more information, see [Microsoft Defender for Endpoint subscriptions settings](/defender-endpoint/defender-endpoint-subscription-settings.md).
-- Microsoft Defender for IoT trial license. For more information, see [Microsoft Defender for IoT subscriptions settings](get-started.md).
+- Site security permissions according to RBAC requirements.
+- For more information, see [Microsoft Defender for Endpoint subscriptions settings](/defender-endpoint/defender-endpoint-subscription-settings.md). check where this link goes to??
+- Microsoft Defender for IoT P2/E5 trial license. For more information, see [Microsoft Defender for IoT subscriptions settings](get-started.md).
 - We recommend you have IP or MAC address details of at least one OT device at the site.
 
 ## Create a site
