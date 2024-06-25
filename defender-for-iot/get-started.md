@@ -17,7 +17,7 @@ Once you have a trial license, you can continue to set up a site to monitor the 
 
 ## Add a trial license
 
-To add a trial license for Microsoft Defender for IoT use the Microsoft 365 Marketplace.
+To add a trial license for Microsoft Defender for IoT:
 
 1. In a browser, open the [Microsoft Defender for IoT - OT Site License (1000 max devices per site) Trial wizard](https://signup.microsoft.com/get-started/signup?products=d2bdd05f-4856-4569-8474-2f9ec298923b).
 
