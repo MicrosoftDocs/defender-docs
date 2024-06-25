@@ -38,7 +38,7 @@ In the [Microsoft Defender portal](https://security.microsoft.com), go to **Endp
 
 :::image type="content" source="media/secconmgmt-main.png" alt-text="The Security configuration management page" lightbox="media/secconmgmt-main.png":::
 
-*The dDevice configuration management page*
+*The device configuration management page*
 
 You can track configuration status at an organizational level and quickly take action in response to poor onboarding coverage, compliance issues, and poorly optimized attack surface mitigations through direct, deep links to device management pages on Microsoft Intune and <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a>.
 
