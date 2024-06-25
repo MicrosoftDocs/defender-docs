@@ -55,13 +55,13 @@ You'll need to take the following steps:
 
    - To onboard non-windows devices using a non-Microsoft solution:
 
-      1. In the navigation pane, select **Partners and APIs > Connected Applications**. Make sure the third-party solution is listed.
+      1. In the navigation pane, select **Partners and APIs** > **Connected Applications**. Make sure the non-Microsoft solution is listed.
       
       2. In the **Connected Applications** page, select the partner that supports your non-Windows devices.
       
       3. Select **View** to open the partner's page. Follow the instructions provided on the page.
       
-      4. After creating an account or subscribing to the partner solution, you should get to a stage where a tenant Global Admin in your organization is asked to accept a permission request from the partner application. Read the permission request carefully to make sure that it's aligned with the service that you require.
+      4. After creating an account or subscribing to the partner solution, you should get to a stage where a tenant admin (or Global Administrator) is asked to accept a permission request from the partner application. Read the permission request carefully to make sure that it's aligned with the service that you require.
 
 2. Run a detection test.
 
