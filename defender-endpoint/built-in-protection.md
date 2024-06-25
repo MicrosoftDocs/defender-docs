@@ -5,9 +5,9 @@ search.appverid: MET150
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-audience: Admin
+audience: IT Pro
 ms.topic: overview
-ms.date: 06/06/2023
+ms.date: 06/24/2024
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
