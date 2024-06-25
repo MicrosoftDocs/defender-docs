@@ -45,4 +45,4 @@ Purchase the license for your network from the Microsoft 365 admin center, by en
 :::image type="content" source="media/365-center-iot-license.png" alt-text="Screenshot showing the license choices for Microsoft Defender for IoT.":::
 
 >[!Note]
->If your site is larger that 5,000 OT devices, purchase extra sites and they can be connected together.<!-- For more information, see []().-- get details for this -->
+>If your site is larger that 5,000 OT devices, purchase extra sites and they can be connected together.<!-- For more information, see [].-- get details for this -->
