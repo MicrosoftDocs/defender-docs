@@ -3,7 +3,7 @@ title: View device control events and information in Microsoft Defender for Endp
 description: Monitor your organization's data security through device control reports.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 05/16/2024
+ms.date: 06/25/2024
 ms.author: siosulli
 author: siosulli
 ms.topic: conceptual
@@ -20,7 +20,11 @@ search.appverid: met150
 
 # View device control events and information in Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint device control helps protect your organization from potential data loss, malware, or other cyberthreats by allowing or preventing certain devices to be connected to users' computers. You can view information about device control events with advanced hunting or by using the device control report. 
+Microsoft Defender for Endpoint device control helps protect your organization from potential data loss, malware, or other cyberthreats by allowing or preventing certain devices to be connected to users' computers. Your security team can view information about device control events with advanced hunting or by using the device control report.
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+ 
 
 To access the [Microsoft Defender portal](https://security.microsoft.com/advanced-hunting), your subscription must include Microsoft 365 for E5 reporting.
 
