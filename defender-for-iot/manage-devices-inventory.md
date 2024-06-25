@@ -1,6 +1,6 @@
 ---
-title: Manage the device inventory for Microsoft Defender for IoT in XDR Defender portal
-description: This article describes how to manage the device inventory for Microsoft Defender for IoT in XDR Defender portal
+title: Manage the device inventory for Microsoft Defender for IoT in the Defender portal
+description: This article describes how to discover devices in the device inventory for Microsoft Defender for IoT in the Defender portal
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
@@ -9,17 +9,17 @@ ms.date: 05/19/2024
 ms.topic: how-to
 ---
 
-# Manage the device inventory
+# Discover devices
 
-The device inventory helps you identify details about specific OT devices. Gathering details about your devices helps your teams proactively investigate vulnerabilities that can compromise your most critical assets. This article describes how to manage your devices in the device inventory. You can filter data in the inventory, explore the inventory, investigate device details, and more.
-
-[IMAGE]
+The device inventory helps you identify details about specific OT devices. Gathering details about your devices helps your teams proactively investigate vulnerabilities that can compromise your most critical assets. This article describes how to discover and manage your devices in the device inventory. You can filter data in the inventory, explore the inventory, investigate device details, and more.
 
 Learn more about the benefits of OT [device discovery](device-discovery.md).
 
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+
 ## Access the Device inventory page
 
-Access the device inventory page by selecting Devices from the Assets navigation menu in the [Microsoft Defender portal](https://security.microsoft.com/machines).
+Access the **Device inventory** page by selecting **Devices** from the **Assets** navigation menu in the [Microsoft Defender portal](https://security.microsoft.com/machines).
 
 ## Prerequisites
 
@@ -43,5 +43,7 @@ To customize the device inventory views:
 ## Manage OT devices
 
 - [Explore the device inventory](/defender-endpoint/machines-view-overview.md#explore-the-device-inventory) including search, export to CSV, and more.
-- Select a specific device and [investigate the device details](/defender-endpoint/investigate-machines.md).
-- Add, edit, or delete devices.
+- [Onboard devices](/defender-endpoint/onboarding.md#onboard-devices-using-any-of-the-supported-management-tools).
+- [Offboard devices](/defender-endpoint/offboard-machines.md).
+- [Investigate the device details](/defender-endpoint/investigate-machines.md) to identify other behaviors or events that might be related to the alert or the potential scope of the breach.
+- In the device details pane, select the ellipsis on the top right to [take response actions on a device](/defender-endpoint/respond-machine-alerts.md).

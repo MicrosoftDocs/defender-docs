@@ -1,6 +1,6 @@
 ---
-title: Device discovery for Microsoft Defender for IoT in XDR Defender portal
-description: This article describes the device discovery concept Microsoft Defender for IoT in XDR Defender portal
+title: Device discovery for Microsoft Defender for IoT in the Defender portal
+description: This article describes device discovery for Microsoft Defender for IoT in the Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
