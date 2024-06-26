@@ -1,6 +1,6 @@
 ---
-title: Investigate incidents and alerts in Site security for Microsoft Defender for IoT in the Defender portal
-description: This article describes how to investigate incidents and alerts in the Site security feature of Microsoft Defender for IoT in the Defender portal
+title: Investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal
+description: This article describes how to investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal
 ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
@@ -13,10 +13,12 @@ ms.topic: how-to
 
 Incidents and alerts are an integral part of the Microsoft Defender portal and Microsoft Defender for Endpoints. For more information, see [Investigate alerts in Defender XDR](/defender-xdr/investigate-alerts.md).
 
-The **Incidents** page lists possible security breaches that could compromise your network. The incident page displays a history of the alerts connected to the incident and an incident graph showing the other devices connected to the affected OT device which might also be compromised. The alert description explains the type of security issue detected and lists remidiation options to solve the security problem. The Incident page alerts are based on the Defender for Endpoints network signals and uniquely combine IT and OT environment signals to detect potential threats and data leaks across this boundary.
+The **Incidents** page lists possible security breaches that could compromise your network. The incident page displays a history of the alerts connected to the incident and an incident graph showing the other devices connected to the affected OT device which might also be compromised.
+
+The alert description explains the type of security issue detected and lists remidiation options to solve the security problem. The Incident page alerts are based on the Defender for Endpoints network signals and uniquely combine IT and OT environment signals to detect potential threats and data leaks across this boundary.
 
 In this article you learn to investigate a Microsoft Defender for IoT incident, it's associated alerts, and to remidiate them.
-
+<!-- Amit wanted this note, although it might not really be relevant here. -->
 >[!Note]
 >Incident and alert data for Defender for IoT will only appear once you have a site set up and the devices are sending data to the Defender portal.
 
