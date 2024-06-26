@@ -47,7 +47,7 @@ Microsoft Defender Antivirus performance analyzer has the following prerequisite
 
 Similar to the way mechanics perform diagnostics and service on a vehicle that has performance problems, performance analyzer can help you improve Defender Antivirus performance.
 
-:::image type="content" source="media/performance-analyzer-improve-defender-antivirus-performance.png" alt-text="Conceptual performance analyzer image for Microsoft Defender Antivirus. The diagram is related to:  Microsoft Defender performance analyzer, Defender performance analyzer, Get-MpPerformanceRepor, New-MpPerformanceRecording, windows Defender, microsoft Defender, microsoft windows 10, microsoft Defender antivirus, micro soft windows 11, windows antivirus, microsoft antivirus, windows Defender antivirus, Windows 10 antivirus, microsoft windows Defender, performance windows. " lightbox="media/performance-analyzer-improve-defender-antivirus-performance.png":::
+:::image type="content" source="media/performance-analyzer-improve-defender-antivirus-performance.png" alt-text="Conceptual performance analyzer image for Microsoft Defender Antivirus." lightbox="media/performance-analyzer-improve-defender-antivirus-performance.png":::
 
 Some options to analyze include:
 
@@ -91,7 +91,7 @@ To start recording system events, open PowerShell in administrative mode and per
 
 4. Analyze the results using the performance analyzer's `Get-MpPerformanceReport` parameter. For example, on executing the command `Get-MpPerformanceReport -Path <recording.etl> -TopFiles 3 -TopScansPerFile 10`, the user is provided with a list of top-ten scans for the top three files affecting performance.
 
-For more information on command-line parameters and options, see the [New-MpPerformanceRecording](#new-mpperformancerecording) and [Get-MpPerformanceReport](#get-mpperformancereport).
+   For more information on command-line parameters and options, see the [New-MpPerformanceRecording](#new-mpperformancerecording) and [Get-MpPerformanceReport](#get-mpperformancereport).
 
 > [!NOTE]
 > When running a recording, if you get the error "Cannot start performance recording because Windows Performance Recorder is already recording", run the following command to stop the existing trace with the new command:
@@ -135,7 +135,6 @@ Starting with Defender version `4.18.2206.X`, users are able to view scan skip r
 ```
 
 To ensure machine-readable output for exporting with other data processing systems, it's recommended to use `-Raw` parameter for `Get-MpPerformanceReport`. See the following sections for more details.
-
 
 ## PowerShell reference
 
@@ -183,7 +182,7 @@ $s = New-PSSession -ComputerName Server02 -Credential Domain01\User01
 New-MpPerformanceRecording -RecordTo C:\LocalPathOnServer02\trace.etl -Session $s
 ```
 
-The above command collects a performance recording on Server02 (as specified by argument $s of parameter Session) and saves it to the specified path: **C:\LocalPathOnServer02\trace.etl** on Server02.
+The command collects a performance recording on `Server02` (as specified by argument $s of parameter Session) and saves it to the specified path: **C:\LocalPathOnServer02\trace.etl** on `Server02`.
 
 
 #### Parameters: New-MpPerformanceRecording
@@ -202,7 +201,7 @@ Accept wildcard characters: False
 
 ##### -Session
 
-Specifies the PSSession object in which to create and save the Microsoft Defender Antivirus performance recording. When you use this parameter the RecordTo parameter refers to the local path on the remote machine. Available with Defender platform version 4.18.2201.10.
+Specifies the `PSSession` object in which to create and save the Microsoft Defender Antivirus performance recording. When you use this command, the `RecordTo` parameter refers to the local path on the remote machine. Available with Defender platform version `4.18.2201.10` and later.
 
 ```yaml
 Type: PSSession[]
@@ -214,7 +213,7 @@ Accept wildcard characters: False
 
 ### Get-MpPerformanceReport
 
-The following section describes the Get-MpPerformanceReport PowerShell cmdlet. Analyzes and reports on Microsoft Defender Antivirus performance recording.
+The following section describes the `Get-MpPerformanceReport` PowerShell cmdlet. Analyzes and reports on Microsoft Defender Antivirus performance recording.
 
 #### Syntax: Get-MpPerformanceReport
 
@@ -271,7 +270,7 @@ Get-MpPerformanceReport [-Path] <String>
 
 The `Get-MpPerformanceReport` cmdlet analyzes a previously collected Microsoft Defender Antivirus performance recording ([New-MpPerformanceRecording](#new-mpperformancerecording)) and reports the file paths, file extensions, and processes that cause the highest impact to Microsoft Defender Antivirus scans.
 
-The performance analyzer provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided "AS IS" and isn't intended to provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
+The performance analyzer provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided "as is" and isn't intended to provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
 
 For more information on the performance analyzer, see [Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) docs.
 
@@ -280,7 +279,7 @@ For more information on the performance analyzer, see [Performance Analyzer](/wi
 Windows Version 10 and later.
 
 > [!NOTE]
-> This feature is available starting with platform version 4.18.2108.X and later.
+> This feature is available starting with platform version `4.18.2108.X` and later.
 
 #### Examples: Get-MpPerformanceReport
 
@@ -320,7 +319,7 @@ Using `-Raw` in the command specifies that the output should be machine readable
 
 ##### -TopPaths
 
-Requests a top-paths report and specifies how many top paths to output, sorted by Duration. Aggregates the scans based on their path and directory. User can specify how many directories should be displayed on each level and the depth of the selection.
+Requests a top-paths report and specifies how many top paths to output, sorted by duration. Aggregates the scans based on their path and directory. User can specify how many directories should be displayed on each level and the depth of the selection.
 
 ```yaml
 - Type: Int32
@@ -332,9 +331,9 @@ Requests a top-paths report and specifies how many top paths to output, sorted b
 
 ##### -TopPathsDepth
 
-Specifies recursive depth that is used to group and display aggregated path results. For example "C:\" corresponds to a depth of 1, "C:\Users\Foo" corresponds to a depth of 3.
+Specifies recursive depth that is used to group and display aggregated path results. For example `C:\` corresponds to a depth of 1, and `C:\Users\Foo` corresponds to a depth of 3.
 
-This flag can accompany all other Top Path options. If missing, a default value of 3 is assumed. Value can't be 0.
+This flag can accompany all other Top Path options. If missing, a default value of 3 is assumed. The value can't be 0.
 
 ```yaml
 - Type: Int32
@@ -396,7 +395,7 @@ Accept wildcard characters: False
 
 ##### -TopExtensions
 
-Specifies how many top extensions to output, sorted by Duration.
+Specifies how many top extensions to output, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -408,7 +407,7 @@ Accept wildcard characters: False
 
 ##### -TopExtensionsPerProcess
 
-Specifies how many top extensions to output for each top process, sorted by Duration.
+Specifies how many top extensions to output for each top process, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -420,7 +419,7 @@ Accept wildcard characters: False
 
 ##### -TopFiles
 
-Requests a top-files report and specifies how many top files to output, sorted by Duration.
+Requests a top-files report and specifies how many top files to output, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -432,7 +431,7 @@ Accept wildcard characters: False
 
 ##### -TopFilesPerExtension
 
-Specifies how many top files to output for each top extension, sorted by Duration.
+Specifies how many top files to output for each top extension, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -444,7 +443,7 @@ Accept wildcard characters: False
 
 ##### -TopFilesPerProcess
 
-Specifies how many top files to output for each top process, sorted by Duration.
+Specifies how many top files to output for each top process, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -456,7 +455,7 @@ Accept wildcard characters: False
 
 ##### -TopProcesses
 
-Requests a top-processes report and specifies how many of the top processes to output, sorted by Duration.
+Requests a top-processes report and specifies how many of the top processes to output, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -468,7 +467,7 @@ Accept wildcard characters: False
 
 ##### -TopProcessesPerExtension
 
-Specifies how many top processes to output for each top extension, sorted by Duration.
+Specifies how many top processes to output for each top extension, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -480,7 +479,7 @@ Accept wildcard characters: False
 
 ##### -TopProcessesPerFile
 
-Specifies how many top processes to output for each top file, sorted by Duration.
+Specifies how many top processes to output for each top file, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -492,7 +491,7 @@ Accept wildcard characters: False
 
 ##### -TopScans
 
-Requests a top-scans report and specifies how many top scans to output, sorted by Duration.
+Requests a top-scans report and specifies how many top scans to output, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -504,7 +503,7 @@ Accept wildcard characters: False
 
 ##### -TopScansPerExtension
 
-Specifies how many top scans to output for each top extension, sorted by Duration.
+Specifies how many top scans to output for each top extension, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -516,7 +515,7 @@ Accept wildcard characters: False
 
 ##### -TopScansPerExtensionPerProcess
 
-Specifies how many top scans to output for each top extension for each top process, sorted by Duration.
+Specifies how many top scans to output for each top extension for each top process, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -528,7 +527,7 @@ Accept wildcard characters: False
 
 ##### -TopScansPerFile
 
-Specifies how many top scans to output for each top file, sorted by Duration.
+Specifies how many top scans to output for each top file, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -540,7 +539,7 @@ Accept wildcard characters: False
 
 ##### -TopScansPerFilePerExtension
 
-Specifies how many top scans to output for each top file for each top extension, sorted by Duration.
+Specifies how many top scans to output for each top file for each top extension, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -552,7 +551,7 @@ Accept wildcard characters: False
 
 ##### -TopScansPerFilePerProcess
 
-Specifies how many top scans for output for each top file for each top process, sorted by Duration.
+Specifies how many top scans for output for each top file for each top process, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -564,7 +563,7 @@ Accept wildcard characters: False
 
 ##### -TopScansPerProcess
 
-Specifies how many top scans to output for each top process in the Top Processes report, sorted by Duration.
+Specifies how many top scans to output for each top process in the Top Processes report, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -576,7 +575,7 @@ Accept wildcard characters: False
 
 ##### -TopScansPerProcessPerExtension
 
-Specifies how many top scans for output for each top process for each top extension, sorted by Duration.
+Specifies how many top scans for output for each top process for each top extension, sorted by duration.
 
 ```yaml
 Type: Int32
@@ -588,7 +587,7 @@ Accept wildcard characters: False
 
 ##### -TopScansPerProcessPerFile
 
-Specifies how many top scans for output for each top process for each top file, sorted by Duration.
+Specifies how many top scans for output for each top process for each top file, sorted by duration.
 
 ```yaml
 Type: Int32
