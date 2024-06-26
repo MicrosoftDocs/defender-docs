@@ -11,6 +11,7 @@ ms.topic: how-to
 
 # Set up a site
 
+
 In this article, you learn how to set up a site in the Site security page. Microsoft Defender for IoT in the Defender portal uses *sites* as the basis for grouping devices that are located in an operation environment at a particular physical location, such as a factory building. Defender for IoT uses the Microsoft Defender for Endpoints agent to identify and locate operational technology (OT) devices and all other devices at the same physical location. Defender for IoT adds these devices to the Device inventory, so we recommend that you know the IP address of at least one OT device that is discovered by the Defender for Endpoints agent.
 
 The Site security page gives the security team an overview of the most important security issues affecting your network and their business impact. This information lets the security team make quick, highly informed decisions to prioritize and organize their response to security problems more effectively.
@@ -18,9 +19,11 @@ The Site security page gives the security team an overview of the most important
 ## Prerequisites
 
 - Review [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
+
 - Site security permissions according to RBAC requirements. For more information, see [RBAC permissions for Defender for IoT](prerequisites.md#permissions).
 - Microsoft Defender for IoT trial license. For more information, see [Microsoft Defender for IoT subscriptions settings](get-started.md).
 - We recommend you have IP or MAC address details of at least one OT device at the site that is discovered by Microsoft Defender for Endpoints.
+
 
 ## Create a site
 
@@ -44,7 +47,7 @@ To set up a site and associate the OT devices in your network to it:
 
 ## Associate devices
 
-OT devices are associated with the site allowing Microsoft Defender for IoT to correctly identify other OT and non OT devices at the same site.
+OT devices are associated with the site allowing Microsoft Defender for IoT to correctly identify other OT/IoT devices at the same site.
 
 1. In the Search bar, type either a public IP address or the IP/MAC address for a specific OT device that is located at this site. A list of suggested sites appears in the table.
     1. If you don't know any of the OT device addresses, select **Show all suggested sites**, and a list of all possible sites appears in the table.
@@ -79,11 +82,11 @@ Once this connection is made and the site tag and attribute data appears, the OT
 
 ## Add device group
 
-A device group can be made using the link at the end of the Site set up process, or could be set up at another time.
+A device group can be made using the link at the end of the Site set up process, or set up at another time.
 
 Create a device group based on a site location to restrict users to that specific site. <!-- [ OR ] -->
 
-It's important that only the correct users have access to the site. Access and permission controls are set for groups of users to restrict access to a specific site or group of sites. Create a **Device group** and set the access per user.
+It's important that only the correct users have access to the site. Access and permission controls can be set for groups of users to restrict access to a specific site or group of sites. Create a **Device group** and set the access per user.
 
 1. Select **Create device group**. The Settings > Endpoints > Device groups page opens.
 1. Select **Add device group**.
