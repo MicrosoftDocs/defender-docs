@@ -13,7 +13,7 @@ ms.topic: conceptual
 
 To protect your environment, you need to take inventory of the devices in your network. However, mapping these devices can often be expensive, challenging, and time-consuming.
 
-Microsoft Defender for IoT in the Defender portal integrates with [Microsoft Defender for Endpoint device discovery](/defender-endpoint/machines-view-overview.md#device-inventory-overview), allowing you to discover devices connected to your operational technologies (OT) network without using extra appliances or complex process changes. Defender for IoT uses onboarded endpoints to collect, probe, or scan your network to discover devices.
+Microsoft Defender for IoT in the Microsoft Defender portal integrates with [Microsoft Defender for Endpoint device discovery](/defender-endpoint/machines-view-overview.md#device-inventory-overview), allowing you to discover devices connected to your operational technologies (OT) network without using extra appliances or complex process changes. Defender for IoT uses onboarded endpoints to collect, probe, or scan your network to discover devices.
 
 This article describes the benefits and capabilities of device discovery in Defender for IoT.
 
@@ -27,9 +27,11 @@ If you don't yet have a Defender for IoT license, the **Device inventory** page 
  
 In this case, [onboard Defender for IoT](get-started.md) to get security value for your OT devices.
 
+If you're seeing the message that indicates the number of unprotected OT devices, and you've already set up Defender for IoT, [set up a site](set-up-sites.md) and associate the relevant devices with it.
+
 ## Device inventory page
 
-The **Device inventory** page helps you identify details about specific devices, such as manufacturer, type, serial number, firmware, and more. Using these details, you can track your devices, dive into device details, and identify potential threats or incompatibilities.
+The **Device inventory** page helps you identify details about specific devices, such as manufacturer, type, serial number, firmware, and more. Using these details, you can track your devices, dive into device information, and identify potential threats or incompatibilities.
 
 Learn how to [discover and manage your IoT/OT devices](manage-devices-inventory.md) in the device inventory.
 
