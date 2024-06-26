@@ -7,7 +7,7 @@ ms.author: siosulli
 manager: deniseb 
 audience: ITPro
 ms.topic: overview
-ms.date: 02/21/2024
+ms.date: 06/25/2024
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
@@ -47,9 +47,8 @@ You can also use a newly added license usage report to track status.
 > - **Make sure to follow the procedures in this article to try mixed-license scenarios in your environment**. Assigning user licenses in the Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) doesn't set your tenant to mixed mode. 
 > - **You should have active trial or paid licenses for both Defender for Endpoint Plan 1 and Plan 2**. 
 > - To access license information, you must have one of the following roles assigned in Microsoft Entra ID:
->    - Global Admin
->    - Security Admin
->    - License Admin + MDE Admin  
+>    - Security Administrator
+>    - License Administrator and Defender for Endpoint Administrator  
 
 1. As an admin, go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
@@ -104,11 +103,10 @@ For example, suppose that you want to use a tag called `VIP` for all the devices
 
 > [!IMPORTANT]
 > To access license information, you must have one of the following roles assigned in Microsoft Entra ID:
-> - Global Admin
-> - Security Admin
-> - License Admin + MDE Admin  
+> - Security Administrator
+> - License Administrator and Defender for Endpoint Administrator  
 
-1. As a Security Admin or Global Admin, go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
+1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in as a Security Administrator.
 
 2. Go to **Settings** > **Endpoints** > **Licenses**.
 
@@ -124,6 +122,9 @@ For example, suppose that you want to use a tag called `VIP` for all the devices
    If you chose to apply Defender for Endpoint Plan 1 to all devices, proceed to [Validate that devices are receiving only Defender for Endpoint Plan 1 capabilities](#validate-that-a-device-is-receiving-only-defender-for-endpoint-plan-1-capabilities).
 
 ---
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Validate that a device is receiving only Defender for Endpoint Plan 1 capabilities
 
@@ -144,9 +145,8 @@ To reduce management overhead, there's no requirement for device-to-user mapping
 
 > [!IMPORTANT]
 > To access license information, you must have one of the following roles assigned in Microsoft Entra ID:
-> - Security Admin
-> - Global Admin
-> - License Admin + MDE Admin
+> - Security Administrator
+> - License Administrator and Defender for Endpoint Administrator
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 

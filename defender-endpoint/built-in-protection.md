@@ -5,9 +5,9 @@ search.appverid: MET150
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-audience: Admin
+audience: IT Pro
 ms.topic: overview
-ms.date: 06/06/2023
+ms.date: 06/24/2024
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
@@ -38,28 +38,12 @@ f1.keywords: NOCSH
 
 ## What is built-in protection, and how does it work?
 
-Built-in protection is a set of default settings that are rolling out to help ensure your devices are protected. These default settings are designed to protect devices from ransomware and other threats. Initially, built-in protection includes turning [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) on for your tenant, with other default settings coming soon. For more information, see the Tech Community blog post, [Tamper protection will be turned on for all enterprise customers](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/tamper-protection-will-be-turned-on-for-all-enterprise-customers/ba-p/3616478).
+Built-in protection is a set of default settings to help ensure your devices are protected by Defender for Endpoint. These default settings are designed to protect devices from ransomware and other threats. Initially, built-in protection began with [tamper protection enabled](prevent-changes-to-security-settings-with-tamper-protection.md) for your tenant, and expanded to other default settings. For more information, see the Tech Community blog post, [Tamper protection will be turned on for all enterprise customers](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/tamper-protection-will-be-turned-on-for-all-enterprise-customers/ba-p/3616478).
 
-| Phase | What happens |
-|:---|:---|
-| Built-in protection is rolling out | Customers are receiving [notification](#what-does-the-notification-look-like) that built-in protection is coming. If it's not already configured, tamper protection is turned on for customers who have Defender for Endpoint Plan 2 or Microsoft 365 E5. |
-| Built-in protection becomes available for your tenant | You'll be [notified](#what-does-the-notification-look-like) that your tenant is about to receive built-in protection and when tamper protection will be turned on (if it's not already configured). |
-| Built-in protection arrives | Tamper protection is turned on for your tenant, and is applied to your organization's Windows devices. You can [opt out](#can-i-opt-out) or [change your built-in protection settings](#can-i-change-built-in-protection-settings). |
-| After built-in protection has arrived | Whenever new devices are onboarded to Defender for Endpoint, built-in protection settings are applied to any new devices running Windows. You can always [change your built-in protection settings](#can-i-change-built-in-protection-settings). |
+As devices are onboarded to Defender for Endpoint, built-in protection settings are applied automatically. However, your security team can [change your built-in protection settings](#can-i-change-built-in-protection-settings). |
 
 > [!NOTE]
 > Built-in protection sets default values for Windows and Mac devices. If endpoint security settings change, such as through baselines or policies in [Microsoft Intune](/mem/endpoint-manager-overview), those settings override the built-in protection settings.  
-
-## What does the notification look like?
-
-You can expect to receive two types of notifications:
-
-- A message center post indicating that built-in protection is coming soon; and 
-- A banner in the Microsoft Defender portal that resembles the following image:
-
-   :::image type="content" source="media/bip-notification-m365defender.png" alt-text="Screenshot showing yellow banner highlighting built in protection in Microsoft Defender portal.":::
-
-Your notification tells you when built-in protection is coming and when tamper protection will be turned on (if it's not already configured) for your tenant.
 
 ## Can I opt out?
 
@@ -67,7 +51,7 @@ You can opt out of built-in protection by specifying your own security settings.
 
 > [!CAUTION]
 > **We do not recommend turning tamper protection off**. Tamper protection provides you with better ransomware protection.
-> You must be a global administrator or security administrator to perform the following procedure.
+> You must have the Security Administrator role assigned to perform the following procedure.
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in.
 
@@ -79,7 +63,7 @@ You can opt out of built-in protection by specifying your own security settings.
 
 ## Can I change built-in protection settings?
 
-Built-in protection is a set of default settings. You aren't required to keep these default settings in place. You can always change your settings to suit your business needs. The following table lists tasks your security team might perform, along with links to learn more. 
+Built-in protection is a set of default settings. Your security team isn't required to keep these default settings in place. To suit your organization's business needs, your security team can change your security settings. The following table lists tasks your security team might perform, along with links to learn more. 
 
 | Task | Description |
 |:---|:---|
@@ -91,12 +75,7 @@ Built-in protection is a set of default settings. You aren't required to keep th
 | Change tamper protection settings using a Mobile Device Management (MDM) solution | To change the tamper protection mode using an MDM, go to the configuration profile and change the enforcement level in  [Intune](tamperprotection-macos.md#intune) or [JAMF](tamperprotection-macos.md#jamf).<br/><br/>The configuration profile set with the MDM will be your first point of reference. Any settings defined in the profile will be enforced on the device, and built-in-protection default settings won't override these applied settings.  |
 | Temporarily disable tamper protection on a device for troubleshooting purposes | See the following articles:<br/>- [Get started with troubleshooting mode in Microsoft Defender for Endpoint](enable-troubleshooting-mode.md)<br/>- [Troubleshooting mode scenarios in Microsoft Defender for Endpoint](troubleshooting-mode-scenarios.md) |
 
-## See also
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-- [Tech Community blog: Tamper protection will be turned on for all enterprise customers](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/tamper-protection-will-be-turned-on-for-all-enterprise-customers/ba-p/3616478)
-- [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)
-- [Manage endpoint security in Microsoft Intune](/mem/intune/protect/endpoint-security)
-- [Configure Microsoft Defender for Endpoint in Intune](/mem/intune/protect/advanced-threat-protection-configure)
-- [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration)
-- [Responding to ransomware attacks](/defender-xdr/playbook-responding-ransomware-m365-defender)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

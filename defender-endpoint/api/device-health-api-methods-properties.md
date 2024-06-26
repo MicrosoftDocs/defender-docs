@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: siosulli 
 author: siosulli
 ms.localizationpriority: medium 
-ms.date: 05/15/2024
+ms.date: 06/25/2024
 manager: deniseb 
 ms.reviewr: mkaminska
 audience: ITPro 
@@ -50,7 +50,7 @@ Data that is collected using either '_JSON response_ or _via files_' is the curr
 > [!IMPORTANT]
 > For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](../configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
 >
-> For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft 365 Security dashboard, see: [Device health and antivirus report in Microsoft Defender for Endpoint](../device-health-reports.md).
+> For information about using the **Device health and antivirus compliance** reporting tool in the Microsoft Defender portal, see: [Device health and antivirus report in Microsoft Defender for Endpoint](../device-health-reports.md).
 
 ### 1.1 Export device antivirus health details API methods
 
@@ -128,4 +128,5 @@ Data that is collected using either '_JSON response_ or _via files_' is the curr
 [Export device antivirus health report](device-health-export-antivirus-health-report-api.md)
 
 [Device health and compliance reporting](../device-health-reports.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
