@@ -46,8 +46,6 @@ Review the site specific data in the sites list table.
 
 Note that the data displayed in this table is the total aggregated data for the entire network, and might include data for sites that you don't have access to. When you drill down into device data, the **Device Inventory** page only displays data for devices you can access.
 
-Review this information in the site list:
-
 |Column | Description|Next steps |
 |----|----|----|
 |**Site name** |The site name and description. |- Select the **Site name** to open the **Insights** panel. This panel displays site details, such as total devices, site location, and site owners. You can also select **Edit site** to make changes to the site.<br>- Select the ellipsis (:::image type="icon" source="media/menu-ellipsis.png" alt-text="menu vertical ellipsis button":::) to the right of the site name to [manage the site](manage-sites.md).
