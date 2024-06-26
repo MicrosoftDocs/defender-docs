@@ -185,9 +185,9 @@ Having this setting turned on can help security teams examine potentially bad fi
 
 #### Backing up quarantined files
 
-Users may be prompted to provide explicit consent before backing up the quarantined file, depending on your [sample submission configuration](enable-cloud-protection-microsoft-defender-antivirus.md#use-group-policy-to-turn-on-cloud-protection).
+Users might be prompted to provide explicit consent before backing up the quarantined file, depending on your [sample submission configuration](enable-cloud-protection-microsoft-defender-antivirus.md#use-group-policy-to-turn-on-cloud-protection).
 
-This feature doesn't work if sample submission is turned off. If automatic sample submission is set to request permission from the user, only samples that the user agrees to send will be collected.
+This feature doesn't work if sample submission is turned off. If automatic sample submission is set to request permission from the user, only samples that the user agrees to send are collected.
 
 > [!IMPORTANT]
 > Download quarantined file requirements:
@@ -200,13 +200,13 @@ This feature doesn't work if sample submission is turned off. If automatic sampl
 
 ### Collect files
 
-If a file isn't already stored by Microsoft Defender for Endpoint, you can't download it. Instead, you'll see a **Collect file** button in the same location.
+If a file isn't already stored by Microsoft Defender for Endpoint, you can't download it. Instead, you see a **Collect file** button in the same location.
 
 The **Collect file** button can have the following states:
 
-- **Active** - You'll be able to collect the file. 
+- **Active** - You are able to collect the file. 
 
-- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you may not have appropriate RBAC permissions to collect files. 
+- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files. 
 
 
     The following permissions are required: 
@@ -218,7 +218,7 @@ The **Collect file** button can have the following states:
     - Global admin or Advanced live response
 
 
-If a file hasn't been seen in the organization in the past 30 days, **Collect file** will be disabled. 
+If a file hasn't been seen in the organization in the past 30 days, **Collect file** is disabled. 
 
 
 > [!Important]
@@ -226,7 +226,7 @@ If a file hasn't been seen in the organization in the past 30 days, **Collect fi
 
 ## Add indicator to block or allow a file
 
-Prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. This operation will prevent it from being read, written, or executed on devices in your organization.
+Prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. This operation prevents it from being read, written, or executed on devices in your organization.
 
 > [!IMPORTANT]
 >
@@ -250,11 +250,11 @@ To start blocking files, you first need to [turn the **Block or allow** feature 
 
 When you add an indicator hash for a file, you can choose to raise an alert and block the file whenever a device in your organization attempts to run it.
 
-Files automatically blocked by an indicator won't show up in the file's Action center, but the alerts will still be visible in the Alerts queue.
+Files automatically blocked by an indicator don't show up in the file's Action center, but the alerts are still visible in the Alerts queue.
 
 See [manage indicators](manage-indicators.md) for more details on blocking and raising alerts on files.
 
-To stop blocking a file, remove the indicator. You can do so via the **Edit Indicator** action on the file's profile page. This action will be visible in the same position as the **Add Indicator** action, before you added the indicator.
+To stop blocking a file, remove the indicator. You can do so via the **Edit Indicator** action on the file's profile page. This action is visible in the same position as the **Add Indicator** action, before you added the indicator.
 
 You can also edit indicators from  the **Settings** page, under **Rules** \> **Indicators**. Indicators are listed in this area by their file's hash.
 
@@ -278,11 +278,11 @@ Cyber security investigations are typically triggered by an alert. Alerts are re
 The Deep analysis feature executes a file in a secure, fully instrumented cloud environment. Deep analysis results show the file's activities, observed behaviors, and associated artifacts, such as dropped files, registry modifications, and communication with IPs.
 Deep analysis currently supports extensive analysis of portable executable (PE) files (including _.exe_ and _.dll_ files).
 
-Deep analysis of a file takes several minutes. Once the file analysis is complete, the Deep Analysis tab will update to display a summary and the date and time of the latest available results.
+Deep analysis of a file takes several minutes. Once the file analysis is complete, the Deep Analysis tab updates to display a summary and the date and time of the latest available results.
 
-The deep analysis summary includes a list of observed *behaviors*, some of which can indicate malicious activity, and *observables*, including contacted IPs and files created on the disk. If nothing was found, these sections will display a brief message.
+The deep analysis summary includes a list of observed *behaviors*, some of which can indicate malicious activity, and *observables*, including contacted IPs and files created on the disk. If nothing was found, these sections display a brief message.
 
-Results of deep analysis are matched against threat intelligence and any matches will generate appropriate alerts.
+Results of deep analysis are matched against threat intelligence and any matches generate appropriate alerts.
 
 Use the deep analysis feature to investigate the details of any file, usually during an investigation of an alert or for any other reason where you suspect malicious behavior. This feature is available at the top of the file's page. Select the three dots to access the **Deep analysis** action.
 
@@ -333,7 +333,7 @@ You can view the comprehensive report that provides details on the following sec
 The details provided can help you investigate if there are indications of a potential attack.
 
 1. Select the file you submitted for deep analysis.
-2. Select the **Deep analysis** tab. If there are any previous reports, the report summary will appear in this tab.
+2. Select the **Deep analysis** tab. If there are any previous reports, the report summary appears in this tab.
 
    :::image type="content" source="media/analysis-results-nothing500.png" alt-text="The deep analysis report showing detailed information across a number of categories" lightbox="media/analysis-results-nothing500.png":::
 
@@ -362,9 +362,10 @@ If you come across a problem when trying to submit a file, try each of the follo
 
 6. If these steps don't resolve the issue, contact support.
 
-## Related topics
+## Related articles
 
 - [Take response actions on a device](respond-machine-alerts.md)
 - [Investigate files](investigate-files.md)
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
