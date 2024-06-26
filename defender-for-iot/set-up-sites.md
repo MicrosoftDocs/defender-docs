@@ -11,7 +11,7 @@ ms.topic: how-to
 
 # Set up a site
 
-Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which offers an overview of the security state of your entire operational technology (OT) network. Your organization's security team can use this page to regularly monitor the security status of your production sites.
+Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which offers an overview of the security state of your entire operational technology (OT) environment. Your organization's security team can use this page to regularly monitor the security status of your production sites.
 
 In this article, you learn how to set up a site in the **Site security** page. 
 
@@ -45,20 +45,20 @@ To set up a site and associate the OT devices in your network to it:
 
 ## Associate devices
 
-In this stage, you configure Defender for IoT to associate OT devices to the site, so it can correctly identify other OT devices at the same site.
+In this stage, you configure Defender for IoT to associate OT devices to the site, so it can correctly identify and associate all types of devices at the same site.
 
-1. In the search bar, type either a public IP address or the IP/MAC address for a specific OT device that is located at this site. 
-    
+1. In the search bar, type either a public IP address or the IP/MAC address for a specific OT device that is located at this site.
+
     A list of suggested sites appears in the table.
 
-1. If you don't know any of the OT device addresses: 
-    
+1. If you don't know any of the OT device addresses:
+
     1. Select **Show all suggested sites**.
 
         A list of all possible sites appears in the table. Each row in the table represents a suggested site location based on the OT devices in that location.
 
     1. Open the location and check that at least one of these devices exists at your site.
-    
+
         Check each location, because Defender for IoT might list your OT devices in more than one suggested location. If this happens, select all of the suggested locations that include an identified OT device. You can select any number of locations. However, you can't edit the list of devices that appear at a specific location.
 
 1. Review the devices and select the suggested sites to add. You might need to select more than one suggested site.
@@ -79,10 +79,9 @@ In this stage, you configure Defender for IoT to associate OT devices to the sit
 
 The site is now set up and appears in the Site security page.
 
-When the site is created data starts to appear once each OT device performs a network activity and contacts the Defender portal. For some devices this happens quickly, but other devices might only connect to the portal after intervals of days or weeks, in which case the data takes time to appear in the inventory. The data appears in the device inventory under **Site tag** and **site attribute**.
-<!-- OR Once the site is created, the data in the device inventory starts to update and include data for the **Site tag** and **site attribute**. However, the data update only occurs the next time a device performs a network activity and contacts the Defender portal, for some devices this happens quite quickly. However, other devices might only connect to the portal with interbals of days or weeks, in which case data takes time to appear in the inventory.-->
+When the site is created data starts to appear once each OT device performs a network activity and contacts the Defender portal. For some devices this happens quickly, but other devices might take longer, in which case the data takes time to appear in the inventory. The data appears in the device inventory under **Site tag** and **site attribute**.
 
-Once this connection is made and the site tag and attribute data appears, the OT device is protected and all of the security value provided by Defender for IoT are available, such as alerts, vulnerabilities and more.
+Once this connection is made and the site tag and attribute data appears, the device ins protected and all of the security value provided by Defender for IoT are available, such as alerts, vulnerabilities and more.
 
 >[!NOTE]
 > Once the site is created any new devices added to the network will automatically be detected and added to the device inventory. Also, if a device is moved to a different or new location within the network, these changes are automatically made to the network.
