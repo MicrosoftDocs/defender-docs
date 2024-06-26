@@ -1,51 +1,64 @@
 ---
 title: Investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal
-description: This article describes how to investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal
+description: This article describes how to investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal.
 ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 05/19/2024
+ms.date: 06/26/2024
 ms.topic: how-to
 ---
 
 # Investigate incidents and alerts
 
-Incidents and alerts are an integral part of the Microsoft Defender portal and Microsoft Defender for Endpoints. For more information, see [Investigate alerts in Defender XDR](/defender-xdr/investigate-alerts.md).
+Microsoft Defender for IoT in the Microsoft Defender portal displays incidents and alerts, which enhance your network security and operations with real-time details about events logged in your network. 
 
-The **Incidents** page lists possible security breaches that could compromise your network. The incident page displays a history of the alerts connected to the incident and an incident graph showing the other devices connected to the affected OT device that might also be compromised.
+Alerts are the basis of all incidents and indicate the occurrence of malicious or suspicious events in your environment. Within an incident, you analyze the alerts that affect your network, understand what they mean, and collate the evidence so that you can devise an effective remediation plan. 
 
-The alert description explains the type of security issue detected and lists remediation options to solve the security problem. The Incident page alerts are based on the Defender for Endpoints network signals and uniquely combine IT and OT environment signals to detect potential threats and data leaks across this boundary.
+In this article, you learn how to investigate a Microsoft Defender for IoT incident and its associated alerts, and how to remediate the security issues raised by the alert.
 
-In this article you learn to investigate a Microsoft Defender for IoT incident, the associated alerts, and to remediate them.
+The **Incidents** page displays: 
 
->[!Note]
->Incident and alert data for Defender for IoT will only appear once you have a site set up and the devices are sending data to the Defender portal.
+- A history of the alerts connected to the incident and an incident graph. The graph shows other devices connected to the affected OT device that might also be compromised.
+- Alert descriptions, which explain the type of detected security issue
+- Remediation options to solve the security problem. 
+
+> [!NOTE]
+> Incident and alert data for Defender for IoT only appear once you have a site set up and your devices are sending data to the Defender portal. Learn how to [set up a site](set-up-sites.md).
+
+Alerts in the **Incidents** page uniquely combine IT and operational technology (OT) environment signals to detect potential threats and data leaks.
+
+Learn more about [alerts](/defender-xdr/investigate-alerts.md) and [incidents](/defender-xdr/investigate-incidents.md) in the Defender portal.
+
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
 ## Investigate alerts
 
-Investigate threats that impact on your operational environment using the **Incidents** page, which shows the list of security events affecting your IT and OT devices.
+To investigate an alert:
 
-1. In the Defender portal, go to **Incidents & alerts > Incidents**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com/machines) menu, select **Incidents & alerts > Incidents**.
 
 1. To display OT related incidents:
+
     1. Select **Add filter**.
-    1. Check the **Product name** box, select **Add**.
-    1. Select the new **Product names** tab that appears and type **Defender for IoT**.
+    1. Select **Product name** and select **Add**.
+    1. Select the **Product names** tab that appears and type: *Defender for IoT*.
     1. Select **Apply**.
 
 1. Locate and select an incident.
 
-    The specific incident page shows the Attack story made up of the alert timeline, an Incident graph and the Incident details panel. The Incident graph shows you the OT device and the other IT or IoT devices that are connected to this alert, to show possible compromised connections.
+    The specific incident page shows the attack story made up of the alert timeline, an incident graph and the incident details. The incident graph displays the OT device and the other IT or IoT devices connected to this alert, to show possible compromised connections.
 
-1. Choose an alert from the Alerts list and the Incident graph and Incident details panel updates with specific data for this alert.
+1. Select an alert from the alerts list.
 
-1. In the Incident panel, scroll through the information, read the **Alert description** and follow the **Alert recommended actions** to remediate the problem.
+    The incident graph and incident details display specific data for this alert.
 
-## Defender for IoT alerts in Defender for Endpoints
+1. In the **Incident** panel, review the information, read the **Alert description** and follow the **Alert recommended actions** to remediate the issue.
 
-Defender for IoT produces its own unique alert. This is described in the table:
+## Defender for IoT alert
+
+Defender for IoT generates its own unique alert.
 
 | Name | Description |
 |----|----|
-| Possible operational impact due to a compromised device | A compromised device communicated with an operational technology (OT) asset. An attacker might be attempting to control or disrupt physical operations.  |
+|**Possible operational impact due to a compromised device** |A compromised device communicated with an operational technology (OT) asset. An attacker might be attempting to control or disrupt physical operations. |
