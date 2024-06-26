@@ -39,7 +39,7 @@ ms.date: 06/25/2024
 
 The following steps guide you on how to create roles in the Microsoft Defender portal. It assumes that you have already created Microsoft Entra user groups.
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security administrator role assigned.
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security Administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
@@ -64,11 +64,11 @@ The following steps guide you on how to create roles in the Microsoft Defender p
 ### Permission options
 
 - **View data**
-  - **Security operations** - View all security operations data in the portal
+  - **Security Operations** - View all security operations data in the portal
   - **Defender Vulnerability Management** - View Defender Vulnerability Management data in the portal
 
 - **Active remediation actions**
-  - **Security operations** - Take response actions, approve or dismiss pending remediation actions, manage allowed/blocked lists for automation and indicators
+  - **Security Operations** - Take response actions, approve or dismiss pending remediation actions, manage allowed/blocked lists for automation and indicators
   - **Defender Vulnerability Management - Exception handling** - Create new exceptions and manage active exceptions
   - **Defender Vulnerability Management - Remediation handling** - Submit new remediation requests, create tickets, and manage existing remediation activities
   - **Defender Vulnerability Management - Application handling** - Apply immediate mitigation actions by blocking vulnerable applications, as part of the remediation activity and manage the blocked apps and perform unblock actions
@@ -81,7 +81,7 @@ The following steps guide you on how to create roles in the Microsoft Defender p
 - **Manage portal system settings** - Configure storage settings, SIEM and threat intel API settings (applies globally), advanced settings, automated file uploads, roles and device groups
 
     > [!NOTE]
-    > This setting is only available in the Microsoft Defender for Endpoint administrator (default) role.
+    > This setting is only available in the Microsoft Defender for Endpoint Administrator (default) role.
 
 - **Manage security settings in Security Center** - Configure alert suppression settings, manage folder exclusions for automation, onboard and offboard devices, manage email notifications, manage evaluation lab, and manage allowed/blocked lists for indicators
 
@@ -114,7 +114,7 @@ For more information on the available commands, see [Investigate devices using L
 
 ## Delete roles
 
-1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security administrator role assigned.
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security Administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
