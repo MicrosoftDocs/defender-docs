@@ -118,3 +118,7 @@ To move a group up or down, drag that row to the correct position in the list. F
 ## Assign device group roles and permissions
 
 To get the full benefit of the Device group, you might need to create roles and permission settings. For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac.md), and [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles.md).
+
+## Next steps
+
+Learn how to [manage sites](manage-sites.md).
