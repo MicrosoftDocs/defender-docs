@@ -31,7 +31,7 @@ To add a trial license for Microsoft Defender for IoT:
 
 1. Confirm that the email address is correct by selecting **Set up account**.
 
-1. In the **Tell us about yourself** page, enter your details, and then select **Next**.
+1. In the **Tell us about yourself** page, type your details and select **Next**.
 
 1. Select whether you want the confirmation message to be sent to you via SMS or a phone call. Verify your phone number, and then select **Send verification code**.
 
@@ -39,7 +39,7 @@ To add a trial license for Microsoft Defender for IoT:
 
 1. In the **How you'll sign in** page, type a username and password and select **Next**.
 
-1. In the **Confirmation details** page, note your order number and username, and then select **Start using Microsoft Defender for IoT - OT Site License (1000 max devices per site) Trial** button to continue.
+1. In the **Confirmation details** page, note your order number and username, and select **Start using Microsoft Defender for IoT - OT Site License (1000 max devices per site) Trial** to continue.
 
 Once you have a trial license, [set up a new site](set-up-sites.md) so that Microsoft Defender for IoT can begin sending data to the Defender portal.
 
