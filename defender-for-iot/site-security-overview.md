@@ -44,3 +44,5 @@ The Site security page is aimed to assist the following user:
 - **OT Security Manager**: develop and implement OT security initiatives across multiple sites or the entire organization.
 - **Site Manager**: oversee daily operations at a specific site, ensuring smooth production and implementation of security measures.
 - **OT Security Engineers**: design, implement, and maintain security solutions that are aligned with the Security Program of the site or with the overall organizational security.
+
+For more information on the site security page and it's features, see [monitor site security](monitor-site-security.md).
