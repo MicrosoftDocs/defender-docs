@@ -43,9 +43,9 @@ Microsoft Defender Antivirus performance analyzer has the following prerequisite
 
 ## What is the Microsoft Defender Antivirus performance analyzer?
 
- If computers running Microsoft Defender Antivirus are experiencing performance issues, you can use performance analyzer to improve the performance of Microsoft Defender Antivirus. Performance analyzer for Microsoft Defender Antivirus in Windows 10, Windows 11, and Windows Server, is a PowerShell command-line tool that helps you determine files, file extensions, and processes that might be causing performance issues on individual endpoints during antivirus scans.  You can use the information gathered by performance analyzer to assess performance issues and apply remediation actions.
+If devices running Microsoft Defender Antivirus are experiencing performance issues, you can use the performance analyzer to improve the performance of Microsoft Defender Antivirus. The performance analyzer is a PowerShell command-line tool that helps you determine files, file extensions, and processes that might be causing performance issues on individual endpoints during antivirus scans. You can use the information gathered by performance analyzer to assess performance issues and apply remediation actions.
 
-Similar to the way mechanics perform diagnostics and service on a vehicle that has performance problems, performance analyzer can help you improve Defender Antivirus performance.
+Similar to the way mechanics perform diagnostics and service on a vehicle that has performance problems, the performance analyzer can help you improve Microsoft Defender Antivirus performance.
 
 :::image type="content" source="media/performance-analyzer-improve-defender-antivirus-performance.png" alt-text="Conceptual performance analyzer image for Microsoft Defender Antivirus." lightbox="media/performance-analyzer-improve-defender-antivirus-performance.png":::
 
@@ -64,18 +64,18 @@ Some options to analyze include:
 
 ## Running performance analyzer
 
-The high-level process for running performance analyzer involves the following steps:
+The high-level process for running the performance analyzer involves the following steps:
 
-1. Run performance analyzer to collect a performance recording of Microsoft Defender Antivirus events on the endpoint.
+1. Run the performance analyzer to collect a performance recording of Microsoft Defender Antivirus events on the endpoint.
 
    > [!NOTE]
-   > Performance of Microsoft Defender Antivirus events of the type **Microsoft-Antimalware-Engine** are recorded through the performance analyzer.
+   > Performance of Microsoft Defender Antivirus events of the type `Microsoft-Antimalware-Engine` are recorded through the performance analyzer.
 
 2. Analyze the scan results using different recording reports.
 
 ## Using performance analyzer
 
-To start recording system events, open PowerShell in administrative mode and perform the following steps:
+To start recording system events, open PowerShell in administrator mode and perform the following steps:
 
 1. Run the following command to start the recording:
 
@@ -94,21 +94,19 @@ To start recording system events, open PowerShell in administrative mode and per
    For more information on command-line parameters and options, see the [New-MpPerformanceRecording](#new-mpperformancerecording) and [Get-MpPerformanceReport](#get-mpperformancereport).
 
 > [!NOTE]
-> When running a recording, if you get the error "Cannot start performance recording because Windows Performance Recorder is already recording", run the following command to stop the existing trace with the new command:
-> **wpr -cancel -instancename MSFT_MpPerformanceRecording**
+> When running a recording, if you get the error "Cannot start performance recording because Windows Performance Recorder is already recording", run the following command to stop the existing trace with the new command: `wpr -cancel -instancename MSFT_MpPerformanceRecording`.
 
 ## Performance tuning data and information
 
-Based on the query, the user is able to view data for scan counts, duration (total/min/average/max/median), path, process, and **reason for scan**. The following image shows sample output for a simple query of the top 10 files for scan impact.
+Based on the query, the user is able to view data for scan counts, duration (total/min/average/max/median), path, process, and reason for scan. The following image shows sample output for a simple query of the top 10 files for scan impact.
 
 :::image type="content" source="media/example-output.png" alt-text="Example output for a basic TopFiles query" lightbox="media/example-output.png":::
 
 ## Exporting and converting to CSV and JSON
 
-The results of the performance analyzer can also be exported and converted to a CSV or JSON file.
-For examples that describe the process of "export" and "convert" through sample codes, see the following sections.
+The results of the performance analyzer can also be exported and converted to a CSV or JSON file. This article includes examples that describe the process of "export" and "convert" through sample code.
 
-Starting with Defender version `4.18.2206.X`, users are able to view scan skip reason information under "SkipReason" column. The possible values are:
+Starting with Defender version `4.18.2206.X`, users are able to view scan skip reason information under `SkipReason` column. The possible values are:
 
 - Not Skipped
 - Optimization (typically due to performance reasons)
@@ -145,7 +143,7 @@ There are two new PowerShell cmdlets used to tune performance of Microsoft Defen
 
 ### New-MpPerformanceRecording
 
-The following section describes the reference for the new PowerShell cmdlet New-MpPerformanceRecording. This cmdlet Collects a performance recording of Microsoft Defender Antivirus scans.
+The following section describes the reference for the new PowerShell cmdlet `New-MpPerformanceRecording`. This cmdlet Collects a performance recording of Microsoft Defender Antivirus scans.
 
 #### Syntax: New-MpPerformanceRecording
 
@@ -157,7 +155,7 @@ New-MpPerformanceRecording -RecordTo <String>
 
 The `New-MpPerformanceRecording` cmdlet collects a performance recording of Microsoft Defender Antivirus scans. These performance recordings contain Microsoft-Antimalware-Engine and NT kernel process events and can be analyzed after collection using the [Get-MpPerformanceReport](#get-mpperformancereport) cmdlet.
 
-This `New-MpPerformanceRecording` cmdlet provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided "AS IS", and isn't intended to provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
+This `New-MpPerformanceRecording` cmdlet provides an insight into problematic files that could cause a degradation in the performance of Microsoft Defender Antivirus. This tool is provided "as is", and isn't intended to provide suggestions on exclusions. Exclusions can reduce the level of protection on your endpoints. Exclusions, if any, should be defined with caution.
 
 For more information on the performance analyzer, see [Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer) docs.
 
@@ -345,17 +343,17 @@ This flag can accompany all other Top Path options. If missing, a default value 
 
 | flag | definition |
 |:---|:---|  
-|  -**TopScansPerPath** | Specifies how many top scans to specify for each top path. |
-|  -**TopFilesPerPath** | Specifies how many top files to specify for each top path. |
-|  -**TopScansPerFilePerPath** | Specifies how many top scans to output for each top file for each top path, sorted by "Duration" |
-|  -**TopExtensionsPerPath** | Specifies how many top extensions to output for each top path |
-|  -**TopScansPerExtensionPerPath** | Specifies how many top scans to output for each top extension for each top path |
-|  -**TopProcessesPerPath** | Specifies how many top processes to output for each top path |
-|  -**TopScansPerProcessPerPath** | Specifies how many top scans to output for each top process for each top path |
-|  -**TopPathsPerExtension** | Specifies how many top paths to output for each top extension |
-|  -**TopScansPerPathPerExtension** | Specifies how many top scans to output for each top path for each top extension |
-|  -**TopPathsPerProcess** | Specifies how many top paths to output for each top process |
-|  -**TopScansPerPathPerProcess** | Specifies how many top scans to output for each top path for each top process |
+|  -`TopScansPerPath` | Specifies how many top scans to specify for each top path. |
+|  -`TopFilesPerPath` | Specifies how many top files to specify for each top path. |
+|  -`TopScansPerFilePerPath` | Specifies how many top scans to output for each top file for each top path, sorted by "Duration" |
+|  -`TopExtensionsPerPath` | Specifies how many top extensions to output for each top path |
+|  -`TopScansPerExtensionPerPath` | Specifies how many top scans to output for each top extension for each top path |
+|  -`TopProcessesPerPath` | Specifies how many top processes to output for each top path |
+|  -`TopScansPerProcessPerPath` | Specifies how many top scans to output for each top process for each top path |
+|  -`TopPathsPerExtension` | Specifies how many top paths to output for each top extension |
+|  -`TopScansPerPathPerExtension` | Specifies how many top scans to output for each top path for each top extension |
+|  -`TopPathsPerProcess` | Specifies how many top paths to output for each top process |
+|  -`TopScansPerPathPerProcess` | Specifies how many top scans to output for each top path for each top process |
 
 ##### -MinDuration
 
