@@ -41,7 +41,7 @@ Microsoft Defender Antivirus performance analyzer has the following prerequisite
 - Platform Version: `4.18.2108.7` or later
 - PowerShell Version: PowerShell Version 5.1, PowerShell ISE, remote PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
 
-## What is Microsoft Defender Antivirus performance analyzer?
+## What is the Microsoft Defender Antivirus performance analyzer?
 
  If computers running Microsoft Defender Antivirus are experiencing performance issues, you can use performance analyzer to improve the performance of Microsoft Defender Antivirus. Performance analyzer for Microsoft Defender Antivirus in Windows 10, Windows 11, and Windows Server, is a PowerShell command-line tool that helps you determine files, file extensions, and processes that might be causing performance issues on individual endpoints during antivirus scans.  You can use the information gathered by performance analyzer to assess performance issues and apply remediation actions.
 
@@ -103,7 +103,7 @@ Based on the query, the user is able to view data for scan counts, duration (tot
 
 :::image type="content" source="media/example-output.png" alt-text="Example output for a basic TopFiles query" lightbox="media/example-output.png":::
 
-## Additional functionality: exporting and converting to CSV and JSON
+## Exporting and converting to CSV and JSON
 
 The results of the performance analyzer can also be exported and converted to a CSV or JSON file.
 For examples that describe the process of "export" and "convert" through sample codes, see the following sections.
