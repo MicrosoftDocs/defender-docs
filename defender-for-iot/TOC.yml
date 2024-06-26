@@ -20,7 +20,7 @@
         href: set-up-sites.md
     - name: Monitor site security
       items:
-      - name: Monitor site security
+      - name: Site security monitoring
         href: monitor-site-security.md  
     - name: Discover devices
       items:
