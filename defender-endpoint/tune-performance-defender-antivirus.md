@@ -173,7 +173,7 @@ For more information on the performance analyzer, see [Performance Analyzer](/wi
 New-MpPerformanceRecording -RecordTo .\Defender-scans.etl
 ```
 
-The above command collects a performance recording and saves it to the specified path: **.\Defender-scans.etl**.
+The command collects a performance recording and saves it to the specified path: `.\Defender-scans.etl`.
 
 ##### Example 2: Collect a performance recording for remote PowerShell session
 
@@ -182,7 +182,7 @@ $s = New-PSSession -ComputerName Server02 -Credential Domain01\User01
 New-MpPerformanceRecording -RecordTo C:\LocalPathOnServer02\trace.etl -Session $s
 ```
 
-The command collects a performance recording on `Server02` (as specified by argument $s of parameter Session) and saves it to the specified path: **C:\LocalPathOnServer02\trace.etl** on `Server02`.
+The command collects a performance recording on `Server02` (as specified by argument $s of parameter Session) and saves it to the specified path: `C:\LocalPathOnServer02\trace.etl` on `Server02`.
 
 
 #### Parameters: New-MpPerformanceRecording
@@ -359,7 +359,7 @@ This flag can accompany all other Top Path options. If missing, a default value 
 
 ##### -MinDuration
 
-Specifies the minimum duration of any scan or total scan durations of files, extensions, and processes included in the report; accepts values like  **0.1234567sec**, **0.1234ms**, **0.1us**, or a valid TimeSpan.
+Specifies the minimum duration of any scan or total scan durations of files, extensions, and processes included in the report; accepts values like  `0.1234567sec`, `0.1234ms`, `0.1us`, or a valid TimeSpan.
 
 ```yaml
 Type: String
