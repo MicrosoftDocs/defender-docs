@@ -32,7 +32,7 @@ Site Security is currently in public preview.
 
 | Feature | Description|
 |----|----|
-|**Visualize and manage your physical sites**| - Create and manage operational sites and devices with ease using automatic suggestions from your inventory.<br>- Utilize the site creation wizard for seamless setup and to group devices by physical proximity for better organization.|
+|**[Visualize and manage your physical sites](set-up-sites.md)**| - Create and manage operational sites and devices with ease using automatic suggestions from your inventory.<br>- Utilize the site creation wizard for seamless setup and to group devices by physical proximity for better organization.|
 |**Gain comprehensive insights and analytics**|- Access a unified view of all operational sites, including security insights to understand their importance and prioritize responses.<br>- Monitor site-specific discovery, posture, and threat detection to identify and address exposure, risks, and business impact.|
 |**Take Action to Reduce Risks**|- Dive into dedicated site-based views for detailed insights on inventory, vulnerabilities, and incidents.<br>- Leverage context-driven guidance within the Defender portal to effectively remediate risks and enhance site security.|
 
