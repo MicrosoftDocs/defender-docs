@@ -11,7 +11,7 @@ ms.topic: how-to
 
 # Prioritize and remediate vulnerabilities
 
-With vulnerability management, Microsoft Defender for IoT provides extended coverage for OT networks, gathers OT device data into one place, and displays the data with the other devices on your network.
+With vulnerability management, Microsoft Defender for IoT in the Defender portal provides extended coverage for operational technology (OT) networks, gathers OT device data into one place, and displays the data with the other devices on your network.
 
 In this article, you learn how to investigate vulnerabilities and take recommended remediation actions.
 
@@ -29,7 +29,7 @@ Learn more about how Defender for IoT [discovers vulnerabilities](discover-vulne
     1. Select a device group.
     1. Select **Apply**.
 
-1. Select a CVE.
+1. Select a Common Vulnerabilities and Exposures (CVE) ID.
 
     A side panel opens with the CVE ID as the title, and the **Vulnerability details** tab visible. You can also select the **Exposed devices** and **Affected software** tabs.
 
@@ -41,3 +41,7 @@ Learn more about how Defender for IoT [discovers vulnerabilities](discover-vulne
 
     - Select **Request remediation** and follow the [Request remediation instructions](/defender-vulnerability-management/tvm-remediation#request-remediation). This sends a request to the relevant team to perform the remediation.
     - Select **Exception options** and fill in the details. For more information, see [justification for an exception](/defender-vulnerability-management/tvm-security-recommendation.md#explore-security-recommendation-options). To complete, select **Submit**.
+
+## Next steps
+
+[Investigate and remediate incidents and alerts](investigate-threats.md)
