@@ -9,9 +9,7 @@
       - name: What is Microsoft Defender for IoT?
         href: microsoft-defender-iot.md      
       - name: Site security
-        href: site-security-overview.md
-      - name: Device discovery
-        href: device-discovery.md
+        href: site-security-overview.md      
     - name: Get started
       items:
       - name: Prerequisites
