@@ -63,7 +63,7 @@ In this stage, you configure Defender for IoT to associate OT devices to the sit
 
 1. Review the devices and select the suggested sites to add. You might need to select more than one suggested site.
 
-        :::image type="content" source="media/site-security-associate-devices.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location in the site set-up page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
+    :::image type="content" source="media/site-security-associate-devices.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location in the site set-up page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
 
 1. Select **Next** to review the site details.
 
