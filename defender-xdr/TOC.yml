@@ -481,7 +481,7 @@
       items:
         - name: Multitenant management in Microsoft Defender XDR
           href: mto-overview.md
-        - name: Set up multitenant management in Microsoft Defender XDR 
+        - name: Set up multitenant management 
           href: mto-requirements.md
         - name: View and manage incidents and alerts
           href: mto-incidents-alerts.md
@@ -494,7 +494,9 @@
         - name: Manage tenants
           href: mto-tenants.md
         - name: Create and manage endpoint security policies
-          href: mto-endpoint-security-policy.md               
+          href: mto-endpoint-security-policy.md
+        - name: Manage content distribution with tenant groups
+          href: mto-tenantgroups.md                           
     - name: Manage roles and permissions
       items: 
         - name: Manage access and roles in Microsoft Defender XDR

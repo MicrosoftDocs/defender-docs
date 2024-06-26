@@ -32,9 +32,9 @@ ms.reviewer: mkaminska
 The Device Health report provides information about the devices in your organization. The report includes trending information showing the sensor health state, antivirus status, OS platforms, Windows 10 versions, and Microsoft Defender Antivirus update versions.
 
 > [!IMPORTANT]
-> For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
+> For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
 
-In the Microsoft 365 Security dashboard navigation panel, select **Reports**, and then open **Device health and compliance**.
+In the Microsoft Defender portalnel, select **Reports**, and then open **Device health and compliance**.
 
 - The [**Sensor health & OS** tab](#sensor-health--os-tab) provides general operating system information, divided into three cards that display the following device attributes:
   - [Sensor health card](#sensor-health-card)
@@ -43,20 +43,29 @@ In the Microsoft 365 Security dashboard navigation panel, select **Reports**, an
 
 ## Report access permissions
 
-To access the Device health and antivirus compliance report in the Microsoft 365 Security dashboard, the following permissions are required:
+To access the Device health and antivirus compliance report in the Microsoft Defender portal, the following permissions are required:
 
 | Permission name | Permission type |
 |:---|:---|
 | View Data | Threat and vulnerability management (TVM) |
 
-To Assign these permissions:
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-1. Sign in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> using account with Security administrator or Global administrator role assigned.
+To assign these permissions:
+
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with Security administrator or Global administrator role assigned.
+
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
+
 1. Select the role you'd like to edit.
+
 1. Select **Edit**.
+
 1. In **Edit role**, on the **General** tab, in **Role name**, type a name for the role.
+
 1. In **Description** type a brief summary of the role.
+
 1. In **Permissions**, select **View Data**, and under **View Data** select **Threat and vulnerability management** (TVM).
 
 For more information about user role management, see [Create and manage roles for role-based access control](user-roles.md).
@@ -89,7 +98,9 @@ Use the provided filters to include or exclude devices with certain attributes. 
 For example, to show data about Windows 10 devices with Active sensor health state:
 
 1. Under **Filters** > **Sensor health state** > **Active**.
+
 2. Then select **OS platforms** > **Windows 10**.
+
 3. Select **Apply**.
 
 ### Sensor health card
@@ -144,4 +155,5 @@ The Windows version trend graph can help you quickly determine whether your orga
 >
 
 [Microsoft Defender Antivirus health](device-health-microsoft-defender-antivirus-health.md#microsoft-defender-antivirus-health-tab)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
