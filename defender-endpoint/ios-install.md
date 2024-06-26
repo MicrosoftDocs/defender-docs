@@ -257,7 +257,8 @@ Defender app is installed into the user's device. User signs in and completes th
 ### Supported features and limitations
 1. Supports all the current capabilities of Defender for Endpoint iOS like – Web protection, Network Protection, Jailbreak detection, Vulnerabilities in OS and Apps, Alerting in Defender Security Portal and Compliance policies. 
   1. Zero touch (silent) deployment and auto onboarding of VPN is not supported with User Enrollment since admins cannot push a device wide VPN profile with User Enrollment.
-  1. For vulnerability management of apps, only apps in the work profile will be visible. 
+  1. For vulnerability management of apps, only apps in the work profile will be visible.
+  1. It can take up to 10 minutes for newly onboarded devices to become compliant if targeted by compliance policies.  
   1. Read more on the [User Enrollment limitations and capabilities](/mem/intune/enrollment/ios-user-enrollment-supported-actions#limitations-and-capabilities-not-supported).
 
 
