@@ -16,7 +16,7 @@ ms.topic: concept-article
 
 # Site security
 
-The Site security page in the Defender portal offers an overview of the security state of your entire OT and non-OT network. Site security is based on creating a **site** that represents a specific physical location in your organization, for example, a manufacturing facility. This site based view of your orgnaisation allows you to clearly differentiate security issues by location and identify points which are better protected or areas that need security improvements.
+The Site security page in the Defender portal offers an overview of the security state of your entire OT and non-OT network. Site security is based on creating a **site** that represents a specific physical location in your organization, for example, a manufacturing facility. This site based view of your organization allows you to clearly differentiate security issues by location and identify points that are better protected or areas that need security improvements.
 
 The Site security page gives the security team management tools to effectively understand and analyze the state of each site. Site security also provides a unified view of all operational sites across your entire organization. Together this enables the security team to make better informed decisions when dealing with security issues.
 
@@ -28,7 +28,7 @@ Using the Microsoft Defender for Endpoint agents already installed on your netwo
 
 Site Security is currently in public preview.
 
-The security team can use the Site security page to identify the most critical areas to work on to prevent or respond to advanced threats. The Site security page lists each site and the number and type of threats that could affect it. This allows the user to make quick and highly informed decisions about which security problems are higher priority and in need of an immediate response. The Site security page also has an aggregated view that shows data for sites with the highest exposure and incident levels, to assist in deciding which security issues to prioritize.
+The security team can use the Site security page to identify the most critical areas to work on to prevent or respond to advanced threats. The Site security page lists each site and the number and type of threats that could affect it. This allows the user to make quick and highly informed decisions about which security problems are higher priority and in need of an immediate response. The Site security page also has an aggregated view that shows data for sites with the highest exposure and incident levels, to assist when prioritizing security problems.
 
 **Site security features**
 
@@ -47,6 +47,8 @@ The security team can use the Site security page to identify the most critical a
 - Dive into dedicated site-based views for detailed insights on inventory, vulnerabilities, and incidents.
 - Leverage context-driven guidance within the Defender portal to effectively remediate risks and enhance site security.
 
+| Feature | Description|
+|----|----|
 |**Visualize and manage your physical sites**| - Create and manage operational sites and devices with ease using automatic suggestions from your inventory.<br>- Utilize the site creation wizard for seamless setup and to group devices by physical proximity for better organization.|
 |**Gain comprehensive insights and analytics**|- Access a unified view of all operational sites, complete with security insights to understand their importance and prioritize responses.<br>- Monitor site-specific discovery, posture, and threat detection to identify and address exposure, risks, and business impact.|
 |**Take Action to Reduce Risks**|- Dive into dedicated site-based views for detailed insights on inventory, vulnerabilities, and incidents.<br>- Leverage context-driven guidance within the Defender portal to effectively remediate risks and enhance site security.|
@@ -59,14 +61,6 @@ The Site security page assists the following user:
 - **OT Security Manager**: develop and implement OT security initiatives across multiple sites or the entire organization.
 - **Site Manager**: oversee daily operations at a specific site, ensuring smooth production and implementation of security measures.
 - **OT Security Engineers**: design, implement, and maintain security solutions that are aligned with the Security Program of the site or with the overall organizational security.
-
-- SOC analyst to get a view of the most important security issues affecting your network. <!-- what do we do with this? Is it included in the above titles?-->
-<!-- the following seems less important now?-->
-This dashboard is especially important for two positions in your company.
-
-The CISO managers who need to see a high level view of the security status of their systems and sites.
-
-Also, for the OT security admin users/SOCs in charge of security implementation who need to be able to make quick and highly informed decisions about which security problems are higher priority and in need of immediate responses.
 
 ## Site security dashboard
 
