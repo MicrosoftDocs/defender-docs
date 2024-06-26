@@ -220,7 +220,6 @@ The **Collect file** button can have the following states:
 
 If a file hasn't been seen in the organization in the past 30 days, **Collect file** is disabled. 
 
-
 > [!Important]
 > A file that was quarantined as a potential network threat might not be recoverable. If a user attempts to restore the file after quarantine, that file might not be accessible. This can be due to the system no longer having network credentials to access the file. Typically, this is a result of a temporary log on to a system or shared folder and the access tokens expired.
 
