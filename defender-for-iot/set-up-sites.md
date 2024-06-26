@@ -69,52 +69,50 @@ In this stage, you configure Defender for IoT to associate OT devices to the sit
 
 ## Review site details
 
-1. Review that information for the site you want to create.
+Review that information for the site you want to create:
 
-    If you want to review the selected OT devices, select **Edit devices** and you return to the **Associate devices** screen.
-
-    You could create a Device group now or finish the site set-up. A Device group can also be set up at a later stage or a different team member might create it. For more information, see [add a device group](#add-device-group).
-
+1. Review the selected OT devices. If needed, select **Edit devices** to return to the **Associate devices** screen.
 1. Select **Complete**.
 
-The site is now set up and appears in the Site security page.
+    The site is now set up and appears in the **Site security** page. 
 
-When the site is created data starts to appear once each OT device performs a network activity and contacts the Defender portal. For some devices this happens quickly, but other devices might take longer, in which case the data takes time to appear in the inventory. The data appears in the device inventory under **Site tag** and **site attribute**.
+    Regarding device data:
 
-Once this connection is made and the site tag and attribute data appears, the device ins protected and all of the security value provided by Defender for IoT are available, such as alerts, vulnerabilities and more.
+    - The site data in the **Device Inventory** under **Site tag** and **Site attribute** starts to appear after each OT device performs network activity and contacts the Defender portal. For some devices, this happens quickly, but for other devices, the data takes time to appear in the inventory. When the site tag and attribute data appears, the device is protected by Defender for IoT, including all of the security value, such as alerts, vulnerabilities, and more.
+    - Any new devices that are added to the network are automatically detected and added to the device inventory. Also, if a device is moved to a different or new location within the network, these changes are automatically made to the network.
 
->[!NOTE]
-> Once the site is created any new devices added to the network will automatically be detected and added to the device inventory. Also, if a device is moved to a different or new location within the network, these changes are automatically made to the network.
+1. Select **Create device group** and [create a device group](#add-device-group) now, or select **Close** and [set up a device group at a later stage](/defender-endpoint/machine-groups.md).
 
 ## Add device group
 
-A device group can be made using the link at the end of the Site set up process, or set up at another time.
+Use a device group to make sure that the correct users have access to the site. To create a device group:
 
-Create a device group based on a site location to restrict users to that specific site. <!-- [ OR ] -->
+1. Select **Create device group**. The **Settings > Endpoints > Device groups** page opens.
+1. Select **Add device group** and type a device group name.
+1. Select the remediation level, type a description, and select **Next**. 
 
-It's important that only the correct users have access to the site. Access and permission controls can be set for groups of users to restrict access to a specific site or group of sites. Create a **Device group** and set the access per user.
+    The **Devices** page opens.
 
-1. Select **Create device group**. The Settings > Endpoints > Device groups page opens.
-1. Select **Add device group**.
-1. Type a **Device group name**.
-1. Select the **Remediation level**.
-1. Type a **Description**.
-1. Select **Next**. The Devices page opens.
-1. Type the value for the **Tag** condition. Type the term **Site:** and then the name of the site. For example, Site: San Francisco.
-1. Select **Next**. The Preview devices page opens.
-1. The Preview devices page displays a list of devices so that you can ensure you're creating the correct group. Select **Next**. The User access page opens.
-1. Filter the user groups or choose the user groups to add to the device group.
-1. Select **Submit**. The device group is created.
-1. Select **Done**.
+1. Type the value for the **Tag** condition in the format: *Site: Site name*. For example, *Site: San Francisco*.
+1. Select **Next**. 
 
-Your device group is now set up and appears in the Device group list.
+    The **Preview devices** page opens with a list of devices in the group. 
+
+1. Select **Next**. 
+
+    The **User access** page opens.
+
+1. Filter the user groups or select the user groups to add to the device group.
+1. Select **Submit** and select **Done**.
+
+    Your device group is now set up and appears in the device groups list.
 
 ## Rank device groups
 
-Device groups might list different preferences for the same user, in which case you need to rank the importance of each Device group.
+If a device group lists different preferences for the same user, you need to rank the importance of each device group.
 
-To move a group up or down, drag that row to the correct position in the list. For more information, see [ranking device groups in Microsoft Defender for Endpoint](/defender-endpoint/machine-groups.md).
+To move a group up or down, drag THE row to the correct position in the list. For more information, see [ranking device groups in Microsoft Defender for Endpoint](/defender-endpoint/machine-groups.md).
 
 ## Assign device group roles and permissions
 
-To get the full benefit of the Device group, you might need to create roles and permission settings. For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac.md), and [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles.md).
+To get the full benefit of device groups, you might need to create roles and permission settings. For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac.md), and [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles.md).
