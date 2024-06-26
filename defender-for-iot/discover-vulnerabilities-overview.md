@@ -24,12 +24,12 @@ The key vulnerability management capabilities are:
 |Capability |Description |
 |----|----|
 |Extended vulnerability coverage| Defender for IoT uses detailed OT device firmware information and discovers the device vendor, model, and version to identify known vulnerabilities. |
-|Security recommendations page|Offers actionable steps to update and mitigate vulnerable products. |
-|Weaknesses page|Includes a detailed list of vulnerabilities like zero-days and known exploits. |
-|Management|You can manage and control the vulnerabilities globally, per tenant or device group, per device from the device page, or per vulnerable product through the Inventory page. |
-|Exception handling| Create exceptions for recommendations that can't be patched.|
-|Customizable Vulnerability Notifications| Alert key stakeholders with customizable notifications.|
-|Reporting Inaccuracies| Users can report inaccuracies on discovered CVEs or request support for new vulnerabilities.|
+|[Security recommendations page](/defender-vulnerability-management/tvm-security-recommendation.md)|Offers actionable steps to update and mitigate vulnerable products. |
+|[Weaknesses page](/defender-vulnerability-management/tvm-weaknesses.md)|Includes a detailed list of vulnerabilities like zero-days and known exploits. |
+|[Management](/defender-vulnerability-management/tvm-weaknesses.md#view-common-vulnerabilities-and-exposures-cve-entries-in-other-places)|You can manage and control the vulnerabilities globally, per tenant or device group, per device from the device page, or per vulnerable product through the Inventory page. |
+|[Exception handling](/defender-vulnerability-management/tvm-security-recommendation.md#file-for-exception)| Create exceptions for recommendations that can't be patched.|
+|[Customizable Vulnerability Notifications](defender-endpoint/configure-vulnerability-email-notifications.md)| Alert key stakeholders with customizable notifications.|
+|[Reporting Inaccuracies](defender-vulnerability-management/tvm-weaknesses.md#report-inaccuracy)| Users can report inaccuracies on discovered CVEs or request support for new vulnerabilities.|
 
 ## Weaknesses page
 
