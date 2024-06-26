@@ -59,7 +59,6 @@ Defender for IoT in the Defender portal uses the following combination of techno
 
 |Use case  |Capabilities  |
 |---------|---------|
-
 |**[Discover OT devices](manage-devices-inventory.md)**     |Gather OT network data from Microsoft Defender for Endpoint; identify and  manage OT devices.  |
 |**[Get an overview of your productions sites (site security)](site-security-overview.md)** |Get an overview of your production sites to gain insights into OT risks, make better-informed security investment decisions​, and streamline communication between stakeholders. |
 |**[Prioritize and remediate vulnerabilities](prioritize-vulnerabilities.md)**     |Proactively manage OT network risks based on vulnerability details and recommended remediation advice.  |
