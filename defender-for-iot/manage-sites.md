@@ -15,6 +15,8 @@ Microsoft Defender for IoT in the Defender portal includes the the **Site securi
 
 When you manage a site, you might need to edit or delete the site information listed in the **Site security** page.
 
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+
 ## Edit or delete a site
 
 To edit or delete a site:

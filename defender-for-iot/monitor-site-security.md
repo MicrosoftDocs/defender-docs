@@ -19,6 +19,11 @@ Learn more about the [site security benefits and use cases](site-security-overvi
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
+## Prerequisites
+
+- Review [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
+- Review site security permissions according to RBAC requirements. For more information, see [RBAC permissions for Defender for IoT](prerequisites.md#permissions).
+
 ## Review the site security page
 
 The **Site security** page gives you an overview of the security status of your network and is divided into two main sections:
@@ -37,8 +42,8 @@ Review the top **How protected are your sites** section to get the following inf
 |**Monitored OT sites** |The number of monitored sites. |Select **Get more sites** to add more sites. |
 |**Total devices** |The number of total OT devices monitored across the entire network. |Select **View inventory** to access the Device inventory. |
 |**Top vendors** |The number of OT devices in your network according to the vendor that produces them. |Select **View all** to view the devices and vendor information in the **Device Inventory** page. |
-|**High exposure devices** |The number of highly exposed OT devices for the top three sites. This indicates devices exposed to a breach (pre-breach). |Drill down into the high risk devices in the **Device Inventory** page to identify and mitigate critical issues. |
-|**High risk devices** |The number of high risk OT devices for the top three sites. This indicates devices that might have been breached (pre-breach). |Drill down into the high risk devices in the **Device Inventory** page to identify and mitigate critical issues. |
+|**Top sites with high risk devices** |The number of high risk OT devices for the top three sites. This number indicates devices that might have been breached (post-breach). |Select the site name to open the **Device Inventory** page filtered to show devices in this site. |
+|**Top sites with high exposure devices** |The number of highly exposed OT devices for the top three sites. This number indicates devices vulnerable to a breach (pre-breach). |Select the site name to open the **Device Inventory** page filtered to show devices in this site. |
 
 ## Review the site list
 
