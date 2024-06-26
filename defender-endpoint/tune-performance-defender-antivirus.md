@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: siosulli
 ms.author: siosulli
-ms.date: 02/16/2024
+ms.date: 06/26/2024
 manager: deniseb
 ms.collection: 
 - m365-security
@@ -32,11 +32,16 @@ search.appverid: met150
 
 Microsoft Defender Antivirus performance analyzer has the following prerequisites:
 
-- Supported Windows versions: Windows 10, Windows 11, Windows 2012 R2 with the Modern Unified Solution and Windows Server 2016 and above
+- Supported Windows versions: 
+   - Windows 10
+   - Windows 11
+   - Windows Server 2016 and later
+   - Windows Server 2012 R2 (when onboarded using [modern, unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution))
+   - For Windows Server 2012 R2, the Windows ADK (Windows Performance Toolkit) is needed. [Download and install the Windows ADK](/windows-hardware/get-started/adk-install)
 - Platform Version: `4.18.2108.7` or later
 - PowerShell Version: PowerShell Version 5.1, PowerShell ISE, remote PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
 
-## What is Microsoft Defender Antivirus performance analyzer?
+## What is the Microsoft Defender Antivirus performance analyzer?
 
  If computers running Microsoft Defender Antivirus are experiencing performance issues, you can use performance analyzer to improve the performance of Microsoft Defender Antivirus. Performance analyzer for Microsoft Defender Antivirus in Windows 10, Windows 11, and Windows Server, is a PowerShell command-line tool that helps you determine files, file extensions, and processes that might be causing performance issues on individual endpoints during antivirus scans.  You can use the information gathered by performance analyzer to assess performance issues and apply remediation actions.
 
@@ -98,7 +103,7 @@ Based on the query, the user is able to view data for scan counts, duration (tot
 
 :::image type="content" source="media/example-output.png" alt-text="Example output for a basic TopFiles query" lightbox="media/example-output.png":::
 
-## Additional functionality: exporting and converting to CSV and JSON
+## Exporting and converting to CSV and JSON
 
 The results of the performance analyzer can also be exported and converted to a CSV or JSON file.
 For examples that describe the process of "export" and "convert" through sample codes, see the following sections.
