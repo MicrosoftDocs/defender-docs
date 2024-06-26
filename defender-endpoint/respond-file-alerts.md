@@ -147,15 +147,15 @@ You can roll back and remove a file from quarantine if you've determined that it
 
 ## Download or collect file
 
-Selecting **Download file** from the response actions allows you to download a local, password-protected .zip archive containing your file. A flyout will appear where you can record a reason for downloading the file, and set a password.
+Selecting **Download file** from the response actions allows you to download a local, password-protected .zip archive containing your file. A flyout appears where you can record a reason for downloading the file, and set a password.
 
 By default, you should be able to download files that are in quarantine.
 
 The **Download file** button can have the following states:
 
-- **Active** - You'll be able to collect the file. 
+- **Active** - You are able to collect the file. 
 
-- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you may not have appropriate RBAC permissions to collect files.
+- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files.
 
   The following permissions are required:
 
@@ -177,9 +177,9 @@ The **Download file** button can have the following states:
 
 ### Download quarantined files
 
-Files that have been quarantined by Microsoft Defender Antivirus or your security team will be saved in a compliant way according to your [sample submission configurations](enable-cloud-protection-microsoft-defender-antivirus.md). Your security team can download the files directly from the file's detail page via the "Download file" button. **This feature is turned 'On' by default**.
+Files that were quarantined by Microsoft Defender Antivirus or your security team are saved in a compliant way according to your [sample submission configurations](enable-cloud-protection-microsoft-defender-antivirus.md). Your security team can download the files directly from the file's detail page via the "Download file" button. **This feature is turned 'On' by default**.
 
-The location depends on your organization's geo settings (either EU, UK, or US). A quarantined file will only be collected once per organization. Learn more about Microsoft's data protection from the Service Trust Portal at https://aka.ms/STP.
+The location depends on your organization's geo settings (either EU, UK, or US). A quarantined file is collected only once per organization. Learn more about Microsoft's data protection from the Service Trust Portal at https://aka.ms/STP.
 
 Having this setting turned on can help security teams examine potentially bad files and investigate incidents quickly and in a less risky way. However, if you need to turn off this setting, go to **Settings** \> **Endpoints** \> **Advanced features** \> **Download quarantined files** to adjust the setting. [Learn more about advanced features](advanced-features.md)
 
@@ -187,7 +187,7 @@ Having this setting turned on can help security teams examine potentially bad fi
 
 Users may be prompted to provide explicit consent before backing up the quarantined file, depending on your [sample submission configuration](enable-cloud-protection-microsoft-defender-antivirus.md#use-group-policy-to-turn-on-cloud-protection).
 
-This feature won't work if sample submission is turned off. If automatic sample submission is set to request permission from the user, only samples that the user agrees to send will be collected.
+This feature doesn't work if sample submission is turned off. If automatic sample submission is set to request permission from the user, only samples that the user agrees to send will be collected.
 
 > [!IMPORTANT]
 > Download quarantined file requirements:
