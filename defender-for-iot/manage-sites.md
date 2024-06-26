@@ -1,6 +1,6 @@
 ---
-title: Manage sites for Microsoft Defender for IoT in the Defender portal
-description: Read this article to get an overview of managing site information in the Site security page.
+title: Manage sites for Microsoft Defender for IoT in the Microsoft Defender portal
+description: Read this article to get an overview of managing site information in the Site security page of the Microsoft Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
@@ -11,7 +11,7 @@ ms.topic: how-to
 
 # Manage sites
 
-Microsoft Defender for IoT in the Defender portal includes the the **Site security** page, which allows you to see the up-to-date security state of your production sites. Learn more about the [site security benefits and use cases](site-security-overview.md) or the [**Site security** page](monitor-site-security.md).
+Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which allows you to see the up-to-date security state of your production sites. Learn more about the [site security benefits and use cases](site-security-overview.md) or the [**Site security** page](monitor-site-security.md).
 
 When you manage a site, you might need to edit or delete the site information listed in the **Site security** page.
 
