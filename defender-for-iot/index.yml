@@ -60,8 +60,8 @@ landingContent:
         - text: Monitor site security
           url: monitor-site-security.md
         - text: Prioritize and remediate vulnerabilities
-          url: discover-vulnerabilities.md
-        - text: Investigate incidents
+          url: prioritize-vulnerabilities.md
+        - text: Investigate incidents and alerts
           url: investigate-threats.md
         - text: Manage sites
           url: manage-sites.md
