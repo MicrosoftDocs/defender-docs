@@ -1,6 +1,6 @@
 ---
-title: Monitor site security for Microsoft Defender for IoT in XDR Defender portal
-description: Read this article to get an overview of Monitor site security of the new Site Security feature.
+title: Monitor site security for Microsoft Defender for IoT in Microsoft Defender portal
+description: Read this article to get an overview of monitoring site security for Microsoft Defender for IoT in Microsoft Defender portal.
 ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
@@ -16,12 +16,11 @@ ms.topic: how-to
 
 # Monitor site security
 
-The security team regularly check the information presented in the **Site security** page to see the up-to-date security state of the sites. Understanding the different features here guides the security team to decide how to prioritize and assign security issues to other team members.
+The security team regularly checks the information presented in the **Site security** page of Microsoft Defender for IoT in the Defender portal to see the up-to-date security state of the sites. Understanding the different features here guides the security team to decide how to prioritize and assign security issues to other team members.
 
 ## Prerequisites
 
 - Review [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
-- At least one active Microsoft Defender for IoT site set up and receiving data.
 - Site security permissions according to RBAC requirements. For more information, see [RBAC permissions for Defender for IoT](prerequisites.md#permissions).
 
 ## Monitoring with the site security page
@@ -30,8 +29,6 @@ The Site security page gives you an overview of the security status of your netw
 
 The top of the page displays a general overview of your entire network, including sites with the highest number of exposed or at risk devices.
 The rest of the page lists security information for each site.
-<!-- need to replace the image.-->
-:::image type="content" source="media/site-security-dashboard-with-new-site.png" alt-text="Screenshot of the site security dashboard including the list of sites":::
 
 ## Cross site metrics panel
 
@@ -48,7 +45,6 @@ The top metrics panel contains network wide security information to guide your s
 ## Site list
 
 The rest of the Site security page lists each site and displays site specific security data.
-
 
 The following table describes the features for each site.
 
