@@ -32,7 +32,7 @@ ms.date: 01/29/2024
 Tamper protection in macOS helps prevent unwanted changes to security settings from being made by unauthorized users. Tamper protection helps prevent unauthorized removal of Microsoft Defender for Endpoint on macOS. This capability also helps important security files, processes, and configuration settings from being tampered.
 
 > [!IMPORTANT]
-> Starting March of 2023, Microsoft Defender for Endpoint on macOS will start respecting the selection for tamper protection applied via the global tamper protection switch under advanced settings in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). You can choose to enforce (block/audit/disable) your own macOS tamper protection settings by using a Mobile Device Management (MDM) solution such as Intune or JAMF (recommended). If the tamper protection setting was not enforced via MDM, a local administrator can continue to manually change the setting with the following command: `sudo mdatp config tamper-protection enforcement-level --value (chosen mode)`.
+> Starting March of 2023, Microsoft Defender for Endpoint on macOS respects the selection for tamper protection applied via the global tamper protection switch under advanced settings in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). You can choose to enforce (block/audit/disable) your own macOS tamper protection settings by using a Mobile Device Management (MDM) solution such as Intune or JAMF (recommended). If the tamper protection setting was not enforced via MDM, a local administrator can continue to manually change the setting with the following command: `sudo mdatp config tamper-protection enforcement-level --value (chosen mode)`.
 
 You can set Tamper Protection in the following modes:
 
@@ -77,6 +77,8 @@ You can configure the tamper protection mode by providing the mode name as enfor
 - Supported macOS versions: Big Sur (11), or later.
 - Minimum required version for Defender for Endpoint: 101.70.19.
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 **Highly recommended settings:**
 
@@ -92,13 +94,17 @@ You can configure the tamper protection mode by providing the mode name as enfor
 Microsoft Defender evaluates these settings in the following order.
 If a higher priority setting is configured, the rest are ignored:
 
-1) Managed configuration profile (tamperProtection/enforcementLevel setting):
+1. Managed configuration profile (tamperProtection/enforcementLevel setting):
     - [JAMF](#jamf)
     - [Intune](#intune)
-2) [Manual configuration](#manual-configuration) (with `mdatp config tamper-protection enforcement-level --value { disabled|audit|block }`)
-3) If Tamper Protection flag in Security Portal is set, the "block" mode is used (in Preview, not available to all customers)
-4) If machine is licensed, then "audit" mode is used by default
-5) If machine isn't licensed, then Tamper Protection is in the "block" mode
+
+2. [Manual configuration](#manual-configuration) (with `mdatp config tamper-protection enforcement-level --value { disabled|audit|block }`)
+
+3. If Tamper Protection flag in Security Portal is set, the "block" mode is used (in Preview, not available to all customers)
+
+4. If machine is licensed, then "audit" mode is used by default
+
+5. If machine isn't licensed, then Tamper Protection is in the "block" mode
 
 ### Before you begin
 
@@ -316,6 +322,7 @@ sudo mdatp config tamper-protection enforcement-level --value disabled
 ```
 
 ## JAMF
+
 Change the `enforcementLevel` value to "disabled" [in your configuration profile](mac-preferences.md#tamper-protection), and push it to the machine:
 
 ```console
@@ -333,6 +340,7 @@ Change the `enforcementLevel` value to "disabled" [in your configuration profile
 ```
 
 ### Intune
+
 Add the following configuration in your Intune [profile](mac-preferences.md#tamper-protection):
 
 ```XML
@@ -393,10 +401,9 @@ Add the following configuration in your Intune [profile](mac-preferences.md#tamp
 ## Exclusions
 
 > [!NOTE]
-> Available in version 101.98.71 or newer.
+> Available in version `101.98.71` or later.
 
-Tamper Protection prevents any macOS process from making changes to Microsoft Defender's assets or killing Microsoft Defender's processes.
-Protected assets include installation and configuration files.
+Tamper protection prevents any macOS process from making changes to Microsoft Defender's assets or stopping Microsoft Defender's processes. Protected assets include installation and configuration files.
 
 Internally, Microsoft Defender makes exceptions to certain macOS processes, under certain circumstances.
 As an example, macOS can upgrade Defender's package, if Tamper Protection verifies the packages authenticity.
