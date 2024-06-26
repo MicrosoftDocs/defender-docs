@@ -24,7 +24,7 @@ Learn more about the [site security benefits and use cases](site-security-overvi
 - Review [the general prerequisites needed for Microsoft Defender for IoT](prerequisites.md).
 - Review site security permissions according to RBAC requirements. For more information, see [RBAC permissions for Defender for IoT](prerequisites.md#permissions).
 
-## Review the site security page
+## Review the Site security page
 
 The **Site security** page gives you an overview of the security status of your network and is divided into two main sections:
 
