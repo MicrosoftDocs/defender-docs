@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 audience: ITPro
 author: siosulli
 ms.author: siosulli
-ms.date: 02/16/2024
+ms.date: 06/26/2024
 manager: deniseb
 ms.collection: 
 - m365-security
@@ -32,7 +32,12 @@ search.appverid: met150
 
 Microsoft Defender Antivirus performance analyzer has the following prerequisites:
 
-- Supported Windows versions: Windows 10, Windows 11, Windows 2012 R2 with the Modern Unified Solution and Windows Server 2016 and above
+- Supported Windows versions: 
+   - Windows 10
+   - Windows 11
+   - Windows Server 2016 and later
+   - Windows Server 2012 R2 (when onboarded using [modern, unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution))
+   - For Windows Server 2012 R2, the Windows ADK (Windows Performance Toolkit) is needed. [Download and install the Windows ADK](/windows-hardware/get-started/adk-install)
 - Platform Version: `4.18.2108.7` or later
 - PowerShell Version: PowerShell Version 5.1, PowerShell ISE, remote PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
 
