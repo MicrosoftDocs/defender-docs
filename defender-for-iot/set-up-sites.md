@@ -39,7 +39,7 @@ To set up a site and associate the OT devices in your network to it:
     - **Site description**: Describe the purpose of the site, what activities occur there, the types and number of devices used, and other important information about the site.
     - **Owners**: The contact emails of any users administering the site who must be contacted when problems occur.
 
-    :::image type="content" source="media/set-up-sites/site-security-set-up-details.png" alt-text="Screenshot showing the details for a new site in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal." lightbox="media/set-up-sites/site-security-set-up-details.png":::
+    :::image type="content" source="media/set-up-sites/site-security-set-up-details-new.png" alt-text="Screenshot showing the details for a new site in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal." lightbox="media/set-up-sites/site-security-set-up-details-new.png":::
 
 1. When completed, select **Next** to associate devices to the site.
 
@@ -63,7 +63,7 @@ In this stage, you configure Defender for IoT to associate OT devices to the sit
 
 1. Review the devices and select the suggested sites to add. You might need to select more than one suggested site.
 
-    :::image type="content" source="media/set-up-sites/site-security-associate-devices.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location in the site set-up page of Microsoft Defender for IoT in the Microsoft Defender portal." lightbox="media/set-up-sites/site-security-associate-devices.png":::
+    :::image type="content" source="media/set-up-sites/site-security-associate-devices-new.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location in the site set-up page of Microsoft Defender for IoT in the Microsoft Defender portal." lightbox="media/set-up-sites/site-security-associate-devices-new.png":::
 
 1. Select **Next** to review the site details.
 
