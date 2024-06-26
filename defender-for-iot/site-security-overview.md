@@ -16,9 +16,11 @@ ms.topic: concept-article
 
 # Site security
 
-The Site security page in the Defender portal offers an overview of the security state of your entire OT/IoT network. Site security is based on creating a **site** that represents a specific physical location in your organization, for example, a manufacturing facility. The Site security page gives the security team management tools to effectively understand and analyze the state of each site. Site security also provides a unified view of all operational sites across your entire organization. Together this enables the security team to make better informed decisions when dealing with security issues.
+The Site security page in the Defender portal offers an overview of the security state of your entire OT and non-OT network. Site security is based on creating a **site** that represents a specific physical location in your organization, for example, a manufacturing facility. This site based view of your orgnaisation allows you to clearly differentiate security issues by location and identify points which are better protected or areas that need security improvements.
 
-Using Microsoft Defender for Endpoint agents already installed on your network, Site security then detects all of the devices at that location and adds them to the site. This set up allows you to:
+The Site security page gives the security team management tools to effectively understand and analyze the state of each site. Site security also provides a unified view of all operational sites across your entire organization. Together this enables the security team to make better informed decisions when dealing with security issues.
+
+Using the Microsoft Defender for Endpoint agents already installed on your network, Site security detects all of the devices at that location and adds them to the site. This set up allows you to:
 
 - proactively track and gain security insights for the site
 - analyze the data for your network
@@ -26,19 +28,28 @@ Using Microsoft Defender for Endpoint agents already installed on your network, 
 
 Site Security is currently in public preview.
 
-The CISO and security site manager can use this dashboard to identify the most critical areas to work on to prevent or respond to advanced threats.
+The security team can use the Site security page to identify the most critical areas to work on to prevent or respond to advanced threats. The Site security page lists each site and the number and type of threats that could affect it. This allows the user to make quick and highly informed decisions about which security problems are higher priority and in need of an immediate response. The Site security page also has an aggregated view that shows data for sites with the highest exposure and incident levels, to assist in deciding which security issues to prioritize.
 
-To help save time for security management and site managers the dashboard lists each site and the number and type of threats that could affect it. This allows the user to make quick and highly informed decisions about which security problems are higher priority and in need of an immediate response.
+**Site security features**
 
-The aggregated view shows data for sites with the highest exposure and incident levels, which also helps in making fast decisions to protect your network.
+**Visualize and manage your physical sites**
 
-The Site security features include:
+- Create and manage operational sites and devices with ease using automatic suggestions from your inventory.
+- Utilize the site creation wizard for seamless setup and to group devices by physical proximity for better organization.
 
-- Speedy set up: Defender for IoT identifies all OT/IoT devices it can at a specific physical location and assigns them to a **Site**. Defender for IoT uses Microsoft for Endpoint agents already on your network to identify all of the OT devices and automatically add them to the site. This enables the faster and more accurate onboarding of devices into the XDR portal, which means your network starts to be secured and monitored without the need to add new equipment or a lengthy process of logging each of your OT devices.
-- Associate OT devices: You can add specific OT devices to the site, which then identify other devices to be added to the device inventory.
-- Authorized users: Device group's can restrict a specific group of users based on site access or security policies and can apply across the entire Defender portal. [A device group is a collection of devices that share common attributes or security policies.]
-- Seemless site and device management: The Site security dashboard enables administrators to easily add and manage new sites and devices to the existing network set up.
-- Quick response to risks: The data and links from the dashboard take the user to other relevant areas in the XDR portal, helping to swiftly deal with security risks and complete tasks.
+**Gain comprehensive insights and analytics**
+
+- Access a unified view of all operational sites, complete with security insights to understand their importance and prioritize responses.
+- Monitor site-specific discovery, posture, and threat detection to identify and address exposure, risks, and business impact.
+
+**Take Action to Reduce Risks**
+
+- Dive into dedicated site-based views for detailed insights on inventory, vulnerabilities, and incidents.
+- Leverage context-driven guidance within the Defender portal to effectively remediate risks and enhance site security.
+
+|**Visualize and manage your physical sites**| - Create and manage operational sites and devices with ease using automatic suggestions from your inventory.<br>- Utilize the site creation wizard for seamless setup and to group devices by physical proximity for better organization.|
+|**Gain comprehensive insights and analytics**|- Access a unified view of all operational sites, complete with security insights to understand their importance and prioritize responses.<br>- Monitor site-specific discovery, posture, and threat detection to identify and address exposure, risks, and business impact.|
+|**Take Action to Reduce Risks**|- Dive into dedicated site-based views for detailed insights on inventory, vulnerabilities, and incidents.<br>- Leverage context-driven guidance within the Defender portal to effectively remediate risks and enhance site security.|
 
 ## Key scenarios and users
 
