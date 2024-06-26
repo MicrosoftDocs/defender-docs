@@ -2,16 +2,11 @@
 title: Monitor site security for Microsoft Defender for IoT in the Defender portal
 description: Learn how to monitor the site security for Microsoft Defender for IoT in the Microsoft Defender portal.
 ms.service: defender-for-iot
-author: lwainstein
+author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 05/19/2024
-manager: deniseb
-audience: ITPro
-ms.collection:
-- m365-security
-- tier2
-ms.topic: reference
+ms.date: 06/25/2024
+ms.topic: how-to
 ---
 
 # Monitor site security

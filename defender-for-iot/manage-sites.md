@@ -2,10 +2,10 @@
 title: Manage sites for Microsoft Defender for IoT in XDR Defender portal
 description: Read this article to get an overview of managing site information in the new Site Security feature.
 ms.service: defender-for-iot
-author: lwainstein
+author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 05/19/2024
+ms.date: 06/25/2024
 ms.topic: how-to
 ---
 
