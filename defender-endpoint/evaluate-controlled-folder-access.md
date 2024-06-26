@@ -51,7 +51,7 @@ Set-MpPreference -EnableControlledFolderAccess AuditMode
 ```
 
 > [!NOTE]
-> - To see how controlled folder access would work in your organization, use a management tool to deploy this setting to devices in your networks. You can also use Group Policy, Intune, mobile device management (MDM), or Microsoft Configuration Manager to configure and deploy the setting, as described in the main [controlled folder access topic](controlled-folders.md).
+> - To see how controlled folder access would work in your organization, use a management tool to deploy it to devices in your network. You can also use Group Policy, Intune, mobile device management (MDM), or Microsoft Configuration Manager to configure and deploy the setting, as described in [Protect important folders with controlled folder access](controlled-folders.md).
 >
 > - If your workflow involves usage of shared network folders, enabling controlled folder access can result in significant network performance reduction, if the shared network folders are accessed by an untrusted process, particularly because of many queries to the file share server. Make sure your file servers are optimized for increased network traffic, especially if you're using shared network folders for offline files.
 >
