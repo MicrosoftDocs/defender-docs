@@ -18,7 +18,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 01/19/2024
+ms.date: 06/26/2024
 ---
 
 # Get started with your Microsoft Defender for Endpoint deployment
@@ -32,7 +32,6 @@ ms.date: 01/19/2024
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
-
 
 Maximize available security capabilities and better protect your enterprise from cyber threats by deploying Microsoft Defender for Endpoint and onboarding your devices. Onboarding your devices enables you to identify and stop threats quickly, prioritize risks, and evolve your defenses across operating systems and network devices.
 
@@ -48,13 +47,16 @@ The steps to deploy Defender for Endpoint are:
 4. [Step 4 - Onboard devices](onboarding.md): Assess and onboard your devices to Defender for Endpoint.
 5. [Step 5 - Configure capabilities](onboard-configure.md): You're now ready to configure Defender for Endpoint security capabilities to protect your devices.
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 ## Requirements
 
 Here's a list of prerequisites required to deploy Defender for Endpoint:
 
-- You're a global admin
+- You're a Global Administrator
 - Your environment meets the [minimum requirements](minimum-requirements.md)
-- You have a full inventory of your environment. The following table provides a starting point to gather information and ensure your environment is deeply understood by stakeholders, which helps identify potential dependencies and/or changes required in technologies or processes.
+- You have a full inventory of your environment. The following table provides a starting point to gather information and ensure that stakeholders understand your environment. The inventory helps identify potential dependencies and/or changes required in technologies or processes.
 
 |What|Description|
 |---|---|
