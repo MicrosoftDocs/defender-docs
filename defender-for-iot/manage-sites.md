@@ -24,7 +24,9 @@ To edit or delete a site:
 1. Select one of the following:
 
     - Select **Edit site**.to open the **Site details** pane, where you can make changes to the site. For more information, see [Site details](set-up-sites.md).
-    - Select **Delete site** to remove a site from the site list.
+    - Select **Delete site** to remove a site from the site list. 
+        
+        This deletes all site-related information for the associated devices.
 
 ## Add device group
 
