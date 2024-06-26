@@ -39,7 +39,7 @@ To set up a site and associate the OT devices in your network to it:
     - **Site description**: Describe the purpose of the site, what activities occur there, the types and number of devices used, and other important information about the site.
     - **Owners**: The contact emails of any users administering the site who must be contacted when problems occur.
 
-    :::image type="content" source="media/site-security-set-up-details.png" alt-text="Screenshot showing the details for a new site in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal." lightbox="media/site-security-set-up-details.png" :::
+    :::image type="content" source="media/set-up-sites/site-security-set-up-details.png" alt-text="Screenshot showing the details for a new site in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal." lightbox="media/site-security-set-up-details.png" :::
 
 1. When completed, select **Next** to associate devices to the site.
 
@@ -55,15 +55,15 @@ In this stage, you configure Defender for IoT to associate OT devices to the sit
     
     1. Select **Show all suggested sites**.
 
-        A list of all possible sites appears in the table. Each row in the table represents a suggested site location based on the OT devices in that location. 
+        A list of all possible sites appears in the table. Each row in the table represents a suggested site location based on the OT devices in that location.
 
-    1. Open the location and check that at least one of these devices exists at your site. 
+    1. Open the location and check that at least one of these devices exists at your site.
     
         Check each location, because Defender for IoT might list your OT devices in more than one suggested location. If this happens, select all of the suggested locations that include an identified OT device. You can select any number of locations. However, you can't edit the list of devices that appear at a specific location.
 
 1. Review the devices and select the suggested sites to add. You might need to select more than one suggested site.
 
-    :::image type="content" source="media/site-security-associate-devices.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location in the site set-up page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
+    :::image type="content" source="media/set-up-sites/site-security-associate-devices.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location in the site set-up page of Microsoft Defender for IoT in the Microsoft Defender portal." lightbox="media/set-up-site/site-security-associate-devices.png":::
 
 1. Select **Next** to review the site details.
 
