@@ -5,7 +5,7 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/26/2024
+ms.date: 06/25/2024
 ms.topic: how-to
 ---
 
@@ -14,6 +14,8 @@ ms.topic: how-to
 Microsoft Defender for IoT in the Defender portal includes the the **Site security** page, which allows you to see the up-to-date security state of your production sites. Learn more about the [site security benefits and use cases](site-security-overview.md) or the [**Site security** page](monitor-site-security.md).
 
 When you manage a site, you might need to edit or delete the site information listed in the **Site security** page.
+
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
 ## Edit or delete a site
 
