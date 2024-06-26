@@ -22,7 +22,7 @@ When you manage a site, you might need to edit or delete the site information li
 To edit or delete a site:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com/machines) menu, select **Operational technology** > **Site security**.
-1. Select the ellipsis (:::image type="icon" source="media/menu-ellipsis.png" alt-text="menu vertical ellipsis button":::) to the right of the site name. 
+1. Select the ellipsis (:::image type="icon" source="media/manage-sites/menu-ellipsis.png" alt-text="menu vertical ellipsis button":::) to the right of the site name. 
 1. Select one of the following:
 
     - Select **Edit site**.to open the **Site details** pane, where you can make changes to the site. For more information, see [Site details](set-up-sites.md).
