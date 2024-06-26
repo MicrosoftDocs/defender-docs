@@ -175,7 +175,7 @@ data_loss_prevention_status                 : "disabled"
 full_disk_access_enabled                    : true
 ```
 
-Notice that the "tamper_protection" is now set to "block".
+Notice that the `tamper_protection` is now set to `block`.
 
 ### JAMF
 
@@ -412,15 +412,14 @@ For example, macOS MDM process can replace Microsoft's Defender's managed config
 There are situations when a Global Administrator needs to restart Defender on all or some managed devices.
 Typically it's done by creating and running a JAMF's policy that runs a script on remote devices (or similar operations for other MDM vendors.)
 
-In order to avoid marking those policy-initiated operations, Microsoft Defender detects those MDM policy processes for JAMF and Intune, and permits tampering operations from them. At the same time, tamper protection will block the same script from restarting Microsoft Defender, if it is started from a Terminal locally.
+In order to avoid marking those policy-initiated operations, Microsoft Defender detects those MDM policy processes for JAMF and Intune, and permits tampering operations from them. At the same time, tamper protection blocks the same script from restarting Microsoft Defender, if it's started from a Terminal locally.
 
 However, those policy running processes are vendor specific.
 While Microsoft Defender provides built-in exclusions for JAMF and Intune, it can't provide those exclusions for all possible MDM vendors.
 Instead, a Global Administrator can add their own exclusions to tamper protection.
 Exclusions can be done only through MDM profile, not local configuration.
 
-To do that, you need to first figure out the path to the MDM helper process that runs policies. You can do it either by following the MDM vendor's documentation.
-You can also initiate tampering with a test policy, get an alert in the Security Portal, inspect the hierarchy of processes that initiated the "attack", and pick the process that looks like an MDM helper candidate.
+To do that, you need to first figure out the path to the MDM helper process that runs policies. You can do it either by following the MDM vendor's documentation. You can also initiate tampering with a test policy, get an alert in the Security Portal, inspect the hierarchy of processes that initiated the attack, and pick the process that looks like an MDM helper candidate.
 
 Once the process path is identified, you have few choices on how to configure an exclusion:
 
