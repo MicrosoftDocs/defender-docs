@@ -11,22 +11,22 @@ ms.topic: conceptual
 
 # Site security
 
-Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which offers an overview of the security state of your entire operational environment. The operational environment monitors all types of devices - OT and others.
+Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which offers an overview of the security state of your entire operational environment. The operational environment monitors all types of devices - operational technology (OT) devices and others.
 
 In this article, you learn about the benefits and key scenarios of site security.
 
-[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
-
-## What are sites?
-
-With site security, you can create *sites*, which represent a specific physical location in your organization. For example, a site can represent a manufacturing facility. Use a site based view of your organization to:
+*Sites* represent a specific physical location in your organization. For example, a site can represent a manufacturing facility. Use a site based view of your organization to:
 
 - Clearly differentiate security issues by location.
 - Identify points with sufficient protection, or areas that need security improvements.
 
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+
 ## Site security page
 
 The **Site security** page gives the security team management tools to effectively understand and analyze the state of each site. Site security also provides a unified view of all operational sites across your entire organization. Your security team uses this data to make better informed decisions when dealing with security issues.
+
+Learn more about how to use the [Site security page](monitor-site-security.md).
 
 ## Key capabilities
 
@@ -45,5 +45,3 @@ The **Site security** page is designed to assist the following users:
 - **OT Security Manager**: develop and implement OT security initiatives across multiple sites or the entire organization.
 - **Site Manager**: oversee daily operations at a specific site, ensuring smooth production and implementation of security measures.
 - **OT Security Engineers**: design, implement, and maintain security solutions that are aligned with the security program of the site or with the overall organizational security.
-
-Learn more about how to use the [Site security page](monitor-site-security.md).
