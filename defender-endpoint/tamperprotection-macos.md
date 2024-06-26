@@ -539,9 +539,11 @@ configuration_is_managed                    : false
 - `configuration_local`, `configuration_portal`, `configuration_default` tells the mode that would be used, *if the corresponding configuration channel was used*. (As an example, you can configure tamper protection to the "block" mode via an MDM profile, and `configuration_default` tells you `audit`. It only means that *if you remove* your profile, and the mode wasn't set with `mdatp config` or through Security Portal, then it uses the default mode, which is `audit`.)
 
 > [!NOTE]
-> You need to inspect Microsoft Defender's logs to get the same information prior to version 101.98.71. See below for an example.
+> You need to inspect Microsoft Defender's logs to get the same information prior to version 101.98.71. Here's an example.
 
 ```console
 $ sudo grep -F '[{tamperProtection}]: Feature state:' /Library/Logs/Microsoft/mdatp/microsoft_defender_core.log | tail -n 1
 ```
+
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
