@@ -314,7 +314,7 @@ Get-MpPerformanceReport -Path .\Defender-scans.etl -TopScans 100 -MinDuration 10
 Get-MpPerformanceReport -Path .\Defender-scans.etl -TopFiles 10 -TopExtensions 10 -TopProcesses 10 -TopScans 10 -Raw | ConvertTo-Json
 ```
 
-Using \-Raw in the above command specifies that the output should be machine readable and readily convertible to serialization formats like JSON.
+Using `-Raw` in the command specifies that the output should be machine readable and readily convertible to serialization formats like JSON.
 
 #### Parameters: Get-MpPerformanceReport
 
