@@ -16,7 +16,7 @@ ms.topic: reference
 
 # Site security monitoring
 
-The **Site security** page in Microsoft Defender for IoT in the Microsoft Defender portal offers an overview of the security state of your entire OT/IoT network. Your organization's security team can use this page to regularly monitor the security status of your production sites.
+Microsoft Defender for IoT in the Microsoft Defender portal includes the The **Site security** page, which offers an overview of the security state of your entire OT/IoT network. Your organization's security team can use this page to regularly monitor the security status of your production sites.
 
 In this article, you gain an understanding of different site security features, so your security team can decide how to prioritize and assign security issues to other team members.
 
