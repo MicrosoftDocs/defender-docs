@@ -13,12 +13,12 @@ ms.topic: how-to
 
 Incidents and alerts are an integral part of the Microsoft Defender portal and Microsoft Defender for Endpoints. For more information, see [Investigate alerts in Defender XDR](/defender-xdr/investigate-alerts.md).
 
-The **Incidents** page lists possible security breaches that could compromise your network. The incident page displays a history of the alerts connected to the incident and an incident graph showing the other devices connected to the affected OT device which might also be compromised.
+The **Incidents** page lists possible security breaches that could compromise your network. The incident page displays a history of the alerts connected to the incident and an incident graph showing the other devices connected to the affected OT device that might also be compromised.
 
-The alert description explains the type of security issue detected and lists remidiation options to solve the security problem. The Incident page alerts are based on the Defender for Endpoints network signals and uniquely combine IT and OT environment signals to detect potential threats and data leaks across this boundary.
+The alert description explains the type of security issue detected and lists remediation options to solve the security problem. The Incident page alerts are based on the Defender for Endpoints network signals and uniquely combine IT and OT environment signals to detect potential threats and data leaks across this boundary.
 
-In this article you learn to investigate a Microsoft Defender for IoT incident, it's associated alerts, and to remidiate them.
-<!-- Amit wanted this note, although it might not really be relevant here. -->
+In this article you learn to investigate a Microsoft Defender for IoT incident, the associated alerts, and to remediate them.
+
 >[!Note]
 >Incident and alert data for Defender for IoT will only appear once you have a site set up and the devices are sending data to the Defender portal.
 
@@ -36,7 +36,7 @@ Investigate threats that impact on your operational environment using the **Inci
 
 1. Locate and select an incident.
 
-    The specific incident page shows the Attack story made up of the alert timeline, an Incident graph and the Incident details panel. The Incident graph will show you the OT device and the other IT or IoT devices that it connects with to show the possible vulnerabilities.
+    The specific incident page shows the Attack story made up of the alert timeline, an Incident graph and the Incident details panel. The Incident graph shows you the OT device and the other IT or IoT devices that are connected to this alert, to show possible compromised connections.
 
 1. Choose an alert from the Alerts list and the Incident graph and Incident details panel updates with specific data for this alert.
 
@@ -44,8 +44,8 @@ Investigate threats that impact on your operational environment using the **Inci
 
 ## Defender for IoT alerts in Defender for Endpoints
 
-Defender for IoT produces its own unique alert. This is described in the table below:
+Defender for IoT produces its own unique alert. This is described in the table:
 
 | Name | Description |
 |----|----|
-| Possible OT device impact due to compromised device | A compromised endpoint device was observed recently communicating with an OT device. An attacker might be trying to cross from an IT to OT device and cause operational impact.  |
+| Possible operational impact due to a compromised device | A compromised device communicated with an operational technology (OT) asset. An attacker might be attempting to control or disrupt physical operations.  |
