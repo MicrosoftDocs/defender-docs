@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 08/07/2023
+ms.date: 06/26/2024
 ---
 
 # Take response actions on a file
@@ -48,7 +48,7 @@ Response actions run along the top of the file page, and include:
 > [!NOTE]
 > If you're using Defender for Endpoint Plan 1, you can take certain response actions manually. For more information, see [Manual response actions](defender-endpoint-plan-1.md#manual-response-actions).
 
-You can also submit files for deep analysis, to run the file in a secure cloud sandbox. When the analysis is complete, you'll get a detailed report that provides information about the behavior of the file. You can submit files for deep analysis and read past reports by selecting the **Deep analysis** action.
+You can also submit files for deep analysis, to run the file in a secure cloud sandbox. When the analysis is complete, you get a detailed report that provides information about the behavior of the file. You can submit files for deep analysis and read past reports by selecting the **Deep analysis** action.
 
 Some actions require certain permissions. The following table describes what action certain permissions can take on portable executable (PE) and non-PE files:
 
@@ -60,6 +60,9 @@ Some actions require certain permissions. The following table describes what act
 |Live response advanced|&#x2611;|&#x2611;|
 
 For more information on roles, see [Create and manage roles for role-based access control](user-roles.md).
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Stop and quarantine files in your network
 
@@ -74,7 +77,7 @@ You can contain an attack in your organization by stopping the malicious process
 
 The **Stop and Quarantine File** action includes stopping running processes, quarantining the files, and deleting persistent data such as registry keys.
 
-This action takes effect on devices with Windows 10, version 1703 or later, and Windows 11 and Server 2012 R2+, where the file was observed in the last 30 days.
+This action takes effect on devices with Windows 10, version 1703 or later, and Windows 11 and Windows Server 2012 R2 or later, where the file was observed in the last 30 days.
 
 > [!NOTE]
 > You'll be able to restore the file from quarantine at any time.
@@ -102,7 +105,7 @@ This action takes effect on devices with Windows 10, version 1703 or later, and 
    :::image type="content" source="media/atp-stopnquarantine-file.png" alt-text="The stop and quarantine file action center" lightbox="media/atp-stopnquarantine-file.png":::
 
    - **Submission time** - Shows when the action was submitted.
-   - **Success** - Shows the number of devices where the file has been stopped and quarantined.
+   - **Success** - Shows the number of devices where the file was stopped and quarantined.
    - **Failed** - Shows the number of devices where the action failed and details about the failure.
    - **Pending** - Shows the number of devices where the file is yet to be stopped and quarantined from. This can take time for cases when the device is offline or not connected to the network.
 
