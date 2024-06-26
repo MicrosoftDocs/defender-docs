@@ -1,5 +1,5 @@
 ---
-title: "How to report false positives or false negatives following automated investigation and response"
+title: "Report false positives or false negatives following automated investigation and response"
 description: Was something missed or wrongly detected by AIR in Microsoft Defender for Office 365 Plan 2? Learn how to submit false positives or false negatives to Microsoft for analysis.
 search.appverid: met150
 f1.keywords: 
@@ -22,7 +22,7 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 ---
 
-# How to report false positives or false negatives in automated investigation and response (AIR)
+# Report false positives or false negatives in automated investigation and response (AIR)
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
