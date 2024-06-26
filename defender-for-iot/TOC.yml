@@ -21,8 +21,14 @@
     - name: Monitor site security
       items:
       - name: Monitor site security
-        href: monitor-site-security.md         
-    - name: Prioritize and remediate vulnerabilities
+        href: monitor-site-security.md  
+    - name: Discover devices
+      items:
+      - name: Overview
+        href: device-discovery.md
+      - name: Discover and manage devices
+        href: manage-devices-inventory.md
+    - name: Investigate and remediate vulnerabilities       
       items:
       - name: Overview
         href: discover-vulnerabilities-overview.md
