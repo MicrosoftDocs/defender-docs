@@ -1,6 +1,6 @@
 ---
-title: Site security monitoring for Microsoft Defender for IoT in the Defender portal
-description: Read this article to get an overview of monitoring site security for Microsoft Defender for IoT in Microsoft Defender portal.
+title: Monitor site security for Microsoft Defender for IoT in the Defender portal
+description: Learn how to monitor the site security for Microsoft Defender for IoT in the Microsoft Defender portal.
 ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
@@ -14,48 +14,48 @@ ms.collection:
 ms.topic: reference
 ---
 
-# Site security monitoring
+# Monitor site security
 
 Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which offers an overview of the security state of your entire OT/IoT network. Your organization's security team can use this page to regularly monitor the security status of your production sites.
 
-In this article, you gain an understanding of different site security features, so your security team can decide how to prioritize and assign security issues to other team members.
+In this article, you learn how to gain an overview of your site security, so your security team can decide how to prioritize and assign security issues.
 
 Learn more about the [site security benefits and use cases](site-security-overview.md).
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
-## Site security page
+## Review the site security page
 
 The **Site security** page gives you an overview of the security status of your network and is divided into two main sections:
 
-- The top **How protected are your sites** section displays a general overview of your entire network, including sites with the highest number of devices that are exposed or at risk.
-- The rest of the page lists security information for each site.
+- [Review the top **How protected are your sites** section](#review-site-protection-information) to get a general overview of your entire network, including sites with the highest number of devices that are exposed or at risk.
+- [Review the site list](#review-the-site-list) to monitor specific security information for each site.
 
-The data displayed in the **Site security** page is the total aggregated data for the entire network, and might include data for sites that you don't have access to. When you drill down into device data from the [site list](#site-list), the **Device Inventory** page only displays data for devices you can access.
+The data displayed in the **Site security** page is the total aggregated data for the entire network, and might include data for sites that you don't have access to. When you drill down into device data from the [site list](#review-the-site-list), the **Device Inventory** page only displays data for devices you can access.
 
-## How protected are your sites? section
+## Review site protection information
 
-The top **How protected are your sites** section displays the following network wide security information to guide your security decisions:
+Review the top **How protected are your sites** section to get the following information:
 
-|Type |Description |Available actions |
+|Section |Description |Next steps |
 |----|----|----|
 |**Monitored OT sites** |The number of monitored sites. |Select **Get more sites** to add more sites. |
 |**Total devices** |The number of total OT devices monitored across the entire network. |Select **View inventory** to access the Device inventory. |
 |**Top vendors** |The number of OT devices in your network according to the vendor that produces them. |Select **View all** to view the devices and vendor information in the **Device Inventory** page. |
-|**High risk devices** |The number of high risk OT devices for the top three sites. | |
-|**High exposure devices** |The number of highly exposed OT devices for the top three sites. | |
+|**High exposure devices** |The number of highly exposed OT devices for the top three sites. This indicates devices exposed to a breach (pre-breach). |Drill down into the high risk devices in the **Device Inventory** page to identify and mitigate critical issues. |
+|**High risk devices** |The number of high risk OT devices for the top three sites. This indicates devices that might have been breached (pre-breach). |Drill down into the high risk devices in the **Device Inventory** page to identify and mitigate critical issues. |
 
-## Site list
+## Review the site list
 
-The rest of the **Site security** page lists each site and displays the site specific security data.
+Review the site specific data in the sites list table.
 
-The data displayed in the **Site security** page is the total aggregated data for the entire network, and might include data for sites that you don't have access to. When you drill down into device data, the **Device Inventory** page only displays data for devices you can access.
+Note that the data displayed in this table is the total aggregated data for the entire network, and might include data for sites that you don't have access to. When you drill down into device data, the **Device Inventory** page only displays data for devices you can access.
 
-This table describes the site information displayed in the site list:
+Review this information in the site list:
 
-|Column | Description|Available actions |
+|Column | Description|Next steps |
 |----|----|----|
 |**Site name** |The site name and description. |- Select the **Site name** to open the **Insights** panel. This panel displays site details, such as total devices, site location, and site owners. You can also select **Edit site** to make changes to the site.<br>- Select the ellipsis (:::image type="icon" source="media/menu-ellipsis.png" alt-text="menu vertical ellipsis button":::) to the right of the site name to [manage the site](manage-sites.md).
-|**Critical devices** |The number of critical devices at this site. |Select the number to open the **Device Inventory** page, filtered according to the site name and criticality level. |
+|**Critical devices** |The number of critical devices at this site. A critical device is a self assigned device that has extra importance to your business or system, such as a server that contains confidential data. |- Use this data to prioritize protection for sites with critical devices.<br>- Select the number to open the **Device Inventory** page, filtered according to the site name and criticality level. |
 |**Highly-exposed devices** |The number of highly exposed devices at this site. |Select the number to open the **Device Inventory** page, filtered according to the site name and high exposure level. |
 |**Devices with high risk** |The number of high risk devices at this site. |Select the number to open the **Device Inventory** page, filtered according to the site name and high risk level. |
