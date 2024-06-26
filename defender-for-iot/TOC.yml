@@ -32,11 +32,11 @@
       items:
       - name: Overview
         href: discover-vulnerabilities-overview.md
-      - name: Prioritize vulnerabilities
+      - name: Prioritize and remediate vulnerabilities
         href: prioritize-vulnerabilities.md
     - name: Investigate and remediate threats
       items:
-      - name: Investigate alerts
+      - name: Investigate incidents and alerts
         href: investigate-threats.md
     - name: Manage
       items:
