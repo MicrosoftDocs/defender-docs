@@ -1,22 +1,17 @@
 ---
-title: Site security overview 
-description: Read this article to get an overview of benefits of the new Site Security features in Defender for IoT.
+title: An overview of Site security in Microsoft Defender for IoT in the Microsoft Defender portal.  
+description: Read this article to get an overview of benefits of the new Site Security features in Microsoft Defender for IoT in the Microsoft Defender portal.
 ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
 ms.date: 05/19/2024
-manager: deniseb
-audience: ITPro
-ms.collection:
-- m365-security
-- tier2
 ms.topic: concept-article
 ---
 
 # Site security
 
-The Site security page in the Defender portal offers an overview of the security state of your entire operational environment. The operational environment monitors all types of devices, OT and others. Site security enables you to create a **site** that represents a specific physical location in your organization, for example, a manufacturing facility. This site based view of your organization allows you to clearly differentiate security issues by location and identify points that are better protected or areas that need security improvements.
+The Site security page in the Microsoft Defender portal offers an overview of the security state of your entire operational environment. The operational environment monitors all types of devices, OT and others. Site security enables you to create a **site** that represents a specific physical location in your organization, for example, a manufacturing facility. This site based view of your organization allows you to clearly differentiate security issues by location and identify points that are better protected or areas that need security improvements.
 
 The Site security page gives the security team management tools to effectively understand and analyze the state of each site. Site security also provides a unified view of all operational sites across your entire organization. Together this enables the security team to make better informed decisions when dealing with security issues.
 
@@ -27,6 +22,8 @@ Site Security enables you to associate devices discovered by Microsoft Defender 
 - Explore ways to mitigate and reduce risks
 
 Site Security is currently in public preview.
+
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
 ## Site security features
 
