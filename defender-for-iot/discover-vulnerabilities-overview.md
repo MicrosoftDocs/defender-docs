@@ -19,14 +19,14 @@ The OT security administrator proactively manages network risks based on the vul
 
 ## Vulnerability management capabilities
 
-The key vulnerability discovery capabilities are:
+The key vulnerability management capabilities are:
 
 |Capability |Description |
 |----|----|
 |Extended vulnerability coverage| Defender for IoT uses detailed OT device firmware information and discovers the device vendor, model, and version to identify known vulnerabilities. |
 |Security recommendations page|Offers actionable steps to update and mitigate vulnerable products. |
 |Weaknesses page|Includes a detailed list of vulnerabilities like zero-days and known exploits. |
-|Management|You can manage and control the vulnerabilities globally, per device, or per vulnerable product. |
+|Management|You can manage and control the vulnerabilities globally, per tenant or device group, per device from the device page, or per vulnerable product through the Inventory page. |
 |Exception handling| Create exceptions for recommendations that can't be patched.|
 |Customizable Vulnerability Notifications| Alert key stakeholders with customizable notifications.|
 |Reporting Inaccuracies| Users can report inaccuracies on discovered CVEs or request support for new vulnerabilities.|
@@ -35,11 +35,9 @@ The key vulnerability discovery capabilities are:
 
 The Microsoft Defender portal displays Microsoft Defender for IoT security vulnerabilities in the **Endpoints > Weaknesses** page.
 
-Vulnerabilities are listed based on their publicly registered Common Vulnerability and Exposures(CVEs) ID. The public registry of CVEs can be accessed from [https://www.cve.org/](https://www.cve.org/).  
+Vulnerabilities are listed based on their publicly registered Common Vulnerability and Exposures(CVEs) ID.
 
-The **Weaknesses** page lists the detected security vulnerabilities across all devices, endpoints, applications and other sources on your network.
-
-For each CVE, the **Weaknesses** page displays a severity rating, a CVSS score (10 is most severe), and the number of exposed devices. Use the metrics to prioritize dealing with these security vulnerabilities.
+The **Weaknesses** page lists the detected security vulnerabilities across all devices, endpoints, applications and other sources on your network. The data can be filtered according to device groups based on the created sites.
 
 The OT security administrator uses the list of detected vulnerabilities in the **Weaknesses** page to send a remediation request for the relevant team to handle.
 
