@@ -6,10 +6,10 @@
   items:
     - name: Overview
       items:
-      - name: What is Microsoft Defender for IoT?
+      - name: What is Microsoft Defender for IoT in the Defender portal?
         href: microsoft-defender-iot.md      
       - name: Site security
-        href: site-security-overview.md
+        href: site-security-overview.md      
     - name: Get started
       items:
       - name: Prerequisites
@@ -21,13 +21,19 @@
     - name: Monitor site security
       items:
       - name: Monitor site security
-        href: monitor-site-security.md         
-    - name: Investigate and remediate vulnerabilities
+        href: monitor-site-security.md  
+    - name: Discover devices
+      items:
+      - name: Overview
+        href: device-discovery.md
+      - name: Discover and manage devices
+        href: manage-devices-inventory.md
+    - name: Investigate and remediate vulnerabilities       
       items:
       - name: Overview
         href: discover-vulnerabilities-overview.md
-      - name: Discover vulnerabilities
-        href: discover-vulnerabilities.md
+      - name: Prioritize vulnerabilities
+        href: prioritize-vulnerabilities.md
     - name: Investigate and remediate threats
       items:
       - name: Investigate alerts
@@ -35,8 +41,4 @@
     - name: Manage
       items:
       - name: Manage sites
-        href: manage-sites.md
-      - name: Manage OT devices in the inventory
-        href: manage-devices-inventory.md
-      - name: License admin centre
-        href: license-admin.md  
+        href: manage-sites.md           
