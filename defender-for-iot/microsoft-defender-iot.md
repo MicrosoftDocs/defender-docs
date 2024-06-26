@@ -12,11 +12,9 @@ ms.date: 06/11/2024
 
 # What is Microsoft Defender for IoT in the Defender portal (Preview)?
 
-The Internet of Things (IoT) supports billions of connected devices that use both operational technology (OT) and IoT networks. IoT/OT devices and networks are often built using specialized protocols, and might prioritize operational challenges over security.
+Operational Technology (OT) involves the specialized hardware and software used to monitor and control physical processes in critical sectors such as manufacturing, utilities, pharmaceuticals, and more. Microsoft Defender for IoT, available within the Microsoft Defender portal, is designed to secure OT environments, including networks, devices, vulnerabilities, and threats crucial for maintaining operational reliability and safety.
 
-Microsoft Defender for IoT in the Microsoft Defender portal is a unified security solution built specifically to identify IoT and OT devices, vulnerabilities, and threats. Use Defender for IoT to secure your entire IoT/OT environment, including existing devices that might not have built-in security agents.
-
-In this article, you learn how Defender for IoT and secures your OT environments, solving these challenges.
+In this article, you learn how Microsoft Defender customers can extend their protection to OT environments by leveraging Defender for IoT in the Defender portal.
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
@@ -40,8 +38,6 @@ Defender for IoT is intended for:
 ## What are the main OT security challenges?
 
 OT network challenges include: poor visibility into assets and networks, difficulty to create network segmentation, vulnerable legacy systems, dependence on external vendors, and lack of security expertise. When OT devices can't be protected by traditional security monitoring systems, each new wave of innovation increases the risk and possible attack surfaces across those networks.
-
-Microsoft Defender for IoT in the Defender portal is built specifically to extend your protection to OT networks, including discovery of OT devices, vulnerabilities, and threats.
 
 ## How does it work?
 
