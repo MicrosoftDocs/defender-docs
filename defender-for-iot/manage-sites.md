@@ -30,7 +30,7 @@ To edit or delete a site:
 
 ## Add device group
 
-You can create a device group based on a site location to restrict access to a specific site or group of sites, and verify thatthe correct users have access to your site.
+You can create a device group based on a site location to restrict access to a specific site or group of sites, and verify that the correct users have access to your site.
 
 You can set up a device group at different stages:
 
