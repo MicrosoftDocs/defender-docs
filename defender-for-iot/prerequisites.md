@@ -21,23 +21,17 @@ To see how Defender for IoT can help and protect your network sign up to a free,
 
 Before you start, you need:
 
-- An XDR Tenant, if you need to create an account, see [create XDR tenant id]().<!-- Limor, can we take out the end part? -->
-
-- A Microsoft 365 tenant, with Global or Billing admin access to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog).
+- A Microsoft tenant, with Global or Billing admin access to the tenent.
 
     For more information, see [Buy or remove licenses for a Microsoft business subscription](/microsoft-365/commerce/licenses/buy-licenses.md) and [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles.md).
 
-- An Microsoft 365 E5/Defender for Endpoint Plan 2 license.
+- An Microsoft 365 E5/Defender for Endpoint Plan 2 license/ E5 security.
 
-- Microsoft Defender for Endpoints agents deployed in your environment.
-
-- The Email address of the tenant being used for the trial license.
-
-A trial supports a **Large** sized site with up to 1,000 devices, and lasts for 90 days.
+- Microsoft Defender for Endpoints agents deployed in your environment. For more information, see [onboard Microsoft defender for endpoint](/defender-endpoint/onboarding.md)
 
 ## Prerequisites for setting up a site
 
-- We recommend you have IP or MAC address details of at least one OT device at the site that is listed in Defender for Endpoints.
+- We recommend that you note the IP or MAC address details of at least one OT device listed in Defender for Endpoint. You'll need this information later when you [set up a site](set-up-sites.md).
 
 ## Permissions
 
@@ -55,7 +49,7 @@ There are two ways to manage user access to the Microsoft Defender portal:
 
 The permission settings listed in this section apply to the unified RBAC version.
 
-Depending on your tenant you might have access to RBAC version 1 or 2 instead of the unified version. For more information, see [permissions for RBAC version 1](/defender-endpoint/prepare-deployment.md), or [permissions for RBAC version 2](/defender-endpoint/user-roles#permission-options.md).  <!-- check these are correct? -->
+Depending on your tenant you might have access to RBAC version 1 or 2 instead of the unified version. For more information, see [permissions for RBAC version 1](/defender-endpoint/prepare-deployment.md), or [permissions for RBAC version 2](/defender-endpoint/user-roles#permission-options.md).
 
 If you're using the Defender portal for the first time, you need to set up all of your roles and permissions. For more information, see [setting up RBAC in the Defender portal](). <!-- what link here-->
 
