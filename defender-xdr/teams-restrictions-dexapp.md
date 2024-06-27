@@ -18,7 +18,7 @@ search.appverid: met150
 ms.date: 06/27/2024
 ---
 
-# Troubleshooting Microsoft Defender Experts app issues in Microsoft Teams
+# Troubleshooting issues with Microsoft Defender Experts app in Microsoft Teams
 
 **Applies to:**
 
