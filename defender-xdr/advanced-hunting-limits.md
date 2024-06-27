@@ -35,8 +35,8 @@ Refer to the following table to understand existing quotas and usage parameters.
 |--|--|--|--|
 | Data range | 30 days | Every query | Each query can look up data from up to the past 30 days. |
 | Result set | 30,000 rows | Every query | Each query can return up to 30,000 records. |
-| Timeout | 10 minutes | Every query | Each query can run for up to 10 minutes. If it does not complete within 10 minutes, the service displays an error.
-| CPU resources | Based on tenant size | Every 15 minutes | The [portal displays an error](advanced-hunting-errors.md) whenever a query runs and the tenant has consumed over 10% of allocated resources. Queries are blocked if the tenant has reached 100% until after the next 15-minute cycle. |
+| Timeout | 10 minutes | Every query | Each query can run for up to 10 minutes. If it doesn't complete within 10 minutes, the service displays an error.
+| CPU resources | Based on tenant size | Every 15 minutes | The [portal displays an error](advanced-hunting-errors.md) whenever a query runs and the tenant consumes over 10% of allocated resources. Queries are blocked if the tenant reaches 100% until after the next 15-minute cycle. |
 
 > [!NOTE]
 > A separate set of quotas and parameters apply to advanced hunting queries performed through the API. [Read about advanced hunting APIs](./api-advanced-hunting.md)
@@ -90,7 +90,7 @@ The query resources report contains all queries that ran, including detailed res
 
 Queries with high resource usage or a long query time can probably be optimized to prevent throttling via this interface.
 
-The graph displays resource usage over time per interface. You can easily identify excessive usage and click the spikes in the graph to filter the table accordingly. Once you select an entry in the graph, the table is filtered to that specific date.
+The graph displays resource usage over time per interface. You can easily identify excessive usage and select the spikes in the graph to filter the table accordingly. Once you select an entry in the graph, the table is filtered to that specific date.
 
 You can identify the queries that used the most resources on that day and take action to improve them – by [applying query best practices](advanced-hunting-best-practices.md) or educating the user who ran the query or created the rule to take query efficiency and resources into consideration. For guided mode, the user needs to [switch to advanced mode](advanced-hunting-query-builder-details.md#switch-to-advanced-mode-after-building-a-query) to edit the query.
 
