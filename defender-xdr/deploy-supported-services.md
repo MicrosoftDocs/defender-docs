@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 02/16/2021
+ms.date: 02/16/2024
 ---
 
 # Deploy supported services
@@ -64,10 +64,10 @@ The table below lists how each supported service provides additional data, oppor
 
 | Service | Data (signals & correlated info) | Remediation & response scope |
 | ------ | ------ | ------ |
-| Microsoft Defender for Endpoint |<ul><li>Endpoint states and raw events</li><li>Endpoint detections and alerts, including antivirus, EDR, attack surface reduction</li><li>Info on files and other entities observed on endpoints</li></ul> | Endpoints |
-|Microsoft Defender for Office 365 |<ul><li>Mail and mailbox states and raw events</li><li>Email, attachment, and link detections</li></ul> | <ul><li>Mailboxes</li><li>Microsoft 365 accounts</li></ul> |
-| Microsoft Defender for Identity |<ul><li>Active Directory signals, including authentication events</li><li>Identity-related behavioral detections</li></ul> | Identities |
-| Microsoft Defender for Cloud Apps |<ul><li>Detection of unsanctioned cloud apps and services (shadow IT)</li><li>Exposure of data to cloud apps</li><li>Threat activity associated with cloud apps</li></ul> | Cloud apps |
+| Microsoft Defender for Endpoint |- Endpoint states and raw events<br/>- Endpoint detections and alerts, including antivirus, EDR, attack surface reduction<br/>- Info on files and other entities observed on endpoints | Endpoints |
+|Microsoft Defender for Office 365 |- Mail and mailbox states and raw events<br/>- Email, attachment, and link detections | - Mailboxes<br/>- Microsoft 365 accounts |
+| Microsoft Defender for Identity |- Active Directory signals, including authentication events<br/>- Identity-related behavioral detections | Identities |
+| Microsoft Defender for Cloud Apps |- Detection of unsanctioned cloud apps and services (shadow IT)<br/>- Exposure of data to cloud apps<br/>- Threat activity associated with cloud apps | Cloud apps |
 
 ## Deploy the services
 
@@ -82,7 +82,7 @@ Deploying each service typically requires provisioning to your tenant and some i
 
 Once you've deployed the supported services, [turn on Microsoft Defender XDR](m365d-enable.md).
 
-## Related topics
+## Related articles
 
 - [Microsoft Defender XDR overview](microsoft-365-defender.md)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)
@@ -91,4 +91,5 @@ Once you've deployed the supported services, [turn on Microsoft Defender XDR](m3
 - [Microsoft Defender for Office 365 overview](/defender-office-365/mdo-about)
 - [Microsoft Defender for Cloud Apps overview](/cloud-app-security/what-is-cloud-app-security)
 - [Microsoft Defender for Identity overview](/azure-advanced-threat-protection/what-is-atp)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
