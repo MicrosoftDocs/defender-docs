@@ -12,7 +12,7 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: conceptual
-ms.date: 10/25/2021
+ms.date: 06/27/2024
 ---
 
 # Integrate your SIEM tools with Microsoft Defender XDR
@@ -22,9 +22,6 @@ ms.date: 10/25/2021
 **Applies to:**
 - [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint)
 - [Microsoft Defender XDR](microsoft-365-defender.md)
-
-> [!NOTE]
-> **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
 
 <a name='pull-microsoft-365-defender-incidents-and-streaming-event-data-using-security-information-and-events-management-siem-tools'></a>
 
@@ -53,7 +50,7 @@ There are two primary models to ingest security information:
 Microsoft Defender XDR currently supports the following SIEM solution integrations:
 
 - [Ingesting incidents from the incidents REST API](#ingesting-incidents-from-the-incidents-rest-api)
-- [Ingesting streaming event data via Event Hub](#ingesting-streaming-event-data-via-event-hubs)
+- [Ingesting streaming event data via Event Hubs](#ingesting-streaming-event-data-via-event-hubs)
 
 ## Ingesting incidents from the incidents REST API
 
@@ -74,7 +71,7 @@ Using the new, fully supported Splunk Add-on for Microsoft Security that support
 
 - Ingesting Defender for Endpoint alerts (from the Defender for Endpoint's Azure endpoint) and updating these alerts
 
-- Support for updating Microsoft Defender XDR Incidents and/or Microsoft Defender for Endpoint Alerts and the respective dashboards has been moved to the Microsoft 365 App for Splunk.
+- Support for updating Microsoft Defender XDR Incidents and/or Microsoft Defender for Endpoint Alerts and the respective dashboards has moved to the Microsoft 365 App for Splunk.
 
 For more information on:
 
@@ -89,7 +86,7 @@ Framework (CEF).
 
 For more information on the new ArcSight SmartConnector for Microsoft Defender XDR, see [ArcSight Product Documentation](https://community.microfocus.com/cyberres/productdocs/w/connector-documentation/39246/smartconnector-for-microsoft-365-defender).
 
-The SmartConnector replaces the previous FlexConnector for Microsoft Defender for Endpoint that has been deprecated.
+The SmartConnector replaces the previous FlexConnector for Microsoft Defender for Endpoint that's now retired.
 
 ### Elastic
 
@@ -120,4 +117,5 @@ For more information on the Elastic streaming API integration, see [Microsoft M3
 ## Related articles
 
 [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
