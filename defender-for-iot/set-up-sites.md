@@ -81,7 +81,7 @@ Review that information for the site you want to create:
     - The site data in the **Device Inventory** under **Site tag** and **Site attribute** starts to appear after each OT device performs network activity and contacts the Defender portal. For some devices, this happens quickly, but for other devices, the data takes time to appear in the inventory. When the site tag and attribute data appears, the device is protected by Defender for IoT, including all of the security value, such as alerts, vulnerabilities, and more.
     - Any new devices that are added to the network are automatically detected and added to the **Device Inventory**. If a device is moved to a different or new location within the network, these changes are automatically made to the network.
 
-1. Select **Create device group** to [create a device group](#add-device-group) now, or select **Close** and [set up a device group at a later stage](/defender-endpoint/machine-groups.md).
+1. Select **Create device group** to [create a device group](#add-device-group) now, or select **Close** and [set up a device group at a later stage](/defender-endpoint/machine-groups).
 
 ## Add device group
 
@@ -114,11 +114,11 @@ Use a device group to make sure that the correct users have access to the site. 
 
 If a device group lists different preferences for the same user, you need to rank the importance of each device group.
 
-To move a group up or down, drag the row to the correct position in the list. For more information, see [ranking device groups in Microsoft Defender for Endpoint](/defender-endpoint/machine-groups.md).
+To move a group up or down, drag the row to the correct position in the list. For more information, see [ranking device groups in Microsoft Defender for Endpoint](/defender-endpoint/machine-groups).
 
 ## Assign device group roles and permissions
 
-To get the full benefit of the Device group, you might need to create roles and permission settings. For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac.md), and [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles.md).
+To get the full benefit of the Device group, you might need to create roles and permission settings. For more information, see [role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac), and [create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles).
 
 ## Next steps
 

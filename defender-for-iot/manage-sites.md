@@ -36,10 +36,10 @@ You can create a device group based on a site location to restrict access to a s
 
 You can set up a device group at different stages:
 
-- To set up a device group as part of the site setup, see [Add a device group](set-up-sites.md#add-device-group).
-- To set up a device group after you set up a site, see [Create and manage device groups](/defender-endpoint/machine-groups.md).
+- To set up a device group as part of the site setup, see [Add a device group](set-up-sites#add-device-group).
+- To set up a device group after you set up a site, see [Create and manage device groups](/defender-endpoint/machine-groups).
 
 To get the full benefit of the device group, you might need to create roles and permission settings. For more information, see: 
 
-- [Role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac.md) 
-- [Create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles.md)
+- [Role based access control in Microsoft Defender for Endpoint](/defender-endpoint/rbac) 
+- [Create and manage roles in Microsoft Defender for Endpoint](/defender-endpoint/user-roles)

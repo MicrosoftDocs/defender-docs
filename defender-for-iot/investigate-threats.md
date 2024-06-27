@@ -15,7 +15,7 @@ Microsoft Defender for IoT in the Microsoft Defender portal displays incidents a
 
 Alerts are the basis of all incidents and indicate the occurrence of malicious or suspicious events in your environment. Within an incident, you analyze the alerts that affect your network, understand what they mean, and collate the evidence so that you can devise an effective remediation plan. 
 
-Learn more about [alerts](/defender-xdr/investigate-alerts.md) and [incidents](/defender-xdr/investigate-incidents.md) in the Defender portal.
+Learn more about [alerts](/defender-xdr/investigate-alerts) and [incidents](/defender-xdr/investigate-incidents) in the Defender portal.
 
 In this article, you learn how to investigate a Microsoft Defender for IoT incident and its associated alerts, and how to remediate the security issues raised by the alert.
 
