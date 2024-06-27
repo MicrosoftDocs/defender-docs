@@ -1,6 +1,6 @@
 ---
 title: Deploy services supported by Microsoft Defender XDR
-description: Learn about the Microsoft security services that can be integrated by Microsoft Defender XDR, their licensing requirements, and deployment procedures
+description: Learn about the Microsoft security services that integrate with Microsoft Defender XDR, their licensing requirements, and deployment procedures
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
@@ -31,7 +31,7 @@ ms.date: 02/16/2024
 
 [!INCLUDE [Prerelease information](../includes/prerelease.md)]
 
-[Microsoft Defender XDR](microsoft-365-defender.md) integrates various Microsoft security services to provide centralized detection, prevention, and investigation capabilities against sophisticated attacks. This article describes the supported services, their licensing requirements, the advantages and limitations associated with deploying one or more services, and links to how you can fully deploy them individually.
+[Microsoft Defender XDR](microsoft-365-defender.md) integrates various Microsoft security services to provide centralized detection, prevention, and investigation capabilities against sophisticated attacks. This article describes the supported services, their licensing requirements, the advantages, and limitations associated with deploying one or more services, and links to how you can fully deploy them individually.
 
 ## Supported services
 
@@ -42,7 +42,7 @@ A Microsoft 365 E5, E5 Security, A5, or A5 Security license or a valid combinati
 | Microsoft Defender for Endpoint | Endpoint protection suite built around powerful behavioral sensors, cloud analytics, and threat intelligence |
 |Microsoft Defender for Office 365 | Advanced protection for your apps and data in Office 365, including email and other collaboration tools |
 | Microsoft Defender for Identity | Defend against advanced threats, compromised identities, and malicious insiders using correlated Active Directory signals |
-| Microsoft Defender for Cloud Apps | Identify and combat cyberthreats across your Microsoft and third-party cloud services |
+| Microsoft Defender for Cloud Apps | Identify and combat cyberthreats across your Microsoft and non-Microsoft cloud services |
 
 ## Deployed services and functionality
 
@@ -58,7 +58,7 @@ To get the complete benefits of Microsoft Defender XDR, we recommend deploying a
 
 ### Limited deployment scenarios
 
-Each supported service that you deploy provides an extremely rich set of raw signals as well as correlated information. While limited deployment doesn't cause Microsoft Defender XDR functionality to turn off, its ability to provide comprehensive visibility across your endpoints, apps, data, and identities is affected. At the same time, any remediation capabilities only apply to entities that can be managed by the services you've deployed.
+Each supported service that you deploy provides an extremely rich set of raw signals and correlated information. While limited deployment doesn't cause Microsoft Defender XDR functionality to turn off, its ability to provide comprehensive visibility across your endpoints, apps, data, and identities is affected. At the same time, any remediation capabilities only apply to entities that are managed by the services you've deployed.
 
 The table below lists how each supported service provides additional data, opportunities to obtain additional insight by correlating the data, and better remediation and response capabilities.
 
