@@ -54,16 +54,16 @@ The following steps guide you on how to create custom roles in Microsoft Defende
 
 7. Select a permission category (for example, Security operations), and then review the permissions available. You can choose to assign the following different levels of permissions:
 
-    - Select all read-only permissions – Users will be assigned with all the read-only permissions in this category.
-    - Select all read and manage permissions – Users will be assigned all permissions in this category (read and manage permissions).
-    - Select custom permissions – Users will be assigned the custom permissions selected.
+    - Select all read-only permissions – Users are assigned with all the read-only permissions in this category.
+    - Select all read and manage permissions – Users are assigned all permissions in this category (read and manage permissions).
+    - Select custom permissions – Users are assigned the custom permissions selected.
 
    :::image type="content" source="/defender/media/defender/m365-defender-rbac-assignments-fig.png" alt-text="Screenshot of the permissions flyout screen" lightbox="/defender/media/defender/m365-defender-rbac-assignments-fig.png":::
 
     For more information on the RBAC custom permissions, see [About RBAC custom permissions](custom-permissions-details.md).
 
     > [!NOTE]
-    > If all read-only or all read and manage permissions are assigned, any new permissions added to this category in the future will be automatically assigned under this role.
+    > If all read-only or all read and manage permissions are assigned, any new permissions added to this category in the future are automatically assigned under this role.
     >
     > If you have assigned custom permissions and new permissions are added to this category, you will need to re-assign your roles with the new permissions if needed.
 
@@ -78,7 +78,7 @@ The following steps guide you on how to create custom roles in Microsoft Defende
     If a user selects all read-only permissions for a single data source, for example, Microsoft Defender for Endpoint, they will not be able to read alerts for Microsoft Defender for Office 365 or Microsoft Defender for Identity.
 
     > [!NOTE]
-    > By selecting **Choose all data sources** all supported data sources within Microsoft Defender XDR Unified RBAC and any future data sources that are added will be automatically assigned to this assignment.
+    > By selecting **Choose all data sources** all supported data sources within Microsoft Defender XDR Unified RBAC and any future data sources that are added are automatically assigned to this assignment.
 
 11. In **Assigned users and groups** choose the Microsoft Entra security groups or individual users to assign the role to, and select **Add**.
 
@@ -105,8 +105,8 @@ To access and manage roles and permissions, without being a Global Administrator
 
 7. On the Authorization and settings category flyout, choose **Select custom permissions** and under **Authorization** select either:
 
-    - Select all permissions - users will be able to create and manage roles and permissions.
-    - Read-only - uses will be able to access and view roles and permissions in a read-only mode.
+    - Select all permissions - users are able to create and manage roles and permissions.
+    - Read-only - uses can access and view roles and permissions in a read-only mode.
 
     :::image type="content" source="/defender/media/defender/m365-defender-rbac-authorization-role.png" alt-text="Screenshot of the permissions and roles page" lightbox="/defender/media/defender/m365-defender-rbac-authorization-role.png":::
 
