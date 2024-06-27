@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 02/16/2021
+ms.date: 06/27/2024
 ---
 
 # Device profile page
