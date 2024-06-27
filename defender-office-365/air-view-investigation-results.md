@@ -25,24 +25,24 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-2-capabilities), details about active and completed investigations from [automated investigation and response (AIR)](air-about.md) are available on the **Investigations** page in the Microsoft Defender portal at <https://security.microsoft.com/airinvestigation>. Investigation details provide you with up-to-date status and (with the right permissions) the ability to approve any pending actions.
+In Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](mdo-about.md#defender-for-office-365-plan-2-capabilities), details about active and completed investigations from [automated investigation and response (AIR) in Defender for Office 365](air-about.md) are available on the **Investigations** page in the Microsoft Defender portal at <https://security.microsoft.com/airinvestigation>. Investigation details provide you with up-to-date status and (with the right permissions) the ability to approve any pending actions.
 
 > [!TIP]
-> Check out the unified investigation page in the Microsoft Defender portal. To learn more, see [Unified investigation page](/defender-xdr/m365d-autoir-results#new-unified-investigation-page).
+> AIR details and results are also available in Microsoft Defender XDR on the **Investigations** page at <https://security.microsoft.com/incidents>. For more information, see [Unified investigation page](/defender-xdr/m365d-autoir-results#new-unified-investigation-page).
 
 ## What do you need to know before you begin?
 
 To see the permissions and licensing requirement for AIR, see [Required permissions and licensing for AIR](air-about.md#required-permissions-and-licensing-for-air).
 
-## The Investigations page in the Defender portal
+## Investigations from AIR in Defender for Office 365
 
 In the Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Investigations**. Or, to go directly to the **Investigations** page, use <https://security.microsoft.com/airinvestigation>.
 
-By default, information about investigations from yesterday and today are shown, but you can change the date range.
+By default, investigation details from yesterday and today are shown, but you can change the date range.
 
-The following information about investigations is shown on the **Investigations** page. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
+The following information shown on the **Investigations** page. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
 
-- **ID**: The unique ID of the investigation. Select :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Open in new window** to open the details of the investigation as described in the [View investigation details](#view-investigation-details) section.
+- **ID**: The unique ID of the investigation. Select :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Open in new window** to open the details of the investigation as described in the [View investigation details](#view-investigation-details-in-the-defender-portal-from-air-in-defender-for-office-365) section.
 - **Status**: The available status values are described in the [Investigation Status values](#investigation-status-values) section.
 - **Detection Source**: This value is always **Office365**.
 - **Investigation**
@@ -91,7 +91,7 @@ The **Status** values that are used in investigations are described in the follo
 
 - **Failed**: At least one investigation analyzer ran into a problem where it couldn't complete properly.
 
-  If an investigation fails after remediation actions were approved, the remediation actions might still have succeeded. For more information, [view the investigation details](#view-investigation-details).
+  If an investigation fails after remediation actions were approved, the remediation actions might still have succeeded. For more information, [view the investigation details](#view-investigation-details-in-the-defender-portal-from-air-in-defender-for-office-365).
 
 - **No Threats Found**: The investigation finished and no threats were identified (compromised user accounts, email messages, URLs, or files).
 
@@ -112,7 +112,7 @@ The **Status** values that are used in investigations are described in the follo
 
 - **Pending Action**: The investigation found a threat (for example, a malicious email, a malicious URL, or a risky mailbox setting), and an action to remediate the threat is [awaiting approval](air-review-approve-pending-completed-actions.md).
 
-  The list of pending actions can increase as an investigation runs. [View the investigation details](#view-investigation-details) to see if other items are still pending completion.
+  The list of pending actions can increase as an investigation runs. [View the investigation details](#view-investigation-details-in-the-defender-portal-from-air-in-defender-for-office-365) to see if other items are still pending completion.
 
 - **Queued By Throttling**: An investigation is being held in a queue. When other investigations complete, queued investigations begin. Throttling helps avoid poor service performance.
 
@@ -120,7 +120,7 @@ The **Status** values that are used in investigations are described in the follo
 
 - **Remediated**: The investigation finished and all remediation actions were approved (noted as fully remediated).
 
-  Approved remediation actions can have errors that prevent the actions from being taken. Regardless of whether remediation actions are successfully completed, the investigation status doesn't change. For more information, [view the investigation details](#view-investigation-details).
+  Approved remediation actions can have errors that prevent the actions from being taken. Regardless of whether remediation actions are successfully completed, the investigation status doesn't change. For more information, [view the investigation details](#view-investigation-details-in-the-defender-portal-from-air-in-defender-for-office-365).
 
 - **Running**: The investigation process is underway. This status value also occurs when [pending actions](air-review-approve-pending-completed-actions.md#approve-or-reject-pending-actions) are approved.
 
@@ -136,11 +136,11 @@ The **Status** values that are used in investigations are described in the follo
 
   You can [start an investigation from Threat Explorer (Explorer)](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
-## View investigation details
+## View investigation details from AIR in Defender for Office 365
 
-When you select :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Open in new window** in the **ID** value of an investigation on the **Investigations** page at <https://security.microsoft.com/airinvestigation>, a new page opens with the investigation details.
+When you select :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Open in new window** in the **ID** value of an entry on the **Investigations** page at <https://security.microsoft.com/airinvestigation>, a new page opens with the investigation details.
 
-The tile of the page is the name of the investigation from the **Investigation** value on the **Investigations** page. For example, **Clicked url Verdict changed to malicious - \<URL\>**.
+The tile of the page is the **Investigation** (name) value on the **Investigations** page. For example, **Clicked url Verdict changed to malicious - \<URL\>**.
 
 The subtitle of the page contains the **ID** and status of the investigation. For example, **Investigation #660b79 is complete - Remediated**.
 
@@ -158,13 +158,22 @@ On the **Investigation graph** tab, the **Investigation summary** pane contains 
 
 - **Investigation status time line** section:
   - **Started**
-  - **Ended**
+  - **Ended**: This value is present only for the following **Status** values:
+    - **No threats found**
+    - **Partially remediated**
+    - **Remediated**
+    - **Terminated by system**
+    - **Terminated by throttling**
+    - **Terminated by user**
+    - **Threats found**
+    - **Failed**
   - **Duration**
-  - **Total pending time**
+  - **Total pending time**: This value is present only for investigations that had pending actions awaiting approval that were eventually approved or expired.
 - **Investigation details** section:
-  - **Status**: The status of the investigation.
+  - **Status**: The status of the investigation. If the value is **No threats found**, no other values are present in the section.
   - **Alert severity**: The value **Low**, **Medium** or **High**.
   - **Category**: The alert category.
+  - **Detection source**: Typically, the value is **MDO**.
 
 The graph pane contains a visual representation of the elements and activities in the investigation. Some elements are common to all investigations, while others depend on the nature and progress of the investigation.
 
@@ -234,6 +243,19 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Determination**
 - **Assigned to**<sup>*</sup>
 
+Clicking on the **Alert name** value in a row takes you to the details page for the alert. This result is the same as going to the **Alerts** page at <https://security.microsoft.com/>, and clicking on the **Alert name** value there. For more information, see [Investigate alerts in Microsoft Defender XDR](/defender-xdr/investigate-alerts).
+
+Clicking anywhere else in the row other than the check box next to the first column opens a details flyout that contains the following information:
+
+- The **Incident name** value is the flyout title. The **Severity** and **Status** values are the subtitle.
+
+- The following actions are available at the top of the flyout:
+  - :::image type="icon" source="media/m365-cc-sc-open-url-page-icon.png" border="false"::: **Open incident page**: Takes you to the same page as when you click on the **Incident name** value of an entry on the **Incidents** page at <https://security.microsoft.com/incidents>. For more information, see [Analyze an alert](/defender-xdr/investigate-alerts#analyze-an-alert).
+
+  - :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Manage incident**: Opens a **Manage incident** flyout where you can view and modify details about the incident. For more information, see xxx.
+
+  - :::image type="icon" source="media/m365-cc-sc-activity-log-icon.png" border="false"::: **Activity log**
+
 ### Mailboxes tab in the investigation details
 
 On the investigation details page, the **Mailboxes** tab is available if any mailboxes were inspected as part of the investigation.
@@ -246,6 +268,18 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Risky activities**
 - **Upn**
 - **Urn**
+
+Clicking anywhere in a row other than the check box next to the first column opens a mailbox details flyout with the following information:
+
+- **Verdict**
+- **Display name**
+- **Primary email address**
+- **UPN**
+- **Object ID**
+- **Risk level**
+- **Risk**
+
+Select :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **More details about user** to open the User entity page in Microsoft Defender XDR. For more information, see [User entity page in Microsoft Defender XDR](/defender-xdr/investigate-users).
 
 ### Evidence tab in the investigation details
 
@@ -269,6 +303,8 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Detection origin**: The values you can select depend on the **Detection origin** values on the tab.
 
 When you're finished in the **Filter** flyout, select **Apply**. To clear the filters, select :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
+
+Clicking anywhere in a row other than the check box next to the first column opens a details flyout. What's available in the flyout depends on the nature of the evidence (email message, file, URL, etc.).
 
 ### Entities tab in the investigation details
 
@@ -379,6 +415,17 @@ You can sort the entries by clicking on an available column header. Select :::im
 
 Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the visible information to a CSV file. The default filename is AirLogs.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, AirLogs (1).csv).
 
+Clicking anywhere in a row other than the check box next to the first column opens a summary flyout that contains the following information:
+
+- **Status**
+- **Create**
+- **Execution start**
+- **Duration**
+- **Description**
+
+> [!TIP]
+> To see details about other entries without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+
 ### Pending approval tab in the investigation details
 
 On the investigation details page, the **Pending approval** tab shows pending actions that are waiting for approval to complete (for example, soft deleting messages).
@@ -484,7 +531,7 @@ Certain kinds of alerts trigger automated investigation in Microsoft 365. To lea
 1. On the **Action center** page, use the **Pending** or **History** tabs to find the action.
 1. Select an action from the table by selecting the link in the **Investigation ID** column.
 
-The [investigation details page](#view-investigation-details) opens.
+The [investigation details page](#view-investigation-details-in-the-defender-portal-from-air-in-defender-for-office-365) opens.
 
 ## Keep the following points in mind
 
