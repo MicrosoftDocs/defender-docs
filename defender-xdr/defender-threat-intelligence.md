@@ -14,7 +14,7 @@ ms.collection:
   - highpri
   - tier3
 ms.topic: conceptual
-ms.date: 03/28/2021
+ms.date: 03/28/2024
 ---
 
 # Microsoft Defender Threat Intelligence in Microsoft Defender XDR
@@ -38,4 +38,5 @@ Under **Threat Intelligence** is the existing node for the **Threat Analytics** 
 The experience between the existing Defender TI standalone portal differs slightly from the version in Microsoft Defender XDR. Though most of the functionality is available, at this time, the Defender TI experience in Microsoft Defender XDR doesn't include the ability to apply custom tags or project capabilities.
 
 [Learn more about Microsoft Defender Threat Intelligence](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti).
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

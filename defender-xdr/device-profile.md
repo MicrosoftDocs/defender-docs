@@ -1,5 +1,5 @@
 ---
-title: Device profile in Microsoft 365 security portal
+title: Device profile in Microsoft Defender portal
 description: View risk and exposure levels for a device in your organization. Analyze past and present threats, and protect the device with the latest updates.
 ms.service: defender-xdr
 ms.localizationpriority: medium
@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 02/16/2021
+ms.date: 06/27/2024
 ---
 
 # Device profile page
@@ -20,7 +20,7 @@ ms.date: 02/16/2021
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
-The Microsoft 365 security portal provides you with device profile pages, so you can quickly assess the health and status of devices on your network.
+The Microsoft Defender portal provides you with device profile pages, so you can quickly assess the health and status of devices on your network.
 
 > [!IMPORTANT]
 > The device profile page may appear slightly different, depending on whether the device is enrolled in Microsoft Defender for Endpoint, Microsoft Defender for Identity, or both.
@@ -37,7 +37,7 @@ The sidebar (1) lists basic details about the device.
 
 The main content area (2) contains tabs that you can toggle through to view different kinds of information about the device.
 
-If the device is enrolled in Microsoft Defender for Endpoint, you'll also see a list of response actions (3). Response actions allow you to perform common security-related tasks.
+If the device is enrolled in Microsoft Defender for Endpoint, you also see a list of response actions (3). Response actions allow you to perform common security-related tasks.
 
 ## Sidebar
 
@@ -47,15 +47,15 @@ Beside the main content area of the device profile page is the sidebar.
 
 The sidebar lists the device's full name and exposure level. It also provides some important basic information in small subsections, which can be toggled open or closed, such as:
 
-* **Tags** - Any Microsoft Defender for Endpoint, Microsoft Defender for Identity, or custom tags associated with the device. Tags from Microsoft Defender for Identity aren't editable.
-* **Security info** - Open incidents and active alerts. Devices enrolled in Microsoft Defender for Endpoint display exposure level and risk level.
+- **Tags** - Any Microsoft Defender for Endpoint, Microsoft Defender for Identity, or custom tags associated with the device. Tags from Microsoft Defender for Identity aren't editable.
+- **Security info** - Open incidents and active alerts. Devices enrolled in Microsoft Defender for Endpoint display exposure level and risk level.
 
 > [!TIP]
 > Exposure level relates to how much the device is complying with security recommendations, while risk level is calculated based on a number of factors, including the types and severity of active alerts.
 
-* **Device details** - Domain, OS, timestamp for when the device was first seen, IP addresses, resources. Devices enrolled in Microsoft Defender for Endpoint also display health state. Devices enrolled in Microsoft Defender for Identity display SAM name and a timestamp for when the device was first created.
-* **Network activity** - Timestamps for the first time and last time the device was seen on the network.
-* **Directory data** (*only for devices enrolled in Microsoft Defender for Identity*) - [UAC](/windows/security/identity-protection/user-account-control/user-account-control-overview) flags, [SPNs](/windows/win32/ad/service-principal-names), and group memberships.
+- **Device details** - Domain, OS, timestamp for when the device was first seen, IP addresses, resources. Devices enrolled in Microsoft Defender for Endpoint also display health state. Devices enrolled in Microsoft Defender for Identity display SAM name and a timestamp for when the device was first created.
+- **Network activity** - Timestamps for the first time and last time the device was seen on the network.
+- **Directory data** (*only for devices enrolled in Microsoft Defender for Identity*) - [UAC](/windows/security/identity-protection/user-account-control/user-account-control-overview) flags, [SPNs](/windows/win32/ad/service-principal-names), and group memberships.
 
 ## Response actions
 
@@ -69,15 +69,15 @@ Response actions offer a quick way to defend against and analyze threats.
 
 Actions available on the device profile page include:
 
-* **Manage tags** - Updates custom tags you've applied to this device.
-* **Isolate device** - Isolates the device from your organization's network while keeping it connected to Microsoft Defender for Endpoint. You can choose to allow Outlook, Teams, and Skype for Business to run while the device is isolated, for communication purposes.
-* **Action center** - View the status of submitted actions. Only available if another action has already been selected.
-* **Restrict app execution** - Prevents applications that aren't signed by Microsoft from running.
-* **Run antivirus scan** - Updates Microsoft Defender Antivirus definitions and immediately runs an antivirus scan. Choose between Quick scan or Full scan.
-* **Collect investigation package** - Gathers information about the device. When the investigation is completed, you can download it.
-* **Initiate Live Response Session** - Loads a remote shell on the device for [in-depth security investigations](/defender-endpoint/live-response).
-* **Initiate automated investigation** - Automatically [investigates and remediates threats](/defender-office-365/air-about). Although you can manually trigger automated investigations to run from this page, [certain alert policies](/Microsoft-365/compliance/alert-policies#default-alert-policies) trigger automatic investigations on their own.
-* **Action center** - Displays information about any response actions that are currently running.
+- **Manage tags** - Updates custom tags you've applied to this device.
+- **Isolate device** - Isolates the device from your organization's network while keeping it connected to Microsoft Defender for Endpoint. You can choose to allow Outlook, Teams, and Skype for Business to run while the device is isolated, for communication purposes.
+- **Action center** - View the status of submitted actions. Only available if another action was selected already.
+- **Restrict app execution** - Prevents applications that aren't signed by Microsoft from running.
+- **Run antivirus scan** - Updates Microsoft Defender Antivirus definitions and immediately runs an antivirus scan. Choose between Quick scan or Full scan.
+- **Collect investigation package** - Gathers information about the device. When the investigation is completed, you can download it.
+- **Initiate Live Response Session** - Loads a remote shell on the device for [in-depth security investigations](/defender-endpoint/live-response).
+- **Initiate automated investigation** - Automatically [investigates and remediates threats](/defender-office-365/air-about). Although you can manually trigger automated investigations to run from this page, [certain alert policies](/Microsoft-365/compliance/alert-policies#default-alert-policies) trigger automatic investigations on their own.
+- **Action center** - Displays information about any response actions that are currently running.
 
 ## Tabs section
 
@@ -93,23 +93,23 @@ The default tab is **Overview**. It provides a quick look at the most important 
 
 Here, you can get a quick look at the device's active alerts, and any currently logged on users.
 
-If the device is enrolled in Microsoft Defender for Endpoint, you'll also see the device's risk level and any available data on security assessments. The security assessments describe the device's exposure level, provide security recommendations, and list affected software and discovered vulnerabilities.
+If the device is enrolled in Microsoft Defender for Endpoint, you also see the device's risk level and any available data on security assessments. The security assessments describe the device's exposure level, provide security recommendations, and list affected software and discovered vulnerabilities.
 
 ### Alerts tab
 
-The **Alerts** tab contains a list of alerts that have been raised on the device, from both Microsoft Defender for Identity and Microsoft Defender for Endpoint.
+The **Alerts** tab contains a list of alerts that were raised on the device, from both Microsoft Defender for Identity and Microsoft Defender for Endpoint.
 
 :::image type="content" source="./media/mtp-device-profile/hybrid-device-tab-alerts.png" alt-text="The Alerts tab for device profile in the Microsoft Defender portal" lightbox="./media/mtp-device-profile/hybrid-device-tab-alerts.png":::
 
 You can customize the number of items displayed and which columns are displayed for each item. The default behavior is to list 30 items per page.
 
-The columns in this tab include information on the severity of the threat that triggered the alert and status, investigation state, and who the alert has been assigned to.
+The columns in this tab include information on the severity of the threat that triggered the alert and status, investigation state, and who the alert is assigned to.
 
 The *impacted entities* column refers to the device (entity) whose profile you're currently viewing, plus any other devices in your network that are affected.
 
 Selecting an item from this list opens a flyout containing even more information about the selected alert.
 
-This list can be filtered by severity, status, or who the alert has been assigned to.
+This list can be filtered by severity, status, or who the alert is assigned to.
 
 ### Timeline tab
 
@@ -151,7 +151,7 @@ This list can be filtered by product code.
 
 ### Discovered vulnerabilities tab
 
-The **Discovered vulnerabilities** tab lists any Common Vulnerabilities and Exploits (CVEs) that may affect the device.
+The **Discovered vulnerabilities** tab lists any Common Vulnerabilities and Exploits (CVEs) that could affect the device.
 
 :::image type="content" source="./media/mtp-device-profile/hybrid-device-tab-discovered-vulnerabilities.png" alt-text="The Discovered vulnerabilities tab for device profile in the Microsoft Defender portal" lightbox="./media/mtp-device-profile/hybrid-device-tab-discovered-vulnerabilities.png":::
 
@@ -173,10 +173,11 @@ The number of items displayed per page and which columns are displayed can be cu
 
 Selecting an item opens a flyout that links to the update.
 
-## Related topics
+## Related articles
 
-* [Microsoft Defender XDR overview](microsoft-365-defender.md)
-* [Turn on Microsoft Defender XDR](m365d-enable.md)
-* [Investigate entities on devices, using live response](/defender-endpoint/live-response)
-* [Automated investigation and response (AIR) in Office 365](/defender-office-365/air-about)
+- [Microsoft Defender XDR overview](microsoft-365-defender.md)
+- [Turn on Microsoft Defender XDR](m365d-enable.md)
+- [Investigate entities on devices, using live response](/defender-endpoint/live-response)
+- [Automated investigation and response (AIR) in Office 365](/defender-office-365/air-about)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
