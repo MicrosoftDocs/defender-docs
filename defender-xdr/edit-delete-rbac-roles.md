@@ -37,14 +37,14 @@ In Microsoft Defender XDR Unified role-based access control (RBAC), you can edit
 The following steps guide you on how to edit roles in Microsoft Defender XDR Unified RBAC:
 
 > [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
+> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the Authorization permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as global administrator or security administrator.
 
 2. In the navigation pane, select **Permissions**.
 
-3. Select **Roles** under Microsoft Defender XDR to get to the Permissions and roles page.
+3. Select **Roles** under Microsoft Defender XDR to get to the **Permissions and roles** page.
 
 4. Select the role you want to edit. You can only edit one role at a time.
 
