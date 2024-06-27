@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: conceptual
 ms.custom: autoir
 ms.reviewer: evaldm, isco
-ms.date: 02/17/2021
+ms.date: 02/17/2024
 ---
 
 # Remediation actions in Microsoft Defender XDR
@@ -77,4 +77,5 @@ In addition to remediation actions that follow automated investigations, your se
 - [View and manage remediation actions](m365d-autoir-actions.md)
 - [Address false positives or false negatives](m365d-autoir-report-false-positives-negatives.md)
 - [Contain devices from the network](/defender-endpoint/respond-machine-alerts#contain-devices-from-the-network)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
