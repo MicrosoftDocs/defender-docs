@@ -57,11 +57,14 @@ Permission type|Permission|Permission display name
 Application|Machine.Offboard|'Offboard machine'
 Delegated (work or school account)|Machine.Offboard|'Offboard machine'
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 > [!NOTE]
 > When obtaining a token using user credentials:
 >
-> - The user needs to 'Global Admin' AD role
-> - The user needs to have access to the device, based on device group settings (See [Create and manage device groups](../machine-groups.md) for more information)
+> - The user needs to have a 'Global Administrator' role.
+> - The user needs to have access to the device, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
 >
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
 

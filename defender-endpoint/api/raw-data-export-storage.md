@@ -38,9 +38,11 @@ ms.date: 12/18/2020
 
 2. Sign in to your [Azure tenant](https://ms.portal.azure.com/), go to **Subscriptions > Your subscription > Resource Providers > Register to Microsoft.insights**.
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 ## Enable raw data streaming
 
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as a ***Global Administrator*** or ***Security Administrator***.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as a ***Security Administrator***.
 
 2. Go to [Data export settings page](https://security.microsoft.com/settings/mtp_settings/raw_data_export) in Microsoft Defender XDR.
 
@@ -85,7 +87,7 @@ ms.date: 12/18/2020
 
 ## Data types mapping
 
-In order to get the data types for our events properties do the following:
+In order to get the data types for our events properties, do the following:
 
 1. Sign in to [Microsoft Defender XDR](https://security.microsoft.com) and go to [Advanced Hunting page](https://security.microsoft.com/hunting-package).
 

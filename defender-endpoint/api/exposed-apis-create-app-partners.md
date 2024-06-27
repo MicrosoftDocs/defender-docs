@@ -53,6 +53,9 @@ In general, you need to take the following steps to use the APIs:
 
 The following steps guide you how to create a Microsoft Entra application, get an access token to Microsoft Defender for Endpoint and validate the token.
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 ## Create the multitenant app
 
 1. Sign in to your [Azure tenant](https://portal.azure.com) with user that has **Global Administrator** role.
@@ -173,13 +176,13 @@ return $token
 
 - Create a new Console Application
 - Install NuGet [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/)
-- Add the below using
+- Add the following using
 
     ```console
     using Microsoft.Identity.Client;
     ```
 
-- Copy/Paste the below code in your application (don't forget to update the three variables: `tenantId`, `appId`, and `appSecret`)
+- Copy/Paste the following code in your application (don't forget to update the three variables: `tenantId`, `appId`, and `appSecret`)
 
     ```csharp
     string tenantId = "00000000-0000-0000-0000-000000000000"; // Paste your own tenant ID here
@@ -204,7 +207,7 @@ Refer to [Get token using Python](run-advanced-query-sample-python.md#get-token)
 ### Using Curl
 
 > [!NOTE]
-> The below procedure supposed Curl for Windows is already installed on your computer
+> The following procedure supposed Curl for Windows is already installed on your computer
 
 1. Open a command window.
 
