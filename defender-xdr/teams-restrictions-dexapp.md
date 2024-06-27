@@ -92,7 +92,7 @@ The app should start working after 24 hours.
 
 ### Teams channel unavailable
 
-You will not be able to receive updates or chat with Defender Experts if the Managed Response channel is archived or deleted. To learn more, see how to [unarchive](https://support.microsoft.com/office/archive-or-restore-a-channel-53c46491-a265-4391-a2a7-001c5026c9e5) or [restore a deleted channel](https://support.microsoft.com/office/delete-a-channel-in-microsoft-teams-973f9014-53db-4165-8ab4-365021fe36b7) back.
+You will not be able to receive updates or chat with Defender Experts if the Managed Response channel is archived or deleted. To learn more, see how to [archive](https://support.microsoft.com/office/archive-or-restore-a-channel-53c46491-a265-4391-a2a7-001c5026c9e5) or [restore a deleted channel](https://support.microsoft.com/office/delete-a-channel-in-microsoft-teams-973f9014-53db-4165-8ab4-365021fe36b7).
 
 ### See also
 
