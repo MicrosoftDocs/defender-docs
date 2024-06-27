@@ -59,9 +59,9 @@ To learn more about how these response actions are performed through Microsoft D
 
 ### Quarantine files
 
-You can deploy the *quarantine* action on files so that they are automatically quarantined when encountered. When selecting this action, you can choose between the following columns to identify which files in your query results to quarantine:
+You can deploy the *quarantine* action on files so that they're automatically quarantined when encountered. When selecting this action, you can choose between the following columns to identify which files in your query results to quarantine:
 
-- `SHA1`: In most advanced hunting tables, this column refers to the SHA-1 of the file that was affected by the recorded action. For example, if a file was copied, this affected file would be the copied file.
+- `SHA1`: In most advanced hunting tables, this column refers to the SHA-1 of the file that's affected by the recorded action. For example, if a file was copied, this affected file would be the copied file.
 - `InitiatingProcessSHA1`: In most advanced hunting tables, this column refers to the file responsible for initiating the recorded action. For example, if a child process was launched, this initiator file would be part of the parent process.
 - `SHA256`: This column is the SHA-256 equivalent of the file identified by the `SHA1` column.
 - `InitiatingProcessSHA256`: This column is the SHA-256 equivalent of the file identified by the `InitiatingProcessSHA1` column.
@@ -71,7 +71,7 @@ To learn more about how quarantine actions are taken and how files can be restor
 > [!NOTE]
 > To locate files and quarantine them, the query results should also include `DeviceId` values as device identifiers.
 
-To take any of the described actions, select one or more records in your query results and then select **Take actions**. A wizard will guide you through the process of selecting and then submitting your preferred actions.
+To take any of the described actions, select one or more records in your query results and then select **Take actions**. A wizard guides you through the process of selecting and then submitting your preferred actions.
 
 :::image type="content" source="media/take-action-multiple.png" alt-text="Screenshot of the take actions option in the Microsoft Defender portal." lightbox="media/take-action-multiple.png":::
 
@@ -79,11 +79,11 @@ To take any of the described actions, select one or more records in your query r
 
 Apart from device-focused remediation steps, you can also take some actions on emails from your query results. Select the records you want to take action on, select **Take actions**, then under **Choose actions**, select your choice from the following:
 
-- `Move to mailbox folder` - select this to move the email messages to Junk, Inbox, or Deleted items folder
+- `Move to mailbox folder` - select this action to move the email messages to Junk, Inbox, or Deleted items folder
 
    :::image type="content" source="media/advanced-hunting-take-actions-email.png" alt-text="Screenshot of the option Take actions in the Microsoft Defender portal." lightbox="media/advanced-hunting-take-actions-email.png":::
 
-- `Delete email` - select this to move email messages to the Deleted items folder (**Soft delete**) or delete them permanently (**Hard delete**)
+- `Delete email` - select this action to move email messages to the Deleted items folder (**Soft delete**) or delete them permanently (**Hard delete**)
 
    Selecting **Soft delete** also automatically soft deletes the messages from the sender's Sent Items folder if the sender is in the organization.
 
@@ -99,7 +99,6 @@ Apart from device-focused remediation steps, you can also take some actions on e
    | project NetworkMessageId,RecipientEmailAddress, EmailDirection, SenderFromAddress, LatestDeliveryAction,LatestDeliveryLocation
    ```
 
-
 You can also provide a remediation name and a short description of the action taken to easily track it in the action center history. You can also use the Approval ID to filter for these actions in the action center. This ID is provided at the end of the wizard:
 
 :::image type="content" source="media/choose-email-actions-entities.png" alt-text="take actions wizard showing choose actions for entities" lightbox="media/choose-email-actions-entities.png":::
@@ -113,11 +112,12 @@ Each action is individually recorded in the [action center](m365d-action-center.
 > [!NOTE]
 > Some tables in this article might not be available in Microsoft Defender for Endpoint. [Turn on Microsoft Defender XDR](m365d-enable.md) to hunt for threats using more data sources. You can move your advanced hunting workflows from Microsoft Defender for Endpoint to Microsoft Defender XDR by following the steps in [Migrate advanced hunting queries from Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
-## Related topics
+## Related articles
 
 - [Advanced hunting overview](advanced-hunting-overview.md)
 - [Learn the query language](advanced-hunting-query-language.md)
 - [Work with query results](advanced-hunting-query-results.md)
 - [Understand the schema](advanced-hunting-schema-tables.md)
 - [Action center overview](m365d-action-center.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
