@@ -36,17 +36,24 @@ The following steps guide you on how to create custom roles in Microsoft Defende
 
 > [!IMPORTANT]
 > You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
+
 2. In the navigation pane, select **Permissions**.
+
 3. Select **Roles** under Microsoft Defender XDR to get to the Permissions and roles page.
+
 4. Select **Create custom role**.
+
 5. Enter the Role name and description.
+
 6. Select **Next** to choose the permissions you want to assign. Permissions are organized in three different categories:
 
    :::image type="content" source="/defender/media/defender/m365-defender-rbac-permissions1.png" alt-text="Screenshot of the permissions screen" lightbox="/defender/media/defender/m365-defender-rbac-permissions1.png":::
 
 7. Select a permission category (for example, Security operations), and then review the permissions available. You can choose to assign the following different levels of permissions:
+
     - Select all read-only permissions – Users will be assigned with all the read-only permissions in this category.
     - Select all read and manage permissions – Users will be assigned all permissions in this category (read and manage permissions).
     - Select custom permissions – Users will be assigned the custom permissions selected.
@@ -61,7 +68,9 @@ The following steps guide you on how to create custom roles in Microsoft Defende
     > If you have assigned custom permissions and new permissions are added to this category, you will need to re-assign your roles with the new permissions if needed.
 
 8. Once you have selected your permissions, select **Apply** and then **Next** to assign users and data sources.
+
 9. Select **Add assignments** and Enter the Assignment name.
+
 10. Under **data sources**, choose if the assigned users will have the selected permissions across all the available products, or only for specific data sources:
 
      :::image type="content" source="/defender/media/defender/m365-defender-rbac-assignments.png" alt-text="Screenshot of the assignments screen" lightbox="/defender/media/defender/m365-defender-rbac-assignments.png":::
@@ -83,25 +92,35 @@ The following steps guide you on how to create custom roles in Microsoft Defende
 To access and manage roles and permissions, without being a Global Administrator or Security Administrator in Microsoft Entra ID, you need to create a role with **Authorization** permissions. To create this role:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as Global Administrator or Security Administrator.
+
 2. In the navigation pane, select **Permissions**.
+
 3. Select **Roles** under Microsoft Defender XDR.
+
 4. Select **Create custom role**.
+
 5. Enter the Role name and description.
+
 6. Select **Next** and choose the **Authorization and settings** option.
+
 7. On the Authorization and settings category flyout, choose **Select custom permissions** and under **Authorization** select either:
+
     - Select all permissions - users will be able to create and manage roles and permissions.
     - Read-only - uses will be able to access and view roles and permissions in a read-only mode.
 
     :::image type="content" source="/defender/media/defender/m365-defender-rbac-authorization-role.png" alt-text="Screenshot of the permissions and roles page" lightbox="/defender/media/defender/m365-defender-rbac-authorization-role.png":::
 
 8. Select **Apply** and then **Next** to assign users and data sources.
+
 9. Select **Add assignments** and enter the Assignment name.
+
 10. To choose the **data sources** users assigned the Authorization permission will have access to:
 
     - Select **Choose all data sources** to grant users permissions to create new roles and manage roles for all data sources.
     - Select **Select specific data sources** to grant users permissions to create new roles and manage roles for a specific data source. For example, select Microsoft Defender for Endpoint from the dropdown to grant users the Authorization permission for the Microsoft Defender for Endpoint data source only.
 
 11. In **Assigned users and groups** – choose the Microsoft Entra security groups or individual users to assign the role to, and select **Add**.
+
 12. Select **Next** to review and finish creating the role and then select **Submit**.
 
 > [!NOTE]
@@ -111,4 +130,5 @@ To access and manage roles and permissions, without being a Global Administrator
 
 - [Import existing RBAC roles](import-rbac-roles.md)
 - [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
