@@ -15,7 +15,7 @@ ms.collection:
   - m365-security
   - tier1
 ms.topic: conceptual
-ms.date: 02/16/2024
+ms.date: 06/27/2024
 ---
 
 # Take action on advanced hunting query results
@@ -34,7 +34,12 @@ You can quickly contain threats or address compromised assets that you find in [
 
 ## Required permissions
 
-To take action on devices through advanced hunting, you need a role in Microsoft Defender for Endpoint with [permissions to submit remediation actions on devices](/windows/security/threat-protection/microsoft-defender-atp/user-roles#permission-options). If you can't take action, contact a global administrator about getting the following permission:
+To take action on devices through advanced hunting, you need a role in Microsoft Defender for Endpoint with [permissions to submit remediation actions on devices](/windows/security/threat-protection/microsoft-defender-atp/user-roles#permission-options). 
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+If you can't take action, contact a Global Administrator about getting the following permission:
 
 *Active remediation actions > Threat and vulnerability management - Remediation handling*
 
