@@ -22,7 +22,7 @@ search.appverid:
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
-ms.date: 05/29/2024
+ms.date: 06/25/2024
 ---
 
 # Connect Microsoft Sentinel to Microsoft Defender XDR
@@ -38,6 +38,7 @@ Before you begin, review the feature documentation to understand the product cha
 
 - [Microsoft Sentinel in the Microsoft Defender portal](/azure/sentinel/microsoft-sentinel-defender-portal)
 - [Advanced hunting in the Microsoft Defender portal](advanced-hunting-microsoft-defender.md)
+- [Alerts, incidents, and correlation in Microsoft Defender XDR](alerts-incidents-correlation.md)
 - [Automation with the unified security operations platform](/azure/sentinel/automation#automation-with-the-unified-security-operations-platform)
 
 The Microsoft Defender portal supports a single Microsoft Entra tenant and the connection to one workspace at a time. In the context of this article, a workspace is a Log Analytics workspace with Microsoft Sentinel enabled.
@@ -45,7 +46,7 @@ The Microsoft Defender portal supports a single Microsoft Entra tenant and the c
 To onboard and use Microsoft Sentinel in the Microsoft Defender portal, you must have the following resources and access:
 
 - A Log Analytics workspace that has Microsoft Sentinel enabled
-- The data connector for Microsoft Defender XDR (formerly named Microsoft 365 Defender) enabled in Microsoft Sentinel for incidents and alerts
+- The data connector for Microsoft Defender XDR (formerly named Microsoft 365 Defender) enabled in Microsoft Sentinel for incidents and alerts. For more information, see [Connect data from Microsoft Defender XDR to Microsoft Sentinel](/azure/sentinel/connect-microsoft-365-defender).
 - Access to Microsoft Defender XDR in the Defender portal
 - Microsoft Defender XDR onboarded to the Microsoft Entra tenant
 - An Azure account with the appropriate roles to onboard, use, and create support requests for Microsoft Sentinel in the Defender portal. The following table highlights some of the key roles needed.
