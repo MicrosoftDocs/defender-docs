@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: conceptual
-ms.date: 04/03/2024
+ms.date: 06/27/2024
 ---
 
 # Use the advanced hunting query resource report
@@ -58,11 +58,14 @@ The report can be accessed in two ways:
 
   :::image type="content" source="/defender/media/ah-query-resources/reports-general-query-resources.png" alt-text="view the query resources report in the Reports section" lightbox="/defender/media/ah-query-resources/reports-general-query-resources.png":::
 
-All users can access the reports, however, only the Microsoft Entra global admin, Microsoft Entra security admin, and Microsoft Entra security reader roles can see queries done by all users in all interfaces. Any other user can only see:
+All users can access the reports; however, only the Microsoft Entra Global Administrator, Microsoft Entra Security Administrator, and Microsoft Entra Security Reader roles can see queries done by all users in all interfaces. Any other user can only see:
 
 - Queries they ran via the portal
 - Public API queries they ran themselves and not through the application
 - Custom detections they created
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ### Query resource report contents
 
@@ -100,9 +103,10 @@ The graph supports two views:
 
 This means that, for instance, if on a specific day you ran two queries, one used 50% of your resources and one used 100%, the average daily use value would show 75%, while the top daily use would show 100%.
 
-## Related topics
+## Related articles
 
 - [Advanced hunting best practices](advanced-hunting-best-practices.md)
 - [Handle advanced hunting errors](advanced-hunting-errors.md)
 - [Advanced hunting overview](advanced-hunting-overview.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
