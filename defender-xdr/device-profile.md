@@ -37,7 +37,7 @@ The sidebar (1) lists basic details about the device.
 
 The main content area (2) contains tabs that you can toggle through to view different kinds of information about the device.
 
-If the device is enrolled in Microsoft Defender for Endpoint, you'll also see a list of response actions (3). Response actions allow you to perform common security-related tasks.
+If the device is enrolled in Microsoft Defender for Endpoint, you also see a list of response actions (3). Response actions allow you to perform common security-related tasks.
 
 ## Sidebar
 
@@ -71,7 +71,7 @@ Actions available on the device profile page include:
 
 - **Manage tags** - Updates custom tags you've applied to this device.
 - **Isolate device** - Isolates the device from your organization's network while keeping it connected to Microsoft Defender for Endpoint. You can choose to allow Outlook, Teams, and Skype for Business to run while the device is isolated, for communication purposes.
-- **Action center** - View the status of submitted actions. Only available if another action has already been selected.
+- **Action center** - View the status of submitted actions. Only available if another action was selected already.
 - **Restrict app execution** - Prevents applications that aren't signed by Microsoft from running.
 - **Run antivirus scan** - Updates Microsoft Defender Antivirus definitions and immediately runs an antivirus scan. Choose between Quick scan or Full scan.
 - **Collect investigation package** - Gathers information about the device. When the investigation is completed, you can download it.
@@ -93,23 +93,23 @@ The default tab is **Overview**. It provides a quick look at the most important 
 
 Here, you can get a quick look at the device's active alerts, and any currently logged on users.
 
-If the device is enrolled in Microsoft Defender for Endpoint, you'll also see the device's risk level and any available data on security assessments. The security assessments describe the device's exposure level, provide security recommendations, and list affected software and discovered vulnerabilities.
+If the device is enrolled in Microsoft Defender for Endpoint, you also see the device's risk level and any available data on security assessments. The security assessments describe the device's exposure level, provide security recommendations, and list affected software and discovered vulnerabilities.
 
 ### Alerts tab
 
-The **Alerts** tab contains a list of alerts that have been raised on the device, from both Microsoft Defender for Identity and Microsoft Defender for Endpoint.
+The **Alerts** tab contains a list of alerts that were raised on the device, from both Microsoft Defender for Identity and Microsoft Defender for Endpoint.
 
 :::image type="content" source="./media/mtp-device-profile/hybrid-device-tab-alerts.png" alt-text="The Alerts tab for device profile in the Microsoft Defender portal" lightbox="./media/mtp-device-profile/hybrid-device-tab-alerts.png":::
 
 You can customize the number of items displayed and which columns are displayed for each item. The default behavior is to list 30 items per page.
 
-The columns in this tab include information on the severity of the threat that triggered the alert and status, investigation state, and who the alert has been assigned to.
+The columns in this tab include information on the severity of the threat that triggered the alert and status, investigation state, and who the alert is assigned to.
 
 The *impacted entities* column refers to the device (entity) whose profile you're currently viewing, plus any other devices in your network that are affected.
 
 Selecting an item from this list opens a flyout containing even more information about the selected alert.
 
-This list can be filtered by severity, status, or who the alert has been assigned to.
+This list can be filtered by severity, status, or who the alert is assigned to.
 
 ### Timeline tab
 
@@ -151,7 +151,7 @@ This list can be filtered by product code.
 
 ### Discovered vulnerabilities tab
 
-The **Discovered vulnerabilities** tab lists any Common Vulnerabilities and Exploits (CVEs) that may affect the device.
+The **Discovered vulnerabilities** tab lists any Common Vulnerabilities and Exploits (CVEs) that could affect the device.
 
 :::image type="content" source="./media/mtp-device-profile/hybrid-device-tab-discovered-vulnerabilities.png" alt-text="The Discovered vulnerabilities tab for device profile in the Microsoft Defender portal" lightbox="./media/mtp-device-profile/hybrid-device-tab-discovered-vulnerabilities.png":::
 
