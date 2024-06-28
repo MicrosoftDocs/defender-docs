@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 04/17/2024
+ms.date: 06/28/2024
 ---
 
 # Offboard machine API
@@ -52,10 +52,10 @@ Offboard device from Defender for Endpoint.
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Use Defender for Endpoint APIs](apis-intro.md)
 
-Permission type|Permission|Permission display name
----|---|---
-Application|Machine.Offboard|'Offboard machine'
-Delegated (work or school account)|Machine.Offboard|'Offboard machine'
+|Permission type|Permission|Permission display name|
+|---|---|---|
+|Application|`Machine.Offboard`|`Offboard machine`|
+|Delegated (work or school account)|`Machine.Offboard`|`Offboard machine`|
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -63,8 +63,8 @@ Delegated (work or school account)|Machine.Offboard|'Offboard machine'
 > [!NOTE]
 > When obtaining a token using user credentials:
 >
-> - The user needs to have a 'Global Administrator' role.
-> - The user needs to have access to the device, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
+> - The user must have a Global Administrator role.
+> - The user must have access to the device, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
 >
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
 
@@ -87,13 +87,13 @@ Content-Type|string|application/json. **Required**.
 
 In the request body, supply a JSON object with the following parameters:
 
-Parameter|Type|Description
----|---|---
-Comment|String|Comment to associate with the action. **Required**.
+|Parameter|Type|Description|
+|---|---|---|
+|Comment|String|Comment to associate with the action. **Required**.|
 
 ## Response
 
-If successful, this method returns 200 - Created response code and [Machine Action](machineaction.md) in the response body.
+If successful, this method returns `200 - Created response` code and [Machine Action](machineaction.md) in the response body.
 
 ## Example
 
@@ -110,4 +110,5 @@ POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e41
   "Comment": "Offboard machine by automation"
 }
 ```
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
