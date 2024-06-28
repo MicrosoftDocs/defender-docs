@@ -89,10 +89,10 @@ The following steps guide you how to create a Microsoft Entra application, get a
 
 To determine which permission you need, review the **Permissions** section in the API you want to call. For instance:
 
-- To [run advanced queries](run-advanced-query-api.md), select 'Run advanced queries' permission
-- To [isolate a device](isolate-machine.md), select 'Isolate machine' permission
+- To [run advanced queries](run-advanced-query-api.md), select the **Run advanced queries** permission.
+- To [isolate a device](isolate-machine.md), select the **Isolate machine** permission.
 
-In the following example we use **'Read all alerts'** permission:
+In the following example we use **Read all alerts** permission:
 
 1. Choose **Application permissions** \> **Alert.Read.All** > select on **Add permissions**
 
@@ -100,7 +100,7 @@ In the following example we use **'Read all alerts'** permission:
 
 2. Select **Grant consent**
 
-   - **Note**: Every time you add permission you must select on **Grant consent** for the new permission to take effect.
+   - Every time you add permission you must select on **Grant consent** for the new permission to take effect.
 
    :::image type="content" source="../media/grant-consent.png" alt-text="The option that allows consent to be granted" lightbox="../media/grant-consent.png":::
 
@@ -108,7 +108,7 @@ In the following example we use **'Read all alerts'** permission:
 
    - Select **Certificates & secrets**, add description to the secret and select **Add**.
 
-    **Important**: After you select **Add**, make sure to copy the generated secret value. You won't be able to retrieve it after you leave!
+    After you select **Add**, make sure to copy the generated secret value. You won't be able to retrieve it after you leave!
 
      :::image type="content" source="../media/webapp-create-key2.png" alt-text="The create app key" lightbox="../media/webapp-create-key2.png":::
 
@@ -130,9 +130,9 @@ In the following example we use **'Read all alerts'** permission:
    https://login.microsoftonline.com/common/oauth2/authorize?prompt=consent&client_id=00000000-0000-0000-0000-000000000000&response_type=code&sso_reload=true
    ```
 
-   Where 00000000-0000-0000-0000-000000000000 should be replaced with your Application ID
+   Where `00000000-0000-0000-0000-000000000000` should be replaced with your Application ID.
 
-   After clicking on the consent link, sign in with the Global Administrator of the customer's tenant and consent the application.
+   After selecting the consent link, sign in as the Global Administrator of the customer's tenant and consent the application.
 
    :::image type="content" source="../media/app-consent-partner.png" alt-text="The Accept button" lightbox="../media/app-consent-partner.png":::
 
@@ -142,7 +142,7 @@ In the following example we use **'Read all alerts'** permission:
 
 ## Get an access token example
 
-**Note:** To get access token on behalf of your customer, use the customer's tenant ID on the following token acquisitions.
+To get access token on behalf of your customer, use the customer's tenant ID on the following token acquisitions.
 
 For more information on Microsoft Entra token, see [Microsoft Entra tutorial](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds).
 
@@ -240,21 +240,22 @@ Confirm you received a correct token.
 
 1. Copy/paste into [JWT](https://jwt.ms) the token you get in the previous step in order to decode it.
 
-2. Confirm you get a 'roles' claim with the desired permissions.
+2. Confirm you get a roles claim with the appropriate permissions.
 
    In the following screenshot, you can see a decoded token acquired from an Application with multiple permissions to  Microsoft Defender for Endpoint:
 
+   :::image type="content" source="../media/webapp-decoded-token.png" alt-text="The token validation page" lightbox="../media/webapp-decoded-token.png":::
+
    The "tid" claim is the tenant ID the token belongs to.
 
-   :::image type="content" source="../media/webapp-decoded-token.png" alt-text="The token validation page" lightbox="../media/webapp-decoded-token.png":::
 
 ## Use the token to access Microsoft Defender for Endpoint API
 
 1. Choose the API you want to use. For more information, see [Supported Microsoft Defender for Endpoint APIs](exposed-apis-list.md).
 
-2. Set the Authorization header in the Http request you send to "Bearer {token}" (Bearer is the Authorization scheme). The Expiration time of the token is 1 hour (you can send more than one request with the same token).
+2. Set the Authorization header in the Http request you send to `Bearer {token}` (Bearer is the Authorization scheme). The Expiration time of the token is one hour (you can send more than one request with the same token).
 
-   Here's an example of sending a request to get a list of alerts **using C#**
+   Here's an example of sending a request to get a list of alerts using C#:
 
    ```csharp
    var httpClient = new HttpClient();
