@@ -39,7 +39,7 @@ Offboard device from Defender for Endpoint.
 
 ## Limitations
 
-- Rate limitations for this API are 100 calls per minute and 1500 calls per hour.
+- Rate limitations for this API are 100 calls per minute and 1,500 calls per hour.
 
   [!include[Machine actions note](../../includes/machineactionsnote.md)]
 
@@ -99,7 +99,7 @@ If successful, this method returns `200 - Created response` code and [Machine Ac
 
 ### Request
 
-Here's an example of the request. If there's no JSON comment added, it will error out with code **400**.
+Here's an example of the request. If there's no JSON comment added, it errors out with code **400**.
 
 ```http
 POST https://api.security.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/offboard
