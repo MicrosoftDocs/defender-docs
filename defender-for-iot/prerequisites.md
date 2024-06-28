@@ -23,11 +23,11 @@ Before you start, you need:
 
 - A Microsoft tenant, with Global or Billing admin access to the tenent.
 
-    For more information, see [Buy or remove licenses for a Microsoft business subscription](/microsoft-365/commerce/licenses/buy-licenses.md) and [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles.md).
+    For more information, see [Buy or remove licenses for a Microsoft business subscription](/microsoft-365/commerce/licenses/buy-licenses) and [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles).
 
 - A Microsoft 365 E5/ Defender for Endpoint Plan 2/ E5 security license.
 
-- Microsoft Defender for Endpoint agents deployed in your environment. For more information, see [onboard Microsoft Defender for Endpoint](/defender-endpoint/onboarding.md)
+- Microsoft Defender for Endpoint agents deployed in your environment. For more information, see [onboard Microsoft Defender for Endpoint](/defender-endpoint/onboarding)
 
 ## Prerequisites for setting up a site
 
@@ -45,14 +45,14 @@ To access the Defender for IoT features, such as site security, alerts, and vuln
 
 There are two ways to manage user access to the Microsoft Defender portal:
 
-- [Global Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference.md).
-- [Custom role access](/defender-xdr/custom-roles.md): Use role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
+- [Global Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference).
+- [Custom role access](/defender-xdr/custom-roles): Use role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 
 The permission settings listed in this section apply to the unified RBAC version.
 
-Depending on your tenant, you might have access to RBAC version 1 or 2 instead of the unified version. For more information, see [permissions for RBAC version 1](/defender-endpoint/prepare-deployment.md), or [permissions for RBAC version 2](/defender-endpoint/user-roles#permission-options.md).
+Depending on your tenant, you might have access to RBAC version 1 or 2 instead of the unified version. For more information, see [permissions for RBAC version 1](/defender-endpoint/prepare-deployment), or [permissions for RBAC version 2](/defender-endpoint/user-roles#permission-options).
 
-If you're using the Defender portal for the first time, you need to set up all of your roles and permissions. For more information, see [manage portal access using role-based access control](/defender-endpoint/rbac.md).
+If you're using the Defender portal for the first time, you need to set up all of your roles and permissions. For more information, see [manage portal access using role-based access control](/defender-endpoint/rbac).
 
 ### Unified RBAC roles for Defender for IoT
 
@@ -72,6 +72,6 @@ This table shows the full roles and permissions needed for all MDE features used
 |Device group| **MDE Roles**: Authorization (Read and manage) <br>**Entra ID roles**: Global Administrator, Security Administrator |**MDE Roles**: Authorization (write roles, Read-only) |
 |Defender for IoT| **MDE roles**: Core security settings. <br> **Entra ID roles**: Global Administrator, Security Administrator, Security Operator scoped to all device groups.|Write roles (including roles that aren't scoped to all device groups). <br> **MDE Roles**: Security data basics (under Security Operations).<br> **Entra ID roles**: Global Reader, Security Reader |
 
-To assign roles and permissions for other Microsoft Defender for Endpoint features, such as alerts, incidents and inventory, see [assign roles and permissions for Defender for Endpoint](/defender-endpoint/prepare-deployment.md).
+To assign roles and permissions for other Microsoft Defender for Endpoint features, such as alerts, incidents and inventory, see [assign roles and permissions for Defender for Endpoint](/defender-endpoint/prepare-deployment).
 
-For more information, see [map unified RBAC permissions](/defender-xdr/compare-rbac-roles.md#microsoft-entra-global-roles-access).
+For more information, see [map unified RBAC permissions](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access).
