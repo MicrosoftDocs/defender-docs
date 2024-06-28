@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 01/25/2023
+ms.date: 06/28/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -78,7 +78,7 @@ The following steps guide you how to create a Microsoft Entra application, get a
 
    - On your application page, select **API Permissions** \> **Add permission** \> **APIs my organization uses** > type **WindowsDefenderATP** and select on **WindowsDefenderATP**.
 
-   - Note that *WindowsDefenderATP* doesn't appear in the original list. Start writing its name in the text box to see it appear.
+   - Note that `WindowsDefenderATP` doesn't appear in the original list. Start writing its name in the text box to see it appear.
 
      :::image type="content" source="../media/add-permission.png" alt-text="The Add a permission option" lightbox="../media/add-permission.png":::
 
