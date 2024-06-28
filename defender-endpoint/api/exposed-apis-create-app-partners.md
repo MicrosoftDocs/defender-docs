@@ -81,7 +81,7 @@ The following steps guide you how to create a Microsoft Entra application, get a
 
    - On your application page, select **API Permissions** \> **Add permission** \> **APIs my organization uses** > type **WindowsDefenderATP** and select on **WindowsDefenderATP**.
 
-   - Note that `WindowsDefenderATP` doesn't appear in the original list. Start writing its name in the text box to see it appear.
+   - `WindowsDefenderATP` doesn't appear in the original list. Start writing its name in the text box to see it appear.
 
      :::image type="content" source="../media/add-permission.png" alt-text="The Add a permission option" lightbox="../media/add-permission.png":::
 
@@ -185,7 +185,7 @@ return $token
     using Microsoft.Identity.Client;
    ```
 
-   This code was tested with Nuget `Microsoft.Identity.Client`.
+   This code was tested with NuGet `Microsoft.Identity.Client`.
 
 4. Copy/Paste the following code in your application (don't forget to update the three variables: `tenantId`, `appId`, and `appSecret`).
 
