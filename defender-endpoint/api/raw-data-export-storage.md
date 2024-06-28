@@ -40,9 +40,10 @@ ms.date: 06/28/2024
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 ## Enable raw data streaming
 
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as a ***Security Administrator***.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as a Security Administrator.
 
 2. Go to [Data export settings page](https://security.microsoft.com/settings/mtp_settings/raw_data_export) in Microsoft Defender XDR.
 
@@ -77,7 +78,7 @@ ms.date: 06/28/2024
 
 - Each blob contains multiple rows.
 
-- Each row contains the event name, the time Defender for Endpoint received the event, the tenant it belongs (you get events only from your tenant), and the event in JSON format in a property called "properties".
+- Each row contains the event name, the time Defender for Endpoint received the event, the tenant it belongs (you get events only from your tenant), and the event in JSON format in a property called `properties`.
 
 - For more information about the schema of Microsoft Defender for Endpoint events, see [Advanced Hunting overview](/defender-xdr/advanced-hunting-overview).
 
@@ -87,9 +88,9 @@ ms.date: 06/28/2024
 
 ## Data types mapping
 
-In order to get the data types for our events properties, do the following:
+In order to get the data types for our events properties, take the following steps:
 
-1. Sign in to [Microsoft Defender portal](https://security.microsoft.com) and go to [Advanced Hunting page](https://security.microsoft.com/hunting-package).
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) and go to [Advanced Hunting page](https://security.microsoft.com/hunting-package).
 
 2. Run the following query to get the data types mapping for each event:
 
@@ -99,16 +100,16 @@ In order to get the data types for our events properties, do the following:
    | project ColumnName, ColumnType
    ```
 
-- Here's an example for Device Info event:
+   Here's an example for Device Info event:
 
-  :::image type="content" source="../media/data-types-mapping-query.png" alt-text="The Event Hubs with resource ID3" lightbox="../media/data-types-mapping-query.png":::
+      :::image type="content" source="../media/data-types-mapping-query.png" alt-text="The Event Hubs with resource ID3" lightbox="../media/data-types-mapping-query.png":::
 
 ## Related articles
 
 - [Stream Microsoft Defender XDR events | Microsoft Learn](/defender-xdr/streaming-api)
-
 - [Overview of Advanced Hunting](/defender-xdr/advanced-hunting-overview)
 - [Microsoft Defender for Endpoint Streaming API](raw-data-export.md)
 - [Stream Microsoft Defender for Endpoint events to your Azure storage account](raw-data-export-storage.md)
 - [Azure Storage Account documentation](/azure/storage/common/storage-account-overview)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]
