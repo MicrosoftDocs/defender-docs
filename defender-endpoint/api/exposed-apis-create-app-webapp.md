@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 03/19/2024
+ms.date: 06/28/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -191,11 +191,11 @@ See [Get token using Python](run-advanced-query-sample-python.md#get-token).
 > [!NOTE]
 > The following procedure assumes that Curl for Windows is already installed on your computer.
 
-1. Open a command prompt, and set CLIENT_ID to your Azure application ID.
+1. Open a command prompt, and set `CLIENT_ID` to your Azure application ID.
 
-1. Set CLIENT_SECRET to your Azure application secret.
+1. Set `CLIENT_SECRET` to your Azure application secret.
 
-1. Set TENANT_ID to the Azure tenant ID of the customer that wants to use your app to access Defender for Endpoint.
+1. Set `TENANT_ID` to the Azure tenant ID of the customer that wants to use your app to access Defender for Endpoint.
 
 1. Run the following command:
 
@@ -203,7 +203,7 @@ See [Get token using Python](run-advanced-query-sample-python.md#get-token).
     curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://securitycenter.onmicrosoft.com/windowsatpservice/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
     ```
     
-    You will get an answer in the following form:
+    You get an answer that resembles the following code snippet:
     
     ```console
     {"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
@@ -215,7 +215,7 @@ Ensure that you got the correct token:
 
 1. Copy and paste the token you got in the previous step into [JWT](https://jwt.ms) in order to decode it.
 
-1. Validate that you get a 'roles' claim with the desired permissions.
+1. Validate that you get a roles claim with the desired permissions.
 
    In the following image, you can see a decoded token acquired from an app with permissions to all of  Microsoft Defender for Endpoint's roles:
 
@@ -225,7 +225,7 @@ Ensure that you got the correct token:
 
 1. Choose the API you want to use. For more information, see [Supported Defender for Endpoint APIs](exposed-apis-list.md).
 
-1. Set the authorization header in the http request you send to "Bearer {token}" (Bearer is the authorization scheme).
+1. Set the authorization header in the `http` request you send to `Bearer {token}` (Bearer is the authorization scheme).
 
 1. The expiration time of the token is one hour. You can send more than one request with the same token.
 
