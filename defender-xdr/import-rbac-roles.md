@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 06/13/2024
+ms.date: 06/28/2024
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -45,16 +45,22 @@ The following steps guide you on how to import roles into Microsoft Defender XDR
 
 > [!IMPORTANT]
 > You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
+
 2. In the navigation pane, select **Permissions**.
+
 3. Select **Roles** under Microsoft Defender XDR to get to the Permissions and roles page.
+
 4. Select **Import role**.
+
 5. Select the products you want to import roles from.
 
     :::image type="content" source="/defender/media/defender/m365-defender-import-workloads.png" alt-text="Screenshot of the import workloads page" lightbox="/defender/media/defender/m365-defender-import-workloads.png":::
 
 6. Select **Next** to choose the roles to import. You can choose all roles or select specific roles from the list. Select the role name to review the permissions and assigned users or groups for that specific role.
+
 7. Select the roles you want to import and select **Next**.
 
 > [!NOTE]
@@ -63,6 +69,7 @@ The following steps guide you on how to import roles into Microsoft Defender XDR
 > To import this role to Unified RBAC, remove the user or user group from the role in the original RBAC model. Select the role to view the list of users that still exist for that role to determine which user or group to remove.
 
 8. Select **Submit**.
+
 9. Select **Done** on the confirmation page.
 
 Now that you have imported your roles you will be able to [View and edit roles](edit-delete-rbac-roles.md) and activate the workloads.
@@ -78,5 +85,6 @@ Imported roles appear in the **Permissions and roles** list together with any cu
 
 - [Activate Microsoft Defender XDR Unified RBAC](activate-defender-rbac.md)
 - [Edit or delete roles](edit-delete-rbac-roles.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
 
