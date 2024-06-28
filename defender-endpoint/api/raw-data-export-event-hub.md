@@ -82,7 +82,7 @@ ms.date: 06/28/2024
 
 - Each event hub message in Azure Event Hubs contains list of records.
 
-- Each record contains the event name, the time Microsoft Defender for Endpoint received the event, the tenant it belongs (you'll only get events from your tenant), and the event in JSON format in a property called "**properties**".
+- Each record contains the event name, the time Microsoft Defender for Endpoint received the event, the tenant it belongs (you only get events from your tenant), and the event in JSON format in a property called "**properties**".
 
 - For more information about the schema of Microsoft Defender for Endpoint events, see [Advanced Hunting overview](/defender-xdr/advanced-hunting-overview).
 
