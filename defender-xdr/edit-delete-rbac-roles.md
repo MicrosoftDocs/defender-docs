@@ -2,17 +2,17 @@
 title: Edit or delete roles Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Edit or delete roles in Microsoft Defender XDR Security portal experiences using role-based access control (RBAC)
 ms.service: defender-xdr
-ms.author: siosulli
+ms.author: diannegali
 author: siosulli
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 08/03/2023
+ms.date: 06/27/2024
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -37,12 +37,17 @@ In Microsoft Defender XDR Unified role-based access control (RBAC), you can edit
 The following steps guide you on how to edit roles in Microsoft Defender XDR Unified RBAC:
 
 > [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the **Authorization** permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-pre-requisites).
+> You must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have all the Authorization permissions assigned in Microsoft Defender XDR Unified RBAC to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as global administrator or security administrator.
+
 2. In the navigation pane, select **Permissions**.
-3. Select **Roles** under Microsoft Defender XDR to get to the Permissions and roles page.
+
+3. Select **Roles** under Microsoft Defender XDR to get to the **Permissions and roles** page.
+
 4. Select the role you want to edit. You can only edit one role at a time.
+
 5. Once selected, this opens a flyout pane where you can edit the role:
 
     :::image type="content" source="/defender/media/defender/m365-defender-rbac-edit-roles.png" alt-text="Screenshot of the edit roles flyout page" lightbox="/defender/media/defender/m365-defender-rbac-edit-roles.png":::
@@ -76,14 +81,17 @@ The CSV also includes a snapshot of the Unified RBAC activation status for each 
 
 The following steps guide you on how to export roles in Microsoft Defender XDR Unified RBAC:
 
->[!Note]
->To export roles, you must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have the **Authorization (manage)** permission assigned for all data sources in Microsoft Defender XDR Unified RBAC and have at least one workload activated for Unified RBAC.
+> [!NOTE]
+> To export roles, you must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have the **Authorization (manage)** permission assigned for all data sources in Microsoft Defender XDR Unified RBAC and have at least one workload activated for Unified RBAC.
 >
->For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-pre-requisites).
+>For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) with the required roles or permissions.
+
 2. In the navigation pane, select **Permissions**.
+
 3. Select **Roles** under Microsoft Defender XDR to get to the Permissions and roles page.
+
 4. Select the **Export** button.
 
     :::image type="content" source="/defender/media/defender/m365-defender-rbac-export-roles.png" alt-text="Screenshot of the export roles page" lightbox="/defender/media/defender/m365-defender-rbac-export-roles.png":::
@@ -94,4 +102,5 @@ A CSV file containing all the roles data will be generated and downloaded to the
 
 - [Learn about RBAC permissions](custom-permissions-details.md)
 - [Map existing RBAC roles to Microsoft Defender XDR Unified RBAC roles](compare-rbac-roles.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

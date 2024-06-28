@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.date: 04/30/2024
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.custom: nextgen
 ms.reviewer:
 ms.subservice: ngp

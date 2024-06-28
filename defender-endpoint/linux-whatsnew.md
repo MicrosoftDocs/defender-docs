@@ -7,7 +7,7 @@ author: dansimp
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
 ms.date: 06/05/2024
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
@@ -32,6 +32,28 @@ This article is updated frequently to let you know what's new in the latest rele
 
 - [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
+<details>
+<summary> June-2024 (Build: 101.24052.0002 | Release version: 30.24052.0002.0)</summary>
+
+## June-2024 Build: 101.24052.0002 | Release version: 30.124052.0002.0
+
+&ensp;Released: **June 24, 2024**<br/>
+&ensp;Published: **June 24, 2024**<br/>
+&ensp;Build: **101.24052.0002**<br/>
+&ensp;Release version: **30.24052.0002.0**<br/>
+&ensp;Engine version: **1.1.24040.2**<br/>
+&ensp;Signature version: **1.411.153.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release.
+
+- This release fixes a bug related to high memory usage eventually leading to high CPU due to eBPF memory leak in kernel space resulting in servers going into unusable states. This only impacted the kernel versions 3.10x and <= 4.16x, majorly on RHEL/CentOS distros. Please update to the latest MDE version to avoid any impact.
+- We have now simplified the output of `mdatp health --detail features`
+- Stability and performance improvements.
+- Other bug fixes.
+
+</details>
 <details>
 <summary> May-2024 (Build: 101.24042.0002 | Release version: 30.24042.0002.0)</summary>
 

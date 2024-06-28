@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: dansimp
 author: dansimp
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
@@ -174,7 +174,7 @@ Create a SaltState state file in your configuration repository (typically `/srv/
 
     install_mdatp_package:
     pkg.installed:
-    - name: matp
+    - name: mdatp
     - required: add_ms_repo
 
     copy_mde_onboarding_file:

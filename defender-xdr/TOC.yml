@@ -4,7 +4,7 @@
   items: 
     - name: Overview
       items:
-      - name: What is Microsoft Defender XDR
+      - name: What is Microsoft Defender XDR?
         href: microsoft-365-defender.md
       - name: What's new
         href: whats-new.md
@@ -68,20 +68,36 @@
           href: m365d-enable.md
         - name: 2. Deploy supported services
           href: deploy-supported-services.md
-        - name: Setup guides for Microsoft Defender XDR
-          href: deploy-configure-m365-defender.md  
-        - name: Turning on Microsoft Defender XDR FAQs
-          href: m365d-enable-faq.md              
-        - name: Train your security staff
-          href: microsoft-365-defender-train-security-staff.md              
+        - name: 3. Train your security staff
+          href: microsoft-365-defender-train-security-staff.md
+        - name : Guides and FAQs
+          items:              
+          - name: Setup guides for Microsoft Defender XDR
+            href: deploy-configure-m365-defender.md  
+          - name: Turning on Microsoft Defender XDR FAQs
+            href: m365d-enable-faq.md
+          - name: Guides for your security staff
+            items: 
+            - name: Respond to your first incident
+              href: respond-first-incident-365-defender.md
+            - name: Analyze your first incident
+              href: respond-first-incident-analyze.md
+            - name: Remediate your first incident
+              href: respond-first-incident-remediate.md
+            - name: Additional incident examples
+              items: 
+              - name: Phishing email
+                href: first-incident-path-phishing.md
+              - name: Identity
+                href: first-incident-path-identity.md                          
     - name: Protect against threats
       items: 
       - name: Microsoft Secure Score
         items: 
-          - name: What's new
-            href: microsoft-secure-score-whats-new.md
           - name: Overview
             href: microsoft-secure-score.md
+          - name: What's new
+            href: microsoft-secure-score-whats-new.md
           - name: Assess your security posture
             href: microsoft-secure-score-improvement-actions.md
           - name: Track your score history and meet goals
@@ -114,6 +130,8 @@
       items: 
        - name: Overview
          href: incident-response-overview.md
+       - name: Alerts, incidents, and correlation
+         href: alerts-incidents-correlation.md
        - name: Respond to incidents
          items: 
               - name: Overview
@@ -124,20 +142,6 @@
                 href: manage-incidents.md
               - name: Export incidents queue to CSV file
                 href: export-incidents-queue.md
-              - name: Respond to your first incident
-                items: 
-                 - name: Overview
-                   href: respond-first-incident-365-defender.md
-                 - name: Analyze your first incident
-                   href: respond-first-incident-analyze.md
-                 - name: Remediate your first incident
-                   href: respond-first-incident-remediate.md
-                 - name: Additional incident examples
-                   items: 
-                    - name: Phishing email
-                      href: first-incident-path-phishing.md
-                    - name: Identity
-                      href: first-incident-path-identity.md
               - name: Investigate incidents
                 items: 
                  - name: Incidents
@@ -406,8 +410,6 @@
                   href: communicate-defender-experts-xdr.md
                 - name: Defender Experts for Hunting
                   href: defender-experts-for-hunting.md
-                - name: Ask Defender Experts
-                  href: experts-on-demand.md
                 - name: Auditing
                   href: auditing.md
               - name: Frequently asked questions
@@ -479,7 +481,7 @@
       items:
         - name: Multitenant management in Microsoft Defender XDR
           href: mto-overview.md
-        - name: Set up multitenant management in Microsoft Defender XDR 
+        - name: Set up multitenant management 
           href: mto-requirements.md
         - name: View and manage incidents and alerts
           href: mto-incidents-alerts.md
@@ -491,10 +493,10 @@
           href: mto-dashboard.md
         - name: Manage tenants
           href: mto-tenants.md
-        - name: Distribute content via tenant groups
-          href: mto-tenantgroups.md                      
         - name: Create and manage endpoint security policies
-          href: mto-endpoint-security-policy.md               
+          href: mto-endpoint-security-policy.md
+        - name: Manage content distribution with tenant groups
+          href: mto-tenantgroups.md                           
     - name: Manage roles and permissions
       items: 
         - name: Manage access and roles in Microsoft Defender XDR

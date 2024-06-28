@@ -12,7 +12,7 @@ ms.collection:
 - tier1
 - essentials-get-started
 ms.localizationpriority: high
-ms.date: 06/07/2024
+ms.date: 06/19/2024
 ms.service: defender-business
 search.appverid: 
 - MOE150
@@ -127,8 +127,6 @@ For the next 30 days, here's guidance from the product team on key features to t
 
 4. [Prepare for ongoing security management](#4-prepare-for-ongoing-security-management).
 
-5. [Try the Document Drops Backdoor tutorial](#5-try-the-document-drops-backdoor-tutorial).
-
 ### 1. Use the Defender Vulnerability Management dashboard
 
 Defender for Business includes a Defender Vulnerability Management dashboard that's designed to save your security team time and effort. Learn how to [use your Defender Vulnerability Management dashboard](mdb-view-tvm-dashboard.md).
@@ -161,27 +159,11 @@ New security events, such as threat detection on a device, adding new devices, a
 - [Onboard a device to Defender for Business](mdb-manage-devices.md#onboard-a-device).
 - [Offboard a device from Defender for Business](mdb-manage-devices.md#offboard-a-device).
 
-### 5. Try the Document Drops Backdoor tutorial
-
-Quickly see how Defender for Business works by trying a tutorial.
-
-Simulate an attack that introduces file-based malware on a test device. The tutorial describes how to use the simulation file and what to watch for in the Microsoft Defender portal.
-
-> [!NOTE]
-> This tutorial requires Microsoft Word to be installed on your test device.
-
-To access the tutorial, do the following:
-
-1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
-
-2. In the navigation pane, under **Endpoints**, choose **Tutorials**.
-
-3. Choose **Document Drops Backdoor**.
 
 ## Additional resources
 
 - [Overview of Defender for Business](mdb-overview.md)
-- [Tutorials and simulations in Defender for Business](mdb-tutorials.md)
+- [Training and learning resources for Defender for Business](mdb-tutorials.md)
 - [Video: Enterprise-Grade Protection for Small & Medium Sized Businesses](https://youtu.be/umhUNzMqZto)
 - [Get Defender for Business](get-defender-business.md)
 

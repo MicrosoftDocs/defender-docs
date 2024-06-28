@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 author: chrisda
 ms.author: chrisda
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.topic: conceptual
 ms.collection:
@@ -108,6 +108,8 @@ The simplest way to verify the Illicit Consent Grant attack is to run [Get-Azure
 
 > [!IMPORTANT]
 > We ***highly recommend*** that you require multi-factor authentication on your admin account. This script supports MFA authentication.
+>
+> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 [!INCLUDE [Azure AD PowerShell deprecation note](../includes/aad-powershell-deprecation-note.md)]
 

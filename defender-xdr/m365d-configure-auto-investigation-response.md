@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 9/18/2023
+ms.date: 06/11/2024
 ms.collection:
 - m365-security
 - tier2
@@ -54,7 +54,7 @@ Whether automated investigations run, and whether remediation actions are taken 
 
 2. Go to **Settings** \> **Endpoints** \> **Device groups** under **Permissions**.
 
-3. Review your device group policies. In particular, look at the **Automation level** column. We recommend using **Full - remediate threats automatically**.  You might need to create or edit your device groups to get the level of automation you want. To get help with this task, see the following articles:
+3. Review your device group policies. In particular, look at the **Remediation level** column. We recommend using **Full - remediate threats automatically**.  You might need to create or edit your device groups to get the level of automation you want. To get help with this task, see the following articles:
 
    - [How threats are remediated](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations#how-threats-are-remediated)
    - [Create and manage device groups](/windows/security/threat-protection/microsoft-defender-atp/machine-groups)

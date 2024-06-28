@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 01/25/2023
+ms.date: 06/24/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -44,11 +44,11 @@ This page describes how to create an application to get programmatic access to D
 
 If you need programmatic access Microsoft Defender for Endpoint without a user, refer to [Access Microsoft Defender for Endpoint with application context](exposed-apis-create-app-webapp.md).
 
-If you are not sure which access you need, read the [Introduction page](apis-intro.md).
+If you're not sure which access you need, read the [Introduction page](apis-intro.md).
 
-Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs will enable you to automate work flows and innovate based on Microsoft Defender for Endpoint capabilities. The API access requires OAuth2.0 authentication. For more information, see [OAuth 2.0 Authorization Code Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
+Microsoft Defender for Endpoint exposes much of its data and actions through a set of programmatic APIs. Those APIs enable you to automate work flows and innovate based on Microsoft Defender for Endpoint capabilities. The API access requires OAuth2.0 authentication. For more information, see [OAuth 2.0 Authorization Code Flow](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code).
 
-In general, you'll need to take the following steps to use the APIs:
+In general, you need to take the following steps to use the APIs:
 
 - Create a Microsoft Entra application
 - Get an access token using this application
@@ -65,23 +65,23 @@ This page explains how to create a Microsoft Entra application, get an access to
 
 ## Create an app
 
-1. Log on to [Azure](https://portal.azure.com) with a user account that has the **Global Administrator** role.
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 2. Navigate to **Microsoft Entra ID** \> **App registrations** \> **New registration**.
 
    :::image type="content" source="../media/atp-azure-new-app2.png" alt-text="The App registrations page in the Microsoft Azure portal" lightbox="../media/atp-azure-new-app2.png":::
 
 3. When the **Register an application** page appears, enter your application's registration information:
-   - **Name** - Enter a meaningful application name that will be displayed to users of the app.
+   - **Name** - Enter a meaningful application name that is displayed to users of the app.
    - **Supported account types** - Select which accounts you would like your application to support.
 
      <br>
 
      |Supported account types|Description|
      |---|---|
-     |**Accounts in this organizational directory only**|Select this option if you're building a line-of-business (LOB) application. This option is not available if you're not registering the application in a directory. <p> This option maps to Microsoft Entra-only single-tenant. <p> This is the default option unless you're registering the app outside of a directory. In cases where the app is registered outside of a directory, the default is Microsoft Entra multi-tenant and personal Microsoft accounts.|
-     |**Accounts in any organizational directory**|Select this option if you would like to target all business and educational customers. <p> This option maps to a Microsoft Entra-only multi-tenant. <p> If you registered the app as Microsoft Entra-only single-tenant, you can update it to be Microsoft Entra multi-tenant and back to single-tenant through the **Authentication** blade.|
-     |**Accounts in any organizational directory and personal Microsoft accounts**|Select this option to target the widest set of customers. <p> This option maps to Microsoft Entra multi-tenant and personal Microsoft accounts. <p> If you registered the app as Microsoft Entra multi-tenant and personal Microsoft accounts, you cannot change this in the UI. Instead, you must use the application manifest editor to change the supported account types.|
+     |**Accounts in this organizational directory only**|Select this option if you're building a line-of-business (LOB) application. This option isn't available if you're not registering the application in a directory. <br/><br/> This option maps to Microsoft Entra-only single-tenant. <br/><br/> This option is the default option unless you're registering the app outside of a directory. In cases where the app is registered outside of a directory, the default is Microsoft Entra multitenant and personal Microsoft accounts.|
+     |**Accounts in any organizational directory**|Select this option if you would like to target all business and educational customers. <br/><br/> This option maps to a Microsoft Entra-only multitenant. <br/><br/> If you registered the app as Microsoft Entra-only single-tenant, you can update it to be Microsoft Entra multitenant and back to single-tenant through the **Authentication** blade.|
+     |**Accounts in any organizational directory and personal Microsoft accounts**|Select this option to target the widest set of customers. <br/><br/> This option maps to Microsoft Entra multitenant and personal Microsoft accounts. <br/><br/> If you registered the app as Microsoft Entra multitenant and personal Microsoft accounts, you can't change this in the UI. Instead, you must use the application manifest editor to change the supported account types.|
 
    - **Redirect URI (optional)** - Select the type of app you're building, **Web** or **Public client (mobile & desktop)**, and then enter the redirect URI (or reply URL) for your application.
 
@@ -113,7 +113,7 @@ This page explains how to create a Microsoft Entra application, get an access to
 
      - To [run advanced queries](run-advanced-query-api.md), select **Run advanced queries** permission.
      - To [isolate a device](isolate-machine.md), select **Isolate machine** permission.
-     - To determine which permission you need, view the **Permissions** section in the API you are interested to call.
+     - To determine which permission you need, view the **Permissions** section in the API you're interested to call.
 
    - Select **Grant consent**.
 

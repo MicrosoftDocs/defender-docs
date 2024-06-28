@@ -6,7 +6,7 @@ ms.author: dansimp
 author: dansimp
 ms.reviewer: gopkr
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 02/21/2024
+ms.date: 06/24/2024
 ---
 
 # Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
@@ -60,7 +60,7 @@ File, folder, and process exclusions support the following wildcards:
 
 Wildcard|Description|Examples|
 ---|---|---
-\*|Matches any number of any characters including none (note if this wildcard is not used at the end of the path then it will substitute only one folder)| `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It does not include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` includes any file in `/var` and its subdirectories. 
+\*|Matches any number of any characters including none (note if this wildcard is not used at the end of the path then it will substitute only one folder)| `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It does not include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` only includes any files in its subdirectories such as `/var/abc/`, but not files directly inside `/var`. 
 ?|Matches any single character|`file?.log` includes `file1.log` and `file2.log`, but not`file123.log`
 > [!NOTE]
 > When using the * wildcard at the end of the path, it will match all files and subdirectories under the parent of the wildcard.

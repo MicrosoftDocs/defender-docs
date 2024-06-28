@@ -14,7 +14,7 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 05/13/2024
+ms.date: 06/14/2024
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
@@ -154,7 +154,7 @@ With streamlined connectivity, IP-based solutions can be used as an alternative 
 - Defender for Endpoint Command and Control
 
 > [!IMPORTANT]
-> The EDR Cyber data service must be configured separately if you are using the IP method (this service is only consolidated on a URL level).You must also maintain connectivity with other required services including SmartScreen, CRL, Windows Update, and other services.<br/>
+> The EDR Cyber data service (OneDsCollector) *must* be configured separately if you are using the IP method (this service is only consolidated on a URL level).You must also maintain connectivity with other required services including SmartScreen, CRL, Windows Update, and other services.<br/>
 
 In order to stay up to date on IP ranges, it's recommended to refer to the following Azure service tags for Microsoft Defender for Endpoint services. The latest IP ranges are found in the service tag. For more information, see [Azure IP ranges](https://azureipranges.azurewebsites.net/).
 
@@ -163,7 +163,7 @@ In order to stay up to date on IP ranges, it's recommended to refer to the follo
 | MicrosoftDefenderForEndpoint | MAPS, Malware Sample Submission Storage, Auto-IR Sample Storage,  Command and Control. |
 | OneDsCollector | EDR Cyberdata <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
 
-The following table lists the current static IP ranges. For latest list, refer to the Azure service tags.
+The following table lists the current static IP ranges covered by the MicrosoftDefenderForEndpoint service tag. For latest list, refer to the Azure service tags.
 
 
 |Geo|IP Ranges|
@@ -220,19 +220,5 @@ Before proceeding, confirm devices meet the [prerequisites](#prerequisites) and 
 4. Exclude devices from any existing onboarding policies that use the standard onboarding package.
 
 For migrating devices already onboarded to Defender for Endpoint, see [Migrating devices to the streamlined connectivity](migrate-devices-streamlined.md). You must reboot your device and follow specific guidance here.  
-
-### Stage 5. Set the default onboarding package to streamlined connectivity
-
-When you're ready to set the default onboarding package to streamlined, you can turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**). 
-
-<img width="593" alt="image" src="https://github.com/MicrosoftDocs/defender-docs-pr/assets/30799281/3509aeec-bbab-4efd-a328-0608a11cc6d1">
-
-This setting sets the default onboarding package to 'streamlined' for applicable operating systems.  You can still use the standard onboarding package within the onboarding page but you must specifically select it in the drop-down.  
-
-For onboarding through Intune & Microsoft Defender for Cloud, you need to activate the relevant option. Devices already onboarded don't automatically reonboard; you need to create a new policy in Intune, where it's recommended to first assign the policy to a set of test devices to verify connectivity is successful, before expanding the audience. Devices in Defender for Cloud can be reonboarded using the relevant onboarding script.
-
-> [!NOTE]
-> - Only tenants created on or before May 8th, 2024 have the option to switch between standard and streamlined connectivity. Newer tenants will only support streamlined connectivity.
-> - Before moving forward with this option, validate that your environment is ready and all devices meet prerequisites.
 
 

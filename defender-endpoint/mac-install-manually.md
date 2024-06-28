@@ -4,7 +4,7 @@ description: Install Microsoft Defender for Endpoint on macOS manually, from the
 ms.service: defender-endpoint
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
