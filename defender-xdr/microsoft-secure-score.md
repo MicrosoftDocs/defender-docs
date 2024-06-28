@@ -15,8 +15,8 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid:
-  - MOE150
-  - MET150
+- MOE150
+- MET150
 ms.date: 06/28/2024
 ---
 
