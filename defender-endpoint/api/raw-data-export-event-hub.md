@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 10/24/2023
+ms.date: 06/28/2024
 ---
 
 # Configure Microsoft Defender for Endpoint to stream Advanced Hunting events to your Azure Event Hubs
@@ -36,14 +36,14 @@ ms.date: 10/24/2023
 
 1. Create an [event hub](/azure/event-hubs/) in your tenant.
 
-2. Sign in to your [Azure tenant](https://ms.portal.azure.com/), go to **Subscriptions > Your subscription > Resource Providers > Register to Microsoft.insights**.
+2. Sign in to your [Azure tenant](https://ms.portal.azure.com/), go to **Subscriptions** > **Your subscription** > **Resource Providers** > **Register to Microsoft.insights**.
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Enable raw data streaming
 
-1. Sign in to the [Microsoft Defender XDR](https://security.microsoft.com) as a ***Security Administrator***.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as a ***Security Administrator***.
 
 2. Go to the [Data export settings page](https://security.microsoft.com/securitysettings/defender/raw_data_export) in the Microsoft Defender portal.
 
@@ -94,7 +94,7 @@ ms.date: 10/24/2023
 
 To get the data types for event properties, do the following:
 
-1. Sign in to [Microsoft Defender XDR](https://security.microsoft.com) and go to [Advanced Hunting page](https://security.microsoft.com/hunting-package).
+1. Sign in to [Microsoft Defender portal](https://security.microsoft.com) and go to [Advanced Hunting page](https://security.microsoft.com/hunting-package).
 
 2. Run the following query to get the data types mapping for each event:
 
@@ -108,13 +108,13 @@ To get the data types for event properties, do the following:
 
   :::image type="content" source="../media/machine-info-datatype-example.png" alt-text="The Event Hubs resource Id-2" lightbox="../media/machine-info-datatype-example.png":::
 
-## Related topics
+## Related articles
 
 - [Stream Microsoft Defender XDR events | Microsoft Learn](/defender-xdr/streaming-api)
-
 - [Overview of Advanced Hunting](/defender-xdr/advanced-hunting-overview)
 - [Microsoft Defender for Endpoint streaming API](raw-data-export.md)
 - [Stream Microsoft Defender for Endpoint events to your Azure storage account](raw-data-export-storage.md)
 - [Azure Event Hubs documentation](/azure/event-hubs/)
 - [Troubleshoot connectivity issues - Azure Event Hubs](/azure/event-hubs/troubleshooting-guide)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

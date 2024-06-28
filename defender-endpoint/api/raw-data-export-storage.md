@@ -89,7 +89,7 @@ ms.date: 12/18/2020
 
 In order to get the data types for our events properties, do the following:
 
-1. Sign in to [Microsoft Defender XDR](https://security.microsoft.com) and go to [Advanced Hunting page](https://security.microsoft.com/hunting-package).
+1. Sign in to [Microsoft Defender portal](https://security.microsoft.com) and go to [Advanced Hunting page](https://security.microsoft.com/hunting-package).
 
 2. Run the following query to get the data types mapping for each event:
 
