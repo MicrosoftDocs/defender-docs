@@ -169,40 +169,42 @@ return $token
 
 ### Using C#
 
-> The below code was tested with Nuget Microsoft.Identity.Client
-
 > [!IMPORTANT]
 > The [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) NuGet package and Azure AD Authentication Library (ADAL) have been deprecated. No new features have been added since June 30, 2020. We strongly encourage you to upgrade, see the [migration guide](/azure/active-directory/develop/msal-migration) for more details.
 
-- Create a new Console Application
-- Install NuGet [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/)
-- Add the following using
+1. Create a new Console Application.
 
-    ```console
+2. Install NuGet [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/).
+
+3. Add the following using code:
+
+   ```console
     using Microsoft.Identity.Client;
-    ```
+   ```
 
-- Copy/Paste the following code in your application (don't forget to update the three variables: `tenantId`, `appId`, and `appSecret`)
+   This code was tested with Nuget `Microsoft.Identity.Client`.
 
-    ```csharp
-    string tenantId = "00000000-0000-0000-0000-000000000000"; // Paste your own tenant ID here
-    string appId = "11111111-1111-1111-1111-111111111111"; // Paste your own app ID here
-    string appSecret = "22222222-2222-2222-2222-222222222222"; // Paste your own app secret here for a test, and then store it in a safe place! 
-    const string authority = https://login.microsoftonline.com;
-    const string audience = https://api.securitycenter.microsoft.com;
+4. Copy/Paste the following code in your application (don't forget to update the three variables: `tenantId`, `appId`, and `appSecret`).
 
-    IConfidentialClientApplication myApp = ConfidentialClientApplicationBuilder.Create(appId).WithClientSecret(appSecret).WithAuthority($"{authority}/{tenantId}").Build();
+   ```csharp
+   string tenantId = "00000000-0000-0000-0000-000000000000"; // Paste your own tenant ID here
+   string appId = "11111111-1111-1111-1111-111111111111"; // Paste your own app ID here
+   string appSecret = "22222222-2222-2222-2222-222222222222"; // Paste your own app secret here for a test, and then store it in a safe place! 
+   const string authority = https://login.microsoftonline.com;
+   const string audience = https://api.securitycenter.microsoft.com;
 
-    List<string> scopes = new List<string>() { $"{audience}/.default" };
+   IConfidentialClientApplication myApp = ConfidentialClientApplicationBuilder.Create(appId).WithClientSecret(appSecret).WithAuthority($"{authority}/{tenantId}").Build();
 
-    AuthenticationResult authResult = myApp.AcquireTokenForClient(scopes).ExecuteAsync().GetAwaiter().GetResult();
+   List<string> scopes = new List<string>() { $"{audience}/.default" };
 
-    string token = authResult.AccessToken;
-    ```
+   AuthenticationResult authResult = myApp.AcquireTokenForClient(scopes).ExecuteAsync().GetAwaiter().GetResult();
+
+   string token = authResult.AccessToken;
+   ```
 
 ### Using Python
 
-Refer to [Get token using Python](run-advanced-query-sample-python.md#get-token).
+See [Get token using Python](run-advanced-query-sample-python.md#get-token).
 
 ### Using Curl
 
@@ -211,11 +213,11 @@ Refer to [Get token using Python](run-advanced-query-sample-python.md#get-token)
 
 1. Open a command window.
 
-2. Set CLIENT_ID to your Azure application ID.
+2. Set `CLIENT_ID` to your Azure application ID.
 
-3. Set CLIENT_SECRET to your Azure application secret.
+3. Set `CLIENT_SECRET` to your Azure application secret.
 
-4. Set TENANT_ID to the Azure tenant ID of the customer that wants to use your application to access Microsoft Defender for Endpoint application.
+4. Set `TENANT_ID` to the Azure tenant ID of the customer that wants to use your application to access Microsoft Defender for Endpoint application.
 
 5. Run the following command:
 
@@ -223,7 +225,7 @@ Refer to [Get token using Python](run-advanced-query-sample-python.md#get-token)
    curl -i -X POST -H "Content-Type:application/x-www-form-urlencoded" -d "grant_type=client_credentials" -d "client_id=%CLIENT_ID%" -d "scope=https://securitycenter.onmicrosoft.com/windowsatpservice/.default" -d "client_secret=%CLIENT_SECRET%" "https://login.microsoftonline.com/%TENANT_ID%/oauth2/v2.0/token" -k
    ```
 
-   You get an answer of the form:
+   You get an answer that resembles the following code snippet:
 
    ```console
    {"token_type":"Bearer","expires_in":3599,"ext_expires_in":0,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIn <truncated> aWReH7P0s0tjTBX8wGWqJUdDA"}
