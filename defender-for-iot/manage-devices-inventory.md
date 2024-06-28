@@ -44,9 +44,9 @@ To customize the device inventory views:
 
 - [Explore the device inventory](/defender-endpoint/machines-view-overview#explore-the-device-inventory) including search, export to CSV, and more.
 - [Onboard devices](/defender-endpoint/onboarding#onboard-devices-using-any-of-the-supported-management-tools).
-- [Offboard devices](/defender-endpoint/offboard-machines.md).
-- [Investigate the device details](/defender-endpoint/investigate-machines.md) to identify behaviors or events that might be related to the alert.
-- In the device details pane, select the ellipsis on the top right to [take response actions on a device](/defender-endpoint/respond-machine-alerts.md).
+- [Offboard devices](/defender-endpoint/offboard-machines).
+- [Investigate the device details](/defender-endpoint/investigate-machines) to identify behaviors or events that might be related to the alert.
+- In the device details pane, select the ellipsis on the top right to [take response actions on a device](/defender-endpoint/respond-machine-alerts).
 
 ## Next steps
 
