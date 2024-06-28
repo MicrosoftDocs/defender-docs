@@ -84,7 +84,7 @@ The following steps guide you how to create a Microsoft Entra application, get a
 
 ### Request API permissions
 
-To determine which permission you need, review the **Permissions** section in the API you're interested to call. For instance:
+To determine which permission you need, review the **Permissions** section in the API you want to call. For instance:
 
 - To [run advanced queries](run-advanced-query-api.md), select 'Run advanced queries' permission
 - To [isolate a device](isolate-machine.md), select 'Isolate machine' permission
