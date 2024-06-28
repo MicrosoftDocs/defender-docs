@@ -29,7 +29,7 @@ The key vulnerability management capabilities are:
 |[Management](/defender-vulnerability-management/tvm-weaknesses#view-common-vulnerabilities-and-exposures-cve-entries-in-other-places)|You can manage and control the vulnerabilities globally, per tenant or device group, per device from the device page, or per vulnerable product through the Inventory page. |
 |[Exception handling](/defender-vulnerability-management/tvm-security-recommendation#file-for-exception)| Create exceptions for recommendations that can't be patched.|
 |[Customizable Vulnerability Notifications](/defender-endpoint/configure-vulnerability-email-notifications)| Alert key stakeholders with customizable notifications.|
-|[Reporting Inaccuracies](/defender-vulnerability-management/tvm-weaknesses.md#report-inaccuracy)| Users can report inaccuracies on discovered CVEs or request support for new vulnerabilities.|
+|[Reporting Inaccuracies](/defender-vulnerability-management/tvm-weaknesses#report-inaccuracy)| Users can report inaccuracies on discovered CVEs or request support for new vulnerabilities.|
 
 ## Weaknesses page
 
