@@ -15,7 +15,7 @@ ms.collection:
   - essentials-get-started
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/28/2024
+ms.date: 06/28/2024
 ---
 
 # Get started with Microsoft Defender Experts for XDR
@@ -36,6 +36,9 @@ Select the link in the welcome email to directly launch the Defender Experts set
 
 ## Grant permissions to our experts
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 By default, Defender Experts for XDR requires **Service provider access** that lets our experts sign into your tenant and deliver services based on assigned security roles. [Learn more about cross-tenant access](/azure/active-directory/external-identities/cross-tenant-access-overview)
 
 You also need to grant our experts one or both of the following permissions:
@@ -53,7 +56,9 @@ You also need to grant our experts one or both of the following permissions:
 **To grant our experts permissions:**
 
 1. In the same Defender Experts settings setup, under **Permissions**, choose the access level(s) you want to grant our experts.
+
 1. If you wish to [exclude device and user groups](#exclude-devices-from-remediation) in your organization from remediation actions, select **Manage exclusions**.
+
 1. Select **Next** to [add contact persons or groups](#tell-us-who-to-contact-for-important-matters).
 
 To edit or update permissions after the initial setup, go to **Settings** > **Defender Experts** > **Permissions**.
@@ -65,12 +70,15 @@ Defender Experts for XDR lets you exclude devices and users from remediation act
 **To exclude device groups:**
 
 1. In the same Defender Experts settings setup, under **Exclusions**, go to the **Device groups** tab.
+
 2. Select **+ Add device groups**, then search for and choose the device group(s) that you wish to exclude.
    > [!NOTE]
    > This page only lists existing device groups. If you wish to create a new device group, you first need to go to the Defender for Endpoint settings in your Microsoft Defender portal. Then, refresh this page to search for and choose the newly created group. [Learn more about creating device groups](/defender-endpoint/machine-groups)
 
 3. Select **Add device groups**.
+
 4. Back on the **Device groups** tab, review the list of excluded device groups. If you wish to remove a device group from the exclusion list, choose it then select **Remove device group**.
+
 5. Select **Next** to confirm your exclusion list and proceed to [adding contact persons or groups](#tell-us-who-to-contact-for-important-matters). Otherwise, select **Skip**, and all your added exclusions are discarded.
 
 :::image type="content" source="/defender/media/xdr/exclude-device-groups.png" alt-text="Screenshot of option to exclude device groups." lightbox="/defender/media/xdr/exclude-device-groups.png":::
@@ -127,9 +135,13 @@ Once identified, the individuals or groups will receive an email notifying them 
 **To add notification contacts:**
 
 1. In the same Defender Experts settings setup, under **Contacts**, search for and add your **Contact person or team** in the text field provided.
+
 2. Add a **Phone number** (optional) that Defender Experts can call for matters that require immediate attention.
+
 3. Under the **Contact for** dropdown box, choose **Incident notification** or **Service review**.
+
 4. Select **Add**.
+
 1. Select **Next** to confirm your contacts list and proceed to [creating a Teams channel](#receive-managed-response-notifications-and-updates-in-microsoft-teams) where you can also receive incident notifications.
 
 To edit or update your notification contacts after the initial setup, go to **Settings** > **Defender Experts** > **Notification contacts**.
@@ -146,8 +158,11 @@ Apart from email and [in-portal chat](communicate-defender-experts-xdr.md#in-por
 **To turn on Teams notifications and chat:**
 
 1. In the same Defender Experts settings setup, under **Teams**, select the **Communicate on Teams** checkbox.  
+
 2. Select **Next** to review your settings.
+
 3. Select **Submit**. The step-by-step guide then completes the initial setup.
+
 4. Select **View readiness assessment** to complete the necessary actions required to [optimize your security posture](#prepare-your-environment-for-the-defender-experts-service).
 
 > [!NOTE]
