@@ -24,7 +24,7 @@ ms.date: 06/28/2024
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Microsoft Secure Score is a measurement of an organization's security posture, with a higher number indicating more recommended actions taken. It can be found at [Microsoft Secure Score](https://security.microsoft.com/securescore) in the [Microsoft Defender portal](microsoft-365-defender-portal.md).
+Microsoft Secure Score is a measurement of an organization's security posture, with a higher number indicating more recommended actions taken. It can be found at [Microsoft Secure Score](https://security.microsoft.com/securescore) in the Microsoft Defender portal.
 
 Following the Secure Score recommendations can protect your organization from threats. From a centralized dashboard in the Microsoft Defender portal, organizations can monitor and work on the security of their Microsoft 365 identities, apps, and devices.
 
@@ -97,7 +97,7 @@ Recommendations for other security products are coming soon. The recommendations
 
 ### Security defaults
 
-Microsoft Secure Score includes updated recommended actions to support [security defaults in Microsoft Entra ID](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults), which make it easier to help protect your organization with preconfigured security settings for common attacks.
+Microsoft Secure Score includes updated recommended actions to support [security defaults in Microsoft Entra ID](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults to make it easier to help protect your organization with preconfigured security settings for common attacks.
 
 If you turn on security defaults, you are awarded full points for the following recommended actions:
 
@@ -106,7 +106,7 @@ If you turn on security defaults, you are awarded full points for the following 
 - Enable policy to block legacy authentication (seven points)
 
 > [!IMPORTANT]
-> Security defaults include security features that provide similar security to the "sign-in risk policy" and "user risk policy" recommended actions. Instead of setting up these policies on top of the security defaults, we recommend updating their statuses to "Resolved through alternative mitigation."
+> Security defaults include security features that provide similar security to the sign-in risk policy and user risk policy recommended actions. Instead of setting up these policies on top of the security defaults, we recommend updating their statuses to `Resolved through alternative mitigation`.
 
 ## Secure Score permissions
 
@@ -130,7 +130,7 @@ To start using Microsoft Defender XDR Unified RBAC to manage your Secure Score p
 
 ### Microsoft Entra global roles permissions
 
-Microsoft Entra global roles (for example, Global Administrator) can still be used to access Secure Score. Users who have the supported Microsoft Entra global roles, but aren't assigned to a custom role in Microsoft Defender XDR Unified RBAC, will continue to have access to view (and manage where permitted) Secure Score data as outlined:
+Microsoft Entra global roles (for example, Global Administrator) can still be used to access Secure Score. Users who have the supported Microsoft Entra global roles, but aren't assigned to a custom role in Microsoft Defender XDR Unified RBAC continue to have access to view (and manage where permitted) Secure Score data as outlined:
 
 The following roles have read and write access and can make changes, directly interact with Secure Score, and can assign read-only access to other users:
 
@@ -153,11 +153,11 @@ The following roles have read-only access and aren't able to edit status or note
 
 ## Risk awareness
 
-Microsoft Secure Score is a numerical summary of your security posture based on system configurations, user behavior, and other security-related measurements. It isn't an absolute measurement of how likely your system or data could be breached. Rather, it represents the extent to which you have adopted security controls in your Microsoft environment that can help offset the risk of being breached. No online service is immune from security breaches, and secure score shouldn't be interpreted as a guarantee against security breach in any manner.
+Microsoft Secure Score is a numerical summary of your security posture based on system configurations, user behavior, and other security-related measurements. It isn't an absolute measurement of how likely your system or data could be breached. Rather, it represents the extent to which you are using security controls in your Microsoft environment that can help offset the risk of being breached. No online service is immune from security breaches, and secure score shouldn't be interpreted as a guarantee against security breach in any manner.
 
 ## We want to hear from you
 
-If you have any issues, let us know by posting in the [Security, Privacy & Compliance](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy) community. We're monitoring the community and will provide help.
+If you have any issues, let us know by posting in the [Security, Privacy & Compliance](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy) community.
 
 ## Related resources
 
