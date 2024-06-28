@@ -120,6 +120,7 @@ You can only have one workspace connected to the Defender portal at a time. If y
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com/) and sign in.
 1. In the Defender portal, under **System**, select **Settings** > **Microsoft Sentinel**.
 1. On the **Workspaces** page, select the connected workspace and **Disconnect workspace**.
+1. Provide a reason why you're disconnecting the workspace. 
 1. Confirm your selection.
 
    When your workspace is disconnected, the **Microsoft Sentinel** section is removed from the left-hand side navigation of the Defender portal. Data from Microsoft Sentinel is no longer included on the Overview page.
