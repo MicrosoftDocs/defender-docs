@@ -46,10 +46,13 @@ Microsoft Defender for Endpoint exposes much of its data and actions through a s
 
 In general, you need to take the following steps to use the APIs:
 
-- Create a **multi-tenant** Microsoft Entra application.
-- Get authorized(consent) by your customer administrator for your application to access Defender for Endpoint resources it needs.
-- Get an access token using this application.
-- Use the token to access Microsoft Defender for Endpoint API.
+1. Create a **multi-tenant** Microsoft Entra application.
+
+2. Get authorized(consent) by your customer administrator for your application to access Defender for Endpoint resources it needs.
+
+3. Get an access token using this application.
+
+4. Use the token to access Microsoft Defender for Endpoint API.
 
 The following steps guide you how to create a Microsoft Entra application, get an access token to Microsoft Defender for Endpoint and validate the token.
 
