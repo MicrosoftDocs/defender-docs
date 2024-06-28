@@ -7,7 +7,7 @@ f1.keywords:
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 06/18/2024
+ms.date: 06/28/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -45,18 +45,18 @@ If you're using a terminal, download the tool by entering the following command:
 2. Verify the download.
 
     > [!NOTE]
-    > The current SHA256 hash of 'XMDEClientAnalyzerBinary.zip' that is downloaded from this link is: '51EC534507729D3A5056D596644FE5768BF1CCED266C8AC514CFCF11A6F12B97'
+    > The current SHA256 hash of 'XMDEClientAnalyzerBinary.zip' that is downloaded from this link is: '6DF1D7F32F1C33B462067F029CA59742241AB6967A981161803A3BC4B5EBDBDF'
 
    - Linux
 
     ```console
-    echo '51EC534507729D3A5056D596644FE5768BF1CCED266C8AC514CFCF11A6F12B97 XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo '6DF1D7F32F1C33B462067F029CA59742241AB6967A981161803A3BC4B5EBDBDF XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
    - macOS
 
     ```console
-    echo '51EC534507729D3A5056D596644FE5768BF1CCED266C8AC514CFCF11A6F12B97  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
+    echo '6DF1D7F32F1C33B462067F029CA59742241AB6967A981161803A3BC4B5EBDBDF  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
     ```
 
 
@@ -128,13 +128,13 @@ When using a terminal, unzip the file by entering one of the following commands 
    - Linux
 
     ```console
-    echo '2B8EBB39857BA24E84E332366B42E041B46AB130F8C8FD4E6D68B195022FD61E XMDEClientAnalyzer.zip' | sha256sum -c
+    echo '799D1C8B24FB826283B9B04B4B503AE3C99A05FE7ADFE25A78A094E231572C4A XMDEClientAnalyzer.zip' | sha256sum -c
     ```
 
    - macOS
 
     ```console
-    echo '2B8EBB39857BA24E84E332366B42E041B46AB130F8C8FD4E6D68B195022FD61E  XMDEClientAnalyzer.zip' | shasum -a 256 -c
+    echo '799D1C8B24FB826283B9B04B4B503AE3C99A05FE7ADFE25A78A094E231572C4A  XMDEClientAnalyzer.zip' | shasum -a 256 -c
     ```
 
 3. Extract the contents of XMDEClientAnalyzer.zip on the machine.
