@@ -25,7 +25,7 @@
         - name: Defender for Endpoint
           href: microsoft-365-security-center-mde.md
         - name: Defender for IoT
-          href: /defender-for-iot/microsoft-defender-iot
+          href: /defender-for-iot/microsoft-defender-iot?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: Defender for Office 365
           href: microsoft-365-security-center-mdo.md
         - name: Defender for Identity
