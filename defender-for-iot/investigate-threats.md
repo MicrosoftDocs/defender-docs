@@ -11,19 +11,19 @@ ms.topic: how-to
 
 # Investigate incidents and alerts
 
-Microsoft Defender for IoT in the Microsoft Defender portal displays incidents and alerts, which enhance your network security and operations with real-time details about events logged in your operational technology (OT) network. 
+Microsoft Defender for IoT in the Microsoft Defender portal displays incidents and alerts, which enhance your network security and operations with real-time details about events logged in your operational technology (OT) network.
 
-Alerts are the basis of all incidents and indicate the occurrence of malicious or suspicious events in your environment. Within an incident, you analyze the alerts that affect your network, understand what they mean, and collate the evidence so that you can devise an effective remediation plan. 
+Alerts are the basis of all incidents and indicate the occurrence of malicious or suspicious events in your environment. Within an incident, you analyze the alerts that affect your network, understand what they mean, and collate the evidence so that you can devise an effective remediation plan.
 
 Learn more about [alerts](/defender-xdr/investigate-alerts) and [incidents](/defender-xdr/investigate-incidents) in the Defender portal.
 
 In this article, you learn how to investigate a Microsoft Defender for IoT incident and its associated alerts, and how to remediate the security issues raised by the alert.
 
-Alerts in the **Incidents** page uniquely combine IT and OT environment signals to detect potential threats and data leaks. The **Incidents** page displays: 
+Alerts in the **Incidents** page uniquely combine IT and OT environment signals to detect potential threats and data leaks. The **Incidents** page displays:
 
 - A history of the alerts connected to the incident and an incident graph. The graph shows other devices connected to the affected OT device that might also be compromised.
 - Alert descriptions, which explain the type of detected security issue.
-- Remediation options to solve the security problem. 
+- Remediation options to solve the security problem.
 
 > [!NOTE]
 > Incident and alert data for Defender for IoT only appear once you have a site set up and your devices are sending data to the Defender portal. Learn how to [set up a site](set-up-sites.md).
