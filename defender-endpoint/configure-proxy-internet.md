@@ -42,12 +42,12 @@ Depending on the operating system, the proxy to be used for Microsoft Defender f
 - For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md)
 - For macOS devices, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md#network-connections)
 
-The Defender for Endpoint sensor requires Microsoft Windows HTTP (WinHTTP) to report sensor data and communicate with the Defender for Endpoint service. The embedded Defender for Endpoint sensor runs in system context using the LocalSystem account.
+The Defender for Endpoint sensor requires Microsoft Windows HTTP (`WinHTTP`) to report sensor data and communicate with the Defender for Endpoint service. The embedded Defender for Endpoint sensor runs in system context using the `LocalSystem` account.
 
 > [!TIP]
-> For organizations that use forward proxies as a gateway to the Internet, you can use network protection to [investigate connection events that occur behind forward proxies](investigate-behind-proxy.md).
+> If you use forward proxies as a gateway to the Internet, you can use network protection to [investigate connection events that occur behind forward proxies](investigate-behind-proxy.md).
 
-The WinHTTP configuration setting is independent of the Windows Internet (WinINet) browsing proxy settings (see, [WinINet vs. WinHTTP](/windows/win32/wininet/wininet-vs-winhttp)). It can only discover a proxy server by using the following discovery methods:
+The `WinHTTP` configuration setting is independent of the Windows Internet (`WinINet`) browsing proxy settings (see [WinINet vs. WinHTTP](/windows/win32/wininet/wininet-vs-winhttp)). It can only discover a proxy server by using the following discovery methods:
 
 - Autodiscovery methods:
 
@@ -65,7 +65,7 @@ The WinHTTP configuration setting is independent of the Windows Internet (WinINe
   - WinHTTP configured using netsh command: Suitable only for desktops in a stable topology (for example: a desktop in a corporate network behind the same proxy)
 
 > [!NOTE]
-> Defender antivirus and EDR proxies can be set independently. In the sections that follow, be aware of those distinctions.
+> Microsoft Defender Antivirus and EDR proxies can be set independently. In the sections that follow, be aware of those distinctions.
 
 ## Configure the proxy server manually using a registry-based static proxy setting
 
@@ -97,7 +97,7 @@ The static proxy settings are configurable through group policy (GP), both setti
 > [!NOTE]
 > If you are using 'TelemetryProxyServer' setting on devices that are otherwise **completely offline**, meaning the operating system is unable to connect for the online certificate revocation list or Windows Update, then it is required to add the additional registry setting `PreferStaticProxyForHttpRequest` with a value of `1`.
 >
-> Parent registry path location for "PreferStaticProxyForHttpRequest" is "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection"
+> Parent registry path location for `PreferStaticProxyForHttpRequest` is `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`.
 >
 > The following command can be used to insert the registry value in the correct location:
 >
@@ -105,9 +105,7 @@ The static proxy settings are configurable through group policy (GP), both setti
 > reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection" /v PreferStaticProxyForHttpRequest /t REG_DWORD /d 1 /f
 > ```
 >
-> The above registry value is applicable only starting with MsSense.exe version 10.8210.* and later, or version 10.8049.* and later.
-
-
+> The registry value mentioned earlier is applicable only starting with MsSense.exe version `10.8210.*` and later, or version `10.8049.*` and later.
 
 ## Configure a static proxy for Microsoft Defender Antivirus
 
