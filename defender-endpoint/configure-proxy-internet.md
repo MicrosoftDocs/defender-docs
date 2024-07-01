@@ -125,12 +125,12 @@ Configure the static proxy using the Group Policy available in Administrative Te
 
     `<server name or ip>:<port>`
 
-    For example: http://10.0.0.6:8080
+    For example, `http://10.0.0.6:8080`
 
 > [!NOTE]
-> If you are using static proxy setting on devices that are otherwise completely offline, meaning the operating system is unable to connect for the online certificate revocation list or Windows Update, then it is required to add the additional registry setting `SSLOptions` with a DWORD value of `2`. Parent registry path location for `SSLOptions` is `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet`. For more information about the `SSLOptions`, see [Cloud Protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
+> If you are using static proxy setting on devices that are otherwise completely offline, meaning the operating system is unable to connect for the online certificate revocation list or Windows Update, then it is required to add the additional registry setting `SSLOptions` with a DWORD value of `2`. The parent registry path location for `SSLOptions` is `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet`. For more information about the `SSLOptions`, see [Cloud Protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
 >
-> For resiliency purposes and the real-time nature of cloud-delivered protection, Microsoft Defender Antivirus caches the last known working proxy. Ensure your proxy solution does not perform SSL inspection. This will break the secure cloud connection.
+> For resiliency purposes and the real-time nature of cloud-delivered protection, Microsoft Defender Antivirus caches the last known working proxy. Ensure your proxy solution does not perform SSL inspection, as that breaks the secure cloud connection.
 >
 > Microsoft Defender Antivirus doesn't use the static proxy to connect to Windows Update or Microsoft Update for downloading updates. Instead, it uses a system-wide proxy if configured to use Windows Update, or the configured internal update source according to the [configured fallback order](manage-protection-updates-microsoft-defender-antivirus.md). If necessary, you can use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define proxy auto-config (.pac)** for connecting to the network. If you need to set up advanced configurations with multiple proxies, use **Administrative Templates > Windows Components > Microsoft Defender Antivirus > Define addresses** to bypass proxy server and prevent Microsoft Defender Antivirus from using a proxy server for those destinations.
 > 
@@ -141,11 +141,10 @@ Configure the static proxy using the Group Policy available in Administrative Te
 
 ## Configure the proxy server manually using netsh command
 
-Use netsh to configure a system-wide static proxy.
+Use `netsh` to configure a system-wide static proxy.
 
 > [!NOTE]
->
-> - This will affect all applications including Windows services which use WinHTTP with default proxy.</br>
+> This configuration affects all applications, including Windows services which use `WinHTTP` with default proxy.
 
 1. Open an elevated command line:
    1. Go to **Start** and type `cmd`.
