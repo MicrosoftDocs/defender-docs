@@ -13,7 +13,7 @@ ms.collection:
 - tier1
 ms.topic: conceptual
 ms.subservice: onboard
-ms.date: 10/25/2023
+ms.date: 07/01/2024
 ---
 
 # STEP 2: Configure your devices to connect to the Defender for Endpoint service using a proxy
@@ -32,13 +32,13 @@ ms.date: 10/25/2023
 > Devices that are configured for IPv6-only traffic are not supported.
 
 > [!NOTE]
-> To use the proxy correctly, configure these two different proxy settings:
-> - Microsoft Defender for Endpoint (MDE)
->   - [Endpoint Detection and Response (EDR)](/defender-endpoint/configure-proxy-internet)
->   - [Antivirus (AV)](/defender-endpoint/configure-proxy-internet)
+> To use the proxy correctly, configure these two different proxy settings in Defender for Endpoint:
+> - [Endpoint Detection and Response (EDR)](/defender-endpoint/configure-proxy-internet)
+> - [Microsoft Defender Antivirus](/defender-endpoint/configure-proxy-internet)
+
 Depending on the operating system, the proxy to be used for Microsoft Defender for Endpoint can be configured automatically, typically by using autodiscovery or an autoconfig file, or statically specific to Defender for Endpoint services running on the device.
 
-- For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md) (this article)
+- For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md) (in this article)
 - For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md)
 - For macOS devices, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md#network-connections)
 
