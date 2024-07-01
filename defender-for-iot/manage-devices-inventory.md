@@ -33,20 +33,20 @@ Review the [Defender for IoT prerequisites](prerequisites.md).
 
 ## View OT devices
 
-View OT devices as part of the [device inventory](/defender-endpoint/machines-view-overview.md#device-inventory-overview).
+View OT devices as part of the [device inventory](/defender-endpoint/machines-view-overview#device-inventory-overview).
 
 To customize the device inventory views:
 
-- [Use filters](/defender-endpoint/machines-view-overview.md#use-filters-to-customize-the-device-inventory-views)
-- [Use columns](/defender-endpoint/machines-view-overview.md#use-columns-to-customize-the-device-inventory-views)
+- [Use filters](/defender-endpoint/machines-view-overview#use-filters-to-customize-the-device-inventory-views)
+- [Use columns](/defender-endpoint/machines-view-overview#use-columns-to-customize-the-device-inventory-views)
 
 ## Manage OT devices
 
-- [Explore the device inventory](/defender-endpoint/machines-view-overview.md#explore-the-device-inventory) including search, export to CSV, and more.
-- [Onboard devices](/defender-endpoint/onboarding.md#onboard-devices-using-any-of-the-supported-management-tools).
-- [Offboard devices](/defender-endpoint/offboard-machines.md).
-- [Investigate the device details](/defender-endpoint/investigate-machines.md) to identify behaviors or events that might be related to the alert.
-- In the device details pane, select the ellipsis on the top right to [take response actions on a device](/defender-endpoint/respond-machine-alerts.md).
+- [Explore the device inventory](/defender-endpoint/machines-view-overview#explore-the-device-inventory) including search, export to CSV, and more.
+- [Onboard devices](/defender-endpoint/onboarding#onboard-devices-using-any-of-the-supported-management-tools).
+- [Offboard devices](/defender-endpoint/offboard-machines).
+- [Investigate the device details](/defender-endpoint/investigate-machines) to identify behaviors or events that might be related to the alert.
+- In the device details pane, select the ellipsis on the top right to [take response actions on a device](/defender-endpoint/respond-machine-alerts).
 
 ## Next steps
 

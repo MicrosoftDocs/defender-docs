@@ -40,7 +40,7 @@ Learn more about how Defender for IoT [discovers vulnerabilities](discover-vulne
 1. Select a recommendation. A side panel opens. Do one of the following:
 
     - Select **Request remediation** and follow the [Request remediation instructions](/defender-vulnerability-management/tvm-remediation#request-remediation). This sends a request to the relevant team to perform the remediation.
-    - Select **Exception options** and fill in the details. For more information, see [justification for an exception](/defender-vulnerability-management/tvm-security-recommendation.md#explore-security-recommendation-options). To complete, select **Submit**.
+    - Select **Exception options** and fill in the details. For more information, see [justification for an exception](/defender-vulnerability-management/tvm-security-recommendation#explore-security-recommendation-options). To complete, select **Submit**.
 
 ## Next steps
 
