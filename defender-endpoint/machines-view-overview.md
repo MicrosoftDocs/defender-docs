@@ -166,7 +166,7 @@ On the **IoT/OT devices** tab, select **Customize columns** to see the columns a
 
 :::image type="content" alt-text="Image of IoT device columns" source="media/iotdevicescolumns.png":::
 
-Firmware information for OT devices is displayed in the **OS distribution** and **OS model** columns.
+Firmware information for OT devices is displayed in the **OS version** and **OS model** columns.
 
 ## Related articles
 
