@@ -171,7 +171,6 @@ See [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/
 For devices running Windows 7, Windows 8.1, Windows Server 2008 R2, and servers that aren't upgraded to Unified Agent and use the Microsoft Monitoring Agent (also known as Log Analytics Agent) to connect to the Defender for Endpoint service, you can either use a system-wide proxy setting, or configure the agent to connect through a proxy or a log analytics gateway.
 
 - Configure the agent to use a proxy: [Proxy configuration](/azure/azure-monitor/agents/log-analytics-agent#proxy-configuration)
-
 - Set up Azure Log Analytics (formerly known as OMS Gateway) to act as proxy or hub: [Azure Log Analytics Agent](/azure/azure-monitor/platform/gateway#download-the-log-analytics-gateway)
 
 [Onboard previous versions of Windows](onboard-downlevel.md)
