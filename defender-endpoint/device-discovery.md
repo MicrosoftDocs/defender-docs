@@ -94,9 +94,9 @@ For more information, see [Network devices](network-devices.md).
 
 To address the challenge of gaining enough visibility to locate, identify, and secure your complete OT/IOT asset inventory Defender for Endpoint now supports the following integration:
 
-- **Microsoft Defender for IoT**: This integration combines Defender for Endpoint's device discovery capabilities, with the agentless monitoring capabilities of Microsoft Defender for IoT in the Defender portal (Preview), to secure:
+- **Microsoft Defender for IoT**: This integration combines Defender for Endpoint's device discovery capabilities with Microsoft Defender for IoT in the Defender portal (Preview) to secure:
 
-    - OT devices, such as servers or packaging systems. For more information, see [What is Microsoft Defender for IoT in the Defender portal?](/defender-for-iot/microsoft-defender-iot.md).
+    - OT devices, such as servers or packaging systems. For more information, [onboard Defender for IoT in the Defender portal](/defender-for-iot/get-started.md).
     - Enterprise IoT devices connected to an IT network (for example, Voice over Internet Protocol (VoIP), printers, and smart TVs). For more information, see [Enable Enterprise IoT security with Defender for Endpoint](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).
 
 ## Vulnerability assessment on discovered devices

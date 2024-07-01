@@ -90,13 +90,9 @@ From the **Network devices** and **IoT/OT devices** tabs, you'll also see inform
 :::image type="content" alt-text="Image of network devices list." source="media/device-inventory-networkdevices.png" lightbox="media/device-inventory-networkdevices.png":::
 
 > [!NOTE]
-> Device discovery integration with [Microsoft Defender for IoT in the Defender portal (Preview)](/defender-for-iot/microsoft-defender-iot) is available to help locate, identify, and secure your complete OT/IOT asset inventory. Devices discovered with this integration will appear on the **IoT/OT devices** tab.
-
-With Defender for IoT, you can also view and manage:
-- OT devices in the classic, Azure portal.
-- Enterprise IoT devices (like printers, smart TVs, and conferencing systems) as part of enterprise IoT monitoring.
+> Device discovery integration with [Microsoft Defender for IoT in the Defender portal (Preview)](/defender-for-iot/microsoft-defender-iot) is available to help locate, identify, and secure your complete OT/IOT asset inventory. Devices discovered with this integration appear on the **IoT/OT devices** tab.
 >
-> Learn more about the different Defender for IoT flavors (/defender-for-iot/microsoft-defender-iot#what-are-the-different-flavors-for-microsoft-defender-for-iot).
+> With Defender for IoT, you can also view and manage Enterprise IoT devices (like printers, smart TVs, and conferencing systems) as part of enterprise IoT monitoring. For more information, see [Enable Enterprise IoT security with Defender for Endpoint](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).
 
 At the top of each device inventory tab, you can see:
 
@@ -169,6 +165,8 @@ On the **Network devices** tab, select **Customize columns** to see the columns 
 On the **IoT/OT devices** tab, select **Customize columns** to see the columns available. The default values are checked in the following image:
 
 :::image type="content" alt-text="Image of IoT device columns" source="media/iotdevicescolumns.png":::
+
+Firmware information for OT devices is displayed in the **OS distribution** and **OS model** columns.
 
 ## Related articles
 

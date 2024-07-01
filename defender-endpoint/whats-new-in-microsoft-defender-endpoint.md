@@ -50,6 +50,12 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 - [What's new in Defender for Endpoint on Android](android-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 
+## July 2024
+
+- (Preview) **Monitor OT devices in the device inventory**: You can now monitor OT devices in addition to IoT devices in the device inventory, as part of the integration with [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/device-discovery.md). As part of this integration: 
+    - We've added the **Site** and **Zone** columns to the device inventory **IoT/OT** tab.
+    - If OT devices are discovered but a Defender for IoT license isn't set up, the device inventory displays a message that indicates the number of unprotected OT devices. [Learn more about the intial device inventory view with detected OT devices](/defender-for-iot/device-discovery.md#device-inventory-initial-view).
+
 ## June 2024
 
 - (Preview) [BitLocker support for Device control](device-control-overview.md#control-access-to-bitlocker-encrypted-removable-media-preview):  Allows device control to apply policy based on the BitLocker encrypted state of a device.  
