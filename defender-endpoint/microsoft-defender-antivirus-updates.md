@@ -42,8 +42,7 @@ This article also includes:
 - [Platform version included with Windows 10 releases](#platform-version-included-with-windows-10-releases)
 - [Updates for Deployment Image Servicing and Management (DISM)](#updates-for-deployment-image-servicing-and-management-dism)
 
-> [!TIP]
-> To see the most current engine, platform, and signature date, visit the [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates)
+To see the most current engine, platform, and signature date, visit the [Security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates)
 
 [!INCLUDE [MDE automated setup guide](../includes/security-analyzer-setup-guide.md)]
 
@@ -109,14 +108,14 @@ All our updates contain
 
 ### What's new
 
-- Fixed issue where Microsoft Defender Antivirus was not properly changing state when non-Microsoft antivirus/antimalware software was installed and [Windows Defender Application Control](/windows/security/application-security/application-control/windows-defender-application-control/wdac) (WDAC) with [Intelligent Security Graph](/windows/security/application-security/application-control/windows-defender-application-control/design/use-wdac-with-intelligent-security-graph) were enabled
+- Fixed issue where Microsoft Defender Antivirus was not properly changing state when non-Microsoft antivirus/antimalware software was installed and [Windows Defender Application Control](/windows/security/application-security/application-control/windows-defender-application-control/wdac) (WDAC) with [Intelligent Security Graph](/windows/security/application-security/application-control/windows-defender-application-control/design/use-wdac-with-intelligent-security-graph) were enabled.
 - Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
 - Custom scans started with [Start-MpScan](/powershell/module/defender/start-mpscan) are now reported in the event log.
-- Fixed potential deadlock that occurred on volume mount scanning
+- Fixed potential deadlock that occurred on volume mount scanning.
 - Fixed issue where Microsoft Defender Antivirus did not allow applications to clean up temporary files.
-- Fixed potentially packet loss due to [network protection](network-protection.md) shutdown that could lead to deadlock
-- Implemented performance improvements for scenarios where WDAC is enabled with Intelligent Security Graph 
-- Fixed an issue where an Outlook exclusion for the ASR rule [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes) was not honored
+- Fixed potentially packet loss due to [network protection](network-protection.md) shutdown that could lead to deadlock.
+- Implemented performance improvements for scenarios where WDAC is enabled with Intelligent Security Graph.
+- Fixed an issue where an Outlook exclusion for the ASR rule [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes) was not honored.
 
 ### May-2024 (Engine: 1.1.24050.5 | Platform: 4.18.24050.7)
 
@@ -131,7 +130,7 @@ All our updates contain
 - Improved performance when running configuration queries.
 - Optimized how scans are prioritized.
 - Fixed a crash caused by a race condition with a device control driver.
-- Added Event Viewer Logging for scan start event where the scan originates from Powershell.
+- Added Event Viewer Logging for scan start event where the scan originates from PowerShell.
 
 ### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.4)
 
@@ -146,7 +145,7 @@ All our updates contain
 - Added an opt-out feature for Experimental Configuration Services (ECS) and One collector in the Core Service.
 - Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
 - After a new engine version is released, support for older versions (N-2) will now reduce to technical support only. Engine versions older than N-2 are no longer supported.
-- Improved health monitoring and telemetry for [Attack Surface Rules](overview-attack-surface-reduction.md) exclusions.
+- Improved health monitoring and telemetry for [attack surface rules](overview-attack-surface-reduction.md) exclusions.
 - Updated inaccurate information in [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) regarding wildcard usage with contextual exclusions.
 
 ### March-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
