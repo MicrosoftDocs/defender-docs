@@ -139,7 +139,7 @@ Configure the static proxy using the Group Policy available in Administrative Te
 >    - `ProxyPacUrl` 
 >    - `ProxyServer` 
 
-## Configure the proxy server manually using netsh command
+## Configure the proxy server manually using `netsh` command
 
 Use `netsh` to configure a system-wide static proxy.
 
