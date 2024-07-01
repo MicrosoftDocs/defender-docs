@@ -99,6 +99,25 @@ All our updates contain
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### June-2024 (Platform: 4.18.24060.xxxx | Engine: 1.1.24060.x)
+
+- Security intelligence update version: **x.x.x.x**
+- Release date: **July 8, 2024** (Engine) / **TBD** (Platform)
+- Platform: **4.18.24060.xxxx**
+- Engine: **1.1.24060.x**
+- Support phase: **Security and Critical Updates**
+
+### What's new
+
+- Fixed issue where Microsoft Defender Antivirus was not properly changing state when non-Microsoft antivirus/antimalware software was installed and [Windows Defender Application Control](/windows/security/application-security/application-control/windows-defender-application-control/wdac) (WDAC) with [Intelligent Security Graph](/windows/security/application-security/application-control/windows-defender-application-control/design/use-wdac-with-intelligent-security-graph) were enabled
+- Fixed deadlock issue on [VDI](deployment-vdi-microsoft-defender-antivirus.md) that occurred when loading corrupted update files from UNC share.
+- Custom scans started with [Start-MpScan](/powershell/module/defender/start-mpscan) are now reported in the event log.
+- Fixed potential deadlock that occurred on volume mount scanning
+- Fixed issue where Microsoft Defender Antivirus did not allow applications to clean up temporary files.
+- Fixed potentially packet loss due to [network protection](network-protection.md) shutdown that could lead to deadlock
+- Implemented performance improvements for scenarios where WDAC is enabled with Intelligent Security Graph 
+- Fixed an issue where an Outlook exclusion for the ASR rule [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes) was not honored
+
 ### May-2024 (Engine: 1.1.24050.5 | Platform: 4.18.24050.7)
 
 - Security intelligence update version: **1.413.1.0**
