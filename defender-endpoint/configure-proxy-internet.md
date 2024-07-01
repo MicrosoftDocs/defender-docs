@@ -38,9 +38,9 @@ ms.date: 07/01/2024
 
 Depending on the operating system, the proxy to be used for Microsoft Defender for Endpoint can be configured automatically. You can use autodiscovery, an autoconfig file, or a method statically specific to Defender for Endpoint services running on the device.
 
-- For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md) (in this article)
-- For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md)
-- For macOS devices, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md#network-connections)
+- For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md) (in this article).
+- For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md).
+- For macOS devices, see [Microsoft Defender for Endpoint on Mac](microsoft-defender-endpoint-mac.md#network-connections).
 
 The Defender for Endpoint sensor requires Microsoft Windows HTTP (`WinHTTP`) to report sensor data and communicate with the Defender for Endpoint service. The embedded Defender for Endpoint sensor runs in system context using the `LocalSystem` account.
 
