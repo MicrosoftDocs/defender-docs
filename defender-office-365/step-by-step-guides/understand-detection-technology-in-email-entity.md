@@ -30,7 +30,7 @@ To resolve false positives like the ones listed in the table below, you should a
 |The Detection technology|How it reaches a verdict|Notes|
 | -------- | -------- | -------- |
 |Advanced filter|Machine learning models based detection on email & contents, to detect phish & spam|
-|Antimalware protection|Detection from signature based anti-malware engines||
+|Antimalware protection|Detection from signature based anti-malware||
 |Bulk|Detection for advertising / marketing and similar message types with their relative complaint levels|[Step-by-Step guide on how to tune bulk thresholds](tune-bulk-mail-filtering-walkthrough.md)|
 |Campaign|Messages identified and grouped as part of a malware or phish campaign|[Learn more about campaigns](track-and-respond-to-emerging-threats-with-campaigns.md)|
 |Domain reputation|The message was sent from a domain that was identified as spam or phish domain, based on internal or external signals||
