@@ -109,7 +109,7 @@ The static proxy settings are configurable through group policy (GP), both setti
 
 ## Configure a static proxy for Microsoft Defender Antivirus
 
-Microsoft Defender Antivirus [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) provides near-instant, automated protection against new and emerging threats. Note that connectivity is required for [custom indicators](manage-indicators.md) when Microsoft Defender Antivirus is your active anti-malware solution and [EDR in block mode](edr-in-block-mode.md), which provides a fallback option when a non-Microsoft solution did not perform a block.
+Microsoft Defender Antivirus [cloud-delivered protection](cloud-protection-microsoft-defender-antivirus.md) provides near-instant, automated protection against new and emerging threats. Connectivity is required for [custom indicators](manage-indicators.md) when Microsoft Defender Antivirus is your active anti-malware solution and [EDR in block mode](edr-in-block-mode.md), which provides a fallback option when a non-Microsoft solution didn't perform a block.
 
 Configure the static proxy using the Group Policy available in Administrative Templates:
 
@@ -128,7 +128,7 @@ Configure the static proxy using the Group Policy available in Administrative Te
     For example: http://10.0.0.6:8080
 
 > [!NOTE]
-> If you are using static proxy setting on devices that are otherwise completely offline, meaning the operating system is unable to connect for the online certificate revocation list or Windows Update, then it is required to add the additional registry setting `SSLOptions` with a DWORD value of 2. Parent registry path location for `SSLOptions` is `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet`. For more information about the `SSLOptions`, see [Cloud Protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
+> If you are using static proxy setting on devices that are otherwise completely offline, meaning the operating system is unable to connect for the online certificate revocation list or Windows Update, then it is required to add the additional registry setting `SSLOptions` with a DWORD value of `2`. Parent registry path location for `SSLOptions` is `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet`. For more information about the `SSLOptions`, see [Cloud Protection](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus).
 >
 > For resiliency purposes and the real-time nature of cloud-delivered protection, Microsoft Defender Antivirus caches the last known working proxy. Ensure your proxy solution does not perform SSL inspection. This will break the secure cloud connection.
 >
@@ -169,7 +169,7 @@ See [Netsh Command Syntax, Contexts, and Formatting](/windows-server/networking/
 
 ### Windows devices running the previous MMA-based solution
 
-Devices running Windows 7, Windows 8.1, Windows Server 2008 R2, and servers that are not upgraded to Unified Agent leverage the Microsoft Monitoring Agent (also known as Log Analytics Agent) to connect to the Defender for Endpoint service, you can either use a system-wide proxy setting, or configure the agent to connect through a proxy or a log analytics gateway.
+For devices running Windows 7, Windows 8.1, Windows Server 2008 R2, and servers that aren't upgraded to Unified Agent and use the Microsoft Monitoring Agent (also known as Log Analytics Agent) to connect to the Defender for Endpoint service, you can either use a system-wide proxy setting, or configure the agent to connect through a proxy or a log analytics gateway.
 
 - Configure the agent to use a proxy: [Proxy configuration](/azure/azure-monitor/agents/log-analytics-agent#proxy-configuration)
 
