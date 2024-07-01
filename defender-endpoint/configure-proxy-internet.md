@@ -36,7 +36,7 @@ ms.date: 07/01/2024
 > - [Endpoint Detection and Response (EDR)](/defender-endpoint/configure-proxy-internet)
 > - [Microsoft Defender Antivirus](/defender-endpoint/configure-proxy-internet)
 
-Depending on the operating system, the proxy to be used for Microsoft Defender for Endpoint can be configured automatically, typically by using autodiscovery or an autoconfig file, or statically specific to Defender for Endpoint services running on the device.
+Depending on the operating system, the proxy to be used for Microsoft Defender for Endpoint can be configured automatically. You can use autodiscovery, an autoconfig file, or a method statically specific to Defender for Endpoint services running on the device.
 
 - For Windows devices, see [Configure device proxy and Internet connectivity settings](configure-proxy-internet.md) (in this article)
 - For Linux devices, see [Configure Microsoft Defender for Endpoint on Linux for static proxy discovery](linux-static-proxy-configuration.md)
@@ -184,7 +184,7 @@ For devices running Windows 7, Windows 8.1, Windows Server 2008 R2, and servers 
 
 ## Related articles
 
-- [Disconnected environments, proxies and Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/disconnected-environments-proxies-and-microsoft-defender-for/ba-p/3710502)
+- [Disconnected environments, proxies, and Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/disconnected-environments-proxies-and-microsoft-defender-for/ba-p/3710502)
 - [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md)
 - [Onboard Windows devices](onboard-windows-client.md)
 - [Troubleshoot Microsoft Defender for Endpoint onboarding issues](troubleshoot-onboarding.md)
