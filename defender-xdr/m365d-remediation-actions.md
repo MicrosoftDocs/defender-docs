@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: conceptual
 ms.custom: autoir
 ms.reviewer: evaldm, isco
-ms.date: 02/17/2021
+ms.date: 02/17/2024
 ---
 
 # Remediation actions in Microsoft Defender XDR
@@ -27,7 +27,7 @@ ms.date: 02/17/2021
 
 - Microsoft Defender XDR
 
-During and after an automated investigation in Microsoft Defender XDR, remediation actions are identified for malicious or suspicious items. Some kinds of remediation actions are taken on devices, also referred to as endpoints. Other remediation actions are taken on identities, accounts and email content. Automated investigations complete after remediation actions are taken, approved, or rejected.
+During and after an automated investigation in Microsoft Defender XDR, remediation actions are identified for malicious or suspicious items. Some kinds of remediation actions are taken on devices, also referred to as endpoints. Other remediation actions are taken on identities, accounts, and email content. Automated investigations complete after remediation actions are taken, approved, or rejected.
 
 > [!IMPORTANT]
 > Whether remediation actions are taken automatically or only upon approval depends on certain settings, such as automation levels. To learn more, see the following articles:
@@ -61,7 +61,7 @@ The following table lists possible verdicts and outcomes:
 
 ## Remediation actions that are taken manually
 
-In addition to remediation actions that follow automated investigations, your security operations team can take certain remediation actions manually. These include the following:
+In addition to remediation actions that follow automated investigations, your security operations team can take certain remediation actions manually. These actions include:
 
 - Manual device action, such as device isolation or file quarantine
 - Manual email action, such as soft-deleting email messages
@@ -77,4 +77,5 @@ In addition to remediation actions that follow automated investigations, your se
 - [View and manage remediation actions](m365d-autoir-actions.md)
 - [Address false positives or false negatives](m365d-autoir-report-false-positives-negatives.md)
 - [Contain devices from the network](/defender-endpoint/respond-machine-alerts#contain-devices-from-the-network)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
