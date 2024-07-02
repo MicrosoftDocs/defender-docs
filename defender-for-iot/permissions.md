@@ -9,7 +9,7 @@ ms.date: 07/2/2024
 ms.topic: how-to
 ---
 
-# Set up permissions
+# Set up full roles and permissions
 
 The Microsoft Defender portal allows granular access to features and data based on user roles and the permissions given to each user.
 
