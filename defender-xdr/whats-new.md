@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 06/05/2024
+ms.date: 07/02/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -28,6 +28,14 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Sentinel](/azure/sentinel/whats-new)
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
+
+## July 2024
+
+- (Preview) You can now customize columns in the **Incidents** and **Alerts** queues in the Microsoft Defender portal. You can add, remove, reorder columns to display the information you need. For more information, see how to customize columns in the [incident queue](incident-queue.md#incident-queue) and [alert queue](investigate-alerts.md).
+
+- (Preview) **Critical assets** are now part of the tags in the incident and alert queues. When a critical asset is involved in an incident or alert, the critical asset tag is displayed in the queues. For more information, see [incident tags](manage-incidents.md#add-incident-tags) and the [alert queue](investigate-alerts.md).
+
+- (Preview) Incidents are now arranged according to the latest automatic or manual updates made to an incident. Read about the **last update time** column in the [incident queue](incident-queue.md#incident-queue).
 
 ## June 2024
 
