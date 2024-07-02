@@ -607,7 +607,7 @@ In the **View data by Email \> Malware** and **Chart breakdown by Detection Tech
 - **File detonation**<sup>\*</sup>: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.
 - **File detonation reputation**<sup>\*</sup>: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.
 - **File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.
-- **Anti-malware engine**<sup>\*</sup>: Detection from anti-malware engines.
+- **Anti-malware engine**<sup>\*</sup>: Detection from anti-malware.
 - **URL malicious reputation**
 - **URL detonation**<sup>\*</sup>: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.
 - **URL detonation reputation**<sup>\*</sup>: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.

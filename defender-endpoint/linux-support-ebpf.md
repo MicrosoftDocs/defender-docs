@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/01/2024
+ms.date: 06/28/2024
 ---
 
 # Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux
@@ -63,13 +63,12 @@ The eBPF sensor for Microsoft Defender for Endpoint on Linux is supported on the
 | Oracle Linux UEK   | 7.9                  | 5.4            |
 | Amazon Linux 2     | 2                    | 5.4.261-174.360|
 
-
 > [!NOTE]
 > Oracle Linux 8.8 with kernel version 5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64 will result in kernel hang when eBPF is enabled as supplementary subsystem provider. This kernel version should not be used for eBPF mode. Refer to Troubleshooting and Diagnostics section for mitigation steps.
 
 ## Use eBPF
 
-The eBPF sensor is automatically enabled for all customers by default for agent versions "101.23082.0006" and above. Customers need to update to the above-mentioned supported versions to experience the feature. When the eBPF sensor is enabled on an endpoint, Defender for Endpoint on Linux updates supplementary_events_subsystem to ebpf.
+The eBPF sensor is automatically enabled for all customers by default for agent versions "101.23082.0006" and later. Customers need to update to a supported version to experience the feature. When the eBPF sensor is enabled on an endpoint, Defender for Endpoint on Linux updates supplementary_events_subsystem to ebpf.
 
 :::image type="content" source="/defender/media/defender-endpoint/ebpf-subsystem-linux.png" alt-text="ebpf subsystem highlight in the mdatp health command" lightbox="/defender/media/defender-endpoint/ebpf-subsystem-linux.png":::
 
@@ -78,6 +77,7 @@ In case you want to manually disable eBPF then you can run the following command
 ```bash
 sudo mdatp config ebpf-supplementary-event-provider --value [enabled/disabled]
 ```
+
 You can also update the mdatp_managed.json file:
 
 ```JSON
@@ -87,10 +87,12 @@ You can also update the mdatp_managed.json file:
     }
 }
 ```
+
 Refer to the link for detailed sample json file - [Set preferences for Microsoft Defender for Endpoint on Linux.](linux-preferences.md)
+
 > [!IMPORTANT]
 > If you disable eBPF, the supplementary event provider switches back to auditd.
-> In the event eBPF doesn't become enabled or is not supported on any specific kernel, it will automatically switch back to auditd and retain all auditd custom rules. 
+> In the event eBPF doesn't become enabled or is not supported on any specific kernel, it will automatically switch back to auditd and retain all auditd custom rules.
 
 You can also check the status of eBPF (enabled/disabled) on your linux endpoints using advanced hunting in the Microsoft Defender Portal. Steps are as follows:
 
@@ -106,18 +108,19 @@ You can also check the status of eBPF (enabled/disabled) on your linux endpoints
 
 ## Immutable mode of Auditd
 
-For customers using auditd in immutable mode, a reboot is required post enablement of eBPF in order to clear the audit rules added by Microsoft Defender for Endpoint. This is a limitation in immutable mode of auditd, which freezes the rules file and prohibits editing/overwriting. This issue is resolved with the reboot.
-Post reboot, run the below command to check if audit rules got cleared.
+For customers using auditd in immutable mode, a reboot is required post enablement of eBPF in order to clear the audit rules added by Microsoft Defender for Endpoint. This requirement is a limitation in immutable mode of auditd, which freezes the rules file and prohibits editing/overwriting. This issue is resolved with the reboot.
+
+Post reboot, run the following command to check if audit rules were cleared:
 
 ```bash
 % sudo auditctl -l
 ```
 
-The output of above command should show no rules or any user added rules. In case the rules didn't get removed, then perform the following steps to clear the audit rules file.
+The output of previous command should show no rules or any user added rules. In case where the rules weren't removed, do the following steps to clear the audit rules file:
 
-1. Switch to ebpf mode
-  2. Remove the file /etc/audit/rules.d/mdatp.rules
-  3. Reboot the machine
+1. Switch to ebpf mode.
+2. Remove the file `/etc/audit/rules.d/mdatp.rules`.
+3. Reboot the machine.
 
 ### Troubleshooting and Diagnostics
 
@@ -136,7 +139,7 @@ uname -a
 
 2. Using Oracle Linux 8.8 with kernel version **5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64** might result in kernel panic. To mitigate this issue, you can take one of the following steps:
 
-    - Use a kernel version higher or lower than **5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64** on Oracle Linux 8.8 if you want to use eBPF as supplementary subsystem provider. Note that the minimum kernel version for Oracle Linux is RHCK 3.10.0 and Oracle Linux UEK is 5.4.
+    - Use a kernel version higher or lower than **5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64** on Oracle Linux 8.8 if you want to use eBPF as supplementary subsystem provider. The minimum kernel version for Oracle Linux is RHCK 3.10.0 and Oracle Linux UEK is 5.4.
     - Switch to auditd mode if you need to use the same kernel version
 
 ```bash
@@ -151,7 +154,7 @@ The following two sets of data help analyze potential issues and determine the m
 
 #### Troubleshooting performance issues
 
-If you see a hike in resource consumption by Microsoft Defender on your endpoints, it's important to identify the process/mount-point/files that is consuming most CPU/Memory utilization and then apply necessary exclusions. After applying possible AV exclusions, if wdavdaemon (parent process) is still consuming the resources, then use the ebpf-statistics command to obtain the top system call count:
+If you see increased resource consumption by Microsoft Defender on your endpoints, it's important to identify the process/mount-point/files that are causing most of the CPU/Memory utilization. You can then apply the necessary exclusions. After applying possible AV exclusions, if wdavdaemon (parent process) is still consuming the resources, use the ebpf-statistics command to get the top system call count:
 
 ```Bash
 sudo mdatp diagnostic  ebpf-statistics
@@ -180,11 +183,11 @@ Top syscall ids:
 82 : 1699333
 90 : 10
 87 : 3
-``` 
+```
 
-In the above output, you can see that stress-ng is the top process generating large number of events and might result into performance issues. Most likely stress-ng is generating the system call with ID 82. You can create a ticket with Microsoft to get this process excluded. In future as part of upcoming enhancements, you have more control to apply such exclusions at your end.
+In the previous output, you can see that stress-ng is the top process generating large number of events and might result into performance issues. Most likely stress-ng is generating the system call with ID 82. You can create a ticket with Microsoft to get this process excluded. In future as part of upcoming enhancements, you have more control to apply such exclusions at your end.
 
-Exclusions applied to auditd can't be migrated or copied to eBPF. Common concerns such as noisy logs, kernel panic, noisy syscalls are already taken care of by eBPF internally. In case you want to add any further exclusions, then reach out to Microsoft to get the necessary exclusions applied. 
+Exclusions applied to auditd can't be migrated or copied to eBPF. Common concerns such as noisy logs, kernel panic, noisy syscalls are already taken care of by eBPF internally. In case you want to add any further exclusions, then reach out to Microsoft to get the necessary exclusions applied.
 
 ## See also
 
