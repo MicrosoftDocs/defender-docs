@@ -49,7 +49,7 @@ Assign users the unified RBAC permissions and roles based on the table:
 1. Select **Authorization and settings**, select the permissions as needed, select **Apply**.
     :::image type="content" source="media/permissions/permissions-choose-options.png" alt-text="Screenshot of the permissions set up page with the specific permissions chosen for site security":::
 1. Select **Next** for Assignments.
-1. Slect **Add assignment**, type a name, choose users and groups and select the Data sources. Select **Add**.
+1. Select **Add assignment**, type a name, choose users and groups and select the Data sources. Select **Add**.
 1. Select **Next** to Review and finish.
 1. Select **Submit**.
 
