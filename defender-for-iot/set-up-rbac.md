@@ -33,11 +33,15 @@ To <!-- give users access to [site security](site-security-overview.md) features
 1. Select **Go to Permissions and roles**.
 1. Select **Create custom role**.
 1. Type a **Role name**, and then select **Next** for Permissions.
+    :::image type="content" source="media/set-up-rbac/permissions-set-up.png" alt-text="Screenshot of the permissions set up page for site security":::
 1. Select **Security operations**, select Select custom permissions. In Security settings select Security data basics, select **Apply**
+    :::image type="content" source="media/set-up-rbac/permissions-choose.png" alt-text="Screenshot of the permissions set up page with the categories of permissions for site security":::
 1. Select **Authorization and settings**, select Select custom permissions. In Security data select Core security settings (manage), select **Apply**
+    :::image type="content" source="media/set-up-rbac/permissions-choose-options.png" alt-text="Screenshot of the permissions set up page with the specific permissions chosen for site security":::
 1. Select **Next** for Assignments.
 1. Slect **Add assignment**, type a name, choose users and groups and select the Data sources. Select **Add**.
 1. Select **Next** to Review and finish.
+    :::image type="content" source="media/set-up-rbac/permissions-review.png" alt-text="Screenshot of the review permissions set up page for site security":::
 1. Select **Submit**.
 
 This table shows the permissions and roles to assign:
