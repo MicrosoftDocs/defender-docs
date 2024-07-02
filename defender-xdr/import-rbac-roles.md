@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 06/28/2024
+ms.date: 07/01/2024
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -63,10 +63,10 @@ The following steps guide you on how to import roles into Microsoft Defender XDR
 
 7. Select the roles you want to import and select **Next**.
 
-> [!NOTE]
-> If the role you want to import appears in the **Roles not eligible for import** list, it contains assignments for users or user groups that no longer exist in Entra ID.
->
-> To import this role to Unified RBAC, remove the user or user group from the role in the original RBAC model. Select the role to view the list of users that still exist for that role to determine which user or group to remove.
+   > [!NOTE]
+   > If the role you want to import appears in the **Roles not eligible for import** list, it contains assignments for users or user groups that no longer exist in Entra ID.
+   >
+   > To import this role to Unified RBAC, remove the user or user group from the role in the original RBAC model. Select the role to view the list of users that still exist for that role to determine which user or group to remove.
 
 8. Select **Submit**.
 
