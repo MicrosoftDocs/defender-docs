@@ -13,7 +13,7 @@ ms.topic: how-to
 
 Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which offers an overview of the security state of your entire operational technology (OT) environment. Your organization's security team can use this page to regularly monitor the security status of your production sites.
 
-In this article, you learn how to set up a site in the **Site security** page. 
+In this article, you learn how to set up a site in the **Site security** page.
 
 Learn more about the [site security benefits and use cases](site-security-overview.md).
 
@@ -22,7 +22,7 @@ Learn more about the [site security benefits and use cases](site-security-overvi
 ## Prerequisites
 
 - Review [the general prerequisites for Microsoft Defender for IoT](prerequisites.md).
-- Review the required site security permissions according to [RBAC requirements](prerequisites.md#permissions).
+- Review the required site security permissions according to [RBAC requirements](set-up-rbac.md).
 - Get a Microsoft Defender for IoT trial license. For more information, see [Microsoft Defender for IoT subscriptions settings](get-started.md).
 - We recommend you have IP or MAC address details of at least one OT device at the site that is discovered by Microsoft Defender for Endpoint.
 
