@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to view, create, modify, and delete anti-spam policies in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 5/10/2024
+ms.date: 07/01/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -108,7 +108,12 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
 5. On the **Bulk email threshold & spam properties** page, configure the following settings:
 
-   - **Bulk email threshold**: Specifies the bulk complaint level (BCL) of a message that must bet met or exceeded to trigger the specified action for the **Bulk compliant level (BCL) met or exceeded** spam filtering verdict that you configure on the next page. A higher value indicates the message is less desirable (more likely to resemble spam). For more information, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
+   - **Bulk email threshold** section: The slider specifies the bulk complaint level (BCL) of a message that must bet met or exceeded to trigger the specified action for the **Bulk compliant level (BCL) met or exceeded** spam filtering verdict that you configure on the next page. A higher value indicates the message is less desirable (more likely to resemble spam). For more information about BCL, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
+
+     This section also contains a comparative chart that shows the effect of different BCL values on messages.
+
+     > [!TIP]
+     > The **Bulk sender insights** link is best used _after_ you finish creating the anti-spam policy. If you select the link, you can't get back to where you left off on the **Bulk email threshold & spam properties** page (you need to start the new anti-spam policy creation over). For more information about the **Bulk sender insights** page, see [Bulk sender insights in Exchange Online Protection](anti-spam-bulk-sender-inisghts.md).
 
    - **Spam properties** section:
 
