@@ -17,7 +17,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 06/05/2024
+ms.date: 07/02/2024
 ---
 
 # Manage incidents in Microsoft Defender
@@ -79,6 +79,16 @@ You can assign or change the severity of an incident from the **Severity** field
 You can add custom tags to an incident, for example to flag a group of incidents with a common characteristic. You can later filter the incident queue for all incidents that contain a specific tag.
 
 The option to select from a list of previously used and selected tags appear after you start typing.
+
+An incident can have system tags and/or custom tags with certain color backgrounds. Custom tags use the white background while system tags typically use red or black background colors. System tags identify the following in an incident:
+
+- A **type of attack**, like credential phishing or BEC fraud
+- **Automatic actions**, like automatic investigation and response and automatic attack disruption
+- **Defender Experts** handling an incident
+- **Critical assets** involved in the incident
+
+> [!TIP]
+> Microsoft's Security Exposure Management, based on predefined classifications, automatically tags devices, identities, and cloud resources as a **critical asset**. This out-of-the-box capability ensures the protection of an organization’s valuable and most important assets. It also helps security operations teams to prioritize investigation and remediation. Know more about [critical asset management](/security-exposure-management/critical-asset-management).
 
 ## Assign an incident
 
