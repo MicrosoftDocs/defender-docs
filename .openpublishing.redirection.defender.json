@@ -189,6 +189,11 @@
       "source_path": "defender-endpoint/evaluation-lab.md",
       "redirect_url": "/defender-endpoint/evaluate-microsoft-defender-antivirus",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/collect-diagnostic-data-update-compliance.md",
+      "redirect_url": "/defender-endpoint/collect-diagnostic-data",
+      "redirect_document_id": true
     }
   ]
 }
