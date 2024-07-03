@@ -43,6 +43,6 @@ To add a trial license for Microsoft Defender for IoT:
 
 Once you have a trial license, [set up a new site](set-up-sites.md) so that Microsoft Defender for IoT can begin sending data to the Defender portal.
 
-## Public preview features
+## Turn on Public preview features
 
-We recommend that you also turn on and benefit from the available [Defender portal preview features](/defender-xdr/preview#turn-on-preview-features).
+Turn on the public preview features in the Microsoft Defender XDR settings to enable the site security features. Directions to change the settings are available in [Defender portal preview features](/defender-xdr/preview#turn-on-preview-features).
