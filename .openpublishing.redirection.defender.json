@@ -193,7 +193,7 @@
     {
       "source_path": "defender-endpoint/collect-diagnostic-data-update-compliance.md",
       "redirect_url": "/defender-endpoint/collect-diagnostic-data",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
