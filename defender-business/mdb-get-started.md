@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 06/19/2024
+ms.date: 07/03/2024
 ms.reviewer: nehabha
 f1.keywords: NOCSH 
 ms.collection: 
@@ -38,7 +38,7 @@ Use the navigation bar on the left side of the screen to access your incidents, 
 | **Actions & submissions** > **Action center** | Takes you to your list of response actions, including completed and pending actions.<br/>- Select the **Pending** tab to view actions that require approval to proceed.<br/>- Select the **History** tab to see the actions that were taken. Some actions are taken automatically; others are taken manually or complete after they're approved.<br/><br/>To learn more, see [Review remediation actions in the Action center](mdb-review-remediation-actions.md). |
 | **Actions & submissions** > **Submissions** | Takes you to the unified submissions portal, where you can submit files to Microsoft for analysis. To learn more, see [Submit files in Microsoft Defender for Endpoint](/defender-endpoint/admin-submissions-mde) (the process is similar for Defender for Business). |
 | **Secure score** | Provides a representation of your company's security position and offers suggestions to improve it. To learn more, see [Microsoft Secure Score for Devices](/defender-vulnerability-management/tvm-microsoft-secure-score-devices). |
-| **Learning hub** | Provides access to security training and other resources through learning paths that are included with your subscription. You can filter by product, skill level, role, and more. The Learning hub can help your security team ramp up on security features and capabilities in Defender for Business and more Microsoft offerings, such as [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) and [Microsoft Defender for Office 365](/defender-office-365/mdo-about).  |
+| **Learning hub** | Security training and other resources are available online at [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). You can filter by product, skill level, role, and more. The Learning hub can help your security team ramp up on security features and capabilities in Defender for Business and more Microsoft offerings, such as [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) and [Microsoft Defender for Office 365](/defender-office-365/mdo-about). |
 | **Trials** | Try additional security and compliance capabilities by adding on a trial subscription. If you do not see **Trials** in your navigation bar, and you want to add on another trial, you can take one of the following steps: <br/>- Visit the [Small Business Solutions page](https://www.microsoft.com/en-us/store/b/business?icid=CNavBusinessStore), and choose **Questions? Talk to an expert** to get some help adding on a trial subscription. <br/>- Go to the [Microsoft 365 admin center](https://admin.microsoft.com/?auth_upn=admin%40M365B614031.onmicrosoft.com&source=applauncher#/catalog), and choose **Billing** > **Purchase services**. If you need help, choose **Help & support**.    |
 | **Partner catalog** | Lists Microsoft partners who provide technical and professional services. |
 | **Assets** > **Devices** | Enables you to view devices, such as computers and mobile devices that are enrolled in [Microsoft Intune](/mem/intune/fundamentals/what-is-intune). |
