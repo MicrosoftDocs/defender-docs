@@ -45,13 +45,13 @@ To investigate an alert:
 
 1. Locate and select an incident.
 
-    The specific incident page shows the attack story made up of the alert timeline, an incident graph and the incident details. The incident graph displays the OT device and the other IT or IoT devices connected to this alert, to show possible compromised connections.
+    The specific incident page shows the attack story made up of the alert timeline, an incident graph and the incident details.
 
 1. Select an alert from the alerts list.
 
     The incident graph and incident details display specific data for this alert.
 
-1. In the **Incident** panel, review the information, read the **Alert description** and follow the **Alert recommended actions** to remediate the issue.
+1. In the **Incident** panel, review the information, read the **Alert description**, **Evidence** and **Impacted assetts** and follow the **Alert recommended actions** to remediate the issue.
 
 ## Defender for IoT alert
 
