@@ -779,8 +779,6 @@
           href: troubleshoot-performance-issues.md
         - name: Collect diagnostic data of Microsoft Defender Antivirus
           href: collect-diagnostic-data.md
-        - name: Collect diagnostic data for Update Compliance and Microsoft Defender Antivirus
-          href: collect-diagnostic-data-update-compliance.md
         - name: Improve performance of Microsoft Defender Antivirus
           href: tune-performance-defender-antivirus.md
 
