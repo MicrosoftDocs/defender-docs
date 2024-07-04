@@ -89,7 +89,7 @@ In general you need to take the following steps:
   - Ubuntu 18.04 LTS
   - Ubuntu 20.04 LTS
   - Ubuntu 22.04 LTS
-  - Ubuntu 24.04
+  - Ubuntu 24.04 LTS
     
   - Debian 9 - 12
   - SUSE Linux Enterprise Server 12 or higher
