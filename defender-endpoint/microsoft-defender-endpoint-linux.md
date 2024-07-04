@@ -89,6 +89,8 @@ In general you need to take the following steps:
   - Ubuntu 18.04 LTS
   - Ubuntu 20.04 LTS
   - Ubuntu 22.04 LTS
+  - Ubuntu 24.04
+    
   - Debian 9 - 12
   - SUSE Linux Enterprise Server 12 or higher
   - SUSE Linux Enterprise Server 15 or higher
@@ -97,7 +99,8 @@ In general you need to take the following steps:
   - Oracle Linux 9.x
   - Amazon Linux 2
   - Amazon Linux 2023
-  - Fedora 33 or higher
+  - Fedora 33-38
+    
   - Rocky 8.7 and higher
   - Alma 8.4 and higher
   - Mariner 2
