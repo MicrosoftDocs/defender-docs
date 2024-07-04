@@ -110,10 +110,22 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
    - **Bulk email threshold** section: The slider specifies the bulk complaint level (BCL) of a message that must bet met or exceeded to trigger the specified action for the **Bulk compliant level (BCL) met or exceeded** spam filtering verdict that you configure on the next page. A higher value indicates the message is less desirable (more likely to resemble spam). For more information about BCL, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
 
-     This section also contains a comparative chart that shows the effect of different BCL values on messages.
+     The bulk senders insight shows the number of messages that were detected at the default bulk email threshold value over the last 60 days:
+
+     :::image type="content" source="media/anti-spam-policy-bulk-sender-insight-default.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk at the current BCL level." lightbox="media/anti-spam-policy-bulk-sender-insight-default.png":::
+
+     - If you decrease the bulk email threshold value, the bulk senders insight changes to show the number of additional email messages that **would be** identified as bulk based on data from the last 60 days, and how many are likely to be false positives (good email identified as bad).
+
+       :::image type="content" source="media/anti-spam-policy-bulk-sender-insight-lower.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk after you decrease the current BCL level." lightbox="media/anti-spam-policy-bulk-sender-insight-lower.png":::
+
+     - If you increase the bulk email threshold value, the bulk senders insight changes to show the number of messages that **wouldn't be** identified as bulk based on data from the last 60 days, and how many are likely to be false negatives (bad email delivered).
+
+       :::image type="content" source="media/anti-spam-policy-bulk-sender-insight-higher.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk after you increase the current BCL level." lightbox="media/anti-spam-policy-bulk-sender-insight-higher.png":::
+
+     This section also contains a corresponding comparative chart that shows the effect of different BCL values on messages.
 
      > [!TIP]
-     > The **Bulk sender insights** link is best used _after_ you finish creating the anti-spam policy. If you select the link, you can't get back to where you left off on the **Bulk email threshold & spam properties** page (you need to start the new anti-spam policy creation over). For more information about the **Bulk sender insights** page, see [Bulk sender insights in Exchange Online Protection](anti-spam-bulk-sender-inisghts.md).
+     > The **View bulk sender insights** or **Bulk sender insights** links go to the same place and are best used _after_ you finish creating the anti-spam policy. If you select one of the links, you can't get back to where you left off on the **Bulk email threshold & spam properties** page (you need to start over in creating the new anti-spam policyr). For more information about the **Bulk sender insights** page, see [Bulk sender insights in Exchange Online Protection](anti-spam-bulk-sender-inisghts.md).
 
    - **Spam properties** section:
 

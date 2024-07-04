@@ -85,9 +85,9 @@ The **Bulk sender insights** page at <https://security.microsoft.com/senderinsig
 
 Before you run a simulation, values in the table in the middle of the page indicate the following values:
 
-- **Bulk complain level**: The range of possible BCL values (1 to 9).
-- **All emails**: The total number of messages that were identified at each possible BCL value. This value is 0 if no messages were identified at that BCL value.
-- **Current level**: The number of messages that were delivered (not identified as bulk) for the given BCL value:
+- **Bulk complaint level**: The range of possible BCL values (1 to 9).
+- **All emails**: The total number of messages that were identified at each BCL value (some of which might be 0).
+- **Current level**: The number of messages that were delivered (not identified as bulk) for each BCL value:
   - If the BCL value is less that the **Current bulk email threshold** value, the message was delivered (wasn't identified as bulk):
     - The **Current level** and **All email** values are the same.
     - The **Current level** value matches the **Email delivered at current config** value.
