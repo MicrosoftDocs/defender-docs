@@ -79,8 +79,8 @@ An alert can have system tags and/or custom tags with certain color backgrounds.
 You'll need to have any of the following roles to access Microsoft Defender for Office 365 alerts:
 
 - For Microsoft Entra global roles:
-  - Global administrator
-  - Security administrator
+  - Global Administrator
+  - Security Administrator
   - Security Operator
   - Global Reader
   - Security Reader
@@ -90,6 +90,9 @@ You'll need to have any of the following roles to access Microsoft Defender for 
   - Organization Management
 
 - A [custom role](custom-roles.md)
+
+> [!NOTE]
+> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
 
 ## Analyze an alert
 
