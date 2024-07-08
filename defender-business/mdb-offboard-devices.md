@@ -21,19 +21,18 @@ ms.collection:
 
 # Offboard a device from Microsoft Defender for Business
 
-As devices are replaced or retired, or your business needs change, you can offboard devices from Defender for Business. Offboarding a device causes the device to stop sending data to Defender for Business, and its status changes to `Inactive` within seven days. 
+As devices are replaced or retired, or your business needs change, you can offboard devices from Defender for Business. Offboarding a device causes the device to stop sending data to Defender for Business, and its status changes to `Inactive` within seven days. You don't have to offboard devices that are already listed as `Inactive`.
 
 Data from a device, such as alerts, vulnerabilities, and detected threats, remains visible in the Microsoft Defender portal until the [configured retention period](/defender-endpoint/data-storage-privacy#how-long-will-microsoft-store-my-data-what-is-microsofts-data-retention-policy) expires (usually 180 days). 
 
-Devices that weren't active within the last 30 days aren't factored into your organization's exposure score. 
-
+Devices that weren't active within the last 30 days aren't factored into your organization's [exposure score](mdb-view-tvm-dashboard.md). 
 
 > [!IMPORTANT]
 > The procedures in this article describe how to remove a device from monitoring by Defender for Business. If you're using Microsoft Intune to manage devices, and you prefer to remove the device from Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](/mem/intune/remote-actions/devices-wipe).
 
 ## What to do
 
-1. Select a tab:
+1. Select one of the following tabs:
 
    - **Windows 10 or 11**
    - **Mac**
