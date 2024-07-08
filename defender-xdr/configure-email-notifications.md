@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 10/11/2023
+ms.date: 07/08/2024
 ---
 
 # Configure alert notifications in Microsoft Defender XDR
@@ -36,6 +36,9 @@ If you're using [Defender for Business](/defender-business/mdb-overview), you ca
 You can set the alert severity levels that trigger notifications. You can also add or remove recipients of the email notification. New recipients get notified about alerts triggered after they're added. For more information about alerts, see [View and organize the Alerts queue](/defender-endpoint/alerts-queue).
 
 If you're using role-based access control (RBAC), recipients will only receive notifications based on the device groups that were configured in the notification rule. Users with the proper permission can only create, edit, or delete notifications that are limited to their device group management scope. Only users assigned to the Global administrator role can manage notification rules that are configured for all device groups.
+
+> [!NOTE]
+> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
 
 The email notification includes basic information about the alert and a link to the portal where you can do further investigation.
 
