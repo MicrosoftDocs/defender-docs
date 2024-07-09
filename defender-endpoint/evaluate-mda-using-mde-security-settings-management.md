@@ -42,7 +42,7 @@ To configure the options that you must use to test the protection features, perf
 1. Select **Create policy**. The **Create a new policy** page appears.
 1. On the **Basics** page, enter a name and description for the profile in the **Name** and **Description** fields, respectively.
 1. Select **Next**.
-1. On the **Settings** page, expand the groups of settings.
+1. On the **Configuration settings** page, expand the groups of settings.
 1. From these groups of settings, select those settings that you want to manage with this profile.
 1. Set the policies for the chosen groups of settings by configuring the settings as described in the following tables:
 
@@ -139,7 +139,7 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 1. Select **Attack Surface Reduction rules** from the **Select Template** drop-down list.
 1. Select **Create policy**.
 1. On the **Basics** page, enter a name and description for the profile; then, choose **Next**.
-1. On the **Settings** page, expand the groups of settings and configure those settings you want to manage with this profile.
+1. On the **Configuration settings** page, expand the groups of settings and configure those settings you want to manage with this profile.
 1. Set the policies based on the following recommended settings:
 
 |Description  |Setting  |
