@@ -129,9 +129,15 @@ Create a subtask or role files that contribute to a playbook or task.
 
 - Add the Defender for Endpoint repository and key, `add_apt_repo.yml`:
 
-    Defender for Endpoint on Linux can be deployed from one of the following channels (denoted below as *[channel]*): *insiders-fast*, *insiders-slow*, or *prod*. Each of these channels corresponds to a Linux software repository.
+    Defender for Endpoint on Linux can be deployed from one of the following channels:
+    - *insiders-fast*, denoted as `[channel]`
+    - *insiders-slow*, denoted as `[channel]`
+    - production, denoted by the version name (see [Linux Software Repository for Microsoft Products](/linux/packages))
 
-    The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in *insiders-fast* are the first ones to receive updates and new features, followed later by *insiders-slow* and lastly by *prod*.
+    Each channel corresponds to a Linux software repository.
+
+    The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in *insiders-fast* are the first ones to receive updates and new features, followed later by *insiders-slow*, and lastly by production builds.
+
 
     In order to preview new features and provide early feedback, it is recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
 
