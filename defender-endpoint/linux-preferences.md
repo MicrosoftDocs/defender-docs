@@ -397,7 +397,7 @@ When this feature is enabled, Defender for Endpoint will scan files when their p
 |**Data type**|Boolean|n/a|
 |**Possible values**|false (default) <p> true|n/a|
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.23062.0010 or higher.
+> Available in Defender for Endpoint version `101.23062.0010` or later.
 
 ##### Configure scanning of file modify ownership events
 
@@ -413,7 +413,7 @@ When this feature is enabled, Defender for Endpoint will scan files for which ow
 |**Possible values**|false (default) <p> true|n/a|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.23062.0010 or higher.
+> Available in Defender for Endpoint version `101.23062.0010` or later.
 
 ##### Configure scanning of raw socket events
 
@@ -430,7 +430,7 @@ When this feature is enabled, Defender for Endpoint will scan network socket eve
 |**Possible values**|false (default) <p> true|n/a|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.23062.0010 or higher.
+> Available in Defender for Endpoint version `101.23062.0010` or later.
 
 
 ### Cloud-delivered protection preferences
@@ -485,7 +485,7 @@ There are five values for setting cloud block level:
 |**Possible values**|`normal` (default) <p>`moderate` <p>`high` <p>`high_plus` <p>`zero_tolerance`|Not configured<br>Normal (default) <br>Moderate <br>High <br>High_Plus <br>Zero_Tolerance|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.56.62 or higher.
+> Available in Defender for Endpoint version `101.56.62` or later.
 
 #### Enable / disable automatic sample submissions
 
@@ -537,7 +537,7 @@ Determines whether module load events (file open events on shared libraries) are
 |**Key**|moduleLoad|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.||
+|**Comments**|Available in Defender for Endpoint version 101.68.80 or later.||
 
 #### Supplementary sensor configurations
 
@@ -561,7 +561,7 @@ Determines whether file modify permissions events (`chmod`) are monitored.
 |**Key**|enableFilePermissionEvents|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
+|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or later.|
 
 ##### Configure monitoring of file modify ownership events
 
@@ -575,7 +575,7 @@ Determines whether file modify ownership events (chown) are monitored.
 |**Key**|enableFileOwnershipEvents|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
+|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or later.|
 
 ##### Configure monitoring of raw socket events
 
@@ -590,7 +590,7 @@ Determines whether network socket events involving creation of raw sockets / pac
 |**Key**|enableRawSocketEvent|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
+|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or later.|
 
 ##### Configure monitoring of boot loader events
 
@@ -604,7 +604,7 @@ Determines whether boot loader events are monitored and scanned.
 |**Key**|enableBootLoaderCalls|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.68.80` or later.|
 
 ##### Configure monitoring of ptrace events
 
@@ -618,7 +618,7 @@ Determines whether ptrace events are monitored and scanned.
 |**Key**|enableProcessCalls|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.68.80` or later.|
 
 ##### Configure monitoring of pseudofs events
 
@@ -632,7 +632,7 @@ Determines whether pseudofs events are monitored and scanned.
 |**Key**|enablePseudofsCalls|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.68.80` or later.|
 
 ##### Configure monitoring of module load events using eBPF
 
@@ -646,7 +646,7 @@ Determines whether module load events are monitored using eBPF and scanned.
 |**Key**|enableEbpfModuleLoadEvents|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.68.80` or later.|
 
 #### Report AV Suspicious Events to EDR
 
@@ -657,7 +657,7 @@ Determines whether suspicious events from Antivirus are reported to EDR.
 |**Key**|sendLowfiEvents|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.23062.0010` or later.|
 
 ### Network protection configurations
 
@@ -692,21 +692,21 @@ Determines whether ICMP events are monitored and scanned.
 |**Key**|disableIcmpInspection|*Not available*|
 |**Data type**|Boolean|*n/a*|
 |**Possible values**|`true` (default) <p>`false`|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.||
+|**Comments**|Available in Defender for Endpoint version `101.23062.0010` or later.||
 
 ## Recommended configuration profile
 
 To get started, we recommend the following configuration profile for your enterprise to take advantage of all protection features that Defender for Endpoint provides.
 
-The following configuration profile will:
+The following configuration profile:
 
-- Enable real-time protection (RTP)
-- Specify how the following threat types are handled:
+- Enables real-time protection (RTP)
+- Specifies how the following threat types are handled:
   - **Potentially unwanted applications (PUA)** are blocked
   - **Archive bombs** (file with a high compression rate) are audited to the product logs
-- Enable automatic security intelligence updates
-- Enable cloud-delivered protection
-- Enable automatic sample submission at `safe` level
+- Enables automatic security intelligence updates
+- Enables cloud-delivered protection
+- Enables automatic sample submission at `safe` level
 
 ### Sample profile
 
@@ -815,32 +815,34 @@ The following configuration profile contains entries for all settings described 
 When you run the `mdatp health` command for the first time, the value for the tag and group ID will be blank. To add tag or group ID to the `mdatp_managed.json` file, follow the below steps:
   
 1. Open the configuration profile from the path `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json`.
-  2. Go down to the bottom of the file, where the `cloudService` block is located.
-  3. Add the required tag or group ID as following example at the end of the closing curly bracket for the `cloudService`.
 
-```JSON
-  },
-  "cloudService": {
+2. Go down to the bottom of the file, where the `cloudService` block is located.
+
+3. Add the required tag or group ID as following example at the end of the closing curly bracket for the `cloudService`.
+
+   ```JSON
+   },
+   "cloudService": {
     "enabled": true,
     "diagnosticLevel": "optional",
     "automaticSampleSubmissionConsent": "safe",
     "automaticDefinitionUpdateEnabled": true,
     "proxy": "http://proxy.server:port/"
-},
-"edr": {
-  "groupIds":"GroupIdExample",
-  "tags": [
+   },
+   "edr": {
+   "groupIds":"GroupIdExample",
+   "tags": [
             {
             "key": "GROUP",
             "value": "Tag"
             }
           ]
       }
-}
-```
+   }
+   ```
 
-  >[!NOTE]
-  >Add the comma after the closing curly bracket at the end of the `cloudService` block. Also, make sure that there are two closing curly brackets after adding Tag or Group ID block (please see the above example). At the moment, the only supported key name for tags is `GROUP`.
+> [!NOTE]
+> Add the comma after the closing curly bracket at the end of the `cloudService` block. Also, make sure that there are two closing curly brackets after adding Tag or Group ID block (please see the above example). At the moment, the only supported key name for tags is `GROUP`.
  
 ## Configuration profile validation
 
