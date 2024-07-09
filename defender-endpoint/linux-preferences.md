@@ -136,7 +136,7 @@ Specifies the degree of parallelism for on-demand scans. This corresponds to the
 
 #### Exclusion merge policy
 
-Specifies the merge policy for exclusions. It can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). This setting can be used to restrict local users from defining their own exclusions.
+Specifies the merge policy for exclusions. It can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). Administrator-defined (admin_only) are exclusions that are configured by Defender for Endpoint policy. This setting can be used to restrict local users from defining their own exclusions.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
@@ -340,7 +340,7 @@ Action to take when coming across a threat of the type specified in the precedin
 
 #### Threat type settings merge policy
 
-Specifies the merge policy for threat type settings. This can be a combination of administrator-defined and user-defined settings (`merge`) or only administrator-defined settings (`admin_only`). This setting can be used to restrict local users from defining their own settings for different threat types.
+Specifies the merge policy for threat type settings. This can be a combination of administrator-defined and user-defined settings (`merge`) or only administrator-defined settings (`admin_only`). Administrator-defined (admin_only) are threat type settings that are configured by Defender for Endpoint policy. This setting can be used to restrict local users from defining their own settings for different threat types.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
