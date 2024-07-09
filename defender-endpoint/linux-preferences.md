@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: dansimp
 author: dansimp
 ms.localizationpriority: medium
-ms.date: 06/18/2024
+ms.date: 07/09/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -40,9 +40,9 @@ This article describes the structure of this profile (including a recommended pr
 
 ## Configuration profile structure
 
-The configuration profile is a .json file that consists of entries identified by a key (which denotes the name of the preference), followed by a value, which depends on the nature of the preference. Values can be simple, such as a numerical value, or complex, such as a nested list of preferences.
+The configuration profile is a `.json` file that consists of entries identified by a key (which denotes the name of the preference), followed by a value, which depends on the nature of the preference. Values can be simple, such as a numerical value, or complex, such as a nested list of preferences.
 
-Typically, you would use a configuration management tool to push a file with the name ```mdatp_managed.json``` at the location ```/etc/opt/microsoft/mdatp/managed/```.
+Typically, you would use a configuration management tool to push a file with the name `mdatp_managed.json` at the location `/etc/opt/microsoft/mdatp/managed/`.
 
 The top level of the configuration profile includes product-wide preferences and entries for subareas of the product, which are explained in more detail in the next sections.
 
@@ -76,7 +76,7 @@ Specifies the enforcement preference of antivirus engine. There are three values
 |**Possible values**|`real_time`<br>`on_demand`<br>`passive` (default)|Not configured<br>Realtime<br>OnDemand<br>Passive (Default)|
 
 > [!NOTE]
-> Available in Defender for Endpoint version 101.10.72 or higher. Default is changed from real_time to passive for Endpoint version 101.23062.0001 or higher.
+> Available in Defender for Endpoint version `101.10.72` or later. Default is changed from `real_time` to `passive` in Defender for Endpoint version `101.23062.0001` or later.
 > It is recommended to also use [scheduled scans](/defender-endpoint/linux-schedule-scan-mde) as per requirement.
 
 #### Enable/disable behavior-monitoring 
@@ -90,8 +90,8 @@ Determines whether behavior monitoring and blocking capability is enabled on the
 |**Possible values**|`disabled` (default) <p> `enabled`|Not configured<br>Disabled (Default)<br>Enabled|
 
 > [!NOTE]
-> Available in Defender for Endpoint version 101.45.00 or higher.
-> This feature is applicable only when Real-Time Protection feature is enabled.
+> Available in Defender for Endpoint version `101.45.00` or later.
+> This feature is applicable only when real-time protection is enabled.
 
 #### Run a scan after definitions are updated
 
@@ -104,7 +104,7 @@ Specifies whether to start a process scan after new security intelligence update
 |**Possible values**|`true` (default) <p> `false`|Not configured<br>Disabled<br>Enabled (Default)|
 
 > [!NOTE]
-> Available in Defender for Endpoint version 101.45.00 or higher.
+> Available in Defender for Endpoint version `101.45.00` or later.
 > This feature only works when the enforcement level is set to `real-time`.
 
 #### Scan archives (on-demand antivirus scans only)
@@ -118,8 +118,8 @@ Specifies whether to scan archives during on-demand antivirus scans.
 |**Possible values**|`true` (default) <p>`false`|Not configured<br>Disabled<br>Enabled (Default)|
 
 > [!NOTE]
-> Available in Microsoft Defender for Endpoint version 101.45.00 or higher.
-> Archive files are never scanned during real time protection. When the files in an archive are extracted, they are scanned. The *scanArchives* option can be used to force the scan of archives only during on-demand scan.
+> Available in Microsoft Defender for Endpoint version `101.45.00` or later.
+> Archive files are never scanned during real-time protection. When the files in an archive are extracted, they are scanned. The *scanArchives* option can be used to force the scan of archives only during on-demand scan.
 
 #### Degree of parallelism for on-demand scans
 
@@ -132,7 +132,7 @@ Specifies the degree of parallelism for on-demand scans. This corresponds to the
 |**Possible values**|2 (default). Allowed values are integers between 1 and 64.|Not Configured (Default toggle off defaults to 2)<br>Configured (toggle on) and integer between 1 and 64.|
 
 > [!NOTE]
-> Available in Microsoft Defender for Endpoint version 101.45.00 or higher.
+> Available in Microsoft Defender for Endpoint version `101.45.00` or later.
 
 #### Exclusion merge policy
 
@@ -145,7 +145,7 @@ Specifies the merge policy for exclusions. It can be a combination of administra
 |**Possible values**|`merge` (default) <p>`admin_only`|Not configured<br>merge (Default)<br>admin_only|
 
 > [!NOTE]
-> Available in Defender for Endpoint version 100.83.73 or higher.
+> Available in Defender for Endpoint version `100.83.73` or later.
 
 #### Scan exclusions
 
@@ -229,11 +229,11 @@ Specifies the behavior of RTP on mount point marked as noexec. There are two val
 |**Possible values**|`unmute` (default) <p>`mute`|Not configured <br>unmute (Default) <br>mute|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.85.27 or higher.
+> Available in Defender for Endpoint version `101.85.27` or later.
 
 #### Unmonitor Filesystems
 
-Configure filesystems to be unmonitored/excluded from Real Time Protection(RTP). The filesystems configured are validated against Microsoft Defender's list of permitted filesystems. Only post successful validation, will the filesystem be allowed to be unmonitored. These configured unmonitored filesystems will still be scanned by Quick, Full, and custom scans.
+Configure filesystems to be unmonitored/excluded from real-time protection (RTP). The filesystems configured are validated against Microsoft Defender's list of permitted filesystems. Filesystems can only be monitored after successful validation. These configured unmonitored filesystems are still scanned by Quick, Full, and custom scans in Microsoft Defender Antivirus.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
@@ -280,7 +280,7 @@ Enables or disables file hash computation feature. When this feature is enabled,
 |**Possible values**|`false` (default) <p>`true`|Not configured<br>Disabled (default)<br>Enabled|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.85.27 or higher.
+> Available in Defender for Endpoint version `101.85.27` or later.
 
 #### Allowed threats
 
@@ -302,7 +302,7 @@ Restricts the actions that the local user of a device can take when threats are 
 |**Possible values**|`allow` (restricts users from allowing threats) <p>`restore` (restricts users from restoring threats from the quarantine)|allow (restricts users from allowing threats) <p>restore (restricts users from restoring threats from the quarantine)|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 100.83.73 or higher.
+> Available in Defender for Endpoint version `100.83.73` or later.
 
 #### Threat type settings
 
@@ -349,7 +349,7 @@ Specifies the merge policy for threat type settings. This can be a combination o
 |**Possible values**|merge (default) <p> admin_only|Not configured<br>merge (Default)<br>admin_only|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 100.83.73 or higher.
+> Available in Defender for Endpoint version `100.83.73` or later.
 
 #### Antivirus scan history retention (in days)
 
@@ -362,7 +362,7 @@ Specify the number of days that results are retained in the scan history on the 
 |**Possible values**|90 (default). Allowed values are from 1 day to 180 days.|Not configured (toggle off - 90-day default)<br>Configured (toggle on) and allowed value 1 to 180 days.|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.04.76 or higher.
+> Available in Defender for Endpoint version `101.04.76` or later.
 
 #### Maximum number of items in the antivirus scan history
 
@@ -375,7 +375,7 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 |**Possible values**|10000 (default). Allowed values are from 5000 items to 15000 items.|Not configured (toggle off - 10000 default)<br>Configured (toggle on) and allowed value from 5000 to 15000 items.|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.04.76 or higher.
+> Available in Defender for Endpoint version `101.04.76` or later.
 
 #### Advanced scan options
 
