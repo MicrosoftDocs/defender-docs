@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 07/02/2024
+ms.date: 07/09/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -36,6 +36,8 @@ You can also get product updates and important notifications through the [messag
 - (Preview) **Critical assets** are now part of the tags in the incident and alert queues. When a critical asset is involved in an incident or alert, the critical asset tag is displayed in the queues. For more information, see [incident tags](manage-incidents.md#add-incident-tags) and the [alert queue](investigate-alerts.md).
 
 - (Preview) Incidents are now arranged according to the latest automatic or manual updates made to an incident. Read about the **last update time** column in the [incident queue](incident-queue.md#incident-queue).
+
+- (GA) Learning hub resources, including Microsoft Defender XDR Ninja training, learning paths, and training modules have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject. 
 
 ## June 2024
 
