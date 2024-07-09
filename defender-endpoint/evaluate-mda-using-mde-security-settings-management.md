@@ -136,7 +136,7 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 1. Sign in to [Microsoft Defender XDR](https://sip.security.microsoft.com/).
 1. Go to **Endpoints > Configuration management > Endpoint security policies > Windows policies > Create new policy**.
 1. Select **Windows 10, Windows 11, and Windows Server** from the **Select Platform** drop-down list.
-1. Select **Attack Surface Reduction rules** from the **Select Template** drop-down list.
+1. Select **Attack Surface Reduction Rules** from the **Select Template** drop-down list.
 1. Select **Create policy**.
 1. On the **Basics** page, enter a name and description for the profile; then, choose **Next**.
 1. On the **Configuration settings** page, expand the groups of settings and configure those settings you want to manage with this profile.
