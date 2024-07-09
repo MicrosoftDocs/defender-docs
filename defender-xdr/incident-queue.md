@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 06/05/2024
+ms.date: 07/02/2024
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -42,9 +42,12 @@ Select **Most recent incidents and alerts** to toggle the expansion of the top s
 
 :::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents2.png" alt-text="Screenshot of 24-hour incident graph." lightbox="/defender/media/incidents-queue/incidents-ss-incidents2.png":::
 
-Below that, the incident queue in the Microsoft Defender portal displays incidents seen in the last six months. The most recent incident is at the top of the list so you can see it first. You can choose a different time frame by selecting it from the drop-down at the top.
+Below that, the incident queue in the Microsoft Defender portal displays incidents seen in the last six months. You can choose a different time frame by selecting it from the drop-down at the top. Incidents are arranged according to the latest automatic or manual updates made to an incident. You can arrange the incidents by **last update time** column to view incidents according to the latest automatic or manual updates made.
 
-The incident queue has customizable columns (select **Customize columns**) that give you visibility into different characteristics of the incident or the impacted entities. This filtering helps you make an informed decision regarding the prioritization of incidents for analysis.
+The incident queue has customizable columns that give you visibility into different characteristics of the incident or the impacted entities. This filtering helps you make an informed decision regarding the prioritization of incidents for analysis. Select **Customize columns** to perform the following customizations based on your preferred view:
+
+- Check/uncheck the columns you want to see in the incident queue.
+- Arrange the order of the columns by dragging them.
 
 :::image type="content" source="/defender/media/incidents-queue/incidents-ss-incidents-3.png" alt-text="Screenshot of Incident page filter and column controls." lightbox="/defender/media/incidents-queue/incidents-ss-incidents-3.png":::
 
