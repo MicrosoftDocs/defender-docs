@@ -100,7 +100,7 @@ All our updates contain
 
 ### June-2024 (Platform: 4.18.24060.xxxx | Engine: 1.1.24060.5)
 
-- Security intelligence update version: **1.415.13.0**
+- Security intelligence update version: **1.415.1.0**
 - Release date: **July 9, 2024** (Engine) / **TBD** (Platform)
 - Platform: **4.18.24060.xxxx**
 - Engine: **1.1.24060.5**
