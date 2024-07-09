@@ -562,7 +562,7 @@ Determines whether file modify permissions events (`chmod`) are monitored.
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
 |**Comments**|Available in Defender for Endpoint version `101.23062.0010` or later.|
-`
+
 ##### Configure monitoring of file modify ownership events
 
 Determines whether file modify ownership events (chown) are monitored.
