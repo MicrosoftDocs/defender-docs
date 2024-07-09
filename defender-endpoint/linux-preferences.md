@@ -856,20 +856,20 @@ If the JSON is well-formed, the above command outputs it back to the Terminal an
 
 To verify that your /etc/opt/microsoft/mdatp/managed/mdatp_managed.json is working properly, you should see "[managed]" next to these settings:
 
-- cloud_enabled
-- cloud_automatic_sample_submission_consent
-- passive_mode_enabled
-- real_time_protection_enabled
-- automatic_definition_update_enabled
+- `cloud_enabled`
+- `cloud_automatic_sample_submission_consent`
+- `passive_mode_enabled`
+- `real_time_protection_enabled`
+- `automatic_definition_update_enabled`
 
 > [!NOTE]
-> No restart of mdatp daemon is required for changes to _most_ configurations in mdatp_managed.json to take effect.
+> No restart of mdatp daemon is required for changes to _most_ configurations in `mdatp_managed.json` to take effect.
   **Exception:** The following configurations require a daemon restart to take effect:
-> - cloud-diagnostic
-> - log-rotation-parameters
+> - `cloud-diagnostic`
+> - `log-rotation-parameters`
 
 ## Configuration profile deployment
 
-Once you've built the configuration profile for your enterprise, you can deploy it through the management tool that your enterprise is using. Defender for Endpoint on Linux reads the managed configuration from the */etc/opt/microsoft/mdatp/managed/mdatp_managed.json* file.
+Once you've built the configuration profile for your enterprise, you can deploy it through the management tool that your enterprise is using. Defender for Endpoint on Linux reads the managed configuration from the `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json` file.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
