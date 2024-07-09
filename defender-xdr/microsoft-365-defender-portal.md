@@ -19,7 +19,7 @@ ms.custom:
   - admindeeplinkDEFENDER
   - intro-overview
 ms.topic: conceptual
-ms.date: 05/14/2024
+ms.date: 07/09/2024
 ---
 
 # Microsoft Defender portal
@@ -47,14 +47,13 @@ The Microsoft Defender portal helps security teams investigate and respond to at
 - Actions & submissions
 - Threat analytics
 - Secure score
-- Learning hub
 - Trials
 - Partner catalog
 
 The Microsoft Defender portal emphasizes *unity, clarity, and common goals*.
 
 > [!NOTE]
-> In the Microsoft Defender portal, customers see only the security features their subscription includes. For example, if you have Defender for Office 365 but not Defender for Endpoint, you see features and capabilities for Defender for Office 365, but not device protection. 
+> In the Microsoft Defender portal, customers see only the security features their subscription includes. For example, if you have Defender for Office 365 but not Defender for Endpoint, you see features and capabilities for Defender for Office 365, but not for device protection. 
 
 ## Incident and alert investigations
 
@@ -110,7 +109,6 @@ For Microsoft Sentinel, after you connect Microsoft Sentinel to the Defender por
 
 - [Roles and permissions in Microsoft Sentinel | Microsoft Learn](/azure/sentinel/roles)
 - [Manage access to Microsoft Sentinel data by resource | Microsoft Learn](/azure/sentinel/resource-context-rbac)
-
 
 ### Integrated reports
 
