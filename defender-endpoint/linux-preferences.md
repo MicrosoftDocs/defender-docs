@@ -537,7 +537,7 @@ Determines whether module load events (file open events on shared libraries) are
 |**Key**|moduleLoad|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.68.80 or later.||
+|**Comments**|Available in Defender for Endpoint version `101.68.80` or later.||
 
 #### Supplementary sensor configurations
 
@@ -561,8 +561,8 @@ Determines whether file modify permissions events (`chmod`) are monitored.
 |**Key**|enableFilePermissionEvents|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or later.|
-
+|**Comments**|Available in Defender for Endpoint version `101.23062.0010` or later.|
+`
 ##### Configure monitoring of file modify ownership events
 
 Determines whether file modify ownership events (chown) are monitored.
@@ -575,7 +575,7 @@ Determines whether file modify ownership events (chown) are monitored.
 |**Key**|enableFileOwnershipEvents|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or later.|
+|**Comments**|Available in Defender for Endpoint version `101.23062.0010` or later.|
 
 ##### Configure monitoring of raw socket events
 
@@ -590,7 +590,7 @@ Determines whether network socket events involving creation of raw sockets / pac
 |**Key**|enableRawSocketEvent|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or later.|
+|**Comments**|Available in Defender for Endpoint version `101.23062.0010` or later.|
 
 ##### Configure monitoring of boot loader events
 
