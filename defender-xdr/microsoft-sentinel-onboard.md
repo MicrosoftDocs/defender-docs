@@ -29,8 +29,10 @@ ms.date: 07/10/2024
 
 Microsoft Sentinel is generally available within the Microsoft unified security operations platform in the Microsoft Defender portal. When you onboard Microsoft Sentinel to the Defender portal, you unify capabilities with Microsoft Defender XDR like incident management and advanced hunting. Reduce tool switching and build a more context-focused investigation that expedites incident response and stops breaches faster. For more information, see:
 
+- Blog post: [General availability of the Microsoft unified security operations platform](https://aka.ms/unified-soc-announcement)
 - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
-- [Blog post announcement for the general availability of Microsoft Sentinel within the unified security operations platform](https://aka.ms/unified-soc-announcement)
+- [Microsoft Defender XDR integration with Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
+
 
 ## Prerequisites
 
