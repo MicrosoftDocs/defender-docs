@@ -41,4 +41,6 @@
     - name: Manage
       items:
       - name: Manage sites
-        href: manage-sites.md           
+        href: manage-sites.md  
+      - name: Manage your license
+        href: manage-license.md           
