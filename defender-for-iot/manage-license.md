@@ -11,9 +11,9 @@ ms.topic: how-to
 
 # Manage your license
 
-After using a trial license, and deciding to use Microsoft Defender for IoT premanantly, you must purchase a full license. To purchase the correct license you need to know to total number of devices within your network so that you can choose the correct sized and priced license for your network.
+After using a trial license, and deciding to use Microsoft Defender for IoT permanently, you must purchase a full license. To purchase the correct license, you need to know to total number of devices within your network so that you can choose the correct sized and priced license for your network.
 
-This article shows how to make changes to your license, including the correct steps to choice the best size license to purchase and upgrading from a trial to permanant license.
+This article shows how to make changes to your license, including the correct steps to choice the best size license to purchase and upgrading from a trial to permanent license.
 
 ## Calculate number of devices
 
@@ -33,9 +33,9 @@ Purchase the license for your network from the Microsoft 365 admin center, by en
 
 1. Search for Defender for IoT.
 
-1. Choose the license appropriate for the size of your site. There are five different sized licenses ranging from Extra-large for up to 5000 devices, to extra-small covering a maximum of 100 devices.
+1. Choose the license appropriate for the size of your site. There are five different sized licenses ranging from Extra-large for up to 5,000 devices, to extra-small covering a maximum of 100 devices.
 
-    Make sure to select the number of licenses you want to purchase, based on the number of sites you're monitoring. You might need to select licenses of different sizes if the number of devices at each site is different. [Question: Do we document a situation where a company has eg 12000 devices, for one site. How should they be advised to purchase?]
+    Make sure to select the number of licenses you want to purchase, based on the number of sites you're monitoring. You might need to select licenses of different sizes if the number of devices at each site is different. [Question: Do we document a situation where a company has, for example, 12,000 devices, for one site. How should they be advised to purchase?]
 
 1. Complete the purchasing instructions.
 
