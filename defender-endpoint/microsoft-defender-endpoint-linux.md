@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender for Endpoint on Linux
-ms.reviewer: gopkr, pahuijbr
+ms.reviewer: gopkr, pahuijbr, megphapriya
 description: Describes how to install and use Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
 ms.author: dansimp
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 06/07/2024
+ms.date: 07/05/2024
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -89,6 +89,8 @@ In general you need to take the following steps:
   - Ubuntu 18.04 LTS
   - Ubuntu 20.04 LTS
   - Ubuntu 22.04 LTS
+  - Ubuntu 24.04 LTS
+    
   - Debian 9 - 12
   - SUSE Linux Enterprise Server 12 or higher
   - SUSE Linux Enterprise Server 15 or higher
@@ -97,7 +99,8 @@ In general you need to take the following steps:
   - Oracle Linux 9.x
   - Amazon Linux 2
   - Amazon Linux 2023
-  - Fedora 33 or higher
+  - Fedora 33-38
+    
   - Rocky 8.7 and higher
   - Alma 8.4 and higher
   - Mariner 2
