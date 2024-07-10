@@ -47,7 +47,7 @@ Review the top **How protected are your sites** section to get the following inf
 
 ## Review the site list
 
-Review the site specific data in the sites list table. Selecting an individual site opens the site specific pane which shows details and data about that site.
+Review the site specific data in the sites list table. When you select an individual site, the site specific pane open, with details and data about that site.
 
 Note that the data displayed in this table is the total aggregated data for the entire environment, and might include data for sites that you don't have access to. When you drill down into device data, the **Device Inventory** page only displays data for devices you can access.
 
