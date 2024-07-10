@@ -50,8 +50,8 @@ Microsoft regularly publishes software updates to improve performance, security,
 > health_issues                               : ["missing license"]
 > licensed                                    : false
 > ```
-Generally available Microsoft Defender for Endpoint capabilities are equivalent regardless of which update channel is used for deployment (Beta (Insider), Preview (External), Current (Production)).
 
+Defender for Endpoint capabilities that are generally available are equivalent, regardless of which update channel is used for deployment (Beta (Insider), Preview (External), Current (Production)).
 
 To update Defender for Endpoint on Linux manually, run one of the following commands:
 
