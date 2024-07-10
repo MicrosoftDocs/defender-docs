@@ -42,7 +42,7 @@ By default, investigation details from yesterday and today are shown, but you ca
 
 The following information shown on the **Investigations** page. You can sort the entries by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
 
-- **ID**: The unique ID of the investigation. Select :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Open in new window** to open the details of the investigation as described in the [View investigation details](#view-investigation-details-from-air-in-defender-for-office-365) section.
+- **ID**: The unique ID of the investigation. Select :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Open in new window** to open the details of the investigation as described in the [View investigation details](#view-investigation-details-from-air-in-defender-for-office-365-plan-2) section.
 - **Status**: The available status values are described in the [Investigation Status values](#investigation-status-values) section.
 - **Detection Source**: This value is always **Office365**.
 - **Investigation**
@@ -91,7 +91,7 @@ The **Status** values that are used in investigations are described in the follo
 
 - **Failed**: At least one investigation analyzer ran into a problem where it couldn't complete properly.
 
-  If an investigation fails after remediation actions were approved, the remediation actions might still have succeeded. For more information, [view the investigation details](#view-investigation-details-from-air-in-defender-for-office-365).
+  If an investigation fails after remediation actions were approved, the remediation actions might still have succeeded. For more information, [view the investigation details](#view-investigation-details-from-air-in-defender-for-office-365-plan-2).
 
 - **No Threats Found**: The investigation finished and no threats were identified (compromised user accounts, email messages, URLs, or files).
 
@@ -112,7 +112,7 @@ The **Status** values that are used in investigations are described in the follo
 
 - **Pending Action**: The investigation found a threat (for example, a malicious email, a malicious URL, or a risky mailbox setting), and an action to remediate the threat is [awaiting approval](air-review-approve-pending-completed-actions.md).
 
-  The list of pending actions can increase as an investigation runs. [View the investigation details](#view-investigation-details-from-air-in-defender-for-office-365) to see if other items are still pending completion.
+  The list of pending actions can increase as an investigation runs. [View the investigation details](#view-investigation-details-from-air-in-defender-for-office-365-plan-2) to see if other items are still pending completion.
 
 - **Queued By Throttling**: An investigation is being held in a queue. When other investigations complete, queued investigations begin. Throttling helps avoid poor service performance.
 
@@ -120,7 +120,7 @@ The **Status** values that are used in investigations are described in the follo
 
 - **Remediated**: The investigation finished and all remediation actions were approved (noted as fully remediated).
 
-  Approved remediation actions can have errors that prevent the actions from being taken. Regardless of whether remediation actions are successfully completed, the investigation status doesn't change. For more information, [view the investigation details](#view-investigation-details-from-air-in-defender-for-office-365).
+  Approved remediation actions can have errors that prevent the actions from being taken. Regardless of whether remediation actions are successfully completed, the investigation status doesn't change. For more information, [view the investigation details](#view-investigation-details-from-air-in-defender-for-office-365-plan-2).
 
 - **Running**: The investigation process is underway. This status value also occurs when [pending actions](air-review-approve-pending-completed-actions.md#approve-or-reject-pending-actions-from-the-investigations-page-in-defender-for-office-365) are approved.
 
@@ -136,7 +136,7 @@ The **Status** values that are used in investigations are described in the follo
 
   You can [start an investigation from Threat Explorer (Explorer)](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
-## View investigation details from AIR in Defender for Office 365
+## View investigation details from AIR in Defender for Office 365 Plan 2
 
 When you select :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Open in new window** in the **ID** column of an entry on the **Investigations** page at <https://security.microsoft.com/airinvestigation>, a new page opens with the investigation details.
 
@@ -258,30 +258,31 @@ Clicking anywhere else in the row other than the check box next to the first col
 #### Manage alert
 
 :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Manage alert**: Opens a **Manage alert** flyout where you can view and modify details about the incident. You can modify the following alert properties:
-    - **Status**: Select one of the following values:
-      - **New**
-      - **In progress**
-      - **Resolved**
-    - **Classification**: Select one of the following values:
-      - **Not set**
-      - **True positive** section:
-        - **Multi staged attack**
-        - **Malware**
-        - **Malicious user activity**
-        - **Unwanted software**
-        - **Phishing**
-        - **Compromised account**
-        - **Other**
-      - **Informational, expected activity** section:
-        - **Security testing**
-        - **Confirmed activity**
-        - **Line of business application**
-        - **Other**
-      - **False positive** section:
-        - **Not malicious**
-        - **Not enough data to validate**
-        - **Other**
-    - **Comment**: Enter an optional comment.
+
+- **Status**: Select one of the following values:
+  - **New**
+  - **In progress**
+  - **Resolved**
+- **Classification**: Select one of the following values:
+  - **Not set**
+  - **True positive** section:
+    - **Multi staged attack**
+    - **Malware**
+    - **Malicious user activity**
+    - **Unwanted software**
+    - **Phishing**
+    - **Compromised account**
+    - **Other**
+  - **Informational, expected activity** section:
+    - **Security testing**
+    - **Confirmed activity**
+    - **Line of business application**
+    - **Other**
+  - **False positive** section:
+    - **Not malicious**
+    - **Not enough data to validate**
+    - **Other**
+- **Comment**: Enter an optional comment.
 
     When you're finished in the **Manage alert** flyout, select **Save**
 
@@ -576,7 +577,7 @@ Certain kinds of alerts trigger automated investigation in Microsoft 365. To lea
 1. On the **Action center** page, use the **Pending** or **History** tabs to find the action.
 1. Select an action from the table by selecting the link in the **Investigation ID** column.
 
-The [investigation details page](#view-investigation-details-from-air-in-defender-for-office-365) opens.
+The [investigation details page](#view-investigation-details-from-air-in-defender-for-office-365-plan-2) opens.
 
 ## Keep the following points in mind
 

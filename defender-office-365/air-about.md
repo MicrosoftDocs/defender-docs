@@ -67,7 +67,7 @@ An alert is triggered, and a security playbook starts an automated investigation
 During and after each automated investigation, the SecOps team can do the following tasks:
 
 - [View details about an alert related to an investigation](air-view-investigation-results.md#view-details-about-an-alert-related-to-an-investigation)
-- [View the results details of an investigation](air-view-investigation-results.md#view-investigation-details-in-the-defender-portal-from-air-in-defender-for-office-365)
+- [View the results details of an investigation](air-view-investigation-results.md#view-investigation-details-from-air-in-defender-for-office-365-plan-2)
 - [Review and approve actions as a result of an investigation](air-review-approve-pending-completed-actions.md)
 
 ## Required permissions and licensing for AIR
@@ -96,6 +96,6 @@ AIR contains data for users with Defender for Office 365 licenses assigned to th
 ## Next steps
 
 - [AIR examples](air-examples.md)
-- [See details and results of an automated investigation](air-view-investigation-results.md#view-investigation-details-in-the-defender-portal-from-air-in-defender-for-office-365)
+- [See details and results of an automated investigation](air-view-investigation-results.md#view-investigation-details-from-air-in-defender-for-office-365-plan-2)
 - [Review and approve pending actions](air-remediation-actions.md)
 - [View pending or completed remediation actions](air-review-approve-pending-completed-actions.md)
