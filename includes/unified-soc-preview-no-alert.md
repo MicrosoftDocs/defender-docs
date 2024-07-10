@@ -10,4 +10,4 @@ ms.topic: include
 ms.custom: "include file"
 ---
 
-Microsoft Sentinel is now generally available within the unified security operations platform in the Microsoft Defender portal. For more information, see [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690).
+Microsoft Sentinel is now generally available within the Microsoft unified security operations platform in the Microsoft Defender portal. For more information, see [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690).
