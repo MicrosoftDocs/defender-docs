@@ -34,13 +34,22 @@ ms.date: 05/01/2024
 Microsoft regularly publishes software updates to improve performance, security, and to deliver new features.
 
 > [!WARNING]
-> Each version of Defender for Endpoint on Linux is set to expire automatically after 9 months. While expired versions continue to receive security intelligence updates, install the latest version to get all available fixes and enhancements. <br>
->To check the expiration date, run the following command:
+> Each version of Defender for Endpoint on Linux is set to expire automatically after 9 months. While expired versions continue to receive security intelligence updates, install the latest version to get all available fixes and enhancements.
+> To check the expiration date, run the following command:
 > ```bash
 > mdatp health --field product_expiration
 > ```
-
-
+> Expired clients will report a health issue and warning message when you run the following command:
+> ```bash
+> mdatp health
+> ```
+> Indicators of an expired client will include the message "**ATTENTION: No license found. Contact your administrator for help**." with the following attributes:
+> ```bash
+> ATTENTION: No license found. Contact your administrator for help.
+> healthy                                     : false
+> health_issues                               : ["missing license"]
+> licensed                                    : false
+> ```
 Generally available Microsoft Defender for Endpoint capabilities are equivalent regardless update channel used for a deployment (Beta (Insider), Preview (External), Current (Production)).
 
 
