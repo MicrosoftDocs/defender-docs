@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/01/2024
+ms.date: 07/10/2024
 ---
 
 # Deploy updates for Microsoft Defender for Endpoint on Linux
@@ -34,17 +34,26 @@ ms.date: 05/01/2024
 Microsoft regularly publishes software updates to improve performance, security, and to deliver new features.
 
 > [!WARNING]
-> Each version of Defender for Endpoint on Linux is set to expire automatically after 9 months. While expired versions continue to receive security intelligence updates, install the latest version to get all available fixes and enhancements. <br>
->To check the expiration date, run the following command:
+> Each version of Defender for Endpoint on Linux is set to expire automatically after 9 months. While expired versions continue to receive security intelligence updates, install the latest version to get all available fixes and enhancements.
+> To check the expiration date, run the following command:
 > ```bash
 > mdatp health --field product_expiration
 > ```
+> Expired clients report a health issue and warning message when you run the following command:
+> ```bash
+> mdatp health
+> ```
+> Indicators of an expired client include the message, "**ATTENTION: No license found. Contact your administrator for help**." with the following attributes:
+> ```bash
+> ATTENTION: No license found. Contact your administrator for help.
+> healthy                                     : false
+> health_issues                               : ["missing license"]
+> licensed                                    : false
+> ```
 
+Defender for Endpoint capabilities that are generally available are equivalent, regardless of which update channel is used for deployment (Beta (Insider), Preview (External), Current (Production)).
 
-Generally available Microsoft Defender for Endpoint capabilities are equivalent regardless update channel used for a deployment (Beta (Insider), Preview (External), Current (Production)).
-
-
-To update Defender for Endpoint on Linux manually, execute one of the following commands:
+To update Defender for Endpoint on Linux manually, run one of the following commands:
 
 ## RHEL and variants (CentOS and Oracle Linux)
 
@@ -65,7 +74,8 @@ sudo apt-get install --only-upgrade mdatp
 ```
 
 > [!IMPORTANT]
-> When Defender for Cloud is provisioning the Microsoft Defender for Endpoint agent to Linux servers, it will keep the client updated automatically.
+> When Defender for Cloud is provisioning the Microsoft Defender for Endpoint agent to Linux servers, it keeps the client updated automatically.
 
 To schedule an update of Microsoft Defender for Endpoint on Linux, see [Schedule an update of the Microsoft Defender for Endpoint (Linux)](linux-update-mde-linux.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
