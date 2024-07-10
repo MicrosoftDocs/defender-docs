@@ -33,7 +33,7 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) The **Microsoft unified security operations platform** in the Microsoft Defender portal is generally available. This release brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, and Microsoft Copilot for Security in Microsoft Defender. For more information, see the following resources:
 
-  - [Blog post announcement for the general availability of the  Microsoft unified security operations platform](https://aka.ms/unified-soc-announcement)
+  - Blog post: [General availability of the Microsoft unified security operations platform](https://aka.ms/unified-soc-announcement)
   - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
   - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
   - [Microsoft Copilot for Security in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)
