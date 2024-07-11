@@ -14,7 +14,7 @@ search.appverid:
 ms.collection:
 - m365-security
 - tier2
-ms.date: 06/03/2024
+ms.date: 07/10/2024
 description: See examples for how to start automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2.
 ms.custom:
 - air

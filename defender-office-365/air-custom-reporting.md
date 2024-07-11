@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 description: Learn how to integrate automated investigation and response with a custom or third-party reporting solution.
-ms.date: 06/09/2023
+ms.date: 07/10/2023
 ms.custom:
 - air
 ms.service: defender-office-365

@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 description: "Learn about calculated and recommended remediation actions in automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2."
-ms.date: 06/09/2024
+ms.date: 07/10/2024
 ms.custom: 
 - air
 ms.service: defender-office-365

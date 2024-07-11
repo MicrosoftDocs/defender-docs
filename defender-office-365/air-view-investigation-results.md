@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 description: Learn about the information that's available from automated investigation and response (AIR) in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/04/2024
+ms.date: 07/10/2024
 ms.service: defender-office-365
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
@@ -32,7 +32,28 @@ In Microsoft 365 organizations with [Microsoft Defender for Office 365 Plan 2](m
 
 ## What do you need to know before you begin?
 
-To see the permissions and licensing requirement for AIR, see [Required permissions and licensing for AIR](air-about.md#required-permissions-and-licensing-for-air).
+- To see the permissions and licensing requirement for AIR, see [Required permissions and licensing for AIR](air-about.md#required-permissions-and-licensing-for-air).
+
+- Email counts are calculated at the time of the investigation. Some counts are recalculated when you open investigation flyouts (based on the underlying query).
+
+  The following email count values are calculated at the time of investigation and don't change:
+
+  - Email clusters on the **Email** tab.
+  - The email quantity value shown on the email clusters flyout.
+
+  The following email count values reflect email messages that were received after the initial analysis of the investigation:
+  
+  - The email count shown at the bottom of the **Email** tab of the email clusters flyout.
+  - The email count shown in Explorer (Threat Explorer)
+
+    For example, an email cluster that shows an original quantity of 10 messages shows an email list total of 15 if five more messages arrive between the investigation analysis phase and when an admin reviews the investigation. Likewise, old investigations might show higher message counts than Threat Explorer queries, because data in Microsoft Defender for Office 365 Plan 2 expires seven days after the end of a trial and 30 days later for paid licenses.
+
+    Historical and current email message counts are shown in different views to give the following information:
+
+    - The email effect at the time of investigation.
+    - The current email effect up to when the remediation is run.
+
+- For email, you might see a volume anomaly threat as part of the investigation. A _volume anomaly_ indicates a spike in similar email messages around the investigation event time compared to earlier times. A spike in email traffic together with similarity in certain message properties (for example, subject, message body, sender domain, and sender IP) typically indicates the beginning of email attacks. But bulk email, spam, and legitimate email campaigns commonly share these same message properties.
 
 ## Investigations from AIR in Defender for Office 365 Plan 2
 
@@ -132,7 +153,7 @@ The **Status** values that are used in investigations are described in the follo
 
   If an investigation halts before actions were taken, try using [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md) to find and address threats.
 
-- **Terminated By Throttling**: An investigation automatically stop after it's been queued for too long, it stops.
+- **Terminated By Throttling**: An investigation automatically stops after it's been queued for too long, it stops.
 
   You can [start an investigation from Threat Explorer (Explorer)](air-examples.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer).
 
@@ -171,7 +192,7 @@ On the **Investigation graph** tab, the **Investigation summary** pane contains 
   - **Total pending time**: This value is present only for investigations that had pending actions awaiting approval that were eventually approved or expired.
 - **Investigation details** section:
   - **Status**: The status of the investigation. If the value is **No threats found**, no other values are present in the section.
-  - **Alert severity**: The value **Low**, **Medium** or **High**.
+  - **Alert severity**: The value **Low**, **Medium, or **High**.
   - **Category**: The alert category.
   - **Detection source**: Typically, the value is **MDO**.
 
@@ -191,7 +212,7 @@ The graph pane contains a visual representation of the elements and activities i
 
 - **Evidence**: Shows the number of entities found. Select :::image type="icon" source="media/mdo-investigations-evidence-icon.png" border="false"::: to go to the **Evidence** tab for more information.
 
-- **Pending approval**: Shows how long the system has been waiting for an admin to do the suggested manual remediation action (for example, soft delete an email message). Select :::image type="icon" source="media/mdo-investigations-pending-approval-icon.png" border="false"::: to go to the **Pending actions** tab tab for more information.
+- **Pending approval**: Shows how long the system has been waiting for an admin to do the suggested manual remediation action (for example, soft delete an email message). Select :::image type="icon" source="media/mdo-investigations-pending-approval-icon.png" border="false"::: to go to the **Pending actions** tab for more information.
 
   After an admin does the action, this item is replaced by **Waited for user approval**.
 
@@ -243,64 +264,30 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Determination**
 - **Assigned to**<sup>*</sup>
 
-Clicking on the **Alert name** value in a row takes you to the details page for the alert. This result is the same as going to the **Alerts** page at <https://security.microsoft.com/alerts>, and clicking on the **Alert name** value there. For more information, see [Analyze an alert](/defender-xdr/investigate-alerts#analyze-an-alert).
+Clicking on the **Alert name** value in a row takes you to the details page for the alert. This details page is the same as clicking on the **Alert name** value in the corresponding entry on the **Alerts** page at <https://security.microsoft.com/alerts>. For more information, see [Analyze an alert](/defender-xdr/investigate-alerts#analyze-an-alert).
 
-Clicking anywhere else in the row other than the check box next to the first column opens a details flyout that contains the following information:
+Clicking anywhere else in the row other than the **Alert name** value or the check box next to the first column opens a details flyout for the alert. This details flyout is the same as clicking anywhere in the row other than the **Alert name** value or the check box next to the first column on the corresponding entry on the **Alerts** page at <https://security.microsoft.com/alerts>.
 
-- The **Alert name** value is the flyout title. The **Severity** and **Status** values are the subtitle.
+The actions that are available at the top of the alert details flyout depend on the nature of the alert contain the same actions that are available in the details flyout of the corresponding alert on the **Alerts** page at <https://security.microsoft.com/alerts>. For example, alerts named **Email messages containing malicious URL removed after delivery​** have the following actions available in the alert details flyout:
 
-- The available actions at the top of the flyout are described in the following subsections.
+- :::image type="icon" source="media/m365-cc-sc-open-url-page-icon.png" border="false"::: **Open alert page**: Opens the same details page as when you click on the **Alert name** value of an entry on the **Alerts** page at <https://security.microsoft.com/alerts>. For more information, see [Analyze an alert](/defender-xdr/investigate-alerts#analyze-an-alert).
 
-#### Open alert page
+- :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Manage alert**: Opens a **Manage alert** flyout where you can view and modify details about the incident. For more information, see [Manage alerts](/defender-xdr/investigate-alerts#manage-alerts).
 
-:::image type="icon" source="media/m365-cc-sc-open-url-page-icon.png" border="false"::: **Open alert page** in the details : Opens the same page as when you click on the **Alert name** value of an entry on the **Alerts** page at <https://security.microsoft.com/alerts>. For more information, see [Analyze an alert](/defender-xdr/investigate-alerts#analyze-an-alert).
+- :::image type="icon" source="media/m365-cc-sc-graph-icon.png" border="false"::: **View messages in Explorer**: Opens Explorer (Threat Explorer) in the **All email** view filtered by the **Alert ID**. For more information about the **All email** view of Threat Explorer, see [All email view in Threat Explorer](threat-explorer-real-time-detections-about.md#all-email-view-in-threat-explorer).
 
-#### Manage alert
+- :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> :::image type="icon" source="media/m365-cc-sc-link-alert-icon.png" border="false"::: **Link alert to another incident**: In the **Link alert to another incident** flyout that opens, configure the following options:
 
-:::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Manage alert**: Opens a **Manage alert** flyout where you can view and modify details about the incident. You can modify the following alert properties:
+  - Select one of the following values:
+    - **Create a new incident**
+    - **Link to an existing incident**: In the **Incident name or ID** box that appears, start typing a value to find and select the existing incident.
+  - **Comment**: Enter an optional comment.
 
-- **Status**: Select one of the following values:
-  - **New**
-  - **In progress**
-  - **Resolved**
-- **Classification**: Select one of the following values:
-  - **Not set**
-  - **True positive** section:
-    - **Multi staged attack**
-    - **Malware**
-    - **Malicious user activity**
-    - **Unwanted software**
-    - **Phishing**
-    - **Compromised account**
-    - **Other**
-  - **Informational, expected activity** section:
-    - **Security testing**
-    - **Confirmed activity**
-    - **Line of business application**
-    - **Other**
-  - **False positive** section:
-    - **Not malicious**
-    - **Not enough data to validate**
-    - **Other**
-- **Comment**: Enter an optional comment.
+  When you're finished in the **Link alert to another incident** flyout, select **Save**
 
-    When you're finished in the **Manage alert** flyout, select **Save**
+- :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> :::image type="icon" source="media/m365-cc-sc-wrench-icon.png" border="false"::: **Tune alert**: Opens a **Tune alert** flyout. For more information, see Step 3 and later in [Create rule conditions to tune alerts](/defender-xdr/investigate-alerts#create-rule-conditions-to-tune-alerts).
 
-  - :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions**:
-
-    - :::image type="icon" source="media/m365-cc-sc-link-alert-icon.png" border="false"::: **Link alert to another incident**: In the **Link alert to another incident** page, configure the following options:
-      - Select one of the following values:
-        - **Create a new incident**
-        - **Link to an existing incident**: In the **Incident name or ID** box that appears, start typing a value to find and select the existing incident.
-      - **Comment**: Enter an optional comment.
-
-    When you're finished in the **Link alert to another incident** flyout, select **Save**
-
-    - :::image type="icon" source="media/m365-cc-sc-wrench-icon.png" border="false"::: **Tune alert**: in the **Tune alert** flyout that opens, configure the following options:
-
-
-
-    - :::image type="icon" source="media/m365-cc-sc-question-mark-icon.png" border="false"::: **Ask Defender Experts**
+- :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More actions** \> :::image type="icon" source="media/m365-cc-sc-question-mark-icon.png" border="false"::: **Ask Defender Experts**. Opens an **Ask Defender Experts** flyout. For more information, see [Collaborate with experts on demand](/defender-xdr/experts-on-demand).
 
 ### Mailboxes tab in the investigation details
 
@@ -352,6 +339,8 @@ When you're finished in the **Filter** flyout, select **Apply**. To clear the fi
 
 Clicking anywhere in a row other than the check box next to the first column opens a details flyout. What's available in the flyout depends on the nature of the evidence (email message, file, URL, etc.).
 
+<!--- Lots going on here --->
+
 ### Entities tab in the investigation details
 
 On the investigation details page, the **Entities** tab shows details about the different types of entities that were encountered and analyzed during the investigation.
@@ -364,7 +353,7 @@ The **Entities** tab is organized by a view selection pane (a summary view and a
 
   You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
 
-  - **Entity type** (you can't deselect this value): This colum acts as header rows for the corresponding data in the remaining columns. For example:
+  - **Entity type** (you can't deselect this value): Contains the same values as the view selection pane, depending on the incident. For example:
     - **Files**
     - **URLs**
     - **Email submissions**
@@ -372,7 +361,7 @@ The **Entities** tab is organized by a view selection pane (a summary view and a
     - **IP addresses**
     - **Email clusters**
 
-    The following columns show the count for entity type (row):
+    The following columns show the count for each entity type (row):
 
     - **Total**
     - **Remediated**
@@ -385,7 +374,9 @@ The **Entities** tab is organized by a view selection pane (a summary view and a
     - **Unremediated**
     - **Partially Remediated**
 
-- **Files** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown.  The default columns are marked with an asterisk <sup>\*</sup>:
+  Clicking anywhere in a row anywhere other than the check box next to the **Entity type** column takes you to the related view from the selection page (for example, **Emails**).
+
+- **Files** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. The default columns are marked with an asterisk <sup>\*</sup>:
   - **Verdict**<sup>\*</sup>
   - **Remediation status**<sup>\*</sup>
   - **Status details**
@@ -393,10 +384,30 @@ The **Entities** tab is organized by a view selection pane (a summary view and a
   - **File name**<sup>\*</sup> (you can't deselect this value)
   - **Device**<sup>\*</sup>
 
+  <!--- No investigations to see details flyout --->
+
 - **URLs** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
   - **Verdict**
   - **Remediation status**
   - **Address** (you can't deselect this value)
+
+  Clicking anywhere in a row other than the check box next to the first column opens a details flyout that contains the following information:
+
+  - **Original URL**
+  - **Detection** section
+  - **Domain details** section
+  - **Registrant contact info** section
+  - **URL prevalence (last 30 days)** section
+
+  <!--- Many more links are available in the sections --->
+
+  The following actions for the URL are also available in the flyout:
+
+  - **Open URL page**
+  - **Submit for analysis**
+  - **Manage indicator**
+  - **View in Explorer**
+  - **Go hunt**
 
 - **Email submissions** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
   - **Verdict**
@@ -407,6 +418,12 @@ The **Entities** tab is organized by a view selection pane (a summary view and a
   - **Reported by**
   - **Report type**
 
+  Clicking anywhere in a row other than the check box next to the first column opens a details flyout that contains the following information:
+
+  - **Email submission details** section
+
+  The **Go hunt** action for the email submission is also available in the flyout.
+
 - **Emails** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
   - **Verdict**
   - **Remediation status**
@@ -416,10 +433,37 @@ The **Entities** tab is organized by a view selection pane (a summary view and a
   - **Sender**
   - **Recipient**
 
+  Clicking anywhere in a row other than the check box next to the first column opens a details flyout that contains the following information:
+
+  - **Email details** section
+
+  Select **More details about email** to view the Email entity page in Defender for XDR. <!-- Not sure what this is called or where it's documented -->
+
+  The following actions for the email message are also available in the flyout:
+
+  - **Go hunt**
+  - **Open in Explorer**
+
+  <!--- Describe in more detail? --->
+
 - **IP addresses** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
   - **Verdict**
   - **Remediation status**
   - **Address** (you can't deselect this value)
+
+  Clicking anywhere in a row other than the check box next to the first column opens a details flyout that contains the following information:
+
+  - **IP details** section
+  - **Detection** section
+  - **IP observed in organization devices** section
+
+  The following actions for the IP addresses are also available in the flyout:
+
+  - **Open IP address page**
+  - **Add indicator**
+  - **Open cloud app IP settings**
+  - **Investigate in Activity log**
+  - **Go hunt**
 
 - **Email Clusters** view: You can sort the entries in the details table by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected:
   - **Verdict**
@@ -439,6 +483,20 @@ The **Entities** tab is organized by a view selection pane (a summary view and a
   - **Not in mailbox**
   - **On-prem/External**
   - **Volume anomaly**
+
+  Clicking anywhere in a row other than the check box next to the first column opens a details flyout that contains the following information:
+
+  - **Email cluster details** section
+  - **Threats** section
+  - **Latest delivery locations** section
+  - **Original delivery locations** section
+
+  The following actions for the email cluster are also available in the flyout:
+
+  - **Go hunt**
+  - **Open in Explorer**
+
+  <!--- Describe in more detail? --->
 
 ### Log tab in the investigation details
 
@@ -501,58 +559,52 @@ The **Pending approval** tab is organized by a view selection pane (a view for e
 
 Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the visible information to a CSV file. The default filename is AirActions.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, AirActions (1).csv).
 
-#### Approve actions on the Pending approval tab in the investigation details
+Clicking anywhere in a row other than the check box next to the first column opens a details flyout that contains the following information:
 
-On the **Pending approval** tab on the investigation details page, select a pending action by clicking anywhere in the row other than the check box next to the first column.
-
-The details flyout that opens is named after the pending action (for example, **Soft delete emails**).
-
-At the top of the details flyout, the following actions are available:
-
-- :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Approve**.
-- :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Reject**.
-
-The rest of the flyout contains information about the email cluster (the flyout is one big **Email cluster details** section):
-
-- **Verdict**
-- **Remediation status**
-- **Email count**
-- **Name**
-- **Volume anomaly**
-- **Query time**
-
-- **Threats** subsection: By default, this subsection is expanded. To collapse it, select **Hide threats**.
-
-  The following information is available for the email cluster:
-
+- **Email cluster details** section
+  - **Verdict**
+  - **Remediation status**
+  - **Email count**
+  - **Name**
+  - **Volume anomaly**
+  - **Query time**
+- **Threats** section:
   - **Threats**: Summarizes the threats found in the email cluster. For example, `MaliciousUrl, HighConfPhish, Volume anomaly`.
   - Counts for the following threat types found in the email cluster:
     - **Malware**
     - **Phish**
     - **High Confidence Phish**
     - **Spam**
-
-- **Latest delivery locations** subsection: By default, this subsection is expanded. To collapse it, select **Hide Latest Delivery Locations**.
-
-  This section contains counts for the following delivery locations for messages in the email cluster:
-
+- **Latest delivery location** section: Counts for the following delivery locations for messages in the email cluster:
   - **Mailbox**
   - **Not in mailbox**
   - **On-prem/External**
-
-- **Original delivery locations**: By default, this subsection is collapsed. To expand it, select **Show original delivery locations**.
-
-  This section contains counts for the following original delivery locations for messages in the email cluster:
-
+- **Original delivery locations** section: Counts for the following original delivery locations for messages in the email cluster:
   - **Delivered**
   - **Junked**
   - **Replaced**
   - **Blocked**
 
-At the bottom of the flyout, the following buttons are available:
+The following actions for the email messages are also available in the flyout:
 
 - **Go hunt**
 - **Open in Explorer**
+
+:::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Approve** and :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Reject** are described in the next subsection.
+
+#### Approve actions on the Pending approval tab in the investigation details
+
+On the **Pending approval** tab on the investigation details page, select a pending action by clicking anywhere in the row other than the check box next to the first column.
+
+The details flyout that opens is named after the pending action (for example, **Soft delete emails**). Read the information in the flyout, and then select one of the following values:
+
+- :::image type="icon" source="media/m365-cc-sc-check-mark-icon.png" border="false"::: **Approve**.
+- :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Reject**.
+
+> [!TIP]
+> Approving and/or rejecting all actions in the investigation fully closes it (the **Status** value becomes **Remediated**). Failing to approve and/or reject all actions in the investigation doesn't fully close it (the **Status** value remains **Partially Remediated**).
+>
+> You don't need to approve every action. If you don't agree with the recommended action or your organization doesn't choose certain types of actions, you can reject the action or take no action.
 
 ### Pending actions history tab in the investigation details
 
@@ -562,12 +614,32 @@ You can sort the entries by clicking on an available column header. Select :::im
 
 - **Action type**
 - **Wait time**
-- **Entity**: Select this value to see details about the email message.
-- **Status**: Select this value to see details about the email cluster.
+- **Entity**
+- **Status**
 - **Handled by**
 - **Time**
 
 Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the visible information to a CSV file. The default filename is AirActions.csv, and the default location is the local Downloads folder. If an exported report already exists in that location, the filename is incremented (for example, AirActions (1).csv).
+
+Clicking on the **Entity** value in a row opens a details flyout with the following information about the email cluster:
+
+- **Email cluster details** section
+- **Threats** section
+- **Latest delivery locations** section
+- **Original delivery locations** section
+
+The following actions for the email cluster are also available in the flyout:
+
+- **Go hunt**
+- **Open in Explorer**
+
+Clicking anywhere in a row other than the check box next to the first column or the **Entity** value opens an action history details flyout that contains the following information:
+
+- **Summary** section:
+  - **Status**
+  - **Create**
+  - **Execution start**
+  - **Description**
 
 ## View details about an alert related to an investigation
 
@@ -578,26 +650,6 @@ Certain kinds of alerts trigger automated investigation in Microsoft 365. To lea
 1. Select an action from the table by selecting the link in the **Investigation ID** column.
 
 The [investigation details page](#view-investigation-details-from-air-in-defender-for-office-365-plan-2) opens.
-
-## Keep the following points in mind
-
-- Email counts are calculated at the time of the investigation, and some counts are recalculated when you open investigation flyouts (based on an underlying query).
-
-- The email counts shown for the email clusters on the **Email** tab and the email quantity value shown on cluster flyout are calculated at the time of investigation, and don't change.
-
-- The email count shown at the bottom of the **Email** tab of the email cluster flyout and the count of email messages shown in Explorer reflect email messages received after the investigation's initial analysis.
-
-  Thus, an email cluster that shows an original quantity of 10 email messages would show an email list total of 15 when five more email messages arrive between the investigation analysis phase and when the admin reviews the investigation. Likewise, old investigations might start showing higher counts than Explorer queries show, because data in Microsoft Defender for Office 365 Plan 2 expires after seven days for trials and after 30 days for paid licenses.
-
-  Showing both count historical and current counts in different views is done to indicate the email impact at the time of investigation and the current impact up until the time that remediation is run.
-
-- In the context of email, you might see a volume anomaly threat surface as part of the investigation. A volume anomaly indicates a spike in similar email messages around the investigation event time compared to earlier time frames. A spike in email traffic together with certain characteristics (for example, subject and sender domain, body similarity, and sender IP) is typical of the start of email campaigns or attacks. However, bulk, spam, and legitimate email campaigns commonly share these characteristics.
-
-- Volume anomalies represent a _potential_ threat, and could be less severe compared to malware or phishing threats that are identified using anti-virus engines, detonation, or malicious reputation.
-
-- You don't have to approve every action. If you don't agree with the recommended action or your organization doesn't choose certain types of actions, then you can choose to **Reject** the actions or simply ignore them and take no action.
-
-- Approving and/or rejecting all actions lets the investigation fully close (status becomes remediated), while leaving some actions incomplete results in the investigation status changing to a partially remediated state.
 
 ## Next steps
 
