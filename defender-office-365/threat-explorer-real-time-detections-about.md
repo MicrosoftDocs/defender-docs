@@ -78,7 +78,7 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
     > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 > [!TIP]
-> End-user spam notifications and system generated email isn't avaialble in Threat Explorer. These types of messages are available in Threat Explorer if there's a mail flow rule (also known as a transport rule) to override.
+> End-user spam notifications and system generated messages aren't avaialble in Threat Explorer. These types of messages are available if there's a mail flow rule (also known as a transport rule) to override.
 >
 > Audit log entries are generated when admins preview or download email messages. You can search the admin audit log by user for **AdminMailAccess** activity. For instructions, see [Audit New Search](/purview/audit-new-search).
 
