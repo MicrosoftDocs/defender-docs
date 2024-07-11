@@ -33,7 +33,7 @@ You can set up Microsoft Defender XDR to notify you through email about manual o
 
 [Manual response actions](respond-first-incident-remediate.md#manual-remediation) are actions that security teams can use to stop threats or aid in investigation of attacks. These actions vary depending on the Defender workload enabled in your environment.
 
-[Automated response actions](respond-first-incident-remediate.md#automatic-remediation), on the other hand, are capabilities in Microsoft 35 Defender that scale investigation and resolution to threats automatically. Automated remediation capabilities consist of [automatic attack disruption](automatic-attack-disruption.md) and [automated investigation and response](m365d-autoir.md).
+[Automated response actions](respond-first-incident-remediate.md#automatic-remediation), on the other hand, are capabilities in Microsoft Defender XDR that scale investigation and resolution to threats automatically. Automated remediation capabilities consist of [automatic attack disruption](automatic-attack-disruption.md) and [automated investigation and response](m365d-autoir.md).
 
 > [!NOTE]
 > You need the **Manage security settings** permission to configure email notification settings. If you've chosen to use basic permissions management, users with Security Administrator or Global Administrator roles can configure email notifications. Likewise, if your organization is using [role-based access control (RBAC)](manage-rbac.md), you can only create, edit, delete, and receive notifications based on device groups that you are allowed to manage.
