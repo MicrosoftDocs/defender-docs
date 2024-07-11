@@ -7,7 +7,7 @@ author: chrisda
 manager: deniseb
 audience: ITPro
 ms.topic: conceptual
-ms.date: 3/22/2024
+ms.date: 07/11/2024
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -78,7 +78,8 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
     > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 > [!TIP]
-> End-user spam notification emails and system generated emails by Microsoft Defender for Office 365 are not avaialble in Explorer. If there is a mailbox/transport rule to override, then these type of emails will be available in Explorer.
+> End-user spam notifications and system generated email isn't avaialble in Threat Explorer. These types of messages are available in Threat Explorer if there's a mail flow rule (also known as a transport rule) to override.
+>
 > Audit log entries are generated when admins preview or download email messages. You can search the admin audit log by user for **AdminMailAccess** activity. For instructions, see [Audit New Search](/purview/audit-new-search).
 
 To use Threat Explorer or Real-time detections, you need to be assigned a license for Defender for Office 365 (included in your subscription or an add-on license).
@@ -237,7 +238,6 @@ The filterable properties that are available in the **Delivery action** box in t
 > - Search for the `https://` prefix in **URL**. When no value is specified, the `http://` prefix is assumed.
 > - `/` at the beginning and end of the **URL path**, **URL Domain**, **URL domain and path** fields is ignored.
 > - `/` at the end of the **URL** field is ignored.
-
 
 ### Pivots for the chart in the All email view in Threat Explorer
 
