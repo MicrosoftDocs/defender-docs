@@ -37,7 +37,7 @@
         - name: Microsoft Sentinel
           items:
           - name: Integration overview
-            href: /azure/sentinel/microsoft-365-defender-sentinel-integration?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+            href: /azure/sentinel/microsoft-365-defender-sentinel-integration?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
           - name: Experience in Defender portal
             href: /azure/sentinel/microsoft-sentinel-defender-portal?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
           - name: Connect Microsoft Sentinel to Microsoft Defender
