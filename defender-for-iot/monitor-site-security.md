@@ -31,7 +31,7 @@ The **Site security** page gives you an overview of the security status of your 
 - [Review the top **How protected are your sites** section](#review-site-protection-information) to get a general overview of your entire network, including sites with the highest number of devices that are exposed or at risk.
 - [Review the site list](#review-the-site-list) to monitor specific security information for each site.
 
-:::image type="content" source="media/monitor-site-security/site-security-page-blurred.png" alt-text="Screenshot showing the site security page with a list of sites and the site specific side pane open displaying details and data for that site." lightbox="media/monitor-site-security/site-security-page-blurred.png":::
+:::image type="content" source="media/monitor-site-security/site-security-page-blurred.png" alt-text="Screenshot showing the site security page with a list of sites." lightbox="media/monitor-site-security/site-security-page-blurred.png":::
 
 The data displayed in the **Site security** page is the total aggregated data for the entire environment, and might include data for sites that you don't have access to. When you drill down into device data from the [site list](#review-the-site-list), the **Device Inventory** page only displays data for devices you can access.
 
