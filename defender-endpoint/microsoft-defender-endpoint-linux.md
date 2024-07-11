@@ -102,7 +102,11 @@ In general you need to take the following steps:
   - Fedora 33-38
     
   - Rocky 8.7 and higher
+  - Rocky 9.2 and higher
+    
   - Alma 8.4 and higher
+  - Alma 9.2 and higher
+    
   - Mariner 2
   
     > [!NOTE]
