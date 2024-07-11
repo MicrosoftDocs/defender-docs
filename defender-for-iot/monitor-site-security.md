@@ -47,7 +47,7 @@ Review the top **How protected are your sites** section to get the following inf
 
 ## Review the site list
 
-Review the site specific data in the sites list table. When you select an individual site, the site specific pane open, with details and data about that site.
+Review the site specific data in the sites list table.
 
 Note that the data displayed in this table is the total aggregated data for the entire environment, and might include data for sites that you don't have access to. When you drill down into device data, the **Device Inventory** page only displays data for devices you can access.
 
@@ -57,3 +57,7 @@ Note that the data displayed in this table is the total aggregated data for the 
 |**Critical devices** |The number of critical devices at this site. A critical device is a self assigned device that has extra importance to your business or system, such as a server that contains confidential data. |- Use this data to prioritize protection for sites with critical devices.<br>- Select the number to open the **Device Inventory** page, filtered according to the site name and criticality level. |
 |**Highly-exposed devices** |The number of highly exposed devices at this site. |Select the number to open the **Device Inventory** page, filtered according to the site name and high exposure level. |
 |**Devices with high risk** |The number of high risk devices at this site. |Select the number to open the **Device Inventory** page, filtered according to the site name and high risk level. |
+
+When you select an individual site, the site specific pane open, with details and data about that site, for example:
+
+:::image type="content" source="media/monitor-site-security/site-security-side-pane.png" alt-text="Screenshot showing the site security page with a list of sites and the site specific side pane open displaying details and data for that site." lightbox="media/monitor-site-security/site-security-side-pane.png":::
