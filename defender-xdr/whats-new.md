@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 07/09/2024
+ms.date: 07/10/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -30,6 +30,13 @@ For more information on what's new with other Microsoft Defender security produc
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
 ## July 2024
+
+- (GA) The **Microsoft unified security operations platform** in the Microsoft Defender portal is generally available. This release brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, and Microsoft Copilot for Security in Microsoft Defender. For more information, see the following resources:
+
+  - Blog post: [General availability of the Microsoft unified security operations platform](https://aka.ms/unified-soc-announcement)
+  - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
+  - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
+  - [Microsoft Copilot for Security in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)
 
 - (Preview) You can now customize columns in the **Incidents** and **Alerts** queues in the Microsoft Defender portal. You can add, remove, reorder columns to display the information you need. For more information, see how to customize columns in the [incident queue](incident-queue.md#incident-queue) and [alert queue](investigate-alerts.md).
 

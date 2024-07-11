@@ -9,7 +9,7 @@ ms.custom: nextgen
 ms.reviewer: pahuijbr
 manager: deniseb
 ms.subservice: ngp
-ms.date: 05/30/2024
+ms.date: 07/10/2024
 ms.collection: 
 - m365-security
 - tier2
@@ -64,7 +64,7 @@ For details on configuring Microsoft Configuration Manager (current branch), see
 |Scan [reparse points](/windows/win32/fileio/reparse-points) <br/> **Scan** \> **Turn on reparse point scanning**|Disabled|Not available <br/>See [Reparse points](/windows/win32/fileio/reparse-points)|
 |Scan mapped network drives<br/>**Scan** \> **Run full scan on mapped network drives**|Disabled|`-DisableScanningMappedNetworkDrivesForFullScan`|
 |Scan archive files (such as .zip or .rar files). <br/>**Scan** \> **Scan archive files**|Enabled|`-DisableArchiveScanning` <br/><br/>The [extensions exclusion list](configure-extension-file-exclusions-microsoft-defender-antivirus.md) will take precedence over this setting.|
-|Scan files on the network <br/>**Scan** \> **Scan network files**|Enabled|`-DisableScanningNetworkFiles`|
+|Scan files on the network <br/>**Scan** \> **Scan network files**|Disabled|`-DisableScanningNetworkFiles`|
 |Scan packed executables<br/>**Scan** \> **Scan packed executables**|Enabled|Not available <br/><br/>Scan packed executables were removed from the following templates:<br/>- Administrative Templates (.admx) for Windows 11 2022 Update (22H2)<br/>- Administrative Templates (.admx) for Windows 11 October 2021 Update (21H2)|
 |Scan removable drives during full scans only<br/>**Scan** \> **Scan removable drives**|Disabled|`-DisableRemovableDriveScanning`|
 |Specify the level of subfolders within an archive folder to scan <p>**Scan** \> **Specify the maximum depth to scan archive files**|0|Not available|
