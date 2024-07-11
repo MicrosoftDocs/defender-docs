@@ -9,7 +9,7 @@ ms.custom: nextgen
 ms.reviewer: pahuijbr
 manager: deniseb
 ms.subservice: ngp
-ms.date: 05/30/2024
+ms.date: 07/10/2024
 ms.collection: 
 - m365-security
 - tier2
