@@ -18,7 +18,7 @@ ms.subservice: linux
 search.appverid: met150
 ---
 
-# Set preferences for Microsoft Defender for Endpoint on Linux (draft)
+# Set preferences for Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -376,6 +376,10 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 
 > [!NOTE] 
 > Available in Defender for Endpoint version `101.04.76` or later.
+
+### Exclusion Setting preferences [**PREVIEW**]
+
+See [Exclusion Settings for Microsoft Defender for Endpoint on Linux [PREVIEW]](linux-exclusions-v2.md#from-the-managed-configuration)
 
 #### Advanced scan options
 
