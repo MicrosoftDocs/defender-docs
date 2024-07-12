@@ -81,9 +81,12 @@ Open any remediation item to view details about it, including its remediation na
     - Junk
     - Deleted Items folder
     - Recoverable Items\Deletions folder (soft deleted items)
+    - Quarantine
+   
+     > [!NOTE] you cannot delete or send to junk the items that are quarantined
 
   - **Not actionable**: Emails in the following locations can't be acted on or moved in remediation actions:
-    - Quarantine
+   
     - Hard-deleted folder
     - On-premises/external
     - Failed/dropped
