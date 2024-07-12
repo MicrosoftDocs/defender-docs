@@ -49,7 +49,7 @@ Microsoft Defender for Endpoint on Linux supports two types of exclusion `scopes
 
 More scopes will be introduced in future. 
 
-![Exclusions checked at every scope ](images/linux-exclusions.png)
+![Exclusions checked at every scope ](media/linux-exclusions.png)
 
 Global Exclusions can be useful to avoid incorrect detections on trusted files or software that are unique or customized to your organization. They can also be useful for mitigating performance issues caused by Defender for Endpoint on Linux.
 
