@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 07/05/2024
+ms.date: 07/11/2024
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -102,7 +102,11 @@ In general you need to take the following steps:
   - Fedora 33-38
     
   - Rocky 8.7 and higher
+  - Rocky 9.2 and higher
+    
   - Alma 8.4 and higher
+  - Alma 9.2 and higher
+    
   - Mariner 2
   
     > [!NOTE]
