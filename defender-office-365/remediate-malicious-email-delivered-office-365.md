@@ -76,17 +76,16 @@ Open any remediation item to view details about it, including its remediation na
 
   :::image type="content" source="media/microsoft-365-defender-action-center-history-panel.png" lightbox="media/microsoft-365-defender-action-center-history-panel.png" alt-text="The Action Center with the Move to Inbox option open.":::
 
-  - **Actionable**: Emails in the following cloud mailbox locations can be acted on and moved:
+  - **Actionable**: Email in the following cloud mailbox locations can be acted on and moved:
     - Inbox
-    - Junk
-    - Deleted Items folder
-    - Recoverable Items\Deletions folder (soft deleted items)
+    - Junk<sup>*</sup>
+    - Deleted Items folder<sup>*</sup>
+    - Recoverable Items\Deletions folder (soft deleted items)<sup>*</sup>
     - Quarantine
-   
-     > [!NOTE] you cannot delete or send to junk the items that are quarantined
 
-  - **Not actionable**: Emails in the following locations can't be acted on or moved in remediation actions:
-   
+    <sup>*</sup> Not available for quarantined items.
+
+  - **Not actionable**: Email in the following locations can't be acted on or moved in remediation actions:
     - Hard-deleted folder
     - On-premises/external
     - Failed/dropped
