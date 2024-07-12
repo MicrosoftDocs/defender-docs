@@ -39,12 +39,12 @@ This is article 4 of 6 in a series to help you deploy the components of Microsof
 
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" alt-text="A diagram that shows Microsoft Defender for Endpoint in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-endpoint.svg" border="false":::
 
-Articles in this series:
+The articles in this series correspond to the following phases of end-to-end deployment:
 
 | Phase | Link |
 |---|---|
 | A. Start the pilot | [Start the pilot](pilot-deploy-overview.md#start-the-pilot)|
-| B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - **Pilot and deploy Defender for Endpoint**  (this article) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
+| B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - [Pilot and deploy  Defender for Office 365](pilot-deploy-defender-office-365.md) <br><br> - **Pilot and deploy Defender for Endpoint** (this article) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
 |C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
 ## Pilot and deploy workflow for Defender for Identity
@@ -57,14 +57,14 @@ You start by evaluating the product or service and how it will work within your 
 
 Here is the workflow for piloting and deploying Defender for Identity in your production environment.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-identity-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Identity." lightbox="./media/eval-defender-xdr/defender-identity-pilot-deploy-steps.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-identity-pilot-deploy-steps.svg" alt-text="A diagram that shows the steps to pilot and deploy Microsoft Defender for Identity." lightbox="./media/eval-defender-xdr/defender-identity-pilot-deploy-steps.svg" border="false":::
 
 Follow these steps:
 
-1. [Check license state](#step-1)
-1. [Onboard endpoints using any of the supported management tools](#step-2)
-1. [Verify pilot group](#step-3)
-1. [Try out capabilities](#step-4)
+1. [Check license state](#step-1-check-license-state)
+1. [Onboard endpoints using any of the supported management tools](#step-2-onboard-endpoints-using-any-of-the-supported-management-tools)
+1. [Verify pilot group](#step-3-verify-pilot-group)
+1. [Try out capabilities](#step-4-try-out-capabilities)
 
 Here are the recommended steps for each deployment stage.
 
@@ -105,8 +105,6 @@ This table describes the illustration.
 > [!TIP]
 > Microsoft Defender for Endpoint also comes with an in-product evaluation lab where you can add pre-configured devices and run simulations to evaluate the capabilities of the platform. The lab comes with a simplified set-up experience that can help quickly demonstrate the value of Microsoft Defender for Endpoint including guidance for many features like advanced hunting and threat analytics. For more information, see [Evaluate capabilities](/defender-endpoint/evaluation-lab). The main difference between the guidance provided in this article and the evaluation lab is the evaluation environment uses production devices whereas the evaluation lab uses non-production devices.
 
-<a name="step-1"></a>
-
 ## Step 1: Check license state
 
 You'll first need to check the license state to verify that it was properly provisioned. You can do this through the admin center or through the **Microsoft Azure portal**.
@@ -120,8 +118,6 @@ You'll first need to check the license state to verify that it was properly prov
     On the screen, you'll see all the provisioned licenses and their current **Status**.
 
     :::image type="content" source="/defender/media/defender/atp-billing-subscriptions.png" alt-text="Screenshot of the Billing licenses page in the Microsoft Azure portal." lightbox="/defender/media/defender/atp-billing-subscriptions.png":::
-
-<a name="step-2"></a>
 
 ## Step 2: Onboard endpoints using any of the supported management tools
 
@@ -143,7 +139,7 @@ The following table lists the available tools based on the endpoint that you nee
 
 | Endpoint | Tool options |
 |---|---|
-| **Windows** |- [Local script (up to 10 devices)](/defender-endpoint/configure-endpoints-script)<br/>- [Group Policy](/defender-endpoint/configure-endpoints-gp)<br/>- [Microsoft Intune / Mobile Device Manager](/defender-endpoint/configure-endpoints-mdm)<br/>- [Microsoft Endpoint Configuration Manager](/defender-endpoint/configure-endpoints-sccm)<br/>- [VDI scripts](/defender-endpoint/configure-endpoints-vdi) |
+| **Windows** | - [Local script (up to 10 devices)](/defender-endpoint/configure-endpoints-script)<br/>- [Group Policy](/defender-endpoint/configure-endpoints-gp)<br/>- [Microsoft Intune / Mobile Device Manager](/defender-endpoint/configure-endpoints-mdm)<br/>- [Microsoft Endpoint Configuration Manager](/defender-endpoint/configure-endpoints-sccm)<br/>- [VDI scripts](/defender-endpoint/configure-endpoints-vdi) |
 | **macOS** | - [Local scripts](/defender-endpoint/mac-install-manually)<br/>- [Microsoft Intune](/defender-endpoint/mac-install-with-intune)<br/>- [JAMF Pro](/defender-endpoint/mac-install-with-jamf)<br/>- [Mobile Device Management](/defender-endpoint/mac-install-with-other-mdm) |
 | **iOS** | [App-based](/defender-endpoint/ios-install) |
 | **Android** | [Microsoft Intune](/defender-endpoint/android-intune) |
@@ -152,15 +148,11 @@ When you pilot Microsoft Defender for Endpoint, you may choose to onboard a few 
 
 You can then try out capabilities that are available such as running attack simulations and seeing how Defender for Endpoint surfaces malicious activities and enables you to conduct an efficient response. 
 
-<a name="step-3"></a>
-
 ## Step 3: Verify pilot group
 
 After completing the onboarding steps outlined in the Enable evaluation section, you should see the devices in the Device inventory list approximately after an hour. 
 
 When you see your onboarded devices you can then proceed with trying out capabilities. 
-
-<a name="step-4"></a>
 
 ## Step 4: Try out capabilities
 

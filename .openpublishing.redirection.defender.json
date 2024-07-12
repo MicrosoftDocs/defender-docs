@@ -6,11 +6,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "defender-xdr/alerts-incidents-correlation.md",
-      "redirect_url": "/defender-xdr/incident-response-overview",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "defender-office-365/zero-trust-continuous-access-evaluation-microsoft-365.md",
       "redirect_url": "/security/zero-trust/zero-trust-continuous-access-evaluation-microsoft-365",
       "redirect_document_id": false
@@ -194,6 +189,11 @@
       "source_path": "defender-endpoint/evaluation-lab.md",
       "redirect_url": "/defender-endpoint/evaluate-microsoft-defender-antivirus",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/collect-diagnostic-data-update-compliance.md",
+      "redirect_url": "/defender-endpoint/collect-diagnostic-data",
+      "redirect_document_id": false
     }
   ]
 }

@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 09/28/2022
+ms.date: 06/19/2024
 ms.reviewer: nehabha
 f1.keywords: NOCSH 
 ms.collection: 
@@ -34,7 +34,7 @@ If you're a Microsoft Cloud Solution Provider (CSP) or Managed Service Provider 
 
 ## Learn more about Microsoft 365 Lighthouse
 
-Microsoft 365 Lighthouse enables Microsoft CSPs and MSPs to secure and manage devices, data, and users at scale.
+Microsoft 365 Lighthouse enables Microsoft CSPs and MSPs to secure and manage devices, data, and users for customers.
 
 To learn more, see:
 
