@@ -18,7 +18,7 @@ ms.subservice: linux
 search.appverid: met150
 ---
 
-# Set preferences for Microsoft Defender for Endpoint on Linux
+# Set preferences for Microsoft Defender for Endpoint on Linux (draft)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
