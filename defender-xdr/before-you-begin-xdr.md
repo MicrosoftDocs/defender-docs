@@ -14,7 +14,7 @@ ms.collection:
   - tier1
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 11/10/2023
+ms.date: 06/19/2023
 ---
 
 # Before you begin
@@ -56,7 +56,6 @@ As part of the service's built-in [Microsoft Defender Experts for Hunting](defen
 
 [Learn more about Microsoft's commercial licensing terms](https://www.microsoft.com/licensing/terms/productoffering/Microsoft365/MCA).
 
-
 ## Access requirements
 
 Work with your Commercial Executive to transact the Defender Experts for XDR SKU.
@@ -81,8 +80,6 @@ Microsoft experts hunt over [advanced hunting logs](advanced-hunting-schema-tabl
 
 When you purchase and onboard to Defender Experts for XDR, you're granting permission to Microsoft experts to access your advanced hunting data.
 
-This service has been developed in alignment with existing security and privacy standards and is working towards several certifications, including ISO 27001 and ISO 27018.
-
 ### Availability
 
 This service is available worldwide for our customers in our commercial public clouds. If you're interested to learn more, reach out to your Microsoft account team.
@@ -93,10 +90,10 @@ This service is currently delivered in English language only.
 
 ### Next step
 
-[Get started with Microsoft Defender Experts for XDR](get-started-xdr.md)
+- [Get started with Microsoft Defender Experts for XDR](get-started-xdr.md)
 
 ### See also
 
-[General information on Defender Experts for XDR service](frequently-asked-questions.md)
+- [General information on Defender Experts for XDR service](frequently-asked-questions.md)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

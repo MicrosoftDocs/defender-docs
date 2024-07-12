@@ -15,14 +15,16 @@ ms.collection:
   - essentials-manage
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/15/2024
+ms.date: 06/27/2024
 ---
 
-# Troubleshooting Microsoft Defender Experts app permissions in Microsoft Teams
+# Troubleshooting issues with Microsoft Defender Experts app in Microsoft Teams
 
 **Applies to:**
 
 - [Microsoft Defender XDR](microsoft-365-defender.md)
+
+## App policy permissions
 
 The Microsoft Defender Experts app is available for Microsoft Teams by default, but some environments might have limitations that block the app's installation because of app policy permissions in Teams. [Learn how to check Teams app permissions policies](#check-the-teams-app-permission-policies)
 
@@ -34,7 +36,7 @@ The following screenshot is an example of the missing bot:
 
 :::image type="content" source="/defender-xdr/media/teams-app-bot.png" alt-text="Screenshot of Teams app bot.":::
 
-## Check the Teams app permission policies
+### Check the Teams app permission policies
 
 **To verify if the Teams permission policies are preventing the Defender Experts app from working, follow these steps.**
 
@@ -59,14 +61,14 @@ This app is blocked in app permission policies. To approve a user's app request,
 
   :::image type="content" source="/defender-xdr/media/app-permissions-blocked.png" alt-text="Screenshot of Defender Experts app permissions blocked image in Teams.":::
 
-## Fix the Teams app permission policies
+### Fix the Teams app permission policies
 
 You have two options to fix the Teams app permission policy that stops the Defender Experts app from running:
 
 - [Change the policy that blocks the Defender Experts app from running](#change-the-policy-that-blocks-the-defender-experts-app-from-running)
 - [Add a new policy that lets the Defender Experts app run](#add-a-new-policy-that-lets-the-defender-experts-app-run)
 
-### Change the policy that blocks the Defender Experts app from running
+#### Change the policy that blocks the Defender Experts app from running
 
 1. Go to the [App permission policies page](https://admin.teams.microsoft.com/policies/app-permission). Read more about [App permission policies - Microsoft Teams admin center](/microsoftteams/teams-app-permission-policies)
 2. Look at each policy and see if **Microsoft apps** is set to **Allow specific apps and block all others**.
@@ -79,7 +81,7 @@ You have two options to fix the Teams app permission policy that stops the Defen
 
 The app should start working after 24 hours.
 
-### Add a new policy that lets the Defender Experts app run
+#### Add a new policy that lets the Defender Experts app run
 
 1. Go to the **App permission policies** page and then select **Add**.
 2. In the flyout panel on the right side, search for and select **Defender Experts**, and then select **Allow**.
@@ -87,6 +89,10 @@ The app should start working after 24 hours.
    :::image type="content" source="/defender-xdr/media/add-dex-app-run.png" alt-text="Screenshot to allow Defender Experts app flyout panel.":::
 
 3. Complete the rest of the fields as needed then select **Save**. If this policy is for a group of users, make sure that all the members in the channel are assigned to the policy. The app should start working after 24 hours.
+
+## Teams channel unavailable
+
+You will not be able to receive updates or chat with Defender Experts if the Managed Response channel is archived or deleted. To learn more, see how to [archive](https://support.microsoft.com/office/archive-or-restore-a-channel-53c46491-a265-4391-a2a7-001c5026c9e5) or [restore a deleted channel](https://support.microsoft.com/office/delete-a-channel-in-microsoft-teams-973f9014-53db-4165-8ab4-365021fe36b7).
 
 ### See also
 

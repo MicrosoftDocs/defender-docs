@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 06/11/2024
+ms.date: 07/08/2024
 ms.collection:
 - m365-security
 - tier2
@@ -45,6 +45,9 @@ Then, after you're all set up, you can [view and manage remediation actions in t
 |Windows device requirements|<ul><li>Windows 11</li><li>Windows 10, version 1709 or later installed (See [Windows release information](/windows/release-information/))</li><li>The following threat protection services are configured:<ul><li>[Microsoft Defender for Endpoint](/defender-endpoint/onboard-windows-client)</li><li>[Microsoft Defender Antivirus](/windows/security/threat-protection/windows-defender-antivirus/configure-windows-defender-antivirus-features)</li></ul></li></ul>|
 |Protection for email content and Office files|<ul><li>[Microsoft Defender for Office 365 is configured](/defender-office-365/mdo-deployment-guide#step-2-configure-protection-policies)</li><li>[Automated investigation and remediation capabilities in Defender for Endpoint are configured](/defender-endpoint/configure-automated-investigations-remediation) (required for manual response actions, such as deleting email messages on devices)</li></ul>|
 |Permissions|To configure automated investigation and response capabilities, you must have one of the following roles assigned in either Microsoft Entra ID (<https://portal.azure.com>) or in the Microsoft 365 admin center (<https://admin.microsoft.com>): <ul><li>Global Administrator</li><li>Security Administrator</li></ul>To work with automated investigation and response capabilities, such as by reviewing, approving, or rejecting pending actions, see [Required permissions for Action center tasks](m365d-action-center.md#required-permissions-for-action-center-tasks).|
+
+> [!NOTE]
+> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
 
 ## Review or change the automation level for device groups
 

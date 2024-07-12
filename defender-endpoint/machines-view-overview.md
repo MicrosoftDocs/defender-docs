@@ -13,7 +13,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/17/2024
+ms.date: 07/08/2024
 ---
 
 # Device inventory
@@ -32,7 +32,7 @@ ms.date: 04/17/2024
 The **Device inventory** shows a list of the devices in your network where alerts were generated. By default, the queue displays devices seen in the last 30 days. At a glance, you see information such as domain, risk level, OS platform, and other details for easy identification of devices most at risk.
 
 > [!NOTE]
-> The device inventory is available in different Microsoft Defender XDR services. The information available to you can differ depending on your license. To get the most complete set of capabilities, use [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md).
+> The device inventory is available in Microsoft Defender XDR services. The information that's available to you can differ depending on your license. To get the most complete set of capabilities, use [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md).
 > 
 > Risk Level, which can influence enforcement of Conditional Access and other security policies in Microsoft Intune, is now available for Windows devices.
 
@@ -85,7 +85,7 @@ Use the **Onboarding Status** column to sort and filter by discovered devices, a
 
 :::image type="content" alt-text="Image of devices list with list of devices." source="media/device-inventory.png" lightbox="media/device-inventory.png":::
 
-From the **Network devices** and **IoT devices** tabs, you'll also see information such as vendor, model, and device type:
+From the **Network devices** and **IoT devices** tabs, you also see information such as vendor, model, and device type:
 
 :::image type="content" alt-text="Image of network devices list." source="media/device-inventory-networkdevices.png" lightbox="media/device-inventory-networkdevices.png":::
 
@@ -129,26 +129,26 @@ The counts on the top of each tab are updated based on the current view.
 
 ## Use filters to customize the device inventory views
 
-Filter | Description
-:---|:---
-**Risk level** | The risk level reflects the overall risk assessment of the device based on a combination of factors, including the types and severity of active alerts on the device. Resolving active alerts, approving remediation activities, and suppressing subsequent alerts can lower the risk level.
-**Exposure level** | The exposure level reflects the current exposure of the device based on the cumulative impact of its pending security recommendations. The possible levels are low, medium, and high. Low exposure means your devices are less vulnerable from exploitation.</br></br> If the exposure level says "No data available," there are a few reasons why:</br>- Device stopped reporting for more than 30 days. In that case it's considered inactive, and the exposure isn't computed.</br>- Device OS not supported - see [minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).</br>- Device with stale agent (unlikely).
-**Criticality level** | The criticality level reflects how critical a device is for your organization. The possible levels are low, medium, high, or very high. Very high means that the device is considered a business critical asset. For more information, see [Overview of critical asset management](/security-exposure-management/critical-asset-management).
-**Transient devices** | By default transient devices are filtered out of the device inventory to reduce inventory noise. You can turn transient device filtering off as needed. Learn more about [transient device filtering](transient-device-tagging.md).
-**OS Platform** | Filter by the OS platforms you're interested in investigating </br></br>(_Computers and mobile and IoT devices only_).
-**Windows version** | Filter by the Windows versions you're interested in investigating. If 'future version' appears in the Windows version field, it can mean:</br></br> - This is a pre-release build for a future Windows release</br> - The build has no version name</br> - The build version name isn't yet supported </br></br> In all these scenarios, where available, the full OS version can be seen in the device details page.</br></br> (_Computers and mobile only_).
-**Sensor health state** | Filter by the following sensor health states, for devices onboard to Microsoft Defender for Endpoint:</br> - **Active**: Devices that are actively reporting sensor data to the service.</br> - **Inactive**: Devices that stopped sending signals for more than seven days.</br> - **Misconfigured**: Devices that have impaired communications with service or are unable to send sensor data.</br> Misconfigured devices can further be classified to: </br>  - No sensor data </br>  - Impaired communications </br>  For more information on how to address issues on misconfigured devices, see, [Fix unhealthy sensors](fix-unhealthy-sensors.md).</br></br> (_Computers and mobile only_).
-**Onboarding status** | Onboarding status indicates whether the device is currently onboarded to Microsoft Defender for Endpoint or not. Device discovery must be enabled for this filter to appear. You can filter by the following states: </br> - **Onboarded**: The endpoint is onboarded to Microsoft Defender for Endpoint.</br> - **Can be onboarded**: The endpoint was discovered in the network as a supported device, but isn't currently onboarded. Microsoft highly recommends onboarding these devices.</br> - **Unsupported**: The endpoint was discovered in the network, but isn't supported by Microsoft Defender for Endpoint.</br> - **Insufficient info**: The system couldn't determine the supportability of the device.</br></br> (_Computers and mobile only_).
-**Antivirus status** | Filter the view based on whether the antivirus status is disabled, not updated or unknown.</br></br> (_Computers and mobile only_).
-**First seen** | Filter your view based on when the device was first seen in the network or when it was first reported by the Microsoft Defender for Endpoint sensor.</br></br>(_Computers and mobile and IoT devices only_).
-**Tags** | Filter the list based on the grouping and tagging that you've added to individual devices. See [Create and manage device tags](machine-tags.md).
-**Internet facing** | Filter the list based on whether the device is internet facing.
-**Group** | Filter the list based on the group you're interested in investigating.</br></br> (_Computers and mobile only_).
-**Device value** | Filter the list based on whether the device is marked as high value or low value.
-**Exclusion state** | Filter the list based on whether the device is excluded or not. For more information, see [Exclude devices](exclude-devices.md).
-**Managed by** | Managed by indicates how the device is being managed. You can filter by:</br> - Microsoft Defender for Endpoint</br> - Microsoft Intune, including co-management with Microsoft Configuration Manager via tenant attach</br>- Microsoft Configuration manager (ConfigMgr)</br> - Unknown: This issue could be due the running an outdated Windows version, GPO management, or another non-Microsoft MDM.</br></br> (_Computers and mobile only_)
-**Device Type** | Filter by the device type you're interested in investigating.</br></br> (_IoT devices only_)
-**Mitigation status** | Filter by isolation or containment status of a device.
+| Filter | Description |
+|---|---|
+| **Risk level** | The risk level reflects the overall risk assessment of the device based on a combination of factors, including the types and severity of active alerts on the device. Resolving active alerts, approving remediation activities, and suppressing subsequent alerts can lower the risk level. |
+| **Exposure level** | The exposure level reflects the current exposure of the device based on the cumulative impact of its pending security recommendations. The possible levels are low, medium, and high. Low exposure means your devices are less vulnerable from exploitation.<br/><br/> If the exposure level says "No data available," there are a few reasons why:<br/>- Device stopped reporting for more than 30 days. In that case it's considered inactive, and the exposure isn't computed.<br/>- Device OS not supported - see [minimum requirements for Microsoft Defender for Endpoint](minimum-requirements.md).<br/>- Device with stale agent (unlikely). |
+| **Criticality level** | The criticality level reflects how critical a device is for your organization. The possible levels are `low`, `medium`, `high`, or `very high`. `Very high` means that the device is considered a business critical asset. For more information, see [Overview of critical asset management](/security-exposure-management/critical-asset-management). |
+| **Transient devices** | By default transient devices are filtered out of the device inventory to reduce inventory noise. You can turn transient device filtering off as needed. Learn more about [transient device filtering](transient-device-tagging.md). |
+| **OS Platform** | Filter by the OS platforms you're interested in investigating <br/><br/>(*Computers and mobile and IoT devices only*). |
+| **Windows version** | Filter by the Windows versions you're interested in investigating. If `future version` appears in the Windows version field, it can mean:<br/><br/> - This is a pre-release build for a future Windows release<br/> - The build has no version name<br/> - The build version name isn't yet supported <br/><br/> In all these scenarios, where available, the full OS version can be seen in the device details page.<br/><br/> (*Computers and mobile only*)<br/><br/>Windows 11 WVD onboarding is supported; however, those devices might appear as WVD 10 in the **Device Inventory** and **Device** pages. |
+| **Sensor health state** | Filter by the following sensor health states, for devices onboard to Microsoft Defender for Endpoint:<br/> - **Active**: Devices that are actively reporting sensor data to the service.<br/> - **Inactive**: Devices that stopped sending signals for more than seven days.<br/> - **Misconfigured**: Devices that have impaired communications with service or are unable to send sensor data.<br/> Misconfigured devices can further be classified to: <br/>  - No sensor data <br/>  - Impaired communications <br/>  For more information on how to address issues on misconfigured devices, see, [Fix unhealthy sensors](fix-unhealthy-sensors.md).<br/><br/> (*Computers and mobile only*) |
+| **Onboarding status** | Onboarding status indicates whether the device is currently onboarded to Microsoft Defender for Endpoint or not. Device discovery must be enabled for this filter to appear. You can filter by the following states: <br/> - **Onboarded**: The endpoint is onboarded to Microsoft Defender for Endpoint.<br/> - **Can be onboarded**: The endpoint was discovered in the network as a supported device, but isn't currently onboarded. Microsoft highly recommends onboarding these devices.<br/> - **Unsupported**: The endpoint was discovered in the network, but isn't supported by Microsoft Defender for Endpoint.<br/> - **Insufficient info**: The system couldn't determine the supportability of the device.<br/><br/> (*Computers and mobile only*) |
+| **Antivirus status** | Filter the view based on whether the antivirus status is disabled, not updated or unknown.<br/><br/> (*Computers and mobile only*) |
+| **First seen** | Filter your view based on when the device was first seen in the network or when it was first reported by the Microsoft Defender for Endpoint sensor.<br/><br/>(*Computers and mobile and IoT devices only*)|
+| **Tags** | Filter the list based on the grouping and tagging that you've added to individual devices. See [Create and manage device tags](machine-tags.md). |
+| **Internet facing** | Filter the list based on whether the device is internet facing. |
+| **Group** | Filter the list based on the group you're interested in investigating.<br/><br/> (*Computers and mobile only*) |
+| **Device value** | Filter the list based on whether the device is marked as high value or low value. |
+| **Exclusion state** | Filter the list based on whether the device is excluded or not. For more information, see [Exclude devices](exclude-devices.md). |
+| **Managed by** | `Managed by` indicates how the device is being managed. You can filter by:<br/> - Microsoft Defender for Endpoint<br/> - Microsoft Intune, including co-management with Microsoft Configuration Manager via tenant attach<br/>- Microsoft Configuration manager (ConfigMgr)<br/> - Unknown: This issue could be due the running an outdated Windows version, GPO management, or another non-Microsoft MDM.<br/><br/> (*Computers and mobile only*) |
+| **Device Type** | Filter by the device type you're interested in investigating.<br/><br/> (*IoT devices only*) |
+| **Mitigation status** | Filter by isolation or containment status of a device. |
 
 ## Use columns to customize the device inventory views
 

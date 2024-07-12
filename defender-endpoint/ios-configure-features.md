@@ -93,6 +93,7 @@ Network protection in Microsoft Defender for endpoint is disabled by default. Ad
 
 > [!NOTE]
 > Only one policy should be created for Network Protection, either MDM or MAM.
+> Network Protection initialization requires the end user to open the app once.
 
 ### For enrolled devices (MDM)
 
@@ -106,7 +107,7 @@ Follow the below steps for setting up MDM configuration for enrolled devices for
 
 4. In the Settings page, choose configuration settings format **Use configuration designer**.
 
-5. Add 'DefenderNetworkProtectionEnable' as the configuration key, value type as 'String' and value as 'true' to enable Network Protection. (Network protection is disabled by default.)
+5. Add 'DefenderNetworkProtectionEnable' as the configuration key, value type as 'String' and value as 'false' to disable Network Protection. (Network protection is enabled by default.)
 
    :::image type="content" source="media/np-mdmconfig-key.png" alt-text="Screenshot that shows the mdm configuration policy." lightbox="media/np-mdmconfig-key.png":::
 
@@ -114,10 +115,10 @@ Follow the below steps for setting up MDM configuration for enrolled devices for
 
    | Key | Value Type | Default (true-enable, false-disable) | Description |
    | --- | --- | --- | --- |
-   | `DefenderOpenNetworkDetection` | Integer | 0 | 1 - Audit, 0 - Disable(default), 2 - Enable. This setting is managed by an IT Admin to audit, disable, or enable open network detection, respectively. In 'Audit' mode, alerts is sent only to the ATP portal with no end-user experience. For end-user experience, set the config to 'Enable' mode.|
+   | `DefenderOpenNetworkDetection` | Integer | 2 | 1 - Audit, 0 - Disable, 2 - Enable(default). This setting is managed by an IT Admin to audit, disable, or enable open network detection, respectively. In 'Audit' mode, alerts is sent only to the ATP portal with no end-user experience. For end-user experience, set the config to 'Enable' mode.|
    | `DefenderEndUserTrustFlowEnable` | String | false | true - enable, false - disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks. |
-   | `DefenderNetworkProtectionAutoRemediation` | String | true | true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WIFI access points or deleting suspicious certificates detected by Defender. |
-   | `DefenderNetworkProtectionPrivacy` | String | true | true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection. |
+   | `DefenderNetworkProtectionAutoRemediation` | String | true | true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WIFI access points.|
+   | `DefenderNetworkProtectionPrivacy` | String | true | true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi or certs data is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
 
 7. In the Assignments section, admin can choose groups of users to include and exclude from the policy.
 
@@ -125,7 +126,7 @@ Follow the below steps for setting up MDM configuration for enrolled devices for
 
 ### For unenrolled devices (MAM)
 
-Follow the below steps for setting up MAM config for unenrolled devices for Network protection (Authenticator device registration is required for MAM configuration) in iOS devices. Network Protection initialization requires the end user to open the app once.
+Follow the below steps for setting up MAM config for unenrolled devices for Network protection (Authenticator device registration is required for MAM configuration) in iOS devices. 
 
 1. In the Microsoft Intune admin center, navigate to **Apps** \> **App configuration policies** \> **Add** \> **Managed apps** \> **Create a new App configuration policy**.
 
@@ -135,7 +136,7 @@ Follow the below steps for setting up MAM config for unenrolled devices for Netw
 
    :::image type="content" source="media/nameiosconfig.png" alt-text="Name the configuration." lightbox="media/nameiosconfig.png":::
 
-3. On the Settings page, add **DefenderNetworkProtectionEnable** as the key and the value as `true` to enable network protection. (Network protection is disabled by default.)
+3. On the Settings page, add **DefenderNetworkProtectionEnable** as the key and the value as `false` to disable network protection. (Network protection is enabled by default.)
 
    :::image type="content" source="media/addiosconfigvalue.png" alt-text="Add configuration value." lightbox="media/addiosconfigvalue.png":::
 
@@ -143,10 +144,10 @@ Follow the below steps for setting up MAM config for unenrolled devices for Netw
 
     |Key| Default (true - enable, false - disable)|Description|
     |---|---|---|
-    |`DefenderOpenNetworkDetection`|0| 1 - Audit, 0 - Disable (default), 2 - Enable. This setting is managed by an IT admin to enable, audit, or disable open network detection. In Audit mode, alerts are sent only to the ATP portal with no user side experience. For user experience, set the config to "Enable" mode.|
+    |`DefenderOpenNetworkDetection`|2| 1 - Audit, 0 - Disable, 2 - Enable (default). This setting is managed by an IT admin to enable, audit, or disable open network detection. In Audit mode, alerts are sent only to the ATP portal with no user side experience. For user experience, set the config to "Enable" mode.|
     |`DefenderEndUserTrustFlowEnable`| false | true - enable, false - disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks.|
-    |`DefenderNetworkProtectionAutoRemediation`| true |true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WIFI access points or deleting suspicious certificates detected by Defender.|
-    |`DefenderNetworkProtectionPrivacy`| true |true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection.|
+    |`DefenderNetworkProtectionAutoRemediation`| true |true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WIFI access points.|
+    |`DefenderNetworkProtectionPrivacy`| true |true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi or certs data is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
   
 5. In the **Assignments** section, an admin can choose groups of users to include and exclude from the policy.
 
@@ -375,8 +376,6 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 1. Admin needs to make **DisableSignOut = true** to disable the sign-out button in the app. Users will not see the sign out button once the policy is pushed.
 1. Click Next and assign this policy to targeted devices/users.
 
->[!Important]
->This feature is in Public Preview. The following information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## Device Tagging
 
@@ -411,6 +410,34 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 
 > [!NOTE] 
 > The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
+
+## Suppress OS update Notification
+A configuration is available for customers to suppress OS update notification in Defender for Endpoint on iOS. Once the config key is set in the Intune App configuration policies, Defender for Endpoint will not send any notifications on the device for OS updates. However, if you do open the Defender app the Device Health card will be visible and show the state of your OS. 
+
+This configuration is available for both the enrolled (MDM) devices as well as unenrolled (MAM) devices. Admins can use the following steps to suppress the OS update Notification.
+
+### Configure OS update Notification
+
+**For enrolled devices(MDM)**
+
+1. In the Microsoft Intune admin center, navigate to Apps \> App configuration policies \> Add \> Managed devices.
+1. Give the policy a name, select Platform \> iOS/iPadOS.
+1. Select Microsoft Defender for Endpoint as the target app. 
+1. In Settings page, select Use configuration designer and add **SuppressOSUpdateNotification** as the key and value type as **String**.
+1. By default, SuppressOSUpdateNotification = false.
+1. Admin needs to make **SuppressOSUpdateNotification = true** to suppress the OS update notifications.
+1. Click Next and assign this policy to targeted devices/users.
+
+**For unenrolled devices(MAM)**
+
+1. In the Microsoft Intune admin center, navigate to Apps > App configuration policies > Add > Managed apps.
+1. Give the policy a name.
+1. Under the Select Public Apps, choose Microsoft Defender for Endpoint as the target app.
+1. In Settings page, add **SuppressOSUpdateNotification** as the key under the General Configuration Settings.
+1. By default, SuppressOSUpdateNotification = false.
+1. Admin needs to make **SuppressOSUpdateNotification = true** to suppress the OS update notifications.
+1. Click Next and assign this policy to targeted devices/users.
+
 
 ## Configure option to send in-app feedback
 

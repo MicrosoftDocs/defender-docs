@@ -13,7 +13,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 06/25/2024
 ---
 
 # Create and manage roles for role-based access control
@@ -34,13 +34,16 @@ ms.date: 12/18/2020
 
 ## Create roles and assign the role to a Microsoft Entra group
 
-The following steps guide you on how to create roles in Microsoft Defender XDR. It assumes that you have already created Microsoft Entra user groups.
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-1. Log in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> using account with a Security administrator or Global administrator role assigned.
+The following steps guide you on how to create roles in the Microsoft Defender portal. It assumes that you have already created Microsoft Entra user groups.
+
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security Administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
-3. Select **Add item**.
+3. Select **Add role**.
 
 4. Enter the role name, description, and permissions you'd like to assign to the role.
 
@@ -61,11 +64,11 @@ The following steps guide you on how to create roles in Microsoft Defender XDR. 
 ### Permission options
 
 - **View data**
-  - **Security operations** - View all security operations data in the portal
+  - **Security Operations** - View all security operations data in the portal
   - **Defender Vulnerability Management** - View Defender Vulnerability Management data in the portal
 
 - **Active remediation actions**
-  - **Security operations** - Take response actions, approve or dismiss pending remediation actions, manage allowed/blocked lists for automation and indicators
+  - **Security Operations** - Take response actions, approve or dismiss pending remediation actions, manage allowed/blocked lists for automation and indicators
   - **Defender Vulnerability Management - Exception handling** - Create new exceptions and manage active exceptions
   - **Defender Vulnerability Management - Remediation handling** - Submit new remediation requests, create tickets, and manage existing remediation activities
   - **Defender Vulnerability Management - Application handling** - Apply immediate mitigation actions by blocking vulnerable applications, as part of the remediation activity and manage the blocked apps and perform unblock actions
@@ -78,7 +81,7 @@ The following steps guide you on how to create roles in Microsoft Defender XDR. 
 - **Manage portal system settings** - Configure storage settings, SIEM and threat intel API settings (applies globally), advanced settings, automated file uploads, roles and device groups
 
     > [!NOTE]
-    > This setting is only available in the Microsoft Defender for Endpoint administrator (default) role.
+    > This setting is only available in the Microsoft Defender for Endpoint Administrator (default) role.
 
 - **Manage security settings in Security Center** - Configure alert suppression settings, manage folder exclusions for automation, onboard and offboard devices, manage email notifications, manage evaluation lab, and manage allowed/blocked lists for indicators
 
@@ -97,7 +100,7 @@ For more information on the available commands, see [Investigate devices using L
 
 ## Edit roles
 
-1. Log in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> using account with Security administrator or Global administrator role assigned.
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
@@ -111,7 +114,7 @@ For more information on the available commands, see [Investigate devices using L
 
 ## Delete roles
 
-1. Log in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> using account with Security administrator or Global administrator role assigned.
+1. Sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> using account with the Security Administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
 
@@ -119,8 +122,10 @@ For more information on the available commands, see [Investigate devices using L
 
 4. Click the drop-down button and select **Delete role**.
 
-## Related topic
+## Related articles
 
-- [User basic permissions to access the portal](basic-permissions.md)
+- [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal)
+- [Assign user access](assign-portal-access.md)
 - [Create and manage device groups](machine-groups.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

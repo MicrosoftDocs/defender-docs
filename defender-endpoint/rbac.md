@@ -12,7 +12,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 06/26/2024
 ---
 
 # Manage portal access using role-based access control
@@ -34,6 +34,9 @@ ms.date: 12/18/2020
 Using role-based access control (RBAC), you can create roles and groups within your security operations team to grant appropriate access to the  portal. Based on the roles and groups you create, you have fine-grained control over what users with access to the portal can see and do.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4bJ2a]
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 Large geo-distributed security operations teams typically adopt a tier-based model to assign and authorize access to security portals. Typical tiers include the following three levels:
 
@@ -65,16 +68,16 @@ Before using RBAC, it's important that you understand the roles that can grant p
 > [!WARNING]
 > Before enabling the feature, it's important that you have a Global Administrator role or Security Administrator role in Microsoft Entra ID and that you have your Microsoft Entra groups ready to reduce the risk of being locked out of the portal.
 
-When you first log in to the Microsoft Defender portal, you're granted either full access or read only access. Full access rights are granted to users with Security Administrator or Global Administrator roles in Microsoft Entra ID. Read only access is granted to users with a Security Reader role in Microsoft Entra ID.
+When you first sign in to the Microsoft Defender portal, you're granted either full access or read only access. Full access rights are granted to users with Security Administrator or Global Administrator roles in Microsoft Entra ID. Read only access is granted to users with a Security Reader role in Microsoft Entra ID.
 
-Someone with a Defender for Endpoint Global administrator role has unrestricted access to all devices, regardless of their device group association and the Microsoft Entra user groups assignments.
+Someone with a Defender for Endpoint Global Administrator role has unrestricted access to all devices, regardless of their device group association and the Microsoft Entra user groups assignments.
 
 > [!WARNING]
-> Initially, only those with Microsoft Entra Global Administrator or Security Administrator rights will be able to create and assign roles in the Microsoft Defender portal, therefore, having the right groups ready in Microsoft Entra ID is important.
+> Initially, only those with Microsoft Entra Global Administrator or Security Administrator rights can create and assign roles in the Microsoft Defender portal; therefore, having the right groups ready in Microsoft Entra ID is important.
 >
-> **Turning on role-based access control will cause users with read-only permissions (for example, users assigned to Microsoft Entra Security reader role) to lose access until they are assigned to a role.**
+> **Turning on role-based access control causes users with read-only permissions (for example, users assigned to Microsoft Entra Security reader role) to lose access until they are assigned to a role.**
 >
-> Users with admin permissions are automatically assigned the default built-in Defender for Endpoint global administrator role with full permissions. After opting in to use RBAC, you can assign additional users that are not Microsoft Entra Global or Security Administrators to the Defender for Endpoint global administrator role.
+> Users with administrator permissions are automatically assigned the default built-in Defender for Endpoint Global Administrator role with full permissions. After opting in to use RBAC, you can assign additional users who aren't Microsoft Entra Global Administrators or Security Administrators to the Defender for Endpoint Global Administrator role.
 >
 > After opting in to use RBAC, you cannot revert to the initial roles as when you first logged into the portal.
 
