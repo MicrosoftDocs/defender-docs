@@ -11,7 +11,7 @@
       - name: Site security
         href: site-security-overview.md     
       - name: Enterprise for IoT
-        href: enterprise-for-iot-in-xdr.md      
+        href: enterprise-for-iot.md      
     - name: Get started
       items:
       - name: Prerequisites

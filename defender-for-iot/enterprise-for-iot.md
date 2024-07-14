@@ -9,7 +9,7 @@ ms.date: 06/25/2024
 ms.topic: how-to
 ---
 
-# Enterprise for IoT in the XDR portal
+# Enterprise for IoT in the Defender portal
 
 Extend Defender for IoT's agentless security features beyond OT environments to enterprise IoT devices by using enterprise IoT security with Microsoft Defender for Endpoint, and view related alerts, vulnerabilities, and recommendations for IoT devices in Microsoft Defender XDR.
 
@@ -20,7 +20,7 @@ While the number of IoT devices continues to grow, they often lack the security 
 
 Microsoft Defender for IoT seamlessly integrates with Microsoft Defender XDR and Microsoft Defender for Endpoint to provide both IoT device discovery and security value for IoT devices, including purpose-built alerts, recommendations, and vulnerability data.
 <!-- I dont know if this is still appropriate? -->
-:::image type="content" source="media/enterprise-for-iot-in-xdr/eiot-architecture.png" alt-text="The architecture showing the use of Enterprise IoT":::
+:::image type="content" source="media/enterprise-for-iot/eiot-architecture.png" alt-text="The architecture showing the use of Enterprise IoT":::
 
 ## Enterprise IoT security in Microsoft Defender XDR
 
@@ -45,7 +45,7 @@ The following Defender for Endpoint security recommendations are supported for E
 •	Remove insecure administration protocols SNMP V1 and SNMP V2
 •	Require authentication for VNC management interface
 
-Frequently asked questions
+## Frequently asked questions
 
 This section provides a list of frequently asked questions about securing Enterprise IoT networks with Microsoft Defender for IoT.
 What is the difference between OT and Enterprise IoT?
