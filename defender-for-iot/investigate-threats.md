@@ -74,4 +74,4 @@ DeviceInfo
 |take 100
 ```
 
-This is relevant for both the Device inventory and Site security. For more information, see [Advanced hunting](../defender-xdr/advanced-hunting-overview.md) and the [Advanced hunting DeviceInfo schema](/defender/defender-xdr/advanced-hunting-deviceinfo-table.md).
+This is relevant for both the Device inventory and Site security. For more information, see [Advanced hunting](/defender-xdr/advanced-hunting-overview.md) and the [Advanced hunting DeviceInfo schema](/defender-xdr/advanced-hunting-deviceinfo-table.md).
