@@ -72,4 +72,4 @@ DeviceInfo
 |where Site == "SanFrancisco" and PublicIP == "192.168.1.1" and DeviceCategory == "Endpoint"
 ```
 
-This is relevant for both the Device inventory and Site security. For more information, see [Advanced hunting](../../defender-xdr/advanced-hunting-overview) and the [Advanced hunting DeviceInfo schema](/../defender-xdr/advanced-hunting-deviceinfo-table).
+This is relevant for both the Device inventory and Site security. For more information, see [Advanced hunting](/../defender-xdr/advanced-hunting-overview) and the [Advanced hunting DeviceInfo schema](/../defender-xdr/advanced-hunting-deviceinfo-table).
