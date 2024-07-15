@@ -6,7 +6,7 @@ ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 06/07/2024
+ms.date: 07/15/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -26,6 +26,28 @@ search.appverid: met150
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions is reduced to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
+
+## March-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
+
+- Security intelligence update version: **1.409.1.0**
+- Release date: **April 2, 2024** (Engine) / **April 9, 2024** (Platform)
+- Engine: **1.1.24030.4**
+- Platform: **4.18.24030.9**
+- Support phase: **Technical upgrade support (only)**
+
+### What's new
+
+- Added manageability settings to opt out for One Collector telemetry channel and Experimentation and Configuration Service (ECS).
+- Microsoft Defender Core Service will be disabled when 3rd party Antivirus is installed (except when Defender for Endpoint is running in Passive mode).
+- The known issue in [4.18.24020.7](msda-updates-previous-versions-technical-upgrade-support.md#february-2024-engine-11240209--platform-418240207) where enforcement of device level access policies wasn't working as expected no longer occurs.
+- Fixed high CPU issue caused by redetection done during Sense originating scans.
+- Fixed an issue with Security Intelligence Update disk cleanup.
+- Fixed an issue where the Signature date information on the Security Health report wasn't accurate.
+- Introduced performance improvements when processing paths for exclusions.
+- Added improvements to allow recovering from erroneously added [Indicators of compromise (IoC)](manage-indicators.md).
+- Improved resilience in processing [attack surface reduction](attack-surface-reduction.md) exclusions for Anti Malware Scan Interface (AMSI) scans.
+- Fixed a high memory issue related to the [Behavior Monitoring](behavior-monitor.md) queue that occurred when MAPS is disabled.
+- A possible deadlock when receiving a [Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) configuration change from the [Microsoft Defender portal](https://security.microsoft.com) no longer occurs.
 
 ## February-2024 (Engine: 1.1.24020.9 | Platform: 4.18.24020.7)
 
