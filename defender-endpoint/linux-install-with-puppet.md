@@ -53,9 +53,11 @@ Download the onboarding package from Microsoft Defender portal.
 
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
-1. In Microsoft Defender portal, go to **Settings > Endpoints > Device management > Onboarding**.
+1. In Microsoft Defender portal, go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
+
 2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Your preferred Linux configuration management tool** as the deployment method.
-3. Select **Download onboarding package**. Save the file as WindowsDefenderATPOnboardingPackage.zip.
+
+3. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
 
    :::image type="content" source="media/portal-onboarding-linux-2.png" alt-text="The option to download the onboarded package" lightbox="media/portal-onboarding-linux-2.png":::
 
@@ -83,29 +85,33 @@ Download the onboarding package from Microsoft Defender portal.
 
 ## Create a Puppet manifest
 
-You need to create a Puppet manifest for deploying Defender for Endpoint on Linux to devices managed by a Puppet server. This example makes use of the *apt* and *yumrepo* modules available from puppetlabs, and assumes that the modules have been installed on your Puppet server.
+You need to create a Puppet manifest for deploying Defender for Endpoint on Linux to devices managed by a Puppet server. This example makes use of the `apt` and `yumrepo` modules available from puppetlabs, and assumes that the modules have been installed on your Puppet server.
 
-Create the folders *install_mdatp/files* and *install_mdatp/manifests* under the modules folder of your Puppet installation. This folder is typically located in */etc/puppetlabs/code/environments/production/modules* on your Puppet server. Copy the mdatp_onboard.json file created above to the *install_mdatp/files* folder. Create an *init.pp* file that contains the deployment instructions:
+1. Create the folders `install_mdatp/files` and `install_mdatp/manifests` under the modules folder of your Puppet installation. This folder is typically located in `/etc/puppetlabs/code/environments/production/modules` on your Puppet server. 
 
-```bash
-pwd
-```
+2. Copy the `mdatp_onboard.json` file created earlier to the `install_mdatp/files` folder. 
 
-```Output
-/etc/puppetlabs/code/environments/production/modules
-```
+3. Create an `init.pp` file that contains the deployment instructions:
 
-```bash
-tree install_mdatp
-```
-
-```Output
-install_mdatp
-├── files
-│   └── mdatp_onboard.json
-└── manifests
-    └── init.pp
-```
+   ```bash
+   pwd
+   ```
+   
+   ```Output
+   /etc/puppetlabs/code/environments/production/modules
+   ```
+   
+   ```bash
+   tree install_mdatp
+   ```
+   
+   ```Output
+   install_mdatp
+   ├── files
+   │   └── mdatp_onboard.json
+   └── manifests
+       └── init.pp
+   ```
 
 ### Contents of `install_mdatp/manifests/init.pp`
 
@@ -119,7 +125,7 @@ Each channel corresponds to a Linux software repository.
 
 The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in *insiders-fast* are the first ones to receive updates and new features, followed later by *insiders-slow*, and lastly by *prod*.
 
-In order to preview new features and provide early feedback, it is recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
+In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
 
 > [!WARNING]
 > Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location.
@@ -200,7 +206,7 @@ class install_mdatp (
 
 ## Deployment
 
-Include the above manifest in your site.pp file:
+Include the above manifest in your `site.pp` file:
 
 ```bash
 cat /etc/puppetlabs/code/environments/production/manifests/site.pp
@@ -248,8 +254,8 @@ The above command prints `1` if the product is onboarded and functioning as expe
 
 If the product is not healthy, the exit code (which can be checked through `echo $?`) indicates the problem:
 
-- 1 if the device isn't onboarded yet.
-- 3 if the connection to the daemon cannot be established.
+- `1` if the device isn't onboarded yet.
+- `3` if the connection to the daemon cannot be established.
 
 ## Log installation issues
 
@@ -270,4 +276,5 @@ class remove_mdatp {
     }
 }
 ```
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
