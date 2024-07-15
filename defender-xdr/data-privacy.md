@@ -19,7 +19,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 07/14/2024
+ms.date: 07/17/2024
 ---
 
 # Microsoft Defender XDR data security and privacy
@@ -38,7 +38,7 @@ Customer data in pseudonymized form might also be stored in central storage and 
 The table below shows the general information on the data storage and privacy of specific service sources in Defender XDR:
 
 |Product|Data retention policy|More information|
-|:---:|:---:|:---:|
+|:---|:---|:---|
 |Microsoft Defender for Endpoint|180 days|[Defender for Endpoint data storage and privacy](/defender-endpoint/data-storage-privacy)|
 |Microsoft Defender for Office 365|Varies according to feature and license|[Defender for Office 365 data retention information](/defender-office-365/mdo-data-retention)|
 |Microsoft Defender for Identity|180 days|[Defender for Identity data storage and privacy](/defender-for-identity/privacy-compliance)|
