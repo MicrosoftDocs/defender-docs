@@ -1,6 +1,6 @@
 --- 
 title: 'Microsoft Defender Threat Intelligence (Defender TI) data sets'
-description: 'Learn about Microsoft Defender Threat Intelligence (Defender TI)’s data sets feature.'
+description: 'Learn about Microsoft Defender Threat Intelligence (Defender TI)'s data sets feature.'
 author: alexroland24
 ms.author: aroland
 manager: dolmont
@@ -15,7 +15,7 @@ ms.custom: template-concept
 >[!IMPORTANT] 
 > On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) will be retired and will no longer be accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
-Microsoft centralizes numerous data sets into Microsoft Defender Threat Intelligence (Defender TI), making it easier for Microsoft’s customers and community to conduct infrastructure analysis. Microsoft’s primary focus is to provide as much data as possible about internet infrastructure to support various security use cases.
+Microsoft centralizes numerous data sets into Microsoft Defender Threat Intelligence (Defender TI), making it easier for Microsoft's customers and community to conduct infrastructure analysis. Microsoft's primary focus is to provide as much data as possible about internet infrastructure to support various security use cases.
 
 Microsoft collects, analyzes, and indexes internet data to help you: 
 - Detect and respond to threats
@@ -100,7 +100,7 @@ Our PDNS resolution data includes the following information:
 
 ## WHOIS
 
-Thousands of times a day, domains are bought and/or transferred between individuals and organizations. The process is easy, only takes a few minutes, and can be as low as $7, depending on the registrar provider. Beyond payment details, one must supply additional information about themselves. Some of this information is stored as part of a WHOIS record the domain has been set up. This action would be considered a public domain registration. However, there are private domain registration services, where one can hide their personal information from their domain’s WHOIS record. In these situations, the domain owner’s information is safe and replaced by their registrar’s information. More actor groups are performing private domain registrations to make it more difficult for analysts to find other domains that they own. Defender TI provides various data sets to find actors’ shared infrastructure when WHOIS records don’t provide leads.
+Thousands of times a day, domains are bought and/or transferred between individuals and organizations. The process is easy, only takes a few minutes, and can be as low as $7, depending on the registrar provider. Beyond payment details, one must supply additional information about themselves. Some of this information is stored as part of a WHOIS record the domain has been set up. This action would be considered a public domain registration. However, there are private domain registration services, where one can hide their personal information from their domain's WHOIS record. In these situations, the domain owner's information is safe and replaced by their registrar's information. More actor groups are performing private domain registrations to make it more difficult for analysts to find other domains that they own. Defender TI provides various data sets to find actors' shared infrastructure when WHOIS records don't provide leads.
 
 WHOIS is a protocol that lets anyone query information about a domain, IP address, or subnet. One of the most common functions for WHOIS in threat infrastructure research is to identify or connect disparate entities based on unique data shared within WHOIS records. If you ever purchased a domain yourself, you might have noticed that the content requested from the registrars is never verified. In fact, you could have put anything in the record (and many people do), which would then be displayed to the world.
 
@@ -127,13 +127,13 @@ Our WHOIS data includes the following information:
 
 ### Current WHOIS lookups
 
-Defender TI’s current WHOIS repository highlights all domains in Microsoft’s WHOIS collection that are currently registered and associated with the WHOIS attribute of interest. This data highlights the domain's registration and expiration date, along with the email address used to register the domain. This data is displayed in the WHOIS Search tab of the platform.
+Defender TI's current WHOIS repository highlights all domains in Microsoft's WHOIS collection that are currently registered and associated with the WHOIS attribute of interest. This data highlights the domain's registration and expiration date, along with the email address used to register the domain. This data is displayed in the WHOIS Search tab of the platform.
 
 :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois.png" alt-text="Data tab WHOIS." lightbox="/defender/threat-intelligence/media/data-sets-whois.png":::
 
 ### Historical WHOIS lookups
 
-Defender TI’s **WHOIS history** repository provides users with access to all known historical domain associations to WHOIS attributes based on the system’s observations. This data set highlights all domains associated with an attribute that a user pivots from displaying the first time and the last time we observed the association between the domain and attribute queried. This data is displayed in a separate tab next to the **WHOIS current** tab.
+Defender TI's **WHOIS history** repository provides users with access to all known historical domain associations to WHOIS attributes based on the system's observations. This data set highlights all domains associated with an attribute that a user pivots from displaying the first time and the last time we observed the association between the domain and attribute queried. This data is displayed in a separate tab next to the **WHOIS current** tab.
 
 :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-history.png" alt-text="Search WHOIS history." lightbox="/defender/threat-intelligence/media/data-sets-whois-history.png":::
 
@@ -186,7 +186,7 @@ Defender TI’s **WHOIS history** repository provides users with access to all k
 ## Certificates
 Beyond securing your data, TLS certificates are a fantastic way for users to connect disparate network infrastructure. Modern scanning techniques let us perform data requests against every node on the internet in a matter of hours. In other words, we can associate a certificate to an IP address hosting it easily and regularly.
 
-Much like a WHOIS record, TLS certificates require information to be supplied by the user to generate the final product. Aside from the domain, the TLS certificate includes who the certificate is being created for (unless self-signed). The user can make up the additional information. Where Microsoft’s users see the most value from TLS certificates isn't necessarily the unique data someone might use when generating the certificate, but where it's hosted.
+Much like a WHOIS record, TLS certificates require information to be supplied by the user to generate the final product. Aside from the domain, the TLS certificate includes who the certificate is being created for (unless self-signed). The user can make up the additional information. Where Microsoft's users see the most value from TLS certificates isn't necessarily the unique data someone might use when generating the certificate, but where it's hosted.
 
 To access a TLS certificate, it needs to be associated with a web server and exposed through a particular port (most often 443). Using mass internet scans on a weekly basis, it's possible to scan all IP addresses and obtain any certificate being hosted to build a historic repository of certificate data. Having a database of IP addresses to TLS certificate mappings provides you with a way to identify overlaps in infrastructure.
 
@@ -284,7 +284,7 @@ Our subdomain data includes the following information:
 
 ## Trackers
 
-Trackers are unique codes or values found within web pages and often used to track user interaction. These codes could be used to correlate a disparate group of websites to a central entity. Often, threat actors copy the source code of a victim’s website they're looking to impersonate for a phishing campaign. They seldomly take the time to remove these IDs, which could allow users to identify these fraudulent sites using Defender TI's **Trackers** data set. Actors might also deploy tracker IDs to see how successful their attack campaigns are. This activity is similar to how marketers use SEO IDs, such as a Google Analytics tracker ID, to track the success of their marketing campaign.
+Trackers are unique codes or values found within web pages and often used to track user interaction. These codes could be used to correlate a disparate group of websites to a central entity. Often, threat actors copy the source code of a victim's website they're looking to impersonate for a phishing campaign. They seldomly take the time to remove these IDs, which could allow users to identify these fraudulent sites using Defender TI's **Trackers** data set. Actors might also deploy tracker IDs to see how successful their attack campaigns are. This activity is similar to how marketers use SEO IDs, such as a Google Analytics tracker ID, to track the success of their marketing campaign.
 
 Our tracker data set includes IDs from providers like Google, Yandex, Mixpanel, New Relic, and Clicky, and continues to grow. It includes the following information:
 
