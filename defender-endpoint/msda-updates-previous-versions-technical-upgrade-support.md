@@ -33,7 +33,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 - Release date: **April 2, 2024** (Engine) / **April 9, 2024** (Platform)
 - Engine: **1.1.24030.4**
 - Platform: **4.18.24030.9**
-- Support phase: **Security and Critical Updates**
+- Support phase: **Technical upgrade support (only)**
 
 ### What's new
 
