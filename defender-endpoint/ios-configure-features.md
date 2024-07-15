@@ -178,7 +178,7 @@ For more details on MAM or app protection policy, see [iOS app protection policy
 
 Microsoft Defender for Endpoint on iOS enables Privacy Controls for both the Admins and the End Users. This includes the controls for enrolled (MDM) and unenrolled (MAM) devices.
 
-For Customers with MDM, admins can configure the Privacy Controls through Managed devices in the App Config. For Customers without enrollment, using MAM, admins can configure the Privacy Controls through Managed apps in the App Config. End Users will also have the ability to configure the Privacy Settings from the Defender App settings.
+For Customers with MDM, admins can configure the Privacy Controls through Managed devices in the App Config. For Customers without enrollment, using MAM, admins can configure the Privacy Controls through Managed apps in the App Config. End Users also can configure the Privacy Settings from the Defender App settings.
 
 ### Configure privacy in phish alert report
 
@@ -207,7 +207,7 @@ Customers can now enable privacy control for the phish report sent by Microsoft 
 
    3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 
-   4. On the **Settings** page, under the **General Configuration Settings**, add **DefenderExcludeURLInReport** as the key and value as `true`.
+   4. On the **Settings** page, under the **General Configuration Settings**, add `DefenderExcludeURLInReport` as the key, and set its value as `true`.
 
       - To enable privacy and not collect the domain name, enter the value as `true` and assign this policy to users. By default, this value is set to `false`.
       - For users with key set as `true`, the phish alert doesn't contain the domain name information whenever a malicious site is detected and blocked by Defender for Endpoint.
@@ -219,7 +219,7 @@ Customers can now enable privacy control for the phish report sent by Microsoft 
    For Supervised devices, End User controls aren't visible. Your admin decides and controls the settings. However, for Unsupervised devices, the control is displayed under the **Settings \> Privacy**.
 
    - Users see a toggle for **Unsafe Site Info**.
-   - This toggle is only visible if Admin has set **DefenderExcludeURLInReport = true**.
+   - This toggle is only visible if Admin has set `DefenderExcludeURLInReport = true`.
    - If enabled by an Admin, Users can decide if they want to send the unsafe site info to their Organization or not.
    - By default, it's set to `false`. The unsafe site information isn't sent.
    - If user toggles it to `true`, the unsafe site details are sent.
@@ -244,7 +244,7 @@ Microsoft Defender for Endpoint on iOS enables **Optional Permissions** in the o
 
    3. Select **Microsoft Defender for Endpoint** as the target app.
 
-   4. On the **Settings** page, select **Use configuration designer** and add **DefenderOptionalVPN** as the key and value type as **Boolean**.
+   4. On the **Settings** page, select **Use configuration designer** and add `DefenderOptionalVPN` as the key, and set its value type as `Boolean`.
 
       - To enable optional VPN permission, enter value as `true` and assign this policy to users. By default, this value is set to `false`.
       - For users with key set as `true`, the users are able to onboard the app without giving the VPN permission.
@@ -265,7 +265,7 @@ Microsoft Defender for Endpoint on iOS enables **Optional Permissions** in the o
 
 Microsoft Defender for Endpoint has the capability of detecting unmanaged and managed devices that are jailbroken. These jailbreak checks are done periodically. If a device is detected as jailbroken, these events occur:
 
-- **High**-risk alert is reported to the Microsoft Defender portal. If device Compliance and Conditional Access is set up based on device risk score, then the device is blocked from accessing corporate data.
+- High-risk alert is reported to the Microsoft Defender portal. If device Compliance and Conditional Access is set up based on device risk score, then the device is blocked from accessing corporate data.
 - User data on app is cleared. When user opens the app after jailbreaking the VPN profile also is deleted and no web protection is offered.
 
 ### Configure compliance policy against jailbroken devices
@@ -283,17 +283,17 @@ Follow the steps below to create a compliance policy against jailbroken devices.
 
 2. Specify a name of the policy, such as *Compliance Policy for Jailbreak*.
 
-3. In the compliance settings page, select to expand **Device Health** section and select **Block** for **Jailbroken devices** field.
+3. In the compliance settings page, select to expand **Device Health** section and select `Block` in the **Jailbroken devices** field.
 
    :::image type="content" source="media/ios-jb-settings.png" alt-text="The Compliance settings tab" lightbox="media/ios-jb-settings.png":::
 
-4. In the **Actions for noncompliance** section, select the actions as per your requirements and select **Next**.
+4. In the **Actions for noncompliance** section, select the actions as per your requirements, and then select **Next**.
 
    :::image type="content" source="media/ios-jb-actions.png" alt-text="The Actions for noncompliance tab" lightbox="media/ios-jb-actions.png":::
 
 5. In the **Assignments** section, select the user groups that you want to include for this policy and then select **Next**.
 
-6. In the **Review+Create** section, verify that all the information entered is correct and then select **Create**.
+6. In the **Review + Create** section, verify that all the information entered is correct and then select **Create**.
 
 ## Configure custom indicators
 
@@ -314,7 +314,7 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
 
 1. Ensure the device is configured in the [Supervised mode](ios-install.md#complete-deployment-for-supervised-devices).
 
-1. To enable the feature in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint Security** \> **Microsoft Defender for Endpoint** \> **Enable App sync for iOS/iPadOS devices**.
+2. To enable the feature in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint Security** \> **Microsoft Defender for Endpoint** \> **Enable App sync for iOS/iPadOS devices**.
 
      :::image type="content" source="media/tvm-app-sync-toggle.png" alt-text="App sync toggleSup" lightbox="media/tvm-app-sync-toggle.png":::
 
@@ -340,9 +340,9 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
 
    3. Select **Microsoft Defender for Endpoint** as the target app.
 
-   4. On the **Settings** page, select Use configuration designer and add **DefenderTVMPrivacyMode** as the key and value type as **String**.
+   4. On the **Settings** page, select Use configuration designer and add `DefenderTVMPrivacyMode` as the key. Set its value type as `String`.
 
-      - To disable privacy and collect the list of apps installed, enter value as `False` and assign this policy to users. 
+      - To disable privacy and collect the list of apps installed, specify the value as `False`, and then assign this policy to users. 
       - By default, this value is set to `True` for unsupervised devices.
       - For users with key set as `False`, Defender for Endpoint sends the list of apps installed on the device for vulnerability assessment.
    
@@ -350,17 +350,17 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
    
    6. Turning the above privacy controls on or off will not impact the device compliance check or conditional access.
 
-4. Once the config is applied, end-user will need to open the app to **Approve** the privacy setting.
+4. Once the config is applied, end users must open the app to approve the privacy setting.
 
    - Privacy approval screen will come only for unsupervised devices.
    - Only if end-user approves the privacy, the app information is sent to the Defender for Endpoint console.
 
    :::image type="content" source="media/tvm-user-privacy2.png" alt-text="Screenshot of the end user privacy screen." lightbox="media/tvm-user-privacy2.png":::
 
-Once the client versions are deployed to target iOS devices, the processing will start. Vulnerabilities found on those devices will start showing up in the Defender Vulnerability Management dashboard. The processing might take few hours (max 24 hours) to complete. Especially for the entire list of apps to show up in the software inventory.
+Once the client versions are deployed to target iOS devices, processing starts. Vulnerabilities found on those devices start showing up in the Defender Vulnerability Management dashboard. The processing might take few hours (max 24 hours) to complete. This time frame is especially true for the entire list of apps to show up in the software inventory.
 
 > [!NOTE]
-> If you're using SSL inspection solution within your iOS device, please allow list these domain names **securitycenter.windows.com** (in commercial environment) and **securitycenter.windows.us** (in GCC environment) for TVM feature to work.
+> If you're using SSL inspection solution within your iOS device, please allow list the domain names `securitycenter.windows.com` (in commercial environment) and `securitycenter.windows.us` (in GCC environment) for TVM feature to work.
 
 ## Disable sign out
 
