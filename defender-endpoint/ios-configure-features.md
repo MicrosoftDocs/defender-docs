@@ -427,19 +427,25 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 
 **For unenrolled devices(MAM)**
 
-1. In the Microsoft Intune admin center, navigate to Apps > App configuration policies > Add > Managed apps.
-1. Give the policy a name.
-1. Under the Select Public Apps, choose Microsoft Defender for Endpoint as the target app.
-1. In Settings page, add **DefenderDeviceTag** as the key under the General Configuration Settings.
-   - Admin can assign a new tag by adding the key **DefenderDeviceTag** and setting a value for device tag.
-   - Admin can edit an existing tag by modifying the value of the key **DefenderDeviceTag**.
-   - Admin can delete an existing tag by removing the key **DefenderDeviceTag**.
-1. Click Next and assign this policy to targeted devices/users.
+1. In the Microsoft Intune admin center, go to **Apps** > **App configuration policies** > **Add** > **Managed apps**.
+
+2. Give the policy a name.
+
+3. Under the **Select Public Apps**, choose `Microsoft Defender for Endpoint` as the target app.
+
+4. On the **Settings** page, add `DefenderDeviceTag` as the key (under **General Configuration Settings**).
+
+   - An admin can assign a new tag by adding the key `DefenderDeviceTag` and setting a value for device tag.
+   - An admin can edit an existing tag by modifying the value of the key `DefenderDeviceTag`.
+   - An admin can delete an existing tag by removing the key `DefenderDeviceTag`.
+
+5. Select **Next**, and then assign this policy to targeted devices/users.
 
 > [!NOTE] 
 > The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
 
 ## Suppress OS update Notification
+
 A configuration is available for customers to suppress OS update notification in Defender for Endpoint on iOS. Once the config key is set in the Intune App configuration policies, Defender for Endpoint will not send any notifications on the device for OS updates. However, if you do open the Defender app the Device Health card will be visible and show the state of your OS. 
 
 This configuration is available for both the enrolled (MDM) devices as well as unenrolled (MAM) devices. Admins can use the following steps to suppress the OS update Notification.
