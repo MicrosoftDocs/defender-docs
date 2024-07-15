@@ -63,13 +63,13 @@ Defender for IoT generates its own unique alert.
 
 ## Advanced hunting site property
 
-Use the **Site** property listed within the **DeviceInfo** table to write queries within Advanced hunting. This allows you to filter devices according to a specific site or set of sites, for example, all devices that communicated with malicious devices at a specific site.
+Use the **Site** property listed in the **DeviceInfo** table to write queries for Advanced hunting. This allows you to filter devices according to a specific site, for example, all devices that communicated with malicious devices at a specific site.
 
-Use the following query to list all of the devices at all of your sites.
+The following query will list all endpoint devices with the specific IP address at the San Francisco site.
 
 ```kusto
 DeviceInfo
-|where Site == "SanFranciso" and PublicIP == "192.168.1.1" and DeviceCategory == "Endpoint"
+|where Site == "SanFrancisco" and PublicIP == "192.168.1.1" and DeviceCategory == "Endpoint"
 ```
 
-This is relevant for both the Device inventory and Site security. For more information, see [Advanced hunting](/defender-xdr/advanced-hunting-overview.md) and the [Advanced hunting DeviceInfo schema](/defender-xdr/advanced-hunting-deviceinfo-table.md).
+This is relevant for both the Device inventory and Site security. For more information, see [Advanced hunting](../../defender-xdr/advanced-hunting-overview.md) and the [Advanced hunting DeviceInfo schema](/../defender-xdr/advanced-hunting-deviceinfo-table.md).

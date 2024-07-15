@@ -27,7 +27,7 @@ Features released earlier than nine months ago are described in the [What's new 
 
 ### Site property added DeviceInfo schema
 
-New site property is added to the DeviceInfo schema for Advanced Hunting, for more information see[investigate threats](investigate-threats.md#advanced-hunting-site-property).
+In the Advanced hunting tables, the **Site** property is added to the **DeviceInfo** schema, for more information see[investigate threats](investigate-threats.md#advanced-hunting-site-property).
 
 ## Next steps
 
