@@ -1,6 +1,6 @@
 ---
 title: What's new in Microsoft Defender for IoT in the Defender portal
-description: This article describes new features available in Microsoft Defender for IoT, including both OT and Enterprise IoT networks, and both on-premises and in the Defender portal.
+description: This article describes new features available in Microsoft Defender for IoT in the Defender portal, including both OT and Enterprise IoT networks.
 ms.topic: whats-new
 ms.service: defender-for-iot
 author: lwainstein
@@ -12,23 +12,20 @@ ms.custom: enterprise-iot
 
 # What's new in Microsoft Defender for IoT?
 
-This article describes features available in Microsoft Defender for IoT, across both OT and Enterprise IoT networks, both on-premises and in the Defender portal, and for versions released in the last nine months.
-<!-- which parts of this need to be kept or adapted? -->
-Features released earlier than nine months ago are described in the [What's new archive for Microsoft Defender for IoT for organizations](release-notes-archive.md). For more information specific to OT monitoring software versions, see [OT monitoring software release notes](release-notes.md).
+This article describes features available in Microsoft Defender for IoT in the Defender portal, across both OT and Enterprise IoT networks.
 
-> [!NOTE]
-> Noted features listed below are in PREVIEW. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include other legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
->
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+
 ## July 2024
 
 |Service area  |Updates  |
 |---------|---------|
-| **OT networks** | - [Site property added DeviceInfo schema](#site-property-added-deviceinfo-schema) |
+| **OT networks** | - [Site property added DeviceInfo schema](#new-site-property-added-deviceinfo-schema) |
 
-### Site property added DeviceInfo schema
+### New Site property added DeviceInfo schema
 
-In the Advanced hunting tables, the **Site** property is added to the **DeviceInfo** schema, for more information see[investigate threats](investigate-threats.md#advanced-hunting-site-property).
+In the advanced hunting tables, the **Site** property is added to the **DeviceInfo** schema. For more information, see[investigate threats](investigate-threats.md#advanced-hunting-site-property).
 
 ## Next steps
 
-[Getting started with Defender for IoT](get-started.md)
+[Get started with Defender for IoT](get-started.md)
