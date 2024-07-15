@@ -1,6 +1,6 @@
 ---
-title: Prerequisites for Microsoft Defender for IoT in the Defender portal
-description: This article describes the prerequisites for Microsoft Defender for IoT in the Microsoft Defender portal.
+title: Prerequisites for a license or setting up a site for Microsoft Defender for IoT in the Defender portal
+description: This article describes the prerequisites for a license or setting up a site for Microsoft Defender for IoT in the Microsoft Defender portal.
 ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
