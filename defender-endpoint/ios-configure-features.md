@@ -111,15 +111,15 @@ Follow the below steps for setting up MDM configuration for enrolled devices for
 
    :::image type="content" source="media/np-mdmconfig-key.png" alt-text="Screenshot that shows the mdm configuration policy." lightbox="media/np-mdmconfig-key.png":::
 
-6. For other configurations related to Network protection, add the following keys, choose the corresponding value type and value.
+1. For other configurations related to Network protection, add the following keys, choose the corresponding value type and value.
 
    | Key | Value Type | Default (true-enable, false-disable) | Description |
    | --- | --- | --- | --- |
    | `DefenderOpenNetworkDetection` | Integer | 2 | 1 - Audit, 0 - Disable, 2 - Enable(default). This setting is managed by an IT Admin to audit, disable, or enable open network detection, respectively. In 'Audit' mode, alerts is sent only to the ATP portal with no end-user experience. For end-user experience, set the config to 'Enable' mode.|
    | `DefenderEndUserTrustFlowEnable` | String | false | true - enable, false - disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks. |
    | `DefenderNetworkProtectionAutoRemediation` | String | true | true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WIFI access points.|
-   | `DefenderNetworkProtectionPrivacy` | String | true | true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi or certs data is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
-
+   | `DefenderNetworkProtectionPrivacy` | String | true | true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
+   
 7. In the Assignments section, admin can choose groups of users to include and exclude from the policy.
 
 8. Review and create the configuration policy.
@@ -140,15 +140,15 @@ Follow the below steps for setting up MAM config for unenrolled devices for Netw
 
    :::image type="content" source="media/addiosconfigvalue.png" alt-text="Add configuration value." lightbox="media/addiosconfigvalue.png":::
 
-4. For other configurations related to network protection, add the following keys and appropriate corresponding value.
+1. For other configurations related to network protection, add the following keys and appropriate corresponding value.
 
-    |Key| Default (true - enable, false - disable)|Description|
-    |---|---|---|
-    |`DefenderOpenNetworkDetection`|2| 1 - Audit, 0 - Disable, 2 - Enable (default). This setting is managed by an IT admin to enable, audit, or disable open network detection. In Audit mode, alerts are sent only to the ATP portal with no user side experience. For user experience, set the config to "Enable" mode.|
-    |`DefenderEndUserTrustFlowEnable`| false | true - enable, false - disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks.|
-    |`DefenderNetworkProtectionAutoRemediation`| true |true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WIFI access points.|
-    |`DefenderNetworkProtectionPrivacy`| true |true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi or certs data is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
-  
+   |Key| Default (true - enable, false - disable)|Description|
+   |---|---|---|
+   |`DefenderOpenNetworkDetection`|2| 1 - Audit, 0 - Disable, 2 - Enable (default). This setting is managed by an IT admin to enable, audit, or disable open network detection. In Audit mode, alerts are sent only to the ATP portal with no user side experience. For user experience, set the config to "Enable" mode.|
+   |`DefenderEndUserTrustFlowEnable`| false | true - enable, false - disable; This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks.|
+   |`DefenderNetworkProtectionAutoRemediation`| true |true - enable, false - disable; This setting is used by the IT admin to enable or disable the remediation alerts that are sent when a user performs remediation activities like switching to safer WIFI access points.|
+   |`DefenderNetworkProtectionPrivacy`| true |true - enable, false - disable; This setting is managed by IT admin to enable or disable privacy in network protection. If privacy is disabled, then user consent to share the malicious wifi is shown. If privacy is enabled, then no user consent is shown and no app data is collected. |
+   
 5. In the **Assignments** section, an admin can choose groups of users to include and exclude from the policy.
 
    :::image type="content" source="media/assigniosconfig.png" alt-text="Assign configuration." lightbox="media/assigniosconfig.png":::
