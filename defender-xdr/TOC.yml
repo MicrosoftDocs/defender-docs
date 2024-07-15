@@ -24,6 +24,8 @@
           href: microsoft-365-defender-portal.md
         - name: Defender for Endpoint
           href: microsoft-365-security-center-mde.md
+        - name: Defender for IoT
+          href: /defender-for-iot/microsoft-defender-iot
         - name: Defender for Office 365
           href: microsoft-365-security-center-mdo.md
         - name: Defender for Identity
@@ -34,6 +36,8 @@
           href: microsoft-365-security-center-defender-cloud.md
         - name: Microsoft Sentinel
           items:
+          - name: Integration overview
+            href: /azure/sentinel/microsoft-365-defender-sentinel-integration?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json&tabs=defender-portal
           - name: Experience in Defender portal
             href: /azure/sentinel/microsoft-sentinel-defender-portal?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
           - name: Connect Microsoft Sentinel to Microsoft Defender
@@ -130,6 +134,8 @@
       items: 
        - name: Overview
          href: incident-response-overview.md
+       - name: Alerts, incidents, and correlation
+         href: alerts-incidents-correlation.md
        - name: Respond to incidents
          items: 
               - name: Overview
@@ -408,8 +414,6 @@
                   href: communicate-defender-experts-xdr.md
                 - name: Defender Experts for Hunting
                   href: defender-experts-for-hunting.md
-                - name: Ask Defender Experts
-                  href: experts-on-demand.md
                 - name: Auditing
                   href: auditing.md
               - name: Frequently asked questions
@@ -481,7 +485,7 @@
       items:
         - name: Multitenant management in Microsoft Defender XDR
           href: mto-overview.md
-        - name: Set up multitenant management in Microsoft Defender XDR 
+        - name: Set up multitenant management 
           href: mto-requirements.md
         - name: View and manage incidents and alerts
           href: mto-incidents-alerts.md
@@ -493,10 +497,10 @@
           href: mto-dashboard.md
         - name: Manage tenants
           href: mto-tenants.md
-        - name: Distribute content via tenant groups
-          href: mto-tenantgroups.md                      
         - name: Create and manage endpoint security policies
-          href: mto-endpoint-security-policy.md               
+          href: mto-endpoint-security-policy.md
+        - name: Manage content distribution with tenant groups
+          href: mto-tenantgroups.md                           
     - name: Manage roles and permissions
       items: 
         - name: Manage access and roles in Microsoft Defender XDR

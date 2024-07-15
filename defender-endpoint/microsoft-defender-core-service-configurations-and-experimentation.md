@@ -5,7 +5,7 @@ search.appverid: met150
 ms.service: defender-endpoint
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.localizationpriority: medium
 ms.date: 03/26/2024
 audience: ITPro
