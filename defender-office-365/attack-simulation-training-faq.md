@@ -109,7 +109,7 @@ Custom payloads have the option to add the External tag to messages. For more in
 
 There are no built-in options to add safety tips to payloads, but you can use the following methods on the **Configure payload** page of the payload setup wizard::
 
-- Use an existing email message that contains the safety tip as a template. Safe the message as HTML and copy the information.
+- Use an existing email message that contains the safety tip as a template. Save the message as HTML and copy the information.
 - Use the following sample code for the First contact safety tip:
 
   ```html
@@ -148,7 +148,7 @@ Yes. For more information, see [Training campaigns in Attack simulation training
 
 The [Users tab](attack-simulation-training-simulations.md#users-tab) for the simulation is filterable by **Simulation message delivery: Failed to deliver**.
 
-If you won the sender domain, the undelivered simulation report is returned in a non-delivery report (also known as an NDR or bounce message). For more information about the codes in the NDR, see [Email non-delivery reports and SMTP errors in Exchange Online](/exchange/troubleshoot/email-delivery/ndr/non-delivery-reports-in-exchange-online).
+If you own the sender domain, the undelivered simulation report is returned in a non-delivery report (also known as an NDR or bounce message). For more information about the codes in the NDR, see [Email non-delivery reports and SMTP errors in Exchange Online](/exchange/troubleshoot/email-delivery/ndr/non-delivery-reports-in-exchange-online).
 
 ## Issues with Attack simulation training reporting
 
@@ -326,14 +326,14 @@ A: See the following table:
 |Simulation metadata|18 months unless the [simulation is deleted sooner by an admin](attack-simulation-training-simulations.md#remove-simulations).|
 |Simulation automation|18 months unless the [simulation automation is deleted sooner by an admin](attack-simulation-training-simulation-automations.md#remove-simulation-automations).|
 |Payload automation|18 months unless the [payload automation is deleted sooner by an admin](attack-simulation-training-payload-automations.md#remove-payload-automations).|
-|User activity in simulation metadata|18 months unless deleted by an admin.|
+|User activity in simulation metadata|18 months unless the [simulation is deleted sooner by an admin](attack-simulation-training-simulations.md#remove-simulations).|
 |Global payloads|Persisted unless deleted by Microsoft.|
 |Tenant payloads|18 months unless the [archived payload is deleted sooner by an admin](attack-simulation-training-payloads.md#remove-archived-payloads).|
 |User activity in training metadata|18 months unless the [simulation is deleted sooner by an admin](attack-simulation-training-simulations.md#remove-simulations).|
 |MDO recommended payloads|6 months.|
 |Global end user notifications|Persisted unless deleted by Microsoft.|
 |Tenant end user notifications|18 months unless the [notification is deleted sooner by an admin](attack-simulation-training-end-user-notifications.md#remove-end-user-notifications).|
-|Global login pages|Persisted unless deleted by the service.|
+|Global login pages|Persisted unless deleted by Microsoft.|
 |Tenant login pages|18 months unless the [login page is deleted sooner by an admin](attack-simulation-training-login-pages.md#remove-login-pages).|
 |Global landing pages|Persisted unless deleted by Microsoft|
 |Tenant landing pages|18 months unless the [landing page is deleted sooner by an admin](attack-simulation-training-landing-pages.md#remove-landing-pages).|
