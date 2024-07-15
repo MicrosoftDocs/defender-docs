@@ -61,7 +61,7 @@ Defender for IoT generates its own unique alert.
 |----|----|
 |**Possible operational impact due to a compromised device** |A compromised device communicated with an operational technology (OT) asset. An attacker might be attempting to control or disrupt physical operations. |
 
-## Advanced hunting site property
+## Advanced hunting
 
 Use the **Site** property listed in the **DeviceInfo** table to write queries for advanced hunting. This allows you to filter devices according to a specific site, for example, all devices that communicated with malicious devices at a specific site.
 

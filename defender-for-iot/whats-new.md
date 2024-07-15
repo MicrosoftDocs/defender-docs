@@ -24,7 +24,7 @@ This article describes features available in Microsoft Defender for IoT in the D
 
 ### New Site property added DeviceInfo schema
 
-In the advanced hunting tables, the **Site** property is added to the **DeviceInfo** schema. For more information, see[investigate threats](investigate-threats.md#advanced-hunting-site-property).
+In the advanced hunting tables, the **Site** property is added to the **DeviceInfo** schema. For more information, see [investigate threats](investigate-threats.md#advanced-hunting-site-property).
 
 ## Next steps
 
