@@ -40,7 +40,7 @@ For more information about how to set up Conditional Access with Defender for En
 
 ## Web Protection and VPN
 
-By default, Defender for Endpoint on iOS includes and enables the web protection feature. [Web protection](web-protection-overview.md) helps to secure devices against web threats and protect users from phishing attacks. Anti-phishing and custom indicators (URL and Domain) are supported as part of Web Protection. IP based custom indicators are currently not supported on iOS. Web Content Filtering is currently not supported on mobile platforms (Android and iOS).
+By default, Defender for Endpoint on iOS includes and enables the web protection feature. [Web protection](web-protection-overview.md) helps to secure devices against web threats and protect users from phishing attacks. Anti-phishing and custom indicators (URL and Domain) are supported as part of web protection. IP based custom indicators are currently not supported on iOS. Web Content Filtering is currently not supported on mobile platforms (Android and iOS).
 
 Defender for Endpoint on iOS uses a VPN in order to provide this capability. The VPN is local, and unlike traditional VPN, network traffic isn't sent outside the device.
 
@@ -224,7 +224,7 @@ Customers can now enable privacy control for the phish report sent by Microsoft 
    - By default, it's set to `false`. The unsafe site information isn't sent.
    - If user toggles it to `true`, the unsafe site details are sent.
 
-Turning the above privacy controls on or off doesn't impact the device compliance check or conditional access.
+Turning privacy controls on or off doesn't impact the device compliance check or conditional access.
 
 > [!NOTE]
 > On Supervised devices with the configuration profile, Microsoft Defender for Endpoint can access the entire URL and if it is found to be phishing, it is blocked.
