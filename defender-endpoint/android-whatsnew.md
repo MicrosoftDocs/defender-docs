@@ -42,7 +42,7 @@ This configuration is available for both the enrolled (MDM) devices and unenroll
 
 ## Microsoft Defender for Endpoint on Company-owned personally enabled devices
 
-MDE is now generally available on AE COPE devices. Enterprises can onboard devices on COPE mode and push MDE to user's devices through the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). With this support, Android Enterprise COPE devices get the full capabilities of our offering on Android, including:
+Defender for Endpoint is now generally available on AE COPE devices. Enterprises can onboard devices on COPE mode and push Defender for Endpoint to user's devices through the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). With this support, Android Enterprise COPE devices get the full capabilities of our offering on Android, including:
 
 - Phishing and web protection.
 - Malware scanning.
@@ -57,7 +57,7 @@ Microsoft Defender for Endpoint on Android enables Privacy Controls for both the
 
 ## Optional Permissions and Disable Web Protection
 
-Microsoft Defender for Endpoint on Android enables **Optional Permissions** in the onboarding flow. Currently the permissions required by MDE are mandatory in the onboarding flow. With this feature, admin can deploy MDE on devices without enforcing the mandatory **VPN** and **Accessibility** permissions during onboarding. End Users can onboard the app without the mandatory permissions and can later review these permissions. This feature is currently present only for unenrolled devices (MAM). For more information, see [optional permissions](android-configure-mam.md#optional-permissions).
+Microsoft Defender for Endpoint on Android enables **Optional Permissions** in the onboarding flow. Currently the permissions required by Defender for Endpoint are mandatory in the onboarding flow. With this feature, admin can deploy Defender for Endpoint on devices without enforcing the mandatory **VPN** and **Accessibility** permissions during onboarding. End Users can onboard the app without the mandatory permissions and can later review these permissions. This feature is currently present only for unenrolled devices (MAM). For more information, see [optional permissions](android-configure-mam.md#optional-permissions).
 
 ## Microsoft Defender on Android enterprise BYOD personal profile
 
@@ -70,10 +70,13 @@ Microsoft Defender is no longer supported for versions 1.0.3011.0302 or earlier.
 
 To update, users can use the following steps:
 
-> 1. On your work profile, go to Managed Play Store.
-> 2. Tap on the profile icon on the top right corner and select "Manage apps and device".
-> 3. Locate MDE under updates available and select update.
-> If you encounter any issues, [submit in-app feedback](android-support-signin.md#send-in-app-feedback).
+1. On your work profile, go to Managed Play Store.
+
+2. Tap on the profile icon on the top right corner and select **Manage apps and device**.
+
+3. Locate Defender for Endpoint under updates available and select **Update**.
+
+If you encounter any issues, [submit in-app feedback](android-support-signin.md#send-in-app-feedback).
 
 ## Microsoft Defender for Endpoint is now Microsoft Defender in the Play store
 
@@ -85,19 +88,19 @@ On January 25, 2022, we announced the general availability of Vulnerability mana
 
 ## Upcoming permission changes for Microsoft Defender for Endpoint running Android 11 or later (Nov 2021)
 
-Release Build: 1.0.3501.0301
+Release Build: `1.0.3501.0301`
 Release month: Nov 2021
 Microsoft Defender for Endpoint has released this update required by [Google](https://developer.android.com/distribute/play-policies#APILevel30) to upgrade to Android API 30. This change prompts users seeking access to [new storage permission](https://developer.android.com/training/data-storage/manage-all-files#all-files-access-google-play), for devices running Android 11 or later. Users need to accept this new storage permission once they update Defender app with the release build 1.0.3501.0301 or later. This update ensures that Defender for Endpoint's app security feature to function without any disruption. For more information, review the following sections.
 
 **How will this affect your organization:** These changes take effect if you're using Microsoft Defender for Endpoint on devices running Android 11 or later and updated Defender for Endpoint to release build 1.0.3501.0301 or later.
 
 > [!NOTE]
-> The new storage permissions cannot be configured by admin to 'Auto Approve' through Microsoft Intune. User will need to take action to provide access to this permission.
+> The new storage permissions cannot be configured by admin to auto approve through Microsoft Intune. User will need to take action to provide access to this permission.
 
-- **User experience:** Users receive a notification indicating a missing permission for app security. If the user denies this permission, the 'App security' functionality is turned off on the device. If user doesn't accept or deny permission, they'll continue to receive the prompt when unlocking their device or opening the app, until it has been approved.
+- **User experience:** Users receive a notification indicating a missing permission for app security. If the user denies this permission, app security functionality is turned off on the device. If user doesn't accept or deny permission, they continue to receive the prompt when unlocking their device or opening the app, until it has been approved.
 
 > [!NOTE]
-> If your organization is previewing 'Tamper protection' feature and if the new storage permissions are not granted by the user within 7 days of updating to the latest version, the user might lose access to corporate resources.
+> If your organization is previewing the tamper protection feature and if the new storage permissions are not granted by the user within 7 days of updating to the latest version, the user might lose access to corporate resources.
 
 **What you need to do to prepare:**
 
