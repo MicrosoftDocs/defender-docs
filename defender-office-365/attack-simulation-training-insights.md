@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how Attack simulation training in the Microsoft Defender portal affects users and can gain insights from simulation and training outcomes.
 search.appverid: met150
-ms.date: 3/14/2024
+ms.date: 06/14/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -313,7 +313,7 @@ The **Delivery status** section on **Report** tab** for a simulation shows the n
 
 - **Successfully received message**
 - **Positive reinforcement message delivered**
-- **Just simulation message delivered
+- **Just simulation message delivered**
 
 Select **View users to whom message delivery failed** to go to the [Users tab](attack-simulation-training-simulations.md#users-tab) tab in the report where the results are filtered by **Simulation message delivery: Failed to deliver**.
 
@@ -379,6 +379,71 @@ The **All user activity** section on **Report** tab** for a Training campaign us
 You can hover over a section in the chart to see the actual numbers in each category.
 
 :::image type="content" source="media/attack-sim-report-training-campaign-report-tab-all-user-activity.png" alt-text="The All user activity section on the Report tab in the Training campaign report in Attack simulation training." lightbox="media/attack-sim-report-training-campaign-report-tab-all-user-activity.png":::
+
+## Appendix
+
+When you export information from the reports, the CSV file contains more information than what's shown in the report, even if you have all column shown. The fields are described in the following table.
+
+> [!TIP]
+> For maximum information, verify that all available columns in the report are visible before you export.
+
+|Field Name|Description|
+|---|---|
+|UserName|Username of the user who did the activity.|
+|UserMail|Email address of the user who did the activity.|
+|Compromised|Indicates if the user was compromised. Values are Yes or No.|
+|AttachmentOpened_TimeStamp|When the attachment was opened.|
+|AttachmentOpened_Browser|When the attachment was opened in a web browser. This information comes from UserAgent.|
+|AttachmentOpened_IP|The IP address where the attachment was opened. This information comes from UserAgent.|
+|AttachmentOpened_Device|The device where the attachment was opened. This information comes from UserAgent.|
+|AttachmentLinkClicked_TimeStamp|When the attachment link was clicked.|
+|AttachmentLinkClicked_Browser|The web browser that was used to click the attachment link. This information comes from UserAgent.|
+|AttachmentLinkClicked_IP|The IP address where the attachment link was clicked. This information comes from UserAgent.|
+|AttachmentLinkClicked_Device|The device where the attachment link was clicked. This information comes from UserAgent.|
+|CredSupplied_TimeStamp(Compromised)|When the user entered their credentials.|
+|CredSupplied_Browser|The web browser that was used when the user entered their credentials. This information comes from UserAgent.|
+|CredSupplied_IP|The IP address where the user entered their credentials. This information comes from UserAgent.|
+|CredSupplied_Device|The device where the user entered their credentials. This information comes from UserAgent.|
+|SuccessfullyDeliveredEmail_TimeStamp|When the simulation email message was delivered to the user.|
+|MessageRead_TimeStamp|When the simulation message was read.|
+|MessageDeleted_TimeStamp|When the simulation message was deleted.|
+|MessageReplied_TimeStamp|When the user replied to the simulation message.|
+|MessageForwarded_TimeStamp|When the user forwarded the simulation message.|
+|OutOfOfficeDays|Determines whether the user is out of office. This information comes from the Automatic replies setting in Outlook.|
+|PositiveReinforcementMessageDelivered_TimeStamp|When the positive reinforcement message was delivered to the user.|
+|PositiveReinforcementMessageFailed_TimeStamp|When the positive reinforcement message failed to be delivered to the user.|
+|JustSimulationMessageDelivered_TimeStamp|When the simulation message was delivered to the user as part of a simulation with no trainings assigned (**No training** was selected on the **Assign training** page of the new simulation wizard).|
+|JustSimulationMessageFailed_TimeStamp|When the simulation email message failed to be delivered to the user, and the simulation had no trainings assigned.|
+|TrainingAssignmentMessageDelivered_TimeStamp|When the training assignment message was delivered to the user. This value is empty if no trainings were assigned in the simulation.|
+|TrainingAssignmentMessageFailed_TimeStamp|When the training assignment message failed to be delivered to the user. This value is empty if no trainings were assigned in the simulation.|
+|FailedToDeliverEmail_TimeStamp|When the simulation email message failed to be delivered to the user.|
+|Last Simulation Activity|The last simulation activity of the user (whether they passed or were compromised).|
+|Assigned Trainings|The list of trainings assigned to the user as part of the simulation.|
+|Completed Trainings|The list of trainings completed by the user as part of the simulation..|
+|Training Status|The current status of trainings for the user as part of the simulation.|
+|Phishing Reported On|When the user reported the simulation message as phishing.|
+|Department|The user's Department property value in Microsoft Entra ID at the time of simulation.|
+|Company|The user's Company property value in Microsoft Entra ID at the time of simulation.|
+|Title|The user's Title property value in Microsoft Entra ID at the time of simulation.|
+|Office|The user's Office property value in Microsoft Entra ID at the time of simulation.|
+|City|The user's City property value in Microsoft Entra ID at the time of simulation.|
+|Country|The user's Country property value in Microsoft Entra ID at the time of simulation.|
+|Manager|The user's Manager property value in Microsoft Entra ID at the time of simulation.|
+
+How user activity signals are captured is described in the following table.
+
+|Field|Description|Calculation logic|
+|---|---|---|
+|DownloadAttachment|A user downloaded the attachment.|The signal comes from the client (for example, Outlook or Word).|
+|Opened Attachment|A user opened the attachment.|The signal comes from the client (for example, Outlook or Word).|
+|Read Message|The user read the simulation message.|Message read signals might experience issues in the following scenarios: <ul><li>The user reported the message as phishing in Outlook without leaving the reading pane, and **Mark items as read when viewed in the Reading Pane** wasn't configured (default).</li><li>The user reported the unread message as phishing in Outlook, the message was deleted, and **Mark messages as read when deleted** wasn't configured (default).</li></ul>|
+|Out of Office|Determines whether the user is out of office.|Currently calculated by the Automatic replies setting from Outlook.|
+|Compromised User|Indicates if a user been compromised. The compromise signals can vary based on the attack type.|<ul><li>**Credential Harvest**: The user enters their credentials in the login page (credentials aren't stored by Microsoft).</li><li>**Malware Attachment**: The user opens the file and enables editing in protected view.</li><li>**Link in attachment**: The user opens the attachment, and clicks on the link.</li><li>**Link to Malware**: The user clicks on the link and enters their credentials.</li><li>**Drive by URL**: The user clicks on the link (entering credentials isn't required).</li><li>**OAuth**: The user clicks on the link and accepts to share permissions.</li></ul>|
+|Clicked Message Link|Indicates if a user clicked on the message .|The URL in the simulation is unique for each user, which allows individual user activity tracking. Third-party filtering services or email forwarding can lead to false positives. For more information, see [I see clicks or compromise events from users who insist they didn't click the link in the simulation message](attack-simulation-training-faq.md#i-see-clicks-or-compromise-events-from-users-who-insist-they-didnt-click-the-link-in-the-simulation-message).|
+|Forwarded Message|Indicates if a user forwarded on the message .||
+|Replied to Message|Indicates if an end users has replied on the message.||
+|Deleted message|Indicates if an end users has deleted the message.|The signal comes from the Outlook activity of the user. If the user reports the message as phishing, the message might be moved to the Deleted Items folder, which is identified as a deletion.|
+|Permissions granted|Indicates if a user shared permissions in an Oauth-based attack.||
 
 ## Related Links
 
