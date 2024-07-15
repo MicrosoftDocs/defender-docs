@@ -73,7 +73,7 @@ This configuration is available for both the enrolled (MDM) devices and unenroll
 
    3. Select Microsoft Defender for Endpoint as the target app.
 
-   4. On the Settings page, select **Use configuration designer**, and then add `WebProtection` as the key, and set its value type to `String`.
+   4. On the **Settings** page, select **Use configuration designer**, and then add `WebProtection` as the key, and set its value type to `String`.
 
       - By default, `WebProtection = true`. An admin must set `WebProtection = false` to turn off web protection.
       - Defender for Endpoint sends the heartbeat to the Microsoft Defender portal whenever a user opens the app.
@@ -110,7 +110,7 @@ To set up network protection using MDM configuration for enrolled devices, follo
 
 3. In the targeted app, choose **Microsoft Defender for Endpoint**.
 
-4. On the Settings page, choose configuration settings format **Use configuration designer**.
+4. On the **Settings** page, choose configuration settings format **Use configuration designer**.
 
 5. Add `DefenderNetworkProtectionEnable` as the configuration key. Set its value type as `String`, and set its value to `false` to disable network protection. (Network protection is enabled by default.)
 
@@ -192,7 +192,7 @@ Customers can now enable privacy control for the phish report sent by Microsoft 
 
    3. Select **Microsoft Defender for Endpoint** as the target app.
 
-   4. On the Settings page, select **Use configuration designer** and add `DefenderExcludeURLInReport` as the key, and set its value type to **Boolean**.
+   4. On the **Settings** page, select **Use configuration designer** and add `DefenderExcludeURLInReport` as the key, and set its value type to **Boolean**.
 
       - To enable privacy and not collect the domain name, enter the value as `true` and assign this policy to users. By default, this value is set to `false`.
       - For users with key set as `true`, the phish alert doesn't contain the domain name information whenever a malicious site is detected and blocked by Defender for Endpoint.
@@ -207,7 +207,7 @@ Customers can now enable privacy control for the phish report sent by Microsoft 
 
    3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 
-   4. On the Settings page, under the **General Configuration Settings**, add **DefenderExcludeURLInReport** as the key and value as `true`.
+   4. On the **Settings** page, under the **General Configuration Settings**, add **DefenderExcludeURLInReport** as the key and value as `true`.
 
       - To enable privacy and not collect the domain name, enter the value as `true` and assign this policy to users. By default, this value is set to `false`.
       - For users with key set as `true`, the phish alert doesn't contain the domain name information whenever a malicious site is detected and blocked by Defender for Endpoint.
@@ -244,7 +244,7 @@ Microsoft Defender for Endpoint on iOS enables **Optional Permissions** in the o
 
    3. Select **Microsoft Defender for Endpoint** as the target app.
 
-   4. On the Settings page, select **Use configuration designer** and add **DefenderOptionalVPN** as the key and value type as **Boolean**.
+   4. On the **Settings** page, select **Use configuration designer** and add **DefenderOptionalVPN** as the key and value type as **Boolean**.
 
       - To enable optional VPN permission, enter value as `true` and assign this policy to users. By default, this value is set to `false`.
       - For users with key set as `true`, the users are able to onboard the app without giving the VPN permission.
@@ -403,7 +403,7 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 
 ## Device Tagging
 
-Defender for Endpoint on iOS enables bulk tagging the mobile devices during onboarding by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Security Portal. The Device tags appear against the devices in the Device Inventory. 
+Defender for Endpoint on iOS enables bulk tagging the mobile devices during onboarding by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Microsoft Defender portal. The Device tags appear against the devices in the Device Inventory. 
 
 This configuration is available for both the enrolled (MDM) devices as well as unenrolled (MAM) devices. Admins can use the following steps to configure the Device tags.
 
@@ -442,7 +442,7 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 5. Select **Next**, and then assign this policy to targeted devices/users.
 
 > [!NOTE] 
-> The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
+> The Microsoft Defender app must be opened for tags to be synced with Intune and passed to the Microsoft Defender portal. It may take up to 18 hours for tags to reflect in the portal.
 
 ## Suppress OS update Notification
 
@@ -454,23 +454,32 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 
 **For enrolled devices(MDM)**
 
-1. In the Microsoft Intune admin center, navigate to Apps \> App configuration policies \> Add \> Managed devices.
-1. Give the policy a name, select Platform \> iOS/iPadOS.
-1. Select Microsoft Defender for Endpoint as the target app. 
-1. In Settings page, select Use configuration designer and add **SuppressOSUpdateNotification** as the key and value type as **String**.
-1. By default, SuppressOSUpdateNotification = false.
-1. Admin needs to make **SuppressOSUpdateNotification = true** to suppress the OS update notifications.
-1. Click Next and assign this policy to targeted devices/users.
+1. In the Microsoft Intune admin center, go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
+
+2. Give the policy a name, select **Platform** \> **iOS/iPadOS**.
+
+3. Select `Microsoft Defender for Endpoint` as the target app. 
+
+4. On the **Settings** page, select **Use configuration designer**, and add `SuppressOSUpdateNotification` as the key. Set its value type as `String`.
+
+   - By default, `SuppressOSUpdateNotification = false`.
+   - An admin can set `SuppressOSUpdateNotification = true` to suppress the OS update notifications.
+   - Select **Next** and assign this policy to targeted devices/users.
 
 **For unenrolled devices(MAM)**
 
-1. In the Microsoft Intune admin center, navigate to Apps > App configuration policies > Add > Managed apps.
-1. Give the policy a name.
-1. Under the Select Public Apps, choose Microsoft Defender for Endpoint as the target app.
-1. In Settings page, add **SuppressOSUpdateNotification** as the key under the General Configuration Settings.
-1. By default, SuppressOSUpdateNotification = false.
-1. Admin needs to make **SuppressOSUpdateNotification = true** to suppress the OS update notifications.
-1. Click Next and assign this policy to targeted devices/users.
+1. In the Microsoft Intune admin center, navigate to **Apps** > **App configuration policies** > **Add** > **Managed apps**.
+
+2. Give the policy a name.
+
+3. Under the **Select Public Apps**, choose `Microsoft Defender for Endpoint` as the target app.
+
+4. On the **Settings** page, add `SuppressOSUpdateNotification` as the key (under **General Configuration Settings**).
+
+   - By default, `SuppressOSUpdateNotification = false`.
+   - An admin can set `SuppressOSUpdateNotification = true` to suppress the OS update notifications.
+
+5. Select **Next** and assign this policy to targeted devices/users.
 
 
 ## Configure option to send in-app feedback
@@ -484,19 +493,19 @@ Use the following steps to configure the option to send feedback data to Microso
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
-1. Give the policy a name, and select **Platform \> iOS/iPadOS** as the profile type.
+2. Give the policy a name, and select **Platform \> iOS/iPadOS** as the profile type.
 
-1. Select **Microsoft Defender for Endpoint** as the target app.
+3. Select `Microsoft Defender for Endpoint` as the target app.
 
-1. On the Settings page, select **Use configuration designer** and add **DefenderFeedbackData** as the key and value type as **Boolean**.
+4. On the **Settings** page, select **Use configuration designer** and add `DefenderFeedbackData` as the key, and set its value type as `Boolean`.
 
    - To remove the ability of end-users to provide feedback, set the value as `false` and assign this policy to users. By default, this value is set to `true`. For US Government customers, the default value is set to 'false'.
-
    - For users with key set as `true`, there is an option to send Feedback data to Microsoft within the app (**Menu** \> **Help & Feedback** \> **Send Feedback to Microsoft**).
 
-1. Select **Next** and assign this profile to targeted devices/users.
+5. Select **Next** and assign this profile to targeted devices/users.
 
 ## Report unsafe site
 
 Phishing websites impersonate trustworthy websites for the purpose of obtaining your personal or financial information. Visit the [Provide feedback about network protection](https://www.microsoft.com/wdsi/filesubmission/exploitguard/networkprotection) page to report a website that could be a phishing site.
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
