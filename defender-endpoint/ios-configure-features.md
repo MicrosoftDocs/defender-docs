@@ -348,11 +348,11 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
    
    5. Select **Next** and assign this profile to targeted devices/users.
    
-   6. Turning the above privacy controls on or off will not impact the device compliance check or conditional access.
+   6. Turning privacy controls on or off doesn't impact the device compliance check or conditional access.
 
 4. Once the config is applied, end users must open the app to approve the privacy setting.
 
-   - Privacy approval screen will come only for unsupervised devices.
+   - The privacy approval screen appears only for unsupervised devices.
    - Only if end-user approves the privacy, the app information is sent to the Defender for Endpoint console.
 
    :::image type="content" source="media/tvm-user-privacy2.png" alt-text="Screenshot of the end user privacy screen." lightbox="media/tvm-user-privacy2.png":::
