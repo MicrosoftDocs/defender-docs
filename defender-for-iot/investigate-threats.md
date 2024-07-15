@@ -69,9 +69,7 @@ Use the following query to list all of the devices at all of your sites.
 
 ```kusto
 DeviceInfo
-|where Site != ''
-|project DeviceId, Site
-|take 100
+|where Site == "SanFranciso" and PublicIP == "192.168.1.1" and DeviceCategory == "Endpoint"
 ```
 
 This is relevant for both the Device inventory and Site security. For more information, see [Advanced hunting](/defender-xdr/advanced-hunting-overview.md) and the [Advanced hunting DeviceInfo schema](/defender-xdr/advanced-hunting-deviceinfo-table.md).
