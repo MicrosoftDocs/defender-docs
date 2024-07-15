@@ -45,26 +45,23 @@ Before you get started, see [the main Defender for Endpoint on Linux page](micro
 
 In addition, for Saltstack deployment, you need to be familiar with Saltstack administration, have Saltstack installed, configure the Master and Minions, and know how to apply states. Saltstack has many ways to complete the same task. These instructions assume availability of supported Saltstack modules, such as *apt* and *unarchive* to help deploy the package. Your organization might use a different workflow. Refer to the [Saltstack documentation](https://docs.saltproject.io/) for details.
 
+Here are a few important points:
+
 - Saltstack is installed on at least one computer (Saltstack calls the computer as the master).
 - The Saltstack master accepted the managed nodes (Saltstack calls the nodes as minions) connections.
 - The Saltstack minions are able to resolve communication to the Saltstack master (be default the minions try to communicate with a machine named 'salt').
-- Rung this ping test:
-
-    ```bash
-    sudo salt '*' test.ping
-    ```
-
-- The Saltstack master has a file server location where the Microsoft Defender for Endpoint files can be distributed from (by default Saltstack uses the /srv/salt folder as the default distribution point)
+- Run the following ping test: `sudo salt '*' test.ping`
+- The Saltstack master has a file server location where the Microsoft Defender for Endpoint files can be distributed from (by default Saltstack uses the `/srv/salt` folder as the default distribution point)
 
 ## Download the onboarding package
 
-Download the onboarding package from Microsoft Defender portal.
-
 [!INCLUDE [Defender for Endpoint repackaging warning](../includes/repackaging-warning.md)]
 
-1. In Microsoft Defender portal, go to **Settings > Endpoints > Device management > Onboarding**.
+1. In Microsoft Defender portal, go to **Settings** > **Endpoints** > **Device management** > **Onboarding**.
+
 2. In the first drop-down menu, select **Linux Server** as the operating system. In the second drop-down menu, select **Your preferred Linux configuration management tool** as the deployment method.
-3. Select **Download onboarding package**. Save the file as WindowsDefenderATPOnboardingPackage.zip.
+
+3. Select **Download onboarding package**. Save the file as `WindowsDefenderATPOnboardingPackage.zip`.
 
    :::image type="content" source="media/portal-onboarding-linux-2.png" alt-text="The Download onboarding package option" lightbox="media/portal-onboarding-linux-2.png":::
 
@@ -90,180 +87,182 @@ Download the onboarding package from Microsoft Defender portal.
 
 ## Create Saltstack state files
 
-Create a SaltState state file in your configuration repository (typically `/srv/salt`) that applies the necessary states to deploy and onboard Defender for Endpoint. Add the Defender for Endpoint repository and key, `install_mdatp.sls`:
+In this step, you create a SaltState state file in your configuration repository (typically `/srv/salt`) that applies the necessary states to deploy and onboard Defender for Endpoint. Then, you add the Defender for Endpoint repository and key: `install_mdatp.sls`.
 
-Defender for Endpoint on Linux can be deployed from one of the following channels:
-
-   - *insiders-fast*, denoted as `[channel]`
-   - *insiders-slow*, denoted as `[channel]`
-   - *prod*, denoted as `[channel]` using the version name (see [Linux Software Repository for Microsoft Products](/linux/packages))
-
-Each channel corresponds to a Linux software repository.
-
-The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in *insiders-fast* are the first ones to receive updates and new features, followed later by *insiders-slow*, and lastly by *prod*.
-
-In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
+> [!NOTE]
+> Defender for Endpoint on Linux can be deployed from one of the following channels:
+> 
+> - *insiders-fast*, denoted as `[channel]`
+> - *insiders-slow*, denoted as `[channel]`
+> - *prod*, denoted as `[channel]` using the version name (see [Linux Software Repository for Microsoft Products](/linux/packages))
+> 
+> Each channel corresponds to a Linux software repository.
+> 
+> The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in *insiders-fast* are the first ones to receive updates and new features, followed later by *insiders-slow*, and lastly by *prod*.
+> 
+> In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
 
 > [!WARNING]
 > Switching the channel after the initial installation requires the product to be reinstalled. To switch the product channel: uninstall the existing package, re-configure your device to use the new channel, and follow the steps in this document to install the package from the new location.
 
-Note your distribution and version and identify the closest entry for it under `https://packages.microsoft.com/config/[distro]/`.
+1. Note your distribution and version and identify the closest entry for it under `https://packages.microsoft.com/config/[distro]/`.
 
-In the following commands, replace *[distro]* and *[version]* with your information.
+   In the following commands, replace *[distro]* and *[version]* with your information.
 
-> [!NOTE]
-> In case of Oracle Linux and Amazon Linux 2, replace *[distro]* with "rhel". For Amazon Linux 2, replace *[version]* with "7". For Oracle utilize, replace *[version]* with the version of Oracle Linux.
+   > [!NOTE]
+   > In case of Oracle Linux and Amazon Linux 2, replace *[distro]* with "rhel". For Amazon Linux 2, replace *[version]* with "7". For Oracle utilize, replace *[version]* with the version of Oracle Linux.
 
-```bash
-cat /srv/salt/install_mdatp.sls
-```
+   ```bash
+   cat /srv/salt/install_mdatp.sls
+   ```
 
-```output
-add_ms_repo:
-  pkgrepo.managed:
-    - humanname: Microsoft Defender Repository
-    {% if grains['os_family'] == 'Debian' %}
-    - name: deb [arch=amd64,armhf,arm64] https://packages.microsoft.com/[distro]/[version]/[channel] [codename] main
-    - dist: [codename]
-    - file: /etc/apt/sources.list.d/microsoft-[channel].list
-    - key_url: https://packages.microsoft.com/keys/microsoft.asc
-    - refresh: true
-    {% elif grains['os_family'] == 'RedHat' %}
-    - name: packages-microsoft-[channel]
-    - file: microsoft-[channel]
-    - baseurl: https://packages.microsoft.com/[distro]/[version]/[channel]/
-    - gpgkey: https://packages.microsoft.com/keys/microsoft.asc
-    - gpgcheck: true
-    {% endif %}
-```
+   ```output
+   add_ms_repo:
+     pkgrepo.managed:
+       - humanname: Microsoft Defender Repository
+       {% if grains['os_family'] == 'Debian' %}
+       - name: deb [arch=amd64,armhf,arm64] https://packages.microsoft.com/[distro]/[version]/[channel] [codename] main
+       - dist: [codename]
+       - file: /etc/apt/sources.list.d/microsoft-[channel].list
+       - key_url: https://packages.microsoft.com/keys/microsoft.asc
+       - refresh: true
+       {% elif grains['os_family'] == 'RedHat' %}
+       - name: packages-microsoft-[channel]
+       - file: microsoft-[channel]
+       - baseurl: https://packages.microsoft.com/[distro]/[version]/[channel]/
+       - gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+       - gpgcheck: true
+       {% endif %}
+   ```
 
-Add the package installed state to `install_mdatp.sls` after the `add_ms_repo` state as previously defined.
+2. Add the package installed state to `install_mdatp.sls` after the `add_ms_repo` state as previously defined.
 
-```Output
-install_mdatp_package:
-  pkg.installed:
-    - name: matp
-    - required: add_ms_repo
-```
+   ```Output
+   install_mdatp_package:
+     pkg.installed:
+       - name: matp
+       - required: add_ms_repo
+   ```
 
-Add the onboarding file deployment to `install_mdatp.sls` after the `install_mdatp_package` as previously defined.
+4. Add the onboarding file deployment to `install_mdatp.sls` after the `install_mdatp_package` as previously defined.
 
-```Output
-copy_mde_onboarding_file:
-  file.managed:
-    - name: /etc/opt/microsoft/mdatp/mdatp_onboard.json
-    - source: salt://mde/mdatp_onboard.json
-    - required: install_mdatp_package
-```
+   ```Output
+   copy_mde_onboarding_file:
+     file.managed:
+       - name: /etc/opt/microsoft/mdatp/mdatp_onboard.json
+       - source: salt://mde/mdatp_onboard.json
+       - required: install_mdatp_package
+   ```
 
-The completed install state file should look similar to this output:
+   The completed install state file should look similar to this output:
 
-```Output
-add_ms_repo:
-pkgrepo.managed:
-- humanname: Microsoft Defender Repository
-{% if grains['os_family'] == 'Debian' %}
-- name: deb [arch=amd64,armhf,arm64] https://packages.microsoft.com/[distro]/[version]/prod [codename] main
-- dist: [codename]
-- file: /etc/apt/sources.list.d/microsoft-[channel].list
-- key_url: https://packages.microsoft.com/keys/microsoft.asc
-- refresh: true
-{% elif grains['os_family'] == 'RedHat' %}
-- name: packages-microsoft-[channel]
-- file: microsoft-[channel]
-- baseurl: https://packages.microsoft.com/[distro]/[version]/[channel]/
-- gpgkey: https://packages.microsoft.com/keys/microsoft.asc
-- gpgcheck: true
-{% endif %}
+   ```Output
+   add_ms_repo:
+   pkgrepo.managed:
+   - humanname: Microsoft Defender Repository
+   {% if grains['os_family'] == 'Debian' %}
+   - name: deb [arch=amd64,armhf,arm64] https://packages.microsoft.com/[distro]/[version]/prod [codename] main
+   - dist: [codename]
+   - file: /etc/apt/sources.list.d/microsoft-[channel].list
+   - key_url: https://packages.microsoft.com/keys/microsoft.asc
+   - refresh: true
+   {% elif grains['os_family'] == 'RedHat' %}
+   - name: packages-microsoft-[channel]
+   - file: microsoft-[channel]
+   - baseurl: https://packages.microsoft.com/[distro]/[version]/[channel]/
+   - gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+   - gpgcheck: true
+   {% endif %}
 
-install_mdatp_package:
-pkg.installed:
-- name: mdatp
-- required: add_ms_repo
+   install_mdatp_package:
+   pkg.installed:
+   - name: mdatp
+   - required: add_ms_repo
 
-copy_mde_onboarding_file:
-file.managed:
-- name: /etc/opt/microsoft/mdatp/mdatp_onboard.json
-- source: salt://mde/mdatp_onboard.json
-- required: install_mdatp_package
-```
+   copy_mde_onboarding_file:
+   file.managed:
+   - name: /etc/opt/microsoft/mdatp/mdatp_onboard.json
+   - source: salt://mde/mdatp_onboard.json
+   - required: install_mdatp_package
+   ```
 
-Create a SaltState state file in your configuration repository (typically `/srv/salt`) that applies the necessary states to offboard and remove Defender for Endpoint. Before using the offboarding state file, you need to download the offboarding package from the Security portal and extract it in the same way you did the onboarding package. The downloaded offboarding package is only valid for a limited period of time.
+5. Create a SaltState state file in your configuration repository (typically `/srv/salt`) that applies the necessary states to offboard and remove Defender for Endpoint. Before using the offboarding state file, you need to download the offboarding package from the Security portal and extract it in the same way you did the onboarding package. The downloaded offboarding package is only valid for a limited period of time.
 
-Create an Uninstall state file `uninstall_mdapt.sls` and add the state to remove the `mdatp_onboard.json` file.
+6. Create an Uninstall state file `uninstall_mdapt.sls` and add the state to remove the `mdatp_onboard.json` file.
 
-    ```bash
-    cat /srv/salt/uninstall_mdatp.sls
-    ```
+   ```bash
+   cat /srv/salt/uninstall_mdatp.sls
+   ```
 
-    ```Output
-    remove_mde_onboarding_file:
-      file.absent:
-        - name: /etc/opt/microsoft/mdatp/mdatp_onboard.json
-    ```
+   ```Output
+   remove_mde_onboarding_file:
+     file.absent:
+       - name: /etc/opt/microsoft/mdatp/mdatp_onboard.json
+   ```
 
-- Add the offboarding file deployment to the `uninstall_mdatp.sls` file after the `remove_mde_onboarding_file` state defined in the previous section.
+6. Add the offboarding file deployment to the `uninstall_mdatp.sls` file after the `remove_mde_onboarding_file` state defined in the previous section.
 
-    ```Output
+   ```Output
     offboard_mde:
-      file.managed:
-        - name: /etc/opt/microsoft/mdatp/mdatp_offboard.json
-        - source: salt://mde/mdatp_offboard.json
-    ```
+     file.managed:
+       - name: /etc/opt/microsoft/mdatp/mdatp_offboard.json
+       - source: salt://mde/mdatp_offboard.json
+   ```
 
-- Add the removal of the MDATP package to the `uninstall_mdatp.sls` file after the `offboard_mde` state defined in the previous section.
+7. Add the removal of the MDATP package to the `uninstall_mdatp.sls` file after the `offboard_mde` state defined in the previous section.
 
-    ```Output
-    remove_mde_packages:
+   ```Output
+   remove_mde_packages:
+     pkg.removed:
+       - name: mdatp
+   ```
+
+   The complete uninstall state file should look similar to the following output:
+
+   ```Output
+   remove_mde_onboarding_file:
+     file.absent:
+       - name: /etc/opt/microsoft/mdatp/mdatp_onboard.json
+
+   offboard_mde:
+     file.managed:
+       - name: /etc/opt/microsoft/mdatp/mdatp_offboard.json
+       - source: salt://mde/offboard/mdatp_offboard.json
+
+   remove_mde_packages:
       pkg.removed:
         - name: mdatp
-    ```
-
-    The complete uninstall state file should look similar to the following output:
-
-    ```Output
-    remove_mde_onboarding_file:
-      file.absent:
-        - name: /etc/opt/microsoft/mdatp/mdatp_onboard.json
-
-    offboard_mde:
-      file.managed:
-        - name: /etc/opt/microsoft/mdatp/mdatp_offboard.json
-        - source: salt://mde/offboard/mdatp_offboard.json
-
-    remove_mde_packages:
-      pkg.removed:
-        - name: mdatp
-    ```
+   ```
 
 ## Deployment
 
-Now apply the state to the minions. The below command applies the state to machines with the name that begins with `mdetest`.
+In this step, you apply the state to the minions. The following command applies the state to machines with the name that begins with `mdetest`.
 
-- Installation:
 
-    ```bash
-    salt 'mdetest*' state.apply install_mdatp
-    ```
+1. Installation:
 
-    > [!IMPORTANT]
-    > When the product starts for the first time, it downloads the latest antimalware definitions. Depending on your Internet connection, this can take up to a few minutes.
+   ```bash
+   salt 'mdetest*' state.apply install_mdatp
+   ```
 
-- Validation/configuration:
+   > [!IMPORTANT]
+   > When the product starts for the first time, it downloads the latest antimalware definitions. Depending on your Internet connection, this can take up to a few minutes.
 
-    ```bash
-    salt 'mdetest*' cmd.run 'mdatp connectivity test'
-    ```
+2. Validation/configuration:
 
-    ```bash
-    salt 'mdetest*' cmd.run 'mdatp health'
-    ```
+   ```bash
+   salt 'mdetest*' cmd.run 'mdatp connectivity test'
+   ```
 
-- Uninstallation:
+   ```bash
+   salt 'mdetest*' cmd.run 'mdatp health'
+   ```
 
-    ```bash
-    salt 'mdetest*' state.apply uninstall_mdatp
-    ```
+3. Uninstallation:
+
+   ```bash
+   salt 'mdetest*' state.apply uninstall_mdatp
+   ```
 
 ## Log installation issues
 
@@ -280,4 +279,5 @@ When upgrading your operating system to a new major version, you must first unin
 ## See also
 
 - [Investigate agent health issues](health-status.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
