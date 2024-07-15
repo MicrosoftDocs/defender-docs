@@ -42,7 +42,7 @@ For more information about how to set up Conditional Access with Defender for En
 
 By default, Defender for Endpoint on iOS includes and enables the web protection feature. [Web protection](web-protection-overview.md) helps to secure devices against web threats and protect users from phishing attacks. Anti-phishing and custom indicators (URL and Domain) are supported as part of Web Protection. IP based custom indicators are currently not supported on iOS. Web Content Filtering is currently not supported on mobile platforms (Android and iOS).
 
-Defender for Endpoint on iOS uses a VPN in order to provide this capability. Note that the VPN is local, and unlike traditional VPN, network traffic isn't sent outside the device.
+Defender for Endpoint on iOS uses a VPN in order to provide this capability. The VPN is local, and unlike traditional VPN, network traffic isn't sent outside the device.
 
 While enabled by default, there might be some cases that require you to disable VPN. For example, you want to run some apps that don't work when a VPN is configured. In such cases, you can choose to disable VPN from the app on the device by following these steps:
 
@@ -55,13 +55,13 @@ While enabled by default, there might be some cases that require you to disable 
    :::image type="content" source="media/ios-vpn-config.png" alt-text="The toggle button for the VPN config Connect on demand option" lightbox="media/ios-vpn-config.png":::
 
 > [!NOTE]
-> Web Protection isn't available when VPN is disabled. To re-enable Web Protection, open the Microsoft Defender for Endpoint app on the device and click or tap **Start VPN**.
+> Web protection isn't available when VPN is disabled. To re-enable web protection, open the Microsoft Defender for Endpoint app on the device, and then select **Start VPN**.
 
 ## Disable Web Protection
 
-Web Protection is one of the key features of Defender for Endpoint and it requires a VPN to provide that capability. The VPN used is a local/loopback VPN and not a traditional VPN, however there are several reasons for which customers might not prefer the VPN. Customers who don't want to set up a VPN, there's an option to disable **Web Protection** and deploy Defender for Endpoint without that feature. Other Defender for Endpoint features continue to work.
+Web Protection is one of the key features of Defender for Endpoint and it requires a VPN to provide that capability. The VPN used is a local/loopback VPN and not a traditional VPN, however there are several reasons for which customers might not prefer the VPN. If you don't want to set up a VPN, you can disable **Web Protection** and deploy Defender for Endpoint without that feature. Other Defender for Endpoint features continue to work.
 
-This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. For customers with MDM, admins can configure the **Web Protection** through Managed devices in the App Config. For customers without enrollment, using MAM, admins can configure the **Web Protection** through Managed apps in the App Config.
+This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. For customers with MDM, admins can configure the **Web Protection** through managed devices in the App Config. For customers without enrollment, using MAM, admins can configure the **Web Protection** through managed apps in the App Config.
 
 ### Configure Web Protection
 
