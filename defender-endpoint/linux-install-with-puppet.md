@@ -267,7 +267,7 @@ When upgrading your operating system to a new major version, you must first unin
 
 ## Uninstallation
 
-Create a module *remove_mdatp* similar to *install_mdatp* with the following contents in *init.pp* file:
+Create a module `remove_mdatp` similar to `install_mdatp` with the following contents in `init.pp` file:
 
 ```bash
 class remove_mdatp {
