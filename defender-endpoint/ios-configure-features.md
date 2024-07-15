@@ -67,25 +67,31 @@ This configuration is available for both the enrolled (MDM) devices and unenroll
 
 1. **Disable Web Protection(MDM)** Use the following steps to disable **Web Protection** for enrolled devices.
 
-    - In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
-    - Give the policy a name, **Platform \> iOS/iPadOS**.
-    - Select Microsoft Defender for Endpoint as the target app.
-    - In Settings page, select Use configuration designer and add **WebProtection** as the key and value type as **String**.
-        - By default, **WebProtection= true**.
-        - Admin needs to make **WebProtection = false** to switch off the web protection.
-        - Defender sends the heartbeat to the Microsoft Defender portal whenever user opens the app.
-        - Select **Next** and assign this profile to targeted devices/users.
+   1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
+   
+   2. Give the policy a name, **Platform \> iOS/iPadOS**.
 
-1. **Disable Web Protection(MAM)** Use the following steps to disable **Web Protection** for unenrolled devices.
+   3. Select Microsoft Defender for Endpoint as the target app.
 
-    - In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed apps**.
-    - Give the policy a name.
-    - Under the Select Public Apps, choose Microsoft Defender for Endpoint as the target app.
-    - In Settings page, under the General Configuration Settings, add **WebProtection** as the key and value as **false**.
-        - By default, **WebProtection= true**.
-        - Admin needs to make **WebProtection = false** to switch off the web protection.
-        - Defender sends the heartbeat to the Microsoft Defender portal whenever user opens the app.
-        - Select **Next** and assign this profile to targeted devices/users.
+   4. On the Settings page, select **Use configuration designer**, and then add `WebProtection` as the key, and set its value type to `String`.
+
+      - By default, `WebProtection = true`. An admin must set `WebProtection = false` to turn off web protection.
+      - Defender for Endpoint sends the heartbeat to the Microsoft Defender portal whenever a user opens the app.
+      - Select **Next**, and then assign this profile to targeted devices/users.
+
+2. **Disable Web Protection(MAM)** Use the following steps to disable **Web Protection** for unenrolled devices.
+
+   1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed apps**.
+
+   2. Give the policy a name.
+
+   3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
+
+   4. On the **Settings** page, under **General Configuration Settings**, add `WebProtection` as the key, and set its value to `false`.
+
+      - By default, `WebProtection = true`. An admin can set `WebProtection = false` to switch off web protection.
+      - Defender for Endpoint sends the heartbeat to the Microsoft Defender portal whenever a user opens the app.
+      - Select **Next**, and then assign this profile to targeted devices/users.
 
 ## Configure Network Protection
 
