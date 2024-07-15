@@ -51,7 +51,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - **Automated end user feedback**: The user submission automatic feedback response capability in Microsoft Defender for Office 365 enables organizations to automatically respond to end user submissions of phishing based on the verdict from the automated investigation. [Learn more](air-user-automatic-feedback-response.md).
 
-- We are introducing **Sender's copy clean-up features** in Threat Explorer, email entity, Summary Panel, and Advanced hunting. These new features will streamline the process of managing Sent items, particularly for admins who use Soft delete and Move to inbox actions. For more information, see [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md). Key highlights:
+- We are introducing **Sender's copy clean-up features** in Threat Explorer, email entity, Summary Panel, and Advanced hunting. These new features will streamline the process of managing Sent items, particularly for admins who use the actions **Move to mailbox folder** \> **Soft delete** and **Move to mailbox folder** \> **Inbox**. For more information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard). Key highlights:
 - Integration with Soft delete: Sender's copy clean-up will be incorporated as part of the Soft delete action.
   - Wide support: This action will be supported across various Defender XDR platforms including Threat Explorer, Take Action wizard from the email entity, Summary Panel, Advanced hunting, and through Microsoft Graph API.
   - Undo capability: An undo action will be available, allowing you to reverse the clean-up by moving items back to the Sent folder.
