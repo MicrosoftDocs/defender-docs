@@ -97,7 +97,7 @@ Microsoft Defender for Endpoint has released this update required by [Google](ht
 > [!NOTE]
 > The new storage permissions cannot be configured by admin to auto approve through Microsoft Intune. User will need to take action to provide access to this permission.
 
-- **User experience:** Users receive a notification indicating a missing permission for app security. If the user denies this permission, app security functionality is turned off on the device. If user doesn't accept or deny permission, they continue to receive the prompt when unlocking their device or opening the app, until it has been approved.
+- **User experience:** Users receive a notification indicating a missing permission for app security. If the user denies this permission, app security functionality is turned off on the device. If user doesn't accept or deny permission, they continue to receive the prompt when unlocking their device or opening the app, until it's approved.
 
 > [!NOTE]
 > If your organization is previewing the tamper protection feature and if the new storage permissions are not granted by the user within 7 days of updating to the latest version, the user might lose access to corporate resources.
