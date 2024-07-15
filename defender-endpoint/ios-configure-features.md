@@ -333,8 +333,8 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
     - In Settings page, select Use configuration designer and add **DefenderTVMPrivacyMode** as the key and value type as **String**.
         - To disable privacy and collect the list of apps installed, enter value as `False` and assign this policy to users. 
         - By default, this value is set to `True` for unsupervised devices.
-        - For users with key set as `False`, Defender for Endpoint will send the list of apps installed on the device for vulnerability assessment.
-    - Click **Next** and assign this profile to targeted devices/users.
+        - For users with key set as `False`, Defender for Endpoint sends the list of apps installed on the device for vulnerability assessment.
+    - Select **Next** and assign this profile to targeted devices/users.
     - Turning the above privacy controls on or off will not impact the device compliance check or conditional access.
 
 1. Once the config is applied, end-user will need to open the app to **Approve** the privacy setting.
