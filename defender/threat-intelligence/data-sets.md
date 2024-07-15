@@ -1,6 +1,6 @@
---- 
-title: 'Microsoft Defender Threat Intelligence (Defender TI) data sets'
-description: 'Learn about Microsoft Defender Threat Intelligence (Defender TI)'s data sets feature.'
+---
+title: Microsoft Defender Threat Intelligence (Defender TI) data sets
+description: Learn about data sets in Microsoft Defender Threat Intelligence (Defender TI).
 author: alexroland24
 ms.author: aroland
 manager: dolmont
@@ -12,12 +12,13 @@ ms.custom: template-concept
 
 # Data sets
 
->[!IMPORTANT] 
-> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) will be retired and will no longer be accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
+> [!IMPORTANT]
+> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal <https://ti.defender.microsoft.com> will be retired and will no longer be accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
 Microsoft centralizes numerous data sets into Microsoft Defender Threat Intelligence (Defender TI), making it easier for Microsoft's customers and community to conduct infrastructure analysis. Microsoft's primary focus is to provide as much data as possible about internet infrastructure to support various security use cases.
 
-Microsoft collects, analyzes, and indexes internet data to help you: 
+Microsoft collects, analyzes, and indexes internet data to help you:
+
 - Detect and respond to threats
 - Prioritize incidents
 - Proactively identify infrastructure associated with actor groups targeting your organization
@@ -25,6 +26,7 @@ Microsoft collects, analyzes, and indexes internet data to help you:
 Microsoft collects internet data through its passive Domain Name System (PDNS) sensor network, global proxy network of virtual users, port scans, and other sources for malware and added DNS data.
 
 This internet data is categorized into two distinct groups: traditional and advanced. Traditional data sets include:
+
 - [Resolutions](#resolutions)
 - [WHOIS information](#whois)
 - [TLS/SSL certificates](#certificates)
@@ -33,7 +35,8 @@ This internet data is categorized into two distinct groups: traditional and adva
 - [Reverse DNS](#reverse-dns)
 - [Services](#services)
 
-Advanced data sets include: 
+Advanced data sets include:
+
 - [Trackers](#trackers)
 - [Components](#components)
 - [Host pairs](#host-pairs)
@@ -62,12 +65,12 @@ Our PDNS resolution data includes the following information:
 
 :::image type="content" source="/defender/threat-intelligence/media/data-sets-info.png" alt-text="Data tab Resolutions." lightbox="/defender/threat-intelligence/media/data-sets-info.png":::
 
-**Questions this data set might help answer**
+**Questions this data set might help answer**:
 
-*Domains*
+*Domains*:
 
 - When did Defender TI first observe the domain resolving to an IP address?
-   
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-resolutions-first-seen.png" alt-text="Data sets domain first seen." lightbox="/defender/threat-intelligence/media/data-sets-resolutions-first-seen.png":::
 
 - When was the last time Defender TI saw the domain actively resolving to an IP address?
@@ -76,14 +79,14 @@ Our PDNS resolution data includes the following information:
 
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-resolutions-resolve.png" alt-text="Data sets domain active resolutions." lightbox="/defender/threat-intelligence/media/data-sets-resolutions-resolve.png":::
 
-*IP addresses*
+*IP addresses*:
 
 - Is the IP address routable?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-resolutions-routable.png" alt-text="Data sets routable IPs." lightbox="/defender/threat-intelligence/media/data-sets-resolutions-routable.png":::
 
 - What subnet is the IP address part of?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-resolutions-netblock.png" alt-text="Data sets IP address subnet." lightbox="/defender/threat-intelligence/media/data-sets-resolutions-netblock.png":::
 
 - Is there an owner associated with the subnet?
@@ -107,19 +110,20 @@ WHOIS is a protocol that lets anyone query information about a domain, IP addres
 Each WHOIS record has several different sections, all of which could include different information. Commonly found sections include *registrar*, *registrant*, *administrator*, and *technical*, with each potentially corresponding to a different contact for the record. This data is duplicated across sections in most cases but there might be some slight discrepancies, especially if an actor made a mistake. When viewing WHOIS information within Defender TI, you see a condensed record that deduplicates any data and notates which part of the record it came from. We found this process greatly speeds up the analyst workflow and avoids any overlooking of data. The Defender TI's WHOIS information is powered by the WhoisIQ™ database.
 
 Our WHOIS data includes the following information:
+
 - **Record updated:** A timestamp that indicates the day a WHOIS record was last updated
 - **Last scanned:** The date that the Defender TI system last scanned the record
 - **Expiration:** The expiration date of the registration, if available
 - **Created:** The age of the current WHOIS record
 - **WHOIS server:** The server set up by an ICANN accredited registrar to acquire up-to-date information about domains that are registered within it
 - **Registrar:** The registrar service used to register the artifact
-- **Domain status:** The current status of the domain; an "active" domain is live on the internet 
+- **Domain status:** The current status of the domain; an "active" domain is live on the internet
 - **Email:** Any email addresses found in the WHOIS record, and the type of contact each one is associated with (for example, *admin* or *tech*)
 - **Name:** The name of any contacts within the record, and the type of contact each is associated with
 - **Organization:** The name of any organizations within the record, and the type of contact each is associated with
 - **Street:** Any street addresses associated with the record, and the type of corresponding contact
 - **City:** Any city listed in an address associated with the record, and the type of corresponding contact
-- **State:** Any states listed in an address associated with the record, and the type of corresponding contact 
+- **State:** Any states listed in an address associated with the record, and the type of corresponding contact
 - **Postal code:** Any postal codes listed in an address associated with the record, and the type of corresponding contact
 - **Country:** Any countries or regions listed in an address associated with the record, and the type of corresponding contact
 - **Phone:** Any phone numbers listed in the record, and the type of corresponding contact
@@ -137,7 +141,7 @@ Defender TI's **WHOIS history** repository provides users with access to all kno
 
 :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-history.png" alt-text="Search WHOIS history." lightbox="/defender/threat-intelligence/media/data-sets-whois-history.png":::
 
-**Questions this data set might help answer**
+**Questions this data set might help answer**:
 
 - How old is the domain?
 
@@ -184,6 +188,7 @@ Defender TI's **WHOIS history** repository provides users with access to all kno
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-whois-phone-02.png" alt-text="Data sets WHOIS shared value search phone." lightbox="/defender/threat-intelligence/media/data-sets-whois-phone-02.png":::
 
 ## Certificates
+
 Beyond securing your data, TLS certificates are a fantastic way for users to connect disparate network infrastructure. Modern scanning techniques let us perform data requests against every node on the internet in a matter of hours. In other words, we can associate a certificate to an IP address hosting it easily and regularly.
 
 Much like a WHOIS record, TLS certificates require information to be supplied by the user to generate the final product. Aside from the domain, the TLS certificate includes who the certificate is being created for (unless self-signed). The user can make up the additional information. Where Microsoft's users see the most value from TLS certificates isn't necessarily the unique data someone might use when generating the certificate, but where it's hosted.
@@ -206,6 +211,7 @@ Our certificate data includes the following information:
 ![Data Tab Certificates List](media/dataTabCertificatesList.png)
 
 When you expand on an SHA-1 hash, you see the following details:
+
 - **Serial number:** The serial number associated with an TLS certificate
 - **Issued:** The date when a certificate was issued
 - **Expires:** The date when a certificate expires
@@ -230,7 +236,7 @@ When you expand on an SHA-1 hash, you see the following details:
 
 ![Data Tab Certificate Details](media/dataTabCertificateDetails.png)
 
-**Questions this data set might help answer**
+**Questions this data set might help answer**:
 
 - What other infrastructure has this certificate been observed associated with?
 
@@ -249,9 +255,8 @@ When you expand on an SHA-1 hash, you see the following details:
   ![Data Sets CertificateFree Provider](media/dataSetsCertificateFreeProvider.png)
 
 - Over what timeframe has the certificate been observed in use?
-   
-  :::image type="content" source="/defender/threat-intelligence/media/data-sets-cert-first-last-seen.png" alt-text="Data Sets Certificates Observation Dates." lightbox="/defender/threat-intelligence/media/data-sets-cert-first-last-seen.png":::
 
+  :::image type="content" source="/defender/threat-intelligence/media/data-sets-cert-first-last-seen.png" alt-text="Data Sets Certificates Observation Dates." lightbox="/defender/threat-intelligence/media/data-sets-cert-first-last-seen.png":::
 
 ## Subdomains
 
@@ -264,14 +269,14 @@ Our subdomain data includes the following information:
 
 ![Data Tab Sub domains](media/dataTabSubdomains.png)
 
-**Questions this data set might help answer**
+**Questions this data set might help answer**:
 
 - Are there more subdomains associated with the higher-level domain?
- 
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-subdomains-01.png" alt-text="Data Sets Subdomains." lightbox="/defender/threat-intelligence/media/data-sets-subdomains-01.png":::
 
 - Are any of the subdomains associated with malicious activity?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-subdomains-02.png" alt-text="Data Sets Subdomains Malicious." lightbox="/defender/threat-intelligence/media/data-sets-subdomains-02.png":::
 
 - If I own this domain, do any of the subdomains look unfamiliar?
@@ -297,34 +302,34 @@ Our tracker data set includes IDs from providers like Google, Yandex, Mixpanel, 
 
 ![Data Tab Trackers](media/dataTabTrackers.png)
 
-**Questions this data set might help answer**
+**Questions this data set might help answer**:
 
 - Are there other resources using the same analytics IDs?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-trackers-analytics.png" alt-text="Data Sets Trackers Pivot Analytics Account." lightbox="/defender/threat-intelligence/media/data-sets-trackers-analytics.png":::
 
 - Are these resources associated with the organization, or are they attempting to conduct an infringement attack?
 
 - Is there any overlap between trackers–are they shared with other websites?
 
-- What are the types of trackers found within the web page?  
-  
+- What are the types of trackers found within the web page?
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-trackers-types.png" alt-text="Data Sets Trackers Types." lightbox="/defender/threat-intelligence/media/data-sets-trackers-types.png":::
-  
+
 - What is the length of time for trackers?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-trackers-first-last-seen.png" alt-text="Data Sets Trackers Length Of Time." lightbox="/defender/threat-intelligence/media/data-sets-trackers-first-last-seen.png":::
 
 - What is the frequency of change for tracker values–do they come, go, or remain?
 
 - Are there any trackers linking to website cloning software (for example, *MarkOfTheWeb* or *HTTrack*)?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-trackers-httrack.png" alt-text="Data Sets Trackers HtTrack." lightbox="/defender/threat-intelligence/media/data-sets-trackers-httrack.png":::
-  
+
 - Are there any trackers linking to malicious command-and-control (C2) server malware (for example, *JARM*)?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-trackers-jarm.png" alt-text="Data Sets Trackers JARM." lightbox="/defender/threat-intelligence/media/data-sets-trackers-jarm.png":::
-  
+
 ## Components
 
 Web components are details describing a web page or server infrastructure gleaned from Microsoft performing a web crawl or scan. These components let you understand the makeup of a webpage or the technology and services driving a specific piece of infrastructure.
@@ -341,7 +346,7 @@ Our component data includes the following information:
 
 ![Data Tab Components](media/dataTabComponents.png)
 
-**Questions this data set might help answer**
+**Questions this data set might help answer**:
 
 - What vulnerable infrastructure am I using?
 
@@ -382,36 +387,36 @@ Our host pair data includes the following information:
 - **First seen**: A timestamp of the date that Microsoft first observed a relationship with the host
 - **Last seen**: A timestamp of the date that Microsoft last observed a relationship with the host
 - **Cause**: The type of connection between the parent and child hostname; potential causes include:
-   - script.src
-   - link.href
-   - redirect
-   - img.src
-   - unknown
-   - xmlhttprequest
-   - a.href
-   - finalRedirect
-   - css.import
-   - parentPage
+  - script.src
+  - link.href
+  - redirect
+  - img.src
+  - unknown
+  - xmlhttprequest
+  - a.href
+  - finalRedirect
+  - css.import
+  - parentPage
 - **Tags**: Any tags applied to this artifact in Defender TI
 
 ![Data Tab Host Pairs](media/dataTabHostPairs.png)
 
-**Questions this data set might help answer**
+**Questions this data set might help answer**:
 
 - Have any of the connected artifacts been blocklisted?
 - Have any of the connected artifacts been tagged (for example, phishing, APT, malicious, suspicious, specific threat actor)?
 - Is this host redirecting users to malicious content?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-host-pairs-redirect.png" alt-text="Data Sets Host Pairs Malicious Redirect." lightbox="/defender/threat-intelligence/media/data-sets-host-pairs-redirect.png":::
-  
+
 - Are resources pulling in CSS or images to set up infringement attacks?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-host-pairs-img.png" alt-text="Data Sets Host Pairs Infringement Attack." lightbox="/defender/threat-intelligence/media/data-sets-host-pairs-img.png":::
-  
+
 - Are resources pulling in a script or referencing a *link.href* to set up a Magecart or skimming attack?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-host-pairs-href.png" alt-text="Data Sets Host Pairs Skimmer Reference." lightbox="/defender/threat-intelligence/media/data-sets-host-pairs-href.png":::
-  
+
 - Where are users being redirected from/to?
 
 - What type of redirection is taking place?
@@ -431,22 +436,22 @@ Our cookie data includes the following information:
 
 ![Data Tab Cookies](media/dataTabCookies.png)
 
-**Questions this data set might help answer**
+**Questions this data set might help answer**:
 
 - What other websites are issuing the same cookies?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-cookies-issue.png" alt-text="Data Sets Cookies Domains Issuing Same Cookie." lightbox="/defender/threat-intelligence/media/data-sets-cookies-issue.png":::
-  
+
 - What other websites are tracking the same cookies?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-cookies-same.png" alt-text="Data Sets Cookies Domains Tracking Same Cookie." lightbox="/defender/threat-intelligence/media/data-sets-cookies-same.png":::
-  
+
 - Does the cookie domain match my query?
 
 - How many cookies are associated with the artifact?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-cookies-number.png" alt-text="Data Sets Cookies Number Associated with Artifact." lightbox="/defender/threat-intelligence/media/data-sets-cookies-number.png":::
- 
+
 - Are there unique cookie names or domains?
 
 - What are the time periods associated with cookies?
@@ -473,22 +478,22 @@ Our services data includes the following information:
 
 ![Data Tab Services](media/dataTabServices.png)
 
-**Questions this data set might help answer**
+**Questions this data set might help answer**:
 
 - What applications are running on a particular port for a given IP address?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-services-ssh.png" alt-text="Data Sets Services Applications Running." lightbox="/defender/threat-intelligence/media/data-sets-services-ssh.png":::
 
 - What version of applications are in use?
 
 - Are there recent changes in the open, filtered, or closed status for a given port?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-services-open-close.png" alt-text="Data Sets Services Port Statuses." lightbox="/defender/threat-intelligence/media/data-sets-services-open-close.png":::
 
 - Was a certificate associated with the connection?
-  
+
   :::image type="content" source="/defender/threat-intelligence/media/data-sets-services-cert.png" alt-text="Data Sets Services Certificate Associations." lightbox="/defender/threat-intelligence/media/data-sets-services-cert.png":::
- 
+
 - Are vulnerable or deprecated technologies in use on a given asset?
 
   ![Data Sets Services Applications Running](media/dataSetsServicesApplicationsRunning.png)
@@ -518,7 +523,7 @@ Our DNS data includes the following information:
 
 ![Data Tab DNS](media/dataTabDNS.png)
 
-**Questions this data set might help answer**
+**Questions this data set might help answer**:
 
 - What other pieces of infrastructure are directly related to the indicator I'm searching?
 - How has the infrastructure changed over time?
@@ -544,12 +549,13 @@ Our reverse DNS data includes the following information:
 
 ![Data Tab Reverse DNS](media/dataTabReverseDNS.png)
 
-**Questions this data set might help answer**
+**Questions this data set might help answer**:
 
 - Which DNS records observed this host?
 - How has the infrastructure that observed this host changed over time?
 
 ### See also
+
 - [Searching and pivoting](searching-and-pivoting.md)
 - [Sorting, filtering, and downloading data](sorting-filtering-and-downloading-data.md)
 - [Infrastructure chaining](infrastructure-chaining.md)
