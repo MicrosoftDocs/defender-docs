@@ -48,7 +48,7 @@ Here is a list of the types of data being collected:
 
 ### Device and account information
 
-- Device information such as date and time, iOS version, CPU info, and Device identifier (Randomly generated globally unique identifier GUID).
+- Device information such as date and time, iOS version, CPU info, and device identifier (randomly generated globally unique identifier GUID).
 
 - Tenant, Device, and User information
   - Microsoft Entra Device ID and Azure User ID - Uniquely identifies the device, User respectively at Microsoft Entra ID.
