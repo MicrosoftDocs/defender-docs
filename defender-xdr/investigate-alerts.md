@@ -72,15 +72,15 @@ An alert can have system tags and/or custom tags with certain color backgrounds.
 - **Critical assets** involved in the incident
 
 > [!TIP]
-> Microsoft's Security Exposure Management, based on predefined classifications, automatically tags devices, identities, and cloud resources as a **critical asset**. This out-of-the-box capability ensures the protection of an organization’s valuable and most important assets. It also helps security operations teams to prioritize investigation and remediation. Know more about [critical asset management](/security-exposure-management/critical-asset-management).
+> Microsoft's Security Exposure Management, based on predefined classifications, automatically tags devices, identities, and cloud resources as a **critical asset**. This out-of-the-box capability ensures the protection of an organization's valuable and most important assets. It also helps security operations teams to prioritize investigation and remediation. Know more about [critical asset management](/security-exposure-management/critical-asset-management).
 
 ## Required roles for Defender for Office 365 alerts
 
 You'll need to have any of the following roles to access Microsoft Defender for Office 365 alerts:
 
 - For Microsoft Entra global roles:
-  - Global administrator
-  - Security administrator
+  - Global Administrator
+  - Security Administrator
   - Security Operator
   - Global Reader
   - Security Reader
@@ -90,6 +90,9 @@ You'll need to have any of the following roles to access Microsoft Defender for 
   - Organization Management
 
 - A [custom role](custom-roles.md)
+
+> [!NOTE]
+> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
 
 ## Analyze an alert
 
