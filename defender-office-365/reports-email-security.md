@@ -525,7 +525,7 @@ If you select an entry from the details table by clicking anywhere in the row ot
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
 - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
@@ -591,7 +591,7 @@ If you select an entry from the details table by clicking anywhere in the row ot
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
 - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
@@ -659,7 +659,7 @@ If you select an entry from the details table by clicking anywhere in the row ot
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
 - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
@@ -722,7 +722,7 @@ If you select an entry from the details table by clicking anywhere in the row ot
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
 - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
@@ -786,7 +786,7 @@ If you select an entry from the details table by clicking anywhere in the row ot
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
 - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
 

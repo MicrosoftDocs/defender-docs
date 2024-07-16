@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 4/30/2024
+ms.date: 07/15/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -82,7 +82,7 @@ Instead, you use the **Emails** tab on the **Submissions** page at <https://secu
 >
 > When the entity in the allow entry is encountered again (during mail flow or at time of click), all filters associated with that entity are overridden.
 >
-> By default, allow entries for domains and email addresses exist for 30 days. During those 30 days, Microsoft learns from the allow entries and [removes them or automatically extends them](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/automatic-tenant-allow-block-list-expiration-management-is-now/ba-p/3723447). After Microsoft learns from the removed allow entries, messages that contain those entities are delivered, unless something else in the message is detected as malicious.
+> By default, allow entries for domains and email addresses, files, and URLs exist for 45 days after last used date. Whenever the entity that isn't determined to be clean by the filtering system is encountered during mail flow or time of click, the allow entry activates and updates the last used date. The allow entry is kept for 45 days after the filtering system determines that the entity is clean. By default, allow entries for spoofed senders never expire. 
 >
 > During mail flow, if messages containing the allowed entity pass other checks in the filtering stack, the messages will be delivered. For example, if a message passes [email authentication checks](email-authentication-about.md), URL filtering, and file filtering, the message is delivered if it's also from an allowed sender.
 
@@ -220,6 +220,7 @@ In existing domain and email address entries, you can change the expiration date
        - **1 day**
        - **7 days**
        - **30 days**
+       - **45 days after last used date**
        - **Specific date**: The maximum value is 30 days from today.
      - **Optional note**
 
