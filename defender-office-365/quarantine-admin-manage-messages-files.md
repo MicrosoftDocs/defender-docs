@@ -276,7 +276,9 @@ If you don't release or remove a message, it's automatically deleted from quaran
 >
 > - Inbox rules (created by users in Outlook or by admins by using the **\*-InboxRule** cmdlets in Exchange Online PowerShell) can move or delete messages from the Inbox.
 >
-> Admins can use [message trace](message-trace-defender-portal.md) to determine if a released message was delivered to the recipient's Inbox.
+> - Admins can use [message trace](message-trace-defender-portal.md) to determine if a released message was delivered to the recipient's Inbox.
+>
+> - Selecting **Move to mailbox folder** \> **Inbox** on quarantined messages in :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** from other Defender for Office 365 features (for example, Explorer (Threat Explorer) or the Email entity page) also allows you to release messages from quarantine. For more information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 After you select the message, use either of the following methods to release it:
 
