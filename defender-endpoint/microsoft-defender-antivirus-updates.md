@@ -116,8 +116,7 @@ All our updates contain
 - Fixed potentially packet loss due to [network protection](network-protection.md) shutdown that could lead to deadlock.
 - Implemented performance improvements for scenarios where WDAC is enabled with Intelligent Security Graph.
 - Fixed an issue where an Outlook exclusion for the ASR rule [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes) was not honored.
-- Fixed a race condition during the startup of [endpoint data loss prevention](/purview/endpoint-dlp-getting-started), such that in certain environments, some system files could be corrupted.
-
+- Fixed a race condition during the startup of [endpoint data loss prevention](/purview/endpoint-dlp-getting-started) such that, in certain environments, some system files could be corrupted.
 
 ### May-2024 (Engine: 1.1.24050.5 | Platform: 4.18.24050.7)
 
