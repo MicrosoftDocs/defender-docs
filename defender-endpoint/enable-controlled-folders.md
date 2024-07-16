@@ -47,6 +47,8 @@ You can enable controlled folder access by using any of these methods:
 > [!TIP]
 > Try using [audit mode](evaluate-controlled-folder-access.md) at first so you can see how the feature works and review events without impacting normal device usage in your organization.
 
+> [!NOTE]
+> If you add Microsoft Defender Antivirus exclusions (process or path) for the binary in question, Controlled Folder Access (CFA) will trust it, and it will not block it.
 Group Policy settings that disable local administrator list merging will override controlled folder access settings. They also override protected folders and allowed apps set by the local administrator through controlled folder access. These policies include:
 
 - Microsoft Defender Antivirus **Configure local administrator merge behavior for lists**
