@@ -41,6 +41,8 @@ This article describes how to use the bulk senders insight in the Microsoft Defe
 
 - You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Bulk sender insights** page, use <https://security.microsoft.com/senderinsights>.
 
+- Bulk simulation and detection might not work correctly if the MX record for your Microsoft 365 domain points to a third party service or device.
+
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)** or **Authorization and settings/Security settings/Core Security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
