@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block URLs in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 4/30/2024
+ms.date: 07/15/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -84,7 +84,7 @@ Instead, you use the **URLs** tab on the **Submissions** page at <https://securi
 >
 > When the entity in the allow entry is encountered again (during mail flow or at time of click), all filters associated with that entity are overridden.
 >
-> By default, allow entries for domains and email addresses, files, and URLs exist for 45 days after last used date. Whenever the entity is encountered during mailflow or time of click and the entity has not been learned to be clean by the filtering, the allow entry will kick in and in the real time the last used date will be updated. So the 45 day after last used date will keep the allow entry for 45 days after the filtering system has learned the entity to be clean and you will have full visibility into it. 
+> By default, allow entries for domains and email addresses, files, and URLs exist for 45 days after last used date. Whenever the entity that isn't determined to be clean by the filtering system is encountered during mail flow or time of click, the allow entry activates and updates the last used date. The allow entry is kept for 45 days after the filtering system determines that the entity is clean. By default, allow entries for spoofed senders never expire.
 >
 > During mail flow, if messages containing the allowed URL pass other checks in the filtering stack, the messages are delivered. For example, if a message passes [email authentication checks](email-authentication-about.md) and file filtering, the message is delivered if it also contains an allowed URL.
 >
