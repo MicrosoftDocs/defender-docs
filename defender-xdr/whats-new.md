@@ -50,7 +50,6 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) The **[UrlClickEvents](advanced-hunting-urlclickevents-table.md)** table in advanced hunting is now generally available. Use this table to get information about [Safe Links](/defender-office-365/safe-links-about) clicks from email messages, Microsoft Teams, and Office 365 apps in supported desktop, mobile, and web apps.
 
- **[CloudAuditEvents](advanced-hunting-cloudauditevents-table.md)** 
 
 ## June 2024
 
