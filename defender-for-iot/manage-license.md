@@ -18,11 +18,10 @@ This article shows how to make changes to your license, including the correct st
 ## Calculate number of devices
 
 To calculate the number of devices in your network:
+<!-- filler for the moment. this needs to be checked-->
+1. Count up the number of OT devices listed in the device inventory.
+1. Check each set of devices filtered by site.
 
-1. hhh
-2. ggg
-
-Waiting for details of actions
 You now know the number of devices in your network.
 
 ## Select license type (size) in admin center
