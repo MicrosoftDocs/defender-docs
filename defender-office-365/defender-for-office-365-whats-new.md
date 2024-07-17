@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 5/31/2024
+ms.date: 07/17/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -41,7 +41,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## July 2024
 
-- **45 days after last used date**: You will be able to create allow from submission and edit existing allow in [Tenant Allow/Block List](tenant-allow-block-list-about.md) to have remove after option of 45 days after last used date. The way it works is that whenever the entity is encountered during mail flow or time of click and determined to be not clean by the filtering system, the allow entry is triggered and the last used date is updated. The allow entry is kept for 45 days after the filtering system determines that the entity is clean and if not used again, it is removed. By default, allow entries for spoofed senders never expire. 
+- **45 days after last used date**: You can now set 'remove 45 days after the last used date' on new allow entries from submissions and existing allow entries in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). The allow entry is triggered and the **Last used** date is updated when the entity is encountered and identified as bad during mail flow or at time of click. After the filtering system determines that the entity is clean, the allow entry is automatically removed after 45 days. By default, allow entries for spoofed senders never expire.
 
 - (GA) Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). Access Microsoft Defender XDR Ninja training, learning paths, training modules and more. Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject. 
 
