@@ -24,11 +24,11 @@ ms.date: 06/24/2024
 
 **In this article:**
 
-1. Supported exclusion scopes 
-2. Supported exclusion types 
-3. How to configure the list of exclusions 
-4. Validate exclusions lists with the EICAR test file 
-5. Allow threats 
+1. [Supported exclusion scopes](#supported-exclusion-scopes)
+2. [Supported exclusion types](#supported-exclusion-types)
+3. [How to configure the list of exclusions](#how-to-configure-the-list-of-exclusions)
+4. [Validate exclusions lists with the EICAR test file](#validate-exclusions-lists-with-the-EICAR-test-file)
+5. [Allow threats](#allow-threats)
 
 **Applies to:**
 
@@ -41,7 +41,7 @@ ms.date: 06/24/2024
 This article provides information on how to define antivirus and global exclusions for Microsoft defender for endpoint. Antivirus exclusions apply to on-demand scans, real-time protection (RTP), behavior monitoring (BM) while global exclusions apply to real-time protection (RTP), behavior monitoring (BM) and also Endpoint detection and response (EDR) thus stopping all the associated AV detections, EDR alerts and visibility for the excluded item.
 
 > [!IMPORTANT]
-> The antivirus exclusions described in this article apply to only antivirus capabilities and not endpoint detection and response (EDR). Files that you exclude using the antivirus exclusions described in this article can still trigger EDR alerts and other detections. Whereas the global exclusions describe in this section apply to antivirus as well as endpoint detection and response capabilities thus stopping all associated AV protection, EDR alerts and detection. Global exclusions are available from version xxxxx.  For EDR exclusions, [contact support](/microsoft-365/admin/get-help-support).
+> The antivirus exclusions described in this article apply to only antivirus capabilities and not endpoint detection and response (EDR). Files that you exclude using the antivirus exclusions described in this article can still trigger EDR alerts and other detections. Whereas the global exclusions describe in this section apply to antivirus as well as endpoint detection and response capabilities thus stopping all associated AV protection, EDR alerts and detection. Global exclusions are available from Defender for Endpoint version `101.23092.0012` or later.  For EDR exclusions, [contact support](/microsoft-365/admin/get-help-support).
 
 You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux scans.
 
