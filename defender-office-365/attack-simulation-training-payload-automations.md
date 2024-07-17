@@ -12,7 +12,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to use payload automations (payload harvesting) to collect and launch automated simulations for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 5/7/2024
+ms.date: 06/24/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -24,6 +24,8 @@ appliesto:
 In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2, payload automations (also known as _payload harvesting_) collect information from real-world phishing attacks that were reported by users in your organization. You can specify the conditions to look for in phishing attacks (for example, recipients, social engineering technique, or sender information).
 
 Payload automation mimics the messages and payloads from the attack and stores them as custom payloads with identifiers in the payload name. You can then use the harvested payloads in simulations or automations to automatically launch harmless simulations to targeted users.
+
+For details about how payload automations are collected, see the [Appendix](#appendix) section at the end of this article.
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
@@ -145,6 +147,19 @@ For payload automations with the **Status** value **Ready**, select the payload 
 
 > [!TIP]
 > To see details about other payload automations without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
+
+## Appendix
+
+Payload automation relies on email messages that are identified as campaigns by Defender for Office 365:
+
+- Admins [marking messages as phishing](submissions-admin.md#notify-users-about-admin-submitted-messages-to-microsoft) doesn't result in payload harvesting.
+
+- Payload automation requires access to the raw payload, which can include user reported messages that meet the following criteria:
+  - The message was delivered to the Inbox (false negative).
+  - The user reported the message as phishing.
+  - The reported message was submitted to Microsoft (directly by the user or [by an admin from the Submissions portal](submissions-admin.md#submit-user-reported-messages-to-microsoft-for-analysis)), and Microsoft determined that the message was phishing.
+
+- Eligible payloads are harvested if the messages meet the criteria of the payload automation as described earlier in this article (Step 4 in [Create payload automations](#create-payload-automations)).
 
 ## Related links
 

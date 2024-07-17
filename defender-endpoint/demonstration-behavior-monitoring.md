@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 author: YongRhee-MSFT
 ms.author: yongrhee
-ms.localizationpriority: normal
+ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.collection: 

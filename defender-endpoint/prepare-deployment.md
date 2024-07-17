@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 06/26/2024
 ---
 
 # Assign roles and permissions for Microsoft Defender for Endpoint deployment
@@ -31,15 +31,14 @@ ms.date: 12/18/2020
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-The next step when deploying Defender for Endpoint is to assign roles and permissions for The Defender for Endpoint deployment.
+The next step when deploying Defender for Endpoint is to assign roles and permissions for the Defender for Endpoint deployment.
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Role-based access control
 
 Microsoft recommends using the concept of least privileges. Defender for Endpoint leverages built-in roles within Microsoft Entra ID. Microsoft recommends [review the different roles that are available](/azure/active-directory/roles/permissions-reference) and choose the right one to solve your needs for each persona for this application. Some roles may need to be applied temporarily and removed after the deployment has been completed.
-
-<br>
-
-****
 
 |Personas|Roles|Microsoft Entra role (if necessary)|Assign to|
 |---|---|---|---|
@@ -48,7 +47,6 @@ Microsoft recommends using the concept of least privileges. Defender for Endpoin
 |Endpoint Administrator||||
 |Infrastructure Administrator||||
 |Business Owner/Stakeholder||||
-|
 
 Microsoft recommends using [Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure) to manage your roles to provide additional auditing, control, and access review for users with directory permissions.
 
@@ -66,11 +64,12 @@ The following example table serves to identify the Cyber Defense Operations Cent
 
 |Tier|Description|Permission Required|
 |---|---|---|
-|Tier 1|**Local security operations team / IT team** <p> This team usually triages and investigates alerts contained within their geolocation and escalates to Tier 2 in cases where an active remediation is required.||
-|Tier 2|**Regional security operations team** <p> This team can see all the devices for their region and perform remediation actions.|View data|
-|Tier 3|**Global security operations team** <p> This team consists of security experts and is authorized to see and perform all actions from the portal.|View data <p> Alerts investigation Active remediation actions <p> Alerts investigation Active remediation actions <p> Manage portal system settings <p> Manage security settings|
+|Tier 1|**Local security operations team / IT team** <br/><br/> This team usually triages and investigates alerts contained within their geolocation and escalates to Tier 2 in cases where an active remediation is required.||
+|Tier 2|**Regional security operations team** <br/><br/> This team can see all the devices for their region and perform remediation actions.|View data|
+|Tier 3|**Global security operations team** <br/><br/> This team consists of security experts and is authorized to see and perform all actions from the portal.|View data <br/><br/> Alerts investigation Active remediation actions <br/><br/> Alerts investigation Active remediation actions <br/><br/> Manage portal system settings <br/><br/> Manage security settings|
 
 ## Next step
 
 After assigning roles and permissions to view and manage Defender for Endpoint it's time for [Step 3 - Identify your architecture and choose your deployment method](deployment-strategy.md).
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

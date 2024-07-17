@@ -215,7 +215,7 @@ You can begin to manage these apps with the following tasks:
 
 For more information, including supported apps and clients, see [Protect apps with Microsoft Defender for Cloud Apps Conditional Access App Control](/cloud-app-security/proxy-intro-aad).
 
-For example policies, see [Recommended Microsoft Defender for Cloud Apps policies for SaaS apps](/defender-office-365/zero-trust-identity-device-access-policies-mcas-saas). These policies build on a set of [common identity and device access policies](/defender-office-365/zero-trust-identity-device-access-policies-overview) that are recommended as a starting point for all customers.
+For example policies, see [Recommended Microsoft Defender for Cloud Apps policies for SaaS apps](/security/zero-trust/zero-trust-identity-device-access-policies-mcas-saas). These policies build on a set of [common identity and device access policies](/security/zero-trust/zero-trust-identity-device-access-policies-overview) that are recommended as a starting point for all customers.
 
 <a name="step-7"></a>
 

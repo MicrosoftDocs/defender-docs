@@ -321,8 +321,6 @@
     items:
     - name: Integration with Microsoft Defender for Cloud
       href: azure-server-integration.md
-    - name: Run simulated attacks on devices
-      href: attack-simulations.md
     - name: Create an onboarding or offboarding notification rule
       href: onboarding-notification.md
     - name: Manage Microsoft Defender for Endpoint configuration settings on devices with Microsoft Intune
@@ -777,8 +775,6 @@
           href: troubleshoot-performance-issues.md
         - name: Collect diagnostic data of Microsoft Defender Antivirus
           href: collect-diagnostic-data.md
-        - name: Collect diagnostic data for Update Compliance and Microsoft Defender Antivirus
-          href: collect-diagnostic-data-update-compliance.md
         - name: Improve performance of Microsoft Defender Antivirus
           href: tune-performance-defender-antivirus.md
 
@@ -815,6 +811,8 @@
 
       - name: Manage endpoint security policies
         href: manage-security-policies.md
+      - name: Deploy endpoint security policies from Intune
+        href: /mem/intune/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
       - name: Increase compliance with the security baseline
         href: configure-machines-security-baseline.md
       - name: Optimize attack surface reduction rule deployment and detections

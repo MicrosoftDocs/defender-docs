@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 03/27/2023
+ms.date: 06/25/2024
 search.appverid: met150
 ---
 
@@ -33,9 +33,6 @@ search.appverid: met150
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-> [!IMPORTANT]
-> Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 The attack surface reduction rules report provides information about the _attack surface reduction rules_ that are applied to devices in your organization. This report also provides information about:
 
 - detected threats
@@ -47,7 +44,6 @@ Additionally, this report provides an easy-to-use interface that enables you to:
 - View threat detections
 - View the configuration of the ASR rules
 - Configure (add) exclusions
-- Easily activate _basic protection_ by enabling the three most recommended ASR rules with a single toggle
 - Drill down to gather detailed information
 
 For more information about individual attack surface reduction rules, see [Attack surface reduction rules reference](attack-surface-reduction-rules-reference.md).
@@ -55,31 +51,24 @@ For more information about individual attack surface reduction rules, see [Attac
 ## Prerequisites
 
 > [!IMPORTANT]
-> To access the **Attack surface reduction rules report**, read permissions are required for the Microsoft Defender portal. Access to this report granted by Microsoft Entra roles, such as Security Global Admin or Security role, is being deprecated and will be removed in April 2023.
-> For Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 to appear in the **Attack surface reduction rules report**, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
+> To access the attack surface reduction rules report, read permissions are required for the Microsoft Defender portal. 
+> For Windows Server 2012 R2 and Windows Server 2016 to appear in the attack surface reduction rules report, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
 
 ## Report access permissions
 
-To access the **Attack surface reduction rules report** in the Microsoft 365 Security dashboard, the following permissions are required:
+To access the attack surface reduction rules report in the Microsoft Defender portal, the following permissions are required:
 
 | Permission type | Permission | Permission display name |
 |:---|:---|:---|
-| Application | Machine.Read.All | 'Read all machine profiles' |
-|Delegated (work or school account) | Machine.Read | 'Read machine information' |
+| Application | `Machine.Read.All` | `Read all machine profiles` |
+| Delegated (work or school account) | `Machine.Read` | `Read machine information` |
 
-To assign these permissions:
+You can assign permissions by using Microsoft Entra ID or the Microsoft Defender portal.
 
-1. Sign in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> using account with Security administrator or Global administrator role assigned.
-1. In the navigation pane, select **Settings** \> **Endpoints** \> **Roles** (under **Permissions**).
-1. Select the role you'd like to edit.
-1. Select **Edit**.
-1. In **Edit role**, on the **General** tab, in **Role name**, type a name for the role.
-1. In **Description** type a brief summary of the role.
-1. In **Permissions**, select **View Data**, and under **View Data** select **Attack surface reduction**.
+- To use Microsoft Entra ID, see [Assign Microsoft Entra roles to users](/entra/identity/role-based-access-control/manage-roles-portal)
+- To use the Microsoft Defender portal, see [Assign user access](assign-portal-access.md).
 
-For more information about user role management, see [Create and manage roles for role-based access control](user-roles.md).
-
-## Navigation
+## Navigate to the attack surface reduction rules report
 
 To navigate to the summary cards for the attack surface reduction rules report
 

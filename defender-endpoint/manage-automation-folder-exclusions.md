@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 06/25/2024
 ---
 
 # Manage automation folder exclusions
@@ -41,13 +41,17 @@ You can control the following attributes about the folder that you'd like to be 
 
 - **File names**: You can specify the file names that you want to be excluded in a specific directory. The names are a way to prevent an attacker from using an excluded folder to hide an exploit. The names explicitly define which files to ignore.
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
+
 ## Add an automation folder exclusion
 
-1. Log in to [Microsoft Defender XDR](https://go.microsoft.com/fwlink/p/?linkid=2077139) using an account with the Security administrator or Global administrator role assigned.
+1. Sign in to the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139) using an account with the Security administrator or Global administrator role assigned.
 
 2. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation folder exclusions**.
 
-2. Click **New folder exclusion**.
+2. Select **New folder exclusion**.
 
 3. Enter the folder details:
 
@@ -56,7 +60,7 @@ You can control the following attributes about the folder that you'd like to be 
     - File names
     - Description
 
-4. Click **Save**.
+4. Select **Save**.
 
 > [!NOTE]
 > Live Response commands to collect or examine excluded files will fail with error: "File is excluded". In addition, automated investigations will ignore the excluded items.
@@ -64,17 +68,21 @@ You can control the following attributes about the folder that you'd like to be 
 ## Edit an automation folder exclusion
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation folder exclusions**.
-2. Click **Edit** on the folder exclusion.
+
+2. Select **Edit** on the folder exclusion.
+
 3. Update the details of the rule and click **Save**.
 
 ## Remove an automation folder exclusion
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Automation folder exclusions**.
-2. Click **Remove exclusion**.
+
+2. Select **Remove exclusion**.
 
 ## Related articles
 
 - [Manage automation allowed/blocked lists](manage-indicators.md)
 - [Manage automation file uploads](manage-automation-file-uploads.md)
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
