@@ -82,7 +82,7 @@ Instead, you use the **Email attachments** tab on the **Submissions** page at <h
 >
 > When the entity in the allow entry is encountered again (during mail flow or at time of click), all filters associated with that entity are overridden.
 >
-> By default, allow entries for domains and email addresses, files, and URLs exist have 45 days after last used date as remove after value. The way it works is that whenever the entity is encountered during mail flow or time of click and determined to be not clean by the filtering system, the allow entry is triggered and the last used date is updated. The allow entry is kept for 45 days after the filtering system determines that the entity is clean and if not used again, it is removed. By default, allow entries for spoofed senders never expire. 
+> By default, allow entries for domains and email addresses, files, and URLs have a 'remove after last used date' value of 45 days. The allow entry is triggered and the **Last used** date is updated when the entity is encountered and identified as bad during mail flow or at time of click. After the filtering system determines that the entity is clean, and if the entity isn't used again, the allow entry is automatically removed after 45 days. By default, allow entries for spoofed senders never expire.
 >
 > During mail flow, if messages containing the allowed entity pass other checks in the filtering stack, the messages are delivered. For example, if a message passes [email authentication checks](email-authentication-about.md), the message is delivered if it also contains an allowed file.
 >
