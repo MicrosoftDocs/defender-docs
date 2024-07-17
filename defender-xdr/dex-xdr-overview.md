@@ -25,8 +25,7 @@ ms.date: 04/25/2024
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
 > [!IMPORTANT]
-> Microsoft Defender Experts for XDR is sold separately from other Microsoft Defender XDR products. If you're a Microsoft Defender XDR customer and are interested in purchasing Defender Experts for XDR, please contact your account manager.
-
+> Microsoft Defender Experts for XDR is sold separately from other Microsoft Defender XDR products. If you're a Microsoft Defender XDR customer and are interested in purchasing Defender Experts for XDR, please complete this [customer interest form](https://aka.ms/IWantDefenderExperts).
 > [!NOTE]
 > Any incident response services offered by Defender Experts will be offered under the Defender Experts Service Terms.
 
@@ -52,4 +51,4 @@ Apart from the constantly updated research and intelligence tailored for the thr
 
 [Before you begin](before-you-begin-xdr.md)
 
-[!INCLUDE Fill out this [form](https://aka.ms/IWantDefenderExperts) to learn more]
+[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
