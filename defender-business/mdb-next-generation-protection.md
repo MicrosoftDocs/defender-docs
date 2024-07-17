@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 06/30/2023
+ms.date: 06/19/2024
 ms.reviewer: nehabha
 f1.keywords: NOCSH 
 ms.collection: 
@@ -33,11 +33,11 @@ You can choose from several options for managing your next-generation protection
 
 1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.
 
-2. In the navigation pane, go to **Configuration management** > **Device configuration**. Policies are organized by operating system and policy type.
+2. In the navigation pane, go to **Endpoints** > **Configuration management** > **Device configuration**. Policies are organized by operating system and policy type.
 
 3. Select an operating system tab (such as **Windows**).
 
-4. Expand **Next-generation protection** to view your list of policies. At a minimum, a default policy using recommended settings is listed. This default policy is assigned to all onboarded devices running operating system you selected in the previous step (such as **Windows**). You can:
+4. Under **Next-generation protection**, view your list of policies. At a minimum, a default policy using recommended settings is listed. This default policy is assigned to all onboarded devices running operating system you selected in the previous step (such as **Windows**). You can:
 
    - Keep your default policy as currently configured.
    - Edit your default policy to make any needed adjustments.
@@ -83,7 +83,7 @@ The following table lists settings and options for next-generation protection in
 | **Time of day to run a scheduled scan** | Select a time to run your regularly scheduled antivirus scans to run. |
 | **Use low performance** | This setting is turned off by default. *We recommend keeping this setting turned off.* However, you can turn on this setting to limit the device memory and resources that are used during scheduled scans. **Important** If you turn on **Use low performance**, it configures the following settings for Microsoft Defender Antivirus: <br/>- Archive files aren't scanned ([AllowArchiveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)).<br/> - Scans are assigned a low CPU priority ([EnableLowCPUPriority](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)).<br/> - If a full antivirus scan is missed, no catch-up scan will run ([DisableCatchupFullScan](/windows/client-management/mdm/policy-csp-defender#defender-disablecatchupfullscan)).<br/> - If a quick antivirus scan is missed, no catch-up scan will run ([DisableCatchupQuickScan](/windows/client-management/mdm/policy-csp-defender#defender-disablecatchupquickscan)).<br/> - Reduces the average CPU load factor during an antivirus scan from 50 percent to 20 percent ([AvgCPULoadFactor](/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor)).  |
 | **User experience**   |  |
-| **Allow users to access the Windows Security app** | Turn on this setting to enable users to open the Windows Security app on their devices. Users won't be able to override settings that you configure in Defender for Business, but they'll be able to run a quick scan or view any detected threats. |
+| **Allow users to access the Windows Security app** | Turn on this setting to enable users to open the Windows Security app on their devices. Users can't override settings that you configure in Defender for Business, but they can run a quick scan or view any detected threats. |
 | **Antivirus exclusions** | Exclusions are processes, files, or folders that are skipped by Microsoft Defender Antivirus scans. *In general, you shouldn't need to define exclusions.* Microsoft Defender Antivirus includes many automatic exclusions that are based on known operating system behavior and typical management files. Every exclusion reduces your level of protection, so it's important to consider carefully what exclusions to define. Before you add any exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](/defender-endpoint/defender-endpoint-antivirus-exclusions). |
 | **Process exclusions** | Process exclusions prevent files that are opened by specific processes from being scanned by Microsoft Defender Antivirus. When you add a process to the process exclusion list, Microsoft Defender Antivirus won't scan files that are opened by that process, no matter where the files are located. The process itself is scanned unless it is added to the file exclusion list. See [Configure exclusions for files opened by processes](/defender-endpoint/configure-process-opened-file-exclusions-microsoft-defender-antivirus). |
 | **File extension exclusions** | File extension exclusions prevent files with specific extensions from being scanned by Microsoft Defender Antivirus. See [Configure and validate exclusions based on file extension and folder location](/defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus). |

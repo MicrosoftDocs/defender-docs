@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 05/04/2023
+ms.date: 06/19/2024
 ms.reviewer: nehabha
 f1.keywords: NOCSH 
 ms.collection: 
@@ -34,10 +34,29 @@ You can use firewall protection to specify whether to allow or to block connecti
 
 Depending on whether you're using the Microsoft Defender portal or Intune to manage your firewall protection, use one of the following procedures.
 
-| Portal | Procedure |
-|:---|:---|
-| Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) |1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.<br/>2. In the navigation pane, choose **Device configuration**. Policies are organized by operating system and policy type.<br/>3. Select an operating system tab (such as **Windows clients**).<br/>4. Expand **Firewall** to view your list of policies.<br/>5. Select a policy to view the details. <br/><br/>To make changes or to learn more about policy settings, see the following articles:<br/>- [View or edit device policies](mdb-view-edit-create-policies.md)<br/>- [Firewall settings](mdb-firewall.md)<br/>- [Manage your custom rules for firewall policies](mdb-firewall.md)  |
-| Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) |1. Go to [https://intune.microsoft.com](https://intune.microsoft.com) and sign in. You're now in the Intune admin center.<br/>2. Select **Endpoint security**.<br/>3. Select **Firewall** to view your policies in that category. Custom rules that are defined for firewall protection are listed as separate policies. <br/><br/>For help with managing your security settings in Intune, start with [Manage endpoint security in Microsoft Intune](/mem/intune/protect/endpoint-security).|
+### Use the Microsoft Defender portal to view or edit firewall policies
+
+1. Go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), and sign in.
+
+2. In the navigation pane, choose **Device configuration**. Policies are organized by operating system and policy type.
+
+3. Select an operating system tab (such as **Windows clients**).
+
+4. Expand **Firewall** to view your list of policies.
+
+5. Select a policy to view the details. To make changes or to learn more about policy settings, see the following articles:
+   
+   - [View or edit device policies](mdb-view-edit-create-policies.md)
+   - [Firewall settings](mdb-firewall.md)
+   - [Manage your custom rules for firewall policies](mdb-firewall.md)
+   
+### Use the Intune admin center to view or edit firewall policies
+
+1. Go to [https://intune.microsoft.com](https://intune.microsoft.com) and sign in. You're now in the Intune admin center.
+
+2. Select **Endpoint security**.
+
+3. Select **Firewall** to view your policies in that category. Custom rules that are defined for firewall protection are listed as separate policies. To get help with managing your security settings in Intune, start with [Manage endpoint security in Microsoft Intune](/mem/intune/protect/endpoint-security).
 
 ## Manage your custom rules for firewall policies in Microsoft Defender for Business
 
@@ -56,10 +75,15 @@ You can use custom rules to define exceptions for your firewall policies. That i
 5. To create a custom rule, follow these steps: 
 
    1. Under **Custom rules**, choose **+ Add rule**. (You can have up to 150 custom rules.)
+
    2. On the **Create new rule** flyout, specify a name and description for the rule.
+
    3. Select a profile. (Your options include **Domain network**, **Public network**, or **Private network**.)
+
    4. In the **Remote address type** list, select either **IP** or **Application file path**.
+
    5. In the **Value** box, specify an appropriate value. Depending on what you selected in step 6d, you might specify an IP address, an IP address range, or an application file path. (See [Firewall settings](mdb-firewall.md).)
+
    6. On the **Create new rule** flyout, select **Create rule**. 
 
 6. On the **Configuration settings** screen, choose **Next**.
@@ -81,10 +105,15 @@ You can use custom rules to define exceptions for your firewall policies. That i
 6. To edit your custom rule, follow these steps:
 
    1. On the **Edit rule** flyout, review and edit the rule's name and description.
+
    2. Review and if necessary, edit the rule's profile. (Your options include **Domain network**, **Public network**, or **Private network**.)
+   
    3. In the **Remote address type** list, select either **IP** or **Application file path**.
+   
    4. In the **Value** box, specify an appropriate value. Depending on what you selected in step 6c, you might specify an IP address, an IP address range, or an application file path. (See [Firewall settings](mdb-firewall.md).)
+   
    5. Set **Enable rule** to **On** to make the rule active. Or, to disable the rule, set the switch to **Off**.
+   
    6. On the **Edit rule** flyout, select **Update rule**. 
 
 7. On the **Configuration settings** screen, choose **Next**.

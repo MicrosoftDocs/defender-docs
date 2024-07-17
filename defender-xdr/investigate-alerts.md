@@ -22,7 +22,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - met150
-ms.date: 06/05/2024
+ms.date: 07/02/2024
 ---
 
 # Investigate alerts in Microsoft Defender XDR
@@ -46,7 +46,7 @@ The **Alerts queue** shows the current set of alerts. You get to the alerts queu
 
 Alerts from different Microsoft security solutions like Microsoft Defender for Endpoint, Defender for Office 365, Microsoft Sentinel, Defender for Cloud, Defender for Identity, Defender for Cloud Apps, Defender XDR, App Governance, Microsoft Entra ID Protection, and Microsoft Data Loss Prevention appear here.
 
-By default, the alerts queue in the Microsoft Defender portal displays the new and in progress alerts from the last 30 days. The most recent alert is at the top of the list so you can see it first.
+By default, the alerts queue in the Microsoft Defender portal displays the new and in progress alerts from the last seven days. The most recent alert is at the top of the list so you can see it first.
 
 From the default alerts queue, you can select **Filter** to see a **Filter** pane, from which you can specify a subset of the alerts. Here's an example.
 
@@ -64,13 +64,23 @@ You can filter alerts according to these criteria:
 - Automated investigation state
 - Alert subscription IDs
 
+An alert can have system tags and/or custom tags with certain color backgrounds. Custom tags use the white background while system tags typically use red or black background colors. System tags identify the following in an incident: 
+
+- A **type of attack**, like ransomware or credential phishing
+- **Automatic actions**, like automatic investigation and response and automatic attack disruption
+- **Defender Experts** handling an incident
+- **Critical assets** involved in the incident
+
+> [!TIP]
+> Microsoft's Security Exposure Management, based on predefined classifications, automatically tags devices, identities, and cloud resources as a **critical asset**. This out-of-the-box capability ensures the protection of an organization's valuable and most important assets. It also helps security operations teams to prioritize investigation and remediation. Know more about [critical asset management](/security-exposure-management/critical-asset-management).
+
 ## Required roles for Defender for Office 365 alerts
 
 You'll need to have any of the following roles to access Microsoft Defender for Office 365 alerts:
 
 - For Microsoft Entra global roles:
-  - Global administrator
-  - Security administrator
+  - Global Administrator
+  - Security Administrator
   - Security Operator
   - Global Reader
   - Security Reader
@@ -80,6 +90,9 @@ You'll need to have any of the following roles to access Microsoft Defender for 
   - Organization Management
 
 - A [custom role](custom-roles.md)
+
+> [!NOTE]
+> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
 
 ## Analyze an alert
 

@@ -8,7 +8,7 @@ ms.date: 05/07/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: ngp
-ms.localizationpriority: normal
+ms.localizationpriority: medium
 ms.collection:
 ms.custom:
 - partner-contribution

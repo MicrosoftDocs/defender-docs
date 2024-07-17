@@ -44,7 +44,7 @@ When a sender spoofs an email address, they appear to be a user in one of your o
   - The sender is on a mailing list (also known as a discussion list), and the mailing list relays email from the original sender to all the participants on the mailing list.
   - An external company sends email on behalf of another company (for example, an automated report or a software-as-a-service company).
 
-You can use the *spoof intelligence insight* in the Microsoft Defender portal to quickly identify spoofed senders who are legitimately sending you unauthenticated email (messages from domains that don't pass SPF, DKIM, or DMARC checks), and manually allow those senders.
+You can use the _spoof intelligence insight_ in the Microsoft Defender portal to quickly identify spoofed senders who are legitimately sending you unauthenticated email (messages from domains that don't pass SPF, DKIM, or DMARC checks), and manually allow those senders.
 
 By allowing known senders to send spoofed messages from known locations, you can reduce false positives (good email marked as bad). By monitoring the allowed spoofed senders, you provide an additional layer of security to prevent unsafe messages from arriving in your organization.
 
@@ -75,7 +75,10 @@ The rest of this article explains how to use the spoof intelligence insight in t
       - **Organization Management**
       - **Security Administrator** <u>and</u> **View-Only Configuration** or **View-Only Organization Management**.
     - _Read-only access to the spoof intelligence insight_: Membership in the **Global Reader**, **Security Reader**, or **View-Only Organization Management** role groups.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+
+    > [!IMPORTANT]
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - For our recommended settings for anti-phishing policies, see [EOP anti-phishing policy settings](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings).
 
@@ -96,7 +99,7 @@ The rest of this article explains how to use the spoof intelligence insight in t
    The insight has two modes:
 
    - **Insight mode**: If spoof intelligence is enabled, the insight shows you how many messages were detected by spoof intelligence during the past seven days.
-   - **What if mode**: If spoof intelligence is disabled, then the insight shows you how many messages *would have been* detected by spoof intelligence during the past seven days.
+   - **What if mode**: If spoof intelligence is disabled, then the insight shows you how many messages _would have been_ detected by spoof intelligence during the past seven days.
 
 To view information about the spoof intelligence detections, select **View spoofing activity** in the spoof intelligence insight to go to the **Spoof intelligence insight** page.
 
@@ -174,7 +177,7 @@ Back on the **Spoof intelligence insight** page, the entry is removed from the l
 
 ### About allowed spoofed senders
 
-Messages from an allowed spoofed sender (automatically detected or manually configured) are allowed only using the combination of the spoofed domain *and* the sending infrastructure. For example, the following spoofed sender is allowed to spoof:
+Messages from an allowed spoofed sender (automatically detected or manually configured) are allowed only using the combination of the spoofed domain _and_ the sending infrastructure. For example, the following spoofed sender is allowed to spoof:
 
 - **Domain**: gmail.com
 - **Infrastructure**: tms.mx.com
@@ -183,7 +186,7 @@ Only email from that domain/sending infrastructure pair is allowed to spoof. Oth
 
 ## Use the spoof intelligence insight in Exchange Online PowerShell or standalone EOP PowerShell
 
-In PowerShell, you use the **Get-SpoofIntelligenceInsight** cmdlet to *view* allowed and blocked spoofed senders that were detected by spoof intelligence. To manually allow or block the spoofed senders, you need to use the **New-TenantAllowBlockListSpoofItems** cmdlet. For more information, see [Use PowerShell to create allow entries for spoofed senders in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#use-powershell-to-create-allow-entries-for-spoofed-senders-in-the-tenant-allowblock-list) and [Use PowerShell to create block entries for spoofed senders in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#use-powershell-to-create-block-entries-for-spoofed-senders-in-the-tenant-allowblock-list).
+In PowerShell, you use the **Get-SpoofIntelligenceInsight** cmdlet to _view_ allowed and blocked spoofed senders that were detected by spoof intelligence. To manually allow or block the spoofed senders, you need to use the **New-TenantAllowBlockListSpoofItems** cmdlet. For more information, see [Use PowerShell to create allow entries for spoofed senders in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#use-powershell-to-create-allow-entries-for-spoofed-senders-in-the-tenant-allowblock-list) and [Use PowerShell to create block entries for spoofed senders in the Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#use-powershell-to-create-block-entries-for-spoofed-senders-in-the-tenant-allowblock-list).
 
 To view the information in the spoof intelligence insight, run the following command:
 

@@ -55,7 +55,7 @@ You can access the device summary capability through the following ways:
 
 - From an incident page, you can choose a device on the incident graph and then select **Device details** (1). On the device pane, select **Summarize** (2) to generate the device summary. The summary is displayed in the Copilot pane.
 
-   :::image type="content" source="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-‌incident-small.png" alt-text="Screenshot highlighting the steps to access the device summary in an incident page in Copilot in Defender." lightbox="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-‌incident.png":::
+   :::image type="content" source="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page-small.png" alt-text="Screenshot highlighting the steps to access the device summary in an incident page in Copilot in Defender." lightbox="/defender/media/copilot-in-defender/device-summary/copilot-defender-device-summary-device-page-small.png":::
 
    You can also access the device summary capability by choosing a device listed in the **Assets** tab of an incident. Select **Copilot** in the device pane to generate the device summary.
 
