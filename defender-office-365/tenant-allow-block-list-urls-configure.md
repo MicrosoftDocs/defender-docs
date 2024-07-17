@@ -84,7 +84,7 @@ Instead, you use the **URLs** tab on the **Submissions** page at <https://securi
 >
 > When the entity in the allow entry is encountered again (during mail flow or at time of click), all filters associated with that entity are overridden.
 >
-> By default, allow entries for domains and email addresses, files, and URLs exist for 45 days after last used date. Whenever the entity that isn't determined to be clean by the filtering system is encountered during mail flow or time of click, the allow entry activates and updates the last used date. The allow entry is kept for 45 days after the filtering system determines that the entity is clean. By default, allow entries for spoofed senders never expire.
+> By default, allow entries for domains and email addresses, files, and URLs exist have 45 days after last used date as remove after value. The way it works is that whenever the entity is encountered during mail flow or time of click and determined to be not clean by the filtering system, the allow entry is triggered and the last used date is updated. The allow entry is kept for 45 days after the filtering system determines that the entity is clean and if not used again, it is removed. By default, allow entries for spoofed senders never expire. 
 >
 > During mail flow, if messages containing the allowed URL pass other checks in the filtering stack, the messages are delivered. For example, if a message passes [email authentication checks](email-authentication-about.md) and file filtering, the message is delivered if it also contains an allowed URL.
 >
