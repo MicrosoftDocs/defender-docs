@@ -52,4 +52,4 @@ Apart from the constantly updated research and intelligence tailored for the thr
 
 [Before you begin](before-you-begin-xdr.md)
 
-[!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
+[!INCLUDE Fill out this [form](https://aka.ms/IWantDefenderExperts) to learn more]
