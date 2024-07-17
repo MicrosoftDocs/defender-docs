@@ -16,7 +16,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 06/24/2024
 ---
 
 # Microsoft Defender for Endpoint API - Hello World
@@ -47,43 +47,43 @@ It only takes 5 minutes done in two steps:
 
 ### Do I need a permission to connect?
 
-For the Application registration stage, you must have a **Global administrator** role in your Microsoft Entra tenant.
+For the Application registration stage, you must have the **Global administrator** role assigned in your Microsoft Entra tenant.
 
 <a name='step-1---create-an-app-in-azure-active-directory'></a>
 
 ### Step 1 - Create an App in Microsoft Entra ID
 
-1. Log on to [Azure](https://portal.azure.com) with your **Global administrator** user.
+1. Sign in to the [Azure portal](https://portal.azure.com).
 
 2. Navigate to **Microsoft Entra ID** \> **App registrations** \> **New registration**.
 
    :::image type="content" source="../media/atp-azure-new-app2.png" alt-text="The App registrations option under the Manage pane in the Microsoft Entra admin center"  lightbox="../media/atp-azure-new-app2.png":::
 
-3. In the registration form, choose a name for your application and then click **Register**.
+3. In the registration form, choose a name for your application and then select **Register**.
 
 4. Allow your Application to access Defender for Endpoint and assign it **'Read all alerts'** permission:
 
-   - On your application page, click **API Permissions** \> **Add permission** \> **APIs my organization uses** > type **WindowsDefenderATP** and click on **WindowsDefenderATP**.
+   - On your application page, select **API Permissions** \> **Add permission** \> **APIs my organization uses** > type **WindowsDefenderATP** and select **WindowsDefenderATP**.
 
      > [!NOTE]
      > WindowsDefenderATP does not appear in the original list. You need to start writing its name in the text box to see it appear.
 
      :::image type="content" source="../media/add-permission.png" alt-text="The API permissions option under the Manage pane in the Microsoft Entra admin center" lightbox="../media/add-permission.png":::
 
-   - Choose **Application permissions** \> **Alert.Read.All** > Click on **Add permissions**.
+   - Choose **Application permissions** \> **Alert.Read.All**, and then select **Add permissions**.
 
      :::image type="content" source="../media/application-permissions.png" alt-text="The permission type and settings panes in the Request API permissions page" lightbox="../media/application-permissions.png":::
 
      > [!IMPORTANT]
-     > You need to select the relevant permissions. 'Read All Alerts' is only an example!
+     > You need to select the relevant permissions. **Read All Alerts** is only an example.
 
      For example:
 
      - To [run advanced queries](run-advanced-query-api.md), select 'Run advanced queries' permission.
      - To [isolate a machine](isolate-machine.md), select 'Isolate machine' permission.
-     - To determine which permission you need, please look at the **Permissions** section in the API you are interested to call.
+     - To determine which permission you need, see the **Permissions** section in the API you're interested to call.
 
-5. Click **Grant consent**.
+5. Select **Grant consent**.
 
    > [!NOTE]
    > Every time you add permission, you must click on **Grant consent** for the new permission to take effect.
@@ -92,7 +92,7 @@ For the Application registration stage, you must have a **Global administrator**
 
 6. Add a secret to the application.
 
-    Click **Certificates & secrets**, add description to the secret and click **Add**.
+    Select **Certificates & secrets**, add description to the secret and select **Add**.
 
     > [!IMPORTANT]
     > After click Add, **copy the generated secret value**. You won't be able to retrieve after you leave!
@@ -105,12 +105,12 @@ For the Application registration stage, you must have a **Global administrator**
 
    :::image type="content" source="../media/app-and-tenant-ids.png" alt-text="The application details pane under the Overview menu item in the Microsoft Entra admin center" lightbox="../media/app-and-tenant-ids.png":::
 
-Done! You have successfully registered an application!
+Done! You've successfully registered an application!
 
 ### Step 2 - Get a token using the App and use this token to access the API.
 
-- Copy the script below to PowerShell ISE or to a text editor, and save it as **Get-Token.ps1**.
-- Running this script will generate a token and will save it in the working folder under the name **Latest-token.txt**.
+- Copy the following script to PowerShell ISE or to a text editor, and save it as `Get-Token.ps1`.
+- Running this script generates a token and saves it in the working folder under the name `Latest-token.txt`.
 
    ```powershell
    # That code gets the App Context Token and save it to a file named "Latest-token.txt" under the current directory
@@ -145,8 +145,8 @@ Done! You have successfully registered an application!
 
 ### Let's get the Alerts!
 
-- The script below will use **Get-Token.ps1** to access the API and will get the past 48 hours Alerts.
-- Save this script in the same folder you saved the previous script **Get-Token.ps1**.
+- The following script uses `Get-Token.ps1` to access the API and gets alerts for the past 48 hours.
+- Save this script in the same folder you saved the previous script `Get-Token.ps1`.
 - The script creates two files (json and csv) with the data in the same folder as the scripts.
 
   ```powershell
@@ -185,16 +185,17 @@ Done! You have successfully registered an application!
   ($alerts | ConvertFrom-Json) | Export-CSV $outputCsvPath -NoTypeInformation
   ```
 
-You're all done! You have just successfully:
+You're all done! You have successfully:
 
 - Created and registered and application
 - Granted permission for that application to read alerts
 - Connected the API
 - Used a PowerShell script to return alerts created in the past 48 hours
 
-## Related topic
+## Related articles
 
 - [Microsoft Defender for Endpoint APIs](exposed-apis-list.md)
 - [Access Microsoft Defender for Endpoint with application context](exposed-apis-create-app-webapp.md)
 - [Access Microsoft Defender for Endpoint with user context](exposed-apis-create-app-nativeapp.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../../includes/defender-mde-techcommunity.md)]

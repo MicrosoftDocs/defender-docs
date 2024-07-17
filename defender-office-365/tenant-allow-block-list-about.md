@@ -8,7 +8,7 @@ manager: deniseb
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 06/10/2024
+ms.date: 07/15/2024
 search.appverid:
 - MET150
 ms.collection:
@@ -96,7 +96,7 @@ The following list describes what happens in the Tenant Allow/Block List when yo
   - If the message was blocked for any other reason, an allow entry for the sender email address or domain is created, and the entry appears on the **Domains & addresses** tab in the Tenant Allow/Block List.
   - If the message wasn't blocked due to filtering, no allow entries are created anywhere.
 
-By default, allow entries for domains and email addresses, files, and URLs exist for 30 days. During those 30 days, Microsoft learns from the allow entries and [removes them or automatically extends them](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/automatic-tenant-allow-block-list-expiration-management-is-now/ba-p/3723447). After Microsoft learns from the removed allow entries, messages that contain those entities are delivered, unless something else in the message is detected as malicious. By default, allow entries for spoofed senders never expire.
+By default, allow entries for domains and email addresses, files, and URLs exist for 45 days after last used date. Whenever the entity that isn't determined to be clean by the filtering system is encountered during mail flow or time of click, the allow entry activates and updates the last used date. The allow entry is kept for 45 days after the filtering system determines that the entity is clean. By default, allow entries for spoofed senders never expire.
 
 > [!IMPORTANT]
 > Microsoft doesn't allow you to create allow entries directly. Unnecessary allow entries expose your organization to malicious email that could have been filtered by the system.

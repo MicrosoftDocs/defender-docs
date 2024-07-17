@@ -39,7 +39,7 @@ This is article 5 of 6 in a series to help you deploy the components of Microsof
 
 :::image type="content" source="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg" alt-text="A diagram that shows Microsoft Defender for Cloud Apps in the pilot and deploy Microsoft Defender XDR process." lightbox="./media/eval-defender-xdr/defender-xdr-pilot-deploy-flow-cloud-apps.svg" border="false":::
 
-Articles in this series:
+The articles in this series correspond to the following phases of end-to-end deployment:
 
 | Phase | Link |
 |---|---|
@@ -57,7 +57,7 @@ You start by evaluating the product or service and how it will work within your 
 
 Here is the workflow for piloting and deploying Defender for Cloud Apps in your production environment.
 
-:::image type="content" source="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg" alt-text="A diagram that shows the pilot and deploy workflow for Microsoft Defender for Cloud Apps." lightbox="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg":::
+:::image type="content" source="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg" alt-text="A diagram that shows the pilot and deploy workflow for Microsoft Defender for Cloud Apps." lightbox="./media/eval-defender-xdr/defender-cloud-apps-pilot-deploy-steps.svg" border="false":::
 
 Follow these steps:
 
@@ -215,7 +215,7 @@ You can begin to manage these apps with the following tasks:
 
 For more information, including supported apps and clients, see [Protect apps with Microsoft Defender for Cloud Apps Conditional Access App Control](/cloud-app-security/proxy-intro-aad).
 
-For example policies, see [Recommended Microsoft Defender for Cloud Apps policies for SaaS apps](/defender-office-365/zero-trust-identity-device-access-policies-mcas-saas). These policies build on a set of [common identity and device access policies](/defender-office-365/zero-trust-identity-device-access-policies-overview) that are recommended as a starting point for all customers.
+For example policies, see [Recommended Microsoft Defender for Cloud Apps policies for SaaS apps](/security/zero-trust/zero-trust-identity-device-access-policies-mcas-saas). These policies build on a set of [common identity and device access policies](/security/zero-trust/zero-trust-identity-device-access-policies-overview) that are recommended as a starting point for all customers.
 
 <a name="step-7"></a>
 

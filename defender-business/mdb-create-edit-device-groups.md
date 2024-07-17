@@ -10,7 +10,7 @@ ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.reviewer: nehabha
-ms.date: 05/17/2023
+ms.date: 06/19/2024
 f1.keywords: NOCSH 
 ms.collection: 
 - SMB
@@ -29,7 +29,6 @@ In Defender for Business, policies are applied to devices through certain collec
 - [How to create device groups in Defender for Business](#create-a-new-device-group)
 - [How to view an existing device group](#view-an-existing-device-group)
 - [What the Add All Devices option does](#what-does-the-add-all-devices-option-do)
-
 
 ## What is a device group?
 
