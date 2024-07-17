@@ -22,6 +22,14 @@ ms.date: 06/24/2024
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+**In this article:**
+
+1. Supported exclusion scopes 
+2. Supported exclusion types 
+3. How to configure the list of exclusions 
+4. Validate exclusions lists with the EICAR test file 
+5. Allow threats 
+
 **Applies to:**
 
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
@@ -30,25 +38,34 @@ ms.date: 06/24/2024
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-This article provides information on how to define Antivirus (AV) exclusions that apply to on-demand scans, and real-time protection and monitoring.
+This article provides information on how to define antivirus and global exclusions for Microsoft defender for endpoint. Antivirus exclusions apply to on-demand scans, real-time protection (RTP), behavior monitoring (BM) while global exclusions apply to real-time protection (RTP), behavior monitoring (BM) and also Endpoint detection and response (EDR) thus stopping all the associated AV detections, EDR alerts and visibility for the excluded item.  
 
 > [!IMPORTANT]
-> The exclusions described in this article don't apply to other Defender for Endpoint on Linux capabilities, including endpoint detection and response (EDR). Files that you exclude using the methods described in this article can still trigger EDR alerts and other detections. For EDR exclusions, [contact support](/microsoft-365/admin/get-help-support). To use Exclusion Settings or Global Exclusions, see [Global Exclusions for Microsoft Defender for Endpoint on Linux](linux-exclusions-v2.md)
+> The antivirus exclusions described in this article apply to only antivirus capabilities and not endpoint detection and response (EDR). Files that you exclude using the antivirus exclusions described in this article can still trigger EDR alerts and other detections. Whereas the global exclusions describe in this section apply to antivirus as well as endpoint detection and response capabilities thus stopping all associated AV protection, EDR alerts and detection. Global exclusions are available from version xxxxx.  For EDR exclusions, [contact support](/microsoft-365/admin/get-help-support). 
 
-You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux scans. These AV exclusions come under the *epp* [scope](linux-exclusions-v2.md#supported-exclusion-scopes).
+You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux scans.
 
-Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. They can also be useful for mitigating performance issues caused by Defender for Endpoint on Linux.
+Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. Global exclusions are extremely useful for mitigating performance issues caused by Defender for Endpoint on Linux. 
 
 > [!WARNING]
 > Defining exclusions lowers the protection offered by Defender for Endpoint on Linux. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you are confident are not malicious.
 
+## Supported exclusion scopes
+
+As described in an earlier section, we support two exclusion scopes antivirus and global exclusions. Antivirus exclusions have scope as “epp” and can be used to exclude trusted files and processes from real time protection while still having EDR visibility. Whereas global exclusions are applied at sensor level where events originate mutes all the events that match exclusion conditions, thus stopping all EDR alerts and AV detections. Please note “Global” is a new exclusion scope that we are introducing in addition to “Antivirus” exclusion scope already supported by us. Refer to the table below for details: 
+
+| Exclusion Category | Exclusion Scope | Description |
+| --- | --- | --- |
+| Antivirus Exclusion  | Antivirus engine (Scope: epp)  | Excludes content from antivirus (AV) scans and on-demand scans.| 
+| Global Exclusion  | Antivirus and endpoint detections and response engine (Scope: global)  | Excludes events from real time protection and EDR visibility. Does not apply to on-demand scans by default. |
+
 ## Supported exclusion types
 
-The following table shows the AV exclusion types supported by Defender for Endpoint on Linux.
+The following table shows the exclusion types supported by Defender for Endpoint on Linux.
 
 Exclusion|Definition|Examples
 ---|---|---
-File extension|All files with the extension, anywhere on the device|`.test`
+File extension|All files with the extension, anywhere on the device (not available for global exclusions) |`.test`
 File|A specific file identified by the full path|`/var/log/test.log`<br/>`/var/log/*.log`<br/>`/var/log/install.?.log`
 Folder|All files under the specified folder (recursively)|`/var/log/`<br/>`/var/*/`
 Process|A specific process (specified either by the full path or file name) and all files opened by it|`/bin/cat`<br/>`cat`<br/>`c?t`
@@ -62,8 +79,9 @@ Wildcard|Description|Examples|
 ---|---|---
 \*|Matches any number of any characters including none (note if this wildcard is not used at the end of the path then it will substitute only one folder)| `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It does not include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` only includes any files in its subdirectories such as `/var/abc/`, but not files directly inside `/var`. 
 ?|Matches any single character|`file?.log` includes `file1.log` and `file2.log`, but not`file123.log`
+
 > [!NOTE]
-> When using the * wildcard at the end of the path, it will match all files and subdirectories under the parent of the wildcard.
+> Wildcards are not supported while configuring global exclusions. For antivirus exclusions, when using the * wildcard at the end of the path, it will match all files and subdirectories under the parent of the wildcard.
 
 ## How to configure the list of exclusions
 
@@ -75,6 +93,8 @@ For more information on how to configure exclusions from Puppet, Ansible, or ano
 
 Run the following command to see the available switches for managing exclusions:
 
+> [!NOTE]
+> --scope is an optional flag with accepted value as *epp* or *global*. Provide same scope used while adding the exclusion to remove the same exclusion. In the command line approach, if the scope isn’t mentioned, the scope value will be set as “epp”. 
 
 ```bash
 mdatp exclusion
@@ -85,13 +105,7 @@ mdatp exclusion
 
 Examples:
 
-> [!NOTE]
-> --scope is an optional flag with accepted values as *epp* or *global*. 
-> Without the scope flag the command option will work as previously by considering the exclusion 
-[scope](linux-exclusions-v2.md#supported-exclusion-scopes) as *epp*.
-> Provide same scope used during adding exclusion to remove exclusions. To configure Global Exclusion, see [Set Global Exclusions from the command line](linux-exclusions-v2.md#from-the-command-line).
-
-- Add an exclusion for a file extension:
+- Add an exclusion for a file extension (Extension exclusion is not supported for  global exclusion scope) : 
 
     ```bash
     mdatp exclusion extension add --name .txt
@@ -100,32 +114,87 @@ Examples:
     ```console
     Extension exclusion configured successfully
     ```
+    
+    ```bash
+    mdatp exclusion extension remove --name .txt
+    ```
 
-- Add an exclusion for a file:
+    ```Output
+    Extension exclusion removed successfully
+    ```
+
+- Add/Remove an exclusion for a file:
 
     ```bash
-    mdatp exclusion file add --path /var/log/dummy.log
+    mdatp exclusion file add --path /var/log/dummy.log --scope epp
     ```
 
     ```console
     File exclusion configured successfully
     ```
 
-- Add an exclusion for a folder:
+    ```bash
+    mdatp exclusion file remove --path /var/log/dummy.log --scope epp
+    ```
+    
+    ```console
+    File exclusion removed successfully"
+    ```
+    
+     ```bash
+    mdatp exclusion file add --path /var/log/dummy.log --scope global
+    ```
+
+    ```console
+    File exclusion configured successfully
+    ```
 
     ```bash
-    mdatp exclusion folder add --path /var/log/
+    mdatp exclusion file remove --path /var/log/dummy.log --scope global
+    ```
+
+    ```console
+    File exclusion removed successfully"
+    ```
+- Add/Remove an exclusion for a folder:
+
+    ```bash
+    mdatp exclusion folder add --path /var/log/ --scope epp
+    ```
+
+    ```console
+    Folder exclusion configured successfully
+    ```
+    
+    ```bash
+    mdatp exclusion folder remove --path /var/log/ --scope epp
+    ```
+
+    ```console
+    Folder exclusion removed successfully
+    ```
+
+  ```bash
+    mdatp exclusion folder add --path /var/log/ --scope global
     ```
 
     ```console
     Folder exclusion configured successfully
     ```
 
+    ```bash
+    mdatp exclusion folder remove --path /var/log/ --scope global
+    ```
+
+    ```console
+    Folder exclusion removed successfully
+    ```
+
 - Add an exclusion for a second folder:
 
     ```bash
-    mdatp exclusion folder add --path /var/log/
-    mdatp exclusion folder add --path /other/folder
+    mdatp exclusion folder add --path /var/log/ --scope epp
+    mdatp exclusion folder add --path /other/folder  --scope global
     ```
 
     ```console
@@ -133,6 +202,9 @@ Examples:
     ```
 
 - Add an exclusion for a folder with a wildcard in it:
+
+ > [!NOTE]
+ > Wildcards are not supported while configuring global exclusions.  
 
     ```bash
     mdatp exclusion folder add --path "/var/*/tmp"
@@ -142,13 +214,12 @@ Examples:
     > This will only exclude paths below */var/\*/tmp/*, but not folders which are siblings of *tmp*; for example, */var/this-subfolder/tmp*, but not */var/this-subfolder/log*.
 
     ```bash
-    mdatp exclusion folder add --path "/var/"
+    mdatp exclusion folder add --path "/var/" --scope epp
     ```
     OR
     ```bash
-    mdatp exclusion folder add --path "/var/*/"
+    mdatp exclusion folder add --path "/var/*/" --scope epp
     ```
-    
 
     > [!NOTE]
     > This will exclude all paths whose parent is */var/*; for example, */var/this-subfolder/and-this-subfolder-as-well*.
@@ -160,18 +231,43 @@ Examples:
 - Add an exclusion for a process:
 
     ```bash
-    mdatp exclusion process add --name cat
+    mdatp exclusion process add --name /usr/bin/cat --scope global 
     ```
 
     ```console
     Process exclusion configured successfully
     ```
 
+    ```bash
+    mdatp exclusion process remove --name /usr/bin/cat  --scope global
+    ```
+
+    ```Output
+    Process exclusion removed successfully
+    ```
+
+   ```bash
+    mdatp exclusion process add --name /usr/bin/cat --scope epp 
+    ```
+
+    ```console
+    Process exclusion configured successfully
+    ```
+
+
+    ```bash
+    mdatp exclusion process remove --name /usr/bin/cat  --scope epp
+    ```
+
+    ```Output
+    Process exclusion removed successfully
+    ```
+
 - Add an exclusion for a second process:
 
     ```bash
-    mdatp exclusion process add --name cat
-    mdatp exclusion process add --name dog
+    mdatp exclusion process add --name cat --scope epp
+    mdatp exclusion process add --name dog --scope global
     ```
 
     ```console
