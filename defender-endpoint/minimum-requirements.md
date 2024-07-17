@@ -66,10 +66,13 @@ Access to Defender for Endpoint is done through a browser. The following browser
 Devices on your network must be running one of these editions. New features or capabilities are typically provided only on operating systems that haven't yet reached the end of their support lifecycle. For more information, see [Supported Microsoft Defender for Endpoint capabilities by platform](supported-capabilities-by-platform.md). Microsoft recommends the installation of the latest available security patches for any operating system.
 
 ### Supported Windows versions
+> [!IMPORTANT]
+> Windows 11 Home devices that have been upgraded to one of the below supported editions, may require you to run the following command before onboarding:
+> DISM /online /Add-Capability /CapabilityName:Microsoft.Windows.Sense.Client~~~~
+> For more information about edition upgrades and features, please reference [Features]([/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod?view=windows-11](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-features?view=windows-11))
 
 - Windows 11 Enterprise
 - Windows 11 IoT Enterprise
-
 - Windows 11 Education
 - Windows 11 Pro
 - Windows 11 Pro Education
