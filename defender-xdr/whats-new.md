@@ -31,7 +31,7 @@ You can also get product updates and important notifications through the [messag
 
 ## July 2024
 
-- Incidents with alerts where a compromised device communicated with an operational technology (OT) device are now visible in the Microsoft Defender portal through the [Microsoft Defender for IoT license and Defender for Endpoint’s device discovery capabilities](/defender-endpoint/device-discovery#device-discovery-integration). Using Defender for Endpoint data, Defender XDR automatically correlates these new OT alerts to incidents to provide a comprehensive attack story. To filter related incidents, see [Prioritize incidents in the Microsoft Defender portal](incident-queue.md#filters).  
+- Incidents with alerts where a compromised device communicated with an operational technology (OT) device are now visible in the Microsoft Defender portal through the [Microsoft Defender for IoT license and Defender for Endpoint’s device discovery capabilities](/defender-endpoint/device-discovery#device-discovery-integration). Using Defender for Endpoint data, Defender XDR automatically correlates these new OT alerts to incidents to provide a comprehensive attack story. To filter related incidents, see [Prioritize incidents in the Microsoft Defender portal](incident-queue.md#filters-).  
 
 - (GA) Filtering Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues is now generally available. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
 
