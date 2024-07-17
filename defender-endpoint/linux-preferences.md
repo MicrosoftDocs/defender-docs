@@ -380,7 +380,7 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 ### Exclusion Setting preferences [**PREVIEW**]
 
 > [!NOTE] 
-> Available in Defender for Endpoint version `xxx` or later.
+> Available in Defender for Endpoint version `101.23092.0012` or later.
 
 The *exclusionSettings* section of the configuration profile is used to configure various exclusion for Microsoft defender for endpoint.
 
@@ -484,6 +484,53 @@ Specifies a process for which all file activity is excluded from scanning. The p
 |**Data type**|String|
 |**Possible values**|any string|
 |**Comments**|Applicable only if *$type* is *excludedFileName*. Wildcard and process name not supported if exclusion has *global* as a scope, need to provide full path.|
+
+#### Sample profile
+
+```JSON
+{
+   "exclusionSettings":{
+        "exclusions":[
+           {
+              "$type":"excludedPath",
+              "isDirectory":true,
+              "path":"/home/*/git<EXAMPLE DO NOT USE>",
+              "scopes": [
+                    "epp"
+              ]
+           },
+           {
+              "$type":"excludedPath",
+              "isDirectory":true,
+              "path":"/run<EXAMPLE DO NOT USE>",
+              "scopes": [
+                    "global"
+              ]
+           },
+           {
+              "$type":"excludedPath",
+              "isDirectory":false,
+              "path":"/var/log/system.log<EXAMPLE DO NOT USE><EXCLUDED IN ALL SCENARIOS>",
+              "scopes": [
+                    "epp", "global"
+              ]
+           },
+           {
+              "$type":"excludedFileExtension",
+              "extension":".pdf<EXAMPLE DO NOT USE>",
+              "scopes": [
+                    "epp"
+              ]
+           },
+           {
+              "$type":"excludedFileName",
+              "name":"/bin/cat<EXAMPLE DO NOT USE><NO SCOPE PROVIDED - GLOBAL CONSIDERED>"
+           }
+        ],
+        "mergePolicy":"admin_only"
+   }
+}
+```
 
 #### Advanced scan options
 
