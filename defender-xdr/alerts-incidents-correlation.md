@@ -111,12 +111,13 @@ Even when the correlation logic indicates that two incidents should be merged, D
 When two or more incidents are merged, a new incident is not created to absorb them. Instead, the contents of one incident are migrated into the other incident, and the incident abandoned in the process is automatically closed. The abandoned incident is no longer visible or available in Microsoft Defender XDR, and any reference to it is redirected to the consolidated incident. The abandoned, closed incident remains accessible in Microsoft Sentinel in the Azure portal. The contents of the incidents are handled in the following ways:
 
 - Alerts contained in the abandoned incident are removed from it and added to the consolidated incident.
+- Any tags applied to the abandoned incident are removed from it and added to the consolidated incident.
+- A **`Redirected`** tag is added to the abandoned incident.
 - Entities (assets etc.) follow the alerts they're linked to.
 - Analytics rules recorded as involved in the creation of the abandoned incident are added to the rules recorded in the consolidated incident.
-- Any tags applied to the abandoned incident are removed, and a **`Redirected`** tag is added to the abandoned incident.
 - Currently, comments and activity log entries in the abandoned incident are *not* moved to the consolidated incident.
 
-To see the abandoned incident's comments and activity history, open the incident in Microsoft Sentinel in the Azure portal. The activity history includes the adding and removal of alerts, tags, and other items related to the incident merge.
+To see the abandoned incident's comments and activity history, open the incident in Microsoft Sentinel in the Azure portal. The activity history includes the closing of the incident and the adding and removal of alerts, tags, and other items related to the incident merge. These activities are attributed to the identity *Microsoft Defender XDR - alert correlation*.
 
 ## Manual correlation
 
