@@ -15,7 +15,7 @@ Microsoft Security Exposure Management is in active development and receives imp
 
 This page will be updated frequently with the latest updates in Microsoft Security Exposure Management.
 
-You can learn more about MSEM by reading the blogs [here](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/bg-p/MicrosoftSecurityandCompliance).
+Learn more about MSEM by reading the blogs,git  [here](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/bg-p/MicrosoftSecurityandCompliance).
 
 Security Exposure Management is currently in public preview.
 
