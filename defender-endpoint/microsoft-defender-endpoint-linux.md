@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 07/11/2024
+ms.date: 07/17/2024
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -89,8 +89,6 @@ In general you need to take the following steps:
   - Ubuntu 18.04 LTS
   - Ubuntu 20.04 LTS
   - Ubuntu 22.04 LTS
-  - Ubuntu 24.04 LTS
-    
   - Debian 9 - 12
   - SUSE Linux Enterprise Server 12 or higher
   - SUSE Linux Enterprise Server 15 or higher
