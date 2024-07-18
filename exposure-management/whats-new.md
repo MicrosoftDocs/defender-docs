@@ -26,6 +26,8 @@ Security Exposure Management is currently in public preview.
 - New integration with Threat Analytics to enhance the set of domain security initiatives with threat-based security initiatives. These initiatives focus on specific attack techniques and active threat actors, as seen and analyzed by expert Microsoft security researchers.
 
 - **Blog** - [Respond to trending threats and adopt zero-trust with Exposure Management](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/respond-to-trending-threats-and-adopt-zero-trust-with-exposure/ba-p/4130133)
+ 
+For more information see, [Review security initiatives](initiatives.md)
 
 ---
 
@@ -35,6 +37,7 @@ Security Exposure Management is currently in public preview.
 
 - **Blog** - [Microsoft Security Exposure Management Graph: unveiling the power](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-security-exposure-management-graph-unveiling-the-power/ba-p/4148546)
 
+For more information see, [Query the enterprise exposure graph](query-enterprise-exposure-graph.md)
 ---
 
 ## April 2024
@@ -44,4 +47,6 @@ Security Exposure Management is currently in public preview.
 - Microsoft Security Exposure Management introduces a contextual risk-based approach, allowing organizations to identify and prioritize critical assets effectively. By assessing potential exposures in real time, security teams gain clarity and focus on safeguarding their digital assets.
 
 - **Blog** - [Critical Asset Protection with Microsoft Security Exposure Management](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/critical-asset-protection-with-microsoft-security-exposure/ba-p/4122645)
+
+For more information see, [Overview of critical asset management](critical-asset-management.md)
 
