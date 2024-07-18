@@ -176,9 +176,9 @@ For more details on MAM or app protection policy, see [iOS app protection policy
 
 ## Privacy Controls
 
-Microsoft Defender for Endpoint on iOS enables Privacy Controls for both the Admins and the End Users. This includes the controls for enrolled (MDM) and unenrolled (MAM) devices.
+Microsoft Defender for Endpoint on iOS enables privacy controls for both admins and end users. This includes the controls for enrolled (MDM) and unenrolled (MAM) devices.
 
-For Customers with MDM, admins can configure the Privacy Controls through Managed devices in the App Config. For Customers without enrollment, using MAM, admins can configure the Privacy Controls through Managed apps in the App Config. End Users also can configure the Privacy Settings from the Defender App settings.
+If you're using MDM, your admins can configure privacy controls through **Managed devices** in the App Config. If you're using MAM without enrollment, your admins can configure privacy controls through **Managed apps** in the App Config. End users also can configure privacy settings in Microsoft Defender app settings.
 
 ### Configure privacy in phish alert report
 
