@@ -184,45 +184,49 @@ If you're using MDM, your admins can configure privacy controls through **Manage
 
 Customers can now enable privacy control for the phish report sent by Microsoft Defender for Endpoint on iOS so that the domain name isn't included as part of a phish alert whenever a phish website is detected and blocked by Microsoft Defender for Endpoint.
 
-1. **Admin Privacy Controls (MDM)** Use the following steps to enable privacy and not collect the domain name as part of the phish alert report for enrolled devices.
+#### Configure privacy controls in MDM
 
-   1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
+Use the following steps to enable privacy and not collect the domain name as part of the phish alert report for enrolled devices.
 
-   2. Give the policy a name, **Platform \> iOS/iPadOS**, select the profile type.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
-   3. Select **Microsoft Defender for Endpoint** as the target app.
+2. Give the policy a name, **Platform \> iOS/iPadOS**, select the profile type.
 
-   4. On the **Settings** page, select **Use configuration designer** and add `DefenderExcludeURLInReport` as the key, and set its value type to **Boolean**.
+3. Select **Microsoft Defender for Endpoint** as the target app.
 
-      - To enable privacy and not collect the domain name, enter the value as `true` and assign this policy to users. By default, this value is set to `false`.
-      - For users with key set as `true`, the phish alert doesn't contain the domain name information whenever a malicious site is detected and blocked by Defender for Endpoint.
+4. On the **Settings** page, select **Use configuration designer** and add `DefenderExcludeURLInReport` as the key, and set its value type to **Boolean**.
 
-   5. Select **Next** and assign this profile to targeted devices/users.
+   - To enable privacy and not collect the domain name, enter the value as `true` and assign this policy to users. By default, this value is set to `false`.
+   - For users with key set as `true`, the phish alert doesn't contain the domain name information whenever a malicious site is detected and blocked by Defender for Endpoint.
 
-2. **Admin Privacy Controls (MAM)** Use the following steps to enable privacy and not collect the domain name as part of the phish alert report for unenrolled devices.
+5. Select **Next** and assign this profile to targeted devices/users.
 
-   1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed apps**.
+#### Configure privacy controls in MAM
 
-   2. Give the policy a name.
+Use the following steps to enable privacy and not collect the domain name as part of the phish alert report for unenrolled devices.
 
-   3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed apps**.
 
-   4. On the **Settings** page, under the **General Configuration Settings**, add `DefenderExcludeURLInReport` as the key, and set its value as `true`.
+2. Give the policy a name.
 
-      - To enable privacy and not collect the domain name, enter the value as `true` and assign this policy to users. By default, this value is set to `false`.
-      - For users with key set as `true`, the phish alert doesn't contain the domain name information whenever a malicious site is detected and blocked by Defender for Endpoint.
+3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 
-   5. Select **Next** and assign this profile to targeted devices/users.
+4. On the **Settings** page, under the **General Configuration Settings**, add `DefenderExcludeURLInReport` as the key, and set its value as `true`.
 
-3. **End User Privacy Controls** These controls help the end user to configure the information shared to their organization.
+   - To enable privacy and not collect the domain name, enter the value as `true` and assign this policy to users. By default, this value is set to `false`.
+   - For users with key set as `true`, the phish alert doesn't contain the domain name information whenever a malicious site is detected and blocked by Defender for Endpoint.
 
-   For Supervised devices, End User controls aren't visible. Your admin decides and controls the settings. However, for Unsupervised devices, the control is displayed under the **Settings \> Privacy**.
+5. Select **Next** and assign this profile to targeted devices/users.
 
-   - Users see a toggle for **Unsafe Site Info**.
-   - This toggle is only visible if Admin has set `DefenderExcludeURLInReport = true`.
-   - If enabled by an Admin, Users can decide if they want to send the unsafe site info to their Organization or not.
-   - By default, it's set to `false`. The unsafe site information isn't sent.
-   - If user toggles it to `true`, the unsafe site details are sent.
+#### Configure end-user privacy controls in the Microsoft Defender app
+
+These controls help the end user to configure the information shared to their organization.
+
+For supervised devices, end-user controls aren't visible. Your admin decides and controls the settings. However, for unsupervised devices, the control is displayed under the **Settings \> Privacy**.
+
+Users see a toggle for **Unsafe Site Info**. This toggle is only visible if admin has set `DefenderExcludeURLInReport = true`.
+
+If enabled by an admin, users can specify whether to send unsafe site info to their organization. By default, it's set to `false`, which means unsafe site information isn't sent. If user toggles it to `true`, unsafe site details are sent.
 
 Turning privacy controls on or off doesn't impact the device compliance check or conditional access.
 
@@ -234,29 +238,31 @@ Turning privacy controls on or off doesn't impact the device compliance check or
 
 Microsoft Defender for Endpoint on iOS enables **Optional Permissions** in the onboarding flow. Currently the permissions required by Defender for Endpoint are mandatory in the onboarding flow. With this feature, admins can deploy Defender for Endpoint on BYOD devices without enforcing the mandatory **VPN Permission** during onboarding. End users can onboard the app without the mandatory permissions and can later review these permissions. This feature is currently present only for enrolled devices (MDM).
 
-### Configure Optional Permission
+### Configure optional permissions using MDM
 
-1. **Admin flow (MDM)** Use the following steps to enable **Optional VPN** permission for enrolled devices.
+Admins can use the following steps to enable **Optional VPN** permission for enrolled devices.
 
-   1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
-   2. Give the policy a name, select **Platform \> iOS/iPadOS**.
+2. Give the policy a name, select **Platform \> iOS/iPadOS**.
 
-   3. Select **Microsoft Defender for Endpoint** as the target app.
+3. Select **Microsoft Defender for Endpoint** as the target app.
 
-   4. On the **Settings** page, select **Use configuration designer** and add `DefenderOptionalVPN` as the key, and set its value type as `Boolean`.
+4. On the **Settings** page, select **Use configuration designer** and add `DefenderOptionalVPN` as the key, and set its value type as `Boolean`.
 
-      - To enable optional VPN permission, enter value as `true` and assign this policy to users. By default, this value is set to `false`.
-      - For users with key set as `true`, the users are able to onboard the app without giving the VPN permission.
+   - To enable optional VPN permission, enter value as `true` and assign this policy to users. By default, this value is set to `false`.
+   - For users with key set as `true`, the users are able to onboard the app without giving the VPN permission.
 
-   5. Select **Next** and assign this profile to targeted devices/users.
+5. Select **Next** and assign this profile to targeted devices/users.
 
-1. **End User flow** - User installs and opens the app to start the onboarding.
+### Configure optional permissions as an end user
 
-   - If an admin has set up optional permissions, then the user can **Skip** VPN permission and complete onboarding.
-   - Even if the user has skipped VPN, the device is able to onboard, and a heartbeat is sent.
-   - If VPN is disabled, web protection isn't active.
-   - Later, the user can enable web protection from within the app, which installs the VPN configuration on the device.
+End users install and open the Microsoft Defender app to start onboarding.
+
+- If an admin has set up optional permissions, then the user can **Skip** VPN permission and complete onboarding.
+- Even if the user has skipped VPN, the device is able to onboard, and a heartbeat is sent.
+- If VPN is disabled, web protection isn't active.
+- Later, the user can enable web protection from within the app, which installs the VPN configuration on the device.
 
 > [!NOTE]
 > **Optional Permission** is different from **Disable Web Protection**. Optional VPN Permission only helps to skip the permission during onboarding but its available for the end user to later review and enable it. While **Disable Web Protection** allows users to onboard the Defender for Endpoint app without the Web Protection. It cannot be enabled later.
@@ -360,7 +366,7 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
 Once the client versions are deployed to target iOS devices, processing starts. Vulnerabilities found on those devices start showing up in the Defender Vulnerability Management dashboard. The processing might take few hours (max 24 hours) to complete. This time frame is especially true for the entire list of apps to show up in the software inventory.
 
 > [!NOTE]
-> If you're using SSL inspection solution within your iOS device, please allow list the domain names `securitycenter.windows.com` (in commercial environment) and `securitycenter.windows.us` (in GCC environment) for TVM feature to work.
+> If you're using SSL inspection solution within your iOS device, add the domain names `securitycenter.windows.com` (in commercial environments) and `securitycenter.windows.us` (in GCC environments) for threat and vulnerability management features to work.
 
 ## Disable sign out
 
@@ -368,9 +374,9 @@ Defender for Endpoint on iOS supports deployment without sign out button in the 
 
 This configuration is available for both the enrolled (MDM) devices as well as unenrolled (MAM) devices. Admins can use the following steps to configure the Disable sign out
 
-### Configure Disable sign out
+### Configure Disable sign out using MDM
 
-**For enrolled devices(MDM)**
+**For enrolled devices (MDM)**
 
 1. In the Microsoft Intune admin center, go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
@@ -384,6 +390,8 @@ This configuration is available for both the enrolled (MDM) devices as well as u
    - An admin can set `DisableSignOut = true` to disable the sign-out button in the app. Users don't see the sign out button once the policy is pushed.
 
 5. Select **Next**, and then assign this policy to targeted devices/users.
+
+### Configure Disable sign out using MAM
 
 **For unenrolled devices(MAM)**
 
@@ -400,16 +408,15 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 
 5. Select **Next**, and then assign this policy to targeted devices/users.
 
-
 ## Device Tagging
 
 Defender for Endpoint on iOS enables bulk tagging the mobile devices during onboarding by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Microsoft Defender portal. The Device tags appear against the devices in the Device Inventory. 
 
 This configuration is available for both the enrolled (MDM) devices as well as unenrolled (MAM) devices. Admins can use the following steps to configure the Device tags.
 
-### Configure Device tags
+### Configure device tags using MDM
 
-**For enrolled devices(MDM)**
+**For enrolled devices (MDM)**
 
 1. In the Microsoft Intune admin center, go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
@@ -425,7 +432,9 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 
 5. Select **Next**, and then assign this policy to targeted devices/users.
 
-**For unenrolled devices(MAM)**
+### Configure device tags using MAM
+
+**For unenrolled devices (MAM)**
 
 1. In the Microsoft Intune admin center, go to **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 
@@ -444,15 +453,15 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 > [!NOTE] 
 > The Microsoft Defender app must be opened for tags to be synced with Intune and passed to the Microsoft Defender portal. It may take up to 18 hours for tags to reflect in the portal.
 
-## Suppress OS update Notification
+## Suppress OS update notification
 
 A configuration is available for customers to suppress OS update notification in Defender for Endpoint on iOS. Once the config key is set in the Intune App configuration policies, Defender for Endpoint will not send any notifications on the device for OS updates. However, when you open the Microsoft Defender app, the Device Health card is visible and show the state of your OS. 
 
 This configuration is available for both the enrolled (MDM) devices as well as unenrolled (MAM) devices. Admins can use the following steps to suppress the OS update Notification.
 
-### Configure OS update Notification
+### Configure OS update notifications using MDM
 
-**For enrolled devices(MDM)**
+**For enrolled devices (MDM)**
 
 1. In the Microsoft Intune admin center, go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
@@ -465,6 +474,8 @@ This configuration is available for both the enrolled (MDM) devices as well as u
    - By default, `SuppressOSUpdateNotification = false`.
    - An admin can set `SuppressOSUpdateNotification = true` to suppress the OS update notifications.
    - Select **Next** and assign this policy to targeted devices/users.
+
+### Configure OS update notifications using MAM
 
 **For unenrolled devices(MAM)**
 
@@ -481,8 +492,7 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 
 5. Select **Next** and assign this policy to targeted devices/users.
 
-
-## Configure option to send in-app feedback
+## Configure the option to send in-app feedback
 
 Customers now have the option to configure the ability to send feedback data to Microsoft within the Defender for Endpoint app. Feedback data helps Microsoft improve  products and troubleshoot issues.
 
@@ -504,7 +514,7 @@ Use the following steps to configure the option to send feedback data to Microso
 
 5. Select **Next** and assign this profile to targeted devices/users.
 
-## Report unsafe site
+## Report unsafe sites
 
 Phishing websites impersonate trustworthy websites for the purpose of obtaining your personal or financial information. Visit the [Provide feedback about network protection](https://www.microsoft.com/wdsi/filesubmission/exploitguard/networkprotection) page to report a website that could be a phishing site.
 
