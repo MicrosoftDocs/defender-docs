@@ -40,7 +40,7 @@ Any of these licenses gives you access to Microsoft Defender XDR features via th
 - Windows 11 Enterprise E5 or A5
 - Enterprise Mobility + Security (EMS) E5 or A5
 - Office 365 E5 or A5
-- Microsoft Defender for Endpoint
+- Microsoft Defender for Endpoint (Plan 2)
 - Microsoft Defender for Identity
 - Microsoft Defender for Cloud Apps or [Cloud App Discovery](/defender-cloud-apps/editions-cloud-app-security-aad)
 - Microsoft Defender for Office 365 (Plan 2)
