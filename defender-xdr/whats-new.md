@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 07/10/2024
+ms.date: 07/16/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -31,9 +31,11 @@ You can also get product updates and important notifications through the [messag
 
 ## July 2024
 
+- (GA) Filtering Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues is now generally available. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
+
 - (GA) The **Microsoft unified security operations platform** in the Microsoft Defender portal is generally available. This release brings together the full capabilities of Microsoft Sentinel, Microsoft Defender XDR, and Microsoft Copilot in Microsoft Defender. For more information, see the following resources:
 
-  - Blog post: [General availability of the Microsoft unified security operations platform](https://aka.ms/unified-soc-announcement)
+- Blog post: [General availability of the Microsoft unified security operations platform](https://aka.ms/unified-soc-announcement)
   - [Microsoft Sentinel in the Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2263690)
   - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
   - [Microsoft Copilot in Microsoft Defender](security-copilot-in-microsoft-365-defender.md)
@@ -46,7 +48,11 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). Access Microsoft Defender XDR Ninja training, learning paths, training modules and more. Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject. 
 
-- (GA) You can now release or move email messages from quarantine back to the user's inbox directly from [Take actions in advanced hunting](advanced-hunting-take-action.md#take-various-actions-on-emails) and in [custom detections](custom-detection-rules.md#actions-on-emails). This allows security operators to manage false positives more efficiently and without losing context. 
+- (GA) The **[UrlClickEvents](advanced-hunting-urlclickevents-table.md)** table in advanced hunting is now generally available. Use this table to get information about [Safe Links](/defender-office-365/safe-links-about) clicks from email messages, Microsoft Teams, and Office 365 apps in supported desktop, mobile, and web apps.
+
+- (GA) You can now **release or move email messages from quarantine** back to the user's inbox directly from [Take actions in advanced hunting](advanced-hunting-take-action.md#take-various-actions-on-emails) and in [custom detections](custom-detection-rules.md#actions-on-emails). This allows security operators to manage false positives more efficiently and without losing context. 
+
+
 
 ## June 2024
 
