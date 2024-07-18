@@ -38,9 +38,9 @@ Microsoft Defender for Endpoint on iOS along with Microsoft Intune and Microsoft
 
 For more information about how to set up Conditional Access with Defender for Endpoint on iOS, see [Defender for Endpoint and Intune](/mem/intune/protect/advanced-threat-protection).
 
-## Web Protection and VPN
+## Web protection and VPN
 
-By default, Defender for Endpoint on iOS includes and enables the web protection feature. [Web protection](web-protection-overview.md) helps to secure devices against web threats and protect users from phishing attacks. Anti-phishing and custom indicators (URL and Domain) are supported as part of web protection. IP based custom indicators are currently not supported on iOS. Web Content Filtering is currently not supported on mobile platforms (Android and iOS).
+By default, Defender for Endpoint on iOS includes and enables [web protection](web-protection-overview.md), which helps to secure devices against web threats and protect users from phishing attacks. Anti-phishing and custom indicators (URL and Domain) are supported as part of web protection. IP based custom indicators are currently not supported on iOS. Web Content Filtering is currently not supported on mobile platforms (Android and iOS).
 
 Defender for Endpoint on iOS uses a VPN in order to provide this capability. The VPN is local, and unlike traditional VPN, network traffic isn't sent outside the device.
 
@@ -57,43 +57,47 @@ While enabled by default, there might be some cases that require you to disable 
 > [!NOTE]
 > Web protection isn't available when VPN is disabled. To re-enable web protection, open the Microsoft Defender for Endpoint app on the device, and then select **Start VPN**.
 
-## Disable Web Protection
+## Disable web protection
 
-Web Protection is one of the key features of Defender for Endpoint and it requires a VPN to provide that capability. The VPN used is a local/loopback VPN and not a traditional VPN, however there are several reasons for which customers might not prefer the VPN. If you don't want to set up a VPN, you can disable **Web Protection** and deploy Defender for Endpoint without that feature. Other Defender for Endpoint features continue to work.
+Web protection is one of the key features of Defender for Endpoint and it requires a VPN to provide that capability. The VPN used is a local/loopback VPN and not a traditional VPN, however there are several reasons for which customers might not prefer the VPN. If you don't want to set up a VPN, you can disable web protection and deploy Defender for Endpoint without that feature. Other Defender for Endpoint features continue to work.
 
-This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. For customers with MDM, admins can configure the **Web Protection** through managed devices in the App Config. For customers without enrollment, using MAM, admins can configure the **Web Protection** through managed apps in the App Config.
+This configuration is available for both the enrolled (MDM) devices and unenrolled (MAM) devices. For customers with MDM, admins can configure web protection through managed devices in the App Config. For customers without enrollment, using MAM, admins can configure the web protection through managed apps in the App Config.
 
-### Configure Web Protection
+### Configure web protection
 
-1. **Disable Web Protection(MDM)** Use the following steps to disable **Web Protection** for enrolled devices.
+#### Disable web protection using MDM
 
-   1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
+Use the following steps to disable web protection for enrolled devices.
+
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
    
-   2. Give the policy a name, **Platform \> iOS/iPadOS**.
+2. Give the policy a name, **Platform \> iOS/iPadOS**.
 
-   3. Select Microsoft Defender for Endpoint as the target app.
+3. Select Microsoft Defender for Endpoint as the target app.
 
-   4. On the **Settings** page, select **Use configuration designer**, and then add `WebProtection` as the key, and set its value type to `String`.
+4. On the **Settings** page, select **Use configuration designer**, and then add `WebProtection` as the key, and set its value type to `String`.
 
-      - By default, `WebProtection = true`. An admin must set `WebProtection = false` to turn off web protection.
-      - Defender for Endpoint sends the heartbeat to the Microsoft Defender portal whenever a user opens the app.
-      - Select **Next**, and then assign this profile to targeted devices/users.
+   - By default, `WebProtection = true`. An admin must set `WebProtection = false` to turn off web protection.
+   - Defender for Endpoint sends the heartbeat to the Microsoft Defender portal whenever a user opens the app.
+   - Select **Next**, and then assign this profile to targeted devices/users.
 
-2. **Disable Web Protection(MAM)** Use the following steps to disable **Web Protection** for unenrolled devices.
+#### Disable web protection using MAM
 
-   1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed apps**.
+Use the following steps to disable web protection for unenrolled devices.
 
-   2. Give the policy a name.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed apps**.
 
-   3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
+2. Give the policy a name.
 
-   4. On the **Settings** page, under **General Configuration Settings**, add `WebProtection` as the key, and set its value to `false`.
+3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 
-      - By default, `WebProtection = true`. An admin can set `WebProtection = false` to switch off web protection.
-      - Defender for Endpoint sends the heartbeat to the Microsoft Defender portal whenever a user opens the app.
-      - Select **Next**, and then assign this profile to targeted devices/users.
+4. On the **Settings** page, under **General Configuration Settings**, add `WebProtection` as the key, and set its value to `false`.
 
-## Configure Network Protection
+   - By default, `WebProtection = true`. An admin can set `WebProtection = false` to switch off web protection.
+   - Defender for Endpoint sends the heartbeat to the Microsoft Defender portal whenever a user opens the app.
+   - Select **Next**, and then assign this profile to targeted devices/users.
+
+## Configure network protection
 
 Network protection in Microsoft Defender for endpoint is disabled by default. Admins can use the following steps to configure network protection. This configuration is available for both enrolled devices through MDM config and unenrolled devices through MAM config.
 
