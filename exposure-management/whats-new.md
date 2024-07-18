@@ -29,8 +29,6 @@ Security Exposure Management is currently in public preview.
 
 For more information, see, [Review security initiatives](initiatives.md)
 
----
-
 ### New Advanced Hunting Graphs
 
 - MSEM released two new powerful tables within Advanced Hunting: *ExposureGraphNodes* and *ExposureGraphEdges*.
@@ -38,8 +36,6 @@ For more information, see, [Review security initiatives](initiatives.md)
 - **Blog** - [Microsoft Security Exposure Management Graph: unveiling the power](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-security-exposure-management-graph-unveiling-the-power/ba-p/4148546)
 
 For more information, see, [Query the enterprise exposure graph](query-enterprise-exposure-graph.md)
-
----
 
 ## April 2024
 
