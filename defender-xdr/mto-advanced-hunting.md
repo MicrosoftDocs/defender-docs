@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - m365-security
-  - highpri
-  - tier1
+- m365-security
+- highpri
+- tier1
 ms.topic: conceptual
-ms.date: 1/5/2024
+ms.date: 07/18/2024
 ---
 
 # Advanced hunting in multi-tenant management in Microsoft Defender XDR
