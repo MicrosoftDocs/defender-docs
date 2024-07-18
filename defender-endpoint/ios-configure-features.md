@@ -104,7 +104,7 @@ Network protection in Microsoft Defender for endpoint is disabled by default. Ad
 > [!NOTE]
 > Only one policy should be created for network Protection, either through MDM or MAM. Network protection initialization requires the end user to open the app once.
 
-### For enrolled devices (MDM)
+### Configure network protection using MDM
 
 To set up network protection using MDM configuration for enrolled devices, follow these steps:
 
@@ -120,7 +120,7 @@ To set up network protection using MDM configuration for enrolled devices, follo
 
    :::image type="content" source="media/np-mdmconfig-key.png" alt-text="Screenshot that shows the mdm configuration policy." lightbox="media/np-mdmconfig-key.png":::
 
-1. For other configurations related to network protection, add the following keys, choose the corresponding value type and value.
+6. For other configurations related to network protection, add the following keys, choose the corresponding value type and value.
 
    | Key | Value Type | Default (true-enable, false-disable) | Description |
    | --- | --- | --- | --- |
@@ -133,9 +133,9 @@ To set up network protection using MDM configuration for enrolled devices, follo
 
 8. Review and create the configuration policy.
 
-### For unenrolled devices (MAM)
+### Configure network protection using MAM
 
-Follow the below steps for setting up MAM config for unenrolled devices for Network protection (Authenticator device registration is required for MAM configuration) in iOS devices. 
+Use the following procedure to set up MAM config for unenrolled devices for network protection (Authenticator device registration is required for MAM configuration) in iOS devices. 
 
 1. In the Microsoft Intune admin center, navigate to **Apps** \> **App configuration policies** \> **Add** \> **Managed apps** \> **Create a new App configuration policy**.
 
@@ -178,7 +178,7 @@ Follow the steps in the following link to set up app protection policies with Mi
 
 For more details on MAM or app protection policy, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios).
 
-## Privacy Controls
+## Privacy controls
 
 Microsoft Defender for Endpoint on iOS enables privacy controls for both admins and end users. This includes the controls for enrolled (MDM) and unenrolled (MAM) devices.
 
@@ -238,13 +238,13 @@ Turning privacy controls on or off doesn't impact the device compliance check or
 > On Supervised devices with the configuration profile, Microsoft Defender for Endpoint can access the entire URL and if it is found to be phishing, it is blocked.
 > On an Unsupervised device, Microsoft Defender for Endpoint has access to only the domain name, and if the domain is not a phishing URL, it won't be blocked.
 
-## Optional Permissions
+## Optional permissions
 
-Microsoft Defender for Endpoint on iOS enables **Optional Permissions** in the onboarding flow. Currently the permissions required by Defender for Endpoint are mandatory in the onboarding flow. With this feature, admins can deploy Defender for Endpoint on BYOD devices without enforcing the mandatory **VPN Permission** during onboarding. End users can onboard the app without the mandatory permissions and can later review these permissions. This feature is currently present only for enrolled devices (MDM).
+Microsoft Defender for Endpoint on iOS enables optional permissions in the onboarding flow. Currently the permissions required by Defender for Endpoint are mandatory in the onboarding flow. With this feature, admins can deploy Defender for Endpoint on BYOD devices without enforcing the mandatory VPN permission during onboarding. End users can onboard the app without the mandatory permissions and can later review these permissions. This feature is currently present only for enrolled devices (MDM).
 
 ### Configure optional permissions using MDM
 
-Admins can use the following steps to enable **Optional VPN** permission for enrolled devices.
+Admins can use the following steps to enable Optional VPN permission for enrolled devices.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** \> **App configuration policies** \> **Add** \> **Managed devices**.
 
@@ -263,13 +263,13 @@ Admins can use the following steps to enable **Optional VPN** permission for enr
 
 End users install and open the Microsoft Defender app to start onboarding.
 
-- If an admin has set up optional permissions, then the user can **Skip** VPN permission and complete onboarding.
+- If an admin has set up optional permissions, then the user can Skip VPN permission and complete onboarding.
 - Even if the user has skipped VPN, the device is able to onboard, and a heartbeat is sent.
 - If VPN is disabled, web protection isn't active.
 - Later, the user can enable web protection from within the app, which installs the VPN configuration on the device.
 
 > [!NOTE]
-> **Optional Permission** is different from **Disable Web Protection**. Optional VPN Permission only helps to skip the permission during onboarding but its available for the end user to later review and enable it. While **Disable Web Protection** allows users to onboard the Defender for Endpoint app without the Web Protection. It cannot be enabled later.
+> Optional Permission is different from Disable Web Protection. Optional VPN Permission only helps to skip the permission during onboarding but its available for the end user to later review and enable it. While Disable Web Protection allows users to onboard the Defender for Endpoint app without the Web Protection. It cannot be enabled later.
 
 ## Jailbreak detection
 
@@ -329,7 +329,7 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
      :::image type="content" source="media/tvm-app-sync-toggle.png" alt-text="App sync toggleSup" lightbox="media/tvm-app-sync-toggle.png":::
 
 > [!NOTE]
-> To get the list of all the apps including unmanaged apps, the admin has to enable **Send full application inventory data on personally owned iOS/iPadOS devices** in the Intune Admin Portal for the supervised devices marked as "Personal".
+> To get the list of all the apps including unmanaged apps, the admin has to enable **Send full application inventory data on personally owned iOS/iPadOS devices** setting in the Intune Admin Portal for the supervised devices marked as "Personal".
 > For the supervised devices marked as "Corporate" in the Intune Admin Portal, the admin need not enable **Send full application inventory data on personally owned iOS/iPadOS devices**.
 
 ### On an Unsupervised Device
@@ -501,7 +501,7 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 Customers now have the option to configure the ability to send feedback data to Microsoft within the Defender for Endpoint app. Feedback data helps Microsoft improve  products and troubleshoot issues.
 
 > [!NOTE]
-> For US Government cloud customers, feedback data collection is **disabled** by default.
+> For US Government cloud customers, feedback data collection is disabled by default.
 
 Use the following steps to configure the option to send feedback data to Microsoft:
 
