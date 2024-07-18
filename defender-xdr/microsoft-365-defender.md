@@ -4,22 +4,22 @@ description: Microsoft Defender XDR is a coordinated threat protection solution 
 search.appverid: met150
 ms.service: defender-xdr
 f1.keywords:
-  - NOCSH
+- NOCSH
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 audience: ITPro
 ms.custom: 
-  - admindeeplinkDEFENDER
-  - intro-overview
+- admindeeplinkDEFENDER
+- intro-overview
 ms.collection:
 - essentials-overview
 - tier1
 ms.topic: conceptual
 adobe-target: true
-ms.date: 03/28/2024
+ms.date: 07/18/2024
 appliesto:
-  - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
+- ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 manager: deniseb
 ---
 
