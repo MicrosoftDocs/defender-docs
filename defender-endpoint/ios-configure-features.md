@@ -374,7 +374,7 @@ Defender for Endpoint on iOS supports deployment without sign out button in the 
 
 This configuration is available for both the enrolled (MDM) devices as well as unenrolled (MAM) devices. Admins can use the following steps to configure the Disable sign out
 
-### Configure Disable sign out using MDM
+### Configure disable sign out using MDM
 
 **For enrolled devices (MDM)**
 
@@ -391,7 +391,7 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 
 5. Select **Next**, and then assign this policy to targeted devices/users.
 
-### Configure Disable sign out using MAM
+### Configure disable sign out using MAM
 
 **For unenrolled devices(MAM)**
 
@@ -408,7 +408,7 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 
 5. Select **Next**, and then assign this policy to targeted devices/users.
 
-## Device Tagging
+## Device tagging
 
 Defender for Endpoint on iOS enables bulk tagging the mobile devices during onboarding by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Microsoft Defender portal. The Device tags appear against the devices in the Device Inventory. 
 
@@ -453,7 +453,7 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 > [!NOTE] 
 > The Microsoft Defender app must be opened for tags to be synced with Intune and passed to the Microsoft Defender portal. It may take up to 18 hours for tags to reflect in the portal.
 
-## Suppress OS update notification
+## Suppress OS update notifications
 
 A configuration is available for customers to suppress OS update notification in Defender for Endpoint on iOS. Once the config key is set in the Intune App configuration policies, Defender for Endpoint will not send any notifications on the device for OS updates. However, when you open the Microsoft Defender app, the Device Health card is visible and show the state of your OS. 
 
