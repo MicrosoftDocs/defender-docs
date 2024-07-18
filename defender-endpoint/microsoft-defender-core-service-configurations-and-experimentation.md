@@ -21,6 +21,8 @@ ms.collection:
 
 This article describes the interaction between Microsoft Defender Core Service and the Experimentation and Configuration Service (ECS). Microsoft Defender Core Service is a part of Microsoft Defender Antivirus and communicates with ECS to request and receive different kinds of payloads. These payloads include configurations, feature rollouts, and experiments. 
 
+> [!CAUTION]
+> If you disable communications with the service, this will affect Microsoft's ability to respond to a severe bug in a timely manner. 
 > [!IMPORTANT]
 > Make sure clients can access the following URLs so payloads can be received:
 >
@@ -48,10 +50,7 @@ Controlled Feature Rollout (CFR) is a procedure for slowly increasing the size o
 
 ## Experiments 
 
-Microsoft Defender Core Service builds have features and functionality that are still in development or are experimental. Experiments are like CFR, but the size of the user group is much smaller for testing the new concept. These features are hidden by default until the feature's rolled out or the experiment's finished. Experiment flags are used to enable and disable these features. 
-
-> [!CAUTION]
-> If you disable communications with the service, this will affect Microsoft's ability to respond to a severe bug in a timely manner. 
+Microsoft Defender Core service follows the [gradual rollout](/defender-endpoint/configure-updates) (based on channels) of engine and platform updates.  Any major changes will be announced in [Message Center](https://admin.microsoft.com/AdminPortal/Home#/MessageCenter).
 
 ## See also 
 
