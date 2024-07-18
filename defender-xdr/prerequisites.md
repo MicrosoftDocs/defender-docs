@@ -16,7 +16,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 06/21/2024
+ms.date: 07/18/2024
 ---
 
 # Microsoft Defender XDR prerequisites
@@ -48,6 +48,9 @@ Any of these licenses gives you access to Microsoft Defender XDR features via th
 - Microsoft Defender for Business
 
 For more information, [view the Microsoft 365 Enterprise service plans](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
+
+> [!NOTE]
+> Automatic attack disruption requires Microsoft Defender for Endpoint Plan 2. For more information, see [Configure automatic attack disruption capabilities](configure-attack-disruption.md).
 
 > Don't have license yet? [Try or buy a Microsoft 365 subscription](/microsoft-365/commerce/try-or-buy-microsoft-365)
 
