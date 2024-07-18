@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block URLs in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 4/30/2024
+ms.date: 07/15/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -84,7 +84,7 @@ Instead, you use the **URLs** tab on the **Submissions** page at <https://securi
 >
 > When the entity in the allow entry is encountered again (during mail flow or at time of click), all filters associated with that entity are overridden.
 >
-> By default, allow entries for URLs exist for 30 days. During those 30 days, Microsoft learns from the allow entries and [removes them or automatically extends them](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/automatic-tenant-allow-block-list-expiration-management-is-now/ba-p/3723447). After Microsoft learns from the removed allow entries, messages that contain those URLs are delivered, unless something else in the message is detected as malicious.
+> By default, allow entries for domains and email addresses, files, and URLs have a 'remove after last used date' value of 45 days. The allow entry is triggered and the **Last used** date is updated when the entity is encountered and identified as bad during mail flow or at time of click. After the filtering system determines that the entity is clean, and if the entity isn't used again, the allow entry is automatically removed after 45 days. By default, allow entries for spoofed senders never expire.
 >
 > During mail flow, if messages containing the allowed URL pass other checks in the filtering stack, the messages are delivered. For example, if a message passes [email authentication checks](email-authentication-about.md) and file filtering, the message is delivered if it also contains an allowed URL.
 >
@@ -221,6 +221,7 @@ In existing URL entries, you can change the expiration date and note.
        - **1 day**
        - **7 days**
        - **30 days**
+       - **45 days after last used date**
        - **Specific date**: The maximum value is 30 days from today.
      - **Optional note**
 
