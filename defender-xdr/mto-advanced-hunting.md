@@ -38,9 +38,6 @@ This action opens a side pane from which you can specify the tenants to include 
 
 Select the tenants you want to include in your query. Select **Apply**, then **Run query**.
 
-> [!NOTE]
-> Queries that use the `join` operator are currently not supported in multi-tenant management advanced hunting.
-
 The query results contain the tenant ID:
 
    :::image type="content" source="/defender/media/defender/mto-cross-tenants-query-tenant-id.png" alt-text="Screenshot of the Microsoft Defender XDR ross tenants advanced hunting query scope column" lightbox="/defender/media/defender/mto-cross-tenants-query-tenant-id.png":::
