@@ -320,7 +320,7 @@ Reducing cyber risk requires comprehensive risk-based vulnerability management t
 
 Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. Vulnerability assessment of iOS versions is available for both enrolled (MDM) and unenrolled (MAM) devices. Vulnerability assessment of apps is only for enrolled (MDM) devices. Admins can use the following steps to configure the vulnerability assessment of apps.
 
-### On a Supervised Device
+### On a supervised device
 
 1. Ensure the device is configured in the [Supervised mode](ios-install.md#complete-deployment-for-supervised-devices).
 
@@ -332,7 +332,7 @@ Defender for Endpoint on iOS supports vulnerability assessments of OS and apps. 
 > To get the list of all the apps including unmanaged apps, the admin has to enable **Send full application inventory data on personally owned iOS/iPadOS devices** setting in the Intune Admin Portal for the supervised devices marked as "Personal".
 > For the supervised devices marked as "Corporate" in the Intune Admin Portal, the admin need not enable **Send full application inventory data on personally owned iOS/iPadOS devices**.
 
-### On an Unsupervised Device
+### On an unsupervised device
 
 1. To enable the feature in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint Security** \> **Microsoft Defender for Endpoint** \> **Enable App sync for iOS/iPadOS devices**.
 
@@ -397,7 +397,7 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 
 ### Configure disable sign out using MAM
 
-**For unenrolled devices(MAM)**
+**For unenrolled devices (MAM)**
 
 1. In the Microsoft Intune admin center, navigate to **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 
@@ -481,7 +481,7 @@ This configuration is available for both the enrolled (MDM) devices as well as u
 
 ### Configure OS update notifications using MAM
 
-**For unenrolled devices(MAM)**
+**For unenrolled devices (MAM)**
 
 1. In the Microsoft Intune admin center, navigate to **Apps** > **App configuration policies** > **Add** > **Managed apps**.
 
