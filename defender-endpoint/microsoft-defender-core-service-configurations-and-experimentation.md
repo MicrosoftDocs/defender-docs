@@ -7,7 +7,7 @@ author: YongRhee-MSFT
 ms.author: yongrhee
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 03/26/2024
+ms.date: 07/19/2024
 audience: ITPro
 ms.topic: troubleshooting
 ms.subservice: ngp
@@ -48,7 +48,7 @@ Controlled Feature Rollout (CFR) is a procedure for slowly increasing the size o
 
 ## Experiments 
 
-Microsoft Defender Core Service builds have features and functionality that are still in development or are experimental. Experiments are like CFR, but the size of the user group is much smaller for testing the new concept. These features are hidden by default until the feature's rolled out or the experiment's finished. Experiment flags are used to enable and disable these features. 
+Currently, Microsoft Defender Core service doesn't do any experimental testing. Development is carried out via the [Gradual Rollout process](/defender-endpoint/manage-gradual-rollout#microsoft-gradual-rollout-model). If this changes, an announcement will be posted in the [Message Center](/microsoft-365/admin/manage/message-center). 
 
 > [!CAUTION]
 > If you disable communications with the service, this will affect Microsoft's ability to respond to a severe bug in a timely manner. 
