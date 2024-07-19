@@ -18,7 +18,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to view, create, modify, and delete Safe Links policies in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 4/8/2024
+ms.date: 07/18/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -120,7 +120,7 @@ You configure Safe Links policies in the Microsoft Defender portal or in Exchang
      - **Do not rewrite the following URLs in email** section: Select the **Manage (nn) URLs** link to allow access to specific URLs that would otherwise be blocked by Safe Links.
 
        > [!NOTE]
-       > Entries in the "Do not rewrite the following URLs" list aren't scanned or wrapped by Safe Links during mail flow, but might still be blocked at time of click. Report the URL as **Should not have been blocked (False positive)** and select **Alow this URL** to add an allow entry to the Tenant Allow/Block List so the URL isn't scanned or wrapped by Safe Links during mail flow _and_ at time of click. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
+       > Entries in the "Do not rewrite the following URLs" list aren't scanned or wrapped by Safe Links during mail flow, but might still be blocked at time of click. Report the URL as **I've confirmed it's clean** and then select **Alow this URL** to add an allow entry to the Tenant Allow/Block List so the URL isn't scanned or wrapped by Safe Links during mail flow _and_ at time of click. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
 
        1. In the **Manage URLs to not rewrite** flyout that opens, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Add URLs**.
        2. In the **Add URLs** flyout that opens, click in the **URL** box, enter a value, and then press the ENTER key or select the complete value that's displayed below the box. Repeat this step as many times as necessary.
