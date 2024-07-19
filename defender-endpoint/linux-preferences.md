@@ -391,7 +391,7 @@ The *exclusionSettings* section of the configuration profile is used to configur
 |**Comments**|See the following sections for a description of the dictionary contents.|
 
 > [!NOTE] 
-> Already configured antivirus exclusions under *antivirusEngine* in managed JSON will continue to function as is with no impact. All new exclusion scopes including antivirus exclusions can be added under this completely new section called *exclusionSettings*. This section is outside the *antivirusEngine* tag as its dedicated solely for configuring all types of exclusions that will come in future. You can also continue to use *antivirusEngine* for configuring antivirus exclusions.
+> Already configured antivirus exclusions under (`antivirusEngine`) in managed JSON will continue to function as is with no impact. All new [exclusions](linux-exclusions.md) including antivirus exclusions can be added under this completely new section (`exclusionSettings`). This section is outside the (`antivirusEngine`) tag as its dedicated solely for configuring all types of exclusions that will come in future. You can also continue to use (`antivirusEngine`) for configuring antivirus exclusions.
 
 #### Merge policy
 
@@ -431,7 +431,7 @@ Specifies the set of exlusion scopes of content excluded. Currently supported sc
 If nothing is specified in for an exclusion under *exclusionSettings* in managed configuration, then `global` is considered as scope.
 
 > [!NOTE] 
-> Prevoiusly configured antivirus exclusions under (`antivirusEngine`) in managed JSON will continue to function as is with no impact. Their scope is considered (`epp`) since they were added as antivirus exclusions. All new exclusion scopes including antivirus exclusions can be added under this completely new section (`exclusionSettings`). This section is outside the (`antivirusEngine`) tag as its dedicated solely for configuring all types of exclusions that will come in future. You can also continue to use (`antivirusEngine`) for configuring antivirus exclusions.
+> Previously configured antivirus exclusions under (`antivirusEngine`) in managed JSON will continue to function and their scope is considered (`epp`) since they were added as antivirus exclusions. 
 
 |Description|Value|
 |---|---|
