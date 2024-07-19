@@ -89,11 +89,11 @@ Wildcard|Description|Examples|
 
 ## How to configure the list of exclusions
 
-### From the management console
+### Using the management console
 
 For more information on how to configure exclusions from Puppet, Ansible, or another management console, see [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
 
-### From the command line
+### Using the command line
 
 Run the following command to see the available switches for managing exclusions:
 
