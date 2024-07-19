@@ -207,9 +207,9 @@ Examples:
     ```
 
 - Add an exclusion for a folder with a wildcard in it:
-
- > [!NOTE]
- > Wildcards are not supported while configuring global exclusions.  
+    
+    > [!NOTE]
+    > Wildcards are not supported while configuring global exclusions.  
 
     ```bash
     mdatp exclusion folder add --path "/var/*/tmp"
