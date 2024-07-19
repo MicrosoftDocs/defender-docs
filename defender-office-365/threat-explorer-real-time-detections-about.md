@@ -1495,7 +1495,7 @@ Multiple conditions use the following syntax:
 \<Condition1> \<AND | OR\> \<Condition2>  \<AND | OR\> \<Condition3>... \<AND | OR\> \<ConditionN>
 
 > [!TIP]
-> Wildcard searches (**\*** or **?**) aren't supported in text or integer values. The **Subject** property uses partial text matching, and yields results similar to a wildcard search.
+> Wildcard searches (**\** or **?**) aren't supported in text or integer values. The **Subject** property uses partial text matching, and yields results similar to a wildcard search.
 
 The steps to create property filter/query conditions are the same in all views in Threat Explorer and Real-time detections:
 

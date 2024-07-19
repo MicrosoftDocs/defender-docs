@@ -191,7 +191,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
     For more information, see [Automatic user notifications for user reported phishing results in AIR](air-user-automatic-feedback-response.md).
 
   - **Customize sender and branding** section:
-    - **Specify a Microsoft 365 mailbox to use ads the From address of email notifications**: Select this option and enter the sender's email address in the box that appears. If you don't select this option, the default sender is submissions@messaging.microsoft.com.
+    - **Specify a Microsoft 365 mailbox to use ads the From address of email notifications**: Select this option and enter the sender's email address in the box that appears. If you don't select this option, the default sender is `submissions@messaging.microsoft.com`.
     - **Replace the Microsoft logo with my organization's logo across all reporting experiences**: Select this option to replace the default Microsoft logo that's used in notifications. Before you do this step, follow the instructions in [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme) to upload your custom logo.
 
 - **Report from quarantine** section \> **Allow reporting for quarantined messages**: Verify that this setting is selected to let users report messages from quarantine as they [release quarantined email messages](quarantine-end-user.md#release-quarantined-email). Otherwise, uncheck this setting.
@@ -369,7 +369,7 @@ This example creates the report submission policy with the default settings:
 Other settings:
 
 - **Outlook** section \> **Select an Outlook report button configuration** section:
-  - ***When the user reports an email** section:
+  - **When the user reports an email** section:
     - **Ask the user to confirm before reporting**:
       - When you go to the **User reported settings** page in the Defender portal for the first time (which creates the report submission policy), this setting is not selected (equivalent to `-PreSubmitMessageEnabled -$false`).
       - When you use PowerShell to create the policy, the default value is `-PreSubmitMessageEnabled $true`.
@@ -565,7 +565,7 @@ For detailed syntax and parameter information, see [Set-ReportSubmissionPolicy](
 
 The following examples show how to change the user reporting experience without concern for the existing settings or values:
 
-- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported messages to** to **Microsoft and my reporting mailbox*** with reportedmessages@contoso.com as the reporting mailbox:
+- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported messages to** to **Microsoft and my reporting mailbox** with `reportedmessages@contoso.com` as the reporting mailbox:
 
   ```powershell
   $usersub = "reportedmessages@contoso.com"

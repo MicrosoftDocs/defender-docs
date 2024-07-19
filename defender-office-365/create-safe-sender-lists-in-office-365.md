@@ -70,7 +70,7 @@ The following example assumes you need email from contoso.com to skip spam filte
 1. **Apply this rule if** (condition): **The sender** \> **domain is** \> contoso.com.
 
 2. Configure either of the following settings:
-   - ***Apply this rule if** (additional condition): **The message headers** \> **includes any of these words**:
+   - **Apply this rule if** (additional condition): **The message headers** \> **includes any of these words**:
      - **Enter text** (header name): `Authentication-Results`
      - **Enter words** (header value): `dmarc=pass` or `dmarc=bestguesspass` (add both values).
 
