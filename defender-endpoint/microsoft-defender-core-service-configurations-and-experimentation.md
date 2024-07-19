@@ -48,11 +48,11 @@ Configurations are the payload meant to ensure product health, security, and pri
 
 ## Controlled feature rollout
 
-Controlled Feature Rollout (CFR) is a procedure for slowly increasing the size of the user group that receives a feature. By distributing a new feature to a randomly selected subset of the user population, it's possible to compare user feedback to an equally sized control group without the feature to measure the impact of the feature. 
+Controlled feature rollout (CFR) is a procedure for slowly increasing the size of the user group that receives a feature. By distributing a new feature to a randomly selected subset of the user population, it's possible to compare user feedback to an equally sized control group without the feature to measure the impact of the feature. 
 
 ## Experiments 
 
-Microsoft Defender Core service follows the [gradual rollout](/defender-endpoint/configure-updates) (based on channels) of engine and platform updates.  Any major changes will be announced in [Message Center](https://admin.microsoft.com/AdminPortal/Home#/MessageCenter).
+Microsoft Defender Core service follows the [gradual rollout](/defender-endpoint/configure-updates) (based on channels) of engine and platform updates.  Any major changes are announced in [Message Center posts](https://admin.microsoft.com/AdminPortal/Home#/MessageCenter).
 
 ## See also 
 
