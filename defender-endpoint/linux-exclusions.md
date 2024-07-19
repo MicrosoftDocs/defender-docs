@@ -56,7 +56,8 @@ As described in an earlier section, we support two exclusion scopes antivirus (*
 
 Antivirus exclusions can be used to exclude trusted files and processes from real time protection while still having EDR visibility. Whereas Global exclusions are applied at sensor level where events originate mutes all the events that match exclusion conditions, thus stopping all EDR alerts and AV detections. 
 
-Please note "Global" (*global*) is a new exclusion scope that we are introducing in addition to "Antivirus" (*epp*) exclusion scope already supported by us. Refer to the following table for details:
+> [!NOTE]
+> "Global" (*global*) is a new exclusion scope that we are introducing in addition to "Antivirus" (*epp*) exclusion scope already supported by us.
 
 | Exclusion Category | Exclusion Scope | Description |
 | --- | --- | --- |
@@ -216,7 +217,7 @@ Examples:
     ```
 
     > [!NOTE]
-    > This will only exclude paths below */var/\*/tmp/*, but not folders which are siblings of *tmp*; for example, */var/this-subfolder/tmp*, but not */var/this-subfolder/log*.
+    > This will only exclude paths under */var/\*/tmp/*, but not folders which are siblings of *tmp*; for example, */var/this-subfolder/tmp*, but not */var/this-subfolder/log*.
 
     ```bash
     mdatp exclusion folder add --path "/var/" --scope epp
