@@ -84,7 +84,7 @@ The actions that are available for messages in the quarantine notification depen
 
   Selecting the action opens an informational web page that acknowledges the request to release the message from quarantine (**The message release request has been initiated. The tenant admin will determine if the request should be approved or denied.**). The **Release status** value of the message on the **Email** tab of the **Quarantine** page is **Release requested**.
 
-- **Block Sender**: Available for messages that were quarantined by features using a custom quarantine policy with the ***Block sender** (_PermissionToBlockSender_) permission.
+- **Block Sender**: Available for messages that were quarantined by features using a custom quarantine policy with the **Block sender** (_PermissionToBlockSender_) permission.
 
   This action opens an informational web page to acknowledge that the message was added to the Blocked Senders list in the user's mailbox (for example, **Spam message sender was blocked in quarantine**).
 
