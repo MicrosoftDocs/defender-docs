@@ -27,7 +27,7 @@ ms.date: 06/24/2024
 1. [Supported exclusion scopes](#supported-exclusion-scopes)
 2. [Supported exclusion types](#supported-exclusion-types)
 3. [How to configure the list of exclusions](#how-to-configure-the-list-of-exclusions)
-4. [Validate exclusions lists with the EICAR test file](#validate-exclusions-lists-with-the-EICAR-test-file)
+4. [Validate exclusions lists with the EICAR test file](#validate-exclusions-lists-with-the-eicar-test-file)
 5. [Allow threats](#allow-threats)
 
 **Applies to:**
@@ -38,7 +38,7 @@ ms.date: 06/24/2024
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-This article provides information on how to define antivirus and global exclusions for Microsoft defender for endpoint. Antivirus exclusions apply to on-demand scans, real-time protection (RTP), behavior monitoring (BM) while global exclusions apply to real-time protection (RTP), behavior monitoring (BM) and also Endpoint detection and response (EDR) thus stopping all the associated AV detections, EDR alerts and visibility for the excluded item.
+This article provides information on how to define antivirus and global exclusions for Microsoft Defender for Endpoint. Antivirus exclusions apply to on-demand scans, real-time protection (RTP), behavior monitoring (BM) while global exclusions apply to real-time protection (RTP), behavior monitoring (BM) and also Endpoint detection and response (EDR) thus stopping all the associated AV detections, EDR alerts and visibility for the excluded item.
 
 > [!IMPORTANT]
 > The antivirus exclusions described in this article apply to only antivirus capabilities and not endpoint detection and response (EDR). Files that you exclude using the antivirus exclusions described in this article can still trigger EDR alerts and other detections. Whereas the global exclusions describe in this section apply to antivirus as well as endpoint detection and response capabilities thus stopping all associated AV protection, EDR alerts and detection. Global exclusions are available from Defender for Endpoint version `101.23092.0012` or later.  For EDR exclusions, [contact support](/microsoft-365/admin/get-help-support).
@@ -56,7 +56,7 @@ As described in an earlier section, we support two exclusion scopes antivirus (*
 
 Antivirus exclusions can be used to exclude trusted files and processes from real time protection while still having EDR visibility. Whereas Global exclusions are applied at sensor level where events originate mutes all the events that match exclusion conditions, thus stopping all EDR alerts and AV detections. 
 
-Please note "Global" (*global*) is a new exclusion scope that we are introducing in addition to “Antivirus” (*epp*) exclusion scope already supported by us. Refer to the table below for details:
+Please note "Global" (*global*) is a new exclusion scope that we are introducing in addition to "Antivirus" (*epp*) exclusion scope already supported by us. Refer to the following table for details:
 
 | Exclusion Category | Exclusion Scope | Description |
 | --- | --- | --- |
@@ -75,7 +75,7 @@ Folder|All files under the specified folder (recursively)|`/var/log/`<br/>`/var/
 Process|A specific process (specified either by the full path or file name) and all files opened by it|`/bin/cat`<br/>`cat`<br/>`c?t`
 
 > [!IMPORTANT]
-> The paths above must be hard links, not symbolic links, in order to be successfully excluded. You can check if a path is a symbolic link by running `file <path-name>`.
+> The paths used must be hard links, not symbolic links, in order to be successfully excluded. You can check if a path is a symbolic link by running `file <path-name>`.
 
 File, folder, and process exclusions support the following wildcards:
 
@@ -99,7 +99,7 @@ Run the following command to see the available switches for managing exclusions:
 
 > [!NOTE]
 > --scope is an optional flag with accepted value as *epp* or *global*. Provide same scope used while adding the exclusion to remove the same exclusion. In the command line approach, if the scope isn’t mentioned, the scope value will be set as *epp*.
-> Exlusions added through CLI before the introduction of --scope flag will remain unaffected and their scope will be considred *epp*.
+> Exclusions added through CLI before the introduction of --scope flag will remain unaffected and their scope will be considred *epp*.
 
 ```bash
 mdatp exclusion
