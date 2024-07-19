@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 07/182024
+ms.date: 07/18/2024
 audience: ITPro
 ms.collection:
   - m365-security
