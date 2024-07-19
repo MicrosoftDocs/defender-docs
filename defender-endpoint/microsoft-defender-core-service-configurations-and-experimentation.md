@@ -52,7 +52,7 @@ Controlled feature rollout (CFR) is a procedure for slowly increasing the size o
 
 ## Experiments 
 
-Microsoft Defender Core service follows the [gradual rollout](/defender-endpoint/configure-updates) (based on channels) of engine and platform updates.  Any major changes are announced in [Message Center posts](https://admin.microsoft.com/AdminPortal/Home#/MessageCenter).
+Currently, Microsoft Defender Core service doesn't do any experimental testing. Development is carried out via the [Gradual Rollout process](/defender-endpoint/manage-gradual-rollout#microsoft-gradual-rollout-model). If this changes, an announcement will be posted in the [Message Center](/microsoft-365/admin/manage/message-center). 
 
 ## See also 
 
