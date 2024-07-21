@@ -43,12 +43,12 @@ Assign users the unified RBAC permissions and roles based on the table:
 
 1. Select **Create custom role**.
 1. Type a **Role name**, and then select **Next** for Permissions.
-    :::image type="content" source="media/permissions/permissions-choose.png" alt-text="Screenshot of the permissions set up page with the categories of permissions for site security":::
+    :::image type="content" source="media/permissions/permissions-choose.png" alt-text="Screenshot of the permissions set up page with the categories of permissions for site security" lightbox="media/permissions/permissions-choose.png" :::
 1. Select **Security operations**, select the permissions as needed, select **Apply**.
 1. Select **Security posture**, select the permissions as needed, select **Apply**.
 1. Select **Authorization and settings**, select the permissions as needed, select **Apply**.
 
-    :::image type="content" source="media/permissions/permissions-choose-options.png" alt-text="Screenshot of the permissions set up page with the specific permissions chosen for site security":::
+    :::image type="content" source="media/permissions/permissions-choose-options.png" alt-text="Screenshot of the permissions set up page with the specific permissions chosen for site security" lightbox="media/permissions/permissions-choose-options.png" :::
 
 1. Select **Next** for Assignments.
 1. Select **Add assignment**, type a name, choose users and groups and select the Data sources. Select **Add**.
