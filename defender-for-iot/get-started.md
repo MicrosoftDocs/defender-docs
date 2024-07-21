@@ -41,10 +41,8 @@ To add a trial license for Microsoft Defender for IoT:
 
 1. In the **Confirmation details** page, note your order number and username, and select **Start using Microsoft Defender for IoT - OT Site License (1000 max devices per site) Trial** to continue.
 
-## Public preview features
-
-We recommend that you also turn on and benefit from the available [Defender portal preview features](/defender-xdr/preview#turn-on-preview-features).
-
-## Next steps
-
 Once you have a trial license, [set up a new site](set-up-sites.md) so that Microsoft Defender for IoT can begin sending data to the Defender portal.
+
+## Turn on Public preview features
+
+Turn on the public preview features in the Microsoft Defender XDR settings to enable the site security features. Directions to change the settings are available in [Defender portal preview features](/defender-xdr/preview#turn-on-preview-features).
