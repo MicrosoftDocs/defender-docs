@@ -143,9 +143,9 @@ The report shows the results that malware detected in email, using the technolog
 
 ## Report messages as clean
 
-You can use the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission> to [report messages as clean (false positives) to Microsoft](submissions-admin.md#report-good-email-to-microsoft). But you can also submit messages as clean to Microsoft from Explorer or Real-time detections.
+You can use the **Submissions** page in the Defender portal at <https://security.microsoft.com/reportsubmission> to [report messages as clean (false positives) to Microsoft](submissions-admin.md#report-good-email-to-microsoft). But you can also submit messages as clean to Microsoft from :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in Threat Explorer or the Email entity page.
 
-For instructions, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+For instructions, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 To summarize:
 

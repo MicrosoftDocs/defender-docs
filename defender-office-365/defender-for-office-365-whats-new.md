@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 5/31/2024
+ms.date: 07/18/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -39,13 +39,21 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## July 2024
+
+- **45 days after last used date**: The value **Remove allow entry after** \> **45 days after last used date** is now the default on new allow entries from submissions and existing allow entries in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). The allow entry is triggered and the **LastUsedDate** property is updated when the entity is encountered and identified as malicious during mail flow or at time of click. After the filtering system determines that the entity is clean, the allow entry is automatically removed after 45 days. By default, allow entries for spoofed senders never expire.
+
+- (GA) Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). Access Microsoft Defender XDR Ninja training, learning paths, training modules and more. Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject. 
+
+- (GA) SecOps personnel can now release email messages from quarantine or move messages from quarantine back to user Inboxes directly from :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in Threat Explorer, Advanced hunting, custom detection, the Email entity page, and the Email summary panel. This capability allows security operators to manage false positives more efficiently and without losing context. For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).  
+
 ## May 2024
 
 - **Top level domain and subdomain blocking in Tenant Allow/Block List**: You will be able to create block entries under domains & email addresses, using the format `*.TLD`, where `TLD` can be any top-level domain or `*.SD1.TLD, *.SD2.SD1.TLD`, `*.SD3.SD2.SD1.TLD`, and similar patterns for subdomain blocking. The entries block all email received from or sent to any email addresses in the domain or subdomain during mail flow.
 
 - **Automated end user feedback**: The user submission automatic feedback response capability in Microsoft Defender for Office 365 enables organizations to automatically respond to end user submissions of phishing based on the verdict from the automated investigation. [Learn more](air-user-automatic-feedback-response.md).
 
-- We are introducing **Sender's copy clean-up features** in Threat Explorer, email entity, Summary Panel, and Advanced hunting. These new features will streamline the process of managing Sent items, particularly for admins who use Soft delete and Move to inbox actions. For more information, see [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md). Key highlights:
+- We are introducing **Sender's copy clean-up features** in Threat Explorer, email entity, Summary Panel, and Advanced hunting. These new features will streamline the process of managing Sent items, particularly for admins who use the actions **Move to mailbox folder** \> **Soft delete** and **Move to mailbox folder** \> **Inbox**. For more information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard). Key highlights:
 - Integration with Soft delete: Sender's copy clean-up will be incorporated as part of the Soft delete action.
   - Wide support: This action will be supported across various Defender XDR platforms including Threat Explorer, Take Action wizard from the email entity, Summary Panel, Advanced hunting, and through Microsoft Graph API.
   - Undo capability: An undo action will be available, allowing you to reverse the clean-up by moving items back to the Sent folder.
