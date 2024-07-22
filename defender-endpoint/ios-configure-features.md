@@ -278,8 +278,8 @@ End users install and open the Microsoft Defender app to start onboarding.
 
 Microsoft Defender for Endpoint has the capability of detecting unmanaged and managed devices that are jailbroken. These jailbreak checks are done periodically. If a device is detected as jailbroken, these events occur:
 
-- High-risk alert is reported to the Microsoft Defender portal. If device Compliance and Conditional Access is set up based on device risk score, then the device is blocked from accessing corporate data.
-- User data on app is cleared. When user opens the app after jailbreaking, the VPN profile (only MDE loopback VPN Profile) also is deleted, and no web protection is offered. VPN profiles delivered by Intune will not be removed.
+- A high-risk alert is reported to the Microsoft Defender portal. If device Compliance and Conditional Access is set up based on device risk score, then the device is blocked from accessing corporate data.
+- User data on app is cleared. When user opens the app after jailbreaking, the VPN profile (only MDE loopback VPN Profile) also is deleted, and no web protection is offered. VPN profiles delivered by Intune are not removed.
 
 ### Configure compliance policy against jailbroken devices
 
