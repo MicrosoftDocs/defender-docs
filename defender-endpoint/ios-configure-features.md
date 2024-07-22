@@ -97,6 +97,9 @@ Use the following steps to disable web protection for unenrolled devices.
    - Defender for Endpoint sends the heartbeat to the Microsoft Defender portal whenever a user opens the app.
    - Select **Next**, and then assign this profile to targeted devices/users.
 
+> [!NOTE]
+> The 'WebProtection' key is not applicable for the Control Filter in the Supervised devices. If customer wants to disable the Web Protection in the supervised devices, they can remove the Control Filter profile.
+
 ## Configure network protection
 
 Network protection in Microsoft Defender for endpoint is disabled by default. Admins can use the following steps to configure network protection. This configuration is available for both enrolled devices through MDM config and unenrolled devices through MAM config.
@@ -276,7 +279,7 @@ End users install and open the Microsoft Defender app to start onboarding.
 Microsoft Defender for Endpoint has the capability of detecting unmanaged and managed devices that are jailbroken. These jailbreak checks are done periodically. If a device is detected as jailbroken, these events occur:
 
 - High-risk alert is reported to the Microsoft Defender portal. If device Compliance and Conditional Access is set up based on device risk score, then the device is blocked from accessing corporate data.
-- User data on app is cleared. When user opens the app after jailbreaking the VPN profile also is deleted and no web protection is offered.
+- User data on app is cleared. When user opens the app after jailbreaking, the VPN profile (only MDE loopback VPN Profile) also is deleted, and no web protection is offered. VPN profiles delivered by Intune will not be removed.
 
 ### Configure compliance policy against jailbroken devices
 
