@@ -123,7 +123,7 @@ The default alert policy named **User restricted from sending email** automatica
 
      - On the **Review your settings** page, select **Submit**, and then select **Done**.
 
-4. Back in the ***User restricted from sending email** flyout, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: at the top of the flyout.
+4. Back in the **User restricted from sending email** flyout, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: at the top of the flyout.
 
 ## Use Exchange Online PowerShell to view and remove users from the Restricted entities page
 
