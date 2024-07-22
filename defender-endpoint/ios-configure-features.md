@@ -10,7 +10,7 @@ audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
-- mde-ios
+- -ios
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
@@ -27,7 +27,7 @@ ms.date: 07/22/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/p2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 > [!NOTE]
 > Defender for Endpoint on iOS would use a VPN in order to provide the Web Protection feature. This is not a regular VPN and is a local/self-looping VPN that does not take traffic outside the device.
@@ -279,7 +279,7 @@ End users install and open the Microsoft Defender app to start onboarding.
 Microsoft Defender for Endpoint has the capability of detecting unmanaged and managed devices that are jailbroken. These jailbreak checks are done periodically. If a device is detected as jailbroken, these events occur:
 
 - A high-risk alert is reported to the Microsoft Defender portal. If device Compliance and Conditional Access is set up based on device risk score, then the device is blocked from accessing corporate data.
-- User data on app is cleared. When user opens the app after jailbreaking, the VPN profile (only MDE loopback VPN Profile) also is deleted, and no web protection is offered. VPN profiles delivered by Intune are not removed.
+- User data on app is cleared. When user opens the app after jailbreaking, the VPN profile (only Defender for Endpoint loopback VPN Profile) also is deleted, and no web protection is offered. VPN profiles delivered by Intune are not removed.
 
 ### Configure compliance policy against jailbroken devices
 
@@ -525,4 +525,4 @@ Use the following steps to configure the option to send feedback data to Microso
 
 Phishing websites impersonate trustworthy websites for the purpose of obtaining your personal or financial information. Visit the [Provide feedback about network protection](https://www.microsoft.com/wdsi/filesubmission/exploitguard/networkprotection) page to report a website that could be a phishing site.
 
-[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
+[!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender--techcommunity.md)]
