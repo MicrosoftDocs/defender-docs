@@ -98,7 +98,7 @@ Use the following steps to disable web protection for unenrolled devices.
    - Select **Next**, and then assign this profile to targeted devices/users.
 
 > [!NOTE]
-> The `WebProtection` key is not applicable for the Control filter in the list of supervised devices. If you want to disable web protection for supervised devices, you can remove the Control Filter profile.
+> The `WebProtection` key is not applicable for the Control Filter in the list of supervised devices. If you want to disable web protection for supervised devices, you can remove the Control Filter profile.
 
 ## Configure network protection
 
