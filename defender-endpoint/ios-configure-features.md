@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ios
 search.appverid: met150
-ms.date: 07/18/2024
+ms.date: 07/22/2024
 ---
 
 # Configure Microsoft Defender for Endpoint on iOS features
@@ -98,7 +98,7 @@ Use the following steps to disable web protection for unenrolled devices.
    - Select **Next**, and then assign this profile to targeted devices/users.
 
 > [!NOTE]
-> The 'WebProtection' key is not applicable for the Control Filter in the Supervised devices. If customer wants to disable the Web Protection in the supervised devices, they can remove the Control Filter profile.
+> The `WebProtection` key is not applicable for the Control filter in the list of supervised devices. If you want to disable web protection for supervised devices, you can remove the Control Filter profile.
 
 ## Configure network protection
 
