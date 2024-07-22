@@ -50,12 +50,20 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). Access Microsoft Defender XDR Ninja training, learning paths, training modules and more. Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject. 
 
+- (GA) The **[UrlClickEvents](advanced-hunting-urlclickevents-table.md)** table in advanced hunting is now generally available. Use this table to get information about [Safe Links](/defender-office-365/safe-links-about) clicks from email messages, Microsoft Teams, and Office 365 apps in supported desktop, mobile, and web apps.
+
+- (GA) You can now **release or move email messages from quarantine** back to the user's inbox directly from [Take actions in advanced hunting](advanced-hunting-take-action.md#take-various-actions-on-emails) and in [custom detections](custom-detection-rules.md#actions-on-emails). This allows security operators to manage false positives more efficiently and without losing context. 
+
+
 
 ## June 2024
 
 - (Preview) **[Content distribution through tenant groups in multitenant management](mto-tenantgroups.md)** is now available. Content distribution helps you manage content at scale across tenants in multitenant management in Microsoft Defender XDR. In content distribution, you can create tenant groups to copy existing content, like custom detection rules, from the source tenant to the target tenants you assign during tenant group creation. The content then runs on the target tenant's devices or device groups that you set in the tenant group scope.
 
 - (Preview) You can now filter your Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
+
+
+
 
 ## May 2024
 

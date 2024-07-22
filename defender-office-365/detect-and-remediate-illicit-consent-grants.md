@@ -86,7 +86,7 @@ You have the following options to inventory apps for your users:
 
 You can look up the applications to which any individual user has granted permissions by using the Microsoft Entra admin center:
 
-  1. Open the Microsoft Entra admin center at <https://entra.microsoft.com>, and then go to **Identity** \> **Users** \> ***All users**. Or, to go directly to **Users** \> **All users**, use <https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/AllUsers/menuId/>.
+  1. Open the Microsoft Entra admin center at <https://entra.microsoft.com>, and then go to **Identity** \> **Users** \> **All users**. Or, to go directly to **Users** \> **All users**, use <https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/AllUsers/menuId/>.
   2. Find and select the user that you want to review by clicking on the **Display name** value.
   3. On the user details page that opens, select **Applications**.
 
@@ -149,7 +149,7 @@ After you finished inventorying application access, review the **audit log** to 
 After you identified the application with illicit permissions, you have several ways to remove that access:
 
 - You can revoke the application's permission in the Microsoft Entra admin center by doing the following steps:
-  1. Open the Microsoft Entra admin center at <https://entra.microsoft.com>, and then go to **Identity** \> **Users** \> ***All users**. Or, to go directly to **Users** \> **All users**, use <https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/AllUsers/menuId/>.
+  1. Open the Microsoft Entra admin center at <https://entra.microsoft.com>, and then go to **Identity** \> **Users** \> **All users**. Or, to go directly to **Users** \> **All users**, use <https://entra.microsoft.com/#view/Microsoft_AAD_UsersAndTenants/UserManagementMenuBlade/~/AllUsers/menuId/>.
   2. Find and select the affected user by clicking on the **Display name** value.
   3. On the user details page that opens, select **Applications**.
   4. On the **Applications** page, select the illicit application by clicking on the **Name** value.
