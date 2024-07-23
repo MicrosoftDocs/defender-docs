@@ -34,7 +34,7 @@ Incident management is critical to ensuring that incidents are named, assigned, 
 
 You can manage incidents from **Incidents & alerts > Incidents** on the quick launch of the Microsoft Defender portal ([security.microsoft.com](https://security.microsoft.com)). Here's an example.
 
-:::image type="content" source="/defender/media/incidents-queue/fig1-manageincidents.png" alt-text="Screenshot highlighting the manage incident option within the incident queue and quick launch pane in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/fig1-manageincidents.png":::
+:::image type="content" source="../defender/media/incidents-queue/fig1-manageincidents.png" alt-text="Screenshot highlighting the manage incident option within the incident queue and quick launch pane in the Microsoft Defender portal." lightbox="../defender/media/incidents-queue/fig1-manageincidents.png":::
 
 Here are the ways you can manage your incidents:
 
@@ -50,7 +50,7 @@ Here are the ways you can manage your incidents:
 
 You can manage incidents from the **Manage incident** pane for an incident. Here's an example.
 
-:::image type="content" source="/defender/media/incidents-queue/fig2-new-manageincidents.png" alt-text="Screenshot showing the Manage incident pane in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/fig2-new-manageincidents.png":::
+:::image type="content" source="../defender/media/incidents-queue/fig2-new-manageincidents.png" alt-text="Screenshot showing the Manage incident pane in the Microsoft Defender portal." lightbox="../defender/media/incidents-queue/fig2-new-manageincidents.png":::
 
 You can display this pane from the **Manage incident** link on the:
 
@@ -108,7 +108,7 @@ When an incident is remediated and resolved, select **Resolved** from the **Stat
 
 When you change an incident's status to **Resolved**, a new field is displayed immediately following the **Status** field. Enter a note in this field that explains why you consider the incident resolved. This note is visible in the activity log of the incident, along with the entry recording the incident's resolution.
 
-:::image type="content" source="/defender/media/incidents-queue/resolve-incidents.png" alt-text="Screenshot of incident management panel with incident resolution note.":::
+:::image type="content" source="../defender/media/incidents-queue/resolve-incidents.png" alt-text="Screenshot of incident management panel with incident resolution note.":::
 
 Resolving an incident also resolves all the linked and active alerts related to the incident. An incident that isn't resolved displays as **Active**.
 
@@ -133,15 +133,15 @@ All comments are added to the historical events of the incident. You can see the
 
 The **Activity log** displays a list of all the comments and actions performed on the incident, known as *Audits and comments*. All changes made to the incident, whether by a user or by the system, are recorded in the activity log. The activity log is available from the **Activity log** option on the incident page or on the incident side pane.
 
-:::image type="content" source="/defender/media/incidents-queue/fig3-manageincidents-new.png" alt-text="Screenshot highlighting the activity log option from the incident page in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/fig3-manageincidents-new.png":::
+:::image type="content" source="../defender/media/incidents-queue/fig3-manageincidents-new.png" alt-text="Screenshot highlighting the activity log option from the incident page in the Microsoft Defender portal." lightbox="../defender/media/incidents-queue/fig3-manageincidents-new.png":::
 
 You can filter the activities within the log by comments and actions. Click the **Content: Audits, Comments** then select the content type to filter activities. Here's an example.
 
-:::image type="content" source="/defender/media/incidents-queue/fig4-manageincidents.png" alt-text="Screenshot highlighting the filter options within the activity log pane from the incident page in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/fig4-manageincidents.png":::
+:::image type="content" source="../defender/media/incidents-queue/fig4-manageincidents.png" alt-text="Screenshot highlighting the filter options within the activity log pane from the incident page in the Microsoft Defender portal." lightbox="../defender/media/incidents-queue/fig4-manageincidents.png":::
 
 You can also add your own comments using the comment box available within the activity log. The comment box accepts text and formatting, links, and images.
 
-:::image type="content" source="/defender/media/incidents-queue/fig5-res-manageincidents.png" alt-text="Screenshot highlighting the comment box from the incident page in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/fig5-manageincidents.png":::
+:::image type="content" source="../defender/media/incidents-queue/fig5-res-manageincidents.png" alt-text="Screenshot highlighting the comment box from the incident page in the Microsoft Defender portal." lightbox="../defender/media/incidents-queue/fig5-manageincidents.png":::
 
 ## Export incident data to PDF
 
@@ -162,7 +162,7 @@ The incident data exported includes the following information:
 
 Here's an example of the exported PDF:
 
-:::image type="content" source="/defender/media/incidents-queue/export-incident-results-small.png" alt-text="Screenshot of the exported PDF's first page." lightbox="/defender/media/incidents-queue/export-incident-results.png":::
+:::image type="content" source="../defender/media/incidents-queue/export-incident-results-small.png" alt-text="Screenshot of the exported PDF's first page." lightbox="../defender/media/incidents-queue/export-incident-results.png":::
 
 If you have the [Copilot for Security](/security-copilot/microsoft-security-copilot) license, the exported PDF contains the following additional incident data:
 
@@ -177,15 +177,15 @@ To generate the PDF, perform the following steps:
 
 1. Open an incident page. Select the **More actions** ellipsis (...) on the upper right corner and choose **Export incident as PDF**. The function becomes grayed out while the PDF is being generated.
 
-   :::image type="content" source="/defender/media/incidents-queue/export-incident-main-small.png" alt-text="Screenshot highlighting the export incident to PDF option." lightbox="/defender/media/incidents-queue/export-incident-main.png":::
+   :::image type="content" source="../defender/media/incidents-queue/export-incident-main-small.png" alt-text="Screenshot highlighting the export incident to PDF option." lightbox="../defender/media/incidents-queue/export-incident-main.png":::
 
 1. A dialog box appears, indicating that the PDF is being generated. Select **Got it** to close the dialog box. Additionally, a status message indicating the current state of the download appears below the incident title. The export process may take a few minutes depending on the incident's complexity and the amount of data to be exported.
 
-   :::image type="content" source="/defender/media/incidents-queue/export-incident-predownload-small.png" alt-text="Screenshot highlighting export message and status before download." lightbox="/defender/media/incidents-queue/export-incident-predownload.png":::
+   :::image type="content" source="../defender/media/incidents-queue/export-incident-predownload-small.png" alt-text="Screenshot highlighting export message and status before download." lightbox="../defender/media/incidents-queue/export-incident-predownload.png":::
 
 1. Once the PDF is ready, the status message indicates that the PDF is ready and another dialog box appears. Select **Download** from the dialog box to save the PDF to your device.
 
-   :::image type="content" source="/defender/media/incidents-queue/export-incident-download-small.png" alt-text="Screenshot highlighting export message and status when download is available." lightbox="/defender/media/incidents-queue/export-incident-download.png":::
+   :::image type="content" source="../defender/media/incidents-queue/export-incident-download-small.png" alt-text="Screenshot highlighting export message and status when download is available." lightbox="../defender/media/incidents-queue/export-incident-download.png":::
 
 The report is cached for a couple of minutes. The system provides the previously generated PDF if you try to export the same incident again within a short time frame. To generate a newer version of the PDF, wait for a few minutes for the cache to expire.
 
