@@ -5,26 +5,28 @@ ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 07/2/2024
+ms.date: 07/23/2024
 ms.topic: how-to
 ---
 
-# Set up RBAC permissions to access Site security
+# Set up RBAC permissions to access site security
 
 The Microsoft Defender portal allows granular access to features and data based on user roles and the permissions given to each user.
 
-To access the Defender for IoT features, such as site security, alerts, and vulnerability updates, you need to assign permissions and roles to the correct users.
+To access the Microsoft Defender for IoT features in the Defender portal, such as site security, alerts, and vulnerability updates, you need to assign permissions and roles to the correct users.
+
+This article shows you how to set up the relevant roles and permissions.
 
 ## Access management options
 
-There are two ways to manage user access to the Microsoft Defender portal:
+There are two ways to manage user access to the Defender portal:
 
 - [Global Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference).
 - [Custom role access](/defender-xdr/custom-roles): Use role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 
-The permission settings listed in this section apply to the unified RBAC version.
+The permission settings listed in this section apply to the unified RBAC version. If you have RBAC version 1 or 2, see [here forpermissions settings information](#rbac-for-version-1-or-2).
 
-### Set up Unified RBAC roles for site security
+### Set up unified RBAC roles for site security
 
 To give access to [site security](site-security-overview.md) features assign users the unified RBAC permissions and roles:
 
@@ -36,23 +38,26 @@ To give access to [site security](site-security-overview.md) features assign use
 
     :::image type="content" source="media/set-up-rbac/permissions-set-up.png" alt-text="Screenshot of the permissions set up page for site security." lightbox="media/set-up-rbac/permissions-set-up.png":::
 
-1. Select **Security operations**, select Select custom permissions. In Security settings select Security data basics, select **Apply**
+1. Select **Security operations**, select **Select custom permissions**.
+1. In **Security settings** select **Security data basics**, select **Apply**
 
     :::image type="content" source="media/set-up-rbac/permissions-choose.png" alt-text="Screenshot of the permissions set up page with the categories of permissions for site security." lightbox="media/set-up-rbac/permissions-choose.png":::
 
-1. Select **Authorization and settings**, select Select custom permissions. In Security data select Core security settings (manage), select **Apply**
+1. Select **Authorization and settings**, select **Select custom permissions**.
+1. In **Security data** select **Core security settings (manage)**, select **Apply**
 
     :::image type="content" source="media/set-up-rbac/permissions-choose-options.png" alt-text="Screenshot of the permissions set up page with the specific permissions chosen for site security." lightbox="media/set-up-rbac/permissions-choose-options.png":::
 
 1. Select **Next** for Assignments.
-1. Select **Add assignment**, type a name, choose users and groups and select the Data sources. Select **Add**.
+1. Select **Add assignment**, type a name, choose users and groups and select the Data sources. 
+1. Select **Add**.
 1. Select **Next** to Review and finish.
 
     :::image type="content" source="media/set-up-rbac/permissions-review.png" alt-text="Screenshot of the review permissions set up page for site security." lightbox="media/set-up-rbac/permissions-review.png":::
 
 1. Select **Submit**.
 
-This table shows the permissions and roles to assign:
+This table summarizes the permissions and roles to assign for site security:
 
 |Write permissions |Read permissions |
 |----|----|

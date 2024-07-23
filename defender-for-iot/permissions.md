@@ -5,7 +5,7 @@ ms.service: defender-for-iot
 author: lwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 07/2/2024
+ms.date: 07/23/2024
 ms.topic: how-to
 ---
 
@@ -13,11 +13,11 @@ ms.topic: how-to
 
 The Microsoft Defender portal allows granular access to features and data based on user roles and the permissions given to each user.
 
-Defender for IoT is part of the Defender portal and user access permissions for alerts, incidents, device inventory, device groups and vulnerabilities should already be configured.
+Microsoft Defender for IoT is part of the Defender portal and user access permissions for alerts, incidents, device inventory, device groups and vulnerabilities should already be configured. Nevertheless, with the added features of Defender for IoT you might want to check, adjust or add to the existing roles and permissions of your team.
 
-To access the Defender for IoT features, such as site security, alerts, and vulnerability updates, you need to assign permissions and roles to the correct users.
+This article shows you how to make general changes to your RBAC roles and permissions.  
 
-### Access management options
+## Access management options
 
 There are two ways to manage user access to the Microsoft Defender portal:
 
@@ -34,30 +34,30 @@ If you're using the Defender portal for the first time, you need to set up all o
 
 Assign users the unified RBAC permissions and roles based on the table:
 
-1. In the Defender portal, either: 
-    1. select **Settings > Microsoft XDR > Permissions and roles**.
+1. In the Defender portal, either:
+    1. Select **Settings > Microsoft XDR > Permissions and roles**.
         1. Enable **Endpoints & Vulnerability Management**.
         1. Select **Go to Permissions and roles**.
-    Or
-    1. select **Permissions > Microsft Defender XDR (1) > Roles**
+
+    1. Select **Permissions > Microsft Defender XDR (1) > Roles**.
 
 1. Select **Create custom role**.
-1. Type a **Role name**, and then select **Next** for Permissions.
+1. Type a **Role name**, and select **Next** for Permissions.
 
     :::image type="content" source="media/permissions/permissions-choose.png" alt-text="Screenshot of the permissions set up page with the categories of permissions for site security" lightbox="media/permissions/permissions-choose.png" :::
 
-1. Select **Security operations**, select the permissions as needed, select **Apply**.
-1. Select **Security posture**, select the permissions as needed, select **Apply**.
-1. Select **Authorization and settings**, select the permissions as needed, select **Apply**.
+1. Select **Security operations**, select the permissions as needed, and select **Apply**.
+1. Select **Security posture**, select the permissions as needed, and select **Apply**.
+1. Select **Authorization and settings**, select the permissions as needed, and select **Apply**.
 
     :::image type="content" source="media/permissions/permissions-choose-options.png" alt-text="Screenshot of the permissions set up page with the specific permissions chosen for site security" lightbox="media/permissions/permissions-choose-options.png" :::
 
 1. Select **Next** for Assignments.
 1. Select **Add assignment**, type a name, choose users and groups and select the Data sources. Select **Add**.
-1. Select **Next** to Review and finish.
+1. Select **Next** for Review and finish.
 1. Select **Submit**.
 
-This table shows the full roles and permissions needed for all MDE features used with Defender for IoT:
+This table summarizes the full roles and permissions needed for all MDE features used with Defender for IoT:
 
 | Feature | Write permissions | Read permissions |
 |---|----|---|
