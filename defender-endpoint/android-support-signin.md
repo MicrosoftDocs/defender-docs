@@ -115,25 +115,23 @@ Xiaomi changed the battery optimization permissions from Android 11 onwards. Def
 1. We open the Stock Android’s Battery Optimization screen. The screen will open automatically as part of the onboarding flow where the user needs to give the permissions. Then the user must follow the following steps in-order to get on-boarded. 
 1. Select Work Profile to see all of the work profile apps
 
-![User's image](media/android-support-signin/image.png)
+![Image of Battery Optimisation screen](media/android-support-signin/image.png)
 
 3. Tap on **Not optimised** and select **All Apps**
 
-![User's image](media/android-support-signin/image1.png)
+![Image of Optimisation dropdown menu](media/android-support-signin/image1.png)
 
-![User's image](media/android-support-signin/image2.png)
+![Image of All Apps option in the dropdown](media/android-support-signin/image2.png)
 
 4. Scroll down to find **Microsoft Defender** and tap on it
 
-![User's image](media/android-support-signin/image3.png)
+![Image of All Apps including Microsoft Defender](media/android-support-signin/image3.png)
 
 5. Select **Don’t Optimise** option and tap on **Done**
 
-![User's image](media/android-support-signin/image4.png)
+![Image of the Microsoft Defende Optimise drop down](media/android-support-signin/image4.png)
 
 6. Navigate back to Defender
-
-
 
 **Solution 2** (needed in case the Solution 1 does not work):
 
