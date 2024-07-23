@@ -45,24 +45,24 @@ This article provides information on how to define antivirus and global exclusio
 
 You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux.
 
-Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. Global exclusions are extremely useful for mitigating performance issues caused by Defender for Endpoint on Linux.
+Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. Global exclusions are useful for mitigating performance issues caused by Defender for Endpoint on Linux.
 
 > [!WARNING]
 > Defining exclusions lowers the protection offered by Defender for Endpoint on Linux. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you are confident are not malicious.
 
 ## Supported exclusion scopes
 
-As described in an earlier section, we support two exclusion scopes antivirus (*epp*) and global (*global*) exclusions.
+As described in an earlier section, we support two exclusion scopes: antivirus (`epp`) and global (`global`) exclusions.
 
-Antivirus exclusions can be used to exclude trusted files and processes from real time protection while still having EDR visibility. Whereas Global exclusions are applied at sensor level and to mute the events that match exclusion conditions much early in the flow before any processing is done, thus stopping all EDR alerts and AV detections.
+Antivirus exclusions can be used to exclude trusted files and processes from real-time protection while still having EDR visibility. Global exclusions are applied at sensor level and to mute the events that match exclusion conditions very early in the flow, before any processing is done, thus stopping all EDR alerts and antivirus detections.
 
 > [!NOTE]
-> "Global" (*global*) is a new exclusion scope that we are introducing in addition to "Antivirus" (*epp*) exclusion scope already supported by us.
+> Global (`global`) is a new exclusion scope that we are introducing in addition to antivirus (`epp`) exclusion scopes that are already supported by Microsoft.
 
 | Exclusion Category | Exclusion Scope | Description |
 | --- | --- | --- |
 | Antivirus Exclusion  | Antivirus engine <br/>*(scope: epp)*  | Excludes content from antivirus (AV) scans and on-demand scans.| 
-| Global Exclusion  | Antivirus and endpoint detections and response engine <br/>*(scope: global)*  | Excludes events from real time protection and EDR visibility. Does not apply to on-demand scans by default. |
+| Global Exclusion  | Antivirus and endpoint detections and response engine <br/>*(scope: global)*  | Excludes events from real time protection and EDR visibility. Doesn't apply to on-demand scans by default. |
 
 ## Supported exclusion types
 
@@ -85,7 +85,7 @@ File, folder, and process exclusions support the following wildcards:
 
 Wildcard|Description|Examples|
 ---|---|---
-\*|Matches any number of any characters including none <br/> *(note if this wildcard is not used at the end of the path then it will substitute only one folder)* | `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It does not include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` only includes any files in its subdirectories such as `/var/abc/`, but not files directly inside `/var`. 
+\*|Matches any number of any characters including none <br/> *(note if this wildcard isn't used at the end of the path then it substitutes only one folder)* | `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It doesn't include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` only includes any files in its subdirectories such as `/var/abc/`, but not files directly inside `/var`. 
 ?|Matches any single character|`file?.log` includes `file1.log` and `file2.log`, but not`file123.log`
 
 > [!NOTE]
@@ -102,8 +102,8 @@ For more information on how to configure exclusions from Puppet, Ansible, or ano
 Run the following command to see the available switches for managing exclusions:
 
 > [!NOTE]
-> --scope is an optional flag with accepted value as *epp* or *global*. Provide same scope used while adding the exclusion to remove the same exclusion. In the command line approach, if the scope isn’t mentioned, the scope value will be set as *epp*.
-> Exclusions added through CLI before the introduction of --scope flag will remain unaffected and their scope will be considred *epp*.
+> `--scope` is an optional flag with accepted value as `epp` or `global`. It provides the same scope used while adding the exclusion to remove the same exclusion. In the command line approach, if the scope isn’t mentioned, the scope value is set as `epp`.
+> Exclusions added through CLI before the introduction of `--scope` flag remain unaffected and their scope is considered `epp`.
 
 ```bash
 mdatp exclusion
@@ -114,7 +114,7 @@ mdatp exclusion
 
 Examples:
 
-- Add an exclusion for a file extension *(Extension exclusion is not supported for  global exclusion scope)* : 
+- Add an exclusion for a file extension *(Extension exclusion isn't supported for  global exclusion scope)* : 
 
     ```bash
     mdatp exclusion extension add --name .txt
@@ -287,21 +287,21 @@ Examples:
 
 You can validate that your exclusion lists are working by using `curl` to download a test file.
 
-In the following Bash snippet, replace `test.txt` with a file that conforms to your exclusion rules. For example, if you have excluded the `.testing` extension, replace `test.txt` with `test.testing`. If you are testing a path, ensure that you run the command within that path.
+In the following Bash snippet, replace `test.txt` with a file that conforms to your exclusion rules. For example, if you have excluded the `.testing` extension, replace `test.txt` with `test.testing`. If you're testing a path, ensure that you run the command within that path.
 
 ```bash
 curl -o test.txt https://secure.eicar.org/eicar.com.txt
 ```
 
-If Defender for Endpoint on Linux reports malware, then the rule is not working. If there is no report of malware, and the downloaded file exists, then the exclusion is working. You can open the file to confirm that the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
+If Defender for Endpoint on Linux reports malware, then the rule isn't working. If there's no report of malware, and the downloaded file exists, then the exclusion is working. You can open the file to confirm that the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
 
-If you do not have Internet access, you can create your own EICAR test file. Write the EICAR string to a new text file with the following Bash command:
+If you don't have Internet access, you can create your own EICAR test file. Write the EICAR string to a new text file with the following Bash command:
 
 ```bash
 echo 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' > test.txt
 ```
 
-You can also copy the string into a blank text file and attempt to save it with the file name or in the folder you are attempting to exclude.
+You can also copy the string into a blank text file and attempt to save it with the file name or in the folder you're attempting to exclude.
 
 ## Allow threats
 
