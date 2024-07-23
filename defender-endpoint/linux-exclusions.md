@@ -41,7 +41,7 @@ ms.date: 06/24/2024
 This article provides information on how to define antivirus and global exclusions for Microsoft Defender for Endpoint. Antivirus exclusions apply to on-demand scans, real-time protection (RTP), behavior monitoring (BM) while global exclusions apply to real-time protection (RTP), behavior monitoring (BM) and also Endpoint detection and response (EDR) thus stopping all the associated AV detections, EDR alerts and visibility for the excluded item.
 
 > [!IMPORTANT]
-> The antivirus exclusions described in this article apply to only antivirus capabilities and not endpoint detection and response (EDR). Files that you exclude using the antivirus exclusions described in this article can still trigger EDR alerts and other detections. Whereas the global exclusions describe in this section apply to antivirus as well as endpoint detection and response capabilities thus stopping all associated AV protection, EDR alerts and detection. Global exclusions are available from Defender for Endpoint version `101.23092.0012` or later.  For EDR exclusions, [contact support](/microsoft-365/admin/get-help-support).
+> The antivirus exclusions described in this article apply to only antivirus capabilities and not endpoint detection and response (EDR). Files that you exclude using the antivirus exclusions described in this article can still trigger EDR alerts and other detections. Whereas the global exclusions described in this section apply to antivirus as well as endpoint detection and response capabilities thus stopping all associated AV protection, EDR alerts and detection. Global exclusions are available from Defender for Endpoint version `101.23092.0012` or later.  For EDR exclusions, [contact support](/microsoft-365/admin/get-help-support).
 
 You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux scans.
 
@@ -54,15 +54,15 @@ Exclusions can be useful to avoid incorrect detections on files or software that
 
 As described in an earlier section, we support two exclusion scopes antivirus (*epp*) and global (*global*) exclusions.
 
-Antivirus exclusions can be used to exclude trusted files and processes from real time protection while still having EDR visibility. Whereas Global exclusions are applied at sensor level where events originate mutes all the events that match exclusion conditions, thus stopping all EDR alerts and AV detections. 
+Antivirus exclusions can be used to exclude trusted files and processes from real time protection while still having EDR visibility. Whereas Global exclusions are applied at sensor level and to mute the events that match exclusion conditions much early in the flow before any processing is done, thus stopping all EDR alerts and AV detections.
 
 > [!NOTE]
 > "Global" (*global*) is a new exclusion scope that we are introducing in addition to "Antivirus" (*epp*) exclusion scope already supported by us.
 
 | Exclusion Category | Exclusion Scope | Description |
 | --- | --- | --- |
-| Antivirus Exclusion  | Antivirus engine (Scope: *epp*)  | Excludes content from antivirus (AV) scans and on-demand scans.| 
-| Global Exclusion  | Antivirus and endpoint detections and response engine (Scope: *global*)  | Excludes events from real time protection and EDR visibility. Does not apply to on-demand scans by default. |
+| Antivirus Exclusion  | Antivirus engine <br/>*(scope: epp)*  | Excludes content from antivirus (AV) scans and on-demand scans.| 
+| Global Exclusion  | Antivirus and endpoint detections and response engine <br/>*(scope: global)*  | Excludes events from real time protection and EDR visibility. Does not apply to on-demand scans by default. |
 
 ## Supported exclusion types
 
@@ -82,7 +82,7 @@ File, folder, and process exclusions support the following wildcards:
 
 Wildcard|Description|Examples|
 ---|---|---
-\*|Matches any number of any characters including none (note if this wildcard is not used at the end of the path then it will substitute only one folder)| `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It does not include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` only includes any files in its subdirectories such as `/var/abc/`, but not files directly inside `/var`. 
+\*|Matches any number of any characters including none <br/> *(note if this wildcard is not used at the end of the path then it will substitute only one folder)* | `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It does not include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` only includes any files in its subdirectories such as `/var/abc/`, but not files directly inside `/var`. 
 ?|Matches any single character|`file?.log` includes `file1.log` and `file2.log`, but not`file123.log`
 
 > [!NOTE]
