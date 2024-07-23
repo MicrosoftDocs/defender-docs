@@ -24,8 +24,8 @@ You can work with these different management portals:
 
 |Portal|Details|Next steps|
 |---|---|---|
-|Defender for IoT in the Defender portal (Preview)|Microsoft Defender customers can use this flavor for a unified IT/OT experience, extending Defender XDR protection to OT environments. [Learn about the main use cases](#what-are-the-main-defender-for-iot-use-cases).|[Get started](get-started.md) with Defender for IoT in the Defender portal.|
-|Defender for IoT in the classic, Azure portal|All customers can use this flavor to identify OT devices, vulnerabilities, and threats in the Azure portal.|See the [Defender for IoT on Azure overview](/azure/defender-for-iot/organizations/overview).|
+|Defender for IoT in the Defender portal (Preview)|Microsoft Defender customers can use this portal for a unified IT/OT experience, extending Defender XDR protection to OT environments. [Learn about the main use cases](#what-are-the-main-defender-for-iot-use-cases).|[Get started](get-started.md) with Defender for IoT in the Defender portal.|
+|Defender for IoT in the classic, Azure portal|All customers can use this portal to identify OT devices, vulnerabilities, and threats in the Azure portal.|See the [Defender for IoT on Azure overview](/azure/defender-for-iot/organizations/overview).|
 
 Protection for enterprise IoT devices is available for Microsoft Defender customers. These customers can enable protection for enterprise IoT devices, like printers, smart TVs, and conferencing systems and purpose-built, proprietary devices. [Get started](/azure/defender-for-iot/organizations/eiot-sensor) with enterprise IoT monitoring.
 
