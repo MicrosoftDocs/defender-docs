@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 06/24/2024
+ms.date: 07/23/2024
 ---
 
 # Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
