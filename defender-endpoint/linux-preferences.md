@@ -136,6 +136,9 @@ Specifies the degree of parallelism for on-demand scans. This corresponds to the
 
 #### Exclusion merge policy
 
+> [!NOTE]
+> ExclusionSetting - you can use
+
 Specifies the merge policy for exclusions. It can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). Administrator-defined (admin_only) are exclusions that are configured by Defender for Endpoint policy. This setting can be used to restrict local users from defining their own exclusions.
 
 |Description|JSON Value|Defender Portal Value|
@@ -382,9 +385,9 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 > [!NOTE] 
 > Available in Defender for Endpoint version `101.23092.0012` or later.
 
-The *exclusionSettings* section of the configuration profile is used to configure various exclusion for Microsoft defender for endpoint.
+The *exclusionSettings* section of the configuration profile is used to configure various exclusions for Microsoft Defender for Endpoint for Linux.
 
-|Description|Value|
+|Description|JSON Value|
 |---|---|
 |**Key**|exclusionSettings|
 |**Data type**|Dictionary (nested preference)|
@@ -397,7 +400,7 @@ The *exclusionSettings* section of the configuration profile is used to configur
 
 Specifies the merge policy for exclusions. It specifies if it can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). This setting can be used to restrict local users from defining their own exclusions. It is applicable for exclusions of all scopes.
 
-|Description|Value|
+|Description|JSON Value|
 |---|---|
 |**Key**|mergePolicy|
 |**Data type**|String|
@@ -408,7 +411,7 @@ Specifies the merge policy for exclusions. It specifies if it can be a combinati
 
 Entities that need to be excluded can be specified by full paths, extensions, or file names. Each exclusion entity, i.e., either full path, extension or file name has an optional scope that can be specified. If not specified, the default value of scope in this section is *global*. (Exclusions are specified as an array of items, administrator can specify as many elements as necessary, in any order.)
 
-|Description|Value|
+|Description|JSON Value|
 |---|---|
 |**Key**|exclusions|
 |**Data type**|Dictionary (nested preference)|
@@ -418,7 +421,7 @@ Entities that need to be excluded can be specified by full paths, extensions, or
 
 Specifies the type of content excluded from the scan.
 
-|Description|Value|
+|Description|JSON Value|
 |---|---|
 |**Key**|$type|
 |**Data type**|String|
@@ -433,104 +436,57 @@ If nothing is specified in for an exclusion under *exclusionSettings* in managed
 > [!NOTE] 
 > Previously configured antivirus exclusions under (`antivirusEngine`) in managed JSON will continue to function and their scope is considered (`epp`) since they were added as antivirus exclusions. 
 
-|Description|Value|
+|Description|JSON Value|
 |---|---|
 |**Key**|scopes|
 |**Data type**|Set of strings|
 |**Possible values**|epp <p> global|
 
->[!NOTE]
->Previously applied exclusions using (`mdatp_managed.json`) or by CLI will remain unaffected. The scope for those exclusions will be (`epp`) since they were added under (`antivirusEngine`).
+> [!NOTE]
+> Previously applied exclusions using (`mdatp_managed.json`) or by CLI will remain unaffected. The scope for those exclusions will be (`epp`) since they were added under (`antivirusEngine`).
 ##### Path to excluded content
 
 Used to exclude content from the scan by full file path.
 
-|Description|Value|
+|Description|JSON Value|
 |---|---|
 |**Key**|path|
 |**Data type**|String|
 |**Possible values**|valid paths|
-|**Comments**|Applicable only if *$type* is *excludedPath*. Wildcard not supported if exclusion has *global* as a scope.|
+|**Comments**|Applicable only if *$type* is *excludedPath*.<br> *Wildcard not supported if exclusion has global as a scope.*|
 
 ##### Path type (file / directory)
 
 Indicates if the *path* property refers to a file or directory.
 
-|Description|Value|
+|Description|JSON Value|
 |---|---|
 |**Key**|isDirectory|
 |**Data type**|Boolean|
 |**Possible values**|false (default) <p> true|
-|**Comments**|Applicable only if *$type* is *excludedPath* Wildcard not supported if exclusion has *global* as a scope.|
+|**Comments**|Applicable only if *$type* is *excludedPath*.<br> *Wildcard not supported if exclusion has global as a scope.*|
 
 ##### File extension excluded from the scan
 
 Used to exclude content from the scan by file extension.
 
-|Description|Value|
+|Description|JSON Value|
 |---|---|
 |**Key**|extension|
 |**Data type**|String|
 |**Possible values**|valid file extensions|
-|**Comments**|Applicable only if *$type* is *excludedFileExtension*. Not supported if exclusion has *global* as a scope.|
+|**Comments**|Applicable only if *$type* is *excludedFileExtension*.<br> *Not supported if exclusion has global as a scope.*|
 
 ##### Process excluded from the scan*
 
 Specifies a process for which all file activity is excluded from scanning. The process can be specified either by its name (for example, `cat`) or full path (for example, `/bin/cat`).
 
-|Description|Value|
+|Description|JSON Value|
 |---|---|
 |**Key**|name|
 |**Data type**|String|
 |**Possible values**|any string|
-|**Comments**|Applicable only if *$type* is *excludedFileName*. Wildcard and process name not supported if exclusion has *global* as a scope, need to provide full path.|
-
-#### Sample profile
-
-```JSON
-{
-   "exclusionSettings":{
-        "exclusions":[
-           {
-              "$type":"excludedPath",
-              "isDirectory":true,
-              "path":"/home/*/git<EXAMPLE DO NOT USE>",
-              "scopes": [
-                    "epp"
-              ]
-           },
-           {
-              "$type":"excludedPath",
-              "isDirectory":true,
-              "path":"/run<EXAMPLE DO NOT USE>",
-              "scopes": [
-                    "global"
-              ]
-           },
-           {
-              "$type":"excludedPath",
-              "isDirectory":false,
-              "path":"/var/log/system.log<EXAMPLE DO NOT USE><EXCLUDED IN ALL SCENARIOS>",
-              "scopes": [
-                    "epp", "global"
-              ]
-           },
-           {
-              "$type":"excludedFileExtension",
-              "extension":".pdf<EXAMPLE DO NOT USE>",
-              "scopes": [
-                    "epp"
-              ]
-           },
-           {
-              "$type":"excludedFileName",
-              "name":"/bin/cat<EXAMPLE DO NOT USE><NO SCOPE PROVIDED - GLOBAL CONSIDERED>"
-           }
-        ],
-        "mergePolicy":"admin_only"
-   }
-}
-```
+|**Comments**|Applicable only if *$type* is *excludedFileName*. <br> *Wildcard and process name not supported if exclusion has global as a scope, need to provide full path.*|
 
 #### Advanced scan options
 
@@ -961,7 +917,47 @@ The following configuration profile contains entries for all settings described 
       "automaticSampleSubmissionConsent":"safe",
       "automaticDefinitionUpdateEnabled":true,
       "proxy": "<EXAMPLE DO NOT USE> http://proxy.server:port/"
-   }
+   },
+"exclusionSettings":{
+  "exclusions":[
+     {
+        "$type":"excludedPath",
+        "isDirectory":true,
+        "path":"/home/*/git<EXAMPLE DO NOT USE>",
+        "scopes": [
+              "epp"
+        ]
+     },
+     {
+        "$type":"excludedPath",
+        "isDirectory":true,
+        "path":"/run<EXAMPLE DO NOT USE>",
+        "scopes": [
+              "global"
+        ]
+     },
+     {
+        "$type":"excludedPath",
+        "isDirectory":false,
+        "path":"/var/log/system.log<EXAMPLE DO NOT USE><EXCLUDED IN ALL SCENARIOS>",
+        "scopes": [
+              "epp", "global"
+        ]
+     },
+     {
+        "$type":"excludedFileExtension",
+        "extension":".pdf<EXAMPLE DO NOT USE>",
+        "scopes": [
+              "epp"
+        ]
+     },
+     {
+        "$type":"excludedFileName",
+        "name":"/bin/cat<EXAMPLE DO NOT USE><NO SCOPE PROVIDED - GLOBAL CONSIDERED>"
+     }
+  ],
+  "mergePolicy":"admin_only"
+}
 }
 ```
 
