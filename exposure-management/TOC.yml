@@ -70,5 +70,5 @@
         href: /azure/defender-for-cloud
       - name: Entra
         href: /entra/
-      - name: Defender External Attack Surface Management
+      - name: Defender EASM
         href: /azure/external-attack-surface-management/
