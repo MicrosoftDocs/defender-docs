@@ -23,9 +23,6 @@ Your attack surfaces are all the places and ways that your organization's networ
 
 To help protect your network and devices, Microsoft Defender for Business includes several attack surface reduction capabilities, including attack surface reduction rules. This article describes how to set up your attack surface reduction rules and describes attack surface reduction capabilities.
 
-> [!NOTE]
-> Intune is not included in the standalone version of Defender for Business, but it can be added on.
-
 ## Standard protection ASR rules
 
 There are lots of attack surface reduction rules available. You don't have to set them all up at once. And, you can set up some rules in audit mode just to see how they work for your organization, and change them to work in block mode later. That said, we recommend enabling the following standard protection rules as soon as possible:
