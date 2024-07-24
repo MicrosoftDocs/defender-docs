@@ -36,7 +36,7 @@ If you're using the Defender portal for the first time, you need to set up all o
 
 ## Unified RBAC roles for features in Defender for IoT
 
-Assign RBAC permissions and roles, based on the [summary table](#summary-of-roles-and-permissions-for-all-mde-features-used-with-defender-for-iot), to give users access to general Defender for IoT<!-- Endpoint ?--> features:
+Assign RBAC permissions and roles, based on the [summary table](#summary-of-roles-and-permissions-for-all-defender-for-iot-features), to give users access to general Defender for IoT<!-- Endpoint ?--> features:
 
 1. In the Defender portal, either:
     1. Select **Settings > Microsoft XDR > Permissions and roles**.
@@ -65,7 +65,7 @@ Assign RBAC permissions and roles, based on the [summary table](#summary-of-role
 1. Select **Next** for **Review and finish**.
 1. Select **Submit**.
 
-### Summary of roles and permissions for all Defender for Endpoint features used with Defender for IoT
+### Summary of roles and permissions for all Defender for IoT features
 <!-- MDE roles change to permissions-->
 | Feature | Write permissions | Read permissions |
 |---|----|---|
