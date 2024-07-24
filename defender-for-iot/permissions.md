@@ -82,3 +82,7 @@ Assign RBAC permissions and roles, based on the [summary table](#summary-of-role
 To assign roles and permissions for other Microsoft Defender for Endpoint features, such as alerts, incidents and inventory, see [assign roles and permissions for Defender for Endpoint](/defender-endpoint/prepare-deployment).
 
 For more information, see [map unified RBAC permissions](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access).
+
+## Next steps
+
+[Monitor site security](monitor-site-security.md)

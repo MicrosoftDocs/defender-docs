@@ -70,6 +70,6 @@ Assign RBAC permissions and roles, based on the [summary table](#summary-of-role
 |----|----|
 | **MDE Roles**: Core security settings scoped to all device groups. <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator scoped to all device groups.| Write roles (including roles that aren't scoped to all device groups). <br> **MDE Roles**: Security data basics (under Security Operations).<br>**Entra ID roles**: Global Reader, Security Reader.|
 
-## What next?
+## Next steps
 
-Once you have set up the RBAC roles and permissions, [set up a new site](set-up-sites.md) so that Microsoft Defender for IoT can begin sending data to the Defender portal.
+Once you have set up the RBAC roles and permissions, [set up a site](set-up-sites.md) so that Microsoft Defender for IoT can begin sending data to the Defender portal.
