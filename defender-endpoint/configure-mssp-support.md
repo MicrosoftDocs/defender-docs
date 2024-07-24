@@ -28,7 +28,17 @@ ms.date: 07/24/2024
 
 [!include[Prerelease information](../includes/prerelease.md)]
 
-To enable the managed security service provider (MSSP) integration, follow the guidance in this article.
+## Managed security service provider partnership opportunities
+
+Security is recognized as a key component in running an enterprise; however, some organizations might not have the capacity or expertise to have a dedicated security operations team to manage the security of their endpoints and network, others may want to have a second set of eyes to review alerts in their network.
+
+To address this demand, managed security service providers (MSSP) offer to deliver managed detection and response (MDR) services on top of Defender for Endpoint. 
+
+Defender for Endpoint adds partnership opportunities for this scenario and allows MSSPs to take the following actions:
+
+- Get access to MSSP customer's Microsoft Defender portal
+- Get email notifications
+- Fetch alerts through security information and event management (SIEM) tools
 
 > [!NOTE]
 > The following terms are used in this article to distinguish between the service provider and service consumer:
@@ -36,13 +46,9 @@ To enable the managed security service provider (MSSP) integration, follow the g
 > - MSSPs: Security organizations that offer to monitor and manage security devices for an organization.
 > - MSSP customers: Organizations that engage the services of MSSPs.
 
-The integration allows MSSPs to take the following actions:
+## MSSP integration
 
-- Get access to MSSP customer's Microsoft Defender portal
-- Get email notifications, and
-- Fetch alerts through security information and event management (SIEM) tools
-
-Before MSSPs can take these actions, the MSSP customer needs to grant access to their Defender for Endpoint tenant so that the MSSP can access the portal.
+To enable MSSP integration, the MSSP customer needs to grant access to their Defender for Endpoint tenant so that the MSSP can access the portal.
 
 Typically, MSSP customers take the initial configuration steps to grant MSSPs access to their Windows Defender Security Central tenant. After access is granted, the MSSP or customer can do the other configuration steps. In general, these are the configuration steps to complete:
 
@@ -57,23 +63,11 @@ Typically, MSSP customers take the initial configuration steps to grant MSSPs ac
 
 For information on how to implement a multitenant delegated access, see [multitenant access for Managed Security Service Providers](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/multi-tenant-access-for-managed-security-service-providers/ba-p/1533440).
 
-## Managed security service provider partnership opportunities
-
-Security is recognized as a key component in running an enterprise; however, some organizations might not have the capacity or expertise to have a dedicated security operations team to manage the security of their endpoints and network, others may want to have a second set of eyes to review alerts in their network.
-
-To address this demand, managed security service providers (MSSP) offer to deliver managed detection and response (MDR) services on top of Defender for Endpoint. 
-
-Defender for Endpoint adds partnership opportunities for this scenario and allows MSSPs to take the following actions:
-
-- Get access to MSSP customer's Microsoft Defender portal
-- Get email notifications, and 
-- Fetch alerts through security information and event management (SIEM) tools
-
-
 ## Related articles
 
 - [Grant MSSP access to the portal](grant-mssp-access.md)
 - [Access the MSSP customer portal](access-mssp-portal.md)
 - [Configure alert notifications](configure-mssp-notifications.md)
 - [Fetch alerts from customer tenant](api/fetch-alerts-mssp.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
