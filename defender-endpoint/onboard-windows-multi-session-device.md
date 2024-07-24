@@ -128,7 +128,7 @@ Also, if you're using FSlogix user profiles, we recommend you follow the guidanc
 
 #### Licensing requirements
 
-When using Windows Enterprise multi-session, per our security best practices the VM can be licensed through Microsoft Defender for Servers or you can choose to have all users licensed through:
+When using Windows Enterprise multi-session, per our security best practices the VM can be licensed through Microsoft Defender for Servers or you can choose to have all AVD VM users licensed through one of the following licenses:
 
 - Microsoft Defender for Endpoint Plan 1 or Plan 2 (per user)
 - Windows Enterprise E3
