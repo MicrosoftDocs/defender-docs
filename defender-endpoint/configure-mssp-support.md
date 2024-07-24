@@ -12,7 +12,7 @@ ms.collection:
 - tier3
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 07/24/2024
 ---
 
 # Configure managed security service provider integration
@@ -53,13 +53,13 @@ Typically, MSSP customers take the initial configuration steps to grant MSSPs ac
 | **Fetch alerts from MSSP customer's tenant into SIEM system**. This action allows MSSPs to fetch alerts in SIEM tools. | MSSP |
 | **Fetch alerts from MSSP customer's tenant using APIs**. This action allows MSSPs to fetch alerts using APIs. | MSSP |
 
-## Multi-tenant access for MSSPs
+## Multitenant access for MSSPs
 
-For information on how to implement a multitenant delegated access, see [Multi-tenant access for Managed Security Service Providers](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/multi-tenant-access-for-managed-security-service-providers/ba-p/1533440).
+For information on how to implement a multitenant delegated access, see [multitenant access for Managed Security Service Providers](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/multi-tenant-access-for-managed-security-service-providers/ba-p/1533440).
 
 ## Managed security service provider partnership opportunities
 
-Security is recognized as a key component in running an enterprise, however some organizations might not have the capacity or expertise to have a dedicated security operations team to manage the security of their endpoints and network, others may want to have a second set of eyes to review alerts in their network.
+Security is recognized as a key component in running an enterprise; however, some organizations might not have the capacity or expertise to have a dedicated security operations team to manage the security of their endpoints and network, others may want to have a second set of eyes to review alerts in their network.
 
 To address this demand, managed security service providers (MSSP) offer to deliver managed detection and response (MDR) services on top of Defender for Endpoint. 
 
