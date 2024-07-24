@@ -2,6 +2,7 @@
 title: Configure device discovery
 description: Learn how to configure device discovery in Microsoft Defender XDR using basic or standard discovery
 ms.service: defender-endpoint
+ms.subservice: onboard
 f1.keywords:
 - NOCSH
 ms.author: siosulli
