@@ -4,7 +4,7 @@ description: Get an overview of attack surface reduction capabilities, including
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-ms.date: 06/07/2024
+ms.date: 07/23/2024
 ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium 
@@ -22,9 +22,6 @@ audience: Admin
 Your attack surfaces are all the places and ways that your organization's network and devices are vulnerable to cyberthreats and attacks. Unsecured devices, unrestricted access to any URL on a company device, and allowing any type of app or script to run on company devices are all examples of attack surfaces. They leave your company vulnerable to cyberattacks. 
 
 To help protect your network and devices, Microsoft Defender for Business includes several attack surface reduction capabilities, including attack surface reduction rules. This article describes how to set up your attack surface reduction rules and describes attack surface reduction capabilities.
-
-> [!NOTE]
-> Intune is not included in the standalone version of Defender for Business, but it can be added on.
 
 ## Standard protection ASR rules
 
