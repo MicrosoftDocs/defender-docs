@@ -26,8 +26,6 @@ ms.date: 07/24/2024
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-mssp-support-abovefoldlink)
 
-[!include[Prerelease information](../includes/prerelease.md)]
-
 ## Managed security service provider partnership opportunities
 
 Security is recognized as a key component in running an enterprise; however, some organizations might not have the capacity or expertise to have a dedicated security operations team to manage the security of their endpoints and network, others may want to have a second set of eyes to review alerts in their network.
@@ -42,19 +40,18 @@ Defender for Endpoint adds partnership opportunities for this scenario and allow
 
 > [!NOTE]
 > The following terms are used in this article to distinguish between the service provider and service consumer:
->
-> - MSSPs: Security organizations that offer to monitor and manage security devices for an organization.
-> - MSSP customers: Organizations that engage the services of MSSPs.
+> - MSSPs: Security organizations who monitor and manage security devices for organizations (customers).
+> - MSSP customers: Organizations who engage the services of MSSPs.
 
 ## MSSP integration
 
-To enable MSSP integration, the MSSP customer needs to grant access to their Defender for Endpoint tenant so that the MSSP can access the portal.
+To enable MSSP integration, the MSSP customer needs to grant access to their Defender for Endpoint tenant so that the MSSP can access their Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)).
 
-Typically, MSSP customers take the initial configuration steps to grant MSSPs access to their Windows Defender Security Central tenant. After access is granted, the MSSP or customer can do the other configuration steps. In general, these are the configuration steps to complete:
+After access is granted, the MSSP or customer can do the other configuration steps. In general, the following table summarizes the configuration steps to complete:
 
 | Step | Who does it|
 |---|---|
-| **Grant the MSSP access to Microsoft Defender XDR**. This action grants the MSSP access to the MSSP customer's Defender for Endpoint tenant. | MSSP Customer |
+| **Grant the MSSP access to the Microsoft Defender portal**. This action grants the MSSP access to the MSSP customer's Microsoft Defender portal. | MSSP Customer |
 | **Configure alert notifications sent to MSSPs**. This action lets the MSSPs know what alerts they need to address for the MSSP customer. | MSSP customer or MSSP |
 | **Fetch alerts from MSSP customer's tenant into SIEM system**. This action allows MSSPs to fetch alerts in SIEM tools. | MSSP |
 | **Fetch alerts from MSSP customer's tenant using APIs**. This action allows MSSPs to fetch alerts using APIs. | MSSP |
