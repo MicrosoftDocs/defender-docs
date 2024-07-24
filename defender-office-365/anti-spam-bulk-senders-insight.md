@@ -1,5 +1,5 @@
 ---
-title: Bulk sender insights
+title: Bulk senders insight
 f1.keywords: 
   - NOCSH
 ms.author: chrisda
@@ -14,9 +14,9 @@ ms.assetid:
 ms.collection: 
   - m365-security
   - tier2
-description: Admins can learn about the Bulk sender insights page in Exchange Online Protection (EOP) to simulate the effect of the bulk complaint level (BCL) on allowed or blocked messages..
+description: Admins can learn about the Bulk senders insight page in Exchange Online Protection (EOP) to simulate the effect of the bulk complaint level (BCL) on allowed or blocked messages..
 ms.service: defender-office-365
-ms.date: 07/01/2024
+ms.date: 07/24/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -39,7 +39,7 @@ This article describes how to use the bulk senders insight in the Microsoft Defe
 
 ## What do you need to know before you begin?
 
-- You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Bulk sender insights** page, use <https://security.microsoft.com/senderinsights>.
+- You open the Microsoft Defender portal at <https://security.microsoft.com>. To go directly to the **Bulk senders insight** page, use <https://security.microsoft.com/senderinsights>.
 
 - Bulk simulation and detection might not work correctly if the MX record for your Microsoft 365 domain points to a third party service or device.
 
@@ -70,20 +70,20 @@ This article describes how to use the bulk senders insight in the Microsoft Defe
 
 3. In the details flyout that opens, select **Edit spam threshold and properties** at the bottom of the **Bulk email threshold & spam properties** section.
 
-4. In the **Spam threshold and properties** flyout that opens, bulk sender insights contains the following information for the last 60 days:
+4. In the **Spam threshold and properties** flyout that opens, bulk senders insight contains the following information for the last 60 days:
 
    - The number of messages that were identified as bulk at the current BCL level.
    - A table that shows the number messages that were identified as bulk at every possible BCL level (1-9).
 
-   :::image type="content" source="media/m365-sc-bulk-sender-insights.png" alt-text="The bulk sender insights in the properties of the default anti-spam policy in the Microsoft Defender portal." lightbox="media/m365-sc-bulk-sender-insights.png":::
+   :::image type="content" source="media/m365-sc-bulk-sender-insights.png" alt-text="The bulk senders insight in the properties of the default anti-spam policy in the Microsoft Defender portal." lightbox="media/m365-sc-bulk-sender-insights.png":::
 
-To view detailed information about bulk detections and senders, select **View bulk sender insights** or **Bulk sender insights** to open the **Bulk sender insights** page.
+To view detailed information about bulk detections and senders, select **View bulk senders insight** or **Bulk senders insight** to open the **Bulk senders insight** page.
 
 ## View the Bulk senders insight page
 
-The **Bulk sender insights** page at <https://security.microsoft.com/senderinsights> is available directly or when you select **View bulk sender insights** or **Bulk sender insights** from the **Spam threshold and properties** flyout in the details of a custom anti-spam policy or the default anti-spam policy.
+The **Bulk senders insight** page at <https://security.microsoft.com/senderinsights> is available directly or when you select **View bulk senders insight** or **Bulk senders insight** from the **Spam threshold and properties** flyout in the details of a custom anti-spam policy or the default anti-spam policy.
 
-:::image type="content" source="media/m365-sc-bulk-sender-insights page.png" alt-text="The Bulk sender insights page in the Microsoft Defender portal." lightbox="media/m365-sc-bulk-sender-insights page.png":::
+:::image type="content" source="media/m365-sc-bulk-sender-insights page.png" alt-text="The Bulk senders insight page in the Microsoft Defender portal." lightbox="media/m365-sc-bulk-sender-insights page.png":::
 
 Before you run a simulation, values in the table in the middle of the page indicate the following values:
 
@@ -100,7 +100,7 @@ Before you run a simulation, values in the table in the middle of the page indic
 
 To run a simulation, use the following elements on the page:
 
-- The unmodifiable **Current bulk email threshold** slider shows the current BCL threshold value based on how you got to the **Bulk sender insights** page:
+- The unmodifiable **Current bulk email threshold** slider shows the current BCL threshold value based on how you got to the **Bulk senders insight** page:
   - **Directly**: The BCL threshold value is 7.
   - **From the properties of an anti-spam policy**: The BCL threshold value is the current value in the anti-spam policy.
 - The **New bulk email threshold** slider allows you to simulate the effect of increasing and decreasing the BCL threshold on delivered or blocked messages.
@@ -114,7 +114,7 @@ After you select the **New bulk email threshold** and **Good coefficient** value
 - The page is updated with the number of blocked vs. allowed messages for the current and new simulated BCL threshold levels.
 - The bottom of the page is updated with information about senders that would be identified as bulk.
 
-### View information about bulk senders on the Bulk sender insights page
+### View information about bulk senders on the Bulk senders insight page
 
 The details table contains sender data when you first open the page if the current bulk threshold value already resulted in messages being identified as bulk.
 
@@ -125,7 +125,7 @@ After you select the **New bulk email threshold** and **Good coefficient** value
 - The page is updated with the allowed vs. blocked senders for the current and new BCL threshold levels.
 - The bottom of the page contains the senders 
 
-The **Bulk sender insights** page contains the following information:
+The **Bulk senders insight** page contains the following information:
 
 - The table in center of the page contains the following columns:
   - **Bulk complaint level**: The available values 1 to 9 are shown.
