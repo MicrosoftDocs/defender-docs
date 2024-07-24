@@ -4,7 +4,7 @@ description: Get an overview of mobile threat defense in Defender for Business. 
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-ms.date: 06/19/2024
+ms.date: 07/23/2024
 ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium 
