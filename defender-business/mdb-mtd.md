@@ -46,7 +46,7 @@ The following table summarizes the capabilities that are included in mobile thre
 > 
 > 1. Use Intune to configure or manage an allow list of root certification authority and private root certification authority certificates.
 > 
-3. See [Prerequisites for the Microsoft Tunnel in Intune](/mem/intune/protect/microsoft-tunnel-prerequisites).
+> 3. See [Prerequisites for the Microsoft Tunnel in Intune](/mem/intune/protect/microsoft-tunnel-prerequisites).
 
 
 ## How to get mobile threat defense capabilities
