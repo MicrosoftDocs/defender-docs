@@ -21,6 +21,11 @@ To make general changes to RBAC roles and permissions that relate to all other a
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
+## Prerequisites
+
+- Review [the general prerequisites for Microsoft Defender for IoT](prerequisites.md).
+- Details of all users to be assigned site security permissions.
+
 ## Access management options
 
 There are two ways to manage user access to the Defender portal:

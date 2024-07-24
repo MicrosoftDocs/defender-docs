@@ -10,14 +10,19 @@ ms.topic: how-to
 ---
 
 # Configure full roles and permissions
-
+<!-- ok to use term configure instead of set up?-->
 The Microsoft Defender portal allows granular access to features and data based on user roles and the permissions given to each user with Role-Based Access Control (RBAC).
-
+<!-- are we assigning to the defender portal, MDE, Microsoft Defender for Endpoint -->
 Microsoft Defender for IoT is part of the Defender portal and user access permissions for alerts, incidents, device inventory, device groups and vulnerabilities should already be configured. Nevertheless, with the added features of Defender for IoT you might want to check, adjust or add to the existing roles and permissions of your team in the Defender portal.
-
+<!-- are we assigning to the defender portal, MDE, Microsoft Defender for Endpoint how to write the line below? -->
 This article shows you how to make general changes to RBAC roles and permissions that relate to all areas of Defender for IoT in the Defender portal. To set up roles and permissions specifically for site security, see [set up RBAC permissions for site security](set-up-rbac.md).  
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+
+## Prerequisites
+
+- Review [the general prerequisites for Microsoft Defender for IoT](prerequisites.md).
+- Details of all users to be assigned updated roles and permissions for the Defender portal.
 
 ## Access management options
 
