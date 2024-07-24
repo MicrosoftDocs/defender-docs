@@ -95,7 +95,7 @@ Threat tags are presented at the top of the threat analytics page. There are cou
 
 To set the types of reports you want in the list, select **Filters**, choose from the list, and select **Apply**. 
 
-  :::image type="content" source="/defender/media/threat-analytics/ta-threattag-filters-mtp-tb.png" alt-text="Screenshot of the Filters list." lightbox="/defender/media/threat-analytics/ta-threattag-filters-mtp.png":::
+  :::image type="content" source="/defender/media/threat-analytics/ta-threattag-filters-mtp.png" alt-text="Screenshot of the Filters list." lightbox="/defender/media/threat-analytics/ta-threattag-filters-mtp.png":::
 
 If you've set more than one filter, the threat analytics reports list can also be sorted by threat tag by selecting the threat tags column:
 
@@ -167,7 +167,7 @@ The **Endpoints exposure** section provides your organization's **Exposure level
 
 This section also provides the deployment status of supported software security updates for vulnerabilities found on onboarded devices. It incorporates data from [Microsoft Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt), which also provides detailed drill-down information from various links in the report.
 
-:::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp.png" alt-text="The Endpoints exposure section of a threat analytics report" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp.png":::
+:::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp2.png" alt-text="The Endpoints exposure section of a threat analytics report" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp2.png":::
 
 ### Recommended actions: Review list of mitigations and the status of your devices
 
@@ -176,7 +176,7 @@ In the **Recommended actions** tab, review the list of specific actionable recom
   - Potentially unwanted application (PUA) protection
   - Real-time protection
 
-:::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp2.png" alt-text="The Recommended actions section of a threat analytics report showing vulnerability details" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp2.png":::
+:::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp.png" alt-text="The Recommended actions section of a threat analytics report showing vulnerability details" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp.png":::
 
 ## Set up email notifications for report updates
 
