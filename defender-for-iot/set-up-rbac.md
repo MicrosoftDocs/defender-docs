@@ -11,11 +11,15 @@ ms.topic: how-to
 
 # Set up RBAC permissions to access site security
 
-The Microsoft Defender portal allows granular access to features and data based on user roles and the permissions given to each user.
+The Microsoft Defender portal allows granular access to features and data based on user roles and the permissions given to each user with Role-Based Access Control (RBAC).
 
-To access the Microsoft Defender for IoT features in the Defender portal, such as site security, alerts, and vulnerability updates, you need to assign permissions and roles to the correct users.
+To access the Microsoft Defender for IoT features in the Defender portal, such as site security, and Defender for IoT specific alerts and vulnerability updates, you need to assign permissions and roles to the correct users.
 
-This article shows you how to set up the relevant roles and permissions.
+This article shows you how to set up the new roles and permissions to access the site security and Defender for IoT specific features.
+
+To make general changes to RBAC roles and permissions that relate to all other areas of Defender for IoT, see [<!--set up/ adjust/ -->configure general RBAC permissions](permissions.md).
+
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
 ## Access management options
 
@@ -24,11 +28,19 @@ There are two ways to manage user access to the Defender portal:
 - [Global Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference).
 - [Custom role access](/defender-xdr/custom-roles): Use role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 
+### heading
+
+Depending on your tenant, you might have access to RBAC version 1 or 2 instead of the unified version. For more information, see [permissions for RBAC version 1](/defender-endpoint/prepare-deployment), or [permissions for RBAC version 2](/defender-endpoint/user-roles#permission-options).
+
+### RBAC for version 1 or 2
+
 The permission settings listed in this section apply to the unified RBAC version. If you have RBAC version 1 or 2, see [here forpermissions settings information](#rbac-for-version-1-or-2).
 
-### Set up unified RBAC roles for site security
+If you're using the Defender portal for the first time, you need to set up all of your roles and permissions. For more information, see [manage portal access using role-based access control](/defender-xdr/manage-rbac).
 
-To give access to [site security](site-security-overview.md) features assign users the unified RBAC permissions and roles:
+## Set up unified RBAC roles for site security
+
+Assign RBAC permissions and roles, based on the [summary table](#summary-of-roles-and-permissions-for-site-security), to give users access to site security features:
 
 1. In the Defender portal, select **Settings > Microsoft XDR > Permissions and roles**.
 1. Enable **Endpoints & Vulnerability Management**.
@@ -38,33 +50,25 @@ To give access to [site security](site-security-overview.md) features assign use
 
     :::image type="content" source="media/set-up-rbac/permissions-set-up.png" alt-text="Screenshot of the permissions set up page for site security." lightbox="media/set-up-rbac/permissions-set-up.png":::
 
-1. Select **Security operations**, select **Select custom permissions**.
-1. In **Security settings** select **Security data basics**, select **Apply**
-
-    :::image type="content" source="media/set-up-rbac/permissions-choose.png" alt-text="Screenshot of the permissions set up page with the categories of permissions for site security." lightbox="media/set-up-rbac/permissions-choose.png":::
-
+1. Select **Security operations**, and select **Select custom permissions**.
+1. In **Security settings**, select **Security data basics** and select **Apply**
 1. Select **Authorization and settings**, select **Select custom permissions**.
-1. In **Security data** select **Core security settings (manage)**, select **Apply**
+1. In **Security data** ,select **Core security settings (manage)** and select **Apply**
 
     :::image type="content" source="media/set-up-rbac/permissions-choose-options.png" alt-text="Screenshot of the permissions set up page with the specific permissions chosen for site security." lightbox="media/set-up-rbac/permissions-choose-options.png":::
 
 1. Select **Next** for Assignments.
-1. Select **Add assignment**, type a name, choose users and groups and select the Data sources. 
+1. Select **Add assignment**, type a name, choose users and groups and select the Data sources.
 1. Select **Add**.
-1. Select **Next** to Review and finish.
-
-    :::image type="content" source="media/set-up-rbac/permissions-review.png" alt-text="Screenshot of the review permissions set up page for site security." lightbox="media/set-up-rbac/permissions-review.png":::
-
+1. Select **Next** to **Review and finish**.
 1. Select **Submit**.
 
-This table summarizes the permissions and roles to assign for site security:
+### Summary of roles and permissions for site security
 
 |Write permissions |Read permissions |
 |----|----|
 | **MDE Roles**: Core security settings scoped to all device groups. <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator scoped to all device groups.| Write roles (including roles that aren't scoped to all device groups). <br> **MDE Roles**: Security data basics (under Security Operations).<br>**Entra ID roles**: Global Reader, Security Reader.|
 
-### RBAC for version 1 or 2
+## What next?
 
-Depending on your tenant, you might have access to RBAC version 1 or 2 instead of the unified version. For more information, see [permissions for RBAC version 1](/defender-endpoint/prepare-deployment), or [permissions for RBAC version 2](/defender-endpoint/user-roles#permission-options).
-
-If you're using the Defender portal for the first time, you need to set up all of your roles and permissions. For more information, see [manage portal access using role-based access control](/defender-xdr/manage-rbac).
+das
