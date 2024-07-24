@@ -6,7 +6,7 @@ ms.author: siosulli
 author: siosulli
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
-ms.date: 05/01/2024
+ms.date: 07/17/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -67,9 +67,13 @@ Devices on your network must be running one of these editions. New features or c
 
 ### Supported Windows versions
 
+> [!IMPORTANT]
+> Windows 11 Home devices that have been upgraded to one of the below supported editions might require you to run the following command before onboarding: 
+> `DISM /online /Add-Capability /CapabilityName:Microsoft.Windows.Sense.Client~~~~`. 
+> For more information about edition upgrades and features, see [Features](/windows-hardware/manufacture/desktop/windows-features?view=windows-11&preserve-view=true))
+
 - Windows 11 Enterprise
 - Windows 11 IoT Enterprise
-
 - Windows 11 Education
 - Windows 11 Pro
 - Windows 11 Pro Education
