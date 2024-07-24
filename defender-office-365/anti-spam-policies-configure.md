@@ -124,8 +124,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
      This section also contains a corresponding comparative chart that shows the effect of different BCL values on messages.
 
-     > [!TIP]
-     > The **View bulk sender insights** or **Bulk sender insights** links go to the same place and are best used _after_ you finish creating the anti-spam policy. If you select one of the links, you can't get back to where you left off on the **Bulk email threshold & spam properties** page (you need to start over in creating the new anti-spam policyr). For more information about the **Bulk sender insights** page, see [Bulk sender insights in Exchange Online Protection](anti-spam-bulk-sender-inisghts.md).
+     For more information about the **Bulk sender insights** page, see [Bulk senders insight in Exchange Online Protection](anti-spam-bulk-senders-insight.md).
 
    - **Spam properties** section:
 
