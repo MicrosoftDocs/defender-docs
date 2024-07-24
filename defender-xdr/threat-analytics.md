@@ -64,13 +64,11 @@ The threat analytics dashboard ([security.microsoft.com/threatanalytics3](https:
 
 - **Latest threats**—lists the most recently published or updated threat reports, along with the number of active and resolved alerts.
 - **High-impact threats**—lists the threats that have the highest impact to your organization. This section lists threats with the highest number of active and resolved alerts first.
-- **Highest exposure**—lists threats to which your org has the highest exposure. Your exposure level to a threat is calculated using two pieces of information: how severe the vulnerabilities associated with the threat are, and how many devices in your organization could be exploited by those vulnerabilities.
-
-
+- **Highest exposure threats**—lists threats to which your organization has the highest exposure. Your exposure level to a threat is calculated using two pieces of information: how severe the vulnerabilities associated with the threat are, and how many devices in your organization could be exploited by those vulnerabilities.
 
 :::image type="content" source="/defender/media/threat-analytics/ta_dashboard_mtp.png" alt-text="Screenshot of the threat analytics dashboard," lightbox="/defender/media/threat-analytics/ta_dashboard_mtp.png":::
 
-Select a threat from the dashboard to view the report for that threat. You can also select the Search field to key in a keyword that's related to the threat analytics report that you'd like to read.
+Select a threat from the dashboard to view the report for that threat. You can also select the **Search** field to key in a keyword that's related to the threat analytics report that you'd like to read.
 
 #### View reports by category
 
@@ -81,21 +79,25 @@ You can filter the threat report list and view the most relevant reports accordi
 
 The different tags have equivalent filters that assist you in efficiently reviewing the threat report list and filtering the view based on a specific threat tag or report type. For example, to view all threat reports related to ransomware category, or threat reports that involve vulnerabilities.
 
-The Microsoft Threat Intelligence team has added threat tags to each threat report. Four threat tags are currently available:
+The Microsoft Threat Intelligence team has added threat tags to each threat report. The following threat tags are currently available:
   - Ransomware
+  - Extortion
   - Phishing
-  - Vulnerability
+  - Hands on keyboard
   - Activity group
+  - Vulnerability
+  - Attack campaign
+  - Tool or technique
 
 Threat tags are presented at the top of the threat analytics page. There are counters for the number of available reports under each tag.
 
-:::image type="content" source="/defender/media/threat-analytics/ta-dashboard-tags.png" alt-text="Screenshot of the threat analytics report tags." lightbox="/defender/media/threat-analytics/ta_dashboard_mtp.png":::
+:::image type="content" source="/defender/media/threat-analytics/ta-dashboard-tags.png" alt-text="Screenshot of the threat analytics report tags." lightbox="/defender/media/threat-analytics/ta-dashboard-tags.png":::
 
 To set the types of reports you want in the list, select **Filters**, choose from the list, and select **Apply**. 
 
   :::image type="content" source="/defender/media/threat-analytics/ta-threattag-filters-mtp-tb.png" alt-text="Screenshot of the Filters list." lightbox="/defender/media/threat-analytics/ta-threattag-filters-mtp.png":::
 
-If you have set more than one filter, the threat analytics reports list can also be sorted by threat tag by selecting the threat tags column:
+If you've set more than one filter, the threat analytics reports list can also be sorted by threat tag by selecting the threat tags column:
 
   :::image type="content" source="/defender/media/threat-analytics/ta-taglist-mtp.png" alt-text="Screenshot of the threat tags column." lightbox="/defender/media/threat-analytics/ta-taglist-mtp.png":::
 
@@ -106,9 +108,9 @@ Each threat analytics report provides information in several sections:
 - [**Overview**](#overview-quickly-understand-the-threat-assess-its-impact-and-review-defenses)
 - [**Analyst report**](#analyst-report-get-expert-insight-from-microsoft-security-researchers)
 - [**Related incidents**](#related-incidents-view-and-manage-related-incidents)
-- [**Impacted assets**](#impacted-assets-get-list-of-impacted-devices-and-mailboxes)
-- [**Prevented email attempts**](#prevented-email-attempts-view-blocked-or-junked-threat-emails)
-- [**Exposure & mitigations**](#exposure-and-mitigations-review-list-of-mitigations-and-the-status-of-your-devices)
+- [**Impacted assets**](#impacted-assets-get-list-of-impacted-devices-users-mailboxes-apps-and-cloud-resources)
+- [**Endpoints exposure**](#endpoints-exposure-know-the-deployment-status-of-security-updates)
+- [**Recommended actions**](#recommended-actions-review-list-of-mitigations-and-the-status-of-your-devices)
 
 ### Overview: Quickly understand the threat, assess its impact, and review defenses
 
@@ -125,15 +127,14 @@ Each report includes charts designed to provide information about the organizati
   - Number of active alerts and the number of active incidents they're associated with
   - Severity of active incidents
 - **Alerts over time**—shows the number of related **Active** and **Resolved** alerts over time. The number of resolved alerts indicates how quickly your organization responds to alerts associated with a threat. Ideally, the chart should be showing alerts resolved within a few days.
-- **Impacted assets**—shows the number of distinct devices and email accounts (mailboxes) that currently have at least one active alert associated with the tracked threat. Alerts are triggered for mailboxes that received threat emails. Review both org- and user-level policies for overrides that cause the delivery of threat emails.
-- **Prevented email attempts**—shows the number of emails from the past seven days that were either blocked before delivery or delivered to the junk mail folder.
+- **Impacted assets**—shows the number of distinct assets that currently have at least one active alert associated with the tracked threat. Alerts are triggered for mailboxes that received threat emails. Review both org- and user-level policies for overrides that cause the delivery of threat emails.
 
 #### Review security resilience and posture
 
 Each report includes charts that provide an overview of how resilient your organization is against a given threat:
 
-- **Secure configuration status**—shows the number of devices with misconfigured security settings. Apply the recommended security settings to help mitigate the threat. Devices are considered **Secure** if they've applied _all_ the tracked settings.
-- **Vulnerability patching status**—shows the number of vulnerable devices. Apply security updates or patches to address vulnerabilities exploited by the threat.
+- **Recommended actions**—shows the **Action status** percentage, or the number of points you've achieved to improve your security posture. Perform the recommended actions to help address the threat. You can view the breakdown of points by **Category** or **Status**.
+- **Endpoints exposure**—shows the number of vulnerable devices. Apply security updates or patches to address vulnerabilities exploited by the threat.
 
 
 ### Analyst report: Get expert insight from Microsoft security researchers
@@ -148,42 +149,34 @@ The **Related incidents** tab provides the list of all incidents related to the 
 
 :::image type="content" source="/defender/media/threat-analytics/ta_related_incidents_mtp.png" alt-text="Screenshot of the related incidents section of a threat analytics report." lightbox="/defender/media/threat-analytics/ta_related_incidents_mtp.png":::
 
-### Impacted assets: Get list of impacted devices and mailboxes
+### Impacted assets: Get list of impacted devices, users, mailboxes, apps, and cloud resources
 
 An asset is considered impacted if it's affected by an active, unresolved alert. The **Impacted assets** tab lists the following types of impacted assets:
 
-- **Impacted devices**—endpoints that have unresolved Microsoft Defender for Endpoint alerts. These alerts typically fire on sightings of known threat indicators and activities.
-- **Impacted mailboxes**—mailboxes that have received email messages that have triggered Microsoft Defender for Office 365 alerts. While most messages that trigger alerts are typically blocked, user- or org-level policies can override filters.
+- **Devices**—endpoints that have unresolved Microsoft Defender for Endpoint alerts. These alerts typically fire on sightings of known threat indicators and activities.
+- **Users**—
+- **Mailboxes**—mailboxes that have received email messages that have triggered Microsoft Defender for Office 365 alerts. While most messages that trigger alerts are typically blocked, user- or org-level policies can override filters.
+- **Apps**—
+- **Cloud resources**—
 
 :::image type="content" source="/defender/media/threat-analytics/ta_impacted_assets_mtp.png" alt-text="Screenshot of the impacted assets section of a threat analytics report." lightbox="/defender/media/threat-analytics/ta_impacted_assets_mtp.png":::
 
+### Endpoints exposure: Know the deployment status of security updates
 
-### Prevented email attempts: View blocked or junked threat emails
+The **Endpoints exposure** section provides your organization's **Exposure level** to the threat, which is calculated based on the severity of the vulnerabilities and misconfigurations exploited by the said threat, and the number of devices with these weaknesses. 
 
-Microsoft Defender for Office 365 typically blocks emails with known threat indicators, including malicious links or attachments. In some cases, proactive filtering mechanisms that check for suspicious content will instead send threat emails to the junk mail folder. In either case, the chances of the threat launching malware code on the device is reduced.
+This section also provides the deployment status of supported software security updates for vulnerabilities found on onboarded devices. It incorporates data from [Microsoft Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt), which also provides detailed drill-down information from various links in the report.
 
-The **Prevented email attempts** tab lists all the emails that have either been blocked before delivery or sent to the junk mail folder by Microsoft Defender for Office 365.
+:::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp.png" alt-text="The Endpoints exposure section of a threat analytics report" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp.png":::
 
-:::image type="content" source="/defender/media/threat-analytics/ta_prevented_email_attempts_mtp.png" alt-text="Screenshot of the prevented email attempts section of a threat analytics report." lightbox="/defender/media/threat-analytics/ta_prevented_email_attempts_mtp.png":::
+### Recommended actions: Review list of mitigations and the status of your devices
 
-
-### Exposure and mitigations: Review list of mitigations and the status of your devices
-
-In the **Exposure & mitigations** section, review the list of specific actionable recommendations that can help you increase your organizational resilience against the threat. The list of tracked mitigations includes:
-
-- **Security updates**—deployment of supported software security updates for vulnerabilities found on onboarded devices
-- **Supported security configurations**
+In the **Recommended actions** tab, review the list of specific actionable recommendations that can help you increase your organizational resilience against the threat. The list of tracked mitigations includes supported security configurations, such as:
   - Cloud-delivered protection  
   - Potentially unwanted application (PUA) protection
   - Real-time protection
 
-Mitigation information in this section incorporates data from [Microsoft Defender Vulnerability Management](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt), which also provides detailed drill-down information from various links in the report.
-
-:::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp.png" alt-text="The mitigations section of a threat analytics report showing secure configuration details" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp.png":::
-
-:::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp2.png" alt-text="The mitigations section of a threat analytics report showing vulnerability details" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp2.png":::
-
-_Exposure & mitigations section of a threat analytics report_
+:::image type="content" source="/defender/media/threat-analytics/ta_mitigations_mtp2.png" alt-text="The Recommended actions section of a threat analytics report showing vulnerability details" lightbox="/defender/media/threat-analytics/ta_mitigations_mtp2.png":::
 
 ## Set up email notifications for report updates
 
@@ -204,7 +197,7 @@ To access threat analytics reports, you need certain roles and permissions. See 
 
 When looking at the threat analytics data, remember the following factors:
 
-- Charts reflect only mitigations that are tracked. Check the report overview for additional mitigations that aren't shown in the charts.
+- Charts reflect only mitigations that are tracked. Check the report overview for more mitigations that aren't shown in the charts.
 - Mitigations don't guarantee complete resilience. The provided mitigations reflect the best possible actions needed to improve resiliency.
 - Devices are counted as "unavailable" if they haven't transmitted data to the service.
 - Antivirus-related statistics are based on Microsoft Defender Antivirus settings. Devices with third-party antivirus solutions can appear as "exposed".
