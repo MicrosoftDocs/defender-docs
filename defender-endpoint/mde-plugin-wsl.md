@@ -6,6 +6,7 @@ ms.author: pahuijbr
 manager: deniseb
 ms.reviewer: gokulgiju, priyankagill, kvitta
 ms.service: defender-endpoint
+ms.subservice: onboard
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.collection: 
