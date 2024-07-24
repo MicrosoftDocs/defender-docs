@@ -72,4 +72,4 @@ Assign RBAC permissions and roles, based on the [summary table](#summary-of-role
 
 ## What next?
 
-das
+Once you have set up the RBAC roles and permissions, [set up a new site](set-up-sites.md) so that Microsoft Defender for IoT can begin sending data to the Defender portal.
