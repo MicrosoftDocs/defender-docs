@@ -92,7 +92,7 @@ For more information, see [Manage the sources for Microsoft Defender Antivirus p
 
 ## Monthly platform and engine versions
 
-All our updates contain
+All our updates contain:
 
 - Performance improvements
 - Serviceability improvements
