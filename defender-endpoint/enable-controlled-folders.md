@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 - mde-asr
 search.appverid: met150
-ms.date: 07/17/2024
+ms.date: 07/25/2024
 ---
 
 # Enable controlled folder access
@@ -69,7 +69,7 @@ For more information about disabling local list merging, see [Prevent or allow u
 
 ## Microsoft Intune
 
-1. Sign in to the [Microsoft Intune admin center](https://endpoint.microsoft.com) and open **Endpoint Security**.
+1. Sign in to the [Microsoft Intune admin center](https://intune.microsoft.com) and open **Endpoint Security**.
 
 2. Go to **Attack Surface Reduction** > **Policy**.
 
