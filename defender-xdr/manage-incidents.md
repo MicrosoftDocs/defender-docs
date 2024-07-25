@@ -104,9 +104,17 @@ You can then save the resulting URL in your browser as a bookmark to quickly see
 
 ## Resolve an incident
 
-Select **Resolve incident** to move the toggle to the right when an incident is remediated. Resolving an incident also resolves all the linked and active alerts related to the incident.
+When an incident is remediated and resolved, select **Resolved** from the **Status** drop-down list. Resolving an incident also resolves all the linked and active alerts related to the incident.
 
-An incident that isn't resolved displays as **Active**.
+When you change an incident's status to **Resolved**, a new field is displayed immediately following the **Status** field. Enter a note in this field that explains why you consider the incident resolved.
+
+:::image type="content" source="/defender/media/incidents-queue/resolve-incidents.png" alt-text="Screenshot of incident management panel with incident resolution note.":::
+
+This note is visible in the activity log of the incident, near the entry recording the incident's resolution.
+
+:::image type="content" source="/defender/media/incidents-queue/resolution-note-in-log.png" alt-text="Screenshot of appearance of resolution note in the activity log.":::
+
+Resolving an incident also resolves all the linked and active alerts related to the incident. An incident that isn't resolved displays as **Active**.
 
 ## Specify the classification
 
