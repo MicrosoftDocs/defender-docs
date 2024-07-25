@@ -49,7 +49,7 @@ This section describes the process for setting up the pilot UAT / Test / QA envi
 
 On about 10-500* Windows and/or Windows Server systems, depending on how many total systems that you all have:
 
-In the Intune portal [https://endpoint.microsoft.com](https://endpoint.microsoft.com), create or append to your Microsoft Defender Antivirus policy the following setting:
+In the Intune portal [https://intune.microsoft.com](https://intune.microsoft.com), create or append to your Microsoft Defender Antivirus policy the following setting:
 For example, your pilot policy named _MDAV_Settings_Pilot_. If you have a Citrix environment, include at least one Citrix VM (non-persistent and/or  persistent).
 
 :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-intune-microsoft-defender-antivirus-pilot-policy-settings.png" alt-text="Shows recommended Intune Microsoft Defender Antivirus pilot policy settings." lightbox="media/microsoft-defender-antivirus-deploy-ring-intune-microsoft-defender-antivirus-pilot-policy-settings.png":::
@@ -73,7 +73,7 @@ Recommended settings are as follows:
 
 ## Setting up the Production environment 
 
-In the Intune portal [https://endpoint.microsoft.com](https://endpoint.microsoft.com), create or append to your Microsoft Defender Antivirus policy using the following setting:
+In the Intune portal [https://intune.microsoft.com](https://intune.microsoft.com), create or append to your Microsoft Defender Antivirus policy using the following setting:
 For example, your production policy named _MDAV_Settings_Production_.
 
 :::image type="content" source="media/microsoft-defender-antivirus-deploy-ring-intune-microsoft-defender-antivirus-production-policy-settings.png" alt-text="Shows recommended Intune Microsoft Defender Antivirus production policy settings." lightbox="media/microsoft-defender-antivirus-deploy-ring-intune-microsoft-defender-antivirus-production-policy-settings.png":::
@@ -88,7 +88,7 @@ For example, your production policy named _MDAV_Settings_Production_.
 
 If you encounter problems with your deployment, change the source of the Microsoft Defender Antivirus 'security intelligence updates':
 
-1. In the Intune portal [https://endpoint.microsoft.com](https://endpoint.microsoft.com), go to **Endpoint Security**, select **Antivirus**, and then find your Intune production policy (for example, MDAV_Settings_Production), and then, in **Configuration settings**, select **Edit**.
+1. In the Intune portal [https://intune.microsoft.com](https://intune.microsoft.com), go to **Endpoint Security**, select **Antivirus**, and then find your Intune production policy (for example, MDAV_Settings_Production), and then, in **Configuration settings**, select **Edit**.
 
 1. Change the entry to **FileShares**. This change is shown in the following figure.
 
