@@ -14,7 +14,7 @@ ms.assetid:
 ms.collection: 
   - m365-security
   - tier2
-description: Admins can learn about the Bulk senders insight page in Exchange Online Protection (EOP) to simulate the effect of the bulk complaint level (BCL) on allowed or blocked messages..
+description: Admins can learn about the Bulk senders insight page in Exchange Online Protection (EOP) to simulate the effect of the bulk complaint level (BCL) on allowed or blocked messages.
 ms.service: defender-office-365
 ms.date: 07/24/2024
 appliesto:
@@ -25,15 +25,18 @@ appliesto:
 
 # Bulk senders insight in Exchange Online Protection
 
-In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, the bulk sender insight in the Microsoft Defender portal allow you to see how much email was identified as bulk at the current bulk threshold level in anti-spam policies, and to simulate identified vs. allowed bulk email based on changes in the bulk email threshold.
+> [!NOTE]
+> The features described in this article are currently in Preview, aren't available in all organizations, and are subject to change.
 
-EOP assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. A higher BCL value indicates a bulk message is more likely to be spam. The bulk email threshold in anti-spam policies use a specified BCL value to identify messages a bulk and take action on them. For more information about the BCL, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
+In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, the bulk senders insight in the Microsoft Defender portal allows you to see how much email was identified as bulk at the current bulk threshold level in anti-spam policies, and to simulate identified vs. allowed bulk email based on changes in the bulk sender threshold and the quality of the bulk sender.
+
+EOP assigns a bulk complaint level (BCL) value to inbound messages from bulk senders. A higher BCL value indicates a bulk message is more likely to be spam. The bulk email threshold in anti-spam policies uses a specified BCL value to identify messages a bulk and take action on them. For more information about the BCL, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
 
 The bulk senders insight has the following capabilities:
 
 - View how much mail is identified as bulk at every BCL level (1 to 9) for the last 60 days.
-- Simulate changes to the bulk email threshold and view the affect on the number of messages that would be delivered vs. blocked as bulk by the default anti-spam or custom anti-spam policies where you can set the BCL threshold. You can't set the BCL threshold in the Standard or Strict [preset security policies](preset-security-policies.md).
-- View information about message senders that were affected by the bulk email threshold, including filtering based on the trustworthiness of the sender.
+- Simulate changes to the bulk email threshold and view the results on the number of messages that would be delivered vs. identified as bulk by the default anti-spam or custom anti-spam policies where you can set the BCL threshold. You can't set the BCL threshold in the Standard or Strict [preset security policies](preset-security-policies.md).
+- View information about message senders that were affected by the bulk email threshold, including filtering based on the quality of the sender.
 
 This article describes how to use the bulk senders insight in the Microsoft Defender portal.
 
@@ -64,39 +67,62 @@ This article describes how to use the bulk senders insight in the Microsoft Defe
 
 ## Open the bulk senders insight in the Microsoft Defender portal
 
-1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
+The bulk senders insight is available in the following locations:
 
-2. On the **Anti-spam policies** page, select a custom anti-spam policy (the **Type** value is **Custom anti-spam policy**) or the default anti-spam policy named **Anti-spam inbound policy (Default)** by clicking anywhere in the row other than the check box next to the first column.
+- In the properties of the default anti-spam policy or custom anti-spam policies:
 
-3. In the details flyout that opens, select **Edit spam threshold and properties** at the bottom of the **Bulk email threshold & spam properties** section.
+  1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & Collaboration** \> **Policies & Rules** \> **Threat policies** \> **Anti-spam** in the **Policies** section. Or, to go directly to the **Anti-spam policies** page, use <https://security.microsoft.com/antispam>.
 
-4. In the **Spam threshold and properties** flyout that opens, bulk senders insight contains the following information for the last 60 days:
+  2. On the **Anti-spam policies** page, select a custom anti-spam policy (the **Type** value is **Custom anti-spam policy**) or the default anti-spam policy named **Anti-spam inbound policy (Default)** by clicking anywhere in the row other than the check box next to the first column.
 
-   - The number of messages that were identified as bulk at the current BCL level.
-   - A table that shows the number messages that were identified as bulk at every possible BCL level (1-9).
+  3. In the details flyout that opens, select **Edit spam threshold and properties** at the bottom of the **Bulk email threshold & spam properties** section.
 
-   :::image type="content" source="media/m365-sc-bulk-sender-insights.png" alt-text="The bulk senders insight in the properties of the default anti-spam policy in the Microsoft Defender portal." lightbox="media/m365-sc-bulk-sender-insights.png":::
+  4. In the **Spam threshold and properties** flyout that opens, the bulk senders insight contains the following information about all bulk email detected by all anti-spam policies in the organization for the last 60 days:
 
-To view detailed information about bulk detections and senders, select **View bulk senders insight** or **Bulk senders insight** to open the **Bulk senders insight** page.
+     - By default, the insight shows the number of bulk messages that were blocked and allowed at the current BCL threshold:
+
+       :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-default.png" alt-text="The bulk senders insight in the properties of the default anti-spam policy with the default BCL threshold value." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-default.png":::
+
+     - If you decrease the BCL threshold value to block more bulk email, the insight shows the number of bulk messages that would be blocked and allowed at the new BCL threshold:
+
+       :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-lower.png" alt-text="The bulk senders insight in the properties of the default anti-spam policy with BCL threshold lower than the original value." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-lower.png":::
+
+     - If you increase the BCL threshold value to allow more bulk email, the insight shows the number of bulk messages that would be blocked and allowed at the new BCL threshold:
+
+       :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-higher.png" alt-text="The bulk senders insight in the properties of the default anti-spam policy with BCL threshold higher than the original value." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-higher.png":::
+
+- On the **Email & collaboration reports and insights** page:
+
+  1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Reports** \> **Email & collaboration** section \> **Email & collaboration reports and insights**. Or, to go directly to the **Email & collaboration reports and insights** page, use <https://security.microsoft.com/emailandcollabreport>.
+  
+  2. On the **Email & collaboration reports and insights** page, go to the **Email & collaboration insights** section and find the **Bulk senders insight**.
+
+  :::image type="content" source="media/insights-page-bulk-senders-insight.png" alt-text="The bulk senders insight on the Email & collaboration reports and insights page in the Microsoft Defender portal." lightbox="media/insights-page-bulk-senders-insight.png":::
+
+To view detailed information about bulk detections and senders, select **View bulk senders insight** or **View details** to open the **Bulk senders insight** page.
 
 ## View the Bulk senders insight page
 
-The **Bulk senders insight** page at <https://security.microsoft.com/senderinsights> is available directly or when you select **View bulk senders insight** or **Bulk senders insight** from the **Spam threshold and properties** flyout in the details of a custom anti-spam policy or the default anti-spam policy.
+The **Bulk senders insight** page is available using the following methods:
 
-:::image type="content" source="media/m365-sc-bulk-sender-insights page.png" alt-text="The Bulk senders insight page in the Microsoft Defender portal." lightbox="media/m365-sc-bulk-sender-insights page.png":::
+- Directly at <https://security.microsoft.com/senderinsights>.
+- When you select **View bulk senders insight** from the **Spam threshold and properties** flyout in the details of a custom anti-spam policy or the default anti-spam policy from the **Anti-spam policies** page at <https://security.microsoft.com/antispam>.
+- When you select **View details** from the **Bulk senders insight** card on the **Email & collaboration reports and insights** page at <https://security.microsoft.com/emailandcollabreport>.
+
+:::image type="content" source="media/anti-spam-policy-bulk-senders-insight-page.png" alt-text="The Bulk senders insight page in the Microsoft Defender portal." lightbox="media/anti-spam-policy-bulk-senders-insight-page.png":::
 
 Before you run a simulation, values in the table in the middle of the page indicate the following values:
 
-- **Bulk complaint level**: The range of possible BCL values (1 to 9).
-- **All emails**: The total number of messages that were identified at each BCL value (some of which might be 0).
-- **Current level**: The number of messages that were delivered (not identified as bulk) for each BCL value:
+- **Bulk complaint level (BCL)**: The range of possible BCL values (1 to 9).
+- **All email**: The total number of messages that were identified at each BCL value (some of which might be 0).
+- **Delivered at current BCL threshold**: The number of messages that were delivered (not identified as bulk) for each BCL value:
   - If the BCL value is less that the **Current bulk email threshold** value, the message was delivered (wasn't identified as bulk):
-    - The **Current level** and **All email** values are the same.
-    - The **Current level** value matches the **Email delivered at current config** value.
+    - The **Delivered at current BCL threshold** and **All email** values are the same.
+    - The **Delivered at current BCL threshold** value matches the **Email delivered at current config** value.
   - If the BCL value is greater than or equal to the **Current bulk email threshold** value, the message was identified as bulk and blocked.
-    - The **Current level** value for the BCL value is 0.
-    - The **All emails** value matches the **Emails blocked at current config** value.
-- **New level**: The number of messages that were identified as bulk after you run a simulation. This value is the same as **All emails** before you run any simulations.
+    - The **Delivered at current BCL threshold** value for the BCL value is 0.
+    - The **All email** value matches the **Email identified at current BCL threshold** value.
+- **Delivered at new BCL threshold**: The number of messages that weren't identified as bulk email **after** you run a simulation. Before you run a simulation, the value is meaningless.
 
 To run a simulation, use the following elements on the page:
 
@@ -104,76 +130,91 @@ To run a simulation, use the following elements on the page:
   - **Directly**: The BCL threshold value is 7.
   - **From the properties of an anti-spam policy**: The BCL threshold value is the current value in the anti-spam policy.
 - The **New bulk email threshold** slider allows you to simulate the effect of increasing and decreasing the BCL threshold on delivered or blocked messages.
-- The **Good coefficient** slider specifies a good/bad sender trustworthiness threshold to use in the BCL update simulation. A higher value indicates that you want simulated BCL threshold results based on more reliable senders. The **Good coefficient** value for senders is based on the following factors:
+- The **Simulation sender quality threshold** slider specifies a good/bad sender trustworthiness threshold to use in the BCL update simulation. A higher value indicates simulated BCL threshold results based on more reliable senders. The **Simulation sender quality threshold** value for senders is based on the following factors:
   - Past interactions with the sender.
   - Message frequency from the sender.
   - Admin or user feedback on messages from the sender.
 
-After you select the **New bulk email threshold** and **Good coefficient** values, select **Simulate**:
+After you select the **New bulk email threshold** and **Simulation sender quality threshold** values, select **Simulate**:
 
 - The page is updated with the number of blocked vs. allowed messages for the current and new simulated BCL threshold levels.
 - The bottom of the page is updated with information about senders that would be identified as bulk.
 
 ### View information about bulk senders on the Bulk senders insight page
 
-The details table contains sender data when you first open the page if the current bulk threshold value already resulted in messages being identified as bulk.
+The bulk sender details table at the bottom of the page contains data about bulk senders whose messages were identified as bulk.
 
-Sender data might be added or modify after you configure the **New bulk email threshold** and **Good coefficient** values and then select **Simulate**.
+The table might contain sender data when you first open the **Bulk senders insight** page if the **Current bulk email threshold** and **Simulation sender quality threshold** values already resulted in bulk email identification before you run any simulations.
 
-After you select the **New bulk email threshold** and **Good coefficient** values, select **Simulate**.
+Otherwise, senders are included in the sender details table based on the **Current bulk email threshold** and **Simulation sender quality threshold** values after you run a simulation.
 
-- The page is updated with the allowed vs. blocked senders for the current and new BCL threshold levels.
-- The bottom of the page contains the senders 
-
-The **Bulk senders insight** page contains the following information:
-
-- The table in center of the page contains the following columns:
-  - **Bulk complaint level**: The available values 1 to 9 are shown.
-  - **All emails**: The total number of messages that were identified as bulk at the specified BCL level.
-  - **Current level**: The number of messages that were identified as bulk
-  - **New level**:
-
-
-- **New bulk email threshold**: Use the slider to experiment with different BCL values and see the result on detected vs. delivered email messages.
-- **Good coefficient**: The value from 0 to 100 indicates how trustworthy the message sender is, based on past interactions, message frequency, and admin or user feedback.
-  - A higher value restricts the simulation results to more reliable and trusted senders.
-  - Senders greater than or equal to the specified **Good coefficient** value are allowed. Senders less than the specified value are identified as bulk and acted upon.
-
-The details table at the bottom of the page shows information about message senders based on the **New bulk email threshold** and **Good coefficient** values after you select **Simulate**. The following information is available:
+For entries in the sender details table, the following columns are always available:
 
 - **Sender**: The sender's email address.
-- **Bulk level**
-- **Good coefficient**
-- **New sender blocked**
-- **Potential false positive**
+- **BCL**
+- **Simulation sender quality threshold**
+
+The remaining columns in the sender details table depend on the relationship between the **Current bulk email threshold** and **New bulk email threshold** values after you run a simulation:
+
+- **New bulk email threshold** equals **Current bulk email threshold**:
+  - **Potential false positive**
+  - **Potential false negative**
+
+  To filter the results, select **All senders** and then select one of the following values:
+
+  - **Potential false positive**: Only senders where **Potential false positive** is **True** are shown.
+  - **Potential false negative**: Only senders where **Potential false negative** is **True** are shown.
+
+  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-page.png" alt-text="The Bulk senders insight page before you run a simulation or after you run a simulation where the new BCL threshold equals the current BCL threshold." lightbox="media/anti-spam-policy-bulk-senders-insight-page.png":::
+
+- **New bulk email threshold** is less than **Current bulk email threshold**:
+  - **New sender blocked**
+  - **Potential false positive**
+
+  To filter the results, select **All senders** and then select one of the following values:
+
+  - **New sender blocked**: Only senders where **New sender blocked** is **True** are shown.
+  - **Potential false positive**: Only senders where **Potential false positive** is **True** are shown.
+
+  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-page-less-than-current.png" alt-text="The Bulk senders insight page after you run a simulation where the new BCL threshold is less than the current BCL threshold." lightbox="media/anti-spam-policy-bulk-senders-insight-page-less-than-current.png":::
+
+- **New bulk email threshold** is greater than **Current bulk email threshold**:
+  - **New sender allowed**
+  - **Potential false negative**
+
+  To filter the results, select **All senders** and then select one of the following values:
+
+  - **New sender allowed**: Only senders where **New sender allowed** is **True** are shown.
+  - **Potential false negative**: Only senders where **Potential false negative** is **True** are shown.
+
+  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-page-greater-than-current.png" alt-text="The Bulk senders insight page after you run a simulation where the new BCL threshold is greater than the current BCL threshold." lightbox="media/anti-spam-policy-bulk-senders-insight-page-greater-than-current.png":::
 
 To change the list of entries from normal to compact spacing, select :::image type="icon" source="media/m365-cc-sc-standard-icon.png" border="false"::: **Change list spacing to compact or normal**, and then select :::image type="icon" source="media/m365-cc-sc-compact-icon.png" border="false"::: **Compact list**.
 
-Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific senders.
+Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box and a corresponding value to find specific senders in the table.
 
-To filter the results, select **All senders** and then select one of the following values:
+Use :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the currently displayed list of senders to a CSV file. The default filename is Bulk sender insights - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported file already exists in that location, the filename is incremented (for example, Bulk sender insights - Microsoft Defender(1).csv).
 
-- **New sender blocked**: Only senders where **New sender blocked** is **True** are shown.
-- **Potential false positive**: Only senders where **Potential false positive** is **True** are shown.
+### View detailed information about a bulk sender on the Bulk senders insight page
 
-Use the :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Export** to save the currently displayed list of senders to a CSV file. The default filename is Bulk sender insights - Microsoft Defender.csv, and the default location is the local Downloads folder. If an exported file already exists in that location, the filename is incremented (for example, Bulk sender insights - Microsoft Defender(1).csv).
-
-To view details about a specific sender, click anywhere in the row other than the check box next to the first column. The **Sender details** flyout that opens contains the following information about the sender:
+To view details about a specific sender from the sender details table at the bottom of the **Bulk senders insight** page, click anywhere in the row other than the check box next to the first column. The **Sender details** flyout that opens contains the following information about the sender:
 
 - **Sender**: The sender's email address.
-- **Emails**: The number of messages from the sender.
-- **Email in Inbox**: The number of messages from the sender that were delivered to user Inboxes.
-- **Email in Junk/quarantine**: The number of messages from the sender that were delivered to user Junk Email folders or quarantined.
-- **Admin control**: Whether the sender is allowed or blocked by the [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md)Valid values are:
+- **Messages**: The number of messages from the sender.
+- **Messages in Inbox**: The number of messages from the sender that were delivered to user Inboxes.
+- **Messages in quarantine or Junk Email**: The number of messages from the sender that were delivered to user Junk Email folders or quarantined.
+- **Admin setting**: Whether the sender is allowed or blocked by the [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md)Valid values are:
   - **Allow**: An allow entry exists for the message sender.
   - **Block**: A block entry exists for the message sender.
-- **User allowed emails**: The number of messages from the sender that were added the Safe Senders list in user mailboxes.
-- **User blocked emails**: The number of messages from the sender that were added the Blocked Senders list in user mailboxes.
+- **User allowed messages**: The number of messages from the sender that were added the Safe Senders list in user mailboxes.
+- **User blocked messages**: The number of messages from the sender that were added the Blocked Senders list in user mailboxes.
 - **False positive submissions**: The number of messages from the sender that were submitted as good mail accidentally blocked.
 - **False negative submissions**: The number of messages from the sender that were submitted as bad mail accidentally delivered.
-- **User moved from Junk to Inbox**
-- **User moved from Inbox to Junk**
-- **User deleted emails**
-- **Admin quarantined emails**
-- **Admin moved emails from Inbox to Junk**
-- **Admin deleted emails**
+- **User moved from Junk Email to Inbox**
+- **User moved from Inbox to Junk Email**
+- **User deleted messages**
+- **Admin quarantined messages**
+- **Admin moved emails from Inbox to Junk Email**
+- **Admin deleted messages**
+
+:::image type="content" source="media/anti-spam-policy-bulk-senders-insight-page-sender-details-flyout.png" alt-text="The sender details flyout from the sender details table on the Bulk senders insight page." lightbox="media/anti-spam-policy-bulk-senders-insight-page-sender-details-flyout.png":::
