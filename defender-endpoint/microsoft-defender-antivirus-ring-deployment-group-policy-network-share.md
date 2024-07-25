@@ -65,9 +65,9 @@ This section describes the process for setting up the pilot UAT / Test / QA envi
 > [!NOTE]
 > Security intelligence update (SIU) is equivalent to signature updates, which is the same as definition updates.
 
-### Create a UNC share for security intelligence and platform updates
+### Create a UNC share for security intelligence
 
-Set up a network file share (UNC/mapped drive) to download security intelligence and platform updates from the MMPC site by using a scheduled task.
+Set up a network file share (UNC/mapped drive) to download security intelligence from the MMPC site by using a scheduled task.
 
 1. On the system on which you want to provision the share and download the updates, create a folder to which you will save the script.
 
