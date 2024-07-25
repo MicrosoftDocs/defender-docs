@@ -110,7 +110,7 @@ When you change an incident's status to **Resolved**, a new field is displayed i
 
 :::image type="content" source="/defender/media/incidents-queue/resolve-incidents.png" alt-text="Screenshot of incident management panel with incident resolution note.":::
 
-On both the incidents queue page and the incident page of a closed incident, you can see the incident resolution note in the side panel, in the *Incident details* section.
+On both the incidents queue page and the incident page of a resolved incident, you can see the incident resolution note in the side panel, in the *Incident details* section.
 
 :::image type="content" source="/defender/media/incidents-queue/resolution-note-in-side-panel.png" alt-text="Screenshot of appearance of resolution note in the incident details panel." lightbox="/defender/media/incidents-queue/resolution-note-in-side-panel.png":::
 
