@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 07/15/2024
+ms.date: 07/25/2024
 audience: ITPro
 ms.topic: reference
 author: siosulli
@@ -211,12 +211,27 @@ Updates are released for x86, x64, and ARM64 Windows architecture.
 
 For more information, see [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
 
+### 1.415.235.0
+
+- Defender package version: `1.415.235.0`
+- Security intelligence version: `1.415.235.0`
+- Engine version: `1.24070.1`
+- Platform version: `4.18.24070.5`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
+
 ### 1.411.111.0
 
-- Defender package version: **1.411.111.0**
-- Security intelligence version: **1.411.111.0**
-- Engine version: **1.24050.2**
-- Platform version: **4.18.24050.7**
+- Defender package version: `1.411.111.0`
+- Security intelligence version: `1.411.111.0`
+- Engine version: `1.24050.2`
+- Platform version: `4.18.24050.7`
 
 #### Fixes
 
@@ -228,10 +243,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.411.9.0
 
-- Defender package version: **1.411.9.0**
-- Security intelligence version: **1.411.9.0**
-- Engine version: **1.24040.1**
-- Platform version: **4.18.24040.4**
+- Defender package version: `1.411.9.0`
+- Security intelligence version: `1.411.9.0`
+- Engine version: `1.24040.1`
+- Platform version: `4.18.24040.4`
 
 #### Fixes
 
@@ -243,10 +258,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20230809.1
 
-- Defender package version: **20230809.1**
-- Security intelligence version: **1.395.68.0**
-- Engine version: **1.1.23070.1005**
-- Platform version: **4.18.23070.1004**
+- Defender package version: `20230809.1`
+- Security intelligence version: `1.395.68.0`
+- Engine version: `1.1.23070.1005`
+- Platform version: `4.18.23070.1004`
 
 #### Fixes
 
@@ -254,10 +269,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20230604.1
 
-- Defender package version: **20230604.1**
-- Security intelligence version: **1.391.476.0**
-- Engine version: **1.1.23050.3**
-- Platform version: **4.18.23050.3**
+- Defender package version: `20230604.1`
+- Security intelligence version: `1.391.476.0`
+- Engine version: `1.1.23050.3`
+- Platform version: `4.18.23050.3`
 
 #### Fixes
 
@@ -265,10 +280,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20230503.1
 
-- Defender package version: **20230503.1**
-- Security intelligence version: **1.389.44.0**
-- Engine version: **1.1.20300.3**
-- Platform version: **4.18.2304.8**
+- Defender package version: `20230503.1`
+- Security intelligence version: `1.389.44.0`
+- Engine version: `1.1.20300.3`
+- Platform version: `4.18.2304.8`
 
 #### Fixes
 
@@ -280,10 +295,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20230330.2
 
-- Defender package version: **20230330.2**
-- Security intelligence version: **1.385.1537.0**
-- Engine version: **1.1.20100.6**
-- Platform version: **4.18.2302.7**
+- Defender package version: `20230330.2`
+- Security intelligence version: `1.385.1537.0`
+- Engine version: `1.1.20100.6`
+- Platform version: `4.18.2302.7`
 
 #### Fixes
 
@@ -295,10 +310,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20230308.1
 
-- Defender package version: **20230308.1**
-- Security intelligence version: **1.383.1321.0**
-- Engine version: **1.1.20000.2**
-- Platform version: **4.18.2301.6**
+- Defender package version: `20230308.1`
+- Security intelligence version: `1.383.1321.0`
+- Engine version: `1.1.20000.2`
+- Platform version: `4.18.2301.6`
 
 #### Fixes
 
@@ -310,10 +325,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20230215.1
 
-- Defender package version: **20230215.1**
-- Security intelligence version: **1.383.51.0**
-- Engine version: **1.1.20000.2**
-- Platform version: **4.18.2301.6**
+- Defender package version: `20230215.1`
+- Security intelligence version: `1.383.51.0`
+- Engine version: `1.1.20000.2`
+- Platform version: `4.18.2301.6`
 
 #### Fixes
 
@@ -325,10 +340,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20230118.1
 
-- Defender package version: **20230118.1**
-- Security intelligence version: **1.381.2404.0**
-- Engine version: **1.1.19900.2**
-- Platform version: **4.18.2211.5**
+- Defender package version: `20230118.1`
+- Security intelligence version: `1.381.2404.0`
+- Engine version: `1.1.19900.2`
+- Platform version: `4.18.2211.5`
 
 #### Fixes
 
@@ -340,10 +355,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20221209.1
 
-- Defender package version: **20221209.1**
-- Security intelligence version: **1.381.144.0**
-- Engine version: **1.1.19900.2**
-- Platform version: **4.18.2211.5**
+- Defender package version: `20221209.1`
+- Security intelligence version: `1.381.144.0`
+- Engine version: `1.1.19900.2`
+- Platform version: `4.18.2211.5`
 
 #### Fixes
 
@@ -355,10 +370,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20221102.3
 
-- Defender package version: **20221102.3**
-- Security intelligence version: **1.377.1180.0**
-- Engine version: **1.1.19700.3**
-- Platform version: **4.18.2210.4**
+- Defender package version: `20221102.3`
+- Security intelligence version: `1.377.1180.0`
+- Engine version: `1.1.19700.3`
+- Platform version: `4.18.2210.4`
 
 #### Fixes
 
@@ -370,10 +385,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20221014.1
 
-- Package version: **20221014.1**
-- Platform version: **4.18.2209.7**
-- Engine version: **1.1.19700.3**
-- Signature version: **1.373.208.0**
+- Package version: `20221014.1`
+- Platform version: `4.18.2209.7`
+- Engine version: `1.1.19700.3`
+- Signature version: `1.373.208.0`
 
 #### Fixes
 
@@ -385,10 +400,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20220929.1
 
-- Package version: **20220929.1**
-- Platform version: **4.18.2207.7**
-- Engine version: **1.1.19600.3**
-- Signature version: **1.373.1243.0**
+- Package version: `20220929.1`
+- Platform version: `4.18.2207.7`
+- Engine version: `1.1.19600.3`
+- Signature version: `1.373.1243.0`
 
 #### Fixes
 
@@ -400,10 +415,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20220925.2
 
-- Package version: **20220925.2**
-- Platform version: **4.18.2207.7**
-- Engine version: **1.1.19600.3**
-- Signature version: **1.373.1371.0**
+- Package version: `20220925.2`
+- Platform version: `4.18.2207.7`
+- Engine version: `1.1.19600.3`
+- Signature version: `1.373.1371.0`
 
 #### Fixes
 
@@ -415,10 +430,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20220901.4
 
-- Package version: **20220901.4**
-- Platform version: **4.18.2205.7**
-- Engine version: **1.1.19500.2**
-- Signature version: **1.373.1371.0**
+- Package version: `20220901.4`
+- Platform version: `4.18.2205.7`
+- Engine version: `1.1.19500.2`
+- Signature version: `1.373.1371.0`
 
 #### Fixes
 
@@ -430,10 +445,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20220802.1
 
-- Package version: **20220802.1**
-- Platform version: **4.18.2205.7**
-- Engine version: **1.1.19400.3**
-- Signature version: **1.371.1205.0**
+- Package version: `20220802.1`
+- Platform version: `4.18.2205.7`
+- Engine version: `1.1.19400.3`
+- Signature version: `1.371.1205.0`
 
 #### Fixes
 
@@ -445,10 +460,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20220629.5
 
-- Package version: **20220629.5**
-- Platform version: **4.18.2205.7**
-- Engine version: **1.1.19300.2**
-- Signature version: **1.369.220.0**
+- Package version: `20220629.5`
+- Platform version: `4.18.2205.7`
+- Engine version: `1.1.19300.2`
+- Signature version: `1.369.220.0`
 
 #### Fixes
 
@@ -460,10 +475,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20220603.3
 
-- Package version: **20220603.3**
-- Platform version: **4.18.2203.5**
-- Engine version: **1.1.19200.6**
-- Signature version: **1.367.1009.0**
+- Package version: `20220603.3`
+- Platform version: `4.18.2203.5`
+- Engine version: `1.1.19200.6`
+- Signature version: `1.367.1009.0`
 
 #### Fixes
 
@@ -475,10 +490,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20220506.6
 
-- Package version: **20220506.6**
-- Platform version: **4.18.2203.5**
-- Engine version: **1.1.19200.5**
-- Signature version: **1.363.1436.0**
+- Package version: `20220506.6`
+- Platform version: `4.18.2203.5`
+- Engine version: `1.1.19200.5`
+- Signature version: `1.363.1436.0`
 
 #### Fixes
 
@@ -490,10 +505,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20220321.1
 
-- Package version: **20220321.1**
-- Platform version: **4.18.2202.4**
-- Engine version: **1.1.19000.8**
-- Signature version: **1.351.337.0**
+- Package version: `20220321.1`
+- Platform version: `4.18.2202.4`
+- Engine version: `1.1.19000.8`
+- Signature version: `1.351.337.0`
 
 #### Fixes
 
@@ -505,10 +520,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20220305.1
 
-- Package version: **20220305.1**
-- Platform version: **4.18.2201.10**
-- Engine version: **1.1.18900.3**
-- Signature version: **1.359.1405.0**
+- Package version: `20220305.1`
+- Platform version: `4.18.2201.10`
+- Engine version: `1.1.18900.3`
+- Signature version: `1.359.1405.0`
 
 #### Fixes
 
@@ -520,10 +535,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20220203.1
 
-- Package version: **20220203.1**
-- Platform version: **4.18.2111.5**
-- Engine version: **1.1.18900.2**
-- Signature version: **1.357.32.0**
+- Package version: `20220203.1`
+- Platform version: `4.18.2111.5`
+- Engine version: `1.1.18900.2`
+- Signature version: `1.357.32.0`
 
 #### Fixes
 
@@ -535,10 +550,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 20220105.1
 
-- Package version: **20220105.1**
-- Platform version: **4.18.2111.5**
-- Engine version: **1.1.18800.4**
-- Signature version: **1.355.1482.0**
+- Package version: `20220105.1`
+- Platform version: `4.18.2111.5`
+- Engine version: `1.1.18800.4`
+- Signature version: `1.355.1482.0`
 
 #### Fixes
 
@@ -551,10 +566,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2112.01
 
-- Package version: **1.1.2112.01**
-- Platform version: **4.18.2110.6**
-- Engine version: **1.1.18700.4**
-- Signature version: **1.353.2283.0**
+- Package version: `1.1.2112.01`
+- Platform version: `4.18.2110.6`
+- Engine version: `1.1.18700.4`
+- Signature version: `1.353.2283.0`
 
 #### Fixes
 
@@ -566,10 +581,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2111.02
 
-- Package version: **1.1.2111.02**
-- Platform version: **4.18.2110.6**
-- Engine version: **1.1.18700.4**
-- Signature version: **1.353.613.0**
+- Package version: `1.1.2111.02`
+- Platform version: `4.18.2110.6`
+- Engine version: `1.1.18700.4`
+- Signature version: `1.353.613.0`
 
 #### Fixes
 
@@ -581,10 +596,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2110.01
 
-- Package version: **1.1.2110.01**
-- Platform version: **4.18.2109.6**
-- Engine version: **1.1.18500.10**
-- Signature version: **1.349.2103.0**
+- Package version: `1.1.2110.01`
+- Platform version: `4.18.2109.6`
+- Engine version: `1.1.18500.10`
+- Signature version: `1.349.2103.0`
 
 #### Fixes
 
@@ -596,10 +611,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2109.01
 
-- Package version: **1.1.2109.01**
-- Platform version: **4.18.2107.4**
-- Engine version: **1.1.18400.5**
-- Signature version: **1.347.891.0**
+- Package version: `1.1.2109.01`
+- Platform version: `4.18.2107.4`
+- Engine version: `1.1.18400.5`
+- Signature version: `1.347.891.0`
 
 #### Fixes
 
@@ -611,10 +626,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2108.01
 
-- Package version: **1.1.2108.01**
-- Platform version: **4.18.2107.4**
-- Engine version: **1.1.18300.4**
-- Signature version: **1.343.2244.0**
+- Package version: `1.1.2108.01`
+- Platform version: `4.18.2107.4`
+- Engine version: `1.1.18300.4`
+- Signature version: `1.343.2244.0`
 
 #### Fixes
 
@@ -626,10 +641,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2107.02
 
-- Package version: **1.1.2107.02**
-- Platform version: **4.18.2105.5**
-- Engine version: **1.1.18300.4**
-- Signature version: **1.343.658.0**
+- Package version: `1.1.2107.02`
+- Platform version: `4.18.2105.5`
+- Engine version: `1.1.18300.4`
+- Signature version: `1.343.658.0`
 
 #### Fixes
 
@@ -641,10 +656,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2106.01
 
-- Package version: **1.1.2106.01**
-- Platform version: **4.18.2104.14**
-- Engine version: **1.1.18100.6**
-- Signature version: **1.339.1923.0**
+- Package version: `1.1.2106.01`
+- Platform version: `4.18.2104.14`
+- Engine version: `1.1.18100.6`
+- Signature version: `1.339.1923.0`
 
 #### Fixes
 
@@ -656,10 +671,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2105.01
 
-- Package version: **1.1.2105.01**
-- Platform version: **4.18.2103.7**
-- Engine version: **1.1.18100.6**
-- Signature version: **1.339.42.0**
+- Package version: `1.1.2105.01`
+- Platform version: `4.18.2103.7`
+- Engine version: `1.1.18100.6`
+- Signature version: `1.339.42.0`
 
 #### Fixes
 
@@ -672,10 +687,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2104.01
 
-- Package version: **1.1.2104.01**
-- Platform version: **4.18.2102.4**
-- Engine version: **1.1.18000.5**
-- Signature version: **1.335.232.0**
+- Package version: `1.1.2104.01`
+- Platform version: `4.18.2102.4`
+- Engine version: `1.1.18000.5`
+- Signature version: `1.335.232.0`
 
 #### Fixes
 
@@ -687,10 +702,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2103.01
 
-- Package version: **1.1.2103.01**
-- Platform version: **4.18.2101.9**
-- Engine version: **1.1.17800.5**
-- Signature version: **1.331.2302.0**
+- Package version: `1.1.2103.01`
+- Platform version: `4.18.2101.9`
+- Engine version: `1.1.17800.5`
+- Signature version: `1.331.2302.0`
 
 #### Fixes
 
@@ -702,10 +717,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2102.03
 
-- Package version: **1.1.2102.03**
-- Platform version: **4.18.2011.6**
-- Engine version: **1.1.17800.5**
-- Signature version: **1.331.174.0**
+- Package version: `1.1.2102.03`
+- Platform version: `4.18.2011.6`
+- Engine version: `1.1.17800.5`
+- Signature version: `1.331.174.0`
 
 #### Fixes
 
@@ -717,10 +732,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2101.02
 
-- Package version: **1.1.2101.02**
-- Platform version: **4.18.2011.6**
-- Engine version: **1.1.17700.4**
-- Signature version: **1.329.1796.0**
+- Package version: `1.1.2101.02`
+- Platform version: `4.18.2011.6`
+- Engine version: `1.1.17700.4`
+- Signature version: `1.329.1796.0`
 
 #### Fixes
 
@@ -732,10 +747,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2012.01
 
-- Package version: **1.1.2012.01**
-- Platform version: **4.18.2010.7**
-- Engine version: **1.1.17600.5**
-- Signature version: **1.327.1991.0**
+- Package version: `1.1.2012.01`
+- Platform version: `4.18.2010.7`
+- Engine version: `1.1.17600.5`
+- Signature version: `1.327.1991.0`
 
 #### Fixes
 
@@ -747,10 +762,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2011.02
 
-- Package version: **1.1.2011.02**
-- Platform version: **4.18.2010.7**
-- Engine version: **1.1.17600.5**
-- Signature version: **1.327.658.0**
+- Package version: `1.1.2011.02`
+- Platform version: `4.18.2010.7`
+- Engine version: `1.1.17600.5`
+- Signature version: `1.327.658.0`
 
 #### Fixes
 
@@ -762,10 +777,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2011.01
 
-- Package version: **1.1.2011.01**
-- Platform version: **4.18.2009.7**
-- Engine version: **1.1.17600.5**
-- Signature version: **1.327.344.0**
+- Package version: `1.1.2011.01`
+- Platform version: `4.18.2009.7`
+- Engine version: `1.1.17600.5`
+- Signature version: `1.327.344.0`
 
 #### Fixes
 
@@ -777,10 +792,10 @@ For more information, see [Microsoft Defender update for Windows operating syste
 
 ### 1.1.2009.10
 
-- Package version: **1.1.2011.01**
-- Platform version: **4.18.2008.9**
-- Engine version: **1.1.17400.5**
-- Signature version: **1.327.2216.0**
+- Package version: `1.1.2011.01`
+- Platform version: `4.18.2008.9`
+- Engine version: `1.1.17400.5`
+- Signature version: `1.327.2216.0`
 
 #### Fixes
 
