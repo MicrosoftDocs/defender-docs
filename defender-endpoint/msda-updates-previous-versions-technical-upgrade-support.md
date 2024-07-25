@@ -1086,7 +1086,7 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 - When this update is installed, the device needs the jump package 4.18.2001.10 to be able to update to the latest platform version.
 
-## Previous Deployment Image Servicing and Management (DISM) updates
+## Previous DISM updates (no longer supported)
 
 The versions listed in this section are no longer supported. To view current versions, see [Updates for Deployment Image Servicing and Management (DISM)](microsoft-defender-antivirus-updates.md#updates-for-deployment-image-servicing-and-management-dism).
 

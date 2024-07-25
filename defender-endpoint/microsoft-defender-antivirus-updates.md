@@ -211,7 +211,7 @@ Updates are released for x86, x64, and ARM64 Windows architecture.
 
 For more information, see [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
 
-After a new package version is released, support for the previous two versions is reduced to technical support only. [View previous DISM updates](msda-updates-previous-versions-technical-upgrade-support.md#deployment-image-servicing-and-management-dism-updates).
+After a new package version is released, support for the previous two versions is reduced to technical support only.
 
 ### 1.415.235.0
 
@@ -257,6 +257,8 @@ After a new package version is released, support for the previous two versions i
 #### Additional information
 
 - None
+
+[View the list of previous DISM updates (no longer supported)](msda-updates-previous-versions-technical-upgrade-support.md#previous-dism-updates-no-longer-supported).
 
 ## More resources
 
