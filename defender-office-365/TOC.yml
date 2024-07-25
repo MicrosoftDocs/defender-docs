@@ -150,6 +150,8 @@
              href: anti-spam-spam-confidence-level-scl-about.md
            - name: Bulk complaint level (BCL)
              href: anti-spam-bulk-complaint-level-bcl-about.md
+           - name: Bulk senders insight
+             href: anti-spam-bulk-senders-insight.md
            - name: Backscatter in EOP
              href: anti-spam-backscatter-about.md
            - name: Configure junk email settings on Exchange Online mailboxes
@@ -392,6 +394,8 @@
            href: teams-message-entity-panel.md
        - name: Insights
          items:
+         - name: Bulk senders insight
+           href: anti-spam-bulk-senders-insight.md
          - name: Spoof intelligence insight
            href: anti-spoofing-spoof-intelligence.md
          - name: Impersonation insight
