@@ -4,6 +4,7 @@ description: Microsoft Defender Antivirus is an enterprise endpoint security pla
 ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
+ms.reviewer: yongrhee
 ms.localizationpriority: high
 manager: deniseb
 audience: ITPro
@@ -14,7 +15,7 @@ ms.custom: intro-overview
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 07/21/2023
+ms.date: 07/25/2024
 ---
 
 # Microsoft Defender Antivirus production ring deployment using Group Policy and network share
