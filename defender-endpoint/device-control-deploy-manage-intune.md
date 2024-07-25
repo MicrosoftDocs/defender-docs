@@ -4,7 +4,7 @@ description: Learn how to deploy and manage device control in Defender for Endpo
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-ms.date: 05/15/2024
+ms.date: 07/25/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -147,7 +147,7 @@ In the **Add Row** pane, specify the following settings:
 
 In Intune, device control groups appear as reusable settings.
 
-1. Go to the [Microsoft Intune admin center](https://endpoint.microsoft.com) and sign in.
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com) and sign in.
 
 2. Go to **Endpoint Security** > **Attack Surface Reduction**. 
 
