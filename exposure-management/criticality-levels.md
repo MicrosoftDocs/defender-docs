@@ -1,15 +1,15 @@
 ---
-title: Criticality Levels for X in Microsoft Security Exposure Management
-description: List of all the... in Microsoft Security Exposure Management.
+title: Criticality Levels for Classifications
+description: Lists of all the current criticality levels for classifications in Microsoft Security Exposure Management.
 ms.author: dlanger
 author: dlanger
 manager: rayne-wiselman
 ms.topic: reference
 ms.service: exposure-management
-ms.date: 07/24/2024
+ms.date: 07/25/2024
 ---
 
-# Overview of critical asset management
+# Criticality Levels for Classifications
 
 In [Microsoft Security Exposure Management](microsoft-security-exposure-management.md), you can define and manage resources as critical assets.
 
