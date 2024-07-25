@@ -258,7 +258,7 @@ After a new package version is released, support for the previous two versions i
 
 - None
 
-[View the list of previous DISM updates (no longer supported)](msda-updates-previous-versions-technical-upgrade-support.md#previous-dism-updates-no-longer-supported).
+[View the list of previous DISM updates (no longer supported)](msda-updates-previous-versions-technical-upgrade-support.md#previous-deployment-image-servicing-and-management-dism-updates).
 
 ## More resources
 
