@@ -77,7 +77,7 @@ The Export feature enables you to export the following roles data:
 
 When a role has multiple assignments, each assignment will be represented as a separate row in the CSV file.
 
-The CSV also includes a snapshot of the Unified RBAC activation status for each workload available on the tenant.
+The CSV also includes a snapshot of the Defender XDR Unified RBAC activation status for each workload available on the tenant.
 
 The following steps guide you on how to export roles in Microsoft Defender XDR Unified RBAC:
 
