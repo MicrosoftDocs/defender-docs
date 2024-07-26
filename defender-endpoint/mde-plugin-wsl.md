@@ -293,6 +293,8 @@ DeviceProcessEvents
          dnsProxy=false
          ```
 
+   - If the connectivity issues persist, please collect the networking logs using the [Steps](https://github.com/microsoft/WSL/blob/master/CONTRIBUTING.md#8-collect-wsl-logs-recommended-method) and send along with support bundle.
+
 5. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
 
    ```powershell
