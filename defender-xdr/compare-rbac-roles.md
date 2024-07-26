@@ -7,13 +7,13 @@ author: siosulli
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: 
+ms.collection:
 - m365-security
 - tier3
-ms.custom: 
+ms.custom:
 ms.topic: reference
 ms.date: 06/27/2024
-ms.reviewer: 
+ms.reviewer:
 search.appverid: met150
 ---
 
@@ -114,15 +114,15 @@ You configured protection-related Exchange Online permissions in the Exchange ad
 
 ### Map Microsoft Defender for Identity permissions to the Microsoft Defender XDR Unified RBAC permissions
 
-|Defender for Identity permission|Unified RBAC permission|
+|Defender for Identity permission|Defender XDR Unified RBAC permission|
 |---|-----|
 |MDI admin|Security operations \ Security data \ Security data basics (read)</br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Authorization (Read and manage) </br>Authorization and settings \ Security setting (All permissions) </br>Authorization and settings \ System settings (Read and manage)|
 |MDI user|Security operations \ Security data \ Security data basics (read) </br>Security operations \ Security data \ Alerts (manage)</br>Authorization and settings \ Security setting (All permissions) </br>Authorization and settings \ System setting (read)|
 |MDI viewer|Security operations \ Security data \ Security data basics (read)</br>Authorization and settings \ Security settings \ Core security settings (read) </br>Authorization and settings \ System setting (read)|
 
 > [!NOTE]
-> Defender for Identity experiences will also adhere to permissions granted from [Microsoft Defender for Cloud Apps](https://security.microsoft.com/cloudapps/permissions/roles). For more information, see [Microsoft Defender for Identity role groups](https://go.microsoft.com/fwlink/?linkid=2202729).  
-> Exception: If you have configured [Scoped deployment](/defender-cloud-apps/scoped-deployment) for Microsoft Defender for Identity alerts in the Microsoft Defender for Cloud Apps portal, these permissions do not carry over. You need to explicitly grant the Security operations \ Security data \ Security data basics (read) permissions for the relevant portal users. 
+> Defender for Identity experiences will also adhere to permissions granted from [Microsoft Defender for Cloud Apps](https://security.microsoft.com/cloudapps/permissions/roles). For more information, see [Microsoft Defender for Identity role groups](https://go.microsoft.com/fwlink/?linkid=2202729).
+> Exception: If you have configured [Scoped deployment](/defender-cloud-apps/scoped-deployment) for Microsoft Defender for Identity alerts in the Microsoft Defender for Cloud Apps portal, these permissions do not carry over. You need to explicitly grant the Security operations \ Security data \ Security data basics (read) permissions for the relevant portal users.
 
 <a name='azure-active-directory-global-roles-access'></a>
 
