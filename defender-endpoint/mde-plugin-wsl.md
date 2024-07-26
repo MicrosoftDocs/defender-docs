@@ -293,7 +293,7 @@ DeviceProcessEvents
          dnsProxy=false
          ```
 
-   - If the connectivity issues persist, please collect the networking logs using the method mentioned at [link](https://aka.ms/wsllogs) and send along with support bundle.
+   - If the connectivity issues persist, collect the networking logs using the method mentioned at [link](https://aka.ms/wsllogs), and include those logs with your support bundle.
 
 5. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
 
