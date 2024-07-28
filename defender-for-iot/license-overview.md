@@ -11,27 +11,29 @@ ms.topic: overview
 
 # How does the site-based license model work?
 
-The site-based license model offers a simplified approach to licensing by providing coverage for entire sites rather than individual devices. Customers can purchase annual licenses for their operational sites, where OT devices are deployed, and receive security coverage for all devices within the site.  
+The site-based license model offers a simplified approach to licensing by providing coverage for entire sites rather than individual devices. Customers can purchase annual licenses for their operational sites where OT devices are deployed, and receive security coverage for all devices within the site.  
 
-What defines a site?  
+## What defines a site?
 
-A site refers to a logical grouping of devices within your organization. It represents a specific physical location, such as a manufacturing facility, campus, office building, hospital, rig, or any other relevant site.  
+A site refers to a logical grouping of devices within your organization. It represents a specific physical location, such as a manufacturing facility, campus, office building, hospital, rig, or any other relevant site.
 
-What are the different between OT site base licenses?
+## What are the different OT site-based licenses?
 
-Licenses come in five different sizes, starting from the basic tier, which covers up to 100 devices per site, to the highest tier, which secures up to 5000 devices per site. You can find all the license options here: [Link](https://www.microsoft.com/en-us/security/business/endpoint-security/microsoft-defender-iot-pricing" \l "x57646dc8c92844039799522a9df7e776)
+Licenses come in five different sizes, based on the number of devices at the site. The licenses range from the smallest tier that covers up to 100 devices per site, to the largest tier, which secures up to 5000 devices per site. For more information, see [license sizing details](https://www.microsoft.com/en-us/security/business/endpoint-security/microsoft-defender-iot-pricing#xfb84a030eec341cb84a6165f393e928a).
 
-The size of a site is determined by the maximum number of devices per site.  Billing is based on the maximum number of devices in each license tier, regardless of the number of devices actually discovered.  
+The size of a site is determined by the maximum number of devices per site. Billing is based on the license tier, regardless of the number of devices actually discovered.
 
-What if I need to change the number of devices for a site after making a purchase?  
+## What if I need to change the number of devices for a site after making a purchase?  
 
-Once a license is purchased, the number of devices cannot be adjusted until the renewal period.  
-During the annual license renewal, you can true-up or down to a different license tier for a site based on your updated discovered device count.
+Once a license is purchased, the number of devices cannot be adjusted until the renewal period. During the annual license renewal, you change to a different license tier for a site based on your updated discovered device count.
 
-How to choose a license and assess the number of devices on-site?
+## How to choose a license and assess the number of devices on-site?
 
-To determine the appropriate license size for your site, you can use several methods to assess the number of devices. You can utilize your OT network monitoring tools to detect and count devices on-site. You can also base your assessment on previous knowledge of the site’s devices and update license during the annual license renewal.  
+There are two methods for assessing the number of devices at your site. You could either utilize your OT network monitoring tools to detect and count the devices per site, or use previous knowledge of the number of devices at the site and update the license during the annual license renewal if needed.
 
-Note: All devices detected on your sites should be counted as part of the license: OT/IT. include endpoints managed by MDE.
+> [!Note]
+> All types of devices, both OT and IT, identified on your site should be included in the license. This includes endpoints managed by Microsoft Defender for Endpoint and devices detected by the Microsoft Defender for IoT sensors.
 
-Note: All types of devices identified on your sites should be included in the license (OT/ IT). This includes endpoints managed by MDE and devices detected by the MD4IoT sensors.
+## Next steps
+
+[Manage your license](manage-license.md)

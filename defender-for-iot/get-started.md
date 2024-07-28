@@ -46,3 +46,7 @@ Once you have a trial license, [set up a new site](set-up-sites.md) so that Micr
 ## Turn on Public preview features
 
 Turn on the public preview features in the Microsoft Defender XDR settings to enable the site security features. Directions to change the settings are available in [Defender portal preview features](/defender-xdr/preview#turn-on-preview-features).
+
+## Upgrade to a permanent license
+
+To upgrade to a full license, see [license overview](license-overview.md).
