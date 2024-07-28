@@ -112,7 +112,7 @@ You can query Microsoft Defender for Endpoint data by using [Advanced hunting](/
 
 Example query:
 
-```PowerShell
+```
 DeviceEvents
 | where ActionType in ('ControlledFolderAccessViolationAudited','ControlledFolderAccessViolationBlocked')
 ```
