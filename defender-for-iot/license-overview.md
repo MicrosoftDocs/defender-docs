@@ -13,6 +13,8 @@ ms.topic: overview
 
 The site-based license model offers a simplified approach to licensing by providing coverage for entire sites rather than individual devices. Customers can purchase annual licenses for their operational sites where OT devices are deployed, and receive security coverage for all devices within the site.  
 
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+
 ## What defines a site?
 
 A site refers to a logical grouping of devices within your organization. It represents a specific physical location, such as a manufacturing facility, campus, office building, hospital, rig, or any other relevant site.
