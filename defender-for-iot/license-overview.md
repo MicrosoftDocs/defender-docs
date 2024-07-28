@@ -1,11 +1,11 @@
 ---
-title: Microsoft Defender for IoT in the Defender portal - Site security 
-description: Read this article to learn about site security in Microsoft Defender for IoT in the Defender portal.
+title: Overview of the permanent site license and how to choose one for Microsoft Defender for IoT in the Defender portal 
+description: Learn about a permanent site license, how to upgrade and the different options available for Microsoft Defender for IoT in the Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/26/2024
+ms.date: 08/01/2024
 ms.topic: overview
 ---
 
