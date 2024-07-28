@@ -121,7 +121,7 @@ For complete information about ASF settings, see [Advanced Spam Filter (ASF) set
 The other settings that are available in this category are:
 
 - **Contains specific languages**: Messages in the specified languages are automatically identified as spam.
-- **From these countries***: Messages from the specified countries are automatically identified as spam.
+- **From these countries**: Messages from the specified countries are automatically identified as spam.
 
 These settings aren't configured in the default anti-spam policy by default, or in the Standard or Strict [preset security policies](preset-security-policies.md).
 

@@ -6,6 +6,7 @@ ms.author: pahuijbr
 manager: deniseb
 ms.reviewer: gokulgiju, priyankagill, kvitta
 ms.service: defender-endpoint
+ms.subservice: onboard
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.collection: 
@@ -14,7 +15,7 @@ ms.collection:
 ms.custom:
 - partner-contribution
 audience: ITPro
-ms.date: 06/12/2024
+ms.date: 07/26/2024
 search.appverid: MET150
 ---
 
@@ -291,6 +292,8 @@ DeviceProcessEvents
 
          dnsProxy=false
          ```
+
+   - If the connectivity issues persist, collect the networking logs using the method mentioned at [link](https://aka.ms/wsllogs), and include those logs with your support bundle.
 
 5. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
 

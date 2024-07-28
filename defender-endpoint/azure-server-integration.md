@@ -3,6 +3,7 @@ title: Integration with Microsoft Defender for Cloud
 description: Learn about Microsoft Defender for Endpoint integration with Microsoft Defender for Cloud
 search.appverid: met150
 ms.service: defender-endpoint
+ms.subservice: onboard
 author: siosulli
 ms.author: siosulli
 ms.localizationpriority: medium
