@@ -21,7 +21,7 @@ To see how Defender for IoT can help and protect your network sign up to a free,
 
 Before you start, you need:
 
-- A Microsoft tenant, with Global or Billing admin access to the tenent.
+- A Microsoft tenant, with Global or Billing admin access to the tenant.
 
     For more information, see [Buy or remove licenses for a Microsoft business subscription](/microsoft-365/commerce/licenses/buy-licenses) and [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles).
 
@@ -73,4 +73,4 @@ This table shows the full roles and permissions needed for all MDE features used
 
 To assign roles and permissions for other Microsoft Defender for Endpoint features, such as alerts, incidents and inventory, see [assign roles and permissions for Defender for Endpoint](/defender-endpoint/prepare-deployment).
 
-For more information, see [map unified RBAC permissions](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access).
+For more information, see [Map Microsoft Defender XDR Unified RBAC permissions: Microsoft Entra Global roles access](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access).

@@ -15,7 +15,7 @@ ms.custom: partner-contribution
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 05/22/2024
+ms.date: 07/25/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
@@ -293,7 +293,7 @@ Android low touch onboarding is disabled by default. Admins can enable it throug
 
 ### Set up Microsoft Defender in Personal Profile
 
-Admins can go to the [Microsoft Endpoint Management admin center](https://endpoint.microsoft.com) to set up and configure Microsoft Defender support in personal profiles by following these steps:
+Admins can go to the [Microsoft Endpoint Management admin center](https://intune.microsoft.com) to set up and configure Microsoft Defender support in personal profiles by following these steps:
 
 1. Go to **Apps> App configuration policies** and click on **Add**. Select **Managed Devices**.
 

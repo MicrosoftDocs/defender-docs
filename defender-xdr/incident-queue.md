@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 07/02/2024
+ms.date: 07/18/2024
 appliesto: 
 - Microsoft Defender XDR 
 - Microsoft Sentinel in the Microsoft Defender portal
@@ -106,6 +106,9 @@ You can quickly remove a filter by selecting the **X** in the name of a filter i
 You can also create filter sets within the incidents page by selecting **Saved filter queries > Create filter set**. If no filter sets have been created, select **Save** to create one.
 
 :::image type="content" source="/defender/media/incidents-queue/fig2-newfilters.png" alt-text="The create filter sets option for the incident queue in the Microsoft Defender portal." lightbox="/defender/media/incidents-queue/fig2-newfilters.png":::
+
+> [!NOTE]
+> Microsoft Defender XDR customers can now filter incidents with alerts where a compromised device communicated with operational technology (OT) devices connected to the enterprise network through the [device discovery integration of Microsoft Defender for IoT and Microsoft Defender for Endpoint](/defender-endpoint/device-discovery#device-discovery-integration). To filter these incidents, select **Any** in the Service/detection sources, then select **Microsoft Defender for IoT** in the Product name or see [Investigate incidents and alerts in Microsoft Defender for IoT in the Defender portal](/defender-for-iot/investigate-threats/). You can also use device groups to filter for site-specific alerts. For more information about Defender for IoT prerequisites, see [Get started with enterprise IoT monitoring in Microsoft Defender XDR](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).
 
 ### Save custom filters as URLs
 

@@ -5,8 +5,9 @@ author: YongRhee-MSFT
 ms.author: yongrhee
 manager: deniseb
 ms.service: defender-endpoint
+ms.subservice: ngp
 ms.topic: how-to
-ms.date: 06/25/2024
+ms.date: 07/22/2024
 ms.collection: 
 - m365-security
 - tier2
