@@ -6,7 +6,7 @@ ms.subservice: onboard
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 06/26/2024
+ms.date: 07/25/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -108,7 +108,7 @@ You can now run Microsoft Defender Antivirus in passive mode on Windows Server 2
 
 3. If you're going to use either [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) or [Microsoft Endpoint Configuration Manager](/mem/endpoint-manager-overview) to onboard devices and configure device policies, set up integration with Defender for Endpoint by following these steps: <br/>
 
-   1. In the Microsoft Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), go to **Endpoint security**.
+   1. In the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), go to **Endpoint security**.
 
    2. Under **Setup**, choose **Microsoft Defender for Endpoint**.
 
@@ -145,7 +145,7 @@ You can now run Microsoft Defender Antivirus in passive mode on Windows Server 2
 
    *If you have Defender for Endpoint Plan 1, your initial setup and configuration is done for now. If you have Defender for Endpoint Plan 2, continue to steps 6-7.*
 
-6. Configure your endpoint detection and response (EDR) policies in the Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)). To get help with this task, see [Create EDR policies](/mem/intune/protect/endpoint-security-edr-policy#create-edr-policies).
+6. Configure your endpoint detection and response (EDR) policies in the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)). To get help with this task, see [Create EDR policies](/mem/intune/protect/endpoint-security-edr-policy#create-edr-policies).
 
 7. Configure your automated investigation and remediation capabilities in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). To get help with this task, see [Configure automated investigation and remediation capabilities in Microsoft Defender for Endpoint](configure-automated-investigations-remediation.md).
 
