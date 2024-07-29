@@ -8,7 +8,7 @@ f1.keywords:
 ms.author: diannegali
 author: diannegali
 manager: deniseb
-ms.date: 06/05/2024
+ms.date: 07/22/2024
 audience: ITPro
 ms.topic: conceptual
 search.appverid: 
@@ -41,10 +41,13 @@ To ensure access to Defender for Cloud alerts in the Microsoft Defender portal, 
 
 ### Required permissions
 
-You must be a global administrator or a security administrator in Azure Active Directory to view Defender for Cloud alerts and correlations. For users that don't have these roles, the integration is available only by applying [unified role-based access control (RBAC) roles](manage-rbac.md) for Defender for Cloud.
-
 > [!NOTE]
 > The permission to view Defender for Cloud alerts and correlations is automatic for the entire tenant. Viewing for specific subscriptions is not supported. You can use the **alert subscription ID** filter to view Defender for Cloud alerts associated with a specific Defender for Cloud subscription in the alert and incident queues. Learn more about [filters](incident-queue.md#filters-).
+
+The integration is available only by applying the appropriate [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md) role for Defender for Cloud. To view Defender for Cloud alerts and correlations without Defender XDR Unified RBAC, you must be a Global Administrator or Security Administrator in Azure Active Directory.
+
+> [!IMPORTANT]
+> Global Administrator is a highly privileged role that should be limited to scenarios when you can't use an existing role. Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization.
 
 ## Investigation experience in the Microsoft Defender portal
 
@@ -53,11 +56,6 @@ You must be a global administrator or a security administrator in Azure Active D
 
 
 The following section describes the detection and investigation experience in the Microsoft Defender portal with Defender for Cloud alerts.
-
-> [!NOTE]
-> Informational alerts from Defender for Cloud are not integrated to the Microsoft Defender portal to allow focus on the relevant and high severity alerts. This strategy streamlines management of incidents and reduces alert fatigue.
-
-
 
 > [!div class="mx-tdCol2BreakAl"]
 > |Area   |Description   |
@@ -68,6 +66,9 @@ The following section describes the detection and investigation experience in th
 > |Threat detection|Accurate matching of virtual entities to device entities to ensure precision and effective threat detection.|
 > |Unified API|Defender for Cloud alerts and incidents are now included in [Microsoft Defender XDR's public API](api-overview.md), allowing customers to export their security alerts data into other systems using one API.|
 > |Advanced hunting (Preview)| Information about cloud audit events for various cloud platforms protected by the organization's Defender for Cloud is available through the [CloudAuditEvents](advanced-hunting-cloudauditevents-table.md) table in [advanced hunting](advanced-hunting-overview.md).|
+
+> [!NOTE]
+> Informational alerts from Defender for Cloud are not integrated to the Microsoft Defender portal to allow focus on the relevant and high severity alerts. This strategy streamlines management of incidents and reduces alert fatigue.
 
 ## Impact to Microsoft Sentinel users
 
