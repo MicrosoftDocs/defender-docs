@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to create and manage payloads for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 3/11/2024
+ms.date: 06/14/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -30,9 +30,9 @@ To see the available payloads, open the Microsoft Defender portal at <https://se
 
 **Payloads** in the **Content library** tab has three tabs:
 
-- **Global payloads**: Contains the built-in, unmodifiable payloads.
+- **Global payloads**: Contains the built-in, unmodifiable payloads. These payloads are based on real-world attacks that were observed in the Microsoft data centers. Although there's no specific release schedule, we typically average 30 to 40 new payloads every month.
 - **Tenant payloads**: Contains the custom payloads that you created.
-- **MDO recommendations**: Payloads that are recommended by Defender for Office 365 as having considerable impact when used by attackers. This list is refreshed monthly.
+- **MDO recommendations**: Payloads that are recommended by Defender for Office 365 as having considerable impact when used by attackers. The recommendations are based on identified campaigns and a high predicted compromise rate. This list is refreshed monthly. If there's no recent campaign activity in your organization (less than 60 days), the **MDO recommendations** tab might be empty.
 
 The information that's available on the tabs is described in the following list:
 
@@ -245,6 +245,9 @@ To see payloads that have been archived (the **Status** value is **Archive**), u
 
            The name value that you entered is added to the message body as a link to the phishing URL. On the **Code** tab, the link value is `<a href="${phishingUrl}" target="_blank">Name value you specified</a>`.
 
+         > [!TIP]
+         > To add images, copy (CTRL+C) and paste (CTRL+V) the image into the editor on the **Text** tab. The editor automatically converts the image to Base64 as part of the HTML code. The maximum payload size for a simulation is 4MB.
+
        - **Code** tab: You can view and modify the HTML code directly.
 
        - **Replace all links in the email message with the phishing link** (**Credential Harvest**, **Link to Malware**, **Drive-by URL**, or **OAuth Consent Grant** techniques only): This toggle can save time by replacing all links in the message with the previously selected **Phishing link** or **Link for attachment** URL. To take this action, toggle the setting to on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
@@ -374,22 +377,29 @@ The create payload wizard opens with the settings and values of the selected pay
 
 ## Archive payloads
 
-You can't delete custom payloads from the **Tenant payloads** tab, but you can archive them.
-
 To archive an existing payload on the **Tenant payloads** tab, select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/m365-cc-sc-archive-icon.png" border="false"::: **Archive**.
 
 The **Status** value of the payload changes to **Archive**, and the payload is no longer visible on the **Tenant payloads** table when **Show archived payloads** is toggled off :::image type="icon" source="media/scc-toggle-off.png" border="false":::.
 
 To see archived payloads on the **Tenant payloads** tab, toggle **Show archived payloads** to on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
 
-## Restore archived payloads
+After you archive a payload, you can restore it or remove it as described in the following subsections.
+
+### Restore archived payloads
 
 To restore an archive payload on the **Tenant payloads** tab, do the following steps:
 
 1. Set the **Show archived payloads** toggle to on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
 2. Select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/m365-cc-sc-archive-icon.png" border="false"::: **Restore**.
 
-After you've restored the archived payload, the **Status** value changes to **Draft**. Toggle **Show archived payloads** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the restored payload. To return the payload to the **Status** value **Ready**, [edit the payload](#modify-payloads), review or change the settings, and then select **Submit**.
+After you restore the archived payload, the **Status** value changes to **Draft**. Toggle **Show archived payloads** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the restored payload. To return the payload to the **Status** value **Ready**, [edit the payload](#modify-payloads), review or change the settings, and then select **Submit**.
+
+### Remove archived payloads
+
+To remove an archived payload from the **Tenant payloads** tab, do the following steps:
+
+1. Set the **Show archived payloads** toggle to on :::image type="icon" source="media/scc-toggle-on.png" border="false":::.
+2. Select the payload by clicking **⋮** (**Actions**) at the end of the row, select :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: **Delete**, and then select **Confirm** in the confirmation dialog.
 
 ## Send a test
 
