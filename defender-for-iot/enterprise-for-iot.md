@@ -34,9 +34,9 @@ https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/architect
 
 For Enterprise IoT networks, use a trial, standalone<!--?--> license for 90 days as an add-on to Microsoft Defender for Endpoint<!--?-->. A trial license support 100 devices. There are two options avilable depending on your existing license:
 
-1. Customers with ME5/E5 Security plans have support for enterprise IoT monitoring available, and don't need to start a trial. 
+1. Customers with ME5/E5 Security plans have support for enterprise IoT monitoring available, and don't need to start a trial.
 
-    To turn on Enterprise for IoT [follow these instructions](enterprise-for-iot-get-started#turn-on-enterprise-iot-monitoring).
+    To turn on Enterprise for IoT [follow these instructions](enterprise-for-iot-get-started.md#turn-on-enterprise-iot-monitoring).
 
 1. Customers with a Microsoft Defender for Endpoint P2 license only can use a trial standalone license for enterprise IoT monitoring.
 
@@ -48,7 +48,7 @@ A permanent Enterprise IoT monitoring license supports 5 devices per Microsoft 3
 <!-- here Enterprise was written with a capital and I have lowered that-->
 Most Defender for Endpoint alerts <!--network-based detections -->are also relevant for enterprise IoT devices, such as alerts for scans involving managed endpoints. Alerts for enterprise IoT devices detected by Defender for Endpoint are only available in Defender for Endpoint only<!-- where are they now available? -->.
 
-For more information, see [Alerts queue in Microsoft 365 Defender](defender-endpoint/alerts-queue). <!-- should this be changed? what alternatives are there? also change to in Microsoft Defender portal? Amit-->
+For more information, see [Alerts queue in Microsoft 365 Defender](/defender-endpoint/alerts-queue.md). <!-- should this be changed? what alternatives are there? also change to in Microsoft Defender portal? Amit-->
 
 ## Recommendations
 
