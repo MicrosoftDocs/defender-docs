@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to view, create, modify, and delete anti-spam policies in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 5/10/2024
+ms.date: 07/25/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -108,7 +108,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
 5. On the **Bulk email threshold & spam properties** page, configure the following settings:
 
-   - **Bulk email threshold**: Specifies the bulk complaint level (BCL) of a message that must bet met or exceeded to trigger the specified action for the **Bulk compliant level (BCL) met or exceeded** spam filtering verdict that you configure on the next page. A higher value indicates the message is less desirable (more likely to resemble spam). For more information, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
+   - **Bulk email threshold** section: The slider specifies the bulk complaint level (BCL) of a message that must bet met or exceeded to trigger the specified action for the **Bulk compliant level (BCL) met or exceeded** spam filtering verdict that you configure on the next page. A higher value indicates the message is less desirable (more likely to resemble spam). For more information about BCL, see [Bulk complaint level (BCL) in EOP](anti-spam-bulk-complaint-level-bcl-about.md).
 
    - **Spam properties** section:
 
@@ -120,7 +120,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
      - **Contains specific languages**: Select **On** or **Off** from the dropdown list. If you turn it on, a box appears. Start typing the name of a language in the box. A filtered list of supported languages appears. When you find the language that you're looking for, select it. Repeat this step as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
 
-     - **From these countries***: Select **On** or **Off** from the dropdown list. If you turn it on, a box appears. Start typing the name of a country/region in the box. A filtered list of supported countries/regions appears. When you find the country/region that you're looking for, select it. Repeat this step as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
+     - **From these countries**: Select **On** or **Off** from the dropdown list. If you turn it on, a box appears. Start typing the name of a country/region in the box. A filtered list of supported countries/regions appears. When you find the country/region that you're looking for, select it. Repeat this step as many times as necessary. To remove an existing value, select :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to the value.
 
      When you're finished on the **Bulk email threshold & spam properties** page, select **Next**.
 
@@ -177,7 +177,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
        - **Enable ZAP for phishing messages**: By default, ZAP is enabled for phishing detections, but you can disable it by clearing the check box. For more information, see:
          - [Zero-hour auto purge (ZAP) for phishing](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-for-phishing)
          - [Zero-hour auto purge (ZAP) for high confidence phishing](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-for-high-confidence-phishing)
-       - **Enable ZAP for spam messages**: By default, ZAP is enabled for spam detections, but you can disable it by clearing the check box. For more information, [Zero-hour auto purge (ZAP) for spam](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-for-spam)see .
+       - **Enable ZAP for spam messages**: By default, ZAP is enabled for spam detections, but you can disable it by clearing the check box. For more information, [Zero-hour auto purge (ZAP) for spam](zero-hour-auto-purge.md#zero-hour-auto-purge-zap-for-spam).
 
    When you're finished on the **Actions** page, select **Next**.
 
@@ -185,7 +185,7 @@ You can configure anti-spam policies in the Microsoft Defender portal or in Powe
 
    In the **Allowed** section, you can configure allowed senders and allowed domains. In the **Blocked** section, you can add blocked senders and blocked domains.
 
-   The maximum limit for these lists is approximately 1000 entries, but you can enter only 30 entries in the Defender portal. Use Exchange Online PowerShell to add more than 30 entries.
+   The maximum limit for these lists is approximately 1,000 entries, but you can enter only 30 entries in the Defender portal. Use Exchange Online PowerShell to add more than 30 entries.
 
    > [!IMPORTANT]
    > The functionality of these lists has largely been replaced by the [Tenant Allow/Block List](tenant-allow-block-list-about.md). For important information, see [Allow and block list in anti-spam policies](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
@@ -279,6 +279,25 @@ After you select the default anti-spam policy or a custom policy by clicking any
 For the default policy, you can't modify the name of the policy, and there are no recipient filters to configure (the policy applies to all recipients). But, you can modify all other settings in the policy.
 
 For the anti-spam policies named **Standard Preset Security Policy** and **Strict Preset Security Policy** that are associated with [preset security policies](preset-security-policies.md), you can't modify the policy settings in the details flyout. Instead, you select :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **View preset security policies** in the details flyout to go to the **Preset security policies** page at <https://security.microsoft.com/presetSecurityPolicies> to modify the preset security policies.
+
+> [!TIP]
+> The bulk senders insight is currently in Preview, isn't available in all organizations, and is subject to change.
+
+If you select **Edit spam threshold and properties** at the bottom of the **Bulk email threshold & spam properties** section in the details flyout of the default anti-spam policy or a custom anti-spam policy, the **Bulk email threshold** section contains the bulk senders insight: information about the number of messages that were detected as bulk at all BCL levels by all anti-spam policies over the last 60 days.
+
+- By default, the bulk senders insight shows the number of messages that were delivered and identified as bulk at the current BCL threshold of the anti-spam policy.
+
+  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-default.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk at the current BCL level." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-default.png":::
+
+- If you decrease the bulk email threshold value, the bulk senders insight changes to show how many fewer messages would be delivered and how many more messages would be identified as bulk. The insight also shows how many bulk message identifications are likely to be false positives (good email identified as bad).
+
+  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-lower.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk after you decrease the current BCL level." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-lower.png":::
+
+- If you increase the bulk email threshold value, the bulk senders insight changes to show how many more messages would be delivered and how many fewer messages would be identified as bulk. The insight also shows how many bulk message identifications are likely to be false negatives (bad email delivered).
+
+  :::image type="content" source="media/anti-spam-policy-bulk-senders-insight-bcl-higher.png" alt-text="The bulk senders insight in the Bulk email threshold section of an anti-spam policy showing the messages identified as bulk after you increase the current BCL level." lightbox="media/anti-spam-policy-bulk-senders-insight-bcl-higher.png":::
+
+Selecting **View bulk senders insight** takes you to the main **Bulk sender insights** page. For more information, see [Bulk senders insight in Exchange Online Protection](anti-spam-bulk-senders-insight.md).
 
 ### Use the Microsoft Defender portal to enable or disable anti-spam policies
 

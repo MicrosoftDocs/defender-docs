@@ -81,7 +81,9 @@ Apart from device-focused remediation steps, you can also take some actions on e
 
 - `Move to mailbox folder` - select this action to move the email messages to Junk, Inbox, or Deleted items folder
 
-   :::image type="content" source="media/advanced-hunting-take-actions-email.png" alt-text="Screenshot of the option Take actions in the Microsoft Defender portal." lightbox="media/advanced-hunting-take-actions-email.png":::
+     Note that you can move email results consisting of quarantined items (for instance, in the case of false positives) by selecting the **Inbox** option.
+   
+   :::image type="content" source="media/advanced-hunting-quarantine-results.png" alt-text="Screenshot of the Inbox option under take actions pane in the Microsoft Defender portal." lightbox="media/advanced-hunting-quarantine-results.png":::
 
 - `Delete email` - select this action to move email messages to the Deleted items folder (**Soft delete**) or delete them permanently (**Hard delete**)
 

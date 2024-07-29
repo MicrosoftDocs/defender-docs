@@ -14,7 +14,7 @@ ms.collection:
 ms.reviewer: pahuijbr
 search.appverid: MET150
 audience: ITPro
-ms.date: 06/14/2024
+ms.date: 06/11/2024
 ---
 
 # Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint 
@@ -27,44 +27,26 @@ ms.date: 06/14/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
 
-The Microsoft Defender for Endpoint service might require the use of proxy configurations to report diagnostic data and communicate data to the service. Prior to the availability of the streamlined connectivity method, other URLs were required and Defender for Endpoint static IP ranges weren't supported. For more information on preparing your environment, see [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
+The Defender for Endpoint client might require the use of proxied connections to relevant cloud services. This article describes the streamlined device connectivity method, the prerequisites and provides additional information for verifying connectivity using the new destination(s).
 
-This article describes the streamlined device connectivity method and how to onboard new devices to use a simpler deployment and management of Defender for Endpoint cloud connectivity services. For more information on migrating previously onboarded devices, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md). 
+To simplify network configuration and management, you now have the option of onboarding new devices to Defender for Endpoint using a reduced URL set or static IP ranges. For more information on migrating previously onboarded devices, see [Migrating devices to streamlined connectivity](migrate-devices-streamlined.md). 
 
-To simplify network configuration and management, you now have the option of onboarding devices to Defender for Endpoint using a reduced URL set or static IP ranges. See the [streamlined URL list](https://aka.ms/MDE-streamlined-urls).
+The Defender for Endpoint-recognized simplified domain: `*.endpoint.security.microsoft.com` consolidates connectivity to the following core Defender for Endpoint services:
 
-The Defender for Endpoint-recognized simplified domain: `*.endpoint.security.microsoft.com` replaces the following core Defender for Endpoint services:
+- Cloud-delivered protection
+- Malware sample submission storage
+- Auto-IR sample storage
+- Defender for Endpoint command & control
+- Defender for Endpoint cyber and diagnostic data
 
-- Cloud Protection/MAPS
-- Malware Sample Submission Storage
-- Auto-IR Sample Storage
-- Defender for Endpoint Command & Control
-- EDR Cyberdata
+For more information on preparing your environment and the updated list of destinations, see [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
 To support network devices without hostname resolution or wildcard support, you can alternatively configure connectivity using dedicated Defender for Endpoint static IP ranges. For more information, see [Configure connectivity using static IP ranges](#option-2-configure-connectivity-using-static-ip-ranges).
 
 > [!NOTE] 
 > - The streamlined connectivity method will **not change how Microsoft Defender for Endpoint functions on a device nor will it change the end-user experience**. Only the URLs or IPs that a device uses to connect to the service will change.
 > - There currently is no plan to deprecate the old, consolidated service URLs. Devices onboarded with "standard" connectivity will continue to function. It is important to ensure connectivity to `*.endpoint.security.microsoft.com` is and remains possible, as future services will require it. This new URL is included in all required URL lists.
-
-## Consolidated services 
-
-The following Defender for Endpoint URLs consolidated under the simplified domain should no longer be required for connectivity if `*.endpoint.security.microsoft.com` is allowed and devices are onboarded using the streamlined onboarding package. You need to maintain connectivity with other required services not consolidated that are relevant to your organization (for example, CRL, SmartScreen/Network Protection, and Windows Update).
-
-For the updated list of required URLs, see [STEP 1: Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
-
-> [!IMPORTANT]
-> If you are configuring using IP ranges, you will need to separately configure the EDR cyberdata service. This service is not consolidated on an IP level.
-
-| Category   | Consolidated URLs  |
-|------------|---------------|
-| MAPS: cloud-delivered protection   | `*.wdcp.microsoft.com` <br/>`*.wd.microsoft.com`  |
-| Cloud protection &  <br/>security intelligence updates for macOS and Linux  | `unitedstates.x.cp.wd.microsoft.com` <br/>`europe.x.cp.wd.microsoft.com` <br/>`unitedkingdom.x.cp.wd.microsoft.com`<br/> `x.cp.wd.microsoft.com` <br/>`https://www.microsoft.com/security/encyclopedia/adlpackages.aspx` |
-| Malware Sample Submission Storage   | `ussus1eastprod.blob.core.windows.net` <br/>`ussus2eastprod.blob.core.windows.net` <br/>`ussus3eastprod.blob.core.windows.net` <br/>`ussus4eastprod.blob.core.windows.net` <br/>`wsus1eastprod.blob.core.windows.net` <br/>`wsus2eastprod.blob.core.windows.net` <br/>`ussus1westprod.blob.core.windows.net` <br/>`ussus2westprod.blob.core.windows.net` <br/>`ussus3westprod.blob.core.windows.net` <br/>`ussus4westprod.blob.core.windows.net` <br/>`wsus1westprod.blob.core.windows.net`<br/>`wsus2westprod.blob.core.windows.net` <br/>`usseu1northprod.blob.core.windows.net` <br/>`wseu1northprod.blob.core.windows.net` <br/>`usseu1westprod.blob.core.windows.net` <br/>`wseu1westprod.blob.core.windows.net` <br/>`ussuk1southprod.blob.core.windows.net` <br/>`wsuk1southprod.blob.core.windows.net` <br/>`ussuk1westprod.blob.core.windows.net` <br/>`wsuk1westprod.blob.core.windows.net`  |
-| Defender for Endpoint Auto-IR Sample Storage   | `automatedirstrprdcus.blob.core.windows.net` <br/>`automatedirstrprdeus.blob.core.windows.net` <br/>`automatedirstrprdcus3.blob.core.windows.net` <br/>`automatedirstrprdeus3.blob.core.windows.net` <br/>`automatedirstrprdneu.blob.core.windows.net` <br/>`automatedirstrprdweu.blob.core.windows.net` <br/>`automatedirstrprdneu3.blob.core.windows.net` <br/>`automatedirstrprdweu3.blob.core.windows.net` <br/>`automatedirstrprduks.blob.core.windows.net` <br/>`automatedirstrprdukw.blob.core.windows.net` |
-| Defender for Endpoint Command and Control   | `winatp-gw-cus.microsoft.com` <br/>`winatp-gw-eus.microsoft.com` <br/>`winatp-gw-cus3.microsoft.com` <br/>`winatp-gw-eus3.microsoft.com` <br/>`winatp-gw-neu.microsoft.com` <br/>`winatp-gw-weu.microsoft.com` <br/>`winatp-gw-neu3.microsoft.com` <br/>`winatp-gw-weu3.microsoft.com` <br/>`winatp-gw-uks.microsoft.com` <br/>`winatp-gw-ukw.microsoft.com` |
-| EDR Cyberdata | `events.data.microsoft.com` <br/>`us-v20.events.data.microsoft.com` <br/> `eu-v20.events.data.microsoft.com` <br/>`uk-v20.events.data.microsoft.com` |
-
+> - Connections to the service leverage certificate pinning and TLS. It is not supported to "break and inspect" traffic. In addition, connections are initiated from a device context, not a user context. Enforcing proxy (user) authentication will disallow (break) connectivity in most cases.
 
 ## Before you begin 
 
@@ -140,9 +122,9 @@ Streamlined connectivity allows you to use the following option to configure clo
  
 #### Option 1: Configure connectivity using the simplified domain
 
-Configure your environment to allow connections with the simplified Defender for Endpoint domain: `*.endpoint.security.microsoft.com`. For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
+Configure your environment to allow connections to the simplified Defender for Endpoint domain: `*.endpoint.security.microsoft.com`. For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint service](configure-environment.md).
 
-You must maintain connectivity with remaining required services listed under the [updated list](https://aka.ms/MDE-streamlined-urls). For example, Certification Revocation List, Windows update, SmartScreen.
+You must maintain connectivity with remaining required services listed under the [updated list](https://aka.ms/MDE-streamlined-urls). For example, the certification revocation list, Windows Update, SmartScreen services may also need to be accessible dependent on your current networking infrastructure and patching approach.
 
 #### Option 2: Configure connectivity using static IP ranges 
 
@@ -160,11 +142,10 @@ In order to stay up to date on IP ranges, it's recommended to refer to the follo
 
 | Service tag name    |    Defender for Endpoint services included   |
 |:---|:---|
-| MicrosoftDefenderForEndpoint | MAPS, Malware Sample Submission Storage, Auto-IR Sample Storage,  Command and Control. |
-| OneDsCollector | EDR Cyberdata <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
+| MicrosoftDefenderForEndpoint | Cloud-delivered protection, malware sample submission storage, Auto-IR sample storage,  Defender for Endpoint command and control. |
+| OneDsCollector | Defender for Endpoint cyber and diagnostic data <br/><br/> Note: The traffic under this service tag isn't limited to Defender for Endpoint and can include diagnostic data traffic for other Microsoft services. |
 
-The following table lists the current static IP ranges covered by the MicrosoftDefenderForEndpoint service tag. For latest list, refer to the Azure service tags.
-
+The following table lists the current static IP ranges covered by the MicrosoftDefenderForEndpoint service tag. For latest list, refer to the [Azure service tags](/azure/virtual-network/service-tags-overview) documentation.
 
 |Geo|IP Ranges|
 |------|-------|
