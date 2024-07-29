@@ -74,10 +74,10 @@ Assign RBAC permissions and roles, based on the [summary table](#summary-of-role
 <!-- MDE roles change to permissions-->
 | Feature | Write permissions | Read permissions |
 |---|----|---|
-|Alerts and incidents| **Defender Roles**: Alerts (manage) <br> **Entra ID roles**: Global Administrator, Security Administrator, Security Operator| Write roles<br> **Defender Roles**: Security data basics<br>**Entra ID roles**: Global Reader, Security Reader |
-|Vulnerabilities | **Defender Roles**: Response (manage)/ Security operations / Security data <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator | Write roles<br> **Defender Roles**: Vulnerability management (read) <br> **Entra ID roles**: Global Reader, Security Reader |
-|Inventory| **Defender Roles**: Onboard offboard device: Detection tuning (manage) <br> Manage device tags: Alerts (manage) <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator | Write roles <br>**Defender Roles**: Security data basics/Security operations / Security data <br> **Entra ID roles**: Global Reader, Security Reader |
-|Device group| **Defender Roles**: Authorization (Read and manage) <br>**Entra ID roles**: Global Administrator, Security Administrator |**Defender Roles**: Authorization (write roles, Read-only) |
+|Alerts and incidents| **Defender Permissions**: Alerts (manage) <br> **Entra ID roles**: Global Administrator, Security Administrator, Security Operator| Write roles<br> **Defender Permissions**: Security data basics<br>**Entra ID roles**: Global Reader, Security Reader |
+|Vulnerabilities | **Defender Permissions**: Response (manage)/ Security operations / Security data <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator | Write roles<br> **Defender Permissions**: Vulnerability management (read) <br> **Entra ID roles**: Global Reader, Security Reader |
+|Inventory| **Defender Permissions**: Onboard offboard device: Detection tuning (manage) <br> Manage device tags: Alerts (manage) <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator | Write roles <br>**Defender Permissions**: Security data basics/Security operations / Security data <br> **Entra ID roles**: Global Reader, Security Reader |
+|Device group| **Defender Permissions**: Authorization (Read and manage) <br>**Entra ID roles**: Global Administrator, Security Administrator |**Defender Permissions**: Authorization (write roles, Read-only) |
 
 To assign roles and permissions for other Microsoft Defender for Endpoint features, such as alerts, incidents and inventory, see [assign roles and permissions for Defender for Endpoint](/defender-endpoint/prepare-deployment).
 

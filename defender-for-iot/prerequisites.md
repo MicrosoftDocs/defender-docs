@@ -60,16 +60,16 @@ The unified RBAC roles and permissions to give users access to [site security](s
 
 |Write permissions|Read permissions|
 |----|----|
-|**MDE Roles**: Core security settings scoped to all device groups. <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator scoped to all device groups.|Write roles (including roles that aren't scoped to all device groups). <br> **MDE Roles**: Security data basics (under Security Operations).<br>**Entra ID roles**: Global Reader, Security Reader.|
+|**Defender Permissions**: Core security settings scoped to all device groups. <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator scoped to all device groups.|Write roles (including roles that aren't scoped to all device groups). <br> **Defender Permissions**: Security data basics (under Security Operations).<br>**Entra ID roles**: Global Reader, Security Reader.|
 
 This table shows the full roles and permissions needed for all MDE features used with Defender for IoT:
 
 |Feature|Write permissions|Read permissions|
 |---|----|---|
-|Alerts and incidents|**MDE Roles**: Alerts (manage) <br> **Entra ID roles**: Global Administrator, Security Administrator, Security Operator|Write roles<br> **MDE Roles**: Security data basics<br>**Entra ID roles**: Global Reader, Security Reader|
-|Vulnerabilities|**MDE Roles**: Response (manage)\ Security operations \ Security data <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator|Write roles<br> **MDE Roles**: Vulnerability management (read) <br> **Entra ID roles**: Global Reader, Security Reader|
-|Inventory|**MDE Roles**: Onboard offboard device: Detection tuning (manage) <br> Manage device tags: Alerts (manage) <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator|Write roles <br>**MDE Roles**: Security data basics/Security operations \ Security data <br> **Entra ID roles**: Global Reader, Security Reader|
-|Device group|**MDE Roles**: Authorization (Read and manage) <br>**Entra ID roles**: Global Administrator, Security Administrator|**MDE Roles**: Authorization (write roles, Read-only)|
+|Alerts and incidents|**Defender Permissions**: Alerts (manage) <br> **Entra ID roles**: Global Administrator, Security Administrator, Security Operator|Write roles<br> **Defender Permissions**: Security data basics<br>**Entra ID roles**: Global Reader, Security Reader|
+|Vulnerabilities|**Defender Permissions**: Response (manage)\ Security operations \ Security data <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator|Write roles<br> **Defender Permissions**: Vulnerability management (read) <br> **Entra ID roles**: Global Reader, Security Reader|
+|Inventory|**Defender Permissions**: Onboard offboard device: Detection tuning (manage) <br> Manage device tags: Alerts (manage) <br>**Entra ID roles**: Global Administrator, Security Administrator, Security Operator|Write roles <br>**Defender Permissions**: Security data basics/Security operations \ Security data <br> **Entra ID roles**: Global Reader, Security Reader|
+|Device group|**Defender Permissions**: Authorization (Read and manage) <br>**Entra ID roles**: Global Administrator, Security Administrator|**Defender Permissions**: Authorization (write roles, Read-only)|
 
 To assign roles and permissions for other Microsoft Defender for Endpoint features, such as alerts, incidents and inventory, see [assign roles and permissions for Defender for Endpoint](/defender-endpoint/prepare-deployment).
 
