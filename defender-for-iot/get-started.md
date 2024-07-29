@@ -49,4 +49,4 @@ Turn on the public preview features in the Microsoft Defender XDR settings to en
 
 ## Upgrade to a permanent license
 
-To upgrade to a full license, see [license overview](license-overview.md).
+After assessing the trial version, to upgrade to a full license, see [license overview](license-overview.md).
