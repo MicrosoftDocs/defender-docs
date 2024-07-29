@@ -57,7 +57,7 @@ If you have extra devices that are not covered by your ME5/E5 licenses, you can 
 
 1. Toggle the Enterprise IoT security option to **On**. For example:
 
-    :::image type="content" source="media/enterprise-iot/eiot-toggle-on.png" alt-text="Screenshot of Enterprise IoT toggled on in Microsoft Defender XDR.":::
+    :::image type="content" source="media/enterprise-for-iot-get-started/eiot-toggle-on.png" alt-text="Screenshot of Enterprise IoT toggled on in Microsoft Defender XDR.":::
 
 ## A standalone Enterprise IoT trial license
 
@@ -78,7 +78,7 @@ Use the following procedure to calculate how many devices you need to monitor if
 
     For example:
 
-    :::image type="content" source="media/how-to-manage-subscriptions/device-inventory-iot.png" alt-text="Screenshot of network device and IoT devices in the device inventory in Microsoft Defender for Endpoint." lightbox="media/how-to-manage-subscriptions/device-inventory-iot.png":::
+    :::image type="content" source="media/enterprise-for-iot-get-started/device-inventory-iot.png" alt-text="Screenshot of network device and IoT devices in the device inventory in Microsoft Defender for Endpoint." lightbox="media/how-to-manage-subscriptions/device-inventory-iot.png":::
 
 1. Round your total to a multiple of 100 and compare it against the number of licenses you have.
 
@@ -105,11 +105,10 @@ Purchase standalone, per-device licenses if you're an ME5/E5 Security customer w
 
 1. Search for the **Microsoft Defender for IoT - EIoT Device License - add-on** and filter the results by **Other services**. For example:
 
-    :::image type="content" source="media/enterprise-iot/eiot-standalone.png" alt-text="Screenshot of the Marketplace search results for the EIoT Device License.":::
+    :::image type="content" source="media/enterprise-for-iot-get-started/eiot-standalone.png" alt-text="Screenshot of the Marketplace search results for the EIoT Device License.":::
 
     > [!IMPORTANT]
     > The prices shown in this image are for example purposes only and are not intended to reflect actual prices.
-    >
 
 1. On the **Microsoft Defender for IoT - EIoT Device License - add-on** page, enter your selected license quantity, select a billing frequency, and then select **Buy**.
 
@@ -121,11 +120,11 @@ For more information, see the [Microsoft 365 admin center help](/microsoft-365/a
 
 1. Search for the **Microsoft Defender for IoT - EIoT Device License - add-on** and filter the results by **Other services**. For example:
 
-    :::image type="content" source="media/enterprise-iot/eiot-standalone.png" alt-text="Screenshot of the Marketplace search results for the EIoT Device License.":::
+    :::image type="content" source="media/enterprise-for-iot-get-started/eiot-standalone.png" alt-text="Screenshot of the Marketplace search results for the EIoT Device License.":::
 
     > [!IMPORTANT]
-    > The prices shown in this image are for example purposes only and are not intended to reflect actual prices.
     >
+    > The prices shown in this image are for example purposes only and are not intended to reflect actual prices.
 
 1. Under **Microsoft Defender for IoT - EIoT Device License - add-on**, select **Details**.
 
@@ -133,7 +132,6 @@ For more information, see the [Microsoft 365 admin center help](/microsoft-365/a
 
 > [!TIP]
 > Make sure to [assign your licenses to specific users](/microsoft-365/admin/manage/assign-licenses-to-users) to start using them.
->
 
 For more information, see [Free trial](billing.md#free-trial).
 
