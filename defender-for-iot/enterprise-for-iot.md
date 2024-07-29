@@ -10,7 +10,7 @@ ms.topic: overview
 ---
 
 # Enterprise for IoT in the Defender portal
-<!-- this should probably be divided into 2 articles - 1 overview, 2 how to -->
+
 The number of IoT devices continues to grow exponentially across enterprise networks in many office buildings. Enterprise IoT devices include devices such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices. For more information, see [Defender for IoT devices](billing#defender-for-iot-devices) <!-- do we have an equivalent to this?-->
 
 While the number of IoT devices continues to grow, they often lack the security safeguards that are common on managed endpoints like laptops and mobile phones. To bad actors, these unmanaged devices can be used as a point of entry for lateral movement or evasion, and too often, the use of such tactics leads to the exfiltration<!-- should this be changed to hacking / exposure/ stealing / leaking --> of sensitive information.
