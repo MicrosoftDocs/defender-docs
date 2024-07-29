@@ -14,7 +14,7 @@
         href: site-security-overview.md     
       - name: Enterprise for IoT
         items:
-          - name: Enterprise for IoT cverview
+          - name: Enterprise for IoT overview
             href: enterprise-for-iot.md
           - name: Get started with enterprise for IoT
             href: enterprise-for-iot-get-started.md      
