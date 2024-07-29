@@ -1,6 +1,6 @@
 ---
-title: Enterprise IoT for Microsoft Defender for IoT in the Defender portal
-description: Learn how to monitor IoT devices using Microsoft Enterprise Defender for IoT in the Microsoft Defender portal.
+title: Get started for Enterprise IoT for Microsoft Defender for IoT in the Defender portal
+description: Learn how to set up and start monitoring enterprise IoT devices using Microsoft Enterprise Defender for IoT in the Microsoft Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
