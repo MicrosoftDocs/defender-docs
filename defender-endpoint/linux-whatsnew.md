@@ -32,17 +32,18 @@ This article is updated frequently to let you know what's new in the latest rele
 
 - [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
+
 <details>
-<summary> July-2024 (Build: 101.24062.0002 | Release version: 30.24052.0002.0)</summary>
+<summary> July-2024 (Build: 101.24062.0001 | Release version: 30.124062.0001.0)</summary>
 
-## June-2024 Build: 101.24052.0002 | Release version: 30.124052.0002.0
+## July-2024 Build: 101.24062.0001 | Release version: 30.124062.0001.0
 
-&ensp;Released: **June 24, 2024**<br/>
-&ensp;Published: **June 24, 2024**<br/>
-&ensp;Build: **101.24052.0002**<br/>
-&ensp;Release version: **30.24052.0002.0**<br/>
-&ensp;Engine version: **1.1.24040.2**<br/>
-&ensp;Signature version: **1.411.153.0**<br/>
+&ensp;Released: **June 31, 2024**<br/>
+&ensp;Published: **June 31, 2024**<br/>
+&ensp;Build: **101.24062.0001**<br/>
+&ensp;Release version: **30.124062.0001.0**<br/>
+&ensp;Engine version: **1.1.24050.7**<br/>
+&ensp;Signature version: **1.411.410.0**<br/>
 
 **What's new**
 
@@ -54,6 +55,7 @@ There are multiple fixes and new changes in this release.
 - Other bug fixes.
 
 </details>
+
 <details>
 <summary> June-2024 (Build: 101.24052.0002 | Release version: 30.24052.0002.0)</summary>
 
