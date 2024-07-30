@@ -10,7 +10,7 @@ ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
-ms.date: 06/24/2024
+ms.date: 07/25/2024
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: 
@@ -109,7 +109,7 @@ The following table describes key roles to consider for Defender for Endpoint in
 
 | Role | Description |
 |:---|:---|
-| Global Administrators <br/><br/> *As a best practice, limit the number of Global Administrators.* | Global Administrators can perform all kinds of tasks. The person who signed up your company for Microsoft 365 or for Microsoft Defender for Endpoint Plan 1 is a Global Administrator by default. <br/><br/> Global Administrators are able to access/change settings across all Microsoft 365 portals, such as: <br/>- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) <br/>- Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com))  |
+| Global Administrators <br/><br/> *As a best practice, limit the number of Global Administrators.* | Global Administrators can perform all kinds of tasks. The person who signed up your company for Microsoft 365 or for Microsoft Defender for Endpoint Plan 1 is a Global Administrator by default. <br/><br/> Global Administrators are able to access/change settings across all Microsoft 365 portals, such as: <br/>- The Microsoft 365 admin center ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) <br/>- Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com))  |
 | Security Administrators | Security Administrators can perform Security Operator tasks plus the following tasks: <br/>- Monitor security-related policies <br/>- Manage security threats and alerts <br/>- View reports |
 | Security Operator | Security Operators can perform Security Reader tasks plus the following tasks: <br/>- View information about detected threats <br/>- Investigate and respond to detected threats  |
 | Security Reader | Security Readers can perform the following tasks: <br/>- View security-related policies across Microsoft 365 services <br/>- View security threats and alerts <br/>- View reports  |
@@ -141,7 +141,7 @@ We recommend using [Intune](/mem) to manage your organization's devices and secu
 
 To configure your next-generation protection in Intune, follow these steps:
 
-1. Go to the Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) and sign in.
+1. Go to the Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign in.
 
 2. Select **Endpoint security** > **Antivirus**, and then select an existing policy. (If you don't have an existing policy, create a new policy.)
 
@@ -239,7 +239,7 @@ You can configure Defender for Endpoint to block or allow removable devices and 
 
 :::image type="content" source="/defender/media/mde-p1/mem-admintemplates.png" alt-text="Screenshot of Intune administrative templates." lightbox="/defender/media/mde-p1/mem-admintemplates.png":::
 
-1. Go to the [Intune admin center](https://endpoint.microsoft.com) and sign in. 
+1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in. 
 
 2. Select **Devices** > **Configuration** > **+ Create** > **Create policy**.
 
@@ -272,7 +272,7 @@ With network protection, you can help protect your organization against dangerou
 
 :::image type="content" source="/defender/media/mde-p1/mem-endpointprotectionprofile.png" alt-text="Screenshot of endpoint protection profile in the Intune portal." lightbox="/defender/media/mde-p1/mem-endpointprotectionprofile.png":::
 
-1. Go to the [Intune admin center](https://endpoint.microsoft.com) and sign in. 
+1. Go to the [Intune admin center](https://intune.microsoft.com) and sign in. 
 
 2. Select **Devices** > **Configuration** > **+ Create** > **Create policy**.
 
@@ -307,7 +307,7 @@ With web protection, you can protect your organization's devices from web threat
 
 #### Configure web threat protection
 
-1. Go to the [Intune admin center](https://endpoint.microsoft.com), and sign in.
+1. Go to the [Intune admin center](https://intune.microsoft.com), and sign in.
  
 2. Choose **Endpoint security** > **Attack surface reduction**, and then choose **+ Create policy**.
 
@@ -362,7 +362,7 @@ Network firewall helps reduce the risk of network security threats. Your securit
 
 To configure basic firewall settings, follow these steps:
 
-1. Go to the [Intune admin center](https://endpoint.microsoft.com), and sign in.
+1. Go to the [Intune admin center](https://intune.microsoft.com), and sign in.
 
 2. Choose **Endpoint security** > **Firewall**, and then choose **+ Create Policy**.
 

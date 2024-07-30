@@ -3,6 +3,7 @@ title: Configure and manage Microsoft Defender Experts capabilities
 ms.reviewer:
 description: Register to Microsoft Threats Experts to configure, manage, and use it in your daily security operations and security administration work.
 ms.service: defender-endpoint
+ms.subservice: onboard
 ms.author: dolmont
 author: DulceMontemayor
 ms.localizationpriority: medium

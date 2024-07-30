@@ -147,7 +147,7 @@ In the **Add Row** pane, specify the following settings:
 
 In Intune, device control groups appear as reusable settings.
 
-1. Go to the [Microsoft Intune admin center](https://endpoint.microsoft.com) and sign in.
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com) and sign in.
 
 2. Go to **Endpoint Security** > **Attack Surface Reduction**. 
 
