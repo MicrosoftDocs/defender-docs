@@ -71,7 +71,7 @@ Assign RBAC permissions and roles, based on the [summary table](#summary-of-role
 1. Select **Submit**.
 
 ### Summary of roles and permissions for all Defender for IoT features
-<!-- MDE roles change to permissions-->
+
 | Feature | Write permissions | Read permissions |
 |---|----|---|
 |Alerts and incidents| **Defender Permissions**: Alerts (manage) <br> **Entra ID roles**: Global Administrator, Security Administrator, Security Operator| Write roles<br> **Defender Permissions**: Security data basics<br>**Entra ID roles**: Global Reader, Security Reader |
