@@ -65,7 +65,7 @@ Use the following procedure to calculate how many devices you need to monitor if
 - You're an ME5/E5 Security customer and think you need to monitor more devices than the devices allocated per ME5/E5 Security license
 - You're a Defender for Endpoint P2 customer who's purchasing standalone enterprise IoT licenses
 
-**To calculate the number of devices you're monitoring:**:
+**To calculate the number of devices you're monitoring:**
 
 1. In [Microsoft Defender XDR](https://security.microsoft.com/), select **Assets** > **Devices** to open the **Device inventory** page.
 

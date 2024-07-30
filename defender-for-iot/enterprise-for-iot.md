@@ -51,7 +51,7 @@ Known CVEs vulnerabilities are detected and showing in the Defender portal assoc
 
 ## Manage enterprise IoT monitoring support with Microsoft Defender for IoT
 
-For Enterprise IoT networks, use a trial, standalone<!--?--> license for 90 days as an add-on to Microsoft Defender for Endpoint<!--?-->. A trial license support 100 devices. There are two options available depending on your existing license:
+For Enterprise IoT networks, use a trial, standalone<!--?--> license for 90 days as an add-on to Microsoft Defender for Endpoint<!--?-->. A trial license supports 100 devices. There are two options available depending on your existing license:
 
 1. Customers with ME5/E5 Security plans have support for enterprise IoT monitoring available, and don't need to start a trial.
 
