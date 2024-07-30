@@ -21,7 +21,7 @@ To see how Defender for IoT can help and protect your network sign up to a free,
 
 Before you start, you need:
 
-- A Microsoft tenant, with Global or Billing admin access to the tenent.
+- A Microsoft tenant, with Global or Billing admin access to the tenant.
 
     For more information, see [Buy or remove licenses for a Microsoft business subscription](/microsoft-365/commerce/licenses/buy-licenses) and [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles).
 

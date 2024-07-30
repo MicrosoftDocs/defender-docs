@@ -14,7 +14,7 @@ ms.collection:
 - mde-android
 ms.topic: conceptual
 ms.subservice: android
-ms.date: 01/13/2023
+ms.date: 07/25/2024
 ---
 
 # Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)
@@ -138,7 +138,7 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
 ## Configure Web protection
 
-Defender for Endpoint on Android allows IT Administrators to configure web protection. Web protection is available within the [Microsoft Intune admin center](https://endpoint.microsoft.com).
+Defender for Endpoint on Android allows IT Administrators to configure web protection. Web protection is available within the [Microsoft Intune admin center](https://intune.microsoft.com).
 
 Web protection helps to secure devices against web threats and protect users from phishing attacks. Note that anti-phishing and custom indicators (URL and IP addresses) are supported as part of web protection. Web content filtering is currently not supported on mobile platforms.
 
