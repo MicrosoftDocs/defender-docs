@@ -44,6 +44,20 @@ For Enterprise IoT networks, use a trial, standalone<!--?--> license for 90 days
 
 A permanent Enterprise IoT monitoring license supports five devices per Microsoft 365 E5 (ME5) or E5 Security license, or is available as a standalone, per-device license for Microsoft Defender for Endpoint P2 customers.
 
+### How can I cancel Enterprise IoT?
+
+For more information, see [Turn off enterprise IoT security](enterprise-for-iot-get-started.md#turn-off-enterprise-iot-security).
+
+### What happens when the trial ends?
+
+If you haven't added a standalone license by the time your trial ends, your trial is automatically canceled, and you lose access to Enterprise IoT security features.
+
+For more information, see [Defender for IoT subscription billing](billing.md).<!-- ?-->
+
+### How can I resolve billing issues associated with my Defender for IoT plan?
+
+For any billing or technical issues, open a support ticket for Microsoft Defender XDR.<!-- ?-->
+
 ## Alerts
 <!-- here Enterprise was written with a capital and I have lowered that-->
 Most Defender for Endpoint alerts <!--network-based detections -->are also relevant for enterprise IoT devices, such as alerts for scans involving managed endpoints. Alerts for enterprise IoT devices detected by Defender for Endpoint are only available in Defender for Endpoint only<!-- where are they now available? -->.
