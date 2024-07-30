@@ -38,8 +38,8 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## July-2024 Build: 101.24062.0001 | Release version: 30.124062.0001.0
 
-&ensp;Released: **June 31, 2024**<br/>
-&ensp;Published: **June 31, 2024**<br/>
+&ensp;Released: **July 31, 2024**<br/>
+&ensp;Published: **July 31, 2024**<br/>
 &ensp;Build: **101.24062.0001**<br/>
 &ensp;Release version: **30.124062.0001.0**<br/>
 &ensp;Engine version: **1.1.24050.7**<br/>
