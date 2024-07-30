@@ -49,8 +49,11 @@ This article is updated frequently to let you know what's new in the latest rele
 
 There are multiple fixes and new changes in this release.
 
-- This release fixes a bug related to high memory usage eventually leading to high CPU due to eBPF memory leak in kernel space resulting in servers going into unusable states. This only impacted the kernel versions 3.10x and <= 4.16x, majorly on RHEL/CentOS distros. Please update to the latest MDE version to avoid any impact.
-- We have now simplified the output of `mdatp health --detail features`
+- Fixes issue with cmdline threats not appearing on security portal.
+- Fixes memory leak issue in kernel space due to ebpf maps and progs not getting closed/unloaded whenever ebpf sensor is reloaded. Impacts kernels 3.10x and <= 4.16x.
+- Fixes bug in which disabling a preview feature wouldn't actually disable it without a MDE restart.
+- Global Exclusions feature now in Public Preview. Refer to https://learn.microsoft.com/en-us/defender-endpoint/linux-exclusions for more.
+- Updated the Linux default engine version to 1.1.24050.7 and default sigs Version to 1.411.410.0.
 - Stability and performance improvements.
 - Other bug fixes.
 
