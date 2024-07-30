@@ -54,7 +54,7 @@ If you haven't added a standalone license by the time your trial ends, your tria
 
 For more information, see [Defender for IoT subscription billing](billing.md).<!-- ?-->
 
-### How can I resolve billing issues associated with my Defender for IoT plan?
+### How can I resolve billing issues associated with my Enterprise IoT plan?
 
 For any billing or technical issues, open a support ticket for Microsoft Defender XDR.<!-- ?-->
 
