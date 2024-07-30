@@ -19,9 +19,9 @@ Before you start the procedures in this article, read through [enterprise for Io
 
 Make sure that you have:
 
-- IoT devices in your network, visible in the Microsoft Defender XDR<!--portal--> **Device inventory**
+- IoT devices in your network, visible in the Microsoft Defender portal **Device inventory**
 
-- Access to the Microsoft Defender Portal as a <!-- what is the correct level global or security?-->[Security administrator](../../active-directory/roles/permissions-reference.md#security-administrator) <!-- what link?-->
+- Access to the Microsoft Defender Portal as a <!-- what is the correct level global or security?-->[Security administrator](entra/identity/role-based-access-control/permissions-reference.md#security-administrator)
 
 - One of the following licenses:
 
@@ -35,7 +35,7 @@ There are two ways to add enterprise IoT to the Defender portal:
 
 1. If you're a Microsoft 365 E5 (ME5)/ E5 Security and Defender for Endpoint P2 customer<!-- is this correct, i thought P2 is the 2nd option?-->, toggle on support for Enterprise IoT Security in the Defender Portal. For more information, see [turn on enterprise IoT monitoring](#turn-on-enterprise-iot-monitoring).
 
-1. If you don't have ME5/E5 Security licenses, but you're a Defender for Endpoint customer, start with a free trial or purchase standalone, per-device licenses to gain the same IoT-specific security value. For more information, see [standalone trial license](#a-standalone-enterprise-iot-trial-license).
+1. If you don't have ME5/E5 Security licenses, but you're a Defender for Endpoint customer, start with a free trial or purchase standalone, per-device licenses to gain the same IoT-specific security value. For more information, see [standalone trial license](#standalone-enterprise-iot-trial-license).
 
 ## Turn on enterprise IoT monitoring
 
@@ -45,14 +45,14 @@ If you have extra devices that aren't covered by your ME5/E5 licenses, you can p
 
 **To turn on enterprise IoT monitoring**:
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com/), select **Settings** > **[Device Discovery](/microsoft-365/security/defender-endpoint/device-discovery)** > **Enterprise IoT**. <!-- does the device discovery need to have a link?-->
+1. In [Microsoft Defender portal](https://security.microsoft.com/), select **Settings** > **[Device Discovery](/microsoft-365/security/defender-endpoint/device-discovery)** > **Enterprise IoT**. <!-- does the device discovery need to have a link?-->
 
 > [!NOTE]
 > Ensure you have turned on Device Discovery in **Settings** > **Endpoints** > **Advanced Features**.
 
 1. Toggle the Enterprise IoT security option to **On**. For example:
 
-    :::image type="content" source="media/enterprise-for-iot-get-started/eiot-toggle-on.png" alt-text="Screenshot of Enterprise IoT toggled on in Microsoft Defender XDR.":::
+    :::image type="content" source="media/enterprise-for-iot-get-started/eiot-toggle-on.png" alt-text="Screenshot of Enterprise IoT toggled on in Microsoft Defender portal.":::
 
 ## Standalone Enterprise IoT trial license
 
@@ -67,7 +67,7 @@ Use the following procedure to calculate how many devices you need to monitor if
 
 **To calculate the number of devices you're monitoring:**
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com/), select **Assets** > **Devices** to open the **Device inventory** page.
+1. In [Microsoft Defender portal](https://security.microsoft.com/), select **Assets** > **Devices** to open the **Device inventory** page.
 
 1. Note down the total number of **IoT devices** listed.
 
@@ -79,7 +79,7 @@ Use the following procedure to calculate how many devices you need to monitor if
 
 For example:
 
-- If in Microsoft Defender XDR **Device inventory**, you have *1204* IoT devices.
+- If in Microsoft Defender portal **Device inventory**, you have *1204* IoT devices.
 - Round down to *1200* devices.
 - You have 240 ME5 licenses, which cover **1200** devices
 
@@ -136,11 +136,11 @@ With enterprise IoT activated the added security value of alerts, recommendation
 
 **To view added security value**:<!-- !!!-->
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com/), select **Assets** > **Devices** to open the **Device inventory** page.
+1. In [Microsoft Defender portal](https://security.microsoft.com/), select **Assets** > **Devices** to open the **Device inventory** page.
 
 1. Select the **IoT devices** tab and select a specific device **IP** to drill down for more details. For example:
 
-    :::image type="content" source="media/enterprise-for-iot-get-started/select-a-device.png" alt-text="Screenshot of the IoT devices tab in Microsoft Defender XDR." lightbox="media/enterprise-iot/select-a-device.png":::
+    :::image type="content" source="media/enterprise-for-iot-get-started/select-a-device.png" alt-text="Screenshot of the IoT devices tab in Microsoft Defender portal." lightbox="media/enterprise-iot/select-a-device.png":::
 
 1. On the device details page, explore the following tabs to view data added by enterprise IoT security for your device:
 
@@ -188,7 +188,7 @@ If you no longer need the **Enterprise IoT security** service, you can turn it o
 
 **To turn off enterprise IoT monitoring**:
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com/), select **Settings** > **Device discovery** > **Enterprise IoT**.
+1. In [Microsoft Defender portal](https://security.microsoft.com/), select **Settings** > **Device discovery** > **Enterprise IoT**.
 
 1. Toggle the option to **Off**.
 

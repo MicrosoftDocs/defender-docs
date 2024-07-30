@@ -17,7 +17,7 @@ While the number of IoT devices continues to grow, they often lack the security 
 
 Extend Defender for IoT's agentless<!-- I presume this is different in Defender and does use agents --> security features to include enterprise IoT devices. Add the enterprise IoT security feature to your existing Microsoft Defender for Endpoint<!-- license? or remove to your?-->, and view related alerts, vulnerabilities, and recommendations for IoT devices in Microsoft Defender.
 
-Microsoft Defender for IoT seamlessly integrates with Microsoft Defender XDR<!-- remove XDR?--> and Defender for Endpoint to both discover IoT devices and provide security value, including purpose-built alerts, recommendations, and vulnerability data.
+Microsoft Defender for IoT seamlessly integrates with Microsoft Defender portal and Defender for Endpoint to both discover IoT devices and provide security value, including purpose-built alerts, recommendations, and vulnerability data.
 <!-- I dont know if this image is still appropriate? -->
 :::image type="content" source="media/enterprise-for-iot/eiot-architecture.png" alt-text="The architecture showing the use of Enterprise IoT":::
 
@@ -75,6 +75,6 @@ For more information, see [Defender for IoT subscription billing](billing.md).<!
 
 ### Resolve billing issues associated with my Enterprise IoT plan
 
-For any billing or technical issues, open a support ticket for Microsoft Defender XDR.<!-- ?-->
+For any billing or technical issues, open a support ticket for Microsoft Defender portal.
 
 ## Next steps
