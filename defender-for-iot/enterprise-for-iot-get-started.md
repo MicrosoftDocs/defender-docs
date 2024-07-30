@@ -184,7 +184,7 @@ For more information, see [Advanced hunting](/microsoft-365/security/defender/ad
 
 ## Turn off enterprise IoT security
 
-If you no longer need the **Enterprise IoT security** service you can turn it off. This feature is supported only for customers who don't have any standalone, per-device licenses added on to the Defender portal.
+If you no longer need the **Enterprise IoT security** service, you can turn it off. This is supported only for customers who don't have any standalone, per-device licenses added on to the Defender portal. <!--This doesn't apply to customers with standalone, per-device licenses added to the Defender portal. -->
 
 **To turn off enterprise IoT monitoring**:
 
