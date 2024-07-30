@@ -15,7 +15,7 @@ The number of IoT devices continues to grow exponentially across enterprise netw
 
 While the number of IoT devices continues to grow, they often lack the security safeguards that are common on managed endpoints like laptops and mobile phones. To bad actors, these unmanaged devices can be used as a point of entry for lateral movement or evasion, and too often, the use of such tactics leads to the exfiltration<!-- should this be changed to hacking / exposure/ stealing / leaking --> of sensitive information.
 
-Extend Defender for IoT's agentless<!-- I presume this is different in Defender and does use agents --> security features to include enterprise IoT devices. Add the enterprise IoT security feature to your existing Microsoft Defender for Endpoint <!-- license? or remove to your?-->, and view related alerts, vulnerabilities, and recommendations for IoT devices in Microsoft Defender.
+Extend Defender for IoT's agentless<!-- I presume this is different in Defender and does use agents --> security features to include enterprise IoT devices. Add the enterprise IoT security feature to your existing Microsoft Defender for Endpoint<!-- license? or remove to your?-->, and view related alerts, vulnerabilities, and recommendations for IoT devices in Microsoft Defender.
 
 Microsoft Defender for IoT seamlessly integrates with Microsoft Defender XDR<!-- remove XDR?--> and Defender for Endpoint to both discover IoT devices and provide security value, including purpose-built alerts, recommendations, and vulnerability data.
 <!-- I dont know if this image is still appropriate? -->
@@ -32,7 +32,7 @@ https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/architect
 
 ## Manage enterprise IoT monitoring support with Microsoft Defender for IoT
 
-For Enterprise IoT networks, use a trial, standalone<!--?--> license for 90 days as an add-on to Microsoft Defender for Endpoint<!--?-->. A trial license support 100 devices. There are two options avilable depending on your existing license:
+For Enterprise IoT networks, use a trial, standalone<!--?--> license for 90 days as an add-on to Microsoft Defender for Endpoint<!--?-->. A trial license support 100 devices. There are two options available depending on your existing license:
 
 1. Customers with ME5/E5 Security plans have support for enterprise IoT monitoring available, and don't need to start a trial.
 
@@ -42,7 +42,7 @@ For Enterprise IoT networks, use a trial, standalone<!--?--> license for 90 days
 
     Start your enterprise IoT trial using the [Microsoft Defender for IoT - EIoT Device License - add-on wizard](https://signup.microsoft.com/get-started/signup?products=b2f91841-252f-4765-94c3-75802d7c0ddb&ali=1&bac=1) or via the Microsoft 365 admin center. <!-- is this correct?-->
 
-A permanent Enterprise IoT monitoring license supports 5 devices per Microsoft 365 E5 (ME5) or E5 Security license, or is available as a standalone, per-device license for Microsoft Defender for Endpoint P2 customers.
+A permanent Enterprise IoT monitoring license supports five devices per Microsoft 365 E5 (ME5) or E5 Security license, or is available as a standalone, per-device license for Microsoft Defender for Endpoint P2 customers.
 
 ## Alerts
 <!-- here Enterprise was written with a capital and I have lowered that-->
@@ -59,8 +59,8 @@ The following Defender for Endpoint security recommendations are supported for E
 - Remove insecure administration protocols SNMP V1 and SNMP V2
 - Require authentication for VNC management interface
 
-## Vulnerabilties
+## Vulnerabilities
 
-Known CVEs vulnerabiltities are detected and showing in the Defender portal associated with the relevant device. Known CVEs can help you decide whether to patch, remove, or contain the device and mitigate risk to your network. Alternatively, use advanced hunting queries to collect vulnerabilities across all your devices.
+Known CVEs vulnerabilities are detected and showing in the Defender portal associated with the relevant device. Known CVEs can help you decide whether to patch, remove, or contain the device and mitigate risk to your network. Alternatively, use advanced hunting queries to collect vulnerabilities across all your devices.
 
 ## Next steps

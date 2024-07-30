@@ -33,7 +33,7 @@ Make sure that you have:
 
 There are two ways to add enterprise IoT to the Defender portal:
 
-1. If you're a Microsoft 365 E5 (ME5)/ E5 Security and Defender for Endpoint P2 customer<!-- is this correct, i thought P2 is the 2nd option?-->, toggle on support for Enterprise IoT Security in the Defender Portal. For more information, see [turn on enterptise IoT monitoring](#turn-on-enterprise-iot-monitoring).
+1. If you're a Microsoft 365 E5 (ME5)/ E5 Security and Defender for Endpoint P2 customer<!-- is this correct, i thought P2 is the 2nd option?-->, toggle on support for Enterprise IoT Security in the Defender Portal. For more information, see [turn on enterprise IoT monitoring](#turn-on-enterprise-iot-monitoring).
 
 1. If you don't have ME5/E5 Security licenses, but you're a Defender for Endpoint customer, start with a free trial or purchase standalone, per-device licenses to gain the same IoT-specific security value. For more information, see [standalone trial license](#a-standalone-enterprise-iot-trial-license).
 
@@ -41,7 +41,7 @@ There are two ways to add enterprise IoT to the Defender portal:
 
 This procedure describes how to turn on enterprise IoT monitoring in Defender portal, and is relevant only for ME5/E5 Security customers.
 
-If you have extra devices that are not covered by your ME5/E5 licenses, you can purchase standalone licenses. For more information, see [calculate the number of devices for standalone licenses](#calculate-monitored-devices-for-enterprise-iot-monitoring).
+If you have extra devices that aren't covered by your ME5/E5 licenses, you can purchase standalone licenses. For more information, see [calculate the number of devices for standalone licenses](#calculate-monitored-devices-for-enterprise-iot-monitoring).
 
 **To turn on enterprise IoT monitoring**:
 
@@ -54,9 +54,9 @@ If you have extra devices that are not covered by your ME5/E5 licenses, you can 
 
     :::image type="content" source="media/enterprise-for-iot-get-started/eiot-toggle-on.png" alt-text="Screenshot of Enterprise IoT toggled on in Microsoft Defender XDR.":::
 
-## A standalone Enterprise IoT trial license
+## Standalone Enterprise IoT trial license
 
-A customers with a Microsoft Defender for Endpoint P2 license only can use a trial standalone license for enterprise IoT monitoring. To purchase a license you need to calculate the number of minotored devices in your network. Then using the Microsoft 365 admin center purchase your licenses.
+Customers with a Microsoft Defender for Endpoint P2 license only can use a trial standalone license for enterprise IoT monitoring. To purchase a license you need to calculate the number of monitored devices in your network. Then using the Microsoft 365 admin center purchase your licenses.
 
 ### Calculate monitored devices for Enterprise IoT monitoring
 
