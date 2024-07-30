@@ -104,7 +104,7 @@ When you create policies with OMA-URI in Intune, create one XML file for each po
 In the **Add Row** pane, specify the following settings:
 
 - In the **Name** field, type `Allow Read Activity`.
-- In the **OMA-URI** field, type `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b[PolicyRule Id]%7d/RuleData`. (You could use the PowerShell command `New-Guid` to generate a new Guid, and replace [PolicyRule Id])
+- In the **OMA-URI** field, type `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b[PolicyRule Id]%7d/RuleData`. (You could use the PowerShell command `New-Guid` to generate a new Guid, and replace `[PolicyRule Id]`.)
 - In the **Data Type** field, select **String (XML file)**, and use **Custom XML**.
 
 You can use parameters to set conditions for specific entries. Here's a [group example XML file for Allow Read access for each removable storage](https://github.com/microsoft/mdatp-devicecontrol/blob/main/windows/device/Intune%20OMA-URI/Allow%20Read.xml).
@@ -121,7 +121,7 @@ When you create groups with OMA-URI in Intune, create one XML file for each grou
 In the **Add Row** pane, specify the following settings:
 
 - In the **Name** field, type `Any Removable Storage Group`.
-- In the **OMA-URI** field, type `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b[GroupId]%7d/GroupData`. (To get your GroupID, in the Intune admin center, go to **Groups**, and then select **Copy the Object ID**. Or you could use Powershell command New-Guid to generate new Guid, and replace [GroupId])
+- In the **OMA-URI** field, type `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b[GroupId]%7d/GroupData`. (To get your GroupID, in the Intune admin center, go to **Groups**, and then select **Copy the Object ID**. Or, you could use the PowerShell command `New-Guid` to generate a new Guid, and replace `[GroupId]`.)
 - In the **Data Type** field, select **String (XML file)**, and use **Custom XML**.
 
 > [!NOTE]
