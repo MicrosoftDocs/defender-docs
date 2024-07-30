@@ -64,6 +64,8 @@ You can use filters to focus in on internet-facing devices and investigate the r
 
    :::image type="content" source="/defender/media/defender-endpoint/internet-facing-filter.png" alt-text="Screenshot of the internet-facing filter" lightbox="/defender/media/defender-endpoint/internet-facing-filter.png":::
 
+The internet-facing device tag also appears in Microsoft Defender Vulnerability Management. This allows you to filter for internet-facing devices from the [weaknesses](../defender-vulnerability-management/tvm-weaknesses.md) or the [security recommendations](../defender-vulnerability-management/tvm-security-recommendation.md). 
+
 > [!NOTE]
 > If no new events for a device occur for 48 hours, the Internet-facing tag is removed and it will no longer be visible in the Microsoft Defender portal.
 
