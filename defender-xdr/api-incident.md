@@ -18,7 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 02/08/2024
+ms.date: 07/30/2024
 ---
 
 # Microsoft Defender XDR incidents API and the incidents resource type
