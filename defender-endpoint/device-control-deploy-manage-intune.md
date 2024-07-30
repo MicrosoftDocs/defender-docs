@@ -104,13 +104,13 @@ When you create policies with OMA-URI in Intune, create one XML file for each po
 In the **Add Row** pane, specify the following settings:
 
 - In the **Name** field, type `Allow Read Activity`.
-- In the **OMA-URI** field, type `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b[PolicyRule Id]%7d/RuleData`. (You could use Powershell command New-Guid to generate new Guid, and replace [PolicyRule Id])
+- In the **OMA-URI** field, type `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7b[PolicyRule Id]%7d/RuleData`. (You could use the PowerShell command `New-Guid` to generate a new Guid, and replace [PolicyRule Id])
 - In the **Data Type** field, select **String (XML file)**, and use **Custom XML**.
 
 You can use parameters to set conditions for specific entries. Here's a [group example XML file for Allow Read access for each removable storage](https://github.com/microsoft/mdatp-devicecontrol/blob/main/windows/device/Intune%20OMA-URI/Allow%20Read.xml).
 
 > [!NOTE]
-> Comments using XML comment notation <!-- COMMENT --> can be used in the Rule and Group XML files, but they must be inside the first XML tag, not the first line of the XML file.
+> Comments using XML comment notation `<!-- COMMENT -->` can be used in the Rule and Group XML files, but they must be inside the first XML tag, not the first line of the XML file.
 
 ### Creating groups with OMA-URI
 
