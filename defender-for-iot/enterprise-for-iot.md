@@ -28,7 +28,7 @@ Microsoft Defender for IoT seamlessly integrates with Microsoft Defender portal 
 Enterprise IoT network protection extends agentless features beyond operational environments, providing coverage for all IoT devices in your environment. For example, an enterprise IoT environment might include printers, cameras, and purpose-built, proprietary, devices.
 
 include the types of devices considered individual or not here as well. how much of this is specific for this article?
-https://learn.microsoft.com/en-us/azure/defender-for-iot/organizations/architecture#devices-monitored-by-defender-for-iot
+https://learn.microsoft.com/azure/defender-for-iot/organizations/architecture#devices-monitored-by-defender-for-iot
 
 ## Alerts
 <!-- here Enterprise was written with a capital and I have lowered that-->
