@@ -1,5 +1,4 @@
 
-## Defender XDR default breadcrumb
 - name: 'Microsoft Defender'
   tocHref: /defender/
   topicHref: /defender/index
@@ -7,7 +6,10 @@
   - name: 'Microsoft Defender XDR'
     tocHref: /defender-xdr/
     topicHref: /defender-xdr/index
-
+  - name: Microsoft Defender XDR
+    tocHref: /defender-for-identity/
+    topicHref: /defender-xdr/index
+    
 ## Azure override
 - name: 'Microsoft Defender'
   tocHref: /azure/
@@ -16,13 +18,4 @@
   - name: 'Microsoft Defender XDR'
     tocHref: /azure/sentinel/
     topicHref: /defender-xdr/index
-
-## Defender for Identity override
-- name: 'Microsoft Defender'
-  tocHref: /defender/
-  topicHref: /defender/index
-  items:
-  - name: Microsoft Defender XDR
-    tocHref: /defender-for-identity/
-    topicHref: /defender-xdr/index 
 
