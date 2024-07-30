@@ -378,6 +378,8 @@
            href: submissions-admin-review-user-reported-messages.md
          - name: Errors during submissions
            href: submissions-error-messages.md
+         - name: Submission result definitions
+           href: submissions-result-definitions.md
        - name: Threat Explorer and real-time detections
          items:
          - name: About Threat Explorer and Real-time detections
