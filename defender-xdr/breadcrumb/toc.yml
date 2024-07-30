@@ -2,7 +2,7 @@
   tocHref: /azure/
   topicHref: /defender/index
   items:
-   - name: 'Microsoft Defender XDR'
+  - name: 'Microsoft Defender XDR'
     tocHref: /azure/sentinel/
     topicHref: /defender-xdr/index
   - name: Microsoft Defender XDR
