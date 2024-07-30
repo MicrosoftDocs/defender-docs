@@ -67,13 +67,13 @@ A permanent Enterprise IoT monitoring license supports five devices per Microsof
 
 For more information, see [Turn off enterprise IoT security](enterprise-for-iot-get-started.md#turn-off-enterprise-iot-security).
 
-### What happens when the trial ends?
+### End of trial period
 
 If you haven't added a standalone license by the time your trial ends, your trial is automatically canceled, and you lose access to Enterprise IoT security features.
 
 For more information, see [Defender for IoT subscription billing](billing.md).<!-- ?-->
 
-### How can I resolve billing issues associated with my Enterprise IoT plan?
+### Resolve billing issues associated with my Enterprise IoT plan
 
 For any billing or technical issues, open a support ticket for Microsoft Defender XDR.<!-- ?-->
 
