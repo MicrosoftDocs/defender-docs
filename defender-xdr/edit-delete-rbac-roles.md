@@ -82,7 +82,7 @@ The CSV also includes a snapshot of the Unified RBAC activation status for each 
 The following steps guide you on how to export roles in Microsoft Defender XDR Unified RBAC:
 
 > [!NOTE]
-> To export roles, you must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have the **Authorization (manage)** permission assigned for all data sources in Microsoft Defender XDR Unified RBAC and have at least one workload activated for Unified RBAC.
+> To export roles, you must be a Global Administrator or Security Administrator in Microsoft Entra ID, or have the **Authorization (manage)** permission assigned for all data sources in Microsoft Defender XDR Unified RBAC and have at least one workload activated for Defender XDR Unified RBAC.
 >
 >For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
 
