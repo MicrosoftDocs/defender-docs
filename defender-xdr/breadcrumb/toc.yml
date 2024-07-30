@@ -1,7 +1,10 @@
 - name: 'Microsoft Defender'
-  tocHref: /defender/
+  tocHref: /azure/
   topicHref: /defender/index
   items:
    - name: 'Microsoft Defender XDR'
-     tocHref: /defender-xdr/
-     topicHref: /defender-xdr/index
+    tocHref: /azure/sentinel/
+    topicHref: /defender-xdr/index
+  - name: Microsoft Defender XDR
+    tocHref: /defender-for-identity/
+    topicHref: /defender-xdr/index 
