@@ -21,7 +21,7 @@ Make sure that you have:
 
 - IoT devices in your network, visible in the Microsoft Defender portal **Device inventory**
 
-- Access to the Microsoft Defender Portal as a <!-- what is the correct level global or security?-->[Security administrator](entra/identity/role-based-access-control/permissions-reference.md#security-administrator)
+- Access to the Microsoft Defender Portal as a <!-- what is the correct level global or security?-->[Security administrator](../entra/identity/role-based-access-control/permissions-reference.md#security-administrator)
 
 - One of the following licenses:
 
