@@ -52,7 +52,7 @@ There are multiple fixes and new changes in this release.
 - Fixes issue with cmdline threats not appearing on security portal.
 - Fixes memory leak issue in kernel space due to ebpf maps and progs not getting closed/unloaded whenever ebpf sensor is reloaded. Impacts kernels 3.10x and <= 4.16x.
 - Fixes bug in which disabling a preview feature wouldn't actually disable it without a MDE restart.
-- Global Exclusions feature now in Public Preview. Refer to https://learn.microsoft.com/defender-endpoint/linux-exclusions for more.
+- Global Exclusions feature now in Public Preview. Refer to [linux-exclusions](linux-exclusions.md) for more information.
 - Updated the Linux default engine version to 1.1.24050.7 and default sigs Version to 1.411.410.0.
 - Stability and performance improvements.
 - Other bug fixes.
