@@ -4,7 +4,7 @@ description: Learn how to deploy and manage device control in Defender for Endpo
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-ms.date: 05/15/2024
+ms.date: 07/30/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -80,7 +80,7 @@ You can add audit policies, and you can add Allow/Deny policies. It is recommend
 > If you only configure audit policies, the permissions are inherited from the default enforcement setting.
 
 > [!NOTE]
-> - The order in the which policies are listed in the user interface isn't preserved for policy enforcement. The best practice is to use **Allow/Deny policies**. Ensure that the **Allow/Deny policies** option is non-intersecting by explicitly adding devices to be excluded. Using Intune's graphical interface, you cannot change the default enforcement. If you change the default enforcement to Deny, and create Allow Policy to specific Devices, all Devices will be blocked except the device you set in Allow Policy.
+> - The order in the which policies are listed in the user interface isn't preserved for policy enforcement. The best practice is to use **Allow/Deny policies**. Ensure that the **Allow/Deny policies** option is non-intersecting by explicitly adding devices to be excluded. Using Intune's graphical interface, you cannot change the default enforcement. If you change the default enforcement to `Deny`, and create an `Allow` policy to be applied specific devices, all devices are blocked except for any devices that are set in the `Allow` policy.
 
 ## Defining Settings with OMA-URI
 
