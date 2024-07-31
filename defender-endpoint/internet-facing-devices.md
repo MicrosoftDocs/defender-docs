@@ -13,7 +13,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 07/10/2023
+ms.date: 07/31/2024
 ---
 
 # Internet-facing devices

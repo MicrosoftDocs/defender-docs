@@ -6,7 +6,7 @@ author: mjosephym
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/11/2024
+ms.date: 07/31/2024
 ---
 
 # Review and classify critical assets
