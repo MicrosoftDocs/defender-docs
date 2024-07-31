@@ -78,8 +78,6 @@ To learn more about an internet-facing device, select the device in the device i
    :::image type="content" source="/defender/media/defender-endpoint/internet-facing-details.png" alt-text="Screenshot of the internet facing device details page" lightbox="/defender/media/defender-endpoint/iinternet-facing-details.png":::
 
 
-   :::image type="content" source="/defender/media/defender-endpoint/internet-facing-details.png" alt-text="Screenshot of the internet facing device details page" lightbox="/defender/media/defender-endpoint/internet-facing-details.png":::
-
 This pane includes details on whether the device was detected by a Microsoft external scan or received an external incoming communication. The external network interface address and port fields provide details on the external IP and port that were scanned at the time this device was identified as internet facing.
 
 The local network interface address and port for this device, along with the last time the device was identified as internet facing are also shown.
