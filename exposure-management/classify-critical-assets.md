@@ -118,6 +118,14 @@ You can change the criticality levels and turn off all assets. You can also edit
 
 :::image type="content" source="./media/classify-critical-assets/device-inventory.png" alt-text="screenshot of the Device inventory window" lightbox="./media/classify-critical-assets/device-inventory.png":::
 
+## Prioritize recommendations for critical assets
+
+The sum of exposed critical assets for a recommendation can be viewed from the [Security recommendations](../defender-vulnerability-management/tvm-security-recommendation.md). This means you can prioritize security recommendations, and remediation steps to focus on critical assets. 
+
+To see the count of exposed critical devies go to the [Security recommendations](../defender-vulnerability-management/tvm-security-recommendation.md) page in the Microsoft Defender portal. 
+
+   :::image type="content" source=" (../exposure-management/media/critical-asset-management/security-recommendations-critical-assets.png)" alt-text="Screenshot of the critical assets column on the security recommendations page" lightbox="../exposure-management/media/critical-asset-management/security-recommendations-critical-assets.png":::
+
 ## Next steps
 
 Learn about simulating [attack paths](work-attack-paths-overview.md).
