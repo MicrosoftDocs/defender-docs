@@ -32,6 +32,33 @@ This article is updated frequently to let you know what's new in the latest rele
 
 - [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
+
+<details>
+<summary> July-2024 (Build: 101.24062.0001 | Release version: 30.124062.0001.0)</summary>
+
+## July-2024 Build: 101.24062.0001 | Release version: 30.124062.0001.0
+
+&ensp;Released: **July 31, 2024**<br/>
+&ensp;Published: **July 31, 2024**<br/>
+&ensp;Build: **101.24062.0001**<br/>
+&ensp;Release version: **30.124062.0001.0**<br/>
+&ensp;Engine version: **1.1.24050.7**<br/>
+&ensp;Signature version: **1.411.410.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release.
+
+- Fixes bug in which infected command-line threat information was not showing correctly in security portal.
+- Fixes a memory leak issue in kernel space due to ebpf maps and progs not getting closed/unloaded whenever ebpf sensor is reloaded. Impacts kernels 3.10x and <= 4.16x.
+- Fixes a bug where disabling a preview feature required a Defender of Endpoint to disable it.
+- Global Exclusions feature using managed JSON is now in Public Preview. available in insiders slow from 101.23092.0012. For more information, see [linux-exclusions](linux-exclusions.md).
+- Updated the Linux default engine version to 1.1.24050.7 and default sigs Version to 1.411.410.0.
+- Stability and performance improvements.
+- Other bug fixes.
+
+</details>
+
 <details>
 <summary> June-2024 (Build: 101.24052.0002 | Release version: 30.24052.0002.0)</summary>
 
