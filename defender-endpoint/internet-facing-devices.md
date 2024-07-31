@@ -66,7 +66,7 @@ You can use filters to focus in on internet-facing devices and investigate the r
 
 The internet-facing device tag also appears in Microsoft Defender Vulnerability Management. This allows you to filter for internet-facing devices from the [weaknesses](/defender-vulnerability-management/tvm-weaknesses) and the [security recommendations](/defender-vulnerability-management/tvm-security-recommendation) pages in the Microsoft Defender portal. 
 
-   :::image type="content" source="(./media/internet-facing-weaknesses.png)" alt-text="Screenshot of the internet-facing weaknesses" lightbox="./media/internet-facing-weaknesses.png":::
+   :::image type="content" source="(./media/internet-facing-devices/internet-facing-weaknesses.png)" alt-text="Screenshot of the internet-facing weaknesses" lightbox="./media/internet-facing-devices/internet-facing-weaknesses.png":::
 
 > [!NOTE]
 > If no new events for a device occur for 48 hours, the Internet-facing tag is removed and it will no longer be visible in the Microsoft Defender portal.
@@ -75,7 +75,7 @@ The internet-facing device tag also appears in Microsoft Defender Vulnerability 
 
 To learn more about an internet-facing device, select the device in the device inventory to open its flyout pane:
 
-   :::image type="content" source="(../defender/media/defender-endpoint/internet-facing-details.png)" alt-text="Screenshot of the internet facing device details page" lightbox="(../defender/media/defender-endpoint/internet-facing-details.png)":::
+   :::image type="content" source="(/defender/media/defender-endpoint/internet-facing-details.png)" alt-text="Screenshot of the internet facing device details page" lightbox="(/defender/media/defender-endpoint/internet-facing-details.png)":::
 
 This pane includes details on whether the device was detected by a Microsoft external scan or received an external incoming communication. The external network interface address and port fields provide details on the external IP and port that were scanned at the time this device was identified as internet facing.
 
