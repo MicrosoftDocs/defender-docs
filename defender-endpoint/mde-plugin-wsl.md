@@ -125,6 +125,9 @@ If you want to use the host [winhttp proxy](configure-proxy-internet.md#configur
 
 If you want to use the host [network and network proxy setting](https://support.microsoft.com/windows/use-a-proxy-server-in-windows-03096c53-0554-4ffe-b6ab-8b1deee8dae1#ID0EFD=Windows_11&preserve-view=true) for MDE for WSL plug-in, nothing more is required. This configuration is adopted by the plug-in automatically.
 
+> [!NOTE]
+> WSL defender supports only `http` proxy.
+
 ## Plug-in Proxy selection
 
 If your host machine contains multiple proxy settings, the plug-in selects the proxy configurations with the following hierarchy:
@@ -293,7 +296,30 @@ DeviceProcessEvents
          dnsProxy=false
          ```
 
-   - If the connectivity issues persist, collect the networking logs using the method mentioned at [link](https://aka.ms/wsllogs), and include those logs with your support bundle.
+   - If the connectivity issues persist, run the following steps to collect the networking logs
+
+      1. Open an elevated(admin) powerhsell prompt 
+      
+      2. Download and Run: `.\collect-networking-logs.ps1`
+
+         ```powershell
+         Invoke-WebRequest -UseBasicParsing "https://raw.githubusercontent.com/microsoft/WSL/master/diagnostics/collect-networking-logs.ps1" -OutFile collect-networking-logs.ps1
+         Set-ExecutionPolicy Bypass -Scope Process -Force
+         .\collect-networking-logs.ps1
+         ```
+
+      3.	Open a new command prompt and run: `wsl`
+      
+      4.	Open an elevated(admin) command prompt and run:  `wsl --debug-shell`
+
+      5.	In debug shell, run: `mdatp connectivity test`
+
+      6.	Allow the connectivity test to be completed
+
+      7.	Stop the .ps1 ran in step #2
+
+      8.	Share the generated .zip file along with support bundle.
+
 
 5. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
 
