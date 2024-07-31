@@ -50,6 +50,7 @@ Defender for Cloud Apps alerts show in the Defender portal's incident and alerts
 
 Use the Microsoft Defender portal's global search bar at the top of the page to search for connected apps in Defender for Cloud Apps.
 
+
 :::image type="content" source="../defender/media/global-search-apps.png" alt-text="Screenshot of searching for connected apps.":::
 
 ## Assets and identities
