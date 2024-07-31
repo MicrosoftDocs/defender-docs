@@ -120,9 +120,9 @@ You can change the criticality levels and turn off all assets. You can also edit
 
 ## Prioritize recommendations for critical assets
 
-The sum of exposed critical assets for a recommendation can be viewed from the [Security recommendations](../defender-vulnerability-management/tvm-security-recommendation.md). This means you can prioritize security recommendations, and remediation steps to focus on critical assets. 
+To help prioritize security recommendations, and remediation steps to focus on critical assets, the sum of exposed critical assets for a recommendation can be viewed from the [Security recommendations](../defender-vulnerability-management/tvm-security-recommendation.md) page in the Microsoft Defender portal.
 
-To see the count of exposed critical devies go to the [Security recommendations](../defender-vulnerability-management/tvm-security-recommendation.md) page in the Microsoft Defender portal. 
+To see the sum of exposed critical devies go to the [Security recommendations](../defender-vulnerability-management/tvm-security-recommendation.md) page:
 
    :::image type="content" source=" (../exposure-management/media/critical-asset-management/security-recommendations-critical-assets.png)" alt-text="Screenshot of the critical assets column on the security recommendations page" lightbox="../exposure-management/media/critical-asset-management/security-recommendations-critical-assets.png":::
 
