@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 07/25/2024
 ---
 
 # Deploy and manage Device Control using Intune
@@ -48,7 +48,7 @@ Now, you have `groups`, `rules`, and `settings`, replace the mobileconfig file w
 
 ### Deploy the mobileconfig file using Intune
 
-You can deploy the mobileconfig file through [**https://endpoint.microsoft.com/**](https://endpoint.microsoft.com/) > **Devices** > **macOS**:
+You can deploy the mobileconfig file through [**https://intune.microsoft.com/**](https://intune.microsoft.com/) > **Devices** > **macOS**:
 
 - select 'Create profile'
 - select 'Templates' and 'Custom'
