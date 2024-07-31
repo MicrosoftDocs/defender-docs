@@ -41,24 +41,23 @@ Learn more about the benefits: [Overview of Microsoft Defender XDR](microsoft-36
 
 Find Defender for Cloud Apps functionality in the Microsoft Defender portal under **Cloud Apps**. For example:
 
-:::image type="content" source="media/defender-for-cloud-apps/cloud-apps.png" alt-text="Screenshot of the Defender for Cloud Apps Cloud discovery page.":::
+:::image type="content" source="media/defender-for-cloud-apps/cloud-apps.png" alt-text="Screenshot that shows the Defender for Cloud Apps Cloud discovery page." lightbox="media/defender-for-cloud-apps/cloud-apps.png":::
 
 ## Investigate cloud app alerts
 
-Defender for Cloud Apps alerts show in the Defender portal's incident and alerts queues, with relevant content inside alert pages for each type of a alert. For more information, see [Investigate incidents in Microsoft Defender XDR](investigate-incidents.md).
+Defender for Cloud Apps alerts show in the Defender portal's incident and alerts queues, with relevant content inside alert pages for each type of an alert. For more information, see [Investigate incidents in Microsoft Defender XDR](investigate-incidents.md).
 
 ## Global search for your connected cloud apps
 
 Use the Microsoft Defender portal's global search bar at the top of the page to search for connected apps in Defender for Cloud Apps.
 
-
-:::image type="content" source="/defender/media/global-search-apps.png" alt-text="Screenshot of searching for connected apps.":::
+:::image type="content" source="/defender/media/global-search-apps.png" alt-text="Screenshot that shows searching for connected apps." lightbox="/defender/media/global-search-apps.png":::
 
 ## Assets and identities
 
 Use the **Assets > Identities** page to find comprehensive details about entities pulled from connected cloud applications, including a users's activity history and security alerts related to the user. For example:
 
-:::image type="content" source="media/defender-for-cloud-apps/dashboard-top-users.png" alt-text="Screenshot of cloud app entities in the Identities page.":::
+:::image type="content" source="media/defender-for-cloud-apps/dashboard-top-users.png" alt-text="Screenshot that shows cloud app entities in the Identities page." lightbox="media/defender-for-cloud-apps/dashboard-top-users.png":::
 
 <a name='redirection-from-the-classic-microsoft-defender-for-cloud-apps-portal-to-microsoft-365-defender'></a>
 
