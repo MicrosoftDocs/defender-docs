@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to simulate phishing attacks and train their users on phishing prevention using Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 3/15/2024
+ms.date: 06/14/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -26,6 +26,9 @@ In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Offi
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
+> [!TIP]
+> To assign training to users without putting them through a simulation, see [Training campaigns in Attack simulation training](attack-simulation-training-training-campaigns.md).
+
 To launch a simulated phishing attack, do the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Simulations** tab. Or, to go directly to the **Simulations** tab, use <https://security.microsoft.com/attacksimulator?viewid=simulations>.
@@ -34,10 +37,10 @@ To launch a simulated phishing attack, do the following steps:
 
    :::image type="content" source="media/attack-sim-training-simulations-launch.png" alt-text="The Launch a simulation button on the Simulations tab in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-simulations-launch.png":::
 
-   The following sections describe the steps and configuration options to create a simulation.
+The following sections describe the steps and configuration options to create a simulation.
 
-   > [!NOTE]
-   > At any point after you name the simulation during the new simulation wizard, you can select **Save and close** to save your progress and continue later. The incomplete simulation has the **Status** value **Draft**. You can pick up where you left off by selecting the simulation and then selecting the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit simulation** action that appears.
+> [!NOTE]
+> At any point after you name the simulation during the new simulation wizard, you can select **Save and close** to save your progress and continue later. The incomplete simulation has the **Status** value **Draft**. You can pick up where you left off by selecting the simulation and then selecting the :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Edit simulation** action that appears.
 
 ## Select a social engineering technique
 
@@ -799,6 +802,19 @@ To cancel a simulation, do the following steps:
 2. Select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: **Cancel simulation**, and then select **Confirm** in the confirmation dialog.
 
 After you cancel the simulation, the **Status** value changes to **Canceled**.
+
+- Cancelling a simulation with the **Status** value **Scheduled** results in 100% cancellation. No training assignment messages or notifications are sent, and the campaign is fully ended.
+- Cancelling a simulation with the **Status** value **In progress** has the following results:
+  - Simulation delivery continues to the target users.
+  - If you cancel the simulation after a training assignment, the training assignments are still shown as due, but subsequent training reminders are cancelled.
+  - If you cancel the simulation before a training assignment, the trainings aren't assigned and no training assignment notifications are sent.
+  - Users who already received the simulated phishing message experience the following results:
+    - For social engineering techniques that use phishing links (all except **Malware Attachment**), the links are deactivated. Selecting the link displays the following message:
+
+      > This URL was part of a simulated phishing exercise provided by Microsoft and is no longer active.
+
+    - For the **Malware Attachment** social engineering technique, the landing page remains visible.
+    - Positive reinforcement messages are delivered if the user reports the simulated phishing message.
 
 ### Remove simulations
 

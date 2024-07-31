@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 5/31/2024
+ms.date: 07/26/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -39,13 +39,23 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## July 2024
+
+- **Tenant Allow/Block List in Microsoft 365 GCC, GCC High, DoD and and Office 365 operated by 21Vianet environments**: The [Tenant Allow/Block List](tenant-allow-block-list-about.md) is now available these environments. They are on parity with the WW commercial experiences.
+
+- **45 days after last used date**: The value **Remove allow entry after** \> **45 days after last used date** is now the default on new allow entries from submissions and existing allow entries in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). The allow entry is triggered and the **LastUsedDate** property is updated when the entity is encountered and identified as malicious during mail flow or at time of click. After the filtering system determines that the entity is clean, the allow entry is automatically removed after 45 days. By default, allow entries for spoofed senders never expire.
+
+- (GA) Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). Access Microsoft Defender XDR Ninja training, learning paths, training modules and more. Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject. 
+
+- (GA) SecOps personnel can now release email messages from quarantine or move messages from quarantine back to user Inboxes directly from :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** in Threat Explorer, Advanced hunting, custom detection, the Email entity page, and the Email summary panel. This capability allows security operators to manage false positives more efficiently and without losing context. For more information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).  
+
 ## May 2024
 
 - **Top level domain and subdomain blocking in Tenant Allow/Block List**: You will be able to create block entries under domains & email addresses, using the format `*.TLD`, where `TLD` can be any top-level domain or `*.SD1.TLD, *.SD2.SD1.TLD`, `*.SD3.SD2.SD1.TLD`, and similar patterns for subdomain blocking. The entries block all email received from or sent to any email addresses in the domain or subdomain during mail flow.
 
 - **Automated end user feedback**: The user submission automatic feedback response capability in Microsoft Defender for Office 365 enables organizations to automatically respond to end user submissions of phishing based on the verdict from the automated investigation. [Learn more](air-user-automatic-feedback-response.md).
 
-- We are introducing **Sender's copy clean-up features** in Threat Explorer, email entity, Summary Panel, and Advanced hunting. These new features will streamline the process of managing Sent items, particularly for admins who use Soft delete and Move to inbox actions. For more information, see [Threat Explorer (Explorer)](threat-explorer-real-time-detections-about.md). Key highlights:
+- We are introducing **Sender's copy clean-up features** in Threat Explorer, email entity, Summary Panel, and Advanced hunting. These new features will streamline the process of managing Sent items, particularly for admins who use the actions **Move to mailbox folder** \> **Soft delete** and **Move to mailbox folder** \> **Inbox**. For more information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard). Key highlights:
 - Integration with Soft delete: Sender's copy clean-up will be incorporated as part of the Soft delete action.
   - Wide support: This action will be supported across various Defender XDR platforms including Threat Explorer, Take Action wizard from the email entity, Summary Panel, Advanced hunting, and through Microsoft Graph API.
   - Undo capability: An undo action will be available, allowing you to reverse the clean-up by moving items back to the Sent folder.
@@ -167,7 +177,7 @@ For more information on what's new with other Microsoft Defender security produc
 - **Anti-spoofing enhancement for internal domains and senders:**
   - For spoofing protection, the allowed senders or domains defined in the [anti-spam policy](anti-spam-policies-configure.md) and within user allow lists must now pass authentication in order for the allowed messages to be honored. The change only affects messages that are considered to be internal (the sender or sender's domain is in an accepted domain in the organization). All other messages continue to be handled as they are today.
 
-- **Automatic redirection from Office action center to unified action center:** The action center in the Email & Collaboration section **Email & Collaboration** > **Review** > **Action center** (https://security.microsoft.com/threatincidents) is automatically redirected to **Actions & Submissions** > **Action center** > **History** (https://security.microsoft.com/action-center/history).
+- **Automatic redirection from Office action center to unified action center:** The action center in the Email & Collaboration section **Email & Collaboration** > **Review** > **Action center** <https://security.microsoft.com/threatincidents> is automatically redirected to **Actions & Submissions** \> **Action center** \> **History** <https://security.microsoft.com/action-center/history>.
 
 - **Automatic redirection from Office 365 Security & Compliance Center to Microsoft Defender portal:** Automatic redirection begins for users accessing the security solutions in Office 365 Security & Compliance center (protection.office.com) to the appropriate solutions in Microsoft Defender portal (security.microsoft.com). This change is for all security workflows like (for example, Alerts, Threat Management, and Reports).
 
@@ -187,7 +197,11 @@ For more information on what's new with other Microsoft Defender security produc
 - This change impacts all customers who use the Office 365 Security & Compliance Center (protection.office.com), including Microsoft Defender for Office (Plan 1 or Plan 2), Microsoft 365 E3 / E5, Office 365 E3/ E5, and Exchange Online Protection. For the full list, see [Microsoft 365 guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)
 - This change impacts all users who sign in to the Office 365 Security and Compliance portal (protection.office.com), including security teams and end-users who access the Email Quarantine experience, at the **Microsoft Defender Portal** \> **Review** \> **Quarantine**.
 - Redirection is enabled by default and impacts all users of the Tenant.
-- Global Administrators and Security Administrators can turn on or off redirection in the Microsoft Defender portal by navigating to **Settings** \> **Email & collaboration** > **Portal redirection** and switch the redirection toggle.
+- Global Administrators<sup>\*</sup> and Security Administrators can turn on or off redirection in the Microsoft Defender portal by navigating to **Settings** \> **Email & collaboration** > **Portal redirection** and switch the redirection toggle.
+
+  > [!IMPORTANT]
+  > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 - **Built-in protection**: A profile that enables a base level of Safe Links and Safe Attachments protection that's on by default for all Defender for Office 365 customers. To learn more about this new policy and order of precedence, see [Preset security policies](preset-security-policies.md). To learn about the specific Safe Links and Safe Attachment controls that are set, see [Safe Attachments settings](recommended-settings-for-eop-and-office365.md#safe-attachments-settings) and [Safe Links policy settings](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
 - **Bulk Complaint Level** is now available in the EmailEvents table in Advanced Hunting with numeric BCL values from 0 to 9. A higher BCL score indicates that bulk message is more likely to generate complaints and is more likely to be spam.
 

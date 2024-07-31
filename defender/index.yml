@@ -82,7 +82,7 @@ conceptualContent:
             text: Training - SC-200 Mitigate threats using Microsoft Defender for Endpoint
           footerLink:
            text: See more
-           url: /defender-endpoint/
+           url: /defender-endpoint/        
 
         - title: Microsoft Defender for Office 365
           summary: Protect your email, prevent phishing attacks, and protect your collaboration tools
@@ -167,9 +167,24 @@ conceptualContent:
             text: Microsoft Defender Vulnerability Management technical community
           footerLink:
            text: See more
-           url: /defender-vulnerability-management/     
-          
+           url: /defender-vulnerability-management/
 
+        - title: Microsoft Defender for IoT
+          summary: Protect your IoT/OT environments
+          links:
+          - url: /defender-for-iot/microsoft-defender-iot
+            itemType: overview
+            text: Overview          
+          - url: /defender-for-iot/get-started
+            itemType: get-started
+            text: Get started
+          - url: https://techcommunity.microsoft.com/t5/microsoft-defender-for-iot-blog/bg-p/MicrosoftDefenderIoTBlog
+            itemType: concept
+            text: Microsoft Defender for IoT technical community          
+          footerLink:
+           text: See more
+           url: /defender-for-iot/    
+          
 additionalContent:
    sections:
    - title: Community & support
@@ -189,14 +204,7 @@ additionalContent:
      - title: Microsoft Security Exposure Management
        links:
          - url: /security-exposure-management/microsoft-security-exposure-management
-           text: Microsoft Security Exposure Management
-
-     - title: Microsoft Defender for IoT 
-       links:
-        - url: /azure/defender-for-iot/organizations/overview
-          text: Microsoft Defender for IoT for end-user organizations
-        - url: /azure/defender-for-iot/device-builders/overview
-          text: Microsoft Defender for IoT for device builders
+           text: Microsoft Security Exposure Management     
 
      - title: Microsoft Defender for Cloud
        links:

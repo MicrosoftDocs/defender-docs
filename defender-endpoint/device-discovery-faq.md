@@ -2,6 +2,7 @@
 title: Device discovery frequently asked questions
 description: Find answers to frequently asked questions (FAQs) about device discovery
 ms.service: defender-endpoint
+ms.subservice: onboard
 f1.keywords:
 - NOCSH
 ms.author: siosulli

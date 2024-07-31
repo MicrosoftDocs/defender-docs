@@ -1,12 +1,8 @@
 ---
 title: Alert grading for session cookie theft alert
-description: Review, manage and grade the session cookie theft alert as True Positive (TP) or False Positive (FP), and if there is TP, take recommended actions to remediate the attack and mitigate the security risks arising because of it.
-keywords: incidents, alerts, investigate, analyze, response, correlation, attack, machines, devices, users, identities, identity, mailbox, email, 365, microsoft, m365, cookie theft, AiTM, Attacker-in-the-middle, Adversary-in-the-middle, session theft, aitm cookie theft, aitm session theft.
+description: Review, manage, and grade the session cookie theft alert as True Positive (TP) or False Positive (FP), and if there's TP, take recommended actions to remediate the attack and mitigate the security risks arising because of it.
 search.appverid: met150
 ms.service: defender-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 f1.keywords: 
 - NOCSH
 ms.author: dansimp
@@ -37,11 +33,11 @@ This article contains information about alert grading for Session Cookie theft a
 - **Stolen session cookie was used**
 - **Authentication request from AiTM-related phishing page**
 
-Threat actors have started using innovative ways to infiltrate their target environments. Taking inspiration from Adversary-in-the-Middle attacks, this type of attack uses phishing to steal credentials or their sign-in session in order to carry out malicious actions. BEC campaigns are an excellent example.
+Threat actors use innovative ways to infiltrate their target environments. Taking inspiration from Adversary-in-the-Middle attacks, this type of attack uses phishing to steal credentials or their sign-in session in order to carry out malicious actions. BEC campaigns are an excellent example.
 
 This attack works by setting up an intermediate (phishing) site, effectively working as a proxy connection between the user and the legitimate website that the attacker is impersonating. By acting as an intermediary (proxy), the attacker is able to steal the target's password and session cookie. The attacker is therefore able to authenticate to a legitimate session as they're authenticating on behalf of the user.
 
-This playbook helps in investigating cases where suspicious behavior is observed indicative of an Attack-in-the-middle (AiTM) type of attack for cookie theft. This helps security teams like security operations center (SOC) and IT administrators to review, manage and grade the alerts as True Positive (TP) or False Positive (FP), and if it's TP, take recommended actions to remediate the attack and mitigate the security risks arising because of it.
+This playbook helps in investigating cases where suspicious behavior is observed indicative of an Attack-in-the-middle (AiTM) type of attack for cookie theft. This helps security teams like security operations center (SOC) and IT administrators to review, manage, and grade the alerts as True Positive (TP) or False Positive (FP), and if it's TP, take recommended actions to remediate the attack and mitigate the security risks arising because of it.
 
 The results of using this playbook are:
 
@@ -78,7 +74,7 @@ The results of using this playbook are:
     - Look for mail flow events [EmailEvents & EmailUrlInfo on NetworkMessageId] where the multiple emails are sent with the same Url.
         - Follow up with inspecting whether an increase or a high volume of mail deletion (ActivityType as Trash or Delete) is observed `[CloudAppEvents]` for the mailbox account.
         - Matching behavior could be deemed as highly suspicious.
-    - Examine device events for Url events that match click events `[DeviceEvents on AccountName|AccountUpn]` for Office365 emails.
+    - Examine device events for Url events that match click events `[DeviceEvents on AccountName|AccountUpn]` for Office 365 emails.
         - Matching the events for click sources (for example, different IP addresses for the same Url) could be an indication of malicious behavior.
 
 ## Advanced hunting queries
@@ -89,14 +85,14 @@ Use these queries to gather more information related to the alert and determine 
 Ensure you have access to the following tables:
 
 - AadSignInEventsBeta - contains sign-in information for users.
-- IdentityLogonEvents - contains logon information for users.
+- IdentityLogonEvents - contains sign-in information for users.
 - CloudAppEvents - contains audit logs of user activities.
 - EmailEvents - contains mail flow/traffic information.
 - EmailUrlInfo - contains Url information contained in emails.
 - UrlClickEvents - contains Url click logs for Urls that were clicked in the emails.
 - DeviceEvents - contains device activity audit events.
 
-Use the query below to identify suspicious logon behavior:
+Use the query below to identify suspicious sign-in behavior:
 
 ```kusto
 let OfficeHomeSessionIds = 

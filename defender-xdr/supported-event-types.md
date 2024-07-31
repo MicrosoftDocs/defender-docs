@@ -1,13 +1,8 @@
 ---
 title: Microsoft Defender XDR streaming event types supported in Event Streaming API
 description: Learn which streaming event types (tables) are supported by the streaming API
-keywords: raw data export, Streaming API, API, Event hubs, Azure storage, storage account, Hunting, raw data sharing
-search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.service: defender-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 ms.author: macapara
 author: mjcaparas
 ms.localizationpriority: medium

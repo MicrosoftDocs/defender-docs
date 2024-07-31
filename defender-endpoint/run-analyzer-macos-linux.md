@@ -7,7 +7,7 @@ f1.keywords:
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 04/16/2024
+ms.date: 06/28/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -45,18 +45,18 @@ If you're using a terminal, download the tool by entering the following command:
 2. Verify the download.
 
     > [!NOTE]
-    > The current SHA256 hash of 'XMDEClientAnalyzerBinary.zip' that is downloaded from this link is: '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469'
+    > The current SHA256 hash of 'XMDEClientAnalyzerBinary.zip' that is downloaded from this link is: '6DF1D7F32F1C33B462067F029CA59742241AB6967A981161803A3BC4B5EBDBDF'
 
    - Linux
 
     ```console
-    echo '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469 XMDEClientAnalyzerBinary.zip' | sha256sum -c
+    echo '6DF1D7F32F1C33B462067F029CA59742241AB6967A981161803A3BC4B5EBDBDF XMDEClientAnalyzerBinary.zip' | sha256sum -c
     ```
 
    - macOS
 
     ```console
-    echo '9D0552DBBD1693D2E2ED55F36147019CFECFDC009E76BAC4186CF03CD691B469  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
+    echo '6DF1D7F32F1C33B462067F029CA59742241AB6967A981161803A3BC4B5EBDBDF  XMDEClientAnalyzerBinary.zip' | shasum -a 256 -c
     ```
 
 
@@ -128,16 +128,16 @@ When using a terminal, unzip the file by entering one of the following commands 
    - Linux
 
     ```console
-    echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66 XMDEClientAnalyzer.zip' | sha256sum -c
+    echo '799D1C8B24FB826283B9B04B4B503AE3C99A05FE7ADFE25A78A094E231572C4A XMDEClientAnalyzer.zip' | sha256sum -c
     ```
 
    - macOS
 
     ```console
-    echo '36C2B13AE657456119F3DC2A898FD9D354499A33F65015670CE2CD8A937F3C66  XMDEClientAnalyzer.zip' | shasum -a 256 -c
+    echo '799D1C8B24FB826283B9B04B4B503AE3C99A05FE7ADFE25A78A094E231572C4A  XMDEClientAnalyzer.zip' | shasum -a 256 -c
     ```
 
-3. Extract the contents of XMDEClientAnalyzer.zip on the machine.\
+3. Extract the contents of XMDEClientAnalyzer.zip on the machine.
     If you're using a terminal, extract the files by using the following command:
 
     ```console
@@ -183,6 +183,9 @@ Use the following command to get the machine diagnostic.
 --force, -f           Will overwrite if output directory exists
 --diagnostic, -d      Collect extensive machine diagnostic information
 --bypass-disclaimer   Do not display disclaimer banner
+--interactive, -i     Interactive diagnostic
+--delay DELAY, -dd DELAY
+                      Set MDATP log level. If you use interactive or delay mode, the log level will set to debug automatically, and reset after 48h.
 --mdatp-log {info,debug,verbose,error,trace,warning}
                       Set MDATP log level
 --max-log-size MAX_LOG_SIZE
@@ -190,6 +193,8 @@ Use the following command to get the machine diagnostic.
 ```
 
 Usage example: `sudo ./MDESupportTool -d`
+
+NOTE: The log level auto-reset feature only available in 2405 or newer client version.
 
 ### Positional arguments
 
@@ -292,7 +297,7 @@ Usage example: `sudo ./mde_support_tool.sh skipfaultyrules -e true`
 
 - report.html
 
-  Description: The main HTML output file that contains the findings and guidance that the analyzer script run on the machine can produce.
+  Description: The main HTML output file that contains the findings and guidance from running the client analyzer tool on the device. This file is only generated when running the Python-based version of the client analyzer tool.
 
 - mde_diagnostic.zip
 

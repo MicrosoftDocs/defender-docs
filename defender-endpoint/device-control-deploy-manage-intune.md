@@ -4,7 +4,7 @@ description: Learn how to deploy and manage device control in Defender for Endpo
 author: siosulli
 ms.author: siosulli
 manager: deniseb 
-ms.date: 05/15/2024
+ms.date: 07/25/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -91,11 +91,9 @@ In the following table, identify the setting you want to configure, and then use
 
 | Setting | OMA-URI, data type, & values |
 |---|---|
-| **Device control default enforcement** <br/>Default enforcement establishes what decisions are made during device control access checks when none of the policy rules match | `./Vendor/MSFT/Defender/Configuration/DefaultEnforcement`<br/><br/>Integer: <br/>- `DefaultEnforcementAllow` = `1`<br/>- `DefaultEnforcementDeny` = `2` | 
+| **Device control default enforcement** <br/>Default enforcement establishes what decisions are made during device control access checks when none of the policy rules match | `./Vendor/MSFT/Defender/Configuration/DefaultEnforcement`<br/><br/>Integer: <br/>- `DefaultEnforcementAllow` = `1`<br/>- `DefaultEnforcementDeny` = `2` |
 | **Device types** <br/>Device types, identified by their Primary IDs, with device control protection turned on | `./Vendor/MSFT/Defender/Configuration/SecuredDevicesConfiguration`<br/><br/>String:<br/>- `RemovableMediaDevices`<br/>- `CdRomDevices`<br/>- `WpdDevices`<br/>- `PrinterDevices` |
 | **Enable device control** <br/>Enable or disable device control on the device | `./Vendor/MSFT/Defender/Configuration/DeviceControlEnabled`<br/><br/>Integer:<br/>- Disable = `0`<br/>- Enable = `1` |
-| **Evidence data remote location** <br/>Device control moves evidence data captured | `./Vendor/MSFT/Defender/Configuration/DataDuplicationRemoteLocation`<br/><br/>String |
-| **Local evidence cache duration** <br/>Sets the retention period in days for files in the local device control cache | `./Vendor/MSFT/Defender/Configuration/DataDuplicationLocalRetentionPeriod`<br/><br/>Integer <br/>Example: `60` (60 days) |
 
 ### Creating policies with OMA-URI
 
@@ -149,7 +147,7 @@ In the **Add Row** pane, specify the following settings:
 
 In Intune, device control groups appear as reusable settings.
 
-1. Go to the [Microsoft Intune admin center](https://endpoint.microsoft.com) and sign in.
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com) and sign in.
 
 2. Go to **Endpoint Security** > **Attack Surface Reduction**. 
 

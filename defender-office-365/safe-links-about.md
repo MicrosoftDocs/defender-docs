@@ -9,7 +9,7 @@ audience: Admin
 ms.topic: overview
 f1_keywords:
   - '197503'
-ms.date: 5/7/2024
+ms.date: 07/18/2024
 ms.localizationpriority: medium
 ms.collection:
   - Strat_O365_IP
@@ -108,7 +108,7 @@ You can use a condition or exception only once, but the condition or exception c
 
 ## Safe Links settings for email messages
 
-Safe Links scans incoming email for known malicious hyperlinks. Scanned URLs are rewritten or _wrapped_ using the Microsoft standard URL prefix: `https://nam01.safelinks.protection..com`. After the link is rewritten, it's analyzed for potentially malicious content.
+Safe Links scans incoming email for known malicious hyperlinks. Scanned URLs are rewritten or _wrapped_ using the Microsoft standard URL prefix: `https://<DataCenterLocation>.safelinks.protection.outlook.com` (for example, `https://nam01.safelinks.protection.outlook.com`). After the link is rewritten, it's analyzed for potentially malicious content.
 
 After Safe Links rewrites a URL, the URL is rewritten even if the message is _manually_ forwarded or replied to. Wrapping is done per message recipient (both internal and external recipients). Additional links that are added to the forwarded or replied-to message are also rewritten.
 
@@ -255,7 +255,7 @@ For more information about the order of precedence and how multiple policies are
 ## "Do not rewrite the following URLs" lists in Safe Links policies
 
 > [!NOTE]
-> Entries in the "Do not rewrite the following URLs" list aren't scanned or wrapped by Safe Links during mail flow, but might still be blocked at time of click. Report the URL as **Should not have been blocked (False positive)** and select **Alow this URL** to add an allow entry to the Tenant Allow/Block List so the URL isn't scanned or wrapped by Safe Links during mail flow _and_ at time of click. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
+> Entries in the "Do not rewrite the following URLs" list aren't scanned or wrapped by Safe Links during mail flow, but might still be blocked at time of click. Report the URL as **I've confirmed it's clean** and then select **Alow this URL** to add an allow entry to the Tenant Allow/Block List so the URL isn't scanned or wrapped by Safe Links during mail flow _and_ at time of click. For instructions, see [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft).
 
 Each Safe Links policy contains a **Do not rewrite the following URLs** list that you can use to specify URLs that aren't rewritten by Safe Links scanning. You can configure different lists in different Safe Links policies. Policy processing stops after the first (likely, the highest priority) policy is applied to the user. So, only one **Do not rewrite the following URLs** list is applied to a user who is included in multiple active Safe Links policies.
 

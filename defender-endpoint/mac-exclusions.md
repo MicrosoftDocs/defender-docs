@@ -4,7 +4,7 @@ description: Provide and validate exclusions for Microsoft Defender for Endpoint
 ms.service: defender-endpoint
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 02/29/2024
+ms.date: 06/14/2024
 ---
 
 # Configure and validate exclusions for Microsoft Defender for Endpoint on macOS
@@ -37,7 +37,7 @@ You can exclude certain files, folders, processes, and process-opened files from
 
 Exclusions can be useful to avoid incorrect detections on files or software that are unique or customized to your organization. They can also be useful for mitigating performance issues caused by Defender for Endpoint on Mac.
 
-To narrow down which process and/or path and/or extension you need to exclude, please use [real-time-protection-statistics](mac-support-perf.md).
+To narrow down which process and/or path and/or extension you need to exclude, use [real-time-protection-statistics](mac-support-perf.md).
 
 > [!WARNING]
 > Defining exclusions lowers the protection offered by Defender for Endpoint on Mac. You should always evaluate the risks that are associated with implementing exclusions, and you should only exclude files that you are confident are not malicious.
@@ -57,7 +57,7 @@ File, folder, and process exclusions support the following wildcards:
 
 |Wildcard|Description|Examples|
 |---|---|---|
-|\*|Matches any number of any characters including none (note if this wildcard is not used at the end of the path then it will substitute only one folder)| `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It does not include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` includes any file in `/var` and its subdirectories.|
+|\*|Matches any number of any characters including none (note if this wildcard isn't used at the end of the path then it substitutes only one folder)| `/var/*/tmp` includes any file in `/var/abc/tmp` and its subdirectories, and `/var/def/tmp` and its subdirectories. It doesn't include `/var/abc/log` or `/var/def/log` <p> <p> `/var/*/` includes any file in `/var` and its subdirectories.|
 |?|Matches any single character|`file?.log` includes `file1.log` and `file2.log`, but not `file123.log`|
 
 > [!NOTE]
@@ -67,15 +67,13 @@ File, folder, and process exclusions support the following wildcards:
 
 ## Best practices for adding antimalware exclusions for Microsoft Defender for Endpoint on macOS.
 
-1. Write down why an exclusion was added to a central location where only SecOps and/or Security Administrator have access.
-
-   e.g. Submitter, date, app name, reason, and exclusion information.
+1. Write down why an exclusion was added to a central location where only SecOps and/or Security Administrator have access. For example, list the submitter, date, app name, reason, and exclusion information.
 
 1. Make sure to have an expiration date* for the exclusions
 
-   *except for apps that the ISV stated that there is no additional tweaking that could be done to prevent the false positive or higher cpu utilization from occurring.
+   *except for apps that the ISV stated that there's no other tweaking that could be done to prevent the false positive or higher cpu utilization from occurring.
 
-1. Avoid migrating 3rd party antimalware exclusions since they may no longer be applicable nor applicable to Microsoft Defender for Endpoint on macOS.
+1. Avoid migrating non-Microsoft antimalware exclusions since they may no longer be applicable nor applicable to Microsoft Defender for Endpoint on macOS.
 
 1. Order of exclusions to consider top (more secure) to bottom (least secure):
 
@@ -85,7 +83,7 @@ File, folder, and process exclusions support the following wildcards:
 
    1. Indicators - File hash - allow
 
-      1. If a process or daemon doesn't change often, e.g. the app doesn't have a monthly security update.
+      1. If a process or daemon doesn't change often, for example, the app doesn't have a monthly security update.
 
    1. Path & Process
 
@@ -97,21 +95,28 @@ File, folder, and process exclusions support the following wildcards:
 
 ## How to configure the list of exclusions
 
-### From the Microsoft Defender for Endpoint Security Settings management console
+### Use the Microsoft Defender for Endpoint Security Settings management console
 
-1. Login to the [Microsoft Defender portal](https://security.microsoft.com).
-2. Go to **Configuration management > Endpoint Security Policies > Create new Policy**
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
+
+2. Go to **Configuration management** > **Endpoint Security Policies** > **Create new Policy**.
+
    - Select Platform: macOS
    - Select Template: Microsoft Defender Antivirus exclusions
-3. Select **Create Policy**
-4. Enter a name and description and select **Next**
-5. Expand **Antivirus engine**
-6. Select **Add**
-7. Select **Path** or **File extension** or **File name**
-8. Select **Configure instance** and add the exclusions as needed
-9. Select **Next**
-10. Assign the exclusion to a group and Select **Next**
-11. Select **Save**
+
+3. Select **Create Policy**.
+
+4. Enter a name and description and select **Next**.
+
+5. Expand **Antivirus engine**, and then select **Add**.
+
+6. Select **Path** or **File extension** or **File name**.
+
+7. Select **Configure instance** and add the exclusions as needed. Then select **Next**.
+
+8. Assign the exclusion to a group and Select **Next**.
+
+9. Select **Save**.
 
 ### From the management console
 
@@ -129,21 +134,21 @@ For more information on how to configure exclusions from JAMF, Intune, or anothe
 
 You can validate that your exclusion lists are working by using `curl` to download a test file.
 
-In the following Bash snippet, replace `test.txt` with a file that conforms to your exclusion rules. For example, if you have excluded the `.testing` extension, replace `test.txt` with `test.testing`. If you are testing a path, ensure that you run the command within that path.
+In the following Bash snippet, replace `test.txt` with a file that conforms to your exclusion rules. For example, if you have excluded the `.testing` extension, replace `test.txt` with `test.testing`. If you're testing a path, ensure that you run the command within that path.
 
 ```bash
 curl -o test.txt https://secure.eicar.org/eicar.com.txt
 ```
 
-If Defender for Endpoint on Mac reports malware, then the rule is not working. If there is no report of malware, and the downloaded file exists, then the exclusion is working. You can open the file to confirm that the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
+If Defender for Endpoint on Mac reports malware, then the rule isn't working. If there's no report of malware, and the downloaded file exists, then the exclusion is working. You can open the file to confirm that the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
 
-If you do not have Internet access, you can create your own EICAR test file. Write the EICAR string to a new text file with the following Bash command:
+If you don't have Internet access, you can create your own EICAR test file. Write the EICAR string to a new text file with the following Bash command:
 
 ```bash
 echo 'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*' > test.txt
 ```
 
-You can also copy the string into a blank text file and attempt to save it with the file name or in the folder you are attempting to exclude.
+You can also copy the string into a blank text file and attempt to save it with the file name or in the folder you're attempting to exclude.
 
 ## Allow threats
 

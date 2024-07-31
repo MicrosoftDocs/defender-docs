@@ -660,26 +660,6 @@ Then the group is then referenced as parameters in an entry, as illustrated in t
        </Entry>
 ```
 
-### File Conditions
-
-The following table describes file group properties:
-
-| Name | Description |
-|---|---|
-| `PathId` | String, value of file path or name. <br/>Wildcards are supported. <br/>Only applicable for file type groups. |
-
-The following table illustrates how properties are added to the `DescriptorIdList` of a file group:
-
-```xml
-
-<Group Id="{e5f619a7-5c58-4927-90cd-75da2348a30f}" Type="File" MatchType="MatchAny">
-    <DescriptorIdList>
-        <PathId>*.exe</PathId>
-        <PathId>*.dll</PathId>
-    </DescriptorIdList>
-</Group>
-```
-
 The group is then referenced as parameters in an entry, as illustrated in the following snippet:
 
 ```xml
@@ -733,53 +713,6 @@ The group is then referenced as parameters in an entry, as illustrated in the fo
       </Parameters>
    </Entry>
 ```
-
-## File evidence
-
-With device control, you can store evidence of files that were copied to removable devices or were printed. When file evidence is enabled, a `RemovableStorageFileEvent` is created. The behavior of file evidence is controlled by options on the Allow action, as described in the following table:
-
-| Option | Description |
-|---|---|
-| `8` | Create a `RemovableStorageFileEvent` event with `FileEvidenceLocation` |
-| `16` | Create a `RemovableStorageFileEvent` without `FileEvidenceLocation` |
-
-The `FileEvidenceLocation` field of has the location of the evidence file, if one is created. The evidence file has a name which ends in `.dup`, and its location is controlled by the `DataDuplicationFolder` setting.
-
-### Storing file evidence in Azure Blob Storage
-
-1. Create an Azure Blob Storage account and container.
-
-2. Create a custom role called `Device Control Evidence Data Provider` for accessing the container.  The role should have the following permissions:
-
-   ```json
-   "permissions": [
-               {
-                   "actions": [
-                       "Microsoft.Storage/storageAccounts/blobServices/containers/read",
-                       "Microsoft.Storage/storageAccounts/blobServices/containers/write",
-                       "Microsoft.Storage/storageAccounts/blobServices/read"
-                   ],
-                   "notActions": [],
-                   "dataActions": [
-                       "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/add/action",
-                       "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write"
-                   ],
-                   "notDataActions": []
-               }
-           ]
-   ```
-
-   Custom roles can be created via [CLI](/azure/role-based-access-control/custom-roles-cli) or [PowerShell](/azure/role-based-access-control/custom-roles-powershell)
-
-   > [!TIP]
-   > The built-in role, [Storage Blob Data Contributor](/azure/role-based-access-control/built-in-roles/storage) has delete permissions for the container, which is not required to store device control feature evidence. The built-in role, [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles/storage) lacks the write permissions that are required. This is why a custom role is recommended.
-
-   > [!IMPORTANT]
-   > To ensure that the integrity of the file evidence use [Azure Immutable Storage](/azure/storage/blobs/immutable-storage-overview)
-
-3. Assign the users of device control to the `Device Control Evidence Data Provider` role.
-
-4. Set the `RemoteStorageFileEvent` to the URL of the Azure Blob Storage container.
 
 ## Next steps
 

@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - m365-security
-  - highpri
-  - tier1
+- m365-security
+- highpri
+- tier1
 ms.topic: conceptual
-ms.date: 1/5/2024
+ms.date: 07/18/2024
 ---
 
 # Advanced hunting in multi-tenant management in Microsoft Defender XDR
@@ -37,9 +37,6 @@ This action opens a side pane from which you can specify the tenants to include 
    :::image type="content" source="/defender/media/defender/mto-cross-tenants-sidepane.png" alt-text="Screenshot of the Microsoft Defender XDR cross tenants advanced hunting query side pane scope" lightbox="/defender/media/defender/mto-cross-tenants-sidepane.png":::
 
 Select the tenants you want to include in your query. Select **Apply**, then **Run query**.
-
-> [!NOTE]
-> Queries that use the `join` operator are currently not supported in multi-tenant management advanced hunting.
 
 The query results contain the tenant ID:
 

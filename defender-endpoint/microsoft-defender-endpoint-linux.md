@@ -1,12 +1,12 @@
 ---
 title: Microsoft Defender for Endpoint on Linux
-ms.reviewer: gopkr, pahuijbr
+ms.reviewer: gopkr, pahuijbr, megphapriya
 description: Describes how to install and use Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
 ms.author: dansimp
 author: dansimp
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 06/07/2024
+ms.date: 07/17/2024
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -97,9 +97,14 @@ In general you need to take the following steps:
   - Oracle Linux 9.x
   - Amazon Linux 2
   - Amazon Linux 2023
-  - Fedora 33 or higher
+  - Fedora 33-38
+    
   - Rocky 8.7 and higher
+  - Rocky 9.2 and higher
+    
   - Alma 8.4 and higher
+  - Alma 9.2 and higher
+    
   - Mariner 2
   
     > [!NOTE]

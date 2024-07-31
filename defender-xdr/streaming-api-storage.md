@@ -1,13 +1,8 @@
 ---
 title: Stream Microsoft Defender XDR events to your Storage account
 description: Learn how to configure Microsoft Defender XDR to stream Advanced Hunting events to your Storage account.
-keywords: raw data export, streaming API, API, Event Hubs, Azure storage, storage account, Advanced Hunting, raw data sharing
-search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.service: defender-xdr
-ms.mktglfcycl: deploy
-ms.sitesec: library
-ms.pagetype: security
 ms.author: macapara
 author: mjcaparas
 ms.localizationpriority: medium
@@ -18,7 +13,7 @@ ms.collection:
 - tier3
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 02/08/2023
+ms.date: 06/21/2024
 ---
 
 # Configure Microsoft Defender XDR to stream Advanced Hunting events to your Storage account
@@ -49,7 +44,10 @@ Once the Storage account is created, you'll need to:
 
 ## Enable raw data streaming
 
-1. Log in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> as a ***Global Administrator*** or ***Security Administrator***.
+1. Log in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> as a ***Security Administrator*** at a minimum.
+
+  >[!IMPORTANT]
+  >Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 2. Go to **Settings** \> **Microsoft Defender XDR** \> **Streaming API**. To go directly to the **Streaming API** page, use <https://security.microsoft.com/settings/mtp_settings/raw_data_export>.
 

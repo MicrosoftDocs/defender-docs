@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to use the advanced delivery policy in Exchange Online Protection (EOP) to identify messages that shouldn't be filtered in specific supported scenarios (third-party phishing simulations and messages delivered to security operations (SecOps) mailboxes.
 ms.service: defender-office-365
-ms.date: 11/2/2023
+ms.date: 07/16/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -64,7 +64,10 @@ Messages that are identified by the advanced delivery policy aren't security thr
     - _Create, modify, or remove configured settings in the advanced delivery policy_: Membership in the **Security Administrator** role groups in Email & collaboration RBAC <u>and</u> membership in the **Organization Management** role group in Exchange Online RBAC.
     - _Read-only access to the advanced delivery policy_: Membership in the **Global Reader** or **Security Reader** role groups in Email & collaboration RBAC.
       - **View-Only Organization Management** in Exchange Online RBAC.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+
+    > [!IMPORTANT]
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Use the Microsoft Defender portal to configure SecOps mailboxes in the advanced delivery policy
 
@@ -125,7 +128,7 @@ There must be a match on at least one **Domain** and one **Sending IP**, but no 
 If your MX record doesn't point to Microsoft 365, the IP address in the `Authentication-results` header must match the IP address in the advanced delivery policy. If the IP addresses don't match, you might need to configure [Enhanced Filtering for Connectors](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) so the correct IP address is detected.
 
 > [!NOTE]
-> Enhanced Filtering for Connectors doesn't work for third-party phishing simulations in complex email routing scenarios (for example, email from the internet is routed to Microsoft 365, then to an on-premises environment or third-party security service, and then back to Microsoft 365). EOP can't identify the true IP address of the message source. Don't try to work around this limitation by adding the IP addresses of the on-premises or third-party sending infrastructure to the third-party phishing simulation. Doing so effectively bypasses spam filtering for any internet sender who impersonates the domain that's specified in the third-party phishing simulation.
+> Enhanced Filtering for Connectors doesn't work for third-party phishing simulations in email routing scenarios that involve mail coming to Exchange online twice (for example, internet email routed to Microsoft 365, then to an on-premises environment or third-party security service, and then back to Microsoft 365). EOP can't identify the true IP address of the message source. Don't try to work around this limitation by adding the IP addresses of the on-premises or third-party sending infrastructure to the third-party phishing simulation. Doing so effectively bypasses spam filtering for any internet sender who impersonates the domain that's specified in the third-party phishing simulation. Routing scenarios where the MX record points to a third party service and then mail is routed to Exchange Online are supported if Enhanced Filtering for Connectors is configured.
 >
 > Currently, the advanced delivery policy for third-party phishing simulations doesn't support simulations within the same organization (`DIR:INT`), especially when email is routed through an Exchange Server gateway before Microsoft 365 in Hybrid mail flow. To work around this issue, you have the following options:
 >

@@ -167,7 +167,7 @@ On the **Type** tab, select **Choose a category for more details** to see more i
 - **Malware in email**: This selection takes you to [View data by Email \> Malware and Chart breakdown by Detection Technology](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) in the Threat protection status report.
 - **Spam detections**: This selection takes you to [View data by Email \> Spam and Chart breakdown by Detection Technology](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) in the Threat protection status report.
 
-On the ***Type** tab, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)** and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
+On the **Type** tab, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)** and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
 ### Direction view for the Mailflow status report
 
@@ -525,7 +525,7 @@ If you select an entry from the details table by clicking anywhere in the row ot
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
 - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
@@ -591,7 +591,7 @@ If you select an entry from the details table by clicking anywhere in the row ot
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
 - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
@@ -607,7 +607,7 @@ In the **View data by Email \> Malware** and **Chart breakdown by Detection Tech
 - **File detonation**<sup>\*</sup>: [Safe Attachments](safe-attachments-about.md) detected a malicious attachment during detonation analysis.
 - **File detonation reputation**<sup>\*</sup>: File attachments previously detected by [Safe Attachments](safe-attachments-about.md) detonations in other Microsoft 365 organizations.
 - **File reputation**: The message contains a file that was previously identified as malicious in other Microsoft 365 organizations.
-- **Anti-malware engine**<sup>\*</sup>: Detection from anti-malware engines.
+- **Anti-malware engine**<sup>\*</sup>: Detection from anti-malware.
 - **URL malicious reputation**
 - **URL detonation**<sup>\*</sup>: [Safe Links](safe-links-about.md) detected a malicious URL in the message during detonation analysis.
 - **URL detonation reputation**<sup>\*</sup>: URLs previously detected by [Safe Links](safe-links-about.md) detonations in other Microsoft 365 organizations.
@@ -659,7 +659,7 @@ If you select an entry from the details table by clicking anywhere in the row ot
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
 - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
@@ -722,7 +722,7 @@ If you select an entry from the details table by clicking anywhere in the row ot
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
 - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
@@ -786,7 +786,7 @@ If you select an entry from the details table by clicking anywhere in the row ot
 In Defender for Microsoft 365, the following actions are available at the top of the Email summary panel for the Threat protection status report:
 
 - :::image type="icon" source="media/m365-cc-sc-open-icon.png" border="false"::: **Open email entity**: For more information, see [The Email entity page in Microsoft Defender for Office 365](mdo-email-entity-page.md).
-- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: Email remediation](threat-explorer-threat-hunting.md#email-remediation).
+- :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action**: For information, see [Threat hunting: The Take action wizard](threat-explorer-threat-hunting.md#the-take-action-wizard).
 
 On the **Threat protection status** page, the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)**, :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)**, and :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Export](#export-report-data)** actions are available.
 
@@ -1045,13 +1045,16 @@ You need to be assigned permissions before you can view and use the reports that
 
 - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Security operations/Security data/Security data basics (read)** or **Authorization and settings/System settings/manage**.
 - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in any of the following role groups:
-  - **Organization Management**<sup>\*</sup>
+  - **Organization Management**¹
   - **Security Administrator**
   - **Security Reader**
   - **Global Reader**
-- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Security Reader**, or **Global Reader** roles in Microsoft Entra ID gives users the required permissions _and_ permissions for other features in Microsoft 365.
+- [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**¹ ², **Security Administrator**, **Security Reader**, or **Global Reader** roles in Microsoft Entra ID gives users the required permissions _and_ permissions for other features in Microsoft 365.
 
-<sup>\*</sup> Membership in the **Organization Management** role group or in the **Global Administrator** role is required to use the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)** or :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)** actions in reports (where available).
+¹ Membership in the **Organization Management** role group or in the **Global Administrator** role is required to use the :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **[Create schedule](#schedule-recurring-reports)** or :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **[Request report](#request-on-demand-reports-for-download)** actions in reports (where available).
+
+> [!IMPORTANT]
+> ² Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## What if the reports aren't showing data?
 
@@ -1097,8 +1100,10 @@ Depending on the report and the specific view in the report, one or more of the 
 
 ### Schedule recurring reports
 
-> [!NOTE]
-> To create scheduled reports, you need to be a member of the **Organization management** role in Exchange Online or the **Global Administrator** role in Microsoft Entra ID.
+To create scheduled reports, you need to be a member of the **Organization management** role in Exchange Online or the **Global Administrator**<sup>\*</sup> role in Microsoft Entra ID.
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 1. On the report page, select :::image type="icon" source="media/m365-cc-sc-create-icon.png"::: **Create schedule** to start the new scheduled report wizard.
 
@@ -1183,10 +1188,10 @@ Back on the **Manage schedules** page, the deleted scheduled report entry is no 
 
 ### Request on-demand reports for download
 
-[Request on-demand reports](#request-on-demand-reports-for-download)
+To create on-demand reports, you need to be a member of the **Organization management** role in Exchange Online or the **Global Administrator**<sup>\*</sup> role in Microsoft Entra ID.
 
-> [!NOTE]
-> To create on-demand reports, you need to be a member of the **Organization management** role in Exchange Online or the **Global Administrator** role in Microsoft Entra ID.
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 1. On the report page, select :::image type="icon" source="media/m365-cc-sc-download-icon.png" border="false"::: **Request report** to start the new on-demand report wizard.
 
@@ -1218,8 +1223,10 @@ The report creation task (and eventually the finished report) is available on th
 
 #### Download reports
 
-> [!NOTE]
-> To download on-demand reports, you need to be a member of the **Organization management** role in Exchange Online or the **Global Administrator** role in Microsoft Entra ID.
+To download on-demand reports, you need to be a member of the **Organization management** role in Exchange Online or the **Global Administrator**<sup>\*</sup> role in Microsoft Entra ID.
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 After you request an on-demand report as described in the previous section, you check the status of the report and eventually download the report on the **Reports for download** page in the Defender portal.
 

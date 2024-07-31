@@ -5,7 +5,7 @@ ms.service: defender-office-365
 ms.author: chrisda
 author: MSFTBen
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-guidance-templates

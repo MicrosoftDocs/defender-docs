@@ -195,9 +195,8 @@ Once the above configuration is done and synced with the device, the following a
 - Web Protection and other features will be activated.
 
 > [!NOTE]
-> For supervised devices, admins can setup Zero touch onboarding with the new [ZeroTouch Control Filter Profile](#device-configuration-profile-control-filter).
-
-Defender for Endpoint VPN Profile will not be installed on the device and Web protection will be provided by the Control Filter Profile.
+> - Zero touch setup can take up to 5 minutes to complete in the background. 
+> - For supervised devices, admins can set up Zero touch onboarding with the [ZeroTouch Control Filter Profile](#device-configuration-profile-control-filter). Defender for Endpoint VPN Profile will not be installed on the device and Web protection will be provided by the Control Filter Profile.
 
 ### Auto-Onboarding of VPN profile (Simplified Onboarding)
 
@@ -230,8 +229,6 @@ Admins can configure auto-setup of VPN profile. This will automatically set up t
 1. In the *Review + Create* section, verify that all the information entered is correct and then select **Create**.
 
 ##  **User Enrollment setup** (only for Intune User Enrolled devices)
-> [!IMPORTANT]
-> User Enrollment for Microsoft Defender on iOS is in public preview. The following information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 Microsoft Defender iOS app can be deployed on the Intune User Enrolled devices using the following steps.
 
@@ -258,9 +255,10 @@ Microsoft Defender iOS app can be deployed on the Intune User Enrolled devices u
 Defender app is installed into the user's device. User signs in and completes the onboarding. Once the device is successfully onboarded, it will be visible in the Defender Security Portal under Device Inventory.
 
 ### Supported features and limitations
-  1. Supported all the current capabilities of MDE iOS like – Web protection, Network Protection, Jailbreak detection, Vulnerabilities in OS and Apps, Alerting in Defender Security Portal and Compliance policies. 
+1. Supports all the current capabilities of Defender for Endpoint iOS like – Web protection, Network Protection, Jailbreak detection, Vulnerabilities in OS and Apps, Alerting in Defender Security Portal and Compliance policies. 
   1. Zero touch (silent) deployment and auto onboarding of VPN is not supported with User Enrollment since admins cannot push a device wide VPN profile with User Enrollment.
-  1. For Vulnerability management of apps, only apps in the work profile will be visible. 
+  1. For vulnerability management of apps, only apps in the work profile will be visible.
+  1. It can take up to 10 minutes for newly onboarded devices to become compliant if targeted by compliance policies.  
   1. Read more on the [User Enrollment limitations and capabilities](/mem/intune/enrollment/ios-user-enrollment-supported-actions#limitations-and-capabilities-not-supported).
 
 
