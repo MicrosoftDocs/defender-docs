@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender for Cloud Apps in Microsoft Defender XDR
-description: Learn about changes from the Microsoft Defender for Cloud Apps to Microsoft Defender XDR.
+title: Microsoft Defender for Cloud Apps in the Microsoft Defender portal
+description: Learn about using Microsoft Defender for Cloud Apps in the Microsoft Defender portal.
 ms.service: defender-xdr
 ms.localizationpriority: medium
 f1.keywords:
@@ -8,7 +8,7 @@ f1.keywords:
 ms.author: bagol
 author: batamig
 manager: raynew
-ms.date: 06/18/2024
+ms.date: 07/31/2024
 audience: ITPro
 ms.topic: conceptual
 search.appverid: 
@@ -20,7 +20,7 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ---
 
-# Microsoft Defender for Cloud Apps in Microsoft Defender XDR
+# Microsoft Defender for Cloud Apps in the Microsoft Defender portal
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -29,102 +29,35 @@ ms.custom: admindeeplinkDEFENDER
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 - [Microsoft Defender for Cloud Apps](/defender-cloud-apps/)
 
-Microsoft Defender for Cloud Apps is part of Microsoft Defender XDR, and uses the Microsoft Defender portal to allow security admins to perform their security tasks in one location. The Microsoft Defender portal simplifies workflows and combines functionality from other Microsoft Defender XDR services to Defender for Cloud Apps. 
+Microsoft Defender for Cloud Apps is available inside the Microsoft Defender portal. The Defender portal is the home for monitoring and managing security across your Microsoft identities, data, devices, apps, and infrastructure, allowing security admins to perform their security tasks in one location, across multiple Microsoft Defender services.
 
-The Microsoft Defender portal is the home for monitoring and managing security across your Microsoft identities, data, devices, apps, and infrastructure. SOC analysts can triage, investigate, and hunt across all Microsoft Defender XDR workloads, including cloud apps. For example, Defender for Cloud Apps alerts appear in Microsoft Defender XDR's incidents queue and alerts queue, with relevant content inside the alert pages, in a unified format with the proper adaptations to each alerts type. 
-
-All users accessing the classic Microsoft Defender for Cloud Apps portal are automatically rerouted to the Microsoft Defender portal, with no option to opt out. This article is intended for customers moving from the classic Defender for Cloud Apps portal and want to learn more about where to find Defender for Cloud Apps content in the Microsoft Defender portal.
+SOC analysts can triage, investigate, and hunt across all Microsoft Defender XDR workloads, including cloud apps.
 
 Take a look in Microsoft Defender XDR at <https://security.microsoft.com>.
 
 Learn more about the benefits: [Overview of Microsoft Defender XDR](microsoft-365-defender.md).
 
-## Quick reference
+## Perform cloud app security tasks
 
-The images and the tables below list the changes in navigation between Microsoft Defender for Cloud Apps and Microsoft Defender XDR.
+Find Defender for Cloud Apps functionality in the Microsoft Defender portal under **Cloud Apps**. For example:
 
-### Discover
+:::image type="content" source="media/defender-for-cloud-apps/cloud-apps.png" alt-text="Screenshot that shows the Defender for Cloud Apps Cloud discovery page." lightbox="media/defender-for-cloud-apps/cloud-apps.png":::
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="/defender/media/defender-cloud-apps-m365-defender-discover.png" alt-text="The new locations for Cloud Discovery features in the Microsoft Defender portal" lightbox="/defender/media/defender-cloud-apps-m365-defender-discover.png":::
+## Investigate cloud app alerts
 
-| Defender for Cloud Apps | Microsoft Defender XDR |
-|---------|---------|
-| Cloud Discover dashboard | Cloud apps -> Cloud discovery |
-| Discovered Apps | tab on Cloud Discovery page |
-| Discovered resources | tab on Cloud Discovery page |
-| IP addresses | tab on Cloud Discovery page |
-| Users | tab on Cloud Discovery page |
-| Devices | tab on Cloud Discovery page |
-| Cloud app catalog |  Cloud apps -> Cloud app catalog |
-| Create Cloud Discovery snapshot report | On the Cloud Discovery page, under Actions |
+Defender for Cloud Apps alerts show in the Defender portal's incident and alerts queues, with relevant content inside alert pages for each type of an alert. For more information, see [Investigate incidents in Microsoft Defender XDR](investigate-incidents.md).
 
-### Investigate
-
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="/defender/media/defender-cloud-apps-m365-defender-investigate.png" alt-text="The new locations for Investigation features in the Microsoft Defender portal" lightbox="/defender/media/defender-cloud-apps-m365-defender-investigate.png":::
-
-| Defender for Cloud Apps | Microsoft Defender XDR |
-|---------|---------|
-| Activity log | Cloud apps -> Activity log |
-| Files | Cloud apps -> Files |
-| Users and accounts | Assets -> Identities |
-| Security configuration | available in [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) |
-| Identity security posture | [Microsoft Defender for Identity's identity security posture assessments](/defender-for-identity/isp-overview) |
-| OAuth apps | Cloud apps -> OAuth apps |
-| Connected apps | Settings -> Cloud apps -> Connected apps |
-
-### Control
-
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="/defender/media/defender-cloud-apps-m365-defender-control.png" alt-text="The new locations for Control features in the Microsoft Defender portal" lightbox="/defender/media/defender-cloud-apps-m365-defender-control.png":::
-
-| Defender for Cloud Apps | Microsoft Defender XDR |
-|---------|---------|
-| Policies | Cloud apps -> Policy management. Note: Microsoft Entra ID Protection policies will be removed gradually from the Cloud apps policies list. To configure alerts from these policies, see [Configure Microsoft Entra IP alert service](investigate-alerts.md#configure-aad-ip-alert-service) |
-| Templates | Cloud apps -> Policy templates |
-
-### Settings
-
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="/defender/media/defender-cloud-apps-m365-defender-settings.png" alt-text="The new locations for Settings in the Microsoft Defender portal" lightbox="/defender/media/defender-cloud-apps-m365-defender-settings.png":::
-
-| Defender for Cloud Apps | Microsoft Defender XDR |
-|---------|---------|
-| Settings | Settings -> Cloud apps |
-| Settings/Governance log | Cloud apps -> Governance log |
-| Security extensions -> Playbooks | Settings -> Cloud apps |
-| Security extensions -> SIEM  agents | Settings -> Cloud apps |
-| Security extensions -> External  DLP | Settings -> Cloud apps |
-| Security extensions -> API  tokens | Settings -> Cloud apps |
-| Manage admin access -> Admin roles | Permissions-> Cloud apps-> Roles |
-| Manage admin access -> Activity privacy permissions | Permissions-> Cloud apps-> Activity privacy permissions |
-| Exported reports | Reports -> Cloud apps -> Exported reports |
-| Scoped deployment and privacy | Settings -> Cloud Apps -> Scoped deployment and privacy |
-| Connected Apps / App connectors | Settings -> Cloud Apps -> Connected apps -> App Connectors |
-| Conditional Access App Control | Settings -> Cloud apps -> Connected apps -> Conditional Access App Control apps |
-| IP address ranges              | Settings -> Cloud apps                                      |
-| User groups                    | Settings -> Cloud apps                                      |
-
-The capabilities on the following pages are fully integrated into Microsoft Defender XDR, and therefore don't have their own standalone experience in Microsoft Defender XDR:
-  
-- [Settings > Microsoft Entra ID Protection](investigate-alerts.md)
-- [Settings > App Governance](/defender-cloud-apps/app-governance-get-started)
-- [Settings > Microsoft Defender for Identity](/defender-for-identity/deploy-defender-identity)
-
-## What's changed
-
-Learn about the changes that have come with the integration of Defender for Cloud Apps and Microsoft Defender XDR.
-
-### Global search
+## Global search for your connected cloud apps
 
 Use the Microsoft Defender portal's global search bar at the top of the page to search for connected apps in Defender for Cloud Apps.
 
-:::image type="content" source="/defender/media/global-search-apps.png" alt-text="Search for connected apps.":::
+:::image type="content" source="/defender/media/global-search-apps.png" alt-text="Screenshot that shows searching for connected apps." lightbox="/defender/media/global-search-apps.png":::
 
-### Assets and identities
+## Assets and identities
 
-As part of the creation of a dedicated **Assets** section that spans the entire Microsoft Defender XDR experience, the **Users and Accounts** section of Defender for Cloud Apps is rebranded as the **Identities** section. No changes to functionality are expected.
+Use the **Assets > Identities** page to find comprehensive details about entities pulled from connected cloud applications, including a users's activity history and security alerts related to the user. For example:
+
+:::image type="content" source="media/defender-for-cloud-apps/dashboard-top-users.png" alt-text="Screenshot that shows cloud app entities in the Identities page." lightbox="media/defender-for-cloud-apps/dashboard-top-users.png":::
 
 <a name='redirection-from-the-classic-microsoft-defender-for-cloud-apps-portal-to-microsoft-365-defender'></a>
 
