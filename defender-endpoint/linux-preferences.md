@@ -136,9 +136,6 @@ Specifies the degree of parallelism for on-demand scans. This corresponds to the
 
 #### Exclusion merge policy
 
-> [!NOTE]
-> ExclusionSetting - you can use
-
 Specifies the merge policy for exclusions. It can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). Administrator-defined (admin_only) are exclusions that are configured by Defender for Endpoint policy. This setting can be used to restrict local users from defining their own exclusions.
 
 |Description|JSON Value|Defender Portal Value|
@@ -149,6 +146,7 @@ Specifies the merge policy for exclusions. It can be a combination of administra
 
 > [!NOTE]
 > Available in Defender for Endpoint version `100.83.73` or later.
+> Can also configure exclusions under [exclusionSettings](exclusion-setting-preferences-preview)
 
 #### Scan exclusions
 
@@ -383,7 +381,7 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 ### Exclusion Setting preferences [**PREVIEW**]
 
 > [!NOTE] 
-> Available in Defender for Endpoint version `101.23092.0012` or later.
+> Available in Defender for Endpoint version `101.23092.0012` or later till Insider Slow Ring.
 
 The *exclusionSettings* section of the configuration profile is used to configure various exclusions for Microsoft Defender for Endpoint for Linux.
 
@@ -444,6 +442,7 @@ If nothing is specified in for an exclusion under *exclusionSettings* in managed
 
 > [!NOTE]
 > Previously applied exclusions using (`mdatp_managed.json`) or by CLI will remain unaffected. The scope for those exclusions will be (`epp`) since they were added under (`antivirusEngine`).
+
 ##### Path to excluded content
 
 Used to exclude content from the scan by full file path.
@@ -457,7 +456,10 @@ Used to exclude content from the scan by full file path.
 
 ##### Path type (file / directory)
 
-Indicates if the *path* property refers to a file or directory.
+Indicates if the *path* property refers to a file or directory. 
+
+> [!NOTE]
+> File path must already exist if adding file exclusion with global scope.
 
 |Description|JSON Value|
 |---|---|
