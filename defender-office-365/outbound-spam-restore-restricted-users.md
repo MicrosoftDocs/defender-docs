@@ -70,7 +70,7 @@ For more information about compromised _connectors_ and how to remove them from 
 
 ## Remove a user from the Restricted entities page in the Microsoft Defender portal
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Restricted entities**. Or, to go directly to the **Restricted entities** page, use <https://security.microsoft.com/restrictedentities>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Restricted entities**. Or, to go directly to the **Restricted entities** page, use <https://security.microsoft.com/restrictedentities>.
 
 2. On the **Restricted entities** page, identify the user account to unblock. The **Entity** value is **Mailbox**.
 
