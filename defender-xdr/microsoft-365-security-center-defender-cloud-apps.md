@@ -1,6 +1,7 @@
 ---
 title: Microsoft Defender for Cloud Apps in the Microsoft Defender portal
-description: Learn about using Microsoft Defender for Cloud Apps in the Microsoft Defender portal.ms.service: defender-xdr
+description: Learn about using Microsoft Defender for Cloud Apps in the Microsoft Defender portal.
+ms.service: defender-xdr
 ms.localizationpriority: medium
 f1.keywords:
 - NOCSH
