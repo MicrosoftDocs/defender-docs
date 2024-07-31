@@ -133,7 +133,7 @@ Examples:
     Extension exclusion removed successfully
     ```
 
-- Add/Remove an exclusion for a file *(File path should already be present in case of adding or removing exclusion with scope global)*:
+- Add/Remove an exclusion for a file *(File path should already be present in case of adding or removing exclusion with global scope)*:
 
     ```bash
     mdatp exclusion file add --path /var/log/dummy.log --scope epp
