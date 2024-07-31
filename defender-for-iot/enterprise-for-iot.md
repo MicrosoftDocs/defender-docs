@@ -31,10 +31,10 @@ include the types of devices considered individual or not here as well. how much
 https://learn.microsoft.com/azure/defender-for-iot/organizations/architecture#devices-monitored-by-defender-for-iot
 
 ## Alerts
-<!-- here Enterprise was written with a capital and I have lowered that-->
-Most Defender for Endpoint alerts <!--network-based detections -->are also relevant for enterprise IoT devices, such as alerts for scans involving managed endpoints. Alerts for enterprise IoT devices detected by Defender for Endpoint are only available in Defender for Endpoint only<!-- where are they now available? -->.
 
-For more information, see [Alerts queue in Microsoft 365 Defender](/defender-endpoint/alerts-queue.md). <!-- should this be changed? what alternatives are there? also change to in Microsoft Defender portal? Amit-->
+Most Defender for Endpoint alerts are also relevant for enterprise IoT devices, such as alerts for scans involving managed endpoints. Alerts for enterprise IoT devices detected by Defender for Endpoint are only available in Defender for Endpoint only.
+
+For more information, see [Alerts queue in Microsoft 365 Defender](/defender-endpoint/alerts-queue.md).
 
 ## Recommendations
 
