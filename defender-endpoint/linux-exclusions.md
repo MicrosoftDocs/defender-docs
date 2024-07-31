@@ -81,7 +81,7 @@ Process|A specific process (specified either by the full path or file name) and 
 File, folder, and process exclusions support the following wildcards:
 
 > [!NOTE]
-> File path needs to be present before adding or removing file exclusions with scope as global
+> File path needs to be present before adding or removing file exclusions with scope as global.
 > Wildcards are not supported while configuring global exclusions.
 
 Wildcard|Description|Examples|
