@@ -81,7 +81,8 @@ Process|A specific process (specified either by the full path or file name) and 
 File, folder, and process exclusions support the following wildcards:
 
 > [!NOTE]
-> Wildcards are not supported while configuring global exclusions. 
+> File path needs to be present before adding or removing file exclusions with scope as global
+> Wildcards are not supported while configuring global exclusions.
 
 Wildcard|Description|Examples|
 ---|---|---
@@ -114,7 +115,7 @@ mdatp exclusion
 
 Examples:
 
-- Add an exclusion for a file extension *(Extension exclusion isn't supported for  global exclusion scope)* : 
+- Add an exclusion for a file extension *(Extension exclusion isn't supported for global exclusion scope)* : 
 
     ```bash
     mdatp exclusion extension add --name .txt
@@ -132,7 +133,7 @@ Examples:
     Extension exclusion removed successfully
     ```
 
-- Add/Remove an exclusion for a file:
+- Add/Remove an exclusion for a file *(File path should already be present in case of adding or removing exclusion with scope global)*:
 
     ```bash
     mdatp exclusion file add --path /var/log/dummy.log --scope epp
