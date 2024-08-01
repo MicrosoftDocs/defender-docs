@@ -128,9 +128,10 @@ To confirm that network protection has been started successfully, run the follow
 mdatp health --field network_protection_status
 ```
 
-#### JAMF deployment
+#### JAMF Pro deployment
 
-A successful JAMF deployment requires a configuration profile to set the enforcement level of network protection.
+A successful JAMF Pro deployment requires a configuration profile to set the enforcement level of network protection.
+
 After you create this configuration profile, assign it to the devices where you want to enable network protection.
 
 ##### Configure the enforcement level
