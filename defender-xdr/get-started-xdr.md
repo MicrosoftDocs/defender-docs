@@ -96,6 +96,9 @@ Defender Experts for XDR lets you exclude devices and users from remediation act
 
 :::image type="content" source="media/exclude-user-groups.png" alt-text="Screenshot to exclude user groups in Defender Experts for XDR." lightbox="media/exclude-user-groups.png":::
 
+> [!NOTE]
+> You can only exclude users by adding them to an Microsoft Entra ID security group. On-prem Entra ID users cannot be excluded at this time.
+
 To edit or update exclusions after the initial setup, go to **Settings** > **Defender Experts** > **Exclusions**, then go to the **Device groups** or **User groups** tab.
 
 <!--
