@@ -15,7 +15,7 @@ ms.collection:
   - essentials-get-started
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 06/28/2024
+ms.date: 08/01/2024
 ---
 
 # Get started with Microsoft Defender Experts for XDR
@@ -63,7 +63,7 @@ You also need to grant our experts one or both of the following permissions:
 
 To edit or update permissions after the initial setup, go to **Settings** > **Defender Experts** > **Permissions**.
 
-## Exclude devices from remediation
+## Exclude devices and users from remediation
 
 Defender Experts for XDR lets you exclude devices and users from remediation actions taken by our experts and instead get remediation guidance for those entities. These exclusions are based on identified [device groups](/defender-endpoint/machine-groups) in Microsoft Defender for Endpoint<!--and identified [user groups](/entra/fundamentals/concept-learn-about-groups) in Microsoft Entra ID-->.
 
@@ -83,7 +83,7 @@ Defender Experts for XDR lets you exclude devices and users from remediation act
 
 :::image type="content" source="/defender/media/xdr/exclude-device-groups.png" alt-text="Screenshot of option to exclude device groups." lightbox="/defender/media/xdr/exclude-device-groups.png":::
 
-<!--**To exclude user groups:**
+**To exclude user groups:**
 
 1. In the same Defender Experts settings setup, under **Exclusions**, go to the **User groups** tab.
 2. Select **+ Add user groups**, then search for and choose the user group(s) that you wish to exclude.
