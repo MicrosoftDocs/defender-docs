@@ -70,7 +70,7 @@ For more information about compromised _connectors_ and how to remove them from 
 
 ## Remove a user from the Restricted entities page in the Microsoft Defender portal
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Restricted entities**. Or, to go directly to the **Restricted entities** page, use <https://security.microsoft.com/restrictedentities>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Restricted entities**. Or, to go directly to the **Restricted entities** page, use <https://security.microsoft.com/restrictedentities>.
 
 2. On the **Restricted entities** page, identify the user account to unblock. The **Entity** value is **Mailbox**.
 
@@ -123,7 +123,7 @@ The default alert policy named **User restricted from sending email** automatica
 
      - On the **Review your settings** page, select **Submit**, and then select **Done**.
 
-4. Back in the ***User restricted from sending email** flyout, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: at the top of the flyout.
+4. Back in the **User restricted from sending email** flyout, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: at the top of the flyout.
 
 ## Use Exchange Online PowerShell to view and remove users from the Restricted entities page
 

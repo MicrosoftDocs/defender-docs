@@ -8,7 +8,7 @@ author: siosulli
 ms.author: siosulli
 ms.topic: conceptual
 ms.custom: nextgen
-ms.date: 07/13/2023
+ms.date: 07/25/2024
 ms.reviewer: 
 manager: deniseb
 ms.collection: 
@@ -92,7 +92,7 @@ By default, lists that have been configured in local group policy and the Window
 
 ### Use Microsoft Intune to disable local list merging
 
-1. In the [Microsoft Intune admin center](https://endpoint.microsoft.com), select **Endpoint security** > **Antivirus**.
+1. In the [Microsoft Intune admin center](https://intune.microsoft.com), select **Endpoint security** > **Antivirus**.
 
 2. Choose **Create Policy**, or modify an existing Microsoft Defender Antivirus policy.
 

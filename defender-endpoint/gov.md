@@ -163,7 +163,7 @@ These are the known gaps:
 |Microsoft Defender for Endpoint Security Configuration Management|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|![No](media/svg/check-no.svg)|
 
 > [!NOTE]
-> <sup>1</sup> While Microsoft Secure Score is available for GCC customers, there are some security recommendations that aren't available.
+> <sup>1</sup> While Microsoft Secure Score is available for GCC, GCC High and DoD customers, there are some security recommendations that aren't available.
 
 These are the features and known gaps for [Mobile Threat Defense (Microsoft Defender for Endpoint on Android & iOS)](mtd.md):
 
@@ -177,11 +177,11 @@ These are the features and known gaps for [Mobile Threat Defense (Microsoft Defe
 |Conditional Access/Conditional Launch|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Support for MAM|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 |Privacy Controls|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Microsoft Defender Vulnerability Management core capabilities <br/> (included in Defender for Endpoint Plan 2) |![Yes](media/svg/check-yes.svg) <sup>1</sup>|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
-|Microsoft Defender Vulnerability Management premium capabilities |![Yes](media/svg/check-yes.svg) <sup>1</sup>|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Microsoft Defender Vulnerability Management core capabilities <br/> (included in Defender for Endpoint Plan 2) <sup>1</sup>|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
+|Microsoft Defender Vulnerability Management premium capabilities <sup>1</sup>|![Yes](media/svg/check-yes.svg) |![Yes](media/svg/check-yes.svg)|![Yes](media/svg/check-yes.svg)|
 
 > [!NOTE]
 >
-> <sup>1</sup> The Defender Vulnerability Management Report inaccuracy functionality is not available for GCC customers.
+> <sup>1</sup> The Defender Vulnerability Management Report inaccuracy functionality is not available for GCC, GCC High and DoD customers.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
