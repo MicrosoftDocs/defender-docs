@@ -318,7 +318,7 @@ DeviceProcessEvents
 
       7.	Stop the .ps1 ran in step #2
 
-      8.	Share the generated .zip file along with support bundle that can be collected as mentioned in [Support bundle](#support-bundle-collection).      
+      8.	Share the generated .zip file along with support bundle that can be collected as mentioned in [steps](#support-bundle-collection).      
 
 ### Support bundle collection
 5. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
