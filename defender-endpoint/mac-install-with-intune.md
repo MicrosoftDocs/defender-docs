@@ -65,7 +65,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 
 1. Under **Configuration profiles**, select **Create Profile**.
 
-   This profile is needed for Big Sur (11) or later. It is ignored on older versions of macOS, because they use the kernel extension.
+   This profile is needed for Big Sur (11) or later. It's ignored on older versions of macOS, because they use the kernel extension.
 
 1. On the **Policies** tab, select **Create** > **New Policy**. 
 
@@ -270,7 +270,7 @@ Download [accessibility.mobileconfig](https://github.com/microsoft/mdatp-xplat/b
 > [!CAUTION]
 > macOS 14 (Sonoma) contains new privacy enhancements. Beginning with this version, by default, applications cannot access Bluetooth without explicit consent. Microsoft Defender for Endpoint uses it if you configure Bluetooth policies for Device Control.
 
-Download [bluetooth.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/bluetooth.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles) and use the same workflow as for the Accessibility settings above to enable Bluetooth access.
+Download [bluetooth.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/bluetooth.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles) and use the same workflow as for the Accessibility settings mentioned earlier in this article to enable Bluetooth access.
 
 > [!NOTE]
 > Bluetooth granted through Apple MDM Configuration Profile is not reflected in System Settings => Privacy & Security => Bluetooth.
