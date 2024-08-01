@@ -476,7 +476,7 @@ Download the onboarding package from Microsoft Defender portal.
      curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
      ```
      
-   - You can run additional detection tests on zip files using either of the following commands:
+   - You can run more detection tests on zip files using either of the following commands:
       
       ```bash
       curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
@@ -503,16 +503,16 @@ Download the onboarding package from Microsoft Defender portal.
 
 The following external package dependencies exist for the mdatp package:
 
-- The mdatp RPM package requires "glibc >= 2.17", "audit", "policycoreutils", "semanage" "selinux-policy-targeted", "mde-netfilter"
-- For RHEL6 the mdatp RPM package requires "audit", "policycoreutils", "libselinux", "mde-netfilter"
-- For DEBIAN the mdatp package requires "libc6 >= 2.23", "uuid-runtime", "auditd", "mde-netfilter"
-- For Mariner the mdatp package requires "attr", "audit", "diffutils", "libacl", "libattr", "libselinux-utils", "selinux-policy", "policycoreutils", "mde-netfilter"
+- The mdatp RPM package requires `glibc >= 2.17`, `audit`, `policycoreutils`, `semanage` `selinux-policy-targeted`, `mde-netfilter`
+- For RHEL6 the mdatp RPM package requires `audit`, `policycoreutils`, `libselinux`, `mde-netfilter`
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, `auditd`, `mde-netfilter`
+- For Mariner the mdatp package requires `attr`, `audit`, `diffutils`, `libacl`, `libattr`, `libselinux-utils`, `selinux-policy`, `policycoreutils`, `mde-netfilter`
 
 The mde-netfilter package also has the following package dependencies:
 
-- For DEBIAN, the mde-netfilter package requires "libnetfilter-queue1", "libglib2.0-0"
-- For RPM, the mde-netfilter package requires "libmnl", "libnfnetlink", "libnetfilter_queue", "glib2"
-- For Mariner, the mde-netfilter package requires "libnfnetlink", "libnetfilter_queue"
+- For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1`, `libglib2.0-0`
+- For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, `glib2`
+- For Mariner, the mde-netfilter package requires `libnfnetlink`, `libnetfilter_queue`
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
 
@@ -523,7 +523,7 @@ See [Log installation issues](linux-resources.md#log-installation-issues) for mo
 
 ## How to migrate from Insiders-Fast to Production channel
 
-1. Uninstall the "Insiders-Fast channel" version of Defender for Endpoint on Linux.
+1. Uninstall the `Insiders-Fast channel` version of Defender for Endpoint on Linux.
 
    ```bash
    sudo yum remove mdatp
@@ -536,13 +536,13 @@ See [Log installation issues](linux-resources.md#log-installation-issues) for mo
    ```
 
    > [!NOTE]
-   > The output should show "packages-microsoft-com-fast-prod".
+   > The output should show `packages-microsoft-com-fast-prod`.
 
    ```bash
    sudo yum-config-manager --disable packages-microsoft-com-fast-prod
    ```
 
-1. Redeploy Microsoft Defender for Endpoint on Linux using the "Production channel".
+1. Redeploy Microsoft Defender for Endpoint on Linux using the Production channel.
 
 ## Uninstallation
 
