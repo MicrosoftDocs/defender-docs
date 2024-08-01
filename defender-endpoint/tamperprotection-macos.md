@@ -298,7 +298,7 @@ Tampering alert is raised in the Microsoft Defender portal
 - Try to stop the Defender for Endpoint process (kill).
 - Try to delete, rename, modify, move Defender for Endpoint files (similar to what a malicious user would do), for example:
 
-  - /Applications/Microsoft Defender ATP.app/
+  - /Applications/Microsoft Defender.app/
   - /Library/LaunchDaemons/com.microsoft.fresno.plist
   - /Library/LaunchDaemons/com.microsoft.fresno.uninstall.plist
   - /Library/LaunchAgents/com.microsoft.wdav.tray.plist
