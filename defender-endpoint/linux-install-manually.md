@@ -58,9 +58,9 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
 
 ## Configure the Linux software repository
 
-Defender for Endpoint on Linux can be deployed from one of the following channels (denoted as *[channel]*): *insiders-fast*, *insiders-slow*, or *prod*. Each of these channels corresponds to a Linux software repository. The instructions in this article describe configuring your device to use one of these repositories.
+Defender for Endpoint on Linux can be deployed from one of the following channels (denoted as *[channel]*): *insiders-fast*, *insiders-slow*, or `prod`. Each of these channels corresponds to a Linux software repository. The instructions in this article describe configuring your device to use one of these repositories.
 
-The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in *insiders-fast* are the first ones to receive updates and new features, followed later by *insiders-slow* and lastly by *prod*.
+The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in *insiders-fast* are the first ones to receive updates and new features, followed later by *insiders-slow* and lastly by `prod`.
 
 In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
 
@@ -160,7 +160,7 @@ Read more [here](https://github.com/microsoft/mdatp-xplat/tree/master/linux/inst
    > [!TIP]
    > Use SPident command to identify system related information including release *[version]*.
 
-   For example, if you're running SLES 12 and wish to deploy Microsoft Defender for Endpoint on Linux from the *prod* channel:
+   For example, if you're running SLES 12 and wish to deploy Microsoft Defender for Endpoint on Linux from the `prod` channel:
 
    ```bash
    sudo zypper addrepo -c -f -n microsoft-prod https://packages.microsoft.com/config/sles/12/prod.repo
@@ -198,7 +198,7 @@ Read more [here](https://github.com/microsoft/mdatp-xplat/tree/master/linux/inst
   > [!TIP]
   > Use hostnamectl command to identify system related information including release *[version]*.
 
-  For example, if you're running Ubuntu 18.04 and wish to deploy Microsoft Defender for Endpoint on Linux from the *prod* channel:
+  For example, if you're running Ubuntu 18.04 and wish to deploy Microsoft Defender for Endpoint on Linux from the `prod` channel:
 
   ```bash
   curl -o microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
@@ -210,7 +210,7 @@ Read more [here](https://github.com/microsoft/mdatp-xplat/tree/master/linux/inst
   sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-[channel].list
   ```
 
-  For example, if you chose *prod* channel:
+  For example, if you chose `prod` channel:
 
   ```bash
   sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-prod.list
@@ -263,7 +263,7 @@ curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | su
   > [!NOTE]
   > On Mariner, Insider Fast Channel is not available.
 
-  If you want to deploy Defender for Endpoint on Linux from the *prod* channel. Use the following commands
+  If you want to deploy Defender for Endpoint on Linux from the `prod` channel. Use the following commands
   
   ```bash
   sudo dnf install mariner-repos-extras
