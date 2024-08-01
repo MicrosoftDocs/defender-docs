@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/20/2024
+ms.date: 08/01/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
@@ -100,7 +100,7 @@ As part of the Endpoint Detection and Response capabilities, Microsoft Defender 
 
 Download [netfilter.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/netfilter.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
-To configure network filter:
+To configure your network filter:
 
 1. Under **Configuration profiles**, select **Create Profile**.
 
@@ -160,7 +160,7 @@ To configure Full Disk Access:
 1. Review the configuration profile. Select **Create**.
 
 > [!NOTE]
-> Full Disk Access granted through Apple MDM Configuration Profile is not reflected in System Settings => Privacy & Security => Full Disk Access.
+> Full Disk Access granted through Apple MDM Configuration Profile is not reflected in **System Settings** > **Privacy & Security** > **Full Disk Access**.
 
 ### Step 4: Background services
 
@@ -267,8 +267,8 @@ Download [accessibility.mobileconfig](https://github.com/microsoft/mdatp-xplat/b
 
 ### Step 7: Bluetooth permissions
 
-   > [!CAUTION]
-   > macOS 14 (Sonoma) contains new privacy enhancements. Beginning with this version, by default, applications cannot access Bluetooth without explicit consent. Microsoft Defender for Endpoint uses it if you configure Bluetooth policies for Device Control.
+> [!CAUTION]
+> macOS 14 (Sonoma) contains new privacy enhancements. Beginning with this version, by default, applications cannot access Bluetooth without explicit consent. Microsoft Defender for Endpoint uses it if you configure Bluetooth policies for Device Control.
 
 Download [bluetooth.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/bluetooth.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles) and use the same workflow as for the Accessibility settings above to enable Bluetooth access.
 
@@ -288,7 +288,7 @@ For more information, see [Deploy updates for Microsoft Defender for Endpoint on
 Download [AutoUpdate2.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/settings/microsoft_auto_update/com.microsoft.autoupdate2.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/settings/microsoft_auto_update).
 
 > [!NOTE]
-> The sample AutoUpdate2.mobileconfig from the GitHub repository has it set to Current Channel (Production).
+> The sample `AutoUpdate2.mobileconfig` from the GitHub repository has it set to Current Channel (Production).
 
 1. Under **Configuration profiles**, select **Create Profile**.
 
@@ -320,6 +320,7 @@ In this step, we go over *Preferences* that enables you to configure anti-malwar
 
 > [!NOTE]
 > If managed via Intune, it will not allow for the device to register via the Microsoft Defender for Endpoint Security Settings Management ([Microsoft Defender XDR portal (https://security.microsoft.com)](Microsoft Defender XDR portal (https://security.microsoft.com) or)).
+
 > [!IMPORTANT]
 > Important
 > Only the policies set via Intune will take effect, and the Microsoft Defender for Endpoint Security Settings Management will not be used.
@@ -355,9 +356,8 @@ In the [Microsoft Defender portal](https://sip.security.microsoft.com/homepage?t
 
 1. Review the policy in **Review+Create** and select **Save**. 
 
-
 > [!TIP]
-> You can also configure network protection by appending the information from [**Network protection to help prevent macOS connections to bad sites**](network-protection-macos.md) to the .mobileconig from step 8.
+> You can also configure network protection by appending the information from [**Network protection to help prevent macOS connections to bad sites**](network-protection-macos.md) to the `.mobileconfig` from step 8.
 
 ### Step 11: Device Control for Microsoft Defender for Endpoint on macOS
 
