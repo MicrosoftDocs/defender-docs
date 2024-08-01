@@ -3,7 +3,7 @@ title: Use network protection to help prevent macOS connections to bad sites
 description: Protect your network by preventing macOS users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 12/08/2023
+ms.date: 08/01/2024
 audience: ITPro
 author: siosulli
 ms.author: siosulli
@@ -128,9 +128,10 @@ To confirm that network protection has been started successfully, run the follow
 mdatp health --field network_protection_status
 ```
 
-#### JAMF deployment
+#### JAMF Pro deployment
 
-A successful JAMF deployment requires a configuration profile to set the enforcement level of network protection.
+A successful JAMF Pro deployment requires a configuration profile to set the enforcement level of network protection.
+
 After you create this configuration profile, assign it to the devices where you want to enable network protection.
 
 ##### Configure the enforcement level
