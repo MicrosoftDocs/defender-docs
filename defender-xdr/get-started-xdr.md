@@ -57,7 +57,7 @@ You also need to grant our experts one or both of the following permissions:
 
 1. In the same Defender Experts settings setup, under **Permissions**, choose the access level(s) you want to grant our experts.
 
-1. If you wish to [exclude device and user groups](#exclude-devices-from-remediation) in your organization from remediation actions, select **Manage exclusions**.
+1. If you wish to [exclude device and user groups](#exclude-devices-and-users-from-remediation) in your organization from remediation actions, select **Manage exclusions**.
 
 1. Select **Next** to [add contact persons or groups](#tell-us-who-to-contact-for-important-matters).
 
