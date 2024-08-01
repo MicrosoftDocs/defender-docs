@@ -437,7 +437,7 @@
            items:
            - name: AIR overview
              href: air-about.md
-           - name: How automated investigation and response works
+           - name: AIR examples
              href: air-examples.md
          - name: Review and approve (or reject) pending actions
            href: air-review-approve-pending-completed-actions.md
