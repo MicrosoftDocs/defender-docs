@@ -446,7 +446,7 @@ You can visit **Apps** > **By platform** > **macOS** to see it on the list of al
 For more information, see [Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune](/mem/intune/apps/apps-advanced-threat-protection-macos).
 
 > [!IMPORTANT]
-> You should create and deploy the configuration profiles in the above order (step 1-13) for a successful system configuration.
+> You should create and deploy the configuration profiles in the order specified (steps 1-13) for a successful system configuration.
 
 #### Step 15: Download the onboarding package
 
