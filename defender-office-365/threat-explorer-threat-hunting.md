@@ -154,7 +154,7 @@ After you determine that an email message is a threat, the next step is remediat
 
 - Select one or more entries in the table by selecting the check box next to the first column. :::image type="icon" source="media/m365-cc-sc-take-actions-icon.png" border="false"::: **Take action** is available directly in the tab.
 
-  :::image type="content" source="../defender-office-365/media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active.":::
+  :::image type="content" source="media/te-rtd-all-email-view-take-action.png" alt-text="Screenshot of the Email view (tab) of the details table with a message selected and Take action active." lightbox="media/te-rtd-all-email-view-take-action.png":::
 
   > [!TIP]
   > **Take action** replaces the **Message actions** drop down list.

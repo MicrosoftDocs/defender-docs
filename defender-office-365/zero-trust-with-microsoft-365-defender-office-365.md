@@ -61,6 +61,6 @@ Learn how to set up your SecOps team with the [Microsoft Defender for Office 365
 
 Learn more about Zero Trust and how to build an enterprise-scale strategy and architecture with the [Zero Trust Guidance Center](/security/zero-trust).
 
-Learn about other Microsoft 365 capabilities that contribute to a strong Zero Trust strategy and architecture with [Zero Trust deployment plan with Microsoft 365](/microsoft-365/security/microsoft-365-zero-trust).
+Learn about other Microsoft 365 capabilities that contribute to a strong Zero Trust strategy and architecture with [Zero Trust deployment plan with Microsoft 365](/defender-xdr/zero-trust-with-microsoft-365-defender).
 
 For an overview of Zero Trust for Microsoft Defender XDR services, see [Zero Trust with Microsoft Defender XDR](/defender-xdr/zero-trust-with-microsoft-365-defender).
