@@ -97,7 +97,7 @@ Defender Experts for XDR lets you exclude devices and users from remediation act
 :::image type="content" source="media/exclude-user-groups.png" alt-text="Screenshot to exclude user groups in Defender Experts for XDR." lightbox="media/exclude-user-groups.png":::
 
 To edit or update exclusions after the initial setup, go to **Settings** > **Defender Experts** > **Exclusions**, then go to the **Device groups** or **User groups** tab.
--->
+
 <!--
 ### Exclude all high-value devices or users automatically
 
