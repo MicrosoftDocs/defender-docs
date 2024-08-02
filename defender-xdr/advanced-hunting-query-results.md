@@ -117,6 +117,8 @@ After running a query, select **Filter** to narrow down the results to specific
 
 :::image type="content" source="/defender/media/add-filter1.png" alt-text="Screenshot of filters in advanced hunting." lightbox="/defender/media/add-filter1.png":::
 
+:::image type="content" source="/defender/media/add-filter2.png" alt-text="Screenshot of filters dropdown in advanced hunting." lightbox="/defender/media/add-filter2.png":::
+
 ## Drill down from query results
 
 You can also explore the results in-line with the following features:
