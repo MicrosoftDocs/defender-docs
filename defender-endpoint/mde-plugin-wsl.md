@@ -149,6 +149,7 @@ On starting you wsl machine, wait for 5 minutes and then run `healthcheck.exe` (
 > [!NOTE]
 > The `ConnectivityTest` registry key is no longer supported.
 > To set a proxy for use in WSL containers (the distributions running on the subsystem), see [Advanced settings configuration in WSL](/windows/wsl/wsl-config).
+
 ## Verifying functionality and SOC analyst experience
 
 After installing the plug-in, the subsystem and all its running containers are onboarded to the [Microsoft Defender portal](https://security.microsoft.com).
@@ -192,6 +193,8 @@ The plug-in onboards the WSL machine with the tag `WSL2`. Should you or your org
 > The custom tag set in registry will be followed by a `_WSL2`.
 > For example, if the registry value set is `Microsoft`, then the custom tag will be `Microsoft_WSL2`.### Test the plug-in
 
+### Test the plug-in
+
 To test the plug-in after installation, follow these steps:
 
 1. Open Terminal or Command Prompt. (In Windows, go to **Start** > **Command Prompt**. Or, right-click the start button and then select **Terminal**.)
@@ -200,12 +203,13 @@ To test the plug-in after installation, follow these steps:
 
 3. Download and extract the script file from [https://aka.ms/MDE-Linux-EDR-DIY](https://aka.ms/MDE-Linux-EDR-DIY).
 
-1. At the Linux prompt, run the command `./mde_linux_edr_diy.sh`.
+4. At the Linux prompt, run the command `./mde_linux_edr_diy.sh`.
 
    An alert should appear in the portal after a few minutes for a detection on the WSL2 instance.
 
    > [!NOTE]
    > It takes about 5 minutes for the events to appear on the Microsoft Defender portal.
+
 Treat the machine as if it were a regular Linux host in your environment to perform testing against. In particular, we would like to get your feedback on the ability to surface potentially malicious behavior using the new plug-in.
 
 ### Advanced hunting
@@ -264,7 +268,7 @@ DeviceProcessEvents
 
    If that error occurs, wait for 5 minutes and rerun `healthcheck.exe`.
 
-1. If you don't see any devices in the Microsoft Defender portal, or you don't see any events in the timeline, check the following things:
+4. If you don't see any devices in the Microsoft Defender portal, or you don't see any events in the timeline, check the following things:
 
    - If you aren't seeing a machine object, make sure sufficient time has passed for onboarding to complete (typically up to 10 minutes).
 
@@ -283,8 +287,8 @@ DeviceProcessEvents
     - This will provide information on which proxy(s) is set on your machine and whether these configurations are invalid for WSL defender. 
     
      ![Extend HealthCheck Proxy doc](media/mde-plugin-wsl/extend-healthcheck-proxy-doc.png)
+
      
-   - 
     - If the steps mentioned above does not fix the problem, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
     
     - In Windows 11
@@ -307,7 +311,6 @@ DeviceProcessEvents
       dnsProxy=false
        ```
        
-   - 
    - If the connectivity issues persist, collect the networking logs using the method mentioned at [link](https://aka.ms/wsllogs), and include those logs with your support bundle.
 
 5. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
@@ -355,7 +358,7 @@ DeviceProcessEvents
    - **Value**: `Dogfood or External or InsiderFast or Production`
    - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
 
-1. If you see an error on launching WSL, such as "A fatal error was returned by plugin 'DefenderforEndpointPlug-in' Error code: Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_FILE_NOT_FOUND", it means the Defender for Endpoint plug-in for WSL installation is faulty. To repair it, follow these steps:
+8. If you see an error on launching WSL, such as "A fatal error was returned by plugin 'DefenderforEndpointPlug-in' Error code: Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_FILE_NOT_FOUND", it means the Defender for Endpoint plug-in for WSL installation is faulty. To repair it, follow these steps:
 
    1. In Control Panel, go to **Programs** > **Programs and Features**.
       
@@ -363,4 +366,4 @@ DeviceProcessEvents
 
    This should fix the problem by placing the right files in the expected directories.
 
-      :::image type="content" source="media/mdeplugin-wsl/plug-in-repair-control-panel.png" alt-text="Screenshot showing MDE plug-in for WSL repair option in control panel." lightbox="media/mdeplugin-wsl/plug-in-repair-control-panel.png":::
+   :::image type="content" source="media/mdeplugin-wsl/plug-in-repair-control-panel.png" alt-text="Screenshot showing MDE plug-in for WSL repair option in control panel." lightbox="media/mdeplugin-wsl/plug-in-repair-control-panel.png":::
