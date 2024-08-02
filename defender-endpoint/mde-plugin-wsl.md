@@ -264,7 +264,7 @@ DeviceProcessEvents
 
    If that error occurs, wait for 5 minutes and rerun `healthcheck.exe`.
 
-4. If you don't see any devices in the Microsoft Defender portal, or you don't see any events in the timeline, check the following things:
+1. If you don't see any devices in the Microsoft Defender portal, or you don't see any events in the timeline, check the following things:
 
    - If you aren't seeing a machine object, make sure sufficient time has passed for onboarding to complete (typically up to 10 minutes).
 
@@ -276,28 +276,38 @@ DeviceProcessEvents
 
    - Enable the connectivity test and check for Defender for Endpoint connectivity in WSL. If the connectivity test fails, provide the output of the health check tool to our support team.
 
-   - If the connectivity test reports "invalid" in health check, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
-
-      - In Windows 11
-
-         ```bash
-         # Settings apply across all Linux distros running on WSL 2
-         [wsl2]
-
-         dnsTunneling=true
-
-         networkingMode=mirrored  
-         ```
-
-      - In Windows 10
-
-         ```bash
-         # Settings apply across all Linux distros running on WSL 2
-         [wsl2]
-
-         dnsProxy=false
-         ```
-
+   - If the connectivity test reports "invalid" in health check:
+   
+    - If your machine has a proxy setup, run the command `healthCheck --extendedProxy`
+    
+    - This will provide information on which proxy(s) is set on your machine and whether these configurations are invalid for WSL defender. 
+    
+     ![Extend HealthCheck Proxy doc](media/mde-plugin-wsl/extend-healthcheck-proxy-doc.png)
+     
+   - 
+    - If the steps mentioned above does not fix the problem, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
+    
+    - In Windows 11
+    
+       ```bash
+      # Settings apply across all Linux distros running on WSL 2
+      [wsl2]
+      
+      dnsTunneling=true
+      
+      networkingMode=mirrored  
+       ```
+       
+    - In Windows 10
+    
+       ```bash
+      # Settings apply across all Linux distros running on WSL 2
+      [wsl2]
+      
+      dnsProxy=false
+       ```
+       
+   - 
    - If the connectivity issues persist, collect the networking logs using the method mentioned at [link](https://aka.ms/wsllogs), and include those logs with your support bundle.
 
 5. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
@@ -345,12 +355,12 @@ DeviceProcessEvents
    - **Value**: `Dogfood or External or InsiderFast or Production`
    - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
 
-8. If you see an error on launching WSL, such as "A fatal error was returned by plugin 'DefenderforEndpointPlug-in' Error code: Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_FILE_NOT_FOUND", it means the Defender for Endpoint plug-in for WSL installation is faulty. To repair it, follow these steps:
+1. If you see an error on launching WSL, such as "A fatal error was returned by plugin 'DefenderforEndpointPlug-in' Error code: Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_FILE_NOT_FOUND", it means the Defender for Endpoint plug-in for WSL installation is faulty. To repair it, follow these steps:
 
    1. In Control Panel, go to **Programs** > **Programs and Features**.
-
+      
    2. Search for and select **Microsoft Defender for Endpoint plug-in for WSL**. Then select **Repair**.
 
    This should fix the problem by placing the right files in the expected directories.
 
-   :::image type="content" source="media/mdeplugin-wsl/plug-in-repair-control-panel.png" alt-text="Screenshot showing MDE plug-in for WSL repair option in control panel." lightbox="media/mdeplugin-wsl/plug-in-repair-control-panel.png":::
+      :::image type="content" source="media/mdeplugin-wsl/plug-in-repair-control-panel.png" alt-text="Screenshot showing MDE plug-in for WSL repair option in control panel." lightbox="media/mdeplugin-wsl/plug-in-repair-control-panel.png":::
