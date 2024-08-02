@@ -7,6 +7,7 @@ manager: deniseb
 audience: ITPro
 ms.topic: conceptual
 ms.service: defender-endpoint
+ms.subservice: onboard
 ms.localizationpriority: medium
 ms.collection: 
 - m365-security

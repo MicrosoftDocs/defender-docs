@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 07/18/2024
+ms.date: 07/26/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -40,6 +40,8 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 ## July 2024
+
+- **Tenant Allow/Block List in Microsoft 365 GCC, GCC High, DoD and and Office 365 operated by 21Vianet environments**: The [Tenant Allow/Block List](tenant-allow-block-list-about.md) is now available these environments. They are on parity with the WW commercial experiences.
 
 - **45 days after last used date**: The value **Remove allow entry after** \> **45 days after last used date** is now the default on new allow entries from submissions and existing allow entries in the [Tenant Allow/Block List](tenant-allow-block-list-about.md). The allow entry is triggered and the **LastUsedDate** property is updated when the entity is encountered and identified as malicious during mail flow or at time of click. After the filtering system determines that the entity is clean, the allow entry is automatically removed after 45 days. By default, allow entries for spoofed senders never expire.
 
