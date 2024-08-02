@@ -50,7 +50,6 @@ This article is updated frequently to let you know what's new in the latest rele
 There are multiple fixes and new changes in this release.
 
 - Fixes bug in which infected command-line threat information was not showing correctly in security portal.
-- Fixes a memory leak issue in kernel space due to ebpf maps and progs not getting closed/unloaded whenever ebpf sensor is reloaded. Impacts kernels 3.10x and <= 4.16x.
 - Fixes a bug where disabling a preview feature required a Defender of Endpoint to disable it.
 - Global Exclusions feature using managed JSON is now in Public Preview. available in insiders slow from 101.23092.0012. For more information, see [linux-exclusions](linux-exclusions.md).
 - Updated the Linux default engine version to 1.1.24050.7 and default sigs Version to 1.411.410.0.
