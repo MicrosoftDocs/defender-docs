@@ -38,10 +38,6 @@ Threat analytics is our in-product threat intelligence solution from expert Micr
 - Common attack surfaces
 - Prevalent malware
 
-Watch this short video to learn more about how threat analytics can help you track the latest threats and stop them.
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWwJfU]
-
 You can access threat analytics either from the upper left-hand side of Microsoft Defender XDR's navigation bar, or from a dedicated dashboard card that shows the top threats to your org, both in terms of known impact, and in terms of your exposure.
 
 :::image type="content" source="/defender/media/threat-analytics/ta_inlandingpage_mtp.png" alt-text="Screenshot of the threat analytics landing page" lightbox="/defender/media/threat-analytics/ta_inlandingpage_mtp.png":::
@@ -57,6 +53,13 @@ With more sophisticated adversaries and new threats emerging frequently and prev
 - Identify the mitigation, recovery, or prevention actions you can take to stop or contain the threats
 
 Each report provides an analysis of a tracked threat and extensive guidance on how to defend against that threat. It also incorporates data from your network, indicating whether the threat is active and if you have applicable protections in place.
+
+## Required roles and permissions
+The following table outlines the roles and permissions required to access Threat Analytics. Roles defined in the following table refer to custom roles in individual portals and aren't connected to global roles in Microsoft Entra ID, even if similarly named.
+
+| **One of the following roles are required for Microsoft Defender XDR**  | **One of the following roles are required for Defender for Endpoint**  | **One of the following roles are required for Defender for Office 365** | **One of the following roles are required for Defender for Cloud Apps** | 
+|---------|---------|---------|---------|
+| Threat Analytics | Alerts and incidents data: <ul><li>View data- security operations</li></ul>Defender Vulnerability Management mitigations:<ul><li>View data - Threat and vulnerability management</li></ul> | Alerts and incidents data:<ul> <li>View-only manage alerts</li> <li>Manage alerts</li> <li>Organization configuration</li><li>Audit logs</li> <li>View-only audit logs</li><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> </ul> Prevented email attempts: <ul><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> | Not available for Defender for Cloud Apps or MDI users |
 
 ## View the threat analytics dashboard
 
@@ -79,7 +82,7 @@ You can filter the threat report list and view the most relevant reports accordi
 
 The different tags have equivalent filters that assist you in efficiently reviewing the threat report list and filtering the view based on a specific threat tag or report type. For example, to view all threat reports related to ransomware category, or threat reports that involve vulnerabilities.
 
-The Microsoft Threat Intelligence team has added threat tags to each threat report. The following threat tags are currently available:
+The Microsoft Threat Intelligence team adds threat tags to each threat report. The following threat tags are currently available:
   - Ransomware
   - Extortion
   - Phishing
@@ -97,7 +100,7 @@ To set the types of reports you want in the list, select **Filters**, choose fro
 
   :::image type="content" source="/defender/media/threat-analytics/ta-threattag-filters-mtp.png" alt-text="Screenshot of the Filters list." lightbox="/defender/media/threat-analytics/ta-threattag-filters-mtp.png":::
 
-If you've set more than one filter, the threat analytics reports list can also be sorted by threat tag by selecting the threat tags column:
+If you set more than one filter, the threat analytics reports list can also be sorted by threat tag by selecting the threat tags column:
 
   :::image type="content" source="/defender/media/threat-analytics/ta-taglist-mtp.png" alt-text="Screenshot of the threat tags column." lightbox="/defender/media/threat-analytics/ta-taglist-mtp.png":::
 
@@ -149,15 +152,22 @@ The **Related incidents** tab provides the list of all incidents related to the 
 
 :::image type="content" source="/defender/media/threat-analytics/ta_related_incidents_mtp.png" alt-text="Screenshot of the related incidents section of a threat analytics report." lightbox="/defender/media/threat-analytics/ta_related_incidents_mtp.png":::
 
+> [!NOTE]
+> Incidents and alerts associated with the threat are sourced from Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Cloud.
+
 ### Impacted assets: Get list of impacted devices, users, mailboxes, apps, and cloud resources
 
-An asset is considered impacted if it's affected by an active, unresolved alert. The **Impacted assets** tab lists the following types of impacted assets:
+The **Impacted assets** tab shows the assets impacted by the threat over time. It displays: 
+- Assets affected by active alerts
+- Assets affected by resolved alerts
+- All assets, or the total number of assets affected by active and resolved alerts
 
-- **Devices**—endpoints that have unresolved Microsoft Defender for Endpoint alerts. These alerts typically fire on sightings of known threat indicators and activities.
-- **Users**—
-- **Mailboxes**—mailboxes that have received email messages that have triggered Microsoft Defender for Office 365 alerts. While most messages that trigger alerts are typically blocked, user- or org-level policies can override filters.
-- **Apps**—
-- **Cloud resources**—
+Assets are divided into the following categories:
+- Devices
+- Users
+- Mailboxes
+- Apps
+- Cloud resources
 
 :::image type="content" source="/defender/media/threat-analytics/ta_impacted_assets_mtp.png" alt-text="Screenshot of the impacted assets section of a threat analytics report." lightbox="/defender/media/threat-analytics/ta_impacted_assets_mtp.png":::
 
@@ -182,7 +192,7 @@ In the **Recommended actions** tab, review the list of specific actionable recom
 
 You can set up email notifications that will send you updates on threat analytics reports. To create email notifications, follow the steps in [get email notifications for Threat analytics updates in Microsoft Defender XDR](m365d-threat-analytics-notifications.md).
 
-## Additional report details and limitations
+## Other report details and limitations
 
 > [!NOTE]
 > As part of the unified security experience, threat analytics is now available not just for Microsoft Defender for Endpoint, but also for Microsoft Defender for Office 365 license holders.
@@ -200,9 +210,9 @@ When looking at the threat analytics data, remember the following factors:
 - Charts reflect only mitigations that are tracked. Check the report overview for more mitigations that aren't shown in the charts.
 - Mitigations don't guarantee complete resilience. The provided mitigations reflect the best possible actions needed to improve resiliency.
 - Devices are counted as "unavailable" if they haven't transmitted data to the service.
-- Antivirus-related statistics are based on Microsoft Defender Antivirus settings. Devices with third-party antivirus solutions can appear as "exposed".
+- Antivirus-related statistics are based on Microsoft Defender Antivirus settings. Devices with third-party antivirus solutions can appear as "exposed."
 
-## Related articles
+## See also
 
 - [Proactively find threats with advanced hunting](advanced-hunting-overview.md)
 - [Understand the analyst report section](threat-analytics-analyst-reports.md)
