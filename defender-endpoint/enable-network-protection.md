@@ -3,7 +3,7 @@ title: Turn on network protection
 description: Enable network protection with Group Policy, PowerShell, or Mobile Device Management and Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 04/03/2024
+ms.date: 07/25/2024
 ms.topic: conceptual
 author: denisebmsft
 ms.author: deniseb
@@ -99,7 +99,7 @@ Use the [./Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection](/windows/
 
 #### Microsoft Defender for Endpoint Baseline method
 
-1. Sign into the [Microsoft Intune admin center](https://endpoint.microsoft.com).
+1. Sign into the [Microsoft Intune admin center](https://intune.microsoft.com).
 
 2. Go to **Endpoint security** > **Security baselines** > **Microsoft Defender for Endpoint Baseline**.
 
@@ -113,7 +113,7 @@ Use the [./Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection](/windows/
 
 #### Antivirus policy method
 
-1. Sign into the [Microsoft Intune admin center](https://endpoint.microsoft.com).
+1. Sign into the [Microsoft Intune admin center](https://intune.microsoft.com).
 
 2. Go to **Endpoint security** > **Antivirus**.
 
@@ -133,7 +133,7 @@ Use the [./Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection](/windows/
 
 #### Configuration profile method
 
-1. Sign into the Microsoft Intune admin center (https://endpoint.microsoft.com).
+1. Sign into the Microsoft Intune admin center (https://intune.microsoft.com).
 
 2. Go to **Devices** > **Configuration profiles** > **Create profile**.
 

@@ -117,7 +117,7 @@ If you turn on security defaults, you are awarded full points for the following 
 
 ### Manage permissions with Microsoft Defender XDR Unified role-based access control(RBAC)
 
-With [Microsoft Defender XDR Unified role-based access control(RBAC)](manage-rbac.md), you can create custom roles with specific permissions for Secure Score. Unified RBAC allows you to control which users have access to Secure Score data, the products for which they see Secure Score data (for example, Microsoft Defender for Endpoint) and their permission level to the data.
+With [Microsoft Defender XDR Unified role-based access control(RBAC)](manage-rbac.md), you can create custom roles with specific permissions for Secure Score. Defender XDR Unified RBAC allows you to control which users have access to Secure Score data, the products for which they see Secure Score data (for example, Microsoft Defender for Endpoint) and their permission level to the data.
 
 You can also manage user permissions to access Secure Score data from additional data sources, such as the other products supported by Secure Score, for more information, see [Products included in Secure Score](#products-included-in-secure-score). You can view the Secure Score data from the other data sources either alone or alongside the other data sources.
 
