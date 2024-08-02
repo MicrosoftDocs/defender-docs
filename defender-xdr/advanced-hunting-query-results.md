@@ -111,6 +111,12 @@ After running a query, select **Export** to save the results to local file. Your
 - **Table view**—The query results are exported in tabular form as a Microsoft Excel workbook
 - **Any chart**—The query results are exported as a JPEG image of the rendered chart
 
+## Filter results
+
+After running a query, select **Filter** to narrow down the results to specific 
+
+:::image type="content" source="/defender/media/add-filter1.png" alt-text="Screenshot of filters in advanced hunting." lightbox="/defender/media/add-filter1.png":::
+
 ## Drill down from query results
 
 You can also explore the results in-line with the following features:
