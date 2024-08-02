@@ -38,7 +38,7 @@ Threat analytics is our in-product threat intelligence solution from expert Micr
 - Common attack surfaces
 - Prevalent malware
 
-You can access threat analytics either from the upper left-hand side of Microsoft Defender XDR's navigation bar, or from a dedicated dashboard card that shows the top threats to your org, both in terms of known impact, and in terms of your exposure.
+You can access threat analytics either from the upper left-hand side of Microsoft Defender portal's navigation bar, or from a dedicated dashboard card that shows the top threats to your org, both in terms of known impact, and in terms of your exposure.
 
 :::image type="content" source="/defender/media/threat-analytics/ta_inlandingpage_mtp.png" alt-text="Screenshot of the threat analytics landing page" lightbox="/defender/media/threat-analytics/ta_inlandingpage_mtp.png":::
 
@@ -98,7 +98,7 @@ Threat tags are presented at the top of the threat analytics page. There are cou
 
 To set the types of reports you want in the list, select **Filters**, choose from the list, and select **Apply**. 
 
-  :::image type="content" source="/defender/media/threat-analytics/ta-threattag-filters-mtp.png" alt-text="Screenshot of the Filters list." lightbox="/defender/media/threat-analytics/ta-threattag-filters-mtp.png":::
+  :::image type="content" source="/defender/media/threat-analytics/ta-threattag-filters-mtp-tb.png" alt-text="Screenshot of the Filters list." lightbox="/defender/media/threat-analytics/ta-threattag-filters-mtp.png":::
 
 If you set more than one filter, the threat analytics reports list can also be sorted by threat tag by selecting the threat tags column:
 
