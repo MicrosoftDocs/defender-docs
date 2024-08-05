@@ -144,7 +144,7 @@ Example: If your host machine has both *Winhttp proxy* and *Network & Internet p
 
 The defender connectivity test is triggered whenever there is a proxy modification on your device and is scheduled to run every hour.
 
-On starting your wsl machine, wait for 5 minutes and then run `healthcheck.exe` (located at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test). If successful, you can see that the connectivity test was a success. If failed, you can see that the connectivity test was `invalid` indicating that the client connectivity from WSL to Defender for Endpoint service URLs is failing.
+On starting your wsl machine, wait for 5 minutes and then run `healthcheck.exe` (located at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test). If successful, you can see that the connectivity test was a success. If failed, you can see that the connectivity test was `invalid` indicating that the client connectivity from MDE plug-in for WSL to Defender for Endpoint service URLs is failing.
 
 > [!NOTE]
 > The `ConnectivityTest` registry key is no longer supported.
