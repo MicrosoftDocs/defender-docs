@@ -21,7 +21,7 @@ Make sure that you have:
 
 - IoT devices in your network, visible in the Microsoft Defender portal **Device inventory**
 
-- Access to the Microsoft Defender Portal as a <!-- what is the correct level global or security?-->[Security administrator](../entra/identity/role-based-access-control/permissions-reference.md#security-administrator)
+- Access to the Microsoft Defender Portal as a <!-- what is the correct level global or security?-->[Security administrator](../entra/identity/role-based-access-control/permissions-reference#security-administrator)
 
 - One of the following licenses:
 
@@ -73,7 +73,7 @@ Use the following procedure to calculate how many devices you need to monitor if
 
     For example:
 
-    :::image type="content" source="media/enterprise-for-iot-get-started/device-inventory-iot.png" alt-text="Screenshot of network device and IoT devices in the device inventory in Microsoft Defender for Endpoint." lightbox="media/how-to-manage-subscriptions/device-inventory-iot.png":::
+    :::image type="content" source="media/enterprise-for-iot-get-started/device-inventory-iot.png" alt-text="Screenshot of network device and IoT devices in the device inventory in Microsoft Defender for Endpoint." lightbox="media/enterprise-for-iot-get-started/device-inventory-iot.png":::
 
 1. Round your total to a multiple of 100 and compare it against the number of licenses you have.
 
@@ -128,7 +128,7 @@ For more information, see the [Microsoft 365 admin center help](/microsoft-365/a
 > [!TIP]
 > Make sure to [assign your licenses to specific users](/microsoft-365/admin/manage/assign-licenses-to-users) to start using them.
 
-For more information, see [Free trial](/azure/defender-for-iot/organizations/billing.md#free-trial). <!-- is there a different link for this?-->
+For more information, see [Free trial](/azure/defender-for-iot/organizations/billing#free-trial). <!-- is there a different link for this?-->
 
 ## View enterprise IoT added security value in the Microsoft Defender portal
 
@@ -140,7 +140,7 @@ With enterprise IoT activated the added security value of alerts, recommendation
 
 1. Select the **IoT devices** tab and select a specific device **IP** to drill down for more details. For example:
 
-    :::image type="content" source="media/enterprise-for-iot-get-started/select-a-device.png" alt-text="Screenshot of the IoT devices tab in Microsoft Defender portal." lightbox="media/enterprise-iot/select-a-device.png":::
+    :::image type="content" source="media/enterprise-for-iot-get-started/select-a-device.png" alt-text="Screenshot of the IoT devices tab in Microsoft Defender portal." lightbox="media/enterprise-for-iot-get-started/select-a-device.png":::
 
 1. On the device details page, explore the following tabs to view data added by enterprise IoT security for your device:
 
