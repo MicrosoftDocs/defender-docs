@@ -142,9 +142,9 @@ Example: If your host machine has both *Winhttp proxy* and *Network & Internet p
 
 ## Connectivity test for Defender running in WSL
 
-The defender connectivity test is initiated any time a proxy modification occurs on your device and is scheduled to execute hourly.
+The defender connectivity test is triggered whenever there is a proxy modification on your device and is scheduled to run every hour.
 
-On starting you wsl machine, wait for 5 minutes and then run `healthcheck.exe` (located at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test). If successful, you can see that the connectivity test was successful. If failed, you can see that the connectivity test was `invalid` indicating that the client connectivity from WSL to Defender for Endpoint service URLs is failing.
+On starting your wsl machine, wait for 5 minutes and then run `healthcheck.exe` (located at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test). If successful, you can see that the connectivity test was a success. If failed, you can see that the connectivity test was `invalid` indicating that the client connectivity from WSL to Defender for Endpoint service URLs is failing.
 
 > [!NOTE]
 > The `ConnectivityTest` registry key is no longer supported.
@@ -191,7 +191,7 @@ The plug-in onboards the WSL machine with the tag `WSL2`. Should you or your org
 
 > [!NOTE]
 > The custom tag set in registry will be followed by a `_WSL2`.
-> For example, if the registry value set is `Microsoft`, then the custom tag will be `Microsoft_WSL2`.### Test the plug-in
+> For example, if the registry value set is `Microsoft`, then the custom tag will be `Microsoft_WSL2` and the same will be visible in the portal.
 
 ### Test the plug-in
 
@@ -289,7 +289,7 @@ DeviceProcessEvents
      ![Extend HealthCheck Proxy doc](media/mde-plugin-wsl/extend-healthcheck-proxy-doc.png)
 
      
-    - If the steps mentioned above does not fix the problem, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
+    - If the steps mentioned above do not fix the problem, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
     
     - In Windows 11
     
