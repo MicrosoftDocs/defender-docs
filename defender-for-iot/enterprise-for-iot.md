@@ -11,7 +11,7 @@ ms.topic: overview
 
 # Enterprise for IoT in the Defender portal
 
-The number of IoT devices continues to grow exponentially across enterprise networks in many office buildings. Enterprise IoT devices include devices such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices. For more information, see [Defender for IoT devices](../defender-for-iot/organizations/billing#defender-for-iot-devices) [1](/defender-for-iot/organizations/billing#defender-for-iot-devices)  [2](../organizations/billing#defender-for-iot-devices) <!-- do we have an equivalent to this?--> [3](../billing#defender-for-iot-devices) [4](/defender-for-iot/organizations/billing.md) [5](../defender-for-iot/organizations/billing.md)
+The number of IoT devices continues to grow exponentially across enterprise networks in many office buildings. Enterprise IoT devices include devices such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices. For more information, see [Defender for IoT devices](azure/defender-for-iot/organizations/billing#defender-for-iot-devices) [1](/azure/defender-for-iot/organizations/billing#defender-for-iot-devices)  [2](../azure/defender-for-iot/organizations/billing#defender-for-iot-devices) <!-- do we have an equivalent to this?--> [3](../billing#defender-for-iot-devices) [4](/defender-for-iot/organizations/billing.md) [5](../defender-for-iot/organizations/billing.md)
 
 While the number of IoT devices continues to grow, they often lack the security safeguards that are common on managed endpoints like laptops and mobile phones. To bad actors, these unmanaged devices can be used as a point of entry for lateral movement or evasion, and too often, the use of such tactics leads to the exfiltration<!-- should this be changed to hacking / exposure/ stealing / leaking --> of sensitive information.
 
@@ -51,7 +51,7 @@ Known CVEs vulnerabilities are detected and showing in the Defender portal assoc
 
 ## Manage enterprise IoT monitoring support with Microsoft Defender for IoT
 
-For Enterprise IoT networks, use a trial, standalone<!--?--> license for 90 days as an add-on to Microsoft Defender for Endpoint<!--?-->. A trial license supports 100 devices. There are two options available depending on your existing license:
+For Enterprise IoT networks, use a trial 90 day license as an add-on to Microsoft Defender for Endpoint. A trial license supports 100 devices. There are two options available depending on your existing license:
 
 1. Customers with ME5/E5 Security plans have support for enterprise IoT monitoring available, and don't need to start a trial.
 
@@ -59,7 +59,7 @@ For Enterprise IoT networks, use a trial, standalone<!--?--> license for 90 days
 
 1. Customers with a Microsoft Defender for Endpoint P2 license only can use a trial standalone license for enterprise IoT monitoring.
 
-    Start your enterprise IoT trial using the [Microsoft Defender for IoT - EIoT Device License - add-on wizard](https://signup.microsoft.com/get-started/signup?products=b2f91841-252f-4765-94c3-75802d7c0ddb&ali=1&bac=1) or via the Microsoft 365 admin center. <!-- is this correct?-->
+    Start your enterprise IoT trial using the [Microsoft Defender for IoT - EIoT Device License - add-on wizard](https://signup.microsoft.com/get-started/signup?products=b2f91841-252f-4765-94c3-75802d7c0ddb&ali=1&bac=1) or via the Microsoft 365 admin center.
 
 A permanent Enterprise IoT monitoring license supports five devices per Microsoft 365 E5 (ME5) or E5 Security license, or is available as a standalone, per-device license for Microsoft Defender for Endpoint P2 customers.
 
