@@ -15,7 +15,7 @@ ms.collection:
 ms.custom:
 - partner-contribution
 audience: ITPro
-ms.date: 07/26/2024
+ms.date: 08/05/2024
 search.appverid: MET150
 ---
 
@@ -33,25 +33,25 @@ Windows Subsystem for Linux (WSL) 2, which replaces the previous version of WSL 
 
 ## Known issues and limitations
 
-Be aware of the following before you start:
+Be aware of the following considerations before you start:
 
-1. The plug-in doesn't support automatic updates on versions prior to `1.24.522.2`. On version `1.24.522.2` and later; updates are supported through Windows Update across all rings. Updates through Windows Server Update services (WSUS), System Center Configuration Manager (SCCM) and Microsoft Update catalog are supported only in the Production ring to ensure package stability.
+1. The plug-in doesn't support automatic updates on versions prior to `1.24.522.2`. On version `1.24.522.2` and later, updates are supported through Windows Update across all rings. Updates through Windows Server Update services (WSUS), System Center Configuration Manager (SCCM) and Microsoft Update catalog are supported only in the Production ring to ensure package stability.
 
 2. It takes a few minutes for the plug-in to fully instantiate, and up to 30 minutes for a WSL2 instance to onboard itself. Short-lived WSL container instances might result in the WSL2 instance not showing up in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). Once any distribution has been running long enough (at least 30 minutes), it does show up.
 
 3. Running a custom kernel and custom kernel command line is not supported. Although the plug-in does not block running in that configuration, it does not guarantee visibility within WSL when you're running a custom kernel and custom kernel command line. We recommend to block such configurations with help of [Microsoft Intune wsl settings](/windows/wsl/intune).
 
-4. OS Distribution is displayed **None** in Device overview page of WSL device in Microsoft Defender portal.
+4. OS Distribution is displayed **None** in the **Device overview** page of a WSL device in the Microsoft Defender portal.
 
 5. The plug-in is not supported on machines with ARM64 processor.
 
-6. The plug-in provides visibility into events from WSL but other features like antimalware, threat and vulnerability management and response commands are not available for the WSL logical device.
+6. The plug-in provides visibility into events from WSL, but other features like antimalware, threat and vulnerability management, and response commands are not available for the WSL logical device.
 
 ## Software prerequisites
 
 - WSL version 2.0.7.0 or later must be running with at least one active distro.
 
-   Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than 2.0.7.0, run `wsl -–update –pre-release` to get the latest update.
+   Run `wsl --update` to make sure you are on the latest version. If `wsl -–version` shows a version older than `2.0.7.0`, run `wsl -–update –pre-release` to get the latest update.
 
 - The Windows client device must be onboarded to Defender for Endpoint.
 
@@ -59,7 +59,7 @@ Be aware of the following before you start:
 
 ## Software components and installer file names
 
-Installer: `DefenderPlugin-x64-0.24.426.1.msi`. You can download it from the onboarding page in the [Microsoft Defender portal](https://security.microsoft.com).
+Installer: `DefenderPlugin-x64-0.24.426.1.msi`. You can download it from the onboarding page in the [Microsoft Defender portal](https://security.microsoft.com). (Go to **Settings** > **Endpoints** > **Onboarding**.)
 
 Installation directories:
 
@@ -69,9 +69,9 @@ Installation directories:
 
 Components installed:
 
-- `DefenderforEndpointPlug-in.dll`. This DLL is the library to load Defender for Endpoint to work within WSL. You can find it at **%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\plug-in**.
+- `DefenderforEndpointPlug-in.dll`. This DLL is the library to load Defender for Endpoint to work within WSL. You can find it at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\plug-in`.
 
-- `healthcheck.exe`. This program checks the health status of Defender for Endpoint and enables you to see the installed versions of WSL, plug-in, and Defender for Endpoint. You can find it at **%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools**.
+- `healthcheck.exe`. This program checks the health status of Defender for Endpoint and enables you to see the installed versions of WSL, plug-in, and Defender for Endpoint. You can find it at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools`.
 
 ## Installation steps
 
@@ -138,10 +138,10 @@ If your host machine contains multiple proxy settings, the plug-in selects the p
 
 3. Network & Internet proxy settings.
 
-Example: If your host machine has both *Winhttp proxy* and *Network & Internet proxy*, the plug-in selects `Winhttp proxy` as the proxy configuration.
+For example, if your host machine has both `Winhttp proxy` and `Network & Internet proxy`, the plug-in selects `Winhttp proxy` as the proxy configuration.
 
 > [!NOTE]
-> The `DefenderProxyServer` registry key is no longer supported. Follow the above mentioned steps to configure proxy in plug-in.
+> The `DefenderProxyServer` registry key is no longer supported. Follow the steps described earlier in this article to configure proxy in plug-in.
 
 ## Connectivity test for Defender running in WSL
 
@@ -162,7 +162,7 @@ The following procedure describes how to confirm that Defender in Endpoint in WS
 
    2. Run the command `wsl`.
 
-4. Wait for 5 minutes and then run `healthcheck.exe` (located at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test).
+4. Wait for five minutes, and then run `healthcheck.exe` (located at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test).
 
    If successful, you can see that the connectivity test was successful. If failed, you can see that the connectivity test was `invalid` indicating that the client connectivity from WSL to Defender for Endpoint service URLs is failing.
 
@@ -202,7 +202,7 @@ To test the plug-in after installation, follow these steps:
    An alert should appear in the portal after a few minutes for a detection on the WSL2 instance.
 
    > [!NOTE]
-   > It takes about 5 minutes for the events to appear on the Microsoft Defender portal.
+   > It takes about five minutes for the events to appear on the Microsoft Defender portal.
 
 Treat the machine as if it were a regular Linux host in your environment to perform testing against. In particular, we would like to get your feedback on the ability to surface potentially malicious behavior using the new plug-in.
 
@@ -246,7 +246,7 @@ DeviceProcessEvents
 
 ## Troubleshooting
 
-1. The command `healthcheck.exe` shows the output, "Launch WSL distro with 'bash' command and retry in 5 minutes."
+1. The command `healthcheck.exe` shows the output, "Launch WSL distro with 'bash' command and retry in five minutes."
 
    :::image type="content" source="media/mdeplugin-wsl/wsl-health-check.png" alt-text="Screenshot showing PowerShell output." lightbox="media/mdeplugin-wsl/wsl-health-check.png":::
 
@@ -254,13 +254,13 @@ DeviceProcessEvents
 
    1. Open a terminal instance and run the command `wsl`.
 
-   2. Wait for at least 5 minutes before rerunning the health check.
+   2. Wait for at least five minutes before rerunning the health check.
 
-3. The `healthcheck.exe` command might show the output, "Waiting for Telemetry. Please retry in 5 minutes."
+3. The `healthcheck.exe` command might show the output, "Waiting for Telemetry. Please retry in five minutes."
 
    :::image type="content" source="media/mdeplugin-wsl/wsl-health-check-telemetry.png" alt-text="Screenshot showing health telemetry status." lightbox="media/mdeplugin-wsl/wsl-health-check-telemetry.png":::
 
-   If that error occurs, wait for 5 minutes and rerun `healthcheck.exe`.
+   If that error occurs, wait for five minutes and rerun `healthcheck.exe`.
 
 4. If you don't see any devices in the Microsoft Defender portal, or you don't see any events in the timeline, check the following things:
 
