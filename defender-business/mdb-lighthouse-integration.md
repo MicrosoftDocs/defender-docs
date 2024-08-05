@@ -4,15 +4,15 @@ description: See how Microsoft Defender for Business integrates with Microsoft 3
 search.appverid: MET150
 author: siosulli
 ms.author: siosulli
-manager: deniseb 
+manager: deniseb
 audience: Admin
 ms.topic: overview
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.date: 06/19/2024
 ms.reviewer: nehabha
-f1.keywords: NOCSH 
-ms.collection: 
+f1.keywords: NOCSH
+ms.collection:
 - SMB
 - m365-security
 - tier1
@@ -28,7 +28,7 @@ If you're a Microsoft Cloud Solution Provider (CSP) or Managed Service Provider 
 
  You can use the Microsoft 365 Lighthouse portal ([https://lighthouse.microsoft.com](https://lighthouse.microsoft.com)) to:
 
-- Manage your customers' security settings and capabilities. 
+- Manage your customers' security settings and capabilities.
 - View and manage detected threats across your customers' tenants.
 - Initiate antivirus scans on customers' devices to keep them up to date and protected.
 
