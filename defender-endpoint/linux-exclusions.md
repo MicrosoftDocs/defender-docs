@@ -22,14 +22,6 @@ ms.date: 07/31/2024
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**In this article:**
-
-1. [Supported exclusion scopes](#supported-exclusion-scopes)
-2. [Supported exclusion types](#supported-exclusion-types)
-3. [How to configure the list of exclusions](#how-to-configure-the-list-of-exclusions)
-4. [Validate exclusions lists with the EICAR test file](#validate-exclusions-lists-with-the-eicar-test-file)
-5. [Allow threats](#allow-threats)
-
 **Applies to:**
 
 - [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
