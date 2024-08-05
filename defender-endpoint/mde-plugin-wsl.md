@@ -298,7 +298,7 @@ DeviceProcessEvents
 
    - If the connectivity issues persist, run the following steps to collect the networking logs
 
-      1. Open an elevated(admin) powerhsell prompt 
+      1. Open an elevated(admin) PowerShell prompt 
       
       2. Download and Run: `.\collect-networking-logs.ps1`
 
@@ -321,7 +321,8 @@ DeviceProcessEvents
       8.	Share the generated .zip file along with support bundle that can be collected as mentioned in [steps](#support-bundle-collection).      
 
 ### Support bundle collection
-5. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
+
+1. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
 
    ```powershell
    cd "%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools"
@@ -335,7 +336,7 @@ DeviceProcessEvents
 
    :::image type="content" source="media/mdeplugin-wsl/wsl-health-check-overview.png" alt-text="Screenshot showing status in PowerShell output." lightbox="media/mdeplugin-wsl/wsl-health-check-overview.png":::
 
-6. Microsoft Defender Endpoint for WSL supports Linux distributions running on WSL 2. If they're associated with WSL 1, you might encounter issues. Therefore, it's advised to disable WSL 1. To do so with the Intune policy, perform the following steps:
+2. Microsoft Defender Endpoint for WSL supports Linux distributions running on WSL 2. If they're associated with WSL 1, you might encounter issues. Therefore, it's advised to disable WSL 1. To do so with the Intune policy, perform the following steps:
 
    1. Go to your [Microsoft Intune admin center](https://intune.microsoft.com).
 
@@ -359,14 +360,14 @@ DeviceProcessEvents
       wsl --set-default-version 2
       ```
 
-7. The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following under registry and restart WSL:
+3. The plug-in uses the Windows EDR ring by default. If you wish to switch to an earlier ring, set `OverrideReleaseRing` to one of the following under registry and restart WSL:
 
    - **Name**: `OverrideReleaseRing`
    - **Type**: `REG_SZ`
    - **Value**: `Dogfood or External or InsiderFast or Production`
    - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
 
-8. If you see an error on launching WSL, such as "A fatal error was returned by plugin 'DefenderforEndpointPlug-in' Error code: Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_FILE_NOT_FOUND", it means the Defender for Endpoint plug-in for WSL installation is faulty. To repair it, follow these steps:
+4. If you see an error on launching WSL, such as "A fatal error was returned by plugin 'DefenderforEndpointPlug-in' Error code: Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_FILE_NOT_FOUND", it means the Defender for Endpoint plug-in for WSL installation is faulty. To repair it, follow these steps:
 
    1. In Control Panel, go to **Programs** > **Programs and Features**.
 
