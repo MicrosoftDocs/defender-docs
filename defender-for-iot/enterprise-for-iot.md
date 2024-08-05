@@ -34,7 +34,7 @@ https://learn.microsoft.com/azure/defender-for-iot/organizations/architecture#de
 
 Most Defender for Endpoint alerts are also relevant for enterprise IoT devices, such as alerts for scans involving managed endpoints. Alerts for enterprise IoT devices detected by Defender for Endpoint are only available in Defender for Endpoint only.
 
-For more information, see [Alerts queue in Microsoft 365 Defender](/defender-endpoint/alerts-queue.md).
+For more information, see [Alerts queue in Microsoft 365 Defender](/defender-endpoint/alerts-queue).
 
 ## Recommendations
 
