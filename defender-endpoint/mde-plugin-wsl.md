@@ -195,7 +195,7 @@ To test the plug-in after installation, follow these steps:
 
 2. Run the command `wsl`.
 
-3. Download and extract the script file from [https://aka.ms/LinuxDIY](https://aka.ms/LinuxDIY).
+3. Download and extract the script file from [https://aka.ms/MDE-Linux-EDR-DIY](https://aka.ms/MDE-Linux-EDR-DIY).
 
 4. At the Linux prompt, run the command `./mde_linux_edr_diy.sh`.
 

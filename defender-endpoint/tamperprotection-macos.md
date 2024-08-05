@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 01/29/2024
+ms.date: 08/01/2024
 ---
 
 # Protect macOS security settings with tamper protection
@@ -298,7 +298,7 @@ Tampering alert is raised in the Microsoft Defender portal
 - Try to stop the Defender for Endpoint process (kill).
 - Try to delete, rename, modify, move Defender for Endpoint files (similar to what a malicious user would do), for example:
 
-  - /Applications/Microsoft Defender ATP.app/
+  - /Applications/Microsoft Defender.app/
   - /Library/LaunchDaemons/com.microsoft.fresno.plist
   - /Library/LaunchDaemons/com.microsoft.fresno.uninstall.plist
   - /Library/LaunchAgents/com.microsoft.wdav.tray.plist
