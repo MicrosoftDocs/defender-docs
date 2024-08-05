@@ -15,7 +15,7 @@ ms.collection:
 - tier3
 - mde-asr
 search.appverid: met150
-ms.date: 06/11/2024
+ms.date: 07/25/2024
 ---
 
 # Enable controlled folder access
@@ -47,10 +47,10 @@ You can enable controlled folder access by using any of these methods:
 > [!TIP]
 > Try using [audit mode](evaluate-controlled-folder-access.md) at first so you can see how the feature works and review events without impacting normal device usage in your organization.
 
-Group Policy settings that disable local administrator list merging will override controlled folder access settings. They also override protected folders and allowed apps set by the local administrator through controlled folder access. These policies include:
-
-- Microsoft Defender Antivirus **Configure local administrator merge behavior for lists**
-- System Center Endpoint Protection **Allow users to add exclusions and overrides**
+> [!NOTE]
+> If you add Microsoft Defender Antivirus exclusions (process or path) for the binary in question, controlled folder access trusts it, and doesn't block the process or path. Group Policy settings that disable local administrator list merging override controlled folder access settings. They also override protected folders and allowed apps set by the local administrator through controlled folder access. These policies include:
+> - Microsoft Defender Antivirus **Configure local administrator merge behavior for lists**
+> - System Center Endpoint Protection **Allow users to add exclusions and overrides**
 
 For more information about disabling local list merging, see [Prevent or allow users to locally modify Microsoft Defender Antivirus policy settings](/windows/security/threat-protection/microsoft-defender-antivirus/configure-local-policy-overrides-microsoft-defender-antivirus).
 
@@ -69,7 +69,7 @@ For more information about disabling local list merging, see [Prevent or allow u
 
 ## Microsoft Intune
 
-1. Sign in to the [Microsoft Intune admin center](https://endpoint.microsoft.com) and open **Endpoint Security**.
+1. Sign in to the [Microsoft Intune admin center](https://intune.microsoft.com) and open **Endpoint Security**.
 
 2. Go to **Attack Surface Reduction** > **Policy**.
 

@@ -194,6 +194,21 @@
       "source_path": "defender-endpoint/collect-diagnostic-data-update-compliance.md",
       "redirect_url": "/defender-endpoint/collect-diagnostic-data",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/attack-simulations.md",
+      "redirect_url": "/defender-endpoint/defender-endpoint-demonstrations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/mssp-support.md",
+      "redirect_url": "/defender-endpoint/configure-mssp-support",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/evaluate-mde.md",
+      "redirect_url": "/defender-endpoint/evaluate-microsoft-defender-antivirus",
+      "redirect_document_id": false
     }
   ]
 }
