@@ -3,7 +3,7 @@ title: Protect important folders from ransomware from encrypting your files with
 description: Files in default folders can be protected from being changed by malicious apps. Prevent ransomware from encrypting your files.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 03/05/2024
+ms.date: 07/30/2024
 author: siosulli
 ms.author: siosulli
 audience: ITPro
@@ -112,7 +112,7 @@ You can query Microsoft Defender for Endpoint data by using [Advanced hunting](/
 
 Example query:
 
-```PowerShell
+```
 DeviceEvents
 | where ActionType in ('ControlledFolderAccessViolationAudited','ControlledFolderAccessViolationBlocked')
 ```
