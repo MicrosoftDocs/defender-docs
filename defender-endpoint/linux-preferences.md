@@ -79,7 +79,7 @@ Specifies the enforcement preference of antivirus engine. There are three values
 > Available in Defender for Endpoint version `101.10.72` or later. Default is changed from `real_time` to `passive` in Defender for Endpoint version `101.23062.0001` or later.
 > It is recommended to also use [scheduled scans](/defender-endpoint/linux-schedule-scan-mde) as per requirement.
 
-#### Enable/disable behavior-monitoring 
+#### Enable/disable behavior monitoring 
 
 Determines whether behavior monitoring and blocking capability is enabled on the device or not. 
 
@@ -213,7 +213,7 @@ Specifies a process for which all file activity is excluded from scanning. The p
 |**Possible values**|any string|any string|
 |**Comments**|Applicable only if *$type* is *excludedFileName*|Accessed in *Configure instance* popup|
 
-#### Muting Non Exec mounts 
+#### Muting non-exec mounts 
  
 Specifies the behavior of RTP on mount point marked as noexec. There are two values for setting are:
 
@@ -232,7 +232,7 @@ Specifies the behavior of RTP on mount point marked as noexec. There are two val
 > [!NOTE] 
 > Available in Defender for Endpoint version `101.85.27` or later.
 
-#### Unmonitor Filesystems
+#### Unmonitor filesystems
 
 Configure filesystems to be unmonitored/excluded from real-time protection (RTP). The filesystems configured are validated against Microsoft Defender's list of permitted filesystems. Filesystems can only be monitored after successful validation. These configured unmonitored filesystems are still scanned by Quick, Full, and custom scans in Microsoft Defender Antivirus.
 
@@ -264,7 +264,7 @@ To remove both NFS and Fuse from unmonitored list of filesystems, do the followi
 ```
 
 > [!NOTE]
-> Here;s the default list of monitored filesystems for RTP: `btrfs`, `ecryptfs`, `ext2`, `ext3`, `ext4`, `fuseblk`, `jfs`, `overlay`, `ramfs`, `reiserfs`, `tmpfs`, `vfat`, `xfs`.
+> Here's the default list of monitored filesystems for RTP: `btrfs`, `ecryptfs`, `ext2`, `ext3`, `ext4`, `fuseblk`, `jfs`, `overlay`, `ramfs`, `reiserfs`, `tmpfs`, `vfat`, `xfs`.
 >
 > If any monitored filesystem needs to be added to the list of unmonitored filesystems,then it needs to be evaluated and enabled by Microsoft via cloud config. Following which customers can update managed_mdatp.json to unmonitor that filesystem.
 
@@ -378,7 +378,9 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 > [!NOTE] 
 > Available in Defender for Endpoint version `101.04.76` or later.
 
-### Exclusion Setting preferences [**PREVIEW**]
+### Exclusion setting preferences
+
+**Exlusion setting preferences are currently in preview**.
 
 > [!NOTE] 
 > Available in Defender for Endpoint version `101.23092.0012` or later till Insider Slow Ring.
