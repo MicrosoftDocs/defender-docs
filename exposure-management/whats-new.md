@@ -25,6 +25,29 @@ Security Exposure Management is currently in public preview.
 >
 > `https://aka.ms/msem/rss`
 
+## July 2024
+
+### New predefined classifications
+
+The following predefined classification rules were added to the critical assets list:
+
+- **Exchange** - This rule applies to devices identified as operational Exchange servers within a domain. These servers might hold sensitive data of the organization.
+- **VMware ESXi** - This rule applies to devices identified as operational ESXi servers. These devices might hold other sensitive or critical devices.
+- **VMware vCenter** - This rule applies to devices identified as operational VMware vCenter and frequently used by admins to manage the virtual infrastructure.
+- **Identity with Privileged Azure Role** - This rule applies to identities assigned with a Privileged Azure role, over a potentially business-critical scope. A compromised identity in this role poses severe risks, including unauthorized access to Azure resources and data exposure.
+- **Exchange Administrator** - This rule applies to identities assigned with the Microsoft Entra ID "Exchange Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to Exchange Admin Center and data exposure.
+- **SharePoint Administrator** - This rule applies to identities assigned with the Microsoft Entra ID "SharePoint Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to SharePoint Admin Center and data exposure.
+- **Groups Administrator** - This rule applies to identities assigned with the Microsoft Entra ID "Groups Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to Microsoft 365 groups and data exposure.
+- **Confidential Azure VM** - This rule applies to Azure confidential virtual machines. A compromised or disrupted Azure VM of this type poses severe risks, including unauthorized access to production services and data exposure.
+- **Locked VM** - This rule applies to virtual machines that are safeguarded by a lock. A compromised or disrupted Azure VM of this type poses severe risks, including unauthorized access to production services and data exposure.
+- **Azure Virtual Machine with High Availability and Performance** - This rule applies to Azure VMs that use premium Azure storage and are configured with an availability set. A compromised or disrupted Azure VM of this type poses severe risks, including unauthorized access to production services and data exposure.
+- **Immutable Azure Storage** - This rule applies to Azure storage accounts that have immutability support enabled. A compromised or disrupted Azure storage account of this type poses severe risks, including unauthorized data access and service disruption.
+- **Immutable and Locked Azure Storage** - This rule applies to Azure storage accounts that have immutability support enabled with a locked policy in place. A compromised or disrupted Azure storage account of this type poses severe risks, including unauthorized data access and service disruption.
+- **Virtual Machine has a critical signed-in user** - This rule applies to Azure VMs protected by Defender for Endpoint with high or very high-criticality users signed in. A compromised or disrupted Azure VM of this type poses severe risks of unauthorized access, session takeover, and data exposure.
+- **Azure Key Vaults with Many Connected Identities** - The rule applies to Azure Key Vaults with high access compared to others, indicating critical workload usage. A compromised or disrupted Azure Key Vault of this type poses severe risks, including unauthorized data access and service disruption.
+ 
+For more information, see, [Review, and classify critical assets](classify-critical-assets.md)
+
 ## May 2024
 
 ### Integration with Threat Analytics
@@ -35,7 +58,7 @@ Security Exposure Management is currently in public preview.
 
 For more information, see, [Review security initiatives](initiatives.md)
 
-### New Advanced Hunting Graphs
+### New Exposure Management Tables
 
 - MSEM released two new powerful tables within Advanced Hunting: *ExposureGraphNodes* and *ExposureGraphEdges*.
 
