@@ -146,7 +146,7 @@ Specifies the merge policy for exclusions. It can be a combination of administra
 
 > [!NOTE]
 > Available in Defender for Endpoint version `100.83.73` or later.
-> Can also configure exclusions under [exclusionSettings](exclusion-setting-preferences-preview)
+> Can also configure exclusions under [exclusionSettings](#exclusion-setting-preferences)
 
 #### Scan exclusions
 
