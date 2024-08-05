@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view, create, modify, and delete outbound spam policies in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 4/8/2024
+ms.date: 08/01/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -114,10 +114,10 @@ You can configure outbound spam policies in the Microsoft Defender portal or in 
 
      For all actions, the senders specified in the **User restricted from sending email** alert policy (and in the now redundant **Notify these users and groups if a sender is blocked due to sending outbound spam** setting on this page) receive email notifications.
 
-     - **Restrict the user from sending mail until the following day**: This is the default value. Email notifications are sent, and the user is unable to send any more messages until the following day, based on UTC time. There's no way for the admin to override this block.
+     - **Restrict the user from sending mail until the following day**: This is the default value. Email notifications are sent, and the user is unable to send any more messages until the following day, based on UTC time.
        - The alert policy named **User restricted from sending email** notifies admins (via email and on the **Incidents & alerts** \> **View alerts** page).
        - Any recipients specified in the **Notify specific people if a sender is blocked due to sending outbound spam** setting in the policy are also notified.
-       - The user is unable to send any more messages until the following day, based on UTC time. There's no way for the admin to override this block.
+       - The user is unable to send any more messages until the following day, based on UTC time.
      - **Restrict the user from sending mail**: Email notifications are sent, the user is added to **Restricted users** <https://security.microsoft.com/restrictedusers> in the Microsoft Defender portal, and the user can't send email until they're removed from **Restricted users** by an admin. After an admin removes the user from the list, the user won't be restricted again for that day. For instructions, see [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md).
      - **No action, alert only**: Email notifications are sent.
 
