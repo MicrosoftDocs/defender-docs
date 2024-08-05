@@ -33,7 +33,7 @@ ms.date: 08/04/2024
 - macOS
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Endpoint on Linux
-- Microsoft Defender for Endpoint on macOS
+<!---- Microsoft Defender for Endpoint on macOS--->
 
 Endpoint detection and response for Endpoint provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
