@@ -11,7 +11,7 @@ ms.topic: overview
 
 # Enterprise for IoT in the Defender portal
 
-The number of IoT devices continues to grow exponentially across enterprise networks in many office buildings. Enterprise IoT devices include devices such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices. For more information, see [Defender for IoT devices](azure/defender-for-iot/organizations/billing#defender-for-iot-devices) [1](/azure/defender-for-iot/organizations/billing#defender-for-iot-devices)  [2](../azure/defender-for-iot/organizations/billing#defender-for-iot-devices) <!-- do we have an equivalent to this?--> [3](../billing#defender-for-iot-devices) [4](/defender-for-iot/organizations/billing.md) [5](../defender-for-iot/organizations/billing.md)
+The number of IoT devices continues to grow exponentially across enterprise networks in many office buildings. Enterprise IoT devices include devices such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices. For more information, see [Defender for IoT devices](/azure/defender-for-iot/organizations/billing#defender-for-iot-devices)<!-- do we have an equivalent to this?-->
 
 While the number of IoT devices continues to grow, they often lack the security safeguards that are common on managed endpoints like laptops and mobile phones. To bad actors, these unmanaged devices can be used as a point of entry for lateral movement or evasion, and too often, the use of such tactics leads to the exfiltration<!-- should this be changed to hacking / exposure/ stealing / leaking --> of sensitive information.
 
@@ -71,7 +71,7 @@ For more information, see [Turn off enterprise IoT security](enterprise-for-iot-
 
 If you haven't added a standalone license by the time your trial ends, your trial is automatically canceled, and you lose access to Enterprise IoT security features.
 
-For more information, see [Defender for IoT subscription billing](billing.md).<!-- ?-->
+For more information, see [Defender for IoT subscription billing](/azure/defender-for-iot/organizations/billing).<!-- ?-->
 
 ### Resolve billing issues associated with my Enterprise IoT plan
 

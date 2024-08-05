@@ -33,7 +33,7 @@ Make sure that you have:
 
 There are two ways to add enterprise IoT to the Defender portal:
 
-1. If you're a Microsoft 365 E5 (ME5)/ E5 Security and Defender for Endpoint P2 customer<!-- is this correct, i thought P2 is the 2nd option?-->, toggle on support for Enterprise IoT Security in the Defender Portal. For more information, see [turn on enterprise IoT monitoring](#turn-on-enterprise-iot-monitoring).
+1. If you're a Microsoft 365 E5 (ME5)/ E5 Security and Defender for Endpoint P2 customer, toggle on support for Enterprise IoT Security in the Defender Portal. For more information, see [turn on enterprise IoT monitoring](#turn-on-enterprise-iot-monitoring).
 
 1. If you don't have ME5/E5 Security licenses, but you're a Defender for Endpoint customer, start with a free trial or purchase standalone, per-device licenses to gain the same IoT-specific security value. For more information, see [standalone trial license](#standalone-enterprise-iot-trial-license).
 
@@ -88,7 +88,7 @@ You need another **4** standalone devices to cover the gap.
 For more information, see the [Defender for Endpoint Device discovery overview](/microsoft-365/security/defender-endpoint/device-discovery).
 
 > [!NOTE]
-> Devices listed on the **Computers & Mobile** tab, including those managed by Defender for Endpoint or otherwise, are not included in the number of [devices](billing.md#defender-for-iot-devices) monitored by Defender for IoT. <!-- change the link??-->
+> Devices listed on the **Computers & Mobile** tab, including those managed by Defender for Endpoint or otherwise, are not included in the number of [devices](/azure/defender-for-iot/organizations/billing#defender-for-iot-devices) monitored by Defender for IoT. <!-- change the link??-->
 
 ### Purchase standalone licenses
 
@@ -128,7 +128,7 @@ For more information, see the [Microsoft 365 admin center help](/microsoft-365/a
 > [!TIP]
 > Make sure to [assign your licenses to specific users](/microsoft-365/admin/manage/assign-licenses-to-users) to start using them.
 
-For more information, see [Free trial](billing.md#free-trial). <!-- is there a different link for this?-->
+For more information, see [Free trial](/azure/defender-for-iot/organizations/billing.md#free-trial). <!-- is there a different link for this?-->
 
 ## View enterprise IoT added security value in the Microsoft Defender portal
 
