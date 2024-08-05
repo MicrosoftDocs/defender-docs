@@ -101,7 +101,7 @@ All assignments on the scope will be aligned with the new setting, resolving the
 
 This page explained security policies. For related information, see the following pages:
 
-- [Learn how to set policies using PowerShell](../governance/policy/assign-policy-powershell.md)
-- [Learn how to edit a security policy in Azure Policy](../governance/policy/tutorials/create-and-manage.md)
-- [Learn how to set a policy across subscriptions or on Management groups using Azure Policy](../governance/policy/overview.md)
+- [Learn how to set policies using PowerShell](/azure/governance/policy/assign-policy-powershell)
+- [Learn how to edit a security policy in Azure Policy](/azure/governance/policy/tutorials/create-and-manage)
+- [Learn how to set a policy across subscriptions or on Management groups using Azure Policy](/azure/governance/policy/overview)
 - [Learn how to enable Defender for Cloud on all subscriptions in a management group](onboard-management-group.md)

@@ -60,11 +60,11 @@ As soon as you've applied filters, the summary values are updated to relate to t
 
 - Assign tags to the filtered resources - select the checkboxes alongside the resources you want to tag.
 - Onboard new servers to Defender for Cloud - use the **Add non-Azure servers** toolbar button.
-- Automate workloads with Azure Logic Apps - use the **Trigger Logic App** button to run a logic app on one or more resources. Your logic apps have to be prepared in advance, and accept the relevant trigger type (HTTP request). [Learn more about logic apps](../logic-apps/logic-apps-overview.md).
+- Automate workloads with Azure Logic Apps - use the **Trigger Logic App** button to run a logic app on one or more resources. Your logic apps have to be prepared in advance, and accept the relevant trigger type (HTTP request). [Learn more about logic apps](/azure/logic-apps/logic-apps-overview).
 
 ## How does asset inventory work?
 
-Asset inventory utilizes [Azure Resource Graph (ARG)](../governance/resource-graph/index.yml), an Azure service that lets you query Defender for Cloud's security posture data across multiple subscriptions.
+Asset inventory utilizes [Azure Resource Graph (ARG)](/azure/governance/resource-graph/), an Azure service that lets you query Defender for Cloud's security posture data across multiple subscriptions.
 
 ARG is designed to provide efficient resource exploration with the ability to query at scale.
 
@@ -189,6 +189,6 @@ This article described the asset inventory page of Microsoft Defender for Cloud.
 
 For more information on related tools, see the following pages:
 
-- [Azure Resource Graph (ARG)](../governance/resource-graph/index.yml)
+- [Azure Resource Graph (ARG)](/azure/governance/resource-graph/)
 - [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/)
 - View common question about [asset inventory](faq-defender-for-servers.yml)

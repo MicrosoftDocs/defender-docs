@@ -19,15 +19,15 @@ Adaptive application controls are an intelligent and automated solution for defi
 
 ### **Microsoft Entra ID**
 
-Microsoft Entra ID is a cloud-based identity and access management service. See [Adaptive Application Controls](../active-directory/fundamentals/active-directory-whatis.md).
+Microsoft Entra ID is a cloud-based identity and access management service. See [Adaptive Application Controls](/azure/active-directory/fundamentals/active-directory-whatis).
 
 ### **ACR Tasks**
 
-A suite of features within Azure container registry. See [Frequently asked questions - Azure Container Registry](../container-registry/container-registry-faq.yml).
+A suite of features within Azure container registry. See [Frequently asked questions - Azure Container Registry](/azure/container-registry/container-registry-faq).
 
 ### **Adaptive network hardening**
 
-Adaptive network hardening provides recommendations to further harden the [network security groups (NSG)](../virtual-network/network-security-groups-overview.md) rules. See [What is Adaptive Network Hardening?](adaptive-network-hardening.md#what-is-adaptive-network-hardening).
+Adaptive network hardening provides recommendations to further harden the [network security groups (NSG)](/azure/virtual-network/network-security-groups-overview) rules. See [What is Adaptive Network Hardening?](adaptive-network-hardening.md#what-is-adaptive-network-hardening).
 
 ### **ADO**
 
@@ -51,15 +51,15 @@ Advanced Persistent Threats See the [video: Understanding APTs](/events/teched-2
 
 ### **Arc-enabled Kubernetes**
 
-Azure Arc-enabled Kubernetes allows you to attach and configure Kubernetes clusters running anywhere. You can connect your clusters running on other public cloud providers or clusters running on your on-premises data center. See [What is Azure Arc-enabled Kubernetes](../azure-arc/kubernetes/overview.md).
+Azure Arc-enabled Kubernetes allows you to attach and configure Kubernetes clusters running anywhere. You can connect your clusters running on other public cloud providers or clusters running on your on-premises data center. See [What is Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
 
 ### **ARG**
 
-Azure Resource Graph-an Azure service designed to extend Azure Resource Management by providing resource exploration with the ability to query at scale across a given set of subscriptions so that you can effectively govern your environment. See [Azure Resource Graph Overview](../governance/resource-graph/overview.md).
+Azure Resource Graph-an Azure service designed to extend Azure Resource Management by providing resource exploration with the ability to query at scale across a given set of subscriptions so that you can effectively govern your environment. See [Azure Resource Graph Overview](/azure/governance/resource-graph/overview).
 
 ### **ARM**
 
-Azure Resource Manager-the deployment and management service for Azure. See [Azure Resource Manager overview](../azure-resource-manager/management/overview.md).
+Azure Resource Manager-the deployment and management service for Azure. See [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview).
 
 ### **ASB**
 
@@ -71,21 +71,21 @@ A graph-based algorithm that scans the cloud security graph, exposes attack path
 
 ### **Auto-provisioning**
 
-To make sure that your server resources are secure, Microsoft Defender for Cloud uses agents installed on your servers to send information about your servers to Microsoft Defender for Cloud for analysis. You can use auto provisioning to deploy the Azure Monitor Agent on your servers. Learn how to [configure auto provision](../iot-dps/quick-setup-auto-provision.md).
+To make sure that your server resources are secure, Microsoft Defender for Cloud uses agents installed on your servers to send information about your servers to Microsoft Defender for Cloud for analysis. You can use auto provisioning to deploy the Azure Monitor Agent on your servers. Learn how to [configure auto provision](/azure/iot-dps/quick-setup-auto-provision).
 
 ### Azure Policy for Kubernetes
 
-A pod that extends the open-source [Gatekeeper v3](https://github.com/open-policy-agent/gatekeeper) and registers as a web hook to Kubernetes admission control making it possible to apply at-scale enforcements, and safeguards on your clusters in a centralized, consistent manner. It's deployed as an AKS add-on in AKS clusters and as an Arc extension in Arc enabled Kubernetes clusters. For more information, see [Protect your Kubernetes workloads](kubernetes-workload-protections.md) and [Understand Azure Policy for Kubernetes clusters](../governance/policy/concepts/policy-for-kubernetes.md).
+A pod that extends the open-source [Gatekeeper v3](https://github.com/open-policy-agent/gatekeeper) and registers as a web hook to Kubernetes admission control making it possible to apply at-scale enforcements, and safeguards on your clusters in a centralized, consistent manner. It's deployed as an AKS add-on in AKS clusters and as an Arc extension in Arc enabled Kubernetes clusters. For more information, see [Protect your Kubernetes workloads](kubernetes-workload-protections.md) and [Understand Azure Policy for Kubernetes clusters](/azure/governance/policy/concepts/policy-for-kubernetes).
 
 ## B
 
 ### **Bicep**
 
-Bicep is a domain-specific language (DSL) that uses declarative syntax to deploy Azure resources. It provides concise syntax, reliable type safety, and support for code reuse. See [Bicep tutorial](../azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code.md).
+Bicep is a domain-specific language (DSL) that uses declarative syntax to deploy Azure resources. It provides concise syntax, reliable type safety, and support for code reuse. See [Bicep tutorial](/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code).
 
 ### **Blob storage**
 
-Azure Blob Storage is the high scale object storage service for Azure and a key building block for data storage in Azure. See [what is Azure blob storage?](../storage/blobs/storage-blobs-introduction.md).
+Azure Blob Storage is the high scale object storage service for Azure and a key building block for data storage in Azure. See [what is Azure blob storage?](/azure/storage/blobs/storage-blobs-introduction).
 
 ## C
 
@@ -133,7 +133,7 @@ The DaemonSet that is deployed on each node, collects signals from hosts using e
 
 ### **DDOS Attack**
 
-Distributed denial-of-service, a type of attack where an attacker sends more requests to an application than the application is capable of handling. See [DDOS FAQs](../ddos-protection/ddos-faq.yml).
+Distributed denial-of-service, a type of attack where an attacker sends more requests to an application than the application is capable of handling. See [DDOS FAQs](/azure/ddos-protection/ddos-faq).
 
 ## E
 
@@ -161,17 +161,17 @@ File Integrity Monitoring. Learn about ([file Integrity Monitoring in Microsoft 
 
 ### **FTP**
 
-File Transfer Protocol. Learn how to  [Deploy content using FTP](../app-service/deploy-ftp.md).
+File Transfer Protocol. Learn how to  [Deploy content using FTP](/azure/app-service/deploy-ftp).
 
 ## G
 
 ### **GCP**
 
-Google Cloud Platform. Learn how to [onboard a GPC Project](../active-directory/cloud-infrastructure-entitlement-management/onboard-gcp.md).
+Google Cloud Platform. Learn how to [onboard a GPC Project](/azure/active-directory/cloud-infrastructure-entitlement-management/onboard-gcp).
 
 ### **GKE**
 
-Google Kubernetes Engine, Google's managed environment for deploying, managing, and scaling applications using GCP infrastructure.|[Deploy a Kubernetes workload using GPU sharing on your Azure Stack Edge Pro](../databox-online/azure-stack-edge-gpu-deploy-kubernetes-gpu-sharing.md).
+Google Kubernetes Engine, Google's managed environment for deploying, managing, and scaling applications using GCP infrastructure.|[Deploy a Kubernetes workload using GPU sharing on your Azure Stack Edge Pro](/azure/databox-online/azure-stack-edge-gpu-deploy-kubernetes-gpu-sharing).
 
 ### **Governance**
 
@@ -207,7 +207,7 @@ Kusto Query Language - a tool to explore your data and discover patterns, identi
 
 ### **LSA**
 
-Local Security Authority. Learn about [secure and use policies on virtual machines in Azure](../virtual-machines/security-policy.md).
+Local Security Authority. Learn about [secure and use policies on virtual machines in Azure](/azure/virtual-machines/security-policy).
 
 ## M
 
@@ -229,7 +229,7 @@ Microsoft Defender Vulnerability Management. Learn how to [enable vulnerability 
 
 ### **MFA**
 
-Multifactor authentication, a process in which users are prompted during the sign-in process for an extra form of identification, such as a code on their cellphone or a fingerprint scan.[How it works: Azure multifactor authentication](../active-directory/authentication/concept-mfa-howitworks.md).
+Multifactor authentication, a process in which users are prompted during the sign-in process for an extra form of identification, such as a code on their cellphone or a fingerprint scan.[How it works: Azure multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
 
 ### **MITRE ATT&CK**
 
@@ -237,7 +237,7 @@ A globally accessible knowledge base of adversary tactics and techniques based o
 
 ### **MMA**
 
-Microsoft Monitoring Agent, also known as Log Analytics Agent|[Log Analytics Agent Overview](../azure-monitor/agents/log-analytics-agent.md).
+Microsoft Monitoring Agent, also known as Log Analytics Agent|[Log Analytics Agent Overview](/azure/azure-monitor/agents/log-analytics-agent).
 
 ## N
 
@@ -251,7 +251,7 @@ National Institute of Standards and Technology. See [National Institute of Stand
 
 ### **NSG**
 
-Network Security Group. Learn about [network security groups (NSGs)](../virtual-network/network-security-groups-overview.md).
+Network Security Group. Learn about [network security groups (NSGs)](/azure/virtual-network/network-security-groups-overview).
 
 ## P
 
@@ -263,15 +263,15 @@ Platform as a service (PaaS) is a complete development and deployment environmen
 
 ### **RaMP**
 
-Rapid Modernization Plan,  guidance based on initiatives, giving you a set of deployment paths to more quickly implement key layers of protection. Learn about [Zero Trust Rapid Modernization Plan](../security/fundamentals/zero-trust.md).
+Rapid Modernization Plan,  guidance based on initiatives, giving you a set of deployment paths to more quickly implement key layers of protection. Learn about [Zero Trust Rapid Modernization Plan](/azure/security/fundamentals/zero-trust).
 
 ### **RBAC**
 
-Azure role-based access control (Azure RBAC) helps you manage who has access to Azure resources, what they can do with those resources, and what areas they have access to. [RBAC Overview](../role-based-access-control/overview.md).
+Azure role-based access control (Azure RBAC) helps you manage who has access to Azure resources, what they can do with those resources, and what areas they have access to. [RBAC Overview](/azure/role-based-access-control/overview).
 
 ### **RDP**
 
-Remote Desktop Protocol (RDP) is a sophisticated technology that uses various techniques to perfect the server's remote graphics' delivery to the client device. [RDP Bandwidth Requirements](../virtual-desktop/rdp-bandwidth.md).
+Remote Desktop Protocol (RDP) is a sophisticated technology that uses various techniques to perfect the server's remote graphics' delivery to the client device. [RDP Bandwidth Requirements](/azure/virtual-desktop/rdp-bandwidth).
 
 ### **Recommendations**
 
@@ -285,7 +285,7 @@ Regulatory compliance refers to the discipline and process of ensuring that a co
 
 ### **SAS**
 
-Shared access signature that provides secure delegated access to resources in your storage account.[Storage SAS Overview](../storage/common/storage-sas-overview.md).
+Shared access signature that provides secure delegated access to resources in your storage account.[Storage SAS Overview](/azure/storage/common/storage-sas-overview).
 
 ### **SaaS**
 
@@ -313,7 +313,7 @@ Security Information and Event Management. [What is SIEM?](https://www.microsoft
 
 ### **SOAR**
 
-Security Orchestration Automated Response, a collection of software tools designed to collect data about security threats from multiple sources and respond to low-level security events without human assistance. Learn more about [SOAR](../sentinel/automation.md).
+Security Orchestration Automated Response, a collection of software tools designed to collect data about security threats from multiple sources and respond to low-level security events without human assistance. Learn more about [SOAR](/azure/sentinel/automation).
 
 ## T
 
@@ -325,13 +325,13 @@ Threat and Vulnerability Management, a built-in module in Microsoft Defender for
 
 ### **WAF**
 
-Web Application Firewall (WAF) provides centralized protection of your web applications from common exploits and vulnerabilities. Learn more about [WAF](../web-application-firewall/overview.md).
+Web Application Firewall (WAF) provides centralized protection of your web applications from common exploits and vulnerabilities. Learn more about [WAF](/azure/web-application-firewall/overview).
 
 ## Z
 
 ### **Zero-Trust**
 
-A new security model that assumes breach and verifies each request as though it originated from an uncontrolled network. Learn more about [Zero-Trust Security](../security/fundamentals/zero-trust.md).
+A new security model that assumes breach and verifies each request as though it originated from an uncontrolled network. Learn more about [Zero-Trust Security](/azure/security/fundamentals/zero-trust).
 
 ## Next steps
 

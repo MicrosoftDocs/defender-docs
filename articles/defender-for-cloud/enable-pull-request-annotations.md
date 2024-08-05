@@ -29,7 +29,7 @@ Annotations can be added by a user with access to the repository, and can be use
 **For Azure DevOps**:
 
 - An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/free/).
-- [Have write access (owner/contributer) to the Azure subscription](../active-directory/privileged-identity-management/pim-how-to-activate-role.md).
+- [Have write access (owner/contributer) to the Azure subscription](/azure/active-directory/privileged-identity-management/pim-how-to-activate-role).
 - [Connect your Azure DevOps repositories to Microsoft Defender for Cloud](quickstart-onboard-devops.md).
 - [Configure the Microsoft Security DevOps Azure DevOps extension](azure-devops-extension.yml).
 

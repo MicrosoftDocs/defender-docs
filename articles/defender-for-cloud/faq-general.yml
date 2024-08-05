@@ -37,7 +37,7 @@ sections:
         answer: |
           Microsoft Defender for Cloud monitors the following Azure resources:
           
-          * Virtual machines (VMs) (including [Cloud Services](../cloud-services/cloud-services-choose-me.md))
+          * Virtual machines (VMs) (including [Cloud Services](/azure/cloud-services/cloud-services-choose-me))
           * Virtual Machine Scale Sets
           * [The many Azure PaaS services listed in the product overview](support-matrix-defender-for-cloud.md#security-benefits-for-azure-services)
 
@@ -73,7 +73,7 @@ sections:
           Microsoft Defender for Cloud analyzes the security state of your Azure, multicloud, and on-premises resources. When potential security vulnerabilities are identified, recommendations are created. The recommendations guide you through the process of configuring the needed control. Examples are:
           
           * Provisioning of anti-malware to help identify and remove malicious software
-          * [Network security groups](../virtual-network/network-security-groups-overview.md) and rules to control traffic to virtual machines
+          * [Network security groups](/azure/virtual-network/network-security-groups-overview) and rules to control traffic to virtual machines
           * Provisioning of a web application firewall to help defend against attacks targeting your web applications
           * Deploying missing system updates
           * Addressing OS configurations that don't match the recommended baselines
@@ -179,7 +179,7 @@ sections:
       - question: |
           Why does Defender for Cloud show user accounts without permissions on the subscription as "requiring MFA"?
         answer: |
-          Defender for Cloud's MFA recommendations refers to [Azure RBAC](../role-based-access-control/role-definitions-list.yml) roles and the [Azure classic subscription administrators](../role-based-access-control/classic-administrators.md) role. Verify that none of the accounts have such roles.
+          Defender for Cloud's MFA recommendations refers to [Azure RBAC](/azure/role-based-access-control/role-definitions-list) roles and the [Azure classic subscription administrators](/azure/role-based-access-control/classic-administrators) role. Verify that none of the accounts have such roles.
 
  
       - question: |
@@ -298,7 +298,7 @@ sections:
 
           For every active automation, we recommend you create an identical (disabled) automation and store it in a different location. When there's an outage, you can enable these backup automations and maintain normal operations.
 
-          Learn more about [Business continuity and disaster recovery for Azure Logic Apps](../logic-apps/business-continuity-disaster-recovery-guidance.md).
+          Learn more about [Business continuity and disaster recovery for Azure Logic Apps](/azure/logic-apps/business-continuity-disaster-recovery-guidance).
 
 
       - question: |
@@ -343,7 +343,7 @@ sections:
         answer: |
           Continuous export can be helpful in to prepare for BCDR scenarios where the target resource is experiencing an outage or other disaster. However, it's the organization's responsibility to prevent data loss by establishing backups according to the guidelines from Azure Event Hubs, Log Analytics workspace, and Logic App.
 
-          Learn more in [Azure Event Hubs - Geo-disaster recovery](../event-hubs/event-hubs-geo-dr.md).
+          Learn more in [Azure Event Hubs - Geo-disaster recovery](/azure/event-hubs/event-hubs-geo-dr).
 
       - question: |
           Can I programmatically update multiple plans on a single subscription simultaneously?

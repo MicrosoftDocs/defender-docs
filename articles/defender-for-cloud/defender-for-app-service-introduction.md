@@ -73,7 +73,7 @@ Dangling DNS protection is available whether your domains are managed with Azure
 
 :::image type="content" source="media/defender-for-app-service-introduction/dangling-dns-alert.png" alt-text="An example of an alert about a discovered dangling DNS entry. Enable Microsoft Defender for App Service to receive this and other alerts for your environment." lightbox="media/defender-for-app-service-introduction/dangling-dns-alert.png":::
 
-Learn more about dangling DNS and the threat of subdomain takeover, in [Prevent dangling DNS entries and avoid subdomain takeover](../security/fundamentals/subdomain-takeover.md).
+Learn more about dangling DNS and the threat of subdomain takeover, in [Prevent dangling DNS entries and avoid subdomain takeover](/azure/security/fundamentals/subdomain-takeover).
 
 For a full list of the App Service alerts, see the [Reference table of alerts](alerts-azure-app-service.md).
 

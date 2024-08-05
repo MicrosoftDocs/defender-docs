@@ -9,9 +9,9 @@ ms.date: 12/06/2023
 
 # Create interactive reports with Azure Monitor workbooks
 
-[Azure workbooks](../azure-monitor/visualize/workbooks-overview.md) are flexible canvas that you can use to analyze data and create rich, visual reports in the Azure portal. In workbooks, you can access multiple data sources across Azure. Combine workbooks into unified, interactive experiences.
+[Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview) are flexible canvas that you can use to analyze data and create rich, visual reports in the Azure portal. In workbooks, you can access multiple data sources across Azure. Combine workbooks into unified, interactive experiences.
 
-Workbooks provide a rich set of capabilities for visualizing your Azure data. For detailed information about each visualization type, see the [visualizations examples and documentation](../azure-monitor/visualize/workbooks-text-visualizations.md).
+Workbooks provide a rich set of capabilities for visualizing your Azure data. For detailed information about each visualization type, see the [visualizations examples and documentation](/azure/azure-monitor/visualize/workbooks-text-visualizations).
 
 In Microsoft Defender for Cloud, you can access built-in workbooks to track your organization’s security posture. You can also build custom workbooks to view a wide range of data from Defender for Cloud or other supported data sources.
 
@@ -21,7 +21,7 @@ For pricing, see the [pricing page](https://azure.microsoft.com/pricing/details/
 
 ## Prerequisites
 
-**Required roles and permissions**: To save a workbook, you must have at least [Workbook Contributor](../role-based-access-control/built-in-roles.md#workbook-contributor) permissions for the relevant resource group.
+**Required roles and permissions**: To save a workbook, you must have at least [Workbook Contributor](/azure/role-based-access-control/built-in-roles#workbook-contributor) permissions for the relevant resource group.
 
 **Cloud availability**: :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds :::image type="icon" source="./media/icons/yes-icon.png"::: National (Azure Government, Microsoft Azure operated by 21Vianet)
 
@@ -276,7 +276,7 @@ To find the saved workbook, go to the **Recently modified workbooks** category.
 
 This article describes the Defender for Cloud integrated Azure workbooks page that has built-in reports and the option to build your own custom, interactive reports.
 
-- Learn more about [Azure workbooks](../azure-monitor/visualize/workbooks-overview.md).
+- Learn more about [Azure workbooks](/azure/azure-monitor/visualize/workbooks-overview).
 
 Built-in workbooks get their data from Defender for Cloud recommendations.
 

@@ -20,7 +20,7 @@ Data is collected using:
 - [Azure Monitor Agent (AMA)](auto-deploy-azure-monitoring-agent.md)
 - [Microsoft Defender for Endpoint](integration-defender-for-endpoint.md) (MDE)
 - [Log Analytics agent](working-with-log-analytics-agent.md)
-- **Security components**, such as the [Azure Policy for Kubernetes](../governance/policy/concepts/policy-for-kubernetes.md)
+- **Security components**, such as the [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes)
 
 ## Why use Defender for Cloud to deploy monitoring components?
 
@@ -29,23 +29,23 @@ Visibility into the security of your workloads depends on the data that the moni
 To save you the process of manually installing the extensions, Defender for Cloud reduces management overhead by installing all required extensions on existing and new machines. Defender for Cloud assigns the appropriate **Deploy if not exists** policy to the workloads in the subscription. This policy type ensures the extension is provisioned on all existing and future resources of that type.
 
 > [!TIP]
-> Learn more about Azure Policy effects, including **Deploy if not exists**, in [Understand Azure Policy effects](../governance/policy/concepts/effects.md).
+> Learn more about Azure Policy effects, including **Deploy if not exists**, in [Understand Azure Policy effects](/azure/governance/policy/concepts/effects).
 
 ## What plans use monitoring components?
 
 These plans use monitoring components to collect data:
 
 - Defender for Servers
-  - [Azure Arc agent](../azure-arc/servers/manage-vm-extensions.md) (For multicloud and on-premises servers)
+  - [Azure Arc agent](/azure/azure-arc/servers/manage-vm-extensions) (For multicloud and on-premises servers)
   - [Microsoft Defender for Endpoint](integration-defender-for-endpoint.md)
   - Vulnerability assessment
   - [Azure Monitor Agent](#azure-monitor-agent-ama) or [Log Analytics agent](#log-analytics-agent)
 - [Defender for SQL servers on machines](defender-for-sql-on-machines-vulnerability-assessment.md)
-  - [Azure Arc agent](../azure-arc/servers/manage-vm-extensions.md) (For multicloud and on-premises servers)
+  - [Azure Arc agent](/azure/azure-arc/servers/manage-vm-extensions) (For multicloud and on-premises servers)
   - [Azure Monitor Agent](#azure-monitor-agent-ama) or [Log Analytics agent](#log-analytics-agent)
   - Automatic SQL server discovery and registration
 - Defender for Containers
-  - [Azure Arc agent](../azure-arc/servers/manage-vm-extensions.md) (For multicloud and on-premises servers)
+  - [Azure Arc agent](/azure/azure-arc/servers/manage-vm-extensions) (For multicloud and on-premises servers)
   - [Defender sensor, Azure Policy for Kubernetes, Kubernetes audit log data](defender-for-containers-introduction.md)
 
 ## Availability of extensions
@@ -64,17 +64,17 @@ Learn more about [using the Azure Monitor Agent with Defender for Cloud](auto-de
 |---|:--|:--|
 | Release state: | Generally available (GA) | Generally available (GA) |
 | Relevant Defender plan: | [Foundational Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) for agent-based security recommendations<br>[Microsoft Defender for Servers](defender-for-servers-introduction.md)<br>[Microsoft Defender for SQL](defender-for-sql-introduction.md) | [Foundational Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) for agent-based security recommendations<br>[Microsoft Defender for Servers](defender-for-servers-introduction.md)<br>[Microsoft Defender for SQL](defender-for-sql-introduction.md) |
-| Required roles and permissions (subscription-level): |[Owner](../role-based-access-control/built-in-roles.md)| [Owner](../role-based-access-control/built-in-roles.md#owner) |
+| Required roles and permissions (subscription-level): |[Owner](/azure/role-based-access-control/built-in-roles)| [Owner](/azure/role-based-access-control/built-in-roles#owner) |
 | Supported destinations: | :::image type="icon" source="./media/icons/yes-icon.png"::: Azure virtual machines | :::image type="icon" source="./media/icons/yes-icon.png"::: Azure Arc-enabled machines |
 | Policy-based: | :::image type="icon" source="./media/icons/no-icon.png"::: No | :::image type="icon" source="./media/icons/yes-icon.png"::: Yes |
 | Clouds: | :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet | :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet |
 
 #### Supported operating systems for the Log Analytics agent
 
-Defender for Cloud depends on the [Log Analytics agent](../azure-monitor/agents/log-analytics-agent.md). Ensure your machines are running one of the supported operating systems for this agent as described on the following pages:
+Defender for Cloud depends on the [Log Analytics agent](/azure/azure-monitor/agents/log-analytics-agent). Ensure your machines are running one of the supported operating systems for this agent as described on the following pages:
 
-- [Log Analytics agent for Windows supported operating systems](../azure-monitor/agents/agents-overview.md#supported-operating-systems)
-- [Log Analytics agent for Linux supported operating systems](../azure-monitor/agents/agents-overview.md#supported-operating-systems)
+- [Log Analytics agent for Windows supported operating systems](/azure/azure-monitor/agents/agents-overview#supported-operating-systems)
+- [Log Analytics agent for Linux supported operating systems](/azure/azure-monitor/agents/agents-overview#supported-operating-systems)
 
 Also ensure your Log Analytics agent is [properly configured to send data to Defender for Cloud](working-with-log-analytics-agent.md#manual-agent).
 
@@ -107,8 +107,8 @@ Learn more about [working with the Log Analytics agent](working-with-log-analyti
 |--|--|--|
 | Release state: | Generally available (GA) | Generally available (GA) |
 | Relevant Defender plan: | [Microsoft Defender for Servers](defender-for-servers-introduction.md) | [Microsoft Defender for Servers](defender-for-servers-introduction.md) |
-| Required roles and permissions (subscription-level): | - To enable/disable the integration: [Security Admin](../role-based-access-control/built-in-roles.md#security-admin) or [Owner](../role-based-access-control/built-in-roles.md#owner)<br>- To view Defender for Endpoint alerts in Defender for Cloud: [Security reader](../role-based-access-control/built-in-roles.md), [Reader](../role-based-access-control/built-in-roles.md), **Resource Group Contributor**, **Resource Group Owner**, [Security Admin](../role-based-access-control/built-in-roles.md#security-admin), **Subscription owner**, or **Subscription Contributor** | - To enable/disable the integration: [Security Admin](../role-based-access-control/built-in-roles.md#security-admin) or [Owner](../role-based-access-control/built-in-roles.md#owner)<br>- To view Defender for Endpoint alerts in Defender for Cloud: [Security reader](../role-based-access-control/built-in-roles.md), [Reader](../role-based-access-control/built-in-roles.md), **Resource Group Contributor**, **Resource Group Owner**, [Security Admin](../role-based-access-control/built-in-roles.md#security-admin), **Subscription owner**, or **Subscription Contributor** |
-| Supported destinations: | :::image type="icon" source="./media/icons/yes-icon.png"::: Azure Arc-enabled machines<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure virtual machines | :::image type="icon" source="./media/icons/yes-icon.png"::: Azure Arc-enabled machines<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure VMs running Windows Server 2022, 2019, 2016, 2012 R2, 2008 R2 SP1, [Azure Virtual Desktop](../virtual-desktop/overview.md), [Windows 10 Enterprise multi-session](../virtual-desktop/windows-10-multisession-faq.yml)<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure VMs running Windows 10 |
+| Required roles and permissions (subscription-level): | - To enable/disable the integration: [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin) or [Owner](/azure/role-based-access-control/built-in-roles#owner)<br>- To view Defender for Endpoint alerts in Defender for Cloud: [Security reader](/azure/role-based-access-control/built-in-roles), [Reader](/azure/role-based-access-control/built-in-roles), **Resource Group Contributor**, **Resource Group Owner**, [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), **Subscription owner**, or **Subscription Contributor** | - To enable/disable the integration: [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin) or [Owner](/azure/role-based-access-control/built-in-roles#owner)<br>- To view Defender for Endpoint alerts in Defender for Cloud: [Security reader](/azure/role-based-access-control/built-in-roles), [Reader](/azure/role-based-access-control/built-in-roles), **Resource Group Contributor**, **Resource Group Owner**, [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), **Subscription owner**, or **Subscription Contributor** |
+| Supported destinations: | :::image type="icon" source="./media/icons/yes-icon.png"::: Azure Arc-enabled machines<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure virtual machines | :::image type="icon" source="./media/icons/yes-icon.png"::: Azure Arc-enabled machines<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure VMs running Windows Server 2022, 2019, 2016, 2012 R2, 2008 R2 SP1, [Azure Virtual Desktop](/azure/virtual-desktop/overview), [Windows 10 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq)<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure VMs running Windows 10 |
 | Policy-based: | :::image type="icon" source="./media/icons/no-icon.png"::: No | :::image type="icon" source="./media/icons/no-icon.png"::: No |
 | Clouds: | :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet | :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet |
 
@@ -120,7 +120,7 @@ Learn more about [Microsoft Defender for Endpoint](/microsoft-365/security/defen
 |------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Release state:                                       | Generally available (GA)                                                                                                                                                           |
 | Relevant Defender plan:                              | [Microsoft Defender for Servers](defender-for-servers-introduction.md)                                                                                                             |
-| Required roles and permissions (subscription-level): | [Owner](../role-based-access-control/built-in-roles.md#owner)                                                                                                                      |
+| Required roles and permissions (subscription-level): | [Owner](/azure/role-based-access-control/built-in-roles#owner)                                                                                                                      |
 | Supported destinations:                              | :::image type="icon" source="./media/icons/yes-icon.png"::: Azure virtual machines<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure Arc-enabled machines       |
 | Policy-based:                                        | :::image type="icon" source="./media/icons/yes-icon.png"::: Yes                                                                                                                    |
 | Clouds:                                              | :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet |
@@ -131,11 +131,11 @@ Learn more about [Microsoft Defender for Endpoint](/microsoft-365/security/defen
 |------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Release state:                                       | Preview                                                                                                                                                                            |
 | Relevant Defender plan:                              | No plan required                                                                                                    |
-| Required roles and permissions (subscription-level): | [Owner](../role-based-access-control/built-in-roles.md#owner)                                                                                                                      |
+| Required roles and permissions (subscription-level): | [Owner](/azure/role-based-access-control/built-in-roles#owner)                                                                                                                      |
 | Supported destinations:                              | :::image type="icon" source="./media/icons/yes-icon.png"::: Azure virtual machines                                                                                                 |
 | Clouds:                                              | :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet |
 
-Learn more about Azure's [Guest Configuration extension](../governance/machine-configuration/overview.md).
+Learn more about Azure's [Guest Configuration extension](/azure/governance/machine-configuration/overview).
 
 ### Defender for Containers extensions
 
@@ -147,7 +147,7 @@ By default, the required extensions are enabled when you enable Defender for Con
 |------------------------------------------------------|----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | Release state:                                       | • Defender sensor: GA<br> • Azure Policy for Kubernetes: Generally available (GA) | • Defender sensor: Preview<br> • Azure Policy for Kubernetes: Preview |
 | Relevant Defender plan:                              | [Microsoft Defender for Containers](defender-for-containers-introduction.md)           | [Microsoft Defender for Containers](defender-for-containers-introduction.md)                |
-| Required roles and permissions (subscription-level): | [Owner](../role-based-access-control/built-in-roles.md#owner) or [User Access Administrator](../role-based-access-control/built-in-roles.md#user-access-administrator)                          | [Owner](../role-based-access-control/built-in-roles.md#owner) or [User Access Administrator](../role-based-access-control/built-in-roles.md#user-access-administrator)                               |
+| Required roles and permissions (subscription-level): | [Owner](/azure/role-based-access-control/built-in-roles#owner) or [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator)                          | [Owner](/azure/role-based-access-control/built-in-roles#owner) or [User Access Administrator](/azure/role-based-access-control/built-in-roles#user-access-administrator)                               |
 | Supported destinations:                              | The AKS Defender sensor only supports [AKS clusters that have RBAC enabled](/azure/aks/concepts-identity#kubernetes-rbac).                                                                                   | [See Kubernetes distributions supported for Arc-enabled Kubernetes](supported-machines-endpoint-solutions-clouds-containers.md?tabs=azure-aks#kubernetes-distributions-and-configurations)             |
 | Policy-based:                                        | :::image type="icon" source="./media/icons/yes-icon.png"::: Yes                        | :::image type="icon" source="./media/icons/yes-icon.png"::: Yes                             |
 | Clouds:                                              | **Defender sensor**:<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet<br>**Azure Policy for Kubernetes**:<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet|**Defender sensor**:<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet<br>**Azure Policy for Kubernetes**:<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet|

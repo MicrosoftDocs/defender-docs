@@ -100,14 +100,14 @@ The new Microsoft Defender for Storage plan has predictable pricing based on the
 
 Malware Scanning is charged on a per-gigabyte basis for scanned data. To ensure cost predictability, a monthly cap can be established for each storage account's scanned data volume, per-month basis. This cap can be set subscription-wide, affecting all storage accounts within the subscription, or applied to individual storage accounts. Under protected subscriptions, you can configure specific storage accounts with different limits.
 
-By default, the limit is set to 5,000 GB per month per storage account. Once this threshold is exceeded, scanning will cease for the remaining blobs, with a 20-GB confidence interval. For configuration details, refer to [configure Defender for Storage](../storage/common/azure-defender-storage-configure.md).
+By default, the limit is set to 5,000 GB per month per storage account. Once this threshold is exceeded, scanning will cease for the remaining blobs, with a 20-GB confidence interval. For configuration details, refer to [configure Defender for Storage](/azure/storage/common/azure-defender-storage-configure).
 
 > [!IMPORTANT]
 > Malware scanning in Defender for Storage is not included for free in the first 30 day trial and will be charged from the first day in accordance with the pricing scheme available on the Defender for Cloud [pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). Malware scanning will also incur additional charges for other Azure services - Azure Storage read operations, Azure Storage blob indexing and Azure Event Grid notifications.
 
 ### Enablement at scale with granular controls
 
-Microsoft Defender for Storage enables you to secure your data at scale with granular controls. You can apply consistent security policies across all your storage accounts within a subscription or customize them for specific accounts to suit your business needs. You can also control your costs by choosing the level of protection you need for each resource. To get started, visit [enable Defender for Storage](../storage/common/azure-defender-storage-configure.md).
+Microsoft Defender for Storage enables you to secure your data at scale with granular controls. You can apply consistent security policies across all your storage accounts within a subscription or customize them for specific accounts to suit your business needs. You can also control your costs by choosing the level of protection you need for each resource. To get started, visit [enable Defender for Storage](/azure/storage/common/azure-defender-storage-configure).
 
 ### Monitoring your malware scanning cap
 

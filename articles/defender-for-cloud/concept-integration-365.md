@@ -40,9 +40,9 @@ The [CloudAuditEvents table](/defender-xdr/advanced-hunting-cloudauditevents-tab
 
 ## Sentinel customers
 
-Microsoft Sentinel customers can [benefit from the Defender for Cloud integration with Microsoft 365 Defender](../sentinel/ingest-defender-for-cloud-incidents.md) in their workspaces using the Microsoft 365 Defender incidents and alerts connector.
+Microsoft Sentinel customers can [benefit from the Defender for Cloud integration with Microsoft 365 Defender](/azure/sentinel/ingest-defender-for-cloud-incidents) in their workspaces using the Microsoft 365 Defender incidents and alerts connector.
 
-First you need to [enabled incident integration in your Microsoft 365 Defender connector](../sentinel/connect-microsoft-365-defender.md).
+First you need to [enabled incident integration in your Microsoft 365 Defender connector](/azure/sentinel/connect-microsoft-365-defender).
 
 Then, enable the `Tenant-based Microsoft Defender for Cloud (Preview)` connector to synchronize your subscriptions with your tenant-based Defender for Cloud incidents to stream through the Microsoft 365 Defender incidents connector.
 

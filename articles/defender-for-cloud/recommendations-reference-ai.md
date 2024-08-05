@@ -75,7 +75,7 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 
 ### Azure Machine Learning Workspaces should disable public network access (Preview)
 
-**Description & related policy**: Disabling public network access improves security by ensuring that the Machine Learning Workspaces aren't exposed on the public internet. You can control exposure of your workspaces by creating private endpoints instead. For more information, see [Configure a private endpoint for an Azure Machine Learning workspace](../machine-learning/how-to-configure-private-link.md).
+**Description & related policy**: Disabling public network access improves security by ensuring that the Machine Learning Workspaces aren't exposed on the public internet. You can control exposure of your workspaces by creating private endpoints instead. For more information, see [Configure a private endpoint for an Azure Machine Learning workspace](/azure/machine-learning/how-to-configure-private-link).
 
 **Severity**: Medium
 
@@ -87,13 +87,13 @@ This recommendation replaces the old recommendation *Diagnostic logs in Search s
 
 ### Azure Machine Learning Computes should have local authentication methods disabled (Preview)
 
-**Description & related policy**: Disabling local authentication methods improves security by ensuring that Machine Learning Computes require Azure Active Directory identities exclusively for authentication. For more information, see [Azure Policy Regulatory Compliance controls for Azure Machine Learning](../machine-learning/security-controls-policy.md).
+**Description & related policy**: Disabling local authentication methods improves security by ensuring that Machine Learning Computes require Azure Active Directory identities exclusively for authentication. For more information, see [Azure Policy Regulatory Compliance controls for Azure Machine Learning](/azure/machine-learning/security-controls-policy).
 
 **Severity**: Medium
 
 ### Azure Machine Learning compute instances should be recreated to get the latest software updates (Preview)
 
-**Description & related policy**: Ensure Azure Machine Learning compute instances run on the latest available operating system. Security is improved and vulnerabilities reduced by running with the latest security patches. For more information, see [Vulnerability management for Azure Machine Learning](../machine-learning/concept-vulnerability-management.md#compute-instance).
+**Description & related policy**: Ensure Azure Machine Learning compute instances run on the latest available operating system. Security is improved and vulnerabilities reduced by running with the latest security patches. For more information, see [Vulnerability management for Azure Machine Learning](/azure/machine-learning/concept-vulnerability-management#compute-instance).
 
 **Severity**: Medium
 

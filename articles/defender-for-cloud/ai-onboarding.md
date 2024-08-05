@@ -21,7 +21,7 @@ Threat protection for AI workloads in Microsoft Defender for Cloud protects AI w
 
 - You must [enable Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- We recommend that you don't opt out of prompt based prompt-base triggered alerts for [Azure OpenAI content filtering](../ai-services/openai/concepts/content-filter.md). If you opt out of prompt-based trigger alerts and remove that capability, it can affect Defender for Cloud's ability to monitor and detect such attacks.
+- We recommend that you don't opt out of prompt based prompt-base triggered alerts for [Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter). If you opt out of prompt-based trigger alerts and remove that capability, it can affect Defender for Cloud's ability to monitor and detect such attacks.
 
 ## Enroll in the limited preview
 

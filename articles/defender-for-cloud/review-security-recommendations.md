@@ -154,7 +154,7 @@ Defender for Cloud supports governance rules for recommendations, to specify a r
 
 ## Review recommendations in Azure Resource Graph
 
-You can use [Azure Resource Graph](../governance/resource-graph/index.yml) to write a [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) to query Defender for Cloud security posture data across multiple subscriptions. Azure Resource Graph provides an efficient way to query at scale across cloud environments by viewing, filtering, grouping, and sorting data.
+You can use [Azure Resource Graph](/azure/governance/resource-graph/) to write a [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) to query Defender for Cloud security posture data across multiple subscriptions. Azure Resource Graph provides an efficient way to query at scale across cloud environments by viewing, filtering, grouping, and sorting data.
 
 **To review recommendations in Azure Resource Graph**:
 

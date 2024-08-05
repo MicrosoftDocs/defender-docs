@@ -49,7 +49,7 @@ With cloud workloads commonly spanning multiple cloud platforms, cloud security 
 
 - **AWS**: To protect AWS machines, you onboard AWS accounts into Defender for Cloud.  This integration provides a unified view of Defender for Cloud recommendations and AWS Security Hub findings. Learn more about [connecting AWS accounts to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
 - **GCP**: To protect GCP machines, you onboard GCP accounts into Defender for Cloud. This integration provides a unified view of Defender for Cloud recommendations and GCP Security Command Center findings. Learn more about [connecting GCP accounts to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
-- **On-premises machines**. You can extend Defender for Cloud protection by connecting  on-premises machines to [Azure Arc enabled servers](../azure-arc/servers/overview.md). Learn more about [connecting on-premises machines to Defender for Cloud](quickstart-onboard-machines.md).
+- **On-premises machines**. You can extend Defender for Cloud protection by connecting  on-premises machines to [Azure Arc enabled servers](/azure/azure-arc/servers/overview). Learn more about [connecting on-premises machines to Defender for Cloud](quickstart-onboard-machines.md).
 
 
 ## Protect Azure PaaS services 
@@ -58,7 +58,7 @@ When Defender for Cloud is available in an Azure subscription, and Defender for 
 
 ## Automate responses with Azure Logic Apps
 
-Use [Azure Logic Apps](../logic-apps/index.yml) to build automated scalable workflows, business processes, and enterprise orchestrations to integrate your apps and data across cloud services and on-premises systems.
+Use [Azure Logic Apps](/azure/logic-apps/) to build automated scalable workflows, business processes, and enterprise orchestrations to integrate your apps and data across cloud services and on-premises systems.
 
 Defender for Cloud's [workflow automation](workflow-automation.yml) feature lets you automate responses to Defender for Cloud triggers.
 
@@ -78,23 +78,23 @@ Defender for Cloud can stream your security alerts into the most popular SIEM, S
 
 ### Integrate with Microsoft Sentinel
 
-Defender for Cloud natively integrates with [Microsoft Sentinel](../sentinel/overview.md), Microsoft's SIEM/SOAR solution.
+Defender for Cloud natively integrates with [Microsoft Sentinel](/azure/sentinel/overview), Microsoft's SIEM/SOAR solution.
 
 There are two approaches to ensuring that Defender for Cloud data is represented in Microsoft Sentinel:
 
 - **Sentinel connectors** - Microsoft Sentinel includes built-in connectors for Microsoft Defender for Cloud at the subscription and tenant levels:
 
-  - [Stream alerts to Microsoft Sentinel at the subscription level](../sentinel/connect-azure-security-center.md)
+  - [Stream alerts to Microsoft Sentinel at the subscription level](/azure/sentinel/connect-azure-security-center)
   - [Connect all subscriptions in your tenant to Microsoft Sentinel](https://techcommunity.microsoft.com/t5/azure-sentinel/azure-security-center-auto-connect-to-sentinel/ba-p/1387539)
 
   > [!TIP]
-  > Learn more in [Connect security alerts from Microsoft Defender for Cloud](../sentinel/connect-defender-for-cloud.md).
+  > Learn more in [Connect security alerts from Microsoft Defender for Cloud](/azure/sentinel/connect-defender-for-cloud).
 
 - **Audit logs streaming** - An alternative way to investigate Defender for Cloud alerts in Microsoft Sentinel is to stream your audit logs into Microsoft Sentinel:
 
-  - [Connect Windows security events](../sentinel/connect-windows-security-events.md)
-  - [Collect data from Linux-based sources using Syslog](../sentinel/connect-syslog.md)
-  - [Connect data from Azure Activity log](../sentinel/data-connectors/azure-activity.md)
+  - [Connect Windows security events](/azure/sentinel/connect-windows-security-events)
+  - [Collect data from Linux-based sources using Syslog](/azure/sentinel/connect-syslog)
+  - [Connect data from Azure Activity log](/azure/sentinel/data-connectors/azure-activity)
 
 ### Stream alerts with Microsoft Graph Security API
 

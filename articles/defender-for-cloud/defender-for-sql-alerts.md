@@ -43,4 +43,4 @@ For related information, see these resources:
 
 - [Security alerts for SQL Database and Azure Synapse Analytics](alerts-sql-database-and-azure-synapse-analytics.md)
 - [Set up email notifications for security alerts](configure-email-notifications.md)
-- [Learn more about Microsoft Sentinel](../sentinel/index.yml)
+- [Learn more about Microsoft Sentinel](/azure/sentinel/)

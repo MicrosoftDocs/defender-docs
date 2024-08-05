@@ -33,7 +33,7 @@ Learn more about the [benefits, features, and limitations of Defender for Storag
 |----|:----|
 |Release state:|General availability (GA)|
 |Pricing:|**Microsoft Defender for Storage** is billed as shown in the [pricing details](https://azure.microsoft.com/pricing/details/defender-for-cloud/) and in the [Defender plans](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/pricingTier) in the Azure portal |
-|Protected storage types:|[Blob Storage](../storage/blobs/storage-blobs-introduction.md)  (Standard/Premium StorageV2, Block Blobs) <br>[Azure Files](../storage/files/storage-files-introduction.md) (over REST API and SMB)<br>[Azure Data Lake Storage Gen2](../storage/blobs/data-lake-storage-introduction.md) (Standard/Premium accounts with hierarchical namespaces enabled)|
+|Protected storage types:|[Blob Storage](/azure/storage/blobs/storage-blobs-introduction)  (Standard/Premium StorageV2, Block Blobs) <br>[Azure Files](/azure/storage/files/storage-files-introduction) (over REST API and SMB)<br>[Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) (Standard/Premium accounts with hierarchical namespaces enabled)|
 |Clouds:|:::image type="icon" source="media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="media/icons/yes-icon.png"::: Azure Government (Only for per-transaction plan)<br>:::image type="icon" source="media/icons/no-icon.png"::: Microsoft Azure operated by 21Vianet<br>:::image type="icon" source="media/icons/no-icon.png"::: Connected AWS accounts|
 
 ## Set up Microsoft Defender for Storage (classic)
@@ -75,7 +75,7 @@ Learn more about the [ARM template AzAPI reference](/azure/templates/microsoft.s
 
 #### Bicep template
 
-To enable Microsoft Defender for Storage at the subscription level with per-transaction pricing using [Bicep](../azure-resource-manager/bicep/overview.md), add the following to your Bicep template:
+To enable Microsoft Defender for Storage at the subscription level with per-transaction pricing using [Bicep](/azure/azure-resource-manager/bicep/overview), add the following to your Bicep template:
 
 ```bicep
 resource symbolicname 'Microsoft.Security/pricings@2022-03-01' = {
@@ -259,7 +259,7 @@ Learn more about the [az security atp storage](/cli/azure/security/atp/storage#a
 
 ## Exclude a storage account from a protected subscription in the per-transaction plan
 
-When you [enable Microsoft Defender for Storage](../storage/common/azure-defender-storage-configure.md) on a subscription for the per-transaction pricing, all current and future Azure Storage accounts in that subscription are protected. You can exclude specific storage accounts from the Defender for Storage protections using the Azure portal, PowerShell, or the Azure CLI.
+When you [enable Microsoft Defender for Storage](/azure/storage/common/azure-defender-storage-configure) on a subscription for the per-transaction pricing, all current and future Azure Storage accounts in that subscription are protected. You can exclude specific storage accounts from the Defender for Storage protections using the Azure portal, PowerShell, or the Azure CLI.
 
 We recommend that you enable Defender for Storage on the entire subscription to protect all existing and future storage accounts in it. However, there are some cases where people want to exclude specific storage accounts from Defender protection.
 
@@ -292,7 +292,7 @@ To exclude an Azure Storage account from Microsoft Defender for Storage (classic
     Update-AzTag -ResourceId <resourceID> -Tag @{"AzDefenderPlanAutoEnable" = "off"} -Operation Merge
     ```
 
-    If you skip this stage, your untagged resources continue receiving daily updates from the subscription level enablement policy. That policy enables Defender for Storage again on the account. Learn more about tags in [Use tags to organize your Azure resources and management hierarchy](../azure-resource-manager/management/tag-resources.md).
+    If you skip this stage, your untagged resources continue receiving daily updates from the subscription level enablement policy. That policy enables Defender for Storage again on the account. Learn more about tags in [Use tags to organize your Azure resources and management hierarchy](/azure/azure-resource-manager/management/tag-resources).
 
 1. Disable Microsoft Defender for Storage for the desired account on the relevant subscription with the ``Disable-AzSecurityAdvancedThreatProtection`` cmdlet (using the same resource ID):
 

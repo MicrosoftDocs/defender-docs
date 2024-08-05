@@ -86,8 +86,8 @@ In this article, you learned how to configure continuous exports of your recomme
 To see related content:
 
 - Learn more about [workflow automation templates](https://github.com/Azure/Azure-Security-Center/tree/master/Workflow%20automation).
-- See the [Azure Event Hubs documentation](../event-hubs/index.yml).
-- Learn more about [Microsoft Sentinel](../sentinel/index.yml).
-- Review the [Azure Monitor documentation](../azure-monitor/index.yml).
+- See the [Azure Event Hubs documentation](/azure/event-hubs/).
+- Learn more about [Microsoft Sentinel](/azure/sentinel/).
+- Review the [Azure Monitor documentation](/azure/azure-monitor/).
 - Learn how to [export data types schemas](https://aka.ms/ASCAutomationSchemas).
 - Check out [common questions](faq-general.yml) about continuous export.

@@ -86,10 +86,10 @@ Request body parameters:
 
 ### Use Azure Resource Manager to remove the Defender sensor from AKS
 
-To use Azure Resource Manager to remove the Defender sensor, you'll need a Log Analytics workspace on your subscription. Learn more in [Log Analytics workspaces](../../azure-monitor/logs/log-analytics-workspace-overview.md).
+To use Azure Resource Manager to remove the Defender sensor, you'll need a Log Analytics workspace on your subscription. Learn more in [Log Analytics workspaces](/azure/azure-monitor/logs/log-analytics-workspace-overview).
 
 > [!TIP]
-> If you're new to Resource Manager templates, start here: [What are Azure Resource Manager templates?](../../azure-resource-manager/templates/overview.md)
+> If you're new to Resource Manager templates, start here: [What are Azure Resource Manager templates?](/azure/azure-resource-manager/templates/overview)
 
 The relevant template and parameters to remove the Defender sensor from AKS are:
 

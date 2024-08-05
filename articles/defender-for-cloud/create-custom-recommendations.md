@@ -88,12 +88,12 @@ You can create custom recommendations and standards in Defender for cloud by cre
 
 Here's how you do that:
 
-1. Create one or more policy definitions in the [Azure Policy portal](../governance/policy/tutorials/create-custom-policy-definition.md), or [programmatically](../governance/policy/how-to/programmatically-create.md).
-1. [Create a policy initiative](../governance/policy/concepts/initiative-definition-structure.md) that contains the custom policy definitions.
+1. Create one or more policy definitions in the [Azure Policy portal](/azure/governance/policy/tutorials/create-custom-policy-definition), or [programmatically](/azure/governance/policy/how-to/programmatically-create).
+1. [Create a policy initiative](/azure/governance/policy/concepts/initiative-definition-structure) that contains the custom policy definitions.
 
 ### Onboard the initiative as a custom standard (legacy)
 
-[Policy assignments](../governance/policy/concepts/assignment-structure.md) are used by Azure Policy to assign Azure resources to a policy or initiative.
+[Policy assignments](/azure/governance/policy/concepts/assignment-structure) are used by Azure Policy to assign Azure resources to a policy or initiative.
 
 To onboard an initiative to a custom security standard in Defender for you, you need to include `"ASC":"true"` in the request body as shown here. The `ASC` field onboards the initiative to Microsoft Defender for Cloud.
 

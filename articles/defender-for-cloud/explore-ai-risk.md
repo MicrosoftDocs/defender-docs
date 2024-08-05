@@ -22,7 +22,7 @@ Defender Cloud Security Posture Management (CSPM) plan in Microsoft Defender for
 
 - Enable [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md) on your Azure subscription.
 
-- Have at least one [Azure OpenAI resource](../ai-studio/how-to/create-azure-ai-resource.md), with at least one [model deployment](../ai-studio/how-to/deploy-models-openai.md) connected to it via Azure AI Studio.
+- Have at least one [Azure OpenAI resource](/azure/ai-studio/how-to/create-azure-ai-resource), with at least one [model deployment](/azure/ai-studio/how-to/deploy-models-openai) connected to it via Azure AI Studio.
 
 ## Identify containers running on vulnerable generative AI container images
 

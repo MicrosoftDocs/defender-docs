@@ -48,7 +48,7 @@ When you collect data in a tenant, you can analyze the data from one, central lo
 
 To export data to an event hub or Log Analytics workspace in a different tenant:
 
-- In the tenant that has the event hub or Log Analytics workspace, [invite a user](../active-directory/external-identities/what-is-b2b.md#easily-invite-guest-users-from-the-azure-portal) from the tenant that hosts the continuous export configuration, or you can configure Azure Lighthouse for the source and destination tenant.
+- In the tenant that has the event hub or Log Analytics workspace, [invite a user](/azure/active-directory/external-identities/what-is-b2b#easily-invite-guest-users-from-the-azure-portal) from the tenant that hosts the continuous export configuration, or you can configure Azure Lighthouse for the source and destination tenant.
 
 - If you use business-to-business (B2B) guest user access in Microsoft Entra ID, ensure that the user accepts the invitation to access the tenant as a guest.
 

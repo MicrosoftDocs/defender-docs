@@ -14,7 +14,7 @@ Defender for APIs in Microsoft Defender for Cloud offers full lifecycle protecti
 
 Defender for APIs helps you to gain visibility into business-critical APIs. You can investigate and improve your API security posture, prioritize vulnerability fixes, and quickly detect active real-time threats.
 
-This article describes how to enable and onboard the Defender for APIs plan in the Defender for Cloud portal. Alternately, you can [enable Defender for APIs within an API Management instance](../api-management/protect-with-defender-for-apis.md) in the Azure portal.
+This article describes how to enable and onboard the Defender for APIs plan in the Defender for Cloud portal. Alternately, you can [enable Defender for APIs within an API Management instance](/azure/api-management/protect-with-defender-for-apis) in the Azure portal.
 
 Learn more about the [Microsoft Defender for APIs](defender-for-apis-introduction.md) plan in the Microsoft Defender for Cloud.
 Learn more about [Defender for APIs](defender-for-apis-introduction.md).
@@ -29,7 +29,7 @@ Learn more about [Defender for APIs](defender-for-apis-introduction.md).
 
 - You enable Defender for APIs at the subscription level.
 
-- Ensure that APIs you want to secure are published in [Azure API management](../api-management/api-management-key-concepts.md). Follow [these instructions](../api-management/get-started-create-service-instance.md) to set up Azure API Management.
+- Ensure that APIs you want to secure are published in [Azure API management](/azure/api-management/api-management-key-concepts). Follow [these instructions](/azure/api-management/get-started-create-service-instance) to set up Azure API Management.
 
 - You must select a plan that grants entitlement appropriate for the API traffic volume in your subscription to receive the most optimal pricing. By default, subscriptions are opted into "Plan 1", which can lead to unexpected overages if your subscription has API traffic higher than the [one million API calls entitlement](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SecurityMenuBlade/~/18).
 

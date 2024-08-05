@@ -28,7 +28,7 @@ introduction: |
   | Aspect | Details |
   |--|:-|
   | Release state: | General availability (GA) |
-  | Supported VMs: | :::image type="icon" source="./media/icons/yes-icon.png"::: VMs deployed through Azure Resource Manager<br>:::image type="icon" source="./media/icons/no-icon.png"::: VMs deployed with [classic deployment models](../azure-resource-manager/management/deployment-models.md)<br>:::image type="icon" source="./media/icons/yes-icon.png"::: VMs protected by Azure Firewalls on the same VNET as the VM<br>:::image type="icon" source="./media/icons/no-icon.png"::: VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](../firewall-manager/overview.md)<br> :::image type="icon" source="./media/icons/yes-icon.png"::: AWS EC2 instances (Preview) |
+  | Supported VMs: | :::image type="icon" source="./media/icons/yes-icon.png"::: VMs deployed through Azure Resource Manager<br>:::image type="icon" source="./media/icons/no-icon.png"::: VMs deployed with [classic deployment models](/azure/azure-resource-manager/management/deployment-models)<br>:::image type="icon" source="./media/icons/yes-icon.png"::: VMs protected by Azure Firewalls on the same VNET as the VM<br>:::image type="icon" source="./media/icons/no-icon.png"::: VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview)<br> :::image type="icon" source="./media/icons/yes-icon.png"::: AWS EC2 instances (Preview) |
   | Required roles and permissions: | **Reader**, **SecurityReader**, or a [custom role](#prerequisites) can view the JIT status and parameters.<br>To create a least-privileged role for users that only need to request JIT access to a VM, use the [Set-JitLeastPrivilegedRole script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/JIT%20Scripts/JIT%20Custom%20Role). |
   | Clouds: | :::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: National (Azure Government, Microsoft Azure operated by 21Vianet)<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Connected AWS accounts (preview) |
 
@@ -73,7 +73,7 @@ procedureSection:
       - **Not configured** - VMs without JIT enabled, but that can support JIT. We recommend that you enable JIT for these VMs.
       - **Unsupported** - VMs that don't support JIT because:
           - Missing network security group (NSG) or Azure Firewall - JIT requires an NSG to be configured or a Firewall configuration (or both)
-          - Classic VM - JIT supports VMs that are deployed through Azure Resource Manager. [Learn more about classic vs Azure Resource Manager deployment models](../azure-resource-manager/management/deployment-models.md).
+          - Classic VM - JIT supports VMs that are deployed through Azure Resource Manager. [Learn more about classic vs Azure Resource Manager deployment models](/azure/azure-resource-manager/management/deployment-models).
           - Other - The JIT solution is disabled in the security policy of the subscription or the resource group.
 
       ### Enable JIT on your VMs from Microsoft Defender for Cloud

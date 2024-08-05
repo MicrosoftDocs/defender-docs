@@ -15,7 +15,7 @@ To configure the Azure resources for QRadar and Splunk in the Azure portal:
 
 ## Step 1: Create an Event Hubs namespace and event hub with send permissions
 
-1. In the [Event Hubs service](../event-hubs/event-hubs-create.md), create an Event Hubs namespace:
+1. In the [Event Hubs service](/azure/event-hubs/event-hubs-create), create an Event Hubs namespace:
     1. Select **Create**.
     1. Enter the details of the namespace, select **Review + create**, and select **Create**.
 

@@ -18,4 +18,4 @@ For public cloud deployments:
 | *.oms.opinsights.azure.com | *.oms.opinsights.azure.us | *.oms.opinsights.azure.cn | 443 |
 | login.microsoftonline.com  | login.microsoftonline.us | login.chinacloudapi.cn  | 443  |
 
-You'll also need to validate the [Azure Arc-enabled Kubernetes network requirements](../../azure-arc/kubernetes/network-requirements.md).
+You'll also need to validate the [Azure Arc-enabled Kubernetes network requirements](/azure/azure-arc/kubernetes/network-requirements).

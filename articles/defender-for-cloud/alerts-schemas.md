@@ -14,8 +14,8 @@ Defender for Cloud provides alerts that help you identify, understand, and respo
 
 You can view these security alerts in Microsoft Defender for Cloud's pages - [overview dashboard](overview-page.md), [alerts](managing-and-responding-alerts.yml), [resource health pages](investigate-resource-health.md), or [workload protections dashboard](workload-protections-dashboard.md) - and through external tools such as:
 
-- [Microsoft Sentinel](../sentinel/index.yml) - Microsoft's cloud-native SIEM. The Sentinel Connector gets alerts from Microsoft Defender for Cloud and sends them to the [Log Analytics workspace](../azure-monitor/logs/quick-create-workspace.md) for Microsoft Sentinel.
-- Third-party SIEMs - Send data to [Azure Event Hubs](../event-hubs/index.yml). Then integrate your Event Hubs data with a third-party SIEM. Learn more in [Stream alerts to a SIEM, SOAR, or IT Service Management solution](export-to-siem.md).
+- [Microsoft Sentinel](/azure/sentinel/) - Microsoft's cloud-native SIEM. The Sentinel Connector gets alerts from Microsoft Defender for Cloud and sends them to the [Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace) for Microsoft Sentinel.
+- Third-party SIEMs - Send data to [Azure Event Hubs](/azure/event-hubs/). Then integrate your Event Hubs data with a third-party SIEM. Learn more in [Stream alerts to a SIEM, SOAR, or IT Service Management solution](export-to-siem.md).
 - [The REST API](/rest/api/defenderforcloud/operation-groups?view=rest-defenderforcloud-2020-01-01&preserve-view=true) - If you're using the REST API to access alerts, see the [online Alerts API documentation](/rest/api/defenderforcloud/alerts).
 
 If you're using any programmatic methods to consume the alerts, you need the correct schema to find the fields that are relevant to you. Also, if you're exporting to an Event Hubs or trying to trigger Workflow Automation with generic HTTP connectors, schemas should be utilized to properly parse the JSON objects.
@@ -31,7 +31,7 @@ The Sentinel Connector gets alerts from Microsoft Defender for Cloud and sends t
 
 To create a Microsoft Sentinel case or incident using Defender for Cloud alerts, you need the schema for those alerts shown.
 
-Learn more in the [Microsoft Sentinel documentation](../sentinel/index.yml).
+Learn more in the [Microsoft Sentinel documentation](/azure/sentinel/).
 
 [!INCLUDE [Sentinel and workspace schema](../../includes/defender-for-cloud-alerts-schema-log-analytics-workspace.md)]
 
@@ -151,9 +151,9 @@ The schema and a JSON representation for security alerts sent to MS Graph, are a
 
 ## Related articles
 
-- [Log Analytics workspaces](../azure-monitor/logs/quick-create-workspace.md) - Azure Monitor stores log data in a Log Analytics workspace, a container that includes data and configuration information
-- [Microsoft Sentinel](../sentinel/index.yml) - Microsoft's cloud-native SIEM
-- [Azure Event Hubs](../event-hubs/index.yml) - Microsoft's fully managed, real-time data ingestion service
+- [Log Analytics workspaces](/azure/azure-monitor/logs/quick-create-workspace) - Azure Monitor stores log data in a Log Analytics workspace, a container that includes data and configuration information
+- [Microsoft Sentinel](/azure/sentinel/) - Microsoft's cloud-native SIEM
+- [Azure Event Hubs](/azure/event-hubs/) - Microsoft's fully managed, real-time data ingestion service
 
 ## Next step
 

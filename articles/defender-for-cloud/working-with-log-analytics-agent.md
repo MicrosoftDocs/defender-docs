@@ -39,7 +39,7 @@ To configure integration with the Log Analytics agent:
 
     - **Connect Azure VMs to a different workspace** - From the dropdown list, select the workspace to store collected data. The dropdown list includes all workspaces across all of your subscriptions. You can use this option to collect data from virtual machines running in different subscriptions and store it all in your selected workspace.
 
-        If you already have an existing Log Analytics workspace, you might want to use the same workspace (requires read and write permissions on the workspace). This option is useful if you're using a centralized workspace in your organization and want to use it for security data collection. Learn more in [Manage access to log data and workspaces in Azure Monitor](../azure-monitor/logs/manage-access.md).
+        If you already have an existing Log Analytics workspace, you might want to use the same workspace (requires read and write permissions on the workspace). This option is useful if you're using a centralized workspace in your organization and want to use it for security data collection. Learn more in [Manage access to log data and workspaces in Azure Monitor](/azure/azure-monitor/logs/manage-access).
 
         If your selected workspace already has a "Security" or "SecurityCenterFree" solution enabled, the pricing will be set automatically. If not, install a Defender for Cloud solution on the workspace:
 
@@ -146,15 +146,15 @@ To manually install the Log Analytics agent:
 
 1. To deploy agents on new VMs using a Resource Manager template, install the Log Analytics agent:
 
-   - [Install the Log Analytics agent for Windows](../virtual-machines/extensions/oms-windows.md)
-   - [Install the Log Analytics agent for Linux](../virtual-machines/extensions/oms-linux.md)
+   - [Install the Log Analytics agent for Windows](/azure/virtual-machines/extensions/oms-windows)
+   - [Install the Log Analytics agent for Linux](/azure/virtual-machines/extensions/oms-linux)
 
-1. To deploy agents on your existing VMs, follow the instructions in [Collect data about Azure Virtual Machines](../azure-monitor/vm/monitor-virtual-machine.md) (the section **Collect event and performance data** is optional).
+1. To deploy agents on your existing VMs, follow the instructions in [Collect data about Azure Virtual Machines](/azure/azure-monitor/vm/monitor-virtual-machine) (the section **Collect event and performance data** is optional).
 
 1. To use PowerShell to deploy the agents, use the instructions from the virtual machines documentation:
 
-    - [For Windows machines](../virtual-machines/extensions/oms-windows.md?toc=%2fazure%2fazure-monitor%2ftoc.json#powershell-deployment)
-    - [For Linux machines](../virtual-machines/extensions/oms-linux.md?toc=%2fazure%2fazure-monitor%2ftoc.json#azure-cli-deployment)
+    - [For Windows machines](/azure/virtual-machines/extensions/oms-windows?toc=%2fazure%2fazure-monitor%2ftoc.json#powershell-deployment)
+    - [For Linux machines](/azure/virtual-machines/extensions/oms-linux?toc=%2fazure%2fazure-monitor%2ftoc.json#azure-cli-deployment)
 
 > [!TIP]
 > For more information about onboarding, see [Automate onboarding of Microsoft Defender for Cloud using PowerShell](powershell-onboarding.md).

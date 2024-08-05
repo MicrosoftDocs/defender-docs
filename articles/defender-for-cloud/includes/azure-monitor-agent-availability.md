@@ -10,7 +10,7 @@ ms.date: 11/02/2023
 |---|:--|
 | Release state: | Generally available (GA) |
 | Relevant Defender plan: | [Defender for SQL Servers on Machines](../defender-for-sql-introduction.md) |
-| Required roles and permissions (subscription-level): | [Owner](../../role-based-access-control/built-in-roles.md#owner) |
+| Required roles and permissions (subscription-level): | [Owner](/azure/role-based-access-control/built-in-roles#owner) |
 | Supported destinations: | :::image type="icon" source="../media/icons/yes-icon.png"::: Azure virtual machines<br> :::image type="icon" source="../media/icons/yes-icon.png"::: Azure Arc-enabled machines |
 | Policy-based: | :::image type="icon" source="../media/icons/yes-icon.png"::: Yes |
 | Clouds: | :::image type="icon" source="../media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="../media/icons/no-icon.png"::: Azure Government, Microsoft Azure operated by 21Vianet |

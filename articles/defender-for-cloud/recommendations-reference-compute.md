@@ -45,7 +45,7 @@ To learn about actions that you can take in response to these recommendations, s
 
 ### [Authentication to Linux machines should require SSH keys](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/22441184-2f7b-d4a0-e00b-4c5eaef4afc9)
 
-**Description**: Although SSH itself provides an encrypted connection, using passwords with SSH still leaves the VM vulnerable to brute-force attacks. The most secure option for authenticating to an Azure Linux virtual machine over SSH is with a public-private key pair, also known as SSH keys. Learn more in [Detailed steps: Create and manage SSH keys for authentication to a Linux VM in Azure](../virtual-machines/linux/create-ssh-keys-detailed.md).
+**Description**: Although SSH itself provides an encrypted connection, using passwords with SSH still leaves the VM vulnerable to brute-force attacks. The most secure option for authenticating to an Azure Linux virtual machine over SSH is with a public-private key pair, also known as SSH keys. Learn more in [Detailed steps: Create and manage SSH keys for authentication to a Linux VM in Azure](/azure/virtual-machines/linux/create-ssh-keys-detailed).
 (Related policy: [Audit Linux machines that are not using SSH key for authentication](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f630c64f9-8b6b-4c64-b511-6544ceff6fd6)).
 
 **Severity**: Medium
@@ -191,7 +191,7 @@ When the file integrity monitoring solution is enabled, create data collection r
 - Trusted launch requires the creation of new virtual machines.
 - You can't enable trusted launch on existing virtual machines that were initially created without it.
 
-Learn more about [Trusted launch for Azure virtual machines](../virtual-machines/trusted-launch.md).
+Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-machines/trusted-launch).
 (No related policy)
 
 **Severity**: Low
@@ -203,7 +203,7 @@ Learn more about [Trusted launch for Azure virtual machines](../virtual-machines
 - Trusted launch requires the creation of new virtual machines.
 - You can't enable trusted launch on existing virtual machines that were initially created without it.
 
-Learn more about [Trusted launch for Azure virtual machines](../virtual-machines/trusted-launch.md).
+Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-machines/trusted-launch).
 (No related policy)
 
 **Severity**: Low
@@ -215,7 +215,7 @@ Learn more about [Trusted launch for Azure virtual machines](../virtual-machines
 - Trusted launch requires the creation of new virtual machines.
 - You can't enable trusted launch on existing virtual machines that were initially created without it.
 
-Learn more about [Trusted launch for Azure virtual machines](../virtual-machines/trusted-launch.md).
+Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-machines/trusted-launch).
 (No related policy)
 
 **Severity**: Low
@@ -227,7 +227,7 @@ Learn more about [Trusted launch for Azure virtual machines](../virtual-machines
 - Trusted launch requires the creation of new virtual machines.
 - You can't enable trusted launch on existing virtual machines that were initially created without it.
 
-Learn more about [Trusted launch for Azure virtual machines](../virtual-machines/trusted-launch.md).
+Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-machines/trusted-launch).
 (No related policy)
 
 **Severity**: Low
@@ -298,7 +298,7 @@ Estimated deprecation: July 2024
 
 ### [Log Analytics agent should be installed on virtual machine scale sets](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/45cfe080-ceb1-a91e-9743-71551ed24e94)
 
-**Description**: Defender for Cloud collects data from your Azure virtual machines (VMs) to monitor for security vulnerabilities and threats. Data is collected using the [Log Analytics agent](../azure-monitor/platform/log-analytics-agent.md), formerly known as the Microsoft Monitoring Agent (MMA), which reads various security-related configurations and event logs from the machine and copies the data to your workspace for analysis. You'll also need to follow that procedure if your VMs are used by an Azure managed service such as Azure Kubernetes Service or Azure Service Fabric. You cannot configure auto-provisioning of the agent for Azure virtual machine scale sets. To deploy the agent on virtual machine scale sets (including those used by Azure managed services such as Azure Kubernetes Service and Azure Service Fabric), follow the procedure in the remediation steps.
+**Description**: Defender for Cloud collects data from your Azure virtual machines (VMs) to monitor for security vulnerabilities and threats. Data is collected using the [Log Analytics agent](/azure/azure-monitor/platform/log-analytics-agent), formerly known as the Microsoft Monitoring Agent (MMA), which reads various security-related configurations and event logs from the machine and copies the data to your workspace for analysis. You'll also need to follow that procedure if your VMs are used by an Azure managed service such as Azure Kubernetes Service or Azure Service Fabric. You cannot configure auto-provisioning of the agent for Azure virtual machine scale sets. To deploy the agent on virtual machine scale sets (including those used by Azure managed services such as Azure Kubernetes Service and Azure Service Fabric), follow the procedure in the remediation steps.
 (Related policy: [Log Analytics agent should be installed on your virtual machine scale sets for Azure Security Center monitoring](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fa3a6ea0c-e018-4933-9ef0-5aaa1501449b)).
 
 As use of the AMA and MMA is phased out in Defender for Servers, recommendations that rely on those agents, like this one, will be removed. Instead, Defender for Servers features will use the Microsoft Defender for Endpoint agent, or agentless scanning, with no reliance on the MMA or AMA. 
@@ -310,7 +310,7 @@ Estimated deprecation: July 2024
 
 ### [Log Analytics agent should be installed on virtual machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/d1db3318-01ff-16de-29eb-28b344515626)
 
-**Description**: Defender for Cloud collects data from your Azure virtual machines (VMs) to monitor for security vulnerabilities and threats. Data is collected using the [Log Analytics agent](../azure-monitor/platform/log-analytics-agent.md), formerly known as the Microsoft Monitoring Agent (MMA), which reads various security-related configurations and event logs from the machine and copies the data to your Log Analytics workspace for analysis. This agent is also required if your VMs are used by an Azure managed service such as Azure Kubernetes Service or Azure Service Fabric. We recommend configuring [auto-provisioning](enable-data-collection.md) to automatically deploy the agent. If you choose not to use auto-provisioning, manually deploy the agent to your VMs using the instructions in the remediation steps.
+**Description**: Defender for Cloud collects data from your Azure virtual machines (VMs) to monitor for security vulnerabilities and threats. Data is collected using the [Log Analytics agent](/azure/azure-monitor/platform/log-analytics-agent), formerly known as the Microsoft Monitoring Agent (MMA), which reads various security-related configurations and event logs from the machine and copies the data to your Log Analytics workspace for analysis. This agent is also required if your VMs are used by an Azure managed service such as Azure Kubernetes Service or Azure Service Fabric. We recommend configuring [auto-provisioning](enable-data-collection.md) to automatically deploy the agent. If you choose not to use auto-provisioning, manually deploy the agent to your VMs using the instructions in the remediation steps.
 (Related policy: [Log Analytics agent should be installed on your virtual machine for Azure Security Center monitoring](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fa4fe33eb-e377-4efb-ab31-0784311bc499)).
 
 As use of the AMA and MMA is phased out in Defender for Servers, recommendations that rely on those agents, like this one, will be removed. Instead, Defender for Servers features will use the Microsoft Defender for Endpoint agent, or agentless scanning, with no reliance on the MMA or AMA. 
@@ -398,7 +398,7 @@ Learn more in [Introduction to Microsoft Defender for servers](defender-for-serv
 - Trusted launch requires the creation of new virtual machines.
 - You can't enable trusted launch on existing virtual machines that were initially created without it.
 
-Learn more about [Trusted launch for Azure virtual machines](../virtual-machines/trusted-launch.md).
+Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-machines/trusted-launch).
 (No related policy)
 
 **Severity**: Low
@@ -450,7 +450,7 @@ Estimated deprecation: July 2024. These recommendations are [replaced by new one
 
 ### [Virtual machines and virtual machine scale sets should have encryption at host enabled](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/efbbd784-656d-473a-9863-ea7693bfcd2a)
 
-**Description**: Use encryption at host to get end-to-end encryption for your virtual machine and virtual machine scale set data. Encryption at host enables encryption at rest for your temporary disk and OS/data disk caches. Temporary and ephemeral OS disks are encrypted with platform-managed keys when encryption at host is enabled. OS/data disk caches are encrypted at rest with either customer-managed or platform-managed key, depending on the encryption type selected on the disk. Learn more at [Use the Azure portal to enable end-to-end encryption using encryption at host](../virtual-machines/disks-enable-host-based-encryption-portal.md). (Related policy: [Virtual machines and virtual machine scale sets should have encryption at host enabled](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2ffc4d8e41-e223-45ea-9bf5-eada37891d87)).
+**Description**: Use encryption at host to get end-to-end encryption for your virtual machine and virtual machine scale set data. Encryption at host enables encryption at rest for your temporary disk and OS/data disk caches. Temporary and ephemeral OS disks are encrypted with platform-managed keys when encryption at host is enabled. OS/data disk caches are encrypted at rest with either customer-managed or platform-managed key, depending on the encryption type selected on the disk. Learn more at [Use the Azure portal to enable end-to-end encryption using encryption at host](/azure/virtual-machines/disks-enable-host-based-encryption-portal). (Related policy: [Virtual machines and virtual machine scale sets should have encryption at host enabled](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2ffc4d8e41-e223-45ea-9bf5-eada37891d87)).
 
 **Severity**: Medium
 
@@ -462,9 +462,9 @@ Because Azure Resource Manager now has full IaaS capabilities and other advancem
 To view all affected classic VMs make sure to select all your Azure subscriptions under 'directories + subscriptions' tab.
 
 Available resources and information about this tool & migration:
-[Overview of Virtual machines (classic) deprecation, step by step process for migration & available Microsoft resources.](../virtual-machines/classic-vm-deprecation.md?toc=/azure/virtual-machines/windows/toc.json&bc=/azure/virtual-machines/windows/breadcrumb/toc.json)
-[Details about Migrate to Azure Resource Manager migration tool.](../virtual-machines/migration-classic-resource-manager-deep-dive.md?toc=/azure/virtual-machines/windows/toc.json&bc=/azure/virtual-machines/windows/breadcrumb/toc.json)
-[Migrate to Azure Resource Manager migration tool using PowerShell.](../virtual-machines/windows/migration-classic-resource-manager-ps.md)
+[Overview of Virtual machines (classic) deprecation, step by step process for migration & available Microsoft resources.](/azure/virtual-machines/classic-vm-deprecation?toc=/azure/virtual-machines/windows/toc.json&bc=/azure/virtual-machines/windows/breadcrumb/toc.json)
+[Details about Migrate to Azure Resource Manager migration tool.](/azure/virtual-machines/migration-classic-resource-manager-deep-dive?toc=/azure/virtual-machines/windows/toc.json&bc=/azure/virtual-machines/windows/breadcrumb/toc.json)
+[Migrate to Azure Resource Manager migration tool using PowerShell.](/azure/virtual-machines/windows/migration-classic-resource-manager-ps)
 (Related policy: [Virtual machines should be migrated to new Azure Resource Manager resources](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1d84d5fb-01f6-4d12-ba4f-4a26081d403d)).
 
 **Severity**: High
@@ -516,7 +516,7 @@ You're using the encryption-at-host feature, or server-side encryption on Manage
 - Trusted launch requires the creation of new virtual machines.
 - You can't enable trusted launch on existing virtual machines that were initially created without it.
 
-Learn more about [Trusted launch for Azure virtual machines](../virtual-machines/trusted-launch.md).
+Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-machines/trusted-launch).
 (No related policy)
 
 **Severity**: Low
@@ -606,7 +606,7 @@ Enable deletion protection to protect your Application Load Balancer from deleti
 
 ### [AWS accounts should have Azure Arc auto provisioning enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/882a80f0-943f-473e-b6d7-40c7a625540e)
 
-**Description**: For full visibility of the security content from Microsoft Defender for servers, EC2 instances should be connected to Azure Arc. To ensure that all eligible EC2 instances automatically receive Azure Arc, enable autoprovisioning from Defender for Cloud at the AWS account level. Learn more about [Azure Arc](../azure-arc/servers/overview.md), and [Microsoft Defender for Servers](plan-defender-for-servers.md).
+**Description**: For full visibility of the security content from Microsoft Defender for servers, EC2 instances should be connected to Azure Arc. To ensure that all eligible EC2 instances automatically receive Azure Arc, enable autoprovisioning from Defender for Cloud at the AWS account level. Learn more about [Azure Arc](/azure/azure-arc/servers/overview), and [Microsoft Defender for Servers](plan-defender-for-servers.md).
 
 **Severity**: High
 
@@ -649,7 +649,7 @@ Authentication credentials `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` shoul
 
 ### [EC2 instances should be connected to Azure Arc](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/231dee23-84db-44d2-bd9d-c32fbcfb42a3)
 
-**Description**: Connect your EC2 instances to Azure Arc in order to have full visibility to Microsoft Defender for Servers security content. Learn more about [Azure Arc](../azure-arc/servers/overview.md), and about [Microsoft Defender for Servers](plan-defender-for-servers.md) on hybrid-cloud environment.
+**Description**: Connect your EC2 instances to Azure Arc in order to have full visibility to Microsoft Defender for Servers security content. Learn more about [Azure Arc](/azure/azure-arc/servers/overview), and about [Microsoft Defender for Servers](plan-defender-for-servers.md) on hybrid-cloud environment.
 
 **Severity**: High
 
@@ -976,13 +976,13 @@ At least business critical VMs should have VM disks encrypted with CSEK.
 
 ### [GCP projects should have Azure Arc auto provisioning enabled](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1716d754-8d50-4b90-87b6-0404cad9b4e3)
 
-**Description**: For full visibility of the security content from Microsoft Defender for servers, GCP VM instances should be connected to Azure Arc. To ensure that all eligible VM instances automatically receive Azure Arc, enable autoprovisioning from Defender for Cloud at the GCP project level. Learn more about [Azure Arc](../azure-arc/servers/overview.md), and [Microsoft Defender for Servers](plan-defender-for-servers.md).
+**Description**: For full visibility of the security content from Microsoft Defender for servers, GCP VM instances should be connected to Azure Arc. To ensure that all eligible VM instances automatically receive Azure Arc, enable autoprovisioning from Defender for Cloud at the GCP project level. Learn more about [Azure Arc](/azure/azure-arc/servers/overview), and [Microsoft Defender for Servers](plan-defender-for-servers.md).
 
 **Severity**: High
 
 ### [GCP VM instances should be connected to Azure Arc](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/9bbe2f0f-d6c6-48e8-b4d0-cf25d2c50206)
 
-**Description**: Connect your GCP Virtual Machines to Azure Arc in order to have full visibility to Microsoft Defender for Servers security content. Learn more about [Azure Arc](../azure-arc/index.yml), and about [Microsoft Defender for Servers](plan-defender-for-servers.md) on hybrid-cloud environment.
+**Description**: Connect your GCP Virtual Machines to Azure Arc in order to have full visibility to Microsoft Defender for Servers security content. Learn more about [Azure Arc](/azure/azure-arc/), and about [Microsoft Defender for Servers](plan-defender-for-servers.md) on hybrid-cloud environment.
 
 **Severity**: High
 

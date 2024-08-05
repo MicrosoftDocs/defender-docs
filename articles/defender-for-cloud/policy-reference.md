@@ -8,7 +8,7 @@ ms.custom: subject-policy-reference
 
 # Azure Policy built-in definitions for Microsoft Defender for Cloud
 
-This page is an index of [Azure Policy](../governance/policy/overview.md) built-in policy
+This page is an index of [Azure Policy](/azure/governance/policy/overview) built-in policy
 definitions related to Microsoft Defender for Cloud. The following groupings of policy definitions are
 available:
 
@@ -16,7 +16,7 @@ available:
 - The [default initiative](#defender-for-clouds-default-initiative-microsoft-cloud-security-benchmark) group lists all the Azure Policy definitions that are part of Defender for Cloud's default initiative, [Microsoft cloud security benchmark](/security/benchmark/azure/introduction). This Microsoft-authored, widely respected benchmark builds on controls from the [Center for Internet Security (CIS)](https://www.cisecurity.org/benchmark/azure/) and the [National Institute of Standards and Technology (NIST)](https://www.nist.gov/) with a focus on cloud-centric security.
 - The [category](#microsoft-defender-for-cloud-category) group lists all the Azure Policy definitions in the "Defender for Cloud" category.
 
-For more information about security policies, see [Working with security policies](./tutorial-security-policy.md). For other Azure Policy built-ins for other services, see [Azure Policy built-in definitions](../governance/policy/samples/built-in-policies.md).
+For more information about security policies, see [Working with security policies](./tutorial-security-policy.md). For other Azure Policy built-ins for other services, see [Azure Policy built-in definitions](/azure/governance/policy/samples/built-in-policies).
 
 The name of each built-in policy definition links to the policy definition in the Azure portal. Use the link in the **Version** column to view the source on the [Azure Policy GitHub repo](https://github.com/Azure/azure-policy).
 

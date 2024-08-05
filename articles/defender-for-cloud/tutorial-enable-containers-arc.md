@@ -19,7 +19,7 @@ You can learn more about Defender for Container's pricing on the [pricing page](
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- Ensure the following [Azure Arc-enabled Kubernetes network requirements](../azure-arc/kubernetes/network-requirements.md) are validated and [connect the Kubernetes cluster to Azure Arc](../azure-arc/kubernetes/quickstart-connect-cluster.md).
+- Ensure the following [Azure Arc-enabled Kubernetes network requirements](/azure/azure-arc/kubernetes/network-requirements) are validated and [connect the Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
 - Validate the following endpoints are configured for outbound access so that the Defender sensor can connect to Microsoft Defender for Cloud to send security data and events:
 
@@ -29,7 +29,7 @@ You can learn more about Defender for Container's pricing on the [pricing page](
     | *.oms.opinsights.azure.com | 443  |
     | login.microsoftonline.com  | 443  |
 
-- [Connect the Kubernetes cluster to Azure Arc](../azure-arc/kubernetes/quickstart-connect-cluster.md)
+- [Connect the Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster)
 
 ## Enable the Defender for Containers plan
 

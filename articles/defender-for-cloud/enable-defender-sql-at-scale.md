@@ -29,7 +29,7 @@ This page explains how you can enable the auto-provision process for Defender fo
 - Gain knowledge on: 
     - [SQL server on VMs](https://azure.microsoft.com/products/virtual-machines/sql-server/)
     - [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview)
-    - [How to migrate to Azure Monitor Agent from Log Analytics agent](../azure-monitor/agents/azure-monitor-agent-migration.md)
+    - [How to migrate to Azure Monitor Agent from Log Analytics agent](/azure/azure-monitor/agents/azure-monitor-agent-migration)
 
 - [Connect AWS accounts to Microsoft Defender for Cloud](quickstart-onboard-aws.md)
 - [Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md)

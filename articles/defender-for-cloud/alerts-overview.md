@@ -105,7 +105,7 @@ You have a range of options for viewing your alerts outside of Defender for Clou
 
 - **Download CSV report** on the alerts dashboard provides a one-time export to CSV.
 - **Continuous export** from Environment settings allows you to configure streams of security alerts and recommendations to Log Analytics workspaces and Event Hubs. [Learn more](continuous-export.md).
-- **Microsoft Sentinel connector** streams security alerts from Microsoft Defender for Cloud into Microsoft Sentinel. [Learn more](../sentinel/connect-azure-security-center.md).
+- **Microsoft Sentinel connector** streams security alerts from Microsoft Defender for Cloud into Microsoft Sentinel. [Learn more](/azure/sentinel/connect-azure-security-center).
 
 Learn about [streaming alerts to a SIEM, SOAR, or IT Service Management solution](export-to-siem.md) and how to [continuously export data](continuous-export.md).
 

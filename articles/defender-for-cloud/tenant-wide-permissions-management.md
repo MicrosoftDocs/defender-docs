@@ -14,7 +14,7 @@ A user with the Microsoft Entra role of **Global Administrator** might have tena
 
 **To assign yourself tenant-level permissions**:
 
-1. If your organization manages resource access with [Microsoft Entra Privileged Identity Management (PIM)](../active-directory/privileged-identity-management/pim-configure.md), or any other PIM tool, the global administrator role must be active for the user.
+1. If your organization manages resource access with [Microsoft Entra Privileged Identity Management (PIM)](/azure/active-directory/privileged-identity-management/pim-configure), or any other PIM tool, the global administrator role must be active for the user.
 
 1. As a Global Administrator user without an assignment on the root management group of the tenant, open Defender for Cloud's **Overview** page and select the **tenant-wide visibility** link in the banner.
 
@@ -25,7 +25,7 @@ A user with the Microsoft Entra role of **Global Administrator** might have tena
     :::image type="content" source="media/management-groups-roles/enable-tenant-level-permissions-form.png" alt-text="Form for defining the tenant-level permissions to be assigned to your user.":::
 
     > [!TIP]
-    > Generally, the Security Admin role is required to apply policies on the root level, while Security Reader will suffice to provide tenant-level visibility. For more information about the permissions granted by these roles, see the [Security Admin built-in role description](../role-based-access-control/built-in-roles.md#security-admin) or the [Security Reader built-in role description](../role-based-access-control/built-in-roles.md#security-reader).
+    > Generally, the Security Admin role is required to apply policies on the root level, while Security Reader will suffice to provide tenant-level visibility. For more information about the permissions granted by these roles, see the [Security Admin built-in role description](/azure/role-based-access-control/built-in-roles#security-admin) or the [Security Reader built-in role description](/azure/role-based-access-control/built-in-roles#security-reader).
     >
     > For differences between these roles specific to Defender for Cloud, see the table in [Roles and allowed actions](permissions.md#roles-and-allowed-actions).
 
@@ -43,7 +43,7 @@ The process of assigning  yourself tenant-level permissions, performs many opera
 
 - The elevated permissions are removed.
 
-For more information of the Microsoft Entra elevation process, see [Elevate access to manage all Azure subscriptions and management groups](../role-based-access-control/elevate-access-global-admin.md).
+For more information of the Microsoft Entra elevation process, see [Elevate access to manage all Azure subscriptions and management groups](/azure/role-based-access-control/elevate-access-global-admin).
 
 ## Request tenant-wide permissions when yours are insufficient
 

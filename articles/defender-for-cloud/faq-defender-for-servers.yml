@@ -239,7 +239,7 @@ sections:
 
           | Reason                                                            | Details                                                                                                                                                                        |
           |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-          | **No scan data available on the machine**                         | There aren't any compliance results for this machine in Azure Resource Graph. All compliance results are written to Azure Resource Graph by the Guest Configuration extension. You can check the data in Azure Resource Graph using the sample queries in [Azure Policy Guest Configuration - sample ARG queries](../governance/policy/samples/resource-graph-samples.md?tabs=azure-cli#azure-policy-guest-configuration).|
+          | **No scan data available on the machine**                         | There aren't any compliance results for this machine in Azure Resource Graph. All compliance results are written to Azure Resource Graph by the Guest Configuration extension. You can check the data in Azure Resource Graph using the sample queries in [Azure Policy Guest Configuration - sample ARG queries](/azure/governance/policy/samples/resource-graph-samples?tabs=azure-cli#azure-policy-guest-configuration).|
           | **Guest Configuration extension isn't installed on the machine** | The machine is missing the Guest Configuration extension, which is a prerequisite for assessing the compliance with the Azure security baseline.                               |
           | **System managed identity isn't configured on the machine**      | A system-assigned, managed identity must be deployed on the machine.                                                                                                           |
           | **The recommendation is disabled in policy**                      | The policy definition that assesses the OS baseline is disabled on the scope that includes the relevant machine.                                                               |
@@ -331,7 +331,7 @@ sections:
 
           1. Navigate to **Log Analytics workspaces** > **Logs**.
 
-          1. Select your time range. Learn about [time ranges](../azure-monitor/logs/log-analytics-tutorial.md).
+          1. Select your time range. Learn about [time ranges](/azure/azure-monitor/logs/log-analytics-tutorial).
 
           1. Copy and past the following query into the **Type your query here** section.
 
@@ -349,7 +349,7 @@ sections:
 
               :::image type="content" source="media/plan-defender-for-servers-data-workspace/select-run.png" alt-text="Screenshot showing where to enter your query and where the select run button is located." lightbox="media/plan-defender-for-servers-data-workspace/select-run.png":::
 
-          You can learn how to [Analyze usage in Log Analytics workspace](../azure-monitor/logs/analyze-usage.md).
+          You can learn how to [Analyze usage in Log Analytics workspace](/azure/azure-monitor/logs/analyze-usage).
 
           Based on your usage, you won't be billed until you've used your daily allowance. If you're receiving a bill, it's only for the data used after the 500-MB limit is reached, or for other service that doesn't fall under the coverage of Defender for Cloud.
                 

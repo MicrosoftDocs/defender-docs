@@ -103,7 +103,7 @@ sections:
         answer: |
           Currently, Defender for Containers can scan images in Azure Container Registry (ACR) and AWS Elastic Container Registry (ECR) only.
           Docker Registry, Microsoft Artifact Registry/Microsoft Container Registry, and Microsoft Azure Red Hat OpenShift (ARO) built-in container image registry aren't supported.
-          Images should first be imported to ACR. Learn more about [importing container images to an Azure container registry](../container-registry/container-registry-import-images.md?tabs=azure-cli).
+          Images should first be imported to ACR. Learn more about [importing container images to an Azure container registry](/azure/container-registry/container-registry-import-images?tabs=azure-cli).
 
       - question: |
           Can I get the scan results via REST API?
@@ -160,7 +160,7 @@ sections:
           For locked clusters, you can also do one of the following steps:
           - Remove the lock.
           - Perform the bind operation manually by making an API request.
-          Learn more about [locked resources](../azure-resource-manager/management/lock-resources.md?tabs=json).
+          Learn more about [locked resources](/azure/azure-resource-manager/management/lock-resources?tabs=json).
 
       - question: |
           Are you using an updated version of AKS?

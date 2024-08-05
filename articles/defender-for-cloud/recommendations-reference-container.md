@@ -62,7 +62,7 @@ Learn more in [Introduction to Microsoft Defender for Containers](defender-for-c
 ### [Azure Kubernetes Service clusters should have the Azure Policy add-on for Kubernetes installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/08e628db-e2ed-4793-bc91-d13e684401c3)
 
 **Description**: Azure Policy add-on for Kubernetes extends [Gatekeeper](https://github.com/open-policy-agent/gatekeeper) v3, an admission controller webhook for [Open Policy Agent](https://www.openpolicyagent.org/) (OPA), to apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner.
-Defender for Cloud requires the Add-on to audit and enforce security capabilities and compliance inside your clusters. [Learn more](../governance/policy/concepts/policy-for-kubernetes.md).
+Defender for Cloud requires the Add-on to audit and enforce security capabilities and compliance inside your clusters. [Learn more](/azure/governance/policy/concepts/policy-for-kubernetes).
 Requires Kubernetes v1.14.0 or later.
 (Related policy: [Azure Policy Add-on for Kubernetes service (AKS) should be installed and enabled on your clusters](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0a15ec92-a229-4763-bb14-0ea34a568f8d)).
 
@@ -399,8 +399,8 @@ The new recommendation is in preview and not used for secure score calculation.
 
 ### [EKS clusters should have Microsoft Defender's extension for Azure Arc installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/38307993-84fb-4636-8ce7-3a64466bb5cc)
 
-**Description**: Microsoft Defender's [cluster extension](../azure-arc/kubernetes/extensions.md) provides security capabilities for your EKS clusters. The extension collects data from a cluster and its nodes to identify security vulnerabilities and threats.
- The extension works with [Azure Arc-enabled Kubernetes](../azure-arc/kubernetes/overview.md).
+**Description**: Microsoft Defender's [cluster extension](/azure/azure-arc/kubernetes/extensions) provides security capabilities for your EKS clusters. The extension collects data from a cluster and its nodes to identify security vulnerabilities and threats.
+ The extension works with [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
 Learn more about [Microsoft Defender for Cloud's security features for containerized environments](defender-for-containers-introduction.md?tabs=defender-for-container-arch-aks).
 
 **Severity**: High
@@ -454,8 +454,8 @@ The new recommendation is in preview and not used for secure score calculation.
 
 ### [GKE clusters should have Microsoft Defender's extension for Azure Arc installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/0faf27b6-f1d5-4f50-b22a-5d129cba0113)
 
-**Description**: Microsoft Defender's [cluster extension](../azure-arc/kubernetes/extensions.md) provides security capabilities for your GKE clusters. The extension collects data from a cluster and its nodes to identify security vulnerabilities and threats.
- The extension works with [Azure Arc-enabled Kubernetes](../azure-arc/kubernetes/overview.md).
+**Description**: Microsoft Defender's [cluster extension](/azure/azure-arc/kubernetes/extensions) provides security capabilities for your GKE clusters. The extension collects data from a cluster and its nodes to identify security vulnerabilities and threats.
+ The extension works with [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
 Learn more about [Microsoft Defender for Cloud's security features for containerized environments](defender-for-containers-introduction.md?tabs=defender-for-container-arch-aks).
 
 **Severity**: High
@@ -463,7 +463,7 @@ Learn more about [Microsoft Defender for Cloud's security features for container
 ### [GKE clusters should have the Azure Policy extension installed](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6273e20b-8814-4fda-a297-42a70b16fcbf)
 
 **Description**: Azure Policy extension for Kubernetes extends [Gatekeeper](https://github.com/open-policy-agent/gatekeeper) v3, an admission controller webhook for [Open Policy Agent](https://www.openpolicyagent.org/) (OPA), to apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner.
- The extension works with [Azure Arc-enabled Kubernetes](../azure-arc/kubernetes/overview.md).
+ The extension works with [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview).
 
 **Severity**: High
 

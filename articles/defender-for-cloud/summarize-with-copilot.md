@@ -18,7 +18,7 @@ By summarizing a recommendation, you can get a quick overview of the recommendat
 
 - [Enable Defender for Cloud on your environment](connect-azure-subscription.md).
 
-- [Have access to Azure Copilot](../copilot/overview.md).
+- [Have access to Azure Copilot](/azure/copilot/overview).
 
 - [Have Security Compute Units assigned for Copilot for Security](/copilot/security/get-started-security-copilot).
 

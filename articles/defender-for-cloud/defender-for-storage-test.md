@@ -27,7 +27,7 @@ There are three main components to test:
 
 Follow these steps to test Malware Scanning after enabling the feature:
 
-1. To verify that the setup is successful, upload a file to the storage account. You can use the Azure portal to [upload a file](../storage/blobs/storage-quickstart-blobs-portal.md#upload-a-block-blob)
+1. To verify that the setup is successful, upload a file to the storage account. You can use the Azure portal to [upload a file](/azure/storage/blobs/storage-quickstart-blobs-portal#upload-a-block-blob)
 
 1. Inspect new blob index tags:
 

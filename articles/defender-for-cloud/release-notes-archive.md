@@ -494,7 +494,7 @@ November 6, 2023
 
 An extra agent is no longer needed on your Azure VMs and Azure Arc machines to ensure the machines have all of the latest security or critical system updates.
 
-The new system updates recommendation, `System updates should be installed on your machines (powered by Azure Update Manager)` in the `Apply system updates` control, is based on the [Update Manager](../update-manager/overview.md) and is now fully GA. The recommendation relies on a native agent embedded in every Azure VM and Azure Arc machines instead of an installed agent. The quick fix in the new recommendation navigates you to a one-time installation of the missing updates in the Update Manager portal.
+The new system updates recommendation, `System updates should be installed on your machines (powered by Azure Update Manager)` in the `Apply system updates` control, is based on the [Update Manager](/azure/update-manager/overview) and is now fully GA. The recommendation relies on a native agent embedded in every Azure VM and Azure Arc machines instead of an installed agent. The quick fix in the new recommendation navigates you to a one-time installation of the missing updates in the Update Manager portal.
 
 The old and the new versions of the recommendations to find missing system updates will both be available until August 2024, which is when the older version is deprecated. Both recommendations: `System updates should be installed on your machines (powered by Azure Update Manager)`and `System updates should be installed on your machines` are available under the same control: `Apply system updates` and has the same results. Thus, there's no duplication in the effect on the secure score.
 
@@ -505,7 +505,7 @@ The recommendation `[Machines should be configured to periodically check for mis
 To apply the new recommendation, you need to:
 
 1. Connect your non-Azure machines to Arc.
-1. Turn on the [periodic assessment property](../update-manager/assessment-options.md). You can use the Quick Fix in the new recommendation, `[Machines should be configured to periodically check for missing system updates](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/90386950-71ca-4357-a12e-486d1679427c)` to fix the recommendation.
+1. Turn on the [periodic assessment property](/azure/update-manager/assessment-options). You can use the Quick Fix in the new recommendation, `[Machines should be configured to periodically check for missing system updates](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/90386950-71ca-4357-a12e-486d1679427c)` to fix the recommendation.
 
 > [!NOTE]
 > Enabling periodic assessments for Arc enabled machines that Defender for Servers Plan 2 isn't enabled on their related Subscription or Connector, is subject to [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/). Arc enabled machines that [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features) is enabled on their related Subscription or Connectors, or any Azure VM, are eligible for this capability with no additional cost.
@@ -568,7 +568,7 @@ Microsoft Defender for Cloud now supports the latest [CIS Azure Security Foundat
 
 ### Change to the Log Analytics daily cap
 
-Azure monitor offers the capability to [set a daily cap](../azure-monitor/logs/daily-cap.md) on the data that is ingested on your Log analytics workspaces. However, Defenders for Cloud security events are currently not supported in those exclusions.
+Azure monitor offers the capability to [set a daily cap](/azure/azure-monitor/logs/daily-cap) on the data that is ingested on your Log analytics workspaces. However, Defenders for Cloud security events are currently not supported in those exclusions.
 
 The Log Analytics Daily Cap no longer excludes the following set of data types:
 
@@ -590,7 +590,7 @@ The Log Analytics Daily Cap no longer excludes the following set of data types:
 
 All billable data types will be capped if the daily cap is met. This change improves your ability to fully contain costs from higher-than-expected data ingestion.
 
-Learn more about [workspaces with Microsoft Defender for Cloud](../azure-monitor/logs/daily-cap.md#workspaces-with-microsoft-defender-for-cloud).
+Learn more about [workspaces with Microsoft Defender for Cloud](/azure/azure-monitor/logs/daily-cap#workspaces-with-microsoft-defender-for-cloud).
 
 ### Data security dashboard available in public preview
 
@@ -949,9 +949,9 @@ Private Endpoint support is now available as part of the Malware Scanning public
 
 Private endpoints provide secure connectivity to your Azure Storage services, effectively eliminating public internet exposure, and are considered a security best practice.
 
-For storage accounts with private endpoints that have Malware Scanning already enabled, you'll need to disable and [enable the plan with Malware Scanning](../storage/common/azure-defender-storage-configure.md?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-subscription) for this to work.
+For storage accounts with private endpoints that have Malware Scanning already enabled, you'll need to disable and [enable the plan with Malware Scanning](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-subscription) for this to work.
 
-Learn more about using [private endpoints](../private-link/private-endpoint-overview.md) in [Defender for Storage](defender-for-storage-introduction.md) and how to secure your storage services further.
+Learn more about using [private endpoints](/azure/private-link/private-endpoint-overview) in [Defender for Storage](defender-for-storage-introduction.md) and how to secure your storage services further.
 
 ### Recommendation released for preview: Running container images should have vulnerability findings resolved (powered by Microsoft Defender Vulnerability Management)
 
@@ -979,7 +979,7 @@ For more information on compliance controls, see [Tutorial: Regulatory complianc
 
 June 11, 2023
 
-Now you can discover potential cost savings in security by applying Defender for Cloud within the context of an [Azure Migrate business case](../migrate/concepts-business-case-calculation.md).
+Now you can discover potential cost savings in security by applying Defender for Cloud within the context of an [Azure Migrate business case](/azure/migrate/concepts-business-case-calculation).
 
 ### Express configuration for vulnerability assessments in Defender for SQL is now Generally Available
 
@@ -1204,7 +1204,7 @@ Permissions can be granted in two different ways:
 
 After you have followed either of these options, you'll be navigated to the review screen where you should review the request. Select **Accept new permissions** to approve the request.
 
-If you require any assistance updating permissions, you can [create an Azure support request](../azure-portal/supportability/how-to-create-azure-support-request.md).
+If you require any assistance updating permissions, you can [create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request).
 
 You can also learn more about [Defender for DevOps](defender-for-devops-introduction.md).
 If a subscription has a VA solution enabled on any of its VMs, no changes are made and Microsoft Defender Vulnerability Management won't be enabled by default on the remaining VMs in that subscription. You can choose to [enable a VA solution](deploy-vulnerability-assessment-defender-vulnerability-management.md) on the remaining VMs on your subscriptions.
@@ -1263,7 +1263,7 @@ These recommendations are based on the following policies:
 - [(Preview) Windows virtual machines should enable Azure Disk Encryption or EncryptionAtHost](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f3dc5edcd-002d-444c-b216-e123bbfa37c0)
 - [(Preview) Linux virtual machines should enable Azure Disk Encryption or EncryptionAtHost](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fca88aadc-6e2b-416c-9de2-5a0f01d1693f)
 
-Learn more about [ADE and EncryptionAtHost and how to enable one of them](../virtual-machines/disk-encryption-overview.md).
+Learn more about [ADE and EncryptionAtHost and how to enable one of them](/azure/virtual-machines/disk-encryption-overview).
 
 ### Changes in the recommendation Machines should be configured securely
 
@@ -1351,7 +1351,7 @@ The recommendations `System updates should be installed on your machines (powere
 To use the new recommendation, you need to:
 
 - Connect your non-Azure machines to Arc.
-- [Enable the periodic assessment property](../update-center/assessment-options.md#periodic-assessment). You can use the [Fix button](implement-security-recommendations.md).
+- [Enable the periodic assessment property](/azure/update-center/assessment-options#periodic-assessment). You can use the [Fix button](implement-security-recommendations.md).
  in the new recommendation, `Machines should be configured to periodically check for missing system updates` to fix the recommendation.
 
 After completing these steps, you can remove the old recommendation `System updates should be installed on your machines`, by disabling it from Defender for Cloud's built-in initiative in Azure policy.
@@ -1367,7 +1367,7 @@ The new recommendation `System updates should be installed on your machines (pow
 
 The new recommendation `System updates should be installed on your machines (powered by Azure Update Manager)` isn't expected to affect your Secure Score, as it has the same results as the old recommendation `System updates should be installed on your machines`.
 
-The prerequisite recommendation ([Enable the periodic assessment property](../update-center/assessment-options.md#periodic-assessment)) has a negative effect on your Secure Score. You can remediate the negative effect with the available [Fix button](implement-security-recommendations.md).
+The prerequisite recommendation ([Enable the periodic assessment property](/azure/update-center/assessment-options#periodic-assessment)) has a negative effect on your Secure Score. You can remediate the negative effect with the available [Fix button](implement-security-recommendations.md).
 
 ### Defender for APIs (Preview)
 
@@ -1564,12 +1564,12 @@ Learn more about [enabling Microsoft Defender for Endpoint](integration-defender
 
 You no longer need an agent on your Azure VMs and Azure Arc machines to make sure the machines have all of the latest security or critical system updates.
 
-The new system updates recommendation, `System updates should be installed on your machines (powered by Azure Update Manager)` in the `Apply system updates` control, is based on the [Update Manager (preview)](../update-center/overview.md). The recommendation relies on a native agent embedded in every Azure VM and Azure Arc machines instead of an installed agent. The Quick Fix in the new recommendation leads you to a one-time installation of the missing updates in the Update Manager portal.
+The new system updates recommendation, `System updates should be installed on your machines (powered by Azure Update Manager)` in the `Apply system updates` control, is based on the [Update Manager (preview)](/azure/update-center/overview). The recommendation relies on a native agent embedded in every Azure VM and Azure Arc machines instead of an installed agent. The Quick Fix in the new recommendation leads you to a one-time installation of the missing updates in the Update Manager portal.
 
 To use the new recommendation, you need to:
 
 - Connect your non-Azure machines to Arc
-- Turn on the [periodic assessment property](../update-center/assessment-options.md#periodic-assessment). You can use the Quick Fix in the new recommendation, `Machines should be configured to periodically check for missing system updates` to fix the recommendation.
+- Turn on the [periodic assessment property](/azure/update-center/assessment-options#periodic-assessment). You can use the Quick Fix in the new recommendation, `Machines should be configured to periodically check for missing system updates` to fix the recommendation.
 
 The existing "System updates should be installed on your machines" recommendation, which relies on the Log Analytics agent, is still available under the same control.
 
@@ -1938,7 +1938,7 @@ Learn more about [viewing vulnerabilities for running images](defender-for-conta
 
 ### Azure Monitor Agent integration now in preview
 
-Defender for Cloud now includes preview support for the [Azure Monitor Agent](../azure-monitor/agents/agents-overview.md) (AMA). AMA is intended to replace the legacy Log Analytics agent (also referred to as the Microsoft Monitoring Agent (MMA)), which is on a path to deprecation. AMA [provides many benefits](/azure/azure-monitor/agents/agents-overview#benefits) over legacy agents.
+Defender for Cloud now includes preview support for the [Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) (AMA). AMA is intended to replace the legacy Log Analytics agent (also referred to as the Microsoft Monitoring Agent (MMA)), which is on a path to deprecation. AMA [provides many benefits](/azure/azure-monitor/agents/agents-overview#benefits) over legacy agents.
 
 In Defender for Cloud, when you [enable autoprovisioning for AMA](auto-deploy-azure-monitoring-agent.md), the agent is deployed on **existing and new** VMs and Azure Arc-enabled machines that are detected in your subscriptions. If Defenders for Cloud plans are enabled, AMA collects configuration information and event logs from Azure VMs and Azure Arc machines. The AMA integration is in preview, so we recommend using it in test environments, rather than in production environments.
 
@@ -2011,9 +2011,9 @@ If you have Defender for Servers enabled with Vulnerability Assessment, you can 
 
 ### Integration with Entra Permissions Management
 
-Defender for Cloud has integrated with [Microsoft Entra Permissions Management](../active-directory/cloud-infrastructure-entitlement-management/index.yml), a cloud infrastructure entitlement management (CIEM) solution that provides comprehensive visibility and control over permissions for any identity and any resource in Azure, AWS, and GCP.
+Defender for Cloud has integrated with [Microsoft Entra Permissions Management](/azure/active-directory/cloud-infrastructure-entitlement-management/), a cloud infrastructure entitlement management (CIEM) solution that provides comprehensive visibility and control over permissions for any identity and any resource in Azure, AWS, and GCP.
 
-Each Azure subscription, AWS account, and GCP project that you onboard, will now show you a view of your [Permission Creep Index (PCI)](../active-directory/cloud-infrastructure-entitlement-management/ui-dashboard.md).
+Each Azure subscription, AWS account, and GCP project that you onboard, will now show you a view of your [Permission Creep Index (PCI)](/azure/active-directory/cloud-infrastructure-entitlement-management/ui-dashboard).
 
 Learn more about [Entra Permission Management (formerly Cloudknox)](other-threat-protections.md#entra-permission-management-formerly-cloudknox)
 
@@ -2128,7 +2128,7 @@ Learn more about [MDE integration with Defender for Servers](enable-defender-for
 
 The policy `API App should only be accessible over HTTPS` is deprecated. This policy is replaced with the `Web Application should only be accessible over HTTPS` policy, which is renamed to `App Service apps should only be accessible over HTTPS`.
 
-To learn more about policy definitions for Azure App Service, see [Azure Policy built-in definitions for Azure App Service](../azure-app-configuration/policy-reference.md).
+To learn more about policy definitions for Azure App Service, see [Azure Policy built-in definitions for Azure App Service](/azure/azure-app-configuration/policy-reference).
 
 ### New Key Vault alerts
 
@@ -2364,8 +2364,8 @@ As organizations move away from using management certificates to manage their su
 Learn more:
 
 - [Cloud Services (classic) deployment model is retiring on 31 August 2024](https://azure.microsoft.com/updates/cloud-services-retirement-announcement/)
-- [Overview of Azure Cloud Services (classic)](../cloud-services/cloud-services-choose-me.md)
-- [Workflow of Microsoft Azure classic VM Architecture - including RDFE workflow basics](../cloud-services/cloud-services-workflow-process.md)
+- [Overview of Azure Cloud Services (classic)](/azure/cloud-services/cloud-services-choose-me)
+- [Workflow of Microsoft Azure classic VM Architecture - including RDFE workflow basics](/azure/cloud-services/cloud-services-workflow-process)
 
 ### Legacy implementation of ISO 27001 replaced with new ISO 27001:2013 initiative
 
@@ -2586,7 +2586,7 @@ We've deprecated the **Kubernetes cluster containers should only listen on allow
 
 | Policy name | Description | Effect(s) | Version |
 |--|--|--|--|
-| [Kubernetes cluster containers should only listen on allowed ports](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F440b515e-a580-421e-abeb-b159a61ddcbc) | Restrict containers to listen only on allowed ports to secure access to the Kubernetes cluster. This policy is generally available for Kubernetes Service (AKS), and preview for AKS Engine and Azure Arc enabled Kubernetes. For more information, see [https://aka.ms/kubepolicydoc](../governance/policy/concepts/policy-for-kubernetes.md). | audit, deny, disabled | [6.1.2](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Kubernetes/ContainerAllowedPorts.json) |
+| [Kubernetes cluster containers should only listen on allowed ports](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F440b515e-a580-421e-abeb-b159a61ddcbc) | Restrict containers to listen only on allowed ports to secure access to the Kubernetes cluster. This policy is generally available for Kubernetes Service (AKS), and preview for AKS Engine and Azure Arc enabled Kubernetes. For more information, see [https://aka.ms/kubepolicydoc](/azure/governance/policy/concepts/policy-for-kubernetes). | audit, deny, disabled | [6.1.2](https://github.com/Azure/azure-policy/blob/master/built-in-policies/policyDefinitions/Kubernetes/ContainerAllowedPorts.json) |
 
 The **[Services should listen on allowed ports only](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/add45209-73f6-4fa5-a5a5-74a451b07fbe)** recommendation should be used to limit ports that an application exposes to the internet.
 
@@ -2765,7 +2765,7 @@ Learn more about [connecting your AWS accounts to Microsoft Defender for Cloud](
 
 Data resources remain a popular target for threat actors. So it's crucial for security teams to identify, prioritize, and secure sensitive data resources across their cloud environments.
 
-To address this challenge, Microsoft Defender for Cloud now integrates sensitivity information from [Microsoft Purview](../purview/overview.md). Microsoft Purview is a unified data governance service that provides rich insights into the sensitivity of your data within multicloud, and on-premises workloads.
+To address this challenge, Microsoft Defender for Cloud now integrates sensitivity information from [Microsoft Purview](/azure/purview/overview). Microsoft Purview is a unified data governance service that provides rich insights into the sensitivity of your data within multicloud, and on-premises workloads.
 
 The integration with Microsoft Purview extends your security visibility in Defender for Cloud from the infrastructure level down to the data, enabling an entirely new way to prioritize resources and security activities for your security teams.
 
@@ -2793,13 +2793,13 @@ Learn more in [Introduction to Azure Security Benchmark](/security/benchmark/azu
 
 ### Microsoft Sentinel connector's optional bi-directional alert synchronization released for general availability (GA)
 
-In July, [we announced](release-notes-archive.md#azure-sentinel-connector-now-includes-optional-bi-directional-alert-synchronization-in-preview) a preview feature, **bi-directional alert synchronization**, for the built-in connector in [Microsoft Sentinel](../sentinel/index.yml) (Microsoft's cloud-native SIEM and SOAR solution). This feature is now released for general availability (GA).
+In July, [we announced](release-notes-archive.md#azure-sentinel-connector-now-includes-optional-bi-directional-alert-synchronization-in-preview) a preview feature, **bi-directional alert synchronization**, for the built-in connector in [Microsoft Sentinel](/azure/sentinel/) (Microsoft's cloud-native SIEM and SOAR solution). This feature is now released for general availability (GA).
 
 When you connect Microsoft Defender for Cloud to Microsoft Sentinel, the status of security alerts is synchronized between the two services. So, for example, when an alert is closed in Defender for Cloud, that alert will display as closed in Microsoft Sentinel as well. Changing the status of an alert in Defender for Cloud won't affect the status of any Microsoft Sentinel **incidents** that contain the synchronized Microsoft Sentinel alert, only that of the synchronized alert itself.
 
 When you enable **bi-directional alert synchronization** you'll automatically sync the status of the original Defender for Cloud alerts with Microsoft Sentinel incidents that contain the copies of those alerts. So, for example, when a Microsoft Sentinel incident containing a Defender for Cloud alert is closed, Defender for Cloud will automatically close the corresponding original alert.
 
-Learn more in [Connect Azure Defender alerts from Azure Security Center](../sentinel/connect-azure-security-center.md) and [Stream alerts to Azure Sentinel](export-to-siem.md#stream-alerts-to-microsoft-sentinel).
+Learn more in [Connect Azure Defender alerts from Azure Security Center](/azure/sentinel/connect-azure-security-center) and [Stream alerts to Azure Sentinel](export-to-siem.md#stream-alerts-to-microsoft-sentinel).
 
 ### New recommendation to push Azure Kubernetes Service (AKS) logs to Sentinel
 
@@ -2984,7 +2984,7 @@ Learn more about the [Azure Defender for Resource Manager](defender-for-resource
 
 The recommendation "Kubernetes clusters should not use the default namespace" prevents usage of the default namespace for a range of resource types. Two of the resource types that were included in this recommendation have been removed: ConfigMap and Secret.
 
-Learn more about this recommendation and hardening your Kubernetes clusters in [Understand Azure Policy for Kubernetes clusters](../governance/policy/concepts/policy-for-kubernetes.md).
+Learn more about this recommendation and hardening your Kubernetes clusters in [Understand Azure Policy for Kubernetes clusters](/azure/governance/policy/concepts/policy-for-kubernetes).
 
 ### Recommendations details pages now show related recommendations
 
@@ -3039,7 +3039,7 @@ In September, the following update was released:
 
 ### Two new recommendations to audit OS configurations for Azure security baseline compliance (in preview)
 
-The following two recommendations have been released to assess your machines' compliance with the [Windows security baseline](../governance/policy/samples/guest-configuration-baseline-windows.md) and the [Linux security baseline](../governance/policy/samples/guest-configuration-baseline-linux.md):
+The following two recommendations have been released to assess your machines' compliance with the [Windows security baseline](/azure/governance/policy/samples/guest-configuration-baseline-windows) and the [Linux security baseline](/azure/governance/policy/samples/guest-configuration-baseline-linux):
 
 - For Windows machines, [Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1f655fb7-63ca-4980-91a3-56dbc2b715c6)
 - For Linux machines, [Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/8c3d9ad0-3639-4686-9cd2-2b2ab2609bda)
@@ -3129,13 +3129,13 @@ It's likely that this change will impact your secure scores. For most subscripti
 
 Azure Defender for container registries includes a vulnerability scanner to scan images in your Azure Container Registry registries. Learn how to scan your registries and remediate findings in [Use Azure Defender for container registries to scan your images for vulnerabilities](defender-for-containers-vulnerability-assessment-azure.md).
 
-To limit access to a registry hosted in Azure Container Registry, assign virtual network private IP addresses to the registry endpoints and use Azure Private Link as explained in [Connect privately to an Azure container registry using Azure Private Link](../container-registry/container-registry-private-link.md).
+To limit access to a registry hosted in Azure Container Registry, assign virtual network private IP addresses to the registry endpoints and use Azure Private Link as explained in [Connect privately to an Azure container registry using Azure Private Link](/azure/container-registry/container-registry-private-link).
 
-As part of our ongoing efforts to support additional environments and use cases, Azure Defender now also scans container registries protected with [Azure Private Link](../private-link/private-link-overview.md).
+As part of our ongoing efforts to support additional environments and use cases, Azure Defender now also scans container registries protected with [Azure Private Link](/azure/private-link/private-link-overview).
 
 ### Security Center can now autoprovision the Azure Policy's Guest Configuration extension (in preview)
 
-Azure Policy can audit settings inside a machine, both for machines running in Azure and Arc connected machines. The validation is performed by the Guest Configuration extension and client. Learn more in [Understand Azure Policy's Guest Configuration](../governance/machine-configuration/overview.md).
+Azure Policy can audit settings inside a machine, both for machines running in Azure and Arc connected machines. The validation is performed by the Guest Configuration extension and client. Learn more in [Understand Azure Policy's Guest Configuration](/azure/governance/machine-configuration/overview).
 
 With this update, you can now set Security Center to automatically provision this extension to all supported machines.
 
@@ -3189,7 +3189,7 @@ Updates in July include:
 
 ### Azure Sentinel connector now includes optional bi-directional alert synchronization (in preview)
 
-Security Center natively integrates with [Azure Sentinel](../sentinel/index.yml), Azure's cloud-native SIEM and SOAR solution.
+Security Center natively integrates with [Azure Sentinel](/azure/sentinel/), Azure's cloud-native SIEM and SOAR solution.
 
 Azure Sentinel includes built-in connectors for Azure Security Center at the subscription and tenant levels. Learn more in [Stream alerts to Azure Sentinel](export-to-siem.md#stream-alerts-to-microsoft-sentinel).
 
@@ -3197,7 +3197,7 @@ When you connect Azure Defender to Azure Sentinel, the status of Azure Defender 
 
 When you enable preview feature **bi-directional alert synchronization**, it automatically syncs the status of the original Azure Defender alerts with Azure Sentinel incidents that contain copies of those Azure Defender alerts. So, for example, when an Azure Sentinel incident containing an Azure Defender alert is closed, Azure Defender will automatically close the corresponding original alert.
 
-Learn more in [Connect Azure Defender alerts from Azure Security Center](../sentinel/connect-azure-security-center.md).
+Learn more in [Connect Azure Defender alerts from Azure Security Center](/azure/sentinel/connect-azure-security-center).
 
 ### Logical reorganization of Azure Defender for Resource Manager alerts
 
@@ -3475,7 +3475,7 @@ This is part of an ongoing change to this recommendation announced in our upcomi
 
 ### New recommendations to enable trusted launch capabilities (in preview)
 
-Azure offers trusted launch as a seamless way to improve the security of [generation 2](../virtual-machines/generation-2.md) VMs. Trusted launch protects against advanced and persistent attack techniques. Trusted launch is composed of several, coordinated infrastructure technologies that can be enabled independently. Each technology provides another layer of defense against sophisticated threats. Learn more in [Trusted launch for Azure virtual machines](../virtual-machines/trusted-launch.md).
+Azure offers trusted launch as a seamless way to improve the security of [generation 2](/azure/virtual-machines/generation-2) VMs. Trusted launch protects against advanced and persistent attack techniques. Trusted launch is composed of several, coordinated infrastructure technologies that can be enabled independently. Each technology provides another layer of defense against sophisticated threats. Learn more in [Trusted launch for Azure virtual machines](/azure/virtual-machines/trusted-launch).
 
 > [!IMPORTANT]
 > Trusted launch requires the creation of new virtual machines. You can't enable trusted launch on existing virtual machines that were initially created without it.
@@ -3492,7 +3492,7 @@ With the vTPM enabled, the **Guest Attestation extension** can remotely validate
 - **Guest Attestation extension should be installed on supported Linux virtual machines**
 - **Guest Attestation extension should be installed on supported Linux Virtual Machine Scale Sets**
 
-Learn more in [Trusted launch for Azure virtual machines](../virtual-machines/trusted-launch.md).
+Learn more in [Trusted launch for Azure virtual machines](/azure/virtual-machines/trusted-launch).
 
 ### New recommendations for hardening Kubernetes clusters (in preview)
 
@@ -3585,7 +3585,7 @@ Learn more about this scanner in [Use Azure Defender for container registries to
 
 ### Use Azure Defender for Kubernetes to protect hybrid and multicloud Kubernetes deployments (in preview)
 
-Azure Defender for Kubernetes is expanding its threat protection capabilities to defend your clusters wherever they're deployed. This was enabled by integrating with [Azure Arc-enabled Kubernetes](../azure-arc/kubernetes/overview.md) and its new [extensions capabilities](../azure-arc/kubernetes/extensions.md).
+Azure Defender for Kubernetes is expanding its threat protection capabilities to defend your clusters wherever they're deployed. This was enabled by integrating with [Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/overview) and its new [extensions capabilities](/azure/azure-arc/kubernetes/extensions).
 
 When you've enabled Azure Arc on your non-Azure Kubernetes clusters, a new recommendation from Azure Security Center offers to deploy the Azure Defender agent to them with only a few clicks.
 
@@ -3609,7 +3609,7 @@ Microsoft Defender for Endpoint is a holistic, cloud delivered endpoint security
 
 When you enable Azure Defender for Servers running Windows Server, a license for Defender for Endpoint is included with the plan. If you've already enabled Azure Defender for Servers and you have Windows Server 2019 servers in your subscription, they'll automatically receive Defender for Endpoint with this update. No manual action is required.
 
-Support has now been expanded to include Windows Server 2019 and Windows 10 on [Windows Virtual Desktop](../virtual-desktop/overview.md).
+Support has now been expanded to include Windows Server 2019 and Windows 10 on [Windows Virtual Desktop](/azure/virtual-desktop/overview).
 
 > [!NOTE]
 > If you're enabling Defender for Endpoint on a Windows Server 2019 server, ensure it meets the prerequisites described in [Enable the Microsoft Defender for Endpoint integration](enable-defender-for-endpoint.md).
@@ -3630,9 +3630,9 @@ Enabling Azure Defender plans results in charges. Learn about the pricing detail
 
 We've added three standards for use with Azure Security Center. Using the regulatory compliance dashboard, you can now track your compliance with:
 
-- [CIS Microsoft Azure Foundations Benchmark 1.3.0](../governance/policy/samples/cis-azure-1-3-0.md)
-- [CMMC Level 3](../governance/policy/samples/cmmc-l3.md)
-- [New Zealand ISM Restricted](../governance/policy/samples/new-zealand-ism.md)
+- [CIS Microsoft Azure Foundations Benchmark 1.3.0](/azure/governance/policy/samples/cis-azure-1-3-0)
+- [CMMC Level 3](/azure/governance/policy/samples/cmmc-l3)
+- [New Zealand ISM Restricted](/azure/governance/policy/samples/new-zealand-ism)
 
 You can assign these to your subscriptions as described in [Customize the set of standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml).
 
@@ -3646,7 +3646,7 @@ Learn more in:
 
 ### Four new recommendations related to guest configuration (in preview)
 
-Azure's [Guest Configuration extension](../governance/machine-configuration/overview.md) reports to Security Center to help ensure your virtual machines' in-guest settings are hardened. The extension isn't required for Arc-enabled servers because it's included in the Arc Connected Machine agent. The extension requires a system-managed identity on the machine.
+Azure's [Guest Configuration extension](/azure/governance/machine-configuration/overview) reports to Security Center to help ensure your virtual machines' in-guest settings are hardened. The extension isn't required for Arc-enabled servers because it's included in the Arc Connected Machine agent. The extension requires a system-managed identity on the machine.
 
 We've added four new recommendations to Security Center to make the most of this extension.
 
@@ -3658,7 +3658,7 @@ We've added four new recommendations to Security Center to make the most of this
   - **Windows Defender Exploit Guard should be enabled on your machines**
   - **Authentication to Linux machines should require SSH keys**
 
-Learn more in [Understand Azure Policy's Guest Configuration](../governance/machine-configuration/overview.md).
+Learn more in [Understand Azure Policy's Guest Configuration](/azure/governance/machine-configuration/overview).
 
 ### CMK recommendations moved to best practices security control
 
@@ -3797,7 +3797,7 @@ The recommendation details pages now include the "Explore in ARG" toolbar button
 
 Azure Resource Graph (ARG) provides instant access to resource information across your cloud environments with robust filtering, grouping, and sorting capabilities. It's a quick and efficient way to query information across Azure subscriptions programmatically or from within the Azure portal.
 
-Learn more about [Azure Resource Graph](../governance/resource-graph/index.yml).
+Learn more about [Azure Resource Graph](/azure/governance/resource-graph/).
 
 :::image type="content" source="media/release-notes/explore-in-resource-graph.png" alt-text="Explore recommendation data in Azure Resource Graph.":::
 
@@ -3824,7 +3824,7 @@ Learn more about how to [Automate responses to Security Center triggers](workflo
 
 ### Two legacy recommendations no longer write data directly to Azure activity log
 
-Security Center passes the data for almost all security recommendations to Azure Advisor, which in turn, writes it to [Azure activity log](../azure-monitor/essentials/activity-log.md).
+Security Center passes the data for almost all security recommendations to Azure Advisor, which in turn, writes it to [Azure activity log](/azure/azure-monitor/essentials/activity-log).
 
 For two recommendations, the data is simultaneously written directly to Azure activity log. With this change, Security Center stops writing data for these legacy security recommendations directly to activity Log. Instead, we're exporting the data to Azure Advisor as we do for all the other recommendations.
 
@@ -3873,7 +3873,7 @@ Azure Security Center's security alerts page was redesigned to provide:
 - **Alignment with Azure Sentinel's incident experience** - for customers who use both products, switching between them is now a more straightforward experience and it's easy to learn one from the other.
 - **Better performance** for large alerts lists.
 - **Keyboard navigation** through the alert list.
-- **Alerts from Azure Resource Graph** - you can query alerts in Azure Resource Graph, the Kusto-like API for all of your resources. This is also useful if you're building your own alerts dashboards. [Learn more about Azure Resource Graph](../governance/resource-graph/index.yml).
+- **Alerts from Azure Resource Graph** - you can query alerts in Azure Resource Graph, the Kusto-like API for all of your resources. This is also useful if you're building your own alerts dashboards. [Learn more about Azure Resource Graph](/azure/governance/resource-graph/).
 - **Create sample alerts feature** - To create sample alerts from the new alerts experience, see [Generate sample Azure Defender alerts](alert-validation.md#generate-sample-security-alerts).
 
 ### Kubernetes workload protection recommendations released for general availability (GA)
@@ -3897,7 +3897,7 @@ Microsoft Defender for Endpoint is a holistic, cloud delivered endpoint security
 
 When you enable Azure Defender for Servers running Windows Server, a license for Defender for Endpoint is included with the plan. If you've already enabled Azure Defender for Servers and you have Windows Server 2019 servers in your subscription, they'll automatically receive Defender for Endpoint with this update. No manual action is required.
 
-Support has now been expanded to include Windows Server 2019 and Windows 10 on [Windows Virtual Desktop](../virtual-desktop/overview.md).
+Support has now been expanded to include Windows Server 2019 and Windows 10 on [Windows Virtual Desktop](/azure/virtual-desktop/overview).
 
 > [!NOTE]
 > If you're enabling Defender for Endpoint on a Windows Server 2019 server, ensure it meets the prerequisites described in [Enable the Microsoft Defender for Endpoint integration](enable-defender-for-endpoint.md).
@@ -4000,7 +4000,7 @@ Main capabilities:
 
 [Learn more about deploying the integrated Qualys vulnerability scanner to your hybrid machines](deploy-vulnerability-assessment-vm.md#deploy-the-integrated-scanner-to-your-azure-and-hybrid-machines).
 
-[Learn more about Azure Arc-enabled servers](../azure-arc/servers/index.yml).
+[Learn more about Azure Arc-enabled servers](/azure/azure-arc/servers/).
 
 ### Secure score for management groups is now available in preview
 
@@ -4032,7 +4032,7 @@ Azure Defender for App Service now detects dangling DNS entries when an App Serv
 Learn more:
 
 - [App Service alert reference table](alerts-azure-app-service.md) - Includes two new Azure Defender alerts that trigger when a dangling DNS entry is detected
-- [Prevent dangling DNS entries and avoid subdomain takeover](../security/fundamentals/subdomain-takeover.md) - Learn about the threat of subdomain takeover and the dangling DNS aspect
+- [Prevent dangling DNS entries and avoid subdomain takeover](/azure/security/fundamentals/subdomain-takeover) - Learn about the threat of subdomain takeover and the dangling DNS aspect
 - [Introduction to Azure Defender for App Service](defender-for-app-service-introduction.md)
 
 ### Multicloud connectors are released for general availability (GA)
@@ -4105,9 +4105,9 @@ To increase the coverage of this benchmark, the following 35 preview recommendat
 Related links:
 
 - [Learn more about Azure Security Benchmark](/security/benchmark/azure/introduction)
-- [Learn more about Azure Database for MariaDB](../mariadb/overview.md)
-- [Learn more about Azure Database for MySQL](../mysql/overview.md)
-- [Learn more about Azure Database for PostgreSQL](../postgresql/overview.md)
+- [Learn more about Azure Database for MariaDB](/azure/mariadb/overview)
+- [Learn more about Azure Database for MySQL](/azure/mysql/overview)
+- [Learn more about Azure Database for PostgreSQL](/azure/postgresql/overview)
 
 ### CSV export of filtered list of recommendations
 
@@ -4174,7 +4174,7 @@ Learn more about [Azure Defender for SQL](defender-for-sql-introduction.md).
 
 ### Azure Defender for SQL support for Azure Synapse Analytics dedicated SQL pool is generally available
 
-Azure Synapse Analytics (formerly SQL DW) is an analytics service that combines enterprise data warehousing and big data analytics. Dedicated SQL pools are the enterprise data warehousing features of Azure Synapse. Learn more in [What is Azure Synapse Analytics (formerly SQL DW)?](../synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is.md).
+Azure Synapse Analytics (formerly SQL DW) is an analytics service that combines enterprise data warehousing and big data analytics. Dedicated SQL pools are the enterprise data warehousing features of Azure Synapse. Learn more in [What is Azure Synapse Analytics (formerly SQL DW)?](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is).
 
 Azure Defender for SQL protects your dedicated SQL pools with:
 
@@ -4217,7 +4217,7 @@ Azure Security Center's security alerts page was redesigned to provide:
 - **Alignment with Azure Sentinel's incident experience** - for customers who use both products, switching between them is now a more straightforward experience and it's easy to learn one from the other
 - **Better performance** for large alerts lists
 - **Keyboard navigation** through the alert list
-- **Alerts from Azure Resource Graph** - you can query alerts in Azure Resource Graph, the Kusto-like API for all of your resources. This is also useful if you're building your own alerts dashboards. [Learn more about Azure Resource Graph](../governance/resource-graph/index.yml).
+- **Alerts from Azure Resource Graph** - you can query alerts in Azure Resource Graph, the Kusto-like API for all of your resources. This is also useful if you're building your own alerts dashboards. [Learn more about Azure Resource Graph](/azure/governance/resource-graph/).
 
 To access the new experience, use the 'try it now' link from the banner at the top of the security alerts page.
 
@@ -4252,7 +4252,7 @@ Learn more about inventory in [Explore and manage your resources with asset inve
 
 The recommendation "Web apps should request an SSL certificate for all incoming requests" was moved from the security control **Manage access and permissions** (worth a maximum of 4 pts) into **Implement security best practices** (which is worth no points).
 
-Ensuring a web app requests a certificate certainly makes it more secure. However, for public-facing web apps it's irrelevant. If you access your site over HTTP and not HTTPS, you will not receive any client certificate. So if your application requires client certificates, you should not allow requests to your application over HTTP. Learn more in [Configure TLS mutual authentication for Azure App Service](../app-service/app-service-web-configure-tls-mutual-auth.md).
+Ensuring a web app requests a certificate certainly makes it more secure. However, for public-facing web apps it's irrelevant. If you access your site over HTTP and not HTTPS, you will not receive any client certificate. So if your application requires client certificates, you should not allow requests to your application over HTTP. Learn more in [Configure TLS mutual authentication for Azure App Service](/azure/app-service/app-service-web-configure-tls-mutual-auth).
 
 With this change, the recommendation is now a recommended best practice that does not impact your score.
 
@@ -4333,16 +4333,16 @@ Preview recommendations don't render a resource unhealthy, and they aren't inclu
 Related links:
 
 - [Learn more about Azure Security Benchmark](/security/benchmark/azure/introduction)
-- [Learn more about Azure API apps](../app-service/app-service-web-tutorial-rest-api.md)
-- [Learn more about Azure function apps](../azure-functions/functions-overview.md)
-- [Learn more about Azure web apps](../app-service/overview.md)
-- [Learn more about Azure Database for MariaDB](../mariadb/overview.md)
-- [Learn more about Azure Database for MySQL](../mysql/overview.md)
-- [Learn more about Azure Database for PostgreSQL](../postgresql/overview.md)
+- [Learn more about Azure API apps](/azure/app-service/app-service-web-tutorial-rest-api)
+- [Learn more about Azure function apps](/azure/azure-functions/functions-overview)
+- [Learn more about Azure web apps](/azure/app-service/overview)
+- [Learn more about Azure Database for MariaDB](/azure/mariadb/overview)
+- [Learn more about Azure Database for MySQL](/azure/mysql/overview)
+- [Learn more about Azure Database for PostgreSQL](/azure/postgresql/overview)
 
 ### NIST SP 800 171 R2 added to Security Center's regulatory compliance dashboard
 
-The NIST SP 800-171 R2 standard is now available as a built-in initiative for use with Azure Security Center's regulatory compliance dashboard. The mappings for the controls are described in [Details of the NIST SP 800-171 R2 Regulatory Compliance built-in initiative](../governance/policy/samples/nist-sp-800-171-r2.md).
+The NIST SP 800-171 R2 standard is now available as a built-in initiative for use with Azure Security Center's regulatory compliance dashboard. The mappings for the controls are described in [Details of the NIST SP 800-171 R2 Regulatory Compliance built-in initiative](/azure/governance/policy/samples/nist-sp-800-171-r2).
 
 To apply the standard to your subscriptions and continuously monitor your compliance status, use the instructions in [Customize the set of standards in your regulatory compliance dashboard](update-regulatory-compliance-packages.yml).
 
@@ -4438,7 +4438,7 @@ Main capabilities:
 
 [Learn more about deploying the integrated Qualys vulnerability scanner to your hybrid machines](deploy-vulnerability-assessment-vm.md#deploy-the-integrated-scanner-to-your-azure-and-hybrid-machines).
 
-[Learn more about Azure Arc-enabled servers](../azure-arc/servers/index.yml).
+[Learn more about Azure Arc-enabled servers](/azure/azure-arc/servers/).
 
 ### Azure Firewall recommendation added (preview)
 
@@ -4476,7 +4476,7 @@ Within ARG, there are tables of data for you to use in your queries.
 :::image type="content" source="./media/release-notes/azure-resource-graph-tables.png" alt-text="Azure Resource Graph Explorer and the available tables.":::
 
 > [!TIP]
-> The ARG documentation lists all the available tables in [Azure Resource Graph table and resource type reference](../governance/resource-graph/reference/supported-tables-resources.md).
+> The ARG documentation lists all the available tables in [Azure Resource Graph table and resource type reference](/azure/governance/resource-graph/reference/supported-tables-resources).
 
 From this update, the **Microsoft.Security/securityStatuses** table was removed. The securityStatuses API is still available.
 
@@ -4556,7 +4556,7 @@ extract("^(.+)/providers/Microsoft.Security/assessments/.+$",1,id)))))
 
 Learn more at the following links:
 
-- [How to create queries with Azure Resource Graph Explorer](../governance/resource-graph/first-query-portal.md)
+- [How to create queries with Azure Resource Graph Explorer](/azure/governance/resource-graph/first-query-portal)
 - [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/)
 
 ## September 2020
@@ -4624,7 +4624,7 @@ Learn more in [Azure Defender for Key Vault](defender-for-key-vault-introduction
 
 **Azure Defender for Storage** detects potentially harmful activity on your Azure Storage accounts. Your data can be protected whether it's stored as blob containers, file shares, or data lakes.
 
-Support for [Azure Files](../storage/files/storage-files-introduction.md) and [Azure Data Lake Storage Gen2](../storage/blobs/data-lake-storage-introduction.md) is now generally available.
+Support for [Azure Files](/azure/storage/files/storage-files-introduction) and [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction) is now generally available.
 
 From 1 October 2020, we'll begin charging for protecting resources on these services.
 
@@ -4785,7 +4785,7 @@ Learn more about [asset inventory](asset-inventory.md).
 
 ### Added support for Azure Active Directory security defaults (for multifactor authentication)
 
-Security Center has added full support for [security defaults](../active-directory/fundamentals/concept-fundamentals-security-defaults.md), Microsoft's free identity security protections.
+Security Center has added full support for [security defaults](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults), Microsoft's free identity security protections.
 
 Security defaults provide preconfigured identity security settings to defend your organization from common identity-related attacks. Security defaults already protecting more than 5 million tenants overall; 50,000 tenants are also protected by Security Center.
 
@@ -4793,7 +4793,7 @@ Security Center now provides a security recommendation whenever it identifies an
 
 Our goal is to encourage more customers to secure their cloud environments with MFA, and mitigate one of the highest risks that is also the most impactful to your [secure score](secure-score-security-controls.md).
 
-Learn more about [security defaults](../active-directory/fundamentals/concept-fundamentals-security-defaults.md).
+Learn more about [security defaults](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults).
 
 ### Service principals recommendation added
 
@@ -4801,7 +4801,7 @@ A new recommendation was added to recommend that Security Center customers using
 
 The recommendation, **Service principals should be used to protect your subscriptions instead of Management Certificates** advises you to use Service Principals or Azure Resource Manager to more securely manage your subscriptions.
 
-Learn more about [Application and service principal objects in Azure Active Directory](../active-directory/develop/app-objects-and-service-principals.md#service-principal-object).
+Learn more about [Application and service principal objects in Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object).
 
 ### Vulnerability assessment on VMs - recommendations and policies consolidated
 
@@ -4980,7 +4980,7 @@ Learn more about [advanced data security for SQL machines](defender-for-sql-usag
 
 ### Two new recommendations to deploy the Log Analytics agent to Azure Arc machines (preview)
 
-Two new recommendations have been added to help deploy the [Log Analytics Agent](../azure-monitor/agents/log-analytics-agent.md) to your Azure Arc machines and ensure they're protected by Azure Security Center:
+Two new recommendations have been added to help deploy the [Log Analytics Agent](/azure/azure-monitor/agents/log-analytics-agent) to your Azure Arc machines and ensure they're protected by Azure Security Center:
 
 - **Log Analytics agent should be installed on your Windows-based Azure Arc machines (Preview)**
 - **Log Analytics agent should be installed on your Linux-based Azure Arc machines (Preview)**
@@ -4991,7 +4991,7 @@ The recommendations also include the Quick fix capability to accelerate the depl
 
 Learn more about how Azure Security Center uses the agent in [What is the Log Analytics agent?](./faq-data-collection-agents.yml#what-is-the-log-analytics-agent-).
 
-Learn more about [extensions for Azure Arc machines](../azure-arc/servers/manage-vm-extensions.md).
+Learn more about [extensions for Azure Arc machines](/azure/azure-arc/servers/manage-vm-extensions).
 
 ### New policies to create continuous export and workflow automation configurations at scale
 
@@ -5128,7 +5128,7 @@ The three recommendations that moved are:
 
 The two new recommendations added to the control are:
 
-- **Guest configuration extension should be installed on Windows virtual machines (Preview)** - Using [Azure Policy Guest Configuration](../governance/machine-configuration/overview.md) provides visibility inside virtual machines to server and application settings (Windows only).
+- **Guest configuration extension should be installed on Windows virtual machines (Preview)** - Using [Azure Policy Guest Configuration](/azure/governance/machine-configuration/overview) provides visibility inside virtual machines to server and application settings (Windows only).
 
 - **Windows Defender Exploit Guard should be enabled on your machines (Preview)** - Windows Defender Exploit Guard leverages the Azure Policy Guest Configuration agent. Exploit Guard has four components that are designed to lock down devices against a wide variety of attack vectors and block behaviors commonly used in malware attacks while enabling enterprises to balance their security risk and productivity requirements  (Windows only).
 
@@ -5215,7 +5215,7 @@ Every security program includes multiple workflows for incident response. These 
 
 For more information about the automatic and manual Security Center capabilities for running your workflows, see [workflow automation](workflow-automation.yml).
 
-Learn more about [creating Logic Apps](../logic-apps/logic-apps-overview.md).
+Learn more about [creating Logic Apps](/azure/logic-apps/logic-apps-overview).
 
 ### Integration of Azure Security Center with Windows Admin Center
 
@@ -5322,7 +5322,7 @@ Today we are introducing a new capability in Security Center that allows custome
 
 For more information about the automatic and manual Security Center capabilities for running your workflows, see [workflow automation](workflow-automation.yml).
 
-To learn about creating Logic Apps, see [Azure Logic Apps](../logic-apps/logic-apps-overview.md).
+To learn about creating Logic Apps, see [Azure Logic Apps](/azure/logic-apps/logic-apps-overview).
 
 ### Quick Fix for bulk resources generally available
 
@@ -5438,7 +5438,7 @@ When you enable JIT for your VMs, you create a policy that determines the ports 
 
 Requests are logged in the Azure Activity Log, so you can easily monitor and audit access. The just-in-time page also helps you quickly identify existing VMs that have JIT enabled and VMs where JIT is recommended.
 
-[Learn more about Azure Firewall](../firewall/overview.md).
+[Learn more about Azure Firewall](/azure/firewall/overview).
 
 ### Single click remediation to boost your security posture (preview)
 

@@ -33,13 +33,13 @@ To complete the procedures in this article, you need:
 
 ## Connect on-premises machines by using Azure Arc
 
-A machine that has [Azure Arc-enabled servers](../azure-arc/servers/overview.md) becomes an Azure resource. When you install the Log Analytics agent on it, it appears in Defender for Cloud with recommendations, like your other Azure resources.
+A machine that has [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) becomes an Azure resource. When you install the Log Analytics agent on it, it appears in Defender for Cloud with recommendations, like your other Azure resources.
 
-Azure Arc-enabled servers provide enhanced capabilities, such as enabling guest configuration policies on the machine and simplifying deployment with other Azure services. For an overview of the benefits of Azure Arc-enabled servers, see [Supported cloud operations](../azure-arc/servers/overview.md#supported-cloud-operations).
+Azure Arc-enabled servers provide enhanced capabilities, such as enabling guest configuration policies on the machine and simplifying deployment with other Azure services. For an overview of the benefits of Azure Arc-enabled servers, see [Supported cloud operations](/azure/azure-arc/servers/overview#supported-cloud-operations).
 
-To deploy Azure Arc on one machine, follow the instructions in [Quickstart: Connect hybrid machines with Azure Arc-enabled servers](../azure-arc/servers/learn/quick-enable-hybrid-vm.md).
+To deploy Azure Arc on one machine, follow the instructions in [Quickstart: Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
-To deploy Azure Arc on multiple machines at scale, follow the instructions in [Connect hybrid machines to Azure at scale](../azure-arc/servers/onboard-service-principal.md).
+To deploy Azure Arc on multiple machines at scale, follow the instructions in [Connect hybrid machines to Azure at scale](/azure/azure-arc/servers/onboard-service-principal).
 
 Defender for Cloud tools for automatically deploying the Log Analytics agent work with machines running Azure Arc. However, this capability is currently in preview. When you connect your machines by using Azure Arc, use the relevant Defender for Cloud recommendation to deploy the agent and benefit from the full range of protections that Defender for Cloud offers:
 
@@ -107,7 +107,7 @@ To onboard a Windows server:
 
 When the process is complete, **Microsoft Monitoring agent** appears in **Control Panel**. You can review your configuration there and verify that the agent is connected.
 
-For more information on installing and configuring the agent, see [Connect Windows machines](../azure-monitor/agents/agent-windows.md#install-the-agent).
+For more information on installing and configuring the agent, see [Connect Windows machines](/azure/azure-monitor/agents/agent-windows#install-the-agent).
 
 ### Onboard your Linux server
 

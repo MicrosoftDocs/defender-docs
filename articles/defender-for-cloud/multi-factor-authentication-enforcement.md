@@ -25,7 +25,7 @@ There are three ways to enable MFA and be compliant with the two recommendations
 
 ### Free option - security defaults
 
-If you're using the free edition of Microsoft Entra ID, you should use the [security defaults](../active-directory/fundamentals/concept-fundamentals-security-defaults.md) to enable multifactor authentication on your tenant.
+If you're using the free edition of Microsoft Entra ID, you should use the [security defaults](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) to enable multifactor authentication on your tenant.
 
 ### MFA for Microsoft 365 Business, E3, or E5 customers
 
@@ -35,7 +35,7 @@ Customers with Microsoft 365 can use **Per-user assignment**. In this scenario, 
 
 ### MFA for Microsoft Entra ID P1 or P2 customers
 
-For an improved user experience, upgrade to Microsoft Entra ID P1 or P2 for **conditional access (CA) policy** options. To configure a CA policy, you need [Microsoft Entra tenant permissions](../active-directory/roles/permissions-reference.md).
+For an improved user experience, upgrade to Microsoft Entra ID P1 or P2 for **conditional access (CA) policy** options. To configure a CA policy, you need [Microsoft Entra tenant permissions](/azure/active-directory/roles/permissions-reference).
 
 Your CA policy must:
 
@@ -47,9 +47,9 @@ Your CA policy must:
 
 **Microsoft Entra ID P1** customers can use Microsoft Entra CA to prompt users for multifactor authentication during certain scenarios or events to fit your business requirements. Other licenses that include this functionality:  Enterprise Mobility + Security E3, Microsoft 365 F1, and Microsoft 365 E3.
 
-**Microsoft Entra ID P2** provides the strongest security features and an improved user experience. This license adds [risk-based conditional access](../active-directory/conditional-access/howto-conditional-access-policy-risk.md) to the Microsoft Entra ID P1 features. Risk-based CA adapts to your users' patterns and minimizes multifactor authentication prompts. Other licenses that include this functionality: Enterprise Mobility + Security E5 or Microsoft 365 E5.
+**Microsoft Entra ID P2** provides the strongest security features and an improved user experience. This license adds [risk-based conditional access](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk) to the Microsoft Entra ID P1 features. Risk-based CA adapts to your users' patterns and minimizes multifactor authentication prompts. Other licenses that include this functionality: Enterprise Mobility + Security E5 or Microsoft 365 E5.
 
-Learn more in the [Azure Conditional Access documentation](../active-directory/conditional-access/overview.md).
+Learn more in the [Azure Conditional Access documentation](/azure/active-directory/conditional-access/overview).
 
 <a name='identify-accounts-without-multi-factor-authentication-mfa-enabled'></a>
 

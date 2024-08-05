@@ -169,7 +169,7 @@ You can also learn more about defending your Kubernetes nodes and clusters with 
 
 ## Simulate alerts for App Service
 
-You can simulate alerts for resources running on [App Service](../app-service/overview.md).
+You can simulate alerts for resources running on [App Service](/azure/app-service/overview).
 
 1. Create a new website and wait 24 hours for it to be registered with Defender for Cloud, or use an existing web site.
 

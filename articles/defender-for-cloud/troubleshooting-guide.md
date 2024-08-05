@@ -18,7 +18,7 @@ This guide is for IT professionals, information security analysts, and cloud adm
 
 ## Use the audit log to investigate problems
 
-The first place to look for troubleshooting information is the [audit log](../azure-monitor/essentials/platform-logs-overview.md) for the failed component. In the audit log, you can see details like:
+The first place to look for troubleshooting information is the [audit log](/azure/azure-monitor/essentials/platform-logs-overview) for the failed component. In the audit log, you can see details like:
 
 - Which operations were performed.
 - Who initiated the operation.
@@ -177,7 +177,7 @@ There are two installation scenarios that can produce different results when you
 
 For agents to connect to and register with Defender for Cloud, they must have access to the DNS addresses and network ports for Azure network resources. To enable this access, take these actions:
 
-- When you use proxy servers, make sure that the appropriate proxy server resources are configured correctly in the [agent settings](../azure-monitor/agents/agent-windows.md).
+- When you use proxy servers, make sure that the appropriate proxy server resources are configured correctly in the [agent settings](/azure/azure-monitor/agents/agent-windows).
 - Configure your network firewalls to permit access to Log Analytics.
 
 The Azure network resources are:
@@ -193,7 +193,7 @@ If you're having trouble onboarding the Log Analytics agent, read [Troubleshoot 
 
 ## Troubleshoot improperly working antimalware protection
 
-The guest agent is the parent process of everything that the [Microsoft Antimalware](../security/fundamentals/antimalware.md) extension does. When the guest agent process fails, the Microsoft Antimalware protection that runs as a child process of the guest agent might also fail.
+The guest agent is the parent process of everything that the [Microsoft Antimalware](/azure/security/fundamentals/antimalware) extension does. When the guest agent process fails, the Microsoft Antimalware protection that runs as a child process of the guest agent might also fail.
 
 Here are some troubleshooting tips:
 

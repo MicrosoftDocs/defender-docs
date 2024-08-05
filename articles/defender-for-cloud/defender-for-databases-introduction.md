@@ -20,19 +20,19 @@ Defender for open-source relational database is supported on PaaS environments f
 
 This plan brings threat protections for the following open-source relational databases on Azure:
 
-**Protected versions of [Azure Database for PostgreSQL](../postgresql/index.yml) include**:
+**Protected versions of [Azure Database for PostgreSQL](/azure/postgresql/) include**:
 
-- Single Server - General Purpose and Memory Optimized. Learn more in [PostgreSQL Single Server pricing tiers](../postgresql/concepts-pricing-tiers.md).
+- Single Server - General Purpose and Memory Optimized. Learn more in [PostgreSQL Single Server pricing tiers](/azure/postgresql/concepts-pricing-tiers).
 - Flexible Server - all pricing tiers.
 
-**Protected versions of [Azure Database for MySQL](../mysql/index.yml) include**:
+**Protected versions of [Azure Database for MySQL](/azure/mysql/) include**:
 
-- Single Server - General Purpose and Memory Optimized. Learn more in [MySQL pricing tiers](../mysql/concepts-pricing-tiers.md).
+- Single Server - General Purpose and Memory Optimized. Learn more in [MySQL pricing tiers](/azure/mysql/concepts-pricing-tiers).
 - Flexible Server - all pricing tiers.
 
-**Protected versions of [Azure Database for MariaDB](../mariadb/index.yml) include**:
+**Protected versions of [Azure Database for MariaDB](/azure/mariadb/) include**:
 
-- General Purpose and Memory Optimized. Learn more in [MariaDB pricing tiers](../mariadb/concepts-pricing-tiers.md).
+- General Purpose and Memory Optimized. Learn more in [MariaDB pricing tiers](/azure/mariadb/concepts-pricing-tiers).
 
 For RDS instances on AWS (Preview):
 

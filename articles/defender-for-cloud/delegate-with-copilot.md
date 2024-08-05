@@ -18,7 +18,7 @@ Delegating recommendations can improve your security posture by having the right
 
 - [Enable Defender for Cloud on your environment](connect-azure-subscription.md).
 
-- [Have access to Azure Copilot](../copilot/overview.md).
+- [Have access to Azure Copilot](/azure/copilot/overview).
 
 - [Have Security Compute Units assigned for Copilot for Security](/copilot/security/get-started-security-copilot).
 

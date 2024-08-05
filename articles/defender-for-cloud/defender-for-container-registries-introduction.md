@@ -31,9 +31,9 @@ To protect the Azure Resource Manager based registries in your subscription, ena
 |Aspect|Details|
 |----|:----|
 |Release state:|Deprecated (Use [**Microsoft Defender for Containers**](defender-for-containers-introduction.md))|
-|Supported registries and images:|Linux images in ACR registries accessible from the public internet with shell access<br>[ACR registries protected with Azure Private Link](../container-registry/container-registry-private-link.md)|
-|Unsupported registries and images:|Windows images<br>'Private' registries (unless access is granted to [Trusted Services](../container-registry/allow-access-trusted-services.md#trusted-services))<br>Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images, or "Distroless" images that only contain an application and its runtime dependencies without a package manager, shell, or OS<br>Images with [Open Container Initiative (OCI) Image Format Specification](https://github.com/opencontainers/image-spec/blob/master/spec.md)|
-|Required roles and permissions:|**Security reader** and [Azure Container Registry roles and permissions](../container-registry/container-registry-roles.md)|
+|Supported registries and images:|Linux images in ACR registries accessible from the public internet with shell access<br>[ACR registries protected with Azure Private Link](/azure/container-registry/container-registry-private-link)|
+|Unsupported registries and images:|Windows images<br>'Private' registries (unless access is granted to [Trusted Services](/azure/container-registry/allow-access-trusted-services#trusted-services))<br>Super-minimalist images such as [Docker scratch](https://hub.docker.com/_/scratch/) images, or "Distroless" images that only contain an application and its runtime dependencies without a package manager, shell, or OS<br>Images with [Open Container Initiative (OCI) Image Format Specification](https://github.com/opencontainers/image-spec/blob/master/spec.md)|
+|Required roles and permissions:|**Security reader** and [Azure Container Registry roles and permissions](/azure/container-registry/container-registry-roles)|
 |Clouds:|:::image type="icon" source="./media/icons/yes-icon.png" border="false"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png" border="false"::: National (Azure Government, Microsoft Azure operated by 21Vianet)|
 
 ## What are the benefits of Microsoft Defender for container registries?
@@ -56,7 +56,7 @@ There are three triggers for an image scan:
 
 - **Recently pulled** - Since new vulnerabilities are discovered every day, **Microsoft Defender for container registries** also scans, on a weekly basis, any image that has been pulled within the last 30 days. There's no additional charge for these rescans; as mentioned above, you're billed once per image.
 
-- **On import** - Azure Container Registry has import tools to bring images to your registry from Docker Hub, Microsoft Container Registry, or another Azure container registry. **Microsoft Defender for container registries** scans any supported images you import. Learn more in [Import container images to a container registry](../container-registry/container-registry-import-images.md).
+- **On import** - Azure Container Registry has import tools to bring images to your registry from Docker Hub, Microsoft Container Registry, or another Azure container registry. **Microsoft Defender for container registries** scans any supported images you import. Learn more in [Import container images to a container registry](/azure/container-registry/container-registry-import-images).
 
 The scan completes typically within 2 minutes, but it might take up to 40 minutes. Findings are made available as security recommendations such as this one:
 

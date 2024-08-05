@@ -9,7 +9,7 @@ ms.date: 05/30/2024
 
 # Cross-tenant management in Defender for Cloud
 
-Cross-tenant management enables you to view and manage the security posture of multiple tenants in Defender for Cloud by using [Azure Lighthouse](../lighthouse/overview.md). Manage multiple tenants efficiently, from a single view, without having to sign in to each tenant's directory.
+Cross-tenant management enables you to view and manage the security posture of multiple tenants in Defender for Cloud by using [Azure Lighthouse](/azure/lighthouse/overview). Manage multiple tenants efficiently, from a single view, without having to sign in to each tenant's directory.
 
 - Service providers can manage the security posture of resources, for multiple customers, from within their own tenant.
 
@@ -17,7 +17,7 @@ Cross-tenant management enables you to view and manage the security posture of m
 
 ## Set up cross-tenant management
 
-[Azure delegated resource management](../lighthouse/concepts/architecture.md) is one of the key components of Azure Lighthouse. Set up cross-tenant management by delegating access to resources of managed tenants to your own tenant using these instructions from Azure Lighthouse's documentation: [Onboard a customer to Azure Lighthouse](../lighthouse/how-to/onboard-customer.md).
+[Azure delegated resource management](/azure/lighthouse/concepts/architecture) is one of the key components of Azure Lighthouse. Set up cross-tenant management by delegating access to resources of managed tenants to your own tenant using these instructions from Azure Lighthouse's documentation: [Onboard a customer to Azure Lighthouse](/azure/lighthouse/how-to/onboard-customer).
 
 ## How cross-tenant management works in Defender for Cloud
 
@@ -38,4 +38,4 @@ The views and actions are basically the same. Here are some examples:
 
 ## Next steps
 
-This article explains how cross-tenant management works in Defender for Cloud. To discover how Azure Lighthouse can simplify cross-tenant management within an enterprise that uses multiple Microsoft Entra tenants, see [Azure Lighthouse in enterprise scenarios](../lighthouse/concepts/enterprise.md).
+This article explains how cross-tenant management works in Defender for Cloud. To discover how Azure Lighthouse can simplify cross-tenant management within an enterprise that uses multiple Microsoft Entra tenants, see [Azure Lighthouse in enterprise scenarios](/azure/lighthouse/concepts/enterprise).

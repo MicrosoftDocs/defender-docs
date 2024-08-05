@@ -21,7 +21,7 @@ Security standards in Defender for Cloud come from these sources:
 
 - **Custom standards**: You can create custom security standards in Defender for Cloud, and then add built-in and custom recommendations to those custom standards as needed.
 
-Security standards in Defender for Cloud are based on [Azure Policy](../governance/policy/overview.md) [initiatives](../governance/policy/concepts/initiative-definition-structure.md) or on the Defender for Cloud native platform. Currently, Azure standards are based on Azure Policy. AWS and GCP standards are based on Defender for Cloud.
+Security standards in Defender for Cloud are based on [Azure Policy](/azure/governance/policy/overview) [initiatives](/azure/governance/policy/concepts/initiative-definition-structure) or on the Defender for Cloud native platform. Currently, Azure standards are based on Azure Policy. AWS and GCP standards are based on Defender for Cloud.
 
 ### Working with security standards
 

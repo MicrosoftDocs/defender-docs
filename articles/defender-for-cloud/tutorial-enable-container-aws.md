@@ -23,7 +23,7 @@ You can learn more about Defender for Container's pricing on the [pricing page](
 
 - Verify your Kubernetes nodes can access source repositories of your package manager. For information about the requirements, see [Network requirements](defender-for-containers-enable.md?tabs=aks-deploy-portal%2Ck8s-deploy-asc%2Ck8s-verify-asc%2Ck8s-remove-arc%2Caks-removeprofile-api&pivots=defender-for-container-eks&preserve-view=true#network-requirements).
 
-- Ensure the following [Azure Arc-enabled Kubernetes network requirements](../azure-arc/kubernetes/quickstart-connect-cluster.md) are validated.
+- Ensure the following [Azure Arc-enabled Kubernetes network requirements](/azure/azure-arc/kubernetes/quickstart-connect-cluster) are validated.
 
 ## Enable the Defender for Containers plan on your AWS account
 

@@ -28,7 +28,7 @@ sections:
       - question: |
           What happens when data collection is enabled?
         answer: |
-          When automatic provisioning is enabled, Defender for Cloud uses the Log Analytics agent on all supported Azure VMs and any new ones that are created. Automatic provisioning is recommended but manual agent installation is also available. [Learn how to install the Log Analytics agent extension](../azure-monitor/agents/log-analytics-agent.md#installation-options).
+          When automatic provisioning is enabled, Defender for Cloud uses the Log Analytics agent on all supported Azure VMs and any new ones that are created. Automatic provisioning is recommended but manual agent installation is also available. [Learn how to install the Log Analytics agent extension](/azure/azure-monitor/agents/log-analytics-agent#installation-options).
           
           The agent enables the process creation event 4688 and the *CommandLine* field inside event 4688. New processes created on the VM get recorded by the EventLog and monitored by Defender for Cloud's detection services. For more information on the details recorded for each new process, see [description fields in 4688](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4688#fields). The agent also collects the 4688 events created on the VM and stores them in search.
           
@@ -42,7 +42,7 @@ sections:
       - question: |
           What is the Log Analytics agent?
         answer: |
-          To monitor for security vulnerabilities and threats, Microsoft Defender for Cloud depends on the [Log Analytics Agent](../azure-monitor/agents/log-analytics-agent.md) - this agent is the same used by the Azure Monitor service.
+          To monitor for security vulnerabilities and threats, Microsoft Defender for Cloud depends on the [Log Analytics Agent](/azure/azure-monitor/agents/log-analytics-agent) - this agent is the same used by the Azure Monitor service.
           
           The agent is sometimes referred to as the Microsoft Monitoring Agent (or "MMA").
           
@@ -50,9 +50,9 @@ sections:
           
           Ensure your machines are running one of the supported operating systems for the agent as described on the following pages:
           
-          * [Log Analytics agent for Windows supported operating systems](../azure-monitor/agents/agents-overview.md#supported-operating-systems)
+          * [Log Analytics agent for Windows supported operating systems](/azure/azure-monitor/agents/agents-overview#supported-operating-systems)
           
-          * [Log Analytics agent for Linux supported operating systems](../azure-monitor/agents/agents-overview.md#supported-operating-systems)
+          * [Log Analytics agent for Linux supported operating systems](/azure/azure-monitor/agents/agents-overview#supported-operating-systems)
           
           Learn more about the [data collected by the Log Analytics agent](monitoring-components.md#log-analytics-agent).
 
@@ -64,7 +64,7 @@ sections:
           
           - The Log Analytics agent extension isn't currently installed on the VM.
           - The VM is in running state.
-          - The Windows or Linux [Azure Virtual Machine Agent](../virtual-machines/extensions/agent-windows.md) is installed.
+          - The Windows or Linux [Azure Virtual Machine Agent](/azure/virtual-machines/extensions/agent-windows) is installed.
           - The VM isn't used as an appliance such as web application firewall or next generation firewall.
 
 
@@ -160,7 +160,7 @@ sections:
       - question: |
           What are the recommended steps when opting out of automatic provisioning?
         answer: |
-          Manually install the Log Analytics agent extension so Defender for Cloud can collect security data from your VMs and provide recommendations and alerts. See [agent installation for Windows VM](../virtual-machines/extensions/oms-windows.md) or [agent installation for Linux VM](../virtual-machines/extensions/oms-linux.md) for guidance on installation.
+          Manually install the Log Analytics agent extension so Defender for Cloud can collect security data from your VMs and provide recommendations and alerts. See [agent installation for Windows VM](/azure/virtual-machines/extensions/oms-windows) or [agent installation for Linux VM](/azure/virtual-machines/extensions/oms-linux) for guidance on installation.
           
           You can connect the agent to any existing custom workspace or Defender for Cloud created workspace. If a custom workspace doesn't have the "Security" or "SecurityCenterFree" solutions enabled, you need to apply a solution. To apply, select the custom workspace and apply a pricing tier via the **Environment settings** > **Defender plans** page.
                     
@@ -193,7 +193,7 @@ sections:
           Will Defender for Cloud work using an OMS gateway?
         answer: |
           Yes. Microsoft Defender for Cloud uses Azure Monitor to collect data from Azure VMs and servers, using the Log Analytics agent.
-          To collect the data, each VM and server must connect to the Internet using HTTPS. The connection can be direct, using a proxy, or through the [OMS Gateway](../azure-monitor/agents/gateway.md).
+          To collect the data, each VM and server must connect to the Internet using HTTPS. The connection can be direct, using a proxy, or through the [OMS Gateway](/azure/azure-monitor/agents/gateway).
           
           
       - question: |

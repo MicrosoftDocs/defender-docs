@@ -15,11 +15,11 @@ This page will walk you through the steps to trigger an alert for one of your AP
 
 ## Prerequisites
 
-- [Create a new Azure API Management service instance in the Azure portal](../api-management/get-started-create-service-instance.md)
+- [Create a new Azure API Management service instance in the Azure portal](/azure/api-management/get-started-create-service-instance)
 
 - Check the [support and prerequisites for Defender for APIs deployment](defender-for-apis-prepare.md)
 
-- [Import and publish your first API](../api-management/import-and-publish.md)
+- [Import and publish your first API](/azure/api-management/import-and-publish)
 
 - [Onboard Defender for APIs](defender-for-apis-deploy.md)
 

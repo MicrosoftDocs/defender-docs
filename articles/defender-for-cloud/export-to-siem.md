@@ -29,7 +29,7 @@ Learn how to [integrate SIEM tools with Defender XDR](/microsoft-365/security/de
 
 ## Stream alerts to Microsoft Sentinel
 
-Defender for Cloud natively integrates with [Microsoft Sentinel](../sentinel/overview.md) Azure's cloud-native SIEM and SOAR solution.
+Defender for Cloud natively integrates with [Microsoft Sentinel](/azure/sentinel/overview) Azure's cloud-native SIEM and SOAR solution.
 
 ### Microsoft Sentinel's connectors for Defender for Cloud
 
@@ -37,22 +37,22 @@ Microsoft Sentinel includes built-in connectors for Microsoft Defender for Cloud
 
 You can:
 
-- [Stream alerts to Microsoft Sentinel at the subscription level](../sentinel/connect-azure-security-center.md).
+- [Stream alerts to Microsoft Sentinel at the subscription level](/azure/sentinel/connect-azure-security-center).
 - [Connect all subscriptions in your tenant to Microsoft Sentinel](https://techcommunity.microsoft.com/t5/azure-sentinel/azure-security-center-auto-connect-to-sentinel/ba-p/1387539).
 
 When you connect Defender for Cloud to Microsoft Sentinel, the status of Defender for Cloud alerts that get ingested into Microsoft Sentinel is synchronized between the two services. For example, when an alert is closed in Defender for Cloud, that alert is also shown as closed in Microsoft Sentinel. When you change the status of an alert in Defender for Cloud, the status of the alert in Microsoft Sentinel is also updated. However, the statuses of any Microsoft Sentinel **incidents** that contain the synchronized Microsoft Sentinel alert aren't updated.
 
 You can enable the **bi-directional alert synchronization** feature to automatically sync the status of the original Defender for Cloud alerts with Microsoft Sentinel incidents that contain the copies of the Defender for Cloud alerts. For example, when a Microsoft Sentinel incident that contains a Defender for Cloud alert is closed, Defender for Cloud automatically closes the corresponding original alert.
 
-Learn how to [connect alerts from Microsoft Defender for Cloud](../sentinel/connect-azure-security-center.md).
+Learn how to [connect alerts from Microsoft Defender for Cloud](/azure/sentinel/connect-azure-security-center).
 
 ### Configure ingestion of all audit logs into Microsoft Sentinel
 
 Another alternative for investigating Defender for Cloud alerts in Microsoft Sentinel is to stream your audit logs into Microsoft Sentinel:
 
-- [Connect Windows security events](../sentinel/connect-windows-security-events.md)
-- [Collect data from Linux-based sources using Syslog](../sentinel/connect-syslog.md)
-- [Connect data from Azure Activity log](../sentinel/data-connectors/azure-activity.md)
+- [Connect Windows security events](/azure/sentinel/connect-windows-security-events)
+- [Collect data from Linux-based sources using Syslog](/azure/sentinel/connect-syslog)
+- [Connect data from Azure Activity log](/azure/sentinel/data-connectors/azure-activity)
 
 > [!TIP]
 > Microsoft Sentinel is billed based on the volume of data that it ingests for analysis in Microsoft Sentinel and stores in the Azure Monitor Log Analytics workspace. Microsoft Sentinel offers a flexible and predictable pricing model. [Learn more at the Microsoft Sentinel pricing page](https://azure.microsoft.com/pricing/details/azure-sentinel/).
@@ -66,10 +66,10 @@ To export security alerts to Splunk and QRadar, you need to use Event Hubs and a
 Before you set up the Azure services for exporting alerts, make sure you have:
 
 - Azure subscription ([Create a free account](https://azure.microsoft.com/free/))
-- Azure resource group ([Create a resource group](../azure-resource-manager/management/manage-resource-groups-portal.md))
+- Azure resource group ([Create a resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal))
 - **Owner** role on the alerts scope (subscription, management group or tenant), or these specific permissions:
   - Write permissions for event hubs and the Event Hubs Policy
-  - Create permissions for [Microsoft Entra applications](../active-directory/develop/howto-create-service-principal-portal.md#permissions-required-for-registering-an-app), if you aren't using an existing Microsoft Entra application
+  - Create permissions for [Microsoft Entra applications](/azure/active-directory/develop/howto-create-service-principal-portal#permissions-required-for-registering-an-app), if you aren't using an existing Microsoft Entra application
   - Assign permissions for policies, if you're using the Azure Policy 'DeployIfNotExist'
   <!-- - To export to a Log Analytics workspace:
     - if it **has the SecurityCenterFree solution**, you'll need a minimum of read permissions for the workspace solution: `Microsoft.OperationsManagement/solutions/read`
@@ -95,7 +95,7 @@ The script performs all of the steps for you. When the script finishes, use the 
 
 1. Search for and select `Event Hubs`.
 
-1. [Create an Event Hubs namespace and event hub](../event-hubs/event-hubs-create.md).
+1. [Create an Event Hubs namespace and event hub](/azure/event-hubs/event-hubs-create).
 
 1. Define a policy for the event hub with `Send` permissions.
 
@@ -159,7 +159,7 @@ To stream alerts into **ArcSight**, **SumoLogic**, **Syslog servers**, **LogRhyt
     | LogRhythm | No| Instructions to set up LogRhythm to collect logs from an event hub are available [here](https://logrhythm.com/six-tips-for-securing-your-azure-cloud-environment/).|
     |Logz.io | Yes | For more information, see [Getting started with monitoring and logging using Logz.io for Java apps running on Azure](/azure/developer/java/fundamentals/java-get-started-with-logzio)|
 
-1. (Optional) Stream the raw logs to the event hub and connect to your preferred solution. Learn more in [Monitoring data available](../azure-monitor/essentials/stream-monitoring-data-event-hubs.md#monitoring-data-available).
+1. (Optional) Stream the raw logs to the event hub and connect to your preferred solution. Learn more in [Monitoring data available](/azure/azure-monitor/essentials/stream-monitoring-data-event-hubs#monitoring-data-available).
 
 To view the event schemas of the exported data types, visit the [Event Hubs event schemas](https://aka.ms/ASCAutomationSchemas).
 
@@ -182,6 +182,6 @@ You can use this API to stream alerts from your **entire tenant** (and data from
 
 This page explained how to ensure your Microsoft Defender for Cloud alert data is available in your SIEM, SOAR, or ITSM tool of choice. For related material, see:
 
-- [What is Microsoft Sentinel?](../sentinel/overview.md)
+- [What is Microsoft Sentinel?](/azure/sentinel/overview)
 - [Alert validation in Microsoft Defender for Cloud](alert-validation.md) - Verify your alerts are correctly configured
 - [Continuously export Defender for Cloud data](continuous-export.md)

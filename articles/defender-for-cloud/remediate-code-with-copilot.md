@@ -18,7 +18,7 @@ Microsoft Defender for Cloud's integration with Microsoft Copilot for Security a
 - [Connect your Azure DevOps environment to Defender for Cloud](quickstart-onboard-devops.md).
 - [Configure the Microsoft Security DevOps Azure DevOps extension](azure-devops-extension.yml).
 - [Review and ensure you meet the DevOps security support and prerequisites requirements](devops-support.md).
-- [Have access to Azure Copilot](../copilot/overview.md).
+- [Have access to Azure Copilot](/azure/copilot/overview).
 - [Have Security Compute Units assigned for Copilot for Security](/copilot/security/get-started-security-copilot).
 
 ## Remediate an Infrastructure as Code scanning finding

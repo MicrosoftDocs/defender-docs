@@ -21,7 +21,7 @@ In this article, we give an overview of AMA preferences for when you deploy Defe
 
 Azure Monitor Agent (AMA) is still available for deployment on your servers but isn't required to receive Defender for Servers features and capabilities. To ensure your servers are secured, receive all the security content of Defender for Servers, verify [Defender for Endpoint (MDE) integration](integration-defender-for-endpoint.md) and [agentless disk scanning](concept-agentless-data-collection.md) are enabled on your subscriptions. This ensures you’ll seamlessly be up to date and receive all the alternative deliverables once they're provided.
 
-AMA provisioning is available through the Microsoft Defender for Cloud platform only through  Defender for SQL servers on machines. Learn how to [deploy AMA on your servers using standard methods including PowerShell, CLI, and Resource Manager templates](../azure-monitor/vm/monitor-virtual-machine-agent.md#agent-deployment-options).
+AMA provisioning is available through the Microsoft Defender for Cloud platform only through  Defender for SQL servers on machines. Learn how to [deploy AMA on your servers using standard methods including PowerShell, CLI, and Resource Manager templates](/azure/azure-monitor/vm/monitor-virtual-machine-agent#agent-deployment-options).
 
 ## Availability
 
@@ -38,7 +38,7 @@ Before you deploy AMA with Defender for Cloud, you must have the following prere
     - [Onboard your AWS connector](quickstart-onboard-aws.md) and autoprovision Azure Arc.
     - [Onboard your GCP connector](quickstart-onboard-gcp.md) and autoprovision Azure Arc.
   - On-premises machines
-    - [Install Azure Arc](../azure-arc/servers/learn/quick-enable-hybrid-vm.md).
+    - [Install Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 - Make sure the Defender plans that you want the Azure Monitor Agent to support are enabled:
   - [Enable Defender for SQL servers on machines](defender-for-sql-usage.md)  
   - [Enable Defender plans on the subscriptions for your AWS VMs](quickstart-onboard-aws.md)
@@ -58,7 +58,7 @@ You can run both the Log Analytics and Azure Monitor Agents on the same machine,
 
 When you enable Defender for Servers Plan 2, Defender for Cloud decides which agent to provision. In most cases, the default is the Log Analytics agent.
 
-Learn more about [migrating to the Azure Monitor Agent](../azure-monitor/agents/azure-monitor-agent-migration.md).
+Learn more about [migrating to the Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-migration).
 
 ## Custom configurations
 

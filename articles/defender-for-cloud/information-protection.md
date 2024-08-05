@@ -8,7 +8,7 @@ ms.date: 05/30/2024
 ---
 # Leverage Purview Catalog to protect sensitive data (Preview)
 
-[Microsoft Purview Data Catalog](../purview/overview.md), Microsoft's data governance service, provides rich insights into the *sensitivity of your data*. With automated data discovery, sensitive data classification, and end-to-end data lineage, Microsoft Purview Data Catalog helps organizations manage and govern data in hybrid and multicloud environments.
+[Microsoft Purview Data Catalog](/azure/purview/overview), Microsoft's data governance service, provides rich insights into the *sensitivity of your data*. With automated data discovery, sensitive data classification, and end-to-end data lineage, Microsoft Purview Data Catalog helps organizations manage and govern data in hybrid and multicloud environments.
 
 Microsoft Defender for Cloud customers using Microsoft Purview Data Catalog can benefit from another important layer of metadata in alerts and recommendations: information about any potentially sensitive data involved. This knowledge helps solve the triage challenge and ensures security professionals can focus their attention on threats to sensitive data.
 
@@ -96,7 +96,7 @@ Some of the attack paths consider resources that contain sensitive data, such as
 The Cloud Map shows resources that “contains sensitive data,” based on Purview scan results. You can use resources with this label to explore the map.
 
 - To see the classification and labels of the resource, go to the [inventory](asset-inventory.md).
-- To see the list of classified files in the resource, go to the [Microsoft Purview compliance portal](../purview/overview.md).
+- To see the list of classified files in the resource, go to the [Microsoft Purview compliance portal](/azure/purview/overview).
 
 ## Learn more
 
@@ -108,7 +108,7 @@ You can check out the following blog:
 
 For related information, see:
 
-- [What is Microsoft Purview?](../purview/overview.md)
-- [Microsoft Purview's supported data sources and file types](../purview/sources-and-scans.md) and [supported data stores](../purview/purview-connector-overview.md)
-- [Microsoft Purview deployment best practices](../purview/deployment-best-practices.md)
-- [How to label to your data in Microsoft Purview](../purview/how-to-automatically-label-your-content.md)
+- [What is Microsoft Purview?](/azure/purview/overview)
+- [Microsoft Purview's supported data sources and file types](/azure/purview/sources-and-scans) and [supported data stores](/azure/purview/purview-connector-overview)
+- [Microsoft Purview deployment best practices](/azure/purview/deployment-best-practices)
+- [How to label to your data in Microsoft Purview](/azure/purview/how-to-automatically-label-your-content)

@@ -43,26 +43,26 @@ You can onboard the Azure Arc agent to your AWS or GCP servers automatically wit
 
 To plan for Azure Arc deployment:
 
-1. Review the Azure Arc [planning recommendations](../azure-arc/servers/plan-at-scale-deployment.md) and [deployment prerequisites](../azure-arc/servers/prerequisites.md).
+1. Review the Azure Arc [planning recommendations](/azure/azure-arc/servers/plan-at-scale-deployment) and [deployment prerequisites](/azure/azure-arc/servers/prerequisites).
 1. Open the [network ports for Azure Arc](support-matrix-defender-for-servers.md#network-requirements) in your firewall.
 1. Azure Arc installs the Connected Machine agent to connect to and manage machines that are hosted outside of Azure. Review the following information:
 
-    - The [agent components and data collected from machines](../azure-arc/servers/agent-overview.md#agent-resources).
-    - [Network and internet access](../azure-arc/servers/network-requirements.md) for the agent.
-    - [Connection options](../azure-arc/servers/deployment-options.md) for the agent.
+    - The [agent components and data collected from machines](/azure/azure-arc/servers/agent-overview#agent-resources).
+    - [Network and internet access](/azure/azure-arc/servers/network-requirements) for the agent.
+    - [Connection options](/azure/azure-arc/servers/deployment-options) for the agent.
 
 ## Log Analytics agent and Azure Monitor agent
 
 > [!NOTE]
 > As the Log Analytics agent is set to retire in August 2024 and as part of the Defender for Cloud [updated strategy](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation), all **Defender for Servers** features and capabilities will be provided either through [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), without dependency on either Log Analytics agent (MMA) or Azure Monitor agent (AMA). As a result, the shared autoprovisioning process for both agents will be adjusted accordingly For more information about this change, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
 
-Defender for Cloud uses the Log Analytics agent and the Azure Monitor agent to collect information from compute resources. Then, it sends the data to a Log Analytics workspace for more analysis. Review the [differences and recommendations for both agents](../azure-monitor/agents/agents-overview.md).
+Defender for Cloud uses the Log Analytics agent and the Azure Monitor agent to collect information from compute resources. Then, it sends the data to a Log Analytics workspace for more analysis. Review the [differences and recommendations for both agents](/azure/azure-monitor/agents/agents-overview).
 
 The following table describes the agents that are used in Defender for Servers:
 
 Feature | Log Analytics agent | Azure Monitor agent
 --- | --- | ---
-Foundational CSPM recommendations (free) that depend on the agent: [OS baseline recommendation](apply-security-baseline.md) (Azure VMs) | :::image type="icon" source="./media/icons/yes-icon.png" :::| :::image type="icon" source="./media/icons/yes-icon.png" :::<br/><br/> With the Azure Monitor agent, the Azure Policy [guest configuration extension](../virtual-machines/extensions/guest-configuration.md) is used.
+Foundational CSPM recommendations (free) that depend on the agent: [OS baseline recommendation](apply-security-baseline.md) (Azure VMs) | :::image type="icon" source="./media/icons/yes-icon.png" :::| :::image type="icon" source="./media/icons/yes-icon.png" :::<br/><br/> With the Azure Monitor agent, the Azure Policy [guest configuration extension](/azure/virtual-machines/extensions/guest-configuration) is used.
 Foundational CSPM: [System updates recommendations](recommendations-reference-compute.md) (Azure VMs) | :::image type="icon" source="./media/icons/yes-icon.png" ::: | Not yet available.
 Foundational CSPM: [Antimalware/endpoint protection recommendations](endpoint-protection-recommendations-technical.md) (Azure VMs) | :::image type="icon" source="./media/icons/yes-icon.png" ::: | :::image type="icon" source="./media/icons/yes-icon.png" :::
 Attack detection at the OS level and network layer, including fileless attack detection<br/><br/> Plan 1 relies on Defender for Endpoint capabilities for attack detection. | :::image type="icon" source="./media/icons/yes-icon.png" :::<br/><br/> Plan 2| :::image type="icon" source="./media/icons/yes-icon.png" :::<br/><br/> Plan 2
@@ -91,7 +91,7 @@ The extension performs audit and configuration operations inside VMs.
 - If you're using the Azure Monitor Agent, Defender for Cloud uses this extension to analyze operating system security baseline settings on Windows and Linux machines.
 - Although Azure Arc-enabled servers and the guest configuration extension are free, more costs might apply if you use guest configuration policies on Azure Arc servers outside the scope of Defender for Cloud.
 
-Learn more about the Azure Policy [guest configuration extension](../virtual-machines/extensions/guest-configuration.md).
+Learn more about the Azure Policy [guest configuration extension](/azure/virtual-machines/extensions/guest-configuration).
 
 ## Defender for Endpoint extensions
 
@@ -109,8 +109,8 @@ Most Defender for Endpoint services can be reached through `*.endpoint.security.
 Before you deploy Defender for Servers, verify operating system support for agents and extensions:
 
 - Verify that your [operating systems are supported](/microsoft-365/security/defender-endpoint/minimum-requirements) by Defender for Endpoint.
-- [Check requirements](../azure-arc/servers/prerequisites.md) for the Azure Arc Connect Machine agent.
-- Check operating system support for the [Log Analytics agent](../azure-monitor/agents/log-analytics-agent.md#supported-operating-systems) and [Azure Monitor agent](../azure-monitor/agents/agents-overview.md).
+- [Check requirements](/azure/azure-arc/servers/prerequisites) for the Azure Arc Connect Machine agent.
+- Check operating system support for the [Log Analytics agent](/azure/azure-monitor/agents/log-analytics-agent#supported-operating-systems) and [Azure Monitor agent](/azure/azure-monitor/agents/agents-overview).
 
 ## Review agent provisioning
 

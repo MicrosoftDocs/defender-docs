@@ -22,7 +22,7 @@ By adding parameters to your Azure OpenAI API calls, you enable your Azure AI to
 
 ## Add security parameters to your Azure OpenAI call
 
-To receive AI security alerts with more context, you can add any or all of the following sample `SecurityContext` parameters to your [Azure OpenAI API](../ai-services/openai/reference.md) calls.
+To receive AI security alerts with more context, you can add any or all of the following sample `SecurityContext` parameters to your [Azure OpenAI API](/azure/ai-services/openai/reference) calls.
 
 All of the fields in the `SecurityContext` are optional. We recommend passing the `EndUserId` and `SourceIP` fields at a minimum. The `EndUserId` and `SourceIP` fields provide Security Operations Center (SOC) analysts the ability to investigate security incidents that involve AI resources and generative AI applications. For examples, see the [SecurityContext schema](#securitycontext-schema).
 

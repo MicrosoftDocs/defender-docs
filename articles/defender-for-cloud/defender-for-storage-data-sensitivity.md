@@ -42,7 +42,7 @@ Upon enablement, the engine initiates an automatic scanning process across all s
 
 ## Enabling sensitive data threat detection
 
-Sensitive data threat detection is enabled by default when you enable Defender for Storage. You can [enable it or disable it](../storage/common/azure-defender-storage-configure.md) in the Azure portal or with other at-scale methods. This feature is included in the price of Defender for Storage.
+Sensitive data threat detection is enabled by default when you enable Defender for Storage. You can [enable it or disable it](/azure/storage/common/azure-defender-storage-configure) in the Azure portal or with other at-scale methods. This feature is included in the price of Defender for Storage.
 
 ## Using the sensitivity context in the security alerts
 

@@ -11,7 +11,7 @@ This article provides information about how you can manage the user data in Micr
 
 [!INCLUDE [gdpr-intro-sentence.md](~/reusable-content/ce-skilling/azure/includes/gdpr-intro-sentence.md)]
 
-A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Account Administrator can access customer data within the tool. To learn more about the Account Administrator role, see [Built-in roles for Azure role-based access control](../role-based-access-control/built-in-roles.md) to learn more about the Reader, Owner, and Contributor roles. See [Azure subscription administrators](../cost-management-billing/manage/add-change-subscription-administrator.md).
+A Defender for Cloud user assigned the role of Reader, Owner, Contributor, or Account Administrator can access customer data within the tool. To learn more about the Account Administrator role, see [Built-in roles for Azure role-based access control](/azure/role-based-access-control/built-in-roles) to learn more about the Reader, Owner, and Contributor roles. See [Azure subscription administrators](/azure/cost-management-billing/manage/add-change-subscription-administrator).
 
 ## Searching for and identifying personal data
 
@@ -94,7 +94,7 @@ A Defender for Cloud user can choose to opt out by deleting their [security cont
 
 ## Auditing and reporting
 
-Audit logs of security contact, just-in-time, and alert updates are maintained in [Azure Activity Logs](../azure-monitor/essentials/platform-logs-overview.md).
+Audit logs of security contact, just-in-time, and alert updates are maintained in [Azure Activity Logs](/azure/azure-monitor/essentials/platform-logs-overview).
 
 ## Respond to data subject export requests for Defender for APIs
 

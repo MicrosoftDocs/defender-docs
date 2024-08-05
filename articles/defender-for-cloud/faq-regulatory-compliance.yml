@@ -27,7 +27,7 @@ sections:
       - question: |
           What standards are supported in the compliance dashboard?
         answer: |
-          By default, the regulatory compliance dashboard shows you the Microsoft cloud security benchmark. The Microsoft cloud security benchmark is the Microsoft-authored guidelines for security, and compliance best practices based on common compliance frameworks. Learn more in the [Microsoft cloud security benchmark introduction](../security/benchmarks/introduction.md).
+          By default, the regulatory compliance dashboard shows you the Microsoft cloud security benchmark. The Microsoft cloud security benchmark is the Microsoft-authored guidelines for security, and compliance best practices based on common compliance frameworks. Learn more in the [Microsoft cloud security benchmark introduction](/azure/security/benchmarks/introduction).
 
           To track your compliance with any other standard, you'll need to explicitly add them to your dashboard.
           
@@ -61,7 +61,7 @@ sections:
         answer: |
           For each compliance standard in the dashboard, there's a list of the standard's controls. For the applicable controls, you can view the details of passing and failing assessments.
 
-          Some controls are grayed out. These controls don't have any Defender for Cloud assessments associated with them. Some might be procedure or process-related, and so can't be verified by Defender for Cloud. Some don't have any automated policies or assessments implemented yet, but will have in the future. And some controls might be the platform's responsibility as explained in [Shared responsibility in the cloud](../security/fundamentals/shared-responsibility.md).
+          Some controls are grayed out. These controls don't have any Defender for Cloud assessments associated with them. Some might be procedure or process-related, and so can't be verified by Defender for Cloud. Some don't have any automated policies or assessments implemented yet, but will have in the future. And some controls might be the platform's responsibility as explained in [Shared responsibility in the cloud](/azure/security/fundamentals/shared-responsibility).
 
 
       - question: |
@@ -118,7 +118,7 @@ sections:
         answer: |
           For MCSB recommendations that are included in the secure score, you can create exemptions for one or more resources directly in the portal as explained in [Exempting resources and recommendations from your secure score](exempt-resource.md).
 
-          For other recommendations, you can create an exemption directly in the recommendation itself, by following the instructions in [Azure Policy exemption structure](../governance/policy/concepts/exemption-structure.md).
+          For other recommendations, you can create an exemption directly in the recommendation itself, by following the instructions in [Azure Policy exemption structure](/azure/governance/policy/concepts/exemption-structure).
 
           
       - question: |

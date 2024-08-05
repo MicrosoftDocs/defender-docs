@@ -16,7 +16,7 @@ If you don't have an Azure subscription, create a [free account](https://azure.m
 
 For a list of the roles and permissions required to work with Microsoft Defender for Cloud's workflow automation feature, see [workflow automation](workflow-automation.yml).
 
-The examples in this quickstart assume you have an existing Logic App. To deploy the example, you pass in parameters that contain the logic app name and resource group. For information about deploying a logic app, see [Quickstart: Create and deploy a Consumption logic app workflow in multi-tenant Azure Logic Apps with Bicep](../logic-apps/quickstart-create-deploy-bicep.md) or [Quickstart: Create and deploy a Consumption logic app workflow in multi-tenant Azure Logic Apps with an ARM template](../logic-apps/quickstart-create-deploy-azure-resource-manager-template.md).
+The examples in this quickstart assume you have an existing Logic App. To deploy the example, you pass in parameters that contain the logic app name and resource group. For information about deploying a logic app, see [Quickstart: Create and deploy a Consumption logic app workflow in multi-tenant Azure Logic Apps with Bicep](/azure/logic-apps/quickstart-create-deploy-bicep) or [Quickstart: Create and deploy a Consumption logic app workflow in multi-tenant Azure Logic Apps with an ARM template](/azure/logic-apps/quickstart-create-deploy-azure-resource-manager-template).
 
 ## ARM template tutorial
 
@@ -59,7 +59,7 @@ For other Defender for Cloud quickstart templates, see these [community contribu
 
   :::image type="content" source="~/reusable-content/ce-skilling/azure/media/template-deployments/deploy-to-azure-button.svg" alt-text="Button to deploy the Resource Manager template to Azure." border="false" link="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fAzure%2fazure-quickstart-templates%2fmaster%2fquickstarts%2fmicrosoft.security%2fsecuritycenter-create-automation-for-alertnamecontains%2fazuredeploy.json":::
 
-  To find more information about this deployment option, see [Use a deployment button to deploy templates from GitHub repository](../azure-resource-manager/templates/deploy-to-azure-button.md).
+  To find more information about this deployment option, see [Use a deployment button to deploy templates from GitHub repository](/azure/azure-resource-manager/templates/deploy-to-azure-button).
 
 ### Review deployed resources
 
@@ -188,5 +188,5 @@ Remove-AzResourceGroup -Name exampleRG
 For step-by-step tutorials that guide you through the process of creating an ARM template or a Bicep file, see:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Create and deploy your first ARM template](../azure-resource-manager/templates/template-tutorial-create-first-template.md)
-> [Quickstart: Create Bicep files with Visual Studio Code](../azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code.md)
+> [Tutorial: Create and deploy your first ARM template](/azure/azure-resource-manager/templates/template-tutorial-create-first-template)
+> [Quickstart: Create Bicep files with Visual Studio Code](/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code)

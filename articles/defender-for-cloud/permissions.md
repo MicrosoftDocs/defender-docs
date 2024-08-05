@@ -7,7 +7,7 @@ ms.date: 07/11/2024
 
 # User roles and permissions
 
-Microsoft Defender for Cloud uses [Azure role-based access control (Azure RBAC)](../role-based-access-control/role-assignments-portal.yml) to provide [built-in roles](../role-based-access-control/built-in-roles.md). You can assign these roles to users, groups, and services in Azure to give users access to resources according to the access defined in the role.
+Microsoft Defender for Cloud uses [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/role-assignments-portal) to provide [built-in roles](/azure/role-based-access-control/built-in-roles). You can assign these roles to users, groups, and services in Azure to give users access to resources according to the access defined in the role.
 
 Defender for Cloud assesses the configuration of your resources to identify security issues and vulnerabilities. In Defender for Cloud, you only see information related to a resource when you're assigned one of these roles for the subscription or for the resource group the resource is in: Owner, Contributor, or Reader.
 
@@ -22,7 +22,7 @@ We recommend that you assign the least permissive role needed for users to compl
 
 The following table displays roles and allowed actions in Defender for Cloud.
 
-| **Action**   | [Security Reader](../role-based-access-control/built-in-roles.md#security-reader) /<br> [Reader](../role-based-access-control/built-in-roles.md#reader) | [Security Admin](../role-based-access-control/built-in-roles.md#security-admin) | [Contributor](../role-based-access-control/built-in-roles.md#contributor) / [Owner](../role-based-access-control/built-in-roles.md#owner) | [Contributor](../role-based-access-control/built-in-roles.md#contributor) | [Owner](../role-based-access-control/built-in-roles.md#owner) |
+| **Action**   | [Security Reader](/azure/role-based-access-control/built-in-roles#security-reader) /<br> [Reader](/azure/role-based-access-control/built-in-roles#reader) | [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin) | [Contributor](/azure/role-based-access-control/built-in-roles#contributor) / [Owner](/azure/role-based-access-control/built-in-roles#owner) | [Contributor](/azure/role-based-access-control/built-in-roles#contributor) | [Owner](/azure/role-based-access-control/built-in-roles#owner) |
 |:-|:-:|:-:|:-:|:-:|:-:|
 |  |  |  | **(Resource group level)** | **(Subscription level)** | **(Subscription level)** |
 | Add/assign initiatives (including regulatory compliance standards) | - | ✔ | - | - | ✔ |
@@ -41,7 +41,7 @@ The specific role required to deploy monitoring components depends on the extens
 
 ## Roles used to automatically provision agents and extensions
 
-To allow the Security Admin role to automatically provision agents and extensions used in Defender for Cloud plans, Defender for Cloud uses policy remediation in a similar way to [Azure Policy](../governance/policy/how-to/remediate-resources.md). To use remediation, Defender for Cloud needs to create service principals, also called managed identities that assign roles at the subscription level. For example, the service principals for the Defender for Containers plan are:
+To allow the Security Admin role to automatically provision agents and extensions used in Defender for Cloud plans, Defender for Cloud uses policy remediation in a similar way to [Azure Policy](/azure/governance/policy/how-to/remediate-resources). To use remediation, Defender for Cloud needs to create service principals, also called managed identities that assign roles at the subscription level. For example, the service principals for the Defender for Containers plan are:
 
 | Service Principal | Roles |
 |:-|:-|
