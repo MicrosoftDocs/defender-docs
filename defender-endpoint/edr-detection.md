@@ -15,7 +15,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 01/15/2024
+ms.date: 08/01/2024
 ---
 
 # EDR detection test for verifying device's onboarding and reporting services
@@ -54,11 +54,11 @@ powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionP
 
 ### Linux
 
-1. Download [script file](https://aka.ms/LinuxDIY) to an onboarded Linux server 
+1. Download [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server 
 
 
 ```bash
-curl -o ~/Downloads/MDE Linux DIY.zip https://aka.ms/LinuxDIY
+curl -o ~/Downloads/MDE Linux DIY.zip https://aka.ms/MDE-Linux-EDR-DIY
 ```
 
 1. Extract the zip 
