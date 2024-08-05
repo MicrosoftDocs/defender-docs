@@ -15,7 +15,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 08/01/2024
+ms.date: 08/04/2024
 ---
 
 # EDR detection test for verifying device's onboarding and reporting services
