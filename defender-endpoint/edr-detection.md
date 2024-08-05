@@ -64,7 +64,7 @@ curl -o ~/Downloads/MDE Linux DIY.zip https://aka.ms/MDE-Linux-EDR-DIY
 1. Extract the zip 
 
 ```bash
-unzip ~/Downloads/MDE Linux DIY.zip
+unzip ~/Downloads/MDE-Linux-EDR-DIY.zip
 ```
 
 1. And run the following command: 
@@ -77,6 +77,7 @@ After a few minutes, a detection should be raised in Microsoft Defender XDR.
 
 3. Look at the alert details, machine timeline, and perform your typical investigation steps.
 
+<!---
 ### macOS
 
 1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP MacOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract.
@@ -129,7 +130,11 @@ After a few minutes, a detection should be raised in Microsoft Defender XDR.
 
     Look at the alert details and the device timeline, and perform the regular investigation steps.
 
- Next steps that you can consider performing are to add AV exclusions as needed for application compatibility or performance:
+--->
+
+## Next steps
+
+If you're experiencing issues with application compatability or performance, you might consider adding exclusions. See the following articles for more information:
 
 - [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md)
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
@@ -137,4 +142,4 @@ After a few minutes, a detection should be raised in Microsoft Defender XDR.
 - [Create indicators of compromise (IoC)](manage-indicators.md)
 - [Create and manage custom detections rules](/defender-xdr/custom-detection-rules)
 
-Read through [Microsoft Defender for Endpoint Security Operations Guide](mde-sec-ops-guide.md).
+Also, see the [Microsoft Defender for Endpoint Security Operations Guide](mde-sec-ops-guide.md).
