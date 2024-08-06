@@ -114,7 +114,7 @@ sections:
 
           When a message expires from quarantine, you can't recover it.
 
-          By default, messages from blocked senders are hiddenfrom view in quarantine. Users need to select **Filter** and then deselect **Don't show blocked senders** to see all messages coming from blocked senders.
+          By default, messages from blocked senders are hidden from view in quarantine. Users need to select **Filter** and then deselect **Don't show blocked senders** to see all messages coming from blocked senders.
 
       - question: |
           A message was released from quarantine, but the original recipient can't find it. How can I determine what happened to the message?
