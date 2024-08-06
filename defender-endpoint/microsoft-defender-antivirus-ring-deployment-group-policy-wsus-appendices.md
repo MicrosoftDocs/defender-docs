@@ -15,7 +15,7 @@ ms.custom: intro-overview
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 07/21/2023
+ms.date: 07/25/2024
 ---
 
 # Appendices for Microsoft Defender Antivirus ring deployment using Group Policy and Windows Server Update Services (WSUS)

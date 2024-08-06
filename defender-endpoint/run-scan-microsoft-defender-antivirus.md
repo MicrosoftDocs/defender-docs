@@ -8,7 +8,7 @@ author: YongRhee-MSFT
 ms.author: yongrhee
 manager: deniseb
 ms.custom: nextgen
-ms.date: 04/30/2024
+ms.date: 07/25/2024
 ms.subservice: ngp
 ms.collection: 
 - m365-security
@@ -59,7 +59,7 @@ To check on the detections, see [Review the results of Microsoft Defender Antivi
 
 ### Use endpoint security to run a scan on Windows devices
 
-1. Go to the Microsoft Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) and sign-in.
+1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign-in.
 
 2. Choose **Endpoint security** \> **Antivirus**.
 
@@ -74,7 +74,7 @@ To check on the detections, see [Review the results of Microsoft Defender Antivi
 
 ### Use devices to run a scan on a single device
 
-1. Go to the Microsoft Intune admin center ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)) and sign-in.
+1. Go to the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)) and sign-in.
 
 2. From the sidebar, select **Devices** \> **All Devices** and choose the device you want to scan.
 
