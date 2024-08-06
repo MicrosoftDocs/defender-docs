@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/20/2024
+ms.date: 08/01/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
@@ -62,6 +62,10 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 This profile is needed for Big Sur (11) or later. It is ignored on older versions of macOS since they use the kernel extension.
 
 1. Under **Configuration profiles**, select **Create Profile**.
+
+   This profile is needed for Big Sur (11) or later. It's ignored on older versions of macOS, because they use the kernel extension.
+
+1. On the **Policies** tab, select **Create** > **New Policy**. 
 
 1. Under **Platform**, select **macOS**.
 
@@ -166,6 +170,7 @@ If you previously configured Microsoft Defender for Endpoint through Intune, we 
 > While adding the Microsoft Defender for Endpoint on macOS settings onto an existing FDA profile, enable **TCC** (Transparency, Consent & Control) through [Intune](mac-install-with-intune.md), a Mobile Device Management solution. Enabling TCC eliminates the risk of Defender for Endpoint losing **Full Disk Access** Authorization to function properly.
 
 Download [**fulldisk.mobileconfig**](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
+> Full Disk Access granted through Apple MDM Configuration Profile is not reflected in **System Settings** > **Privacy & Security** > **Full Disk Access**.
 
 ### Step 4: Background services
 
@@ -297,7 +302,7 @@ For more information, see [Deploy updates for Microsoft Defender for Endpoint on
 Download [AutoUpdate2.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/settings/microsoft_auto_update/com.microsoft.autoupdate2.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
 > [!NOTE]
-> The sample AutoUpdate2.mobileconfig from the GitHub repository has it set to Current Channel (Production).
+> The sample `AutoUpdate2.mobileconfig` from the GitHub repository has it set to Current Channel (Production).
 
 1. Under **Configuration profiles**, select **Create Profile**.
 
@@ -327,7 +332,7 @@ Download [AutoUpdate2.mobileconfig](https://github.com/microsoft/mdatp-xplat/blo
 
 ### Step 9: Microsoft Defender for Endpoint configuration settings
 
-In this step, we go over *Preferences* that enables you to configure anti-malware and EDR policies using Microsoft Defender XDR portal ([https://security.microsoft.com](https://security.microsoft.com)) **or** Microsoft Intune ([https://intune.microsoft.com](https://intune.microsoft.com)).
+In this step, we go over *Preferences* that enables you to configure anti-malware and EDR policies using Microsoft Intune ([https://intune.microsoft.com](https://intune.microsoft.com)).
 
 #### 9a. Set policies using Microsoft Defender portal
 
@@ -349,11 +354,13 @@ For more information about managing security settings, see:
 
 - [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](/mem/intune/protect/mde-security-integration?pivots=mdssc-ga)
 - [Manage security settings for Windows, macOS, and Linux natively in Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/manage-security-settings-for-windows-macos-and-linux-natively-in/ba-p/3870617)
+> [!NOTE]
+> If managed via Intune, it will not allow for the device to register via the Microsoft Defender for Endpoint Security Settings Management ([Microsoft Defender XDR portal (https://security.microsoft.com)](Microsoft Defender XDR portal (https://security.microsoft.com) or)).
 
 > [!IMPORTANT]
-> The policies set via Intune will take precedence over the Microsoft Defender for Endpoint Security Settings Management.
-
-#### Set policies using Microsoft Intune
+> Important
+> Only the policies set via Intune will take effect, and the Microsoft Defender for Endpoint Security Settings Management will not be used.
+#### **Set policies using Microsoft Intune**
 
 You can manage the security settings for Microsoft Defender for Endpoint on macOS under **Setting Preferences** in Microsoft Intune.
 
@@ -386,7 +393,7 @@ In the [Microsoft Defender portal](https://sip.security.microsoft.com/homepage?t
 1. Review the policy in **Review+Create** and select **Save**. 
 
 > [!TIP]
-> You can also configure network protection by appending the information from [**Network protection to help prevent macOS connections to bad sites**](network-protection-macos.md) to the .mobileconig from step 8.
+> You can also configure network protection by appending the information from [**Network protection to help prevent macOS connections to bad sites**](network-protection-macos.md) to the `.mobileconfig` from step 8.
 
 ### Step 11: Device Control for Microsoft Defender for Endpoint on macOS
 
@@ -475,7 +482,7 @@ You can visit **Apps** > **By platform** > **macOS** to see it on the list of al
 For more information, see [Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune](/mem/intune/apps/apps-advanced-threat-protection-macos).
 
 > [!IMPORTANT]
-> You should create and deploy the configuration profiles in the above order (step 1-13) for a successful system configuration.
+> You should create and deploy the configuration profiles in the order specified (steps 1-13) for a successful system configuration.
 
 ### Step 15: Download the onboarding package
 
