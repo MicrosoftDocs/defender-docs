@@ -17,7 +17,7 @@ To access the Microsoft Defender for IoT features in the Defender portal, such a
 
 This article shows you how to set up the new roles and permissions to access the site security and Defender for IoT specific features.
 
-To make general changes to RBAC roles and permissions that relate to all other areas of Defender for IoT, see [<!--set up/ adjust/ -->configure general RBAC permissions](permissions.md).
+To make general changes to RBAC roles and permissions that relate to all other areas of Defender for IoT, see [configure general RBAC permissions](permissions.md).
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 

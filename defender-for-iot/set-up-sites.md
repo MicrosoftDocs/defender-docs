@@ -74,7 +74,7 @@ Review that information for the site you want to create:
 1. Review the selected OT devices. If needed, select **Edit devices** to return to the **Associate devices** screen.
 1. Select **Complete**.
 
-    The site is now set up and appears in the **Site security** page. 
+    The site is now set up and appears in the **Site security** page.
 
     Regarding device data:
 
@@ -87,21 +87,21 @@ Review that information for the site you want to create:
 
 Use a device group to make sure that the correct users have access to the site. To create a device group:
 
-1. Select **Create device group**. 
+1. Select **Create device group**.
 
     The **Settings > Endpoints > Device groups** page opens.
 
 1. Select **Add device group** and type a device group name.
-1. Select the remediation level, type a description, and select **Next**. 
+1. Select the remediation level, type a description, and select **Next**.
 
     The **Devices** page opens.
 
 1. Type the value for the **Tag** condition in the format: *Site: \<Site name\>*. For example, *Site: San Francisco*.
-1. Select **Next**. 
+1. Select **Next**.
 
-    The **Preview devices** page opens with a list of devices in the group. 
+    The **Preview devices** page opens with a list of devices in the group.
 
-1. Select **Next**. 
+1. Select **Next**.
 
     The **User access** page opens.
 

@@ -22,7 +22,7 @@
         href: set-up-rbac.md   
       - name: Set up sites
         href: set-up-sites.md
-      - name: Set up permissions
+      - name: Configure permissions
         href: permissions.md 
     - name: Monitor site security
       items:
