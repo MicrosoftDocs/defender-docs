@@ -47,8 +47,8 @@ If you have extra devices that aren't covered by your ME5/E5 licenses, you can p
 
 1. In [Microsoft Defender portal](https://security.microsoft.com/), select **Settings** > **[Device Discovery](/microsoft-365/security/defender-endpoint/device-discovery)** > **Enterprise IoT**. <!-- does the device discovery need to have a link? LW-->
 
-> [!NOTE]
-> Ensure you have turned on Device Discovery in **Settings** > **Endpoints** > **Advanced Features**.
+    > [!NOTE]
+    > Ensure you have turned on Device Discovery in **Settings** > **Endpoints** > **Advanced Features**.
 
 1. Toggle the Enterprise IoT security option to **On**. For example:
 
@@ -104,18 +104,18 @@ Use the following procedure to calculate how many devices you need to monitor if
 
 1. Round your total to a multiple of 100 and compare it against the number of licenses you have.
 
-For example:
+    For example:
 
-- If in Microsoft Defender portal **Device inventory**, you have *1204* IoT devices.
-- Round down to *1200* devices.
-- You have 240 ME5 licenses, which cover **1200** devices
+    - If in Microsoft Defender portal **Device inventory**, you have *1204* IoT devices.
+    - Round down to *1200* devices.
+    - You have 240 ME5 licenses, which cover **1200** devices
 
-You need another **4** standalone devices to cover the gap.
+    You need another **4** standalone devices to cover the gap.
 
 For more information, see the [Defender for Endpoint Device discovery overview](/microsoft-365/security/defender-endpoint/device-discovery).
 
 > [!NOTE]
-> Devices listed on the **Computers & Mobile** tab, including those managed by Defender for Endpoint or otherwise, are not included in the number of [devices](/azure/defender-for-iot/organizations/billing#defender-for-iot-devices) monitored by Defender for IoT. <!-- change the link?? if we add this section to the previous page. i think we should -->
+> Devices listed on the **Computers & Mobile** tab, including those managed by Defender for Endpoint or otherwise, are not included in the number of [devices](enterprise-for-iot.md#identified-unique-devices) monitored by Defender for IoT.
 
 ### Purchase standalone licenses
 
