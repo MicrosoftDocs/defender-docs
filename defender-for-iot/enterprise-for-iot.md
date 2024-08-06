@@ -27,9 +27,15 @@ Microsoft Defender for IoT seamlessly integrates with Microsoft Defender portal 
 
 - Enterprise IoT: Enterprise IoT provides visibility and security for IoT devices in the corporate environment.
 Enterprise IoT network protection extends agentless features beyond operational environments, providing coverage for all IoT devices in your environment. For example, an enterprise IoT environment might include printers, cameras, and purpose-built, proprietary, devices.
+<!-- include the types of devices considered individual or not here as well. how much of this is specific for this article? -->
+Defender for IoT can discover all devices, of all types, across all environments. Devices are listed in the Defender for IoT **Device inventory** pages based on a unique IP and MAC address coupling.
 
-include the types of devices considered individual or not here as well. how much of this is specific for this article?
-https://learn.microsoft.com/azure/defender-for-iot/organizations/architecture#devices-monitored-by-defender-for-iot
+Defender for IoT identifies single and unique devices as follows:
+
+|Type  |Description  |
+|---------|---------|
+|**Identified as individual devices**     |    Devices identified as *individual* devices include:<br>**IT, OT, or IoT devices with one or more NICs**, including network infrastructure devices such as switches and routers<br><br>**Note**: A device with modules or backplane components, such as racks or slots, is counted as a single device, including all modules or backplane components.|
+|**Not identified as individual devices**     | The following items *aren't* considered as individual devices, and do not count against your license:<br><br>- **Public internet IP addresses** <br>- **Multi-cast groups**<br>- **Broadcast groups**<br>- **Inactive devices**<br><br> Network-monitored devices are marked as *inactive* when there's no network activity detected within a specified time:<br><br> - **OT networks**: No network activity detected for more than 60 days<br> - **Enterprise IoT networks**: No network activity detected for more than 30 days<br><br>**Note**: Endpoints already managed by Defender for Endpoint are not considered as separate devices by Defender for IoT.  |
 
 ## Alerts
 
@@ -60,7 +66,7 @@ For Enterprise IoT networks, use a trial license as an add-on to Microsoft Defen
 
 1. Customers with a Microsoft Defender for Endpoint P2 license only can use a trial standalone license for enterprise IoT monitoring.
 
-    Start your enterprise IoT trial using the [Microsoft Defender for IoT - EIoT Device License - add-on wizard](https://signup.microsoft.com/get-started/signup?products=b2f91841-252f-4765-94c3-75802d7c0ddb&ali=1&bac=1) or via the Microsoft 365 admin center.
+    Start your enterprise IoT trial using the [Microsoft Defender for IoT - EIoT Device License - add-on wizard](https://signup.microsoft.com/get-started/signup?products=b2f91841-252f-4765-94c3-75802d7c0ddb&ali=1&bac=1) or via the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog).
 
 A permanent Enterprise IoT monitoring license supports five devices per Microsoft 365 E5 (ME5) or E5 Security license, or is available as a standalone, per-device license for Microsoft Defender for Endpoint P2 customers.
 

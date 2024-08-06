@@ -62,7 +62,7 @@ You can also purchase a license using the Microsoft 365 admin center. Before pur
 
 ### Start a standalone trial license
 
-**To start an Enterprise IoT trial**:<!-- is this correct? should it be removed? -->
+**To start an Enterprise IoT trial**:<!-- is this correct?  -->
 
 1. Go to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog) > **Marketplace**.
 
