@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/29/2024
+ms.date: 08/05/2024
 ---
 
 # Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
@@ -85,7 +85,7 @@ To troubleshoot and mitigate performance issues, follow these steps:
 4. To find the applications that are triggering the most scans, you can use real-time statistics gathered by Defender for Endpoint on macOS. Run the following command to enable it:
 
    ```bash
-   mdatp config real-time-protection-statistics --value enabled.
+   mdatp config real-time-protection-statistics --value enabled
    ```
    
    > [!TIP]
