@@ -15,7 +15,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 08/04/2024
+ms.date: 08/06/2024
 ---
 
 # EDR detection test for verifying device's onboarding and reporting services
@@ -43,14 +43,13 @@ Run an EDR detection test to verify that the device is properly onboarded and re
 
 1. Open a Command Prompt window
 
-2. At the prompt, copy and run the command below. The Command Prompt window will close automatically.
+2. At the prompt, copy and run the following command. The Command Prompt window closes automatically.
 
+   ```powershell
+   powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference= 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-WDATP-test\\invoice.exe');Start-Process 'C:\\test-WDATP-test\\invoice.exe'
+   ```
 
-```powershell
-powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference= 'silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-WDATP-test\\invoice.exe');Start-Process 'C:\\test-WDATP-test\\invoice.exe'
-```
-
-3. If successful, the detection test will be marked as completed and a new alert will appear in few minutes.
+3. If successful, the detection test is marked as completed and a new alert appears within a few minutes.
 
 ### Linux
 
@@ -134,7 +133,7 @@ After a few minutes, a detection should be raised in Microsoft Defender XDR.
 
 ## Next steps
 
-If you're experiencing issues with application compatability or performance, you might consider adding exclusions. See the following articles for more information:
+If you're experiencing issues with application compatibility or performance, you might consider adding exclusions. See the following articles for more information:
 
 - [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md)
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
