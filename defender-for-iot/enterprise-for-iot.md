@@ -72,7 +72,7 @@ For more information, see [Turn off enterprise IoT security](enterprise-for-iot-
 
 If you haven't added a standalone license by the time your trial ends, your trial is automatically canceled, and you lose access to Enterprise IoT security features.
 
-For more information, see [purchase a standalone license](enterprise-for-iot-get-started#purchase-a-standalone-license).
+For more information, see [purchase a standalone license](enterprise-for-iot-get-started.md#purchase-a-standalone-license).
 
 ### Resolve billing issues associated with my Enterprise IoT plan
 
