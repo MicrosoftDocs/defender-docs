@@ -109,9 +109,10 @@ All our updates contain:
 ### What's new
 
 - False positive detections are no longer reported as ThreatNotFound on the Sense portal. 
-- Optimized Network Protection calls to the backend resulting from suspicious connection checks.
+- Optimized Network Protection calls to the backend that occur as a result of suspicious connection checks.
 - Fixed PerformanceModeStatus configuration key in the Defender CSP. 
-- Resolved File Evidence Location not always being captured in scenarios where Remote Location is inaccessible. 
+- Resolved File Evidence Location not always being captured in scenarios where Remote Location is inaccessible.
+- Resolved an issue where File Evidence Location was not always captured in scenarios where the Remote Location is inaccessible. 
 - New event log added (5016) to report Defender self-healed when a deadlock is detected during shutdown. 
 - Fixed a prioritization issue with full scans initiated from the portal that resulted in longer than expected full scan duration
 
