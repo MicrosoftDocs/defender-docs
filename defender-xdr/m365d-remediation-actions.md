@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: conceptual
 ms.custom: autoir
 ms.reviewer: evaldm, isco
-ms.date: 02/17/2024
+ms.date: 08/06/2024
 ---
 
 # Remediation actions in Microsoft Defender XDR
