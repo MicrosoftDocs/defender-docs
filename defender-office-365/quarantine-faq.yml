@@ -272,6 +272,6 @@ sections:
           Mutiple or duplicate quarantine notifications are sent if the SendFromAliasEnabled paraMETER value is True.
 
       - question: |
-          I can't see all recipientS of a quarantined message. What's going on?
+          I can't see all recipients of a quarantined message. What's going on?
         answer: |
           For quarantine messages with a large number of recipients, we don't show all of the recipients. However, admins can use **View message header** or **Preview message** to see all recipients.
