@@ -11,19 +11,20 @@ ms.topic: overview
 
 # Enterprise for IoT in the Defender portal
 
-The number of IoT devices continues to grow exponentially across enterprise networks in many office buildings. Enterprise IoT devices include devices such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices. For more information, see [Defender for IoT devices](/azure/defender-for-iot/organizations/billing#defender-for-iot-devices)<!-- do we have an equivalent to this?-->
+The number of IoT devices continues to grow exponentially across enterprise networks in many office buildings. Enterprise IoT devices include devices such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices.
 
-While the number of IoT devices continues to grow, they often lack the security safeguards that are common on managed endpoints like laptops and mobile phones. To bad actors, these unmanaged devices can be used as a point of entry for lateral movement or evasion, and too often, the use of such tactics leads to the exfiltration<!-- should this be changed to hacking / exposure/ stealing / leaking --> of sensitive information.
+While the number of IoT devices continues to grow, they often lack the security safeguards that are common on managed endpoints like laptops and mobile phones. To bad actors, these unmanaged devices can be used as a point of entry for lateral movement or evasion, and too often, the use of such tactics leads to the exfiltration<!-- should this be changed to hacking / exposure/ stealing / leaking LW --> of sensitive information.
 
-Extend Defender for IoT's agentless<!-- I presume this is different in Defender and does use agents --> security features to include enterprise IoT devices. Add the enterprise IoT security feature to your existing Microsoft Defender for Endpoint<!-- license? or remove to your?-->, and view related alerts, vulnerabilities, and recommendations for IoT devices in Microsoft Defender.
+Extend Defender for IoT's agentless security features to include enterprise IoT devices. Add the enterprise IoT security feature to your existing Microsoft Defender for Endpoint license, and view related alerts, vulnerabilities, and recommendations for IoT devices in Microsoft Defender.
 
 Microsoft Defender for IoT seamlessly integrates with Microsoft Defender portal and Defender for Endpoint to both discover IoT devices and provide security value, including purpose-built alerts, recommendations, and vulnerability data.
-<!-- I dont know if this image is still appropriate? -->
+
 :::image type="content" source="media/enterprise-for-iot/eiot-architecture.png" alt-text="The architecture showing the use of Enterprise IoT":::
 
 ## What is the difference between OT and Enterprise IoT?
 
 - Operational Technology (OT): OT network sensors use agentless, patented technology to discover, learn, and continuously monitor network devices for deep visibility into Operational Technology (OT) / Industrial Control System (ICS) risks. Sensors carry out data collection, analysis, and alerting on-site, making them ideal for locations with low bandwidth or high latency.
+
 - Enterprise IoT: Enterprise IoT provides visibility and security for IoT devices in the corporate environment.
 Enterprise IoT network protection extends agentless features beyond operational environments, providing coverage for all IoT devices in your environment. For example, an enterprise IoT environment might include printers, cameras, and purpose-built, proprietary, devices.
 
@@ -71,7 +72,7 @@ For more information, see [Turn off enterprise IoT security](enterprise-for-iot-
 
 If you haven't added a standalone license by the time your trial ends, your trial is automatically canceled, and you lose access to Enterprise IoT security features.
 
-For more information, see [Defender for IoT subscription billing](/azure/defender-for-iot/organizations/billing).<!-- ?-->
+For more information, see [purchase a standalone license](enterprise-for-iot-get-started#purchase-a-standalone-license).
 
 ### Resolve billing issues associated with my Enterprise IoT plan
 
