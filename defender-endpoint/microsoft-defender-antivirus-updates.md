@@ -113,7 +113,7 @@ All our updates contain:
 - Fixed the [PerformanceModeStatus](/windows/client-management/mdm/defender-csp#configurationperformancemodestatus) configuration key in Defender CSP so changing this value in the console takes effect on the endpoint. 
 - Resolved an issue where File Evidence Location was not always captured in scenarios where the Remote Location is inaccessible. 
 - New event log added (5016) to report Microsoft Defender Antivirus self-healed when a deadlock is detected during shutdown. 
-- Fixed a prioritization issue with full scans initiated from the portal that resulted in longer than expected full scan duration
+- Fixed a prioritization issue with full scans initiated from the portal that resulted in longer than expected full scan duration.
 
 ### June-2024 (Platform: 4.18.24060.7 | Engine: 1.1.24060.5)
 
