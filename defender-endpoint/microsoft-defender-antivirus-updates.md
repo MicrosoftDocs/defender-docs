@@ -108,7 +108,7 @@ All our updates contain:
 
 ### What's new
 
-- False positive detections are no longer reported as ThreatNotFound on the Microsoft 365 Defender portal. 
+- False positive detections are no longer reported as ThreatNotFound in the Microsoft 365 Defender portal. 
 - Optimized Network Protection calls to the backend that occur as a result of suspicious connection checks.
 - Fixed PerformanceModeStatus configuration key in the Defender CSP. 
 - Resolved File Evidence Location not always being captured in scenarios where Remote Location is inaccessible.
