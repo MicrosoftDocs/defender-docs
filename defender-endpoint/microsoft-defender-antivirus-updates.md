@@ -98,6 +98,23 @@ All our updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### July-2024 (Platform: 4.18.24070.x | Engine: 1.1.24070.xxxx)
+
+- Security intelligence update version: **1.415.1.x**
+- Release date: **August x, 2024** (Engine) / **August x, 2024** (Platform)
+- Platform: **4.18.24070.x**
+- Engine: **1.1.24070.x**
+- Support phase: **Security and Critical Updates**
+
+### What's new
+
+- False positive detections are no longer reported as ThreatNotFound on the Sense portal. 
+- Optimized Network Protection calls to the backend resulting from suspicious connection checks.
+- Fixed PerformanceModeStatus configuration key in the Defender CSP. 
+- Resolved File Evidence Location not always being captured in scenarios where Remote Location is inaccessible. 
+- New event log added (5016) to report Defender self-healed when a deadlock is detected during shutdown. 
+- Fixed a prioritization issue with full scans initiated from the portal that resulted in longer than expected full scan duration
+
 ### June-2024 (Platform: 4.18.24060.7 | Engine: 1.1.24060.5)
 
 - Security intelligence update version: **1.415.1.0**
