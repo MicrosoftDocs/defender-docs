@@ -22,6 +22,7 @@ ms.date: 09/18/2023
 
 # Threat analytics in Microsoft Defender XDR
 
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 **Applies to:**
@@ -60,6 +61,11 @@ The following table outlines the roles and permissions required to access Threat
 | **One of the following roles are required for Microsoft Defender XDR**  | **One of the following roles are required for Defender for Endpoint**  | **One of the following roles are required for Defender for Office 365** | **One of the following roles are required for Defender for Cloud Apps** | 
 |---------|---------|---------|---------|
 | Threat Analytics | Alerts and incidents data: <ul><li>View data- security operations</li></ul>Defender Vulnerability Management mitigations:<ul><li>View data - Threat and vulnerability management</li></ul> | Alerts and incidents data:<ul> <li>View-only manage alerts</li> <li>Manage alerts</li> <li>Organization configuration</li><li>Audit logs</li> <li>View-only audit logs</li><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> </ul> Prevented email attempts: <ul><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> | Not available for Defender for Cloud Apps or MDI users |
+
+>[!IMPORTANT]
+> You'll have visibility to all threat analytics reports even if you have just one of the products and its corresponding roles described in the previous table. However, you're required to have each product and roles to see that product’s specific incidents, assets, exposure, and recommended actions associated with the threat. 
+
+[Learn more about custom roles in role-based access control for Microsoft Defender XDR](custom-roles.md)
 
 ## View the threat analytics dashboard
 
@@ -194,27 +200,16 @@ You can set up email notifications that will send you updates on threat analytic
 
 ## Other report details and limitations
 
-> [!NOTE]
-> As part of the unified security experience, threat analytics is now available not just for Microsoft Defender for Endpoint, but also for Microsoft Defender for Office 365 license holders.
->
-> If you are not using the Microsoft 365 security portal (Microsoft Defender XDR), you can also see the report details (without the Microsoft Defender for Office data) in the Microsoft Defender Security Center portal (Microsoft Defender for Endpoint).
-
-To access threat analytics reports, you need certain roles and permissions. See [Custom roles in role-based access control for Microsoft Defender XDR](custom-roles.md) for details.
-
-- To view alerts, incidents, or impacted assets data, you need to have permissions to Microsoft Defender for Office or Microsoft Defender for Endpoint alerts data, or both.
-- To view prevented email attempts, you need to have permissions to Microsoft Defender for Office hunting data.
-- To view mitigations, you need to have permissions to Defender Vulnerability Management data in Microsoft Defender for Endpoint.
-
 When looking at the threat analytics data, remember the following factors:
 
-- Charts reflect only mitigations that are tracked. Check the report overview for more mitigations that aren't shown in the charts.
-- Mitigations don't guarantee complete resilience. The provided mitigations reflect the best possible actions needed to improve resiliency.
-- Devices are counted as "unavailable" if they haven't transmitted data to the service.
-- Antivirus-related statistics are based on Microsoft Defender Antivirus settings. Devices with third-party antivirus solutions can appear as "exposed."
+- The checklist in the **Recommended actions** tab only displays recommendations tracked in [Microsoft Secure Score](microsoft-secure-score.md). Check the **Analyst report** tab for more recommended actions that aren't tracked in Secure Score.
+- The recommended actions don’t guarantee complete resilience and only reflect the best possible actions needed to improve it.
+
 
 ## See also
 
 - [Proactively find threats with advanced hunting](advanced-hunting-overview.md)
 - [Understand the analyst report section](threat-analytics-analyst-reports.md)
 - [Assess and resolve security weaknesses and exposures](/windows/security/threat-protection/microsoft-defender-atp/next-gen-threat-and-vuln-mgt)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
