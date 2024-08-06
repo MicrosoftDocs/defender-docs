@@ -54,7 +54,7 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) You can now **release or move email messages from quarantine** back to the user's inbox directly from [Take actions in advanced hunting](advanced-hunting-take-action.md#take-various-actions-on-emails) and in [custom detections](custom-detection-rules.md#actions-on-emails). This allows security operators to manage false positives more efficiently and without losing context. 
 
-- (GA) You can now **[filter your results](advanced-hunting-query-results.md#filter-results)** in advanced hunting so you can narrow down your investigation on specific data you want to focus on.
+
 
 ## June 2024
 
@@ -63,7 +63,7 @@ You can also get product updates and important notifications through the [messag
 - (Preview) You can now filter your Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
 
 
-
+- (GA) You can now **[filter your results](advanced-hunting-query-results.md#filter-results)** in advanced hunting so you can narrow down your investigation on specific data you want to focus on.
 
 ## May 2024
 
