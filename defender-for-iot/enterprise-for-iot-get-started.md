@@ -48,6 +48,7 @@ If you have extra devices that aren't covered by your ME5/E5 licenses, you can p
 1. In [Microsoft Defender portal](https://security.microsoft.com/), select **Settings** > **[Device Discovery](/microsoft-365/security/defender-endpoint/device-discovery)** > **Enterprise IoT**. <!-- does the device discovery need to have a link? LW-->
 
     > [!NOTE]
+    >
     > Ensure you have turned on Device Discovery in **Settings** > **Endpoints** > **Advanced Features**.
 
 1. Toggle the Enterprise IoT security option to **On**. For example:
@@ -102,9 +103,7 @@ Use the following procedure to calculate how many devices you need to monitor if
 
     :::image type="content" source="media/enterprise-for-iot-get-started/device-inventory-iot.png" alt-text="Screenshot of network device and IoT devices in the device inventory in Microsoft Defender for Endpoint." lightbox="media/enterprise-for-iot-get-started/device-inventory-iot.png":::
 
-1. Round your total to a multiple of 100 and compare it against the number of licenses you have.
-
-    For example:
+1. Round your total to a multiple of 100 and compare it against the number of licenses you have. For example:
 
     - If in Microsoft Defender portal **Device inventory**, you have *1204* IoT devices.
     - Round down to *1200* devices.
