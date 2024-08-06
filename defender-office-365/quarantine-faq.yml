@@ -6,7 +6,7 @@ metadata:
   ms.author: chrisda
   author: chrisda
   manager: deniseb
-  ms.date: 11/3/2023
+  ms.date: 08/05/2024
   audience: ITPro
   ms.topic: faq
 
@@ -81,6 +81,9 @@ sections:
 
           If the quarantine policy requires users to request the release of messages or requires admins to release messages, an admin must [approve the release request](quarantine-admin-manage-messages-files.md#approve-or-deny-release-requests-from-users-for-quarantined-email) or [release the message](quarantine-admin-manage-messages-files.md#release-quarantined-email) before the message is available to users.
 
+          You can't customize quarantine policies in preset security policies.
+
+
       - question: |
           What messages can end users access in quarantine?
         answer: |
@@ -93,7 +96,7 @@ sections:
       - question: |
           How can I prevent users from accessing quarantined messages?
         answer: |
-          The default quarantine policy named AdminOnlyAccessPolicy prevents any user interaction with their quarantined messages. By default, this quarantine policy is used for messages that were quarantined as malware or high confidence phishing. In custom policies or the default policy for [protection features that support quarantining messages](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), admins can specify the AdminOnlyAccessPolicy as the quarantine policy to use.
+          The default quarantine policy named AdminOnlyAccessPolicy prevents any user interaction with their quarantined messages. By default, this quarantine policy is used for messages that were quarantined as malware or high confidence phishing. In custom policies or the default policy for [protection features that support quarantining messages](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features), admins can specify the AdminOnlyAccessPolicy as the quarantine policy to use. You can prevent end users from accessing `security.microsoft.com/quarantine`.
 
       - question: |
           How do I find out why a message was quarantined?
@@ -111,6 +114,8 @@ sections:
 
           When a message expires from quarantine, you can't recover it.
 
+          By default, messages from blocked senders are hidden from view in quarantine. Users need to select **Filter** and then deselect **Don't show blocked senders** to see all messages coming from blocked senders.
+
       - question: |
           A message was released from quarantine, but the original recipient can't find it. How can I determine what happened to the message?
         answer: |
@@ -120,6 +125,10 @@ sections:
             - The released message never arrives in the recipient's Inbox.
 
             Verify that you aren't using third party filtering before you open a support ticket about these issues.
+
+            If a third party filter isn't preventing the message from reaching the user's Inbox, then admins can use force release functionality to release message (if the first release didn't work).
+
+            Admin should try to release the message to an alternate mailbox if the forced release doesn't work after third party filtering vendor is turned off.
 
           - Inbox rules ([created by users in Outlook](https://support.microsoft.com/office/c24f5dea-9465-4df4-ad17-a50704d66c59) or by admins using the **\*-InboxRule** cmdlets in Exchange Online PowerShell) can move or delete messages from the Inbox.
 
@@ -132,12 +141,16 @@ sections:
 
           Verify that you aren't using third party filtering before you open a support ticket about this issue.
 
+          Admins can also use the audit log to see who released a message from Quarantine.
+
       - question: |
           Can I release or report more than one quarantined message at a time?
         answer: |
           In the Microsoft Defender portal, you can select and release up to 100 messages at a time.
 
           Admins can use the [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage) and [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage) cmdlets in Exchange Online PowerShell or standalone EOP PowerShell to find and release quarantined messages in bulk, and to report false positives in bulk.
+
+          Admins can also bulk delete messages.
 
       - question: |
           Are wildcards supported when searching for quarantined messages? Can I search for quarantined messages for a specific domain?
@@ -200,6 +213,8 @@ sections:
 
           Also, the protection policies in [preset security policies](preset-security-policies.md) are always applied _before_ custom protection policies. A user who's defined in the Standard or Strict preset security policy will never get a customized protection policy where the quarantine policy is customized to turn on quarantine notifications. For more information, see [Policy settings in preset security policies](preset-security-policies.md#policy-settings-in-preset-security-policies)
 
+          Quarantine notifications aren't enabled for messages quarantined by Exchange mail flow rules (transport rules) or data loss prevention (DLP). These messages have the AdminOnly quarantine policy. Quarantine notifications are also no generated for messages with DefaultFullAccess quarantine policy.
+
       - question: |
           How do I customize quarantine notifications to add a custom logo?
         answer: |
@@ -209,6 +224,8 @@ sections:
           What permissions are required for admins to download or release messages from quarantine?
         answer: |
           See the permissions entry [here](quarantine-admin-manage-messages-files.md#what-do-you-need-to-know-before-you-begin).
+
+          Admins can release quarantined messages to external recipients that aren't in their organization.
 
           > [!TIP]
           > The ability to manage quarantined messages using [Exchange Online permissions](/exchange/permissions-exo/permissions-exo) ended in February 2023 per MC447339.
@@ -224,3 +241,37 @@ sections:
           I can't preview a quarantined Microsoft Teams message. What's going on?
         answer: |
           If a user deletes the message from the Teams client, the message is gone, so Preview isn't available in quarantine for the deleted message.
+
+      - question: |
+          I can't see the **Block sender** button or the **Approve release** button. What's going on?
+        answer: |
+          The **Block sender** action is disabled by default for quarantined messages. However, admins can create a custom quarantine policy to include the **Block sender** action for end users.
+
+          The **Approve release** button has been retired and replaced by the **Release** button.
+
+      - question: |
+          **Filter** and **Search** aren't working. What's going on?
+        answer: |
+          The **Search** box applies to loaded quarantine messages only.
+
+          To filter by Internet Message ID, you need to ensure that angle brackets `<>` are always inluded (even in PowerShell).
+
+      - question: |
+          Released quarantine messages are still showing up in Quarantine. What's going on?
+        answer: |
+          Released messages remain visible in quarantine unless they're explicitly deleted from quarantine.
+
+      - question: |
+          Release request alerts aren't being generated. What's going on?
+        answer: |
+          Audit logging needs to be enabled (it's on by default).
+
+      - question: |
+          Duplicate or multiple quarantine notifications are sent to the same user.
+        answer: |
+          Mutiple or duplicate quarantine notifications are sent if the SendFromAliasEnabled paraMETER value is True.
+
+      - question: |
+          I can't see all recipients of a quarantined message. What's going on?
+        answer: |
+          For quarantine messages with a large number of recipients, we don't show all of the recipients. However, admins can use **View message header** or **Preview message** to see all recipients.
