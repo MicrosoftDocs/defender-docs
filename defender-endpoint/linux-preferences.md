@@ -1,12 +1,12 @@
 ---
 title: Set preferences for Microsoft Defender for Endpoint on Linux
-ms.reviewer: gopkr
+ms.reviewer: gopkr, ardeshmukh
 description: Describes how to configure Microsoft Defender for Endpoint on Linux in enterprises.
 ms.service: defender-endpoint
 ms.author: dansimp
 author: dansimp
 ms.localizationpriority: medium
-ms.date: 07/23/2024
+ms.date: 07/31/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -79,7 +79,7 @@ Specifies the enforcement preference of antivirus engine. There are three values
 > Available in Defender for Endpoint version `101.10.72` or later. Default is changed from `real_time` to `passive` in Defender for Endpoint version `101.23062.0001` or later.
 > It is recommended to also use [scheduled scans](/defender-endpoint/linux-schedule-scan-mde) as per requirement.
 
-#### Enable/disable behavior-monitoring 
+#### Enable/disable behavior monitoring 
 
 Determines whether behavior monitoring and blocking capability is enabled on the device or not. 
 
@@ -136,9 +136,6 @@ Specifies the degree of parallelism for on-demand scans. This corresponds to the
 
 #### Exclusion merge policy
 
-> [!NOTE]
-> ExclusionSetting - you can use
-
 Specifies the merge policy for exclusions. It can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). Administrator-defined (admin_only) are exclusions that are configured by Defender for Endpoint policy. This setting can be used to restrict local users from defining their own exclusions.
 
 |Description|JSON Value|Defender Portal Value|
@@ -149,6 +146,7 @@ Specifies the merge policy for exclusions. It can be a combination of administra
 
 > [!NOTE]
 > Available in Defender for Endpoint version `100.83.73` or later.
+> Can also configure exclusions under [exclusionSettings](#exclusion-setting-preferences)
 
 #### Scan exclusions
 
@@ -215,7 +213,7 @@ Specifies a process for which all file activity is excluded from scanning. The p
 |**Possible values**|any string|any string|
 |**Comments**|Applicable only if *$type* is *excludedFileName*|Accessed in *Configure instance* popup|
 
-#### Muting Non Exec mounts 
+#### Muting non-exec mounts 
  
 Specifies the behavior of RTP on mount point marked as noexec. There are two values for setting are:
 
@@ -234,7 +232,7 @@ Specifies the behavior of RTP on mount point marked as noexec. There are two val
 > [!NOTE] 
 > Available in Defender for Endpoint version `101.85.27` or later.
 
-#### Unmonitor Filesystems
+#### Unmonitor filesystems
 
 Configure filesystems to be unmonitored/excluded from real-time protection (RTP). The filesystems configured are validated against Microsoft Defender's list of permitted filesystems. Filesystems can only be monitored after successful validation. These configured unmonitored filesystems are still scanned by Quick, Full, and custom scans in Microsoft Defender Antivirus.
 
@@ -266,7 +264,7 @@ To remove both NFS and Fuse from unmonitored list of filesystems, do the followi
 ```
 
 > [!NOTE]
-> Here;s the default list of monitored filesystems for RTP: `btrfs`, `ecryptfs`, `ext2`, `ext3`, `ext4`, `fuseblk`, `jfs`, `overlay`, `ramfs`, `reiserfs`, `tmpfs`, `vfat`, `xfs`.
+> Here's the default list of monitored filesystems for RTP: `btrfs`, `ecryptfs`, `ext2`, `ext3`, `ext4`, `fuseblk`, `jfs`, `overlay`, `ramfs`, `reiserfs`, `tmpfs`, `vfat`, `xfs`.
 >
 > If any monitored filesystem needs to be added to the list of unmonitored filesystems,then it needs to be evaluated and enabled by Microsoft via cloud config. Following which customers can update managed_mdatp.json to unmonitor that filesystem.
 
@@ -380,10 +378,12 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 > [!NOTE] 
 > Available in Defender for Endpoint version `101.04.76` or later.
 
-### Exclusion Setting preferences [**PREVIEW**]
+### Exclusion setting preferences
+
+**Exlusion setting preferences are currently in preview**.
 
 > [!NOTE] 
-> Available in Defender for Endpoint version `101.23092.0012` or later.
+> Available in Defender for Endpoint version `101.23092.0012` or later till Insider Slow Ring.
 
 The *exclusionSettings* section of the configuration profile is used to configure various exclusions for Microsoft Defender for Endpoint for Linux.
 
@@ -444,6 +444,7 @@ If nothing is specified in for an exclusion under *exclusionSettings* in managed
 
 > [!NOTE]
 > Previously applied exclusions using (`mdatp_managed.json`) or by CLI will remain unaffected. The scope for those exclusions will be (`epp`) since they were added under (`antivirusEngine`).
+
 ##### Path to excluded content
 
 Used to exclude content from the scan by full file path.
@@ -457,7 +458,10 @@ Used to exclude content from the scan by full file path.
 
 ##### Path type (file / directory)
 
-Indicates if the *path* property refers to a file or directory.
+Indicates if the *path* property refers to a file or directory. 
+
+> [!NOTE]
+> File path must already exist if adding file exclusion with global scope.
 
 |Description|JSON Value|
 |---|---|
