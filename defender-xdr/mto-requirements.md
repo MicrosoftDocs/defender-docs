@@ -1,6 +1,6 @@
 ---
 title: Set up multitenant management in Microsoft Defender XDR
-description: Learn what steps you need to take to get started with multitenant management in Microsoft Defender XDR.
+description: Learn what steps you need to take to get started with multitenant management for Microsoft Defender XDR and the Microsoft unified security operations platform.
 ms.service: defender-xdr
 ms.author: siosulli
 author: siosulli
@@ -11,40 +11,39 @@ ms.collection:
   - m365-security
   - highpri
   - tier1
+  - usx-security
 ms.topic: conceptual
-ms.date: 09/01/2023
+ms.date: 08/07/20
+appliesto:
+  - Microsoft Defender XDR
+  - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Set up multi-tenant management in Microsoft Defender XDR
 
-**Applies to:**
-
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-
-This article describes the steps you need to take to start using multi-tenant management in Microsoft Defender XDR.
-
->[!Note]
->In multi-tenant management, interactions between the multi-tenant user and the managed tenants could involve accessing data and managing configurations. The ability to undertake these actions is determined by the permissions a managed tenant has granted the multi-tenant user.
+This article describes the steps you need to take to start using multi-tenant management for Microsoft Defender XDR and the Microsoft unified security operations platform.
 
 1. [Review the requirements](#review-the-requirements)
 2. [Verify your tenant access](#verify-your-tenant-access)
 3. [Set up multi-tenant management in Microsoft Defender XDR](#set-up-multi-tenant-management)
 
 >[!Note]
-> [Data privacy](data-privacy.md), [role-based access control (RBAC)](m365d-permissions.md) and [Licensing](prerequisites.md#licensing-requirements) are respected by multi-tenant management in Microsoft Defender XDR.
+>- In multi-tenant management, interactions between the multi-tenant user and the managed tenants could involve accessing data and managing configurations. The ability to undertake these actions is determined by the permissions a managed tenant has granted the multi-tenant user.
+>- [Data privacy](data-privacy.md), [role-based access control (RBAC)](m365d-permissions.md) and [Licensing](prerequisites.md#licensing-requirements) are respected by multi-tenant management in Microsoft Defender XDR.
 
 ## Review the requirements
 
-The following table lists the basic requirements you need to use multi-tenant management in Microsoft Defender XDR.
+The following table lists the basic requirements you need to use multi-tenant management for Microsoft Defender XDR and the unified security operations platform.
 
 | Requirement | Description |
 |:---|:---|
 | Microsoft Defender XDR prerequisites | Verify you meet the [Microsoft Defender XDR prerequisites](prerequisites.md)|
 | Multi-tenant access | To view and manage the data you have access to in multi-tenant management, you need to ensure you have the necessary access. For each tenant you want to view and manage, you need to have either: <br/> <br/> - [Granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction) <br/> - [Microsoft Entra B2B authentication](/azure/active-directory/external-identities/what-is-b2b) <br/> <br/> To learn more about how to synchronize multiple B2B users across tenants, see [Configure cross-tenant synchronization](/azure/active-directory/multi-tenant-organizations/cross-tenant-synchronization-configure).|
 | Permissions | Users must be assigned the correct roles and permissions at the individual tenant level, in order to view and manage the associated data in multi-tenant management. To learn more, see: <br/><br/> - [Manage access to Microsoft Defender XDR with Microsoft Entra global roles](./m365d-permissions.md) <br/> - [Custom roles in role-based access control for Microsoft Defender XDR](./custom-roles.md)<br/><br/> To learn how to grant permissions for multiple users at scale, see [What is entitlement management](/azure/active-directory/governance/entitlement-management-overview).|
+| SIEM data (Optional) |To include SIEM data with the XDR data, one or more tenants must include a Microsoft Sentinel workspace onboarded to unified security operations platform. For more information, see [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md).<br/><br/>Only one Microsoft Sentinel workspace per tenant is currently supported in the unfied security operations platform. So for multi-tenant management, you'll have SIEM data from one Microsoft Sentinel workspace per tenant.|
 
->[!Note]
-> Setting up [multi-factor authentication trust](/azure/active-directory/external-identities/authentication-conditional-access) is highly recommended for each tenant to avoid missing data in multi-tenant management Microsoft Defender XDR.
+We recommend that you set up [multi-factor authentication trust](/azure/active-directory/external-identities/authentication-conditional-access) for each tenant to avoid missing data in multi-tenant management for Microsoft Defender XDR and the unified security operations platform.
+
 
 ## Verify your tenant access
 

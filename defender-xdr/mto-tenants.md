@@ -12,15 +12,17 @@ ms.collection:
   - m365-security
   - highpri
   - tier1
+  - usx-security
 ms.topic: conceptual
-ms.date: 03/20/2024
+ms.date: 08/07/2024
+appliesto:
+  - Microsoft Defender XDR
+  - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# Manage tenants
+# Manage tenants in Microsoft Defender XDR
 
-**Applies to:**
-
-- [Microsoft Defender XDR](microsoft-365-defender.md)
+Add or remove tenants from the settings page in multi-tenant management from the Microsoft Defender portal.
 
 ## View the tenants page
 

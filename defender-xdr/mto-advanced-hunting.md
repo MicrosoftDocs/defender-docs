@@ -12,17 +12,17 @@ ms.collection:
 - m365-security
 - highpri
 - tier1
+- usx-security
 ms.topic: conceptual
-ms.date: 07/18/2024
+ms.date: 08/07/2024
+appliesto:
+  - Microsoft Defender XDR
+  - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# Advanced hunting in multi-tenant management in Microsoft Defender XDR
+# Advanced hunting in multi-tenant management for Microsoft Defender XDR
 
-**Applies to:**
-
-- [Microsoft Defender XDR](microsoft-365-defender.md)
-
-Advanced hunting in multi-tenant management in Microsoft Defender XDR allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants at the same time.
+Advanced hunting in multi-tenant management for Microsoft Defender XDR allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants at the same time. If you have tenants with a Microsoft Sentinel workspace onboarded to the unified security operations platform, search for SIEM data together with XDR data across multiple tenants.
 
 ## Run cross-tenant queries
 
@@ -73,3 +73,9 @@ When you select a single detection rule, a flyout panel opens with the detection
    :::image type="content" source="/defender/media/defender/custom-detection-rule-details.png" alt-text="Screenshot of the Microsoft Defender XDR custom detection rule details page" lightbox="/defender/media/defender/custom-detection-rule-details.png":::
 
 Select **Open detection rules** to view this rule in a new tab for the specific tenant in the [Microsoft Defender portal](https://security.microsoft.com). To learn more, see [Custom detection rules](./custom-detection-rules.md).
+
+## Related content
+
+- [Set up multi-tenant management in Microsoft Defender XDR](mto-requirements.md)
+- [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
+- [View and manage incidents and alerts](mto-incidents-alerts.md)
