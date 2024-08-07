@@ -52,7 +52,7 @@ The PowerShell script that enables Microsoft Defender for SQL on Machines on a g
 | Parameter name | Required | Description |
 |--|--|--|
 | SubscriptionId: | Required | The Azure subscription ID that you want to enable Defender for SQL servers on machines for. |
-| RegisterSqlVmAgnet | Required | A flag indicating whether to register the SQL VM Agent in bulk. <br><br> Learn more about [registering multiple SQL VMs in Azure with the SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-vms-bulk?view=azuresql). |
+| RegisterSqlVmAgnet | Required | A flag indicating whether to register the SQL VM Agent in bulk. <br><br> Learn more about [registering multiple SQL VMs in Azure with the SQL IaaS Agent extension](/azure/azure-sql/virtual-machines/windows/sql-agent-extension-manually-register-vms-bulk). |
 | WorkspaceResourceId | Optional | The resource ID of the Log Analytics workspace, if you want to use a custom workspace instead of the default one. |
 | DataCollectionRuleResourceId | Optional | The resource ID of the data collection rule, if you want to use a custom DCR instead of the default one. |
 | UserAssignedIdentityResourceId | Optional | The resource ID of the user assigned identity, if you want to use a custom user assigned identity instead of the default one. |
