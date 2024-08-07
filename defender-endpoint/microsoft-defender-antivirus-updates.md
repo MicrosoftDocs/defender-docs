@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 07/25/2024
+ms.date: 08/07/2024
 audience: ITPro
 ms.topic: reference
 author: siosulli
@@ -98,17 +98,17 @@ All our updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
-### July-2024 (Platform: 4.18.24070.x | Engine: 1.1.24070.xxxx)
+### July-2024 (Platform: 4.18.24070.5 | Engine: 1.1.24070.3)
 
-- Security intelligence update version: **1.415.1.x**
-- Release date: **August x, 2024** (Engine) / **August x, 2024** (Platform)
-- Platform: **4.18.24070.x**
-- Engine: **1.1.24070.x**
+- Security intelligence update version: **1.417.14.0**
+- Release date: **August 7, 2024** (Engine and Platform)
+- Platform: **4.18.24070.5**
+- Engine: **1.1.24070.3**
 - Support phase: **Security and Critical Updates**
 
 ### What's new
 
-- False positive detections are no longer reported as ThreatNotFound in the Microsoft 365 Defender portal. 
+- False positive detections are no longer reported as `ThreatNotFound` in the Microsoft Defender portal. 
 - Optimized Network Protection calls to the backend that occur as a result of suspicious connection checks.
 - Fixed the [PerformanceModeStatus](/windows/client-management/mdm/defender-csp#configurationperformancemodestatus) configuration key in Defender CSP so changing this value in the console takes effect on the endpoint. 
 - Resolved an issue where File Evidence Location was not always captured in scenarios where the Remote Location is inaccessible. 
