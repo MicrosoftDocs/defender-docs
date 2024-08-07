@@ -30,8 +30,8 @@
         href: critical-asset-management.md
       - name: Review and classify critical assets
         href: classify-critical-assets.md
-      - name: Classification criticality levels
-        href: criticality-levels.md
+      - name: Predefined classifications
+        href: predefined-classification-rules-and-levels.md
     - name: Work with attack paths
       items:      
         - name: Overview
