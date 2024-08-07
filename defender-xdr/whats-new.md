@@ -63,7 +63,7 @@ You can also get product updates and important notifications through the [messag
 - (Preview) You can now filter your Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
 
 
-
+- (GA) You can now **[filter your results](advanced-hunting-query-results.md#filter-results)** in advanced hunting so you can narrow down your investigation on specific data you want to focus on.
 
 ## May 2024
 
