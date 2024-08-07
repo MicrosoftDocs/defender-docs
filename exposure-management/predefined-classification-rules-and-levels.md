@@ -17,7 +17,13 @@ You can [review and classify critical assets](classify-critical-assets.md), turn
 
 To suggest new critical asset classifications, use the **Feedback** button.
 
-#### Device
+Current asset types are:
+
+* [Device](#device)
+* [Identity](#identity)
+* [Cloud resource](#cloud-resource)
+
+##### Device
 
 | Classification                                               | Asset type                 | Default criticality level | Description                                                  | Why is this critical?                                        |
 | ------------------------------------------------------------ | -------------------------- | ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -34,7 +40,7 @@ To suggest new critical asset classifications, use the **Feedback** button.
 | VMware ESXi                                                  | Device                     | NA                        | The VMware ESXi hypervisor is essential for running and managing virtual machines within your infrastructure. As a bare-metal hypervisor, it's providing the foundation for creating and managing virtual resources. | A compromised ESXi server can result in compromising all the virtual machines it holds. Attackers often target ESXi servers to disrupt the organization's operations by modifying, encrypting, or deleting virtual machines. |
 | VMware vCenter                                               | Device                     | NA                        | The VMware vCenter Server is crucial for managing virtual environments. It provides centralized management of virtual machines and ESXi hosts. If it fails, it could disrupt the administration and control of your virtual infrastructure, including provisioning, migration, load balancing of virtual machines, and datacenter automation. However, as there are often redundant vCenter Servers and High Availability configurations, the immediate halt of all operations might not occur. Its failure could still cause significant inconvenience and potential performance issues | A compromised vCenter server can result in the entire virtual infrastructure of the organization being compromised. Attackers often target vCenter servers to disrupt the organization's operations by modifying, encrypting, or deleting virtual machines, and in some cases, even their backups. |
 
-#### Identity
+##### Identity
 
 | Classification                                               | Asset type                 | Default criticality level | Description                                                  | Why is this critical?                                        |
 | ------------------------------------------------------------ | -------------------------- | ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -66,7 +72,7 @@ To suggest new critical asset classifications, use the **Feedback** button.
 | SharePoint Administrator                                     | Identity                   | Medium                    | Users in this role can manage all aspects of the SharePoint service. | A compromised user in this role poses a severe risk, potentially allowing unauthorized access to SharePoint Admin Center, SharePoint sites, and sensitive data, deleting, or creating files, and more. |
 | Groups Administrator                                         | Identity                   | Medium                    | Users in this role can create/manage groups and group settings like naming and expiration policies, and view group activity and audit reports. | A compromised user in this role poses a severe risk, potentially allowing unauthorized access to all Security and Microsoft 365 groups, except role-assignable groups, thus inheriting all access scopes the groups have, and more. |
 
-#### Cloud resource
+##### Cloud resource
 
 | Classification                                               | Asset type                 | Default criticality level | Description                                                  | Why is this critical?                                        |
 | ------------------------------------------------------------ | -------------------------- | ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
