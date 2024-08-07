@@ -46,20 +46,19 @@ Microsoft Defender for Endpoint seamlessly integrates with existing security sol
 
 ### Security information and analytics
 
-Logo|Partner name|Description
-:---|---|---
-![Logo for AttackIQ.](media/attackiq-logo.png)|[AttackIQ Platform](https://go.microsoft.com/fwlink/?linkid=2103502)|AttackIQ Platform validates Defender for Endpoint is configured properly by launching continuous attacks safely on production assets
-![Logo for Microsoft Sentinel.](media/sentinel-logo.png)|[AzureSentinel](https://go.microsoft.com/fwlink/?linkid=2135705)|Stream alerts from Microsoft Defender for Endpoint into Microsoft Sentinel
-![Logo for Cymulate.](media/cymulate-logo.png)|[Cymulate](https://go.microsoft.com/fwlink/?linkid=2135574)|Correlate Defender for Endpoint findings with simulated attacks to validate accurate detection and effective response actions
-![Logo for Elastic security.](media/elastic-security-logo.png)|[Elastic Security](https://go.microsoft.com/fwlink/?linkid=2139303)|Elastic Security is a free and open solution for preventing, detecting, and responding to threats
-![Logo for IBM QRadar.](media/ibm-qradar-logo.png)|[IBM QRadar](https://go.microsoft.com/fwlink/?linkid=2113903)|Configure IBM QRadar to collect detections from Defender for Endpoint
-![Logo for Micro Focus ArcSight.](media/arcsight-logo.png)|[Micro Focus ArcSight](https://go.microsoft.com/fwlink/?linkid=2113548)|Use Micro Focus ArcSight to pull Defender for Endpoint detections
-![Logo for RSA NetWitness.](media/rsa-netwitness-logo.png)|[RSA NetWitness](https://go.microsoft.com/fwlink/?linkid=2118566)|Stream Defender for Endpoint Alerts to RSA NetWitness using Microsoft Graph Security API
-![Logo for SafeBreach.](media/safebreach-logo.png)|[SafeBreach](https://go.microsoft.com/fwlink/?linkid=2114114)|Gain visibility into Defender for Endpoint security events that are automatically correlated with SafeBreach simulations
-![Logo for Skybox Vulnerability Control.](media/skybox-logo.png)|[Skybox Vulnerability Control](https://go.microsoft.com/fwlink/?linkid=2127467)|Skybox Vulnerability Control cuts through the noise of vulnerability management, correlating business, network, and threat context to uncover your riskiest vulnerabilities
-![Logo for Splunk.](media/splunk-logo.png)|[Splunk](https://go.microsoft.com/fwlink/?linkid=2129805)|The Defender for Endpoint Add-on allows Splunk users to ingest all of the alerts and supporting information to their Splunk
-![Logo for XM Cyber.](media/xmcyber-logo.png)|[XM Cyber](/microsoft-365/compliance/insider-risk-management-configure)|Prioritize your response to an alert based on risk factors and high value assets
-
+|Logo|Partner name|Description |
+|---|---|---|
+|![Logo for AttackIQ.](media/attackiq-logo.png)|[AttackIQ Platform](https://go.microsoft.com/fwlink/?linkid=2103502)|AttackIQ Platform validates Defender for Endpoint is configured properly by launching continuous attacks safely on production assets |
+|![Logo for Microsoft Sentinel.](media/sentinel-logo.png)|[AzureSentinel](https://go.microsoft.com/fwlink/?linkid=2135705)|Stream alerts from Microsoft Defender for Endpoint into Microsoft Sentinel |
+|![Logo for Cymulate.](media/cymulate-logo.png)|[Cymulate](https://go.microsoft.com/fwlink/?linkid=2135574)|Correlate Defender for Endpoint findings with simulated attacks to validate accurate detection and effective response actions |
+|![Logo for Elastic security.](media/elastic-security-logo.png)|[Elastic Security](https://go.microsoft.com/fwlink/?linkid=2139303)|Elastic Security is a free and open solution for preventing, detecting, and responding to threats |
+|![Logo for IBM QRadar.](media/ibm-qradar-logo.png)|[IBM QRadar](https://go.microsoft.com/fwlink/?linkid=2113903)|Configure IBM QRadar to collect detections from Defender for Endpoint |
+|![Logo for Micro Focus ArcSight.](media/arcsight-logo.png)|[Micro Focus ArcSight](https://go.microsoft.com/fwlink/?linkid=2113548)|Use Micro Focus ArcSight to pull Defender for Endpoint detections |
+|![Logo for RSA NetWitness.](media/rsa-netwitness-logo.png)|[RSA NetWitness](https://go.microsoft.com/fwlink/?linkid=2118566)|Stream Defender for Endpoint Alerts to RSA NetWitness using Microsoft Graph Security API |
+|![Logo for SafeBreach.](media/safebreach-logo.png)|[SafeBreach](https://go.microsoft.com/fwlink/?linkid=2114114)|Gain visibility into Defender for Endpoint security events that are automatically correlated with SafeBreach simulations |
+|![Logo for Skybox Vulnerability Control.](media/skybox-logo.png)|[Skybox Vulnerability Control](https://go.microsoft.com/fwlink/?linkid=2127467)|Skybox Vulnerability Control cuts through the noise of vulnerability management, correlating business, network, and threat context to uncover your riskiest vulnerabilities |
+|![Logo for Splunk.](media/splunk-logo.png)|[Splunk](https://go.microsoft.com/fwlink/?linkid=2129805)|The Defender for Endpoint Add-on allows Splunk users to ingest all of the alerts and supporting information to their Splunk |
+|![Logo for XM Cyber.](media/xmcyber-logo.png)|[XM Cyber](/microsoft-365/compliance/insider-risk-management-configure)|Prioritize your response to an alert based on risk factors and high value assets|
 
 ### Orchestration and automation
 
