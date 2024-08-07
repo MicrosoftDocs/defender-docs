@@ -24,17 +24,17 @@ The name of each built-in policy definition links to the policy definition in th
 
 To learn about the built-in initiatives that are monitored by Defender for Cloud, see the following table:
 
-[!INCLUDE [azure-policy-reference-policyset-security-center](../../includes/policy/reference/bycat/policysets-security-center.md)]
+[!INCLUDE [azure-policy-reference-policyset-security-center](~/azure-docs-pr/includes/policy/reference/bycat/policysets-security-center.md)]
 
 ## Defender for Cloud's default initiative (Microsoft cloud security benchmark)
 
 To learn about the built-in policies that are monitored by Defender for Cloud, see the following table:
 
-[!INCLUDE [azure-policy-reference-init-asc](../../includes/policy/reference/custom/init-asc.md)]
+[!INCLUDE [azure-policy-reference-init-asc](~/azure-docs-pr/includes/policy/reference/custom/init-asc.md)]
 
 ## Microsoft Defender for Cloud category
 
-[!INCLUDE [azure-policy-reference-category-securitycenter](../../includes/policy/reference/bycat/policies-security-center.md)]
+[!INCLUDE [azure-policy-reference-category-securitycenter](~/azure-docs-pr/includes/policy/reference/bycat/policies-security-center.md)]
 
 ## Next steps
 
