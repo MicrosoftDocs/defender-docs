@@ -2,6 +2,7 @@
 title: Network device discovery and vulnerability management
 description: Security recommendations and vulnerability detection are now available for operating systems of switches, routers, WLAN controllers, and firewalls.
 ms.service: defender-endpoint
+ms.subservice: onboard
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
