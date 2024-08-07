@@ -909,7 +909,7 @@ image.
 > Make sure to verify the login page while using the payload in a simulation. You can also 
 change the login page while selecting the payload in a simulation.
 > It is advisable to conduct a test simulation to validate the end-to-end flow before 
-circulating the final payload to broader audiences. Make sure that the payload contains the div id= QR code within the payload code, before using it in a simulation. 
+circulating the final payload to broader audiences. Make sure that the payload contains the div id= QR code within the payload code, before using it in a simulation. You may also find that Outlook may block certain messages with QR codes, since it is configured by default to block picture downloads. In such cases, <a href="https://support.microsoft.com/en-us/office/block-or-unblock-automatic-picture-downloads-in-email-messages-15e08854-6808-49b1-9a0a-50b81f2d617a" target="_blank">instructions</a> to block or unblock automatic picture downloads in email messages may help. 
 
 ### Reporting for QR code simulations
 Given that QR codes is just another vector for the phishing URL, the user events around 
