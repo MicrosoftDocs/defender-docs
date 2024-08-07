@@ -128,7 +128,7 @@ sections:
 
             Verify that you aren't using third party filtering before you open a support ticket about these issues.
 
-            If a third party filter isn't preventing the message from reaching the user's Inbox and the first release attempt didn't work, admins can try using the [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage) cmdlet in [Exchange Online PowerShell](/exchange/connect-to-exchange-online-powershell) with the _Force_ switch to release the message.
+            If a third party filter isn't preventing the message from reaching the user's Inbox and the first release attempt didn't work, admins can try using the [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage) cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) with the _Force_ switch to release the message.
 
             If **Release-QuarantineMessage** with the _Force_ switch doesn't work, admins should try releasing the message to an alternate mailbox after filtering by the third party service is turned off.
 
@@ -281,7 +281,7 @@ sections:
       - question: |
           Duplicate or multiple quarantine notifications are sent to the same user.
         answer: |
-          Multiple or duplicate quarantine notifications are sent to the same user if the [SendFromAliasEnabled parameter](/powershell/module/exchange/set-organizationconfig#-sendfromaliasenabled) on the **Set-OrganizationConfig** cmdlet in [Exchange Online PowerShell](/exchange/connect-to-exchange-online-powershell) is set to the value $true.
+          Multiple or duplicate quarantine notifications are sent to the same user if the [SendFromAliasEnabled parameter](/powershell/module/exchange/set-organizationconfig#-sendfromaliasenabled) on the **Set-OrganizationConfig** cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) is set to the value $true.
 
       - question: |
           I can't see all recipients of a quarantined message. What's going on?
