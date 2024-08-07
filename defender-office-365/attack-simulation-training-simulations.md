@@ -853,3 +853,88 @@ To include a completed session in reporting after it has been excluded, do the f
 2. Select the simulation by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/m365-cc-sc-include-icon.png" border="false"::: **Exclude**.
 
 After you included the excluded simulation, the **Status** value changes to **Completed**. Toggle **Show excluded simulations** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the simulation.
+
+## QR code simulations and training
+> [!IMPORTANT]
+> Currently, QR code simulations in Attack simulation training is in Preview.
+
+The current flow of running simulations, which involves selection of users, selection of payload, scheduling training, and notifications is also applicable for QR code-based simulations. Within simulations, you can select payloads with QR codes and use them for simulation. 
+
+Currently configuring payloads with QR codes and use of these payloads in a simulation is applicable to the Email platform and for the below attack techniques.   
+
+- Credential harvest
+- Link to malware
+- drive by URL
+- oAuth consent grant
+
+Given that QR codes are another vector for the phishing URL, the user events around read/delete/compromises/clicks remain the same. E.g. If a user is navigating to the URL after scanning the QR code, then it is tracked as a click event. The existing mechanisms for tracking compromise, deletes, report events remain the same. 
+
+### QR code payloads
+
+#### Global payloads
+Within the payload library, you can see multiple payloads across 5 languages, addressing various real-world scenarios involving QR code attacks. These payloads can be found in the Content Library- Global Payloads, name of each beginning with QR code payloads (for example, QR code payloads: Prize Winner Notification). You can locate these by typing "QR" in the search bar.
+
+:::image type="content" source="media/attack-simulation-training-global-payloads-QR-code.png" alt-text="Image showing the QR code how to guide within the content library" lightbox="media/attack-simulation-training-global-payloads-QR-code.png":::
+
+> [!TIP]
+> Before utilizing these payloads in your simulations, make sure to examine different fields and contents of the payload for your requirements.
+
+#### Tenant payloads
+You can create a custom payload by duplicating the existing global payloads, or creating a payload from scratch.   Within the payload editing experience, you can insert QR code using Dynamic Tags(Insert QR code) or formatting controls (QR code icon).  You have the options to select the size and position of the QR code. 
+
+:::image type="content" source="media/attack-simulation-training-insert-QR-code-1.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-1.png":::
+
+:::image type="content" source="media/attack-simulation-training-insert-QR-code-2.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-2.png":::
+
+:::image type="content" source="media/attack-simulation-training-insert-QR-code-3.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-3.png":::
+
+:::image type="content" source="media/attack-simulation-training-insert-QR-code-4.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-4.png":::
+
+:::image type="content" source="media/attack-simulation-training-insert-QR-code-5.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-5.png":::
+
+The QR code that is generated will map to the phishing URL that is selected by you while configuring the payload in the payload wizard.   When this payload is used in simulation, the service will replace the QR code with a dynamically generated QR code, to track click and compromise metrics. The size, position, and shape of the QR code would match the configuration of the QR set by you in the payload. 
+
+Note that if you are using Send a Test, you will still see the QR code, but it will point to the 
+{phishingURL} that you have selected. The dynamic QR is generated when the payload is used in an 
+actual simulation
+
+The QR code is inserted as an image. If you look at the code section, you will see that the image has 
+been inserted into a base64 format. The QR code inserted using the wizard (and which will be 
+used for dynamic URL update) is marked with div id= QRcode as seen in the first line of below 
+image.
+
+:::image type="content" source="media/attack-simulation-training-insert-QR-code-6-html-div.png" alt-text="Image showing the base 64 format of the QR image and the variable" lightbox="media/attack-simulation-training-insert-QR-code-6-html-div.png":::
+
+> [!TIP]
+> Make sure to verify the login page while using the payload in a simulation. You can also 
+change the login page while selecting the payload in a simulation.
+> It is advisable to conduct a test simulation to validate the end-to-end flow before 
+circulating the final payload to broader audiences. Make sure that the payload contains the div id= QR code within the payload code, before using it in a simulation. 
+
+### Reporting for QR code simulations
+Given that QR codes is just another vector for the phishing URL, the user events around 
+read/delete/compromises/clicks remain the same. E.g. If a user is navigating to the URL after 
+scanning the QR code, then it is tracked as a click event. The existing mechanisms for tracking 
+compromise, deletes, report events remain the same. 
+Within the simulation report CSV (exported from individual simulations), you will be able to view the 
+field Click Source (EmailLinkClicked_ClickSource) as a column, with values as ‘PhishingURL’ (click 
+came from a phishing link in email content) or ‘QR code’ (click came after scanning a QR code). Other 
+metrics like Reads, Compromises, Deletes, Reported Message continue to be tracked without any 
+additional updates.
+
+:::image type="content" source="media/attack-simulation-training-reporting-QR-code.png" alt-text="Image showing the reporting experience for running QR code simulations" lightbox="media/attack-simulation-training-reporting-QR-code.png":::
+
+### QR code trainings
+
+We have provided two mechanisms for learning about QR based attacks: How to guides, and new training modules from our content partner. 
+How to Guides is designed to provide a lightweight guidance to end users on how to report a phishing message directly through email. By delivering these guides directly to the end user's inbox, we can ensure that the end user has the information they need to confidently report any suspicious emails. 
+
+You can filter for the How to Guide through either:
+1.	Filtering by Technique = How to Guide
+2.	Search by name = " Teaching Guide: How to recognize and report QR phishing messages 
+
+:::image type="content" source="media/attack-simulation-training-how-to-guide-QR-code.png" alt-text="Image showing the QR code how to guide within the content library" lightbox="media/attack-simulation-training-how-to-guide-QR-code.png":::
+
+Within the trainings list (Content Library- Training Modules), we have added a new training called Malicious Digital QR Codes which is a short learning to educate on what to do when a user receives a QR code in the email. You can assign the training as part of a simulation or use training campaigns to assign the training to your users. 
+
+:::image type="content" source="media/attack-simulation-training-out-of-the-box-training-QR-code.png" alt-text="Image showing the QR code trainings available within Content library" lightbox="media/attack-simulation-training-out-of-the-box-training-QR-code":::
