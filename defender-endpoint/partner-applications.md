@@ -14,7 +14,7 @@ ms.collection:
 - tier3
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/04/2024
+ms.date: 08/07/2024
 ---
 
 # Partner applications in Microsoft Defender for Endpoint
@@ -47,7 +47,7 @@ Microsoft Defender for Endpoint seamlessly integrates with existing security sol
 ### Security information and analytics
 
 Logo|Partner name|Description
-:---|:---|:---
+:---|---|---
 ![Logo for AttackIQ.](media/attackiq-logo.png)|[AttackIQ Platform](https://go.microsoft.com/fwlink/?linkid=2103502)|AttackIQ Platform validates Defender for Endpoint is configured properly by launching continuous attacks safely on production assets
 ![Logo for Microsoft Sentinel.](media/sentinel-logo.png)|[AzureSentinel](https://go.microsoft.com/fwlink/?linkid=2135705)|Stream alerts from Microsoft Defender for Endpoint into Microsoft Sentinel
 ![Logo for Cymulate.](media/cymulate-logo.png)|[Cymulate](https://go.microsoft.com/fwlink/?linkid=2135574)|Correlate Defender for Endpoint findings with simulated attacks to validate accurate detection and effective response actions
@@ -64,7 +64,7 @@ Logo|Partner name|Description
 ### Orchestration and automation
 
 Logo|Partner name|Description
-:---|:---|:---
+:---|---|---
 ![Logo for Fortinet.](media/fortinet-logo.jpg)|[Fortinet FortiSOAR](https://www.fortinet.com/products/fortisoar)|Fortinet FortiSOAR is a holistic Security Orchestration, Automation and Response (SOAR) workbench, designed for SOC teams to efficiently respond to the ever-increasing influx of alerts, repetitive manual processes, and shortage of resources. It pulls together all of organization's tools, helps unify operations and reduces alert fatigue, context switching, and the mean time to respond to incidents. 
 ![Logo for Delta Risk ActiveEye.](media/delta-risk-activeeye-logo.png)|[Delta Risk ActiveEye](https://go.microsoft.com/fwlink/?linkid=2127468)|Delta Risk, a leading provider of SOC-as-a-Service and security services, integrate Defender for Endpoint with its cloud-native SOAR platform, ActiveEye.
 ![Logo for Demisto, a Palo Alto Networks Company.](media/demisto-logo.png)|[Demisto, a Palo Alto Networks Company](https://go.microsoft.com/fwlink/?linkid=2108414)|Demisto integrates with Defender for Endpoint to enable security teams to orchestrate and automate endpoint security monitoring, enrichment, and response
@@ -76,7 +76,7 @@ Logo|Partner name|Description
 ### Threat intelligence
 
 Logo|Partner name|Description
-:---|:---|:---
+:---|---|---
 ![Logo for MISP Malware Information Sharing Platform)logo.](media/misp-logo.png)|[MISP (Malware Information Sharing Platform)](https://go.microsoft.com/fwlink/?linkid=2127543)|Integrate threat indicators from the Open Source Threat Intelligence Sharing Platform into your Defender for Endpoint environment
 ![Logo for Palo Alto Networks.](media/paloalto-logo.png)|[Palo Alto Networks](https://go.microsoft.com/fwlink/?linkid=2099582)|Enrich your endpoint protection by extending Autofocus and other threat feeds to Defender for Endpoint using MineMeld
 ![Logo for ThreatConnect.](media/threatconnect-logo.png)|[ThreatConnect](https://go.microsoft.com/fwlink/?linkid=2114115)|Alert and/or block on custom threat intelligence from ThreatConnect Playbooks using Defender for Endpoint indicators
@@ -84,7 +84,7 @@ Logo|Partner name|Description
 ### Network security
 
 Logo|Partner name|Description
-:---|:---|:---
+:---|---|---
 ![Logo for Aruba ClearPass Policy Manager.](media/aruba-logo.png)|[Aruba ClearPass Policy Manager](https://go.microsoft.com/fwlink/?linkid=2127544)|Ensure Defender for Endpoint is installed and updated on each endpoint before allowing access to the network
 ![Logo for Blue Hexagon for Network.](media/bluehexagon-logo.png)|[Blue Hexagon for Network](/training/modules/explore-malware-threat-protection/)|Blue Hexagon has built the industry's first real-time deep learning platform for network threat protection
 ![Logo for CyberMDX.](media/cybermdx-logo.png)|[CyberMDX](https://go.microsoft.com/fwlink/?linkid=2135620)|Cyber MDX integrates comprehensive healthcare assets visibility, threat prevention and repose into your Defender for Endpoint environment
@@ -93,20 +93,21 @@ Logo|Partner name|Description
 
 ### Cross platform
 
-Logo|Partner name|Description
-:---|:---|:---
-![Logo for Bitdefender.](media/bitdefender-logo.png)|[Bitdefender](https://go.microsoft.com/fwlink/?linkid=860032)|Bitdefender GravityZone is a layered next generation endpoint protection platform offering comprehensive protection against the full spectrum of sophisticated cyber threats
-![Logo for Better Mobile.](media/bettermobile-logo.png)|[Better Mobile](https://go.microsoft.com/fwlink/?linkid=2086214)|AI-based MTD solution to stop mobile threats & phishing. Private internet browsing to protect user privacy
-![Logo for Corrata.](media/corrata-new.png)|[Corrata](https://go.microsoft.com/fwlink/?linkid=2081148)|Mobile solution - Protect your mobile devices with granular visibility and control from Corrata
-![Logo for Lookout.](media/lookout-logo.png)|[Lookout](https://go.microsoft.com/fwlink/?linkid=866935)|Get Lookout Mobile Threat Protection telemetry for Android and iOS mobile devices
-![Logo for Symantec Endpoint Protection Mobile.](media/symantec-logo.png)|[Symantec Endpoint Protection Mobile](https://go.microsoft.com/fwlink/?linkid=2090992)|SEP Mobile helps businesses predict, detect, and prevent security threats and vulnerabilities on mobile devices
-![Logo for Zimperium.](media/zimperium-logo.png)|[Zimperium](https://go.microsoft.com/fwlink/?linkid=2118044)|Extend your Defender for Endpoint to iOS and Android with Machine Learning-based Mobile Threat Defense
+|Logo|Partner name|Description|
+|---|---|---|
+|![Logo for Bitdefender.](media/bitdefender-logo.png)|[Bitdefender](https://go.microsoft.com/fwlink/?linkid=860032)|Bitdefender GravityZone is a layered next generation endpoint protection platform offering comprehensive protection against the full spectrum of sophisticated cyber threats |
+|![Logo for Better Mobile.](media/bettermobile-logo.png)|[Better Mobile](https://go.microsoft.com/fwlink/?linkid=2086214)|AI-based MTD solution to stop mobile threats & phishing. Private internet browsing to protect user privacy |
+|![Logo for Corrata.](media/corrata-new.png)|[Corrata](https://go.microsoft.com/fwlink/?linkid=2081148)|Mobile solution - Protect your mobile devices with granular visibility and control from Corrata |
+| 
+|![Logo for Lookout.](media/lookout-logo.png)|[Lookout](https://go.microsoft.com/fwlink/?linkid=866935)|Get Lookout Mobile Threat Protection telemetry for Android and iOS mobile devices |
+|![Logo for Symantec Endpoint Protection Mobile.](media/symantec-logo.png)|[Symantec Endpoint Protection Mobile](https://go.microsoft.com/fwlink/?linkid=2090992)|SEP Mobile helps businesses predict, detect, and prevent security threats and vulnerabilities on mobile devices |
+|![Logo for Zimperium.](media/zimperium-logo.png)|[Zimperium](https://go.microsoft.com/fwlink/?linkid=2118044)|Extend your Defender for Endpoint to iOS and Android with Machine Learning-based Mobile Threat Defense|
 
 
 ## Other integrations
 
 Logo|Partner name|Description
-:---|:---|:---
+:---|---|---
 ![Logo for Cyren Web Filter.](media/cyren-logo.png)|[Cyren Web Filter](https://www.cyren.com/security-center/url-category-check)|Enhance your Defender for Endpoint with advanced Web Filtering
 ![Logo for Morphisec.](media/morphisec-logo.png)|[Morphisec](https://go.microsoft.com/fwlink/?linkid=2086215)|Provides Moving Target Defense-powered advanced threat prevention. Integrates forensics data directly into WD Defender for Cloud dashboards to help prioritize alerts, determine device at-risk score and visualize full attack timeline including internal memory information
 ![Logo for THOR Cloud.](media/nextron-thor-logo.png)|[THOR Cloud](https://go.microsoft.com/fwlink/?linkid=862988)|Provides on-demand live forensics scans using a signature base with focus on persistent threats
