@@ -13,7 +13,7 @@ ms.topic: how-to
 
 Microsoft Defender for IoT in the Microsoft Defender portal allows you to analyze OT data, generate alerts, and identify network risks. This article explains how to create a trial license for Defender for IoT in the Defender portal using your Microsoft tenant.
 
-One trial license is available per tenant. The trial license is limited to a maximum of 1,000 OT devices and lasts for 90 days. After you set up the trial license, you can access the Defender for IoT security insights available for your network.
+One trial license is available per tenant. The trial license is limited to a maximum of 1,000 OT devices. After you set up the trial license, you can access the Defender for IoT security insights available for your network.
 
 When you finish setting up the trial license, you can continue to [set up a site](set-up-sites.md) to monitor your OT devices at the production site level.
 
@@ -43,6 +43,6 @@ To add a trial license for Microsoft Defender for IoT:
 
 Once you have a trial license, [set up a new site](set-up-sites.md) so that Microsoft Defender for IoT can begin sending data to the Defender portal.
 
-## Public preview features
+## Turn on Public preview features
 
-We recommend that you also turn on and benefit from the available [Defender portal preview features](/defender-xdr/preview#turn-on-preview-features).
+Turn on the public preview features in the Microsoft Defender XDR settings to enable the site security features. Directions to change the settings are available in [Defender portal preview features](/defender-xdr/preview#turn-on-preview-features).

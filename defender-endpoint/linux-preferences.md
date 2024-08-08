@@ -1,12 +1,12 @@
 ---
 title: Set preferences for Microsoft Defender for Endpoint on Linux
-ms.reviewer: gopkr
+ms.reviewer: gopkr, ardeshmukh
 description: Describes how to configure Microsoft Defender for Endpoint on Linux in enterprises.
 ms.service: defender-endpoint
 ms.author: dansimp
 author: dansimp
 ms.localizationpriority: medium
-ms.date: 06/18/2024
+ms.date: 07/31/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -40,9 +40,9 @@ This article describes the structure of this profile (including a recommended pr
 
 ## Configuration profile structure
 
-The configuration profile is a .json file that consists of entries identified by a key (which denotes the name of the preference), followed by a value, which depends on the nature of the preference. Values can be simple, such as a numerical value, or complex, such as a nested list of preferences.
+The configuration profile is a `.json` file that consists of entries identified by a key (which denotes the name of the preference), followed by a value, which depends on the nature of the preference. Values can be simple, such as a numerical value, or complex, such as a nested list of preferences.
 
-Typically, you would use a configuration management tool to push a file with the name ```mdatp_managed.json``` at the location ```/etc/opt/microsoft/mdatp/managed/```.
+Typically, you would use a configuration management tool to push a file with the name `mdatp_managed.json` at the location `/etc/opt/microsoft/mdatp/managed/`.
 
 The top level of the configuration profile includes product-wide preferences and entries for subareas of the product, which are explained in more detail in the next sections.
 
@@ -76,10 +76,10 @@ Specifies the enforcement preference of antivirus engine. There are three values
 |**Possible values**|`real_time`<br>`on_demand`<br>`passive` (default)|Not configured<br>Realtime<br>OnDemand<br>Passive (Default)|
 
 > [!NOTE]
-> Available in Defender for Endpoint version 101.10.72 or higher. Default is changed from real_time to passive for Endpoint version 101.23062.0001 or higher.
+> Available in Defender for Endpoint version `101.10.72` or later. Default is changed from `real_time` to `passive` in Defender for Endpoint version `101.23062.0001` or later.
 > It is recommended to also use [scheduled scans](/defender-endpoint/linux-schedule-scan-mde) as per requirement.
 
-#### Enable/disable behavior-monitoring 
+#### Enable/disable behavior monitoring 
 
 Determines whether behavior monitoring and blocking capability is enabled on the device or not. 
 
@@ -90,8 +90,8 @@ Determines whether behavior monitoring and blocking capability is enabled on the
 |**Possible values**|`disabled` (default) <p> `enabled`|Not configured<br>Disabled (Default)<br>Enabled|
 
 > [!NOTE]
-> Available in Defender for Endpoint version 101.45.00 or higher.
-> This feature is applicable only when Real-Time Protection feature is enabled.
+> Available in Defender for Endpoint version `101.45.00` or later.
+> This feature is applicable only when real-time protection is enabled.
 
 #### Run a scan after definitions are updated
 
@@ -104,7 +104,7 @@ Specifies whether to start a process scan after new security intelligence update
 |**Possible values**|`true` (default) <p> `false`|Not configured<br>Disabled<br>Enabled (Default)|
 
 > [!NOTE]
-> Available in Defender for Endpoint version 101.45.00 or higher.
+> Available in Defender for Endpoint version `101.45.00` or later.
 > This feature only works when the enforcement level is set to `real-time`.
 
 #### Scan archives (on-demand antivirus scans only)
@@ -118,8 +118,8 @@ Specifies whether to scan archives during on-demand antivirus scans.
 |**Possible values**|`true` (default) <p>`false`|Not configured<br>Disabled<br>Enabled (Default)|
 
 > [!NOTE]
-> Available in Microsoft Defender for Endpoint version 101.45.00 or higher.
-> Archive files are never scanned during real time protection. When the files in an archive are extracted, they are scanned. The *scanArchives* option can be used to force the scan of archives only during on-demand scan.
+> Available in Microsoft Defender for Endpoint version `101.45.00` or later.
+> Archive files are never scanned during real-time protection. When the files in an archive are extracted, they are scanned. The *scanArchives* option can be used to force the scan of archives only during on-demand scan.
 
 #### Degree of parallelism for on-demand scans
 
@@ -132,11 +132,11 @@ Specifies the degree of parallelism for on-demand scans. This corresponds to the
 |**Possible values**|2 (default). Allowed values are integers between 1 and 64.|Not Configured (Default toggle off defaults to 2)<br>Configured (toggle on) and integer between 1 and 64.|
 
 > [!NOTE]
-> Available in Microsoft Defender for Endpoint version 101.45.00 or higher.
+> Available in Microsoft Defender for Endpoint version `101.45.00` or later.
 
 #### Exclusion merge policy
 
-Specifies the merge policy for exclusions. It can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). This setting can be used to restrict local users from defining their own exclusions.
+Specifies the merge policy for exclusions. It can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). Administrator-defined (admin_only) are exclusions that are configured by Defender for Endpoint policy. This setting can be used to restrict local users from defining their own exclusions.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
@@ -145,7 +145,8 @@ Specifies the merge policy for exclusions. It can be a combination of administra
 |**Possible values**|`merge` (default) <p>`admin_only`|Not configured<br>merge (Default)<br>admin_only|
 
 > [!NOTE]
-> Available in Defender for Endpoint version 100.83.73 or higher.
+> Available in Defender for Endpoint version `100.83.73` or later.
+> Can also configure exclusions under [exclusionSettings](#exclusion-setting-preferences)
 
 #### Scan exclusions
 
@@ -212,7 +213,7 @@ Specifies a process for which all file activity is excluded from scanning. The p
 |**Possible values**|any string|any string|
 |**Comments**|Applicable only if *$type* is *excludedFileName*|Accessed in *Configure instance* popup|
 
-#### Muting Non Exec mounts 
+#### Muting non-exec mounts 
  
 Specifies the behavior of RTP on mount point marked as noexec. There are two values for setting are:
 
@@ -229,11 +230,11 @@ Specifies the behavior of RTP on mount point marked as noexec. There are two val
 |**Possible values**|`unmute` (default) <p>`mute`|Not configured <br>unmute (Default) <br>mute|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.85.27 or higher.
+> Available in Defender for Endpoint version `101.85.27` or later.
 
-#### Unmonitor Filesystems
+#### Unmonitor filesystems
 
-Configure filesystems to be unmonitored/excluded from Real Time Protection(RTP). The filesystems configured are validated against Microsoft Defender's list of permitted filesystems. Only post successful validation, will the filesystem be allowed to be unmonitored. These configured unmonitored filesystems will still be scanned by Quick, Full, and custom scans.
+Configure filesystems to be unmonitored/excluded from real-time protection (RTP). The filesystems configured are validated against Microsoft Defender's list of permitted filesystems. Filesystems can only be monitored after successful validation. These configured unmonitored filesystems are still scanned by Quick, Full, and custom scans in Microsoft Defender Antivirus.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
@@ -263,7 +264,7 @@ To remove both NFS and Fuse from unmonitored list of filesystems, do the followi
 ```
 
 > [!NOTE]
-> Here;s the default list of monitored filesystems for RTP: `btrfs`, `ecryptfs`, `ext2`, `ext3`, `ext4`, `fuseblk`, `jfs`, `overlay`, `ramfs`, `reiserfs`, `tmpfs`, `vfat`, `xfs`.
+> Here's the default list of monitored filesystems for RTP: `btrfs`, `ecryptfs`, `ext2`, `ext3`, `ext4`, `fuseblk`, `jfs`, `overlay`, `ramfs`, `reiserfs`, `tmpfs`, `vfat`, `xfs`.
 >
 > If any monitored filesystem needs to be added to the list of unmonitored filesystems,then it needs to be evaluated and enabled by Microsoft via cloud config. Following which customers can update managed_mdatp.json to unmonitor that filesystem.
 
@@ -280,7 +281,7 @@ Enables or disables file hash computation feature. When this feature is enabled,
 |**Possible values**|`false` (default) <p>`true`|Not configured<br>Disabled (default)<br>Enabled|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.85.27 or higher.
+> Available in Defender for Endpoint version `101.85.27` or later.
 
 #### Allowed threats
 
@@ -302,7 +303,7 @@ Restricts the actions that the local user of a device can take when threats are 
 |**Possible values**|`allow` (restricts users from allowing threats) <p>`restore` (restricts users from restoring threats from the quarantine)|allow (restricts users from allowing threats) <p>restore (restricts users from restoring threats from the quarantine)|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 100.83.73 or higher.
+> Available in Defender for Endpoint version `100.83.73` or later.
 
 #### Threat type settings
 
@@ -340,7 +341,7 @@ Action to take when coming across a threat of the type specified in the precedin
 
 #### Threat type settings merge policy
 
-Specifies the merge policy for threat type settings. This can be a combination of administrator-defined and user-defined settings (`merge`) or only administrator-defined settings (`admin_only`). This setting can be used to restrict local users from defining their own settings for different threat types.
+Specifies the merge policy for threat type settings. This can be a combination of administrator-defined and user-defined settings (`merge`) or only administrator-defined settings (`admin_only`). Administrator-defined (admin_only) are threat type settings that are configured by Defender for Endpoint policy. This setting can be used to restrict local users from defining their own settings for different threat types.
 
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
@@ -349,7 +350,7 @@ Specifies the merge policy for threat type settings. This can be a combination o
 |**Possible values**|merge (default) <p> admin_only|Not configured<br>merge (Default)<br>admin_only|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 100.83.73 or higher.
+> Available in Defender for Endpoint version `100.83.73` or later.
 
 #### Antivirus scan history retention (in days)
 
@@ -362,7 +363,7 @@ Specify the number of days that results are retained in the scan history on the 
 |**Possible values**|90 (default). Allowed values are from 1 day to 180 days.|Not configured (toggle off - 90-day default)<br>Configured (toggle on) and allowed value 1 to 180 days.|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.04.76 or higher.
+> Available in Defender for Endpoint version `101.04.76` or later.
 
 #### Maximum number of items in the antivirus scan history
 
@@ -375,7 +376,121 @@ Specify the maximum number of entries to keep in the scan history. Entries inclu
 |**Possible values**|10000 (default). Allowed values are from 5000 items to 15000 items.|Not configured (toggle off - 10000 default)<br>Configured (toggle on) and allowed value from 5000 to 15000 items.|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.04.76 or higher.
+> Available in Defender for Endpoint version `101.04.76` or later.
+
+### Exclusion setting preferences
+
+**Exlusion setting preferences are currently in preview**.
+
+> [!NOTE] 
+> Available in Defender for Endpoint version `101.23092.0012` or later till Insider Slow Ring.
+
+The *exclusionSettings* section of the configuration profile is used to configure various exclusions for Microsoft Defender for Endpoint for Linux.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|exclusionSettings|
+|**Data type**|Dictionary (nested preference)|
+|**Comments**|See the following sections for a description of the dictionary contents.|
+
+> [!NOTE] 
+> Already configured antivirus exclusions under (`antivirusEngine`) in managed JSON will continue to function as is with no impact. All new [exclusions](linux-exclusions.md) including antivirus exclusions can be added under this completely new section (`exclusionSettings`). This section is outside the (`antivirusEngine`) tag as its dedicated solely for configuring all types of exclusions that will come in future. You can also continue to use (`antivirusEngine`) for configuring antivirus exclusions.
+
+#### Merge policy
+
+Specifies the merge policy for exclusions. It specifies if it can be a combination of administrator-defined and user-defined exclusions (`merge`) or only administrator-defined exclusions (`admin_only`). This setting can be used to restrict local users from defining their own exclusions. It is applicable for exclusions of all scopes.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|mergePolicy|
+|**Data type**|String|
+|**Possible values**|merge (default) <p> admin_only|
+|**Comments**|Available in Defender for Endpoint version Sept 2023 or higher.|
+
+#### Exclusions
+
+Entities that need to be excluded can be specified by full paths, extensions, or file names. Each exclusion entity, i.e., either full path, extension or file name has an optional scope that can be specified. If not specified, the default value of scope in this section is *global*. (Exclusions are specified as an array of items, administrator can specify as many elements as necessary, in any order.)
+
+|Description|JSON Value|
+|---|---|
+|**Key**|exclusions|
+|**Data type**|Dictionary (nested preference)|
+|**Comments**|See the following sections for a description of the dictionary contents.|
+
+##### Type of exclusion
+
+Specifies the type of content excluded from the scan.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|$type|
+|**Data type**|String|
+|**Possible values**|excludedPath <p> excludedFileExtension <p> excludedFileName|
+
+##### Scopes of exclusion (optional)
+
+Specifies the set of exlusion scopes of content excluded. Currently supported scopes are `epp` and `global`.
+
+If nothing is specified in for an exclusion under *exclusionSettings* in managed configuration, then `global` is considered as scope.
+
+> [!NOTE] 
+> Previously configured antivirus exclusions under (`antivirusEngine`) in managed JSON will continue to function and their scope is considered (`epp`) since they were added as antivirus exclusions. 
+
+|Description|JSON Value|
+|---|---|
+|**Key**|scopes|
+|**Data type**|Set of strings|
+|**Possible values**|epp <p> global|
+
+> [!NOTE]
+> Previously applied exclusions using (`mdatp_managed.json`) or by CLI will remain unaffected. The scope for those exclusions will be (`epp`) since they were added under (`antivirusEngine`).
+
+##### Path to excluded content
+
+Used to exclude content from the scan by full file path.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|path|
+|**Data type**|String|
+|**Possible values**|valid paths|
+|**Comments**|Applicable only if *$type* is *excludedPath*.<br> *Wildcard not supported if exclusion has global as a scope.*|
+
+##### Path type (file / directory)
+
+Indicates if the *path* property refers to a file or directory. 
+
+> [!NOTE]
+> File path must already exist if adding file exclusion with global scope.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|isDirectory|
+|**Data type**|Boolean|
+|**Possible values**|false (default) <p> true|
+|**Comments**|Applicable only if *$type* is *excludedPath*.<br> *Wildcard not supported if exclusion has global as a scope.*|
+
+##### File extension excluded from the scan
+
+Used to exclude content from the scan by file extension.
+
+|Description|JSON Value|
+|---|---|
+|**Key**|extension|
+|**Data type**|String|
+|**Possible values**|valid file extensions|
+|**Comments**|Applicable only if *$type* is *excludedFileExtension*.<br> *Not supported if exclusion has global as a scope.*|
+
+##### Process excluded from the scan*
+
+Specifies a process for which all file activity is excluded from scanning. The process can be specified either by its name (for example, `cat`) or full path (for example, `/bin/cat`).
+
+|Description|JSON Value|
+|---|---|
+|**Key**|name|
+|**Data type**|String|
+|**Possible values**|any string|
+|**Comments**|Applicable only if *$type* is *excludedFileName*. <br> *Wildcard and process name not supported if exclusion has global as a scope, need to provide full path.*|
 
 #### Advanced scan options
 
@@ -397,7 +512,7 @@ When this feature is enabled, Defender for Endpoint will scan files when their p
 |**Data type**|Boolean|n/a|
 |**Possible values**|false (default) <p> true|n/a|
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.23062.0010 or higher.
+> Available in Defender for Endpoint version `101.23062.0010` or later.
 
 ##### Configure scanning of file modify ownership events
 
@@ -413,7 +528,7 @@ When this feature is enabled, Defender for Endpoint will scan files for which ow
 |**Possible values**|false (default) <p> true|n/a|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.23062.0010 or higher.
+> Available in Defender for Endpoint version `101.23062.0010` or later.
 
 ##### Configure scanning of raw socket events
 
@@ -430,7 +545,7 @@ When this feature is enabled, Defender for Endpoint will scan network socket eve
 |**Possible values**|false (default) <p> true|n/a|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.23062.0010 or higher.
+> Available in Defender for Endpoint version `101.23062.0010` or later.
 
 
 ### Cloud-delivered protection preferences
@@ -485,7 +600,7 @@ There are five values for setting cloud block level:
 |**Possible values**|`normal` (default) <p>`moderate` <p>`high` <p>`high_plus` <p>`zero_tolerance`|Not configured<br>Normal (default) <br>Moderate <br>High <br>High_Plus <br>Zero_Tolerance|
 
 > [!NOTE] 
-> Available in Defender for Endpoint version 101.56.62 or higher.
+> Available in Defender for Endpoint version `101.56.62` or later.
 
 #### Enable / disable automatic sample submissions
 
@@ -537,7 +652,7 @@ Determines whether module load events (file open events on shared libraries) are
 |**Key**|moduleLoad|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.||
+|**Comments**|Available in Defender for Endpoint version `101.68.80` or later.||
 
 #### Supplementary sensor configurations
 
@@ -561,7 +676,7 @@ Determines whether file modify permissions events (`chmod`) are monitored.
 |**Key**|enableFilePermissionEvents|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.23062.0010` or later.|
 
 ##### Configure monitoring of file modify ownership events
 
@@ -575,7 +690,7 @@ Determines whether file modify ownership events (chown) are monitored.
 |**Key**|enableFileOwnershipEvents|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.23062.0010` or later.|
 
 ##### Configure monitoring of raw socket events
 
@@ -590,7 +705,7 @@ Determines whether network socket events involving creation of raw sockets / pac
 |**Key**|enableRawSocketEvent|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.23062.0010` or later.|
 
 ##### Configure monitoring of boot loader events
 
@@ -604,7 +719,7 @@ Determines whether boot loader events are monitored and scanned.
 |**Key**|enableBootLoaderCalls|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.68.80` or later.|
 
 ##### Configure monitoring of ptrace events
 
@@ -618,7 +733,7 @@ Determines whether ptrace events are monitored and scanned.
 |**Key**|enableProcessCalls|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.68.80` or later.|
 
 ##### Configure monitoring of pseudofs events
 
@@ -632,7 +747,7 @@ Determines whether pseudofs events are monitored and scanned.
 |**Key**|enablePseudofsCalls|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.68.80` or later.|
 
 ##### Configure monitoring of module load events using eBPF
 
@@ -646,7 +761,7 @@ Determines whether module load events are monitored using eBPF and scanned.
 |**Key**|enableEbpfModuleLoadEvents|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.68.80 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.68.80` or later.|
 
 #### Report AV Suspicious Events to EDR
 
@@ -657,7 +772,7 @@ Determines whether suspicious events from Antivirus are reported to EDR.
 |**Key**|sendLowfiEvents|*Not available*|
 |**Data type**|String|*n/a*|
 |**Possible values**|disabled (default) <p> enabled|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.|
+|**Comments**|Available in Defender for Endpoint version `101.23062.0010` or later.|
 
 ### Network protection configurations
 
@@ -692,21 +807,21 @@ Determines whether ICMP events are monitored and scanned.
 |**Key**|disableIcmpInspection|*Not available*|
 |**Data type**|Boolean|*n/a*|
 |**Possible values**|`true` (default) <p>`false`|*n/a*|
-|**Comments**|Available in Defender for Endpoint version 101.23062.0010 or higher.||
+|**Comments**|Available in Defender for Endpoint version `101.23062.0010` or later.||
 
 ## Recommended configuration profile
 
 To get started, we recommend the following configuration profile for your enterprise to take advantage of all protection features that Defender for Endpoint provides.
 
-The following configuration profile will:
+The following configuration profile:
 
-- Enable real-time protection (RTP)
-- Specify how the following threat types are handled:
+- Enables real-time protection (RTP)
+- Specifies how the following threat types are handled:
   - **Potentially unwanted applications (PUA)** are blocked
   - **Archive bombs** (file with a high compression rate) are audited to the product logs
-- Enable automatic security intelligence updates
-- Enable cloud-delivered protection
-- Enable automatic sample submission at `safe` level
+- Enables automatic security intelligence updates
+- Enables cloud-delivered protection
+- Enables automatic sample submission at `safe` level
 
 ### Sample profile
 
@@ -806,7 +921,47 @@ The following configuration profile contains entries for all settings described 
       "automaticSampleSubmissionConsent":"safe",
       "automaticDefinitionUpdateEnabled":true,
       "proxy": "<EXAMPLE DO NOT USE> http://proxy.server:port/"
-   }
+   },
+"exclusionSettings":{
+  "exclusions":[
+     {
+        "$type":"excludedPath",
+        "isDirectory":true,
+        "path":"/home/*/git<EXAMPLE DO NOT USE>",
+        "scopes": [
+              "epp"
+        ]
+     },
+     {
+        "$type":"excludedPath",
+        "isDirectory":true,
+        "path":"/run<EXAMPLE DO NOT USE>",
+        "scopes": [
+              "global"
+        ]
+     },
+     {
+        "$type":"excludedPath",
+        "isDirectory":false,
+        "path":"/var/log/system.log<EXAMPLE DO NOT USE><EXCLUDED IN ALL SCENARIOS>",
+        "scopes": [
+              "epp", "global"
+        ]
+     },
+     {
+        "$type":"excludedFileExtension",
+        "extension":".pdf<EXAMPLE DO NOT USE>",
+        "scopes": [
+              "epp"
+        ]
+     },
+     {
+        "$type":"excludedFileName",
+        "name":"/bin/cat<EXAMPLE DO NOT USE><NO SCOPE PROVIDED - GLOBAL CONSIDERED>"
+     }
+  ],
+  "mergePolicy":"admin_only"
+}
 }
 ```
 
@@ -815,32 +970,34 @@ The following configuration profile contains entries for all settings described 
 When you run the `mdatp health` command for the first time, the value for the tag and group ID will be blank. To add tag or group ID to the `mdatp_managed.json` file, follow the below steps:
   
 1. Open the configuration profile from the path `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json`.
-  2. Go down to the bottom of the file, where the `cloudService` block is located.
-  3. Add the required tag or group ID as following example at the end of the closing curly bracket for the `cloudService`.
 
-```JSON
-  },
-  "cloudService": {
+2. Go down to the bottom of the file, where the `cloudService` block is located.
+
+3. Add the required tag or group ID as following example at the end of the closing curly bracket for the `cloudService`.
+
+   ```JSON
+   },
+   "cloudService": {
     "enabled": true,
     "diagnosticLevel": "optional",
     "automaticSampleSubmissionConsent": "safe",
     "automaticDefinitionUpdateEnabled": true,
     "proxy": "http://proxy.server:port/"
-},
-"edr": {
-  "groupIds":"GroupIdExample",
-  "tags": [
+   },
+   "edr": {
+   "groupIds":"GroupIdExample",
+   "tags": [
             {
             "key": "GROUP",
             "value": "Tag"
             }
           ]
       }
-}
-```
+   }
+   ```
 
-  >[!NOTE]
-  >Add the comma after the closing curly bracket at the end of the `cloudService` block. Also, make sure that there are two closing curly brackets after adding Tag or Group ID block (please see the above example). At the moment, the only supported key name for tags is `GROUP`.
+> [!NOTE]
+> Add the comma after the closing curly bracket at the end of the `cloudService` block. Also, make sure that there are two closing curly brackets after adding Tag or Group ID block (please see the above example). At the moment, the only supported key name for tags is `GROUP`.
  
 ## Configuration profile validation
 
@@ -856,20 +1013,20 @@ If the JSON is well-formed, the above command outputs it back to the Terminal an
 
 To verify that your /etc/opt/microsoft/mdatp/managed/mdatp_managed.json is working properly, you should see "[managed]" next to these settings:
 
-- cloud_enabled
-- cloud_automatic_sample_submission_consent
-- passive_mode_enabled
-- real_time_protection_enabled
-- automatic_definition_update_enabled
+- `cloud_enabled`
+- `cloud_automatic_sample_submission_consent`
+- `passive_mode_enabled`
+- `real_time_protection_enabled`
+- `automatic_definition_update_enabled`
 
 > [!NOTE]
-> No restart of mdatp daemon is required for changes to _most_ configurations in mdatp_managed.json to take effect.
+> No restart of mdatp daemon is required for changes to _most_ configurations in `mdatp_managed.json` to take effect.
   **Exception:** The following configurations require a daemon restart to take effect:
-> - cloud-diagnostic
-> - log-rotation-parameters
+> - `cloud-diagnostic`
+> - `log-rotation-parameters`
 
 ## Configuration profile deployment
 
-Once you've built the configuration profile for your enterprise, you can deploy it through the management tool that your enterprise is using. Defender for Endpoint on Linux reads the managed configuration from the */etc/opt/microsoft/mdatp/managed/mdatp_managed.json* file.
+Once you've built the configuration profile for your enterprise, you can deploy it through the management tool that your enterprise is using. Defender for Endpoint on Linux reads the managed configuration from the `/etc/opt/microsoft/mdatp/managed/mdatp_managed.json` file.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 12/18/2020
+ms.date: 07/18/2024
 ---
 
 # Troubleshoot subscription and portal access issues
@@ -76,7 +76,7 @@ You'll need to allow the `security.windows.com` and all subdomains under it on y
 
 ## Portal communication issues
 
-If you encounter issues with accessing the portal, missing data, or restricted access to portions of the portal, you'll need to verify that the following URLs are allowed and open for communication.
+If you encounter issues with accessing the portal, missing data, or restricted access to portions of the portal, you'll need to verify that the following URLs are accessible through the browser for authorized users:
 
 - `*.blob.core.windows.net`
 - `crl.microsoft.com`

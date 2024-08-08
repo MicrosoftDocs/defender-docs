@@ -4,6 +4,7 @@ description: Learn how Microsoft Defender for Endpoint integrates with other Mic
 author: siosulli
 ms.author: siosulli
 ms.service: defender-endpoint
+ms.subservice: onboard
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

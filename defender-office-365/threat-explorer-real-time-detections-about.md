@@ -7,7 +7,7 @@ author: chrisda
 manager: deniseb
 audience: ITPro
 ms.topic: conceptual
-ms.date: 3/22/2024
+ms.date: 07/11/2024
 ms.localizationpriority: medium
 ms.collection:
   - m365-security
@@ -78,6 +78,8 @@ To use Explorer or Real-time detections, you need to be assigned permissions. Yo
     > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 > [!TIP]
+> End-user spam notifications and system generated messages aren't avaialble in Threat Explorer. These types of messages are available if there's a mail flow rule (also known as a transport rule) to override.
+>
 > Audit log entries are generated when admins preview or download email messages. You can search the admin audit log by user for **AdminMailAccess** activity. For instructions, see [Audit New Search](/purview/audit-new-search).
 
 To use Threat Explorer or Real-time detections, you need to be assigned a license for Defender for Office 365 (included in your subscription or an add-on license).
@@ -1493,7 +1495,7 @@ Multiple conditions use the following syntax:
 \<Condition1> \<AND | OR\> \<Condition2>  \<AND | OR\> \<Condition3>... \<AND | OR\> \<ConditionN>
 
 > [!TIP]
-> Wildcard searches (**\*** or **?**) aren't supported in text or integer values. The **Subject** property uses partial text matching, and yields results similar to a wildcard search.
+> Wildcard searches (**\** or **?**) aren't supported in text or integer values. The **Subject** property uses partial text matching, and yields results similar to a wildcard search.
 
 The steps to create property filter/query conditions are the same in all views in Threat Explorer and Real-time detections:
 

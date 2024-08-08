@@ -3,6 +3,7 @@ title: Microsoft Defender for Endpoint partner opportunities and scenarios
 ms.reviewer: 
 description: Learn how you can extend existing security offerings on top of the open framework and a rich set of APIs to build extensions and integrations with Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
+ms.subservice: onboard
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium

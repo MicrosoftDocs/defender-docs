@@ -7,7 +7,7 @@ ms.author: siosulli
 author: siosulli
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 06/04/2024
+ms.date: 07/09/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -41,6 +41,7 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Office 365](/defender-office-365/defender-for-office-365-whats-new)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+- [What's new in Microsoft Defender Vulnerability Management](/defender-vulnerability-management/whats-new-in-microsoft-defender-vulnerability-management)
 
 For more information on Microsoft Defender for Endpoint on specific operating systems:
 
@@ -55,6 +56,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 - (Preview) **Monitor OT devices in the device inventory**: You can now monitor OT devices in addition to IoT devices in the device inventory, as part of the integration with [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/device-discovery). As part of this integration: 
     - We've added the **Device type**, **Device subtype**, **Mac address**, and **Site** columns to the device inventory **IoT/OT** tab.
     - If OT devices are discovered but a Defender for IoT license isn't set up, the device inventory displays a message that indicates the number of unprotected OT devices. [Learn more about the initial device inventory view with detected OT devices](/defender-for-iot/device-discovery#device-inventory-initial-view).
+- (GA) Learning hub resources have moved from the Microsoft Defender portal to [learn.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2273118). Access Microsoft Defender XDR Ninja training, learning paths, training modules and more. Browse the [list of learning paths](/training/browse/?products=m365-ems-cloud-app-security%2Cdefender-for-cloud-apps%2Cdefender-identity%2Cm365-information-protection%2Cm365-threat-protection%2Cmdatp%2Cdefender-office365&expanded=m365%2Coffice-365), and filter by product, role, level, and subject. 
 
 ## June 2024
 
