@@ -126,12 +126,13 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
 2. Select **Continue**. A screen is presented which recommends downloading and setting up of Microsoft Defender for Endpoint on Android app.
 
-3. Select **Download**. You'll be redirected to the app store (Google play).
+1. Select **Download**. You'll be redirected to the app store (Google play).
 
-4. Install the Microsoft Defender for Endpoint (Mobile) app and launch back Managed app onboarding screen.
+1. Install the Microsoft Defender for Endpoint (Mobile) app and launch back Managed app onboarding screen.
 
-   :::image type="content" source="media/download-mde.png" alt-text="The illustrative pages that contain the procedure of downloading MDE and launching back the app-onboarding screen." lightbox="media/download-mde.png":::
-
+   ![mam_flow](media/android-configure-mam/mam-flow.png)
+   
+   
 5. Click **Continue > Launch**. The Microsoft Defender for Endpoint app onboarding/activation flow is initiated. Follow the steps to complete onboarding. You'll automatically be redirected back to Managed app onboarding screen, which now indicates that the device is healthy.
 
 6. Select **Continue** to log into the managed application.
