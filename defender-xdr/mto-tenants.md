@@ -22,7 +22,7 @@ appliesto:
 
 # Manage tenants in Microsoft Defender XDR
 
-Add or remove tenants from the settings page in multi-tenant management from the Microsoft Defender portal.
+Add or remove tenants from the settings page in multitenant management from the Microsoft Defender portal.
 
 ## View the tenants page
 
