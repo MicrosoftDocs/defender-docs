@@ -63,7 +63,7 @@ You can also get product updates and important notifications through the [messag
 - (Preview) You can now filter your Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
 
 
-
+- (GA) You can now **[filter your results](advanced-hunting-query-results.md#filter-results)** in advanced hunting so you can narrow down your investigation on specific data you want to focus on.
 
 ## May 2024
 
@@ -138,7 +138,7 @@ You can also get product updates and important notifications through the [messag
 
 - **Microsoft Defender XDR Unified role-based access control (RBAC)** is now generally available. Unified (RBAC) allows administrators to manage user permissions across different security solutions from a single, centralized location. This offering is also available to GCC Moderate customers. To learn more, see [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md).
 
-- Microsoft Defender Experts for XDR now lets you [exclude devices](get-started-xdr.md#exclude-devices-from-remediation) from remediation actions taken by our experts and instead get remediation guidance for those entities.
+- Microsoft Defender Experts for XDR now lets you [exclude devices](get-started-xdr.md#exclude-devices-and-users-from-remediation) from remediation actions taken by our experts and instead get remediation guidance for those entities.
 
 - The Microsoft Defender portal's incident queue has updated filters, search, and added a new function where you can create your own filter sets. For details, see [Available filters](incident-queue.md#available-filters).
 

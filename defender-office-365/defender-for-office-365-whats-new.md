@@ -30,7 +30,7 @@ This article lists new features in the latest release of Microsoft Defender for 
 
 Learn more by watching [this video](https://www.youtube.com/watch?v=Tdz6KfruDGo&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=3).
 
-To search the Microsoft 365 Roadmap for Defender for Office 365 features, use [this link](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=Microsoft%2CDefender%2Cfor%2COffice%2C365).
+To search the Microsoft 365 Roadmap for Defender for Office 365 features, use [this link](https://www.microsoft.com/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Office%20365).
 
 For more information on what's new with other Microsoft Defender security products, see:
 
@@ -304,5 +304,5 @@ Did you know that Microsoft Defender for Office 365 is available in two plans? [
 
 ## See also
 
-- [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap)
+- [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=Microsoft%20365)
 - [Microsoft Defender for Office 365 Service Description](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)
