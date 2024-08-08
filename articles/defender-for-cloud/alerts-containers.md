@@ -614,7 +614,7 @@ Microsoft Defender for Containers provides security alerts on the cluster level 
 <sup><a name="footnote3"></a>3</sup>: This alert is supported on Windows nodes/containers.
 
 > [!NOTE]
-> For alerts that are in preview: [!INCLUDE [Legalese](../../includes/defender-for-cloud-preview-legal-text.md)]
+> For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
 ## Next steps
 

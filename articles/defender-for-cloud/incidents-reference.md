@@ -8,7 +8,7 @@ ms.date: 06/26/2024
 # Incidents - a reference guide
 
 > [!NOTE]
-> For incidents that are in preview: [!INCLUDE [Legalese](../../includes/defender-for-cloud-preview-legal-text.md)]
+> For incidents that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
 This article lists the incidents you might get from Microsoft Defender for Cloud and any Microsoft Defender plans you've enabled. The incidents shown in your environment depend on the resources and services you're protecting, and your customized configuration.
 

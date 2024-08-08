@@ -483,7 +483,7 @@ Attackers often use this tool for probing the web application to find vulnerabil
 **Severity**: Medium
 
 > [!NOTE]
-> For alerts that are in preview: [!INCLUDE [Legalese](../../includes/defender-for-cloud-preview-legal-text.md)]
+> For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
 ## Next steps
 

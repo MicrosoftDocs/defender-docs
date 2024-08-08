@@ -198,7 +198,7 @@ Learn more about [Defender for Cloud latest protections against the abuse of Azu
 **Severity**: Medium
 
 > [!NOTE]
-> For alerts that are in preview: [!INCLUDE [Legalese](../../includes/defender-for-cloud-preview-legal-text.md)]
+> For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
 ## Next steps
 
