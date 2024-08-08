@@ -64,6 +64,8 @@ The following table outlines the roles and permissions required to access threat
 | Threat analytics | Alerts and incidents data: <ul><li>View data- security operations</li></ul>Defender Vulnerability Management mitigations:<ul><li>View data - Threat and vulnerability management</li></ul> | Alerts and incidents data:<ul> <li>View-only manage alerts</li> <li>Manage alerts</li> <li>Organization configuration</li><li>Audit logs</li> <li>View-only audit logs</li><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> </ul> Prevented email attempts: <ul><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> | Not available for Defender for Cloud Apps or Microsoft Defender for Identity users | <ul><li>Global admin</li><li>Security admin</li></ul> |
 
 >[!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+>
 > You'll have visibility to all threat analytics reports even if you have just one of the products and its corresponding roles described in the previous table. However, you're required to have each product and roles to see that product’s specific incidents, assets, exposure, and recommended actions associated with the threat. 
 
 Learn more:
