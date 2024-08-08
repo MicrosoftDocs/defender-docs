@@ -111,6 +111,28 @@ After running a query, select **Export** to save the results to local file. Your
 - **Table view**—The query results are exported in tabular form as a Microsoft Excel workbook
 - **Any chart**—The query results are exported as a JPEG image of the rendered chart
 
+## Filter results
+
+After running a query, select **Filter** to narrow down the results. 
+
+:::image type="content" source="/defender/media/add-filter1.png" alt-text="Screenshot of filters in advanced hunting." lightbox="/defender/media/add-filter1.png":::
+
+To add a filter, select the data you want to filter for by selecting one or more of the check boxes. Then select **Add**.
+
+:::image type="content" source="/defender/media/add-filter2.png" alt-text="Screenshot of filters dropdown in advanced hunting." lightbox="/defender/media/add-filter2.png":::
+
+You can narrow the results down even further to specific data by selecting the newly added filter. 
+
+:::image type="content" source="/defender/media/add-filter3.png" alt-text="Screenshot of new filter pill in advanced hunting." lightbox="/defender/media/add-filter3.png":::
+
+This opens a dropdown showing the possible filters you can use further. Select one or more of the check boxes, then select **Apply**.
+
+:::image type="content" source="/defender/media/add-filter4.png" alt-text="Screenshot of new filter's dropdown in advanced hunting." lightbox="/defender/media/add-filter4.png":::
+
+Confirm that you have added the filters that you wanted by checking the Filters section. 
+
+:::image type="content" source="/defender/media/add-filter5.png" alt-text="Screenshot of filters added advanced hunting." lightbox="/defender/media/add-filter5.png":::
+
 ## Drill down from query results
 
 You can also explore the results in-line with the following features:
