@@ -14,7 +14,7 @@ ms.collection:
 - mde-android
 ms.topic: conceptual
 ms.subservice: android
-ms.date: 07/25/2024
+ms.date: 08/08/2024
 ---
 
 # Configure Microsoft Defender for Endpoint on Android risk signals using App Protection Policies (MAM)
