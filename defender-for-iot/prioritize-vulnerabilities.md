@@ -1,6 +1,6 @@
 ---
-title: Prioritize and remediate vulnerabilities with Microsoft Defender for IoT in the Defender portal
-description: This article describes how to prioritize and remediate vulnerabilities with Microsoft Defender for IoT in the Defender portal.
+title: Prioritize, investigate and remediate vulnerabilities with Microsoft Defender for IoT in the Defender portal
+description: This article describes how to prioritize, investigate and remediate vulnerabilities with Microsoft Defender for IoT in the Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
