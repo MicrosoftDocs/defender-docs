@@ -15,6 +15,8 @@ The number of IoT devices continues to grow exponentially across enterprise netw
 
 While the number of IoT devices continues to grow, they often lack the security safeguards that are common on managed endpoints like laptops and mobile phones. To bad actors, these unmanaged devices can be used as a point of entry for lateral movement or evasion, and too often, the use of such tactics leads to the exfiltration<!-- should this be changed to hacking / exposure/ stealing / leaking LW --> of sensitive information.
 
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+
 Extend Defender for IoT's agentless security features to include enterprise IoT devices. Add the enterprise IoT security feature to your existing Microsoft Defender for Endpoint license, and view related alerts, vulnerabilities, and recommendations for IoT devices in Microsoft Defender.
 
 Microsoft Defender for IoT seamlessly integrates with Microsoft Defender portal and Defender for Endpoint to both discover IoT devices and provide security value, including purpose-built alerts, recommendations, and vulnerability data.

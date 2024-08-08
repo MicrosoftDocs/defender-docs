@@ -13,6 +13,8 @@ ms.topic: how-to
 
 Add enterprise IoT to your Microsoft Defender portal and use the IoT specific security features to protect your IoT environment.
 
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+
 ## Prerequisites
 
 Before you start the procedures in this article, read through [enterprise for IoT in the Defender portal](enterprise-for-iot.md) to understand more about the integration between Defender for Endpoint and Defender for IoT.
