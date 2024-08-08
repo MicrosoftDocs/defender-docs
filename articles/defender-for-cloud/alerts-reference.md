@@ -68,7 +68,7 @@ Defender for Cloud's supported kill chain intents are based on [version 9 of the
 | **Impact**               | V7, V9         | Impact events primarily try to directly reduce the availability or integrity of a system, service, or network; including manipulation of data to impact a business or operational process. This would often refer to techniques such as ransomware, defacement, data manipulation, and others. |
 
 > [!NOTE]
-> For alerts that are in preview: [!INCLUDE [Legalese](../../includes/defender-for-cloud-preview-legal-text.md)]
+> For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
 ## Next steps
 

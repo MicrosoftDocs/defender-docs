@@ -383,7 +383,7 @@ Applies to: Azure Blob (Standard general-purpose v2, Azure Data Lake Storage Gen
 **Severity**: High, if Eicar - low
 
 > [!NOTE]
-> For alerts that are in preview: [!INCLUDE [Legalese](../../includes/defender-for-cloud-preview-legal-text.md)]
+> For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
 ## Next steps
 

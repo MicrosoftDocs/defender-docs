@@ -33,7 +33,7 @@ To create a Microsoft Sentinel case or incident using Defender for Cloud alerts,
 
 Learn more in the [Microsoft Sentinel documentation](/azure/sentinel/).
 
-[!INCLUDE [Sentinel and workspace schema](../../includes/defender-for-cloud-alerts-schema-log-analytics-workspace.md)]
+[!INCLUDE [Sentinel and workspace schema](./includes/defender-for-cloud-alerts-schema-log-analytics-workspace.md)]
 
 ### [Azure Activity Log](#tab/schema-activitylog)
 

@@ -25,7 +25,7 @@ For the scope you need, you can create an exemption rule to:
 
 ## Before you start
 
-This feature is in preview. [!INCLUDE [Legalese](../../includes/defender-for-cloud-preview-legal-text.md)] This is a premium Azure Policy capability offered at no extra cost for customers with Microsoft Defender for Cloud's enhanced security features enabled. For other users, charges might apply in the future.
+This feature is in preview. [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)] This is a premium Azure Policy capability offered at no extra cost for customers with Microsoft Defender for Cloud's enhanced security features enabled. For other users, charges might apply in the future.
 
 - You need the following permissions to make exemptions:
   - **Owner** or **Security Admin** to create an exemption.

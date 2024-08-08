@@ -50,7 +50,7 @@ These plans use monitoring components to collect data:
 
 ## Availability of extensions
 
-[!INCLUDE [Legalese](../../includes/defender-for-cloud-preview-legal-text.md)]
+[!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
 ### Azure Monitor Agent (AMA)
 
