@@ -58,14 +58,16 @@ Each report provides an analysis of a tracked threat and extensive guidance on h
 ## Required roles and permissions
 The following table outlines the roles and permissions required to access Threat Analytics. Roles defined in the following table refer to custom roles in individual portals and aren't connected to global roles in Microsoft Entra ID, even if similarly named.
 
-| **One of the following roles are required for Microsoft Defender XDR**  | **One of the following roles are required for Defender for Endpoint**  | **One of the following roles are required for Defender for Office 365** | **One of the following roles are required for Defender for Cloud Apps** | 
-|---------|---------|---------|---------|
-| Threat Analytics | Alerts and incidents data: <ul><li>View data- security operations</li></ul>Defender Vulnerability Management mitigations:<ul><li>View data - Threat and vulnerability management</li></ul> | Alerts and incidents data:<ul> <li>View-only manage alerts</li> <li>Manage alerts</li> <li>Organization configuration</li><li>Audit logs</li> <li>View-only audit logs</li><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> </ul> Prevented email attempts: <ul><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> | Not available for Defender for Cloud Apps or MDI users |
+| **One of the following roles are required for Microsoft Defender XDR**  | **One of the following roles are required for Microsoft Defender for Endpoint**  | **One of the following roles are required for Microsoft Defender for Office 365** | **One of the following roles are required for Microsoft Defender for Cloud Apps** |  **One of the following roles are required for Microsoft Defender for Cloud** | 
+|---------|---------|---------|---------|---------|
+| Threat Analytics | Alerts and incidents data: <ul><li>View data- security operations</li></ul>Defender Vulnerability Management mitigations:<ul><li>View data - Threat and vulnerability management</li></ul> | Alerts and incidents data:<ul> <li>View-only manage alerts</li> <li>Manage alerts</li> <li>Organization configuration</li><li>Audit logs</li> <li>View-only audit logs</li><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> </ul> Prevented email attempts: <ul><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> | Not available for Defender for Cloud Apps or Microsoft Defender for Identity users | <ul><li>Global admin</li><li>Security admin</li></ul> |
 
 >[!IMPORTANT]
 > You'll have visibility to all threat analytics reports even if you have just one of the products and its corresponding roles described in the previous table. However, you're required to have each product and roles to see that product’s specific incidents, assets, exposure, and recommended actions associated with the threat. 
 
-[Learn more about custom roles in role-based access control for Microsoft Defender XDR](custom-roles.md)
+Learn more:
+- [Custom roles in role-based access control for Microsoft Defender XDR](custom-roles.md)
+- [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md)
 
 ## View the threat analytics dashboard
 
@@ -159,7 +161,7 @@ The **Related incidents** tab provides the list of all incidents related to the 
 :::image type="content" source="/defender/media/threat-analytics/ta_related_incidents_mtp.png" alt-text="Screenshot of the related incidents section of a threat analytics report." lightbox="/defender/media/threat-analytics/ta_related_incidents_mtp.png":::
 
 > [!NOTE]
-> Incidents and alerts associated with the threat are sourced from Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Cloud.
+> Incidents and alerts associated with the threat are sourced from Defender for Endpoint, Defender for Identity, Defender for Office 365, Defender for Cloud Apps, and Defender for Cloud.
 
 ### Impacted assets: Get list of impacted devices, users, mailboxes, apps, and cloud resources
 
