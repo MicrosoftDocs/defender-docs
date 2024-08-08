@@ -22,7 +22,7 @@ appliesto:
 
 # Advanced hunting in multi-tenant management for Microsoft Defender XDR
 
-Advanced hunting in multi-tenant management for Microsoft Defender XDR allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants at the same time. If you have tenants with a Microsoft Sentinel workspace onboarded to the unified security operations platform, search for SIEM data together with XDR data across multiple tenants.
+Advanced hunting in multi-tenant management for Microsoft Defender XDR allows you to proactively hunt for intrusion attempts and breach activity in email, data, devices, and accounts across multiple tenants at the same time. If you have tenants with a Microsoft Sentinel workspace onboarded to the unified security operations platform, search for SIEM data together with XDR data across multiple tenants. 
 
 ## Run cross-tenant queries
 

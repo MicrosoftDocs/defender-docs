@@ -32,7 +32,7 @@ To view or investigate an incident:
 
 1. Go to the [Incidents page](https://mto.security.microsoft.com/incidents) in multi-tenant management in Microsoft Defender XDR. The **Tenant name** column shows which tenant the incident originates from:
 
-   :::image type="content" source="/defender/media/defender/mto-incidents.png" alt-text="Screenshot of the Microsoft Defender XDR multi-tenant incidents page" lightbox="/defender/media/defender/mto-incidents.png":::
+   :::image type="content" source="/defender/media/defender/mto-incidents.png" alt-text="Screenshot of the Microsoft Defender multi-tenant incidents page" lightbox="/defender/media/defender/mto-incidents.png":::
 
 2. Select the incident you want to view. A flyout panel opens with the incident details page:
 
