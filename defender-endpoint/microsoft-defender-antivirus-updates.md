@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 08/07/2024
+ms.date: 08/08/2024
 audience: ITPro
 ms.topic: reference
 author: siosulli
@@ -149,22 +149,6 @@ All our updates contain:
 - Optimized how scans are prioritized.
 - Fixed a crash caused by a race condition with a device control driver.
 - Added Event Viewer Logging for scan start event where the scan originates from PowerShell.
-
-### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.4)
-
-- Security intelligence update version: **1.411.7.0**
-- Release date: **May 07, 2024** (Engine) / **May 16, 2024** (Platform)
-- Engine: **1.1.24040.1**
-- Platform: **4.18.24040.4**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Added an opt-out feature for Experimental Configuration Services (ECS) and One collector in the Core Service.
-- Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
-- After a new engine version is released, support for older versions (N-2) will now reduce to technical support only. Engine versions older than N-2 are no longer supported.
-- Improved health monitoring and telemetry for [attack surface rules](overview-attack-surface-reduction.md) exclusions.
-- Updated inaccurate information in [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) regarding wildcard usage with contextual exclusions.
 
 ### Previous version updates: Technical upgrade support only
 
