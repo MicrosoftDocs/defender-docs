@@ -25,7 +25,7 @@ This article describes the steps you need to take to start using multitenant man
 
 1. [Review the requirements](#review-the-requirements)
 2. [Verify your tenant access](#verify-your-tenant-access)
-3. [Set up multitenant management in Microsoft Defender XDR](#set-up-multi-tenant-management)
+3. [Set up multitenant management in Microsoft Defender XDR](#set-up-multitenant-management)
 
 >[!Note]
 >- In multi-tenant management, interactions between the multi-tenant user and the managed tenants could involve accessing data and managing configurations. The ability to undertake these actions is determined by the permissions a managed tenant has granted the multi-tenant user.
