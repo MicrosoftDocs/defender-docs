@@ -120,9 +120,7 @@ For more information, see the [Defender for Endpoint Device discovery overview](
 
 ### Purchase standalone licenses
 
-<!--Purchase standalone, per-device licenses if you're an ME5/E5 Security customer who needs extra devices monitored, or if you're a Defender for Endpoint customer who wants to add enterprise IoT security to your organization. --- i think this can be removed it has been said enough-->
-
-**To purchase standalone licenses**:
+To purchase standalone licenses:
 
 1. Go to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog) **Billing > Purchase services**. If you don't have this option, select **Marketplace** instead.
 
@@ -191,7 +189,7 @@ For more information, see [Advanced hunting](/microsoft-365/security/defender/ad
 
 ## Turn off enterprise IoT security
 
-If you no longer need the **Enterprise IoT security** service, you can turn it off. This is supported only for customers who don't have any standalone, per-device licenses added on to the Defender portal. <!-- This doesn't apply to customers with standalone, per-device licenses added to the Defender portal. LW -->
+Customers with ME5/E5 Security plans who no longer need the **Enterprise IoT security** service, can turn off the feature.<!-- This is supported only for customers who don't have any standalone, per-device licenses added on to the Defender portal.   ----- This doesn't apply to customers with standalone, per-device licenses added to the Defender portal. LW -->
 
 **To turn off enterprise IoT monitoring**:
 
@@ -200,3 +198,5 @@ If you no longer need the **Enterprise IoT security** service, you can turn it o
 1. Toggle the option to **Off**.
 
 You stop getting security value in the Defender portal, including purpose-built alerts, vulnerabilities, and recommendations.
+
+Customers with a Microsoft Defender for Endpoint P2 license who don't add a standalone license by the time the trial ends, have the trial automatically canceled, and lose access to Enterprise IoT security features.
