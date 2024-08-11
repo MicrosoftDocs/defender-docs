@@ -15,7 +15,7 @@ ms.collection:
   - essentials-manage
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 06/20/2024
+ms.date: 07/31/2024
 ---
 
 # Managed detection and response
@@ -98,6 +98,7 @@ Defender Experts for XDR currently supports the following one-click managed resp
 |[Restrict app execution](/defender-endpoint/respond-machine-alerts##restrict-app-execution)| Restricts the execution of potentially malicious programs and locks down the device to prevent further attempts.|
 |[Release from isolation](/defender-endpoint/respond-machine-alerts#isolate-devices-from-the-network)| Undoes isolation of a device.|
 |[Remove app restriction](/defender-endpoint/respond-machine-alerts#restrict-app-execution)| Undoes release from isolation.|
+|[Disable user](/defender-for-identity/remediation-actions#supported-actions) | Disable an identity from accessing the network and different endpoints.| 
 
 Apart from these one-click actions, you can also receive managed responses from our experts that you need to perform manually.
 

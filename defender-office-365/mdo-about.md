@@ -148,4 +148,4 @@ This quick-reference section summarizes the different capabilities between Defen
 
 [What's new in Microsoft Defender for Office 365](defender-for-office-365-whats-new.md)
 
-The [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=Microsoft%2CDefender%2Cfor%2COffice%2C365) describes new features that are being added to Defender for Office 365.
+The [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Office%20365) describes new features that are being added to Defender for Office 365.

@@ -4,7 +4,7 @@ description: Provide and validate exclusions for Microsoft Defender for Endpoint
 ms.service: defender-endpoint
 ms.author: dansimp
 author: dansimp
-ms.reviewer: gopkr
+ms.reviewer: gopkr, ardeshmukh
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,20 +15,12 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 07/23/2024
+ms.date: 07/31/2024
 ---
 
 # Configure and validate exclusions for Microsoft Defender for Endpoint on Linux
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**In this article:**
-
-1. [Supported exclusion scopes](#supported-exclusion-scopes)
-2. [Supported exclusion types](#supported-exclusion-types)
-3. [How to configure the list of exclusions](#how-to-configure-the-list-of-exclusions)
-4. [Validate exclusions lists with the EICAR test file](#validate-exclusions-lists-with-the-eicar-test-file)
-5. [Allow threats](#allow-threats)
 
 **Applies to:**
 
@@ -41,7 +33,7 @@ ms.date: 07/23/2024
 This article provides information on how to define antivirus and global exclusions for Microsoft Defender for Endpoint. Antivirus exclusions apply to on-demand scans, real-time protection (RTP), and behavior monitoring (BM). Global exclusions apply to real-time protection (RTP), behavior monitoring (BM), and endpoint detection and response (EDR), thus stopping all the associated antivirus detections, EDR alerts, and visibility for the excluded item.
 
 > [!IMPORTANT]
-> The antivirus exclusions described in this article apply to only antivirus capabilities and not endpoint detection and response (EDR). Files that you exclude using the antivirus exclusions described in this article can still trigger EDR alerts and other detections. Whereas the global exclusions described in this section apply to antivirus as well as endpoint detection and response capabilities thus stopping all associated AV protection, EDR alerts and detection. Global exclusions are available from Defender for Endpoint version `101.23092.0012` or later.  For EDR exclusions, [contact support](/microsoft-365/admin/get-help-support).
+> The antivirus exclusions described in this article apply to only antivirus capabilities and not endpoint detection and response (EDR). Files that you exclude using the antivirus exclusions described in this article can still trigger EDR alerts and other detections. Whereas the global exclusions described in this section apply to antivirus as well as endpoint detection and response capabilities thus stopping all associated AV protection, EDR alerts and detection. Global exclusions are available from Defender for Endpoint version `101.23092.0012` or later till Insider Slow Ring.  For EDR exclusions, [contact support](/microsoft-365/admin/get-help-support).
 
 You can exclude certain files, folders, processes, and process-opened files from Defender for Endpoint on Linux.
 
@@ -81,7 +73,8 @@ Process|A specific process (specified either by the full path or file name) and 
 File, folder, and process exclusions support the following wildcards:
 
 > [!NOTE]
-> Wildcards are not supported while configuring global exclusions. 
+> File path needs to be present before adding or removing file exclusions with scope as global.
+> Wildcards are not supported while configuring global exclusions.
 
 Wildcard|Description|Examples|
 ---|---|---
@@ -114,7 +107,7 @@ mdatp exclusion
 
 Examples:
 
-- Add an exclusion for a file extension *(Extension exclusion isn't supported for  global exclusion scope)* : 
+- Add an exclusion for a file extension *(Extension exclusion isn't supported for global exclusion scope)* : 
 
     ```bash
     mdatp exclusion extension add --name .txt
@@ -132,7 +125,7 @@ Examples:
     Extension exclusion removed successfully
     ```
 
-- Add/Remove an exclusion for a file:
+- Add/Remove an exclusion for a file *(File path should already be present in case of adding or removing exclusion with global scope)* :
 
     ```bash
     mdatp exclusion file add --path /var/log/dummy.log --scope epp
