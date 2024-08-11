@@ -1,10 +1,11 @@
 ---
 title: Validate your Microsoft Defender for APIs alerts
-description: Learn how to validate your Microsoft Defender for APIs alerts
+description: Validate your Microsoft Defender for APIs alerts and ensure the security of your APIs with full lifecycle protection, detection, and response coverage.
 ms.service: defender-for-cloud
-ms.topic: conceptual
-ms.date: 05/11/2023
+ms.topic: how-to
+ms.date: 08/11/2024
 ms.custom: references_regions
+#customer intent: As a user, I want to learn how to validate my Microsoft Defender for APIs alerts so that I can ensure the security of my APIs.
 ---
 
 # Validate your Microsoft Defender for APIs alerts
@@ -23,55 +24,33 @@ This page will walk you through the steps to trigger an alert for one of your AP
 
 - [Onboard Defender for APIs](defender-for-apis-deploy.md)
 
-- An account with [Postman](https://identity.getpostman.com/signup)
-
 ## Simulate an alert
+
+It is important to validate that Defender for APIs is working as expected. To do this, you can simulate an alert by sending a request to your API endpoint with a suspicious user agent.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Search for and select **API Management services**.
 
-    :::image type="content" source="media/defender-for-apis-validation/api-management.png" alt-text="Screenshot that shows you where on the Azure portal to search for and select API Management service.":::
+    :::image type="content" source="media/defender-for-apis-validation/api-management.png" alt-text="Screenshot that shows you where on the Azure portal to search for and select API Management service." lightbox="media/defender-for-apis-validation/api-management.png":::
+
+1. Select the relevant API.
 
 1. Select **APIs**.
 
-    :::image type="content" source="media/defender-for-apis-validation/apis-section.png" alt-text="Screenshot that shows where to select APIs from the menu.":::
+    :::image type="content" source="media/defender-for-apis-validation/apis-section.png" alt-text="Screenshot that shows where to select APIs from the menu." lightbox="media/defender-for-apis-validation/apis-section.png":::
 
 1. Select an API endpoint.
 
     :::image type="content" source="media/defender-for-apis-validation/api-endpoint.png" alt-text="Screenshot that shows where to select an API endpoint.":::
 
-1. Navigate to the **Test** tab.
+1. Select **Test** > **Get Retrieve resource (cashed)**.
 
-1. Select **Get Retrieve resource (cashed)**.
+1. In the Headers section, select **User-Agent** in the name drop down menu.
 
-1. In the HTTP request section select the see more button.
+    :::image type="content" source="media/defender-for-apis-validation/user-agent.png" alt-text="Screenshot of the Headers section of the APIs showing you how to select the User-Agent option under the name drop-down menu." lightbox="media/defender-for-apis-validation/user-agent.png":::
 
-    :::image type="content" source="media/defender-for-apis-validation/see-more.png" alt-text="Screenshot that shows you where the see more button is located on the screen.":::
-
-1. Select the **Copy** button.
-
-1. Navigate and sign in to your [Postman account](https://www.postman.com/).
-
-1. Select **My Workspace**.
-
-1. Select **+**.
-
-1. Enter the HTTPS request information you copied.
-
-    :::image type="content" source="media/defender-for-apis-validation/postman-url.png" alt-text="Screenshot that shows you where to enter the URL you copied earlier.":::
-
-1. Select the **Headers** tab
-
-1. In the key field, enter **Ocp-Apim-Subscription-Key**.
-
-1. In the value field enter the key you copied.
-
-1. In the key field enter **User-Agent**.
-
-1. In the value field enter **javascript:**.
-
-    :::image type="content" source="media/defender-for-apis-validation/postman-keys.png" alt-text="Screenshot that shows where to enter the keys and their values in Postman.":::
+1. In the value field enter `javascript:`.
 
 1. Select **Send**
 
