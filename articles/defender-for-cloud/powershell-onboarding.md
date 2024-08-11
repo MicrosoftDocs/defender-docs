@@ -14,7 +14,7 @@ Onboarding Microsoft Defender for Cloud using PowerShell enables you to programm
 
 This article provides a sample PowerShell script that can be modified and used in your environment to roll out Defender for Cloud across your subscriptions.
 
-In this example, we'll enable Defender for Cloud on a subscription with ID: <Subscription ID> and apply the recommended settings that provide a high level of protection, by enabling Microsoft Defender for Cloud's enhanced security features, which provides advanced threat protection and detection capabilities:
+In this example, we'll enable Defender for Cloud on a subscription with ID: `<Subscription ID>` and apply the recommended settings that provide a high level of protection, by enabling Microsoft Defender for Cloud's enhanced security features, which provides advanced threat protection and detection capabilities:
 
 1. Enable [the enhanced security in Microsoft Defender for Cloud](enable-enhanced-security.md).
 
