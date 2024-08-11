@@ -97,6 +97,9 @@ The same role groups and roles are available in the Defender portal and in the P
 
 For complete information about these role groups, see [Roles and role groups in the Microsoft Defender XDR and Microsoft Purview compliance portals](scc-permissions.md)
 
+> [!NOTE]
+> Microsoft Defender for Office data available in the Defender portal is not impacted by Adaptive Scopes, if those are configured in the Microsoft Purview portal. For additional informaion on Purview's Adaptive scopes, see [Adaptive scopes in Purview compliance portal](https://learn.microsoft.com/en-us/purview/purview-adaptive-scopes)
+> 
 The following actions are available for Email & collaboration role groups in the Defender portal:
 
 - [Create role groups](#create-email--collaboration-role-groups-in-the-microsoft-defender-portal)
