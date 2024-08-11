@@ -4,7 +4,7 @@ description: Learn how to Retrieve attack path data with APIs in Microsoft Defen
 ms.author: dacurwin
 author: dcurwin
 ms.topic: how-to
-ms.date: 03/03/2024
+ms.date: 08/11/2024
 #customer intent: As a developer, I want to learn how to retrieve attack path data with APIs in Microsoft Defender for Cloud so that I can enhance the security of my environment.
 ---
 
@@ -31,7 +31,7 @@ For example, `Internet exposed VM with high severity vulnerabilities and read pe
 ```kusto
 securityresources
 | where type == "microsoft.security/attackpaths"
-| where subscriptionId == "212f9889-769e-45ae-ab43-6da33674bd26"
+| where subscriptionId == "<Subscription ID>"
 | extend AttackPathDisplayName = tostring(properties["displayName"])
 | where AttackPathDisplayName == "<DISPLAY_NAME>"
 ```
