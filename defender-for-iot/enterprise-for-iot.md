@@ -62,13 +62,13 @@ Known CVEs vulnerabilities are detected and showing in the Defender portal assoc
 
 ## Manage enterprise IoT monitoring support with Microsoft Defender for IoT
 
-For Enterprise IoT networks, use a trial license as an add-on to Microsoft Defender for Endpoint. A trial license supports 100 devices. There are two options available depending on your existing license:
+To add Enterprise IoT monitoring to Microsoft Defender for Endpoint, there are two options available depending on your existing license:
 
-1. Customers with ME5/E5 Security plans have support for enterprise IoT monitoring available, and don't need to start a trial.
+1. Customers with ME5/E5 Security plans already have enterprise IoT monitoring available, but just need to turn on the feature.
 
     To turn on Enterprise for IoT [follow these instructions](enterprise-for-iot-get-started.md#turn-on-enterprise-iot-monitoring).
 
-1. Customers with a Microsoft Defender for Endpoint P2 license only can use a trial standalone license for enterprise IoT monitoring.
+1. Customers with a Microsoft Defender for Endpoint P2 license only can use a trial standalone license for enterprise IoT monitoring. A trial license supports 100 devices.
 
     Start your enterprise IoT trial using the [Microsoft Defender for IoT - EIoT Device License - add-on wizard](https://signup.microsoft.com/get-started/signup?products=b2f91841-252f-4765-94c3-75802d7c0ddb&ali=1&bac=1) or via the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog).
 
@@ -76,11 +76,11 @@ A permanent Enterprise IoT monitoring license supports five devices per Microsof
 
 ### Disable Enterprise IoT
 
-For more information, see [Turn off enterprise IoT security](enterprise-for-iot-get-started.md#turn-off-enterprise-iot-security).
+Customers with ME5/E5 Security plans who no longer need the Enterprise IoT monitoring can turn off the feature. For more information, see [Turn off enterprise IoT security](enterprise-for-iot-get-started.md#turn-off-enterprise-iot-security).
 
 ### End of trial period
 
-If you haven't added a standalone license by the time your trial ends, your trial is automatically canceled, and you lose access to Enterprise IoT security features.
+Customers with a Microsoft Defender for Endpoint P2 license who don't add a standalone license by the time the trial ends, have the trial automatically canceled, and lose access to Enterprise IoT security features.
 
 For more information, see [purchase a standalone license](enterprise-for-iot-get-started.md#purchase-a-standalone-license).
 
