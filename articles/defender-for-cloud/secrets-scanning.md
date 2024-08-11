@@ -8,22 +8,25 @@ ms.date: 04/16/2024
 
 # Protecting secrets in Defender for Cloud
 
-Microsoft Defender for Cloud helps security team to minimize the risk of attackers exploiting security secrets.
+Microsoft Defender for Cloud helps security teams to minimize the risk of attackers exploiting security secrets.
 
 After gaining initial access, attackers can move laterally across networks, find sensitive data, and exploit vulnerabilities to damage critical information systems by accessing cloud deployments, resources, and internet facing workloads. Lateral movement often involves credentials threats that typically exploit sensitive data such as exposed credentials and secrets such as passwords, keys, tokens, and connection strings to gain access to additional assets. Secrets are often found in files, stored on VM disks, or on containers, across multicloud deployments. Exposed secrets happen for a number of reasons:
 
-- Lack of awareness: Organizations might not be aware of the risks and consequences of secrets exposure in their cloud environment. There might not be a clear policy on handling and protecting secrets in code and configuration files.
-- Lack of discovery tools: Tools might not be in place to detect and remediate secrets leaks.
-- Complexity and speed: Modern software development is complex and fast-paced, relying on multiple cloud platforms, open-source software, and third-party code. Developers might use secrets to access and integrate resources and services in cloud environments They might store secrets in source code repositories for convenience and reuse. This can lead to accidental exposure of secrets in public or private repositories, or during data transfer or processing.
-- Trade-off between security and usability: Organizations might keep secrets exposed in cloud environments for ease-of-use, to avoid the complexity and latency of encrypting and decrypting data at rest and in transit. This can compromise the security and privacy of data and credentials.
+- **Lack of awareness**: Organizations might not be aware of the risks and consequences of secrets exposure in their cloud environment. There might not be a clear policy on handling and protecting secrets in code and configuration files.
+- **Lack of discovery tools**: Tools might not be in place to detect and remediate secrets leaks.
+- **Complexity and speed**: Modern software development is complex and fast-paced, relying on multiple cloud platforms, open-source software, and third-party code. Developers might use secrets to access and integrate resources and services in cloud environments They might store secrets in source code repositories for convenience and reuse. This can lead to accidental exposure of secrets in public or private repositories, or during data transfer or processing.
+- **Trade-off between security and usability**: Organizations might keep secrets exposed in cloud environments for ease-of-use, to avoid the complexity and latency of encrypting and decrypting data at rest and in transit. This can compromise the security and privacy of data and credentials.
 
-Defender for Cloud provides secrets scanning for virtual machines, and for cloud deployments, to reduce lateral movement risk.
 
-- **Virtual machines (VMs)**: Agentless secrets scanning on multicloud VMs.
-- **Cloud deployments**: Agentless secrets scanning across multicloud infrastructure-as-code deployment resources.
-- **Azure DevOps**: [Scanning to discover exposed secrets in Azure DevOps](defender-for-devops-introduction.md).
+## Secrets scanning support 
 
-## Prerequisites
+Defender for Cloud provides secrets scanning to reduce lateral movement risk, as summarized in the table.
+
+**Scanning type** | **Details** | **Requirements**
+--- | --- | ---
+**VM scanning** |  Agentless secrets scanning on multicloud VMs. | Defender for Cloud Security Posture Management (CSPM) plan, or Defender for Servers Plan 2.
+**Cloud deployment scanning** | Agentless secrets scanning across multicloud infrastructure-as-code deployment resources. | Defender CSPM plan
+**Azure DevOps scanning** | [Scanning to discover exposed secrets in Azure DevOps](defender-for-devops-introduction.md). | Defender CSPM plan
 
 Required roles and permissions:
 
@@ -37,13 +40,7 @@ Required roles and permissions:
             
                - Owner
                
-## Deploying secrets scanning
 
-Secrets scanning is provided as a feature in Defender for Cloud plans:
-
-- **VM scanning**: Provided with Defender for Cloud Security Posture Management (CSPM) plan, or with Defender for Servers Plan 2.
-- **Cloud deployment resource scanning** Provided with Defender CSPM.
-- **DevOps scanning**: Provided with Defender CSPM.
 
 ## Reviewing secrets findings
 

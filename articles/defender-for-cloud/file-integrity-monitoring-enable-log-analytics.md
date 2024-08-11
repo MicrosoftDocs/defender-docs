@@ -8,44 +8,38 @@ ms.date: 05/16/2024
 #customer intent: As a user, I want to learn how to enable File Integrity Monitoring with the Log Analytics agent so that I can track and identify changes in my environment.
 ---
 
-# File Integrity Monitoring using the Log Analytics agent
+# Enable file integrity monitoring with the MMA
 
-To provide [File Integrity Monitoring (FIM)](file-integrity-monitoring-overview.md), the Log Analytics agent uploads data to the Log Analytics workspace. By comparing the current state of these items with the state during the previous scan, FIM notifies you if suspicious modifications have been made.
+In the Defender for Servers plan in Microsoft Defender for Cloud, [file integrity monitoring](file-integrity-monitoring-overview.md) examines operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack.
 
-> [!NOTE]
-> As the Log Analytics agent (also known as MMA) is set to retire in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
 
-In this article, you'll learn how to:
-
-- [Enable File Integrity Monitoring with the Log Analytics agent](#enable-file-integrity-monitoring-with-the-log-analytics-agent)
-- [Disable File Integrity Monitoring](#disable-file-integrity-monitoring)
-- [Monitor workspaces, entities, and files](#monitor-workspaces-entities-and-files)
-- [Compare baselines using File Integrity Monitoring](#compare-baselines-using-file-integrity-monitoring)
+File integrity monitoring uses the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA) to collect and upload data to the Log Analytics workspace. By comparing the current state of these items with the state during the previous scan, file integrity monitoring notifies you if suspicious modifications have been made.
 
 > [!NOTE]
-> File Integrity Monitoring might create the following account on monitored SQL Servers: `NT Service\HealthService` \
-> If you delete the account, it will be automatically recreated.
+> - File integrity monitoring in general availability (GA) uses the MMA for change tracking.The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024.
+> - File integrity monitoring was available [in preview using the Azure Monitoring Agent (AMA)](file-integiry-monitoring-enable-ama.md) This preview is no longer supported.
+> - A new version of the feature, using the Microsoft Defender for Endpoint agent that's integrated with Defender for Servers will be released in preview around August 2024.
 
-## Availability
 
-|Aspect|Details|
-|----|:----|
-|Release state:|General availability (GA)|
-|Pricing:|Requires [Microsoft Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features).<br>Using the Log Analytics agent, FIM uploads data to the Log Analytics workspace. Data charges apply, based on the amount of data you upload. See [Log Analytics pricing](https://azure.microsoft.com/pricing/details/log-analytics/) to learn more.|
-|Required roles and permissions:|**Workspace owner** can enable/disable FIM (for more information, see [Azure Roles for Log Analytics](/services-hub/health/azure-roles#azure-roles)).<br>**Reader** can view results.|
-|Clouds:|:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: National (Azure Government, Microsoft Azure operated by 21Vianet)<br>Supported only in regions where Azure Automation's change tracking solution is available.<br>:::image type="icon" source="./media/icons/yes-icon.png"::: [Azure Arc](/azure/azure-arc/servers/overview) enabled devices.<br>See [Supported regions for linked Log Analytics workspace](/azure/automation/how-to/region-mappings).<br>[Learn more about change tracking](/azure/automation/change-tracking/overview).<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Connected AWS accounts|
+## Prerequisites
 
-## Enable File Integrity Monitoring with the Log Analytics agent
+- File integrity monitoring is available in [Defender for Servers Plan 2](defender-for-servers-introduction.md)). The plan must be enabled.
+- Using the Log Analytics agent, file integrity monitoring uploads data to the Log Analytics workspace. Data charges apply, based on the amount of data you upload. Learn more about [Log Analytics pricing](https://azure.microsoft.com/pricing/details/log-analytics/).
+- You need Workspace Owner permissions to enable/disable file integrity monitoring. Learn more about [Azure roles for Log Analytics](/services-hub/health/azure-roles#azure-roles). The Reader role can view results.
+- File integrity monitoring is supported for Azure VMs, on-premises machines onboarded as Azure Arc VMs, and AWS accounts and GCP projects connected to Defender for Cloud.
+- When monitoring SQL Servers, file integrity monitoring might create this account: `NT Service\HealthService`. If you delete the account, it's automatically recreated.
+- You can't work with file integrity monitoring using the REST API. It's only available in the Azure portal.
 
-FIM is only available from Defender for Cloud's pages in the Azure portal. There's currently no REST API for working with FIM.
 
-1. From the **Workload protections** dashboard's **Advanced protection** area, select **File integrity monitoring**.
+## Enable file integrity monitoring with the MMA
+
+1. From the **Workload protections** > **Advanced protection**, select **File integrity monitoring**.
 
    :::image type="content" source="./media/file-integrity-monitoring-overview/open-file-integrity-monitoring.png" alt-text="Screenshot of screenshot of opening the File Integrity Monitoring dashboard." lightbox="./media/file-integrity-monitoring-overview/open-file-integrity-monitoring.png":::
 
     The following information is provided for each workspace:
 
-    - Total number of changes that occurred in the last week (you might see a dash "-“ if FIM isn't enabled on the workspace)
+    - Total number of changes that occurred in the last week (you might see a dash "-“ if file integrity monitoring isn't enabled on the workspace)
     - Total number of computers and VMs reporting to the workspace
     - Geographic location of the workspace
     - Azure subscription that the workspace is under
@@ -54,29 +48,26 @@ FIM is only available from Defender for Cloud's pages in the Azure portal. There
 
     - Access and view the status and settings of each workspace
 
-    - ![Upgrade plan icon.][4] Upgrade the workspace to use enhanced security features. This icon indicates that the workspace or subscription isn't protected with Microsoft Defender for Servers. To use the FIM features, your subscription must be protected with this plan. Learn about how to [enable Defender for Servers](plan-defender-for-servers-select-plan.md).
+    - ![Upgrade plan icon.][4] Upgrade the workspace to use enhanced security features. This icon indicates that the workspace or subscription isn't protected with Microsoft Defender for Servers. To use the file integrity monitoring features, your subscription must be protected with this plan. Learn about how to [enable Defender for Servers](plan-defender-for-servers-select-plan.md).
 
-    - ![Enable icon][3] Enable FIM on all machines under the workspace and configure the FIM options. This icon indicates that FIM isn't enabled for the workspace. If there's no enable or upgrade button, and the space is blank, it means that FIM is already enabled on the workspace.
+    - ![Enable icon][3] Enable file integrity monitoring on all machines under the workspace and configure the file integrity monitoring options. This icon indicates that file integrity monitoring isn't enabled for the workspace. If there's no enable or upgrade button, and the space is blank, it means that file integrity monitoring is already enabled on the workspace.
 
-        :::image type="content" source="./media/file-integrity-monitoring-overview/workspace-list-fim.png" alt-text="Screenshot of enabling FIM for a specific workspace.":::
+        :::image type="content" source="./media/file-integrity-monitoring-overview/workspace-list-fim.png" alt-text="Screenshot of enabling file integrity monitoring for a specific workspace.":::
 
-1. Select **ENABLE**. The details of the workspace including the number of Windows and Linux machines under the workspace is shown.
+1. Select **Enable file integrity monitoring**. The details of the workspace including the number of Windows and Linux machines under the workspace is shown.
 
-    :::image type="content" source="./media/file-integrity-monitoring-overview/workspace-fim-status.png" alt-text="Screenshot of FIM workspace details page.":::
-
+    :::image type="content" source="./media/file-integrity-monitoring-overview/workspace-fim-status.png" alt-text="Screenshot of file integrity monitoringM workspace details page.":::
    The recommended settings for Windows and Linux are also listed.  Expand **Windows files**, **Registry**, and **Linux files** to see the full list of recommended items.
 
-1. Clear the checkboxes for any recommended entities you don't want to be monitored by FIM.
+1. Clear the checkboxes for any recommended entities you don't want to be monitored by file integrity monitoring.
 
-1. Select **Apply file integrity monitoring** to enable FIM.
+1. Select **Apply file integrity monitoring** to enable file integrity monitoring.
 
 You can change the settings at any time. Learn more about [editing monitored entities](#edit-monitored-entities).
 
-### Disable File Integrity Monitoring
+### Disable file integrity monitoring
 
-FIM uses the Azure Change Tracking solution to track and identify changes in your environment. By disabling FIM, you remove the Change Tracking solution from selected workspace.
-
-To disable FIM:
+File integrity monitoring uses the Azure Monitor Change Tracking solution to track and identify changes in your environment. By disabling file integrity monitoring, you remove the Change Tracking solution from selected workspace.
 
 1. From the **File Integrity Monitoring dashboard** for a workspace, select **Disable**.
 
@@ -88,11 +79,11 @@ To disable FIM:
 
 ### Audit monitored workspaces
 
-The **File integrity monitoring** dashboard displays for workspaces where FIM is enabled. The FIM dashboard opens after you enable FIM on a workspace or when you select a workspace in the **file integrity monitoring** window that already has FIM enabled.
+The **File integrity monitoring** dashboard displays for workspaces where file integrity monitoring is enabled. The file integrity monitoring dashboard opens after you enable on a workspace or when you select a workspace in the **file integrity monitoring** window that already has file integrity monitoring enabled.
 
-:::image type="content" source="./media/file-integrity-monitoring-overview/fim-dashboard.png" alt-text="Screenshot of the FIM dashboard and its various informational panels.":::
+:::image type="content" source="./media/file-integrity-monitoring-overview/fim-dashboard.png" alt-text="Screenshot of the file integrity monitoring dashboard and its various informational panels.":::
 
-The FIM dashboard for a workspace displays the following details:
+The file integrity monitoring dashboard for a workspace displays the following details:
 
 - Total number of machines connected to the workspace
 - Total number of changes that occurred during the selected time period
@@ -101,7 +92,7 @@ The FIM dashboard for a workspace displays the following details:
 
 Select **Filter** at the top of the dashboard to change the time period for which changes are shown.
 
-:::image type="content" source="./media/file-integrity-monitoring-overview/dashboard-filter.png" alt-text="Screenshot of time period filter for the FIM dashboard.":::
+:::image type="content" source="./media/file-integrity-monitoring-overview/dashboard-filter.png" alt-text="Screenshot of time period filter for the file integrity monitoring dashboard.":::
 
 The **Servers** tab lists the machines reporting to this workspace. For each machine, the dashboard lists:
 
@@ -139,7 +130,7 @@ The **Changes** tab (shown below) lists all changes for the workspace during the
       - File content
       - Windows services
 
-      Each tab lists the entities that you can edit in that category. For each entity listed, Defender for Cloud identifies whether FIM is enabled (true) or not enabled (false). Edit the entity to enable or disable FIM.
+      Each tab lists the entities that you can edit in that category. For each entity listed, Defender for Cloud identifies whether file integrity monitoring is enabled (true) or not enabled (false). Edit the entity to enable or disable file integrity monitoring.
 
     :::image type="content" source="./media/file-integrity-monitoring-overview/file-integrity-monitoring-workspace-configuration.png" alt-text="Screenshot of workspace configuration for file integrity monitoring in Microsoft Defender for Cloud.":::
 
@@ -182,11 +173,11 @@ Use wildcards to simplify tracking across directories. The following rules apply
 
 ## Compare baselines using File Integrity Monitoring
 
-[File Integrity Monitoring (FIM)](file-integrity-monitoring-overview.md) informs you when changes occur to sensitive areas in your resources, so you can investigate and address unauthorized activity. FIM monitors Windows files, Windows registries, and Linux files.
+File integrity monitoring informs you when changes occur to sensitive areas in your resources, so you can investigate and address unauthorized activity. File integrity monitoring monitors Windows files, Windows registries, and Linux files.
 
 ### Enable built-in recursive registry checks
 
-The FIM registry hive defaults provide a convenient way to monitor recursive changes within common security areas.  For example, an adversary might configure a script to execute in LOCAL_SYSTEM context by configuring an execution at startup or shutdown.  To monitor changes of this type, enable the built-in check.
+The file integrity monitoring registry hive defaults provide a convenient way to monitor recursive changes within common security areas.  For example, an adversary might configure a script to execute in LOCAL_SYSTEM context by configuring an execution at startup or shutdown.  To monitor changes of this type, enable the built-in check.
 
 ![Registry.](./media/file-integrity-monitoring-enable-log-analytics/baselines-registry.png)
 
@@ -195,7 +186,7 @@ The FIM registry hive defaults provide a convenient way to monitor recursive cha
 
 ### Add a custom registry check
 
-FIM baselines start by identifying characteristics of a known-good state for the operating system and supporting application.  For this example, we'll focus on the password policy configurations for Windows Server 2008 and higher.
+File integrity monitoring baselines start by identifying characteristics of a known-good state for the operating system and supporting application.  For this example, we'll focus on the password policy configurations for Windows Server 2008 and higher.
 
 |Policy Name                 | Registry Setting|
 |----------------------------|-----------------|
@@ -213,7 +204,7 @@ FIM baselines start by identifying characteristics of a known-good state for the
 > [!NOTE]
 > To learn more about registry settings supported by various operating system versions, refer to the [Group Policy Settings reference spreadsheet](https://www.microsoft.com/download/confirmation.aspx?id=25250).
 
-To configure FIM to monitor registry baselines:
+Monitor registry baselines:
 
 1. In the **Add Windows Registry for Change Tracking** window, select the **Windows Registry Key** text box.
 1. Enter the following registry key:
@@ -222,7 +213,7 @@ To configure FIM to monitor registry baselines:
     HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters
     ```
 
-    :::image type="content" source="./media/file-integrity-monitoring-enable-log-analytics/baselines-add-registry.png" alt-text="Screenshot of enable FIM on a registry.":::
+    :::image type="content" source="./media/file-integrity-monitoring-enable-log-analytics/baselines-add-registry.png" alt-text="Screenshot of enable file integrity monitoring on a registry.":::
 
 ### Track changes to Windows files
 
@@ -231,7 +222,7 @@ In the example in the following figure, **Contoso Web App** resides in the D:\ d
 
 1. Create a custom Windows file entry by providing a name of the setting class, enabling recursion, and specifying the top folder with a wildcard (*) suffix.
 
-    :::image type="content" source="./media/file-integrity-monitoring-enable-log-analytics/baselines-add-file.png" alt-text="Screenshot of enable FIM on a file.":::
+    :::image type="content" source="./media/file-integrity-monitoring-enable-log-analytics/baselines-add-file.png" alt-text="Screenshot of enable file integrity monitoring on a file.":::
 
 ### Retrieve change data
 
@@ -262,16 +253,9 @@ File Integrity Monitoring data resides within the Azure Log Analytics/Configurat
 
 Reports can be exported to CSV for archival and/or channeled to a Power BI report.
 
-![FIM data.](./media/file-integrity-monitoring-enable-log-analytics/baselines-data.png)
+![File integrity monitoring data.](./media/file-integrity-monitoring-enable-log-analytics/baselines-data.png)
 
 <!--Image references-->
 [3]: ./media/file-integrity-monitoring-overview/enable.png
 [4]: ./media/file-integrity-monitoring-overview/upgrade-plan.png
 
-## Next steps
-
-Learn more about Defender for Cloud in:
-
-- [Setting security policies](tutorial-security-policy.md) - Learn how to configure security policies for your Azure subscriptions and resource groups.
-- [Managing security recommendations](review-security-recommendations.md) - Learn how recommendations help you protect your Azure resources.
-- [Azure Security blog](https://azure.microsoft.com/blog/topics/security/) - Get the latest Azure security news and information.

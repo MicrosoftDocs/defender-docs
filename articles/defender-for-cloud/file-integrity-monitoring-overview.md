@@ -6,21 +6,27 @@ ms.author: dacurwin
 ms.topic: how-to
 ms.date: 03/11/2024
 ---
-# File Integrity Monitoring in Microsoft Defender for Cloud
+# File integrity monitoring
 
-File Integrity Monitoring (FIM) examines operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack.
+In the Defender for Servers plan in Microsoft Defender for Cloud, file integrity monitoring examines operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack.
 
-FIM (file integrity monitoring) uses the Azure Change Tracking solution to track and identify changes in your environment. When FIM is enabled, you have a **Change Tracking** resource of type **Solution**. If you remove the **Change Tracking** resource, you'll also disable the File Integrity Monitoring feature in Defender for Cloud. FIM lets you take advantage of [Change Tracking](/azure/automation/change-tracking/overview) directly in Defender for Cloud. For data collection frequency details, see [Change tracking data collection details](/azure/automation/change-tracking/overview#change-tracking-and-inventory-data-collection).
+- File integrity monitoring uses the Azure Monitor change tracking, to track and identify changes in your environment. When file integrity monitoring  is enabled, you have a **Change Tracking** resource of type **Solution**. If you remove the **Change Tracking** resource, you disable the file integrity monitoring  feature in Defender for Cloud.
+- File integrity monitoring  lets you take advantage of [Change Tracking](../automation/change-tracking/overview.md) directly in Defender for Cloud. For data collection frequency details, see [Change tracking data collection details](../automation/change-tracking/overview.md#change-tracking-and-inventory-data-collection).
 
-Defender for Cloud recommends entities to monitor with FIM, and you can also define your own FIM policies or entities to monitor. FIM informs you about suspicious activity such as:
+> [!Note]
+> - File integrity monitoring in general availability (GA) uses the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) for change tracking.The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024.
+> - File integrity monitoring was available in preview using the Azure Monitoring Agent (AMA). This preview is no longer supported.
+> - A new version of the feature, using the Microsoft Defender for Endpoint agent that's integrated with Defender for Servers will be released in preview around August 2024.
+
+## Monitoring files
+
+Defender for Cloud recommends entities to monitor with file integrity monitoring, and you can also define your own file integrity monitoring policies or entities to monitor. File integrity monitoring  informs you about suspicious activity such as:
 
 - File and registry key creation or removal
 - File modifications (changes in file size, access control lists, and hash of the content)
 - Registry modifications (changes in size, access control lists, type, and content)
 
-Many regulatory compliance standards require implementing FIM controls, such as PCI-DSS and ISO 17799.
-
-## Which files should I monitor?
+Many regulatory compliance standards require implementing file integrity monitoring controls, such as PCI-DSS and ISO 17799.
 
 When choosing which files to monitor, consider the files that are critical for your system and applications. Monitor files that you don’t expect to change without planning. If you choose files that are frequently changed by applications or operating system (such as log files and text files) it will create noise, making it difficult to identify an attack.
 
@@ -60,9 +66,5 @@ Defender for Cloud provides the following list of recommended items to monitor b
 
 ## Next steps
 
-In this article, you learned about File Integrity Monitoring (FIM) in Defender for Cloud.
-
-Next, you can:
-
-- [Enable File Integrity Monitoring when using the Azure Monitor Agent](file-integrity-monitoring-enable-ama.md)
-- [Enable File Integrity Monitoring when using the Log Analytics agent](file-integrity-monitoring-enable-log-analytics.md)
+- [Enable file integrity monitoring when using the Azure Monitor Agent](file-integrity-monitoring-enable-ama.md)
+- [Enable file integrity monitoring when using the Log Analytics agent](file-integrity-monitoring-enable-log-analytics.md)

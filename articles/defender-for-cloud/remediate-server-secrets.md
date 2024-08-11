@@ -12,6 +12,48 @@ Microsoft Defender for Cloud provides secrets scanning for virtual machines (VMs
 
 This article helps you to identify and remediate security risks with VM secrets.
 
+## Identifying and remediating secrets issue
+
+There are a number of methods available to identify and mitigate secrets issues. Not every method is supported for every secret. Review the [supported secrets list](secrets-scanning.md#discovery-support) for more details.
+
+- **Review secrets in the asset inventory**: The inventory shows the security state of resources connected to Defender for Cloud. From the inventory you can view the secrets discovered on a specific machine.
+- **Review secrets recommendations**: When secrets are found on assets, a recommendation is triggered under the Remediate vulnerabilities security control on the Defender for Cloud Recommendations page. Recommendations are triggered as follows:
+- **Review secrets with cloud security explorer**. Use cloud security explorer to query the cloud security graph. You can build your own queries, or use one of the built-in templates to query for VM secrets across your environment.
+- **Review attack paths**: Attack path analysis scans the cloud security graph to expose exploitable paths that attacks might use to breach your environment and reach high-impact assets. VM secrets scanning supports a number of attack path scenarios.
+
+It’s important to be able to prioritize secrets and identify which ones need immediate attention. To help you do this, Defender for Cloud provides:
+
+- Providing rich metadata for every secret, such as last access time for a file, a token expiration date, an indication whether the target resource that the secrets provide access to exists, and more.
+- Combining secrets metadata with cloud assets context. This helps you to start with assets that are exposed to the internet, or contain secrets that might compromise other sensitive assets. Secrets scanning findings are incorporated into risk-based recommendation prioritization.
+- Providing multiple views to help you pinpoint the mostly commonly found secrets, or assets containing secrets.
+    
+## Secrets security recommendations
+
+The following VM secrets security recommendations are available:
+
+- Azure resources: Machines should have secrets findings resolved
+- AWS resources: EC2 instances should have secrets findings resolved
+- GCP resources: VM instances should have secrets findings resolved
+
+
+### Secrets attack path scenarios
+
+The table summarizes supported attack paths.
+
+**VM** | **Attack paths**
+--- | ---
+Azure | Exposed Vulnerable VM has an insecure SSH private key that is used to authenticate to a VM.<br/>Exposed Vulnerable VM has insecure secrets that are used to authenticate to a storage account.<br/>Vulnerable VM has insecure secrets that are used to authenticate to a storage account.<br/>Exposed Vulnerable VM has insecure secrets that are used to authenticate to an SQL server.
+AWS | Exposed Vulnerable EC2 instance has an insecure SSH private key that is used to authenticate to an EC2 instance.<br/>Exposed Vulnerable EC2 instance has an insecure secret that is used to authenticate to a storage account.<br/>Exposed Vulnerable EC2 instance has insecure secrets that are used to authenticate to an AWS RDS server.<br/>Vulnerable EC2 instance has insecure secrets that are used to authenticate to an AWS RDS server.
+GCP | Exposed Vulnerable GCP VM instance has an insecure SSH private key that is used to authenticate to a GCP VM instance.
+
+## Predefined cloud security explorer queries
+
+Defender for Cloud provides these predefined queries for investigating secrets security issues:
+
+- VM with plaintext secret that can authenticate to another VM - Returns all Azure VMs, AWS EC2 instances, or GCP VM instances with plaintext secret that can access other VMs or EC2s.
+- VM with plaintext secret that can authenticate to a storage account - Returns all Azure VMs, AWS EC2 instances, or GCP VM instances with plaintext secret that can access storage accounts
+- VM with plaintext secret that can authenticate to an SQL database - Returns all Azure VMs, AWS EC2 instances, or GCP VM instances with plaintext secret that can access SQL databases.
+
 ## Prerequisites
 
 - An Azure account. If you don't already have an Azure account, you can [create your Azure free account today](https://azure.microsoft.com/free/).

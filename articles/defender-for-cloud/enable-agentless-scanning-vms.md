@@ -1,6 +1,6 @@
 ---
-title: Enable agentless scanning for VMs
-description: Find installed software and software vulnerabilities on your Azure machines and AWS machines without installing an agent.
+title: Enable agentless scanning for VMs in Microsoft Defender for Cloud
+description: Run agentless scanning on VMs for vulnerabilities and threats in Microsoft Defender for Cloud.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
@@ -9,45 +9,36 @@ ms.date: 01/16/2024
 
 # Enable agentless scanning for VMs
 
-Agentless scanning provides visibility into installed software and software vulnerabilities on your workloads to extend vulnerability assessment coverage to server workloads without a vulnerability assessment agent installed.
+Agentless machine scanning in Microsoft Defender for Cloud improves the security posture on Azure VMs, and on AWS and GCP machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
-Agentless vulnerability assessment uses the Microsoft Defender Vulnerability Management engine to assess vulnerabilities in the software installed on your VMs, without requiring Defender for Endpoint to be installed. Vulnerability assessment shows software inventory and vulnerability results in the same format as the agent-based assessments.
+- [Learn more](concept-agentless-data-collection.md) about agentless scanning capabilities.
+- [Learn more](auto-deploy-vulnerability-assessment.md) about agentless and agent-based machine vulnerability scanning, and how they fit together.
 
-## Compatibility with agent-based vulnerability assessment solutions
 
-Defender for Cloud already supports different agent-based vulnerability scans, including [Microsoft Defender Vulnerability Management (MDVM)](deploy-vulnerability-assessment-defender-vulnerability-management.md), [BYOL](deploy-vulnerability-assessment-byol-vm.md). Agentless scanning extends the visibility of Defender for Cloud to reach more devices.
 
-When you enable agentless vulnerability assessment:
 
-- If you have **no existing integrated vulnerability** assessment solutions enabled on any of your VMs on your subscription, Defender for Cloud automatically enables MDVM by default.
+You can enable agentless scanning manually as needed.
 
-- If you select **Microsoft Defender Vulnerability Management** as part of an [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md), Defender for Cloud shows a unified and consolidated view that optimizes coverage and freshness.
+## Prerequisites
 
-  - Machines covered by just one of the sources (Defender Vulnerability Management or agentless) show the results from that source.
-  - Machines covered by both sources show the agent-based results only for increased freshness.
+- You need the [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) plan, or the [Defender for Servers P2](defender-for-servers-introduction.md). When you enable one of these plans, agentless scanning is turned on by default.
+- Agentless machine scanning is available for Azure VMs,and for AWS/GCP machines connected to Defender for Cloud.
+- Malware scanning on machines if only available if you're running Defender for Servers Plan 2.
+- Agentless scanning is avilable on Azure standard VMs with:
+    -  Maximum total disk size allowed: 4TB (the sum of all disks)
+    - Maximum number of disks allowed: 6
+    - Virtual machine scale set - Flex
+    - Encryption: Unencrypted, Encrypted (managed disks using Azure Storage encryption with platform-managed keys (PMK)), Encrypted (customer-managed keys (preview))
+- Agentless scanning is available on AWS as follows:
+    - EC2
+    - Auto Scale instances
+    - Unencrypted, Encrypted (PMK), Encrypted (CMK)
+- Agentless scanning is available on GCP as follows:
+    - Compute instances
+    - Instance groups (managed and unmanaged)
+    - Google-managed encryption key, Customer-managed encryption key (CMEK)
 
-- If you select **Vulnerability assessment with BYOL integrations** - Defender for Cloud shows the agent-based results by default. Results from the agentless scan are shown for machines that don't have an agent installed or from machines that aren't reporting findings correctly.
-
-    To change the default behavior to always display results from MDVM (regardless if a third-party agent solution), select the [Microsoft Defender Vulnerability Management](auto-deploy-vulnerability-assessment.md#automatically-enable-a-vulnerability-assessment-solution) setting in the vulnerability assessment solution.
-
-## Enabling agentless scanning for machines
-
-When you enable [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) or [Defender for Servers P2](defender-for-servers-introduction.md), agentless scanning is enabled on by default.
-
-If you have Defender for Servers P2 already enabled and agentless scanning is turned off, you need to turn on agentless scanning manually.
-
-You can enable agentless scanning on
-
-- [Azure](#agentless-vulnerability-assessment-on-azure)
-- [AWS](#agentless-vulnerability-assessment-on-aws)
-- [GCP](#enable-agentless-scanning-in-gcp)
-
-> [!NOTE]
-> Agentless malware scanning is only available if you have [enabled Defender for Servers plan 2](tutorial-enable-servers-plan.md#select-a-defender-for-servers-plan)
-
-### Agentless vulnerability assessment on Azure
-
-**To enable agentless vulnerability assessment on Azure**:  
+## Enable agentless scanning on Azure
 
 1. From Defender for Cloud's menu, open **Environment settings**.
 1. Select the relevant subscription.
@@ -63,7 +54,7 @@ You can enable agentless scanning on
 
 1. Select **Save**.
 
-**To enable scanning of CMK encrypted disks in Azure (preview)**:
+## Enable agentless scanning of CMK encrypted disks in Azure (preview)**:
 
 For agentless scanning to cover Azure VMs with CMK encrypted disks, you need to grant Defender for Cloud additional permissions to create a secure copy of these disks. To do so, additional permissions are needed on Key Vaults used for CMK encryption for your VMs.
 
@@ -76,7 +67,7 @@ To assign these permissions at scale, you can also use [this script](https://git
 
 For more information, see [agentless scanning permissions](faq-permissions.yml#which-permissions-are-used-by-agentless-scanning-).
 
-### Agentless vulnerability assessment on AWS
+## Enable agentless scanning on AWS
 
 1. From Defender for Cloud's menu, open **Environment settings**.
 1. Select the relevant account.
@@ -102,7 +93,7 @@ For more information, see [agentless scanning permissions](faq-permissions.yml#w
 
 After you enable agentless scanning, software inventory and vulnerability information are updated automatically in Defender for Cloud.
 
-### Enable agentless scanning in GCP
+## Enable agentless scanning on GCP
 
 1. In Defender for Cloud, select **Environment settings**.
 1. Select the relevant project or organization.
@@ -120,7 +111,7 @@ After you enable agentless scanning, software inventory and vulnerability inform
 1. Select  **Next: Review and generate**.
 1. Select  **Update**.
 
-## Test the agentless malware scanner's deployment
+## Test agentless malware scanning
 
 Security alerts appear on the portal only in cases where threats are detected on your environment. If you do not have any alerts it might be because there are no threats on your environment. You can test to see that the device is properly onboarded and reporting to Defender for Cloud by creating a test file.
 
@@ -156,9 +147,8 @@ The alert `MDC_Test_File malware was detected (Agentless)` will appear within 24
 
 :::image type="content" source="media/enable-agentless-scanning-vms/test-alert.jpg" alt-text="Screenshot of the test alert that appears in Defender for Cloud for Linux." lightbox="media/enable-agentless-scanning-vms/test-alert.jpg":::
 
-### Create a test file for Windows
+### Create a test file for Windows with a text document
 
-#### Create a test file with a text document
 
 1. Create a text file on your VM.
 
@@ -175,7 +165,7 @@ The alert `MDC_Test_File malware was detected (Agentless)` will appear within 24
 
 :::image type="content" source="media/enable-agentless-scanning-vms/test-alert.jpg" alt-text="Screenshot of the test alert that appears in Defender for Cloud for Windows because of the text file that was created." lightbox="media/enable-agentless-scanning-vms/test-alert.jpg":::
 
-#### Create a test file with PowerShell
+### Create a test file for Windows with PowerShell
 
 1. Open PowerShell on your VM.
 
@@ -214,7 +204,7 @@ The alert `MDC_Test_File malware was detected (Agentless)` will appear within 24
 
 :::image type="content" source="media/enable-agentless-scanning-vms/test-alert.jpg" alt-text="Screenshot of the test alert that appears in Defender for Cloud for Windows with because of the PowerShell script." lightbox="media/enable-agentless-scanning-vms/test-alert.jpg":::
 
-## Exclude machines from scanning
+## Exclude machines from agentless scanning
 
 Agentless scanning applies to all of the eligible machines in the subscription. To prevent specific machines from being scanned, you can exclude machines from agentless scanning based on your pre-existing environment tags. When Defender for Cloud performs the continuous discovery for machines, excluded machines are skipped.
 
@@ -237,8 +227,4 @@ Agentless scanning applies to all of the eligible machines in the subscription. 
 
 Learn more about:
 
-- [Agentless scanning](concept-agentless-data-collection.md).
-- [Vulnerability assessment with Microsoft Defender for Endpoint](deploy-vulnerability-assessment-defender-vulnerability-management.md)
-
-- [Vulnerability assessment with BYOL solutions](deploy-vulnerability-assessment-byol-vm.md)
-
+[Agentless scanning](concept-agentless-data-collection.md).
