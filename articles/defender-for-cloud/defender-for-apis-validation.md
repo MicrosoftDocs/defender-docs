@@ -60,6 +60,8 @@ It is important to validate that Defender for APIs is working as expected. To do
 
 After some time, Defenders APIs will trigger an alert with detailed information about the simulated suspicious user agent activity.
 
-## Next steps
+## Next step
 
-Learn how to [Investigate API findings, recommendations, and alerts](defender-for-apis-posture.md).
+
+> [!div class="nextstepaction"]
+> [Investigate API findings, recommendations, and alerts](defender-for-apis-posture.md).
