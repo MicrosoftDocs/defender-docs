@@ -11,7 +11,7 @@ ms.topic: overview
 
 # How the site-based license model works
 
-The site-based license model offers a simplified approach to licensing by providing coverage for entire sites rather than individual devices. Customers can purchase annual licenses for their operational sites where OT devices are deployed, and receive security coverage for all devices within the site.  
+The site-based license model offers a simplified approach to licensing by providing coverage for entire sites rather than individual devices. Customers can purchase annual licenses for their operational sites where Operational Technology (OT) devices are deployed, and receive security coverage for all devices within the site.  
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
