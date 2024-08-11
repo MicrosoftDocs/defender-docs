@@ -44,19 +44,7 @@ EDR recommendations are available if you have the following prerequisites in pla
 
 - [Agentless scanning for machines](enable-agentless-scanning-vms.md#enabling-agentless-scanning-for-machines) must be enabled in the plan. It's enabled by default, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
 
-### Supported solutions and platforms
 
-The following EDR solutions are supported by Defender for Cloud:
-
-| EDR solution | Supported platforms |
-|--|--|
-| Microsoft Defender for Endpoint for Windows | Windows |
-| Microsoft Defender for Endpoint for Linux  | Linux |
-| Microsoft Defender for Endpoint Unified Solution  | Windows Server 2012 R2 and Windows 2016 |
-| CrowdStrike (Falcon) | Windows and Linux |
-| Trellix | Windows and Linux |
-| Symantec | Windows and Linux |
-| Sophos |  Windows and Linux |
 
 ## Identify enabled EDR solutions
 

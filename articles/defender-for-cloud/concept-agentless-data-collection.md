@@ -16,10 +16,10 @@ Microsoft Defender for Cloud provides agentless machine scanning to improve secu
 
 Agentless scanning for virtual machines provides:
 
-- **Software inventory**: Scan your [software inventory](/defender/defender-vulnerability-management/tvm-software-inventory) for broad visibility with integrated Microsoft Defender Vulnerability Management.
--  **Vulnerability scanning**: [Assess machines for vulnerabilities](auto-deploy-vulnerability-assessment.md) using integrated Defender Vulnerability Management.
-- **Secrets scanning**: Locate plain text secrets in your compute environment with agentless [secrets scanning](secrets-scanning.md).
-- **Detect malware threats**: [Scan machines for malware and viruses](agentless-malware-scanning.md) using [Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows). 
+- **Scan software inventory**: Scan your [software inventory](/defender/defender-vulnerability-management/tvm-software-inventory) for broad visibility with integrated Microsoft Defender Vulnerability Management.
+-  **Scan for vulnerabilities**: [Assess machines for vulnerabilities](auto-deploy-vulnerability-assessment.md) using integrated Defender Vulnerability Management.
+- **Scan for secrets on machines**: Locate plain text secrets in your compute environment with agentless [secrets scanning](secrets-scanning.md).
+- **Scan for malware**: [Scan machines for malware and viruses](agentless-malware-scanning.md) using [Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows). 
 
 Agentless scanning is available in the following Defender for Cloud plans:
 
@@ -27,9 +27,7 @@ Agentless scanning is available in the following Defender for Cloud plans:
 - [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features).
 - Malware scanning is only available in Defender for Servers Plan 2.
 
-
-
-## How agentless scanning works
+## Agentless scanning architecture
 
 Agentless scanning for VMs uses cloud APIs to collect data. Whereas agent-based methods use operating system APIs in runtime to continuously collect security related data. Defender for Cloud takes snapshots of VM disks and performs an out-of-band, deep analysis of the operating system configuration and file system stored in the snapshot. The copied snapshot remains in the same region as the VM. The VM isn't affected by the scan.
 

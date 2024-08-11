@@ -642,10 +642,10 @@
       - name: Endpoint detection and response
         displayName: mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
         href: integration-defender-for-endpoint.md
-      - name: Agentless scanning
+      - name: Agentless machines scanning
         displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots
         href: concept-agentless-data-collection.md
-      - name: Agentless machines secrets scanning
+      - name: Agentless machine secrets scanning
         displayName: secrets, secret scanning, agentless
         href: secrets-scanning-servers.md
       - name: Agentless machine malware scanning
