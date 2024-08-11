@@ -55,16 +55,23 @@ Learn more about how to [deploy AMA](/azure/azure-monitor/vm/monitor-virtual-mac
 For SQL servers on machines, we recommend to [migrate to SQL server-targeted Azure Monitoring Agent's (AMA) autoprovisioning process](defender-for-sql-autoprovisioning.md).
 
 ### Changes to legacy Defender for Servers Plan 2 onboarding via Log Analytics agent
-
 The legacy approach to onboard servers to Defender for Servers Plan 2 based on the Log Analytics agent and using Log analytics workspaces is set for retirement as well:
-
 - The onboarding experience for [onboarding new non-Azure machines](quickstart-onboard-machines.md) to Defender for Servers using Log Analytics agents and workspaces is removed from the **Inventory** and **Getting started** blades in the Defender for Cloud portal.
-
-- To avoid losing security coverage with the Agent retirement:
-
-  - If you onboarded on-premises servers using the [legacy approach](quickstart-onboard-machines.md), you should now connect these machines via Azure Arc-enabled servers to Defender for Servers Plan 2 Azure subscriptions.
-
+- To avoid losing security coverage on the affected machines connected to a Log Analytics Workspace, with the Agent retirement:
+- If you onboarded non-Azure servers (both on-premises and multi-cloud) using the [legacy approach](quickstart-onboard-machines.md), you should now connect these machines via Azure Arc-enabled servers to Defender for Servers Plan 2 Azure subscriptions and connectors. [Learn more](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fazure-arc%2Fservers%2Fdeployment-options&data=05%7C02%7Cgfenigshtein%40microsoft.com%7C2129a7485d734bf7b33108dcb1700037%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638580341822810584%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=z50jItK%2BrIunP%2BbhX%2Fj76m%2B6nQ8kmJe2KcQRX8z1Kc0%3D&reserved=0) about deploying Arc machines at scale.
+    
   - If you used the legacy approach to enable Defender for Servers Plan 2 on selected Azure VMs, we recommend enabling Defender for Servers Plan 2 on the Azure subscriptions for these machines. You can then exclude individual machines from the Defender for Servers coverage using the Defender for Servers [per-resource configuration](tutorial-enable-servers-plan.md).
+    
+This is a summary of the required action for each of the servers onboarded to Defender for Servers Plan 2 through the legacy approach:
+
+ 
+
+|Machine type |Action required to preserve security coverage|
+| -------- | -------- |
+|On premise servers| [Onboarded to Arc ](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fazure-arc%2Fservers%2Fdeployment-options&data=05%7C02%7Cgfenigshtein%40microsoft.com%7C6ff6be46dfc142cd16a208dcb605dbd7%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638585383520387890%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=%2BIb7%2FO6449WU4NE1lJ7EL6JmpL%2BcKYLQ3WtbuNSwSVY%3D&reserved=0)and connected to a subscription with Defender for Servers Plan 2 |
+|Azure Virtual machines|Connect to subscription with Defender for Servers Plan 2|
+|Multi Cloud Servers |Connect to [multicloud connector](/azure/defender-for-cloud/quickstart-onboard-aws) with Azure Arc provisioning and Defender for Servers plan 2|
+
 
 ### Endpoint protection recommendations experience - changes and migration guidance
 
