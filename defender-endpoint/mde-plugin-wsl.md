@@ -298,10 +298,10 @@ DeviceProcessEvents
        ```bash
       # Settings apply across all Linux distros running on WSL 2
       [wsl2]
-      
+
       dnsProxy=false
        ```
-       
+
    - If the connectivity issues persist, collect the networking logs using the method mentioned at [link](https://aka.ms/wsllogs), and include those logs with your support bundle.
 
 5. If you run into any other challenges or issues, open Terminal, and run the following commands to generate a support bundle:
@@ -352,7 +352,7 @@ DeviceProcessEvents
 8. If you see an error on launching WSL, such as "A fatal error was returned by plugin 'DefenderforEndpointPlug-in' Error code: Wsl/Service/CreateInstance/CreateVm/Plugin/ERROR_FILE_NOT_FOUND", it means the Defender for Endpoint plug-in for WSL installation is faulty. To repair it, follow these steps:
 
    1. In Control Panel, go to **Programs** > **Programs and Features**.
-      
+
    2. Search for and select **Microsoft Defender for Endpoint plug-in for WSL**. Then select **Repair**.
 
    This should fix the problem by placing the right files in the expected directories.
