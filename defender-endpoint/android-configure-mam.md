@@ -124,18 +124,19 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
 1. Sign in to a managed application, for example, Outlook. The device is registered and the application protection policy is synchronized to the device. The application protection policy recognizes the device's health state.
 
-2. Select **Continue**. A screen is presented which recommends downloading and setting up of Microsoft Defender for Endpoint on Android app.
+2. Select **Continue**. A screen is presented which recommends downloading and setting up of the Microsoft Defender: Antivirus (Mobile) app.
 
-1. Select **Download**. You'll be redirected to the app store (Google play).
+3. Select **Download**. You'll be redirected to the app store (Google play).
 
-1. Install the Microsoft Defender: Antivirus (Mobile) app and launch back Managed app onboarding screen.
+4. Install the Microsoft Defender: Antivirus (Mobile) app.
+
+5. After installation Launch the managed app 
 
    ![mam_flow](media/android-configure-mam/mam-flow.png)
    
-   
-5. Click **Continue > Launch**. The Microsoft Defender for Endpoint app onboarding/activation flow is initiated. Follow the steps to complete onboarding. You'll automatically be redirected back to Managed app onboarding screen, which now indicates that the device is healthy.
+6. Click **Continue > Launch**. The Microsoft Defender for Endpoint app onboarding/activation flow is initiated. Follow the steps to complete onboarding. You'll automatically be redirected back to Managed app onboarding screen, which now indicates that the device is healthy.
 
-6. Select **Continue** to log into the managed application.
+7. Select **Continue** to log into the managed application.
 
 ## Configure Web protection
 
