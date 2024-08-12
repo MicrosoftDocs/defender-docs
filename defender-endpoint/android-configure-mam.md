@@ -130,7 +130,7 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
 4. Install the Microsoft Defender: Antivirus (Mobile) app.
 
-5. After installation Launch the managed app 
+5. After installation Launch the managed app.
 
    ![mam_flow](media/android-configure-mam/mam-flow.png)
    
