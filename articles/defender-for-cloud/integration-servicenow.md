@@ -4,7 +4,7 @@ description: Learn about integrating ServiceNow with Microsoft Defender for Clou
 author: dcurwin
 ms.author: dacurwin
 ms.topic: overview
-ms.date: 03/11/2024
+ms.date: 08/12/2024
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn about the integration that exists between ServiceNow and Microsoft Defender for Cloud so that I can protect my Azure, hybrid, and multicloud machines.
 ---
@@ -13,7 +13,11 @@ ai-usage: ai-assisted
 
 ServiceNow is a cloud-based workflow automation and enterprise-oriented solution that enables organizations to manage and track digital workflows within a unified, robust platform. ServiceNow helps to improve operational efficiencies by streamlining and automating routine work tasks and delivers resilient services that help increase your productivity.  
 
-ServiceNow can be integrated with Microsoft Defender for Cloud to allow customers to prioritize remediation of recommendations that affect your business. Defender for Cloud integrates with the IT Service Management (ITSM) module (incident management). As part of this connection, customers can create/view ServiceNow tickets (linked to recommendations) from Defender for Cloud.
+ServiceNow can be integrated with Microsoft Defender for Cloud to allow customers to prioritize remediation of recommendations that affect your business. Defender for Cloud integrates workflows with the following ServiceNow modules:
+
+- **IT Service Management (ITSM)** -For incident management. As part of this connection, customers can create/view ServiceNow tickets (linked to recommendations) from Defender for Cloud.
+- **Vulnerability Response (VR)** - For vulnerability management. As part of this connection, customers can create and view ServiceNow tickets (linked to recommendations) from Defender for Cloud.
+- **Configuration Compliance (CC)** - For compliance management. As part of this connection, customers can create and view ServiceNow tickets (linked to recommendations) from Defender for Cloud.
 
 As part of the integration, you can create and monitor tickets in ServiceNow directly from Defender for Cloud:
 
@@ -23,11 +27,9 @@ As part of the integration, you can create and monitor tickets in ServiceNow dir
 
 ## Bidirectional synchronization
 
-ServiceNow and Defender for Cloud automatically synchronize the status of the tickets between the platforms, which includes:
+As part of the governance capabilities within Defender for Cloud, you can enable a bi-directional integration between ServiceNow and Defender for Cloud, for the creation of ITSM incidents, changes or problem tickets. 
 
-- A verification that a ticket state is still **In progress**. If the ticket state is changed to **Resolved**, **Canceled**, or **Closed** in ServiceNow, the change is synchronized to Defender for Cloud and delete the assignment.
-
-- When the ticket owner is changed in ServiceNow, the assignment owner is updated in Defender for Cloud.
+Tickets can be initiated manually or automatically by leveraging governance automation rules.
 
 > [!NOTE]
 > Synchronization occurs every 24 hrs.
