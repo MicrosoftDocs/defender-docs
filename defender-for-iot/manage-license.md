@@ -18,7 +18,7 @@ This article shows how to make changes to your license, including the steps to c
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
 ## Calculate number of devices
-
+ 
 To calculate the number of devices in your network:
 
 1. In the [Microsoft Defender portal](https://security.microsoft.com/machines) menu, select **Assets > Devices**. The device inventory opens.
