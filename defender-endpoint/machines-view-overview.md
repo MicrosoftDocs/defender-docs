@@ -148,8 +148,8 @@ Filter | Description
 **Device value** | Filter the list based on whether the device is marked as high value or low value.
 **Exclusion state** | Filter the list based on whether the device is excluded or not. For more information, see [Exclude devices](exclude-devices.md).
 **Managed by** | Managed by indicates how the device is being managed. You can filter by:</br> - Microsoft Defender for Endpoint</br> - Microsoft Intune, including co-management with Microsoft Configuration Manager via tenant attach</br>- Microsoft Configuration manager (ConfigMgr)</br> - Unknown: This issue could be due the running an outdated Windows version, GPO management, or another non-Microsoft MDM.</br></br> (_Computers and mobile only_)
-**Device type** | Filter by the device type you're interested in investigating.</br></br> (_Appears on all tabs, except for uncategorized devices_)
-**Device subtype** | Filter by the device subtype you're interested in investigating.</br></br> (_Appears on all tabs, except for uncategorized devices_)
+**Device type** | Filter by the device type you're interested in investigating.</br></br> (_Appears on all tabs, except for Uncategorized devices_)
+**Device subtype** | Filter by the device subtype you're interested in investigating.</br></br> (_Appears on all tabs, except for Uncategorized devices_)
 **Device category** | Filter by the device category you're interested in investigating.</br></br> (_All devices and IoT/OT devices only_)
 **Vendor** | Filter by the device vendor you're interested in investigating.</br></br> (_All devices only_)
 **Model** | Filter by the device model you're interested in investigating.</br></br> (_All devices only_)
@@ -160,17 +160,21 @@ Filter | Description
 
 You can add or remove columns from the view and sort the entries by clicking on an available column header.
 
+On the **All devices** tab, select **Customize columns** to see the columns available. The default values are checked in the following image:
+
+:::image type="content" alt-text="Image of All devices" source="media/alldevicescolumns.png":::
+
 On the **Computer and Mobiles** tab, select **Customize columns** to see the columns available. The default values are checked in the following image:
 
-:::image type="content" alt-text="Image of computers and mobiles" source="media/computerandmobilescolumns.png":::
+:::image type="content" alt-text="Image of computers and mobiles" source="media/computerandmobilescolumns_updated.png":::
 
 On the **Network devices** tab, select **Customize columns** to see the columns available. The default values are checked in the following image:
 
-:::image type="content" alt-text="Image of network device columns" source="media/networkdevicescolumns.png":::
+:::image type="content" alt-text="Image of network device columns" source="media/networkdevicescolumns_updated.png":::
 
 On the **IoT/OT devices** tab, select **Customize columns** to see the columns available. The default values are checked in the following image:
 
-:::image type="content" alt-text="Image of IoT device columns" source="media/iotdevicescolumns.png":::
+:::image type="content" alt-text="Image of IoT device columns" source="media/iotdevicescolumns_updated.png":::
 
 Firmware information for OT devices is displayed in the **OS version** and **OS model** columns.
 
