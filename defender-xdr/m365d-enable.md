@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 09/21/2023
+ms.date: 08/12/2024
 ---
 
 # Turn on Microsoft Defender XDR
@@ -54,6 +54,21 @@ You must be one of the following roles to turn on Microsoft Defender XDR:
 - Cloud Application Administrator
 
 [View your roles in Microsoft Entra ID](/azure/active-directory/users-groups-roles/directory-manage-roles-portal)
+
+## Configure your network firewall
+
+Configuring your network firewall ensures a smooth experience while navigating the Microsoft Defender portal https://security.microsoft.com.
+
+Add to your firewall's allow list the outbound IP addresses in the following page:
+
+- [IP addresses used by Azure Monitor](/azure/azure-monitor/ip-addresses#outgoing-ports)
+
+In addition, ensure that other Defender services are properly configured. You can refer to the following pages for configuration information:
+
+- [Enable access to Microsoft Defender for Endpoint service in the proxy server](/defender-endpoint/configure-environment#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server)
+- [Get started with Microsoft Defender for Office 365](/defender-office-365/mdo-deployment-guide)
+- [Configure endpoint proxy and internet connectivity settings for Microsoft Defender for Identity](/defender-for-identity/deploy/configure-proxy)
+- [Ensure portal access for Microsoft Defender for Cloud Apps](/defender-cloud-apps/network-requirements#portal-access)
 
 ## Supported services
 
