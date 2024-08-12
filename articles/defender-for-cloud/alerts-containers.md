@@ -241,7 +241,7 @@ Microsoft Defender for Containers provides security alerts on the cluster level 
 
 (K8S_ExposedKubeflow)
 
-**Description**: The Kubernetes audit log analysis detected exposure of the Istio Ingress by a load balancer in a cluster that runs Kubeflow. This action might expose the Kubeflow dashboard to the internet. If the dashboard is exposed to the internet, attackers can access it and run malicious containers or code on the cluster. Find more details in the following article: <https://aka.ms/exposedkubeflow-blog>
+**Description**: The Kubernetes audit log analysis detected exposure of the Istio Ingress by a load balancer in a cluster that runs Kubeflow. This action might expose the Kubeflow dashboard to the internet. If the dashboard is exposed to the internet, attackers can access it and run malicious containers or code on the cluster. Find more details in the following article: <https://www.microsoft.com/en-us/security/blog/2020/06/10/misconfigured-kubeflow-workloads-are-a-security-risk/>
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Initial Access
 
