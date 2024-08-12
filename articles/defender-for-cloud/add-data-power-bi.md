@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 # Add Defender for Cloud data to Power BI
 
-By connecting Microsoft Defender for Cloud's data with Microsoft Power BI, you can easily monitor and analyze your security metrics. The integration allows you to visualize security insights and quickly identify potential threats and vulnerabilities. In this article, you will be guided through the steps to connect Defender for Cloud data to Power BI, helping you transform complex security information into clear, actionable insights.
+By connecting Microsoft Defender for Cloud's data with Microsoft Power BI, you can easily monitor and analyze your security metrics. The integration allows you to visualize security insights and quickly identify potential threats and vulnerabilities. This article guides you through the steps to connect Defender for Cloud data to Power BI, helping you transform complex security information into clear, actionable insights.
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ Before you can connect Defender for Cloud's data to Power BI, you must first con
 
 Once Power BI Desktop is connected to Azure Resource Graph, you can use Azure Resource Graph to query various data sources from Defender for Cloud into Power BI.
 
-The queries provided on this page are examples that will provide results. Azure Resource Graph allows you to query a wide range of data that you can create and customize to return results that suit your specific requirements. 
+The queries provided on this page are examples that provide results. Azure Resource Graph allows you to query a wide range of data that you can create and customize to return results that suit your specific requirements. 
 
 1. Copy and paste one of the provided queries into the query editor in Power BI Desktop.
 
@@ -202,7 +202,7 @@ The queries provided on this page are examples that will provide results. Azure 
 
 1. Select **Load**.
 
-With Azure Resource Graph, you have the flexibility to retrieve and analyze any data available within your Defender for Cloud environment, ensuring comprehensive and tailored insights. Once you have added your data to Power BI, you can create visualizations and dashboards to monitor and manage your security posture effectively.
+With Azure Resource Graph, you have the flexibility to retrieve and analyze any data available within your Defender for Cloud environment, ensuring comprehensive and tailored insights. Once your data is added to Power BI, you can create visualizations and dashboards to monitor and manage your security posture effectively.
 
 ## Next step
 
