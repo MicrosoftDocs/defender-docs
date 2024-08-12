@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 07/16/2024
+ms.date: 08/12/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -28,6 +28,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Sentinel](/azure/sentinel/whats-new)
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
+
+## August 2024
+
+- To ensure a smooth experience while navigating the Microsoft Defender portal, configure your network firewall by adding the appropriate addresses to your allow list. For more information, see [Network firewall configuration for Microsoft Defender XDR](m365d-enable.md#configure-your-network-firewall).
 
 ## July 2024
 
