@@ -212,7 +212,7 @@ Updates are released for x86, x64, and ARM64 Windows architecture.
 
 For more information, see [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
 
-After a new package version is released, support for the previous two versions is reduced to technical support only.
+After a new package version is released, support for the previous two versions is reduced to technical support only. To view a list of previous versions, see [Previous DISM updates (no longer supported)](msda-updates-previous-versions-technical-upgrade-support.md#previous-dism-updates-no-longer-supported).
 
 ### 1.415.295.0
 
@@ -250,21 +250,6 @@ After a new package version is released, support for the previous two versions i
 - Security intelligence version: `1.411.111.0`
 - Engine version: `1.24050.2`
 - Platform version: `4.18.24050.7`
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.411.9.0
-
-- Defender package version: `1.411.9.0`
-- Security intelligence version: `1.411.9.0`
-- Engine version: `1.24040.1`
-- Platform version: `4.18.24040.4`
 
 #### Fixes
 
