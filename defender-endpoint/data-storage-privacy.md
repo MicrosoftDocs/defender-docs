@@ -16,7 +16,7 @@ ms.collection:
 - essentials-compliance
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/14/2024
+ms.date: 08/12/2024
 ---
 
 # Microsoft Defender for Endpoint data storage and privacy
