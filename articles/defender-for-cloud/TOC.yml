@@ -637,61 +637,71 @@
       - name: Modify plan settings
         displayName: Defender for Servers, monitoring coverage, Log analytics, agentless scanning, Vulnerability assessment, Endpoint protection
         href: configure-servers-coverage.md
-    - name: Learn
-      items: 
-      - name: Endpoint detection and response
-        displayName: mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
-        href: integration-defender-for-endpoint.md
-      - name: Agentless machines scanning
-        displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots
-        href: concept-agentless-data-collection.md
-      - name: Agentless machine secrets scanning
-        displayName: secrets, secret scanning, agentless
-        href: secrets-scanning-servers.md
-      - name: Agentless machine malware scanning
-        displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots, Microsoft Defender Antivirus
-        href: agentless-malware-scanning.md
-      - name: Machine vulnerability scanning
-        displayName: qualys, rapid7, vulnerability, auto provision
-        href: auto-deploy-vulnerability-assessment.md
-      - name: File integrity monitoring
-        displayName: fim, change
-        href: file-integrity-monitoring-overview.md
-      - name: Just-in-time access
-        displayName: jit, management
-        href: just-in-time-access-overview.md
-      - name: Adaptive application controls
-        displayName: aac, allowlist, reviewgroup
-        href: adaptive-application-controls.md
     - name: Configure
       items:
-      - name: Enable Defender for Endpoint integration
-        displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
-        href: enable-defender-for-endpoint.md
-      - name: Enable agentless VM scanning
-        displayName: vulnerability, software inventory, agentless scanning
-        href: enable-agentless-scanning-vms.md
-      - name: Enable vulnerability scanning
-        displayName: mde, tvm, vulnerability, va, arc, hybrid, defender vulnerability management
-        href: deploy-vulnerability-assessment-defender-vulnerability-management.md
-      - name: Enable vulnerability scanning with a BYOL solution
-        displayName: qualys, rapid7, vulnerability
-        href: deploy-vulnerability-assessment-byol-vm.md
-      - name: Move to scanning with Defender Vulnerability Management
-        displayName: qualys, rapid7, vulnerability, migrate, transition, Microsoft Defender Vulnerability Management, mdvm
-        href: how-to-transition-to-built-in.yml
-      - name: Enable File Integrity Monitoring (AMA)
-        displayName: fim, change, azure monitor agent
-        href: file-integrity-monitoring-enable-ama.md
-      - name: Enable File Integrity Monitoring (Log Analytics)
-        displayName: fim, change, log analytics, mma
-        href: file-integrity-monitoring-enable-log-analytics.md
-      - name: Enable just-in-time access on VMs
-        displayName: jit, management, ports
-        href: just-in-time-access-usage.yml
-      - name: Enable and manage adaptive application controls
-        displayName: aac, allowlist, reviewgroup
-        href: enable-adaptive-application-controls.md
+      - name: Endpoint detection and response
+        items:
+          - name: Overview
+            displayName: mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
+            href: integration-defender-for-endpoint.md
+          - name: Enable Defender for Endpoint integration
+            displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
+            href: enable-defender-for-endpoint.md
+      - name: Agentless machine scanning
+        items:
+          - name: Overview
+            displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots
+            href: concept-agentless-data-collection.md
+          - name: Machine secrets scanning
+            displayName: secrets, secret scanning, agentless
+            href: secrets-scanning-servers.md
+          - name: Machine malware scanning
+            displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots, Microsoft Defender Antivirus
+            href: agentless-malware-scanning.md
+          - name: Enable agentless VM scanning
+            displayName: vulnerability, software inventory, agentless scanning
+            href: enable-agentless-scanning-vms.md
+      - name: Vulnerability scanning
+        items:
+          - name: Overview
+            displayName: qualys, rapid7, vulnerability, auto provision
+            href: auto-deploy-vulnerability-assessment.md
+          - name: Enable vulnerability scanning
+            displayName: mde, tvm, vulnerability, va, arc, hybrid, defender vulnerability management
+            href: deploy-vulnerability-assessment-defender-vulnerability-management.md
+          - name: Enable vulnerability scanning with a BYOL solution
+            displayName: qualys, rapid7, vulnerability
+            href: deploy-vulnerability-assessment-byol-vm.md
+          - name: Move to scanning with Defender Vulnerability Management
+            displayName: qualys, rapid7, vulnerability, migrate, transition, Microsoft Defender Vulnerability Management, mdvm
+            href: how-to-transition-to-built-in.yml
+      - name: File integrity monitoring
+        items:
+          - name: Overview
+            displayName: fim, change
+            href: file-integrity-monitoring-overview.md
+          - name: Enable File Integrity Monitoring (AMA)
+            displayName: fim, change, azure monitor agent
+            href: file-integrity-monitoring-enable-ama.md
+          - name: Enable File Integrity Monitoring (Log Analytics)
+            displayName: fim, change, log analytics, mma
+            href: file-integrity-monitoring-enable-log-analytics.md
+      - name: Just-in-time VM access
+        items:
+          - name: Just-in-time access
+            displayName: jit, management
+            href: just-in-time-access-overview.md
+          - name: Enable just-in-time access on VMs
+            displayName: jit, management, ports
+            href: just-in-time-access-usage.yml
+      - name: Adaptive application controls
+        items:
+          - name: Adaptive application controls
+            displayName: aac, allowlist, reviewgroup
+            href: adaptive-application-controls.md
+          - name: Enable and manage adaptive application controls
+            displayName: aac, allowlist, reviewgroup
+            href: enable-adaptive-application-controls.md
     - name: Investigate and remediate 
       items:
       - name: Remediate agentless EDR recommendations

@@ -7,24 +7,29 @@ ms.date: 02/05/2024
 
 # Modify Defender for Servers plan settings
 
-After [deploying the Defender for Servers plan](tutorial-enable-servers-plan.md) in Microsoft Defender for Cloud, you can check whether resources are protected by the plan configure plan features, or turn the plan on and off as needed.
+After [deploying the Defender for Servers plan](tutorial-enable-servers-plan.md) in Microsoft Defender for Cloud, you can check whether resources are protected by the plan, configure plan features, or turn the plan on and off as needed.
 
 ## Check resource protection
 
-You can check VM resources to see if Defender for Cloud enabled on them.
-
-- Defender for Server settings for each resource are inherited by the subscription-level settings by default.
-- If you change settings at the resource level, the resource no longer inherits settings from its parent subscription unless you delete the settings you configured.
+You can check resources to see if Defender for Servers is enabled on them.
 
 Check as follows: 
-1. In Defender for Cloud, select **Inventory**.
 
-1. Locate the Defender for Cloud column:
+1. In Defender for Cloud, select **Inventory**.
+1. In the **Resource Type** query, you can filter the inventory to narrow down results to resources supported by Defender for Servers. For example:
+    - Use the **Resource type** query to find virtual machines, AWS EC2 instances, and GCP Compute instances.
+    - Use the **Environment** query to narrow down to Azure, AWS, or GCP resources.
+1. In the virtual machine list, review the **Defender for Cloud** column:
 
     :::image type="content" source="media/configure-servers-coverage/select-inventory.png" alt-text="Screenshot that shows you where to select Inventory from the main menu." lightbox="media/configure-servers-coverage/select-inventory.png":::
 
+1. If the column setting is **On**, then Defender for Cloud is enabled, along with any plans switched on in Defender for Cloud, including Defender for Servers.
 
 You can also check the coverage for all of all your subscriptions and resources using the [Coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook).
+
+> [!NOTE]
+> - Defender for Server settings for each resource are inherited by the subscription-level settings by default.
+> - If you change settings at the resource level, the resource no longer inherits settings from its parent subscription unless you delete the settings you configured.
 
 
 ## Modify plan settings
@@ -39,7 +44,7 @@ You can modify plan settings as follows:
     --- | --- | ---
     **Vulnerability assessment** | When you enable the plan, [vulnerability scanning](auto-deploy-vulnerability-assessment.md) is enabled by default.<br/> | [Manually configure](deploy-vulnerability-assessment-defender-vulnerability-management.md) vulnerability scanning settings.
     **Endpoint protection**. | When you enable the Defender for Servers plan, Defender for Endpoint is integrated by default. Defender for Endpoint protection features are available, and automatic provisioning of the Defender for Endpoint agent is enabled. | [Turn endpoint protection on and off](enable-defender-for-endpoint.md) in a plan.
-    **Agentless scanning** |  Agentless scanning provides a number of scanning capabilities, and is enabled by default when Defender for Servers Plan 2 (or the Defender Cloud Security Posture Management (CSPM) plan) is turned on. | [Turn agentless scanning on and off](enable-agentless-scanning-vms.md), and [exclude machines from agentless scanning](enable-agentless-scanning-vms.md#exclude-machines-from-scanning). 
+    **Agentless scanning** |  Agentless scanning provides a number of scanning capabilities, including agentless vulnerability scanning. It is enabled by default when Defender for Servers Plan 2 (or the Defender Cloud Security Posture Management (CSPM) plan) is turned on. | [Turn agentless scanning on and off](enable-agentless-scanning-vms.md), and [exclude machines from agentless scanning](enable-agentless-scanning-vms.md#exclude-machines-from-scanning). 
 
 
 
