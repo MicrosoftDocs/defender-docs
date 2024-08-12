@@ -164,6 +164,8 @@ On the **All devices** tab, select **Customize columns** to see the columns avai
 
 :::image type="content" alt-text="Image of all devices columns" source="media/alldevicescolumns.png":::
 
+Firmware information for OT devices is displayed in the **OS version** and **Model** columns.
+
 On the **Computer and Mobiles** tab, select **Customize columns** to see the columns available. The default values are checked in the following image:
 
 :::image type="content" alt-text="Image of computers and mobiles columns" source="media/computerandmobilescolumns_updated.png":::
@@ -175,8 +177,6 @@ On the **Network devices** tab, select **Customize columns** to see the columns 
 On the **IoT/OT devices** tab, select **Customize columns** to see the columns available. The default values are checked in the following image:
 
 :::image type="content" alt-text="Image of IoT device columns" source="media/iotdevicescolumns_updated.png":::
-
-Firmware information for OT devices is displayed in the **OS version** and **OS model** columns.
 
 ## Related articles
 
