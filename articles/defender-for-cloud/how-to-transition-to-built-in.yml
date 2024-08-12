@@ -9,24 +9,19 @@ metadata:
   ms.custom:
     - ge-structured-content-pilot
 title: |
-  Transition to Microsoft Defender Vulnerability Management for servers
+  Move to vulnerability assessment with Microsoft Defender Vulnerability Management
 introduction: |
 
-  The Defender for Serers plan in Microsoft Defender for Cloud provides vulnerability scanning with Microsoft Defender Vulnerability Management, to scan machines for software inventory and vulnerabilities, and provide findings and insights in Defender for Cloud. 
+  Microsoft Defender for Cloud provides vulnerability scanning with Microsoft Defender Vulnerability Management, to scan machines for software inventory and vulnerabilities, and provide findings and insights in Defender for Cloud. 
   If you're currently using a different vulnerability assessement solution, you can move to Defender Vulnerability Management using the instructions in this article. 
 
-  To transition to the integrated Defender Vulnerability Management solution, you can use the Azure portal, use an Azure policy definition (for Azure VMs), or use REST APIs.
-
-  - [Transition with Azure policy for Azure VMs](#transition-with-azure-policy-for-azure-vms)
-  - [Transition with Defender for Cloud's portal](#transition-with-defender-for-clouds-portal)
-  - [Transition with REST API](#transition-with-rest-api)
 prerequisites:
   summary: |
-    Review [supported machines](/defender/security/defender-endpoint/tvm-supported-os)
-    Make sure you have a Defender for Servers plan enabled.
-    The plan must have Microsoft Defender for Endpoint integration enabled.
-    You need Owner (resource group level) permissions to deploy.
-    You need Security Reader permissions to view vulnerability findings.
+    - Review [supported machines](/defender/security/defender-endpoint/tvm-supported-os)
+    - Make sure you have a Defender for Servers plan enabled.
+    - The plan must have Defender for Endpoint integration enabled.
+    - You need Owner (resource group level) permissions to deploy.
+    - You need Security Reader permissions to view vulnerability findings.
 procedureSection:
   - title: |
       Transition with Azure policy for Azure VMs 
