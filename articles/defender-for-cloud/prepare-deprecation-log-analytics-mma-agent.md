@@ -68,7 +68,7 @@ This is a summary of the required action for each of the servers onboarded to De
 
 |Machine type |Action required to preserve security coverage|
 | -------- | -------- |
-|On premise servers| [Onboarded to Arc ](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fazure-arc%2Fservers%2Fdeployment-options&data=05%7C02%7Cgfenigshtein%40microsoft.com%7C6ff6be46dfc142cd16a208dcb605dbd7%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638585383520387890%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=%2BIb7%2FO6449WU4NE1lJ7EL6JmpL%2BcKYLQ3WtbuNSwSVY%3D&reserved=0)and connected to a subscription with Defender for Servers Plan 2 |
+|On premise servers| [Onboarded to Arc ](/azure/azure-arc/servers/deployment-options) and connected to a subscription with Defender for Servers Plan 2 |
 |Azure Virtual machines|Connect to subscription with Defender for Servers Plan 2|
 |Multi Cloud Servers |Connect to [multicloud connector](/azure/defender-for-cloud/quickstart-onboard-aws) with Azure Arc provisioning and Defender for Servers plan 2|
 
