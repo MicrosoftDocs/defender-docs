@@ -282,25 +282,25 @@ DeviceProcessEvents
 
    - If the connectivity test reports "invalid" in health check, include the following configuration settings in the `.wslconfig` located in your `%UserProfile%` and restart WSL. Details about settings can be found in [WSL Settings](/windows/wsl/wsl-config#main-wsl-settings).
 
-     - In Windows 11
+      - In Windows 11
 
-        ```bash
-        # Settings apply across all Linux distros running on WSL 2
-        [wsl2]
+         ```bash
+         # Settings apply across all Linux distros running on WSL 2
+         [wsl2]
 
-        dnsTunneling=true
+         dnsTunneling=true
 
-        networkingMode=mirrored  
-        ```
+         networkingMode=mirrored  
+         ```
 
-     - In Windows 10
+      - In Windows 10
 
-        ```bash
-        # Settings apply across all Linux distros running on WSL 2
-        [wsl2]
+         ```bash
+         # Settings apply across all Linux distros running on WSL 2
+         [wsl2]
 
-        dnsProxy=false
-        ```
+         dnsProxy=false
+         ```
 
    - If the connectivity issues persist, collect the networking logs using the method mentioned at [link](https://aka.ms/wsllogs), and include those logs with your support bundle.
 
