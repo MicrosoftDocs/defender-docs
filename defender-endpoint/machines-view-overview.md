@@ -90,7 +90,7 @@ From the **Network devices** and **IoT/OT devices** tabs, you'll also see inform
 :::image type="content" alt-text="Image of network devices list." source="media/device-inventory-networkdevices.png" lightbox="media/device-inventory-networkdevices.png":::
 
 > [!NOTE]
-> Device discovery integration with [Microsoft Defender for IoT in the Defender portal (Preview)](../defender-for-iot/microsoft-defender-iot.md)  is available to help locate, identify, and secure your complete OT/IOT asset inventory. Devices discovered with this integration appear on the **IoT/OT devices** tab.
+> Device discovery integration with [Microsoft Defender for IoT in the Defender portal (Preview)](/defender-for-iot/microsoft-defender-iot)  is available to help locate, identify, and secure your complete OT/IOT asset inventory. Devices discovered with this integration appear on the **IoT/OT devices** tab.
 >
 > With Defender for IoT, you can also view and manage Enterprise IoT devices (like printers, smart TVs, and conferencing systems) as part of enterprise IoT monitoring. For more information, see [Enable Enterprise IoT security with Defender for Endpoint](/azure/defender-for-iot/organizations/eiot-defender-for-endpoint/).
 
@@ -148,13 +148,13 @@ Filter | Description
 **Device value** | Filter the list based on whether the device is marked as high value or low value.
 **Exclusion state** | Filter the list based on whether the device is excluded or not. For more information, see [Exclude devices](exclude-devices.md).
 **Managed by** | Managed by indicates how the device is being managed. You can filter by:</br> - Microsoft Defender for Endpoint</br> - Microsoft Intune, including co-management with Microsoft Configuration Manager via tenant attach</br>- Microsoft Configuration manager (ConfigMgr)</br> - Unknown: This issue could be due the running an outdated Windows version, GPO management, or another non-Microsoft MDM.</br></br> (_Computers and mobile only_)
-**Device type** | Filter by the device type you're interested in investigating.</br></br> (_Appears on all tabs, except for Uncategorized devices_)
-**Device subtype** | Filter by the device subtype you're interested in investigating.</br></br> (_Appears on all tabs, except for Uncategorized devices_)
+**Device type** | Filter by the device type you're interested in investigating.</br></br> (_All devices and IoT/OT devices only_)
+**Device subtype** | Filter by the device subtype you're interested in investigating.</br></br> (_All devices and IoT/OT devices only_)
 **Device category** | Filter by the device category you're interested in investigating.</br></br> (_All devices and IoT/OT devices only_)
 **Vendor** | Filter by the device vendor you're interested in investigating.</br></br> (_All devices only_)
 **Model** | Filter by the device model you're interested in investigating.</br></br> (_All devices only_)
 **Mitigation status** | Filter by isolation or containment status of a device.
-**Site** | Filter by site name. Used for the Defender for IoT [site security](/defender-for-iot/site-security-overview.md) feature.</br></br> (_All devices and IoT/OT devices only, for customers with a Defender for IoT license._)
+**Site** | Filter by site name. Used for the Defender for IoT [site security](/defender-for-iot/site-security-overview) feature.</br></br> (_All devices and IoT/OT devices only, for customers with a Defender for IoT license._)
 
 ## Use columns to customize the device inventory views
 
