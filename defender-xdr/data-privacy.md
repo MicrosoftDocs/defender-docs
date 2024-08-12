@@ -19,7 +19,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 05/14/2024
+ms.date: 08/12/2024
 ---
 
 # Microsoft Defender XDR data security and privacy
