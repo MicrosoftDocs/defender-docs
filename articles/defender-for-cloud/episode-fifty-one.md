@@ -2,25 +2,24 @@
 title: Defender for Open-Source Relational Databases multicloud
 description: Learn about Microsoft's Defender for Cloud Defender for Open-Source Relational Databases multicloud capabilities
 ms.topic: reference
-ms.date: 06/18/2024
+ms.date: 08/12/2024
 ---
 
 # Defender for Open-Source Relational Databases multicloud
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Asaf Nakash joins Yuri Diogenes to talk about Microsoft Copilot for Security integration with Defender for Cloud. Asaf talks about the benefits of leveraging AI to help improve security posture in cloud environment, and the different scenarios that Copilot for Security integrates with Defender for Cloud. Asaf also demonstrates how to use the embedded experience of Copilot of Security in Defender for Cloud.
+**Episode description**: In this episode of Defender for Cloud in the Field, Catalin Esanu joins Yuri Diogenes to talk about Defender for Open-Source Relational Databases. Catalin starts giving some updates about Defender for Databases, and then he started talking about the new AWS and GCP scenario for databases. Catalin also demonstrates how to alerts are detected in Defender for Cloud that has threat protection for Open-Source Relational Databases.
   
 
-> [!VIDEO https://aka.ms/docs/player?id=849f64d2-5a66-406c-ac88-8c6c2f77fa34]
+> [!VIDEO https://aka.ms/docs/player?id=b500f9ce-ef69-4c97-8205-c167138ddb68]
 
-- [01:56](/shows/mdc-in-the-field/copilot-security#time=01m56s) - What is Copilot for Security?
-- [04:08](/shows/mdc-in-the-field/copilot-security#time=04m08s) - Why the AI integration with MDC is something important for Cloud Administrators?
-- [06:50](/shows/mdc-in-the-field/copilot-security#time=06m50s) - Requirements to have Copilot for Security integration with MDC
-- [09:56](/shows/mdc-in-the-field/copilot-security#time=09m56s) - RBAC considerations
-- [12:07](/shows/mdc-in-the-field/copilot-security#time=12m07s) - Demonstration
+- [02:13](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=02m13s) - Understanding the new additions for database protection in multicloud environments.
+- [05:52](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=05m52s) - RDS protection in public preview
+- [07:00](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=07m00s) - Threat detection alerts for databases in multicloud environment.
+- [08:53](/shows/mdc-in-the-field/open-source-relational-databases-multicloud#time=08m53s) - Demonstration
 
 ## Recommended resources
 
-- Learn more about [Copilot for Security in Defender for Cloud (Preview)](copilot-security-in-defender-for-cloud.md).
+- Learn more about [What is Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md).
 - Learn more about [Microsoft Security](https://msft.it/6002T9HQY).
 - Subscribe to [Microsoft Security on YouTube](https://www.youtube.com/playlist?list=PL3ZTgFEc7LysiX4PfHhdJPR7S8mGO14YS).
 

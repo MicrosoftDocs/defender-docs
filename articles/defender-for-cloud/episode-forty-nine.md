@@ -14,7 +14,7 @@ ms.date: 06/18/2024
 
 - [01:56](/shows/mdc-in-the-field/copilot-security#time=01m56s) - What is Copilot for Security?
 - [04:08](/shows/mdc-in-the-field/copilot-security#time=04m08s) - Why the AI integration with MDC is something important for Cloud Administrators?
-- [06:50](/shows/mdc-in-the-field/copilot-security#time=06m50s) - Requirements to have Copilot for Security integration with MDC
+- [06:50](/shows/mdc-in-the-field/copilot-security#time=06m50s) - Requirements to have Copilot for Security integration with Defender for Cloud.
 - [09:56](/shows/mdc-in-the-field/copilot-security#time=09m56s) - RBAC considerations
 - [12:07](/shows/mdc-in-the-field/copilot-security#time=12m07s) - Demonstration
 
