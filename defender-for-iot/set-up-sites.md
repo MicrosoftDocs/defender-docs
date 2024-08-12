@@ -1,6 +1,6 @@
 ---
-title: Set up sites with Microsoft Defender for IoT in the Defender portal
-description: This article describes how to set up a site as part of the site security feature included in Microsoft Defender for IoT in the Microsoft Defender portal.
+title: Set up and create sites for site security with Microsoft Defender for IoT in the Defender portal
+description: This article describes how to set up and create a site as part of the site security feature included in Microsoft Defender for IoT in the Microsoft Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
@@ -11,7 +11,7 @@ ms.topic: how-to
 
 # Set up sites
 
-Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which offers an overview of the security state of your entire operational technology (OT) environment. Your organization's security team can use this page to regularly monitor the security status of your production sites.
+Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which offers an overview of the security state of your entire operational technology (OT) environment. Your organization's security team use this page to regularly monitor the security status of your production sites.
 
 In this article, you learn how to set up a site in the **Site security** page.
 
@@ -39,7 +39,7 @@ To set up a site and associate the OT devices in your network to it:
     - **Site description**: Describe the purpose of the site, what activities occur there, the types and number of devices used, and other important information about the site.
     - **Owners**: The contact emails of any users administering the site who must be contacted when problems occur.
 
-    :::image type="content" source="media/set-up-sites/site-security-set-up-details-new.png" alt-text="Screenshot showing the details for a new site in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
+    :::image type="content" source="media/set-up-sites/site-security-set-up-details-new.png" alt-text="Screenshot showing the details for creating a new site in the Site security page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
 
 1. When completed, select **Next** to associate devices to the site.
 
