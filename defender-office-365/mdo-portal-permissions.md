@@ -19,7 +19,7 @@ description: Admins can learn how to manage Microsoft Defender for Office 365 (E
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 6/15/2023
+ms.date: 08/12/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -98,8 +98,8 @@ The same role groups and roles are available in the Defender portal and in the P
 For complete information about these role groups, see [Roles and role groups in the Microsoft Defender XDR and Microsoft Purview compliance portals](scc-permissions.md)
 
 > [!NOTE]
-> Microsoft Defender for Office data available in the Defender portal is not impacted by Adaptive Scopes, if those are configured in the Microsoft Purview portal. For additional informaion on Purview's Adaptive scopes, see [Adaptive scopes in Purview compliance portal](https://learn.microsoft.com/en-us/purview/purview-adaptive-scopes)
-> 
+> Defender for Office 365 data that's available in the Microsoft Defender portal isn't affected by adaptive scopes that are configured in the Microsoft Purview compliance portal. For more information about adaptive scopes, see [Adaptive scopes](/purview/purview-adaptive-scopes).
+
 The following actions are available for Email & collaboration role groups in the Defender portal:
 
 - [Create role groups](#create-email--collaboration-role-groups-in-the-microsoft-defender-portal)
