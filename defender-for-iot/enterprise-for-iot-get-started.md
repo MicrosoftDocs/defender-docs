@@ -10,7 +10,7 @@ ms.topic: how-to
 ---
 
 # Get started with enterprise for IoT
-
+ 
 Add enterprise IoT to your Microsoft Defender portal and use the IoT specific security features to protect your IoT environment.
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
