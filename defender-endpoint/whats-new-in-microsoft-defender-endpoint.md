@@ -55,7 +55,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 - (Preview) **Monitor OT devices in the device inventory**: You can now monitor OT devices in addition to IoT devices in the device inventory, as part of the integration with [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/device-discovery). As part of this integration:
     - We've added the **All devices** tab and renamed the **IoT devices** tab to **IoT/OT devices**.
-    - We've added the **Device type**, **Device subtype**, **Vendor** and **Model** filters and columns to the device inventory. 
+    - We've added the **Device type**, **Device subtype**, **Vendor**, **Model**, and **Site** filters and columns to the device inventory. Some of these filters are only visible on specific tabs, and only for customers with a Defender for IoT license. [Learn more](machines-view-overview#use-filters-to-customize-the-device-inventory-views.md).
     - We've added the ability to search Mac devices and Mac addresses.
     - We've added a system tag that shows the production site name (read only), used for the Defender for IoT [site security](/defender-for-iot/site-security-overview.md) feature, as part of the [device group](/defender-for-iot/set-up-sites.md#add-device-group).
     - If OT devices are discovered but a Defender for IoT license isn't set up, the device inventory displays partial data on the OT/IoT devices, and a message that indicates the number of unprotected OT devices. [Learn more about the initial device inventory view with detected OT devices](/defender-for-iot/device-discovery#device-inventory-initial-view).

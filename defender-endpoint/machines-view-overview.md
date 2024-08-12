@@ -136,7 +136,7 @@ Filter | Description
 **Criticality level** | The criticality level reflects how critical a device is for your organization. The possible levels are low, medium, high, or very high. Very high means that the device is considered a business critical asset. For more information, see [Overview of critical asset management](/security-exposure-management/critical-asset-management).
 **Transient devices** | By default transient devices are filtered out of the device inventory to reduce inventory noise. You can turn transient device filtering off as needed. Learn more about [transient device filtering](transient-device-tagging.md).
 **OS Platform** | Filter by the OS platforms you're interested in investigating </br></br>(_Computers and mobile and IoT/OT devices only_).
-**OS Version** | Filter by the OS versions you're interested in investigating </br></br>(_All devices, Computers and mobile, and IoT/OT devices only_).
+**OS Version** | Filter by the OS versions you're interested in investigating. Includes Windows versions. In the Computers and mobile tab, the **Windows version** filter is available instead of **OS version**. </br></br> (_All devices only_).
 **Windows version** | Filter by the Windows versions you're interested in investigating. If 'future version' appears in the Windows version field, it can mean:</br></br> - This is a pre-release build for a future Windows release</br> - The build has no version name</br> - The build version name isn't yet supported </br></br> In all these scenarios, where available, the full OS version can be seen in the device details page.</br></br> (_Computers and mobile only_).
 **Sensor health state** | Filter by the following sensor health states, for devices onboard to Microsoft Defender for Endpoint:</br> - **Active**: Devices that are actively reporting sensor data to the service.</br> - **Inactive**: Devices that stopped sending signals for more than seven days.</br> - **Misconfigured**: Devices that have impaired communications with service or are unable to send sensor data.</br> Misconfigured devices can further be classified to: </br>  - No sensor data </br>  - Impaired communications </br>  For more information on how to address issues on misconfigured devices, see, [Fix unhealthy sensors](fix-unhealthy-sensors.md).</br></br> (_Computers and mobile only_).
 **Onboarding status** | Onboarding status indicates whether the device is currently onboarded to Microsoft Defender for Endpoint or not. Device discovery must be enabled for this filter to appear. You can filter by the following states: </br> - **Onboarded**: The endpoint is onboarded to Microsoft Defender for Endpoint.</br> - **Can be onboarded**: The endpoint was discovered in the network as a supported device, but isn't currently onboarded. Microsoft highly recommends onboarding these devices.</br> - **Unsupported**: The endpoint was discovered in the network, but isn't supported by Microsoft Defender for Endpoint.</br> - **Insufficient info**: The system couldn't determine the supportability of the device.</br></br> (_Computers and mobile only_).
@@ -148,12 +148,13 @@ Filter | Description
 **Device value** | Filter the list based on whether the device is marked as high value or low value.
 **Exclusion state** | Filter the list based on whether the device is excluded or not. For more information, see [Exclude devices](exclude-devices.md).
 **Managed by** | Managed by indicates how the device is being managed. You can filter by:</br> - Microsoft Defender for Endpoint</br> - Microsoft Intune, including co-management with Microsoft Configuration Manager via tenant attach</br>- Microsoft Configuration manager (ConfigMgr)</br> - Unknown: This issue could be due the running an outdated Windows version, GPO management, or another non-Microsoft MDM.</br></br> (_Computers and mobile only_)
-**Device Type** | Filter by the device type you're interested in investigating.</br></br> (_Appears on all tabs, except for uncategorized devices_)
-**Device Subtype** | Filter by the device subtype you're interested in investigating.</br></br> (_Appears on all tabs, except for uncategorized devices_)
-**Device Category** | Filter by the device category you're interested in investigating.</br></br> (_All devices and IoT devices/OT only_)
-**Vendor** | Filter by the device vendor you're interested in investigating.</br></br> (_All devices and IoT devices/OT only_)
-**Model** | Filter by the device model you're interested in investigating.</br></br> (_All devices and IoT devices/OT only_)
+**Device type** | Filter by the device type you're interested in investigating.</br></br> (_Appears on all tabs, except for uncategorized devices_)
+**Device subtype** | Filter by the device subtype you're interested in investigating.</br></br> (_Appears on all tabs, except for uncategorized devices_)
+**Device category** | Filter by the device category you're interested in investigating.</br></br> (_All devices and IoT/OT devices only_)
+**Vendor** | Filter by the device vendor you're interested in investigating.</br></br> (_All devices only_)
+**Model** | Filter by the device model you're interested in investigating.</br></br> (_All devices only_)
 **Mitigation status** | Filter by isolation or containment status of a device.
+**Site** | Filter by site name. Used for the Defender for IoT [site security](/defender-for-iot/site-security-overview.md) feature.</br></br> (_All devices and IoT/OT devices only, for customers with a Defender for IoT license._)
 
 ## Use columns to customize the device inventory views
 
