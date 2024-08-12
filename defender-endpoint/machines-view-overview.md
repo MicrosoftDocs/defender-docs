@@ -162,21 +162,21 @@ You can add or remove columns from the view and sort the entries by clicking on 
 
 On the **All devices** tab, select **Customize columns** to see the columns available. The default values are checked in the following image:
 
-:::image type="content" alt-text="Image of all devices columns" source="media/alldevicescolumns.png":::
+:::image type="content" alt-text="Image of all devices columns" source="media/alldevicescolumns.png" lightbox="media/alldevicescolumns.png":::
 
 Firmware information for OT devices is displayed in the **OS version** and **Model** columns.
 
 On the **Computer and Mobiles** tab, select **Customize columns** to see the columns available. The default values are checked in the following image:
 
-:::image type="content" alt-text="Image of computers and mobiles columns" source="media/computerandmobilescolumns_updated.png":::
+:::image type="content" alt-text="Image of computers and mobiles columns" source="media/computerandmobilescolumns_updated.png" lightbox="media/computerandmobilescolumns_updated.png":::
 
 On the **Network devices** tab, select **Customize columns** to see the columns available. The default values are checked in the following image:
 
-:::image type="content" alt-text="Image of network device columns" source="media/networkdevicescolumns_updated.png":::
+:::image type="content" alt-text="Image of network device columns" source="media/networkdevicescolumns_updated.png" lightbox="media/networkdevicescolumns_updated.png":::
 
 On the **IoT/OT devices** tab, select **Customize columns** to see the columns available. The default values are checked in the following image:
 
-:::image type="content" alt-text="Image of IoT device columns" source="media/iotdevicescolumns_updated.png":::
+:::image type="content" alt-text="Image of IoT device columns" source="media/iotdevicescolumns_updated.png" lightbox="media/iotdevicescolumns_updated.png":::
 
 ## Related articles
 
