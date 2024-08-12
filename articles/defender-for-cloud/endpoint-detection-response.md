@@ -45,7 +45,6 @@ EDR recommendations are available if you have the following prerequisites in pla
 - [Agentless scanning for machines](enable-agentless-scanning-vms.md#enabling-agentless-scanning-for-machines) must be enabled in the plan. It's enabled by default, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
 
 
-
 ## Identify enabled EDR solutions
 
 To identify which solution is enabled on a VM:

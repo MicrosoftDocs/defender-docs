@@ -189,7 +189,7 @@ The Azure network resources are:
 | `*.blob.core.windows.net` | 443 | Yes |
 | `*.azure-automation.net` | 443 | Yes |
 
-If you're having trouble onboarding the Log Analytics agent, read [Troubleshoot Operations Management Suite onboarding issues](https://support.microsoft.com/help/3126513/how-to-troubleshoot-operations-management-suite-onboarding-issues).
+If you're having trouble onboarding the Log Analytics agent, read [Troubleshoot Operations Management Suite onboarding issues](https://techcommunity.microsoft.com/t5/system-center-blog/operations-management-suite-onboarding-troubleshooting-steps/ba-p/349464).
 
 ## Troubleshoot improperly working antimalware protection
 

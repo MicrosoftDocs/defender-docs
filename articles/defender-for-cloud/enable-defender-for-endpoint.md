@@ -10,141 +10,84 @@ ms.date: 03/13/2024
 
 # Enable the Defender for Endpoint integration
 
-Microsoft Defender for Cloud's integration with Microsoft Defender for Endpoint, provides a cloud-based endpoint security solution that offers a wide range of features. The integration provides risk-based vulnerability management and assessment, which helps identify and prioritize vulnerabilities that need to be addressed. The solution also includes attack surface reduction, which helps minimize the attack surface of endpoints, as well as behavioral-based and cloud-powered protection to detect and respond to threats. Additionally, Microsoft Defender for Endpoint offers endpoint detection and response (EDR), automatic investigation and remediation, and managed hunting services to help organizations quickly detect, investigate, and respond to security incidents.
+The Defender for Servers plan in Microsoft Defender for Cloud [integrates natively with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md) to provide Defender for Endpoint protection capabilities to machines protected by Defender for Servers. 
+
+When you turn on the Defender for Servers plan, Defender for Endpoint is integrated by default, and automatic provisioning of the Defender for Endpoint sensor is enabled for supported machines connected to Defender for Cloud. 
+
+This article describes how to enable Defender for Endpoint integration manually if needed, for Windows and Linux machines.
 
 ## Prerequisites
 
-Before you can enable the Microsoft Defender for Endpoint integration with Defender for Cloud, you must confirm that your machine meets the necessary requirements for Defender for Endpoint:
-
-- Ensure the machine is connected to Azure and the internet as required:
-
-  - **Azure virtual machines (Windows or Linux)** - Configure the network settings described in configure device proxy and internet connectivity settings: [Windows](/microsoft-365/security/defender-endpoint/configure-proxy-internet) or [Linux](/microsoft-365/security/defender-endpoint/linux-static-proxy-configuration).
-
-  - **On-premises machines** - Connect your target machines to Azure Arc as explained in [Connect hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
-
-- Enable **Microsoft Defender for Servers**. See [Quickstart: Enable Defender for Cloud's enhanced security features](enable-enhanced-security.md).
-
-    > [!IMPORTANT]
-    > Defender for Cloud's integration with Microsoft Defender for Endpoint is enabled by default. So when you enable enhanced security features, you give consent for Microsoft Defender for Servers to access the Microsoft Defender for Endpoint data related to vulnerabilities, installed software, and alerts for your endpoints.
-
-- For Windows servers, make sure that your servers meet the requirements for [onboarding Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016).
-
-- For Linux servers, you must have Python installed. Python 3 is recommended for all distros, but is required for RHEL 8.x and Ubuntu 20.04 or higher. If needed, see Step-by-step Instructions for Installing Python on Linux.
-
+- **Windows support**: Verify that Windows machines are [supported by Defender for Endpoint](/defender/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016).
+- **Linux servers**: For Linux servers, you must have Python installed. Python 3 is recommended for all distros, but is required for RHEL 8.x and Ubuntu 20.04 or higher. 
+- **Azure VMs**: Check that VMs can connect to the Defender for Endpoint service. If machines don't have direct access, your proxy settings or firewall rules need to allow access to Defender for Endpoint URLs. Review proxy settings for [Windows](/defender/defender-endpoint/configure-proxy-internet) and [Linux](/defender/defender-endpoint/linux-static-proxy-configuration) machines.
+- **On-premises VMs**: - Onboard [on-premises machines](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) as Azure Arc VMs to Defender for Cloud.
 - If you've moved your subscription between Azure tenants, some manual preparatory steps are also required. For details, [contact Microsoft support](https://portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview).
 
-## Enable the integration
+> [!NOTE]
+> If you choose not to deploy the Defender for Endpoint unified solution to Windows 2012 R2 and 2016 servers in Defender for Servers Plan 2, and then downgrade to Plan 1, the Defender for Endpoint sensor is not deployed automatically to those servers, so that your existing deployment is not changed without your explicit consent.
 
-- On [Windows](#windows)
 
-- On [Linux](#linux)
+## Enable on Windows machines (Defender for Servers/integration enabled)
 
-### Windows
+If Defender for Servers is already enabled and Defender for Endpoint integration is on by default, you can manually turn on the integration for specific machines using the [REST API call](#enable-the-microsoft-defender-for-endpoint-unified-solution-at-scale), or turn on in the portal as follows:
 
-[The Defender for Endpoint unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) doesn't use or require installation of the Log Analytics agent. The unified solution is automatically deployed for Azure Windows 2012 R2 and 2016 servers, Windows servers connected through Azure Arc, and Windows multicloud servers connected through the multicloud connectors.
-
-You'll deploy Defender for Endpoint to your Windows machines in one of two ways - depending on whether you've already deployed it to your Windows machines:
-
-- [Users with Defender for Servers enabled and Microsoft Defender for Endpoint deployed](#users-with-defender-for-servers-enabled-and-microsoft-defender-for-endpoint-deployed)
-- [Users who never enabled the integration with Microsoft Defender for Endpoint](#users-who-never-enabled-the-integration-with-microsoft-defender-for-endpoint-for-windows)
-
-#### Users with Defender for Servers enabled and Microsoft Defender for Endpoint deployed
-
-If you've already enabled the integration with **Defender for Endpoint**, you have complete control over when and whether to deploy the Defender for Endpoint unified solution to your **Windows** machines.
-
-To deploy the Defender for Endpoint unified solution, you need to use the [REST API call](#enable-the-microsoft-defender-for-endpoint-unified-solution-at-scale) or the Azure portal:
-
-1. From Defender for Cloud's menu, select **Environment settings** and select the subscription with the Windows machines that you want to receive Defender for Endpoint.
+1. In Defender for Cloud, select **Environment settings** and select the subscription with the Windows machines that you want to receive Defender for Endpoint.
 
 1. In the Monitoring coverage column of the Defender for Servers plan, select **Settings**.
 
     The status of the Endpoint protections component is **Partial**, meaning that not all parts of the component are enabled.
 
-    > [!NOTE]
-    > If the status is **Off**, use the instructions in [Users who've never enabled the integration with Microsoft Defender for Endpoint for Windows](#users-who-never-enabled-the-integration-with-microsoft-defender-for-endpoint-for-windows).
-
 1. Select **Fix** to see the components that aren't enabled.
 
     :::image type="content" source="./media/integration-defender-for-endpoint/fix-defender-for-endpoint.png" alt-text="Screenshot of Fix button that enables Microsoft Defender for Endpoint support.":::
 
-1. To enable the Unified solution for Windows Server 2012 R2 and 2016 machines, select **Enable**.
+1. In **Missing components** > **Unified solution**, select enable to automatically provision the Defender for Endpoint sensor on Windows Server 2012 R2 and 2016 machines connected to Microsoft Defender for Cloud.
 
     :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-unified.png" alt-text="Screenshot of enabling the use of the Defender for Endpoint unified solution for Windows Server 2012 R2 and 2016 machines.":::
 
-1. To save the changes, select **Save** at the top of the page and then select **Continue** in the Settings and monitoring page.
+1. To save the changes, select **Save** at the top of the page. In the **Settings and monitoring** page, select **Continue**.
 
-Microsoft Defender for Cloud will:
+    Defender for Cloud onboards for all existing and new Windows Server 2012 R2 and 2016 machines to Defender for Endpoint.
 
-- Stop the existing Defender for Endpoint process in the Log Analytics agent that collects data for Defender for Servers.
-- Install the Defender for Endpoint unified solution for all existing and new Windows Server 2012 R2 and 2016 machines.
+    Onboarding might take up to 12 hours. For new machines created after the integration has been enabled, onboarding takes up to an hour.
 
-Microsoft Defender for Cloud will automatically onboard your machines to Microsoft Defender for Endpoint. Onboarding might take up to 12 hours. For new machines created after the integration has been enabled, onboarding takes up to an hour.
+## Enable on Linux machines (Defender for Servers/integration enabled)
 
-> [!NOTE]
-> If you choose not to deploy the Defender for Endpoint unified solution to your Windows 2012 R2 and 2016 servers in Defender for Servers Plan 2 and then downgrade Defender for Servers to Plan 1, the Defender for Endpoint unified solution is not deployed to those servers so that your existing deployment is not changed without your explicit consent.
-
-#### Users who never enabled the integration with Microsoft Defender for Endpoint for Windows
-
-If you've never enabled the integration for Windows, Endpoint protection enables Defender for Cloud to deploy Defender for Endpoint to *both* your Windows and Linux machines.
-
-To deploy the Defender for Endpoint unified solution, you'll need to use the [REST API call](#enable-the-microsoft-defender-for-endpoint-unified-solution-at-scale) or the Azure portal:
-
-1. From Defender for Cloud's menu, select **Environment settings** and select the subscription with the machines that you want to receive Defender for Endpoint.
-
-1. In the status of the Endpoint protection component, select **On** to enable the integration with Microsoft Defender for Endpoint.
-
-    :::image type="content" source="media/integration-defender-for-endpoint/enable-defender-for-endpoint.png" alt-text="Screenshot of Status toggle that enables Microsoft Defender for Endpoint." lightbox="media/integration-defender-for-endpoint/enable-defender-for-endpoint.png":::
-
-The Defender for Endpoint agent unified solution is deployed to all of the machines in the selected subscription.
-
-### Linux
-
-You'll deploy Defender for Endpoint to your Linux machines in one of these ways, depending on whether you've already deployed it to your Windows machines:
-
-- Enable for a specific subscription in the Azure portal environment settings
-  - [Existing users with Defender for Cloud's enhanced security features enabled and Microsoft Defender for Endpoint for Windows](#existing-users-with-defender-for-clouds-enhanced-security-features-enabled-and-microsoft-defender-for-endpoint-for-windows)
-  - [New users who never enabled the integration with Microsoft Defender for Endpoint for Windows](#new-users-who-never-enabled-the-integration-with-microsoft-defender-for-endpoint-for-windows)
-- [Enable for multiple subscriptions in the Azure portal dashboard](#enable-on-multiple-subscriptions-in-the-azure-portal-dashboard)
-- Enable for multiple subscriptions with a PowerShell script
+If Defender for Servers is already enabled and Defender for Endpoint integration is on by default, you can manually turn on the integration for specific Linux machines in the portal.
 
 > [!NOTE]
-> When you enable automatic deployment, Defender for Endpoint for Linux installation will abort on machines with pre-existing running services using [fanotify](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements) and other services that can also cause Defender for Endpoint to malfunction or might be affected by Defender for Endpoint, such as security services.
-> After you validate potential compatibility issues, we recommend that you manually install Defender for Endpoint on these servers.
+> - Automatic deployment of the Defender for Endpoint sensor on Linux machines might not work as expected on machines running services that use [fanotify](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements) or other incompatible components.
+> - After you validate potential compatibility issues, we recommend that you manually install Defender for Endpoint on these servers.
 
-#### Existing users with Defender for Cloud's enhanced security features enabled and Microsoft Defender for Endpoint for Windows
+Turn on integration as follows:
 
-If you've already enabled the integration with **Defender for Endpoint for Windows**, you have complete control over when and whether to deploy Defender for Endpoint to your **Linux** machines.
-
-1. From Defender for Cloud's menu, select **Environment settings** and select the subscription with the Linux machines that you want to receive Defender for Endpoint.
+1. In Defender for Cloud, select **Environment settings** and select the subscription with the Linux machines that you want to receive Defender for Endpoint.
 
 1. In the Monitoring coverage column of the Defender for Server plan, select **Settings**.
 
     The status of the Endpoint protections component is **Partial**, meaning that not all parts of the component are enabled.
 
-    > [!NOTE]
-    > If the status is **Off** isn't selected, use the instructions in [Users who've never enabled the integration with Microsoft Defender for Endpoint for Windows](#users-who-never-enabled-the-integration-with-microsoft-defender-for-endpoint-for-windows).
-
 1. Select **Fix** to see the components that aren't enabled.
 
     :::image type="content" source="./media/integration-defender-for-endpoint/fix-defender-for-endpoint.png" alt-text="Screenshot of Fix button that enables Microsoft Defender for Endpoint support.":::
 
-1. To enable deployment to Linux machines, select **Enable**.
+1. In **Missing components** > **Linux machines**, select **Enable**.
 
     :::image type="content" source="./media/integration-defender-for-endpoint/enable-defender-for-endpoint-linux.png" alt-text="Screenshot of enabling the integration between Defender for Cloud and Microsoft's EDR solution, Microsoft Defender for Endpoint for Linux.":::
 
-1. To save the changes, select **Save** at the top of the page and then select **Continue** in the Settings and monitoring page.
+1. To save the changes, select **Save** at the top of the page. In the **Settings and monitoring** page, select **Continue**.
 
-    Microsoft Defender for Cloud will:
+    Defender for Cloud onboards Linux machines to Defender for Endpoint. Defender for Cloud detects any previous Defender for Endpoint installations, and reconfigures them to integrate with Defender for Cloud.
 
-    - Automatically onboard your Linux machines to Defender for Endpoint
-    - Detect any previous installations of Defender for Endpoint and reconfigure them to integrate with Defender for Cloud
+    Onboarding might take up to 12 hours. For new machines created after the integration has been enabled, onboarding takes up to an hour.
 
-    Microsoft Defender for Cloud will automatically onboard your machines to Microsoft Defender for Endpoint. Onboarding might take up to 12 hours. For new machines created after the integration has been enabled, onboarding takes up to an hour.
+
 
     > [!NOTE]
-    > The next time you return to this page of the Azure portal, the **Enable for Linux machines** button won't be shown. To disable the integration for Linux, you'll need to disable it for Windows too by turning the toggle **off** in **Endpoint Protection**, and selecting **Continue**.
+    > The next time you open the **Missing components** page, the option to enable/disable integration for Linux machines doesn't appear. To disable Linux integration, you need to turn off Defender for Endpoint integration for the plan (disabling it for Windows too), and then turn back on for Windows machines as needed.
 
-1. To verify installation of Defender for Endpoint on a Linux machine, run the following shell command on your machines:
+1. To verify Defender for Endpoint sensor installation on a Linux machine, run the following shell command on each machine.
 
     `mdatp health`
 
@@ -156,42 +99,45 @@ If you've already enabled the integration with **Defender for Endpoint for Windo
 
     Also, in the Azure portal you'll see a new Azure extension on your machines called `MDE.Linux`.
 
-#### New users who never enabled the integration with Microsoft Defender for Endpoint for Windows
+## Enable Defender for Endpoint integration on a subscription (never enabled)
 
-If you've never enabled the integration for Windows, endpoint protection enables Defender for Cloud to deploy Defender for Endpoint to *both* your Windows and Linux machines.
+If you've never enabled the Defender for Endpoint unified solution, you can turn it on for both Windows and Linux machines using the [REST API call](#enable-the-microsoft-defender-for-endpoint-unified-solution-at-scale), or in the portal as follows:
 
-1. From Defender for Cloud's menu, select **Environment settings** and select the subscription with the Linux machines that you want to receive Defender for Endpoint.
+1. In Defender for Cloud, select **Environment settings** and select the subscription containing the machines on which you want to deploy the Defender for Endpoint integration.
 
-1. In the Monitoring coverage column of the Defender for Server plan, select **Settings**.
-
-1. In the status of the Endpoint protection component, select **On** to enable the integration with Microsoft Defender for Endpoint.
+1. In **Settings and monitoring** > **Endpoint protection**, toggle the **Status** column settings to**On**. 
 
     :::image type="content" source="media/integration-defender-for-endpoint/enable-defender-for-endpoint.png" alt-text="Screenshot of Status toggle that enables Microsoft Defender for Endpoint." lightbox="media/integration-defender-for-endpoint/enable-defender-for-endpoint.png":::
 
-    Microsoft Defender for Cloud will:
-
-    - Automatically onboard your Windows and Linux machines to Defender for Endpoint
-    - Detect any previous installations of Defender for Endpoint and reconfigure them to integrate with Defender for Cloud
-
-    Onboarding might take up to 1 hour.
-
 1. Select **Continue** and **Save** to save your settings.
 
-1. To verify installation of Defender for Endpoint on a Linux machine, run the following shell command on your machines:
+    The Defender for Endpoint unified sensor is deployed to all of Windows and Linux machines in the selected subscription.
 
-    `mdatp health`
-
-    If Microsoft Defender for Endpoint is installed, you'll see its health status:
+    On Linux machines:
+    - Defender for Cloud detects any previous Defender for Endpoint installations, and reconfigures them to integrate with Defender for Cloud.
+    - To verify Defender for Endpoint sensor installation on a Linux machine, run the following shell command on each machine: `mdatp health`. If Microsoft Defender for Endpoint is installed, you'll see its health status:
 
     `healthy : true`
 
     `licensed: true`
 
-    In addition, in the Azure portal you'll see a new Azure extension on your machines called `MDE.Linux`.
+    Also, in the Azure portal you'll see a new Azure extension on your machines called `MDE.Linux`.
 
-#### Enable on multiple subscriptions in the Azure portal dashboard
+    Onboarding might take up to an hour.
 
-If one or more of your subscriptions don't have Endpoint protections enabled for Linux machines, you'll see an insight panel in the Defender for Cloud dashboard. The insight panel tells you about subscriptions that have Defender for Endpoint integration enabled for Windows machines, but not for Linux machines. You can use the insight panel to see the affected subscriptions with the number of affected resources in each subscription. Subscriptions that don't have Linux machines show no affected resources. You can then select the subscriptions to enable endpoint protection for Linux integration.
+
+## Enable integration on Linux machines in multiple subscriptions
+
+An insight panel in the Defender for Cloud dashboard shows information about Defender for Endpoint integration in subscriptions that don't have doesn't have Defender for Endpoint integration enabled for Linux machines. 
+
+Defender for Cloud > Workload protections > Insights panel?
+
+
+If integration is enabled for Linux machines in a subscription, the insight panel doesn't show information about that subscription. 
+
+If one or more subscriptions don't have endpoint integration for Linux machines, you see an insight panel in the Defender for Cloud dashboard. 
+
+- The insight panel tells you about subscriptions that have Defender for Endpoint integration enabled for Windows machines, but not for Linux machines. You can use the insight panel to see the affected subscriptions with the number of affected resources in each subscription. Subscriptions that don't have Linux machines show no affected resources. You can then select the subscriptions to enable endpoint protection for Linux integration.
 
 After you select **Enable** in the insight panel, Defender for Cloud:
 
