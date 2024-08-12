@@ -786,7 +786,7 @@
             href: transition-to-defender-vulnerability-management.md
           - name: Common questions 
             href: common-questions-microsoft-defender-vulnerability-management.md
-      - name: Defender for Containers - inventory and offboarding
+      - name: Resource Inventory and Offboarding
         displayName: defender, containers, offboard, inventory
         href: defender-for-containers-offboard.md
       - name: Binary drift detection (preview)
