@@ -45,7 +45,9 @@ Learn more about:
 
 ## Enable on Azure, AWS, or GCP
 
-You can enable a Defender for Servers plan for an Azure subscription, AWS account, or GCP project.
+You can enable a Defender for Servers plan for an Azure subscription, AWS account, or GCP project. 
+
+Defender for Endpoint integration is enabled by default in Defender for Cloud. When you enable Defender for Servers, you give consent for the plan to access the Defender for Endpoint data related to vulnerabilities, installed software, and alerts for endpoints.
 
 
 1. Sign in to the [Azure portal](https://portal.azure.com)

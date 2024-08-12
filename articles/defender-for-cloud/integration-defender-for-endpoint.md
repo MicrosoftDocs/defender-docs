@@ -8,27 +8,33 @@ ms.date: 06/23/2024
 #customer intent: As a reader, I want to understand how to deploy Microsoft Defender for Endpoint from Microsoft Defender for Cloud to protect Azure, hybrid, and multicloud machines.
 ---
 
-# Endpoint detection and response in Defender for Servers
+# Overview: Defender for Servers endpoint detection and response 
 
-The [Defender for Servers plan](defender-for-servers-overview.md) works with endpoint detection and response (EDR) solutions to check that solutions are installed as expected on VMs, and to address any security gaps. 
+[Defender for Servers Plan 2](defender-for-servers-overview.md) in Microsoft Defender for Cloud provides agentless scanning of protected machines to check that machines have a endpoint detection and response (EDR) solution installed, and to address any security gaps.
+
+> [!NOTE]
+> - Agentless scanning replaces older functionality that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) in general availability, or the Azure Monitoring Agent (AMA) in preview.
+> - The MMA is set to retire in August 2024. Machine scanning using the MMA will be deprecated in November 2024.
+> - The AMA preview is now deprecated.
 
 
 ## Defender for Endpoint integration
 
-Microsoft Defender for Cloud integrates natively with [Microsoft Defender for Endpoint](/defender/defender-endpoint/microsoft-defender-endpoint), providing [EDR capabilities](defender/defender-endpoint/overview-endpoint-detection-response), and other [Defender for Endpoint Plan 2 protection features](/defender/defender-endpoint/microsoft-defender-endpoint) to machines protected by Defender for Servers. 
+Defender for Servers integrates natively with [Microsoft Defender for Endpoint](/defender/defender-endpoint/microsoft-defender-endpoint) to provide Defender for Endpoint Plan 2 protection features to machines protected by Defender for Servers, including EDR capabilities.
 
 Defender for Endpoint integration provides a number of benefits, including: 
 
-- **Automated agent provisioning**. Defender for Cloud automatically enables the Defender for Endpoint sensor on all supported machines connected to Defender for Cloud.
-- **Licensing**: Defender for Servers covers licensing for Defender for Endpoint. Licensing is charged per hour instead of per seat, lowering costs by protecting VMs only when they're in use.
-- **Centralized alert monitoring**. Defender for Endpoint alerts appear in the Defender for Cloud portal. Drill down for alerts is in the Defender portal, and includes additional information such as the alert process tree, the incident graph, and a detailed machine timeline of up to six months
-- **Defender for Endpoint protection features***. Defender for Endpoint's Plan 2 protection, detection, and response capabilities include:
-    - [Threat and vulnerability management with [Defender Vulnerability Management](/defender/defender-vulnerability-management/defender-vulnerability-management).
-    - [Attack surface reduction](/defender/defender-endpoint/attack-surface-reduction).
+- **Integration of Defender for Endpoint protection features**
+    - Threat and vulnerability management with [Defender Vulnerability Management](/defender/defender-vulnerability-management/defender-vulnerability-management).
+    - [Attack surface reduction](/defender/defender-endpoint/attack-surface-reduction) capabilities.
     - Threat protection, including endpoint protection from [Internet-based network events](/defender/defender-endpoint/network-protection) and [web threats](/defender/defender-endpoint/web-protection-overview)
     - Next-generation protection providing [antimalware and antivirus protection](/defender/defender-endpoint/next-generation-protection). 
     - [EDR capabilities](defender/defender-endpoint/overview-endpoint-detection-response) to provide real-time, actionable threat detection and response.
-    - Threat intelligence using data provided by Microsoft threat hunters and security teams, augmented by intelligence provided by partners, to generate alerts when Defender for Endpoint identifies attacker tools, techniques, and procedures.
+    - Threat intelligence using data provided by Microsoft threat hunters and security teams, augmented by intelligence provided by partners. Security alerts are generated when Defender for Endpoint identifies attacker tools, techniques, and procedures.
+- **Automated agent provisioning**. Defender for Cloud automatically installs the Defender for Endpoint sensor on all supported machines connected to Defender for Cloud.
+- **Licensing**: Defender for Servers covers licensing for Defender for Endpoint. Licensing is charged per hour instead of per seat, lowering costs by protecting VMs only when they're in use.
+- **Centralized alert monitoring**. Defender for Endpoint alerts appear in the Defender for Cloud portal. You drill down into alerts in the Defender portal for additional information such as the alert process tree, the incident graph, and a detailed machine timeline of up to six months.
+
 
 ### Integration architecture
 
@@ -44,7 +50,7 @@ A Defender for Endpoint tenant is automatically created, when you use Defender f
 
 ## Other EDR solutions
 
-Defender for Servers can assess the state of other supported EDR solutions.
+Defender for Servers Plan 2 can assess the state of other supported EDR solutions.
 
 | EDR solution | Supported platforms |
 |--|--|
@@ -58,13 +64,13 @@ Defender for Servers can assess the state of other supported EDR solutions.
 
 ## EDR solution recommendations
 
-Defender for Servers provides agentless scanning of VMs to check whether an EDR solution is enabled. Agentless scanning checks whether:
+Defender for Servers Plan 2 provides agentless scanning of VMs to check whether an EDR solution is enabled. Agentless scanning checks whether:
 
 - A supported EDR solution is enabled.
-- Defender for Servers plan 2 is enabled on the Azure subscription and the associated VMs.
+- Defender for Servers plan 2 is enabled on the Azure subscription and its associated VMs.
 - Supported EDR solutions are installed successfully.
 
-If checks find issues, Defender for Servers provides recommendations as follows:
+If a condition isn't met, Defender for Servers provides recommendations as follows:
 
 - `EDR solution should be installed on Virtual Machines`
 - `EDR solution should be installed on EC2s`
@@ -72,10 +78,6 @@ If checks find issues, Defender for Servers provides recommendations as follows:
 
 Recommendations include remediation steps to fix detected issues.
 
-> [!NOTE]
-> - Agentless scanning of supported EDR solutions replaces older functionality that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) in general availability, or the Azure Monitoring Agent (AMA) in preview.
-> - The MMA is set to retire in August 2024. Agentless machine scanning with the MMA will be deprecated in November 2024.
-> - The AMA preview is now deprecated.
 
 
 ## Related content
