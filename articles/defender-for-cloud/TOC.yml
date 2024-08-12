@@ -663,6 +663,10 @@
           - name: Enable agentless VM scanning
             displayName: vulnerability, software inventory, agentless scanning
             href: enable-agentless-scanning-vms.md
+          - name: Exclude machines from agentless scanning
+            href: exclude-machines-agentless-scanning.md
+          - name: Test malware scanning alerts
+            href: test-agentless-malware-scanning.md
       - name: Vulnerability scanning
         items:
           - name: Overview

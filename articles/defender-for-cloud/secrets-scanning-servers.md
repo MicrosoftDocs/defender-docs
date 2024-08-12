@@ -6,22 +6,22 @@ ms.date: 04/16/2024
 ---
 
 
-# Agentless secrets scanning for machines
+# Machine secrets scanning
 
-Microsoft Defender for Cloud provides [secrets scanning](secrets-scanning.md) for virtual machines as part of its [agentless machine scanning features](concept-agentless-data-collection.md) that improve security posture on Azure VMs, and on AWS and GCP machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+Microsoft Defender for Cloud provides [secrets scanning](secrets-scanning.md) for virtual machines as part of its [agentless machine scanning features](concept-agentless-data-collection.md) that improve machine security posture. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
-Secrets scanning for VMs helps you to quickly detect, prioritizes, and remediate exposed secrets. Secrets detection can identify a wide range of secrets types, such as tokens, passwords, keys, or credentials, stored in different types of file on the OS file system. 
+Secrets scanning for VMs helps you to quickly detect, prioritize, and remediate exposed secrets. 
 
-- Agentless secrets scanning for VMs locates plaintext secrets that exist in your environment.
-- If secrets are detected, Defender for Cloud assists your security team to prioritize and take actionable remediation steps to minimize the risk of lateral movement, all without affecting your machine's performance.
+Agentless secrets scanning for VMs locates plaintext secrets that exist in your environment.
 
+If secrets are detected, Defender for Cloud findings help security teams to prioritize actions, and remediate to minimize the risk of lateral movement.
 
 Secrets scanning for VMs is available in these Defender for Cloud plans:
 
 - Defender Cloud Security Posture Management (CSPM) plan.
 - Defender for Servers Plan 2
 
-VM secrets scanning can scan Azure VMs, and AWS/GCP instances onboarded to Defender for Cloud.
+VM secrets scanning can scan Azure VMs, and AWS/GCP instances connected to Defender for Cloud.
 
 ## Reducing security risk
 
@@ -36,16 +36,11 @@ Secrets scanning helps reduce risk with the following mitigations:
 
 Secrets scanning for VMs is agentless and uses cloud APIs.
 
-- Secrets scanning captures disk snapshots and analyses them, with no impact on VM performance.
- - After the Microsoft secrets scanning engine collects secrets metadata from disk, it sends them to Defender for Cloud. 
-- The secrets scanning engine verifies whether SSH private keys can be used to move laterally in your network.
+- Step 1: Secrets scanning captures disk snapshots and analyses them, with no impact on VM performance.
+- Step 2: After the Microsoft secrets scanning engine collects secrets metadata from disk, it sends them to Defender for Cloud. 
+- Step 3: The secrets scanning engine verifies whether SSH private keys can be used to move laterally in your network.
     - SSH keys that aren’t successfully verified are categorized as unverified on the Defender for Cloud Recommendations page. 
     - Directories recognized as containing test-related content are excluded from scanning.
-
-
-
-
-
 
 
 ## Related content

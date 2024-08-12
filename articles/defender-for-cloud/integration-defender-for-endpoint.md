@@ -10,7 +10,7 @@ ms.date: 06/23/2024
 
 # Overview: Defender for Servers endpoint detection and response 
 
-[Defender for Servers Plan 2](defender-for-servers-overview.md) in Microsoft Defender for Cloud provides agentless scanning of protected machines to check that machines have a endpoint detection and response (EDR) solution installed, and to address any security gaps.
+[Defender for Servers Plan 2](defender-for-servers-overview.md) in Microsoft Defender for Cloud provides agentless scanning of protected machines to check that machines have a endpoint detection and response (EDR) solution installed on supported machines connected to Defender for Cloud.
 
 > [!NOTE]
 > - Agentless scanning replaces older functionality that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) in general availability, or the Azure Monitoring Agent (AMA) in preview.
