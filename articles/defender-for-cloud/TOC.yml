@@ -243,7 +243,7 @@
           items:
           - name: Power Bi integration with Defender for Cloud
             displayName: CSPM, cloud security, posture, management, Power BI
-            href: integration-powerbi.md
+            href: integration-power-bi.md
           - name: Add Defender for Cloud data to Power BI
             displayName: CSPM, cloud security, posture, management, Power BI
             href: add-data-power-bi.md

@@ -15,9 +15,9 @@ By connecting Microsoft Defender for Cloud's data with Microsoft Power BI, you c
 
 ## Prerequisites
 
-- [Donwload and install Power BI Desktop](https://www.microsoft.com/power-platform/products/power-bi/desktop).
+- [Download and install Power BI Desktop](https://www.microsoft.com/power-platform/products/power-bi/desktop).
 
-- Ensure you have the correct [permissions to access Azure Resource Graph](../governance/resource-graph/overview.md#permissions-in-azure-resource-graph).
+- Ensure you have the correct [permissions to access Azure Resource Graph](/azure/governance/resource-graph/overview#permissions-in-azure-resource-graph).
 
 ## Connect Power BI to Azure Resource Graph
 
@@ -202,9 +202,9 @@ The queries provided on this page are examples that will provide results. Azure 
 
 1. Select **Load**.
 
-With Azure Resource Graph, you have the flexibility to retrieve and analyze any data available within your Defender for Cloud environment, ensuring comprehensive and tailored insights.
+With Azure Resource Graph, you have the flexibility to retrieve and analyze any data available within your Defender for Cloud environment, ensuring comprehensive and tailored insights. Once you have added your data to Power BI, you can create visualizations and dashboards to monitor and manage your security posture effectively.
 
 ## Next step
 
 > [!div class="nextstep"]
-> [Create visualizations in Power BI](create-visualizations-power-bi.md)
+> [Learn how to create visualizations in Power BI](/power-bi/fundamentals/service-get-started)
