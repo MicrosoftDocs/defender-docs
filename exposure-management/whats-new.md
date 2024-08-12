@@ -27,6 +27,12 @@ Security Exposure Management is currently in public preview.
 
 ## August 2024
 
+### New Initiative Event
+
+A new event type has been created to notify users when a new initiative is added to MSEM.
+
+For more information see, [Overview - Exposure insights](exposure-insights-overview.md)
+
 ### News from the Research Team
 
 Read more about what the research team has been up to in this blog - [Bridging the On-premises to Cloud Security Gap: Cloud Credentials Detection](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/bridging-the-on-premises-to-cloud-security-gap-cloud-credentials/ba-p/4211794)
