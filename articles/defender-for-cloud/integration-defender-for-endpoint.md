@@ -78,6 +78,13 @@ If a condition isn't met, Defender for Servers provides recommendations as follo
 
 Recommendations include remediation steps to fix detected issues.
 
+## EDR solution misconfigurations
+
+If you're using Defender for Endpoint as an EDR solution, Defender for Cloud can also run some checks for EDR misconfiguration settings, including
+
+- Scans that haven't run for seven days: `Both full and quick scans are out of 7 days`
+- Signatures that are out-of-date: `Signature out of date`
+- Anti-virus issues: `Anti-virus is off or partially configured`
 
 
 ## Related content
