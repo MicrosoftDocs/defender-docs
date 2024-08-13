@@ -2,7 +2,7 @@
 title: Defender for Open-Source Relational Databases multicloud
 description: Learn about Microsoft's Defender for Cloud Defender for Open-Source Relational Databases multicloud capabilities
 ms.topic: reference
-ms.date: 08/12/2024
+ms.date: 08/13/2024
 ---
 
 # Defender for Open-Source Relational Databases multicloud

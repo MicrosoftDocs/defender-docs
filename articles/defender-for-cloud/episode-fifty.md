@@ -2,7 +2,7 @@
 title: Secure your AI applications from code to runtime
 description: Learn about Microsoft's Defender for Cloud ability to secure your AI applications from code to runtime.
 ms.topic: reference
-ms.date: 08/12/2024
+ms.date: 08/13/2024
 ---
 
 # Secure your AI applications from code to runtime
