@@ -104,7 +104,7 @@ Approximately 30 minutes after the Azure Policy for Kubernetes installation comp
 > Some recommendations have parameters that must be customized via Azure Policy to use them effectively. For example, to benefit from the recommendation **Container images should be deployed only from trusted registries**, you'll have to define your trusted registries. If you don't enter the necessary parameters for the recommendations that require configuration, your workloads will be shown as unhealthy.
 
 > [!NOTE]
-> Out of the box Microsoft components such as the Defendor Sensor and Azure Monitor Agent (AMA) are deployed to the kube-system namespace. This configuration ensures that they are not marked as non-compliant in data plane recommendations. However, when third-party vendor tools are installed on the cluster in a different namespace, they may be flagged as non-compliant. In such cases, if you wish to exclude third-party vendors from these recommendations, you can add the third-party vendor’s namespace to the exclusion list.
+> Microsoft components like the Defender sensor and Azure Monitor Agent (AMA) are deployed in the kube-system namespace by default. This setup ensures they are not marked as non-compliant in data plane recommendations. However, third-party vendor tools installed in a different namespace may be flagged as non-compliant. To exclude third-party vendors from these recommendations, you can add their namespace to the exclusion list.
 
 | Recommendation name | Security Control | Configuration required |
 |---------------------|--------------------|------------------------|
