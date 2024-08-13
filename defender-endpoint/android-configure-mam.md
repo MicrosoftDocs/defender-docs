@@ -128,9 +128,7 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
 3. Select **Download**. You'll be redirected to the app store (Google play).
 
-4. Install the Microsoft Defender: Antivirus (Mobile) app.
-
-5. After installation Launch the managed app.
+4. Install the Microsoft Defender: Antivirus (Mobile) app and launch back Managed app onboarding screen.
 
    ![mam_flow](media/android-configure-mam/mam-flow.png)
    
