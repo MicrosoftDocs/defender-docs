@@ -64,4 +64,4 @@ After some time, Defenders APIs will trigger an alert with detailed information 
 
 
 > [!div class="nextstepaction"]
-> [Investigate API findings, recommendations, and alerts](defender-for-apis-posture.md).
+> [Investigate API findings, recommendations, and alerts](defender-for-apis-posture.md)
