@@ -132,9 +132,9 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
    ![mam_flow](media/android-configure-mam/mam-flow.png)
    
-6. Click **Continue > Launch**. The Microsoft Defender for Endpoint app onboarding/activation flow is initiated. Follow the steps to complete onboarding. You'll automatically be redirected back to Managed app onboarding screen, which now indicates that the device is healthy.
+5. Click **Continue > Launch**. The Microsoft Defender for Endpoint app onboarding/activation flow is initiated. Follow the steps to complete onboarding. You'll automatically be redirected back to Managed app onboarding screen, which now indicates that the device is healthy.
 
-7. Select **Continue** to log into the managed application.
+6. Select **Continue** to log into the managed application.
 
 ## Configure Web protection
 
