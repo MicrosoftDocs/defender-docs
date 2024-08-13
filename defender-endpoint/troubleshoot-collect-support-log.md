@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: edr
 search.appverid: met150
-ms.date: 08/01/2024
+ms.date: 08/13/2024
 ---
 
 # Collect support logs in Microsoft Defender for Endpoint using live response
@@ -55,7 +55,7 @@ This article provides instructions on how to run the tool via Live Response on W
 
    ```console
    Run MDELiveAnalyzer.ps1
-   GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDEClientAnalyzerResult.zip"
+   GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDECA\MDEClientAnalyzerResult.zip"
    ```
 
    [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
