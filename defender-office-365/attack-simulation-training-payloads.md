@@ -407,6 +407,47 @@ On the **Tenant payloads** or **Global payloads** tabs, you can send a copy of t
 
 Select the payload by clicking the check box next to the name, and then select the :::image type="icon" source="media/m365-cc-sc-send-icon.png" border="false"::: **Send a test** button that appears.
 
+### QR code payloads
+
+#### Global payloads
+Within the payload library, you can see multiple payloads across 5 languages, addressing various real-world scenarios involving QR code attacks. These payloads can be found in the Content Library- Global Payloads, name of each beginning with QR code payloads (for example, QR code payloads: Prize Winner Notification). You can locate these by typing "QR" in the search bar.
+
+:::image type="content" source="media/attack-simulation-training-global-payloads-QR-code.png" alt-text="Image showing the QR code how to guide within the content library" lightbox="media/attack-simulation-training-global-payloads-QR-code.png":::
+
+> [!TIP]
+> Before utilizing these payloads in your simulations, make sure to examine different fields and contents of the payload for your requirements.
+#### Tenant payloads
+You can create a custom payload by duplicating the existing global payloads, or creating a payload from scratch.   Within the payload editing experience, you can insert QR code using Dynamic Tags(Insert QR code) or formatting controls (QR code icon).  You have the options to select the size and position of the QR code. 
+
+:::image type="content" source="media/attack-simulation-training-insert-QR-code-1.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-1.png":::
+
+:::image type="content" source="media/attack-simulation-training-insert-QR-code-2.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-2.png":::
+
+:::image type="content" source="media/attack-simulation-training-insert-QR-code-3.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-3.png":::
+
+:::image type="content" source="media/attack-simulation-training-insert-QR-code-4.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-4.png":::
+
+:::image type="content" source="media/attack-simulation-training-insert-QR-code-5.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-5.png":::
+
+The QR code that is generated will map to the phishing URL that is selected by you while configuring the payload in the payload wizard.   When this payload is used in simulation, the service will replace the QR code with a dynamically generated QR code, to track click and compromise metrics. The size, position, and shape of the QR code would match the configuration of the QR set by you in the payload. 
+
+Note that if you are using Send a Test, you will still see the QR code, but it will point to the 
+{phishingURL} that you have selected. The dynamic QR is generated when the payload is used in an 
+actual simulation
+
+The QR code is inserted as an image. If you look at the code section, you will see that the image has 
+been inserted into a base64 format. The QR code inserted using the wizard (and which will be 
+used for dynamic URL update) is marked with div id= QRcode as seen in the first line of below 
+image.
+
+:::image type="content" source="media/attack-simulation-training-insert-QR-code-6-html-div.png" alt-text="Image showing the base 64 format of the QR image and the variable" lightbox="media/attack-simulation-training-insert-QR-code-6-html-div.png":::
+
+> [!TIP]
+> Make sure to verify the login page while using the payload in a simulation. You can also 
+change the login page while selecting the payload in a simulation.
+> It is advisable to conduct a test simulation to validate the end-to-end flow before 
+circulating the final payload to broader audiences. Make sure that the payload contains the div id= QR code within the payload code, before using it in a simulation. 
+
 ## Related links
 
 [Get started using Attack simulation training](attack-simulation-training-get-started.md)
