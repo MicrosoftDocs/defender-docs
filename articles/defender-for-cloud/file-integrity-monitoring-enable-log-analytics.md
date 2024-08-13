@@ -10,56 +10,63 @@ ms.date: 05/16/2024
 
 # Enable file integrity monitoring with the MMA
 
-In the Defender for Servers plan in Microsoft Defender for Cloud, [file integrity monitoring](file-integrity-monitoring-overview.md) examines operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack.
+In the Defender for Servers plan in Microsoft Defender for Cloud, [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
+
+File integrity monitoring uses Azure Automation change tracking. This article describes how to set up file integrity monitoring with the [Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA))](../automation/change-tracking/overview.md), so that you can monitor changes directly in Defender for Cloud.
+
+> [!Note]
+> - File integrity monitoring using the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) is generally availability (GA).
+> - The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024.
+> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default into Defender for Cloud will be released in August 2024.
+> - There's also a preview version of file integrity monitoring using the Azure Monitor Agent (AMA). Support for this version will end when Defender for Endpoint agent support is released.
 
 
-File integrity monitoring uses the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA) to collect and upload data to the Log Analytics workspace. By comparing the current state of these items with the state during the previous scan, file integrity monitoring notifies you if suspicious modifications have been made.
+This article describes how to set up file integrity monitoring with the MMA
 
-> [!NOTE]
-> - File integrity monitoring in general availability (GA) uses the MMA for change tracking.The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024.
-> - File integrity monitoring was available [in preview using the Azure Monitoring Agent (AMA)](file-integiry-monitoring-enable-ama.md) This preview is no longer supported.
-> - A new version of the feature, using the Microsoft Defender for Endpoint agent that's integrated with Defender for Servers will be released in preview around August 2024.
 
 
 ## Prerequisites
 
-- File integrity monitoring is available in [Defender for Servers Plan 2](defender-for-servers-introduction.md)). The plan must be enabled.
-- Using the Log Analytics agent, file integrity monitoring uploads data to the Log Analytics workspace. Data charges apply, based on the amount of data you upload. Learn more about [Log Analytics pricing](https://azure.microsoft.com/pricing/details/log-analytics/).
+- [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled.
+- With the MMA, file integrity monitoring uploads data to a Log Analytics workspace. Data charges apply, based on the amount of data you upload. Learn more about [Log Analytics pricing](https://azure.microsoft.com/pricing/details/log-analytics/).
 - You need Workspace Owner permissions to enable/disable file integrity monitoring. Learn more about [Azure roles for Log Analytics](/services-hub/health/azure-roles#azure-roles). The Reader role can view results.
 - File integrity monitoring is supported for Azure VMs, on-premises machines onboarded as Azure Arc VMs, and AWS accounts and GCP projects connected to Defender for Cloud.
 - When monitoring SQL Servers, file integrity monitoring might create this account: `NT Service\HealthService`. If you delete the account, it's automatically recreated.
 - You can't work with file integrity monitoring using the REST API. It's only available in the Azure portal.
 
 
+
 ## Enable file integrity monitoring with the MMA
 
-1. From the **Workload protections** > **Advanced protection**, select **File integrity monitoring**.
+1. In Defender for Cloud open **Workload protections**.
+1. In the **Advanced protection** area, select **File integrity monitoring**.
 
    :::image type="content" source="./media/file-integrity-monitoring-overview/open-file-integrity-monitoring.png" alt-text="Screenshot of screenshot of opening the File Integrity Monitoring dashboard." lightbox="./media/file-integrity-monitoring-overview/open-file-integrity-monitoring.png":::
 
-    The following information is provided for each workspace:
+1. Review workspace information.
 
     - Total number of changes that occurred in the last week (you might see a dash "-“ if file integrity monitoring isn't enabled on the workspace)
     - Total number of computers and VMs reporting to the workspace
     - Geographic location of the workspace
     - Azure subscription that the workspace is under
 
-1. Use this page to:
-
-    - Access and view the status and settings of each workspace
-
-    - ![Upgrade plan icon.][4] Upgrade the workspace to use enhanced security features. This icon indicates that the workspace or subscription isn't protected with Microsoft Defender for Servers. To use the file integrity monitoring features, your subscription must be protected with this plan. Learn about how to [enable Defender for Servers](plan-defender-for-servers-select-plan.md).
-
-    - ![Enable icon][3] Enable file integrity monitoring on all machines under the workspace and configure the file integrity monitoring options. This icon indicates that file integrity monitoring isn't enabled for the workspace. If there's no enable or upgrade button, and the space is blank, it means that file integrity monitoring is already enabled on the workspace.
+    If there's no enable or upgrade button, and the space is blank for a workspace, it means that file integrity monitoring is already enabled on the workspace.
 
         :::image type="content" source="./media/file-integrity-monitoring-overview/workspace-list-fim.png" alt-text="Screenshot of enabling file integrity monitoring for a specific workspace.":::
 
-1. Select **Enable file integrity monitoring**. The details of the workspace including the number of Windows and Linux machines under the workspace is shown.
+
+1. Enable Defender for Cloud plans if needed.
+
+    The ![Upgrade plan icon.][4] indicates that the workspace or subscription isn't protected with the Defender for Servers plan. Defender for Servers Plan 2 must be enabled to use file integrity monitoring features. Learn [how to enable Defender for Servers](plan-defender-for-servers-select-plan.md).
+
+1. Select the ![Enable icon][3] to turn on file integrity monitoring for a workspace.
+1. Review the workspace details, including the number of Windows and Linux machines in the workspace.
+1. Expand **Windows files**, **Registry**, and **Linux files** to see the full list of recommended items.
 
     :::image type="content" source="./media/file-integrity-monitoring-overview/workspace-fim-status.png" alt-text="Screenshot of file integrity monitoringM workspace details page.":::
-   The recommended settings for Windows and Linux are also listed.  Expand **Windows files**, **Registry**, and **Linux files** to see the full list of recommended items.
+   The recommended settings for Windows and Linux are also listed.  
 
-1. Clear the checkboxes for any recommended entities you don't want to be monitored by file integrity monitoring.
+1. Clear the checkboxes for any recommended entities you don't want to monitor for changes.
 
 1. Select **Apply file integrity monitoring** to enable file integrity monitoring.
 
@@ -67,70 +74,69 @@ You can change the settings at any time. Learn more about [editing monitored ent
 
 ### Disable file integrity monitoring
 
-File integrity monitoring uses the Azure Monitor Change Tracking solution to track and identify changes in your environment. By disabling file integrity monitoring, you remove the Change Tracking solution from selected workspace.
+When you disable file integrity monitoring, you remove the Change Tracking solution from the selected Log Analytics workspace.
 
-1. From the **File Integrity Monitoring dashboard** for a workspace, select **Disable**.
+1. In Defender for Cloud open **Workload protections**.
+1. In the **Advanced protection** area, select **File integrity monitoring**.
+1. Select a workspace with file integrity monitoring enabled.
+1. In the **File Integrity Monitoring** page for the workspace, select **Disable**.
 
     :::image type="content" source="./media/file-integrity-monitoring-overview/disable-file-integrity-monitoring.png" alt-text="Screenshot of disabling file integrity monitoring from the settings page.":::
 
 1. Select **Remove**.
 
-## Monitor workspaces, entities, and files
+## Monitor changes
 
 ### Audit monitored workspaces
 
-The **File integrity monitoring** dashboard displays for workspaces where file integrity monitoring is enabled. The file integrity monitoring dashboard opens after you enable on a workspace or when you select a workspace in the **file integrity monitoring** window that already has file integrity monitoring enabled.
+1. In Defender for Cloud open **Workload protections**.
+1. In the **Advanced protection** area, select **File integrity monitoring**.
+1. Select a workspace with file integrity monitoring enabled.
+1. In the **File Integrity Monitoring** page for the workspace, review changes, including:
+
+    - Total number of machines connected to the workspace
+    - Total number of changes that occurred during the selected time period
+    - A breakdown of change type (files, registry)
+    - A breakdown of change category (modified, added, removed)
 
 :::image type="content" source="./media/file-integrity-monitoring-overview/fim-dashboard.png" alt-text="Screenshot of the file integrity monitoring dashboard and its various informational panels.":::
 
-The file integrity monitoring dashboard for a workspace displays the following details:
-
-- Total number of machines connected to the workspace
-- Total number of changes that occurred during the selected time period
-- A breakdown of change type (files, registry)
-- A breakdown of change category (modified, added, removed)
-
-Select **Filter** at the top of the dashboard to change the time period for which changes are shown.
+1. Select **Filter** at the top of the dashboard to change the time period for which changes are shown.
 
 :::image type="content" source="./media/file-integrity-monitoring-overview/dashboard-filter.png" alt-text="Screenshot of time period filter for the file integrity monitoring dashboard.":::
 
-The **Servers** tab lists the machines reporting to this workspace. For each machine, the dashboard lists:
+1. On the **Servers** tab, review the machines reporting to this workspace. For each machine, the dashboard lists:
 
-- Total changes that occurred during the selected period of time
-- A breakdown of total changes as file changes or registry changes
+    - Total changes that occurred during the selected period of time
+    - A breakdown of total changes as file changes or registry changes
 
-When you select a machine, the query appears along with the results that identify the changes made during the selected time period for the machine. You can expand a change for more information.
+1. Select a machine. The query appears along with the results that identify the changes made during the selected time period for the machine. You can expand a change for more information.
 
-:::image type="content" source="./media/file-integrity-monitoring-overview/query-machine-changes.png" alt-text="Screenshot of log Analytics query showing the changes identified by Microsoft Defender for Cloud's file integrity monitoring." lightbox="./media/file-integrity-monitoring-overview/query-machine-changes.png":::
+    :::image type="content" source="./media/file-integrity-monitoring-overview/query-machine-changes.png" alt-text="Screenshot of log Analytics query showing the changes identified by Microsoft Defender for Cloud's file integrity monitoring." lightbox="./media/file-integrity-monitoring-overview/query-machine-changes.png":::
 
-The **Changes** tab (shown below) lists all changes for the workspace during the selected time period. For each entity that was changed, the dashboard lists the:
+1. On the **Changes** tab, review all changes for the workspace during the selected time period. For each entity that was changed, you can see:
 
-- Machine that the change occurred on
-- Type of change (registry or file)
-- Category of change (modified, added, removed)
-- Date and time of change
+    - Machine that the change occurred on
+    - Type of change (registry or file)
+    - Category of change (modified, added, removed)
+    - Date and time of change
 
-:::image type="content" source="./media/file-integrity-monitoring-overview/changes-tab.png" alt-text="Screenshot of Microsoft Defender for Cloud's file integrity monitoring changes tab." lightbox="./media/file-integrity-monitoring-overview/changes-tab.png":::
+    :::image type="content" source="./media/file-integrity-monitoring-overview/changes-tab.png" alt-text="Screenshot of Microsoft Defender for Cloud's file integrity monitoring changes tab." lightbox="./media/file-integrity-monitoring-overview/changes-tab.png":::
 
-**Change details** opens when you enter a change in the search field or select an entity listed under the **Changes** tab.
+1. Enter a change in the search field or select an entity listed under the **Changes** tab to open the **Change details** page.
 
-:::image type="content" source="./media/file-integrity-monitoring-overview/change-details.png" alt-text="Screenshot of Microsoft Defender for Cloud's file integrity monitoring showing the details pane for a change." lightbox="./media/file-integrity-monitoring-overview/change-details.png":::
+    :::image type="content" source="./media/file-integrity-monitoring-overview/change-details.png" alt-text="Screenshot of Microsoft Defender for Cloud's file integrity monitoring showing the details pane for a change." lightbox="./media/file-integrity-monitoring-overview/change-details.png":::
 
-### Edit monitored entities
+## Customise monitoring
 
-1. From the **File Integrity Monitoring dashboard** for a workspace, select **Settings** from the toolbar.
+1. 1. In Defender for Cloud open **Workload protections**.
+1. In the **Advanced protection** area, select **File integrity monitoring**.
+1. Select a workspace with file integrity monitoring enabled.
+1. In the **File Integrity Monitoring** page for the workspace, select **Settings** from the toolbar.
 
     :::image type="content" source="./media/file-integrity-monitoring-overview/file-integrity-monitoring-dashboard-settings.png" alt-text="Screenshot of accessing the file integrity monitoring settings for a workspace." lightbox="./media/file-integrity-monitoring-overview/file-integrity-monitoring-dashboard-settings.png":::
 
-   **Workspace Configuration** opens with tabs for each type of element that can be monitored:
-
-      - Windows registry
-      - Windows files
-      - Linux Files
-      - File content
-      - Windows services
-
-      Each tab lists the entities that you can edit in that category. For each entity listed, Defender for Cloud identifies whether file integrity monitoring is enabled (true) or not enabled (false). Edit the entity to enable or disable file integrity monitoring.
+1. In **Workspace Configuration** review elements that can be modified under the tabs: Windows registry, Windows files, Linux files, File content, Windows services.
 
     :::image type="content" source="./media/file-integrity-monitoring-overview/file-integrity-monitoring-workspace-configuration.png" alt-text="Screenshot of workspace configuration for file integrity monitoring in Microsoft Defender for Cloud.":::
 
@@ -141,28 +147,9 @@ The **Changes** tab (shown below) lists all changes for the workspace during the
     - Provide or change the value or path
     - Delete the entity
 
-1. Discard or save your changes.
+1. Discard or save changes.
 
-### Add a new entity to monitor
-
-1. From the **File Integrity Monitoring dashboard** for a workspace, select **Settings** from the toolbar.
-
-    The **Workspace Configuration** opens.
-
-1. On the **Workspace Configuration**:
-
-    1. Select the tab for the type of entity that you want to add: Windows registry, Windows files, Linux Files, file content, or Windows services.
-    1. Select **Add**.
-
-        In this example, we selected **Linux Files**.
-
-        :::image type="content" source="./media/file-integrity-monitoring-overview/file-integrity-monitoring-add-element.png" alt-text="Screenshot of adding an element to monitor in Microsoft Defender for Cloud's file integrity monitoring." lightbox="./media/file-integrity-monitoring-overview/file-integrity-monitoring-add-element.png":::
-
-1. Select **Add**. **Add for Change Tracking** opens.
-
-1. Enter the necessary information and select **Save**.
-
-### Folder and path monitoring using wildcards
+### Monitor folders and paths using wildcards
 
 Use wildcards to simplify tracking across directories. The following rules apply when you configure folder monitoring using wildcards:
 
@@ -171,9 +158,21 @@ Use wildcards to simplify tracking across directories. The following rules apply
 - If an environment variable includes a path that isn't valid, validation succeeds but the path fails when inventory runs.
 - When setting the path, avoid general paths such as `c:\*.*`, which results in too many folders being traversed.
 
-## Compare baselines using File Integrity Monitoring
+### Add an entity to monitor
 
-File integrity monitoring informs you when changes occur to sensitive areas in your resources, so you can investigate and address unauthorized activity. File integrity monitoring monitors Windows files, Windows registries, and Linux files.
+1. From the **File Integrity Monitoring** page in a workspace, select **Settings** from the toolbar.
+
+1. On the **Workspace Configuration** select the tab for the type of entity that you want to add: Windows registry, Windows files, Linux Files, file content, or Windows services.
+1. Select **Add**. In this example, we selected **Linux Files**.
+
+    :::image type="content" source="./media/file-integrity-monitoring-overview/file-integrity-monitoring-add-element.png" alt-text="Screenshot of adding an element to monitor in Microsoft Defender for Cloud's file integrity monitoring." lightbox="./media/file-integrity-monitoring-overview/file-integrity-monitoring-add-element.png":::
+
+1. In **Add for Change Tracking**, enter the necessary information and select **Save**.
+
+
+## Compare baselines
+
+File integrity monitoring informs you when changes occur to sensitive areas in your resources, so you can investigate and address unauthorized activity. 
 
 ### Enable built-in recursive registry checks
 

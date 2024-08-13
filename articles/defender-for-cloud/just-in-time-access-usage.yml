@@ -13,20 +13,20 @@ metadata:
 title: |
   Enable just-in-time access on VMs
 introduction: |
-  The Defender for Servers Plan 2 in Microsoft Defender for Cloud provides a just-in-time (JIT) VM access feature.
+  The Defender for Servers Plan 2 in Microsoft Defender for Cloud provides a just-in-time VM access feature.
   
-  You can use Microsoft Defender for Cloud's just-in-time (JIT) access to protect your Azure virtual machines (VMs) from unauthorized network access. Many times firewalls contain allow rules that leave your VMs vulnerable to attack. JIT lets you allow access to your VMs only when the access is needed, on the ports needed, and for the period of time needed.
+  You can use Microsoft Defender for Cloud's just-in-time access to protect your Azure virtual machines (VMs) from unauthorized network access. Many times firewalls contain allow rules that leave your VMs vulnerable to attack. JIT lets you allow access to your VMs only when the access is needed, on the ports needed, and for the period of time needed.
 
   In this article, you learn how to include JIT in your security program, including how to:
 
-  - Enable JIT on your VMs from the Azure portal or programmatically
-  - Request access to a VM that has JIT enabled from the Azure portal or programmatically
-  - [Audit the JIT activity](#audit-jit-access-activity-in-defender-for-cloud) to make sure your VMs are secured appropriately
+  - Enable just-in-time on your VMs from the Azure portal or programmatically
+  - Request access to a VM that has just-in-time access enabled from the Azure portal or programmatically
+  - [Audit just-in-time access activity](#audit-jit-access-activity-in-defender-for-cloud) to make sure your VMs are secured appropriately
 
 
 prerequisites:
   summary: |
-    - JIT requires [Microsoft Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features) to be enabled on the subscription.
+    - Just-in-time access requires [Microsoft Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features) to be enabled on the subscription.
 
     - Supported VMs:  VMs deployed through Azure Resource Manager, VMs deployed with [classic deployment models](../azure-resource-manager/management/deployment-models.md), VMs protected by Azure Firewalls on the same VNET as the VM, VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](../firewall-manager/overview.md), AWS EC2 instances (Preview) 
     

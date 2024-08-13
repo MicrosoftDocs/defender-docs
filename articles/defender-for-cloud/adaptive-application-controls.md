@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.date: 01/22/2024
 ---
 
-# Adaptive application controls
+# Overview - Adaptive application controls
 
 Defender for Servers Plan 2 in Microsoft Defender for Cloud provides adaptive application controls that enhance your security a data-driven, intelligent automated solution that defines allowlists of known-safe applications for your machines.
 

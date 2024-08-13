@@ -9,7 +9,7 @@ metadata:
   ms.custom:
     - ge-structured-content-pilot
 title: |
-  Move to vulnerability assessment with Microsoft Defender Vulnerability Management
+  Move to scanning with Defender Vulnerability Management
 introduction: |
 
   Microsoft Defender for Cloud provides vulnerability scanning with Microsoft Defender Vulnerability Management, to scan machines for software inventory and vulnerabilities, and provide findings and insights in Defender for Cloud. 

@@ -5,20 +5,18 @@ ms.topic: how-to
 ms.date: 06/29/2023
 ---
 
-# Just-in-time (JIT) VM access on machines
+# Overview - Just-in-time (JIT) VM access
 
-The Defender for Servers Plan 2 in Microsoft Defender for Cloud provides a just-in-time (JIT) VM access feature.
+The Defender for Servers Plan 2 in Microsoft Defender for Cloud provides a just-in-time (JIT) VM access.
 
 Threat actors actively hunt accessible machines with open management ports, like RDP or SSH. All of your VMs are potential targets for an attack. When a VM is successfully compromised, it's used as the entry point to attack further resources within your environment.
 
-As with all cybersecurity prevention techniques, your goal should be to reduce the attack surface. In this case that means having fewer open ports especially management ports.
+As with all cybersecurity prevention techniques, your goal should be to reduce the attack surface. In this case that means having fewer open ports especially management ports. Legitimate users also use these ports, so it's not practical to keep them closed.
 
-Your legitimate users also use these ports, so it's not practical to keep them closed.
-
-To solve this dilemma, Microsoft Defender for Cloud offers JIT. With JIT, you can lock down the inbound traffic to your VMs, reducing exposure to attacks while providing easy access to connect to VMs when needed.
+To solve this dilemma, Microsoft Defender for Cloud offers just-in-time VM access so that you can lock down the inbound traffic to your VMs, reducing exposure to attacks while providing easy access to connect to VMs when needed.
 
 
-## How JIT operates with network resources 
+## Just-in-time access and network resources 
 
 ### Azure
 
@@ -42,7 +40,7 @@ In AWS, by enabling JIT access the relevant rules in the attached EC2 security g
 > [!NOTE]
 > JIT doesn't support VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](../firewall-manager/overview.md).  The Azure Firewall must be configured with Rules (Classic) and cannot use Firewall policies.
 
-## Identifying VMs that should have JIT applied
+## Identifying VMs for just-in-time access
 
 The following diagram shows the logic that Defender for Servers applies when deciding how to categorize your supported VMs:
 
@@ -56,11 +54,11 @@ The following diagram shows the logic that Defender for Servers applies when dec
 
 ---
 
-When Defender for Cloud finds a machine that can benefit from JIT, it adds that machine to the recommendation's **Unhealthy resources** tab.
+When Defender for Cloud finds a machine that can benefit from just-in-time access, it adds that machine to the recommendation's **Unhealthy resources** tab.
 
 ![Just-in-time (JIT) virtual machine (VM) access recommendation.](./media/just-in-time-explained/unhealthy-resources.png)
 
-## Next step
+## Next steps
 
 [Enable just-in-time access on VMs](just-in-time-access-usage.yml)
 
