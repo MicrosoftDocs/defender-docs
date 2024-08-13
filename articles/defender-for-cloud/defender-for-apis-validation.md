@@ -3,7 +3,7 @@ title: Validate your Microsoft Defender for APIs alerts
 description: Validate your Microsoft Defender for APIs alerts and ensure the security of your APIs with full lifecycle protection, detection, and response coverage.
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 08/11/2024
+ms.date: 08/13/2024
 ms.custom: references_regions
 #customer intent: As a user, I want to learn how to validate my Microsoft Defender for APIs alerts so that I can ensure the security of my APIs.
 ---
@@ -12,7 +12,7 @@ ms.custom: references_regions
 
 Microsoft Defender for APIs offers full lifecycle protection, detection, and response coverage for APIs that are published in Azure API Management. One of the main capabilities is the ability to detect exploits of the Open Web Application Security Project (OWASP) API Top 10 vulnerabilities through runtime observations of anomalies using machine learning-based and rule-based detections.
 
-This page will walk you through the steps to trigger an alert for one of your API endpoints through Defender for APIs. In this scenario, the alert will be for the detection of a suspicious user agent.
+This page walks you through the steps to trigger an alert for one of your API endpoints through Defender for APIs. In this scenario, the alert is for the detection of a suspicious user agent.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ This page will walk you through the steps to trigger an alert for one of your AP
 
 ## Simulate an alert
 
-It is important to validate that Defender for APIs is working as expected. To do this, you can simulate an alert by sending a request to your API endpoint with a suspicious user agent.
+It's important to validate that Defender for APIs is working as expected. To validate the API, you can simulate an alert by sending a request to your API endpoint with a suspicious user agent.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -46,15 +46,15 @@ It is important to validate that Defender for APIs is working as expected. To do
 
 1. Select **Test** > **Get Retrieve resource (cashed)**.
 
-1. In the Headers section, select **User-Agent** in the name drop down menu.
+1. In the Headers section, select **User-Agent** in the name drop-down menu.
 
     :::image type="content" source="media/defender-for-apis-validation/user-agent.png" alt-text="Screenshot of the Headers section of the APIs showing you how to select the User-Agent option under the name drop-down menu." lightbox="media/defender-for-apis-validation/user-agent.png":::
 
-1. In the value field enter `javascript:`.
+1. In the value field, enter `javascript:`.
 
 1. Select **Send**
 
-    You will see a 200 OK which will let you know that it succeeded.
+    A 200 OK appears, letting you know that it succeeded.
 
     :::image type="content" source="media/defender-for-apis-validation/200-ok.png" alt-text="Screenshot that shows the result 200 OK.":::
 
