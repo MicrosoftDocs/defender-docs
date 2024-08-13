@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 07/26/2024
+ms.date: 08/13/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -38,6 +38,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+
+## August 2024
+
+- (Preview) You can now run [simulations](attack-simulation-training-simulations.md) with QR code payloads in [Attack simulation training](attack-simulation-training-get-started.md). You can track user repsonses and assign training to end users.
 
 ## July 2024
 
