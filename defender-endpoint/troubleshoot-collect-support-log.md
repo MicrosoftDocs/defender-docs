@@ -55,7 +55,7 @@ This article provides instructions on how to run the tool via Live Response on W
 
    ```console
    Run MDELiveAnalyzer.ps1
-   GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDEClientAnalyzerResult.zip"
+   GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDECA\MDEClientAnalyzerResult.zip"
    ```
 
    [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
