@@ -20,3 +20,4 @@ ms.topic: article
 > - uk.api.security.microsoft.com
 > - au.api.security.microsoft.com
 > - swa.api.security.microsoft.com
+> - ina.api.security.microsoft.com
