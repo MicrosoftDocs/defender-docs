@@ -853,3 +853,47 @@ To include a completed session in reporting after it has been excluded, do the f
 2. Select the simulation by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/m365-cc-sc-include-icon.png" border="false"::: **Exclude**.
 
 After you included the excluded simulation, the **Status** value changes to **Completed**. Toggle **Show excluded simulations** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the simulation.
+
+## QR code simulations and training
+> [!IMPORTANT]
+> Currently, QR code simulations in Attack simulation training is in Preview.
+The current flow of running simulations, which involves selection of users, selection of payload, scheduling training, and notifications is also applicable for QR code-based simulations. Within simulations, you can select payloads with QR codes and use them for simulation. 
+
+Currently configuring payloads with QR codes and use of these payloads in a simulation is applicable to the Email platform and for the below attack techniques.   
+
+- Credential harvest
+- Link to malware
+- drive by URL
+- oAuth consent grant
+
+Given that QR codes are another vector for the phishing URL, the user events around read/delete/compromises/clicks remain the same. E.g. If a user is navigating to the URL after scanning the QR code, then it is tracked as a click event. The existing mechanisms for tracking compromise, deletes, report events remain the same. 
+
+For more details about QR code payloads, configuring a QR payload, see [QR payloads](attack-simulation-training-payloads.md#QR-Code-Payloads).
+
+### Reporting for QR code simulations
+Given that QR codes is just another vector for the phishing URL, the user events around 
+read/delete/compromises/clicks remain the same. E.g. If a user is navigating to the URL after 
+scanning the QR code, then it is tracked as a click event. The existing mechanisms for tracking 
+compromise, deletes, report events remain the same. 
+Within the simulation report CSV (exported from individual simulations), you will be able to view the 
+field Click Source (EmailLinkClicked_ClickSource) as a column, with values as ‘PhishingURL’ (click 
+came from a phishing link in email content) or ‘QR code’ (click came after scanning a QR code). Other 
+metrics like Reads, Compromises, Deletes, Reported Message continue to be tracked without any 
+additional updates.
+
+:::image type="content" source="media/attack-simulation-training-reporting-QR-code.png" alt-text="Image showing the reporting experience for running QR code simulations" lightbox="media/attack-simulation-training-reporting-QR-code.png":::
+
+### QR code trainings
+
+We have provided two mechanisms for learning about QR based attacks: How to guides, and new training modules from our content partner. 
+How to Guides is designed to provide a lightweight guidance to end users on how to report a phishing message directly through email. By delivering these guides directly to the end user's inbox, we can ensure that the end user has the information they need to confidently report any suspicious emails. 
+
+You can filter for the How to Guide through either:
+1.	Filtering by Technique = How to Guide
+2.	Search by name = " Teaching Guide: How to recognize and report QR phishing messages 
+
+:::image type="content" source="media/attack-simulation-training-how-to-guide-QR-code.png" alt-text="Image showing the QR code how to guide within the content library" lightbox="media/attack-simulation-training-how-to-guide-QR-code.png":::
+
+Within the trainings list (Content Library- Training Modules), we have added a new training called Malicious Digital QR Codes which is a short learning to educate on what to do when a user receives a QR code in the email. You can assign the training as part of a simulation or use training campaigns to assign the training to your users. 
+
+:::image type="content" source="media/attack-simulation-training-out-of-the-box-training-QR-code.png" alt-text="Image showing the QR code trainings available within Content library" lightbox="media/attack-simulation-training-out-of-the-box-training-QR-code":::
