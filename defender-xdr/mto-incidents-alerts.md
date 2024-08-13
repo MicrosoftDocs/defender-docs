@@ -1,6 +1,6 @@
 ---
-title: View and manage incidents and alerts in multitenant management for Microsoft Defender XDR
-description: Learn about incidents and alerts in multitenant management for Microsoft Defender XDR
+title: View and manage incidents and alerts in Microsoft Defender multitenant management
+description: Learn about incidents and alerts in Microsoft Defender multitenant management
 search.appverid: met150
 ms.service: defender-xdr
 ms.author: siosulli
@@ -20,7 +20,7 @@ appliesto:
   - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# View and manage incidents and alerts
+# View and manage incidents and alerts in Microsoft Defender multitenant management
 
 Multitenant management for Microsoft Defender XDR and the Microsoft unified security operations platform enables security operation center (SOC) analysts to access and analyze data from multiple tenants in one place, allowing them to quickly identify and respond to threats. Triage incidents and alerts across security information and event management (SIEM) and extended detection and response (XDR) data for tenants that onboarded a Microsoft Sentinel workspace to the unified security operations platform.
 
@@ -30,13 +30,13 @@ Manage incidents & alerts originating from multiple tenants under **Incidents & 
 
 To view or investigate an incident: 
 
-1. Go to the [Incidents page](https://mto.security.microsoft.com/incidents) in multitenant management in Microsoft Defender XDR. The **Tenant name** column shows which tenant the incident originates from:
+1. Go to the [Incidents page](https://mto.security.microsoft.com/incidents) in Microsoft Defender multitenant management. The **Tenant name** column shows which tenant the incident originates from:
 
    :::image type="content" source="/defender/media/defender/mto-incidents.png" alt-text="Screenshot of the Microsoft Defender multi-tenant incidents page" lightbox="/defender/media/defender/mto-incidents.png":::
 
 2. Select the incident you want to view. A flyout panel opens with the incident details page:
 
-   :::image type="content" source="/defender/media/defender/mto-incident-details.png" alt-text="Screenshot of the Microsoft Defender XDR incidents details page" lightbox="/defender/media/defender/mto-incident-details.png":::
+   :::image type="content" source="/defender/media/defender/mto-incident-details.png" alt-text="Screenshot of the Microsoft Defender multi-tenant incidents details page" lightbox="/defender/media/defender/mto-incident-details.png":::
 
 3. From the incident details page you can:
 
@@ -49,10 +49,10 @@ To learn more, see [Investigate incidents](/defender-endpoint/investigate-incide
 
 To manage incidents across multiple tenants:
 
-1. Go to the [Incidents page](https://mto.security.microsoft.com/incidents) in multitenant management.
+1. Go to the [Incidents page](https://mto.security.microsoft.com/incidents) in Microsoft Defender multitenant management.
 2. Choose the incidents you want to manage from the incidents list and select **Manage incidents**.
 
-   :::image type="content" source="/defender/media/defender/mto-manage-incidents.png" alt-text="Screenshot of the Microsoft Defender XDR incidents page" lightbox="/defender/media/defender/mto-manage-incidents.png":::
+   :::image type="content" source="/defender/media/defender/mto-manage-incidents.png" alt-text="Screenshot of the Microsoft Defender multi-tenant incidents page" lightbox="/defender/media/defender/mto-manage-incidents.png":::
 
 On the incidents fly-out you can assign incidents, assign incidents tags, set the incident status, and classify multiple incidents for multiple tenants simultaneously.
 
@@ -80,10 +80,10 @@ To learn more, see [Investigate alerts](/defender-endpoint/investigate-alerts).
 
 To manage alerts across multiple tenants:
 
-1. Go to the [Alerts page](https://mto.security.microsoft.com/alerts) in multitenant management.
+1. Go to the [Alerts page](https://mto.security.microsoft.com/alerts) in Microsoft Defender multitenant management.
 2. Choose the alerts you want to manage from the alerts list and select **Manage alerts**.
 
-   :::image type="content" source="/defender/media/defender/mto-manage-alerts.png" alt-text="Screenshot of the Microsoft Defender XDR alerts page" lightbox="/defender/media/defender/mto-manage-alerts.png":::
+   :::image type="content" source="/defender/media/defender/mto-manage-alerts.png" alt-text="Screenshot of the Microsoft Defender multitenant alerts page" lightbox="/defender/media/defender/mto-manage-alerts.png":::
 
 On the alert fly-out you can assign alerts, set the alert status, and classify the alerts for multiple tenants simultaneously.
 
@@ -93,7 +93,7 @@ To learn more about alerts in the Microsoft Defender portal, see [Manage alerts]
 
 ## Related content
 
-- [Set up multitenant management in Microsoft Defender XDR](mto-requirements.md)
+- [Set up Microsoft Defender multitenant management](mto-requirements.md)
 - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
-- [Advanced hunting in multitenant management in Microsoft Defender XDR](mto-advanced-hunting.md)
+- [Advanced hunting in Microsoft Defender multitenant management](mto-advanced-hunting.md)
 

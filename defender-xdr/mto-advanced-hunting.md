@@ -1,6 +1,6 @@
 ---
-title: Advanced hunting in multitenant management in Microsoft Defender XDR
-description: Learn about advanced hunting in multitenant management in Microsoft Defender XDR
+title: Advanced hunting in Microsoft Defender multitenant management
+description: Learn about advanced hunting in Microsoft Defender multitenant management
 search.appverid: met150
 ms.service: defender-xdr
 ms.author: siosulli
@@ -50,7 +50,7 @@ Likewise, you can manage custom detection rules from multiple tenants in the cus
 
 ### View custom detection rules by tenant
 
-1. To view custom detection rules, go to the [Custom detection rules page](https://mto.security.microsoft.com/v2/custom_detection) in multitenant management in Microsoft Defender XDR.
+1. To view custom detection rules, go to the [Custom detection rules page](https://mto.security.microsoft.com/v2/custom_detection) in Microsoft Defender multitenant management.
 2. View the **Tenant name** column to see which tenant the detection rule comes from:
 
    :::image type="content" source="/defender/media/defender/mto-custom-detection-tenant-name.png" alt-text="Screenshot of the Microsoft Defender XDR multi-tenant custom detection page" lightbox="/defender/media/defender/mto-custom-detection-tenant-name.png":::
@@ -61,11 +61,11 @@ To read more about custom detection rules, read [Custom detections overview](cus
 
 ### Manage custom detection rules
 
-You can **Run**, **Turn off**, and **Delete** detection rules from multitenant management in Microsoft Defender XDR.
+You can **Run**, **Turn off**, and **Delete** detection rules from Microsoft Defender multitenant management.
 
 To manage detection rules:
 
-1. Go to the [Custom detection rules page](https://mto.security.microsoft.com/v2/custom_detection) in multitenant management in Microsoft Defender XDR
+1. Go to the [Custom detection rules page](https://mto.security.microsoft.com/v2/custom_detection) in Microsoft Defender multitenant management
 2. Choose the detection rule you want to manage
 
 When you select a single detection rule, a flyout panel opens with the detection rule details:
@@ -76,6 +76,6 @@ Select **Open detection rules** to view this rule in a new tab for the specific 
 
 ## Related content
 
-- [Set up multitenant management in Microsoft Defender XDR](mto-requirements.md)
+- [Set up Microsoft Defender multitenant management](mto-requirements.md)
 - [Connect Microsoft Sentinel to Microsoft Defender XDR](microsoft-sentinel-onboard.md)
 - [View and manage incidents and alerts](mto-incidents-alerts.md)

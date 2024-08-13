@@ -1,6 +1,6 @@
 ---
-title: Manage tenants with multitenant management in Microsoft Defender XDR
-description: Learn about the tenant list in multitenant management in Microsoft Defender XDR
+title: Manage tenants with Microsoft Defender multitenant management
+description: Learn about the tenant list in Microsoft Defender multitenant management
 search.appverid: met150
 ms.service: defender-xdr
 ms.author: siosulli
@@ -20,15 +20,15 @@ appliesto:
   - Microsoft Sentinel in the Microsoft Defender portal
 ---
 
-# Manage tenants in Microsoft Defender XDR
+# Manage tenants with Microsoft Defender multitenant management
 
-Add or remove tenants from the settings page in multitenant management from the Microsoft Defender portal.
+Add or remove tenants from the settings page in Microsoft Defender multitenant management.
 
 ## View the tenants page
 
-To view the list of tenants that appear in multitenant management, go to [Settings page](https://mto.security.microsoft.com/mtosettings) in multitenant management in Microsoft Defender XDR:
+To view the list of tenants that appear in multitenant management, go to [Settings page](https://mto.security.microsoft.com/mtosettings) in Microsoft Defender multitenant management:
 
-   :::image type="content" source="/defender/media/defender/mto-tenant-settings.png" alt-text="Screenshot of multitenant management in Microsoft Defender XDR" lightbox="/defender/media/defender/mto-tenant-settings.png":::
+   :::image type="content" source="/defender/media/defender/mto-tenant-settings.png" alt-text="Screenshot of Microsoft Defender multitenant management" lightbox="/defender/media/defender/mto-tenant-settings.png":::
 
 From the **Settings** page you can:
 
@@ -51,3 +51,8 @@ When an issue exists, the status indicator shows a red warning sign:
 Hovering over the red warning sign displays the issues that occurred and the tenant information. By expanding each section, you see all the tenants with this issue.
 
 - ![tenant data issues](/defender/media/defender/mto-tenantdata-issues.png)
+
+## Related content
+
+- [Microsoft Defender multitenant management](mto-overview.md)
+- [Set up Microsoft Defender multitenant management](mto-requirements.md)
