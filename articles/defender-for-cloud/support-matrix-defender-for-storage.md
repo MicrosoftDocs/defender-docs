@@ -48,6 +48,8 @@ The action sets are collections of Azure resource provider operations that you c
 
 - Microsoft.Storage/storageAccounts/write
 - Microsoft.Storage/storageAccounts/read
+- Microsoft.Security/datascanners/read (must be granted at subscription level)
+- Microsoft.Security/datascanners/write (must be granted at subscription level)
 - Microsoft.Security/defenderforstoragesettings/read
 - Microsoft.Security/defenderforstoragesettings/write
 - Microsoft.EventGrid/eventSubscriptions/read
