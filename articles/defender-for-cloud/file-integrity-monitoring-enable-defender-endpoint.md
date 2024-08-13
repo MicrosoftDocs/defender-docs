@@ -48,6 +48,28 @@ To track changes to your files and registries on machines with Defender for Endp
 
 ### Enable in the Azure portal
 
+To enable FIM in the Azure portal, follow these steps:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Search for and select **Microsoft Defender for Cloud**.
+
+1. In the Defender for Cloud menu, select **Environment settings**.
+
+1. Select the relevant subscription.
+
+1. Locate the Defenders for Servers plan and select **Settings**.
+1. In the **File Integrity Monitoring** section, switch the toggle to **On**. Then select **Edit configuration**.
+
+    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/defender-servers-file-integrity-monitoring.png" alt-text="Screenshot of how to enable File Integrity Monitoring." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/defender-servers-file-integrity-monitoring.png":::
+
+1. The **FIM configuration** pane opens. In the **Workspace selection** dropdown, select the workspace where you want to store the FIM data. If you want to create a new workspace, select **Create new**.
+
+   :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png" alt-text="Screenshot of the FIM configuration pane." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png":::
+
+1. In the lower section of the **FIM configuration** pane, select the **Windows registry**, **Windows files**, and **Linux files** tabs to choose the files and registries you want to monitor. If you choose the top selection in each tab, all files and registries are monitored. Select **Apply** to save your changes.
+
+   :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration-tabs.png" alt-text="Screenshot of the FIM configuration tabs." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration-tabs.png":::
 
 ### Enable with API
 
@@ -65,15 +87,36 @@ After FIM is disabled, no new events are collected. However, the data collected 
 
 ### Disable in the Azure portal
 
+To disable FIM in the Azure portal, follow these steps:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+1. Search for and select **Microsoft Defender for Cloud**.
+1. In the Defender for Cloud menu, select **Environment settings**.
+
+1. Select the relevant subscription.
+
+1. Locate the Defenders for Servers plan and select **Settings**.
+1. In the **File Integrity Monitoring** section, switch the toggle to **Off**.
+
+    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/disable-file-integrity-monitoring.png" alt-text="Screenshot of how to disable File Integrity Monitoring." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/disable-file-integrity-monitoring.png":::
 
 ### Disable with API
 
-
-
-
 ## Monitor entities and files
 
+To monitor entities and files, follow these steps:
 
+1. From Defender for Cloud's sidebar, go to **Workload protections** > **File integrity monitoring**.
+
+    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/workload-protections-file-integrity-monitoring.png" alt-text="Screenshot of how to access File Integrity Monitoring in Workload protections." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/workload-protections-file-integrity-monitoring.png":::
+
+1. A window opens with all resources that contain tracked changed files and registries.
+
+    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-results.png" alt-text="Screenshot of the File Integrity Monitoring results." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-results.png":::
+
+1. If you select a resource, a window opens with a query showing the changes made to the tracked files and registries on that resource.
+
+    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-query.png" alt-text="Screenshot of the File Integrity Monitoring query." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-query.png":::
 
 ## Retrieve and analyze FIM data  
 
