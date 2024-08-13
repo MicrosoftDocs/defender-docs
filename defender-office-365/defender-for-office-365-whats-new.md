@@ -39,6 +39,9 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## August 2024
+- (Preview) YOu can now run [QR code simulations](attack-simulation-training-simulations.md) within attack simulation and training, track user repsonses, and assign training to end users. 
+  
 ## July 2024
 
 - **Tenant Allow/Block List in Microsoft 365 GCC, GCC High, DoD and and Office 365 operated by 21Vianet environments**: The [Tenant Allow/Block List](tenant-allow-block-list-about.md) is now available these environments. They are on parity with the WW commercial experiences.
