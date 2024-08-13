@@ -27,6 +27,36 @@ Security Exposure Management is currently in public preview.
 
 ## August 2024
 
+### New predefined classifications
+
+The following predefined **Identity** classification rules were added to the critical assets list:
+
+| Classification                                | Description                                                  |
+| --------------------------------------------- | ------------------------------------------------------------ |
+| External Identity Provider Administrator      | This rule applies to identities assigned with the Entra ID "External Identity Provider Administrator" role. A compromised identity in this role poses severe risks, including allowing management of federation between Microsoft Entra organizations and external identity providers (IdP). |
+| Domain Name Administrator                     | This rule applies to identities assigned with the Entra ID "Domain Name Administrator" role. A compromised identity in this role poses severe risks, including manipulation of domain names. |
+| Permissions Management Administrator          | This rule applies to identities assigned with the Entra ID "Permissions Management Administrator" role. A compromised identity in this role poses severe risks, including manipulation of EPM settings. |
+| Billing Administrator                         | This rule applies to identities assigned with the Entra ID "Billing Administrator" role. A compromised identity in this role poses severe risks, including disruption of subscriptions. |
+| License Administrator                         | This rule applies to identities assigned with the Entra ID "License Administrator" role. A compromised identity in this role poses severe risks, including manipulation of license assignments. |
+| Teams Administrator                           | This rule applies to identities assigned with the Entra ID "Teams Administrator" role. A compromised identity in this role poses severe risks, including manipulation of Microsoft 365 groups. |
+| External ID User Flow Administrator           | This rule applies to identities assigned with the Entra ID "External ID User Flow Administrator" role. A compromised identity in this role poses severe risks, including manipulation of B2C user flow settings. |
+| External ID User Flow Attribute Administrator | This rule applies to identities assigned with the Entra ID "External ID User Flow Attribute Administrator" role. A compromised identity in this role poses severe risks, including manipulation of B2C custom attributes. |
+| B2C IEF Policy Administrator                  | This rule applies to identities assigned with the Entra ID "B2C IEF Policy Administrator" role. A compromised identity in this role poses severe risks, including manipulation of all custom policies in B2C. |
+| Compliance Data Administrator                 | This rule applies to identities assigned with the Entra ID "Compliance Data Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to Microsoft Purview compliance portal. |
+| Authentication Policy Administrator           | This rule applies to identities assigned with the Entra ID "Authentication Policy Administrator" role. A compromised identity in this role poses severe risks, including manipulation of authentication methods policies. |
+| Knowledge Administrator                       | This rule applies to identities assigned with the Entra ID "Knowledge Administrator" role. A compromised identity in this role poses severe risks, including manipulation of and unauthorized access to security groups. |
+| Knowledge Manager                             | This rule applies to identities assigned with the Entra ID "Knowledge Manager" role. A compromised identity in this role poses severe risks, including manipulation of and unauthorized access to security groups. |
+| Attribute Definition Administrator            | This rule applies to identities assigned with the Entra ID "Attribute Definition Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to Microsoft Purview compliance portal. |
+| Attribute Assignment Administrator            | This rule applies to identities assigned with the Entra ID "Attribute Assignment Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to Microsoft Purview compliance portal. |
+| Identity Governance Administrator             | This rule applies to identities assigned with the Entra ID "Identity Governance Administrator" role. A compromised identity in this role poses severe risks, including manipulation of Microsoft Entra ID Governance configurations. |
+| Cloud App Security Administrator              | This rule applies to identities assigned with the Entra ID "Cloud App Security Administrator" role. A compromised identity in this role poses severe risks, including unauthorized full access to Microsoft Defender for Cloud Apps. |
+| Windows 365 Administrator                     | This rule applies to identities assigned with the Entra ID "Windows 365 Administrator" role. A compromised identity in this role poses severe risks, including full management of Windows 365 resources in Microsoft Intune. |
+| Yammer Administrator                          | This rule applies to identities assigned with the Entra ID "Yammer Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to the Message Center in Microsoft 365 Admin Center. |
+| Authentication Extensibility Administrator    | This rule applies to identities assigned with the Entra ID "Authentication Extensibility Administrator" role. A compromised identity in this role poses severe risks, including manipulation of custom authentication extensions. |
+| Lifecycle Workflows Administrator             | This rule applies to identities assigned with the Entra ID "Lifecycle Workflows Administrator" role. A compromised identity in this role poses severe risks, including unauthorized full access to Lifecycle Workflows in Microsoft Entra ID. |
+
+For more information, see, [Review, and classify critical assets](classify-critical-assets.md)
+
 ### News from the Research Team
 
 Read more about what the research team has been up to in this blog - [Bridging the On-premises to Cloud Security Gap: Cloud Credentials Detection](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/bridging-the-on-premises-to-cloud-security-gap-cloud-credentials/ba-p/4211794)
