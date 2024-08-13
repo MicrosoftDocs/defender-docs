@@ -1,14 +1,14 @@
 ---
-title: New and upcoming changes in recommendations and alerts
-description: Get release notes for new and upcoming changes in recommendations and alerts in Microsoft Defender for Cloud. 
+title: New and upcoming changes in recommendations, alerts, and incidents
+description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
 ms.date: 07/30/2024
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ---
 
-# What's new in Defender for Cloud recommendations and alerts
+# What's new in Defender for Cloud recommendations, alerts, and incidents
 
-This article summarizes what's new in security recommendations and alerts in Microsoft Defender for Cloud. It includes information about new, modified, and deprecated recommendations and alerts.
+This article summarizes what's new in security recommendations, alerts, and incidents in Microsoft Defender for Cloud. It includes information about new, modified, and deprecated recommendations and alerts.
 
 <!-- Please don't adjust this next line without getting approval from the Defender for Cloud documentation team. It is necessary for proper RSS functionality. -->
 - This page is updated frequently with the latest recommendations and alerts in Defender for Cloud.
@@ -24,7 +24,6 @@ This article summarizes what's new in security recommendations and alerts in Mic
 - Review a complete list of multicloud security recommendations and alerts:
   - [AI recommendations](/azure/defender-for-cloud/recommendations-reference-ai)
   - [Compute recommendations](recommendations-reference-compute.md)
-
   - [Container recommendations](recommendations-reference-container.md)
   - [Data recommendations](recommendations-reference-data.md)
   - [DevOps recommendations](recommendations-reference-devops.md)
@@ -33,14 +32,15 @@ This article summarizes what's new in security recommendations and alerts in Mic
   - [Networking recommendations](recommendations-reference-networking.md)
   - [Deprecated recommendations](recommendations-reference-deprecated.md)
   - [Security alerts](alerts-reference.md).
+  - [Security incidents](incidents-reference.md)
 
-## Recommendations and alert updates
+## Recommendations, alerts, and incidents updates
 
-New and updated recommendations and alerts are added to the table in date order.
+New and updated recommendations, alerts, and incidents are added to the table in date order.
 
 <!-- 1. Add your new recommendation/alert to the table.-->
 <!-- 2. In Date, specify the date you added the item.-->
-<!-- 3. In Type specify whether it's a Recommendation or Alert.-->
+<!-- 3. In Type specify whether it's a Recommendation, Alert, or Incident.-->
 <!-- 4. In State specify whether it's GA, Preview, Update, Deprecation, Upcoming Update, or Upcoming Deprecation, or other as needed.-->
 <!-- 5. If you're adding a new recommendation entry to the table, first add the recommendation to the relevant recommendations-reference page. There are multiple pages for recommendations for AI, APIs, App Services, Compute, Container, Data, DevOps, Identity & Access, IoT, networking, and deprecated recommendations.-->
 <!-- 6. If you're adding a new alert here, make sure you also add it to the alerts reference page-->
@@ -48,6 +48,7 @@ New and updated recommendations and alerts are added to the table in date order.
 
 | **Date**    | **Type**                       | **State**                                                    | **Name**                                                     |
 | ----------- | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| August 15 | Incidents | Upcoming deprecation | Estimated date for change: September 15, 2024<br /><br />Security incident detected anomalous geographical location activity (Preview)<br />Security incident detected suspicious app service activity (Preview)<br />Security incident detected suspicious Key Vault activity (Preview)<br />Security incident detected suspicious Azure toolkits activity (Preview)<br />Security incident detected on the same resource (Preview)<br />Security incident detected suspicious IP activity (Preview)<br/>Security incident detected suspicious user activity (Preview)<br/>Security incident detected suspicious service principal activity (Preview)<br/>Security incident detected suspicious SAS activity (Preview)<br/>Security incident detected suspicious account activity (Preview)<br/>Security incident detected suspicious crypto mining activity (Preview)<br/>Security incident detected suspicious fileless attack activity (Preview)<br/>Security incident detected suspicious Kubernetes cluster activity (Preview)<br/>Security incident detected suspicious storage activity (Preview)<br/>Security incident detected suspicious crypto mining activity (Preview)<br/>Security incident detected suspicious data exfiltration activity (Preview)<br/>Security incident detected suspicious Kubernetes cluster activity (Preview)<br/>Security incident detected suspicious DNS activity (Preview)<br/>Security incident detected suspicious SQL activity (Preview)<br/>Security incident detected suspicious DDOS activity (Preview) |
 |August 11|Recommendation|Upcoming deprecation|[Super identities in your Azure environment should be removed](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/fe7d5a87-36fc-4530-99b5-1848512a3209) , [Super Identities in your GCP environment should be removed](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/7057d0ba-7d1c-4484-8bae-e82785cf8418) Estimated deprecation: September 2024|
 |August 2|Recommendation|Preview|[Azure DevOps projects should have creation of classic pipelines disabled](https://portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/98b5895a-0ad8-4ed9-8c9d-d654f5bda816)|
 |August 2|Recommendation|Preview|[GitHub organizations should block Copilot suggestions that match public code](https://portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/98e858ed-6e88-4698-b538-f51b31ad57f6)|
@@ -171,4 +172,3 @@ New and updated recommendations and alerts are added to the table in date order.
 ## Related content
 
 For information about new features, see [What's new in Defender for Cloud features](release-notes.md).
-
