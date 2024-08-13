@@ -6,7 +6,7 @@ ms.author: itsela
 author: itsela-ms
 ms.localizationpriority: medium
 manager: dansimp
-ms.date: 05/02/2024
+ms.date: 08/12/2024
 audience: ITPro
 ms.collection: M365-security-compliance 
 ms.topic: article
