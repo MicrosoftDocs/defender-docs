@@ -369,7 +369,7 @@ This example creates the report submission policy with the default settings:
 Other settings:
 
 - **Outlook** section \> **Select an Outlook report button configuration** section:
-  - ***When the user reports an email** section:
+  - **When the user reports an email** section:
     - **Ask the user to confirm before reporting**:
       - When you go to the **User reported settings** page in the Defender portal for the first time (which creates the report submission policy), this setting is not selected (equivalent to `-PreSubmitMessageEnabled -$false`).
       - When you use PowerShell to create the policy, the default value is `-PreSubmitMessageEnabled $true`.
@@ -565,7 +565,7 @@ For detailed syntax and parameter information, see [Set-ReportSubmissionPolicy](
 
 The following examples show how to change the user reporting experience without concern for the existing settings or values:
 
-- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported messages to** to **Microsoft and my reporting mailbox*** with reportedmessages@contoso.com as the reporting mailbox:
+- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported messages to** to **Microsoft and my reporting mailbox** with `reportedmessages@contoso.com` as the reporting mailbox:
 
   ```powershell
   $usersub = "reportedmessages@contoso.com"

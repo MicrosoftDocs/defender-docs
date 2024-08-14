@@ -36,7 +36,7 @@ Microsoft Defender XDR helps security teams protect and detect their organizatio
 - [**Microsoft Defender for Identity**](/defender-for-identity/what-is)
 - [**Microsoft Defender for Cloud Apps**](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 - [**Microsoft Defender Vulnerability Management**](/defender-vulnerability-management/defender-vulnerability-management)
-- [**Microsoft Defender for Cloud**](/defender-for-cloud/defender-for-cloud-introduction)
+- [**Microsoft Defender for Cloud**](/azure/defender-for-cloud/defender-for-cloud-introduction)
 - [**Microsoft Entra ID Protection**](/azure/active-directory/identity-protection/overview-identity-protection)
 - [**Microsoft Data Loss Prevention**](/microsoft-365/compliance/dlp-learn-about-dlp)
 - [**App Governance**](/defender-cloud-apps/app-governance-manage-app-governance)

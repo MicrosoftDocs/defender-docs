@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 07/16/2024
+ms.date: 08/12/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -29,7 +29,13 @@ For more information on what's new with other Microsoft Defender security produc
 
 You can also get product updates and important notifications through the [message center](https://admin.microsoft.com/Adminportal/Home#/MessageCenter).
 
+## August 2024
+
+- To ensure a smooth experience while navigating the Microsoft Defender portal, configure your network firewall by adding the appropriate addresses to your allow list. For more information, see [Network firewall configuration for Microsoft Defender XDR](m365d-enable.md#configure-your-network-firewall).
+
 ## July 2024
+
+- Incidents with alerts where a compromised device communicated with an operational technology (OT) device are now visible in the Microsoft Defender portal through the [Microsoft Defender for IoT license and Defender for Endpoint’s device discovery capabilities](/defender-endpoint/device-discovery#device-discovery-integration). Using Defender for Endpoint data, Defender XDR automatically correlates these new OT alerts to incidents to provide a comprehensive attack story. To filter related incidents, see [Prioritize incidents in the Microsoft Defender portal](incident-queue.md#filters-).  
 
 - (GA) Filtering Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues is now generally available. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
 
@@ -50,12 +56,18 @@ You can also get product updates and important notifications through the [messag
 
 - (GA) The **[UrlClickEvents](advanced-hunting-urlclickevents-table.md)** table in advanced hunting is now generally available. Use this table to get information about [Safe Links](/defender-office-365/safe-links-about) clicks from email messages, Microsoft Teams, and Office 365 apps in supported desktop, mobile, and web apps.
 
+- (GA) You can now **release or move email messages from quarantine** back to the user's inbox directly from [Take actions in advanced hunting](advanced-hunting-take-action.md#take-various-actions-on-emails) and in [custom detections](custom-detection-rules.md#actions-on-emails). This allows security operators to manage false positives more efficiently and without losing context. 
+
+
 
 ## June 2024
 
 - (Preview) **[Content distribution through tenant groups in multitenant management](mto-tenantgroups.md)** is now available. Content distribution helps you manage content at scale across tenants in multitenant management in Microsoft Defender XDR. In content distribution, you can create tenant groups to copy existing content, like custom detection rules, from the source tenant to the target tenants you assign during tenant group creation. The content then runs on the target tenant's devices or device groups that you set in the tenant group scope.
 
 - (Preview) You can now filter your Microsoft Defender for Cloud alerts by the associated **alert subscription ID** in the Incidents and Alerts queues. For more information, see [Microsoft Defender for Cloud in Microsoft Defender XDR](microsoft-365-security-center-defender-cloud.md).
+
+
+- (GA) You can now **[filter your results](advanced-hunting-query-results.md#filter-results)** in advanced hunting so you can narrow down your investigation on specific data you want to focus on.
 
 ## May 2024
 
@@ -130,7 +142,7 @@ You can also get product updates and important notifications through the [messag
 
 - **Microsoft Defender XDR Unified role-based access control (RBAC)** is now generally available. Unified (RBAC) allows administrators to manage user permissions across different security solutions from a single, centralized location. This offering is also available to GCC Moderate customers. To learn more, see [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md).
 
-- Microsoft Defender Experts for XDR now lets you [exclude devices](get-started-xdr.md#exclude-devices-from-remediation) from remediation actions taken by our experts and instead get remediation guidance for those entities.
+- Microsoft Defender Experts for XDR now lets you [exclude devices](get-started-xdr.md#exclude-devices-and-users-from-remediation) from remediation actions taken by our experts and instead get remediation guidance for those entities.
 
 - The Microsoft Defender portal's incident queue has updated filters, search, and added a new function where you can create your own filter sets. For details, see [Available filters](incident-queue.md#available-filters).
 
