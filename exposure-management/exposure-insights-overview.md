@@ -166,10 +166,6 @@ Events measure the score drop or worsening in the metric status. Events include:
 - **Initiative score drop events**: These events are issued when there's a decrease of at least 2% in initiative score since yesterday.
 - **New Initiave event**: These events are issued when a new inititave is available in MSEM.
 
-
-On the **Events** page for an initiative, you can view and filter events.
-
-
 ## Next steps
 
 - [Review security initiatives](initiatives.md)
