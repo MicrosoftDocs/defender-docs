@@ -16,7 +16,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 07/08/2024
+ms.date: 08/08/2024
 ---
 
 # Manage the deception capability in Microsoft Defender XDR
@@ -94,7 +94,7 @@ The alert details contain:
 - The decoy device or user account where the alert originated
 - The type of attack like sign in attempts or lateral movement attempts
 
-:::image type="content" source="/defender/media/deception/fig2-deception.png" alt-text="Screenshot of a deception alert highlighting the tag and the attempt" lightbox="/defender/media/deception/fig2-deception.png":::
+:::image type="content" source="/defender/media/deception/deception-alert-small.png" alt-text="Screenshot of a deception alert highlighting the tag and the attempt" lightbox="/defender/media/deception/deception-alert.png":::
 
 *Figure 2. Details of a deception-related alert*
 
