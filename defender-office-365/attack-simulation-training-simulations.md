@@ -872,23 +872,3 @@ To include a completed session in reporting after it has been excluded, do the f
 2. Select the simulation by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/m365-cc-sc-include-icon.png" border="false"::: **Exclude**.
 
 After you included the excluded simulation, the **Status** value changes to **Completed**. Toggle **Show excluded simulations** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the simulation.
-
-
-
-
-
-### QR code trainings
-
-We have provided two mechanisms for learning about QR based attacks: How to guides, and new training modules from our content partner.
-How to Guides is designed to provide a lightweight guidance to end users on how to report a phishing message directly through email. By delivering these guides directly to the end user's inbox, we can ensure that the end user has the information they need to confidently report any suspicious emails.
-
-You can filter for the How to Guide through either:
-
-1.	Filtering by Technique = How to Guide
-2.	Search by name = " Teaching Guide: How to recognize and report QR phishing messages
-
-:::image type="content" source="media/attack-simulation-training-how-to-guide-QR-code.png" alt-text="Image showing the QR code how to guide within the content library" lightbox="media/attack-simulation-training-how-to-guide-QR-code.png":::
-
-Within the trainings list (Content Library- Training Modules), we have added a new training called Malicious Digital QR Codes which is a short learning to educate on what to do when a user receives a QR code in the email. You can assign the training as part of a simulation or use training campaigns to assign the training to your users.
-
-:::image type="content" source="media/attack-simulation-training-out-of-the-box-training-QR-code.png" alt-text="Image showing the QR code trainings available within Content library" lightbox="media/attack-simulation-training-out-of-the-box-training-QR-code":::

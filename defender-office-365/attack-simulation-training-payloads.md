@@ -142,7 +142,7 @@ QR code payloads are available in five languages to address real-world scenarios
 
 :::image type="content" source="media/attack-sim-training-payloads-global-QR-codes.png" alt-text="Screenshot of the Global payloads tab showing the QR code payloads returned after searching for the value QR." lightbox="media/attack-sim-training-payloads-global-QR-codes.png":::
 
-You can also create custom payloads that use QR codes as described in the next section.
+You can also create custom payloads that use QR codes as phishing links as described in the next section.
 
 > [!TIP]
 > Before you use a QR code payload in simulations, be sure to examine the available fields and content in the payload.
@@ -221,13 +221,6 @@ You can also create custom payloads that use QR codes as described in the next s
 
      A rich text editor is available to create the attachment content. To see the typical font and formatting settings, toggle **Formatting controls** to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
-     > [!TIP]
-     > When **Formatting controls** is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, you can use the **Insert QR code** action on the formatting controls bar for applicable social engineering techniques instead of selecting **Insert QR code** from the **Dynamic tag** dropdown list (currently in Preview):
-     >
-     > :::image type="content" source="media/attack-sim-training-payloads-formatting-controls-insert-qr-code.png" alt-text="The Insert QR code action in the formatting controls on the Configure payload page of the new payload creation wizard." lightbox="media/attack-sim-training-payloads-formatting-controls-insert-qr-code.png":::
-     >
-     > See the **Dynamic tag** description for details about adding QR codes to a payload.
-
      Select the **Phishing link** box. In the **Name phishing URL** dialog that opens, enter a **Name** value for the URL that you selected in the **Phishing link** section, and then select **Confirm**.
 
      The name value that you entered is added to the attachment content as a link to the phishing URL.
@@ -244,6 +237,13 @@ You can also create custom payloads that use QR codes as described in the next s
      - **Email message** section:
        - You can select **Import email** and then **Choose file** to import an existing plain text message file. Two tabs are available:
        - **Text** tab: A rich text editor is available to create the payload. To see the typical font and formatting settings, toggle **Formatting controls** to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
+
+         > [!TIP]
+         > The **Formatting controls** bar contains an **Insert QR code** action that you can use instead of selecting **Insert QR code** control from the **Dynamic tag** dropdown list for applicable social engineering techniques (currently in Preview):
+         >
+         > :::image type="content" source="media/attack-sim-training-payloads-formatting-controls-insert-qr-code.png" alt-text="The Insert QR code action in the formatting controls on the Configure payload page of the new payload creation wizard." lightbox="media/attack-sim-training-payloads-formatting-controls-insert-qr-code.png":::
+         >
+         > See the **Insert QR code** control description for details about adding QR codes to a payload.
 
          The following controls are also available on the **Text** tab:
 
@@ -273,7 +273,7 @@ You can also create custom payloads that use QR codes as described in the next s
            - **Horizontal position**: Enter the horizontal location in centimeters. Use the next **From** box to specify the horizontal starting point to measure from:
              - **Top left corner**
              - **Center**
-           - **Vertical position**: Enter the vertical location in centimeters. Use the next **From** box to specify the horizontal starting point to measure from:
+           - **Vertical position**: Enter the vertical location in centimeters. Use the next **From** box to specify the vertical starting point to measure from:
              - **Top left corner**
              - **Center**
 
