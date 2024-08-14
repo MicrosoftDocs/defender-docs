@@ -14,9 +14,9 @@ ms.collection:
 - tier1
 ms.topic: conceptual
 search.appverid: 
-- MOE150
-- MET150
-ms.date: 05/23/2024
+  - MOE150
+  - MET150
+ms.date: 08/08/2024
 ---
 
 # Manage the deception capability in Microsoft Defender XDR
@@ -46,6 +46,9 @@ The following table lists the requirements to enable the deception capability in
 > |Subscription requirements|One of these subscriptions:</br> - Microsoft 365 E5</br> - Microsoft Security E5</br> - Microsoft Defender for Endpoint Plan 2|
 > |Deployment requirements|Requirements:</br> - Defender for Endpoint is the primary EDR solution</br> - [Automated investigation and response capabilities in Defender for Endpoint](/defender-endpoint/configure-automated-investigations-remediation) is configured</br> - Devices are [joined](/entra/identity/devices/concept-directory-join/) or [hybrid joined](/entra/identity/devices/concept-hybrid-join/) in Microsoft Entra</br> - PowerShell is enabled on the devices</br> - The deception feature covers clients operating on Windows 10 RS5 and later in preview|
 > |Permissions|You must have one of the following roles assigned in the [Microsoft Entra admin center](https://entra.microsoft.com) or in the [Microsoft 365 admin center](https://admin.microsoft.com) to configure deception capabilities:</br> - Global administrator</br> - Security administrator</br> - Manage portal system settings|
+
+> [!NOTE]
+> Microsoft recommends using roles with fewer permissions for better security. The Global Administrator role, which has many permissions, should only be used in emergencies when no other role fits.
 
 ## What is deception technology?
 
@@ -88,7 +91,7 @@ The alert details contain:
 - The decoy device or user account where the alert originated
 - The type of attack like sign in attempts or lateral movement attempts
 
-:::image type="content" source="/defender/media/deception/fig2-deception.png" alt-text="Screenshot of a deception alert highlighting the tag and the attempt" lightbox="/defender/media/deception/fig2-deception.png":::
+:::image type="content" source="/defender/media/deception/deception-alert-small.png" alt-text="Screenshot of a deception alert highlighting the tag and the attempt" lightbox="/defender/media/deception/deception-alert.png":::
 
 *Figure 2. Details of a deception-related alert*
 

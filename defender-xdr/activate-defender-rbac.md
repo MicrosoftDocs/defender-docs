@@ -2,17 +2,17 @@
 title: Activate Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Activate Microsoft Defender XDR Security unified role-based access control(RBAC)
 ms.service: defender-xdr
-ms.author: siosulli
+ms.author: diannegali
 author: siosulli
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection: 
 - m365-security
 - tier3
 ms.custom: 
 ms.topic: how-to
-ms.date: 08/03/2023
+ms.date: 06/27/2024
 ms.reviewer: 
 search.appverid: met150
 ---
@@ -30,7 +30,7 @@ search.appverid: met150
 - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
 
-For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new [custom roles](create-custom-rbac-roles.md) or [imported roles](import-rbac-roles.md) you must activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
+For the Microsoft Defender XDR security portal to start enforcing the permissions and assignments configured in your new [custom roles](create-custom-rbac-roles.md) or [imported roles](import-rbac-roles.md), you must activate the Microsoft Defender XDR Unified RBAC model for some or all of your workloads.
 
 <a name='activate-microsoft-365-defender-unified-rbac'></a>
 
@@ -42,7 +42,8 @@ The following steps guide you on how to activate the Microsoft Defender XDR Unif
 2. [Activate in Microsoft Defender XDR settings](#activate-in-microsoft-365-defender-settings)
 
 > [!IMPORTANT]
-> You must be a Global Administrator or Security Administrator in Microsoft Entra ID to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-pre-requisites).
+> You must be a Global Administrator or Security Administrator in Microsoft Entra ID to perform this task. For more information on permissions, see [Permission pre-requisites](manage-rbac.md#permissions-prerequisites).
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ### Activate from the Permissions and roles page
 
@@ -53,26 +54,23 @@ You can activate your workloads in two ways from the Permissions and roles page:
 :::image type="content" source="/defender/media/defender/m365-defender-rbac-activate-workloads1.png" alt-text="Screenshot of the activate workloads page" lightbox="/defender/media/defender/m365-defender-rbac-activate-workloads1.png":::
 
 1. **Activate workloads**
-    - Select **Activate workloads** on the banner above the list of roles.
-    - This will bring you directly to the **Activate workloads** screen.
-    - You must activate each workload one by one. Once you select the individual toggle, you'll activate (or deactivate) that workload.
+   - Select **Activate workloads** on the banner above the list of roles to go directly to the **Activate workloads** screen.
+   - You must activate each workload one by one. Once you select the individual toggle, you activate (or deactivate) that workload.
 
-    :::image type="content" source="/defender/media/defender/m365-defender-rbac-activate-workload-selection1.png" alt-text="Screenshot of the choose workloads to activate screen" lightbox="/defender/media/defender/m365-defender-rbac-activate-workload-selection1.png":::
+   :::image type="content" source="/defender/media/defender/m365-defender-rbac-activate-workload-selection1.png" alt-text="Screenshot of the choose workloads to activate screen" lightbox="/defender/media/defender/m365-defender-rbac-activate-workload-selection1.png":::
 
-    > [!NOTE]
-    > The **Activate workloads** button is only available when there is it at least one workload that's not active for Microsoft Defender XDR Unified RBAC.
-
-    > [!NOTE]
-    > Microsoft Defender for Cloud is active by default with Microsoft Defender XDR Unified RBAC.
-
-    > [!NOTE]
-    > To activate Exchange Online permissions in Microsoft Defender XDR Unified RBAC, Defender for Office 365 permissions must be active. 
+   > [!NOTE]
+   > The **Activate workloads** button is only available when there is it at least one workload that's not active for Microsoft Defender XDR Unified RBAC.
+   >
+   > Microsoft Defender for Cloud is active by default with Microsoft Defender XDR Unified RBAC.
+   > 
+   > To activate Exchange Online permissions in Microsoft Defender XDR Unified RBAC, Defender for Office 365 permissions must be active. 
 
 2. **Workload settings**
     - Select **Workload settings**.
     - This brings you to the Microsoft Defender XDR **Permission and roles** page.
     - Select the toggle for the workload you want to activate.
-    - Select Activate on the confirmation message.
+    - Select **Activate** on the confirmation message.
 
 You have now successfully activated (or deactivated) that workload.
 
@@ -83,11 +81,16 @@ You have now successfully activated (or deactivated) that workload.
 Follow these steps to activate your workloads directly in Microsoft Defender XDR settings:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
+
 2. In the navigation pane, select **Settings**.
+
 3. Select **Microsoft Defender XDR**.
+
 4. Select **Permissions and roles**. This brings you to the **Activate workloads** page.
+
 5. Select the toggle for the workload you want to activate.
-6. Select Activate on the confirmation message.
+
+6. Select **Activate** on the confirmation message.
 
 You have now successfully activated (or deactivated) that workload.
 
@@ -100,11 +103,12 @@ You have now successfully activated (or deactivated) that workload.
 
 You can deactivate Microsoft Defender XDR Unified RBAC and revert to the individual RBAC models from Microsoft Defender for Endpoint, Microsoft Defender for Identity, and Microsoft Defender for Office 365 (Exchange Online Protection).
 
-To Deactivate the workloads, repeat the steps above and select the workloads you want to deactivate. The status will be set to **Not Active**.
+To Deactivate the workloads, repeat the steps above and select the workloads you want to deactivate. The status is set to **Not Active**.
 
-If you deactivate a workload, the roles created and edited within Microsoft Defender XDR Unified RBAC won't be effective and you'll return to using the previous permissions model. This will remove any access that users assigned these roles have.
+If you deactivate a workload, the roles created and edited within Microsoft Defender XDR Unified RBAC are no longer in effect, and the previous permissions model is used instead.
 
 ## Next steps
 
 - [Edit or delete roles](edit-delete-rbac-roles.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

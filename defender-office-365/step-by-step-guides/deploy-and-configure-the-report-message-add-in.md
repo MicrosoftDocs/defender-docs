@@ -7,7 +7,7 @@ f1.keywords:
 ms.author: chrisda
 author: MSFTBen
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-guidance-templates
@@ -33,8 +33,11 @@ Depending on whether you're licensed for Defender for Office 365, you also get a
 ## What you need
 
 - Exchange Online Protection (some features require Defender for Office 365 Plan 2).
-- Sufficient permissions (Global admin for add-in deployment, security admin for customization).
+- Sufficient permissions (Global Administrator<sup>\*</sup> for add-in deployment, Security Administrator for customization).
 - 5-10 minutes to perform the steps in this article.
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Deploy the add-in for users
 

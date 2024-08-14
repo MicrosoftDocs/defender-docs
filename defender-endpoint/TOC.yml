@@ -321,8 +321,6 @@
     items:
     - name: Integration with Microsoft Defender for Cloud
       href: azure-server-integration.md
-    - name: Run simulated attacks on devices
-      href: attack-simulations.md
     - name: Create an onboarding or offboarding notification rule
       href: onboarding-notification.md
     - name: Manage Microsoft Defender for Endpoint configuration settings on devices with Microsoft Intune
@@ -777,8 +775,6 @@
           href: troubleshoot-performance-issues.md
         - name: Collect diagnostic data of Microsoft Defender Antivirus
           href: collect-diagnostic-data.md
-        - name: Collect diagnostic data for Update Compliance and Microsoft Defender Antivirus
-          href: collect-diagnostic-data-update-compliance.md
         - name: Improve performance of Microsoft Defender Antivirus
           href: tune-performance-defender-antivirus.md
 
@@ -815,6 +811,8 @@
 
       - name: Manage endpoint security policies
         href: manage-security-policies.md
+      - name: Deploy endpoint security policies from Intune
+        href: /mem/intune/protect/mde-security-integration?toc=/defender-endpoint/toc.json&bc=/defender-endpoint/breadcrumb/toc.json
       - name: Increase compliance with the security baseline
         href: configure-machines-security-baseline.md
       - name: Optimize attack surface reduction rule deployment and detections
@@ -961,35 +959,34 @@
       - name: View the details and results of an automated investigation
         href: autoir-investigation-results.md
 
-    - name: Next generation protection
-      href: autoir-investigation-results.md
-      items:
-      - name: Run and customize scheduled and on-demand scans
-        href: customize-run-review-remediate-scans-microsoft-defender-antivirus.md
-
     - name: Endpoint Attack Notifications
       href: endpoint-attack-notifications.md
+
+    - name: Run and customize scheduled and on-demand scans
+      href: customize-run-review-remediate-scans-microsoft-defender-antivirus.md
 
   - name: Reference
     items:
     - name: Microsoft Security Resources
       items: 
         - name: Threat actor naming
-          href: /defender/microsoft-threat-actor-naming
+          href: /defender-xdr/microsoft-threat-actor-naming
         - name: Malware names
-          href: /defender/malware-naming
+          href: /defender-xdr/malware-naming
         - name: How Microsoft identifies malware and PUA
-          href: /defender/criteria
+          href: /defender-xdr/criteria
         - name: Submit files for analysis
           href: /defender-xdr/submission-guide
         - name: Troubleshoot MSI portal errors caused by admin block
-          href: /defender/portal-submission-troubleshooting
+          href: /defender-xdr/portal-submission-troubleshooting
         - name: Microsoft virus initiative
-          href: /defender/virus-initiative-criteria
+          href: /defender-xdr/virus-initiative-criteria
         - name: Software developer FAQ
-          href: /defender/developer-faq
+          href: /defender-xdr/developer-faq
     - name: Malware information
       items: 
+       - name: Understanding malware
+         href: malware/understanding-malware.md
        - name: Coinminers
          href: malware/coinminer-malware.md
        - name: Exploits and Exploit Kits
@@ -1012,8 +1009,6 @@
          href: malware/support-scams.md
        - name: Trojans
          href: malware/trojans-malware.md
-       - name: Understanding malware
-         href: malware/understanding-malware.md
        - name: Unwanted software
          href: malware/unwanted-software.md
        - name: Worms
@@ -1406,14 +1401,14 @@
         href: api/exposed-apis-create-app-partners.md
       - name: Fetch alerts from customer tenant
         href: api/fetch-alerts-mssp.md
-      - name: Managed security service provider opportunity
-        href: mssp-support.md
     - name: Partner integration scenarios
       items:
       - name: Technical partner opportunities
         href: partner-integration.md
       - name: Become a Microsoft Defender for Endpoint partner
         href: get-started-partner-integration.md
+      - name: Professional security services that integrate with Defender for Endpoint
+        href: professional-services.md
     - name: Integrations
       items:
       - name: Microsoft Defender for Endpoint integrations
@@ -1555,10 +1550,6 @@
       href: /defender-business
     - name: Defender Vulnerability Management
       href: /defender-vulnerability-management
-
-
-
-
               
               
                 

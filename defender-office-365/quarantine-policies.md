@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to use quarantine policies to control what users are able to do to quarantined messages.
 ms.service: defender-office-365
-ms.date: 4/26/2024
+ms.date: 05/21/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -57,7 +57,10 @@ You create and assign quarantine policies in the Microsoft Defender portal or in
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Core Security settings (manage)**, or **Security operations/Security Data/Email & collaboration quarantine (manage)**.
   - [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Quarantine Administrator**, **Security Administrator**, or **Organization Management** role groups.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator** or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+
+    > [!IMPORTANT]
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - All actions taken by admins or users on quarantined messages are audited. For more information about audited quarantine events, see [Quarantine schema in the Office 365 Management API](/office/office-365-management-api/office-365-management-activity-api-schema#quarantine-schema).
 
@@ -85,14 +88,17 @@ You create and assign quarantine policies in the Microsoft Defender portal or in
        - **Delete**
        - **Preview**
        - **Block sender**
+       - **Allow sender**
 
    These permissions and their effect on quarantined messages and in quarantine notifications are described in the [Quarantine policy permission details](#quarantine-policy-permission-details) section later in this article.
 
    When you're finished on the **Recipient message access** page, select **Next**.
 
-5. On the **Quarantine notification** page, select **Enable** to turn on quarantine notifications.
+5. On the **Quarantine notification** page, select **Enable** to turn on quarantine notifications, and then select one of the following values:
+   - **Include quarantined messages from blocked sender addresses**
+   - **Don't include quarantined messages from blocked sender addresses**
 
-   > [!NOTE]
+   > [!TIP]
    > If you turn on quarantine notifications for **No access** permissions (on the **Recipient message access** page, you selected **Set specific access (Advanced)** \> **Select release action preference** \> blank), users can view their messages in quarantine, but the only available action for the messages is :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers).
 
    When you're finished on the **Quarantine notification** page, select **Next**.
@@ -118,8 +124,6 @@ If you'd rather use PowerShell to create quarantine policies, connect to [Exchan
 New-QuarantinePolicy -Name "<UniqueName>" -EndUserQuarantinePermissionsValue <0 to 236> [-EsnEnabled $true]
 ```
 
-**Notes**:
-
 - The _ESNEnabled_ parameter with the value `$true` turns on quarantine notifications. Quarantine notifications are turned off by default (the default value is `$false`).
 
 - The _EndUserQuarantinePermissionsValue_ parameter uses a decimal value that's converted from a binary value. The binary value corresponds to the available end-user quarantine permissions in a specific order. For each permission, the value 1 equals True and the value 0 equals False.
@@ -130,7 +134,7 @@ New-QuarantinePolicy -Name "<UniqueName>" -EndUserQuarantinePermissionsValue <0 
   |---|:---:|:---:|
   |PermissionToViewHeader¹|128|10000000|
   |PermissionToDownload²|64|01000000|
-  |PermissionToAllowSender²|32|00100000|
+  |PermissionToAllowSender|32|00100000|
   |PermissionToBlockSender|16|00010000|
   |PermissionToRequestRelease³|8|00001000|
   |PermissionToRelease³|4|00000100|
@@ -149,24 +153,27 @@ New-QuarantinePolicy -Name "<UniqueName>" -EndUserQuarantinePermissionsValue <0 
   |---|:--:|
   |PermissionToViewHeader|0|
   |PermissionToDownload|0|
-  |PermissionToAllowSender|0|
-  |PermissionToBlockSender|1|
+  |PermissionToAllowSender|1|
+  |PermissionToBlockSender|0|
   |PermissionToRequestRelease|1|
   |PermissionToRelease|0|
   |PermissionToPreview|1|
   |PermissionToDelete|1|
-  |Binary value|00011011|
-  |Decimal value to use|27|
+  |Binary value|00101011|
+  |Decimal value to use|43|
 
-- If you set the _ESNEnabled_ parameter to the value `$true` when the value of the _EndUserQuarantinePermissionsValue_ parameter is 0 (**No access** where all permissions are turned off), users can see their messages in quarantine, but the only available action for the messages is :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers).
+- If you set the _ESNEnabled_ parameter to the value `$true` when the value of the _EndUserQuarantinePermissionsValue_ parameter is 0 (**No access** where all permissions are turned off), recipients can see their messages in quarantine, but the only available action for the messages is :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers).
 
 This example creates a new quarantine policy named LimitedAccess with quarantine notifications turned on that assigns the Limited access permissions as described in the previous table.
 
 ```powershell
-New-QuarantinePolicy -Name LimitedAccess -EndUserQuarantinePermissionsValue 27 -EsnEnabled $true
+New-QuarantinePolicy -Name LimitedAccess -EndUserQuarantinePermissionsValue 43 -EsnEnabled $true
 ```
 
-For custom permissions, use the previous table to get the binary value that corresponds to the permissions you want. Convert the binary value to a decimal value and use the decimal value for the _EndUserQuarantinePermissionsValue_ parameter. Don't use the binary value.
+For custom permissions, use the previous table to get the binary value that corresponds to the permissions you want. Convert the binary value to a decimal value and use the decimal value for the _EndUserQuarantinePermissionsValue_ parameter.
+
+> [!TIP]
+> Use the equivalent **decimal** value for _EndUserQuarantinePermissionsValue_. Don't use the raw binary value.
 
 For detailed syntax and parameter information, see [New-QuarantinePolicy](/powershell/module/exchange/new-quarantinepolicy).
 
@@ -227,8 +234,6 @@ If you'd rather use PowerShell to assign quarantine policies in anti-spam polici
 ```powershell
 <New-HostedContentFilterPolicy -Name "<Unique name>" | Set-HostedContentFilterPolicy -Identity "<Policy name>"> [-SpamAction Quarantine] [-SpamQuarantineTag <QuarantineTagName>] [-HighConfidenceSpamAction Quarantine] [-HighConfidenceSpamQuarantineTag <QuarantineTagName>] [-PhishSpamAction Quarantine] [-PhishQuarantineTag <QuarantineTagName>] [-HighConfidencePhishQuarantineTag <QuarantineTagName>] [-BulkSpamAction Quarantine] [-BulkQuarantineTag <QuarantineTagName>] ...
 ```
-
-**Notes**:
 
 - Quarantine policies matter only when messages are quarantined. The default value for the _HighConfidencePhishAction_ parameter is Quarantine, so you don't need to use that _\*Action_ parameter when you create new spam filter policies in PowerShell. By default, all other _\*Action_ parameters in new spam filter policies aren't set to value Quarantine.
 
@@ -301,8 +306,6 @@ If you'd rather use PowerShell to assign quarantine policies in anti-phishing po
 <New-AntiPhishPolicy -Name "<Unique name>" | Set-AntiPhishPolicy -Identity "<Policy name>"> [-EnableSpoofIntelligence $true] [-AuthenticationFailAction Quarantine] [-SpoofQuarantineTag <QuarantineTagName>] [-EnableMailboxIntelligence $true] [-EnableMailboxIntelligenceProtection $true] [-MailboxIntelligenceProtectionAction Quarantine] [-MailboxIntelligenceQuarantineTag <QuarantineTagName>] [-EnableOrganizationDomainsProtection $true] [-EnableTargetedDomainsProtection $true] [-TargetedDomainProtectionAction Quarantine] [-TargetedDomainQuarantineTag <QuarantineTagName>] [-EnableTargetedUserProtection $true] [-TargetedUserProtectionAction Quarantine] [-TargetedUserQuarantineTag <QuarantineTagName>] ...
 ```
 
-**Notes**:
-
 - Quarantine policies matter only when messages are quarantined. In anti-phish policies, messages are quarantined when the _Enable\*_ parameter value for the feature is $true **and** the corresponding _*\Action_ parameter value is Quarantine. The default value for the _EnableMailboxIntelligence_ and _EnableSpoofIntelligence_ parameters is $true, so you don't need to use them when you create new anti-phish policies in PowerShell. By default, no _*\Action_ parameters have the value Quarantine.
 
   To see the important parameter values in existing anti-phish policies, run the following command:
@@ -366,8 +369,6 @@ If you'd rather use PowerShell to assign quarantine policies in anti-malware pol
 <New-AntiMalwarePolicy -Name "<Unique name>" | Set-AntiMalwarePolicy -Identity "<Policy name>"> [-QuarantineTag <QuarantineTagName>]
 ```
 
-**Notes**:
-
 - When you create new anti-malware policies without using the _QuarantineTag_ parameter, the default quarantine policy named AdminOnlyAccessPolicy is used.
 
   Users can't release their own messages that were quarantined as malware, regardless of how the quarantine policy is configured. If the policy allows users to release their own quarantined messages, users are instead allowed to _request_ the release of their quarantined malware messages.
@@ -419,8 +420,6 @@ If you'd rather use PowerShell to assign quarantine policies in Safe Attachments
 ```powershell
 <New-SafeAttachmentPolicy -Name "<Unique name>" | Set-SafeAttachmentPolicy -Identity "<Policy name>"> -Enable $true -Action <Block | DynamicDelivery> [-QuarantineTag <QuarantineTagName>]
 ```
-
-**Notes**:
 
 - The _Action_ parameter values Block or DynamicDelivery can result in quarantined messages (the value Allow doesn't quarantine messages). The value of the _Action_ parameter in meaningful only when the value of the _Enable_ parameter is `$true`.
 
@@ -535,8 +534,6 @@ If you'd rather use PowerShell to configure global quarantine notification setti
 ```powershell
 Get-QuarantinePolicy -QuarantinePolicyType GlobalQuarantinePolicy | Set-QuarantinePolicy -MultiLanguageSetting ('Language1','Language2','Language3') -MultiLanguageCustomDisclaimer ('Language1 Disclaimer','Language2 Disclaimer','Language3 Disclaimer') -ESNCustomSubject ('Language1 Subject','Language2 Subject','Language3 Subject') -MultiLanguageSenderName ('Language1 Sender Display Name','Language2 Sender Display Name','Language3 Sender Display Name') [-EndUserSpamNotificationCustomFromAddress <InternalUserEmailAddress>] [-OrganizationBrandingEnabled <$true | $false>] [-EndUserSpamNotificationFrequency <04:00:00 | 1.00:00:00 | 7.00:00:00>]
 ```
-
-**Notes**:
 
 - You can specify a maximum of 3 available languages. The value Default is en-US. The value English is everything else (en-GB, en-CA, en-AU, etc.).
 - For each language, you need to specify unique _MultiLanguageCustomDisclaimer_, _ESNCustomSubject_, and _MultiLanguageSenderName_ values.
@@ -679,7 +676,8 @@ The relationship between permissions, permissions groups, and the default quaran
 |Permission|No access|Limited access|Full access|
 |---|:---:|:---:|:---:|
 |(_PermissionToViewHeader_)¹|✔|✔|✔|
-|**Block sender** (_PermissionToBlockSender_)||✔|✔|
+|**Allow sender** (_PermissionToAllowSender_)||✔|✔|
+|**Block sender** (_PermissionToBlockSender_)||||
 |**Delete** (_PermissionToDelete_)||✔|✔|
 |**Preview** (_PermissionToPreview_)²||✔|✔|
 |**Allow recipients to release a message from quarantine** (_PermissionToRelease_)³|||✔|
@@ -692,7 +690,7 @@ The relationship between permissions, permissions groups, and the default quaran
 |DefaultFullAccessWithNotificationPolicy⁴|Full access|Yes|
 |NotificationEnabledPolicy⁵|Full access|Yes|
 
-¹ This permission isn't available in the Defender portal. Turning off the permission in PowerShell doesn't affect the availability of the :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message header** action on quarantined messages. If the message is visible to a user in quarantine, the action is always available for the message.
+¹ This permission isn't available in the Defender portal. Turning off the permission in PowerShell doesn't affect the availability of the :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: **View message header** action on quarantined messages. If the message is visible to a user in quarantine, **View message header** is always available for the message.
 
 ² The **Preview** permission is unrelated to the **Review message** action that's available in quarantine notifications.
 
@@ -749,16 +747,15 @@ The effect of **No access** permissions (admin only access) on user capabilities
 If the quarantine policy assigns **Limited access** permissions, users get the following capabilities:
 
 - **On the Quarantine page and in the message details in quarantine**: The following actions are available:
-  - :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) (the difference from **Full access** permissions)
+  - :::image type="icon" source="media/m365-cc-sc-request-release-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) (the difference from **Full access** permissions)
   - :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: [Delete](quarantine-end-user.md#delete-email-from-quarantine)
   - :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: [Preview message](quarantine-end-user.md#preview-email-from-quarantine)
   - :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers)
-  - :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false":::  [Block sender](quarantine-end-user.md#block-email-senders-from-quarantine)
+  - :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false"::: [Allow sender](quarantine-end-user.md#allow-email-senders-from-quarantine)
 
 - **In quarantine notifications**: The following actions are available:
   - **Review message**
   - **Request release** (the difference from **Full access** permissions)
-  - **Block sender**
 
 ##### Full access
 
@@ -769,14 +766,27 @@ If the quarantine policy assigns **Full access** permissions (all available perm
   - :::image type="icon" source="media/m365-cc-sc-delete-icon.png" border="false"::: [Delete](quarantine-end-user.md#delete-email-from-quarantine)
   - :::image type="icon" source="media/m365-cc-sc-preview-message-icon.png" border="false"::: [Preview message](quarantine-end-user.md#preview-email-from-quarantine)
   - :::image type="icon" source="media/m365-cc-sc-view-message-headers-icon.png" border="false"::: [View message headers](quarantine-end-user.md#view-email-message-headers)
-  - :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: [Block sender](quarantine-end-user.md#block-email-senders-from-quarantine)
+  - :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false"::: [Allow sender](quarantine-end-user.md#allow-email-senders-from-quarantine)
 
 - **In quarantine notifications**: The following actions are available:
   - **Review message**
   - **Release** (the difference from **Limited access** permissions)
-  - **Block sender**
 
 #### Individual permissions
+
+##### Allow sender permission
+
+The **Allow sender** permission (_PermissionToAllowSender_) allows users to add the message sender to the Safe Senders list in their mailbox.
+
+If the **Allow sender** permission is enabled:
+
+:::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false":::
+
+- :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false"::: [Allow sender](quarantine-end-user.md#allow-email-senders-from-quarantine) is available on the **Quarantine** page and in the message details in quarantine.
+
+If the **Allow sender** permission is disabled, users can't allow senders from quarantine (the action isn't available).
+
+For more information about the Safe Senders list, see [Add recipients of my email messages to the Safe Senders List](https://support.microsoft.com/office/be1baea0-beab-4a30-b968-9004332336ce) and [Use Exchange Online PowerShell to configure the safelist collection on a mailbox](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox).
 
 ##### Block sender permission
 
@@ -794,7 +804,7 @@ If the **Block sender** permission is disabled, users can't block senders from q
 For more information about the Blocked Senders list, see [Block messages from someone](https://support.microsoft.com/office/274ae301-5db2-4aad-be21-25413cede077#__toc304379667) and [Use Exchange Online PowerShell to configure the safelist collection on a mailbox](configure-junk-email-settings-on-exo-mailboxes.md#use-exchange-online-powershell-to-configure-the-safelist-collection-on-a-mailbox).
 
 > [!TIP]
-> The organization can still receive mail from the blocked sender. Messages from the sender are delivered to user Junk Email folders or to quarantine. To delete messages from the sender upon arrival, use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
+> The organization can still receive mail from the blocked sender. Messages from the sender are delivered to user Junk Email folders or to quarantine depending on the policy precedence as described in [User allows and blocks](how-policies-and-protections-are-combined.md#user-allows-and-blocks). To delete messages from the sender upon arrival, use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
 
 ##### Delete permission
 
@@ -841,7 +851,7 @@ The **Allow recipients to request a message to be released from quarantine** per
 
 If the **Allow recipients to request a message to be released from quarantine** permission is enabled:
 
-- :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) is available on the **Quarantine** page and in the message details in quarantine.
+- :::image type="icon" source="media/m365-cc-sc-request-release-icon.png" border="false"::: [Request release](quarantine-end-user.md#request-the-release-of-quarantined-email) is available on the **Quarantine** page and in the message details in quarantine.
 - **Request release** is available in quarantine notifications.
 
 If the **Allow recipients to request a message to be released from quarantine** permission is disabled, users can't request the release of their own messages from quarantine or in quarantine notifications (the action isn't available).

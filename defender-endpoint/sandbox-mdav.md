@@ -6,7 +6,7 @@ ms.localizationpriority: medium
 ms.topic: conceptual
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.date: 02/26/2024
 ms.subservice: ngp
 ms.collection:

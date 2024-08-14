@@ -6,7 +6,7 @@ ms.author: siosulli
 author: siosulli
 ms.reviewer: sunasing
 ms.localizationpriority: medium
-ms.date: 03/04/2024
+ms.date: 06/12/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -29,9 +29,11 @@ search.appverid: met150
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-> [!IMPORTANT]
->  ## Network Protection – Update
-> Network protection feature will soon be enabled by default for all users. The update will be rolled out in a phased manner. As a result, users will be able to see Network Protection Card in the Defender app along with App Protection and Web Protection. Users are also required to provide **Local Network** permission. This permission is needed to enhance the existing rogue wifi detection. For more information, see [Network Protection](ios-configure-features.md#configure-network-protection).
+
+## User Enrollment
+
+Microsoft Defender for Endpoint iOS can now be deployed on Intune User Enrolled devices. This new feature offers security and IT teams the flexibility to deploy Defender for Endpoint for iOS to user-enrolled devices so that work data and applications are protected, while end-user privacy is upheld on those devices. For more information, see [User Enrollment setup](ios-install.md#user-enrollment-setup-only-for-intune-user-enrolled-devices).  
+
 ## Device Tagging
 
 Mobile Device Tagging is now generally available. This feature enables bulk tagging the mobile devices by allowing the admins to set up tags via Intune. Admin can configure the device tags through Intune via configuration policies and push them to user's devices. Once the User installs and activates Defender, the client app passes the device tags to the Security Portal. The Device tags appear against the devices in the Device Inventory. For more information, read [Configure Device Tagging](ios-configure-features.md#device-tagging).
@@ -44,7 +46,9 @@ Vulnerability assessment of apps on Microsoft Defender for Endpoint for iOS is n
 
 Network Protection on Microsoft Defender for Endpoint is now generally available. Network protection provides protection against rogue Wi-Fi related threats, rogue hardware like pineapple devices and notifies the user if a related threat is detected. Users also see a guided experience to connect to secure networks and change networks when they're connected to an unsecure connection.
 
-It includes several admin controls to offer flexibility, such as the ability to configure the feature from within the Microsoft Intune admin center. Admins can also enable privacy controls to configure the data that's sent by Defender for Endpoint from iOS devices. For more information, read [Configure Network Protection](ios-configure-features.md#configure-network-protection).
+**This feature is now enabled by default for all users.** As a result, users will be able to see the Network Protection Card in the Defender for Endpoint iOS app along with App Protection and Web Protection. Users are also required to provide **Local Network** permission. This permission is needed to enhance the existing rogue wifi detection. Admins can change the default value for the Network Protection feature if they decide not to use it via the Intune App Configuration policies. 
+
+There are also several admin controls to offer flexibility, including privacy controls to configure the data that's sent by Defender for Endpoint from iOS devices. For more information, read [Configure Network Protection](ios-configure-features.md#configure-network-protection).
 
 ## Privacy Controls
 

@@ -1,12 +1,12 @@
 ---
 title: Microsoft Defender for Endpoint on Linux
-ms.reviewer: gopkr, pahuijbr
+ms.reviewer: gopkr, pahuijbr, megphapriya
 description: Describes how to install and use Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
 ms.author: dansimp
 author: dansimp
 ms.localizationpriority: medium
-manager: dansimp
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/08/2024
+ms.date: 07/17/2024
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -97,15 +97,21 @@ In general you need to take the following steps:
   - Oracle Linux 9.x
   - Amazon Linux 2
   - Amazon Linux 2023
-  - Fedora 33 or higher
+  - Fedora 33-38
+    
   - Rocky 8.7 and higher
+  - Rocky 9.2 and higher
+    
   - Alma 8.4 and higher
+  - Alma 9.2 and higher
+    
   - Mariner 2
-
+  
     > [!NOTE]
     > Distributions and version that are not explicitly listed are unsupported (even if they are derived from the officially supported distributions).
     > With RHEL 6 support for 'extended end of life' coming to an end by June 30, 2024; MDE Linux support for RHEL 6 will also be deprecated by June 30, 2024
-    > MDE Linux version 101.23082.0011 is the last MDE Linux release supporting RHEL 6.7 or higher versions (does not expire before June 30, 2024). Customers are advised to plan upgrades to their RHEL 6 infrastructure aligned with guidance from Red Hat. 
+    > MDE Linux version 101.23082.0011 is the last MDE Linux release supporting RHEL 6.7 or higher versions (does not expire before June 30, 2024). Customers are advised to plan upgrades to their RHEL 6 infrastructure aligned with guidance from Red Hat.
+    > Microsoft Defender Vulnerablity Management is not supported on Rocky and Alma currently.
 
 - List of supported kernel versions
 
@@ -255,4 +261,3 @@ High I/O workloads from certain applications can experience performance issues w
 - [Turn on network protection for Linux](network-protection-linux.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
-

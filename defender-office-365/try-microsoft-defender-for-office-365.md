@@ -424,10 +424,13 @@ In **audit mode**, you're looking for reports that show detections by the evalua
 
 The following permissions are required in [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal) to set up an evaluation or trial of Defender for Microsoft 365:
 
-- _Create, modify or delete an evaluation or trial_: Membership in the **Security Administrator** or **Global Administrator** roles.
+- _Create, modify or delete an evaluation or trial_: Membership in the **Security Administrator** or **Global Administrator**<sup>\*</sup> roles.
 - _View evaluation policies and reports in audit mode_: Membership in the **Security Administrator** or **Security Reader** roles.
 
 For more information about Microsoft Entra permissions in the Microsoft Defender portal, see [Microsoft Entra roles in the Microsoft Defender portal](mdo-portal-permissions.md#microsoft-entra-roles-in-the-microsoft-defender-portal)
+
+> [!IMPORTANT]
+> <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Frequently asked questions
 
@@ -438,6 +441,10 @@ A: No. The trial automatically provisions Defender for Office 365 Plan 2 license
 ### Q: How do I extend the trial?
 
 A: See [Extend your trial](/microsoft-365/commerce/try-or-buy-microsoft-365#extend-your-trial).
+
+### Q: Why do I not see options to cancel or extend the trial?
+
+A: You don't see options to cancel or extend your trial if your subscription is part of the New Commerce Experience (NCE). Currently, only customers on legacy subscriptions have the capability to cancel or extend their trials. 
 
 ### Q: What happens to my data after the trial expires?
 

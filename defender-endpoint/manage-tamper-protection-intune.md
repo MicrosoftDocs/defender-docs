@@ -5,7 +5,7 @@ manager: deniseb
 description: Turn tamper protection on or off for your organization in Microsoft Intune.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 10/24/2023
+ms.date: 07/25/2024
 audience: ITPro
 ms.topic: how-to
 author: siosulli
@@ -34,7 +34,7 @@ search.appverid: met150
 **Platforms**
 - Windows
 
-Tamper protection helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, and you're using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), you can manage tamper protection for your organization in the [Intune admin center](https://endpoint.microsoft.com). Or, you can use [Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection-configure). With Intune or Configuration Manager, you can:
+Tamper protection helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, and you're using [Microsoft Intune](/mem/intune/fundamentals/what-is-intune), you can manage tamper protection for your organization in the [Intune admin center](https://intune.microsoft.com). Or, you can use [Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection-configure). With Intune or Configuration Manager, you can:
 
 - [Turn tamper protection on (or off) for some or all devices](#turn-tamper-protection-on-or-off-in-microsoft-intune). 
 - [Protect Microsoft Defender Antivirus exclusions from tampering](#tamper-protection-for-antivirus-exclusions) (certain requirements must be met).
@@ -51,7 +51,7 @@ Tamper protection helps protect certain [security settings](prevent-changes-to-s
 
 | Requirement | Details |
 |---|---|
-| Roles and permissions | You must have appropriate permissions assigned through roles, such as Global Administrator or Security Administrator. See [Microsoft Entra roles with Intune access](/mem/intune/fundamentals/role-based-access-control#azure-active-directory-roles-with-intune-access). |
+| Roles and permissions | You must have appropriate permissions assigned through roles, such as Security Administrator. See [Microsoft Entra roles with Intune access](/mem/intune/fundamentals/role-based-access-control#azure-active-directory-roles-with-intune-access). |
 | Device management | Your organization uses [Intune to manage devices](/mem/intune/fundamentals/manage-devices). |
 | Intune licenses | Intune licenses are required. See [Microsoft Intune licensing](/mem/intune/fundamentals/licenses). |
 | Operating System | Windows devices must be running Windows 10 [version 1709 or later](/lifecycle/announcements/revised-end-of-service-windows-10-1709) or Windows 11. (For more information about releases, see [Windows release information](/windows/release-health/release-information).) <br/><br/>For Mac, see [Protect macOS security settings with tamper protection](tamperprotection-macos.md). |

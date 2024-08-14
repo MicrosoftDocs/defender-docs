@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: yongrhee-MSFT
 ms.author: yongrhee
 ms.reviewer: pricci, yongrhee
-manager: dansimp
+manager: deniseb
 ms.custom: nextgen02
 ms.subservice: ngp
 ms.collection: 
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 05/02/2024
+ms.date: 05/29/2024
 ---
 
 # Protect Dev Drive using performance mode
@@ -32,8 +32,8 @@ ms.date: 05/02/2024
 
 - Windows 11
 
-> [!TIP]
-> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088), which helps you utilize essential tools and automated features such as attack surface reduction and next-generation protection. When signed in to the Microsoft 365 admin center, this guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
+[!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
+
 ## What is performance mode
 
 Performance mode is now available on Windows 11 as a new Microsoft Defender Antivirus capability. Performance mode reduces the performance impact of Microsoft Defender Antivirus scans for files stored on designated _Dev Drive_. The goal of performance mode is to improve functional performance for developers who use Windows 11 devices. 

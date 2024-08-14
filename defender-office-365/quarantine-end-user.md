@@ -20,7 +20,7 @@ ms.custom:
 description: Users can learn how to view and manage quarantined messages in Exchange Online Protection (EOP) that should have been delivered to them.
 ms.service: defender-office-365
 adobe-target: true
-ms.date: 5/7/2024
+ms.date: 05/21/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -68,6 +68,8 @@ You view and manage your quarantined messages in the Microsoft Defender portal o
 
 - By default, messages that were quarantined for high confidence phishing, malware, or by mail flow rules are only available to admins, and aren't visible to users. For more information, see [Manage quarantined messages and files as an admin in EOP](quarantine-admin-manage-messages-files.md).
 
+- For information about the order of precedence for user allows and blocks and organization allows and blocks, see [User and tenant settings conflict](how-policies-and-protections-are-combined.md#user-and-tenant-settings-conflict).
+
 - All actions taken by admins or users on quarantined messages are audited. For more information about audited quarantine events, see [Quarantine schema in the Office 365 Management API](/office/office-365-management-api/office-365-management-activity-api-schema#quarantine-schema).
 
 ## Manage quarantined messages in EOP
@@ -91,6 +93,11 @@ You can sort the entries by clicking on an available column header. Select :::im
 - **Policy type**<sup>\*</sup> (see the possible values in the :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** description.)
 - **Expires**<sup>\*</sup>
 - **Recipient**<sup>\*</sup>
+- **Sender address override reason**<sup>\*</sup>: One of the following values:
+  - **None**
+  - **Message sender is blocked by recipient settings**
+  - **Message sender is blocked by administrator settings**
+- **Released by**<sup>\*</sup>
 - **Message ID**
 - **Policy name**
 - **Message size**
@@ -102,31 +109,34 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Sender address**
 - **Recipient address**
 - **Subject**
-- **Time received**:
+- **Time received**: Select one of the following values:
   - **Last 24 hours**
-  - **Last 7 days**
+  - **Last 7 days** (default)
   - **Last 14 days**
   - **Last 30 days** (default)
   - **Custom**: Enter a **Start time** and **End time** (date).
-- **Expires**: Filter messages by when they expire from quarantine:
+- **Expires**: Filter messages by when they expire from quarantine. Select one of the following values:
   - **Today**
   - **Next 2 days**
   - **Next 7 days**
   - **Custom**: Enter a **Start time** and **End time** (date).
-- **Quarantine reason**:
+- **Quarantine reason**: Select one or more of the following values:
   - **Transport rule** (mail flow rule)
   - **Bulk**
   - **Spam**
   - **Malware**: Anti-malware policies in EOP or Safe Attachments policies in Defender for Office 365. The **Policy Type** value indicates which feature was used.
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
+- **Blocked sender**: One of the following values:
+  - **Don't show blocked senders** (default)
+  - **Show all senders**
 - **Release status**: Any of the following values:
   - **Needs review**
   - **Approved**
   - **Denied**
   - **Release requested**
   - **Released**
-- **Policy Type**: Filter messages by policy type:
+- **Policy Type**: Filter messages by what type of protection policy quarantined the message. Select one or more of the following values:
   - **Anti-malware policy**
   - **Safe Attachments policy**
   - **Anti-phishing policy**
@@ -148,7 +158,7 @@ Use the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="f
 After you've entered the search criteria, press the enter ENTER key to filter the results.
 
 > [!NOTE]
-> The **Search** box searches for quarantined items in the current view, not all quarantined items. To search all quarantined items, use **Filter** and the resulting **Filters** flyout.
+> The **Search** box searches for quarantined items in the current view, not all quarantined items. To search all quarantined items, use :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and the resulting **Filters** flyout.
 
 After you find a specific quarantined message, select the message to view details about it and to take action on it (for example, view, release, download, or delete the message).
 
@@ -171,16 +181,19 @@ In the details flyout that opens, the following information is available:
   - **Subject**
   - **Quarantine reason**: Shows if a message has been identified as **Spam**, **Bulk**, **Phish**, matched a mail flow rule (**Transport rule**), or was identified as containing **Malware**.
   - **Policy type**
-  - **Policy name**
   - **Recipient count**
   - **Recipients**: If the message contains multiple recipients, you might need to select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **Preview message** or :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: \> **View message header** to see the complete list of recipients.
+  - **Sender override reason**
+  - **Released by**:
+    - If the user released the message themselves, the user's email address is shown.
+    - If the message was released by an admin, the value **Admin** is shown.
 - **Email details** section:
   - **Sender address**
   - **Time received**
   - **Network message ID**
   - **Recipients**
 
-:::image type="content" source="media/quarantine-user-message-details.png" alt-text="The details flyout of a quarantined message" lightbox="media/quarantine-user-message-details.png":::
+:::image type="content" source="media/quarantine-user-message-details-released-by.png" alt-text="The details flyout of a quarantined message" lightbox="media/quarantine-user-message-details-released-by.png":::
 
 To take action on the message, see the next section.
 
@@ -255,8 +268,8 @@ If you don't release or remove a message, it's automatically deleted from quaran
 
 After you select the message, use either of the following methods to request its release:
 
-- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Request release**.
-- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-edit-icon.png" border="false"::: **Request release**.
+- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-request-release-icon.png" border="false"::: **Request release**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-request-release-icon.png" border="false"::: **Request release**.
 
 In the **Request release** flyout that opens, review the information, select **Request release**. In the **Release requested** flyout that opens, select **Done**.
 
@@ -308,9 +321,28 @@ Use :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false":
 
 Select the **Microsoft Message Header Analyzer** link to analyze the header fields and values in depth. Paste the message header into the **Insert the message header you would like to analyze** section (CTRL+V or right-click and choose **Paste**), and then select **Analyze headers**.
 
+#### Allow email senders from quarantine
+
+> [!TIP]
+> If the sender is already in your [Junk email filter lists](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089), **Allow sender** isn't available.
+
+The **Allow sender** action adds the message sender to the Safe Senders list in your mailbox. For more information about allowing senders, see [Add recipients of my email messages to the Safe Senders List](https://support.microsoft.com/office/be1baea0-beab-4a30-b968-9004332336ce).
+
+After you select the message, use either of the following methods to add the message sender to the Safe Senders list in your mailbox:
+
+- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Allow sender**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-allow-sender-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-block-sender-icon.png" border="false"::: **Allow sender**.
+
+The flyout that opens indicates when the sender was successfully added to your Safe Senders list. Select **Done**.
+
 #### Block email senders from quarantine
 
-The Block senders action adds the message sender to the Blocked Senders list in your mailbox. For more information about blocking senders, see [Block a mail sender](https://support.microsoft.com/office/b29fd867-cac9-40d8-aed1-659e06a706e4).
+> [!TIP]
+> **Block sender** is available only if an admin created a custom quarantine policy with the **Block sender** permission enabled, and assigned that quarantine policy to the protection feature policy that quarantined the message.
+>
+> If the sender is already in your [Safe Senders list](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089), **Block sender** isn't available. **[Remove sender from user block list](#remove-senders-from-your-blocked-senders-list-from-quarantine)** is available instead.
+
+The **Block sender** action adds the message sender to the Blocked Senders list in your mailbox. For more information about blocking senders, see [Block a mail sender](https://support.microsoft.com/office/b29fd867-cac9-40d8-aed1-659e06a706e4).
 
 After you select the message, use either of the following methods to add the message sender to the Blocked Senders list in your mailbox:
 
@@ -320,7 +352,18 @@ After you select the message, use either of the following methods to add the mes
 In the **Block sender** flyout that opens, review the information about the sender, and then select **Block**.
 
 > [!TIP]
-> The organization can still receive mail from the blocked sender. Messages from the sender are delivered to user Junk Email folders or to quarantine. To delete messages from the sender upon arrival, an admin can use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
+> The organization can still receive mail from the blocked sender. Messages from the sender are delivered to your Junk Email folder or to quarantine. To delete messages from the sender upon arrival, an admin can use [mail flow rules](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (also known as transport rules) to **Block the message**.
+
+#### Remove senders from your Blocked Senders list from quarantine
+
+The **Remove sender from user block list** is available only if the sender of the quarantined message is already in your [Block Senders list](https://support.microsoft.com/office/5ae3ea8e-cf41-4fa0-b02a-3b96e21de089).
+
+After you select the message, use either of the following methods to remove the sender from your Block Senders list:
+
+- **On the Email tab**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More** \> :::image type="icon" source="media/m365-cc-sc-remove-sender-icon.png" border="false"::: **Remove sender from user block list**.
+- **In the details flyout of the selected message**: Select :::image type="icon" source="media/m365-cc-sc-more-actions-icon.png" border="false"::: **More options** \> :::image type="icon" source="media/m365-cc-sc-remove-sender-icon.png" border="false"::: **Remove sender from user block list**.
+
+The flyout that opens indicates when the sender was successfully removed from your Blocked Senders list. Select **Done**.
 
 #### Take action on multiple quarantined email messages
 

@@ -4,9 +4,9 @@ description: Learn about the major changes for previous versions of Microsoft De
 ms.service: defender-endpoint
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.localizationpriority: medium
-ms.date: 05/07/2024
+ms.date: 06/21/2024
 audience: ITPro
 ms.collection:
 - m365-security
@@ -52,6 +52,31 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 ### Behavior Monitoring for macOS is now in public preview
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
+
+### Jun-2024 (Build: 101.24052.0013  | Release version: 20.124052.13.0)
+
+| Build:             | **101.24052.0013**    |
+|--------------------|-----------------------|
+| Release version:   | **20.124052.13.0**    |
+| Engine version:    | **1.1.24040.2**       |
+| Signature version: | **1.411.153.0**       |
+
+##### What's new
+
+- [[device control](mac-device-control-overview.md)] Secure Digital cards are not recognized on newer macOS
+- Bug and performance fixes
+
+### May-2024 (Build: 101.24042.0008  | Release version: 20.124042.8.0)
+
+| Build:             | **101.24042.0008**   |
+|--------------------|----------------------|
+| Release version:   | **20.124042.8.0**    |
+| Engine version:    | **1.1.24040.1**      |
+| Signature version: | **1.413.13.0**       |
+
+#### What's new
+
+- Bug and performance fixes
 
 ### Apr-2024 (Build: 101.24032.0006  | Release version: 20.124032.06.0)
 
@@ -262,31 +287,6 @@ Network protection for macOS is now available for all Mac devices onboarded to D
 &ensp;Engine version: **1.1.19900.2**<br/>
 &ensp;Signature version: **1.381.2029.0**<br/>
 
-&ensp;Build: **101.96.85**<br/>
-&ensp;Release version: **20.122112.19413.0**<br/>
-&ensp;Engine version: **1.1.19900.2**<br/>
-&ensp;Signature version: **1.381.2029.0**<br/>
-
-&ensp;Build: **101.96.85**<br/>
-&ensp;Release version: **20.122112.19413.0**<br/>
-&ensp;Engine version: **1.1.19900.2**<br/>
-&ensp;Signature version: **1.381.2029.0**<br/>
-
-&ensp;Build: **101.96.85**<br/>
-&ensp;Release version: **20.122112.19413.0**<br/>
-&ensp;Engine version: **1.1.19900.2**<br/>
-&ensp;Signature version: **1.381.2029.0**<br/>
-
-&ensp;Build: **101.96.85**<br/>
-&ensp;Release version: **20.122112.19413.0**<br/>
-&ensp;Engine version: **1.1.19900.2**<br/>
-&ensp;Signature version: **1.381.2029.0**<br/>
-
-&ensp;Build: **101.96.85**<br/>
-&ensp;Release version: **20.122112.19413.0**<br/>
-&ensp;Engine version: **1.1.19900.2**<br/>
-&ensp;Signature version: **1.381.2029.0**<br/>
-
 **What's new**
 
 - Bug and performance fixes
@@ -304,6 +304,14 @@ Network protection for macOS is now available for all Mac devices onboarded to D
 - Adding exclusions from command line now requires admin privileges
 - Decrease sysextd noise from Tamper Protection in Advanced Hunting
 - Bug and performance fixes
+
+### Jan-2023
+
+**What's new**
+
+- **(GA) Live Response available for macOS**
+
+Live Response for macOS is now available for all Mac devices onboarded to Defender for Endpoint. Devices must meet the minimum requirements. To learn more, see  [Investigate entities on devices using live response](/defender-endpoint/live-response) 
 
 ### Nov-2022 (Build: 101.87.30 | Release version: 20.122082.18681.0)
 
@@ -997,10 +1005,5 @@ Network protection for macOS is now available for all Mac devices onboarded to D
 > - For managed deployments, see the updated instructions in the [JAMF-based deployment](mac-install-with-jamf.md) and [Microsoft Intune-based deployment](mac-install-with-intune.md#create-system-configuration-profiles) topics.
 
 - Performance improvements & bug fixes
-
-
-
-
-
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

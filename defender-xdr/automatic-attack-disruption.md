@@ -18,7 +18,7 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 02/21/2024
+ms.date: 05/29/2024
 ---
 
 # Automatic attack disruption in Microsoft Defender XDR
@@ -71,7 +71,7 @@ Automatic attack disruption uses Microsoft-based XDR response actions. Examples 
 
 For more information, see [remediation actions](m365d-remediation-actions.md) in Microsoft Defender XDR.
 
-### Automated response actions for SAP with Microsoft Sentinel (Preview)
+### Automated response actions for SAP with Microsoft Sentinel
 
 If you're using the [unified security operations platform](microsoft-sentinel-onboard.md) and you deployed the Microsoft Sentinel solution for SAP applications, you can also deploy automatic attack disruption for SAP.
 

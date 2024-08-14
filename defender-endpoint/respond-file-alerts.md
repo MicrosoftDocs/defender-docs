@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 08/07/2023
+ms.date: 06/26/2024
 ---
 
 # Take response actions on a file
@@ -48,7 +48,7 @@ Response actions run along the top of the file page, and include:
 > [!NOTE]
 > If you're using Defender for Endpoint Plan 1, you can take certain response actions manually. For more information, see [Manual response actions](defender-endpoint-plan-1.md#manual-response-actions).
 
-You can also submit files for deep analysis, to run the file in a secure cloud sandbox. When the analysis is complete, you'll get a detailed report that provides information about the behavior of the file. You can submit files for deep analysis and read past reports by selecting the **Deep analysis** action.
+You can also submit files for deep analysis, to run the file in a secure cloud sandbox. When the analysis is complete, you get a detailed report that provides information about the behavior of the file. You can submit files for deep analysis and read past reports by selecting the **Deep analysis** action.
 
 Some actions require certain permissions. The following table describes what action certain permissions can take on portable executable (PE) and non-PE files:
 
@@ -60,6 +60,9 @@ Some actions require certain permissions. The following table describes what act
 |Live response advanced|&#x2611;|&#x2611;|
 
 For more information on roles, see [Create and manage roles for role-based access control](user-roles.md).
+
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Stop and quarantine files in your network
 
@@ -74,7 +77,7 @@ You can contain an attack in your organization by stopping the malicious process
 
 The **Stop and Quarantine File** action includes stopping running processes, quarantining the files, and deleting persistent data such as registry keys.
 
-This action takes effect on devices with Windows 10, version 1703 or later, and Windows 11 and Server 2012 R2+, where the file was observed in the last 30 days.
+This action takes effect on devices with Windows 10, version 1703 or later, and Windows 11 and Windows Server 2012 R2 or later, where the file was observed in the last 30 days.
 
 > [!NOTE]
 > You'll be able to restore the file from quarantine at any time.
@@ -102,7 +105,7 @@ This action takes effect on devices with Windows 10, version 1703 or later, and 
    :::image type="content" source="media/atp-stopnquarantine-file.png" alt-text="The stop and quarantine file action center" lightbox="media/atp-stopnquarantine-file.png":::
 
    - **Submission time** - Shows when the action was submitted.
-   - **Success** - Shows the number of devices where the file has been stopped and quarantined.
+   - **Success** - Shows the number of devices where the file was stopped and quarantined.
    - **Failed** - Shows the number of devices where the action failed and details about the failure.
    - **Pending** - Shows the number of devices where the file is yet to be stopped and quarantined from. This can take time for cases when the device is offline or not connected to the network.
 
@@ -144,15 +147,15 @@ You can roll back and remove a file from quarantine if you've determined that it
 
 ## Download or collect file
 
-Selecting **Download file** from the response actions allows you to download a local, password-protected .zip archive containing your file. A flyout will appear where you can record a reason for downloading the file, and set a password.
+Selecting **Download file** from the response actions allows you to download a local, password-protected .zip archive containing your file. A flyout appears where you can record a reason for downloading the file, and set a password.
 
 By default, you should be able to download files that are in quarantine.
 
 The **Download file** button can have the following states:
 
-- **Active** - You'll be able to collect the file. 
+- **Active** - You are able to collect the file. 
 
-- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you may not have appropriate RBAC permissions to collect files.
+- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files.
 
   The following permissions are required:
 
@@ -174,17 +177,17 @@ The **Download file** button can have the following states:
 
 ### Download quarantined files
 
-Files that have been quarantined by Microsoft Defender Antivirus or your security team will be saved in a compliant way according to your [sample submission configurations](enable-cloud-protection-microsoft-defender-antivirus.md). Your security team can download the files directly from the file's detail page via the "Download file" button. **This feature is turned 'On' by default**.
+Files that were quarantined by Microsoft Defender Antivirus or your security team are saved in a compliant way according to your [sample submission configurations](enable-cloud-protection-microsoft-defender-antivirus.md). Your security team can download the files directly from the file's detail page via the "Download file" button. **This feature is turned 'On' by default**.
 
-The location depends on your organization's geo settings (either EU, UK, or US). A quarantined file will only be collected once per organization. Learn more about Microsoft's data protection from the Service Trust Portal at https://aka.ms/STP.
+The location depends on your organization's geo settings (either EU, UK, or US). A quarantined file is collected only once per organization. Learn more about Microsoft's data protection from the Service Trust Portal at https://aka.ms/STP.
 
 Having this setting turned on can help security teams examine potentially bad files and investigate incidents quickly and in a less risky way. However, if you need to turn off this setting, go to **Settings** \> **Endpoints** \> **Advanced features** \> **Download quarantined files** to adjust the setting. [Learn more about advanced features](advanced-features.md)
 
 #### Backing up quarantined files
 
-Users may be prompted to provide explicit consent before backing up the quarantined file, depending on your [sample submission configuration](enable-cloud-protection-microsoft-defender-antivirus.md#use-group-policy-to-turn-on-cloud-protection).
+Users might be prompted to provide explicit consent before backing up the quarantined file, depending on your [sample submission configuration](enable-cloud-protection-microsoft-defender-antivirus.md#use-group-policy-to-turn-on-cloud-protection).
 
-This feature won't work if sample submission is turned off. If automatic sample submission is set to request permission from the user, only samples that the user agrees to send will be collected.
+This feature doesn't work if sample submission is turned off. If automatic sample submission is set to request permission from the user, only samples that the user agrees to send are collected.
 
 > [!IMPORTANT]
 > Download quarantined file requirements:
@@ -197,13 +200,13 @@ This feature won't work if sample submission is turned off. If automatic sample 
 
 ### Collect files
 
-If a file isn't already stored by Microsoft Defender for Endpoint, you can't download it. Instead, you'll see a **Collect file** button in the same location.
+If a file isn't already stored by Microsoft Defender for Endpoint, you can't download it. Instead, you see a **Collect file** button in the same location.
 
 The **Collect file** button can have the following states:
 
-- **Active** - You'll be able to collect the file. 
+- **Active** - You are able to collect the file. 
 
-- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you may not have appropriate RBAC permissions to collect files. 
+- **Disabled** - If the button is grayed out or disabled during an active collection attempt, you might not have appropriate RBAC permissions to collect files. 
 
 
     The following permissions are required: 
@@ -215,15 +218,14 @@ The **Collect file** button can have the following states:
     - Global admin or Advanced live response
 
 
-If a file hasn't been seen in the organization in the past 30 days, **Collect file** will be disabled. 
-
+If a file hasn't been seen in the organization in the past 30 days, **Collect file** is disabled. 
 
 > [!Important]
 > A file that was quarantined as a potential network threat might not be recoverable. If a user attempts to restore the file after quarantine, that file might not be accessible. This can be due to the system no longer having network credentials to access the file. Typically, this is a result of a temporary log on to a system or shared folder and the access tokens expired.
 
 ## Add indicator to block or allow a file
 
-Prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. This operation will prevent it from being read, written, or executed on devices in your organization.
+Prevent further propagation of an attack in your organization by banning potentially malicious files or suspected malware. If you know a potentially malicious portable executable (PE) file, you can block it. This operation prevents it from being read, written, or executed on devices in your organization.
 
 > [!IMPORTANT]
 >
@@ -247,11 +249,11 @@ To start blocking files, you first need to [turn the **Block or allow** feature 
 
 When you add an indicator hash for a file, you can choose to raise an alert and block the file whenever a device in your organization attempts to run it.
 
-Files automatically blocked by an indicator won't show up in the file's Action center, but the alerts will still be visible in the Alerts queue.
+Files automatically blocked by an indicator don't show up in the file's Action center, but the alerts are still visible in the Alerts queue.
 
 See [manage indicators](manage-indicators.md) for more details on blocking and raising alerts on files.
 
-To stop blocking a file, remove the indicator. You can do so via the **Edit Indicator** action on the file's profile page. This action will be visible in the same position as the **Add Indicator** action, before you added the indicator.
+To stop blocking a file, remove the indicator. You can do so via the **Edit Indicator** action on the file's profile page. This action is visible in the same position as the **Add Indicator** action, before you added the indicator.
 
 You can also edit indicators from  the **Settings** page, under **Rules** \> **Indicators**. Indicators are listed in this area by their file's hash.
 
@@ -275,11 +277,11 @@ Cyber security investigations are typically triggered by an alert. Alerts are re
 The Deep analysis feature executes a file in a secure, fully instrumented cloud environment. Deep analysis results show the file's activities, observed behaviors, and associated artifacts, such as dropped files, registry modifications, and communication with IPs.
 Deep analysis currently supports extensive analysis of portable executable (PE) files (including _.exe_ and _.dll_ files).
 
-Deep analysis of a file takes several minutes. Once the file analysis is complete, the Deep Analysis tab will update to display a summary and the date and time of the latest available results.
+Deep analysis of a file takes several minutes. Once the file analysis is complete, the Deep Analysis tab updates to display a summary and the date and time of the latest available results.
 
-The deep analysis summary includes a list of observed *behaviors*, some of which can indicate malicious activity, and *observables*, including contacted IPs and files created on the disk. If nothing was found, these sections will display a brief message.
+The deep analysis summary includes a list of observed *behaviors*, some of which can indicate malicious activity, and *observables*, including contacted IPs and files created on the disk. If nothing was found, these sections display a brief message.
 
-Results of deep analysis are matched against threat intelligence and any matches will generate appropriate alerts.
+Results of deep analysis are matched against threat intelligence and any matches generate appropriate alerts.
 
 Use the deep analysis feature to investigate the details of any file, usually during an investigation of an alert or for any other reason where you suspect malicious behavior. This feature is available at the top of the file's page. Select the three dots to access the **Deep analysis** action.
 
@@ -330,7 +332,7 @@ You can view the comprehensive report that provides details on the following sec
 The details provided can help you investigate if there are indications of a potential attack.
 
 1. Select the file you submitted for deep analysis.
-2. Select the **Deep analysis** tab. If there are any previous reports, the report summary will appear in this tab.
+2. Select the **Deep analysis** tab. If there are any previous reports, the report summary appears in this tab.
 
    :::image type="content" source="media/analysis-results-nothing500.png" alt-text="The deep analysis report showing detailed information across a number of categories" lightbox="media/analysis-results-nothing500.png":::
 
@@ -359,9 +361,10 @@ If you come across a problem when trying to submit a file, try each of the follo
 
 6. If these steps don't resolve the issue, contact support.
 
-## Related topics
+## Related articles
 
 - [Take response actions on a device](respond-machine-alerts.md)
 - [Investigate files](investigate-files.md)
 - [Manual response actions in Microsoft Defender for Endpoint Plan 1](defender-endpoint-plan-1.md#manual-response-actions)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

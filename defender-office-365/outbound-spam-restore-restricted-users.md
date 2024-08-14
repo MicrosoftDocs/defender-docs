@@ -61,13 +61,16 @@ For more information about compromised _connectors_ and how to remove them from 
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Remove user accounts from the Restricted entities page_: Membership in the **Organization Management** or **Security Administrator** role groups.
     - _Read-only access to the Restricted entities page_: Membership in the **Global Reader**, **Security Reader**, or **View-Only Organization Management** role groups.
-  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+  - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in the **Global Administrator**<sup>\*</sup>, **Security Administrator**, **Global Reader**, or **Security Reader** roles gives users the required permissions _and_ permissions for other features in Microsoft 365.
+
+    > [!IMPORTANT]
+    > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 - A sender exceeding the outbound email limits is an indicator of a compromised account. Before you follow the procedures in this article to remove a user from the **Restricted entities** page, be sure to follow the required steps to regain control of the account as described in [Responding to a compromised email account in Office 365](responding-to-a-compromised-email-account.md).
 
 ## Remove a user from the Restricted entities page in the Microsoft Defender portal
 
-In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Restricted entities**. Or, to go directly to the **Restricted entities** page, use <https://security.microsoft.com/restrictedentities>.
+1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Review** \> **Restricted entities**. Or, to go directly to the **Restricted entities** page, use <https://security.microsoft.com/restrictedentities>.
 
 2. On the **Restricted entities** page, identify the user account to unblock. The **Entity** value is **Mailbox**.
 
@@ -113,14 +116,14 @@ The default alert policy named **User restricted from sending email** automatica
 
      - On the **Decide if you want to notify people when this alert is triggered** page of the wizard that opens, verify or change the following settings:
        - Verify **Opt-in for email notifications** is selected.
-       - **Email recipients**: The default value is **TenantAdmins** (meaning, **Global Administrator** members). To add more recipients, click in the empty area of the box. A list of recipients appears, and you can start typing a name to filter and select a recipient. Remove an existing recipient from the box by selecting :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to their name.
+       - **Email recipients**: The default value is **TenantAdmins** group (**Global Administrator** members). To add more recipients, click in the empty area of the box. A list of recipients appears, and you can start typing a name to filter and select a recipient. Remove an existing recipient from the box by selecting :::image type="icon" source="media/m365-cc-sc-remove-selection-icon.png" border="false"::: next to their name.
        - **Daily notification limit**: The default value is **No limit**.
 
        When you're finished on the **Decide if you want to notify people when this alert is triggered** page, select **Next**.
 
      - On the **Review your settings** page, select **Submit**, and then select **Done**.
 
-4. Back in the ***User restricted from sending email** flyout, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: at the top of the flyout.
+4. Back in the **User restricted from sending email** flyout, select :::image type="icon" source="media/m365-cc-sc-close-icon.png" border="false"::: at the top of the flyout.
 
 ## Use Exchange Online PowerShell to view and remove users from the Restricted entities page
 

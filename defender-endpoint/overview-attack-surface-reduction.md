@@ -1,6 +1,6 @@
 ---
 title: Understand and use attack surface reduction
-ms.reviewer: niwelton
+ms.reviewer: niwelton, joshbregman
 description: Learn about the attack surface reduction capabilities of Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
 author: siosulli
@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 03/20/2024
+ms.date: 06/04/2024
 search.appverid: met150
 ---
 
@@ -58,7 +58,7 @@ To configure attack surface reduction in your environment, follow these steps:
 
 4. [Enable controlled folder access](enable-controlled-folders.md).
 
-5. Enable [removable storage protection](device-control-overview.md).
+5. Enable [device control](device-control-overview.md).
 
 6. [Turn on network protection](enable-network-protection.md).
 
@@ -146,11 +146,11 @@ You can also manually navigate to the event area that corresponds to the feature
 
 2. Type **event viewer** in the Start menu and open **Event Viewer**.
 
-3. Select **Action** \> **Import Custom View...**
+1. Select **Action** > **Import Custom View...**
 
-   > [!div class="mx-imgBorder"]
+      > [!div class="mx-imgBorder"]
    > ![Animation highlighting Import custom view on the left of the Even viewer window.](media/events-import.gif)
-
+   
 4. Navigate to where you extracted the XML file for the custom view you want and select it.
 
 5. Select **Open**.
@@ -161,11 +161,11 @@ You can also manually navigate to the event area that corresponds to the feature
 
 1. Type **event viewer** in the Start menu and open the Windows **Event Viewer**.
 
-2. On the left panel, under **Actions**, select **Create Custom View...**
+1. On the left panel, under **Actions**, select **Create Custom View...**
 
-   > [!div class="mx-imgBorder"]
-   > ![Animation highlighting the create custom view option on the Event viewer window.](media/events-create.gif)
-
+      > [!div class="mx-imgBorder"]
+   > ![Animation highlighting the create custom view option on the Event viewer window.](media/events-import.gif)
+   
 3. Go to the XML tab and select **Edit query manually**. You see a warning that you can't edit the query using the **Filter** tab if you use the XML option. Select **Yes**.
 
 4. Paste the XML code for the feature you want to filter events from into the XML section.
@@ -235,11 +235,11 @@ You can access these events in Windows Event viewer:
 
 2. Expand **Applications and Services Logs > Microsoft > Windows** and then go to the folder listed under **Provider/source** in the table below.
 
-3. Double-click on the sub item to see events. Scroll through the events to find the one you're looking.
+1. Double-click on the sub item to see events. Scroll through the events to find the one you're looking.
 
-   ![Animation showing using Event Viewer.](media/event-viewer.gif)
-
-
+   ![Animation showing using Event Viewer.](media/events-import.gif)
+   
+   
 |Feature|Provider/source|Event ID|Description|
 |---|---|:---:|---|
 |Exploit protection|Security-Mitigations (Kernel Mode/User Mode)|1|ACG audit|

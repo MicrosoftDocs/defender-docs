@@ -2,7 +2,7 @@
 title: The Teams Message Entity Panel in Microsoft Defender for Office 365
 author: chrisda
 ms.author: chrisda
-manager: dansimp
+manager: deniseb
 audience: Admin
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -34,10 +34,13 @@ This article explains the information and actions on the Teams message entity pa
 
 To use the Email entity page, you need to be assigned permissions. You have the following options:
 
-- [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Global Administrator**, **Security Administrator**, or **Quarantine Administrator** role groups.
+- [Email & collaboration permissions in the Microsoft Defender portal](mdo-portal-permissions.md): Membership in the **Organization Management**, **Security Administrator**, or **Quarantine Administrator** role groups.
 - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
-  - _Full access_: Membership in the **Global Administrator** or **Security Administrator** roles.
+  - _Full access_: Membership in the **Global Administrator**<sup>\*</sup> or **Security Administrator** roles.
   - _Read-only access_: Membership in the **Global Reader** or **Security Reader** roles.
+
+  > [!IMPORTANT]
+  > <sup>\*</sup> Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Where to find the Teams message entity panel
 

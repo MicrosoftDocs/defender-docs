@@ -38,6 +38,30 @@
       "build_entry_point": "docs"
     },
     {
+      "docset_name": "defender-for-cloud",
+      "build_source_folder": "defender-for-cloud",
+      "build_output_subfolder": "defender-for-cloud",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    },
+    {
+      "docset_name": "defender-for-iot",
+      "build_source_folder": "defender-for-iot",
+      "build_output_subfolder": "defender-for-iot",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    },
+    {
       "docset_name": "defender-office-365",
       "build_source_folder": "defender-office-365",
       "build_output_subfolder": "defender-office-365",
@@ -115,6 +139,5 @@
   "redirection_files": [
     ".openpublishing.redirection.defender.json",
     ".openpublishing.redirection.endpoint.json"
-  
   ]
 }

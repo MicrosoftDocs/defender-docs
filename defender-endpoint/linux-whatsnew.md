@@ -6,13 +6,14 @@ ms.author: dansimp
 author: dansimp
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 05/16/2024
-manager: dansimp
+ms.date: 06/05/2024
+manager: deniseb
 audience: ITPro
 ms.collection:
 - m365-security
 - tier3
 - mde-linux
+ms.custom: partner-contribution
 ms.topic: reference
 ms.subservice: linux
 search.appverid: met150
@@ -32,6 +33,74 @@ This article is updated frequently to let you know what's new in the latest rele
 - [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 
+<details>
+<summary> July-2024 (Build: 101.24062.0001 | Release version: 30.124062.0001.0)</summary>
+
+## July-2024 Build: 101.24062.0001 | Release version: 30.124062.0001.0
+
+&ensp;Released: **July 31, 2024**<br/>
+&ensp;Published: **July 31, 2024**<br/>
+&ensp;Build: **101.24062.0001**<br/>
+&ensp;Release version: **30.124062.0001.0**<br/>
+&ensp;Engine version: **1.1.24050.7**<br/>
+&ensp;Signature version: **1.411.410.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release.
+
+- Fixes bug in which infected command-line threat information was not showing correctly in security portal.
+- Fixes a bug where disabling a preview feature required a Defender of Endpoint to disable it.
+- Global Exclusions feature using managed JSON is now in Public Preview. available in insiders slow from 101.23092.0012. For more information, see [linux-exclusions](linux-exclusions.md).
+- Updated the Linux default engine version to 1.1.24050.7 and default sigs Version to 1.411.410.0.
+- Stability and performance improvements.
+- Other bug fixes.
+
+</details>
+
+<details>
+<summary> June-2024 (Build: 101.24052.0002 | Release version: 30.24052.0002.0)</summary>
+
+## June-2024 Build: 101.24052.0002 | Release version: 30.124052.0002.0
+
+&ensp;Released: **June 24, 2024**<br/>
+&ensp;Published: **June 24, 2024**<br/>
+&ensp;Build: **101.24052.0002**<br/>
+&ensp;Release version: **30.24052.0002.0**<br/>
+&ensp;Engine version: **1.1.24040.2**<br/>
+&ensp;Signature version: **1.411.153.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release.
+
+- This release fixes a bug related to high memory usage eventually leading to high CPU due to eBPF memory leak in kernel space resulting in servers going into unusable states. This only impacted the kernel versions 3.10x and <= 4.16x, majorly on RHEL/CentOS distros. Please update to the latest MDE version to avoid any impact.
+- We have now simplified the output of `mdatp health --detail features`
+- Stability and performance improvements.
+- Other bug fixes.
+
+</details>
+<details>
+<summary> May-2024 (Build: 101.24042.0002 | Release version: 30.24042.0002.0)</summary>
+
+## May-2024 Build: 101.24042.0002 | Release version: 30.124042.0002.0
+
+&ensp;Released: **May 29, 2024**<br/>
+&ensp;Published: **May 29, 2024**<br/>
+&ensp;Build: **101.24042.0002**<br/>
+&ensp;Release version: **30.24042.0002.0**<br/>
+&ensp;Engine version: **1.1.24030.4**<br/>
+&ensp;Signature version: **1.407.521.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release:
+
+- In version 24032.0007, there was a known issue where the enrollment of devices to MDE Security Management failed when using the "Device Tagging" mechanism via the mdatp_managed.json file. This issue has been resolved in the current release.
+- Stability and performance improvements.
+- Other bug fixes.
+
+</details>
 <details>
 <summary> May-2024 (Build: 101.24032.0007 | Release version: 30.124032.0007.0)</summary>
 
@@ -64,6 +133,15 @@ There are multiple fixes and new changes in this release:
 - Bug fix to enhance behavioral detections.
 - Stability and performance improvements.
 - Other bug fixes.
+
+**Known Issues**
+
+- There's a known issue where enrolling devices to MDE Security Management via "Device Tagging" mechanism using mdatp_managed.json is failing in 24032.0007. To mitigate this issue, use the following mdatp CLI command to tag devices:
+
+   ```bash
+   sudo mdatp edr tag set --name GROUP --value MDE-Management
+   ```
+    **The issue has been fixed in Build: 101.24042.0002**
 
 </details>
 

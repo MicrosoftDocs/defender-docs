@@ -30,8 +30,6 @@ appliesto:
 
 With [Microsoft Defender for Office 365](mdo-about.md), you get [detailed information about automated investigations](air-view-investigation-results.md). However, some organizations also use a custom or third-party reporting solution. If your organization wants to integrate information about [automated investigations](air-about.md) with such a solution, you can use the Office 365 Management Activity API.
 
-With [Microsoft Defender for Office 365](mdo-about.md), you get [detailed information about automated investigations](air-view-investigation-results.md). However, some organizations also use a custom or third-party reporting solution. If your organization wants to integrate information about automated investigations with such a solution, you can use the Office 365 Management Activity API.
-
 |Resource|Description|
 |:---|:---|
 |[Office 365 Management APIs overview](/office/office-365-management-api/office-365-management-apis-overview)|The Office 365 Management Activity API provides information about various user, admin, system, and policy actions and events from Microsoft 365 and Microsoft Entra activity logs.|

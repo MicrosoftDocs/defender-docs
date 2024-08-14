@@ -2,7 +2,6 @@
 title: How Microsoft names threat actors
 ms.reviewer: 
 description: Learn how Microsoft names threat actors and how to use the naming convention to identify associated intelligence.
-keywords: security, threat actor, security intelligence, naming convention, taxonomy, weather, threat actor naming, motivation, attribution, nation-state, financially motivated, private sector offensive actor, influence operations, groups in development, DEV-, nation state
 ms.service: defender-xdr
 ms.mktglfcycl: secure
 ms.sitesec: library
@@ -16,7 +15,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/29/2024
+ms.date: 06/12/2024
 ---
 
 # How Microsoft names threat actors
@@ -85,12 +84,14 @@ Use the following reference table to understand how our previously publicly disc
 |Lemon Sandstorm|RUBIDIUM|Iran|Fox Kitten, UNC757, PioneerKitten|
 |Leopard Typhoon|LEAD|China|KAOS, Mana, Winnti, Red Diablo|
 |Lilac Typhoon|DEV-0234|China||
+|Luna Tempest|Storm-0744|Financially motivated||
 |Manatee Tempest|DEV-0243|Financially motivated|EvilCorp, UNC2165, Indrik Spider|
 |Mango Sandstorm|MERCURY|Iran|MuddyWater, SeedWorm, Static Kitten, TEMP.Zagros|
 |Marbled Dust|SILICON|Türkiye|Sea Turtle|
 |Marigold Sandstorm|DEV-0500|Iran|Moses Staff|
 |Midnight Blizzard|NOBELIUM|Russia|APT29, Cozy Bear|
 |Mint Sandstorm|PHOSPHORUS|Iran|APT35, Charming Kitten|
+|Moonstone Sleet|Storm-1789|North Korea||
 |Mulberry Typhoon|MANGANESE|China|APT5, Keyhole Panda, TABCTENG|
 |Mustard Tempest|DEV-0206|Financially motivated|Purple Vallhund|
 |Night Tsunami|DEV-0336|Private sector offensive actor|NSO Group|
@@ -106,6 +107,7 @@ Use the following reference table to understand how our previously publicly disc
 |Pistachio Tempest|DEV-0237|Financially motivated|FIN12|
 |Plaid Rain|POLONIUM|Lebanon||
 |Pumpkin Sandstorm|DEV-0146|Iran|ZeroCleare|
+|Purple Typhoon|POTASSIUM|China|APT10, Cloudhopper, MenuPass|
 |Raspberry Typhoon|RADIUM|China|APT30, LotusBlossom|
 |Ruby Sleet|CERIUM|North Korea||
 |Salmon Typhoon|SODIUM|China|APT4, Maverick Panda|
@@ -124,7 +126,7 @@ Use the following reference table to understand how our previously publicly disc
 |Storm-0324||Financially motivated|TA543, Sagrid|
 |Storm-0381||Financially motivated||
 |Storm-0530||North Korea|H0lyGh0st|
-|Storm-0539||Financially motivated||
+|Storm-0539||Financially motivated|Atlas Lion|
 |Storm-0558||China||
 |Storm-0569||Financially motivated||
 |Storm-0587||Russia|SaintBot, Saint Bear, TA471|
@@ -155,6 +157,9 @@ Use the following reference table to understand how our previously publicly disc
 |Storm-1567||Financially motivated|Akira|
 |Storm-1575||Group in development|Dadsec|
 |Storm-1674||Financially motivated||
+|Storm-1679||Russia, Influence operations||
+|Storm-1811||Financially motivated||
+|Storm-1849||China|UAT4356|
 |Strawberry Tempest||Financially motivated|LAPSUS$|
 |Sunglow Blizzard||Russia||
 |Tomato Tempest|SPURR|Financially motivated|Vatet|
@@ -190,4 +195,4 @@ GetThreatActorAlias("ZINC")
 The following files containing the comprehensive mapping of old threat actor names with their new names are also available:
 
 - [JSON format](https://github.com/microsoft/mstic/blob/master/PublicFeeds/ThreatActorNaming/MicrosoftMapping.json)
-- [downloadable Excel](https://download.microsoft.com/download/4/5/2/45208247-c1e9-432d-a9a2-1554d81074d9/microsoft-threat-actor-list.xlsx)
+- [downloadable Excel](https://download.microsoft.com/download/4/5/2/45208247-c1e9-432d-a9a2-1554d81074d9/Microsoft-threat-actor-list.xlsx)

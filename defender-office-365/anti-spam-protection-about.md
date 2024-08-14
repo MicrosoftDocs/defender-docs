@@ -43,7 +43,7 @@ EOP uses the following spam filtering verdicts to classify messages:
 - **High confidence spam**: The message received an SCL of 7, 8, or 9.
 - **Phishing**
 - **High confidence phishing**: As part of [secure by default](secure-by-default.md), messages that are identified as high confidence phishing are always quarantined, and users can't release their own quarantined high confidence phishing messages, regardless of any available settings that admins configure.
-- **Bulk**: The message source met or exceeded the configured [bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md). threshold.
+- **Bulk**: The message source met or exceeded the configured [bulk complaint level (BCL)](anti-spam-bulk-complaint-level-bcl-about.md) threshold.
 
 For more information about anti-spam protection, see the [Anti-spam protection FAQ](anti-spam-protection-faq.yml)
 
@@ -121,7 +121,7 @@ For complete information about ASF settings, see [Advanced Spam Filter (ASF) set
 The other settings that are available in this category are:
 
 - **Contains specific languages**: Messages in the specified languages are automatically identified as spam.
-- **From these countries***: Messages from the specified countries are automatically identified as spam.
+- **From these countries**: Messages from the specified countries are automatically identified as spam.
 
 These settings aren't configured in the default anti-spam policy by default, or in the Standard or Strict [preset security policies](preset-security-policies.md).
 

@@ -50,7 +50,7 @@ landingContent:
       - linkListType: get-started
         links:
         - text: Evaluate Microsoft Defender for Endpoint
-          url: evaluation-lab.md
+          url: evaluate-microsoft-defender-antivirus.md
         - text: Plan your deployment
           url: deployment-strategy.md
       - linkListType: deploy

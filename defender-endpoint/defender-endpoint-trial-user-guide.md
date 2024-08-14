@@ -7,7 +7,7 @@ ms.author: siosulli
 manager: deniseb 
 audience: ITPro
 ms.topic: how-to
-ms.date: 07/07/2022
+ms.date: 06/25/2024
 ms.collection: 
 - m365-security
 - tier2
@@ -22,7 +22,7 @@ f1.keywords: NOCSH
 
 Welcome to the Microsoft Defender for Endpoint Plan 2 trial user guide!
 
-This playbook is a simple guide to help you make the most of your free trial. Using the suggested steps in this article from the Microsoft Defender team, you'll learn how Defender for Endpoint can help you to prevent, detect, investigate, and respond to advanced threats.
+This playbook is a simple guide to help you make the most of your free trial. Using the suggested steps in this article from the Microsoft Defender team, you learn how Defender for Endpoint can help you to prevent, detect, investigate, and respond to advanced threats.
 
 ## What is Defender for Endpoint?
 
@@ -63,8 +63,7 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 3. [Visit the Microsoft Defender portal](#step-3-visit-the-microsoft-365-defender-portal).
 4. [Onboard endpoints using any of the supported management tools](#step-4-onboard-endpoints-using-any-of-the-supported-management-tools).
 5. [Configure capabilities](#step-5-configure-capabilities).
-6. [Experience Microsoft Defender for Endpoint through simulated attacks](#step-6-experience-microsoft-defender-for-endpoint-through-simulated-attacks).
-7. [Set up the Microsoft Defender for Endpoint evaluation lab](#step-7-set-up-the-microsoft-defender-for-endpoint-evaluation-lab).
+6. [Set up the Microsoft Defender for Endpoint evaluation lab](#step-6-set-up-the-microsoft-defender-for-endpoint-evaluation-lab).
 
 ## Step 1: Confirm your license state
 
@@ -74,17 +73,17 @@ To make sure your Defender for Endpoint subscription is properly provisioned, yo
 
 ## Step 2: Set up role-based access control and grant permissions to your security team
 
-Microsoft recommends using the concept of least privileges. Defender for Endpoint uses built-in roles within Microsoft Entra ID. [Review the different roles that are available](/azure/active-directory/roles/permissions-reference) and choose appropriate roles for your security team. Some roles may need to be applied temporarily and removed after the trial has been completed.
+Microsoft recommends using the concept of least privileges. Defender for Endpoint uses built-in roles within Microsoft Entra ID. [Review the different roles that are available](/azure/active-directory/roles/permissions-reference) and choose appropriate roles for your security team. Some roles might need to be applied temporarily and removed after the trial is finished.
 
 Use [Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure) to manage your roles to provide extra auditing, control, and access review for users with directory permissions.
 
 Defender for Endpoint supports two ways to manage permissions:
 
-- Basic permissions management: Set permissions to either full access or read-only. Users with Global Administrator or Security Administrator roles in Microsoft Entra ID have full access. The Security reader role has read-only access and doesn't grant access to view machines/device inventory.
+- Basic permissions management: Set permissions to either full access or read-only. Users who have either the Global Administrator or Security Administrator role in Microsoft Entra ID have full access. The Security Reader role has read-only access and doesn't grant access to view machines/device inventory.
 - Role-based access control (RBAC): Set granular permissions by defining roles, assigning Microsoft Entra user groups to the roles, and granting the user groups access to device groups. For more information, see [Manage portal access using role-based access control](rbac.md).
 
-    > [!NOTE]
-    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 <a name='step-3-visit-the-microsoft-365-defender-portal'></a>
 
@@ -112,24 +111,12 @@ After onboarding devices (endpoints), you'll configure the various capabilities,
 
 Use [this table](onboarding.md) to choose components to configure. We recommend configuring all available capabilities, but you're able to skip the ones that don't apply.
 
-## Step 6: Experience Microsoft Defender for Endpoint through simulated attacks
-
-You might want to experience Defender for Endpoint before you onboard more than a few devices to the service. To do this, you can run controlled attack simulations on a few test devices. After running the simulated attacks, you can review how Defender for Endpoint surfaces malicious activity and explore how it enables an efficient response.
-
-To run any of the provided simulations, you need at least [one onboarded device](onboard-configure.md).
-
-1. Access the tutorials. In the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)), in the navigation pane, under **Endpoints**, choose **Tutorials**.
-
-2. Read the walkthrough document provided with each attack scenario. Each document includes OS and application requirements and detailed instructions that are specific to an attack scenario.
-
-3. [Run a simulation](attack-simulations.md).
-
-## Step 7: Set up the Microsoft Defender for Endpoint evaluation lab   
+## Step 6: Set up the Microsoft Defender for Endpoint evaluation lab   
 
 The Microsoft Defender for Endpoint evaluation lab is designed to eliminate the complexities of device and environment configuration so that you can focus on evaluating the capabilities of the platform, running simulations, and seeing the prevention, detection, and remediation features in action. Using the simplified set-up experience in evaluation lab, you can focus on running your own test scenarios and the pre-made simulations to see how Defender for Endpoint performs.
 
 - [Watch the video overview](https://www.microsoft.com/videoplayer/embed/RE4qLUM) of the evaluation lab
-- [Get started with the lab](evaluation-lab.md) 
+- [Get started with the lab](evaluate-microsoft-defender-antivirus.md) 
 
 
 ## See also

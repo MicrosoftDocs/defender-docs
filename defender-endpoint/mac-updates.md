@@ -4,7 +4,7 @@ description: Control updates for Microsoft Defender for Endpoint on Mac in enter
 ms.service: defender-endpoint
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 

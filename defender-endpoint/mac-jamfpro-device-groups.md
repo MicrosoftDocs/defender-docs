@@ -4,7 +4,7 @@ description: Learn how to set up device groups in Jamf Pro for Microsoft Defende
 ms.service: defender-endpoint
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 

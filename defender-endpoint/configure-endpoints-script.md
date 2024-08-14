@@ -98,7 +98,7 @@ After onboarding the device, you can choose to run a detection test to verify th
 
 ## Offboard devices using a local script
 
-For security reasons, the package used to offboard devices expires three days after the date it was downloaded. Expired offboarding packages sent to a device are rejected. When downloading an offboarding package, you're notified of the package's expiry date, and that date is included in the package file name.
+For security reasons, the package used to offboard devices expires seven days after the date it was downloaded. Expired offboarding packages sent to a device are rejected. When downloading an offboarding package, you're notified of the package's expiry date, and that date is included in the package file name.
 
 > [!NOTE]
 > Onboarding and offboarding policies must not be deployed on the same device at the same time. Otherwise, unpredictable collisions might occur.

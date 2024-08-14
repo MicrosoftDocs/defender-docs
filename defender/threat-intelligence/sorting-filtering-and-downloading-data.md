@@ -222,7 +222,7 @@ When you download data from the **Cookies** tab, the following headers are expor
 | **firstSeen**              | Date and time (in *mm/dd/yyyy hh:mm* format) when the cookie name was first observed to the hostname originating from the cookie domain |
 | **lastSeen**               | Date and time (in *mm/dd/yyyy hh:mm* format) when the cookie name was last observed to the hostname originating from the cookie domain |
 | **cookieName**             | Cookie name |
-| **cookieDomain**           | The domain name’s server the cookie name originated from |
+| **cookieDomain**           | The domain name's server the cookie name originated from |
 | **Tags**                   | System or custom tags associated with the artifact |
 
 When you download project lists from **Intel projects** (**My projects**, **Team projects**, and **Shared projects**), the following headers are exported:

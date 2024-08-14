@@ -36,8 +36,7 @@ For more information about reporting messages to Microsoft, see [Report messages
 
 Admins configure user reported messages to go to a specified reporting mailbox, to Microsoft, or both. These user reported messages are available on the **User reported** tab on the **Submissions** page in the Microsoft Defender portal. For more information, see [User reported settings](submissions-user-reported-messages-custom-mailbox.md).
 
-> [!TIP]
-> Simplify *Microsoft Defender for Office 365* deployment with our [setup guide](https://go.microsoft.com/fwlink/p/?linkid=2268341). Protect against email, link, and collaboration threats. Configure policies, access reports, and automate investigations. Features include Safe Links, Safe Attachments, and more. Sign in credentials are required. Microsoft 365 advanced deployment guides are available for unauthenticated users on [setup.cloud.microsoft](https://go.microsoft.com/fwlink/p/?linkid=2268240). Anyone, from potential Microsoft clients to partners and IT admins, can access the guides and use them freely (credentials aren't required).
+[!INCLUDE [MDO Setup guide](../includes/mdo-setup-guide.md)]
 
 ## Use the built-in Report button in Outlook on the web
 

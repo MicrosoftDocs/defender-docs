@@ -42,9 +42,8 @@ This article provides information about Microsoft Defender for Endpoint attack s
 - [Per-rule-descriptions](#per-rule-descriptions)
 
 [!Include[Prerelease information](../includes/prerelease.md)]
+[!Include [defender-endpoint-setup-guide.md](../includes/mde-automated-setup-guide.md)]
 
-> [!TIP]
-> As a companion to this article, we recommend using the [Microsoft Defender for Endpoint automated setup guide](https://go.microsoft.com/fwlink/?linkid=2268088), which helps you utilize essential tools and automated features such as attack surface reduction and next-generation protection. When signed in to the Microsoft 365 admin center, this guide will customize your experience based on your environment. To review best practices without signing in and activating automated setup features, go to the [Microsoft 365 setup guide](https://go.microsoft.com/fwlink/?linkid=2268087).
 ## Attack surface reduction rules by type
 
 Attack surface reduction rules are categorized as one of two types:
@@ -544,7 +543,7 @@ Dependencies: Microsoft Defender Antivirus, RPC
 This rule blocks processes created through [PsExec](/sysinternals/downloads/psexec) and [WMI](/windows/win32/wmisdk/about-wmi) from running. Both PsExec and WMI can remotely execute code. There's a risk of malware abusing functionality of PsExec and WMI for command and control purposes, or to spread an infection throughout an organization's network.
 
 > [!WARNING]
-> Only use this rule if you're managing your devices with [Intune](/intune) or another MDM solution. This rule is incompatible with management through [Microsoft Endpoint Configuration Manager](/configmgr) because this rule blocks WMI commands the Configuration Manager client uses to function correctly.
+> Only use this rule if you're managing your devices with [Intune](/mem/intune) or another MDM solution. This rule is incompatible with management through [Microsoft Endpoint Configuration Manager](/configmgr) because this rule blocks WMI commands the Configuration Manager client uses to function correctly.
 
 Intune name: `Process creation from PSExec and WMI commands`
 

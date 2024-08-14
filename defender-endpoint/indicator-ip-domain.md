@@ -97,6 +97,7 @@ For processes other than Microsoft Edge and Internet Explorer, web protection sc
 - Encrypted URLs (FQDN only) can be blocked in third party browsers (that is, other than Internet Explorer, Edge)
 - Full URL path blocks can be applied for unencrypted URLs
 - If there are conflicting URL indicator policies, the longer path is applied. For example, the URL indicator policy `https://support.microsoft.com/office` takes precedence over the URL indicator policy `https://support.microsoft.com`.
+- In the case of URL indicator policy conflicts, the longer path may not be applied due to redirection. In such cases, register a non-redirected URL.
 
 ## Network protection and the TCP three-way handshake
 

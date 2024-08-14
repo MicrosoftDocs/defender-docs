@@ -4,7 +4,7 @@ description: Learn how to configure Microsoft Defender for Endpoint on Mac to re
 ms.service: defender-endpoint
 author: YongRhee-MSFT
 ms.author: yongrhee
-manager: dansimp
+manager: deniseb
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection: 
@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/16/2024
+ms.date: 06/12/2024
 ---
 
 # Device Control for macOS
@@ -471,8 +471,11 @@ In this case, only have one access rule policy, but if you have multiple, make s
 
 ## Known Issues
 
-> >[!WARNING]
+> [!WARNING]
 > Device Control on macOS restricts Android devices that are connected using PTP mode **only**.  Device control does not restrict other modes such as File Transfer, USB Tethering and MIDI.
+
+> [!WARNING]
+> Device Control on macOS does not prevent software developed on XCode from being transferred to an external device.
 
 
 
