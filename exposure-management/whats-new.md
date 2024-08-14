@@ -33,27 +33,27 @@ The following predefined **Identity** classification rules were added to the cri
 
 | Classification                                | Description                                                  |
 | --------------------------------------------- | ------------------------------------------------------------ |
-| External Identity Provider Administrator      | This rule applies to identities assigned with the Entra ID "External Identity Provider Administrator" role. A compromised identity in this role poses severe risks, including allowing management of federation between Microsoft Entra organizations and external identity providers (IdP). |
-| Domain Name Administrator                     | This rule applies to identities assigned with the Entra ID "Domain Name Administrator" role. A compromised identity in this role poses severe risks, including manipulation of domain names. |
-| Permissions Management Administrator          | This rule applies to identities assigned with the Entra ID "Permissions Management Administrator" role. A compromised identity in this role poses severe risks, including manipulation of EPM settings. |
-| Billing Administrator                         | This rule applies to identities assigned with the Entra ID "Billing Administrator" role. A compromised identity in this role poses severe risks, including disruption of subscriptions. |
-| License Administrator                         | This rule applies to identities assigned with the Entra ID "License Administrator" role. A compromised identity in this role poses severe risks, including manipulation of license assignments. |
-| Teams Administrator                           | This rule applies to identities assigned with the Entra ID "Teams Administrator" role. A compromised identity in this role poses severe risks, including manipulation of Microsoft 365 groups. |
-| External ID User Flow Administrator           | This rule applies to identities assigned with the Entra ID "External ID User Flow Administrator" role. A compromised identity in this role poses severe risks, including manipulation of B2C user flow settings. |
-| External ID User Flow Attribute Administrator | This rule applies to identities assigned with the Entra ID "External ID User Flow Attribute Administrator" role. A compromised identity in this role poses severe risks, including manipulation of B2C custom attributes. |
-| B2C IEF Policy Administrator                  | This rule applies to identities assigned with the Entra ID "B2C IEF Policy Administrator" role. A compromised identity in this role poses severe risks, including manipulation of all custom policies in B2C. |
-| Compliance Data Administrator                 | This rule applies to identities assigned with the Entra ID "Compliance Data Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to Microsoft Purview compliance portal. |
-| Authentication Policy Administrator           | This rule applies to identities assigned with the Entra ID "Authentication Policy Administrator" role. A compromised identity in this role poses severe risks, including manipulation of authentication methods policies. |
-| Knowledge Administrator                       | This rule applies to identities assigned with the Entra ID "Knowledge Administrator" role. A compromised identity in this role poses severe risks, including manipulation of and unauthorized access to security groups. |
-| Knowledge Manager                             | This rule applies to identities assigned with the Entra ID "Knowledge Manager" role. A compromised identity in this role poses severe risks, including manipulation of and unauthorized access to security groups. |
-| Attribute Definition Administrator            | This rule applies to identities assigned with the Entra ID "Attribute Definition Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to Microsoft Purview compliance portal. |
-| Attribute Assignment Administrator            | This rule applies to identities assigned with the Entra ID "Attribute Assignment Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to Microsoft Purview compliance portal. |
-| Identity Governance Administrator             | This rule applies to identities assigned with the Entra ID "Identity Governance Administrator" role. A compromised identity in this role poses severe risks, including manipulation of Microsoft Entra ID Governance configurations. |
-| Cloud App Security Administrator              | This rule applies to identities assigned with the Entra ID "Cloud App Security Administrator" role. A compromised identity in this role poses severe risks, including unauthorized full access to Microsoft Defender for Cloud Apps. |
-| Windows 365 Administrator                     | This rule applies to identities assigned with the Entra ID "Windows 365 Administrator" role. A compromised identity in this role poses severe risks, including full management of Windows 365 resources in Microsoft Intune. |
-| Yammer Administrator                          | This rule applies to identities assigned with the Entra ID "Yammer Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to the Message Center in Microsoft 365 Admin Center. |
-| Authentication Extensibility Administrator    | This rule applies to identities assigned with the Entra ID "Authentication Extensibility Administrator" role. A compromised identity in this role poses severe risks, including manipulation of custom authentication extensions. |
-| Lifecycle Workflows Administrator             | This rule applies to identities assigned with the Entra ID "Lifecycle Workflows Administrator" role. A compromised identity in this role poses severe risks, including unauthorized full access to Lifecycle Workflows in Microsoft Entra ID. |
+| External Identity Provider Administrator      | This rule applies to identities assigned with the Microsoft Entra "External Identity Provider Administrator" role. |
+| Domain Name Administrator                     | This rule applies to identities assigned with the Microsoft Entra "Domain Name Administrator" role. |
+| Permissions Management Administrator          | This rule applies to identities assigned with the Microsoft Entra "Permissions Management Administrator" role. |
+| Billing Administrator                         | This rule applies to identities assigned with the Microsoft Entra "Billing Administrator" role. |
+| License Administrator                         | This rule applies to identities assigned with the Microsoft Entra "License Administrator" role. |
+| Teams Administrator                           | This rule applies to identities assigned with the Microsoft Entra "Teams Administrator" role. |
+| External ID User Flow Administrator           | This rule applies to identities assigned with the Microsoft Entra "External ID User Flow Administrator" role. |
+| External ID User Flow Attribute Administrator | This rule applies to identities assigned with the Microsoft Entra "External ID User Flow Attribute Administrator" role. |
+| B2C IEF Policy Administrator                  | This rule applies to identities assigned with the Microsoft Entra "B2C IEF Policy Administrator" role. |
+| Compliance Data Administrator                 | This rule applies to identities assigned with the Microsoft Entra "Compliance Data Administrator" role. |
+| Authentication Policy Administrator           | This rule applies to identities assigned with the Microsoft Entra "Authentication Policy Administrator" role. |
+| Knowledge Administrator                       | This rule applies to identities assigned with the Microsoft Entra "Knowledge Administrator" role. |
+| Knowledge Manager                             | This rule applies to identities assigned with the Microsoft Entra "Knowledge Manager" role. |
+| Attribute Definition Administrator            | This rule applies to identities assigned with the Microsoft Entra "Attribute Definition Administrator" role. |
+| Attribute Assignment Administrator            | This rule applies to identities assigned with the Microsoft Entra "Attribute Assignment Administrator" role. |
+| Identity Governance Administrator             | This rule applies to identities assigned with the Microsoft Entra "Identity Governance Administrator" role. |
+| Cloud App Security Administrator              | This rule applies to identities assigned with the Microsoft Entra "Cloud App Security Administrator" role. |
+| Windows 365 Administrator                     | This rule applies to identities assigned with the Microsoft Entra "Windows 365 Administrator" role. |
+| Yammer Administrator                          | This rule applies to identities assigned with the Microsoft Entra "Yammer Administrator" role. |
+| Authentication Extensibility Administrator    | This rule applies to identities assigned with the Microsoft Entra "Authentication Extensibility Administrator" role. |
+| Lifecycle Workflows Administrator             | This rule applies to identities assigned with the Microsoft Entra "Lifecycle Workflows Administrator" role. |
 
 For more information, see, [Review, and classify critical assets](classify-critical-assets.md)
 
@@ -73,22 +73,23 @@ Read more about what the research team has been up to in this blog - [Bridging t
 
 The following predefined classification rules were added to the critical assets list:
 
-| Classification                                | Description                                                                                                                             |
-|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| **Exchange**                                  | This rule applies to devices identified as operational Exchange servers within a domain. These servers might hold sensitive data of the organization.                                                |
-| **VMware ESXi**                               | This rule applies to devices identified as operational ESXi servers. These devices might hold other sensitive or critical devices.          |
-| **VMware vCenter**                            | This rule applies to devices identified as operational VMware vCenter and frequently used by admins to manage the virtual infrastructure. |
-| **Identity with Privileged Azure Role**       | This rule applies to identities assigned with a Privileged Azure role, over a potentially business-critical scope. A compromised identity in this role poses severe risks, including unauthorized access to Azure resources and data exposure. |
-| **Exchange Administrator**                    | This rule applies to identities assigned with the Microsoft Entra ID "Exchange Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to Exchange Admin Center and data exposure. |
-| **SharePoint Administrator**                  | This rule applies to identities assigned with the Microsoft Entra ID "SharePoint Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to SharePoint Admin Center and data exposure. |
-| **Groups Administrator**                      | This rule applies to identities assigned with the Microsoft Entra ID "Groups Administrator" role. A compromised identity in this role poses severe risks, including unauthorized access to Microsoft 365 groups and data exposure. |
-| **Confidential Azure VM**                     | This rule applies to Azure confidential virtual machines. A compromised or disrupted Azure VM of this type poses severe risks, including unauthorized access to production services and data exposure. |
-| **Locked VM**                                 | This rule applies to virtual machines that are safeguarded by a lock. A compromised or disrupted Azure VM of this type poses severe risks, including unauthorized access to production services and data exposure. |
-| **Azure Virtual Machine with High Availability and Performance** | This rule applies to Azure VMs that use premium Azure storage and are configured with an availability set. A compromised or disrupted Azure VM of this type poses severe risks, including unauthorized access to production services and data exposure. |
-| **Immutable Azure Storage**                    | This rule applies to Azure storage accounts that have immutability support enabled. A compromised or disrupted Azure storage account of this type poses severe risks, including unauthorized data access and service disruption. |
-| **Immutable and Locked Azure Storage**         | This rule applies to Azure storage accounts that have immutability support enabled with a locked policy in place. A compromised or disrupted Azure storage account of this type poses severe risks, including unauthorized data access and service disruption. |
-| **Virtual Machine has a critical signed-in user** | This rule applies to Azure VMs protected by Defender for Endpoint with high or very high-criticality users signed in. A compromised or disrupted Azure VM of this type poses severe risks of unauthorized access, session takeover, and data exposure. |
-| **Azure Key Vaults with Many Connected Identities** | The rule applies to Azure Key Vaults with high access compared to others, indicating critical workload usage. A compromised or disrupted Azure Key Vault of this type poses severe risks, including unauthorized data access and service disruption. |
+| Classification                                               | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Exchange**                                                 | This rule applies to devices identified as operational Exchange servers within a domain. These servers might hold sensitive data of the organization. |
+| **VMware ESXi**                                              | This rule applies to devices identified as operational ESXi servers. These devices might hold other sensitive or critical devices. |
+| **VMware vCenter**                                           | This rule applies to devices identified as operational VMware vCenter and frequently used by admins to manage the virtual infrastructure. |
+| **Identity with Privileged Azure Role**                      | This rule applies to identities assigned with a Privileged Azure role, over a potentially business-critical scope. A compromised identity in this role poses severe risks, including unauthorized access to Azure resources and data exposure. |
+| **Exchange Administrator**                                   | This rule applies to identities assigned with the Microsoft Entra "Exchange Administrator" role. |
+| **SharePoint Administrator**                                 | This rule applies to identities assigned with the Microsoft Entra "SharePoint Administrator" role. |
+| **Compliance Administrator**                                 | This rule applies to identities assigned with the Microsoft Entra "Compliance Administrator" role. |
+| **Groups Administrator**                                     | This rule applies to identities assigned with the Microsoft Entra "Groups Administrator" role. |
+| **Confidential Azure Virtual Machine**                                    | This rule applies to Azure confidential Virtual Machines.    |
+| **Locked Azure Virutal Machine**                                                | This rule applies to Azuew virtual machines that are safeguarded by a lock. |
+| **Azure Virtual Machine with High Availability and Performance** | This rule applies to Azure Virtual Machines that use premium Azure storage and are configured with an availability set. |
+| **Immutable Azure Storage**                                  | This rule applies to Azure storage accounts that have immutability support enabled. |
+| **Immutable and Locked Azure Storage**                       | This rule applies to Azure storage accounts that have immutability support enabled with a locked policy in place. |
+| **Azure Virtual Machine has a Critical Signed-in user**            | This rule applies to Azure Virtual Machines with a Critical user signed in protected by Defender for Endpoint with high or very high-criticality users signed in. |
+| **Azure Key Vaults with Many Connected Identities**          | This rule applies to Azure Key Vaults with high access compared to others, indicating critical workload usage. |
 
 For more information, see, [Review, and classify critical assets](classify-critical-assets.md)
 
