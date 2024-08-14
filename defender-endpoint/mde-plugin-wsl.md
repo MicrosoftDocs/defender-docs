@@ -15,7 +15,7 @@ ms.collection:
 ms.custom:
 - partner-contribution
 audience: ITPro
-ms.date: 08/05/2024
+ms.date: 08/12/2024
 search.appverid: MET150
 ---
 
@@ -145,28 +145,12 @@ For example, if your host machine has both `Winhttp proxy` and `Network & Intern
 
 ## Connectivity test for Defender running in WSL
 
-The following procedure describes how to confirm that Defender in Endpoint in WSL has internet connectivity.
+The defender connectivity test is triggered whenever there is a proxy modification on your device and is scheduled to run every hour.
 
-1. Open Registry Editor as an administrator.
-
-2. Create a registry key with the following details:
-
-   - **Name**: `ConnectivityTest`
-   - **Type**: `REG_DWORD`
-   - **Value**: `Number of seconds plug-in must wait before running the test. (Recommended: 60 seconds)`
-   - **Path**:  `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Defender for Endpoint plug-in for WSL`
-
-3. Once the registry is set, restart wsl using the following steps:
-
-   1. Open Command Prompt and run the command, `wsl --shutdown`.
-
-   2. Run the command `wsl`.
-
-4. Wait for five minutes, and then run `healthcheck.exe` (located at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test).
-
-   If successful, you can see that the connectivity test was successful. If failed, you can see that the connectivity test was `invalid` indicating that the client connectivity from WSL to Defender for Endpoint service URLs is failing.
+On starting your wsl machine, wait for 5 minutes and then run `healthcheck.exe` (located at `%ProgramFiles%\Microsoft Defender for Endpoint plug-in for WSL\tools` for the results of the connectivity test). If successful, you can see that the connectivity test was a success. If failed, you can see that the connectivity test was `invalid` indicating that the client connectivity from MDE plug-in for WSL to Defender for Endpoint service URLs is failing.
 
 > [!NOTE]
+> The `ConnectivityTest` registry key is no longer supported.
 > To set a proxy for use in WSL containers (the distributions running on the subsystem), see [Advanced settings configuration in WSL](/windows/wsl/wsl-config).
 
 ## Verifying functionality and SOC analyst experience
@@ -186,6 +170,31 @@ After installing the plug-in, the subsystem and all its running containers are o
    :::image type="content" source="media/mdeplugin-wsl/wsl-ui-overview.png" alt-text="Screenshot showing device overview." lightbox="media/mdeplugin-wsl/wsl-ui-overview.png":::  
 
 The timeline is populated, similar to Defender for Endpoint on Linux, with events from inside the subsystem (file, process, network). You can observe activity and detections in the timeline view. Alerts and incidents are generated as appropriate as well.
+
+## Setting up custom tag for your WSL machine
+
+The plug-in onboards the WSL machine with the tag `WSL2`. Should you or your organization need a custom tag, please follow the steps outlined below:
+
+1. Open Registry Editor as an administrator
+
+2. Create a registry key with the following details:
+
+   - Name: `GROUP`
+   - Type: `REG_SZ` or registry string
+   - Value: `Custom tag`
+   - Path: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\DeviceTagging`
+
+3. Once the registry is set, restart wsl using the following steps:
+
+    1. Open Command Prompt and run the command, `wsl --shutdown`.
+
+    2. Run the `wsl` command.
+
+4. Wait for 5-10 minutes for the portal to reflect the changes. 
+
+> [!NOTE]
+> The custom tag set in registry will be followed by a `_WSL2`.
+> For example, if the registry value set is `Microsoft`, then the custom tag will be `Microsoft_WSL2` and the same will be visible in the portal.
 
 ### Test the plug-in
 
@@ -371,8 +380,6 @@ DeviceProcessEvents
 
    1. In Control Panel, go to **Programs** > **Programs and Features**.
 
-   2. Search for and select **Microsoft Defender for Endpoint plug-in for WSL**. Then select **Repair**.
-
-   This should fix the problem by placing the right files in the expected directories.
+   2. Search for and select **Microsoft Defender for Endpoint plug-in for WSL**. Then select **Repair**. This action should fix the problem by placing the right files in the expected directories.
 
    :::image type="content" source="media/mdeplugin-wsl/plug-in-repair-control-panel.png" alt-text="Screenshot showing MDE plug-in for WSL repair option in control panel." lightbox="media/mdeplugin-wsl/plug-in-repair-control-panel.png":::

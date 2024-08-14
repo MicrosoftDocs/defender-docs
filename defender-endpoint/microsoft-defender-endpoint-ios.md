@@ -53,6 +53,10 @@ ms.date: 02/22/2024
 
 - For more information on how to assign licenses, see [Assign licenses to users](/azure/active-directory/users-groups-roles/licensing-groups-assign).
 
+> [!NOTE]
+> - Defender for Endpoint on iOS requires configuring its VPN to activate the Web Protection feature and to send periodic status signals while the app operates in the background. This VPN is local and pass-through, meaning it does not route traffic through a remote VPN server.
+> - Customers who opt not to set up a Defender for Endpoint VPN can disable Web Protection and still deploy Defender for Endpoint. In such cases, Defender for Endpoint will only send status signals to the Microsoft Defender portal when the user opens the app. If the app is not opened for 7 days, the device may be marked as inactive in the Microsoft Defender Portal.
+
 ### For Administrators
 
 - Access to the Microsoft Defender portal.
@@ -65,6 +69,8 @@ ms.date: 02/22/2024
     >
     > - Microsoft Defender for Endpoint now extends protection to an organization's data within a managed application for those who aren't using mobile device management (MDM) but are using Intune to manage mobile applications. It also extends this support to customers who use other enterprise mobility management solutions, while still using Intune for [mobile application management (MAM)](/mem/intune/apps/mam-faq).
     > - In addition, Microsoft Defender for Endpoint already supports devices that are enrolled using Intune mobile device management (MDM).
+
+
 
 ### System Requirements
 
