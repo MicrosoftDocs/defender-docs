@@ -44,7 +44,7 @@ When you use Copilot for Security in Defender for Cloud, the following data proc
 
     :::image type="content" source="media/copilot-security-in-defender-for-cloud/data-process-workflow.png" alt-text="Conceptual image that shows the data process workflow of the Copilot experience in Defender for Cloud." lightbox="media/copilot-security-in-defender-for-cloud/data-process-workflow.png":::
 
-Check out the Copilot for Securtiy [FAQs].
+Check out the Copilot for Securtiy [FAQs](faq-copilot).
 
 ## Copilot's capabilities in Defender for Cloud
 
