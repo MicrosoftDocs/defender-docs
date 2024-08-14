@@ -181,6 +181,7 @@ Recommendation [Azure running container images should have vulnerabilities resol
 
 The new recommendation is in preview and not used for secure score calculation.
 
+> [!NOTE]
 > Starting in mid-September, this recommendation will be updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
 >To support this improvement the assessment key for this recommendation will be updated to `c5045ea3-afc6-4006-ab8f-86c8574dbf3d`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the assessment key once it is updated.
 
