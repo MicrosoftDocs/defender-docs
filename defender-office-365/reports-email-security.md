@@ -19,7 +19,7 @@ description: "Admins can learn how to find and use the email security reports th
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 05/29/2024
+ms.date: 08/12/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -830,8 +830,8 @@ In the **View data by System override** and **Chart breakdown by Reason** view, 
 - **Exclusive setting (Outlook)**
 - **IP Allow**
 - **On-premises skip**
-- **Organization allowed domains**
-- **Organization allowed senders**
+- **Organization allowed domains**: The domain is specified in the [allowed domains list in an anti-spam policy](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
+- **Organization allowed senders**: The sender is specified in the [allowed senders list in an anti-spam policy](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
 - **Phishing simulation**: For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
 - **Sender Domain List**
 - **TABL - Both URL and file allowed**
