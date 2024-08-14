@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 07/17/2024
+ms.date: 08/14/2024
 ---
 
 # What's new in Microsoft Security Exposure Management?
