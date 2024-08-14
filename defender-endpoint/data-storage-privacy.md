@@ -16,7 +16,7 @@ ms.collection:
 - essentials-compliance
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/14/2024
+ms.date: 08/12/2024
 ---
 
 # Microsoft Defender for Endpoint data storage and privacy
@@ -63,7 +63,7 @@ In all scenarios, data is encrypted using 256-bit [AES encryption](https://en.wi
 
 ## Data storage location
 
-Defender for Endpoint operates in the Microsoft Azure data centers in the European Union, the United Kingdom, the United States, Australia, or Switzerland. Customer data collected by the service might be stored in: (a) the geo-location of the tenant as identified during provisioning or, (b) the geo-location as defined by the data storage rules of an online service if this online service is used by Defender for Endpoint to process such data. For more information, see [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
+Defender for Endpoint operates in the Microsoft Azure data centers in the European Union, the United Kingdom, the United States, Australia, Switzerland, or India. Customer data collected by the service might be stored in: (a) the geo-location of the tenant as identified during provisioning or, (b) the geo-location as defined by the data storage rules of an online service if this online service is used by Defender for Endpoint to process such data. For more information, see [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
 
 Customer data in pseudonymized form may also be stored in the central storage and processing systems in the United States.
 
