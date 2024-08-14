@@ -124,7 +124,7 @@ To help prioritize security recommendations, and remediation steps to focus on c
 
 To see the sum of exposed critical assets go to the [Security recommendations](/defender-vulnerability-management/tvm-security-recommendation) page:
 
-   :::image type="content" source=" ./media/critical-asset-management/security-recommendations-critical-assets.png" alt-text="Screenshot of the critical assets column on the security recommendations page" lightbox="./media/critical-asset-management/security-recommendations-critical-assets.png":::
+   :::image type="content" source=" ./media/critical-asset-management/security-recommendations-critical-assets.png" alt-text="Screenshot of the critical assets column on the security recommendations page." lightbox="./media/critical-asset-management/security-recommendations-critical-assets.png":::
 
 ## Next steps
 
