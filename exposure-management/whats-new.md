@@ -57,6 +57,12 @@ The following predefined **Identity** classification rules were added to the cri
 
 For more information, see, [Review, and classify critical assets](classify-critical-assets.md)
 
+### New Initiative Event
+
+A new event type has been created to notify users when a new initiative is added to MSEM.
+
+For more information see, [Overview - Exposure insights](exposure-insights-overview.md)
+
 ### News from the Research Team
 
 Read more about what the research team has been up to in this blog - [Bridging the On-premises to Cloud Security Gap: Cloud Credentials Detection](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/bridging-the-on-premises-to-cloud-security-gap-cloud-credentials/ba-p/4211794)
@@ -83,7 +89,7 @@ The following predefined classification rules were added to the critical assets 
 | **Immutable and Locked Azure Storage**         | This rule applies to Azure storage accounts that have immutability support enabled with a locked policy in place. A compromised or disrupted Azure storage account of this type poses severe risks, including unauthorized data access and service disruption. |
 | **Virtual Machine has a critical signed-in user** | This rule applies to Azure VMs protected by Defender for Endpoint with high or very high-criticality users signed in. A compromised or disrupted Azure VM of this type poses severe risks of unauthorized access, session takeover, and data exposure. |
 | **Azure Key Vaults with Many Connected Identities** | The rule applies to Azure Key Vaults with high access compared to others, indicating critical workload usage. A compromised or disrupted Azure Key Vault of this type poses severe risks, including unauthorized data access and service disruption. |
- 
+
 For more information, see, [Review, and classify critical assets](classify-critical-assets.md)
 
 ## May 2024
