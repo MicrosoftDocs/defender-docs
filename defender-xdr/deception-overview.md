@@ -28,6 +28,9 @@ ms.date: 08/08/2024
 - Microsoft Defender XDR
 - Microsoft Defender for Endpoint
 
+> [!IMPORTANT]
+> Some information in this article relates to prereleased products/services that might be substantially modified before commercially release. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
 Microsoft Defender XDR, through built-in deception capability, delivers high confidence detections of human-operated lateral movement, preventing attacks from reaching an organization's critical assets. Various attacks like [business email compromise (BEC)](https://www.microsoft.com/security/business/security-101/what-is-business-email-compromise-bec), [ransomware](/security/ransomware/), organizational breaches, and nation-state attacks often use lateral movement and can be hard to detect with high confidence in the early stages. Defender XDR's deception technology provides high confidence detections based on deception signals correlated with Microsoft Defender for Endpoint signals.
 
 The deception capability automatically generates authentic-looking decoy accounts, hosts, and lures. The fake assets generated are then automatically deployed to specific clients. When an attacker interacts with the decoys or lures, the deception capability raises high confidence alerts, helping in security team's investigations and allowing them to observe an attacker's methods and strategies. All alerts raised by the deception capability are automatically correlated into incidents and are fully integrated into Microsoft Defender XDR. In addition, the deception technology is integrated into Defender for Endpoint, minimizing deployment needs.
