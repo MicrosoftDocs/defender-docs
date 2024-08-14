@@ -61,9 +61,7 @@ Network protection in Microsoft Defender for endpoint is disabled by default. Ad
 
 1. In the Microsoft Intune admin center, navigate to Apps > App configuration policies. Create a new App configuration policy.
 
-      > [!div class="mx-imgBorder"]
-   > ![Image of how to create a policy.](media/android-mem.png)
-   
+> [!div class="mx-imgBorder"]
 1. Provide a name and description to uniquely identify the policy. Select **'Android Enterprise'** as the platform and **'Personally-owned work profile only'** as the profile type and **'Microsoft Defender'** as the Targeted app.
 
       > [!div class="mx-imgBorder"]
@@ -116,7 +114,8 @@ Network protection in Microsoft Defender for endpoint is disabled by default. Ad
 1. Add the required groups to which the policy has to be applied. Review and create the policy.
 
 > [!NOTE]
-> Users need to enable location permission (which is an optional permission); this enables Defender for Endpoint to scan their networks and alert them when there are WIFI-related threats. If the location permission is denied by the user, Defender for Endpoint will only be able to provide limited protection against network threats and will only protect the users from rogue certificates.## Privacy Controls
+> Users need to enable location permission (which is an optional permission); this enables Defender for Endpoint to scan their networks and alert them when there are WIFI-related threats. If the location permission is denied by the user, Defender for Endpoint will only be able to provide limited protection against network threats and will only protect the users from rogue certificates.
+## Privacy Controls
 
 Following privacy controls are available for configuring the data that is sent by Defender for Endpoint from Android devices:
 
@@ -324,11 +323,11 @@ Use the following steps to configure the Device tags:
 5. Click Next and assign this policy to targeted devices and users.
 
 
-> [!NOTE] 
+> [!NOTE]
 > The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
-
 ## Related articles
 
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
+
 - [Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
