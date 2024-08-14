@@ -68,7 +68,7 @@ To protect your EKS clusters, enable the Containers plan on the relevant account
         > Don't select the clusters by their hyperlinked names: select anywhere else in the relevant row.
 
     1. Select **Fix**.
-    1. Defender for Cloud generates a script in the language of your choice: select Bash (for Linux) or PowerShell (for Windows).
+    1. Defender for Cloud generates a script in the language of your choice: select Bash (for Linux) or PowerShell (for Windows). To see the permissions granted in the script, see [Permissions granted in cloud environments](../containers-permissions.md#permissions-granted-in-cloud-environments).
     1. Select **Download remediation logic**.
     1. Run the generated script on your cluster.
     1. Repeat steps *"a" through "f"* for the second recommendation.

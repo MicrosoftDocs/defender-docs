@@ -180,6 +180,8 @@
         - name: Support matrices for Containers
           displayName: Containers, features availability, environment information
           href: support-matrix-defender-for-containers.md
+        - name: Permissions in Defender for Containers
+          href: containers-permissions.md
     - name: Improve cloud security posture
       items:
       - name: Cloud Security Posture Management (CSPM)
