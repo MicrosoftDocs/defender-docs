@@ -181,6 +181,8 @@ Recommendation [Azure running container images should have vulnerabilities resol
 
 The new recommendation is in preview and not used for secure score calculation.
 
+> Starting from mid September, this recommendation would be updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation would only report a single instance of the vulnerable containers within that job. This change will assist in remove duplicate reporting for identical containers that requires a single action for remedation. Customers that have been using this recommendation prior to the change, should expect reduction in the number of instances of this recommednation. 
+
 **Severity**: High
 
 **Type**: Vulnerability Assessment
