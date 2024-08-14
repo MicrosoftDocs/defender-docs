@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how Attack simulation training in the Microsoft Defender portal affects users and can gain insights from simulation and training outcomes.
 search.appverid: met150
-ms.date: 06/14/2024
+ms.date: 08/13/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -272,6 +272,24 @@ For more information about the **Users** and **Details** tabs, see the following
 - Training campaigns:
   - [Users tab](attack-simulation-training-training-campaigns.md#users-tab)
   - [Details tab](attack-simulation-training-training-campaigns.md#details-tab)
+
+### Reporting for QR code simulations
+
+> [!TIP]
+> QR code payloads are currently in Preview, aren't available in all organizations, and are subject to change.
+
+You can select payloads with QR codes to use in simulations. The QR code replaces the phishing URL as the payload that's used in the simulation email message. For more information, see [QR code payloads](attack-simulation-training-payloads.md#qr-code-payloads).
+
+Because QR codes are another method of phishing URL, the user events around read, delete, compromises, and click events remain the same. For example, scanning the QR code opens the phishing URL, so the event is tracked as a click event. The existing mechanisms for tracking compromise, deletes, and report events remain the same.
+
+If you export a [simulation report](#simulation-report-for-simulations) to a CSV file, the `EmailLinkClicked_ClickSource` column is available with the following values:
+
+- `PhishingURL`: The click came from a phishing link in the simulation email message.
+- `QR code`: The click came from scanning the QR code in the simulation email message.
+
+Other metrics like reads, compromises, deletes, and reported messages continue to be tracked without any additional updates.
+
+:::image type="content" source="media/attack-simulation-training-reporting-QR-code.png" alt-text="Image showing the reporting experience for running QR code simulations." lightbox="media/attack-simulation-training-reporting-QR-code.png":::
 
 ### Simulation report for simulations
 

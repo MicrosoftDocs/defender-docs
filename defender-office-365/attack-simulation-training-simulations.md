@@ -7,13 +7,13 @@ audience: ITPro
 ms.topic: how-to
 ms.service: defender-office-365
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
   - m365-security
   - tier2
 ms.custom:
 description: Admins can learn how to simulate phishing attacks and train their users on phishing prevention using Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 06/14/2024
+ms.date: 08/13/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -46,13 +46,15 @@ The following sections describe the steps and configuration options to create a 
 
 On the **Select technique** page, select an available social engineering technique:
 
-- **Credential Harvest**
+- **Credential Harvest**<sup>\*</sup>
 - **Malware Attachment**
 - **Link in Attachment**
-- **Link to Malware**
+- **Link to Malware**<sup>\*</sup>
 - **Drive-by URL**
-- **OAuth Consent Grant**
-- **How-to Guide**
+- **OAuth Consent Grant**<sup>\*</sup>
+- **How-to Guide**<sup>\*</sup>
+
+<sup>\*</sup> This social engineering technique allows you to use QR codes (currently in Preview). For more information, see the [QR code simulations and training](#qr-code-simulations-and-training) section later in this article.
 
 If you select the **View details** link in the description, a details flyout opens that describes the technique and the simulation steps that result from the technique.
 
@@ -623,6 +625,23 @@ Back on the **Simulations** tab, the simulation that you created is now listed. 
 - **In progress** if you selected **Launch this simulation as soon as I'm done**.
 - **Scheduled** if you selected **Schedule this simulation to be launched later**.
 
+## QR code simulations and training
+
+> [!TIP]
+> QR code payloads are currently in Preview, aren't available in all organizations, and are subject to change.
+
+You can select payloads with QR codes to use in simulations. The QR code replaces the phishing URL as the payload that's used in the simulation email message in the following social engineering techniques:
+
+- **Credential Harvest**
+- **Link to Malware**
+- **Drive-by URL**
+- **OAuth Consent Grant**
+- **How-to Guide**
+
+For more information about QR code payloads and configuring a custom QR code payload, see [QR code payloads](attack-simulation-training-payloads.md#qr-code-payloads).
+
+For more information about reporting for simulations with QR code payloads, see [Reporting for QR code simulations](attack-simulation-training-insights.md#reporting-for-qr-code-simulations).
+
 ## View simulations
 
 The **Simulations** tab in Attack simulation training at <https://security.microsoft.com/attacksimulator> shows any simulations that you created.
@@ -854,46 +873,22 @@ To include a completed session in reporting after it has been excluded, do the f
 
 After you included the excluded simulation, the **Status** value changes to **Completed**. Toggle **Show excluded simulations** to off :::image type="icon" source="media/scc-toggle-off.png" border="false"::: to see the simulation.
 
-## QR code simulations and training
-> [!IMPORTANT]
-> Currently, QR code simulations in Attack simulation training is in Preview.
-The current flow of running simulations, which involves selection of users, selection of payload, scheduling training, and notifications is also applicable for QR code-based simulations. Within simulations, you can select payloads with QR codes and use them for simulation. 
 
-Currently configuring payloads with QR codes and use of these payloads in a simulation is applicable to the Email platform and for the below attack techniques.   
 
-- Credential harvest
-- Link to malware
-- drive by URL
-- oAuth consent grant
 
-Given that QR codes are another vector for the phishing URL, the user events around read/delete/compromises/clicks remain the same. E.g. If a user is navigating to the URL after scanning the QR code, then it is tracked as a click event. The existing mechanisms for tracking compromise, deletes, report events remain the same. 
-
-For more details about QR code payloads, configuring a QR payload, see [QR payloads](attack-simulation-training-payloads.md#QR-Code-Payloads).
-
-### Reporting for QR code simulations
-Given that QR codes is just another vector for the phishing URL, the user events around 
-read/delete/compromises/clicks remain the same. E.g. If a user is navigating to the URL after 
-scanning the QR code, then it is tracked as a click event. The existing mechanisms for tracking 
-compromise, deletes, report events remain the same. 
-Within the simulation report CSV (exported from individual simulations), you will be able to view the 
-field Click Source (EmailLinkClicked_ClickSource) as a column, with values as ‘PhishingURL’ (click 
-came from a phishing link in email content) or ‘QR code’ (click came after scanning a QR code). Other 
-metrics like Reads, Compromises, Deletes, Reported Message continue to be tracked without any 
-additional updates.
-
-:::image type="content" source="media/attack-simulation-training-reporting-QR-code.png" alt-text="Image showing the reporting experience for running QR code simulations" lightbox="media/attack-simulation-training-reporting-QR-code.png":::
 
 ### QR code trainings
 
-We have provided two mechanisms for learning about QR based attacks: How to guides, and new training modules from our content partner. 
-How to Guides is designed to provide a lightweight guidance to end users on how to report a phishing message directly through email. By delivering these guides directly to the end user's inbox, we can ensure that the end user has the information they need to confidently report any suspicious emails. 
+We have provided two mechanisms for learning about QR based attacks: How to guides, and new training modules from our content partner.
+How to Guides is designed to provide a lightweight guidance to end users on how to report a phishing message directly through email. By delivering these guides directly to the end user's inbox, we can ensure that the end user has the information they need to confidently report any suspicious emails.
 
 You can filter for the How to Guide through either:
+
 1.	Filtering by Technique = How to Guide
-2.	Search by name = " Teaching Guide: How to recognize and report QR phishing messages 
+2.	Search by name = " Teaching Guide: How to recognize and report QR phishing messages
 
 :::image type="content" source="media/attack-simulation-training-how-to-guide-QR-code.png" alt-text="Image showing the QR code how to guide within the content library" lightbox="media/attack-simulation-training-how-to-guide-QR-code.png":::
 
-Within the trainings list (Content Library- Training Modules), we have added a new training called Malicious Digital QR Codes which is a short learning to educate on what to do when a user receives a QR code in the email. You can assign the training as part of a simulation or use training campaigns to assign the training to your users. 
+Within the trainings list (Content Library- Training Modules), we have added a new training called Malicious Digital QR Codes which is a short learning to educate on what to do when a user receives a QR code in the email. You can assign the training as part of a simulation or use training campaigns to assign the training to your users.
 
 :::image type="content" source="media/attack-simulation-training-out-of-the-box-training-QR-code.png" alt-text="Image showing the QR code trainings available within Content library" lightbox="media/attack-simulation-training-out-of-the-box-training-QR-code":::

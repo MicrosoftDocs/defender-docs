@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how to create and manage payloads for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 06/14/2024
+ms.date: 08/13/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -22,7 +22,7 @@ appliesto:
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2, a _payload_ is the link or attachment in the simulated phishing email message that's presented to users. Attack simulation training offers a robust built-in payload catalog for the available social engineering techniques. However, you might want to create custom payloads that work better for your organization.
+In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2, a _payload_ is the link, QR code (currently in Preview), or attachment in the simulated phishing email message that's presented to users. Attack simulation training offers a robust built-in payload catalog for the available social engineering techniques. However, you might want to create custom payloads that work better for your organization.
 
 For getting started information about Attack simulation training, see [Get started using Attack simulation training](attack-simulation-training-get-started.md).
 
@@ -79,13 +79,13 @@ The information that's available on the tabs is described in the following list:
   Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: to filter the payloads by one or of the following values:
 
   - **Technique**: One of the available [social engineering techniques](attack-simulation-training-simulations.md#select-a-social-engineering-technique):
-  - **Credential Harvest**
-  - **Malware Attachment**
-  - **Link in Attachment**
-  - **Link to Malware**
-  - **Drive-by URL**
-  - **OAuth Consent Grant**
-  - **How-to Guide**
+    - **Credential Harvest**
+    - **Malware Attachment**
+    - **Link in Attachment**
+    - **Link to Malware**
+    - **Drive-by URL**
+    - **OAuth Consent Grant**
+    - **How-to Guide**
 
   - **Complexity**: Calculated based on the number of indicators in the payload that indicate a possible attack (spelling errors, urgency, etc.). More indicators are easier to identify as an attack and indicate lower complexity. The available values are: **High**, **Medium**, and **Low**.
 
@@ -131,6 +131,22 @@ When you select a payload by clicking anywhere in the row other than the check b
 
 To see payloads that have been archived (the **Status** value is **Archive**), use the **Show archived payloads** toggle on the **Tenant payloads** tab.
 
+## QR code payloads
+
+> [!TIP]
+> QR code payloads are currently in Preview, aren't available in all organizations, and are subject to change.
+
+On the **Global payloads** tab of **Content library** \> **Payloads** at <https://security.microsoft.com/attacksimulator?viewid=contentlibrary&source=global>, you can see the built-in, unmodifiable QR code payloads by typing **QR** in the :::image type="icon" source="media/m365-cc-sc-search-icon.png" border="false"::: **Search** box, and then pressing the ENTER key.
+
+QR code payloads are available in five languages to address real-world scenarios that involve QR code attacks.
+
+:::image type="content" source="media/attack-sim-training-payloads-global-QR-codes.png" alt-text="Screenshot of the Global payloads tab showing the QR code payloads returned after searching for the value QR." lightbox="media/attack-sim-training-payloads-global-QR-codes.png":::
+
+You can also create custom payloads that use QR codes as described in the next section.
+
+> [!TIP]
+> Before you use a QR code payload in simulations, be sure to examine the available fields and content in the payload.
+
 ## Create payloads
 
 > [!NOTE]
@@ -154,13 +170,15 @@ To see payloads that have been archived (the **Status** value is **Archive**), u
    When you're finished on the **Select type** page, select **Next**.
 
 3. On the **Select technique** page, the available options are the same as on the **Select technique** page in the new simulation wizard:
-   - **Credential Harvest**
+   - **Credential Harvest**<sup>\*</sup>
    - **Malware Attachment**
    - **Link in Attachment**
-   - **Link to Malware**
+   - **Link to Malware**<sup>\*</sup>
    - **Drive-by URL**
-   - **OAuth Consent Grant**
-   - **How-to Guide**
+   - **OAuth Consent Grant**<sup>\*</sup>
+   - **How-to Guide**<sup>\*</sup>
+
+   <sup>\*</sup> This social engineering technique allows you to use QR codes (currently in Preview).
 
    For more information about the different social engineering techniques, see [Simulations](attack-simulation-training-get-started.md#simulations).
 
@@ -203,6 +221,13 @@ To see payloads that have been archived (the **Status** value is **Archive**), u
 
      A rich text editor is available to create the attachment content. To see the typical font and formatting settings, toggle **Formatting controls** to :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**.
 
+     > [!TIP]
+     > When **Formatting controls** is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **On**, you can use the **Insert QR code** action on the formatting controls bar for applicable social engineering techniques instead of selecting **Insert QR code** from the **Dynamic tag** dropdown list (currently in Preview):
+     >
+     > :::image type="content" source="media/attack-sim-training-payloads-formatting-controls-insert-qr-code.png" alt-text="The Insert QR code action in the formatting controls on the Configure payload page of the new payload creation wizard." lightbox="media/attack-sim-training-payloads-formatting-controls-insert-qr-code.png":::
+     >
+     > See the **Dynamic tag** description for details about adding QR codes to a payload.
+
      Select the **Phishing link** box. In the **Name phishing URL** dialog that opens, enter a **Name** value for the URL that you selected in the **Phishing link** section, and then select **Confirm**.
 
      The name value that you entered is added to the attachment content as a link to the phishing URL.
@@ -236,6 +261,35 @@ To see payloads that have been archived (the **Status** value is **Archive**), u
             |**Insert Mobile phone**|`${mobilePhone}`|
             |**Insert City**|`${city}`|
             |**Insert Date**|`${date|MM/dd/yyyy|offset}`|
+
+         - The **Insert QR code** control (currently in Preview) is available only in the **Credential Harvest**, **Drive-by URL**, **OAuth Consent Grant**, or **How-to Guide** techniques.
+
+           Instead of using a link as the phishing payload in the message, you can use a QR code. Selecting the **Insert QR code** control opens the **Insert QR code** flyout where you configure the following information:
+
+           - **Size**: Select one of the following values:
+             - **Small (50 x 50 pixels)**
+             - **Medium (100 x 100 pixels)**
+             - **Large (150 x 150 pixels)**
+           - **Horizontal position**: Enter the horizontal location in centimeters. Use the next **From** box to specify the horizontal starting point to measure from:
+             - **Top left corner**
+             - **Center**
+           - **Vertical position**: Enter the vertical location in centimeters. Use the next **From** box to specify the horizontal starting point to measure from:
+             - **Top left corner**
+             - **Center**
+
+           :::image type="content" source="media/attack-sim-training-payloads-insert-qr-code-flyout.png" alt-text="The Insert QR code flyout from the Configure payload page of the new payload creation wizard." lightbox="media/attack-sim-training-payloads-insert-qr-code-flyout.png":::
+
+           When you're finished on the **Insert QR code** flyout, select **Save**.
+
+           :::image type="content" source="media/attack-sim-training-payloads-qr-code-inserted.png" alt-text="QR code inserted in the email message of the payload during payload creation." lightbox="media/attack-sim-training-payloads-qr-code-inserted.png":::
+
+           > [!TIP]
+           >
+           > - The QR code maps to the phishing URL that you selected in the **Phishing link** section \> **Select URL**. When the payload is used in a simulation, the service replaces the QR code with a dynamically generated QR code to track click and compromise metrics. The size, position, and shape of the QR code matches the configuration options you configured in the payload.
+           > - If you use the **Send a test** button on the **Review payload** page (Step 7), you see the QR code, but it points the phishing URL that you selected. The dynamic QR code is generated when the payload is used in a real simulation.
+           > - The QR code is inserted in the email message as an image. If you switch from the **Text** tab to the **Code** tab, you see the inserted image in Base64 format. The beginning of the image starts with `<div id="QRcode"...>`. Verify the finished payload contains `<div id="QRcode"...>` before you use it in a simulation.
+           > - Verify the login page while using the payload in a simulation. You can also create login pages during the creation of simulations. For more information, see [Create a simulation: Select a payload and login page](attack-simulation-training-simulations.md#select-a-payload-and-login-page).
+           > - We recommend conducting a test simulation to validate the end to end flow before using the payload with a larger audience.
 
          - The **Phishing link** or **Malware attachment** control is available:
            - **Phishing link** is available only in the **Credential Harvest**, **Drive-by URL**, or **OAuth Consent Grant** techniques.
@@ -406,47 +460,6 @@ To remove an archived payload from the **Tenant payloads** tab, do the following
 On the **Tenant payloads** or **Global payloads** tabs, you can send a copy of the payload email to yourself (the currently logged in user) for inspection.
 
 Select the payload by clicking the check box next to the name, and then select the :::image type="icon" source="media/m365-cc-sc-send-icon.png" border="false"::: **Send a test** button that appears.
-
-### QR code payloads
-
-#### Global payloads
-Within the payload library, you can see multiple payloads across 5 languages, addressing various real-world scenarios involving QR code attacks. These payloads can be found in the Content Library- Global Payloads, name of each beginning with QR code payloads (for example, QR code payloads: Prize Winner Notification). You can locate these by typing "QR" in the search bar.
-
-:::image type="content" source="media/attack-simulation-training-global-payloads-QR-code.png" alt-text="Image showing the QR code how to guide within the content library" lightbox="media/attack-simulation-training-global-payloads-QR-code.png":::
-
-> [!TIP]
-> Before utilizing these payloads in your simulations, make sure to examine different fields and contents of the payload for your requirements.
-#### Tenant payloads
-You can create a custom payload by duplicating the existing global payloads, or creating a payload from scratch.   Within the payload editing experience, you can insert QR code using Dynamic Tags(Insert QR code) or formatting controls (QR code icon).  You have the options to select the size and position of the QR code. 
-
-:::image type="content" source="media/attack-simulation-training-insert-QR-code-1.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-1.png":::
-
-:::image type="content" source="media/attack-simulation-training-insert-QR-code-2.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-2.png":::
-
-:::image type="content" source="media/attack-simulation-training-insert-QR-code-3.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-3.png":::
-
-:::image type="content" source="media/attack-simulation-training-insert-QR-code-4.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-4.png":::
-
-:::image type="content" source="media/attack-simulation-training-insert-QR-code-5.png" alt-text="Image showing the experience for inserting a QR code in tenant payload" lightbox="media/attack-simulation-training-insert-QR-code-5.png":::
-
-The QR code that is generated will map to the phishing URL that is selected by you while configuring the payload in the payload wizard.   When this payload is used in simulation, the service will replace the QR code with a dynamically generated QR code, to track click and compromise metrics. The size, position, and shape of the QR code would match the configuration of the QR set by you in the payload. 
-
-Note that if you are using Send a Test, you will still see the QR code, but it will point to the 
-{phishingURL} that you have selected. The dynamic QR is generated when the payload is used in an 
-actual simulation
-
-The QR code is inserted as an image. If you look at the code section, you will see that the image has 
-been inserted into a base64 format. The QR code inserted using the wizard (and which will be 
-used for dynamic URL update) is marked with div id= QRcode as seen in the first line of below 
-image.
-
-:::image type="content" source="media/attack-simulation-training-insert-QR-code-6-html-div.png" alt-text="Image showing the base 64 format of the QR image and the variable" lightbox="media/attack-simulation-training-insert-QR-code-6-html-div.png":::
-
-> [!TIP]
-> Make sure to verify the login page while using the payload in a simulation. You can also 
-change the login page while selecting the payload in a simulation.
-> It is advisable to conduct a test simulation to validate the end-to-end flow before 
-circulating the final payload to broader audiences. Make sure that the payload contains the div id= QR code within the payload code, before using it in a simulation. 
 
 ## Related links
 
