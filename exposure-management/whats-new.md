@@ -61,7 +61,7 @@ For more information, see, [Review, and classify critical assets](classify-criti
 
 A new event type has been created to notify users when a new initiative is added to MSEM.
 
-For more information see, [Overview - Exposure insights](exposure-insights-overview.md)
+For more information, see, [Overview - Exposure insights](exposure-insights-overview.md)
 
 ### News from the Research Team
 
