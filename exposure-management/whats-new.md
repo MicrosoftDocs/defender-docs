@@ -55,7 +55,7 @@ The following predefined **Identity** classification rules were added to the cri
 | Authentication Extensibility Administrator    | This rule applies to identities assigned with the Microsoft Entra "Authentication Extensibility Administrator" role. |
 | Lifecycle Workflows Administrator             | This rule applies to identities assigned with the Microsoft Entra "Lifecycle Workflows Administrator" role. |
 
-For more information, see, [Review, and classify critical assets](classify-critical-assets.md)
+For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md)
 
 ### New Initiative Event
 
@@ -91,7 +91,7 @@ The following predefined classification rules were added to the critical assets 
 | **Azure Virtual Machine has a Critical Signed-in user**            | This rule applies to Azure Virtual Machines with a Critical user signed in protected by Defender for Endpoint with high or very high-criticality users signed in. |
 | **Azure Key Vaults with Many Connected Identities**          | This rule applies to Azure Key Vaults with high access compared to others, indicating critical workload usage. |
 
-For more information, see, [Review, and classify critical assets](classify-critical-assets.md)
+For more information, see, [Predefined classifications](predefined-classification-rules-and-levels.md) 
 
 ## May 2024
 
