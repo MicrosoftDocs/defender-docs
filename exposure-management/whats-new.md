@@ -78,13 +78,13 @@ The following predefined classification rules were added to the critical assets 
 | **Exchange**                                                 | This rule applies to devices identified as operational Exchange servers within a domain. These servers might hold sensitive data of the organization. |
 | **VMware ESXi**                                              | This rule applies to devices identified as operational ESXi servers. These devices might hold other sensitive or critical devices. |
 | **VMware vCenter**                                           | This rule applies to devices identified as operational VMware vCenter and frequently used by admins to manage the virtual infrastructure. |
-| **Identity with Privileged Azure Role**                      | This rule applies to identities assigned with a Privileged Azure role, over a potentially business-critical scope. A compromised identity in this role poses severe risks, including unauthorized access to Azure resources and data exposure. |
+| **Identity with Privileged Azure Role**                      | This rule applies to identities assigned with a Privileged Azure role, over a potentially business-critical scope. |
 | **Exchange Administrator**                                   | This rule applies to identities assigned with the Microsoft Entra "Exchange Administrator" role. |
 | **SharePoint Administrator**                                 | This rule applies to identities assigned with the Microsoft Entra "SharePoint Administrator" role. |
 | **Compliance Administrator**                                 | This rule applies to identities assigned with the Microsoft Entra "Compliance Administrator" role. |
 | **Groups Administrator**                                     | This rule applies to identities assigned with the Microsoft Entra "Groups Administrator" role. |
 | **Confidential Azure Virtual Machine**                                    | This rule applies to Azure confidential Virtual Machines.    |
-| **Locked Azure Virutal Machine**                                                | This rule applies to Azuew virtual machines that are safeguarded by a lock. |
+| **Locked Azure Virtual Machine**                                                | This rule applies to Azure virtual machines that are safeguarded by a lock. |
 | **Azure Virtual Machine with High Availability and Performance** | This rule applies to Azure Virtual Machines that use premium Azure storage and are configured with an availability set. |
 | **Immutable Azure Storage**                                  | This rule applies to Azure storage accounts that have immutability support enabled. |
 | **Immutable and Locked Azure Storage**                       | This rule applies to Azure storage accounts that have immutability support enabled with a locked policy in place. |
