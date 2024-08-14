@@ -14,9 +14,9 @@ ms.collection:
 - tier1
 ms.topic: conceptual
 search.appverid: 
-  - MOE150
-  - MET150
-ms.date: 08/08/2024
+- MOE150
+- MET150
+ms.date: 08/14/2024
 ---
 
 # Manage the deception capability in Microsoft Defender XDR
