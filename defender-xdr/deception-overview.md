@@ -76,7 +76,7 @@ There are two types of lures available in the deception feature:
 
 You can specify decoys, lures, and the scope in a deception rule. See [Configure the deception feature](configure-deception.md) to learn more about how to create and modify deception rules.  
 
-When an attacker uses a decoy or a lure on any Defender for Endpoint-onboarded client, the deception capability triggers an alert that indicates possible attacker activity, regardless of whether deception was deployed on the client or not.
+When an attacker uses a decoy on any Defender for Endpoint-onboarded client, the deception capability triggers an alert that indicates possible attacker activity, regardless of whether deception was deployed on the client or not.
 
 ## Identify incidents and alerts activated by deception
 
