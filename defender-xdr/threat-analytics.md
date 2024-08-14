@@ -56,11 +56,11 @@ With more sophisticated adversaries and new threats emerging frequently and prev
 Each report provides an analysis of a tracked threat and extensive guidance on how to defend against that threat. It also incorporates data from your network, indicating whether the threat is active and if you have applicable protections in place.
 
 ## Required roles and permissions
-The following table outlines the roles and permissions required to access Threat Analytics. Roles defined in the following table refer to custom roles in individual portals and aren't connected to global roles in Microsoft Entra ID, even if similarly named.
+The following table outlines the roles and permissions required to access Threat Analytics. Roles defined in the table refer to custom roles in individual portals and aren't connected to global roles in Microsoft Entra ID, even if similarly named.
 
-| **One of the following roles are required for Microsoft Defender XDR**  | **One of the following roles are required for Microsoft Defender for Endpoint**  | **One of the following roles are required for Microsoft Defender for Office 365** | **One of the following roles are required for Microsoft Defender for Cloud Apps** |  **One of the following roles are required for Microsoft Defender for Cloud** | 
+| **One of the following roles are required for Microsoft Defender XDR**  | **One of the following roles are required for Microsoft Defender for Endpoint**  | **One of the following roles are required for Microsoft Defender for Office 365** | **One of the following roles are required for Microsoft Defender for Cloud Apps and Microsoft Defender for Identity** |  **One of the following roles is required for Microsoft Defender for Cloud** | 
 |---------|---------|---------|---------|---------|
-| Threat analytics | Alerts and incidents data: <ul><li>View data- security operations</li></ul>Defender Vulnerability Management mitigations:<ul><li>View data - Threat and vulnerability management</li></ul> | Alerts and incidents data:<ul> <li>View-only manage alerts</li> <li>Manage alerts</li> <li>Organization configuration</li><li>Audit logs</li> <li>View-only audit logs</li><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> </ul> Prevented email attempts: <ul><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> | Not available for Defender for Cloud Apps or Microsoft Defender for Identity users | <ul><li>Global admin</li><li>Security admin</li></ul> |
+| Threat analytics | Alerts and incidents data: <ul><li>View data- security operations</li></ul>Defender Vulnerability Management mitigations:<ul><li>View data - Threat and vulnerability management</li></ul> | Alerts and incidents data:<ul> <li>View-only manage alerts</li> <li>Manage alerts</li> <li>Organization configuration</li><li>Audit logs</li> <li>View-only audit logs</li><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> </ul> Prevented email attempts: <ul><li>Security reader</li> <li>Security admin</li><li>View-only recipients</li> | <ul><li>Global admin</li> <li>Security admin</li> <li>Compliance admin</li> <li>Security operator</li> <li>Security reader</li></ul> | <ul><li>Global admin</li><li>Security admin</li></ul> |
 
 >[!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -208,6 +208,7 @@ When looking at the threat analytics data, remember the following factors:
 
 - The checklist in the **Recommended actions** tab only displays recommendations tracked in [Microsoft Secure Score](microsoft-secure-score.md). Check the **Analyst report** tab for more recommended actions that aren't tracked in Secure Score.
 - The recommended actions don’t guarantee complete resilience and only reflect the best possible actions needed to improve it.
+- Antivirus-related statistics are based on Microsoft Defender Antivirus settings. 
 
 
 ## See also
