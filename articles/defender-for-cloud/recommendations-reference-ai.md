@@ -23,7 +23,7 @@ To learn about actions that you can take in response to these recommendations, s
 
 ### [Azure AI Services resources should have key access disabled (disable local authentication)](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/13b10b36-aa99-4db6-b00c-dcf87c4761e6)
 
-**Description**: Key access (local authentication) is recommended to be disabled for security. Azure OpenAI Studio, typically used in development/testing, requires key access and will not function if key access is disabled. After the setting is disabled, Microsoft Entra ID becomes the only access method, which allows maintaining minimum privilege principle and granular control. [Learn more](https://aka.ms/AI/auth).
+**Description**: Key access (local authentication) is recommended to be disabled for security. Azure OpenAI Studio, typically used in development/testing, requires key access and will not function if key access is disabled. After the setting is disabled, Microsoft Entra ID becomes the only access method, which allows maintaining minimum privilege principle and granular control. [Learn more](/azure/ai-services/authentication).
 
 This recommendation replaces the old recommendation *Cognitive Services accounts should have local authentication methods disabled*. It was formerly in category Cognitive Services and Cognitive Search, and was updated to comply with the Azure AI Services naming format and align with the relevant resources. 
 
@@ -40,9 +40,9 @@ This recommendation replaces the old recommendation *Cognitive Services accounts
 
 ### [Azure AI Services resources should use Azure Private Link](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/54f53ddf-6ebd-461e-a247-394c542bc5d1)
 
-**Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The Private Link platform reduces data leakage risks by handling the connectivity between the consumer and services over the Azure backbone network.
+**Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The Private Link platform reduces data leakage risks by handling the connectivity between the consumer and services over the Azure backbone network.
 
-Learn more about private links at: [https://aka.ms/AzurePrivateLink/Overview](https://aka.ms/AzurePrivateLink/Overview)
+Learn more about private links at: [What is Azure Private Link?](/azure/private-link/private-link-overview)
 
 This recommendation replaces the old recommendation *Cognitive Services should use private link*. It was formerly in category Data recommendations, and was updated to comply with the Azure AI Services naming format and align with the relevant resources.
 

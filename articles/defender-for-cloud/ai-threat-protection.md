@@ -20,9 +20,6 @@ Defender for Cloud's AI threat protection integrates with [Azure AI Content Safe
 
 :::image type="content" source="media/ai-threat-protection/threat-protection-ai.png" alt-text="Diagram that shows how enabling, detection, and response works for threat protection." lightbox="media/ai-threat-protection/threat-protection-ai.png":::
 
-> [!NOTE]
-> Threat protection for AI workloads relies on [Azure OpenAI content filtering](/azure/ai-services/openai/concepts/content-filter) for prompt-base triggered alert. If you opt out of prompt-based trigger alerts and removed that capability, it can affect Defender for Cloud's ability to monitor and detect such attacks.
-
 ## Defender XDR integration
 
 Threat protection for AI workloads integrates with [Defender XDR](concept-integration-365.md), enabling security teams to centralize alerts on AI workloads within the Defender XDR portal.

@@ -61,6 +61,8 @@ The following endpoint detection and response solutions are supported in Defende
 | Trellix | Windows and Linux |
 | Symantec | Windows and Linux |
 | Sophos |  Windows and Linux |
+| Singularity Platform by SentinelOne | Windows and Linux |
+| Cortex XDR|  Windows and Linux |
 
 ### Identify which endpoint detection and response solution is enabled on a VM
 

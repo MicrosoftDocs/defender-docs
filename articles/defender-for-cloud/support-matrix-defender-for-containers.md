@@ -136,6 +136,10 @@ Learn how to [use Azure Private Link to connect networks to Azure Monitor](/azur
 
 Outbound proxy without authentication and outbound proxy with basic authentication are supported. Outbound proxy that expects trusted certificates is currently not supported.
 
+### Clusters with IP restrictions - AWS
+
+If your Kubernetes cluster in AWS has control plane IP restrictions enabled (see  [Amazon EKS cluster endpoint access control - Amazon EKS,](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) ), the control plane’s IP restriction configuration will be updated to include the CIDR block of Microsoft Defender for Cloud.
+
 ## GCP
 
 | Domain | Feature | Supported Resources | Linux release state  | Windows release state  | Agentless/Sensor-based | Pricing tier |
@@ -179,6 +183,10 @@ Outbound proxy without authentication and outbound proxy with basic authenticati
 ### Outbound proxy support - GCP
 
 Outbound proxy without authentication and outbound proxy with basic authentication are supported. Outbound proxy that expects trusted certificates is currently not supported.
+
+### Clusters with IP restrictions - GCP
+
+If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see [Add authorized networks for control plane access  |  Google Kubernetes Engine (GKE)  |  Google Cloud](https://cloud.google.com/kubernetes-engine/docs/how-to/authorized-networks) ), the control plane’s IP restriction configuration will be updated to include the CIDR block of Microsoft Defender for Cloud.
 
 ## On-premises, Arc-enabled Kubernetes clusters
 

@@ -234,7 +234,7 @@ Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-mach
 
 ### [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc)
 
-**Description**: To ensure secure configurations of in-guest settings of your machine, install the Guest Configuration extension. In-guest settings that the extension monitors include the configuration of the operating system, application configuration or presence, and environment settings. Once installed, in-guest policies will be available such as [Windows Exploit guard should be enabled](https://aka.ms/gcpol).
+**Description**: To ensure secure configurations of in-guest settings of your machine, install the Guest Configuration extension. In-guest settings that the extension monitors include the configuration of the operating system, application configuration or presence, and environment settings. Once installed, in-guest policies will be available such as [Windows Exploit guard should be enabled](/azure/governance/machine-configuration/overview).
 (Related policy: [Virtual machines should have the Guest Configuration extension](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicyDefinitions%2fae89ebca-1c92-4898-ac2c-9f63decb045c)).
 
 **Severity**: Medium
@@ -254,7 +254,7 @@ Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-mach
 
 ### [Linux virtual machines should enable Azure Disk Encryption or EncryptionAtHost](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/a40cc620-e72c-fdf4-c554-c6ca2cd705c0)
 
-**Description**: By default, a virtual machine's OS and data disks are encrypted-at-rest using platform-managed keys; temp disks and data caches aren't encrypted, and data isn't encrypted when flowing between compute and storage resources. Use Azure Disk Encryption or EncryptionAtHost to encrypt all this data. Visit [https://aka.ms/diskencryptioncomparison](https://aka.ms/diskencryptioncomparison) to compare encryption offerings. This policy requires two prerequisites to be deployed to the policy assignment scope. For details, visit [https://aka.ms/gcpol](https://aka.ms/gcpol).
+**Description**: By default, a virtual machine's OS and data disks are encrypted-at-rest using platform-managed keys; temp disks and data caches aren't encrypted, and data isn't encrypted when flowing between compute and storage resources. Use Azure Disk Encryption or EncryptionAtHost to encrypt all this data. Visit [Overview of managed disk encryption options](/azure/virtual-machines/disk-encryption-overview#comparison) to compare encryption offerings. This policy requires two prerequisites to be deployed to the policy assignment scope. For details, visit [Understanding Azure Machine Configuration](/azure/governance/machine-configuration/overview).
 (Related policy: [[Preview]: Linux virtual machines should enable Azure Disk Encryption or EncryptionAtHost](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicyDefinitions%2fca88aadc-6e2b-416c-9de2-5a0f01d1693f)).
 
 Replaces the older recommendation *Virtual machines should encrypt temp disks, caches, and data flows between Compute and Storage resources*. The recommendation enables you to audit VM encryption compliance.
@@ -480,7 +480,7 @@ This assessment only applies to Trusted Launch enabled virtual machines that hav
 
 ### [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755)
 
-**Description**: The Guest Configuration extension requires a system assigned managed identity. Azure virtual machines in the scope of this policy will be non-compliant when they have the Guest Configuration extension installed but do not have a system assigned managed identity. [Learn more](https://aka.ms/gcpol)
+**Description**: The Guest Configuration extension requires a system assigned managed identity. Azure virtual machines in the scope of this policy will be non-compliant when they have the Guest Configuration extension installed but do not have a system assigned managed identity. [Learn more](/azure/governance/machine-configuration/overview)
 (Related policy: [Guest Configuration extension should be deployed to Azure virtual machines with system assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2fd26f7642-7545-4e18-9b75-8c9bbdee3a9a)).
 
 **Severity**: Medium
@@ -498,11 +498,11 @@ This assessment only applies to Trusted Launch enabled virtual machines that hav
 
 **Description**: By default, a virtual machine's OS and data disks are encrypted-at-rest using platform-managed keys;
 temp disks and data caches aren't encrypted, and data isn't encrypted when flowing between compute and storage resources.
-For a comparison of different disk encryption technologies in Azure, see <https://aka.ms/diskencryptioncomparison>.
+For a comparison of different disk encryption technologies in Azure, see [Overview of managed disk encryption options](/azure/virtual-machines/disk-encryption-overview#comparison).
 Use Azure Disk Encryption to encrypt all this data.
 Disregard this recommendation if:
 
-You're using the encryption-at-host feature, or server-side encryption on Managed Disks meets your security requirements. Learn more in [server-side encryption of Azure Disk Storage](https://aka.ms/disksse).
+You're using the encryption-at-host feature, or server-side encryption on Managed Disks meets your security requirements. Learn more in [server-side encryption of Azure Disk Storage](/azure/virtual-machines/disk-encryption).
 
 (Related policy: [Disk encryption should be applied on virtual machines](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f0961003e-5a0a-4549-abde-af6a37f2724d))
 
@@ -544,7 +544,7 @@ Learn more about [Trusted launch for Azure virtual machines](/azure/virtual-mach
 
 ### [Windows virtual machines should enable Azure Disk Encryption or EncryptionAtHost](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/0cb5f317-a94b-6b80-7212-13a9cc8826af)
 
-**Description**: By default, a virtual machine's OS and data disks are encrypted-at-rest using platform-managed keys; temp disks and data caches aren't encrypted, and data isn't encrypted when flowing between compute and storage resources. Use Azure Disk Encryption or EncryptionAtHost to encrypt all this data. Visit [https://aka.ms/diskencryptioncomparison](https://aka.ms/diskencryptioncomparison) to compare encryption offerings. This policy requires two prerequisites to be deployed to the policy assignment scope. For details, visit [https://aka.ms/gcpol](https://aka.ms/gcpol).
+**Description**: By default, a virtual machine's OS and data disks are encrypted-at-rest using platform-managed keys; temp disks and data caches aren't encrypted, and data isn't encrypted when flowing between compute and storage resources. Use Azure Disk Encryption or EncryptionAtHost to encrypt all this data. Visit [Overview of managed disk encryption options](/azure/virtual-machines/disk-encryption-overview#comparison) to compare encryption offerings. This policy requires two prerequisites to be deployed to the policy assignment scope. For details, visit [Understanding Azure Machine Configuration](/azure/governance/machine-configuration/overview).
 (Related policy: [[Preview]: Windows virtual machines should enable Azure Disk Encryption or EncryptionAtHost](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f3dc5edcd-002d-444c-b216-e123bbfa37c0)).
 
 Replaces the older recommendation Virtual machines should encrypt temp disks, caches, and data flows between Compute and Storage resources. The recommendation enables you to audit VM encryption compliance.
