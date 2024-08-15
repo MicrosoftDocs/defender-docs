@@ -681,7 +681,7 @@ The following configuration profile (or, in case of JAMF, a property list that c
         <key>PayloadOrganization</key>
         <string>Microsoft</string>
         <key>PayloadIdentifier</key>
-        <string>com.microsoft.wdav</string>
+        <string>
         <key>PayloadDisplayName</key>
         <string>Microsoft Defender for Endpoint settings</string>
         <key>PayloadDescription</key>
@@ -704,7 +704,7 @@ The following configuration profile (or, in case of JAMF, a property list that c
                 <key>PayloadOrganization</key>
                 <string>Microsoft</string>
                 <key>PayloadIdentifier</key>
-                <string>com.microsoft.wdav</string>
+                <string>
                 <key>PayloadDisplayName</key>
                 <string>Microsoft Defender for Endpoint configuration settings</string>
                 <key>PayloadDescription</key>
