@@ -710,10 +710,12 @@
             href: enable-adaptive-application-controls.md
     - name: Investigate and remediate 
       items:
-      - name: Remediate agentless EDR recommendations
+      - name: Remediate EDR solution recommendations (agentless)
         displayName: defender for endpoint, endpoint, edr
-        href: endpoint-detection-response.md     
-      - name: Review recommendations for supported EDR solutions (MMA)
+        href: endpoint-detection-response.md   
+      - name: Remediate Defender for Endpoint EDR recommendations
+        href: endpoint-detection-misconfiguration  
+      - name: Remediate EDR solution recommendations (MMA)
         href: endpoint-protection-recommendations-technical.md 
       - name: Remediate machine vulnerabilities
         displayName: qualys, va, rapid7, vulnerability
