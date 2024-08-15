@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/29/2024
+ms.date: 08/15/2024
 ---
 
 # Set preferences for Microsoft Defender for Endpoint on macOS
@@ -681,7 +681,7 @@ The following configuration profile (or, in case of JAMF, a property list that c
         <key>PayloadOrganization</key>
         <string>Microsoft</string>
         <key>PayloadIdentifier</key>
-        <string>com.microsoft.wdav</string>
+        <string>
         <key>PayloadDisplayName</key>
         <string>Microsoft Defender for Endpoint settings</string>
         <key>PayloadDescription</key>
@@ -704,7 +704,7 @@ The following configuration profile (or, in case of JAMF, a property list that c
                 <key>PayloadOrganization</key>
                 <string>Microsoft</string>
                 <key>PayloadIdentifier</key>
-                <string>com.microsoft.wdav</string>
+                <string>
                 <key>PayloadDisplayName</key>
                 <string>Microsoft Defender for Endpoint configuration settings</string>
                 <key>PayloadDescription</key>
