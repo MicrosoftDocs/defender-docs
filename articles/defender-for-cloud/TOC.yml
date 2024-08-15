@@ -12,8 +12,8 @@
     - name: What's new in Defender for Cloud features
       displayName: changelog, news, release notes
       href: release-notes.md
-    - name: What's new in recommendations and alerts
-      displayName: what's new, recommendations, alerts
+    - name: What's new in recommendations, alerts, and incidents
+      displayName: what's new, recommendations, alerts, incidents
       href: release-notes-recommendations-alerts.md
     - name: Prepare for retirement of the Log Analytics agent
       href: prepare-deprecation-log-analytics-mma-agent.md
@@ -212,6 +212,8 @@
         href: permissions-management.md
       - name: Agentless machine scanning
         href: concept-agentless-data-collection.md
+      - name: Supported resource types for multicloud in Foundational CSPM
+        href: multicloud-resource-types-support-foundational-cspm.md  
       - name: Secrets protection
         items:
         - name: Overview
@@ -1169,6 +1171,12 @@
         - name: Microsoft Copilot for Security integration
           displayName: Copilot, security
           href: episode-forty-nine.md
+        - name: Secure your AI applications from code to runtime
+          displayName: AI, applications, code, runtime
+          href: episode-fifty.md
+        - name: Defender for Open-Source Relational Databases multicloud
+          displayName: Defender for Open-Source Relational Databases, multicloud, RDS, threat detection
+          href: episode-fifty-one.md
     - name: Manage user data
       href: privacy.md
     - name: Microsoft Defender for IoT documentation
