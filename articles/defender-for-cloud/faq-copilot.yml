@@ -48,7 +48,9 @@ sections:
 
         answer: |
           Yes. When you submit a prompt, a progress screen appears. If the message `Using Copilot for Security` appears, then Azure Copilot passed along the prompt to Copilot for Security to respond.   
-
+          
+          :::image type="content" source="media/faq-copilot/using-copilot.png" alt-text="Screenshot that shows the copilot window showing the words Using Copilot for Security." lightbox="media/faq-copilot/using-copilot.png":::
+          
 
 
       - question: |
@@ -63,7 +65,7 @@ sections:
           I got a response from one of the Copilots that was inaccurate, what should I do?
 
         answer: |
-          For any responses that somehow deviate from your expectations, we recommend using the feedback option that appears after the prompt.
+          For any responses that somehow deviate from your expectations, we recommend using the feedback option that appears after the prompt by selecting the thumbs up or thumbs down buttons.
 
 
 
