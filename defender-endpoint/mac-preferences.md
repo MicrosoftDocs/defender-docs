@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: how-to
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/29/2024
+ms.date: 08/15/2024
 ---
 
 # Set preferences for Microsoft Defender for Endpoint on macOS
