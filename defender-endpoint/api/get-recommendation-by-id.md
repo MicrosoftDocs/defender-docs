@@ -102,7 +102,11 @@ Here's an example of the response.
     "totalMachineCount": 6,
     "exposedMachinesCount": 5,
     "nonProductivityImpactedAssets": 0,
-    "relatedComponent": "Chrome"
+    "relatedComponent": "Chrome",
+    "tags": [
+    "internetFacing"
+    ],
+    "exposedCriticalDevices": 116
 }
 ```
 
