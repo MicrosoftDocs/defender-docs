@@ -108,7 +108,9 @@ Here is an example of the response.
             "exploitInKit": false,
             "exploitTypes": [],
             "exploitUris": [],
-            "CveSupportability": "supported"  
+            "CveSupportability": "supported",
+            "tags": [],
+            "epss": 0.632
         }
     ]
 
