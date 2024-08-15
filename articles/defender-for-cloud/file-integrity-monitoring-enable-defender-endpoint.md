@@ -71,6 +71,10 @@ To enable FIM in the Azure portal, follow these steps:
 
    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration-tabs.png" alt-text="Screenshot of the FIM configuration tabs." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration-tabs.png":::
 
+1. Select **Continue**.
+
+1. Select **Save**.
+
 ### Enable with API
 
 FIM collected events are ingested into the designated workspace defined in the onboarding process into a dedicated table called `MDCFileIntegrityMonitoringEvents`.
@@ -100,6 +104,12 @@ To disable FIM in the Azure portal, follow these steps:
 
     :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/disable-file-integrity-monitoring.png" alt-text="Screenshot of how to disable File Integrity Monitoring." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/disable-file-integrity-monitoring.png":::
 
+1. Select **Apply**.
+
+1. Select **Continue**.
+
+1. Select **Save**.
+
 ### Disable with API
 
 ## Monitor entities and files
@@ -117,6 +127,11 @@ To monitor entities and files, follow these steps:
 1. If you select a resource, a window opens with a query showing the changes made to the tracked files and registries on that resource.
 
     :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-query.png" alt-text="Screenshot of the File Integrity Monitoring query." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-query.png":::
+
+1. If you select the subscription of the resource (under the column **Subscription name**), a query opens with all the tracked files and registries in that subscription.
+
+> [!NOTE]
+> If you previously used [File Integrity Monitoring over MMA](file-integrity-monitoring-enable-log-analytics.md), you can return to that method by selecting **Change to previous experience**. This will be available until the FIM over MMA feature is deprecated. For information on the deprecation plan, see [Prepare for retirement of the Log Analytics agent](prepare-deprecation-log-analytics-mma-agent.md).
 
 ## Retrieve and analyze FIM data  
 

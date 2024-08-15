@@ -683,10 +683,10 @@
         href:  file-integrity-monitoring-enable-defender-endpoint.md
       - name: Migrate from previous versions
         href:  migrate-file-integrity-monitoring.md
-      - name: Enable File Integrity Monitoring (AMA)
+      - name: File Integrity Monitoring over AMA (Deprecated)
         displayName: fim, change, azure monitor agent
         href: file-integrity-monitoring-enable-ama.md
-      - name: Enable File Integrity Monitoring (Log Analytics)
+      - name: File Integrity Monitoring over Log Analytics
         displayName: fim, change, log analytics, mma
         href: file-integrity-monitoring-enable-log-analytics.md
     - name: Just-in-time access
