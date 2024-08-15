@@ -4,6 +4,7 @@ ms.reviewer:
 description: Select Ask Defender Experts directly inside the Microsoft Defender security portal to get swift and accurate responses to all your threat hunting questions.
 search.product: Windows 10
 ms.service: defender-experts
+ms.subservice: dex-hunting
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -18,7 +19,7 @@ ms.collection:
   - essentials-get-started
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/18/2024
+ms.date: 08/14/2024
 ---
 
 # Collaborate with experts on demand
