@@ -15,7 +15,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 08/06/2024
+ms.date: 08/15/2024
 ---
 
 # EDR detection test for verifying device's onboarding and reporting services
@@ -76,7 +76,6 @@ After a few minutes, a detection should be raised in Microsoft Defender XDR.
 
 3. Look at the alert details, machine timeline, and perform your typical investigation steps.
 
-<!---
 ### macOS
 
 1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP MacOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract.
@@ -129,7 +128,6 @@ After a few minutes, a detection should be raised in Microsoft Defender XDR.
 
     Look at the alert details and the device timeline, and perform the regular investigation steps.
 
---->
 
 ## Next steps
 
