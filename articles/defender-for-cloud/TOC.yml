@@ -12,8 +12,8 @@
     - name: What's new in Defender for Cloud features
       displayName: changelog, news, release notes
       href: release-notes.md
-    - name: What's new in recommendations and alerts
-      displayName: what's new, recommendations, alerts
+    - name: What's new in recommendations, alerts, and incidents
+      displayName: what's new, recommendations, alerts, incidents
       href: release-notes-recommendations-alerts.md
     - name: Prepare for retirement of the Log Analytics agent
       href: prepare-deprecation-log-analytics-mma-agent.md
