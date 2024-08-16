@@ -135,7 +135,6 @@ For example:
 For more information about DMARC, use the following resources:
 
 - The [DMARC Training Series](https://www.m3aawg.org/activities/training/dmarc-training-series) from M<sup>3</sup>AAWG (Messaging, Malware, Mobile Anti-Abuse Working Group).
-- The checklist at [dmarcian](https://space.dmarcian.com/deployment/).
 - Information at [DMARC.org](https://dmarc.org).
 
 ## Use the Microsoft 365 admin center to add DMARC TXT records for \*.onmicrosoft.com domains in Microsoft 365
