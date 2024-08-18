@@ -3,12 +3,12 @@ title: Zero Trust and Defender for Cloud | Defender for Cloud in the Field
 
 description: Learn about Zero Trust best practices and Zero Trust visibility and analytics tools
 ms.topic: reference
-ms.date: 04/27/2023
+ms.date: 08/18/2024
 ---
 
 # Zero Trust and Defender for Cloud | Defender for Cloud in the field
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Mekonnen Kassa joins Yuri Diogenes to discuss the importance of using Zero Trust. Mekonnen covers the principles of Zero Trust, the importance of switching your mindset to adopt this strategy and how Defender for Cloud can help. Mekonnen also talks about best practices to get started, visibility and analytics as part of Zero Trust, and what tools can be leveraged to achieve it.
+**Episode description**: In this episode of Defender for Cloud in the Field, Mekonnen Kassa joins Yuri Diogenes to discuss the importance of using Zero Trust. Mekonnen covers the principles of Zero Trust, the importance of switching your mindset to adopt this strategy and how Defender for Cloud can help. Mekonnen also talks about best practices to get started, visibility, and analytics as part of Zero Trust, and what tools can be applied to achieve it.
 
 > [!VIDEO https://aka.ms/docs/player?id=125af768-01bd-45ac-8503-4dba5eb53ff7]
 
