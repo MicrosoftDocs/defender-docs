@@ -2,7 +2,7 @@
 title: Supported resource and service types for multicloud in Foundational CSPM
 description: Learn more about the supported resource and service types for multicloud in Microsoft Defender for Cloud's Foundational CSPM.
 ms.topic: conceptual
-ms.date: 02/29/2024
+ms.date: 08/18/2024
 ---
 
 # Supported resource and service types for multicloud in foundational CSPM
@@ -17,7 +17,7 @@ ms.date: 02/29/2024
 | ApiGateway | Stage |
 | AppSync | GraphqlApi |
 | ApplicationAutoScaling | ScalableTarget |
-| AutoScaling | AutoScalingGroup |
+| Auto-Scaling | AutoScalingGroup |
 | AWS | Account |
 | AWS | AccountInRegion |
 | CertificateManager | CertificateTags |

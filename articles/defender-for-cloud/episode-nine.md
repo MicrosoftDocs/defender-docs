@@ -1,25 +1,25 @@
 ---
 title: Microsoft Defender for Containers in a multicloud environment
-description: Learn about Microsoft Defender for Containers implementation in AWS and GCP.
+description: Learn about Microsoft Defender for Containers implementation in Amazon Web Service and Google Cloud Platform.
 ms.topic: reference
-ms.date: 04/27/2023
+ms.date: 08/18/2024
 ---
 
 # Microsoft Defender for Containers in a Multicloud Environment
 
-**Episode description**: In this episode of Defender for Cloud in the field, Maya Herskovic joins Yuri Diogenes to talk about Microsoft Defender for Containers implementation in AWS and GCP.
+Maya Herskovic and Yuri Diogenes discuss the implementation of Microsoft Defender for Containers in Amazon Web Service (AWS) and Google Cloud Platform (GCP) in this episode of Defender for Cloud in the field.
 
 Maya explains about the new workload protection capabilities related to Containers when they're deployed in a multicloud environment. Maya also demonstrates the onboarding experience in GCP and how to visualize security recommendations across AWS, GCP, and Azure in a single dashboard.
 
 > [!VIDEO https://aka.ms/docs/player?id=f9470496-abe3-4344-8160-d6a6b65c077f]
 
-- [01:12](/shows/mdc-in-the-field/containers-multi-cloud#time=01m12s) - Container protection in a multicloud environment
+- [01:12](/shows/mdc-in-the-field/containers-multi-cloud#time=01m12s) - Container protection in a multicloud environment.
 
-- [05:03](/shows/mdc-in-the-field/containers-multi-cloud#time=05m03s) - Workload protection capabilities for GCP
+- [05:03](/shows/mdc-in-the-field/containers-multi-cloud#time=05m03s) - Workload protection capabilities for GCP.
 
-- [06:18](/shows/mdc-in-the-field/containers-multi-cloud#time=06m18s) - Single dashboard for multi-cloud
+- [06:18](/shows/mdc-in-the-field/containers-multi-cloud#time=06m18s) - Single dashboard for multicloud.
 
-- [10:25](/shows/mdc-in-the-field/containers-multi-cloud#time=10m25s) - Demonstration
+- [10:25](/shows/mdc-in-the-field/containers-multi-cloud#time=10m25s) - Demonstration.
 
 ## Recommended resources
 
