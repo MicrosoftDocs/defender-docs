@@ -44,7 +44,7 @@ Microsoft Defender for Cloud assesses machines against MCSB baselines. Defender 
 1. In Defender for Cloud, open the **Recommendations** page.
 1. Select the recommendation ```Machines should be configured to periodically check for missing system updates (powered by Azure Update Manager)```.
 
-    - Under **Remediation steps**, review quick fix and manual fix details. If you follow the quick fix, the [periodic assessment](/azure/update-manager/assessment-options.mdassessment-options#periodic-assessment) update setting is enabled on machines.
+    - Under **Remediation steps**, review quick fix and manual fix details. If you follow the quick fix, the [periodic assessment](/azure/update-manager/assessment-options#periodic-assessment) update setting is enabled on machines.
     - In the **Unhealthy resources** list, you can drill to see resource details
 
 1. Select the recommendation ```System updates should be installed on your machines (powered by Azure Update Manager)```. 

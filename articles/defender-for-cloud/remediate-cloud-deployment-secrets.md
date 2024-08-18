@@ -19,7 +19,7 @@ This article helps you to identify and remediate security risks with cloud deplo
 
 - [Defender for Cloud](get-started.md) must be available in your Azure subscription.
  - The [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) plan.
-- [Agentless machine scanning](econcept-agentless-data-collection) must be enabled. 
+- [Agentless machine scanning](concept-agentless-data-collection) must be enabled. 
 
 
 

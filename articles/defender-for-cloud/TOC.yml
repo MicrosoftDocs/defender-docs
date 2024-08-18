@@ -714,7 +714,7 @@
         displayName: defender for endpoint, endpoint, edr
         href: endpoint-detection-response.md   
       - name: Remediate Defender for Endpoint EDR recommendations
-        href: endpoint-detection-misconfiguration  
+        href: endpoint-detection-misconfiguration.md
       - name: Remediate EDR solution recommendations (MMA)
         href: endpoint-protection-recommendations-technical.md 
       - name: Remediate machine vulnerabilities
@@ -730,10 +730,10 @@
         displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
       - name: Review system update recommendations
         displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
-        href: reommendations-apply-operating-system-updates.md
+        href: recommendations-apply-operating-system-updates.md
       - name: Review software inventory
         displayName: inventory, apps, software inventory, mde, tvm
-        href: asset-inventory.md#access-a-software-inventory
+        href: asset-inventory.md
       - name: Remediate machine secrets
         href: remediate-server-secrets.md 
       - name: Review Docker host hardening recommendations

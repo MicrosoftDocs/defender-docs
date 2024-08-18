@@ -17,7 +17,7 @@ introduction: |
 
 prerequisites:
   summary: |
-    - Review [supported machines](/defender-endpoint/tvm-supported-os)
+    - Review [supported machines](/defender-vulnerability-management/tvm-supported-os)
     - Make sure you have a Defender for Servers plan enabled.
     - The plan must have Defender for Endpoint integration enabled.
     - You need Owner (resource group level) permissions to deploy.
