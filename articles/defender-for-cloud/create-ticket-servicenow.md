@@ -4,14 +4,14 @@ description: Learn how to create a ticket in Defender for Cloud that connects an
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 03/11/2024
+ms.date: 08/18/2024
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to Create a ticket in Defender for Cloud for my ServiceNow account.
 ---
 
 # Create a ticket in Defender for Cloud
 
-The integration between Defender for Cloud and ServiceNow allows Defender for Cloud customers to create tickets in Defender for Cloud that connects to a ServiceNow account. ServiceNow tickets are linked to recommendations directly from Defender for Cloud, allowing the two platforms to facilitate efficient incident management.
+The integration between Defender for Cloud with ServiceNow's IT Service Management (ITSM) module, allows Defender for Cloud customers to create tickets in Defender for Cloud that connect to a ServiceNow account. ServiceNow tickets are then linked directly to recommendations in Defender for Cloud. When a ticket is connected to a recommendation, the two platforms can facilitate efficient incident management and resolution.
 
 ## Prerequisites
 
