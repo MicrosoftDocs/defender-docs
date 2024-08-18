@@ -10,7 +10,7 @@ ms.date: 03/12/2024
 
 In the Defender for Servers plan in Microsoft Defender for Cloud, [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
-File integrity monitoring uses Azure Automation change tracking. This article describes how to set up file integrity monitoring with the [Azure Monitoring Agent (AMA)](../automation/change-tracking/overview-monitoring-agent), so that you can monitor changes directly in Defender for Cloud.
+File integrity monitoring uses Azure Automation change tracking. This article describes how to set up file integrity monitoring with the [Azure Monitoring Agent (AMA)](/azure/automation/change-tracking/overview-monitoring-agent), so that you can monitor changes directly in Defender for Cloud.
 
 > [!Note]
 > - File integrity monitoring using the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) is generally availability (GA).
@@ -25,8 +25,8 @@ This article describes how to set up file integrity monitoring with the AMA. Thi
 
 ## Prerequisites
 
-- The [AMA must be installed](../azure-monitor/vm/monitor-virtual-machine-agent.md) on machines you want to monitor.
-- [Defender for Servers Plan 2]((defender-for-servers-introduction.md)) must be enabled.
+- The [AMA must be installed](/azure/azure-monitor/vm/monitor-virtual-machine-agent) on machines you want to monitor.
+- [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled.
 - You need Owner/Contributor permissions to configure file integrity monitoring.
 - File integrity monitoring is supported for Azure VMs, on-premises machines onboarded as Azure Arc VMs, and AWS accounts and GCP projects connected to Defender for Cloud.
 - File integrity monitoring is supported in the Azure commercial cloud in these regions: `australiaeast`, `australiasoutheast`, `canadacentral`, `centralindia`, `centralus`, `eastasia`, `eastus2euap`, `eastus`, `eastus2`, `francecentral`, `japaneast`, `koreacentral`, `northcentralus`, `northeurope`, `southcentralus`, `southeastasia`, `switzerlandnorth`, `uksouth`, `westcentralus`, `westeurope`, `westus`, `westus2`
@@ -67,7 +67,7 @@ Enable file integrity monitoring using a security recommendation.
 
 ## Customize tracking
 
-[Data collection rules](../azure-monitor/essentials/data-collection-rule-overview.md) define which files and registry keys to track. Each subscription has a rule for the machines in that subscription.
+[Data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview) define which files and registry keys to track. Each subscription has a rule for the machines in that subscription.
 
 File integrity monitoring creates rules with a with a default tracking settings. You can edit the rules to customize file and registry tracking.
 
@@ -79,7 +79,7 @@ File integrity monitoring creates rules with a with a default tracking settings.
     - You can change entry definitions for a file or registry key, including name, path, and other options.
     - You can disable an entry to untrack it without removing the definition.
 
-    Learn more about [system file and registry key definitions](../automation/change-tracking/manage-change-tracking.md#track-files).
+    Learn more about [system file and registry key definitions](/azure/automation/change-tracking/manage-change-tracking#track-files).
 
 
 1. Select **Add** to save the changes.

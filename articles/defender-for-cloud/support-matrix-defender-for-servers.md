@@ -13,13 +13,13 @@ ms.date: 03/13/2024
 This article summarizes support information for the Defender for Servers plan in Microsoft Defender for Cloud.
 
 > [!NOTE]
-> This article references CentOS, a Linux distribution that is end of life (EOL) as of June 30, 2024. See [EOL guidance](../virtual-machines/workloads/centos/centos-end-of-life).
+> This article references CentOS, a Linux distribution that is end of life (EOL) as of June 30, 2024. See [EOL guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
 
 ## Network requirements
 
 Validate the following endpoints are configured for outbound access so that Azure Arc extension can connect to Microsoft Defender for Cloud to send security data and events:
 
-- For Defender for Server multicloud deployments, make sure that the [addresses and ports required by Azure Arc](../azure-arc/data/connectivity.md#details-on-internet-addresses-ports-encryption-and-proxy-server-support) are open.
+- For Defender for Server multicloud deployments, make sure that the [addresses and ports required by Azure Arc](/azure/azure-arc/data/connectivity#details-on-internet-addresses-ports-encryption-and-proxy-server-support) are open.
 
 - For deployments with GCP connectors, open port 443 to these URLs:
 
@@ -61,9 +61,9 @@ This table summarizes Azure cloud support for Defender for Servers features.
 
 The following table shows feature support for Windows machines in Azure, Azure Arc, and other clouds.
 
-| **Feature** | **Azure VMs*<br/> **[VM Scale Sets (Flexible orchestration](../virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes.md#scale-sets-with-flexible-orchestration)** | **Azure Arc-enabled machines** | **Defender for Servers required** |
+| **Feature** | **Azure VMs*<br/> **[VM Scale Sets (Flexible orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)** | **Azure Arc-enabled machines** | **Defender for Servers required** |
 |--|:-:|:-:|:-:|
-| [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔</br> Available on: Windows Server 2022, 2019, 2016, 2012 R2, 2008 R2 SP1, [Windows 10/11 Enterprise multi-session](../virtual-desktop/windows-10-multisession-faq.yml) | ✔ | Yes |
+| [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔</br> Available on: Windows Server 2022, 2019, 2016, 2012 R2, 2008 R2 SP1, [Windows 10/11 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq) | ✔ | Yes |
 | [Virtual machine behavioral analytics (and security alerts)](alerts-reference.md) | ✔ | ✔ | Yes |
 | [Fileless security alerts](alerts-windows-machines.md) | ✔ | ✔ | Yes |
 | [Network-based security alerts](other-threat-protections.md#network-layer) | ✔ | - | Yes |
@@ -78,7 +78,7 @@ The following table shows feature support for Windows machines in Azure, Azure A
 | Missing OS patches assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | Machine OS configuration |  Windows Server 2019/2016/2012 R2/2012| ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
-| Disk encryption assessment | ✔</br>([supported scenarios](../virtual-machines/windows/disk-encryption-windows.md)) | - | No |
+| Disk encryption assessment | ✔</br>[supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) | - | No |
 | Third-party vulnerability assessment (BYOL) | ✔ | - | No |
 | [Network security assessment](protect-network-resources.md) | ✔ | - | No |
 
@@ -86,7 +86,7 @@ The following table shows feature support for Windows machines in Azure, Azure A
 
 The following table shows feature support for Linux machines in Azure, Azure Arc, and other clouds.
 
-| **Feature** | **Azure VMs**<br/> **[VM Scale Sets (Flexible orchestration](../virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes.md#scale-sets-with-flexible-orchestration)** | **Azure Arc-enabled machines** | **Defender for Servers required** |
+| **Feature** | **Azure VMs**<br/> **[VM Scale Sets (Flexible orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration)** | **Azure Arc-enabled machines** | **Defender for Servers required** |
 |--|:-:|:-:|:-:|
 | [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) | ✔ <br> ([supported versions](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux)) | ✔ | Yes |
 | [Virtual machine behavioral analytics (and security alerts)](./azure-defender.md) | ✔</br> Supported versions | ✔ | Yes |
@@ -103,7 +103,7 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | Missing OS patches | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | Machine OS misconfiguration | Ubuntu 14.04, 16.04, 17.04, 18.04 or 20.04<br/>Debian 7, 8, 9, or 10<br/>CentOS 7 or 8 (End of life (EOL) as of June 30, 2024.<br/>Red Hat Enterprise Linux (RHEL) 7 or 8<br/>Oracle Linux 7 or 8<br/>SUSE Linux Enterprise Server 12| ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | - | - | No |
-| Disk encryption assessment | ✔</br> [supported scenarios](../virtual-machines/windows/disk-encryption-windows.md)) | - | No |
+| Disk encryption assessment | ✔</br> [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) | - | No |
 | Third-party vulnerability assessment (BYOL) | ✔ | - | No |
 | [Network security assessment](protect-network-resources.md) | ✔ | - | No |
 
@@ -128,7 +128,7 @@ The following table shows feature support for AWS and GCP machines.
 | Missing OS patches assessment | ✔ | ✔ |
 | Security misconfigurations assessment | ✔ | ✔ |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | ✔ | ✔ |
-| Disk encryption assessment | ✔</br>(for [supported scenarios](../virtual-machines/windows/disk-encryption-windows.md)) | ✔</br>(for [supported scenarios](../virtual-machines/windows/disk-encryption-windows.md)) |
+| Disk encryption assessment | ✔</br>for [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) | ✔</br>for [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) |
 | Third-party vulnerability assessment | - | - |
 | [Network security assessment](protect-network-resources.md) | - | - |
 | [Cloud security explorer](how-to-manage-cloud-security-explorer.md) | ✔ | - |

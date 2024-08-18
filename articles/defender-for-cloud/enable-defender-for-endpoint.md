@@ -18,9 +18,9 @@ This article describes how to enable Defender for Endpoint integration manually 
 
 ## Prerequisites
 
-- **Windows support**: Verify that Windows machines are [supported by Defender for Endpoint](/defender/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016).
+- **Windows support**: Verify that Windows machines are [supported by Defender for Endpoint](/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016).
 - **Linux servers**: For Linux servers, you must have Python installed. Python 3 is recommended for all distros, but is required for RHEL 8.x and Ubuntu 20.04 or higher. 
-- **Azure VMs**: Check that VMs can connect to the Defender for Endpoint service. If machines don't have direct access, your proxy settings or firewall rules need to allow access to Defender for Endpoint URLs. Review proxy settings for [Windows](/defender/defender-endpoint/configure-proxy-internet) and [Linux](/defender/defender-endpoint/linux-static-proxy-configuration) machines.
+- **Azure VMs**: Check that VMs can connect to the Defender for Endpoint service. If machines don't have direct access, your proxy settings or firewall rules need to allow access to Defender for Endpoint URLs. Review proxy settings for [Windows](/defender-endpoint/configure-proxy-internet) and [Linux](/defender-endpoint/linux-static-proxy-configuration) machines.
 - **On-premises VMs**: - Onboard [on-premises machines](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) as Azure Arc VMs to Defender for Cloud.
 - If you've moved your subscription between Azure tenants, some manual preparatory steps are also required. For details, [contact Microsoft support](https://portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview).
 

@@ -12,7 +12,7 @@ ms.date: 05/16/2024
 
 In the Defender for Servers plan in Microsoft Defender for Cloud, [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
-File integrity monitoring uses Azure Automation change tracking. This article describes how to set up file integrity monitoring with the [Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA))](../automation/change-tracking/overview.md), so that you can monitor changes directly in Defender for Cloud.
+File integrity monitoring uses Azure Automation change tracking. This article describes how to set up file integrity monitoring with the [Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA))](/azure/automation/change-tracking/overview), so that you can monitor changes directly in Defender for Cloud.
 
 > [!Note]
 > - File integrity monitoring using the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) is generally availability (GA).
@@ -52,7 +52,7 @@ This article describes how to set up file integrity monitoring with the MMA
 
     If there's no enable or upgrade button, and the space is blank for a workspace, it means that file integrity monitoring is already enabled on the workspace.
 
-        :::image type="content" source="./media/file-integrity-monitoring-overview/workspace-list-fim.png" alt-text="Screenshot of enabling file integrity monitoring for a specific workspace.":::
+    :::image type="content" source="./media/file-integrity-monitoring-overview/workspace-list-fim.png" alt-text="Screenshot of enabling file integrity monitoring for a specific workspace.":::
 
 
 1. Enable Defender for Cloud plans if needed.
@@ -70,7 +70,7 @@ This article describes how to set up file integrity monitoring with the MMA
 
 1. Select **Apply file integrity monitoring** to enable file integrity monitoring.
 
-You can change the settings at any time. Learn more about [editing monitored entities](#edit-monitored-entities).
+You can change the settings at any time.
 
 ### Disable file integrity monitoring
 

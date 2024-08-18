@@ -31,7 +31,7 @@ Learn more about:
     - Connect [AWS accounts](quickstart-onboard-aws.md) to Defender for Cloud.
     - Connect [GCP projects](quickstart-onboard-gcp.md) to Defender for Cloud.
     - Onboard [on-premises machines](onboard-machines-with-defender-for-endpoint.md) as Azure Arc VMs to Defender for Cloud.
-- **Review support**. Check [Defender for Servers requirements and support](support-matrix-defender-for-server.md) information.
+- **Review support**. Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
 - **Deployment scope** 
     - Plan 1 can be enabled at the Azure subscription level, or at the resource level for Azure VMs, on-premises machines that are onboarded as Azure Arc VMs, and Azure VM Scale Sets Flex.
     - Plan 2 can be enabled at the subscription level only. You can however, disable protection for specific machines.

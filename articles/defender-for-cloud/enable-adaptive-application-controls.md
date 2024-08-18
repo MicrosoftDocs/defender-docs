@@ -90,8 +90,7 @@ You might decide to edit the allowlist for a group of machines because of known 
 
 1. From the **Configured** tab, select the group with the rule you want to edit.
 
-1. Review the various sections of the **Configure application control rules** page as described in [On a group of machines](#on-a-group-of-machines).
-
+1. Review the various sections of the **Configure application control rules** page.
 1. Optionally, to add one or more custom rules, select **Add rule**.
 
     :::image type="content" source="media/enable-adaptive-application-controls/adaptive-application-add-custom-rule.png" alt-text="Screenshot that shows you where the add rule button is located.":::
@@ -132,7 +131,7 @@ To remediate the issues:
 
 1. Select the group with the rule you want to edit.
 
-1. Review the various sections of the **Configure application control rules** page as described in [On a group of machines](#on-a-group-of-machines).
+1. Review the various sections of the **Configure application control rules** page.
 
 1. To apply the changes, select **Audit**.
 

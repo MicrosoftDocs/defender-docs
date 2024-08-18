@@ -10,7 +10,7 @@ ms.date: 03/11/2024
 
 In the Defender for Servers plan in Microsoft Defender for Cloud, the file integrity monitoring feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
-File integrity monitoring uses Azure Automation change tracking with the [Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA))](../automation/change-tracking/overview.md) or the [Azure Monitoring Agent (AMA)](../automation/change-tracking/overview-monitoring-agent), so that you can monitor changes directly in Defender for Cloud.
+File integrity monitoring uses Azure Automation change tracking with the [Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA))](/azure/automation/change-tracking/overview) or the [Azure Monitoring Agent (AMA)](/azure/automation/change-tracking/overview-monitoring-agent), so that you can monitor changes directly in Defender for Cloud.
 
 - In Defender for Cloud, you can enable file integrity monitoring on Log Analytics workspaces in Azure subscriptions that have Defender for Cloud enabled. Defender for Servers Plan 2 must be enabled to use this feature.
 - When you use MMA and file integrity monitoring is enabled on a workspace, the MMA collects change data from devices in accordance with workspace configuration settings, and sends it to the workspace for analysis.

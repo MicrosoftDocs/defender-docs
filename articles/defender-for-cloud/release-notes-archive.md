@@ -90,7 +90,7 @@ January 14, 2024**
 
 **Estimated date of change: February 2024**
 
-In Azure, agentless scanning for VMs uses a built-in role (called [VM scanner operator](faq-permissions.yml)) with the minimum necessary permissions required to scan and assess your VMs for security issues. To continuously provide relevant scan health and configuration recommendations for VMs with encrypted volumes, an update to this role's permissions is planned. The update includes the addition of the `Microsoft.Compute/DiskEncryptionSets/read` permission. This permission solely enables improved identification of encrypted disk usage in VMs. It doesn't provide Defender for Cloud any more capabilities to decrypt or access the content of these encrypted volumes beyond the encryption methods [already supported](concept-agentless-data-collection.md#availability) prior to this change. This change is expected to take place during February 2024 and no action is required on your end.
+In Azure, agentless scanning for VMs uses a built-in role (called [VM scanner operator](faq-permissions.yml)) with the minimum necessary permissions required to scan and assess your VMs for security issues. To continuously provide relevant scan health and configuration recommendations for VMs with encrypted volumes, an update to this role's permissions is planned. The update includes the addition of the `Microsoft.Compute/DiskEncryptionSets/read` permission. This permission solely enables improved identification of encrypted disk usage in VMs. It doesn't provide Defender for Cloud any more capabilities to decrypt or access the content of these encrypted volumes beyond the encryption methods [already supported](concept-agentless-data-collection.md) prior to this change. This change is expected to take place during February 2024 and no action is required on your end.
 
 ### Update: DevOps security Pull Request annotations enabled by default for Azure DevOps connectors
 
@@ -208,7 +208,7 @@ December 24, 2023
 
 It's now possible to manage Defender for Servers on specific resources within your subscription, giving you full control over your protection strategy. With this capability, you can configure specific resources with custom configurations that differ from the settings configured at the subscription level.
 
-Learn more about [enabling Defender for Servers at the resource level](tutorial-enable-servers-plan.md#enable-defender-for-servers-at-the-resource-level).
+Learn more about [enabling Defender for Servers at the resource level](tutorial-enable-servers-plan.md).
 
 ### Retirement of Classic connectors for multicloud
 
@@ -2177,7 +2177,7 @@ Learn more about [vulnerability management](deploy-vulnerability-assessment-defe
 
 When you [connect AWS accounts](quickstart-onboard-aws.md), JIT will automatically evaluate the network configuration of your instance's security groups and recommend which instances need protection for their exposed management ports. This is similar to how JIT works with Azure. When you onboard unprotected EC2 instances, JIT will block public access to the management ports, and only open them with authorized requests for a limited time frame.
 
-Learn how [JIT protects your AWS EC2 instances](just-in-time-access-overview.md#how-jit-operates-with-network-resources-in-azure-and-aws)
+Learn how [JIT protects your AWS EC2 instances](just-in-time-access-overview.md)
 
 ### Add and remove the Defender sensor for AKS clusters using the CLI
 
@@ -2876,7 +2876,7 @@ You can query the software inventory data in **Azure Resource Graph Explorer**.
 
 To use these features, you'll need to enable the [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md).
 
-For full details, including sample Kusto queries for Azure Resource Graph, see [Access a software inventory](asset-inventory.md#access-a-software-inventory).
+For full details, including sample Kusto queries for Azure Resource Graph, see [Access a software inventory](asset-inventory.md).
 
 ### New AKS security policy added to default initiative
 
@@ -2942,7 +2942,7 @@ Additionally, you can query the software inventory data in **Azure Resource Grap
 
 To use these new features, you'll need to enable the [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md).
 
-For full details, including sample Kusto queries for Azure Resource Graph, see [Access a software inventory](asset-inventory.md#access-a-software-inventory).
+For full details, including sample Kusto queries for Azure Resource Graph, see [Access a software inventory](asset-inventory.md).
 
 :::image type="content" source="media/deploy-vulnerability-assessment-defender-vulnerability-management/software-inventory.png" alt-text="If you've enabled the threat and vulnerability solution, Security Center's asset inventory offers a filter to select resources by their installed software.":::
 
@@ -3071,8 +3071,8 @@ When Defender for Endpoint detects a threat, it triggers an alert. The alert is 
 
 During the preview period, you'll deploy the [Defender for Endpoint for Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux) sensor to supported Linux machines in one of two ways depending on whether you've already deployed it to your Windows machines:
 
-- [Existing users with Defender for Cloud's enhanced security features enabled and Microsoft Defender for Endpoint for Windows](enable-defender-for-endpoint.md#existing-users-with-defender-for-clouds-enhanced-security-features-enabled-and-microsoft-defender-for-endpoint-for-windows)
-- [New users who have never enabled the integration with Microsoft Defender for Endpoint for Windows](enable-defender-for-endpoint.md?tabs=linux#new-users-who-never-enabled-the-integration-with-microsoft-defender-for-endpoint-for-windows)
+- [Existing users with Defender for Cloud's enhanced security features enabled and Microsoft Defender for Endpoint for Windows](enable-defender-for-endpoint.md)
+- New users who have never enabled the integration with Microsoft Defender for Endpoint for Windows
 
 Learn more in [Protect your endpoints with Security Center's integrated EDR solution: Microsoft Defender for Endpoint](integration-defender-for-endpoint.md).
 

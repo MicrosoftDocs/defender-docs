@@ -9,7 +9,7 @@ ms.date: 07/31/2023
 
 # Review OS misconfiguration recommendations
 
-To reduce a machine's attack surface and security risk, it's important to configure the operating system as securely as possible. The [Microsoft Cloud Security Benchmark (MCSB)](azure/security/benchmarks/azure/introduction) provides hardening baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](azure/governance/policy/samples/guest-configuration-baseline-linux) machines.
+To reduce a machine's attack surface and security risk, it's important to configure the operating system as securely as possible. The [Microsoft Cloud Security Benchmark (MCSB)](/agentless-vulnerability-assessment-azure.mdazure/security/benchmarks/azure/introduction) provides hardening baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) machines.
 
 > [!NOTE]
 > The Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) is set to retire. Defender for Servers dependency on the MMA agent will be phased out by November 2024. [Learn more](prepare-deprecation-log-analytics-mma-agent.md) about the roadmap for features that currently rely on this agent. 
@@ -24,7 +24,7 @@ Microsoft Defender for Cloud assesses machines against MCSB baselines. Defender 
 
 ## Prerequisites
 
-- Review supported Azure VMs and Azure Arc VMs running  [Windows](support-matrix-defender-for-servers.md#windows-machine-support.md) and [Linux](support-matrix-defender-for-servers.md#linux-machine-support).
+- Review supported Azure VMs and Azure Arc VMs running  [Windows](support-matrix-defender-for-servers.md#windows-machine-support) and [Linux](support-matrix-defender-for-servers.md#linux-machine-support).
 - To use the Guest Configuration on VMs, machines must have:
     -  The Azure Machine Configuration extension installed.
     - A system-assigned managed identity assigned to the VM (used to read and write to the Guest Configuration service).
@@ -36,7 +36,7 @@ Microsoft Defender for Cloud assesses machines against MCSB baselines. Defender 
 
 ## Assess machines against security baselines
 
-Compare machines with [Windows](../governance/policy/samples/guest-configuration-baseline-windows.md) and [Linux](azure/governance/policy/samples/guest-configuration-baseline-linux) baselines in the MCSB compliance standard.
+Compare machines with [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](azure/governance/policy/samples/guest-configuration-baseline-linux) baselines in the MCSB compliance standard.
 
 
 1. In Defender for Cloud, open the **Recommendations** page.

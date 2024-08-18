@@ -22,7 +22,7 @@ To solve this dilemma, Microsoft Defender for Cloud offers just-in-time VM acces
 
 In Azure, you can block inbound traffic on specific ports, by enabling just-in-time VM access. 
 
-- Defender for Cloud ensures "deny all inbound traffic" rules exist for your selected ports in the [network security group (NSG)](../virtual-network/network-security-groups-overview.md#security-rules) and [Azure Firewall rules](../firewall/rule-processing.md).
+- Defender for Cloud ensures "deny all inbound traffic" rules exist for your selected ports in the [network security group (NSG)](/azure/virtual-network/network-security-groups-overview.#security-rules) and [Azure Firewall rules](/azure/firewall/rule-processing).
 - These rules restrict access to your Azure VMs’ management ports and defend them from attack.
 - If other rules already exist for the selected ports, then those existing rules take priority over the new "deny all inbound traffic" rules.
 - If there are no existing rules on the selected ports, then the new rules take top priority in the NSG and Azure Firewall.
@@ -31,14 +31,14 @@ In Azure, you can block inbound traffic on specific ports, by enabling just-in-t
 
 In AWS, by enabling JIT access the relevant rules in the attached EC2 security groups, for the selected ports, are revoked which blocks inbound traffic on those specific ports.
 
-- When a user requests access to a VM, Defender for Servers checks that the user has [Azure role-based access control (Azure RBAC)](../role-based-access-control/role-assignments-portal.yml) permissions for that VM.
+- When a user requests access to a VM, Defender for Servers checks that the user has [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/role-assignments-portal) permissions for that VM.
 - If the request is approved, Defender for Cloud configures the NSGs and Azure Firewall to allow inbound traffic to the selected ports from the relevant IP address (or range), for the amount of time that was specified.
 - In AWS, Defender for Cloud creates a new EC2 security group that allows inbound traffic to the specified ports.
 - After the time has expired, Defender for Cloud restores the NSGs to their previous states
 - Connections that are already established aren't interrupted.
 
 > [!NOTE]
-> JIT doesn't support VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](../firewall-manager/overview.md).  The Azure Firewall must be configured with Rules (Classic) and cannot use Firewall policies.
+> JIT doesn't support VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview).  The Azure Firewall must be configured with Rules (Classic) and cannot use Firewall policies.
 
 ## Identifying VMs for just-in-time access
 

@@ -123,7 +123,7 @@ As we approach the agent's retirement in August 2024, the following MMA-related 
 - [The capability](quickstart-onboard-machines.md#connect-on-premises-machines-by-using-the-azure-portal) to onboard new non-Azure servers to Defender for Servers via Log Analytics workspaces will be removed from both the **Inventory** and **Getting Started** blades.  
 
 > [!NOTE]
-> We recommend that current customers, who have onboarded on-premises servers using the [legacy approach](quickstart-onboard-machines.md#connect-on-premises-machines-by-using-the-azure-portal), should now connect these machines via Azure Arc-enabled servers.  We  also recommend enabling the Defender for Servers Plan 2 on the Azure subscriptions to which these servers are connected.
+> We recommend that current customers, who have onboarded on-premises servers using the [legacy approach](quickstart-onboard-machines.md), should now connect these machines via Azure Arc-enabled servers.  We  also recommend enabling the Defender for Servers Plan 2 on the Azure subscriptions to which these servers are connected.
 >
 >For those customers who have selectively enabled Defender for Servers Plan 2 on specific Azure VMs through the [legacy approach](quickstart-onboard-machines.md#connect-on-premises-machines-by-using-the-azure-portal), we recommend enabling the Defender for Servers Plan 2 on the Azure subscriptions of these machines. You can then exclude individual machines from the Defender for Servers coverage using the Defender for Servers [per-resource configuration](tutorial-enable-servers-plan.md#enable-defender-for-servers-at-the-resource-level).
 >
@@ -470,10 +470,9 @@ Until now agentless scanning covered CMK encrypted VMs in AWS and GCP. With this
 - The unencrypted VM disk data is never copied or re-encrypted with another key.
 - The original key isn't replicated during the process. Purging it eradicates the data on both your production VM and Defender for Cloud’s temporary snapshot.
 
-During public preview this capability isn't automatically enabled. If you're using Defender for Servers P2 or Defender CSPM and your environment has VMs with CMK encrypted disks, you can now have them scanned for vulnerabilities, secrets, and malware following these [enablement steps](enable-agentless-scanning-vms.md#agentless-vulnerability-assessment-on-azure).
-
+During public preview this capability isn't automatically enabled. If you're using Defender for Servers P2 or Defender CSPM and your environment has VMs with CMK encrypted disks, you can now have them scanned for vulnerabilities, secrets, and malware following these [enablement steps](enable-agentless-scanning-vms.md)
 - [Learn more on agentless scanning for VMs](concept-agentless-data-collection.md)
-- [Learn more on agentless scanning permissions](faq-permissions.yml#which-permissions-are-used-by-agentless-scanning-)
+- [Learn more on agentless scanning permissions](faq-permissions.yml)
 
 ### Preview: Custom recommendations based on KQL for Azure
 

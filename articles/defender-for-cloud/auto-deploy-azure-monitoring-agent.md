@@ -23,7 +23,7 @@ The Defender for SQL Server on Machines plan in Microsoft Defender for Cloud use
 The AMA replaces the Microsoft Monitoring Agent (MMA) that was previously used by the plan. The MMA is set to retire.
 
 - If you're still using MMA for the Defender for SQL Server on Machines plan, [follow the migration steps](defender-for-sql-autoprovisioning.md) to deploy AMA autoprovisioning.
-- Autoprovisioning for the MMA is turned on by default when you enable the plan. [Learn more](defender-for-sql-on-machines-overview.md) about the AMA in Defender for SQL Server on Machines. - Autoprovisioning can be turned on and off. Alternatively the agent can be deployed with other [deployment options](../azure-monitor/vm/monitor-virtual-machine-agent.md#agent-deployment-options).
+- Autoprovisioning for the MMA is turned on by default when you enable the plan. [Learn more](defender-for-sql-on-machines-overview.md) about the AMA in Defender for SQL Server on Machines. - Autoprovisioning can be turned on and off. Alternatively the agent can be deployed with other [deployment options](/azure/azure-monitor/vm/monitor-virtual-machine-agent).
 
 
 ## AMA in Defender for Servers

@@ -21,7 +21,7 @@ The Inventory page provides information about:
 - Risk prioritization is available when the Defender CSPM plan is enabled.
 - **Software**. You can review resources by installed applications. To take advantage of the software inventory, either the Defender Cloud Security Posture Management (CSPM) plan, or a Defender for Servers plan must be enabled.
 
-The Inventory uses [Azure Resource Graph (ARG)](azure/governance/resource-graph/index) to query and retrieve data at scale. For deep custom insights, you can use [KQL](/azure/data-explorer/kusto/query/) to query the inventory.
+The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph/index) to query and retrieve data at scale. For deep custom insights, you can use [KQL](/azure/data-explorer/kusto/query/) to query the inventory.
 
 ## Review the inventory
 

@@ -33,7 +33,7 @@ EDR recommendations are available when:
 - One of these Defender for Cloud plans is enabled:
   - [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
   - [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
-- [Agentless scanning for machines](enable-agentless-scanning-vms.md#enabling-agentless-scanning-for-machines) is turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
+- [Agentless scanning for machines](concept-agentless-data-collection.md) is turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
 
 
 ## Investigate EDR solution recommendations
@@ -86,7 +86,7 @@ To enable Defender for Endpoint on the machine:
 
 This recommended action is available when:
 
-- One of the [supported third-party EDR solutions](#supported-solutions-and-platforms) wasn't detected on the VM.
+- One of the [supported third-party EDR solutions](integration-defender-for-endpoint.md#other-edr-solutions) wasn't detected on the VM.
 - One of the supported plans (Defender for Servers Plan 2 or Defender CSPM) isn't enabled for the VM.
 
 To fix the recommendation.
@@ -116,7 +116,7 @@ This recommended action is available when Defender for Endpoint is detected on a
 
     :::image type="content" source="media/endpoint-detection-response/remediation-steps.png" alt-text="Screenshot that shows where the remediation steps are located in the recommendation." lightbox="media/endpoint-detection-response/remediation-steps.png":::
 
-1. Follow the instructions to troubleshoot onboarding issues for [Windows](/defender/defender-endpoint/troubleshoot-onboarding) or [Linux](/defender/defender-endpoint/microsoft-defender-endpoint-linux).
+1. Follow the instructions to troubleshoot onboarding issues for [Windows](/defender-endpoint/troubleshoot-onboarding) or [Linux](/defender-endpoint/microsoft-defender-endpoint-linux).
 
 After the process is completed, it can take up to 24 hours until your machine appears in the Healthy resources tab.
 

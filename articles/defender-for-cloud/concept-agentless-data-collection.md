@@ -16,7 +16,7 @@ Microsoft Defender for Cloud provides agentless machine scanning to improve secu
 
 Agentless scanning for virtual machines:
 
-- **Scans software inventory**: Scan your [software inventory](/defender/defender-vulnerability-management/tvm-software-inventory) for broad visibility with integrated Microsoft Defender Vulnerability Management.
+- **Scans software inventory**: Scan your [software inventory](/defender-vulnerability-management/tvm-software-inventory) for broad visibility with integrated Microsoft Defender Vulnerability Management.
 -  **Scans for vulnerabilities**: [Assess machines for vulnerabilities](auto-deploy-vulnerability-assessment.md) using integrated Defender Vulnerability Management.
 - **Scans for secrets on machines**: Locate plain text secrets in your compute environment with agentless [secrets scanning](secrets-scanning.md).
 - **Scans for malware**: [Scan machines for malware and viruses](agentless-malware-scanning.md) using [Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows). 

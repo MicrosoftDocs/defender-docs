@@ -44,7 +44,7 @@ You can modify plan settings as follows:
     --- | --- | ---
     **Vulnerability assessment** | When you enable the plan, [vulnerability scanning](auto-deploy-vulnerability-assessment.md) is enabled by default.<br/> | [Manually configure](deploy-vulnerability-assessment-defender-vulnerability-management.md) vulnerability scanning settings.
     **Endpoint protection**. | When you enable the Defender for Servers plan, Defender for Endpoint is integrated by default. Defender for Endpoint protection features are available, and automatic provisioning of the Defender for Endpoint agent is enabled. | [Turn endpoint protection on and off](enable-defender-for-endpoint.md) in a plan.
-    **Agentless scanning** |  Agentless scanning provides a number of scanning capabilities, including agentless vulnerability scanning. It is enabled by default when Defender for Servers Plan 2 (or the Defender Cloud Security Posture Management (CSPM) plan) is turned on. | [Turn agentless scanning on and off](enable-agentless-scanning-vms.md), and [exclude machines from agentless scanning](enable-agentless-scanning-vms.md#exclude-machines-from-scanning). 
+    **Agentless scanning** |  Agentless scanning provides a number of scanning capabilities, including agentless vulnerability scanning. It is enabled by default when Defender for Servers Plan 2 (or the Defender Cloud Security Posture Management (CSPM) plan) is turned on. | [Turn agentless scanning on and off](enable-agentless-scanning-vms.md), and [exclude machines from agentless scanning](exclude-machines-agentless-scanning.md). 
 
 
 

@@ -9,19 +9,24 @@ ms.date: 09/21/2023
 
 # Enable Microsoft Defender for SQL servers on machines
 
-Defender for SQL protects your IaaS SQL Servers by identifying and mitigating potential database vulnerabilities and detecting anomalous activities that could indicate threats to your databases.
 
-Defender for Cloud populates with alerts when it detects suspicious database activities, potentially harmful attempts to access or exploit SQL machines, SQL injection attacks, anomalous database access, and query patterns. The alerts created by these types of events appear on the [alerts reference page](alerts-sql-database-and-azure-synapse-analytics.md).
 
-Defender for Cloud uses vulnerability assessment to discover, track, and assist you in the remediation of potential database vulnerabilities. Assessment scans provide an overview of your SQL machines' security state and provide details of any security findings.
+Defender for SQL servers on machines protects your 
 
-Learn more about [vulnerability assessment for Azure SQL servers on machines](defender-for-sql-on-machines-vulnerability-assessment.md).
+## Prerequisites
 
-Defender for SQL servers on machines protects your SQL servers hosted in Azure, multicloud, and even on-premises machines.
+Before you deploy AMA with Defender for Cloud, you must have the following prerequisites:
 
-- Learn more about [SQL Server on Virtual Machines](https://azure.microsoft.com/services/virtual-machines/sql-server/).
-
-- For on-premises SQL servers, you can learn more about [SQL Server enabled by Azure Arc](/sql/sql-server/azure-arc/overview) and how to [install Log Analytics agent on Windows computers without Azure Arc](/azure/azure-monitor/agents/agent-windows).
+- Make sure your multicloud and on-premises machines have Azure Arc installed.
+  - AWS and GCP machines
+    - [Onboard your AWS connector](quickstart-onboard-aws.md) and autoprovision Azure Arc.
+    - [Onboard your GCP connector](quickstart-onboard-gcp.md) and autoprovision Azure Arc.
+  - On-premises machines
+    - [Install Azure Arc](../azure-arc/servers/learn/quick-enable-hybrid-vm.md).
+- Make sure the Defender plans that you want the Azure Monitor Agent to support are enabled:
+  - [Enable Defender for SQL servers on machines](defender-for-sql-usage.md)  
+  - [Enable Defender plans on the subscriptions for your AWS VMs](quickstart-onboard-aws.md)
+  - [Enable Defender plans on the subscriptions for your GCP VMs](quickstart-onboard-gcp.md)
 
 - For multicloud SQL servers:
 

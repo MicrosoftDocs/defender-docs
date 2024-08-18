@@ -20,16 +20,16 @@ ms.date: 06/23/2024
 
 ## Defender for Endpoint integration
 
-Defender for Servers integrates natively with [Microsoft Defender for Endpoint](/defender/defender-endpoint/microsoft-defender-endpoint) to provide Defender for Endpoint Plan 2 protection features to machines protected by Defender for Servers, including EDR capabilities.
+Defender for Servers integrates natively with [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide Defender for Endpoint Plan 2 protection features to machines protected by Defender for Servers, including EDR capabilities.
 
 Defender for Endpoint integration provides a number of benefits, including: 
 
 - **Integration of Defender for Endpoint protection features**
-    - Threat and vulnerability management with [Defender Vulnerability Management](/defender/defender-vulnerability-management/defender-vulnerability-management).
-    - [Attack surface reduction](/defender/defender-endpoint/attack-surface-reduction) capabilities.
-    - Threat protection, including endpoint protection from [Internet-based network events](/defender/defender-endpoint/network-protection) and [web threats](/defender/defender-endpoint/web-protection-overview)
-    - Next-generation protection providing [antimalware and antivirus protection](/defender/defender-endpoint/next-generation-protection). 
-    - [EDR capabilities](defender/defender-endpoint/overview-endpoint-detection-response) to provide real-time, actionable threat detection and response.
+    - Threat and vulnerability management with [Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).
+    - [Attack surface reduction](/defender-endpoint/attack-surface-reduction) capabilities.
+    - Threat protection, including endpoint protection from [Internet-based network events](/defender-endpoint/network-protection) and [web threats](/defender-endpoint/web-protection-overview)
+    - Next-generation protection providing [antimalware and antivirus protection](/defender-endpoint/next-generation-protection). 
+    - [EDR capabilities](/defender-endpoint/overview-endpoint-detection-response) to provide real-time, actionable threat detection and response.
     - Threat intelligence using data provided by Microsoft threat hunters and security teams, augmented by intelligence provided by partners. Security alerts are generated when Defender for Endpoint identifies attacker tools, techniques, and procedures.
 - **Automated agent provisioning**. Defender for Cloud automatically installs the Defender for Endpoint sensor on all supported machines connected to Defender for Cloud.
 - **Licensing**: Defender for Servers covers licensing for Defender for Endpoint. Licensing is charged per hour instead of per seat, lowering costs by protecting VMs only when they're in use.

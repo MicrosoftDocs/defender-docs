@@ -64,7 +64,7 @@ Defender for Cloud provides these predefined queries for investigating secrets s
   - [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md)
   - [Defender CSPM](concept-cloud-security-posture-management.md)
 
-- [Agentless machine scanning](enable-vulnerability-assessment-agentless.md#enabling-agentless-scanning-for-machines) must be enabled. Learn more about [agentless scanning](concept-agentless-data-collection.md#availability).
+- [Agentless machine scanning](concept-agentless-data-collection.md) must be enabled.
 
 ## Remediate secrets with attack paths
 
@@ -82,7 +82,7 @@ Attack path analysis is a graph-based algorithm that scans your [cloud security 
 
 ## Remediate secrets with recommendations
 
-If a secret is found on your resource, that resource triggers an affiliated recommendation that is located under the Remediate vulnerabilities security control on the Recommendations page. Defender for Cloud provides a [number of VM secrets security recommendations](secrets-scanning-servers.md#security-recommendations).
+If a secret is found on your resource, that resource triggers an affiliated recommendation that is located under the Remediate vulnerabilities security control on the Recommendations page. Defender for Cloud provides a [number of VM secrets security recommendations](secrets-scanning-servers.md).
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -90,7 +90,7 @@ If a secret is found on your resource, that resource triggers an affiliated reco
 
 1. Expand the **Remediate vulnerabilities** security control.
 
-1. Select one of the [relevant recommendations](secrets-scanning-servers.md#security-recommendations).
+1. Select one of the relevant recommendations:
 
     - **Azure resources**: `Machines should have secrets findings resolved`
     - **AWS resources**: `EC2 instances should have secrets findings resolved`

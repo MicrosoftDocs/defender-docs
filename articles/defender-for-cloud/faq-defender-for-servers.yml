@@ -17,7 +17,7 @@ sections:
       - question: |
           Can I enable Defender for Servers on a subset of machines in a subscription?
         answer: |
-          Yes. It's now possible to manage Defender for Servers on specific resources within your subscription, giving you full control over your protection strategy. With this capability, you can configure specific resources with custom configurations that differ from the settings configured at the subscription level. Learn more about [enabling Defender for Servers at the resource level](tutorial-enable-servers-plan.md#enable-defender-for-servers-at-the-resource-level). However, when you enable Microsoft Defender for Servers on a connected AWS account or GCP project, all connected machines are protected by Defender for Servers.
+          Yes. It's now possible to manage Defender for Servers on specific resources within your subscription, giving you full control over your protection strategy. With this capability, you can configure specific resources with custom configurations that differ from the settings configured at the subscription level. [Learn more](tutorial-enable-servers-plan.md#). However, when you enable Microsoft Defender for Servers on a connected AWS account or GCP project, all connected machines are protected by Defender for Servers.
 
       - question: |
           Can I get a discount if I already have a Microsoft Defender for Endpoint license?
@@ -176,7 +176,7 @@ sections:
       - question: |
           Are there any options to enforce the application controls?
         answer: |
-          No enforcement options are currently available. Adaptive application controls are intended to provide **security alerts** if any application runs other than the ones you've defined as safe. They have a range of benefits ([What are the benefits of adaptive application controls?](adaptive-application-controls.md#what-are-the-benefits-of-adaptive-application-controls)) and are customizable as shown on this page.
+          No enforcement options are currently available. Adaptive application controls are intended to provide **security alerts** if any application runs other than the ones you've defined as safe. [Learn more](adaptive-application-controls.md) and are customizable as shown on this page.
 
       - question: |
           Why do I see a Qualys app in my recommended applications?
