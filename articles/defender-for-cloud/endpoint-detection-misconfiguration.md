@@ -38,7 +38,7 @@ EDR recommendations are available when:
 - One of these Defender for Cloud plans is enabled:
   - [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
   - [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
-- [Agentless scanning for machines](enable-agentless-scanning-vms.md#enabling-agentless-scanning-for-machines) is turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
+- [Agentless scanning for machines](concept-agentless-data-collection.md) is turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
 - You're running Defender for Endpoint as an EDR solution on VMs.
 
 ## Investigate misconfiguration recommendations

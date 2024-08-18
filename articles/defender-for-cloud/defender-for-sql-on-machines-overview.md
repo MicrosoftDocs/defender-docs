@@ -37,7 +37,7 @@ The Defender for SQL Server on Machines plan in Microsoft Defender for Cloud use
 A SQL Server-targeted AMA autoprovisioning processes is enabled by default when you enable the Defender for SQL Server on Machines plan.
 
 - You can turn autoprovisioning on and off as needed.
-- You can also deploy the agent yourself by using a number of methods. Learn about [deployment options](../azure-monitor/vm/monitor-virtual-machine-agent.md#agent-deployment-options).)
+- You can also deploy the agent yourself by using a number of methods. Learn about [deployment options](/azure/azure-monitor/vm/monitor-virtual-machine-agent#agent-deployment-options).)
 
 
 ## Migrating to the AMA
