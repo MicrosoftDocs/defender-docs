@@ -10,19 +10,26 @@ ms.date: 03/11/2024
 
 In the Defender for Servers plan in Microsoft Defender for Cloud, the file integrity monitoring feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
-File integrity monitoring uses Azure Automation change tracking with the [Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA))](/azure/automation/change-tracking/overview) or the [Azure Monitoring Agent (AMA)](/azure/automation/change-tracking/overview-monitoring-agent), so that you can monitor changes directly in Defender for Cloud.
+## Change tracking
 
-- In Defender for Cloud, you can enable file integrity monitoring on Log Analytics workspaces in Azure subscriptions that have Defender for Cloud enabled. Defender for Servers Plan 2 must be enabled to use this feature.
-- When you use MMA and file integrity monitoring is enabled on a workspace, the MMA collects change data from devices in accordance with workspace configuration settings, and sends it to the workspace for analysis.
-- When you use the AMA and file integrity monitoring is enabled on a workspace, the AMA collects change data from devices in accordance with data collection rules that define a list of files and registries to track. You can use default data collection rules, or customize. Changes are sent to a Log Analytics workspace that you specify when you turn on file integrity monitoring. You can customize the workspace used for file integrity monitoring.
-- Workspaces with file integrity monitoring enabled have the **Azure Change Tracking** monitoring solution configured. If you remove the solution directly from the workspace, file integrity monitoring is disabled.
+File integrity monitoring uses [Azure Automation change tracking](/azure/automation/change-tracking/overview) so that you can monitor changes directly in Defender for Cloud. Change data is collected as follows:
+
+- Collection with [Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA))](/azure/automation/change-tracking/overview) is generally available (GA).
+- Collection with the [Azure Monitoring Agent (AMA)](/azure/automation/change-tracking/overview-monitoring-agent) in is preview.
 
 
 > [!Note]
-> - File integrity monitoring using the MMA is generally availability (GA).
 > - The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024.
-> - File integrity monitoring was available in preview using the Azure Monitoring Agent (AMA). This preview is no longer supported.
+> - File integrity monitoring using the AMA is no longer supported.
 > - A new version of the feature, using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers will be released in preview around August 2024.
+
+## Enabling file integrity monitoring
+
+In Defender for Cloud, you can enable file integrity monitoring on Log Analytics workspaces in Azure subscriptions that have Defender for Cloud enabled. Defender for Servers Plan 2 must be enabled to use this feature.
+
+- With MMA, when file integrity monitoring is enabled on a workspace the MMA collects change data from devices in accordance with workspace configuration settings, and sends it to the workspace for analysis.
+- With AMA, when file integrity monitoring is enabled on a workspace the AMA collects change data from devices in accordance with data collection rules that define a list of files and registries to track. You can use default data collection rules, or customize. Changes are sent to a Log Analytics workspace that you specify when you turn on file integrity monitoring. You can customize the workspace used for file integrity monitoring.
+- Workspaces with file integrity monitoring enabled have the **Azure Change Tracking** monitoring solution configured. If you remove the solution directly from the workspace, file integrity monitoring is disabled.
 
 ## Suspicious activity
 
@@ -36,10 +43,7 @@ Many regulatory compliance standards require implementing file integrity monitor
 
 ## Choosing what to monitor
 
-Defender for Cloud recommends entities to monitor with file integrity monitoring, and you can define your own entities. 
-
-
-When choosing which files to monitor:
+Defender for Cloud recommends entities to monitor with file integrity monitoring, and you can define your own entities. When choosing which files to monitor:
 
 - Consider the files that are critical for your system and applications.
 - Monitor files that you don’t expect to change without planning. 
@@ -47,7 +51,6 @@ When choosing which files to monitor:
 
 
 ## Recommended items to monitor
-
 
 Defender for Cloud recommends monitoring these items based on known attack patterns.
 

@@ -7,19 +7,15 @@ author: dcurwin
 ms.date: 07/31/2023
 ---
 
-# Review OS misconfiguration recommendations
+# Review OS misconfigurations (MCSB) 
 
-To reduce a machine's attack surface and security risk, it's important to configure the operating system as securely as possible. The [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) provides hardening baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) machines.
+Microsoft Defender for Cloud provides security recommendations to improve your organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment.
+
+When Defender for Cloud is enabled, by default its foundational cloud security posture management (CSPM) capabilities assesses machine settings against the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction). The benchmark Covers Azure, AWS, and GCP (in preview) environments, and provides hardening baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
 
 > [!NOTE]
-> The Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) is set to retire. Defender for Servers dependency on the MMA agent will be phased out by November 2024. [Learn more](prepare-deprecation-log-analytics-mma-agent.md) about the roadmap for features that currently rely on this agent. 
-
-Microsoft Defender for Cloud assesses machines against MCSB baselines. Defender for Cloud collects operating system information for assessment as follows:
-
-- **Foundational CSPM**: The free foundational CSPM capabilities of Defender for Cloud collects operating system information from VMs using the MMA.
-- **Defender for Servers**: Defender for Servers Plan 2 uses the [Azure Policy Guest Configuration Extension](/azure/virtual-machines/extensions/guest-configuration)
-    - Using the Guest Configuration to collect machine information is currently in preview.
-    - When this method becomes generally available, it will replace the existing generally available method that uses the MMA.
+> - Machine information is now gathered with a new method using the Guest Configuration on the machine. This capability is currently in preview and is expected to release to general availability (GA) around September 2024.
+> - The older method, that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) to gather data, will be supported until the end of November 2024.
 
 
 ## Prerequisites
@@ -34,7 +30,7 @@ Microsoft Defender for Cloud assesses machines against MCSB baselines. Defender 
 
 
 
-## Assess machines against security baselines
+## Assess machines against the MCSB
 
 Compare machines with [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) baselines in the MCSB compliance standard.
 
@@ -58,4 +54,5 @@ Compare machines with [Windows](/azure/governance/policy/samples/guest-configura
 1. To drill down to findings for a single machine, select it on the **Unhealthy resources** tab. A page will open listing only the findings for that machine.
 
 ## Next steps
-Learn more about the [Microsoft Cloud Security Benchmark](concept-regulatory-compliance.md) in Defender for Cloud.
+
+When you turn on a paid plan in Defender for Cloud, you can enable other compliance standards, in addition to the default MCSB. Learn more about [available compliance standards](concept-regulatory-compliance-standards.md) in Defender for Cloud.

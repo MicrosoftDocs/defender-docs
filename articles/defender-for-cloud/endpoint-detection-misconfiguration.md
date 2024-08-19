@@ -9,26 +9,20 @@ ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to review and remediate endpoint detection and response recommendations in order to ensure the security of my virtual machine.
 ---
 
-# Remediate Defender for Endpoint EDR misconfigurations (agentless)
+# Remediate Defender for Endpoint misconfigurations (agentless)
 
-Microsoft Defender for Cloud provides agentless scanning of protected machines to:
-
-- [Check that an endpoint detection and response (EDR) solution is installed on supported, connected machines and configured correctly. [Learn more]](integration-defender-for-endpoint.md).
-- Detect whether there are EDR misconfigurations if you're using Microsoft Defender for Endpoint as an EDR solution. 
-
+Microsoft Defender for Cloud provides agentless scanning of protected machines to detect whether the integrated Microsoft Defender for Endpoint endpoint detection and response (EDR) solution is configured correctly.
 
 > [!NOTE]
->
 > - Agentless scanning for EDR information replaces previous functionality that collected EDR solution information with the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), in general availability (GA), or with the Azure Monitoring Agent (AMA), in preview.
 > - The MMA is set to retire in August 2024. Data collection with the MMA will be deprecated in November 2024.
 > -The  AMA data collect preview is now deprecated.
 
-Defender for Cloud runs the following security checks for Defender for Endpoint EDR misconfigurations, and provides recommendations to fix them:
+Defender for Cloud runs the following security checks for Defender for Endpoint misconfigurations, and provides recommendations to fix them:
 
 - `Both full and quick scans are out of 7 days`
 - `Signature out of date`
 - `Anti-virus is off or partially configured`
-
 
 ## Prerequisites
 
@@ -38,7 +32,7 @@ EDR recommendations are available when:
 - One of these Defender for Cloud plans is enabled:
   - [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
   - [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
-- [Agentless scanning for machines](concept-agentless-data-collection.md) is turned on. It's enabled by default in the plans, but if you need to turn it on manually, [follow these instructions](enable-agentless-scanning-vms.md).
+- [Agentless scanning for machines](concept-agentless-data-collection.md) is turned on. It's enabled by default in the plans, but [follow these instructions](enable-agentless-scanning-vms.md) if you need to turn it on manually.
 - You're running Defender for Endpoint as an EDR solution on VMs.
 
 ## Investigate misconfiguration recommendations
@@ -50,6 +44,8 @@ EDR recommendations are available when:
     - `EDR configuration issues should be resolved on virtual machines`
     - `EDR configuration issues should be resolved on EC2s`
     - `EDR configuration issues should be resolved on GCP virtual machines`
+    - 
+    - 
 
     :::image type="content" source="media/endpoint-detection-response/configurable-solutions.png" alt-text="Screenshot that shows the recommendations that configure your endpoint detection and solution and remediate misconfigurations." lightbox="media/endpoint-detection-response/configurable-solutions.png":::
 
@@ -70,3 +66,7 @@ EDR recommendations are available when:
 
 
 After the process is completed, it can take up to 24 hours until your machine appears in the **Healthy resources** tab.
+
+## Related content
+
+[Verify](endpoint-detection-response.md) that machines have an EDR solution configured.

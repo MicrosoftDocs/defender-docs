@@ -10,7 +10,9 @@ ms.date: 05/26/2024
 
 # Remediate security baseline assessment recommendations
 
-The Defender for Server Plan 2 in Microsoft Defender for Cloud can assess machine security posture against a security baseline profile made up of security benchmarks. Security baselines assessment is provided by the integration of Microsoft Defender Vulnerability Management with Defender for Servers Plan 2. [Learn more](/defender-vulnerability-management/tvm-security-baselines) about security baselines assessment.
+The Defender for Server Plan 2 in Microsoft Defender for Cloud can assess machine security posture against a security baseline profile made up of security benchmarks. 
+
+Security baselines assessment is provided by the integration of Microsoft Defender Vulnerability Management with Defender for Servers Plan 2. [Learn more](/defender-vulnerability-management/tvm-security-baselines) about security baselines assessment.
 
 The security benchmarks in security baseline profiles are comprehensive, and continuously updated. Each assessment rule is accompanied with information about the effect of the issue, a description of the problem, and detailed recommendation steps. Checks are integrated into the Microsoft Defender for Endpoint agent, which allows Defender for Cloud to provide extra security checks within the same agent.
 

@@ -15,16 +15,12 @@ Defender for Servers provides two plans.
 - **Plan 2** provides the same features, along with addition vulnerability assessment and response capabilities, agentless vulnerabilities scanning, cloud-native protection features and threat protection, and more.
 
 
-Learn more about:
-
-- [Defender for Servers plans](defender-for-servers-overview.md).
-- Defender for Servers pricing on the [the Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
-
 > [!NOTE]
 > After a plan is enabled, a 30-day trial period begins. There is no way to stop, pause, or extend this trial period. To enjoy the full 30-day trial, plan ahead to meet your evaluation goals using the [Defender for Servers planning guide](plan-defender-for-servers.md).
 
 ## Prerequisites
 
+- **Understand Defender for Servers**. Before you start, we recommend reading the [Defender for Servers planning guide](plan-defender-for-server.md), making sure you understand the [Defender for Servers plans](defender-for-servers-overview.md), and reviewing Defender for Servers pricing on the [the Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 - **Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) if you don't have one
 - Defender for Cloud should [be connected to your Azure subscription](connect-azure-subscription.md).
 - **Multicloud machines**. To protect multicloud (AWS/GCP machines) or on-premises machines, you must:
@@ -35,12 +31,10 @@ Learn more about:
 - **Deployment scope** 
     - Plan 1 can be enabled at the Azure subscription level, or at the resource level for Azure VMs, on-premises machines that are onboarded as Azure Arc VMs, and Azure VM Scale Sets Flex.
     - Plan 2 can be enabled at the subscription level only. You can however, disable protection for specific machines.
-- **Custom Log Analytics workspace**
-    - When you enable Defender for Cloud on a subscription for the first time, a default Log Analytics workspace is set up in the subscription. 
-    - When you enable Defender for Servers Plan 2 for a subscription, Defender for Cloud enables the plan on this default Analytics workspace. The workspace isn't relevant for Plan 1.
-    - If you enable Plan 2 with a custom workspace, you need to specifically enable the plan on the workspace. All machines connected to the workspace then have Plan 2 enabled, regardless of the settings on their connected subscription.
-    
-[Learn more](plan-defender-for-servers-data-workspace.md) about workspace planning in Defender for Servers.
+- **Using a custom Log Analytics workspace**
+    - When you enable Defender for Cloud on a subscription for the first time, a default Log Analytics workspace is set up in the subscription. When you enable Defender for Servers Plan 2 for a subscription, it's enabled on this default workspace. The workspace isn't relevant for Plan 1.
+    - If you're using a custom workspace for Defender for Cloud, you must specifically enable Plan 2 on that workspace. All machines connected to the workspace then have Plan 2 enabled, regardless of the settings on their connected subscription.
+    - [Learn more](plan-defender-for-servers-data-workspace.md) about workspace planning in Defender for Servers.
 
 
 ## Enable on Azure, AWS, or GCP
@@ -76,9 +70,11 @@ Defender for Endpoint integration is enabled by default in Defender for Cloud. W
 
 After enabling the plan, you have the ability to [configure the features of the plan](configure-servers-coverage.md) to suit your needs.
 
-## Enable Plan 1 for specific resources
+## Enable Plan 1 for resources
 
-Although we recommend that you enable the plan for an entire Azure subscription, you can turn on Plan 1 for a specific resource.
+Although we recommend that you enable the plan for an entire Azure subscription, you can turn on Plan 1 for a specific resource using the Defender for Cloud REST API or a PowerShell script.
+
+## Enable Plan 1 for a specific resource
 
 To turn the plan on for a specific resource, use the Defender for Cloud REST API.[Pricings resource](/rest/api/defenderforcloud/pricings).
 

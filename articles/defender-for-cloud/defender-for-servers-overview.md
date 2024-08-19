@@ -45,54 +45,35 @@ Defender for Servers offers two plans:
 
 ## Plan protection features
 
-**Area** | **Plan support** | **Details**
---- | --- | ---
-**Defender protection** | Plan 1,2 | Integrated protection features include:<br/><br/>**Automatic onboarding** of the Defender for Endpoint sensor on supported machines connected to Defender for Cloud.<br/><br/><br/><br/> **Integration of alerts and data** in Defender for Cloud and Defender XDR.<br/><br/>Defender Vulnerability Management features that include:<br/>- **[Continuous vulnerability monitoring](/defender-vulnerability-management/defender-vulnerability-management)**  <br/> - **[Software inventory discovery](/defender-vulnerability-management/tvm-software-inventory)**.<br/><br/> Defender for Endpoint protection features, including:<br/> - **[Attack surface reduction rules](/defender-endpoint/attack-surface-reduction)**<br/> - **Threat protection** from [Internet-based network](/defender-endpoint/network-protection) and [web](/defender-endpoint/web-protection-overview) threats.<br/>- **[Next-generation](/defender-endpoint/next-generation-protection)** antimalware and antivirus protection.<br/>- **[EDR capabilities](/defender-endpoint/overview-endpoint-detection-response)** to provide real-time, actionable detection and response.
+**Feature** | **Plan** | **Details**
+--- | --- | --- 
+**Multicloud and hybrid support** | Plan 1, 2 | Defender for Servers can protect Azure VMs, AWS/GCP machines connect to Defender for Cloud, and on-premises machines onboarded as Azure Arc-enabled VMs.<br/><br/> Review Defender for Servers [support and requirements](support-matrix-defender-for-servers.md).
+**Automatic onboarding** | Defender for Cloud can [automatically onboard connected machines to Defender for Endpoint](enable-defender-for-endpoint.md).
+**Integrated alerts and incidents** | Plan 1, 2 | When a Defender for Servers plan (or any other paid plan) is enabled in Defender for Cloud, Defender for Endpoint alerts and incidents are displayed in Defender for Cloud. You can drill down into alerts in the Defender portal for additional information and context.
+**Software inventory discovery** | Plan 1, 2 | [Software inventory](asset-inventory.md) discovery provided by [Defender Vulnerability Management](/defender-vulnerability-management/tvm-software-inventory) is integrated into Defender for Cloud.
+**Vulnerability scanning (agent-based)** | Plan 1, 2 | Defender for Servers [assesses machines for vulnerabilities](auto-deploy-vulnerability-assessment.md) with Defender Vulnerability Management [threat and vulnerability monitoring](/defender-vulnerability-management/defender-vulnerability-management), using the Defender for Endpoint agent.
+**Vulnerability scanning (agentless)** | Plan 2 | As part of its [agentless scanning capabilities](concept-agentless-data-collection), Defender for Cloud provides [agentless vulnerability scanning](auto-deploy-vulnerability-assessment.md) for connected machines, using Defender Vulnerability Management.<br/><br/> Agentless vulnerability scanning is in addition to  agent-based vulnerability scanning with the Defender for Endpoint sensor.
+md#available-compliance-standards) to improve security posture.
+**OS misconfigurations** | No plan required | Defender for Servers uses the free foundational posture capabilities of Defender for Cloud that collects operating system information from VMs and checks the information against standards in the Microsoft Cloud Security Benchmark.
+**Regulatory compliance assessment** | Plan 1, 2 | By default Defender for Cloud enables a couple of [default compliance standards](concept-regulatory-compliance-standards.md#default-compliance-standards) against which to assess security posture, including the Microsoft cloud Security Benchmark.<br/><br/>If you have the Defender for Servers plan enabled (or any other paid plan), you can enable [additional compliance standards](concept-regulatory-compliance-standards.
+**[Docker host hardening](harden-docker-hosts.md)** | Plan 2  | Defender for Servers identifies and assesses containers hosted on Linux machines running Docker containers, and then compares their settings with the Center for Internet Security (CIS) Docker Benchmark.
 **Defender for Vulnerability Management premium  features** | Plan 2 | Defender for Servers Plan 2 includes [premium features](/defender-vulnerability-management/defender-vulnerability-management-capabilities) in Defender Vulnerability Management.<br/><br/>Premium features include certificate assessments, OS security baseline assessments, and more.<br/><br/> Premium features are available in the [Defender portal](https://security.microsoft.com/homepage) only.
-**Agentless scanning** | Plan 2 | Defender for Servers Plan 2 provides [agentless machine scanning](concept-agentless-data-collection) that includes:<br/><br/>- [Agentless machine vulnerability scanning](auto-deploy-vulnerability-assessment.md), in addition to the vulnerability scanning provided by Defender Vulnerability Management.<br/><br/> - [Agentless malware scanning](agentless-malware-scanning.md) to detect malware and viruses on supported machines.<br/><br/>[Agentless secrets scanning](secrets-scanning.md) to locate plain text secrets in protected machines.<br/><br/> Agentless vulnerability scanning and secrets scanning is also available in the Defender CSPM plan.
-**Third-party vulnerability monitoring** |  Defender for Cloud also supports vulnerability scanning with a [bring your own licence (BYOL) solution](deploy-vulnerability-assessment-byol-vm.md) for Azure VMs only. Azure Arc-enabled VMs aren't supported. Supported solutions include [Qualys](https://www.qualys.com/lp/azure) and [Rapid7](https://www.rapid7.com/products/insightvm/).
+**Malware scanning (agentless)** | Plan 2 | As part of its [agentless scanning capabilities](concept-agentless-data-collection), Defender for Cloud provides [agentless secrets scanning](secrets-scanning.md) to locate plain text secrets in protected machines.<br/><br/> Agentless secrets scanning is also available in the Defender CSPM plan.
+**Endpoint detection and response** | Plan 1, 2 | Defender for Servers integrates Defender for Endpoint [EDR](/defender-endpoint/overview-endpoint-detection-response capabilities that provide near real-time threat detection for supported endpoints. Protection includes:<br/><br/>**[Attack surface reduction rules](/defender-endpoint/attack-surface-reduction)**<br/> - **Threat protection** from [Internet-based network](/defender-endpoint/network-protection) and [web](/defender-endpoint/web-protection-overview) threats.<br/>- **[Next-generation](/defender-endpoint/next-generation-protection)** antimalware and antivirus protection.
+**Threat detection (OS-level)** | Plan 1, 2 | In addition to OS-level monitoring provided by Defender for Endpoint integration, Defender for Servers provides fileless attack detection to identify fileless attack toolkits, techniques, and behaviors.
 **Threat detection (Azure network layer)** | Plan 2 | Defender for Server uses agentless detection to detect threats that are directed at the control plan on the network, including [network-based security alerts](alerts-azure-network-layer.md) for Azure VMs. 
-**Threat detection** | Plan 1, 2 | In addition to OS-level monitoring provided by Defender for Endpoint integration, Defender for Servers provides fileless attack detection to identify fileless attack toolkits, techniques, and behaviors.
-
-**OS misconfigurations** | Plan 1, 2 | Defender for Servers uses the free foundational posture capabilities of Defender for Cloud that collects operating system information from VMs and checks the information against standards in the Microsoft Cloud Security Benchmark.
-
-
 **File integrity monitoring** | Plan 2 | [File integrity monitoring](file-integrity-monitoring-overview.md) examines files and registries for changes that might indicate an attack.<br/><br/>A new version of this feature, using the Defender for Endpoint agent that's integrated with Defender for Servers will be released in preview around August 2024.[Learn more](prepare-deprecation-log-analytics-mma-agent.md).
-**[Just-in-time virtual machine access](just-in-time-access-overview.md)** | Plan 2 | Just-in-time virtual machine access locks down machine ports to reduce the attack surface. 
+**Just-in-time virtual machine access** | Plan 2 | [Just-in-time virtual machine access](just-in-time-access-overview.md) locks down machine ports to reduce the attack surface. 
 **[Adaptive network hardening](adaptive-network-hardening.md)** | Plan 2 | Network hardening filters traffic to and from resources by using network security groups (NSGs) to improve network security posture. 
-**[Docker host hardening](harden-docker-hosts.md)** | Plan 2  | Assesses containers hosted on Linux machines running Docker containers, and then compares them with the Center for Internet Security (CIS) Docker Benchmark.
-
-
-
- - FIM, JIM
-500 MB
-
-- Agentlessly scan machines for vulnerabilities,
-
-
-  and secrets.
-
-
-using cloud APIs to collect data.<br/><br/> Also available in the Defender CSPM plan.
-
-<br/><br/> Also available in the Defender CSPM plan.
-
-
-
-
-
-
-
-
-
-**Regulatory compliance** | Plan 1, 2 | By default Defender for Cloud enables a couple of [default compliance standards](concept-regulatory-compliance-standards.md#default-compliance-standards). You can enable [additional compliance standards](concept-regulatory-compliance-standards.md#available-compliance-standards) if you have Defender for Servers, or any other Defender for Cloud plan enabled.
-
 **Network map** | Plan 2 only | Provides a geographical [network map](protect-network-resources.md) view of recommendations for hardening your network resources.
 **[Adaptive application controls](adaptive-application-controls.md)** | Plan 2 only | Adaptive application controls define allowlists of known safe applications for machines. To use this feature, Defender for Cloud must be enabled on the subscription. 
 **Free data ingestion (500 MB)** | Plan 2 only | Free data ingestion is available for [specific data types](faq-defender-for-servers.yml#what-data-types-are-included-in-the-daily-allowance-) to Log Analytics workspaces.<br/>- Data ingestion is calculated per node, per reported workspace, and per day.<br/>- It's available for every workspace that has a *Security* or *AntiMalware* solution installed. 
 **Free Azure Update Manager Remediation for Arc machines** | Plan 2 only | [Azure Update Manager remediation of unhealthy resources and recommendations](/azure/update-center/update-manager-faq#im-a-defender-for-server-customer-and-use-update-recommendations-powered-by-azure-update-manager-namely-periodic-assessment-should-be-enabled-on-your-machines-and-system-updates-should-be-installed-on-your-machines-would-i-be-charged-for-azure-update-manager) is available at no additional cost for Arc enabled machines.
 
-
+> [!NOTE]
+> - As an alternative to using integrated Defender Vulnerability Management, Defender for Cloud also supports vulnerability scanning with a [bring your own licence (BYOL) solution](deploy-vulnerability-assessment-byol-vm.md) for Azure VMs only. Azure Arc-enabled VMs aren't supported.
+> - You don't need to turn on a Defender for Cloud plan in order to use this feature.
+> - Supported solutions include [Qualys](https://www.qualys.com/lp/azure) and [Rapid7](https://www.rapid7.com/products/insightvm/).
 
 
 ## Enabling plans

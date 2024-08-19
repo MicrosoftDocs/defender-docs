@@ -9,20 +9,20 @@ ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to review and remediate endpoint detection and response recommendations in order to ensure the security of my virtual machine.
 ---
 
-# Remediate EDR solution recommendations (agentless)
+# Remediate EDR solutions (agentless)
 
-Microsoft Defender for Cloud provides agentless scanning of protected machines to [check that an endpoint detection and response (EDR) solution is installed on supported, connected machines and configured correctly. [Learn more]](integration-defender-for-endpoint.md). 
+Microsoft Defender for Cloud provides agentless scanning of protected machines to [check that an endpoint detection and response (EDR) solution is installed](integration-defender-for-endpoint.md#edr-solution-assessment). 
 
-The EDR solution might be Microsoft Defender for Endpoint that's integrated by default into Defender for Cloud, or a [supported third-party EDR solution](integration-defender-for-endpoint.md#other-edr-solutions).
+The EDR solution might be Microsoft Defender for Endpoint (integrated by default into Defender for Cloud), or a [supported third-party EDR solution](integration-defender-for-endpoint.md#other-edr-solutions).
 
-Based on EDR solution findings, Defender for Cloud provides [EDR recommendations](integration-defender-for-endpoint.md#edr-solution-recommendations). Remediate these recommendations to ensure that EDR solutons are installed and running correctly on VMs.
+Based on EDR solution findings, Defender for Cloud provides [recommendations](integration-defender-for-endpoint.md#edr-solution-recommendations) to remediate any issues, and ensure that EDR solutons are installed and running correctly on VMs.
 
 
 > [!NOTE]
 >
 > - Agentless scanning for EDR solution information replaces previous functionality that collected EDR solution information with the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), in general availability (GA), or with the Azure Monitoring Agent (AMA), in preview.
 > - The MMA is set to retire in August 2024. Data collection with the MMA will be deprecated in November 2024.
-> -The  AMA data collect preview is now deprecated.
+> - AMA preview support is now deprecated.
 
 
 ## Prerequisites

@@ -7,18 +7,15 @@ ms.topic: how-to
 ms.date: 01/16/2024
 ---
 
-# Enable agentless scanning for VMs
+# Enable agentless machine scanning
 
-Agentless machine scanning in Microsoft Defender for Cloud improves the security posture on machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+[Agentless machine scanning](concept-agentless-data-collection) in Microsoft Defender for Cloud improves the security posture on machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
-- [Learn more](concept-agentless-data-collection.md) about agentless scanning capabilities.
-- [Learn more](auto-deploy-vulnerability-assessment.md) about agentless and agent-based machine vulnerability scanning, and how they fit together.
-
-You can enable agentless scanning manually as needed.
+When you turn on Defender for Servers Plan 2, or the Defender Cloud Security Posture Management (CSPM) plan, agentless scanning is turned on by default. If needed, you can use the instructions in this article to turn on agentless scanning manually.
 
 ## Prerequisites
 
-- To use agentless scanning the [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md) plan, or [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled. When you enable one of these plans, agentless scanning is turned on by default.
+- To use agentless scanning the [Defender CSPM](concept-cloud-security-posture-management.md) plan, or [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled. 
 - Agentless machine scanning is available for Azure VMs,and for AWS/GCP machines connected to Defender for Cloud.
 - Malware scanning on machines if only available if you're running Defender for Servers Plan 2.
 - Agentless scanning is avilable on Azure standard VMs with:
@@ -52,18 +49,16 @@ You can enable agentless scanning manually as needed.
 
 1. Select **Save**.
 
-## Enable agentless scanning of Azure VMs with CMK encrypted disks (preview)
+## Enable for Azure VMs with CMK encrypted disks (preview)
 
-For agentless scanning of Azure VMs with CMK encrypted disks, you need to grant Defender for Cloud additional permissions to create a secure copy of these disks. To do this, dditional permissions are needed on Key Vaults used for CMK encryption for your VMs.
+For agentless scanning of Azure VMs with CMK encrypted disks, you need to grant Defender for Cloud additional permissions on Key Vaults used for CMK encryption for the VMs, to create a secure copy of the disks.
 
-### Assign permissions on Key Vaults
+1. To manually assign the permissions on a Key Vault, do the following:
 
-To manually assign the permissions on a Key Vault, follow these instructions:
+    - **Key vaults with non-RBAC permissions**: Assign "Microsoft Defender for Cloud Servers Scanner Resource Provider" (`0c7668b5-3260-4ad0-9f53-34ed54fa19b2`) these permissions: Key Get, Key Wrap, Key Unwrap.
+    - **Key vaults using RBAC permissions**: Assign "Microsoft Defender for Cloud Servers Scanner Resource Provider” (`0c7668b5-3260-4ad0-9f53-34ed54fa19b2`) the [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide?preserve-view=true&tabs=azure-cli#azure-built-in-roles-for-key-vault-data-plane-operations) built-in role.
 
-- **Key vaults with non-RBAC permissions**: Assign "Microsoft Defender for Cloud Servers Scanner Resource Provider" (`0c7668b5-3260-4ad0-9f53-34ed54fa19b2`) these permissions: Key Get, Key Wrap, Key Unwrap.
-- **Key vaults using RBAC permissions**: Assign "Microsoft Defender for Cloud Servers Scanner Resource Provider” (`0c7668b5-3260-4ad0-9f53-34ed54fa19b2`) the [Key Vault Crypto Service Encryption User](/azure/key-vault/general/rbac-guide?preserve-view=true&tabs=azure-cli#azure-built-in-roles-for-key-vault-data-plane-operations) built-in role.
-
-To assign these permissions at scale for multiple Key Vaults, use [this script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Agentless%20Scanning%20CMK%20support).
+1. To assign these permissions at scale for multiple Key Vaults, use [this script](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Agentless%20Scanning%20CMK%20support).
 
 
 ## Enable agentless scanning on AWS

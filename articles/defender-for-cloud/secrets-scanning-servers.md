@@ -8,31 +8,25 @@ ms.date: 04/16/2024
 
 # Machine secrets scanning
 
-Microsoft Defender for Cloud provides [secrets scanning](secrets-scanning.md) for virtual machines as part of its [agentless machine scanning features](concept-agentless-data-collection.md) that improve machine security posture. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+Microsoft Defender for Cloud provides [secrets scanning](secrets-scanning.md) for virtual machines as part of its [agentless scanning features](concept-agentless-data-collection.md) that improve machine security posture. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
-Secrets scanning for VMs helps you to quickly detect, prioritize, and remediate exposed secrets. 
-
-Agentless secrets scanning for VMs locates plaintext secrets that exist in your environment.
-
-If secrets are detected, Defender for Cloud findings help security teams to prioritize actions, and remediate to minimize the risk of lateral movement.
-
-Secrets scanning for VMs is available in these Defender for Cloud plans:
-
-- Defender Cloud Security Posture Management (CSPM) plan.
-- Defender for Servers Plan 2
-
-VM secrets scanning can scan Azure VMs, and AWS/GCP instances connected to Defender for Cloud.
+- Agentless secrets scanning for VMs helps you to quickly detect, prioritize, and remediate exposed plaintext secrets in your environment.
+- If secrets are detected, Defender for Cloud findings help security teams to prioritize actions, and remediate to minimize the risk of lateral movement.
+- Secrets scanning for VMs is available in these Defender for Cloud plans:
+    - Defender Cloud Security Posture Management (CSPM) plan.
+    - Defender for Servers Plan 2
+- VM secrets scanning can scan Azure VMs, and AWS/GCP instances connected to Defender for Cloud.
 
 ## Reducing security risk
 
-Secrets scanning helps reduce risk with the following mitigations:
+Secrets scanning helps reduce risk by:
 
 - Eliminating secrets that aren’t needed.
 - Applying the principle of least privilege.
 - Strengthening secrets security by using secrets management systems such as Azure Key Vault.
 - Using short-lived secrets such as substituting Azure Storage connection strings with SAS tokens that possess shorter validity periods.
 
-## How does VM secrets scanning work?
+## How VM secrets scanning works
 
 Secrets scanning for VMs is agentless and uses cloud APIs.
 
@@ -45,4 +39,4 @@ Secrets scanning for VMs is agentless and uses cloud APIs.
 
 ## Related content
 
-[Investigate and remediate machine secrets](remediate-server-secrets.md)
+[Investigate and remediate machine secrets](remediate-server-secrets.md).
