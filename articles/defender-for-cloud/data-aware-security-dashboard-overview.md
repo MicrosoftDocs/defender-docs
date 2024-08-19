@@ -5,7 +5,7 @@ ms.topic: conceptual
 ms.date: 02/11/2024
 ---
 
-# Data security dashboard (Preview)
+# Data security dashboard 
 
 Microsoft Defender for Cloud's data security dashboard provides an interactive view of significant risks to sensitive data. It prioritizes alerts and potential attack paths across multicloud data resources, making data protection management more effective.
 
