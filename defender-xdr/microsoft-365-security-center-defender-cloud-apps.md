@@ -73,7 +73,7 @@ Learn how to protect your cloud apps in Microsoft Defender XDR:
 
 **Defender for Cloud Apps in Microsoft Defender XDR for customers migrating from the classic portal**<br>
 
-> [!VIDEO https://learn.microsoft.com/_themes/docs.theme/master/en-us/_themes/global/video-embed.html?id=2105e5c9-23bf-41fb-a61d-0f0fae8ef05f title="Defender for Cloud Apps in Microsoft Defender XDR for customers migrating from the classic portal"]
+> [!VIDEO 2105e5c9-23bf-41fb-a61d-0f0fae8ef05f title="Defender for Cloud Apps in Microsoft Defender XDR for customers migrating from the classic portal"]
 
 
 ## Related information
