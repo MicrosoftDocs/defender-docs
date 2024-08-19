@@ -3,6 +3,7 @@ title: What is Microsoft Defender Experts for Hunting offering
 ms.reviewer:
 description: Microsoft  Defender Experts for Hunting is a proactive threat hunting service that goes beyond the endpoint to hunt across endpoints
 ms.service: defender-experts
+ms.subservice: dex-hunting
 ms.author: vpattnaik
 author: vpattnai
 ms.localizationpriority: medium
