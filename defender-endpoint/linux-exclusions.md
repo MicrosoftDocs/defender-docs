@@ -88,7 +88,53 @@ For antivirus exclusions, when using the * wildcard at the end of the path, it w
 
 ### Using the management console
 
-For more information on how to configure exclusions from Puppet, Ansible, or another management console, see [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
+To configure exclusions from Puppet, Ansible, or another management console, please refer to the following sample `mdatp_managed.json`.
+```JSON
+{
+   "exclusionSettings":{
+     "exclusions":[
+        {
+           "$type":"excludedPath",
+           "isDirectory":true,
+           "path":"/home/*/git<EXAMPLE DO NOT USE>",
+           "scopes": [
+              "epp"
+           ]
+        },
+        {
+           "$type":"excludedPath",
+           "isDirectory":true,
+           "path":"/run<EXAMPLE DO NOT USE>",
+           "scopes": [
+              "global"
+           ]
+        },
+        {
+           "$type":"excludedPath",
+           "isDirectory":false,
+           "path":"/var/log/system.log<EXAMPLE DO NOT USE><EXCLUDED IN ALL SCENARIOS>",
+           "scopes": [
+              "epp", "global"
+           ]
+        },
+        {
+           "$type":"excludedFileExtension",
+           "extension":".pdf<EXAMPLE DO NOT USE>",
+           "scopes": [
+              "epp"
+           ]
+        },
+        {
+           "$type":"excludedFileName",
+           "name":"/bin/cat<EXAMPLE DO NOT USE><NO SCOPE PROVIDED - GLOBAL CONSIDERED>"
+        }
+     ],
+     "mergePolicy":"admin_only"
+   }
+}
+```
+
+For more information, see [Set preferences for Defender for Endpoint on Linux](linux-preferences.md).
 
 ### Using the command line
 
