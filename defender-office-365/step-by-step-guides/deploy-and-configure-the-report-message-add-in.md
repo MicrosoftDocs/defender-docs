@@ -26,9 +26,9 @@ Depending on whether you're licensed for Defender for Office 365, you also get a
 
 ## Choose between which add-in to deploy
 
-- The Report Phishing add-in provides the option to report only phishing messages
-- The Report Message add-in provides the option to report junk, not junk (false positive), and phishing messages
-- The built-in Report button in Outlook on the web *[Learn More](../submissions-outlook-report-messages.md)*
+- The Report Phishing add-in provides the option to report only phishing messages.
+- The Report Message add-in provides the option to report junk, not junk (false positive), and phishing messages.
+- The built-in Report button in supported versions of Outlook. *[Learn More](../submissions-outlook-report-messages.md)*
 
 ## What you need
 
