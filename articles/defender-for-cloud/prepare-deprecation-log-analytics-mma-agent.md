@@ -184,13 +184,19 @@ After you disable the file events collection:
 
 ## Baseline experience
 
-The baseline feature which is based on the log analytics agent will be deprecated. The new baseline experience is base don the Guest Configuration experience, which provides machine misconfiguration information. This section provides guidance on how to migrate the legacy security baselines over MMA to the new version based on the Guest Configuration extension.
+The baseline feature which is based on the log analytics agent will be deprecated. The new baseline experience is based on the Guest Configuration experience, which provides machine misconfiguration information. This section provides guidance on how to migrate the legacy security baselines over MMA to the new version based on the Guest Configuration extension.
 
-### Prerequisites
+### Prepare for the migration
 
 - Ensure you have [enabled the Defender for Servers Plan 2](tutorial-enable-servers-plan.md).
 
 - Review the [support matrix for the Guest Configuration](/azure/governance/machine-configuration/overview).
+
+- **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for the [[Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc)](recommendations-reference-compute.md#guest-configuration-extension-should-be-installed-on-machineshttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkey6c99f570-2ce7-46bc-8175-cde013df43bc) and [remediate the recommendation](implement-security-recommendations.md).
+
+- **For GCP and AWS**: ARC machines contain a built in autoprovision feature within the connector, that automatically install the Guest Configuration feature.
+    - [Connect your GCP project to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
+    - [Connect AWS accounts to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
 
 ### Install Guest Configuration
 
