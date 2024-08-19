@@ -14,7 +14,7 @@ ms.collection:
   - tier1
   - usx-security
 ms.topic: conceptual
-ms.date: 08/07/2024
+ms.date: 08/19/2024
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
