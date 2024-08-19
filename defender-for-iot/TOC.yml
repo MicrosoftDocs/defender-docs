@@ -14,10 +14,12 @@
         href: site-security-overview.md     
       - name: Enterprise for IoT
         items:
-          - name: Enterprise for IoT overview
-            href: enterprise-for-iot.md
-          - name: Get started with enterprise for IoT
-            href: enterprise-for-iot-get-started.md      
+          - name: Enterprise IoT overview
+            href: enterprise-iot.md
+          - name: Enterprise IoT licenses
+            href: enterprise-iot-licenses.md
+          - name: Get started with enterprise IoT
+            href: enterprise-iot-get-started.md      
     - name: Get started
       items:
       - name: Prerequisites
