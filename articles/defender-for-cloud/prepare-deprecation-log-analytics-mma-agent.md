@@ -2,7 +2,7 @@
 title: Prepare for retirement of the Log Analytics agent 
 description: Learn how to prepare for the deprecation of the Log Analytics (MMA) agent in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 08/19/2024
 # customer intent: As a user, I want to understand how to prepare for the retirement of the Log Analytics agent in Microsoft Defender for Cloud.
 ---
 
@@ -181,6 +181,20 @@ After you disable the file events collection:
 
 - New events will stop being collected on the selected scope.
 - The historical events that already were collected remain stored in the relevant workspace under the *ConfigurationChange* table in the **Change Tracking** section. These events will remain available in the relevant workspace according to the retention period defined in this workspace. For more information, see [How retention and archiving work](/azure/azure-monitor/logs/data-retention-archive#how-retention-and-archiving-work).
+
+## Baseline experience
+
+The baseline feature which is based on the log analytics agent will be deprecated. The new baseline experience is base don the Guest Configuration experience, which provides machine misconfiguration information. This section provides guidance on how to migrate the legacy security baselines over MMA to the new version based on the Guest Configuration extension.
+
+### Prerequisites
+
+- Ensure you have [enabled the Defender for Servers Plan 2](tutorial-enable-servers-plan.md).
+
+- Review the [support matrix for the Guest Configuration](/azure/governance/machine-configuration/overview).
+
+### Install Guest Configuration
+
+
 
 ## Preparing Defender for SQL on Machines
 
