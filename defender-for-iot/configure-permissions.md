@@ -29,7 +29,7 @@ This article shows you how to make general changes to RBAC roles and permissions
 There are two ways to manage user access to the Defender portal, depending on the type of tenent you're using. Each system has different named permissions that allow access for Defender for IoT. The two systems are:
 
 - [Global Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference).
-- [Custom role access](/defender-xdr/custom-roles): Use role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
+- [Unified RBAC](/defender-xdr/custom-roles): Use unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 
 The instructions and permission settings listed in this article apply to the unified RBAC version.
 
