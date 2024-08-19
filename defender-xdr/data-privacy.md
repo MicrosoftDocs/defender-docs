@@ -1,11 +1,11 @@
 ---
-title: Microsoft Defender XDR data security and privacy
+title: Data retention and data security in Microsoft Defender XDR
 description: Describes the privacy and data security of the service.
 ms.service: defender-xdr
 f1.keywords: 
   - NOCSH
 ms.author: macapara
-author: mjcaparas
+author: diannegali
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
@@ -19,25 +19,24 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 08/12/2024
+ms.date: 08/19/2024
 ---
 
-# Microsoft Defender XDR data security and privacy
+# Data security and retention in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
 
 **Applies to:**
 - Microsoft Defender XDR
-- Microsoft Sentinel in the Microsoft Defender portal
 
-Microsoft Defender XDR operates in Microsoft Azure data centers in the European Union, the United Kingdom, the United States, Australia, Switzerland, and India. Customer data collected by the service is stored at rest in (a) the geo-location of the tenant as identified during provisioning or, (b) the geo-location as defined by the data storage rules of an online service if this online service is used by Microsoft Defender XDR to process such data.
+Microsoft Defender XDR operates in Microsoft Azure data centers in the European Union, the United Kingdom, the United States, Australia, and Switzerland. Customer data collected by the service is stored at rest in (a) the geo-location of the tenant as identified during provisioning or, (b) the geo-location as defined by the data storage rules of an online service if this online service is used by Microsoft Defender XDR to process such data.
 
 Customer data in pseudonymized form might also be stored in central storage and processing systems in the United States.
 
-The table below shows the general information on the data storage and privacy of specific service sources in Defender XDR:
+The table below shows the general information on the data retention of specific service sources in Defender XDR:
 
-|Product|Data retention policy|More information|
+|Product|Default data retention period|More information|
 |:---|:---|:---|
 |Microsoft Defender for Endpoint|180 days|[Defender for Endpoint data storage and privacy](/defender-endpoint/data-storage-privacy)|
 |Microsoft Defender for Office 365|Varies according to feature and license|[Defender for Office 365 data retention information](/defender-office-365/mdo-data-retention)|
