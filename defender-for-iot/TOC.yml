@@ -23,7 +23,7 @@
       - name: Set up sites
         href: set-up-sites.md
       - name: Configure permissions
-        href: permissions.md 
+        href: configure-permissions.md 
     - name: Monitor site security
       items:
       - name: Monitor site security
