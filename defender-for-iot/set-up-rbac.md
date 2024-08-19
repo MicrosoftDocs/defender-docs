@@ -33,6 +33,8 @@ There are two ways to manage user access to the Defender portal, depending on th
 - [Global Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference).
 - [Unified RBAC](/defender-xdr/custom-roles): Use unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 
+The instructions and permission settings listed in this article apply to the unified RBAC version.
+
 ### RBAC for version 1 or 2
 
 Depending on your tenant, you might have access to RBAC version 1 or 2 instead of the unified version. For more information, see [permissions for RBAC version 1](/defender-endpoint/prepare-deployment), or [permissions for RBAC version 2](/defender-endpoint/user-roles#permission-options).
