@@ -20,15 +20,12 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 08/19/2024
+appliesto: Microsoft Defender XDR
 ---
 
 # Data security and retention in Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-- Microsoft Defender XDR
 
 Microsoft Defender XDR operates in Microsoft Azure data centers in the European Union, the United Kingdom, the United States, Australia, and Switzerland. Customer data collected by the service is stored at rest in (a) the geo-location of the tenant as identified during provisioning or, (b) the geo-location as defined by the data storage rules of an online service if this online service is used by Microsoft Defender XDR to process such data.
 
