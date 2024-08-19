@@ -3,6 +3,7 @@ title: Enable Conditional Access to better protect users, devices, and data
 description: Enable Conditional Access to prevent applications from running if a device is considered at risk and an application is determined to be non-compliant.
 search.appverid: met150
 ms.service: defender-endpoint
+ms.subservice: onboard
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium

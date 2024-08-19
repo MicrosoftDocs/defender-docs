@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/01/2024
+ms.date: 08/01/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux manually
@@ -42,7 +42,7 @@ This article describes how to deploy Microsoft Defender for Endpoint on Linux ma
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems-1)
   - [Mariner](#mariner)
 - [Application installation](#application-installation)
-  - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
+  - [RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)](#rhel-and-variants-centos-fedora-oracle-linux-amazon-linux-2-rocky-and-alma)
   - [SLES and variants](#sles-and-variants)
   - [Ubuntu and Debian systems](#ubuntu-and-debian-systems)
   - [Mariner](#mariner-1)
@@ -58,9 +58,9 @@ Before you get started, see [Microsoft Defender for Endpoint on Linux](microsoft
 
 ## Configure the Linux software repository
 
-Defender for Endpoint on Linux can be deployed from one of the following channels (denoted below as *[channel]*): *insiders-fast*, *insiders-slow*, or *prod*. Each of these channels corresponds to a Linux software repository. The instructions in this article describe configuring your device to use one of these repositories.
+Defender for Endpoint on Linux can be deployed from one of the following channels (denoted as *[channel]*): *insiders-fast*, *insiders-slow*, or `prod`. Each of these channels corresponds to a Linux software repository. The instructions in this article describe configuring your device to use one of these repositories.
 
-The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in *insiders-fast* are the first ones to receive updates and new features, followed later by *insiders-slow* and lastly by *prod*.
+The choice of the channel determines the type and frequency of updates that are offered to your device. Devices in *insiders-fast* are the first ones to receive updates and new features, followed later by *insiders-slow* and lastly by `prod`.
 
 In order to preview new features and provide early feedback, it's recommended that you configure some devices in your enterprise to use either *insiders-fast* or *insiders-slow*.
 
@@ -91,7 +91,7 @@ Options:
 
 Read more [here](https://github.com/microsoft/mdatp-xplat/tree/master/linux/installation).
 
-### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky and Alma)
+### RHEL and variants (CentOS, Fedora, Oracle Linux, Amazon Linux 2, Rocky, and Alma)
 
 - Install `yum-utils` if it isn't installed yet:
 
@@ -128,7 +128,7 @@ Read more [here](https://github.com/microsoft/mdatp-xplat/tree/master/linux/inst
   > [!TIP]
   > Use hostnamectl command to identify system related information including release *[version]*.
 
-  For example, if you're running CentOS 7 and want to deploy Defender for Endpoint on Linux from the *prod* channel:
+  For example, if you're running CentOS 7 and want to deploy Defender for Endpoint on Linux from the `prod` channel:
 
   ```bash
   sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/7/prod.repo
@@ -160,7 +160,7 @@ Read more [here](https://github.com/microsoft/mdatp-xplat/tree/master/linux/inst
    > [!TIP]
    > Use SPident command to identify system related information including release *[version]*.
 
-   For example, if you're running SLES 12 and wish to deploy Microsoft Defender for Endpoint on Linux from the *prod* channel:
+   For example, if you're running SLES 12 and wish to deploy Microsoft Defender for Endpoint on Linux from the `prod` channel:
 
    ```bash
    sudo zypper addrepo -c -f -n microsoft-prod https://packages.microsoft.com/config/sles/12/prod.repo
@@ -198,7 +198,7 @@ Read more [here](https://github.com/microsoft/mdatp-xplat/tree/master/linux/inst
   > [!TIP]
   > Use hostnamectl command to identify system related information including release *[version]*.
 
-  For example, if you're running Ubuntu 18.04 and wish to deploy Microsoft Defender for Endpoint on Linux from the *prod* channel:
+  For example, if you're running Ubuntu 18.04 and wish to deploy Microsoft Defender for Endpoint on Linux from the `prod` channel:
 
   ```bash
   curl -o microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list
@@ -210,7 +210,7 @@ Read more [here](https://github.com/microsoft/mdatp-xplat/tree/master/linux/inst
   sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-[channel].list
   ```
 
-  For example, if you chose *prod* channel:
+  For example, if you chose `prod` channel:
 
   ```bash
   sudo mv ./microsoft.list /etc/apt/sources.list.d/microsoft-prod.list
@@ -263,7 +263,7 @@ curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | su
   > [!NOTE]
   > On Mariner, Insider Fast Channel is not available.
 
-  If you want to deploy Defender for Endpoint on Linux from the *prod* channel. Use the following commands
+  If you want to deploy Defender for Endpoint on Linux from the `prod` channel. Use the following commands
   
   ```bash
   sudo dnf install mariner-repos-extras
@@ -476,7 +476,7 @@ Download the onboarding package from Microsoft Defender portal.
      curl -o /tmp/eicar.com.txt https://secure.eicar.org/eicar.com.txt
      ```
      
-   - You can run additional detection tests on zip files using either of the following commands:
+   - You can run more detection tests on zip files using either of the following commands:
       
       ```bash
       curl -o /tmp/eicar_com.zip https://secure.eicar.org/eicar_com.zip
@@ -493,7 +493,7 @@ Download the onboarding package from Microsoft Defender portal.
 
 - Verify that the onboarded Linux server appears in Microsoft Defender XDR. If this is the first onboarding of the machine, it can take up to 20 minutes until it appears.
 
-   - Download and extract the [script file](https://aka.ms/LinuxDIY) to an onboarded Linux server and run the following command: `./mde_linux_edr_diy.sh`
+   - Download and extract the [script file](https://aka.ms/MDE-Linux-EDR-DIY) to an onboarded Linux server and run the following command: `./mde_linux_edr_diy.sh`
 
    - After a few minutes, a detection should be raised in Microsoft Defender XDR.
 
@@ -503,16 +503,16 @@ Download the onboarding package from Microsoft Defender portal.
 
 The following external package dependencies exist for the mdatp package:
 
-- The mdatp RPM package requires "glibc >= 2.17", "audit", "policycoreutils", "semanage" "selinux-policy-targeted", "mde-netfilter"
-- For RHEL6 the mdatp RPM package requires "audit", "policycoreutils", "libselinux", "mde-netfilter"
-- For DEBIAN the mdatp package requires "libc6 >= 2.23", "uuid-runtime", "auditd", "mde-netfilter"
-- For Mariner the mdatp package requires "attr", "audit", "diffutils", "libacl", "libattr", "libselinux-utils", "selinux-policy", "policycoreutils", "mde-netfilter"
+- The mdatp RPM package requires `glibc >= 2.17`, `audit`, `policycoreutils`, `semanage` `selinux-policy-targeted`, `mde-netfilter`
+- For RHEL6 the mdatp RPM package requires `audit`, `policycoreutils`, `libselinux`, `mde-netfilter`
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, `auditd`, `mde-netfilter`
+- For Mariner the mdatp package requires `attr`, `audit`, `diffutils`, `libacl`, `libattr`, `libselinux-utils`, `selinux-policy`, `policycoreutils`, `mde-netfilter`
 
 The mde-netfilter package also has the following package dependencies:
 
-- For DEBIAN, the mde-netfilter package requires "libnetfilter-queue1", "libglib2.0-0"
-- For RPM, the mde-netfilter package requires "libmnl", "libnfnetlink", "libnetfilter_queue", "glib2"
-- For Mariner, the mde-netfilter package requires "libnfnetlink", "libnetfilter_queue"
+- For DEBIAN, the mde-netfilter package requires `libnetfilter-queue1`, `libglib2.0-0`
+- For RPM, the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, `glib2`
+- For Mariner, the mde-netfilter package requires `libnfnetlink`, `libnetfilter_queue`
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the prerequisite dependencies.
 
@@ -523,7 +523,7 @@ See [Log installation issues](linux-resources.md#log-installation-issues) for mo
 
 ## How to migrate from Insiders-Fast to Production channel
 
-1. Uninstall the "Insiders-Fast channel" version of Defender for Endpoint on Linux.
+1. Uninstall the `Insiders-Fast channel` version of Defender for Endpoint on Linux.
 
    ```bash
    sudo yum remove mdatp
@@ -536,13 +536,13 @@ See [Log installation issues](linux-resources.md#log-installation-issues) for mo
    ```
 
    > [!NOTE]
-   > The output should show "packages-microsoft-com-fast-prod".
+   > The output should show `packages-microsoft-com-fast-prod`.
 
    ```bash
    sudo yum-config-manager --disable packages-microsoft-com-fast-prod
    ```
 
-1. Redeploy Microsoft Defender for Endpoint on Linux using the "Production channel".
+1. Redeploy Microsoft Defender for Endpoint on Linux using the Production channel.
 
 ## Uninstallation
 

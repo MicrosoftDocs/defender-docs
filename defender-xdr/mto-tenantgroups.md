@@ -110,9 +110,9 @@ Sync results display the number of synced tenants and synced content. The number
 
 Common reasons for a sync to fail include:
 
-- User doesn’t have permission to create custom detection rules on the target tenant.
-- User doesn’t have permission to read custom detection rules from **content source**.
-- User doesn’t have permission for the target device scope.
+- User doesn't have permission to create custom detection rules on the target tenant.
+- User doesn't have permission to read custom detection rules from **content source**.
+- User doesn't have permission for the target device scope.
 
 If the issue is with the target tenant, try creating an identical custom detection rule for further diagnosis. If the issue is with accessing the source data, try accessing the custom detection.
 

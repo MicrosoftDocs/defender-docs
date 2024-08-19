@@ -4,6 +4,7 @@ ms.reviewer:
 description: Select Ask Defender Experts directly inside the Microsoft Defender security portal to get swift and accurate responses to all your threat hunting questions.
 search.product: Windows 10
 ms.service: defender-experts
+ms.subservice: dex-hunting
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.pagetype: security
@@ -18,7 +19,7 @@ ms.collection:
   - essentials-get-started
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 04/18/2024
+ms.date: 08/14/2024
 ---
 
 # Collaborate with experts on demand
@@ -42,7 +43,7 @@ Select **Ask Defender Experts** directly inside the Microsoft 365 security porta
 
 You need to select one of the following permissions before submitting inquires to our Defender experts. For more details about role-based access control (RBAC) permissions, see: [Microsoft Defender for Endpoint and Microsoft Defender XDR RBAC permissions](compare-rbac-roles.md#map-defender-for-endpoint-and-defender-vulnerability-management-permissions-to-the-microsoft-defender-xdr-rbac-permissions).
 
-|**Product name**|**Product RBAC permission**|
+|Product name|Product RBAC permission|
 |---|---|---|
 | Microsoft Defender for Endpoint RBAC | Manage security settings in the Security Center|
 | Microsoft Defender XDR Unified RBAC | Authorization and settings \ Security settings \ Core security settings (manage)</br>Authorization and settings \ Security settings \ Detection tuning (manage) |
@@ -51,25 +52,25 @@ You need to select one of the following permissions before submitting inquires t
 
 The option to **Ask Defender Experts** is available in several places throughout the portal:
 
-- **Device page actions menu**
+- **Device page actions menu**:
 
-:::image type="content" source="/defender/media/mte/defenderexperts/device-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Device page action menu in the Microsoft Defender portal." lightbox="/defender/media/mte/defenderexperts/device-page-actions-menu.png":::
+  :::image type="content" source="/defender/media/mte/defenderexperts/device-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Device page action menu in the Microsoft Defender portal." lightbox="/defender/media/mte/defenderexperts/device-page-actions-menu.png":::
 
-- **Device inventory page flyout menu**
+- **Device inventory page flyout menu**:
 
-:::image type="content" source="/defender/media/mte/defenderexperts/device-inventory-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Device inventory page flyout menu in the Microsoft Defender portal.." lightbox="/defender/media/mte/defenderexperts/device-inventory-flyout-menu.png":::
+  :::image type="content" source="/defender/media/mte/defenderexperts/device-inventory-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Device inventory page flyout menu in the Microsoft Defender portal.." lightbox="/defender/media/mte/defenderexperts/device-inventory-flyout-menu.png":::
 
-- **Alerts page flyout menu**
+- **Alerts page flyout menu**:
 
-:::image type="content" source="/defender/media/mte/defenderexperts/alerts-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Alerts page flyout menu in the Microsoft Defender portal.." lightbox="/defender/media/mte/defenderexperts/alerts-flyout-menu.png":::
+  :::image type="content" source="/defender/media/mte/defenderexperts/alerts-flyout-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Alerts page flyout menu in the Microsoft Defender portal.." lightbox="/defender/media/mte/defenderexperts/alerts-flyout-menu.png":::
 
-- **Incidents page actions menu**
+- **Incidents page actions menu**:
 
-:::image type="content" source="/defender/media/mte/defenderexperts/incidents-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Incidents page actions menu in the Microsoft Defender portal.." lightbox="/defender/media/mte/defenderexperts/incidents-page-actions-menu.png":::
+  :::image type="content" source="/defender/media/mte/defenderexperts/incidents-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Incidents page actions menu in the Microsoft Defender portal.." lightbox="/defender/media/mte/defenderexperts/incidents-page-actions-menu.png":::
 
 ### Sample questions you can ask from Defender Experts
 
-**Alert information**
+#### Alert information
 
 - We saw a new type of alert for a living-off-the-land binary. We can provide the alert ID. Can you tell us more about this alert and if it's related to any incident and how we can investigate it further?
 - We've observed two similar attacks, which both try to execute malicious PowerShell scripts but generate different alerts. One is "Suspicious PowerShell command line" and the other is "A malicious file was detected based on indication provided by Office 365." What is the difference?
@@ -77,18 +78,18 @@ The option to **Ask Defender Experts** is available in several places throughout
 - Can you give more context or insight about the alert and any related incidents, "Suspicious behavior by a system utility was observed"?
 - I observed an alert titled "Creation of forwarding/redirect rule". I believe the activity is benign. Can you tell me why I received an alert?
 
-**Possible device compromise**
+#### Possible device compromise
 
 - Can you help explain why we see a message or alert for "Unknown process observed" on many devices in our organization? We appreciate any input to clarify whether this message or alert is related to malicious activity or incidents.
 - Can you help validate a possible compromise on the following system, dating from last week? It's behaving similarly as a previous malware detection on the same system six months ago.
 
-**Threat intelligence details**
+#### Threat intelligence details
 
 - We detected a phishing email that delivered a malicious Word document to a user. The document caused a series of suspicious events, which triggered multiple alerts for a particular malware family. Do you have any information on this malware? If yes, can you send us a link?
 - We recently saw a blog post about a threat that is targeting our industry. Can you help us understand what protection Microsoft Defender XDR provides against this threat actor?
 - We recently observed a phishing campaign conducted against our organization. Can you tell us if this was targeted specifically to our company or vertical?
 
-**Microsoft Defender Experts for Hunting alert communications**
+#### Microsoft Defender Experts for Hunting alert communications
 
 - Can your incident response team help us address the Defender Experts Notification that we got?
 - We received this Defender Experts Notification from Microsoft Defender Experts for Hunting. We don't have our own incident response team. What can we do now, and how can we contain the incident?

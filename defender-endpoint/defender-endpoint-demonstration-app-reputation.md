@@ -3,6 +3,7 @@ title: Microsoft Defender for Endpoint SmartScreen app reputation demonstration
 description: Test how Microsoft Defender for Endpoint SmartScreen helps you identify phishing and malware websites
 search.appverid: met150
 ms.service: defender-endpoint
+ms.subservice: ngp
 ms.author: siosulli 
 author: siosulli 
 ms.localizationpriority: medium
@@ -13,7 +14,7 @@ ms.collection:
 - tier2
 - demo
 ms.topic: article
-ms.date: 01/15/2024
+ms.date: 07/22/2024
 ---
 
 # SmartScreen app reputation demonstration

@@ -86,11 +86,11 @@ The criteria Microsoft Defender uses to correlate alerts together in a single in
 
 ## Incident correlation and merging
 
-Microsoft Defender XDR’s correlation activities don’t stop when incidents are created. Defender XDR continues to detect commonalities and relationships between incidents, and between alerts across incidents. When two or more incidents are determined to be sufficiently alike, Defender XDR merges the incidents into a single incident.
+Microsoft Defender XDR's correlation activities don't stop when incidents are created. Defender XDR continues to detect commonalities and relationships between incidents, and between alerts across incidents. When two or more incidents are determined to be sufficiently alike, Defender XDR merges the incidents into a single incident.
 
 ### How does Defender XDR make that determination?
 
-Defender XDR’s correlation engine merges incidents when it recognizes common elements between alerts in separate incidents, based on its deep knowledge of the data and the attack behavior. Some of these elements include:
+Defender XDR's correlation engine merges incidents when it recognizes common elements between alerts in separate incidents, based on its deep knowledge of the data and the attack behavior. Some of these elements include:
 
 - Entities&mdash;assets like users, devices, mailboxes, and others
 - Artifacts&mdash;files, processes, email senders, and others
@@ -99,9 +99,9 @@ Defender XDR’s correlation engine merges incidents when it recognizes common e
 
 ### When are incidents *not* merged?
 
-Even when the correlation logic indicates that two incidents should be merged, Defender XDR doesn’t merge the incidents under the following circumstances:
+Even when the correlation logic indicates that two incidents should be merged, Defender XDR doesn't merge the incidents under the following circumstances:
 
-- One of the incidents has a status of "Closed". Incidents that are resolved don’t get reopened.
+- One of the incidents has a status of "Closed". Incidents that are resolved don't get reopened.
 - The two incidents eligible for merging are assigned to two different people.
 - Merging the two incidents would raise the number of entities in the merged incident above the maximum allowed.
 - The two incidents contain devices in different [device groups](/defender-endpoint/machine-groups) as defined by the organization. <br>(This condition is not in effect by default; it must be enabled.)
@@ -110,10 +110,14 @@ Even when the correlation logic indicates that two incidents should be merged, D
 
 When two or more incidents are merged, a new incident is not created to absorb them. Instead, the contents of one incident are migrated into the other incident, and the incident abandoned in the process is automatically closed. The abandoned incident is no longer visible or available in Microsoft Defender XDR, and any reference to it is redirected to the consolidated incident. The abandoned, closed incident remains accessible in Microsoft Sentinel in the Azure portal. The contents of the incidents are handled in the following ways:
 
-- Alerts contained in the abandoned incident are moved to the consolidated incident.
-- Entities (assets etc.) follow the alerts they’re linked to.
+- Alerts contained in the abandoned incident are removed from it and added to the consolidated incident.
+- Any tags applied to the abandoned incident are removed from it and added to the consolidated incident.
+- A **`Redirected`** tag is added to the abandoned incident.
+- Entities (assets etc.) follow the alerts they're linked to.
 - Analytics rules recorded as involved in the creation of the abandoned incident are added to the rules recorded in the consolidated incident.
-- Currently, comments and activity log entries in the abandoned incident are *not* moved to the consolidated incident. To see the abandoned incident's comments and activity history, open the incident in Microsoft Sentinel in the Azure portal.
+- Currently, comments and activity log entries in the abandoned incident are *not* moved to the consolidated incident.
+
+To see the abandoned incident's comments and activity history, open the incident in Microsoft Sentinel in the Azure portal. The activity history includes the closing of the incident and the adding and removal of alerts, tags, and other items related to the incident merge. These activities are attributed to the identity *Microsoft Defender XDR - alert correlation*.
 
 ## Manual correlation
 

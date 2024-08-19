@@ -102,7 +102,7 @@ Use the following steps to check the network connectivity of Microsoft Defender 
 3. Verify that the traffic isn't being inspected by SSL inspection (TLS inspection). This is the most common network related issue when setting up Microsoft Defender Endpoint, see [Verify SSL inspection isn't being performed on the network traffic](#step-3-verify-ssl-inspection-isnt-being-performed-on-the-network-traffic).
 
 > [!NOTE]
-> - It is generally recommended that traffic for Defender for Endpoint is not inspected by SSL inspection (TLS inspection). This applies to all supported operating systems (Windows, Linux, and MacOS).
+> - Traffic for Defender for Endpoint should NOT be inspected by SSL inspection (TLS inspection). This applies to all supported operating systems (Windows, Linux, and MacOS).
 > - To allow connectivity to the consolidated set of URLs or IP addresses, ensure your devices are running the latest component versions. See [Onboarding devices using streamlined connectivity for Microsoft Defender for Endpoint](configure-device-connectivity.md) for more information.
 
 For more information see [Troubleshoot cloud connectivity issues](#troubleshoot-cloud-connectivity-issues).

@@ -8,7 +8,7 @@ metadata:
   ms.service: defender-business
   ms.topic: landing-page
   ms.date: 09/07/2023
-  ms.collection: 
+  ms.collection:
   - SMB
   - m365-security
   - m365-initiative-defender-business
@@ -92,5 +92,3 @@ landingContent:
             url: mdb-faq.yml
           - text: Microsoft Security Intelligence
             url: https://www.microsoft.com/wdsi/threats
-
- 
