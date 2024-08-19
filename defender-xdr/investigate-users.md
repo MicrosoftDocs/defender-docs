@@ -1,5 +1,5 @@
 ---
-title: Investigate users in Microsoft Defender XDR
+title: User entity page in the Microsoft Defender portal
 description: Investigate users for an incident in the Microsoft Defender portal.
 ms.service: defender-xdr
 ms.localizationpriority: medium
