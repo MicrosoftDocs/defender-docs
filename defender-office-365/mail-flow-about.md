@@ -58,7 +58,7 @@ To verify that EOP mail flow is working correctly, use the following tests:
 
 ## Support for anonymous inbound email over IPv6
 
-EOP supports receiving anonymous inbound email over IPv6, but an admin is required to opt in by contacting Microsoft support. To open a support request, see [Get support for Microsoft 365 for business](/microsoft-365/admin/get-help-support).
+EOP supports receiving anonymous inbound email over IPv6; we are rolling out IPv6 by default to all Exchange Online customers by end of Q1CY25. If you need to enable inbound IPv6 for your Accepted Domains before then, an admin is required to opt in by contacting Microsoft support. To open a support request, see [Get support for Microsoft 365 for business](/microsoft-365/admin/get-help-support).
 
 After the organization has opted in, the organization can receive anonymous inbound email over IPv6 as long as the source IPv6 email server meets both of the following requirements:
 
