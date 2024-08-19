@@ -17,7 +17,7 @@ ms.collection:
 - tier1
 ms.topic: conceptual
 adobe-target: true
-ms.date: 07/18/2024
+ms.date: 08/19/2024
 appliesto:
 - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
 manager: deniseb
