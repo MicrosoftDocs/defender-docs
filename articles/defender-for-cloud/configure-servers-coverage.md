@@ -1,19 +1,18 @@
 ---
-title: Modify settings in the  Defender for Servers plan in Microsoft Defender for Cloud
+title: Modify Defender for Servers plan settings in Microsoft Defender for Cloud
 description: Learn how to configure settings in the Defender for Servers plan in Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 02/05/2024
+ms.date: 08/19/2024
+# customer intent: After setting up the Defender for Servers plan in Defender for Cloud, I want to review machines protected by the plan, and modify plan settings.
 ---
 
 # Modify Defender for Servers plan settings
 
-After [deploying the Defender for Servers plan](tutorial-enable-servers-plan.md) in Microsoft Defender for Cloud, you can check whether resources are protected by the plan, configure plan features, or turn the plan on and off as needed.
+After [deploying the Defender for Servers plan](tutorial-enable-servers-plan.md) in Microsoft Defender for Cloud, you can check which resources are protected by the plan, configure plan features, or turn the plan on and off as needed.
 
-## Check resource protection
+## Check machine protection
 
-You can check resources to see if Defender for Servers is enabled on them.
-
-Check as follows: 
+Find machines protected by the plan.
 
 1. In Defender for Cloud, select **Inventory**.
 1. In the **Resource Type** query, you can filter the inventory to narrow down results to resources supported by Defender for Servers. For example:
@@ -43,8 +42,8 @@ You can modify plan settings as follows:
     **Feature** | **Details** | **Modify plan**
     --- | --- | ---
     **Vulnerability assessment** | When you enable the plan, [vulnerability scanning](auto-deploy-vulnerability-assessment.md) is enabled by default.<br/> | [Manually configure](deploy-vulnerability-assessment-defender-vulnerability-management.md) vulnerability scanning settings.
-    **Endpoint protection**. | When you enable the Defender for Servers plan, Defender for Endpoint is integrated by default. Defender for Endpoint protection features are available, and automatic provisioning of the Defender for Endpoint agent is enabled. | [Turn endpoint protection on and off](enable-defender-for-endpoint.md) in a plan.
-    **Agentless scanning** |  Agentless scanning provides a number of scanning capabilities, including agentless vulnerability scanning. It is enabled by default when Defender for Servers Plan 2 (or the Defender Cloud Security Posture Management (CSPM) plan) is turned on. | [Turn agentless scanning on and off](enable-agentless-scanning-vms.md), and [exclude machines from agentless scanning](exclude-machines-agentless-scanning.md). 
+    **Endpoint protection**. | When you enable the plan, Defender for Endpoint is integrated by default. Defender for Endpoint protection features are available, and automatic provisioning of the Defender for Endpoint agent is enabled. | [Turn endpoint protection on and off](enable-defender-for-endpoint.md) in a plan.
+    **Agentless scanning** |  [Agentless scanning](concept-agentless-data-collection.md) provides a number of scanning capabilities. It's enabled by default when Defender for Servers Plan 2 (or the Defender Cloud Security Posture Management (CSPM) plan) is turned on. | [Turn agentless scanning on and off](enable-agentless-scanning-vms.md), and [exclude machines from agentless scanning](exclude-machines-agentless-scanning.md). 
 
 
 

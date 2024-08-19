@@ -1,8 +1,10 @@
 ---
-title: Deploy Defender for Servers
-description: Learn how to enable the Defender for Servers on your Azure subscription for Microsoft Defender for Cloud.
+title: Deploy the Defender for Servers plan in Microsoft Defender for Cloud
+description: Learn how to enable the Defender for Servers plan in Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 02/05/2024
+ms.date: 08/19/2024
+# customer intent: I want to deploy the Defender for Servers plan in Defender for Cloud so that I can protect connected machines and reduce security risk.
+
 ---
 
 # Deploy Defender for Servers
@@ -20,22 +22,19 @@ Defender for Servers provides two plans.
 
 ## Prerequisites
 
-- **Understand Defender for Servers**. Before you start, we recommend reading the [Defender for Servers planning guide](plan-defender-for-server.md), making sure you understand the [Defender for Servers plans](defender-for-servers-overview.md), and reviewing Defender for Servers pricing on the [the Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
-- **Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) if you don't have one
-- Defender for Cloud should [be connected to your Azure subscription](connect-azure-subscription.md).
+- **Plan the deployment**. Before you start, we recommend reading the [Defender for Servers planning guide](plan-defender-for-server.md).
+- **Review plans**. Make sure you understand the available [plans](defender-for-servers-overview.md), and [different ways to deploy](defender-for-servers-overview.md#enabling-plans).
+- **Review pricing**. Check Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
+- **Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) if needed. Defender for Cloud should [be connected to an Azure subscription](connect-azure-subscription.md).
 - **Multicloud machines**. To protect multicloud (AWS/GCP machines) or on-premises machines, you must:
-    - Connect [AWS accounts](quickstart-onboard-aws.md) to Defender for Cloud.
-    - Connect [GCP projects](quickstart-onboard-gcp.md) to Defender for Cloud.
-    - Onboard [on-premises machines](onboard-machines-with-defender-for-endpoint.md) as Azure Arc VMs to Defender for Cloud.
-- **Review support**. Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
-- **Deployment scope** 
-    - Plan 1 can be enabled at the Azure subscription level, or at the resource level for Azure VMs, on-premises machines that are onboarded as Azure Arc VMs, and Azure VM Scale Sets Flex.
-    - Plan 2 can be enabled at the subscription level only. You can however, disable protection for specific machines.
+    - [Connect AWS accounts](quickstart-onboard-aws.md) to Defender for Cloud.
+    - [Connect GCP projects](quickstart-onboard-gcp.md) to Defender for Cloud.
+    - [Onboard on-premises machines](onboard-machines-with-defender-for-endpoint.md) as Azure Arc VMs to Defender for Cloud.
+- **Review support requirements**. Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
 - **Using a custom Log Analytics workspace**
-    - When you enable Defender for Cloud on a subscription for the first time, a default Log Analytics workspace is set up in the subscription. When you enable Defender for Servers Plan 2 for a subscription, it's enabled on this default workspace. The workspace isn't relevant for Plan 1.
-    - If you're using a custom workspace for Defender for Cloud, you must specifically enable Plan 2 on that workspace. All machines connected to the workspace then have Plan 2 enabled, regardless of the settings on their connected subscription.
+    - When you enabled Defender for Cloud on a subscription for the first time, a default Log Analytics workspace is set up in the subscription. When you enable Defender for Servers Plan 2 for a subscription, it's enabled on this default workspace. The workspace isn't relevant for Plan 1.
+    - If you used a custom workspace for Defender for Cloud, you must specifically enable Plan 2 on that workspace. All machines connected to the workspace then have Plan 2 enabled, regardless of the settings on their connected subscription.
     - [Learn more](plan-defender-for-servers-data-workspace.md) about workspace planning in Defender for Servers.
-
 
 ## Enable on Azure, AWS, or GCP
 
@@ -70,15 +69,15 @@ Defender for Endpoint integration is enabled by default in Defender for Cloud. W
 
 After enabling the plan, you have the ability to [configure the features of the plan](configure-servers-coverage.md) to suit your needs.
 
-## Enable Plan 1 for resources
+## Enable Plan 1 for specific resources
 
 Although we recommend that you enable the plan for an entire Azure subscription, you can turn on Plan 1 for a specific resource using the Defender for Cloud REST API or a PowerShell script.
 
-## Enable Plan 1 for a specific resource
+## Enable for a specific machine
 
 To turn the plan on for a specific resource, use the Defender for Cloud REST API.[Pricings resource](/rest/api/defenderforcloud/pricings).
 
-## Enable Plan 1 for a resource group or tags
+## Enable for a resource group or tags
 
 Enable for a resource group or Azure resource tags as follows:
 
@@ -88,7 +87,7 @@ Enable for a resource group or Azure resource tags as follows:
 1. Follow the rest of the onscreen instructions.
 
 
-## Enable Plan 2 for a custom workspace
+## Enable Plan 2 on a custom workspace
 
 Enable Plan 2 on a specific workspace as follows:
 

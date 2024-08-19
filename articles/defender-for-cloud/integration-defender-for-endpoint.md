@@ -1,29 +1,34 @@
 ---
-title: Understand endpoint detection and response
-description: Learn about deploying Microsoft Defender for Endpoint from Microsoft Defender for Cloud to protect Azure, hybrid, and multicloud machines.
+title: Understand EDR in the Defender for Servers plan in Microsoft Defender for Cloud
+description: Learn about EDR integration in the Defender for Servers plan in Microsoft Defender for Cloud.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: concept-article
-ms.date: 06/23/2024
-#customer intent: As a reader, I want to understand how to deploy Microsoft Defender for Endpoint from Microsoft Defender for Cloud to protect Azure, hybrid, and multicloud machines.
+ms.date: 08/19/2024
+#customer intent: I want to understand endpoint detection and response (EDR) capabilities provided by Defender for Servers plan, and what EDR solutions are available.
 ---
 
 # Overview: Endpoint detection and response 
 
 The Defender for Servers plan in Microsoft Defender for Cloud integrates endpoint detection and response (EDR) protection for supported machines. Defender for Servers:
 
-- **Provides EDR protection**: Defender for Servers integrates natively with [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide Defender for Endpoint EDR capabilities by default in Defender for Cloud.
-- **Assesses EDR solutions**: Defender for Servers Plan 2 is also capable of agentlessly scanning connected machines to check whether they have an EDR solution installed as expected.
+- **Provides EDR protection**: Defender for Servers integrates natively with [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide Defender for Endpoint EDR protection capabilities for machines connected to Defender for Cloud.
+- **Assesses EDR solutions**: Defender for Servers Plan 2 (or the Defender CSPM plan) can agentlessly scan connected machines to check whether they have an EDR solution installed and running.
+
+    Agentless scanning is available for Azure VMs, and for AWS/GCP machines connected to Defender for Cloud, It isn't available for on-premises machines.
+
 
 > [!NOTE]
-> - Agentless scanning for EDR solutions replaces older functionality that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) in general availability, or the Azure Monitoring Agent (AMA) in preview.
-> - The MMA is set to retire in August 2024. Scanning using the MMA will be deprecated in November 2024.
-> - The AMA preview is now deprecated.
+> - Agentless scanning for EDR solutions replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)). The MMA collected machine data for assessment against security standards provided by Defender for Cloud foundational CSPM.
+> - The MMA is set to retire in August 2024. > - Scanning using the MMA will be deprecated in November 2024.
+
 
 
 ## EDR protection with Defender for Endpoint
 
-Defender for Servers integrates natively with [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide Defender for Endpoint Plan 2 EDR protection to provide near real-time, actionable threat detection and response. Integrated features include:
+Defender for Servers integrates natively with [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide  near real-time, actionable threat detection and response for supported machines.
+
+Integrated features include:
 
 - **Threat and vulnerability management**, provided by [Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).
 - **[Attack surface reduction](/defender-endpoint/attack-surface-reduction)** capabilities.
@@ -36,14 +41,15 @@ Defender for Servers integrates natively with [Microsoft Defender for Endpoint](
 
 ### Integration architecture
 
-A Defender for Endpoint tenant is automatically created, when you use Defender for Cloud to monitor your machines.
+A Defender for Endpoint tenant is automatically created when you use Defender for Cloud to monitor your machines.
 
-- **Location:** Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning
-    - Customer data - in pseudonymized form - might also be stored in the central storage and processing systems in the United States.
+- **Collected data:** Data collected by Defender for Endpoint is stored in the geo-location of the tenant as identified during provisioning.
+
+    - Customer data, in pseudonymized form, might also be stored in the central storage and processing systems in the United States.
     - After you configure the location, you can't change it.
     - If you have your own license for Defender for Endpoint and need to move your data to another location, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview) to reset the tenant.
-- **Different subscription in same tenant**: To move your Defender for Endpoint extension to a different subscription in the same tenant, delete either the `MDE.Linux' or 'MDE.Windows` extension from the virtual machine and Defender for Cloud will automatically redeploy it.
-- **Moving subscriptions between tenants:** If you move your Azure subscription between Azure tenants, some manual preparatory steps are required before Defender for Cloud deploys Defender for Endpoint. For full details, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+- **Move to a different subscription in the same tenant**: To move your Defender for Endpoint extension to a different subscription in the same tenant, delete either the `MDE.Linux' or 'MDE.Windows` extension from the virtual machine and Defender for Cloud will automatically redeploy it.
+- **Move subscriptions between tenants:** If you move your Azure subscription between Azure tenants, some manual preparatory steps are required before Defender for Cloud deploys Defender for Endpoint. For full details, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
 
 
@@ -57,13 +63,13 @@ A Defender for Endpoint tenant is automatically created, when you use Defender f
 
 ### Supported EDR solutions
 
-Defender for Servers Plan 2 can assess the state of other supported EDR solutions.
+Defender for Servers Plan 2 can assess the state of these EDR solutions.
 
 | EDR solution | Supported platforms |
 |--|--|
-| Microsoft Defender for Endpoint for Windows | Windows |
-| Microsoft Defender for Endpoint for Linux  | Linux |
-| Microsoft Defender for Endpoint Unified Solution  | Windows Server 2012 R2 and Windows 2016 |
+| Defender for Endpoint for Windows | Windows |
+| Defender for Endpoint for Linux  | Linux |
+| Defender for Endpoint Unified Solution  | Windows Server 2012 R2 and Windows 2016 |
 | CrowdStrike (Falcon) | Windows and Linux |
 | Trellix | Windows and Linux |
 | Symantec | Windows and Linux |
@@ -71,7 +77,7 @@ Defender for Servers Plan 2 can assess the state of other supported EDR solution
 
 ### EDR solution recommendations
 
-If a condition isn't met, Defender for Servers provides recommendations as follows:
+If a condition for EDR solution assessment isn't met, Defender for Servers provides recommendations as follows:
 
 - `EDR solution should be installed on Virtual Machines`
 - `EDR solution should be installed on EC2s`
@@ -79,9 +85,9 @@ If a condition isn't met, Defender for Servers provides recommendations as follo
 
 Recommendations include remediation steps to fix detected issues.
 
-### EDR solution misconfigurations
+### Defender for Endpoint misconfigurations
 
-If you're using Defender for Endpoint as an EDR solution, Defender for Cloud can also run some checks for EDR misconfiguration settings, including
+If you're using Defender for Endpoint as an EDR solution, Defender for Cloud can run some checks for misconfiguration settings, including:
 
 - Scans that haven't run for seven days: `Both full and quick scans are out of 7 days`
 - Signatures that are out-of-date: `Signature out of date`
@@ -90,5 +96,5 @@ If you're using Defender for Endpoint as an EDR solution, Defender for Cloud can
 ## Related content
 
 - Check out the [minimum requirements for Defender for Endpoint](/defender-endpoint/minimum-requirements), to see what the licensing, browser, hardware, software requirements are and more.
-- For information about migrating servers from Defender for Endpoint to Defender for Cloud, read the [Defender for Endpoint to Defender for Cloud migration guide](/microsoft-365/security/defender-endpoint/migrating-mde-server-to-cloud).
-- Learn more about the integration by watching [Defender for Servers integration with Microsoft Defender for Endpoint](episode-sixteen.md) in the Defender for Cloud in the Field video series.
+- Learn about [migrating machines from Defender for Endpoint to Defender for Cloud](/microsoft-365/security/defender-endpoint/migrating-mde-server-to-cloud).
+- Watch [Defender for Servers integration with Microsoft Defender for Endpoint](episode-sixteen.md) in the Defender for Cloud in the Field video series.
