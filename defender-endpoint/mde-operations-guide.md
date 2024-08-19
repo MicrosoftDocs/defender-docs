@@ -1,6 +1,4 @@
 ---
-# required metadata
-
 title: Operating guide Microsoft Defender for Endpoint
 description: Plan, design, implement, adopt, and manage updates for Micrsoft Defender for Endpoint. Get guidance and advice to determine goals, use-case scenarios and requirements, and create rollout and communication plans, support, testing, and validation plans.
 keywords: mde planning and configuration, intune deployment planning, design and implementation guide, intune deployment project plan
@@ -16,7 +14,6 @@ ms.custom: get-started
 ms.collection:
 - tier1
 - highpri
-
 ---
 
 # Operating guide Microsoft Defender for Endpoint
@@ -56,7 +53,6 @@ Some considerations:
   For example, Microsoft Defender for Endpoint scans a device, and can determine if the device is compromised. Conditional Access can automatically block organization access on this device, including email.
 
 - **Update the device, the OS, and apps to help keep your data secure**. Create a plan on how and when updates are installed. T
-
 
 ## Step 2 - Review existing policies, exclusions and infrastructure
 
@@ -160,19 +156,3 @@ Validate the end-user experience with success metrics in your deployment plan. S
   - Help learn the technology
   - Quickly identify issues and resolution
   - Improve the overall user experience
-
-- **Train your help desk and support teams**. Have them enroll devices running the different platforms used in your organization so they're familiar with the process. Consider using help desk and support teams as a pilot group for your scenarios.
-
-  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../configuration/tutorial-walkthrough-administrative-templates.md), and courses through training partners.
-
-  The following example is an Intune support training agenda:
-
-  - Intune support plan review
-  - Intune overview
-  - Troubleshooting common issues
-  - Tools and resources
-  - Q & A
-
-The community-based [Intune forum](https://social.technet.microsoft.com/Forums/home) and [end-user documentation](/intune-user-help/use-managed-devices-to-get-work-done) are also great resources.
-
-## Related articles
