@@ -315,7 +315,9 @@
             href: ios-privacy.md
     - name: Run a detection test on a newly onboarded Microsoft Defender for Endpoint
       href: run-detection-test.md
-      
+
+  - name: Operating guide Microsoft Defender for Endpoint
+    href: mde-operations-guide.md   
   - name: Defender for Endpoint Security Operations Guide 
     href: mde-sec-ops-guide.md
 
