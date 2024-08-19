@@ -17,18 +17,15 @@ ms.topic: conceptual
 search.appverid: 
   - MOE150
   - MET150
-ms.date: 07/02/2024
+ms.date: 08/19/2024
+appliesto: 
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Manage incidents in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Defender unified security operations center (SOC) platform
 
 Incident management is critical to ensuring that incidents are named, assigned, and tagged to optimize time in your incident workflow and more quickly contain and address threats.
 
