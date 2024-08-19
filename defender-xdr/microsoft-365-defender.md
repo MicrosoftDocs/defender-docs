@@ -59,8 +59,6 @@ Microsoft Defender XDR services protect:
 
 - **Applications with Defender for Cloud Apps** - Microsoft Defender for Cloud Apps is a comprehensive cross-SaaS solution bringing deep visibility, strong data controls, and enhanced threat protection to your cloud apps.
 
-- **Cloud workloads and applications** **with Defender for Cloud** - Microsoft Defender for Cloud is a cloud-native application protection platform (CNAPP) combining capabilities of a development security operations (DevSecOps), a cloud security posture (CPSM), and a cloud workload protection platform (CWPP) to protect cloud-based applications from threats and vulnerabilities.
-
 Microsoft Defender XDR's unique cross-product layer augments the individual service components to:
 
 - Help protect against attacks and coordinate defensive responses across the services through signal sharing and automated actions.
