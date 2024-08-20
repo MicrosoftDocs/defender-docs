@@ -6,6 +6,8 @@
       items:
       - name: What is Microsoft Security Exposure Management?
         href: microsoft-security-exposure-management.md
+      - name: What's new 
+        href: whats-new.md      
       - name: Compare Secure Score and Security Exposure Management
         href: compare-secure-score-security-exposure-management.md      
     - name: Get started
@@ -29,7 +31,9 @@
       - name: Overview
         href: critical-asset-management.md
       - name: Review and classify critical assets
-        href: classify-critical-assets.md  
+        href: classify-critical-assets.md
+      - name: Predefined classifications
+        href: predefined-classification-rules-and-levels.md
     - name: Work with attack paths
       items:      
         - name: Overview

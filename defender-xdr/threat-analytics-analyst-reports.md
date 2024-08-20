@@ -53,7 +53,7 @@ Each section of the analyst report is designed to provide actionable information
 
 ## Apply additional mitigations
 
-Threat analytics dynamically tracks the [status of security updates and secure configurations](threat-analytics.md#exposure-and-mitigations-review-list-of-mitigations-and-the-status-of-your-devices). This information is available as charts and tables in the **Exposure & mitigations** tab.
+Threat analytics dynamically tracks the [status of security updates](threat-analytics.md#endpoints-exposure-know-the-deployment-status-of-security-updates) and [secure configurations](threat-analytics.md#recommended-actions-review-list-of-mitigations-and-the-status-of-your-devices). These types of information are available as charts and tables in the **Endpoints exposures** and **Recommended actions** tabs.
 
 In addition to these tracked mitigations, the analyst report also discusses mitigations that are _not_ dynamically monitored. Here are some examples of important mitigations that are not dynamically tracked:
 
@@ -62,7 +62,7 @@ In addition to these tracked mitigations, the analyst report also discusses miti
 - Educate end users about phishing email and other threat vectors
 - Turn on specific [attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
-While you can use the **Exposure & mitigations** tab to assess your security posture against a threat, these recommendations let you take additional steps towards improving your security posture. Carefully read all the mitigation guidance in the analyst report and apply them whenever possible.
+While you can use the **Endpoints exposures** and **Recommended actions** tabs to assess your security posture against a threat, these recommendations let you take additional steps towards improving your security posture. Carefully read all the mitigation guidance in the analyst report and apply them whenever possible.
 
 ## Understand how each threat can be detected
 

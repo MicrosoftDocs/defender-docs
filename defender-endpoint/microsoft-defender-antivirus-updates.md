@@ -3,7 +3,7 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 07/25/2024
+ms.date: 08/12/2024
 audience: ITPro
 ms.topic: reference
 author: siosulli
@@ -98,6 +98,23 @@ All our updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### July-2024 (Platform: 4.18.24070.5 | Engine: 1.1.24070.3)
+
+- Security intelligence update version: **1.417.14.0**
+- Release date: **August 7, 2024** (Engine and Platform)
+- Platform: **4.18.24070.5**
+- Engine: **1.1.24070.3**
+- Support phase: **Security and Critical Updates**
+
+### What's new
+
+- False positive detections are no longer reported as `ThreatNotFound` in the Microsoft Defender portal. 
+- Optimized Network Protection calls to the backend that occur as a result of suspicious connection checks.
+- Fixed the [PerformanceModeStatus](/windows/client-management/mdm/defender-csp#configurationperformancemodestatus) configuration key in Defender CSP so changing this value in the console takes effect on the endpoint. 
+- Resolved an issue where File Evidence Location was not always captured in scenarios where the Remote Location is inaccessible. 
+- New event log added (5016) to report Microsoft Defender Antivirus self-healed when a deadlock is detected during shutdown. 
+- Fixed a prioritization issue with full scans initiated from the portal that resulted in longer than expected full scan duration.
+
 ### June-2024 (Platform: 4.18.24060.7 | Engine: 1.1.24060.5)
 
 - Security intelligence update version: **1.415.1.0**
@@ -132,22 +149,6 @@ All our updates contain:
 - Optimized how scans are prioritized.
 - Fixed a crash caused by a race condition with a device control driver.
 - Added Event Viewer Logging for scan start event where the scan originates from PowerShell.
-
-### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.4)
-
-- Security intelligence update version: **1.411.7.0**
-- Release date: **May 07, 2024** (Engine) / **May 16, 2024** (Platform)
-- Engine: **1.1.24040.1**
-- Platform: **4.18.24040.4**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Added an opt-out feature for Experimental Configuration Services (ECS) and One collector in the Core Service.
-- Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
-- After a new engine version is released, support for older versions (N-2) will now reduce to technical support only. Engine versions older than N-2 are no longer supported.
-- Improved health monitoring and telemetry for [attack surface rules](overview-attack-surface-reduction.md) exclusions.
-- Updated inaccurate information in [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) regarding wildcard usage with contextual exclusions.
 
 ### Previous version updates: Technical upgrade support only
 
@@ -211,7 +212,22 @@ Updates are released for x86, x64, and ARM64 Windows architecture.
 
 For more information, see [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
 
-After a new package version is released, support for the previous two versions is reduced to technical support only.
+After a new package version is released, support for the previous two versions is reduced to technical support only. To view a list of previous versions, see [Previous DISM updates (no longer supported)](msda-updates-previous-versions-technical-upgrade-support.md#previous-dism-updates-no-longer-supported).
+
+### 1.415.295.0
+
+- Defender package version: `1.415.295.0`
+- Security intelligence version: `1.415.295.0`
+- Engine version: `1.24070.1`
+- Platform version: `4.18.24070.5`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
 
 ### 1.415.235.0
 
@@ -234,21 +250,6 @@ After a new package version is released, support for the previous two versions i
 - Security intelligence version: `1.411.111.0`
 - Engine version: `1.24050.2`
 - Platform version: `4.18.24050.7`
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.411.9.0
-
-- Defender package version: `1.411.9.0`
-- Security intelligence version: `1.411.9.0`
-- Engine version: `1.24040.1`
-- Platform version: `4.18.24040.4`
 
 #### Fixes
 
