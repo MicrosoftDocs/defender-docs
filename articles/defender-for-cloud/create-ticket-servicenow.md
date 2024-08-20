@@ -4,7 +4,7 @@ description: Learn how to create a ticket in Defender for Cloud that connects an
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 08/18/2024
+ms.date: 08/20/2024
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to Create a ticket in Defender for Cloud for my ServiceNow account.
 ---
@@ -30,7 +30,11 @@ Security admins can create and assign tickets directly from the Defender for Clo
 
 1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
 
-1. Select any recommendation with unhealthy resources that you want to create a ServiceNow ticket for and assign an owner to.
+1. Select a recommendation you want to create a ServiceNow ticket for, and assign an owner to.
+
+1. Select **View recommendation for all resources**.
+
+1. Expand the Affected resources section.
 
 1. Select the resource from the unhealthy resources and select **Assign owner**.
 
