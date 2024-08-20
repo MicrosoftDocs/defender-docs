@@ -75,4 +75,4 @@ Customers with ME5/E5 Security plans who no longer need the **enterprise IoT sec
 
 You stop getting security value in the Defender portal, including purpose-built alerts, vulnerabilities, and recommendations.
 
-Customers with a Microsoft Defender for Endpoint P2 license who don't add a standalone license by the time the trial ends, have the trial automatically canceled, and lose access to Enterprise IoT security features. For more information, see [purchase a standalone license](enterprise-iot-get-started.md#purchase-the-standalone-licenses).
+Customers with a Microsoft Defender for Endpoint P2 license who don't add a standalone license by the time the trial ends, have the trial automatically canceled, and lose access to Enterprise IoT security features. For more information, see [purchase a standalone license](enterprise-iot-get-started.md#purchase-the-standalone-license).

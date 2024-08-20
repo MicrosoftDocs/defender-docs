@@ -37,7 +37,7 @@ Customers with ME5/E5 Security plans who no longer need the enterprise IoT secur
 
 Customers with a Defender for Endpoint P2 license who don't add a standalone license by the time the trial ends, have the trial automatically canceled, and lose access to enterprise IoT security features.
 
-For more information, see [purchase a standalone license](enterprise-iot-get-started.md#purchase-the-standalone-licenses).
+For more information, see [purchase a standalone license](enterprise-iot-get-started.md#purchase-the-standalone-license).
 
 ## Resolve billing issues associated with my enterprise IoT plan
 
