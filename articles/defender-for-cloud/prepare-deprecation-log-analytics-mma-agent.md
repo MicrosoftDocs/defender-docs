@@ -184,30 +184,33 @@ After you disable the file events collection:
 
 ## Baseline experience
 
-The baseline feature which is based on the log analytics agent will be deprecated. The new baseline experience is based on the Guest Configuration experience, which provides machine misconfiguration information. This section provides guidance on how to migrate the legacy security baselines over MMA to the new version based on the Guest Configuration extension.
-
-- Ensure you have [enabled the Defender for Servers Plan 2](tutorial-enable-servers-plan.md).
+When you enable Defender for Cloud on your Azure environment, the Defender Foundational CSPM plan is enabled by default. With the Foundational CSPM plan, the [Microsoft cloud security benchmark (MCSB)](/security/benchmark/azure/introduction) automatically starts to assess resources in scope. This process relies on MMA to provide you with recommendations to harden and correct misconfigurations within your environment. As part of the MMA deprecation, the baseline experience powered by MDVM and Host misconfiguration powered by Guest Configuration will now require you to [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md).
 
 ### Install Guest Configuration
 
+In order to continue receiving the baseline experience, you need to enable the Defender for Servers Plan 2 and install the Guest Configuration. This will ensure that you continue to receive the same recommendations and hardening guidance that you have been receiving through the baseline experience.
+
+Depending on your environment, you may need to take the following steps:
+
 - Review the [support matrix for the Guest Configuration](/azure/governance/machine-configuration/overview).
 
-- Install the Guest Configuaration extension on your machines.
+- Install the Guest Configuration extension on your machines.
     - **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [[Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc)](recommendations-reference-compute.md#guest-configuration-extension-should-be-installed-on-machineshttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkey6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
     
-    - **For GCP and AWS**: The Guest Configuration feature is automatically installed when you [connect your GCP project](quickstart-onboard-gcp.md), or you [connect your AWS accounts](quickstart-onboard-aws.md) to Defender for Cloud.
+    - **GCP and AWS**: The Guest Configuration feature is automatically installed when you [connect your GCP project](quickstart-onboard-gcp.md), or you [connect your AWS accounts](quickstart-onboard-aws.md) to Defender for Cloud.
     
-    - **For other cloud and on-premises machines**: The Guest Configuration is enabled by default when you [connect your hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm?branch=main).
+    - **Other cloud and on-premises machines**: The Guest Configuration is enabled by default when you [connect your hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm?branch=main).
 
-- Assigned managed Identity (Azure VMs only): In the Defender for Cloud portal, on the recommendations page, search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](recommendations-reference-compute.md#virtual-machines-guest-configuration-extension-should-be-deployed-with-system-assigned-managed-identityhttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkey69133b6b-695a-43eb-a763-221e19556755), and [remediate the recommendation](implement-security-recommendations.md).
+- (**Azure VMs only**) Assign managed Identity: In the Defender for Cloud portal, on the recommendations page, search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](recommendations-reference-compute.md#virtual-machines-guest-configuration-extension-should-be-deployed-with-system-assigned-managed-identityhttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkey69133b6b-695a-43eb-a763-221e19556755), and [remediate the recommendation](implement-security-recommendations.md).
 
 - The following policies are enabled with Guest Configuration:
     - Windows machines should meet requirements of the Azure compute security baseline
     - Linux machines should meet requirements for the Azure compute security baseline  
 
     > [!NOTE]
-    > If you remove these policies you will lose access to Guest Configutration.
+    > If you remove these policies you won't be able to access the benefits of the Guest Configuration extension.
 
+Once you have completed the necessary steps to install the Guest Configuration extension, you will automatically gain access to the baseline features based on the Guest Configuration extension. This will ensure that you continue to receive the same recommendations and hardening guidance that you have been receiving through the baseline experience.
 
 
 
