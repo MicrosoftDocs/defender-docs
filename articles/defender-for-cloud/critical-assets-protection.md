@@ -15,7 +15,7 @@ Defender for Cloud now has business criticality concept added to its security po
 |--|--|
 | Release state | Preview |
 | Prerequisites | Defender Cloud Security Posture Management (CSPM) enabled  |
-| Required Microsoft Entra ID built-in roles: | To create/edit/read classification rules: Security Reader or higher <br> To read classification rules: Global Reader, Security Reader  |
+| Required Microsoft Entra ID built-in roles: | To create/edit/read classification rules: Security Operator or higher <br> To read classification rules: Global Reader, Security Reader  |
 | Clouds: | All commercial clouds |
 
 ## Set up critical asset management
