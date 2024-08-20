@@ -3,21 +3,21 @@ title: Microsoft Copilot in Microsoft Defender
 description: Learn about Microsoft Copilot for Security capabilities embedded in Microsoft Defender.
 ms.service: defender-xdr
 f1.keywords:
-  - NOCSH
+- NOCSH
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.collection: 
-  - m365-security
-  - tier1
-  - security-copilot
+- m365-security
+- tier1
+- security-copilot
 ms.topic: conceptual
 search.appverid:
-  - MOE150
-  - MET150
-ms.date: 04/01/2024
+- MOE150
+- MET150
+ms.date: 08/20/2024
 ---
 
 # Microsoft Copilot in Microsoft Defender
