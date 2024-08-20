@@ -186,9 +186,9 @@ After you disable the file events collection:
 
 The baseline feature which is based on the log analytics agent will be deprecated. The new baseline experience is based on the Guest Configuration experience, which provides machine misconfiguration information. This section provides guidance on how to migrate the legacy security baselines over MMA to the new version based on the Guest Configuration extension.
 
-### Install Guest Configuration
-
 - Ensure you have [enabled the Defender for Servers Plan 2](tutorial-enable-servers-plan.md).
+
+### Install Guest Configuration
 
 - Review the [support matrix for the Guest Configuration](/azure/governance/machine-configuration/overview).
 
