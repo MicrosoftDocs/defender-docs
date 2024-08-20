@@ -59,7 +59,7 @@ Microsoft Defender Antivirus and cloud protection automatically block most new, 
    1. In the event Microsoft Defender Antivirus can't make a clear determination, file metadata is sent to the cloud protection service. Often within milliseconds, the cloud protection service can determine based on the metadata as to whether the file is malicious or not a threat.  
 
       - The cloud query of file metadata can be a result of behavior, mark of the web, or other characteristics where a clear verdict isn't determined.
-      - A small metadata payload is sent, with the goal of reaching a verdict of malware or not a threat. The metadata doesn't include personally identifiable information (PII). Information such as filenames, are hashed.
+      - A small metadata payload is sent, with the goal of reaching a verdict of malware or not a threat. The metadata doesn't include personal data, such as personally identifiable information (PII). Information such as filenames, are hashed.
       - Can be synchronous or asynchronous. For synchronous, the file won't open until the cloud renders a verdict. For asynchronous, the file opens while cloud protection performs its analysis.
       - Metadata can include PE attributes, static file attributes, dynamic and contextual attributes, and more (see [Examples of metadata sent to the cloud protection service](#examples-of-metadata-sent-to-the-cloud-protection-service)).
 
