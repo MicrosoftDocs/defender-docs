@@ -18,8 +18,12 @@
         href: prerequisites.md            
       - name: Get started
         href: get-started.md  
+      - name: Set up RBAC for site security
+        href: set-up-rbac.md   
       - name: Set up sites
         href: set-up-sites.md
+      - name: Configure permissions
+        href: configure-permissions.md 
     - name: Monitor site security
       items:
       - name: Monitor site security
