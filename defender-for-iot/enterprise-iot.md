@@ -21,7 +21,7 @@ While the number of IoT devices continues to grow, they often lack the security 
 
 Extend Microsoft Defender for IoT's security features to include enterprise IoT devices. Add the enterprise IoT security feature to your existing Microsoft Defender for Endpoint license, and view related alerts, vulnerabilities, and recommendations for IoT devices in Microsoft Defender.
 
-Defender for IoT seamlessly integrates with Microsoft Defender portal and Defender for Endpoint to both discover IoT devices and provide security value, including purpose-built alerts, recommendations, and vulnerability data.
+Defender for IoT seamlessly integrates with the Microsoft Defender portal and Defender for Endpoint to both discover IoT devices and provide security value, including purpose-built alerts, recommendations, and vulnerability data.
 
 :::image type="content" source="media/enterprise-iot/eiot-architecture.png" alt-text="The architecture showing the use of enterprise IoT":::
 
@@ -43,7 +43,7 @@ For more information, see [Alerts queue in Microsoft 365 Defender](/defender-end
 
 ### Recommendations
 
-The following Defender for Endpoint security recommendations are supported for Enterprise IoT devices:
+The following Defender for Endpoint security recommendations are supported for enterprise IoT devices:
 
 - Require authentication for Telnet management interface
 - Disable insecure administration protocol – Telnet
@@ -52,7 +52,7 @@ The following Defender for Endpoint security recommendations are supported for E
 
 ### Vulnerabilities
 
-Known CVEs vulnerabilities are detected and showing in the Defender portal associated with the relevant device. Known CVEs can help you decide whether to patch, remove, or contain the device and mitigate risk to your network. Alternatively, use advanced hunting queries to collect vulnerabilities across all your devices.
+Known CVE vulnerabilities, already detected by the Defender portal, are also detected and displayed associated with the relevant enterprise IoT device in the Defender portal. Known CVEs can help you decide whether to patch, remove, or contain the device and mitigate risk to your network. Alternatively, use advanced hunting queries to collect vulnerabilities across all your devices.
 
 <!--
 ## Licensing and set up of enterprise IoT security

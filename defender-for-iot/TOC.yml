@@ -20,6 +20,8 @@
             href: enterprise-iot-licenses.md
           - name: Get started with enterprise IoT
             href: enterprise-iot-get-started.md      
+          - name: Manage enterprise IoT
+            href: enterprise-iot-manage.md 
     - name: Get started
       items:
       - name: Prerequisites
