@@ -11,6 +11,8 @@ ms.topic: how-to
 
 # Manage enterprise IoT security
 
+Enterprise IoT security improves the monitoring and protection of the IoT devices in your network, such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices.
+
 When enterprise IoT is activated, the added security value of alerts, recommendations, and vulnerabilities are shown in the Defender portal.
 
 ## View enterprise IoT added security value in the Microsoft Defender portal
@@ -23,11 +25,11 @@ To view enterprise IoT security value:
 
     :::image type="content" source="media/enterprise-iot-manage/select-a-device.png" alt-text="Screenshot of the IoT devices tab in Microsoft Defender portal." lightbox="media/enterprise-iot-manage/select-a-device.png":::
 
-1. On the device details page, explore the following tabs to view data added by enterprise IoT security for your device:
+1. When you select a specific device, the device details page opens. Explore the following tabs to view data added by enterprise IoT security for your device:
 
     - On the **Alerts** tab, check for any alerts triggered by the device. Simulate alerts in Microsoft 365 Defender for Enterprise IoT using the Raspberry Pi scenario available in the Microsoft 365 Defender [Evaluation & Tutorials](https://security.microsoft.com/tutorials/all) page.
 
-        You can also set up advanced hunting queries to create custom alert rules. For more information, see [sample advanced hunting queries for Enterprise IoT monitoring](#sample-advanced-hunting-queries-for-enterprise-iot).
+        You can also set up advanced hunting queries to create custom alert rules. For more information, see [sample advanced hunting queries for enterprise IoT security](#sample-advanced-hunting-queries-for-enterprise-iot).
 
     - On the **Security recommendations** tab, check for any recommendations available for the device to reduce risk and maintain a smaller attack surface.
 
@@ -37,9 +39,9 @@ To view enterprise IoT security value:
 
 On the **Device inventory** page, select **Go hunt** to query devices using tables like the *[DeviceInfo](/microsoft-365/security/defender/advanced-hunting-deviceinfo-table)* table. On the **Advanced hunting** page, query data using other schemas.
 
-## Sample advanced hunting queries for Enterprise IoT
+## Sample advanced hunting queries for enterprise IoT
 
-This section lists sample advanced hunting queries that you can use in Microsoft 365 Defender to help you monitor and secure your IoT devices with Enterprise for IoT security.
+This section lists sample advanced hunting queries that you can use in Microsoft 365 Defender to help you monitor and secure your IoT devices with enterprise IoT security.
 
 ### Find devices by specific type or subtype
 

@@ -11,7 +11,9 @@ ms.topic: how-to
 
 # Get started with enterprise IoT
 
-Enterprise IoT security improves the monitoring and protection of the IoT devices in your network, such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices. The security monitoring includes IoT related alerts, vulnerabilities, and recommendations that are integrated with your existing Microsoft Defender for Endpoint data. To understand more about the integration between Defender for Endpoint and Defender for IoT, see [enterprise IoT overview](enterprise-iot.md).
+Enterprise IoT security improves the monitoring and protection of the IoT devices in your network, such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices.
+
+The security monitoring includes IoT related alerts, vulnerabilities, and recommendations that are integrated with your existing Microsoft Defender for Endpoint data. To understand more about the integration between Defender for Endpoint and Defender for IoT, see [enterprise IoT overview](enterprise-iot.md).
 
 In this article you will learn how to add enterprise IoT to your Microsoft Defender portal and use the IoT specific security features to protect your IoT environment.
 
@@ -35,15 +37,15 @@ Make sure that you have:
 
 There are two ways to add enterprise IoT to the Defender portal:
 
-- ME5/ E5 Security customers: Turn on support for Enterprise IoT Security in the Defender Portal. For more information, see [turn on enterprise IoT security](#me5-e5-security-customers).
+- ME5/ E5 Security customers: Turn on support for enterprise IoT Security in the Defender Portal. For more information, see [turn on enterprise IoT security](#me5-e5-security-customers).
 
 - Defender for Endpoint P2 customers: Start with a free trial or purchase standalone, per-device licenses to gain the same IoT-specific security value. For more information, see [set up a standalone trial license](#set-up-a-standalone-trial-license). To purchase a full license, see [purchase the standalone full license](#set-up-a-standalone-full-license).
 
 ## ME5/ E5 Security customers
 
-This procedure describes how to turn on enterprise IoT security in Defender portal, and is relevant only for ME5/ E5 Security customers.
+This procedure describes how to turn on enterprise IoT security in Defender portal for ME5/ E5 Security customers.
 
-If you have extra devices that aren't covered by your ME5/E5 licenses, you can purchase standalone licenses. For more information, see [calculate the number of devices for standalone licenses](#calculate-monitored-devices-for-enterprise-iot-security).
+If you have extra devices that aren't covered by your ME5/E5 licenses, you can purchase standalone licenses. For more information, see [set up a standalone full license](#set-up-a-standalone-full-license).
 
 **To turn on enterprise IoT security**:
 
