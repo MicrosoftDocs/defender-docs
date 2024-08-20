@@ -846,8 +846,8 @@ For email messages, admins can see what users are reporting on the **User report
 
 - The [user reported settings](submissions-user-reported-messages-custom-mailbox.md) are turned on.
 - **Email messages**: You're using supported methods for users to report messages:
-  - The [Microsoft Report Message or Report Phishing add-ins in Outlook](submissions-users-report-message-add-in-configure.md).
   - The [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
+  - The [Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md).
   - [Supported third-party reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-third-party-reporting-tools)
 - **Teams messages**: [User reporting settings for Teams messages](submissions-teams.md#user-reporting-settings-for-teams-messages) is turned on.
 

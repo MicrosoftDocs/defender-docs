@@ -32,7 +32,7 @@ In Microsoft 365 organizations with Exchange Online mailboxes, you can identify 
 User reported settings and the reporting mailbox work with the following message reporting tools:
 
 - [The built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook)
-- [The Microsoft Report Message or Report Phishing add-ins in Outlook](submissions-users-report-message-add-in-configure.md)
+- [The Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md)
 - [Supported third-party reporting tools](#options-for-third-party-reporting-tools)
 
 Delivering user reported messages to a reporting mailbox instead of directly to Microsoft allows admins to selectively and manually submit messages to Microsoft from the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. For more information, see [Admin submission](submissions-admin.md).
