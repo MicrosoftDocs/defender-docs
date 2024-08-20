@@ -15,7 +15,7 @@ The number of IoT devices continues to grow exponentially across enterprise netw
 
 While the number of IoT devices continues to grow, they often lack the security safeguards that are common on managed endpoints like laptops and mobile phones. To bad actors, these unmanaged devices can be used as a point of entry for lateral movement or evasion, and too often, the use of such tactics leads to the exfiltration of sensitive information.
 
-[!INCLUDE [defender-iot-preview](../includes//defender-iot-defender-public-preview.md)]
+[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
 ## Enterprise IoT monitoring in the Defender portal
 
