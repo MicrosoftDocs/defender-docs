@@ -3,21 +3,21 @@ title: Microsoft Copilot in Microsoft Defender
 description: Learn about Microsoft Copilot for Security capabilities embedded in Microsoft Defender.
 ms.service: defender-xdr
 f1.keywords:
-  - NOCSH
+- NOCSH
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
 ms.collection: 
-  - m365-security
-  - tier1
-  - security-copilot
+- m365-security
+- tier1
+- security-copilot
 ms.topic: conceptual
 search.appverid:
-  - MOE150
-  - MET150
-ms.date: 04/01/2024
+- MOE150
+- MET150
+ms.date: 08/20/2024
 ---
 
 # Microsoft Copilot in Microsoft Defender
@@ -27,7 +27,7 @@ ms.date: 04/01/2024
 **Applies to:**
 
 - Microsoft Defender XDR
-- Microsoft Defender unified security operations center (SOC) platform
+- Microsoft Sentinel in the Microsoft Defender portal
 
 [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Copilot for Security is embedded in the Microsoft Defender portal to enable security teams to efficiently summarize incidents, analyze scripts and codes, analyze files, summarize device information, use guided responses to resolve incidents, generate KQL queries, and create incident reports.
 

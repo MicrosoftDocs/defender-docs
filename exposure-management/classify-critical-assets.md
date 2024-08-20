@@ -1,12 +1,12 @@
 ---
 title: Review and classify critical assets in Microsoft Security Exposure Management
 description: Learn how to manage critical assets in Microsoft Security Exposure Management.
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: dlanger
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 07/31/2024
+ms.date: 08/20/2024
 ---
 
 # Review and classify critical assets
