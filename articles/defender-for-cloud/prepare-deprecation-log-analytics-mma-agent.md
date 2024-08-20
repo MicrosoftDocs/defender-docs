@@ -221,6 +221,44 @@ With this change the following recommendations will be effected:
 |[Machines should be configured securely](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/c476dc48-8110-4139-91af-c8d940896b98) | MMA | Azure & non-Azure (Windows & Linux)  | November 2024 |[Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/8c3d9ad0-3639-4686-9cd2-2b2ab2609bda) <br> <br>[Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1f655fb7-63ca-4980-91a3-56dbc2b715c6) |
 |[Auto provisioning of the Log Analytics agent should be enabled on subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/af849052-4299-0692-acc0-bffcbe9e440c) |MMA |Azure & non-Azure (Windows & Linux)  | Deprecated |[Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc) |
 
+### APIs
+
+With the retirement of the MMA, API location will now be available through Azure Resource Graph. The following are 2 sample queries you can use in Azure Resource Graph with either API or in the Azure Resource Graph portal:
+
+- **Query all unhealthy rules for a specific resource**
+
+    ```rest
+    Securityresources 
+    | where type == "microsoft.security/assessments/subassessments" 
+    | extend assessmentKey=extract(@"(?i)providers/Microsoft.Security/assessments/([^/]*)", 1, id) 
+    | where assessmentKey == '1f655fb7-63ca-4980-91a3-56dbc2b715c6' or assessmentKey ==  '8c3d9ad0-3639-4686-9cd2-2b2ab2609bda' 
+    | parse-where id with machineId:string '/providers/Microsoft.Security/' * 
+    | where machineId  == '{machineId}'
+    ```
+
+- **All Unhealthy Rules and the amount if Unhealthy machines for each**
+
+    ```rest
+    securityresources 
+    | where type == "microsoft.security/assessments/subassessments" 
+    | extend assessmentKey=extract(@"(?i)providers/Microsoft.Security/assessments/([^/]*)", 1, id) 
+    | where assessmentKey == '1f655fb7-63ca-4980-91a3-56dbc2b715c6' or assessmentKey ==  '8c3d9ad0-3639-4686-9cd2-2b2ab2609bda' 
+    | parse-where id with * '/subassessments/' subAssessmentId:string 
+    | parse-where id with machineId:string '/providers/Microsoft.Security/' * 
+    | extend status = tostring(properties.status.code) 
+    | summarize count() by subAssessmentId, status
+    ```
+
+### Compliance and Secure Score
+
+During the transition period between September 2024 to November 2024, both Baselines recommendations from the Log Analytics and from the Guest Configuration, will affect your Compliance and Secure Score. 
+
+To remove the duplicate findings and view the Guest Configuration only, you need to [exempt the Log Analytics Baselines recommendation](exempt-resource.md) from your compliance standard. 
+
+We also recommend that you remove the deprecated recommendations when the replacement recommendation becomes available. To do that, [disable the recommendation in the built-in Defender for Cloud initiative](manage-mcsb.md#manage-recommendation-settings) in Azure Policy. 
+
+Some of the baseline configuration rules powered by the Guest Configuration tool are more current and offer broader coverage. As a result, transition to Baselines feature power by Guest Configuration can affect your compliance status since they include checks that might not have been performed previously. 
+
 ## Preparing Defender for SQL on Machines
 
 You can learn more about the [Defender for SQL Server on machines Log Analytics agent's deprecation plan](upcoming-changes.md#defender-for-sql-server-on-machines).
