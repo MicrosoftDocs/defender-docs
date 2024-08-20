@@ -287,7 +287,12 @@ You can also create custom payloads that use QR codes as phishing links as descr
            >
            > - The QR code maps to the phishing URL that you selected in the **Phishing link** section \> **Select URL**. When the payload is used in a simulation, the service replaces the QR code with a dynamically generated QR code to track click and compromise metrics. The size, position, and shape of the QR code matches the configuration options you configured in the payload.
            > - If you use the **Send a test** button on the **Review payload** page (Step 7), you see the QR code, but it points the phishing URL that you selected. The dynamic QR code is generated when the payload is used in a real simulation.
-           > - The QR code is inserted in the email message as an image. If you switch from the **Text** tab to the **Code** tab, you see the inserted image in Base64 format. The beginning of the image starts with `<div id="QRcode"...>`. Verify the finished payload contains `<div id="QRcode"...>` before you use it in a simulation.
+           > - The QR code is inserted in the email message as an image. If you switch from the **Text** tab to the **Code** tab, you see the inserted image in Base64 format. The beginning of the image contains `<div id="QRcode"...>`. Verify the finished payload contains `<div id="QRcode"...>` before you use it in a simulation. For example:
+           >
+           >   ```xml
+           >   <div id="QRcode" style="position: absolute; margin-top: 2%; margin-left: 2%;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAM0AAADNCAYAAAAbvPRpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA9cSURBVHhe7dNBDiM7EgPRvv+l/1zgLVggIXm6FU...
+           >   ```
+           >
            > - Verify the login page while using the payload in a simulation. You can also create login pages during the creation of simulations. For more information, see [Create a simulation: Select a payload and login page](attack-simulation-training-simulations.md#select-a-payload-and-login-page).
            > - We recommend conducting a test simulation to validate the end to end flow before using the payload with a larger audience.
 
