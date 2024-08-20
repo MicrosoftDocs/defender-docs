@@ -100,6 +100,8 @@ As part of the Endpoint Detection and Response capabilities, Microsoft Defender 
 
 Download [netfilter.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/netfilter.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
+> [!IMPORTANT]
+> Only one .mobileconfig (plist) for Network Filter is supported.  Adding multiple Network Filters will lead to network connectivity issues on the macOS'es.  Not MDE on macOS specific.
 To configure your network filter:
 
 1. Under **Configuration profiles**, select **Create Profile**.
