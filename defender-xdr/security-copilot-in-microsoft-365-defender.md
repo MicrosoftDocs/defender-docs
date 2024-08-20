@@ -27,7 +27,7 @@ ms.date: 04/01/2024
 **Applies to:**
 
 - Microsoft Defender XDR
-- Microsoft Defender unified security operations center (SOC) platform
+- Microsoft Sentinel in the Microsoft Defender portal
 
 [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Copilot for Security is embedded in the Microsoft Defender portal to enable security teams to efficiently summarize incidents, analyze scripts and codes, analyze files, summarize device information, use guided responses to resolve incidents, generate KQL queries, and create incident reports.
 
