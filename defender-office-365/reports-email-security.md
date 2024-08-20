@@ -1009,7 +1009,7 @@ The **URL protection report** is available only in Microsoft Defender for Office
 > [!IMPORTANT]
 > In order for the **User reported messages** report to work correctly, **audit logging must be turned on** in your Microsoft 365 organization (it's on by default). For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
-The **User reported messages** report shows information about email messages that users have reported as junk, phishing attempts, or good mail by using the [built-in Report button in Outlook on the web](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook-on-the-web) or the [Microsoft Report Message or Report Phishing add-ins](submissions-outlook-report-messages.md#use-the-report-message-and-report-phishing-add-ins-in-outlook).
+The **User reported messages** report shows information about email messages that users have reported as junk, phishing attempts, or good mail by using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or the [Microsoft Report Message or Report Phishing add-ins](submissions-outlook-report-messages.md#use-the-report-message-and-report-phishing-add-ins-in-outlook).
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **User reported messages**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/reports/userSubmissionReport>.
 
