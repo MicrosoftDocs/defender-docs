@@ -30,7 +30,7 @@ To add enterprise IoT security to Defender for Endpoint, there are two options a
     Start your enterprise IoT trial using the [Microsoft Defender for IoT - EIoT Device License - add-on wizard](https://signup.microsoft.com/get-started/signup?products=b2f91841-252f-4765-94c3-75802d7c0ddb&ali=1&bac=1) or via the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog).
 
     When the trial ends, the trial license is automatically canceled, and you lose access to enterprise IoT security features. To continue using enterprise IoT purchase a full standalone license. For more information, see [purchase a standalone license](enterprise-iot-get-started.md#set-up-a-standalone-full-license).
-
+<!-- remove of keep these instead of the lines above? -->
 ## Disable enterprise IoT
 
 Customers with ME5/E5 Security plans who no longer need the enterprise IoT security can turn off the feature. For more information, see [Turn off enterprise IoT security](enterprise-iot-manage.md#turn-off-enterprise-iot-security).

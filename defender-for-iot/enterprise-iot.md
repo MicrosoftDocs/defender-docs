@@ -55,4 +55,5 @@ Known CVE vulnerabilities, already detected by the Defender portal, are also det
 ## Next steps
 
 [Licenses for enterprise IoT](enterprise-iot-licenses.md)
+
 [Get started with enterprise IoT](enterprise-iot-get-started.md)
