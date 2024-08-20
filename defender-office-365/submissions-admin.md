@@ -95,7 +95,7 @@ For other ways that **admins** can report messages to Microsoft in the Defender 
    - **Select the submission type**: Verify the value **Email** is selected.
 
    - **Add the network message ID or upload the email file**: Select one of the following options:
-     - **Add the email network message ID**: The GUID value is available in the **X-MS-Exchange-Organization-Network-Message-Id** header in the message or in the **X-MS-Office365-Filtering-Correlation-Id** header in quarantined messages.
+     - **Add the email network message ID**: The GUID value is available in the **X-MS-Exchange-Organization-Network-Message-Id** header or in the **X-MS-Office365-Filtering-Correlation-Id** header in messages.
      - **Upload the email file (.msg or .eml)**: Select **Browse files**. In the dialog that opens, find and select the .eml or .msg file, and then select **Open**.
 
    - **Choose at least one recipient who had an issue**: Specify the recipients to run a policy check against. The policy check determines if the email bypassed scanning due to user or organization policies or override.
@@ -846,8 +846,8 @@ For email messages, admins can see what users are reporting on the **User report
 
 - The [user reported settings](submissions-user-reported-messages-custom-mailbox.md) are turned on.
 - **Email messages**: You're using supported methods for users to report messages:
+  - The [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
   - The [Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md).
-  - The [built-in Report button in Outlook on the web](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook-on-the-web).
   - [Supported third-party reporting tools](submissions-user-reported-messages-custom-mailbox.md#options-for-third-party-reporting-tools)
 - **Teams messages**: [User reporting settings for Teams messages](submissions-teams.md#user-reporting-settings-for-teams-messages) is turned on.
 

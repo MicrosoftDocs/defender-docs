@@ -6,7 +6,7 @@ ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 07/25/2024
+ms.date: 08/12/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -28,6 +28,22 @@ search.appverid: met150
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.4)
+
+- Security intelligence update version: **1.411.7.0**
+- Release date: **May 07, 2024** (Engine) / **May 16, 2024** (Platform)
+- Engine: **1.1.24040.1**
+- Platform: **4.18.24040.4**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Added an opt-out feature for Experimental Configuration Services (ECS) and One collector in the Core Service.
+- Fixed an issue where occasionally exclusions deployed via Intune were not being honored when tamper protection was enabled.
+- After a new engine version is released, support for older versions (N-2) will now reduce to technical support only. Engine versions older than N-2 are no longer supported.
+- Improved health monitoring and telemetry for [attack surface rules](overview-attack-surface-reduction.md) exclusions.
+- Updated inaccurate information in [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md) regarding wildcard usage with contextual exclusions.
 
 ### March-2024 (Engine: 1.1.24030.4 | Platform: 4.18.24030.9)
 
@@ -1084,11 +1100,26 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 #### Known issues
 
-- When this update is installed, the device needs the jump package 4.18.2001.10 to be able to update to the latest platform version.
+- When this update is installed, the device needs the jump package `4.18.2001.10` to be able to update to the latest platform version.
 
 ## Previous DISM updates (no longer supported)
 
 The versions listed in this section are no longer supported. To view current versions, see [Updates for Deployment Image Servicing and Management (DISM)](microsoft-defender-antivirus-updates.md#updates-for-deployment-image-servicing-and-management-dism).
+
+### 1.411.9.0
+
+- Defender package version: `1.411.9.0`
+- Security intelligence version: `1.411.9.0`
+- Engine version: `1.24040.1`
+- Platform version: `4.18.24040.4`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
 
 ### 20230809.1
 

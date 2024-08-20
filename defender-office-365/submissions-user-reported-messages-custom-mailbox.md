@@ -31,7 +31,7 @@ In Microsoft 365 organizations with Exchange Online mailboxes, you can identify 
 
 User reported settings and the reporting mailbox work with the following message reporting tools:
 
-- [The built-in Report button in Outlook on the web](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook-on-the-web)
+- [The built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook)
 - [The Microsoft Report Message or Report Phishing add-ins](submissions-users-report-message-add-in-configure.md)
 - [Supported third-party reporting tools](#options-for-third-party-reporting-tools)
 
@@ -85,7 +85,7 @@ On the **User reported settings** page, the available settings for reporting mes
 
 - **Monitor reported messages in Outlook** is selected: The following configurations are supported:
 
-  - Use the built-in **Report** button in Outlook on the web or the Microsoft Report Message or Report Phishing add-ins in virtually all Outlook platforms to report email messages.
+  - Use the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or the Microsoft Report Message or Report Phishing add-ins in virtually all Outlook platforms to report email messages.
     - Configure user reported messages to go to the reporting mailbox, to Microsoft, or both.
     - Decide whether users receive default or customized pre-reporting and post-reporting pop-ups in supported version of Outlook.
     - Decide whether to customize the feedback email that's sent to users after an admin reviews and marks the message on the **User submissions** tab on the **Submissions** page.
@@ -116,7 +116,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
   Notification pop-ups contain default English text that's automatically localized for users based on their client language. To customize the pop-up text, you can create custom versions of the five reporting pop-ups in up to seven different languages.
 
   > [!NOTE]
-  > Customized pre-reporting and post-reporting pop-ups are shown when using the **Report** button in Outlook on the web.
+  > Customized pre-reporting and post-reporting pop-ups are shown when using the **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
   >
   > The Microsoft Report Message add-in supports only customized **Title** and **Description** values, and only for pre-reporting pop-ups (**Report phishing**, **Report junk**, and **Report not junk**).
   >
@@ -167,7 +167,7 @@ When **Monitor reported messages in Outlook** is selected and you also select **
 
   > [!NOTE]
   >
-  > - When you select **Use the built-in Report button in Outlook** and users report messages using the built-in **Report** button in Outlook on the web or the Microsoft Report Message or Report Phishing add-ins in Outlook, user reported messages are available to admins on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>, regardless of the value you select for **Send the reported messages to**. For more information, see [Admin options for user reported messages](submissions-admin.md#admin-options-for-user-reported-messages).
+  > - When you select **Use the built-in Report button in Outlook** and users report messages using the built-in **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or the Microsoft Report Message or Report Phishing add-ins in virtually all versions of Outlook, user reported messages are available to admins on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>, regardless of the value you select for **Send the reported messages to**. For more information, see [Admin options for user reported messages](submissions-admin.md#admin-options-for-user-reported-messages).
   >
   > - In U.S. Government organizations (Microsoft 365 GCC, GCC High, and DoD), the only available value for **Send the reported messages to** is **My reporting mailbox only**. The other two options are unavailable for compliance reasons (data isn't allowed to leave the organization boundary).
 
@@ -416,7 +416,7 @@ Other settings:
       - For the number of language codes that you specify, you need to provide the same number of blank values for **all** of the _MultiLanguage\*SubmitMessage\*_ parameters that you aren't using. For example, if you're using three languages, but you aren't using the _MultiLanguagePostSubmitMessageButtonTextForJunk_ and _MultiLanguagePostSubmitMessageButtonLinkForJunk_ parameters, you need to use the value `"","",""` for those parameters. You might need to add these blank values for up to 18 of the _MultiLanguage\*SubmitMessage\*_ parameters.
 
     > [!NOTE]
-    > Customized pre-reporting and post-reporting pop-ups are shown when using the **Report** button in Outlook on the web.
+    > Customized pre-reporting and post-reporting pop-ups are shown when using the **Report** button in [supported versions of Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
     >
     > The Microsoft Report Message add-in supports only customized **Title** and **Description** values, and only for pre-reporting pop-ups (**Report phishing**, **Report junk**, and **Report not junk**).
     >
@@ -540,7 +540,7 @@ New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPoli
 
 Turning off reporting in Outlook has the following consequences:
 
-- The **Report** button in Outlook on the web and the Microsoft Report Message and Report Phishing add-ins are unavailable in all Outlook platforms.
+- The built-in **Report** button and the Microsoft Report Message and Report Phishing add-ins are unavailable in all Outlook platforms.
 - Third-party reporting tools still work, but reported messages don't appear on the **User reported** tab on the **Submissions** page in the Defender portal.
 - **Allow reporting for quarantined messages** (_DisableQuarantineReportingOption_) is unaffected, and can be enabled or disabled when reporting in Outlook is turned off.
 
@@ -587,7 +587,7 @@ The following examples show how to change the user reporting experience without 
     New-ReportSubmissionRule -Name DefaultReportSubmissionRule -ReportSubmissionPolicy DefaultReportSubmissionPolicy -SentTo $usersub
     ```
 
-- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported messages to** to **My reporting mailbox only** with userreportedmessages@fabrikam.com as the reporting mailbox:
+- Turn on reporting in Outlook if necessary, select **Use the built-in Report button in Outlook**, and change **Send reported messages to** to **My reporting mailbox only** with `userreportedmessages@fabrikam.com` as the reporting mailbox:
 
   ```powershell
   $usersub = "userreportedmessages@fabrikam.com"
