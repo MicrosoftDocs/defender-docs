@@ -212,7 +212,14 @@ Depending on your environment, you may need to take the following steps:
 
 Once you have completed the necessary steps to install the Guest Configuration extension, you will automatically gain access to the baseline features based on the Guest Configuration extension. This will ensure that you continue to receive the same recommendations and hardening guidance that you have been receiving through the baseline experience.
 
+### Changes to recommendations
 
+With this change the following recommendations will be effected:
+
+| **Recommendation** | **Agent** | **Supported resources** | **Deprecation Date** | **Replacement recommendation** |
+|--|--|--|--|--|
+|[Machines should be configured securely](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/c476dc48-8110-4139-91af-c8d940896b98) | MMA | Azure & non-Azure (Windows & Linux)  | November 2024 |[Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/8c3d9ad0-3639-4686-9cd2-2b2ab2609bda) <br> <br>[Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1f655fb7-63ca-4980-91a3-56dbc2b715c6) |
+|[Auto provisioning of the Log Analytics agent should be enabled on subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/af849052-4299-0692-acc0-bffcbe9e440c) |MMA |Azure & non-Azure (Windows & Linux)  | Deprecated |[Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc) |
 
 ## Preparing Defender for SQL on Machines
 
