@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 08/01/2024
+ms.date: 08/20/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
@@ -101,7 +101,8 @@ As part of the Endpoint Detection and Response capabilities, Microsoft Defender 
 Download [netfilter.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/netfilter.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
 > [!IMPORTANT]
-> Only one .mobileconfig (plist) for Network Filter is supported.  Adding multiple Network Filters will lead to network connectivity issues on the macOS'es.  Not MDE on macOS specific.
+> Only one `.mobileconfig` (plist) for Network Filter is supported.  Adding multiple Network Filters leads to network connectivity issues on Mac. This issue is not specific to Defender for Endpoint on macOS.
+
 To configure your network filter:
 
 1. Under **Configuration profiles**, select **Create Profile**.
