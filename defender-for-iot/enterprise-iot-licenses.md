@@ -13,13 +13,15 @@ ms.topic: overview
 
 Enterprise IoT security improves the monitoring and protection of the IoT devices in your network, such as printers, smart TVs, Voice over Internet Protocol (VoIP) devices, conferencing systems and purpose-built, proprietary devices. The security monitoring includes IoT related alerts, vulnerabilities, and recommendations that are integrated with your existing Microsoft Defender for Endpoint data.
 
+[!INCLUDE [defender-iot-preview](../includes//defender-iot-defender-public-preview.md)]
+
 ## Enterprise IoT licenses
 
 To add enterprise IoT to Defender for Endpoint, there are two options available depending on your existing license:
 
 1. Customers with ME5/E5 Security plans already have enterprise IoT available, but just need to turn on the feature.
 
-    To turn on enterprise for IoT [follow these instructions](enterprise-iot-get-started.md#turn-on-enterprise-iot-monitoring).
+    To turn on enterprise for IoT [follow these instructions](enterprise-iot-get-started.md#turn-on-enterprise-iot-security).
 
 1. Customers with a Defender for Endpoint P2 license only can use a trial standalone license for enterprise IoT monitoring. A trial license supports 100 devices.
 

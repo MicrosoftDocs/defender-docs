@@ -15,7 +15,7 @@ Enterprise IoT security improves the monitoring and protection of the IoT device
 
 In this article you will learn how to add enterprise IoT to your Microsoft Defender portal and use the IoT specific security features to protect your IoT environment.
 
-[!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
+[!INCLUDE [defender-iot-preview](../includes//defender-iot-defender-public-preview.md)]
 
 ## Prerequisites
 
@@ -71,7 +71,7 @@ You can also purchase a license using the Microsoft 365 admin center. Before pur
 
 1. Search for the **Microsoft Defender for IoT - EIoT Device License - add-on** and filter the results by **Other services**. For example:
 
-    :::image type="content" source="media/enterprise-for-iot-get-started/eiot-standalone.png" alt-text="Screenshot of the Marketplace search results for the EIoT Device License.":::
+    :::image type="content" source="media/enterprise-iot-get-started/eiot-standalone.png" alt-text="Screenshot of the Marketplace search results for the EIoT Device License.":::
 
     > [!IMPORTANT]
     >
@@ -103,7 +103,7 @@ Use the following procedure to calculate how many devices you need to monitor if
 
     For example:
 
-    :::image type="content" source="media/enterprise-for-iot-get-started/device-inventory-iot.png" alt-text="Screenshot of network device and IoT devices in the device inventory in Microsoft Defender for Endpoint." lightbox="media/enterprise-for-iot-get-started/device-inventory-iot.png":::
+    :::image type="content" source="media/enterprise-iot-get-started/device-inventory-iot.png" alt-text="Screenshot of network device and IoT devices in the device inventory in Microsoft Defender for Endpoint." lightbox="media/enterprise-iot-get-started/device-inventory-iot.png":::
 
 1. Round your total to a multiple of 100 and compare it against the number of licenses you have. For example:
 
@@ -116,7 +116,7 @@ Use the following procedure to calculate how many devices you need to monitor if
 For more information, see the [Defender for Endpoint Device discovery overview](/microsoft-365/security/defender-endpoint/device-discovery).
 
 > [!NOTE]
-> Devices listed on the **Computers & Mobile** tab, including those managed by Defender for Endpoint or otherwise, are not included in the number of [devices](enterprise-for-iot.md#identified-unique-devices) monitored by Defender for IoT.
+> Devices listed on the **Computers & Mobile** tab, including those managed by Defender for Endpoint or otherwise, are not included in the number of [devices](enterprise-iot.md#identified-unique-devices) monitored by Defender for IoT.
 
 ### Purchase standalone licenses
 
@@ -126,7 +126,7 @@ To purchase standalone licenses:
 
 1. Search for the **Microsoft Defender for IoT - EIoT Device License - add-on** and filter the results by **Other services**. For example:
 
-    :::image type="content" source="media/enterprise-for-iot-get-started/eiot-standalone.png" alt-text="Screenshot of the Marketplace search results for the EIoT Device License.":::
+    :::image type="content" source="media/enterprise-iot-get-started/eiot-standalone.png" alt-text="Screenshot of the Marketplace search results for the EIoT Device License.":::
 
     > [!IMPORTANT]
     > The prices shown in this image are for example purposes only and are not intended to reflect actual prices.
@@ -145,7 +145,7 @@ When enterprise IoT is activated, the added security value of alerts, recommenda
 
 1. Select the **IoT devices** tab and select a specific device **IP** to drill down for more details. For example:
 
-    :::image type="content" source="media/enterprise-for-iot-get-started/select-a-device.png" alt-text="Screenshot of the IoT devices tab in Microsoft Defender portal." lightbox="media/enterprise-for-iot-get-started/select-a-device.png":::
+    :::image type="content" source="media/enterprise-iot-get-started/select-a-device.png" alt-text="Screenshot of the IoT devices tab in Microsoft Defender portal." lightbox="media/enterprise-iot-get-started/select-a-device.png":::
 
 1. On the device details page, explore the following tabs to view data added by enterprise IoT security for your device:
 
