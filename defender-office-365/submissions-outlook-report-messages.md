@@ -80,10 +80,9 @@ In a supported version of Outlook, select one or more messages in the Junk Email
 
 Based on the [User reported settings](submissions-user-reported-messages-custom-mailbox.md) in your organization, the messages are sent to the reporting mailbox, to Microsoft, or both. The messages are also moved out of Junk Email to the Inbox.
 
-## Use the Report Message and Report Phishing add-ins
+## Use the Report Message and Report Phishing add-ins in Outlook
 
 - The procedures in this section require the Microsoft Report Message or Report Phishing add-ins. For more information, see [Enable the Microsoft Report Message or the Report Phishing add-in](submissions-users-report-message-add-in-configure.md) installed.
-
 - The versions of Outlook that are supported by the Report Message and Report Phishing add-ins are described [here](submissions-users-report-message-add-in-configure.md#what-do-you-need-to-know-before-you-begin).
 
 ### Use the Report Message add-in to report junk and phishing messages
