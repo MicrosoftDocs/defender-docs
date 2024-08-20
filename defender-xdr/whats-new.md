@@ -31,7 +31,7 @@ You can also get product updates and important notifications through the [messag
 
 ## August 2024
 
-- (Preview) Microsoft Sentinel data is now available with Defender XDR data in Microsoft Defender multitenant management. Only one Microsoft Sentinel workspace per tenant is currently supported in the Microsoft unified security operations platform. So, Microsoft Defender multitenant management shows security information and event management (SIEM) data from one Microsoft Sentinel workspace per tenant. For more information, see [Microsoft Defender multitenant management](mto-overview).
+- (Preview) Microsoft Sentinel data is now available with Defender XDR data in Microsoft Defender multitenant management. Only one Microsoft Sentinel workspace per tenant is currently supported in the Microsoft unified security operations platform. So, Microsoft Defender multitenant management shows security information and event management (SIEM) data from one Microsoft Sentinel workspace per tenant. For more information, see [Microsoft Defender multitenant management](mto-overview.md).
 - To ensure a smooth experience while navigating the Microsoft Defender portal, configure your network firewall by adding the appropriate addresses to your allow list. For more information, see [Network firewall configuration for Microsoft Defender XDR](m365d-enable.md#configure-your-network-firewall).
 
 ## July 2024
