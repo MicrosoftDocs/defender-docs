@@ -35,7 +35,7 @@ Make sure that you have:
 
 There are two ways to add enterprise IoT to the Defender portal:
 
-- ME5/ E5 Security customers: Turn on support for Enterprise IoT Security in the Defender Portal. For more information, see [turn on enterprise IoT security](#turn-on-enterprise-iot-security).
+- ME5/ E5 Security customers: Turn on support for Enterprise IoT Security in the Defender Portal. For more information, see [turn on enterprise IoT security](#me5-e5-security-customers).
 
 - Defender for Endpoint P2 customers: Start with a free trial or purchase standalone, per-device licenses to gain the same IoT-specific security value. For more information, see [set up a standalone trial license](#set-up-a-standalone-trial-license). To purchase a full license, see [purchase the standalone full license](#set-up-a-standalone-full-license).
 
@@ -116,11 +116,11 @@ Use the following procedure to calculate how many devices you need to monitor if
 For more information, see the [Defender for Endpoint Device discovery overview](/microsoft-365/security/defender-endpoint/device-discovery).
 
 > [!NOTE]
-> Devices listed on the **Computers & Mobile** tab, including those managed by Defender for Endpoint or otherwise, are not included in the number of [devices](enterprise-iot.md#identified-unique-devices) monitored by Defender for IoT.
+> Devices listed on the **Computers & Mobile** tab, including those managed by Defender for Endpoint or otherwise, are not included in the number of [devices](device-discovery.md#identified-unique-devices) monitored by Defender for IoT.
 
-#### Purchase the standalone licenses
+#### Purchase the standalone license
 
-To purchase standalone licenses:
+To purchase the standalone full license:
 
 1. Go to the [Microsoft 365 admin center](https://portal.office.com/AdminPortal/Home#/catalog) **Billing > Purchase services**. If you don't have this option, select **Marketplace** instead.
 
