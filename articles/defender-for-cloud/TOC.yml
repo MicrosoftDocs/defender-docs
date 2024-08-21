@@ -36,6 +36,9 @@
         - name: Common questions about Defender for Containers
           displayName: containers, common questions, faq, frequently asked questions
           href: faq-defender-for-containers.yml
+        - name: Common questions about Copilot in Defender for Cloud
+          displayName: copilot, common questions, faq, frequently asked questions
+          href: faq-copilot.yml
 
 - name: Plan
   items:
