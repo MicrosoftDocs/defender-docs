@@ -207,7 +207,7 @@ Depending on your environment, you may need to take the following steps:
     
     - **Other cloud and on-premises machines**: The Guest Configuration is enabled by default when you [connect your hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm?branch=main).
 
-- (**Azure VMs only**) Assign managed Identity: In the Defender for Cloud portal, on the recommendations page, search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](recommendations-reference-compute.md#virtual-machines-guest-configuration-extension-should-be-deployed-with-system-assigned-managed-identityhttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkey69133b6b-695a-43eb-a763-221e19556755), and [remediate the recommendation](implement-security-recommendations.md).
+- (**Azure VMs only**) Assign managed Identity: In the Defender for Cloud portal, on the recommendations page, search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755), and [remediate the recommendation](implement-security-recommendations.md).
 
 - The following policies are enabled with Guest Configuration:
     - Windows machines should meet requirements of the Azure compute security baseline
