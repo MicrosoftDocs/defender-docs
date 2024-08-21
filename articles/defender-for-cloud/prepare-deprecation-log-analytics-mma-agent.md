@@ -249,7 +249,7 @@ by searching for and disabling them on the [built-in MCSB Defender for Cloud ini
 
 You can also exempt the machines from the recommendations through the regulatory compliance dashboard. by selecting the recommendation and exempting the relevant machines.
 
-:::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/exempt-recommendation.png" alt-text=":::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/exempt-recommendation.png" alt-text="Screenshot of the regulatory compliance dashboard that shows where one of the MMA recommendations exist.":::":::
+:::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/exempt-recommendation.png" alt-text="Screenshot of the regulatory compliance dashboard that shows where one of the MMA recommendations exist." lightbox="media/prepare-deprecation-log-analytics-mma-agent/exempt-recommendation.png":::
 
 Some of the baseline configuration rules powered by the Azure Policy guest configuration tool are more current and offer broader coverage. As a result, transition to Baselines feature power by Azure Policy guest configuration can affect your compliance status since they include checks that might not have been performed previously. 
 
