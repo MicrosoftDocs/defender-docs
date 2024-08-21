@@ -240,7 +240,12 @@ The deprecated recommendations will be replaced by the following Azure Policy gu
 
 If a machine is running both the MMA and the Azure Policy guest configuration, you will see duplicate recommendations. The duplication of recommendations occurs because both methods are running at the same time and producing the same recommendations. These duplicates will affect your Compliance and Secure Score. 
 
-As a work around, you can disable the MMA recommendations Machines should be configured securely, and Auto provisioning of the Log Analytics agent should be enabled on subscriptions, by disabling them on the [built-in MCSB Defender for Cloud initiative](manage-mcsb.md#manage-recommendation-settings)
+As a work around, you can disable the MMA recommendations;
+
+- "Machines should be configured securely"
+- "Auto provisioning of the Log Analytics agent should be enabled on subscriptions"
+
+by searching for and disabling them on the [built-in MCSB Defender for Cloud initiative](manage-mcsb.md#manage-recommendation-settings).
 
 You can also exempt the machines from the recommendations through the regulatory compliance dashboard. by selecting the recommendation and exempting the relevant machines.
 
