@@ -186,16 +186,18 @@ After you disable the file events collection:
 
 When you enable Defender for Cloud on an Azure subscription, the [Microsoft cloud security benchmark (MCSB)](/security/benchmark/azure/introduction), including compute security baselines that assess machine OS compliance, is enabled as a default compliance standard. Free foundational cloud security posture management (CSPM) in Defender for Cloud makes security recommendations based on the MCSB.
 
-Machine information is collected for assessment using the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA). The MMA is set to be deprecated in November 2024, and the following changes will occur:
+Machine information is collected for assessment using the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). The MMA is set to be deprecated in November 2024, and the following changes will occur:
 
-The following policies are enabled with Azure Policy guest configuration:
+- Machine information will be collected using the [Azure Policy guest configuration](/azure/virtual-machines/extensions/guest-configuration).
+
+- The following Azure policies are enabled with Azure Policy guest configuration:
 - "Windows machines should meet requirements of the Azure compute security baseline"
 - "Linux machines should meet requirements for the Azure compute security baseline"
 
     > [!NOTE]
     > If you remove these policies you won't be able to access the benefits of the Azure Policy guest configuration extension.
 
-OS recommendations based on compute security baselines will no longer be included in Defender for Cloud foundational CSPM. These recommendations will be available when you [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
+- OS recommendations based on compute security baselines will no longer be included in Defender for Cloud foundational CSPM. These recommendations will be available when you [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
 
 Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing.
 
