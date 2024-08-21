@@ -1,0 +1,85 @@
+### YamlMime:FAQ
+metadata:
+  title: Common questions - Copilot in Microsoft Defender for Cloud
+  description: Frequently asked questions about Copilot for Microsoft Defender for Cloud.
+  author: ElazarK
+  ms.author: elkrieger
+  manager: raynew
+  ms.topic: faq
+  ms.date: 08/21/2024
+title: 'Common questions about Copilot in Microsoft Defender for Cloud'
+summary: |
+  Microsoft Defender for Cloud's integration with Copilot for Security brings the benefits of AI and automation to your security operations. Copilot helps you prioritize and respond to security incidents faster and more effectively.
+  
+
+sections:
+  - name: Ignored
+    questions:
+      - question: |
+          What can go wrong when I enter a prompt into Copilot for Azure?
+        answer: |
+          When you enter a prompt into Copilot for Azure, you might encounter the following issues:
+          - Copilot for Azure might fail to choose a skill.
+          - Copilot for Azure might not select the Defender for Cloud skill.
+          - Copilot for Azure might select its own skill instead of a Defender for Cloud skill. For example, a skill belonging to Azure documentation, a skill focused on Azure alerts.
+          - A Copilot for Security skill might be selected. For example, CVS related prompts can sometimes be answered by [Microsoft Defender External Attack Surface Management](https://azure.microsoft.com/products/defender-external-attack-surface-management/) skills.
+          - A Defender for Cloud skills is selected but the user doesn't have Copilot for Security security compute units (SCUs). Learn more about [managing the usage of SCUs in Copilot for Security](/copilot/security/manage-usage).
+          - A Defender for Cloud skill is selected but the response can be blocked by security measures.
+
+
+      - question: |
+          Is it possible for a user to submit a prompt with the intentions of Copilot for Security of answering it and Azure Copilot answering it instead? 
+
+        answer: |
+          Yes. If you ask a question that doesn't relate to a skill that Defender for Cloud currently supports, Azure Copilot attempts to answer the question based on the skills and data available to it.
+
+
+
+      - question: |
+          How can I know which skills are currently supported?
+
+        answer: |
+          To get a better understanding of the skills that Defender for Cloud currently supports, check out [Analyze recommendations with Copilot for Security](analyze-with-copilot.md).
+
+
+
+      - question: |
+          Is there a way to determine which Copilot is responding to a user’s prompt? 
+
+        answer: |
+          Yes. When you submit a prompt, a progress screen appears. If the message `Using Copilot for Security` appears, then Azure Copilot passed along the prompt to Copilot for Security to respond.   
+          
+          :::image type="content" source="media/faq-copilot/using-copilot.png" alt-text="Screenshot that shows the copilot window showing the words Using Copilot for Security." lightbox="media/faq-copilot/using-copilot.png":::
+          
+
+
+      - question: |
+          What happens when Azure Copilot or Copilot for Security can't handle a user prompt?
+
+        answer: |
+          If a prompt can't be answered by either Azure Copilot or Copilot for Security, a response stating "Sorry, I can't assist with that" will be displayed.
+
+
+
+      - question: |
+          I got a response from one of the Copilots that is inaccurate, what should I do?
+
+        answer: |
+          For any responses that somehow deviate from your expectations, we recommend using the feedback option that appears after the prompt by selecting up the thumbs-up or thumbs-down buttons.
+
+
+
+      - question: |
+          Is there a way to force Azure Copilot to use Copilot for Security for all prompts?
+
+        answer: |
+          No.
+
+
+
+      - question: |
+          Will I be charged for using Azure Copilot if my skill is executed by Copilot for Security?
+
+        answer: |
+          No.
+
