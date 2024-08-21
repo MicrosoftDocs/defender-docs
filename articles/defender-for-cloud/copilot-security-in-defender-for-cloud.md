@@ -45,7 +45,7 @@ When you use Copilot for Security in Defender for Cloud, the following data proc
 1. If the prompt is security related and the skill is available, Copilot for Security executes the skills and sends back a response to Copilot in Azure for presentation.
 1. If a security-related prompt is received but the skill is unavailable, Azure Copilot searches all of its available skills to find the most relevant skills to resolve the prompt. A response is then sent to the user.
 
-    :::image type="content" source="media/copilot-security-in-defender-for-cloud/data-process-workflow.png" alt-text="Conceptual image that shows the data process workflow of the Copilot experience in Defender for Cloud." lightbox="media/copilot-security-in-defender-for-cloud/data-process-workflow.png":::
+    :::image type="content" source="media/copilot-security-in-defender-for-cloud/data-process-workflow.png" alt-text="Diagram that shows the data process workflow of the Copilot experience in Defender for Cloud." lightbox="media/copilot-security-in-defender-for-cloud/data-process-workflow.png":::
 
 Check out the [Copilot for Security FAQs](faq-copilot.yml).
 
