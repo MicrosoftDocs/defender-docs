@@ -1,7 +1,7 @@
 ---
 title: Copilot for Security in Defender for Cloud (Preview)
 description: Learn about the benefits of copilot in Microsoft Defender for Cloud and how it applies to analyzing your security posture.
-ms.date: 08/15/2024
+ms.date: 08/21/2024
 author: dcurwin
 ms.author: dacurwin
 ms.topic: concept-article
@@ -11,19 +11,19 @@ ai-usage: ai-assisted
 
 # Copilot for Security in Defender for Cloud (Preview)
 
-Microsoft Defender for Cloud has integrated both Microsoft Copilot for Security and Microsoft Copilot for Azure into its experience. With these integrations, you can ask security-related questions, receive responses, and automatically trigger the necessary skills needed to analyze, summarize, remediate, and delegate recommendations using natural language prompts.
+Microsoft Defender for Cloud integrates both Microsoft Copilot for Security and Microsoft Copilot for Azure into its experience. With these integrations, you can ask security-related questions, receive responses, and automatically trigger the necessary skills needed to analyze, summarize, remediate, and delegate recommendations using natural language prompts.
 
-Both [Copilot for Security](/copilot/security/microsoft-security-copilot) and [Copilot for Azure](/azure/copilot/overview?wt.mc_id=copilot_1a_webpage_gdc) are cloud-based AI platforms that provide a natural language copilot experience. They assist security professionals in understanding the context and impact of recommendations, remediating or delegating tasks, and addressing misconfigurations in code.
+Both [Copilot for Security](/copilot/security/microsoft-security-copilot) and [Copilot for Azure](/azure/copilot/overview?wt.mc_id=copilot_1a_webpage_gdc) are cloud-based AI platforms that provide a natural language copilot experience. They assist security professionals in understanding the context and effect of recommendations, remediating or delegating tasks, and addressing misconfigurations in code.
 
-By leveraging Microsoft Defender for Cloud's integration with Copilot for Security and Copilot for Azure on the recommendations page, you can enhance your security posture and mitigate risks in your environments. This integration streamlines the process of understanding and implementing recommendations, making your security management more efficient and effective.
+Defender for Cloud's integration with Copilot for Security and Copilot for Azure on the recommendations page allows you to enhance your security posture and mitigate risks in your environments. This integration streamlines the process of understanding and implementing recommendations, making your security management more efficient and effective.
 
 ## How Copilot works in Defender for Cloud
 
-Defender for Cloud has integrated Copilot directly in to the Defender for Cloud experience. This integration allows you to analyze, summarize, remediate, and delegate your recommendations with natural language prompts
+Defender for Cloud integrates Copilot directly in to the Defender for Cloud experience. This integration allows you to analyze, summarize, remediate, and delegate your recommendations with natural language prompts
 
 :::image type="content" source="media/copilot-security-in-defender-for-cloud/analyze-copilot.png" alt-text="Screenshot that shows where the Analyze with copilot button located on the recommendations page." lightbox="media/copilot-security-in-defender-for-cloud/analyze-copilot.png":::
 
-When you open Copilot, you can use natural language prompts to ask questions about the recommendations. Copilot provides you with a response in natural language that helps you understand the context of the recommendation, the effect of implementing the recommendation, and the steps to take to implement the recommendation.
+When you open Copilot, you can use natural language prompts to ask questions about the recommendations. Copilot provides you with a response in natural language that helps you understand the context of the recommendation. It also explains the effect of implementing the recommendation and provides steps to take for implementation.
 
 Some sample prompts include:
 
@@ -31,7 +31,7 @@ Some sample prompts include:
 - Show critical risks to sensitive data
 - Show resources with high severity vulnerabilities
 
-Copilot can also assist with each recommendation and can refine your recommendations, provide a summary of individual recommendations, remediation steps for recommendations, and allow you to delegate recommendations.
+Copilot can assist with refining recommendations, providing summaries, remediation steps, and delegation. It enhances your ability to analyze and act on recommendations. 
 
 :::image type="content" source="media/copilot-security-in-defender-for-cloud/summarize-copilot.png" alt-text="Screenshot of a recommendation that shows where the Summarize with Copilot button is located." lightbox="media/copilot-security-in-defender-for-cloud/summarize-copilot.png":::
 
@@ -40,14 +40,14 @@ Copilot can also assist with each recommendation and can refine your recommendat
 When you use Copilot for Security in Defender for Cloud, the following data processing workflow occurs:
 
 1. A user enters a prompt in the Copilot interface.
-1. The prompt is received by the Azure orchestrator, which is a part of Copilot for Azure.
+1. Copilot for Azure receives the prompt.
 1. Copilot for Azure evaluates the prompt and the active page, to determine the skills needed to resolve the prompt.
-1. If the prompt is security related and the skill is available, the orchestrator sends the prompt to Copilot for Security which executes the skills, and sends back an appropriate response to Copilot in Azure to be presented to you.
-1. If the prompt is security related but the skill is unavailable, Azure Copilot will search all of its available skills to find the most relevant skills to resolve the prompt, and sends back an appropriate response to Copilot in Azure to be presented to you.
+1. If the prompt is security related and the skill is available, Copilot for Security executes the skills and sends back a response to Copilot in Azure for presentation.
+1. If a security-related prompt is received but the skill is unavailable, Azure Copilot searches all of its available skills to find the most relevant skills to resolve the prompt. A response is then sent to the user.
 
     :::image type="content" source="media/copilot-security-in-defender-for-cloud/data-process-workflow.png" alt-text="Conceptual image that shows the data process workflow of the Copilot experience in Defender for Cloud." lightbox="media/copilot-security-in-defender-for-cloud/data-process-workflow.png":::
 
-Check out the [Copilot for Securtiy FAQs](faq-copilot.yml).
+Check out the [Copilot for Security FAQs](faq-copilot.yml).
 
 ## Copilot's capabilities in Defender for Cloud
 

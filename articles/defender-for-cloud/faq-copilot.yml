@@ -6,7 +6,7 @@ metadata:
   ms.author: elkrieger
   manager: raynew
   ms.topic: faq
-  ms.date: 08/15/2024
+  ms.date: 08/21/2024
 title: 'Common questions about Copilot in Microsoft Defender for Cloud'
 summary: |
   Microsoft Defender for Cloud's integration with Copilot for Security brings the benefits of AI and automation to your security operations. Copilot helps you prioritize and respond to security incidents faster and more effectively.
@@ -57,15 +57,15 @@ sections:
           What happens when Azure Copilot or Copilot for Security can't handle a user prompt?
 
         answer: |
-          If you enter a prompt that can't be answered by either Azure Copilot or Copilot for Security, a response appears that states, `Sorry I can’t assist with that`.
+          If a prompt can't be answered by either Azure Copilot or Copilot for Security, a response stating "Sorry, I can't assist with that" will be displayed.
 
 
 
       - question: |
-          I got a response from one of the Copilots that was inaccurate, what should I do?
+          I got a response from one of the Copilots that is inaccurate, what should I do?
 
         answer: |
-          For any responses that somehow deviate from your expectations, we recommend using the feedback option that appears after the prompt by selecting the thumbs up or thumbs down buttons.
+          For any responses that somehow deviate from your expectations, we recommend using the feedback option that appears after the prompt by selecting up the thumbs-up or thumbs-down buttons.
 
 
 
