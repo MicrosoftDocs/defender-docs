@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 07/26/2024
+ms.date: 08/21/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -41,7 +41,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 ## August 2024
 
-- [Use the built-in Report button on legacy Outlook for Windows](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): Use the built-in Report button in legacy Outlook for Windows client to report messages as phish, junk, and not junk.
+- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Microsoft 365 and Outlook 2021 now support the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
 
 ## July 2024
 
