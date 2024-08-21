@@ -191,8 +191,8 @@ Machine information is collected for assessment using the Log Analytics agent (a
 - Machine information will be collected using the [Azure Policy guest configuration](/azure/virtual-machines/extensions/guest-configuration).
 
 - The following Azure policies are enabled with Azure Policy guest configuration:
-- "Windows machines should meet requirements of the Azure compute security baseline"
-- "Linux machines should meet requirements for the Azure compute security baseline"
+    - "Windows machines should meet requirements of the Azure compute security baseline"
+    - "Linux machines should meet requirements for the Azure compute security baseline"
 
     > [!NOTE]
     > If you remove these policies you won't be able to access the benefits of the Azure Policy guest configuration extension.
