@@ -8,7 +8,7 @@ ms.date: 08/19/2024
 
 # Modify Defender for Servers plan settings
 
-After [deploying the Defender for Servers plan](tutorial-enable-servers-plan.md) in Microsoft Defender for Cloud, you can check which resources are protected by the plan, configure plan features, or turn the plan on and off as needed.
+After [deploying the Defender for Servers plan](tutorial-enable-servers-plan.md) in Microsoft Defender for Cloud, you can check which resources are protected by the plan, configure plan features manually, or turn the plan on and off as needed.
 
 ## Check machine protection
 
@@ -31,9 +31,9 @@ You can also check the coverage for all of all your subscriptions and resources 
 > - If you change settings at the resource level, the resource no longer inherits settings from its parent subscription unless you delete the settings you configured.
 
 
-## Modify plan settings
+## Modify plan feature settings
 
-You can modify plan settings as follows:
+Features are turned on by default when you enable Defender for Servers. You can modify plan features manually as follows:
 
 1. In subscription enabled for Defender for Cloud, select **Environment settings**.
 1. Under Cloud Workload Protection (CWP), in the **Servers** entry > **Monitoring coverage** column, select **Settings**.

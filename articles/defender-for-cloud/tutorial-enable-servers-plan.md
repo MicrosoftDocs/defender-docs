@@ -73,13 +73,13 @@ After enabling the plan, you have the ability to [configure the features of the 
 
 Although we recommend that you enable the plan for an entire Azure subscription, you can turn on Plan 1 for a specific resource using the Defender for Cloud REST API or a PowerShell script.
 
-## Enable for a specific machine
+### Enable for a specific machine
 
-To turn the plan on for a specific resource, use the Defender for Cloud REST API.[Pricings resource](/rest/api/defenderforcloud/pricings).
+To turn Plan 1 on for a specific resource, use the Defender for Cloud REST API.[Pricings resource](/rest/api/defenderforcloud/pricings).
 
-## Enable for a resource group or tags
+### Enable for a resource group or tags
 
-Enable for a resource group or Azure resource tags as follows:
+Enable Plan 1 on a resource group or Azure resource tags as follows:
 
 1. [Download and save this file](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Powershell%20scripts/Defender%20for%20Servers%20on%20resource%20level) as a PowerShell file.
 1. Run the downloaded file.
@@ -89,7 +89,7 @@ Enable for a resource group or Azure resource tags as follows:
 
 ## Enable Plan 2 on a custom workspace
 
-Enable Plan 2 on a specific workspace as follows:
+If you're not using the default workspace created when you enabled Defender for Cloud on an Azure subscription, you can enable Plan 2 on your custom workspaces as follows:
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Defender for Cloud**.
 

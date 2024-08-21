@@ -12,7 +12,7 @@ ms.custom: template-concept
 
 # Agentless machine scanning
 
-Microsoft Defender for Cloud provides agentless machine scanning to improve security posture on Azure VMs, AWS, GCP, and on-premises machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+Microsoft Defender for Cloud provides agentless machine scanning to improve security posture of machines to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
 Agentless scanning for virtual machines:
 
@@ -26,6 +26,7 @@ Agentless scanning is available in the following Defender for Cloud plans:
 - [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md).
 - [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features).
 - Malware scanning is only available in Defender for Servers Plan 2.
+- Agentless scanning is available for Azure VMs, GCP/AWS machines connected to Defender for Cloud, and on-premises machines that are onboarded as Azure Arc-enabled VMs. Agentless scanning isn't available for on-premises machines that are [directly onboarded to Defender for Cloud](quickstart-onboard-machines.md).
 
 ## Agentless scanning architecture
 
