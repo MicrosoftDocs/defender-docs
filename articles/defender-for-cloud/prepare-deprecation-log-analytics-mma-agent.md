@@ -201,7 +201,7 @@ Depending on your environment, you may need to take the following steps:
 - Review the [support matrix for the Guest Configuration](/azure/governance/machine-configuration/overview).
 
 - Install the Guest Configuration extension on your machines.
-    - **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [[Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc)](recommendations-reference-compute.md#guest-configuration-extension-should-be-installed-on-machineshttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkey6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
+    - **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
     
     - **GCP and AWS**: The Guest Configuration feature is automatically installed when you [connect your GCP project](quickstart-onboard-gcp.md), or you [connect your AWS accounts](quickstart-onboard-aws.md) to Defender for Cloud.
     
