@@ -1,12 +1,12 @@
 ---
 title: Schemas and operators in Microsoft Security Exposure Management
 description: This article describes the enterprise exposure graph schemas and operators in Microsoft Exposure Management.
-ms.author: v-mjosephy
-author: mjosephym
+ms.author: dlanger
+author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/11/2024
+ms.date: 08/20/2024
 ---
 
 # Schemas and operators overview

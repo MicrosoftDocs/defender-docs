@@ -46,3 +46,11 @@ Once you have a trial license, [set up a new site](set-up-sites.md) so that Micr
 ## Turn on Public preview features
 
 Turn on the public preview features in the Microsoft Defender XDR settings to enable the site security features. Directions to change the settings are available in [Defender portal preview features](/defender-xdr/preview#turn-on-preview-features).
+
+## Upgrade to a permanent license
+
+After assessing the trial version, you can [upgrade to a full license](manage-license.md). For more information, see [license overview](license-overview.md).
+
+## Next steps
+
+Once you have a trial license, [set up the roles and permissions](set-up-rbac.md) needed to access the Defender for IoT site security features in the Defender portal.

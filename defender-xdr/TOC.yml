@@ -478,12 +478,14 @@
         items:
         - name: SOC optimization overview
           display name: SOC optimization
-          href: https://aka.ms/soc-opt-from-defender
+          href: /azure/sentinel/soc-optimization/soc-optimization-access?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
+        - name: Use SOC optimizations programmatically
+          href: /azure/sentinel/soc-optimization/soc-optimization-api?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
         - name: SOC optimization reference
-          href: https://aka.ms/soc-opt-ref
+          href: /azure/sentinel/soc-optimization/soc-optimization-reference?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json
     - name: Manage multitenant environments
       items:
-        - name: Multitenant management in Microsoft Defender XDR
+        - name: Overview
           href: mto-overview.md
         - name: Set up multitenant management
           href: mto-requirements.md
