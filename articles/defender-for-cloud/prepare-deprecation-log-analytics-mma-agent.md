@@ -184,13 +184,25 @@ After you disable the file events collection:
 
 ## Baseline experience
 
-When you enable Defender for Cloud on your Azure subscription, the Defender Foundational CSPM plan is enabled by default. With the Foundational CSPM plan, the [Microsoft cloud security benchmark (MCSB)](/security/benchmark/azure/introduction), including compute security baselines that use both the MCSB and the CIS Microsoft Azure Foundations Benchmark, automatically assess machine OS compliance. This process relies on MMA to gather information from your VMs to generate recommendations based on the benchmarks to harden and correct misconfigurations within your environment. 
+**Version 1:**
+
+When you enable Microsoft Defender for Cloud on your subscription, you get the Microsoft Cloud Security Benchmark (MCSB) and compute security baselines based on both the MCSB and the CIS Microsoft Azure Foundations Benchmark automatically with the included Foundational CSPM plan. Defender for Cloud gathers information from your VMs to assess them using MMA and compares the collected information against these benchmarks. Recommendations are then generated based on the comparison.
+
+With the deprecation of the MMA, the information will now be collected from your VMs using Guest Configuration. OS recommendations for Windows and Linux machines based on compute security baselines will no longer be part of the Foundational CSPM plan and will require you to [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md). 
+
+Other recommendations from the MCSB, which are not specific to Windows and Linux compute security baselines, will still be part of the free foundational CSPM.
+
+Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing.
+
+**Version 2:** 
+
+When you enable Defender for Cloud on your Azure subscription, the Defender Foundational CSPM plan is enabled by default. With the Foundational CSPM plan, the [Microsoft cloud security benchmark (MCSB)](/security/benchmark/azure/introduction) which includes the compute security baselines, which uses both the MCSB and the CIS Microsoft Azure Foundations Benchmark, automatically assess machine OS compliance. This process relies on MMA to gather information from your VMs to generate recommendations based on the benchmarks to harden and correct misconfigurations within your environment. 
 
 With the deprecation of the MMA, the baseline experience will only be powered by the Guest Configuration experience and will require you to [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md), as of September, to gain access to the baseline features.
 
 Recommendations provided by the MCSB that aren't part of Windows and Linux compute security baselines continue to be part of free foundational CSPM.
 
-**Add link to the pricing page here**
+Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing.
 
 ### Install Guest Configuration
 
