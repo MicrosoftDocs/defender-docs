@@ -184,7 +184,13 @@ After you disable the file events collection:
 
 ## Baseline experience
 
-When you enable Defender for Cloud on your Azure environment, the Defender Foundational CSPM plan is enabled by default. With the Foundational CSPM plan, the [Microsoft cloud security benchmark (MCSB)](/security/benchmark/azure/introduction) automatically starts to assess resources in scope. This process relies on MMA to provide you with recommendations to harden and correct misconfigurations within your environment. As part of the MMA deprecation, the baseline experience powered by MDVM and Host misconfiguration powered by Guest Configuration will now require you to [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md).
+When you enable Defender for Cloud on your Azure subscription, the Defender Foundational CSPM plan is enabled by default. With the Foundational CSPM plan, the [Microsoft cloud security benchmark (MCSB)](/security/benchmark/azure/introduction), including compute security baselines that use both the MCSB and the CIS Microsoft Azure Foundations Benchmark, automatically assess machine OS compliance. This process relies on MMA to gather information from your VMs to generate recommendations based on the benchmarks to harden and correct misconfigurations within your environment. 
+
+With the deprecation of the MMA, the baseline experience will only be powered by the Guest Configuration experience and will require you to [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md), as of September, to gain access to the baseline features.
+
+Recommendations provided by the MCSB that aren't part of Windows and Linux compute security baselines continue to be part of free foundational CSPM.
+
+**Add link to the pricing page here**
 
 ### Install Guest Configuration
 
@@ -221,9 +227,9 @@ With this change the following recommendations will be effected:
 |[Machines should be configured securely](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/c476dc48-8110-4139-91af-c8d940896b98) | MMA | Azure & non-Azure (Windows & Linux)  | November 2024 |[Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/8c3d9ad0-3639-4686-9cd2-2b2ab2609bda) <br> <br>[Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1f655fb7-63ca-4980-91a3-56dbc2b715c6) |
 |[Auto provisioning of the Log Analytics agent should be enabled on subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/af849052-4299-0692-acc0-bffcbe9e440c) |MMA |Azure & non-Azure (Windows & Linux)  | Deprecated |[Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc) |
 
-### APIs
+### Query recommendations with APIs
 
-With the retirement of the MMA, API location will now be available through Azure Resource Graph. The following are 2 sample queries you can use in Azure Resource Graph with either API or in the Azure Resource Graph portal:
+With the retirement of the MMA, the way APIs operate will be changing. APIs will now query [recommendation information through Azure Resource Graph](review-security-recommendations.md#review-recommendations-in-azure-resource-graph). The following are 2 sample queries you can use in Azure Resource Graph with either API or in the Azure Resource Graph portal:
 
 - **Query all unhealthy rules for a specific resource**
 
@@ -248,10 +254,9 @@ With the retirement of the MMA, API location will now be available through Azure
     | extend status = tostring(properties.status.code) 
     | summarize count() by subAssessmentId, status
     ```
-
 ### Compliance and Secure Score
 
-During the transition period between September 2024 to November 2024, both Baselines recommendations from the Log Analytics and from the Guest Configuration, will affect your Compliance and Secure Score. 
+During the transition period between September 2024 to November 2024, you will see duplicate recommendations. The duplication occurs due to the baseline experience and the Log Analytics experience running at the same time and producing the same recommendations. These duplicates will affect your Compliance and Secure Score. 
 
 To remove the duplicate findings and view the Guest Configuration only, you need to [exempt the Log Analytics Baselines recommendation](exempt-resource.md) from your compliance standard. 
 
