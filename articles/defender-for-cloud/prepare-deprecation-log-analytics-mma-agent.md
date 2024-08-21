@@ -214,9 +214,8 @@ Depending on your environment, you may need to take the following steps:
 - Install the Azure Policy guest configuration on your machines.
     - **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
 
-    > [!NOTE]
-    > (**Azure VMs only**) You muss Assign managed Identity. 
-    > In the Defender for Cloud portal, on the recommendations page, search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755), and [remediate the recommendation](implement-security-recommendations.md).
+    - (**Azure VMs only**) You must Assign managed Identity. 
+        - In the Defender for Cloud portal, on the recommendations page, search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755), and [remediate the recommendation](implement-security-recommendations.md).
     
     - **GCP and AWS**: Azure Policy guest configuration is automatically installed when you [connect your GCP project](quickstart-onboard-gcp.md), or you [connect your AWS accounts](quickstart-onboard-aws.md) with Azure Arc autoprovisioning enabled, to Defender for Cloud.
     
@@ -228,24 +227,19 @@ Once you have completed the necessary steps to install the Azure Policy guest co
 
 With the deprecation of the MMA, the following MMA based recommendations are set to be deprecated:
 
-- [Machines should be configured securely](recommendations-reference-compute.md#machines-should-be-configured-securelyhttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkeyc476dc48-8110-4139-91af-c8d940896b98)
-- [Auto provisioning of the Log Analytics agent should be enabled on subscriptions](recommendations-reference-data.md#auto-provisioning-of-the-log-analytics-agent-should-be-enabled-on-subscriptionshttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkeyaf849052-4299-0692-acc0-bffcbe9e440c)
+- [Machines should be configured securely](recommendations-reference-compute.md)
+- [Auto provisioning of the Log Analytics agent should be enabled on subscriptions](recommendations-reference-data.md)
 
 The deprecated recommendations will be replaced by the following Azure Policy guest configuration base recommendations:
-- [Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md#guest-configuration-extension-should-be-installed-on-machineshttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkey6c99f570-2ce7-46bc-8175-cde013df43bc)
-- [Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md#vulnerabilities-in-security-configuration-on-your-linux-machines-should-be-remediated-powered-by-guest-configurationhttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkey1f655fb7-63ca-4980-91a3-56dbc2b715c6)
-- [Guest Configuration extension should be installed on machines](recommendations-reference-compute.md#guest-configuration-extension-should-be-installed-on-machineshttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkey6c99f570-2ce7-46bc-8175-cde013df43bc) |
+- [Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md)
+- [Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md)
+- [Guest Configuration extension should be installed on machines](recommendations-reference-compute.md)
 
 ### Duplicate recommendations
 
 If a machine is running both the MMA and the Azure Policy guest configuration, you will see duplicate recommendations. The duplication of recommendations occurs because both methods are running at the same time and producing the same recommendations. These duplicates will affect your Compliance and Secure Score. 
 
-As a work around, you can disable the MMA recommendations;
-
-- "Machines should be configured securely"
-- "Auto provisioning of the Log Analytics agent should be enabled on subscriptions"
-
-by searching for and disabling them on the [built-in MCSB Defender for Cloud initiative](manage-mcsb.md#manage-recommendation-settings).
+As a work around, you can disable the MMA recommendations, "Machines should be configured securely", and "Auto provisioning of the Log Analytics agent should be enabled on subscriptions", by searching for and disabling them on the [built-in MCSB Defender for Cloud initiative](manage-mcsb.md#manage-recommendation-settings).
 
 You can also exempt the machines from the recommendations through the regulatory compliance dashboard. by selecting the recommendation and exempting the relevant machines.
 
