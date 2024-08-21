@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 07/26/2024
+ms.date: 08/21/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -38,6 +38,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Endpoint](/defender-endpoint/whats-new-in-microsoft-defender-endpoint)
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
+
+## August 2024
+
+- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Microsoft 365 and Outlook 2021 now support the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
 
 ## July 2024
 
@@ -160,7 +164,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - The new Microsoft Defender XDR role-based access control (RBAC) model, with support for Microsoft Defender for Office, is now available in public preview. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
-- [Use the built-in Report button in Outlook on the web](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): Use the built-in Report button in Outlook on the web to report messages as phish, junk, and not junk.
+- [Use the built-in Report button on Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): Use the built-in Report button in Outlook on the web and new Outlook for Windows client to report messages as phish, junk, and not junk.
 
 ## October 2022
 
