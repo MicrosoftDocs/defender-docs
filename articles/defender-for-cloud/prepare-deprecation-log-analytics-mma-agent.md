@@ -2,7 +2,7 @@
 title: Prepare for retirement of the Log Analytics agent 
 description: Learn how to prepare for the deprecation of the Log Analytics (MMA) agent in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 08/19/2024
+ms.date: 08/21/2024
 # customer intent: As a user, I want to understand how to prepare for the retirement of the Log Analytics agent in Microsoft Defender for Cloud.
 ---
 
@@ -197,9 +197,9 @@ Machine information is collected for assessment using the Log Analytics agent (a
     > [!NOTE]
     > If you remove these policies you won't be able to access the benefits of the Azure Policy guest configuration extension.
 
-- OS recommendations based on compute security baselines will no longer be included in Defender for Cloud foundational CSPM. These recommendations will be available when you [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
+- OS recommendations based on compute security baselines will no longer be included in Defender for Cloud foundational CSPM. These recommendations will be available when you [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md).
 
-Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing.
+Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing information.
 
 Recommendations that are provided by the MCSB that aren't part of Windows and Linux compute security baselines, will continue to be part of free foundational CSPM.
 
@@ -226,7 +226,7 @@ Once you have completed the necessary steps to install the Azure Policy guest co
 
 ### Changes to recommendations
 
-With the deprecation of the MMA, the following MMA based recommendations are set to be deprecated. 
+With the deprecation of the MMA, the following MMA based recommendations are set to be deprecated:
 
 - [Machines should be configured securely](recommendations-reference-compute.md#machines-should-be-configured-securelyhttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkeyc476dc48-8110-4139-91af-c8d940896b98)
 - [Auto provisioning of the Log Analytics agent should be enabled on subscriptions](recommendations-reference-data.md#auto-provisioning-of-the-log-analytics-agent-should-be-enabled-on-subscriptionshttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkeyaf849052-4299-0692-acc0-bffcbe9e440c)
@@ -250,7 +250,9 @@ Some of the baseline configuration rules powered by the Azure Policy guest confi
 
 ### Query recommendations
 
-With the retirement of the MMA Defender for Cloud no longer queries recommendations through the Log Analytic workspace information. Instead it now uses ARG for API and portal to query recommendations. Here are 2 sample queries you can use:
+With the retirement of the MMA, Defender for Cloud no longer queries recommendations through the Log Analytic workspace information. Instead, Defender for Cloud now uses Azure Resource Graph for API, and portal queries, to query recommendation information. 
+
+Here are 2 sample queries you can use:
 
 - **Query all unhealthy rules for a specific resource**
 
