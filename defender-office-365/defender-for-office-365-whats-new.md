@@ -39,6 +39,10 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Identity](/defender-for-identity/whats-new)
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
+## August 2024
+
+- [Use the built-in Report button on legacy Outlook for Windows](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): Use the built-in Report button in legacy Outlook for Windows client to report messages as phish, junk, and not junk.
+
 ## July 2024
 
 - **Tenant Allow/Block List in Microsoft 365 GCC, GCC High, DoD, and Office 365 operated by 21Vianet environments**: The [Tenant Allow/Block List](tenant-allow-block-list-about.md) is now available these environments. They are on parity with the WW commercial experiences.
@@ -160,7 +164,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - The new Microsoft Defender XDR role-based access control (RBAC) model, with support for Microsoft Defender for Office, is now available in public preview. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
-- [Use the built-in Report button in Outlook on the web](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): Use the built-in Report button in Outlook on the web to report messages as phish, junk, and not junk.
+- [Use the built-in Report button on Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): Use the built-in Report button in Outlook on the web and new Outlook for Windows client to report messages as phish, junk, and not junk.
 
 ## October 2022
 
