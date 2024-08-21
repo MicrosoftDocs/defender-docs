@@ -1,5 +1,5 @@
 ---
-title: Connect ServiceNow to Defender for Cloud
+title: Connect ServiceNow's ITSM module to Defender for Cloud
 description: Learn how to connect ServiceNow with Microsoft Defender for Cloud to protect Azure, hybrid, and multicloud machines.
 author: dcurwin
 ms.author: dacurwin
@@ -9,9 +9,9 @@ ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to connect my ServiceNow account with Microsoft Defender for Cloud so that I can protect my Azure, hybrid, and multicloud machines.
 ---
 
-# Connect ServiceNow to Defender for Cloud
+# Connect ServiceNow ITSM to Defender for Cloud
 
-Microsoft Defender for Cloud's integration with ServiceNow allows customers to connect their Defender for Cloud accounts to ServiceNow. ServiceNow is a powerful workflow automation and enterprise solution that helps organizations streamline and automate routine tasks, improving operational efficiencies and increasing productivity. By integrating ServiceNow with Defender for Cloud, customers can prioritize the remediation of recommendations that affect their business. This integration allows you to create and view ServiceNow tickets linked to recommendations directly from Defender for Cloud, which facilitates efficient incident management.
+Microsoft Defender for Cloud's integration with ServiceNow's IT Service Management (ITSM) module, allows customers to connect their Defender for Cloud accounts to ServiceNow. ServiceNow is a powerful workflow automation and enterprise solution that helps organizations streamline and automate routine tasks, improving operational efficiencies and increasing productivity. By integrating ServiceNow with Defender for Cloud, customers can prioritize the remediation of recommendations that affect their business. This integration allows you to create and view ServiceNow tickets linked to recommendations directly from Defender for Cloud, which facilitates efficient incident management.
 
 ## Prerequisites
 
