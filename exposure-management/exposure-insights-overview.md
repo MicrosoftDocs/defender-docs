@@ -1,12 +1,12 @@
 ---
 title: Overview of exposure insights and secure score in Microsoft Security Exposure Management
 description: Learn how to get exposure insights into your corporate attack surface with Microsoft Security Exposure Management.
-ms.author: v-mjosephy
+ms.author: dlanger
 author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 03/11/2024
+ms.date: 08/20/2024
 ---
 
 # Overview - Exposure insights
@@ -164,10 +164,7 @@ Events measure the score drop or worsening in the metric status. Events include:
 
 - **Metric score drop events**: These events are issued with there's a decrease of at least 2% in metric score (exposure grew by 2%) since yesterday.
 - **Initiative score drop events**: These events are issued when there's a decrease of at least 2% in initiative score since yesterday.
-
-
-On the **Events** page for an initiative, you can view and filter events.
-
+- **New Initiave event**: These events are issued when a new inititave is available in MSEM.
 
 ## Next steps
 

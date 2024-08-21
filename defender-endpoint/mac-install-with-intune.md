@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 08/01/2024
+ms.date: 08/20/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
@@ -97,6 +97,9 @@ This profile is needed for Big Sur (11) or later. It is ignored on older version
 As part of the Endpoint Detection and Response capabilities, Microsoft Defender for Endpoint on macOS inspects socket traffic and reports this information to the Microsoft 365 Defender portal. The following policy allows the network extension to perform this functionality.
 
 Download [netfilter.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/netfilter.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
+
+> [!IMPORTANT]
+> Only one `.mobileconfig` (plist) for Network Filter is supported.  Adding multiple Network Filters leads to network connectivity issues on Mac. This issue is not specific to Defender for Endpoint on macOS.
 
 To configure your network filter:
 
