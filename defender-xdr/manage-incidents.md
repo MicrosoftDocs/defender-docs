@@ -189,9 +189,9 @@ To generate the PDF, perform the following steps:
 
    :::image type="content" source="/defender/media/incidents-queue/export-prepare-small.png" alt-text="Screenshot highlighting export message and status before download." lightbox="/defender/media/incidents-queue/export-prepare.png":::
 
-1. Another dialog box appears indicating that the PDF is ready. Select **Download** from the dialog box to save the PDF to your device.
+1. Another dialog box appears indicating that the PDF is ready. Select **Download** from the dialog box to save the PDF to your device. The status message below the incident title also updates to indicate that the download is available.
 
-   :::image type="content" source="/defender/media/incidents-queue/export-incident-download-small.png" alt-text="Screenshot highlighting export message and status when download is available." lightbox="/defender/media/incidents-queue/export-incident-download.png":::
+   :::image type="content" source="/defender/media/incidents-queue/export-download-small.png" alt-text="Screenshot highlighting export message and status when download is available." lightbox="/defender/media/incidents-queue/export-download.png":::
 
 The report is cached for a couple of minutes. The system provides the previously generated PDF if you try to export the same incident again within a short time frame. To generate a newer version of the PDF, wait for a few minutes for the cache to expire.
 
