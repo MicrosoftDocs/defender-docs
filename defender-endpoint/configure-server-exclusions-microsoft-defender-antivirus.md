@@ -29,7 +29,7 @@ search.appverid: met150
 
 **Platforms**
 
-- Windows
+- Windows Server
 
 This article describes types of exclusions that you don't have to define for Microsoft Defender Antivirus: 
 
