@@ -184,64 +184,71 @@ After you disable the file events collection:
 
 ## Baseline experience
 
-**Version 1:**
+When you enable Defender for Cloud on an Azure subscription, the [Microsoft cloud security benchmark (MCSB)](/security/benchmark/azure/introduction), including compute security baselines that assess machine OS compliance, is enabled as a default compliance standard. Free foundational cloud security posture management (CSPM) in Defender for Cloud makes security recommendations based on the MCSB.
 
-When you enable Microsoft Defender for Cloud on your subscription, you get the Microsoft Cloud Security Benchmark (MCSB) and compute security baselines based on both the MCSB and the CIS Microsoft Azure Foundations Benchmark automatically with the included Foundational CSPM plan. Defender for Cloud gathers information from your VMs to assess them using MMA and compares the collected information against these benchmarks. Recommendations are then generated based on the comparison.
+Machine information is collected for assessment using the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA). The MMA is set to be deprecated in November 2024, and the following changes will occur:
 
-With the deprecation of the MMA, the information will now be collected from your VMs using Guest Configuration. OS recommendations for Windows and Linux machines based on compute security baselines will no longer be part of the Foundational CSPM plan and will require you to [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md). 
+The following policies are enabled with Azure Policy guest configuration:
+- "Windows machines should meet requirements of the Azure compute security baseline"
+- "Linux machines should meet requirements for the Azure compute security baseline"
 
-Other recommendations from the MCSB, which are not specific to Windows and Linux compute security baselines, will still be part of the free foundational CSPM.
+    > [!NOTE]
+    > If you remove these policies you won't be able to access the benefits of the Azure Policy guest configuration extension.
 
-Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing.
-
-**Version 2:** 
-
-When you enable Defender for Cloud on your Azure subscription, the Defender Foundational CSPM plan is enabled by default. With the Foundational CSPM plan, the [Microsoft cloud security benchmark (MCSB)](/security/benchmark/azure/introduction) which includes the compute security baselines, which uses both the MCSB and the CIS Microsoft Azure Foundations Benchmark, automatically assess machine OS compliance. This process relies on MMA to gather information from your VMs to generate recommendations based on the benchmarks to harden and correct misconfigurations within your environment. 
-
-With the deprecation of the MMA, the baseline experience will only be powered by the Guest Configuration experience and will require you to [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md), as of September, to gain access to the baseline features.
-
-Recommendations provided by the MCSB that aren't part of Windows and Linux compute security baselines continue to be part of free foundational CSPM.
+OS recommendations based on compute security baselines will no longer be included in Defender for Cloud foundational CSPM. These recommendations will be available when you [enable the Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
 
 Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing.
 
-### Install Guest Configuration
+Recommendations that are provided by the MCSB that aren't part of Windows and Linux compute security baselines, will continue to be part of free foundational CSPM.
 
-In order to continue receiving the baseline experience, you need to enable the Defender for Servers Plan 2 and install the Guest Configuration. This will ensure that you continue to receive the same recommendations and hardening guidance that you have been receiving through the baseline experience.
+### Install Azure Policy guest configuration
+
+In order to continue receiving the baseline experience, you need to enable the Defender for Servers Plan 2 and install the Azure Policy guest configuration. This will ensure that you continue to receive the same recommendations and hardening guidance that you have been receiving through the baseline experience.
 
 Depending on your environment, you may need to take the following steps:
 
-- Review the [support matrix for the Guest Configuration](/azure/governance/machine-configuration/overview).
+- Review the [support matrix for the Azure Policy guest configuration](/azure/governance/machine-configuration/overview).
 
-- Install the Guest Configuration extension on your machines.
+- Install the Azure Policy guest configuration on your machines.
     - **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
-    
-    - **GCP and AWS**: The Guest Configuration feature is automatically installed when you [connect your GCP project](quickstart-onboard-gcp.md), or you [connect your AWS accounts](quickstart-onboard-aws.md) to Defender for Cloud.
-    
-    - **Other cloud and on-premises machines**: The Guest Configuration is enabled by default when you [connect your hybrid machines with Azure Arc-enabled servers](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm?branch=main).
-
-- (**Azure VMs only**) Assign managed Identity: In the Defender for Cloud portal, on the recommendations page, search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755), and [remediate the recommendation](implement-security-recommendations.md).
-
-- The following policies are enabled with Guest Configuration:
-    - Windows machines should meet requirements of the Azure compute security baseline
-    - Linux machines should meet requirements for the Azure compute security baseline  
 
     > [!NOTE]
-    > If you remove these policies you won't be able to access the benefits of the Guest Configuration extension.
+    > (**Azure VMs only**) You muss Assign managed Identity. 
+    > In the Defender for Cloud portal, on the recommendations page, search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755), and [remediate the recommendation](implement-security-recommendations.md).
+    
+    - **GCP and AWS**: Azure Policy guest configuration is automatically installed when you [connect your GCP project](quickstart-onboard-gcp.md), or you [connect your AWS accounts](quickstart-onboard-aws.md) with Azure Arc autoprovisioning enabled, to Defender for Cloud.
+    
+    - **On-premises machines**: The Azure Policy guest configuration is enabled by default when you [onboard on-premises machines as Azure Arc enabled machine or VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm?branch=main).
 
-Once you have completed the necessary steps to install the Guest Configuration extension, you will automatically gain access to the baseline features based on the Guest Configuration extension. This will ensure that you continue to receive the same recommendations and hardening guidance that you have been receiving through the baseline experience.
+Once you have completed the necessary steps to install the Azure Policy guest configuration, you will automatically gain access to the baseline features based on the Azure Policy guest configuration. This will ensure that you continue to receive the same recommendations and hardening guidance that you have been receiving through the baseline experience.
 
 ### Changes to recommendations
 
-With this change the following recommendations will be effected:
+With the deprecation of the MMA, the following MMA based recommendations are set to be deprecated. 
 
-| **Recommendation** | **Agent** | **Supported resources** | **Deprecation Date** | **Replacement recommendation** |
-|--|--|--|--|--|
-|[Machines should be configured securely](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/c476dc48-8110-4139-91af-c8d940896b98) | MMA | Azure & non-Azure (Windows & Linux)  | November 2024 |[Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/8c3d9ad0-3639-4686-9cd2-2b2ab2609bda) <br> <br>[Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/1f655fb7-63ca-4980-91a3-56dbc2b715c6) |
-|[Auto provisioning of the Log Analytics agent should be enabled on subscriptions](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/af849052-4299-0692-acc0-bffcbe9e440c) |MMA |Azure & non-Azure (Windows & Linux)  | Deprecated |[Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc) |
+- [Machines should be configured securely](recommendations-reference-compute.md#machines-should-be-configured-securelyhttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkeyc476dc48-8110-4139-91af-c8d940896b98)
+- [Auto provisioning of the Log Analytics agent should be enabled on subscriptions](recommendations-reference-data.md#auto-provisioning-of-the-log-analytics-agent-should-be-enabled-on-subscriptionshttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkeyaf849052-4299-0692-acc0-bffcbe9e440c)
 
-### Query recommendations with APIs
+The deprecated recommendations will be replaced by the following Azure Policy guest configuration base recommendations:
+- [Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md#guest-configuration-extension-should-be-installed-on-machineshttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkey6c99f570-2ce7-46bc-8175-cde013df43bc)
+- [Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md#vulnerabilities-in-security-configuration-on-your-linux-machines-should-be-remediated-powered-by-guest-configurationhttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkey1f655fb7-63ca-4980-91a3-56dbc2b715c6)
+- [Guest Configuration extension should be installed on machines](recommendations-reference-compute.md#guest-configuration-extension-should-be-installed-on-machineshttpsportalazurecomblademicrosoft_azure_securityrecommendationsbladeassessmentkey6c99f570-2ce7-46bc-8175-cde013df43bc) |
 
-With the retirement of the MMA, the way APIs operate will be changing. APIs will now query [recommendation information through Azure Resource Graph](review-security-recommendations.md#review-recommendations-in-azure-resource-graph). The following are 2 sample queries you can use in Azure Resource Graph with either API or in the Azure Resource Graph portal:
+### Duplicate recommendations
+
+If a machine is running both the MMA and the Azure Policy guest configuration, you will see duplicate recommendations. The duplication of recommendations occurs because both methods are running at the same time and producing the same recommendations. These duplicates will affect your Compliance and Secure Score. 
+
+As a work around, you can disable the MMA recommendations Machines should be configured securely, and Auto provisioning of the Log Analytics agent should be enabled on subscriptions, by disabling them on the [built-in MCSB Defender for Cloud initiative](manage-mcsb.md#manage-recommendation-settings)
+
+You can also exempt the machines from the recommendations through the regulatory compliance dashboard. by selecting the recommendation and exempting the relevant machines.
+
+:::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/exempt-recommendation.png" alt-text=":::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/exempt-recommendation.png" alt-text="Screenshot of the regulatory compliance dashboard that shows where one of the MMA recommendations exist.":::":::
+
+Some of the baseline configuration rules powered by the Azure Policy guest configuration tool are more current and offer broader coverage. As a result, transition to Baselines feature power by Azure Policy guest configuration can affect your compliance status since they include checks that might not have been performed previously. 
+
+### Query recommendations
+
+With the retirement of the MMA Defender for Cloud no longer queries recommendations through the Log Analytic workspace information. Instead it now uses ARG for API and portal to query recommendations. Here are 2 sample queries you can use:
 
 - **Query all unhealthy rules for a specific resource**
 
@@ -266,15 +273,6 @@ With the retirement of the MMA, the way APIs operate will be changing. APIs will
     | extend status = tostring(properties.status.code) 
     | summarize count() by subAssessmentId, status
     ```
-### Compliance and Secure Score
-
-During the transition period between September 2024 to November 2024, you will see duplicate recommendations. The duplication occurs due to the baseline experience and the Log Analytics experience running at the same time and producing the same recommendations. These duplicates will affect your Compliance and Secure Score. 
-
-To remove the duplicate findings and view the Guest Configuration only, you need to [exempt the Log Analytics Baselines recommendation](exempt-resource.md) from your compliance standard. 
-
-We also recommend that you remove the deprecated recommendations when the replacement recommendation becomes available. To do that, [disable the recommendation in the built-in Defender for Cloud initiative](manage-mcsb.md#manage-recommendation-settings) in Azure Policy. 
-
-Some of the baseline configuration rules powered by the Guest Configuration tool are more current and offer broader coverage. As a result, transition to Baselines feature power by Guest Configuration can affect your compliance status since they include checks that might not have been performed previously. 
 
 ## Preparing Defender for SQL on Machines
 
