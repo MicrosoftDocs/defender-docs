@@ -216,9 +216,9 @@ That said, our recommendation would be to plan a move to using eBPF as the prima
 
 In cases where eBPF isn't supported:
 
-- Netlink Fallback: The system falls back to using the Netlink event provider. While Netlink continues to capture process events (e.g., exec, exit, fork, gid, tid), it does not support file system-related events (e.g., rename, unlink) or socket events.
+- Netlink Fallback: The system falls back to using the Netlink event provider. While Netlink continues to capture process events (for example, `exec`, `exit`, `fork`, `gid`, or `tid`), it doesn't support file system-related events (for example, `rename`, `unlink`) or socket events.
 
-- Impact: Your workloads will not be disrupted, but you may miss out on specific file and socket-related events that eBPF would otherwise capture.
+- Impact: Your workloads won't be disrupted, but you could miss out on specific file and socket-related events that eBPF would otherwise capture.
 
 **4. How Can I Manage Exclusions with the Updated Versions?**
 
