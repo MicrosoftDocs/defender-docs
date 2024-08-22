@@ -153,7 +153,7 @@ The following two sets of data help analyze potential issues and determine the m
 
 #### Troubleshooting performance issues
 
-If you see increased resource consumption by Microsoft Defender on your endpoints, it's important to identify the process/mount-point/files that are causing most of the CPU/Memory utilization. You can then apply the necessary exclusions. After applying possible AV exclusions, if wdavdaemon (parent process) is still consuming the resources, use the ebpf-statistics command to get the top system call count:
+If you see increased resource consumption by Microsoft Defender on your endpoints, it's important to identify the process/mount-point/files that are causing most of the CPU/Memory utilization. You can then apply the necessary exclusions. After applying possible antivirusexclusions, if `wdavdaemon` (parent process) is still consuming the resources, use the ebpf-statistics command to get the top system call count:
 
 ```Bash
 sudo mdatp diagnostic  ebpf-statistics
@@ -206,9 +206,9 @@ The extended Berkeley Packet Filter (eBPF) for Microsoft Defender for Endpoint o
 
 If you prefer to continue using AuditD:
 
-- Supported Versions: You can remain on Defender for Endpoint on Linux version 101.24072.0000, which will support AuditD for the duration of validity of the build which is ~9 months. This provides a sufficient transition period to plan your move to eBPF. Expiry date can be checked by running the command ‘mdatp health’ on the Linux server.
+- Supported Versions: You can remain on Defender for Endpoint on Linux version 101.24072.0000, which will support AuditD during validity of the build, which is approximately nine months. This provides a sufficient transition period to plan your move to eBPF. Expiry date can be checked by running the command `mdatp health` on the Linux server.
 
-- Long-Term Plan: While staying on the 101.24072.0000 build is an option, we recommend planning your transition to eBPF within this timeframe to ensure you benefit from the latest security and performance improvements and also get continued support.
+- Long-Term Plan: While staying on the `101.24072.0000` build is an option, we recommend planning your transition to eBPF within this timeframe to ensure you benefit from the latest security and performance improvements and also get continued support.
 
 That said, our recommendation would be to plan a move to leveraging eBPF as the primary event provider.
 
@@ -216,7 +216,7 @@ That said, our recommendation would be to plan a move to leveraging eBPF as the 
 
 In cases where eBPF is not supported:
 
-- Netlink Fallback: The system will fall back to using the ‘Netlink’ event provider. While Netlink will continue to capture process events (e.g., exec, exit, fork, gid, tid), it does not support file system-related events (e.g., rename, unlink) or socket events.
+- Netlink Fallback: The system will fall back to using the Netlink event provider. While Netlink will continue to capture process events (e.g., exec, exit, fork, gid, tid), it does not support file system-related events (e.g., rename, unlink) or socket events.
 
 - Impact: Your workloads will not be disrupted, but you may miss out on specific file and socket-related events that eBPF would otherwise capture.
 
