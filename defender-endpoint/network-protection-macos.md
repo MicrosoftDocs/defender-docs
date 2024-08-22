@@ -3,7 +3,7 @@ title: Use network protection to help prevent macOS connections to bad sites
 description: Protect your network by preventing macOS users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 08/01/2024
+ms.date: 08/22/2024
 audience: ITPro
 author: siosulli
 ms.author: siosulli
@@ -38,6 +38,7 @@ search.appverid: met150
 - Licensing: Microsoft Defender XDR for Endpoint Plan 1 or Microsoft Defender XDR for Endpoint Plan 2 (can be trial) or Microsoft Defender for Business.
 
 - Onboarded Machines:
+
   - macOS version: Big Sur (11) or later.
     
   - Product version 101.94.13 or later.
@@ -46,9 +47,9 @@ search.appverid: met150
 
 - Microsoft Edge for macOS browser*
 
-
 > [!NOTE]
 > Microsoft Edge for macOS does not currently support web content filtering, custom indicators, or other enterprise features. However, network protection will provide this protection to Microsoft Edge for macOS if network protection is enabled.
+
 ## Overview
 
 Microsoft Network protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that might host:
