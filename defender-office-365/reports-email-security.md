@@ -19,7 +19,7 @@ description: "Admins can learn how to find and use the email security reports th
 ms.custom: 
 - seo-marvel-apr2020
 ms.service: defender-office-365
-ms.date: 05/29/2024
+ms.date: 08/12/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -830,8 +830,8 @@ In the **View data by System override** and **Chart breakdown by Reason** view, 
 - **Exclusive setting (Outlook)**
 - **IP Allow**
 - **On-premises skip**
-- **Organization allowed domains**
-- **Organization allowed senders**
+- **Organization allowed domains**: The domain is specified in the [allowed domains list in an anti-spam policy](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
+- **Organization allowed senders**: The sender is specified in the [allowed senders list in an anti-spam policy](anti-spam-protection-about.md#allow-and-block-lists-in-anti-spam-policies).
 - **Phishing simulation**: For more information, see [Configure the delivery of third-party phishing simulations to users and unfiltered messages to SecOps mailboxes](advanced-delivery-policy-configure.md).
 - **Sender Domain List**
 - **TABL - Both URL and file allowed**
@@ -1009,7 +1009,7 @@ The **URL protection report** is available only in Microsoft Defender for Office
 > [!IMPORTANT]
 > In order for the **User reported messages** report to work correctly, **audit logging must be turned on** in your Microsoft 365 organization (it's on by default). For more information, see [Turn auditing on or off](/purview/audit-log-enable-disable).
 
-The **User reported messages** report shows information about email messages that users have reported as junk, phishing attempts, or good mail by using the [built-in Report button in Outlook on the web](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook-on-the-web) or the [Microsoft Report Message or Report Phishing add-ins](submissions-outlook-report-messages.md#use-the-report-message-and-report-phishing-add-ins-in-outlook).
+The **User reported messages** report shows information about email messages that users have reported as junk, phishing attempts, or good mail by using the [built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook) or the [Microsoft Report Message or Report Phishing add-ins](submissions-outlook-report-messages.md#use-the-report-message-and-report-phishing-add-ins-in-outlook).
 
 On the **Email & collaboration reports** page at <https://security.microsoft.com/emailandcollabreport>, find **User reported messages**, and then select **View details**. Or, to go directly to the report, use <https://security.microsoft.com/reports/userSubmissionReport>.
 

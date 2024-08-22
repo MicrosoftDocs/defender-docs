@@ -6,7 +6,7 @@ ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 08/07/2024
+ms.date: 08/12/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -1100,11 +1100,26 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 #### Known issues
 
-- When this update is installed, the device needs the jump package 4.18.2001.10 to be able to update to the latest platform version.
+- When this update is installed, the device needs the jump package `4.18.2001.10` to be able to update to the latest platform version.
 
 ## Previous DISM updates (no longer supported)
 
 The versions listed in this section are no longer supported. To view current versions, see [Updates for Deployment Image Servicing and Management (DISM)](microsoft-defender-antivirus-updates.md#updates-for-deployment-image-servicing-and-management-dism).
+
+### 1.411.9.0
+
+- Defender package version: `1.411.9.0`
+- Security intelligence version: `1.411.9.0`
+- Engine version: `1.24040.1`
+- Platform version: `4.18.24040.4`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
 
 ### 20230809.1
 

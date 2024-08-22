@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 08/01/2024
+ms.date: 08/21/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
@@ -100,6 +100,9 @@ As part of the Endpoint Detection and Response capabilities, Microsoft Defender 
 
 Download [netfilter.mobileconfig](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/netfilter.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
+> [!IMPORTANT]
+> Only one `.mobileconfig` (plist) for Network Filter is supported.  Adding multiple Network Filters leads to network connectivity issues on Mac. This issue is not specific to Defender for Endpoint on macOS.
+
 To configure your network filter:
 
 1. Under **Configuration profiles**, select **Create Profile**.
@@ -141,15 +144,13 @@ To configure Full Disk Access:
 
 1. Under **Profile type**, select **Templates**.
 
-1. Under **Template name**, select **Custom**. Then select **Create**
+1. Under **Template name**, select **Custom**, and then select **Create**.
 
-1. Select **Create**.
-
-1. On the **Basics** tab, **Name** the profile. For example, `Background_Services-prod-macOS-Default-MDE`.
+1. On the **Basics** tab, **Name** the profile. For example, `FullDiskAccess-prod-macOS-Default-MDE`.
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `background_services.mobileconfig`.
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `FullDiskAccess-prod-macOS-Default-MDE`.
 
 1. Choose a **Deployment channel** and then select **Next**.
 

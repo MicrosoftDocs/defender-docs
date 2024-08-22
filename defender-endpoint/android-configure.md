@@ -61,36 +61,32 @@ Network protection in Microsoft Defender for endpoint is disabled by default. Ad
 
 1. In the Microsoft Intune admin center, navigate to Apps > App configuration policies. Create a new App configuration policy.
 
-    > [!div class="mx-imgBorder"]
-    > ![Image of how to create a policy.](media/android-mem.png)
-
+> [!div class="mx-imgBorder"]
 1. Provide a name and description to uniquely identify the policy. Select **'Android Enterprise'** as the platform and **'Personally-owned work profile only'** as the profile type and **'Microsoft Defender'** as the Targeted app.
 
-    > [!div class="mx-imgBorder"]
-    > ![Image of policy details.](media/appconfigdetails.png)
-
+      > [!div class="mx-imgBorder"]
+   > ![Screenshot of policy details.](media/appconfigdetails.png)
+   
 1. In Settings page, select **'Use configuration designer'** and add **'Enable Network Protection in Microsoft Defender'** as the key and value as **'1'** to enable Network Protection. (Network protection is disabled by default)
 
-    > [!div class="mx-imgBorder"]
-    > ![Image of how to select enable network protection policy](media/selectnp.png)
-
-    > [!div class="mx-imgBorder"]
-    > ![Image of add configuration policy.](media/npvalue.png)
-
+      > [!div class="mx-imgBorder"]
+   > ![Screenshot of how to select enable network protection policy](media/selectnp.png)
+   
+      > [!div class="mx-imgBorder"]
+   > ![Screenshot of add configuration policy.](media/npvalue.png)
+   
 1. If your organization uses root CAs that are private, you must establish explicit trust between Intune (MDM solution) and user devices. Establishing trust helps prevent Defender from flagging root CAs as rogue certificates.
 
     To establish trust for the root CAs, use **'Trusted CA certificate list for Network Protection'** as the key. In the value, add the **'comma separated list of certificate thumbprints (SHA 1)'**.
 
     **Example of Thumbprint format to add**: `50 30 06 09 1d 97 d4 f5 ae 39 f7 cb e7 92 7d 7d 65 2d 34 31, 503006091d97d4f5ae39f7cbe7927d7d652d3431`
 
-   > [!IMPORTANT]
+      > [!IMPORTANT]
    > Certificate SHA-1 Thumbprint characters should be with either white space separated, or non separated.
    >
    > This format is invalid: `50:30:06:09:1d:97:d4:f5:ae:39:f7:cb:e7:92:7d:7d:65:2d:34:31`
 
-   Any other separation characters are invalid.
-
-   > ![Image of trusted CA certificate.](media/trustca.png)
+      Any other separation characters are invalid.
 
 1. For other configurations related to Network protection, add the following keys and appropriate corresponding value.
 
@@ -119,26 +115,6 @@ Network protection in Microsoft Defender for endpoint is disabled by default. Ad
 
 > [!NOTE]
 > Users need to enable location permission (which is an optional permission); this enables Defender for Endpoint to scan their networks and alert them when there are WIFI-related threats. If the location permission is denied by the user, Defender for Endpoint will only be able to provide limited protection against network threats and will only protect the users from rogue certificates.
-
-## Configure Low Touch Onboarding
-
-Admins can configure Microsoft Defender for Endpoint in low touch onboarding mode. In this scenario, administrators creates a deployment profile and the user is simply required to provide a reduced set of permissions to complete onboarding. 
-
-Android low touch onboarding is disabled by default. Admins can enable it through app configuration policies on Intune by following these steps:
-
-1.	Push the Defender app to target user group by following these [steps](android-intune.md#add-microsoft-defender-for-endpoint-on-android-as-a-managed-google-play-app).
-2.	Push a VPN profile to the user's device by following the instructions [here](android-intune.md#auto-setup-of-always-on-vpn).
-3.	In Apps > Application configuration policies, select Managed Devices.
-4.	Provide a name to uniquely identify the policy. Select 'Android Enterprise' as the Platform, the required Profile type and 'Microsoft Defender: Antivirus' as the targeted app. Click on Next.
-5.	Add runtime permissions. Select Location access (fine)(This permission is not supported for Android 13 and above), POST_NOTIFICATIONS and change the Permission state to 'Auto grant'.
-6.	Under configuration settings, select 'Use Configuration designer' and click on Add.
-7.	Select Low touch onboarding and User UPN. For User UPN, change the Value type to 'Variable' and Configuration value to 'User Principal Name' from the drop down Enable Low touch onboarding by changing the configuration value to 1.
-    >[!div class="mx-imgBorder"]
-    >![Image of low touch onboarding configuration policy.](media/low-touch-user-upn.png)
-
-8.	Assign the policy to the target user group.
-9.	Review and create the policy.
-
 ## Privacy Controls
 
 Following privacy controls are available for configuring the data that is sent by Defender for Endpoint from Android devices:
@@ -347,11 +323,11 @@ Use the following steps to configure the Device tags:
 5. Click Next and assign this policy to targeted devices and users.
 
 
-> [!NOTE] 
+> [!NOTE]
 > The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
-
 ## Related articles
 
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
+
 - [Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune](android-intune.md)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
