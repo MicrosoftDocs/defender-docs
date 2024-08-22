@@ -24,8 +24,6 @@ By default, access to services available in the Microsoft Defender portal are ma
 
 For example, create a custom role for Microsoft Defender for Endpoint to manage access to specific Defender for Endpoint data, or create a custom role for Microsoft Defender for Office to manage access to specific email and collaboration data.
 
-In each service, custom role names aren't connected to global roles in Microsoft Entra ID, even if similarly named. For example, a custom role named *Security Admin* in Microsoft Defender for Endpoint isn't connected to the global *Security Admin* role in Microsoft Entra ID.
-
 **Applies to:**
 
 - Microsoft Defender for Cloud
@@ -35,6 +33,8 @@ In each service, custom role names aren't connected to global roles in Microsoft
 - Microsoft Defender for IoT
 - Microsoft Defender for Office 365
 - Microsoft Defender XDR
+- Microsoft Security Exposure Management (preview)
+- Microsoft Sentinel
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 
@@ -50,16 +50,20 @@ Each Microsoft Defender service has its own custom role management settings, wit
 
   :::image type="content" source="./media/custom-roles/custom-roles-endpoint.png" alt-text="Screenshot of a Roles link for Defender for Endpoint.":::
 
+In each service, custom role names aren't connected to global roles in Microsoft Entra ID, even if similarly named. For example, a custom role named *Security Admin* in Microsoft Defender for Endpoint isn't connected to the global *Security Admin* role in Microsoft Entra ID.
+
 ## Reference of Defender portal service content
 
 For information about the permissions and roles for each Microsoft Defender XDR service, see the following articles:
 
-- [Microsoft Defender for Cloud user roles and permissions](/azure/defender-for-cloud/permissions)
-- [Configure access for Defender for Cloud Apps](/defender-cloud-apps/manage-admins)
-- [Create and manage roles in Defender for Endpoint](/defender-endpoint/user-roles)
-- [Roles and permissions in Defender for Identity](/defender-for-identity/role-groups)
-- [Microsoft Defender for IoT user management](/azure/defender-for-iot/organizations/manage-users-overview)
-- [Microsoft Defender for Office 365 permissions](/defender-office-365/mdo-portal-permissions)
-- [Roles and permissions in Microsoft Sentinel](/azure/sentinel/roles)
+- [Microsoft **Defender for Cloud** user roles and permissions](/azure/defender-for-cloud/permissions)
+- [Configure access for **Defender for Cloud Apps**](/defender-cloud-apps/manage-admins)
+- [Create and manage roles in **Defender for Endpoint**](/defender-endpoint/user-roles)
+- [Roles and permissions in **Defender for Identity**](/defender-for-identity/role-groups)
+- [Microsoft **Defender for IoT** user management](/azure/defender-for-iot/organizations/manage-users-overview)
+- [Microsoft **Defender for Office 365** permissions](/defender-office-365/mdo-portal-permissions)
+- [Manage access to **Microsoft Defender XDR**](m365d-permissions.md)
+- [**Microsoft Security Exposure Management** permissions](security-exposure-management/prerequisites#permissions)
+- [Roles and permissions in **Microsoft Sentinel**](/azure/sentinel/roles)
 
 Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
