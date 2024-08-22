@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 08/09/2024
+ms.date: 08/22/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: defender-office-365
@@ -23,7 +23,7 @@ appliesto:
 
 # Privacy in Microsoft Defender for Office 365
 
-Microsoft Defender for Office 365 helps protect organizations against threats in email messages, links (URLs), file attachment, and collaboration tools. For more information about Defender for Office 365, see [Microsoft Defender for Office 365 overview](https://learn.microsoft.com/defender-office-365/mdo-about).
+Microsoft Defender for Office 365 helps protect organizations against threats in email messages, links (URLs), file attachment, and collaboration tools. For more information about Defender for Office 365, see [Microsoft Defender for Office 365 overview](mdo-about.md).
 
 ## What do we collect?
 
@@ -72,9 +72,9 @@ Defender for Office 365 operates in the Microsoft Entra datacenters. For the fol
 - South Korea
 - Sweden
 - Switzerland
-- The United Arab Emirates
-- The United Kingdom
-- The United States
+- United Arab Emirates
+- United Kingdom
+- United States
 
 In Exchange Online Protection (EOP), the following data is stored at rest in the local region geo:
 
