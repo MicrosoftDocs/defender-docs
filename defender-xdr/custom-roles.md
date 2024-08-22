@@ -28,7 +28,6 @@ Microsoft recommends that you use roles with the fewest permissions. This helps 
 
 **Applies to:**
 
-- Microsoft Defender for Cloud
 - Microsoft Defender for Cloud Apps
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Identity
@@ -66,12 +65,13 @@ For Defender for Endpoint and Defender for Office, use custom roles as follows:
 
 For other service information, see:
 
-- [Roles and permissions in Defender for Cloud](/azure/defender-for-cloud/permissions)
 - [Configure access for Defender for Cloud Apps](/defender-cloud-apps/manage-admins)
 - [Roles and permissions in Defender for Identity](/defender-for-identity/role-groups)
 
 ## Related content
 
-- [RBAC roles](/defender-office-365/migrate-to-defender-for-office-365-onboard#rbac-roles)
-- [Common questions about Defender for Cloud permissions](/azure/defender-for-cloud/faq-permissions)
-- [Create and manage roles for role-based access control in Defender for Endpoint](/defender-endpoint/user-roles)
+For more information about other Microsoft Defender portal services, see:
+
+- [Microsoft Defender for Cloud user roles and permissions](/azure/defender-for-cloud/permissions)
+- [Roles and permissions in Microsoft Sentinel](/azure/sentinel/roles)
+- [Microsoft Defender for IoT user management](/azure/defender-for-iot/organizations/manage-users-overview)
