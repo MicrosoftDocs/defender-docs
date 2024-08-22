@@ -220,7 +220,7 @@ Depending on your environment, you may need to take the following steps:
     - (**Azure VMs only**) You must enable the Guest Configuration agent (preview).
         - To enable the Guest Configuration agent:
             1. Sign in to the [Azure portal](https://portal.azure.com/).
-            1. Navigate to **Environment settings** > **<Relevant subscription>** > **Settings & Monitoring**.
+            1. Navigate to **Environment settings** > **Your subscription** > **Settings & Monitoring**.
             1. Under **Settings**, select **Guest Configuration**.
                :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/setting-and-monitoring.png" alt-text="Screenshot that shows the location of the settings and monitoring button." lightbox="media/prepare-deprecation-log-analytics-mma-agent/setting-and-monitoring.png":::
             1. Toggle the Guest Configuration agent (preview) to **On**.
