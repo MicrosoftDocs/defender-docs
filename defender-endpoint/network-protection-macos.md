@@ -26,29 +26,19 @@ search.appverid: met150
 **Applies to:**
 
 - [Microsoft Defender XDR](/defender-xdr)
-
 - [Microsoft Defender XDR for Endpoint Plan 2](microsoft-defender-endpoint.md)
-
 - Microsoft Defender for Business
-
 - [Microsoft Defender XDR for Endpoint Plan 1](microsoft-defender-endpoint.md)
 
 ### Prerequisites
 
 - Licensing: Microsoft Defender XDR for Endpoint Plan 1 or Microsoft Defender XDR for Endpoint Plan 2 (can be trial) or Microsoft Defender for Business.
-
-- Onboarded Machines:
-
-  - macOS version: Big Sur (11) or later.
-    
-  - Product version 101.94.13 or later.
-    
-- 3rd party browsers such as Brave, Chrome, Opera, and Safari.
-
-- Microsoft Edge for macOS browser*
+- Onboarded Machines: macOS version: Big Sur (11) or later, with product version 101.94.13 or later.
+- Non-Microsoft web browsers, such as Brave, Chrome, Opera, and Safari
+- Microsoft Edge for macOS browser
 
 > [!NOTE]
-> Microsoft Edge for macOS does not currently support web content filtering, custom indicators, or other enterprise features. However, network protection will provide this protection to Microsoft Edge for macOS if network protection is enabled.
+> Microsoft Edge for macOS does not currently support web content filtering, custom indicators, or other enterprise features. However, network protection provides this protection to Microsoft Edge for macOS if network protection is enabled.
 
 ## Overview
 
