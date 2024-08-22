@@ -231,7 +231,7 @@ Following are some common reasons for placing exclusions for auditd:
  
 •	Noisy logs, where audit logs are using up the disk space. Customer placed the exclusions for the noisy processes in order to reduce the log size.
 
-**While with eBPF, the first two use cases are the candidates for the migration. Logs are no longer an issue with eBPF. For the first two uses case, you can chose from the following options -**
+**While with eBPF, the first two use cases are the candidates for the migration. Logs are no longer an issue with eBPF. For the first two uses case, you can chose from the following options:**
 
 •	Contact support: Reach out to Microsoft to apply the exclusions from the backend.
 
