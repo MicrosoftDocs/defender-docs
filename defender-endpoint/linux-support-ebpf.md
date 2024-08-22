@@ -29,13 +29,13 @@ ms.date: 08/22/2024
 - [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - 
 > [!NOTE]
->Starting with MDE Linux version 101.2408.0000, Auditd will not longer be supported as a supplementary event provider. For more details, refer to the FAQs at the end.
+>Starting with MDE Linux version 101.2408.0000, AutitD will not longer be supported as a supplementary event provider. For more information, see the FAQs at the end.
 
-The extended Berkeley Packet Filter (eBPF) for Microsoft Defender for Endpoint on Linux provides supplementary event data for Linux operating systems. eBPF helps address several classes of issues seen with the auditd event provider and is beneficial in the areas of performance and system stability.
+The extended Berkeley Packet Filter (eBPF) for Microsoft Defender for Endpoint on Linux provides supplementary event data for Linux operating systems. eBPF helps address several classes of issues seen with the AutitD event provider and is beneficial in the areas of performance and system stability.
 
 Key benefits include:
 
-- Reduced system-wide auditd-related log noise
+- Reduced system-wide AutitD-related log noise
 - Optimized system-wide event rules otherwise causing conflict between applications
 - Reduced overhead for file event (file read/open) monitoring
 - Improved event rate throughput and reduced memory footprint
@@ -43,7 +43,7 @@ Key benefits include:
 
 ## How eBPF works
 
-With eBPF, events previously obtained from the auditd event provider now flow from the eBPF sensor. This helps with system stability, improves CPU and memory utilization, and reduces disk usage. eBPF helps reduce the possibility of conflicts between applications as no custom rules are required. Data related to eBPF gets logged into the /var/log/microsoft/mdatp/microsoft_defender_core.log file.
+With eBPF, events previously obtained from the AutitD event provider now flow from the eBPF sensor. This helps with system stability, improves CPU and memory utilization, and reduces disk usage. eBPF helps reduce the possibility of conflicts between applications as no custom rules are required. Data related to eBPF gets logged into the /var/log/microsoft/mdatp/microsoft_defender_core.log file.
 
 In addition, the eBPF sensor uses capabilities of the Linux kernel without requiring the use of a kernel module that helps increase system stability.
 
@@ -92,7 +92,7 @@ You can also update the mdatp_managed.json file:
 Refer to the link for detailed sample json file - [Set preferences for Microsoft Defender for Endpoint on Linux.](linux-preferences.md)
 
 > [!IMPORTANT]
-> If you disable eBPF or in the event eBPF is not supported on any specific kernel, supplementary event provider switches to ‘Netlink’. All process operations will continue to flow seamlessly, but you may miss out on specific file and socket-related events that eBPF would otherwise capture.
+> If you disable eBPF or in the event eBPF is not supported on any specific kernel, supplementary event provider switches to Netlink. All process operations will continue to flow seamlessly, but you may miss out on specific file and socket-related events that eBPF would otherwise capture.
 
 You can also check the status of eBPF (enabled/disabled) on your linux endpoints using advanced hunting in the Microsoft Defender Portal. Steps are as follows:
 
@@ -106,9 +106,9 @@ You can also check the status of eBPF (enabled/disabled) on your linux endpoints
 
 5. In the output, in the **Additional fields** column, select **Show more**, and then look for **EBPF STATUS: true**.
 
-## Immutable mode of Auditd
+## Immutable mode of AutitD
 
-For customers using auditd in immutable mode, a reboot is required post enablement of eBPF in order to clear the audit rules added by Microsoft Defender for Endpoint. This requirement is a limitation in immutable mode of auditd, which freezes the rules file and prohibits editing/overwriting. This issue is resolved with the reboot.
+For customers using AutitD in immutable mode, a reboot is required post enablement of eBPF in order to clear the audit rules added by Microsoft Defender for Endpoint. This requirement is a limitation in immutable mode of AutitD, which freezes the rules file and prohibits editing/overwriting. This issue is resolved with the reboot.
 
 Post reboot, run the following command to check if audit rules were cleared:
 
@@ -135,12 +135,12 @@ uname -a
 1. Enabling eBPF on RHEL 8.1 version with SAP might result in kernel panic. To mitigate this issue, you can take one of the following steps:
 
     - Use a distro version higher than RHEL 8.1.
-    - Switch to auditd mode if you need to use RHEL 8.1 version.
+    - Switch to AutitD mode if you need to use RHEL 8.1 version.
 
 2. Using Oracle Linux 8.8 with kernel version **5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64** might result in kernel panic. To mitigate this issue, you can take one of the following steps:
 
     - Use a kernel version higher or lower than **5.15.0-0.30.20.el8uek.x86_64, 5.15.0-0.30.20.1.el8uek.x86_64** on Oracle Linux 8.8 if you want to use eBPF as supplementary subsystem provider. The minimum kernel version for Oracle Linux is RHCK 3.10.0 and Oracle Linux UEK is 5.4.
-    - Switch to auditd mode if you need to use the same kernel version
+    - Switch to AutitD mode if you need to use the same kernel version
 
 ```bash
 sudo mdatp config  ebpf-supplementary-event-provider  --value disabled
@@ -187,15 +187,15 @@ Top syscall ids:
 
 In the previous output, you can see that stress-ng is the top process generating large number of events and might result into performance issues. Most likely stress-ng is generating the system call with ID 82. You can create a ticket with Microsoft to get this process excluded. In future as part of upcoming enhancements, you have more control to apply such exclusions at your end.
 
-Exclusions applied to auditd can't be migrated or copied to eBPF. Common concerns such as noisy logs, kernel panic, noisy syscalls are already taken care of by eBPF internally. In case you want to add any further exclusions, then reach out to Microsoft to get the necessary exclusions applied.
+Exclusions applied to AutitD can't be migrated or copied to eBPF. Common concerns such as noisy logs, kernel panic, noisy syscalls are already taken care of by eBPF internally. In case you want to add any further exclusions, then reach out to Microsoft to get the necessary exclusions applied.
 
 ## FAQs - Transition to eBPF 
 
 **1. Why should you consider moving to eBPF?**
     
-The extended Berkeley Packet Filter (eBPF) for Microsoft Defender for Endpoint on Linux serves as an efficient alternative to auditd and addresses various challenges associated with the auditd event provider while providing significant advantages in terms of performance and system stability. Some of the key benefits include -
+The extended Berkeley Packet Filter (eBPF) for Microsoft Defender for Endpoint on Linux serves as an efficient alternative to AutitD and addresses various challenges associated with the AutitD event provider while providing significant advantages in terms of performance and system stability. Some of the key benefits include -
 
-•	Performance: eBPF significantly improves performance by reducing the overhead on system resources compared to Auditd. 
+•	Performance: eBPF significantly improves performance by reducing the overhead on system resources compared to AutitD. 
 
 •	Resource Efficiency: eBPF uses fewer resources, which helps maintain system stability even under heavy load conditions.
 
@@ -203,11 +203,11 @@ The extended Berkeley Packet Filter (eBPF) for Microsoft Defender for Endpoint o
 
 •	Modern Technology: eBPF represents a modern, forward-looking technology that aligns with future Linux kernel developments, ensuring better long-term support.
 
-**2. How Can I Continue to Use Auditd?**
+**2. How Can I Continue to Use AutitD?**
 
-If you prefer to continue using Auditd:
+If you prefer to continue using AutitD:
 
-•	Supported Versions: You can remain on MDE Linux version 101.24072.0000, which will support Auditd for the duration of validity of the build which is ~9 months. This provides a sufficient transition period to plan your move to eBPF. Expiry date can be checked by running the command ‘mdatp health’ on the Linux server.
+•	Supported Versions: You can remain on MDE Linux version 101.24072.0000, which will support AutitD for the duration of validity of the build which is ~9 months. This provides a sufficient transition period to plan your move to eBPF. Expiry date can be checked by running the command ‘mdatp health’ on the Linux server.
 
 •	Long-Term Plan: While staying on the 101.24072.0000 build is an option, we recommend planning your transition to eBPF within this timeframe to ensure you benefit from the latest security and performance improvements and also get continued support.
 
@@ -217,13 +217,13 @@ That said, our recommendation would be to plan a move to leveraging eBPF as the 
 
 In cases where eBPF is not supported:
 
-•	Netlink Fallback: The system will fall back to using the ‘netlink’ event provider. While netlink will continue to capture process events (e.g., exec, exit, fork, gid, tid), it does not support file system-related events (e.g., rename, unlink) or socket events.
+- Netlink Fallback: The system will fall back to using the ‘Netlink’ event provider. While Netlink will continue to capture process events (e.g., exec, exit, fork, gid, tid), it does not support file system-related events (e.g., rename, unlink) or socket events.
 
-•	Impact: Your workloads will not be disrupted, but you may miss out on specific file and socket-related events that eBPF would otherwise capture.
+- Impact: Your workloads will not be disrupted, but you may miss out on specific file and socket-related events that eBPF would otherwise capture.
 
 **4. How Can I Manage Exclusions with the Updated Versions?**
 
-Following are some common reasons for placing exclusions for auditd:
+Following are some common reasons for placing exclusions for AutitD:
 
 •	Performance as some syscall or process is generating lot of noise
 
