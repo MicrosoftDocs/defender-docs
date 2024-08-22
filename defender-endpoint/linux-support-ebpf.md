@@ -68,7 +68,7 @@ The eBPF sensor for Microsoft Defender for Endpoint on Linux is supported on the
 
 ## Use eBPF
 
-The eBPF sensor is automatically enabled for all customers by default for agent versions "101.23082.0006" and later. Customers need to update to a supported version to experience the feature. When the eBPF sensor is enabled on an endpoint, Defender for Endpoint on Linux updates supplementary_events_subsystem to ebpf.
+The eBPF sensor is automatically enabled for all customers by default for agent versions `101.23082.0006` and later. Customers need to update to a supported version to experience the feature. When the eBPF sensor is enabled on an endpoint, Defender for Endpoint on Linux updates supplementary_events_subsystem to ebpf.
 
 :::image type="content" source="/defender/media/defender-endpoint/ebpf-subsystem-linux.png" alt-text="ebpf subsystem highlight in the mdatp health command" lightbox="/defender/media/defender-endpoint/ebpf-subsystem-linux.png":::
 
