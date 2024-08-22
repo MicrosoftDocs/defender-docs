@@ -210,13 +210,13 @@ If you prefer to continue using AuditD:
 
 - Long-Term Plan: While staying on the `101.24072.0000` build is an option, we recommend planning your transition to eBPF within this timeframe to ensure you benefit from the latest security and performance improvements and also get continued support.
 
-That said, our recommendation would be to plan a move to leveraging eBPF as the primary event provider.
+That said, our recommendation would be to plan a move to using eBPF as the primary event provider.
 
 **3. What Happens If eBPF Is Not Supported in Some Scenarios?**
 
-In cases where eBPF is not supported:
+In cases where eBPF isn't supported:
 
-- Netlink Fallback: The system will fall back to using the Netlink event provider. While Netlink will continue to capture process events (e.g., exec, exit, fork, gid, tid), it does not support file system-related events (e.g., rename, unlink) or socket events.
+- Netlink Fallback: The system falls back to using the Netlink event provider. While Netlink continues to capture process events (e.g., exec, exit, fork, gid, tid), it does not support file system-related events (e.g., rename, unlink) or socket events.
 
 - Impact: Your workloads will not be disrupted, but you may miss out on specific file and socket-related events that eBPF would otherwise capture.
 
