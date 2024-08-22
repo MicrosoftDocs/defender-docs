@@ -218,7 +218,7 @@ In cases where eBPF isn't supported:
 
 - Netlink Fallback: The system falls back to using the Netlink event provider. While Netlink continues to capture process events (for example, `exec`, `exit`, `fork`, `gid`, or `tid`), it doesn't support file system-related events (for example, `rename`, `unlink`) or socket events.
 
-- Impact: Your workloads won't be disrupted, but you could miss out on specific file and socket-related events that eBPF would otherwise capture.
+- Impact: Your workloads won't be disrupted, but you could miss specific file and socket-related events that eBPF would otherwise capture.
 
 **4. How Can I Manage Exclusions with the Updated Versions?**
 
@@ -238,7 +238,7 @@ Following are some common reasons for placing exclusions for AuditD:
 
 **5. What Should I Do in Case There Are Issues?**
 
-- Contact Support: If you encounter any issues during or after your transition to eBPF, please reach out to our support team for assistance. We are committed to ensuring a smooth transition and are available to help resolve any challenges you may face.
+- Contact Support: If you encounter any issues during or after your transition to eBPF, contact technical support for assistance. We're committed to ensuring a smooth transition and are available to help resolve any challenges you may face.
 
 - Support Channels: You can contact support via the Microsoft Defender portal. Additionally, our knowledge base and community forums are valuable resources for troubleshooting common issues.
 
