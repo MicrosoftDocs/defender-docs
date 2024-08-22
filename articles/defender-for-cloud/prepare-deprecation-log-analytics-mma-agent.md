@@ -217,7 +217,7 @@ Depending on your environment, you may need to take the following steps:
     - (**Azure VMs only**) You must Assign managed Identity. 
         - In the Defender for Cloud portal, on the recommendations page, search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755), and [remediate the recommendation](implement-security-recommendations.md).
     
-    - (**Azure VMs only**) You must enable the Guest Configuration agent (preview).
+    - (**Azure VMs only**) Optional: To autoprovision the Azure Policy guest configuration across your entire subscription, you can enable the Guest Configuration agent (preview).
         - To enable the Guest Configuration agent:
             1. Sign in to the [Azure portal](https://portal.azure.com/).
             1. Navigate to **Environment settings** > **Your subscription** > **Settings & Monitoring**.
