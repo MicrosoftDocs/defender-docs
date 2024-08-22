@@ -2,7 +2,7 @@
 title: Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 description: Get an overview of how to configure Microsoft Defender Antivirus in a remote desktop or non-persistent virtual desktop environment.
 ms.localizationpriority: medium
-ms.date: 03/06/2023
+ms.date: 08/22/2023
 ms.topic: conceptual
 author: siosulli
 ms.author: siosulli
@@ -233,19 +233,13 @@ This policy hides the entire Microsoft Defender Antivirus user interface from en
 
 ## Run the "Windows Defender Cache Maintenance" scheduled task
 
-Optimize the "Windows Defender Cache Maintenance" for non-persistent and/or persistent VDI environments.
+Optimize the "Windows Defender Cache Maintenance" scheduled task for non-persistent and/or persistent VDI environments. Run this task on the main image before sealing.
 
-1. On the '**master** image' before sealing
+1. Open up the **Task Scheduler** mmc (`taskschd.msc`).
 
-1. Open up the **Task Scheduler** mmc (taskschd.msc)
+2. Expand **Task Scheduler Library** > **Microsoft** > **Windows** > **Windows Defender**, and then right-click on **Windows Defender Cache Maintenance**.
 
-1. Expand **Task Scheduler Library** > **Microsoft** > **Windows** > **Windows Defender**
-
-1. Right-click on **Windows Defender Cache Maintenance**
-
-1. Click on **Run**
-
-1. Let the scheduled task finish
+3. Select **Run**, and let the scheduled task finish.
 
 ## Exclusions
 
@@ -263,4 +257,5 @@ If you're looking for information about Defender for Endpoint on non-Windows pla
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
