@@ -47,9 +47,9 @@ Each Microsoft Defender service has its own custom role management settings, wit
 1. In the navigation pane, select **Permissions**.
 1. Select the **Roles** link for the service where you want to create a custom role. For example, for Defender for Endpoint:
 
-  :::image type="content" source="media/custom-roles/custom-roles-endpoint.jpeg" alt-text="Screenshot of a Roles link for Defender for Endpoint.":::
+  :::image type="content" source="./media/custom-roles/custom-roles-endpoint.png" alt-text="Screenshot of a Roles link for Defender for Endpoint.":::
 
-## Reference to service-specific content
+## Required roles for Defender XDR services
 
 Custom role names aren't connected to global roles in Microsoft Entra ID, even if similarly named. For example, a custom role named *Security Admin* in Microsoft Defender for Endpoint isn't connected to the global *Security Admin* role in Microsoft Entra ID.
 
@@ -62,8 +62,7 @@ For Defender for Endpoint and Defender for Office, use custom roles as follows:
 |**Manage alerts and incidents**     | Alert investigation        |One of the following: <ul><li>Manage alerts<li>Security admin|
 |**Action center remediation**     |     Active remediation actions – security operations    | Search and purge |
 |**Set custom detections**     |   Manage security settings      | One of the following: <ul><li>Manage alerts<li>Security admin|
-|**Threat analytics**     |   For alert and incidents data: View data- security operations <br><br>For vulnerability management mitigations: View data - Threat and vulnerability management      | For alerts and incidents data, one of the following: <ul><li>View-only Manage alerts<li>Manage alerts<li>Organization configuration<li>Audit logs<li>View-only audit logs<li>Security reader<li>Security admin<li>View-only recipients
-<br>For prevented email attempts, one of the following:<ul><li>Security reader<li>Security admin<li>View-only recipients |
+|**Threat analytics**     |   For alert and incidents data: View data- security operations <br><br>For vulnerability management mitigations: View data - Threat and vulnerability management      | For alerts and incidents data, one of the following: <ul><li>View-only Manage alerts<li>Manage alerts<li>Organization configuration<li>Audit logs<li>View-only audit logs<li>Security reader<li>Security admin<li>View-only recipients<br>For prevented email attempts, one of the following:<ul><li>Security reader<li>Security admin<li>View-only recipients |
 
 For other service information, see:
 
