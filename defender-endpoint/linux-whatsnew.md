@@ -33,6 +33,21 @@ This article is updated frequently to let you know what's new in the latest rele
 - [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 
+> [!IMPORTANT]
+> Starting with version 101.2408.0000, Microsoft defender for Endpoint for Linux will no longer support Auditd event provider; transitioning completely to the more efficient ‘eBPF’ technology. This will allow for better performance, reduced resource consumption, and overall improved stability. eBPF support has been available since August 2023 and is fully integrated into all updates of MDE Linux versions (101.23082.0006 and above). We strongly encourage you to adopt the eBPF build, as it provides significant enhancements over auditd.
+>
+>If eBPF is not supported on your machines or there are specific requirements to remain on auditd, you can use the following alternatives - 
+>1.	You can continue to use MDE Linux build 101.24072.0000 with auditd. This build will be supported for close to 9 months, giving you ample time to plan and execute the migration to eBPF.
+>2.	If you are on versions higher than 101.24072.0000, MDE Linux will rely on ‘netlink’ as a backup supplementary event provider in the event of a fallback and all process operations will continue to flow seamlessly. 
+>
+> We request you to review your current MDE Linux deployments and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, please refer to our public [documentation](https://learn.microsoft.com/en-us/defender-endpoint/linux-support-ebpf) on the same.
+>
+>If you have any concerns or need assistance during this transition, please reach out to our support team.
+
+
+
+
+
 <details>
 <summary> July-2024 (Build: 101.24062.0001 | Release version: 30.124062.0001.0)</summary>
 
