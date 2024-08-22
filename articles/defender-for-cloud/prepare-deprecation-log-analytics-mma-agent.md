@@ -58,7 +58,7 @@ For SQL servers on machines, we recommend to [migrate to SQL server-targeted Azu
 The legacy approach to onboard servers to Defender for Servers Plan 2 based on the Log Analytics agent and using Log analytics workspaces is set for retirement as well:
 - The onboarding experience for [onboarding new non-Azure machines](quickstart-onboard-machines.md) to Defender for Servers using Log Analytics agents and workspaces is removed from the **Inventory** and **Getting started** blades in the Defender for Cloud portal.
 - To avoid losing security coverage on the affected machines connected to a Log Analytics Workspace, with the Agent retirement:
-- If you onboarded non-Azure servers (both on-premises and multi-cloud) using the [legacy approach](quickstart-onboard-machines.md), you should now connect these machines via Azure Arc-enabled servers to Defender for Servers Plan 2 Azure subscriptions and connectors. [Learn more](/azure/azure-arc/servers/deployment-options) about deploying Arc machines at scale.
+- If you onboarded non-Azure servers (both on-premises and multicloud) using the [legacy approach](quickstart-onboard-machines.md), you should now connect these machines via Azure Arc-enabled servers to Defender for Servers Plan 2 Azure subscriptions and connectors. [Learn more](/azure/azure-arc/servers/deployment-options) about deploying Arc machines at scale.
     
   - If you used the legacy approach to enable Defender for Servers Plan 2 on selected Azure VMs, we recommend enabling Defender for Servers Plan 2 on the Azure subscriptions for these machines. You can then exclude individual machines from the Defender for Servers coverage using the Defender for Servers [per-resource configuration](tutorial-enable-servers-plan.md).
     
@@ -70,7 +70,7 @@ This is a summary of the required action for each of the servers onboarded to De
 | -------- | -------- |
 |On premise servers| [Onboarded to Arc ](/azure/azure-arc/servers/deployment-options) and connected to a subscription with Defender for Servers Plan 2 |
 |Azure Virtual machines|Connect to subscription with Defender for Servers Plan 2|
-|Multi Cloud Servers |Connect to [multicloud connector](/azure/defender-for-cloud/quickstart-onboard-aws) with Azure Arc provisioning and Defender for Servers plan 2|
+|Multicloud Servers |Connect to [multicloud connector](/azure/defender-for-cloud/quickstart-onboard-aws) with Azure Arc provisioning and Defender for Servers plan 2|
 
 
 ### Endpoint protection recommendations experience - changes and migration guidance
@@ -209,9 +209,9 @@ In order to continue receiving the baseline experience, you need to enable the D
 
 Depending on your environment, you may need to take the following steps:
 
-- Review the [support matrix for the Azure Policy guest configuration](/azure/governance/machine-configuration/overview).
+1. Review the [support matrix for the Azure Policy guest configuration](/azure/governance/machine-configuration/overview).
 
-- Install the Azure Policy guest configuration on your machines.
+1. Install the Azure Policy guest configuration on your machines.
     - **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
 
     - (**Azure VMs only**) You must Assign managed Identity. 
