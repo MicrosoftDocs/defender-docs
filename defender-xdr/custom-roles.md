@@ -40,7 +40,7 @@ For example, create a custom role for Microsoft Defender for Endpoint to manage 
 
 <a name='manage-permissions-and-roles-in-the-microsoft-365-defender-portal'></a>
 
-## Locate custom role management settings in the Microsoft 365 Defender portal
+## Locate custom role management settings in the Microsoft Defender portal
 
 Each Microsoft Defender service has its own custom role management settings, with some services being represented in a central location in the Microsoft Defender portal. To locate custom role management settings in the Microsoft Defender portal:
 
@@ -63,7 +63,7 @@ For information about the permissions and roles for each Microsoft Defender XDR 
 - [Microsoft **Defender for IoT** user management](/azure/defender-for-iot/organizations/manage-users-overview)
 - [Microsoft **Defender for Office 365** permissions](/defender-office-365/mdo-portal-permissions)
 - [Manage access to **Microsoft Defender XDR**](m365d-permissions.md)
-- [**Microsoft Security Exposure Management** permissions](security-exposure-management/prerequisites#permissions)
+- [**Microsoft Security Exposure Management** permissions](/security-exposure-management/prerequisites#permissions)
 - [Roles and permissions in **Microsoft Sentinel**](/azure/sentinel/roles)
 
 Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
