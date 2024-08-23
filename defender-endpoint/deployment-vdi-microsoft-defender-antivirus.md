@@ -2,7 +2,7 @@
 title: Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 description: Get an overview of how to configure Microsoft Defender Antivirus in a remote desktop or non-persistent virtual desktop environment.
 ms.localizationpriority: medium
-ms.date: 03/06/2023
+ms.date: 08/22/2023
 ms.topic: conceptual
 author: siosulli
 ms.author: siosulli
@@ -83,7 +83,7 @@ Security intelligence packages are typically published once every three to four 
 You can also set up your single server or machine to fetch the updates on behalf of the VMs at an interval and place them in the file share for consumption.
 This configuration is possible when the devices have the share and read access (NTFS permissions) to the share so they can grab the updates. To set this configuration up, follow these steps:
 
- 1. Create an SMB/CIFS file share.
+1. Create an SMB/CIFS file share.
 
  2. Use the following example to create a file share with the following share permissions.
 
@@ -231,6 +231,16 @@ This policy forces a scan if the VM has missed two or more consecutive scheduled
 
 This policy hides the entire Microsoft Defender Antivirus user interface from end users in your organization.
 
+## Run the "Windows Defender Cache Maintenance" scheduled task
+
+Optimize the "Windows Defender Cache Maintenance" scheduled task for non-persistent and/or persistent VDI environments. Run this task on the main image before sealing.
+
+1. Open up the **Task Scheduler** mmc (`taskschd.msc`).
+
+2. Expand **Task Scheduler Library** > **Microsoft** > **Windows** > **Windows Defender**, and then right-click on **Windows Defender Cache Maintenance**.
+
+3. Select **Run**, and let the scheduled task finish.
+
 ## Exclusions
 
 If you think you need to add exclusions, see [Manage exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md).
@@ -247,4 +257,5 @@ If you're looking for information about Defender for Endpoint on non-Windows pla
 - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 - [Configure Defender for Endpoint on Android features](android-configure.md)
 - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
