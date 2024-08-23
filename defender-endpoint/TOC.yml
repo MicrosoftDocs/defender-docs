@@ -96,6 +96,12 @@
       - name: URL reputation demonstrations
         href: defender-endpoint-demonstration-smartscreen-url-reputation.md
  
+  - name: Defender for Endpoint Security Operations Guide 
+    href: mde-sec-ops-guide.md
+  - name: Operating guide Microsoft Defender for Endpoint
+    href: mde-operations-guide.md   
+
+
   - name: Deploy Defender for Endpoint
     items:
     - name: Overview
@@ -315,11 +321,6 @@
             href: ios-privacy.md
     - name: Run a detection test on a newly onboarded Microsoft Defender for Endpoint
       href: run-detection-test.md
-
-  - name: Operating guide Microsoft Defender for Endpoint
-    href: mde-operations-guide.md   
-  - name: Defender for Endpoint Security Operations Guide 
-    href: mde-sec-ops-guide.md
 
   - name: How to guides
     items:
