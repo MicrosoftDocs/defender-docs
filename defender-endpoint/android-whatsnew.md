@@ -27,12 +27,17 @@ ms.date: 07/15/2024
 
 Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
+**Aug-2024 (version: 1.0.6812.0101)**
+
+- Network Protection feature is enabled by default for all users
+
 ## Network protection
 
-Network protection on Microsoft Defender for Endpoint is now available. Network protection provides protection against rogue Wi-Fi related threats, rogue hardware like pineapple devices, and rogue certificates. It notifies the user if a related threat is detected. Users also see a guided experience to connect to secure networks and change networks when they're connected to an unsecure connection.
+Network protection on Microsoft Defender for Endpoint is now generally available. Network protection provides protection against rogue Wi-Fi related threats, rogue hardware like pineapple devices, and rogue certificates. It notifies the user if a related threat is detected. Users also see a guided experience to connect to secure networks and change networks when they're connected to an unsecure connection.
 
 > [!IMPORTANT]
-> Network protection feature will soon be enabled by default for all users. The update will be rolled out in a phased manner. As a result, users will be able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the set up. Admins can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. There are also several admin controls to offer flexibility, including privacy controls to configure the data that's sent by Defender for Endpoint from Android devices. For more information, see [network protection](android-configure.md).
+> **This feature is now enabled by default for all users.** As a result, users will be able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the set up. Admins can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. 
+There are also several admin controls to offer flexibility, including privacy controls to configure the data that's sent by Defender for Endpoint from Android devices. For more information, see [network protection](android-configure.md).
 
 ## Device Tagging
 
