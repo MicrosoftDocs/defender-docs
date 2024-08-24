@@ -51,6 +51,20 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 - [What's new in Defender for Endpoint on Android](android-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 
+## August 2024
+
+- **Network Protection feature is enabled by default** on Microsoft Defender for **Android**. 
+
+  - As a result, users will be able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. 
+  
+  - Users are also required to provide location permission to complete the set up. 
+  
+  - Admins can change the default value for network protection if they decide not to use it via the Intune App Configuration policies.
+  
+  - This feature was already enabled by default earlier on Microsoft Defender for iOS.  
+    
+  - For more information, see [network protection](/defender-endpoint/android-configure#network-protection).
+    
 ## July 2024
 
 - (Preview) **Monitor OT devices in the device inventory**: You can now monitor OT devices in addition to IoT devices in the device inventory, as part of the integration with [Microsoft Defender for IoT in the Defender portal](/defender-for-iot/device-discovery). As part of this integration:
