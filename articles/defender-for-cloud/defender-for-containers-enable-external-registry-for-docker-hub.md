@@ -28,13 +28,13 @@ To enable Defender for Containers to connect to your Docker Hub containers regis
 
 :::image type="content" source="{source}" alt-text="{alt-text}":::
 
-1. Generate Access Token for this user to enable a secure connection for the Defender for Containers Docker Hub connector to your organization's Docker Hub account. Save this access token for later use to configure the Defender for Containers Docker Hub connector.
+1. Generate an access token for this user to enable the Defender for Cloud Docker Hub connector to securely connect to your organization's Docker Hub account. Save this access token for later use to configure the Defender for Cloud Docker Hub connector.
 
 :::image type="content" source="{source}" alt-text="{alt-text}":::
 
 :::image type="content" source="{source}" alt-text="{alt-text}":::
 
-1. Invite the dedicated user to be the type “Member” of your Docker Hub organization, with “Read-Only” permissions.
+1. Invite the dedicated user to be of the type “Member” in your Docker Hub organization, with “Read-Only” permissions.
 
 :::image type="content" source="{source}" alt-text="{alt-text}":::
 
