@@ -1,10 +1,8 @@
 ---
 title: How to onboard Docker Hub container registries
 description: How to onboard Docker Hub container registries to Defender for Containers
+ms.service: defender-for-containers
 ms.topic: how-to
-author: a-ehorwitz
-ms.author: dacurwin
-ms.custom: devx-track-azurecli
 ms.date: 09/25/2024
 ---
 
