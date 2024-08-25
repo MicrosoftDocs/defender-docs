@@ -35,11 +35,11 @@ To view enterprise IoT security value:
 
     - On the **Discovered vulnerabilities** tab, check for any known CVEs associated with the device. Known CVEs can help decide whether to patch, remove, or contain the device and mitigate risk to your network. Alternatively, use [advanced hunting queries](#sample-advanced-hunting-queries-for-enterprise-iot) to collect vulnerabilities across all your devices.
 
-### Hunt for threats
+## Hunt for threats on the Device inventory page
 
 On the **Device inventory** page, select **Go hunt** to query devices using tables like the *[DeviceInfo](/microsoft-365/security/defender/advanced-hunting-deviceinfo-table)* table. On the **Advanced hunting** page, query data using other schemas.
 
-## Sample advanced hunting queries for enterprise IoT
+## Advanced hunting queries for enterprise IoT
 
 This section lists sample advanced hunting queries that you can use in Microsoft 365 Defender to help you monitor and secure your IoT devices with enterprise IoT security.
 

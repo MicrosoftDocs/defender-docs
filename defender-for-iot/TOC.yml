@@ -12,7 +12,7 @@
         href: whats-new.md  
       - name: Site security
         href: site-security-overview.md     
-      - name: Enterprise for IoT
+      - name: Enterprise IoT
         items:
           - name: Enterprise IoT overview
             href: enterprise-iot.md
