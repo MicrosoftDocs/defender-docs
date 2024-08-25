@@ -33,7 +33,7 @@ Make sure that you have:
 
     - Microsoft Defender for Endpoint P2, with an extra, standalone **Microsoft Defender for IoT - EIoT Device License - add-on** license, available for trial or purchase from the Microsoft 365 admin center.
 
-## Add enterprise IoT security in the Microsoft Defender portal
+## Add enterprise IoT security in the Defender portal
 
 There are two ways to add enterprise IoT to the Defender portal:
 
