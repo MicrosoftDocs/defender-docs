@@ -29,11 +29,11 @@ To view enterprise IoT security value:
 
     - On the **Alerts** tab, check for any alerts triggered by the device. Simulate alerts in Microsoft 365 Defender for Enterprise IoT using the Raspberry Pi scenario available in the Microsoft 365 Defender [Evaluation & Tutorials](https://security.microsoft.com/tutorials/all) page.
 
-        You can also set up advanced hunting queries to create custom alert rules. For more information, see [sample advanced hunting queries for enterprise IoT security](#sample-advanced-hunting-queries-for-enterprise-iot).
+        You can also set up advanced hunting queries to create custom alert rules. For more information, see [advanced hunting queries for enterprise IoT security](#advanced-hunting-queries-for-enterprise-iot).
 
     - On the **Security recommendations** tab, check for any recommendations available for the device to reduce risk and maintain a smaller attack surface.
 
-    - On the **Discovered vulnerabilities** tab, check for any known CVEs associated with the device. Known CVEs can help decide whether to patch, remove, or contain the device and mitigate risk to your network. Alternatively, use [advanced hunting queries](#sample-advanced-hunting-queries-for-enterprise-iot) to collect vulnerabilities across all your devices.
+    - On the **Discovered vulnerabilities** tab, check for any known CVEs associated with the device. Known CVEs can help decide whether to patch, remove, or contain the device and mitigate risk to your network. Alternatively, use [advanced hunting queries](#advanced-hunting-queries-for-enterprise-iot) to collect vulnerabilities across all your devices.
 
 ## Hunt for threats on the Device inventory page
 

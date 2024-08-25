@@ -15,7 +15,7 @@ Enterprise IoT security improves the monitoring and protection of the IoT device
 
 The security monitoring includes IoT related alerts, vulnerabilities, and recommendations that are integrated with your existing Microsoft Defender for Endpoint data. To understand more about the integration between Defender for Endpoint and Defender for IoT, see [enterprise IoT overview](enterprise-iot.md).
 
-In this article you will learn how to add enterprise IoT to your Microsoft Defender portal and use the IoT specific security features to protect your IoT environment.
+In this article you'll learn how to add enterprise IoT to your Microsoft Defender portal and use the IoT specific security features to protect your IoT environment.
 
 [!INCLUDE [defender-iot-preview](../includes//defender-for-iot-defender-public-preview.md)]
 
