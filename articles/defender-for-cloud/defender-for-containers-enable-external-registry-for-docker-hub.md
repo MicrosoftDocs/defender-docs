@@ -26,7 +26,7 @@ To enable Defender for Containers to connect to your Docker Hub containers regis
 
 1. Enable the user to access all repositories in your organization
 
-:::image type="content" source="{source}" alt-text="{alt-text}":::
+    :::image type="content" source="{source}" alt-text="{alt-text}":::
 
 1. Generate an access token for this user to enable the Defender for Cloud Docker Hub connector to securely connect to your organization's Docker Hub account. Save this access token for later use to configure the Defender for Cloud Docker Hub connector.
 
@@ -40,12 +40,12 @@ To enable Defender for Containers to connect to your Docker Hub containers regis
 
 ## Configure the Defender for Cloud Docker Hub connector
 
-Under the Environment settings of Defender for Cloud, open the Docker Hub connection. In the Configure access tab of the Docker Hub connection, enter your organization name, the user name of the Docker Hub connector account, and the connector account access token.
+1. Under the Environment settings of Defender for Cloud, open the Docker Hub connection. In the Configure access tab of the Docker Hub connection, enter your organization name, the user name of the Docker Hub connector account, and the connector account access token.
 
     :::image type="content" source="{source}" alt-text="{alt-text}":::
 
-Finalize connector onboarding wizard
+1. Finalize connector onboarding wizard
 
-Validate if the connectivity succeeded and the connection appears as “Connected” in the environments settings screen
+1. Validate if the connectivity succeeded and the connection appears as “Connected” in the environments settings screen
 
     :::image type="content" source="{source}" alt-text="{alt-text}":::
