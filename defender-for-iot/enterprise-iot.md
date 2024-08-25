@@ -5,7 +5,7 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 08/19/2024
+ms.date: 08/25/2024
 ms.topic: overview
 ---
 
@@ -31,7 +31,7 @@ Extend Microsoft Defender for IoT's security features to include enterprise IoT 
 
 ## Enterprise IoT data in the Defender portal
 
-Enterprise IoT data for features such as alerts, recommendations and vulnerabilities, seamlessly integrates with other data into the Defender portal.
+Enterprise IoT data for features such as alerts, recommendations and vulnerabilities, seamlessly integrates with other data in the Defender portal.
 
 ### Alerts
 

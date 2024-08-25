@@ -5,7 +5,7 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 08/19/2024
+ms.date: 08/25/2024
 ms.topic: how-to
 ---
 
