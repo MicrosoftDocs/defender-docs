@@ -2,7 +2,7 @@
 title: Deploy Defender for Servers
 description: Learn how to enable the Defender for Servers on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 02/05/2024
+ms.date: 08/25/2024
 ---
 
 # Deploy Defender for Servers
@@ -131,6 +131,26 @@ Use the following base script file to customize it for your specific needs.
 1. Follow the rest of the onscreen instructions.
 
 After enabling the plan, you have the ability to [configure the features of the plan](configure-servers-coverage.md) to suit your needs.
+
+## Enable period updates
+
+System updates are critical to maintaining the security and health of your Azure Arc enabled machines and Azure VMs. 
+
+Microsoft Defender for Cloud generates the following recommendations that ensure the latest security and critical OS updates are installed on your machines:
+
+- System updates should be installed on your machines (powered by Azure Update Manager)
+- Machines should be configured to periodically check for missing system updates
+
+These updates contain security patches for vulnerabilities that, if left unfixed, can be exploited by attackers. The recommendations rely on a native agent embedded in every Azure VM and Azure Arc machines instead of an installed agent.
+
+You can use [the Fix option](implement-security-recommendations.md#use-the-fix-option) in the recommendation, to perform a one-time installation of the missing updates in the Update Manager portal.
+
+If you are using an on-premises machine, it must be [connected to Azure Arc](quickstart-onboard-machines.md).
+
+> [!NOTE]
+> If your Azure Arc enabled machines or VM isn't connected to a subscription, or connector that has Defender for Servers Plan 2 enabled, when you enable periodic assessments, it will be subject to [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/).
+>
+> If your Azure Arc enabled machines or VM is connected to a subscription, or connector that has Defender for Servers Plan 2 enabled, periodic assessments are included in the Defender for Servers Plan 2 pricing.
 
 ## Next steps
 
