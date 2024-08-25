@@ -141,11 +141,11 @@ Microsoft Defender for Cloud generates the following recommendations that ensure
 - System updates should be installed on your machines (powered by Azure Update Manager)
 - Machines should be configured to periodically check for missing system updates
 
-These updates contain security patches for vulnerabilities that, if left unfixed, can be exploited by attackers. The recommendations rely on a native agent embedded in every Azure VM and Azure Arc machines instead of an installed agent.
+These updates contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers. The recommendations rely on a native agent embedded in every Azure VM and Azure Arc machines instead of an installed agent.
 
 You can use [the Fix option](implement-security-recommendations.md#use-the-fix-option) in the recommendation, to perform a one-time installation of the missing updates in the Update Manager portal.
 
-If you are using an on-premises machine, it must be [connected to Azure Arc](quickstart-onboard-machines.md).
+If you're using an on-premises machine, it must be [connected to Azure Arc](quickstart-onboard-machines.md).
 
 > [!NOTE]
 > If your Azure Arc enabled machines or VM isn't connected to a subscription, or connector that has Defender for Servers Plan 2 enabled, when you enable periodic assessments, it will be subject to [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/).
