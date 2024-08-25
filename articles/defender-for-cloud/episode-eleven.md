@@ -2,12 +2,12 @@
 title: Threat landscape for Defender for Containers
 description: Learn about the new detections that are available for different attacks and how Defender for Containers can help to quickly identify malicious activities in containers.
 ms.topic: reference
-ms.date: 04/27/2023
+ms.date: 08/18/2024
 ---
 
 # Threat landscape for Defender for Containers
 
-**Episode description**: In this episode of Defender for Cloud in the Field, Yossi Weizman joins Yuri Diogenes to talk about the evolution of the threat matrix for Containers and how attacks against Kubernetes have evolved. Yossi also demonstrates new detections that are available for different attacks and how Defender for Containers can help to quickly identify malicious activities in containers.
+**Episode description**: In this episode of Defender for Cloud in the Field, Yossi Weizman joins Yuri Diogenes to discuss the evolution of the threat matrix for Containers and how attacks against Kubernetes evolve. Yossi also demonstrates new detections that are available for different attacks and explains how Defender for Containers quickly identifies malicious activities in containers.
 
 > [!VIDEO https://aka.ms/docs/player?id=646c2b9a-3f15-4705-af23-7802bd9549c5]
 

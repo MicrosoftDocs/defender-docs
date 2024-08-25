@@ -36,6 +36,9 @@
         - name: Common questions about Defender for Containers
           displayName: containers, common questions, faq, frequently asked questions
           href: faq-defender-for-containers.yml
+        - name: Common questions about Copilot in Defender for Cloud
+          displayName: copilot, common questions, faq, frequently asked questions
+          href: faq-copilot.yml
 
 - name: Plan
   items:
@@ -501,7 +504,7 @@
     - name: Manage security by subscriptions, users, and permissions
       items:
         - name: Grant and request tenant-wide permissions
-          displayName: global admin, Azure Active Directory (AD), AAD
+          displayName: Azure Active Directory (AD), AAD
           href: tenant-wide-permissions-management.md
         - name: Enable Defender for Cloud for a management group
           displayName: management group
