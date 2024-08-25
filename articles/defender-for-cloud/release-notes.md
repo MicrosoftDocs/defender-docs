@@ -31,6 +31,18 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| September 1 | GA | Enable system updates on your machines |
+
+### Enable system updates on your machines
+
+September 1, 2024
+
+You can now [enable system updates on your machines](tutorial-enable-servers-plan.md#enable-system-updates). This feature allows you to enable system updates on multiple servers at once, saving time and effort.
+
+## August 2024
+
+|Date | Category | Update|
+|--|--|--|
 | August 22 | Upcoming deprecation | [Retirement of Defender for Cloud alert integration with Azure WAF alerts](#retirement-of-defender-for-cloud-alert-integration-with-azure-waf-alerts) |
 | August 1 | GA | [Enable Microsoft Defender for SQL servers on machines at scale](#enable-microsoft-defender-for-sql-servers-on-machines-at-scale) |
 
