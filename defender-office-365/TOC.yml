@@ -473,6 +473,8 @@
        href: app-guard-for-office-install.md
      - name: Data retention in Defender for Office 365
        href: mdo-data-retention.md
+     - name: Privacy in Defender for Office 365
+       href: mdo-privacy.md
      - name: External email senders - Microsoft 365 resources
        items:
        - name: Microsoft 365 services for external email senders
