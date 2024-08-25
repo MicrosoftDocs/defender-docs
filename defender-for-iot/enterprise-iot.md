@@ -29,7 +29,7 @@ Extend Microsoft Defender for IoT's security features to include enterprise IoT 
 
 - Enterprise IoT: Enterprise IoT provides visibility and security for IoT devices in the corporate environment. Enterprise IoT network protection extends agentless features beyond operational environments, providing coverage for all IoT devices in your environment, such as printers, cameras, and purpose-built, proprietary, devices.
 
-## Enterprise IoT data available in the Defender portal
+## Enterprise IoT data in the Defender portal
 
 Enterprise IoT data for features such as alerts, recommendations and vulnerabilities, seamlessly integrates with other data into the Defender portal.
 
