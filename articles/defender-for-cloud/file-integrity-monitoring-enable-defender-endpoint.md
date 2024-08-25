@@ -44,7 +44,7 @@ To track changes to your files and registries on machines with Defender for Endp
 
 - Enable [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) on machines you want to monitor
 
-## Enable File Integrity Monitoring with Defender for Endpoint
+## Enable File Integrity Monitoring
 
 ### Enable in the Azure portal
 
@@ -67,6 +67,9 @@ To enable FIM in the Azure portal, follow these steps:
 
    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png" alt-text="Screenshot of the FIM configuration pane." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration.png":::
 
+> [!IMPORTANT]
+> Events collected for FIM powered by Defender for Endpoint are included in the data types eligible for the 500 MB benefit for Defender for Servers Plan 2 customers. For more information, see [What data types are included in the daily allowance?](/azure/defender-for-cloud/faq-defender-for-servers#what-data-types-are-included-in-the-daily-allowance-).
+
 1. In the lower section of the **FIM configuration** pane, select the **Windows registry**, **Windows files**, and **Linux files** tabs to choose the files and registries you want to monitor. If you choose the top selection in each tab, all files and registries are monitored. Select **Apply** to save your changes.
 
    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration-tabs.png" alt-text="Screenshot of the FIM configuration tabs." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-configuration-tabs.png":::
@@ -75,17 +78,7 @@ To enable FIM in the Azure portal, follow these steps:
 
 1. Select **Save**.
 
-### Enable with API
-
-FIM collected events are ingested into the designated workspace defined in the onboarding process into a dedicated table called `MDCFileIntegrityMonitoringEvents`.
-
-### Ensure that FIM is successfully deployed
-
-- Test flow
-- Create filename: ""
-- Check that events are collected and ingested into the designated workspace
-
-## Disable File Integrity Monitoring with Defender for Endpoint
+## Disable File Integrity Monitoring
 
 After FIM is disabled, no new events are collected. However, the data collected before the disabling the feature remain in the workspace, according to the workspace's retention policy. For more information, see [Manage data retention in a Log Analytics workspace](/azure/azure-monitor/logs/data-retention-configure).
 
@@ -110,11 +103,12 @@ To disable FIM in the Azure portal, follow these steps:
 
 1. Select **Save**.
 
-### Disable with API
-
 ## Monitor entities and files
 
 To monitor entities and files, follow these steps:
+
+> [!NOTE]
+> If you haven't enabled FIM yet, you'll see a message that says **File Integrity Monitoring is not enabled**. To enable FIM, select **Onboard subscriptions** and then follow the directions in [Enable File Integrity Monitoring](#enable-file-integrity-monitoring).
 
 1. From Defender for Cloud's sidebar, go to **Workload protections** > **File integrity monitoring**.
 
