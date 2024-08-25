@@ -8,14 +8,15 @@ ms.custom: devx-track-azurecli
 ms.date: 09/25/2024
 ---
 
-# How to onboard your organization Docker Hub container registries to Defender for Cloud Security Posture Management
+# How to onboard your Docker Hub container registries to Defender for Cloud Security Posture Management
 
 Defender for Containers can connect to your organization's Docker Hub containers registry to gain the benefits of scanning your Docker Hub container images for security threats and protect the Docker Hub container registry itself within your Defender for Cloud Security Posture Management.
 
 To enable Defender for Containers to connect to your Docker Hub containers registry, you need to:
-    1. Create in your Docker Hub organization account a dedicated user with access to the organization's Docker Hub container registries.
-    1. Generate access tokens for the Docker Hub user.
-    2. Configure the Defender for Cloud connector to securely access Docker Hub using the dedicated Docker Hub user name and access tokens.
+
+1. Create in your Docker Hub organization account a dedicated user with access to the organization's Docker Hub container registries.
+1. Generate access tokens for the Docker Hub user.
+1. Configure the Defender for Cloud connector to securely access Docker Hub using the dedicated Docker Hub user name and access tokens.
 
 ## Set up the organization Docker Hub account
 
@@ -23,7 +24,7 @@ To enable Defender for Containers to connect to your Docker Hub containers regis
 
 1. Create a dedicated user with your organization's email account, making sure it is a designated user for Defender for Containers connectivity only and not an account that be deactivated in the future.
 
-        Example: MDC_User @myorg.com  
+    Example: MDC_User @myorg.com  
 
 1. Enable the user to access all repositories in your organization
 
