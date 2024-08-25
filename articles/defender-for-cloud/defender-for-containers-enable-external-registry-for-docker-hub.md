@@ -13,14 +13,14 @@ Defender for Containers can connect to your organization's Docker Hub containers
 To enable Defender for Containers to connect to your Docker Hub containers registry, you need to:
 
 1. Create in your Docker Hub organization account a dedicated user with access to the organization's Docker Hub container registries.
-1. Generate access tokens for the Docker Hub user.
+1. Generate access tokens for the Docker Hub dedicated user.
 1. Configure the Defender for Cloud connector to securely access Docker Hub using the dedicated Docker Hub user name and access tokens.
 
 ## Set up the organization Docker Hub account
 
 1. Before starting, verify that you own an organization Docker Hub account and have the appropriate administrative permissions to create and manage a Docker Hub user on the organization scope.
 
-1. Create a dedicated user with your organization's email account, making sure it is a designated user for Defender for Containers connectivity only and not an account that be deactivated in the future.
+1. Create a dedicated user with your organization's email account, making sure it is a dedicated user for Defender for Containers connectivity only and not a real user account that could be deactivated in the future.
 
     Example: MDC_User @myorg.com  
 
