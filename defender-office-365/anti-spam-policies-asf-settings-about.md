@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about the Advanced Spam Filter (ASF) settings that are available in anti-spam policies in Exchange Online Protection (EOP).
 ms.service: defender-office-365
-ms.date: 06/10/2024
+ms.date: 08/26/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -73,7 +73,7 @@ The following **Increase spam score** ASF settings result in an increase in spam
 |**Image links to remote websites** (_IncreaseScoreWithImageLinks_)|Messages that contain `<Img>` HTML tag links to remote sites (for example, using http) are marked as spam.|`X-CustomSpam: Image links to remote sites`|
 |**Numeric IP address in URL** (_IncreaseScoreWithNumericIps_)|Messages that contain numeric-based URLs (typically, IP addresses) are marked as spam.|`X-CustomSpam: Numeric IP in URL`|
 |**URL redirect to other port** (_IncreaseScoreWithRedirectToOtherPort_)|Messages that contain hyperlinks that redirect to TCP ports other than 80 (HTTP), 8080 (alternate HTTP), or 443 (HTTPS) are marked as spam.|`X-CustomSpam: URL redirect to other port`|
-|**Links to .biz or .info websites** (_IncreaseScoreWithBizOrInfoUrls_)|Messages that contain `.biz` or `.info` links in the body of the message are marked as spam.|`X-CustomSpam: URL to .biz or .info websites`|
+|**Links to .biz or .info websites** (_IncreaseScoreWithBizOrInfoUrls_)|Messages that contain `.biz` or `.info` links in the body of the message are marked as spam. <br/><br/> Note that URLs such as `contoso.info.com` (where `.biz` or `.info` is not the top-level domain) will also match. |`X-CustomSpam: URL to .biz or .info websites`|
 
 ## Mark as spam settings
 
