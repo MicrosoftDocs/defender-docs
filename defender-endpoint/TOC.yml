@@ -322,7 +322,7 @@
         href: mde-operations-guide.md   
 
       - name: Configure portal settings
-          items:
+        items:
           - name: Configure general Defender for Endpoint settings
             href: preferences-setup.md
           - name: General
