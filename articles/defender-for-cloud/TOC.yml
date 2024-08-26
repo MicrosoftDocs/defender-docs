@@ -689,7 +689,7 @@
           - name: Enable File Integrity Monitoring (AMA)
             displayName: fim, change, azure monitor agent
             href: file-integrity-monitoring-enable-ama.md
-          - name: Enable File Integrity Monitoring (Log Analytics)
+          - name: Enable File Integrity Monitoring (MMA)
             displayName: fim, change, log analytics, mma
             href: file-integrity-monitoring-enable-log-analytics.md
       - name: Just-in-time VM access
@@ -740,9 +740,9 @@
       - name: Review Docker host hardening recommendations
         displayName: containers
         href: harden-docker-hosts.md
-      - name: Compare baselines using file integrity monitoring
+      - name: Review changes with file integrity monitoring
         displayName: fim, change
-        href: file-integrity-monitoring-usage.md
+        href: file-integrity-monitoring-compare-baselines.md
       - name: Improve network security posture
         displayName: anh, adaptive network hardening
         href: adaptive-network-hardening.md
