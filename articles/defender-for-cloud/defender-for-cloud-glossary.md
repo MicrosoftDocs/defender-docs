@@ -27,7 +27,7 @@ A suite of features within Azure container registry. See [Frequently asked quest
 
 ### **Adaptive network hardening**
 
-Adaptive network hardening provides recommendations to further harden the [network security groups (NSG)](/azure/virtual-network/network-security-groups-overview) rules. See [What is Adaptive Network Hardening?](adaptive-network-hardening.md#what-is-adaptive-network-hardening).
+Adaptive network hardening provides recommendations to further harden the [network security groups (NSG)](/azure/virtual-network/network-security-groups-overview) rules. 
 
 ### **ADO**
 

@@ -728,7 +728,7 @@
         href: remediate-security-baseline.md
       - name: Review OS misconfigurations (MCSB)
         displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
-        href: apply-security-baselines.md
+        href: apply-security-baseline.md
       - name: Review OS system update issues
         displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
         href: recommendations-apply-operating-system-updates.md

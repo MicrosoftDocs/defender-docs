@@ -9,7 +9,7 @@ ms.date: 01/16/2024
 
 # Enable agentless machine scanning
 
-[Agentless machine scanning](concept-agentless-data-collection) in Microsoft Defender for Cloud improves the security posture on machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+[Agentless machine scanning](concept-agentless-data-collection,md) in Microsoft Defender for Cloud improves the security posture on machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
 When you turn on Defender for Servers Plan 2, or the Defender Cloud Security Posture Management (CSPM) plan, agentless scanning is turned on by default. If needed, you can use the instructions in this article to turn on agentless scanning manually.
 

@@ -22,7 +22,7 @@ Defender for Servers provides two plans.
 
 ## Prerequisites
 
-- **Plan the deployment**. Before you start, we recommend reading the [Defender for Servers planning guide](plan-defender-for-server.md).
+- **Plan the deployment**. Before you start, we recommend reading the [Defender for Servers planning guide](plan-defender-for-servers.md).
 - **Review plans**. Make sure you understand the available [plans](defender-for-servers-overview.md), and [different ways to deploy](defender-for-servers-overview.md#enabling-plans).
 - **Review pricing**. Check Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 - **Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) if needed. Defender for Cloud should [be enabled on the subscription](connect-azure-subscription.md).

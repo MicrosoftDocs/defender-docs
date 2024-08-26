@@ -11,9 +11,9 @@ ai-usage: ai-assisted
 
 # Remediate EDR solutions (agentless)
 
-Microsoft Defender for Cloud provides agentless scanning of protected machines to [check that an endpoint detection and response (EDR) solution is installed](integration-defender-for-endpoint.md#edr-solution-assessment). 
+Microsoft Defender for Cloud provides agentless scanning of protected machines to [check that an endpoint detection and response (EDR) solution is installed](integration-defender-for-endpoint.md#assessing-edr-solutions). 
 
-The EDR solution might be Microsoft Defender for Endpoint (integrated by default into Defender for Cloud), or a [supported third-party EDR solution](integration-defender-for-endpoint.md#other-edr-solutions).
+The EDR solution might be Microsoft Defender for Endpoint (integrated by default into Defender for Cloud), or a [supported third-party EDR solution](integration-defender-for-endpoint.md#supported-edr-solutions).
 
 Based on EDR solution findings, Defender for Cloud provides [recommendations](integration-defender-for-endpoint.md#edr-solution-recommendations) to remediate any issues, and ensure that EDR solutons are installed and running correctly on VMs.
 
@@ -64,7 +64,7 @@ EDR recommendations are available when:
 
 ## Enable Defender for Endpoint integration
 
-This recommended action is available when Defender for Endpoint, or an [supported third-party EDR solution](integration-defender-for-endpoint.md#other-edr-solutions) wasn't detected on the VM.
+This recommended action is available when Defender for Endpoint, or an [supported third-party EDR solution](integration-defender-for-endpoint.md#supported-edr-solutions) wasn't detected on the VM.
 
 
 To enable Defender for Endpoint on the machine: 
@@ -86,7 +86,7 @@ To enable Defender for Endpoint on the machine:
 
 This recommended action is available when:
 
-- One of the [supported third-party EDR solutions](integration-defender-for-endpoint.md#other-edr-solutions) wasn't detected on the VM.
+- One of the [supported third-party EDR solutions](integration-defender-for-endpoint.md#supported-edr-solutions) wasn't detected on the VM.
 - One of the supported plans (Defender for Servers Plan 2 or Defender CSPM) isn't enabled for the VM.
 
 To fix the recommendation.

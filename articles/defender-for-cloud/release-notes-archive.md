@@ -866,8 +866,6 @@ July 20, 2023
 
 By default, Defender for Cloud attempts to update your Defender for Endpoint for Linux agents onboarded with the `MDE.Linux` extension. With this release, you can manage this setting and opt-out from the default configuration to manage your update cycles manually.
 
-Learn how to [manage automatic updates configuration for Linux](enable-defender-for-endpoint.md#manage-automatic-updates-configuration-for-linux).  
-
 ### Agentless secrets scanning for virtual machines in Defender for servers P2 & Defender CSPM
 
 July 18, 2023

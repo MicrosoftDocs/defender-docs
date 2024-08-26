@@ -55,7 +55,7 @@ If you've never enabled the Defender for Endpoint unified solution, you can turn
 
 ## Enable manually on Windows machines (plan and integration on)
 
-If Defender for Servers is already enabled and Defender for Endpoint integration, you can manually turn on the integration for specific machines using the [REST API call](#enable-the-microsoft-defender-for-endpoint-unified-solution-at-scale), or turn on in the portal.
+If Defender for Servers is already enabled and Defender for Endpoint integration, you can manually turn on the integration for specific machines.
 
 > [!NOTE]
 > If you deploy Defender for Servers Plan 2 (and the Defender for Endpoint sensor isn't deployed on Windows 2012 R2 and 2016 servers) and then downgrade to Plan 1, the sensor won't be deployed automatically to those servers, so that your existing deployment isn't changed without your explicit consent.
@@ -128,9 +128,6 @@ Turn on integration as follows:
     `licensed: true`
 
     Also, in the Azure portal you'll see a new Azure extension on your machines called `MDE.Linux`.
-
-#
-
 
 ## Enable integration on Linux in multiple subscriptions
 

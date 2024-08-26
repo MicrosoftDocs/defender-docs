@@ -1,6 +1,6 @@
 ---
-title: Enable File Integrity Monitoring (Log Analytics agent)
-description: Learn how to enable File Integrity Monitoring with the Log Analytics agent to track and identify changes in your environment.
+title: Monitor changes with file integrity monitoring in Microsoft Defender for Cloud
+description: Learn how to monitor machine changes with file integrity monitoring in Microsoft Defender for Cloud.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
@@ -8,28 +8,19 @@ ms.date: 05/16/2024
 #customer intent: As a user, I want to learn how to enable File Integrity Monitoring with the Log Analytics agent so that I can track and identify changes in my environment.
 ---
 
-# Enable file integrity monitoring (Log Analytics agent)
+# Monitor machine changes with file integrity monitoring
 
 In the Defender for Servers plan in Microsoft Defender for Cloud, [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
-File integrity monitoring uses Azure Automation change tracking. This article describes how to set up file integrity monitoring with the [Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA))](/azure/automation/change-tracking/overview), so that you can monitor changes directly in Defender for Cloud.
-
-> [!Note]
-> - File integrity monitoring using the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) is generally availability (GA).
-> - The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024.
-> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default into Defender for Cloud will be released in August 2024.
-> - There's also a preview version of file integrity monitoring using the Azure Monitor Agent (AMA). Support for this version will end when Defender for Endpoint agent support is released.
-
-
-This article describes how to set up file integrity monitoring with the MMA
-
+File integrity monitoring uses Azure Automation change tracking. This article describes how to monitor machine changes captured in file integrity monitoring
 
 
 ## Prerequisites
 
-- [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled.
-- With the MMA, file integrity monitoring uploads data to a Log Analytics workspace. Data charges apply, based on the amount of data you upload. Learn more about [Log Analytics pricing](https://azure.microsoft.com/pricing/details/log-analytics/).
-- You need Workspace Owner permissions to enable/disable file integrity monitoring. Learn more about [Azure roles for Log Analytics](/services-hub/health/azure-roles#azure-roles). The Reader role can view results.
+- [File integrity monitoring](file-integrity-monitoring-overview.md) must be set up. [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled.
+- If file integrity monitoring is enabled to use the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) to collect data, file integrity monitoring uploads data to a Log Analytics workspace. 
+- If file integrity monitoring is enabled to use the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) to collect data, file integrity monitoring uploads data to a Log Analytics workspace. 
+- You need Workspace Owner permissions to enable/disable file integrity monitoring. The Reader role can view monitoring results.
 - File integrity monitoring is supported for Azure VMs, on-premises machines onboarded as Azure Arc VMs, and AWS accounts and GCP projects connected to Defender for Cloud.
 - When monitoring SQL Servers, file integrity monitoring might create this account: `NT Service\HealthService`. If you delete the account, it's automatically recreated.
 - You can't work with file integrity monitoring using the REST API. It's only available in the Azure portal.
