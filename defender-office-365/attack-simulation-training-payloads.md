@@ -140,7 +140,7 @@ On the **Global payloads** tab of **Content library** \> **Payloads** at <https:
 
 QR code payloads are available in five languages to address real-world scenarios that involve QR code attacks.
 
-:::image type="content" source="media/attack-sim-training-payloads-global-QR-codes.png" alt-text="Screenshot of the Global payloads tab showing the QR code payloads returned after searching for the value QR." lightbox="media/attack-sim-training-payloads-global-QR-codes.png":::
+:::image type="content" source="media/attack-sim-training-payloads-global-qr-codes.png" alt-text="Screenshot of the Global payloads tab showing the QR code payloads returned after searching for the value QR." lightbox="media/attack-sim-training-payloads-global-qr-codes.png":::
 
 You can also create custom payloads that use QR codes as phishing links as described in the next section.
 
