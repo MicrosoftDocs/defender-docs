@@ -42,6 +42,10 @@ This guide helps you manage and maintain your security posture with Defender for
 
 ## Step 3: Stay up to date 
 
+## Step 4: Establishing Security Operations
+
+[Security operations guide](mde-sec-ops-guide.md)
+
 ## Step 4: Troubleshooting guidance
 
 Include your IT support and helpdesk in the early stages of Intune deployment planning and pilot efforts. Early involvement exposes your support staff to Intune, and they gain knowledge and experience in identifying and resolving issues more effectively. It also prepares them for supporting the organization's full production rollout. Knowledgeable help desk and support teams also help users adopt these changes.
@@ -51,6 +55,10 @@ Include your IT support and helpdesk in the early stages of Intune deployment pl
 Validate the end-user experience with success metrics in your deployment plan. Some considerations:
 
 ✅ **Determine who will support end users**. Organizations can have different tiers or levels (1-3). For example, tier 1 and 2 might be part of the support team. Tier 3 includes members of the MDM team responsible for the Intune deployment.
+
+
+
+
 
 
 Some considerations:
