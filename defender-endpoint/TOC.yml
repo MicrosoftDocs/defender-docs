@@ -322,35 +322,35 @@
         items:
         - name: Configure general Defender for Endpoint settings
           href: preferences-setup.md
-          - name: General
-            items:
-            - name: Configure alert notifications
-              href: /defender-xdr/configure-email-notifications
-            - name: Configure vulnerability email notifications
-              href: configure-vulnerability-email-notifications.md
-            - name: Configure advanced features
-              href: advanced-features.md
+        - name: General
+          items:
+          - name: Configure alert notifications
+            href: /defender-xdr/configure-email-notifications
+          - name: Configure vulnerability email notifications
+            href: configure-vulnerability-email-notifications.md
+          - name: Configure advanced features
+            href: advanced-features.md
 
-          - name: Permissions
+        - name: Permissions
+          items:
+          - name: Use basic permissions to access the portal
+            href: basic-permissions.md
+          - name: Assign user access to the portal
+            href: assign-portal-access.md
             items:
-            - name: Use basic permissions to access the portal
-              href: basic-permissions.md
-            - name: Assign user access to the portal
-              href: assign-portal-access.md
-              items:
             - name: Create and manage roles
               href: user-roles.md
             - name: Create and manage device groups
               href: machine-groups.md
             - name: Create and manage device tags
               href: machine-tags.md
-          - name: Rules
+        - name: Rules
+          items:
+          - name: Manage suppression rules
+            href: manage-suppression-rules.md
+          - name: Create indicators
+            href: manage-indicators.md
             items:
-            - name: Manage suppression rules
-              href: manage-suppression-rules.md
-            - name: Create indicators
-              href: manage-indicators.md
-              items:
               - name: Create indicators for files
                 href: indicator-file.md
               - name: Create indicators for IPs and URLs/domains
@@ -364,21 +364,21 @@
               - name: Manage automation folder exclusions
                 href: manage-automation-folder-exclusions.md
 
-          - name: Device management
-            items:
-              - name: Onboarding devices
-                href: onboarding.md
-              - name: Offboarding devices
-                href: offboard-machines.md
-              - name: Ensure your devices are configured properly
-                href: configure-machines.md
-              - name: Monitor and increase device onboarding
-                href: configure-machines-onboarding.md
-              - name: Updating MMA on Windows devices
-                href: update-agent-mma-windows.md
+        - name: Device management
+          items:
+            - name: Onboarding devices
+              href: onboarding.md
+            - name: Offboarding devices
+              href: offboard-machines.md
+            - name: Ensure your devices are configured properly
+              href: configure-machines.md
+            - name: Monitor and increase device onboarding
+              href: configure-machines-onboarding.md
+            - name: Updating MMA on Windows devices
+              href: update-agent-mma-windows.md
 
-          - name: Configure time zone settings
-            href: time-settings.md
+        - name: Configure time zone settings
+          href: time-settings.md
 
       - name: Manage and maintain Defender for Endpoint 
         href: mde-operations-guide.md   
