@@ -321,6 +321,9 @@
       - name: Manage and maintain Defender for Endpoint 
         href: mde-operations-guide.md   
 
+  - name: Defender for Endpoint Security Operations Guide 
+    href: mde-sec-ops-guide.md
+    
   - name: How to guides
     items:
     - name: Integration with Microsoft Defender for Cloud
@@ -335,9 +338,6 @@
       href: onboarding-endpoint-configuration-manager.md
     - name: Onboarding using Microsoft Intune
       href: onboarding-endpoint-manager.md
-
-  - name: Defender for Endpoint Security Operations Guide 
-    href: mde-sec-ops-guide.md
 
   - name: Migration guides
     items:
