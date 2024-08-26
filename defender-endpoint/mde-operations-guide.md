@@ -25,6 +25,7 @@ This guide helps you manage and maintain your security posture with Defender for
 - Guidance on safe configurations including use of exclusions
 - Troubleshooting information  
 
+
 ## Setp 1: Determine your objectives
 
 ### Objective: Onboard devices 
