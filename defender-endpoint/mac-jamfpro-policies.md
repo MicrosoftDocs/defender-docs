@@ -32,7 +32,7 @@ Use this article to set up policies for Defender for Endpoint on Mac using Jamf 
 ## Step 1: Get the Microsoft Defender for Endpoint onboarding package
 
 > [!IMPORTANT]
-> You must have an appropriate role assigned to view, manage, and onboard devices. For more information, see [Manage access to Microsoft Defender XDR with Microsoft Entra global roles](/defender-xdr/m365d-permissions.md).
+> You must have an appropriate role assigned to view, manage, and onboard devices. For more information, see [Manage access to Microsoft Defender XDR with Microsoft Entra global roles](../defender-xdr/m365d-permissions.md#manage-access-to-microsoft-defender-xdr-with-microsoft-entra-global-roles).
 
 1. In the [Microsoft Defender Portal](https://security.microsoft.com), navigate to **Settings > Endpoints > Onboarding**.
 
