@@ -53,7 +53,19 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
 
-### Jul-2024 (Build: 101.24062.0009  | Release version: )
+### Aug-2024 (Build: 101.24072.0006  | Release version: 20.124072.6.0)
+
+| Build:             | **101.24072.0006**         |
+|--------------------|-----------------------|
+| Release version:   | 20.124072.6.0 |
+| Engine version:    | 1.1.24060.7 |
+| Signature version: | 1.417.325.0      |
+
+##### What's new
+
+- Bug and performance fixes
+
+### Jul-2024 (Build: 101.24062.0009  | Release version: 20.124062.9.0)
 
 | Build:             | **101.24062.0009**         |
 |--------------------|-----------------------|
