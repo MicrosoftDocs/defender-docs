@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 08/13/2024
+ms.date: 08/26/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -42,6 +42,8 @@ For more information on what's new with other Microsoft Defender security produc
 ## August 2024
 
 - (Preview) You can now run [simulations](attack-simulation-training-simulations.md) with QR code payloads in [Attack simulation training](attack-simulation-training-get-started.md). You can track user repsonses and assign training to end users.
+
+- [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Microsoft 365 and Outlook 2021 now support the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
 
 ## July 2024
 
@@ -164,7 +166,7 @@ For more information on what's new with other Microsoft Defender security produc
 
 - The new Microsoft Defender XDR role-based access control (RBAC) model, with support for Microsoft Defender for Office, is now available in public preview. For more information, see [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
-- [Use the built-in Report button in Outlook on the web](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): Use the built-in Report button in Outlook on the web to report messages as phish, junk, and not junk.
+- [Use the built-in Report button on Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): Use the built-in Report button in Outlook on the web and new Outlook for Windows client to report messages as phish, junk, and not junk.
 
 ## October 2022
 

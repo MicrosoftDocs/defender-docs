@@ -17,7 +17,7 @@ ms.topic: conceptual
 search.appverid:
   - MOE150
   - MET150
-ms.date: 04/01/2024
+ms.date: 08/22/2024
 ---
 
 # Triage and investigate incidents with guided responses from Microsoft Copilot in Microsoft Defender
@@ -73,7 +73,11 @@ To use guided responses, perform the following steps:
 > [!NOTE]
 > Grayed out action buttons mean these actions are limited by your permission. [Refer to the unified role-based access (RBAC) permissions](manage-rbac.md) page for more information.
 
-Copilot in Defender supports incident response teams by enabling analysts to gain more context about response actions with additional insights. For remediation responses, incident response teams can view additional information with options like **View similar incidents** or **View similar emails**.
+Copilot helps speed up analysts' investigation tasks. When an incident requires further investigation on a user activity, Copilot suggests text that analysts can use to communicate with a user. The guided response card includes a **Contact user in Teams** or **Copy to clipboard** action that copies the suggested text to the clipboard. Analysts can then paste the text into an email or another communication tool. The analyst can also gain more context about the user through the **View user** action.
+
+   :::image type="content" source="/defender/media/copilot-in-defender/guided-response/guided-response-teams-message-main.png" alt-text="Screenshot that shows the suggested text for communication in a guided response card.":::
+
+Copilot also supports incident response teams by enabling analysts to gain more context about response actions with additional insights. For remediation responses, incident response teams can view additional information with options like **View similar incidents** or **View similar emails**.
 
 The **View similar incidents** action becomes available when there are other incidents within the organization that are similar to the current incident. The Similar incidents tab lists similar incidents that you can review. Microsoft Defender automatically identifies similar incidents within the organization through machine learning. Incident response teams can use the information from these similar incidents to classify incidents and further review the actions done in those similar incidents.
 

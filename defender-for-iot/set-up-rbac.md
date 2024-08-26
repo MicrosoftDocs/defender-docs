@@ -31,21 +31,21 @@ To make general changes to RBAC roles and permissions that relate to all other a
 There are two ways to manage user access to the Defender portal, depending on the type of tenent you're using. Each system has different named permissions that allow access for site security. The two systems are:
 
 - [Global Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference).
-- [Unified RBAC](/defender-xdr/custom-roles): Use unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
+- [Microsoft Defender XDR Unified RBAC](/defender-xdr/custom-roles): Use Defender XDR Unified role-based access control (RBAC) to manage access to specific data, tasks, and capabilities in the Defender portal.
 
-The instructions and permission settings listed in this article apply to the unified RBAC version.
+The instructions and permission settings listed in this article apply to Defender XDR Unified RBAC.
 
 ### RBAC for version 1 or 2
 
-Depending on your tenant, you might have access to RBAC version 1 or 2 instead of the unified version. For more information, see [permissions for RBAC version 1](/defender-endpoint/prepare-deployment), or [permissions for RBAC version 2](/defender-endpoint/user-roles#permission-options).
+Depending on your tenant, you might have access to RBAC version 1 or 2 instead of Defender XDR Unified RBAC. For more information, see [permissions for RBAC version 1](/defender-endpoint/prepare-deployment), or [permissions for RBAC version 2](/defender-endpoint/user-roles#permission-options).
 
 If you're using the Defender portal for the first time, you need to set up all of your roles and permissions. For more information, see [manage portal access using role-based access control](/defender-xdr/manage-rbac).
 
-## Set up unified RBAC roles for site security
+## Set up Defender XDR Unified RBAC roles for site security
 
 Assign RBAC permissions and roles, based on the [summary table](#summary-of-roles-and-permissions-for-site-security), to give users access to site security features:
 
-1. In the Defender portal, select **Settings > Microsoft XDR > Permissions and roles**.
+1. In the Defender portal, select **Settings** \> **Microsoft XDR** \> **Permissions and roles**.
 1. Enable **Endpoints & Vulnerability Management**.
 1. Select **Go to Permissions and roles**.
 1. Select **Create custom role**.
