@@ -27,7 +27,7 @@ This article describes how to enable Defender for Endpoint integration manually 
 
 ## Enable integration on a subscription
 
-If you've never enabled the Defender for Endpoint unified solution, you can turn it on manually for both Windows and Linux machines in a subscription using the [REST API call](#enable-the-microsoft-defender-for-endpoint-unified-solution-at-scale), or in the portal as follows:
+If you've never enabled the Defender for Endpoint unified solution, you can turn it on manually as follows:
 
 1. In Defender for Cloud, select **Environment settings** and select the subscription containing the machines on which you want to deploy the Defender for Endpoint integration.
 
