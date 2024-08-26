@@ -22,7 +22,7 @@ To enable Defender for Storage at the subscription level using the Azure portal:
 
     :::image type="content" source="media/defender-for-storage-malware-scan/azure-portal-enablement-subscription.png" alt-text="Screenshot that shows where to select the subscription." lightbox="media/defender-for-storage-malware-scan/azure-portal-enablement-subscription.png":::
 
-1. Click on 3 dots at right and select **Edit settings** option
+1. Select the three dots on the right and then choose the **Edit settings** option.
 1. On the Defender plans page, locate **Storage** in the list and select **On** and **Save**. If you currently have Defender for Storage enabled with per-transaction pricing, select the **New pricing plan available** link and confirm the pricing change.
 
     :::image type="content" source="media/defender-for-storage-malware-scan/azure-portal-enablement-turn-on.png" alt-text="Screenshot that shows where to turn on Storage plan." lightbox="media/defender-for-storage-malware-scan/azure-portal-enablement-turn-on.png":::
