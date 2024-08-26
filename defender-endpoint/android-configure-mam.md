@@ -88,7 +88,7 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
         Because mobile app management doesn't require device management, you can protect company data on both managed and unmanaged devices. The management is centered on the user identity, which removes the requirement for device management. Companies can use app protection policies with or without MDM at the same time. For example, consider an employee that uses both a phone issued by the company, and their own personal tablet. The company phone is enrolled in MDM and protected by app protection policies while the personal device is protected by app protection policies only.
 
-    1. Select Apps.
+     1. Select Apps.
 
         A managed app is an app that has app protection policies applied to it, and can be managed by Intune. Any app that has been integrated with the [Intune SDK](/mem/intune/developer/app-sdk) or wrapped by the [Intune App Wrapping Tool](/mem/intune/developer/apps-prepare-mobile-application-management) can be managed using Intune app protection Policies. See the official list of [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps) that have been built using these tools and are available for public use.
 
@@ -106,7 +106,7 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
   Select **Included groups**. Then add the relevant groups.
 
-    :::image type="content" source="media/assignment.png" alt-text="The Included groups pane in the Microsoft Defender portal." lightbox="media/assignment.png":::
+  :::image type="content" source="media/assignment.png" alt-text="The Included groups pane in the Microsoft Defender portal." lightbox="media/assignment.png":::
 
 > [!NOTE]
 > If a config policy is to be targeted at unenrolled devices (MAM), the recommendation is to deploy the general app configuration settings in Managed Apps instead of using Managed Devices.
@@ -130,7 +130,7 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
 4. Install the Microsoft Defender: Antivirus (Mobile) app and go back to the managed app onboarding screen.
 
-    :::image type="content" source="media/mam-flow.png" alt-text="Shows the procedure of downloading Microsoft Defender: Antivirus (Mobile) app." lightbox="media/mam-flow.png":::
+   :::image type="content" source="media/mam-flow.png" alt-text="Shows the procedure of downloading Microsoft Defender: Antivirus (Mobile) app." lightbox="media/mam-flow.png":::
    
 5. Click **Continue > Launch**. The Microsoft Defender for Endpoint app onboarding/activation flow is initiated. Follow the steps to complete onboarding. You'll automatically be redirected back to Managed app onboarding screen, which now indicates that the device is healthy.
 
@@ -149,14 +149,14 @@ Web protection helps to secure devices against web threats and protect users fro
 3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 
 4. In the **Settings** page, under the **General Configuration Settings**, add the following keys and set their value as required.
-    - **antiphishing**
-    - **vpn**
+   - **antiphishing**
+   - **vpn**
 
    To disable web protection, enter 0 for the antiphishing and VPN values.
 
    To disable only the use of VPN by web protection, enter these values:
-    - 0 for vpn
-    - 1 for antiphishing
+   - 0 for vpn
+   - 1 for antiphishing
 
    Add **DefenderMAMConfigs** key and set the value as 1.
 
@@ -254,8 +254,10 @@ Use the following steps to configure the Disable sign out:
 2. Provide the policy a **name**.
 3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 4. In the **Settings** page, under the **General Configuration Settings**, add **DisableSignOut** as the key and set the value as 1.
+
    - By default, Disable Sign Out = 0.
    - Admin needs to make Disable Sign Out = 1 to disable the sign-out button in the app. Users will not see the sign out button once the policy is pushed to the device.
+
 5. Select **Next** and assign this profile to targeted devices and users.
 
 
@@ -269,6 +271,7 @@ Use the following steps to configure the Device tags:
 2. Provide the policy a **name**.
 3. Under **Select Public Apps**, choose **Microsoft Defender for Endpoint** as the target app.
 4. In Settings page, select Use configuration designer and add **DefenderDeviceTag** as the key and value type as **String**.
+
    - Admin can assign a new tag by adding the key **DefenderDeviceTag** and setting a value for device tag.
    - Admin can edit an existing tag by modifying the value of the key **DefenderDeviceTag**.
    - Admin can delete an existing tag by removing the key **DefenderDeviceTag**.
