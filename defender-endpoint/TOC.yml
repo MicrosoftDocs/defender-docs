@@ -318,7 +318,7 @@
         - name: Run a detection test on a newly onboarded Microsoft Defender for Endpoint
           href: run-detection-test.md
 
-      - name: Configure portal settings
+- name: Configure portal settings
         items:
           - name: Configure general Defender for Endpoint settings
             href: preferences-setup.md
