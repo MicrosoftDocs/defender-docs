@@ -97,7 +97,7 @@
         href: defender-endpoint-demonstration-smartscreen-url-reputation.md
  
   - name: Operationalize Microsoft Defender for Endpoint
-
+    items:
       - name: Deploy Defender for Endpoint
         items:
         - name: Overview
