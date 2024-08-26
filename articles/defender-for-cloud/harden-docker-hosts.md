@@ -8,25 +8,25 @@ ms.date: 06/29/2023
 ---
 # Review Docker host hardening recommendations
 
-Microsoft Defender for Cloud identifies unmanaged containers hosted on IaaS Linux VMs, or other Linux machines running Docker containers. Defender for Cloud continuously assesses the configurations of these containers. It then compares them with the [Center for Internet Security (CIS) Docker Benchmark](https://www.cisecurity.org/benchmark/docker/).
+The Defender for Servers plan in Microsoft Defender for Cloud identifies unmanaged containers hosted on IaaS Linux VMs, or other Linux machines running Docker containers. Defender for Servers continuously assesses the configuration of these Docker hosts, and compares them with the [Center for Internet Security (CIS) Docker Benchmark](https://www.cisecurity.org/benchmark/docker/).
 
-Defender for Cloud includes the entire ruleset of the CIS Docker Benchmark and alerts you if your containers don't satisfy any of the controls. When it finds misconfigurations, Defender for Cloud generates security recommendations. Use Defender for Cloud's **recommendations page** to view recommendations and remediate issues.
-
+- Defender for Cloud includes the entire ruleset of the CIS Docker Benchmark and alerts you if your containers don't satisfy any of the controls.
+- When it finds misconfigurations, Defender for Servers generates security recommendations to address findings.- 
 When vulnerabilities are found, they're grouped inside a single recommendation.
 
->[!NOTE]
-> These CIS benchmark checks will not run on AKS-managed instances or Databricks-managed VMs.
+> [!NOTE]
+> Docker host hardening uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA) to collect host information for assessment. 
+> The MMA is set to retire, and the Docket host hardening feature will be deprecated in November 2024.
 
-## Availability
 
-|Aspect|Details|
-|----|:----|
-|Release state:|General availability (GA)|
-|Pricing:|Requires [Microsoft Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features)|
-|Required roles and permissions:|**Reader** on the workspace to which the host connects|
-|Clouds:|:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br>:::image type="icon" source="./media/icons/yes-icon.png"::: National (Azure Government, Microsoft Azure operated by 21Vianet)<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Connected AWS accounts|
+## Prerequisites
 
-## Identify and remediate security vulnerabilities in your Docker configuration
+- You need [Defender for Servers Plan 2](defender-for-servers-overview.md) to use this feature.
+- These CIS benchmark checks will not run on AKS-managed instances or Databricks-managed VMs.
+- You need *Reader** permissions on the workspace to which the host connects.
+
+
+## Identify Docker configuration issues
 
 1. From Defender for Cloud's menu, open the **Recommendations** page.
 
@@ -54,8 +54,6 @@ When vulnerabilities are found, they're grouped inside a single recommendation.
 
 1. When you're sure the command is appropriate and ready for your host, select **Run**.
 
-## Next step
+## Next steps
 
-Docker hardening is just one aspect of Defender for Cloud's container security features.
-
-Learn more [Container security in Defender for Cloud](defender-for-containers-introduction.md).
+Learn more about [container security in Defender for Cloud](defender-for-containers-introduction.md).
