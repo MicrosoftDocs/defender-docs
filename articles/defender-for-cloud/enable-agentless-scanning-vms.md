@@ -16,7 +16,7 @@ When you turn on Defender for Servers Plan 2, or the Defender Cloud Security Pos
 ## Prerequisites
 
 - To use agentless scanning the [Defender CSPM](concept-cloud-security-posture-management.md) plan, or [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled. 
-- Agentless machine scanning is available for Azure VMs,and for AWS/GCP machines connected to Defender for Cloud.
+- Agentless machine scanning is available for Azure VMs, AWS/GCP machines connected to Defender for Cloud, and for on-premises machines onboarded as Azure Arc-enabled VMs.
 - Malware scanning on machines if only available if you're running Defender for Servers Plan 2.
 - Agentless scanning is avilable on Azure standard VMs with:
     -  Maximum total disk size allowed: 4TB (the sum of all disks)

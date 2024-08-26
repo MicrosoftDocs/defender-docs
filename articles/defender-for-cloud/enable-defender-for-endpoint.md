@@ -8,24 +8,22 @@ ms.date: 03/13/2024
 #customer intent: As a user, I want to learn how to enable the Defender for Endpoint integration in Defender for Cloud so that I can protect my Azure, hybrid, and multicloud machines.
 ---
 
-# Enable the Defender for Endpoint integration
+# Enable Defender for Endpoint integration
 
 The Defender for Servers plan in Microsoft Defender for Cloud [integrates natively with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md) to provide Defender for Endpoint and Microsoft Defender Vulnerability Management capabilities to machines protected by Defender for Servers.
 
 When you turn on the Defender for Servers plan, Defender for Endpoint integration is turned on by default for supported machines connected to Defender for Cloud. Integration automatically deploys the Defender for Endpoint sensor on connected machines.
 
-This article describes how to enable Defender for Endpoint integration manually if needed, for Windows and Linux machines.
+This article describes how to enable Defender for Endpoint integration manually if needed.
 
 ## Prerequisites
 
 - **Windows support**: Verify that Windows machines are [supported by Defender for Endpoint](/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016).
 - **Linux servers**: For Linux servers, you must have Python installed. Python 3 is recommended for all distros, but is required for RHEL 8.x and Ubuntu 20.04 or higher. 
 - **Azure VMs**: Check that VMs can connect to the Defender for Endpoint service. If machines don't have direct access, your proxy settings or firewall rules need to allow access to Defender for Endpoint URLs. Review proxy settings for [Windows](/defender-endpoint/configure-proxy-internet) and [Linux](/defender-endpoint/linux-static-proxy-configuration) machines.
-- **On-premises VMs**: - Onboard [on-premises machines](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) as Azure Arc VMs to Defender for Cloud.
+- **On-premises VMs**: - We recommend [onboarding on-premises machines as Azure Arc-enabled VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). If you [onboard on-premises VMs directly](onboard-machines-with-defender-for-endpoint.md), Defender Server Plan 1 features will be available, but most Defender for Servers Plan 2 functionlity isn't available.
 - If you've moved your subscription between Azure tenants, some manual preparatory steps are also required. For details, [contact Microsoft support](https://portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview).
 
-> [!NOTE]
-> If you deploy Defender for Servers Plan 2 (and the Defender for Endpoint sensor isn't deployed on Windows 2012 R2 and 2016 servers) and then downgrade to Plan 1, the sensor won't be deployed automatically to those servers, so that your existing deployment isn't changed without your explicit consent.
 
 ## Enable integration on a subscription
 
@@ -57,7 +55,12 @@ If you've never enabled the Defender for Endpoint unified solution, you can turn
 
 ## Enable manually on Windows machines (plan and integration on)
 
-If Defender for Servers is already enabled and Defender for Endpoint integration, you can manually turn on the integration for specific machines using the [REST API call](#enable-the-microsoft-defender-for-endpoint-unified-solution-at-scale), or turn on in the portal as follows:
+If Defender for Servers is already enabled and Defender for Endpoint integration, you can manually turn on the integration for specific machines using the [REST API call](#enable-the-microsoft-defender-for-endpoint-unified-solution-at-scale), or turn on in the portal.
+
+> [!NOTE]
+> If you deploy Defender for Servers Plan 2 (and the Defender for Endpoint sensor isn't deployed on Windows 2012 R2 and 2016 servers) and then downgrade to Plan 1, the sensor won't be deployed automatically to those servers, so that your existing deployment isn't changed without your explicit consent.
+
+Enable as follows:
 
 1. In Defender for Cloud, select **Environment settings** and select the subscription with the Windows machines that you want to receive Defender for Endpoint.
 

@@ -14,7 +14,7 @@ ms.custom: template-concept
 
 Microsoft Defender for Cloud provides agentless machine scanning to improve security posture of machines to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
-Agentless scanning for virtual machines:
+Overview: Agentless scanning for virtual machines:
 
 - **Scans software inventory**: Scan your [software inventory](/defender-vulnerability-management/tvm-software-inventory) for broad visibility with integrated Microsoft Defender Vulnerability Management.
 -  **Scans for vulnerabilities**: [Assess machines for vulnerabilities](auto-deploy-vulnerability-assessment.md) using integrated Defender Vulnerability Management.

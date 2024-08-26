@@ -5,7 +5,7 @@ ms.topic: how-to
 ms.date: 06/29/2023
 ---
 
-# Overview - Just-in-time (JIT) VM access
+# Overview: Just-in-time (JIT) VM access
 
 The Defender for Servers Plan 2 in Microsoft Defender for Cloud provides a just-in-time (JIT) VM access.
 
