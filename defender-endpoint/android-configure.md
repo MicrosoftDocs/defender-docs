@@ -132,7 +132,7 @@ Admin Privacy Controls (MDM) Use the following steps to enable privacy.
 
 4. On the Settings page, select **Use configuration designer** and then select **Add**.
 
-5. Select the required privacy setting -
+5. Select the required privacy setting
     - Hide URLs in report
     - Hide URLs in report for personal profile
     - Hide app details in report
@@ -198,8 +198,10 @@ Defender for Endpoint supports vulnerability assessment of apps in the work prof
 2. Give the policy a name; **Platform \> Android Enterprise**; select the profile type.
 3. Select **Microsoft Defender for Endpoint** as the target app.
 4. In Settings page, select **Use configuration designer** and add **DefenderTVMPrivacyMode** as the key and value type as **Integer**
+
    - To disable vulnerability of apps in the work profile, enter value as `1` and assign this policy to users. By default, this value is set to `0`.
    - For users with key set as `0`, Defender for Endpoint sends the list of apps from the work profile to the backend service for vulnerability assessment.
+
 5. Select **Next** and assign this profile to targeted devices/users.
 
 Turning the above privacy controls on or off won't impact the device compliance check or conditional access.
@@ -238,7 +240,9 @@ Use the following steps to turn on privacy for targeted users in the work profil
 2. Give the policy a name, **Platform > Android Enterprise**, select the profile type.
 3. Select **Microsoft Defender for Endpoint** as the target app.
 4. In Settings page, select **Use configuration designer** and add **DefenderExcludeURLInReport** as the key and value type as **Integer**.
-   - Enter **1 to enable privacy**. The default value is 0.
+
+   Enter **1 to enable privacy**. The default value is 0.
+
 5. Select **Next** and assign this profile to targeted devices/users.
 
 Turning the above privacy controls on or off won't impact the device compliance check or conditional access.
@@ -277,7 +281,9 @@ Use the following steps to turn on privacy for targeted users in the work profil
 2. Give the policy a name, **Platform > Android Enterprise**, select the profile type.
 3. Select **Microsoft Defender for Endpoint** as the target app.
 4. In Settings page, select **Use configuration designer** and add **DefenderExcludeAppInReport** as the key and value type as **Integer**
-   - Enter **1 to enable privacy**. The default value is 0.
+
+   Enter **1 to enable privacy**. The default value is 0.
+
 5. Select **Next** and assign this profile to targeted devices/users.
 
 Using this privacy control won't impact the device compliance check or conditional access. For example, devices with a malicious app will always have a risk level of "Medium".
@@ -291,8 +297,10 @@ Use the following steps to configure Disable sign-out:
 2. Give the policy a name, select **Platform > Android Enterprise**, and select the profile type.
 3. Select **Microsoft Defender for Endpoint** as the target app.
 4. In the Settings page, select **Use configuration designer** and add **Disable Sign Out** as the key and **Integer** as the value type.
+
    - By default, Disable Sign Out = 1 for Android Enterprise personally owned work profiles, fully managed, company owned personally enabled profiles and 0 for device administrator mode.
    - Admins need to make Disable Sign Out = 0 to enable the sign-out button in the app. Users will be able to see the sign-out button once the policy is pushed.
+
 5. Select **Next** and assign this profile to targeted devices and users.
 
 > [!IMPORTANT]
@@ -308,6 +316,7 @@ Use the following steps to configure the Device tags:
 2. Give the policy a name, select **Platform > Android Enterprise**, and select the profile type.
 3. Select **Microsoft Defender for Endpoint** as the target app.
 4. In Settings page, select Use configuration designer and add **DefenderDeviceTag** as the key and value type as **String**.
+
    - Admin can assign a new tag by adding the key **DefenderDeviceTag** and setting a value for device tag.
    - Admin can edit an existing tag by modifying the value of the key **DefenderDeviceTag**.
    - Admin can delete an existing tag by removing the key **DefenderDeviceTag**.
@@ -317,6 +326,7 @@ Use the following steps to configure the Device tags:
 
 > [!NOTE]
 > The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
+
 ## Related articles
 
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
