@@ -23,18 +23,14 @@ Defender for Servers provides two plans.
 
 - **Plan the deployment**. Work through the [Defender for Servers planning guide](plan-defender-for-servers.md).
 - **Review plans**. [Understand and compare](defender-for-servers-overview.md) plans.
-- **Decide on deployment scope**: You can enable Plan 1 at subscription-level or on specific Azure resources. Plan 2 can only be enabled on a subscription. You can disable protection for specific machines in the subscription.<br/><br/> Defender for Server settings for each resource are inherited by the subscription-level settings by default. If you change settings at the resource level, the resource no longer inherits settings from its parent subscription unless you delete the settings you configured. [Learn more about deployment scope](defender-for-servers-overview.md#enabling-plans).
+- **Decide on deployment scope**: You can enable Plan 1 on an Azure subscription, AWS account, GCP project, or on specific Azure resources. Plan 2 can only be enabled on a subscription, AWS account, or GCP project.  If you enable on a subscription, you can disable protection for specific machines in the subscription.
 - **Review pricing**. Check Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 - **Get an Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) as needed.
 - Ensure Defender for Cloud is [enabled on the subscription](connect-azure-subscription.md).
-- **Onbobard AWS/GCP machines**. To protect AWS, GCP machines, connect [AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) to Defender for Cloud. The connection process onboards multicloud machines as Azure Arc-enabled VMs.
-- **Deploy on-premises machines**. To use full Defender for Servers functionality, on-premises machines should be [onboarded to the subscription as Azure Arc VMs](quickstart-onboard-machines.md). If you onboard on-premises machines by [directly installing the Defender for Endpoint agent](onboard-machines-with-defender-for-endpoint.md), Defender Plan 1 features are available. For Defender for Servers Plan 2, in addition to Plan 1 features, the only other available capability will be premium Defender Vulnerability Management features.
+- **Onboard AWS/GCP machines**. To protect AWS, GCP machines, connect [AWS accounts](quickstart-onboard-aws.md) and [GCP projects](quickstart-onboard-gcp.md) to Defender for Cloud. The connection process onboards multicloud machines as Azure Arc-enabled VMs.
+- **Onboard on-premises machines**. To use full Defender for Servers functionality, on-premises machines should be [onboarded to the subscription as Azure Arc VMs](quickstart-onboard-machines.md). If you onboard on-premises machines by [directly installing the Defender for Endpoint agent](onboard-machines-with-defender-for-endpoint.md), Defender Plan 1 features are available. For Defender for Servers Plan 2, in addition to Plan 1 features, the only other available capability will be premium Defender Vulnerability Management features.
 - **Review support requirements**. Check [Defender for Servers requirements and support](support-matrix-defender-for-servers.md) information.
-- **Configure for a custom Log Analytics workspace**: If you used the suggested default Log Analytics workspace when you enabled Defender for Cloud on a subscription for the first time, when you turn on Defender for Servers Plan 2 it's enabled automatically on that workspace.
-    - The workspace isn't relevant for Plan 1.
-    - If you used a custom workspace when you enabled Defender for Cloud, you need to specifically enable Defender for Servers Plan 2 on that workspace.
-    - All machines connected to the workspace then have Plan 2 enabled, regardless of the settings on their connected subscription.
-    - [Learn more](plan-defender-for-servers-data-workspace.md) about workspace planning in Defender for Servers.
+- **Configure for a custom Log Analytics workspace**: If you [used the default Log Analytics workspace](plan-defender-for-servers-data-workspace.md) when you enabled Defender for Cloud on a subscription for the first time, when you turn on Defender for Servers Plan 2 it's enabled automatically on that workspace. If you used a custom workspace, you will need to specifically enable Defender for Servers Plan 2 on it. The workspace isn't relevant for Plan 1.
 - **Integration**: Defender for Endpoint integration is enabled by default in Defender for Cloud. When you enable Defender for Servers, you give consent for the plan to access the Defender for Endpoint data related to vulnerabilities, installed software, and alerts for endpoints.
 
 ## Enable on Azure, AWS, or GCP
@@ -71,6 +67,9 @@ After enabling the plan, you have the ability to [configure the features of the 
 
 Although we recommend that you enable the plan for an entire Azure subscription, you can turn on Plan 1 for a specific resource using the Defender for Cloud REST API or a PowerShell script.
 
+-  Defender for Server settings for each resource are inherited by the subscription-level settings by default.
+- If you change settings at the resource level, the resource no longer inherits settings from its parent subscription unless you delete the settings you configured.
+
 ### Enable for a specific machine
 
 To turn Plan 1 on for a specific resource, use the Defender for Cloud REST API.[Pricings resource](/rest/api/defenderforcloud/pricings).
@@ -87,7 +86,7 @@ Enable Plan 1 on a resource group or Azure resource tags as follows:
 
 ## Enable Plan 2 on a custom workspace
 
-If you're not using the default workspace created when you enabled Defender for Cloud on an Azure subscription, you can enable Plan 2 on your custom workspaces as follows:
+If you're not using the default workspace created when you enabled Defender for Cloud on an Azure subscription, you should enable Plan 2 on your custom workspaces. After enabling, all machines connected to the workspace have Plan 2 enabled, regardless of the settings on their connected subscription.
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Defender for Cloud**.
 

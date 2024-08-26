@@ -8,7 +8,7 @@ ms.date: 08/19/2024
 #customer intent: I want to understand endpoint detection and response (EDR) capabilities provided by Defender for Servers plan, and what EDR solutions are available.
 ---
 
-# Overview: Endpoint detection and response 
+# Overview - Endpoint detection and response 
 
 The Defender for Servers plan in Microsoft Defender for Cloud integrates endpoint detection and response (EDR) protection for supported machines. Defender for Servers:
 
@@ -17,7 +17,7 @@ The Defender for Servers plan in Microsoft Defender for Cloud integrates endpoin
 
 > [!NOTE]
 > - Agentless scanning for EDR solutions replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously use to collect machine data.
-> - The MMA is set to retire in August 2024. Scanning using the MMA will be deprecated in November 2024.
+> - The MMA is set to retire. Scanning using the MMA will be deprecated in November 2024.
 
 
 

@@ -10,11 +10,11 @@ ms.custom: template-concept
 #customer intent: As a user, I want to understand how agentless machine scanning works in Defender for Cloud so that I can effectively collect data from my machines.
 ---
 
-# Agentless machine scanning
+# Overview - Agentless machine scanning
 
-Microsoft Defender for Cloud provides agentless machine scanning to improve security posture of machines to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+Microsoft Defender for Cloud provides agentless machine scanning to improve security posture of machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
-Overview: Agentless scanning for virtual machines:
+Agentless machine scanning:
 
 - **Scans software inventory**: Scan your [software inventory](/defender-vulnerability-management/tvm-software-inventory) for broad visibility with integrated Microsoft Defender Vulnerability Management.
 -  **Scans for vulnerabilities**: [Assess machines for vulnerabilities](auto-deploy-vulnerability-assessment.md) using integrated Defender Vulnerability Management.
@@ -26,15 +26,23 @@ Agentless scanning is available in the following Defender for Cloud plans:
 - [Defender Cloud Security Posture Management (CSPM)](concept-cloud-security-posture-management.md).
 - [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features).
 - Malware scanning is only available in Defender for Servers Plan 2.
-- Agentless scanning is available for Azure VMs, GCP/AWS machines connected to Defender for Cloud, and on-premises machines that are onboarded as Azure Arc-enabled VMs. Agentless scanning isn't available for on-premises machines that are [directly onboarded to Defender for Cloud](quickstart-onboard-machines.md).
+- Agentless scanning is available for Azure VMs, GCP/AWS machines connected to Defender for Cloud, and on-premises machines that are onboarded as Azure Arc-enabled VMs. 
 
 ## Agentless scanning architecture
 
-Agentless scanning for VMs uses cloud APIs to collect data. Whereas agent-based methods use operating system APIs in runtime to continuously collect security related data. Defender for Cloud takes snapshots of VM disks and performs an out-of-band, deep analysis of the operating system configuration and file system stored in the snapshot. The copied snapshot remains in the same region as the VM. The VM isn't affected by the scan.
+Here's how agentless scanning works:
 
-After acquiring the necessary metadata is acquired from the copied disk, Defender for Cloud immediately deletes the copied snapshot of the disk and sends the metadata to Microsoft engines to detect configuration gaps and potential threats. For example, in vulnerability assessment, the analysis is done by Defender Vulnerability Management. The results are displayed in Defender for Cloud, which consolidates both the agent-based and agentless results on the Security alerts page.
+1. Defender for Cloud takes snapshots of VM disks and performs an out-of-band, deep analysis of the operating system configuration and file system stored in the snapshot.
 
-The scanning environment where disks are analyzed is regional, volatile, isolated, and highly secure. Disk snapshots and data unrelated to the scan aren't stored longer than is necessary to collect the metadata, typically a few minutes.
+    - The copied snapshot remains in the same region as the VM.
+    - The VM isn't affected by the scan.
+
+2. After acquiring the necessary metadata from the copied disk, Defender for Cloud immediately deletes the copied snapshot of the disk and sends the metadata to relevant Microsoft engines to detect configuration gaps and potential threats.
+
+    - For example, in vulnerability assessment, the analysis is done by Defender Vulnerability Management. 
+    - The results are displayed in Defender for Cloud, which consolidates both the agent-based and agentless results on the Security alerts page.
+
+3. Disks are analyzed in a a scanning environment that's regional, volatile, isolated, and highly secure. Disk snapshots and data unrelated to the scan aren't stored longer than is necessary to collect the metadata, typically a few minutes.
 
 :::image type="content" source="media/concept-agentless-data-collection/agentless-scanning-process.png" alt-text="Diagram of the process for collecting operating system data through agentless scanning.":::
 
@@ -122,7 +130,7 @@ The role “VmScanner” is assigned to the scanner when you enable agentless sc
             
 During onboarding, a new custom role is created with minimal permissions required to get instances status and create snapshots.
 
-On top of that permissions to an existing GCP KMS role are granted to support scanning disks that are encrypted with CMEK. The roles are:
+In addition, permissions to an existing GCP KMS role are granted to support scanning disks that are encrypted with CMEK. The roles are:
 
 - roles/MDCAgentlessScanningRole granted to Defender for Cloud’s service account with permissions: compute.disks.createSnapshot, compute.instances.get
 - roles/cloudkms.cryptoKeyEncrypterDecrypter granted to Defender for Cloud’s compute engine service agent
