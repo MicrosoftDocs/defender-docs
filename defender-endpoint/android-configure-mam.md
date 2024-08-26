@@ -44,15 +44,15 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
 - **Validate that the Microsoft Defender for Endpoint-Intune connector is enabled**.
 
-  a. Go to security.microsoft.com.
+  1. Go to security.microsoft.com.
 
-  b. Select **Settings > Endpoints > Advanced Features > Microsoft Intune Connection** is turned on.
+  1. Select **Settings > Endpoints > Advanced Features > Microsoft Intune Connection** is turned on.
 
-  c. If the connection isn't turned on, select the toggle to turn it on and then select **Save Preferences**.
+  1. If the connection isn't turned on, select the toggle to turn it on and then select **Save Preferences**.
 
      :::image type="content" source="media/enable-intune-connection.png" alt-text="The Advanced features section in the Microsoft Defender portal." lightbox="media/enable-intune-connection.png":::
 
-  d. Go to the **Microsoft Intune admin center** and Validate whether Microsoft Defender for Endpoint-Intune connector is enabled.
+  1. Go to the **Microsoft Intune admin center** and Validate whether Microsoft Defender for Endpoint-Intune connector is enabled.
 
      :::image type="content" source="media/validate-intune-connector.png" alt-text="The intune-connector status pane in the Microsoft Defender portal." lightbox="media/validate-intune-connector.png":::
 
@@ -60,11 +60,11 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
   Configure the connector on Microsoft Intune for App protection policies:
 
-  a. Go to **Tenant Administration > Connectors and Tokens > Microsoft Defender for Endpoint**.
+  1. Go to **Tenant Administration > Connectors and Tokens > Microsoft Defender for Endpoint**.
 
-  b. Turn on the toggle for the app protection policy for Android (as seen in the following screenshot).
+  1. Turn on the toggle for the app protection policy for Android (as seen in the following screenshot).
 
-  c. Select **Save**.
+  1. Select **Save**.
 
      :::image type="content" source="media/app-settings.png" alt-text="The application settings pane in the Microsoft Defender portal." lightbox="media/app-settings.png":::
 
@@ -82,13 +82,13 @@ End users also need to take steps to install Microsoft Defender for Endpoint on 
 
   2. Add apps.
 
-     a. Choose how you want to apply this policy to apps on different devices. Then add at least one app.
+     1. Choose how you want to apply this policy to apps on different devices. Then add at least one app.
 
         Use this option to specify whether this policy applies to unmanaged devices. In Android, you can specify the policy applies to Android Enterprise, Device Admin, or Unmanaged devices. You can also choose to target your policy to apps on devices of any management state.
 
         Because mobile app management doesn't require device management, you can protect company data on both managed and unmanaged devices. The management is centered on the user identity, which removes the requirement for device management. Companies can use app protection policies with or without MDM at the same time. For example, consider an employee that uses both a phone issued by the company, and their own personal tablet. The company phone is enrolled in MDM and protected by app protection policies while the personal device is protected by app protection policies only.
 
-     b. Select Apps.
+    1. Select Apps.
 
         A managed app is an app that has app protection policies applied to it, and can be managed by Intune. Any app that has been integrated with the [Intune SDK](/mem/intune/developer/app-sdk) or wrapped by the [Intune App Wrapping Tool](/mem/intune/developer/apps-prepare-mobile-application-management) can be managed using Intune app protection Policies. See the official list of [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps) that have been built using these tools and are available for public use.
 
