@@ -7,7 +7,7 @@ ms.author: siosulli
 author: siosulli
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
-ms.date: 07/09/2024
+ms.date: 08/26/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -53,17 +53,7 @@ For more information on Microsoft Defender for Endpoint on specific operating sy
 
 ## August 2024
 
-- **Network Protection feature is enabled by default** on Microsoft Defender for **Android**. 
-
-  - As a result, users will be able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. 
-  
-  - Users are also required to provide location permission to complete the set up. 
-  
-  - Admins can change the default value for network protection if they decide not to use it via the Intune App Configuration policies.
-  
-  - This feature was already enabled by default earlier on Microsoft Defender for iOS.  
-    
-  - For more information, see [network protection](/defender-endpoint/android-configure#network-protection).
+- **Network Protection feature is enabled by default** in Microsoft Defender for Endpoint on Android. As a result, users will be able to see a network protection card in the Defender for Endpoint app, along with App Protection and Web Protection. Users are also required to provide location permission to complete the setup process. Admins can change the default value for network protection if they decide not to use it via the Intune App Configuration policies. This feature was already enabled by default earlier on Microsoft Defender for Endpoint on iOS. For more information, see [network protection](/defender-endpoint/android-configure#network-protection).
     
 ## July 2024
 
