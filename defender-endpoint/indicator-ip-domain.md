@@ -46,38 +46,45 @@ You can block malicious IPs/URLs through the settings page or by machine groups,
 > [!NOTE]
 > Classless Inter-Domain Routing (CIDR) notation for IP addresses is not supported.
 
-## Before you begin
-
-It's important to understand the following prerequisites prior to creating indicators for IPS, URLs, or domains:
-
-### Network Protection requirements
-
-URL/IP allow and block requires that the Microsoft Defender for Endpoint component _Network Protection_ is enabled in block mode. For more information on Network Protection and configuration instructions, see [Enable network protection](enable-network-protection.md).
-
 ### Supported operating systems
 
-- Windows 10, version 1709 or later
 - Windows 11
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2019
+
+- Windows 10, version 1709 or later
 - Windows Server 2022
+- Windows Server 2019
+- Windows Server 2016 running [Defender for Endpoint modern unified solution](/defender-endpoint/configure-server-endpoints) (requires installation through MSI)
+
+- Windows Server 2012 R2 running [Defender for Endpoint modern unified solution](/defender-endpoint/configure-server-endpoints) (requires installation through MSI)
+
 - macOS
 - Linux
 - iOS 
 - Android
 
-### Windows Server 2016 and Windows Server 2012 R2 requirements
+## Before you begin
 
-Windows Server 2016 and Windows Server 2012 R2 must be onboarded using the instructions in [Onboard Windows servers](configure-server-endpoints.md#windows-server-2016-and-windows-server-2012-r2).
+It's important to understand the following prerequisites prior to creating indicators for IPS, URLs, or domains:
 
 ### Microsoft Defender Antivirus version requirements
 
-The _Antimalware client version_ must be 4.18.1906.x or later.
+This feature is available if your organization uses [Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-windows) (in active mode)
+
+[Behavior Monitoring](/defender-endpoint/behavior-monitor) is enabled
+
+[Cloud-based protection](/windows/security/threat-protection/microsoft-defender-antivirus/deploy-manage-report-microsoft-defender-antivirus) is turned on.
+
+[Cloud Protection network connectivity](/defender-endpoint/configure-network-connections-microsoft-defender-antivirus) is functional
+
+The *Antimalware client version* must be 4.18.1906.x or later. See [Monthly platform and engine versions](/defender-endpoint/microsoft-defender-antivirus-updates)
+
+### Network Protection requirements
+
+URL/IP allow and block requires that the Microsoft Defender for Endpoint component _Network Protection_ is enabled in **block mode**. For more information on Network Protection and configuration instructions, see [Enable network protection](enable-network-protection.md).
 
 ### Custom network indicators requirements
 
-Ensure that **Custom network indicators** is enabled in **Microsoft Defender XDR** \> **Settings** \> **Advanced features**. For more information, see [Advanced features](advanced-features.md).
+To start blocking IP addresses and/or URL's, turn on "**Custom network indicators"** feature in **Microsoft Defender XDR** (in the Microsoft Defender portal), go to **Settings** > **Endpoints** > **General** > **Advanced features**. For more information, see [Advanced features](advanced-features.md).
 
 For support of indicators on iOS, see [Microsoft Defender for Endpoint on iOS](ios-configure-features.md#configure-custom-indicators).
 
