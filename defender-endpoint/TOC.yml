@@ -97,10 +97,8 @@
         href: defender-endpoint-demonstration-smartscreen-url-reputation.md
  
   - name: Operationalize Microsoft Defender for Endpoint
-    href: mde-operations-guide.md   
 
-
-  - name: Deploy Defender for Endpoint
+      - name: Deploy Defender for Endpoint
     items:
     - name: Overview
       href: mde-planning-guide.md
@@ -115,7 +113,7 @@
     - name: Step 5 - Configure Microsoft Defender for Endpoint capabilities
       href: onboard-configure.md
 
-  - name: Onboard and configure devices
+      - name: Onboard and configure devices
     items:
     - name: Configure service connections
       items:
@@ -320,6 +318,9 @@
     - name: Run a detection test on a newly onboarded Microsoft Defender for Endpoint
       href: run-detection-test.md
 
+      - name: Manage and maintain Defender for Endpoint 
+        href: mde-operations-guide.md   
+
   - name: How to guides
     items:
     - name: Integration with Microsoft Defender for Cloud
@@ -337,7 +338,7 @@
 
   - name: Defender for Endpoint Security Operations Guide 
     href: mde-sec-ops-guide.md
-    
+
   - name: Migration guides
     items:
     - name: Migration guides overview
