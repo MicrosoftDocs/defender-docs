@@ -20,53 +20,38 @@ ms.collection:
 
 This guide helps you manage and maintain your security posture with Defender for Endpoint by providing:
 
-- A list of of common objectives for enterprise device management and security 
 - Recommendations and information on safe deployment practices
 - Guidance on safe configurations including use of exclusions
 - Troubleshooting information  
 
+## Step 1: Safe deployment practices
 
-## Setp 1: Determine your objectives
-
-### Objective: Onboard devices 
-
-✅ **Task: Determine the correct onboarding mechanism for your organization**
-
-### Objective: Secure access on all devices
-
-✅ **Task: Determine how you want to secure your devices**
-
-Antivirus, malware scanning, responding to threats, and keep devices up-to-date are all important considerations. You also want to minimize the impact of malicious activity.
-
-Some considerations:
-
-- **Antivirus (AV) and malware protection are a must**. Intune integrates with [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) and [different Mobile Threat Defense (MTD) partners](../protect/mobile-threat-defense.md) to help protect your managed devices, personal devices, and apps.
-
-  [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) includes security features and a [portal](/microsoft-365/security/defender/microsoft-365-security-center-mde) to help monitor, and react to threats.
-
-- If a device is compromised, you want to **limit malicious impact using [Conditional Access](../protect/conditional-access.md)**.
-
-  For example, Microsoft Defender for Endpoint scans a device, and can determine if the device is compromised. Conditional Access can automatically block organization access on this device, including email.
-
-- **Update the device, the OS, and apps to help keep your data secure**. Create a plan on how and when updates are installed. T
-
-## Step 2 - Review existing policies, exclusions and infrastructure
-
-Many organizations have existing policies and device management infrastructure that's only being "maintained". For example, you might have 20-year-old group policies, and don't know what they do. When considering a move to the cloud, instead of looking at what you've always done, determine the goal.
-
-With these goals in mind, create a baseline of your policies. If you have multiple device management solutions, now might be the time to use a single mobile device management service.
-
-✅ **Task: Look at tasks you run on-premises**
-
-- **Review existing policies and their structure**. Some policies can apply globally, some apply at the site level, and some are specific to a device. The goal is to know and understand the intent of global policies, the intent of local policies, and so on.
-
-✅ **Task: Determine how you want to use exclusions**
-
-## Step 3 - Safe deployment practices 
-
-The next task is to plan how and when your users and devices are updated In this task
+✅ **Task: Update the device, the OS, and apps to help keep your data secure**. Create a plan on how and when updates are installed. 
 
 ✅ **Task: Create a plan to roll out updates**
+
+## Step 2: Enable capabilities 
+
+✅ **Task: Configure Antivirus (AV) and malware protection**
+
+✅ **Task: Configure baseline policies**
+
+✅ **Task: Enable/disable the necessary capabilities for your organization**
+
+✅ **Task: Plan how to manage exclusions**
+
+## Step 3: Stay up to date 
+
+## Step 4: Troubleshooting guidance
+
+Include your IT support and helpdesk in the early stages of Intune deployment planning and pilot efforts. Early involvement exposes your support staff to Intune, and they gain knowledge and experience in identifying and resolving issues more effectively. It also prepares them for supporting the organization's full production rollout. Knowledgeable help desk and support teams also help users adopt these changes.
+
+✅ **Task: Train your support teams**
+
+Validate the end-user experience with success metrics in your deployment plan. Some considerations:
+
+✅ **Determine who will support end users**. Organizations can have different tiers or levels (1-3). For example, tier 1 and 2 might be part of the support team. Tier 3 includes members of the MDM team responsible for the Intune deployment.
+
 
 Some considerations:
 
