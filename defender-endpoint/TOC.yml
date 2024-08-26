@@ -318,9 +318,6 @@
         - name: Run a detection test on a newly onboarded Microsoft Defender for Endpoint
           href: run-detection-test.md
 
-      - name: Manage and maintain Defender for Endpoint 
-        href: mde-operations-guide.md   
-
       - name: Configure portal settings
         items:
           - name: Configure general Defender for Endpoint settings
@@ -382,6 +379,9 @@
 
           - name: Configure time zone settings
             href: time-settings.md
+
+      - name: Manage and maintain Defender for Endpoint 
+        href: mde-operations-guide.md   
 
   - name: Defender for Endpoint Security Operations Guide 
     href: mde-sec-ops-guide.md
