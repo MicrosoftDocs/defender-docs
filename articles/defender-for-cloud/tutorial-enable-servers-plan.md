@@ -23,7 +23,7 @@ Defender for Servers provides two plans.
 
 - **Plan the deployment**. Work through the [Defender for Servers planning guide](plan-defender-for-servers.md).
 - **Review plans**. [Understand and compare](defender-for-servers-overview.md) plans.
-- **Decide on deployment scope**: You can enable Plan 1 at subscription-level or on specific Azure resources. Plan 2 can only be enabled on a subscription. You can disable protection for specific machines in the subscription. [Learn more](defender-for-servers-overview.md#enabling-plans)
+- **Decide on deployment scope**: You can enable Plan 1 at subscription-level or on specific Azure resources. Plan 2 can only be enabled on a subscription. You can disable protection for specific machines in the subscription.<br/><br/> Defender for Server settings for each resource are inherited by the subscription-level settings by default. If you change settings at the resource level, the resource no longer inherits settings from its parent subscription unless you delete the settings you configured. [Learn more about deployment scope](defender-for-servers-overview.md#enabling-plans).
 - **Review pricing**. Check Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 - **Get an Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) as needed.
 - Ensure Defender for Cloud is [enabled on the subscription](connect-azure-subscription.md).
