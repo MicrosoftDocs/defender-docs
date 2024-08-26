@@ -1,5 +1,5 @@
 ---
-title: Operating guide Microsoft Defender for Endpoint
+title: Manage and maintain security posture with Defender for Endpoint
 description: Plan, design, implement, adopt, and manage updates for Micrsoft Defender for Endpoint. Get guidance and advice to determine goals, use-case scenarios and requirements, and create rollout and communication plans, support, testing, and validation plans.
 keywords: mde planning and configuration, intune deployment planning, design and implementation guide, intune deployment project plan
 author: siosulli
@@ -16,19 +16,14 @@ ms.collection:
 - highpri
 ---
 
-# Operating guide Microsoft Defender for Endpoint
+# Manage and maintain security posture with Defender for Endpoint
 
-This guide helps you plan, onboard, configure, update, and troubleshoot Microsoft Defender for Endpoint as your enterprise endpoint security platform. 
+This guide helps you manage and maintain your security posture with Defender for Endpoint by providing:
 
-:::image type="content" source="./media/intune-planning-guide/intune-planning-guide-steps-image.png" alt-text="Diagram that shows the steps to plan your migration or move to Microsoft Intune, including licensing needs." lightbox="./media/intune-planning-guide/intune-planning-guide-steps-image.png":::
-
-This guide:
-
-- Lists and describes some common objectives for enterprise device management and security 
-- Provides guidance on onboarding devices
-- Gives guidance on configuration including use of exclusions
-- Provides recommendations and information on safe deployment practices
-- Provides troubleshooting information  
+- A list of of common objectives for enterprise device management and security 
+- Recommendations and information on safe deployment practices
+- Guidance on safe configurations including use of exclusions
+- Troubleshooting information  
 
 ## Setp 1: Determine your objectives
 
