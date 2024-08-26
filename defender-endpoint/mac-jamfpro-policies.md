@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/20/2024
+ms.date: 08/26/2024
 ---
 
 # Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
@@ -34,7 +34,7 @@ Use this article to set up policies for Defender for Endpoint on Mac using Jamf 
 > [!IMPORTANT]
 > You must have an appropriate role assigned to view, manage, and onboard devices. For more information, see [Manage access to Microsoft Defender XDR with Microsoft Entra global roles](/defender-xdr/m365d-permissions#manage-access-to-microsoft-defender-xdr-with-microsoft-entra-global-roles).
 
-1. In the [Microsoft Defender Portal](https://security.microsoft.com), navigate to **Settings > Endpoints > Onboarding**.
+1. In the [Microsoft Defender Portal](https://security.microsoft.com), navigate to **Settings** > **Endpoints** > **Onboarding**.
 
 2. Select macOS as the operating system and Mobile Device Management / Microsoft Intune as the deployment method.
 
