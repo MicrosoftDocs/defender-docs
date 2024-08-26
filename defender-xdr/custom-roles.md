@@ -48,7 +48,7 @@ Each Microsoft Defender service has its own custom role management settings, wit
 1. In the navigation pane, select **Permissions**.
 1. Select the **Roles** link for the service where you want to create a custom role. For example, for Defender for Endpoint:
 
-  :::image type="content" source="./media/custom-roles/custom-roles-endpoint.png" alt-text="Screenshot of a Roles link for Defender for Endpoint.":::
+  :::image type="content" source="./media/custom-roles/custom-roles-endpoint.png" alt-text="Screenshot that shows Roles link for Defender for Endpoint." lightbox="./media/custom-roles/custom-roles-endpoint.png" :::
 
 In each service, custom role names aren't connected to global roles in Microsoft Entra ID, even if similarly named. For example, a custom role named *Security Admin* in Microsoft Defender for Endpoint isn't connected to the global *Security Admin* role in Microsoft Entra ID.
 
