@@ -96,9 +96,7 @@
       - name: URL reputation demonstrations
         href: defender-endpoint-demonstration-smartscreen-url-reputation.md
  
-  - name: Defender for Endpoint Security Operations Guide 
-    href: mde-sec-ops-guide.md
-  - name: Operating guide Microsoft Defender for Endpoint
+  - name: Operationalize Microsoft Defender for Endpoint
     href: mde-operations-guide.md   
 
 
@@ -336,7 +334,10 @@
       href: onboarding-endpoint-configuration-manager.md
     - name: Onboarding using Microsoft Intune
       href: onboarding-endpoint-manager.md
- 
+
+  - name: Defender for Endpoint Security Operations Guide 
+    href: mde-sec-ops-guide.md
+    
   - name: Migration guides
     items:
     - name: Migration guides overview
