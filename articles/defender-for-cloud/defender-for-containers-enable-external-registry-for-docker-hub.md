@@ -20,13 +20,13 @@ To enable Defender for Containers to connect to your Docker Hub containers regis
 
 1. Before starting, verify that you:
    * Own an organization Docker Hub account and have the appropriate administrative permissions to create and manage a Docker Hub user on the organization scope.
-   * Have already a dedicated user with your organization's email account (for example `mdc_user@myorg.com`), to be used only for Defender for Cloud connectivity.
+   * Have already a dedicated user with your organization's email account (for example `mdc_user@contoso.com`), to be used only for Defender for Cloud connectivity.
 
 1. Invite the dedicated user to access all repositories in your organization as an "Editor".
 
-    :::image type="content" source="./media/how-to-setup-docker-hub-external-registry/docker-hub-invite-member.png" alt-text="Select invite member" lightbox="media/how-to-setup-docker-hub-external-registry/docker-hub-invite-member.png":::
+    :::image type="content" source="media/how-to-setup-docker-hub-external-registry/docker-hub-invite-member.png" alt-text="Select invite member" lightbox="media/how-to-setup-docker-hub-external-registry/docker-hub-invite-member.png":::
 
-    :::image type="content" source="./media/how-to-setup-docker-hub-external-registry/docker-hub-invite-editor-type.png" alt-text="Invite member" lightbox="media/how-to-setup-docker-hub-external-registry/docker-hub-invite-editor-type.png":::
+    :::image type="content" source="media/how-to-setup-docker-hub-external-registry/docker-hub-invite-editor-type.png" alt-text="Invite member" lightbox="media/how-to-setup-docker-hub-external-registry/docker-hub-invite-editor-type.png":::
 
     > [!NOTE]
     > While the Editor privilege allows a user to modify Docker Hub registries, the access token created will allow Defender for Cloud read-only access.
@@ -37,6 +37,6 @@ To enable Defender for Containers to connect to your Docker Hub containers regis
 
 Sign in to Docker Hub as the dedicated user and generate an access token with "Read-Only" permissions. The access token will be used to enable the Defender for Cloud to securely connect to your organization's Docker Hub account. Save this access token and the Docker Hub user name for use when configuring the Defender for Cloud Docker Hub connector.
 
-    :::image type="content" source="./media/how-to-setup-docker-hub-external-registry/docker-hub-create-access-token.png" alt-text="Create access token" lightbox="media/how-to-setup-docker-hub-external-registry/docker-hub-create-access-token.png":::
+    :::image type="content" source="media/how-to-setup-docker-hub-external-registry/docker-hub-create-access-token.png" alt-text="Create access token" lightbox="media/how-to-setup-docker-hub-external-registry/docker-hub-create-access-token.png":::
 
-    :::image type="content" source="./media/how-to-setup-docker-hub-external-registry/docker-hub-access-token-text.png" alt-text="View access token" lightbox="media/how-to-setup-docker-hub-external-registry/docker-hub-access-token-text.png":::
+    :::image type="content" source="media/how-to-setup-docker-hub-external-registry/docker-hub-access-token-text.png" alt-text="View access token" lightbox="media/how-to-setup-docker-hub-external-registry/docker-hub-access-token-text.png":::
