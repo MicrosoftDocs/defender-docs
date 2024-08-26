@@ -122,6 +122,7 @@ Choose if to Generate an alert on the file block event and define the alerts set
 
 > For more information about the EnableFileHashComputation group policy, see [Defender CSP](/windows/client-management/mdm/defender-csp).
 > > For more information on configuring this feature on Defender for Endpoint on Linux and macOS, see [Configure file hash computation feature on Linux](linux-preferences.md#configure-file-hash-computation-feature) and [Configure file hash computation feature on macOS](mac-preferences.md#configure-file-hash-computation-feature).
+
 > ## Advanced hunting capabilities (preview)
 
 > [!IMPORTANT]
@@ -155,11 +156,17 @@ The response action activity can also be viewable in the device timeline.
 Cert and File IoC policy handling conflicts follow this order:
 
 1. If the file isn't allowed by Windows Defender Application Control and AppLocker enforce mode policies, then **Block**.
+
 2. Else, if the file is allowed by the Microsoft Defender Antivirus exclusions, then **Allow**.
+
 3. Else, if the file is blocked or warned by a block or warn file IoCs, then **Block/Warn**.
+
 4. Else, if the file is blocked by SmartScreen, then **Block**.
+
 5. Else, if the file is allowed by an allow file IoC policy, then **Allow**.
+
 6. Else, if the file is blocked by attack surface reduction rules, controlled folder access, or antivirus protection, then **Block**.
+
 7. Else, **Allow** (passes Windows Defender Application Control & AppLocker policy, no IoC rules apply to it).
 
 > [!NOTE]
@@ -181,7 +188,6 @@ Microsoft Defender Vulnerability Management's block vulnerable application featu
 |Windows Defender Application Control|Allow|Block|Allow|
 |Windows Defender Application Control|Block|Allow|Block|
 |Microsoft Defender Antivirus exclusion|Allow|Block|Allow|
-|
 
 ## See also
 
@@ -189,7 +195,6 @@ Microsoft Defender Vulnerability Management's block vulnerable application featu
 - [Create indicators for IPs and URLs/domains](indicator-ip-domain.md)
 - [Create indicators based on certificates](indicator-certificates.md)
 - [Manage indicators](indicator-manage.md)
-
 - [Exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus](defender-endpoint-antivirus-exclusions.md)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
