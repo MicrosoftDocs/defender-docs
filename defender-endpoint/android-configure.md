@@ -61,14 +61,10 @@ Network protection in Microsoft Defender for endpoint is disabled by default. Ad
 
 In the Microsoft Intune admin center, navigate to Apps > App configuration policies. Create a new App configuration policy.
 
-> [!div class="mx-imgBorder"]
 1. Provide a name and description to uniquely identify the policy. Select **'Android Enterprise'** as the platform and **'Personally-owned work profile only'** as the profile type and **'Microsoft Defender'** as the Targeted app.
 
-> [!div class="mx-imgBorder"]
 2. In Settings page, select **'Use configuration designer'** and add **'Enable Network Protection in Microsoft Defender'** as the key and value as **'0'** to disable Network Protection. (Network protection is enabled by default)
 
-> [!div class="mx-imgBorder"]
-> [!div class="mx-imgBorder"]
 3. If your organization uses root CAs that are private, you must establish explicit trust between Intune (MDM solution) and user devices. Establishing trust helps prevent Defender from flagging root CAs as rogue certificates.
 
     To establish trust for the root CAs, use **'Trusted CA certificate list for Network Protection'** as the key. In the value, add the **'comma separated list of certificate thumbprints (SHA 1)'**.
