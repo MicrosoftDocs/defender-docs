@@ -318,10 +318,10 @@
         - name: Run a detection test on a newly onboarded Microsoft Defender for Endpoint
           href: run-detection-test.md
 
-- name: Configure portal settings
-        items:
-          - name: Configure general Defender for Endpoint settings
-            href: preferences-setup.md
+    - name: Configure portal settings
+      items:
+        - name: Configure general Defender for Endpoint settings
+          href: preferences-setup.md
           - name: General
             items:
             - name: Configure alert notifications
@@ -338,12 +338,12 @@
             - name: Assign user access to the portal
               href: assign-portal-access.md
               items:
-              - name: Create and manage roles
-                href: user-roles.md
-              - name: Create and manage device groups
-                href: machine-groups.md
-              - name: Create and manage device tags
-                href: machine-tags.md
+            - name: Create and manage roles
+              href: user-roles.md
+            - name: Create and manage device groups
+              href: machine-groups.md
+            - name: Create and manage device tags
+              href: machine-tags.md
           - name: Rules
             items:
             - name: Manage suppression rules
