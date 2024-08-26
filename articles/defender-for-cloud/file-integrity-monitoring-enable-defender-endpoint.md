@@ -1,5 +1,5 @@
 ---
-title: Enable File Integrity Monitoring with Microsoft Defender for Endpoint
+title: File Integrity Monitoring with Microsoft Defender for Endpoint
 description: Learn how to enable File Integrity Monitor when you collect data with Microsoft Defender for Endpoint.
 author: dcurwin
 ms.author: dacurwin
@@ -7,9 +7,9 @@ ms.topic: how-to
 ms.date: 08/11/2024
 ---
 
-# Enable File Integrity Monitoring using Microsoft Defender for Endpoint
+# File Integrity Monitoring using Microsoft Defender for Endpoint
 
-To provide [File Integrity Monitoring (FIM)](file-integrity-monitoring-overview.md), Microsoft Defender for Endpoint collects data from machines according to data collection rules. When the current state of your system files is compared with the state during the previous scan, FIM notifies you about suspicious modifications.
+To provide [File Integrity Monitoring (FIM)](file-integrity-monitoring-overview.md), Microsoft Defender for Endpoint collects data from machines according to collection rules. When the current state of your system files is compared with the state during the previous scan, FIM notifies you about suspicious modifications.
 
 Using FIM you can:
 

@@ -681,8 +681,8 @@
       - name: Understand File Integrity Monitoring
         displayName: fim, change
         href: file-integrity-monitoring-overview.md
-      - name: Enable File Integrity Monitoring (MDE)
-        displayName: fim, change, defender for endpoint
+      - name: File Integrity Monitoring over Defender for Endpoint
+        displayName: fim, change, defender for endpoint, mde
         href:  file-integrity-monitoring-enable-defender-endpoint.md
       - name: Migrate from previous versions
         href:  migrate-file-integrity-monitoring.md
