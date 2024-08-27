@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
-ms.author: vpattnaik
-author: diannegali
+ms.author: diannegali
+author: vpattnaik
 manager: dansimp
 audience: ITPro
 ms.collection: 
@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 06/12/2024
+ms.date: 08/19/2024
 ---
 
 # How Microsoft names threat actors
@@ -54,6 +54,7 @@ Use the following reference table to understand how our previously publicly disc
 
 |Threat actor name|Previous name|Origin/Threat|Other names|
 |:---:|:---:|:---:|:---:|
+|Antique Typhoon|Storm-0558|China||
 |Aqua Blizzard|ACTINIUM|Russia|UNC530, Primitive Bear, Gamaredon|
 |Blue Tsunami||Private sector offensive actor|Black Cube|
 |Brass Typhoon|BARIUM|China|APT41|
@@ -97,7 +98,7 @@ Use the following reference table to understand how our previously publicly disc
 |Night Tsunami|DEV-0336|Private sector offensive actor|NSO Group|
 |Nylon Typhoon|NICKEL|China|ke3chang, APT15, Vixen Panda|
 |Octo Tempest|Storm-0875|Financially motivated|0ktapus, Scattered Spider, UNC3944|
-|Onyx Sleet|PLUTONIUM|North Korea|Silent Chollima, Andariel, DarkSeoul|
+|Onyx Sleet|PLUTONIUM|North Korea|APT45, Silent Chollima, Andariel, DarkSeoul|
 |Opal Sleet|OSMIUM|North Korea|Konni|
 |Peach Sandstorm|HOLMIUM|Iran|APT33, Refined Kitten|
 |Pearl Sleet|DEV-0215 (LAWRENCIUM)|North Korea||
@@ -110,13 +111,15 @@ Use the following reference table to understand how our previously publicly disc
 |Purple Typhoon|POTASSIUM|China|APT10, Cloudhopper, MenuPass|
 |Raspberry Typhoon|RADIUM|China|APT30, LotusBlossom|
 |Ruby Sleet|CERIUM|North Korea||
+|Ruza Flood|Storm-1099|Russia, Influence operations||
 |Salmon Typhoon|SODIUM|China|APT4, Maverick Panda|
 |Sangria Tempest|ELBRUS|Financially motivated|Carbon Spider, FIN7|
 |Sapphire Sleet|COPERNICIUM|North Korea|Genie Spider, BlueNoroff|
 |Seashell Blizzard|IRIDIUM|Russia|APT44, Sandworm|
 |Secret Blizzard|KRYPTON|Russia|Venomous Bear, Turla, Snake|
+|Sefid Flood|Storm-1364|Iran, Influence operations||
 |Silk Typhoon|HAFNIUM|China||
-|Smoke Sandstorm|BOHRIUM|Iran||
+|Smoke Sandstorm|BOHRIUM|Iran|UNC1549|
 |Spandex Tempest|CHIMBORAZO|Financially motivated|TA505|
 |Star Blizzard|SEABORGIUM|Russia|Callisto, Reuse Team|
 |Storm-0062||China|DarkShadow, Oro0lxy|
@@ -125,9 +128,10 @@ Use the following reference table to understand how our previously publicly disc
 |Storm-0257||Group in development|UNC1151|
 |Storm-0324||Financially motivated|TA543, Sagrid|
 |Storm-0381||Financially motivated||
+|Storm-0501||Group in development||
+|Storm-0506||Group in development||
 |Storm-0530||North Korea|H0lyGh0st|
 |Storm-0539||Financially motivated|Atlas Lion|
-|Storm-0558||China||
 |Storm-0569||Financially motivated||
 |Storm-0587||Russia|SaintBot, Saint Bear, TA471|
 |Storm-0744||Financially motivated||
@@ -135,13 +139,13 @@ Use the following reference table to understand how our previously publicly disc
 |Storm-0829||Group in development|Nwgen Team|
 |Storm-0835||Group in development|EvilProxy|
 |Storm-0842||Iran||
+|Storm-0844||Group in development||
 |Storm-0861||Iran||
 |Storm-0867||Egypt|Caffeine|
 |Storm-0971||Financially motivated|(Merged into Octo Tempest)|
 |Storm-0978||Group in development|RomCom, Underground Team|
 |Storm-1044||Financially motivated|Danabot|
 |Storm-1084||Iran|DarkBit|
-|Storm-1099||Russia||
 |Storm-1101||Group in development|NakedPages|
 |Storm-1113||Financially motivated||
 |Storm-1133||Palestinian Authority||
@@ -151,17 +155,22 @@ Use the following reference table to understand how our previously publicly disc
 |Storm-1283||Group in development||
 |Storm-1286||Group in development||
 |Storm-1295||Group in development|Greatness|
-|Storm-1364||Iran||
-|Storm-1376||China, Influence operations||
 |Storm-1516||Russia, Influence operations||
 |Storm-1567||Financially motivated|Akira|
 |Storm-1575||Group in development|Dadsec|
+|Storm-1660||Iran, Influence operations||
 |Storm-1674||Financially motivated||
 |Storm-1679||Russia, Influence operations||
+|Storm-1804||Iran, Influence operations||
+|Storm-1805||Iran, Influence operations||
 |Storm-1811||Financially motivated||
+|Storm-1841||Russia, Influence operations||
 |Storm-1849||China|UAT4356|
+|Storm-1852||Group in development||
+|Storm-2035||Iran, Influence operations||
 |Strawberry Tempest||Financially motivated|LAPSUS$|
 |Sunglow Blizzard||Russia||
+|Taizi Flood|Storm-1376|China, Influence operations|Spamouflage, Dragonbridge|
 |Tomato Tempest|SPURR|Financially motivated|Vatet|
 |Vanilla Tempest|DEV-0832|Financially motivated||
 |Velvet Tempest|DEV-0504|Financially motivated||
