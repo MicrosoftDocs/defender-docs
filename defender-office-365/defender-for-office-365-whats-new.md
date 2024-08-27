@@ -8,7 +8,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 08/21/2024
+ms.date: 08/26/2024
 audience: ITPro
 ms.collection:
   - m365-security
@@ -40,6 +40,8 @@ For more information on what's new with other Microsoft Defender security produc
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 ## August 2024
+
+- (Preview) You can now run [simulations](attack-simulation-training-simulations.md) with QR code payloads in [Attack simulation training](attack-simulation-training-get-started.md). You can track user responses and assign training to end users.
 
 - [Use the built-in Report button in Outlook](submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook): The built-in **Report** button in Outlook for Microsoft 365 and Outlook 2021 now support the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) experience to report messages as Phishing, Junk, and Not Junk.
 
@@ -75,7 +77,7 @@ For more information on what's new with other Microsoft Defender security produc
     - Submit messages to Microsoft.
     - Trigger investigations.
     - Block entries in the Tenant Allow/Block List.
-  - Actions are contextual based on the latest delivery location of the message, but SecOps personnel can use the **Show all response actions** toggle to allow all available actions.
+  - Actions are contextually based on the latest delivery location of the message, but SecOps personnel can use the **Show all response actions** toggle to allow all available actions.
   - For 101 or more messages selected, only email purge and propose remediation options are available.
 
   > [!TIP]
@@ -95,7 +97,7 @@ For more information on what's new with other Microsoft Defender security produc
 ## January 2024
 
 - **New training modules available in Attack Simulation Training**: Teach your users to recognize and protect themselves against QR code phishing attacks. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/train-your-users-to-be-more-resilient-against-qr-code-phishing/ba-p/4022667).
-- **Providing intent while submitting is now generally available**: Admins can identify if they're submitting an item to Microsoft for a second opinion or they're submitting the message because it's malicious and was missed by Microsoft. With this change, Microsoft analysis of admin submitted messages (email and Microsoft Teams), URLs, and email attachments is further streamlined and results in a more accurate analysis. [Learn more](submissions-admin.md).
+- **Providing intent while submitting is now generally available**: Admins can identify if they're submitting an item to Microsoft for a second opinion or they're submitting the message because it's malicious and was missed by Microsoft. With this change, Microsoft analyses of admin submitted messages (email and Microsoft Teams), URLs, and email attachments are further streamlined and results in a more accurate analysis. [Learn more](submissions-admin.md).
 
 ## December 2023
 
@@ -262,7 +264,7 @@ For more information on what's new with other Microsoft Defender security produc
 ## August 2021
 
 - [Admin review for reported messages](submissions-admin-review-user-reported-messages.md): Admins can now send templated messages back to end users after they review reported messages. The templates can be customized for your organization and based on your admin's verdict as well.
-- You can now add allow entries to the Tenant Allow/Block List if the blocked message was submitted as part of the admin submission process. Depending on the nature of the block, the submitted URL, file, and/or sender allow entries are added to the Tenant Allow/Block List. In most cases, the allows are added to give the system some time and allow it naturally, if warranted. In some cases, Microsoft manages the allow for you. For more information, see:
+- You can now add allow entries to the Tenant Allow/Block List if the blocked message was submitted as part of the admin submission process. Depending on the nature of the block, the submitted URL, file, and/or sender allow entries are added to the Tenant Allow/Block List. In most cases, the allows entries are added to give the system some time and allow it naturally, if warranted. In some cases, Microsoft manages the allow entries for you. For more information, see:
   - [Report good URLs to Microsoft](submissions-admin.md#report-good-urls-to-microsoft)
   - [Report good email attachments to Microsoft](submissions-admin.md#report-good-email-attachments-to-microsoft)
   - [Report good email to Microsoft](submissions-admin.md#report-good-email-to-microsoft)

@@ -12,7 +12,7 @@ ms.collection:
   - tier2
 description: Admins can learn about the Training modules that are available to use in Training campaigns in Attack simulation training in Microsoft Defender for Office 365 Plan 2.
 search.appverid: met150
-ms.date: 3/11/2024
+ms.date: 08/14/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -24,6 +24,12 @@ appliesto:
 In Attack simulation training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2, you select one or more Training modules to include in Training campaigns that you create and assign to users. For more information about Training campaigns, see [Training campaigns in Attack simulation training](attack-simulation-training-training-campaigns.md).
 
 To see the available Training modules, open the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Attack simulation training** \> **Content library** tab \> and then select **Training modules**. Or, to go directly to the **Content library** tab where you can select **Training modules**, use <https://security.microsoft.com/attacksimulator?viewid=contentlibrary>.
+
+> [!TIP]
+> The following training modules for QR codes are available:
+>
+> - **Malicious digital QR codes**
+> - **Malicious printed QR codes**
 
 The **Training modules** page shows the following information for each module. You can sort the modules by clicking on an available column header. Select :::image type="icon" source="media/m365-cc-sc-customize-icon.png" border="false"::: **Customize columns** to change the columns that are shown. By default, all available columns are selected.
 
@@ -66,7 +72,7 @@ Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="fa
 
 When you're finished configuring the filters, select **Apply**, **Cancel**, or :::image type="icon" source="media/m365-cc-sc-clear-filters-icon.png" border="false"::: **Clear filters**.
 
-When you select a Training module from the list by clicking anywhere in the row other than the check box next to the name, a details flyout appears with the following information:
+When you select a Training module from the list by clicking anywhere in the row other than the check box next to the name, a details flyout opens with the following information:
 
 - **Description**
 - **Source**
