@@ -4,7 +4,7 @@ description: Learn about Device control policies in Defender for Endpoint
 author: siosulli
 ms.author: siosulli
 manager: deniseb
-ms.date: 06/04/2024
+ms.date: 08/27/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -254,7 +254,7 @@ The following table provides more context for the XML code snippet:
 |---|---|---|
 | `Entry Id` | GUID, a unique ID, represents the entry and is used in reporting and troubleshooting. | You can generate the GUID by using PowerShell. |
 | `Type` | Defines the action for the removable storage groups in `IncludedIDList`. <br/>- `Allow` <br/>- `Deny` <br/>- `AuditAllowed`: Defines notification and event when access is allowed <br/>- `AuditDenied`: Defines notification and event when access is denied; works together with a `Deny` entry. <br/><br/>When there are conflict types for the same media, the system applies the first one in the policy. An example of a conflict type is `Allow` and `Deny`. | - `Allow` <br/>- `Deny` <br/>- `AuditAllowed` <br/>- `AuditDenied` |
-| `Option` | If type is `Allow` | - `0`: nothing <br/>- `4`: disable `AuditAllowed` and `AuditDenied` for this entry. If `Allow` occurs and the `AuditAllowed` setting is configured, events aren't generated.<br/>|
+| `Option` | If type is `Allow` | - `0`: nothing <br/>- `4`: disable `AuditAllowed` and `AuditDenied` for this entry. If `Allow` occurs and the `AuditAllowed` setting is configured, events aren't generated. |
 | `Option` | If type is `Deny` | - `0`: nothing <br/>- `4`: disable `AuditDenied` for this Entry. If Block occurs and the `AuditDenied` is setting configured, the system doesn't show notifications. |
 | `Option` | If type is `AuditAllowed` | - `0`: nothing<br/>- `1`: nothing <br/>- `2`: send event |
 | `Option` | If type is `AuditDenied` | - `0`: nothing <br/>- `1`: show notification <br/>- `2`: send event <br/>- `3`: show notification and send event |
