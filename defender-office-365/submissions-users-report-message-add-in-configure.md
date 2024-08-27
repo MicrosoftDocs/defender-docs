@@ -32,7 +32,7 @@ appliesto:
 > [!NOTE]
 > If you're an admin in a Microsoft 365 organization with Exchange Online mailboxes, we recommend that you use the **Submissions** page in the Microsoft Defender portal. For more information, see [Use Admin Submission to submit suspected spam, phish, URLs, and files to Microsoft](submissions-admin.md).
 
-The Microsoft Report Message and Report Phishing add-ins for Outlook and Outlook on the web (formerly known as Outlook Web App or OWA) makes it easy for users to report false positives and false negatives to Microsoft for analysis. False positives are good email that was blocked or sent to the Junk Email folder. False negatives are unwanted email or phishing that was delivered to the Inbox.
+The Microsoft Report Message and Report Phishing add-ins for Outlook and inbuild report button on Outlook on the web (formerly known as Outlook Web App or OWA), new Outlook for Windows, legacy Outlook for Windows makes it easy for users to report false positives and false negatives to Microsoft for analysis. False positives are good email that was blocked or sent to the Junk Email folder. False negatives are unwanted email or phishing that was delivered to the Inbox.
 
 Microsoft uses these user-reported messages to improve the effectiveness of email protection technologies. For example, suppose that people are reporting many messages using the Report Phishing add-in. This information surfaces in the Security Dashboard and other reports. Your organization's security team can use this information as an indication that anti-phishing policies might need to be updated.
 
