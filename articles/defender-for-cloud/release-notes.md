@@ -27,6 +27,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## September 2024
+
+|Date | Category | Update|
+|--|--|--|
+| September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
+
+### Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions
+
+September 4, 2024
+
+**Estimated date for change**: February 5, 2025
+
+After February 5, 2025, you won't be able to activate the legacy Defender for Storage (classic) per-transaction storage protection plan unless it's already enabled in your subscription. For more information, see [Move to the new Defender for Storage pricing plan](defender-for-storage-classic-migrate.md).
+
 ## August 2024
 
 |Date | Category | Update|
