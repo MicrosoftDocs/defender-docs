@@ -71,7 +71,7 @@ Selecting **View all simulations** takes you to the **Simulations** tab.
 
 Selecting **Launch a simulation** starts the new simulation wizard. For more information, see [Simulate a phishing attack in Defender for Office 365](attack-simulation-training-simulations.md).
 
-:::image type="content" source="media/attack-sim-training-overview-recent-simulations-card.png" alt-text="The Recent simulations card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-overview-recent-simulations-card.png":::
+:::image type="content" source="media/attack-sim-training-overview-recent-simulations-card.png" alt-text="The Recent simulations card on the Overview tab in Attack simulation training in the Microsoft Defender portal.":::
 
 ### Recommendations card
 
@@ -79,7 +79,7 @@ The **Recommendations** card on the **Overview** tab suggests different types of
 
 Selecting **Launch now** starts the new simulation wizard with the specified simulation type automatically selected on the **Select technique** page. For more information, see [Simulate a phishing attack in Defender for Office 365](attack-simulation-training-simulations.md).
 
-:::image type="content" source="media/attack-sim-training-overview-recommendations-card.png" alt-text="The Recommendations card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-overview-recommendations-card.png":::
+:::image type="content" source="media/attack-sim-training-overview-recommendations-card.png" alt-text="The Recommendations card on the Overview tab in Attack simulation training in the Microsoft Defender portal.":::
 
 ### Simulation coverage card
 
@@ -89,7 +89,7 @@ Selecting **View simulation coverage report** takes you to the [User coverage ta
 
 Selecting **Launch simulation for non-simulated users** starts the new simulation wizard where the users who didn't receive the simulation are automatically selected on the **Target user** page. For more information, see [Simulate a phishing attack in Defender for Office 365](attack-simulation-training-simulations.md).
 
-:::image type="content" source="media/attack-sim-training-overview-sim-coverage-card.png" alt-text="The Simulation coverage card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-overview-sim-coverage-card.png":::
+:::image type="content" source="media/attack-sim-training-overview-sim-coverage-card.png" alt-text="The Simulation coverage card on the Overview tab in Attack simulation training in the Microsoft Defender portal.":::
 
 ### Training completion card
 
@@ -103,7 +103,7 @@ You can hover over a section in the chart to see the actual number of users in e
 
 Selecting **View training completion report** takes you to the [Training completion tab for the Attack simulation report](#training-completion-tab-for-the-attack-simulation-report).
 
-:::image type="content" source="media/attack-sim-training-overview-training-complete-card.png" alt-text="The Training completion card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-overview-training-complete-card.png":::
+:::image type="content" source="media/attack-sim-training-overview-training-complete-card.png" alt-text="The Training completion card on the Overview tab in Attack simulation training in the Microsoft Defender portal.":::
 
 ### Repeat offenders card
 
@@ -120,7 +120,7 @@ The chart organizes repeat offender data by [simulation type](attack-simulation-
 
 Selecting **View repeat offender report** takes you to the [Repeat offenders tab for the Attack simulation report](#repeat-offenders-tab-for-the-attack-simulation-report).
 
-:::image type="content" source="media/attack-sim-training-overview-repeat-offenders-card.png" alt-text="The Repeat offenders card on the Overview tab in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-overview-repeat-offenders-card.png":::
+:::image type="content" source="media/attack-sim-training-overview-repeat-offenders-card.png" alt-text="The Repeat offenders card on the Overview tab in Attack simulation training in the Microsoft Defender portal":::
 
 ### Behavior impact on compromise rate card
 
@@ -135,7 +135,7 @@ If you hover over a data point in the chart, the actual percentage values are sh
 
 To see a detailed report, select **View simulations and training efficacy report**. This report is explained [later in this article](#training-efficacy-tab-for-the-attack-simulation-report).
 
-:::image type="content" source="media/attack-sim-training-overview-behavior-impact-card.png" alt-text="The Behavior impact on compromise rate card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-overview-behavior-impact-card.png":::
+:::image type="content" source="media/attack-sim-training-overview-behavior-impact-card.png" alt-text="The Behavior impact on compromise rate card on the Overview tab in Attack simulation training in the Microsoft Defender portal.":::
 
 ## Attack simulation report
 
@@ -250,7 +250,7 @@ The simulation report shows the details of in-progress or completed simulations 
 
 - On the **Overview** tab of the **Attack simulation training** page at <https://security.microsoft.com/attacksimulator?viewid=overview>, select a simulation from the [Recent simulations card](#recent-simulations-card).
 
-  :::image type="content" source="media/attack-sim-training-overview-recent-simulations-card.png" alt-text="The Recent simulations card on the Overview tab in Attack simulation training in the Microsoft Defender portal." lightbox="media/attack-sim-training-overview-recent-simulations-card.png":::
+  :::image type="content" source="media/attack-sim-training-overview-recent-simulations-card.png" alt-text="The Recent simulations card on the Overview tab in Attack simulation training in the Microsoft Defender portal.":::
 
 - On the **Simulations** tab of the **Attack simulation training** page at <https://security.microsoft.com/attacksimulator?viewid=simulations>, select a simulation by clicking anywhere in the row other than the check box next to the name. For more information, see [View simulation reports](attack-simulation-training-simulations.md#view-simulation-reports).
 
@@ -305,7 +305,7 @@ Select **View compromised users** to go to the [Users tab](attack-simulation-tra
 
 Select **View users who reported** to go to the [Users tab](attack-simulation-training-simulations.md#users-tab) tab in the report where the results are filtered by **Reported message: Yes**.
 
-:::image type="content" source="media/attack-sim-report-simulation-report-tab-simulation-impact.png" alt-text="The Simulation impact section on the Report tab of a simulation report for a simulation." lightbox="media/attack-sim-report-simulation-report-tab-simulation-impact.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab-simulation-impact.png" alt-text="The Simulation impact section on the Report tab of a simulation report for a simulation.":::
 
 #### All user activity section in the report for simulations
 
@@ -321,7 +321,7 @@ The **All user activity** section on **Report** tab** for a simulation shows num
 
 Select **View all users** to go to the [Users tab](attack-simulation-training-simulations.md#users-tab) tab in the report where the results are unfiltered.
 
-:::image type="content" source="media/attack-sim-report-simulation-report-tab-all-user-activity.png" alt-text="The All users activity section on the Report tab of a simulation report for a simulation." lightbox="media/attack-sim-report-simulation-report-tab-all-user-activity.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab-all-user-activity.png" alt-text="The All users activity section on the Report tab of a simulation report for a simulation.":::
 
 #### Delivery status section in the report for simulations
 
@@ -335,7 +335,7 @@ Select **View users to whom message delivery failed** to go to the [Users tab](a
 
 Select **View excluded users or groups** to open an **Excluded users or groups** flyout that shows the users or groups that were excluded from the simulation.
 
-:::image type="content" source="media/attack-sim-report-simulation-report-tab-delivery-status.png" alt-text="The Delivery status section on the Report tab of a simulation report for a simulation." lightbox="media/attack-sim-report-simulation-report-tab-delivery-status.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab-delivery-status.png" alt-text="The Delivery status section on the Report tab of a simulation report for a simulation.":::
 
 #### Training completion section in the report for simulations
 
@@ -343,7 +343,7 @@ The **Training completion** section on the simulation details page shows the tra
 
 If no trainings were included in the simulation, the only value in this section is **Trainings were not part of this simulation**.
 
-:::image type="content" source="media/attack-sim-report-simulation-report-tab-training-completion.png" alt-text="The Training completion section on the Report tab of a simulation report for a simulation." lightbox="media/attack-sim-report-simulation-report-tab-training-completion.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab-training-completion.png" alt-text="The Training completion section on the Report tab of a simulation report for a simulation.":::
 
 #### First & average instance section in the report for simulations
 
@@ -354,13 +354,13 @@ The **First & average instance** section on **Report** tab** for a simulation sh
 - **First credential entered**
 - **Avg. credential entered**
 
-:::image type="content" source="media/attack-sim-report-simulation-report-tab-first-and-average-instances.png" alt-text="The First & average instance section on the Report tab of a simulation report for a simulation." lightbox="media/attack-sim-report-simulation-report-tab-first-and-average-instances.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab-first-and-average-instances.png" alt-text="The First & average instance section on the Report tab of a simulation report for a simulation.":::
 
 #### Recommendations section in the report for simulations
 
 The **Recommendations** section on **Report** tab** for a simulation shows recommendations for using Attack simulation training to help secure your organization.
 
-:::image type="content" source="media/attack-sim-report-simulation-report-tab-recommendations.png" alt-text="The Recommendations section on the Report tab of a simulation report for a simulation." lightbox="media/attack-sim-report-simulation-report-tab-recommendations.png":::
+:::image type="content" source="media/attack-sim-report-simulation-report-tab-recommendations.png" alt-text="The Recommendations section on the Report tab of a simulation report for a simulation.":::
 
 ### Simulation report for Training campaigns
 
@@ -372,7 +372,7 @@ This section describes the information in the simulation report for Training cam
 
 The **Training completion classification** section on **Report** tab** for a Training campaign shows information about the completed Training modules in the Training campaign.
 
-:::image type="content" source="media/attack-sim-report-training-campaign-report-tab-training-completion-classification.png" alt-text="The Training completion classification section on the Report tab in the Training campaign report in Attack simulation training." lightbox="media/attack-sim-report-training-campaign-report-tab-training-completion-classification.png":::
+:::image type="content" source="media/attack-sim-report-training-campaign-report-tab-training-completion-classification.png" alt-text="The Training completion classification section on the Report tab in the Training campaign report in Attack simulation training.":::
 
 #### Training completion summary section in the report for Training campaigns
 
@@ -386,7 +386,7 @@ The **Training completion summary** section on **Report** tab** for a Training c
 
 You can hover over a section in the chart to see the actual percentage in each category.
 
-:::image type="content" source="media/attack-sim-report-training-campaign-report-tab-training-completion-summary.png" alt-text="The Training completion summary section on the Report tab in the Training campaign report in Attack simulation training." lightbox="media/attack-sim-report-training-campaign-report-tab-training-completion-summary.png":::
+:::image type="content" source="media/attack-sim-report-training-campaign-report-tab-training-completion-summary.png" alt-text="The Training completion summary section on the Report tab in the Training campaign report in Attack simulation training.":::
 
 #### All user activity section in the report for Training campaigns
 
@@ -394,7 +394,7 @@ The **All user activity** section on **Report** tab** for a Training campaign us
 
 You can hover over a section in the chart to see the actual numbers in each category.
 
-:::image type="content" source="media/attack-sim-report-training-campaign-report-tab-all-user-activity.png" alt-text="The All user activity section on the Report tab in the Training campaign report in Attack simulation training." lightbox="media/attack-sim-report-training-campaign-report-tab-all-user-activity.png":::
+:::image type="content" source="media/attack-sim-report-training-campaign-report-tab-all-user-activity.png" alt-text="The All user activity section on the Report tab in the Training campaign report in Attack simulation training.":::
 
 ## Appendix
 
