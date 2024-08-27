@@ -13,7 +13,7 @@ ms.collection:
 ms.custom:
 description: Admins can learn how Attack simulation training in the Microsoft Defender portal affects users and can gain insights from simulation and training outcomes.
 search.appverid: met150
-ms.date: 06/14/2024
+ms.date: 08/14/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -273,6 +273,22 @@ For more information about the **Users** and **Details** tabs, see the following
   - [Users tab](attack-simulation-training-training-campaigns.md#users-tab)
   - [Details tab](attack-simulation-training-training-campaigns.md#details-tab)
 
+### Reporting for QR code simulations
+
+> [!TIP]
+> QR code payloads are currently in Preview, aren't available in all organizations, and are subject to change.
+
+You can select QR code payloads to use in simulations. The QR code replaces the phishing URL as the payload that's used in the simulation email message. For more information, see [QR code payloads](attack-simulation-training-payloads.md#qr-code-payloads).
+
+Because QR codes are a different type of a phishing URL, user events around read, delete, compromise, and click events remain the same. For example, scanning the QR code opens the phishing URL, so the event is tracked as a click event. The existing mechanisms for tracking compromise, deletes, and report events remain the same.
+
+If you export a [simulation report](#simulation-report-for-simulations) to a CSV file, the **EmailLinkClicked_ClickSource** column is available with the following values:
+
+- `PhishingURL`: The user clicked on the phishing link in the simulation email message.
+- `QRCode`: The user scanned the QR code in the simulation email message.
+
+Other metrics like reads, compromises, deletes, and reported messages continue to be tracked without any additional updates. For more information, the [Appendix](#appendix) section later in this article.
+
 ### Simulation report for simulations
 
 This section describes the information in the simulation report for regular simulations (not [Training campaigns](#simulation-report-for-training-campaigns)).
@@ -392,14 +408,19 @@ When you export information from the reports, the CSV file contains more informa
 |UserName|Username of the user who did the activity.|
 |UserMail|Email address of the user who did the activity.|
 |Compromised|Indicates if the user was compromised. Values are Yes or No.|
-|AttachmentOpened_TimeStamp|When the attachment was opened.|
-|AttachmentOpened_Browser|When the attachment was opened in a web browser. This information comes from UserAgent.|
-|AttachmentOpened_IP|The IP address where the attachment was opened. This information comes from UserAgent.|
-|AttachmentOpened_Device|The device where the attachment was opened. This information comes from UserAgent.|
-|AttachmentLinkClicked_TimeStamp|When the attachment link was clicked.|
-|AttachmentLinkClicked_Browser|The web browser that was used to click the attachment link. This information comes from UserAgent.|
-|AttachmentLinkClicked_IP|The IP address where the attachment link was clicked. This information comes from UserAgent.|
-|AttachmentLinkClicked_Device|The device where the attachment link was clicked. This information comes from UserAgent.|
+|AttachmentOpened_TimeStamp|When the attachment payload was opened in **Malware Attachment** simulations.|
+|AttachmentOpened_Browser|When the attachment payload was opened in a web browser in **Malware Attachment** simulations. This information comes from UserAgent.|
+|AttachmentOpened_IP|The IP address where the attachment payload was opened in **Malware Attachment** simulations. This information comes from UserAgent.|
+|AttachmentOpened_Device|The device where the attachment payload was opened in **Malware Attachment** simulations. This information comes from UserAgent.|
+|AttachmentLinkClicked_TimeStamp|When the attachment link payload was clicked in **Link in Attachment** simulations.|
+|AttachmentLinkClicked_Browser|The web browser that was used to click the attachment link payload in **Link in Attachment** simulations. This information comes from UserAgent.|
+|AttachmentLinkClicked_IP|The IP address where the attachment link payload was clicked in **Link in Attachment** simulations. This information comes from UserAgent.|
+|AttachmentLinkClicked_Device|The device where the attachment link payload was clicked in **Link in Attachment** simulations. This information comes from UserAgent.|
+|EmailLinkClicked_TimeStamp|When the link payload was clicked in **Credential Harvest**, **Link to Malware**, **Drive-by-url**, and **OAuth Consent Grant** simulations.|
+|EmailLinkClicked_Browser|The web browser that was used to click the link payload in **Credential Harvest**, **Link to Malware**, **Drive-by-url**, and **OAuth Consent Grant** simulations. This information comes from UserAgent.|
+|EmailLinkClicked_IP|The IP address where the link payload was clicked in **Credential Harvest**, **Link to Malware**, **Drive-by-url**, and **OAuth Consent Grant** simulations. This information comes from UserAgent.|
+|EmailLinkClicked_Device|The device where the link payload was clicked in **Credential Harvest**, **Link to Malware**, **Drive-by-url**, and **OAuth Consent Grant** simulations. This information comes from UserAgent.|
+|EmailLinkClicked_ClickSource|Whether the payload link was selected by clicking on a URL or scanning a QR Code in **Credential Harvest**, **Link to Malware**, **Drive-by-url**, and **OAuth Consent Grant** simulations. Values are `PhishingURL` or `QRCode`. QR code support is currently in Preview.|
 |CredSupplied_TimeStamp(Compromised)|When the user entered their credentials.|
 |CredSupplied_Browser|The web browser that was used when the user entered their credentials. This information comes from UserAgent.|
 |CredSupplied_IP|The IP address where the user entered their credentials. This information comes from UserAgent.|
@@ -419,7 +440,7 @@ When you export information from the reports, the CSV file contains more informa
 |FailedToDeliverEmail_TimeStamp|When the simulation email message failed to be delivered to the user.|
 |Last Simulation Activity|The last simulation activity of the user (whether they passed or were compromised).|
 |Assigned Trainings|The list of trainings assigned to the user as part of the simulation.|
-|Completed Trainings|The list of trainings completed by the user as part of the simulation..|
+|Completed Trainings|The list of trainings completed by the user as part of the simulation.|
 |Training Status|The current status of trainings for the user as part of the simulation.|
 |Phishing Reported On|When the user reported the simulation message as phishing.|
 |Department|The user's Department property value in Microsoft Entra ID at the time of simulation.|
@@ -438,12 +459,14 @@ How user activity signals are captured is described in the following table.
 |Opened Attachment|A user opened the attachment.|The signal comes from the client (for example, Outlook or Word).|
 |Read Message|The user read the simulation message.|Message read signals might experience issues in the following scenarios: <ul><li>The user reported the message as phishing in Outlook without leaving the reading pane, and **Mark items as read when viewed in the Reading Pane** wasn't configured (default).</li><li>The user reported the unread message as phishing in Outlook, the message was deleted, and **Mark messages as read when deleted** wasn't configured (default).</li></ul>|
 |Out of Office|Determines whether the user is out of office.|Currently calculated by the Automatic replies setting from Outlook.|
-|Compromised User|Indicates if a user been compromised. The compromise signals can vary based on the attack type.|<ul><li>**Credential Harvest**: The user enters their credentials in the login page (credentials aren't stored by Microsoft).</li><li>**Malware Attachment**: The user opens the file and enables editing in protected view.</li><li>**Link in attachment**: The user opens the attachment, and clicks on the link.</li><li>**Link to Malware**: The user clicks on the link and enters their credentials.</li><li>**Drive by URL**: The user clicks on the link (entering credentials isn't required).</li><li>**OAuth**: The user clicks on the link and accepts to share permissions.</li></ul>|
-|Clicked Message Link|Indicates if a user clicked on the message.|The URL in the simulation is unique for each user, which allows individual user activity tracking. Third-party filtering services or email forwarding can lead to false positives. For more information, see [I see clicks or compromise events from users who insist they didn't click the link in the simulation message](attack-simulation-training-faq.md#i-see-clicks-or-compromise-events-from-users-who-insist-they-didnt-click-the-link-in-the-simulation-message).|
-|Forwarded Message|Indicates if a user forwarded on the message.||
-|Replied to Message|Indicates if an end users has replied on the message.||
-|Deleted message|Indicates if an end users has deleted the message.|The signal comes from the Outlook activity of the user. If the user reports the message as phishing, the message might be moved to the Deleted Items folder, which is identified as a deletion.|
-|Permissions granted|Indicates if a user shared permissions in an Oauth-based attack.||
+|Compromised User|The user was compromised. The compromise signal varies based on the social engineering technique.|<ul><li>**Credential Harvest**: The user entered their credentials on the login page (credentials aren't stored by Microsoft).¹</li><li>**Malware Attachment**: The user opened the payload attachment and selected **Enable Editing** in [Protected View](https://support.microsoft.com/office/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653).</li><li>**Link in Attachment**: The user opened the attachment and clicked on the payload link.</li><li>**Link to Malware**: The user clicked on the payload link and entered their credentials.</li><li>**Drive by URL**: The user clicked on the payload link (entering credentials isn't required).¹</li><li>**OAuth Consent Grant**: The user clicked on the payload link and accepted the prompt to share permissions.¹</li></ul>|
+|Clicked Message Link|The user clicked on the payload link in the simulation message.|The URL in the simulation is unique for each user, which allows individual user activity tracking. Third-party filtering services or email forwarding can lead to false positives. For more information, see [I see clicks or compromise events from users who insist they didn't click the link in the simulation message](attack-simulation-training-faq.md#i-see-clicks-or-compromise-events-from-users-who-insist-they-didnt-click-the-link-in-the-simulation-message).|
+|Forwarded Message|The user forwarded the message.||
+|Replied to Message|The user replied to the message.||
+|Deleted message|The user deleted the message.|The signal comes from the Outlook activity of the user. If the user reports the message as phishing, the message might be moved to the Deleted Items folder, which is identified as a deletion.|
+|Permissions granted|The user shared permissions in an **OAuth Consent Grant** simulation.||
+
+¹ The clicked link can be a selected URL or a scanned QR code (QR code support in Attack simulation training is currently in Preview).
 
 ## Related Links
 
