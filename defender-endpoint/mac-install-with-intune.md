@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 08/20/2024
+ms.date: 08/21/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune
@@ -152,6 +152,35 @@ On this macOS Catalina v10.15 (or newer) platform, when you deploy Microsoft Def
 1. Choose a **Deployment channel**.
 
 1. Select **Next**.
+
+1. Review the configuration profile. Select **Create**.
+
+### Full Disk Access
+
+> [!NOTE]
+> Starting with macOS Catalina (10.15) or newer, in order to provide privacy for the end-users, it created the **FDA** (Full Disk Access). Enabling **TCC** (Transparency, Consent & Control) through a Mobile Device Management solution such as [Intune](mac-install-with-intune.md), will eliminate the risk of Defender for Endpoint losing **Full Disk Access** Authorization to function properly.
+>
+> This configuration profile grants Full Disk Access to Microsoft Defender for Endpoint. If you previously configured Microsoft Defender for Endpoint through Intune, we recommend you update the deployment with this configuration profile.
+
+Download [**fulldisk.mobileconfig**](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
+
+To configure Full Disk Access:
+
+1. In the Intune admin center, under **Configuration profiles**, select **Create Profile**.
+
+1. Under **Platform**, select **macOS**.
+
+1. Under **Profile type**, select **Templates**.
+
+1. Under **Template name**, select **Custom**, and then select **Create**.
+
+1. On the **Basics** tab, **Name** the profile. For example, `FullDiskAccess-prod-macOS-Default-MDE`.
+
+1. Select **Next**.
+
+1. On the **Configuration settings** tab, enter a **Custom configuration profile** name. For example, `FullDiskAccess-prod-macOS-Default-MDE`.
+
+1. Choose a **Deployment channel** and then select **Next**.
 
 1. Select a **Configuration profile file**.
 
