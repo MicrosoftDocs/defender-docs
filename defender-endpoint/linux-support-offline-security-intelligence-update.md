@@ -42,7 +42,7 @@ Key benefits include:
 - Local server can run any of the three OS - Windows, Mac, Linux, and isn't required to install Defender for Endpoint.
 - Provides the most up to date antivirus protection as signatures are always downloaded along with the latest compatible AV engine.
 - In each iteration, signature with n-1 version is moved to a backup folder on the local server. If there's any issue with the latest signature, you can pull the n-1 signature version from the backup folder to your endpoints.
-- On the rare occasion the offline update fails, you can also choose to fallback to online updates from Microsoft cloud(traditional method).
+- On the rare occasion the offline update fails, you can also choose to fall back to online updates from Microsoft cloud(traditional method).
 
 ## How Offline Security Intelligence Update works
 
