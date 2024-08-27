@@ -64,7 +64,7 @@ During troubleshooting mode, you can use the PowerShell command `Set-MPPreferenc
 
 - Admins can also review the changes in settings that take place during Troubleshooting mode in **Event Viewer** on the device itself.
   - `Applications and Services Logs > Microsoft > Windows > Windows Defender > Operational`
-  - Potential events may be event IDs 5000, 5001, 5004, 5007 and others. See more details at [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus#event-id-5000).
+  - Potential events may be event IDs 5000, 5001, 5004, 5007 and others. See more details at [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.yml#event-id-5000).
 
 - Troubleshooting mode automatically turns off after reaching the expiration time (it lasts for 4 hours). After expiration, all policy-managed configurations become read-only again and revert back to how the device was configured before enabling troubleshooting mode.
 
