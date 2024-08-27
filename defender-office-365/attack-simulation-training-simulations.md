@@ -794,7 +794,7 @@ All actions on existing simulations start on the **Simulations** tab. To go ther
 
 You can copy an existing simulation and modify it to suit your needs. This action saves time and effort when you create new simulations based on previous ones.
 
-You can copy any simulation that's available in the **Simulations** tab, regardless of the **Status** value. When you copy the simulation, you can change the setting in the new copy of the simulation . For example, change the simulation name, description, technique, payload, and target users.
+You can copy any simulation that's available in the **Simulations** tab, regardless of the **Status** value. When you copy the simulation, you can change the setting in the new copy of the simulation. For example, change the simulation name, description, technique, payload, and target users.
 
 - We don't recommend copying **Failed** simulations, because the reasons for failure could recur in the copied simulation.
 - When you copy a simulation, the most recent settings are used in the copy (for example, the payload, landing page, and end-user notifications). If any content is deleted, you're prompted to select the respective content again.
@@ -808,7 +808,7 @@ To copy a simulation, do the following steps:
 
 1. On the **Simulations** tab at <https://security.microsoft.com/attacksimulator?viewid=simulations>, find and select the simulation to copy by selecting the check box next to the name.
 2. Select the :::image type="icon" source="media/m365-cc-sc-copy-icon.png" border="false"::: **Copy simulation** action that appears on the tab.
-3. The simulation wizard opens with all the settings from the original simulation. The default simulation name on the **Name simulation** page is the original name plus the the suffix **_Copy**.
+3. The simulation wizard opens with all the settings from the original simulation. The default simulation name on the **Name simulation** page is the original name plus the suffix **_Copy**.
 4. Review and modify the simulation configuration as needed. Select **Submit** to launch it or **Save and close** to review it later. If you select **Cancel**, the copied simulation isn't saved.
 
 ### Cancel simulations
@@ -825,7 +825,7 @@ After you cancel the simulation, the **Status** value changes to **Canceled**.
 - Cancelling a simulation with the **Status** value **Scheduled** results in 100% cancellation. No training assignment messages or notifications are sent, and the campaign is fully ended.
 - Cancelling a simulation with the **Status** value **In progress** has the following results:
   - Simulation delivery continues to the target users.
-  - If you cancel the simulation after a training assignment, the training assignments are still shown as due, but subsequent training reminders are cancelled.
+  - If you cancel the simulation after a training assignment, the training assignments are still shown as due, but subsequent training reminders are canceled.
   - If you cancel the simulation before a training assignment, the trainings aren't assigned and no training assignment notifications are sent.
   - Users who already received the simulated phishing message experience the following results:
     - For social engineering techniques that use phishing links (all except **Malware Attachment**), the links are deactivated. Selecting the link displays the following message:
