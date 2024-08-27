@@ -34,7 +34,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | August 22 | Upcoming deprecation | [Retirement of Defender for Cloud alert integration with Azure WAF alerts](#retirement-of-defender-for-cloud-alert-integration-with-azure-waf-alerts) |
 | August 1 | GA | [Enable Microsoft Defender for SQL servers on machines at scale](#enable-microsoft-defender-for-sql-servers-on-machines-at-scale) |
 
-## Retirement of Defender for Cloud alert integration with Azure WAF alerts
+### Retirement of Defender for Cloud alert integration with Azure WAF alerts
 
 August 22, 2024
 
