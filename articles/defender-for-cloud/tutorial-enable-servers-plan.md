@@ -132,18 +132,18 @@ Use the following base script file to customize it for your specific needs.
 
 After enabling the plan, you have the ability to [configure the features of the plan](configure-servers-coverage.md) to suit your needs.
 
-## Enable period updates
+## Enable periodic system updates
 
-System updates are critical to maintaining the security and health of your Azure Arc enabled machines and Azure VMs. 
+System updates are crucial for keeping the security and health of your Azure Arc-enabled machines and Azure VMs. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers. 
 
-Microsoft Defender for Cloud generates the following recommendations that ensure the latest security and critical OS updates are installed on your machines:
+Microsoft Defender for Cloud provides these recommendations to ensure the latest security and critical OS updates are installed on your machines:
 
 - System updates should be installed on your machines (powered by Azure Update Manager)
 - Machines should be configured to periodically check for missing system updates
 
-These updates contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers. The recommendations rely on a native agent embedded in every Azure VM and Azure Arc machines instead of an installed agent.
+These recommendations rely on a native agent embedded in every Azure VM and Azure Arc machines instead of an installed agent.
 
-You can use [the Fix option](implement-security-recommendations.md#use-the-fix-option) in the recommendation, to perform a one-time installation of the missing updates in the Update Manager portal.
+[The Fix option](implement-security-recommendations.md#use-the-fix-option), presented in the recommendation, can be used to perform a one-time installation of any missing updates through the Update Manager portal.
 
 If you're using an on-premises machine, it must be [connected to Azure Arc](quickstart-onboard-machines.md).
 
