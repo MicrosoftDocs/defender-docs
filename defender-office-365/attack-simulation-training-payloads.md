@@ -140,7 +140,7 @@ On the **Global payloads** tab of **Content library** \> **Payloads** at <https:
 
 QR code payloads are available in five languages to address real-world scenarios that involve QR code attacks.
 
-:::image type="content" source="media/attack-sim-training-payloads-global-QR-codes.png" alt-text="Screenshot of the Global payloads tab showing the QR code payloads returned after searching for the value QR." lightbox="media/attack-sim-training-payloads-global-QR-codes.png":::
+:::image type="content" source="media/attack-sim-training-payloads-global-qr-codes.png" alt-text="Screenshot of the Global payloads tab showing the QR code payloads returned after searching for the value QR." lightbox="media/attack-sim-training-payloads-global-qr-codes.png":::
 
 You can also create custom payloads that use QR codes as phishing links as described in the next section.
 
@@ -241,7 +241,7 @@ You can also create custom payloads that use QR codes as phishing links as descr
          > [!TIP]
          > The **Formatting controls** bar contains an **Insert QR code** action that you can use instead of selecting **Insert QR code** control from the **Dynamic tag** dropdown list for applicable social engineering techniques (currently in Preview):
          >
-         > :::image type="content" source="media/attack-sim-training-payloads-formatting-controls-insert-qr-code.png" alt-text="The Insert QR code action in the formatting controls on the Configure payload page of the new payload creation wizard." lightbox="media/attack-sim-training-payloads-formatting-controls-insert-qr-code.png":::
+         > :::image type="content" source="media/attack-sim-training-payloads-formatting-controls-insert-qr-code.png" alt-text="The Insert QR code action in the formatting controls on the Configure payload page of the new payload creation wizard.":::
          >
          > See the **Insert QR code** control description for details about adding QR codes to a payload.
 
@@ -277,11 +277,11 @@ You can also create custom payloads that use QR codes as phishing links as descr
              - **Top left corner**
              - **Center**
 
-           :::image type="content" source="media/attack-sim-training-payloads-insert-qr-code-flyout.png" alt-text="The Insert QR code flyout from the Configure payload page of the new payload creation wizard." lightbox="media/attack-sim-training-payloads-insert-qr-code-flyout.png":::
+           :::image type="content" source="media/attack-sim-training-payloads-insert-qr-code-flyout.png" alt-text="The Insert QR code flyout from the Configure payload page of the new payload creation wizard.":::
 
            When you're finished on the **Insert QR code** flyout, select **Save**.
 
-           :::image type="content" source="media/attack-sim-training-payloads-qr-code-inserted.png" alt-text="QR code inserted in the email message of the payload during payload creation." lightbox="media/attack-sim-training-payloads-qr-code-inserted.png":::
+           :::image type="content" source="media/attack-sim-training-payloads-qr-code-inserted.png" alt-text="QR code inserted in the email message of the payload during payload creation.":::
 
            > [!TIP]
            >
@@ -358,7 +358,7 @@ You can also create custom payloads that use QR codes as phishing links as descr
 
      If you select the email message subject or the message body as the location for the indicator, **Select text** appears. In the **Select required text** flyout that opens, select (highlight) the text in the message subject or message body where you want the indicator to appear. When you're finished, select **Select**.
 
-     :::image type="content" source="media/attack-sim-training-payloads-add-indicators-select-location.png" alt-text="The Selected text location in the message body to add to an indicator in the new payload wizard in Attack simulation training" lightbox="media/attack-sim-training-payloads-add-indicators-select-location.png":::
+     :::image type="content" source="media/attack-sim-training-payloads-add-indicators-select-location.png" alt-text="The Selected text location in the message body to add to an indicator in the new payload wizard in Attack simulation training":::
 
      Back on the **Add indicator** flyout, the selected text appears in the **Text selected** section.
 
@@ -390,7 +390,7 @@ You can also create custom payloads that use QR codes as phishing links as descr
 
    When you're finished on the **Review payload** page, select **Submit**. On the confirmation page that appears, select **Done**.
 
-   :::image type="content" source="media/attack-sim-training-payloads-review-payload.png" alt-text="The Review payload page in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-payloads-review-payload.png":::
+   :::image type="content" source="media/attack-sim-training-payloads-review-payload.png" alt-text="The Review payload page in Attack simulation training in the Microsoft Defender portal":::
 
 8. On the **New payload created** page, you can use the links to view all simulations or go to the Attack simulation training overview.
 

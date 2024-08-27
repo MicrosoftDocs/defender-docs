@@ -125,7 +125,7 @@ On the **Target users** page, select who receives the Training campaign. Use the
 
       - **Suggested user groups**: Select from the following values:
         - **All suggested user groups**: The same result as selecting **Users not targeted by a simulation in the last three months** and **Repeat offenders**.
-        - **Users not targeted by a simulation in the last three months**
+        - **Users not targeted by a simulation in the last three months**.
         - **Repeat offenders**: For more information, see [Configure the repeat offender threshold](attack-simulation-training-settings.md#configure-the-repeat-offender-threshold).
 
       - **User tags**: User tags are identifiers for specific groups of users (for example, Priority accounts). For more information, see [User tags in Microsoft Defender for Office 365](user-tags-about.md). Use the following options:
@@ -153,7 +153,7 @@ On the **Target users** page, select who receives the Training campaign. Use the
         - Select **All Title**
         - Select existing Title values. If the link is available, select **See all Titles** to see the complete list of available Title values.
 
-      :::image type="content" source="media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="The User filtering on the Target users page in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-simulations-target-users-filter-by-category.png":::
+      :::image type="content" source="media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="The User filtering on the Target users page in Attack simulation training in the Microsoft Defender portal":::
 
       You can use some or all of the search categories to find users and groups. If you select multiple categories, the AND operator is used. Any users or groups must match both values to be returned in the results (which is virtually impossible if you use the value **All** in multiple categories).
 
@@ -416,7 +416,7 @@ To set the training threshold on the **Settings** tab, do the following steps:
 
 ## View Training campaign reports
 
-For Training campaigns with the **Status** value **In progress** or **Completed**, you can view the report for the Training campaign by using either of the following methods on the **Training campaigns** tab at <https://security.microsoft.com/attacksimulator?viewid=trainingcampaign>
+For Training campaigns with the **Status** value **In progress** or **Completed**, you can view the report for the Training campaign by using either of the following methods on the **Training campaigns** tab at <https://security.microsoft.com/attacksimulator?viewid=trainingcampaign>.
 
 - Select the campaign by clicking anywhere in the row other than the check box next to the name.
 - Select the campaign by selecting the check box next to the name, and then select :::image type="icon" source="media/m365-cc-sc-eye-icon.png" border="false"::: **View report**.
@@ -433,7 +433,7 @@ To close the Training campaign report, select :::image type="icon" source="media
 
 ### Report tab
 
-For a description of what's on the **Report** tab for Training campaigns, see [Simulation report for Training campaigns](attack-simulation-training-insights.md#simulation-report-for-training-campaigns)
+For a description of what's on the **Report** tab for Training campaigns, see [Simulation report for Training campaigns](attack-simulation-training-insights.md#simulation-report-for-training-campaigns).
 
 ### Users tab
 

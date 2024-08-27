@@ -94,7 +94,7 @@ The rest of this article explains how to use the spoof intelligence insight in t
 
 3. On the **Spoofed senders** tab, the spoof intelligence insight looks like this:
 
-   :::image type="content" source="media/m365-sc-spoof-intelligence-insight.png" alt-text="The Spoof intelligence insight on the Anti-phishing policy page" lightbox="media/m365-sc-spoof-intelligence-insight.png":::
+   :::image type="content" source="media/m365-sc-spoof-intelligence-insight.png" alt-text="The Spoof intelligence insight on the Anti-phishing policy page":::
 
    The insight has two modes:
 
