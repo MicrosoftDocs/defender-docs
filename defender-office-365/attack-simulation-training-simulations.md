@@ -60,7 +60,7 @@ If you select the **View details** link in the description, a details flyout ope
 
 For more information about the different social engineering techniques, see [Simulations](attack-simulation-training-get-started.md#simulations).
 
-:::image type="content" source="media/attack-sim-training-simulations-select-technique-sim-steps.png" alt-text="The Details flyout for the credential harvest technique on the Select technique page" lightbox="media/attack-sim-training-simulations-select-technique-sim-steps.png":::
+:::image type="content" source="media/attack-sim-training-simulations-select-technique-sim-steps.png" alt-text="The Details flyout for the credential harvest technique on the Select technique page":::
 
 When you're finished on the **Select technique** page, select **Next**.
 
@@ -118,7 +118,7 @@ When you're finished configuring filters, select **Apply**, **Cancel**, or :::im
 
 If you select a payload by selecting the check box next to the name, a :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Send a test** action appears above the list of payloads. Use this action to send a copy of the payload email to yourself (the currently logged in user) for inspection.
 
-:::image type="content" source="media/attack-sim-training-simulations-select-payload-global-tab.png" alt-text="The Global payloads tab on the Select payload page with a payload selected and the Send a test action in Attack simulation training." lightbox="media/attack-sim-training-simulations-select-payload-global-tab.png":::
+:::image type="content" source="media/attack-sim-training-simulations-select-payload-global-tab.png" alt-text="The Global payloads tab on the Select payload page with a payload selected and the Send a test action in Attack simulation training.":::
 
 On the **Tenant payloads** tab, if no payloads are available or if you want to create your own payload, select :::image type="icon" source="media/m365-cc-sc-create-icon.png" border="false"::: **Create a payload**. The creation steps are the same as at **Attack simulation training** \> **Content library** tab \> **Payloads** \> **Tenant payloads** tab. For more information, see [Create custom payloads for Attack simulation training](attack-simulation-training-payloads.md#create-payloads).
 
@@ -254,7 +254,7 @@ On the **Target users** page, select who receives the simulation. Use the follow
         - Select **All Title**
         - Select existing Title values. If the link is available, select **See all Titles** to see the complete list of available Title values.
 
-      :::image type="content" source="media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="The User filtering on the Target users page in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-simulations-target-users-filter-by-category.png":::
+      :::image type="content" source="media/attack-sim-training-simulations-target-users-filter-by-category.png" alt-text="The User filtering on the Target users page in Attack simulation training in the Microsoft Defender portal":::
 
       You can use some or all of the search categories to find users and groups. If you select multiple categories, the AND operator is used. Any users or groups must match both values to be returned in the results (which is virtually impossible if you use the value **All** in multiple categories).
 
@@ -333,7 +333,7 @@ In the **Add training** flyout that opens, use the following tabs to select trai
 - **Recommended** tab: Shows the recommended built-in trainings based on the simulation configuration. These trainings are the same trainings that would have been assigned if you selected **Assign training for me (Recommended)** on the previous page.
 - **All trainings** tab: Shows all built-in trainings that are available.
 
-:::image type="content" source="media/attack-sim-training-simulations-assign-training-add-recommended-training.png" alt-text="The option to add the recommended training on the Training assignment page in Attack simulation training in the Microsoft Defender portal" lightbox="media/attack-sim-training-simulations-assign-training-add-recommended-training.png":::
+:::image type="content" source="media/attack-sim-training-simulations-assign-training-add-recommended-training.png" alt-text="The option to add the recommended training on the Training assignment page in Attack simulation training in the Microsoft Defender portal":::
 
 On either tab, the following information is shown for each training:
 
