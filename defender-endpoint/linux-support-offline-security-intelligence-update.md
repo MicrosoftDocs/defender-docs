@@ -15,7 +15,7 @@ ms.collection:
 - mde-linux
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 07/22/2024
+ms.date: 08/27/2024
 ---
 
 # Configure Offline Security Intelligence Update for Microsoft Defender for Endpoint on Linux 
@@ -30,9 +30,6 @@ ms.date: 07/22/2024
 
 This document describes the Offline Security Intelligence Update feature of Microsoft Defender for Endpoint on Linux.
 
-> [!IMPORTANT]
-> Information in this article relates to a prerelease product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 This feature enables an organization to update the security intelligence (also referred to as definitions or signatures in this document) on Linux endpoints with limited or no exposure to the internet using a local hosting server (termed as *Mirror Server* in this document).
 
 Mirror Server is any server in the customer's environment that can connect to the Microsoft cloud to download the signatures. Other Linux endpoints pull the signatures from the Mirror Server at a predefined interval.
@@ -45,7 +42,7 @@ Key benefits include:
 - Local server can run any of the three OS - Windows, Mac, Linux, and isn't required to install Defender for Endpoint.
 - Provides the most up to date antivirus protection as signatures are always downloaded along with the latest compatible AV engine.
 - In each iteration, signature with n-1 version is moved to a backup folder on the local server. If there's any issue with the latest signature, you can pull the n-1 signature version from the backup folder to your endpoints.
-- On the rare occasion the offline update fails, you can also choose to fallback to online updates from Microsoft cloud(traditional method).
+- On the rare occasion the offline update fails, you can also choose to fall back to online updates from Microsoft cloud(traditional method).
 
 ## How Offline Security Intelligence Update works
 
