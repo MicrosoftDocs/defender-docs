@@ -38,7 +38,28 @@ For those with policies enforcing the classic per-transaction plan, existing sub
 
 We provide three options to find out your Defender for Storage plans enablement and configuration:
 
-- **KQL query in Resource Graph Explorer**: Use a KQL query in the Azure portal's Resource Graph Explorer to view which plans are enabled at the subscription level. For information on how to access and run the query and instructions on how to run it, see []()
+- **KQL query in Resource Graph Explorer**: Use this KQL query in the Azure portal's Resource Graph Explorer to view which plans are enabled at the subscription level:
+
+    ```kusto
+    // DF-Storage Plans
+    securityresources
+    | where type == "microsoft.security/pricings"
+    | where name == "StorageAccounts"
+    | extend pricingTier = properties.pricingTier
+    | extend DefenderForStoragePlan = properties.subPlan
+    | extend IsInTrialPeriod = properties.freeTrialRemainingTime
+    | extend MalwareScanningEnabled = properties.extensions[0].isEnabled
+    | extend MalwareScanningCapping = properties.extensions[0].additionalExtensionProperties["CapGBPerMonthPerStorageAccount"]
+    | extend SensitiveDataDiscoveryEnabled = properties.extensions[1].isEnabled
+    | extend IsEnabled = iff(pricingTier == "Free", "Disabled", "Enabled"), 
+        DefenderForStoragePlan  = iff(isnull(DefenderForStoragePlan ), "", DefenderForStoragePlan ), 
+        MalwareScanningEnabled = iff(isnull(MalwareScanningEnabled), "", MalwareScanningEnabled), 
+        MalwareScanningCapping = iff(isnull(MalwareScanningCapping), "", MalwareScanningCapping), 
+        SensitiveDataDiscoveryEnabled = iff(isnull(SensitiveDataDiscoveryEnabled), "", SensitiveDataDiscoveryEnabled),
+        IsInTrialPeriod = iff(IsInTrialPeriod == "PT0S", "", "Yes")
+    | project properties, tenantId, subscriptionId, IsInTrialPeriod, IsEnabled, DefenderForStoragePlan, MalwareScanningEnabled, MalwareScanningCapping, SensitiveDataDiscoveryEnabled
+    ```
+
 - **Detailed analysis with PowerShell script**: For a more detailed investigation, including information at both the subscription and resource levels (with add-ons configuration), run [this PowerShell script](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Powershell%20scripts/Analyze%20Defender%20For%20Storage%20Configuration/Analyze-DefenderForStorageConfig.ps1).
 - **Workbook for subscription-level coverage details**: Use the provided workbook to see which plans are enabled at the subscription level and their configuration details. To access the workbook, see [Microsoft Defender for Storage - Price Estimation Dashboard 4.0](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Microsoft%20Defender%20for%20Storage%20Price%20Estimation).
 
