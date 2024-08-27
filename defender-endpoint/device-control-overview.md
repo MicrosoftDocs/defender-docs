@@ -62,7 +62,7 @@ Device control capabilities from Microsoft can be organized into three main cate
   - Device control in Microsoft Defender can be managed using Intune or [Group Policy](device-control-deploy-manage-gpo.md).
   - **Device control in Microsoft Defender and Intune**. Intune provides a rich experience for managing complex device control policies for organizations. You can configure and deploy device restriction settings in Defender for Endpoint, for example. See [Deploy and manage device control with Microsoft Intune](device-control-deploy-manage-intune.md).
 
-- **Endpoint data loss prevention** (Endpoint DLP). Endpoint DLP monitors sensitive information on devices that are onboarded to Microsoft Purview solutions. DLP policies can enforce protective actions on sensitive information and where it's stored or used. [Learn about Endpoint DLP](/purview/endpoint-dlp-learn-about).
+- **Endpoint data loss prevention** (Endpoint DLP). Endpoint DLP monitors sensitive information on devices that are onboarded to Microsoft Purview solutions. DLP policies can enforce protective actions on sensitive information and where it's stored or used.  Endpoint DLP can capture file evidence. [Learn about Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
 ## Common device control scenarios
 
@@ -187,6 +187,10 @@ Device control can also restrict the types of files that are printed. Device con
 
 To block printing of documents based on information classification use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
+### Use Endpoint DLP to capture file evidence of printed files
+
+To capture evidence of a file being printed, use [Endpoint DLP](/purview/dlp-copy-matched-items-get-started?tabs=purview-portal%2Cpurview)
+
 ## Control access to Bluetooth devices
 
 You can use device control to control access to Bluetooth services on Windows devices or by using Endpoint DLP.
@@ -201,6 +205,10 @@ Administrators can control the behavior of the Bluetooth service (Allowing adver
 ### Use Endpoint DLP to prevent document copying to devices
 
 To block copying of sensitive document to any Bluetooth Device use [Endpoint DLP](/purview/endpoint-dlp-learn-about).
+
+### Use Endpoint DLP to capture file evidence of files copied to USB
+
+To capture evidence of a file being copied to a USB, use [Endpoint DLP](/purview/dlp-copy-matched-items-get-started?tabs=purview-portal%2Cpurview)
 
 ## Device control policy samples and scenarios
 
