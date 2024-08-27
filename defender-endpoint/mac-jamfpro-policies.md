@@ -402,7 +402,7 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
 
-2. Select **New**, and then, on the **General** tab, for **Options**, specify the following details :
+2. Select **New**, and then, on the **General** tab, for **Options**, specify the following details:
 
    - **Name**: `MDATP MDAV Notification settings`
    - **Description**: `macOS 11 (Big Sur) or later`
@@ -476,7 +476,7 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
    :::image type="content" source="media/eaba2a23dd34f73bf59e826217ba6f15.png" alt-text="The configuration settings." lightbox="media/eaba2a23dd34f73bf59e826217ba6f15.png":::
 
-4. On the **General** tab, specify the following details :
+4. On the **General** tab, specify the following details:
 
     - **Name**: `MDATP MDAV MAU settings`
     - **Description**: `Microsoft AutoUpdate settings for MDATP for macOS`
