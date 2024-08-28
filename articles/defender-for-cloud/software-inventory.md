@@ -1,5 +1,5 @@
 ---
-title: Review the software inventory Defender for Cloud
+title: Review the software inventory in Defender for Cloud
 description: Learn how to review the software inventory in Microsoft Defender for Cloud
 ms.date: 06/14/2023
 ms.topic: how-to
@@ -13,9 +13,8 @@ The Defender for Servers plan in Microsoft Defender for Cloud provides vulnerabi
 
 The software inventory feature, provided by Defender Vulnerability Management, shows a list of known software in your organization, with security information about discovered applications.
 
-Defender for Cloud shows the integrated software inventory on the **Inventory** page, summarizing software running on resources connected to Defender for Cloud. 
-
-You can query the Defender for Cloud inventory using [Azure Resource Graph (ARG)](/azure/governance/resource-graph/index) to query and retrieve data at scale. For deep custom insights, you can use also use [KQL](/azure/data-explorer/kusto/query/) to query the inventory.
+- Defender for Cloud shows the integrated software inventory on the **Inventory** page, summarizing software running on resources connected to Defender for Cloud. 
+- You can query the Defender for Cloud inventory using [Azure Resource Graph (ARG)](/azure/governance/resource-graph/index) to query and retrieve data at scale. For deep custom insights, you can use also use [KQL](/azure/data-explorer/kusto/query/) to query the inventory.
 
 This article explains how to review the software inventory.
 
@@ -23,7 +22,7 @@ This article explains how to review the software inventory.
 
 To see the software inventory, one of these paid plans must be enabled.
 - [Defender CSPM plan](concept-cloud-security-posture-management.md) with [agentless machine scanning](concept-agentless-data-collection.md) enabled.
-- [Defender for Server Plan 1 or Plan 2](defender-for-servers-introduction.md) with [Defender for Endpoint integration](integration-defender-for-endpoint.md), or Defender for Servers Plan 2 with agentless machine scanning enabled.
+- [Defender for Server Plan 1 or Plan 2](defender-for-servers-introduction.md) with [Defender for Endpoint integration](integration-defender-for-endpoint.md) enabled, or Defender for Servers Plan 2 with agentless machine scanning enabled.
 - If software that isn't supported appears in the inventory, only limited data will be available. 
 
 

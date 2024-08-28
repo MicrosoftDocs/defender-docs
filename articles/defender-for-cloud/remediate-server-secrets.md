@@ -8,7 +8,7 @@ ms.date: 04/16/2024
 
 # Remediate machine secrets
 
-Microsoft Defender for Cloud can [scan machines and cloud deployments](secrets-scanning.md) for [supported secrets](secrets-scanning.md#discovery-support), to reduce lateral movement risk.
+Microsoft Defender for Cloud can [scan machines and cloud deployments](secrets-scanning.md) for [supported secrets](secrets-scanning.md#secrets-support), to reduce lateral movement risk.
 
 This article helps you to identify and remediate [machine secrets scan](secrets-scanning-servers.md) findings.
 

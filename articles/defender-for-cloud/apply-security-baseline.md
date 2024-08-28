@@ -47,7 +47,7 @@ With Defender for Servers Plan 2 enabled, you can install the guest configuratio
     - **Azure machines**: Install by remediating the recommendation [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc). 
     - **Azure VMs only**:
         - Managed identity must be assigned to the machine. To do this, remediate the recommendation [Virtual machines Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755)
-        - For Azure VMs you can [autoprovision the Azure Policy guest configuration agent](#autoprovision-the-guest-configuration-agent), available in preview.
+        - For Azure VMs you can [autoprovision the Azure Policy guest configuration agent](#autoprovision-the-guest-configuration-extension-on-azure-vms), available in preview.
     - **AWS/GCP**: The guest configuration is installed by default when you select Arc provisioning in the [AWS](quickstart-onboard-aws.md) or [GCP](quickstart-onboard-gcp.md) connector.
     - **On-premises machines**: The guest configuration is enabled by default when you [onboard on-premises VMs as Azure Arc-enabled VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 

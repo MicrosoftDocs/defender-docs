@@ -91,7 +91,7 @@ If you're using Defender for Endpoint as an EDR solution, Defender for Cloud can
 
 ## Next steps
 
-- [Enable Defender for Endpoint integration](enable-defender-for-endpoin) if it isn't switched on.
+- [Enable Defender for Endpoint integration](enable-defender-for-endpoint.md) if it isn't switched on.
 - [Remediate EDR solutions](endpoint-detection-response.md)
 - [Remediate Defender for Endpoint misconfigurations](endpoint-detection-misconfiguration.md)
 - Learn about [migrating machines from Defender for Endpoint to Defender for Cloud](/microsoft-365/security/defender-endpoint/migrating-mde-server-to-cloud).
