@@ -6,7 +6,8 @@ ms.author: dacurwin
 ms.topic: how-to
 ms.date: 08/25/2024
 ---
-# Enable file integrity monitoring (Azure Monitor Agent)
+
+# Enable file integrity monitoring with Azure Monitor agent (deprecated)
 
 In the Defender for Servers plan in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
