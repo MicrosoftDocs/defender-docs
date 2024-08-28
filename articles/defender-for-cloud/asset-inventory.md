@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
 ---
-# Review the inventory in Defender for Cloud
+# Review the asset inventory
 
 The Inventory page in Microsoft Defender for Cloud summarizes the resources that are connected to Defender for Cloud.
 

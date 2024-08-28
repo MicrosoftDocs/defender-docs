@@ -4,9 +4,9 @@ description: Learn about tracking changes to system files and registry keys with
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 03/11/2024
+ms.date: 08/28/2024
 ---
-# Overview: File integrity monitoring
+# Overview - File integrity monitoring
 
 In the Defender for Servers plan in Microsoft Defender for Cloud, the file integrity monitoring feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
@@ -16,7 +16,7 @@ File integrity monitoring uses [Azure Automation change tracking](/azure/automat
 > File integrity monitoring previously used the [Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA))](/azure/automation/change-tracking/overview) in general availability (GA), or the [Azure Monitoring Agent (AMA)](/azure/automation/change-tracking/overview-monitoring-agent) in preview.
 > - The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024.
 > - File integrity monitoring using the AMA in preview is no longer supported.
-> A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers will be released in preview around August 2024.
+> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers will be released in preview around August 2024.
 
 ## Enabling file integrity monitoring (MMA/AMA)
 

@@ -55,7 +55,7 @@ If you've never enabled the Defender for Endpoint integration on a subscription,
 1. In the Azure portal, you can check that Linux machines have a new Azure extension called `MDE.Linux`.
 
 
-## Enable on specific Windows machines (plan and integration on)
+## Enable on specific Windows machines (plan/integration enabled)
 
 If Defender for Servers is already enabled and Defender for Endpoint integration is on in a subscription, you can manually turn on the integration for specific machines.
 
@@ -79,7 +79,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 
     Onboarding might take up to 12 hours. For new machines created after the integration has been enabled, onboarding takes up to an hour.
 
-## Enable on specific Linux machines (plan and integration on)
+## Enable on specific Linux machines (plan/integration enabled)
 
 If Defender for Servers is already enabled and Defender for Endpoint integration is on in the subscription, you can manually turn on the integration for specific Linux machines.
 

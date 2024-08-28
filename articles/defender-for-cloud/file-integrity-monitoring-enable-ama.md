@@ -16,7 +16,7 @@ File integrity monitoring uses Azure Automation change tracking. This article de
 > File integrity monitoring previously used the [MMA](/azure/automation/change-tracking/overview) in general availability (GA), or the [AMA](/azure/automation/change-tracking/overview-monitoring-agent) in preview.
 > - The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024.
 > - File integrity monitoring using the AMA in preview is no longer supported.
-> A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers will be released in preview around August 2024.
+> -  new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers will be released in preview around August 2024.
 
 ## Prerequisites
 
@@ -35,19 +35,19 @@ Enable file integrity monitoring using a security recommendation.
 1. Select the recommendation [File integrity monitoring should be enabled on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/9b7d740f-c271-4bfd-88fb-515680c33440).
 1. Select the machines you want to monitor. Select **Fix** > **Fix X resources**. Here's what the fix does:
 
-- Installs the change tracking extension on VMs.
-
-  - Windows extension: `ChangeTracking-Windows`
-  - Linux extension: `ChangeTracking-Linux` 
+  - Installs the change tracking extension on VMs.
+    
+    - Windows extension: `ChangeTracking-Windows`
+    - Linux extension: `ChangeTracking-Linux` 
      
-- Generates a data collection rule for the default subscription named `Microsoft-ChangeTracking-[subscriptionId]-default-dcr`.
+  - Generates a data collection rule for the default subscription named `Microsoft-ChangeTracking-[subscriptionId]-default-dcr`.
+    
+    - This rule defines what files and registries should be monitored based on default settings.
+    - The fix attaches the DCR to all machines in the subscription that have AMA installed and file integrity monitoring enabled.
 
-  - This rule defines what files and registries should be monitored based on default settings.
-  - The fix attaches the DCR to all machines in the subscription that have AMA installed and file integrity monitoring enabled.
+  - Creates a new Log Analytics workspace specifically for file integrity monitoring with the naming convention `defaultWorkspace-[subscriptionId]-fim`, with default workspace settings.        
 
-- Creates a new Log Analytics workspace specifically for file integrity monitoring with the naming convention `defaultWorkspace-[subscriptionId]-fim`, with default workspace settings.
-
-    You can update the DCR and Log Analytics workspace settings later.
+  You can update the DCR and Log Analytics workspace settings later.
 
 ## Review machines with file integrity monitoring enabled
 

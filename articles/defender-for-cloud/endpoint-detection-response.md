@@ -11,23 +11,23 @@ ai-usage: ai-assisted
 
 # Remediate EDR solutions (agentless)
 
-Microsoft Defender for Cloud provides agentless scanning of protected machines to [check that an endpoint detection and response (EDR) solution is installed](integration-defender-for-endpoint.md#assessing-edr-solutions). 
+Microsoft Defender for Cloud integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide endpoint detection and response (EDR) capabilities for machines connected to Defender for Cloud. 
 
-The EDR solution might be Microsoft Defender for Endpoint (integrated by default into Defender for Cloud), or a [supported third-party EDR solution](integration-defender-for-endpoint.md#supported-edr-solutions).
+As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solution, whether that's integrated Defender for Endpoint or a [supported third-party solution](integration-defender-for-endpoint.md#supported-edr-solutions).
 
-Based on EDR solution findings, Defender for Cloud provides [recommendations](integration-defender-for-endpoint.md#edr-solution-recommendations) to remediate any issues, and ensure that EDR solutons are installed and running correctly on VMs.
 
+Based on EDR solution findings, Defender for Cloud provides [recommendations](integration-defender-for-endpoint.md#edr-solution-recommendations) to ensure that EDR solutions are installed and running correctly on VMs.
+
+This article describes how to remediate those recommendations.
 
 > [!NOTE]
->
-> - Agentless scanning for EDR solution information replaces previous functionality that collected EDR solution information with the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), in general availability (GA), or with the Azure Monitoring Agent (AMA), in preview.
-> - The MMA is set to retire in August 2024. Data collection with the MMA will be deprecated in November 2024.
-> - AMA preview support is now deprecated.
-
+> - Defender for Cloud uses agentless scanning to assess EDR settings.
+> - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously use to collect machine data.
+> - The MMA is set to retire. Scanning using the MMA will be deprecated in November 2024. 
 
 ## Prerequisites
 
-EDR recommendations are available when:
+EDR solution recommendations are available when:
 
 - [Defender for Cloud](connect-azure-subscription.md) is available in the Azure subscription.
 - One of these Defender for Cloud plans is enabled:

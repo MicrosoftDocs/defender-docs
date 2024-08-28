@@ -10,18 +10,19 @@ ms.date: 05/26/2024
 
 # Remediate security baseline assessment recommendations
 
-The Defender for Server Plan 2 in Microsoft Defender for Cloud can assess machine security posture against a security baseline profile made up of security benchmarks. 
+Microsoft Defender for Cloud integrates natively with Microsoft Defender for Endpoint and Microsoft Vulnerability Management to provide machines with vulnerability protection, and endpoint detection and response (EDR) capabilities.
 
-Security baselines assessment is provided by the integration of Microsoft Defender Vulnerability Management with Defender for Servers Plan 2. [Learn more](/defender-vulnerability-management/tvm-security-baselines) about security baselines assessment.
+As part of that integration, [security baselines assessment](/defender-vulnerability-management/tvm-security-baselines) is provided by Defender Vulnerability Management.
 
-The security benchmarks in security baseline profiles are comprehensive, and continuously updated. Each assessment rule is accompanied with information about the effect of the issue, a description of the problem, and detailed recommendation steps. Checks are integrated into the Microsoft Defender for Endpoint agent, which allows Defender for Cloud to provide extra security checks within the same agent.
+Security baseline assessment uses customised security baseline profiles. Profiles are basically a template that consists of device configuration settings, and benchmarks against which to compare them. 
+
+This article describes how to remediate recommendations made by Defender Vulnerability Management baseline assessments.
 
 ## Prerequisites
 
-- [Enable Defender for Servers Plan 2](tutorial-enable-servers-plan.md).
-
+- [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) must be enabled.
 - The Defender for Endpoint agent must be enabled on machines. Autoprovisioning of the agent is turned on by default when you enable the Defender for Servers plan, but if needed, you can [enable the agent manually](enable-defender-for-endpoint.md).
-- The following operating systems are supported for assessment:
+- Machines running these operating systems can be assessment against security baseline profiles:
     - windows_server_2008_r2
     - windows_server_2016
     - windows_server_2019
@@ -29,7 +30,7 @@ The security benchmarks in security baseline profiles are comprehensive, and con
 
 ## Remediate recommendations
 
-To ensure your servers are protected and secure, you should remediate all security baselines recommendations.
+To ensure your servers are protected and secure, remediate all security baselines recommendations.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 

@@ -18,7 +18,7 @@ This article describes how to work with adaptive application control recommendat
 > [!Note]
 > - Adaptive application controls in general availability (GA) uses the Log Analytics agent. (also known as the Microsoft Monitoring Agent (MMA)).The MMA is set to retire in August 2024.
 > -  Adaptive application controls is also available in preview using the Azure Monitoring Agent (AMA).
-> - The adaptive application controls features, using either the AMA or MMA, will be deprecated in August 2024.
+> - The adaptive application controls features, using AMA or MMA, will be deprecated in August 2024.
 
 
 ## Prerequisites

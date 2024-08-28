@@ -660,7 +660,7 @@
           - name: Machine malware scanning
             displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots, Microsoft Defender Antivirus
             href: agentless-malware-scanning.md
-          - name: Enable agentless VM scanning
+          - name: Enable agentless machine scanning
             displayName: vulnerability, software inventory, agentless scanning
             href: enable-agentless-scanning-vms.md
           - name: Exclude machines from agentless scanning
@@ -692,17 +692,17 @@
           - name: Enable File Integrity Monitoring (MMA)
             displayName: fim, change, log analytics, mma
             href: file-integrity-monitoring-enable-log-analytics.md
-      - name: Just-in-time VM access
+      - name: Just-in-time machine access
         items:
-          - name: Just-in-time access
+          - name: Overview
             displayName: jit, management
             href: just-in-time-access-overview.md
-          - name: Enable just-in-time access on VMs
+          - name: Enable just-in-time access 
             displayName: jit, management, ports
             href: just-in-time-access-usage.yml
-      - name: Adaptive application controls
+      - name: Adaptive application controls (deprecated)
         items:
-          - name: Adaptive application controls
+          - name: Overview
             displayName: aac, allowlist, reviewgroup
             href: adaptive-application-controls.md
           - name: Enable and manage adaptive application controls
@@ -710,13 +710,13 @@
             href: enable-adaptive-application-controls.md
     - name: Investigate and remediate 
       items:
-      - name: Remediate Defender for Endpoint issues
-        href: endpoint-detection-misconfiguration.md
       - name: Remediate EDR solutions (agentless)
         displayName: defender for endpoint, endpoint, edr
         href: endpoint-detection-response.md   
       - name: Remediate EDR solutions (MMA)
         href: endpoint-protection-recommendations-technical.md 
+      - name: Remediate Defender for Endpoint misconfigurations
+        href: endpoint-detection-misconfiguration.md
       - name: Remediate machine vulnerabilities
         displayName: qualys, va, rapid7, vulnerability
         href: remediate-vulnerability-findings-vm.md

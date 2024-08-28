@@ -18,9 +18,9 @@ After gaining initial access, attackers can move laterally across networks, find
 - **Trade-off between security and usability**: Organizations might keep secrets exposed in cloud environments for ease-of-use, to avoid the complexity and latency of encrypting and decrypting data at rest and in transit. This can compromise the security and privacy of data and credentials.
 
 
-## Secrets scanning support 
+## Scanning types
 
-Defender for Cloud provides secrets scanning to reduce lateral movement risk, as summarized in the table.
+Defender for Cloud provides different types of secrets scanning.
 
 **Scanning type** | **Details** | **Requirements**
 --- | --- | ---
@@ -28,7 +28,18 @@ Defender for Cloud provides secrets scanning to reduce lateral movement risk, as
 **Cloud deployment scanning** | Agentless secrets scanning across multicloud infrastructure-as-code deployment resources. | Defender CSPM plan
 **Azure DevOps scanning** | [Scanning to discover exposed secrets in Azure DevOps](defender-for-devops-introduction.md). | Defender CSPM plan
 
-Required roles and permissions:
+## Scanning in plans
+
+Secrets scanning is provided as a feature in Defender for Cloud plans:
+
+- Machine scanning is provided with Defender for Cloud Security Posture Management (CSPM) plan, or with Defender for Servers Plan 2.
+- Cloud deployment resource scanning is provided with Defender CSPM.
+- DevOps scanning is provided with Defender CSPM.
+
+
+## Scanning permissions
+
+To use secrets scanning, the following permissions are needed:
 
    - Security Reader
    
@@ -42,20 +53,22 @@ Required roles and permissions:
                
 
 
+## Investigation and remediation methods
+
+There are a number of methods available to identify and mitigate secrets issues. Not every method is supported for every secret.
+
+- **Review secrets in the asset inventory**: The inventory shows the security state of resources connected to Defender for Cloud. From the inventory you can view the secrets discovered on a specific machine.
+- **Review secrets recommendations**: When secrets are found on assets, a recommendation is triggered under the Remediate vulnerabilities security control on the Defender for Cloud Recommendations page. Recommendations are triggered as follows:
+- **Review secrets with cloud security explorer**. Use cloud security explorer to query the cloud security graph. You can build your own queries, or use one of the built-in templates to query for VM secrets across your environment.
+- **Review attack paths**: Attack path analysis scans the cloud security graph to expose exploitable paths that attacks might use to breach your environment and reach high-impact assets. VM secrets scanning supports a number of attack path scenarios.
 ## Reviewing secrets findings
 
-You can review and investigate the security findings for secrets in a couple of ways:
 
-- Review the asset inventory. In the Inventory page you can get an all-up view of your secrets.
-- Review secrets recommendations: In the Defender for Cloud Recommendations page, you can review and remediate secrets recommendations. Learn more about Investigate recommendations and alerts.
-- Investigate security insights: You can use cloud security explorer to query the cloud security graph. You can build your own queries, or use predefined query templates.
-- Use attack paths: You can use attack paths to investigate and remediate critical secrets risk. Learn more.
+## Secrets support
 
-## Discovery support
+Defender for Cloud supports discovery of the types of secrets summarized in the table. The **Review using** column indicates the methods you can use to investigate and remediate secrets recommendations.
 
-Defender for Cloud supports discovery of the types of secrets summarized in the table.
-
-**Secrets type** | **VM secrets discovery** | **Cloud deployment secrets discovery** | **Review location**
+**Secrets type** | **VM secrets discovery** | **Cloud deployment secrets discovery** | **Review using**
 --- | --- | --- | ---
 Insecure SSH private keys<br/>Supports RSA algorithm for PuTTy files.<br/>PKCS#8 and PKCS#1 standards<br/>OpenSSH standard |Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths
 Plaintext Azure SQL connection strings support SQL PAAS.|Yes |Yes | Inventory, cloud security explorer, recommendations, attack paths

@@ -12,9 +12,8 @@ Microsoft Defender for Cloud provides [secrets scanning](secrets-scanning.md) fo
 
 - Agentless secrets scanning for VMs helps you to quickly detect, prioritize, and remediate exposed plaintext secrets in your environment.
 - If secrets are detected, Defender for Cloud findings help security teams to prioritize actions, and remediate to minimize the risk of lateral movement.
-- Secrets scanning for VMs is available in these Defender for Cloud plans:
-    - Defender Cloud Security Posture Management (CSPM) plan.
-    Machine secrets scanning can scan Azure VMs, and AWS/GCP instances connected to Defender for Cloud.
+- Scanning machines for [supported secrets](secrets-scanning.md#secrets-support) is available when Defender for Servers Plan 2, or the Defender Cloud Security Posture Management (CSPM) plan is enabled.
+- Machine secrets scanning can scan Azure VMs, and AWS/GCP instances connected to Defender for Cloud.
 
 ## Reducing security risk
 
@@ -25,7 +24,7 @@ Secrets scanning helps reduce risk by:
 - Strengthening secrets security by using secrets management systems such as Azure Key Vault.
 - Using short-lived secrets such as substituting Azure Storage connection strings with SAS tokens that possess shorter validity periods.
 
-## How VM secrets scanning works
+## How machine secrets scanning works
 
 Secrets scanning for VMs is agentless and uses cloud APIs. Here's how it works:
 
@@ -34,6 +33,36 @@ Secrets scanning for VMs is agentless and uses cloud APIs. Here's how it works:
 3. The secrets scanning engine verifies whether SSH private keys can be used to move laterally in your network.
     - SSH keys that aren’t successfully verified are categorized as unverified on the Defender for Cloud **Recommendations** page.
     - Directories recognized as containing test-related content are excluded from scanning.
+
+## Machine secrets recommendations
+
+The following machine secrets security recommendations are available:
+
+- Azure resources: Machines should have secrets findings resolved
+- AWS resources: EC2 instances should have secrets findings resolved
+- GCP resources: VM instances should have secrets findings resolved
+
+### Machine secrets attack paths
+
+The table summarizes supported attack paths.
+
+**VM** | **Attack paths**
+--- | ---
+Azure | Exposed Vulnerable VM has an insecure SSH private key that is used to authenticate to a VM.<br/>Exposed Vulnerable VM has insecure secrets that are used to authenticate to a storage account.<br/>Vulnerable VM has insecure secrets that are used to authenticate to a storage account.<br/>Exposed Vulnerable VM has insecure secrets that are used to authenticate to an SQL server.
+AWS | Exposed Vulnerable EC2 instance has an insecure SSH private key that is used to authenticate to an EC2 instance.<br/>Exposed Vulnerable EC2 instance has an insecure secret that is used to authenticate to a storage account.<br/>Exposed Vulnerable EC2 instance has insecure secrets that are used to authenticate to an AWS RDS server.<br/>Vulnerable EC2 instance has insecure secrets that are used to authenticate to an AWS RDS server.
+GCP | Exposed Vulnerable GCP VM instance has an insecure SSH private key that is used to authenticate to a GCP VM instance.
+
+## Predefined cloud security explorer queries
+
+Defender for Cloud provides these predefined queries for investigating secrets security issues:
+
+- VM with plaintext secret that can authenticate to another VM - Returns all Azure VMs, AWS EC2 instances, or GCP VM instances with plaintext secret that can access other VMs or EC2s.
+- VM with plaintext secret that can authenticate to a storage account - Returns all Azure VMs, AWS EC2 instances, or GCP VM instances with plaintext secret that can access storage accounts
+- VM with plaintext secret that can authenticate to an SQL database - Returns all Azure VMs, AWS EC2 instances, or GCP VM instances with plaintext secret that can access SQL databases.
+
+## Investigating and remediating machine secrets
+
+You can investigate machine secrets findings in Defender for Cloud using a number of method. Not all methods are available for all secrets. [Review the supported methods](secrets-scanning.md#investigation-and-remediation methods) for different types of secrets.
 
 
 ## Related content

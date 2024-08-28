@@ -11,11 +11,16 @@ ms.date: 07/31/2023
 
 Microsoft Defender for Cloud provides security recommendations to improve your organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment.
 
-When Defender for Cloud is enabled, by default its foundational cloud security posture management (CSPM) capabilities assesses machine settings against the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction). The benchmark Covers Azure, AWS, and GCP (in preview) environments, and provides hardening baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
+When you enable Defender for Cloud on a subscription, free foundational cloud security posture management (CSPM) capabilities assesses the configuration of protected resources against the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction).
+
+The MCSB covers Azure, AWS, and GCP (in preview) environments, and includes compute security baselines that assess compliance for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
 
 > [!NOTE]
-> - Machine information is now gathered with a new method using the Guest Configuration on the machine. This capability is currently in preview and is expected to release to general availability (GA) around September 2024.
-> - The older method, that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) to gather data, will be supported until the end of November 2024.
+> Machine information is gathered using the Azure Policy guest configuration of the machine. This feature is currently in preview and is expected to release to general availability (GA) around September 2024.
+> - The guest configuration will replace the older method of data collection that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)).
+> - Use of the MMA will be supported until November 2024.
+> - With the GA of the guest configuration method, OS recommendations based on compute security baselines in the MCSB will no longer be included in Defender for Cloud foundational CSPM. These recommendations will be available when Defender for Servers Plan 2 is enabled. 
+> - Recommendations provided by the MCSB that aren't part of Windows and Linux compute security baselines continue to be part of free foundational CSPM.
 
 
 ## Prerequisites
@@ -27,13 +32,42 @@ When Defender for Cloud is enabled, by default its foundational cloud security p
     - Be members of a workgroup.
 - To install the Guest Configuration extension you need Write permission on the relevant machines.
 - To view the recommendations and explore the OS baseline data, you need Read permission on the relevant Azure subscription.
+- These Azure policies are enabled with the guest configuration. Make sure you don't remove them or you won't be able to leverage the guest configuration.
+    - "Windows machines should meet requirements of the Azure compute security baseline" 
+    - "Linux machines should meet requirements for the Azure compute security baseline"
 
 
+## Install the guest configuration extension
 
-## Assess machines against the MCSB
+With Defender for Servers Plan 2 enabled, you can install the guest configuration extension on machines using a Defender for Cloud recommendation.
 
-Compare machines with [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) baselines in the MCSB compliance standard.
+1. Enable that machines [meet support requirements](/azure/governance/machine-configuration/overview) for the extension.
+2. Install the extension.
 
+    - **Azure machines**: Install by remediating the recommendation [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc). 
+    - **Azure VMs only**:
+        - Managed identity must be assigned to the machine. To do this, remediate the recommendation [Virtual machines Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755)
+        - For Azure VMs you can [autoprovision the Azure Policy guest configuration agent](#autoprovision-the-guest-configuration-agent), available in preview.
+    - **AWS/GCP**: The guest configuration is installed by default when you select Arc provisioning in the [AWS](quickstart-onboard-aws.md) or [GCP](quickstart-onboard-gcp.md) connector.
+    - **On-premises machines**: The guest configuration is enabled by default when you [onboard on-premises VMs as Azure Arc-enabled VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
+
+With the guest configuration extension enabled on machine, the machine can then be assessed against [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems baselines.
+
+### Autoprovision the guest configuration agent on Azure VMs
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. Navigate to **Environment settings** > **Your subscription** > **Settings & Monitoring**.
+1. Under **Settings**, select **Guest Configuration**.
+
+    :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/setting-and-monitoring.png" alt-text="Screenshot that shows the location of the settings and monitoring button." lightbox="media/prepare-deprecation-log-analytics-mma-agent/setting-and-monitoring.png":::
+
+1. Toggle the Guest Configuration agent (preview) to **On**.
+
+    :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/toggle-guest.png" alt-text="Screenshot that shows the location of the toggle button to enable the Guest Configuration agent." lightbox="media/prepare-deprecation-log-analytics-mma-agent/toggle-guest.png":::
+
+1. Select **Continue**.
+
+## Review OS baseline recommendations
 
 1. In Defender for Cloud, open the **Recommendations** page.
 1. Select the relevant recommendation.

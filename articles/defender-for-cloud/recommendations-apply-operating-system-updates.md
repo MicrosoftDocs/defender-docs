@@ -7,37 +7,33 @@ author: dcurwin
 ms.date: 06/27/2023
 ---
 
-# Review OS system update issues 
+# Remediate system update recommendations 
 
-Microsoft Defender for Cloud provides security recommendations to improve your organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment, including installing the latest system updates.
+Microsoft Defender for Cloud provides security recommendations to improve your organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment.
 
-
-When Defender for Cloud is enabled, by default its foundational cloud security posture management (CSPM) capabilities assesses machine settings against the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction). The benchmark covers Azure, AWS, and GCP (in preview) environments, and provides hardening baselines for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems, including recommendations for system updates.
+As part of the hardening strategy, Defender for Cloud assesses machines to check that the latest system updates are installed, and issues security recommendations if they're not.
 
 
 > [!NOTE]
-> - Information about missing machine updates is now gathered using [Azure Update Manager](/azure/update-manager/overview). This method is currently in preview and is expected to be generally available (GA) around September 2024.
+> - Information about missing machine updates is now gathered using [Azure Update Manager](/azure/update-manager/overview).
+> - This method is currently in preview and is expected to be generally available (GA) around September 2024.
 > - The older method, that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) to gather data, will be supported until the end of November 2024.
 
 ## Prerequisites
 
-- Check [machines supported](/azure/update-manager/support-matrix) by Azure Update Manager.
-- On-premises and multicloud machines must be onboarded as Azure Arc to use Azure Update Manager.
+- To verify system updates [machines must be supported](/azure/update-manager/support-matrix) by Azure Update Manager.
+- On-premises machines must be [onboarded as Azure Arc-enabled VMs](quickstart-onboard-machines.md) to use Azure Update Manager.
 - To view and explore system update recommendations, you need Read permission on the relevant Azure subscription.
-- > If you're using Defender for Servers Plan 2, there's no additional cost for assessing, remediating, and patching system updates on supported Azure VMs and Azure Arc VMs.
-> If Defender for Servers Plan 2 isn't enabled on your subscription or multicloud connector, assessments for Azure Arc-enabled machines VMs in the subscription are subject to [Azure Update Manager charges](https://azure.microsoft.com/pricing/details/azure-update-management-center/).
+- Multicloud (AWS/GCP machines) must be onboarded with Azure Arc when you connect [AWS](quickstart-onboard-aws.md) or [GCP](quickstart-onboard-gcp.md).
+- If you're using Defender for Servers Plan 2, there's no additional cost for assessing, remediating, and patching system updates on supported Azure VMs and Azure Arc VMs.
+- If Defender for Servers Plan 2 isn't enabled on your subscription or multicloud connector, assessments for Azure Arc-enabled machines VMs in the subscription are subject to [Azure Update Manager charges](https://azure.microsoft.com/pricing/details/azure-update-management-center/).
 
 
 
 
-## Assess machines for system updates
+## Remediate system update findings
 
-Assess machines for system update issues.
-
-> [!IMPORTANT]
-> - One of the system update recommendations enables the [periodic assessment](/azure/update-manager/assessment-options#periodic-assessment) update setting on machines, so that Update Manager can fetch the latest updates to the machines, and you can view the latest machine compliance status.
-
-
+Remediate system update recommendations as follows. Be sure to remediate the recommendation that enables the [periodic assessment](/azure/update-manager/assessment-options#periodic-assessment) update setting on machines, so that Update Manager can fetch the latest updates to the machines, and you can view the latest machine compliance status.
 
 1. In Defender for Cloud, open the **Recommendations** page.
 1. Select the recommendation ``Machines should be configured to periodically check for missing system updates (powered by Azure Update Manager)``.
@@ -50,5 +46,3 @@ Assess machines for system update issues.
 1. Under **Remediation steps**, review quick fix and manual fix details. If you follow the quick fix,  it guides you to a one-time installation of the missing updates.
 1. In the **Unhealthy resources** list, you can drill to see resource details.
 
-## Next steps
-Learn more about the [Microsoft Cloud Security Benchmark](concept-regulatory-compliance.md) in Defender for Cloud.

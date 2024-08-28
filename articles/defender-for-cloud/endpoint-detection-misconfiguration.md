@@ -1,6 +1,6 @@
 ---
-title: Remediate Defender for Endpoint EDR misconfigurations
-description: Identify and remediate Defender for Endpoint EDR misconfigurations in Defender for Cloud
+title: Remediate Defender for Endpoint misconfiguration isues
+description: Identify and remediate Defender for Endpoint misconfigurations in Defender for Cloud
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
@@ -11,22 +11,24 @@ ai-usage: ai-assisted
 
 # Remediate Defender for Endpoint misconfigurations (agentless)
 
-Microsoft Defender for Cloud provides agentless scanning of protected machines to detect whether the integrated Microsoft Defender for Endpoint endpoint detection and response (EDR) solution is configured correctly.
+Microsoft Defender for Cloud integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide endpoint detection and response (EDR) capabilities for machines connected to Defender for Cloud. 
 
-> [!NOTE]
-> - Agentless scanning for EDR information replaces previous functionality that collected EDR solution information with the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), in general availability (GA), or with the Azure Monitoring Agent (AMA), in preview.
-> - The MMA is set to retire in August 2024. Data collection with the MMA will be deprecated in November 2024.
-> -The  AMA data collect preview is now deprecated.
-
-Defender for Cloud runs the following security checks for Defender for Endpoint misconfigurations, and provides recommendations to fix them:
+As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solution. In addition, for machines using Defender for Endpoint as an EDR, Defender for Servers agentlessly scans the machines with security checks to assess whether Defender for Endpoint is configured correctly. Checks include:
 
 - `Both full and quick scans are out of 7 days`
 - `Signature out of date`
 - `Anti-virus is off or partially configured`
 
+Based on these checks, Defender for Cloud makes recommendations if misconfigurations are found. This article describes how to remediate those recommendations.
+
+> [!NOTE]
+> - Defender for Cloud uses agentless scanning to assess EDR settings.
+> - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously use to collect machine data.
+> - The MMA is set to retire. Scanning using the MMA will be deprecated in November 2024.
+
 ## Prerequisites
 
-EDR recommendations are available when:
+Recommendations for Defender for Endpoint misconfigurations are available when:
 
 - [Defender for Cloud](connect-azure-subscription.md) is available in the Azure subscription.
 - One of these Defender for Cloud plans is enabled:
