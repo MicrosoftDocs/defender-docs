@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: dansimp
 author: dansimp
 ms.localizationpriority: medium
-ms.date: 07/31/2024
+ms.date: 08/28/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -63,12 +63,13 @@ Specifies the enforcement preference of antivirus engine. There are three values
 - Real-time (`real_time`): Real-time protection (scan files as they're modified) is enabled.
 - On-demand (`on_demand`): Files are scanned only on demand. In this:
   - Real-time protection is turned off.
-- Passive (`passive`): Runs the antivirus engine in passive mode. In this:
+- Passive (`passive`): Runs the antivirus engine in passive mode. In this case, all of the following apply:
   - Real-time protection is turned off: Threats are not remediated by Microsoft Defender Antivirus.
   - On-demand scanning is turned on: Still use the scan capabilities on the endpoint.
-  - Automatic threat remediation is turned off: No files will be moved and security admin is expected to take required action.
-  - Security intelligence updates are turned on: Alerts will be available on security admins tenant.
-
+  - Automatic threat remediation is turned off: No files are moved and your security administrator is expected to take required action.
+  - Security intelligence updates are turned on: Alerts are available in the security administrator's tenant.
+  - Definition updates occur only when a scan starts, even if `automaticDefinitionUpdateEnabled` is set to `true` in passive mode.
+    
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
 |**Key**|enforcementLevel|Enforcement Level|
