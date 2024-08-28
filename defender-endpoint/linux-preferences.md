@@ -68,7 +68,9 @@ Specifies the enforcement preference of antivirus engine. There are three values
   - On-demand scanning is turned on: Still use the scan capabilities on the endpoint.
   - Automatic threat remediation is turned off: No files will be moved and security admin is expected to take required action.
   - Security intelligence updates are turned on: Alerts will be available on security admins tenant.
-
+    
+  - Definition updates will happen only when scan starts even with automaticDefinitionUpdateEnabled set to true in passive mode
+    
 |Description|JSON Value|Defender Portal Value|
 |---|---|---|
 |**Key**|enforcementLevel|Enforcement Level|
