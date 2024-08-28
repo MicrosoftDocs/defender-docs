@@ -8,23 +8,30 @@ ms.date: 08/25/2024
 ---
 # Enable file integrity monitoring (Azure Monitor Agent)
 
-In the Defender for Servers plan in Microsoft Defender for Cloud, [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
+In the Defender for Servers plan in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
-File integrity monitoring uses Azure Automation change tracking. This article describes how to set up file integrity monitoring with the [Azure Monitoring Agent (AMA)](/azure/automation/change-tracking/overview-monitoring-agent) (in preview), so that you can monitor changes directly in Defender for Cloud.
+File integrity monitoring uses [Azure Automation change tracking](/azure/automation/change-tracking/overview) so that you can monitor changes directly in Defender for Cloud. 
+
+
+This article describes how to set up file integrity monitoring with the [Azure Monitoring Agent (AMA)](/azure/automation/change-tracking/overview-monitoring-agent) (in preview).
+
+The Azure Monitor agent (AMA) collects change data from devices in accordance with data collection rules that define a list of files and registries to track. You can use default data collection rules, or customize. Changes are sent to a Log Analytics workspace that you specify when you turn on file integrity monitoring. You can customize the workspace used for file integrity monitoring.
 
 > [!Note]
-> File integrity monitoring previously used the [MMA](/azure/automation/change-tracking/overview) in general availability (GA), or the [AMA](/azure/automation/change-tracking/overview-monitoring-agent) in preview.
+> File integrity monitoring can use the Log Analytics agent (also known as the Microsoft Monitor agent (MMA)), or the AMA in preview to collect information.
 > - The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024.
 > - File integrity monitoring using the AMA in preview is no longer supported.
-> -  new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers will be released in preview around August 2024.
+> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers will be released in preview around September 2024.
+
 
 ## Prerequisites
 
-- The [AMA must be installed](/azure/azure-monitor/vm/monitor-virtual-machine-agent) on machines you want to monitor.
 - [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled.
+- The [AMA must be installed](/azure/azure-monitor/vm/monitor-virtual-machine-agent) on machines you want to monitor.
 - You need Owner/Contributor permissions to configure file integrity monitoring.
 - File integrity monitoring is supported for Azure VMs, on-premises machines onboarded as Azure Arc VMs, and AWS accounts and GCP projects connected to Defender for Cloud.
-- File integrity monitoring is supported in the Azure commercial cloud in these regions: `australiaeast`, `australiasoutheast`, `canadacentral`, `centralindia`, `centralus`, `eastasia`, `eastus2euap`, `eastus`, `eastus2`, `francecentral`, `japaneast`, `koreacentral`, `northcentralus`, `northeurope`, `southcentralus`, `southeastasia`, `switzerlandnorth`, `uksouth`, `westcentralus`, `westeurope`, `westus`, `westus2`
+- File integrity monitoring is supported for Azure VMs, on-premises machines onboarded as Azure Arc VMs, and AWS accounts and GCP projects connected to Defender for Cloud.
+- File integrity monitoring with the AMA is supported in the Azure commercial cloud in these regions: `australiaeast`, `australiasoutheast`, `canadacentral`, `centralindia`, `centralus`, `eastasia`, `eastus2euap`, `eastus`, `eastus2`, `francecentral`, `japaneast`, `koreacentral`, `northcentralus`, `northeurope`, `southcentralus`, `southeastasia`, `switzerlandnorth`, `uksouth`, `westcentralus`, `westeurope`, `westus`, `westus2`
 
 
 ## Enable with AMA

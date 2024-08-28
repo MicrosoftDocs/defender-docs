@@ -15,15 +15,15 @@ The Defender for Servers plan in Microsoft Defender for Cloud identifies unmanag
 When vulnerabilities are found, they're grouped inside a single recommendation.
 
 > [!NOTE]
-> Docker host hardening uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA) to collect host information for assessment. 
-> The MMA is set to retire, and the Docket host hardening feature will be deprecated in November 2024.
+> Docker host hardening uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)) to collect host information for assessment. 
+> The MMA is retiring, and the Docker host hardening feature will be deprecated in November 2024.
 
 
 ## Prerequisites
 
 - You need [Defender for Servers Plan 2](defender-for-servers-overview.md) to use this feature.
 - These CIS benchmark checks will not run on AKS-managed instances or Databricks-managed VMs.
-- You need *Reader** permissions on the workspace to which the host connects.
+- You need Reader permissions on the workspace to which the host connects.
 
 
 ## Identify Docker configuration issues
