@@ -7,48 +7,27 @@ ms.topic: how-to
 ms.date: 08/11/2024
 ---
 
-# File Integrity Monitoring using Microsoft Defender for Endpoint
+# File integrity monitoring (Defender for Endpoint)
 
-To provide [File Integrity Monitoring (FIM)](file-integrity-monitoring-overview.md), Microsoft Defender for Endpoint collects data from machines according to collection rules. When the current state of your system files is compared with the state during the previous scan, FIM notifies you about suspicious modifications.
+In the Defender for Servers plan in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
-Using FIM you can:
+File integrity monitoring uses [Azure Automation change tracking](/azure/automation/change-tracking/overview) so that you can monitor changes directly in Defender for Cloud. 
 
-- Monitor changes made to critical files and Windows registries from a predefined list in real-time.
-- Access and analyze the audited changes in a designated Workspace.
-- Take advantage of the 500-MB benefit included in the Defender for Servers Plan 2.
-- Maintain compliance: FIM offers built-in support for relevant security regulatory compliance standards, such as PCI-DSS, CIS, NIST, and others
+This article describes how to set up file integrity monitoring with the integrated [Microsoft Defender for Endpoint](file-integrity-monitoring-overview.md#defender-for-endpoint-monitoring) sensor (in preview).
 
-FIM alerts you to any potentially suspicious activities. These activities include:
+For file integrity monitoring, the Defender for Endpoint sensor collects data from machines in accordance with data collection rules. When the current state of your system files is compared with the state during the previous scan, file integrity monitoring notifies you about suspicious modifications.
 
-- The creation or deletion of files and registry keys
-- Modifications to files, such as changes in the file's size, name, location, or the hash of its content
-- Alterations to the registry, including changes in its size, type, and content
-- Details about the change, including the source of the change. These include account details, which indicate who made the changes, and information about the initiating process.
-
-For guidance on which files to monitor, see [Which files should I monitor?](file-integrity-monitoring-overview.md#which-files-should-i-monitor).
-
-## Availability
-
-|Aspect|Details|
-|----|:----|
-|Release state:|Preview|
-|Pricing:|Requires [Microsoft Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features)|
-|Required roles and permissions:|**Workspace owner** or **Security admin** can enable and disable FIM. For more information, see [Azure Roles for Log Analytics](/services-hub/health/azure-roles#azure-roles).<br />**Reader** can view results.|
-|Clouds:|:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br />:::image type="icon" source="./media/icons/yes-icon.png"::: [Azure Arc](/azure/azure-arc/servers/overview) enabled devices.<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Connected AWS accounts<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Connected GCP accounts|
+For guidance on which files to monitor, see [Which files should I monitor?](file-integrity-monitoring-overview.md#choosing-what-to-monitor).
 
 ## Prerequisites
 
-To track changes to your files and registries on machines with Defender for Endpoint, you need to:
+- [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features) should be enabled.
+- The [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) sensor should be installed on machines you want to monitor.
+- You need **Workspace owner** or **Security admin** permissions to enable and disable file integrity monitoring. **Reader** permissions can view results.
+- File integrity monitoring with Defender for Endpoint is supported from Azure VMs, Azure Arc-enabled VMs, connected AWS accounts and GCP projects.
 
-- Enable [Defender for Servers Plan 2](defender-for-servers-introduction.md).
 
-- Enable [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) on machines you want to monitor
-
-## Enable File Integrity Monitoring
-
-### Enable in the Azure portal
-
-To enable FIM in the Azure portal, follow these steps:
+## Enable file integrity monitoring
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -78,13 +57,11 @@ To enable FIM in the Azure portal, follow these steps:
 
 1. Select **Save**.
 
-## Disable File Integrity Monitoring
+## Disable file integrity monitoring
 
-After FIM is disabled, no new events are collected. However, the data collected before the disabling the feature remain in the workspace, according to the workspace's retention policy. For more information, see [Manage data retention in a Log Analytics workspace](/azure/azure-monitor/logs/data-retention-configure).
+If you disable file integrity monitoring, no new events are collected. However, the data collected before the disabling the feature remains in the workspace, according to the workspace's retention policy.
 
-### Disable in the Azure portal
-
-To disable FIM in the Azure portal, follow these steps:
+Disable as follows:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Search for and select **Microsoft Defender for Cloud**.
@@ -105,10 +82,12 @@ To disable FIM in the Azure portal, follow these steps:
 
 ## Monitor entities and files
 
-To monitor entities and files, follow these steps:
+To monitor entities and files file integrity monitoring must be enabled.
 
-> [!NOTE]
-> If you haven't enabled FIM yet, you'll see a message that says **File Integrity Monitoring is not enabled**. To enable FIM, select **Onboard subscriptions** and then follow the directions in [Enable File Integrity Monitoring](#enable-file-integrity-monitoring).
+- If you haven't enabled file integrity monitoring yet, in  you'll see a message that says **File Integrity Monitoring is not enabled**.
+- To enable, select **Onboard subscriptions** and then [enable file integrity monitoring](#enable-file-integrity-monitoring).
+
+After file integrity monitoring is enabled, you can monitor entities and files as follows:
 
 1. From Defender for Cloud's sidebar, go to **Workload protections** > **File integrity monitoring**.
 

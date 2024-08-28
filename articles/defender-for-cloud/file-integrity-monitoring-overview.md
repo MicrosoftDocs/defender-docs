@@ -16,7 +16,19 @@ File integrity monitoring uses [Azure Automation change tracking](/azure/automat
 > [!Note]
 > There are some upcoming changes for file integrity monitoring.
 > - The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024. File integrity monitoring using the AMA in preview is no longer supported.
-> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers will be released in preview around September 2024.
+> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers is [now available in preview](file-integrity-monitoring-enable-defender-endpoint.md)
+
+## Defender for Endpoint monitoring
+
+When file integrity monitoring uses integrated Defender for Endpoint, the Defender for Endpoint sensor collects data from machines in accordance with data collection rules. When the current state of your system files is compared with the state during the previous scan, file integrity monitoring notifies you about suspicious modifications.
+
+Using the Defender for Endpoint sensor, you can: 
+
+- Monitor changes made to critical files and Windows registries from a predefined list in real-time.
+- Access and analyze the audited changes in a designated Workspace.
+- Take advantage of the 500-MB benefit included in the Defender for Servers Plan 2.
+- Maintain compliance: FIM offers built-in support for relevant security regulatory compliance standards, such as PCI-DSS, CIS, NIST, and others
+
 
 ## Agent-based monitoring
 
@@ -28,15 +40,15 @@ File integrity monitoring can use the [Log Analytics agent (also known as the Mi
 
 
 
-## Suspicious activity
+## Monitoring suspicious activity
 
-File integrity monitoring informs you about suspicious activity such as:
+File integrity monitoring informs you about potentially suspicious activity such as:
 
-- File and registry key creation or removal
-- File modifications (changes in file size, access control lists, and hash of the content)
-- Registry modifications (changes in size, access control lists, type, and content)
+- File and registry key creation or deletion.
+- File modifications, such as changes in file size, access control lists, and hash of the content)
+- Registry modifications such as changes in size, access control lists, type, and content)
 
-Many regulatory compliance standards require implementing file integrity monitoring controls, such as PCI-DSS and ISO 17799.
+File integrity monitoring provides details about the change, including the source of the change, account details, indication of who made the changes, and information about the initiating process.
 
 ## Choosing what to monitor
 

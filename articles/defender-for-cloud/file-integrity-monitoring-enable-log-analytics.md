@@ -23,7 +23,7 @@ With MMA, when file integrity monitoring is enabled on a workspace the MMA colle
 > File integrity monitoring can use the MMA, or the Azure Monitoring agent (AMA) in preview to collect information.
 > - The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024.
 > - File integrity monitoring using the AMA in preview is no longer supported.
-> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers will be released in preview around September 2024.
+> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers is [now available in preview](file-integrity-monitoring-enable-defender-endpoint.md).
 
 
 

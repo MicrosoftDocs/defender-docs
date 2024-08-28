@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.date: 08/25/2024
 ---
 
-# Enable file integrity monitoring with Azure Monitor agent (deprecated)
+# Enable file integrity monitoring (AMA) (deprecated)
 
 In the Defender for Servers plan in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
@@ -22,7 +22,7 @@ The Azure Monitor agent (AMA) collects change data from devices in accordance wi
 > File integrity monitoring can use the Log Analytics agent (also known as the Microsoft Monitor agent (MMA)), or the AMA in preview to collect information.
 > - The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024.
 > - File integrity monitoring using the AMA in preview is no longer supported.
-> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers will be released in preview around September 2024.
+> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers is [now available in preview](file-integrity-monitoring-enable-defender-endpoint.md).
 
 
 ## Prerequisites
