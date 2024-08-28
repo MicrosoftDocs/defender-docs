@@ -46,7 +46,7 @@ Defender for Cloud alert [integration](other-threat-protections.md#display-azure
 
 August 1, 2024
 
-You can now enable Microsoft Defender for SQL servers on machines at scale. This feature allows you to enable Microsoft Defender for SQL on multiple servers at once, saving time and effort. 
+You can now enable Microsoft Defender for SQL servers on machines at scale. This feature allows you to enable Microsoft Defender for SQL on multiple servers at once, saving time and effort.
 
 Learn how to [enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
 
@@ -83,7 +83,7 @@ With this general availability release, the list of [supported solutions](/azure
 
 July 31, 2024
 
-**Estimated date for change: August 31, 2024**
+**Estimated date for change**: August 31, 2024
 
 Defender for Server's adaptive network hardening is being deprecated.
 
