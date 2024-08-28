@@ -57,7 +57,6 @@ Device control capabilities from Microsoft can be organized into three main cate
 
 - **Device control in Defender for Endpoint**. Device control in Defender for Endpoint provides more advanced capabilities and is cross platform.
   - Granular access control - create policies to control access by device, device type, operation (read, write, execute), user group, network location, or file type.
-  - File evidence - store the file information and contents to audit files copied or accessed on devices.
   - Reporting and advanced hunting - complete visibility into add device related activities.
   - Device control in Microsoft Defender can be managed using Intune or [Group Policy](device-control-deploy-manage-gpo.md).
   - **Device control in Microsoft Defender and Intune**. Intune provides a rich experience for managing complex device control policies for organizations. You can configure and deploy device restriction settings in Defender for Endpoint, for example. See [Deploy and manage device control with Microsoft Intune](device-control-deploy-manage-intune.md).
