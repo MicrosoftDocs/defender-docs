@@ -743,7 +743,7 @@
       - name: Review machine changes with file integrity monitoring
         displayName: fim, change
         href: file-integrity-monitoring-compare-baselines.md
-      - name: Improve network security posture
+      - name: Improve network posture (deprecated)
         displayName: anh, adaptive network hardening
         href: adaptive-network-hardening.md
     - name: Common questions 
