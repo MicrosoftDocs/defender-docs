@@ -27,6 +27,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## September 2024
+
+|Date | Category | Update|
+| -------- | -------- | -------- |
+|September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-Defender-for-Containers) |
+
+### Public Preview for Docker Hub container registry support by Defender for Containers
+
+September 1, 2024
+
+We are introducing the public preview of the Microsoft Defender for Containers extension of coverage to include external registries, beginning with Docker Hub container registries. As part of your organization's Microsoft Cloud Security Posture Management, the extension of coverage to Docker Hub container registries provides the benefits of scanning your Docker Hub container images  using Microsoft Defender Vulnerability Management to identify security threats and mitigate potential security risks.
+
+For more information about this feature, see [External Container Registries – Docker Hub](external-container-registries-–docker-hub.md)
+
 ## August 2024
 
 |Date | Category | Update|
