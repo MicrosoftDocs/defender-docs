@@ -31,8 +31,25 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| August 28 | Preview | [New version of File Integrity Monitoring based on Microsoft Defender for Endpoint](#new-version-of-file-integrity-monitoring-based-on-microsoft-defender-for-endpoint) |
 | August 22 | Upcoming deprecation | [Retirement of Defender for Cloud alert integration with Azure WAF alerts](#retirement-of-defender-for-cloud-alert-integration-with-azure-waf-alerts) |
 | August 1 | GA | [Enable Microsoft Defender for SQL servers on machines at scale](#enable-microsoft-defender-for-sql-servers-on-machines-at-scale) |
+
+### New version of File Integrity Monitoring based on Microsoft Defender for Endpoint
+
+August 28, 2024
+
+The new version of File Integrity Monitoring based on Microsoft Defender for Endpoint is now in public preview. It's part of Defender for Servers Plan 2. It enables you to:
+
+- Meet compliance requirements by monitoring critical files and registries in real-time and auditing the changes.
+- Identify potential security issues by detecting suspicious file content changes.
+
+As part of this release, the [FIM experience over AMA](file-integrity-monitoring-enable-ama.md) will no longer be available in the Defender for Cloud portal.
+The [FIM experience over MMA](file-integrity-monitoring-enable-log-analytics.md) will remain supported until the end of November 2024.
+In the beginning of September, an in-product experience will be released which allows you to migrate your FIM configuration over MMA to the new FIM over Defender for Endpoint version.
+
+For information on how to enable FIM over Defender for Endpoint, see [File Integrity Monitoring using Microsoft Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md).
+For information on how to migrate from previous versions, see [Migrate File Integrity Monitoring from previous versions](migrate-file-integrity-monitoring.md).
 
 ### Retirement of Defender for Cloud alert integration with Azure WAF alerts
 

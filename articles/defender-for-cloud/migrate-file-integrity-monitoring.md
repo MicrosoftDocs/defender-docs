@@ -45,6 +45,9 @@ To disable FIM over MMA, remove the Azure Change Tracking solution. For more inf
 
 After you disable the file events collections by the Change Tracking extension over AMA using one of the previously mentioned methods, new events will stop being collected on the selected scopes. Historical events that already were collected, remain stored in the relevant workspace under the table `ConfigurationChange` under the Change Tracking section. These events will remain available in the relevant workspace according to the retention period defined in this workspace. For more information, see [Manage data retention in a Log Analytics workspace](/azure/azure-monitor/logs/data-retention-configure).
 
+> [!NOTE]
+> If you no longer need the legacy Log Analytics agent, make sure you remove it from your environments. For this purpose, be sure to disable the agent's auto provisioning from the [subscription settings](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/DataCollectionBladeV2), then use the [Azure Monitor utility](/azure/azure-monitor/agents/azure-monitor-agent-mma-removal-tool) to discover and remove the Log Analytics agent from your machines.
+
 ## Next steps
 
 - [Enable File Integrity Monitoring with Microsoft Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md)
