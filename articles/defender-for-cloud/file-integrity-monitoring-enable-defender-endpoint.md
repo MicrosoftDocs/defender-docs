@@ -33,7 +33,7 @@ For guidance on which files to monitor, see [Which files should I monitor?](file
 |----|:----|
 |Release state:|Preview|
 |Pricing:|Requires [Microsoft Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features)|
-|Required roles and permissions:|**Workspace owner** can enable and disable FIM. For more information, see [Azure Roles for Log Analytics](/services-hub/health/azure-roles#azure-roles).<br />**Reader** can view results.|
+|Required roles and permissions:|**Workspace owner** or **Security admin** can enable and disable FIM. For more information, see [Azure Roles for Log Analytics](/services-hub/health/azure-roles#azure-roles).<br />**Reader** can view results.|
 |Clouds:|:::image type="icon" source="./media/icons/yes-icon.png"::: Commercial clouds<br />:::image type="icon" source="./media/icons/yes-icon.png"::: [Azure Arc](/azure/azure-arc/servers/overview) enabled devices.<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Connected AWS accounts<br>:::image type="icon" source="./media/icons/yes-icon.png"::: Connected GCP accounts|
 
 ## Prerequisites
@@ -154,31 +154,6 @@ The file integrity monitoring data resides within the Azure Log Analytics worksp
     ```
 
 1. The reports can be exported to CSV for archival purposes and  channeled to a Power BI report for further analysis.
-
-## Recommended items to monitor
-
-Defender for Cloud provides the following list of recommended items to monitor based on known attack patterns.
-
-| Linux Files       | Windows files                    | Windows registry keys (HKLM = HKEY_LOCAL_MACHINE)            |
-| ----------------- | -------------------------------- | ------------------------------------------------------------ |
-| /bin              | C:\config.sys                    | SOFTWARE\Microsoft\Cryptography\OID\*                        |
-| /bin/passwd       | C:\Windows\regedit.exe           | SOFTWARE\WOW6432Node\Microsoft\Cryptography\OID\*            |
-| /boot             | C:\Windows\System32\userinit.exe | HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows    |
-| /etc/*.conf       | C:\Windows\explorer.exe          | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders |
-| /etc/cron.daily   | C:\autoexec.bat                  | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders |
-| /etc/cron.hourly  | C:\boot.ini                      | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run           |
-| /etc/cron.monthly | C:\Windows\system.ini            | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce       |
-| /etc/cron.weekly  | C:\Windows\win.ini               | SOFTWARE\Microsoft\Windows\CurrentVersion\RunServicesOnce    |
-| /etc/crontab      |                                  | SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Windows\ |
-| /etc/init.d       |                                  | SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders |
-| /opt/sbin         |                                  | SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders |
-| /sbin             |                                  | SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run    |
-| /usr/bin          |                                  | SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\RunOnce |
-| /usr/local/bin    |                                  | SECURITY\POLICY\SECRETS                                      |
-| /usr/local/sbin   |                                  |                                                              |
-| /usr/sbin         |                                  |                                                              |
-| /bin/login        |                                  |                                                              |
-| /opt/bin          |                                  |                                                              |
 
 ## Related content
 
