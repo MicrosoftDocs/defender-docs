@@ -1184,7 +1184,7 @@
         - name: Microsoft Copilot for Security integration
           displayName: Copilot, security
           href: episode-forty-nine.md
-        - name: Secure your AI applications from code to runtime
+        - name: Secure AI applications from code to runtime
           displayName: AI, applications, code, runtime
           href: episode-fifty.md
         - name: Defender for Open-Source Relational Databases multicloud
