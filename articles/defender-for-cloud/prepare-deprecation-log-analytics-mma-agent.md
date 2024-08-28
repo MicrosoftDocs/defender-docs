@@ -221,7 +221,7 @@ Depending on your environment, you may need to take the following steps:
         - To enable the Guest Configuration agent:
             1. Sign in to the [Azure portal](https://portal.azure.com/).
             1. Navigate to **Environment settings** > **Your subscription** > **Settings & Monitoring**.
-            1. Under **Settings**, select **Guest Configuration**.
+            1. Select **Guest Configuration**.
                :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/setting-and-monitoring.png" alt-text="Screenshot that shows the location of the settings and monitoring button." lightbox="media/prepare-deprecation-log-analytics-mma-agent/setting-and-monitoring.png":::
             1. Toggle the Guest Configuration agent (preview) to **On**.
                :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/toggle-guest.png" alt-text="Screenshot that shows the location of the toggle button to enable the Guest Configuration agent." lightbox="media/prepare-deprecation-log-analytics-mma-agent/toggle-guest.png":::

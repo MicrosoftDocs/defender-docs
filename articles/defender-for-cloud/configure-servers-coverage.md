@@ -152,9 +152,17 @@ Defender for Cloud provides a set of built-in policies that help you assess and 
 
 1. Search for and select **Microsoft Defender for Cloud**.
 
-1. In the Defender for Cloud menu, select **Environment settings**.
+1. Navigate to **Environment settings** > **Your subscription** > **Settings & Monitoring**.
 
-1. Select the relevant subscription.
+1. Select **Guest Configuration**.
+               
+:::image type="content" source="media/configure-servers-coverage/setting-and-monitoring.png" alt-text="Screenshot that shows the location of the settings and monitoring button." lightbox="media/configure-servers-coverage/setting-and-monitoring.png":::
+            
+1. Toggle the Guest Configuration agent (preview) to **On**.
+               
+:::image type="content" source="media/configure-servers-coverage/toggle-guest.png" alt-text="Screenshot that shows the location of the toggle button to enable the Guest Configuration agent." lightbox="media/configure-servers-coverage/toggle-guest.png":::
+            
+1. Select **Continue**.
 
 ## Defender for Servers feature status
 
