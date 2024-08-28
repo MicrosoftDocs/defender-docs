@@ -30,7 +30,7 @@ This article describes how to enable Defender for Endpoint integration manually 
 
 ## Enable integration on a subscription
 
-If you've never enabled the Defender for Endpoint integration, you can turn it on manually.
+If you've never enabled the Defender for Endpoint integration on a subscription, you can turn it on manually.
 
 
 1. In Defender for Cloud, select **Environment settings** and select the subscription containing the machines on which you want to deploy the Defender for Endpoint integration.
@@ -52,12 +52,12 @@ If you've never enabled the Defender for Endpoint integration, you can turn it o
 
     `licensed: true`
 
-1. In the Azure portal, you can check that machines have a new Azure extension called `MDE.Linux`.
+1. In the Azure portal, you can check that Linux machines have a new Azure extension called `MDE.Linux`.
 
 
-## Enable manually on Windows machines (plan and integration on)
+## Enable on specific Windows machines (plan and integration on)
 
-If Defender for Servers is already enabled and Defender for Endpoint integration is on, you can manually turn on the integration for specific machines. 
+If Defender for Servers is already enabled and Defender for Endpoint integration is on in a subscription, you can manually turn on the integration for specific machines.
 
 1. In Defender for Cloud, select **Environment settings** and select the subscription with the Windows machines that you want to receive Defender for Endpoint.
 
@@ -79,9 +79,9 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 
     Onboarding might take up to 12 hours. For new machines created after the integration has been enabled, onboarding takes up to an hour.
 
-## Enable manually on Linux (plan and integration on)
+## Enable on specific Linux machines (plan and integration on)
 
-If Defender for Servers is already enabled and Defender for Endpoint integration is on by default, you can manually turn on the integration for specific Linux machines in the portal.
+If Defender for Servers is already enabled and Defender for Endpoint integration is on in the subscription, you can manually turn on the integration for specific Linux machines.
 
 
 1. In Defender for Cloud, select **Environment settings** and select the subscription with the Linux machines that you want to receive Defender for Endpoint.
@@ -101,7 +101,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 1. To save the changes, select **Save** at the top of the page. In the **Settings and monitoring** page, select **Continue**.
 
     - Defender for Cloud onboards Linux machines to Defender for Endpoint.
-    - Defender for Cloud detects any previous Defender for Endpoint installations, and reconfigures them to integrate with Defender for Cloud.
+    - Defender for Cloud detects any previous Defender for Endpoint installations on Linux machines, and reconfigures them to integrate with Defender for Cloud.
     - Onboarding might take up to 12 hours. For new machines created after the integration has been enabled, onboarding takes up to an hour.
 
 
@@ -115,7 +115,7 @@ If Defender for Servers is already enabled and Defender for Endpoint integration
 
     `licensed: true`
 
-    Also, in the Azure portal you'll see a new Azure extension on your machines called `MDE.Linux`.
+1. In the Azure portal, you can check that Linux machines have a new Azure extension called `MDE.Linux`.
 
 
 > [!NOTE]
@@ -144,18 +144,21 @@ Use our [PowerShell script](https://github.com/Azure/Microsoft-Defender-for-Clou
 
 ### Manage automatic updates for Linux
 
-In Windows, Defender for Endpoint version updates are provided via continuous knowledge base updates; in Linux you need to update the Defender for Endpoint package. When you use Defender for Servers with the `MDE.Linux` extension, automatic updates for Microsoft Defender for Endpoint are enabled by default. If you wish to manage the Defender for Endpoint version updates manually, you can disable automatic updates on your machines. To do so, add the following tag for machines onboarded with the `MDE.Linux` extension.
+In Windows, Defender for Endpoint version updates are provided via continuous knowledge base updates. In Linux you need to update the Defender for Endpoint package.
 
-- Tag name: 'ExcludeMdeAutoUpdate'
-- Tag value:  'true'
+- When you use Defender for Servers with the `MDE.Linux` extension, automatic updates for Microsoft Defender for Endpoint are enabled by default.
+- If you want to manage version updates manually, you can disable automatic updates on your machines. To do this, add the following tag for machines onboarded with the `MDE.Linux` extension.
 
-This configuration is supported for Azure VMs and Azure Arc machines, where the `MDE.Linux` extension initiates auto-update.
+    - Tag name: 'ExcludeMdeAutoUpdate'
+    - Tag value:  'true'
+
+= This configuration is supported for Azure VMs and Azure Arc machines, where the `MDE.Linux` extension initiates auto-update.
 
 ## Enable integration at scale
 
-You can also enable the Defender for Endpoint unified solution at scale through the supplied REST API version 2022-05-01. For full details, see the [API documentation](/rest/api/defenderforcloud/settings/update?tabs=HTTP).
+You can enable the Defender for Endpoint integration at scale through the supplied REST API version 2022-05-01. For full details, see the [API documentation](/rest/api/defenderforcloud/settings/update?tabs=HTTP).
 
-Here's an example request body for the PUT request to enable the Defender for Endpoint unified solution:
+Here's an example request body for the PUT request to enable the Defender for Endpoint integratoin:
 
 URI: `https://management.azure.com/subscriptions/<subscriptionId>/providers/Microsoft.Security/settings/WDATP?api-version=2022-05-01`
 
@@ -172,23 +175,22 @@ URI: `https://management.azure.com/subscriptions/<subscriptionId>/providers/Micr
 
 ## Track Defender for Endpoint deployment status
 
-You can use the [Defender for Endpoint deployment status workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Defender%20for%20Servers%20Deployment%20Status) to track the Defender for Endpoint deployment status on your Azure VMs and non-Azure machines that are connected via Azure Arc. The interactive workbook provides an overview of machines in your environment showing their Microsoft Defender for Endpoint extension deployment status.
+You can use the [Defender for Endpoint deployment status workbook](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Defender%20for%20Servers%20Deployment%20Status) to track the Defender for Endpoint deployment status on your Azure VMs and Azure Arc-enabled VMs. The interactive workbook provides an overview of machines in your environment showing their Microsoft Defender for Endpoint extension deployment status.
 
 ## Access the Defender portal
 
-1. Ensure the user account has the necessary permissions. Learn more in [Assign user access to Microsoft Defender Security Center](/microsoft-365/security/defender-endpoint/assign-portal-access).
+1. Make sure you have the [right permissions for portal access](/microsoft-365/security/defender-endpoint/assign-portal-access).
 
-1. Check whether you have a proxy or firewall that is blocking anonymous traffic. The Defender for Endpoint sensor connects from the system context, so anonymous traffic must be permitted. To ensure unhindered access to the Defender for Endpoint portal, follow the instructions in [Enable access to service URLs in the proxy server](/microsoft-365/security/defender-endpoint/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
+1. Check whether you have a proxy or firewall that is blocking anonymous traffic.
+
+    - The Defender for Endpoint sensor connects from the system context, so anonymous traffic must be permitted.
+    - To ensure unhindered access to the Defender for Endpoint portal, [enable access to service URLs in the proxy server](/microsoft-365/security/defender-endpoint/configure-proxy-internet#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
 
 1. Open the [Microsoft Defender Portal](https://security.microsoft.com/). Learn about [Microsoft Defender for Endpoint in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mde).
 
-## Send a test alert
+## Send a test alert from Defender for Endpoint
 
 To generate a benign test alert from Defender for Endpoint, select the tab for the relevant operating system of your endpoint:
-
-- [Test on Windows](#test-on-windows)
-
-- [Test on Linux](#test-on-linux)
 
 ### Test on Windows
 
@@ -233,18 +235,8 @@ For endpoints running Linux:
 
 To remove the Defender for Endpoint solution from your machines:
 
-1. Disable the integration:
-    1. From Defender for Cloud's menu, select **Environment settings** and select the subscription with the relevant machines.
-    1. In the Defender plans page, select **Settings & Monitoring**.
-    1. In the status of the Endpoint protection component, select **Off** to disable the integration with Microsoft Defender for Endpoint.
-    1. Select **Continue** and **Save** to save your settings.
-
-1. Remove the MDE.Windows/MDE.Linux extension from the machine.
-
-1. Follow the steps in [Offboard devices from the Microsoft Defender for Endpoint service](/microsoft-365/security/defender-endpoint/offboard-machines) from the Defender for Endpoint documentation.
-
-## Related content
-
-- [Platforms and features supported by Microsoft Defender for Cloud](security-center-os-coverage.md)
-- [Learn how recommendations help you protect your Azure resources](review-security-recommendations.md)
-- View common question about the [Defender for Cloud integration with Microsoft Defender for Endpoint](faq-defender-for-servers.yml)
+1. To disable the integration, in Defender for Cloud > **Environment settings**, select the subscription with the relevant machines.
+1. In the Defender plans page, select **Settings & Monitoring**.
+1. In the status of the Endpoint protection component, select **Off** to disable the integration with Microsoft Defender for Endpoint.
+1. Select **Continue** and **Save** to save your settings.
+1. To remove the MDE.Windows/MDE.Linux extension from the machine, follow the steps to [offboard devices from the Microsoft Defender for Endpoint service](/microsoft-365/security/defender-endpoint/offboard-machines).

@@ -4,7 +4,7 @@ description: Get a quick overview of the Defender for Servers plan in Microsoft 
 ms.topic: conceptual
 ms.author: dacurwin
 author: dcurwin
-ms.date: 08/19/2024
+ms.date: 08/28/2024
 # customer intent: I want to understand how the Defender for Servers plan in Defender for Cloud can help protect from business from security threats, and reduce security risk.
 ---
 
@@ -13,9 +13,9 @@ ms.date: 08/19/2024
 The Defender for Servers plan in [Microsoft Defender for Cloud](defender-for-cloud-introduction.md) reduces risk and exposure with security recommendations for improving multicloud security posture. Defender for Servers also provides protection against real-time threats and attacks.
 
 > [!NOTE]
-> Some Defender for Servers features use the Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA) in general availability (GA), or the Azure Monitoring Agent (AMA) (in preview), to gather information from machines.
-> - Support for these agents in Defender for Servers features is ending.
-> - In most plan features, agent use is replaced by [agentless machine scanning](concept-agentless-data-collection.md), or by [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md).
+> Some Defender for Servers features use the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) in general availability (GA), or the Azure Monitoring Agent (AMA), in preview, to gather information from machines.
+> - Support for using these agents in Defender for Servers is ending.
+> - In most plan features, the use of the MMA/AMA is replaced by [agentless machine scanning](concept-agentless-data-collection.md), or by [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md).
 > - [Learn more](prepare-deprecation-log-analytics-mma-agent.md) about upcoming changes.
 
 ## Defender for Server benefits
@@ -53,7 +53,7 @@ Defender for Servers offers two plans:
 
 ## Plan protection features
 
-Plan features are summarized in the table. Some plan features have upcoming changes. Review these in the table, and read the latest [upcoming agent deprecation information](prepare-deprecation-log-analytics-mma-agent.md).
+Plan features are summarized in the table. Some plan features have upcoming changes to the way that information is collected. Review these in the table, and read the latest [upcoming agent deprecation information](prepare-deprecation-log-analytics-mma-agent.md).
 
 **Feature** | **Plan** | **Details**
 --- | --- | --- 
@@ -63,7 +63,7 @@ Plan features are summarized in the table. Some plan features have upcoming chan
 **Software inventory discovery** | Plan 1, 2 | [Software inventory](asset-inventory.md) discovery provided by [Defender Vulnerability Management](/defender-vulnerability-management/tvm-software-inventory) is integrated into Defender for Cloud.
 **Vulnerability scanning (agent-based)** | Plan 1, 2 | Defender for Servers [assesses machines for vulnerabilities](auto-deploy-vulnerability-assessment.md) with [Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management), using the Defender for Endpoint agent.
 **Vulnerability scanning (agentless)** | Plan 2 only | As part of its [agentless scanning capabilities](concept-agentless-data-collection.md), Defender for Cloud [agentlessly assesses machines for vulnerabilities](auto-deploy-vulnerability-assessment.md) with Defender Vulnerability Management for connected machines. Agentless assessment is in addition to agent-based vulnerability scanning.
-**OS baseline misconfigurations** | No plan needed | When you enable Defender for Cloud on an Azure subscription, Defender for Cloud's free foundational cloud security posture management (CSPM) collects information from protected resources, assesses it against the Microsoft Cloud Security Benchmark (including compute security baselines that assess machine OS compliance), and makes recommendations to improve security posture.<br/><br/> The MMA that was used to collect this information will be replaced by the [Azure Policy guest configuration](/azure/virtual-machines/extensions/guest-configuration), currently in preview.<br/><br/> Use of the MMA in Defender for Servers will end in November 2024.<br/><br/>OS recommendations based on compute security baselines will no longer be included in foundational CSPM. They will be available when you enable Defender for Servers Plan 2.
+**OS baseline misconfigurations** | No plan needed | When you enable Defender for Cloud on an Azure subscription, Defender for Cloud's free foundational cloud security posture management (CSPM) collects information from protected resources, assesses it against the Microsoft Cloud Security Benchmark (including compute security baselines that assess machine OS compliance), and makes recommendations to improve security posture.<br/><br/> Support for using the MMA  to collect this information will end in November 2024. It will be replaced by the [Azure Policy guest configuration](/azure/virtual-machines/extensions/guest-configuration), currently in preview.<br/><br/>With the move to the guest configuration, OS recommendations based on compute security baselines will no longer be included in foundational CSPM. They will be available when you enable Defender for Servers Plan 2.
 **Regulatory compliance assessment** | Plan 1, 2 | As part of its foundational posture assessment, Defender for Cloud provides a couple of [default compliance standards](concept-regulatory-compliance-standards.md#default-compliance-standards).<br/><br/>If you have the Defender for Servers plan enabled (or any other paid plan), you can enable [additional compliance standards](concept-regulatory-compliance-standards.md).
 **OS system updates** | No plan required | Defender for Servers uses Defender for Cloud's free foundational posture capabilities to assess whether VMs have the latest updates installed. [Learn more](recommendations-apply-operating-system-updates.md).<br/><br/> Information about machine updates is gathered  using Azure Update Manager. The older method that used the MMA will remain supported until November 2024.
 **Free OS system update remediation** | Plan 2 only | When Defender for Servers Plan 2 is enabled, there's no charge for assessing and remediating system updates on Azure Arc machines. Charges are incurred if you're not using Defender for Servers Plan 2. [Learn more](/azure/update-center/update-manager-faq#im-a-defender-for-server-customer-and-use-update-recommendations-powered-by-azure-update-manager-namely-periodic-assessment-should-be-enabled-on-your-machines-and-system-updates-should-be-installed-on-your-machines-would-i-be-charged-for-azure-update-manager).
@@ -89,7 +89,7 @@ You can enable Defender for Servers with the following scope.
 **Scope** | **Plan**
 --- | ---
 **Enable on an Azure subscription** | Plan 1 and 2
-**Enable on a resource** | Plan 1 only<br/><br/>  Plan 1 can be enabled and disabled at the resource level for Azure VMs and on-premises machines that are configured as Azure Arc-enabled VMs. This provides protection at machine level.<br/><br/>Plan 2 can't be enabled at the resource level, but you can disable protection for specific machines.
+**Enable on a resource** | Plan 1 only. Plan 1 can be enabled and disabled at the resource level for Azure VMs and on-premises machines that are configured as Azure Arc-enabled VMs. This provides protection at machine level.<br/><br/>Plan 2 can't be enabled at the resource level, but you can disable protection for specific machines.
 
 
 - After a plan is enabled, a 30-day trial period begins. There is no way to stop, pause, or extend this trial period. To enjoy the full 30-day trial, plan ahead to meet your evaluation goals.
