@@ -695,7 +695,7 @@
             displayName: fim, change, log analytics, mma
           - name: Enable file integrity monitoring (AMA) (deprecated)
             displayName: fim, change, azure monitor agent
-            href: file-integrity-monitoring-enable-ama.m
+            href: file-integrity-monitoring-enable-ama.md
       - name: Just-in-time machine access
         items:
           - name: Overview
