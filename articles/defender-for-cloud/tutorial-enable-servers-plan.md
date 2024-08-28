@@ -47,7 +47,7 @@ You can enable a Defender for Servers plan for an Azure subscription, AWS accoun
 
 1. On the Defender plans page, toggle the Servers switch to **On**.
 
-    :::image type="content" source="/media/tutorial-enable-servers-plan/enable-servers-plan.png" alt-text="Screenshot that shows you how to toggle the Defender for Servers plan to on." lightbox="media/tutorial-enable-servers-plan/enable-servers-plan.png":::
+    :::image type="content" source="media/tutorial-enable-servers-plan/enable-servers-plan.png" alt-text="Screenshot that shows you how to toggle the Defender for Servers plan to on." lightbox="media/tutorial-enable-servers-plan/enable-servers-plan.png":::
 
 1. By default this turns on Defender for Servers Plan 2. If you want to switch the plan, select **Change plans**.
 
