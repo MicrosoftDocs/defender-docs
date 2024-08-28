@@ -80,64 +80,6 @@ Disable as follows:
 
 1. Select **Save**.
 
-## Monitor entities and files
+## Next steps
 
-To monitor entities and files file integrity monitoring must be enabled.
-
-- If you haven't enabled file integrity monitoring yet, in  you'll see a message that says **File Integrity Monitoring is not enabled**.
-- To enable, select **Onboard subscriptions** and then [enable file integrity monitoring](#enable-file-integrity-monitoring).
-
-After file integrity monitoring is enabled, you can monitor entities and files as follows:
-
-1. From Defender for Cloud's sidebar, go to **Workload protections** > **File integrity monitoring**.
-
-    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/workload-protections-file-integrity-monitoring.png" alt-text="Screenshot of how to access File Integrity Monitoring in Workload protections." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/workload-protections-file-integrity-monitoring.png":::
-
-1. A window opens with all resources that contain tracked changed files and registries.
-
-    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-results.png" alt-text="Screenshot of the File Integrity Monitoring results." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-results.png":::
-
-1. If you select a resource, a window opens with a query showing the changes made to the tracked files and registries on that resource.
-
-    :::image type="content" source="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-query.png" alt-text="Screenshot of the File Integrity Monitoring query." lightbox="media/file-integrity-monitoring-enable-defender-endpoint/file-integrity-monitoring-query.png":::
-
-1. If you select the subscription of the resource (under the column **Subscription name**), a query opens with all the tracked files and registries in that subscription.
-
-> [!NOTE]
-> If you previously used [File Integrity Monitoring over MMA](file-integrity-monitoring-enable-log-analytics.md), you can return to that method by selecting **Change to previous experience**. This will be available until the FIM over MMA feature is deprecated. For information on the deprecation plan, see [Prepare for retirement of the Log Analytics agent](prepare-deprecation-log-analytics-mma-agent.md).
-
-## Retrieve and analyze FIM data  
-
-The file integrity monitoring data resides within the Azure Log Analytics workspace in the `MDCFileIntegrityMonitoringEvents` table.  
-
-1. Set a time range to retrieve a summary of changes by resource. In the following example, we retrieve all changes in the last 14 days in the categories of registry and files:  
-
-    ```kusto  
-    MDCFileIntegrityMonitoringEvents  
-    | where TimeGenerated > ago(14d)  
-    | where ConfigChangeType in ('Registry', 'Files')  
-    | summarize count() by Computer, ConfigChangeType  
-    ```
-
-1. To view detailed information about registry changes:  
-  
-    1. Remove `Files` from the `where` clause.  
-
-    1. Replace the summarization line with an ordering clause:  
-
-    ```kusto  
-    MDCFileIntegrityMonitoringEvents  
-    | where TimeGenerated > ago(14d)  
-    | where ConfigChangeType == 'Registry'  
-    | order by Computer, RegistryKey  
-    ```
-
-1. The reports can be exported to CSV for archival purposes and  channeled to a Power BI report for further analysis.
-
-## Related content
-
-Learn more about Defender for Cloud in:
-
-- [Setting security policies](tutorial-security-policy.md) - Learn how to configure security policies for your Azure subscriptions and resource groups.
-- [Managing security recommendations](review-security-recommendations.md) - Learn how recommendations help you protect your Azure resources.
-- [Azure Security blog](https://azure.microsoft.com/blog/topics/security/) - Get the latest Azure security news and information.
+[Review changes](file-integrity-monitoring-review-changes.md) with file integrity monitoring (Defender for Endpoint)

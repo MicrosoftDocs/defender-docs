@@ -65,6 +65,5 @@ Defender for Cloud recommends monitoring these items based on known attack patte
 
 
 ## Next steps
-
-- [Enable file integrity monitoring (AMA)](file-integrity-monitoring-enable-ama.md)
+- [Enable file integrity monitoring (Defender for Endpoint)](file-integrity-monitoring-enable-defender-endpoint.md)
 - [Enable file integrity monitoring (MMA)](file-integrity-monitoring-enable-log-analytics.md)
