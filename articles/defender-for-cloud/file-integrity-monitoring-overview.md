@@ -12,6 +12,12 @@ In the Defender for Servers plan in Microsoft Defender for Cloud, the file integ
 
 File integrity monitoring uses [Azure Automation change tracking](/azure/automation/change-tracking/overview) so that you can monitor changes directly in Defender for Cloud. 
 
+
+> [!Note]
+> There are some upcoming changes for file integrity monitoring.
+> - The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024. File integrity monitoring using the AMA in preview is no longer supported.
+> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers will be released in preview around September 2024.
+
 ## Agent-based monitoring
 
 File integrity monitoring can use the [Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA))](/azure/automation/change-tracking/overview) in general availability (GA), or the [Azure Monitoring Agent (AMA)](/azure/automation/change-tracking/overview-monitoring-agent) in preview to collect information.
@@ -21,10 +27,6 @@ File integrity monitoring can use the [Log Analytics agent (also known as the Mi
 - Workspaces with file integrity monitoring enabled have the **Azure Change Tracking** monitoring solution configured. If you remove the solution directly from the workspace, file integrity monitoring is disabled.
 
 
-> [!Note]
-> There are some upcoming changes for file integrity monitoring.
-> - The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024. File integrity monitoring using the AMA in preview is no longer supported.
-> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers will be released in preview around September 2024.
 
 ## Suspicious activity
 

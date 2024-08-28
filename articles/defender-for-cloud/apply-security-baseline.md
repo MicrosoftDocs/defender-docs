@@ -7,7 +7,7 @@ author: dcurwin
 ms.date: 07/31/2023
 ---
 
-# Review OS misconfigurations (MCSB) 
+# Review OS misconfigurations (Cloud Security Baseline)
 
 Microsoft Defender for Cloud provides security recommendations to improve your organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment.
 
@@ -53,7 +53,9 @@ With Defender for Servers Plan 2 enabled, you can install the guest configuratio
 
 With the guest configuration extension enabled on machine, the machine can then be assessed against [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems baselines.
 
-### Autoprovision the guest configuration agent on Azure VMs
+### Autoprovision the guest configuration extension on Azure VMs
+
+For Azure VMs, you can autoprovisiong installation of guest configuration extension on Azure VMs. This feature is available in preview.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 1. Navigate to **Environment settings** > **Your subscription** > **Settings & Monitoring**.

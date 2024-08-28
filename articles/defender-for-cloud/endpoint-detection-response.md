@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 
 Microsoft Defender for Cloud integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide endpoint detection and response (EDR) capabilities for machines connected to Defender for Cloud. 
 
-As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solution, whether that's integrated Defender for Endpoint or a [supported third-party solution](integration-defender-for-endpoint.md#supported-edr-solutions).
+As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solutionץ The solution can be integrated Defender for Endpoint EDR, or a [supported third-party solution](integration-defender-for-endpoint.md#supported-edr-solutions).
 
 
 Based on EDR solution findings, Defender for Cloud provides [recommendations](integration-defender-for-endpoint.md#edr-solution-recommendations) to ensure that EDR solutions are installed and running correctly on VMs.
@@ -22,7 +22,7 @@ This article describes how to remediate those recommendations.
 
 > [!NOTE]
 > - Defender for Cloud uses agentless scanning to assess EDR settings.
-> - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously use to collect machine data.
+> - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously used to collect machine data.
 > - The MMA is set to retire. Scanning using the MMA will be deprecated in November 2024. 
 
 ## Prerequisites

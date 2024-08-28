@@ -11,17 +11,20 @@ ms.date: 03/13/2024
 
 # Remediate EDR recommendations (MMA)
 
-Microsoft Defender for Cloud integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide endpoint detection and response (EDR) capabilities for machines connected to Defender for Cloud. 
+Microsoft Defender for Cloud integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide endpoint detection and response (EDR) capabilities for machines connected to Defender for Cloud.
 
-Defender for Cloud assesses machines and provides recommendations to improve endpoint security. By remediating these recommendations, you can ensure that machines are running an EDR solutions, and that solutions are compliant and secure across all environments. EDR recommendations include:
+As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solutionץ The solution can be integrated Defender for Endpoint EDR, or a [supported third-party solution](integration-defender-for-endpoint.md#supported-edr-solutions).
+
+Based on EDR solution findings, Defender for Cloud makes EDR recommendations that include:
 
 - [Endpoint protection should be installed on your machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4fb67663-9ab9-475d-b026-8c544cced439)
 - [Endpoint protection health issues should be resolved on your machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/37a3689a-818e-4a0e-82ac-b1392b9bb000)
 
+This article describes how to remediate these recommendations.
 
 > [!NOTE]
 > - Defender for Servers now uses agentless scanning to assess EDR settings.
-> - Agentless scanning replaces use of the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), that's described in this article.
+> - Agentless scanning replaces use of the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), as described in this article.
 > - The MMA is set to retire. Scanning using the MMA will be deprecated in November 2024.
  
 ## Recommendation conditions on EDR solutions

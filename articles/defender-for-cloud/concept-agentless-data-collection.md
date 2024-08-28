@@ -12,7 +12,7 @@ ms.custom: template-concept
 
 # Overview - Agentless machine scanning
 
-Microsoft Defender for Cloud provides agentless machine scanning to improve security posture of machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+Microsoft Defender for Cloud provides agentless machine scanning to improve the security posture of machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
 Agentless machine scanning:
 

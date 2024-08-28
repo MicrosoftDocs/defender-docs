@@ -723,24 +723,24 @@
       - name: Disable vulnerability findings
         displayName: qualys, rapid7, va
         href: disable-vulnerability-findings.md
-      - name: Remediate security baseline assessment issues
+      - name: Remediate security baseline assessments
         displayName: security, baseline, remediate, mdvm, vulnerability, assessment, va
         href: remediate-security-baseline.md
-      - name: Review OS misconfigurations (MCSB)
+      - name: Remediate OS misconfigurations (Cloud Security Benchmark)
         displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
         href: apply-security-baseline.md
-      - name: Review OS system update issues
+      - name: Remediate system updates
         displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
         href: recommendations-apply-operating-system-updates.md
-      - name: Review software inventory
+      - name: Review the software inventory
         displayName: inventory, apps, software inventory, mde, tvm
-        href: asset-inventory.md
+        href: software-inventory.md
       - name: Remediate machine secrets
         href: remediate-server-secrets.md 
       - name: Review Docker host hardening recommendations
         displayName: containers
         href: harden-docker-hosts.md
-      - name: Review changes with file integrity monitoring
+      - name: Review machine changes with file integrity monitoring
         displayName: fim, change
         href: file-integrity-monitoring-compare-baselines.md
       - name: Improve network security posture

@@ -19,11 +19,11 @@ As part of these [integrated EDR capabilities](integration-defender-for-endpoint
 - `Signature out of date`
 - `Anti-virus is off or partially configured`
 
-Based on these checks, Defender for Cloud makes recommendations if misconfigurations are found. This article describes how to remediate those recommendations.
+If misconfigurations are found Defender for Cloud makes recommendations to fix them. This article describes how to remediate those recommendations.
 
 > [!NOTE]
 > - Defender for Cloud uses agentless scanning to assess EDR settings.
-> - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously use to collect machine data.
+> - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously used to collect machine data.
 > - The MMA is set to retire. Scanning using the MMA will be deprecated in November 2024.
 
 ## Prerequisites
