@@ -19,7 +19,7 @@ File integrity monitoring uses Azure Automation change tracking. This article de
 [File integrity monitoring using the integrated Defender for Endpoint sensor](file-integrity-monitoring-enable-defender-endpoint.md) must be enabled.
 
 > [!NOTE]
-> If you haven't enabled FIM yet, you'll see a message that says **File Integrity Monitoring is not enabled**. To enable FIM, select **Onboard subscriptions** and then follow the directions in [Enable File Integrity Monitoring](#enable-file-integrity-monitoring).
+> If you haven't enabled FIM yet, you'll see a message that says **File Integrity Monitoring is not enabled**. To enable FIM, select **Onboard subscriptions** and then [enable File Integrity Monitoring](file-integrity-monitoring-enable-defender-for-endpoint.md).
 
 
 ## Monitor entities and files
