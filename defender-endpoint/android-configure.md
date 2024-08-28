@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 04/30/2024
+ms.date: 08/26/2024
 ---
 
 # Configure Defender for Endpoint on Android features
@@ -59,62 +59,54 @@ It includes several admin controls to offer flexibility, such as the ability to 
 
 Network protection in Microsoft Defender for endpoint is disabled by default. Admins can use the following steps to **configure Network protection in Android devices.**
 
-1. In the Microsoft Intune admin center, navigate to Apps > App configuration policies. Create a new App configuration policy.
+In the Microsoft Intune admin center, navigate to Apps > App configuration policies. Create a new App configuration policy.
 
-> [!div class="mx-imgBorder"]
 1. Provide a name and description to uniquely identify the policy. Select **'Android Enterprise'** as the platform and **'Personally-owned work profile only'** as the profile type and **'Microsoft Defender'** as the Targeted app.
 
-      > [!div class="mx-imgBorder"]
-   > ![Screenshot of policy details.](media/appconfigdetails.png)
-   
-1. In Settings page, select **'Use configuration designer'** and add **'Enable Network Protection in Microsoft Defender'** as the key and value as **'1'** to enable Network Protection. (Network protection is disabled by default)
+2. In Settings page, select **'Use configuration designer'** and add **'Enable Network Protection in Microsoft Defender'** as the key and value as **'0'** to disable Network Protection. (Network protection is enabled by default)
 
-      > [!div class="mx-imgBorder"]
-   > ![Screenshot of how to select enable network protection policy](media/selectnp.png)
-   
-      > [!div class="mx-imgBorder"]
-   > ![Screenshot of add configuration policy.](media/npvalue.png)
-   
-1. If your organization uses root CAs that are private, you must establish explicit trust between Intune (MDM solution) and user devices. Establishing trust helps prevent Defender from flagging root CAs as rogue certificates.
+3. If your organization uses root CAs that are private, you must establish explicit trust between Intune (MDM solution) and user devices. Establishing trust helps prevent Defender from flagging root CAs as rogue certificates.
 
     To establish trust for the root CAs, use **'Trusted CA certificate list for Network Protection'** as the key. In the value, add the **'comma separated list of certificate thumbprints (SHA 1)'**.
 
     **Example of Thumbprint format to add**: `50 30 06 09 1d 97 d4 f5 ae 39 f7 cb e7 92 7d 7d 65 2d 34 31, 503006091d97d4f5ae39f7cbe7927d7d652d3431`
 
       > [!IMPORTANT]
-   > Certificate SHA-1 Thumbprint characters should be with either white space separated, or non separated.
-   >
-   > This format is invalid: `50:30:06:09:1d:97:d4:f5:ae:39:f7:cb:e7:92:7d:7d:65:2d:34:31`
+      > Certificate SHA-1 Thumbprint characters should be with either white space separated, or non separated.
+      >
+      > This format is invalid: `50:30:06:09:1d:97:d4:f5:ae:39:f7:cb:e7:92:7d:7d:65:2d:34:31`
 
       Any other separation characters are invalid.
 
-1. For other configurations related to Network protection, add the following keys and appropriate corresponding value.
+4. For other configurations related to Network protection, add the following keys and appropriate corresponding value.
 
-    | Configuration Key| Description|
-    |---|---|
-    |Trusted CA certificate list for Network Protection|Security admins manage this setting to establish trust for root CA and self-signed certificates.|
-    |Enable Network protection in Microsoft Defender|1 - Enable, 0- Disable (default). This setting is used by the IT admin to enable or disable the network protection capabilities in the Defender app.|
-    |Enable Network Protection Privacy|1 - Enable (default), 0 - Disable. Security admins manage this setting to enable or disable privacy in network protection.|
-    |Enable Users to Trust Networks and Certificates|1 - Enable, 0 - Disable (default). Security admins manage this setting to enable or disable the end user's in-app experience to trust and untrust unsecure and suspicious networks and malicious certificates.|
-    |Automatic Remediation of Network Protection Alerts|1 - Enable (default), 0 - Disable. Security admins manage this setting to enable or disable the remediation alerts that are sent when a user performs remediation activities, such as switching to a safer Wi-Fi access point or deleting suspicious certificates detected by Defender.|
-    |Manage Network Protection detection for Open Networks|0 - Disable (default), 1 - Audit Mode, 2 - Enable. Security admins manage this setting to disable, audit, or enable open network detection, respectively. In 'Audit' mode, alerts are sent only to the ATP portal with no end user experience. For user experience, set the config to 'Enable' mode.|  
-    |Manage Network protection Detection for Certificates|0 - Disable, 1 - Audit mode (default), 2 - Enable. When network protection is enabled, Audit mode for certificate detection is enabled by default. In Audit mode, notification alerts are sent to SOC admins, but no end-user notifications are displayed to the user when Defender detects a bad certificate. Admins can, however, disable this detection with 0 as the value and enable full feature functionality by setting 2 as the value. When the feature is enabled with the value of 2, end-user notifications are sent to the user when Defender detects a bad certificate, and alerts are also sent to the SOC Admin.|
+   | Configuration Key| Description|
+   |---|---|
+   |Trusted CA certificate list for Network Protection|Security admins manage this setting to establish trust for root CA and self-signed certificates.|
+   |Enable Network protection in Microsoft Defender|1 - Enable (default), 0- Disable. This setting is used by the IT admin to enable or disable the network protection capabilities in the Defender app.|
+   |Enable Network Protection Privacy|1 - Enable (default), 0 - Disable. Security admins manage this setting to enable or disable privacy in network protection.|
+   |Enable Users to Trust Networks and Certificates|1 - Enable, 0 - Disable (default). Security admins manage this setting to enable or disable the end user's in-app experience to trust and untrust unsecure and suspicious networks and malicious certificates.|
+   |Automatic Remediation of Network Protection Alerts|1 - Enable (default), 0 - Disable. Security admins manage this setting to enable or disable the remediation alerts that are sent when a user performs remediation activities, such as switching to a safer Wi-Fi access point or deleting suspicious certificates detected by Defender.|
+   |Manage Network Protection detection for Open Networks|2- Enable (default), 1- Audit mode, 0 - Disable. Security admins manage this setting to enable, audit, or disable open network detection, respectively. In 'Audit' mode, alerts are sent only to the ATP portal with no end user experience. For end user experience, the config should be set to 'Enable' mode.|
+   |Manage Network protection Detection for Certificates|2- Enable, 1- Audit mode, 0 - Disable (default).  In Audit mode, notification alerts are sent to SOC admins, but no end-user notifications are displayed to the user when Defender detects a bad certificate. Admins can, however, enable full feature functionality by setting 2 as the value. When the feature is enabled with the value of 2, end-user notifications are sent to the user when Defender detects a bad certificate, and alerts are also sent to the SOC Admin. |
+   
+5. Add the required groups to which the policy will have to be applied. Review and create the policy.
 
-6. Add the required groups to which the policy will have to be applied. Review and create the policy.
-
-    | Configuration Key| Description|
-    |---|---|
-    |Enable Network protection in Microsoft Defender|1: Enable <br/> 0: Disable (default) <br/><br/> This setting is used by the IT admin to enable or disable the network protection capabilities in the Defender app.|
-    |Enable Network Protection Privacy|1: Enable (default) <br/> 0: Disable <br/><br/> Security admins manage this setting to enable or disable privacy in network protection.|
-    |Enable Users to Trust Networks and Certificates|1 <br/> Enable <br/> 0:Disable (default) <br/><br/> This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks and malicious certificates.|
-    |Automatic Remediation of Network Protection Alerts|1: Enable (default) <br/> 0: Disable <br/><br/> This setting is used by IT admins to enable or disable the remediation alerts that are sent when a user does remediation activities. For example, the user switches to a safer Wi-Fi access point or deletes suspicious certificates that were detected by Defender.|
-    |Manage Network Protection detection for Open Networks|0: Disable (default) <br/> 1: Audit Mode <br/><br/> Security admins manage this setting to enable or disable open network detection.|
-    |Manage Network protection Detection for Certificates|0: Disable <br/> 1: Audit mode (default) <br/> 2: Enable <br/><br/> When network protection is enabled, Audit mode for certificate detection is enabled by default. In audit mode, notification alerts are sent to SOC admins, but no end user notifications are shown when Defender detects a bad certificate. Admins can disable this detection with the value 0 or enable full feature functionality by setting the value 2. When the value is 2, end user notifications are sent to users and alerts are sent to SOC admins when Defender detects a bad certificate.|
-
-1. Add the required groups to which the policy has to be applied. Review and create the policy.
+   | Configuration Key| Description|
+   |---|---|
+   |Enable Network protection in Microsoft Defender|1: Enable (default)<br/> 0: Disable<br/><br/> This setting is used by the IT admin to enable or disable the network protection capabilities in the Defender app.|
+   |Enable Network Protection Privacy|1: Enable (default) <br/> 0: Disable <br/><br/> Security admins manage this setting to enable or disable privacy in network protection.|
+   |Enable Users to Trust Networks and Certificates|1: Enable <br/>0: Disable (default) <br/><br/> This setting is used by IT admins to enable or disable the end user in-app experience to trust and untrust the unsecure and suspicious networks and malicious certificates.|
+   |Automatic Remediation of Network Protection Alerts|1: Enable (default) <br/> 0: Disable <br/><br/> This setting is used by IT admins to enable or disable the remediation alerts that are sent when a user does remediation activities. For example, the user switches to a safer Wi-Fi access point or deletes suspicious certificates that were detected by Defender.|
+   |Manage Network Protection detection for Open Networks| 2:  Enable (default)<br/> 1: Audit Mode <br/> 0: Disable <br/>  Security admins manage this setting to enable or disable open network detection.|
+   |Manage Network protection Detection for Certificates|2: Enable <br/> 1: Audit mode<br/> 0: Disable (default)<br/><br/>In audit mode, notification alerts are sent to SOC admins, but no end user notifications are shown when Defender detects a bad certificate. Admins can enable full feature functionality by setting the value 2. When the value is 2, end user notifications are sent to users and alerts are sent to SOC admins when Defender detects a bad certificate.|
+   
+6. Add the required groups to which the policy has to be applied. Review and create the policy.
 
 > [!NOTE]
-> Users need to enable location permission (which is an optional permission); this enables Defender for Endpoint to scan their networks and alert them when there are WIFI-related threats. If the location permission is denied by the user, Defender for Endpoint will only be able to provide limited protection against network threats and will only protect the users from rogue certificates.
+> - The other config keys of Network Protection will only work if the parent key '**Enable Network Protection in Microsoft Defender'** is enabled.
+> - Users need to enable location permission (which is an optional permission) and need to grant “Allow All the Time” permission to ensure protection against Wi-Fi threat, even when the app is not actively in use. If the location permission is denied by the user, Defender for Endpoint will only be able to provide limited protection against network threats and will only protect the users from rogue certificates.
+
 ## Privacy Controls
 
 Following privacy controls are available for configuring the data that is sent by Defender for Endpoint from Android devices:
@@ -124,7 +116,7 @@ Following privacy controls are available for configuring the data that is sent b
 |Malware report |Admins can set up privacy control for malware report. If privacy is enabled, then Defender for Endpoint won't send the malware app name and other app details as part of the malware alert report. |
 |Phish report |Admins can set up privacy control for phishing reports. If privacy is enabled, then Defender for Endpoint won't send the domain name and details of the unsafe website as part of the phishing alert report. |
 |Vulnerability assessment of apps |By default only information about apps installed in the work profile is sent for vulnerability assessment. Admins can disable privacy to include personal apps|
-|Network Protection (preview)| Admins can enable or disable privacy in network protection. If enabled, then Defender won't send network details.|
+|Network Protection | Admins can enable or disable privacy in network protection. If enabled, then Defender won't send network details.|
 
 ### Configure privacy alert report
 
@@ -140,7 +132,7 @@ Admin Privacy Controls (MDM) Use the following steps to enable privacy.
 
 4. On the Settings page, select **Use configuration designer** and then select **Add**.
 
-5. Select the required privacy setting -
+5. Select the required privacy setting
     - Hide URLs in report
     - Hide URLs in report for personal profile
     - Hide app details in report
@@ -206,8 +198,10 @@ Defender for Endpoint supports vulnerability assessment of apps in the work prof
 2. Give the policy a name; **Platform \> Android Enterprise**; select the profile type.
 3. Select **Microsoft Defender for Endpoint** as the target app.
 4. In Settings page, select **Use configuration designer** and add **DefenderTVMPrivacyMode** as the key and value type as **Integer**
+
    - To disable vulnerability of apps in the work profile, enter value as `1` and assign this policy to users. By default, this value is set to `0`.
    - For users with key set as `0`, Defender for Endpoint sends the list of apps from the work profile to the backend service for vulnerability assessment.
+
 5. Select **Next** and assign this profile to targeted devices/users.
 
 Turning the above privacy controls on or off won't impact the device compliance check or conditional access.
@@ -246,7 +240,9 @@ Use the following steps to turn on privacy for targeted users in the work profil
 2. Give the policy a name, **Platform > Android Enterprise**, select the profile type.
 3. Select **Microsoft Defender for Endpoint** as the target app.
 4. In Settings page, select **Use configuration designer** and add **DefenderExcludeURLInReport** as the key and value type as **Integer**.
-   - Enter **1 to enable privacy**. The default value is 0.
+
+   Enter **1 to enable privacy**. The default value is 0.
+
 5. Select **Next** and assign this profile to targeted devices/users.
 
 Turning the above privacy controls on or off won't impact the device compliance check or conditional access.
@@ -285,7 +281,9 @@ Use the following steps to turn on privacy for targeted users in the work profil
 2. Give the policy a name, **Platform > Android Enterprise**, select the profile type.
 3. Select **Microsoft Defender for Endpoint** as the target app.
 4. In Settings page, select **Use configuration designer** and add **DefenderExcludeAppInReport** as the key and value type as **Integer**
-   - Enter **1 to enable privacy**. The default value is 0.
+
+   Enter **1 to enable privacy**. The default value is 0.
+
 5. Select **Next** and assign this profile to targeted devices/users.
 
 Using this privacy control won't impact the device compliance check or conditional access. For example, devices with a malicious app will always have a risk level of "Medium".
@@ -299,8 +297,10 @@ Use the following steps to configure Disable sign-out:
 2. Give the policy a name, select **Platform > Android Enterprise**, and select the profile type.
 3. Select **Microsoft Defender for Endpoint** as the target app.
 4. In the Settings page, select **Use configuration designer** and add **Disable Sign Out** as the key and **Integer** as the value type.
+
    - By default, Disable Sign Out = 1 for Android Enterprise personally owned work profiles, fully managed, company owned personally enabled profiles and 0 for device administrator mode.
    - Admins need to make Disable Sign Out = 0 to enable the sign-out button in the app. Users will be able to see the sign-out button once the policy is pushed.
+
 5. Select **Next** and assign this profile to targeted devices and users.
 
 > [!IMPORTANT]
@@ -316,6 +316,7 @@ Use the following steps to configure the Device tags:
 2. Give the policy a name, select **Platform > Android Enterprise**, and select the profile type.
 3. Select **Microsoft Defender for Endpoint** as the target app.
 4. In Settings page, select Use configuration designer and add **DefenderDeviceTag** as the key and value type as **String**.
+
    - Admin can assign a new tag by adding the key **DefenderDeviceTag** and setting a value for device tag.
    - Admin can edit an existing tag by modifying the value of the key **DefenderDeviceTag**.
    - Admin can delete an existing tag by removing the key **DefenderDeviceTag**.
@@ -325,6 +326,7 @@ Use the following steps to configure the Device tags:
 
 > [!NOTE]
 > The Defender app needs to be opened for tags to be synced with Intune and passed to Security Portal. It may take up to 18 hours for tags to reflect in the portal.
+
 ## Related articles
 
 - [Overview of Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
