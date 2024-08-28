@@ -39,7 +39,7 @@ September 4, 2024
 
 **Estimated date for change**: February 5, 2025
 
-After February 5, 2025, you won't be able to activate the legacy Defender for Storage (classic) per-transaction storage protection plan unless it's already enabled in your subscription. For more information, see [Move to the new Defender for Storage pricing plan](defender-for-storage-classic-migrate.md).
+After February 5, 2025, you won't be able to activate the legacy Defender for Storage (classic) per-transaction storage protection plan unless it's already enabled in your subscription. For more information, see [Move to the new Defender for Storage plan](defender-for-storage-classic-migrate.md).
 
 ## August 2024
 
