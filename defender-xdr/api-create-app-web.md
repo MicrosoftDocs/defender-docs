@@ -18,7 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.custom: api
-ms.date: 02/16/2024
+ms.date: 08/29/2024
 ---
 
 # Create an app to access Microsoft Defender XDR without a user
@@ -52,7 +52,7 @@ This article explains how to:
 
 ## Create an app
 
-1. Sign in to [Azure](https://portal.azure.com) as a user with the **Global Administrator** role.
+1. Sign in to [Azure](https://portal.azure.com).
 
 2. Navigate to **Microsoft Entra ID** > **App registrations** > **New registration**.
 

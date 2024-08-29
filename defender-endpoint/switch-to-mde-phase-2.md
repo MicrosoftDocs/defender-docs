@@ -6,7 +6,7 @@ ms.subservice: onboard
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 07/25/2024
+ms.date: 08/29/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -87,7 +87,7 @@ You can now run Microsoft Defender Antivirus in passive mode on Windows Server 2
 > - If you have Defender for Endpoint Plan 1, complete steps 1-5 in the following procedure.
 > - If you have Defender for Endpoint Plan 2, complete steps 1-7 in the following procedure.
 
-1. Make sure Defender for Endpoint is provisioned. As a Global Administrator, go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in. Then, in the navigation pane, select **Assets** > **Devices**. 
+1. Make sure Defender for Endpoint is provisioned. As a Security Administrator, go to the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) and sign in. Then, in the navigation pane, select **Assets** > **Devices**. 
 
    The following table shows what your screen might look like and what it means.
 

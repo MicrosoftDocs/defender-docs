@@ -43,7 +43,7 @@ ms.date: 06/28/2024
 
 ## Enable raw data streaming
 
-1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as a Security Administrator.
+1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com).
 
 2. Go to [Data export settings page](https://security.microsoft.com/settings/mtp_settings/raw_data_export) in Microsoft Defender XDR.
 
