@@ -211,6 +211,8 @@ When looking at the threat analytics data, remember the following factors:
 - The checklist in the **Recommended actions** tab only displays recommendations tracked in [Microsoft Secure Score](/defender-xdr/microsoft-secure-score). Check the **Analyst report** tab for more recommended actions that aren't tracked in Secure Score.
 - The recommended actions don’t guarantee complete resilience and only reflect the best possible actions needed to improve it.
 - Antivirus-related statistics are based on Microsoft Defender Antivirus settings. 
+- The **Misconfigured devices** column in the main Threat analytics page shows the number of devices affected by a threat when the threat's related recommended actions aren't turned on. However, if Microsoft researchers don't link any recommended actions, the **Misconfigured devices** column shows the status *Not available*.  
+- The **Vulnerable devices** column in the main Threat analytics page shows the number of devices running software that are vulnerable to any of the vulnerabilities linked to the threat. However, if Microsoft researchers don't link any vulnerabilities, the **Vulnerable devices** column shows the status *Not available*.
 
 ## See also
 
