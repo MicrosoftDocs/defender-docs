@@ -6,7 +6,7 @@ ms.subservice: onboard
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 07/25/2024
+ms.date: 08/29/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
