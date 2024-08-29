@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 06/28/2024
+ms.date: 08/29/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -61,7 +61,7 @@ The following steps guide you how to create a Microsoft Entra application, get a
 
 ## Create the multitenant app
 
-1. Sign in to your [Azure tenant](https://portal.azure.com) with user that has **Global Administrator** role.
+1. Sign in to your [Azure tenant](https://portal.azure.com).
 
 2. Navigate to **Microsoft Entra ID** \> **App registrations** \> **New registration**.
 
