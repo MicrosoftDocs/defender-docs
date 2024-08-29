@@ -90,7 +90,7 @@ Make sure that the following requirements are met:
 - Ensure that Defender for Endpoint has **Full Disk Access** authorization.
 
    > [!NOTE]
-   > Both having SIP enabled and all configuration done via MDM is not mandatory, but required for a fully secured device, as otherwise a local admin still can make tampering changes that macOS manages. For example, enabling **TCC** (Transparency, Consent & Control) through a Mobile Device Management solution such as [Intune](mac-install-with-intune.md), will eliminate the risk of a Global Administrator revoking **Full Disk Access** Authorization by a local admin.
+   > Both having SIP enabled and all configuration done via MDM is not mandatory, but is required for a fully secured device. Otherwise, a local administrator can make tampering changes that macOS manages. For example, enabling **TCC** (Transparency, Consent & Control) through a Mobile Device Management solution such as [Intune](mac-install-with-intune.md), will eliminates the risk of a Security Administrator revoking **Full Disk Access** Authorization by a local admin.
 
 ## Configure tamper protection on macOS devices
 
@@ -137,7 +137,7 @@ sudo mdatp config tamper-protection enforcement-level --value block
 ![Image of manual configuration command](media/manual-config-cmd.png)
 
 > [!NOTE]
-> You must use managed configuration profile (deployed via MDM) on production devices. If a local admin changed tamper protection mode via a manual configuration, they can change it to a less restrictive mode at any time as well. If tamper protection mode was set via a managed profile, only a Global Administrator will be able to undo it.
+> You must use managed configuration profile (deployed via MDM) on production devices. If a local admin changed tamper protection mode via a manual configuration, they can change it to a less restrictive mode at any time as well. If tamper protection mode was set via a managed profile, only a Security Administrator will be able to undo it.
 
 2. Verify the result.
 
