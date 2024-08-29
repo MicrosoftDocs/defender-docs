@@ -74,8 +74,11 @@ You can configure the tamper protection mode by providing the mode name as enfor
 
 ## Before you begin
 
+Make sure that the following requirements are met:
+
 - Supported macOS versions: Big Sur (11), or later
 - Minimum required version for Defender for Endpoint: `101.70.19`
+- You have an appropriate role assigned (see [Create and manage roles for role-based access control](user-roles.md))
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -497,7 +500,7 @@ Configure [preferences](mac-preferences.md#exclusions), for example for JAMF:
 </plist>
 ```
 
-Note, that excluding a scripting interpreter (like Ruby from the example above) instead of a compiled executable isn't secure, as it can run *any script*, not just the one that a Global Administrator uses.
+Note, that excluding a scripting interpreter (like Ruby from the example above) instead of a compiled executable isn't secure, as it can run *any script*, not just the one that a Security Administrator uses.
 
 To minimize the risk, we recommend using extra `args` to allow only specific scripts to run with scripting interpreters.
 In the example above, only `/usr/bin/ruby /usr/local/bin/global_mdatp_restarted.rb` is permitted to restart Defender.
@@ -530,7 +533,7 @@ configuration_is_managed                    : false
 
 - `tamper_protection` is the *effective* mode. If this mode is the mode you intended to use, then you're all set.
 - `configuration_source` indicates how tamper protection enforcement level is set. It must match how you configured tamper protection. (If you set its mode through a managed profile, and `configuration_source` shows something different, then you most probably misconfigured your profile.)
-  - `mdm` - it's configured through a managed profile. Only a Global Administrator can change it with an update to the profile!
+  - `mdm` - it's configured through a managed profile. Only a Security Administrator can change it with an update to the profile!
   - `local` - it's configured with `mdatp config` command
   - `portal` - default enforcement level set in Security Portal
   - `defaults` - not configured, the default mode is used
