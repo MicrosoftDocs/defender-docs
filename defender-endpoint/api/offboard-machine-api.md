@@ -15,7 +15,7 @@ ms.topic: reference
 ms.subservice: reference
 ms.custom: api
 search.appverid: met150
-ms.date: 06/28/2024
+ms.date: 08/29/2024
 ---
 
 # Offboard machine API
@@ -63,7 +63,7 @@ One of the following permissions is required to call this API. To learn more, in
 > [!NOTE]
 > When obtaining a token using user credentials:
 >
-> - The user must have a Global Administrator role.
+> - The user must have an appropriate role assigned (see [Permission options](../user-roles.md#permission-options)).
 > - The user must have access to the device, based on device group settings. For more information, see [Create and manage device groups](../machine-groups.md).
 >
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
