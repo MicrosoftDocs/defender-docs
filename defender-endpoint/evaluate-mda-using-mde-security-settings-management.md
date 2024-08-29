@@ -183,7 +183,7 @@ To check which "Platform Update” version you have installed, run the following
 
 #### Check the Security Intelligence Update version
 
-The latest “Security Intelligence Update” version is available in [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates).
+The latest “Security Intelligence Update” version is available in [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 To check which “Security Intelligence Update” version you have installed, run the following command in PowerShell using the privileges of an administrator:
 
@@ -191,7 +191,7 @@ To check which “Security Intelligence Update” version you have installed, ru
 
 #### Check the Engine Update version
 
-The latest scan “engine update” version is available in [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/wdsi/defenderupdates).
+The latest scan “engine update” version is available in [Latest security intelligence updates for Microsoft Defender Antivirus and other Microsoft antimalware - Microsoft Security Intelligence](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 To check which “Engine Update” version you have installed, run the following command in PowerShell using the privileges of an administrator:
 
