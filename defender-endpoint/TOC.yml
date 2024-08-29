@@ -383,8 +383,8 @@
       - name: Manage and maintain Defender for Endpoint 
         href: mde-operations-guide.md   
 
-  - name: Defender for Endpoint Security Operations Guide 
-    href: mde-sec-ops-guide.md
+      - name: Defender for Endpoint Security Operations Guide 
+        href: mde-sec-ops-guide.md
 
   - name: How to guides
     items:
