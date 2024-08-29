@@ -381,7 +381,7 @@
           href: time-settings.md
 
       - name: Manage and maintain Defender for Endpoint 
-        href: mde-operations-guide.md   
+        href: manage-maintain-mde-guide.md   
 
       - name: Defender for Endpoint Security Operations Guide 
         href: mde-sec-ops-guide.md
