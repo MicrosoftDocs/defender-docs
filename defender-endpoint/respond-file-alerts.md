@@ -166,10 +166,10 @@ The **Download file** button can have the following states:
   For Microsoft Defender for Endpoint role-based access control (RBAC):
 
     For Portable Executable file (.exe, .sys, .dll, and others)
-    - Global admin or Advanced live response or Alerts 
+    - Security Administrator or Advanced live response or Alerts 
 
     Non-Portable Executable file (.txt, .docx, and others) 
-    - Global admin or Advanced live response
+    - Security Administrator or Advanced live response
     - Tenants with [role-based access (RBAC) permissions](/defender-xdr/manage-rbac) enabled
 
 
@@ -212,10 +212,10 @@ The **Collect file** button can have the following states:
     The following permissions are required: 
 
     For Portable Executable file (.exe, .sys, .dll, and others)
-    - Global admin or Advanced live response or Alerts 
+    - Security Administrator or Advanced live response or Alerts 
 
     Non-Portable Executable file (.txt, .docx, and others) 
-    - Global admin or Advanced live response
+    - Security Administrator or Advanced live response
 
 
 If a file hasn't been seen in the organization in the past 30 days, **Collect file** is disabled. 
