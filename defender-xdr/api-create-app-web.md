@@ -99,7 +99,7 @@ This article explains how to:
 
     Since your application interacts with Microsoft Defender XDR on behalf of your users, it needs be approved for every tenant on which you intend to use it.
 
-    The Active Directory global admin for each tenant needs to select the consent link and approve your app.
+    The Active Directory administrator for each tenant needs to select the consent link and approve your app.
 
     The consent link has the following structure:
 
