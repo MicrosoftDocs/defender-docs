@@ -18,7 +18,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 06/26/2024
+ms.date: 08/29/2024
 ---
 
 # Get started with your Microsoft Defender for Endpoint deployment
@@ -54,7 +54,7 @@ The steps to deploy Defender for Endpoint are:
 
 Here's a list of prerequisites required to deploy Defender for Endpoint:
 
-- You're a Global Administrator
+- You're a Security Administrator
 - Your environment meets the [minimum requirements](minimum-requirements.md)
 - You have a full inventory of your environment. The following table provides a starting point to gather information and ensure that stakeholders understand your environment. The inventory helps identify potential dependencies and/or changes required in technologies or processes.
 
