@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view and manage quarantined messages for all users in Exchange Online Protection (EOP). Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint Online, OneDrive for Business, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 08/07/2024
+ms.date: 08/30/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -215,7 +215,7 @@ In the details flyout that opens, the following information is available:
   - **Not yet released to**, **Released to**, and/or **Released by**: Depending on the state of the message, one or more of the following values might be available:
     - **Not yet released to**: Email addresses of recipients that the message hasn't been released to.
     - **Released to**: Email addresses of recipients that the message has been released to.
-    - **Released by**: The admin that released the message using the format: `<email address of admin who released the message> released for <recipient>`. For example, `admin@contoso.onmicrosoft.com released to laura@contoso.onmicrosoft.com`. if the end user releases the message, it will also show the SMTP address of the end user. if the release is carried out by the system, it will show "System released". please note that in the case that the release is not carried by the Admin, end user, or system, it will default to "Admin"
+    - **Released by**: The admin that released the message using the format: `<email address of admin who released the message> released for <recipient>`. For example, `admin@contoso.onmicrosoft.com released to laura@contoso.onmicrosoft.com`. If the end user releases the message, it shows the end user's SMTP address. If the release is carried out by the system, it says, "System released". If the release is not carried by an admin, an end user, or the system, it defaults to "Admin."
 
 The rest of the details flyout contains the **Delivery details**, **Email details**, **URLs**, and **Attachments** sections that are part of the _Email summary panel_. For more information, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
