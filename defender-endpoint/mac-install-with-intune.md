@@ -403,7 +403,7 @@ After completing the profile configuration, you'll be able to review the status 
 
 Once the Intune changes are propagated to the enrolled devices, you can see them listed under **Monitor** \> **Device status**:
 
-:::image type="content" source="../defender-endpoint/media/mdatp-7-devicestatusblade.png" alt-text="Screenshot that shows the view of the device status" lightbox="../defender-endpoint/media/mdatp-7-devicestatusblade.png":::
+:::image type="content" source="../defender-endpoint/media/mdatp-7-devicestatusblade.png" alt-text="Screenshot that shows the view of the device status." lightbox="../defender-endpoint/media/mdatp-7-devicestatusblade.png":::
 
 #### Client device setup
 
@@ -431,11 +431,11 @@ A standard [Company Portal installation](/intune-user-help/enroll-your-device-in
 
    :::image type="content" source="../defender-endpoint/media/mdatp-13-systempreferences.png" alt-text="Screenshot that shows the System preferences page." lightbox="../defender-endpoint/media/mdatp-13-systempreferences.png":::
     
-   :::image type="content" source="../defender-endpoint/media/mdatp-14-systempreferencesprofiles.png" alt-text="Screenshot that shows the System Preferences Profiles page" lightbox="../defender-endpoint/media/mdatp-14-systempreferencesprofiles.png":::
+   :::image type="content" source="../defender-endpoint/media/mdatp-14-systempreferencesprofiles.png" alt-text="Screenshot that shows the System Preferences Profiles page." lightbox="../defender-endpoint/media/mdatp-14-systempreferencesprofiles.png":::
 
 2. Verify that the following configuration profiles are present and installed. The **Management Profile** should be the Intune system profile. _Wdav-config_ and _wdav-kext_ are system configuration profiles that were added in Intune:
 
-   :::image type="content" source="../defender-endpoint/media/mdatp-15-managementprofileconfig.png" alt-text="Screenshot that shows the Profiles page" lightbox="../defender-endpoint/media/mdatp-15-managementprofileconfig.png":::
+   :::image type="content" source="../defender-endpoint/media/mdatp-15-managementprofileconfig.png" alt-text="Screenshot that shows the Profiles page." lightbox="../defender-endpoint/media/mdatp-15-managementprofileconfig.png":::
 
 3. You should also see the Microsoft Defender for Endpoint icon in the top-right corner.
 

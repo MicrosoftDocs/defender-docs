@@ -142,28 +142,28 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 1. On the **Configuration settings** page, expand the groups of settings and configure those settings you want to manage with this profile.
 1. Set the policies based on the following recommended settings:
 
-|Description  |Setting  |
-|---------|---------|
-|Block executable content from email client and webmail     |  Block       |
-|Block Adobe Reader from creating child processes     |   Block      |
-|Block execution of potentially obfuscated scripts     |    Block     |
-|Block abuse of exploited vulnerable signed drivers (Device)     |  Block       |
-|Block Win32 API calls from Office macros     | Block        |
-|Block executable files from running unless they meet a prevalence, age, or trusted list criterion     | Block        |
-|Block Office communication application from creating child processes     | Block        |
-|Block all Office applications from creating child processes     |  Block       |
-|[PREVIEW] Block use of copied or impersonated system tools     |  Block       |
-|Block JavaScript or VBScript from launching downloaded executable content     | Block        |
-|Block credential stealing from the Windows local security authority subsystem     | Block        |
-|Block Webshell creation for Servers     |   Block      |
-|Block Office applications from creating executable content     |  Block       |
-|Block untrusted and unsigned processes that run from USB     |   Block      |
-|Block Office applications from injecting code into other processes     | Block        |
-|Block persistence through WMI event subscription     |  Block       |
-|Use advanced protection against ransomware     |  Block       |
-|Block process creations originating from PSExec and WMI commands     | Block<br>NOTE:If you have Configuration Manager (formerly SCCM), or other management tools, that use WMI, you might need to set this to **Audit** instead of **Block**.        |
-|[PREVIEW] Block rebooting machine in Safe Mode     | Block      |
-|Enable Controlled Folder Access     |  Enabled       |
+   |Description  |Setting  |
+   |---------|---------|
+   |Block executable content from email client and webmail     |  Block       |
+   |Block Adobe Reader from creating child processes     |   Block      |
+   |Block execution of potentially obfuscated scripts     |    Block     |
+   |Block abuse of exploited vulnerable signed drivers (Device)     |  Block       |
+   |Block Win32 API calls from Office macros     | Block        |
+   |Block executable files from running unless they meet a prevalence, age, or trusted list criterion     | Block        |
+   |Block Office communication application from creating child processes     | Block        |
+   |Block all Office applications from creating child processes     |  Block       |
+   |[PREVIEW] Block use of copied or impersonated system tools     |  Block       |
+   |Block JavaScript or VBScript from launching downloaded executable content     | Block        |
+   |Block credential stealing from the Windows local security authority subsystem     | Block        |
+   |Block Webshell creation for Servers     |   Block      |
+   |Block Office applications from creating executable content     |  Block       |
+   |Block untrusted and unsigned processes that run from USB     |   Block      |
+   |Block Office applications from injecting code into other processes     | Block        |
+   |Block persistence through WMI event subscription     |  Block       |
+   |Use advanced protection against ransomware     |  Block       |
+   |Block process creations originating from PSExec and WMI commands     | Block<br>NOTE: If you have Configuration Manager (formerly SCCM), or other management tools, that use WMI, you might need to set this to **Audit** instead of **Block**.        |
+   |[PREVIEW] Block rebooting machine in Safe Mode     | Block      |
+   |Enable Controlled Folder Access     |  Enabled       |
 
 > [!TIP]
 > Any of the rules may block behavior you find acceptable in your organization. In these cases, add the per-rule exclusions named “Attack Surface Reduction Only Exclusions”.  And, change the rule from **Enabled** to **Audit** to prevent unwanted blocks.
@@ -175,9 +175,9 @@ To enable Attack Surface Reduction (ASR) rules using the endpoint security polic
 
 #### Check the platform update version
 
-The latest Platform Update” version Production channel (GA) is available in [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623+update).
+The latest "Platform Update" version Production channel (GA) is available in [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623+update).
 
-To check which "Platform Update” version you have installed, run the following command in PowerShell using the privileges of an administrator:
+To check which "Platform Update" version you have installed, run the following command in PowerShell using the privileges of an administrator:
 
 `get-mpComputerStatus | ft AMProductVersion`
 
