@@ -187,6 +187,8 @@ In the details flyout that opens, the following information is available:
   - **Released by**:
     - If the user released the message themselves, the user's email address is shown.
     - If the message was released by an admin, the value **Admin** is shown.
+    - if the release is carried out by the system, the value **System** is shown
+    - if the release is not carried out by user, Admin, or system, it will default to "Admin"
 - **Email details** section:
   - **Sender address**
   - **Time received**
