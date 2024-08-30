@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 08/26/2024
+ms.date: 08/30/2024
 ---
 
 # Configure Defender for Endpoint on Android features
@@ -302,9 +302,6 @@ Use the following steps to configure Disable sign-out:
    - Admins need to make Disable Sign Out = 0 to enable the sign-out button in the app. Users will be able to see the sign-out button once the policy is pushed.
 
 5. Select **Next** and assign this profile to targeted devices and users.
-
-> [!IMPORTANT]
-> This feature is in Public Preview. The following information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## Device Tagging
 
