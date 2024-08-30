@@ -215,7 +215,7 @@ In the details flyout that opens, the following information is available:
   - **Not yet released to**, **Released to**, and/or **Released by**: Depending on the state of the message, one or more of the following values might be available:
     - **Not yet released to**: Email addresses of recipients that the message hasn't been released to.
     - **Released to**: Email addresses of recipients that the message has been released to.
-    - **Released by**: The admin that released the message using the format: `<email address of admin who released the message> released for <recipient>`. For example, `admin@contoso.onmicrosoft.com released to laura@contoso.onmicrosoft.com`.
+    - **Released by**: The admin that released the message using the format: `<email address of admin who released the message> released for <recipient>`. For example, `admin@contoso.onmicrosoft.com released to laura@contoso.onmicrosoft.com`. if the end user releases the message, it will also show the SMTP address of the end user. if the release is carried out by the system, it will show "System released". please note that in the case that the release is not carried by the Admin, end user, or system, it will default to "Admin"
 
 The rest of the details flyout contains the **Delivery details**, **Email details**, **URLs**, and **Attachments** sections that are part of the _Email summary panel_. For more information, see [The Email summary panel](mdo-email-entity-page.md#the-email-summary-panel).
 
