@@ -154,6 +154,24 @@ Defender for Cloud provides a set of built-in policies that help you assess and 
 
 ### Install the Azure Policy guest configuration on your machines
 
+- **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
+
+    - Autoprovision the Azure Policy guest configuration extension on your Azure machines::
+        
+        1. Sign in to the [Azure portal](https://portal.azure.com).
+        
+        1. Search for and select **Microsoft Defender for Cloud**.
+        
+        1. Navigate to **Environment settings** > **Your subscription** > **Settings & Monitoring**.
+                       
+            :::image type="content" source="media/configure-servers-coverage/setting-and-monitoring.png" alt-text="Screenshot that shows the location of the settings and monitoring button." lightbox="media/configure-servers-coverage/setting-and-monitoring.png":::
+                    
+        1. Toggle the Guest Configuration agent (preview) to **On**.
+                       
+            :::image type="content" source="media/configure-servers-coverage/toggle-guest.png" alt-text="Screenshot that shows the location of the toggle button to enable the Guest Configuration agent." lightbox="media/configure-servers-coverage/toggle-guest.png":::
+                    
+        1. Select **Continue**.
+
 - **Azure VMs only**: You must assign managed Identity in the Defender for Cloud portal. Navigate to the recommendations page. Search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755). Then [remediate the recommendation](implement-security-recommendations.md).
     
     - (Optional) **Azure VMs only**: Enable [Azure Policy guest configuration across your entire subscription](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
@@ -161,24 +179,6 @@ Defender for Cloud provides a set of built-in policies that help you assess and 
 - **GCP and AWS**: Azure Policy guest configuration is automatically installed when you [connect your GCP project](quickstart-onboard-gcp.md), or you [connect your AWS accounts](quickstart-onboard-aws.md) with Azure Arc autoprovisioning enabled, to Defender for Cloud.
     
 - **On-premises machines**: Azure Policy guest configuration is enabled by default when you [onboard on-premises machines as Azure Arc enabled machine or VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm?branch=main).
-
-- **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
-
-**To enable Azure Policy guest configuration**:
-
-1. Sign in to the [Azure portal](https://portal.azure.com).
-
-1. Search for and select **Microsoft Defender for Cloud**.
-
-1. Navigate to **Environment settings** > **Your subscription** > **Settings & Monitoring**.
-               
-    :::image type="content" source="media/configure-servers-coverage/setting-and-monitoring.png" alt-text="Screenshot that shows the location of the settings and monitoring button." lightbox="media/configure-servers-coverage/setting-and-monitoring.png":::
-            
-1. Toggle the Guest Configuration agent (preview) to **On**.
-               
-    :::image type="content" source="media/configure-servers-coverage/toggle-guest.png" alt-text="Screenshot that shows the location of the toggle button to enable the Guest Configuration agent." lightbox="media/configure-servers-coverage/toggle-guest.png":::
-            
-1. Select **Continue**.
 
 Once enabled, Defender for Cloud will automatically evaluate the configuration of your VMs against the predefined security baselines, and identifies any deviations, or misconfigurations that could pose a risk to your environment. Defender for Cloud creates [recommendations](review-security-recommendations.md) for each issue it identifies, and provides guidance on how to [remediate the recommendations](review-security-recommendations.md).
 
