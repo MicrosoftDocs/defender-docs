@@ -156,7 +156,7 @@ Defender for Cloud provides a set of built-in policies that help you assess and 
 
 - **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
 
-    - Autoprovision the Azure Policy guest configuration extension on your Azure machines::
+    - Autoprovision the Azure Policy guest configuration extension on your Azure machines across your entire subscription:
         
         1. Sign in to the [Azure portal](https://portal.azure.com).
         

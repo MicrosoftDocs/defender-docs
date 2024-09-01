@@ -31,7 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date        | Category | Update                     |
 | ----------- | -------- | -------------------------- |
-| September 1 | GA       | [Azure Policy guest configuration is now generally available (GA)](#guest-configuration-is-now-generally-available-ga) |
+| September 1 | GA       | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
 
 ### Azure Policy guest configuration is now generally available (GA)
 
