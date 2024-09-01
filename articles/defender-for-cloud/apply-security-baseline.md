@@ -39,6 +39,22 @@ Machine information is collected through the [Azure Policy guest configuration](
     
     - (Optional) **Azure VMs only**: Enable [Azure Policy guest configuration across your entire subscription](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
 
+    - Autoprovision the Azure Policy guest configuration extension on your Azure machines across your entire subscription:
+        
+        1. Sign in to the [Azure portal](https://portal.azure.com).
+        
+        1. Search for and select **Microsoft Defender for Cloud**.
+        
+        1. Navigate to **Environment settings** > **Your subscription** > **Settings & Monitoring**.
+                       
+            :::image type="content" source="media/configure-servers-coverage/setting-and-monitoring.png" alt-text="Screenshot that shows the location of the settings and monitoring button." lightbox="media/configure-servers-coverage/setting-and-monitoring.png":::
+                    
+        1. Toggle the Guest Configuration agent (preview) to **On**.
+                       
+            :::image type="content" source="media/configure-servers-coverage/toggle-guest.png" alt-text="Screenshot that shows the location of the toggle button to enable the Guest Configuration agent." lightbox="media/configure-servers-coverage/toggle-guest.png":::
+                    
+        1. Select **Continue**.
+
     - **GCP and AWS**: Azure Policy guest configuration is automatically installed when you [connect your GCP project](quickstart-onboard-gcp.md), or you [connect your AWS accounts](quickstart-onboard-aws.md) with Azure Arc autoprovisioning enabled, to Defender for Cloud.
     
     - **On-premises machines**: Azure Policy guest configuration is enabled by default when you [onboard on-premises machines as Azure Arc enabled machine or VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm?branch=main).
@@ -49,7 +65,6 @@ Once the Azure Policy guest configuration is onboarded to your subscription, Def
 
 - [Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md)
 - [Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md)
-- [Guest Configuration extension should be installed on machines](recommendations-reference-compute.md)
 
 **To review and remediate these**: 
 
@@ -58,10 +73,6 @@ Once the Azure Policy guest configuration is onboarded to your subscription, Def
 1. Navigate to **Defender for Cloud** > Recommendations**.
 
 1. Search for and select one of the recommendations.
-
-    - Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)
-    - Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)
-    - Guest Configuration extension should be installed on machines
     
 1. Review the recommendation.
  
