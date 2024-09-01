@@ -31,15 +31,15 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 | Date        | Category | Update                     |
 | ----------- | -------- | -------------------------- |
-| September 1 | GA       | [Guest Configuration is now generally available (GA)](#guest-configuration-is-now-generally-available-ga) |
+| September 1 | GA       | [Azure Policy guest configuration is now generally available (GA)](#guest-configuration-is-now-generally-available-ga) |
 
-### Guest Configuration is now generally available (GA)
+### Azure Policy guest configuration is now generally available (GA)
 
 September 1, 2024
 
-Defender for Servers Guest Configuration is now generally available (GA).
+Defender for Server's Azure Policy guest configuration is now generally available (GA) for all multicloud Defender for Servers Plan 2 customers. Guest Configuration provides a unified experience for managing security baselines across your environment. It enables you to assess and enforce security configurations on your servers, including Windows and Linux machines, Azure VMs, AWS EC2, and GCP instances.
 
-Learn how to enable Guest Configuration on your environment.
+Learn how to [enable Azure Policy guest configuration on your environment](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
 
 ## August 2024
 
