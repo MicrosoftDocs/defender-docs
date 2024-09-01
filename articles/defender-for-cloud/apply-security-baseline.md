@@ -1,10 +1,11 @@
 ---
 title: Remediate guest configuration recommendations
-description: Learn how to enable Azure Policy guest configuration in Microsoft Defender for Cloud to gain the benefits of comparing your OS with the guidance from Microsoft cloud security benchmark
+description: Learn how to enable Azure Policy guest configuration in Microsoft Defender for Cloud and ensure a secure computing environment.
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
 ms.date: 09/01/2024
+#customer intent: As a security administrator, I want to enable Azure Policy guest configuration in Microsoft Defender for Cloud so that I can compare my OS with the guidance from Microsoft cloud security benchmark and ensure a secure computing environment.
 ---
 
 # Remediate guest configuration recommendations
@@ -29,6 +30,9 @@ Machine information is collected through the [Azure Policy guest configuration](
 
 - Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing information.
 
+> [!IMPORTANT]
+> Be aware that additional features provided by Azure Policy guest configuration that exist outside of the Defender for Cloud portal aren't included with Defender for Cloud, and are subject to Azure Policy guest configurations pricing policies. For example [remediation](/azure/governance/machine-configuration/concepts/remediation-options) and [custom policies](/azure/governance/machine-configuration/how-to/create-policy-definition). For more information, see the [Azure Policy guest configuration pricing page](https://azure.microsoft.com/pricing/details/azure-policy/?msockid=06fc23a2aac2601229353214abbf61f1).
+
 - Review the [support matrix for the Azure Policy guest configuration](/azure/governance/machine-configuration/overview).
 
 - Install the Azure Policy guest configuration on your machines:
@@ -39,7 +43,7 @@ Machine information is collected through the [Azure Policy guest configuration](
     
     - (Optional) **Azure VMs only**: Enable [Azure Policy guest configuration across your entire subscription](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
 
-    - Autoprovision the Azure Policy guest configuration extension on your Azure machines across your entire subscription:
+    - Enable Azure Policy guest configuration extension on your Azure machines across your entire subscription:
         
         1. Sign in to the [Azure portal](https://portal.azure.com).
         

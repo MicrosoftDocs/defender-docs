@@ -152,6 +152,9 @@ Defender for Cloud provides a set of built-in policies that help you assess and 
 
 - Review the [support matrix for the Azure Policy guest configuration](/azure/governance/machine-configuration/overview).
 
+> [!IMPORTANT]
+> Be aware that additional features provided by Azure Policy guest configuration that exist outside of the Defender for Cloud portal aren't included with Defender for Cloud, and are subject to Azure Policy guest configurations pricing policies. For example [remediation](/azure/governance/machine-configuration/concepts/remediation-options) and [custom policies](/azure/governance/machine-configuration/how-to/create-policy-definition). For more information, see the [Azure Policy guest configuration pricing page](https://azure.microsoft.com/pricing/details/azure-policy/?msockid=06fc23a2aac2601229353214abbf61f1).
+
 ### Install the Azure Policy guest configuration on your machines
 
 - **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
@@ -160,7 +163,7 @@ Defender for Cloud provides a set of built-in policies that help you assess and 
     
     - (Optional) **Azure VMs only**: Enable [Azure Policy guest configuration across your entire subscription](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
 
-    - Autoprovision the Azure Policy guest configuration extension on your Azure machines across your entire subscription:
+    - Enable Azure Policy guest configuration extension on your Azure machines across your entire subscription:
         
         1. Sign in to the [Azure portal](https://portal.azure.com).
         
