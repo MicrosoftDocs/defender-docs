@@ -15,7 +15,7 @@ Microsoft Defender for Cloud's Defender for Servers plans contains components th
 | [Vulnerability assessment for machines](deploy-vulnerability-assessment-defender-vulnerability-management.md) | Plan 1 and Plan 2 |Enables vulnerability assessment on your Azure and hybrid machines. | [Learn more](monitoring-components.md) about how Defender for Cloud collects data. |
 | [Endpoint protection](integration-defender-for-endpoint.md) | Plan 1 and Plan 2 | Enables protection powered by Microsoft Defender for Endpoint, including automatic agent deployment to your servers, and security data integration with Defender for Cloud | [Learn more](integration-defender-for-endpoint.md) about endpoint protection. |
 | [Agentless scanning for machines](concept-agentless-data-collection.md) | Plan 2 | Scans your machines for installed software and vulnerabilities without relying on agents or impacting machine performance. | [Learn more](concept-agentless-data-collection.md) about agentless scanning for machines. |
-| Azure Policy guest configuration | Plan 2 | Provides a set of built-in policies that help you assess and enforce security configurations for your Azure, AWS, GCP and on-premises machines. | Learn more about [Azure Policy guest configuration](/azure/virtual-machines/extensions/guest-configuration). |
+| [Azure Policy guest configuration](#enable-azure-policy-guest-configuration) | Plan 2 | Provides a set of built-in policies that help you assess and enforce security configurations for your Azure, AWS, GCP and on-premises machines. | Learn more about [Azure Policy guest configuration](/azure/virtual-machines/extensions/guest-configuration). |
 
 When you enable Defender for Servers plan 2, all of these components are toggled to **On** by default.
 
@@ -142,11 +142,9 @@ Learn more about agentless scanning and how to [enable agentless scanning](enabl
 
 ## Enable Azure Policy guest configuration
 
-Defender for Cloud provides a set of built-in policies that help you assess and enforce security configurations for your Azure, AWS, GCP and on-premises machines. These policies are based on industry best practices and can be customized to meet your organization's specific requirements. 
+Defender for Cloud provides a set of built-in policies that help you assess and enforce security configurations in your operating systems for your Azure, AWS, GCP and on-premises machines. These policies are based on industry best practices and can be customized to meet your organization's specific requirements. 
 
 **To enable Azure Policy guest configuration**:
-
-**To configure agentless scanning for machines**:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
