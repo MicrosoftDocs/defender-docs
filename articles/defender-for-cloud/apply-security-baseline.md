@@ -35,7 +35,7 @@ Machine information is collected through the [Azure Policy guest configuration](
 
     - **Azure machines**: In the Defender for Cloud portal, on the recommendations page, search for and select [Guest Configuration extension should be installed on machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/6c99f570-2ce7-46bc-8175-cde013df43bc), and [remediate the recommendation](implement-security-recommendations.md).
 
-    - **Azure VMs only** You must Assign managed Identity in the Defender for Cloud portal. Navigate to the recommendations page, search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755), and [remediate the recommendation](implement-security-recommendations.md).
+    - **Azure VMs only** You must Assign managed Identity in the Defender for Cloud portal. Navigate to the recommendations page. Search for and select [Virtual machines' Guest Configuration extension should be deployed with system-assigned managed identity](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/69133b6b-695a-43eb-a763-221e19556755). Then [remediate the recommendation](implement-security-recommendations.md).
     
     - (Optional) **Azure VMs only**: Enable [Azure Policy guest configuration across your entire subscription](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
 
@@ -45,7 +45,7 @@ Machine information is collected through the [Azure Policy guest configuration](
 
 ## Review and remediate guest configuration recommendations
 
-Once you have onboarded the Azure Policy guest configuration to your subscription, Defender for Cloud will start evaluating your VMs against the security baselines. Based on your environments, if misconfigurations are found, the following recommendations might appear on your the recommendations page:
+Once the Azure Policy guest configuration is onboarded to your subscription, Defender for Cloud starts evaluating your VMs against the security baselines. Based on your environments, if misconfigurations are found, the following recommendations might appear on your recommendations page:
 
 - [Vulnerabilities in security configuration on your Windows machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md)
 - [Vulnerabilities in security configuration on your Linux machines should be remediated (powered by Guest Configuration)](recommendations-reference-compute.md)
@@ -76,7 +76,7 @@ Defender for Cloud uses [Azure Resource Graph](/azure/governance/resource-graph/
 
 You can learn how to [review recommendations in Azure Resource Graph](review-security-recommendations.md#review-recommendations-in-azure-resource-graph).
 
-Here are 2 sample queries you can use:
+Here are two sample queries you can use:
 
 - **Query all unhealthy rules for a specific resource**
 
