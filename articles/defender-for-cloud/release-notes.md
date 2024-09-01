@@ -39,7 +39,7 @@ September 1, 2024
 
 We are introducing the public preview of the Microsoft Defender for Containers extension of coverage to include external registries, beginning with Docker Hub container registries. As part of your organization's Microsoft Cloud Security Posture Management, the extension of coverage to Docker Hub container registries provides the benefits of scanning your Docker Hub container images  using Microsoft Defender Vulnerability Management to identify security threats and mitigate potential security risks.
 
-For more information about this feature, see [Vulnerability Assessment for Docker Hub](agentless-vulnerability-accessment-docker-hub.md)
+For more information about this feature, see [Vulnerability Assessment for Docker Hub](agentless-vulnerability-assessment-docker-hub.md)
 
 ## August 2024
 
