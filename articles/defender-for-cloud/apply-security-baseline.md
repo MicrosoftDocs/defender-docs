@@ -1,10 +1,10 @@
 ---
-title: Review hardening recommendations
+title: Remediate guest configuration recommendations
 description: Learn how Microsoft Defender for Cloud uses the guest configuration to compare your OS hardening with the guidance from Microsoft cloud security benchmark
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
-ms.date: 06/27/2023
+ms.date: 09/01/2024
 ---
 
 # Review hardening recommendations
