@@ -1,19 +1,16 @@
 ---
 title: Remediate guest configuration recommendations
-description: Learn how Microsoft Defender for Cloud uses the guest configuration to compare your OS hardening with the guidance from Microsoft cloud security benchmark
+description: Learn how to enable Azure Policy guest configuration in Microsoft Defender for Cloud to gain the benefits of comparing your OS with the guidance from Microsoft cloud security benchmark
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
 ms.date: 09/01/2024
 ---
 
-# Review hardening recommendations
-
-> [!CAUTION]
-> This article references CentOS, a Linux distribution that is End Of Life (EOL) as of June 30, 2024. Please consider your use and planning accordingly. For more information, see the [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).
+# Remediate guest configuration recommendations
 
 > [!NOTE]
-> As the Log Analytics agent (also known as MMA) is set to retire in [August 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
+> As the Log Analytics agent (also known as MMA) is set to retire in [November 2024](https://azure.microsoft.com/updates/were-retiring-the-log-analytics-agent-in-azure-monitor-on-31-august-2024/), all Defender for Servers features that currently depend on it, including those described on this page, will be available through either [Microsoft Defender for Endpoint integration](integration-defender-for-endpoint.md) or [agentless scanning](concept-agentless-data-collection.md), before the retirement date. For more information about the roadmap for each of the features that are currently rely on Log Analytics Agent, see [this announcement](upcoming-changes.md#defender-for-cloud-plan-and-strategy-for-the-log-analytics-agent-deprecation).
 
 To reduce a machine's attack surface and avoid known risks, it's important to configure the operating system (OS) as securely as possible.
 

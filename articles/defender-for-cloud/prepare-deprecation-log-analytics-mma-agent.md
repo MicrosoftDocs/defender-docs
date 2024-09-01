@@ -8,7 +8,7 @@ ms.date: 08/22/2024
 
 # Prepare for retirement of the Log Analytics agent
 
-The Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA), [is retiring in August 2024](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-strategy-and-plan-towards-log/ba-p/3883341). As a result, the Defender for Servers and Defender for SQL on machines plans in Microsoft Defender for Cloud will be updated, and features that rely on the Log Analytics agent will be redesigned.
+The Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA), [is retiring in November 2024](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-strategy-and-plan-towards-log/ba-p/3883341). As a result, the Defender for Servers and Defender for SQL on machines plans in Microsoft Defender for Cloud will be updated, and features that rely on the Log Analytics agent will be redesigned.
 
 This article summarizes plans for agent retirement.
 

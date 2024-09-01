@@ -2,7 +2,7 @@
 title: Configure Defender for Servers features
 description: Learn how to configure the different monitoring components that are available in Defender for Servers in Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 08/28/2024
+ms.date: 09/01/2024
 ---
 
 # Configure Defender for Servers features
@@ -15,7 +15,7 @@ Microsoft Defender for Cloud's Defender for Servers plans contains components th
 | [Vulnerability assessment for machines](deploy-vulnerability-assessment-defender-vulnerability-management.md) | Plan 1 and Plan 2 |Enables vulnerability assessment on your Azure and hybrid machines. | [Learn more](monitoring-components.md) about how Defender for Cloud collects data. |
 | [Endpoint protection](integration-defender-for-endpoint.md) | Plan 1 and Plan 2 | Enables protection powered by Microsoft Defender for Endpoint, including automatic agent deployment to your servers, and security data integration with Defender for Cloud | [Learn more](integration-defender-for-endpoint.md) about endpoint protection. |
 | [Agentless scanning for machines](concept-agentless-data-collection.md) | Plan 2 | Scans your machines for installed software and vulnerabilities without relying on agents or impacting machine performance. | [Learn more](concept-agentless-data-collection.md) about agentless scanning for machines. |
-| Guest Configuration | Plan 2 | Provides a set of built-in policies that help you assess and enforce security configurations for your Azure, AWS, GCP and on-premises machines. | [Learn more] about Guest Configuration. |
+| Azure Policy guest configuration | Plan 2 | Provides a set of built-in policies that help you assess and enforce security configurations for your Azure, AWS, GCP and on-premises machines. | Learn more about [Azure Policy guest configuration](/azure/virtual-machines/extensions/guest-configuration). |
 
 When you enable Defender for Servers plan 2, all of these components are toggled to **On** by default.
 
@@ -140,11 +140,11 @@ Defender for Cloud has the ability to scan your Azure machines for installed sof
 
 Learn more about agentless scanning and how to [enable agentless scanning](enable-agentless-scanning-vms.md) on other cloud environments.
 
-## Enable Guest Configuration
+## Enable Azure Policy guest configuration
 
 Defender for Cloud provides a set of built-in policies that help you assess and enforce security configurations for your Azure, AWS, GCP and on-premises machines. These policies are based on industry best practices and can be customized to meet your organization's specific requirements. 
 
-**To enable Guest Configuration**:
+**To enable Azure Policy guest configuration**:
 
 **To configure agentless scanning for machines**:
 
@@ -153,16 +153,16 @@ Defender for Cloud provides a set of built-in policies that help you assess and 
 1. Search for and select **Microsoft Defender for Cloud**.
 
 1. Navigate to **Environment settings** > **Your subscription** > **Settings & Monitoring**.
-
-1. Select **Guest Configuration**.
                
-:::image type="content" source="media/configure-servers-coverage/setting-and-monitoring.png" alt-text="Screenshot that shows the location of the settings and monitoring button." lightbox="media/configure-servers-coverage/setting-and-monitoring.png":::
+    :::image type="content" source="media/configure-servers-coverage/setting-and-monitoring.png" alt-text="Screenshot that shows the location of the settings and monitoring button." lightbox="media/configure-servers-coverage/setting-and-monitoring.png":::
             
 1. Toggle the Guest Configuration agent (preview) to **On**.
                
-:::image type="content" source="media/configure-servers-coverage/toggle-guest.png" alt-text="Screenshot that shows the location of the toggle button to enable the Guest Configuration agent." lightbox="media/configure-servers-coverage/toggle-guest.png":::
+    :::image type="content" source="media/configure-servers-coverage/toggle-guest.png" alt-text="Screenshot that shows the location of the toggle button to enable the Guest Configuration agent." lightbox="media/configure-servers-coverage/toggle-guest.png":::
             
 1. Select **Continue**.
+
+Once enabled, Defender for Cloud will automatically evaluate the configuration of your VMs against the predefined security baselines, and identifies any deviations, or misconfigurations that could pose a risk to your environment. Defender for Cloud creates [recommendations](review-security-recommendations.md) for each issue it identifies, and provides guidance on how to [remediate the recommendations](review-security-recommendations.md).
 
 ## Defender for Servers feature status
 
