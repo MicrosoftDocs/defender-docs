@@ -201,6 +201,9 @@ Machine information is collected for assessment using the Log Analytics agent (a
 
 Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing information.
 
+> [!IMPORTANT]
+> Be aware that additional features provided by Azure Policy guest configuration that exist outside of the Defender for Cloud portal aren't included with Defender for Cloud, and are subject to Azure Policy guest configurations pricing policies. For example [remediation](/azure/governance/machine-configuration/concepts/remediation-options) and [custom policies](/azure/governance/machine-configuration/how-to/create-policy-definition). For more information, see the [Azure Policy guest configuration pricing page](https://azure.microsoft.com/pricing/details/azure-policy/?msockid=06fc23a2aac2601229353214abbf61f1).
+
 Recommendations that are provided by the MCSB that aren't part of Windows and Linux compute security baselines, will continue to be part of free foundational CSPM.
 
 ### Install Azure Policy guest configuration
