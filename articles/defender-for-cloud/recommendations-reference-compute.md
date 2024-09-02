@@ -4,7 +4,7 @@ description: This article lists all Microsoft Defender for Cloud compute securit
 author: dcurwin
 ms.service: defender-for-cloud
 ms.topic: reference
-ms.date: 03/13/2024
+ms.date: 09/02/2024
 ms.author: dacurwin
 ms.custom: generated
 ai-usage: ai-assisted
@@ -28,6 +28,18 @@ To learn about actions that you can take in response to these recommendations, s
 
 
 ## Azure compute recommendations
+
+### [System updates should be installed on your machines (powered by Update Center)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2Ff85bf3e0-d513-442e-89c3-1784ad63382b)
+
+**Description**: Your machines are missing system, security, and critical updates. Software updates often include critical patches to security holes. Such holes are frequently exploited in malware attacks so it's vital to keep your software updated. To install all outstanding patches and secure your machines, follow the remediation steps.
+
+**Severity**: Low
+
+### [Machines should be configured to periodically check for missing system updates](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2Fbd876905-5b84-4f73-ab2d-2e7a7c4568d9)
+
+**Description**: To ensure periodic assessments for missing system updates are triggered automatically every 24 hours, the AssessmentMode property should be set to 'AutomaticByPlatform'. Learn more about AssessmentMode property for Windows: https://aka.ms/computevm-windowspatchassessmentmode, for Linux: https://aka.ms/computevm-linuxpatchassessmentmode.
+
+**Severity**: Low
 
 ### [Adaptive application controls for defining safe applications should be enabled on your machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/35f45c95-27cf-4e52-891f-8390d1de5828)
 
