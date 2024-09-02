@@ -37,7 +37,7 @@ These recommendations rely on a native agent embedded in every Azure Virtual Mac
 
 1. Search for and select one of the above recommendations.
 
-1. [Review the recommendation](implement-security-recommendations.md#review-the-recommendation).
+1. [Review the recommendation](review-security-recommendations.md).
 
 1. Select the [Fix option](implement-security-recommendations.md#use-the-fix-option) to perform a one-time installation of any missing updates through the Update Manager portal.
 
