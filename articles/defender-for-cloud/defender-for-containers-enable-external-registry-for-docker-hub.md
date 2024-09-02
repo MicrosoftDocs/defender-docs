@@ -8,7 +8,7 @@ ms.date: 09/25/2024
 
 # How to onboard your Docker Hub container registries to Defender for Cloud Security Posture Management
 
-Microsoft Defender for Containers can connect to your organization's Docker Hub container registries to gain the benefits of scanning your Docker Hub container images for security threats and protect the Docker Hub container registries themselves through Defender for Cloud Security Posture Management.
+Microsoft Defender for Containers connects to your organization's Docker Hub container registries using Defender for Cloud Security Posture Management to assess vulnerabilities in your Docker Hub container images.
 
 To enable Defender for Containers to connect to your Docker Hub containers registry, you need to:
 
@@ -26,7 +26,7 @@ To enable Defender for Containers to connect to your Docker Hub containers regis
 
     :::image type="content" source="media/how-to-setup-docker-hub-external-registry/docker-hub-invite-member.png" alt-text="Select an invite member." lightbox="media/how-to-setup-docker-hub-external-registry/docker-hub-invite-member.png":::
 
-    :::image type="content" source="media/how-to-setup-docker-hub-external-registry/docker-hub-invite-editor-type.png" alt-text="Invite a member." lightbox="media/how-to-setup-docker-hub-external-registry/docker-hub-invite-editor-type.png":::
+    :::image type="content" source="media/how-to-setup-docker-hub-external-registry/docker-hub-invite-editor-type-reduced.png" alt-text="Invite a member." lightbox="media/how-to-setup-docker-hub-external-registry/docker-hub-invite-editor-type.png":::
 
     > [!NOTE]
     > While the Editor privilege allows a user to modify Docker Hub registries, the access token created will allow Defender for Cloud read-only access.
