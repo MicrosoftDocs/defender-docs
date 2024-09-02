@@ -747,6 +747,9 @@
         - name: Review applications and software installed on machines
           displayName: inventory, apps, software inventory, mde, tvm
           href: asset-inventory.md#access-a-software-inventory
+        - name: Enable period system updates
+          displayName: update, system, updates
+          href: enable-periodic-system-updates.md
     - name: Common questions (FAQ)
       items:
         - name: Common questions about Defender for Servers
