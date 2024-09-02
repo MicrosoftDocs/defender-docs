@@ -1,10 +1,11 @@
 ---
 title: Enable period system updates
-description: Learn how to use actual traffic patterns to harden your network security groups (NSG) rules and further improve your security posture.
+description: Learn how to enable system updates on your Azure Arc-enabled machines and Azure VMs to keep them secure and healthy.
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
 ms.date: 09/02/2024
+#customer-intent: As a Defender for Servers user, I want to enable system updates on my Azure Arc-enabled machines and Azure VMs to keep them secure and healthy.
 ---
 
 # Enable period system updates
@@ -17,16 +18,16 @@ System updates are crucial for keeping the security and health of your Azure Arc
 
 - On-premises machines must be [connected to Azure Arc](quickstart-onboard-machines.md).
 
-- Azure Arc enabled machines must be connected to a subscription, or connector that has Defender for Servers Plan 2 enabled. If you enable periodic assessments on a machine that isn't connected to a subscription or connector with Defender for Servers Plan 2 Enabled, it will be subject to [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/).
+- Azure Arc enabled machines must be connected to a subscription, or connector that has Defender for Servers Plan 2 enabled. If you enable periodic system updates on a machine that isn't connected to a subscription, or to a connector with Defender for Servers Plan 2 enabled, the machine is subject to [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/).
 
 ## Enable system updates on machines
 
-Defender for Cloud automatically assess the security of your machines and provides recommendations to ensure the latest security and critical OS updates are installed on your machines. If your machines are not up to date, Defender for Cloud generates the following recommendations to ensure the latest security and critical OS updates are installed on your machines:
+Defender for Cloud automatically assesses the security of your machines and provides recommendations to ensure the latest security and critical OS updates are installed on your machines. If your machines aren't up to date, Defender for Cloud generates the following recommendations to ensure the latest security and critical OS updates are installed on your machines:
 
 - System updates should be installed on your machines (powered by Azure Update Manager)
 - Machines should be configured to periodically check for missing system updates
 
-These recommendations rely on a native agent embedded in every Azure VM and Azure Arc machines instead of an installed agent.
+These recommendations rely on a native agent embedded in every Azure Virtual Machine (VM) and Azure Arc machines instead of an installed agent.
 
 **To enable periodic system updates on your machines**:
 
