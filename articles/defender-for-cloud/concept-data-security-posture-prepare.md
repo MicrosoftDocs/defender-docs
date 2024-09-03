@@ -5,7 +5,7 @@ author: dcurwin
 ms.author: dacurwin
 ms.service: defender-for-cloud
 ms.topic: conceptual
-ms.date: 03/04/2024
+ms.date: 09/03/2024
 ms.custom: references_regions
 ---
 
@@ -63,6 +63,7 @@ For object storage:
 - After files are updated in the discovered resources, data is refreshed within eight days.
 - A new Azure storage account that's added to an already discovered subscription is discovered within 24 hours or less.
 - A new AWS S3 bucket or GCP storage bucket that's added to an already discovered AWS account or Google account is discovered within 48 hours or less.
+- Sensitive data discovery for storage is conducted locally within your region. This ensures that your data doesn't leave your region. Only resource metadata, such as files, blobs, buckets names, detected sensitivity labels, and the names of identified Sensitive Information Types (SITs), are transferred to Defender for Cloud.
 
 For databases:
 
