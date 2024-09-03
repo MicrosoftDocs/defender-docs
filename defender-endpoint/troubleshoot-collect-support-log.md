@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: edr
 search.appverid: met150
-ms.date: 08/13/2024
+ms.date: 09/03/2024
 ---
 
 # Collect support logs in Microsoft Defender for Endpoint using live response
@@ -51,8 +51,7 @@ This article provides instructions on how to run the tool via Live Response on W
 
    :::image type="content" source="media/analyzer-file.png" alt-text="The choose file button-2" lightbox="media/analyzer-file.png":::
 
-> [!NOTE]
-> Do the same for the `MDEClientAnalyzerPreview.zip` file.
+   Repeat this step for the `MDEClientAnalyzerPreview.zip` file.
 
 6. While still in the LiveResponse session, use the following commands to run the analyzer and collect the resulting file.
 
