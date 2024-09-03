@@ -322,6 +322,8 @@ Dependencies: Microsoft Defender Antivirus
 
 ### Block credential stealing from the Windows local security authority subsystem
 
+> [!NOTE]
+> If you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) enabled and [Credential Guard](/windows/security/identity-protection/credential-guard) enabled this ASR rule is not required. 
 This rule helps prevent credential stealing by locking down Local Security Authority Subsystem Service (LSASS).
 
 LSASS authenticates users who sign in on a Windows computer. Microsoft Defender Credential Guard in Windows normally prevents attempts to extract credentials from LSASS. Some organizations can't enable Credential Guard on all of their computers because of compatibility issues with custom smartcard drivers or other programs that load into the Local Security Authority (LSA). In these cases, attackers can use tools like Mimikatz to scrape cleartext passwords and NTLM hashes from LSASS.
