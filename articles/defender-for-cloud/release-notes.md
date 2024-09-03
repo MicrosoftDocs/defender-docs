@@ -32,7 +32,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date        | Category | Update                     |
 | ----------- | -------- | -------------------------- |
 | September 1 | GA       | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
-| September 1 | GA | Enable system updates on your machines |
+| September 3 | GA | [Enable system updates on your machines](#enable-system-updates-on-your-machines) |
+| September 3 | GA | [ServiceNow's integration now includes Configuration Compliance module](#servicenows-integration-now-includes-configuration-compliance-module) |
 
 ### Azure Policy guest configuration is now generally available (GA)
 
@@ -44,9 +45,17 @@ Learn how to [enable Azure Policy guest configuration on your environment](confi
 
 ### Enable system updates on your machines
 
-September 1, 2024
+September 3, 2024
 
 You can now [enable system updates on your machines](tutorial-enable-servers-plan.md#enable-system-updates). This feature allows you to enable system updates on multiple servers at once, saving time and effort.
+
+### ServiceNow's integration now includes Configuration Compliance module
+
+September 3, 2024
+
+Defender for Cloud's CSPM plan's integration with ServiceNow now includes ServiceNow's Configuration Compliance module. This feature allows you to identify, prioritize, and remediate configuration issues in your cloud assets while reducing security risks and improving your overall compliance posture through automated workflows and real-time insights.
+
+Learn more about [ServiceNow's integration with Defender for Cloud](integration-servicenow.md).
 
 ## August 2024
 
