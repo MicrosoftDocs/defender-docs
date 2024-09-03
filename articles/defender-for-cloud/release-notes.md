@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 08/01/2024
+ms.date: 09/03/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -27,11 +27,20 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
-## August 2024
+## September 2024
 
-|Date | Category | Update|
-|--|--|--|
+| Date        | Category | Update                     |
+| ----------- | -------- | -------------------------- |
+| September 1 | GA       | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
 | September 1 | GA | Enable system updates on your machines |
+
+### Azure Policy guest configuration is now generally available (GA)
+
+September 1, 2024
+
+Defender for Server's Azure Policy guest configuration is now generally available (GA) for all multicloud Defender for Servers Plan 2 customers. Guest Configuration provides a unified experience for managing security baselines across your environment. It enables you to assess and enforce security configurations on your servers, including Windows and Linux machines, Azure VMs, AWS EC2, and GCP instances.
+
+Learn how to [enable Azure Policy guest configuration on your environment](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
 
 ### Enable system updates on your machines
 
@@ -43,10 +52,27 @@ You can now [enable system updates on your machines](tutorial-enable-servers-pla
 
 |Date | Category | Update|
 |--|--|--|
+| August 28 | Preview | [New version of File Integrity Monitoring based on Microsoft Defender for Endpoint](#new-version-of-file-integrity-monitoring-based-on-microsoft-defender-for-endpoint) |
 | August 22 | Upcoming deprecation | [Retirement of Defender for Cloud alert integration with Azure WAF alerts](#retirement-of-defender-for-cloud-alert-integration-with-azure-waf-alerts) |
 | August 1 | GA | [Enable Microsoft Defender for SQL servers on machines at scale](#enable-microsoft-defender-for-sql-servers-on-machines-at-scale) |
 
-## Retirement of Defender for Cloud alert integration with Azure WAF alerts
+### New version of File Integrity Monitoring based on Microsoft Defender for Endpoint
+
+August 28, 2024
+
+The new version of File Integrity Monitoring based on Microsoft Defender for Endpoint is now in public preview. It's part of Defender for Servers Plan 2. It enables you to:
+
+- Meet compliance requirements by monitoring critical files and registries in real-time and auditing the changes.
+- Identify potential security issues by detecting suspicious file content changes.
+
+As part of this release, the [FIM experience over AMA](file-integrity-monitoring-enable-ama.md) will no longer be available in the Defender for Cloud portal.
+The [FIM experience over MMA](file-integrity-monitoring-enable-log-analytics.md) will remain supported until the end of November 2024.
+In the beginning of September, an in-product experience will be released which allows you to migrate your FIM configuration over MMA to the new FIM over Defender for Endpoint version.
+
+For information on how to enable FIM over Defender for Endpoint, see [File Integrity Monitoring using Microsoft Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md).
+For information on how to migrate from previous versions, see [Migrate File Integrity Monitoring from previous versions](migrate-file-integrity-monitoring.md).
+
+### Retirement of Defender for Cloud alert integration with Azure WAF alerts
 
 August 22, 2024
 
@@ -58,7 +84,7 @@ Defender for Cloud alert [integration](other-threat-protections.md#display-azure
 
 August 1, 2024
 
-You can now enable Microsoft Defender for SQL servers on machines at scale. This feature allows you to enable Microsoft Defender for SQL on multiple servers at once, saving time and effort. 
+You can now enable Microsoft Defender for SQL servers on machines at scale. This feature allows you to enable Microsoft Defender for SQL on multiple servers at once, saving time and effort.
 
 Learn how to [enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
 
@@ -95,7 +121,7 @@ With this general availability release, the list of [supported solutions](/azure
 
 July 31, 2024
 
-**Estimated date for change: August 31, 2024**
+**Estimated date for change**: August 31, 2024
 
 Defender for Server's adaptive network hardening is being deprecated.
 
@@ -633,7 +659,7 @@ Azure Kubernetes Service (AKS) threat detection features in Defender for Contain
 
 February 20, 2024
 
-[A new version](/azure/aks/supported-kubernetes-versions#aks-kubernetes-release-calendar) of the [Defender sensor for Defender for Containers](tutorial-enable-containers-azure.md#deploy-the-defender-sensor-in-azure) is available. It includes performance and security improvements, support for both AMD64 and ARM64 arch nodes (Linux only), and uses [Inspektor Gadget](https://www.inspektor-gadget.io/) as the process collection agent instead of Sysdig. The new version is only supported on Linux kernel versions 5.4 and higher, so if you have older versions of the Linux kernel, you need to upgrade. Support for ARM64 is only available from AKS V1.29 and above. For more information, see [Supported host operating systems](support-matrix-defender-for-containers.md#supported-host-operating-systems).
+[A new version](/azure/aks/supported-kubernetes-versions#aks-kubernetes-release-calendar) of the [Defender sensor for Defender for Containers](tutorial-enable-containers-azure.md#deploy-the-defender-sensor-in-azure) is available. It includes performance and security improvements, support for both AMD64 and Arm64 arch nodes (Linux only), and uses [Inspektor Gadget](https://www.inspektor-gadget.io/) as the process collection agent instead of Sysdig. The new version is only supported on Linux kernel versions 5.4 and higher, so if you have older versions of the Linux kernel, you need to upgrade. Support for Arm64 is only available from AKS V1.29 and above. For more information, see [Supported host operating systems](support-matrix-defender-for-containers.md#supported-host-operating-systems).
 
 ### Update: Open Container Initiative (OCI) image format specification support
 
