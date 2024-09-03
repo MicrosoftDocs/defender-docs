@@ -52,7 +52,7 @@ Microsoft recommends using [Privileged Identity Management](/azure/active-direct
 
 Defender for Endpoint supports two ways to manage permissions:
 
-- **Basic permissions management**: Set permissions to either full access or read-only. Users with Global Administrator or Security Administrator roles in Microsoft Entra ID have full access. The Security reader role has read-only access and does not grant access to view machines/device inventory.
+- **Basic permissions management**: Set permissions to either full access or read-only. Users with a role, such as Security Administrator in Microsoft Entra ID have full access. The Security reader role has read-only access and does not grant access to view machines/device inventory.
 
 - **Role-based access control (RBAC)**: Set granular permissions by defining roles, assigning Microsoft Entra user groups to the roles, and granting the user groups access to device groups. For more information. see [Manage portal access using role-based access control](rbac.md).
 

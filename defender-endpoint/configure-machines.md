@@ -14,7 +14,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 06/25/2024
+ms.date: 08/29/2024
 ---
 
 # Ensure your devices are configured properly
@@ -63,7 +63,7 @@ Before you can ensure your devices are configured properly, enroll them to Intun
 
 ## Obtain required permissions
 
-By default, only users who have been assigned the Global Administrator or the Intune Service Administrator role on Microsoft Entra ID can manage and assign the device configuration profiles needed for onboarding devices and deploying the security baseline.
+By default, only users who have been assigned an appropriate role, such as the Intune Service Administrator role in Microsoft Entra ID, can manage and assign the device configuration profiles needed for onboarding devices and deploying the security baseline.
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.

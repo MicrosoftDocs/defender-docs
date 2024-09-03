@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 08/26/2024
+ms.date: 09/03/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -63,7 +63,12 @@ Understand the following prerequisites before you create indicators for files:
   
 - To start blocking files, [turn on the "block or allow" feature](advanced-features.md) in Settings (in the [Microsoft Defender portal](https://security.microsoft.com), go to **Settings** > **Endpoints** > **General** > **Advanced features** > **Allow or block file**).
 
-This feature is designed to prevent suspected malware (or potentially malicious files) from being downloaded from the web. It currently supports portable executable (PE) files, including `.exe` and `.dll` files. Coverage is extended over time.
+This feature is designed to prevent suspected malware (or potentially malicious files) from being downloaded from the web. 
+
+> [!NOTE]
+> File indicators support portable executable (PE) files, including `.exe` and `.dll` files only.
+
+
 
 > [!IMPORTANT]
 > In Defender for Endpoint Plan 1 and Defender for Business, you can create an indicator to block or allow a file. In Defender for Business, your indicator is applied across your environment and cannot be scoped to specific devices.
