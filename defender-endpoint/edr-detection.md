@@ -77,7 +77,7 @@ chmod +x ./mde_linux_edr_diy.sh
  ./mde_linux_edr_diy.sh
 ```
 
-5. After a few minutes, a detection should be raised in Microsoft Defender XDR. Look at the alert details, machine timeline, and perform    your typical investigation steps.
+5. After a few minutes, a detection should be raised in Microsoft Defender XDR. Look at the alert details, machine timeline, and perform your typical investigation steps.
  
 ### macOS
 
