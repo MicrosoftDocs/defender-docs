@@ -4,7 +4,7 @@ description: Learn about Device control policies in Defender for Endpoint
 author: siosulli
 ms.author: siosulli
 manager: deniseb
-ms.date: 06/04/2024
+ms.date: 08/27/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
@@ -194,9 +194,9 @@ Device control policies define access (called an entry) for a set of devices. En
 
 | Entry setting | Options |
 |---|---|
-| AccessMask | Applies the action only if the access operations match the access mask -  The access mask is the bit-wise OR of the access values:<br><br>  1 - Device Read<br>2 - Device Write<br>4 - Device Execute<br>8 - File Read<br>16 - File Write<br>32 - File Execute<br>64 - Print<br><br>For example:<br>Device Read, Write, and Execute = 7 (1+2+4)<br>Device Read, Disk Read = 9 (1+8)<br>
+| AccessMask | Applies the action only if the access operations match the access mask -  The access mask is the bit-wise OR of the access values:<br><br>  1 - Device Read<br>2 - Device Write<br>4 - Device Execute<br>8 - File Read<br>16 - File Write<br>32 - File Execute<br>64 - Print<br><br>For example:<br>Device Read, Write, and Execute = 7 (1+2+4)<br>Device Read, Disk Read = 9 (1+8)<br>|
 | Action | Allow <br/> Deny <br/> AuditAllow <br/> AuditDeny |
-| Notification | None (default) <br/> An event is generated <br/> The user receives notification <br/> File evidence is captured |
+| Notification | None (default) <br/> An event is generated <br/> The user receives notification <br/> |
 
 If device control is configured, and a user attempts to use a device that's not allowed, the user gets a notification that contains the name of the device control policy and the name of the device. The notification appears once every hour after initial access is denied.
 
@@ -254,7 +254,7 @@ The following table provides more context for the XML code snippet:
 |---|---|---|
 | `Entry Id` | GUID, a unique ID, represents the entry and is used in reporting and troubleshooting. | You can generate the GUID by using PowerShell. |
 | `Type` | Defines the action for the removable storage groups in `IncludedIDList`. <br/>- `Allow` <br/>- `Deny` <br/>- `AuditAllowed`: Defines notification and event when access is allowed <br/>- `AuditDenied`: Defines notification and event when access is denied; works together with a `Deny` entry. <br/><br/>When there are conflict types for the same media, the system applies the first one in the policy. An example of a conflict type is `Allow` and `Deny`. | - `Allow` <br/>- `Deny` <br/>- `AuditAllowed` <br/>- `AuditDenied` |
-| `Option` | If type is `Allow` | - `0`: nothing <br/>- `4`: disable `AuditAllowed` and `AuditDenied` for this entry. If `Allow` occurs and the `AuditAllowed` setting is configured, events aren't generated.<br/>- `8`: create a copy of the file as evidence, and generate a `RemovableStorageFileEvent` event. This setting must be used together with the **Set location for a copy of the file** setting in [Intune](device-control-deploy-manage-intune.md) or [Group Policy](device-control-deploy-manage-gpo.md). |
+| `Option` | If type is `Allow` | - `0`: nothing <br/>- `4`: disable `AuditAllowed` and `AuditDenied` for this entry. If `Allow` occurs and the `AuditAllowed` setting is configured, events aren't generated. |
 | `Option` | If type is `Deny` | - `0`: nothing <br/>- `4`: disable `AuditDenied` for this Entry. If Block occurs and the `AuditDenied` is setting configured, the system doesn't show notifications. |
 | `Option` | If type is `AuditAllowed` | - `0`: nothing<br/>- `1`: nothing <br/>- `2`: send event |
 | `Option` | If type is `AuditDenied` | - `0`: nothing <br/>- `1`: show notification <br/>- `2`: send event <br/>- `3`: show notification and send event |

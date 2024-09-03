@@ -27,7 +27,7 @@ Before you start, you need:
 
 - A Microsoft 365 E5/ Defender for Endpoint Plan 2/ E5 security license.
 
-- Microsoft Defender for Endpoint agents deployed in your environment. For more information, see [onboard Microsoft Defender for Endpoint](/defender-endpoint/onboarding)
+- Microsoft Defender for Endpoint agents deployed in your environment. For more information, see [onboard Microsoft Defender for Endpoint](/defender-endpoint/onboarding).
 
 ## Prerequisites for setting up a site
 
