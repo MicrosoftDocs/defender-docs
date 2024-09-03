@@ -57,25 +57,28 @@ Run an EDR detection test to verify that the device is properly onboarded and re
 
 
 ```bash
-curl -o ~/Downloads/MDE Linux DIY.zip https://aka.ms/MDE-Linux-EDR-DIY
+curl -o ~/Downloads/MDE Linux DIY.zip -L https://aka.ms/MDE-Linux-EDR-DIY
 ```
 
-1. Extract the zip 
+2. Extract the zip 
 
 ```bash
 unzip ~/Downloads/MDE-Linux-EDR-DIY.zip
 ```
 
-1. And run the following command: 
+3. And run the following command to give the script executable permission: 
 
 ```bash
-./mde_linux_edr_diy.sh
+chmod +x ./mde_linux_edr_diy.sh
 ```
 
-After a few minutes, a detection should be raised in Microsoft Defender XDR.
+4. Run the following command to execute the script:
+```bash
+ ./mde_linux_edr_diy.sh
+```
 
-3. Look at the alert details, machine timeline, and perform your typical investigation steps.
-
+5. After a few minutes, a detection should be raised in Microsoft Defender XDR. Look at the alert details, machine timeline, and perform    your typical investigation steps.
+ 
 ### macOS
 
 1. In your browser, Microsoft Edge for Mac or Safari, download *MDATP MacOS DIY.zip* from [https://aka.ms/mdatpmacosdiy](https://aka.ms/mdatpmacosdiy) and extract.
