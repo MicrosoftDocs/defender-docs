@@ -51,9 +51,13 @@ This article provides instructions on how to run the tool via Live Response on W
 
    :::image type="content" source="media/analyzer-file.png" alt-text="The choose file button-2" lightbox="media/analyzer-file.png":::
 
+> [!NOTE]
+> Do the same for the `MDEClientAnalyzerPreview.zip` file.
+
 6. While still in the LiveResponse session, use the following commands to run the analyzer and collect the resulting file.
 
    ```console
+   Putfile MDEClientAnalyzerPreview.zip
    Run MDELiveAnalyzer.ps1
    GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDECA\MDEClientAnalyzerResult.zip"
    ```
