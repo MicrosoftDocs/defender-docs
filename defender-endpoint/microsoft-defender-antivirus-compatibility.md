@@ -162,7 +162,12 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 
 ### Notes about protection states
 
-1. In general, when Microsoft Defender Antivirus is in passive mode, real-time protection doesn't provide any blocking or enforcement, even though it's enabled and in passive mode.
+1. When Microsoft Defender Antivirus is in passive mode, real-time protection behaves the following way:
+
+|Microsoft Defender Antivirus in passive mode| Real-time protection|
+| -------- | -------- |
+|Microsoft Endpoint Data Loss Prevention (endpoint DLP) is disabled|Disabled.  Doesn't provide any antivirus real-time protection blocking or enforcement.|
+|Microsoft Endpoint Data Loss Prevention (endpoint DLP) is enabled|Enabled for DLP specific functionalities.  Doesn't provide any antivirus real-time protection blocking or enforcement.  Please make sure to add Microsoft Defender Antivirus and Microsoft Defender for Endpoint binaries to the exclusion list of the 3rd party antivirus and/or edr.|
 
 2. When Microsoft Defender Antivirus is in passive mode, scans aren't scheduled. If scans *are* scheduled in your configuration, the schedule is ignored. Unless:
 
@@ -289,6 +294,7 @@ You might also use [limited periodic scanning](limited-periodic-scanning-microso
 
 - [Microsoft Defender Antivirus on Windows clients](microsoft-defender-antivirus-windows.md)
 - [EDR in block mode](edr-in-block-mode.md)
+
 - [Learn about Endpoint data loss prevention](/microsoft-365/compliance/endpoint-dlp-learn-about)
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
 
