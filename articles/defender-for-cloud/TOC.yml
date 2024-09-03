@@ -726,7 +726,7 @@
         - name: Remediate security baseline recommendations (Defender Vulnerability Management)
           displayName: security, baseline, remediate, mdvm, vulnerability, assessment, va
           href: remediate-security-baseline.md
-        - name: Review hardening recommendations
+        - name: Remediate guest configuration recommendations
           displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
           href: apply-security-baseline.md
         - name: Review Docker host hardening recommendations
