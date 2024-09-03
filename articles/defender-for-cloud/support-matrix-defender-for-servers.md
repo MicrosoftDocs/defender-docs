@@ -5,7 +5,7 @@ ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: dcurwin
 ms.author: dacurwin
-ms.date: 09/02/2024
+ms.date: 09/03/2024
 ---
 
 # Defender for Servers support
@@ -53,7 +53,7 @@ This table summarizes Azure cloud support for Defender for Servers features.
 | [Agentless secret scanning](secrets-scanning.md) | GA | NA | NA |
 | [Agentless malware scanning](agentless-malware-scanning.md) | Preview | NA | NA |
 | [Endpoint detection and response](endpoint-detection-response.md) | Preview | NA | NA |
-| [Periodic system updates](enable-periodic-system-updates.md) | GA | NA | NA |
+| [System updates and patches](enable-periodic-system-updates.md) | GA | NA | NA |
 
 ## Windows machine support
 
@@ -79,7 +79,7 @@ The following table shows feature support for Windows machines in Azure, Azure A
 | Disk encryption assessment | ✔</br>([supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) | - | No |
 | Third-party vulnerability assessment (BYOL) | ✔ | - | No |
 | [Network security assessment](protect-network-resources.md) | ✔ | - | No |
-| [Periodic system updates](enable-periodic-system-updates.md) | ✔ | ✔ | Yes (Plan 2)|
+| [System updates and patches](enable-periodic-system-updates.md) | ✔ | ✔ | Yes (Plan 2)|
 
 ## Linux machine support
 
@@ -105,7 +105,7 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | Disk encryption assessment | ✔</br> [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) | - | No |
 | Third-party vulnerability assessment (BYOL) | ✔ | - | No |
 | [Network security assessment](protect-network-resources.md) | ✔ | - | No |
-| [Periodic system updates](enable-periodic-system-updates.md) | ✔ | ✔ | Yes (Plan 2)|
+| [System updates and patches](enable-periodic-system-updates.md) | ✔ | ✔ | Yes (Plan 2)|
 
 ## Multicloud machines
 

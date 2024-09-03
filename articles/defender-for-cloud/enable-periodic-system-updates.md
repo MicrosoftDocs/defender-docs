@@ -1,16 +1,16 @@
 ---
-title: Enable period system updates
+title: Enable system updates and patches
 description: Learn how to enable system updates on your Azure Arc-enabled machines and Azure VMs to keep them secure and healthy.
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 09/02/2024
+ms.date: 09/03/2024
 #customer-intent: As a Defender for Servers user, I want to enable system updates on my Azure Arc-enabled machines and Azure VMs to keep them secure and healthy.
 ---
 
-# Enable period system updates
+# Enable system updates and patches
 
-System updates are crucial for keeping the security and health of your Azure Arc-enabled machines and Azure VMs. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers. 
+System updates and patches are crucial for keeping the security and health of your Azure Arc-enabled machines and Azure VMs. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers. 
 
 ## Prerequisites
 
@@ -20,16 +20,18 @@ System updates are crucial for keeping the security and health of your Azure Arc
 
 - Azure Arc enabled machines must be connected to a subscription, or connector that has Defender for Servers Plan 2 enabled. If you enable periodic system updates on a machine that isn't connected to a subscription, or to a connector with Defender for Servers Plan 2 enabled, the machine is subject to [Azure Update Manager pricing](https://azure.microsoft.com/pricing/details/azure-update-management-center/).
 
-## Enable system updates on machines
+- [Enable periodic assessment](/azure/update-manager/assessment-options).
+
+## Enable system updates and patches on machines
 
 Defender for Cloud automatically assesses the security of your machines and provides recommendations to ensure the latest security and critical OS updates are installed on your machines. If your machines aren't up to date, Defender for Cloud generates the following recommendations to ensure the latest security and critical OS updates are installed on your machines:
 
-- System updates should be installed on your machines (powered by Azure Update Manager)
-- Machines should be configured to periodically check for missing system updates
+- [System updates should be installed on your machines (powered by Azure Update Manager)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e1145ab1-eb4f-43d8-911b-36ddf771d13f)
+- [Machines should be configured to periodically check for missing system updates](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2Fbd876905-5b84-4f73-ab2d-2e7a7c4568d9)
 
 These recommendations rely on a native agent embedded in every Azure Virtual Machine (VM) and Azure Arc machines instead of an installed agent.
 
-**To enable periodic system updates on your machines**:
+**To system updates and patches on your machines**:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
