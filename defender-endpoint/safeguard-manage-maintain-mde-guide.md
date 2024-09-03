@@ -18,47 +18,67 @@ ms.collection:
 
 # Use Safe Deployment Practices and Defender for Endpoint capabilities to safeguard and manage your environment
 
-This guide helps understand how to use safe deployment practices and Defender for Endpoint capabilities to safeguard and manage your environment.
+This article helps you understand how to use safe deployment practices and Defender for Endpoint capabilities to safeguard and manage your environment and maintain productivity.
 
-- Recommendations and information on safe deployment practices
-- Guidance on safe configurations including use of exclusions
+## Safe deployment practices
 
-## Step 1: Safe deployment practices
+Updates to Microsoft Defender for Endpoint are a combination of monthly and daily updates.  Monthly updates are software/drivers, and daily updates are, for example, antimalware definitions and detection logic.
+
+Microsoft follows safe deployment practices to minimize the risk of these updates having an unexpected impact, but customers can create their own additional safe deployment practices by configuring gradual rollout controls.
+
+### Monthly Update (software and drivers) safe deployment practices
+
+**Microsoft**
+
+- Microsoft undertakes extensive pre-release validations for monthly rollouts (including running driver code under driver verifier and other tools that can catch subtle bugs). 
+- We ship updates post all the certification and validation to multiple internal rings of devices and watch for Telemetry/False positives/ Crashes etc from them before releasing to the world in "waves". 
+- We continue to monitor post release and act quickly through our cloud to remotely solve issues if they emerge - as well as quickly revert and reissue update packages.
+- Mature infrastructure (Watson) for tracking product crashes (both in user-mode and kernel-mode).
+
+**Customer**
+
+- Gradual rollout - enterprises can control what ring each of their device comes into (place lower-valued assets in earlier rings and higher-valued assets in later rings)
+- Windows Update - security component updates can also arrive in the form of monthly "LCUs" - cumulative update packages. Patch management software and practices apply.
+- Rollback controls - as a last resort, it's possible to revert or reset components to a last known good state. As this can introduce new challenges if applied across a large group of devices, caution is advised.
+
+
+### Daily security intelligence and logic updates (Content) safe deployment practices
+
+**Microsoft** 
+
+- We ship definitions post all the certification and validation to multiple internal rings of devices and watch for Telemetry/False positives/ Crashes etc from them before releasing to the world in "waves". 
+- We continue to monitor post release and act quickly through our cloud to solve issues if they emerge.
+
+**Customer**
+
+- Customers can control security intelligence (definition) updates with their own Safe Deployment Policies by staging updates on file-shares or through patch management solutions.
+- For critical systems, it's recommended to set up practices where daily releases updates are applied at a lower frequency, or to have these updates applied to monitored test environments first. 
+- Rollback controls - as a last resort, it's possible to revert or reset components to a last known good state. As this can introduce new challenges if applied across a large group of devices, caution is advised.
+
+## Related content
+
+- [microsoft-defender-antivirus-ring-deployment](microsoft-defender-antivirus-ring-deployment.md)
+- [manage-protection-updates-microsoft-defender-antivirus](manage-protection-updates-microsoft-defender-antivirus)
+- [microsoft-defender-antivirus-updates](microsoft-defender-antivirus-updates)
+- [mac-updates](mac-updates)
+- [linux-support-offline-security-intelligence-update](linux-support-offline-security-intelligence-update)
+- [Microsoft Defender for Endpoint’s Safe Deployment Practices](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-for-endpoint-s-safe-deployment-practices/ba-p/4220342)
 
 ✅ **Task: Update the device, the OS, and apps to help keep your data secure**. Create a plan on how and when updates are installed. 
 
 ✅ **Task: Create a plan to roll out updates**
 
-## Step 2: Enable capabilities 
+## Enable capabilities
 
 ✅ **Task: Configure Antivirus (AV) and malware protection**
 
 ✅ **Task: Configure baseline policies**
 
+## Manage behavior safely in your organization with exclusions, indicators, and other techniques
+
 ✅ **Task: Enable/disable the necessary capabilities for your organization**
 
 ✅ **Task: Plan how to manage exclusions**
-
-## Step 3: Stay up to date 
-
-## Step 4: Establishing Security Operations
-
-[Security operations guide](mde-sec-ops-guide.md)
-
-## Step 4: Troubleshooting guidance
-
-Include your IT support and helpdesk in the early stages of Intune deployment planning and pilot efforts. Early involvement exposes your support staff to Intune, and they gain knowledge and experience in identifying and resolving issues more effectively. It also prepares them for supporting the organization's full production rollout. Knowledgeable help desk and support teams also help users adopt these changes.
-
-✅ **Task: Train your support teams**
-
-Validate the end-user experience with success metrics in your deployment plan. Some considerations:
-
-✅ **Determine who will support end users**. Organizations can have different tiers or levels (1-3). For example, tier 1 and 2 might be part of the support team. Tier 3 includes members of the MDM team responsible for the Intune deployment.
-
-
-
-
-
 
 Some considerations:
 
@@ -113,6 +133,7 @@ Some considerations:
 
   For more information on the different enrollment methods for each platform, go to [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 
+
 ## Step 4: Troubleshooting guidance
 
 Include your IT support and helpdesk in the early stages of Intune deployment planning and pilot efforts. Early involvement exposes your support staff to Intune, and they gain knowledge and experience in identifying and resolving issues more effectively. It also prepares them for supporting the organization's full production rollout. Knowledgeable help desk and support teams also help users adopt these changes.
@@ -129,18 +150,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
     - If different users or groups are hesitant about enrolling their personal devices, consider a Teams calls to answer common questions.
     - If users are having the same issues enrolling organization-owned devices, then host an in-person event to help users enroll the devices.
 
-- **Create a help desk workflow, and constantly communicate support issues**, trends, and other important information to all tiers in your support team. For example, hold daily or weekly Teams meetings so all tiers are aware of trends, patterns, and can get help.
 
-  The following example shows how Contoso implements their IT support or helpdesk workflows:
+## Next Steps
 
-  1. End-user contacts IT support or helpdesk tier 1 with an enrollment issue.
-  2. IT support or helpdesk tier 1 can't determine the root cause and escalates to tier 2.
-  3. IT support or helpdesk tier 2 investigates. Tier 2 can't resolve the issue and escalates to tier 3, and provides additional information to help with the issue.
-  4. IT support or helpdesk tier 3 investigates, determines the root cause, and communicates the resolution to tier 2 and 1.
-  5. IT support/helpdesk tier 1 then contacts the users, and resolves the issue.
-
-  This approach, especially in early stages of the Intune rollout, adds many benefits, including:
-
-  - Help learn the technology
-  - Quickly identify issues and resolution
-  - Improve the overall user experience
+- [Security operations guide](mde-sec-ops-guide.md)
