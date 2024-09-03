@@ -55,14 +55,17 @@ Microsoft follows safe deployment practices to minimize the risk of these update
 - For critical systems, it's recommended to set up practices where daily releases updates are applied at a lower frequency, or to have these updates applied to monitored test environments first. 
 - Rollback controls - as a last resort, it's possible to revert or reset components to a last known good state. As this can introduce new challenges if applied across a large group of devices, caution is advised.
 
-## Related content
 
-- [microsoft-defender-antivirus-ring-deployment](microsoft-defender-antivirus-ring-deployment.md)
-- [manage-protection-updates-microsoft-defender-antivirus](manage-protection-updates-microsoft-defender-antivirus)
-- [microsoft-defender-antivirus-updates](microsoft-defender-antivirus-updates)
-- [mac-updates](mac-updates)
-- [linux-support-offline-security-intelligence-update](linux-support-offline-security-intelligence-update)
-- [Microsoft Defender for Endpoint’s Safe Deployment Practices](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-for-endpoint-s-safe-deployment-practices/ba-p/4220342)
+
+> [!NOTE]
+> The following articles provide more details Information on Defender for Endpoint updates and safe deployment practices 
+>
+> - [microsoft-defender-antivirus-ring-deployment](microsoft-defender-antivirus-ring-deployment.md)
+> - [manage-protection-updates-microsoft-defender-antivirus](manage-protection-updates-microsoft-defender-antivirus)
+> - [microsoft-defender-antivirus-updates](microsoft-defender-antivirus-updates)
+> - [mac-updates](mac-updates)
+> - [linux-support-offline-security-intelligence-update](linux-support-offline-security-intelligence-update)
+> - [Microsoft Defender for Endpoint’s Safe Deployment Practices](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/microsoft-defender-for-endpoint-s-safe-deployment-practices/ba-p/4220342)
 
 ✅ **Task: Update the device, the OS, and apps to help keep your data secure**. Create a plan on how and when updates are installed. 
 
