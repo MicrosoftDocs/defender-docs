@@ -1,7 +1,7 @@
 ---
-title: Manage and maintain security posture with Defender for Endpoint
-description: Plan, design, implement, adopt, and manage updates for Micrsoft Defender for Endpoint. Get guidance and advice to determine goals, use-case scenarios and requirements, and create rollout and communication plans, support, testing, and validation plans.
-keywords: mde planning and configuration, intune deployment planning, design and implementation guide, intune deployment project plan
+title: Use Safe Deployment Practices and Defender for Endpoint capabilities to safeguard and manage your environment
+description: Plan, design, implement, adopt, and manage updates for Micrsoft Defender for Endpoint. 
+keywords: mde safe deployment practices
 author: siosulli
 ms.author: siosulli
 manager: deniseb
@@ -16,13 +16,12 @@ ms.collection:
 - highpri
 ---
 
-# Manage and maintain security posture with Defender for Endpoint
+# Use Safe Deployment Practices and Defender for Endpoint capabilities to safeguard and manage your environment
 
-This guide helps you manage and maintain your security posture with Defender for Endpoint by providing:
+This guide helps understand how to use safe deployment practices and Defender for Endpoint capabilities to safeguard and manage your environment.
 
 - Recommendations and information on safe deployment practices
 - Guidance on safe configurations including use of exclusions
-- Troubleshooting information  
 
 ## Step 1: Safe deployment practices
 

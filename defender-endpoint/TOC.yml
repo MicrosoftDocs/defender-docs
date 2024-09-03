@@ -382,8 +382,8 @@
         - name: Configure time zone settings
           href: time-settings.md
 
-      - name: Manage and maintain Defender for Endpoint 
-        href: manage-maintain-mde-guide.md   
+      - name: Safeguard and manage your environment 
+        href: safeguard-manage-maintain-mde-guide.md   
 
       - name: Defender for Endpoint Security Operations Guide 
         href: mde-sec-ops-guide.md
