@@ -37,6 +37,8 @@ Dynamic rules can help manage device context by assigning tags and device values
 
 A rule can be based on device name, domain, OS platform, internet facing status, onboarding status and manual device tags. You can select or create a tag that will be applied based on the conditions you've set.
 
+> [!IMPORTANT]
+> Use of ***Microsoft Defender for Endpoint's Dynamic tag capability*** to tag devices with *MDE-Management* isn't currently supported with security settings management. Devices tagged through this capability won't successfully enroll. This issue remains under investigation.
 The following steps guide you on how to create a new dynamic rule in Microsoft Defender XDR:
 
 1. Sign in to the [Microsoft Defender portal](https://security.microsoft.com) as a user who can view and perform actions on all devices.
