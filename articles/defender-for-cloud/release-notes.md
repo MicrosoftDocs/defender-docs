@@ -29,26 +29,45 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## September 2024
 
-| Date        | Category | Update                     |
-| ----------- | -------- | -------------------------- |
-| September 1 | GA       | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
-| September 3 | GA | [Enable system updates and patches on your machines](#enable-system-updates-and-patches-on-your-machines)|
+|Date | Category | Update|
+|--|--|--|
+| September 4 | GA | [Enable system updates and patches on your machines](#enable-system-updates-and-patches-on-your-machines)|
+| September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
+|September 1 | Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
+| September 1 | GA | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
+
+
+### Enable system updates and patches on your machines
+
+September 4, 2024
+
+You can now enable system updates and patches on your Azure Arc-enabled machines and Azure VMs. System updates and patches are crucial for keeping the security and health of your machines. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
+
+Learn how to [enable system updates and patches on your machines](enable-periodic-system-updates.md).
+
+### Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions
+
+September 4, 2024
+
+**Estimated date for change**: February 5, 2025
+
+After February 5, 2025, you won't be able to activate the legacy Defender for Storage (classic) per-transaction storage protection plan unless it's already enabled in your subscription. For more information, see [Move to the new Defender for Storage plan](defender-for-storage-classic-migrate.md).
+
+### Public Preview for Docker Hub container registry support by Defender for Containers
+
+September 1, 2024
+
+We are introducing the public preview of the Microsoft Defender for Containers extension of coverage to include external registries, beginning with Docker Hub container registries. As part of your organization's Microsoft Cloud Security Posture Management, the extension of coverage to Docker Hub container registries provides the benefits of scanning your Docker Hub container images  using Microsoft Defender Vulnerability Management to identify security threats and mitigate potential security risks.
+
+For more information about this feature, see [Vulnerability Assessment for Docker Hub](agentless-vulnerability-assessment-docker-hub.md)
+
+### Azure Policy guest configuration is now generally available (GA)
 
 September 1, 2024
 
 Defender for Server's Azure Policy guest configuration is now generally available (GA) for all multicloud Defender for Servers Plan 2 customers. Guest Configuration provides a unified experience for managing security baselines across your environment. It enables you to assess and enforce security configurations on your servers, including Windows and Linux machines, Azure VMs, AWS EC2, and GCP instances.
 
 Learn how to [enable Azure Policy guest configuration on your environment](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
-
-### Enable system updates and patches on your machines
-
-September 3, 2024
-
-You can now enable system updates and patches on your Azure Arc-enabled machines and Azure VMs. System updates and patches are crucial for keeping the security and health of your machines. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
-
-Learn how to [enable system updates and patches on your machines](enable-periodic-system-updates.md).
-
-### Azure Policy guest configuration is now generally available (GA)
 
 ## August 2024
 
@@ -96,7 +115,7 @@ Learn how to [enable Microsoft Defender for SQL servers on machines at scale](en
 | ------- | --------------- | ------------------------------------------------------------ |
 | July 31 | GA              | [General availability of enhanced discovery and configuration recommendations for endpoint protection](#general-availability-of-enhanced-discovery-and-configuration-recommendations-for-endpoint-protection) |
 | July 31 | Upcoming update | [Adaptive network hardening deprecation](#adaptive-network-hardening-deprecation) |
-| July 22 | Preview         | [Security assessments for GitHub no longer requires additional licensing](#preview-security-assessments-for-github-no-longer-requires-additional-licensing) |
+| July 22 | Preview         | [Security assessments for GitHub no longer require additional licensing](#preview-security-assessments-for-github-no-longer-require-additional-licensing) |
 | July 18 | Upcoming update | [Updated timelines toward MMA deprecation in Defender for Servers Plan 2](#updated-timelines-toward-mma-deprecation-in-defender-for-servers-plan-2) |
 | July 18 | Upcoming update | [Deprecation of MMA-related features as part of agent retirement](#deprecation-of-mma-related-features-as-part-of-agent-retirement) |
 | July 15 | Preview         | [Binary Drift Public Preview in Defender for Containers](#binary-drift-public-preview-now-available-in-defender-for-containers) |
@@ -132,7 +151,7 @@ The feature deprecation includes the following experiences:
 - **Recommendation**: [Adaptive network hardening recommendations should be applied on internet facing virtual machines](recommendations-reference-networking.md#adaptive-network-hardening-recommendations-should-be-applied-on-internet-facing-virtual-machines) [assessment Key: f9f0eed0-f143-47bf-b856-671ea2eeed62]
 - **Alert**: [Traffic detected from IP addresses recommended for blocking](alerts-azure-network-layer.md#traffic-detected-from-ip-addresses-recommended-for-blocking)
 
-### Preview: Security assessments for GitHub no longer requires additional licensing
+### Preview: Security assessments for GitHub no longer require additional licensing
 
 July 22, 2024
 

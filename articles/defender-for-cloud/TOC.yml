@@ -409,6 +409,8 @@
         - name: Attack path analysis and enhanced risk-hunting for containers
           displayName: attack paths, paths, security explorer, test
           href: how-to-test-attack-path-and-security-explorer-with-vulnerable-container-image.md
+        - name: Configure a Docker Hub external container registry
+          href: defender-for-containers-enable-external-registry-for-docker-hub.md
     - name: Secrets security posture
       items: 
       - name: Remediate issues with VM secrets
@@ -779,6 +781,8 @@
             href: agentless-vulnerability-assessment-aws.md
           - name: Vulnerability assessments for GCP
             href: agentless-vulnerability-assessment-gcp.md
+          - name: Vulnerability assessments for Docker Hub
+            href: agentless-vulnerability-assessment-docker-hub.md
           - name: Enable vulnerability assessments
             href: enable-vulnerability-assessment.md
           - name: Remediate vulnerabilities for registry images (risk-based)
