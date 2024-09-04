@@ -49,6 +49,27 @@ Enable threat protection for AI workloads.
 
     :::image type="content" source="media/ai-onboarding/enable-ai-workloads-plan.png" alt-text="Screenshot that shows you how to toggle threat protection for AI workloads to on." lightbox="media/ai-onboarding/enable-ai-workloads-plan.png":::
 
+## Enable user prompt evidence
+With the AI workloads threat protection plan enabled, you can control whether alerts include suspicious segments directly from your user prompts or model responses from your AI applications or resources. This helps you to triage and classify alerts and your users intentions. 
+
+User prompt evidence consists of prompts and model responses. Both the prompts and model responses are considered your data. The evidence is available through the Azure portal, Defender portal, and any attached third-party integrations.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Search for and select **Microsoft Defender for Cloud**.
+
+1. In the Defender for Cloud menu, select **Environment settings**.
+
+1. Select the relevant Azure subscription.
+
+1. Locate AI workloads and select **Configure**.
+
+1. Toggle Enable user prompt evidence to **On**.
+
+    :::image type="content" source="media/ai-onboarding/enable-user-prompt-evidence.png" alt-text="Screenshot that shows you how to toggle user prompt evidence to on." lightbox="media/ai-onboarding/enable-user-prompt-evidence.png":::
+
+1. Select **Continue**.
+
 ## Next step
 
 > [!div class="nextstepaction"]
