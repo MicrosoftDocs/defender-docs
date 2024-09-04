@@ -43,7 +43,29 @@ These recommendations rely on a native agent embedded in every Azure Virtual Mac
 
 1. Select the [Fix option](implement-security-recommendations.md#use-the-fix-option) to perform a one-time installation of any missing updates through the Update Manager portal.
 
+    :::image type="content" source="media/enable-periodic-system-updates/fix-updates.png" alt-text="Screenshot that shows where the fix button is located." lightbox="media/enable-periodic-system-updates/fix-updates.png":::
+
 By protecting your machines with the latest security updates, you can reduce the risk of security breaches and ensure your machines are protected against the latest threats.
+
+## Enable system updates and patches on machines at scale
+
+You also have the ability to enable system updates and patches on multiple machines at scale.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Navigate to **Microsoft Defender for Cloud** > **Recommendations**.
+
+1. Search for and select one of the above recommendations.
+
+1. [Review the recommendation](review-security-recommendations.md).
+
+1. Select **view recommendation for all resources**.
+
+    :::image type="content" source="media/enable-periodic-system-updates/view-recommendations.png" alt-text="Screenshot that shows where the view recommendation for all resources button is located." lightbox="media/enable-periodic-system-updates/view-recommendations.png":::
+
+1. Select all the machines you want to enable system updates and patches on.
+
+1. Select **Fix**.
 
 ## Next step
 
