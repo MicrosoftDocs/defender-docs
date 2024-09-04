@@ -80,7 +80,7 @@ Detections and mitigations from [Defender for Office 365](/defender-office-365/m
 
 ### Microsoft Defender for Identity
 
-[Defender for Identity](/defender-for-identity/what-is) is a cloud-based security solution that helps secure your identity monitoring across your organization. It leverages signals from both on-premises Active Directory and cloud identities to help you better identify, detect, and investigate advanced threats directed at your organization.
+[Defender for Identity](/defender-for-identity/what-is) is a cloud-based security solution that helps secure your identity monitoring across your organization. It uses signals from both on-premises Active Directory and cloud identities to help you better identify, detect, and investigate advanced threats directed at your organization.
 
 ### Microsoft Defender for Cloud Apps
 
