@@ -57,7 +57,7 @@ Run an EDR detection test to verify that the device is properly onboarded and re
 
 
 ```bash
-curl -o ~/Downloads/MDE Linux DIY.zip -L https://aka.ms/MDE-Linux-EDR-DIY
+curl -o ~/Downloads/MDE-Linux-EDR-DIY.zip -L https://aka.ms/MDE-Linux-EDR-DIY
 ```
 
 2. Extract the zip 
