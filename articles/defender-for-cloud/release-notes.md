@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 08/28/2024
+ms.date: 09/04/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -31,9 +31,18 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| September 4 | GA | [ServiceNow's integration now includes Configuration Compliance module](#servicenows-integration-now-includes-configuration-compliance-module) |
 | September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
-| September 1 | GA       | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
+| September 1 | GA  | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
 |September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
+
+### ServiceNow's integration now includes Configuration Compliance module
+
+September 4, 2024
+
+Defender for Cloud's CSPM plan's integration with ServiceNow now includes ServiceNow's Configuration Compliance module. This feature allows you to identify, prioritize, and remediate configuration issues in your cloud assets while reducing security risks and improving your overall compliance posture through automated workflows and real-time insights.
+
+Learn more about [ServiceNow's integration with Defender for Cloud](integration-servicenow.md).
 
 ### Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions
 
