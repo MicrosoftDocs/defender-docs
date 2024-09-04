@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 09/03/2024
+ms.date: 09/04/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -32,8 +32,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date        | Category | Update                     |
 | ----------- | -------- | -------------------------- |
 | September 1 | GA       | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
-| September 3 | GA | [Enable system updates on your machines](#enable-system-updates-on-your-machines) |
-| September 3 | GA | [ServiceNow's integration now includes Configuration Compliance module](#servicenows-integration-now-includes-configuration-compliance-module) |
+| September 4 | GA | [ServiceNow's integration now includes Configuration Compliance module](#servicenows-integration-now-includes-configuration-compliance-module) |
 
 ### Azure Policy guest configuration is now generally available (GA)
 
@@ -42,12 +41,6 @@ September 1, 2024
 Defender for Server's Azure Policy guest configuration is now generally available (GA) for all multicloud Defender for Servers Plan 2 customers. Guest Configuration provides a unified experience for managing security baselines across your environment. It enables you to assess and enforce security configurations on your servers, including Windows and Linux machines, Azure VMs, AWS EC2, and GCP instances.
 
 Learn how to [enable Azure Policy guest configuration on your environment](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
-
-### Enable system updates on your machines
-
-September 3, 2024
-
-You can now [enable system updates on your machines](tutorial-enable-servers-plan.md#enable-system-updates). This feature allows you to enable system updates on multiple servers at once, saving time and effort.
 
 ### ServiceNow's integration now includes Configuration Compliance module
 
