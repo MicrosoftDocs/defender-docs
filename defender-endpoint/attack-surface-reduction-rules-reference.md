@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 05/02/2024
+ms.date: 09/07/2024
 search.appverid: met150
 ---
 
@@ -109,7 +109,6 @@ The following ASR rules DO NOT honor Microsoft Defender for Endpoint Indicators 
 The following table lists the supported operating systems for rules that are currently released to general availability. The rules are listed alphabetical order in this table.
 
 > [!NOTE]
->
 > Unless otherwise indicated, the minimum Windows&nbsp;10 build is version 1709 (RS3, build 16299) or later; the minimum Windows&nbsp;Server build is version 1809 or later.
 >
 > Attack surface reduction rules in Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 are available for devices onboarded using the modern unified solution package. For more information, see [New Windows Server 2012 R2 and 2016 functionality in the modern unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
@@ -257,7 +256,6 @@ This rule prevents an application from writing a vulnerable signed driver to dis
 The **Block abuse of exploited vulnerable signed drivers** rule doesn't block a driver already existing on the system from being loaded.
 
 > [!NOTE]
->
 > You can configure this rule using Intune OMA-URI. See [Intune OMA-URI](enable-attack-surface-reduction.md#custom-profile-in-intune) for configuring custom rules.
 >
 > You can also configure this rule using [PowerShell](enable-attack-surface-reduction.md#powershell).
@@ -323,7 +321,8 @@ Dependencies: Microsoft Defender Antivirus
 ### Block credential stealing from the Windows local security authority subsystem
 
 > [!NOTE]
-> If you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) enabled and [Credential Guard](/windows/security/identity-protection/credential-guard) enabled this ASR rule is not required. 
+> If you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) enabled and [Credential Guard](/windows/security/identity-protection/credential-guard) enabled, this attack surface reduction rule is not required. 
+
 This rule helps prevent credential stealing by locking down Local Security Authority Subsystem Service (LSASS).
 
 LSASS authenticates users who sign in on a Windows computer. Microsoft Defender Credential Guard in Windows normally prevents attempts to extract credentials from LSASS. Some organizations can't enable Credential Guard on all of their computers because of compatibility issues with custom smartcard drivers or other programs that load into the Local Security Authority (LSA). In these cases, attackers can use tools like Mimikatz to scrape cleartext passwords and NTLM hashes from LSASS.
