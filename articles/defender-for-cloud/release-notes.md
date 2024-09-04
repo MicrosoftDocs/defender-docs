@@ -29,10 +29,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## September 2024
 
-| Date        | Category | Update                     |
-| ----------- | -------- | -------------------------- |
+|Date | Category | Update|
+|--|--|--|
+| September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
 | September 1 | GA       | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
 |September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
+
+### Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions
+
+September 4, 2024
+
+**Estimated date for change**: February 5, 2025
+
+After February 5, 2025, you won't be able to activate the legacy Defender for Storage (classic) per-transaction storage protection plan unless it's already enabled in your subscription. For more information, see [Move to the new Defender for Storage plan](defender-for-storage-classic-migrate.md).
 
 ### Azure Policy guest configuration is now generally available (GA)
 
