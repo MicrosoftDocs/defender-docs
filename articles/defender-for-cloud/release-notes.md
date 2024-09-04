@@ -44,7 +44,9 @@ Learn how to [enable Azure Policy guest configuration on your environment](confi
 
 September 3, 2024
 
-You can now [enable system updates and patches on your Azure Arc-enabled machines and Azure VMs](tutorial-enable-servers-plan.md#enable-system-updates). System updates and patches are crucial for keeping the security and health of your machines. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
+You can now enable system updates and patches on your Azure Arc-enabled machines and Azure VMs. System updates and patches are crucial for keeping the security and health of your machines. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
+
+Learn how to [enable system updates and patches on your machines](enable-periodic-system-updates.md).
 
 ### Azure Policy guest configuration is now generally available (GA)
 
