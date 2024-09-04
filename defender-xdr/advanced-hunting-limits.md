@@ -92,7 +92,11 @@ Queries with high resource usage or a long query time can probably be optimized 
 
 The graph displays resource usage over time per interface. You can easily identify excessive usage and select the spikes in the graph to filter the table accordingly. Once you select an entry in the graph, the table is filtered to that specific date.
 
-You can identify the queries that used the most resources on that day and take action to improve them – by [applying query best practices](advanced-hunting-best-practices.md) or educating the user who ran the query or created the rule to take query efficiency and resources into consideration. For guided mode, the user needs to [switch to advanced mode](advanced-hunting-query-builder-details.md#switch-to-advanced-mode-after-building-a-query) to edit the query.
+You can identify the queries that used the most resources on that day and take action to improve them – by [applying query best practices](advanced-hunting-best-practices.md) or educating the user who ran the query or created the rule to take query efficiency and resources into consideration. 
+
+To view a query, select the three dots beside the timestamp of the query you want to check and select **Open in query editor**.
+
+For guided mode, the user needs to [switch to advanced mode](advanced-hunting-query-builder-details.md#switch-to-advanced-mode-after-building-a-query) to edit the query.
 
 The graph supports two views:
 
