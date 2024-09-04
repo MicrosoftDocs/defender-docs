@@ -32,14 +32,21 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | Date        | Category | Update                     |
 | ----------- | -------- | -------------------------- |
 | September 1 | GA       | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
-
-### Azure Policy guest configuration is now generally available (GA)
+| September 3 | GA | [Enable system updates and patches on your machines](#enable-system-updates-and-patches-on-your-machines)|
 
 September 1, 2024
 
 Defender for Server's Azure Policy guest configuration is now generally available (GA) for all multicloud Defender for Servers Plan 2 customers. Guest Configuration provides a unified experience for managing security baselines across your environment. It enables you to assess and enforce security configurations on your servers, including Windows and Linux machines, Azure VMs, AWS EC2, and GCP instances.
 
 Learn how to [enable Azure Policy guest configuration on your environment](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
+
+### Enable system updates and patches on your machines
+
+September 3, 2024
+
+You can now [enable system updates and patches on your Azure Arc-enabled machines and Azure VMs](tutorial-enable-servers-plan.md#enable-system-updates). System updates and patches are crucial for keeping the security and health of your machines. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
+
+### Azure Policy guest configuration is now generally available (GA)
 
 ## August 2024
 
