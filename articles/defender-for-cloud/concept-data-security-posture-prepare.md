@@ -77,7 +77,7 @@ To scan Azure storage accounts, Microsoft Defender for Cloud creates a new `stor
 - List
 - Read
 
-For storage accounts behind a private network, we include the `StorageDataScanner` in the resource instances as part of the resource configuration.
+For storage accounts behind private networks, we include the `StorageDataScanner` in the list of allowed resource instances in the storage account's network rules configuration.
 
 ### Discovering and scanning AWS S3 buckets
 
