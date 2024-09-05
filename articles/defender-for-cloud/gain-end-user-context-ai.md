@@ -63,7 +63,7 @@ We recommend adding all of the parameters provided in this document to your gene
       
 1. Locate and copy the sample code.
 
-   ![Sample app code.](media/gain-end-user-context-ai/sample-app-code-sample-for-docs.png)
+   :::image type="content" source="media/gain-end-user-context-ai/sample-app-code-sample-for-docs.png" alt-text="Screenshot that shows sample application code." lightbox="media/gain-end-user-context-ai/sample-app-code-sample-for-docs.png":::
    
 1. Add the code to your generative AI application's code where Azure OpenAI API is called.
 
