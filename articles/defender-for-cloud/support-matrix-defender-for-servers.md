@@ -53,7 +53,7 @@ This table summarizes Azure cloud support for Defender for Servers features.
 | [Agentless secret scanning](secrets-scanning.md) | GA | NA | NA |
 | [Agentless malware scanning](agentless-malware-scanning.md) | Preview | NA | NA |
 | [Endpoint detection and response](endpoint-detection-response.md) | Preview | NA | NA |
-| [System updates and patches](enable-periodic-system-updates.md) | GA | NA | NA |
+| [System updates and patches](enable-periodic-system-updates.md) | GA | GA | GA |
 
 ## Windows machine support
 
@@ -135,6 +135,7 @@ The following table shows feature support for AWS and GCP machines.
 | [Agentless secret scanning](secrets-scanning.md) | ✔ | ✔ |
 | [Agentless malware scanning](agentless-malware-scanning.md) | ✔ | ✔ |
 | [Endpoint detection and response](endpoint-detection-response.md) | ✔ | ✔ |
+| [System updates and patches](enable-periodic-system-updates.md) | ✔ <br> (With Azure Arc) | ✔ (With Azure Arc) |
 
 ## Endpoint protection support
 
