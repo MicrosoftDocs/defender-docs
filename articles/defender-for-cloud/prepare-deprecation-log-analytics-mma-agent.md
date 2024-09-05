@@ -8,7 +8,7 @@ ms.date: 08/28/2024
 
 # Prepare for retirement of the Log Analytics agent
 
-The Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA), [is retiring in August 2024](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-strategy-and-plan-towards-log/ba-p/3883341). As a result, the Defender for Servers and Defender for SQL on machines plans in Microsoft Defender for Cloud will be updated, and features that rely on the Log Analytics agent will be redesigned.
+The Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA), [is retiring in November 2024](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/microsoft-defender-for-cloud-strategy-and-plan-towards-log/ba-p/3883341). As a result, the Defender for Servers and Defender for SQL on machines plans in Microsoft Defender for Cloud will be updated, and features that rely on the Log Analytics agent will be redesigned.
 
 This article summarizes plans for agent retirement.
 
@@ -201,6 +201,9 @@ Machine information is collected for assessment using the Log Analytics agent (a
 
 Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/) to learn about Defender Servers Plan 2 pricing information.
 
+> [!IMPORTANT]
+> Be aware that additional features provided by Azure Policy guest configuration that exist outside of the Defender for Cloud portal aren't included with Defender for Cloud, and are subject to Azure Policy guest configurations pricing policies. For example [remediation](/azure/governance/machine-configuration/concepts/remediation-options) and [custom policies](/azure/governance/machine-configuration/how-to/create-policy-definition). For more information, see the [Azure Policy guest configuration pricing page](https://azure.microsoft.com/pricing/details/azure-policy/?msockid=06fc23a2aac2601229353214abbf61f1).
+
 Recommendations that are provided by the MCSB that aren't part of Windows and Linux compute security baselines, will continue to be part of free foundational CSPM.
 
 ### Install Azure Policy guest configuration
@@ -221,7 +224,7 @@ Depending on your environment, you may need to take the following steps:
         - To enable the Guest Configuration agent:
             1. Sign in to the [Azure portal](https://portal.azure.com/).
             1. Navigate to **Environment settings** > **Your subscription** > **Settings & Monitoring**.
-            1. Under **Settings**, select **Guest Configuration**.
+            1. Select **Guest Configuration**.
                :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/setting-and-monitoring.png" alt-text="Screenshot that shows the location of the settings and monitoring button." lightbox="media/prepare-deprecation-log-analytics-mma-agent/setting-and-monitoring.png":::
             1. Toggle the Guest Configuration agent (preview) to **On**.
                :::image type="content" source="media/prepare-deprecation-log-analytics-mma-agent/toggle-guest.png" alt-text="Screenshot that shows the location of the toggle button to enable the Guest Configuration agent." lightbox="media/prepare-deprecation-log-analytics-mma-agent/toggle-guest.png":::

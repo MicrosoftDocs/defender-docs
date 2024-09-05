@@ -5,7 +5,7 @@ ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: dcurwin
 ms.author: dacurwin
-ms.date: 03/13/2024
+ms.date: 09/04/2024
 ---
 
 # Defender for Servers support
@@ -75,8 +75,13 @@ The following table shows feature support for Windows machines in Azure, Azure A
 | [Adaptive network hardening](adaptive-network-hardening.md) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
 | [Docker host hardening](./harden-docker-hosts.md) | - | - | Yes |
+<<<<<<< HEAD
 | Missing OS patches assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | Machine OS configuration |  Windows Server 2019/2016/2012 R2/2012| ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
+=======
+| [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
+| Security misconfigurations assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
+>>>>>>> 532a6886f558a815cc5ca3ef8478bd861ec09fc8
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | Disk encryption assessment | ✔</br>[supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) | - | No |
 | Third-party vulnerability assessment (BYOL) | ✔ | - | No |
@@ -100,8 +105,8 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | [Adaptive network hardening](adaptive-network-hardening.md) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
 | [Docker host hardening](./harden-docker-hosts.md) | ✔ | ✔ | Yes |
-| Missing OS patches | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
-| Machine OS misconfiguration | Ubuntu 14.04, 16.04, 17.04, 18.04 or 20.04<br/>Debian 7, 8, 9, or 10<br/>CentOS 7 or 8 (End of life (EOL) as of June 30, 2024.<br/>Red Hat Enterprise Linux (RHEL) 7 or 8<br/>Oracle Linux 7 or 8<br/>SUSE Linux Enterprise Server 12| ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
+| [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
+| Security misconfigurations assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | - | - | No |
 | Disk encryption assessment | ✔</br> [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) | - | No |
 | Third-party vulnerability assessment (BYOL) | ✔ | - | No |
@@ -125,7 +130,7 @@ The following table shows feature support for AWS and GCP machines.
 | [Adaptive network hardening](adaptive-network-hardening.md) | - | - |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ |
 | [Docker host hardening](harden-docker-hosts.md) | ✔ | ✔ |
-| Missing OS patches assessment | ✔ | ✔ |
+| [Missing OS patches assessment](apply-security-baseline.md)| ✔ | ✔ |
 | Security misconfigurations assessment | ✔ | ✔ |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | ✔ | ✔ |
 | Disk encryption assessment | ✔</br>for [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) | ✔</br>for [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows) |

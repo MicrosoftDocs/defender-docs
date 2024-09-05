@@ -545,9 +545,19 @@ Learn more about [Microsoft Defender for Cloud's security features for container
 
 **Severity**: Medium
 
-### Data plane recommendations
+## Data plane recommendations
 
 All the [Kubernetes data plane security recommendations](kubernetes-workload-protections.md#view-and-configure-the-bundle-of-recommendations) are supported for GCP after you [enable Azure Policy for Kubernetes](kubernetes-workload-protections.md#enable-kubernetes-data-plane-hardening).
+
+## External container registries recommendations
+
+### [[Preview] Container images in Docker Hub registry should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f064651f-2459-47f2-9731-0c5a782891d3)
+
+**Description**: Defender for Cloud scans your registry images for known vulnerabilities (CVEs) and provides detailed findings for each scanned image. Remediating vulnerabilities in container images helps maintain a secure and reliable software supply chain, reduces the risk of security incidents, and ensures compliance with industry standards.",
+
+**Severity**: High
+
+**Type**: Vulnerability Assessment
 
 ## Related content
 

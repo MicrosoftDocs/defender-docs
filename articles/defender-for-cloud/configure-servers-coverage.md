@@ -2,8 +2,7 @@
 title: Modify Defender for Servers plan settings in Microsoft Defender for Cloud
 description: Learn how to configure settings in the Defender for Servers plan in Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 08/19/2024
-# customer intent: After setting up the Defender for Servers plan in Defender for Cloud, I want to review machines protected by the plan, and modify plan settings.
+ms.date: 09/01/2024
 ---
 
 # Modify Defender for Servers plan settings
