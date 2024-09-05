@@ -63,17 +63,17 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 **Severity**: Medium
 
-### A corrupted AI application\model\data shared a malicious URL
+### Corrupted AI application\model\data directed a phishing attempt at a user
 
 (AI.Azure_PhishingContentInModelResponse)
 
-**Description**: This alert indicates a corruption of an AI application, as it has actively shared a known malicious URL used for phishing with a user. The URL orginated within the application itself, the AI model or the data the application can access.
+**Description**: This alert indicates a corruption of an AI application developed by the organization, as it has actively shared a known malicious URL used for phishing with a user. The URL originated within the application itself, the AI model or the data the application can access.
 
 **[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Impact (Defacement)
 
 **Severity**: High
 
-### A malicious URL was shared in one of your AI applications 
+### Phishing URL shared in an AI application
 
 (AI.Azure_PhishingContentInAIApplication)
 
@@ -83,7 +83,7 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 **Severity**: High
 
-### A user phishing attempt detected in one of your AI applications 
+### Phishing attempt detected in an AI application
 
 (AI.Azure_PhishingContentInUserPrompt)
 
