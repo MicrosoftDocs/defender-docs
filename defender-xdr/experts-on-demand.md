@@ -53,7 +53,7 @@ You need to select one of the following Microsoft Defender XDR Unified RBAC perm
 
 To learn more about Unified RBAC permissions, see: [Microsoft Defender XDR Unified RBAC permission details](custom-permissions-details.md#microsoft-defender-xdr-unified-rbac-permission-details).
 
-### Where to fisubmit inquiries to Ask Defender Experts
+### Where to submit inquiries to Ask Defender Experts
 
 The option to **Ask Defender Experts** is available in several places throughout the portal:
 
