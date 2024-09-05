@@ -11,7 +11,7 @@ ms.date: 08/11/2024
 
 In the Defender for Servers plan in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
-File integrity monitoring uses Azure Automation change tracking. This article describes how to monitor machine changes captured by file integrity monitoring. [
+File integrity monitoring uses Azure Automation change tracking. This article describes how to monitor machine changes captured by file integrity monitoring. 
 
 
 ## Prerequisites
@@ -43,7 +43,7 @@ To monitor entities and files, follow these steps:
 > [!NOTE]
 > If you previously used [File Integrity Monitoring over MMA](file-integrity-monitoring-enable-log-analytics.md), you can return to that method by selecting **Change to previous experience**. This will be available until the FIM over MMA feature is deprecated. For information on the deprecation plan, see [Prepare for retirement of the Log Analytics agent](prepare-deprecation-log-analytics-mma-agent.md).
 
-## Retrieve and analyze FIM data  
+## Retrieve and analyze file integrity monitoring data  
 
 The file integrity monitoring data resides within the Azure Log Analytics workspace in the `MDCFileIntegrityMonitoringEvents` table.  
 
