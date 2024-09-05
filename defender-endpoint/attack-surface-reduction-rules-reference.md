@@ -574,6 +574,14 @@ Configuration Manager name: Not yet available
  
 GUID: `33ddedf1-c6e0-47cb-833e-de6133960387`
  
+Advanced hunting action type:
+
+- `AsrSafeModeRebootedAudited`
+
+- `AsrSafeModeRebootBlocked`
+
+- `AsrSafeModeRebootWarnBypassed`
+
 Dependencies: Microsoft Defender Antivirus
 
 ### Block untrusted and unsigned processes that run from USB
@@ -611,6 +619,14 @@ Configuration Manager name: Not yet available
 
 GUID: `c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb`
  
+Advanced hunting action type:
+
+- `AsrAbusedSystemToolAudited`
+
+- `AsrAbusedSystemToolBlocked`
+
+- `AsrAbusedSystemToolWarnBypassed`
+
 Dependencies: Microsoft Defender Antivirus
 
 ### Block Webshell creation for Servers
