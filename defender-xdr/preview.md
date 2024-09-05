@@ -62,7 +62,7 @@ Turn on preview features to be among the first to try new features. Your feedbac
 
 In Microsoft Defender XDR, select **Settings > Microsoft Defender XDR > General > Preview features**, and select to turn on preview features.
 
-(Preview) If you already have preview features turned on, and you're a Microsoft Defender for Business, Microsoft Defender for Endpoint, or Microsoft Defender for Cloud Apps customer, you can also select to turn preview features on and off for specific services only. For example:
+If you already have preview features turned on, and you're a Microsoft Defender for Business, Microsoft Defender for Endpoint, or Microsoft Defender for Cloud Apps customer, you can also select to turn preview features on and off for specific services only. For example:
 
 :::image type="content" source="media/preview-features-settings.png" alt-text="Screenshot of the preview features settings.":::
 
