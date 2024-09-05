@@ -2,7 +2,7 @@
 title: Deploy Defender for Servers
 description: Learn how to enable the Defender for Servers on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 08/25/2024
+ms.date: 02/05/2024
 ---
 
 # Deploy Defender for Servers
