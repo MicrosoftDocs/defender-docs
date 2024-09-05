@@ -5,7 +5,7 @@ ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: dcurwin
 ms.author: dacurwin
-ms.date: 09/03/2024
+ms.date: 09/05/2024
 ---
 
 # Defender for Servers support
@@ -73,7 +73,7 @@ The following table shows feature support for Windows machines in Azure, Azure A
 | [Adaptive network hardening](adaptive-network-hardening.md) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
 | [Docker host hardening](./harden-docker-hosts.md) | - | - | Yes |
-| Missing OS patches assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
+| [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
 | Security misconfigurations assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | Disk encryption assessment | ✔</br>([supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) | - | No |
@@ -99,7 +99,7 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | [Adaptive network hardening](adaptive-network-hardening.md) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
 | [Docker host hardening](./harden-docker-hosts.md) | ✔ | ✔ | Yes |
-| Missing OS patches assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
+| [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
 | Security misconfigurations assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | - | - | No |
 | Disk encryption assessment | ✔</br> [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) | - | No |
@@ -125,7 +125,7 @@ The following table shows feature support for AWS and GCP machines.
 | [Adaptive network hardening](adaptive-network-hardening.md) | - | - |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ |
 | [Docker host hardening](harden-docker-hosts.md) | ✔ | ✔ |
-| Missing OS patches assessment | ✔ | ✔ |
+| [Missing OS patches assessment](apply-security-baseline.md)| ✔ | ✔ |
 | Security misconfigurations assessment | ✔ | ✔ |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | ✔ | ✔ |
 | Disk encryption assessment | ✔</br>(for [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) | ✔</br>(for [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) |

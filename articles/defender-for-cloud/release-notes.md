@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 08/28/2024
+ms.date: 09/04/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -31,19 +31,27 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| September 4 | GA | [Enable system updates and patches on your machines](#enable-system-updates-and-patches-on-your-machines)|
+| September 5 | GA | [Enable system updates and patches on your machines](#enable-system-updates-and-patches-on-your-machines)|
+| September 4 | GA | [ServiceNow's integration now includes Configuration Compliance module](#servicenows-integration-now-includes-configuration-compliance-module) |
 | September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
-|September 1 | Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
-| September 1 | GA | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
-
+| September 1 | GA  | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
+|September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
 
 ### Enable system updates and patches on your machines
 
-September 4, 2024
+September 5, 2024
 
 You can now enable system updates and patches on your Azure Arc-enabled machines and Azure VMs. System updates and patches are crucial for keeping the security and health of your machines. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
 
 Learn how to [enable system updates and patches on your machines](enable-periodic-system-updates.md).
+
+### ServiceNow's integration now includes Configuration Compliance module
+
+September 4, 2024
+
+Defender for Cloud's CSPM plan's integration with ServiceNow now includes ServiceNow's Configuration Compliance module. This feature allows you to identify, prioritize, and remediate configuration issues in your cloud assets while reducing security risks and improving your overall compliance posture through automated workflows and real-time insights.
+
+Learn more about [ServiceNow's integration with Defender for Cloud](integration-servicenow.md).
 
 ### Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions
 
@@ -53,14 +61,6 @@ September 4, 2024
 
 After February 5, 2025, you won't be able to activate the legacy Defender for Storage (classic) per-transaction storage protection plan unless it's already enabled in your subscription. For more information, see [Move to the new Defender for Storage plan](defender-for-storage-classic-migrate.md).
 
-### Public Preview for Docker Hub container registry support by Defender for Containers
-
-September 1, 2024
-
-We are introducing the public preview of the Microsoft Defender for Containers extension of coverage to include external registries, beginning with Docker Hub container registries. As part of your organization's Microsoft Cloud Security Posture Management, the extension of coverage to Docker Hub container registries provides the benefits of scanning your Docker Hub container images  using Microsoft Defender Vulnerability Management to identify security threats and mitigate potential security risks.
-
-For more information about this feature, see [Vulnerability Assessment for Docker Hub](agentless-vulnerability-assessment-docker-hub.md)
-
 ### Azure Policy guest configuration is now generally available (GA)
 
 September 1, 2024
@@ -68,6 +68,14 @@ September 1, 2024
 Defender for Server's Azure Policy guest configuration is now generally available (GA) for all multicloud Defender for Servers Plan 2 customers. Guest Configuration provides a unified experience for managing security baselines across your environment. It enables you to assess and enforce security configurations on your servers, including Windows and Linux machines, Azure VMs, AWS EC2, and GCP instances.
 
 Learn how to [enable Azure Policy guest configuration on your environment](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
+
+### Public Preview for Docker Hub container registry support by Defender for Containers
+
+September 1, 2024
+
+We are introducing the public preview of the Microsoft Defender for Containers extension of coverage to include external registries, beginning with Docker Hub container registries. As part of your organization's Microsoft Cloud Security Posture Management, the extension of coverage to Docker Hub container registries provides the benefits of scanning your Docker Hub container images  using Microsoft Defender Vulnerability Management to identify security threats and mitigate potential security risks.
+
+For more information about this feature, see [Vulnerability Assessment for Docker Hub](agentless-vulnerability-assessment-docker-hub.md)
 
 ## August 2024
 
