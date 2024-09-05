@@ -63,6 +63,36 @@ This article lists the security alerts you might get for AI workloads from Micro
 
 **Severity**: Medium
 
+### A corrupted AI application\model\data shared a malicious URL
+
+(AI.Azure_PhishingContentInModelResponse)
+
+**Description**: This alert indicates a corruption of an AI application, as it has actively shared a known malicious URL used for phishing with a user. The URL orginated within the application itself, the AI model or the data the application can access.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Impact (Defacement)
+
+**Severity**: High
+
+### A malicious URL was shared in one of your AI applications 
+
+(AI.Azure_PhishingContentInAIApplication)
+
+**Description**: This alert indicates a potential corruption of an AI application, or a phishing attempt by one of the end users. The alert determines that a malicious URL used for phishing was passed during a conversation through the AI application, however the origin of the URL (user or application) is unclear. 
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Impact (Defacement), Collection
+
+**Severity**: High
+
+### A user phishing attempt detected in one of your AI applications 
+
+(AI.Azure_PhishingContentInUserPrompt)
+
+**Description**: This alert indicates a URL used for phishing attack was sent by a user to an AI application. The content typically lures visitors into entering their corporate credentials or financial information into a legitimate looking website. Sending this to an AI application may be for the purpose of corrupting it, poisoning the data sources it has access to, or gaining access to employees or other customers via the application's tools.
+
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Collection
+
+**Severity**: High
+
 > [!NOTE]
 > For alerts that are in preview: [!INCLUDE [Legalese](./includes/defender-for-cloud-preview-legal-text.md)]
 
