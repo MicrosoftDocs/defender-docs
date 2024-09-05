@@ -1,5 +1,5 @@
 ---
-title: Enable system updates and patches
+title: Remediate system updates and patches recommendations
 description: Learn how to enable system updates on your Azure Arc-enabled machines and Azure VMs to keep them secure and healthy.
 author: Elazark
 ms.author: elkrieger
@@ -8,7 +8,7 @@ ms.date: 09/03/2024
 #customer-intent: As a Defender for Servers user, I want to enable system updates on my Azure Arc-enabled machines and Azure VMs to keep them secure and healthy.
 ---
 
-# Enable system updates and patches
+# Remediate system updates and patches recommendations
 
 System updates and patches are crucial for keeping the security and health of your Azure Arc-enabled machines and Azure VMs. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers. 
 
@@ -22,14 +22,14 @@ System updates and patches are crucial for keeping the security and health of yo
 
 - [Enable periodic assessment](/azure/update-manager/assessment-options).
 
-## Enable system updates and patches on machines
+## Locate and remediate the recommendations
 
 Defender for Cloud automatically assesses the security of your machines and provides recommendations to ensure the latest security and critical OS updates are installed on your machines. If your machines aren't up to date, Defender for Cloud generates the following recommendations to ensure the latest security and critical OS updates are installed on your machines:
 
 - [System updates should be installed on your machines (powered by Azure Update Manager)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e1145ab1-eb4f-43d8-911b-36ddf771d13f)
 - [Machines should be configured to periodically check for missing system updates](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2Fbd876905-5b84-4f73-ab2d-2e7a7c4568d9)
 
-These recommendations rely on a native agent embedded in every Azure Virtual Machine (VM) and Azure Arc machines instead of an installed agent.
+These recommendations rely on [Azure Update Manager which uses a VM extension](/azure/update-manager/workflow-update-manager?tabs=azure-vms%2Cupdate-win).
 
 **To system updates and patches on your machines**:
 
@@ -47,9 +47,9 @@ These recommendations rely on a native agent embedded in every Azure Virtual Mac
 
 By protecting your machines with the latest security updates, you can reduce the risk of security breaches and ensure your machines are protected against the latest threats.
 
-## Enable system updates and patches on machines at scale
+## Remediate the recommendations at scale
 
-You also have the ability to enable system updates and patches on multiple machines at scale.
+You also have the ability to remediate system updates and patches recommendations on multiple machines at scale.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -63,7 +63,7 @@ You also have the ability to enable system updates and patches on multiple machi
 
     :::image type="content" source="media/enable-periodic-system-updates/view-recommendations.png" alt-text="Screenshot that shows where the view recommendation for all resources button is located." lightbox="media/enable-periodic-system-updates/view-recommendations.png":::
 
-1. Select all the machines you want to enable system updates and patches on.
+1. Select all relevant machines.
 
 1. Select **Fix**.
 

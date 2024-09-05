@@ -749,7 +749,7 @@
         - name: Review applications and software installed on machines
           displayName: inventory, apps, software inventory, mde, tvm
           href: asset-inventory.md#access-a-software-inventory
-        - name: Enable system updates and patches
+        - name: Remediate system updates and patches recommendations
           displayName: update, system, updates, patches
           href: enable-periodic-system-updates.md
     - name: Common questions (FAQ)
