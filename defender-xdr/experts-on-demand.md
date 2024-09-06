@@ -19,7 +19,7 @@ ms.collection:
   - essentials-get-started
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 08/14/2024
+ms.date: 09/05/2024
 ---
 
 # Collaborate with experts on demand
@@ -31,7 +31,7 @@ ms.date: 08/14/2024
 - [Microsoft Defender XDR](microsoft-365-defender.md)
 
 > [!NOTE]
-> Ask Defender Experts is included in your Defender Experts for Hunting subscription with [monthly allocations](before-you-begin-defender-experts.md#eligibility-and-licensing). However, it's not a security incident response service. It's intended to provide a better understanding of complex threats affecting your organization. Engage with your own security incident response team to address urgent security incident response issues. If you don't have your own security incident response team and would like Microsoft's help, create a support request in the [Premier Services Hub](/services-hub/).
+> Ask Defender Experts is included in your Defender Experts for Hunting subscription with [quarterly allocations](before-you-begin-defender-experts.md#eligibility-and-licensing). However, it's not a security incident response service. It's intended to provide a better understanding of complex threats affecting your organization. Engage with your own security incident response team to address urgent security incident response issues. If you don't have your own security incident response team and would like Microsoft's help, create a support request in the [Premier Services Hub](/services-hub/).
 
 Select **Ask Defender Experts** directly inside the Microsoft 365 security portal to get swift and accurate responses to all your threat hunting questions. Experts can provide insight to better understand the complex threats your organization might face. Ask Defender Experts can help:
 
@@ -39,16 +39,21 @@ Select **Ask Defender Experts** directly inside the Microsoft 365 security porta
 - Gain clarity into suspicious devices, alerts, or incidents and take next steps if faced with an advanced attacker
 - Determine risks and available protections related to threat actors, campaigns, or emerging attacker techniques
 
-### Required permissions for submitting inquiries in the Ask Defender Experts panel
+ :::image type="content" source="media/ask-defender-expert-dialog.png" alt-text="Screenshot of the Ask Defender Experts dialog box." lightbox="media/ask-defender-expert-dialog.png":::
 
-You need to select one of the following permissions before submitting inquires to our Defender experts. For more details about role-based access control (RBAC) permissions, see: [Microsoft Defender for Endpoint and Microsoft Defender XDR RBAC permissions](compare-rbac-roles.md#map-defender-for-endpoint-and-defender-vulnerability-management-permissions-to-the-microsoft-defender-xdr-rbac-permissions).
+### Required permissions for using Ask Defender Experts
 
-|Product name|Product RBAC permission|
+You need to select one of the following Microsoft Defender XDR Unified RBAC permissions before submitting inquiries to our Defender experts.
+
+|Permission name|Level|
 |---|---|---|
-| Microsoft Defender for Endpoint RBAC | Manage security settings in the Security Center|
-| Microsoft Defender XDR Unified RBAC | Authorization and settings \ Security settings \ Core security settings (manage)</br>Authorization and settings \ Security settings \ Detection tuning (manage) |
+| Security data basics | Read|
+| Alerts | Manage |
+| Response | Manage |
 
-### Where to find Ask Defender Experts
+To learn more about Unified RBAC permissions, see: [Microsoft Defender XDR Unified RBAC permission details](custom-permissions-details.md#microsoft-defender-xdr-unified-rbac-permission-details).
+
+### Where to submit inquiries to Ask Defender Experts
 
 The option to **Ask Defender Experts** is available in several places throughout the portal:
 
@@ -67,6 +72,23 @@ The option to **Ask Defender Experts** is available in several places throughout
 - **Incidents page actions menu**:
 
   :::image type="content" source="/defender/media/mte/defenderexperts/incidents-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Incidents page actions menu in the Microsoft Defender portal.." lightbox="/defender/media/mte/defenderexperts/incidents-page-actions-menu.png":::
+
+### Where to view responses from Defender Experts
+
+#### In portal
+
+You can view responses to inquiries submitted to Ask Defender Experts from up to six months ago by navigating to **Reports** > **Defender Experts messages**. You will also be able to ask follow-up questions or reply with more information to Defender Experts from this page.
+
+:::image type="content" source="media/inportal-managed-response.png" alt-text="Screenshot of in-portal managed response." lightbox="media/inportal-managed-response.png":::
+
+#### Email
+
+If you included contact email addresses when submitting your inquiry, they will receive an email notification when a response from Defender Experts is posted.
+
+:::image type="content" source="media/email-based-managed-response.png" alt-text="Screenshot of email based managed response." lightbox="media/email-based-managed-response.png":::
+
+> [!NOTE]
+> Defender Experts will not be able to assist you with inquiries regarding bugs or issues in your product experience in the Microsoft Defender XDR portal. You can reach out to Microsoft Support via the [Services Hub](https://serviceshub.microsoft.com/home) regarding such inquiries.
 
 ### Sample questions you can ask from Defender Experts
 
