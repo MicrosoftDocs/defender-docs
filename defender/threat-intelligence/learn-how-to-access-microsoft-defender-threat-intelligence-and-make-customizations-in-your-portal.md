@@ -14,7 +14,7 @@ ms.collection: essentials-get-started
 # Quickstart: Learn how to access Microsoft Defender Threat Intelligence and make customizations
 
 >[!IMPORTANT] 
-> As of June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) has been retired and is no longer accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
+> On June 30, 2024, The Microsoft Defender Threat Intelligence (Defender TI) standalone portal (https://ti.defender.microsoft.com) was retired and is no longer accessible. Customers can continue using Defender TI in the [Microsoft Defender portal](https://aka.ms/mdti-intel-explorer) or with [Microsoft Copilot for Security](security-copilot-and-defender-threat-intelligence.md). [Learn more](https://aka.ms/mdti-standaloneportal)
 
 This guide walks you through how to access Microsoft Threat Intelligence (Defender TI) from the Microsoft Defender portal, adjust the portal's theme to make it easier on your eyes when using it, and find sources for enrichment so you can see more results when gathering threat intelligence. 
 
