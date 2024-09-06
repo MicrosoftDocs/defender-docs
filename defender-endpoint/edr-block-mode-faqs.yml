@@ -43,7 +43,7 @@ sections:
       - question: |
           Will EDR in block mode affect a user's antivirus protection?
         answer: |
-          EDR in block mode does not affect third-party antivirus protection running on users' devices. EDR in block mode works if the primary antivirus solution misses something, or if there is a post-breach detection. EDR in block mode works just like Microsoft Defender Antivirus in passive mode, except that EDR in block mode also blocks and remediates malicious artifacts or behaviors that are detected.
+          EDR in block mode does not affect non-Microsoft antivirus protection running on users' devices. EDR in block mode works if the primary antivirus solution misses something, or if there is a post-breach detection. EDR in block mode works just like Microsoft Defender Antivirus in passive mode, except that EDR in block mode also blocks and remediates malicious artifacts or behaviors that are detected.
 
       - question: |
           Why do I need to keep Microsoft Defender Antivirus up to date?
