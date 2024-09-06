@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: reference
-ms.date: 01/16/2024
+ms.date: 09/06/2024
 ---
 
 # DeviceLogonEvents
