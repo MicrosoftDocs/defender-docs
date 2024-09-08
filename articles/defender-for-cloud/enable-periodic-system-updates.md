@@ -4,7 +4,7 @@ description: Learn how to enable system updates on your servers to keep them sec
 author: Elazark
 ms.author: elkrieger
 ms.topic: how-to
-ms.date: 09/03/2024
+ms.date: 09/08/2024
 #customer intent: As a <role>, I want to learn how to enable system updates on my servers so that I can keep them secure and healthy.
 ---
 
@@ -17,7 +17,7 @@ Microsoft Defender for Cloud provides security recommendations to improve your o
 As part of the hardening strategy, Defender for Cloud assesses machines to check that the latest system updates are installed, and issues security recommendations if they're not.
 
 > [!NOTE]
-> - Azure Update Manager is used to collect information about missing machine updates.
+> - Information about missing machine updates is now gathered using [Azure Update Manager](/azure/update-manager/overview?branch=main).
 > - The Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) method to gather data, has been [deprecated in August 2024](prepare-deprecation-log-analytics-mma-agent.md).
 
 ## Prerequisites
@@ -54,11 +54,11 @@ Be sure to remediate the recommendation that enables the [periodic assessment](/
     - Under **Remediation steps**, review quick fix and manual fix details. If you follow the quick fix, the [periodic assessment](/azure/update-manager/assessment-options#periodic-assessment) update setting is enabled on machines.
     - In the **Unhealthy resources** list, you can drill to see resource details
 
-1. Select the recommendation ```System updates should be installed on your machines (powered by Azure Update Manager)```. 
+1. Select the [Fix option](implement-security-recommendations.md#use-the-fix-option).
 
-1. Under **Remediation steps**, review quick fix and manual fix details. If you follow the quick fix,  it guides you to a one-time installation of the missing updates.
+1. Select the relevant machine.
 
-1. In the **Unhealthy resources** list, you can drill to see resource details.
+1. Select **Fix 1 resource**.
 
 Periodic assessment can also be [enabled at scale with Azure Policy](/azure/update-manager/periodic-assessment-at-scale?branch=main).
 
