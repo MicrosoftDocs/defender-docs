@@ -28,6 +28,8 @@ As part of the hardening strategy, Defender for Cloud assesses machines to check
 
 - Multicloud machines must be onboarded with Azure Arc when you connect [AWS](quickstart-onboard-aws.md) or [GCP](quickstart-onboard-gcp.md).
 
+- [Enable the periodic assessment updates settings on your machines](#enable-periodic-assessment-on-your-machines).
+
 - If you're using Defender for Servers Plan 2, there's no extra cost for assessing, remediating, and patching system updates on supported Azure VMs and Azure Arc VMs.
 
 - If Defender for Servers Plan 2 isn't enabled on your subscription or multicloud connector, assessments for Azure Arc-enabled machines VMs in the subscription are subject to [Azure Update Manager charges](https://azure.microsoft.com/pricing/details/azure-update-management-center/).

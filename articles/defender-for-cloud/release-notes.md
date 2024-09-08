@@ -43,6 +43,10 @@ September 8, 2024
 
 You can now remediate system updates and patches recommendations on your Azure Arc-enabled machines and Azure VMs. System updates and patches are crucial for keeping the security and health of your machines. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
 
+Information about missing machine updates is now gathered using Azure Update Manager.
+
+In order to maintain the security of your machines for system updates and patches, you'll need to enable the periodic assessment updates settings on your machines.
+
 Learn how to [Remediate system updates and patches recommendations on your machines](enable-periodic-system-updates.md).
 
 ### ServiceNow's integration now includes Configuration Compliance module
