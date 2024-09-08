@@ -19,9 +19,9 @@ Sensitive data discovery is available in the Defender CSPM, Defender for Storage
 
 - When you enable one of the plans, the sensitive data discovery extension is turned on as part of the plan.
 - If you have existing plans running, the extension is available, but turned off by default.
-- Existing plan status shows as “Partial” rather than “Full” if one or more extensions aren't turned on.
+- Existing plan status shows as "Partial" rather than "Full" if one or more extensions aren't turned on.
 - The feature is turned on at the subscription level.
-- If sensitive data discovery is turned on, but Defender CSPM isn't enabled, only storage resources will be scanned.
+- If sensitive data discovery is turned on, but Defender CSPM isn't enabled, only storage resources are scanned.
 - If a subscription is enabled with Defender CSPM and in parallel you scanned the same resources with Purview, Purview's scan result is ignored and defaults to displaying the Microsoft Defender for Cloud's scanning results for the supported resource type.
 
 ## What's supported
@@ -70,7 +70,16 @@ For databases:
 - Databases are scanned on a weekly basis.
 - For newly enabled subscriptions, results appear within 24 hours.
 
-### Discovering AWS S3 buckets
+### Discovering and scanning Azure storage accounts
+
+To scan Azure storage accounts, Microsoft Defender for Cloud creates a new `storageDataScanner` resource and assigns it the [Storage Blob Data Reader](/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-reader) role. This role grants the following permissions:
+
+- List
+- Read
+
+For storage accounts behind private networks, we include the `StorageDataScanner` in the list of allowed resource instances in the storage account's network rules configuration.
+
+### Discovering and scanning AWS S3 buckets
 
 In order to protect AWS resources in Defender for Cloud, you set up an AWS connector, using a CloudFormation template to onboard the AWS account.
 
@@ -79,7 +88,7 @@ In order to protect AWS resources in Defender for Cloud, you set up an AWS conne
 - To connect AWS accounts, you need Administrator permissions on the account.
 - The role allows these permissions: S3 read only; KMS decrypt.
 
-### Discovering AWS RDS instances
+### Discovering and scanning AWS RDS instances
 
 To protect AWS resources in Defender for Cloud, set up an AWS connector using a CloudFormation template to onboard the AWS account.
 
@@ -97,7 +106,7 @@ To protect AWS resources in Defender for Cloud, set up an AWS connector using a 
   - Create alias for KMS keys
 - KMS keys are created once for each region that contains RDS instances. The creation of a KMS key might incur a minimal extra cost, according to AWS KMS pricing.
 
-### Discovering GCP storage buckets
+### Discovering and scanning GCP storage buckets
 
 In order to protect GCP resources in Defender for Cloud, you can set up a Google connector using a script template to onboard the GCP account.
 
@@ -112,7 +121,7 @@ Defender CSPM attack paths and cloud security graph insights include information
 | **State** | **Azure storage accounts** | **AWS S3 Buckets** | **GCP Storage Buckets** |
 |--- | --- | --- | --- |
 |**Exposed to the internet** | An Azure storage account is considered exposed to the internet if either of these settings enabled:<br/><br/> Storage_account_name > **Networking** > **Public network access** > **Enabled from all networks**<br/><br/> or<br/><br/>  Storage_account_name > **Networking** > **Public network access** > **Enable from selected virtual networks and IP addresses**. | An AWS S3 bucket is considered exposed to the internet if the AWS account/AWS S3 bucket policies don't have a condition set for IP addresses. | All GCP storage buckets are exposed to the internet by default. |
-|**Allows public access** | An Azure storage account container is considered as allowing public access if these settings are enabled on the storage account:<br/><br/> Storage_account_name > **Configuration** >**Allow Blob Anonymous access** > **Enabled**.<br/><br/>and **either** of these settings:<br/><br/> Storage_account_name > **Containers** > container_name > **Public access level** set to **Blob (anonymous read access for blobs only)**<br/><br/> Or, storage_account_name > **Containers** > container_name > **Public access level** set to **Container (anonymous read access for containers and blobs)**. | An AWS S3 bucket is considered to allow public access if both the AWS account and the AWS S3 bucket have **Block all public access** set to **Off**, and **either** of these settings is set:<br/><br/> In the policy, **RestrictPublicBuckets** isn't enabled, and the **Principal** setting is set to * and **Effect** is set to **Allow**.<br/><br/> Or, in the access control list, **IgnorePublicAcl** isn't enabled, and permission is allowed for **Everyone**, or for **Authenticated users**. | A GCP storage bucket is considered to allow public access if: it has an IAM (Identity and Access Management) role that meets these criteria: <br/><br/> The role is granted to the principal **allUsers** or **allAuthenticatedUsers**. <br/><br/>The role has at least one storage permission that *isn't* **storage.buckets.create** or **storage.buckets.list**. Public access in GCP is called “Public to internet“.|
+|**Allows public access** | An Azure storage account container is considered as allowing public access if these settings are enabled on the storage account:<br/><br/> Storage_account_name > **Configuration** >**Allow Blob Anonymous access** > **Enabled**.<br/><br/>and **either** of these settings:<br/><br/> Storage_account_name > **Containers** > container_name > **Public access level** set to **Blob (anonymous read access for blobs only)**<br/><br/> Or, storage_account_name > **Containers** > container_name > **Public access level** set to **Container (anonymous read access for containers and blobs)**. | An AWS S3 bucket is considered to allow public access if both the AWS account and the AWS S3 bucket have **Block all public access** set to **Off**, and **either** of these settings is set:<br/><br/> In the policy, **RestrictPublicBuckets** isn't enabled, and the **Principal** setting is set to * and **Effect** is set to **Allow**.<br/><br/> Or, in the access control list, **IgnorePublicAcl** isn't enabled, and permission is allowed for **Everyone**, or for **Authenticated users**. | A GCP storage bucket is considered to allow public access if: it has an IAM (Identity and Access Management) role that meets these criteria: <br/><br/> The role is granted to the principal **allUsers** or **allAuthenticatedUsers**. <br/><br/>The role has at least one storage permission that *isn't* **storage.buckets.create** or **storage.buckets.list**. Public access in GCP is called **Public to internet**.|
 
 Database resources don't allow public access but can still be exposed to the internet.
 
