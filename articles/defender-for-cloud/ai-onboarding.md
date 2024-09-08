@@ -2,7 +2,7 @@
 title: Enable threat protection for AI workloads (preview)
 description: Learn how to enable threat protection for AI workloads on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 05/05/2024
+ms.date: 09/08/2024
 ---
 
 # Enable threat protection for AI workloads (preview)
@@ -50,9 +50,10 @@ Enable threat protection for AI workloads.
     :::image type="content" source="media/ai-onboarding/enable-ai-workloads-plan.png" alt-text="Screenshot that shows you how to toggle threat protection for AI workloads to on." lightbox="media/ai-onboarding/enable-ai-workloads-plan.png":::
 
 ## Enable user prompt evidence
-With the AI workloads threat protection plan enabled, you can control whether alerts include suspicious segments directly from your user prompts or model responses from your AI applications or resources. This helps you to triage and classify alerts and your users intentions. 
 
-User prompt evidence consists of prompts and model responses. Both the prompts and model responses are considered your data. The evidence is available through the Azure portal, Defender portal, and any attached third-party integrations.
+With the AI workloads threat protection plan enabled, you can control whether alerts include suspicious segments directly from your user's prompts, or the model responses from your AI applications or resources. Enabling user prompt evidence helps you to triage and classifying alerts and your user's intentions. 
+
+User prompt evidence consists of prompts and model responses. Both the prompts and model responses are considered your data. The evidence is available through the Azure portal, Defender portal, and any attached partners integrations.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -62,7 +63,7 @@ User prompt evidence consists of prompts and model responses. Both the prompts a
 
 1. Select the relevant Azure subscription.
 
-1. Locate AI workloads and select **Configure**.
+1. Locate AI workloads and select **Settings**.
 
 1. Toggle Enable user prompt evidence to **On**.
 
