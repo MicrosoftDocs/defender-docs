@@ -2,7 +2,7 @@
 title: New and upcoming changes in recommendations, alerts, and incidents
 description: Get release notes for new and upcoming changes in recommendations, alerts, and incidents in Microsoft Defender for Cloud. 
 ms.topic: overview
-ms.date: 08/29/2024
+ms.date: 09/05/2024
 #customer intent: As a Defender for Cloud admin, I want to stay up to date on the latest new and changed security recommendations and alerts.
 ---
 
@@ -48,6 +48,8 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date**    | **Type**                       | **State**                                                    | **Name**                                                     |
 | ----------- | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| September 5 | Recommendation | GA | [System updates should be installed on your machines (powered by Azure Update Manager)](recommendations-reference-compute.md) |
+| September 5 | Recommendation | GA | [Machines should be configured to periodically check for missing system updates](recommendations-reference-compute.md) |
 | August 15 | Incident | Upcoming deprecation | Estimated date for change: September 15, 2024<br /><br />Security incident detected anomalous geographical location activity (Preview)<br />Security incident detected suspicious app service activity (Preview)<br />Security incident detected suspicious Key Vault activity (Preview)<br />Security incident detected suspicious Azure toolkits activity (Preview)<br />Security incident detected on the same resource (Preview)<br />Security incident detected suspicious IP activity (Preview)<br/>Security incident detected suspicious user activity (Preview)<br/>Security incident detected suspicious service principal activity (Preview)<br/>Security incident detected suspicious SAS activity (Preview)<br/>Security incident detected suspicious account activity (Preview)<br/>Security incident detected suspicious crypto mining activity (Preview)<br/>Security incident detected suspicious fileless attack activity (Preview)<br/>Security incident detected suspicious Kubernetes cluster activity (Preview)<br/>Security incident detected suspicious storage activity (Preview)<br/>Security incident detected suspicious crypto mining activity (Preview)<br/>Security incident detected suspicious data exfiltration activity (Preview)<br/>Security incident detected suspicious Kubernetes cluster activity (Preview)<br/>Security incident detected suspicious DNS activity (Preview)<br/>Security incident detected suspicious SQL activity (Preview)<br/>Security incident detected suspicious DDOS activity (Preview) |
 |September 15|Recommendation|Update|[[Preview] Containers running in GCP should have vulnerability findings resolved](recommendations-reference-container.md#preview-containers-running-in-gcp-should-have-vulnerability-findings-resolved)|
 |September 15|Recommendation|Update|[[Preview] Containers running in AWS should have vulnerability findings resolved](recommendations-reference-container.md#preview-containers-running-in-aws-should-have-vulnerability-findings-resolved)|
