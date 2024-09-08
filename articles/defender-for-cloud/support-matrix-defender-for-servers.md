@@ -5,7 +5,7 @@ ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: dcurwin
 ms.author: dacurwin
-ms.date: 09/05/2024
+ms.date: 09/08/2024
 ---
 
 # Defender for Servers support
@@ -47,12 +47,10 @@ This table summarizes Azure cloud support for Defender for Servers features.
 | [VM vulnerability scanning - Qualys](deploy-vulnerability-assessment-vm.md) | GA | NA | NA |
 | [Just-in-time VM access](./just-in-time-access-usage.yml) | GA | GA | GA |
 | [File integrity monitoring](./file-integrity-monitoring-overview.md)  | GA | GA | GA |
-| [Adaptive application controls](./adaptive-application-controls.md)  | GA | GA | GA |
-| [Adaptive network hardening](./adaptive-network-hardening.md) | GA | NA | NA |
 | [Docker host hardening](./harden-docker-hosts.md)  | GA | GA | GA |
 | [Agentless secret scanning](secrets-scanning.md) | GA | NA | NA |
-| [Agentless malware scanning](agentless-malware-scanning.md) | Preview | NA | NA |
-| [Endpoint detection and response](endpoint-detection-response.md) | Preview | NA | NA |
+| [Agentless malware scanning](agentless-malware-scanning.md) | GA | NA | NA |
+| [Agentless assessment checks for endpoint detection and response solutions](endpoint-detection-response.md) | GA | NA | NA |
 | [System updates and patches](enable-periodic-system-updates.md) | GA | GA | GA |
 
 ## Windows machine support
