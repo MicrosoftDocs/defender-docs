@@ -48,7 +48,7 @@ Microsoft Defender for Endpoint for Linux includes anti-malware and endpoint det
   > Linux distribution using system manager, except for RHEL/CentOS 6.x support both SystemV and Upstart.
 
 - Beginner-level experience in Linux and BASH scripting
-- Administrative privileges on the device (in case of manual deployment)
+- Administrative privileges on the device (for manual deployment)
 
 > [!NOTE]
 > Microsoft Defender for Endpoint on Linux agent is independent from [OMS agent](/azure/azure-monitor/agents/agents-overview#log-analytics-agent). Microsoft Defender for Endpoint relies on its own independent telemetry pipeline.
