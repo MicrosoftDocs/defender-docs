@@ -96,7 +96,7 @@ The procedures in this article first describe how to set the order, and then how
 
 ## Use Group Policy to manage the update location
 
-1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and then select **Edit**.
+1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)). Right-click the Group Policy Object you want to configure and then select **Edit**.
 
 1. In the **Group Policy Management Editor**, go to **Computer configuration**.
 
@@ -135,7 +135,7 @@ Set-MpPreference -SignatureFallbackOrder {LOCATION|LOCATION|LOCATION|LOCATION}
 Set-MpPreference -SignatureDefinitionUpdateFileSharesSource {\\UNC SHARE PATH|\\UNC SHARE PATH}
 ```
 
-See the following articles for more information:
+For more information, see the following articles:
 
 - [Set-MpPreference -SignatureFallbackOrder](/powershell/module/defender/set-mppreference)
 - [Set-MpPreference -SignatureDefinitionUpdateFileSharesSource](/powershell/module/defender/set-mppreference#-signaturedefinitionupdatefilesharessources)
@@ -159,7 +159,7 @@ See the following articles for more information:
 
 See [Policy CSP - Defender/SignatureUpdateFallbackOrder](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder) for details on configuring MDM.
 
-## What if we're using a third-party vendor?
+## What if we're using a non-Microsoft vendor?
 
 This article describes how to configure and manage updates for Microsoft Defender Antivirus. However, you can hire third-party vendors to perform these tasks.
 
