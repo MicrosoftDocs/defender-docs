@@ -78,7 +78,14 @@ In general you need to take the following steps:
 
 ### System requirements
 
-- Supported Linux server distributions and x64 (AMD64/EM64T) and x86_64 versions:
+- Disk space: 2 GB
+> [!NOTE]
+> An additional 2 GB disk space might be needed if cloud diagnostics are enabled for crash collections. Please make sure that you have free disk space in /var.
+- Cores: 2 minimum, 4 preferred
+> [!NOTE]
+> If you are on Passive or RTP ON mode, 2 Cores are minimum and 4 Cores are preferred. If you are turning on BM, then a minimum of 4 Cores is required.
+- Memory: 1 GB minimum, 4 preferred
+- List of supported Linux server distributions and x64 (AMD64/EM64T) and x86_64 versions:
   - Red Hat Enterprise Linux 6.7 or higher (In preview)
   - Red Hat Enterprise Linux 7.2 or higher
   - Red Hat Enterprise Linux 8.x
@@ -97,21 +104,18 @@ In general you need to take the following steps:
   - Oracle Linux 9.x
   - Amazon Linux 2
   - Amazon Linux 2023
-  - Fedora 33-38
-    
+  - Fedora 33-38 
   - Rocky 8.7 and higher
-  - Rocky 9.2 and higher
-    
+  - Rocky 9.2 and higher 
   - Alma 8.4 and higher
-  - Alma 9.2 and higher
-    
+  - Alma 9.2 and higher 
   - Mariner 2
-  
-    > [!NOTE]
-    > Distributions and version that are not explicitly listed are unsupported (even if they are derived from the officially supported distributions).
-    > With RHEL 6 support for 'extended end of life' coming to an end by June 30, 2024; MDE Linux support for RHEL 6 will also be deprecated by June 30, 2024
-    > MDE Linux version 101.23082.0011 is the last MDE Linux release supporting RHEL 6.7 or higher versions (does not expire before June 30, 2024). Customers are advised to plan upgrades to their RHEL 6 infrastructure aligned with guidance from Red Hat.
-    > Microsoft Defender Vulnerablity Management is not supported on Rocky and Alma currently.
+
+  > [!NOTE]
+  > Distributions and version that are not explicitly listed are unsupported (even if they are derived from the officially supported distributions).
+  > With RHEL 6 support for 'extended end of life' coming to an end by June 30, 2024; MDE Linux support for RHEL 6 will also be deprecated by June 30, 2024
+  > MDE Linux version 101.23082.0011 is the last MDE Linux release supporting RHEL 6.7 or higher versions (does not expire before June 30, 2024). Customers are advised to plan upgrades to their RHEL 6 infrastructure aligned with guidance from Red Hat.
+  > Microsoft Defender Vulnerablity Management is not supported on Rocky and Alma currently.
 
 - List of supported kernel versions
 
@@ -161,20 +165,6 @@ In general you need to take the following steps:
   > [!CAUTION]
   > Running Defender for Endpoint on Linux side by side with other `fanotify`-based security solutions is not supported. It can lead to unpredictable results, including hanging the operating system. If there are any other applications on the system that use `fanotify` in blocking mode, applications are listed in the `conflicting_applications` field of the `mdatp health` command output. The Linux **FAPolicyD** feature uses `fanotify` in blocking mode, and is therefore unsupported when running Defender for Endpoint in active mode. You can still safely take advantage of Defender for Endpoint on Linux EDR functionality after configuring the antivirus functionality Real Time Protection Enabled to [Passive mode](linux-preferences.md#enforcement-level-for-antivirus-engine).
 
-- Disk space: 2 GB
-
-  > [!NOTE]
-  > An additional 2 GB disk space might be needed if cloud diagnostics are enabled for crash collections.
-
-- /opt/microsoft/mdatp/sbin/wdavdaemon requires executable permission. For more information, see "Ensure that the daemon has executable permission" in [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](linux-support-install.md).
-
-- Cores: 2 minimum, 4 preferred
-
-- Memory: 1 GB minimum, 4 preferred
-
-    > [!NOTE]
-    > Please make sure that you have free disk space in /var.
-
 - List of supported filesystems for RTP, Quick, Full and Custom Scan.
   
   |RTP, Quick, Full Scan| Custom Scan|
@@ -197,12 +187,14 @@ In general you need to take the following steps:
   |xfs|
 
 
-After you've enabled the service, you m need to configure your network or firewall to allow outbound connections between it and your endpoints.
+After you've enabled the service, you need to configure your network or firewall to allow outbound connections between it and your endpoints.
 
 - Audit framework (`auditd`) must be enabled.
 
   > [!NOTE]
   > System events captured by rules added to `/etc/audit/rules.d/` will add to `audit.log`(s) and might affect host auditing and upstream collection. Events added by Microsoft Defender for Endpoint on Linux will be tagged with `mdatp` key.
+
+- /opt/microsoft/mdatp/sbin/wdavdaemon requires executable permission. For more information, see "Ensure that the daemon has executable permission" in [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](linux-support-install.md).
 
 ### External package dependency
 The following external package dependencies exist for the mdatp package:
