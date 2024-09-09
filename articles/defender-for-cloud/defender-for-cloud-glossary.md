@@ -1,7 +1,7 @@
 ---
 title: Defender for Cloud glossary
 description: The glossary provides a brief description of important Defender for Cloud platform terms and concepts.
-ms.date: 11/08/2023
+ms.date: 09/09/2024
 ms.topic: article
 ---
 
@@ -10,10 +10,6 @@ ms.topic: article
 This glossary provides a brief description of important terms and concepts for the Microsoft Defender for Cloud platform. Select the **Learn more** links to go to related terms in the glossary. This glossary can help you to learn and use the product tools quickly and effectively.
 
 ## A
-
-### **Microsoft Entra ID**
-
-Microsoft Entra ID is a cloud-based identity and access management service. 
 
 ### **ACR Tasks**
 
@@ -196,6 +192,10 @@ Kusto Query Language - a tool to explore your data and discover patterns, identi
 Local Security Authority. Learn about [secure and use policies on virtual machines in Azure](/azure/virtual-machines/security-policy).
 
 ## M
+
+### **Microsoft Entra ID**
+
+Microsoft Entra ID is a cloud-based identity and access management service. 
 
 ### **MCSB**
 
