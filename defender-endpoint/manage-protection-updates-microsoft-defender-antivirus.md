@@ -85,7 +85,7 @@ Each source has typical scenarios that depend on how your network is configured,
 |Microsoft Update|You want your endpoints to connect directly to Microsoft Update. This option is useful for endpoints that irregularly connect to your enterprise network, or if you don't use Windows Server Update Service to manage your updates.|
 |File share|You have non-Internet-connected devices (such as VMs). You can use your Internet-connected VM host to download the updates to a network share, from which the VMs can obtain the updates. See the [VDI deployment guide](deployment-vdi-microsoft-defender-antivirus.md) for how file shares are used in virtual desktop infrastructure (VDI) environments.|
 |Microsoft Configuration Manager|You're using Microsoft Configuration Manager to update your endpoints.|
-|Security intelligence updates and platform updates for Microsoft Defender Antivirus and other Microsoft anti-malware (formerly referred to as MMPC)|[Make sure your devices are updated to support SHA-2](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus). Microsoft Defender Antivirus Security intelligence and platform updates are delivered through Windows Update, and starting Monday October 21, 2019 security intelligence updates and platform updates are SHA-2 signed exclusively. <br/>Download the latest protection updates because of a recent infection or to help provision a strong, base image for [VDI deployment](deployment-vdi-microsoft-defender-antivirus.md). This option should generally be used only as a final fallback source, and not the primary source. It's only be used if updates can't be downloaded from Windows Server Update Service or Microsoft Update for [a specified number of days](manage-outdated-endpoints-microsoft-defender-antivirus.md#set-the-number-of-days-before-protection-is-reported-as-out-of-date).|
+|Security intelligence updates and platform updates for Microsoft Defender Antivirus and other Microsoft anti-malware (formerly referred to as MMPC)|[Make sure your devices are updated to support SHA-2](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus). Microsoft Defender Antivirus Security intelligence and platform updates are delivered through Windows Update, and starting Monday October 21, 2019 security intelligence updates and platform updates are SHA-2 signed exclusively. <br/>Download the latest protection updates because of a recent infection or to help provision a strong, base image for [VDI deployment](deployment-vdi-microsoft-defender-antivirus.md). This option should be used only as a final fallback source, and not the primary source. It's only be used if updates can't be downloaded from Windows Server Update Service or Microsoft Update for [a specified number of days](manage-outdated-endpoints-microsoft-defender-antivirus.md#set-the-number-of-days-before-protection-is-reported-as-out-of-date).|
 
 You can manage the order in which update sources are used with Group Policy, Microsoft Endpoint Configuration Manager, PowerShell cmdlets, and WMI.
 
@@ -98,24 +98,24 @@ The procedures in this article first describe how to set the order, and then how
 
 1. On your Group Policy management machine, open the [Group Policy Management Console](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)), right-click the Group Policy Object you want to configure and then select **Edit**.
 
-2. In the **Group Policy Management Editor**, go to **Computer configuration**.
+1. In the **Group Policy Management Editor**, go to **Computer configuration**.
 
-3. Select **Policies** then **Administrative templates**.
+1. Select **Policies** then **Administrative templates**.
 
-4. Expand the tree to **Windows components** \> **Windows Defender** \> **Signature updates** and then configure the following settings:
+1. Expand the tree to **Windows components** > **Windows Defender** > **Signature updates** and then configure the following settings:
 
    1. Edit the **Define the order of sources for downloading security intelligence updates** setting. Set the option to **Enabled**.
-
+      
    2. Specify the order of sources, separated by a single pipe, for example: `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`, as shown in the following screenshot.
 
       :::image type="content" source="/defender/media/wdav-order-update-sources.png" alt-text="Group policy setting listing the order of sources" lightbox="/defender/media/wdav-order-update-sources.png":::
 
-   3. Select **OK**. This action sets the order of protection update sources.
-
-   4. Edit the **Define file shares for downloading security intelligence updates** setting and then set the option to **Enabled**.
-
-   5. Specify the file share source. If you have multiple sources, specify each source in the order they should be used, separated by a single pipe. Use [standard UNC notation](/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc) for denoting the path, for example: `\\host-name1\share-name\object-name|\\host-name2\share-name\object-name`. If you don't enter any paths, then this source is skipped when the VM downloads updates.
-
+   1. Select **OK**. This action sets the order of protection update sources.
+      
+   1. Edit the **Define file shares for downloading security intelligence updates** setting and then set the option to **Enabled**.
+      
+   1. Specify the file share source. If you have multiple sources, specify each source in the order they should be used, separated by a single pipe. Use [standard UNC notation](/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc) for denoting the path, for example: `\\host-name1\share-name\object-name|\\host-name2\share-name\object-name`. If you don't enter any paths, then this source is skipped when the VM downloads updates.
+      
    6. Select **OK**. This action sets the order of file shares when that source is referenced in the **Define the order of sources...** group policy setting.
 
 > [!NOTE]
