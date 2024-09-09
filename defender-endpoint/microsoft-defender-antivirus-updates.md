@@ -98,6 +98,22 @@ All our updates contain:
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender))
 
+### August-2024 (Platform: 4.18.24080.xxxx | Engine: 1.24080.xxxx)
+
+- Security intelligence update version: **x.x.x.x**
+- Release date: **September 16, 2024** (Engine and Platform)
+- Platform: **4.18.24080.xxxx**
+- Engine: **1.24080.xxxx**
+- Support phase: **Security and Critical Updates**
+
+### What's new
+
+- Added parameter to get-mppreference cmdlet to show default protected folders for CFA (ControlledFolderAccessDefaultProtectedFolders)
+- Fixed a bug with Device Control regarding printer security checks
+- Resolved an issue with platform rollback after an upgrade from Windows 10 to 11
+- Updated volume exclusion configuration after RTP resumes when OOBE phase completes
+- Removed support for Windows RT devices using 32-bit ARM processors that have reached their end-of-servicing date, such as Surface RT
+
 ### July-2024 (Platform: 4.18.24070.5 | Engine: 1.1.24070.3)
 
 - Security intelligence update version: **1.417.14.0**
