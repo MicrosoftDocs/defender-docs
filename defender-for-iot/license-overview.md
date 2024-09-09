@@ -25,11 +25,11 @@ Licenses come in five different sizes, based on the number of devices at the sit
 
 The size of a site is determined by the maximum number of devices per site. Billing is based on the license tier, regardless of the number of devices actually discovered.
 
-## Changing the number of devices for a site after making a purchase  
+## Changing the number of devices for a site
 
-Once a license is purchased, the number of devices can't be adjusted until the renewal period. During the annual license renewal, you change to a different license tier for a site based on your updated discovered device count.
+Once a license is purchased, the number of devices can only be adjusted at the renewal period. During the annual license renewal, you can change to a different license tier for a site based on your updated discovered device count.
 
-## Choosing a license and assessing the number of devices on-site
+## Assessing the number of devices at a site
 
 There are two methods for assessing the number of devices at your site. You could either utilize your OT network monitoring tools to detect and count the devices per site, or use previous knowledge of the number of devices at the site and update the license during the annual license renewal if needed.
 
