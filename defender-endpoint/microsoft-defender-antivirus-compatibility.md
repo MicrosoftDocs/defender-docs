@@ -238,7 +238,7 @@ You can use one of several methods to confirm the state of Microsoft Defender An
 
 ### Use Windows PowerShell to confirm that antivirus protection is running
 
-> [!NOTE]
+> [!IMPORTANT]
 > Use this procedure only to confirm whether antivirus protection is enabled on an endpoint.
 
 1. On a Windows device, open Windows PowerShell.
@@ -246,9 +246,6 @@ You can use one of several methods to confirm the state of Microsoft Defender An
 2. Run following PowerShell cmdlet: `Get-MpComputerStatus | select AMRunningMode`.
 
 3. Review the results. You should see **Normal**, **Passive**, or **EDR Block Mode** if antivirus protection is enabled on the endpoint. 
-
-> [!NOTE]
-> Note that this procedure is only to confirm whether antivirus protection is enabled on an endpoint.
 
 ## More details about Microsoft Defender Antivirus states
 
