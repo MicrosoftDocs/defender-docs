@@ -113,7 +113,7 @@ For passive mode to work on endpoints running Windows Server 2016 and Windows Se
 > [!IMPORTANT]
 > Beginning with [platform version 4.18.2208.0 and later](msda-updates-previous-versions-technical-upgrade-support.md#september-2022-platform-41822097--engine-11197003), if a server is onboarded to Microsoft Defender for Endpoint, [tamper protection](/editor/MicrosoftDocs/microsoft-365-docs-pr/microsoft-365%2Fsecurity%2Fdefender-endpoint%2Fmicrosoft-defender-antivirus-compatibility.md/main/9a5f8a9f-f5b9-cd00-0d21-171936a25b2b/prevent-changes-to-security-settings-with-tamper-protection.md) allows a switch to active mode, but not to passive mode.
 >
-> Note the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is set to active mode, tamper protection prevents it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
+> Notice the modified logic for `ForceDefenderPassiveMode` when tamper protection is enabled: Once Microsoft Defender Antivirus is set to active mode, tamper protection prevents it from going back into passive mode even when `ForceDefenderPassiveMode` is set to `1`.
 
 On Windows Server 2016, Windows Server 2012 R2, Windows Server version 1803 or newer, Windows Server 2019, and Windows Server 2022, if you're using a non-Microsoft antivirus product on an endpoint that *isn't* onboarded to Microsoft Defender for Endpoint, disable/uninstall Microsoft Defender Antivirus manually to prevent problems caused by having multiple antivirus products installed on a server. However, Defender for Endpoint includes capabilities that further extend the antivirus protection that is installed on your endpoint. If you have Defender for Endpoint, you can benefit from running Microsoft Defender Antivirus alongside another antivirus solution.
 
@@ -162,12 +162,12 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 
 ### Notes about protection states
 
-1. When Microsoft Defender Antivirus is in passive mode, real-time protection behaves the following way:
+1. When Microsoft Defender Antivirus is in passive mode, real-time protection behaves in the following ways with Microsoft Endpoint Data Loss Prevention (Endpoint DLP):
 
-|Microsoft Defender Antivirus in passive mode| Real-time protection|
-| -------- | -------- |
-|Microsoft Endpoint Data Loss Prevention (endpoint DLP) is disabled|Disabled.  Doesn't provide any antivirus real-time protection blocking or enforcement.|
-|Microsoft Endpoint Data Loss Prevention (endpoint DLP) is enabled|Enabled for DLP specific functionalities.  Doesn't provide any antivirus real-time protection blocking or enforcement.  Please make sure to add Microsoft Defender Antivirus and Microsoft Defender for Endpoint binaries to the exclusion list of the 3rd party antivirus and/or edr.|
+   |Microsoft Defender Antivirus in passive mode| Real-time protection state|
+   | -------- | -------- |
+   |Endpoint DLP is disabled|Disabled. <br/><br/> Doesn't provide any antivirus real-time protection blocking or enforcement.|
+   |Endpoint DLP is enabled|Enabled for DLP specific functionalities. <br/><br/> Doesn't provide any antivirus real-time protection blocking or enforcement. <br/><br/>Make sure to add Microsoft Defender Antivirus and Microsoft Defender for Endpoint binaries to the exclusion list of the non-Microsoft antivirus or EDR solution.|
 
 2. When Microsoft Defender Antivirus is in passive mode, scans aren't scheduled. If scans *are* scheduled in your configuration, the schedule is ignored. Unless:
 
