@@ -176,7 +176,7 @@ sections:
           How do I upgrade from the retired Trivy vulnerability assessment to the AWS vulnerability assessment powered by Microsoft Defender Vulnerability Management?
         answer: |
 
-          The following steps will remove the single registry recommendation powered by Trivy and add the [new registry and runtime recommendations that are powered by MDVM](agentless-vulnerability-assessment-aws.md).
+          The following steps will remove the single registry recommendation powered by Trivy and add the [new registry and runtime recommendations that are powered by MDVM](agentless-vulnerability-assessment-azure.md).
 
 
           1. Open the relevant AWS connector.

@@ -280,7 +280,7 @@ Microsoft Defender for Containers brings threat detection and advanced defenses 
   - Manually install [Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster) and [extensions](/azure/azure-arc/kubernetes/extensions).
 
 - [Agentless discovery for Kubernetes](defender-for-containers-architecture.md#how-does-agentless-discovery-for-kubernetes-in-gcp-work) provides API-based discovery of your Kubernetes clusters. To enable the **Agentless discovery for Kubernetes** feature, toggle the setting to **On**.
-- The [Agentless Container Vulnerability Assessment](agentless-vulnerability-assessment-gcp.md) provides vulnerability management for images stored in Google Container Registry (GCR) and Google Artifact Registry (GAR) and running images on your GKE clusters. To enable the **Agentless Container Vulnerability Assessment** feature, toggle the setting to **On**.
+- The [Agentless Container Vulnerability Assessment](agentless-vulnerability-assessment-azure.md) provides vulnerability management for images stored in Google Container Registry (GCR) and Google Artifact Registry (GAR) and running images on your GKE clusters. To enable the **Agentless Container Vulnerability Assessment** feature, toggle the setting to **On**.
 
 To configure the Defender for Containers plan:
 
