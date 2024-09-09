@@ -31,12 +31,19 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| September 9 | Deprecation | [Defender for Servers feature deprecation](#defender-for-servers-feature-deprecation) |
 | September 9 | GA | [Spanish National Security Framework (Esquema Nacional de Seguridad (ENS)) added to regulatory compliance dashboard for Azure](#spanish-national-security-framework-esquema-nacional-de-seguridad-ens-added-to-regulatory-compliance-dashboard-for-azure)|
 | September 8 | GA | [Remediate system updates and patches recommendations on your machines](#remediate-system-updates-and-patches-recommendations-on-your-machines)|
 | September 4 | GA | [ServiceNow's integration now includes Configuration Compliance module](#servicenows-integration-now-includes-configuration-compliance-module) |
 | September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
 | September 1 | GA  | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
 |September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
+
+### Defender for Servers feature deprecation
+
+September 9, 2024
+
+Both Adaptive application controls, and Adaptive network hardening are now deprecated.
 
 ### Spanish National Security Framework (Esquema Nacional de Seguridad (ENS)) added to regulatory compliance dashboard for Azure
 
