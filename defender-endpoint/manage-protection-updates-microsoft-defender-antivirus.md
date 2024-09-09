@@ -47,10 +47,10 @@ This article describes how to specify from where updates should be downloaded (t
 
 Typically, you configure endpoints to individually download updates from a primary source followed by other sources in order of priority, based on your network configuration. Updates are obtained from sources in the order you specify. If updates from the current source are out-of-date, the next source in the list is used immediately.
 
-When updates are published, some logic is applied to minimize the size of the update. In most cases, only the differences between the latest update and the update that is currently installed (the set of differences is referred to as the delta) on the device is downloaded and applied. However, the size of the delta depends on two main factors:
+When updates are published, logic is applied to minimize the size of the update. In most cases, only the differences between the latest update and the update that is currently installed is downloaded and applied to the device. The set of differences is referred to as the *delta*. The size of the delta depends on two main factors:
 
 - The age of the last update on the device; and
-- The source used to download and apply updates.
+- The source used to download and apply updates
 
 The older the updates on an endpoint, the larger the download is. However, you must also consider download frequency as well. A more frequent update schedule can result in more network usage, whereas a less-frequent schedule can result in larger file sizes per download.
 
