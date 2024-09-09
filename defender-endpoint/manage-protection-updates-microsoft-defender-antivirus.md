@@ -92,7 +92,7 @@ You can manage the order in which update sources are used with Group Policy, Mic
 > [!IMPORTANT]
 > If you set Windows Server Update Service as a download location, you must approve the updates, regardless of the management tool you use to specify the location. You can set up an automatic approval rule with Windows Server Update Service, which might be useful as updates arrive at least once a day. To learn more, see [synchronize endpoint protection updates in standalone Windows Server Update Service](/configmgr/protect/deploy-use/endpoint-definitions-wsus#to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus).
 
-The procedures in this article first describe how to set the order, and then how to set up the **File share** option if you have enabled it.
+The procedures in this article first describe how to set the order, and then how to set up the **File share** option if it's enabled.
 
 ## Use Group Policy to manage the update location
 
