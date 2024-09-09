@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 09/08/2024
+ms.date: 09/09/2024
 ---
 
 # Manage the sources for Microsoft Defender Antivirus protection updates
@@ -34,7 +34,7 @@ ms.date: 09/08/2024
 Keeping your antivirus protection up to date is critical. There are two components to managing protection updates for Microsoft Defender Antivirus:
 
 - *Where* the updates are downloaded from; and
-- *When* updates are downloaded and applied.
+- *When* updates are downloaded and applied
 
 This article describes how to specify from where updates should be downloaded (this specification is also known as the fallback order). See [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md) article for an overview on how updates work, and how to configure other aspects of updates (such as scheduling updates).
 
