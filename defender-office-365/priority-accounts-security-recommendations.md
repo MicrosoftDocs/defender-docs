@@ -6,7 +6,7 @@ ms.author: chrisda
 author: chrisda
 manager: deniseb
 audience: Admin
-ms.topic: conceptual
+ms.topic: solution-overview
 ms.localizationpriority: medium
 search.appverid:
   - MET150
@@ -112,7 +112,7 @@ After you secure and tag your priority users, you can use the available reports,
 
 Training users with priority accounts can help save those users and your security operations team much time and frustration. Savvy users are less likely to open attachments or click links in questionable email messages, and they're more likely to avoid suspicious websites.
 
-The Harvard Kennedy School [Cybersecurity Campaign Handbook](https://www.belfercenter.org/CyberPlaybook) provides excellent guidance for establishing a strong culture of security awareness within your organization, including training users to identify phishing attacks.
+The Harvard Kennedy School [Cybersecurity Campaign Handbook](https://www.hks.harvard.edu/publications/cybersecurity-campaign-playbook) provides excellent guidance for establishing a strong culture of security awareness within your organization, including training users to identify phishing attacks.
 
 Microsoft 365 provides the following resources to help inform users in your organization:
 
