@@ -5,7 +5,7 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/26/2024
+ms.date: 08/26/2024
 ms.topic: how-to
 ---
 
@@ -61,10 +61,12 @@ In this stage, you configure Defender for IoT to associate OT devices to the sit
 
         Check each location, because Defender for IoT might list your OT devices in more than one suggested location. If this happens, select all of the suggested locations that include an identified OT device. You can select any number of locations. However, you can't edit the list of devices that appear at a specific location.
 
-1. Review the devices and select the suggested sites to add. You might need to select more than one suggested site.
+1. Review the devices and select the suggested sites to associate with the site. You might need to select more than one suggested site.
 
-    :::image type="content" source="media/set-up-sites/site-security-associate-devices-new.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location in the site set-up page of Microsoft Defender for IoT in the Microsoft Defender portal.":::
+    Use the **Group** column to check the ID for each suggested site. Sites with the same ID indicate that the devices are likely located at the same physical location. As these suggested sites are expected to belong to the same site, review and confirm that the devices listed are correct before making your selections and associating the suggested sites.
 
+    :::image type="content" source="media/set-up-sites/site-security-associate-group.png" alt-text="Screenshot showing the associate devices screen and the suggested list of OT devices per location with the Group column in the site set-up page of Microsoft Defender for IoT in the Microsoft Defender portal." lightbox="media/set-up-sites/site-security-associate-group.png":::
+  
 1. Select **Next** to review the site details.
 
 ## Review site details
