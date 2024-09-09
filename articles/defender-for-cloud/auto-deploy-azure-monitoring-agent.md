@@ -91,6 +91,5 @@ As in Log Analytics workspaces, Defender for Servers Plan 2 users are eligible f
 Now that you enabled the Log Analytics agent, check out the features that are supported by the agent:
 
 - [Endpoint protection assessment](endpoint-protection-recommendations-technical.md)
-- [Adaptive application controls](adaptive-application-controls.md)
 - [Fileless attack detection](defender-for-servers-introduction.md#plan-features)
 - [File integrity monitoring](file-integrity-monitoring-enable-ama.md)
