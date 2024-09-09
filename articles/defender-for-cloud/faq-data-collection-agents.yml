@@ -240,7 +240,7 @@ sections:
         answer: |
           AgentlessThe analysis of the snapshots takes place in secure environments managed by Defender for Cloud.
           
-          The environments are regional across multi-cloud, such that snapshots remain at the same cloud region as the VM they originated from (for example – a snapshot of an EC2 instance in US west will be analysed at the same region, without being copied to another region or cloud).
+          The environments are regional across multicloud, such that snapshots remain at the same cloud region as the VM they originated from (for example – a snapshot of an EC2 instance in US west will be analysed at the same region, without being copied to another region or cloud).
           
           The scanning environment where disks are analyzed is volatile, isolated, and highly secure.
       
