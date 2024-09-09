@@ -68,7 +68,7 @@ You can learn more about [Kubernetes data plane hardening](kubernetes-workload-p
 
 Defender for Containers scans the container images in Azure Container Registry (ACR), Amazon AWS Elastic Container Registry (ECR), Google Artifact Registry (GAR), and Google Container Registry (GCR) to provide agentless vulnerability assessment for your container images, including registry and runtime recommendations, remediation guidance, quick scans of new images, real-world exploit insights, exploitability insights, and more.
 
-Now for [public preview in the AKS environment](agentless-vulnerability-assessment-azure#how-vulnerability-assessment-for-images-and-containers-works), Defender for Containers also performs a daily scan of all running containers to provide updated vulnerability assessment, agnostic to the container's image registry.
+Now for [public preview in the AKS environment](agentless-vulnerability-assessment-azure.md#how-vulnerability-assessment-for-images-and-containers-works), Defender for Containers also performs a daily scan of all running containers to provide updated vulnerability assessment, agnostic to the container's image registry.
 
 Vulnerability information powered by Microsoft Defender Vulnerability Management is added to the [cloud security graph](concept-attack-path.md#what-is-cloud-security-graph) for contextual risk, calculation of attack paths, and hunting capabilities.
 
