@@ -772,12 +772,8 @@
         href: defender-for-containers-architecture.md
       - name: Vulnerability assessments (Defender Vulnerability Management)
         items:
-          - name: Vulnerability assessments for images and containers
+          - name: Vulnerability assessments for supported environments
             href: agentless-vulnerability-assessment-azure.md
-          - name: Vulnerability assessments for AWS
-            href: agentless-vulnerability-assessment-aws.md
-          - name: Vulnerability assessments for GCP
-            href: agentless-vulnerability-assessment-gcp.md
           - name: Vulnerability assessments for Docker Hub
             href: agentless-vulnerability-assessment-docker-hub.md
           - name: Enable vulnerability assessments
