@@ -25,6 +25,15 @@ Security Exposure Management is currently in public preview.
 >
 > `https://aka.ms/msem/rss`
 
+## September 2024
+
+### Proactively manage your security posture
+
+Read how the *ExposureGraphEdges* and *ExposureGraphNodes* tables in Advanced Hunting helps your organizations proactively manage and understand your security posture by analyzing asset relationships and potential vulnerabilities.
+
+**Blog** - [Microsoft Security Exposure Management Graph: Prioritization is the king](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-security-exposure-management-graph-prioritization-is/ba-p/4160316)
+For more information, see, [Query the enterprise exposure graph](query-enterprise-exposure-graph.md)
+
 ## August 2024
 
 ### New predefined classifications
