@@ -255,7 +255,7 @@ You can use one of several methods to confirm the state of Microsoft Defender An
 The following sections describe what to expect when Microsoft Defender Antivirus is:
 
 - [In active mode](#active-mode)
-- [In passive mode, or when EDR in block mode is turned on](#passive-mode-or-edr-block-mode)
+- [In passive mode, or when EDR in block mode is turned on](#passive-mode-or-edr-in-block-mode)
 - [Disabled or uninstalled](#disabled-or-uninstalled)
 
 ### Active mode
