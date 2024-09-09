@@ -62,7 +62,7 @@ The following table summarizes what to expect:
 |Windows version|Primary antivirus/antimalware solution|Microsoft Defender Antivirus state|
 |---|---|---|
 |Windows 10 <br/>Windows 11|Microsoft Defender Antivirus|Active mode|
-|Windows 10 <br/>Windows 11|A non-Microsoft antivirus/antimalware solution|Disabled mode (happens automatically) <br/><br/> Note that in Windows 11, if SmartAppControl is enabled, Microsoft Defender Antivirus goes into passive mode.|
+|Windows 10 <br/>Windows 11|A non-Microsoft antivirus/antimalware solution|Disabled mode (happens automatically) <br/><br/> In Windows 11, if SmartAppControl is enabled, Microsoft Defender Antivirus goes into passive mode.|
 |Windows Server 2022 <br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 <br/>Windows Server 2012 R2 |Microsoft Defender Antivirus|Active mode|
 |Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 |A non-Microsoft antivirus/antimalware solution|Disabled<br/>(set manually; see the note that follows this table) |
 
@@ -80,7 +80,7 @@ If the device is onboarded to Microsoft Defender for Endpoint, you can use Micro
 
 Whether Microsoft Defender Antivirus runs in active mode, passive mode, or is disabled depends on several factors, such as:
 
-- Which version of Windows is installed on an endpoint
+- The version of Windows installed on an endpoint
 - Whether Microsoft Defender Antivirus is the primary antivirus/antimalware solution on the endpoint
 - Whether the endpoint is onboarded to Defender for Endpoint
 
@@ -166,8 +166,8 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 
    |Microsoft Defender Antivirus in passive mode| Real-time protection state|
    | -------- | -------- |
-   |Endpoint DLP is disabled|Disabled. <br/><br/> Doesn't provide any antivirus real-time protection blocking or enforcement.|
-   |Endpoint DLP is enabled|Enabled for DLP specific functionalities. <br/><br/> Doesn't provide any antivirus real-time protection blocking or enforcement. <br/><br/>Make sure to add Microsoft Defender Antivirus and Microsoft Defender for Endpoint binaries to the exclusion list of the non-Microsoft antivirus or EDR solution.|
+   |Endpoint DLP is disabled|Disabled <br/><br/> Doesn't provide any antivirus real-time protection blocking or enforcement.|
+   |Endpoint DLP is enabled|Enabled for DLP specific functionalities <br/><br/> Doesn't provide any antivirus real-time protection blocking or enforcement. <br/><br/>Make sure to add Microsoft Defender Antivirus and Microsoft Defender for Endpoint binaries to the exclusion list of the non-Microsoft antivirus or EDR solution.|
 
 2. When Microsoft Defender Antivirus is in passive mode, scans aren't scheduled. If scans *are* scheduled in your configuration, the schedule is ignored. Unless:
 
@@ -262,7 +262,7 @@ The following sections describe what to expect when Microsoft Defender Antivirus
 
 In active mode, Microsoft Defender Antivirus is used as the antivirus app on the machine. Settings that are configured by using Configuration Manager, Group Policy, Microsoft Intune, or other management products apply. Files are scanned, threats are remediated, and detection information is reported in your configuration tool (such as in the Microsoft Intune admin center or the Microsoft Defender Antivirus app on the endpoint).  
 
-### Passive mode or EDR Block mode
+### Passive mode or EDR in block mode
 
 In passive mode, Microsoft Defender Antivirus isn't used as the antivirus app, and threats aren't* remediated by Microsoft Defender Antivirus. However, [Endpoint detection and response (EDR) in block mode](edr-in-block-mode.md) can remediate threats. Files are scanned by EDR, and reports are provided for threat detections that are shared with the Defender for Endpoint service. You might see alerts showing Microsoft Defender Antivirus as a source, even when Microsoft Defender Antivirus is in passive mode. 
 
