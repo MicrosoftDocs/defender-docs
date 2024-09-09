@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 08/01/2024
+ms.date: 09/09/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -27,17 +27,116 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 <!-- 5. Under the relevant month, add a short paragraph about the new feature. Give the paragraph an H3 (###) heading. Keep the title short and not rambling. -->
 <!-- 6. In the Update column, add a bookmark to the H3 paragraph that you created (#<bookmark-name>) .-->
 
+## September 2024
+
+|Date | Category | Update|
+|--|--|--|
+| September 9 | Deprecation | [Defender for Servers feature deprecation](#defender-for-servers-feature-deprecation) |
+| September 9 | GA | [Spanish National Security Framework (Esquema Nacional de Seguridad (ENS)) added to regulatory compliance dashboard for Azure](#spanish-national-security-framework-esquema-nacional-de-seguridad-ens-added-to-regulatory-compliance-dashboard-for-azure)|
+| September 8 | GA | [Remediate system updates and patches recommendations on your machines](#remediate-system-updates-and-patches-recommendations-on-your-machines)|
+| September 4 | GA | [ServiceNow's integration now includes Configuration Compliance module](#servicenows-integration-now-includes-configuration-compliance-module) |
+| September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
+| September 1 | GA  | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
+|September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
+
+### Defender for Servers feature deprecation
+
+September 9, 2024
+
+Both Adaptive application controls, and Adaptive network hardening are now deprecated.
+
+### Spanish National Security Framework (Esquema Nacional de Seguridad (ENS)) added to regulatory compliance dashboard for Azure
+
+September 9, 2024
+
+Organizations that wish to check their Azure environments for compliance with the ENS standard can now do so using Defender for Cloud.
+
+The ENS standard applies to the entire public sector in Spain, as well as to suppliers collaborating with the Administration. It establishes basic principles, requirements, and security measures to protect information and services processed electronically. The goal is to ensure access, confidentiality, integrity, traceability, authenticity, availability, and data preservation.
+
+Check out the [full list of supported compliance standards](concept-regulatory-compliance-standards.md#available-compliance-standards).
+
+
+### Remediate system updates and patches recommendations on your machines
+
+September 8, 2024
+
+You can now remediate system updates and patches recommendations on your Azure Arc-enabled machines and Azure VMs. System updates and patches are crucial for keeping the security and health of your machines. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
+
+Information about missing machine updates is now gathered using Azure Update Manager.
+
+In order to maintain the security of your machines for system updates and patches, you'll need to enable the periodic assessment updates settings on your machines.
+
+Learn how to [Remediate system updates and patches recommendations on your machines](enable-periodic-system-updates.md).
+
+### ServiceNow's integration now includes Configuration Compliance module
+
+September 4, 2024
+
+Defender for Cloud's CSPM plan's integration with ServiceNow now includes ServiceNow's Configuration Compliance module. This feature allows you to identify, prioritize, and remediate configuration issues in your cloud assets while reducing security risks and improving your overall compliance posture through automated workflows and real-time insights.
+
+Learn more about [ServiceNow's integration with Defender for Cloud](integration-servicenow.md).
+
+### Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions
+
+September 4, 2024
+
+**Estimated date for change**: February 5, 2025
+
+After February 5, 2025, you won't be able to activate the legacy Defender for Storage (classic) per-transaction storage protection plan unless it's already enabled in your subscription. For more information, see [Move to the new Defender for Storage plan](defender-for-storage-classic-migrate.md).
+
+### Azure Policy guest configuration is now generally available (GA)
+
+September 1, 2024
+
+Defender for Server's Azure Policy guest configuration is now generally available (GA) for all multicloud Defender for Servers Plan 2 customers. Guest Configuration provides a unified experience for managing security baselines across your environment. It enables you to assess and enforce security configurations on your servers, including Windows and Linux machines, Azure VMs, AWS EC2, and GCP instances.
+
+Learn how to [enable Azure Policy guest configuration on your environment](configure-servers-coverage.md#enable-azure-policy-guest-configuration).
+
+### Public Preview for Docker Hub container registry support by Defender for Containers
+
+September 1, 2024
+
+We are introducing the public preview of the Microsoft Defender for Containers extension of coverage to include external registries, beginning with Docker Hub container registries. As part of your organization's Microsoft Cloud Security Posture Management, the extension of coverage to Docker Hub container registries provides the benefits of scanning your Docker Hub container images  using Microsoft Defender Vulnerability Management to identify security threats and mitigate potential security risks.
+
+For more information about this feature, see [Vulnerability Assessment for Docker Hub](agentless-vulnerability-assessment-docker-hub.md)
+
 ## August 2024
 
 |Date | Category | Update|
 |--|--|--|
+| August 28 | Preview | [New version of File Integrity Monitoring based on Microsoft Defender for Endpoint](#new-version-of-file-integrity-monitoring-based-on-microsoft-defender-for-endpoint) |
+| August 22 | Upcoming deprecation | [Retirement of Defender for Cloud alert integration with Azure WAF alerts](#retirement-of-defender-for-cloud-alert-integration-with-azure-waf-alerts) |
 | August 1 | GA | [Enable Microsoft Defender for SQL servers on machines at scale](#enable-microsoft-defender-for-sql-servers-on-machines-at-scale) |
+
+### New version of File Integrity Monitoring based on Microsoft Defender for Endpoint
+
+August 28, 2024
+
+The new version of File Integrity Monitoring based on Microsoft Defender for Endpoint is now in public preview. It's part of Defender for Servers Plan 2. It enables you to:
+
+- Meet compliance requirements by monitoring critical files and registries in real-time and auditing the changes.
+- Identify potential security issues by detecting suspicious file content changes.
+
+As part of this release, the [FIM experience over AMA](file-integrity-monitoring-enable-ama.md) will no longer be available in the Defender for Cloud portal.
+The [FIM experience over MMA](file-integrity-monitoring-enable-log-analytics.md) will remain supported until the end of November 2024.
+In the beginning of September, an in-product experience will be released which allows you to migrate your FIM configuration over MMA to the new FIM over Defender for Endpoint version.
+
+For information on how to enable FIM over Defender for Endpoint, see [File Integrity Monitoring using Microsoft Defender for Endpoint](file-integrity-monitoring-enable-defender-endpoint.md).
+For information on how to migrate from previous versions, see [Migrate File Integrity Monitoring from previous versions](migrate-file-integrity-monitoring.md).
+
+### Retirement of Defender for Cloud alert integration with Azure WAF alerts
+
+August 22, 2024
+
+**Estimated date for change**: September 25, 2024
+
+Defender for Cloud alert [integration](other-threat-protections.md#display-azure-waf-alerts-in-defender-for-cloud) with Azure WAF alerts will be retired on September 25, 2024. No action is needed on your end. For Sentinel customers, you can configure the Azure Web Application Firewall [connector](/azure/web-application-firewall/waf-sentinel).
 
 ### Enable Microsoft Defender for SQL servers on machines at scale
 
 August 1, 2024
 
-You can now enable Microsoft Defender for SQL servers on machines at scale. This feature allows you to enable Microsoft Defender for SQL on multiple servers at once, saving time and effort. 
+You can now enable Microsoft Defender for SQL servers on machines at scale. This feature allows you to enable Microsoft Defender for SQL on multiple servers at once, saving time and effort.
 
 Learn how to [enable Microsoft Defender for SQL servers on machines at scale](enable-defender-sql-at-scale.md).
 
@@ -47,7 +146,7 @@ Learn how to [enable Microsoft Defender for SQL servers on machines at scale](en
 | ------- | --------------- | ------------------------------------------------------------ |
 | July 31 | GA              | [General availability of enhanced discovery and configuration recommendations for endpoint protection](#general-availability-of-enhanced-discovery-and-configuration-recommendations-for-endpoint-protection) |
 | July 31 | Upcoming update | [Adaptive network hardening deprecation](#adaptive-network-hardening-deprecation) |
-| July 22 | Preview         | [Security assessments for GitHub no longer requires additional licensing](#preview-security-assessments-for-github-no-longer-requires-additional-licensing) |
+| July 22 | Preview         | [Security assessments for GitHub no longer require additional licensing](#preview-security-assessments-for-github-no-longer-require-additional-licensing) |
 | July 18 | Upcoming update | [Updated timelines toward MMA deprecation in Defender for Servers Plan 2](#updated-timelines-toward-mma-deprecation-in-defender-for-servers-plan-2) |
 | July 18 | Upcoming update | [Deprecation of MMA-related features as part of agent retirement](#deprecation-of-mma-related-features-as-part-of-agent-retirement) |
 | July 15 | Preview         | [Binary Drift Public Preview in Defender for Containers](#binary-drift-public-preview-now-available-in-defender-for-containers) |
@@ -74,7 +173,7 @@ With this general availability release, the list of [supported solutions](/azure
 
 July 31, 2024
 
-**Estimated date for change: August 31, 2024**
+**Estimated date for change**: August 31, 2024
 
 Defender for Server's adaptive network hardening is being deprecated.
 
@@ -83,7 +182,7 @@ The feature deprecation includes the following experiences:
 - **Recommendation**: [Adaptive network hardening recommendations should be applied on internet facing virtual machines](recommendations-reference-networking.md#adaptive-network-hardening-recommendations-should-be-applied-on-internet-facing-virtual-machines) [assessment Key: f9f0eed0-f143-47bf-b856-671ea2eeed62]
 - **Alert**: [Traffic detected from IP addresses recommended for blocking](alerts-azure-network-layer.md#traffic-detected-from-ip-addresses-recommended-for-blocking)
 
-### Preview: Security assessments for GitHub no longer requires additional licensing
+### Preview: Security assessments for GitHub no longer require additional licensing
 
 July 22, 2024
 
@@ -174,7 +273,7 @@ Those standards included CIS Google Kubernetes Engine (GKE) Benchmark, ISO/IEC 2
 
 Those preview standards are now generally available (GA).
 
-Check out the [full list of supported compliance standards](concept-regulatory-compliance-standards.md#available-compliance-standards)
+Check out the [full list of supported compliance standards](concept-regulatory-compliance-standards.md#available-compliance-standards).
 
 ### Inventory experience improvement
 
@@ -612,7 +711,7 @@ Azure Kubernetes Service (AKS) threat detection features in Defender for Contain
 
 February 20, 2024
 
-[A new version](/azure/aks/supported-kubernetes-versions#aks-kubernetes-release-calendar) of the [Defender sensor for Defender for Containers](tutorial-enable-containers-azure.md#deploy-the-defender-sensor-in-azure) is available. It includes performance and security improvements, support for both AMD64 and ARM64 arch nodes (Linux only), and uses [Inspektor Gadget](https://www.inspektor-gadget.io/) as the process collection agent instead of Sysdig. The new version is only supported on Linux kernel versions 5.4 and higher, so if you have older versions of the Linux kernel, you need to upgrade. Support for ARM64 is only available from AKS V1.29 and above. For more information, see [Supported host operating systems](support-matrix-defender-for-containers.md#supported-host-operating-systems).
+[A new version](/azure/aks/supported-kubernetes-versions#aks-kubernetes-release-calendar) of the [Defender sensor for Defender for Containers](tutorial-enable-containers-azure.md#deploy-the-defender-sensor-in-azure) is available. It includes performance and security improvements, support for both AMD64 and Arm64 arch nodes (Linux only), and uses [Inspektor Gadget](https://www.inspektor-gadget.io/) as the process collection agent instead of Sysdig. The new version is only supported on Linux kernel versions 5.4 and higher, so if you have older versions of the Linux kernel, you need to upgrade. Support for Arm64 is only available from AKS V1.29 and above. For more information, see [Supported host operating systems](support-matrix-defender-for-containers.md#supported-host-operating-systems).
 
 ### Update: Open Container Initiative (OCI) image format specification support
 

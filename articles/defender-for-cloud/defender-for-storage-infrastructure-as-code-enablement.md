@@ -8,7 +8,7 @@ ms.topic: how-to
 
 # Enable and configure with Infrastructure as Code templates
 
-We recommend that you enable Defender for Storage on the subscription level. Doing so ensures all storage accounts in the subscription will be protected, including future ones.
+We recommend that you enable Defender for Storage on the subscription level. Doing so ensures all storage accounts currently in the subscription will be protected. Storage accounts that are created after enabling Defender for Storage on the subscription level will be protected up to 24 hours after creation.
 
 > [!TIP]
 > You can always [configure specific storage accounts](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-subscription#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level (override subscription-level settings).

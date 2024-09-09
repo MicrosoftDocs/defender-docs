@@ -7,7 +7,7 @@ ms.date: 08/15/2023
 
 # Enable and configure with the Azure portal
 
-We recommend that you enable Defender for Storage on the subscription level. Doing so ensures all current and future storage accounts in the subscription are protected.
+We recommend that you enable Defender for Storage on the subscription level. Doing so ensures all storage accounts currently in the subscription will be protected. Storage accounts that are created after enabling Defender for Storage on the subscription level will be protected up to 24 hours after creation.
 
 > [!TIP]
 > You can always [configure specific storage accounts](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-subscription.md#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level (override subscription-level settings).
@@ -22,6 +22,7 @@ To enable Defender for Storage at the subscription level using the Azure portal:
 
     :::image type="content" source="media/defender-for-storage-malware-scan/azure-portal-enablement-subscription.png" alt-text="Screenshot that shows where to select the subscription." lightbox="media/defender-for-storage-malware-scan/azure-portal-enablement-subscription.png":::
 
+1. Select the three dots on the right and then choose the **Edit settings** option.
 1. On the Defender plans page, locate **Storage** in the list and select **On** and **Save**. If you currently have Defender for Storage enabled with per-transaction pricing, select the **New pricing plan available** link and confirm the pricing change.
 
     :::image type="content" source="media/defender-for-storage-malware-scan/azure-portal-enablement-turn-on.png" alt-text="Screenshot that shows where to turn on Storage plan." lightbox="media/defender-for-storage-malware-scan/azure-portal-enablement-turn-on.png":::

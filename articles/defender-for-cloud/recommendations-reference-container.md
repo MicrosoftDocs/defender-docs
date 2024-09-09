@@ -181,6 +181,10 @@ Recommendation [Azure running container images should have vulnerabilities resol
 
 The new recommendation is in preview and not used for secure score calculation.
 
+> [!NOTE]
+> Starting in mid-September, this recommendation will be updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
+>To support this improvement the assessment key for this recommendation will be updated to `c5045ea3-afc6-4006-ab8f-86c8574dbf3d`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the assessment key once it is updated.
+
 **Severity**: High
 
 **Type**: Vulnerability Assessment
@@ -385,6 +389,10 @@ Recommendation [AWS running container images should have vulnerability findings 
 
 The new recommendation is in preview and not used for secure score calculation.
 
+> [!NOTE]
+> Starting in mid-September, this recommendation will be updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
+>To support this improvement the assessment key for this recommendation will be updated to `8749bb43-cd24-4cf9-848c-2a50f632043c`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the assessment key once it is updated. 
+
 **Severity**: High
 
 **Type**: Vulnerability Assessment
@@ -447,6 +455,10 @@ The new recommendation is in preview and not used for secure score calculation.
 Recommendation [GCP running container images should have vulnerability findings resolved (powered by Microsoft Defender Vulnerability Management) - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security_CloudNativeCompute/GcpContainersRuntimeRecommendationDetailsBlade/assessmentKey/e538731a-80c8-4317-a119-13075e002516) will be removed when the new recommendation is generally available. 
 
 The new recommendation is in preview and not used for secure score calculation.
+
+> [!NOTE]
+> Starting in mid-September, this recommendation will be updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
+>To support this improvement the assessment key for this recommendation will be updated to `1b3abfa4-9e53-46f1-9627-51f2957f8bba`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the assessment key once it is updated. 
 
 **Severity**: High
 
@@ -533,9 +545,19 @@ Learn more about [Microsoft Defender for Cloud's security features for container
 
 **Severity**: Medium
 
-### Data plane recommendations
+## Data plane recommendations
 
 All the [Kubernetes data plane security recommendations](kubernetes-workload-protections.md#view-and-configure-the-bundle-of-recommendations) are supported for GCP after you [enable Azure Policy for Kubernetes](kubernetes-workload-protections.md#enable-kubernetes-data-plane-hardening).
+
+## External container registries recommendations
+
+### [[Preview] Container images in Docker Hub registry should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/f064651f-2459-47f2-9731-0c5a782891d3)
+
+**Description**: Defender for Cloud scans your registry images for known vulnerabilities (CVEs) and provides detailed findings for each scanned image. Remediating vulnerabilities in container images helps maintain a secure and reliable software supply chain, reduces the risk of security incidents, and ensures compliance with industry standards.",
+
+**Severity**: High
+
+**Type**: Vulnerability Assessment
 
 ## Related content
 

@@ -25,7 +25,7 @@ Learn more about [Defender for APIs](defender-for-apis-introduction.md).
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
-- Review [Defender for APIs support, permissions, and requirements](defender-for-apis-introduction.md) before you begin deployment.
+- Review [Defender for APIs support, permissions, and requirements](defender-for-apis-prepare.md) before you begin deployment.
 
 - You enable Defender for APIs at the subscription level.
 
