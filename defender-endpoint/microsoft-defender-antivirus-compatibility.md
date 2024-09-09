@@ -60,7 +60,7 @@ In general, Microsoft Defender Antivirus doesn't run in passive mode on devices 
 The following table summarizes what to expect:
 
 |Windows version|Primary antivirus/antimalware solution|Microsoft Defender Antivirus state|
-|:---|:---|:---|
+|---|---|---|
 |Windows 10 <br/>Windows 11|Microsoft Defender Antivirus|Active mode|
 |Windows 10 <br/>Windows 11|A non-Microsoft antivirus/antimalware solution|Disabled mode (happens automatically) <br/><br/> Note that in Windows 11, if SmartAppControl is enabled, Microsoft Defender Antivirus goes into passive mode.|
 |Windows Server 2022 <br/>Windows Server 2019<br/>Windows Server, version 1803, or newer <br/>Windows Server 2016 <br/>Windows Server 2012 R2 |Microsoft Defender Antivirus|Active mode|
@@ -146,7 +146,7 @@ Defender for Endpoint affects whether Microsoft Defender Antivirus can run in pa
 > - **Do not turn off capabilities**, such as real-time protection, cloud-delivered protection, or limited periodic scanning if you are using Microsoft Defender Antivirus in passive mode, or if you are using [EDR in block mode](edr-in-block-mode.md), which works behind the scenes to detect and remediate malicious artifacts that were detected post-breach.
 
 | Protection | Microsoft Defender Antivirus <br/>(*Active mode*) | Microsoft Defender Antivirus <br/>(*Passive mode*) | Microsoft Defender Antivirus <br/>(*Disabled or uninstalled*) |
-|:---|:---|:---|:---|
+|---|---|---|---|
 | [Real-time protection](configure-real-time-protection-microsoft-defender-antivirus.md) | Yes | [See note 1](#notes-about-protection-states) | No |
 | [Cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md) | Yes | No  | No |
 | [Network protection](network-protection.md)  | Yes | No | No |
