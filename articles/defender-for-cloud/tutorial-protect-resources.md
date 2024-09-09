@@ -8,7 +8,7 @@ ms.date: 06/29/2023
 ---
 # Protect your Virtual Machines (VMs) with Microsoft Defender for Servers
 
-Defender for Servers in Microsoft Defender for Cloud, limits your exposure to threats by using access and application controls to block malicious activity. Just-in-time (JIT) virtual machine (VM) access reduces your exposure to attacks by enabling you to deny persistent access to VMs. Instead, you provide controlled and audited access to VMs only when needed. Adaptive application controls help harden VMs against malware by controlling which applications can run on your VMs. Defender for Cloud uses machine learning to analyze the processes running in the VM and helps you apply allowlist rules using this intelligence.
+Defender for Servers in Microsoft Defender for Cloud, limits your exposure to threats by using access and application controls to block malicious activity. Just-in-time (JIT) virtual machine (VM) access reduces your exposure to attacks by enabling you to deny persistent access to VMs. Instead, you provide controlled and audited access to VMs only when needed. Defender for Cloud uses machine learning to analyze the processes running in the VM and helps you apply allowlist rules using this intelligence.
 
 In this tutorial you'll learn how to:
 
@@ -29,11 +29,6 @@ Management ports don't need to be open always. They only need to be open while y
 
 Follow the guidance in [Secure your management ports with just-in-time access](just-in-time-access-usage.yml).
 
-## Harden VMs against malware
-
-Adaptive application controls help you define a set of applications that are allowed to run on configured resource groups, which among other benefits helps harden your VMs against malware. Defender for Cloud uses machine learning to analyze the processes running in the VM and helps you apply allowlist rules using this intelligence.
-
-Follow the guidance in [Use adaptive application controls to reduce your machines' attack surfaces](adaptive-application-controls.md).
 
 ## Next steps
 
@@ -42,7 +37,7 @@ In this tutorial, you learned how to limit your exposure to threats by:
 > [!div class="checklist"]
 >
 > * Configuring a just-in-time VM access policy to provide controlled and audited access to VMs only when needed
-> * Configuring an adaptive application controls policy to control which applications can run on your VMs
+
 
 Advance to the next tutorial to learn about responding to security incidents.
 

@@ -66,9 +66,7 @@ The following table shows feature support for Windows machines in Azure, Azure A
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - | Yes |
 | [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ | Yes |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ | Yes |
-| [Adaptive application controls](adaptive-application-controls.md) | ✔ | ✔ | Yes |
 | [Network map](protect-network-resources.md#network-map) | ✔ | - | Yes |
-| [Adaptive network hardening](adaptive-network-hardening.md) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
 | [Docker host hardening](./harden-docker-hosts.md) | - | - | Yes |
 | [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
@@ -92,9 +90,7 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - | Yes |
 | [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ | Yes |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ | Yes |
-| [Adaptive application controls](adaptive-application-controls.md) | ✔ | ✔ | Yes |
 | [Network map](protect-network-resources.md#network-map) | ✔ | - | Yes |
-| [Adaptive network hardening](adaptive-network-hardening.md) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
 | [Docker host hardening](./harden-docker-hosts.md) | ✔ | ✔ | Yes |
 | [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
@@ -118,9 +114,7 @@ The following table shows feature support for AWS and GCP machines.
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - |
 | [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ |
-| [Adaptive application controls](adaptive-application-controls.md) | ✔ | ✔ |
 | [Network map](protect-network-resources.md#network-map) | - | - |
-| [Adaptive network hardening](adaptive-network-hardening.md) | - | - |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ |
 | [Docker host hardening](harden-docker-hosts.md) | ✔ | ✔ |
 | [Missing OS patches assessment](apply-security-baseline.md)| ✔ | ✔ |
