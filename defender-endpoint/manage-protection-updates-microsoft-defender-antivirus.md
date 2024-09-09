@@ -161,7 +161,7 @@ See [Policy CSP - Defender/SignatureUpdateFallbackOrder](/windows/client-managem
 
 ## What if we're using a non-Microsoft vendor?
 
-This article describes how to configure and manage updates for Microsoft Defender Antivirus. However, you can hire third-party vendors to perform these tasks.
+This article describes how to configure and manage updates for Microsoft Defender Antivirus. However, you can hire non-Microsoft vendors to perform these tasks.
 
 For example, suppose that Contoso has hired Fabrikam to manage their security solution, which includes Microsoft Defender Antivirus. Fabrikam typically uses [Windows Management Instrumentation](./use-wmi-microsoft-defender-antivirus.md), [PowerShell cmdlets](./use-powershell-cmdlets-microsoft-defender-antivirus.md), or [Windows command-line](./command-line-arguments-microsoft-defender-antivirus.md) to deploy patches and updates.
 
@@ -246,7 +246,7 @@ Set up a network file share (UNC/mapped drive) to download security intelligence
    > [!NOTE]
    > When the scheduled tasks are created, you can find these in the Task Scheduler under `Microsoft\Windows\Windows Defender`.
 
-9. Run each task manually and verify that you have data (`mpam-d.exe`, `mpam-fe.exe`, and `nis_full.exe`) in the following folders (you might have chosen different locations):
+9. Run each task manually and verify that you have data (`mpam-d.exe`, `mpam-fe.exe`, and `nis_full.exe`) in the following folders (you might use different locations):
 
    - `C:\Temp\TempSigs\x86`
    - `C:\Temp\TempSigs\x64`
