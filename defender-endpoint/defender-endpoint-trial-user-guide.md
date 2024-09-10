@@ -115,7 +115,7 @@ After you have onboarded devices, [run a detection test](run-detection-test.md).
 
 ## Step 6: Visit the Microsoft Defender portal
 
-The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is a central location where you can view onboarded devices, security recommendations, detected threats, alerts, and more. To get started, see [Microsoft Defender portal](../defender-xdr/microsoft-365-defender-portal.md).   
+The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is a central location where you can view onboarded devices, security recommendations, detected threats, alerts, and more. To get started, see [Microsoft Defender portal](/defender-xdr/microsoft-365-defender-portal).   
 
 
 ## See also
