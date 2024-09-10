@@ -578,6 +578,9 @@ What you see on the **Schedule details** page depends on whether you selected **
 
   - **Automation end** section: Use **Select the date you want the automations to end** to select the end date for the simulations. You can select any future date of upto a year.
 
+    > [!TIP]
+    > Only one simulation is launched in a day, so we recommend selecting at least as many days as you'd like the simulations to run.
+
 - **Fixed** simulation schedule: The following settings are available:
   - **Automation start** section: Use **Select the date you want the simulations to start from** to select the start date for the simulations. You can select any future date of upto a year.
 
