@@ -36,6 +36,20 @@ The following table summarizes how Defender for Servers features will be provide
 | OS misconfigurations (Microsoft Cloud Security Benchmark) | Recommendations that are  available through the Foundational CSPM and Defender for Servers plans using the Log Analytics agent, Guest Configuration extension (Preview). | Guest Configuration extension, as part of Defender for Servers Plan 2.| - Functionality based on Guest Configuration extension will be released to GA in September 2024<br/>- For Defender for Cloud customers only: functionality with the Log Analytics agent will be deprecated in November 2024.<br/>- Support of this feature for Docker-hub and Azure Virtual Machine Scale Sets will be deprecated in Aug 2024.|
 | File integrity monitoring | Log Analytics agent, AMA (Preview) | Defender for Endpoint agent integration | Functionality with the Defender for Endpoint agent will be available in August 2024.<br/>- For Defender for Cloud customers only: functionality with the Log Analytics agent will be deprecated in November 2024.<br/>- Functionality with AMA will deprecate when the Defender for Endpoint integration is released.|
 
+### Log analytics agent autoprovisioning experience - deprecation plan
+
+
+
+As part of the MMA agent retirement, the auto provisioning capability that provides the installation and configuration of the agent for MDC customers, will be deprecated as well in 2 stages: 
+
+1. **By the end of September 2024**- auto provisioning of MMA will be disabled for customers that are no longer using the capability, as well as for newly created subscriptions:​
+
+- **Existing subscriptions** that switch off MMA auto provisioning after end of September will no longer be able to enable the capability afterwards.​
+
+  - On **newly created subscriptions** auto provisioning can no longer be enabled and is automatically turned off.​
+
+2. **End of November 202-** the capability will be disabled on subscriptions that have not yet switched it off. From that point forward, it can no longer be possible to enable the capability on existing subscriptions.
+
 ### The 500-MB benefit for data ingestion
 
 To preserve the 500 MB of free data ingestion allowance for the [supported data types](faq-defender-for-servers.yml#is-the-500-mb-of-free-data-ingestion-allowance-applied-per-workspace-or-per-machine-), you need to migrate from MMA to AMA.
