@@ -4,7 +4,7 @@ description: Learn how to enable File Integrity Monitor when you collect data wi
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 08/11/2024
+ms.date: 09/09/2024
 ---
 
 # File Integrity Monitoring using Microsoft Defender for Endpoint
@@ -135,9 +135,9 @@ The file integrity monitoring data resides within the Azure Log Analytics worksp
 
     ```kusto  
     MDCFileIntegrityMonitoringEvents  
-    | where TimeGenerated > ago(14d)  
-    | where ConfigChangeType in ('Registry', 'Files')  
-    | summarize count() by Computer, ConfigChangeType  
+    | where TimeGenerated > ago(14d)
+    | where MonitoredEntityType in ('Registry', 'File')
+    | summarize count() by Computer, MonitoredEntityType
     ```
 
 1. To view detailed information about registry changes:  
@@ -147,10 +147,10 @@ The file integrity monitoring data resides within the Azure Log Analytics worksp
     1. Replace the summarization line with an ordering clause:  
 
     ```kusto  
-    MDCFileIntegrityMonitoringEvents  
-    | where TimeGenerated > ago(14d)  
-    | where ConfigChangeType == 'Registry'  
-    | order by Computer, RegistryKey  
+    MDCFileIntegrityMonitoringEvents 
+    | where TimeGenerated > ago(14d)
+    | where MonitoredEntityType == 'Registry'
+    | order by Computer, RegistryKey
     ```
 
 1. The reports can be exported to CSV for archival purposes and  channeled to a Power BI report for further analysis.
