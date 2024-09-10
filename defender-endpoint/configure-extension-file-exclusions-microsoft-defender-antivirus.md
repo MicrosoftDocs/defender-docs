@@ -118,9 +118,9 @@ See [How to create and deploy antimalware policies: Exclusion settings](/configm
     
     5. Enter **0** in the **Value** column.
 
-5. Choose **OK**.
+    6. Choose **OK**.
 
-6. Open the **Extension Exclusions** setting for editing and add your exclusions.
+5. Open the **Extension Exclusions** setting for editing and add your exclusions.
 
     1. Set the option to **Enabled**.
     
@@ -130,7 +130,7 @@ See [How to create and deploy antimalware policies: Exclusion settings](/configm
     
     4. Enter **0** in the **Value** column.
 
-7. Choose **OK**.
+    5. Choose **OK**.
 
 <a id="ps"></a>
 
