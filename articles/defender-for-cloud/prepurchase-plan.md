@@ -19,7 +19,7 @@ A Defender for Cloud prepurchase applies to all Defender for Cloud plans. You ca
 
 There’s no ratio on which the DCUs are applied. DCUs are equivalent to the purchase currency value and are deducted at retail prices. Like other reservations, the benefit of a prepurchase plan is discounted pricing by committing to a purchase term. The more you buy, the larger the discount you receive.
 
-For example, if you purchase 5,000 Commit Units for a one-year term, you get a 10% discount on Defender for Cloud products at this tier, so you pay only 4,500 USD. You can choose to use these units with Defender for Servers P2, and Defender CSPM plans on 20 Virtual machines (Azure VMs) for one year, which uses up 4800 Commit units. In this example, we use $15/$5 monthly retail price and 1 MCU = $1.
+For example, if you purchase 5,000 Commit Units for a one-year term, you get a 10% discount on Defender for Cloud products at this tier, so you pay only 4,500 USD. You can choose to use these units with Defender for Servers P2, and Defender CSPM plans on 20 Virtual machines (Azure VMs) for one year, which uses up 4800 Commit units.
 
 As another example, an enterprise customer has an Annual Commitment Discount (ACD) of 10%. This customer typically consumes 120,000 USD worth of Microsoft Defender for Cloud at retail prices annually. With the ACD applied, their actual usage cost is 108,000 USD.
 
