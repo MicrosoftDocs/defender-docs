@@ -861,40 +861,15 @@ The following configuration profile contains entries for all settings described 
 
 ```JSON
 {
-   "antivirusEngine":{
-      "enforcementLevel":"real_time",
-      "behaviorMonitoring": "enabled",
+"antivirusEngine":{
+      "enforcementLevel":"passive",
+      "behaviorMonitoring": "disabled",
       "scanAfterDefinitionUpdate":true,
       "scanArchives":true,
       "scanHistoryMaximumItems": 10000,
       "scanResultsRetentionDays": 90,
       "maximumOnDemandScanThreads":2,
       "exclusionsMergePolicy":"merge",
-      "exclusions":[
-         {
-            "$type":"excludedPath",
-            "isDirectory":false,
-            "path":"/var/log/system.log<EXAMPLE DO NOT USE>"
-         },
-         {
-            "$type":"excludedPath",
-            "isDirectory":true,
-            "path":"/run<EXAMPLE DO NOT USE>"
-         },
-         {
-            "$type":"excludedPath",
-            "isDirectory":true,
-            "path":"/home/*/git<EXAMPLE DO NOT USE>"
-         },
-         {
-            "$type":"excludedFileExtension",
-            "extension":".pdf<EXAMPLE DO NOT USE>"
-         },
-         {
-            "$type":"excludedFileName",
-            "name":"cat<EXAMPLE DO NOT USE>"
-         }
-      ],
       "allowedThreats":[
          "<EXAMPLE DO NOT USE>EICAR-Test-File (not a virus)"
       ],
@@ -904,6 +879,7 @@ The following configuration profile contains entries for all settings described 
       ],
       "nonExecMountPolicy":"unmute",
       "unmonitoredFilesystems": ["nfs,fuse"],
+      "enableFileHashComputation": false,
       "threatTypeSettingsMergePolicy":"merge",
       "threatTypeSettings":[
          {
@@ -914,14 +890,49 @@ The following configuration profile contains entries for all settings described 
             "key":"archive_bomb",
             "value":"audit"
          }
-      ]
+      ],
+      "scanFileModifyPermissions":false,
+      "scanFileModifyOwnership":false,
+      "scanNetworkSocketEvent":false,
+      "offlineDefinitionUpdateUrl": "http://172.22.199.67:8000/linux/production/<EXAMPLE DO NOT USE>",
+      "offlineDefintionUpdateFallbackToCloud":false,
+      "offlineDefinitionUpdate":"disabled"
    },
    "cloudService":{
       "enabled":true,
       "diagnosticLevel":"optional",
       "automaticSampleSubmissionConsent":"safe",
       "automaticDefinitionUpdateEnabled":true,
-      "proxy": "<EXAMPLE DO NOT USE> http://proxy.server:port/"
+      "proxy": "<EXAMPLE DO NOT USE> http://proxy.server:port/",
+      "definitionUpdatesInterval":28800
+   },
+   "features":{
+      "moduleLoad":"disabled",
+      "supplementarySensorConfigurations":{
+        "enableFilePermissionEvents":"disabled",
+        "enableFileOwnershipEvents":"disabled",
+        "enableRawSocketEvent":"disabled",
+        "enableBootLoaderCalls":"disabled",
+        "enableProcessCalls":"disabled",
+        "enablePseudofsCalls":"diabled",
+        "enableEbpfModuleLoadEvents":"disabled",
+        "sendLowfiEvents":"disabled"
+      },
+      "ebpfSupplementaryEventProvider":"enabled",
+      "offlineDefinitionUpdateVerifySig": "disabled"
+   },
+   "networkProtection":{
+      "enforcementLevel":"disabled",
+      "disableIcmpInspection":true
+   },
+   "edr":{
+      "groupIds":"GroupIdExample",
+      "tags": [
+         {
+         "key": "GROUP",
+         "value": "Tag"
+         }
+       ]
    },
 "exclusionSettings":{
   "exclusions":[
