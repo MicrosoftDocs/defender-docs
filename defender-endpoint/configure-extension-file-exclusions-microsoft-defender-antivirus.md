@@ -4,7 +4,7 @@ description: Exclude files from Microsoft Defender Antivirus scans based on thei
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-ms.date: 04/03/2024
+ms.date: 09/10/2024
 author: siosulli
 ms.author: siosulli
 ms.topic: conceptual
@@ -189,6 +189,7 @@ See [Add exclusions in the Windows Security app](microsoft-defender-security-cen
 ## Use wildcards in the file name and folder path or extension exclusion lists
 
 You can use the asterisk `*`, question mark `?`, or environment variables (such as `%ALLUSERSPROFILE%`) as wildcards when defining items in the file name or folder path exclusion list. You can mix and match `*` and `?` and environment variables into a single exclusion.   The way these wildcards are interpreted differs from their usual usage in other apps and languages. Make sure to read this section to understand their specific limitations.
+
 > [!IMPORTANT]
 > There are key limitations and usage scenarios for these wildcards:
 > - Environment variable usage is limited to machine variables and those applicable to processes running as an NT AUTHORITY\SYSTEM account.
