@@ -89,7 +89,7 @@ This is a summary of the required action for each of the servers onboarded to De
 
 ### Endpoint protection recommendations experience - changes and migration guidance
 
-Endpoint discovery and recommendations are currently provided by the Defender for Cloud Foundational CSPM and the Defender for Servers plans using the Log Analytics agent in GA, or in preview via the AMA. This experience will be replaced by security recommendations that are gathered using agentless machine scanning.
+Endpoint discovery and recommendations were previously provided by the Defender for Cloud Foundational CSPM and the Defender for Servers plans using the Log Analytics agent in GA, or in preview via the AMA. These experience have been replaced by security recommendations that are gathered using agentless machine scanning.
 
 Endpoint protection recommendations are constructed in two stages. The first stage is [discovery](#endpoint-detection-and-response-solution---discovery) of an endpoint detection and response solution. The second is [assessment](#endpoint-detection-and-response-solution---configuration-assessment) of the solution’s configuration. The following tables provide details of the current and new experiences for each stage.
 
