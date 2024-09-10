@@ -30,7 +30,7 @@ search.appverid: met150
 
 - Windows
 
-You can define exclusions for Microsoft Defender Antivirus that apply to [scheduled scans](schedule-antivirus-scans.md), [on-demand scans](run-scan-microsoft-defender-antivirus.md), and [always-on, real-time protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md). **Generally, you don't need to apply exclusions**. If you do need to apply exclusions, then you can choose from the following:
+You can define exclusions for Microsoft Defender Antivirus that apply to [scheduled scans](schedule-antivirus-scans.md), [on-demand scans](run-scan-microsoft-defender-antivirus.md), and [always-on, real-time protection and monitoring](configure-real-time-protection-microsoft-defender-antivirus.md). **Generally, you don't need to apply exclusions**. If you do need to apply exclusions, then you can choose from the following types:
 
 - Exclusions based on file extensions and folder locations (described in this article)
 - [Exclusions for files that are opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
@@ -46,7 +46,7 @@ See [Recommendations for defining exclusions](configure-exclusions-microsoft-def
 
 ## Exclusion lists
 
-To exclude certain files from Microsoft Defender Antivirus scans, modify your exclusion lists. Microsoft Defender Antivirus includes many automatic exclusions based on known operating system behaviors and typical management files, such as those used in enterprise management, database management, and other enterprise scenarios and situations.
+To exclude certain files from Microsoft Defender Antivirus scans, modify your exclusion lists. Microsoft Defender Antivirus includes many automatic exclusions based on known operating system behaviors and typical management files, such as those used in enterprise management, database management, and other enterprise scenarios.
 
 > [!NOTE]
 > Exclusions apply to [potentially unwanted apps (PUA) detections](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) as well.
@@ -111,7 +111,7 @@ See [How to create and deploy antimalware policies: Exclusion settings](/configm
     1. Set the option to **Enabled**.
     2. Under the **Options** section, select **Show**.
     3. Specify each folder on its own line under the **Value name** column.
-    4. If you are specifying a file, ensure that you enter a fully qualified path to the file, including the drive letter, folder path, file name, and extension.
+    4. If you're specifying a file, ensure that you enter a fully qualified path to the file, including the drive letter, folder path, file name, and extension.
     5. Enter **0** in the **Value** column.
 
 5. Choose **OK**.
@@ -150,7 +150,7 @@ The following table lists values that you can use in the `<exclusion list>` port
 |Exclusion type|PowerShell parameter|
 |---|---|
 |All files with a specified file extension|`-ExclusionExtension`|
-|All files under a folder (including files in sub-directories), or a specific file|`-ExclusionPath`|
+|All files under a folder (including files in subdirectories), or a specific file|`-ExclusionPath`|
 
 > [!IMPORTANT]
 > If you have created a list, either with `Set-MpPreference` or `Add-MpPreference`, using the `Set-MpPreference` cmdlet again overwrites the existing list.
@@ -297,7 +297,7 @@ You can retrieve the items in the exclusion list by using one of the following m
 If you use PowerShell, you can retrieve the list in the following two ways:
 
 - Retrieve the status of all Microsoft Defender Antivirus preferences. Each list is displayed on separate lines, but the items within each list are combined into the same line.
-- Write the status of all preferences to a variable, and use that variable to only call the specific list you are interested in. Each use of `Add-MpPreference` is written to a new line.
+- Write the status of all preferences to a variable, and use that variable to only call the specific list you're interested in. Each use of `Add-MpPreference` is written to a new line.
 
 ### Validate the exclusion list by using MpCmdRun
 
@@ -349,28 +349,28 @@ For more information, see [Use PowerShell cmdlets to configure and run Microsoft
 
 You can validate that your exclusion lists are working by using PowerShell with either the `Invoke-WebRequest` cmdlet or the .NET WebClient class to download a test file.
 
-In the following PowerShell snippet, replace `test.txt` with a file that conforms to your exclusion rules. For example, if you have excluded the `.testing` extension, replace `test.txt` with `test.testing`. If you're testing a path, make sure that you run the cmdlet within that path.
+In the following PowerShell snippet, replace `test.txt` with a file that conforms to your exclusion rules. For example, if you're excluding the `.testing` extension, replace `test.txt` with `test.testing`. If you're testing a path, make sure that you run the cmdlet within that path.
 
 ```PowerShell
 Invoke-WebRequest "https://secure.eicar.org/eicar.com.txt" -OutFile "test.txt"
 ```
 
-If Microsoft Defender Antivirus reports malware, then the rule is not working. If there is no report of malware and the downloaded file exists, then the exclusion is working. You can open the file to confirm the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
+If Microsoft Defender Antivirus reports malware, then the rule isn't working. If there's no report of malware and the downloaded file exists, then the exclusion is working. You can open the file to confirm the contents are the same as what is described on the [EICAR test file website](https://www.eicar.org/download-anti-malware-testfile/).
 
-You can also use the following PowerShell code, which calls the .NET WebClient class to download the test file - as with the `Invoke-WebRequest` cmdlet; replace `c:\test.txt` with a file that conforms to the rule you are validating:
+You can also use the following PowerShell code, which calls the .NET WebClient class to download the test file - as with the `Invoke-WebRequest` cmdlet; replace `c:\test.txt` with a file that conforms to the rule you're validating:
 
 ```PowerShell
 $client = new-object System.Net.WebClient
 $client.DownloadFile("http://www.eicar.org/download/eicar.com.txt","c:\test.txt")
 ```
 
-If you do not have Internet access, you can create your own EICAR test file by writing the EICAR string to a new text file with the following PowerShell command:
+If you don't have Internet access, you can create your own EICAR test file by writing the EICAR string to a new text file with the following PowerShell command:
 
 ```PowerShell
 [io.file]::WriteAllText("test.txt",'X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*')
 ```
 
-You can also copy the string into a blank text file and attempt to save it with the file name or in the folder you are attempting to exclude.
+You can also copy the string into a blank text file and attempt to save it with the file name or in the folder you're attempting to exclude.
 
 
 ## See also
