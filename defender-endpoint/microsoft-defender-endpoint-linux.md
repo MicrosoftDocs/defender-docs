@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 09/09/2024
+ms.date: 09/10/2024
 ---
 
 # Microsoft Defender for Endpoint on Linux
@@ -72,9 +72,7 @@ In general you need to take the following steps:
 
 > [!NOTE]
 > It is not supported to install Microsoft Defender for Endpoint in any other location other than the default install path.
->
-> Microsoft Defender for Endpoint on Linux creates an "mdatp" user with random UID and GID. If you want to control the UID and GID, create an "mdatp" user prior to installation using the  "/usr/sbin/nologin" shell option.
-> For example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
+> Microsoft Defender for Endpoint on Linux creates an `mdatp` user with random UID and GID. If you want to control the UID and GID, create an `mdatp` user prior to installation using the  `/usr/sbin/nologin` shell option. Here's an example: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
 
 ### System requirements
 
@@ -97,7 +95,6 @@ In general you need to take the following steps:
   - Ubuntu 20.04 LTS
   - Ubuntu 22.04 LTS
   - Ubuntu 24.04 LTS
-    
   - Debian 9 - 12
   - SUSE Linux Enterprise Server 12 or higher
   - SUSE Linux Enterprise Server 15 or higher
@@ -115,8 +112,8 @@ In general you need to take the following steps:
 
     > [!NOTE]
   > Distributions and version that are not explicitly listed are unsupported (even if they are derived from the officially supported distributions).
-  > With RHEL 6 support for 'extended end of life' coming to an end by June 30, 2024; MDE Linux support for RHEL 6 will also be deprecated by June 30, 2024
-  > MDE Linux version 101.23082.0011 is the last MDE Linux release supporting RHEL 6.7 or higher versions (does not expire before June 30, 2024). Customers are advised to plan upgrades to their RHEL 6 infrastructure aligned with guidance from Red Hat.
+  > With RHEL 6 support for 'extended end of life' coming to an end by June 30, 2024; Defender for Endpoint on Linux support for RHEL 6 will also be deprecated by June 30, 2024
+  > Defender for Endpoint on Linux version `101.23082.0011` is the last Defender for Endpoint on Linux release supporting RHEL 6.7 or higher versions (does not expire before June 30, 2024). Customers are advised to plan upgrades to their RHEL 6 infrastructure aligned with guidance from Red Hat.
   > Microsoft Defender Vulnerablity Management is not supported on Rocky and Alma currently.
 
 - List of supported kernel versions
@@ -200,13 +197,13 @@ After you've enabled the service, you need to configure your network or firewall
 
 ### External package dependency
 The following external package dependencies exist for the mdatp package:
-- The mdatp RPM package requires "glibc >= 2.17", "audit", "policycoreutils", "semanage" "selinux-policy-targeted", "mde-netfilter"
-- For RHEL6 the mdatp RPM package requires "audit", "policycoreutils", "libselinux", "mde-netfilter"
-- For DEBIAN the mdatp package requires "libc6 >= 2.23", "uuid-runtime", "auditd", "mde-netfilter"
+- The mdatp RPM package requires `glibc >= 2.17`, `audit`, `policycoreutils`, `semanage` `selinux-policy-targeted`, `mde-netfilter`
+- For RHEL6 the mdatp RPM package requires `audit`, `policycoreutils`, `libselinux`, `mde-netfilter`
+- For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, `auditd`, `mde-netfilter`
 
 The mde-netfilter package also has the following package dependencies:
-- For DEBIAN the mde-netfilter package requires "libnetfilter-queue1", "libglib2.0-0"
-- For RPM the mde-netfilter package requires "libmnl", "libnfnetlink", "libnetfilter_queue", "glib2"
+- For DEBIAN the mde-netfilter package requires `libnetfilter-queue1`, `libglib2.0-0`
+- For RPM the mde-netfilter package requires `libmnl`, `libnfnetlink`, `libnetfilter_queue`, `glib2`
 
 If the Microsoft Defender for Endpoint installation fails due to missing dependencies errors, you can manually download the pre-requisite dependencies.
 
