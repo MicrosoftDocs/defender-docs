@@ -96,6 +96,8 @@ In general you need to take the following steps:
   - Ubuntu 18.04 LTS
   - Ubuntu 20.04 LTS
   - Ubuntu 22.04 LTS
+  - Ubuntu 24.04 LTS
+    
   - Debian 9 - 12
   - SUSE Linux Enterprise Server 12 or higher
   - SUSE Linux Enterprise Server 15 or higher
@@ -111,7 +113,7 @@ In general you need to take the following steps:
   - Alma 9.2 and higher 
   - Mariner 2
 
-  > [!NOTE]
+    > [!NOTE]
   > Distributions and version that are not explicitly listed are unsupported (even if they are derived from the officially supported distributions).
   > With RHEL 6 support for 'extended end of life' coming to an end by June 30, 2024; MDE Linux support for RHEL 6 will also be deprecated by June 30, 2024
   > MDE Linux version 101.23082.0011 is the last MDE Linux release supporting RHEL 6.7 or higher versions (does not expire before June 30, 2024). Customers are advised to plan upgrades to their RHEL 6 infrastructure aligned with guidance from Red Hat.
