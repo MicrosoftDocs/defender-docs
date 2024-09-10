@@ -111,10 +111,10 @@ In general you need to take the following steps:
   - Mariner 2
 
     > [!NOTE]
-  > Distributions and version that are not explicitly listed are unsupported (even if they are derived from the officially supported distributions).
-  > With RHEL 6 support for 'extended end of life' coming to an end by June 30, 2024; Defender for Endpoint on Linux support for RHEL 6 will also be deprecated by June 30, 2024
-  > Defender for Endpoint on Linux version `101.23082.0011` is the last Defender for Endpoint on Linux release supporting RHEL 6.7 or higher versions (does not expire before June 30, 2024). Customers are advised to plan upgrades to their RHEL 6 infrastructure aligned with guidance from Red Hat.
-  > Microsoft Defender Vulnerablity Management is not supported on Rocky and Alma currently.
+    > Distributions and version that are not explicitly listed are unsupported (even if they are derived from the officially supported distributions).
+    > With RHEL 6 support for 'extended end of life' coming to an end by June 30, 2024; Defender for Endpoint on Linux support for RHEL 6 will also be deprecated by June 30, 2024
+    > Defender for Endpoint on Linux version `101.23082.0011` is the last Defender for Endpoint on Linux release supporting RHEL 6.7 or higher versions (does not expire before June 30, 2024). Customers are advised to plan upgrades to their RHEL 6 infrastructure aligned with guidance from Red Hat.
+    > Microsoft Defender Vulnerablity Management is not supported on Rocky and Alma currently.
 
 - List of supported kernel versions
 
@@ -123,6 +123,7 @@ In general you need to take the following steps:
    > Microsoft Defender for Endpoint for all other supported distributions and versions is kernel-version-agnostic. With a minimal requirement for the kernel version to be at or greater than 3.10.0-327.
 
   - The `fanotify` kernel option must be enabled
+
   - Red Hat Enterprise Linux 6 and CentOS 6:
     - For 6.7: 2.6.32-573.* (except 2.6.32-573.el6.x86_64)
     - For 6.8: 2.6.32-642.*
@@ -196,7 +197,9 @@ After you've enabled the service, you need to configure your network or firewall
 - /opt/microsoft/mdatp/sbin/wdavdaemon requires executable permission. For more information, see "Ensure that the daemon has executable permission" in [Troubleshoot installation issues for Microsoft Defender for Endpoint on Linux](linux-support-install.md).
 
 ### External package dependency
+
 The following external package dependencies exist for the mdatp package:
+
 - The mdatp RPM package requires `glibc >= 2.17`, `audit`, `policycoreutils`, `semanage` `selinux-policy-targeted`, `mde-netfilter`
 - For RHEL6 the mdatp RPM package requires `audit`, `policycoreutils`, `libselinux`, `mde-netfilter`
 - For DEBIAN the mdatp package requires `libc6 >= 2.23`, `uuid-runtime`, `auditd`, `mde-netfilter`
