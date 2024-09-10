@@ -7,7 +7,7 @@ ms.author: siosulli
 manager: deniseb 
 audience: ITPro
 ms.topic: how-to
-ms.date: 06/25/2024
+ms.date: 09/10/2024
 ms.collection: 
 - m365-security
 - tier2
@@ -49,7 +49,7 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 <a href="microsoft-defender-endpoint.md#apis"><center><b>Centralized configuration and administration, APIs</a></b></center></td>
 </tr>
 <tr>
-<td colspan="7"><a href="microsoft-defender-endpoint.md#mtp"><center><b>Microsoft Defender XDR</a></center></b></td>
+<td colspan="7"><a href="microsoft-defender-endpoint.md#mtp"><center><b>Microsoft Defender portal</a></center></b></td>
 </tr>
 </table>
 <br>
@@ -63,7 +63,6 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 3. [Visit the Microsoft Defender portal](#step-3-visit-the-microsoft-365-defender-portal).
 4. [Onboard endpoints using any of the supported management tools](#step-4-onboard-endpoints-using-any-of-the-supported-management-tools).
 5. [Configure capabilities](#step-5-configure-capabilities).
-6. [Set up the Microsoft Defender for Endpoint evaluation lab](#step-6-set-up-the-microsoft-defender-for-endpoint-evaluation-lab).
 
 ## Step 1: Confirm your license state
 
@@ -109,7 +108,9 @@ This section outlines the general steps you to onboard devices (endpoints).
 
 After onboarding devices (endpoints), you'll configure the various capabilities, such as endpoint detection and response, next-generation protection, and attack surface reduction.
 
-Use [this table](onboarding.md) to choose components to configure. We recommend configuring all available capabilities, but you're able to skip the ones that don't apply.
+Use [the device onboarding table](onboarding.md) to choose components to configure. We recommend configuring all available capabilities, but you're able to skip the ones that don't apply.
+
+After you have onboarded devices, [run a detection test](run-detection-test.md). 
 
 ## Step 6: Set up the Microsoft Defender for Endpoint evaluation lab   
 
