@@ -87,6 +87,40 @@ This is a summary of the required action for each of the servers onboarded to De
 |Multicloud Servers |Connect to [multicloud connector](/azure/defender-for-cloud/quickstart-onboard-aws) with Azure Arc provisioning and Defender for Servers plan 2|
 
 
+### System update and patches recommendations experience - changes and migration guidance 
+
+System updates and patches are crucial for keeping the security and health of your machines. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.  
+
+System updates recommendations were previously provided by the Defender for Cloud Foundational CSPM and the Defender for Servers plans using the Log Analytics agent. This experience has been replaced by security recommendations that are gathered using [Azure Update Manager](/azure/update-manager/overview?branch=main) and constructed out of 2 new recommendations: 
+
+1. [Machines should be configured to periodically check for missing system updates](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2Fbd876905-5b84-4f73-ab2d-2e7a7c4568d9) 
+
+2. [System updates should be installed on your machines (powered by Azure Update Manager)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e1145ab1-eb4f-43d8-911b-36ddf771d13f) 
+
+Learn how to [Remediate system updates and patches recommendations on your machines](/azure/defender-for-cloud/enable-periodic-system-updates). 
+
+#### Which recommendations are being Replaced?
+
+The following table summarizes the timetable for recommendations being deprecated and replaced.
+
+|Recommendation|Agent|Supported resources|Deprecation date|Replacement recommendation|
+| -------- | -------- | -------- | -------- | -------- |
+|[System updates should be installed on your machines ](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/SystemUpdatesRecommendationDetailsWithRulesBlade/assessmentKey/4ab6e3c5-74dd-8b35-9ab9-f61b30875b27)|MMA |Azure & non-Azure (Windows & Linux) |August 2024 |[New recommendation powered by Azure Update Manager ](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e1145ab1-eb4f-43d8-911b-36ddf771d13f)|
+|[System updates on virtual machine scale sets should be installed ](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/bd20bd91-aaf1-7f14-b6e4-866de2f43146)|MMA |Azure Virtual Machine Scale Sets  |August 2024 |No replacement |
+
+#### How do I prepare for the new recommendations?
+
+- Connect your non-Azure machines to Arc 
+
+- Ensure that [periodic assessment](/azure/update-manager/assessment-options) update setting is enabled on your machines. You can do it in 2 ways: 
+
+1. Fix the recommendation: Machines should be configured to periodically check for missing system updates (powered by Azure Update Manager). 
+2. Enable Periodic assessment [at scale with Azure Policy](/azure/update-manager/periodic-assessment-at-scale?branch=main). 
+
+- Once dome, Update Manager can fetch the latest updates to the machines, and you can view the latest machine compliance status. 
+
+> [!NOTE]
+> Enabling periodic assessments for Arc enabled machines that Defender for Servers Plan 2 is not enabled on their related Subscription or Connector, is subject to [Azure Update Manager pricing](https://azure.microsoft.com/en-us/pricing/details/azure-update-management-center/). **Arc enabled machines that Defender for Servers Plan 2 is enabled on their related Subscription or Connectors, or any Azure VM, are eligible for this capability with no additional cost.** 
 ### Endpoint protection recommendations experience - changes and migration guidance
 
 Endpoint discovery and recommendations were previously provided by the Defender for Cloud Foundational CSPM and the Defender for Servers plans using the Log Analytics agent in GA, or in preview via the AMA. These experience have been replaced by security recommendations that are gathered using agentless machine scanning.
