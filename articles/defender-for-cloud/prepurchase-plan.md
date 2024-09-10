@@ -1,17 +1,17 @@
 ---
-title: Optimize Microsoft Defender for Cloud costs with a prepurchase plan
-description: Learn how you can optimize Microsoft Defender for Cloud costs with a prepurchase plan.
+title: Optimize Microsoft Defender for Cloud costs with a pre-purchase plan
+description: Learn how you can optimize Microsoft Defender for Cloud costs with a pre-purchase plan.
 ms.topic: how-to
 ms.reviewer: liuyizhu
 ms.service: defender-for-cloud
 ms.date: 05/15/2024
 ---
 
-# Optimize Microsoft Defender for Cloud costs with a prepurchase plan
+# Optimize Microsoft Defender for Cloud costs with a pre-purchase plan
 
 You can save on your Microsoft Defender for Cloud costs when you prepurchase Microsoft Defender for Cloud commit units (DCU) for one year. You can use the prepurchased DCUs at any time during the purchase term. Unlike VMs, the prepurchased units don't expire on an hourly basis and you can use them at any time during the term of the purchase.
 
-Any eligible Microsoft Defender for Cloud usage deducts from the prepurchased DCUs automatically. You don't need to redeploy or assign a prepurchased plan to your Microsoft Defender for Cloud workspaces for the DCU usage to get the prepurchase discounts.
+Any eligible Microsoft Defender for Cloud usage deducts from the prepurchased DCUs automatically. You don't need to redeploy or assign a pre-purchased plan to your Microsoft Defender for Cloud workspaces for the DCU usage to get the prepurchase discounts.
 
 ## Determine the right size to buy
 
@@ -87,7 +87,7 @@ You can make the following types of changes to a reservation after purchase:
 - Update reservation scope
 - Azure role-based access control (Azure RBAC)
 
-You can't split or merge the Defender for Cloud prepurchase plan. For more information about managing reservations, see [Manage reservations after purchase](/azure/cost-management-billing/reservations/manage-reserved-vm-instance).
+You can't split or merge the Defender for Cloud pre-purchase plan. For more information about managing reservations, see [Manage reservations after purchase](/azure/cost-management-billing/reservations/manage-reserved-vm-instance).
 
 ## Cancellations and exchanges
 
