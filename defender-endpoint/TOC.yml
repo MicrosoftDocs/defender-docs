@@ -67,6 +67,8 @@
         href: evaluate-microsoft-defender-antivirus.md
       - name: Evaluate Microsoft Defender Antivirus using PowerShell
         href: microsoft-defender-antivirus-using-powershell.md
+      - name: Evaluate Microsoft Defender Antivirus using Microsoft Defender Endpoint Security Settings Management
+        href: evaluate-mda-using-mde-security-settings-management.md
       - name: Evaluate Microsoft Defender Antivirus using Group Policy 
         href: evaluate-mdav-using-gp.md  
       - name: Microsoft Defender for Endpoint demonstration scenarios
@@ -1401,8 +1403,6 @@
         href: api/exposed-apis-create-app-partners.md
       - name: Fetch alerts from customer tenant
         href: api/fetch-alerts-mssp.md
-      - name: Managed security service provider opportunity
-        href: mssp-support.md
     - name: Partner integration scenarios
       items:
       - name: Technical partner opportunities

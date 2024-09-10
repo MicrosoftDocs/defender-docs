@@ -16,7 +16,7 @@ ms.collection:
 - m365solution-fpfn
 - highpri
 - tier1
-ms.topic: how-to
+ms.topic: solution-overview
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs, yonghree, jcedola
 ms.custom: 
 - FPFN

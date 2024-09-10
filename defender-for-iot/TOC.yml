@@ -11,15 +11,29 @@
       - name: What's new
         href: whats-new.md  
       - name: Site security
-        href: site-security-overview.md  
+        href: site-security-overview.md     
+      - name: Enterprise IoT
+        items:
+          - name: Enterprise IoT overview
+            href: enterprise-iot.md
+          - name: Enterprise IoT licenses
+            href: enterprise-iot-licenses.md
+          - name: Get started with enterprise IoT
+            href: enterprise-iot-get-started.md      
+          - name: Manage enterprise IoT
+            href: enterprise-iot-manage.md 
     - name: Get started
       items:
       - name: Prerequisites
         href: prerequisites.md            
       - name: Get started
         href: get-started.md  
+      - name: Set up RBAC for site security
+        href: set-up-rbac.md   
       - name: Set up sites
         href: set-up-sites.md
+      - name: Configure permissions
+        href: configure-permissions.md 
     - name: Monitor site security
       items:
       - name: Monitor site security
@@ -43,4 +57,10 @@
     - name: Manage
       items:
       - name: Manage sites
-        href: manage-sites.md           
+        href: manage-sites.md  
+      - name: Manage licenses
+        items:
+          - name: Overview
+            href: license-overview.md
+          - name: Manage your license
+            href: manage-license.md           

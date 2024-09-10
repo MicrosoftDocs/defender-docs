@@ -15,7 +15,7 @@ ms.collection:
   - tier1
 description: Admins can learn how to allow or block email and spoofed sender entries in the Tenant Allow/Block List.
 ms.service: defender-office-365
-ms.date: 07/15/2024
+ms.date: 07/18/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -75,22 +75,15 @@ This article describes how admins can manage entries for email senders in the Mi
 
 You can't create allow entries for domains and email addresses directly in the Tenant Allow/Block List. Unnecessary allow entries expose your organization to malicious email that would have been filtered by the system.
 
-Instead, you use the **Emails** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=email>. When you submit a blocked message as **Should not have been blocked (False positive)**, an allow entry for the sender is added to the **Domains & email addresses** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Submit good email to Microsoft](submissions-admin.md#report-good-email-to-microsoft).
+Instead, you use the **Emails** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=email>. When you submit a blocked message as **I've confirmed it's clean** and then select **Allow this message**, an allow entry for the sender is added to the **Domains & email addresses** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Submit good email to Microsoft](submissions-admin.md#report-good-email-to-microsoft).
 
-> [!NOTE]
-> Allow entries are added based on the filters that determined the message was malicious during mail flow. For example, if the sender email address and a URL in the message were determined to be bad, an allow entry is created for the sender (email address or domain) and the URL.
->
-> When the entity in the allow entry is encountered again (during mail flow or at time of click), all filters associated with that entity are overridden.
->
-> By default, allow entries for domains and email addresses, files, and URLs have a 'remove after last used date' value of 45 days. The allow entry is triggered and the **Last used** date is updated when the entity is encountered and identified as bad during mail flow or at time of click. After the filtering system determines that the entity is clean, and if the entity isn't used again, the allow entry is automatically removed after 45 days. By default, allow entries for spoofed senders never expire.
->
-> During mail flow, if messages containing the allowed entity pass other checks in the filtering stack, the messages will be delivered. For example, if a message passes [email authentication checks](email-authentication-about.md), URL filtering, and file filtering, the message is delivered if it's also from an allowed sender.
+[!INCLUDE [Allow entry facts](../includes/allow-entry-facts.md)]
 
 ### Create block entries for domains and email addresses
 
 To create block entries for *domains and email addresses*, use either of the following methods:
 
-- From the **Emails** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=email>. When you submit a message as **Should have been blocked (False negative)**, you can select **Block all emails from this sender or domain** to add a block entry to the **Domains & email addresses** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Report questionable email to Microsoft](submissions-admin.md#report-questionable-email-to-microsoft).
+- From the **Emails** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=email>. When you submit a message as **I've confirmed it's a threat**, you can select **Block all emails from this sender or domain** to add a block entry to the **Domains & email addresses** tab on the **Tenant Allow/Block Lists** page. For instructions, see [Report questionable email to Microsoft](submissions-admin.md#report-questionable-email-to-microsoft).
 
 - From the **Domains & addresses** tab on the **Tenant Allow/Block Lists** page or in PowerShell as described in this section.
 

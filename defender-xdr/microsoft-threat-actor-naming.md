@@ -6,8 +6,8 @@ ms.service: defender-xdr
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
-ms.author: vpattnaik
-author: diannegali
+ms.author: diannegali
+author: vpattnaik
 manager: dansimp
 audience: ITPro
 ms.collection: 
@@ -15,7 +15,7 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 06/12/2024
+ms.date: 08/19/2024
 ---
 
 # How Microsoft names threat actors
@@ -54,26 +54,27 @@ Use the following reference table to understand how our previously publicly disc
 
 |Threat actor name|Previous name|Origin/Threat|Other names|
 |:---:|:---:|:---:|:---:|
-|Aqua Blizzard|ACTINIUM|Russia|UNC530, Primitive Bear, Gamaredon|
+|[Antique Typhoon](https://www.microsoft.com/en-us/security/blog/2023/07/14/analysis-of-storm-0558-techniques-for-unauthorized-email-access/)|Storm-0558|China||
+|[Aqua Blizzard](https://www.microsoft.com/en-us/security/blog/2022/02/04/actinium-targets-ukrainian-organizations/)|ACTINIUM|Russia|UNC530, Primitive Bear, Gamaredon|
 |Blue Tsunami||Private sector offensive actor|Black Cube|
 |Brass Typhoon|BARIUM|China|APT41|
-|Cadet Blizzard|DEV-0586|Russia||
+|[Cadet Blizzard](https://www.microsoft.com/en-us/security/blog/2023/06/14/cadet-blizzard-emerges-as-a-novel-and-distinct-russian-threat-actor/)|DEV-0586|Russia||
 |Camouflage Tempest|TAAL|Financially motivated|FIN6, Skeleton Spider|
 |Canvas Cyclone|BISMUTH|Vietnam|APT32, OceanLotus|
 |Caramel Tsunami|SOURGUM|Private sector offensive actor|Candiru|
-|Carmine Tsunami|DEV-0196|Private sector offensive actor|QuaDream|
+|[Carmine Tsunami](https://www.microsoft.com/en-us/security/blog/2023/04/11/dev-0196-quadreams-kingspawn-malware-used-to-target-civil-society-in-europe-north-america-the-middle-east-and-southeast-asia/)|DEV-0196|Private sector offensive actor|QuaDream|
 |Charcoal Typhoon|CHROMIUM|China|ControlX|
 |Cinnamon Tempest|DEV-0401|Financially motivated|Emperor Dragonfly, Bronze Starlight|
 |Circle Typhoon|DEV-0322|China||
-|Citrine Sleet|DEV-0139, DEV-1222|North Korea|AppleJeus, Labyrinth Chollima, UNC4736|
+|[Citrine Sleet](https://www.microsoft.com/en-us/security/blog/2024/08/30/north-korean-threat-actor-citrine-sleet-exploiting-chromium-zero-day/)|DEV-0139, DEV-1222|North Korea|AppleJeus, Labyrinth Chollima, UNC4736|
 |Cotton Sandstorm|DEV-0198 (NEPTUNIUM)|Iran|Vice Leaker|
 |Crimson Sandstorm|CURIUM|Iran|TA456, Tortoise Shell|
 |Cuboid Sandstorm|DEV-0228|Iran||
-|Denim Tsunami|KNOTWEED|Private sector offensive actor|DSIRF|
-|Diamond Sleet|ZINC|North Korea|Labyrinth Chollima, Lazarus|
+|[Denim Tsunami](https://www.microsoft.com/en-us/security/blog/2022/07/27/untangling-knotweed-european-private-sector-offensive-actor-using-0-day-exploits/)|KNOTWEED|Private sector offensive actor|DSIRF|
+|[Diamond Sleet](https://www.microsoft.com/en-us/security/blog/tag/diamond-sleet-zinc/)|ZINC|North Korea|Labyrinth Chollima, Lazarus|
 |Emerald Sleet|THALLIUM|North Korea|Kimsuky, Velvet Chollima|
-|Flax Typhoon|Storm-0919|China|Ethereal Panda|
-|Forest Blizzard|STRONTIUM|Russia|APT28, Fancy Bear|
+|[Flax Typhoon](https://www.microsoft.com/en-us/security/blog/2023/08/24/flax-typhoon-using-legitimate-software-to-quietly-access-taiwanese-organizations/)|Storm-0919|China|Ethereal Panda|
+|[Forest Blizzard](https://www.microsoft.com/en-us/security/blog/tag/forest-blizzard-strontium/)|STRONTIUM|Russia|APT28, Fancy Bear|
 |Ghost Blizzard|BROMINE|Russia|Energetic Bear, Crouching Yeti|
 |Gingham Typhoon|GADOLINIUM|China|APT40, Leviathan, TEMP.Periscope, Kryptonite Panda|
 |Granite Typhoon|GALLIUM|China||
@@ -86,48 +87,51 @@ Use the following reference table to understand how our previously publicly disc
 |Lilac Typhoon|DEV-0234|China||
 |Luna Tempest|Storm-0744|Financially motivated||
 |Manatee Tempest|DEV-0243|Financially motivated|EvilCorp, UNC2165, Indrik Spider|
-|Mango Sandstorm|MERCURY|Iran|MuddyWater, SeedWorm, Static Kitten, TEMP.Zagros|
+|[Mango Sandstorm](https://www.microsoft.com/en-us/security/blog/2023/04/07/mercury-and-dev-1084-destructive-attack-on-hybrid-environment/)|MERCURY|Iran|MuddyWater, SeedWorm, Static Kitten, TEMP.Zagros|
 |Marbled Dust|SILICON|Türkiye|Sea Turtle|
 |Marigold Sandstorm|DEV-0500|Iran|Moses Staff|
-|Midnight Blizzard|NOBELIUM|Russia|APT29, Cozy Bear|
-|Mint Sandstorm|PHOSPHORUS|Iran|APT35, Charming Kitten|
-|Moonstone Sleet|Storm-1789|North Korea||
+|[Midnight Blizzard](https://www.microsoft.com/en-us/security/blog/tag/midnight-blizzard-nobelium/)|NOBELIUM|Russia|APT29, Cozy Bear|
+|[Mint Sandstorm](https://www.microsoft.com/en-us/security/blog/tag/mint-sandstorm-phosphorus/)|PHOSPHORUS|Iran|APT35, Charming Kitten|
+|[Moonstone Sleet](https://www.microsoft.com/en-us/security/blog/2024/05/28/moonstone-sleet-emerges-as-new-north-korean-threat-actor-with-new-bag-of-tricks/)|Storm-1789|North Korea||
 |Mulberry Typhoon|MANGANESE|China|APT5, Keyhole Panda, TABCTENG|
 |Mustard Tempest|DEV-0206|Financially motivated|Purple Vallhund|
 |Night Tsunami|DEV-0336|Private sector offensive actor|NSO Group|
 |Nylon Typhoon|NICKEL|China|ke3chang, APT15, Vixen Panda|
-|Octo Tempest|Storm-0875|Financially motivated|0ktapus, Scattered Spider, UNC3944|
-|Onyx Sleet|PLUTONIUM|North Korea|Silent Chollima, Andariel, DarkSeoul|
+|[Octo Tempest](https://www.microsoft.com/en-us/security/blog/2023/10/25/octo-tempest-crosses-boundaries-to-facilitate-extortion-encryption-and-destruction/)|Storm-0875|Financially motivated|0ktapus, Scattered Spider, UNC3944|
+|Onyx Sleet|PLUTONIUM|North Korea|APT45, Silent Chollima, Andariel, DarkSeoul|
 |Opal Sleet|OSMIUM|North Korea|Konni|
-|Peach Sandstorm|HOLMIUM|Iran|APT33, Refined Kitten|
+|[Peach Sandstorm](https://www.microsoft.com/en-us/security/blog/2024/08/28/peach-sandstorm-deploys-new-custom-tickler-malware-in-long-running-intelligence-gathering-operations/)|HOLMIUM|Iran|APT33, Refined Kitten|
 |Pearl Sleet|DEV-0215 (LAWRENCIUM)|North Korea||
 |Periwinkle Tempest|DEV-0193|Financially motivated|Wizard Spider, UNC2053|
 |Phlox Tempest|DEV-0796|Financially motivated|ClickPirate, Chrome Loader, Choziosi loader|
 |Pink Sandstorm|AMERICIUM|Iran|Agrius, Deadwood, BlackShadow, SharpBoys|
 |Pistachio Tempest|DEV-0237|Financially motivated|FIN12|
-|Plaid Rain|POLONIUM|Lebanon||
+|[Plaid Rain](https://www.microsoft.com/en-us/security/blog/2022/06/02/exposing-polonium-activity-and-infrastructure-targeting-israeli-organizations/)|POLONIUM|Lebanon||
 |Pumpkin Sandstorm|DEV-0146|Iran|ZeroCleare|
 |Purple Typhoon|POTASSIUM|China|APT10, Cloudhopper, MenuPass|
 |Raspberry Typhoon|RADIUM|China|APT30, LotusBlossom|
 |Ruby Sleet|CERIUM|North Korea||
+|Ruza Flood|Storm-1099|Russia, Influence operations||
 |Salmon Typhoon|SODIUM|China|APT4, Maverick Panda|
 |Sangria Tempest|ELBRUS|Financially motivated|Carbon Spider, FIN7|
 |Sapphire Sleet|COPERNICIUM|North Korea|Genie Spider, BlueNoroff|
 |Seashell Blizzard|IRIDIUM|Russia|APT44, Sandworm|
 |Secret Blizzard|KRYPTON|Russia|Venomous Bear, Turla, Snake|
+|Sefid Flood|Storm-1364|Iran, Influence operations||
 |Silk Typhoon|HAFNIUM|China||
-|Smoke Sandstorm|BOHRIUM|Iran||
+|Smoke Sandstorm|BOHRIUM|Iran|UNC1549|
 |Spandex Tempest|CHIMBORAZO|Financially motivated|TA505|
-|Star Blizzard|SEABORGIUM|Russia|Callisto, Reuse Team|
+|[Star Blizzard](https://www.microsoft.com/en-us/security/blog/2023/12/07/star-blizzard-increases-sophistication-and-evasion-in-ongoing-attacks/)|SEABORGIUM|Russia|Callisto, Reuse Team|
 |Storm-0062||China|DarkShadow, Oro0lxy|
 |Storm-0133||Iran|LYCEUM, HEXANE|
 |Storm-0216||Financially motivated|Twisted Spider, UNC2198|
 |Storm-0257||Group in development|UNC1151|
 |Storm-0324||Financially motivated|TA543, Sagrid|
 |Storm-0381||Financially motivated||
+|Storm-0501||Group in development||
+|[Storm-0506](https://www.microsoft.com/en-us/security/blog/2022/11/17/dev-0569-finds-new-ways-to-deliver-royal-ransomware-various-payloads/)||Group in development||
 |Storm-0530||North Korea|H0lyGh0st|
 |Storm-0539||Financially motivated|Atlas Lion|
-|Storm-0558||China||
 |Storm-0569||Financially motivated||
 |Storm-0587||Russia|SaintBot, Saint Bear, TA471|
 |Storm-0744||Financially motivated||
@@ -135,14 +139,14 @@ Use the following reference table to understand how our previously publicly disc
 |Storm-0829||Group in development|Nwgen Team|
 |Storm-0835||Group in development|EvilProxy|
 |Storm-0842||Iran||
+|Storm-0844||Group in development||
 |Storm-0861||Iran||
 |Storm-0867||Egypt|Caffeine|
 |Storm-0971||Financially motivated|(Merged into Octo Tempest)|
-|Storm-0978||Group in development|RomCom, Underground Team|
+|[Storm-0978](https://www.microsoft.com/en-us/security/blog/2023/07/11/storm-0978-attacks-reveal-financial-and-espionage-motives/)||Group in development|RomCom, Underground Team|
 |Storm-1044||Financially motivated|Danabot|
 |Storm-1084||Iran|DarkBit|
-|Storm-1099||Russia||
-|Storm-1101||Group in development|NakedPages|
+|[Storm-1101](https://www.microsoft.com/en-us/security/blog/2023/03/13/dev-1101-enables-high-volume-aitm-campaigns-with-open-source-phishing-kit/)||Group in development|NakedPages|
 |Storm-1113||Financially motivated||
 |Storm-1133||Palestinian Authority||
 |Storm-1152||Financially motivated||
@@ -151,19 +155,24 @@ Use the following reference table to understand how our previously publicly disc
 |Storm-1283||Group in development||
 |Storm-1286||Group in development||
 |Storm-1295||Group in development|Greatness|
-|Storm-1364||Iran||
-|Storm-1376||China, Influence operations||
 |Storm-1516||Russia, Influence operations||
 |Storm-1567||Financially motivated|Akira|
 |Storm-1575||Group in development|Dadsec|
+|Storm-1660||Iran, Influence operations||
 |Storm-1674||Financially motivated||
 |Storm-1679||Russia, Influence operations||
-|Storm-1811||Financially motivated||
+|Storm-1804||Iran, Influence operations||
+|Storm-1805||Iran, Influence operations||
+|[Storm-1811](https://www.microsoft.com/en-us/security/blog/2024/05/15/threat-actors-misusing-quick-assist-in-social-engineering-attacks-leading-to-ransomware/)||Financially motivated||
+|Storm-1841||Russia, Influence operations||
 |Storm-1849||China|UAT4356|
+|Storm-1852||Group in development||
+|Storm-2035||Iran, Influence operations||
 |Strawberry Tempest||Financially motivated|LAPSUS$|
 |Sunglow Blizzard||Russia||
+|Taizi Flood|Storm-1376|China, Influence operations|Spamouflage, Dragonbridge|
 |Tomato Tempest|SPURR|Financially motivated|Vatet|
-|Vanilla Tempest|DEV-0832|Financially motivated||
+|[Vanilla Tempest](https://www.microsoft.com/en-us/security/blog/2022/10/25/dev-0832-vice-society-opportunistic-ransomware-campaigns-impacting-us-education-sector/)|DEV-0832|Financially motivated||
 |Velvet Tempest|DEV-0504|Financially motivated||
 |Violet Typhoon|ZIRCONIUM|China|APT31|
 |[Volt Typhoon](https://www.microsoft.com/security/blog/2023/05/24/volt-typhoon-targets-us-critical-infrastructure-with-living-off-the-land-techniques)||China|BRONZE SILHOUETTE, VANGUARD PANDA|

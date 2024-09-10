@@ -150,6 +150,8 @@
              href: anti-spam-spam-confidence-level-scl-about.md
            - name: Bulk complaint level (BCL)
              href: anti-spam-bulk-complaint-level-bcl-about.md
+           - name: Bulk senders insight
+             href: anti-spam-bulk-senders-insight.md
            - name: Backscatter in EOP
              href: anti-spam-backscatter-about.md
            - name: Configure junk email settings on Exchange Online mailboxes
@@ -339,6 +341,7 @@
          - name: Email security reports
            href: reports-email-security.md
          - name: Defender for Office 365 reports
+           href: reports-defender-for-office-365.md
        - name: Safe Documents in Microsoft 365 A5 or E5 Security
          items:
          - name: Safe Documents in A5 or E5 Security
@@ -376,6 +379,8 @@
            href: submissions-admin-review-user-reported-messages.md
          - name: Errors during submissions
            href: submissions-error-messages.md
+         - name: Submission result definitions
+           href: submissions-result-definitions.md
        - name: Threat Explorer and real-time detections
          items:
          - name: About Threat Explorer and Real-time detections
@@ -392,6 +397,8 @@
            href: teams-message-entity-panel.md
        - name: Insights
          items:
+         - name: Bulk senders insight
+           href: anti-spam-bulk-senders-insight.md
          - name: Spoof intelligence insight
            href: anti-spoofing-spoof-intelligence.md
          - name: Impersonation insight
@@ -466,6 +473,8 @@
        href: app-guard-for-office-install.md
      - name: Data retention in Defender for Office 365
        href: mdo-data-retention.md
+     - name: Privacy in Defender for Office 365
+       href: mdo-privacy.md
      - name: External email senders - Microsoft 365 resources
        items:
        - name: Microsoft 365 services for external email senders

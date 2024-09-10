@@ -3,6 +3,7 @@ title: Partner applications in Microsoft Defender for Endpoint
 ms.reviewer:
 description: View supported partner applications to enhance the detection, investigation, and threat intelligence capabilities of the platform
 ms.service: defender-endpoint
+ms.subservice: reference
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium

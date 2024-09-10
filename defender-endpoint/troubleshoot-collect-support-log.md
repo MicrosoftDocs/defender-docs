@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: troubleshooting
 ms.subservice: edr
 search.appverid: met150
-ms.date: 06/05/2024
+ms.date: 09/03/2024
 ---
 
 # Collect support logs in Microsoft Defender for Endpoint using live response
@@ -51,11 +51,14 @@ This article provides instructions on how to run the tool via Live Response on W
 
    :::image type="content" source="media/analyzer-file.png" alt-text="The choose file button-2" lightbox="media/analyzer-file.png":::
 
+   Repeat this step for the `MDEClientAnalyzerPreview.zip` file.
+
 6. While still in the LiveResponse session, use the following commands to run the analyzer and collect the resulting file.
 
    ```console
+   Putfile MDEClientAnalyzerPreview.zip
    Run MDELiveAnalyzer.ps1
-   GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDEClientAnalyzerResult.zip"
+   GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDECA\MDEClientAnalyzerResult.zip"
    ```
 
    [![Image of commands.](media/analyzer-commands.png)](media/analyzer-commands.png#lightbox)
@@ -69,7 +72,7 @@ This article provides instructions on how to run the tool via Live Response on W
    ```console
    PutFile MDEClientAnalyzerPreview.zip -overwrite
    Run MDELiveAnalyzer.ps1
-   GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDEClientAnalyzerResult.zip"
+   GetFile "C:\ProgramData\Microsoft\Windows Defender Advanced Threat Protection\Downloads\MDECA\MDEClientAnalyzerResult.zip"
    ```
 
 - For more information on gathering data locally on a machine in case the machine isn't communicating with Microsoft Defender for Endpoint cloud services, or doesn't appear in Microsoft Defender for Endpoint portal as expected, see [Verify client connectivity to Microsoft Defender for Endpoint service URLs](verify-connectivity.md).

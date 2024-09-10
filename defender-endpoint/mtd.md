@@ -3,10 +3,11 @@ title: Microsoft Defender for Endpoint - Mobile Threat Defense
 ms.reviewer: tdoucette, sunasing
 description: Overview of Mobile Threat Defense in Microsoft Defender for Endpoint
 ms.service: defender-endpoint
+ms.subservice: onboard
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 01/28/2024
+ms.date: 09/05/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -100,10 +101,10 @@ While evaluating mobile threat defense with Microsoft Defender for Endpoint, you
 This helps reduce potential issues that could arise while rolling out the service. Here are some tests and exit criteria that might help:
 
 - Devices show up in the device inventory list: After successful onboarding of Defender for Endpoint on the mobile device, verify that the device is listed in the Device Inventory in the [security console](https://security.microsoft.com).
+<!---
+- Run a malware detection test on an Android device: Install any test virus app from the Google play store and verify that it gets detected by Microsoft Defender for Endpoint. Here's an example app that can be used for this test: (We are working on new one, it will be updated soon). Note that on Android Enterprise with a work profile, only the work profile is supported. --->
 
-- Run a malware detection test on an Android device: Install any test virus app from the Google play store and verify that it gets detected by Microsoft Defender for Endpoint. Here's an example app that can be used for this test: [Test virus](https://play.google.com/store/apps/details?id=com.antivirus&hl=en_US&gl=US). Note that on Android Enterprise with a work profile, only the work profile is supported.
-
-- Run a phishing test: Browse to https://smartscreentestratings2.net and verify that it gets blocked by Microsoft Defender for Endpoint. Note that on Android Enterprise with a work profile, only the work profile is supported.
+- Run a phishing test: Browse to `https://smartscreentestratings2.net` and verify that it gets blocked by Microsoft Defender for Endpoint. Note that on Android Enterprise with a work profile, only the work profile is supported.
 
 - Alerts appear in dashboard: Verify that alerts for above detection tests appear on the [security console](https://security.microsoft.com).
 

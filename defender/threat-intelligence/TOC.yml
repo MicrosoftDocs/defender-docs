@@ -31,6 +31,9 @@
     href: using-projects.md
   - name: Using Microsoft Copilot in Defender for threat intelligence
     href: using-copilot-threat-intelligence-defender-xdr.md
+  - name: Enabling data connector for Defender TI in Microsoft Sentinel (Preview)
+    href: /azure/sentinel/connect-mdti-data-connector
+
 - name: Tutorials
   items:
   - name: Gathering threat intelligence and infrastructure chaining

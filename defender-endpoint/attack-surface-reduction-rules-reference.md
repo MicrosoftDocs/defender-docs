@@ -15,7 +15,7 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.date: 05/02/2024
+ms.date: 09/07/2024
 search.appverid: met150
 ---
 
@@ -109,7 +109,6 @@ The following ASR rules DO NOT honor Microsoft Defender for Endpoint Indicators 
 The following table lists the supported operating systems for rules that are currently released to general availability. The rules are listed alphabetical order in this table.
 
 > [!NOTE]
->
 > Unless otherwise indicated, the minimum Windows&nbsp;10 build is version 1709 (RS3, build 16299) or later; the minimum Windows&nbsp;Server build is version 1809 or later.
 >
 > Attack surface reduction rules in Windows&nbsp;Server&nbsp;2012&nbsp;R2 and Windows&nbsp;Server&nbsp;2016 are available for devices onboarded using the modern unified solution package. For more information, see [New Windows Server 2012 R2 and 2016 functionality in the modern unified solution](configure-server-endpoints.md#functionality-in-the-modern-unified-solution).
@@ -257,7 +256,6 @@ This rule prevents an application from writing a vulnerable signed driver to dis
 The **Block abuse of exploited vulnerable signed drivers** rule doesn't block a driver already existing on the system from being loaded.
 
 > [!NOTE]
->
 > You can configure this rule using Intune OMA-URI. See [Intune OMA-URI](enable-attack-surface-reduction.md#custom-profile-in-intune) for configuring custom rules.
 >
 > You can also configure this rule using [PowerShell](enable-attack-surface-reduction.md#powershell).
@@ -321,6 +319,9 @@ Advanced hunting action type:
 Dependencies: Microsoft Defender Antivirus
 
 ### Block credential stealing from the Windows local security authority subsystem
+
+> [!NOTE]
+> If you have [LSA protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) enabled and [Credential Guard](/windows/security/identity-protection/credential-guard) enabled, this attack surface reduction rule is not required. 
 
 This rule helps prevent credential stealing by locking down Local Security Authority Subsystem Service (LSASS).
 
@@ -543,7 +544,7 @@ Dependencies: Microsoft Defender Antivirus, RPC
 This rule blocks processes created through [PsExec](/sysinternals/downloads/psexec) and [WMI](/windows/win32/wmisdk/about-wmi) from running. Both PsExec and WMI can remotely execute code. There's a risk of malware abusing functionality of PsExec and WMI for command and control purposes, or to spread an infection throughout an organization's network.
 
 > [!WARNING]
-> Only use this rule if you're managing your devices with [Intune](/intune) or another MDM solution. This rule is incompatible with management through [Microsoft Endpoint Configuration Manager](/configmgr) because this rule blocks WMI commands the Configuration Manager client uses to function correctly.
+> Only use this rule if you're managing your devices with [Intune](/mem/intune) or another MDM solution. This rule is incompatible with management through [Microsoft Endpoint Configuration Manager](/configmgr) because this rule blocks WMI commands the Configuration Manager client uses to function correctly.
 
 Intune name: `Process creation from PSExec and WMI commands`
 
@@ -573,6 +574,14 @@ Configuration Manager name: Not yet available
  
 GUID: `33ddedf1-c6e0-47cb-833e-de6133960387`
  
+Advanced hunting action type:
+
+- `AsrSafeModeRebootedAudited`
+
+- `AsrSafeModeRebootBlocked`
+
+- `AsrSafeModeRebootWarnBypassed`
+
 Dependencies: Microsoft Defender Antivirus
 
 ### Block untrusted and unsigned processes that run from USB
@@ -610,6 +619,14 @@ Configuration Manager name: Not yet available
 
 GUID: `c0033c00-d16d-4114-a5a0-dc9b3a7d2ceb`
  
+Advanced hunting action type:
+
+- `AsrAbusedSystemToolAudited`
+
+- `AsrAbusedSystemToolBlocked`
+
+- `AsrAbusedSystemToolWarnBypassed`
+
 Dependencies: Microsoft Defender Antivirus
 
 ### Block Webshell creation for Servers

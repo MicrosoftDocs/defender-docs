@@ -3,20 +3,20 @@ title: Manage the deception capability in Microsoft Defender XDR
 description: Detect human-operated attacks with lateral movement in the early stages using high confidence signals from the deception feature in Microsoft Defender XDR.
 ms.service: defender-xdr
 f1.keywords: 
-  - NOCSH
+- NOCSH
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: 
-  - m365-security
-  - tier1
+- m365-security
+- tier1
 ms.topic: conceptual
 search.appverid: 
-  - MOE150
-  - MET150
-ms.date: 07/08/2024
+- MOE150
+- MET150
+ms.date: 08/14/2024
 ---
 
 # Manage the deception capability in Microsoft Defender XDR
@@ -79,7 +79,7 @@ There are two types of lures available in the deception feature:
 
 You can specify decoys, lures, and the scope in a deception rule. See [Configure the deception feature](configure-deception.md) to learn more about how to create and modify deception rules.  
 
-When an attacker uses a decoy or a lure on any Defender for Endpoint-onboarded client, the deception capability triggers an alert that indicates possible attacker activity, regardless of whether deception was deployed on the client or not.
+When an attacker uses a decoy on any Defender for Endpoint-onboarded client, the deception capability triggers an alert that indicates possible attacker activity, regardless of whether deception was deployed on the client or not.
 
 ## Identify incidents and alerts activated by deception
 
@@ -94,7 +94,7 @@ The alert details contain:
 - The decoy device or user account where the alert originated
 - The type of attack like sign in attempts or lateral movement attempts
 
-:::image type="content" source="/defender/media/deception/fig2-deception.png" alt-text="Screenshot of a deception alert highlighting the tag and the attempt" lightbox="/defender/media/deception/fig2-deception.png":::
+:::image type="content" source="/defender/media/deception/deception-alert-small.png" alt-text="Screenshot of a deception alert highlighting the tag and the attempt" lightbox="/defender/media/deception/deception-alert.png":::
 
 *Figure 2. Details of a deception-related alert*
 

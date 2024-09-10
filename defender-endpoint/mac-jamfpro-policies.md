@@ -14,7 +14,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: macos
 search.appverid: met150
-ms.date: 05/20/2024
+ms.date: 08/26/2024
 ---
 
 # Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
@@ -31,7 +31,10 @@ Use this article to set up policies for Defender for Endpoint on Mac using Jamf 
 
 ## Step 1: Get the Microsoft Defender for Endpoint onboarding package
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com), navigate to **Settings > Endpoints > Onboarding**.
+> [!IMPORTANT]
+> You must have an appropriate role assigned to view, manage, and onboard devices. For more information, see [Manage access to Microsoft Defender XDR with Microsoft Entra global roles](/defender-xdr/m365d-permissions#manage-access-to-microsoft-defender-xdr-with-microsoft-entra-global-roles).
+
+1. In the [Microsoft Defender Portal](https://security.microsoft.com), navigate to **Settings** > **Endpoints** > **Onboarding**.
 
 2. Select macOS as the operating system and Mobile Device Management / Microsoft Intune as the deployment method.
 
@@ -53,7 +56,7 @@ Use this article to set up policies for Defender for Endpoint on Mac using Jamf 
 
    :::image type="content" source="media/jamf-pro-configure-profile.png" alt-text="The page on which you create a new Jamf Pro dashboard." lightbox="media/jamf-pro-configure-profile.png":::
 
-3. Enter the following details in the **General** tab:
+3. On the **General** tab, specify the following details:
    
    - **Name**: `MDE onboarding for macOS`
    - **Description**: `MDE EDR onboarding for macOS`
@@ -144,7 +147,7 @@ Note that you must use exact `com.microsoft.wdav` as the **Preference Domain**; 
     curl -o ~/Documents/schema.json https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/schema/schema.json
     ```
 
-2. Create a new configuration profile. Under **Computers**, go to **Configuration Profiles**, and then specify the following details on the **General** tab:
+2. Create a new configuration profile. Under **Computers**, go to **Configuration Profiles**, and then, on the **General** tab, specify the following details:
 
    :::image type="content" source="media/644e0f3af40c29e80ca1443535b2fe32.png" alt-text="A new profile." lightbox="media/644e0f3af40c29e80ca1443535b2fe32.png":::
 
@@ -325,7 +328,7 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
    :::image type="content" source="media/644e0f3af40c29e80ca1443535b2fe32.png" alt-text="The page displaying a new profile." lightbox="media/644e0f3af40c29e80ca1443535b2fe32.png":::
 
-4. Enter the following details on the **General** tab:
+4. On the **General** tab, specify the following details:
 
     - **Name**: `MDATP MDAV configuration settings`
     - **Description**: `<blank>`
@@ -394,11 +397,12 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 ## Step 4: Configure notifications settings
 
-These steps are applicable on macOS 11 (Big Sur) or later.
+> [!NOTE]
+> These steps are applicable on macOS 11 (Big Sur) or later. Even though Jamf supports notifications on macOS version 10.15 or later, Defender for Endpoint on Mac requires macOS 11 or later.
 
 1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
 
-2. Select **New**, and enter the following details in the **General** tab for **Options**:
+2. Select **New**, and then, on the **General** tab, for **Options**, specify the following details:
 
    - **Name**: `MDATP MDAV Notification settings`
    - **Description**: `macOS 11 (Big Sur) or later`
@@ -408,7 +412,7 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
      :::image type="content" source="media/c9820a5ff84aaf21635c04a23a97ca93.png" alt-text="The new macOS configuration profile page." lightbox="media/c9820a5ff84aaf21635c04a23a97ca93.png":::
 
-    - Tab **Notifications**, select **Add**, and enter the following values:
+    - On the **Notifications** tab, select **Add**, and specify the following values:
         - **Bundle ID**: `com.microsoft.wdav.tray`
         - **Critical Alerts**: Select **Disable**
         - **Notifications**: Select **Enable**
@@ -419,7 +423,7 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
           :::image type="content" source="media/7f9138053dbcbf928e5182ee7b295ebe.png" alt-text="The configuration settings mdatpmdav notifications tray." lightbox="media/7f9138053dbcbf928e5182ee7b295ebe.png":::
 
-    - Tab **Notifications**, select **Add** one more time, scroll down to **New Notifications Settings**
+    - On the **Notifications** tab, select **Add** one more time, and then scroll down to **New Notifications Settings**
         - **Bundle ID**: `com.microsoft.autoupdate.fba`
         - Configure the rest of the settings to the same values mentioned earlier
 
@@ -472,7 +476,7 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
    :::image type="content" source="media/eaba2a23dd34f73bf59e826217ba6f15.png" alt-text="The configuration settings." lightbox="media/eaba2a23dd34f73bf59e826217ba6f15.png":::
 
-4. Enter the following details on the **General** tab:
+4. On the **General** tab, specify the following details:
 
     - **Name**: `MDATP MDAV MAU settings`
     - **Description**: `Microsoft AutoUpdate settings for MDATP for macOS`
@@ -531,7 +535,7 @@ These steps are applicable on macOS 11 (Big Sur) or later.
 
 2. Select **+ New**.
 
-3. Enter the following details on the **General** tab:
+3. On the **General** tab, specify the following details:
 
     - **Name**: `MDATP MDAV - grant Full Disk Access to EDR and AV`
     - **Description**: `On macOS 11 (Big Sur) or later, the new Privacy Preferences Policy Control`
@@ -619,7 +623,7 @@ Alternatively, you can download [fulldisk.mobileconfig](https://github.com/micro
 
    :::image type="content" source="media/6c8b406ee224335a8c65d06953dc756e.png" alt-text="The automatically generated social media post's description." lightbox="media/6c8b406ee224335a8c65d06953dc756e.png":::
 
-2. Enter the following details on the **General** tab:
+2. On the **General** tab, specify the following details:
 
     - **Name**: `MDATP MDAV System Extensions`
     - **Description**: `MDATP system extensions`
@@ -666,22 +670,23 @@ Alternatively, you can download [fulldisk.mobileconfig](https://github.com/micro
 
 ## Step 8: Configure Network Extension
 
-As part of the Endpoint Detection and Response capabilities, Microsoft Defender for Endpoint on macOS inspects socket traffic and reports this information to the Microsoft Defender portal. The following policy allows the network extension to perform this functionality.
+As part of the Endpoint Detection and Response capabilities, Microsoft Defender for Endpoint on macOS inspects socket traffic and reports this information to the Microsoft Defender portal.
 
-These steps are applicable on macOS 11 (Big Sur) or later.
+> [!NOTE]
+> These steps are applicable on macOS 11 (Big Sur) or later. Even though Jamf supports notifications on macOS version 10.15 or later, Defender for Endpoint on Mac requires macOS 11 or later.
 
 1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
 
 2. Select **New**, and enter the following details for **Options**:
 
-    - Tab **General**:
+    - On the **General** tab, specify the following values:
       - **Name**: `Microsoft Defender Network Extension`
       - **Description**: `macOS 11 (Big Sur) or later`
       - **Category**: `None *(default)*`
       - **Distribution Method**: `Install Automatically *(default)*`
       - **Level**: `Computer Level *(default)*`
 
-    - Tab **Content Filter**:
+    - On the **Content Filter** tab, specify the following values:
       - **Filter Name**: `Microsoft Defender Content Filter`
       - **Identifier**: `com.microsoft.wdav`
       - Leave **Service Address**, **Organization**, **User Name**, **Password**, **Certificate** blank (**Include** is *not* selected)
@@ -793,7 +798,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
    :::image type="content" source="media/57aa4d21e2ccc65466bf284701d4e961.png" alt-text="The bird Description for an automatically generated package." lightbox="media/57aa4d21e2ccc65466bf284701d4e961.png":::
 
-6. In the **General tab**, enter the following details in **New Package**:
+6. On the **General tab**, in **New Package**, specify the following details:
 
     - **Display Name**: Leave it blank for now. Because it is reset when you choose your pkg.
     - **Category**: `None (default)`

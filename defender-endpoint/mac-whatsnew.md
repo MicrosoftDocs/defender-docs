@@ -2,11 +2,11 @@
 title: What's new in Microsoft Defender for Endpoint on Mac
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Mac.
 ms.service: defender-endpoint
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: dansimp
+ms.author: dansimp
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 06/21/2024
+ms.date: 08/27/2024
 audience: ITPro
 ms.collection:
 - m365-security
@@ -52,6 +52,30 @@ Microsoft Defender for Endpoint no longer supports Big Sur (11)
 ### Behavior Monitoring for macOS is now in public preview
 
 Behavior monitoring monitors process behavior to detect and analyze potential threats based on the behavior of the applications, daemons, and files within the system. As behavior monitoring observes how the software behaves in real-time, it can adapt quickly to new and evolving threats and block them. To learn more, see [Behavior Monitoring in Microsoft Defender for Endpoint on macOS](behavior-monitor-macos.md).
+
+### Aug-2024 (Build: 101.24072.0006  | Release version: 20.124072.6.0)
+
+| Build:             | **101.24072.0006**         |
+|--------------------|-----------------------|
+| Release version:   | 20.124072.6.0 |
+| Engine version:    | 1.1.24060.7 |
+| Signature version: | 1.417.325.0      |
+
+##### What's new
+
+- Bug and performance fixes
+
+### Jul-2024 (Build: 101.24062.0009  | Release version: 20.124062.9.0)
+
+| Build:             | **101.24062.0009**         |
+|--------------------|-----------------------|
+| Release version:   | 20.124062.9.0 |
+| Engine version:    | 1.1.24050.7       |
+| Signature version: | 1.411.410.0      |
+
+##### What's new
+
+- Bug and performance fixes
 
 ### Jun-2024 (Build: 101.24052.0013  | Release version: 20.124052.13.0)
 

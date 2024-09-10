@@ -3,7 +3,7 @@ title: Use network protection to help prevent macOS connections to bad sites
 description: Protect your network by preventing macOS users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 12/08/2023
+ms.date: 08/22/2024
 audience: ITPro
 author: siosulli
 ms.author: siosulli
@@ -25,9 +25,20 @@ search.appverid: met150
 
 **Applies to:**
 
-- [Microsoft Microsoft Defender XDR for Endpoint Plan 1](microsoft-defender-endpoint.md)
-- [Microsoft Microsoft Defender XDR for Endpoint Plan 2](microsoft-defender-endpoint.md)
 - [Microsoft Defender XDR](/defender-xdr)
+- [Microsoft Defender XDR for Endpoint Plan 2](microsoft-defender-endpoint.md)
+- Microsoft Defender for Business
+- [Microsoft Defender XDR for Endpoint Plan 1](microsoft-defender-endpoint.md)
+
+### Prerequisites
+
+- Licensing: Microsoft Defender XDR for Endpoint Plan 1 or Microsoft Defender XDR for Endpoint Plan 2 (can be trial) or Microsoft Defender for Business.
+- Onboarded Machines: macOS version: Big Sur (11) or later, with product version 101.94.13 or later.
+- Non-Microsoft web browsers, such as Brave, Chrome, Opera, and Safari
+- Microsoft Edge for macOS browser
+
+> [!NOTE]
+> Microsoft Edge for macOS does not currently support web content filtering, custom indicators, or other enterprise features. However, network protection provides this protection to Microsoft Edge for macOS if network protection is enabled.
 
 ## Overview
 
@@ -73,18 +84,7 @@ To roll out Network Protection for macOS, we recommend the following actions:
 ### Important notes
 
 - We don't recommend controlling network protection from System Preferences by using the Disconnect button. Instead, use the mdatp command-line tool or JAMF / Intune to control network protection for macOS.
-- To evaluate effectiveness of macOS web threat protection, we recommend trying it in browsers other than Microsoft Edge for macOS (for example, Safari). Microsoft Edge for macOS has built-in web threat protection that is enabled regardless of whether the Mac network protection feature you're evaluating, is turned on or not.
-
-> [!NOTE]
->
-> Microsoft Edge for macOS does not currently support web content filtering, custom indicators, or other enterprise features. However, network protection will provide this protection to Microsoft Edge for macOS if network protection is enabled.
-
-## Prerequisites
-
-- Licensing: Microsoft Defender XDR for Endpoint Plan 1 or Microsoft Defender XDR for Endpoint Plan 2 (can be trial)
-- Onboarded Machines:
-  - Minimum macOS version: 11
-  - Product version 101.94.13 or later
+- To evaluate effectiveness of macOS web threat protection, we recommend trying it in browsers other than Microsoft Edge for macOS (for example, Safari). Microsoft Edge for macOS has built-in web threat protection (Microsoft Defender Browser Protection extension which provides Smartscreen capabilities) that is enabled regardless of whether the Mac network protection feature you're evaluating, is turned on or not.
 
 ## Deployment instructions
 
@@ -128,9 +128,10 @@ To confirm that network protection has been started successfully, run the follow
 mdatp health --field network_protection_status
 ```
 
-#### JAMF deployment
+#### JAMF Pro deployment
 
-A successful JAMF deployment requires a configuration profile to set the enforcement level of network protection.
+A successful JAMF Pro deployment requires a configuration profile to set the enforcement level of network protection.
+
 After you create this configuration profile, assign it to the devices where you want to enable network protection.
 
 ##### Configure the enforcement level
@@ -265,7 +266,7 @@ The following scenarios are supported.
 
 ### Web threat protection
 
-Web threat protection is part of web protection in Microsoft Defender XDR for Endpoint. It uses network protection to secure your devices against web threats. By integrating with Microsoft Edge for macOS and popular non-Microsoft browsers, such as Chrome and Firefox, web threat protection stops web threats without a web proxy. Web threat protection can protect devices while they're on premises or away. Web threat protection stops access to the following types of sites:
+Web threat protection is part of web protection in Microsoft Defender XDR for Endpoint. It uses network protection to secure your devices against web threats. By integrating with Microsoft Edge for macOS and popular non-Microsoft browsers, such as Brave, Chrome, Firefox, Safari, Opera, web threat protection stops web threats without a web proxy. For more information about browser support, see [Prerequisites](#prerequisites)  Web threat protection can protect devices while they're on premises or away. Web threat protection stops access to the following types of sites:
 
 - phishing sites
 - malware vectors
@@ -295,7 +296,7 @@ Web content filtering is part of the [Web protection](web-protection-overview.md
 
 Configure policies across your device groups to block certain categories. Blocking a category prevents users within specified device groups from accessing URLs associated with the category. For any category that's not blocked, the URLs are automatically audited. Your users can access the URLs without disruption, and you gather access statistics to help create a more custom policy decision. Your users see a block notification if an element on the page they're viewing is making calls to a blocked resource.
 
-Web content filtering is available on the major web browsers, with blocks performed by Network Protection (Safari, Chrome, Firefox, Brave, and Opera). For more information about browser support, see [Prerequisites](#prerequisites).
+Web content filtering is available on the major web browsers, with blocks performed by Network Protection (Brave, Chrome, Firefox, Safari, and Opera). For more information about browser support, see [Prerequisites](#prerequisites).
 
 :::image type="content" source="media/network-protection-wcf-add-policy.png" alt-text="Shows network protection web content filtering add policy." lightbox="media/network-protection-wcf-add-policy.png":::
 

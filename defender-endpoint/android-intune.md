@@ -15,7 +15,7 @@ ms.custom: partner-contribution
 ms.topic: conceptual
 ms.subservice: android
 search.appverid: met150
-ms.date: 05/22/2024
+ms.date: 07/25/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on Android with Microsoft Intune
@@ -93,7 +93,7 @@ Defender for Endpoint on Android supports Android Enterprise enrolled devices.
 
 For more information on the enrollment options supported by Microsoft Intune, see [Enrollment Options](/mem/intune/enrollment/android-enroll).
 
-**Currently, personally owned devices using a work profile and corporate-owned, fully managed user device enrollments are supported for deployment.**
+**Currently, Personally-owned devices with work profile, Corporate-owned devices with work profile, and Corporate-owned fully managed user device enrollments are supported in Android Enterprise.**
 
 ## Add Microsoft Defender for Endpoint on Android as a Managed Google Play app
 
@@ -280,11 +280,11 @@ Android low touch onboarding is disabled by default. Admins can enable it throug
 
 6. Under **Configuration settings**, select `Use Configuration designer`, and then select **Add**.
 
-7. Select **Low touch onboarding and User UPN**. For User UPN, change the value type to `Variable`, and set the configuration value to `User Principal Name`. Enable low-touch onboarding by changing its configuration value to `1`.
+1. Select **Low touch onboarding and User UPN**. For User UPN, change the value type to `Variable`, and set the configuration value to `User Principal Name`. Enable low-touch onboarding by changing its configuration value to `1`.
 
-    >[!div class="mx-imgBorder"]
-    >![Screenshot showing a low touch onboarding configuration policy.](media/low-touch-user-upn.png)
-
+      > [!div class="mx-imgBorder"]
+   > ![Screenshot showing a low touch onboarding configuration policy.](media/low-touch-user-upn.png)
+   
 8. Assign the policy to the target user group.
 
 9. Review and create the policy.
@@ -293,33 +293,33 @@ Android low touch onboarding is disabled by default. Admins can enable it throug
 
 ### Set up Microsoft Defender in Personal Profile
 
-Admins can go to the [Microsoft Endpoint Management admin center](https://endpoint.microsoft.com) to set up and configure Microsoft Defender support in personal profiles by following these steps:
+Admins can go to the [Microsoft Endpoint Management admin center](https://intune.microsoft.com) to set up and configure Microsoft Defender support in personal profiles by following these steps:
 
 1. Go to **Apps> App configuration policies** and click on **Add**. Select **Managed Devices**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Image of adding app configuration policy.](media/addpolicy.png)
+      > [!div class="mx-imgBorder"]
+   > ![Image of adding app configuration policy.](media/addpolicy.png)
+   
+1. Enter **Name** and **Description** to uniquely identify the configuration policy. Select platform as **'Android Enterprise'**, Profile type as **'Personally-owned work profile only'** and Targeted app as **'Microsoft Defender'**.
 
-2. Enter **Name** and **Description** to uniquely identify the configuration policy. Select platform as **'Android Enterprise'**, Profile type as **'Personally-owned work profile only'** and Targeted app as **'Microsoft Defender'**.
+      > [!div class="mx-imgBorder"]
+   > ![Image of naming configuration policy.](media/selectapp.png)
+   
+1. On the settings page, in **'Configuration settings format'**, select **'Use configuration designer'** and click on **Add**. From the list of configurations that are displayed, select **'Microsoft Defender in Personal profile'**.
 
-    > [!div class="mx-imgBorder"]
-    > ![Image of naming configuration policy.](media/selectapp.png)
+      > [!div class="mx-imgBorder"]
+   > ![Image of configuring personal profile.](media/addconfiguration.png)
+   
+1. The selected configuration will be listed. Change the **configuration value to 1** to enable Microsoft Defender support personal profiles. A notification will appear informing the admin about the same. Click on **Next**.
 
-3. On the settings page, in **'Configuration settings format'**, select **'Use configuration designer'** and click on **Add**. From the list of configurations that are displayed, select **'Microsoft Defender in Personal profile'**.
+      > [!div class="mx-imgBorder"]
+   > ![Image of changing config value.](media/changeconfigvalue.png)
+   
+1. **Assign** the configuration policy to a group of users. **Review and create** the policy.
 
-    > [!div class="mx-imgBorder"]
-    > ![Image of configuring personal profile.](media/addconfiguration.png)
-
-4. The selected configuration will be listed. Change the **configuration value to 1** to enable Microsoft Defender support personal profiles. A notification will appear informing the admin about the same. Click on **Next**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Image of changing config value.](media/changeconfigvalue.png)
-
-5. **Assign** the configuration policy to a group of users. **Review and create** the policy.
-
-    > [!div class="mx-imgBorder"]
-    > ![Image of reviewing and creating policy.](media/savepolicy.png)
-
+      > [!div class="mx-imgBorder"]
+   > ![Image of reviewing and creating policy.](media/savepolicy.png)
+   
 Admins also can set up **privacy controls** from the Microsoft Intune admin center to control what data can be sent by the Defender mobile client to the security portal. For more information, see [configuring privacy controls](android-configure.md).
 
 Organizations can communicate to their users to protect Personal profile with Microsoft Defender on their enrolled BYOD devices.
