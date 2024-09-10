@@ -188,8 +188,7 @@ See [Add exclusions in the Windows Security app](microsoft-defender-security-cen
 
 ## Use wildcards in the file name and folder path or extension exclusion lists
 
-You can use the asterisk `*`, question mark `?`, or environment variables (such as `%ALLUSERSPROFILE%`) as wildcards when defining items in the file name or folder path exclusion list. The way these wildcards are interpreted differs from their usual usage in other apps and languages. Make sure to read this section to understand their specific limitations.
-
+You can use the asterisk `*`, question mark `?`, or environment variables (such as `%ALLUSERSPROFILE%`) as wildcards when defining items in the file name or folder path exclusion list. You can mix and match `*` and `?` and environment variables into a single exclusion.   The way these wildcards are interpreted differs from their usual usage in other apps and languages. Make sure to read this section to understand their specific limitations.
 > [!IMPORTANT]
 > There are key limitations and usage scenarios for these wildcards:
 > - Environment variable usage is limited to machine variables and those applicable to processes running as an NT AUTHORITY\SYSTEM account.
@@ -204,6 +203,7 @@ The following table describes how the wildcards can be used and provides some ex
 |`*` (asterisk) <br/><br/> In **file name and file extension inclusions**, the asterisk replaces any number of characters, and only applies to files in the last folder defined in the argument. <br/><br/> In **folder exclusions**, the asterisk replaces a single folder. Use multiple `*` with folder slashes `\` to indicate multiple nested folders. After matching the number of wild carded and named folders, all subfolders are also included.|`C:\MyData\*.txt` includes `C:\MyData\notes.txt` <br/><br/> `C:\somepath\*\Data` includes any file in `C:\somepath\Archives\Data` and its subfolders, and `C:\somepath\Authorized\Data` and its subfolders <br/><br/> `C:\Serv\*\*\Backup` includes any file in `C:\Serv\Primary\Denied\Backup` and its subfolders, and `C:\Serv\Secondary\Allowed\Backup` and its subfolders|
 |`?` (question mark)  <br/><br/> In **file name and file extension inclusions**, the question mark replaces a single character, and only applies to files in the last folder defined in the argument. <br/><br/> In **folder exclusions**, the question mark replaces a single character in a folder name. After matching the number of wild carded and named folders, all subfolders are also included.|`C:\MyData\my?.zip` includes `C:\MyData\my1.zip` <br/><br/> `C:\somepath\?\Data` includes any file in `C:\somepath\P\Data` and its subfolders  <br/><br/> `C:\somepath\test0?\Data` would include any file in `C:\somepath\test01\Data` and its subfolders|
 |Environment variables <br/><br/> The defined variable is populated as a path when the exclusion is evaluated.|`%ALLUSERSPROFILE%\CustomLogFiles` would include `C:\ProgramData\CustomLogFiles\Folder1\file1.txt`|
+|Mix and Match <br/><br/>Environment variables * and ? can be combined into a single exclusion|`%PROGRAMFILES%\Contoso*\v?\bin\contoso.exe` would include `c:\Program Files\Contoso Labs\v1\bin\contoso.exe`|
 
 > [!IMPORTANT]
 > If you mix a file exclusion argument with a folder exclusion argument, the rules stop at the file argument match in the matched folder, and don't look for file matches in any subfolders.
