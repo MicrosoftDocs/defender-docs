@@ -63,7 +63,7 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 3. [Visit the Microsoft Defender portal](#step-3-visit-the-microsoft-365-defender-portal).
 4. [Onboard endpoints using any of the supported management tools](#step-4-onboard-endpoints-using-any-of-the-supported-management-tools).
 5. [Configure capabilities](#step-5-configure-capabilities).
-6. [Step 6: Visit the Microsoft Defender portal](#step-6-visit-the-microsoft-defender-portal).
+6. [Visit the Microsoft Defender portal](#step-6-visit-the-microsoft-defender-portal).
 
 ## Step 1: Confirm your license state
 
