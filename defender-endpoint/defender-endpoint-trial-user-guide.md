@@ -63,6 +63,7 @@ This playbook is a simple guide to help you make the most of your free trial. Us
 3. [Visit the Microsoft Defender portal](#step-3-visit-the-microsoft-365-defender-portal).
 4. [Onboard endpoints using any of the supported management tools](#step-4-onboard-endpoints-using-any-of-the-supported-management-tools).
 5. [Configure capabilities](#step-5-configure-capabilities).
+6. [Step 6: Visit the Microsoft Defender portal](#step-6-visit-the-microsoft-defender-portal).
 
 ## Step 1: Confirm your license state
 
@@ -112,12 +113,9 @@ Use [the device onboarding table](onboarding.md) to choose components to configu
 
 After you have onboarded devices, [run a detection test](run-detection-test.md). 
 
-## Step 6: Set up the Microsoft Defender for Endpoint evaluation lab   
+## Step 6: Visit the Microsoft Defender portal
 
-The Microsoft Defender for Endpoint evaluation lab is designed to eliminate the complexities of device and environment configuration so that you can focus on evaluating the capabilities of the platform, running simulations, and seeing the prevention, detection, and remediation features in action. Using the simplified set-up experience in evaluation lab, you can focus on running your own test scenarios and the pre-made simulations to see how Defender for Endpoint performs.
-
-- [Watch the video overview](https://www.microsoft.com/videoplayer/embed/RE4qLUM) of the evaluation lab
-- [Get started with the lab](evaluate-microsoft-defender-antivirus.md) 
+The Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) is a central location where you can view onboarded devices, security recommendations, detected threats, alerts, and more. To get started, see [Microsoft Defender portal](../defender-xdr/microsoft-365-defender-portal.md).   
 
 
 ## See also
