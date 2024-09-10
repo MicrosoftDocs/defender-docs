@@ -73,5 +73,13 @@ User prompt evidence consists of prompts and model responses. Both the prompts a
 
 ## Next step
 
+[!div class="nextstepaction"]
+
+[Add user and application context to AI alerts](/azure/defender-for-cloud/gain-end-user-context-ai)
+
+[!div class="nextstepaction"]
+
+[Explore AI alerts](/azure/defender-for-cloud/alerts-ai-workloads)
+
 > [!div class="nextstepaction"]
 > [Manage and respond to the security alerts](managing-and-responding-alerts.yml)
