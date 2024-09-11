@@ -1,6 +1,6 @@
 ---
 title: Overview of partner integrations
-description: Learn about how Microsoft Defender for Cloud integrates with partner solutions to enhance your security posture and protect your Azure resources.
+description: Learn about The different partners that integrate with Defender for Cloud to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
 ms.date: 09/10/2024
 #customer intent: As a reader, I want to learn what partner solutions integrate with Defender for Cloud.
