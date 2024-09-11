@@ -39,6 +39,12 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | September 1 | GA  | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
 |September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
 
+### Update to Defender CSPM multi cloud network requirements
+
+September 11, 2024
+
+**Estimated date for change:** October 2024
+
 ### Defender for Servers feature deprecation
 
 September 9, 2024
