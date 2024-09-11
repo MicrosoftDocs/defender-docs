@@ -14,7 +14,7 @@ See the [required FQDN/application rules for Microsoft Defender for Containers](
 
 By default, AKS clusters have unrestricted outbound (egress) internet access.
 
-Defender sensor must connect to the configured Azure Monitor Log Analytics workspace. In the event egress from the cluster requires the use of Azure Monitor Private Link Scope (AMPLS), you must perform the following:
+Defender sensor must connect to the configured Azure Monitor Log Analytics workspace. In the event egress from the cluster requires the use of Azure Monitor Private Link Scope (AMPLS), you must:
 
 -    Define the cluster with Container Insights and a Log Analytics workspace
 -    Configure the AMPLS with Query access mode and Ingestion access mode set to "Open"
