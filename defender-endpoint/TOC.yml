@@ -383,7 +383,11 @@
           href: time-settings.md
 
       - name: Safeguard and manage your environment 
-        href: safeguard-manage-maintain-mde-guide.md   
+  	    items:
+          - name: Safe deployment practices strategy 
+            href: mde-sdp-strategy.md
+          - name: Manage behavior safely in your organization
+            href: manage-maintain-mde-guide.md
 
       - name: Defender for Endpoint Security Operations Guide 
         href: mde-sec-ops-guide.md
