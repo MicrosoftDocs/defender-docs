@@ -18,7 +18,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn how to view and manage quarantined messages for all users in Exchange Online Protection (EOP). Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint Online, OneDrive for Business, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 08/30/2024
+ms.date: 09/11/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -106,6 +106,10 @@ You can sort the entries by clicking on an available column header. Select :::im
   - **None**
   - **Message sender is blocked by recipient settings**
   - **Message sender is blocked by administrator settings**
+
+  > [!TIP]
+  > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+
 - **Released by**<sup>\*</sup>
 - **Message ID**
 - **Policy name**
@@ -149,6 +153,10 @@ To filter the entries, select :::image type="icon" source="media/m365-cc-sc-filt
 - **Blocked sender**: One of the following values:
   - **Don't show blocked senders** (default)
   - **Show all senders**
+
+  > [!TIP]
+  > If a sender is blocked and **Don't show blocked senders** is selected, messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
+
 - **Release status**: Select one or more of the following values
   - **Needs review**
   - **Approved**
