@@ -65,7 +65,12 @@ Automatic attack disruption uses Microsoft-based XDR response actions. Examples 
 
 - [Device contain](/defender-endpoint/respond-machine-alerts#contain-devices-from-the-network) - based on Microsoft Defender for Endpoint's capability, this action is an automatic containment of a suspicious device to block any incoming/outgoing communication with the said device.
 
-- [Disable user](/defender-for-identity/remediation-actions) - based on Microsoft Defender for Identity's capability, this action is an automatic suspension of a compromised account to prevent additional damage like lateral movement, malicious mailbox use, or malware execution.
+- [Disable user](/defender-for-identity/remediation-actions) - based on Microsoft Defender for Identity's capability, this action is an automatic suspension of a compromised account to prevent additional damage like lateral movement, malicious mailbox use, or malware execution. The Disable user action behaves differently depending on how the user is hosted in your environment.
+  - User hosted in Active Directory : Microsoft Defender for Identity will trigger the Disable user action on DCs running the Defender for Identity agent
+  - User hosted in Active Directory and synced on Entra ID :  Microsoft Defender for Identity will trigger the Disable user action via onboarded domain controllers. Attack Disruption will also disable the user on the Entra ID synced account as well.
+  - User hosted on Entra ID only (cloud native account) :  Attack Disruption will disable the user on the Entra ID synced account.
+ 
+[!NOTE] Disabling the user on Entra ID is not dependent on Microsoft Defender for Identity being deployed. 
 
 - [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint's capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with Defender for Endpoint's onboarded devices.
 
