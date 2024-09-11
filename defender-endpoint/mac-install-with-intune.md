@@ -63,34 +63,40 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 
 1. Under **Configuration profiles**, select **Create Profile**.
 
-   This profile is needed for Big Sur (11) or later. It's ignored on older versions of macOS, because they use the kernel extension.
-
 1. On the **Policies** tab, select **Create** > **New Policy**. 
 
 1. Under **Platform**, select **macOS**.
 
-1. Under **Profile type**, select **Templates**.
-
-1. Under **Template name**, select **Extensions**.
+1. Under **Profile type**, select **Settings catalog**.
 
 1. Select **Create**.
 
-1. On the **Basics** tab, **Name** the profile. For example, `SysExt-prod-macOS-Default-MDE`.
+1. On the **Basics** tab, **Name** the profile and enter a **Description.**
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, expand **System Extensions** and add the following entries in the **Allowed system extensions** section:
+1. On the **Configuration settings tab,** select **+Add settings.**
 
-    |Bundle identifier|Team identifier|
-    |---|---|
-    |`com.microsoft.wdav.epsext`|`UBF8T346G9`|
-    |`com.microsoft.wdav.netext`|`UBF8T346G9`|
+1. Under **Template name**, select **Extensions**.
 
-    :::image type="content" source="../defender-endpoint/media/mac-system-extension-intune2.png" alt-text="Screenshot that shows the settings of the system's extension." lightbox="../defender-endpoint/media/mac-system-extension-intune2.png":::
-    
+1. In the **Settings picker**, expand the **System Configuration** category and select **System Extensions > Allowed System Extensions:**
+
+![Screenshot 2024-09-11 at 1.41.09 PM](media/mac-install-with-intune/screenshot-2024-09-11-at-1.41.09 pm.png)
+
+1. Close the Settings picker and select **+ Edit instance**. 
+
+1. Configure the following entries in the **Allowed system extensions** section:
+
+|Allowed System Extensions|Team Identifier|
+|---|---|
+|`com.microsoft.wdav.epsext`|`UBF8T346G9`|
+|`com.microsoft.wdav.netext`|`UBF8T346G9`|
+
+![image003](media/mac-install-with-intune/image003.png)
+
 1. Select **Next**.
 
-1. On the **Assignments** tab, assign the profile to a group where the macOS devices and/or users are located, or **All Users** and **All devices**.
+1. On the **Assignments** tab, assign the profile to a group where the macOS devices or users are located.
 
 1. Review the configuration profile. Select **Create**.
 
@@ -564,6 +570,7 @@ For information on troubleshooting procedures, see:
 - [Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](mac-support-install.md)
 - [Troubleshoot license issues for Microsoft Defender for Endpoint on macOS](mac-support-license.md)
 - [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS](troubleshoot-cloud-connect-mdemac.md)
+
 - [Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf.md)
 
 ## Uninstallation
