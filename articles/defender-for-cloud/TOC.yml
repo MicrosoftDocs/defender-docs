@@ -145,6 +145,27 @@
         - name: Integrate partner solutions
           displayName: security, solutions, integrate, integrated, data sources
           href: partner-integration.md
+        - name: Partner integrations
+          items:  
+          - name: ServiceNow
+            items:
+            - name: ServiceNow integration with Defender for Cloud
+              displayName: CSPM, cloud security, posture, management, ServiceNow
+              href: integration-servicenow.md
+            - name: Connect ServiceNow to Defender for Cloud
+              displayName: CSPM, cloud security, posture, management, ServiceNow
+              href: connect-servicenow.md
+          - name: API partners
+            items:
+            - name: Partner applications
+              href: defender-partner-applications.md
+            - name: Onboard 42Crunch (preview)
+              href: onboarding-guide-42crunch.md
+            - name: Onboard StackHawk (preview)
+              href: onboarding-guide-stackhawk.md
+            - name: Onboard Bright Security (preview)
+              href: onboarding-guide-bright.md
+
 
 - name: Tutorials
   items:
