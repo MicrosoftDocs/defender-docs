@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 09/04/2024
+ms.date: 09/09/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -31,10 +31,42 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| September 9 | Deprecation | [Defender for Servers feature deprecation](#defender-for-servers-feature-deprecation) |
+| September 9 | GA | [Spanish National Security Framework (Esquema Nacional de Seguridad (ENS)) added to regulatory compliance dashboard for Azure](#spanish-national-security-framework-esquema-nacional-de-seguridad-ens-added-to-regulatory-compliance-dashboard-for-azure)|
+| September 8 | GA | [Remediate system updates and patches recommendations on your machines](#remediate-system-updates-and-patches-recommendations-on-your-machines)|
 | September 4 | GA | [ServiceNow's integration now includes Configuration Compliance module](#servicenows-integration-now-includes-configuration-compliance-module) |
 | September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
 | September 1 | GA  | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
 |September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
+
+### Defender for Servers feature deprecation
+
+September 9, 2024
+
+Both Adaptive application controls, and Adaptive network hardening are now deprecated.
+
+### Spanish National Security Framework (Esquema Nacional de Seguridad (ENS)) added to regulatory compliance dashboard for Azure
+
+September 9, 2024
+
+Organizations that wish to check their Azure environments for compliance with the ENS standard can now do so using Defender for Cloud.
+
+The ENS standard applies to the entire public sector in Spain, as well as to suppliers collaborating with the Administration. It establishes basic principles, requirements, and security measures to protect information and services processed electronically. The goal is to ensure access, confidentiality, integrity, traceability, authenticity, availability, and data preservation.
+
+Check out the [full list of supported compliance standards](concept-regulatory-compliance-standards.md#available-compliance-standards).
+
+
+### Remediate system updates and patches recommendations on your machines
+
+September 8, 2024
+
+You can now remediate system updates and patches recommendations on your Azure Arc-enabled machines and Azure VMs. System updates and patches are crucial for keeping the security and health of your machines. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
+
+Information about missing machine updates is now gathered using Azure Update Manager.
+
+In order to maintain the security of your machines for system updates and patches, you'll need to enable the periodic assessment updates settings on your machines.
+
+Learn how to [Remediate system updates and patches recommendations on your machines](enable-periodic-system-updates.md).
 
 ### ServiceNow's integration now includes Configuration Compliance module
 
@@ -241,7 +273,7 @@ Those standards included CIS Google Kubernetes Engine (GKE) Benchmark, ISO/IEC 2
 
 Those preview standards are now generally available (GA).
 
-Check out the [full list of supported compliance standards](concept-regulatory-compliance-standards.md#available-compliance-standards)
+Check out the [full list of supported compliance standards](concept-regulatory-compliance-standards.md#available-compliance-standards).
 
 ### Inventory experience improvement
 

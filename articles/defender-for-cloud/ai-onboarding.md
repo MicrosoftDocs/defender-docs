@@ -2,7 +2,7 @@
 title: Enable threat protection for AI workloads (preview)
 description: Learn how to enable threat protection for AI workloads on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 05/05/2024
+ms.date: 09/08/2024
 ---
 
 # Enable threat protection for AI workloads (preview)
@@ -49,7 +49,30 @@ Enable threat protection for AI workloads.
 
     :::image type="content" source="media/ai-onboarding/enable-ai-workloads-plan.png" alt-text="Screenshot that shows you how to toggle threat protection for AI workloads to on." lightbox="media/ai-onboarding/enable-ai-workloads-plan.png":::
 
-## Next step
+## Enable user prompt evidence
 
-> [!div class="nextstepaction"]
-> [Manage and respond to the security alerts](managing-and-responding-alerts.yml)
+With the AI workloads threat protection plan enabled, you can control whether alerts include suspicious segments directly from your user's prompts, or the model responses from your AI applications or resources. Enabling user prompt evidence helps you to triage and classifying alerts and your user's intentions. 
+
+User prompt evidence consists of prompts and model responses. Both the prompts and model responses are considered your data. The evidence is available through the Azure portal, Defender portal, and any attached partners integrations.
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+
+1. Search for and select **Microsoft Defender for Cloud**.
+
+1. In the Defender for Cloud menu, select **Environment settings**.
+
+1. Select the relevant Azure subscription.
+
+1. Locate AI workloads and select **Settings**.
+
+1. Toggle Enable user prompt evidence to **On**.
+
+    :::image type="content" source="media/ai-onboarding/enable-user-prompt-evidence.png" alt-text="Screenshot that shows you how to toggle user prompt evidence to on." lightbox="media/ai-onboarding/enable-user-prompt-evidence.png":::
+
+1. Select **Continue**.
+
+## Next steps
+
+- [Add user and application context to AI alerts](/azure/defender-for-cloud/gain-end-user-context-ai)
+- [Explore AI alerts](/azure/defender-for-cloud/alerts-ai-workloads)
+- [Manage and respond to the security alerts](managing-and-responding-alerts.yml)
