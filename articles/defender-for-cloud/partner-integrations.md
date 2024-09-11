@@ -19,9 +19,13 @@ There are two types of partner Integration in Defender for Cloud:
 
 The following table lists the partner solutions that provide insights to Defender for Cloud. These solutions help you to gain more visibility into your cloud resources and enhance your security posture.
 
-| Partner name | Description | Partner integration documentation |
+| Partner name | Description | Documentation |
 |--|--|--|
-| x | x | x | 
+| Barracuda Networks | Barracuda Networks is a cybersecurity company that provides security, networking, and storage solutions. It offers a range of products including email protection, application security, network security, and data protection to help organizations safeguard their digital environments. | [Integrate partner solutions](partner-integration.md) |
+| Check Point | Check Point is a cybersecurity company that provides comprehensive security solutions for networks, endpoints, clouds, and mobile devices. It offers a range of products and services designed to protect organizations from cyber threats and ensure robust security management. | [Integrate partner solutions](partner-integration.md) |
+| F5 Networks | F5 Networks is a technology company that specializes in application security, multi-cloud management, and application delivery networking. It provides solutions to ensure the security, availability, and performance of applications across various environments. |  [Integrate partner solutions](partner-integration.md) |
+| Rapid7 | Rapid7 is a cybersecurity company that provides security data and analytics solutions. It helps organizations manage vulnerabilities, detect threats, and respond to incidents in real-time, enhancing their overall security posture. | [Integrate partner solutions](partner-integration.md) |
+| Qualys | Qualys is a cybersecurity company that provides cloud-based security and compliance solutions. It helps organizations identify and manage security risks, ensuring continuous protection and compliance across their IT environments. | [Integrate partner solutions](partner-integration.md) |
 
 ## Receive insights
 
