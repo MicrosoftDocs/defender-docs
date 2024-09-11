@@ -67,10 +67,11 @@ Automatic attack disruption uses Microsoft-based XDR response actions. Examples 
 
 - [Disable user](/defender-for-identity/remediation-actions) - based on Microsoft Defender for Identity's capability, this action is an automatic suspension of a compromised account to prevent additional damage like lateral movement, malicious mailbox use, or malware execution. The disable user action behaves differently depending on how the user is hosted in your environment.
   - When the user account is hosted in Active Directory: Defender for Identity triggers the disable user action on domain controllers running the Defender for Identity agent.
-  - When the user account is hosted in Active Directory and is synced on Entra ID:  Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account on the Entra ID synced account.
-  - When the user account is hosted on Entra ID only (cloud native account): attack disruption disable the user account on the Entra ID synced account.
+  - When the user account is hosted in Active Directory and is synced on Microsoft Entra ID:  Defender for Identity triggers the disable user action via onboarded domain controllers. Attack disruption also disables the user account on the Entra ID synced account.
+  - When the user account is hosted in Entra ID only (cloud native account): attack disruption disable the user account on the Entra ID synced account.
  
-[!NOTE] Disabling the user on Entra ID is not dependent on Microsoft Defender for Identity being deployed. 
+> [!NOTE]
+> Disabling the user account in Microsoft Entra ID is not dependent on the deployment of Microsoft Defender for Identity. 
 
 - [Contain user](/defender-endpoint/respond-machine-alerts#contain-user-from-the-network) - based on Microsoft Defender for Endpoint's capability, this response action automatically contains suspicious identities temporarily to help block any lateral movement and remote encryption related to incoming communication with Defender for Endpoint's onboarded devices.
 
