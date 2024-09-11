@@ -136,7 +136,15 @@
         - name: Protect APIs with Defender for APIs
           displayName: APIs, enable
           href: defender-for-apis-deploy.md
-
+    - name: Integrate external solutions
+      expanded: false
+      items:
+        - name: Overview of partner integrations
+          displayName: partner, integration, integrations, partners
+          href: partner-integrations.md
+        - name: Integrate partner solutions
+          displayName: security, solutions, integrate, integrated, data sources
+          href: partner-integration.md
 
 - name: Tutorials
   items:
@@ -380,9 +388,6 @@
         - name: Track secure score
           displayName: secure score, rest api, resource graph
           href: secure-score-access-and-track.md
-        - name: Integrate security solutions
-          displayName: security, solutions, integrate, integrated, data sources
-          href: partner-integration.md
         - name: Enable permissions management (CIEM)
           displayName: permissions, management, role-based access control, RBAC, azure, azure ad, active directory
           href: enable-permissions-management.md
