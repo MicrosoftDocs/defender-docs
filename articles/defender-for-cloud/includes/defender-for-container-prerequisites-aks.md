@@ -21,4 +21,4 @@ Defender sensor must connect to the configured Azure Monitor Log Analytics works
 -    Define the cluster Log Analytics workspace as a resource in the AMPLS
 -    Create in the AMPLS a virtual network endpoint between the VNet of the cluster and the Log Analytics resource. The virtual network private endpoint integrates with a private DNS zone.
 
-Refer to [Create an Azure Monitor Private Link](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/private-link-configure#create-an-azure-monitor-private-link-scope) for instructions.
+Refer to [Create an Azure Monitor Private Link](/azure/azure-monitor/logs/private-link-configure#create-an-azure-monitor-private-link-scope) for instructions.
