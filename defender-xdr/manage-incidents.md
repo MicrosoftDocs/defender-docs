@@ -179,7 +179,7 @@ To generate the PDF, perform the following steps:
 
 1. Open an incident page. Select the **More actions** ellipsis (...) on the upper right corner and choose **Export incident as PDF**.
 
-   :::image type="content" source="/defender/media/incidents-queue/export-ellipsis-small.png" alt-text="Screenshot highlighting the export incident to PDF option." lightbox="/defender/media/incidents-queue/export-ellipsis.png":::
+   :::image type="content" source="/defender/media/incidents-queue/export-ellipsis-small.png" alt-text="Screenshot highlighting the More actions ellipsis on the incident page." lightbox="/defender/media/incidents-queue/export-ellipsis.png":::
 
 1. In the dialog box that appears next, confirm the incident information that you want to include or exclude in the PDF. All incident information is selected by default. Select **Export PDF** to proceed.
 
