@@ -6,7 +6,7 @@ metadata:
   ms.author: chrisda
   author: chrisda
   manager: deniseb
-  ms.date: 08/07/2024
+  ms.date: 09/11/2024
   audience: ITPro
   ms.topic: faq
 
@@ -117,6 +117,9 @@ sections:
           When a message expires from quarantine, you can't recover it.
 
           By default, messages from blocked senders are hidden from view in quarantine (quarantine is filtered by **Don't show blocked senders**). To see messages from all senders, select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** and then select **Show all senders**.
+
+          > [!TIP]
+          > If a sender is blocked and **Don't show blocked senders** is selected (default), messages from those senders are shown on the **Quarantine** page and are included in quarantine notifications when the **Sender address override reason** value is **None**. This behavior occurs because the messages were blocked due to reasons other than sender address overrides.
 
       - question: |
           A message was released from quarantine, but the original recipient can't find it. How can I determine what happened to the message?
