@@ -13,12 +13,14 @@ ms.collection:
 - tier2
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 05/09/2024
+ms.date: 09/12/2024
 ---
 
 # Microsoft Virus Initiative
 
 The Microsoft Virus Initiative (MVI) helps organizations improve the security solutions our customers rely on to keep them safe. We provide tools, resources, and knowledge to support better-together experiences with great performance, reliability, and compatibility.
+
+Microsoft collaborates with MVI partners to define and follow Safe Deployment Practices (SDP) to support the safety and resiliency of our mutual customers. In addition, Microsoft engages MVI partners in the development of new platform capabilities to create highly available security solutions building on the foundational security features in Windows 11.
 
 ## Become a member
 
