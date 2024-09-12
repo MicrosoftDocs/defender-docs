@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+|September 11|Upcoming change|[Update to CSPM multi cloud network requirements](#update-to-cspm-multi-cloud-network-requirements)|
 | September 9 | Deprecation | [Defender for Servers feature deprecation](#defender-for-servers-feature-deprecation) |
 | September 9 | GA | [Spanish National Security Framework (Esquema Nacional de Seguridad (ENS)) added to regulatory compliance dashboard for Azure](#spanish-national-security-framework-esquema-nacional-de-seguridad-ens-added-to-regulatory-compliance-dashboard-for-azure)|
 | September 8 | GA | [Remediate system updates and patches recommendations on your machines](#remediate-system-updates-and-patches-recommendations-on-your-machines)|
@@ -38,6 +39,16 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
 | September 1 | GA  | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
 |September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
+
+### Update to CSPM multi cloud network requirements
+
+September 11, 2024
+
+**Estimated date for change:** October 2024
+
+Beginning October 2024, we'll be adding additional IP addresses to our multi cloud discovery services to accommodate improvements and ensure a more efficient experience for all users.
+
+To ensure uninterrupted access from our services, you should update your IP allowlist with the new ranges [provided here](https://aka.ms/CSPM-network-requirements). You should make the necessary adjustments in your firewall settings, security groups, or any other configurations that may be applicable to your environment. The list is sufficient for full capability of the CSPM foundational (free) offering.
 
 ### Defender for Servers feature deprecation
 
