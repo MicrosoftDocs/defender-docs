@@ -13,6 +13,7 @@ ms.collection:
   - m365-security
   - m365initiative-defender-endpoint
   - tier1
+  - essentials-compliance
 ms.topic: conceptual
 search.appverid: met150
 ms.date: 08/14/2024

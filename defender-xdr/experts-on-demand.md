@@ -16,10 +16,10 @@ audience: ITPro
 ms.collection:
   - m365-security
   - tier1
-  - essentials-get-started
+  - essentials-manage
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 09/05/2024
+ms.date: 09/12/2024
 ---
 
 # Collaborate with experts on demand
@@ -43,15 +43,14 @@ Select **Ask Defender Experts** directly inside the Microsoft 365 security porta
 
 ### Required permissions for using Ask Defender Experts
 
-You need to select one of the following Microsoft Defender XDR Unified RBAC permissions before submitting inquiries to our Defender experts.
+You need to select one of the following Microsoft Entra ID roles to view and submit inquiries to our Defender experts.
 
-|Permission name|Level|
+|Microsoft Entra ID role|Permission level|
 |---|---|---|
-| Security data basics | Read|
-| Alerts | Manage |
-| Response | Manage |
+| Global Reader, Security Reader | Read inquiries |
+| Global Admin, Security Admin, Security Operator | Read and submit inquiries |
 
-To learn more about Unified RBAC permissions, see: [Microsoft Defender XDR Unified RBAC permission details](custom-permissions-details.md#microsoft-defender-xdr-unified-rbac-permission-details).
+To learn more about how Microsoft Entra ID roles map to Microsoft Defender Unified RBAC permissions, see [Microsoft Entra Global roles access](compare-rbac-roles.md#microsoft-entra-global-roles-access).
 
 ### Where to submit inquiries to Ask Defender Experts
 
