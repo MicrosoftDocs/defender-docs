@@ -4,7 +4,7 @@ description: Learn how to connect Power BI to Microsoft Defender for Cloud to ga
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 08/12/2024
+ms.date: 09/12/2024
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn how to connect Power BI to Microsoft Defender for Cloud so that I can gain enhanced value from the data collected by Defender for Cloud.
 ---
@@ -207,4 +207,4 @@ With Azure Resource Graph, you have the flexibility to retrieve and analyze any 
 ## Next step
 
 > [!div class="nextstep"]
-> [Learn how to create visualizations in Power BI](/power-bi/fundamentals/service-get-started)
+> [Add visualizations in Power BI](/power-bi/visuals/power-bi-report-add-visualizations-i?tabs=powerbi-desktop)

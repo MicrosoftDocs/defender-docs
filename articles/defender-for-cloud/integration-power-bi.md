@@ -1,15 +1,15 @@
 ---
-title: Power BI integration with Defender for Cloud
+title: Overview of integration with Power BI
 description: Learn about integrating Power BI with Microsoft Defender for Cloud to gain enhanced value from the data collected by Defender for Cloud.
 author: dcurwin
 ms.author: dacurwin
 ms.topic: overview
-ms.date: 08/12/2024
+ms.date: 09/12/2024
 ai-usage: ai-assisted
 #customer intent: As a user, I want to learn about the integration that exists between Power BI and Microsoft Defender for Cloud so that I can gain enhanced value from the data collected by Defender for Cloud.
 ---
 
-# Power BI integration with Defender for Cloud
+# Overview of integration with Power BI
 
 Microsoft Defender for Cloud has the ability to integrate its information into Microsoft Power BI to enhance the value derived from Defender for Cloud's data. 
 
@@ -27,4 +27,5 @@ Another significant benefit of this integration is the seamless data consolidati
 ## Related content
 
 - [Add Defender for Cloud data to Power BI](add-data-power-bi.md)
-- [Learn how to create visualizations in Power BI](/power-bi/fundamentals/service-get-started)
+- [Get started with Power BI](/power-bi/fundamentals/service-get-started)
+- [Add visualizations in Power BI](/power-bi/visuals/power-bi-report-add-visualizations-i?tabs=powerbi-desktop)
