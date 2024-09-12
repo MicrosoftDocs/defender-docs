@@ -24,6 +24,8 @@ Power BI’s extensive array of visualization options allows you to create highl
 
 Another significant benefit of this integration is the seamless data consolidation and collaborative features offered by Power BI. The platform's ability to integrate with various data sources, including Azure Resource Graph, means security teams can consolidate data from multiple platforms into a single, unified view. This unified view simplifies monitoring and analysis, providing a more comprehensive understanding of the security landscape. Additionally, Power BI facilitates collaboration by enabling you to share dashboards and reports with ease, while role-based access controls ensure that sensitive data remains secure. With its intuitive drag-and-drop functionality, Power BI is user-friendly and accessible, making it easier for individuals of all skill levels to create and customize visualizations, ultimately enhancing the efficiency and effectiveness of security operations.
 
+When you integrate Power BI with Defender for Cloud, you can bypass the 1,000-record limit in Azure Resource Graph, enabling comprehensive data retrieval. This integration ensures access to complete datasets, leading to better insights and more informed decision-making. It improves efficiency in managing large volumes of data and enhances security management by providing deeper visibility into your security posture.
+
 ## Related content
 
 - [Add Defender for Cloud data to Power BI](add-data-power-bi.md)
