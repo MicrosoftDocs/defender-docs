@@ -48,6 +48,7 @@ New and updated recommendations, alerts, and incidents are added to the table in
 
 | **Date**    | **Type**                       | **State**                                                    | **Name**                                                     |
 | ----------- | ------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+|October 12|Recommendation|GA|[Azure Database for PostgreSQL flexible server should have Microsoft Entra authentication only enabled](recommendations-reference-data.md#azure-database-for-postgresql-flexible-server-should-have-microsoft-entra-authentication-only-enabled)|
 | September 10| Alert | Preview | [Corrupted AI application\model\data directed a phishing attempt at a user](alerts-ai-workloads.md#corrupted-ai-applicationmodeldata-directed-a-phishing-attempt-at-a-user) |
 | September 10| Alert | Preview | [Phishing URL shared in an AI application](alerts-ai-workloads.md#phishing-url-shared-in-an-ai-application) |
 | September 10| Alert | Preview | [Phishing attempt detected in an AI application](alerts-ai-workloads.md#phishing-attempt-detected-in-an-ai-application) |
