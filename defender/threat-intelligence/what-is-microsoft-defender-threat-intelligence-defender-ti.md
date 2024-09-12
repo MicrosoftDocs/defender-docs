@@ -1,6 +1,6 @@
 --- 
 title: 'What is Microsoft Defender Threat Intelligence (Defender TI)?'
-description: 'In this overview article, learn about the main features that come with Microsoft Defender Threat Intelligence (Defender TI).'
+description: 'Learn about the main features that come with Microsoft Defender Threat Intelligence (Defender TI).'
 author: alexroland24
 ms.author: aroland
 manager: dolmont
@@ -39,9 +39,14 @@ The **Featured articles** section of the Intel explorer page (right below the se
 
 ![TI Overview Featured Articles](media/tiOverviewFeaturedArticles.png)
 
+Featured articles also appear in the [**Featured threat intelligence articles** widget](learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal.md#featured-threat-intelligence-articles-widget) in the Defender portal home page: 
+
+:::image type="content" source="/defender/threat-intelligence/media/mdti-featured-articles-widget.png" alt-text="Screenshot of Featured threat intelligence articles widget in the Defender portal home page." lightbox="/defender/threat-intelligence/media/mdti-featured-articles-widget.png":::
+
 Selecting a featured article banner loads it full article content. The article's **Snapshot** gives you a quick understanding of the article. The **Indicators** call-out shows how many public and Defender TI indicators are associated with the article.
 
 ![TI Overview Featured Article](media/tiOverviewFeaturedArticle.png)
+
 
 ### Articles
 

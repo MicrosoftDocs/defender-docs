@@ -16,7 +16,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 06/26/2024
+ms.date: 09/09/2024
 ---
 
 # Assign roles and permissions for Microsoft Defender for Endpoint deployment
@@ -38,15 +38,7 @@ The next step when deploying Defender for Endpoint is to assign roles and permis
 
 ## Role-based access control
 
-Microsoft recommends using the concept of least privileges. Defender for Endpoint leverages built-in roles within Microsoft Entra ID. Microsoft recommends [review the different roles that are available](/azure/active-directory/roles/permissions-reference) and choose the right one to solve your needs for each persona for this application. Some roles may need to be applied temporarily and removed after the deployment has been completed.
-
-|Personas|Roles|Microsoft Entra role (if necessary)|Assign to|
-|---|---|---|---|
-|Security Administrator||||
-|Security Analyst||||
-|Endpoint Administrator||||
-|Infrastructure Administrator||||
-|Business Owner/Stakeholder||||
+Microsoft recommends using the concept of least privileges. Defender for Endpoint leverages built-in roles within Microsoft Entra ID. [Review the different roles available](/azure/active-directory/roles/permissions-reference) and choose the right one to solve your needs for each persona for this application. Some roles may need to be applied temporarily and removed after the deployment has been completed.
 
 Microsoft recommends using [Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure) to manage your roles to provide additional auditing, control, and access review for users with directory permissions.
 
@@ -62,11 +54,11 @@ You can find details on permission guidelines here: [Create roles and assign the
 
 The following example table serves to identify the Cyber Defense Operations Center structure in your environment that will help you determine the RBAC structure required for your environment.
 
-|Tier|Description|Permission Required|
+|Tier|Description|Permissions required|
 |---|---|---|
-|Tier 1|**Local security operations team / IT team** <br/><br/> This team usually triages and investigates alerts contained within their geolocation and escalates to Tier 2 in cases where an active remediation is required.||
-|Tier 2|**Regional security operations team** <br/><br/> This team can see all the devices for their region and perform remediation actions.|View data|
-|Tier 3|**Global security operations team** <br/><br/> This team consists of security experts and is authorized to see and perform all actions from the portal.|View data <br/><br/> Alerts investigation Active remediation actions <br/><br/> Alerts investigation Active remediation actions <br/><br/> Manage portal system settings <br/><br/> Manage security settings|
+|Tier 1|**Local security operations team / IT team** <br/><br/> This team usually triages and investigates alerts contained within their geolocation and escalates to Tier 2 in cases where an active remediation is required.|View data|
+|Tier 2|**Regional security operations team** <br/><br/> This team can see all the devices for their region and perform remediation actions.|View data <br/><br/> Alerts investigation <br/><br/> Active remediation actions <br/><br/>|
+|Tier 3|**Global security operations team** <br/><br/> This team consists of security experts and is authorized to see and perform all actions from the portal.|View data <br/><br/> Alerts investigation <br/><br/> Active remediation actions <br/><br/>  Manage portal system settings <br/><br/> Manage security settings|
 
 ## Next step
 
