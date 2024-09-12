@@ -81,18 +81,18 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 
 1. In the **Settings picker**, expand the **System Configuration** category and select **System Extensions > Allowed System Extensions:**
 
-![Screenshot 2024-09-11 at 1.41.09 PM](media/mac-install-with-intune/screenshot-2024-09-11-at-1.41.09 pm.png)
+   ![Screenshot 2024-09-11 at 1.41.09 PM](media/mac-install-with-intune/screenshot-2024-09-11-at-1.41.09 pm.png)
 
 1. Close the Settings picker and select **+ Edit instance**. 
 
 1. Configure the following entries in the **Allowed system extensions** section:
 
-|Allowed System Extensions|Team Identifier|
-|---|---|
-|`com.microsoft.wdav.epsext`|`UBF8T346G9`|
-|`com.microsoft.wdav.netext`|`UBF8T346G9`|
+   |Allowed System Extensions|Team Identifier|
+   |---|---|
+   |`com.microsoft.wdav.epsext`|`UBF8T346G9`|
+   |`com.microsoft.wdav.netext`|`UBF8T346G9`|
 
-![image003](media/mac-install-with-intune/image003.png)
+   ![image003](media/mac-install-with-intune/image003.png)
 
 1. Select **Next**.
 
@@ -570,7 +570,6 @@ For information on troubleshooting procedures, see:
 - [Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](mac-support-install.md)
 - [Troubleshoot license issues for Microsoft Defender for Endpoint on macOS](mac-support-license.md)
 - [Troubleshoot cloud connectivity issues for Microsoft Defender for Endpoint on macOS](troubleshoot-cloud-connect-mdemac.md)
-
 - [Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS](mac-support-perf.md)
 
 ## Uninstallation
@@ -579,27 +578,13 @@ See [Uninstalling](mac-resources.md#uninstalling) for details on how to remove M
 
 ## Recommended content
 
-[Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune](/mem/intune/apps/apps-advanced-threat-protection-macos?source=recommendations)
-
-Learn about adding Microsoft Defender for Endpoint to macOS devices using Microsoft Intune.
-
-[Examples of device control policies for Intune](mac-device-control-intune.md)
-<br>Learn how to use device control policies using examples that can be used with Intune.
-
-[Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-<br>Describes how to deploy Microsoft Defender for Endpoint on iOS features.
-
-[Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](ios-install.md)
-<br>Describes how to deploy Microsoft Defender for Endpoint on iOS using an app.
-
-[Configure Microsoft Defender for Endpoint in Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure?source=recommendations)
-<br>Describes connecting to Defender for Endpoint, onboarding devices, assigning compliance for risk levels, and conditional access policies.
-
-[Troubleshoot issues and find answers on FAQs related to Microsoft Defender for Endpoint on iOS](ios-troubleshoot.md)
-<br>Troubleshooting and FAQ - Microsoft Defender for Endpoint on iOS.
-
-[Configure Microsoft Defender for Endpoint on Android features](android-configure.md)
-<br>Describes how to configure Microsoft Defender for Endpoint on Android.
-
-[Manage Defender for Endpoint on Android devices in Intune - Azure](/mem/intune/protect/advanced-threat-protection-manage-android?source=recommendations)
-<br>Configure Microsoft Defender for Endpoint web protection on Android devices managed by Microsoft Intune.
+|Article | Description |
+|---|---|
+| [Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune](/mem/intune/apps/apps-advanced-threat-protection-macos?source=recommendations) | Learn about adding Microsoft Defender for Endpoint to macOS devices using Microsoft Intune |
+| [Examples of device control policies for Intune](mac-device-control-intune.md) | Learn how to use device control policies using examples that can be used with Intune |
+| [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md) | Describes how to deploy Microsoft Defender for Endpoint on iOS features |
+| [Deploy Microsoft Defender for Endpoint on iOS with Microsoft Intune](ios-install.md) | Describes how to deploy Microsoft Defender for Endpoint on iOS using an app |
+| [Configure Microsoft Defender for Endpoint in Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure?source=recommendations) | Describes connecting to Defender for Endpoint, onboarding devices, assigning compliance for risk levels, and conditional access policies |
+| [Troubleshoot issues and find answers on FAQs related to Microsoft Defender for Endpoint on iOS](ios-troubleshoot.md) | Troubleshooting and FAQ - Microsoft Defender for Endpoint on iOS |
+| [Configure Microsoft Defender for Endpoint on Android features](android-configure.md) | Describes how to configure Microsoft Defender for Endpoint on Android | 
+| [Manage Defender for Endpoint on Android devices in Intune - Azure](/mem/intune/protect/advanced-threat-protection-manage-android?source=recommendations) | Configure Microsoft Defender for Endpoint web protection on Android devices managed by Microsoft Intune |
