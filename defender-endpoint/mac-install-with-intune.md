@@ -79,11 +79,11 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 
 1. Under **Template name**, select **Extensions**.
 
-1. In the **Settings picker**, expand the **System Configuration** category and select **System Extensions > Allowed System Extensions:**
+1. In the **Settings picker**, expand the **System Configuration** category, and then select **System Extensions** > **Allowed System Extensions:**
 
-   ![Screenshot 2024-09-11 at 1.41.09 PM](media/mac-install-with-intune/screenshot-2024-09-11-at-1.41.09 pm.png)
+   ![Screenshot showing the Settings Picker](media/mac-install-with-intune/screenshot-2024-09-11-at-1.41.09 pm.png)
 
-1. Close the Settings picker and select **+ Edit instance**. 
+1. Close the Settings picker, and then select **+ Edit instance**. 
 
 1. Configure the following entries in the **Allowed system extensions** section:
 
@@ -92,7 +92,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
    |`com.microsoft.wdav.epsext`|`UBF8T346G9`|
    |`com.microsoft.wdav.netext`|`UBF8T346G9`|
 
-   ![image003](media/mac-install-with-intune/image003.png)
+   ![Screenshot showing allowed system extensions](media/mac-install-with-intune/image003.png)
 
 1. Select **Next**.
 
