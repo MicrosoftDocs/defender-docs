@@ -216,7 +216,7 @@ The offboarding profile should be uploaded without any modifications, and with P
 
 ## The Microsoft Defender portal
 
-When threats are detected, your security team can view detections and if necessary, take response actions on a device. For more information, see the following resources:
+When threats are detected, your security team can view detections and if necessary, take response actions on a device in the Microsoft Defender portal ([https://security.microsoft.com](https://security.microsoft.com)). The Microsoft Defender combines protection, detection, investigation, and response to threats in a central location. For more information, see the following resources:
 
 - [Overview of endpoint detection and response](/defender-endpoint/overview-endpoint-detection-response)
 - [Tech Community blog: EDR capabilities for macOS have now arrived](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/edr-capabilities-for-macos-have-now-arrived/ba-p/1047801)
