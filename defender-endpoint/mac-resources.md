@@ -214,10 +214,13 @@ The offboarding profile should be uploaded without any modifications, and with P
 > 3. Run this command: `sudo /Library/Application Support/Microsoft/Defender/uninstall/install_helper execute --path '/Library/Application Support/Microsoft/Defender/uninstall/uninstall' --args --post-uninstall-hook`.
 > 4. Restart the device.
 
-## Microsoft Defender for Endpoint portal information
+## The Microsoft Defender portal
 
-The Microsoft Defender for Endpoint blog,
-[EDR capabilities for macOS have now arrived](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/edr-capabilities-for-macos-have-now-arrived/ba-p/1047801) provides detailed guidance on what to expect.
+When threats are detected, your security team can view detections and if necessary, take response actions on a device. For more information, see the following resources:
+
+- [Overview of endpoint detection and response](/defender-endpoint/overview-endpoint-detection-response)
+- [Tech Community blog: EDR capabilities for macOS have now arrived](https://techcommunity.microsoft.com/t5/microsoft-defender-atp/edr-capabilities-for-macos-have-now-arrived/ba-p/1047801)
+- [Microsoft Defender portal overview](/defender-xdr/microsoft-365-defender-portal)
 
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
