@@ -41,9 +41,9 @@ Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/docu
 
 In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device controls ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS less than 14.3.1.
 
-**Sonoma support**
+**Sequoia support**
 
-Microsoft Defender supports macOS Sonoma (14.0) in the current Defender release.
+Microsoft Defender supports macOS Sequoia (15) in the current Defender release.
 
 **macOS Deprecation**
 
