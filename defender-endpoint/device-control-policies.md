@@ -4,7 +4,7 @@ description: Learn about Device control policies in Defender for Endpoint
 author: siosulli
 ms.author: siosulli
 manager: deniseb
-ms.date: 08/27/2024
+ms.date: 09/13/2024
 ms.topic: overview
 ms.service: defender-endpoint
 ms.subservice: asr
