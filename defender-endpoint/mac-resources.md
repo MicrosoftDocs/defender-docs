@@ -173,9 +173,24 @@ To enable autocompletion in zsh:
 ## Uninstalling
 
 > [!NOTE]
-> Before uninstalling Microsoft Defender for Endpoint on macOS, offboard each device per [Offboard non-Windows devices](configure-endpoints-non-windows.md).
-
+> Before uninstalling Microsoft Defender for Endpoint on macOS, 
 There are several ways to uninstall Microsoft Defender for Endpoint on macOS. Although centrally managed uninstallation is available on JAMF, it's not yet available for Microsoft Intune.
+
+All of the uninstall of Microsoft Defender for Endpoint on macOS require the following:
+
+1. Create a [device tag](/defender-endpoint/machine-tags), and name the tag *decommissioned* and assign it to the macOS where Microsoft Defender for macOS is being uninstalled.
+
+1. Create a [Device group](/defender-endpoint/machine-groups) and name it (e.g. *Decommissioned macOS*) and assign a user *group* that should be able to see them.
+
+   Note: Steps 1 and 2 are optional if you do not want to see these devices that are retired in the "Device inventory" for 180 days.
+   
+1. Remove the "Set Preferences" policies that contain [Tamper Protection](/defender-endpoint/tamperprotection-macos) or through the manual configuration.
+
+1. Offboard each device per [Offboard non-Windows devices](configure-endpoints-non-windows.md).
+
+1. Uninstall the Microsoft Defender for Endpoint for macOS apps
+
+1. Remove the device from the *group* for *system extension* policies if an MDM was used to set them.
 
 ### Interactive uninstallation
 
