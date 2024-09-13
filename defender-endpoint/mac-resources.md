@@ -172,8 +172,6 @@ To enable autocompletion in zsh:
 
 ## Uninstalling
 
-> [!NOTE]
-> Before uninstalling Microsoft Defender for Endpoint on macOS, 
 There are several ways to uninstall Microsoft Defender for Endpoint on macOS. Although centrally managed uninstallation is available on JAMF, it's not yet available for Microsoft Intune.
 
 All of the uninstall of Microsoft Defender for Endpoint on macOS require the following:
