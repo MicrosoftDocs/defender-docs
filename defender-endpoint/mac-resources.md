@@ -74,16 +74,7 @@ If an error occurs during installation, the installer reports a general failure 
 
 For further troubleshooting installation issues, see [Troubleshoot installation issues for Microsoft Defender for Endpoint on macOS](mac-support-install.md).
 
-## Uninstalling
-
-> [!NOTE]
-> Before uninstalling Microsoft Defender for Endpoint on macOS, offboard each device per [Offboard non-Windows devices](configure-endpoints-non-windows.md).
-
-There are several ways to uninstall Microsoft Defender for Endpoint on macOS. Although centrally managed uninstallation is available on JAMF, it's not yet available for Microsoft Intune.
-
-### Interactive uninstallation
-
-- Open **Finder > Applications**. Right click on **Microsoft Defender for Endpoint**, and then select **Move to Trash**.
+## Configuring from the command line
 
 ### Supported output types
 
@@ -92,28 +83,6 @@ Supports table and JSON format output types. For each command, there's a default
 `-output json`
 
 `-output table`
-
-### From the command line
-
-- `sudo '/Library/Application Support/Microsoft/Defender/uninstall/uninstall'`
-
-### Using JAMF Pro
-
-To uninstall Microsoft Defender for Endpoint on macOS using JAMF Pro upload the offboarding profile. 
-
-The offboarding profile should be uploaded without any modifications, and with Preference Domain name set to `com.microsoft.wdav.atp.offboarding`, as shown in the following image:
-
-   :::image type="content" source="/defender/media/defender-endpoint/jamf-pro-offboarding.png" alt-text="Screenshot of the JAMF offboarding screen" lightbox="/defender/media/defender-endpoint/jamf-pro-offboarding.png":::
-
-
-> [!NOTE]
-> If you have trouble uninstalling Defender for Endpoint on Mac, and you see in your reports an item for *Microsoft Defender Endpoint Security Extension*, follow these steps:
-> 1. Reinstall the Microsoft Defender app.
-> 2. Drag **Microsoft Defender.app** to **Trash**.
-> 3. Run this command: `sudo /Library/Application Support/Microsoft/Defender/uninstall/install_helper execute --path '/Library/Application Support/Microsoft/Defender/uninstall/uninstall' --args --post-uninstall-hook`.
-> 4. Restart the device.
-
-## Configuring from the command line
 
 Important tasks, such as controlling product settings and triggering on-demand scans, can be done by using the command line:
 
@@ -200,6 +169,37 @@ To enable autocompletion in zsh:
 ## Client Microsoft Defender for Endpoint quarantine directory
 
 `/Library/Application Support/Microsoft/Defender/quarantine/` contains the files quarantined by `mdatp`. The files are named after the threat trackingId. The current trackingIds are shown with `mdatp threat list`.
+
+## Uninstalling
+
+> [!NOTE]
+> Before uninstalling Microsoft Defender for Endpoint on macOS, offboard each device per [Offboard non-Windows devices](configure-endpoints-non-windows.md).
+
+There are several ways to uninstall Microsoft Defender for Endpoint on macOS. Although centrally managed uninstallation is available on JAMF, it's not yet available for Microsoft Intune.
+
+### Interactive uninstallation
+
+- Open **Finder > Applications**. Right click on **Microsoft Defender for Endpoint**, and then select **Move to Trash**.
+
+### From the command line
+
+- `sudo '/Library/Application Support/Microsoft/Defender/uninstall/uninstall'`
+
+### Using JAMF Pro
+
+To uninstall Microsoft Defender for Endpoint on macOS using JAMF Pro upload the offboarding profile. 
+
+The offboarding profile should be uploaded without any modifications, and with Preference Domain name set to `com.microsoft.wdav.atp.offboarding`, as shown in the following image:
+
+   :::image type="content" source="/defender/media/defender-endpoint/jamf-pro-offboarding.png" alt-text="Screenshot of the JAMF offboarding screen" lightbox="/defender/media/defender-endpoint/jamf-pro-offboarding.png":::
+
+
+> [!NOTE]
+> If you have trouble uninstalling Defender for Endpoint on Mac, and you see in your reports an item for *Microsoft Defender Endpoint Security Extension*, follow these steps:
+> 1. Reinstall the Microsoft Defender app.
+> 2. Drag **Microsoft Defender.app** to **Trash**.
+> 3. Run this command: `sudo /Library/Application Support/Microsoft/Defender/uninstall/install_helper execute --path '/Library/Application Support/Microsoft/Defender/uninstall/uninstall' --args --post-uninstall-hook`.
+> 4. Restart the device.
 
 ## Microsoft Defender for Endpoint portal information
 
