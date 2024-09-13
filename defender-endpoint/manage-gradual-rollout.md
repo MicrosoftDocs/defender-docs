@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 01/12/2024
+ms.date: 09/13/2024
 ---
 
 # Manage the gradual rollout process for Microsoft Defender updates
