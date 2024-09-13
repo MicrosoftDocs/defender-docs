@@ -96,6 +96,8 @@ The resulting logs or alerts can be linked to an incident by selecting a results
 
 :::image type="content" source="/defender/media/investigate-incidents/fig2-gohunt-attackstory.png" alt-text="Highlighting the link to incident option in go hunt query results" lightbox="/defender/media/investigate-incidents/fig2-gohunt-attackstory.png":::
 
+If the incident or related alerts were the result of an analytics rule you've set, you can also select **Run query** to see other related results.
+ 
 ## Summary
 
 Use the **Summary** page to assess the relative importance of the incident and quickly access the associated alerts and impacted entities. The **Summary** page gives you a snapshot glance at the top things to notice about the incident.
