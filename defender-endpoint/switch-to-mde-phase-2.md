@@ -6,7 +6,7 @@ ms.subservice: onboard
 ms.author: siosulli
 author: siosulli
 ms.localizationpriority: medium
-ms.date: 08/29/2024
+ms.date: 09/13/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -106,7 +106,7 @@ You can now run Microsoft Defender Antivirus in passive mode on Windows Server 2
 
    [Learn more about tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md).
 
-3. If you're going to use either [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) or [Microsoft Endpoint Configuration Manager](/mem/endpoint-manager-overview) to onboard devices and configure device policies, set up integration with Defender for Endpoint by following these steps: <br/>
+3. If you're using either [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) or [Microsoft Endpoint Configuration Manager](/mem/endpoint-manager-overview) to onboard devices and configure device policies, set up integration with Defender for Endpoint by following these steps: <br/>
 
    1. In the Microsoft Intune admin center ([https://intune.microsoft.com](https://intune.microsoft.com)), go to **Endpoint security**.
 
