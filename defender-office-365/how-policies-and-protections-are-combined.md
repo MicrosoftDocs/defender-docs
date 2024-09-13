@@ -17,7 +17,7 @@ ms.custom:
 description: Admins can learn how the order of protection settings and the priority order of security policies affect the application of security policies in Microsoft 365.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 05/16/2024
+ms.date: 09/12/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -180,7 +180,10 @@ Tenant allows and blocks are able to override some filtering stack verdicts as d
   |Bulk|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email delivered to user's Junk Email folder|
   |Not spam|**Tenant wins**: Email delivered to mailbox|**Tenant wins**: Email delivered to user's Junk Email folder|
 
-- [Allow entries in the Tenant Allow/Block List](tenant-allow-block-list-about.md#allow-entries-in-the-tenant-allowblock-list):
+- [Allow entries in the Tenant Allow/Block List](tenant-allow-block-list-about.md#allow-entries-in-the-tenant-allowblock-list): 
+    - There are two  type of allow here: message level allow and entity level allow
+    - Message level allow which act on the entire message irrespective of the entity present. Email address/domain allow is an example of this type. 
+    - Entity level allow which act on the filter verdict for that entity. URL, Spoofed sender, file allow are example of this type. To override malware and high confidence phishing verdict you need to have these type of allow which can be created by submission only due to [Secure by default in Office 365](secure-by-default.md).
 
   |Filtering stack verdict|Email address/domain|
   |---|---|
