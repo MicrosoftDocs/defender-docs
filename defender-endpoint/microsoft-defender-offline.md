@@ -34,7 +34,7 @@ search.appverid: met150
 |**Protection type** | Hardware|
 |**Firmware/ Rootkit**|  Operating system <br/> Driver <br/> Memory (Heap) <br/> Application <br/> Identity <br/> Cloud|
 
-> [NOTE]
+> [!NOTE]
 > The protection for this feature focuses on the Firmware/Rootkit.
 
 Microsoft Defender Offline is an anti-malware scanning tool that lets you boot and run a scan from a trusted environment. The scan runs from outside the normal Windows kernel so it can target malware that attempts to bypass the Windows shell, such as viruses and rootkits that infect or overwrite the master boot record (MBR).
@@ -50,7 +50,7 @@ The following are the hardware requirements for Microsoft Defender Offline Scan 
 - x64/x86 Windows 8.1 
 - x64/x86 Windows 7 Service Pack 1
 
->[!CAUTION]
+> [!CAUTION]
 > Microsoft Defender Offline Scan does not apply to:
 >
 > - ARM Windows 11 
