@@ -1,15 +1,15 @@
 ---
-title: Protect resources that report to a workspace
+title: Protect resources that report to a Log Analytics workspace
 description: Learn how to enable the Defender for Cloud plans that are available on workspaces to protect the resources that report to that workspace.
 ms.topic: install-set-up-deploy
 ms.date: 09/15/2024
 ---
 
-# Protect resources that report to a workspace
+# Protect resources that report to a Log Analytics workspace
 
-Defender for Cloud utilizes workspaces to collect and analyze data from your connected resources. To protect your resources, you can enable specific Defender for Cloud plans on both the subscription level or on specific workspaces that have resources that report to that workspace.
+Defender for Cloud utilizes Log Analytics workspaces, both default and custom, to collect and analyze data from your connected resources. To protect your resources, you can enable specific Defender for Cloud plans on both the subscription level or on specific workspaces that have resources that report to that Log Analytics workspace.
 
-The available plans that you can enable on a workspace level are:
+The available plans that you can enable on a Log Analytics workspace level are:
 
 - [Foundational CSPM](concept-cloud-security-posture-management.md) (enabled by default and non-configurable)
 - [Defender for Servers](plan-defender-for-servers.md)
@@ -25,9 +25,9 @@ The available plans that you can enable on a workspace level are:
 
 - Review the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 
-## Enable plans on a workspace
+## Enable plans on a Log Analytics workspace
 
-When you enable a plan on a workspace, you enable the plan for all the resources that report to that workspace.
+When you enable a plan on a Log Analytics workspace, you enable the plan for all the resources that report to that workspace.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 

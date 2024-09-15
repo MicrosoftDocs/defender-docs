@@ -136,7 +136,7 @@
         - name: Protect APIs with Defender for APIs
           displayName: APIs, enable
           href: defender-for-apis-deploy.md
-        - name: Protect resources that report to a workspace
+        - name: Protect resources that report to a Log Analytics workspace
           displayName: workSystem, namespace, enable, plans
           href: enable-plan-workspace.md
 
