@@ -2,7 +2,7 @@
 title: What's new in Microsoft Defender for Cloud features
 description: What's new and updated in Microsoft Defender for Cloud features
 ms.topic: overview
-ms.date: 09/09/2024
+ms.date: 09/15/2024
 ---
 
 # What's new in Defender for Cloud features
@@ -31,6 +31,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
+| September 15 | GA | Integration with PowerBI |
 |September 11|Upcoming change|[Update to CSPM multi cloud network requirements](#update-to-cspm-multi-cloud-network-requirements)|
 | September 9 | Deprecation | [Defender for Servers feature deprecation](#defender-for-servers-feature-deprecation) |
 | September 9 | GA | [Spanish National Security Framework (Esquema Nacional de Seguridad (ENS)) added to regulatory compliance dashboard for Azure](#spanish-national-security-framework-esquema-nacional-de-seguridad-ens-added-to-regulatory-compliance-dashboard-for-azure)|
@@ -39,6 +40,14 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
 | September 1 | GA  | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
 |September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
+
+### Integration with PowerBI
+
+September 15, 2024
+
+Defender for Cloud can now integrate with PowerBI. This integration allows you to create custom reports and dashboards using the data from Defender for Cloud. You can use PowerBI to visualize and analyze your security posture, compliance, and security recommendations. 
+
+Learn more about the new [integration with PowerBI](integration-power-bi.md).
 
 ### Update to CSPM multi cloud network requirements
 
