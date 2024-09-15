@@ -12,7 +12,7 @@ Defender for Databases in Microsoft Defender for Cloud allows you to protect you
 Database protection includes:
 
 - [Microsoft Defender for Azure SQL databases](defender-for-sql-introduction.md)
-- [Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md)
+- [Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md) (Can also be [enabled on a Log Analytics workspace](enable-plan-workspace.md))
 - [Microsoft Defender for open-source relational databases](defender-for-databases-introduction.md)
 - [Microsoft Defender for Azure Cosmos DB](concept-defender-for-cosmos.md)
 
