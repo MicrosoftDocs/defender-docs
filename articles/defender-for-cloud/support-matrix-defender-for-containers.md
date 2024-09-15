@@ -82,16 +82,6 @@ Following are the features for each of the domains in Defender for Containers:
 > [!NOTE]
 > For additional requirements for Kubernetes workload protection, see [existing limitations](/azure/governance/policy/concepts/policy-for-kubernetes#limitations).
 
-### Private link restrictions
-
-Defender for Containers relies on the [Defender sensor](defender-for-cloud-glossary.md#defender-sensor) for several features. The Defender sensor doesn't support the ability to ingest data through Private Link. You can disable public access for ingestion, so that only machines that are configured to send traffic through Azure Monitor Private Link can send data to that workstation. You can configure a private link by navigating to **`your workspace`** > **Network Isolation** and setting the Virtual networks access configurations to **No**.
-
-:::image type="content" source="media/supported-machines-endpoint-solutions-cloud-containers/network-access.png" alt-text="Screenshot that shows where to go to turn off data ingestion.":::
-
-Allowing data ingestion to occur only through Private Link Scope on your workspace Network Isolation settings, can result in communication failures and partial converge of the Defender for Containers feature set.
-
-Learn how to [use Azure Private Link to connect networks to Azure Monitor](/azure/azure-monitor/logs/private-link-security).
-
 ## AWS
 
 | Domain | Feature | Supported Resources | Linux release state  | Windows release state   | Agentless/Sensor-based | Pricing tier |
@@ -138,7 +128,7 @@ Outbound proxy without authentication and outbound proxy with basic authenticati
 
 ### Clusters with IP restrictions - AWS
 
-If your Kubernetes cluster in AWS has control plane IP restrictions enabled (see  [Amazon EKS cluster endpoint access control - Amazon EKS,](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) ), the control plane’s IP restriction configuration will be updated to include the CIDR block of Microsoft Defender for Cloud.
+If your Kubernetes cluster in AWS has control plane IP restrictions enabled (see  [Amazon EKS cluster endpoint access control - Amazon EKS,](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) ), the control plane’s IP restriction configuration is updated to include the CIDR block of Microsoft Defender for Cloud.
 
 ## GCP
 
@@ -186,7 +176,7 @@ Outbound proxy without authentication and outbound proxy with basic authenticati
 
 ### Clusters with IP restrictions - GCP
 
-If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see [Add authorized networks for control plane access  |  Google Kubernetes Engine (GKE)  |  Google Cloud](https://cloud.google.com/kubernetes-engine/docs/how-to/authorized-networks) ), the control plane’s IP restriction configuration will be updated to include the CIDR block of Microsoft Defender for Cloud.
+If your Kubernetes cluster in GCP has control plane IP restrictions enabled (see [Add authorized networks for control plane access  |  Google Kubernetes Engine (GKE)  |  Google Cloud](https://cloud.google.com/kubernetes-engine/docs/how-to/authorized-networks) ), the control plane’s IP restriction configuration is updated to include the CIDR block of Microsoft Defender for Cloud.
 
 ## On-premises, Arc-enabled Kubernetes clusters
 
@@ -245,19 +235,9 @@ Ensure your Kubernetes node is running on one of the verified supported operatin
 
 ### Defender sensor limitations
 
-The Defender sensor in AKS V1.28 and below is not supported on ARM64 nodes.
+The Defender sensor in AKS V1.28 and below isn't supported on Arm64 nodes.
 
 ### Network restrictions
-
-#### Private link
-
-Defender for Containers relies on the Defender sensor for several features. The Defender sensor doesn't support the ability to ingest data through Private Link. You can disable public access for ingestion, so that only machines that are configured to send traffic through Azure Monitor Private Link can send data to that workstation. You can configure a private link by navigating to **`your workspace`** > **Network Isolation** and setting the Virtual networks access configurations to **No**.
-
-:::image type="content" source="media/supported-machines-endpoint-solutions-cloud-containers/network-access.png" alt-text="Screenshot that shows where to go to turn off data ingestion.":::
-
-Allowing data ingestion to occur only through Private Link Scope on your workspace Network Isolation settings, can result in communication failures and partial converge of the Defender for Containers feature set.
-
-Learn how to [use Azure Private Link to connect networks to Azure Monitor](/azure/azure-monitor/logs/private-link-security).
 
 #### Outbound proxy support
 
