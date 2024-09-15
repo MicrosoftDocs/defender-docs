@@ -11,7 +11,7 @@ Defender for Cloud utilizes Log Analytics workspaces, both default and custom, t
 
 The available plans that you can enable on a Log Analytics workspace level are:
 
-- [Foundational CSPM](concept-cloud-security-posture-management.md) (enabled by default and non-configurable)
+- [Foundational CSPM](concept-cloud-security-posture-management.md) (enabled by default and nonconfigurable)
 - [Defender for Servers](plan-defender-for-servers.md)
 - [Defender for SQL servers on machines](defender-for-sql-usage.md)
 
@@ -39,7 +39,7 @@ When you enable a plan on a Log Analytics workspace, you enable the plan for all
 
     :::image type="content" source="media/enable-plan-workspace/select-workspace.png" alt-text="Screenshot that shows the environment settings page, with demo workspaces highlighted. " lightbox="media/enable-plan-workspace/select-workspace.png":::
 
-1. Toggle the switch to **On** for the plan(s) that you want to enable.
+1. Toggle the switch to **On** for the plan that you want to enable.
 
 1. Select **Save**.
 
