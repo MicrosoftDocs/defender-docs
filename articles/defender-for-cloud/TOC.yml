@@ -244,7 +244,7 @@
             href: create-governance-rule-servicenow.md
         - name: Power BI
           items:
-          - name: Power Bi integration with Defender for Cloud
+          - name: Power BI integration with Defender for Cloud
             displayName: CSPM, cloud security, posture, management, Power BI
             href: integration-power-bi.md
           - name: Add Defender for Cloud data to Power BI
