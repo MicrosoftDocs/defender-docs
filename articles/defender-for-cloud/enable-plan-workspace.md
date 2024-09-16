@@ -2,7 +2,7 @@
 title: Protect resources that report to a Log Analytics workspace
 description: Learn how to enable the Defender for Cloud plans that are available on workspaces to protect the resources that report to that workspace.
 ms.topic: install-set-up-deploy
-ms.date: 09/15/2024
+ms.date: 09/16/2024
 ---
 
 # Protect resources that report to a Log Analytics workspace
@@ -33,7 +33,7 @@ When you enable a plan on a Log Analytics workspace, you enable the plan for all
 
 1. Search for and select **Microsoft Defender for Cloud**.
 
-1. In the Defender for Cloud menu, select **Environment settings**.
+1. Select **Environment settings**.
 
 1. Select the relevant workspace.
 
