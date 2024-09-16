@@ -244,6 +244,14 @@
           - name: Create automatic tickets with governance rules
             displayName: CSPM, cloud security, posture, management, ServiceNow
             href: create-governance-rule-servicenow.md
+        - name: Power BI
+          items:
+          - name: Power BI integration with Defender for Cloud
+            displayName: CSPM, cloud security, posture, management, Power BI
+            href: integration-power-bi.md
+          - name: Add Defender for Cloud data to Power BI
+            displayName: CSPM, cloud security, posture, management, Power BI
+            href: add-data-power-bi.md
       - name: Common questions 
         displayName: questions, common, CSPM, agentless scanning, faq, frequently asked questions
         href: faq-cspm.yml
@@ -715,14 +723,6 @@
           - name: Enable just-in-time access 
             displayName: jit, management, ports
             href: just-in-time-access-usage.yml
-      - name: Adaptive application controls (deprecated)
-        items:
-          - name: Overview
-            displayName: aac, allowlist, reviewgroup
-            href: adaptive-application-controls.md
-          - name: Enable and manage adaptive application controls
-            displayName: aac, allowlist, reviewgroup
-            href: enable-adaptive-application-controls.md
     - name: Investigate and remediate 
       items:
       - name: Remediate EDR solutions (agentless)
@@ -760,9 +760,6 @@
       - name: Review changes with file integrity monitoring (MMA)
         displayName: fim, change
         href: file-integrity-monitoring-compare-baselines.md
-      - name: Improve network posture (deprecated)
-        displayName: anh, adaptive network hardening
-        href: adaptive-network-hardening.md
     - name: Common questions 
       items:
       - name: Questions about Defender for Servers

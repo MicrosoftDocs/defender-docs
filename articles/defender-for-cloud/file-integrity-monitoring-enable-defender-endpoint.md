@@ -4,7 +4,7 @@ description: Learn how to enable File Integrity Monitor when you collect data wi
 author: dcurwin
 ms.author: dacurwin
 ms.topic: how-to
-ms.date: 08/11/2024
+ms.date: 09/09/2024
 ---
 
 # File integrity monitoring (Defender for Endpoint)
