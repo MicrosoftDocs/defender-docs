@@ -27,7 +27,7 @@ Defender for Endpoint applies SDP to two distinct update mechanisms:
 - Software and driver updates that are updated monthly (can potentially update kernel-mode components).
 - Security intelligence and detection logic updates that can be updated multiple times a day (updates only apply to user-mode components).
 
-## Monthly SDP software and drivers updates
+## Monthly SDP software and driver updates
 
 Defender for Endpoint releases monthly software and driver updates that add new functionality, improve existing features, and resolve bugs. 
 
@@ -49,7 +49,7 @@ Once internal testing is successfully completed, Microsoft then releases the upd
 
 In addition to Microsoft’s safe deployment practices, organizations can also manage monthly updates with their own safe deployment practices through various controls:
 
-- [Create a custom gradual rollout process for Microsoft Defender updates](configure-updates.md) to control the delivery of agent updates to their devices. Customers can control the rings that are assigned to their device group and when each ring receive updates. For example, place lower-valued assets in earlier rings and higher-valued assets in later rings.
+- [Create a custom gradual rollout process for Microsoft Defender updates](configure-updates.md) to control the delivery of agent updates to their devices. Customers can control the rings that are assigned to their device group and when each ring receives updates. For example, place lower-valued assets in earlier rings and higher-valued assets in later rings.
 - Apply patch management software and practices for security component updates that can also arrive in the form of monthly Latest Cumulative Updates (LCUs).
 - Use [rollback controls](microsoft-defender-antivirus-updates.md#how-to-roll-back-an-update) or automated rollback options to revert or reset components to a last known good state. 
 
@@ -68,7 +68,7 @@ Similar to the process for software and driver updates, Microsoft ships security
 
 ### Customer SDP for daily updates
 
-Customers can also manage security intelligence updates with their own safe deployment policies through various controls:
+Customers can also manage security intelligence updates with their own safe deployment policies through various measures:
 
 - Stage updates through [corporate networks](microsoft-defender-antivirus-ring-deployment-group-policy-network-share.md#setting-up-the-pilot-environment) or software management solutions.
 - Apply updates at a lower frequency for critical systems. Daily releases can be applied at a lower frequency for certain device groups, including servers critical to running your infrastructure.
