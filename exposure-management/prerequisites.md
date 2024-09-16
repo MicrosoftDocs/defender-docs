@@ -22,7 +22,7 @@ Security Exposure Management is currently in public preview.
 Permissions are based on [Microsoft Entra ID Roles](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
 
 - For full Security Exposure Management access, user roles need access to all Defender for Endpoint  [device groups](/microsoft-365/security//defender-endpoint/machine-groups).
-- Users who have access restricted to some of the organization's device groups (and those users with no restrictions), can:
+- Users who have access restricted to some of the organization's device groups (and not to all), can:
     - Access global exposure insights data.
     - View affected assets under metrics, recommendations, events, and initiatives history only within users' scope
     - View attack paths will show only devices that are within the users' scope
