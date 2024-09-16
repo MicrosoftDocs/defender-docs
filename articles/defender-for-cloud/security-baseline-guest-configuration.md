@@ -32,7 +32,7 @@ Machine information is gathered using the Azure Policy machine configuration (fo
 
 - [Enable Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md).
 - Review supported Azure VMs and Azure Arc VMs running  [Windows](support-matrix-defender-for-servers.md#windows-machine-support) and [Linux](support-matrix-defender-for-servers.md#linux-machine-support).
-- Review [deployment requirements](zure/governance/machine-configuration/overview#enable-machine-configuration) for Azure VMs.
+- Review [deployment requirements](/azure/governance/machine-configuration/overview#enable-machine-configuration) for Azure VMs.
 - To view the recommendations and explore the OS baseline data, you need Read permission on the relevant Azure subscription.
 - These Azure policies are enabled with the guest configuration. Make sure you don't remove them or you won't be able to leverage the guest configuration.
     - "Windows machines should meet requirements of the Azure compute security baseline" 
