@@ -41,14 +41,15 @@ Admins configure user reported messages to go to a specified reporting mailbox, 
 ## Use the built-in Report button in Outlook
 
 - The built-in **Report** button is available in the following versions of Outlook:
-  - Outlook for Microsoft 365 and Outlook 2021.
+  - Outlook for Microsoft 365 and Outlook 2021 starting with Version 2407 (Build 17830.20138). 
+    
   - The new Outlook for Windows.
   - Outlook on the web.
 
   The **Report** button is available in supported versions of Outlook if both of the following conditions are true:
 
-  - User reporting is turned on.
-  - The built-in **Report** button is configured in the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) at <https://security.microsoft.com/securitysettings/userSubmission>.
+- User reporting is turned on.
+- The built-in **Report** button is configured in the [user reported settings](submissions-user-reported-messages-custom-mailbox.md) at <https://security.microsoft.com/securitysettings/userSubmission>.
 
   If user reporting is turned off and a non-Microsoft add-in button is selected, the **Report** button isn't available in supported versions of Outlook.
 
