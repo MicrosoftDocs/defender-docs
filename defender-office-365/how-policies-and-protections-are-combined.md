@@ -17,7 +17,7 @@ ms.custom:
 description: Admins can learn how the order of protection settings and the priority order of security policies affect the application of security policies in Microsoft 365.
 ms.service: defender-office-365
 search.appverid: met150
-ms.date: 09/12/2024
+ms.date: 09/16/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -119,6 +119,11 @@ Entries in a user's _safelist collection_ (the Safe Senders list, the Safe Recip
 |Spam|**User wins**: Email delivered to user's Inbox|**Tenant wins**: The applicable anti-spam policy determines the action|
 |Bulk|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
 |Not spam|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
+
+- In Exchange Online, the domain allow in the Safe Sender's list might not work if the message is quarantined by any of the following conditions:
+  - The message is identified as malware or high confidence phishing (malware and high confidence phishing messages are quarantined).
+  - [Actions in anti-spam policies](anti-spam-protection-about.md#actions-in-anti-spam-policies) are configured to quarantine instead of move mail to the Junk Email folder.
+  - The email address, URL, or file in the email message is also in a block entry in the [Tenant Allow/Block List](tenant-allow-block-list-about.md#block-entries-in-the-tenant-allowblock-list).
 
 For more information about the safelist collection and anti-spam settings on user mailboxes, see [Configure junk email settings on Exchange Online mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
 
