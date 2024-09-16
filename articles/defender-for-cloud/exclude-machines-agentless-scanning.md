@@ -13,7 +13,8 @@ ms.date: 08/12/2024
 
 By default agentless scanning is turned on in a subscription for all supported machines when Defender for Servers Plan 2, or the Defender Cloud Security Posture Management (CSPM) plan is turned on.
 
-In some circumstances, you might want to exclude machines from agentless scanning. You can do this using pre-existing environment tags. Exclude machines are then skipped during Defender for Cloud continuous machine discovery.
+
+In some circumstances, you might want to exclude machines from agentless scanning recommendations. You can do this using pre-existing environment tags. Exclude machines are then skipped during Defender for Cloud continuous machine discovery.
 
 ## Prerequisites
 
@@ -25,7 +26,7 @@ In some circumstances, you might want to exclude machines from agentless scannin
 1. In Defender for Cloud, select **Environment settings**.
 1. Select the relevant subscription or multicloud connector.
 1. For either the Defender Cloud Security Posture Management (CSPM) or Defender for Servers P2 plan, select **Settings**.
-1. In **Agnelss scanning for machines**, select **Edit configuration**.
+1. In **Agentless scanning for machines**, select **Edit configuration**.
 
     :::image type="content" source="media/enable-vulnerability-assessment-agentless/agentless-scanning-edit-configuration.png" alt-text="Screenshot of the link to edit the agentless scanning configuration." lightbox="media/enable-vulnerability-assessment-agentless/agentless-scanning-edit-configuration.png":::
 

@@ -659,19 +659,11 @@
           - name: Overview
             displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots
             href: concept-agentless-data-collection.md
-          - name: Machine secrets scanning
-            displayName: secrets, secret scanning, agentless
-            href: secrets-scanning-servers.md
-          - name: Machine malware scanning
-            displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots, Microsoft Defender Antivirus
-            href: agentless-malware-scanning.md
           - name: Enable agentless machine scanning
             displayName: vulnerability, software inventory, agentless scanning
             href: enable-agentless-scanning-vms.md
           - name: Exclude machines from agentless scanning
             href: exclude-machines-agentless-scanning.md
-          - name: Test malware scanning alerts
-            href: test-agentless-malware-scanning.md
       - name: Vulnerability scanning
         items:
           - name: Overview
@@ -686,6 +678,22 @@
           - name: Move to scanning with Defender Vulnerability Management
             displayName: qualys, rapid7, vulnerability, migrate, transition, Microsoft Defender Vulnerability Management, mdvm
             href: how-to-transition-to-built-in.yml
+      - name: Machine secrets scanning
+        items:
+          - name: Overview
+            displayName: secrets, secret scanning, agentless
+            href: secrets-scanning-servers.md
+          - name: Enable agentless machine scanning
+            href: enable-agentless-scanning.md
+      - name: Malware scanning
+        items:
+          - name: Overview
+            displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots, Microsoft Defender Antivirus
+            href: agentless-malware-scanning.md
+          - name: Enable agentless machine scanning
+            href: enable-agentless-scanning.md
+          - name: Test malware scanning alerts
+            href: test-agentless-malware-scanning.md
       - name: File integrity monitoring
         items:
           - name: Overview

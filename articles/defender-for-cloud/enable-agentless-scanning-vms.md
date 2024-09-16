@@ -9,15 +9,18 @@ ms.date: 01/16/2024
 
 # Enable agentless machine scanning
 
-[Agentless machine scanning](concept-agentless-data-collection.md) in Microsoft Defender for Cloud improves the security posture on machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+[Agentless machine scanning](concept-agentless-data-collection.md) in Microsoft Defender for Cloud improves the security posture of machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
-When you turn on Defender for Servers Plan 2, or the Defender Cloud Security Posture Management (CSPM) plan, agentless scanning is turned on by default. If needed, you can use the instructions in this article to turn on agentless scanning manually.
+Agentless machine scanning includes a number of components, including scanning for software inventory, vulnerabilities, secrets, and malware. You can turn agentless machine scanning on or off, but you can't turn off individual components
+
+When you turn on Defender for Servers Plan 2, or the Defender Cloud Security Posture Management (CSPM) plan, agentless machine scanning is turned on by default. If needed, you can use the instructions in this article to turn on agentless machine scanning manually.
 
 ## Prerequisites
 
 - To use agentless scanning the [Defender CSPM](concept-cloud-security-posture-management.md) plan, or [Defender for Servers Plan 2](defender-for-servers-introduction.md) must be enabled. 
+- Malware scanning is only available when Defender for Servers Plan 2 is enabled.
+- When you enable agentless scanning on either plan, the setting is enabled for both plans.
 - Agentless machine scanning is available for Azure VMs, AWS/GCP machines connected to Defender for Cloud, and for on-premises machines onboarded as Azure Arc-enabled VMs.
-- Malware scanning on machines if only available if you're running Defender for Servers Plan 2.
 - Agentless scanning is avilable on Azure standard VMs with:
     -  Maximum total disk size allowed: 4TB (the sum of all disks)
     - Maximum number of disks allowed: 6
@@ -41,7 +44,6 @@ When you turn on Defender for Servers Plan 2, or the Defender Cloud Security Pos
 
     :::image type="content" source="media/enable-vulnerability-assessment-agentless/defender-plan-settings-azure.png" alt-text="Screenshot of link for the settings of the Defender plans for Azure accounts." lightbox="media/enable-vulnerability-assessment-agentless/defender-plan-settings-azure.png":::
 
-    The agentless scanning settings are shared by both Defender Cloud Security Posture Management (CSPM) or Defender for Servers P2. When you enable agentless scanning on either plan, the setting is enabled for both plans.
 
 1. In **Settings and monitoring**, turn on **Agentless scanning for machines**.
 

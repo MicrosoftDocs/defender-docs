@@ -23,7 +23,7 @@ Find machines protected by the plan.
 
 1. If the column setting is **On**, then Defender for Cloud is enabled, along with any plans switched on in Defender for Cloud, including Defender for Servers.
 
-You can also check the coverage for all of all your subscriptions and resources using the [Coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook).
+You can also check protection coverage for all subscriptions and resources using the [Coverage workbook](custom-dashboards-azure-workbooks.md#coverage-workbook).
 
 
 ## Modify plan feature settings

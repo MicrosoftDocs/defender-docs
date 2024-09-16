@@ -14,7 +14,7 @@ The Defender for Servers plan in Microsoft Defender for Cloud protects Windows a
 Defender for Servers provides two plans. 
 
 - **Plan 1** provides vulnerability management and endpoint detection and response (EDR) features, based on integration of Defender for Servers with Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management.
-- **Plan 2** provides the same features and more capabilities, including agentless vulnerabilities scanning, cloud-native protection features, and premium Defender Vulnerability Management features.
+- **Plan 2** provides Plan 1 features and more capabilities, including agentless vulnerabilities scanning, cloud-native protection features, and premium Defender Vulnerability Management features.
 
 > [!NOTE]
 > After a plan is enabled, a 30-day trial period begins. There is no way to stop, pause, or extend this trial period. To get the most out of the full 30-day trial, [plan your evaluation goals](plan-defender-for-servers.md).
@@ -23,7 +23,7 @@ Defender for Servers provides two plans.
 
 - **Plan the deployment**. Work through the [Defender for Servers planning guide](plan-defender-for-servers.md).
 - **Review plans**. [Understand and compare](defender-for-servers-overview.md) plans.
-- **Decide on deployment scope**: You can enable Plan 1 on an Azure subscription, AWS account, GCP project, or on specific Azure resources. Plan 2 can only be enabled on a subscription, AWS account, or GCP project.  If you enable on a subscription, you can disable protection for specific machines in the subscription.
+- **Decide on deployment scope**: You can enable Defender for Servers plans on an Azure subscription, AWS account, or GCP project. In addition, Defender for Servers Plan 1 can be enabled on specific Azure resources. [Learn more](defender-for-servers-overview.md#enabling-plans).
 - **Review pricing**. Check Defender for Servers pricing on the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/).
 - **Get an Azure subscription**. You need a Microsoft Azure subscription. You can [sign up for a free one](https://azure.microsoft.com/pricing/free-trial/) as needed.
 - Ensure Defender for Cloud is [enabled on the subscription](connect-azure-subscription.md).
