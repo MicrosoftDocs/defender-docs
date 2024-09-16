@@ -41,9 +41,13 @@ When you enable a plan on a Log Analytics workspace, you enable the plan for all
 
 1. Toggle the switch to **On** for the plan that you want to enable.
 
+    :::image type="content" source="media/enable-plan-workspace/toggle-plan-on.png" alt-text="Screenshot that shows the two available plans that can be enabled and where the toggles are." lightbox="media/enable-plan-workspace/toggle-plan-on.png":::
+
 1. Select **Save**.
 
-Once you enable a plan on a workspace, the plan is enabled for all the resources that report to that workspace.
+Once you enable a plan on a workspace, the plan protects to all of the resources that report to that workspace.
+
+:::image type="content" source="media/enable-plan-workspace/protected-resources.png" alt-text="Screenshot that shows where on the page you can see how many resources will be protected." lightbox="media/enable-plan-workspace/protected-resources.png":::
 
 ## Related content
 
