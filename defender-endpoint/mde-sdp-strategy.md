@@ -27,7 +27,7 @@ Defender for Endpoint applies SDP to two distinct update mechanisms:
 - Software and driver updates that are updated monthly (and can potentially update kernel-mode components).
 - Security intelligence and detection logic updates that may be updated multiple times a day and only apply to user-mode components.
 
-## Monthly SDP (software and drivers)
+## Monthly SDP software and drivers updates
 
 Defender for Endpoint releases monthly software and driver updates that add new functionality, improve existing features, and resolve bugs. 
 
@@ -56,7 +56,7 @@ In addition to Microsoft’s safe deployment practices, organizations can also m
 > [!NOTE]
 > Caution is advised when rolling back an update across a large group of devices.
 
-## Daily SDP security intelligence and detection logic updates (Content)
+## Daily SDP security intelligence and detection logic updates
 
 Microsoft releases security intelligence updates which are installed on devices to supplement the real-time local and cloud-based machine learning models, behavior analysis, and heuristics that enable Defender for Endpoint to neutralize the latest known cyberthreats.
 
