@@ -25,7 +25,7 @@ Permissions are based on [Microsoft Entra ID Roles](/entra/identity/role-based-a
 - Users who have access restricted to some of the organization's device groups (and not to all), can:
     - Access global exposure insights data.
     - View affected assets under metrics, recommendations, events, and initiatives history only within users' scope
-    - View View devices in attack paths that are within the users' scope
+    - View devices in attack paths that are within the users' scope
     - Access the Security Exposure Management attack surface map and advanced hunting schemas (ExposureGraphNodes and ExposureGraphEdges) for the device groups to which they have access
 
 ### Permissions for Security Exposure Management tasks
