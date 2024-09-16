@@ -271,6 +271,14 @@
           - name: Create automatic tickets with governance rules
             displayName: CSPM, cloud security, posture, management, ServiceNow
             href: create-governance-rule-servicenow.md
+        - name: Power BI
+          items:
+          - name: Power BI integration with Defender for Cloud
+            displayName: CSPM, cloud security, posture, management, Power BI
+            href: integration-power-bi.md
+          - name: Add Defender for Cloud data to Power BI
+            displayName: CSPM, cloud security, posture, management, Power BI
+            href: add-data-power-bi.md
       - name: Common questions 
         displayName: questions, common, CSPM, agentless scanning, faq, frequently asked questions
         href: faq-cspm.yml
