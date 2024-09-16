@@ -31,6 +31,8 @@ Defender for Endpoint applies SDP to two distinct update mechanisms:
 
 Defender for Endpoint releases monthly software and driver updates that add new functionality, improve existing features, and resolve bugs. 
 
+Defender for Endpoint’s kernel drivers capture system-wide signals like process execution, file creation, and network activity. These drivers are updated through Windows Update, over a gradual and staged deployment process after spending weeks in stabilization and testing. The deployment evaluation monitors key metrics like reliability, performance, battery, application compatibility, and more across hardware and software configurations. 
+
 The process for rolling out software and driver updates for Defender for Endpoint is shown in this image:
 
 :::image type="content" alt-text="process for rolling out software and driver updates for Defender for Endpoint" source="/defender/media/defender-endpoint/mde-software-driver-updates.png" lightbox="/defender/media/defender-endpoint/mde-software-driver-updates.png":::
