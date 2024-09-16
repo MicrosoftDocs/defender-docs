@@ -750,7 +750,7 @@
         href: apply-security-baseline.md
       - name: Remediate system updates
         displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
-        href: recommendations-apply-operating-system-updates.md
+        href: enable-periodic-system-updates.md
       - name: Review the software inventory
         displayName: inventory, apps, software inventory, mde, tvm
         href: software-inventory.md
