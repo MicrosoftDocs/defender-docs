@@ -8,7 +8,7 @@ manager: deniseb
 ms.date: 09/16/2024
 ms.topic: conceptual
 ms.service: defender-endpoint
-ms.subservice: fundamentals
+ms.subservice: ngp
 ms.localizationpriority: high
 ms.custom: get-started
 ms.collection:
@@ -18,18 +18,16 @@ ms.collection:
 
 # Use safe deployment practices to safeguard and manage your environment
 
-Safe Deployment Practices (SDP) help an organzation build resilient processes that maintain productivity. Microsoft follows safe deployment practices that minimize the risk of updates having an unexpected impact. This guides describes Microsoft Defender for Endpoint’s approach to SDP and what customers can do to manage their own roll-out process for an additional layer of control.
+Safe Deployment Practices (SDP) help an organzation build resilient processes that maintain productivity. Microsoft follows safe deployment practices that minimize the risk of updates having an unexpected impact. This article describes Microsoft Defender for Endpoint’s approach to SDP and what customers can do to manage their own roll-out processes for an additional layer of control.
 
 Microsoft Defender for Endpoint ships updates externally only after all the certification and validation tests are completed across multiple iterations of internal devices. 
 
-Defender for Endpoint applies safe deployment practices to two distinct update mechanisms:
+Defender for Endpoint applies SDP to two distinct update mechanisms:
 
-- Software and driver updates that are updated monthly (and potentially can update kernel-mode components).
-- Security intelligence and detection logic updates that may be updated multiple times per day and apply only to user-mode components.
+- Software and driver updates that are updated monthly (and can potentially update kernel-mode components).
+- Security intelligence and detection logic updates that may be updated multiple times a day and only apply to user-mode components.
 
-Enterprise customers can stage their roll-outs of Microsoft Defender for Endpoint to control how quickly updates are applied to specific classes of devices.  
-
-## Monthly update (software and drivers) safe deployment practices
+## Monthly SDP (software and drivers)
 
 Defender for Endpoint releases monthly software and driver updates that add new functionality, improve existing features, and resolve bugs. 
 
@@ -58,7 +56,7 @@ In addition to Microsoft’s safe deployment practices, organizations can also m
 > [!NOTE]
 > Caution is advised when rolling back an update across a large group of devices.
 
-### Daily security intelligence and logic updates (Content) safe deployment practices
+## Daily SDP security intelligence and detection logic updates (Content)
 
 Microsoft releases security intelligence updates which are installed on devices to supplement the real-time local and cloud-based machine learning models, behavior analysis, and heuristics that enable Defender for Endpoint to neutralize the latest known cyberthreats.
 
