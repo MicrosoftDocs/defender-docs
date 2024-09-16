@@ -24,6 +24,10 @@ This article will help you better understand:
 - Recommended additional safe deployment practices customers can put in place: For example, configuring gradual rollout controls.
 - Defender for Endpoint capabilities that will help you safeguard and manage your environment and maintain productivity.
 
+- Microsoft's safe deployment practices for Defender for Endpoint: Microsoft follows safe deployment practices that minimize the risk of updates having an unexpected impact.
+- Recommended additional safe deployment practices customers can put in place: For example, configuring gradual rollout controls.
+- Defender for Endpoint capabilities that will help you safeguard and manage your environment and maintain productivity.
+
 ## Enable/disable capabilities to keep you organization secure and operational
 
 ✅ **Task: Configure Antivirus (AV) and malware protection**

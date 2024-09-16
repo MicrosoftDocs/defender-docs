@@ -384,7 +384,7 @@
 
       - name: Safeguard and manage your environment 
         items:
-          - name: Safe deployment practices strategy 
+          - name: Safe deployment practices
             href: mde-sdp-strategy.md
           - name: Manage behavior safely in your organization
             href: manage-maintain-mde-guide.md
