@@ -27,11 +27,12 @@ Security Exposure Management is currently in public preview.
 
 ## September 2024
 
-### Enhanced visibility for scoped users in device groups
+### Enhanced visibility for scoped users
 
 This change now allows users who have been granted access to only some of the organization's devices to see the list of affected assets in metrics, recommendations, events, and initiative history within their specific scope.
 
 For more information, see [[Prerequisites and support](prerequisites.md)](prerequisites.md#permissions).
+
 
 ### Proactively manage your security posture
 
