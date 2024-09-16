@@ -692,14 +692,14 @@
             displayName: secrets, secret scanning, agentless
             href: secrets-scanning-servers.md
           - name: Enable agentless machine scanning
-            href: enable-agentless-scanning.md
+            href: enable-agentless-scanning-vms.md
       - name: Malware scanning
         items:
           - name: Overview
             displayName: agentless, scanning, virtual, machines, freshness, snapshot, snapshots, Microsoft Defender Antivirus
             href: agentless-malware-scanning.md
           - name: Enable agentless machine scanning
-            href: enable-agentless-scanning.md
+            href: enable-agentless-scanning-vms.md
           - name: Test malware scanning alerts
             href: test-agentless-malware-scanning.md
       - name: OS misconfiguration (Cloud Security Benchmark)
