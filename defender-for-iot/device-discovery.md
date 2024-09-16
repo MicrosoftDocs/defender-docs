@@ -43,7 +43,7 @@ The key device discovery capabilities are:
 
 |Capability|Description|
 |---|---|
-|OT device management|[Manage OT devices](manage-devices-inventory.md):<br>- Build an up-to-date inventory that includes all your managed and unmanaged devices.<br>- Discover your organization BMS devices such as Motion detector, Fire Alarm, and Elevators.<br>- Classify critical devices to ensure that the most important assets in your organization are protected.<br>- Add organization-specific information to emphasize your organization preferences.|
+|OT device management|[Manage OT devices](manage-devices-inventory.md):<br>- Build an up-to-date inventory that includes all your managed and unmanaged devices.<br>- Discover your organization BMS devices such as **Motion detector**, **Fire Alarm**, and **Elevators**.<br>- Classify critical devices to ensure that the most important assets in your organization are protected.<br>- Add organization-specific information to emphasize your organization preferences.|
 |Device protection with risk-based approach|Identify risks such as missing patches, vulnerabilities and prioritize fixes based on risk scoring and automated threat modeling.|
 |Device alignment with physical sites|Allows contextual security monitoring. Use the **Site** filter to manage each site separately. Learn more about [filters](/defender-endpoint/machines-view-overview#use-filters-to-customize-the-device-inventory-views).|
 |Device groups|Allows different teams in your organization to monitor and manage relevant assets only. Learn more about [creating a device group](/defender-endpoint/machine-groups#create-a-device-group).|
