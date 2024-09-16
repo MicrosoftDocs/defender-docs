@@ -18,7 +18,7 @@ ms.collection:
 
 # Use safe deployment practices to safeguard and manage your environment
 
-Safe Deployment Practices (SDP) help an organization build resilient processes that maintain productivity. Microsoft follows safe deployment practices that minimize the risk of updates having an unexpected impact. This article describes Microsoft Defender for Endpoint’s approach to SDP and what customers can do to manage their own roll-out processes for an layer of control.
+Microsoft follows safe deployment practices (SDP) that minimize the risk of security updates having an unexpected impact. This article describes Microsoft Defender for Endpoint’s approach to SDP and what customers can do to manage their own roll-out processes to add an extra layer of control.
 
 Microsoft Defender for Endpoint ships updates externally only after all the certification and validation tests are completed across multiple iterations of internal devices. 
 
