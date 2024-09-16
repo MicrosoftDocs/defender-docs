@@ -18,20 +18,20 @@ ms.collection:
 
 # Use safe deployment practices to safeguard and manage your environment
 
-Safe Deployment Practices (SDP) help an organzation build resilient processes that maintain productivity. Microsoft follows safe deployment practices that minimize the risk of updates having an unexpected impact. This article describes Microsoft Defender for Endpoint’s approach to SDP and what customers can do to manage their own roll-out processes for an additional layer of control.
+Safe Deployment Practices (SDP) help an organization build resilient processes that maintain productivity. Microsoft follows safe deployment practices that minimize the risk of updates having an unexpected impact. This article describes Microsoft Defender for Endpoint’s approach to SDP and what customers can do to manage their own roll-out processes for an layer of control.
 
 Microsoft Defender for Endpoint ships updates externally only after all the certification and validation tests are completed across multiple iterations of internal devices. 
 
 Defender for Endpoint applies SDP to two distinct update mechanisms:
 
-- Software and driver updates that are updated monthly (and can potentially update kernel-mode components).
-- Security intelligence and detection logic updates that may be updated multiple times a day and only apply to user-mode components.
+- Software and driver updates that are updated monthly (can potentially update kernel-mode components).
+- Security intelligence and detection logic updates that can be updated multiple times a day (only apply to user-mode components).
 
 ## Monthly SDP software and drivers updates
 
 Defender for Endpoint releases monthly software and driver updates that add new functionality, improve existing features, and resolve bugs. 
 
-Defender for Endpoint’s kernel drivers capture system-wide signals like process execution, file creation, and network activity. These drivers are updated through Windows Update, over a gradual and staged deployment process after spending weeks in stabilization and testing. The deployment evaluation monitors key metrics like reliability, performance, battery, application compatibility, and more across hardware and software configurations. 
+Defender for Endpoint’s kernel drivers captures system-wide signals like process execution, file creation, and network activity. These drivers are updated through Windows Update, over a gradual and staged deployment process after spending weeks in stabilization and testing. The deployment evaluation monitors key metrics like reliability, performance, battery, application compatibility, and more across hardware and software configurations. 
 
 :::image type="content" alt-text="process for rolling out software and driver updates for Defender for Endpoint" source="/defender/media/defender-endpoint/mde-software-driver-updates.png" lightbox="/defender/media/defender-endpoint/mde-software-driver-updates.png":::
 
@@ -41,15 +41,13 @@ All code and content changes go through engineering release gates along with ext
  
 Within each ring, Microsoft closely monitors quality signals such as product behavior and performance, false positives, as well as functional and reliability issues, before proceeding to roll out the update to a broader set of devices.
  
-Once internal testing is successfully completed, Microsoft then releases the updates externally in a staggered manner to ensure stability. During this time, Microsoft continuously monitors the rollout to ensure a quick response and remote resoluion of any issues by reverting or reissuing update packages.
+Once internal testing is successfully completed, Microsoft then releases the updates externally in a staggered manner to ensure stability. During this time, Microsoft continuously monitors the rollout to ensure a quick response and remote Resolution of any issues by reverting or reissuing update packages.
 
 ### Customer SDP for monthly updates 
 
-Customers can control the rings that are assigned to their device groups, including early access groups, to see how each update may interact with their devices and provide feedback to Microsoft before it is released.
-
 In addition to Microsoft’s safe deployment practices, organizations can also manage monthly updates with their own safe deployment policies through various controls:
 
-- [Create a custom gradual rollout process for Microsoft Defender updates](configure-updates.md) to control the delivery of agent updates to their devices. Customers can control the rings that are assigned to their device group and when each ring recieves updates. For example, place lower-valued assets in earlier rings and higher-valued assets in later rings.
+- [Create a custom gradual rollout process for Microsoft Defender updates](configure-updates.md) to control the delivery of agent updates to their devices. Customers can control the rings that are assigned to their device group and when each ring receive updates. For example, place lower-valued assets in earlier rings and higher-valued assets in later rings.
 - Apply patch management software and practices for security component updates that can also arrive in the form of monthly Latest Cumulative Updates (LCUs).
 - Use [rollback controls](microsoft-defender-antivirus-updates.md#how-to-roll-back-an-update) or automated rollback options to revert or reset components to a last known good state. 
 
@@ -58,13 +56,13 @@ In addition to Microsoft’s safe deployment practices, organizations can also m
 
 ## Daily SDP security intelligence and detection logic updates
 
-Microsoft releases security intelligence updates which are installed on devices to supplement the real-time local and cloud-based machine learning models, behavior analysis, and heuristics that enable Defender for Endpoint to neutralize the latest known cyberthreats.
+Microsoft releases security intelligence updates which are installed on devices that supplement the real-time local and cloud-based machine learning models, behavior analysis, and heuristics that enable Defender for Endpoint to neutralize the latest known cyberthreats.
 
-Given the high frequency at which these updates need to be delivered to protect customers, it’s not possible to deploy these through the same deployment process. Therefore, Defender for Endpoint does not include kernel changes in intelligence updates. Instead, daily updates are only delivered to components that run in the user mode of the operating system. This approach helps mitigate the risk of these more frequent updates from impacting the broader operating system and, in the unlikely event of an error, limits the risk of significant negative effects like system crashes and ensures devices can be automatically recovered.
+Given the high frequency at which these updates need to be delivered to protect customers, it’s not possible to deploy these through the same deployment process. Therefore, Defender for Endpoint doesn't include kernel changes in intelligence updates. Instead, daily updates are only delivered to components that run in the user mode of the operating system. This approach helps mitigate the risk of these more frequent updates from impacting the broader operating system and, in the unlikely event of an error, limits the risk of significant negative effects like system crashes and ensures devices can be automatically recovered.
 
 ### Microsoft SDP for daily updates 
 
-Similar to the process for software and driver updates, Microsoft ships security intelligence updates after extensive testing and rolls them out starting with internal devices, early access customers, and then releases them externally in a controlled, gradual manner. Microsof continually monitors telemetry and can mitigate issues through the cloud in minutes.
+Similar to the process for software and driver updates, Microsoft ships security intelligence updates after extensive testing and rolls them out starting with internal devices, early access customers, and then releases them externally in a controlled, gradual manner. Microsoft continually monitors telemetry and can mitigate issues through the cloud in minutes.
 
 ### Customer SDP for daily updates
 
