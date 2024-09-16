@@ -15,7 +15,7 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.subservice: edr
 search.appverid: met150
-ms.date: 08/15/2024
+ms.date: 09/04/2024
 ---
 
 # EDR detection test for verifying device's onboarding and reporting services
@@ -57,7 +57,7 @@ Run an EDR detection test to verify that the device is properly onboarded and re
 
 
 ```bash
-curl -o ~/Downloads/MDE Linux DIY.zip -L https://aka.ms/MDE-Linux-EDR-DIY
+curl -o ~/Downloads/MDE-Linux-EDR-DIY.zip -L https://aka.ms/MDE-Linux-EDR-DIY
 ```
 
 2. Extract the zip 

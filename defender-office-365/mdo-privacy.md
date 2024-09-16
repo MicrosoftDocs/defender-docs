@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-ms.date: 08/22/2024
+ms.date: 09/03/2024
 audience: ITPro
 ms.topic: conceptual
 ms.service: defender-office-365
@@ -42,7 +42,7 @@ All [reports in Defender for Office 365](reports-defender-for-office-365.md) are
 - All related data is securely stored in the organization's region.
 - Only authorized users in the organization can access the data.
 
-Microsoft stores this data securely in Microsoft Entra and maintains it in accordance with Microsoft privacy practices and [Microsoft Trust Center policies](https://go.microsoft.com/fwlink/p/?linkid=827578). All service log data at rest is encrypted and hashed using ODL and CDP encryption (no clear text). Defender for Office 365 uses this data for the following features:
+Microsoft stores this data securely in Microsoft Entra and maintains it in accordance with Microsoft privacy practices and [Microsoft Trust Center policies](https://go.microsoft.com/fwlink/p/?linkid=827578). All service log data at rest is encrypted and hashed using Office Data Loader (ODL) and Common Data Platform (CDP) encryption (no clear text). Defender for Office 365 uses this data for the following features:
 
 - Threat protection policies to set the appropriate level of protection for your organization.
 - Real-time reports to monitor Defender for Office 365 performance in your organization.
