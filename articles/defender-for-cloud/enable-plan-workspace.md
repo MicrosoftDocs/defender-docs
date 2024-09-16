@@ -47,7 +47,7 @@ When you enable a plan on a Log Analytics workspace, you enable the plan for all
 
 Once you enable a plan on a workspace, the plan protects to all of the resources that report to that workspace.
 
-:::image type="content" source="media/enable-plan-workspace/protected-resources.png" alt-text="Screenshot that shows where on the page you can see how many resources will be protected." lightbox="media/enable-plan-workspace/protected-resources.png":::
+:::image type="content" source="media/enable-plan-workspace/protected-resources.png" alt-text="Screenshot that shows where on the page you can see how many resources are protected." lightbox="media/enable-plan-workspace/protected-resources.png":::
 
 ## Related content
 
