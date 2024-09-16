@@ -29,15 +29,6 @@ The process for addressing an unwanted behavior is to firstly identify what is c
 
 When you identify the capability causing the issue you can take action to exclude/trust that process or file. This might include actions such as adding exclusions, creating indicators, alert suppression, custom remediation, or submitting a file to Microsoft.
 
-
-## Enable/disable capabilities to keep you organization secure and operational
-
-✅ **Task: Configure Antivirus (AV) and malware protection**
-
-✅ **Task: Configure baseline policies**
-
-✅ **Task: Manage behavior with exclusions, indicators, and other techniques**
-
 The following tables describes the different ways unexpected behavior can present in your organzation and provides a link to where you can learn more about identifying, investigating and remediating the behaviors:
 
 |Behavior |Description|Get started|
@@ -46,8 +37,4 @@ The following tables describes the different ways unexpected behavior can presen
 |**Poor performance** |Applications experience performance issues when features of MDE are enabled |[Manage performance issues with exceptions ](./exceptions-performance-issues.md) |
 |**Application Incompatibility** |Applications don’t function properly when features of MDE are enabled |[Manage application compatibility issues with exceptions](./exceptions-app-compatibility.md)|
 
-## Troubleshooting guidance
-
-## Next Steps
-
-- [Security operations guide](mde-sec-ops-guide.md)
+## Related articles
