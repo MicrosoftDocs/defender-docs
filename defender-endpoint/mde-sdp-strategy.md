@@ -49,9 +49,9 @@ Customers can control the rings that are assigned to their device groups, includ
 
 In addition to Microsoft’s safe deployment practices, organizations can also manage monthly updates with their own safe deployment policies through various controls:
 
-•	[Create a custom gradual rollout process for Microsoft Defender updates](configure-updates.md) to control the delivery of agent updates to their devices. Customers can control the rings that are assigned to their device group and when each ring recieves updates. For example, place lower-valued assets in earlier rings and higher-valued assets in later rings.
-•	Apply patch management software and practices for security component updates that can also arrive in the form of monthly Latest Cumulative Updates (LCUs).
-•	Use [rollback controls](microsoft-defender-antivirus-updates.md#how-to-roll-back-an-update) or automated rollback options to revert or reset components to a last known good state. 
+- [Create a custom gradual rollout process for Microsoft Defender updates](configure-updates.md) to control the delivery of agent updates to their devices. Customers can control the rings that are assigned to their device group and when each ring recieves updates. For example, place lower-valued assets in earlier rings and higher-valued assets in later rings.
+- Apply patch management software and practices for security component updates that can also arrive in the form of monthly Latest Cumulative Updates (LCUs).
+- Use [rollback controls](microsoft-defender-antivirus-updates.md#how-to-roll-back-an-update) or automated rollback options to revert or reset components to a last known good state. 
 
 > [!NOTE]
 > Caution is advised when rolling back an update across a large group of devices.
