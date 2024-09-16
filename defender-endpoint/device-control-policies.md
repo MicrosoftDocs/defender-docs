@@ -204,8 +204,12 @@ There are two types of entries:  enforcement entries (Allow/Deny) and audit entr
 
 ### Audit entries
 
-Audit events control the behavior when device control enforces a rule (allow/deny).   Device control can display a notification to the end-user.  The user gets a notification that contains the name of the device control policy and the name of the device. The notification appears once every hour after initial access is denied.  Device control can also create an event that is available in Advanced Hunting.
+Audit events control the behavior when device control enforces a rule (allow/deny).   Device control can display a notification to the end-user.  The user gets a notification that contains the name of the device control policy and the name of the device. The notification appears once every hour after initial access is denied.  
 
+Device control can also create an event that is available in Advanced Hunting.
+
+> [!IMPORTANT]
+> There is a limit of 300 events per device per day
 Audit entries are processed after the enforcement decision has been made.  All corresponding audit entries are evaluated.
 
 ### Conditions
