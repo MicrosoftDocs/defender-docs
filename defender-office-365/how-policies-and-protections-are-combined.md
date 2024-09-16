@@ -120,10 +120,10 @@ Entries in a user's _safelist collection_ (the Safe Senders list, the Safe Recip
 |Bulk|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
 |Not spam|**User wins**: Email delivered to user's Inbox|**User wins**: Email delivered to user's Junk Email folder|
 
-- In Exchange Online, the domain allow in the Safe Sender's list might not work if the message is going to Quarantine due to the following conditions:
-    - The message is identified as malware or high confidence phishing (malware and high confidence phishing messages are quarantined).
-    - The tenant has configured to send all their spam to quarantine instead of junk in their  [[Antispam policy]](anti-spam-policies-configure).
-    - The email address or URL or file present in the email is also in a block entry in the [Tenant Allow/Block List](tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-domains-and-email-addresses).
+- In Exchange Online, the domain allow in the Safe Sender's list might not work if the message is quarantined by any of the following conditions:
+  - The message is identified as malware or high confidence phishing (malware and high confidence phishing messages are quarantined).
+  - [Actions in anti-spam policies](anti-spam-protection-about.md#actions-in-anti-spam-policies) are configured to quarantine instead of move mail to the Junk Email folder.
+  - The email address, URL, or file in the email message is also in a block entry in the [Tenant Allow/Block List](tenant-allow-block-list-about.md#block-entries-in-the-tenant-allowblock-list).
 
 For more information about the safelist collection and anti-spam settings on user mailboxes, see [Configure junk email settings on Exchange Online mailboxes](configure-junk-email-settings-on-exo-mailboxes.md).
 
