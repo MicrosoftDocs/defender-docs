@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: reference
 ms.service: exposure-management
-ms.date: 08/13/2024
+ms.date: 09/16/2024
 ---
 
 # Predefined classifications
@@ -31,12 +31,13 @@ Current asset types are:
 | ADCS                       | Device     | Medium                    | ADCS server allows administrators to fully implement a public key infrastructure (PKI) and issue digital certificates that can be used to secure multiple resources on a network. Moreover, ADCS can be used for various security solutions, such as SSL encryption, user authentication, and secure email. |
 | ADFS                       | Device     | High                      | ADFS server provides users with single sign-on access to systems and applications located across organizational boundaries. It uses a claims-based access control authorization model to maintain application security and implement federated identity. |
 | Backup                     | Device     | Medium                    | Backup server is responsible for safeguarding data through regular backups, ensuring data protection and disaster recovery readiness. |
-| Domain Admin Machines      | Device     | High                      | Domain admin machines are machines that one or more of the domain admins are frequently logged into. These devices are likely to store related files, documents, and credentials used by the domain admins. |
+| Domain Admin Device      | Device     | High                      | Domain admin devices are devices that one or more of the domain admins are frequently logged into. These devices are likely to store related files, documents, and credentials used by the domain admins. |
 | Domain Controller          | Device     | High                      | Domain controller server is responsible for user authentication, authorization, and centralized management of network resources within an active directory domain. |
+| DNS                        | Device     | Low                    | The DNS server is essential for resolving domain names to IP addresses, enabling network communication and access to resources both internally and externally. |
 | Exchange                   | Device     | Medium                    | Exchange server is responsible for all the mail traffic within the organization. Depending on the setup and architecture, each server might hold several mail databases that store highly sensitive organizational information. |
 | SCCM                       | Device     | Medium                    | SCCM is used for managing endpoints in a large network, including patch management, software distribution, and inventory management. |
-| ITAdminDevice              | Device     | Medium                    | Critical devices used to configure, manage, and monitor the assets within the organization are vital for IT administration and are at high risk of cyber threats. They require top-level security to prevent unauthorized access. |
-| NetworkAdminDevice         | Device     | Medium                    | Critical devices used to configure, manage, and monitor the network assets within the organization are vital for network administration and are at high risk of cyber threats. They require top-level security to prevent unauthorized access. |
+| IT Admin Device              | Device     | Medium                    | Critical devices used to configure, manage, and monitor the assets within the organization are vital for IT administration and are at high risk of cyber threats. They require top-level security to prevent unauthorized access. |
+| Network Admin Device         | Device     | Medium                    | Critical devices used to configure, manage, and monitor the network assets within the organization are vital for network administration and are at high risk of cyber threats. They require top-level security to prevent unauthorized access. |
 | VMware ESXi                | Device     | High                      | The VMware ESXi hypervisor is essential for running and managing virtual machines within your infrastructure. As a bare-metal hypervisor, it's providing the foundation for creating and managing virtual resources. |
 | VMware vCenter             | Device     | High                      | The VMware vCenter Server is crucial for managing virtual environments. It provides centralized management of virtual machines and ESXi hosts. If it fails, it could disrupt the administration and control of your virtual infrastructure, including provisioning, migration, load balancing of virtual machines, and datacenter automation. However, as there are often redundant vCenter Servers and High Availability configurations, the immediate halt of all operations might not occur. Its failure could still cause significant inconvenience and potential performance issues |
 
