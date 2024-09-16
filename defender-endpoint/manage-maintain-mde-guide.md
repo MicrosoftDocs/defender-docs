@@ -7,7 +7,7 @@ ms.author: siosulli
 manager: deniseb
 ms.date: 08/19/2024
 ms.topic: conceptual
-ms.service: mde
+ms.service: defender-endpoint
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.custom: get-started
@@ -18,23 +18,7 @@ ms.collection:
 
 # Manage behavior safely in your organization with exclusions, indicators, and other techniques
 
-This article will help you better understand: 
-
-- Microsoft's safe deployment practices for Defender for Endpoint: Microsoft follows safe deployment practices that minimize the risk of updates having an unexpected impact.
-- Recommended additional safe deployment practices customers can put in place: For example, configuring gradual rollout controls.
-- Defender for Endpoint capabilities that will help you safeguard and manage your environment and maintain productivity.
-
-- Microsoft's safe deployment practices for Defender for Endpoint: Microsoft follows safe deployment practices that minimize the risk of updates having an unexpected impact.
-- Recommended additional safe deployment practices customers can put in place: For example, configuring gradual rollout controls.
-- Defender for Endpoint capabilities that will help you safeguard and manage your environment and maintain productivity.
-
-## Enable/disable capabilities to keep you organization secure and operational
-
-✅ **Task: Configure Antivirus (AV) and malware protection**
-
-✅ **Task: Configure baseline policies**
-
-✅ **Task: Manage behavior with exclusions, indicators, and other techniques**
+This article will help you better understand the Microsoft Defender for Endpoint capabilities that will help you safeguard and manage your environment and maintain productivity.
 
 Defender for Endpoint allow customers to be safe from threats while remaining productive but occasionally, unwanted behaviors may occur. Sometimes files, folders, or processes that aren't actually a threat can be detected as malicious by Defender for Endpoint or Microsoft Defender Antivirus. These entities can be blocked or sent to quarantine, even though they're not really a threat.
 
@@ -44,6 +28,15 @@ The process for addressing an unwanted behavior is to firstly identify what is c
 - From the device, using performance analyzer tools, events, and protection history.
 
 When you identify the capability causing the issue you can take action to exclude/trust that process or file. This might include actions such as adding exclusions, creating indicators, alert suppression, custom remediation, or submitting a file to Microsoft.
+
+
+## Enable/disable capabilities to keep you organization secure and operational
+
+✅ **Task: Configure Antivirus (AV) and malware protection**
+
+✅ **Task: Configure baseline policies**
+
+✅ **Task: Manage behavior with exclusions, indicators, and other techniques**
 
 The following tables describes the different ways unexpected behavior can present in your organzation and provides a link to where you can learn more about identifying, investigating and remediating the behaviors:
 
