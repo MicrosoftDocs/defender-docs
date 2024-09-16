@@ -18,7 +18,7 @@ ms.collection:
 
 # Use safe deployment practices to safeguard and manage your environment
 
-Microsoft follows safe deployment practices (SDP) that minimize the risk of security updates having an unexpected impact. This article describes Microsoft Defender for Endpoint’s approach to SDP and what customers can do to manage their own roll-out processes to add an extra layer of control.
+Microsoft follows safe deployment practices (SDP) to minimize the risk of security updates having an unexpected impact. This article describes Microsoft Defender for Endpoint’s approach to SDP and what customers can do to manage their own roll-out processes to add an extra layer of control.
 
 Microsoft Defender for Endpoint ships updates externally only after all the certification and validation tests are completed across multiple iterations of internal devices. 
 
@@ -31,7 +31,7 @@ Defender for Endpoint applies SDP to two distinct update mechanisms:
 
 Defender for Endpoint releases monthly software and driver updates that add new functionality, improve existing features, and resolve bugs. 
 
-Defender for Endpoint’s kernel drivers captures system-wide signals like process execution, file creation, and network activity. These drivers are updated through Windows Update, over a gradual and staged deployment process after spending weeks in stabilization and testing. The deployment evaluation monitors key metrics like reliability, performance, battery, application compatibility, and more across hardware and software configurations. 
+Defender for Endpoint’s kernel drivers, that capture system-wide signals like process execution, file creation, and network activity, are updated through Windows Update, over a gradual and staged deployment process after spending weeks in stabilization and testing. The deployment evaluation monitors key metrics like reliability, performance, battery, application compatibility, and more across hardware and software configurations. 
 
 :::image type="content" alt-text="process for rolling out software and driver updates for Defender for Endpoint" source="/defender/media/defender-endpoint/mde-software-driver-updates.png" lightbox="/defender/media/defender-endpoint/mde-software-driver-updates.png":::
 
@@ -41,7 +41,7 @@ All code and content changes go through engineering release gates along with ext
  
 Within each ring, Microsoft closely monitors quality signals such as product behavior and performance, false positives, as well as functional and reliability issues, before proceeding to roll out the update to a broader set of devices.
  
-Once internal testing is successfully completed, Microsoft then releases the updates externally in a staggered manner to ensure stability. During this time, Microsoft continuously monitors the rollout to ensure a quick response and remote Resolution of any issues by reverting or reissuing update packages.
+Once internal testing is successfully completed, Microsoft then releases the updates externally in a staggered manner to ensure stability. During this time, Microsoft continuously monitors the rollout to ensure a quick response and remote resolution of any issues by reverting or reissuing update packages.
 
 ### Customer SDP for monthly updates 
 
