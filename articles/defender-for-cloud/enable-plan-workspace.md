@@ -39,7 +39,7 @@ When you enable a plan on a Log Analytics workspace, you enable the plan for all
 
     :::image type="content" source="media/enable-plan-workspace/select-workspace.png" alt-text="Screenshot that shows the environment settings page, with demo workspaces highlighted. " lightbox="media/enable-plan-workspace/select-workspace.png":::
 
-1. Toggle the switch to **On** for the plan that you want to enable.
+1. Enable a plan by toggling the switch to **On**.
 
     :::image type="content" source="media/enable-plan-workspace/toggle-plan-on.png" alt-text="Screenshot that shows the two available plans that can be enabled and where the toggles are." lightbox="media/enable-plan-workspace/toggle-plan-on.png":::
 
