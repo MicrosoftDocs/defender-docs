@@ -8,7 +8,9 @@ ms.date: 04/16/2024
 
 # Machine secrets scanning
 
-Microsoft Defender for Cloud provides [secrets scanning](secrets-scanning.md) for virtual machines as part of its [agentless scanning features](concept-agentless-data-collection.md) that improve machine security posture. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+Microsoft Defender for Cloud provides [secrets scanning](secrets-scanning.md) in a number of scenarios, including scanning for secrets including scanning for machine secrets, scanning for secrets across infrastructure-as-code deployment resources, and scanning for secrets in Azure DevOps. 
+
+Virtual machines secrets scanning is provided as one of Defender for Cloud's [agentless scanning features](concept-agentless-data-collection.md) that improve machine security posture. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
 - Agentless secrets scanning for VMs helps you to quickly detect, prioritize, and remediate exposed plaintext secrets in your environment.
 - If secrets are detected, Defender for Cloud findings help security teams to prioritize actions, and remediate to minimize the risk of lateral movement.
