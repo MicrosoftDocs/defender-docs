@@ -31,6 +31,8 @@ Defender for Endpoint applies SDP to two distinct update mechanisms:
 
 Defender for Endpoint releases monthly software and driver updates that add new functionality, improve existing features, and resolve bugs. 
 
+The process for rolling out software and driver updates for Defender for Endpoint is shown in this image:
+
 :::image type="content" alt-text="process for rolling out software and driver updates for Defender for Endpoint" source="/defender/media/defender-endpoint/mde-software-driver-updates.png" lightbox="/defender/media/defender-endpoint/mde-software-driver-updates.png":::
 
 ### Microsoft SDP for monthly updates
@@ -43,7 +45,7 @@ Once internal testing is successfully completed, Microsoft then releases the upd
 
 ### Customer SDP for monthly updates 
 
-In addition to Microsoft’s safe deployment practices, organizations can also manage monthly updates with their own safe deployment policies through various controls:
+In addition to Microsoft’s safe deployment practices, organizations can also manage monthly updates with their own safe deployment practices through various controls:
 
 - [Create a custom gradual rollout process for Microsoft Defender updates](configure-updates.md) to control the delivery of agent updates to their devices. Customers can control the rings that are assigned to their device group and when each ring receive updates. For example, place lower-valued assets in earlier rings and higher-valued assets in later rings.
 - Apply patch management software and practices for security component updates that can also arrive in the form of monthly Latest Cumulative Updates (LCUs).
@@ -54,9 +56,9 @@ In addition to Microsoft’s safe deployment practices, organizations can also m
 
 ## Daily SDP security intelligence and detection logic updates
 
-Microsoft releases security intelligence updates which are installed on devices that supplement the real-time local and cloud-based machine learning models, behavior analysis, and heuristics that enable Defender for Endpoint to neutralize the latest known cyberthreats.
+Microsoft releases security intelligence updates that once installed on devices supplement the real-time local and cloud-based machine learning models, behavior analysis, and heuristics that enable Defender for Endpoint to neutralize the latest known cyberthreats.
 
-Given the high frequency at which these updates need to be delivered to protect customers, it’s not possible to deploy these through the same deployment process. Therefore, Defender for Endpoint doesn't include kernel changes in intelligence updates. Instead, daily updates are only delivered to components that run in the user mode of the operating system. This approach helps mitigate the risk of these more frequent updates from impacting the broader operating system and, in the unlikely event of an error, limits the risk of significant negative effects like system crashes and ensures devices can be automatically recovered.
+Given the high frequency at which these updates need to be delivered to protect customers, it’s not possible to deploy them through the same deployment process. Therefore, Defender for Endpoint doesn't include kernel changes in intelligence updates. Instead, daily updates are only delivered to components that run in the user mode of the operating system. This approach helps mitigate the risk of these more frequent updates from impacting the broader operating system and, in the unlikely event of an error, limits the risk of significant negative effects like system crashes and ensures devices can be automatically recovered.
 
 ### Microsoft SDP for daily updates 
 
