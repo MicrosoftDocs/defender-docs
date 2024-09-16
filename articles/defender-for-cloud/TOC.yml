@@ -702,6 +702,10 @@
             href: enable-agentless-scanning.md
           - name: Test malware scanning alerts
             href: test-agentless-malware-scanning.md
+      - name: OS misconfiguration (Cloud Security Benchmark)
+        items:
+         - name: Set up Azure Policy guest configuration
+           href: security-baseline-guest-configuration.md
       - name: File integrity monitoring
         items:
           - name: Overview

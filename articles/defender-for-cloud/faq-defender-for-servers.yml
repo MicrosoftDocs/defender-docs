@@ -172,15 +172,6 @@ sections:
           Which Microsoft Defender for Endpoint plan is supported in Defender for Servers?
         answer: |
           Defender for Servers Plan 1 and Plan 2 provides the capabilities of [Microsoft Defender for Endpoint Plan 2](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint).
-
-<<<<<<< HEAD
-      - question: |
-          Are there any options to enforce the application controls?
-        answer: |
-          No enforcement options are currently available. Adaptive application controls are intended to provide **security alerts** if any application runs other than the ones you've defined as safe. [Learn more](adaptive-application-controls.md) and are customizable as shown on this page.
-=======
->>>>>>> 4404eeee0447be4622824dc5ced6d2520850e333
-
       - question: |
           Why do I see a Qualys app in my recommended applications?
         answer: |
@@ -204,9 +195,6 @@ sections:
 
           :::image type="content" source="./media/asset-inventory/agent-pricing-blanks.png" alt-text="Some resources show blank info in the monitoring agent  or Defender for Cloud columns." lightbox="./media/asset-inventory/agent-pricing-blanks.png":::
 
-<<<<<<< HEAD
-    
-=======
 
       - question: |
           When should I use a "Deny all traffic" rule?
@@ -214,7 +202,6 @@ sections:
           A **Deny all traffic** rule is recommended when, as a result of running the algorithm, Defender for Cloud doesn't identify traffic that should be allowed, based on the existing NSG configuration. Therefore, the recommended rule is to deny all traffic to the specified port. The name of this type of rule is displayed as "*System Generated*". After enforcing this rule, its actual name in the NSG will be a string comprised of the protocol, traffic direction, "DENY", and a random number.
 
 
->>>>>>> 4404eeee0447be4622824dc5ced6d2520850e333
       - question: |
           How do I deploy the prerequisites for the security configuration recommendations?
         answer: |
