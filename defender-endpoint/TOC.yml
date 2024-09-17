@@ -716,8 +716,6 @@
         href: safety-scanner-download.md
       - name: Configure Microsoft Defender Antivirus features
         href: configure-microsoft-defender-antivirus-features.md
-      - name: Manage exclusions for Defender for Endpoint and Microsoft Defender Antivirus
-        href: defender-endpoint-antivirus-exclusions.md
       - name: Cloud protection and Microsoft Defender Antivirus
         href: cloud-protection-microsoft-defender-antivirus.md
         items:
