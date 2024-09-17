@@ -1,6 +1,6 @@
 ---
 title: Exclusions overview
-description: Learn how to navigate exclusions for Defender for Endpoint and Microsoft Defender Antivirus
+description: Learn how to navigate exclusions for Defender for Endpoint and Microsoft Defender Antivirus.
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
