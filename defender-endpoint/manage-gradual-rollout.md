@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: ngp
 search.appverid: met150
-ms.date: 01/12/2024
+ms.date: 09/13/2024
 ---
 
 # Manage the gradual rollout process for Microsoft Defender updates
@@ -95,7 +95,7 @@ You can also assign a machine to a channel to define the cadence in which it rec
 |Channel name|Description|Application|
 |---|---|---|
 |Current Channel (Staged)|Get Current Channel updates later during gradual release|Devices are offered updates later during the gradual release cycle. Suggested to apply to a small, representative part of your device population (~10%).|
-|Current Channel (Broad)|Get updates at the end of gradual release|Devices will be offered updates after the gradual release cycle. Best for datacenter machines that only receive limited updates. Note: this setting applies to all Defender updates.|
+|Current Channel (Broad)|Get updates at the end of gradual release|Devices will be offered updates after the gradual release cycle. Suggested to apply to a broad set of devices in your production population. Note: this setting applies to all Defender updates.|
 |(default)||If you disable or don't configure this policy, the device remains in Current Channel (Default): Stay up to date automatically during the gradual release cycle. This means Microsoft assigns a channel to the device. The channel selected by Microsoft might be one that receives updates early during the gradual release cycle, which isn't suitable for devices in a production or critical environment.|
 
 > [!NOTE]
