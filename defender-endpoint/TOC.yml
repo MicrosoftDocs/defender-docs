@@ -542,6 +542,16 @@
 
   - name: Detect threats and protect endpoints
     items:
+    - name: Defender for Endpoint Security Operations Guide 
+      href: mde-sec-ops-guide.md
+    - name: Navigating exclusions for Defender for Endpoint and Microsoft Defender Antivirus
+      items:
+      - name: Exclustions overview
+        href: navigate-defender-endpoint-antivirus-exclusions.md
+      - name: Using submissions, supressions and exclusions
+        href: submissions-supressions-exclustions.md
+      - name:  Control unwanted behaviors with exclusions and indicators
+        href: exclusions-indictors-scenarios.md
     - name: Microsoft Defender Vulnerability Management
       href: /defender-vulnerability-management
     - name: Device discovery
@@ -707,8 +717,6 @@
         href: safety-scanner-download.md
       - name: Configure Microsoft Defender Antivirus features
         href: configure-microsoft-defender-antivirus-features.md
-      - name: Manage exclusions for Defender for Endpoint and Microsoft Defender Antivirus
-        href: defender-endpoint-antivirus-exclusions.md
       - name: Cloud protection and Microsoft Defender Antivirus
         href: cloud-protection-microsoft-defender-antivirus.md
         items:
@@ -859,8 +867,9 @@
           href: restore-quarantined-files-microsoft-defender-antivirus.md
 
       - name: Microsoft Defender Antivirus exclusions
-        href: configure-exclusions-microsoft-defender-antivirus.md
         items:
+        - name: Configure custom exclusions
+          href: configure-exclusions-microsoft-defender-antivirus.md
         - name: Exclusions based on file extension and folder location
           href: configure-extension-file-exclusions-microsoft-defender-antivirus.md
         - name: Exclusions for files opened by processes
