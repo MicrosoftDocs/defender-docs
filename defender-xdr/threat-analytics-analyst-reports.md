@@ -110,11 +110,9 @@ Microsoft Sentinel has powerful hunting search and query tools to hunt for secur
 
 ## Apply additional mitigations
 
-Threat analytics dynamically tracks the [status of security updates](threat-analytics.md#endpoints-exposure-know-the-deployment-status-of-security-updates) and [secure configurations](threat-analytics.md#recommended-actions-review-list-of-mitigations-and-the-status-of-your-devices). These types of information are available as charts and tables in the **Endpoints exposures** and **Recommended actions** tabs.
+Threat analytics dynamically tracks the status of certain [security updates](threat-analytics.md#endpoints-exposure-know-the-deployment-status-of-security-updates) and [secure configurations](threat-analytics.md#recommended-actions-review-list-of-mitigations-and-the-status-of-your-devices). These types of information are available as charts and tables in the **Endpoints exposures** and **Recommended actions** tabs, and are repeatable recommendations that apply to this threat and might apply to other threats, too.
 
-In addition to these tracked recommendations, the analyst report could also discuss mitigations that are *not* dynamically monitored because they’re specific to just the threat or situation being discussed in the report. [Microsoft Secure Score](microsoft-secure-score.md) and [Microsoft Security Exposure Management](/security-exposure-management/microsoft-security-exposure-management) are looking at incorporating recommendations that are repeatable and applicable to the most customers.
-
-Here are some examples of important mitigations that aren’t dynamically tracked:
+In addition to these tracked recommendations, the analyst report could also discuss mitigations that are *not* dynamically monitored because they’re specific to just the threat or situation being discussed in the report. Here are some examples of important mitigations that aren’t dynamically tracked:
 
 - Block emails with _.lnk_ attachments or other suspicious file types
 - Randomize local administrator passwords
@@ -128,4 +126,5 @@ While you can use the **Endpoints exposures** and **Recommended actions** tabs t
 - [Threat analytics overview](threat-analytics.md)
 - [Proactively find threats with advanced hunting](advanced-hunting-overview.md)
 - [Custom detection rules](custom-detection-rules.md)
+
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]
