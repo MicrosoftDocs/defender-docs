@@ -1,6 +1,6 @@
 ---
 title: Use safe deployment practices to safeguard your environment
-description: Plan, design, implement, adopt, and manage safe deployment practices to safeguard and manage your environment
+description: Plan, implement, adopt, and manage safe deployment practices to safeguard and manage your environment
 keywords: mde safe deployment practices
 author: siosulli
 ms.author: siosulli
