@@ -1,12 +1,13 @@
 ---
 title: Hardware acceleration and Microsoft Defender Antivirus.
 description: How Microsoft Defender Antivirus incorporates hardware acceleration and Microsoft Defender Antivirus.
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
+ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: overview
-ms.date: 02/26/2024
+ms.date: 09/18/2024
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.custom: partner-contribution
