@@ -42,7 +42,7 @@ The following table summarizes how Defender for Servers features will be provide
 
 As part of the MMA agent retirement, the auto provisioning capability that provides the installation and configuration of the agent for MDC customers, will be deprecated as well in 2 stages: 
 
-1. **By the end of September 2024**- auto provisioning of MMA will be disabled for customers that are no longer using the capability, as well as for newly created subscriptions:​
+1. **By the end of September 2024** - auto provisioning of MMA will be disabled for customers that are no longer using the capability, as well as for newly created subscriptions:​
 
      - **Existing subscriptions** that switch off MMA auto provisioning after end of September will no longer be able to enable the capability afterwards.​
 
