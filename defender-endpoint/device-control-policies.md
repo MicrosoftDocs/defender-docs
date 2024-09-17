@@ -200,17 +200,18 @@ Device control policies define access (called an entry) for a set of devices. En
 
 ### Entry evaluation
 
-There are two types of entries:  enforcement entries (Allow/Deny) and audit entries (AuditAllow/AuditDeny).  Enforcement entries for a rule are evaluated in order until all of the requested permissions have been matched.  If no entries match a rule, then the next rule is evaluated.  If no rules match, then the default is applied.
+There are two types of entries:  enforcement entries (Allow/Deny) and audit entries (AuditAllow/AuditDeny).  
+
+Enforcement entries for a rule are evaluated in order until all of the requested permissions have been matched.  If no entries match a rule, then the next rule is evaluated.  If no rules match, then the default is applied.
 
 ### Audit entries
 
-Audit events control the behavior when device control enforces a rule (allow/deny).   Device control can display a notification to the end-user.  The user gets a notification that contains the name of the device control policy and the name of the device. The notification appears once every hour after initial access is denied.  
+Audit events control the behavior when device control enforces a rule (allow/deny). Device control can display a notification to the end-user. The user gets a notification that contains the name of the device control policy and the name of the device. The notification appears once every hour after initial access is denied.  
 
 Device control can also create an event that is available in Advanced Hunting.
 
 > [!IMPORTANT]
-> There is a limit of 300 events per device per day
-Audit entries are processed after the enforcement decision has been made.  All corresponding audit entries are evaluated.
+> There is a limit of 300 events per device per day. Audit entries are processed after the enforcement decision has been made.  All corresponding audit entries are evaluated.
 
 ### Conditions
 
