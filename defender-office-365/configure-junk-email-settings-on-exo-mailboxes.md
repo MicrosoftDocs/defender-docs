@@ -16,7 +16,7 @@ ms.collection:
   - tier2
 description: Admins can learn how to configure the junk email settings in Exchange Online mailboxes. Many of these settings are available to users in Outlook or Outlook on the web.
 ms.service: defender-office-365
-ms.date: 11/28/2023
+ms.date: 09/16/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Exchange Online Protection</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -70,18 +70,16 @@ The safelist collection on a mailbox includes the Safe Senders list, the Safe Re
 
 <sup>\*</sup> You can't directly modify the **Safe Recipients** list by using the **Set-MailboxJunkEmailConfiguration** cmdlet (the _TrustedRecipientsAndDomains_ parameter doesn't work). You modify the Safe Senders list, and those changes are synchronized to the Safe Recipients list.
 
-**Notes**:
-
 - In Exchange Online, whether entries in the Safe Senders list or _TrustedSendersAndDomains_ parameter work or don't work depends on the verdict and action in the policy that identified the message:
   - **Move messages to Junk Email folder**: Domain entries and sender email address entries are honored. Messages from those senders aren't moved to the Junk Email folder.
   - **Quarantine**: Domain entries aren't honored (messages from those senders are quarantined). Email address entries are honored (messages from those senders aren't quarantined) if either of the following statements is true:
     - The message isn't identified as malware or high confidence phishing (malware and high confidence phishing messages are quarantined).
-    - The email address isn't in a block entry in the [Tenant Allow/Block](tenant-allow-block-list-email-spoof-configure.md#create-block-entries-for-domains-and-email-addresses).
+    - The email address, URL, or file in the email message isn't in a block entry in the [Tenant Allow/Block](tenant-allow-block-list-about.md#block-entries-in-the-tenant-allowblock-list).
 - In standalone EOP with directory synchronization, domain entries aren't synchronized by default, but you can enable synchronization for domains. For more information, see [Configure Content Filtering to Use Safe Domain Data: Exchange 2013 Help | Microsoft Learn](/exchange/configure-content-filtering-to-use-safe-domain-data-exchange-2013-help).
 
 To configure the safelist collection on a mailbox, use the following syntax:
 
-```PowerShell
+```powershell
 Set-MailboxJunkEmailConfiguration <MailboxIdentity> -BlockedSendersAndDomains <EmailAddressesOrDomains | $null> -ContactsTrusted <$true | $false> -TrustedListsOnly <$true | $false> -TrustedSendersAndDomains  <EmailAddresses | $null>
 ```
 

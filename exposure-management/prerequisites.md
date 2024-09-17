@@ -6,7 +6,7 @@ author: dlanger
 manager: rayne-wiselman
 ms.topic: overview
 ms.service: exposure-management
-ms.date: 06/24/2024
+ms.date: 09/16/2024
 ---
 
 # Prerequisites and support
@@ -19,12 +19,14 @@ Security Exposure Management is currently in public preview.
 
 ## Permissions
 
-Permissions are based on [Microsoft Entra ID RBAC](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
+Permissions are based on [Microsoft Entra ID Roles](/entra/identity/role-based-access-control/custom-overview). You need a tenant with at least one Global Admin or Security Admin to create a Security Exposure Management workspace.
 
 - For full Security Exposure Management access, user roles need access to all Defender for Endpoint  [device groups](/microsoft-365/security//defender-endpoint/machine-groups).
-- Users who have access restricted to specific device groups can:
-    - Access global exposure insights data. They can't access specific device information and attack paths
-    - Access the Security Exposure Management attack surface map and advanced hunting schemas (ExposureGraphNodes and ExposureGraphEdges) for the device groups to which they have access.
+- Users who have access restricted to some of the organization's device groups (and not to all), can:
+    - Access global exposure insights data.
+    - View affected assets under metrics, recommendations, events, and initiatives history only within users' scope
+    - View devices in attack paths that are within the users' scope
+    - Access the Security Exposure Management attack surface map and advanced hunting schemas (ExposureGraphNodes and ExposureGraphEdges) for the device groups to which they have access
 
 ### Permissions for Security Exposure Management tasks
 
