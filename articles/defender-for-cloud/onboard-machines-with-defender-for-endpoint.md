@@ -2,7 +2,7 @@
 title: Onboard non-Azure machines with Defender for Endpoint
 description: Learn how to connect your non-Azure machines directly to Microsoft Defender for Cloud with Microsoft Defender for Endpoint.
 ms.topic: quickstart
-ms.date: 06/29/2023
+ms.date: 09/17/2024
 author: dcurwin
 ms.author: dacurwin
 
@@ -23,7 +23,7 @@ This tenant-level setting allows you to automatically and natively onboard any n
 | ------------------------------- | ------------------------------------------------------------ |
 | Release state                   | GA                                                           |
 | Supported operating systems     | All [Windows](/microsoft-365/security/defender-endpoint/minimum-requirements#supported-windows-versions) and [Linux](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux#system-requirements) **Server** operating systems supported by Defender for Endpoint |
-| Required roles and  permissions | To manage this setting, you need **Subscription Owner** (on the chosen subscription), and  **Microsoft Entra Global Administrator** or  **Microsoft Entra Security Administrator** |
+| Required roles and  permissions | To manage this setting, you need **Subscription Owner** (on the chosen subscription), **Microsoft Entra Security Administrator or higher permissions on the tenant** |
 | Environments                    | On-premises servers  <br />Multicloud VMs – limited  support (see limitations section)|
 | Supported plans                 | Defender for Servers P1  <br />Defender for Servers P2 –  limited features (see limitations section) |
 
