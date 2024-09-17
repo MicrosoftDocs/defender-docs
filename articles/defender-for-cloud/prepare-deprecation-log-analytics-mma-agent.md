@@ -48,7 +48,7 @@ As part of the MMA agent retirement, the auto provisioning capability that provi
 
   - On **newly created subscriptions** auto provisioning can no longer be enabled and is automatically turned off.​
 
-2. **End of November 202-** the capability will be disabled on subscriptions that have not yet switched it off. From that point forward, it can no longer be possible to enable the capability on existing subscriptions.
+2. **End of November 2024** - the capability will be disabled on subscriptions that have not yet switched it off. From that point forward, it can no longer be possible to enable the capability on existing subscriptions.
 
 ### The 500-MB benefit for data ingestion
 
