@@ -44,7 +44,7 @@ As part of the MMA agent retirement, the auto provisioning capability that provi
 
 1. **By the end of September 2024**- auto provisioning of MMA will be disabled for customers that are no longer using the capability, as well as for newly created subscriptions:​
 
-- **Existing subscriptions** that switch off MMA auto provisioning after end of September will no longer be able to enable the capability afterwards.​
+     - **Existing subscriptions** that switch off MMA auto provisioning after end of September will no longer be able to enable the capability afterwards.​
 
   - On **newly created subscriptions** auto provisioning can no longer be enabled and is automatically turned off.​
 
