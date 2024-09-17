@@ -43,7 +43,7 @@ The key device discovery capabilities are:
 
 |Capability|Description|
 |---|---|
-|OT device management|[Manage OT devices](manage-devices-inventory.md):<br>- Build an up-to-date inventory that includes all your managed and unmanaged devices.<br>- Classify critical devices to ensure that the most important assets in your organization are protected.<br>- Add organization-specific information to emphasize your organization preferences.|
+|OT device management|[Manage OT devices](manage-devices-inventory.md):<br>- Build an up-to-date inventory that includes all your managed and unmanaged devices.<br>- Discover your organization Building Management Systems (BMS) devices such as **Motion detector**, **Fire Alarm**, and **Elevators**.<br>- Classify critical devices to ensure that the most important assets in your organization are protected.<br>- Add organization-specific information to emphasize your organization preferences.|
 |Device protection with risk-based approach|Identify risks such as missing patches, vulnerabilities and prioritize fixes based on risk scoring and automated threat modeling.|
 |Device alignment with physical sites|Allows contextual security monitoring. Use the **Site** filter to manage each site separately. Learn more about [filters](/defender-endpoint/machines-view-overview#use-filters-to-customize-the-device-inventory-views).|
 |Device groups|Allows different teams in your organization to monitor and manage relevant assets only. Learn more about [creating a device group](/defender-endpoint/machine-groups#create-a-device-group).|
@@ -51,7 +51,7 @@ The key device discovery capabilities are:
 
 ## Supported devices
 
-Defender for IoT's device inventory supports the following device classes:
+Defender for IoT's device inventory supports the following device categories:
 
 |Devices|Example|
 |---|---|
@@ -60,9 +60,11 @@ Defender for IoT's device inventory supports the following device classes:
 |**Health care**|Glucose meters, monitors|
 |**Transportation / Utilities**|Turnstiles, people counters, motion sensors, fire and safety systems, intercoms|
 |**Energy and resources**|DCS controllers, PLCs, historian devices, HMIs|
-|**Endpoint devices**|Workstations, servers, or mobile devices|
-|**Enterprise**|Smart devices, printers,  communication devices, or audio/video devices|
 |**Retail**|Barcode scanners, humidity sensor, punch clocks|
+
+For Enterprise device discovery information, see [Enterprise device discovery](/defender-for-iot/enterprise-iot).
+
+For Endpoint device discovery information, see [Endpoint device discovery](/defender-endpoint/device-discovery).
 
 ### Identified, unique devices
 
@@ -72,8 +74,8 @@ Defender for IoT identifies single and unique devices as follows:
 
 |Type  |Description  |
 |---------|---------|
-|**Identified as individual devices**     |    Devices identified as *individual* devices include:<br>**IT, OT, or IoT devices with one or more NICs**, including network infrastructure devices such as switches and routers<br><br>**Note**: A device with modules or backplane components, such as racks or slots, is counted as a single device, including all modules or backplane components.|
-|**Not identified as individual devices**     | The following items *aren't* considered as individual devices, and do not count against your license:<br><br>- **Public internet IP addresses** <br>- **Multi-cast groups**<br>- **Broadcast groups**<br>- **Inactive devices**<br><br> Network-monitored devices are marked as *inactive* when there's no network activity detected within a specified time:<br><br> - **OT networks**: No network activity detected for more than 60 days<br> - **Enterprise IoT networks**: No network activity detected for more than 30 days<br><br>**Note**: Endpoints already managed by Defender for Endpoint are not considered as separate devices by Defender for IoT.  |
+|**Identified as individual devices**     |    Devices identified as *individual* devices include:<br>**OT or BMS unmanaged devices with one or more NICs**, including network infrastructure devices such as switches and routers<br><br>**Note**: A device with modules or backplane components, such as racks or slots, is counted as a single device, including all modules or backplane components.|
+|**Not identified as individual devices**     | The following items *aren't* considered as individual devices, and don't count against your license:<br><br>- **Public internet IP addresses** <br>- **Multi-cast groups**<br>- **Broadcast groups**<br>- **Inactive devices**<br><br> Network-monitored devices are marked as *inactive* when there's no network activity detected within a specified time:<br><br> - **OT networks**: No network activity detected for more than 60 days<br><br>**Note**: Endpoints already managed by Defender for Endpoint aren't considered as separate devices by Defender for IoT.  |
 
 ## Next steps
 
