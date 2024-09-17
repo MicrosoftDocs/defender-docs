@@ -24,9 +24,9 @@ This article describes features available in Microsoft Defender for IoT in the D
 
 ### New Device Category Added – Building Management Systems (BMS)
 
-A new BMS device category has been added to the MDIoT license aiming to improve BMS device discovery and security. The BMS category includes a subset of Smart Facility and Surveillance devices (previously under the IoT category) such as fire alarms, humidity sensors, security radars, etc. These devices now require an Microsoft Defender for IoT site-based license for full protection.
+A new BMS device category has been added to the MDIoT license aiming to improve BMS device discovery and security. The BMS category includes a subset of Smart Facility and Surveillance devices (previously under the IoT category) such as fire alarms, humidity sensors, security radars, etc. These devices now require a Microsoft Defender for IoT site-based license for full protection.
 
-Cameras devices will remain under the IoT category.
+Camera devices remain under the IoT category.
 
 For more information, see [overview of device discovery](device-discovery.md).
 
