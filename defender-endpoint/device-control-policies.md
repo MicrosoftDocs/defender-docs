@@ -73,7 +73,7 @@ Device control policies can be applied to users and/or user groups.
 > [!NOTE]
 > In the articles related to device control, groups of users are referred to as <i>user groups</i>.  The term <i>groups</i> refer to [groups](#groups) defined in the device control policy.
 
- Using Intune, on either Mac and Windows, device control policies can be targeted to user groups defined in Entra Id.
+Using Intune, on either Mac and Windows, device control policies can be targeted to user groups defined in Entra Id.
 
 On Windows, a user or user group can be a condition on an [entry](#entries) in a policy.
 
@@ -200,7 +200,7 @@ Device control policies define access (called an entry) for a set of devices. En
 
 ### Entry evaluation
 
-There are two types of entries:  enforcement entries (Allow/Deny) and audit entries (AuditAllow/AuditDeny).  
+There are two types of entries: enforcement entries (Allow/Deny) and audit entries (AuditAllow/AuditDeny).  
 
 Enforcement entries for a rule are evaluated in order until all of the requested permissions have been matched.  If no entries match a rule, then the next rule is evaluated.  If no rules match, then the default is applied.
 
