@@ -5,7 +5,7 @@ ms.topic: sample
 ms.custom: devx-track-azurecli
 author: dcurwin
 ms.author: dacurwin
-ms.date: 01/15/2024
+ms.date: 09/17/2024
 ---
 
 # Express configuration Azure Command Line Interface (CLI) commands reference
@@ -37,15 +37,17 @@ The examples in this article should be run in PowerShell; they aren't for use "a
 > [!NOTE]
 > For Azure CLI reference for the classic configuration, see [Manage findings in your Azure SQL databases](sql-azure-vulnerability-assessment-manage.md#azure-cli)
 
+You can get the list of available scan IDs with this cmdlet - [Get SQL vulnerability assessment scan](express-configuration-powershell-commands.md#get-sql-vulnerability-assessment-scan)
+
 ## Set SQL vulnerability assessment baseline on system database
 
 **Example 1**:
 
 ```azurecli
-az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master --body '{  "properties": {    "latestScan": true,    "results": {}  }}'
+az rest --method Put --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master --body '{  "properties": {    "latestScan": true,    "results": {}  }}'
 
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/Default",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/Default",
   "name": "Default",
   "properties": {
     "results": {
@@ -68,10 +70,10 @@ az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 2**:
 
 ```azurecli
-az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master --body '{\"properties\": { \"latestScan\": false, \"results\": {\"VA2063\": [[\"AllowAll\",\"0.0.0.0\",\"255.255.255.255\" ]]}}}'
+az rest --method Put --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master --body '{\"properties\": { \"latestScan\": false, \"results\": {\"VA2063\": [[\"AllowAll\",\"0.0.0.0\",\"255.255.255.255\" ]]}}}'
 
 {
- "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/Default",
+ "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/Default",
  "name": "Default",
  "properties": {
    "results": {
@@ -93,10 +95,10 @@ az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 1**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
 
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/master/sqlVulnerabilityAssessments/Default/baselines/Default",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/master/sqlVulnerabilityAssessments/Default/baselines/Default",
   "name": "Default",
   "properties": {
     "results": {
@@ -119,11 +121,11 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 2**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
 {
   "value": [
     {
-      "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/Default",
+      "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/Default",
       "name": "Default",
       "properties": {
         "results": {
@@ -150,9 +152,9 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 1**:
 
 ```azurecli
-az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview --body '{  "properties": {    "latestScan": true,    "results": {}  }}'
+az rest --method Put --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview --body '{  "properties": {    "latestScan": true,    "results": {}  }}'
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default",
   "name": "Default",
   "properties": {
     "results": {
@@ -175,10 +177,10 @@ az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 2**:
 
 ```azurecli
-az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview --body '{\"properties\": { \"latestScan\": false, \"results\": {\"VA2062\": [[\"AllowAll\",\"0.0.0.0\",\"255.255.255.255\" ]]}}}'
+az rest --method Put --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview --body '{\"properties\": { \"latestScan\": false, \"results\": {\"VA2062\": [[\"AllowAll\",\"0.0.0.0\",\"255.255.255.255\" ]]}}}'
 
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default",
   "name": "Default",
   "properties": {
     "results": {
@@ -200,9 +202,9 @@ az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 1**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default?api-version=2022-02-01-preview
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default",
   "name": "Default",
   "properties": {
     "results": {
@@ -225,12 +227,12 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 2**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines?api-version=2022-02-01-preview
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines?api-version=2022-02-01-preview
 
 {
   "value": [
     {
-      "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default",
+      "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/Default",
       "name": "Default",
       "properties": {
         "results": {
@@ -255,10 +257,10 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 ### Set SQL vulnerability assessment baseline rule on system database
 
 ```azurecli
-az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master --body '{ \"properties\": {    \"latestScan\": false,    \"results\": [        [          \"AllowAll\",          \"0.0.0.0\",          \"255.255.255.255\"        ]      ]  }}'
+az rest --method Put --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master --body '{ \"properties\": {    \"latestScan\": false,    \"results\": [        [          \"AllowAll\",          \"0.0.0.0\",          \"255.255.255.255\"        ]      ]  }}'
 
 {
-    "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2065",
+    "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2065",
  "name": "VA2065",
  "properties": {
    "results": [
@@ -278,9 +280,9 @@ az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 1**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2065",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2065",
   "name": "VA2065",
   "properties": {
     "results": [
@@ -298,12 +300,12 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 2**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default/rules?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default/rules?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
 
 {
   "value": [
     {
-      "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2060",
+      "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2060",
       "name": "VA2060",
       "properties": {
         "results": [
@@ -315,7 +317,7 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
       "type": "Microsoft.Sql/servers/sqlVulnerabilityAssessments/baselines"
     },
     {
-      "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2061",
+      "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2061",
       "name": "VA2061",
       "properties": {
         "results": [
@@ -327,7 +329,7 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
       "type": "Microsoft.Sql/servers/sqlVulnerabilityAssessments/baselines"
     },
     {
-      "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2065",
+      "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2065",
       "name": "VA2065",
       "properties": {
         "results": [
@@ -347,16 +349,16 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 ### Remove SQL vulnerability assessment baseline rule on system database
 
 ```azurecli
-az rest --method Delete --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
+az rest --method Delete --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
 ```
 
 ### Set SQL vulnerability assessment baseline rule on user database
 
 ```azurecli
-az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId?api-version=2022-02-01-preview --body '{ \"properties\": {    \"latestScan\": false,    \"results\": [        [          \"AllowAll\",          \"0.0.0.0\",          \"255.255.255.255\"        ]      ]  }}'
+az rest --method Put --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId?api-version=2022-02-01-preview --body '{ \"properties\": {    \"latestScan\": false,    \"results\": [        [          \"AllowAll\",          \"0.0.0.0\",          \"255.255.255.255\"        ]      ]  }}'
 
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2062",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2062",
   "name": "VA2062",
   "properties": {
     "results": [
@@ -376,10 +378,10 @@ az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 1**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId?api-version=2022-02-01-preview
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId?api-version=2022-02-01-preview
 
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2062",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA2062",
   "name": "VA2062",
   "properties": {
     "results": [
@@ -397,12 +399,12 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 2**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default/rules?api-version=2022-02-01-preview
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default/rules?api-version=2022-02-01-preview
 
 {
   "value": [
     {
-      "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA1143",
+      "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA1143",
       "name": "VA1143",
       "properties": {
         "results": [
@@ -414,7 +416,7 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
       "type": "Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/baselines"
     },
     {
-      "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA1219",
+      "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/baselines/default/rules/VA1219",
       "name": "VA1219",
       "properties": {
         "results": [
@@ -432,7 +434,7 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 ### Remove SQL vulnerability assessment baseline rule on user database
 
 ```azurecli
-az rest --method Delete --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId?api-version=2022-02-01-preview
+az rest --method Delete --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/baselines/default/rules/$RuleId?api-version=2022-02-01-preview
 ```
 
 ### Get SQL vulnerability assessment scan results on system database
@@ -440,9 +442,9 @@ az rest --method Delete --uri /subscriptions/00000000-1111-2222-3333-44444444444
 **Example 1**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/scans/$ScanId/scanresults/$RuleId?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/scans/$ScanId/scanresults/$RuleId?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/VA2065/scanResults/VA2065",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/VA2065/scanResults/VA2065",
   "name": "VA2065",
   "properties": {
     "baselineAdjustedResult": null,
@@ -484,12 +486,12 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 2**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/scans/$ScanId/scanresults?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/scans/$ScanId/scanresults?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
 
 {
   "value": [
     {
-      "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/VA1223/scanResults/VA1223",
+      "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/VA1223/scanResults/VA1223",
       "name": "VA1223",
       "properties": {
         "baselineAdjustedResult": null,
@@ -531,7 +533,7 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
       "type": "Microsoft.Sql/servers/sqlVulnerabilityAssessments/scans/scanResults"
     },
     {
-      "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/VA2060/scanResults/VA2060",
+      "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/VA2060/scanResults/VA2060",
       "name": "VA2060",
       "properties": {
         "baselineAdjustedResult": {
@@ -595,9 +597,9 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 1**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/scans/$ScanId/scanresults/$RuleId?api-version=2022-02-01-preview
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/scans/$ScanId/scanresults/$RuleId?api-version=2022-02-01-preview
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/scans/VA2062/scanResults/VA2062",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/scans/VA2062/scanResults/VA2062",
   "name": "VA2062",
   "properties": {
     "baselineAdjustedResult": {
@@ -659,12 +661,12 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 2**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/scans/$ScanId/scanresults?api-version=2022-02-01-preview
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/scans/$ScanId/scanresults?api-version=2022-02-01-preview
 
 {
  "value": [
    {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/scans/VA1020/scanResults/VA1020",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/scans/VA1020/scanResults/VA1020",
   "name": "VA1020",
   "properties": {
     "baselineAdjustedResult": null,
@@ -705,7 +707,7 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
   "type": "Microsoft.Sql/servers/databases/sqlVulnerabilityAssessments/scans/scanResults"
    },
    {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/scans/VA1054/scanResults/VA1054",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/Default/scans/VA1054/scanResults/VA1054",
   "name": "VA1054",
   "properties": {
     "baselineAdjustedResult": null,
@@ -756,10 +758,10 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 1**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/scans/$ScanId?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/scans/$ScanId?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
 
  {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/ab58a4de-6bd6-4e54-bfa7-1d5e97ece68d",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/ab58a4de-6bd6-4e54-bfa7-1d5e97ece68d",
   "name": "ab58a4de-6bd6-4e54-bfa7-1d5e97ece68d",
   "properties": {
     "database": "master",
@@ -785,12 +787,12 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 2**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/scans?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/scans?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
 
 {
   "value": [
     {
-      "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/ab58a4de-6bd6-4e54-bfa7-1d5e97ece68d",
+      "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/ab58a4de-6bd6-4e54-bfa7-1d5e97ece68d",
       "name": "ab58a4de-6bd6-4e54-bfa7-1d5e97ece68d",
       "properties": {
         "database": "master",
@@ -812,7 +814,7 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
       "type": "Microsoft.Sql/servers/sqlVulnerabilityAssessments/scans"
     },
     {
-      "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/f3ec698b-104c-40a7-b1eb-251ff83bcf4e",
+      "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/f3ec698b-104c-40a7-b1eb-251ff83bcf4e",
       "name": "f3ec698b-104c-40a7-b1eb-251ff83bcf4e",
       "properties": {
         "database": "master",
@@ -834,7 +836,7 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
       "type": "Microsoft.Sql/servers/sqlVulnerabilityAssessments/scans"
     },
     {
-      "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/8c26af1e-79d6-4238-b7cf-bc7941714f34",
+      "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default/scans/8c26af1e-79d6-4238-b7cf-bc7941714f34",
       "name": "8c26af1e-79d6-4238-b7cf-bc7941714f34",
       "properties": {
         "database": "master",
@@ -864,10 +866,10 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 1**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/scans/$ScanId?api-version=2022-02-01-preview
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/scans/$ScanId?api-version=2022-02-01-preview
 
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/vulnerabilityAssessments/Default/scans/f64d81a1-9d7b-4516-a623-a1bfc845ed7e",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/vulnerabilityAssessments/Default/scans/f64d81a1-9d7b-4516-a623-a1bfc845ed7e",
   "name": "f64d81a1-9d7b-4516-a623-a1bfc845ed7e",
   "properties": {
     "database": "db",
@@ -893,10 +895,10 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 2**:
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/scans?api-version=2022-02-01-preview
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/scans?api-version=2022-02-01-preview
 
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/vulnerabilityAssessments/Default/scans/f64d81a1-9d7b-4516-a623-a1bfc845ed7e",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/vulnerabilityAssessments/Default/scans/f64d81a1-9d7b-4516-a623-a1bfc845ed7e",
   "name": "f64d81a1-9d7b-4516-a623-a1bfc845ed7e",
   "properties": {
     "database": "db",
@@ -922,7 +924,7 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 ### Invoke SQL vulnerability assessment scan on system database
 
 ```azurecli
-az rest --method Post --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/initiateScan?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
+az rest --method Post --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default/initiateScan?api-version=2022-02-01-preview --uri-parameters systemDatabaseName=master
 
 {
   "operation": "ExecuteDatabaseVulnerabilityAssessmentScan",
@@ -933,7 +935,7 @@ az rest --method Post --uri /subscriptions/00000000-1111-2222-3333-444444444444/
 ### Invoke SQL vulnerability assessment scan on user database
 
 ```azurecli
-az rest --method Post --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/initiateScan?api-version=2022-02-01-preview
+az rest --method Post --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/databases/db/sqlVulnerabilityAssessments/default/initiateScan?api-version=2022-02-01-preview
 
 {
   "operation": "ExecuteDatabaseVulnerabilityAssessmentScan",
@@ -944,10 +946,10 @@ az rest --method Post --uri /subscriptions/00000000-1111-2222-3333-444444444444/
 ### Get SQL vulnerability assessment server setting
 
 ```azurecli
-az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview
+az rest --method Get --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview
 
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default",
   "name": "Default",
   "properties": {
     "state": "Enabled"
@@ -961,10 +963,10 @@ az rest --method Get --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 1**:
 
 ```azurecli
-az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview --body '{   \"properties\": {     \"state\": \"Enabled\" }}'
+az rest --method Put --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview --body '{   \"properties\": {     \"state\": \"Enabled\" }}'
 
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default",
   "name": "Default",
   "properties": {
     "state": "Enabled"
@@ -976,10 +978,10 @@ az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 **Example 2**:
 
 ```azurecli
-az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview --body '{   \"properties\": {     \"state\": \"Disabled\" }}'
+az rest --method Put --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview --body '{   \"properties\": {     \"state\": \"Disabled\" }}'
 
 {
-  "id": "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default",
+  "id": "/subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/Default",
   "name": "Default",
   "properties": {
     "state": "Disabled"
@@ -991,7 +993,7 @@ az rest --method Put --uri /subscriptions/00000000-1111-2222-3333-444444444444/r
 ### Remove SQL vulnerability assessment server setting
 
 ```azurecli
-az rest --method Delete --uri /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview
+az rest --method Delete --uri /subscriptions/<SubscriptionID>/resourceGroups/vulnerabilityaseessmenttestRg/providers/Microsoft.Sql/servers/vulnerabilityaseessmenttest/sqlVulnerabilityAssessments/default?api-version=2022-02-01-preview
 ```
 
 ## Next steps
