@@ -1,5 +1,5 @@
 ---
-title: Submissions, supressions, and exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus
+title: Submissions, suppressions, and exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus
 description: Learn about suppressing alerts, submitting files for analysis, and defining exclusions and indicators to reduce noise and risk for your organization.
 ms.service: defender-endpoint
 ms.subservice: ngp
@@ -18,7 +18,7 @@ ms.collection:
 search.appverid: met150
 ---
 
-# Submissions, supressions, and exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus
+# Submissions, suppressions, and exclusions for Microsoft Defender for Endpoint and Microsoft Defender Antivirus
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
