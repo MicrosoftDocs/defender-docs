@@ -51,6 +51,23 @@ As part of the MMA agent retirement, the auto provisioning capability that provi
 
 1. **End of November 2024-** auto provisioning of MMA will be disabled on subscriptions that have not yet switched it off. From that point forward, it can no longer be possible to enable the capability on existing subscriptions.
 
+### Integration with Power BI
+
+September 15, 2024
+
+Defender for Cloud can now integrate with Power BI. This integration allows you to create custom reports and dashboards using the data from Defender for Cloud. You can use Power BI to visualize and analyze your security posture, compliance, and security recommendations. 
+
+Learn more about the new [integration with Power BI](integration-power-bi.md).
+
+### Update to CSPM multicloud network requirements
+
+September 11, 2024
+
+**Estimated date for change:** October 2024
+
+Beginning October 2024, we'll be adding additional IP addresses to our multicloud discovery services to accommodate improvements and ensure a more efficient experience for all users.
+
+To ensure uninterrupted access from our services, you should update your IP allowlist with the new ranges [provided here](https://aka.ms/CSPM-network-requirements). You should make the necessary adjustments in your firewall settings, security groups, or any other configurations that may be applicable to your environment. The list is sufficient for full capability of the CSPM foundational (free) offering.
 ### Defender for Servers feature deprecation
 
 September 9, 2024
