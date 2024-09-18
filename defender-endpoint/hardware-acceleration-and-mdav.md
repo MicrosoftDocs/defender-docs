@@ -1,12 +1,13 @@
 ---
 title: Hardware acceleration and Microsoft Defender Antivirus.
 description: How Microsoft Defender Antivirus incorporates hardware acceleration and Microsoft Defender Antivirus.
-author: YongRhee-MSFT
-ms.author: yongrhee
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
+ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: overview
-ms.date: 02/26/2024
+ms.date: 09/18/2024
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.custom: partner-contribution
@@ -19,10 +20,6 @@ audience: ITPro
 
 **Applies to:**
 
-- [Microsoft Defender XDR](/defender-xdr)
-- [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)
-- [Microsoft Defender for Business](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-business)
-- [Microsoft Defender for Endpoint Plan 1](microsoft-defender-endpoint.md)
 - Microsoft Defender Antivirus
 - [Microsoft Defender for Individuals](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals)
 
