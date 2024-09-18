@@ -58,7 +58,7 @@ With this release, an in-product experience has been released to allow you to mi
 
 For information on how to enable FIM over Defender for Endpoint, see[ File Integrity Monitoring using Microsoft Defender for Endpoint](/azure/defender-for-cloud/file-integrity-monitoring-enable-defender-endpoint). For information on how to disable previous versions, see [Migrate File Integrity Monitoring from previous versions](/azure/defender-for-cloud/migrate-file-integrity-monitoring).
 
-### FIM migration experience is available through MDC portal 
+### FIM migration experience is available in Defender for Cloud
 September 18, 2024
 
 An in-product experience has been released to allow you to migrate your FIM configuration over MMA to the new FIM over Defender for Endpoint version.
