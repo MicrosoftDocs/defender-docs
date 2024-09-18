@@ -43,7 +43,8 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 |September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
 
 ### Deprecation of MMA auto-provisioning capability 
-September 10, 2024
+
+September 18, 2024
 As part of the MMA agent retirement, the auto provisioning capability that provides the installation and configuration of the agent for MDC customers, will be deprecated as well in 2 stages:
 
 1. **By the end of September 2024**- auto provisioning of MMA will be disabled for customers that are no longer using the capability, as well as for newly created subscriptions. After end of September, the capability will no longer be able to be re-enable on those subscriptions.
