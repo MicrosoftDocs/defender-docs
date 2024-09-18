@@ -473,7 +473,7 @@ Microsoft Defender for Containers provides security alerts on the cluster level 
 
 **Description**: Kubernetes audit log analysis detected a new binding to the cluster-admin role which gives administrator privileges. Unnecessary administrator privileges might cause privilege escalation in the cluster.
 
-**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Persistence
+**[MITRE tactics](alerts-reference.md#mitre-attck-tactics)**: Persistence, PrivilegeEscalation
 
 **Severity**: Informational
 
