@@ -41,7 +41,7 @@ This article describes the most common scenarios where this behavior occurs and 
 
 - [Submitting a file to Microsoft for analysis](#submitting-files-for-analysis)
 - [Suppressing an alert](#suppressing-alerts)
-- [Adding an exclusion or indicator](#exclusions-and-indicators)
+- [Adding an exclusion or indicator](#using-exclusions-and-indicators)
 
 > [!CAUTION]
 > **Defining exclusions reduces the level of protection offered by Defender for Endpoint and Microsoft Defender Antivirus**. Use exclusions as a last resort, and make sure to define only the exclusions that are necessary. Make sure to review your exclusions periodically, and remove the ones you no longer need. See [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md#important-points-about-exclusions) and [Common mistakes to avoid](common-exclusion-mistakes-microsoft-defender-antivirus.md).
