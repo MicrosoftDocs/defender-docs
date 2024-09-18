@@ -346,8 +346,12 @@
               href: machine-groups.md
             - name: Create and manage device tags
               href: machine-tags.md
-        - name: Rules
+        - name: Rules and Exclusions
           items:
+              - name: Exclustions overview
+                href: navigate-defender-endpoint-antivirus-exclusions.md
+              - name: Using submissions, supressions and exclusions
+                href: submissions-supressions-exclustions.md
           - name: Manage suppression rules
             href: manage-suppression-rules.md
           - name: Create indicators
@@ -386,14 +390,6 @@
         items:
           - name: Safe deployment practices
             href: mde-sdp-strategy.md
-          - name: Navigating exclusions for Defender for Endpoint and Microsoft Defender Antivirus
-            items:
-              - name: Exclustions overview
-                href: navigate-defender-endpoint-antivirus-exclusions.md
-              - name: Using submissions, supressions and exclusions
-                href: submissions-supressions-exclustions.md
-              - name:  Control unwanted behaviors with exclusions and indicators
-                href: exclusions-indictors-scenarios.md
 
       - name: Defender for Endpoint Security Operations Guide 
         href: mde-sec-ops-guide.md
