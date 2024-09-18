@@ -6,8 +6,8 @@ ms.subservice: ngp
 ms.localizationpriority: medium
 ms.date: 09/07/2024
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom: 
 - nextgen
 - partner-contribution
