@@ -43,8 +43,6 @@ This article describes the most common scenarios where this behavior occurs and 
 - [Suppressing an alert](#suppressing-alerts)
 - [Adding an exclusion or indicator](#exclusions-and-indicators)
 
-For more specific scenarios about how manage this behavior, see [Exclusions scenarios in your organization](exclusions-indictors-scenarios.md)
-
 > [!CAUTION]
 > **Defining exclusions reduces the level of protection offered by Defender for Endpoint and Microsoft Defender Antivirus**. Use exclusions as a last resort, and make sure to define only the exclusions that are necessary. Make sure to review your exclusions periodically, and remove the ones you no longer need. See [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md#important-points-about-exclusions) and [Common mistakes to avoid](common-exclusion-mistakes-microsoft-defender-antivirus.md).
 
