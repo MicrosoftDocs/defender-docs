@@ -350,8 +350,8 @@
           items:
           - name: Exclustions overview
             href: navigate-defender-endpoint-antivirus-exclusions.md
-          - name: Using submissions, supressions and exclusions
-            href: submissions-supressions-exclusions.md
+          - name: Using submissions, suppressions and exclusions
+            href: submissions-suppressions-exclusions.md
           - name: Manage suppression rules
             href: manage-suppression-rules.md
           - name: Create indicators
