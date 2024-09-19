@@ -8,8 +8,8 @@ ms.subservice: reference
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: denisebmsft
 manager: deniseb
 audience: ITPro
 ms.collection: 
