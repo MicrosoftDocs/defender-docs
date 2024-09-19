@@ -45,7 +45,7 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
 **Sequoia support**
 
-Microsoft Defender supports macOS Sequoia (15) in the current Defender release.
+Microsoft Defender is working with Apple on a network stack change that is impacting Network Protection's Network Filter with macOS Sequoia (15).
 
 **macOS Deprecation**
 
