@@ -173,21 +173,22 @@ Use customer-managed keys to manage the encryption at rest of the contents of yo
 **Severity**: Medium
 
 **Type**: Control plane
+
 ### [[Preview] Containers running in Azure should have vulnerability findings resolved](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e9acaf48-d2cf-45a3-a6e7-3caa2ef769e0)
 
 **Description**: Defender for Cloud creates an inventory of all container workloads currently running in your Kubernetes clusters, and provides vulnerability reports for those workloads by matching the images and the vulnerability reports created for the registry images. Scanning and remediating vulnerabilities of container workloads is critical to ensure a robust and secure software supply chain, reduce the risk of security incidents, and ensures compliance with industry standards.
 
-Recommendation [Azure running container images should have vulnerabilities resolved (powered by Microsoft Defender Vulnerability Management)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/c609cf0f-71ab-41e9-a3c6-9a1f7fe1b8d5) will be removed when the new recommendation is generally available.
-
 The new recommendation is in preview and not used for secure score calculation.
 
 > [!NOTE]
-> Starting on September 29th, this recommendation will be updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
-> To support this improvement the assessment key for this recommendation will be updated to `c5045ea3-afc6-4006-ab8f-86c8574dbf3d`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the assessment key once it is updated.
+> Starting September 29, 2024, this recommendation was updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
+> To support this improvement the assessment key for this recommendation has been updated to `c5045ea3-afc6-4006-ab8f-86c8574dbf3d`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you change the API call to use the new assessment key.
+
+Recommendation [Azure running container images should have vulnerabilities resolved (powered by Microsoft Defender Vulnerability Management)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/c609cf0f-71ab-41e9-a3c6-9a1f7fe1b8d5) will be removed when the new recommendation is generally available.
+
 **Severity**: High
 
 **Type**: Vulnerability Assessment
-
 
 ### [Containers sharing sensitive host namespaces should be avoided](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/802c0637-5a8c-4c98-abd7-7c96d89d6010)
 
@@ -384,13 +385,14 @@ The new recommendation is in preview and not used for secure score calculation.
 
 **Description**: Defender for Cloud creates an inventory of all container workloads currently running in your Kubernetes clusters and provides vulnerability reports for those workloads by matching the images and the vulnerability reports created for the registry images. Scanning and remediating vulnerabilities of container workloads is critical to ensure a robust and secure software supply chain, reduce the risk of security incidents, and ensures compliance with industry standards.
 
-Recommendation [AWS running container images should have vulnerability findings resolved (powered by Microsoft Defender Vulnerability Management)](https://ms.portal.azure.com/#view/Microsoft_Azure_Security_CloudNativeCompute/AwsContainersRuntimeRecommendationDetailsBlade/assessmentKey/682b2595-d045-4cff-b5aa-46624eb2dd8f) will be removed when the new recommendation is generally available. 
-
 The new recommendation is in preview and not used for secure score calculation.
 
 > [!NOTE]
-> Starting on September 29th, this recommendation will be updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
-> To support this improvement the assessment key for this recommendation will be updated to `8749bb43-cd24-4cf9-848c-2a50f632043c`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the assessment key once it is updated. 
+> Starting September 29, 2024, this recommendation was updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
+> To support this improvement the assessment key for this recommendation has been updated to `8749bb43-cd24-4cf9-848c-2a50f632043c`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the API call to use the new assessment key.
+
+Recommendation [AWS running container images should have vulnerability findings resolved (powered by Microsoft Defender Vulnerability Management)](https://ms.portal.azure.com/#view/Microsoft_Azure_Security_CloudNativeCompute/AwsContainersRuntimeRecommendationDetailsBlade/assessmentKey/682b2595-d045-4cff-b5aa-46624eb2dd8f) will be removed when the new recommendation is generally available.
+
 **Severity**: High
 
 **Type**: Vulnerability Assessment
@@ -450,13 +452,14 @@ The new recommendation is in preview and not used for secure score calculation.
 
 **Description**: Defender for Cloud creates an inventory of all container workloads currently running in your Kubernetes clusters and provides vulnerability reports for those workloads by matching the images and the vulnerability reports created for the registry images. Scanning and remediating vulnerabilities of container workloads is critical to ensure a robust and secure software supply chain, reduce the risk of security incidents, and ensures compliance with industry standards.
 
-Recommendation [GCP running container images should have vulnerability findings resolved (powered by Microsoft Defender Vulnerability Management) - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security_CloudNativeCompute/GcpContainersRuntimeRecommendationDetailsBlade/assessmentKey/e538731a-80c8-4317-a119-13075e002516) will be removed when the new recommendation is generally available. 
-
 The new recommendation is in preview and not used for secure score calculation.
 
 > [!NOTE]
-> Starting on September 29th, this recommendation will be updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
-> To support this improvement the assessment key for this recommendation will be updated to `1b3abfa4-9e53-46f1-9627-51f2957f8bba`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the assessment key once it is updated. 
+> Starting September 29, 2024, this recommendation was updated to report only a single container for each root controller. For example, if a cronjob creates multiple jobs, where each job is creating a pod with a vulnerable container, the recommendation will only report a single instance of the vulnerable containers within that job. This change will assist in removing duplicate reporting for identical containers that requires a single action for remediation. If you used this recommendation prior to the change, you should expect a reduction in the number of instances of this recommendation.  
+> To support this improvement the assessment key for this recommendation has been updated to `1b3abfa4-9e53-46f1-9627-51f2957f8bba`. If you are currently retrieving vulnerability reports from this recommendation via API, ensure you update the API call to use the new assessment key.
+
+Recommendation [GCP running container images should have vulnerability findings resolved (powered by Microsoft Defender Vulnerability Management) - Microsoft Azure](https://ms.portal.azure.com/#view/Microsoft_Azure_Security_CloudNativeCompute/GcpContainersRuntimeRecommendationDetailsBlade/assessmentKey/e538731a-80c8-4317-a119-13075e002516) will be removed when the new recommendation is generally available.
+
 **Severity**: High
 
 **Type**: Vulnerability Assessment
