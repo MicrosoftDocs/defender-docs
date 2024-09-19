@@ -2,7 +2,7 @@
 title: Troubleshoot performance issues for Microsoft Defender for Endpoint on Linux
 description: Troubleshoot performance issues in Microsoft Defender for Endpoint on Linux.
 ms.service: defender-endpoint
-ms.author: dansimp
+ms.author: deniseb
 author: dansimp
 ms.reviewer: gopkr
 ms.localizationpriority: medium
