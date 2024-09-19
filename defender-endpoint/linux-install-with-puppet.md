@@ -4,7 +4,7 @@ ms.reviewer: gopkr
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using Puppet.
 ms.service: defender-endpoint
 ms.author: deniseb
-author: dansimp
+author: deniseb
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
