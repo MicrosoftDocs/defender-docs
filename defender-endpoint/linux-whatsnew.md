@@ -53,8 +53,8 @@ This article is updated frequently to let you know what's new in the latest rele
 &ensp;Published: **September 19, 2024**<br/>
 &ensp;Build: **101.24072.0001**<br/>
 &ensp;Release version: **30.24072.0001.0**<br/>
-&ensp;Engine version: **1.1.24030.4**<br/>
-&ensp;Signature version: **1.407.521.0**<br/>
+&ensp;Engine version: **1.1.24060.6**<br/>
+&ensp;Signature version: **1.415.228.0**<br/>
 
 **What's new**
 
