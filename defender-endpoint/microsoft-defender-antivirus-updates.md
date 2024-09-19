@@ -6,8 +6,8 @@ ms.localizationpriority: high
 ms.date: 09/19/2024
 audience: ITPro
 ms.topic: reference
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom: nextgen
 ms.reviewer: pahuijbr, tudobril, yongrhee
 manager: deniseb
