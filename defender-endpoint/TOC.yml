@@ -346,8 +346,12 @@
               href: machine-groups.md
             - name: Create and manage device tags
               href: machine-tags.md
-        - name: Rules
+        - name: Rules and Exclusions
           items:
+          - name: Exclusions overview
+            href: navigate-defender-endpoint-antivirus-exclusions.md
+          - name: Using submissions, suppressions and exclusions
+            href: submissions-suppressions-exclusions.md
           - name: Manage suppression rules
             href: manage-suppression-rules.md
           - name: Create indicators
@@ -386,6 +390,7 @@
         items:
           - name: Safe deployment practices
             href: mde-sdp-strategy.md
+
       - name: Defender for Endpoint Security Operations Guide 
         href: mde-sec-ops-guide.md
       - name: Troubleshoot
@@ -707,8 +712,6 @@
         href: safety-scanner-download.md
       - name: Configure Microsoft Defender Antivirus features
         href: configure-microsoft-defender-antivirus-features.md
-      - name: Manage exclusions for Defender for Endpoint and Microsoft Defender Antivirus
-        href: defender-endpoint-antivirus-exclusions.md
       - name: Cloud protection and Microsoft Defender Antivirus
         href: cloud-protection-microsoft-defender-antivirus.md
         items:
@@ -859,8 +862,9 @@
           href: restore-quarantined-files-microsoft-defender-antivirus.md
 
       - name: Microsoft Defender Antivirus exclusions
-        href: configure-exclusions-microsoft-defender-antivirus.md
         items:
+        - name: Configure custom exclusions
+          href: configure-exclusions-microsoft-defender-antivirus.md
         - name: Exclusions based on file extension and folder location
           href: configure-extension-file-exclusions-microsoft-defender-antivirus.md
         - name: Exclusions for files opened by processes
