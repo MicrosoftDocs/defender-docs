@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 author: dansimp
-ms.author: dansimp
+ms.author: deniseb
 manager: deniseb
 ms.subservice: linux
 ms.topic: overview
