@@ -5,10 +5,10 @@ ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.topic: how-to
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom: nextgen
-ms.date: 08/07/2023
+ms.date: 09/19/2024
 ms.reviewer: joshbregman
 manager: deniseb
 ms.collection: 
