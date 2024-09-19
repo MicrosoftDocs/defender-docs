@@ -9,17 +9,16 @@ ms.date: 08/12/2024
 
 # Exclude machines from agentless scanning
 
-[Agentless machine scanning](concept-agentless-data-collection.md) in Microsoft Defender for Cloud improves the security posture on machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+[Agentless machine scanning](concept-agentless-data-collection.md) in Microsoft Defender for Cloud improves the security posture of machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
-By default agentless scanning is turned on in a subscription for all supported machines when Defender for Servers Plan 2, or the Defender Cloud Security Posture Management (CSPM) plan is turned on.
+By default agentless scanning is turned on for all supported machines when Defender for Servers Plan 2, or the Defender Cloud Security Posture Management (CSPM) plan is enabled.
 
-
-In some circumstances, you might want to exclude machines from agentless scanning recommendations. You can do this using pre-existing environment tags. Exclude machines are then skipped during Defender for Cloud continuous machine discovery.
+In some circumstances, you might want to exclude machines from agentless scanning recommendations. You can do this using pre-existing environment tags. Excluded machines are skipped during continuous machine discovery.
 
 ## Prerequisites
 
-- Defender for Servers Plan 2, or the Defender CSPM plan is turned on.
-- Agentless scanning is enabled in the plan.
+- Defender for Servers Plan 2, or Defender CSPM.
+- Agentless scanning enabled in the plan.
 
 ## Exclude machines
 

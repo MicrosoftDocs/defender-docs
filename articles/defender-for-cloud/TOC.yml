@@ -700,11 +700,13 @@
             href: agentless-malware-scanning.md
           - name: Enable agentless machine scanning
             href: enable-agentless-scanning-vms.md
-          - name: Test malware scanning alerts
+          - name: Test agentless malware scanning alerts
             href: test-agentless-malware-scanning.md
-      - name: OS misconfiguration (Cloud Security Benchmark)
+      - name: OS baseline misconfigurations
         items:
-         - name: Set up Azure Policy guest configuration
+         - name: Overview
+           href: operating-system-misconfiguration.md
+         - name: Deploy the Azure machine configuration extension
            href: security-baseline-guest-configuration.md
       - name: File integrity monitoring
         items:

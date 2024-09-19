@@ -9,35 +9,31 @@ ms.date: 07/31/2023
 
 # Set up Azure Policy machine configuration
 
-Microsoft Defender for Cloud provides security recommendations to improve your organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment.
 
-- When you enable Defender for Cloud on a subscription, free foundational cloud security posture management (CSPM) capabilities assesses the configuration of protected resources against the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction).
-- The MCSB covers Azure, AWS, and GCP (in preview) environments. As part of the MCSB, compute security baselines assess compliance for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
+Defender for Cloud assesses and enforces security configurations using [built-in Azure policy initiatives], including its default [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) initiative.
 
+As part of the MCSB offering, compute security baselines assess compliance for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems in these environments.
 
-Machine information is gathered using the Azure Policy machine configuration (formerly known as the guest configuration) of the machine. This article describes how to set up the guest configuration on Azure machines.
-
-- For AWS/GCP machines, the machine configuration is installed by default when you select Arc provisioning in the [AWS](quickstart-onboard-aws.md) or [GCP](quickstart-onboard-gcp.md) connector.
-- For on-premises machines, the machine configuration is enabled by default when you [onboard on-premises VMs as Azure Arc-enabled VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
-
-
-> [!NOTE]
-> - Collection with the machine configuration replaces the older method of data collection that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)). Use of the MMA will be supported until November 2024.
-> - When using the machine configuration to collect data, Defender for Servers Plan 2 must be enabled in order to receive OS recommendations based on compute security baselines in the MCSB. Recommendations provided by the MCSB that aren't part of Windows and Linux compute security baselines are part of free foundational CSPM.
-> - Additional features provided by Azure Policy machine configuration outside of Defender for Cloud aren't included, and are subject to Azure Policy machine configuration pricing. For example [remediation](/azure/governance/machine-configuration/concepts/remediation-options) and [custom policies](/azure/governance/machine-configuration/how-to/create-policy-definition). [Review details](https://azure.microsoft.com/pricing/details/azure-policy/?msockid=06fc23a2aac2601229353214abbf61f1) on the Azure Policy machine configuration pricing page.
-
-
+Machine information for assessment against baselines is collected using the Azure machine configuration extension (formerly known as the Azure Policy guest configuration). This article describes how the extension is deployed on machines.
 
 ## Prerequisites
 
-- [Enable Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md).
+- To receive operating system recommendations based on MCSB compute security baselines, [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md) must be enabled.
 - Review supported Azure VMs and Azure Arc VMs running  [Windows](support-matrix-defender-for-servers.md#windows-machine-support) and [Linux](support-matrix-defender-for-servers.md#linux-machine-support).
 - Review [deployment requirements](/azure/governance/machine-configuration/overview#enable-machine-configuration) for Azure VMs.
 - To view the recommendations and explore the OS baseline data, you need Read permission on the relevant Azure subscription.
-- These Azure policies are enabled with the guest configuration. Make sure you don't remove them or you won't be able to leverage the guest configuration.
-    - "Windows machines should meet requirements of the Azure compute security baseline" 
-    - "Linux machines should meet requirements for the Azure compute security baseline"
 
+> [!NOTE]
+> Collection with the machine configuration extension replaces the older method of data collection that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)). Use of the MMA will be supported until November 2024.
+
+
+## Install on AWS/GCP
+
+For AWS/GCP machines, the machine configuration is installed by default when you select Arc provisioning in the [AWS](quickstart-onboard-aws.md) or [GCP](quickstart-onboard-gcp.md) connector.
+
+## Install on on-premises machines 
+
+For on-premises machines, the machine configuration is enabled by default when you [onboard on-premises VMs as Azure Arc-enabled VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
 ## Install on an Azure machines
 
@@ -65,12 +61,10 @@ For Azure VMs, you can autoprovision installation of guest configuration extensi
 1. Select **Continue**.
 
 
-With the guest configuration extension enabled on machine, the machine can then be assessed against [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems baselines.
-
-
+With the machine configuration extension enabled on machine, the machine can then be assessed against [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems baselines.
 
 
 ## Next step
 
-[Review](apply-security-baseline.md) OS misconfiguration recommendations
+[Review](apply-security-baseline.md) OS misconfiguration recommendations.
 

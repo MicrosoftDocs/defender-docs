@@ -8,12 +8,12 @@ ms.date: 04/16/2024
 
 # Machine secrets scanning
 
-Microsoft Defender for Cloud provides [secrets scanning](secrets-scanning.md) in a number of scenarios, including scanning for secrets including scanning for machine secrets, scanning for secrets across infrastructure-as-code deployment resources, and scanning for secrets in Azure DevOps. 
+Microsoft Defender for Cloud provides [secrets scanning](secrets-scanning.md) in a number of scenarios, including scanning for machine secrets, scanning for secrets across infrastructure-as-code deployment resources, and scanning for secrets in Azure DevOps.
 
-Virtual machines secrets scanning is provided as one of Defender for Cloud's [agentless scanning features](concept-agentless-data-collection.md) that improve machine security posture. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+Machine secrets scanning is provided as one of Defender for Cloud's [agentless scanning features](concept-agentless-data-collection.md) that improve machine security posture. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
 
-- Agentless secrets scanning for VMs helps you to quickly detect, prioritize, and remediate exposed plaintext secrets in your environment.
-- If secrets are detected, Defender for Cloud findings help security teams to prioritize actions, and remediate to minimize the risk of lateral movement.
+- Agentless machine secrets scanning for helps you to quickly detect, prioritize, and remediate exposed plaintext secrets in your environment.
+- If secrets are detected, findings help security teams to prioritize actions, and remediate to minimize the risk of lateral movement.
 - Scanning machines for [supported secrets](secrets-scanning.md#secrets-support) is available when Defender for Servers Plan 2, or the Defender Cloud Security Posture Management (CSPM) plan is enabled.
 - Machine secrets scanning can scan Azure VMs, and AWS/GCP instances connected to Defender for Cloud.
 
@@ -44,7 +44,7 @@ The following machine secrets security recommendations are available:
 - AWS resources: EC2 instances should have secrets findings resolved
 - GCP resources: VM instances should have secrets findings resolved
 
-### Machine secrets attack paths
+## Machine secrets attack paths
 
 The table summarizes supported attack paths.
 
@@ -64,7 +64,7 @@ Defender for Cloud provides these predefined queries for investigating secrets s
 
 ## Investigating and remediating machine secrets
 
-You can investigate machine secrets findings in Defender for Cloud using a number of method. Not all methods are available for all secrets. [Review the supported methods](secrets-scanning.md#investigation-and-remediation methods) for different types of secrets.
+You can investigate machine secrets findings in Defender for Cloud using a number of method. Not all methods are available for all secrets. [Review supported methods](secrets-scanning.md#investigation-and-remediation-methods) for different types of secrets.
 
 
 ## Related content

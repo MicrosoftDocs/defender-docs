@@ -12,13 +12,11 @@ ms.custom: template-concept
 
 # Overview - Agentless machine scanning
 
-Agentless machine scanning in Microsoft Defender for Cloud improves the security posture of machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
-
-Microsoft Defender for Cloud provides agentless machine scanning to improve the security posture of machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance.
+Agentless machine scanning in Microsoft Defender for Cloud improves the security posture of machines connected to Defender for Cloud. Agentless scanning doesn't need any installed agents or network connectivity, and doesn't effect machine performance..
 
 Agentless machine scanning:
 
-- **Scans software inventory**: Scan your [software inventory](/defender-vulnerability-management/tvm-software-inventory) for broad visibility with integrated Microsoft Defender Vulnerability Management.
+- **Scans software inventory**: Scan your [software inventory](/defender-vulnerability-management/tvm-software-inventory) with integrated Microsoft Defender Vulnerability Management.
 -  **Scans for vulnerabilities**: [Assess machines for vulnerabilities](auto-deploy-vulnerability-assessment.md) using integrated Defender Vulnerability Management.
 - **Scans for secrets on machines**: Locate plain text secrets in your compute environment with agentless [secrets scanning](secrets-scanning.md).
 - **Scans for malware**: [Scan machines for malware and viruses](agentless-malware-scanning.md) using [Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows). 
@@ -39,10 +37,9 @@ Here's how agentless scanning works:
     - The copied snapshot remains in the same region as the VM.
     - The VM isn't affected by the scan.
 
-2. After acquiring the necessary metadata from the copied disk, Defender for Cloud immediately deletes the copied snapshot of the disk and sends the metadata to relevant Microsoft engines to detect configuration gaps and potential threats.
+1. After acquiring the necessary metadata from the copied disk, Defender for Cloud immediately deletes the copied snapshot of the disk and sends the metadata to relevant Microsoft engines to detect configuration gaps and potential threats. For example, in vulnerability assessment, the analysis is done by Defender Vulnerability Management. 
 
-    - For example, in vulnerability assessment, the analysis is done by Defender Vulnerability Management. 
-    - The results are displayed in Defender for Cloud, which consolidates both the agent-based and agentless results on the Security alerts page.
+1. Scanning results are displayed in Defender for Cloud, which consolidates both the agent-based and agentless results on the Security alerts page.
 
 3. Disks are analyzed in a a scanning environment that's regional, volatile, isolated, and highly secure. Disk snapshots and data unrelated to the scan aren't stored longer than is necessary to collect the metadata, typically a few minutes.
 
@@ -53,8 +50,8 @@ Here's how agentless scanning works:
 Defender for Cloud used specific roles and permissions to perform agentless scanning.
 
 - In Azure, these permissions are automatically added to your subscriptions when you enable agentless scanning.
-- In AWS, these permissions are [added to the CloudFormation stack in your AWS connector](enable-vulnerability-assessment-agentless.md#agentless-vulnerability-assessment-on-aws).
-- In GCP permissions are added to the onboarding script in your GCP connector.
+- In AWS, these permissions are [added to the CloudFormation stack in your AWS connector](enable-agentless-scanning-vms.md#enable-agentless-scanning-on-aws).
+- In GCP permissions are [added to the onboarding script in your GCP connector](enable-agentless-scanning-vms.md#enable-agentless-scanning-on-gcp).
 
 ### Azure permisions
 
@@ -140,5 +137,5 @@ In addition, permissions to an existing GCP KMS role are granted to support scan
 
 ## Next steps
 
-[Enable agentless scanning for VMs](enable-vulnerability-assessment-agentless.md).
+[Enable agentless machine scanning](enable-vulnerability-assessment-agentless.md).
 
