@@ -4,7 +4,7 @@ description: Troubleshoot cloud connectivity issues for Microsoft Defender for E
 search.appverid: met150
 ms.service: defender-endpoint
 ms.author: deniseb
-author: dansimp
+author: deniseb
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: deniseb
