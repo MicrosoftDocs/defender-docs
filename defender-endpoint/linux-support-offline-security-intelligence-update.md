@@ -4,7 +4,7 @@ description: Offline Security Intelligence Update in Microsoft Defender for Endp
 ms.service: defender-endpoint
 ms.subservice: linux
 ms.author: deniseb
-author: dansimp
+author: deniseb
 ms.reviewer: gopkr
 ms.localizationpriority: medium
 manager: deniseb
