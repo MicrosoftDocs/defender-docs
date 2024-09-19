@@ -49,7 +49,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 September 29, 2024
 
-The preview recommendations for "Containers running in AWS/Azure/GCP should have vulnerabilities findings resolved" have been updated to group all containers that are part of the same workload to a single recommendation, reducing duplications and avoid fluctuations due to new and terminated containers.
+The preview recommendations for "Containers running in AWS/Azure/GCP should have vulnerabilities findings resolved" are updated to group all containers that are part of the same workload into a single recommendation, reducing duplications and avoid fluctuations due to new and terminated containers.
 
 Assessment IDs prior to September 29, 2024 are replaced for all three recommendations as follows:
 
@@ -60,7 +60,7 @@ Assessment IDs prior to September 29, 2024 are replaced for all three recommenda
 | Containers running in AWS should have vulnerability findings resolved   | d5d1e526-363a-4223-b860-f4b6e710859f | 8749bb43-cd24-4cf9-848c-2a50f632043c |
 | Containers running in GCP should have vulnerability findings resolved   | c7c1d31d-a604-4b86-96df-63448618e165 | 1b3abfa4-9e53-46f1-9627-51f2957f8bba |
 
- If you are currently retrieving vulnerability reports from these recommendations via API, ensure you update the API call with the new assessment ID.
+ If you're currently retrieving vulnerability reports from these recommendations via API, ensure you update the API call with the new assessment ID.
 
 ### General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint
 September 18, 2024
