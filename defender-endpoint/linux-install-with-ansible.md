@@ -3,7 +3,7 @@ title: Deploy Microsoft Defender for Endpoint on Linux with Ansible
 ms.reviewer: gopkr
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using Ansible.
 ms.service: defender-endpoint
-ms.author: dansimp
+ms.author: deniseb
 author: dansimp
 ms.localizationpriority: medium
 manager: deniseb
