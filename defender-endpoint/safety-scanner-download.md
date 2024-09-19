@@ -9,7 +9,7 @@ ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
 ms.author: deniseb
-author: dansimp
+author: denisebmsft
 manager: deniseb
 audience: ITPro
 ms.collection: 
