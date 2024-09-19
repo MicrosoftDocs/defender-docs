@@ -8,7 +8,7 @@ ms.subservice: reference
 ms.mktglfcycl: secure
 ms.sitesec: library
 ms.localizationpriority: medium
-ms.author: dansimp
+ms.author: deniseb
 author: dansimp
 manager: deniseb
 audience: ITPro
