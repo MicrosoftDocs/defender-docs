@@ -4,7 +4,7 @@ description: Use this guide to evaluate and test the protection offered by Micro
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: conceptual
-author: deniseb
+author: denisebmsft
 ms.author: deniseb
 ms.custom: nextgen
 ms.date: 05/10/2024
