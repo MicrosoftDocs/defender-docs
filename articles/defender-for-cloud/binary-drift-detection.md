@@ -1,5 +1,5 @@
 ---
-title: Binary drift detection (preview)
+title: Binary drift detection
 description: Learn how binary drift detection can help you detect unauthorized external processes within containers.
 ms.topic: how-to
 author: dcurwin
@@ -8,13 +8,13 @@ ms.date: 06/17/2024
 #customer intent: As a user, I want to understand how binary drift detection can help me detect unauthorized external processes within containers.
 ---
 
-# Binary drift detection (preview)
+# Binary drift detection
 
-A binary drift happens when a container is running an executable that didn’t come from the original image. This can either be intentional and legitimate, or it can indicate an attack. Since container images should be immutable, any processes launched from binaries not included in the original image should be evaluated as suspicious activity.
+A binary drift happens when a container is running an executable that didn't come from the original image. This can either be intentional and legitimate, or it can indicate an attack. Since container images should be immutable, any processes launched from binaries not included in the original image should be evaluated as suspicious activity.
 
 The binary drift detection feature alerts you when there's a difference between the workload that came from the image, and the workload running in the container. It alerts you about potential security threats by detecting unauthorized external processes within containers. You can define drift policies to specify conditions under which alerts should be generated, helping you distinguish between legitimate activities and potential threats.
 
-Binary drift detection is integrated into the Defender for Containers plan and is available in public preview. It's available for the Azure (AKS), Amazon (EKS), and Google (GKE) clouds.
+Binary drift detection is integrated into the Defender for Containers plan and is available for the Azure (AKS), Amazon (EKS), and Google (GKE) clouds.
 
 ## Prerequisites
 
