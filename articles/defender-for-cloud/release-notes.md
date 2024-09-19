@@ -31,7 +31,10 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 |Date | Category | Update|
 |--|--|--|
-| September 29| Preview| [Updated containers runtime recommendations (preview)](#updated-containers-runtime-recommendations-preview)|
+| September 29 | Preview | [Updated containers runtime recommendations (preview)](#updated-containers-runtime-recommendations-preview)|
+| September 29 | Preview | [Kubernetes Identity and Access information in the security graph](#kubernetes-identity-and-access-information-in-the-security-graph) |
+| September 29 | Preview | [Kubernetes identity and access information-based attack paths](#kubernetes-identity-and-access-information-based-attack-paths) |
+| September 29 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
 | September 18 | GA | [General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint](#general-availability-of-file-integrity-monitoring-based-on-microsoft-defender-for-endpoint) |
 | September 18 | GA | [FIM migration experience is available in Defender for Cloud](#fim-migration-experience-is-available-in-defender-for-cloud) |
 | September 18 | Deprecation | [Deprecation of MMA auto-provisioning capability](#deprecation-of-mma-auto-provisioning-capability) |
@@ -61,6 +64,24 @@ Assessment IDs prior to September 29, 2024 are replaced for all three recommenda
 | Containers running in GCP should have vulnerability findings resolved   | c7c1d31d-a604-4b86-96df-63448618e165 | 1b3abfa4-9e53-46f1-9627-51f2957f8bba |
 
  If you're currently retrieving vulnerability reports from these recommendations via API, ensure you update the API call with the new assessment ID.
+
+### Kubernetes Identity and Access information in the security graph
+
+September 29, 2024
+
+Kubernetes Identity and Access information has been added to the security graph, including nodes that represent all Kubernetes Role Based Access Control (RBAC) related entitles (service accounts, roles, role Bindings, etc.), and edges that represent the permissions between Kubernetes objects. Customers can now query the security graph for their Kubernetes RBAC, and related relationships between Kubernetes entities (can authenticate as, can impersonate as, Grants role, Access define by, grants access to, has permission to, etc.)
+
+### Kubernetes identity and access information-based attack paths
+
+September 29, 2024
+
+Using the Kubernetes RBAC data in the security graph, we will start detecting cloud to Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and report on additional attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from and within Kubernetes clusters.
+
+### Improved attack path analysis
+
+September 29, 2024
+
+The new attack path analysis engine released last November now supports   container use cases as well, dynamically detecting new types of attack paths in cloud environments based on the data added to the graph. We can now find more attack paths for containers and detect more complex and sophisticated attack patterns used by attackers to infiltrate cloud environments.
 
 ### General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint
 September 18, 2024
