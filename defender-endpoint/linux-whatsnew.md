@@ -42,7 +42,7 @@ This article is updated frequently to let you know what's new in the latest rele
 >
 > Review your current Defender for Endpoint on Linux deployment, and begin planning your migration to the eBPF-supported build. For more information on eBPF and how it works, see [Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-support-ebpf).
 >
-> If you have any concerns or need assistance during this transition, please reach out to our support team.
+> If you have any concerns or need assistance during this transition, contact support.
 
 <details>
 <summary> Sept-2024 (Build: 101.24072.0001 | Release version: 30.24072.0001.0)</summary>
@@ -60,8 +60,8 @@ This article is updated frequently to let you know what's new in the latest rele
 
 There are multiple fixes and new changes in this release:
 
-- Updated default engine version to 1.1.24060.6 and default signatures version to 1.415.228.0.
-- Fix for MDE's cgroup resource constraints on non MDE processes
+- Updated default engine version to `1.1.24060.6` and default signatures version to `1.415.228.0`.
+- Resolved an issue with Defender for Endpoint's `cgroup` resource constraints on non-Defender for Endpoint processes.
 
 </details>
 
