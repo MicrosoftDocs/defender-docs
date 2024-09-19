@@ -129,7 +129,7 @@ To monitor entities and files, follow these steps:
 
 ## Retrieve and analyze FIM data  
 
-The file integrity monitoring data resides within the Azure Log Analytics workspace in the `MDCFileIntegrityMonitoringEvents` table.  
+The file integrity monitoring data resides within the Azure Log Analytics workspace in the `MDCFileIntegrityMonitoringEvents` table. The table appears in the Log Analytics Workspace under the `LogManagment` table.
 
 1. Set a time range to retrieve a summary of changes by resource. In the following example, we retrieve all changes in the last 14 days in the categories of registry and files:  
 
