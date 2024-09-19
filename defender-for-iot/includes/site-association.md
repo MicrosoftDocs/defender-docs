@@ -8,5 +8,5 @@ ms.service: microsoft-defender-iot
 
 >[!NOTE]
 >
->Currently, devices discovered in the Defender XDR portal aren't synchronized with Azure, and therefore the list of devices discovered could be different in each portal. It is important to note these differences, especially when associating devices to a site. This issue will be resolved in upcoming versions.
+>Currently, devices discovered in the Defender XDR portal aren't synchronized with Azure, and therefore the list of devices discovered could be different in each portal. It is important to note these differences, especially when associating devices to a site.
 >
