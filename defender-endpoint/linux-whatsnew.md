@@ -44,6 +44,26 @@ This article is updated frequently to let you know what's new in the latest rele
 >
 > If you have any concerns or need assistance during this transition, please reach out to our support team.
 
+<details>
+<summary> Sept-2024 (Build: 101.24072.0001 | Release version: 30.24072.0001.0)</summary>
+
+## Sept-2024 Build: 101.24072.0001 | Release version: 30.24072.0001.0
+
+&ensp;Released: **September 19, 2024**<br/>
+&ensp;Published: **September 19, 2024**<br/>
+&ensp;Build: **101.24072.0001**<br/>
+&ensp;Release version: **30.24072.0001.0**<br/>
+&ensp;Engine version: **1.1.24030.4**<br/>
+&ensp;Signature version: **1.407.521.0**<br/>
+
+**What's new**
+
+There are multiple fixes and new changes in this release:
+
+- Updated default engine version to 1.1.24060.6 and default signatures version to 1.415.228.0.
+- Fix for MDE's cgroup resource constraints on non MDE processes
+
+</details>
 
 <details>
 <summary> July-2024 (Build: 101.24062.0001 | Release version: 30.124062.0001.0)</summary>
