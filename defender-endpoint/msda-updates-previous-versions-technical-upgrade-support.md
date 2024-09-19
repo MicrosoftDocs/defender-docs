@@ -29,6 +29,21 @@ Microsoft regularly releases [security intelligence updates and product updates 
 
 ## Engine and platform updates
 
+### May-2024 (Engine: 1.1.24050.5 | Platform: 4.18.24050.7)
+
+- Security intelligence update version: **1.413.1.0**
+- Release date: **May 30, 2024** (Engine) / **June 4, 2024** (Platform)
+- Engine: **1.1.24050.5**
+- Platform: **4.18.24050.7**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Improved performance when running configuration queries.
+- Optimized how scans are prioritized.
+- Fixed a crash caused by a race condition with a device control driver.
+- Added Event Viewer Logging for scan start event where the scan originates from PowerShell.
+
 ### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.4)
 
 - Security intelligence update version: **1.411.7.0**
