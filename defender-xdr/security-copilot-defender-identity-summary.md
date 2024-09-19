@@ -1,6 +1,6 @@
 ---
-title: Script analysis with Microsoft Copilot in Microsoft Defender
-description: Use Microsoft Copilot script analysis in Microsoft Defender to investigate scripts and command lines.
+title: Summarize identity information with Microsoft Copilot in Microsoft Defender
+description: Summarize an identity information with Microsoft Copilot in Microsoft Defender to investigate identities.
 ms.service: defender-xdr
 f1.keywords:
   - NOCSH
