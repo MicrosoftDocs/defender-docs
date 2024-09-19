@@ -149,12 +149,20 @@
           items:  
           - name: ServiceNow
             items:
-            - name: ServiceNow integration with Defender for Cloud
+            - name: Overview ServiceNow integration
               displayName: CSPM, cloud security, posture, management, ServiceNow
               href: integration-servicenow.md
             - name: Connect ServiceNow to Defender for Cloud
               displayName: CSPM, cloud security, posture, management, ServiceNow
               href: connect-servicenow.md
+          - name: Power BI
+            items:
+            - name: Overview Power BI integration
+              displayName: CSPM, cloud security, posture, management, Power BI
+              href: integration-power-bi.md
+            - name: Add Defender for Cloud data to Power BI
+              displayName: CSPM, cloud security, posture, management, Power BI
+              href: add-data-power-bi.md
           - name: API partners
             items:
             - name: Partner applications
@@ -259,7 +267,7 @@
         items:  
         - name: ServiceNow
           items:
-          - name: ServiceNow integration with Defender for Cloud
+          - name: Overview ServiceNow integration
             displayName: CSPM, cloud security, posture, management, ServiceNow
             href: integration-servicenow.md
           - name: Connect ServiceNow to Defender for Cloud
@@ -273,7 +281,7 @@
             href: create-governance-rule-servicenow.md
         - name: Power BI
           items:
-          - name: Power BI integration with Defender for Cloud
+          - name: Overview Power BI integration
             displayName: CSPM, cloud security, posture, management, Power BI
             href: integration-power-bi.md
           - name: Add Defender for Cloud data to Power BI
