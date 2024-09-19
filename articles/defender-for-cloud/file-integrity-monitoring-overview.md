@@ -12,11 +12,18 @@ In the Defender for Servers plan in Microsoft Defender for Cloud, the file integ
 
 File integrity monitoring uses [Azure Automation change tracking](/azure/automation/change-tracking/overview) so that you can monitor changes directly in Defender for Cloud. 
 
+File integrity monitoring uses the Defender for Endpoint agent that's integrated by default with Defender for Servers.
 
 > [!Note]
-> There are some upcoming changes for file integrity monitoring.
-> - The MMA is set to retire, and file integrity monitoring using the MMA will be deprecated in November 2024. File integrity monitoring using the AMA in preview is no longer supported.
-> - A new version of file integrity monitoring using the Microsoft Defender for Endpoint agent that's integrated by default with Defender for Servers is [now available in preview](file-integrity-monitoring-enable-defender-endpoint.md)
+> The older method of data collection for file integrity monitoring uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). Support for using the MMA will end in November 2024.
+
+An in-product experience has been released to allow you to migrate your FIM configuration over MMA to the new FIM over Defender for Endpoint version. With this experience you can:
+
+Review affected environment with previous FIM version over MMA enabled and required migration.
+Export your current FIM rules from MMA- based experience and reside on workspaces
+Migrate to P2 enabled subscriptions with new FIM over MDE.
+To use the migration experience, navigate to "Environment settings" blade and click "MMA migration" button in the upper row.
+
 
 ## Defender for Endpoint monitoring
 
@@ -28,16 +35,6 @@ Using the Defender for Endpoint sensor, you can:
 - Access and analyze the audited changes in a designated Workspace.
 - Take advantage of the 500-MB benefit included in the Defender for Servers Plan 2.
 - Maintain compliance: FIM offers built-in support for relevant security regulatory compliance standards, such as PCI-DSS, CIS, NIST, and others
-
-
-## Agent-based monitoring
-
-File integrity monitoring can use the [Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA))](/azure/automation/change-tracking/overview) in general availability (GA), or the [Azure Monitoring Agent (AMA)](/azure/automation/change-tracking/overview-monitoring-agent) in preview to collect information.
-
-- With MMA, when file integrity monitoring is enabled on a workspace the MMA collects change data from devices in accordance with workspace configuration settings, and sends it to the workspace for analysis.
-- With AMA, when file integrity monitoring is enabled, the AMA collects change data from devices in accordance with data collection rules that define a list of files and registries to track. You can use default data collection rules, or customize. Changes are sent to a Log Analytics workspace that you specify when you turn on file integrity monitoring. You can customize the workspace used for file integrity monitoring.
-- Workspaces with file integrity monitoring enabled have the **Azure Change Tracking** monitoring solution configured. If you remove the solution directly from the workspace, file integrity monitoring is disabled.
-
 
 
 ## Monitoring suspicious activity
@@ -61,7 +58,29 @@ Defender for Cloud recommends entities to monitor with file integrity monitoring
 
 ## Recommended items to monitor
 
-Defender for Cloud recommends monitoring these items based on known attack patterns.
+When using file integrity monitoring with the Defender for Endpoing agent, we recommend monitoring these items with based on known attack patterns.
+
+
+| Linux Files       | Windows files                    | Windows registry keys (HKLM = HKEY_LOCAL_MACHINE)            |
+| ----------------- | -------------------------------- | ------------------------------------------------------------ |
+| /bin              | C:\config.sys                    | SOFTWARE\Microsoft\Cryptography\OID\*                        |
+| /bin/passwd       | C:\Windows\regedit.exe           | SOFTWARE\WOW6432Node\Microsoft\Cryptography\OID\*            |
+| /boot             | C:\Windows\System32\userinit.exe | HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows    |
+| /etc/*.conf       | C:\Windows\explorer.exe          | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders |
+| /etc/cron.daily   | C:\autoexec.bat                  | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders |
+| /etc/cron.hourly  | C:\boot.ini                      | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run           |
+| /etc/cron.monthly | C:\Windows\system.ini            | HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce       |
+| /etc/cron.weekly  | C:\Windows\win.ini               | SOFTWARE\Microsoft\Windows\CurrentVersion\RunServicesOnce    |
+| /etc/crontab      |                                  | SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Windows\ |
+| /etc/init.d       |                                  | SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders |
+| /opt/sbin         |                                  | SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders |
+| /sbin             |                                  | SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run    |
+| /usr/bin          |                                  | SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\RunOnce |
+| /usr/local/bin    |                                  | SECURITY\POLICY\SECRETS                                      |
+| /usr/local/sbin   |                                  |                                                              |
+| /usr/sbin         |                                  |                                                              |
+| /bin/login        |                                  |                                                              |
+| /opt/bin          |                                  |                                                              |
 
 
 ## Next steps

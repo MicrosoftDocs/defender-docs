@@ -7,15 +7,13 @@ ms.topic: how-to
 ms.date: 09/09/2024
 ---
 
-# File integrity monitoring (Defender for Endpoint)
+# Enable file integrity monitoring 
 
 In the Defender for Servers plan in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
 File integrity monitoring uses [Azure Automation change tracking](/azure/automation/change-tracking/overview) so that you can monitor changes directly in Defender for Cloud. 
 
-This article describes how to set up file integrity monitoring with the integrated [Microsoft Defender for Endpoint](file-integrity-monitoring-overview.md#defender-for-endpoint-monitoring) sensor (in preview).
-
-For file integrity monitoring, the Defender for Endpoint sensor collects data from machines in accordance with data collection rules. When the current state of your system files is compared with the state during the previous scan, file integrity monitoring notifies you about suspicious modifications.
+This article describes how to set up file integrity monitoring with the integrated [Microsoft Defender for Endpoint](file-integrity-monitoring-overview.md#defender-for-endpoint-monitoring) agent.
 
 For guidance on which files to monitor, see [Which files should I monitor?](file-integrity-monitoring-overview.md#choosing-what-to-monitor).
 
@@ -82,4 +80,4 @@ Disable as follows:
 
 ## Next steps
 
-[Review changes](file-integrity-monitoring-review-changes.md) with file integrity monitoring (Defender for Endpoint)
+[Review changes](file-integrity-monitoring-review-changes.md) with file integrity monitoring.
