@@ -4,7 +4,7 @@ ms.reviewer: gopkr, ardeshmukh
 description: Describes how to configure Microsoft Defender for Endpoint on Linux in enterprises.
 ms.service: defender-endpoint
 ms.author: deniseb
-author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.date: 08/28/2024
 manager: deniseb
