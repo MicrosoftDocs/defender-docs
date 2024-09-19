@@ -2,11 +2,11 @@
 title: What's new in Microsoft Defender for Endpoint on Mac
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Mac.
 ms.service: defender-endpoint
-author: dansimp
-ms.author: dansimp
+author: deniseb
+ms.author: deniseb
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 08/27/2024
+ms.date: 09/19/2024
 audience: ITPro
 ms.collection:
 - m365-security
@@ -37,9 +37,11 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
 **Known issues**
 
-Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes), and [Sonoma upgrade](https://developer.apple.com/forums/thread/737824#773449022) with the latest OS update. The issue impacts Microsoft Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting its ability to function properly.
+> [!NOTE]
+> - Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes), and [Sonoma upgrade](https://developer.apple.com/forums/thread/737824#773449022) with the latest OS update. The issue impacts Microsoft Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting its ability to function properly.
+> - In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device controls ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS less than 14.3.1.
+> - In both macOS Sonoma and Sequoia builds, Network Protection capabilities may be impacted due to changes in Apple's internal networking structure resulting in crashes of the network extension (NetExt). This will result in intermittent network connectivity issues for end users. We are recommending that customers who have Network Protection enabled in their organization refrain from upgrading to Sonoma / Seqouia builds at this time.
 
-In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device controls ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS less than 14.3.1.
 
 **Sequoia support**
 
@@ -1022,11 +1024,9 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 > [!CAUTION]
 > macOS 10.15 (Catalina) contains new security and privacy enhancements. Beginning with this version, by default, applications are not able to access certain locations on disk (such as Documents, Downloads, Desktop, etc.) without explicit consent. In the absence of this consent, Microsoft Defender for Endpoint is not able to fully protect your device.
->
-> The mechanism for granting this consent depends on how you deployed Microsoft Defender for Endpoint:
->
+> > The mechanism for granting this consent depends on how you deployed Microsoft Defender for Endpoint:
 > - For manual deployments, see the updated instructions in the [Manual deployment topic](mac-install-manually.md#allow-full-disk-access).
-> - For managed deployments, see the updated instructions in the [JAMF-based deployment](mac-install-with-jamf.md) and [Microsoft Intune-based deployment](mac-install-with-intune.md#create-system-configuration-profiles) topics.
+- For managed deployments, see the updated instructions in the [JAMF-based deployment](mac-install-with-jamf.md) and [Microsoft Intune-based deployment](mac-install-with-intune.md#create-system-configuration-profiles) topics.
 
 - Performance improvements & bug fixes
 
