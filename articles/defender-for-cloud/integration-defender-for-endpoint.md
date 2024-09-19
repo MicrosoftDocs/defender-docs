@@ -10,24 +10,24 @@ ms.date: 08/19/2024
 
 # Overview - Endpoint detection and response 
 
-Microsoft Defender for Cloud endpoint detection and response (EDR) recommendations to improve security posture for supported machines. EDR recommendations are available when you enable Defender for Servers Plan 2, or the Defender Cloud Security Posture Management (CSPM) plan. With one of these plans is enabled:
+Microsoft Defender for Cloud includes endpoint detection and response (EDR) capabilities to improve security posture for supported machines. Defender for Cloud:
 
-- **Defender for Cloud assesses whether machines are running an EDR solution**: Defender for Cloud agentlessly scans connected machines (Azure VMs and AWS/GCP machines) to check whether they have an EDR solution installed and running.
-- **Defender for Servers integrates with Microsoft Defender for Endpoint for EDR capabilities**: Defender for Servers integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide EDR capabilities for machines connected to Defender for Cloud. Defender for Servers can agentlessly detect Defender for Endpoint misconfigurations on a machine, and make recommendations to fix them.
+- **Assesses whether machines are running an EDR solution**: Defender for Cloud agentlessly scans connected machines (Azure VMs and AWS/GCP machines) to check whether they have an EDR solution installed and running.
+- **Integrates with Microsoft Defender for Endpoint for EDR capabilities**: Defender for Servers integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide EDR capabilities for machines connected to Defender for Cloud. 
 
+
+## Assessing EDR solutions
+
+When Defender for Servers Plan 2 (or the Defender for Cloud Defender Cloud Security Posture Management (CSPM) plan) is enabled, agentless scanning assesses protected machines to check that:
+
+- A supported EDR solution is enabled.
+- Defender for Servers Plan 2 or the Defender CSPM plan is enabled on the Azure subscription and its associated VMs.
+- Supported EDR solutions are installed successfully.
 
 > [!NOTE]
 > - Defender for Cloud uses agentless scanning to assess EDR settings.
 > - Agentless scanning replaces the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), which was previously used to collect machine data.
 > - The MMA is set to retire. Scanning using the MMA will be deprecated in November 2024. 
-
-## Assessing EDR solutions
-
-Defender for Cloud agentless scanning assesses protected machines to check that:
-
-- A supported EDR solution is enabled.
-- Defender for Servers Plan 2 or the Defender CSPM plan is enabled on the Azure subscription and its associated VMs.
-- Supported EDR solutions are installed successfully.
 
 ### Supported EDR solutions
 
@@ -54,7 +54,7 @@ If a condition for EDR solution assessment isn't met, Defender for Servers provi
 Recommendations include remediation steps to fix detected issues.
 
 
-## EDR protection with Defender for Endpoint
+## Integration with Defender for Endpoint EDR
 
 Defender for Cloud's native integration Defender for Endpoint provides EDR protection for supported machines. Integrated features include:
 
@@ -80,7 +80,7 @@ A Defender for Endpoint tenant is automatically created when you use Defender fo
 - **Move subscriptions between tenants:** If you move your Azure subscription between Azure tenants, some manual preparatory steps are required before Defender for Cloud deploys Defender for Endpoint. For full details, [contact Microsoft support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
 
-## Assessing Defender for Endpoint misconfigurations
+### Assessing Defender for Endpoint misconfigurations
 
 If you're using Defender for Endpoint as an EDR solution, Defender for Cloud can assess machines for misconfiguration settings, including:
 
