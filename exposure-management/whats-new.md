@@ -27,6 +27,14 @@ Security Exposure Management is currently in public preview.
 
 ## September 2024
 
+### New predefined classifications
+
+The following predefined classification rule was added to the critical assets list:
+
+| Classification                                               | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Hyper-V Server**                                                 | This rule applies to devices identified as Hyper-V servers within a domain. These servers are essential for running and managing virtual machines within your infrastructure, serving as the core platform for their creation and management. |
+
 ### Enhanced visibility for scoped users
 
 This change now allows users who have been granted access to only some of the organization's devices to see the list of affected assets in metrics, recommendations, events, and initiative history within their specific scope.
