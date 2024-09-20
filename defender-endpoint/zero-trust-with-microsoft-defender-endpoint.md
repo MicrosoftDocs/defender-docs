@@ -5,8 +5,8 @@ search.appverid: met150
 ms.service: microsoft-365-zero-trust
 f1.keywords:
   - NOCSH
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.date: 05/10/2024
 manager: deniseb
