@@ -2,8 +2,8 @@
 title: List vulnerabilities by software
 description: Retrieve a list of vulnerabilities in the installed software.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

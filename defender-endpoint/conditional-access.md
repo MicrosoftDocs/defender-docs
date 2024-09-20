@@ -4,8 +4,8 @@ description: Enable Conditional Access to prevent applications from running if a
 search.appverid: met150
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

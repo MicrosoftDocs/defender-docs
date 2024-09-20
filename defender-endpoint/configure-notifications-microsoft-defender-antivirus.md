@@ -4,9 +4,9 @@ description: Learn how to configure and customize both standard and other Micros
 ms.service: defender-endpoint
 ms.subservice: ngp
 ms.localizationpriority: medium
-author: siosulli
+author: denisebmsft
 ms.topic: conceptual
-ms.author: siosulli
+ms.author: deniseb
 ms.custom: nextgen
 ms.date: 10/18/2021
 ms.reviewer: 

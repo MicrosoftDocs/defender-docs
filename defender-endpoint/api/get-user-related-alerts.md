@@ -2,8 +2,8 @@
 title: Get user-related alerts API
 description: Retrieve a collection of alerts related to a given user ID using Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
