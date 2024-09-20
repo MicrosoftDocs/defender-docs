@@ -192,8 +192,12 @@ Create a subtask or role files that contribute to a playbook or task.
         ```Output
         - hosts: servers
           tasks:
-            - include: ../roles/onboarding_setup.yml
-            - include: ../roles/add_apt_repo.yml
+            - name: include onboarding tasks
+              import_tasks:
+                file: ../roles/onboarding_setup.yml
+            - name: add apt repository
+              import_tasks:
+                file: ../roles/add_apt_repo.yml
             - name: Install MDATP
               apt:
                 name: mdatp
