@@ -59,7 +59,8 @@ Device control capabilities from Microsoft can be organized into three main cate
   - Granular access control - create policies to control access by device, device type, operation (read, write, execute), user group, network location, or file type.
   - Reporting and advanced hunting - complete visibility into add device related activities.
   - Device control in Microsoft Defender can be managed using Intune or [Group Policy](device-control-deploy-manage-gpo.md).
-  - **Device control in Microsoft Defender and Intune**. Intune provides a rich experience for managing complex device control policies for organizations. You can configure and deploy device restriction settings in Defender for Endpoint, for example. See [Deploy and manage device control with Microsoft Intune](device-control-deploy-manage-intune.md).
+
+- **Device control in Microsoft Defender and Intune**. Intune provides a rich experience for managing complex device control policies for organizations. You can configure and deploy device restriction settings in Defender for Endpoint, for example. See [Deploy and manage device control with Microsoft Intune](device-control-deploy-manage-intune.md).
 
 - **Endpoint data loss prevention** (Endpoint DLP). Endpoint DLP monitors sensitive information on devices that are onboarded to Microsoft Purview solutions. DLP policies can enforce protective actions on sensitive information and where it's stored or used.  Endpoint DLP can capture file evidence. [Learn about Endpoint DLP](/purview/endpoint-dlp-learn-about).
 
