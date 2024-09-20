@@ -3,8 +3,8 @@ title: Onboard non-Windows devices to the Microsoft Defender for Endpoint servic
 description: Configure non-Windows devices so that they can send sensor data to the Microsoft Defender for Endpoint service.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

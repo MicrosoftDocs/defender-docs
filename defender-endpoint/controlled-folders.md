@@ -4,8 +4,8 @@ description: Files in default folders can be protected from being changed by mal
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.date: 07/30/2024
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 audience: ITPro
 ms.reviewer: sugamar 
 manager: deniseb
