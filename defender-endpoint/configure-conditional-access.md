@@ -2,8 +2,8 @@
 title: Configure Conditional Access in Microsoft Defender for Endpoint
 description: Learn about steps that you need to do in Intune, Microsoft Defender XDR, and Azure to implement Conditional access
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
