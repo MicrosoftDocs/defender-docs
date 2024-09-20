@@ -1,8 +1,8 @@
 ---
 title: Deploy and manage device control in Microsoft Defender for Endpoint with Microsoft Intune           
 description: Learn how to deploy and manage device control in Defender for Endpoint using Microsoft Intune
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb 
 ms.date: 07/30/2024
 ms.topic: overview
