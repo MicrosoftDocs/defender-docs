@@ -108,7 +108,7 @@ All our updates contain:
 
 ### What's new
 
-- Added a new parameter to get-mppreference cmdlet (ControlledFolderAccessDefaultProtectedFolders) to show default protected folders for Controlled Folder Access (CFA).
+- Added a new parameter (`ControlledFolderAccessDefaultProtectedFolders`) to [Get-MpPreference](/powershell/module/defender/get-mppreference) cmdlet to show default protected folders for [controlled folder access](enable-controlled-folders.md).
 - Fixed an issue with device control regarding printer security checks.
 - Resolved an issue with platform rollback after an upgrade from Windows 10 to Windows 11.
 - Fixed an issue where volume exclusions weren't properly enforced in real-time protection after the completion of OOBE.
