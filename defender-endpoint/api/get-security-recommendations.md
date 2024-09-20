@@ -2,8 +2,8 @@
 title: Get security recommendations
 description: Retrieves a collection of security recommendations related to a given device ID.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
