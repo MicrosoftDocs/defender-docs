@@ -109,10 +109,10 @@ All our updates contain:
 ### What's new
 
 - Added a new parameter to get-mppreference cmdlet (ControlledFolderAccessDefaultProtectedFolders) to show default protected folders for Controlled Folder Access (CFA).
-- Fixed an issue with Device Control regarding printer security checks.
-- Resolved an issue with platform rollback after an upgrade from Windows 10 to 11.
+- Fixed an issue with device control regarding printer security checks.
+- Resolved an issue with platform rollback after an upgrade from Windows 10 to Windows 11.
 - Fixed an issue where volume exclusions weren't properly enforced in real-time protection after the completion of OOBE.
-- Removed support for Windows RT devices, for example, Surface RT, that use 32-bit ARM processors and have reached their end-of-servicing date.
+- Removed support for Windows RT devices, like Surface RT, that use 32-bit ARM processors and have reached their end-of-servicing date.
 
 ### July-2024 (Platform: 4.18.24070.5 | Engine: 1.1.24070.3)
 
