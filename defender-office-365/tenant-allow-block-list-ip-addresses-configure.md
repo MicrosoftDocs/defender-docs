@@ -38,7 +38,7 @@ This article describes how admins can manage entries for IP addresses in the Mic
 
 - IPv6 addresses are supported only in the following formats:
   - Single addresses in colon-hexadecimal format. For example, 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
-  - Single addresses in zero compression format. For example, 2001:db8::1 represents 2001:0db8:0000:0000:0000:0000:0000:0001.
+  - Single addresses in zero-compression format. For example, 2001:db8::1 represents 2001:0db8:0000:0000:0000:0000:0000:0001.
   - CIDR IPv6 range. For example, 2001:0db8::/32. 1-128 range is supported.
 
 - Entry limits for IP addresses:
