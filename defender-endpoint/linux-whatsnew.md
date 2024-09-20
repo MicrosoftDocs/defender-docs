@@ -58,10 +58,8 @@ This article is updated frequently to let you know what's new in the latest rele
 
 **What's new**
 
-There are multiple fixes and new changes in this release:
-
+- Added support for Ubuntu 24.04
 - Updated default engine version to `1.1.24060.6` and default signatures version to `1.415.228.0`.
-- Resolved an issue with Defender for Endpoint's `cgroup` resource constraints on non-Defender for Endpoint processes.
 
 </details>
 
