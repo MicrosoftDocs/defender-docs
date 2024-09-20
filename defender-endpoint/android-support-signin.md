@@ -2,8 +2,8 @@
 title: Troubleshoot issues on Microsoft Defender for Endpoint on Android
 description: Troubleshoot issues for Microsoft Defender for Endpoint on Android
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

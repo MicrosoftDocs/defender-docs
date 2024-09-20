@@ -2,8 +2,8 @@
 title: List vulnerabilities by recommendation
 description: Retrieves a list of vulnerabilities associated with the security recommendation.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
