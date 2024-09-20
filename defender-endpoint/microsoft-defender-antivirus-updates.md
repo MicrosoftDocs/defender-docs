@@ -3,11 +3,11 @@ title: Microsoft Defender Antivirus security intelligence and product updates
 description: Manage how Microsoft Defender Antivirus receives protection and product updates.
 ms.service: defender-endpoint
 ms.localizationpriority: high
-ms.date: 08/12/2024
+ms.date: 09/19/2024
 audience: ITPro
 ms.topic: reference
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom: nextgen
 ms.reviewer: pahuijbr, tudobril, yongrhee
 manager: deniseb
@@ -151,21 +151,6 @@ All our updates contain:
 - Fixed an issue where an Outlook exclusion for the ASR rule [Block Office applications from injecting code into other processes](/defender-endpoint/attack-surface-reduction-rules-reference#block-office-applications-from-injecting-code-into-other-processes) was not honored.
 - Fixed a race condition during the startup of [endpoint data loss prevention](/purview/endpoint-dlp-getting-started) such that, in certain environments, some system files could be corrupted.
 
-### May-2024 (Engine: 1.1.24050.5 | Platform: 4.18.24050.7)
-
-- Security intelligence update version: **1.413.1.0**
-- Release date: **May 30, 2024** (Engine) / **June 4, 2024** (Platform)
-- Engine: **1.1.24050.5**
-- Platform: **4.18.24050.7**
-- Support phase: **Security and Critical Updates**
-
-#### What's new
-
-- Improved performance when running configuration queries.
-- Optimized how scans are prioritized.
-- Fixed a crash caused by a race condition with a device control driver.
-- Added Event Viewer Logging for scan start event where the scan originates from PowerShell.
-
 ### Previous version updates: Technical upgrade support only
 
 After a new package version is released, support for the previous two versions is reduced to technical support only. For more information about previous versions, see [Microsoft Defender Antivirus updates: Previous versions for technical upgrade support](msda-updates-previous-versions-technical-upgrade-support.md).
@@ -228,7 +213,21 @@ Updates are released for x86, x64, and ARM64 Windows architecture.
 
 For more information, see [Microsoft Defender update for Windows operating system installation images](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
 
-After a new package version is released, support for the previous two versions is reduced to technical support only. To view a list of previous versions, see [Previous DISM updates (no longer supported)](msda-updates-previous-versions-technical-upgrade-support.md#previous-dism-updates-no-longer-supported).
+After a new package version is released, support for the previous two versions is reduced to technical support only. To view a list of previous versions, see [Previous DISM updates](msda-updates-previous-versions-technical-upgrade-support.md#previous-dism-updates-no-longer-supported).
+
+### 1.417.472.0
+
+- Defender package version: `1.417.472.0`
+- Security intelligence version: `1.417.472.0`
+- Engine version: `1.24080.9`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
 
 ### 1.415.295.0
 
@@ -251,21 +250,6 @@ After a new package version is released, support for the previous two versions i
 - Security intelligence version: `1.415.235.0`
 - Engine version: `1.24070.1`
 - Platform version: `4.18.24070.5`
-
-#### Fixes
-
-- None
-
-#### Additional information
-
-- None
-
-### 1.411.111.0
-
-- Defender package version: `1.411.111.0`
-- Security intelligence version: `1.411.111.0`
-- Engine version: `1.24050.2`
-- Platform version: `4.18.24050.7`
 
 #### Fixes
 
