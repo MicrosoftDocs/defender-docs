@@ -49,10 +49,10 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Sept-2024 Build: 101.24072.0001 | Release version: 30.124072.0001.0
 
-&ensp;Released: **September 20, 2024**<br/>
-&ensp;Published: **September 20, 2024**<br/>
+&ensp;Released: **September 23, 2024**<br/>
+&ensp;Published: **September 23, 2024**<br/>
 &ensp;Build: **101.24072.0001**<br/>
-&ensp;Release version: **30.24072.0001.0**<br/>
+&ensp;Release version: **30.124072.0001.0**<br/>
 &ensp;Engine version: **1.1.24060.6**<br/>
 &ensp;Signature version: **1.415.228.0**<br/>
 
@@ -89,14 +89,14 @@ There are multiple fixes and new changes in this release.
 </details>
 
 <details>
-<summary> June-2024 (Build: 101.24052.0002 | Release version: 30.24052.0002.0)</summary>
+<summary> June-2024 (Build: 101.24052.0002 | Release version: 30.124052.0002.0)</summary>
 
 ## June-2024 Build: 101.24052.0002 | Release version: 30.124052.0002.0
 
 &ensp;Released: **June 24, 2024**<br/>
 &ensp;Published: **June 24, 2024**<br/>
 &ensp;Build: **101.24052.0002**<br/>
-&ensp;Release version: **30.24052.0002.0**<br/>
+&ensp;Release version: **30.124052.0002.0**<br/>
 &ensp;Engine version: **1.1.24040.2**<br/>
 &ensp;Signature version: **1.411.153.0**<br/>
 
@@ -111,14 +111,14 @@ There are multiple fixes and new changes in this release.
 
 </details>
 <details>
-<summary> May-2024 (Build: 101.24042.0002 | Release version: 30.24042.0002.0)</summary>
+<summary> May-2024 (Build: 101.24042.0002 | Release version: 30.124042.0002.0)</summary>
 
 ## May-2024 Build: 101.24042.0002 | Release version: 30.124042.0002.0
 
 &ensp;Released: **May 29, 2024**<br/>
 &ensp;Published: **May 29, 2024**<br/>
 &ensp;Build: **101.24042.0002**<br/>
-&ensp;Release version: **30.24042.0002.0**<br/>
+&ensp;Release version: **30.124042.0002.0**<br/>
 &ensp;Engine version: **1.1.24030.4**<br/>
 &ensp;Signature version: **1.407.521.0**<br/>
 
