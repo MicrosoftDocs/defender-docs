@@ -2,8 +2,8 @@
 title: Add, update, or delete a scan definition
 description: Learn how to use the Add, update, or delete scan definitions.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
