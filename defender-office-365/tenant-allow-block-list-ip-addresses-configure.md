@@ -36,10 +36,10 @@ This article describes how admins can manage entries for IP addresses in the Mic
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). To connect to standalone EOP PowerShell, see [Connect to Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
-- Only support IPv6 addresses in the following format:
-    - Single IPv6 address in Colon-Hexadecimal Notation. for example, 2001:0db8:85a3:0000:0000:8a2e:0370:7334. 
-    - Single IPv6 address in Zero Compression. for example, 2001:db8::1 represents 2001:0db8:0000:0000:0000:0000:0000:0001. 
-    - CIDR IPv6 range. for example, 2001:0db8::/32. 1-128 range is supported
+- IPv6 addresses are supported only in the following formats:
+  - Single addresses in colon-hexadecimal format. For example, 2001:0db8:85a3:0000:0000:8a2e:0370:7334.
+  - Single addresses in zero compression format. For example, 2001:db8::1 represents 2001:0db8:0000:0000:0000:0000:0000:0001.
+  - CIDR IPv6 range. For example, 2001:0db8::/32. 1-128 range is supported.
 
 - Entry limits for IP addresses:
   - **Exchange Online Protection**: The maximum number of allow entries is 500, and the maximum number of block entries is 500 (1000 IP entries in total).
@@ -66,9 +66,9 @@ This article describes how admins can manage entries for IP addresses in the Mic
 
 ## Create allow entries for IP addresses
 
- The allow entry only override the IP filters for that sending IP address. You can create allow entries for IP addresses directly in the Tenant Allow/Block List, using either of the following methods:
+The allow entry overrides only the IP filters for the specified sending IP address.
 
-- From the **IP addresses** tab on the **Tenant Allow/Block Lists** page or in PowerShell as described in this section.
+You can create allow entries for IP addresses directly in the Tenant Allow/Block List as described in this section.
 
 ### Use the Microsoft Defender portal to create allow entries for IP addresses in the Tenant Allow/Block List
 
@@ -85,7 +85,7 @@ This article describes how admins can manage entries for IP addresses in the Mic
    - **Remove allow entry after**: Select from the following values:
      - **1 day**
      - **7 days**
-     - **30 days** 
+     - **30 days**
      - **Never expire** (default)
      - **Specific date**: The maximum value is 90 days from today.
 
@@ -95,7 +95,7 @@ This article describes how admins can manage entries for IP addresses in the Mic
 
 Back on the **IP addresses** tab, the entry is listed.
 
-##### Use PowerShell to create allow entries for IP addresses in the Tenant Allow/Block List
+#### Use PowerShell to create allow entries for IP addresses in the Tenant Allow/Block List
 
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
 
@@ -106,17 +106,16 @@ New-TenantAllowBlockListItems -ListType IP -Allow -Entries "IPAddress1","IPAddre
 This example adds an allow entry for the specified IP address that never expires.
 
 ```powershell
-New-TenantAllowBlockListItems -ListType IP -Allow -Entries "2001:db8:3333:4444:5555:6666:7777:8882"-NoExpiration
+New-TenantAllowBlockListItems -ListType IP -Allow -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -NoExpiration
 ```
 
 For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
 
-
 ## Create block entries for IP addresses
 
-Email messages send from the blocked IP addresses are dropped on the edge. To create block entries for IP addresses, use either of the following methods:
+You can create block entries for IP addresses directly in the Tenant Allow/Block List as described in this section.
 
-- From the **IP addresses** tab on the **Tenant Allow/Block Lists** page or in PowerShell as described in this section.
+Incoming email messages from IP addresses in block entries are blocked at the edge of the service.
 
 ### Use the Microsoft Defender portal to create block entries for IP addresses in the Tenant Allow/Block List
 
@@ -133,7 +132,7 @@ Email messages send from the blocked IP addresses are dropped on the edge. To cr
    - **Remove block entry after**: Select from the following values:
      - **1 day**
      - **7 days**
-     - **30 days** 
+     - **30 days**
      - **Never expire** (default)
      - **Specific date**: The maximum value is 90 days from today.
 
@@ -143,7 +142,7 @@ Email messages send from the blocked IP addresses are dropped on the edge. To cr
 
 Back on the **IP addresses** tab, the entry is listed.
 
-##### Use PowerShell to create block entries for IP addresses in the Tenant Allow/Block List
+#### Use PowerShell to create block entries for IP addresses in the Tenant Allow/Block List
 
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
 
@@ -154,11 +153,10 @@ New-TenantAllowBlockListItems -ListType IP -Block -Entries "IPAddress1","IPAddre
 This example adds an block entry for the specified IP address that never expires.
 
 ```powershell
-New-TenantAllowBlockListItems -ListType IP -Block -Entries "2001:db8:3333:4444:5555:6666:7777:8882"-NoExpiration
+New-TenantAllowBlockListItems -ListType IP -Block -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -NoExpiration
 ```
 
 For detailed syntax and parameter information, see [New-TenantAllowBlockListItems](/powershell/module/exchange/new-tenantallowblocklistitems).
-
 
 ## Use the Microsoft Defender portal to view entries for IP addresses in the Tenant Allow/Block List
 
@@ -248,19 +246,18 @@ For existing IP addresses entries, you can change the expiration date and note.
 
    When you're finished in the **Edit IP addresses** flyout, select **Save**.
 
-
 ### Use PowerShell to modify existing allow or block entries for IP addresses in the Tenant Allow/Block List
 
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
 
 ```powershell
-Set-TenantAllowBlockListItems -ListType IP <-Ids <Identity value> | -Entries <Value>> [<-ExpirationDate Date | -NoExpiration>] [-Notes <String>]
+Set-TenantAllowBlockListItems -ListType IP <-Ids <Identity value> | -Entries <Value> [<-ExpirationDate Date | -NoExpiration>] [-Notes <String>]
 ```
 
 This example changes the expiration date of the specified IP address block entry.
 
 ```powershell
-Set-TenantAllowBlockListItems -ListType IP -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -ExpirationDate "9/1/2022"
+Set-TenantAllowBlockListItems -ListType IP -Entries "2001:db8:3333:4444:5555:6666:7777:8882" -ExpirationDate "9/1/2024"
 ```
 
 For detailed syntax and parameter information, see [Set-TenantAllowBlockListItems](/powershell/module/exchange/set-tenantallowblocklistitems).
