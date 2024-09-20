@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 ms.reviewer: kumasumit, gopkr
 ms.localizationpriority: medium
-ms.date: 09/19/2024
+ms.date: 09/20/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -44,24 +44,6 @@ This article is updated frequently to let you know what's new in the latest rele
 >
 > If you have any concerns or need assistance during this transition, contact support.
 
-<details>
-<summary> Sept-2024 (Build: 101.24072.0001 | Release version: 30.124072.0001.0)</summary>
-
-## Sept-2024 Build: 101.24072.0001 | Release version: 30.124072.0001.0
-
-&ensp;Released: **September 23, 2024**<br/>
-&ensp;Published: **September 23, 2024**<br/>
-&ensp;Build: **101.24072.0001**<br/>
-&ensp;Release version: **30.124072.0001.0**<br/>
-&ensp;Engine version: **1.1.24060.6**<br/>
-&ensp;Signature version: **1.415.228.0**<br/>
-
-**What's new**
-
-- Added support for Ubuntu 24.04
-- Updated default engine version to `1.1.24060.6` and default signatures version to `1.415.228.0`.
-
-</details>
 
 <details>
 <summary> July-2024 (Build: 101.24062.0001 | Release version: 30.124062.0001.0)</summary>
