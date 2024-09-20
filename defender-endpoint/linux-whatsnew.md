@@ -49,8 +49,8 @@ This article is updated frequently to let you know what's new in the latest rele
 
 ## Sept-2024 Build: 101.24072.0001 | Release version: 30.24072.0001.0
 
-&ensp;Released: **September 19, 2024**<br/>
-&ensp;Published: **September 19, 2024**<br/>
+&ensp;Released: **September 20, 2024**<br/>
+&ensp;Published: **September 20, 2024**<br/>
 &ensp;Build: **101.24072.0001**<br/>
 &ensp;Release version: **30.24072.0001.0**<br/>
 &ensp;Engine version: **1.1.24060.6**<br/>
