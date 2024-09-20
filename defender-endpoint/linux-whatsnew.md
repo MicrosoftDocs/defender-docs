@@ -45,9 +45,9 @@ This article is updated frequently to let you know what's new in the latest rele
 > If you have any concerns or need assistance during this transition, contact support.
 
 <details>
-<summary> Sept-2024 (Build: 101.24072.0001 | Release version: 30.24072.0001.0)</summary>
+<summary> Sept-2024 (Build: 101.24072.0001 | Release version: 30.124072.0001.0)</summary>
 
-## Sept-2024 Build: 101.24072.0001 | Release version: 30.24072.0001.0
+## Sept-2024 Build: 101.24072.0001 | Release version: 30.124072.0001.0
 
 &ensp;Released: **September 20, 2024**<br/>
 &ensp;Published: **September 20, 2024**<br/>
