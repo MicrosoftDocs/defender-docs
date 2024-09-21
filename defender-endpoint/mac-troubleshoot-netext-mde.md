@@ -60,7 +60,7 @@ Here are the steps you'll follow:
 2. Set up the device group as follows:
 
    - Group type: `Security` 
-   - Group name: `<add a group name>`. For example, "Devices with NetExt disabled".
+   - Group name: Add a group name, such as `Devices with NetExt disabled`.
    - Group description: `<add a description>`
    - Membership type: `Assigned` 
 
