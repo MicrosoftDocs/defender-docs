@@ -113,8 +113,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
 
    - Auto-Update
    - Background Services
-   - Behavior
-   - Monitor
+   - Behavior Monitoring
    - Device Control
    - Full Disk Access
    - Network Protection
@@ -178,8 +177,7 @@ The following sections describe how to create a new "Devices with NetExt disable
 
    - Auto-Update
    - Background Services
-   - Behavior
-   - Monitor
+   - Behavior Monitoring
    - Device Control
    - Full Disk Access
    - Network Protection
