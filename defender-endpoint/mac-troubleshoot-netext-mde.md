@@ -188,4 +188,34 @@ The following sections describe how to create a new "Devices with NetExt disable
 
 After you have completed these steps, see if you are able to reproduce the issue. 
 
-Manual 
+## Manual method
+
+If you have installed Defender for Endpoint on Mac, you can remove the NetExt extension temporarily by following these steps:
+
+1. On your Mac, open **System Settings**.
+
+2. Go to **General** > **Login items & Extensions**, and then scroll down until you see **Network Extensions**. There, you will see the following:
+
+   ```console
+
+   Microsoft Defender 
+
+   Microsoft Defender Network Extension 
+
+   ```
+
+3. Toggle Microsoft Defender Network Extension to off. Type your password, and then select **OK**.
+
+4. You should see the following message:
+
+   ```console
+
+   Note: Disabling the system extension will make sure that it will not be launched after reboot, but it does not guarantee that it will be terminated immediately 
+
+   OK  
+
+   ```   
+ 
+5. Select **OK**, and then select **Done**. 
+
+After you have completed these steps, see if you are able to reproduce the issue. 
