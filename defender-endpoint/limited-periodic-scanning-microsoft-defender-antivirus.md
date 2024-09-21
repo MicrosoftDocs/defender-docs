@@ -4,8 +4,8 @@ description: Limited periodic scanning lets you use Microsoft Defender Antivirus
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom: nextgen
 ms.date: 02/18/2024
 ms.reviewer: yongrhee

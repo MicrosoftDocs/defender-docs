@@ -2,8 +2,8 @@
 title: Export secure configuration assessment per device
 description: Returns  an entry for every unique combination of DeviceId, ConfigurationId.
 ms.service: defender-endpoint
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

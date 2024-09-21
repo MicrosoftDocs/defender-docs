@@ -6,8 +6,8 @@ ms.localizationpriority: medium
 ms.date: 04/11/2024
 audience: ITPro
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
 ms.subservice: asr
 ms.collection: 

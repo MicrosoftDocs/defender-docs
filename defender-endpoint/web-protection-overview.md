@@ -3,8 +3,8 @@ title: Web protection
 description: Learn about the web protection in Microsoft Defender for Endpoint and how it can protect your organization.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.date: 04/03/2024
 manager: deniseb
