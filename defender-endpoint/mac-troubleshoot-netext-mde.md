@@ -61,7 +61,7 @@ Here are the steps you'll follow:
 
    - Group type: `Security` 
    - Group name: Add a group name, such as `Devices with NetExt disabled`.
-   - Group description: `<add a description>`
+   - Group description: Add a description.
    - Membership type: `Assigned` 
 
    Then select **Refresh**. 
