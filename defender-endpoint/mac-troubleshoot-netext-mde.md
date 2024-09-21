@@ -5,6 +5,7 @@ ms.service: defender-endpoint
 author: denisebmsft
 ms.author: deniseb
 manager: deniseb
+ms.reviewer: yongrhee
 ms.localizationpriority: medium
 audience: ITPro
 ms.collection:
