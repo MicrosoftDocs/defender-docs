@@ -126,7 +126,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
    > [!CAUTION]
    > Do not repeat this procedure for NetExt. 
 
-After you complete these steps, see if you're able to reproduce the issue. 
+   After you complete these steps, see if you're able to reproduce the issue. 
 
 ## JamF method
 
@@ -191,7 +191,7 @@ The following sections describe how to create a new "Devices with NetExt disable
    > [!CAUTION]
    > Do not repeat this procedure for NetExt. 
 
-After you complete these steps, see if you're able to reproduce the issue. 
+   After you complete these steps, see if you're able to reproduce the issue. 
 
 ## Manual method
 
@@ -212,7 +212,7 @@ If you have installed Defender for Endpoint on Mac, you can remove the NetExt ex
  
 5. Select **OK**, and then select **Done**. 
 
-After you complete these steps, see if you're able to reproduce the issue. 
+   After you complete these steps, see if you're able to reproduce the issue. 
 
 ## See also
 
