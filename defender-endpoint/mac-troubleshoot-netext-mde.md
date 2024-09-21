@@ -199,7 +199,7 @@ If you have installed Defender for Endpoint on Mac, you can remove the NetExt ex
 
 1. On your Mac, open **System Settings**.
 
-2. Go to **General** > **Login items & Extensions**, and then scroll down until you see **Network Extensions**. There, you'll see the following extensions:
+2. Go to **General** > **Login items & Extensions**, and then scroll down until you see **Network Extensions**. There, you see the following extensions:
 
    - Microsoft Defender 
    - Microsoft Defender Network Extension 
