@@ -46,6 +46,8 @@ You might notice issues with network related latencies when using your browser o
 
 This article describes how to temporarily disable NetExt, temporarily remove network protection, and resolve network stack-related issues by using Intune, JamF, or a manual process on Mac.
 
+Microsoft Defender is collaborating with Apple to provide our mutual customers a solution when Network Protection is enabled in Microsoft Defender for Endpoint on macOS Sequoia (version 15.0).
+
 At a high level, these are the steps to follow for [Intune](#intune-method) and [JamF](#jamf-method):
 
 1. Create a new "Devices with NetExt disabled" group.
