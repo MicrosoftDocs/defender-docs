@@ -131,7 +131,7 @@ The following sections describe how to create a new "Devices with NetExt disable
 
 ### Create a "Devices with NetExt disabled" group
 
-1. In your [JamF portal](https://jamfcloud.com), select **Computers**, and then select **Static device groups**.
+1. In your JamF portal, select **Computers**, and then select **Static device groups**.
 
 2. Select **New**.
 
@@ -145,7 +145,7 @@ The following sections describe how to create a new "Devices with NetExt disable
 
 ### Exclude your "Devices with NetExt disabled" group from the existing NetExt configuration 
 
-1. In your [JamF portal](https://jamfcloud.com), select **Computers**, and then select **Configuration Profiles**.
+1. In your JamF portal, select **Computers**, and then select **Configuration Profiles**.
 
 2. Select your current policy for NetExt. For example, `NetFilter-prod-macOS-Default-MDE`.
 
@@ -159,7 +159,7 @@ The following sections describe how to create a new "Devices with NetExt disable
 
 ### Assign the existing configuration to the "Devices with NetExt disabled" group 
 
-1. In your [JamF portal](https://jamfcloud.com), select **Computers**, and then select **Configuration Profiles**.
+1. In your JamF portal, select **Computers**, and then select **Configuration Profiles**.
 
 2. Select a current policy, such as one for Accessibility. For example, `Accessibility-prod-macOS-Default-MDE`.
 
