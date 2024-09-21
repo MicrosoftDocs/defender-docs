@@ -185,7 +185,7 @@ The following sections describe how to create a new "Devices with NetExt disable
    - System Extensions 
 
    > [!CAUTION]
-   > Do not repeat it for NetFilter (NetExt). 
+   > Do not repeat this procedure for NetExt. 
 
 After you have completed these steps, see if you are able to reproduce the issue. 
 
