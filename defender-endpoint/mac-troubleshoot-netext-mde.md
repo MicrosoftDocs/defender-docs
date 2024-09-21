@@ -40,17 +40,19 @@ The network filter extension (NetExt) is used by [Network Protection](network-pr
 
 **Symptom**: 
 
-You may notice issues with network related latencies when using your browser or copying files over the network or using a chat/meeting application. 
+You might notice issues with network related latencies when using your browser or copying files over the network or using a chat/meeting application. 
 
 **Temporary solution**:
 
 This article describes how to temporarily disable NetExt, temporarily remove network protection, and resolve network stack-related issues by using Intune, JamF, or a manual process on Mac.
 
-Here are the steps you'll follow for [Intune](#intune-method) and [JamF](#jamf-method):
+At a high level, these are the steps to follow for [Intune](#intune-method) and [JamF](#jamf-method):
 
 1. Create a new "Devices with NetExt disabled" group.
 2. Exclude that group from the existing NetExt configuration.
 3. Assign the existing configuration to the ""Devices with NetExt disabled"" device group.
+
+The following sections describe these steps in more detail.
 
 ## Intune method
 
