@@ -43,13 +43,15 @@ You may notice issues with network related latencies when using your browser or 
 
 This article describes how to temporarily disable NetExt, and temporarily remove network protection, and resolve network stack-related issues by using Intune, JamF, or a manual process on Mac.
 
-Here are the steps you'll follow:
+Here are the steps you'll follow for [Intune](#intune-method) and [JamF](#jamf-method):
 
 1. Create a new group for `<device group name goes here>`. For example: `Devices with NetExt disabled`.
 2. Exclude that group from the existing Network Filter (NetExt) configuration.
 3. Assign the existing configuration to the device group you created in step 1.
 
 ## Intune method
+
+The following sections describe how to set up a device group, exclude it from the NetExt configuration, and then assign the existing configuration to your new device group.
 
 ### Create a device group for affected devices
 
@@ -72,7 +74,7 @@ Here are the steps you'll follow:
 
 6. Select **Refresh**. You should now be able to see your devices. 
 
-### Exclude that group from the existing Network Filter (NetExt) configuration 
+### Exclude the "Devices with NetExt disabled" device group from the existing Network Filter (NetExt) configuration 
 
 1. In the [Intune admin center](https://intune.microsoft.com), select **Devices**.
 
@@ -135,7 +137,7 @@ After you have completed these steps, see if you are able to reproduce the issue
 
    Under **Computers - Static Computer Groups**, you should be able to see your new group. 
 
- 
+### 
 
 Exclude that group from the existing Network Filter (NetExt) configuration 
 
