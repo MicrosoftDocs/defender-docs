@@ -51,9 +51,9 @@ Here are the steps you'll follow for [Intune](#intune-method) and [JamF](#jamf-m
 
 ## Intune method
 
-The following sections describe how to set up a device group, exclude it from the NetExt configuration, and then assign the existing configuration to your new device group.
+The following sections describe how to set up a new "Devices with NetExt disabled" device group, exclude it from the NetExt configuration, and then assign the existing configuration to your new device group.
 
-### Create a device group for affected devices
+### Create a device group called "Devices with NetExt disabled"
 
 1. In the [Intune admin center](https://intune.microsoft.com), select **Groups**, and then select **New group**.
 
@@ -123,9 +123,11 @@ After you have completed these steps, see if you are able to reproduce the issue
 
 ## JamF method
 
-### Create a group for affected devices
+The following sections describe how to create a new "Devices with NetExt disabled" group, exclude the group from the existing NetExt configuration, and then assign the existing configuration to the new group.
 
-1. In [JamF](jamfcloud.com), select **Computers**, and then select **Static device groups**.
+### Create a "Devices with NetExt disabled" group
+
+1. In your [JamF portal](jamfcloud.com), select **Computers**, and then select **Static device groups**.
 
 2. Select **New**.
 
@@ -137,15 +139,9 @@ After you have completed these steps, see if you are able to reproduce the issue
 
    Under **Computers - Static Computer Groups**, you should be able to see your new group. 
 
-### 
+### Exclude your  group from the existing Network Filter (NetExt) configuration 
 
-Exclude that group from the existing Network Filter (NetExt) configuration 
-
-In the JamF portal 
-
-Click on "Computers" 
-
-Click on "Configuration Profiles" 
+1. In your [JamF portal](jamfcloud.com), select **Computers**, and then select **Configuration Profiles**.
 
 Select your current policy for "NetFilter" (NetExt) e.g. NetFilter-prod-macOS-Default-MDE 
 
