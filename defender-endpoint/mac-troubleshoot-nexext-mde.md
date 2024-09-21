@@ -55,7 +55,7 @@ Here are the steps you'll follow:
 
 ### Create a device group for affected devices
 
-1. In the Intune admin center, select **Groups**, and then select **New group**.
+1. In the [Intune admin center](https://intune.microsoft.com), select **Groups**, and then select **New group**.
 
 2. Set up the device group as follows:
 
@@ -76,7 +76,7 @@ Here are the steps you'll follow:
 
 ### Exclude that group from the existing Network Filter (NetExt) configuration 
 
-1. In the Intune admin center, select **Devices**.
+1. In the [Intune admin center](https://intune.microsoft.com), select **Devices**.
 
 2. Under **By platform**, select **macOS**, and then select **Configuration**.
 
@@ -88,39 +88,35 @@ Here are the steps you'll follow:
 
 6. Select **Review + save**, and then select **Save**.
 
+### Assign the existing configuration to the "Devices with NetExt disabled" device group 
 
+1. In the [Intune admin center](https://intune.microsoft.com), select **Devices**.
 
- 
+2. Under **By platform**, select **macOS**, and then select **Configuration**.
 
-Assign the existing configuration for MDE on macOS to the "Devices with NetExt disabled" device group 
+3. Select a current policy, such as your policy for Accessibility. For example, `Accessibility-prod-macOS-Default-MDE`.
 
-Click on "Devices" 
+4. Next to **Assignments**, select **Edit**.
 
-Under "By platform", click on "macOS" 
+5. Under **Add groups**, select the device group that you created earlier (for example, `Devices with NetExt disabled`). Then click **Select**.
 
-Click on "Configuration" 
+6. Select **Review + save**, and then select **Save**.
 
-Select your current policy for Accessibility e.g. Accessibility-prod-macOS-Default-MDE 
+7. Repeat this procedure for each of your existing policies for Defender for Endpoint on Mac. Examples include:
 
-Next to "Assignments", click on "Edit" 
+   - AutoUpdate
+   - Background Services
+   - Behavior
+   - Monitor
+   - Device Control
+   - Full Disk Access
+   - Network Protection
+   - Notifications
+   - Scheduled Scan
+   - Settings Preferences
+   - System Extensions 
 
-Under "Add groups" 
+   > [!CAUTION]
+   > Do not repeat it for NetFilter (NetExt). 
 
-Select the new "Device Group" from Step 1. e.g. "Devices with NetExt disabled" 
-
-Click on "Select" 
-
-Click on "Review + save" 
-
-Click on "Save" 
-
- 
-
-Repeat this for each of the existing policies for MDE on macOS such as, AutoUpdate, Background Services, Behavior, Monitor, Device Control, Full Disk Access, Network Protection, Notifications, Scheduled Scan, Settings Preferences, System Extensions 
-
- 
-Important: Do not repeat it for NetFilter (NetExt). 
-
- 
-
-And now try to see if you are able to reproduce the issue. 
+After you have completed these steps, see if you are able to reproduce the issue. 
