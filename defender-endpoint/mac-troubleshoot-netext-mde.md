@@ -76,7 +76,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
 
 6. Select **Refresh**. You should now be able to see your devices. 
 
-### Exclude the "Devices with NetExt disabled" device group from the existing Network Filter (NetExt) configuration 
+### Exclude the "Devices with NetExt disabled" device group from the existing NetExt configuration 
 
 1. In the [Intune admin center](https://intune.microsoft.com), select **Devices**.
 
@@ -141,7 +141,7 @@ The following sections describe how to create a new "Devices with NetExt disable
 
    Under **Computers - Static Computer Groups**, you should be able to see your new group. 
 
-### Exclude your  group from the existing Network Filter (NetExt) configuration 
+### Exclude your "Devices with NetExt disabled" group from the existing NetExt configuration 
 
 1. In your [JamF portal](jamfcloud.com), select **Computers**, and then select **Configuration Profiles**.
 
