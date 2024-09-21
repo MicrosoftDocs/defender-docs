@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot network filter extension (NetExt) issues in Microsoft Defender for Endpoint on Mac
+title: Troubleshoot Network Extension issues in Microsoft Defender for Endpoint on Mac
 description: Learn how to troubleshoot issues with the network filter extension (NetExt) that's installed as part of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: denisebmsft
@@ -18,7 +18,7 @@ search.appverid: met150
 ms.date: 09/20/2024
 ---
 
-# Troubleshoot NetExt issues in Microsoft Defender for Endpoint on Mac 
+# Troubleshoot Network Extension (NetExt) issues in Microsoft Defender for Endpoint on Mac 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
