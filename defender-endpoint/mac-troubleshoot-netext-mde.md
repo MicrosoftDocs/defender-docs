@@ -62,7 +62,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
 2. Set up the device group as follows:
 
    - Group type: `Security` 
-   - Group name: Add a group name, such as `Devices with NetExt disabled`.
+   - Group name: `Devices with NetExt disabled`
    - Group description: Add a description.
    - Membership type: `Assigned` 
 
