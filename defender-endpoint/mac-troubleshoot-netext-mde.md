@@ -44,7 +44,7 @@ You may notice issues with network related latencies when using your browser or 
 
 **Temporary solution**:
 
-This article describes how to temporarily disable NetExt, and temporarily remove network protection, and resolve network stack-related issues by using Intune, JamF, or a manual process on Mac.
+This article describes how to temporarily disable NetExt, temporarily remove network protection, and resolve network stack-related issues by using Intune, JamF, or a manual process on Mac.
 
 Here are the steps you'll follow for [Intune](#intune-method) and [JamF](#jamf-method):
 
