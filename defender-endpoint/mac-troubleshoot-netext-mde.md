@@ -49,7 +49,7 @@ Here are the steps you'll follow for [Intune](#intune-method) and [JamF](#jamf-m
 
 1. Create a new "Devices with NetExt disabled" group.
 2. Exclude that group from the existing NetExt configuration.
-3. Assign the existing configuration to the device group you created in step 1.
+3. Assign the existing configuration to the ""Devices with NetExt disabled"" device group.
 
 ## Intune method
 
