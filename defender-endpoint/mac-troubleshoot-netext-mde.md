@@ -18,7 +18,7 @@ search.appverid: met150
 ms.date: 09/20/2024
 ---
 
-# Troubleshoot Network Extension (NetExt) issues in Microsoft Defender for Endpoint on Mac 
+# Troubleshoot Network Extension (NetExt) issues in Defender for Endpoint on Mac 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
