@@ -422,13 +422,15 @@
 
         - name: Troubleshoot Microsoft Defender for Endpoint on macOS
           items:
+          - name: Troubleshoot NetExt issues with Defender for Endpoint on Mac
+            href: mac-troubleshoot-nexext-mde.md
           - name: Troubleshooting mode on macOS
             href: mac-troubleshoot-mode.md
           - name: Troubleshoot macOS installation issues
             href: mac-support-install.md
           - name: Troubleshoot macOS performance issues overview
             href: mac-support-perf-overview.md
-            displayName: Troubleshoot performance issues for Microsoft Defender for Endpoint on macOS
+            displayName: Troubleshoot performance issues for Defender for Endpoint on macOS
           - name: Troubleshoot performance issues
             href: mac-support-perf.md
           - name: Troubleshoot cloud connectivity
