@@ -41,7 +41,7 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
 - In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device controls ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS earlier than 14.3.1.
 
-- In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This will result in intermittent network connectivity issues for end users. We are recommending that customers who have Network Protection enabled in their organization refrain from upgrading to Sequoia builds at this time. For more information, see [Troubleshoot NetExt issues in Microsoft Defender for Endpoint on Mac](mac-troubleshoot-netext-mde.md).
+- In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This will result in intermittent network connectivity issues for end users. We are recommending that customers who have Network Protection enabled in their organization refrain from upgrading to Sequoia builds at this time. To work around the issue, see [Troubleshoot NetExt issues in Microsoft Defender for Endpoint on Mac](mac-troubleshoot-netext-mde.md).
 
 **Sequoia support**
 
