@@ -155,44 +155,37 @@ The following sections describe how to create a new "Devices with NetExt disable
 
 6. Select **Done**, and then select **Save**.
 
-
 ### Assign the existing configuration for MDE on macOS to the "Disabling NetExt" device group 
 
-Click on "Computers" 
+1. In your [JamF portal](jamfcloud.com), select **Computers**, and then select **Configuration Profiles**.
 
-Click on "Configuration Profiles" 
+2. Select a current policy, such as one for Accessibility. For example, `Accessibility-prod-macOS-Default-MDE`.
 
-Select your current policy for Accessibility e.g. Accessibility-prod-macOS-Default-MDE 
+3. On the **Scope** tab, select **Edit**.
 
-Click on "Scope" tab 
+4. On the **Targets** tab, select **Add**, and then select **Computer Groups**.
 
-Click on "Edit" 
+5. Find your "Devices with NetExt disabled" group, and then select **Add**.
 
-Click on "Targets" tab (default) 
+6. Select **Done**, and then select **Save**. 
 
-Click on "Add" 
+7. Repeat this procedure for each of your existing policies for Defender for Endpoint on Mac. Examples include:
 
-Select "Computer Groups" 
+   - AutoUpdate
+   - Background Services
+   - Behavior
+   - Monitor
+   - Device Control
+   - Full Disk Access
+   - Network Protection
+   - Notifications
+   - Scheduled Scan
+   - Settings Preferences
+   - System Extensions 
 
-Look for "Device Group" from Step 1. e.g. "Devices with NetExt disabled" 
-Click on "Add" 
+   > [!CAUTION]
+   > Do not repeat it for NetFilter (NetExt). 
 
-Click on "Done" 
-
-Click on "Save" 
-
- 
-
-Repeat this for each of the existing policies for MDE on macOS such as, AutoUpdate, Background Services, Behavior, Monitor, Device Control, Full Disk Access, Network Protection, Notifications, Scheduled Scan, Settings Preferences, System Extensions 
-
- 
-
-Important: Do not repeat it for NetFilter (NetExt). 
-
- 
-
-And now try to see if you are able to reproduce the issue. 
-
- 
+After you have completed these steps, see if you are able to reproduce the issue. 
 
 Manual 
