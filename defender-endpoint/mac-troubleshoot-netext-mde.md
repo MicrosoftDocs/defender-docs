@@ -219,3 +219,7 @@ If you have installed Defender for Endpoint on Mac, you can remove the NetExt ex
 5. Select **OK**, and then select **Done**. 
 
 After you have completed these steps, see if you are able to reproduce the issue. 
+
+## See also
+
+[What's new in Microsoft Defender for Endpoint on Mac](mac-whatsnew.md)
