@@ -46,9 +46,7 @@ This article describes how to temporarily disable NetExt, and temporarily remove
 Here are the steps you'll follow:
 
 1. Create a new group for `<device group name goes here>`. For example: `Devices with NetExt disabled`.
-
 2. Exclude that group from the existing Network Filter (NetExt) configuration.
-
 3. Assign the existing configuration to the device group you created in step 1.
 
 ## Intune method
