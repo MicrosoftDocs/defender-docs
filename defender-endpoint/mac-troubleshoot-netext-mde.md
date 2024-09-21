@@ -136,7 +136,7 @@ The following sections describe how to create a new "Devices with NetExt disable
 
 2. Select **New**.
 
-3. On the **Computer Group** tab (default), under **Display name**, add a group name (such as `Devices with NetExt disabled`).
+3. On the **Computer Group** tab (default), under **Display name**, add the group name `Devices with NetExt disabled`.
 
 4. Select the **Assignments** tab.
 
