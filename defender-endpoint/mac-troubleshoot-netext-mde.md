@@ -91,7 +91,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
 
 4. Next to **Assignments**, select **Edit**.
 
-5. Under **Excluded groups**, select **Add groups**, and then select the new device group you created earlier (for example, `Devices with NetExt disabled`). Then click **Select**.
+5. Under **Excluded groups**, select **Add groups**, and then select the "Devices with NetExt disabled" device group. Then click **Select**.
 
 6. Select **Review + save**, and then select **Save**.
 
