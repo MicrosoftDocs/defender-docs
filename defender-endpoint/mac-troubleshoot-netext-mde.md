@@ -45,7 +45,7 @@ This article describes how to temporarily disable NetExt, and temporarily remove
 
 Here are the steps you'll follow:
 
-1. Create a new group for `<device group name goes here>`. For example: "Disabling NetExt" device group.
+1. Create a new group for `<device group name goes here>`. For example: `Devices with NetExt disabled`.
 
 2. Exclude that group from the existing Network Filter (NetExt) configuration.
 
@@ -120,3 +120,101 @@ Here are the steps you'll follow:
    > Do not repeat it for NetFilter (NetExt). 
 
 After you have completed these steps, see if you are able to reproduce the issue. 
+
+JamF (jamfcloud.com) 
+
+ 
+
+Create a new group for e.g. "Disabling NetExt" device group 
+
+In the JamF portal 
+
+Click on "Computers" 
+
+Click on "Static device groups" 
+
+Click on "New" 
+
+Under "Computer Group" tab (default) 
+
+Under "Display name": <add a group name> e.g. "Devices with NetExt disabled" 
+
+Click on the "Assignments" tab 
+
+Select the devices where you want to disable "NetExt" that you want to add. 
+
+Click on "Save" 
+
+Under "Computers - Static Computer Groups", you should be able to see it. 
+
+ 
+
+Exclude that group from the existing Network Filter (NetExt) configuration 
+
+In the JamF portal 
+
+Click on "Computers" 
+
+Click on "Configuration Profiles" 
+
+Select your current policy for "NetFilter" (NetExt) e.g. NetFilter-prod-macOS-Default-MDE 
+
+Click on "Scope" tab 
+
+Click on "Edit" 
+
+Click on "Exclusions" tab 
+
+Click on "Add" 
+
+Select "Computer Groups" 
+
+Look for "Device Group" from Step 1. e.g. "Devices with NetExt disabled" 
+Click on "Add" 
+
+Click on "Done" 
+
+Click on "Save" 
+
+ 
+
+Assign the existing configuration for MDE on macOS to the "Disabling NetExt" device group 
+
+Click on "Computers" 
+
+Click on "Configuration Profiles" 
+
+Select your current policy for Accessibility e.g. Accessibility-prod-macOS-Default-MDE 
+
+Click on "Scope" tab 
+
+Click on "Edit" 
+
+Click on "Targets" tab (default) 
+
+Click on "Add" 
+
+Select "Computer Groups" 
+
+Look for "Device Group" from Step 1. e.g. "Devices with NetExt disabled" 
+Click on "Add" 
+
+Click on "Done" 
+
+Click on "Save" 
+
+ 
+
+Repeat this for each of the existing policies for MDE on macOS such as, AutoUpdate, Background Services, Behavior, Monitor, Device Control, Full Disk Access, Network Protection, Notifications, Scheduled Scan, Settings Preferences, System Extensions 
+
+ 
+
+Important: Do not repeat it for NetFilter (NetExt). 
+
+ 
+
+And now try to see if you are able to reproduce the issue. 
+
+ 
+
+Manual 
