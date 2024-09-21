@@ -124,7 +124,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
    > [!CAUTION]
    > Do not repeat this procedure for NetExt. 
 
-After you complete these steps, see if you are able to reproduce the issue. 
+After you complete these steps, see if you're able to reproduce the issue. 
 
 ## JamF method
 
@@ -158,7 +158,7 @@ The following sections describe how to create a new "Devices with NetExt disable
 
 6. Select **Done**, and then select **Save**.
 
-### Assign the existing configuration for MDE on macOS to the "Disabling NetExt" device group 
+### Assign the existing configuration to the "Devices with NetExt disabled" group 
 
 1. In your [JamF portal](jamfcloud.com), select **Computers**, and then select **Configuration Profiles**.
 
