@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Network Extension issues in Microsoft Defender for Endpoint on Mac
-description: Learn how to troubleshoot issues with the network filter extension (NetExt) that's installed as part of Microsoft Defender for Endpoint on macOS.
+description: Learn how to troubleshoot issues with the network extension (NetExt) that's installed as part of Microsoft Defender for Endpoint on macOS.
 ms.service: defender-endpoint
 author: denisebmsft
 ms.author: deniseb
@@ -34,9 +34,9 @@ ms.date: 09/20/2024
 
 ## Overview 
 
-This article provides information on how to troubleshoot issues with the network filter extension (NetExt) that's installed as part of Microsoft Defender for Endpoint on macOS. 
+This article provides information on how to troubleshoot issues with the network extension (NetExt) that's installed as part of Microsoft Defender for Endpoint on macOS. 
 
-The network filter extension (NetExt) is used by [Network Protection](network-protection-macos.md) is enabled on Mac devices.
+NetExt is used by [Network Protection](network-protection-macos.md) is enabled on Mac devices.
 
 **Symptom**: 
 
