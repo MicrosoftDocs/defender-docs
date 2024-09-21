@@ -191,7 +191,7 @@ The following sections describe how to create a new "Devices with NetExt disable
 
 ## Manual method
 
-If you Defender for Endpoint on Mac is installed, you can remove the NetExt extension temporarily by following these steps:
+If you have Defender for Endpoint installed on your Mac, you can remove the NetExt extension temporarily by following these steps:
 
 1. On your Mac, open **System Settings**.
 
