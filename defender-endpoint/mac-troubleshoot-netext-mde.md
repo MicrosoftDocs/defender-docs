@@ -18,7 +18,7 @@ search.appverid: met150
 ms.date: 09/20/2024
 ---
 
-# Troubleshoot network filter extension (NetExt) issues in Microsoft Defender for Endpoint on Mac 
+# Troubleshoot NetExt issues in Microsoft Defender for Endpoint on Mac 
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
