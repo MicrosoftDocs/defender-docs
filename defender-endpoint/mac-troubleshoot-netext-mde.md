@@ -33,7 +33,9 @@ ms.date: 09/20/2024
 
 ## Overview 
 
-This article provides information on how to troubleshoot issues with the network filter extension (NetExt) that's installed as part of Microsoft Defender for Endpoint on macOS. The network filter extension (NetExt) is used by [Network Protection](network-protection-macos.md) (NP) is enabled on Mac devices.
+This article provides information on how to troubleshoot issues with the network filter extension (NetExt) that's installed as part of Microsoft Defender for Endpoint on macOS. 
+
+The network filter extension (NetExt) is used by [Network Protection](network-protection-macos.md) (NP) is enabled on Mac devices.
 
 **Symptom**: 
 
@@ -45,8 +47,8 @@ This article describes how to temporarily disable NetExt, and temporarily remove
 
 Here are the steps you'll follow for [Intune](#intune-method) and [JamF](#jamf-method):
 
-1. Create a new group for `<device group name goes here>`. For example: `Devices with NetExt disabled`.
-2. Exclude that group from the existing Network Filter (NetExt) configuration.
+1. Create a new "Devices with NetExt disabled" group.
+2. Exclude that group from the existing NetExt configuration.
 3. Assign the existing configuration to the device group you created in step 1.
 
 ## Intune method
