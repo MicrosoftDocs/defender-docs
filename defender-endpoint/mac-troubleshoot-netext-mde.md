@@ -109,7 +109,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
 
 7. Repeat this procedure for each of your existing policies for Defender for Endpoint on Mac. Examples include:
 
-   - AutoUpdate
+   - Auto-Update
    - Background Services
    - Behavior
    - Monitor
@@ -124,7 +124,7 @@ The following sections describe how to set up a new "Devices with NetExt disable
    > [!CAUTION]
    > Do not repeat it for NetFilter (NetExt). 
 
-After you have completed these steps, see if you are able to reproduce the issue. 
+After you complete these steps, see if you are able to reproduce the issue. 
 
 ## JamF method
 
@@ -189,7 +189,7 @@ The following sections describe how to create a new "Devices with NetExt disable
    > [!CAUTION]
    > Do not repeat this procedure for NetExt. 
 
-After you have completed these steps, see if you are able to reproduce the issue. 
+After you complete these steps, see if you are able to reproduce the issue. 
 
 ## Manual method
 
@@ -221,7 +221,7 @@ If you have installed Defender for Endpoint on Mac, you can remove the NetExt ex
  
 5. Select **OK**, and then select **Done**. 
 
-After you have completed these steps, see if you are able to reproduce the issue. 
+After you complete these steps, see if you are able to reproduce the issue. 
 
 ## See also
 
