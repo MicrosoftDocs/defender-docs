@@ -211,13 +211,7 @@ If you have installed Defender for Endpoint on Mac, you can remove the NetExt ex
 
 4. You should see the following message:
 
-   ```console
-
-   Note: Disabling the system extension will make sure that it will not be launched after reboot, but it does not guarantee that it will be terminated immediately 
-
-   OK  
-
-   ```   
+   `Note: Disabling the system extension will make sure that it will not be launched after reboot, but it does not guarantee that it will be terminated immediately.`
  
 5. Select **OK**, and then select **Done**. 
 
