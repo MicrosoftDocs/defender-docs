@@ -121,31 +121,21 @@ Here are the steps you'll follow:
 
 After you have completed these steps, see if you are able to reproduce the issue. 
 
-JamF (jamfcloud.com) 
+## JamF method
 
- 
+### Create a group for affected devices
 
-Create a new group for e.g. "Disabling NetExt" device group 
+1. In [JamF](jamfcloud.com), select **Computers**, and then select **Static device groups**.
 
-In the JamF portal 
+2. Select **New**.
 
-Click on "Computers" 
+3. On the **Computer Group** tab (default), under **Display name**, add a group name (such as `Devices with NetExt disabled`).
 
-Click on "Static device groups" 
+4. Select the **Assignments** tab.
 
-Click on "New" 
+5. Select the devices select the devices for which you want to disable NetExt. Then select **Save**.
 
-Under "Computer Group" tab (default) 
-
-Under "Display name": <add a group name> e.g. "Devices with NetExt disabled" 
-
-Click on the "Assignments" tab 
-
-Select the devices where you want to disable "NetExt" that you want to add. 
-
-Click on "Save" 
-
-Under "Computers - Static Computer Groups", you should be able to see it. 
+   Under **Computers - Static Computer Groups**, you should be able to see your new group. 
 
  
 
