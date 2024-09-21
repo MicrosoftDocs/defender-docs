@@ -50,7 +50,7 @@ At a high level, these are the steps to follow for [Intune](#intune-method) and 
 
 1. Create a new "Devices with NetExt disabled" group.
 2. Exclude that group from the existing NetExt configuration.
-3. Assign the existing configuration to the ""Devices with NetExt disabled"" device group.
+3. Assign the existing configuration to the "Devices with NetExt disabled" device group.
 
 The following sections describe these steps in more detail.
 
@@ -174,7 +174,7 @@ The following sections describe how to create a new "Devices with NetExt disable
 
 7. Repeat this procedure for each of your existing policies for Defender for Endpoint on Mac. Examples include:
 
-   - AutoUpdate
+   - Auto-Update
    - Background Services
    - Behavior
    - Monitor
@@ -189,7 +189,7 @@ The following sections describe how to create a new "Devices with NetExt disable
    > [!CAUTION]
    > Do not repeat this procedure for NetExt. 
 
-After you complete these steps, see if you are able to reproduce the issue. 
+After you complete these steps, see if you're able to reproduce the issue. 
 
 ## Manual method
 
@@ -197,7 +197,7 @@ If you have installed Defender for Endpoint on Mac, you can remove the NetExt ex
 
 1. On your Mac, open **System Settings**.
 
-2. Go to **General** > **Login items & Extensions**, and then scroll down until you see **Network Extensions**. There, you will see the following:
+2. Go to **General** > **Login items & Extensions**, and then scroll down until you see **Network Extensions**. There, you'll see the following extensions:
 
    ```console
 
@@ -221,7 +221,7 @@ If you have installed Defender for Endpoint on Mac, you can remove the NetExt ex
  
 5. Select **OK**, and then select **Done**. 
 
-After you complete these steps, see if you are able to reproduce the issue. 
+After you complete these steps, see if you're able to reproduce the issue. 
 
 ## See also
 
