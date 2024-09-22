@@ -35,6 +35,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | September 29 | Preview | [Kubernetes Identity and Access information in the security graph](#kubernetes-identity-and-access-information-in-the-security-graph) |
 | September 29 | Preview | [Kubernetes identity and access information-based attack paths](#kubernetes-identity-and-access-information-based-attack-paths) |
 | September 29 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
+| September 29 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
 | September 18 | GA | [General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint](#general-availability-of-file-integrity-monitoring-based-on-microsoft-defender-for-endpoint) |
 | September 18 | GA | [FIM migration experience is available in Defender for Cloud](#fim-migration-experience-is-available-in-defender-for-cloud) |
 | September 18 | Deprecation | [Deprecation of MMA auto-provisioning capability](#deprecation-of-mma-auto-provisioning-capability) |
@@ -82,6 +83,12 @@ Using the Kubernetes RBAC data in the security graph, we will start detecting cl
 September 29, 2024
 
 The new attack path analysis engine released last November now supports   container use cases as well, dynamically detecting new types of attack paths in cloud environments based on the data added to the graph. We can now find more attack paths for containers and detect more complex and sophisticated attack patterns used by attackers to infiltrate cloud environments.
+
+### Full discovery of container images in supported registries
+
+September 29, 2024
+
+Defender for Cloud now collects inventory data for all container images in supported registries, providing full visibility within the security graph to all images in your cloud environments, including images that currently do not have any posture recommendations.
 
 ### General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint
 September 18, 2024
