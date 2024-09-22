@@ -36,6 +36,9 @@
         - name: Common questions about Defender for Containers
           displayName: containers, common questions, faq, frequently asked questions
           href: faq-defender-for-containers.yml
+        - name: Common questions about Copilot in Defender for Cloud
+          displayName: copilot, common questions, faq, frequently asked questions
+          href: faq-copilot.yml
 
 - name: Plan
   items:
@@ -241,6 +244,14 @@
           - name: Create automatic tickets with governance rules
             displayName: CSPM, cloud security, posture, management, ServiceNow
             href: create-governance-rule-servicenow.md
+        - name: Power BI
+          items:
+          - name: Power BI integration with Defender for Cloud
+            displayName: CSPM, cloud security, posture, management, Power BI
+            href: integration-power-bi.md
+          - name: Add Defender for Cloud data to Power BI
+            displayName: CSPM, cloud security, posture, management, Power BI
+            href: add-data-power-bi.md
       - name: Common questions 
         displayName: questions, common, CSPM, agentless scanning, faq, frequently asked questions
         href: faq-cspm.yml
@@ -408,6 +419,8 @@
         - name: Attack path analysis and enhanced risk-hunting for containers
           displayName: attack paths, paths, security explorer, test
           href: how-to-test-attack-path-and-security-explorer-with-vulnerable-container-image.md
+        - name: Configure a Docker Hub external container registry
+          href: defender-for-containers-enable-external-registry-for-docker-hub.md
     - name: Secrets security posture
       items: 
       - name: Remediate issues with VM secrets
@@ -503,7 +516,7 @@
     - name: Manage security by subscriptions, users, and permissions
       items:
         - name: Grant and request tenant-wide permissions
-          displayName: global admin, Azure Active Directory (AD), AAD
+          displayName: Azure Active Directory (AD), AAD
           href: tenant-wide-permissions-management.md
         - name: Enable Defender for Cloud for a management group
           displayName: management group
@@ -625,7 +638,7 @@
       - name: Plan Defender for Servers deployment
         items:
           - name: Get started
-            displayName: VM, JIT, plan 1, plan 2, plans, vulnerability assessment, threat management, defender for endpoint, vulnerability scanner, Qualys, FIM, File integrity monitoring, adaptive application controls, adaptive network hardening, docker, fileless attack detection, auditd, simulate alerts
+            displayName: VM, JIT, plan 1, plan 2, plans, vulnerability assessment, threat management, defender for endpoint, vulnerability scanner, Qualys, FIM, File integrity monitoring, docker, fileless attack detection, auditd, simulate alerts
             href: plan-defender-for-servers.md
           - name: Review data residency and workspace design
             href: plan-defender-for-servers-data-workspace.md
@@ -680,10 +693,15 @@
       - name: Understand File Integrity Monitoring
         displayName: fim, change
         href: file-integrity-monitoring-overview.md
-      - name: Enable File Integrity Monitoring (AMA)
+      - name: File Integrity Monitoring over Defender for Endpoint
+        displayName: fim, change, defender for endpoint, mde
+        href:  file-integrity-monitoring-enable-defender-endpoint.md
+      - name: Migrate from previous versions
+        href:  migrate-file-integrity-monitoring.md
+      - name: File Integrity Monitoring over AMA (Deprecated)
         displayName: fim, change, azure monitor agent
         href: file-integrity-monitoring-enable-ama.md
-      - name: Enable File Integrity Monitoring (Log Analytics)
+      - name: File Integrity Monitoring over Log Analytics
         displayName: fim, change, log analytics, mma
         href: file-integrity-monitoring-enable-log-analytics.md
     - name: Just-in-time access
@@ -702,25 +720,17 @@
       - name: Enable the Defender for Endpoint integration
         displayName: ATP, mdatp, wdatp, mde, mdfe, defender for endpoint, endpoint, edr
         href: enable-defender-for-endpoint.md
-      - name: Assessment checks for endpoint detection and response solutions (MMA)
-        href: endpoint-protection-recommendations-technical.md
-      - name: Review and remediate endpoint detection and response  recommendations (agentless)
+      - name: Review and remediate endpoint detection and response recommendations (agentless)
         displayName: defender for endpoint, endpoint, edr
         href: endpoint-detection-response.md
-    - name: Adaptive application controls
-      items:
-      - name: Understand adaptive application controls
-        displayName: aac, allowlist, reviewgroup
-        href: adaptive-application-controls.md
-      - name: Enable and manage adaptive application controls
-        displayName: aac, allowlist, reviewgroup
-        href: enable-adaptive-application-controls.md
+      - name: Review and remediate endpoint detection and response recommendations (MMA)
+        href: endpoint-protection-recommendations-technical.md
     - name: Review server protection
       items:
         - name: Remediate security baseline recommendations (Defender Vulnerability Management)
           displayName: security, baseline, remediate, mdvm, vulnerability, assessment, va
           href: remediate-security-baseline.md
-        - name: Review hardening recommendations
+        - name: Remediate guest configuration recommendations
           displayName: VM, guest configuration, vulnerabilities, ASB, benchmark
           href: apply-security-baseline.md
         - name: Review Docker host hardening recommendations
@@ -735,12 +745,12 @@
         - name: Compare baselines using file integrity monitoring
           displayName: fim, change
           href: file-integrity-monitoring-usage.md
-        - name: Improve network security posture
-          displayName: anh, adaptive network hardening
-          href: adaptive-network-hardening.md
         - name: Review applications and software installed on machines
           displayName: inventory, apps, software inventory, mde, tvm
           href: asset-inventory.md#access-a-software-inventory
+        - name: Remediate system updates and patches recommendations
+          displayName: update, system, updates, patches
+          href: enable-periodic-system-updates.md
     - name: Common questions (FAQ)
       items:
         - name: Common questions about Defender for Servers
@@ -770,6 +780,8 @@
             href: agentless-vulnerability-assessment-aws.md
           - name: Vulnerability assessments for GCP
             href: agentless-vulnerability-assessment-gcp.md
+          - name: Vulnerability assessments for Docker Hub
+            href: agentless-vulnerability-assessment-docker-hub.md
           - name: Enable vulnerability assessments
             href: enable-vulnerability-assessment.md
           - name: Remediate vulnerabilities for registry images (risk-based)

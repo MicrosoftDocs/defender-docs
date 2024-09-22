@@ -5,7 +5,7 @@ ms.topic: limits-and-quotas
 ms.custom: linux-related-content
 author: dcurwin
 ms.author: dacurwin
-ms.date: 03/13/2024
+ms.date: 09/08/2024
 ---
 
 # Defender for Servers support
@@ -47,12 +47,11 @@ This table summarizes Azure cloud support for Defender for Servers features.
 | [VM vulnerability scanning - Qualys](deploy-vulnerability-assessment-vm.md) | GA | NA | NA |
 | [Just-in-time VM access](./just-in-time-access-usage.yml) | GA | GA | GA |
 | [File integrity monitoring](./file-integrity-monitoring-overview.md)  | GA | GA | GA |
-| [Adaptive application controls](./adaptive-application-controls.md)  | GA | GA | GA |
-| [Adaptive network hardening](./adaptive-network-hardening.md) | GA | NA | NA |
 | [Docker host hardening](./harden-docker-hosts.md)  | GA | GA | GA |
 | [Agentless secret scanning](secrets-scanning.md) | GA | NA | NA |
-| [Agentless malware scanning](agentless-malware-scanning.md) | Preview | NA | NA |
-| [Endpoint detection and response](endpoint-detection-response.md) | Preview | NA | NA |
+| [Agentless malware scanning](agentless-malware-scanning.md) | GA | NA | NA |
+| [Agentless assessment checks for endpoint detection and response solutions](endpoint-detection-response.md) | GA | NA | NA |
+| [System updates and patches](enable-periodic-system-updates.md) | GA | GA | GA |
 
 ## Windows machine support
 
@@ -67,17 +66,16 @@ The following table shows feature support for Windows machines in Azure, Azure A
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - | Yes |
 | [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ | Yes |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ | Yes |
-| [Adaptive application controls](adaptive-application-controls.md) | ✔ | ✔ | Yes |
 | [Network map](protect-network-resources.md#network-map) | ✔ | - | Yes |
-| [Adaptive network hardening](adaptive-network-hardening.md) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
 | [Docker host hardening](./harden-docker-hosts.md) | - | - | Yes |
-| Missing OS patches assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
+| [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
 | Security misconfigurations assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | Disk encryption assessment | ✔</br>([supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) | - | No |
 | Third-party vulnerability assessment (BYOL) | ✔ | - | No |
 | [Network security assessment](protect-network-resources.md) | ✔ | - | No |
+| [System updates and patches](enable-periodic-system-updates.md) | ✔ | ✔ | Yes (Plan 2)|
 
 ## Linux machine support
 
@@ -92,17 +90,16 @@ The following table shows feature support for Linux machines in Azure, Azure Arc
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - | Yes |
 | [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ | Yes |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ | Yes |
-| [Adaptive application controls](adaptive-application-controls.md) | ✔ | ✔ | Yes |
 | [Network map](protect-network-resources.md#network-map) | ✔ | - | Yes |
-| [Adaptive network hardening](adaptive-network-hardening.md) | ✔ | - | Yes |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ | Yes |
 | [Docker host hardening](./harden-docker-hosts.md) | ✔ | ✔ | Yes |
-| Missing OS patches assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
+| [Missing OS patches assessment](apply-security-baseline.md) | ✔ | ✔ | Azure: Yes<br><br>Azure Arc-enabled: Yes |
 | Security misconfigurations assessment | ✔ | ✔ | Azure: No<br><br>Azure Arc-enabled: Yes |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | - | - | No |
 | Disk encryption assessment | ✔</br> [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) | - | No |
 | Third-party vulnerability assessment (BYOL) | ✔ | - | No |
 | [Network security assessment](protect-network-resources.md) | ✔ | - | No |
+| [System updates and patches](enable-periodic-system-updates.md) | ✔ | ✔ | Yes (Plan 2)|
 
 ## Multicloud machines
 
@@ -117,12 +114,10 @@ The following table shows feature support for AWS and GCP machines.
 | [Just-in-time VM access](just-in-time-access-usage.yml) | ✔ | - |
 | [Integrated Qualys vulnerability scanner](deploy-vulnerability-assessment-vm.md#overview-of-the-integrated-vulnerability-scanner) | ✔ | ✔ |
 | [File Integrity Monitoring](file-integrity-monitoring-overview.md) | ✔ | ✔ |
-| [Adaptive application controls](adaptive-application-controls.md) | ✔ | ✔ |
 | [Network map](protect-network-resources.md#network-map) | - | - |
-| [Adaptive network hardening](adaptive-network-hardening.md) | - | - |
 | [Regulatory compliance dashboard & reports](regulatory-compliance-dashboard.md) | ✔ | ✔ |
 | [Docker host hardening](harden-docker-hosts.md) | ✔ | ✔ |
-| Missing OS patches assessment | ✔ | ✔ |
+| [Missing OS patches assessment](apply-security-baseline.md)| ✔ | ✔ |
 | Security misconfigurations assessment | ✔ | ✔ |
 | [Endpoint protection assessment](supported-machines-endpoint-solutions-clouds-servers.md#supported-endpoint-protection-solutions) | ✔ | ✔ |
 | Disk encryption assessment | ✔</br>(for [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) | ✔</br>(for [supported scenarios](/azure/virtual-machines/windows/disk-encryption-windows)) |
@@ -132,6 +127,7 @@ The following table shows feature support for AWS and GCP machines.
 | [Agentless secret scanning](secrets-scanning.md) | ✔ | ✔ |
 | [Agentless malware scanning](agentless-malware-scanning.md) | ✔ | ✔ |
 | [Endpoint detection and response](endpoint-detection-response.md) | ✔ | ✔ |
+| [System updates and patches](enable-periodic-system-updates.md) | ✔ <br> (With Azure Arc) | ✔ (With Azure Arc) |
 
 ## Endpoint protection support
 

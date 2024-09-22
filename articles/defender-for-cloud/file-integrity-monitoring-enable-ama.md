@@ -6,7 +6,7 @@ ms.author: dacurwin
 ms.topic: how-to
 ms.date: 03/12/2024
 ---
-# Enable File Integrity Monitoring when using the Azure Monitor Agent
+# Enable File Integrity Monitoring when using the Azure Monitor Agent (Deprecated)
 
 To provide [File Integrity Monitoring (FIM)](file-integrity-monitoring-overview.md), the Azure Monitor Agent (AMA) collects data from machines according to [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview). When the current state of your system files is compared with the state during the previous scan, FIM notifies you about suspicious modifications.
 

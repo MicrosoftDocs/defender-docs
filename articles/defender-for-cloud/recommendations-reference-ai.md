@@ -38,7 +38,7 @@ This recommendation replaces the old recommendation *Cognitive Services accounts
 **Severity**: Medium
 
 
-### [Azure AI Services resources should use Azure Private Link](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/54f53ddf-6ebd-461e-a247-394c542bc5d1)
+### [Azure AI Services resources should use Azure Private Link](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/67279c29-fa4c-4f09-ae59-cb1491565995)
 
 **Description**: Azure Private Link lets you connect your virtual network to Azure services without a public IP address at the source or destination. The Private Link platform reduces data leakage risks by handling the connectivity between the consumer and services over the Azure backbone network.
 
