@@ -29,30 +29,30 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 
 ## September 2024
 
-|Date || Category | Update|
-|--| -------- |--|--|
-|September 19||Upcoming change|[Cloud security explorer experience improvements](#cloud-security-explorer-experience-improvements)|
-| September 18 || GA | [General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint](#general-availability-of-file-integrity-monitoring-based-on-microsoft-defender-for-endpoint) |
-| September 18 || GA | [FIM migration experience is available in Defender for Cloud](#fim-migration-experience-is-available-in-defender-for-cloud) |
-| September 18 || Deprecation | [Deprecation of MMA auto-provisioning capability](#deprecation-of-mma-auto-provisioning-capability) |
-| September 15 || GA | [Integration with Power BI](#integration-with-power-bi) |
-|September 11||Upcoming change|[Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements)|
-| September 9 || Deprecation | [Defender for Servers feature deprecation](#defender-for-servers-feature-deprecation) |
-| September 9 || GA | [Spanish National Security Framework (Esquema Nacional de Seguridad (ENS)) added to regulatory compliance dashboard for Azure](#spanish-national-security-framework-esquema-nacional-de-seguridad-ens-added-to-regulatory-compliance-dashboard-for-azure)|
-| September 8 || GA | [Remediate system updates and patches recommendations on your machines](#remediate-system-updates-and-patches-recommendations-on-your-machines)|
-| September 4 || GA | [ServiceNow's integration now includes Configuration Compliance module](#servicenows-integration-now-includes-configuration-compliance-module) |
-| September 4 || Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
-| September 1 || GA  | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
-|September 1|| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
+|Date | Category | Update|
+|--|--|--|
+|September 22|Upcoming change|[Cloud security explorer experience improvements](#cloud-security-explorer-experience-improvements)|
+| September 18 | GA | [General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint](#general-availability-of-file-integrity-monitoring-based-on-microsoft-defender-for-endpoint) |
+| September 18 | GA | [FIM migration experience is available in Defender for Cloud](#fim-migration-experience-is-available-in-defender-for-cloud) |
+| September 18 | Deprecation | [Deprecation of MMA auto-provisioning capability](#deprecation-of-mma-auto-provisioning-capability) |
+| September 15 | GA | [Integration with Power BI](#integration-with-power-bi) |
+|September 11|Upcoming change|[Update to CSPM multicloud network requirements](#update-to-cspm-multicloud-network-requirements)|
+| September 9 | Deprecation | [Defender for Servers feature deprecation](#defender-for-servers-feature-deprecation) |
+| September 9 | GA | [Spanish National Security Framework (Esquema Nacional de Seguridad (ENS)) added to regulatory compliance dashboard for Azure](#spanish-national-security-framework-esquema-nacional-de-seguridad-ens-added-to-regulatory-compliance-dashboard-for-azure)|
+| September 8 | GA | [Remediate system updates and patches recommendations on your machines](#remediate-system-updates-and-patches-recommendations-on-your-machines)|
+| September 4 | GA | [ServiceNow's integration now includes Configuration Compliance module](#servicenows-integration-now-includes-configuration-compliance-module) |
+| September 4 | Upcoming change | [Defender for Storage (classic) per-transaction storage protection plan not available for new subscriptions](#defender-for-storage-classic-per-transaction-storage-protection-plan-not-available-for-new-subscriptions) |
+| September 1 | GA  | [Azure Policy guest configuration is now generally available (GA)](#azure-policy-guest-configuration-is-now-generally-available-ga) |
+|September 1| Preview |[Public Preview for Docker Hub container registry support by Defender for Containers](#public-preview-for-docker-hub-container-registry-support-by-defender-for-containers) |
 
 
 ### Cloud security explorer experience improvements
 
-September 19, 2024
+September 22, 2024
 
 **Estimated date for change:** October 2024
 
-The Cloud Security Explorer is set to improve performance and grid functionality, add additional data enrichment on each asset, improve search categories, and improve CSV export report with additional insights on the exported assets.
+The Cloud Security Explorer is set to improve performance and grid functionality, add additional data enrichment on each cloud asset, improve search categories, and improve CSV export report with additional insights on the exported cloud assets.
 
 ### General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint
 September 18, 2024
