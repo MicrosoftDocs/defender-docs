@@ -3,8 +3,8 @@ title: Onboard Windows servers to the Microsoft Defender for Endpoint service
 description: Onboard Windows servers so that they can send sensor data to the Microsoft Defender for Endpoint sensor.
 search.appverid: met150
 ms.service: defender-endpoint
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.reviewer: pahuijbr
 ms.localizationpriority: medium
 ms.date: 05/20/2024

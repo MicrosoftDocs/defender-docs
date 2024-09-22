@@ -2,8 +2,8 @@
 title: Recommendation methods and properties
 description: Retrieves the top recent alerts.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
