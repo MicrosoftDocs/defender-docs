@@ -3,8 +3,8 @@ title: View and manage incidents and alerts in Microsoft Defender multitenant ma
 description: Learn about incidents and alerts in Microsoft Defender multitenant management
 search.appverid: met150
 ms.service: defender-xdr
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

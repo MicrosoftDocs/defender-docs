@@ -2,8 +2,8 @@
 title: Create and manage device tags
 description: Use device tags to group devices to capture context and enable dynamic list creation as part of an incident
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

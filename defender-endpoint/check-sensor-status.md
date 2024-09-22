@@ -3,8 +3,8 @@ title: Check the device health at Microsoft Defender for Endpoint
 description: Check the sensor health on devices to identify which ones are misconfigured, inactive, or aren't reporting sensor data.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

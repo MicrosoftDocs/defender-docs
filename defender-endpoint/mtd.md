@@ -4,8 +4,8 @@ ms.reviewer: tdoucette, sunasing
 description: Overview of Mobile Threat Defense in Microsoft Defender for Endpoint
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.date: 09/05/2024
 manager: deniseb
