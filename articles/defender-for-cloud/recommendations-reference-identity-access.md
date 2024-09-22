@@ -252,12 +252,6 @@ Learn more in [Introduction to Microsoft Defender for Key Vault](defender-for-ke
 
 **Severity**: Medium
 
-### [Super identities in your Azure environment should be removed](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/fe7d5a87-36fc-4530-99b5-1848512a3209)
-
-**Description**: Super Identity is any human or workload identity such as users, Service Principals, and serverless functions that have admin permissions and can perform any action on any resource across the infrastructure. Super Identities are extremely high risk, as any malicious or accidental permissions misuse can result in catastrophic service disruption, service degradation, or data leakage. Super Identities pose a huge threat to cloud infrastructure. Too many super identities can create excessive risks and increase the blast radius during a breach.
-
-**Severity**: Medium
-
 ### [Privileged roles should not have permanent access at the subscription and resource group level](https://portal.azure.com/#view/Microsoft_Azure_Security/IdentityRecommendationDetailsBlade/assessmentKey/706b33f0-129e-4ed0-a179-f450b9ee4145/showSecurityCenterCommandBar~/true)
 
 **Description:** Microsoft Defender for Cloud discovered an identity that has not performed any action on any resource within your Azure subscription in the past 45 days. It is recommended to revoke permissions of inactive identities, in order to reduce the attack surface of your cloud environment.
@@ -1002,13 +996,6 @@ GCP facilitates up to 10 external service account keys per service account to fa
 **Description**: This recommendation evaluates the IAM policy in resource metadata for any principals assigned roles/Owner, roles/Writer, or roles/Reader.
 
 **Severity**: High
-
-### [Super Identities in your GCP environment should be removed](https://ms.portal.azure.com/#view/Microsoft_Azure_Security/GenericRecommendationDetailsBlade/assessmentKey/7057d0ba-7d1c-4484-8bae-e82785cf8418)
-
-**Description**: A super identity has a powerful set of permissions. Super admins are human or workload identities that have access to all permissions and all resources. They can create and modify configuration settings to a service, add or remove identities, and access or even delete data. Left unmonitored, these identities present a significant risk of permission misuse if breached.
-
-**Severity**: High
-
 
 ## Related content
 
