@@ -163,6 +163,14 @@
             - name: Add Defender for Cloud data to Power BI
               displayName: CSPM, cloud security, posture, management, Power BI
               href: add-data-power-bi.md
+          - name: Microsoft Defender for Endpoint
+            items:
+            - name: Overview Microsoft Defender for Endpoint integration
+              displayName: CSPM, cloud security, posture, management, Microsoft Defender for Endpoint
+              href: integration-defender-for-endpoint.md
+            - name: Enable the Defender for Endpoint integration
+              displayName: CSPM, cloud security, posture, management, Microsoft Defender for Endpoint
+              href: enable-defender-for-endpoint.md
           - name: API partners
             items:
             - name: Partner applications
