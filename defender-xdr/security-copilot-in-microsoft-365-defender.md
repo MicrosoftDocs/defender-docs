@@ -17,17 +17,18 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
-ms.date: 08/20/2024
+ms.date: 09/23/2024
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Microsoft Copilot in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Sentinel in the Microsoft Defender portal
+> [!NOTE]
+> Microsoft Defender XDR provides a unified XDR experience for Microsoft Defender for Endpoint, Microsoft Defender for Identity, Microsoft Defender for Office 365, Microsoft Defender for Cloud Apps, and Microsoft Defender for Vulnerability Management. Learn more about this pre- and post-breach defense suite in [What is Microsoft Defender XDR?](microsoft-365-defender.md)
 
 [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Copilot for Security is embedded in the Microsoft Defender portal to enable security teams to efficiently summarize incidents, analyze scripts and codes, analyze files, summarize device information, use guided responses to resolve incidents, generate KQL queries, and create incident reports.
 
@@ -73,6 +74,12 @@ Copilot helps security teams quickly assess and understand suspicious files with
 
 :::image type="content" source="/defender/media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide-small.png" alt-text="Screenshot of the file analysis results in Copilot in Defender with the Hide details option highlighted." lightbox="/defender/media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide.png":::
 
+### Investigate identities immediately
+
+Quickly assess a user’s risk by generating an [identity summary](security-copilot-defender-identity-summary.md) with Copilot. Identify when an identity is at risk or suspicious with contextualized information about a user’s role and role changes, sign in behaviors, devices signed in to, and relevant contact information.
+
+:::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-incident-graph-small.png" alt-text="Screenshot showing the Summarize option in the user details pane." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-incident-graph.png":::
+
 ### Write incident reports efficiently
 
 Security operations teams usually write reports to record important information, including what response actions were taken and the corresponding results, the team members involved, and other information to aid future security decisions and learning. Oftentimes, documenting incidents can be time-consuming. For an incident report to be effective, it must contain an incident's summary along with the actions taken, including what actions were taken by whom and when. Copilot [generates an incident report](security-copilot-m365d-create-incident-report.md) by quickly consolidating these pieces of information.
@@ -108,9 +115,9 @@ Because of its continuing evolution, Copilot might miss some things. Reviewing a
 All Copilot in Defender capabilities have an option for providing feedback. To provide feedback, perform the following steps:
 
 1. Select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards.](/defender/media/copilot-in-defender/copilot-defender-feedback.png) located at the bottom of any results card in the Copilot side panel.
-2. Select **Confirmed, it looks great** if the results are accurate based on your assessment. You can provide more information in the next dialog box.
-3. Select **Off-target, inaccurate** if any detail is incorrect or incomplete based on your assessment. You can provide more information about your assessment in the next dialog box and submit this assessment to Microsoft.
-4. You can also report the results if it contains questionable or ambiguous information by selecting **Potentially harmful, inappropriate**. Provide more information about the results in the next dialog box and select Submit.
+2. Select **Looks right** if you deem the results accurate. You can provide more information in the next dialog box.
+3. Select **Needs improvement** if you assessed the result as lacking or incomplete. You can provide more information about your assessment in the next dialog box and submit this assessment to Microsoft.
+4. You can also report the results if it contains questionable or ambiguous information by selecting **Inappropriate**. Provide more information about the results in the next dialog box and select Submit.
 
 <a name='microsoft-365-defender-plugin-in-security-copilot'></a>
 

@@ -18,7 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 09/23/2024
-appliiesto:
+appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the unified security operations center (SOC) platform
 ---
@@ -58,6 +58,10 @@ You can access the identity summary capability in the following ways:
 - You can also access the identity summary capability by choosing a user in the **Assets** tab of an incident. Select **Summarize** in the user details pane to generate the identity summary.
 
    :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-assets-small.png" alt-text="Screenshot showing the Assets tab and a user account highlighted." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-assets.png":::
+
+- In an alert page, select a user then select **Summarize** in the user details pane to generate the identity summary.
+
+- In the advanced hunting page, you can access the identity summary capability by selecting a user in the results table, then selecting the link to the user page. Copilot automatically generates the identity summary and displays the side panel upon opening the user page.
 
 - From the main menu, navigate to **Assets > Identities**. Select a username from the list, then select **View user page** to open the user page. Copilot automatically generates the identity summary and displays the side panel upon opening the user page.
 
