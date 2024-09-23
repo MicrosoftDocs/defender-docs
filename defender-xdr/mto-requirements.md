@@ -2,8 +2,8 @@
 title: Set up Microsoft Defender multitenant management
 description: Learn what steps you need to take to get started with multitenant management for Microsoft Defender XDR and the Microsoft unified security operations platform.
 ms.service: defender-xdr
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
