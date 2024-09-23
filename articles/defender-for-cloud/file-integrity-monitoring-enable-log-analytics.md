@@ -49,11 +49,8 @@ File integrity monitoring uses [Azure Automation change tracking](/azure/automat
     :::image type="content" source="./media/file-integrity-monitoring-overview/workspace-list-fim.png" alt-text="Screenshot of enabling file integrity monitoring for a specific workspace.":::
 
 
-1. Enable Defender for Cloud plans if needed.
-
-    The ![Upgrade plan icon.][4] indicates that the workspace or subscription isn't protected with the Defender for Servers plan. Defender for Servers Plan 2 must be enabled to use file integrity monitoring features. Learn [how to enable Defender for Servers](plan-defender-for-servers-select-plan.md).
-
-1. Select the ![Enable icon][3] to turn on file integrity monitoring for a workspace.
+1. Enable Defender for Cloud plans if needed
+1. Turn on file integrity monitoring for a workspace.
 1. Review the workspace details, including the number of Windows and Linux machines in the workspace.
 1. Expand **Windows files**, **Registry**, and **Linux files** to see the full list of recommended items.
 

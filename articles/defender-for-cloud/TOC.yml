@@ -755,12 +755,9 @@
         href: software-inventory.md
       - name: Remediate machine secrets
         href: remediate-server-secrets.md 
-      - name: Review Docker host hardening recommendations
-        displayName: containers
-        href: harden-docker-hosts.md
-      - name: Review changes with file integrity monitoring (Defender for Endpoint)
+      - name: Review file integrity changes
         href: file-integrity-monitoring-review-changes.md
-      - name: Review changes with file integrity monitoring (MMA)
+      - name: Review file integrity changes (MMA)
         displayName: fim, change
         href: file-integrity-monitoring-compare-baselines.md
     - name: Common questions 

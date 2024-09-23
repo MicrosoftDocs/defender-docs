@@ -5,22 +5,22 @@ ms.topic: how-to
 ms.date: 06/29/2023
 ---
 
-# Overview - Just-in-time (JIT) machine access
+# Overview - Just-in-time machine access
 
-Defender for Servers Plan 2 in Microsoft Defender for Cloud provides a just-in-time (JIT) machine access feature.
+Defender for Servers Plan 2 in Microsoft Defender for Cloud provides a just-in-time machine access feature.
 
-Threat actors actively hunt accessible machines with open management ports, like RDP or SSH. All of your machines are potential targets for an attack. When a machine is successfully compromised, it's used as the entry point to attack further resources within your environment.
+Threat actors actively hunt accessible machines with open management ports, like RDP or SSH. All of your machines are potential targets for an attack. When a machine is successfully compromised, it's used as the entry point to attack further resources in the environment.
 
-As with all cybersecurity prevention techniques, your goal should be to reduce the attack surface. In this case that means having fewer open ports especially management ports. Legitimate users also use these ports, so it's not practical to keep them closed.
+Like all cybersecurity prevention techniques, your goal should be to reduce the attack surface. In this case that means having fewer open ports especially management ports. Legitimate users also use these ports, so it's not practical to keep them closed.
 
-To solve this dilemma, Microsoft Defender for Cloud offers just-in-time machine access so that you can lock down the inbound traffic to your VMs, reducing exposure to attacks while providing easy access to connect to VMs when needed.
+To solve this dilemma, Defender for Cloud offers just-in-time machine access so that you can lock down the inbound traffic to your VMs, reducing exposure to attacks while providing easy access to connect to VMs when needed.
 
 
 ## Just-in-time access and network resources 
 
 ### Azure
 
-In Azure, you can block inbound traffic on specific ports, by enabling just-in-time VM access. 
+In Azure, you can block inbound traffic on specific ports, by enabling just-in-time access. 
 
 - Defender for Cloud ensures "deny all inbound traffic" rules exist for your selected ports in the [network security group (NSG)](/azure/virtual-network/network-security-groups-overview.#security-rules) and [Azure Firewall rules](/azure/firewall/rule-processing).
 - These rules restrict access to your Azure VMs’ management ports and defend them from attack.
@@ -29,7 +29,7 @@ In Azure, you can block inbound traffic on specific ports, by enabling just-in-t
 
 ### AWS
 
-In AWS, by enabling JIT access the relevant rules in the attached EC2 security groups, for the selected ports, are revoked which blocks inbound traffic on those specific ports.
+In AWS, by enabling just-in-time access, the relevant rules in the attached EC2 security groups (for the selected ports) are revoked, blocking inbound traffic on those specific ports.
 
 - When a user requests access to a VM, Defender for Servers checks that the user has [Azure role-based access control (Azure RBAC)](/azure/role-based-access-control/role-assignments-portal) permissions for that VM.
 - If the request is approved, Defender for Cloud configures the NSGs and Azure Firewall to allow inbound traffic to the selected ports from the relevant IP address (or range), for the amount of time that was specified.
@@ -38,7 +38,8 @@ In AWS, by enabling JIT access the relevant rules in the attached EC2 security g
 - Connections that are already established aren't interrupted.
 
 > [!NOTE]
-> JIT doesn't support VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview).  The Azure Firewall must be configured with Rules (Classic) and cannot use Firewall policies.
+> - Just-in-time access doesn't support VMs protected by Azure Firewalls controlled by [Azure Firewall Manager](/azure/firewall-manager/overview).
+> - The Azure Firewall must be configured with Rules (Classic) and can't use Firewall policies.
 
 ## Identifying VMs for just-in-time access
 
@@ -50,7 +51,7 @@ The following diagram shows the logic that Defender for Servers applies when dec
 
 ### [**AWS**](#tab/defender-for-container-arch-eks)
 
-:::image type="content" source="media/just-in-time-explained/aws-jit-logic-flow.png" alt-text="A chart that explains the logic flow for the AWS Just in time (J I T) virtual machine (V M) logic flow.":::
+:::image type="content" source="media/just-in-time-explained/aws-jit-logic-flow.png" alt-text="A chart that explains the logic flow for the AWS just-in-time logic flow.":::
 
 ---
 
@@ -60,5 +61,5 @@ When Defender for Cloud finds a machine that can benefit from just-in-time acces
 
 ## Next steps
 
-[Enable just-in-time access on VMs](just-in-time-access-usage.yml)
+[Enable just-in-time access on VMs](just-in-time-access-usage.yml).
 

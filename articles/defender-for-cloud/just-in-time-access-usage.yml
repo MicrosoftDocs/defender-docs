@@ -17,7 +17,7 @@ introduction: |
   
   You can use Microsoft Defender for Cloud's just-in-time access to protect your Azure VMs from unauthorized network access. Many times firewalls contain allow rules that leave your VMs vulnerable to attack. JIT lets you allow access to your VMs only when the access is needed, on the ports needed, and for the period of time needed.
 
-  In this article, you learn how set up and use just-in-time access, including how to:
+  In this article, you learn how to set up and use just-in-time access, including how to:
 
   - Enable just-in-time on VMs from the Azure portal or programmatically
   - Request access to a VM that has just-in-time access enabled from the Azure portal or programmatically

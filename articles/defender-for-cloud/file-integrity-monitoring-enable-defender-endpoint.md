@@ -11,18 +11,19 @@ ms.date: 09/09/2024
 
 In the Defender for Servers plan in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
-File integrity monitoring uses [Azure Automation change tracking](/azure/automation/change-tracking/overview) so that you can monitor changes directly in Defender for Cloud. 
 
-This article describes how to set up file integrity monitoring with the integrated [Microsoft Defender for Endpoint](file-integrity-monitoring-overview.md#defender-for-endpoint-monitoring) agent.
+This article describes how to set up file integrity monitoring using the [Microsoft Defender for Endpoint](file-integrity-monitoring-overview.md#defender-for-endpoint-monitoring) agent to collect data.
 
-For guidance on which files to monitor, see [Which files should I monitor?](file-integrity-monitoring-overview.md#choosing-what-to-monitor).
+> [!Note]
+> The older method of data collection uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). Support for using the MMA will end in November 2024.
 
 ## Prerequisites
 
 - [Defender for Servers Plan 2](plan-defender-for-servers-select-plan.md#plan-features) should be enabled.
-- The [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) sensor should be installed on machines you want to monitor.
+- The [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) agent should be installed on machines you want to monitor.
 - You need **Workspace owner** or **Security admin** permissions to enable and disable file integrity monitoring. **Reader** permissions can view results.
-- File integrity monitoring with Defender for Endpoint is supported from Azure VMs, Azure Arc-enabled VMs, connected AWS accounts and GCP projects.
+- File integrity monitoring with Defender for Endpoint is supported for Azure VMs, Azure Arc-enabled VMs, connected AWS accounts and GCP projects.
+- For guidance on which files to monitor, see [Which files should I monitor?](file-integrity-monitoring-overview.md#choosing-what-to-monitor).
 
 
 ## Enable file integrity monitoring
@@ -57,7 +58,7 @@ For guidance on which files to monitor, see [Which files should I monitor?](file
 
 ## Disable file integrity monitoring
 
-If you disable file integrity monitoring, no new events are collected. However, the data collected before the disabling the feature remains in the workspace, according to the workspace's retention policy.
+If you disable file integrity monitoring, no new events are collected. However, the data collected before you disabled the feature remains in the Log Analytics workspace, in accordance with the workspace retention policy.
 
 Disable as follows:
 
