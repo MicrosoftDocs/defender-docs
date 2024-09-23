@@ -37,6 +37,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | September 29 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
 | September 29 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
 | September 29 | GA | [Dangling ACR hardening recommendation](#dangling-acr-hardening-recommendation-preview) |
+| September 22 |Upcoming change|[Cloud security explorer experience improvements](#cloud-security-explorer-experience-improvements)|
 | September 18 | GA | [General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint](#general-availability-of-file-integrity-monitoring-based-on-microsoft-defender-for-endpoint) |
 | September 18 | GA | [FIM migration experience is available in Defender for Cloud](#fim-migration-experience-is-available-in-defender-for-cloud) |
 | September 18 | Deprecation | [Deprecation of MMA auto-provisioning capability](#deprecation-of-mma-auto-provisioning-capability) |
@@ -96,6 +97,14 @@ Defender for Cloud now collects inventory data for all container images in suppo
 September 29, 2024
 
 Defender for Cloud now detects when container workloads try to pull images from deleted ACRs and will provide a recommendation to stop using those images. This recommendation helps organizations protect themselves against malicious actors that would recreate the ACRs the images are pulled from and replace the images with malicious images.
+
+### Cloud security explorer experience improvements
+
+September 22, 2024
+
+**Estimated date for change:** October 2024
+
+The Cloud Security Explorer is set to improve performance and grid functionality, add additional data enrichment on each cloud asset, improve search categories, and improve CSV export report with additional insights on the exported cloud assets.
 
 ### General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint
 September 18, 2024
