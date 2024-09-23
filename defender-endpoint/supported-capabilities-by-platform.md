@@ -67,7 +67,7 @@ The following table gives information about the supported Microsoft Defender for
 
 <sup>[3]</sup> Feature is currently in preview ([Microsoft Defender for Endpoint preview features](/defender-xdr/preview)) Or you can also use Live Response [2]
 
-<sup>[4]</sup> Collect file only, is currently in preview ([Microsoft Defender for Endpoint preview features](/defender-xdr/preview)) Or you can also use Live Response [2]
+<sup>[4]</sup> Collect file only or you can also use Live Response [2]
 
 <sup>[5]</sup> Endpoint & network device discovery is supported on Windows Server 2019 or later, Windows 10, and Windows 11
 
