@@ -6,7 +6,7 @@ ms.service: defender-xdr
 ms.author: diannegali
 author: diannegali
 ms.localizationpriority: medium
-ms.date: 09/24/2024
+ms.date: 09/23/2024
 manager: dansimp
 audience: ITPro
 ms.collection:
