@@ -209,6 +209,11 @@
       "source_path": "defender-endpoint/evaluate-mde.md",
       "redirect_url": "/defender-endpoint/evaluate-microsoft-defender-antivirus",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/defender-endpoint-antivirus-exclusions.md",
+      "redirect_url": "/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions",
+      "redirect_document_id": false
     }
   ]
 }

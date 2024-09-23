@@ -5,8 +5,8 @@ metadata:
   ms.service: defender-endpoint
   ms.localizationpriority: medium
   ms.topic: faq
-  author: siosulli
-  ms.author: siosulli
+  author: denisebmsft
+  ms.author: deniseb
   ms.custom: nextgen
   ms.reviewer:
   manager: deniseb
@@ -27,7 +27,7 @@ sections:
       - question: |
           Tamper protection is preventing my security team from managing a device. What should we do?
         answer: |
-         If tamper protection prevents your IT or security team from performing a necessary task on a device, consider using [troubleshooting mode](enable-troubleshooting-mode.md). After troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
+         If your IT or security team is prevented from performing a necessary task on a device, consider using [troubleshooting mode](enable-troubleshooting-mode.md). After troubleshooting mode ends, any changes made to tamper-protected settings are reverted to their configured state.
 
       - question: |
           Changes to Microsoft Defender Antivirus settings using Group Policy are ignored. Why is this happening, and what can we do about it?
@@ -57,7 +57,7 @@ sections:
 
              - If **ManagedDefenderProductType** has a value of `6`, then the device is managed by Intune only (*this value is required to protect Microsoft Defender Antivirus exclusions*).
 
-             - If **ManagedDefenderProductType** has a value of `7`, then the device is comanaged, such as by Intune and Configuration Manager (*this value indicates that exclusions aren't currently tamper protected*).
+             - If **ManagedDefenderProductType** has a value of `7`, then the device is co-managed, such as by Intune and Configuration Manager (*this value indicates that exclusions aren't currently tamper protected*).
 
           3. Confirm that tamper protection is deployed and that Microsoft Defender Antivirus exclusions are protected. Go to `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Features` (or `HKLM\SOFTWARE\Microsoft\Windows Defender\Features`), and look for a `REG_DWORD` entry called **TPExclusions**.
 
