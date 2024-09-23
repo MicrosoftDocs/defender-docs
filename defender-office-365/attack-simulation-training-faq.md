@@ -19,7 +19,7 @@ ms.custom:
   - seo-marvel-apr2020
 description: Admins can learn about deployment considerations and frequently asked questions regarding Attack simulation and training in Microsoft 365 E5 or Microsoft Defender for Office 365 Plan 2 organizations.
 ms.service: defender-office-365
-ms.date: 06/14/2024
+ms.date: 09/23/2024
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -361,12 +361,16 @@ A: Yes. First you archive the payload, then you delete the archived payload. For
 
 ### Q: Can I modify the built-in payloads?
 
-A: Not directly. You can copy the payload and then modify the copy. For instructions, see [Copy payloads](attack-simulation-training-payloads.md#copy-payloads).
+A: Not directly. You can copy the built-in payload and then modify the copy. For instructions, see [Copy payloads](attack-simulation-training-payloads.md#copy-payloads).
 
-### Q: I am trying to run a QR code simulation, and on scanning the QR code, it shows me as ping successful instead of the landing page? 
-A: When you insert a QR code in the payload editor, it maps to the base phishing URL that you selected in the Phishing link section > Select URL. The QR code is inserted in the email message as an image. If you switch from the Text tab to the Code tab, you see the inserted image in Base64 format. The beginning of the image contains <div id="QRcode"...>. Make sure to verify that the finished payload contains <div id="QRcode"...> before you use it in a simulation. 
-At this stage, if you scan the QR code, or you use the Send a Test experience to review the payload, you will see the QR code point to the base phishing URL that you had selected. 
-When the payload is used in a simulation, the service replaces the QR code with a dynamically generated QR code to track click and compromise metrics. The size, position, and shape of the QR code matches the configuration options you configured in the payload. It is during an actual simulation, when scanning the QR code will take you to the configured landing page.  
+### Q: I'm trying to run a QR code simulation, but scanning the QR code shows me 'ping successful' instead of the landing page?
 
-### Q: I am trying to create a payload in HTML, but the payload editor seems to be removing certain content from my design?
-A: There are certain HTML tags which are not currently supported within the payload editor. Please make sure that you are not using these tags in your code: applet, base, basefont, command, embed, frame, frameset, iframe, keygen, link, meta, noframes, noscript, param, script, object, title. 
+A: When you insert a QR code in the payload editor, it maps to the base phishing URL that you selected in the **Phishing link** section \> **Select URL**. The QR code is inserted in the email message as an image. If you switch from the **Text** tab to the **Code** tab, you see the inserted image in Base64 format. The beginning of the image contains `<div id="QRcode"...>`. Make sure to verify that the finished payload contains `<div id="QRcode"...>` before you use it in a simulation.
+
+During simulation creation, if you scan the QR code or you use **Send a Test** to review the payload, the QR code points to the base phishing URL that you selected.
+
+When the payload is used in a simulation, the service replaces the QR code with a dynamically generated QR code to track click and compromise metrics. The size, position, and shape of the QR code matches the configuration options you configured in the payload. Scanning the QR code during an actual simulation takes you to the configured landing page.
+
+### Q: I'm trying to create a payload in HTML, but the payload editor seems to remove certain content from my design?
+
+A: Currently, the following HTML tags aren't supported in the payload editor: `applet, base, basefont, command, embed, frame, frameset, iframe, keygen, link, meta, noframes, noscript, param, script, object, title`.
