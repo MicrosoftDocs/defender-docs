@@ -2,8 +2,8 @@
 title: Map Microsoft Defender XDR Unified role-based access control (RBAC) permissions
 description: Compare permissions and access to Microsoft Defender XDR Security portal experiences using role-based access control (RBAC)
 ms.service: defender-xdr
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro

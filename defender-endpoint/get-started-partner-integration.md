@@ -4,8 +4,8 @@ ms.reviewer:
 description: Learn the steps and requirements to integrate your solution with Microsoft Defender for Endpoint and be a partner.
 ms.service: defender-endpoint
 ms.subservice: onboard
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

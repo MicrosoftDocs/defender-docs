@@ -2,8 +2,8 @@
 title: What's new in Microsoft Defender for Endpoint on iOS
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on iOS.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.reviewer: sunasing
 ms.localizationpriority: medium
 ms.date: 06/12/2024

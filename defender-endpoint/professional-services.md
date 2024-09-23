@@ -3,8 +3,8 @@ title: Professional services supported by Microsoft Defender XDR
 description: See the list of professional services that Microsoft Defender XDR can integrate with.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

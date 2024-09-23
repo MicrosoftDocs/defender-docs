@@ -4,8 +4,8 @@ ms.reviewer:
 description: Use Microsoft Defender for Endpoint Flow connector to create a flow that will be triggered anytime a new event occurs on your tenant.
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
