@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint Controlled folder access (CFA) demonstrat
 description: Demonstrates how Controlled Folder Access protects valuable data from malicious apps and threats, such as ransomware.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

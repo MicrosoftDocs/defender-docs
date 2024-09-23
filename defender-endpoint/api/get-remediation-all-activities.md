@@ -2,8 +2,8 @@
 title: List all remediation activities
 description: Returns information about all remediation activities.
 ms.service: defender-endpoint
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

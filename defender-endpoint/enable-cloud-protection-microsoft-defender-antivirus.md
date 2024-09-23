@@ -4,8 +4,8 @@ description: Turn on cloud protection to benefit from fast and advanced protecti
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 ms.topic: how-to
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.date: 04/03/2024
 ms.reviewer: pahuijbr
 manager: deniseb

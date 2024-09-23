@@ -2,11 +2,11 @@
 title: What's new in Microsoft Defender for Endpoint on Mac
 description: Learn about the major changes for previous versions of Microsoft Defender for Endpoint on Mac.
 ms.service: defender-endpoint
-author: dansimp
-ms.author: dansimp
+author: deniseb
+ms.author: deniseb
 manager: deniseb
 ms.localizationpriority: medium
-ms.date: 08/27/2024
+ms.date: 09/20/2024
 audience: ITPro
 ms.collection:
 - m365-security
@@ -37,13 +37,15 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
 **Known issues**
 
-Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes), and [Sonoma upgrade](https://developer.apple.com/forums/thread/737824#773449022) with the latest OS update. The issue impacts Microsoft Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting its ability to function properly.
+- Apple fixed an issue on macOS [Ventura upgrade](https://developer.apple.com/documentation/macos-release-notes/macos-13_1-release-notes) and macOS [Sonoma upgrade](https://developer.apple.com/forums/thread/737824#773449022) with the latest OS update. The issue impacts Microsoft Defender for Endpoint security extensions, and might result in losing Full Disk Access Authorization, impacting its ability to function properly.
 
-In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device controls ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS less than 14.3.1.
+- In macOS Sonoma 14.3.1, Apple made a change to the [handling of Bluetooth devices](https://developer.apple.com/forums/thread/738748) that impacts Defender for Endpoint device controls ability to intercept and block access to Bluetooth devices.  At this time, the recommended mitigation is to use a version of macOS earlier than 14.3.1.
 
-**Sonoma support**
+- In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This will result in intermittent network connectivity issues for end users. We are recommending that customers who have Network Protection enabled in their organization refrain from upgrading to Sequoia builds at this time. To work around the issue, see [Troubleshoot NetExt issues in Microsoft Defender for Endpoint on Mac](mac-troubleshoot-netext-mde.md).
 
-Microsoft Defender supports macOS Sonoma (14.0) in the current Defender release.
+**Sequoia support**
+
+Microsoft Defender is collaborating with Apple to provide our mutual customers a solution when Network Protection is enabled in Microsoft Defender for Endpoint on macOS Sequoia (version 15.0).
 
 **macOS Deprecation**
 
@@ -87,7 +89,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ##### What's new
 
-- [[device control](mac-device-control-overview.md)] Secure Digital cards are not recognized on newer macOS
+- [[device control](mac-device-control-overview.md)] Secure Digital cards aren't recognized on newer macOS
 - Bug and performance fixes
 
 ### May-2024 (Build: 101.24042.0008  | Release version: 20.124042.8.0)
@@ -1022,11 +1024,9 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 > [!CAUTION]
 > macOS 10.15 (Catalina) contains new security and privacy enhancements. Beginning with this version, by default, applications are not able to access certain locations on disk (such as Documents, Downloads, Desktop, etc.) without explicit consent. In the absence of this consent, Microsoft Defender for Endpoint is not able to fully protect your device.
->
-> The mechanism for granting this consent depends on how you deployed Microsoft Defender for Endpoint:
->
+> > The mechanism for granting this consent depends on how you deployed Microsoft Defender for Endpoint:
 > - For manual deployments, see the updated instructions in the [Manual deployment topic](mac-install-manually.md#allow-full-disk-access).
-> - For managed deployments, see the updated instructions in the [JAMF-based deployment](mac-install-with-jamf.md) and [Microsoft Intune-based deployment](mac-install-with-intune.md#create-system-configuration-profiles) topics.
+- For managed deployments, see the updated instructions in the [JAMF-based deployment](mac-install-with-jamf.md) and [Microsoft Intune-based deployment](mac-install-with-intune.md#create-system-configuration-profiles) articles.
 
 - Performance improvements & bug fixes
 

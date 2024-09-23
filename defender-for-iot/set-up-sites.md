@@ -69,6 +69,8 @@ In this stage, you configure Defender for IoT to associate OT devices to the sit
   
 1. Select **Next** to review the site details.
 
+[!INCLUDE [defender-iot-site-association](includes/site-association.md)]
+
 ## Review site details
 
 Review that information for the site you want to create:

@@ -2,11 +2,11 @@
 title: Microsoft Defender Antivirus updates - Previous versions for technical upgrade support
 description: Understand the type of technical support offered for previous versions of Microsoft Defender Antivirus
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.reviewer: pahuijbr
-ms.date: 08/12/2024
+ms.date: 09/19/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -28,6 +28,21 @@ search.appverid: met150
 Microsoft regularly releases [security intelligence updates and product updates for Microsoft Defender Antivirus](microsoft-defender-antivirus-updates.md). It's important to keep Microsoft Defender Antivirus up to date. When a new package version is released, support for the previous two versions reduces to technical support only. Versions that are older than the previous two versions are listed in this article and are provided for technical upgrade support only.
 
 ## Engine and platform updates
+
+### May-2024 (Engine: 1.1.24050.5 | Platform: 4.18.24050.7)
+
+- Security intelligence update version: **1.413.1.0**
+- Release date: **May 30, 2024** (Engine) / **June 4, 2024** (Platform)
+- Engine: **1.1.24050.5**
+- Platform: **4.18.24050.7**
+- Support phase: **Technical upgrade support (only)**
+
+#### What's new
+
+- Improved performance when running configuration queries.
+- Optimized how scans are prioritized.
+- Fixed a crash caused by a race condition with a device control driver.
+- Added Event Viewer Logging for scan start event where the scan originates from PowerShell.
 
 ### April-2024 (Engine: 1.1.24040.1 | Platform: 4.18.24040.4)
 
@@ -1105,6 +1120,21 @@ Microsoft regularly releases [security intelligence updates and product updates 
 ## Previous DISM updates (no longer supported)
 
 The versions listed in this section are no longer supported. To view current versions, see [Updates for Deployment Image Servicing and Management (DISM)](microsoft-defender-antivirus-updates.md#updates-for-deployment-image-servicing-and-management-dism).
+
+### 1.411.111.0
+
+- Defender package version: `1.411.111.0`
+- Security intelligence version: `1.411.111.0`
+- Engine version: `1.24050.2`
+- Platform version: `4.18.24050.7`
+
+#### Fixes
+
+- None
+
+#### Additional information
+
+- None
 
 ### 1.411.9.0
 

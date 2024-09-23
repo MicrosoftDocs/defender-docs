@@ -18,7 +18,7 @@ ms.collection:
   - zerotrust-solution
   - highpri
   - tier1
-ms.topic: conceptual
+ms.topic: solution-overview
 ---
 
 # Pilot and deploy Microsoft Defender XDR

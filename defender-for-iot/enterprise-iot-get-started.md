@@ -21,7 +21,7 @@ In this article you'll learn how to add enterprise IoT to your Microsoft Defende
 
 ## Prerequisites
 
-Make sure that you have:
+Before you start, you need:
 
 - IoT devices in your network, visible in the Microsoft Defender portal **Device inventory**
 
