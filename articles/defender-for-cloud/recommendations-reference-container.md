@@ -224,7 +224,7 @@ The AllowPrivilegeEscalation attribute controls whether a process can gain more 
 
 **Description**: Defender for Cloud identified that a container workload running on your Kubernetes clusters is using an image from an Azure Container Registry that was deleted. Such workloads should be removed to avoid a potential scenario where a malicious actor would recreate the Azure Container Registry and replace the image used by the workload with a malicious image.
 
-**Severity**: ???
+**Severity**: Medium
 
 **Type**: Kubernetes data plane
 

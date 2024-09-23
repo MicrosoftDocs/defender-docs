@@ -72,31 +72,31 @@ Assessment IDs prior to September 29, 2024 are replaced for all three recommenda
 
 September 29, 2024
 
-Kubernetes Identity and Access information has been added to the security graph, including nodes that represent all Kubernetes Role Based Access Control (RBAC) related entitles (service accounts, roles, role Bindings, etc.), and edges that represent the permissions between Kubernetes objects. Customers can now query the security graph for their Kubernetes RBAC, and related relationships between Kubernetes entities (can authenticate as, can impersonate as, Grants role, Access define by, grants access to, has permission to, etc.)
+Kubernetes Identity and Access information has been added to the security graph, including nodes that represent all Kubernetes Role Based Access Control (RBAC) related entitles (service accounts, roles, role bindings, etc.), and edges that represent the permissions between Kubernetes objects. Customers can now query the security graph for their Kubernetes RBAC, and related relationships between Kubernetes entities (Can Authenticate As, Can Impersonate As, Grants Role, Access Defined By, Grants Access To, Has Permission To, etc.)
 
-### Kubernetes identity and access information-based attack paths (preview)
+### Kubernetes Identity and Access information-based attack paths (preview)
 
 September 29, 2024
 
-Using the Kubernetes RBAC data in the security graph, we will start detecting cloud to Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and report on additional attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from and within Kubernetes clusters.
+Using the Kubernetes RBAC data in the security graph, we'll start detecting Cloud to Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and report on additional attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from and within Kubernetes clusters.
 
 ### Improved attack path analysis
 
 September 29, 2024
 
-The new attack path analysis engine released last November now supports container use cases as well, dynamically detecting new types of attack paths in cloud environments based on the data added to the graph. We can now find more attack paths for containers and detect more complex and sophisticated attack patterns used by attackers to infiltrate cloud environments.
+The new attack path analysis engine [released last November now supports container use cases as well](/azure/defender-for-cloud/release-notes-archive#attack-path-analysis-new-engine-and-extensive-enhancements), dynamically detecting new types of attack paths in cloud environments based on the data added to the graph. We can now find more attack paths for containers and detect more complex and sophisticated attack patterns used by attackers to infiltrate cloud environments.
 
 ### Full discovery of container images in supported registries
 
 September 29, 2024
 
-Defender for Cloud now collects inventory data for all container images in supported registries, providing full visibility within the security graph to all images in your cloud environments, including images that currently do not have any posture recommendations.
+Defender for Cloud now collects inventory data for all container images in supported registries, providing full visibility within the security graph to all images in your cloud environments, including images that currently don't have any posture recommendations.
 
 ### Dangling ACR hardening recommendation (preview)
 
 September 29, 2024
 
-Defender for Cloud now detects when container workloads try to pull images from deleted ACRs and will provide a recommendation to stop using those images. This recommendation helps organizations protect themselves against malicious actors that would recreate the ACRs the images are pulled from and replace the images with malicious images.
+Defender for Cloud now detects when container workloads try to pull images from deleted ACRs and provides a recommendation to stop using those images. This recommendation helps organizations protect themselves against malicious actors that would recreate the ACRs the images are pulled from and replace the images with malicious images.
 
 ### Cloud security explorer experience improvements
 
@@ -104,7 +104,7 @@ September 22, 2024
 
 **Estimated date for change:** October 2024
 
-The Cloud Security Explorer is set to improve performance and grid functionality, add additional data enrichment on each cloud asset, improve search categories, and improve CSV export report with additional insights on the exported cloud assets.
+The Cloud Security Explorer is set to improve performance and grid functionality, provide more data enrichment on each cloud asset, improve search categories, and improve CSV export report with more insights on the exported cloud assets.
 
 ### General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint
 September 18, 2024
