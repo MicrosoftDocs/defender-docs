@@ -17,17 +17,15 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
-ms.date: 08/20/2024
+ms.date: 09/24/2024
+appliesto:
+- Microsoft Defender XDR
+- Microsoft Sentinel in the Microsoft Defender portal
 ---
 
 # Microsoft Copilot in Microsoft Defender
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
-
-**Applies to:**
-
-- Microsoft Defender XDR
-- Microsoft Sentinel in the Microsoft Defender portal
 
 [Microsoft Copilot for Security](/security-copilot/microsoft-security-copilot) brings together the power of AI and human expertise to help security teams respond to attacks faster and more effectively. Copilot for Security is embedded in the Microsoft Defender portal to enable security teams to efficiently summarize incidents, analyze scripts and codes, analyze files, summarize device information, use guided responses to resolve incidents, generate KQL queries, and create incident reports.
 
@@ -72,6 +70,10 @@ Investigating devices involved in incidents can be a tasking job. To quickly ass
 Copilot helps security teams quickly assess and understand suspicious files with [file analysis](copilot-in-defender-file-analysis.md). Copilot provides a file's summary, including detection information, related file certificates, a list of API calls, and strings found in the file.
 
 :::image type="content" source="/defender/media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide-small.png" alt-text="Screenshot of the file analysis results in Copilot in Defender with the Hide details option highlighted." lightbox="/defender/media/copilot-in-defender/file-analysis/copilot-defender-file-analysis-hide.png":::
+
+### Investigate identities immediately
+
+Quickly assess a user’s risk by generating an [identity summary](security-copilot-defender-identity-summary.md) with Copilot. Identify when an identity is at risk or suspicious with contextualized information about a user’s role and role changes, sign in behaviors, devices signed in to, and relevant contact information.
 
 ### Write incident reports efficiently
 
