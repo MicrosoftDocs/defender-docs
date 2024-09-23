@@ -7,19 +7,22 @@ ms.topic: how-to
 ms.date: 08/11/2024
 ---
 
-# Review changes with file integrity monitoring (Defender for Endpoint)
+# Review file changes with file integrity monitoring
 
-In the Defender for Servers plan in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
+In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integrity monitoring feature](file-integrity-monitoring-overview.md) helps keeps enterprise assets and resources secure by scanning and analyzing files, and comparing their current state with previous scans.
 
-File integrity monitoring uses Azure Automation change tracking. This article describes how to monitor machine changes captured by file integrity monitoring. 
+File integrity monitoring uses the Microsoft Defender for Endpoint agent to collect data from machines, in accordance with collection rules. [Defender for Endpoint is integrated by default](integration-defender-for-endpoint.md#integration-with-defender-for-endpoint-edr) with Defender for Cloud.
+
+> [!Note]
+> The older method of data collection uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). Support for using the MMA will end in November 2024.
+
+This article shows you how to review file changes.
 
 
 ## Prerequisites
 
-[File integrity monitoring using the integrated Defender for Endpoint sensor](file-integrity-monitoring-enable-defender-endpoint.md) must be enabled.
-
-> [!NOTE]
-> If you haven't enabled FIM yet, you'll see a message that says **File Integrity Monitoring is not enabled**. To enable FIM, select **Onboard subscriptions** and then [enable File Integrity Monitoring](file-integrity-monitoring-enable-defender-endpoint.md).
+- Defender for Servers Plan 2 must be enabled.
+- [File integrity monitoring with the Defender for Endpoint agent](file-integrity-monitoring-enable-defender-endpoint.md) must be enabled. If it isn't enabled this message appears - **File Integrity Monitoring is not enabled**. To enable select **Onboard subscriptions**, and then enable the feature.
 
 
 ## Monitor entities and files

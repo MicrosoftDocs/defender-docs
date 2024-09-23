@@ -161,7 +161,7 @@
 
 - name: Samples
   items:
-    - name: Azure Resource Graph queries
+    - name: Queries - Azure Resource Graph
       displayName: sample, query, queries, resource, graph
       href: ./resource-graph-samples.md
 
@@ -755,16 +755,16 @@
         href: software-inventory.md
       - name: Remediate machine secrets
         href: remediate-server-secrets.md 
-      - name: Review file integrity changes
+      - name: Review file changes
         href: file-integrity-monitoring-review-changes.md
-      - name: Review file integrity changes (MMA)
+      - name: Review file changes (MMA)
         displayName: fim, change
         href: file-integrity-monitoring-compare-baselines.md
     - name: Common questions 
       items:
       - name: Questions about Defender for Servers
         href: faq-defender-for-servers.yml
-      - name: Questions about Defender Vulnerability Management integraiton
+      - name: Questions about Defender Vulnerability Management integration
         displayName: questions, common, MDVM, Qualys, BYOL, bring your own license, agent, consolidated, vulnerability, management, faq, frequently asked questions
         href: faq-scanner-detection.yml
       - name: Questions about VM protection

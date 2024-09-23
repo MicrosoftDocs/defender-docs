@@ -17,7 +17,7 @@ The Inventory page provides information about:
 - **Connected resources**. Quickly see which resources are connected to Defender for Cloud.
 - **Overall security state**: Get a clear summary about the security state of connected Azure, AWS, and GCP resources, including the total resources connected to Defender for Cloud, resources by environment, and a count of unhealthy resources.
 - **Recommendations, alerts**: Drill down into the state of specific resources to see active security recommendations and security alerts for a resource.
-- **Risk prioritization**: Risk-based recommendations assigns risk levels to recommendations, based on factors such as data sensitivity, internet exposure, lateral movement potential, and potential attack paths.
+- **Risk prioritization**: Risk-based recommendations assign risk levels to recommendations, based on factors such as data sensitivity, internet exposure, lateral movement potential, and potential attack paths.
 - Risk prioritization is available when the Defender CSPM plan is enabled.
 - **Software**. You can review resources by installed applications. To take advantage of the software inventory, either the Defender Cloud Security Posture Management (CSPM) plan, or a Defender for Servers plan must be enabled.
 
@@ -33,7 +33,7 @@ The Inventory uses [Azure Resource Graph (ARG)](/azure/governance/resource-graph
     - **Resource count by environment**: The number of Azure, AWS, and GCP resources.
 1. Select a resource to drill down for details.
 1. On the **Resource Health** page for the resource, review information about the resource.
-    - The **Recommendations** tab show any active security recommendations, in order of risk. You can drill down into each recommendation for more details and remediation options.
+    - The **Recommendations** tab shows any active security recommendations, in order of risk. You can drill down into each recommendation for more details and remediation options.
     - The **Alerts** tab shows any relevant security alerts. 
 
 ## Review software inventory
@@ -68,8 +68,7 @@ Refine visibility into the inventory with filtered values to focus on specific r
     - Select **Security findings** to find vulnerability findings. You can specify an operator and a free text value from the ID, security check, or CVE name of a finding to filter resources.
 
 
-## Query in Resource Graph Explorer
-
+## Create queries 
 1. Select **Open query** to open **Azure Resource Graph Explorer**.
 1. In the main query pane, review the currently selected filter options in query form.
 
