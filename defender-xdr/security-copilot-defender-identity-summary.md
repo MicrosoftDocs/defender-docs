@@ -65,6 +65,12 @@ You can access the identity summary capability in the following ways:
 
 - Type a username in the Microsoft Defender portal’s **search box** then select the username from the search results. In the user details side panel, select **Summarize** to generate the identity summary.
 
+- You can also access the identity summary capability in an alert page. Select a user in the alert page, then select **Summarize** in the user details pane to generate the identity summary.
+
+- In the advanced hunting page, you can access the identity summary capability by selecting a user in the results table, then selecting the link to the user page. Copilot automatically generates the identity summary and displays the side panel upon opening the user page.
+
+   :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/identity-alert-small.png" alt-text="Screenshot showing the Entities tab and a user account highlighted." lightbox="/defender/media/copilot-in-defender/identity-summary/identity-alert.png":::
+
 Review the identity summary results. You can copy the results to clipboard, regenerate the results, or open Security Copilot by selecting the More actions ellipsis (...) on top of the identity summary card. You can extend your investigation of identity using prompts and other plugins in the Copilot for Security portal.
 
 > [!TIP]
