@@ -18,7 +18,7 @@ search.appverid:
   - MOE150
   - MET150
 ms.date: 09/23/2024
-appliiesto:
+appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the unified security operations center (SOC) platform
 ---
