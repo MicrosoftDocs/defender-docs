@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 09/18/2024
+ms.date: 09/23/2024
 ---
 
 # Supported Microsoft Defender for Endpoint capabilities by platform
@@ -63,13 +63,13 @@ The following table gives information about the supported Microsoft Defender for
 
 <sup>[1]</sup> Refers to the modern, unified solution for Windows Server 2012 R2 and Windows Server 2016. For more information, see [Onboard Windows Servers to the Defender for Endpoint service](configure-server-endpoints.md).
 
-<sup>[2]</sup> Feature is currently in preview ([Microsoft Defender for Endpoint preview features](/defender-xdr/preview))
+<sup>[2]</sup> Feature is currently in preview ([Microsoft Defender for Endpoint preview features](/defender-xdr/preview)).
 
-<sup>[3]</sup> Feature is currently in preview ([Microsoft Defender for Endpoint preview features](/defender-xdr/preview)) Or you can also use Live Response [2]
+<sup>[3]</sup> Feature is currently in preview ([Microsoft Defender for Endpoint preview features](/defender-xdr/preview)). Or you can also use Live Response [2].
 
-<sup>[4]</sup> Collect file only, is currently in preview ([Microsoft Defender for Endpoint preview features](/defender-xdr/preview)) Or you can also use Live Response [2]
+<sup>[4]</sup> Collect file only. Or, you can use Live Response [2].
 
-<sup>[5]</sup> Endpoint & network device discovery is supported on Windows Server 2019 or later, Windows 10, and Windows 11
+<sup>[5]</sup> Endpoint & network device discovery is supported on Windows Server 2019 or later, Windows 10, and Windows 11.
 
 > [!NOTE]
 > Windows 7, 8.1, Windows Server 2008 R2 include support for the EDR sensor, and antivirus using System Center Endpoint Protection (SCEP).

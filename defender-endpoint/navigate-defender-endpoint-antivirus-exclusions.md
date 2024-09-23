@@ -8,7 +8,7 @@ ms.topic: how-to
 author: denisebmsft
 ms.author: deniseb
 ms.custom: nextgen
-ms.date: 09/19/2024
+ms.date: 09/23/2024
 ms.reviewer: joshbregman
 manager: deniseb
 ms.collection: 
@@ -239,6 +239,5 @@ Depending on what you're using, you might need to refer to the documentation for
 - [Submissions, suppressions and exclusions](submissions-suppressions-exclusions.md)
 - [Important points about exclusions](configure-exclusions-microsoft-defender-antivirus.md#important-points-about-exclusions)
 - [Common mistakes to avoid when defining exclusions](common-exclusion-mistakes-microsoft-defender-antivirus.md)
-- [Blog post: The Hitchhiker's Guide to Microsoft Defender for Endpoint exclusions](https://cloudbrothers.info/en/guide-to-defender-exclusions/)
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
