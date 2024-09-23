@@ -1,6 +1,6 @@
 ---
-title: Remediate VM secrets security issues in Microsoft Defender for Cloud
-description: Learn how to remediate VM secrets security issues in Microsoft Defender for Cloud.
+title: Remediate machine secrets in Microsoft Defender for Cloud
+description: Learn how to remediate security issues with machine secrets in Microsoft Defender for Cloud.
 ms.topic: overview
 ms.date: 04/16/2024
 ---

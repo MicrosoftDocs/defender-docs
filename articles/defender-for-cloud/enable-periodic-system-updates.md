@@ -12,16 +12,16 @@ ms.date: 09/08/2024
 
 Microsoft Defender for Cloud provides security recommendations to improve your organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment. 
 
-As part of the hardening strategy, Defender for Cloud assesses machines to check that the latest system updates are installed, and issues security recommendations if they're not. System updates and patches are crucial for keeping the security and health of your servers. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
+As part of the hardening strategy, Defender for Cloud assesses machines to check that the latest system updates and patches are installed, and issues security recommendations if they're not. System updates and patches are crucial for keeping machines secure and healthy. Updates often contain security patches for vulnerabilities that, if left unfixed, are exploitable by attackers.
 
-Defender for Cloud automatically assesses state of updates and patches on machines and generates the following recommendations as needed:
+Defender for Servers Plan 2 automatically assesses updates and patches on machines and generates the following recommendations as needed:
 
 - [Machines should be configured to periodically check for missing system updates](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/2Fbd876905-5b84-4f73-ab2d-2e7a7c4568d9)
 - [System updates should be installed on your machines (powered by Azure Update Manager)](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/e1145ab1-eb4f-43d8-911b-36ddf771d13f)
 
 These recommendations rely on [Azure Update Manager](/azure/update-manager/overview), which uses a [VM extension](/azure/update-manager/workflow-update-manager?tabs=azure-vms%2Cupdate-win).
 
-The older method, that used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) to gather data is now deprecated.
+! [!NOTE] The older method for update assessment used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) to gather data. Use of the MMA is now deprecated.
 
 ## Prerequisites
 
@@ -35,9 +35,9 @@ The older method, that used the Log Analytics agent (also known as the Microsoft
 
 
 
-## Enable periodic assessment on machines 
+## Enable periodic assessement on machines
 
-After assessment of system updates and patches, Defender for Cloud issues recommendations as needed. Remediate recommendations to ensure that machines have the latest updates installed.
+Defender for Cloud issues a recommendation that machines should be assessed periodically for system updates.
 
 1. In Defender for Cloud, open the **Recommendations** page.
 1. Select the recommendation ``Machines should be configured to periodically check for missing system updates (powered by Azure Update Manager)``.
@@ -50,7 +50,7 @@ After assessment of system updates and patches, Defender for Cloud issues recomm
 
 Periodic assessment can also be [enabled at scale with Azure Policy](/azure/update-manager/periodic-assessment-at-scale?branch=main).
 
-## Remediate recommendations
+## Remediate update recommendations
 
 1. In Defender for Cloud, open the **Recommendations** page.
 1. Select the recommendation ``System updates should be installed on your machines (powered by Azure Update Manager)``.

@@ -10,20 +10,28 @@ ms.date: 07/31/2023
 # Review OS misconfigurations (Cloud Security Baseline)
 
 
-Microsoft Defender for Cloud provides security recommendations to improve your organizational security posture and reduce risk. An important element in risk reduction is to harden machines across your business environment.
+Microsoft Defender for Cloud provides security recommendations to improve organizational security posture and reduce risk. An important element in risk reduction is machine hardening.
 
-- When you enable Defender for Cloud on a subscription, free foundational cloud security posture management (CSPM) capabilities assesses the configuration of protected resources against the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction).
-- The MCSB covers Azure, AWS, and GCP (in preview) environments. As part of the MCSB, compute security baselines assess compliance for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems.
+Defender for Cloud uses the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction) to assess the security state of resources. The MCSB covers Azure, AWS, and GCP environments.
 
+- When you enable Defender for Cloud on a subscription, free foundational security posture capabilities assess protected resource configurations against some MCSB security standards.
+- As part of its security standards, MCSB includes compute security baselines. [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating system (OS) compliance is assessed against these baselines.
+- Assessment of OS configurations against compute security baselines in Defender for Cloud requires Defender for Servers Plan 2.
 
-Machine information is gathered for assessment against these OS baselines using the Azure Policy machine configuration (formerly known as the guest configuration) on the machine. This article describes how to review recommendations made by the assessment.
+This article describes how to review recommendations made by the assessment.
+
+> [!NOTE]
+> - Machine information is gathered for assessment against OS baselines using the Azure Policy machine configuration (formerly known as the guest configuration) extension on the machine.
+> - Using the machine configuration to collect data replaces use of the Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA).
+> - Use of the MMA will deprecate in November 2024.
+> - Support for assessing misconfigurations in Docker hub and Azure virtual machine scale sets also ends in November 2024.
 
 
 ## Prerequisites
 
-- [Defender for Servers Plan 2 must be enabled](plan-defender-for-servers-select-plan.md) to gather data OS configuration data using the Azure Policy machine configuration. Recommendations provided by the MCSB that aren't part of Windows and Linux compute security baselines continue to be part of free foundational CSPM.
+- [Defender for Servers Plan 2 must be enabled](plan-defender-for-servers-select-plan.md) 
 - The [Azure Policy machine configuration must be installed on machines](security-baseline-guest-configuration.md).
-- Using the machine configuration to collect information replaces use of the Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA). If you still have the MMA in use, you might receive duplicate recommendations for the same machine. To avoid this, you can [disable the MMA on the machine](prepare-deprecation-log-analytics-mma-agent.md#duplicate-recommendations).
+ If you still have the MMA in use, you might receive duplicate recommendations for the same machine. To avoid this, you can [disable the MMA on the machine](prepare-deprecation-log-analytics-mma-agent.md#duplicate-recommendations).
 
 
 ## Review and remediate OS baseline recommendations

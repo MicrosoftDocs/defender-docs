@@ -16,13 +16,11 @@ Defender for Cloud assesses and enforces security configurations using [built-in
 
 ## Compute security baselines
 
-The MCSB covers Azure, AWS, and GCP environments. Many of the MCSB recommendations in Defender for Cloud are provided for free as part of Defender for Cloud's [foundation posture management capabilities](concept-cloud-security-posture-management.md#cspm-features).
+The MCSB covers Azure, AWS, and GCP environments. When you enable Defender for Cloud on a subscription, [free foundational security posture capabilities](concept-cloud-security-posture-management.md#cspm-features) assess protected resource configurations against some of the MCSB security standards.
 
-As part of the MCSB offering, compute security baselines assess compliance for [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems in these environments.
+As part of its security standards, MCSB includes compute security baselines. [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating system (OS) compliance is assessed against these baselines.
 
-Operating system recommendations based on MCSB compute security baselines are available when Defender for Servers Plan 2 is enabled.
-
-With Defender for Servers Plan 2 enabled, these Azure policies are enabled on the subscription.
+Operating system recommendations based on MCSB compute security baselines are available when Defender for Servers Plan 2 is enabled. With the plan enabled, these Azure policies are enabled on the subscription.
 
 - "Windows machines should meet requirements of the Azure compute security baseline" 
 - "Linux machines should meet requirements for the Azure compute security baseline"
@@ -34,8 +32,10 @@ Make sure you don't remove these policies or you won't be able to leverage the m
 Machine information is gathered for assessment using the Azure Policy machine configuration (formerly known as the guest configuration) of the machine. 
 
 > [!!NOTE]
-> - The older data collection method used the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA). Use of this agent will be deprecated in November 2023.
-> - Support for assessing misconfigurations in Docker hub and Azure virtual machine scale sets also ends in November.
+> - Machine information is gathered for assessment against OS baselines using the Azure Policy machine configuration (formerly known as the guest configuration) extension on the machine.
+> - Using the machine configuration to collect data replaces use of the Log Analytics agent, also known as the Microsoft Monitoring Agent (MMA).
+> - Use of the MMA will deprecate in November 2024.
+> - Support for assessing misconfigurations in Docker hub and Azure virtual machine scale sets also ends in November 2024.
 
 ## Installing the machine configuration extension
 

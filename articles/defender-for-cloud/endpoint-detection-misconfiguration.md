@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 
 Microsoft Defender for Cloud integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide endpoint detection and response (EDR) capabilities for machines connected to Defender for Cloud. 
 
-As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solution. In addition, for machines using Defender for Endpoint as an EDR, Defender for Servers agentlessly scans the machines with security checks to assess whether Defender for Endpoint is configured correctly. Checks include:
+As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solution. In addition, for machines using Defender for Endpoint as an EDR, Defender for Servers agentlessly scans the machines with security checks that assess whether Defender for Endpoint is configured correctly. Checks include:
 
 - `Both full and quick scans are out of 7 days`
 - `Signature out of date`
@@ -34,7 +34,7 @@ Recommendations for Defender for Endpoint misconfigurations are available when:
 - One of these Defender for Cloud plans is enabled:
   - [Defender for Servers Plan 2](tutorial-enable-servers-plan.md)
   - [Defender Cloud Security Posture Management (CSPM)](tutorial-enable-cspm-plan.md)
-- [Agentless scanning for machines](concept-agentless-data-collection.md) is turned on. It's enabled by default in the plans, but [follow these instructions](enable-agentless-scanning-vms.md) if you need to turn it on manually.
+- [Agentless scanning for machines](concept-agentless-data-collection.md) is turned on. It's enabled by default when you enable a supported plan, but [follow these instructions](enable-agentless-scanning-vms.md) if you need to turn it on manually.
 - You're running Defender for Endpoint as an EDR solution on VMs.
 
 ## Investigate misconfiguration recommendations

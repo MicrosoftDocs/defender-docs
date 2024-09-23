@@ -1,6 +1,6 @@
 ---
-title: Review and remediate endpoint detection and response recommendations
-description: How the endpoint protection solutions are discovered, identified, and maintained for optimal security.
+title: Remediate EDR recommendations in Defender for Cloud using the MMA 
+description: Learn how to remediate endpoint detection and response recommendations when using the MMA in Microsoft Defender for Cloud
 ms.topic: concept-article
 ms.custom: linux-related-content
 ms.author: dacurwin
@@ -13,30 +13,25 @@ ms.date: 09/08/2024
 
 Microsoft Defender for Cloud integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide endpoint detection and response (EDR) capabilities for machines connected to Defender for Cloud.
 
-As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solutionץ The solution can be integrated Defender for Endpoint EDR, or a [supported third-party solution](integration-defender-for-endpoint.md#supported-edr-solutions).
+As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solutionץ The solution can be the integrated Defender for Endpoint solution, or a [supported third-party solution](integration-defender-for-endpoint.md#supported-edr-solutions).
 
-Based on EDR solution findings, Defender for Cloud makes EDR recommendations that include:
 
-- [Endpoint protection should be installed on your machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4fb67663-9ab9-475d-b026-8c544cced439)
-- [Endpoint protection health issues should be resolved on your machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/37a3689a-818e-4a0e-82ac-b1392b9bb000)
-
-This article describes how to remediate these recommendations.
+Based on findings, Defender for Cloud makes recommendations to address EDR solution issues. This article describes how to remediate those recommendations when you're using the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) to collect EDR solution information.
 
 > [!NOTE]
-> - Defender for Servers now uses agentless scanning to assess EDR settings.
-> - Agentless scanning replaces use of the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)), as described in this article.
-> - The MMA is set to retire. Scanning using the MMA will be deprecated in November 2024.
+> - This feature now [uses agentless scanning](endpoint-detection-response.md) to replace the MMA agent th
+> - Use of the MMA for this feature will be deprecated in November 2024.
  
-## Recommendation conditions on EDR solutions
+## Review recommendation conditions
 
-The following sections summarize the conditions that trigger the recommendations for EDR solutions.
+Review the conditions that trigger the recommendations for EDR solutions.
 
 ### Windows Defender
 
 | Recommendation | Appears when |
 |--|--|
-| **Endpoint protection should be installed on your machines** | [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus) runs and the result is **AMServiceEnabled: False** |
-| **Endpoint protection health issues should be resolved on your machines** | [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus) runs and any of the following occurs: <br><br> Any of the following properties are false: <br><br> - **AMServiceEnabled** <br> - **AntispywareEnabled** <br> - **RealTimeProtectionEnabled** <br> - **BehaviorMonitorEnabled** <br> - **IoavProtectionEnabled** <br> - **OnAccessProtectionEnabled** <br> <br> If one or both of the following properties are 7 or more: <br><br> - **AntispywareSignatureAge** <br> - **AntivirusSignatureAge** |
+| **[Endpoint protection should be installed on your machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/4fb67663-9ab9-475d-b026-8c544cced439)** | [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus) runs and the result is **AMServiceEnabled: False** |
+| **[Endpoint protection health issues should be resolved on your machines](https://portal.azure.com/#blade/Microsoft_Azure_Security/RecommendationsBlade/assessmentKey/37a3689a-818e-4a0e-82ac-b1392b9bb000)** | [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus) runs and any of the following occurs: <br><br> Any of the following properties are false: <br><br> - **AMServiceEnabled** <br> - **AntispywareEnabled** <br> - **RealTimeProtectionEnabled** <br> - **BehaviorMonitorEnabled** <br> - **IoavProtectionEnabled** <br> - **OnAccessProtectionEnabled** <br> <br> If one or both of the following properties are 7 or more: <br><br> - **AntispywareSignatureAge** <br> - **AntivirusSignatureAge** |
 
 ### Microsoft System Center endpoint protection
 

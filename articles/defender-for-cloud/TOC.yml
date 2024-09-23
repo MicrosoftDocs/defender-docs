@@ -741,7 +741,7 @@
       - name: Disable vulnerability findings
         displayName: qualys, rapid7, va
         href: disable-vulnerability-findings.md
-      - name: Remediate security baseline assessments
+      - name: Remediate security baselines assessments
         displayName: security, baseline, remediate, mdvm, vulnerability, assessment, va
         href: remediate-security-baseline.md
       - name: Remediate OS misconfigurations (Cloud Security Benchmark)

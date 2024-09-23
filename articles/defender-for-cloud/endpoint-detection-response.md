@@ -11,10 +11,10 @@ ai-usage: ai-assisted
 
 # Remediate EDR solutions (agentless)
 
-Microsoft Defender for Cloud integrates natively with [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to provide endpoint detection and response (EDR) capabilities for machines connected to Defender for Cloud. 
+Microsoft Defender for Cloud includes endpoint detection and response (EDR) capabilities to improve security posture for supported machines. Defender for Cloud:
 
-As part of these [integrated EDR capabilities](integration-defender-for-endpoint.md), Defender for Cloud agentlessly scans machines to assess whether they're running an EDR solutionץ The solution can be integrated Defender for Endpoint EDR, or a [supported third-party solution](integration-defender-for-endpoint.md#supported-edr-solutions).
-
+- Integrates natively with Defender for Endpoint as an EDR solution for machine protection. to provide EDR capabilities for protected machines.
+- Scans connected machines (Azure VMs and AWS/GCP machines) to check whether they have an EDR solution installed and running. The solution can be integrated Defender for Endpoint EDR, or a [supported third-party solution](integration-defender-for-endpoint.md#supported-edr-solutions).
 
 Based on EDR solution findings, Defender for Cloud provides [recommendations](integration-defender-for-endpoint.md#edr-solution-recommendations) to ensure that EDR solutions are installed and running correctly on VMs.
 
@@ -64,10 +64,10 @@ EDR solution recommendations are available when:
 
 ## Enable Defender for Endpoint integration
 
-This recommended action is available when Defender for Endpoint, or an [supported third-party EDR solution](integration-defender-for-endpoint.md#supported-edr-solutions) wasn't detected on the VM.
+This recommended action is available when Defender for Endpoint can be installed on a machine, and a [supported third-party EDR solution](integration-defender-for-endpoint.md#supported-edr-solutions) isn't detected on the machine.
 
 
-To enable Defender for Endpoint on the machine: 
+Enable Defender for Endpoint on the machine as follows:
 
 1. Select the affected machine. You can also select multiple machines with the `Enable Microsoft Defender for Endpoint integration` recommended action.
 
@@ -82,14 +82,14 @@ To enable Defender for Endpoint on the machine:
     :::image type="content" source="media/endpoint-detection-response/enable-endpoint.png" alt-text="Screenshot that shows the pop-up window from which to enable the Defender for Endpoint integration on.":::
 
 
-### Upgrade Defender plan
+## Turn on a plan
 
 This recommended action is available when:
 
-- One of the [supported third-party EDR solutions](integration-defender-for-endpoint.md#supported-edr-solutions) wasn't detected on the VM.
-- One of the supported plans (Defender for Servers Plan 2 or Defender CSPM) isn't enabled for the VM.
+- A [supported third-party EDR solutions](integration-defender-for-endpoint.md#supported-edr-solutions) isn't detected on the machine.
+- A required Defender for Cloud plan (Defender for Servers Plan 2 or Defender CSPM) isn't enabled for the machine.
 
-To fix the recommendation.
+Fix the recommendation as follows:
 
 1. Select the affected machine. You can also select multiple machines with the `Upgrade Defender plan` recommended action.
 
@@ -105,7 +105,7 @@ To fix the recommendation.
 
 After the process is completed, it can take up to 24 hours until your machine appears on the **Healthy resources** tab.
 
-### Troubleshoot issues
+## Troubleshoot issues
 
 This recommended action is available when Defender for Endpoint is detected on a machine but wasn't onboarded properly.
 

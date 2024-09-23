@@ -9,7 +9,7 @@ author: dcurwin
 # Review the software inventory
 
 
-The Defender for Servers plan in Microsoft Defender for Cloud provides vulnerability scanning using Microsoft Defender Vulnerability Management. Microsoft Defender for Endpoint and Defender Vulnerability Management are integrated natively into Defender for Servers. 
+The Defender for Servers plan in Microsoft Defender for Cloud provides vulnerability scanning using Microsoft Defender Vulnerability Management. Microsoft Defender for Endpoint and Defender Vulnerability Management are integrated natively into Defender for Cloud.
 
 The software inventory feature, provided by Defender Vulnerability Management, shows a list of known software in your organization, with security information about discovered applications.
 
@@ -23,7 +23,8 @@ This article explains how to review the software inventory.
 To see the software inventory, one of these paid plans must be enabled.
 - [Defender CSPM plan](concept-cloud-security-posture-management.md) with [agentless machine scanning](concept-agentless-data-collection.md) enabled.
 - [Defender for Server Plan 1 or Plan 2](defender-for-servers-introduction.md) with [Defender for Endpoint integration](integration-defender-for-endpoint.md) enabled, or Defender for Servers Plan 2 with agentless machine scanning enabled.
-- If software that isn't supported appears in the inventory, only limited data will be available. 
+
+If software that isn't supported appears in the inventory, only limited data will be available. 
 
 
 ## Review the software inventory

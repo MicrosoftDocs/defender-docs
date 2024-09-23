@@ -1,20 +1,18 @@
 ---
-title: Remediate security baseline recommendations powered by MDVM
-description: Learn how to secure your servers with security baselines in Microsoft Defender for Cloud powered by Microsoft Defender Vulnerability Management.
+title: Remediate security baseline recommendations from Defender Vulnerability Management in Microsoft Defender for Cloud
+description: Learn how to assess machines with Defender Vulnerability Management security baselines in Microsoft Defender for Cloud.
 ms.topic: how-to
 ms.author: dacurwin
 author: dcurwin
 ms.date: 05/26/2024
-# customer intent: As a user, I want to learn how to secure my servers with security baselines in Microsoft Defender for Cloud powered by Microsoft Defender Vulnerability Management.
+# customer intent: As a security admin in Defender for Cloud, I want to remediate recommendations issued by Defender Vulnerability Management security baselines assessment.
 ---
 
 # Remediate security baseline assessment recommendations
 
-Microsoft Defender for Cloud integrates natively with Microsoft Defender for Endpoint and Microsoft Vulnerability Management to provide machines with vulnerability protection, and endpoint detection and response (EDR) capabilities.
+Microsoft Defender for Cloud integrates natively with Microsoft Defender for Endpoint and Microsoft Defender Vulnerability Management to provide machines with vulnerability protection, and endpoint detection and response (EDR) capabilities.
 
-As part of that integration, [security baselines assessment](/defender-vulnerability-management/tvm-security-baselines) is provided by Defender Vulnerability Management.
-
-Security baseline assessment uses customised security baseline profiles. Profiles are basically a template that consists of device configuration settings, and benchmarks against which to compare them. 
+As part of that integration, [security baselines assessment](/defender-vulnerability-management/tvm-security-baselines) is provided by Defender Vulnerability Management. Security baselines assessment uses customised security baseline profiles. Profiles are basically a template that consists of device configuration settings, and benchmarks against which to compare them. 
 
 This article describes how to remediate recommendations made by Defender Vulnerability Management baseline assessments.
 
