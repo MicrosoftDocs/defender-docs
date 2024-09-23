@@ -4,8 +4,8 @@ ms.reviewer:
 description: View supported partner applications to enhance the detection, investigation, and threat intelligence capabilities of the platform
 ms.service: defender-endpoint
 ms.subservice: reference
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -14,7 +14,7 @@ ms.collection:
 - tier3
 ms.topic: conceptual
 search.appverid: met150
-ms.date: 09/12/2024
+ms.date: 09/20/2024
 ---
 
 # Partner applications in Microsoft Defender for Endpoint
@@ -95,7 +95,7 @@ Microsoft Defender for Endpoint seamlessly integrates with existing security sol
 |Logo|Partner name|Description|
 |---|---|---|
 |![Logo for Bitdefender.](media/bitdefender-logo.png)|[Bitdefender](https://go.microsoft.com/fwlink/?linkid=860032)|Bitdefender GravityZone is a layered next generation endpoint protection platform offering comprehensive protection against the full spectrum of sophisticated cyber threats |
-|![Logo for Better Mobile.](media/bettermobile-logo.png)|[Better Mobile](https://go.microsoft.com/fwlink/?linkid=2086214)|AI-based MTD solution to stop mobile threats & phishing. Private internet browsing to protect user privacy |
+|![Logo for Better Mobile.](media/bettermobile-logo.png)|[Better Mobile](https://appsource.microsoft.com/en-us/product/web-apps/bettermobilesecurityinc.bettermobile)|AI-based MTD solution to stop mobile threats & phishing. Private internet browsing to protect user privacy |
 |![Logo for Corrata.](media/corrata-new.png)|[Corrata](https://go.microsoft.com/fwlink/?linkid=2081148)|Mobile solution - Protect your mobile devices with granular visibility and control from Corrata |
 | ![Logo for Darktrace.](media/partner-applications/darktrace.png) | [Darktrace](https://darktrace.com/products/endpoint) | Network and endpoint protection. Darktrace and Microsoft disrupt cyberattacks at machine speed, offering full visibility and enhanced XDR capabilities. |
 |![Logo for Lookout.](media/lookout-logo.png)|[Lookout](https://go.microsoft.com/fwlink/?linkid=866935)|Get Lookout Mobile Threat Protection telemetry for Android and iOS mobile devices |  

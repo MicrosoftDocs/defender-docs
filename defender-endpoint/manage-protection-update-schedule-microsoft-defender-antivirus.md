@@ -6,8 +6,8 @@ search.appverid: met150
 ms.localizationpriority: medium
 ms.date: 12/20/2022
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom: nextgen
 ms.reviewer: pahuijbr
 manager: deniseb

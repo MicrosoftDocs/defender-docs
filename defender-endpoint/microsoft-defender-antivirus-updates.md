@@ -108,11 +108,11 @@ All our updates contain:
 
 ### What's new
 
-- Added a new parameter to get-mppreference cmdlet (ControlledFolderAccessDefaultProtectedFolders) to show default protected folders for Controlled Folder Access (CFA).
-- Fixed an issue with Device Control regarding printer security checks.
-- Resolved an issue with platform rollback after an upgrade from Windows 10 to 11.
+- Added a new parameter (`ControlledFolderAccessDefaultProtectedFolders`) to [Get-MpPreference](/powershell/module/defender/get-mppreference) cmdlet to show default protected folders for [controlled folder access](enable-controlled-folders.md).
+- Fixed an issue with device control regarding printer security checks.
+- Resolved an issue with platform rollback after an upgrade from Windows 10 to Windows 11.
 - Fixed an issue where volume exclusions weren't properly enforced in real-time protection after the completion of OOBE.
-- Removed support for Windows RT devices, for example, Surface RT, that use 32-bit ARM processors and have reached their end-of-servicing date.
+- Removed support for Windows RT devices, like Surface RT, that use 32-bit ARM processors and have reached their end-of-servicing date.
 
 ### July-2024 (Platform: 4.18.24070.5 | Engine: 1.1.24070.3)
 
@@ -125,11 +125,11 @@ All our updates contain:
 ### What's new
 
 - False positive detections are no longer reported as `ThreatNotFound` in the Microsoft Defender portal. 
-- Optimized Network Protection calls to the backend that occur as a result of suspicious connection checks.
-- Fixed the [PerformanceModeStatus](/windows/client-management/mdm/defender-csp#configurationperformancemodestatus) configuration key in Defender CSP so changing this value in the console takes effect on the endpoint. 
-- Resolved an issue where File Evidence Location was not always captured in scenarios where the Remote Location is inaccessible. 
-- New event log added (5016) to report Microsoft Defender Antivirus self-healed when a deadlock is detected during shutdown. 
-- Fixed a prioritization issue with full scans initiated from the portal that resulted in longer than expected full scan duration.
+- Optimized [network protection](network-protection.md) calls to the backend that occur as a result of suspicious connection checks.
+- Fixed the [PerformanceModeStatus](/windows/client-management/mdm/defender-csp#configurationperformancemodestatus) configuration key in the [Defender CSP](/windows/client-management/mdm/defender-csp) so that changing this value in the console takes effect on the endpoint. 
+- Resolved an issue where file evidence location was not always captured in scenarios where the remote location is inaccessible. 
+- New event log added (`5016`) to report Microsoft Defender Antivirus self-healed when a deadlock is detected during shutdown. 
+- Fixed a prioritization issue with [full scans](mdav-scan-best-practices.md) initiated from the portal that resulted in longer than expected full scan duration.
 
 ### June-2024 (Platform: 4.18.24060.7 | Engine: 1.1.24060.5)
 

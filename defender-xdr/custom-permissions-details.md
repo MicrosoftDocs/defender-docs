@@ -2,8 +2,8 @@
 title: Details of custom permissions in Microsoft Defender XDR Unified role-based access control (RBAC)
 description: Learn about the custom permissions available in Microsoft Defender XDR Security role-based access control (RBAC)
 ms.service: defender-xdr
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
