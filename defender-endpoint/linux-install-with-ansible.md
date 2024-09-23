@@ -3,8 +3,8 @@ title: Deploy Microsoft Defender for Endpoint on Linux with Ansible
 ms.reviewer: gopkr
 description: Describes how to deploy Microsoft Defender for Endpoint on Linux using Ansible.
 ms.service: defender-endpoint
-ms.author: dansimp
-author: dansimp
+ms.author: deniseb
+author: deniseb
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 07/10/2024
+ms.date: 09/19/2024
 ---
 
 # Deploy Microsoft Defender for Endpoint on Linux with Ansible
@@ -221,8 +221,12 @@ Create a subtask or role files that contribute to a playbook or task.
         ```Output
         - hosts: servers
           tasks:
-            - include: ../roles/onboarding_setup.yml
-            - include: ../roles/add_yum_repo.yml
+            - name: include onboarding tasks
+              import_tasks:
+                file: ../roles/onboarding_setup.yml
+            - name: add apt repository
+              import_tasks:
+                file: ../roles/add_yum_repo.yml
             - name: Install MDATP
               dnf:
                 name: mdatp
