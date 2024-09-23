@@ -72,11 +72,9 @@ Review the identity summary results. You can copy the results to clipboard, rege
 
 Microsoft highly encourages you to provide feedback to Copilot, as it’s crucial for a capability’s continuous improvement. To provide feedback, navigate to the bottom of the Copilot side panel and select the feedback icon ![Screenshot of the feedback icon for Copilot in Defender cards](/defender/media/copilot-in-defender/create-report/copilot-defender-feedback.png).
 
-   :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/feedback-textbox.png" alt-text="Screenshot highlighting the view user page option in an username search within Identities.":::
+  :::image type="content" source="/defender/media/copilot-in-defender/identity-summary/feedback-textbox.png" alt-text="Screenshot that shows the Feedback text box where you can share your feedback.":::
 
 Fill in the dedicated text box to share your thoughts, experiences, and requests. Microsoft values your feedback and takes it seriously in our commitment to enhance Copilot’s performance and user experience.
-
-
 
 ## See also
 
