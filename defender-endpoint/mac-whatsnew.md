@@ -314,7 +314,7 @@ Network protection for macOS is now available for all Mac devices onboarded to D
 #### What's new
 
 - Improved performance, stability, and security
-- Bug fixes
+- Product improvements
 - Discontinued support macOS Catalina [10.15]
 
 
@@ -411,7 +411,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - Fix for osqueryui zombie processes
 - Fix for UI crash on Ventura
 - Fix for definitions not getting downloaded right after install
-- Other bug fixes
+- Other Product improvements
 
 ### Aug-2022 (Build: 101.75.90 | Release version: 20.122071.17590.0)
 
@@ -426,7 +426,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Added a new field in the output of `mdatp health` that can be used to query the enforcement level of the network protection feature. The new field is called `network_protection_enforcement_level` and can take one of the following values: `audit`, `block`, or `disabled`.
 - Addressed a product bug where multiple detections of the same content could lead to duplicate entries in the threat history.
-- Other bug fixes.
+- Other Product improvements.
 
 ### Jul-2022 (Build: 101.73.77 | Release version: 20.122062.17377.0)
 
@@ -443,7 +443,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - Added an option to [configure file hash computation](mac-preferences.md#configure-file-hash-computation-feature)
 - From this build onwards, the product has the new anti-malware engine by default
 - Performance improvements for file copy operations
-- Bug fixes
+- Product improvements
 
 ### Jul-2022 (Build: 101.71.18 | Release version: 20.122052.17118.0)
 
@@ -458,7 +458,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - Up until now, the product log level didn't persist between product restarts. Beginning in this version, there's a new command-line tool switch that persists the log level. The new command is `mdatp log level persist --level <level>`.
 - Fixed a bug in the product installation package that in rare cases could lead a loss of product state during updates
 - Performance improvements for file copy operations and built-in macOS applications
-- Bug fixes
+- Product improvements
 
 ### Jun-2022 (Build: 101.70.19 | Release version: 20.122051.17019.0)
 
@@ -483,7 +483,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Fixed a bug where the installation package was sometimes hanging indefinitely during product updates
 - Fixed a bug where the product sometimes was incorrectly detecting files inside the quarantine folder
-- Performance improvements & other bug fixes
+- Performance improvements & other Product improvements
 
 ### May-2022 (Build: 101.66.54 | Release version: 20.122041.16654.0)
 
@@ -495,7 +495,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - Addressed an issue where `mdatp diagnostic real-time-protection-statistics` wasn't printing the correct process path in some cases.
-- Bug fixes
+- Product improvements
 
 ### Apr-2022 (Build: 101.64.15 | Release version: 20.122032.16415.0)
 
@@ -509,7 +509,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - Fixed a regression introduced in version 101.61.69 where the status menu icon was sometimes showing an error icon, even though no action was required from the end user
 - Improved the `conflicting_applications` field in `mdatp health` to show only the most recent 10 processes and also to include the process names. This makes it easier to identify which processes are potentially conflicting with Microsoft Defender for Endpoint for Mac.
 - Fixed a bug in `mdatp device-control removable-media policy list` where vendor ID and product ID were displayed as decimal instead of hexadecimal
-- Performance improvements & other bug fixes
+- Performance improvements & other Product improvements
 
 ### Mar-2022 (Build: 101.61.69 | Release version: 20.122022.16169.0)
 
@@ -520,7 +520,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Bug fixes
+- Product improvements
 
 ### Mar-2022 (Build: 101.60.91 | Release version: 20.122021.16091.0)
 
@@ -561,7 +561,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - The command-line tool now supports restoring quarantined files to a location other than the one where the file was originally detected. This can be done through `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`.
 - Extended device control to handle devices connected over Thunderbolt 3
 - Improved the handling of device control policies containing invalid vendor IDs and product IDs. Before this version, if the policy contained one or more invalid IDs, the entire policy was ignored. Beginning with this version, only the invalid portions of the policy are ignored. Issues with the policy are surfaced through `mdatp device-control removable-media policy list`.
-- Bug fixes
+- Product improvements
 
 
 ### Feb-2022 (Build: 101.56.62 | Release version: 20.121122.15662.0)
@@ -573,7 +573,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Bug fixes
+- Product improvements
 
 ### Jan-2022 (Build: 101.56.35 | Release version: 20.121121.15635.0)
 
@@ -591,7 +591,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - Addressed an issue discovered in macOS 12.2 preview 2 where the installation package couldn't be opened due to a change in the operating system (OS) that prevents installation of packages with certain characteristics. While it appears that this OS change isn't included in the final release of macOS 12.2, it's likely that it will be reintroduced in a future macOS version. As such, we encourage all enterprise administrators to refresh the Microsoft Defender for Endpoint package in their management console to this product version (or a newer version).
 - Addressed an issue seen on some M1 devices where the product was stuck with invalid anti-malware definitions and couldn't successfully update to a working set of definitions.
 - `mdatp health` output has been extended with a more attribute called `full_disk_access_enabled` that can be used to determine whether Full Disk Access has been granted to all components of Microsoft Defender for Endpoint for Mac.
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 ### Jan-2022 (Build: 101.54.16 | Release version: 20.121111.15416.0)
 
@@ -604,7 +604,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - macOS 10.14 (Mojave) is no longer supported
 - After a product setting stops being managed by the administrator through MDM, it now reverts to the value it had before it was managed (the value configured locally by the end user or, if no such local value was explicitly provided, the default value used by the product). Prior to this change, after a setting stopped being managed, its managed value persisted and was still used by the product.
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -614,7 +614,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - Added a new switch to the command-line tool to control whether archives are scanned during on-demand scans. This can be configured through `mdatp config scan-archives --value [enabled/disabled]`. By default, this is set to enabled.
-- Bug fixes
+- Product improvements
 
 
 
@@ -633,7 +633,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - Candidate build for macOS 12 (Monterey)
-- Bug fixes
+- Product improvements
 
 
 
@@ -646,7 +646,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
   - Control degree of parallelism for on-demand scans. This can be configured through `mdatp config maximum-on-demand-scan-threads --value [number-between-1-and-64]`. By default, a degree of parallelism of 2 is used.
   - Control whether scans after security intelligence updates are enabled or disabled. This can be configured through `mdatp config scan-after-definition-update --value [enabled/disabled]`. By default, this is set to enabled.
 - Changing the product log level now requires elevation.
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -656,7 +656,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - M1 chip native support
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -665,7 +665,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -674,7 +674,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Bug fixes
+- Product improvements
 
 
 
@@ -683,7 +683,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Bug fixes
+- Product improvements
 
 
 
@@ -694,7 +694,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - [Device control for macOS](mac-device-control-overview.md) is now in general availability.
 - Addressed an issue where a quick scan couldn't be started from the status menu on macOS 11 (Big Sur).
-- Other bug fixes
+- Other Product improvements
 
 
 
@@ -716,7 +716,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - `mdatp diagnostic real-time-protection-statistics` now supports two other switches:
   - `--sort`: sorts the output descending by total number of files scanned
   - `--top N`: displays the top N results (only works if `--sort` is also specified)
-- Performance improvements (specifically for when `YARN` is used) & bug fixes
+- Performance improvements (specifically for when `YARN` is used) & Product improvements
 
 
 
@@ -735,7 +735,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - Microsoft Defender for Endpoint on macOS is now available in preview for US Government customers. For more information, see [Microsoft Defender for Endpoint for US Government customers](gov.md).
-- Performance improvements (specifically for the situation when the XCode Simulator app is used) & bug fixes.
+- Performance improvements (specifically for the situation when the XCode Simulator app is used) & Product improvements.
 
 
 
@@ -745,7 +745,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - Added a new option to the command-line tool to view information about the last on-demand scan. To view information about the last on-demand scan, run `mdatp health --details antivirus`.
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -754,7 +754,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -763,7 +763,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -775,7 +775,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 > [!NOTE]
 > The old command-line tool syntax has been deprecated with this release. For information on the new syntax, see [Resources](mac-resources.md#configuring-from-the-command-line).
 - Added a new command-line switch to disable the network extension: `mdatp system-extension network-filter disable`. This command can be useful to troubleshoot networking issues that could be related to Microsoft Defender for Endpoint on Mac.
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -784,7 +784,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Bug fixes
+- Product improvements
 
 
 
@@ -795,7 +795,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Improved the reliability of the agent when running on macOS 11 Big Sur.
 - Added a new command-line switch (`--ignore-exclusions`) to ignore AV exclusions during custom scans (`mdatp scan custom`).
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -806,7 +806,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Removed conditions when Microsoft Defender for Endpoint was triggering a macOS 11 (Big Sur) bug that manifests into a kernel panic.
 - Fixed a memory leak in the Endpoint Security system extension when running on mac 11 (Big Sur).
-- Bug fixes
+- Product improvements
 
 
 
@@ -814,7 +814,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Bug fixes
+- Product improvements
 
 
 
@@ -824,7 +824,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Added a new managed preference for [disabling the option to send feedback](mac-preferences.md#show--hide-option-to-send-feedback).
 - Status menu icon now shows a healthy state when the product settings are managed. Previously, the status menu icon was displaying a warning or error state, even though the product settings were managed by the administrator.
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -837,7 +837,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 > [!NOTE]
 > The old command-line tool syntax will be removed from the product on **January 1st, 2021**.
 - Extended `mdatp diagnostic create` with a new parameter (`--path [directory]`) that allows the diagnostic logs to be saved to a different directory.
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -847,7 +847,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - User interface improvements to differentiate exclusions that are managed by the IT administrator versus exclusions defined by the local user.
 - Improved CPU utilization during on-demand scans.
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -862,7 +862,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Fixed a bug where automatic sample submission wasn't marked as managed in the user interface.
 - Added new settings for controlling the retention of items in the antivirus scan history. You can now [specify the number of days to retain items in the scan history](mac-preferences.md#antivirus-scan-history-retention-in-days) and [specify the maximum number of items in the scan history](mac-preferences.md#maximum-number-of-items-in-the-antivirus-scan-history).
-- Bug fixes
+- Product improvements
 
 
 
@@ -882,7 +882,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 > We are working on a new and enhanced syntax for the `mdatp` command-line tool. The new syntax is currently the default in the Insider Fast and Insider Slow update channels. We encourage you to familiarize yourself with this new syntax.
 > We will continue supporting the old syntax in parallel with the new syntax and will provide more communication around the deprecation plan for the old syntax in the upcoming months.
 - Addressed a kernel panic that occurred sometimes when accessing SMB file shares.
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -892,7 +892,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Improvements to quick scan logic to significantly reduce the number of scanned files.
 - Added [autocompletion support](mac-resources.md#how-to-enable-autocompletion) for the command-line tool.
-- Bug fixes
+- Product improvements
 
 
 
@@ -900,7 +900,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -910,7 +910,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Improvements around compatibility with Time Machine
 - Accessibility improvements
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -922,7 +922,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - Antivirus [exclusions now support wildcards](mac-exclusions.md#supported-exclusion-types)
 - Added the ability to trigger antivirus scans from the macOS contextual menu. You can now right-click a file or a folder in Finder and select **Scan with Microsoft Defender for Endpoint**.
 - In-place product downgrades are now explicitly disallowed by the installer. If you need to downgrade, first uninstall the existing version and reconfigure your device.
-- Other performance improvements & bug fixes
+- Other performance improvements & Product improvements
 
 
 
@@ -933,7 +933,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - You can now [set an update channel](mac-updates.md#set-the-channel-name) for Microsoft Defender for Endpoint on macOS that is different from the system-wide update channel.
 - New product icon
 - Other user experience improvements
-- Bug fixes
+- Product improvements
 
 
 
@@ -944,7 +944,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 - Improvements around compatibility with Time Machine
 - Addressed an issue where the product was sometimes not cleaning all files under `/Library/Application Support/Microsoft/Defender` during uninstallation.
 - Reduced the CPU utilization of the product when Microsoft products are updated through Microsoft AutoUpdate.
-- Other performance improvements & bug fixes
+- Other performance improvements & Product improvements
 
 
 
@@ -957,7 +957,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 >
 > If you already have MDATP for Mac deployed to your Sierra [10.12] devices, please upgrade to the latest macOS version to eliminate risks of losing protection.
 
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -967,7 +967,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Added more controls for IT administrators around [management of exclusions](mac-preferences.md#exclusion-merge-policy), [management of threat type settings](mac-preferences.md#threat-type-settings-merge-policy), and [disallowed threat actions](mac-preferences.md#disallowed-threat-actions).
 - When Full Disk Access isn't enabled on the device, a warning is now displayed in the status menu.
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -983,7 +983,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Bug fixes
+- Product improvements
 
 
 
@@ -998,7 +998,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
   mdatp connectivity test
   ```
 - Added ability to view the full threat history in the user interface (can be accessed from the **Protection history** view).
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -1006,7 +1006,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Bug fixes
+- Product improvements
 
 
 
@@ -1023,7 +1023,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - Added the ability to configure the antivirus functionality to run in [passive mode](mac-preferences.md#enforcement-level-for-antivirus-engine).
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 
 
@@ -1039,6 +1039,6 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 > - For manual deployments, see the updated instructions in the [Manual deployment topic](mac-install-manually.md#allow-full-disk-access).
 - For managed deployments, see the updated instructions in the [JAMF-based deployment](mac-install-with-jamf.md) and [Microsoft Intune-based deployment](mac-install-with-intune.md#create-system-configuration-profiles) articles.
 
-- Performance improvements & bug fixes
+- Performance improvements & Product improvements
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
