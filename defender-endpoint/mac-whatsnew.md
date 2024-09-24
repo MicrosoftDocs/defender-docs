@@ -43,16 +43,16 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
 ## Sequoia support
 
-- In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This will result in intermittent network connectivity issues for end users. 
+- In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This results in intermittent network connectivity issues for end users. 
 
    > [!NOTE]
    > The core functionalities of antivirus, endpoint detection & response, and threat and vulnerability management continue functioning.
 
-- We are recommending that customers who have Network Protection enabled in their organization to either:
+- We're recommending that customers who have Network Protection enabled in their organization to either:
 
    1. Delay updating to macOS Sequoia (version 15.0); or
 
-   2. Use the instructions to disable Network Extension as described in [Troubleshoot NetExt issues in Microsoft Defender for Endpoint on Mac](mac-troubleshoot-netext-mde.md).  This will cause Network Protection, Web Content Filtering, and IP address/URL Indicators to be non-functional.
+   2. Use the instructions to disable Network Extension as described in [Troubleshoot NetExt issues in Microsoft Defender for Endpoint on Mac](mac-troubleshoot-netext-mde.md).  This causes Network Protection, Web Content Filtering, and IP address/URL Indicators to be nonfunctional.
 
 - Microsoft Defender is collaborating with Apple to provide our mutual customers a solution when Network Protection is enabled in Microsoft Defender for Endpoint on macOS Sequoia (version 15.0).
 
@@ -128,7 +128,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 - Improvements to `mdatp threat` command
 - Remove Big Sur from supported versions of macOS
-- [[device control](mac-device-control-overview.md)] Fix Bluetooth support on Sonoma (see Note below)
+- [[device control](mac-device-control-overview.md)] Fix Bluetooth support on Sonoma (see the note later in this section)
 - Bug and performance fixes
 - **(GA) Troubleshooting mode for macOS**. Troubleshooting mode helps you identify instances where antivirus might be causing issues with your applications or system resources. To learn more, see [Troubleshooting mode in Microsoft Defender for Endpoint on macOS](mac-troubleshoot-mode.md).  
 
