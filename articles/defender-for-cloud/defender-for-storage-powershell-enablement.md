@@ -12,9 +12,7 @@ We recommend that you enable Defender for Storage on the subscription level. Doi
 > [!TIP]
 > You can always [configure specific storage accounts](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-subscription#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level (override subscription-level settings).
 
-## [Enable on a subscription](#tab/enable-subscription/)
-
-To enable Microsoft Defender for Storage at the subscription level with per-transaction pricing using PowerShell:
+Before working with the Azure Az PowerShell, perform the following steps:
 
 1. If you don't have it already, [install the Azure Az PowerShell module](/powershell/azure/install-azure-powershell).
 1. Use the `Connect-AzAccount` cmdlet to sign in to your Azure account. Learn more about [signing in to Azure with Azure PowerShell](/powershell/azure/authenticate-azureps).
@@ -27,25 +25,40 @@ To enable Microsoft Defender for Storage at the subscription level with per-tran
 
     Replace `<subscriptionId>` with your subscription ID.
 
+## [Enable on a subscription](#tab/enable-subscription/)
+
+To enable Microsoft Defender for Storage at the subscription level with per-transaction pricing using PowerShell:
+
 1. Enable Microsoft Defender for Storage for your subscription with the `Set-AzSecurityPricing` cmdlet:
 
     ```powershell
-    Set-AzSecurityPricing -Name "StorageAccounts" -PricingTier "Standard" -SubPlan P2
+    Set-AzSecurityPricing -Name "StorageAccounts" -PricingTier "Standard" -SubPlan "DefenderForStorageV2" -Extension '[
+        {
+            "name": "OnUploadMalwareScanning",
+                "isEnabled": "True",
+            "additionalExtensionProperties": {
+                "CapGBPerMonthPerStorageAccount": "6000"
+            }
+        },
+        {
+            "name": "SensitiveDataDiscovery",
+            "isEnabled": "True"
+        }]
     ```
+
+If no extensions properties are provided, both malware scanning and sensitive data discovery are enabled by default. The default monthly threshold per storage account for malware scanning is 5,000 GB.
 
 > [!TIP]
 > You can use the [`GetAzSecurityPricing` (Az_Security)](/powershell/module/az.security/get-azsecuritypricing) to see all of the Defender for Cloud plans that are enabled for the subscription.
 
-To disable the entire Defender plan, set the PricingTier property value to `Free` and remove the `SubPlan` and extensions properties.
+To modify the monthly threshold for on-upload malware scanning in your storage accounts, adjust the `-CapGBPerMonthPerStorageAccount` property to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
+
+If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to **False** on the `OnUploadMalwareScanning` or `SensitiveDataDiscovery` extension properties. To disable the entire Defender plan, set the `-PricingTier` property value to `Free` and remove the `-SubPlan` and extension properties.
 
 Learn more about [using PowerShell with Microsoft Defender for Cloud](powershell-onboarding.md).
 
-To modify the monthly threshold for malware scanning in your storage accounts, adjust the `-CapGBPerMonthPerStorageAccount` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
 
-If you want to turn off the on-upload malware scanning (`Onor Sensitive data threat detection features, you can change the isEnabled value to **False** under Sensitive data discovery.
-
-
-Learn more about [updating Defender plans with PowerShell - fix this link](/rest/api/defenderforcloud/pricings/update).
+Refer to the [Azure PowerShell reference](/powershell/module/az.security/set-azsecuritypricing?view=azps-12.3.0) for details on the 'Set-AzSecurityPricing` cmdlet.
 
 ## [Enable on a storage account](#tab/enable-storage-account/)
 
@@ -55,8 +68,7 @@ To enable and configure Microsoft Defender for Storage at the storage account le
 Update-AzSecurityDefenderForStorage -ResourceId "/subscriptions/<SubscriptionId>/resourcegroups/<ResourceGroupName>/providers/Microsoft.Storage/storageAccounts/<StorageAccountName>" -IsEnabled -OnUploadIsEnabled -OnUploadCapGbPerMonth 7000 -SensitiveDataDiscoveryIsEnabled
 ```
 
-
-To modify the monthly threshold for malware scanning in your storage accounts, adjust the `OnUploadCapGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
+To modify the monthly threshold for malware scanning in your storage accounts, adjust the `-OnUploadCapGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
 
 If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to **False** under the `malwareScanning` or `sensitiveDataDiscovery` properties sections.
 
