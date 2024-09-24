@@ -76,7 +76,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ##### What's new
 
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### Jul-2024 (Build: 101.24062.0009  | Release version: 20.124062.9.0)
 
@@ -88,7 +88,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 ##### What's new
 
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### Jun-2024 (Build: 101.24052.0013  | Release version: 20.124052.13.0)
 
@@ -101,7 +101,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 ##### What's new
 
 - [[device control](mac-device-control-overview.md)] Secure Digital cards aren't recognized on newer macOS
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### May-2024 (Build: 101.24042.0008  | Release version: 20.124042.8.0)
 
@@ -113,7 +113,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 #### What's new
 
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### Apr-2024 (Build: 101.24032.0006  | Release version: 20.124032.06.0)
 
@@ -129,7 +129,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 - Improvements to `mdatp threat` command
 - Remove Big Sur from supported versions of macOS
 - [[device control](mac-device-control-overview.md)] Fix Bluetooth support on Sonoma (see the note later in this section)
-- Bug and performance fixes
+- Product improvements and performance fixes
 - **(GA) Troubleshooting mode for macOS**. Troubleshooting mode helps you identify instances where antivirus might be causing issues with your applications or system resources. To learn more, see [Troubleshooting mode in Microsoft Defender for Endpoint on macOS](mac-troubleshoot-mode.md).  
 
    > [!NOTE]
@@ -146,7 +146,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 #### What's new
 
-- Bug and performance fixes
+- Product improvements and performance fixes
 - **(GA) Built-in Scheduled Scan for macOS**: For information on Scheduled Scan built-in for Microsoft Defender for Endpoint on macOS, see [How to schedule scans with Microsoft Defender for Endpoint on macOS](mac-schedule-scan.md).
 
 ### Jan-2024 (Build: 101.23122.0005  | Release version: 20.123122.5.0)
@@ -160,7 +160,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 #### What's new
 
 - [[device control](mac-device-control-overview.md)] Fixes for Bluetooth devices support
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### Dec-2023 (Build: 101.23102.0020 | Release version: 20.123102.20.0)
 
@@ -172,7 +172,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 #### What's new
 
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### Nov-2023 (Build: 101.23092.0007 | Release version: 20.123092.7.0)
 
@@ -204,7 +204,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 - [[device control](mac-device-control-overview.md)] Detailed status with `mdatp health --details device_control`
 - [[device control](mac-device-control-overview.md)] `mdatp config device-control policy` to [set policy](mac-device-control-manual.md) on a nonmanaged machine
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### Sep-2023 (Build: 101.23072.0025 | Release version: 20.123072.25.0)
 
@@ -216,7 +216,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 #### What's new
 
-- Bug and performance fixes
+- Product improvements and performance fixes
 - Fix: Security Portal events might have missed ancestors details for short lived processes
 - Fix: Major performance issues on macOS when Network Protection is set to Audit mode
 - **(GA) Mac devices receive built-in protection**. Tamper protection is turned on in block mode by default. This setting helps secure your Mac against threats. To learn more, see [Protect macOS security settings with tamper protection](built-in-protection.md).
@@ -231,7 +231,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 #### What's new
 
-- Bug and performance fixes
+- Product improvements and performance fixes
 - Fix: macOS complains that uninstall background task is from unidentified developer
 
 ### Jul-2023 (Build: 101.23052.0004  | Release version: 20.123052.4.0)
@@ -246,7 +246,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 
 - Client version schema change
 - Fix: Defender doesn't start on a machine with certain versions of Microsoft Edge due to directory permission issue
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### Jun-2023 (Build: 101.98.84  | Release version: 20.123042.19884.0)
 
@@ -259,7 +259,7 @@ Behavior monitoring monitors process behavior to detect and analyze potential th
 #### What's new
 
 - System Extensions health command `mdatp health --details system_extensions`
-- Bug and performance fixes
+- Product improvements and performance fixes
 - **(GA) Network protection available for macOS**
 
 Network protection for macOS is now available for all Mac devices onboarded to Defender for Endpoint. Devices must meet the minimum requirements. To learn more, see [Use network protection to help prevent macOS connections to bad sites](network-protection-macos.md).
@@ -277,7 +277,7 @@ Network protection for macOS is now available for all Mac devices onboarded to D
 - Tamper Protection health command `mdatp health --details tamper_protection`
 - Tamper Protection - [MDM processes exclusions](tamperprotection-macos.md#exclusions)
 - Fix: Remove Codesigned Artifact from App Bundle
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### May-2023 (Build: 101.98.70  | Release version: 20.123022.19870.0)
 
@@ -289,7 +289,7 @@ Network protection for macOS is now available for all Mac devices onboarded to D
 
 #### What's new
 
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### Mar-2023 (Build: 101.98.30  | Release version: 20.123012.19830.0)
 
@@ -301,7 +301,7 @@ Network protection for macOS is now available for all Mac devices onboarded to D
 
 #### What's new
 
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### Feb-2023 (Build: 101.97.94  | Release version: 20.123011.19794.0)
 
@@ -326,7 +326,7 @@ Network protection for macOS is now available for all Mac devices onboarded to D
 
 **What's new**
 
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 
 
@@ -340,7 +340,7 @@ Network protection for macOS is now available for all Mac devices onboarded to D
 - Scanning optimization for move file operations
 - Adding exclusions from command line now requires admin privileges
 - Decrease sysextd noise from Tamper Protection in Advanced Hunting
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### Jan-2023
 
@@ -362,7 +362,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - Fix for some users experiencing performance issues and temporary system hangs
-- Bug and performance fixes
+- Product improvements and performance fixes
 
 ### Oct-2022 (Build: 101.86.81 | Release version: 20.122082.18681.0)
 
@@ -375,9 +375,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Bug fix: Upgrade fails if `\_mdatp` user a member of `\_lpadmin` group
-
-
+- Issue resolution: Upgrade fails if `\_mdatp` user a member of `\_lpadmin` group
 
 > [!IMPORTANT]
 > This is a minimal recommended MDE version for macOS Ventura.
@@ -425,7 +423,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - Added a new field in the output of `mdatp health` that can be used to query the enforcement level of the network protection feature. The new field is called `network_protection_enforcement_level` and can take one of the following values: `audit`, `block`, or `disabled`.
-- Addressed a product bug where multiple detections of the same content could lead to duplicate entries in the threat history.
+- Addressed a product issue where multiple detections of the same content could lead to duplicate entries in the threat history.
 - Other Product improvements.
 
 ### Jul-2022 (Build: 101.73.77 | Release version: 20.122062.17377.0)
@@ -804,7 +802,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Removed conditions when Microsoft Defender for Endpoint was triggering a macOS 11 (Big Sur) bug that manifests into a kernel panic.
+- Removed conditions when Microsoft Defender for Endpoint was triggering a macOS 11 (Big Sur) issue that manifests into a kernel panic.
 - Fixed a memory leak in the Endpoint Security system extension when running on mac 11 (Big Sur).
 - Product improvements
 
