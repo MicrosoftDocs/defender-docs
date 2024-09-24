@@ -584,7 +584,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- The application is renamed from "Microsoft Defender ATP" to "Microsoft Defender". End users observe the following changes:
+- The application is renamed from *Microsoft Defender ATP* to *Microsoft Defender*. End users observe the following changes:
 - The application installation path has changed from `/Application/Microsoft Defender ATP.app` to `/Applications/Microsoft Defender.app`.
 - Within the user experience, occurrences of "Microsoft Defender ATP" are replaced by "Microsoft Defender"
 - Resolved an issue where some VPN applications couldn't connect due to the network content filter that is distributed with Microsoft Defender for Endpoint for Mac
