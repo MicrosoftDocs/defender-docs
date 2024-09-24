@@ -181,7 +181,7 @@ On the **Direction** tab, the chart shows the following information for the spec
 
 Select :::image type="icon" source="media/m365-cc-sc-filter-icon.png" border="false"::: **Filter** to modify the report and the details table by selecting one or more of the following values in the flyout that opens:
 
-- **Date (UTC)**: **Start date** and **End date**.
+- **Date (UTC)**: **Start date** and **End date**.  Note: if a user wants to see data for a specific such as Jan 10th for example, the user needs to filter for Jan 11th. we showcase the data in T-1 format. as the current day data is always available for filtering the following day. 
 - **Mail direction**: Select **Inbound**, **Outbound**, and **Intra-org**.
 - **Type**: Select one or more of the following values:
   - **Good mail**
