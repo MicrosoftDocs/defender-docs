@@ -483,7 +483,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Resolved an issue where the installation package was sometimes hanging indefinitely during product updates
 - Resolved an issue where the product sometimes was incorrectly detecting files inside the quarantine folder
-- Performance improvements & other Product improvements
+- Performance improvements & other product improvements
 
 ### May-2022 (Build: 101.66.54 | Release version: 20.122041.16654.0)
 
@@ -507,9 +507,9 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 **What's new**
 
 - Fixed a regression introduced in version 101.61.69 where the status menu icon was sometimes showing an error icon, even though no action was required from the end user
-- Improved the `conflicting_applications` field in `mdatp health` to show only the most recent 10 processes and also to include the process names. This makes it easier to identify which processes are potentially conflicting with Microsoft Defender for Endpoint for Mac.
+- Improved the `conflicting_applications` field in `mdatp health` to show only the most recent 10 processes and also to include the process names. This improvement makes it easier to identify which processes are potentially conflicting with Microsoft Defender for Endpoint for Mac.
 - Resolved an issue in `mdatp device-control removable-media policy list` where vendor ID and product ID were displayed as decimal instead of hexadecimal
-- Performance improvements & other Product improvements
+- Performance improvements & other product improvements
 
 ### Mar-2022 (Build: 101.61.69 | Release version: 20.122022.16169.0)
 
@@ -558,7 +558,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- The command-line tool now supports restoring quarantined files to a location other than the one where the file was originally detected. This can be done through `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`.
+- The command-line tool now supports restoring quarantined files to a location other than the one where the file was originally detected. Restoration can be done through `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`.
 - Extended device control to handle devices connected over Thunderbolt 3
 - Improved the handling of device control policies containing invalid vendor IDs and product IDs. Before this version, if the policy contained one or more invalid IDs, the entire policy was ignored. Beginning with this version, only the invalid portions of the policy are ignored. Issues with the policy are surfaced through `mdatp device-control removable-media policy list`.
 - Product improvements
