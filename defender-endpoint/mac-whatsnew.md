@@ -43,7 +43,7 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
 ## Sequoia support
 
-- In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This results in intermittent network connectivity issues for end users. 
+- In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This issue results in intermittent network connectivity issues for end users. 
 
    > [!NOTE]
    > The core functionalities of antivirus, endpoint detection & response, and threat and vulnerability management continue functioning.
@@ -391,11 +391,11 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Bug fix - Mac TP in Block mode causing device hang on shutdown/crashes on reboot
+- Fix - Mac TP in Block mode causing device hang on shutdown/crashes on reboot
 - Add a mdatp command-line switch to view the on-demand scan history
 - Improve Performance of Device Owner on macOS
 - Ready for macOS Ventura (13.0)
-- Bug and performance fixes
+- Fixes for product and performance issues
 
 
 
