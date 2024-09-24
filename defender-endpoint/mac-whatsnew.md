@@ -45,10 +45,10 @@ For more information on Microsoft Defender for Endpoint on other operating syste
 
 - In macOS Sequoia (version 15.0), if you have Network Protection enabled, you might see crashes of the network extension (NetExt). This will result in intermittent network connectivity issues for end users. 
 
-         Note: The core functionalities of AV, EDR, and TVM continue functioning.
+         Note: The core functionalities of antivirus, endpoint detection & response, and threat and vulnerability management continue functioning.
 
-- We are recommending that customers who have Network Protection enabled in their organization:
-1. To either use the work-around here [Troubleshoot NetExt issues in Microsoft Defender for Endpoint on Mac](mac-troubleshoot-netext-mde.md)
+- We are recommending that customers who have Network Protection enabled in their organization to either:
+1. Use the instructions to disable Network Extension as described here [Troubleshoot NetExt issues in Microsoft Defender for Endpoint on Mac](mac-troubleshoot-netext-mde.md).  This will cause Network Protection, Web Content Filtering, and IP address/URL Indicators to be non-functional.
 or
 2. Revert back to macOS Sonoma (14.x)
 
