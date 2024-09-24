@@ -73,13 +73,13 @@ Assessment IDs prior to September 29, 2024 are replaced for all three recommenda
 
 September 29, 2024
 
-Kubernetes Identity and Access information has been added to the security graph, including nodes that represent all Kubernetes Role Based Access Control (RBAC) related entitles (service accounts, roles, role bindings, etc.), and edges that represent the permissions between Kubernetes objects. Customers can now query the security graph for their Kubernetes RBAC, and related relationships between Kubernetes entities (Can Authenticate As, Can Impersonate As, Grants Role, Access Defined By, Grants Access To, Has Permission To, etc.)
+Kubernetes Identity and Access information is added to the security graph, including nodes that represent all Kubernetes Role Based Access Control (RBAC) related entitles (service accounts, roles, role bindings, etc.), and edges that represent the permissions between Kubernetes objects. Customers can now query the security graph for their Kubernetes RBAC, and related relationships between Kubernetes entities (Can Authenticate As, Can Impersonate As, Grants Role, Access Defined By, Grants Access To, Has Permission To, etc.)
 
 ### Kubernetes Identity and Access information-based attack paths (preview)
 
 September 29, 2024
 
-Using the Kubernetes RBAC data in the security graph, we'll start detecting Cloud to Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and report on additional attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from and within Kubernetes clusters.
+Using the Kubernetes RBAC data in the security graph, we start detecting Cloud to Kubernetes, Kubernetes to Cloud, and inner Kubernetes lateral movement and report on additional attack paths where attackers can abuse Kubernetes and Cloud authorization for lateral movement to, from and within Kubernetes clusters.
 
 ### Improved attack path analysis
 
@@ -103,7 +103,7 @@ Defender for Cloud now detects when container workloads try to pull images from 
 
 Sept 29, 2024
 
-Customers are now able to get a list of software installed in their containers and container images through the Cloud Security Explorer. This can also be used to quickly gain other insights into the customer environment, such as finding all containers and container images with a software impacted by a 0-day vulnerability, even before a CVE is published.
+Customers are now able to get a list of software installed in their containers and container images through the Cloud Security Explorer. This list can also be used to quickly gain other insights into the customer environment, such as finding all containers and container images with a software impacted by a 0-day vulnerability, even before a CVE is published.
 
 ### Cloud security explorer experience improvements
 
