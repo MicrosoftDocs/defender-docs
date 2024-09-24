@@ -13,7 +13,7 @@ ms.collection:
 - tier3
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 06/21/2024
+ms.date: 09/24/2024
 ---
 
 # Configure Microsoft Defender XDR to stream Advanced Hunting events to your Azure Event Hub
