@@ -456,7 +456,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - `mdatp connectivity test` added an extra URL. The new URL is [https://go.microsoft.com/fwlink/?linkid=2144709](https://go.microsoft.com/fwlink/?linkid=2144709).
 - Up until now, the product log level didn't persist between product restarts. Beginning in this version, there's a new command-line tool switch that persists the log level. The new command is `mdatp log level persist --level <level>`.
-- Fixed a bug in the product installation package that in rare cases could lead a loss of product state during updates
+- Resolved an issue in the product installation package that in rare cases could lead a loss of product state during updates
 - Performance improvements for file copy operations and built-in macOS applications
 - Product improvements
 
@@ -469,7 +469,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Fixed a bug where threat-related notifications weren't always presented to the end user.
+- Resolved an issue where threat-related notifications weren't always presented to the end user.
 - Performance improvements & other updates.
 
 ### Jun-2022 (Build: 101.70.18 | Release version: 20.122042.17018.0)
@@ -481,8 +481,8 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 **What's new**
 
-- Fixed a bug where the installation package was sometimes hanging indefinitely during product updates
-- Fixed a bug where the product sometimes was incorrectly detecting files inside the quarantine folder
+- Resolved an issue where the installation package was sometimes hanging indefinitely during product updates
+- Resolved an issue where the product sometimes was incorrectly detecting files inside the quarantine folder
 - Performance improvements & other Product improvements
 
 ### May-2022 (Build: 101.66.54 | Release version: 20.122041.16654.0)
@@ -508,7 +508,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - Fixed a regression introduced in version 101.61.69 where the status menu icon was sometimes showing an error icon, even though no action was required from the end user
 - Improved the `conflicting_applications` field in `mdatp health` to show only the most recent 10 processes and also to include the process names. This makes it easier to identify which processes are potentially conflicting with Microsoft Defender for Endpoint for Mac.
-- Fixed a bug in `mdatp device-control removable-media policy list` where vendor ID and product ID were displayed as decimal instead of hexadecimal
+- Resolved an issue in `mdatp device-control removable-media policy list` where vendor ID and product ID were displayed as decimal instead of hexadecimal
 - Performance improvements & other Product improvements
 
 ### Mar-2022 (Build: 101.61.69 | Release version: 20.122022.16169.0)
@@ -860,7 +860,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
   > [!NOTE]
   > `mdatp --health` will be replaced with `mdatp health` in a future product update.
 
-- Fixed a bug where automatic sample submission wasn't marked as managed in the user interface.
+- Resolved an issue where automatic sample submission wasn't marked as managed in the user interface.
 - Added new settings for controlling the retention of items in the antivirus scan history. You can now [specify the number of days to retain items in the scan history](mac-preferences.md#antivirus-scan-history-retention-in-days) and [specify the maximum number of items in the scan history](mac-preferences.md#maximum-number-of-items-in-the-antivirus-scan-history).
 - Product improvements
 
