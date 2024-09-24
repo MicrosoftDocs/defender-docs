@@ -37,6 +37,7 @@ This article summarizes what's new in Microsoft Defender for Cloud. It includes 
 | September 29 | GA | [Improved attack path analysis](#improved-attack-path-analysis) |
 | September 29 | GA | [Full discovery of container images in supported registries](#full-discovery-of-container-images-in-supported-registries) |
 | September 29 | GA | [Dangling ACR hardening recommendation](#dangling-acr-hardening-recommendation-preview) |
+| September 29 | GA | [Containers software inventory with Cloud Security Explorer](#containers-software-inventory-with-cloud-security-explorer)
 | September 22 |Upcoming change|[Cloud security explorer experience improvements](#cloud-security-explorer-experience-improvements)|
 | September 18 | GA | [General Availability of File Integrity Monitoring based on Microsoft Defender for Endpoint](#general-availability-of-file-integrity-monitoring-based-on-microsoft-defender-for-endpoint) |
 | September 18 | GA | [FIM migration experience is available in Defender for Cloud](#fim-migration-experience-is-available-in-defender-for-cloud) |
@@ -97,6 +98,12 @@ Defender for Cloud now collects inventory data for all container images in suppo
 September 29, 2024
 
 Defender for Cloud now detects when container workloads try to pull images from deleted ACRs and provides a recommendation to stop using those images. This recommendation helps organizations protect themselves against malicious actors that would recreate the ACRs the images are pulled from and replace the images with malicious images.
+
+### Containers software inventory with Cloud Security Explorer
+
+Sept 29, 2024
+
+Customers are now able to get a list of software installed in their containers and container images through the Cloud Security Explorer. This can also be used to quickly gain other insights into the customer environment, such as finding all containers and container images with a software impacted by a 0-day vulnerability, even before a CVE is published.
 
 ### Cloud security explorer experience improvements
 
