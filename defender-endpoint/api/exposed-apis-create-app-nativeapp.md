@@ -3,8 +3,8 @@ title: Use Microsoft Defender for Endpoint APIs
 ms.reviewer:
 description: Learn how to design a native Windows app to get programmatic access to Microsoft Defender for Endpoint without a user.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 ms.date: 06/24/2024
 manager: deniseb

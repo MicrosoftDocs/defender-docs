@@ -374,10 +374,10 @@
          items:
               - name: Threat analytics overview
                 href: threat-analytics.md
-              - name: Defender Threat Intelligence in Microsoft Defender XDR
-                href: defender-threat-intelligence.md
               - name: Understand the analyst report
                 href: threat-analytics-analyst-reports.md
+              - name: Defender Threat Intelligence in Microsoft Defender XDR
+                href: defender-threat-intelligence.md
        - name: Endpoint Attack Notifications
          href: /defender-endpoint/endpoint-attack-notifications
        - name: Collaborate with Microsoft Defender Experts for Hunting
@@ -444,6 +444,8 @@
                 href: copilot-in-defender-file-analysis.md
               - name: Generate device summaries
                 href: copilot-in-defender-device-summary.md
+              - name: Summarize identities
+                href: security-copilot-defender-identity-summary.md                
               - name: Use guided responses
                 href: security-copilot-m365d-guided-response.md
               - name: Generate KQL queries
