@@ -25,13 +25,20 @@ If there are no entries in the list of attack paths, you can still test this fea
 
 1. Import a mock vulnerable image to your Azure Container Registry:
 
-    1. Run the following command in Cloud Shell:
+    1. First, pull a base image (for example, alpine) to your local environment by running:
 
         ```azurecli
-        az acr import --name $MYACR --source DCSPMtesting.azurecr.io/mdc-mock-0001 --image mdc-mock-0001
+        docker pull alpine
+        ```
+    
+    1. Tag the image with a vulnerable label and push it to your ACR. Replace <MYACR> with your Azure Container Registry name:
+    
+        ```azurecli
+        docker tag alpine <MYACR>.azurecr.io/mdc-mock-0001
+        docker push <MYACR>.azurecr.io/mdc-mock-0001
         ```
 
-    1. If you don't have an AKS cluster, use the following command to create a new AKS cluster:
+    1. If you don't have an AKS (Azure Kubernetes Service) cluster, use the following command to create a new AKS cluster:
 
         ```azurecli
         az aks create -n myAKSCluster -g myResourceGroup --generate-ssh-keys --attach-acr $MYACR
