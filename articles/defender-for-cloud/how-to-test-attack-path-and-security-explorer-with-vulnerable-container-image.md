@@ -31,7 +31,7 @@ If there are no entries in the list of attack paths, you can still test this fea
         docker pull alpine
         ```
     
-    1. Tag the image with a vulnerable label and push it to your ACR. Replace `<MYACR>` with your Azure Container Registry name:
+    1. Tag the image with the below label and push it to your ACR. Replace `<MYACR>` with your Azure Container Registry name:
     
         ```azurecli
         docker tag alpine <MYACR>.azurecr.io/mdc-mock-0001
