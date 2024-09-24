@@ -7,12 +7,12 @@ ms.date: 08/08/2023
 
 # Enable and configure with PowerShell
 
-We recommend that you enable Defender for Storage on the subscription level. Doing so ensures all storage accounts currently in the subscription will be protected. Storage accounts that are created after enabling Defender for Storage on the subscription level will be protected up to 24 hours after creation.
+We recommend that you enable Defender for Storage on the subscription level. Doing so ensures all storage accounts currently in the subscription are protected. Storage accounts that are created after enabling Defender for Storage on the subscription level are protected within 24 hours of creation.
 
 > [!TIP]
 > You can always [configure specific storage accounts](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-subscription#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level (override subscription-level settings).
 
-Before working with the Azure Az PowerShell, perform the following steps:
+Before working with the Azure PowerShell, perform the following steps:
 
 1. If you don't have it already, [install the Azure Az PowerShell module](/powershell/azure/install-azure-powershell).
 1. Use the `Connect-AzAccount` cmdlet to sign in to your Azure account. Learn more about [signing in to Azure with Azure PowerShell](/powershell/azure/authenticate-azureps).
@@ -62,7 +62,7 @@ Refer to the [Azure PowerShell reference](/powershell/module/az.security/set-azs
 
 ## [Enable on a storage account](#tab/enable-storage-account/)
 
-To enable and configure Microsoft Defender for Storage at the storage account level using PowerShell, use the `Update-AzSecurityDefenderForStorage`  cmdlet. Replace the `SubscriptionId`, `ResourceGroupName`, and `StorageAccountName` with your own Azure subscription ID, resource group and storage account names accordingly.
+To enable and configure Microsoft Defender for Storage at the storage account level using PowerShell, use the `Update-AzSecurityDefenderForStorage`  cmdlet. Replace the `SubscriptionId`, `ResourceGroupName`, and `StorageAccountName` with your own Azure subscription ID, resource group, and storage account names accordingly.
 
 ```powershell
 Update-AzSecurityDefenderForStorage -ResourceId "/subscriptions/<SubscriptionId>/resourcegroups/<ResourceGroupName>/providers/Microsoft.Storage/storageAccounts/<StorageAccountName>" -IsEnabled -OnUploadIsEnabled -OnUploadCapGbPerMonth 7000 -SensitiveDataDiscoveryIsEnabled
