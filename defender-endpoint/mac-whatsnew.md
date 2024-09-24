@@ -560,7 +560,7 @@ Live Response for macOS is now available for all Mac devices onboarded to Defend
 
 - The command-line tool now supports restoring quarantined files to a location other than the one where the file was originally detected. This can be done through `mdatp threat quarantine restore --id [threat-id] --path [destination-folder]`.
 - Extended device control to handle devices connected over Thunderbolt 3
-- Improved the handling of device control policies containing invalid vendor IDs and product IDs. Before this version, if the policy contained one or more invalid IDs, the entire policy was ignored. Starting from this version, only the invalid portions of the policy are ignored. Issues with the policy are surfaced through `mdatp device-control removable-media policy list`.
+- Improved the handling of device control policies containing invalid vendor IDs and product IDs. Before this version, if the policy contained one or more invalid IDs, the entire policy was ignored. Beginning with this version, only the invalid portions of the policy are ignored. Issues with the policy are surfaced through `mdatp device-control removable-media policy list`.
 - Bug fixes
 
 
