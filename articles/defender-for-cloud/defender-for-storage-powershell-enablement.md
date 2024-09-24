@@ -58,7 +58,7 @@ If you want to turn off the on-upload malware scanning or sensitive data threat 
 Learn more about [using PowerShell with Microsoft Defender for Cloud](powershell-onboarding.md).
 
 
-Refer to the [Azure PowerShell reference](/powershell/module/az.security/set-azsecuritypricing?view=azps-12.3.0) for details on the 'Set-AzSecurityPricing` cmdlet.
+Refer to the [Azure PowerShell reference](/powershell/module/az.security/set-azsecuritypricing) for details on the 'Set-AzSecurityPricing` cmdlet.
 
 ## [Enable on a storage account](#tab/enable-storage-account/)
 
