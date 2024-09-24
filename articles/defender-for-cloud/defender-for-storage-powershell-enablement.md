@@ -1,6 +1,6 @@
 ---
-title: Enable and configure the Microsoft Defender for Storage plan at scale using REST API
-description: Learn how to enable the Defender for Storage on your Azure subscription for Microsoft Defender for Cloud using REST API.
+title: Enable and configure the Microsoft Defender for Storage plan using PowerShell
+description: Learn how to enable the Defender for Storage on your Azure subscription for Microsoft Defender for Cloud using PowerShell.
 ms.topic: install-set-up-deploy
 ms.date: 08/08/2023
 ---
@@ -12,7 +12,7 @@ We recommend that you enable Defender for Storage on the subscription level. Doi
 > [!TIP]
 > You can always [configure specific storage accounts](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-subscription#override-defender-for-storage-subscription-level-settings) with custom configurations that differ from the settings configured at the subscription level (override subscription-level settings).
 
-Before working with the Azure PowerShell, perform the following steps:
+Before working with the PowerShell, perform the following steps:
 
 1. If you don't have it already, [install the Azure Az PowerShell module](/powershell/azure/install-azure-powershell).
 1. Use the `Connect-AzAccount` cmdlet to sign in to your Azure account. Learn more about [signing in to Azure with Azure PowerShell](/powershell/azure/authenticate-azureps).
