@@ -3,11 +3,11 @@ title: Microsoft Defender for Endpoint for US Government customers
 description: Learn about the Microsoft Defender for Endpoint for US Government customers requirements and capabilities available
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.reviewer: jesquive
 ms.localizationpriority: medium
-ms.date: 05/08/2024
+ms.date: 09/24/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -182,6 +182,8 @@ These are the features and known gaps for [Mobile Threat Defense (Microsoft Defe
 
 > [!NOTE]
 >
-> <sup>1</sup> The Defender Vulnerability Management Report inaccuracy functionality is not available for GCC, GCC High and DoD customers.
+> <sup>1</sup> The following Defender Vulnerability Management functionality is not available for GCC, GCC High and DoD customers:
+> - Report inaccuracy
+> - Request CVE support
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]

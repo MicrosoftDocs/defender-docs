@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint APIs connection to Power BI
 ms.reviewer: yongrhee
 description: Create a Power Business Intelligence (BI) report on top of Microsoft Defender for Endpoint APIs.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

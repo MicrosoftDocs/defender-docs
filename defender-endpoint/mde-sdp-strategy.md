@@ -2,8 +2,8 @@
 title: Use safe deployment practices to safeguard your environment
 description: Plan, implement, adopt, and manage safe deployment practices to safeguard and manage your environment
 keywords: mde safe deployment practices
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 manager: deniseb
 ms.date: 09/16/2024
 ms.topic: conceptual
@@ -35,7 +35,7 @@ Defender for Endpoint’s kernel drivers capture system-wide signals like proces
 
 The process for rolling out software and driver updates for Defender for Endpoint is shown in this image:
 
-:::image type="content" alt-text="process for rolling out software and driver updates for Defender for Endpoint" source="/defender/media/defender-endpoint/mde-software-driver-updates.png" lightbox="/defender/media/defender-endpoint/mde-software-driver-updates.png":::
+:::image type="content" alt-text="Screenshot that shows the process for rolling out software and driver updates for Defender for Endpoint." source="/defender/media/defender-endpoint/mde-software-driver-updates.png" lightbox="/defender/media/defender-endpoint/mde-software-driver-updates.png":::
 
 ### Microsoft SDP for monthly updates
 
