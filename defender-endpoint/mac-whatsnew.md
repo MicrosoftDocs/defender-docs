@@ -48,9 +48,9 @@ For more information on Microsoft Defender for Endpoint on other operating syste
          Note: The core functionalities of antivirus, endpoint detection & response, and threat and vulnerability management continue functioning.
 
 - We are recommending that customers who have Network Protection enabled in their organization to either:
-1. Use the instructions to disable Network Extension as described here [Troubleshoot NetExt issues in Microsoft Defender for Endpoint on Mac](mac-troubleshoot-netext-mde.md).  This will cause Network Protection, Web Content Filtering, and IP address/URL Indicators to be non-functional.
+1. Delay updating to macOS Sequoia (version 15.0)
 or
-2. Revert back to macOS Sonoma (14.x)
+2. Use the instructions to disable Network Extension as described here [Troubleshoot NetExt issues in Microsoft Defender for Endpoint on Mac](mac-troubleshoot-netext-mde.md).  This will cause Network Protection, Web Content Filtering, and IP address/URL Indicators to be non-functional.
 
 - Microsoft Defender is collaborating with Apple to provide our mutual customers a solution when Network Protection is enabled in Microsoft Defender for Endpoint on macOS Sequoia (version 15.0).
 
