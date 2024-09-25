@@ -6,7 +6,7 @@ ms.service: defender-endpoint
 ms.author: deniseb
 author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 05/30/2024
+ms.date: 09/25/2024
 manager: deniseb
 audience: ITPro
 ms.collection: 
@@ -28,14 +28,14 @@ ms.topic: reference
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink).
 
-This page covers the Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles:
+This page covers the Microsoft Defender for Endpoint endpoint detection and response (EDR) `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles:
 
 - [Windows 11 release information](/windows/release-health/windows11-release-information)
 - [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)
 - [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)
 - [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
 
-For the latest updates to Microsoft Defender for Endpoint all up, see [What's new in Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
+For the latest updates to Microsoft Defender for Endpoint all up, see [What's new in Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
 For the latest updates to Microsoft Defender for Endpoint Next-Generation Protection/Microsoft Defender Antivirus, see [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md)
 
@@ -44,6 +44,26 @@ All updates contain:
 - Performance improvements
 - Serviceability improvements
 - Integration improvements (Cloud, [Microsoft Defender XDR](/defender-xdr))
+
+## July-2024 (Release version: 10.8760)
+
+|OS  |KB  |Release version |
+| -------- | -------- | -------- |
+|Windows Server 2012 R2, 2016 |[KB 5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8760|
+
+### What's new
+
+**Identity Protection**
+
+- Added CertificateTemplate and EnrollmentService entities collection
+- Added large entities compression and encoding
+- Improved ACL parsing process
+
+**Data Loss Prevention (DLP)**
+
+- Scoped classification (Know Your Data policy): Scope classification and activity events across workloads.
+- Device group discovery and scoping: Scope Endpoint DLP custom policy based on the device or device group.
+- OCR URL Caching: Performance improvement for already classified images by having client side caching.
 
 ## May-2024 (Release version: 10.8750)
 
@@ -74,7 +94,7 @@ All updates contain:
   - An issue related to the agent's monitoring of deleted registry keys no longer occurs.
   - Added a new capability to enable/disable registry monitoring through configuration settings.
    
-- **Network Detection and Response (NDR) Performance Enhancemens** 
+- **Network Detection and Response (NDR) Performance Enhancements** 
   - Introduced performance enhancements to minimize the CPU and memory footprint of the agent.
   - Enhanced the accuracy of network detections.
     
@@ -151,9 +171,9 @@ All updates contain:
 - Enhanced Endpoint DLP with support for context data in audit telemetry (short evidence).
 - Improved Microsoft Defender for Endpoint client authentication support for VDI devices.
 - Enhanced Microsoft Defender for Endpoint's ability to identify and intercept ransomware and advanced attacks.
-- The Contain feature now supports more desktop and server versions to perform the Contain action and block discovered devices when these are contained.
-- Expanded the troubleshooting mode feature to additional desktop and server versions. For a complete list of supported OS versions and more information about prerequisites, see [Get started with troubleshooting mode in Microsoft Defender for Endpoint](enable-troubleshooting-mode.md).
-- Live Response improvements include reduced session creation latency when using proxies, an undo Remediation manual command, support for OneDrive share in FindFile action, and improved isolation and stability.
+- The *Contain* feature now supports more desktop and server versions to perform the Contain action and block discovered devices when such devices are contained.
+- Expanded the troubleshooting mode feature to more desktop and server versions. For a complete list of supported OS versions and more information about prerequisites, see [Get started with troubleshooting mode in Microsoft Defender for Endpoint](enable-troubleshooting-mode.md).
+- Live Response improvements include reduced session creation latency when using proxies, an undo remediation manual command, support for OneDrive shares in `FindFile` action, and improved isolation and stability.
 - [Security Management for Microsoft Defender for Endpoint](/mem/intune/protect/mde-security-integration#configure-your-tenant-to-support-microsoft-defender-for-endpoint-security-configuration-management) now provides the ability to sync the device configuration on demand instead of waiting for a specific cadence.
 
  > [!NOTE] 
@@ -165,4 +185,5 @@ See also:
 - [What's new in Defender for Endpoint on macOS](mac-whatsnew.md)
 - [What's new in Defender for Endpoint on iOS](ios-whatsnew.md)
 - [What's new in Defender for Endpoint on Linux](linux-whatsnew.md)
+
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
