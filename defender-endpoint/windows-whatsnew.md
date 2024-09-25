@@ -54,13 +54,8 @@ All updates contain:
 | Windows 11 21H2 | [KB5043067](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043067-os-build-22000-3197-62287850-4f0d-4e4a-9fe8-b026bb1be994) |  |
 | Windows 10 22H2 | [KB5041582](https://support.microsoft.com/en-us/topic/august-29-2024-kb5041582-os-build-19045-4842-preview-f4c4d191-5457-475c-80ac-e1d43cf9c941) |  |
 | Windows Server 2022 | [KB5042881](https://support.microsoft.com/en-us/topic/september-10-2024-kb5042881-os-build-20348-2700-5b548143-9613-4e5a-9454-8ed9be8b2bd2) |  |
-|Windows Server 2012 R2, 2016 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8760|
-
-
-|Server 2022 (Iron)     | [KB5016693](https://support.microsoft.com/topic/august-16-2022-kb5016693-os-build-20348-946-preview-ee90d0bc-c162-4124-b7c6-f963ee7b17ed)        | |
-|Windows 10 20H2/21H1/21H2<br> Windows Server 20H2  (Vibranium)     | [KB5016688](https://support.microsoft.com/topic/august-26-2022-kb5016688-os-builds-19042-1949-19043-1949-and-19044-1949-preview-ec31ebdc-067d-44dd-beb0-eabcc984d843)       | 10.8210.19041.1949        |
-
-
+| Windows Server 2019 | [KB5043050](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043050-os-build-17763-6293-66e9809a-1838-4474-a6a7-90d64f042f00) |  |
+|Windows Server 2016 <br/>Windows Server 2012 R2 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8760|
 
 ### What's new
 
