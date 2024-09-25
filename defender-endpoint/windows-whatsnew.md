@@ -173,7 +173,7 @@ All updates contain:
 **What's new**
 
 - Added a fix to resolve a missing intermediate certificate issue with the use of "TelemetryProxyServer" on Windows Server 2012 R2 running the unified agent.
-- Enhanced Endpoint DLP with ability to protect password protected and encrypted files and not label files.
+- Enhanced [Endpoint DLP](/purview/endpoint-dlp-learn-about) with ability to protect password protected and encrypted files and not label files.
 - Enhanced Endpoint DLP with support for context data in audit telemetry (short evidence).
 - Improved Microsoft Defender for Endpoint client authentication support for VDI devices.
 - Enhanced Microsoft Defender for Endpoint's ability to identify and intercept ransomware and advanced attacks.
