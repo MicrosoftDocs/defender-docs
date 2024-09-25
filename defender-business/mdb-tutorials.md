@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.service: defender-business
 ms.localizationpriority: medium
 ms.reviewer: efratka, nehabha, yaelbenari
-ms.date: 06/19/2024
+ms.date: 09/25/2024
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security
 - tier1
-- essentials-get-started
 ---
 
 # Learning resources for Microsoft Defender for Business
