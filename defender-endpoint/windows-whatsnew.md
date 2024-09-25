@@ -68,7 +68,7 @@ All updates contain:
 **Data Loss Prevention (DLP)**
 
 - Scoped classification (Know Your Data policy): Scope classification and activity events across workloads.
-- Device group discovery and scoping: Scope Endpoint DLP custom policy based on the device or device group.
+- Device group discovery and scoping: Scope [Endpoint DLP](/purview/endpoint-dlp-learn-about) custom policy based on the device or device group.
 - OCR URL Caching: Performance improvement for already classified images by having client side caching.
 
 ## May-2024 (Release version: 10.8750)
