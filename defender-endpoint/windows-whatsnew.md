@@ -50,6 +50,12 @@ All updates contain:
 |OS  |KB |Release version |
 | -------- | -------- | -------- |
 |Windows Server 2012 R2, 2016 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8760|
+| Windows 11 24H2     | [KB5041865](https://support.microsoft.com/en-us/topic/august-27-2024-kb5041865-os-build-26100-1591-preview-5d299921-2b27-4fe0-b414-c2336371b552)        |       |
+| Windows 11 23H2 <br/> Windows 11 22H | [KB5041587](https://support.microsoft.com/en-us/topic/august-27-2024-kb5041587-os-builds-22621-4112-and-22631-4112-preview-9706ea0e-6f72-430e-b08a-878963dafe08) |  |
+| Windows 11 21H2 | [KB5043067](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043067-os-build-22000-3197-62287850-4f0d-4e4a-9fe8-b026bb1be994) |  |
+|Server 2022 (Iron)     | [KB5016693](https://support.microsoft.com/topic/august-16-2022-kb5016693-os-build-20348-946-preview-ee90d0bc-c162-4124-b7c6-f963ee7b17ed)        | |
+|Windows 10 20H2/21H1/21H2<br> Windows Server 20H2  (Vibranium)     | [KB5016688](https://support.microsoft.com/topic/august-26-2022-kb5016688-os-builds-19042-1949-19043-1949-and-19044-1949-preview-ec31ebdc-067d-44dd-beb0-eabcc984d843)       | 10.8210.19041.1949        |
+
 
 
 ### What's new
