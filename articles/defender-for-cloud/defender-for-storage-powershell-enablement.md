@@ -46,37 +46,41 @@ To enable Microsoft Defender for Storage at the subscription level with per-tran
         }]
     ```
 
-If no extensions properties are provided, both malware scanning and sensitive data discovery are enabled by default. The default monthly threshold per storage account for malware scanning is 5,000 GB.
+If no extensions properties are provided for the cmdlet, both malware scanning and sensitive data discovery are enabled by default. The default monthly threshold per storage account for malware scanning is 5,000 GB.
+
+To modify the monthly threshold for on-upload malware scanning in your storage accounts, adjust the `CapGBPerMonthPerStorageAccount` property to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
+
+If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to `"False"` on the `OnUploadMalwareScanning` or `SensitiveDataDiscovery` extension properties respectively. To disable the entire Defender plan, set the `-PricingTier` property value to `Free` and remove the `-SubPlan` and extension properties.
 
 > [!TIP]
-> You can use the [`GetAzSecurityPricing` (Az_Security)](/powershell/module/az.security/get-azsecuritypricing) to see all of the Defender for Cloud plans that are enabled for the subscription.
+> You can use the [GetAzSecurityPricing](/powershell/module/az.security/get-azsecuritypricing) cmdlet to see all of the Defender for Cloud plans that are enabled for the subscription.
 
-To modify the monthly threshold for on-upload malware scanning in your storage accounts, adjust the `-CapGBPerMonthPerStorageAccount` property to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
-
-If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to **False** on the `OnUploadMalwareScanning` or `SensitiveDataDiscovery` extension properties. To disable the entire Defender plan, set the `-PricingTier` property value to `Free` and remove the `-SubPlan` and extension properties.
-
-Learn more about [using PowerShell with Microsoft Defender for Cloud](powershell-onboarding.md).
-
-
-Refer to the [Azure PowerShell reference](/powershell/module/az.security/set-azsecuritypricing) for details on the 'Set-AzSecurityPricing` cmdlet.
+Refer to the Azure PowerShell reference for details on the [Set-AzSecurityPricing](/powershell/module/az.security/set-azsecuritypricing) cmdlet.
 
 ## [Enable on a storage account](#tab/enable-storage-account/)
 
-To enable and configure Microsoft Defender for Storage at the storage account level using PowerShell, use the `Update-AzSecurityDefenderForStorage`  cmdlet. Replace the `SubscriptionId`, `ResourceGroupName`, and `StorageAccountName` with your own Azure subscription ID, resource group, and storage account names accordingly.
+To enable and configure Microsoft Defender for Storage at the storage account level using PowerShell, use the `Update-AzSecurityDefenderForStorage`  cmdlet. In this example, replace the `<SubscriptionId>`, `<ResourceGroupName>`, and `<StorageAccountName>` with your own Azure subscription ID, resource group, and storage account names:
 
 ```powershell
 Update-AzSecurityDefenderForStorage -ResourceId "/subscriptions/<SubscriptionId>/resourcegroups/<ResourceGroupName>/providers/Microsoft.Storage/storageAccounts/<StorageAccountName>" -IsEnabled -OnUploadIsEnabled -OnUploadCapGbPerMonth 7000 -SensitiveDataDiscoveryIsEnabled
 ```
 
-To modify the monthly threshold for malware scanning in your storage accounts, adjust the `-OnUploadCapGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
+To modify the monthly threshold for malware scanning the storage account, adjust the `-OnUploadCapGBPerMonth` parameter to your preferred value. This parameter sets a cap on the maximum data to be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
 
-If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to **False** under the `malwareScanning` or `sensitiveDataDiscovery` properties sections.
+The malware scan results can be sent to the Event Grid by supplying the Event Grid topic resource id in the parameter  `-MalwareScanningScanResultsEventGridTopicResourceId "<resourceId>"`.
 
-To disable the entire Defender plan for the storage account, set the `isEnabled` property value to **False** and remove the `malwareScanning` and `sensitiveDataDiscovery` sections from the properties.
+If you want to turn off the on-upload malware scanning or sensitive data threat detection features for the storage account, set `-OnUpoadIsEnabled:$false` or `-SensitiveDataDiscoveryIsEnabled:$false` respectively.
 
-Learn more about the [Microsoft.Security/DefenderForStorageSettings API](/rest/api/defenderforcloud/defender-for-storage/create) documentation.
+To disable the entire Defender plan for the storage account, set `IsEnabled:$false`, `-OnUpoadIsEnabled:$false` and `-SensitiveDataDiscoveryIsEnabled:$false`.
+
+> [!TIP]
+> You can use the [Get-AzSecurityDefenderForStorage](/powershell/module/az.security/get-azsecuritydefenderforstorage) cmdlet to see the Defender for Storage settings for a storage account.
+
+Refer to the Azure PowerShell reference for details on the [Update-AzSecurityDefenderForStorage](/powershell/module/az.security/update-azsecuritydefenderforstorage) cmdlet.
 
 ---
+
+Learn more about [using PowerShell with Microsoft Defender for Cloud](powershell-onboarding.md).
 
 > [!TIP]
 > Malware Scanning can be configured to send scanning results to the following: <br>  **Event Grid custom topic** - for near-real time automatic response based on every scanning result. Learn more how to [configure malware scanning to send scanning events to an Event Grid custom topic](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-event-grid-for-malware-scanning). <br> **Log Analytics workspace** - for storing every scan result in a centralized log repository for compliance and audit. Learn more how to [configure malware scanning to send scanning results to a Log Analytics workspace](/azure/storage/common/azure-defender-storage-configure?toc=%2Fazure%2Fdefender-for-cloud%2Ftoc.json&tabs=enable-storage-account#setting-up-logging-for-malware-scanning).
