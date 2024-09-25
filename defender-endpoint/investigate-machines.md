@@ -2,8 +2,8 @@
 title: Investigate devices in the Defender for Endpoint Devices list
 description: Investigate affected devices by reviewing alerts, network connection information, adding device tags and groups, and checking the service health.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro

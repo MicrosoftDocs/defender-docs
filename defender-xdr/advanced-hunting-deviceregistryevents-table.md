@@ -55,7 +55,7 @@ For information on other tables in the advanced hunting schema, [see the advance
 | `InitiatingProcessSHA1` | `string` | SHA-1 of the process (image file) that initiated the event |
 | `InitiatingProcessSHA256` | `string` | SHA-256 of the process (image file) that initiated the event. This field is usually not populated — use the SHA1 column when available. |
 | `InitiatingProcessMD5` | `string` | MD5 hash of the process (image file) that initiated the event |
-| `InitiatingProcessFileName` | `string` | Name of the process file name that initiated the event; if unavailable, the name of the process that initiated the event might be shown instead |
+| `InitiatingProcessFileName` | `string` | Name of the process file that initiated the event; if unavailable, the name of the process that initiated the event might be shown instead |
 | `InitiatingProcessFileSize` | `long` | Size of the file that ran the process responsible for the event |
 | `InitiatingProcessVersionInfoCompanyName` | `string` | Company name from the version information of the process (image file) responsible for the event |
 | `InitiatingProcessVersionInfoProductName` | `string` | Product name from the version information of the process (image file) responsible for the event |

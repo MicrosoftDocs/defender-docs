@@ -3,8 +3,8 @@ title: Server migration scenarios for the new version of Microsoft Defender for 
 description: Read this article to get an overview of how to migrate your servers from the previous, MMA-based solution to the current Defender for Endpoint unified solution package.
 search.appverid: met150
 ms.service: defender-endpoint
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.localizationpriority: medium
 ms.date: 09/19/2022
 manager: deniseb
