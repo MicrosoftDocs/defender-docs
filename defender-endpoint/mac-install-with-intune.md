@@ -413,7 +413,7 @@ Once the Intune changes are propagated to the enrolled devices, you can see them
 
 #### Client device setup
 
-A standard [Company Portal installation](/intune-user-help/enroll-your-device-in-intune-macos-cp) is sufficient for a mac device.
+A standard [Company Portal installation](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) is sufficient for a mac device.
 
 1. Confirm device management.
 
