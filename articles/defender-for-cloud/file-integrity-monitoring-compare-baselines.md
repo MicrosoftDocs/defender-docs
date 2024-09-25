@@ -8,7 +8,7 @@ ms.date: 05/16/2024
 #customer intent: As a user, I want to learn how to enable File Integrity Monitoring with the Log Analytics agent so that I can track and identify changes in my environment.
 ---
 
-# Review changes with file integrity monitoring (MMA)
+# Review changes in file integrity monitoring (legacy MMA)
 
 In the Defender for Servers plan in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 

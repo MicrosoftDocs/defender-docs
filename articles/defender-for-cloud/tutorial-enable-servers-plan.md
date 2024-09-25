@@ -110,4 +110,5 @@ After you enable on the custom workspace, all machines connected to the workspac
 
 ## Next steps
 
-[Modify plan settings](configure-servers-coverage.md) as needed.
+- If you enabled Defender for Servers Plan 2, [enable file integrity monitoring](file-integrity-monitoring-enable-defender-endpoint.md) 
+- [Modify plan settings](configure-servers-coverage.md) as needed.

@@ -713,9 +713,11 @@
           - name: Overview
             displayName: fim, change
             href: file-integrity-monitoring-overview.md
+          - name: Migrate to the latest file integrity monitoring
+            href: migrate-file-integrity-monitoring.md
           - name: Enable file integrity monitoring
             href: file-integrity-monitoring-enable-defender-endpoint.md
-          - name: Enable file integrity monitoring (MMA)
+          - name: Enable file integrity monitoring (legacy MMA)
             displayName: fim, change, log analytics, mma
             href: file-integrity-monitoring-enable-log-analytics.md
       - name: Just-in-time machine access
@@ -755,9 +757,9 @@
         href: software-inventory.md
       - name: Remediate machine secrets
         href: remediate-server-secrets.md 
-      - name: Review file changes
+      - name: Review changes in file integrity monitoring
         href: file-integrity-monitoring-review-changes.md
-      - name: Review file changes (MMA)
+      - name: Review changes in file integrity monitoring (legacy MMA)
         displayName: fim, change
         href: file-integrity-monitoring-compare-baselines.md
     - name: Common questions 

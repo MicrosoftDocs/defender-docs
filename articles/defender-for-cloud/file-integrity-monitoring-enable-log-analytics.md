@@ -10,14 +10,13 @@ ms.date: 05/16/2024
 
 # Enable file integrity monitoring (MMA)
 
-In the Defender for Servers plan in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
+In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integrity monitoring](file-integrity-monitoring-overview.md) feature provides visibility into machine changes by examining operating system files, Windows registries, application software, and Linux system files to detect suspicious tampering activity such as file and registry modifications.
 
-File integrity monitoring uses [Azure Automation change tracking](/azure/automation/change-tracking/overview) so that you can monitor changes directly in Defender for Cloud. 
+After enabling Defender for Servers Plan 2, this article describes how to set up file integrity monitoring using the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). File integrity monitoring with the MMA uses [Azure Automation change tracking](/azure/automation/change-tracking/overview) so that you can monitor changes directly in Defender for Cloud. 
 
 > [!Note]
-> - This article describes how to set up file integrity monitoring using the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)).
 > - Support for using the MMA will end in November 2024.
-> - We recommend that you use the new data collection method, with the Defender for Endpoint agent. [Learn more](file-integrity-monitoring-enable-defender-endpoint.md)
+> - We recommend that you [migrate to the new file integrity monitoring experience](migrate-file-integrity-monitoring.md) that uses the Defender for Endpoint agent.
 
 
 ## Prerequisites
@@ -79,4 +78,4 @@ When you disable file integrity monitoring, you remove the Change Tracking solut
 
 ## Next steps
 
-[Review changes](file-integrity-monitoring-compare-baselines.md) with file integrity monitoring (MMA)
+[Review changes](file-integrity-monitoring-compare-baselines.md) in file integrity monitoring (legacy MMA).

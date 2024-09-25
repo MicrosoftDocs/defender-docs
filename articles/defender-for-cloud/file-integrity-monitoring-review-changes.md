@@ -7,7 +7,7 @@ ms.topic: how-to
 ms.date: 08/11/2024
 ---
 
-# Review file changes with file integrity monitoring
+# Review changes in file integrity monitoring
 
 In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [file integrity monitoring feature](file-integrity-monitoring-overview.md) helps keeps enterprise assets and resources secure by scanning and analyzing files, and comparing their current state with previous scans.
 

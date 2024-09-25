@@ -18,27 +18,19 @@ In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the file integri
 File integrity monitoring uses the Microsoft Defender for Endpoint agent to collect data from machines, in accordance with collection rules. [Defender for Endpoint is integrated by default](integration-defender-for-endpoint.md#integration-with-defender-for-endpoint-edr) with Defender for Cloud.
 
 > [!Note]
-> The older method of data collection uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). Support for using the MMA will end in November 2024.
+> The older method of data collection uses the Log Analytics agent (also known as the Microsoft Monitoring agent (MMA)). Support for using the MMA will end in November 2024. For a quick overview of the differences between new and old methods, read our [Tech Community blog](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/introducing-the-new-file-integrity-monitoring-with-defender-for/ba-p/4252051).
 
-When you enable Defender for Servers Plan 2, file integrity monitoring is turned on by default.
+After enabling Defender for Servers Plan 2, you enable and configure file integrity monitoring.
 
 - File integrity monitoring monitors selected files across a subscription.
 - The Defender for Endpoint agent collects data from machines in accordance with a defined list of files to monitor.
 - Data collected by the Defender for Endpoint agent is stored for access and analysis in a Log Analytics workspace.
-- You can configure file integrity monitoring settings to use any workspace, or create a new one.
-- By default data is stored in the workspace defined for Defender for Servers. That's either the Log Analytics workspace you defined when you set up Defender for Cloud, or a custom workspace that you specifically assigned for Defender for Servers Plan 2.
-- You can take advantage of the 500 MB benefits included in Defender for Servers Plan 2.
+- You can select an existing workspace for file integrity monitoring, or create a new one.
+- Collected file integrity monitoring data is part of the the 500 MB benefit included in Defender for Servers Plan 2.
 
 ## Migrating to the new experience
 
-In Defender for Cloud, you can migrate file integrity monitoring using the MMA to use the Defender for Endpoint agent. You can:
-
-- Review the current environment/state before migrating.
-- Export current file integrity monitoring rules that use MMA and reside in a Log Analytics workspace.
-- With Defender for Servers Plan 2 enabled, migrate to the new experience.
-
-Access the migration experience in Defender for Cloud > **Environment settings**. Select the **MMA migration** button to begin migration.
-
+In Defender for Cloud, you can migrate file integrity monitoring using the MMA to use the new experience. Follow the steps to [migrate file integrity monitoring](migrate-file-integrity-monitoring.md).
 
 ## Monitoring suspicious activity
 
@@ -87,5 +79,5 @@ When using file integrity monitoring with the Defender for Endpoing agent, we re
 
 
 ## Next steps
-- [Enable file integrity monitoring (Defender for Endpoint)](file-integrity-monitoring-enable-defender-endpoint.md)
-- [Enable file integrity monitoring (MMA)](file-integrity-monitoring-enable-log-analytics.md)
+
+[Enable file integrity monitoring with Defender for Endpoint)](file-integrity-monitoring-enable-defender-endpoint.md)
