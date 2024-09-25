@@ -109,7 +109,7 @@ For environments where there's a need for a more controlled gradual rollout of a
 
 1. Participate in the Windows Insider program or assign a group of devices to the Beta Channel.
 
-2. Designate a pilot group that opts-in to Preview Channel, typically validation environments, to receive new updates early.
+2. Designate a pilot group that opts in to Preview Channel, typically validation environments, to receive new updates early.
 
 3. Designate a group of machines that receive updates later during the gradual rollout from Staged channel. Typically, this group would be a representative ~10% of the population.
 
