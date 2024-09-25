@@ -28,19 +28,19 @@ ms.topic: reference
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink).
 
-This page covers the Microsoft Defender for Endpoint endpoint detection and response (EDR) `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles:
+This page covers the Microsoft Defender for Endpoint endpoint detection and response (EDR) `MsSense.exe` versions. You can also refer to the following articles for updates:
 
 | Windows version | Article |
 |---|---|
-| Windows 11 | [Windows 11 release information](/windows/release-health/windows11-release-information) <br/><br/>Windows 11 24H2: [KB5041565](https://support.microsoft.com/en-us/topic/august-27-2024-kb5041865-os-build-26100-1591-preview-5d299921-2b27-4fe0-b414-c2336371b552) <br/><br/>Windows 11 23H2, Windows 11 22H2: [KB5041587](https://support.microsoft.com/en-us/topic/august-27-2024-kb5041587-os-builds-22621-4112-and-22631-4112-preview-9706ea0e-6f72-430e-b08a-878963dafe08) <br/><br/>Windows 11 21H2: [KB5043067](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043067-os-build-22000-3197-62287850-4f0d-4e4a-9fe8-b026bb1be994) |
-| Windows 10 | [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562) <br/><br/>Windows 10 22H2: [KB5041582](https://support.microsoft.com/en-us/topic/august-29-2024-kb5041582-os-build-19045-4842-preview-f4c4d191-5457-475c-80ac-e1d43cf9c941) |
-| Windows Server 2022 | [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee) <br/><br/>Windows Server 2022: [KB5042881](https://support.microsoft.com/en-us/topic/september-10-2024-kb5042881-os-build-20348-2700-5b548143-9613-4e5a-9454-8ed9be8b2bd2) |
-| Windows Server 2019 | [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059) <br/><br/>Windows Server 2019: [KB5043050](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043050-os-build-17763-6293-66e9809a-1838-4474-a6a7-90d64f042f00) |
+| Windows 11 | [Windows 11 release information](/windows/release-health/windows11-release-information) <br/>Windows 11 24H2: [KB5041565](https://support.microsoft.com/en-us/topic/august-27-2024-kb5041865-os-build-26100-1591-preview-5d299921-2b27-4fe0-b414-c2336371b552) <br/>Windows 11 23H2, Windows 11 22H2: [KB5041587](https://support.microsoft.com/en-us/topic/august-27-2024-kb5041587-os-builds-22621-4112-and-22631-4112-preview-9706ea0e-6f72-430e-b08a-878963dafe08) <br/>Windows 11 21H2: [KB5043067](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043067-os-build-22000-3197-62287850-4f0d-4e4a-9fe8-b026bb1be994) |
+| Windows 10 | [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)<br/>Windows 10 22H2: [KB5041582](https://support.microsoft.com/en-us/topic/august-29-2024-kb5041582-os-build-19045-4842-preview-f4c4d191-5457-475c-80ac-e1d43cf9c941) |
+| Windows Server 2022 | [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)<br/>Windows Server 2022: [KB5042881](https://support.microsoft.com/en-us/topic/september-10-2024-kb5042881-os-build-20348-2700-5b548143-9613-4e5a-9454-8ed9be8b2bd2) |
+| Windows Server 2019 | [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)<br/>Windows Server 2019: [KB5043050](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043050-os-build-17763-6293-66e9809a-1838-4474-a6a7-90d64f042f00) |
 | Windows Server 2016 <br/>Windows Server 2012 R2 | [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/en-us/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) |
 
 For the latest updates to Microsoft Defender for Endpoint all up, see [What's new in Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
-For the latest updates to Microsoft Defender for Endpoint Next-Generation Protection/Microsoft Defender Antivirus, see [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md)
+For the latest updates to Microsoft Defender for Endpoint next-generation protection and Microsoft Defender Antivirus, see [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).
 
 All updates contain:
 
