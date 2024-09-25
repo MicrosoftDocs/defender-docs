@@ -28,19 +28,16 @@ ms.topic: reference
 
 > Want to experience Defender for Endpoint? [Sign up for a free trial](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-pullalerts-abovefoldlink).
 
-This page covers the Microsoft Defender for Endpoint endpoint detection and response (EDR) `MsSense.exe` versions. You can also refer to the following articles for updates:
+This page covers the Microsoft Defender for Endpoint EDR `MsSense.exe` versions. You can also check the file information section in the monthly cumulative rollup updates in the following articles:
 
-| Windows version | Article |
-|---|---|
-| Windows 11 | [Windows 11 release information](/windows/release-health/windows11-release-information) <br/>Windows 11 24H2: [KB5041565](https://support.microsoft.com/en-us/topic/august-27-2024-kb5041865-os-build-26100-1591-preview-5d299921-2b27-4fe0-b414-c2336371b552) <br/>Windows 11 23H2, Windows 11 22H2: [KB5041587](https://support.microsoft.com/en-us/topic/august-27-2024-kb5041587-os-builds-22621-4112-and-22631-4112-preview-9706ea0e-6f72-430e-b08a-878963dafe08) <br/>Windows 11 21H2: [KB5043067](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043067-os-build-22000-3197-62287850-4f0d-4e4a-9fe8-b026bb1be994) |
-| Windows 10 | [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)<br/>Windows 10 22H2: [KB5041582](https://support.microsoft.com/en-us/topic/august-29-2024-kb5041582-os-build-19045-4842-preview-f4c4d191-5457-475c-80ac-e1d43cf9c941) |
-| Windows Server 2022 | [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)<br/>Windows Server 2022: [KB5042881](https://support.microsoft.com/en-us/topic/september-10-2024-kb5042881-os-build-20348-2700-5b548143-9613-4e5a-9454-8ed9be8b2bd2) |
-| Windows Server 2019 | [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)<br/>Windows Server 2019: [KB5043050](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043050-os-build-17763-6293-66e9809a-1838-4474-a6a7-90d64f042f00) |
-| Windows Server 2016 <br/>Windows Server 2012 R2 | [Microsoft Defender for Endpoint update for EDR Sensor](https://support.microsoft.com/en-us/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) |
+- [Windows 11 release information](/windows/release-health/windows11-release-information)
+- [Windows 10 updates](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562)
+- [Windows Server 2022 updates](https://support.microsoft.com/topic/windows-server-2022-update-history-e1caa597-00c5-4ab9-9f3e-8212fe80b2ee)
+- [Windows Server 2019 updates](https://support.microsoft.com/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059)
 
 For the latest updates to Microsoft Defender for Endpoint all up, see [What's new in Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
-For the latest updates to Microsoft Defender for Endpoint next-generation protection and Microsoft Defender Antivirus, see [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).
+For the latest updates to Microsoft Defender for Endpoint Next-Generation Protection/Microsoft Defender Antivirus, see [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).
 
 All updates contain:
 
@@ -50,10 +47,15 @@ All updates contain:
 
 ## July-2024 (Release version: 10.8760)
 
-|OS  |KB |Release version |
-| -------- | -------- | -------- |
-|Windows Server 2012 R2, 2016 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac)|10.8760|
-
+|OS  |KB |
+| -------- | -------- |
+| Windows 11 24H2     | [KB5041865](https://support.microsoft.com/en-us/topic/august-27-2024-kb5041865-os-build-26100-1591-preview-5d299921-2b27-4fe0-b414-c2336371b552)  |  
+| Windows 11 23H2 <br/> Windows 11 22H | [KB5041587](https://support.microsoft.com/en-us/topic/august-27-2024-kb5041587-os-builds-22621-4112-and-22631-4112-preview-9706ea0e-6f72-430e-b08a-878963dafe08) |
+| Windows 11 21H2 | [KB5043067](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043067-os-build-22000-3197-62287850-4f0d-4e4a-9fe8-b026bb1be994) |
+| Windows 10 22H2 | [KB5041582](https://support.microsoft.com/en-us/topic/august-29-2024-kb5041582-os-build-19045-4842-preview-f4c4d191-5457-475c-80ac-e1d43cf9c941) |
+| Windows Server 2022 | [KB5042881](https://support.microsoft.com/en-us/topic/september-10-2024-kb5042881-os-build-20348-2700-5b548143-9613-4e5a-9454-8ed9be8b2bd2) |
+| Windows Server 2019 | [KB5043050](https://support.microsoft.com/en-us/topic/september-10-2024-kb5043050-os-build-17763-6293-66e9809a-1838-4474-a6a7-90d64f042f00) |
+|Windows Server 2016 <br/>Windows Server 2012 R2 |[KB5005292](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) |
 
 ### What's new
 
@@ -66,7 +68,7 @@ All updates contain:
 **Data Loss Prevention (DLP)**
 
 - Scoped classification (Know Your Data policy): Scope classification and activity events across workloads.
-- Device group discovery and scoping: Scope Endpoint DLP custom policy based on the device or device group.
+- Device group discovery and scoping: Scope [Endpoint DLP](/purview/endpoint-dlp-learn-about) custom policy based on the device or device group.
 - OCR URL Caching: Performance improvement for already classified images by having client side caching.
 
 ## May-2024 (Release version: 10.8750)
@@ -171,7 +173,7 @@ All updates contain:
 **What's new**
 
 - Added a fix to resolve a missing intermediate certificate issue with the use of "TelemetryProxyServer" on Windows Server 2012 R2 running the unified agent.
-- Enhanced Endpoint DLP with ability to protect password protected and encrypted files and not label files.
+- Enhanced [Endpoint DLP](/purview/endpoint-dlp-learn-about) with ability to protect password protected and encrypted files and not label files.
 - Enhanced Endpoint DLP with support for context data in audit telemetry (short evidence).
 - Improved Microsoft Defender for Endpoint client authentication support for VDI devices.
 - Enhanced Microsoft Defender for Endpoint's ability to identify and intercept ransomware and advanced attacks.
