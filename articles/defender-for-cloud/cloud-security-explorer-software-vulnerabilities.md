@@ -27,10 +27,10 @@ You can also read [the introduction on how to use Cloud Security Explorer](how-t
 
     :::image type="content" source="./media/cloud-security-explorer-software-vulnerabilities/security-explorer-vm-query.png" alt-text="Screenshot of query to retrieve VMs with software installed" lightbox="./media/cloud-security-explorer-software-vulnerabilities/security-explorer-vm-query.png":::
 
-1. Select the View details link on the line of the VM of interest to see the Result details pane. In the Insights section of the Result details pane is a drop-drown list of the software installed on the VM. Select the installed software for review.
+1. Select the View details link of the VM of interest to see the Result details pane. In the Insights section of the Result details pane is a drop-drown list of the software installed on the VM. Select the installed software for review.
 
     :::image type="content" source="./media/cloud-security-explorer-software-vulnerabilities/security-explorer-vm-query-result-details.png" alt-text="Screenshot shows results of query to retrieve VMs with software installed" lightbox="./media/cloud-security-explorer-software-vulnerabilities/security-explorer-vm-query-result-details.png":::
 
-1. The details of the installed software are presented.
+1. View the details of the installed software in the Insights section.
 
     :::image type="content" source="./media/cloud-security-explorer-software-vulnerabilities/security-explorer-vm-query-result-details-insights.png" alt-text="Screenshot shows result details and insight results from the selected VM" lightbox="./media/cloud-security-explorer-software-vulnerabilities/security-explorer-vm-query-result-details-insights.png":::
