@@ -57,7 +57,7 @@ Conventional security defenses that have been commonly used to protect SAP syste
 - Microsoft Defender for Endpoint on Linux requires connectivity to [specific Internet endpoints](microsoft-defender-endpoint-linux.md#network-connections) from VMs to update antivirus Definitions.
 - Microsoft Defender for Endpoint on Linux requires some crontab (or other task scheduler) entries to schedule scans, log rotation, and Microsoft Defender for Endpoint updates. Enterprise Security teams normally manage these entries. Refer to [How to schedule an update of the Microsoft Defender for Endpoint (Linux)](linux-update-mde-linux.md).
 
-The default configuration option for deployment as an Azure Extension for AntiVirus (AV) will be Passive Mode. This means that the AV component of Microsoft Defender for Endpoint won't intercept IO calls. It's recommended to run Microsoft Defender for Endpoint in Passive Mode on all SAP applications and to schedule a scan once per day. In this mode:
+The default configuration option for deployment as an Azure Extension for AntiVirus (AV) is Passive Mode. This means that the AV component of Microsoft Defender for Endpoint doesn't intercept IO calls. It's recommended to run Microsoft Defender for Endpoint in Passive Mode on all SAP applications and to schedule a scan once per day. In this mode:
 
 - **Real-time protection is turned off**: Threats aren't remediated by Microsoft Defender Antivirus.
 - **On-demand scanning is turned on**: Still use the scan capabilities on the endpoint.
