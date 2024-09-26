@@ -130,8 +130,10 @@ The Microsoft Defender portal's search function is located at the top of the pag
 
 Search results are categorized by sections related to your search terms. You can search across the following entities in the Microsoft Defender portal:
 
-- **Devices** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud, and Microsoft Sentinel (Preview).
-- **Users** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, and Microsoft Sentinel (Preview).
+- **Devices** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud, and Microsoft Sentinel.
+
+- **Users** - supported for Defender for Endpoint, Defender for Identity, Defender for Cloud Apps, and Microsoft Sentinel.
+
 - **Files, IPs, and URLs** - same capabilities as in Defender for Endpoint.
 
   > [!NOTE]
