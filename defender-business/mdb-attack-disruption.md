@@ -1,8 +1,8 @@
 ---
 title: Automatic attack disruption in Microsoft Defender for Business
 description: Learn about automatic attack disruption in Microsoft Defender for Business
-author: denisebmsft
-ms.author: deniseb
+author: chrisda
+ms.author: chrisda
 manager: deniseb
 ms.date: 06/07/2024
 ms.topic: conceptual
