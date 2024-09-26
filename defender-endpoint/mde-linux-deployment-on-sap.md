@@ -64,7 +64,7 @@ The default configuration option for deployment as an Azure Extension for AntiVi
 - **Automatic threat remediation is turned off**: No files are moved and the security administrator is expected to take required action.
 - **Security intelligence updates are turned on**: Alerts are available on security administrator's tenant.
 
-Online Kernel patching tools such as Ksplice or similar can lead to unpredictable OS stability if Defender for Endpoint is running. It is recommended to temporarily stop the MDE daemon prior to performing online Kernel patching. After the Kernel is updated MDE for Linux can be safely restarted. This is especially important on large SAP HANA VMs with huge memory contexts.
+Online Kernel patching tools such as Ksplice or similar can lead to unpredictable OS stability if Defender for Endpoint is running. It is recommended to temporarily stop the Defender for Endpoint daemon prior to performing online Kernel patching. After the Kernel is updated Defender for Endpoint on Linux can be safely restarted. This is especially important on large SAP HANA VMs with huge memory contexts.
 
 The Linux crontab is typically used to schedule Microsoft Defender for Endpoint AV scan and log rotation tasks:
 [How to schedule scans with Microsoft Defender for Endpoint (Linux)](linux-schedule-scan-mde.md)
