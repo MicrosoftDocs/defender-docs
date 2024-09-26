@@ -56,8 +56,6 @@ List of Azure recommendations:
 
 - Permissions of inactive identities in your Azure subscription should be revoked
 
-- Super identities in your Azure environment should be revoked/removed
-
 ## Enable Permissions Management (CIEM) for AWS
 
 When you enabled the Defender CSPM plan on your AWS account, the **AWS CSPM** [standard is automatically assigned to your subscription](concept-regulatory-compliance-standards.md). The AWS CSPM standard provides Cloud Infrastructure Entitlement Management (CIEM) recommendations. 
@@ -146,8 +144,6 @@ List of GCP recommendations:
 - GCP overprovisioned identities should have only necessary permissions
 
 - Permissions of inactive identities in your GCP project should be revoked
-
-- Super identities in your GCP environment should be revoked/removed
 
 ## Next step
 
