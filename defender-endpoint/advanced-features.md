@@ -2,8 +2,8 @@
 title: Configure advanced features in Microsoft Defender for Endpoint
 description: Turn on advanced features such as block file in Microsoft Defender for Endpoint.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.reviewer: yongrhee
 ms.localizationpriority: medium
 manager: deniseb
@@ -184,7 +184,7 @@ After configuring the [Security policy violation indicators](/microsoft-365/comp
 
 ## Microsoft Intune connection
 
-Defender for Endpoint can be integrated with [Microsoft Intune](/intune/what-is-intune) to [enable device risk-based conditional access](/intune/advanced-threat-protection). When you [turn on this feature](configure-conditional-access.md), you'll be able to share Defender for Endpoint device information with Intune, enhancing policy enforcement.
+Defender for Endpoint can be integrated with [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) to [enable device risk-based conditional access](/mem/intune/protect/advanced-threat-protection). When you [turn on this feature](configure-conditional-access.md), you'll be able to share Defender for Endpoint device information with Intune, enhancing policy enforcement.
 
 > [!IMPORTANT]
 > You'll need to enable the integration on both Intune and Defender for Endpoint to use this feature. For more information on specific steps, see [Configure Conditional Access in Defender for Endpoint](configure-conditional-access.md).

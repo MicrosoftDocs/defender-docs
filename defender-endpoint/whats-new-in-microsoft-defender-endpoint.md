@@ -3,8 +3,8 @@ title: What's new in Microsoft Defender for Endpoint
 description: See what features are generally available (GA) in the latest release of Microsoft Defender for Endpoint, and security features in Windows 10 and Windows Server.
 search.appverid: met150
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.reviewer: noamhadash, pahuijbr, yongrhee
 ms.localizationpriority: medium
 ms.date: 08/26/2024

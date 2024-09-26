@@ -2,8 +2,8 @@
 title: Assign security roles and permissions in Microsoft Defender for Business
 description: Assign roles to your cybersecurity team. Learn about these roles and permissions in Defender for Business.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
+author: chrisda
+ms.author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: how-to

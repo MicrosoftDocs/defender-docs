@@ -4,10 +4,10 @@ description: Learn how to run the Microsoft Defender for Endpoint Client Analyze
 ms.service: defender-endpoint
 f1.keywords:
 - NOCSH
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
-ms.date: 06/28/2024
+ms.date: 09/25/2024
 manager: deniseb
 audience: ITPro
 ms.collection:
@@ -45,7 +45,7 @@ If you're using a terminal, download the tool by entering the following command:
 2. Verify the download.
 
     > [!NOTE]
-    > The current SHA256 hash of 'XMDEClientAnalyzerBinary.zip' that is downloaded from this link is: '6DF1D7F32F1C33B462067F029CA59742241AB6967A981161803A3BC4B5EBDBDF'
+    > The current SHA256 hash of `XMDEClientAnalyzerBinary.zip` that is downloaded from this link is: `6DF1D7F32F1C33B462067F029CA59742241AB6967A981161803A3BC4B5EBDBDF`.
 
    - Linux
 
@@ -74,13 +74,14 @@ If you're using a terminal, download the tool by entering the following command:
     cd XMDEClientAnalyzerBinary
     ```
 
-5. Three new zip files are produced:
+5. Two new zip files are produced:
 
    - **SupportToolLinuxBinary.zip** : For all Linux devices
    - **SupportToolMacOSBinary.zip** : For Mac devices
 
-6. Unzip one of the above 2 zip files based on the machine you need to investigate.\
-When using a terminal, unzip the file by entering one of the following commands based on OS type:
+6. Unzip one of the above 2 zip files based on the machine you need to investigate.
+
+   When using a terminal, unzip the file by entering one of the following commands based on OS type:
 
    - Linux
 

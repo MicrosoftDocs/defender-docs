@@ -8,8 +8,8 @@ ms.localizationpriority: medium
 ms.date: 02/07/2023
 audience: ITPro
 ms.topic: conceptual
-author: siosulli
-ms.author: siosulli
+author: denisebmsft
+ms.author: deniseb
 ms.custom:
 - nextgen
 - admindeeplinkDEFENDER

@@ -2,8 +2,8 @@
 title: Get devices onboarded to Microsoft Defender for Endpoint
 description: Track onboarding of Intune-managed devices to Microsoft Defender for Endpoint and increase onboarding rate.
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -69,7 +69,7 @@ From the device compliance page, create a configuration profile specifically for
 - Select **Create a device configuration profile to configure ATP sensor** to start with a predefined device configuration profile.
 - Create the device configuration profile from scratch.
 
-For more information, [read about using Intune device configuration profiles to onboard devices to Defender for Endpoint](/intune/advanced-threat-protection#onboard-devices-by-using-a-configuration-profile).
+For more information, [read about using Intune device configuration profiles to onboard devices to Defender for Endpoint](/mem/intune/protect/advanced-threat-protection#onboard-devices).
 
 > Want to experience Microsoft Defender for Endpoint? [Sign up for a free trial.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-onboardconfigure-belowfoldlink)
 

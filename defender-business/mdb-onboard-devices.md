@@ -2,8 +2,8 @@
 title: Onboard devices to Microsoft Defender for Business
 description: See how to get devices onboarded to Defender for Business to protect your devices from day one.
 search.appverid: MET150
-author: siosulli
-ms.author: siosulli
+author: chrisda
+ms.author: chrisda
 manager: deniseb
 audience: Admin
 ms.topic: overview

@@ -2,8 +2,8 @@
 title: Ring deployment using System Center Configuration Manager and Windows Server Update Services
 description: Microsoft Defender Antivirus is an enterprise endpoint security platform that helps defend against advanced persistent threats. This article provides information about how to use a ring deployment method to update your Microsoft Defender Antivirus clients using System Center Configuration Manager (SCCM) and Windows Server Update Services (WSUS).
 ms.service: defender-endpoint
-ms.author: siosulli
-author: siosulli
+ms.author: deniseb
+author: denisebmsft
 ms.localizationpriority: high
 manager: deniseb
 audience: ITPro
