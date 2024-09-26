@@ -356,7 +356,9 @@ For this page, we recommend that your organization uses a basic SharePoint site.
 
 1. It can take up to two hours (typically less) for app domains to propagate and to be update in the endpoint devices, after it's marked as _Monitored_.
 2. By default, action is taken for all apps and domains that were marked as Monitored in Microsoft Defender for Cloud Apps portal for all the onboarded endpoints in the organization.
-3. Full URLs are currently not supported and won't be sent from Microsoft Defender for Cloud Apps to Microsoft Defender XDR for Endpoint, if any full URLs are listed under Microsoft Defender for Cloud Apps monitored apps, hence, user won't get warned on access attempt (for example, google.com/drive isn't supported, while drive.google.com is supported).
+1. Full URLs are currently not supported and won't be sent from Microsoft Defender for Cloud Apps to Microsoft Defender XDR for Endpoint, if any full URLs are listed under Microsoft Defender for Cloud Apps monitored apps, hence, user won't get warned on access attempt (for example, google.com/drive isn't supported, while drive.google.com is supported).
+
+1. Network protection does not support the use of QUIC on browsers. Administrators need to ensure that QUIC is disabled when testing to ensure sites are blocked correctly. 
 
 No End-user notification on third party browsers? Check your toast message settings.
 
