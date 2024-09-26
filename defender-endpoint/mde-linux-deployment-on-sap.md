@@ -2,9 +2,9 @@
 title: Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP 
 description: Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP 
 ms.service: defender-endpoint
-ms.author: cgardin
-author: cgardin
-ms.reviewer: shlomiakirav  
+ms.author: deniseb
+author: denisebmsft
+ms.reviewer: cgardin  
 ms.localizationpriority: medium
 manager: deniseb
 audience: ITPro
@@ -15,7 +15,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: linux
 search.appverid: met150
-ms.date: 05/17/2024
+ms.date: 09/26/2024
 ms.custom: 
 - partner-contribution
 ---
@@ -63,6 +63,8 @@ The default configuration option for deployment as an Azure Extension for AntiVi
 - **On-demand scanning is turned on**: Still use the scan capabilities on the endpoint.
 - **Automatic threat remediation is turned off**: No files are moved and the security administrator is expected to take required action.
 - **Security intelligence updates are turned on**: Alerts are available on security administrator's tenant.
+
+Online Kernel patching tools such as Ksplice or similar can lead to unpredictable OS stability if Defender for Endpoint is running. It is recommended to temporarily stop the MDE daemon prior to performing online Kernel patching.  After the Kernel is updated MDE for Linux can be safely restarted.  This is especially important on large SAP HANA VMs with huge memory contexts.
 
 The Linux crontab is typically used to schedule Microsoft Defender for Endpoint AV scan and log rotation tasks:
 [How to schedule scans with Microsoft Defender for Endpoint (Linux)](linux-schedule-scan-mde.md)
