@@ -103,35 +103,40 @@ WScript.Echo("Script executed successfully.");
 
    ```
 
-### Testing AMSI with vbscript
-
+### Testing AMSI with VBScript
 
 ```vbscript
+
 REM Save this sample AMSI vbscript as AMSI_vbscript.vbs
 Dim result 
 result = eval("AMSI Test Sample: " + "7e72c3ce-861b-4339-8740-0ac1484c1386")
 WScript.Echo result
+
 ```
 
-Open a Command Prompt (Run as admin)
+1. Open Command Prompt as an administrator.
 
-Type "wscript AMSI_vbscript.js" without the double quotes, and press **Enter**.
+2. Type `wscript AMSI_vbscript.js`, and then press **Enter**.
 
-The result should be:
+   The result should be as follows:
 
-Windows Script Host
+   ```console
 
-Script: C:\Users\Admin\Desktop\AMSI_vbscript.vbs
+   Windows Script Host
 
-Line: 3
+   Script: C:\Users\Admin\Desktop\AMSI_vbscript.vbs
 
-Char: 1
+   Line: 3
 
-Error: This script contains malicious content and has been blocked by your antivirus software.: 'eval'
+   Char: 1
 
-Code: 800A802D
+   Error: This script contains malicious content and has been blocked by your antivirus software.: 'eval'
 
-Source: Microsoft VBScript runtime error
+   Code: 800A802D
+
+   Source: Microsoft VBScript runtime error
+
+   ```
 
 ### Verifying the test results
 
