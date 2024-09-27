@@ -171,7 +171,7 @@ After you create this configuration profile, assign it to the devices where you 
 ##### Configure the enforcement level using Intune
 
 > [!NOTE]
-> If you've already configured Microsoft Defender for Endpoint on Mac using the previous instructions (with an XML file), then remove the previous Custom configuration policy and replace it with the instructions below.
+> If you've already configured Microsoft Defender for Endpoint on Mac using the previous instructions (with an XML file), then remove the previous Custom configuration policy and replace it with the following instructions:
 
 1. Open **Manage** > **Device configuration**. Select **Manage** \> **Profiles** \> **Create Profile**.
 
