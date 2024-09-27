@@ -1,19 +1,16 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
-title: AMSI demonstrations
+title: AMSI demonstrations with Microsoft Defender for Endpoint
 description: Demonstration of AMSI detection by Microsoft Defender for Endpoint
-author:      YongRhee-MSFT # GitHub alias
-ms.author:   yongrhee # Microsoft alias
+author: denisebmsft
+ms.author: deniseb
+ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: how-to
-ms.date:     09/27/2024
+ms.date: 09/27/2024
 ms.subservice: ngp
 ---
 
-# AMSI demonstrations
+# AMSI demonstrations with Microsoft Defender for Endpoint
 
 **Applies to:**
 
@@ -183,29 +180,29 @@ Microsoft Defender Antivirus has detected malware or other potentially unwanted 
 
 https://go.microsoft.com/fwlink/?linkid=37020&name=Virus:Win32/MpTest!amsi&threatid=2147694217&enterprise=0
 
- 	Name: Virus:Win32/MpTest!amsi
+     Name: Virus:Win32/MpTest!amsi
 
- 	ID: 2147694217
+     ID: 2147694217
 
- 	Severity: Severe
+     Severity: Severe
 
- 	Category: Virus
+     Category: Virus
 
- 	Path: _\Device\HarddiskVolume3\Windows\System32\WindowsPowerShell\v1.0\powershell.exe or _C:\Users\Admin\Desktop\AMSI_jscript.js;   file:_C:\Users\Admin\Desktop\AMSI_jscript.js->[Eval] or _C:\Users\Admin\Desktop\AMSI_vbscript.vbs
+     Path: _\Device\HarddiskVolume3\Windows\System32\WindowsPowerShell\v1.0\powershell.exe or _C:\Users\Admin\Desktop\AMSI_jscript.js;   file:_C:\Users\Admin\Desktop\AMSI_jscript.js->[Eval] or _C:\Users\Admin\Desktop\AMSI_vbscript.vbs
 
- 	Detection Origin: Local machine or Unknown
+     Detection Origin: Local machine or Unknown
 
- 	Detection Type: Concrete
+     Detection Type: Concrete
 
- 	Detection Source: System
+     Detection Source: System
 
- 	User: NT AUTHORITY\SYSTEM
+     User: NT AUTHORITY\SYSTEM
 
- 	Process Name: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exeor C:\Windows\System32\cscript.exe or C:\Windows\System32\wscript.exe or Unknown 
+     Process Name: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exeor C:\Windows\System32\cscript.exe or C:\Windows\System32\wscript.exe or Unknown 
 
- 	Security intelligence Version: AV: 1.419.221.0, AS: 1.419.221.0, NIS: 1.419.221.0
+     Security intelligence Version: AV: 1.419.221.0, AS: 1.419.221.0, NIS: 1.419.221.0
 
- 	Engine Version: AM: 1.1.24080.9, NIS: 1.1.24080.9
+     Engine Version: AM: 1.1.24080.9, NIS: 1.1.24080.9
 
 ##### Via Powershell
 
