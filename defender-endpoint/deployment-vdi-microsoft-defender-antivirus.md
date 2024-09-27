@@ -99,7 +99,7 @@ You can set a scheduled task to run once a day so that whenever the package is d
 Security intelligence packages are typically published once every three to four hours. Setting a frequency shorter than four hours isn't advisable because it will increase the network overhead on your management machine for no benefit.
 
 You can also set up your single server or machine to fetch the updates on behalf of the VMs at an interval and place them in the file share for consumption.
-This configuration is possible when the devices have the share and read access (NTFS permissions) to the share so they can grab the updates. To set this configuration up, follow these steps:
+This configuration is possible when the devices have the share and read access (NTFS permissions) to the share so they can grab the updates. To set up this configuration, follow these steps:
 
 1. Create an SMB/CIFS file share.
 
@@ -122,7 +122,7 @@ This configuration is possible when the devices have the share and read access (
    
 ### Set a scheduled task to run the PowerShell script
 
-1. On the management machine, open the Start menu and type `Task Scheduler`. From the reasults, Task Scheduler and then select **Create task...** on the side panel.
+1. On the management machine, open the Start menu and type `Task Scheduler`. From the results, Task Scheduler and then select **Create task...** on the side panel.
 
 2. Specify the name as `Security intelligence unpacker`. 
 
@@ -132,7 +132,7 @@ This configuration is possible when the devices have the share and read access (
 
 5. Specify `PowerShell` in the **Program/Script** field. 
 
-6. In the **Add arguements**  field, type `-ExecutionPolicy Bypass c:\wdav-update\vdmdlunpack.ps1`, and then select **OK**.
+6. In the **Add arguments**  field, type `-ExecutionPolicy Bypass c:\wdav-update\vdmdlunpack.ps1`, and then select **OK**.
 
 7. Configure any other settings as appropriate.
 
