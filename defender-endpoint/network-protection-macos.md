@@ -174,12 +174,19 @@ After you create this configuration profile, assign it to the devices where you 
 > If you've already configured Microsoft Defender for Endpoint on Mac using the previous instructions (with an XML file), then remove the previous Custom configuration policy and replace it with the instructions below.
 
 1. Open **Manage** \> **Device configuration**. Select **Manage** \> **Profiles** \> **Create Profile**.
+
 2. Change **Platform** to **macOS** and **Profile type** to **Settings catalog**. Select **Create**.
+
 3. Specify a name for the profile. 
+
 4. On the **Configuration settings** screen, select **Add settings**. Select **Microsoft Defender** \> **Network protection**, and tick the **Enforcement level** checkbox.
+
 5. Set the enforcement level to **block**. Select **Next**
+
 6. Open the configuration profile and upload the com.microsoft.wdav.xml file. (This file was created in step 3.)
+
 7. Select **OK**
+
 8. Select **Manage** \> **Assignments**. In the **Include** tab, select the devices for which you want to enable network protection.
 
 #### Mobileconfig deployment
