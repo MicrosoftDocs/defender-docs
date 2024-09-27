@@ -114,21 +114,21 @@ This configuration is possible when the devices have the share and read access (
 
 5. Specify `PowerShell` in the **Program/Script** field. 
 
-In the **Add arguements**  field, type `-ExecutionPolicy Bypass c:\wdav-update\vdmdlunpack.ps1`, and then select **OK**.
+6. In the **Add arguements**  field, type `-ExecutionPolicy Bypass c:\wdav-update\vdmdlunpack.ps1`, and then select **OK**.
 
-4. Configure any other settings as appropriate.
+7. Configure any other settings as appropriate.
 
-5. Select **OK** to save the scheduled task.
+8. Select **OK** to save the scheduled task.
 
-You can initiate the update manually by right-clicking on the task and then selecting **Run**.
+To initiate the update manually, right-click on the task, and then select **Run**.
 
 ### Download and unpackage manually
 
 If you would prefer to do everything manually, here's what to do to replicate the script's behavior:
 
-1. Create a new folder on the system root called `wdav_update` to store intelligence updates, for example, create the folder `c:\wdav_update`.
+1. Create a new folder on the system root called `wdav_update` to store intelligence updates. For example, create the folder `c:\wdav_update`.
 
-2. Create a subfolder under *wdav_update* with a GUID name, such as `{00000000-0000-0000-0000-000000000000}`
+2. Create a subfolder under `wdav_update` with a GUID name, such as `{00000000-0000-0000-0000-000000000000}`
 
    Here's an example: `c:\wdav_update\{00000000-0000-0000-0000-000000000000}`
 
@@ -137,7 +137,7 @@ If you would prefer to do everything manually, here's what to do to replicate th
 
 3. Download a security intelligence package from [https://www.microsoft.com/wdsi/definitions](https://www.microsoft.com/wdsi/definitions)  into the GUID folder. The file should be named `mpam-fe.exe`.
 
-4. Open a cmd prompt window and navigate to the GUID folder you created. Use the **/X** extraction command to extract the files, for example `mpam-fe.exe /X`.
+4. Open a Command Prompt window and navigate to the GUID folder you created. Use the `/X` extraction command to extract the files. For example `mpam-fe.exe /X`.
 
    > [!NOTE]
    > The VMs will pick up the updated package whenever a new GUID folder is created with an extracted update package or whenever an existing folder is updated with a new extracted package.
