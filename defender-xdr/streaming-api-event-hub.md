@@ -13,7 +13,7 @@ ms.collection:
 - tier3
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
-ms.date: 06/21/2024
+ms.date: 09/24/2024
 ---
 
 # Configure Microsoft Defender XDR to stream Advanced Hunting events to your Azure Event Hub
@@ -58,9 +58,9 @@ Prior to configuring Microsoft Defender XDR to stream data to Event Hubs, ensure
 
 6. You can select if you want to export the event data to a single Event Hub, or to export each event table to a different Event Hubs in your Event Hubs namespace.
 
-7. To export the event data to a single Event Hub, enter your **Event Hub name** and your **Event Hub resource ID**.
+7. To export the event data to a single Event Hub, enter your **Event Hub name** and your **Event Hub Namespace resource ID**.
 
-   To get your **Event Hub resource ID**, go to your Azure Event Hubs namespace page on [Azure](https://ms.portal.azure.com/) > **Properties** tab > copy the text under **Resource ID**:
+   To get your **Event Hub Namespace resource ID**, go to your Azure Event Hubs namespace page on [Azure](https://ms.portal.azure.com/) > **Properties** tab > copy the text under **Resource ID**:
 
    :::image type="content" source="/defender-endpoint/media/event-hub-resource-id.png" alt-text="An Event Hub resource ID" lightbox="/defender-endpoint/media/event-hub-resource-id.png":::
 
