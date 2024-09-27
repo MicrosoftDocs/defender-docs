@@ -42,7 +42,7 @@ search.appverid: met150
 
 ## Overview
 
-Microsoft Network protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that might host:
+Network protection helps reduce the attack surface of your devices from Internet-based events. It prevents people from using any application to access dangerous domains that might host:
 
 - phishing scams
 - exploits
