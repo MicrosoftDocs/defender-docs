@@ -48,7 +48,7 @@ Network protection helps reduce the attack surface of your devices from Internet
 - exploits
 - other malicious content on the Internet
 
-Network protection expands the scope of Microsoft Defender XDR [SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP/ HTTPS traffic that attempts to connect to low-reputation sources. The blocks on outbound HTTP(s) traffic are based on the domain or hostname.
+Network protection expands the scope of Microsoft Defender XDR [SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP/HTTPS traffic that attempts to connect to low-reputation sources. The blocks on outbound HTTP/HTTPS traffic are based on the domain or hostname.
 
 ## Availability
 
