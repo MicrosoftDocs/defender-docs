@@ -3,7 +3,7 @@ title: Use network protection to help prevent macOS connections to bad sites
 description: Protect your network by preventing macOS users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 08/22/2024
+ms.date: 09/27/2024
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
@@ -136,7 +136,8 @@ After you create this configuration profile, assign it to the devices where you 
 
 ##### Configure the enforcement level
 
-Note: If you've already configured Microsoft Defender XDR for Endpoint on Mac using the instructions listed here, then update the plist file you previously deployed with the content listed below and redeploy it from JAMF.
+> [!NOTE]
+> If you've already configured Microsoft Defender XDR for Endpoint on Mac using the instructions listed here, then update the plist file you previously deployed with the content listed below and redeploy it from JAMF.
 
 1. In **Computers** \> **Configuration Profiles**, select **Options** \> **Applications & Custom Settings**
 2. Select **Upload File** (PLIST file)
