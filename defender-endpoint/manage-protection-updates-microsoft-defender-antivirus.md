@@ -178,14 +178,14 @@ On a Windows Server set up a network file share (UNC/mapped drive) to download s
 
 1. On the system for which you want to provision the share and download the updates, create a folder for the script.
 
-    ```console
+    ```cmd
     Start, CMD (Run as admin)
     MD C:\Tool\PS-Scripts\
     ```
 
 2. Create a folder for signature updates.
 
-    ```console
+    ```cmd
     MD C:\Temp\TempSigs\x64
     MD C:\Temp\TempSigs\x86
     ```
@@ -255,8 +255,7 @@ On a Windows Server set up a network file share (UNC/mapped drive) to download s
 
    If the scheduled task fails, run the following commands:
 
-   ```console
-
+   ```powershell
     C:\windows\system32\windowspowershell\v1.0\powershell.exe -NoProfile -executionpolicy allsigned -command "&\"C:\Tool\PS-Scripts\SignatureDownloadCustomTask.ps1\" -action run -arch x64 -isDelta $False -destDir C:\Temp\TempSigs\x64"
 
     C:\windows\system32\windowspowershell\v1.0\powershell.exe -NoProfile -executionpolicy allsigned -command "&\"C:\Tool\PS-Scripts\SignatureDownloadCustomTask.ps1\" -action run -arch x64 -isDelta $True -destDir C:\Temp\TempSigs\x64"
@@ -264,7 +263,6 @@ On a Windows Server set up a network file share (UNC/mapped drive) to download s
     C:\windows\system32\windowspowershell\v1.0\powershell.exe -NoProfile -executionpolicy allsigned -command "&\"C:\Tool\PS-Scripts\SignatureDownloadCustomTask.ps1\" -action run -arch x86 -isDelta $False -destDir C:\Temp\TempSigs\x86"
 
     C:\windows\system32\windowspowershell\v1.0\powershell.exe -NoProfile -executionpolicy allsigned -command "&\"C:\Tool\PS-Scripts\SignatureDownloadCustomTask.ps1\" -action run -arch x86 -isDelta $True -destDir C:\Temp\TempSigs\x86"
-    
     ```
 
 10. Create a share pointing to `C:\Temp\TempSigs` (for example, `\\server\updates`).
