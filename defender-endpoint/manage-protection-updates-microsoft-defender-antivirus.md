@@ -14,7 +14,7 @@ ms.collection:
 - m365-security
 - tier2
 search.appverid: met150
-ms.date: 09/09/2024
+ms.date: 09/27/2024
 ---
 
 # Manage the sources for Microsoft Defender Antivirus protection updates
