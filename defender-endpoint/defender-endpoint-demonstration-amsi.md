@@ -20,7 +20,7 @@ ms.subservice: ngp
 
 - [Microsoft Defender Antivirus](microsoft-defender-antivirus-windows.md)
 
-Microsoft Defender for Endpoint utilizes the [anti-malware Scan Interface (AMSI)](/defender-endpoint/amsi-on-mdav) to enhance protection against fileless malware, dynamic script-based attacks, and other nontraditional cyber threats.  In this article, we will go over how to test the AMSI engine with a benign sample.
+Microsoft Defender for Endpoint utilizes the [anti-malware Scan Interface (AMSI)](/defender-endpoint/amsi-on-mdav) to enhance protection against fileless malware, dynamic script-based attacks, and other nontraditional cyber threats.  In this article, we describe how to test the AMSI engine with a benign sample.
 
 ## Scenario requirements and setup
 
