@@ -139,24 +139,29 @@ After you create this configuration profile, assign it to the devices where you 
 > [!NOTE]
 > If you've already configured Microsoft Defender XDR for Endpoint on Mac using the instructions listed here, then update the plist file you previously deployed with the content listed below and redeploy it from JAMF.
 
-1. In **Computers** \> **Configuration Profiles**, select **Options** \> **Applications & Custom Settings**
-2. Select **Upload File** (PLIST file)
-3. Set preference domain to _com.microsoft.wdav_
-4. Upload the following plist file
+1. In **Computers** > **Configuration Profiles**, select **Options** > **Applications & Custom Settings**.
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>networkProtection</key>
-    <dict>
-        <key>enforcementLevel</key>
-        <string>block</string>
-    </dict>
-</dict>
-</plist>
-```
+2. Select **Upload File** (PLIST file).
+
+3. Set preference domain to `com.microsoft.wdav`.
+
+4. Upload the following plist file.
+
+   ```xml
+   
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+   <plist version="1.0">
+   <dict>
+       <key>networkProtection</key>
+       <dict>
+           <key>enforcementLevel</key>
+           <string>block</string>
+       </dict>
+   </dict>
+   </plist>
+   
+   ```
 
 #### Intune deployment
 
