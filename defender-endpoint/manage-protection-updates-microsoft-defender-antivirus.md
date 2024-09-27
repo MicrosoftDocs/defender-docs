@@ -103,6 +103,10 @@ The procedures in this article first describe how to set the order, and then how
 
 3. Expand the tree to **Windows components** > **Windows Defender** > **Signature updates**.
 
+   > [!NOTE]
+   > - For Windows 10, versions 1703 up to and including 1809, the policy path is **Windows Components > Microsoft Defender Antivirus > Signature Updates**
+   > - For Windows 10, version 1903, the policy path is **Windows Components > Microsoft Defender Antivirus > Security Intelligence Updates**
+
 4. Edit the **Define the order of sources for downloading security intelligence updates** setting. Set the option to **Enabled**.
       
 5. Specify the order of sources, separated by a single pipe, for example: `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`, as shown in the following screenshot.
@@ -119,9 +123,6 @@ The procedures in this article first describe how to set the order, and then how
       
 9. Select **OK**. This action sets the order of file shares when that source is referenced in the **Define the order of sources...** group policy setting.
 
-> [!NOTE]
-> For Windows 10, versions 1703 up to and including 1809, the policy path is **Windows Components > Microsoft Defender Antivirus > Signature Updates**
-> For Windows 10, version 1903, the policy path is **Windows Components > Microsoft Defender Antivirus > Security Intelligence Updates**
 
 ## Use Configuration Manager to manage the update location
 
