@@ -55,8 +55,8 @@ In Windows 10, version 1903, Microsoft introduced the shared security intelligen
 
 |Method  | Procedure  |
 |---------|---------|
-| Group Policy | 1. On your Group Policy management computer, open the Group Policy Management Console, right-click the Group Policy Object you want to configure, and then select **Edit**.<br/><br/>2. In the Group Policy Management Editor, go to **Computer configuration**.<br/><br/>Select **Administrative templates**.<br/><br/>Expand the tree to **Windows components** \> **Microsoft Defender Antivirus** \> **Security Intelligence Updates**.<br/><br/>3. Double-click **Define security intelligence location for VDI clients**, and then set the option to **Enabled**. A field automatically appears.<br/><br/>4. Enter `\\<sharedlocation\>\wdav-update` (for help with this value, see [Download and unpackage](#download-and-unpackage-the-latest-updates)).<br/><br/>5. Select **OK**.<br/><br/>Deploy the GPO to the VMs you want to test. |
-| PowerShell | 1. On each RDS or VDI device, use the following cmdlet to enable the feature: `Set-MpPreference -SharedSignaturesPath \\<shared location>\wdav-update`. <br/><br/>2. Push the update as you normally would push PowerShell-based configuration policies onto your VMs. (See the [Download and unpackage](#download-and-unpackage-the-latest-updates) section the \<shared location\> entry.) |
+| Group Policy | 1. On your Group Policy management computer, open the Group Policy Management Console, right-click the Group Policy Object you want to configure, and then select **Edit**.<br/><br/>2. In the Group Policy Management Editor, go to **Computer configuration**.<br/><br/>Select **Administrative templates**.<br/><br/>Expand the tree to **Windows components** > **Microsoft Defender Antivirus** > **Security Intelligence Updates**.<br/><br/>3. Double-click **Define security intelligence location for VDI clients**, and then set the option to **Enabled**. A field automatically appears.<br/><br/>4. Enter `\\<Windows File Server shared location\>\wdav-update` (for help with this value, see [Download and unpackage](#download-and-unpackage-the-latest-updates)).<br/><br/>5. Select **OK**.<br/><br/>Deploy the GPO to the VMs you want to test. |
+| PowerShell | 1. On each RDS or VDI device, use the following cmdlet to enable the feature: `Set-MpPreference -SharedSignaturesPath \\<Windows File Server shared location>\wdav-update`. <br/><br/>2. Push the update as you normally would push PowerShell-based configuration policies onto your VMs. (See the [Download and unpackage](#download-and-unpackage-the-latest-updates) section the <shared location> entry.) |
 
 ## Download and unpackage the latest updates
 
@@ -85,9 +85,9 @@ This configuration is possible when the devices have the share and read access (
 
 1. Create an SMB/CIFS file share.
 
- 2. Use the following example to create a file share with the following share permissions.
+1. Use the following example to create a file share with the following share permissions.
 
-    ```PowerShell
+       ```PowerShell
     PS c:\> Get-SmbShareAccess -Name mdatp$
 
     Name   ScopeName AccountName AccessControlType AccessRight
@@ -95,13 +95,13 @@ This configuration is possible when the devices have the share and read access (
     mdatp$ *         Everyone    Allow             Read
     ```
 
-    > [!NOTE]
+       > [!NOTE]
     > An NTFS permission is added for **Authenticated Users:Read:**.
 
-    For this example, the file share is:
+       For this example, the file share is:
 
-    `\\fileserver.fqdn\mdatp$\wdav-update`
-
+   `\\WindowsFileServer.fqdn\mdatp$\wdav-update`
+   
 ### Set a scheduled task to run the PowerShell script
 
 1. On the management machine, open the Start menu and type **Task Scheduler**. Open it and select **Create task...** on the side panel.
