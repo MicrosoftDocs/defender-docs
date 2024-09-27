@@ -67,7 +67,7 @@ In Windows 10, version 1903, Microsoft introduced the shared security intelligen
 
 5. Enter `\\<Windows File Server shared location\>\wdav-update` (for help with this value, see [Download and unpackage](#download-and-unpackage-the-latest-updates)).
 
-5. Select **OK**, and then deploy the GPO to the VMs you want to test.
+6. Select **OK**, and then deploy the GPO to the VMs you want to test.
 
 ### PowerShell
 
