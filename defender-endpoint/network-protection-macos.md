@@ -83,7 +83,7 @@ To roll out Network Protection for macOS, we recommend the following actions:
 
 ### Important notes
 
-- We don't recommend controlling network protection from System Preferences by using the Disconnect button. Instead, use the mdatp command-line tool or JAMF / Intune to control network protection for macOS.
+- We don't recommend controlling network protection from System Preferences by using the **Disconnect** button. Instead, use the mdatp command-line tool or JamF/Intune to control network protection for macOS.
 - To evaluate effectiveness of macOS web threat protection, we recommend trying it in browsers other than Microsoft Edge for macOS (for example, Safari). Microsoft Edge for macOS has built-in web threat protection (Microsoft Defender Browser Protection extension which provides Smartscreen capabilities) that is enabled regardless of whether the Mac network protection feature you're evaluating, is turned on or not.
 
 ## Deployment instructions
