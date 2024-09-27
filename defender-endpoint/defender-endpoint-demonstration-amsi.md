@@ -91,13 +91,17 @@ eval(testString);
 WScript.Echo("Script executed successfully."); 
 ```
 
-Open a Command Prompt (Run as admin)
+1. Open Command Prompt as an administrator.
 
-Type "cscript /E:jscript AMSI_jscript.js" without the double quotes, and press **Enter**.
+2. Type `cscript /E:jscript AMSI_jscript.js`, and then press **Enter**.
 
-The result should be:
+   The result should be as follows:
 
-CScript Error: Loading script "C:\Users\Admin\Desktop\AMSI_jscript.js" failed (Operation did not complete successfully because the file contains a virus or potentially unwanted software. ).
+   ```console
+
+   CScript Error: Loading script "C:\Users\Admin\Desktop\AMSI_jscript.js" failed (Operation did not complete successfully because the file contains a virus or potentially unwanted software. ).
+
+   ```
 
 ### Testing AMSI with vbscript
 
