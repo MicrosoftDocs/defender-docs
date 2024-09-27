@@ -543,3 +543,4 @@ For submission instructions for impersonation false positives, see [Report good 
 - [Manage allows and blocks in the Tenant Allow/Block List](tenant-allow-block-list-about.md)
 - [Allow or block files in the Tenant Allow/Block List](tenant-allow-block-list-files-configure.md)
 - [Allow or block URLs in the Tenant Allow/Block List](tenant-allow-block-list-urls-configure.md)
+- [Allow or block IP addresses in the Tenant Allow/Block List](tenant-allow-block-list-ip-addresses-configure.md)
