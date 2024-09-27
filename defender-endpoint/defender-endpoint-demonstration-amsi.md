@@ -39,7 +39,11 @@ Microsoft Defender for Endpoint utilizes the [anti-malware Scan Interface (AMSI)
 
 ## Testing AMSI
 
-In this demonstration page, you have 3 engine choices to test AMSI.  Powershell or jscript or vbscript.
+In this demonstration page, you have three engine choices to test AMSI:
+
+- PowerShell
+- JScript
+- VBScript
 
 ### Testing AMSI with PowerShell
 
@@ -50,29 +54,32 @@ $testString = "AMSI Test Sample: " + "7e72c3ce-861b-4339-8740-0ac1484c1386"
 Invoke-Expression $testString
 ```
 
-Open Powershell (Run as admin)
+1. As an administrator, open PowerShell.
 
-Type "Powershell -ExecutionPolicy Bypass AMSI_PoSh_script.ps1" without the double quotes, and press **Enter**.
+2. Type `Powershell -ExecutionPolicy Bypass AMSI_PoSh_script.ps1`, and then press the **Enter** key.
 
-The result should be:
+   The result should be as follows:
 
-Invoke-Expression : At line:1 char:1
+   ```powershell
+   Invoke-Expression : At line:1 char:1
 
-+ AMSI Test Sample: 7e72c3ce-861b-4339-8740-0ac1484c1386
+   + AMSI Test Sample: 7e72c3ce-861b-4339-8740-0ac1484c1386
 
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This script contains malicious content and has been blocked by your antivirus software.
+   This script contains malicious content and has been blocked by your antivirus software.
 
-At C:\Users\Admin\Desktop\AMSI_PoSh_script.ps1:3 char:1
+   At C:\Users\Admin\Desktop\AMSI_PoSh_script.ps1:3 char:1
 
-+ Invoke-Expression $testString
+   + Invoke-Expression $testString
 
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     + CategoryInfo          : ParserError: (:) [Invoke-Expression], ParseException
 
     + FullyQualifiedErrorId : ScriptContainedMaliciousContent,Microsoft.PowerShell.Commands.InvokeExpressionCommand
+    
+    ```
 
 ### Testing AMSI with jscript
 
