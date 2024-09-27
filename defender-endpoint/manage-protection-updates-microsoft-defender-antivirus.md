@@ -71,7 +71,6 @@ To ensure the best level of protection, Microsoft Update allows for rapid releas
 
 Platform updates and engine updates are released on a monthly cadence. Security intelligence updates are delivered multiple times a day, but this delta package doesn't contain an engine update. See [Microsoft Defender Antivirus security intelligence and product updates](microsoft-defender-antivirus-updates.md).
 
-
 > [!IMPORTANT]
 > If you have set [Microsoft Security intelligence page](https://www.microsoft.com/security/portal/definitions/adl.aspx) updates as a fallback source after Windows Server Update Service or Microsoft Update, updates are only downloaded from security intelligence updates and platform updates when the current update is considered out-of-date. (By default, this is seven consecutive days of not being able to apply updates from the Windows Server Update Service or Microsoft Update services).
 > You can, however, [set the number of days before protection is reported as out-of-date](manage-outdated-endpoints-microsoft-defender-antivirus.md).<p>
@@ -100,23 +99,25 @@ The procedures in this article first describe how to set the order, and then how
 
 1. In the **Group Policy Management Editor**, go to **Computer configuration**.
 
-1. Select **Policies** then **Administrative templates**.
+2. Select **Policies** then **Administrative templates**.
 
-1. Expand the tree to **Windows components** > **Windows Defender** > **Signature updates** and then configure the following settings:
+3. Expand the tree to **Windows components** > **Windows Defender** > **Signature updates**.
 
-   1. Edit the **Define the order of sources for downloading security intelligence updates** setting. Set the option to **Enabled**.
+4. Edit the **Define the order of sources for downloading security intelligence updates** setting. Set the option to **Enabled**.
       
-   2. Specify the order of sources, separated by a single pipe, for example: `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`, as shown in the following screenshot.
+5. Specify the order of sources, separated by a single pipe, for example: `InternalDefinitionUpdateServer|MicrosoftUpdateServer|MMPC`, as shown in the following screenshot.
 
-      :::image type="content" source="/defender/media/wdav-order-update-sources.png" alt-text="Group policy setting listing the order of sources" lightbox="/defender/media/wdav-order-update-sources.png":::
+   :::image type="content" source="/defender/media/wdav-order-update-sources.png" alt-text="Group policy setting listing the order of sources" lightbox="/defender/media/wdav-order-update-sources.png":::
 
-   1. Select **OK**. This action sets the order of protection update sources.
+6. Select **OK**. This action sets the order of protection update sources.
+
+7. Edit the **Define file shares for downloading security intelligence updates** setting and then set the option to **Enabled**.
+
+8. On a Windows Server, specify the file share source. If you have multiple sources, specify each source in the order they should be used, separated by a single pipe. Use [standard UNC notation](/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc) for denoting the path. For example: `\\host-name1\share-name\object-name|\\host-name2\share-name\object-name`. 
+
+   If you don't enter any paths, then this source is skipped when the VM downloads updates.
       
-   1. Edit the **Define file shares for downloading security intelligence updates** setting and then set the option to **Enabled**.
-      
-   1. On a Windows Server, specify the file share source. If you have multiple sources, specify each source in the order they should be used, separated by a single pipe. Use [standard UNC notation](/openspecs/windows_protocols/ms-dtyp/62e862f4-2a51-452e-8eeb-dc4ff5ee33cc) for denoting the path, for example: `\\host-name1\share-name\object-name|\\host-name2\share-name\object-name`. If you don't enter any paths, then this source is skipped when the VM downloads updates.
-      
-   6. Select **OK**. This action sets the order of file shares when that source is referenced in the **Define the order of sources...** group policy setting.
+9. Select **OK**. This action sets the order of file shares when that source is referenced in the **Define the order of sources...** group policy setting.
 
 > [!NOTE]
 > For Windows 10, versions 1703 up to and including 1809, the policy path is **Windows Components > Microsoft Defender Antivirus > Signature Updates**
@@ -253,7 +254,8 @@ On a Windows Server set up a network file share (UNC/mapped drive) to download s
 
    If the scheduled task fails, run the following commands:
 
-    ```console
+   ```console
+
     C:\windows\system32\windowspowershell\v1.0\powershell.exe -NoProfile -executionpolicy allsigned -command "&\"C:\Tool\PS-Scripts\SignatureDownloadCustomTask.ps1\" -action run -arch x64 -isDelta $False -destDir C:\Temp\TempSigs\x64"
 
     C:\windows\system32\windowspowershell\v1.0\powershell.exe -NoProfile -executionpolicy allsigned -command "&\"C:\Tool\PS-Scripts\SignatureDownloadCustomTask.ps1\" -action run -arch x64 -isDelta $True -destDir C:\Temp\TempSigs\x64"
@@ -261,6 +263,7 @@ On a Windows Server set up a network file share (UNC/mapped drive) to download s
     C:\windows\system32\windowspowershell\v1.0\powershell.exe -NoProfile -executionpolicy allsigned -command "&\"C:\Tool\PS-Scripts\SignatureDownloadCustomTask.ps1\" -action run -arch x86 -isDelta $False -destDir C:\Temp\TempSigs\x86"
 
     C:\windows\system32\windowspowershell\v1.0\powershell.exe -NoProfile -executionpolicy allsigned -command "&\"C:\Tool\PS-Scripts\SignatureDownloadCustomTask.ps1\" -action run -arch x86 -isDelta $True -destDir C:\Temp\TempSigs\x86"
+    
     ```
 
 10. Create a share pointing to `C:\Temp\TempSigs` (for example, `\\server\updates`).
@@ -271,9 +274,7 @@ On a Windows Server set up a network file share (UNC/mapped drive) to download s
 11. Set the share location in the policy to the share.
 
     > [!NOTE]
-    > Do not add the x64 (or x86) folder in the path. The mpcmdrun.exe process adds it automatically.
-
-
+    > Do not add the x64 (or x86) folder in the path. The `mpcmdrun.exe` process adds it automatically.
 
 ## Related articles
 
