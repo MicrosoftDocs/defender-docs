@@ -381,7 +381,7 @@ For this page, we recommend that your organization uses a basic SharePoint site.
 4. Network protection does not support the use of QUIC on browsers. Administrators need to ensure that QUIC is disabled when testing to ensure sites are blocked correctly. 
 
 > [!TIP]
-> No end-user notifications on third party browsers? Check your toast message settings.
+> No end-user notifications are appearing on third party browsers? Check your toast message settings.
 
 ## See also
 
