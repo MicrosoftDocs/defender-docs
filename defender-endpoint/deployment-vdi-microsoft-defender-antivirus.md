@@ -75,8 +75,7 @@ Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/?LinkID=121721&arch=x64'
 Start-Process -FilePath $vdmpackage -WorkingDirectory $vdmpath -ArgumentList "/x"
 ```
 
-You can set a scheduled task to run once a day so that whenever the package is downloaded and unpacked then the VMs will receive the new update.
-We suggest starting with once a day, but you should experiment with increasing or decreasing the frequency to understand the impact.
+You can set a scheduled task to run once a day so that whenever the package is downloaded and unpacked then the VMs receive the new update. We suggest starting with once a day, but you should experiment with increasing or decreasing the frequency to understand the impact.
 
 Security intelligence packages are typically published once every three to four hours. Setting a frequency shorter than four hours isn't advisable because it will increase the network overhead on your management machine for no benefit.
 
