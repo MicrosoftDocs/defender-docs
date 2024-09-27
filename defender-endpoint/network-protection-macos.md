@@ -3,7 +3,7 @@ title: Use network protection to help prevent macOS connections to bad sites
 description: Protect your network by preventing macOS users from accessing known malicious and suspicious network addresses
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 08/22/2024
+ms.date: 09/27/2024
 audience: ITPro
 author: denisebmsft
 ms.author: deniseb
@@ -42,13 +42,13 @@ search.appverid: met150
 
 ## Overview
 
-Microsoft Network protection helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that might host:
+Network protection helps reduce the attack surface of your devices from Internet-based events. It prevents people from using any application to access dangerous domains that might host:
 
 - phishing scams
 - exploits
 - other malicious content on the Internet
 
-Network protection expands the scope of Microsoft Defender XDR [SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP(s) traffic that attempts to connect to low-reputation sources. The blocks on outbound HTTP(s) traffic are based on the domain or hostname.
+Network protection expands the scope of Microsoft Defender XDR [SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP/HTTPS traffic that attempts to connect to low-reputation sources. The blocks on outbound HTTP/HTTPS traffic are based on the domain or hostname.
 
 ## Availability
 
@@ -83,7 +83,7 @@ To roll out Network Protection for macOS, we recommend the following actions:
 
 ### Important notes
 
-- We don't recommend controlling network protection from System Preferences by using the Disconnect button. Instead, use the mdatp command-line tool or JAMF / Intune to control network protection for macOS.
+- We don't recommend controlling network protection from System Preferences by using the **Disconnect** button. Instead, use the mdatp command-line tool or JamF/Intune to control network protection for macOS.
 - To evaluate effectiveness of macOS web threat protection, we recommend trying it in browsers other than Microsoft Edge for macOS (for example, Safari). Microsoft Edge for macOS has built-in web threat protection (Microsoft Defender Browser Protection extension which provides Smartscreen capabilities) that is enabled regardless of whether the Mac network protection feature you're evaluating, is turned on or not.
 
 ## Deployment instructions
@@ -136,26 +136,32 @@ After you create this configuration profile, assign it to the devices where you 
 
 ##### Configure the enforcement level
 
-Note: If you've already configured Microsoft Defender XDR for Endpoint on Mac using the instructions listed here, then update the plist file you previously deployed with the content listed below and redeploy it from JAMF.
+> [!NOTE]
+> If you've already configured Microsoft Defender XDR for Endpoint on Mac using the instructions listed here, then update the plist file you previously deployed with the content listed in this section, and then redeploy it from JAMF.
 
-1. In **Computers** \> **Configuration Profiles**, select **Options** \> **Applications & Custom Settings**
-2. Select **Upload File** (PLIST file)
-3. Set preference domain to _com.microsoft.wdav_
-4. Upload the following plist file
+1. In **Computers** > **Configuration Profiles**, select **Options** > **Applications & Custom Settings**.
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>networkProtection</key>
-    <dict>
-        <key>enforcementLevel</key>
-        <string>block</string>
-    </dict>
-</dict>
-</plist>
-```
+2. Select **Upload File** (PLIST file).
+
+3. Set preference domain to `com.microsoft.wdav`.
+
+4. Upload the following plist file.
+
+   ```xml
+   
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+   <plist version="1.0">
+   <dict>
+       <key>networkProtection</key>
+       <dict>
+           <key>enforcementLevel</key>
+           <string>block</string>
+       </dict>
+   </dict>
+   </plist>
+   
+   ```
 
 #### Intune deployment
 
@@ -165,24 +171,32 @@ After you create this configuration profile, assign it to the devices where you 
 ##### Configure the enforcement level using Intune
 
 > [!NOTE]
-> If you've already configured Microsoft Defender for Endpoint on Mac using the previous instructions (with an XML file), then remove the previous Custom configuration policy and replace it with the instructions below.
+> If you've already configured Microsoft Defender for Endpoint on Mac using the previous instructions (with an XML file), then remove the previous Custom configuration policy and replace it with the following instructions:
 
-1. Open **Manage** \> **Device configuration**. Select **Manage** \> **Profiles** \> **Create Profile**.
+1. Open **Manage** > **Device configuration**. Select **Manage** \> **Profiles** \> **Create Profile**.
+
 2. Change **Platform** to **macOS** and **Profile type** to **Settings catalog**. Select **Create**.
+
 3. Specify a name for the profile. 
-4. On the **Configuration settings** screen, select **Add settings**. Select **Microsoft Defender** \> **Network protection**, and tick the **Enforcement level** checkbox.
-5. Set the enforcement level to **block**. Select **Next**
-6. Open the configuration profile and upload the com.microsoft.wdav.xml file. (This file was created in step 3.)
+
+4. On the **Configuration settings** screen, select **Add settings**. Select **Microsoft Defender** > **Network protection**, and tick the **Enforcement level** checkbox.
+
+5. Set the enforcement level to **block**. Select **Next**.
+
+6. Open the configuration profile and upload the `com.microsoft.wdav.xml` file. (This file was created in step 3.)
+
 7. Select **OK**
+
 8. Select **Manage** \> **Assignments**. In the **Include** tab, select the devices for which you want to enable network protection.
 
 #### Mobileconfig deployment
 
-To deploy the configuration via a .mobileconfig file, which can be used with non-Microsoft MDM solutions or distributed to devices directly:
+To deploy the configuration via a `.mobileconfig` file, which can be used with non-Microsoft MDM solutions or distributed to devices directly, follow these steps:
 
-1. Save the following payload as _com.microsoft.wdav.xml.mobileconfig_
+1. Save the following payload as `com.microsoft.wdav.xml.mobileconfig`.
    
    ```xml
+
    <?xml version="1.0" encoding="utf-8"?>
    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
    <plist version="1">
@@ -235,21 +249,26 @@ To deploy the configuration via a .mobileconfig file, which can be used with non
            </array>
        </dict>
    </plist>
+   
    ```
 
-2. Verify that the above file was copied correctly. From the Terminal, run the following command and verify that it outputs OK:
+2. Verify that the file from the previous step was copied correctly. Using Terminal, run the following command and verify that it outputs OK:
 
    ```bash
-   plutil -lint com.microsoft.wdav.xml
-   ```
 
+   plutil -lint com.microsoft.wdav.xml
+   
+   ```
 
 ## How to explore the features
 
 1. Learn how to [Protect your organization against web threats](web-threat-protection.md) using web threat protection.
    - Web threat protection is part of web protection in Microsoft Defender for Endpoint. It uses network protection to secure your devices against web threats.
+
 2. Run through the [Custom Indicators of Compromise](indicator-ip-domain.md) flow to get blocks on the Custom Indicator type.
+
 3. Explore [Web content filtering](web-content-filtering.md).
+
    > [!NOTE]
    > If you are removing a policy or changing device groups at the same time, this might cause a delay in policy deployment.
    > Pro tip: You can deploy a policy without selecting any category on a device group. This action will create an audit only policy, to help you understand user behavior before creating a block policy.
@@ -257,6 +276,7 @@ To deploy the configuration via a .mobileconfig file, which can be used with non
    > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.
 
 4. [Integrate Microsoft Defender for Endpoint with Defender for Cloud Apps](/defender-cloud-apps/mde-integration) and your network protection-enabled macOS devices have endpoint policy enforcement capabilities.
+
    > [!NOTE]
    > Discovery and other features are currently not supported on these platforms.
 
@@ -312,24 +332,22 @@ Within 10-15 minutes, these domains are listed in Microsoft Defender XDR under I
 
 :::image type="content" source="media/network-protection-macos-indicators-urls-domains-warn.png" alt-text="Shows network protection indicators for urls or domains warning.":::
 
-When the end user is attempting to access monitored domains, they're warned by Defender for Endpoint.
-
-- The user gets a plain block experience accompanied by the following toast message, which is displayed by the operating system including the name of the blocked application (e.g Blogger.com)
+When the end user is attempting to access monitored domains, they're warned by Defender for Endpoint. The user gets a plain block experience accompanied by the following toast message, which is displayed by the operating system including the name of the blocked application (e.g Blogger.com)
 
   :::image type="content" source="media/network-protection-macos-content-blocked.png" alt-text="Shows end-user network protection content blocked toast notification.":::
 
-If the end user encounters a _block_, the user has two possible resolutions:
+If the end user encounters a _block_, the user has two possible resolutions: bypass and education.
 
 #### User bypass
 
-- **For toast message experience**: Press the Unblock button. By reloading the webpage, the user is able to proceed and use the cloud app. (This action is applicable for the next 24 hours, after which the user has to unblock once again)
+- **For toast message experience**: Press the **Unblock** button. By reloading the webpage, the user is able to proceed and use the cloud app. (This action is applicable for the next 24 hours, after which the user has to unblock once again.)
 
 #### User education
 
 - **For toast message experience**: Press the toast message itself. End user is redirected to a custom redirect URL set globally in Microsoft Defender for Cloud Apps (More information at the bottom of this page)
 
 > [!NOTE]
-> Tracking bypasses per app** – You can track how many users have bypassed the warning in the _Application_ page in Microsoft Defender for Cloud Apps.
+> Tracking bypasses per app: You can track how many users have bypassed the warning in the **Application** page in Microsoft Defender for Cloud Apps.
 
   :::image type="content" source="media/network-protection-macos-mcas-cloud-app-security.png" alt-text="Shows network protection cloud app security overview.":::
 
@@ -355,10 +373,15 @@ For this page, we recommend that your organization uses a basic SharePoint site.
 ### Important things to know
 
 1. It can take up to two hours (typically less) for app domains to propagate and to be update in the endpoint devices, after it's marked as _Monitored_.
-2. By default, action is taken for all apps and domains that were marked as Monitored in Microsoft Defender for Cloud Apps portal for all the onboarded endpoints in the organization.
-3. Full URLs are currently not supported and won't be sent from Microsoft Defender for Cloud Apps to Microsoft Defender XDR for Endpoint, if any full URLs are listed under Microsoft Defender for Cloud Apps monitored apps, hence, user won't get warned on access attempt (for example, google.com/drive isn't supported, while drive.google.com is supported).
 
-No End-user notification on third party browsers? Check your toast message settings.
+2. By default, action is taken for all apps and domains that were marked as Monitored in Microsoft Defender for Cloud Apps portal for all the onboarded endpoints in the organization.
+
+3. Full URLs are currently not supported and aren't sent from Microsoft Defender for Cloud Apps to Microsoft Defender for Endpoint. If any full URLs are listed under Microsoft Defender for Cloud Apps as monitored apps, users aren't warned when they attempt to access a site. (For example, `google.com/drive` isn't supported, while `drive.google.com` is supported.)
+
+4. Network protection doesn't support the use of QUIC on browsers. Administrators need to ensure that QUIC is disabled when testing to ensure sites are blocked correctly. 
+
+> [!TIP]
+> No end-user notifications are appearing on third party browsers? Check your toast message settings.
 
 ## See also
 
