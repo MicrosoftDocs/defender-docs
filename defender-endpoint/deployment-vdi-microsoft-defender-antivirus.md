@@ -2,7 +2,7 @@
 title: Configure Microsoft Defender Antivirus on a remote desktop or virtual desktop infrastructure environment
 description: Get an overview of how to configure Microsoft Defender Antivirus in a remote desktop or non-persistent virtual desktop environment.
 ms.localizationpriority: medium
-ms.date: 08/22/2023
+ms.date: 09/27/2024
 ms.topic: conceptual
 author: denisebmsft
 ms.author: deniseb
@@ -85,30 +85,36 @@ This configuration is possible when the devices have the share and read access (
 
 1. Create an SMB/CIFS file share.
 
-1. Use the following example to create a file share with the following share permissions.
+2. Use the following example to create a file share with the following share permissions.
 
-       ```PowerShell
-    PS c:\> Get-SmbShareAccess -Name mdatp$
+   ```PowerShell
+   
+   PS c:\> Get-SmbShareAccess -Name mdatp$
 
-    Name   ScopeName AccountName AccessControlType AccessRight
-    ----   --------- ----------- ----------------- -----------
-    mdatp$ *         Everyone    Allow             Read
-    ```
+   Name   ScopeName AccountName AccessControlType AccessRight
+   ----   --------- ----------- ----------------- -----------
+   mdatp$ *         Everyone    Allow             Read
+   
+   ```
 
-       > [!NOTE]
-    > An NTFS permission is added for **Authenticated Users:Read:**.
+   > [!NOTE]
+   > An NTFS permission is added for **Authenticated Users:Read:**.
 
-       For this example, the file share is:
-
-   `\\WindowsFileServer.fqdn\mdatp$\wdav-update`
+   For this example, the file share is `\\WindowsFileServer.fqdn\mdatp$\wdav-update`.
    
 ### Set a scheduled task to run the PowerShell script
 
-1. On the management machine, open the Start menu and type **Task Scheduler**. Open it and select **Create task...** on the side panel.
+1. On the management machine, open the Start menu and type `Task Scheduler`. From the reasults, Task Scheduler and then select **Create task...** on the side panel.
 
-2. Enter the name as **Security intelligence unpacker**. Go to the **Trigger** tab. Select **New...** \> **Daily**, and select **OK**.
+2. Specify the name as `Security intelligence unpacker`. 
 
-3. Go to the **Actions** tab. Select **New...** Enter **PowerShell** in the **Program/Script** field. Enter `-ExecutionPolicy Bypass c:\wdav-update\vdmdlunpack.ps1` in the **Add arguments** field. Select **OK**.
+3. On the **Trigger** tab, select **New...** > **Daily**, and select **OK**.
+
+4. On the **Actions** tab, select **New...**.
+
+5. Specify `PowerShell` in the **Program/Script** field. 
+
+In the **Add arguements**  field, type `-ExecutionPolicy Bypass c:\wdav-update\vdmdlunpack.ps1`, and then select **OK**.
 
 4. Configure any other settings as appropriate.
 
