@@ -3,7 +3,7 @@ title: Investigating risks with security explorer/attack paths in Microsoft Defe
 description: Learn about investigating risks with security explorer/attack paths in Microsoft Defender for Cloud.
  attack path.
 ms.topic: conceptual
-ms.date: 05/07/2023
+ms.date: 09/29/2024
 ---
 
 # Investigating risk with security explorer/attack paths
@@ -18,7 +18,7 @@ All of these capabilities are available as part of the [Defender Cloud Security 
 
 ## What is cloud security graph?
 
-The cloud security graph is a graph-based context engine that exists within Defender for Cloud. The cloud security graph collects data from your multicloud environment and other data sources. For example, the cloud assets inventory, connections and lateral movement possibilities between resources, exposure to internet, permissions, network connections, vulnerabilities and more. The data collected is then used to build a graph representing your multicloud environment.
+The cloud security graph is a graph-based context engine that exists within Defender for Cloud. The cloud security graph collects data from your multicloud environment and other data sources. For example, the cloud assets inventory, connections and lateral movement possibilities between resources, exposure to internet, permissions, network connections, vulnerabilities, and more. The data collected is then used to build a graph representing your multicloud environment.
 
 Defender for Cloud then uses the generated graph to perform an attack path analysis and find the issues with the highest risk that exist within your environment. You can also query the graph using the cloud security explorer.  
 
@@ -26,11 +26,13 @@ Defender for Cloud then uses the generated graph to perform an attack path analy
 
 ## What is attack path analysis?
 
-Attack path analysis is a graph-based algorithm that scans the cloud security graph. The scans expose exploitable paths that attackers might use to breach your environment to reach your high-impact assets. Attack path analysis exposes attack paths and suggests recommendations as to how best remediate issues that will break the attack path and prevent successful breach.
+Attack path analysis is a graph-based algorithm that scans the cloud security graph. The scans expose exploitable paths that attackers might use to breach your environment to reach your high-impact assets. Attack path analysis exposes attack paths and suggests recommendations as to how best remediate issues that break the attack path and prevent successful breach.
 
-When you take your environment's contextual information into account, attack path analysis identifies issues that might lead to a breach on your environment, and helps you to remediate the highest risk ones first.  For example its exposure to the internet, permissions, lateral movement, and more.
+When you take your environment's contextual information into account, attack path analysis identifies issues that might lead to a breach on your environment, and helps you to remediate the highest risk ones first. For example its exposure to the internet, permissions, lateral movement, and more.
 
 :::image type="content" source="media/concept-cloud-map/attack-path.png" alt-text="Image that shows a sample attack path from attacker to your sensitive data.":::
+
+Defender for Cloud offers a dynamic attack path analysis that is based on each customers individual cloud security graph. Attack paths are unique for each individual customer and the analysis performed by Defender for Cloud is updated in real-time as new data is collected from your multicloud environments. Unlike other products that offer attack path analysis, Defender for Cloud doesn't rely on static rules or predefined attack paths. Instead, it uses a graph-based algorithm that is unique to each customer's environment to provide the most accurate and up-to-date attack path analysis for each customer's environment.
 
 Learn how to use [attack path analysis](how-to-manage-attack-path.md).
 
