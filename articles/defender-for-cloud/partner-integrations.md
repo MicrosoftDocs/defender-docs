@@ -12,7 +12,7 @@ Microsoft Defender for Cloud is a Cloud Native Application Protection Platform (
 
 There are two types of partner Integration in Defender for Cloud:
 
-- [Obtain external partner data](#Obtain-external-partner-data)
+- [Obtain external partner data](#obtain-external-partner-data)
 - [Share data with external partners](#share-data-with-external-partners)
 
 ## Obtain external partner data
@@ -48,7 +48,7 @@ The following table lists our partners that can receive data from Defender for C
 | Vanta | Vanta is a security and compliance automation platform that helps companies improve and demonstrate their security practices. It automates the process of obtaining and maintaining compliance certifications such as SOC 2, HIPAA, and ISO 27001. | [Partner integration page](https://help.vanta.com/hc/en-us/articles/360050273571-Connecting-Vanta-Azure) |
 | Tenable | Tenable is a cybersecurity company that specializes in vulnerability management and exposure management solutions. It helps organizations identify, assess, and mitigate cyber risks across their entire digital infrastructure. | [Partner integration page](https://www.tenable.com/partners/technology) |
 | TrendMicro | Trend Micro is a cybersecurity company that provides advanced threat protection and security solutions for businesses and consumers. It specializes in cloud and enterprise cybersecurity, offering services like attack surface management, extended detection and response (XDR), and data loss prevention. | [Partner integration page](https://www.trendmicro.com/cloudoneconformity/knowledge-base/azure/SecurityCenter/) |
-| Cavenix | Caveonix is a cybersecurity company that provides an enterprise risk management platform. It automates cybersecurity, compliance, and governance processes, helping organizations manage risks and maintain regulatory compliance efficiently. | [Partner integration page](https://www.caveonix.com/integrations) |
+| Cavenix | Caveonix is a cybersecurity company that provides an enterprise risk management platform. It automates cybersecurity, compliance, and governance processes, helping organizations manage risks and maintain regulatory compliance efficiently. | Partner integration page|
 | Permiso | Permiso is a cybersecurity company that specializes in identity-based cloud detection and response. It helps organizations monitor and secure identities across various environments, detecting suspicious or malicious activities to protect cloud infrastructures. | [Partner integration page](https://permiso.io/integrations) |
 | Kondukto | Kondukto is a cybersecurity company that specializes in application security orchestration and posture management. It provides a platform that integrates security data, automates vulnerability remediation workflows, and helps manage risks with key security performance indicators. | [Partner integration page](https://kondukto.io/integrations?search=defender) |
 | Phoenix Security | Phoenix Security is a cybersecurity company that specializes in risk-based vulnerability management. It provides a platform that helps organizations identify, prioritize, and remediate vulnerabilities to minimize cyberattack risks. | [Partner integration page](https://kb.phoenix.security/?ht_kb=integration-with-azure-defender) |
