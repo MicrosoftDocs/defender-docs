@@ -115,13 +115,13 @@ If you turn on security defaults, you are awarded full points for the following 
 
 <a name='manage-permissions-with-microsoft-365-defender-unified-role-based-access-controlrbac'></a>
 
-### Manage permissions with Microsoft Defender XDR Unified role-based access control(RBAC)
+### Manage permissions with Microsoft Defender XDR Unified role-based access control (RBAC)
 
 With [Microsoft Defender XDR Unified role-based access control(RBAC)](manage-rbac.md), you can create custom roles with specific permissions for Secure Score. These permissions are located under the **Security posture** category in Defender XDR Unified RBAC permissions model and are named **Exposure Management (read)** for read-only access and **Exposure Management (manage)** for users who will have access to manage Secure Score recommendations.
 
 In order for users to access Secure Score data, a custom role in Defender XDR Unified RBAC shall be assigned with the **Microsoft Security Exposure Management** data source.
 
-To start using Microsoft Defender XDR Unified RBAC to manage your Secure Score permissions, see [Microsoft Defender XDR Unified role-based access control(RBAC)](manage-rbac.md).
+To start using Microsoft Defender XDR Unified RBAC to manage your Secure Score permissions, see [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md).
 
 > [!NOTE]
 > Defender XDR Unified RBAC is automatically active for Secure Score access. Once a custom role with one of the permissions is created, it has an immediate impact on assigned users. There is no need to activate it.
