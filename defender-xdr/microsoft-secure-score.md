@@ -17,7 +17,7 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
-ms.date: 06/28/2024
+ms.date: 09/29/2024
 ---
 
 # Microsoft Secure Score
@@ -117,7 +117,7 @@ If you turn on security defaults, you are awarded full points for the following 
 
 ### Manage permissions with Microsoft Defender XDR Unified role-based access control(RBAC)
 
-With [Microsoft Defender XDR Unified role-based access control(RBAC)](manage-rbac.md), you can create custom roles with specific permissions for Secure Score. These permissions are located under the Security posture category in Defender XDR Unified RBAC permissions model and are named **Exposure Management (read)** for read-only access and **Exposure Management (manage)** for users who will have access to manage Secure Score recommendations.
+With [Microsoft Defender XDR Unified role-based access control(RBAC)](manage-rbac.md), you can create custom roles with specific permissions for Secure Score. These permissions are located under the **Security posture** category in Defender XDR Unified RBAC permissions model and are named **Exposure Management (read)** for read-only access and **Exposure Management (manage)** for users who will have access to manage Secure Score recommendations.
 
 In order for users to access Secure Score data, a custom role in Defender XDR Unified RBAC shall be assigned with the **Microsoft Security Exposure Management** data source.
 
