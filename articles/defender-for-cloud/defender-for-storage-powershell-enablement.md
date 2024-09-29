@@ -41,14 +41,14 @@ Set-AzSecurityPricing -Name "StorageAccounts" -PricingTier "Standard" -SubPlan "
     {
         "name": "SensitiveDataDiscovery",
         "isEnabled": "True"
-    }]
+    }]'
 ```
 
 If no extension properties are provided for the cmdlet, both malware scanning and sensitive data discovery are enabled by default. The default monthly threshold per storage account for malware scanning is 5,000 GB.
 
 To modify the monthly threshold for on-upload malware scanning in your storage accounts, adjust the `CapGBPerMonthPerStorageAccount` property to your preferred value. This parameter sets a cap on the maximum data that can be scanned for malware each month, per storage account. If you want to permit unlimited scanning, assign the value -1. The default limit is set at 5,000 GB.
 
-If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to `"False"` on the `OnUploadMalwareScanning` or `SensitiveDataDiscovery` extension properties respectively. To disable the entire Defender plan, set the `-PricingTier` property value to `Free` and remove the `-SubPlan` and extension properties.
+If you want to turn off the on-upload malware scanning or sensitive data threat detection features, you can change the `isEnabled` value to `False` on the `OnUploadMalwareScanning` or `SensitiveDataDiscovery` extension properties respectively. To disable the entire Defender plan, set the `-PricingTier` property value to `Free` and remove the `-SubPlan` and extension properties.
 
 > [!TIP]
 > You can use the [GetAzSecurityPricing](/powershell/module/az.security/get-azsecuritypricing) cmdlet to see all of the Defender for Cloud plans that are enabled for the subscription.
@@ -70,9 +70,9 @@ To modify the monthly threshold for malware scanning the storage account, adjust
 
 The malware scan results can be sent to the Event Grid by supplying the Event Grid topic resource ID in the parameter  `-MalwareScanningScanResultsEventGridTopicResourceId "<resourceId>"`.
 
-If you want to turn off the on-upload malware scanning or sensitive data threat detection features for the storage account, set `-OnUpoadIsEnabled:$false` or `-SensitiveDataDiscoveryIsEnabled:$false` respectively.
+If you want to turn off the on-upload malware scanning or sensitive data threat detection features for the storage account, set `-OnUploadIsEnabled:$false` or `-SensitiveDataDiscoveryIsEnabled:$false` respectively.
 
-To disable the entire Defender plan for the storage account, set `IsEnabled:$false`, `-OnUpoadIsEnabled:$false`, and `-SensitiveDataDiscoveryIsEnabled:$false`.
+To disable the entire Defender plan for the storage account, set `IsEnabled:$false`, `-OnUploadIsEnabled:$false`, and `-SensitiveDataDiscoveryIsEnabled:$false`.
 
 > [!TIP]
 > You can use the [Get-AzSecurityDefenderForStorage](/powershell/module/az.security/get-azsecuritydefenderforstorage) cmdlet to see the Defender for Storage settings for a storage account.
