@@ -2,7 +2,7 @@
 title: Overview of partner Integration
 description: Learn about The different partners that integrate with Defender for Cloud to enhance your security posture and protect your Azure resources.
 ms.topic: concept-article
-ms.date: 09/19/2024
+ms.date: 09/29/2024
 #customer intent: As a reader, I want to learn what partner solutions integrate with Defender for Cloud.
 ---
 
@@ -12,12 +12,12 @@ Microsoft Defender for Cloud is a Cloud Native Application Protection Platform (
 
 There are two types of partner Integration in Defender for Cloud:
 
-- [Provide insights](#provide-insights)
-- [Receive insights](#receive-insights)
+- [Obtain external partner data](#Obtain-external-partner-data)
+- [Share data with external partners](#share-data-with-external-partners)
 
-## Provide insights
+## Obtain external partner data
 
-The following table lists the partner solutions that provide insights to Defender for Cloud. These solutions help you to gain more visibility into your cloud resources and enhance your security posture.
+The following table lists the partner solutions that provide data to Defender for Cloud. These solutions help you to gain more visibility into your cloud resources and enhance your security posture.
 
 | Partner name | Description | Documentation |
 |--|--|--|
@@ -28,9 +28,9 @@ The following table lists the partner solutions that provide insights to Defende
 | Rapid7 | Rapid7 is a cybersecurity company that provides security data and analytics solutions. It helps organizations manage vulnerabilities, detect threats, and respond to incidents in real-time, enhancing their overall security posture. | [Integrate partner solutions](partner-integration.md) |
 | Qualys | Qualys is a cybersecurity company that provides cloud-based security and compliance solutions. It helps organizations identify and manage security risks, ensuring continuous protection and compliance across their IT environments. | [Integrate partner solutions](partner-integration.md) |
 
-## Receive insights
+## Share data with external partners
 
-The following table lists the partner solutions that receive insights from Defender for Cloud. These solutions help you to streamline security operations, automate remediation workflows, and manage cyber risks more effectively.
+The following table lists our partners that can receive data from Defender for Cloud. These solutions help you to provide insights from Defender for Cloud to other security solutions.
 
 | Partner name | Description | Partner integration documentation |
 |--|--|--|
