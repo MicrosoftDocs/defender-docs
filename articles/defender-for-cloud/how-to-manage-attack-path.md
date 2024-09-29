@@ -4,13 +4,13 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to identify and remediate attack paths in Microsoft Defender for Cloud and enhance the security of your environment.
 ms.topic: how-to
-ms.date: 06/05/2024
+ms.date: 09/29/2024
 #customer intent: As a security analyst, I want to learn how to identify and remediate attack paths in Microsoft Defender for Cloud so that I can enhance the security of my environment.
 ---
 
 # Identify and remediate attack paths
 
-Defender for Cloud's contextual security capabilities assists security teams in the reduction of the risk of impactful breaches. Defender for Cloud uses environment context to perform a risk assessment of your security issues. Defender for Cloud identifies the biggest security risk issues, while distinguishing them from less risky issues.
+Defender for Cloud's contextual security capabilities assists security teams in the reduction of the risk of impactful breaches. Defender for Cloud doesn't rely on set attack paths and instead uses a dynamic algorithm to find unique attack paths specific to every customer's multicloud environment. Based on each customers environmental context, Defender for Cloud performs a risk assessment of that environment's security issues. Defender for Cloud identifies the biggest security risk issues, while distinguishing them from less risky issues.
 
 Attack path analysis helps you to address the security issues that pose immediate threats with the greatest potential of being exploited in your environment. Defender for Cloud analyzes which security issues are part of potential attack paths that attackers could use to breach your environment. It also highlights the security recommendations that need to be resolved in order to mitigate it.
 
