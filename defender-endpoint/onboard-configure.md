@@ -13,7 +13,7 @@ ms.collection:
 ms.topic: conceptual
 ms.subservice: onboard
 search.appverid: met150
-ms.date: 03/28/2024
+ms.date: 09/30/2024
 ---
 
 # Configure Microsoft Defender for Endpoint capabilities
