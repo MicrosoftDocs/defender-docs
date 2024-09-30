@@ -844,53 +844,53 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
     :::image type="content" source="media/9d6e5386e652e00715ff348af72671c6.png" alt-text="The save option for the configuration settings." lightbox="media/9d6e5386e652e00715ff348af72671c6.png":::
 
-1. Create a smart group for machines with Microsoft Defender profiles.
+### Create a smart group for machines with Microsoft Defender profiles.
 
-   For a better user experience, configuration profiles to enrolled machines must be installed before Microsoft Defender's package. In most cases JamF Pro pushes configuration profiles immediately, and those policies are executed after some time (that is, during check-in). However, in some cases, configuration profiles deployment can be deployed with a significant delay (that is, if a user's machine is locked).
+For a better user experience, configuration profiles to enrolled machines must be installed before Microsoft Defender's package. In most cases JamF Pro pushes configuration profiles immediately, and those policies are executed after some time (that is, during check-in). However, in some cases, configuration profiles deployment can be deployed with a significant delay (that is, if a user's machine is locked).
    
-   Jamf Pro provides a way to ensure the correct order. You can create a smart group for machines that already received Microsoft Defender's configuration profile, and install Microsoft Defender's package only to those machines (and as soon as they receive this profile).
+Jamf Pro provides a way to ensure the correct order. You can create a smart group for machines that already received Microsoft Defender's configuration profile, and install Microsoft Defender's package only to those machines (and as soon as they receive this profile).
    
-       Follow these steps:
+Follow these steps:
 
-   1. Create a smart group. In a new browser window, open **Smart Computers Groups**. 
+1. Create a smart group. In a new browser window, open **Smart Computers Groups**. 
     
-    2. Select **New**, and give your group a name.
+2. Select **New**, and give your group a name.
 
-    3. On the **Criteria** tab, select **Add**, and then select **Show Advanced Criteria**.
+3. On the **Criteria** tab, select **Add**, and then select **Show Advanced Criteria**.
 
-    4. Select **Profile Name** as a criterion, and use the name of a previously created configuration profile as the value:
+4. Select **Profile Name** as a criterion, and use the name of a previously created configuration profile as the value:
 
-       :::image type="content" source="media/ffae2332be230870f865585c84733225.png" alt-text="Creating a smart group." lightbox="media/ffae2332be230870f865585c84733225.png":::
+   :::image type="content" source="media/ffae2332be230870f865585c84733225.png" alt-text="Creating a smart group." lightbox="media/ffae2332be230870f865585c84733225.png":::
 
-    5. Select **Save**. 
+5. Select **Save**. 
     
-    6. Go back to the window where you configure a package policy.
+6. Go back to the window where you configure a package policy.
 
-18. Select the **Scope** tab.
+7. Select the **Scope** tab.
 
-    :::image type="content" source="media/8d80fe378a31143db9be0bacf7ddc5a3.png" alt-text="The Scope tab related to the configuration settings." lightbox="media/8d80fe378a31143db9be0bacf7ddc5a3.png":::
+   :::image type="content" source="media/8d80fe378a31143db9be0bacf7ddc5a3.png" alt-text="The Scope tab related to the configuration settings." lightbox="media/8d80fe378a31143db9be0bacf7ddc5a3.png":::
 
-19. Select the target computers.
+8. Select the target computers.
 
-    :::image type="content" source="media/6eda18a64a660fa149575454e54e7156.png" alt-text="The option to add computer groups." lightbox="media/6eda18a64a660fa149575454e54e7156.png":::
+   :::image type="content" source="media/6eda18a64a660fa149575454e54e7156.png" alt-text="The option to add computer groups." lightbox="media/6eda18a64a660fa149575454e54e7156.png":::
 
-    Under **Scope**, select **Add**. 
+9. Under **Scope**, select **Add**. 
 
-    :::image type="content" source="media/1c08d097829863778d562c10c5f92b67.png" alt-text="The configuration settings - ad1." lightbox="media/1c08d097829863778d562c10c5f92b67.png":::
+   :::image type="content" source="media/1c08d097829863778d562c10c5f92b67.png" alt-text="The configuration settings - ad1." lightbox="media/1c08d097829863778d562c10c5f92b67.png":::
 
-    Switch to the **Computer Groups** tab. Find the smart group you created, and then select **Add**.
+10. Switch to the **Computer Groups** tab. Find the smart group you created, and then select **Add**.
 
-    :::image type="content" source="media/216253cbfb6ae738b9f13496b9c799fd.png" alt-text="The configuration settings - ad2." lightbox="media/216253cbfb6ae738b9f13496b9c799fd.png":::
+   :::image type="content" source="media/216253cbfb6ae738b9f13496b9c799fd.png" alt-text="The configuration settings - ad2." lightbox="media/216253cbfb6ae738b9f13496b9c799fd.png":::
 
-    If you want users to install Defender for Endpoint voluntarily (or on demand), select **Self-Service**.
+11. If you want users to install Defender for Endpoint voluntarily (or on demand), select **Self-Service**.
 
     :::image type="content" source="media/c9f85bba3e96d627fe00fc5a8363b83a.png" alt-text="The Self Service tab for configuration settings." lightbox="media/c9f85bba3e96d627fe00fc5a8363b83a.png":::
 
-20. Select **Done**.
+12. Select **Done**.
 
-    :::image type="content" source="media/99679a7835b0d27d0a222bc3fdaf7f3b.png" alt-text="The Contoso onboarding status with an option to complete it." lightbox="media/99679a7835b0d27d0a222bc3fdaf7f3b.png":::
+   :::image type="content" source="media/99679a7835b0d27d0a222bc3fdaf7f3b.png" alt-text="The Contoso onboarding status with an option to complete it." lightbox="media/99679a7835b0d27d0a222bc3fdaf7f3b.png":::
 
-    :::image type="content" source="media/632aaab79ae18d0d2b8e0c16b6ba39e2.png" alt-text="The policies page." lightbox="media/632aaab79ae18d0d2b8e0c16b6ba39e2.png":::
+   :::image type="content" source="media/632aaab79ae18d0d2b8e0c16b6ba39e2.png" alt-text="The policies page." lightbox="media/632aaab79ae18d0d2b8e0c16b6ba39e2.png":::
 
 ## Configuration profile scope
 
