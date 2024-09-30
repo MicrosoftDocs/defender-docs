@@ -4,15 +4,15 @@ author: Elazark
 ms.author: elkrieger
 description: Learn how to identify and remediate attack paths in Microsoft Defender for Cloud and enhance the security of your environment.
 ms.topic: how-to
-ms.date: 09/29/2024
+ms.date: 09/30/2024
 #customer intent: As a security analyst, I want to learn how to identify and remediate attack paths in Microsoft Defender for Cloud so that I can enhance the security of my environment.
 ---
 
 # Identify and remediate attack paths
 
-Defender for Cloud's contextual security capabilities assists security teams in the reduction of the risk of impactful breaches. Defender for Cloud doesn't rely on set attack paths and instead uses a dynamic algorithm to find unique attack paths specific to every customer's multicloud environment. Based on each customers environmental context, Defender for Cloud performs a risk assessment of that environment's security issues. Defender for Cloud identifies the biggest security risk issues, while distinguishing them from less risky issues.
+Defender for Cloud's dynamic approach to attack paths allows security teams to search for environment specific attack paths. Defender for Cloud doesn't search for specific preset attack paths, instead, a dynamic algorithmic method is used to detect potential attack paths based on each customers multicloud environmental context. This allows security teams to focus on the most impactful security issues that could lead to a breach.
 
-Attack path analysis helps you to address the security issues that pose immediate threats with the greatest potential of being exploited in your environment. Defender for Cloud analyzes which security issues are part of potential attack paths that attackers could use to breach your environment. It also highlights the security recommendations that need to be resolved in order to mitigate it.
+The attack path analysis can be used to address security issues that pose immediate threats with the greatest potential of being exploited in your environment. Defender for Cloud analyzes which security issues are part of potential attack paths that attackers could use to breach your environment. It also highlights the security recommendations that need to be resolved in order to mitigate it.
 
 By default attack paths are organized by their risk level. The risk level is determined by a context-aware risk-prioritization engine that considers the risk factors of each resource. Learn more about how Defender for Cloud [prioritizes security recommendations](risk-prioritization.md).
 
