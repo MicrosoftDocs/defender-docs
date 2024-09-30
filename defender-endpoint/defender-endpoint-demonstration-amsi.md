@@ -6,7 +6,7 @@ ms.author: deniseb
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: how-to
-ms.date: 09/27/2024
+ms.date: 09/30/2024
 ms.subservice: ngp
 ---
 
@@ -178,47 +178,43 @@ Affected items:
 
 ##### Via the Event log
 
- 
+1. Go to **Start**, and search for `EventVwr.msc`. Open Event Viewer in the list of results.
 
- 
+2. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Windows Defender operational events**.
 
-Start, EventVwr.msc
+3. Look for `event ID 1116`. You should see the following information:
 
-Applications and Services Logs -> Microsoft -> Windows -> Windows Defender operational events 
+   ```console
 
-Filter by event ID 1116 
+   Microsoft Defender Antivirus has detected malware or other potentially unwanted software.
 
-You should be able to see:
+    For more information please see the following: https://go.microsoft.com/fwlink/?linkid=37020&name=Virus:Win32/MpTest!amsi&threatid=2147694217&enterprise=0
 
-Microsoft Defender Antivirus has detected malware or other potentially unwanted software.
+   Name: Virus:Win32/MpTest!amsi
 
- For more information please see the following:
+   ID: 2147694217
 
-https://go.microsoft.com/fwlink/?linkid=37020&name=Virus:Win32/MpTest!amsi&threatid=2147694217&enterprise=0
+   Severity: Severe
 
-     Name: Virus:Win32/MpTest!amsi
+   Category: Virus
 
-     ID: 2147694217
+   Path: _\Device\HarddiskVolume3\Windows\System32\WindowsPowerShell\v1.0\powershell.exe or _C:\Users\Admin\Desktop\AMSI_jscript.js;   file: _C:\Users\Admin\Desktop\AMSI_jscript.js->[Eval] or _C:\Users\Admin\Desktop\AMSI_vbscript.vbs
 
-     Severity: Severe
+   Detection Origin: Local machine or Unknown
 
-     Category: Virus
+   Detection Type: Concrete
 
-     Path: _\Device\HarddiskVolume3\Windows\System32\WindowsPowerShell\v1.0\powershell.exe or _C:\Users\Admin\Desktop\AMSI_jscript.js;   file:_C:\Users\Admin\Desktop\AMSI_jscript.js->[Eval] or _C:\Users\Admin\Desktop\AMSI_vbscript.vbs
+   Detection Source: System
 
-     Detection Origin: Local machine or Unknown
+   User: NT AUTHORITY\SYSTEM
 
-     Detection Type: Concrete
+   Process Name: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe or C:\Windows\System32\cscript.exe or C:\Windows\System32\wscript.exe or Unknown 
 
-     Detection Source: System
+   Security intelligence Version: AV: 1.419.221.0, AS: 1.419.221.0, NIS: 1.419.221.0
 
-     User: NT AUTHORITY\SYSTEM
+   Engine Version: AM: 1.1.24080.9, NIS: 1.1.24080.9
 
-     Process Name: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exeor C:\Windows\System32\cscript.exe or C:\Windows\System32\wscript.exe or Unknown 
-
-     Security intelligence Version: AV: 1.419.221.0, AS: 1.419.221.0, NIS: 1.419.221.0
-
-     Engine Version: AM: 1.1.24080.9, NIS: 1.1.24080.9
+   ```
 
 ##### Via Powershell
 
