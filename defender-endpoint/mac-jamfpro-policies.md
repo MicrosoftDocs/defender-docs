@@ -17,7 +17,7 @@ search.appverid: met150
 ms.date: 08/26/2024
 ---
 
-# Set up the Microsoft Defender for Endpoint on macOS policies in Jamf Pro
+# Set up the Microsoft Defender for Endpoint on macOS policies in JamF Pro
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
@@ -44,17 +44,17 @@ Use this article to set up policies for Defender for Endpoint on Mac using Jamf 
 
 4. Extract `WindowsDefenderATPOnboardingPackage.zip`.
 
-5. Copy the file to your preferred location. For example, `C:\Users\JaneDoe_or_JohnDoe.contoso\Downloads\WindowsDefenderATPOnboardingPackage_macOS_MDM_contoso\jamf\WindowsDefenderATPOnboarding.plist`.
+1. Copy the file to your preferred location. For example, `C:\Users\JaneDoe_or_JohnDoe.contoso\Downloads\WindowsDefenderATPOnboardingPackage_macOS_MDM_contoso\JamF\WindowsDefenderATPOnboarding.plist`.
 
-## Step 2: Create a configuration profile in Jamf Pro using the onboarding package
+## Step 2: Create a configuration profile in JamF Pro using the onboarding package
 
 1. Locate the file `WindowsDefenderATPOnboarding.plist` from the previous section.
 
    :::image type="content" source="media/plist-onboarding-file.png" alt-text="The  Windows Defender ATP Onboarding file." lightbox="media/plist-onboarding-file.png":::
 
-2. Sign in to Jamf Pro, navigate to **Computers** > **Configuration Profiles**, and select **New**.
+1. Sign in to JamF Pro, navigate to **Computers** > **Configuration Profiles**, and select **New**.
 
-   :::image type="content" source="media/jamf-pro-configure-profile.png" alt-text="The page on which you create a new Jamf Pro dashboard." lightbox="media/jamf-pro-configure-profile.png":::
+      :::image type="content" source="media/jamf-pro-configure-profile.png" alt-text="The page on which you create a new Jamf Pro dashboard." lightbox="media/jamf-pro-configure-profile.png":::
 
 3. On the **General** tab, specify the following details:
    
@@ -133,7 +133,7 @@ For more information about managing security settings, see the following article
 
 ### 3b. Set policies using JamF
 
-You can either use JAMF Pro GUI to edit individual settings of the Microsoft Defender for Endpoint configuration, or use the legacy method by creating a configuration Plist in a text editor, and uploading it to JAMF Pro.
+You can either use JamF Pro GUI to edit individual settings of the Microsoft Defender for Endpoint configuration, or use the legacy method by creating a configuration Plist in a text editor, and uploading it to JamF Pro.
 
 Note that you must use exact `com.microsoft.wdav` as the **Preference Domain**; Microsoft Defender for Endpoint uses only this name and `com.microsoft.wdav.ext` to load its managed settings.
 
@@ -195,33 +195,33 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 1. Use the following Microsoft Defender for Endpoint configuration settings:
 
-    - `enableRealTimeProtection`
-    - `passiveMode`
+- `enableRealTimeProtection`
+ - `passiveMode`
 
-      > [!NOTE]
-      > Not turned on by default, if you are planning to run a third-party antivirus for macOS, set it to `true`.
+   > [!NOTE]
+   > Not turned on by default, if you are planning to run a third-party antivirus for macOS, set it to `true`.
 
-    - `exclusions`
-    - `excludedPath`
-    - `excludedFileExtension`
-    - `excludedFileName`
-    - `exclusionsMergePolicy`
-    - `allowedThreats`
+ - `exclusions`
+ - `excludedPath`
+ - `excludedFileExtension`
+ - `excludedFileName`
+ - `exclusionsMergePolicy`
+ - `allowedThreats`
 
-      > [!NOTE]
-      > EICAR is on the sample, if you are going through a proof-of-concept, remove it especially if you are testing EICAR.
+   > [!NOTE]
+   > EICAR is on the sample, if you are going through a proof-of-concept, remove it especially if you are testing EICAR.
 
-    - `disallowedThreatActions`
-    - `potentially_unwanted_application`
-    - `archive_bomb`
-    - `cloudService`
-    - `automaticSampleSubmission`
-    - `tags`
-    - `hideStatusMenuIcon`
+ - `disallowedThreatActions`
+ - `potentially_unwanted_application`
+ - `archive_bomb`
+ - `cloudService`
+ - `automaticSampleSubmission`
+ - `tags`
+ - `hideStatusMenuIcon`
 
-     For information, see [Property list for JAMF full configuration profile](mac-preferences.md#property-list-for-jamf-full-configuration-profile).
-
-     ```XML
+     For information, see [Property list for JamF full configuration profile](mac-preferences.md#property-list-for-jamf-full-configuration-profile).
+   
+        ```XML
      <?xml version="1.0" encoding="UTF-8"?>
      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
      <plist version="1.0">
@@ -324,9 +324,9 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 2. Save the file as `MDATP_MDAV_configuration_settings.plist`.
 
-3. In the Jamf Pro dashboard, open **Computers**, and their **Configuration Profiles**. Select **New** and switch to the **General** tab.
+1. In the JamF Pro dashboard, open **Computers**, and their **Configuration Profiles**. Select **New** and switch to the **General** tab.
 
-   :::image type="content" source="media/644e0f3af40c29e80ca1443535b2fe32.png" alt-text="The page displaying a new profile." lightbox="media/644e0f3af40c29e80ca1443535b2fe32.png":::
+      :::image type="content" source="media/644e0f3af40c29e80ca1443535b2fe32.png" alt-text="The page displaying a new profile." lightbox="media/644e0f3af40c29e80ca1443535b2fe32.png":::
 
 4. On the **General** tab, specify the following details:
 
@@ -398,9 +398,8 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 ## Step 4: Configure notifications settings
 
 > [!NOTE]
-> These steps are applicable on macOS 11 (Big Sur) or later. Even though Jamf supports notifications on macOS version 10.15 or later, Defender for Endpoint on Mac requires macOS 11 or later.
-
-1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
+> These steps are applicable on macOS 11 (Big Sur) or later. Even though JamF supports notifications on macOS version 10.15 or later, Defender for Endpoint on Mac requires macOS 11 or later.
+1. In the JamF Pro dashboard, select **Computers**, then **Configuration Profiles**.
 
 2. Select **New**, and then, on the **General** tab, for **Options**, specify the following details:
 
@@ -472,9 +471,9 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 2. Save it as `MDATP_MDAV_MAU_settings.plist`.
 
-3. In the Jamf Pro dashboard, select **General**.
+1. In the JamF Pro dashboard, select **General**.
 
-   :::image type="content" source="media/eaba2a23dd34f73bf59e826217ba6f15.png" alt-text="The configuration settings." lightbox="media/eaba2a23dd34f73bf59e826217ba6f15.png":::
+      :::image type="content" source="media/eaba2a23dd34f73bf59e826217ba6f15.png" alt-text="The configuration settings." lightbox="media/eaba2a23dd34f73bf59e826217ba6f15.png":::
 
 4. On the **General** tab, specify the following details:
 
@@ -529,9 +528,9 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 ## Step 6: Grant full disk access to Microsoft Defender for Endpoint
 
-1. In the Jamf Pro dashboard, select **Configuration Profiles**.
+1. In the JamF Pro dashboard, select **Configuration Profiles**.
 
-   :::image type="content" source="media/264493cd01e62c7085659d6fdc26dc91.png" alt-text="The profile for which settings are to be configured." lightbox="media/264493cd01e62c7085659d6fdc26dc91.png":::
+      :::image type="content" source="media/264493cd01e62c7085659d6fdc26dc91.png" alt-text="The profile for which settings are to be configured." lightbox="media/264493cd01e62c7085659d6fdc26dc91.png":::
 
 2. Select **+ New**.
 
@@ -612,7 +611,7 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
     :::image type="content" source="media/6c8b406ee224335a8c65d06953dc756e.png" alt-text="The configuration setting illustration." lightbox="media/6c8b406ee224335a8c65d06953dc756e.png":::
 
-Alternatively, you can download [fulldisk.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) and upload it to JAMF Configuration Profiles as described in [Deploying Custom Configuration Profiles using Jamf Pro|Method 2: Upload a Configuration Profile to Jamf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
+Alternatively, you can download [fulldisk.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/fulldisk.mobileconfig) and upload it to JamF Configuration Profiles as described in [Deploying Custom Configuration Profiles using Jamf Pro|Method 2: Upload a Configuration Profile to JamF Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
 
 > [!NOTE]
 > Full Disk Access granted through Apple MDM Configuration Profile is not reflected in System Settings => Privacy & Security => Full Disk Access.
@@ -673,9 +672,8 @@ Alternatively, you can download [fulldisk.mobileconfig](https://github.com/micro
 As part of the Endpoint Detection and Response capabilities, Microsoft Defender for Endpoint on macOS inspects socket traffic and reports this information to the Microsoft Defender portal.
 
 > [!NOTE]
-> These steps are applicable on macOS 11 (Big Sur) or later. Even though Jamf supports notifications on macOS version 10.15 or later, Defender for Endpoint on Mac requires macOS 11 or later.
-
-1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
+> These steps are applicable on macOS 11 (Big Sur) or later. Even though JamF supports notifications on macOS version 10.15 or later, Defender for Endpoint on Mac requires macOS 11 or later.
+1. In the JamF Pro dashboard, select **Computers**, then **Configuration Profiles**.
 
 2. Select **New**, and enter the following details for **Options**:
 
@@ -719,18 +717,16 @@ As part of the Endpoint Detection and Response capabilities, Microsoft Defender 
 
    :::image type="content" source="media/netext-final.png" alt-text="The configuration settings netext - final." lightbox="media/netext-final.png":::
 
-Alternatively, you can download [netfilter.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/netfilter.mobileconfig) and upload it to JAMF Configuration Profiles as described in [Deploying Custom Configuration Profiles using Jamf Pro|Method 2: Upload a Configuration Profile to Jamf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
+Alternatively, you can download [netfilter.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/netfilter.mobileconfig) and upload it to JamF Configuration Profiles as described in [Deploying Custom Configuration Profiles using JamF Pro|](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro)
 
 ## Step 9: Configure Background Services
 
 > [!CAUTION]
 > macOS 13 (Ventura) contains new privacy enhancements. Beginning with this version, by default, applications cannot run in background without explicit consent. Microsoft Defender for Endpoint must run its daemon process in background.
->
-> This configuration profile grants Background Service permissions to Microsoft Defender for Endpoint. If you previously configured Microsoft Defender for Endpoint through JAMF, we recommend you update the deployment with this configuration profile.
-
+> > This configuration profile grants Background Service permissions to Microsoft Defender for Endpoint. If you previously configured Microsoft Defender for Endpoint through JamF, we recommend you update the deployment with this configuration profile.
 Download [**background_services.mobileconfig**](https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/mobileconfig/profiles/background_services.mobileconfig) from [our GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
-Upload downloaded mobileconfig to JAMF Configuration Profiles as described in [Deploying Custom Configuration Profiles using Jamf Pro|Method 2: Upload a Configuration Profile to Jamf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
+Upload downloaded mobileconfig to JamF Configuration Profiles as described in [Deploying Custom Configuration Profiles using JamF Pro|Method 2: Upload a Configuration Profile to JamF Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
 
 ## Step 10: Grant Bluetooth Permissions
 
@@ -740,10 +736,9 @@ Upload downloaded mobileconfig to JAMF Configuration Profiles as described in [D
 Download [bluetooth.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/master/macos/mobileconfig/profiles/bluetooth.mobileconfig) from [GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/mobileconfig/profiles).
 
 > [!WARNING]
-> Current version of JAMF Pro does not support this kind of payload yet. If you upload this mobileconfig as-is, JAMF Pro will remove unsupported payload,
-> and it will fail to apply to client machines. You need to sign downloaded mobileconfig first, after that JAMF Pro will consider it "sealed" and will not 
+> Current version of JamF Pro does not support this kind of payload yet. If you upload this mobileconfig as-is, JamF Pro will remove unsupported payload,
+> and it will fail to apply to client machines. You need to sign downloaded mobileconfig first, after that JamF Pro will consider it "sealed" and will not 
 > tamper with it. See instructions below:
-
 - You need to have at least one signing certificate installed into your KeyChain, even a self-signed certificate works. You can inspect what you have with:
 
   ```bash
@@ -762,9 +757,9 @@ Download [bluetooth.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/
   /usr/bin/security cms -S -N "DevCert" -i bluetooth.mobileconfig -o bluetooth-signed.mobileconfig
   ```
 
-- Now you can upload the generated bluetooth-signed.mobileconfig to JAMF Pro as described in [Deploying Custom Configuration Profiles using Jamf Pro|Method 2: Upload a Configuration Profile to Jamf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
+- Now you can upload the generated bluetooth-signed.mobileconfig to JamF Pro as described in [Deploying Custom Configuration Profiles using JamF Pro|Method 2: Upload a Configuration Profile to JamF Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
 
-  > [!NOTE]
+    > [!NOTE]
   > Bluetooth granted through Apple MDM Configuration Profile is not reflected in System Settings => Privacy & Security => Bluetooth.
 
 ## Step 11: Schedule scans with Microsoft Defender for Endpoint on macOS
@@ -786,9 +781,9 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
    :::image type="content" source="media/fb2220fed3a530f4b3ef36f600da0c27.png" alt-text="The file explorer1 wdavmdm package." lightbox="media/fb2220fed3a530f4b3ef36f600da0c27.png":::
 
-3. Open the Jamf Pro dashboard.
+1. Open the JamF Pro dashboard.
 
-   :::image type="content" source="media/990742cd9a15ca9fdd37c9f695d1b9f4.png" alt-text="The configuration settings for jamfpro." lightbox="media/990742cd9a15ca9fdd37c9f695d1b9f4.png":::
+      :::image type="content" source="media/990742cd9a15ca9fdd37c9f695d1b9f4.png" alt-text="The configuration settings for jamfpro." lightbox="media/990742cd9a15ca9fdd37c9f695d1b9f4.png":::
 
 4. Select your computer and select the gear icon at the top, and then select **Computer Management**.
 
@@ -818,13 +813,13 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
    :::image type="content" source="media/56dac54634d13b2d3948ab50e8d3ef21.png" alt-text="The limitation tab for the configuration settings." lightbox="media/56dac54634d13b2d3948ab50e8d3ef21.png":::
 
-8. Select **Save**. The package is uploaded to Jamf Pro.
+1. Select **Save**. The package is uploaded to JamF Pro.
 
-   :::image type="content" source="media/33f1ecdc7d4872555418bbc3efe4b7a3.png" alt-text="The configuration settings pack uploading process for the package related to the configuration settings." lightbox="media/33f1ecdc7d4872555418bbc3efe4b7a3.png":::
+      :::image type="content" source="media/33f1ecdc7d4872555418bbc3efe4b7a3.png" alt-text="The configuration settings pack uploading process for the package related to the configuration settings." lightbox="media/33f1ecdc7d4872555418bbc3efe4b7a3.png":::
 
-   It can take a few minutes for the package to be available for deployment.
+      It can take a few minutes for the package to be available for deployment.
 
-   :::image type="content" source="media/1626d138e6309c6e87bfaab64f5ccf7b.png" alt-text="An instance of uploading the package for configuration settings." lightbox="media/1626d138e6309c6e87bfaab64f5ccf7b.png":::
+      :::image type="content" source="media/1626d138e6309c6e87bfaab64f5ccf7b.png" alt-text="An instance of uploading the package for configuration settings." lightbox="media/1626d138e6309c6e87bfaab64f5ccf7b.png":::
 
 9. Navigate to the **Policies** page.
 
@@ -856,15 +851,15 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
     :::image type="content" source="media/9d6e5386e652e00715ff348af72671c6.png" alt-text="The save option for the configuration settings." lightbox="media/9d6e5386e652e00715ff348af72671c6.png":::
 
-17. Create a smart group for machines with Microsoft Defender profiles.
+1. Create a smart group for machines with Microsoft Defender profiles.
 
-    For a better user experience, configuration profiles to enrolled machines must be installed before Microsoft Defender's package. In most cases JAMF Pro pushes configuration profiles immediately, and those policies are executed after some time (that is, during check-in). However, in some cases, configuration profiles deployment can be deployed with a significant delay (that is, if a user's machine is locked).
+   For a better user experience, configuration profiles to enrolled machines must be installed before Microsoft Defender's package. In most cases JamF Pro pushes configuration profiles immediately, and those policies are executed after some time (that is, during check-in). However, in some cases, configuration profiles deployment can be deployed with a significant delay (that is, if a user's machine is locked).
+   
+   JamF Pro provides a way to ensure the correct order. You can create a smart group for machines that already received Microsoft Defender's configuration profile, and install Microsoft Defender's package only to those machines (and as soon as they receive this profile).
+   
+       Follow these steps:
 
-    JAMF Pro provides a way to ensure the correct order. You can create a smart group for machines that already received Microsoft Defender's configuration profile, and install Microsoft Defender's package only to those machines (and as soon as they receive this profile).
-
-    Follow these steps:
-
-    1. Create a smart group. In a new browser window, open **Smart Computers Groups**. 
+   1. Create a smart group. In a new browser window, open **Smart Computers Groups**. 
     
     2. Select **New**, and give your group a name.
 
@@ -906,7 +901,7 @@ Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint 
 
 ## Configuration profile scope
 
-JAMF requires you to define a set of machines for a configuration profile. You need to make sure that all machines receiving Defender's package, also receive *all* configuration profiles listed above.
+JamF requires you to define a set of machines for a configuration profile. You need to make sure that all machines receiving Defender's package, also receive *all* configuration profiles listed above.
 
 > [!WARNING]
 > JAMF supports Smart Computer Groups that allow deploying, such as configuration profiles or policies to all machines matching certain criteria evaluated dynamically.
@@ -916,8 +911,6 @@ JAMF requires you to define a set of machines for a configuration profile. You n
 > While using this criterion may sound logical, it creates problems that are difficult to diagnose.
 >
 > Defender relies on all these profiles at the moment of its installation.
-> Making configuration profiles depending on Defender's presence effectively delays deployment of configuration profiles, and results in an initially unhealthy product and/or prompts for manual approval of certain application permissions, that are otherwise auto approved by profiles.
-
-Deploying a policy with Microsoft Defender's package *after* deploying configuration profiles ensures the end user's best experience, because all required configurations will be applied before the package installs.
+> Making configuration profiles depending on Defender's presence effectively delays deployment of configuration profiles, and results in an initially unhealthy product and/or prompts for manual approval of certain application permissions, that are otherwise auto approved by profiles.Deploying a policy with Microsoft Defender's package *after* deploying configuration profiles ensures the end user's best experience, because all required configurations will be applied before the package installs.
 
 [!INCLUDE [Microsoft Defender for Endpoint Tech Community](../includes/defender-mde-techcommunity.md)]
