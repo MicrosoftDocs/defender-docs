@@ -240,6 +240,8 @@
              href: tenant-allow-block-list-files-configure.md
            - name: Allow or block URLs using the Tenant Allow/Block List
              href: tenant-allow-block-list-urls-configure.md
+           - name: Allow or block IP addresses using the Tenant Allow/Block List
+             href: tenant-allow-block-list-ip-addresses-configure.md
          - name: Admin submissions
            href: submissions-admin.md
          - name: Create block sender lists
