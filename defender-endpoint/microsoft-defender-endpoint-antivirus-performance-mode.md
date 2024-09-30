@@ -46,12 +46,11 @@ It's important to note that performance mode can run only on Dev Drive. Addition
 
 1. Make sure Microsoft Defender Antivirus is up to date. 
 
-  - Microsoft Defender Antivirus needs to be primary
-    
-  - Real-time protection is turned on
-    
-  - Antimalware platform version: `4.18.2303.8` (or later)
-  - Antimalware security intelligence version: `1.385.1455.0` (or later)
+   - Microsoft Defender Antivirus needs to be primary
+   - Real-time protection is turned on
+   - Antimalware platform version: `4.18.2303.8` (or later)
+   - Antimalware security intelligence version: `1.385.1455.0` (or later)
+
 ### Dev Drive
 
 Dev Drive is a new form of storage volume available to improve performance for key developer workloads. It builds on ReFS technology to employ targeted file system optimizations and provide more control over storage volume settings and security, including trust designation, antivirus configuration, and administrative control over which filters are attached.
