@@ -169,7 +169,7 @@ You must use exact `com.microsoft.wdav` as the **Preference Domain**. Microsoft 
 
    :::image type="content" source="media/817b3b760d11467abe9bdd519513f54f.png" alt-text="The chosen managed settings." lightbox="media/817b3b760d11467abe9bdd519513f54f.png":::
 
-6. Change values of the settings to desired values. You can select **More information** to get documentation for a particular setting. (You can select **Plist preview** to inspect what the configuration plist will look like. Select **Form editor** to return to the visual editor.)
+6. Change values of the settings to desired values. You can select **More information** to get documentation for a particular setting. (You can select **Plist preview** to inspect what the configuration plist. Select **Form editor** to return to the visual editor.)
 
    :::image type="content" source="media/a14a79efd5c041bb8974cb5b12b3a9b6.png" alt-text="The page on which you change the settings values." lightbox="media/a14a79efd5c041bb8974cb5b12b3a9b6.png":::
 
@@ -202,7 +202,7 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
    - `excludedFileExtension`
    - `excludedFileName`
    - `exclusionsMergePolicy`
-   - `allowedThreats` (EICAR is on the sample. If you are going through a proof-of-concept, remove it especially if you are testing EICAR.)
+   - `allowedThreats` (EICAR is on the sample. If you're going through a proof-of-concept, remove it especially if you're testing EICAR.)
    - `disallowedThreatActions`
    - `potentially_unwanted_application`
    - `archive_bomb`
