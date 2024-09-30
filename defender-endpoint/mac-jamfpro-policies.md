@@ -767,7 +767,7 @@ Follow the instructions in [Schedule scans with Microsoft Defender for Endpoint 
 
    :::image type="content" source="media/fb2220fed3a530f4b3ef36f600da0c27.png" alt-text="The file explorer1 wdavmdm package." lightbox="media/fb2220fed3a530f4b3ef36f600da0c27.png":::
 
-1. Open the Jamf Pro dashboard.
+3. Open the Jamf Pro dashboard.
 
       :::image type="content" source="media/990742cd9a15ca9fdd37c9f695d1b9f4.png" alt-text="The configuration settings for Jamf pro." lightbox="media/990742cd9a15ca9fdd37c9f695d1b9f4.png":::
 
@@ -781,17 +781,17 @@ Follow the instructions in [Schedule scans with Microsoft Defender for Endpoint 
 
 6. On the **General tab**, in **New Package**, specify the following details:
 
-    - **Display Name**: Leave it blank for now. Because it is reset when you choose your pkg.
-    - **Category**: `None (default)`
-    - **Filename**: `Choose File`
+   - **Display Name**: Leave it blank for now. Because it is reset when you choose your pkg.
+   - **Category**: `None (default)`
+   - **Filename**: `Choose File`
 
-    :::image type="content" source="media/21de3658bf58b1b767a17358a3f06341.png" alt-text="The General tab for configuration settings." lightbox="media/21de3658bf58b1b767a17358a3f06341.png":::
+   :::image type="content" source="media/21de3658bf58b1b767a17358a3f06341.png" alt-text="The General tab for configuration settings." lightbox="media/21de3658bf58b1b767a17358a3f06341.png":::
 
-    Open the file and point it to `wdav.pkg` or `wdav_MDM_Contoso_200329.pkg`.
+7. Open the file and point it to `wdav.pkg` or `wdav_MDM_Contoso_200329.pkg`.
 
-    :::image type="content" source="media/1aa5aaa0a387f4e16ce55b66facc77d1.png" alt-text="The computer screen displaying the description for an automatically generated package." lightbox="media/1aa5aaa0a387f4e16ce55b66facc77d1.png":::
+   :::image type="content" source="media/1aa5aaa0a387f4e16ce55b66facc77d1.png" alt-text="The computer screen displaying the description for an automatically generated package." lightbox="media/1aa5aaa0a387f4e16ce55b66facc77d1.png":::
 
-7. Select **Open**. Set the **Display Name** to **Microsoft Defender Advanced Threat Protection and Microsoft Defender Antivirus**.
+8. Select **Open**. Set the **Display Name** to **Microsoft Defender Advanced Threat Protection and Microsoft Defender Antivirus**.
 
    - **Manifest File** isn't required. Microsoft Defender for Endpoint works without Manifest File.
    - **Options tab**: Keep default values.
@@ -799,33 +799,31 @@ Follow the instructions in [Schedule scans with Microsoft Defender for Endpoint 
 
    :::image type="content" source="media/56dac54634d13b2d3948ab50e8d3ef21.png" alt-text="The limitation tab for the configuration settings." lightbox="media/56dac54634d13b2d3948ab50e8d3ef21.png":::
 
-1. Select **Save**. The package is uploaded to Jamf Pro.
+9. Select **Save**. The package is uploaded to Jamf Pro.
 
-      :::image type="content" source="media/33f1ecdc7d4872555418bbc3efe4b7a3.png" alt-text="The configuration settings pack uploading process for the package related to the configuration settings." lightbox="media/33f1ecdc7d4872555418bbc3efe4b7a3.png":::
+   :::image type="content" source="media/33f1ecdc7d4872555418bbc3efe4b7a3.png" alt-text="The configuration settings pack uploading process for the package related to the configuration settings." lightbox="media/33f1ecdc7d4872555418bbc3efe4b7a3.png":::
 
-      It can take a few minutes for the package to be available for deployment.
+   It can take a few minutes for the package to be available for deployment.
 
-      :::image type="content" source="media/1626d138e6309c6e87bfaab64f5ccf7b.png" alt-text="An instance of uploading the package for configuration settings." lightbox="media/1626d138e6309c6e87bfaab64f5ccf7b.png":::
+   :::image type="content" source="media/1626d138e6309c6e87bfaab64f5ccf7b.png" alt-text="An instance of uploading the package for configuration settings." lightbox="media/1626d138e6309c6e87bfaab64f5ccf7b.png":::
 
-9. Navigate to the **Policies** page.
+10. Navigate to the **Policies** page.
 
    :::image type="content" source="media/f878f8efa5ebc92d069f4b8f79f62c7f.png" alt-text="The configuration settings policies." lightbox="media/f878f8efa5ebc92d069f4b8f79f62c7f.png":::
 
-10. Select **+ New** to create a new policy.
+11. Select **+ New** to create a new policy.
 
     :::image type="content" source="media/847b70e54ed04787e415f5180414b310.png" alt-text="The configuration settings new policy." lightbox="media/847b70e54ed04787e415f5180414b310.png":::
 
-11. In **General**, for the **Display name**, use `MDATP Onboarding Contoso 200329 v100.86.92 or later`.
+12. In **General**, for the **Display name**, use `MDATP Onboarding Contoso 200329 v100.86.92 or later`.
 
     :::image type="content" source="media/625ba6d19e8597f05e4907298a454d28.png" alt-text="The configuration settings - MDATP onboard." lightbox="media/625ba6d19e8597f05e4907298a454d28.png":::
 
-12. Select **Recurring Check-in**.
+13. Select **Recurring Check-in**.
 
     :::image type="content" source="media/68bdbc5754dfc80aa1a024dde0fce7b0.png" alt-text="The recurring check-in for the configuration settings." lightbox="media/68bdbc5754dfc80aa1a024dde0fce7b0.png":::
 
-13. Select **Save**.
-
-14. Select **Packages** > **Configure**.
+14. Select **Save**. Then select **Packages**, and then select**Configure**.
 
     :::image type="content" source="media/8fb4cc03721e1efb4a15867d5241ebfb.png" alt-text="The option to configure packages." lightbox="media/8fb4cc03721e1efb4a15867d5241ebfb.png":::
 
