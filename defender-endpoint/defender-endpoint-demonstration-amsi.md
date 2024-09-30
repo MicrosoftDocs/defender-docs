@@ -55,7 +55,7 @@ Invoke-Expression $testString
 
 1. As an administrator, open PowerShell.
 
-2. Type `Powershell -ExecutionPolicy Bypass AMSI_PoSh_script.ps1`, and then press the **Enter** key.
+2. Type `Powershell -ExecutionPolicy Bypass AMSI_PoSh_script.ps1`, and then press **Enter**.
 
    The result should be as follows:
 
@@ -200,7 +200,7 @@ You can view detected threats by using the Event log or PowerShell.
 
    ```
 
-##### Use Powershell
+##### Use PowerShell
 
 Open PowerShell, and then type the following command: `Get-MpThreat`.
 
