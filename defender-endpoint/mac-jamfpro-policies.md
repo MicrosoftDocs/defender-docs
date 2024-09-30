@@ -151,11 +151,11 @@ Note that you must use exact `com.microsoft.wdav` as the **Preference Domain**; 
 
    :::image type="content" source="media/644e0f3af40c29e80ca1443535b2fe32.png" alt-text="A new profile." lightbox="media/644e0f3af40c29e80ca1443535b2fe32.png":::
 
-    - **Name**: `MDATP MDAV configuration settings`
-    - **Description**: `<blank\>`
-    - **Category**: `None (default)`
-    - **Level**: `Computer Level (default)`
-    - **Distribution Method**: `Install Automatically (default)`
+   - **Name**: `MDATP MDAV configuration settings`
+   - **Description**: `<blank\>`
+   - **Category**: `None (default)`
+   - **Level**: `Computer Level (default)`
+   - **Distribution Method**: `Install Automatically (default)`
 
 3. Scroll down to the **Application & Custom Settings** tab, select **External Applications**, select **Add**, and then use **Custom Schema** as the source for the preference domain.
 
@@ -195,33 +195,25 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 1. Use the following Microsoft Defender for Endpoint configuration settings:
 
-- `enableRealTimeProtection`
- - `passiveMode`
+   - `enableRealTimeProtection`
+   - `passiveMode` (This setting is not turned on by default. If you are planning to run a third-party antivirus for macOS, set it to `true`.)
+   - `exclusions`
+   - `excludedPath`
+   - `excludedFileExtension`
+   - `excludedFileName`
+   - `exclusionsMergePolicy`
+   - `allowedThreats` (EICAR is on the sample. If you are going through a proof-of-concept, remove it especially if you are testing EICAR.)
+   - `disallowedThreatActions`
+   - `potentially_unwanted_application`
+   - `archive_bomb`
+   - `cloudService`
+   - `automaticSampleSubmission`
+   - `tags`
+   - `hideStatusMenuIcon`
 
-   > [!NOTE]
-   > Not turned on by default, if you are planning to run a third-party antivirus for macOS, set it to `true`.
-
- - `exclusions`
- - `excludedPath`
- - `excludedFileExtension`
- - `excludedFileName`
- - `exclusionsMergePolicy`
- - `allowedThreats`
-
-   > [!NOTE]
-   > EICAR is on the sample, if you are going through a proof-of-concept, remove it especially if you are testing EICAR.
-
- - `disallowedThreatActions`
- - `potentially_unwanted_application`
- - `archive_bomb`
- - `cloudService`
- - `automaticSampleSubmission`
- - `tags`
- - `hideStatusMenuIcon`
-
-     For information, see [Property list for Jamf full configuration profile](mac-preferences.md#property-list-for-jamf-full-configuration-profile).
+   For more information, see [Property list for Jamf full configuration profile](mac-preferences.md#property-list-for-jamf-full-configuration-profile).
    
-        ```XML
+   ```XML
      <?xml version="1.0" encoding="UTF-8"?>
      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
      <plist version="1.0">
@@ -320,11 +312,11 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
          </dict>
      </dict>
      </plist>
-     ```
+   ```
 
 2. Save the file as `MDATP_MDAV_configuration_settings.plist`.
 
-1. In the Jamf Pro dashboard, open **Computers**, and their **Configuration Profiles**. Select **New** and switch to the **General** tab.
+3. In the Jamf Pro dashboard, open **Computers**, and their **Configuration Profiles**. Select **New** and switch to the **General** tab.
 
       :::image type="content" source="media/644e0f3af40c29e80ca1443535b2fe32.png" alt-text="The page displaying a new profile." lightbox="media/644e0f3af40c29e80ca1443535b2fe32.png":::
 
@@ -399,6 +391,7 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 > [!NOTE]
 > These steps are applicable on macOS 11 (Big Sur) or later. Even though Jamf supports notifications on macOS version 10.15 or later, Defender for Endpoint on Mac requires macOS 11 or later.
+
 1. In the Jamf Pro dashboard, select **Computers**, then **Configuration Profiles**.
 
 2. Select **New**, and then, on the **General** tab, for **Options**, specify the following details:
