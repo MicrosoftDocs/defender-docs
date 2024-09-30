@@ -135,13 +135,11 @@ For more information about managing security settings, see the following article
 
 You can either use Jamf Pro GUI to edit individual settings of the Microsoft Defender for Endpoint configuration, or use the legacy method by creating a configuration Plist in a text editor, and uploading it to Jamf Pro.
 
-You must use exact `com.microsoft.wdav` as the **Preference Domain**. Microsoft Defender for Endpoint uses only this name and `com.microsoft.wdav.ext` to load its managed settings.
-
-(The `com.microsoft.wdav.ext` version can be used in rare cases when you prefer to use GUI method, but also need to configure a setting that hasn't been added to the schema yet.)
+You must use exact `com.microsoft.wdav` as the **Preference Domain**. Microsoft Defender for Endpoint uses only this name and `com.microsoft.wdav.ext` to load its managed settings. (The `com.microsoft.wdav.ext` version can be used in rare cases when you prefer to use GUI method, but also need to configure a setting that hasn't been added to the schema yet.)
 
 ### GUI method
 
-1. Download schema.json file from [Defender's GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/schema) and save it to a local file:
+1. Download the `schema.json` file from [Defender's GitHub repository](https://github.com/microsoft/mdatp-xplat/tree/master/macos/schema) and save it to a local file:
 
    ```bash
    curl -o ~/Documents/schema.json https://raw.githubusercontent.com/microsoft/mdatp-xplat/master/macos/schema/schema.json
@@ -177,15 +175,13 @@ You must use exact `com.microsoft.wdav` as the **Preference Domain**. Microsoft 
 
    :::image type="content" source="media/9fc17529e5577eefd773c658ec576a7d.png" alt-text="The Configuration profile scope." lightbox="media/9fc17529e5577eefd773c658ec576a7d.png":::
 
-8. Select **Contoso's Machine Group**.
-
-9. Select **Add**, then select **Save**.
+8. Select **Contoso's Machine Group**. Select **Add**, then select **Save**.
 
    :::image type="content" source="media/cf30438b5512ac89af1d11cbf35219a6.png" alt-text="The page on which you can add the Configuration settings." lightbox="media/cf30438b5512ac89af1d11cbf35219a6.png":::
 
    :::image type="content" source="media/6f093e42856753a3955cab7ee14f12d9.png" alt-text="The page on which you can save the Configuration settings." lightbox="media/6f093e42856753a3955cab7ee14f12d9.png":::
 
-10. Select **Done**. You see the new **Configuration profile**.
+9. Select **Done**. You see the new **Configuration profile**.
 
     :::image type="content" source="media/dd55405106da0dfc2f50f8d4525b01c8.png" alt-text="The page on which you complete the Configuration settings." lightbox="media/dd55405106da0dfc2f50f8d4525b01c8.png":::
 
@@ -318,15 +314,15 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
 3. In the Jamf Pro dashboard, open **Computers**, and their **Configuration Profiles**. Select **New** and switch to the **General** tab.
 
-      :::image type="content" source="media/644e0f3af40c29e80ca1443535b2fe32.png" alt-text="The page displaying a new profile." lightbox="media/644e0f3af40c29e80ca1443535b2fe32.png":::
+   :::image type="content" source="media/644e0f3af40c29e80ca1443535b2fe32.png" alt-text="The page displaying a new profile." lightbox="media/644e0f3af40c29e80ca1443535b2fe32.png":::
 
 4. On the **General** tab, specify the following details:
 
-    - **Name**: `MDATP MDAV configuration settings`
-    - **Description**: `<blank>`
-    - **Category**: `None (default)`
-    - **Distribution Method**: `Install Automatically (default)`
-    - **Level**: `Computer Level (default)`
+   - **Name**: `MDATP MDAV configuration settings`
+   - **Description**: `<blank>`
+   - **Category**: `None (default)`
+   - **Distribution Method**: `Install Automatically (default)`
+   - **Level**: `Computer Level (default)`
 
 5. In **Application & Custom Settings**, select **Configure**.
 
@@ -375,15 +371,13 @@ Microsoft Defender for Endpoint adds new settings over time. These new settings 
 
     :::image type="content" source="media/9fc17529e5577eefd773c658ec576a7d.png" alt-text="The scope for the configuration settings." lightbox="media/9fc17529e5577eefd773c658ec576a7d.png":::
 
-14. Select **Contoso's Machine Group**.
-
-15. Select **Add**, then select **Save**.
+14. Select **Contoso's Machine Group**. Select **Add**, then select **Save**.
 
     :::image type="content" source="media/cf30438b5512ac89af1d11cbf35219a6.png" alt-text="The configuration settings addsav." lightbox="media/cf30438b5512ac89af1d11cbf35219a6.png":::
 
     :::image type="content" source="media/6f093e42856753a3955cab7ee14f12d9.png" alt-text="The notification of configuration settings." lightbox="media/6f093e42856753a3955cab7ee14f12d9.png":::
 
-1. Select **Done**. You see the new **Configuration profile**.
+15. Select **Done**. You see the new **Configuration profile**.
 
    :::image type="content" source="media/dd55405106da0dfc2f50f8d4525b01c8.png" alt-text="Image of configuration settings config profile image." lightbox="media/dd55405106da0dfc2f50f8d4525b01c8.png":::
 
