@@ -118,7 +118,9 @@ WScript.Echo result
 
 ### Verifying the test results
 
-#### In the Protection history, you should be able to see:
+In your protection history, you should be able to see the following information:
+
+```console
 
 Threat blocked
 
@@ -152,9 +154,13 @@ Details: This program is dangerous and replicates by infecting other files
 
 Affected items:
 
-#### Getting the list of Microsoft Defender Antivirus threats
+```
 
-##### Via the Event log
+### Get the list of Microsoft Defender Antivirus threats
+
+You can view detected threats by using the Event log or PowerShell.
+
+#### Via the Event log
 
 1. Go to **Start**, and search for `EventVwr.msc`. Open Event Viewer in the list of results.
 
