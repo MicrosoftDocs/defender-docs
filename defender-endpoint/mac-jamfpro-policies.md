@@ -737,20 +737,20 @@ Download [bluetooth.mobileconfig](https://github.com/microsoft/mdatp-xplat/blob/
        4 valid identities found
   ```
 
-- Choose any of them, and provide the quoted text as the -N parameter:
+Choose any of them, and provide the quoted text as the `-N` parameter:
 
   ```bash
   /usr/bin/security cms -S -N "DevCert" -i bluetooth.mobileconfig -o bluetooth-signed.mobileconfig
   ```
 
-- Now you can upload the generated bluetooth-signed.mobileconfig to Jamf Pro as described in [Deploying Custom Configuration Profiles using Jamf Pro|Method 2: Upload a Configuration Profile to Jamf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
+Now you can upload the generated bluetooth-signed.mobileconfig to Jamf Pro as described in [Deploying Custom Configuration Profiles using Jamf Pro|Method 2: Upload a Configuration Profile to Jamf Pro](https://www.jamf.com/jamf-nation/articles/648/deploying-custom-configuration-profiles-using-jamf-pro).
 
-    > [!NOTE]
-  > Bluetooth granted through Apple MDM Configuration Profile is not reflected in System Settings => Privacy & Security => Bluetooth.
+> [!NOTE]
+> Bluetooth granted through Apple MDM Configuration Profile is not reflected in System Settings => Privacy & Security => Bluetooth.
 
 ## Step 11: Schedule scans with Microsoft Defender for Endpoint on macOS
 
-Follow the instructions on [Schedule scans with Microsoft Defender for Endpoint on macOS](/windows/security/threat-protection/microsoft-defender-atp/mac-schedule-scan-atp).
+Follow the instructions in [Schedule scans with Microsoft Defender for Endpoint on macOS](/windows/security/threat-protection/microsoft-defender-atp/mac-schedule-scan-atp).
 
 ## Step 12: Deploy Microsoft Defender for Endpoint on macOS
 
